@@ -3,21 +3,21 @@
 exports[`<StepInfosGenerales /> should render 1`] = `
 <div>
   <form>
-    <label
-      class="sc-dvEHMn eummWX"
+    <legend
+      class="sc-hsWlPz dQgJqc"
       data-testid="question-label"
     >
       <span
-        class="sc-bCfvAP iHaZba"
+        class="sc-fcCDlF gZwBNq"
       >
         Quel est le type du contrat de travail ?
         <span
-          class="sc-bCfvAP hEXzCO"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
-    </label>
+    </legend>
     <div
       class="sc-hjjlnc goUtYR"
     >
@@ -64,21 +64,21 @@ exports[`<StepInfosGenerales /> should render 1`] = `
 exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 <div>
   <form>
-    <label
-      class="sc-dvEHMn eummWX"
+    <legend
+      class="sc-hsWlPz dQgJqc"
       data-testid="question-label"
     >
       <span
-        class="sc-bCfvAP iHaZba"
+        class="sc-fcCDlF gZwBNq"
       >
         Quel est le type du contrat de travail ?
         <span
-          class="sc-bCfvAP hEXzCO"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
-    </label>
+    </legend>
     <div
       class="sc-hjjlnc goUtYR"
     >
@@ -115,26 +115,26 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
       </label>
     </div>
     <div
-      class="sc-kiPvrU bNJyhQ"
+      class="sc-cLNonn kHAoQt"
     >
-      <label
-        class="sc-dvEHMn eummWX"
+      <legend
+        class="sc-hsWlPz dQgJqc"
         data-testid="question-label"
         for="input-criteria.cddType"
       >
         <span
-          class="sc-bCfvAP iHaZba"
+          class="sc-fcCDlF gZwBNq"
         >
           Quel est le type de CDD ?
           <span
-            class="sc-bCfvAP hEXzCO"
+            class="sc-fcCDlF gePGde"
           >
              (obligatoire)
           </span>
         </span>
-      </label>
+      </legend>
       <div
-        class="sc-fWHiwC eYDYwl sc-elAWhN gnhaNU"
+        class="sc-fWHiwC eYDYwl sc-kiPvrU fuxYJe"
       >
         <select
           class="sc-gzrROc iRaQTV"
@@ -241,21 +241,21 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] = `
 <div>
   <form>
-    <label
-      class="sc-dvEHMn eummWX"
+    <legend
+      class="sc-hsWlPz dQgJqc"
       data-testid="question-label"
     >
       <span
-        class="sc-bCfvAP iHaZba"
+        class="sc-fcCDlF gZwBNq"
       >
         Quel est le type du contrat de travail ?
         <span
-          class="sc-bCfvAP hEXzCO"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
-    </label>
+    </legend>
     <div
       class="sc-hjjlnc goUtYR"
     >
@@ -292,26 +292,26 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
       </label>
     </div>
     <div
-      class="sc-kiPvrU bNJyhQ"
+      class="sc-cLNonn kHAoQt"
     >
-      <label
-        class="sc-dvEHMn eummWX"
+      <legend
+        class="sc-hsWlPz dQgJqc"
         data-testid="question-label"
         for="input-criteria.cddType"
       >
         <span
-          class="sc-bCfvAP iHaZba"
+          class="sc-fcCDlF gZwBNq"
         >
           Quel est le type de CDD ?
           <span
-            class="sc-bCfvAP hEXzCO"
+            class="sc-fcCDlF gePGde"
           >
              (obligatoire)
           </span>
         </span>
-      </label>
+      </legend>
       <div
-        class="sc-fWHiwC eYDYwl sc-elAWhN gnhaNU"
+        class="sc-fWHiwC eYDYwl sc-kiPvrU fuxYJe"
       >
         <select
           class="sc-gzrROc iRaQTV"
@@ -418,21 +418,21 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 exports[`<StepInfosGenerales /> should render with CTT 1`] = `
 <div>
   <form>
-    <label
-      class="sc-dvEHMn eummWX"
+    <legend
+      class="sc-hsWlPz dQgJqc"
       data-testid="question-label"
     >
       <span
-        class="sc-bCfvAP iHaZba"
+        class="sc-fcCDlF gZwBNq"
       >
         Quel est le type du contrat de travail ?
         <span
-          class="sc-bCfvAP hEXzCO"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
-    </label>
+    </legend>
     <div
       class="sc-hjjlnc goUtYR"
     >
@@ -468,23 +468,23 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
-    <label
-      class="sc-dvEHMn eummWX"
+    <legend
+      class="sc-hsWlPz dQgJqc"
       data-testid="question-label"
     >
       <span
-        class="sc-bCfvAP iHaZba"
+        class="sc-fcCDlF gZwBNq"
       >
         S’agit-il d’un contrat de mission-formation ?
         <span
-          class="sc-bCfvAP hEXzCO"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
-    </label>
+    </legend>
     <div
-      class="sc-iJbNxu laMeKi"
+      class="sc-grxQYx eLmzGx"
       data-testid="cttFormation"
     >
       <div
@@ -524,23 +524,23 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
         </label>
       </div>
     </div>
-    <label
-      class="sc-dvEHMn eummWX"
+    <legend
+      class="sc-hsWlPz dQgJqc"
       data-testid="question-label"
     >
       <span
-        class="sc-bCfvAP iHaZba"
+        class="sc-fcCDlF gZwBNq"
       >
         Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
         <span
-          class="sc-bCfvAP hEXzCO"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
-    </label>
+    </legend>
     <div
-      class="sc-iJbNxu laMeKi"
+      class="sc-grxQYx eLmzGx"
       data-testid="ruptureContratFauteGrave"
     >
       <div
@@ -580,23 +580,23 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
         </label>
       </div>
     </div>
-    <label
-      class="sc-dvEHMn eummWX"
+    <legend
+      class="sc-hsWlPz dQgJqc"
       data-testid="question-label"
     >
       <span
-        class="sc-bCfvAP iHaZba"
+        class="sc-fcCDlF gZwBNq"
       >
         À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
         <span
-          class="sc-bCfvAP hEXzCO"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
-    </label>
+    </legend>
     <div
-      class="sc-iJbNxu laMeKi"
+      class="sc-grxQYx eLmzGx"
       data-testid="propositionCDIFinContrat"
     >
       <div
@@ -636,23 +636,23 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
         </label>
       </div>
     </div>
-    <label
-      class="sc-dvEHMn eummWX"
+    <legend
+      class="sc-hsWlPz dQgJqc"
       data-testid="question-label"
     >
       <span
-        class="sc-bCfvAP iHaZba"
+        class="sc-fcCDlF gZwBNq"
       >
         Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
         <span
-          class="sc-bCfvAP hEXzCO"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
-    </label>
+    </legend>
     <div
-      class="sc-iJbNxu laMeKi"
+      class="sc-grxQYx eLmzGx"
       data-testid="refusSouplesse"
     >
       <div

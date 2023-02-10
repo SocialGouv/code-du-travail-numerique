@@ -102,7 +102,7 @@ exports[`<Stats /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt cizsts sc-ehVsHJ kCoenY"
+              class="sc-hhOBVt hjpTeI sc-ehVsHJ kCoenY"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -147,14 +147,14 @@ exports[`<Stats /> should render 1`] = `
           class="sc-dcntqk kpnQJG"
         >
           <button
-            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-ciEjBl bDyXUw fgfViG"
+            class="sc-hhOBVt clLQVO sc-eeMvmM sc-ciEjBl bDyXUw fgfViG"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-djTcra gicOTe"
+          class="sc-hhOBVt euGdTx sc-cjibBx mHCxp sc-djTcra gicOTe"
         >
           <svg
             aria-hidden="true"
@@ -200,16 +200,16 @@ exports[`<Stats /> should render 1`] = `
             class="sc-jSUZER heYtoX"
           >
             <div
-              class="sc-eJDSGI hWSwY sc-hiDMwi gAYklG"
+              class="sc-iOeugr TLLGV sc-eJDSGI cnCImS"
             >
               <div
-                class="sc-oZIhv grJGZr"
+                class="sc-jfvxQR hUilgg"
               >
                 <div
-                  class="sc-ehvNnt jkVqcZ"
+                  class="sc-oZIhv eWwzHY"
                 >
                   <div
-                    class="sc-laZRCg FkEKn"
+                    class="sc-hiDMwi mnHoI"
                   >
                     <div
                       class="sc-jSUZER sc-gWoSmj cbQucy hQGVfv"
@@ -221,14 +221,14 @@ exports[`<Stats /> should render 1`] = `
                         Contenus référencés
                       </h2>
                       <p
-                        class="sc-cOxWqc gHQTzK sc-hJVpLM eEgjIW"
+                        class="sc-GKYbw iqWWVn sc-hJVpLM eEgjIW"
                       >
                         16
                       </p>
                     </div>
                   </div>
                   <div
-                    class="sc-laZRCg FkEKn"
+                    class="sc-hiDMwi mnHoI"
                   >
                     <div
                       class="sc-jSUZER sc-gWoSmj cbQucy hQGVfv"
@@ -240,14 +240,14 @@ exports[`<Stats /> should render 1`] = `
                         Visites
                       </h2>
                       <p
-                        class="sc-cOxWqc gHQTzK sc-hJVpLM eEgjIW"
+                        class="sc-GKYbw iqWWVn sc-hJVpLM eEgjIW"
                       >
                         20
                       </p>
                     </div>
                   </div>
                   <div
-                    class="sc-laZRCg FkEKn"
+                    class="sc-hiDMwi mnHoI"
                   >
                     <div
                       class="sc-jSUZER sc-gWoSmj cbQucy hQGVfv"
@@ -259,14 +259,14 @@ exports[`<Stats /> should render 1`] = `
                         Recherches
                       </h2>
                       <p
-                        class="sc-cOxWqc gHQTzK sc-hJVpLM eEgjIW"
+                        class="sc-GKYbw iqWWVn sc-hJVpLM eEgjIW"
                       >
                         4
                       </p>
                     </div>
                   </div>
                   <div
-                    class="sc-laZRCg FkEKn"
+                    class="sc-hiDMwi mnHoI"
                   >
                     <div
                       class="sc-jSUZER sc-gWoSmj cbQucy hQGVfv"
@@ -278,7 +278,7 @@ exports[`<Stats /> should render 1`] = `
                         Consultations
                       </h2>
                       <p
-                        class="sc-cOxWqc gHQTzK sc-hJVpLM eEgjIW"
+                        class="sc-GKYbw iqWWVn sc-hJVpLM eEgjIW"
                       >
                         10
                       </p>
@@ -328,7 +328,7 @@ exports[`<Stats /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hhOBVt irUZZv"
+              class="sc-hhOBVt hqeNIF"
             >
               Contacter nos services en région
               <svg
@@ -364,7 +364,7 @@ exports[`<Stats /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-hZNxer gwhdUi kjUJkp"
+                class="sc-lbVpMG sc-hZNxer fqAvkB kjUJkp"
               >
                 <li>
                   <a
@@ -444,11 +444,11 @@ exports[`<Stats /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-hZNxer gwhdUi kjUJkp"
+                class="sc-lbVpMG sc-hZNxer fqAvkB kjUJkp"
               >
                 <li>
                   <button
-                    class="sc-hhOBVt eyKsVw sc-gGWvLE bJZTVN"
+                    class="sc-hhOBVt clLQVO sc-gGWvLE bJZTVN"
                   >
                     Contact
                   </button>
@@ -489,7 +489,7 @@ exports[`<Stats /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-hZNxer gwhdUi kjUJkp"
+                class="sc-lbVpMG sc-hZNxer fqAvkB kjUJkp"
               >
                 <li>
                   <a

@@ -35,7 +35,6 @@ exports[`<Tooltip /> renders simple tooltip 1`] = `
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
-  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;

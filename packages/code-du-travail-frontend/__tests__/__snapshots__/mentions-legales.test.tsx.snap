@@ -102,7 +102,7 @@ exports[`<MentionLegales /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt cizsts sc-ehVsHJ kCoenY"
+              class="sc-hhOBVt hjpTeI sc-ehVsHJ kCoenY"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -147,14 +147,14 @@ exports[`<MentionLegales /> should render 1`] = `
           class="sc-dcntqk kpnQJG"
         >
           <button
-            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-ciEjBl bDyXUw fgfViG"
+            class="sc-hhOBVt clLQVO sc-eeMvmM sc-ciEjBl bDyXUw fgfViG"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-djTcra gicOTe"
+          class="sc-hhOBVt euGdTx sc-cjibBx mHCxp sc-djTcra gicOTe"
         >
           <svg
             aria-hidden="true"
@@ -377,7 +377,7 @@ exports[`<MentionLegales /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hhOBVt irUZZv"
+              class="sc-hhOBVt hqeNIF"
             >
               Contacter nos services en région
               <svg
@@ -413,7 +413,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-hZNxer gwhdUi kjUJkp"
+                class="sc-lbVpMG sc-hZNxer fqAvkB kjUJkp"
               >
                 <li>
                   <a
@@ -493,11 +493,11 @@ exports[`<MentionLegales /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-hZNxer gwhdUi kjUJkp"
+                class="sc-lbVpMG sc-hZNxer fqAvkB kjUJkp"
               >
                 <li>
                   <button
-                    class="sc-hhOBVt eyKsVw sc-gGWvLE bJZTVN"
+                    class="sc-hhOBVt clLQVO sc-gGWvLE bJZTVN"
                   >
                     Contact
                   </button>
@@ -538,7 +538,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-hZNxer gwhdUi kjUJkp"
+                class="sc-lbVpMG sc-hZNxer fqAvkB kjUJkp"
               >
                 <li>
                   <a

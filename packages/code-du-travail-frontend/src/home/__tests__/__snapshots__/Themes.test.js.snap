@@ -53,16 +53,16 @@ exports[`<Themes /> should render 1`] = `
           </header>
         </div>
         <div
-          class="sc-eJDSGI hWSwY sc-hiDMwi gAYklG"
+          class="sc-iOeugr TLLGV sc-eJDSGI cnCImS"
         >
           <div
-            class="sc-oZIhv grJGZr"
+            class="sc-jfvxQR hUilgg"
           >
             <div
-              class="sc-ehvNnt jkVqcZ"
+              class="sc-oZIhv eWwzHY"
             >
               <div
-                class="sc-laZRCg cupBig sc-kSGOQU diGwA"
+                class="sc-hiDMwi cjLrkj sc-kSGOQU diGwA"
               >
                 <div
                   class="sc-cLNonn gVcJvM"
@@ -87,10 +87,10 @@ exports[`<Themes /> should render 1`] = `
                 </div>
               </div>
               <div
-                class="sc-laZRCg cupBig sc-kSGOQU diGwA"
+                class="sc-hiDMwi cjLrkj sc-kSGOQU diGwA"
               />
               <div
-                class="sc-laZRCg cupBig"
+                class="sc-hiDMwi cjLrkj"
               >
                 <a
                   class="sc-eGugkK gnEaJx"
@@ -141,7 +141,7 @@ exports[`<Themes /> should render 1`] = `
                 </a>
               </div>
               <div
-                class="sc-laZRCg cupBig"
+                class="sc-hiDMwi cjLrkj"
               >
                 <a
                   class="sc-eGugkK gnEaJx"
@@ -190,7 +190,7 @@ exports[`<Themes /> should render 1`] = `
                 </a>
               </div>
               <div
-                class="sc-laZRCg cupBig sc-kSGOQU diGwA"
+                class="sc-hiDMwi cjLrkj sc-kSGOQU diGwA"
               >
                 <svg
                   aria-hidden="true"
@@ -756,7 +756,7 @@ exports[`<Themes /> should render 1`] = `
                 </svg>
               </div>
               <div
-                class="sc-laZRCg cupBig"
+                class="sc-hiDMwi cjLrkj"
               >
                 <a
                   class="sc-eGugkK gnEaJx"
@@ -810,7 +810,7 @@ exports[`<Themes /> should render 1`] = `
           </div>
         </div>
         <a
-          class="sc-hhOBVt fRaRnn"
+          class="sc-hhOBVt dNuRXt"
           href="/themes"
         >
           Voir tous les thèmes 

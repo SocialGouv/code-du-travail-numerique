@@ -2,32 +2,32 @@
 
 exports[`<Salaires /> should add a salaire 1`] = `
 <div>
-  <label
-    class="sc-kiPvrU lppfVs"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <div
-    class="sc-ZqGJI eTHaMk"
+    class="sc-knEsKG gPmAfU"
   >
     <label
-      class="sc-iJbNxu gJJDFs"
+      class="sc-grxQYx feXdnD"
       for="5"
     >
       Montant :
     </label>
     <div
-      class="sc-cLNonn hjsQlh"
+      class="sc-iJbNxu dbzYfl"
     >
       <span
         class="sc-bQmOxr iqEHsz"
@@ -57,7 +57,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
       </span>
     </div>
     <button
-      class="sc-hhOBVt cizsts sc-grxQYx gEVZbe"
+      class="sc-hhOBVt hjpTeI sc-ZqGJI iGodws"
       type="button"
     >
       Supprimer
@@ -78,7 +78,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
     </button>
   </div>
   <button
-    class="sc-hhOBVt cizsts sc-kSGOQU byxAuQ"
+    class="sc-hhOBVt hjpTeI sc-kSGOQU byxAuQ"
     type="button"
   >
     <svg
@@ -102,23 +102,23 @@ exports[`<Salaires /> should add a salaire 1`] = `
 
 exports[`<Salaires /> should delete a salaires 1`] = `
 <div>
-  <label
-    class="sc-kiPvrU lppfVs"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <button
-    class="sc-hhOBVt cizsts sc-kSGOQU byxAuQ"
+    class="sc-hhOBVt hjpTeI sc-kSGOQU byxAuQ"
     type="button"
   >
     <svg
@@ -142,32 +142,32 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 
 exports[`<Salaires /> should render 1`] = `
 <div>
-  <label
-    class="sc-kiPvrU lppfVs"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <div
-    class="sc-ZqGJI eTHaMk"
+    class="sc-knEsKG gPmAfU"
   >
     <label
-      class="sc-iJbNxu gJJDFs"
+      class="sc-grxQYx feXdnD"
       for="1"
     >
       Montant :
     </label>
     <div
-      class="sc-cLNonn hjsQlh"
+      class="sc-iJbNxu dbzYfl"
     >
       <span
         class="sc-bQmOxr iqEHsz"
@@ -197,7 +197,7 @@ exports[`<Salaires /> should render 1`] = `
       </span>
     </div>
     <button
-      class="sc-hhOBVt cizsts sc-grxQYx gEVZbe"
+      class="sc-hhOBVt hjpTeI sc-ZqGJI iGodws"
       type="button"
     >
       Supprimer
@@ -218,7 +218,7 @@ exports[`<Salaires /> should render 1`] = `
     </button>
   </div>
   <button
-    class="sc-hhOBVt cizsts sc-kSGOQU byxAuQ"
+    class="sc-hhOBVt hjpTeI sc-kSGOQU byxAuQ"
     type="button"
   >
     <svg

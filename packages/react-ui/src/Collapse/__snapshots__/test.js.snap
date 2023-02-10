@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Collapse /> renders 1`] = `
-.c2 {
+.c3 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -15,29 +15,79 @@ exports[`<Collapse /> renders 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c1,
-[aria-selected="true"] .c2 {
+[aria-expanded="true"] .c2,
+[aria-selected="true"] .c3 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c3 {
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 100%;
+  padding: 0 1.9rem;
   color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+  will-change: transform;
+}
+
+.c0:link,
+.c0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c0:not([disabled]):hover {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c0[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c5 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+  display: none;
 }
 
-.c0 {
+.c1 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -54,10 +104,10 @@ exports[`<Collapse /> renders 1`] = `
   overflow: hidden;
 }
 
-.c0:hover,
-.c0:focus,
-.c0:focus-within,
-.c0[aria-expanded="true"] {
+.c1:hover,
+.c1:focus,
+.c1:focus-within,
+.c1[aria-expanded="true"] {
   color: #3e486e;
 }
 
@@ -65,16 +115,28 @@ exports[`<Collapse /> renders 1`] = `
   margin-left: 1rem;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="c0"
-      role="button"
+      class="c0 c1"
+      type="button"
     >
       <svg
         aria-hidden="true"
-        class="c1 c2"
+        class="c2 c3"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -89,12 +151,14 @@ exports[`<Collapse /> renders 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="c3 c4"
+      <div
+        class="c4"
+        font-size="hsmall"
+        font-weight="600"
       >
         Hello
-      </p>
-    </div>
+      </div>
+    </button>
     <div
       class="c5"
     >

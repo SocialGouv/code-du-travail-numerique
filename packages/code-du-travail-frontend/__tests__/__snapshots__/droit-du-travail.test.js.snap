@@ -102,7 +102,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt cizsts sc-gukea eiceyH"
+              class="sc-hhOBVt hjpTeI sc-gukea eiceyH"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -147,14 +147,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
           class="sc-liQGml dMULtD"
         >
           <button
-            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-itMJkM bDyXUw eXofZB"
+            class="sc-hhOBVt clLQVO sc-eeMvmM sc-itMJkM bDyXUw eXofZB"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-ciEjBl idNOvf"
+          class="sc-hhOBVt euGdTx sc-cjibBx mHCxp sc-ciEjBl idNOvf"
         >
           <svg
             aria-hidden="true"
@@ -238,10 +238,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 class="sc-jSUZER cbQucy"
               >
                 <div
-                  class="sc-gGvHcT fhtJMY"
+                  class="sc-ehvNnt jLpEWC"
                 >
                   <div
-                    class="sc-ckEbSK fTbCHa"
+                    class="sc-laZRCg gxUMeY"
                   >
                     <svg
                       aria-hidden="true"
@@ -261,7 +261,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="sc-fbYMXx dVfpRL"
+                    class="sc-gGvHcT iaPnrK"
                   >
                     <p
                       aria-level="3"
@@ -271,7 +271,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       Le droit du travail, ce n’est pas…
                     </p>
                     <p
-                      class="sc-cOxWqc bBCaVZ"
+                      class="sc-GKYbw gcbROE"
                     >
                       Le droit du travail ne concerne pas les travailleurs qui sont soumis au droit public (par exemple, les fonctionnaires), les travailleurs indépendants (artisan, commerçant, professions libérales…), les bénévoles et les dirigeants d’entreprise.
                     </p>
@@ -2046,10 +2046,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       class="sc-jSUZER kEfUQE"
                     >
                       <div
-                        class="sc-gGvHcT fhtJMY"
+                        class="sc-ehvNnt jLpEWC"
                       >
                         <div
-                          class="sc-ckEbSK fTbCHa"
+                          class="sc-laZRCg gxUMeY"
                         >
                           <svg
                             aria-hidden="true"
@@ -2069,7 +2069,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="sc-fbYMXx dVfpRL"
+                          class="sc-gGvHcT iaPnrK"
                         >
                           <h4
                             class="sc-fmPOXC gDdYSH"
@@ -2223,10 +2223,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       class="sc-jSUZER kEfUQE"
                     >
                       <div
-                        class="sc-gGvHcT fhtJMY"
+                        class="sc-ehvNnt jLpEWC"
                       >
                         <div
-                          class="sc-ckEbSK fTbCHa"
+                          class="sc-laZRCg gxUMeY"
                         >
                           <svg
                             aria-hidden="true"
@@ -2246,7 +2246,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="sc-fbYMXx dVfpRL"
+                          class="sc-gGvHcT iaPnrK"
                         >
                           <p
                             class="sc-kiPvrU liMILW"
@@ -2254,7 +2254,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             Ce principe ne s’applique pas dans
                              
                             <button
-                              class="sc-hhOBVt ipLPsD"
+                              class="sc-hhOBVt cDewmZ"
                             >
                               13 matières
                               <svg
@@ -2273,7 +2273,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             où la loi reconnaît la primauté à la convention collective de branche et
                              
                             <button
-                              class="sc-hhOBVt ipLPsD"
+                              class="sc-hhOBVt cDewmZ"
                             >
                               4 matières
                               <svg
@@ -2694,7 +2694,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hhOBVt irUZZv"
+              class="sc-hhOBVt hqeNIF"
             >
               Contacter nos services en région
               <svg
@@ -2730,7 +2730,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-jvSYwb gwhdUi hATHJl"
+                class="sc-lbVpMG sc-jvSYwb fqAvkB hATHJl"
               >
                 <li>
                   <a
@@ -2810,11 +2810,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-jvSYwb gwhdUi hATHJl"
+                class="sc-lbVpMG sc-jvSYwb fqAvkB hATHJl"
               >
                 <li>
                   <button
-                    class="sc-hhOBVt eyKsVw sc-iXGltN jfbOGR"
+                    class="sc-hhOBVt clLQVO sc-iXGltN jfbOGR"
                   >
                     Contact
                   </button>
@@ -2855,7 +2855,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-jvSYwb gwhdUi hATHJl"
+                class="sc-lbVpMG sc-jvSYwb fqAvkB hATHJl"
               >
                 <li>
                   <a

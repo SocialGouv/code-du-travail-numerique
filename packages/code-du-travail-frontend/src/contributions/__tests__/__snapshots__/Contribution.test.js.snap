@@ -33,10 +33,10 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
     class="sc-jSUZER sc-gukea cbQucy juPNNr"
   >
     <div
-      class="sc-gGvHcT fhtJMY"
+      class="sc-ehvNnt jLpEWC"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -73,7 +73,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
           aria-level="2"
@@ -83,7 +83,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           Page personnalisable
         </p>
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -166,7 +166,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           Consultez
            
           <button
-            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
+            class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -212,10 +212,10 @@ exports[`<Contribution /> should render answer references 1`] = `
     class="sc-jSUZER sc-gukea cbQucy juPNNr"
   >
     <div
-      class="sc-gGvHcT fhtJMY"
+      class="sc-ehvNnt jLpEWC"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -252,7 +252,7 @@ exports[`<Contribution /> should render answer references 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
           aria-level="2"
@@ -262,7 +262,7 @@ exports[`<Contribution /> should render answer references 1`] = `
           Page personnalisable
         </p>
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -345,7 +345,7 @@ exports[`<Contribution /> should render answer references 1`] = `
           Consultez
            
           <button
-            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
+            class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -391,10 +391,10 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     class="sc-jSUZER sc-gukea cbQucy juPNNr"
   >
     <div
-      class="sc-gGvHcT fhtJMY"
+      class="sc-ehvNnt jLpEWC"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -431,7 +431,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
           aria-level="2"
@@ -441,7 +441,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           Page personnalisable
         </p>
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -524,7 +524,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           Consultez
            
           <button
-            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
+            class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -570,10 +570,10 @@ exports[`<Contribution /> should render with both answers 1`] = `
     class="sc-jSUZER sc-gukea cbQucy juPNNr"
   >
     <div
-      class="sc-gGvHcT fhtJMY"
+      class="sc-ehvNnt jLpEWC"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -610,7 +610,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
           aria-level="2"
@@ -620,7 +620,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
           Page personnalisable
         </p>
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -703,7 +703,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
           Consultez
            
           <button
-            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
+            class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -749,10 +749,10 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     class="sc-jSUZER sc-gukea cbQucy juPNNr"
   >
     <div
-      class="sc-gGvHcT fhtJMY"
+      class="sc-ehvNnt jLpEWC"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -789,7 +789,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
           aria-level="2"
@@ -799,7 +799,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           Page personnalisable
         </p>
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -860,7 +860,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           Consultez
            
           <button
-            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
+            class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -958,7 +958,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
         Références
       </div>
       <ul
-        class="sc-jfvxQR sc-gGWvLE gwhdUi kAmmUU"
+        class="sc-lbVpMG sc-gGWvLE fqAvkB kAmmUU"
       >
         <li>
           <a

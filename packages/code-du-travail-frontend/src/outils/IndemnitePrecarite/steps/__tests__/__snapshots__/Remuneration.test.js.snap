@@ -2,21 +2,21 @@
 
 exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 <div>
-  <label
-    class="sc-dvEHMn eummWX"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <div
     class="sc-hjjlnc goUtYR"
   >
@@ -64,32 +64,32 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </label>
   </div>
-  <label
-    class="sc-dvEHMn eummWX"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <div
-    class="sc-iWOQzb lmcSIn"
+    class="sc-jKvnYE ccQHbe"
   >
     <label
-      class="sc-gJFNMl kZDsq"
+      class="sc-fxTzYC YReEU"
       for="2"
     >
       Montant :
     </label>
     <div
-      class="sc-jsTgWu dkEWbX"
+      class="sc-elAWhN cFiJbq"
     >
       <span
         class="sc-bQmOxr iqEHsz"
@@ -119,13 +119,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      class="sc-hhOBVt cizsts sc-fxTzYC bSIzNd"
+      class="sc-hhOBVt hjpTeI sc-iWOQzb hOmVGD"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-cxdZMj bLMMYA"
+        class="sc-dkKxlM eSIfVb"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -140,16 +140,16 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <div
-    class="sc-iWOQzb lmcSIn"
+    class="sc-jKvnYE ccQHbe"
   >
     <label
-      class="sc-gJFNMl kZDsq"
+      class="sc-fxTzYC YReEU"
       for="4"
     >
       Montant :
     </label>
     <div
-      class="sc-jsTgWu dkEWbX"
+      class="sc-elAWhN cFiJbq"
     >
       <span
         class="sc-bQmOxr iqEHsz"
@@ -179,13 +179,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      class="sc-hhOBVt cizsts sc-fxTzYC bSIzNd"
+      class="sc-hhOBVt hjpTeI sc-iWOQzb hOmVGD"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-cxdZMj bLMMYA"
+        class="sc-dkKxlM eSIfVb"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -200,12 +200,12 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <button
-    class="sc-hhOBVt cizsts sc-knEsKG jBERtL"
+    class="sc-hhOBVt hjpTeI sc-cxdZMj hyacni"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="sc-dkKxlM bkWqkE"
+      class="sc-gJFNMl btgjl"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +220,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     Ajouter un salaire
   </button>
   <p
-    class="sc-ZqGJI nJtAW"
+    class="sc-knEsKG cVPhka"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>
@@ -229,21 +229,21 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 
 exports[`<StepRemuneration /> should render one input 1`] = `
 <div>
-  <label
-    class="sc-dvEHMn eummWX"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <div
     class="sc-hjjlnc goUtYR"
   >
@@ -291,24 +291,24 @@ exports[`<StepRemuneration /> should render one input 1`] = `
       </span>
     </label>
   </div>
-  <label
-    class="sc-dvEHMn eummWX"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
     for="currency-1"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       Quelle est la rémunération totale brute perçue durant le contrat de travail ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <div
-    class="sc-jsTgWu dkEWbX"
+    class="sc-elAWhN cFiJbq"
   >
     <span
       class="sc-bQmOxr iqEHsz"
@@ -338,7 +338,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </span>
   </div>
   <p
-    class="sc-ZqGJI nJtAW"
+    class="sc-knEsKG cVPhka"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>

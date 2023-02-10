@@ -61,14 +61,14 @@ exports[`<Recherche /> should render 1`] = `
           class="sc-hQIyOC cjSLts"
         >
           <button
-            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-hJVpLM bDyXUw fAQchY"
+            class="sc-hhOBVt clLQVO sc-eeMvmM sc-hJVpLM bDyXUw fAQchY"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-iuuDEZ dFqnzS"
+          class="sc-hhOBVt euGdTx sc-cjibBx mHCxp sc-iuuDEZ dFqnzS"
         >
           <svg
             aria-hidden="true"
@@ -152,7 +152,7 @@ exports[`<Recherche /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt fRaRnn sc-IQBGL hyQkFA"
+              class="sc-hhOBVt dNuRXt sc-IQBGL hyQkFA"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -200,12 +200,12 @@ exports[`<Recherche /> should render 1`] = `
               class="sc-byHATT cRYjOn"
             >
               <button
-                class="sc-hhOBVt gQDoEE"
+                class="sc-hhOBVt gNwDiq"
               >
                 Consulter les thèmes
               </button>
               <button
-                class="sc-hhOBVt gQDoEE"
+                class="sc-hhOBVt gNwDiq"
               >
                 Chercher une convention collective
               </button>
@@ -248,7 +248,7 @@ exports[`<Recherche /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hhOBVt irUZZv"
+              class="sc-hhOBVt hqeNIF"
             >
               Contacter nos services en région
               <svg
@@ -284,7 +284,7 @@ exports[`<Recherche /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-hZDVde gwhdUi fOhxyf"
+                class="sc-lbVpMG sc-hZDVde fqAvkB fOhxyf"
               >
                 <li>
                   <a
@@ -364,11 +364,11 @@ exports[`<Recherche /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-hZDVde gwhdUi fOhxyf"
+                class="sc-lbVpMG sc-hZDVde fqAvkB fOhxyf"
               >
                 <li>
                   <button
-                    class="sc-hhOBVt eyKsVw sc-ehVsHJ huOvpL"
+                    class="sc-hhOBVt clLQVO sc-ehVsHJ huOvpL"
                   >
                     Contact
                   </button>
@@ -409,7 +409,7 @@ exports[`<Recherche /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-hZDVde gwhdUi fOhxyf"
+                class="sc-lbVpMG sc-hZDVde fqAvkB fOhxyf"
               >
                 <li>
                   <a

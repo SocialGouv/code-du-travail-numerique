@@ -22,16 +22,16 @@ exports[`<Highlights /> should render 1`] = `
         </h2>
       </header>
       <div
-        class="sc-eJDSGI hWSwY sc-hiDMwi gAYklG"
+        class="sc-iOeugr TLLGV sc-eJDSGI cnCImS"
       >
         <div
-          class="sc-oZIhv grJGZr"
+          class="sc-jfvxQR hUilgg"
         >
           <div
-            class="sc-ehvNnt jkVqcZ"
+            class="sc-oZIhv eWwzHY"
           >
             <div
-              class="sc-laZRCg iWIsUK"
+              class="sc-hiDMwi edbZAZ"
             >
               <a
                 class="sc-eGugkK cJzHzy"
@@ -62,7 +62,7 @@ exports[`<Highlights /> should render 1`] = `
                     class="sc-iJbNxu hWSYxX"
                   >
                     <p
-                      class="sc-cOxWqc bBCaVZ"
+                      class="sc-GKYbw gcbROE"
                     >
                       1. Dois-je prévenir mon employeur si je reviens, ou si...
                     </p>
@@ -71,7 +71,7 @@ exports[`<Highlights /> should render 1`] = `
               </a>
             </div>
             <div
-              class="sc-laZRCg iWIsUK"
+              class="sc-hiDMwi edbZAZ"
             >
               <a
                 class="sc-eGugkK cJzHzy"
@@ -102,7 +102,7 @@ exports[`<Highlights /> should render 1`] = `
                     class="sc-iJbNxu hWSYxX"
                   >
                     <p
-                      class="sc-cOxWqc bBCaVZ"
+                      class="sc-GKYbw gcbROE"
                     >
                       9. Quelles sont les recommandations sanitaires pour...
                     </p>

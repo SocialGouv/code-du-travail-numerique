@@ -23,7 +23,6 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
-  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
@@ -35,7 +34,7 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 4rem;
+  height: 100%;
   padding: 0 1rem;
   color: #3e486e;
   background: transparent;
@@ -246,7 +245,6 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
-  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
@@ -258,7 +256,7 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 4rem;
+  height: 100%;
   padding: 0 1rem;
   color: #3e486e;
   background: transparent;

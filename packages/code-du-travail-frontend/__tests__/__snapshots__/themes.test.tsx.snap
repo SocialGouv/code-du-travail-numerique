@@ -102,7 +102,7 @@ exports[`<Theme /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt cizsts sc-bGhRYA gGtMwd"
+              class="sc-hhOBVt hjpTeI sc-bGhRYA gGtMwd"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -147,14 +147,14 @@ exports[`<Theme /> should render 1`] = `
           class="sc-gWoSmj fxjsy"
         >
           <button
-            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-ehkVkK bDyXUw ftyXgJ"
+            class="sc-hhOBVt clLQVO sc-eeMvmM sc-ehkVkK bDyXUw ftyXgJ"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-fyBusP hSOEsH"
+          class="sc-hhOBVt euGdTx sc-cjibBx mHCxp sc-fyBusP hSOEsH"
         >
           <svg
             aria-hidden="true"
@@ -183,10 +183,10 @@ exports[`<Theme /> should render 1`] = `
         class="sc-kSGOQU kJOVaH"
       >
         <div
-          class="sc-eJDSGI dCXocf"
+          class="sc-iOeugr cfcIjK"
         >
           <div
-            class="sc-oZIhv bFEaYe"
+            class="sc-jfvxQR dxcKMx"
           >
             <ol
               class="sc-bcXHqe sc-dvEHMn evAMOC lgHRVY"
@@ -268,31 +268,31 @@ exports[`<Theme /> should render 1`] = `
             class="sc-bcXHqe sc-gXnjX evAMOC ejlvda"
           >
             <a
-              class="sc-gelMue jAkAiq sc-hhOBVt irUZZv"
+              class="sc-gelMue jAkAiq sc-hhOBVt hqeNIF"
               href="/themes//themes/121-cdi"
             >
               CDI
             </a>
             <a
-              class="sc-gelMue jAkAiq sc-hhOBVt irUZZv"
+              class="sc-gelMue jAkAiq sc-hhOBVt hqeNIF"
               href="/themes//themes/122-cdd"
             >
               CDD
             </a>
             <a
-              class="sc-gelMue jAkAiq sc-hhOBVt irUZZv"
+              class="sc-gelMue jAkAiq sc-hhOBVt hqeNIF"
               href="/themes//themes/123-interim"
             >
               Intérim
             </a>
             <a
-              class="sc-gelMue jAkAiq sc-hhOBVt irUZZv"
+              class="sc-gelMue jAkAiq sc-hhOBVt hqeNIF"
               href="/themes//themes/124-contrat-dapprentissage"
             >
               Contrat d'apprentissage
             </a>
             <a
-              class="sc-gelMue jAkAiq sc-hhOBVt irUZZv"
+              class="sc-gelMue jAkAiq sc-hhOBVt hqeNIF"
               href="/themes//themes/125-contrat-de-professionnalisation"
             >
               Contrat de professionnalisation
@@ -335,7 +335,7 @@ exports[`<Theme /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hhOBVt irUZZv"
+              class="sc-hhOBVt hqeNIF"
             >
               Contacter nos services en région
               <svg
@@ -371,7 +371,7 @@ exports[`<Theme /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-hjsNop gwhdUi eUYHdO"
+                class="sc-lbVpMG sc-hjsNop fqAvkB eUYHdO"
               >
                 <li>
                   <a
@@ -451,11 +451,11 @@ exports[`<Theme /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-hjsNop gwhdUi eUYHdO"
+                class="sc-lbVpMG sc-hjsNop fqAvkB eUYHdO"
               >
                 <li>
                   <button
-                    class="sc-hhOBVt eyKsVw sc-edLOhm jvNoUu"
+                    class="sc-hhOBVt clLQVO sc-edLOhm jvNoUu"
                   >
                     Contact
                   </button>
@@ -496,7 +496,7 @@ exports[`<Theme /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-hjsNop gwhdUi eUYHdO"
+                class="sc-lbVpMG sc-hjsNop fqAvkB eUYHdO"
               >
                 <li>
                   <a
