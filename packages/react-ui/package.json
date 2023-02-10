@@ -11,7 +11,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "NODE_ENV=production babel src --out-dir lib --extensions \".ts,.tsx,.js,.jsx\" --ignore \"**/story.js,**/test.js\"",
+    "build": "babel src --out-dir lib --extensions \".ts,.tsx,.js,.jsx\" --ignore \"**/story.js,**/test.js\"",
     "dev": "npm run build -- --watch",
     "lint-js": "eslint src/**/*.js",
     "lint-css": "stylelint 'src/**/*.js'",
@@ -39,6 +39,7 @@
     "@babel/core": "^7.20.12",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
+    "@babel/plugin-transform-typescript": "^7.20.13",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
