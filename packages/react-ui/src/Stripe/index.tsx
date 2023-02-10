@@ -2,16 +2,16 @@ import styled, { css } from "styled-components";
 
 import { box } from "../theme.js";
 
-interface StripeProps {
+type StripeProps = {
   rounded: boolean;
   variant: "primary" | "secondary";
   position: "top" | "left";
   length: string;
-}
+};
 
 export const Stripe = styled.span<StripeProps>`
   position: absolute;
-  background-color: ${({ variant, theme }) => theme[variant]};
+  background-color: ${({ variant, theme }) => theme[variant ?? "primary"]};
   border-radius: ${({ rounded }) => (rounded ? box.borderRadius : "0")};
   ${({ position, length }) => {
     return css`
