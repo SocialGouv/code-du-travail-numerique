@@ -1,5 +1,4 @@
 import React from "react";
-import { Paragraph } from "@socialgouv/cdtn-ui";
 import { RadioQuestion } from "../../Components";
 import { Route } from "./store";
 import { AgreementSearch, EnterpriseSearch } from "./components";
@@ -14,6 +13,8 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
 import { AgreementSearchValue } from "./store";
 import { SectionTitle } from "../../common/stepStyles";
+import styled from "styled-components";
+import { Paragraph, theme } from "@socialgouv/cdtn-ui";
 
 type Props = {
   selectedRoute?: Route;
@@ -144,7 +145,7 @@ function AgreementStep({
               content: (
                 <p>
                   Sont des salariés du particulier employeur : les personnes
-                  travaillant au domicile privé d'un particulier (garde
+                  travaillant au domicile privé d&apos;un particulier (garde
                   d’enfants ou d’une personne dépendante, ménage, travaux de
                   jardinage, soutien scolaire...) et les assistants maternels
                   (qui accueillent des enfants à leur domicile).
@@ -171,6 +172,9 @@ function AgreementStep({
               <Paragraph noMargin fontWeight="600" fontSize="default">
                 Particulier employeur et emploi à domicile
               </Paragraph>
+              <StyledParagraph>
+                Cliquez sur Suivant pour poursuivre la simulation.
+              </StyledParagraph>
             </>
           )}
           {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
@@ -181,3 +185,7 @@ function AgreementStep({
 }
 
 export default AgreementStep;
+
+const StyledParagraph = styled(Paragraph)`
+  margin-top: ${theme.spacings.large};
+`;
