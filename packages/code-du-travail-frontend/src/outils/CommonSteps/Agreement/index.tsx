@@ -126,42 +126,45 @@ function AgreementStep({
             simulator={simulator}
             isDisabled={selectedAgreement?.num === 3239}
           />
-          <RowWrapper>
-            <InputWrapper>
-              <InputCheckbox
-                label={
-                  <span>
-                    <strong>
-                      Je suis particulier employeur ou salarié du particulier
-                      employeur
-                    </strong>{" "}
-                    (assistant maternel, employé maison)
-                  </span>
-                }
-                name="salarieParticulierEmployeur"
-                id="salarieParticulierEmployeur"
-                onChange={() => {
-                  onAgreementChange(
-                    selectedAgreement?.num === 3239
-                      ? null
-                      : {
-                          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
-                          id: "KALICONT000044594539",
-                          num: 3239,
-                          shortTitle:
-                            "Particuliers employeurs et emploi à domicile",
-                          slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
-                          title: "Particuliers employeurs et emploi à domicile",
-                        }
-                  );
-                }}
-                checked={selectedAgreement?.num === 3239}
-              />
-            </InputWrapper>
-            <ButtonClicker onClick={() => setIsInputVisible(!isInputVisible)}>
-              <icons.HelpCircle size="20" aria-label="?" />
-            </ButtonClicker>
-          </RowWrapper>
+          {!selectedEnterprise && (
+            <RowWrapper>
+              <InputWrapper>
+                <InputCheckbox
+                  label={
+                    <span>
+                      <strong>
+                        Je suis particulier employeur ou salarié du particulier
+                        employeur
+                      </strong>{" "}
+                      (assistant maternel, employé maison)
+                    </span>
+                  }
+                  name="salarieParticulierEmployeur"
+                  id="salarieParticulierEmployeur"
+                  onChange={() => {
+                    onAgreementChange(
+                      selectedAgreement?.num === 3239
+                        ? null
+                        : {
+                            url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+                            id: "KALICONT000044594539",
+                            num: 3239,
+                            shortTitle:
+                              "Particuliers employeurs et emploi à domicile",
+                            slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
+                            title:
+                              "Particuliers employeurs et emploi à domicile",
+                          }
+                    );
+                  }}
+                  checked={selectedAgreement?.num === 3239}
+                />
+              </InputWrapper>
+              <ButtonClicker onClick={() => setIsInputVisible(!isInputVisible)}>
+                <icons.HelpCircle size="20" aria-label="?" />
+              </ButtonClicker>
+            </RowWrapper>
+          )}
           {isInputVisible && (
             <AlertWithMargin>
               <p>

@@ -8,7 +8,11 @@ const sharedStyle = css`
   ${({ theme }) => {
     return css`
       color: ${(props) =>
-        props.$variant ? theme[props.$variant] : theme.paragraph};
+        props.$variant
+          ? theme[props.$variant]
+          : props.disabled
+          ? "gray"
+          : theme.paragraph};
       font-size: ${(props) =>
         props.$fontSize && props.$fontSize.startsWith("h")
           ? fonts.sizes.headings[props.$fontSize.replace("h", "")]

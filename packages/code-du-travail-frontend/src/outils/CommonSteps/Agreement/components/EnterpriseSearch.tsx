@@ -85,7 +85,12 @@ const EnterpriseSearch = ({
   };
   return (
     <Section>
-      <Paragraph noMargin fontWeight="600" fontSize="default">
+      <Paragraph
+        noMargin
+        fontWeight="600"
+        fontSize="default"
+        disabled={isDisabled}
+      >
         Précisez et sélectionnez votre entreprise
       </Paragraph>
       <SearchEnterpriseInput

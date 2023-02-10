@@ -56,9 +56,9 @@ export const SearchEnterpriseInput = ({
     <>
       <Flex>
         <Box>
-          <InlineLabel htmlFor="enterprise-search">
+          <InlineLabel htmlFor="enterprise-search" disabled={isDisabled}>
             Nom de votre entreprise ou numéro Siret{" "}
-            <Text fontWeight="400" fontSize="small">
+            <Text fontWeight="400" fontSize="small" disabled={isDisabled}>
               (obligatoire)
             </Text>
           </InlineLabel>
@@ -80,10 +80,14 @@ export const SearchEnterpriseInput = ({
             onChange={searchInputHandler}
             autoComplete="off"
             data-testid="agreement-company-search-input"
+            disabled={isDisabled}
           />
         </Box>
         <Box>
-          <InlineLabel htmlFor="enterprise-search-address">
+          <InlineLabel
+            htmlFor="enterprise-search-address"
+            disabled={isDisabled}
+          >
             Code postal ou ville
           </InlineLabel>
           <BlockInput
@@ -95,6 +99,7 @@ export const SearchEnterpriseInput = ({
             onChange={searchInputHandler}
             autoComplete="off"
             data-testid="agreement-postal-code-search-input"
+            disabled={isDisabled}
           />
         </Box>
       </Flex>
@@ -111,6 +116,7 @@ const BlockInput = styled(Input)`
 
 const InlineLabel = styled(Label)`
   display: inline;
+  color: ${({ theme, disabled }) => (disabled ? "gray" : theme.paragraph)};
 `;
 
 const Flex = styled.div`
