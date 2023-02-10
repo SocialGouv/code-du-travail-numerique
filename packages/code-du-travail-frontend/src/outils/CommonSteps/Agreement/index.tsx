@@ -143,30 +143,31 @@ function AgreementStep({
               )}
             </>
           )}
-
-          <Toast>
-            Vous êtes particuliers employeurs ou salarié du particulier
-            employeur (assistant maternel, employé de maison) ?
-            <br />
-            Sélectionnez{" "}
-            <Button
-              variant="link"
-              onClick={(e) => {
-                e.preventDefault();
-                onAgreementChange({
-                  url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
-                  id: "KALICONT000044594539",
-                  num: 3239,
-                  shortTitle: "Particuliers employeurs et emploi à domicile",
-                  slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
-                  title: "Particuliers employeurs et emploi à domicile",
-                });
-                setIsCcSelected(true);
-              }}
-            >
-              votre convention collective ici
-            </Button>
-          </Toast>
+          {!selectedAgreement && (
+            <Toast>
+              Vous êtes particuliers employeurs ou salarié du particulier
+              employeur (assistant maternel, employé de maison) ?
+              <br />
+              Sélectionnez{" "}
+              <Button
+                variant="link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onAgreementChange({
+                    url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+                    id: "KALICONT000044594539",
+                    num: 3239,
+                    shortTitle: "Particuliers employeurs et emploi à domicile",
+                    slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
+                    title: "Particuliers employeurs et emploi à domicile",
+                  });
+                  setIsCcSelected(true);
+                }}
+              >
+                votre convention collective ici
+              </Button>
+            </Toast>
+          )}
         </>
       )}
     </>
