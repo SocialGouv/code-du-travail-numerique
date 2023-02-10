@@ -15,5 +15,9 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": "warn",
     "@typescript-eslint/no-unnecessary-condition": "warn",
     "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/member-ordering": "off",
+    "@typescript-eslint/no-invalid-this": "off",
+    "@typescript-eslint/no-import-type-side-effects": "off",
+    "@typescript-eslint/prefer-optional-chain": "off",
   },
 };
