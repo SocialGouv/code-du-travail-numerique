@@ -1,7 +1,6 @@
 import http from "http";
 import https from "https";
-
-const AZURE_BASE_URL = "https://cdtnadminprod.blob.core.windows.net";
+import { AZURE_BASE_URL } from "../src/config";
 
 const Sitemap = () => {};
 
