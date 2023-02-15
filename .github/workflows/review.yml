@@ -147,7 +147,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        url: ${{ env.SITE_URL }}
         paths:
           - "/"
           - "/outils"
@@ -165,6 +164,6 @@ jobs:
           - "/contribution/les-conges-pour-evenements-familiaux"
     steps:
       - name: Run lhci
-        run: npx --yes @lhci/cli@latest autorun --collect.url=${{ matrix.url }}${{ matrix.paths }}
+        run: npx --yes @lhci/cli@latest autorun --collect.url=${{ env.SITE_URL }}${{ matrix.paths }}
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.SOCIALGROOVYBOT_LHCI_GITHUB_APP_TOKEN }}
