@@ -23,6 +23,7 @@ jobs:
         shell: bash
         run: |
           yarn add @socialgouv/kosko-charts
+
       - name: Get k8s infos
         id: k8s
         shell: bash
@@ -30,6 +31,7 @@ jobs:
           RAW_BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
           BRANCH=$(npx @socialgouv/env-slug "${RAW_BRANCH}")
           echo "branch=$(echo ${BRANCH})" >> $GITHUB_OUTPUT
+
       - name: Use k8s manifests generation
         uses: SocialGouv/actions/k8s-manifests@v1
         with:
@@ -40,32 +42,27 @@ jobs:
           ELASTIC_APM_ENVIRONMENT: cdtn-${{ steps.k8s.outputs.branch }}
           ES_INDEX_PREFIX: cdtn-preprod
 
-  register-frontend:
-    name: Register frontend
-    runs-on: ubuntu-latest
-    needs: [manifests]
-    steps:
       - name: Get commit sha
         run: |
           echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
-
-      - name: Download k8s manifests
-        uses: actions/download-artifact@v3
-        with:
-          name: manifests-dev.yml
 
       - name: Get deployment url for site
         uses: mikefarah/yq@v4.30.5
         id: url
         with:
-          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
+          cmd: echo "SITE_URL=https://$(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)" >> $GITHUB_ENV
 
       - name: Get api url for site
         uses: mikefarah/yq@v4.30.5
         id: apiurl
         with:
-          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | head -n 1)
+          cmd: echo "API_URL=https://$(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | head -n 1)" >> $GITHUB_ENV
 
+  register-frontend:
+    name: Register frontend
+    runs-on: ubuntu-latest
+    needs: [ manifests ]
+    steps:
       - name: Register docker images
         uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
         with:
@@ -81,9 +78,9 @@ jobs:
               NEXT_PUBLIC_AZURE_CONTAINER=cdtn
               NEXT_PUBLIC_PIWIK_SITE_ID=3
               NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
-              NEXT_PUBLIC_API_URL=https://${{ steps.apiurl.outputs.result }}/api/v1
+              NEXT_PUBLIC_API_URL=${{ env.API_URL }}/api/v1
               NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
-              NEXT_PUBLIC_SITE_URL=https://${{ steps.url.outputs.result }}
+              NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
 
   register-api:
     name: Register api
@@ -131,18 +128,9 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --prefer-offline --frozen-lockfile
-      - name: Download k8s manifests
-        uses: actions/download-artifact@v3
-        with:
-          name: manifests-dev.yml
-      - name: Get deployment url
-        uses: mikefarah/yq@v4.30.5
-        id: url
-        with:
-          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
       - name: Run test e2e
         run: |
-          CODECEPT_BASEURL=https://${{ steps.url.outputs.result }} yarn test:e2e
+          CODECEPT_BASEURL=${{ env.SITE_URL }} yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v3
@@ -159,33 +147,24 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        url: [ "/", "/outils", "/modeles-de-courriers" ]
+        url: ${{ env.SITE_URL }}
+        paths:
+          - "/"
+          - "/outils"
+          - "/outils/procedure-licenciement"
+          - "/outils/preavis-demission"
+          - "/outils/simulateur-embauche"
+          - "/outils/indemnite-licenciement"
+          - "/modeles-de-courriers"
+          - "/contribution"
+          - "/convention-collective"
+          - "/themes"
+          - "/fiche-service-public/conges-payes"
+          - "/fiche-ministere-travail/conventions-collectives-nomenclatures"
+          - "/information/la-prime-de-partage-de-la-valeur-infographie"
+          - "/contribution/les-conges-pour-evenements-familiaux"
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-      - name: Restore cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Install dependencies
-        run: |
-          yarn install --prefer-offline --frozen-lockfile
-      - name: Download k8s manifests
-        uses: actions/download-artifact@v3
-        with:
-          name: manifests-dev.yml
-      - name: Get deployment url
-        uses: mikefarah/yq@v4.30.5
-        id: url
-        with:
-          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
       - name: Run lhci
-        run: npx --yes @lhci/cli@latest autorun --collect.url=https://${{ steps.url.outputs.result }}${{ matrix.url }}}
+        run: npx --yes @lhci/cli@latest autorun --collect.url=${{ matrix.url }}${{ matrix.paths }}
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.SOCIALGROOVYBOT_LHCI_GITHUB_APP_TOKEN }}
