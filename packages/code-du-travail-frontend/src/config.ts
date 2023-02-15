@@ -11,6 +11,5 @@ export const COMMIT = process.env.NEXT_PUBLIC_COMMIT ?? "";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? `http://localhost:3000`;
 export const PACKAGE_VERSION = process.env.NEXT_PUBLIC_VERSION ?? version;
-export const PIWIK_SITE_ID = process.env.NEXT_PUBLIC_PIWIK_SITE_ID ?? "3";
-export const PIWIK_URL =
-  process.env.NEXT_PUBLIC_PIWIK_URL ?? "https://matomo.fabrique.social.gouv.fr";
+export const PIWIK_SITE_ID = process.env.NEXT_PUBLIC_PIWIK_SITE_ID ?? "";
+export const PIWIK_URL = process.env.NEXT_PUBLIC_PIWIK_URL ?? "";
