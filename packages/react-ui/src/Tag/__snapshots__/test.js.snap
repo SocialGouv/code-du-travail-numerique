@@ -1,23 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tag /> renders text 1`] = `
-.c0 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.c1 {
-  display: inline-block;
-  padding: 0.4rem 0.8rem;
-  color: #2f3b6c;
-  background-color: #f2f5fa;
-  border-radius: 0.6rem;
-}
-
 <div>
   <span
-    class="c0 c1"
+    class="sc-bcXHqe hZGKZr sc-dkrFOg gwZLei"
   >
     A simple text
   </span>
