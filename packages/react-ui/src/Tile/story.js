@@ -58,7 +58,7 @@ export const base = ({ handler }) => (
   </div>
 );
 
-export const wide = ({ handler }) => (
+export const wide = () => (
   <div
     style={{
       alignItems: "stretch",
