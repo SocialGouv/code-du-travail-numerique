@@ -90,9 +90,9 @@ jobs:
               NEXT_PUBLIC_AZURE_CONTAINER=cdtn
               NEXT_PUBLIC_PIWIK_SITE_ID=3
               NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
-              NEXT_PUBLIC_API_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <(echo "${{ needs.manifests.outputs.API_URL }}" | base64 --decode))/api/v1
+              NEXT_PUBLIC_API_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <<< "${{ needs.manifests.outputs.API_URL }}" | base64 --decode)/api/v1
               NEXT_PUBLIC_COMMIT=${{ needs.manifests.outputs.GITHUB_SHA }}
-              NEXT_PUBLIC_SITE_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <(echo "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode))
+              NEXT_PUBLIC_SITE_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <<< "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode)
 
   register-api:
     name: Register api
