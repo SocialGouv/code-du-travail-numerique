@@ -75,6 +75,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [ manifests ]
     steps:
+      - name: Unseal url
+        run: |
+          echo "API_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <<< "${{ needs.manifests.outputs.API_URL }}" | base64 --decode)" >> $GITHUB_ENV
+          echo "SITE_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <<< "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode)" >> $GITHUB_ENV
       - name: Register docker images
         uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
         with:
@@ -90,9 +94,9 @@ jobs:
               NEXT_PUBLIC_AZURE_CONTAINER=cdtn
               NEXT_PUBLIC_PIWIK_SITE_ID=3
               NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
-              NEXT_PUBLIC_API_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <<< "${{ needs.manifests.outputs.API_URL }}" | base64 --decode)/api/v1
+              NEXT_PUBLIC_API_URL=${{ env.API_URL}}/api/v1
               NEXT_PUBLIC_COMMIT=${{ needs.manifests.outputs.GITHUB_SHA }}
-              NEXT_PUBLIC_SITE_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <<< "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode)
+              NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
 
   register-api:
     name: Register api
@@ -140,9 +144,12 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --prefer-offline --frozen-lockfile
+      - name: Unseal url
+        run: |
+          echo "SITE_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <<< "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode)" >> $GITHUB_ENV
       - name: Run test e2e
         run: |
-          CODECEPT_BASEURL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <(echo "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode)) yarn test:e2e
+          CODECEPT_BASEURL=${{ env.SITE_URL }} yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v3
@@ -175,7 +182,10 @@ jobs:
           - "/information/la-prime-de-partage-de-la-valeur-infographie"
           - "/contribution/les-conges-pour-evenements-familiaux"
     steps:
+      - name: Unseal url
+        run: |
+          echo "SITE_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <<< "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode)" >> $GITHUB_ENV
       - name: Run lhci
-        run: npx --yes @lhci/cli@latest autorun --collect.url=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <(echo "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode))${{ matrix.paths }}
+        run: npx --yes @lhci/cli@latest autorun --collect.url=${{ env.SITE_URL }}${{ matrix.paths }}
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.SOCIALGROOVYBOT_LHCI_GITHUB_APP_TOKEN }}
