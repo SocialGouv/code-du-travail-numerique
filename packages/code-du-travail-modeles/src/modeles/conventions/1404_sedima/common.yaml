@@ -8,3 +8,4 @@ contrat salarié . convention collective . sedima:
   cdtn:
     idcc: 1404
     préavis-retraite: true
+    indemnité-licenciement: false

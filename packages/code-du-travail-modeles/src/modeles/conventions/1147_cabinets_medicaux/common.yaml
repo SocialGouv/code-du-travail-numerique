@@ -6,3 +6,4 @@ contrat salarié . convention collective . cabinets médicaux:
   cdtn:
     idcc: 1147
     préavis-retraite: true
+    indemnité-licenciement: false

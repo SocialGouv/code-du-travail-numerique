@@ -5,3 +5,4 @@ contrat salarié . convention collective . sociétés d'assurances:
   cdtn:
     idcc: 1672
     préavis-retraite: true
+    indemnité-licenciement: false

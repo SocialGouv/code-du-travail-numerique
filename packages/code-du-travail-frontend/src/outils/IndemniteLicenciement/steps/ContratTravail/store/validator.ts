@@ -1,5 +1,5 @@
 import { deepEqualObject, isValidDate } from "../../../../../lib";
-import { ContratTravailStoreInput, ContratTravailStoreError } from "./types";
+import { ContratTravailStoreError, ContratTravailStoreInput } from "./types";
 
 export const validateStep = (state: ContratTravailStoreInput) => {
   const errorState: ContratTravailStoreError = {
@@ -27,7 +27,6 @@ export const validateStep = (state: ContratTravailStoreInput) => {
         ? "La date doit être valide"
         : undefined,
   };
-  console.log("Errors:", errorState);
   return {
     isValid: deepEqualObject(errorState, {
       errorLicenciementInaptitude: undefined,
