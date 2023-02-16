@@ -1,105 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Table /> should render 1`] = `
-.c0 {
-  position: relative;
-  overflow: hidden;
-}
-
-.c0:before,
-.c0:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: block;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c0:before {
-  left: -2rem;
-}
-
-.c0:after {
-  right: -2rem;
-}
-
-.c1 {
-  overflow-x: auto;
-}
-
-.c2 {
-  text-align: left;
-  empty-cells: show;
-  background-color: #fff;
-  border: 1px solid #bbcadf;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.c2 caption {
-  padding: 1rem 0;
-  font-style: italic;
-  text-align: center;
-}
-
-.c2 td,
-.c2 th {
-  padding: 1rem 1.6rem;
-  border: 1px solid #bbcadf;
-}
-
-.c2 th {
-  color: #2f3b6c;
-  font-weight: 600;
-  background: #e4e8ef;
-}
-
-.c2 thead,
-.c2 tfoot {
-  padding: 1rem 1.6rem;
-  vertical-align: bottom;
-  background: #f2f5fa;
-}
-
-.c2 tfoot {
-  vertical-align: top;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c0:before,
-  .c0:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    overflow-x: auto;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-bcXHqe keQCoM"
   >
     <div
-      class="c1"
+      class="sc-gswNZR gCRuQd"
     >
       <table
-        class="c2"
+        class="sc-dkrFOg jOrmrf"
       >
         <tbody>
           <tr>

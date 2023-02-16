@@ -1,5 +1,5 @@
 import { utils } from "@socialgouv/cdtn-ui";
-import { css, html, LitElement } from "lit-element";
+import { css, html, LitElement } from "lit";
 
 const { throttledDisplayInViewport } = utils;
 

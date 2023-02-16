@@ -11,7 +11,7 @@ describe("Dossiers", () => {
     );
     cy.get("body").should(
       "contain",
-      "Le ministère du Travail a mis fin à ses recommandations telles qu’elles figuraient dans le protocole national en entreprise"
+      "Le passe vaccinal et le passe sanitaire ne sont plus requis"
     );
   });
 });
