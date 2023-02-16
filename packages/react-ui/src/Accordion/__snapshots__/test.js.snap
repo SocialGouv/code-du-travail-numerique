@@ -1,103 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> renders 1`] = `
-.c4 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c2 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c1,
-[aria-selected="true"] .c2 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c5 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c0:hover,
-.c0:focus,
-.c0:focus-within,
-.c0[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c3 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <div
     class="accordion"
@@ -105,7 +8,7 @@ exports[`<Accordion /> renders 1`] = `
   >
     <div>
       <div
-        class=""
+        class="sc-hLBbgP fTgiIa"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -116,7 +19,7 @@ exports[`<Accordion /> renders 1`] = `
             aria-controls="accordion__panel-raa-0"
             aria-disabled="false"
             aria-expanded="false"
-            class="c0"
+            class="sc-jSUZER FOjkG"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-0"
             role="button"
@@ -124,7 +27,7 @@ exports[`<Accordion /> renders 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="c1 c2"
+              class="sc-dkrFOg fpzKWB"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -140,10 +43,10 @@ exports[`<Accordion /> renders 1`] = `
               />
             </svg>
             <div
-              class="c3"
+              class="sc-gKPRtg iLBxMm"
             >
               <h3
-                class="c4"
+                class="sc-gswNZR dDyrDL"
                 data-testid="undefined-0"
                 style="margin: 0px;"
               >
@@ -154,13 +57,13 @@ exports[`<Accordion /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="c5"
+          class="sc-eDvSVe gZVJSY"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-0"
         >
           <div
-            class="c6"
+            class="sc-hHTYSt jLyUcE"
           >
             this is the body
           </div>
@@ -172,103 +75,6 @@ exports[`<Accordion /> renders 1`] = `
 `;
 
 exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
-.c4 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c2 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c1,
-[aria-selected="true"] .c2 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c5 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c0:hover,
-.c0:focus,
-.c0:focus-within,
-.c0[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c3 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <div
     class="accordion"
@@ -276,7 +82,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
   >
     <div>
       <div
-        class=""
+        class="sc-hLBbgP fTgiIa"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -287,7 +93,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
             aria-controls="accordion__panel-raa-3"
             aria-disabled="false"
             aria-expanded="false"
-            class="c0"
+            class="sc-jSUZER FOjkG"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-3"
             role="button"
@@ -295,7 +101,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="c1 c2"
+              class="sc-dkrFOg fpzKWB"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -311,10 +117,10 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
               />
             </svg>
             <div
-              class="c3"
+              class="sc-gKPRtg iLBxMm"
             >
               <h3
-                class="c4"
+                class="sc-gswNZR dDyrDL"
                 data-testid="undefined-0"
                 style="margin: 0px;"
               >
@@ -325,13 +131,13 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="c5"
+          class="sc-eDvSVe gZVJSY"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-3"
         >
           <div
-            class="c6"
+            class="sc-hHTYSt jLyUcE"
           >
             this is the body
           </div>
@@ -343,103 +149,6 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
 `;
 
 exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
-.c4 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c2 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c1,
-[aria-selected="true"] .c2 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c5 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c0:hover,
-.c0:focus,
-.c0:focus-within,
-.c0[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c3 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <div
     class="accordion"
@@ -447,7 +156,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
   >
     <div>
       <div
-        class=""
+        class="sc-hLBbgP fTgiIa"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -458,7 +167,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
             aria-controls="accordion__panel-raa-2"
             aria-disabled="false"
             aria-expanded="false"
-            class="c0"
+            class="sc-jSUZER FOjkG"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-2"
             role="button"
@@ -466,7 +175,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="c1 c2"
+              class="sc-dkrFOg fpzKWB"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -482,10 +191,10 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
               />
             </svg>
             <div
-              class="c3"
+              class="sc-gKPRtg iLBxMm"
             >
               <h1
-                class="c4"
+                class="sc-gswNZR dDyrDL"
                 data-testid="undefined-0"
                 style="margin: 0px;"
               >
@@ -496,13 +205,13 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="c5"
+          class="sc-eDvSVe gZVJSY"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-2"
         >
           <div
-            class="c6"
+            class="sc-hHTYSt jLyUcE"
           >
             this is the body
           </div>
@@ -514,103 +223,6 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
 `;
 
 exports[`<Accordion /> renders as h2 1`] = `
-.c4 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c2 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c1,
-[aria-selected="true"] .c2 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c5 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c0:hover,
-.c0:focus,
-.c0:focus-within,
-.c0[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c3 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <div
     class="accordion"
@@ -618,7 +230,7 @@ exports[`<Accordion /> renders as h2 1`] = `
   >
     <div>
       <div
-        class=""
+        class="sc-hLBbgP fTgiIa"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -629,7 +241,7 @@ exports[`<Accordion /> renders as h2 1`] = `
             aria-controls="accordion__panel-raa-1"
             aria-disabled="false"
             aria-expanded="false"
-            class="c0"
+            class="sc-jSUZER FOjkG"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-1"
             role="button"
@@ -637,7 +249,7 @@ exports[`<Accordion /> renders as h2 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="c1 c2"
+              class="sc-dkrFOg fpzKWB"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -653,10 +265,10 @@ exports[`<Accordion /> renders as h2 1`] = `
               />
             </svg>
             <div
-              class="c3"
+              class="sc-gKPRtg iLBxMm"
             >
               <h2
-                class="c4"
+                class="sc-gswNZR dDyrDL"
                 data-testid="undefined-0"
                 style="margin: 0px;"
               >
@@ -667,13 +279,13 @@ exports[`<Accordion /> renders as h2 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="c5"
+          class="sc-eDvSVe gZVJSY"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-1"
         >
           <div
-            class="c6"
+            class="sc-hHTYSt jLyUcE"
           >
             this is the body
           </div>
