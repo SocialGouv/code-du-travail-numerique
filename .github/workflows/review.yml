@@ -90,9 +90,9 @@ jobs:
               NEXT_PUBLIC_AZURE_CONTAINER=cdtn
               NEXT_PUBLIC_PIWIK_SITE_ID=3
               NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
-              NEXT_PUBLIC_API_URL=$API_URL/api/v1
+              NEXT_PUBLIC_API_URL=${{ env.API_URL }}/api/v1
               NEXT_PUBLIC_COMMIT=${{ needs.manifests.outputs.GITHUB_SHA }}
-              NEXT_PUBLIC_SITE_URL=$SITE_URL
+              NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
         env:
           API_URL: $(gpg --decrypt --quiet --batch --passphrase "abc" --output - <(echo "${{ needs.manifests.outputs.API_URL }}" | base64 --decode))
           SITE_URL: $(gpg --decrypt --quiet --batch --passphrase "abc" --output - <(echo "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode))
@@ -145,7 +145,7 @@ jobs:
           yarn install --prefer-offline --frozen-lockfile
       - name: Run test e2e
         run: |
-          CODECEPT_BASEURL=$SITE_URL yarn test:e2e
+          CODECEPT_BASEURL=${{ env.SITE_URL }} yarn test:e2e
         env:
           SITE_URL: $(gpg --decrypt --quiet --batch --passphrase "abc" --output - <(echo "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode))
       - name: Archive generated screenshots
@@ -181,7 +181,7 @@ jobs:
           - "/contribution/les-conges-pour-evenements-familiaux"
     steps:
       - name: Run lhci
-        run: npx --yes @lhci/cli@latest autorun --collect.url=$SITE_URL${{ matrix.paths }}
+        run: npx --yes @lhci/cli@latest autorun --collect.url=${{ env.SITE_URL }}${{ matrix.paths }}
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.SOCIALGROOVYBOT_LHCI_GITHUB_APP_TOKEN }}
           SITE_URL: $(gpg --decrypt --quiet --batch --passphrase "abc" --output - <(echo "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode))
