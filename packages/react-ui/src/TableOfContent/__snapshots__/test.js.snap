@@ -1,51 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TableOfContent /> renders with nav items 1`] = `
-.c1 {
-  display: block;
-  padding: 1.6rem 0 1rem 0;
-  color: #4d73b8;
-  font-weight: bold;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  text-transform: uppercase;
-}
-
-.c0 {
-  display: block;
-  padding: 0.4rem 0;
-  font-weight: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-@media (max-width:980px) {
-  .c0 {
-    font-weight: normal;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <div>
     <a
-      class="c0"
+      class="sc-gswNZR biGLyc"
       href="#it-works-1"
     >
       This should appear inside the table of content
     </a>
     <span
-      class="c1"
+      class="sc-bcXHqe eiklNx"
     >
       delimiter
     </span>
     <a
-      class="c0"
+      class="sc-gswNZR biGLyc"
       href="#it-works-2"
     >
       this should appear

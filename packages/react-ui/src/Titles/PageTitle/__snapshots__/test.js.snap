@@ -1,59 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PageTitle /> renders a H1 page title 1`] = `
-.c2 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c0 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: auto;
-  text-align: center;
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin-bottom: 3.2rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 2.6rem;
-  }
-}
-
 <div>
   <header
-    class="c0"
+    class="sc-gswNZR eDYiWs"
   >
     <h1
-      class="c1"
+      class="sc-hLBbgP cpYAAb"
     >
       <span
-        class="c2"
+        class="sc-bcXHqe eafpDT"
       />
       Lorem Ipsum
     </h1>
@@ -62,65 +18,15 @@ exports[`<PageTitle /> renders a H1 page title 1`] = `
 `;
 
 exports[`<PageTitle /> renders a left striped shifted H1 page title 1`] = `
-.c2 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c0 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin-bottom: 3.2rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 2.6rem;
-  }
-}
-
 <div>
   <header
-    class="c0"
+    class="sc-gswNZR gvmDjE"
   >
     <h1
-      class="c1"
+      class="sc-hLBbgP jMohai"
     >
       <span
-        class="c2"
+        class="sc-bcXHqe ebNMxn"
       />
       Lorem Ipsum
     </h1>
