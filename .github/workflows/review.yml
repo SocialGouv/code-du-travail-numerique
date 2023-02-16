@@ -19,9 +19,9 @@ jobs:
     name: Generate k8s manifests
     runs-on: ubuntu-latest
     outputs:
-      GITHUB_SHA: ${{ steps.sha.outputs.GITHUB_SHA }}
-      SITE_URL: ${{ steps.url.outputs.SITE_URL }}
-      API_URL: ${{ steps.apiurl.outputs.API_URL }}
+      GITHUB_SHA: ${{ steps.output.outputs.GITHUB_SHA }}
+      SITE_URL: ${{ steps.output.outputs.SITE_URL }}
+      API_URL: ${{ steps.output.outputs.API_URL }}
     steps:
       - name: Install
         shell: bash
@@ -46,11 +46,6 @@ jobs:
           ELASTIC_APM_ENVIRONMENT: cdtn-${{ steps.k8s.outputs.branch }}
           ES_INDEX_PREFIX: cdtn-preprod
 
-      - name: Get commit sha
-        id: sha
-        run: |
-          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_OUTPUT
-
       - name: Download k8s manifests
         uses: actions/download-artifact@v3
         with:
@@ -68,15 +63,12 @@ jobs:
         with:
           cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | head -n 1
 
-      - name: Set deployment url
-        id: url
+      - name: Set output
+        id: output
         run: |
           echo "SITE_URL=https://${{ steps.yq_url.outputs.result }}" >> $GITHUB_OUTPUT
-
-      - name: Set api url
-        id: apiurl
-        run: |
           echo "API_URL=https://${{ steps.yq_apiurl.outputs.result }}" >> $GITHUB_OUTPUT
+          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_OUTPUT
 
   register-frontend:
     name: Register frontend
