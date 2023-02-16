@@ -8,7 +8,7 @@ import {
   PublicodesInformation,
 } from "./types";
 import { StoreSlice } from "../../../types";
-import { MissingArgs } from "@socialgouv/modeles-social";
+import { MissingArgs, CatPro3239 } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
@@ -163,29 +163,33 @@ const createCommonInformationsStore: StoreSlice<
       );
     },
     onSetStepHidden: () => {
-      try {
-        const publicodes = get().agreementData.publicodes!;
-        const publicodesInformations = get().informationsData.input
-          .publicodesInformations;
-        const agreement = get().agreementData.input.agreement!;
-        const rules = informationToSituation(publicodesInformations);
-        const isStepSalaryHidden = publicodes.setSituation(
-          mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-            agreement.num,
-            rules
-          ),
-          "contrat salarié . indemnité de licenciement . étape salaire désactivée"
-        ).result.value as boolean;
-        set(
-          produce((state: CommonInformationsStoreSlice) => {
-            state.informationsData.input.isStepSalaryHidden = isStepSalaryHidden;
-          })
-        );
-      } catch (e) {
-        console.error(e);
+      const publicodesInformations = get().informationsData.input
+        .publicodesInformations;
+      const agreement = get().agreementData.input.agreement!;
+      let isStepHidden = false;
+      if (
+        agreement &&
+        agreement.num === 3239 &&
+        publicodesInformations.find(
+          (v) =>
+            v.question.rule.nom ===
+            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
+        )?.info === `'${CatPro3239.assistantMaternel}'` &&
+        publicodesInformations.find(
+          (v) =>
+            v.question.rule.nom ===
+            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement"
+        )?.info === `'Non'`
+      ) {
+        isStepHidden = true;
       }
+      set(
+        produce((state: CommonInformationsStoreSlice) => {
+          state.informationsData.input.isStepSalaryHidden = isStepHidden;
+        })
+      );
     },
-    onValidateWithEligibility: () => {
+    onNextStep: () => {
       const state = get().informationsData.input;
       const { isValid, errorState } = validateStep(state);
       let errorEligibility;

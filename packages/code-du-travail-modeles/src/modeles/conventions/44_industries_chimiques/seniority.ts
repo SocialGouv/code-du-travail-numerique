@@ -14,7 +14,8 @@ import type {
 import { MotifKeys } from "../../common/motif-keys";
 
 export class Seniority44
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC0044> {
+  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC0044>
+{
   computeSeniority({
     dateEntree,
     dateSortie,
@@ -55,7 +56,7 @@ export class Seniority44
           item.motif.key === MotifKeys.maladieNonPro &&
           item.durationInMonth > 36
         ) {
-          return total + item.durationInMonth;
+          return total + (item.durationInMonth - 36);
         }
         return total + item.durationInMonth * m.value;
       }, 0) / 12;

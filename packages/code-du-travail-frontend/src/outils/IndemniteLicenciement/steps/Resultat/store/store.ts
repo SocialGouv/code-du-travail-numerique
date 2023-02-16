@@ -1,6 +1,5 @@
 import {
   Formula,
-  IndemniteLicenciementPublicodes,
   Notification,
   PublicodesIndemniteLicenciementResult,
   References,
@@ -30,8 +29,8 @@ import { getAgreementReferenceSalary } from "../../../agreements";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
 import {
-  getAgreementSeniority,
   getAgreementRequiredSeniority,
+  getAgreementSeniority,
 } from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";

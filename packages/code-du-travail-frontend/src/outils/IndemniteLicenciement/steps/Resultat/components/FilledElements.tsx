@@ -29,6 +29,7 @@ type Props = {
   hasSameSalary: boolean;
   salary?: string;
   isStepSalaryHidden: boolean;
+  showHasTempsPartiel: boolean;
 };
 
 export default function FilledElements(props: Props) {
@@ -103,7 +104,7 @@ export default function FilledElements(props: Props) {
           <strong>Ancienneté (A)</strong>
           <ul>
             <li>
-              Date d&apos;entrée dans l&apos;entreprise&nbsp;:&nbsp;
+              Date de début du contrat de travail&nbsp;:&nbsp;
               {props.dateEntree}
             </li>
             <li>
@@ -111,7 +112,7 @@ export default function FilledElements(props: Props) {
               {props.dateNotification}
             </li>
             <li>
-              Date de sortie de l&apos;entreprise&nbsp;:&nbsp;
+              Date de fin du contrat de travail&nbsp;:&nbsp;
               {props.dateSortie}
             </li>
             <li>
@@ -126,10 +127,12 @@ export default function FilledElements(props: Props) {
           <li>
             <strong>Salaire de référence (Sref)</strong>
             <ul>
-              <li>
-                Alternance temps plein / temps partiel&nbsp;:&nbsp;
-                {props.hasTempsPartiel ? "Oui" : "Non"}
-              </li>
+              {props.showHasTempsPartiel && (
+                <li>
+                  Alternance temps plein / temps partiel&nbsp;:&nbsp;
+                  {props.hasTempsPartiel ? "Oui" : "Non"}
+                </li>
+              )}
               <li>
                 {generateResultSameSalary(
                   props.isArretTravail ? "oui" : "non",

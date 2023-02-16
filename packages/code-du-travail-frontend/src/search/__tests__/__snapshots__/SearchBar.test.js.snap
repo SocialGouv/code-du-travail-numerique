@@ -4,11 +4,11 @@ exports[`<SearchBar /> should render 1`] = `
 <div>
   <form
     action="/recherche"
-    class="sc-ellfGf bAscX"
+    class="sc-elAWhN bsCmZO"
     role="search"
   >
     <div
-      class="sc-gXfVKN gNNUJi"
+      class="sc-gYbzsP fCavdH"
     >
       <label>
         Rechercher
@@ -26,7 +26,7 @@ exports[`<SearchBar /> should render 1`] = `
         aria-controls="react-autowhatever-1"
         aria-label="recherchez par mots-clés"
         autocomplete="off"
-        class="sc-iIgjPs edChZz"
+        class="sc-iJbNxu fWeNJ"
         id="main-search-input"
         name="q"
         placeholder="Rechercher"
@@ -35,20 +35,20 @@ exports[`<SearchBar /> should render 1`] = `
         value=""
       />
       <div
-        class="sc-jtiXyc epYyJZ"
+        class="sc-jsTgWu iLotkC"
         id="react-autowhatever-1"
         role="listbox"
       />
     </div>
     <button
       aria-label="Lancer ma recherche"
-      class="sc-hiKfDv jbMTFD sc-amkrK ctiiva"
+      class="sc-hhOBVt cizsts sc-ZqGJI dqEqjF"
       title="Lancer ma recherche"
       type="submit"
     >
       <svg
         aria-hidden="true"
-        class="sc-kizEQm jMSoYK"
+        class="sc-kiPvrU kybKMq"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -67,11 +67,11 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 <div>
   <form
     action="/recherche"
-    class="sc-ellfGf bAscX"
+    class="sc-elAWhN bsCmZO"
     role="search"
   >
     <div
-      class="sc-gXfVKN gNNUJi"
+      class="sc-gYbzsP fCavdH"
     >
       <label>
         Rechercher
@@ -89,7 +89,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
         aria-controls="react-autowhatever-1"
         aria-label="recherchez par mots-clés"
         autocomplete="off"
-        class="sc-iIgjPs edChZz"
+        class="sc-iJbNxu fWeNJ"
         id="main-search-input"
         name="q"
         placeholder="Rechercher"
@@ -98,7 +98,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
         value="yolo"
       />
       <div
-        class="sc-jtiXyc epYyJZ"
+        class="sc-jsTgWu iLotkC"
         id="react-autowhatever-1"
         role="listbox"
       >
@@ -114,10 +114,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
           >
             <div
-              class="sc-dvUynV ddAQyb"
+              class="sc-dvEHMn dVSrXz"
             >
               <span
-                class="sc-kTCsyW"
+                class="sc-kSGOQU"
               >
                 foo
               </span>
@@ -131,10 +131,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
           >
             <div
-              class="sc-dvUynV ddAQyb"
+              class="sc-dvEHMn dVSrXz"
             >
               <span
-                class="sc-kTCsyW"
+                class="sc-kSGOQU"
               >
                 foobar
               </span>
@@ -148,10 +148,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
           >
             <div
-              class="sc-dvUynV ddAQyb"
+              class="sc-dvEHMn dVSrXz"
             >
               <span
-                class="sc-kTCsyW"
+                class="sc-kSGOQU"
               >
                 foo bar ?
               </span>
@@ -165,10 +165,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
           >
             <div
-              class="sc-dvUynV ddAQyb"
+              class="sc-dvEHMn dVSrXz"
             >
               <span
-                class="sc-kTCsyW"
+                class="sc-kSGOQU"
               >
                 foo bazzz
               </span>
@@ -179,13 +179,13 @@ exports[`<SearchBar /> should render suggestions 1`] = `
     </div>
     <button
       aria-label="Lancer ma recherche"
-      class="sc-hiKfDv jbMTFD sc-amkrK ctiiva"
+      class="sc-hhOBVt cizsts sc-ZqGJI dqEqjF"
       title="Lancer ma recherche"
       type="submit"
     >
       <svg
         aria-hidden="true"
-        class="sc-kizEQm jMSoYK"
+        class="sc-kiPvrU kybKMq"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"

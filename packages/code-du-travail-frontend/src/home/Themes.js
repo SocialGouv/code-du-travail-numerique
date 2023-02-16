@@ -22,6 +22,7 @@ export const Themes = ({ themes = [] }) => {
           key={slug}
           href={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
           passHref
+          legacyBehavior
         >
           <Tile title={title} icon={icons[icon]} titleTagType="h3" />
         </Link>
@@ -70,7 +71,7 @@ export const Themes = ({ themes = [] }) => {
         <RootGrid>
           {[titleCell, ghostCell, t1, t2, illustrationCell].concat(otherThemes)}
         </RootGrid>
-        <Link href="/themes" passHref>
+        <Link href="/themes" passHref legacyBehavior>
           <Button variant="primary" as="a">
             Voir tous les thèmes <StyledArrowRight />
           </Button>

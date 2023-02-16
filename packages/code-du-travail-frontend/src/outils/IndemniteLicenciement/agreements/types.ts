@@ -1,5 +1,6 @@
 import { StoreApi } from "zustand";
 import { MainStore } from "../store";
+import { StoreOptions } from "../store";
 import {
   Agreement1516StoreError,
   Agreement1516StoreInput,
@@ -60,12 +61,13 @@ export type AgreementStoreSlice = Agreement1516StoreSlice &
 
 export const createRootAgreementsStore = (
   set: StoreApi<MainStore>["setState"],
-  get: StoreApi<MainStore>["getState"]
+  get: StoreApi<MainStore>["getState"],
+  options: StoreOptions
 ) => ({
-  ...createAgreement1516StoreSalaires(set, get),
-  ...createAgreement1527StoreSalaires(set, get),
-  ...createAgreement16StoreSalaires(set, get),
-  ...createAgreement29StoreSalaires(set, get),
-  ...createAgreement44StoreSalaires(set, get),
-  ...createAgreement2609StoreSalaires(set, get),
+  ...createAgreement1516StoreSalaires(set, get, options),
+  ...createAgreement1527StoreSalaires(set, get, options),
+  ...createAgreement16StoreSalaires(set, get, options),
+  ...createAgreement29StoreSalaires(set, get, options),
+  ...createAgreement44StoreSalaires(set, get, options),
+  ...createAgreement2609StoreSalaires(set, get, options),
 });

@@ -10,7 +10,6 @@ import {
   Section,
   theme,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -21,13 +20,10 @@ import { Themes } from "../src/home/Themes";
 import { Layout } from "../src/layout/Layout";
 import SearchHero from "../src/search/SearchHero";
 import { fetchTools } from "../src/outils/service";
+import { API_URL } from "../src/config";
 
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
-
-export const DocumentsTile = (
-  <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref>
+const DocumentsTile = (
+  <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref legacyBehavior>
     <CallToActionTile
       action="Découvrir"
       custom
@@ -76,7 +72,7 @@ const Home = ({ themes = [], highlights = [], tools }) => (
               linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
             }
             return (
-              <Link {...linkProps} key={slug || href}>
+              <Link {...linkProps} key={slug || href} legacyBehavior>
                 <CallToActionTile
                   action={action}
                   custom
@@ -93,7 +89,7 @@ const Home = ({ themes = [], highlights = [], tools }) => (
           {DocumentsTile}
         </Grid>
         <ButtonWrapper>
-          <Link href="/outils" passHref>
+          <Link href="/outils" passHref legacyBehavior>
             <Button variant="primary" as="a">
               Voir tous les outils <StyledArrowRight />
             </Button>

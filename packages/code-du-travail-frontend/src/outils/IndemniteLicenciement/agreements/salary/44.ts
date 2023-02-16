@@ -27,6 +27,7 @@ export class AgreementSalary44 implements AgreementSalary {
       salaires: salaryPeriods,
       category,
       hasVariablePay: ccInput.hasVariablePay === "oui",
+      lastMonthSalary: ccInput.lastMonthSalary,
     });
   };
 }

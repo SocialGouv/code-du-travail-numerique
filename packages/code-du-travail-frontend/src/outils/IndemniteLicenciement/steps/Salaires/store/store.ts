@@ -25,6 +25,7 @@ const initialState: SalairesStoreData = {
   input: {
     salaryPeriods: [],
     refSalary: 0,
+    showHasTempsPartiel: true,
   },
   error: {},
   hasBeenSubmit: false,
@@ -61,6 +62,18 @@ const createSalairesStore: StoreSlice<
         })
       );
     },
+    initShowHasTempsPartiel: () => {
+      const idcc = get().agreementData.input.agreement?.num;
+      const showPartialTime = idcc !== 3239;
+      set(
+        produce((state: SalairesStoreSlice) => {
+          state.salairesData.input.showHasTempsPartiel = showPartialTime;
+          state.salairesData.input.hasTempsPartiel = showPartialTime
+            ? state.salairesData.input.hasTempsPartiel
+            : "non";
+        })
+      );
+    },
     onChangeHasTempsPartiel: (value) => {
       applyGenericValidation(get, set, "hasTempsPartiel", value);
     },
@@ -76,7 +89,7 @@ const createSalairesStore: StoreSlice<
     onChangeSalary(value) {
       applyGenericValidation(get, set, "salary", value);
     },
-    onValidateStep: () => {
+    onNextStep: () => {
       const { isValid, errorState } = validateStep(get().salairesData.input);
 
       if (isValid) {
@@ -127,7 +140,7 @@ const createSalairesStore: StoreSlice<
 
       set(
         produce((state: SalairesStoreSlice) => {
-          state.salairesData.hasBeenSubmit = isStepValid ? false : true;
+          state.salairesData.hasBeenSubmit = !isStepValid;
           state.salairesData.isStepValid = isStepValid;
           state.salairesData.error = errorState;
         })

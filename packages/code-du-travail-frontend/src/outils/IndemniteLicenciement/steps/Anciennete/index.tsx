@@ -7,6 +7,8 @@ import { useIndemniteLicenciementStore } from "../../store";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 import Html from "../../../../common/Html";
+// Do not optimize the following import
+import { getMessageMotifExample } from "../../agreements/messageMotifExample";
 
 const StepAnciennete = () => {
   const {
@@ -56,13 +58,18 @@ const StepAnciennete = () => {
     init();
   }, [init]);
 
+  const messageMotifsExample = React.useMemo(
+    () => getMessageMotifExample(informationData),
+    [informationData]
+  );
+
   return (
     <>
       <SectionTitle hasSmallMarginTop>
-        Dates d’entrée et de sortie de l’entreprise
+        Dates de début et de fin de contrat
       </SectionTitle>
       <TextQuestion
-        label="Quelle est la date d’entrée dans l’entreprise&nbsp;?"
+        label="Quelle est la date de début du contrat de travail&nbsp;?"
         inputType="date"
         placeholder="jj/mm/aaaa"
         value={dateEntree}
@@ -84,7 +91,7 @@ const StepAnciennete = () => {
         dataTestId={"date-notification"}
       />
       <TextQuestion
-        label="Quelle est la date de sortie de l’entreprise&nbsp;?"
+        label="Quelle est la date de fin du contrat de travail&nbsp;?"
         inputType="date"
         placeholder="jj/mm/aaaa"
         value={dateSortie}
@@ -136,6 +143,7 @@ const StepAnciennete = () => {
           absences={absencePeriods}
           error={errorAbsencePeriods}
           informationData={informationData}
+          messageMotifExample={messageMotifsExample}
         />
       )}
     </>

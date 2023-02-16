@@ -26,11 +26,23 @@ export const validateStep = (state: Agreement44StoreInput) => {
       state.showVariablePay && !state.hasVariablePay
         ? "Vous devez répondre à cette question"
         : undefined,
+    errorKnowingLastSalary:
+      state.showKnowingLastSalary && !state.knowingLastSalary
+        ? "Vous devez répondre à cette question"
+        : undefined,
+    errorLastMonthSalary:
+      state.showLastMonthSalary &&
+      (!state.lastMonthSalary ||
+        (state.lastMonthSalary && !state.lastMonthSalary.value))
+        ? "Vous devez répondre à cette question"
+        : undefined,
   };
 
   return {
     isValid: deepEqualObject(errorState, {
       errorHasVariablePay: undefined,
+      errorKnowingLastSalary: undefined,
+      errorLastMonthSalary: undefined,
     }),
     errorState,
   };

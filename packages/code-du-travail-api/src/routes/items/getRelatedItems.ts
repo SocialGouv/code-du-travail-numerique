@@ -25,26 +25,19 @@ const sources = [
 ];
 
 // select certain fields and add recommendation source (covisits or search)
-const mapSource = (reco: string) => ({
-  action,
-  description,
-  icon,
-  slug,
-  source,
-  subtitle,
-  title,
-  url,
-}: any) => ({
-  action,
-  description,
-  icon,
-  reco,
-  slug,
-  source,
-  subtitle,
-  title,
-  url,
-});
+const mapSource =
+  (reco: string) =>
+  ({ action, description, icon, slug, source, subtitle, title, url }: any) => ({
+    action,
+    description,
+    icon,
+    reco,
+    slug,
+    source,
+    subtitle,
+    title,
+    url,
+  });
 
 // rely on covisit links within the item, computed offline from usage logs (Monolog)
 export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {

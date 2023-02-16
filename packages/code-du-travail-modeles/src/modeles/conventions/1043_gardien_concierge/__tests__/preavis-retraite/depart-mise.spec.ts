@@ -29,7 +29,8 @@ test.each`
       {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC1043'",
-        "contrat salarié . convention collective . gardien concierge . coefficient": coefficient,
+        "contrat salarié . convention collective . gardien concierge . coefficient":
+          coefficient,
         "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",

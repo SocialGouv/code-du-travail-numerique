@@ -1,6 +1,6 @@
 import { Absence, SeniorityFactory } from "@socialgouv/modeles-social";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social/bin";
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import { AddButton } from "../../../../common/Buttons";
@@ -19,6 +19,7 @@ type Props = {
     absences?: AncienneteAbsenceStoreError[];
   };
   idcc?: SupportedCcIndemniteLicenciement;
+  messageMotifExample?: string;
 };
 
 const AbsencePeriods = ({
@@ -27,6 +28,7 @@ const AbsencePeriods = ({
   error,
   idcc,
   informationData,
+  messageMotifExample,
 }: Props) => {
   const motifs = new SeniorityFactory()
     .create(idcc ?? SupportedCcIndemniteLicenciement.default)
@@ -41,6 +43,19 @@ const AbsencePeriods = ({
           },
         ]
   );
+
+  useEffect(() => {
+    setLocalAbsences(
+      absences.length > 0
+        ? absences
+        : [
+            {
+              motif: motifs[0],
+              durationInMonth: undefined,
+            },
+          ]
+    );
+  }, [absences, motifs]);
 
   const [errorsInput, setErrorsInput] = React.useState({});
 
@@ -102,15 +117,7 @@ const AbsencePeriods = ({
 
   return (
     <>
-      <p>
-        Les congés payés, le congé de maternité ou d&apos;adoption, le congé de
-        présence parentale, l&apos;arrêt de travail lié à un accident du travail
-        ou une maladie professionnelle, le congé lié à la formation
-        professionnelle (CIF, projet de transition professionnelle), le congé de
-        solidarité internationale, le congé de solidarité familiale et le stage
-        de fin d&apos;étude de plus de 2 mois sont déjà pris en compte dans
-        l&apos;ancienneté et ne sont pas des périodes à renseigner ci-après :
-      </p>
+      {messageMotifExample && <p>{messageMotifExample}</p>}
       <Question>
         Quels sont le motif et la durée de ces absences prolongées&nbsp;?
       </Question>
@@ -121,7 +128,7 @@ const AbsencePeriods = ({
       </SmallText>
       {localAbsences.map((value, index) => (
         <AbsencePeriod
-          key={index}
+          key={`${index}-${value.motif.key}-${value.durationInMonth}`}
           index={index}
           onSelectMotif={onSelectMotif}
           onSetDurationDate={onSetDurationDate}

@@ -1,8 +1,4 @@
-import getConfig from "next/config";
-
-const {
-  publicRuntimeConfig: { AZURE_BASE_URL, AZURE_CONTAINER },
-} = getConfig();
+import { AZURE_BASE_URL, AZURE_CONTAINER } from "../config";
 
 export const toUrl = (file: string): string => {
   if (!file) return "";

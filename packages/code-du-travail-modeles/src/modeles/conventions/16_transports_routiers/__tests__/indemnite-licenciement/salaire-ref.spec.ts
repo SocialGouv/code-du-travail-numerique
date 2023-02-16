@@ -98,9 +98,9 @@ describe("Calcul du salaire pour la CC 16", () => {
       { month: "juillet", value: 2443 },
       { month: "août", value: 2410 },
       { month: "septembre", value: 2537 },
-      { month: "octobre", value: 2428, prime: 1000 },
-      { month: "novembre", value: 2434, prime: 2000 },
-      { month: "décembre", value: 2551, prime: 1000 },
+      { month: "octobre", prime: 1000, value: 2428 },
+      { month: "novembre", prime: 2000, value: 2434 },
+      { month: "décembre", prime: 1000, value: 2551 },
     ];
 
     test.each`
@@ -148,9 +148,9 @@ describe("Calcul du salaire pour la CC 16", () => {
       { month: "juillet", value: 2525 },
       { month: "août", value: 2412 },
       { month: "septembre", value: 2411 },
-      { month: "octobre", value: 2460, prime: 500 },
-      { month: "novembre", value: 2486, prime: 750 },
-      { month: "décembre", value: 2602, prime: 600 },
+      { month: "octobre", prime: 500, value: 2460 },
+      { month: "novembre", prime: 750, value: 2486 },
+      { month: "décembre", prime: 600, value: 2602 },
     ];
 
     test.each`

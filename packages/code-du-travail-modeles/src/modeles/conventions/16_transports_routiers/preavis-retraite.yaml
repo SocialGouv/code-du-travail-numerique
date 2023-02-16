@@ -34,7 +34,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
   valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe:
-  question: Quel est le groupe du salarié&nbsp;?
+  question: Quel est le groupe du salarié ?
   titre: Groupe
   description: Le groupe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   cdtn:

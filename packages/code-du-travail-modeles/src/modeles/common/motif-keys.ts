@@ -9,4 +9,5 @@ export enum MotifKeys {
   greve = "absenceGreve",
   miseAPied = "absenceMiseAPied",
   congesPaternite = "absenceCongesPaternite",
+  convenancePro = "absenceConvenancePro",
 }

@@ -24,10 +24,10 @@ const Information = ({
       references = [],
       title = "",
       dismissalProcess = false,
+      slug = "",
     },
     relatedItems,
-    slug,
-  } = { _source: {}, slug: "" },
+  } = { _source: {} },
 }: EditorialContentDataWrapper) => {
   const { asPath } = useRouter();
   const anchor = asPath.split("#")[1];
@@ -59,9 +59,9 @@ const Information = ({
           contents={contents}
         ></Contents>
         {references.map(
-          ({ label, links }) =>
+          ({ label, links }, index) =>
             links.length > 0 && (
-              <Section>
+              <Section key={`section-info-${index}`}>
                 <References
                   label={label}
                   accordionDisplay={1}

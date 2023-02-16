@@ -9,16 +9,12 @@ import {
 } from "@socialgouv/cdtn-ui";
 import { max, startOfDay, subMonths } from "date-fns";
 import { GetServerSideProps } from "next";
-import getConfig from "next/config";
 import React from "react";
 import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
+import { API_URL } from "../src/config";
 import { Layout } from "../src/layout/Layout";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
 
 type PropsData = {
   nbDocuments: number;

@@ -59,9 +59,9 @@ describe("Indemnité licenciement - CC 44", () => {
     });
 
     test(`
-     - vérification que l'on demande si le salaire a eu des primes pour un Ouvriers et collaborateurs (Groupes I à III)
-     - vérification que l'on demande si le salaire a eu des primes pour un Agents de maîtrise et techniciens (Groupe IV)
-     - vérification que l'on ne demande pas si le salaire a eu des primes pour un Ingénieurs et cadres (Groupe V)
+      - vérification que l'on demande si le salaire a eu des primes pour un Ouvriers et collaborateurs (Groupes I à III)
+      - vérification que l'on demande si le salaire a eu des primes pour un Agents de maîtrise et techniciens (Groupe IV)
+      - vérification que l'on ne demande pas si le salaire a eu des primes pour un Ingénieurs et cadres (Groupe V)
     `, () => {
       // vérification que l'on demande si le salaire a eu des primes pour un Ouvriers et collaborateurs (Groupes I à III)
       userEvent.click(ui.salary.hasPartialTime.non.get());
@@ -130,6 +130,29 @@ describe("Indemnité licenciement - CC 44", () => {
           "Les salaires indiqués comportent-ils une partie variable ?"
         )
       ).not.toBeInTheDocument();
+    });
+
+    test(`Ajout des questions supplémentaires pour le dernier salaire`, () => {
+      // vérification que l'on demande si le salaire a eu des primes pour un Ouvriers et collaborateurs (Groupes I à III)
+      userEvent.click(ui.salary.hasPartialTime.non.get());
+      userEvent.click(ui.salary.hasSameSalary.non.get());
+      userEvent.click(ui.salary.variablePart.non.get());
+      expect(
+        screen.queryByText(
+          "Connaissez-vous le montant du dernier salaire perçu (préavis inclus) ?"
+        )
+      ).toBeInTheDocument();
+      userEvent.click(ui.salary.agreement44.knowingLastSalary.oui.get());
+      expect(
+        screen.queryByText("Salaire et primes perçus au cours du dernier mois")
+      ).toBeInTheDocument();
+      fireEvent.change(ui.salary.agreement44.salaries.get(), {
+        target: { value: "2500" },
+      });
+      fireEvent.change(ui.salary.agreement44.primes.get(), {
+        target: { value: "500" },
+      });
+      userEvent.click(ui.next.get());
     });
   });
 });

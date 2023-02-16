@@ -188,8 +188,5 @@ contrat salarié . indemnité de licenciement . résultat conventionnel:
   valeur: 0
   unité: €
 
-contrat salarié . indemnité de licenciement . étape salaire désactivée:
-  valeur: non
-
 contrat salarié . indemnité de licenciement . date de notification:
   valeur: non

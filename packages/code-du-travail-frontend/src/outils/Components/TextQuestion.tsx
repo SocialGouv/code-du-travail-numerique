@@ -5,7 +5,7 @@ import styled from "styled-components";
 import xss from "xss";
 import Html from "../../common/Html";
 import { InlineError } from "../common/ErrorField";
-import { Tooltip, Question } from "../common/Question";
+import { Question, Tooltip } from "../common/Question";
 import { SmallText } from "../common/stepStyles";
 import { SubLabel } from "./SelectQuestion";
 
@@ -54,7 +54,7 @@ export default function TextQuestion({
           name={id}
           value={value}
           onChange={(e) => onChange(inputType === "date" ? e : e.target.value)}
-          invalid={error}
+          invalid={!!error}
           placeholder={placeholder}
           icon={icon}
           type={inputType === "date" ? "text" : inputType}

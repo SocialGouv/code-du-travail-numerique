@@ -11,6 +11,7 @@ import { Enterprise } from "../../../conventions/Search/api/enterprises.service"
 import { InlineError } from "../../common/ErrorField";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
+import { AgreementSearchValue } from "./store";
 
 type Props = {
   selectedRoute?: Route;
@@ -20,6 +21,8 @@ type Props = {
   selectedEnterprise?: Enterprise;
   selectedAgreement?: Agreement;
   onAgreementChange: OnSelectAgreementFn;
+  onAgreementSearch: (value: AgreementSearchValue) => void;
+  onEnterpriseSearch: (value: AgreementSearchValue) => void;
   simulator: PublicodesSimulator;
   error?: {
     route?: string;
@@ -38,6 +41,8 @@ function AgreementStep({
   error,
   simulator,
   onInitAgreementPage,
+  onEnterpriseSearch,
+  onAgreementSearch,
 }: Props): JSX.Element {
   React.useEffect(() => {
     onInitAgreementPage();
@@ -88,7 +93,9 @@ function AgreementStep({
             supportedAgreements={supportedAgreements}
             selectedAgreement={selectedAgreement}
             onSelectAgreement={onAgreementChange}
-            onUserAction={() => {}}
+            onUserAction={(action, value: AgreementSearchValue) =>
+              onAgreementSearch(value)
+            }
             alertAgreementNotSupported={undefined}
             simulator={simulator}
           />
@@ -102,7 +109,10 @@ function AgreementStep({
             selectedAgreement={selectedAgreement}
             selectedEnterprise={selectedEnterprise}
             onSelectAgreement={onAgreementChange}
-            onUserAction={() => {}}
+            onUserAction={(action, value: AgreementSearchValue) =>
+              onEnterpriseSearch(value)
+            }
+            simulator={simulator}
           />
           {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
         </>

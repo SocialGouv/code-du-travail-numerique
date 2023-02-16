@@ -19,16 +19,16 @@ export const getDateSortieErrors = (
     errors.errorDateSortie = "Veuillez saisir cette date";
   } else if (state.dateSortie && differenceInMonths(new Date(), dSortie) > 18) {
     errors.errorDateSortie =
-      "La date de sortie doit se situer dans les 18 derniers mois";
+      "La date de fin de contrat doit se situer dans les 18 derniers mois";
   } else if (
     state.dateSortie &&
     state.dateEntree &&
     isAfter(dEntree, dSortie)
   ) {
     errors.errorDateSortie =
-      "La date de sortie doit se situer après la date d’entrée";
+      "La date de fin de contrat doit se situer après la date de début de contrat";
   } else if (!isValidDate(state.dateSortie)) {
-    errors.errorDateSortie = "La date de sortie est invalide";
+    errors.errorDateSortie = "La date de fin de contrat est invalide";
   } else {
     errors.errorDateSortie = undefined;
   }

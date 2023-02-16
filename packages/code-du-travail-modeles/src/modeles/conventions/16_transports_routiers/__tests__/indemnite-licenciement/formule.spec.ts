@@ -27,15 +27,18 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . convention collective": "'IDCC0016'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
             "'Ouvriers'",
-          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . age": age,
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . age":
+            age,
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
             haveRightToRetirement ? "'Oui'" : "'Non'"
           }`,
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
             "'Non'",
           "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1000",
         });
@@ -64,8 +67,10 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive":
             "'Non'",
           "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1000",
         });
@@ -98,8 +103,10 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive":
             "'Oui'",
           "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1000",
         });
@@ -131,15 +138,18 @@ describe("Formule indemnité licenciement - CC 16", () => {
       }) => {
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0016'",
-          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": age,
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age":
+            age,
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
             "'Employés'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
             haveRightToRetirement ? "'Oui'" : "'Non'"
           }`,
           "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1000",
         });
@@ -174,15 +184,18 @@ describe("Formule indemnité licenciement - CC 16", () => {
       }) => {
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0016'",
-          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": age,
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age":
+            age,
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
             "'TAM'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
             haveRightToRetirement ? "'Oui'" : "'Non'"
           }`,
           "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1000",
         });
@@ -231,10 +244,15 @@ describe("Formule indemnité licenciement - CC 16", () => {
       ${15}     | ${6}         | ${true}    | ${60} | ${false}              | ${"(4 / 10 * Sref * A1) + (3 / 10 * Sref * A2)"}                                                                             | ${["A1 : Ancienneté dans la catégorie Ingénieurs et cadres (15 ans)", "A2 : Ancienneté dans les catégories Techniciens et agents de maîtrise et Employés (6 ans)", "Sref : Salaire de référence (1000 €)"]}
       ${31}     | ${undefined} | ${true}    | ${60} | ${false}              | ${"4 / 10 * Sref * A1"}                                                                                                      | ${["A1 : Ancienneté totale (31 ans)", "Sref : Salaire de référence (1000 €)"]}
       ${25}     | ${6}         | ${true}    | ${60} | ${false}              | ${"(4 / 10 * Sref * A1) + (3 / 10 * Sref * A2)"}                                                                             | ${["A1 : Ancienneté dans la catégorie Ingénieurs et cadres (25 ans)", "A2 : Ancienneté dans les catégories Techniciens et agents de maîtrise et Employés (6 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${5}      | ${0}         | ${false}   | ${60} | ${true}               | ${"4 / 10 * Sref * A1"}                                                                                                      | ${["A1 : Ancienneté totale (5 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${5}      | ${0}         | ${false}   | ${61} | ${true}               | ${"(4 / 10 * Sref * A1) - (20% * A3 * (4 / 10 * Sref * A1))"}                                                                | ${["A1 : Ancienneté totale (5 ans)", "A3 : Années entre 60 et 65 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
+      ${5}      | ${0}         | ${false}   | ${63} | ${true}               | ${"(4 / 10 * Sref * A1) - (20% * A3 * (4 / 10 * Sref * A1))"}                                                                | ${["A1 : Ancienneté totale (5 ans)", "A3 : Années entre 60 et 65 ans (3 ans)", "Sref : Salaire de référence (1000 €)"]}
       ${20}     | ${0}         | ${false}   | ${61} | ${true}               | ${"4 / 10 * Sref * A1"}                                                                                                      | ${["A1 : Ancienneté totale (20 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${35}     | ${0}         | ${false}   | ${61} | ${true}               | ${"4 / 10 * Sref * A1"}                                                                                                      | ${["A1 : Ancienneté totale (35 ans)", "Sref : Salaire de référence (1000 €)"]}
       ${35}     | ${0}         | ${false}   | ${61} | ${false}              | ${"4 / 10 * Sref * A1"}                                                                                                      | ${["A1 : Ancienneté totale (35 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${14.5}   | ${undefined} | ${false}   | ${61} | ${true}               | ${"4 / 10 * Sref * A1"}                                                                                                      | ${["A1 : Ancienneté totale (14.5 ans)", "Sref : Salaire de référence (1000 €)"]}
     `(
-      "Ancienneté: $seniority ans (dont $seniorityTAM en tant que TAM ou Employés), âge: $age, droit à la retraite: $haveRightToRetirement => $expectedFormula",
+      "$#) Ancienneté: $seniority ans (dont $seniorityTAM en tant que TAM ou Employés), âge: $age, droit à la retraite: $haveRightToRetirement => $expectedFormula",
       ({
         seniority,
         seniorityTAM,
@@ -246,7 +264,8 @@ describe("Formule indemnité licenciement - CC 16", () => {
         const cadreBeforeTAM =
           seniorityTAM > 0
             ? {
-                "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . ancienneté avant cadre": seniorityTAM,
+                "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . ancienneté avant cadre":
+                  seniorityTAM,
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien": `${"'Oui'"}`,
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . date du statut cadre":
                   "01/01/2010",
@@ -258,13 +277,16 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . convention collective": "'IDCC0016'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
             "'Ingénieurs et cadres'",
-          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age": age,
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age":
+            age,
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
             haveRightToRetirement ? "'Oui'" : "'Non'"
           }`,
           "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1000",
           ...cadreBeforeTAM,

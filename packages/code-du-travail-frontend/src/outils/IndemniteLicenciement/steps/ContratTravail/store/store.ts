@@ -45,10 +45,10 @@ const createContratTravailStore: StoreSlice<
     onChangeDateArretTravail: (value) => {
       applyGenericValidation(get, set, "dateArretTravail", value);
       if (get().ancienneteData.hasBeenSubmit) {
-        get().ancienneteFunction.onValidateWithEligibility();
+        get().ancienneteFunction.onNextStep();
       }
     },
-    onValidateWithEligibility: () => {
+    onNextStep: () => {
       const state = get().contratTravailData.input;
       const { isValid, errorState } = validateStep(state);
       let errorEligibility;

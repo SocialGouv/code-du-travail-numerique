@@ -12,6 +12,7 @@ describe("<FilledElement />", () => {
           isLicenciementFauteGrave={true}
           agreementName="agreementName"
           isLicenciementInaptitude={true}
+          showHasTempsPartiel={true}
           isArretTravail={true}
           dateArretTravail="01/01/2020"
           agreementInformations={[

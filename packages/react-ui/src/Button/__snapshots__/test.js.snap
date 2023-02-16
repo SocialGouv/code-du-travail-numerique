@@ -1,251 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> it renders a Button flat 1`] = `
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c0:link,
-.c0:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c0:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c0[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c1:link,
-.c1:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c1:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c1[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c2:link,
-.c2:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c2:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c2[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c1 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c2 {
-    display: none;
-  }
-}
-
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe kABrKC"
   >
     this is a Button 
     flat
      
   </button>
   <button
-    class="c1"
+    class="sc-bcXHqe eIGSgv"
   >
     this is a small Button 
     flat
      
   </button>
   <button
-    class="c2"
+    class="sc-bcXHqe hbiXmL"
   >
     this is a narrow Button 
     flat
@@ -255,83 +27,9 @@ exports[`<Button /> it renders a Button flat 1`] = `
 `;
 
 exports[`<Button /> it renders a Button link 1`] = `
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-}
-
-.c0:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c0:hover svg {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-.c0 svg {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-  fill: #f66663;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe hwiGht"
   >
     this is a Button 
     link
@@ -349,7 +47,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     </svg>
   </button>
   <button
-    class="c0"
+    class="sc-bcXHqe hwiGht"
   >
     this is a small Button 
     link
@@ -367,7 +65,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     </svg>
   </button>
   <button
-    class="c0"
+    class="sc-bcXHqe hwiGht"
   >
     this is a narrow Button 
     link
@@ -388,251 +86,23 @@ exports[`<Button /> it renders a Button link 1`] = `
 `;
 
 exports[`<Button /> it renders a Button naked 1`] = `
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c0:link,
-.c0:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c0:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c0[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c1:link,
-.c1:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c1:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c1[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c2:link,
-.c2:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c2:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c2[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c1 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c2 {
-    display: none;
-  }
-}
-
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe cfGWSN"
   >
     this is a Button 
     naked
      
   </button>
   <button
-    class="c1"
+    class="sc-bcXHqe kdSVfY"
   >
     this is a small Button 
     naked
      
   </button>
   <button
-    class="c2"
+    class="sc-bcXHqe kxYXcw"
   >
     this is a narrow Button 
     naked
@@ -642,84 +112,23 @@ exports[`<Button /> it renders a Button naked 1`] = `
 `;
 
 exports[`<Button /> it renders a Button navLink 1`] = `
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c0:focus {
-  color: #f66663;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe bdrMdS"
   >
     this is a Button 
     navLink
      
   </button>
   <button
-    class="c0"
+    class="sc-bcXHqe bdrMdS"
   >
     this is a small Button 
     navLink
      
   </button>
   <button
-    class="c0"
+    class="sc-bcXHqe bdrMdS"
   >
     this is a narrow Button 
     navLink
@@ -729,251 +138,23 @@ exports[`<Button /> it renders a Button navLink 1`] = `
 `;
 
 exports[`<Button /> it renders a Button primary 1`] = `
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #f66663;
-  border-color: #f66663;
-  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c0:link,
-.c0:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c0:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #f99593;
-  border-color: #f99593;
-}
-
-.c0[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #fff;
-  background: #f66663;
-  border-color: #f66663;
-  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c1:link,
-.c1:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c1:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #f99593;
-  border-color: #f99593;
-}
-
-.c1[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
-  color: #fff;
-  background: #f66663;
-  border-color: #f66663;
-  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c2:link,
-.c2:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c2:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #f99593;
-  border-color: #f99593;
-}
-
-.c2[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c1 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c2 {
-    display: none;
-  }
-}
-
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe giqjOB"
   >
     this is a Button 
     primary
      
   </button>
   <button
-    class="c1"
+    class="sc-bcXHqe guOFGk"
   >
     this is a small Button 
     primary
      
   </button>
   <button
-    class="c2"
+    class="sc-bcXHqe bUsDoQ"
   >
     this is a narrow Button 
     primary
@@ -983,251 +164,23 @@ exports[`<Button /> it renders a Button primary 1`] = `
 `;
 
 exports[`<Button /> it renders a Button secondary 1`] = `
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c0:link,
-.c0:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c0:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c0[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c1:link,
-.c1:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c1:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c1[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c2:link,
-.c2:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c2:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c2[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c1 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c2 {
-    display: none;
-  }
-}
-
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe iRwlKl"
   >
     this is a Button 
     secondary
      
   </button>
   <button
-    class="c1"
+    class="sc-bcXHqe evPepU"
   >
     this is a small Button 
     secondary
      
   </button>
   <button
-    class="c2"
+    class="sc-bcXHqe liZAkQ"
   >
     this is a narrow Button 
     secondary
@@ -1237,89 +190,9 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 `;
 
 exports[`<Button /> renders 1`] = `
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c0:link,
-.c0:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c0:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c0[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 3rem;
-  }
-}
-
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe iRwlKl"
   >
     A button
   </button>
@@ -1327,89 +200,9 @@ exports[`<Button /> renders 1`] = `
 `;
 
 exports[`<Button /> renders as a link 1`] = `
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c0:link,
-.c0:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c0:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c0[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 3rem;
-  }
-}
-
 <div>
   <a
-    class="c0"
+    class="sc-bcXHqe iRwlKl"
     href="http://www.turfu.com"
   >
     A button
@@ -1418,89 +211,9 @@ exports[`<Button /> renders as a link 1`] = `
 `;
 
 exports[`<Button /> renders as div 1`] = `
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c0:link,
-.c0:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c0:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c0[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 3rem;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-bcXHqe iRwlKl"
   >
     A button
   </div>

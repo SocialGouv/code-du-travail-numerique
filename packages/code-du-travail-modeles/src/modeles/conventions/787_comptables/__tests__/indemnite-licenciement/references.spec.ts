@@ -8,8 +8,7 @@ const engine = new IndemniteLicenciementPublicodes(
 const References = [
   {
     article: "Article 6.2.1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005719412/?idConteneur=KALICONT000005635826",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005719412/?idConteneur=KALICONT000005635826",
   },
 ];
 
@@ -24,8 +23,10 @@ describe("Vérification des références juridiques pour la CC 787", () => {
     ({ seniority, expectedReferences }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC0787'",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
       });

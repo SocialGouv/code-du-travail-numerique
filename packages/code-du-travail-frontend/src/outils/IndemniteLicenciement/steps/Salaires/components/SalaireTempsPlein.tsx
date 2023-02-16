@@ -17,6 +17,8 @@ type Props = {
   error?: string;
   note?: string;
   tooltip?: Tooltip;
+  dataTestidSalaries?: string;
+  dataTestidPrimes?: string;
 };
 
 export const SalaireTempsPlein = ({
@@ -27,6 +29,8 @@ export const SalaireTempsPlein = ({
   note,
   subTitle,
   tooltip,
+  dataTestidSalaries,
+  dataTestidPrimes,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
@@ -46,7 +50,7 @@ export const SalaireTempsPlein = ({
         [`${index}`]: undefined,
       });
     }
-    let newLocalSalaries: SalaryPeriods[] = [];
+    let newLocalSalaries: SalaryPeriods[];
     if (isFirstEdit) {
       newLocalSalaries = salaryPeriods.map((p, i) =>
         i >= index ? { ...p, value: salary } : p
@@ -119,7 +123,7 @@ export const SalaireTempsPlein = ({
                   updateOnScrollDisabled
                   onChange={(e) => onChangeSalaries(index, e.target.value)}
                   onBlur={() => setIsFirstEdit(false)}
-                  data-testid={"salary-input"}
+                  data-testid={dataTestidSalaries ?? "salary-input"}
                 />
                 {errorsSalaries[`${index}`] && (
                   <ErrorWrapper>
@@ -137,14 +141,14 @@ export const SalaireTempsPlein = ({
                       id={`prime.${index}`}
                       name={`prime.${index}`}
                       type="number"
-                      error={errorsPrimes[`${index}`]}
+                      invalid={errorsPrimes[`${index}`]}
                       icon={icons.Euro}
                       onChange={(e) =>
                         onChangeLocalPrimes(index, e.target.value)
                       }
                       value={sPeriod.prime ?? ""}
                       updateOnScrollDisabled
-                      data-testid={"prime-input"}
+                      data-testid={dataTestidPrimes ?? "prime-input"}
                     />
                     {errorsPrimes[`${index}`] && (
                       <ErrorWrapper>
@@ -191,6 +195,10 @@ const Caption = styled.caption`
 
 const Th = styled.th`
   font-size: ${fonts.sizes.small};
+
+  &:first-child {
+    min-width: 100px;
+  }
 `;
 
 const StyledInlineWrapperError = styled.div`

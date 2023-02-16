@@ -22,7 +22,11 @@ export function AgreementTile({ agreement, onUserAction }: Props): JSX.Element {
     onUserAction(UserAction.SelectAgreement, `idcc${agreement.num.toString()}`);
   };
   return (
-    <Link href={`/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`} passHref>
+    <Link
+      href={`/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`}
+      passHref
+      legacyBehavior
+    >
       <Tile
         wide
         title={`${agreement.shortTitle} IDCC${formatIdcc(agreement.num)}`}

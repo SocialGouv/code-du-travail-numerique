@@ -3,7 +3,6 @@ import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { GetServerSideProps } from "next";
-import getConfig from "next/config";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import styled from "styled-components";
@@ -12,23 +11,20 @@ import { Feedback } from "../../src/common/Feedback";
 import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
+import { API_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import {
   AgreementSearch,
   CalculateurIndemnite,
+  DismissalProcess,
   DureePreavisDemission,
   DureePreavisLicenciement,
   DureePreavisRetraite,
+  fetchTool,
   HeuresRechercheEmploi,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
-  DismissalProcess,
-  fetchTool,
 } from "../../src/outils";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
 
 const toolsBySlug = {
   "convention-collective": AgreementSearch,

@@ -1,6 +1,6 @@
 import debounce from "debounce-promise";
 import memoizee from "memoizee";
-import getConfig from "next/config";
+import { API_URL } from "../../../config";
 
 import { Agreement } from "./type";
 
@@ -35,11 +35,10 @@ const siretLengthError =
 const siretNumberError =
   "Veuillez indiquer un numéro Siret (14 chiffres uniquement)";
 
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
-
-const apiEnterprises = memoizee(function createFetcher(query, address) {
+const apiEnterprises = memoizee(function createFetcher(
+  query: string,
+  address: string | undefined | null = undefined
+): Promise<Enterprise[]> {
   if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {
     return Promise.reject(siretSirenError);
   }
@@ -74,7 +73,7 @@ const apiEnterprises = memoizee(function createFetcher(query, address) {
       const errorMessage = await response.text();
       return Promise.reject(errorMessage);
     })
-    .then((result) => {
+    .then((result: ApiEnterpriseData) => {
       return result.entreprises;
     });
 });

@@ -9,7 +9,6 @@ import {
   Title,
 } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
-import getConfig from "next/config";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
@@ -17,10 +16,10 @@ import styled from "styled-components";
 
 import { ContactModal } from "../common/ContactModal";
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
+import { PACKAGE_VERSION } from "../config";
 import { Partners } from "../home/Partners";
 
 const { DirectionRight: DirectionRightIcon } = icons;
-const { publicRuntimeConfig } = getConfig();
 
 const GITHUB_REPO = "https://github.com/SocialGouv/code-du-travail-numerique";
 
@@ -64,44 +63,48 @@ const Footer = (): JSX.Element => {
               </Heading>
               <StyledList>
                 <li>
-                  <Link passHref href="/droit-du-travail">
+                  <Link passHref href="/droit-du-travail" legacyBehavior>
                     <StyledLink>Le droit du travail</StyledLink>
                   </Link>
                 </li>
                 <li>
-                  <Link passHref href="/glossaire">
+                  <Link passHref href="/glossaire" legacyBehavior>
                     <StyledLink>Glossaire</StyledLink>
                   </Link>
                 </li>
                 <li>
-                  <Link passHref href="/a-propos">
+                  <Link passHref href="/a-propos" legacyBehavior>
                     <StyledLink>À propos</StyledLink>
                   </Link>
                 </li>
                 <li>
-                  <Link passHref href="/mentions-legales">
+                  <Link passHref href="/mentions-legales" legacyBehavior>
                     <StyledLink>Mentions légales</StyledLink>
                   </Link>
                 </li>
                 <li>
-                  <Link passHref href="/accessibilite">
+                  <Link passHref href="/accessibilite" legacyBehavior>
                     <StyledLink>
                       Accessibilité&nbsp;: partiellement conforme
                     </StyledLink>
                   </Link>
                 </li>
                 <li>
-                  <Link passHref href="/politique-confidentialite">
+                  <Link
+                    passHref
+                    href="/politique-confidentialite"
+                    legacyBehavior
+                  >
                     <StyledLink>Politique de confidentialité</StyledLink>
                   </Link>
                 </li>
                 <li>
-                  <Link passHref href="/stats">
+                  <Link passHref href="/stats" legacyBehavior>
                     <StyledLink>Statistiques d’utilisation</StyledLink>
                   </Link>
                 </li>
                 <li>
-                  <Link passHref href="/integration">
+                  <Link passHref href="/integration" legacyBehavior>
                     <StyledLink>
                       Intégrer les outils du Code du travail numérique
                     </StyledLink>
@@ -135,18 +138,23 @@ const Footer = (): JSX.Element => {
                   </ContactModal>
                 </li>
                 <li>
-                  <StyledLink
-                    href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    passHref
+                    href={`${GITHUB_REPO}/tree/${PACKAGE_VERSION}`}
+                    legacyBehavior
                   >
-                    Contribuer sur Github
-                  </StyledLink>
+                    <StyledLink
+                      href={`${GITHUB_REPO}/tree/${PACKAGE_VERSION}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Contribuer sur Github
+                    </StyledLink>
+                  </Link>
                 </li>
                 <li>
                   {(() => {
-                    const packageVersion =
-                      publicRuntimeConfig.PACKAGE_VERSION || "";
+                    const packageVersion = PACKAGE_VERSION || "";
                     const isTag = packageVersion[0] === "v";
                     const path = isTag
                       ? "releases/tag"
@@ -154,13 +162,15 @@ const Footer = (): JSX.Element => {
                       ? "commits"
                       : "compare";
                     return (
-                      <StyledLink
+                      <Link
                         href={`${GITHUB_REPO}/${path}/${packageVersion}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        passHref
+                        legacyBehavior
                       >
-                        Journal des modifications
-                      </StyledLink>
+                        <StyledLink target="_blank" rel="noopener noreferrer">
+                          Journal des modifications
+                        </StyledLink>
+                      </Link>
                     );
                   })()}
                 </li>
@@ -172,33 +182,35 @@ const Footer = (): JSX.Element => {
               </Heading>
               <StyledList>
                 <li>
-                  <StyledLink
+                  <Link
                     href={
                       "https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     }
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    passHref
+                    legacyBehavior
                   >
-                    La Direction Générale du Travail
-                  </StyledLink>
+                    <StyledLink target="_blank" rel="noopener noreferrer">
+                      La Direction Générale du Travail
+                    </StyledLink>
+                  </Link>
                 </li>
                 <li>
-                  <StyledLink
+                  <Link
                     href={"https://fabrique.social.gouv.fr/"}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    passHref
+                    legacyBehavior
                   >
-                    La fabrique des Ministères sociaux
-                  </StyledLink>
+                    <StyledLink target="_blank" rel="noopener noreferrer">
+                      La fabrique des Ministères sociaux
+                    </StyledLink>
+                  </Link>
                 </li>
                 <li>
-                  <StyledLink
-                    href={"https://beta.gouv.fr/"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    beta.gouv.fr
-                  </StyledLink>
+                  <Link href={"https://beta.gouv.fr/"} passHref legacyBehavior>
+                    <StyledLink target="_blank" rel="noopener noreferrer">
+                      beta.gouv.fr
+                    </StyledLink>
+                  </Link>
                 </li>
               </StyledList>
             </Category>
@@ -206,65 +218,65 @@ const Footer = (): JSX.Element => {
         </NavSection>
         <GovernmentSection>
           <li>
-            <StyledGovLink
+            <Link
               href={"https://travail-emploi.gouv.fr"}
-              target="_blank"
-              rel="noopener noreferrer"
+              passHref
+              legacyBehavior
             >
-              travail-emploi.gouv.fr
-            </StyledGovLink>
+              <StyledGovLink target="_blank" rel="noopener noreferrer">
+                travail-emploi.gouv.fr
+              </StyledGovLink>
+            </Link>
             <Separator aria-hidden>|</Separator>
           </li>
           <li>
-            <StyledGovLink
+            <Link
               href={"https://www.service-public.fr"}
-              target="_blank"
-              rel="noopener noreferrer"
+              passHref
+              legacyBehavior
             >
-              service-public.fr
-            </StyledGovLink>
+              <StyledGovLink target="_blank" rel="noopener noreferrer">
+                service-public.fr
+              </StyledGovLink>
+            </Link>
             <Separator aria-hidden>|</Separator>
           </li>
 
           <li>
-            <StyledGovLink
+            <Link
               href={"https://www.legifrance.gouv.fr"}
-              target="_blank"
-              rel="noopener noreferrer"
+              passHref
+              legacyBehavior
             >
-              legifrance.gouv.fr
-            </StyledGovLink>
+              <StyledGovLink target="_blank" rel="noopener noreferrer">
+                legifrance.gouv.fr
+              </StyledGovLink>
+            </Link>
             <Separator aria-hidden>|</Separator>
           </li>
 
           <li>
-            <StyledGovLink
-              href={"https://www.data.gouv.fr"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              data.gouv.fr
-            </StyledGovLink>
+            <Link href={"https://www.data.gouv.fr"} passHref legacyBehavior>
+              <StyledGovLink target="_blank" rel="noopener noreferrer">
+                data.gouv.fr
+              </StyledGovLink>
+            </Link>
             <Separator aria-hidden>|</Separator>
           </li>
           <li>
-            <StyledGovLink
-              href={"https://www.gouvernement.fr"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              gouvernement.fr
-            </StyledGovLink>
+            <Link href={"https://www.gouvernement.fr"} passHref legacyBehavior>
+              <StyledGovLink target="_blank" rel="noopener noreferrer">
+                gouvernement.fr
+              </StyledGovLink>
+            </Link>
             <Separator aria-hidden>|</Separator>
           </li>
           <li>
-            <StyledGovLink
-              href={"https://www.cnil.fr/"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              cnil.fr
-            </StyledGovLink>
+            <Link href={"https://www.cnil.fr"} passHref legacyBehavior>
+              <StyledGovLink target="_blank" rel="noopener noreferrer">
+                cnil.fr
+              </StyledGovLink>
+            </Link>
           </li>
         </GovernmentSection>
       </StyledFooter>

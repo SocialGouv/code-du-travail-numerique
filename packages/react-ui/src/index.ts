@@ -16,11 +16,7 @@ export { Alert, AlertWithIcon } from "./Alert/index.js";
 export { ArrowLink } from "./ArrowLink/index.js";
 export { Badge } from "./Badge/index.js";
 export { BurgerNav } from "./BurgerNav/index.js";
-export {
-  BurgerNavButton,
-  BurgerNavCurrent,
-  BurgerNavLink,
-} from "./BurgerNav/NavItems.js";
+export { BurgerNavButton, BurgerNavItem } from "./BurgerNav/NavItems.js";
 export { Button } from "./Button/index.js";
 export { CodeSnippet } from "./CodeSnippet/index.js";
 export { Collapse } from "./Collapse/index.js";
@@ -36,7 +32,7 @@ export { MoreContent } from "./MoreContent/index.js";
 export { OverflowWrapper } from "./OverflowWrapper/index.js";
 export { Progress } from "./Progress/index.js";
 export { ScreenReaderOnly } from "./ScreenReaderOnly/index.js";
-export { Stripe } from "./Stripe/";
+export { Stripe } from "./Stripe";
 export { Table } from "./Table/index.js";
 export { TableOfContent } from "./TableOfContent/index.js";
 export { Tabs } from "./Tabs/index.js";

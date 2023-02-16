@@ -8,7 +8,7 @@ import type {
   SeniorityProps,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
-} from "./types";
+} from "./index";
 
 export type DefaultSeniorityProps = {
   dateEntree: string;
@@ -22,7 +22,8 @@ export type DefaultSeniorityRequiredProps = DefaultSeniorityProps & {
 
 export abstract class SeniorityDefault<
   T extends SupportedCcIndemniteLicenciement
-> implements ISeniority<T> {
+> implements ISeniority<T>
+{
   computeSeniority({
     dateEntree,
     dateSortie,
