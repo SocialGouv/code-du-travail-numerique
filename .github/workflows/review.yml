@@ -66,9 +66,9 @@ jobs:
       - name: Set output
         id: output
         run: |
-          echo "API_URL=$(echo "https://${{ steps.yq_apiurl.outputs.result }}" | base64)" >> $GITHUB_ENV
-          echo "SITE_URL=$(echo "https://${{ steps.yq_url.outputs.result }}" | base64)" >> $GITHUB_ENV
-          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
+          echo "API_URL=$(echo "https://${{ steps.yq_apiurl.outputs.result }}" | base64)" >> $GITHUB_OUTPUT
+          echo "SITE_URL=$(echo "https://${{ steps.yq_url.outputs.result }}" | base64)" >> $GITHUB_OUTPUT
+          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_OUTPUT
 
   register-frontend:
     name: Register frontend
