@@ -17,6 +17,7 @@ export const Tile = React.forwardRef(
       striped,
       subtitle,
       title,
+      href,
       wide,
       titleTagType,
       centerTitle,
@@ -38,7 +39,11 @@ export const Tile = React.forwardRef(
             {subtitle && (
               <StyledSubtitle noTitle={!title}>{subtitle}</StyledSubtitle>
             )}
-            {title && <StyledHeading as={titleTagType}>{title}</StyledHeading>}
+            {title && (
+              <StyledHeading as={titleTagType}>
+                {href ? <a href={href}>{title}</a> : title}
+              </StyledHeading>
+            )}
           </HeadingWrapper>
         </TopWrapper>
         {children && <ChildrenWrapper>{children}</ChildrenWrapper>}
@@ -53,6 +58,7 @@ Tile.propTypes = {
   centerTitle: PropTypes.bool,
   children: PropTypes.node,
   custom: PropTypes.bool,
+  href: PropTypes.string,
   icon: PropTypes.elementType,
   striped: PropTypes.bool,
   subtitle: PropTypes.string,
@@ -64,6 +70,7 @@ Tile.propTypes = {
 Tile.defaultProps = {
   centerTitle: false,
   custom: false,
+  href: undefined,
   icon: null,
   striped: false,
   subtitle: "",
@@ -138,6 +145,11 @@ const HeadingWrapper = styled.div`
   align-items: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
   justify-content: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
   margin: ${({ centerTitle }) => (centerTitle ? "0" : "inherit")};
+
+  a,
+  a:hover {
+    text-decoration: none;
+  }
 `;
 
 const StyledSubtitle = styled(Subtitle)`

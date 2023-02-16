@@ -300,12 +300,16 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   class="sc-dEVLtI ijCjkg"
                 >
                   <div
-                    class="sc-brePNt jDJZCD"
+                    class="sc-brePNt dSrKNm"
                   >
                     <h3
                       class="sc-evzXkX dtQFbH"
                     >
-                      Rupture de période d’essai à l'initiative de l'employeur
+                      <a
+                        href="modeles-de-courriers/rupture-de-periode-dessai-a-linitiative-de-lemployeur"
+                      >
+                        Rupture de période d’essai à l'initiative de l'employeur
+                      </a>
                     </h3>
                   </div>
                 </div>
@@ -359,12 +363,16 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   class="sc-dEVLtI ijCjkg"
                 >
                   <div
-                    class="sc-brePNt jDJZCD"
+                    class="sc-brePNt dSrKNm"
                   >
                     <h3
                       class="sc-evzXkX dtQFbH"
                     >
-                      Demande de rendez-vous en vue d’une rupture conventionnelle
+                      <a
+                        href="modeles-de-courriers/demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle"
+                      >
+                        Demande de rendez-vous en vue d’une rupture conventionnelle
+                      </a>
                     </h3>
                   </div>
                 </div>

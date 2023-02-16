@@ -12,7 +12,7 @@ exports[`<ServiceEnLigne /> should render 1`] = `
       class="sc-dEVLtI ijCjkg"
     >
       <div
-        class="sc-brePNt jDJZCD"
+        class="sc-brePNt dSrKNm"
       >
         <p
           class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
@@ -22,7 +22,11 @@ exports[`<ServiceEnLigne /> should render 1`] = `
         <p
           class="sc-evzXkX dtQFbH"
         >
-          Texte qui se retrouve dans le lien
+          <a
+            href="url à retoruver dans le lien"
+          >
+            Texte qui se retrouve dans le lien
+          </a>
         </p>
       </div>
     </div>

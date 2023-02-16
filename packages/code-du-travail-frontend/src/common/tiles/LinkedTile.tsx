@@ -30,7 +30,7 @@ export const LinkedTile = React.forwardRef<HTMLAnchorElement, LinkedTileProps>(
       router.push(href);
     };
     return (
-      <Tile {...props} ref={ref} onClick={() => handleClick()}>
+      <Tile {...props} href={href} ref={ref} onClick={() => handleClick()}>
         {children}
       </Tile>
     );

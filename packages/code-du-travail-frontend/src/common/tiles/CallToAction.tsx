@@ -9,15 +9,15 @@ export const CallToActionTile = React.forwardRef<
   HTMLAnchorElement,
   CallToActionTileProps
 >(function _CallToActionTile(
-  { action = "", children, centerTitle, href, ...props }: CallToActionTileProps,
+  { action = "", children, centerTitle, ...props }: CallToActionTileProps,
   ref: ForwardedRef<any>
 ): JSX.Element {
   return (
-    <StyledTile centerTitle={centerTitle} {...props} href={href} ref={ref}>
+    <StyledTile centerTitle={centerTitle} {...props} ref={ref}>
       <TileChildren>
         {children}
         <StyledDiv hasContentAbove={Boolean(children)}>
-          <Button variant="link" hasText as="a" href={href}>
+          <Button variant="link" hasText>
             {action}
           </Button>
         </StyledDiv>
@@ -55,10 +55,6 @@ const StyledTile = styled(LinkedTile)`
 `;
 
 const StyledDiv = styled.div`
-  a {
-    text-decoration: none;
-  }
-
   padding-top: ${({ hasContentAbove }) =>
     hasContentAbove ? spacings.base : spacings.small};
 `;

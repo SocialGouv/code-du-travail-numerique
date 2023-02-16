@@ -36,12 +36,16 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
       class="sc-iBYQkv iFcAMU"
     >
       <div
-        class="sc-ftTHYK kvTyZc"
+        class="sc-ftTHYK cBdSwd"
       >
         <p
           class="sc-jrcTuL ivrcvT"
         >
-          Hello !
+          <a
+            href="#"
+          >
+            Hello !
+          </a>
         </p>
       </div>
     </div>
@@ -66,12 +70,16 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
         class="sc-dkrFOg fIhaAp"
       />
       <div
-        class="sc-ftTHYK kvTyZc"
+        class="sc-ftTHYK cBdSwd"
       >
         <p
           class="sc-jrcTuL ivrcvT"
         >
-          Hello !
+          <a
+            href="#"
+          >
+            Hello !
+          </a>
         </p>
       </div>
     </div>
@@ -122,12 +130,16 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
         </svg>
       </div>
       <div
-        class="sc-ftTHYK kvTyZc"
+        class="sc-ftTHYK cBdSwd"
       >
         <p
           class="sc-jrcTuL ivrcvT"
         >
-          Hello !
+          <a
+            href="#"
+          >
+            Hello !
+          </a>
         </p>
       </div>
     </div>
@@ -149,8 +161,44 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
       class="sc-iBYQkv iFcAMU"
     >
       <div
-        class="sc-ftTHYK kvTyZc"
+        class="sc-ftTHYK cBdSwd"
       >
+        <p
+          class="sc-jrcTuL ivrcvT"
+        >
+          <a
+            href="#"
+          >
+            Hello !
+          </a>
+        </p>
+      </div>
+    </div>
+    <div
+      class="sc-kDvujY bkpTTX"
+    >
+      There is text inside
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Tile /> renders a wide tile with a subtitle 1`] = `
+<div>
+  <div
+    class="sc-jSUZER cZiRCn"
+  >
+    <div
+      class="sc-iBYQkv iFcAMU"
+    >
+      <div
+        class="sc-ftTHYK cBdSwd"
+      >
+        <p
+          class="sc-eDvSVe sc-pyfCe jvdTTT cebNzU"
+        >
+          This is a theme
+        </p>
         <p
           class="sc-jrcTuL ivrcvT"
         >

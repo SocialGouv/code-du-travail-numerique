@@ -467,7 +467,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
                             class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
@@ -477,7 +477,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           <p
                             class="sc-evzXkX dtQFbH"
                           >
-                            Lettre de démission du salarié
+                            <a
+                              href="https://www.service-public.fr/simulateur/calcul/Demission"
+                            >
+                              Lettre de démission du salarié
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -1504,7 +1508,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         class="sc-dEVLtI ijCjkg"
       >
         <div
-          class="sc-brePNt jDJZCD"
+          class="sc-brePNt dSrKNm"
         >
           <p
             class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
@@ -1514,7 +1518,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
           <p
             class="sc-evzXkX dtQFbH"
           >
-            Lettre de démission du salarié
+            <a
+              href="https://www.service-public.fr/simulateur/calcul/Demission"
+            >
+              Lettre de démission du salarié
+            </a>
           </p>
         </div>
       </div>

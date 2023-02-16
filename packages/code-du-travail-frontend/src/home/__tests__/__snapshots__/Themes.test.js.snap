@@ -128,12 +128,16 @@ exports[`<Themes /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="sc-brePNt jDJZCD"
+                      class="sc-brePNt dSrKNm"
                     >
                       <h3
                         class="sc-evzXkX dtQFbH"
                       >
-                        Embauche et contrat de travail
+                        <a
+                          href="/themes/1-embauche-et-contrat-de-travail"
+                        >
+                          Embauche et contrat de travail
+                        </a>
                       </h3>
                     </div>
                   </div>
@@ -176,12 +180,16 @@ exports[`<Themes /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="sc-brePNt jDJZCD"
+                      class="sc-brePNt dSrKNm"
                     >
                       <h3
                         class="sc-evzXkX dtQFbH"
                       >
-                        Salaire et Rémunération
+                        <a
+                          href="/themes/2-salaire-et-remuneration"
+                        >
+                          Salaire et Rémunération
+                        </a>
                       </h3>
                     </div>
                   </div>
@@ -792,12 +800,16 @@ exports[`<Themes /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="sc-brePNt jDJZCD"
+                      class="sc-brePNt dSrKNm"
                     >
                       <h3
                         class="sc-evzXkX dtQFbH"
                       >
-                        Temps de travail
+                        <a
+                          href="/themes/3-temps-de-travail"
+                        >
+                          Temps de travail
+                        </a>
                       </h3>
                     </div>
                   </div>

@@ -36,12 +36,16 @@ exports[`<CallToActionTile /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="sc-brePNt jDJZCD"
+        class="sc-brePNt dSrKNm"
       >
         <p
           class="sc-evzXkX dtQFbH"
         >
-          Saluez moi
+          <a
+            href="/test"
+          >
+            Saluez moi
+          </a>
         </p>
       </div>
     </div>
@@ -55,11 +59,10 @@ exports[`<CallToActionTile /> should render 1`] = `
           Cette tuile vous fera dire bonjour !
         </p>
         <div
-          class="sc-jsTgWu jCRpNm"
+          class="sc-jsTgWu kNvrCw"
         >
-          <a
+          <button
             class="sc-hhOBVt bxVHUw"
-            href="/test"
           >
             Bonjour
             <svg
@@ -73,7 +76,7 @@ exports[`<CallToActionTile /> should render 1`] = `
                 fill="currentColor"
               />
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </div>
