@@ -7,7 +7,6 @@ import {
   CommonAgreementStoreData,
   CommonAgreementStoreInput,
   CommonAgreementStoreSlice,
-  Route,
 } from "./types";
 import { STORAGE_KEY_AGREEMENT, StoreSlicePublicode } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
@@ -16,10 +15,11 @@ import { loadPublicodes } from "../../../api";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
 import { supportedCcn } from "@socialgouv/modeles-social";
 import {
-  MatomoAgreementEvent,
   MatomoBaseEvent,
   MatomoSearchAgreementCategory,
 } from "../../../../lib";
+import { pushAgreementEvents } from "../../../common/Agreement";
+import { AgreementRoute } from "../../../common/type/WizardType";
 
 const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
   input: {},
@@ -43,7 +43,12 @@ const createCommonAgreementStore: StoreSlicePublicode<
           const parsedData: Agreement = JSON.parse(data);
           if (parsedData?.num !== get().agreementData.input.agreement?.num) {
             applyGenericValidation(get, set, "agreement", parsedData);
-            applyGenericValidation(get, set, "route", Route.agreement);
+            applyGenericValidation(
+              get,
+              set,
+              "route",
+              "agreement" as AgreementRoute
+            );
             const idcc = parsedData?.num?.toString();
             if (idcc) {
               set(
@@ -60,7 +65,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
       }
     },
     onRouteChange: (value) => {
-      if (value === Route.none && window.localStorage) {
+      if (value === "not-selected" && window.localStorage) {
         window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
       }
       set(
@@ -93,49 +98,21 @@ const createCommonAgreementStore: StoreSlicePublicode<
     onNextStep: () => {
       const input = get().agreementData.input;
       const { isValid, errorState } = validateStep(input);
-      const { route, agreement } = input;
-      if (isValid) {
-        let clickEvent;
-        let selectEvent;
-        switch (route) {
-          case Route.agreement:
-            clickEvent = "click_p1";
-            selectEvent = MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1;
-            break;
-          case Route.enterprise:
-            clickEvent = "click_p2";
-            selectEvent = MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2;
-            break;
-          case Route.none:
-            clickEvent = "click_p3";
-            break;
-        }
-        matopush([
-          MatomoBaseEvent.TRACK_EVENT,
-          MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-          clickEvent,
+      const { route, agreement, enterprise } = input;
+      if (isValid && route) {
+        const isTreated = !!supportedCcn.find(
+          ({ indemniteLicenciement, idcc }) =>
+            indemniteLicenciement && idcc === agreement?.num
+        );
+        pushAgreementEvents(
           toolName,
-        ]);
-        if (agreement?.num) {
-          const isTreated = !!supportedCcn.find(
-            ({ indemniteLicenciement, idcc }) =>
-              indemniteLicenciement && idcc === agreement?.num
-          );
-          matopush([
-            MatomoBaseEvent.TRACK_EVENT,
-            MatomoBaseEvent.OUTIL,
-            isTreated
-              ? MatomoAgreementEvent.CC_TREATED
-              : MatomoAgreementEvent.CC_UNTREATED,
-            `idcc${agreement?.num}`,
-          ]);
-          matopush([
-            MatomoBaseEvent.TRACK_EVENT,
-            selectEvent,
-            toolName,
-            `idcc${agreement?.num}`,
-          ]);
-        }
+          {
+            route,
+            selected: agreement,
+            enterprise,
+          },
+          isTreated
+        );
       }
       set(
         produce((state: CommonAgreementStoreSlice) => {
