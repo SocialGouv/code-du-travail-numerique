@@ -51,6 +51,11 @@ jobs:
         run: |
           echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_OUTPUT
 
+      - name: Download k8s manifests
+        uses: actions/download-artifact@v3
+        with:
+          name: manifests-dev.yml
+
       - name: Get deployment url for site
         uses: mikefarah/yq@v4.30.5
         id: url
