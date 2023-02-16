@@ -14,7 +14,6 @@ import {
   ViewMore,
 } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
-import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
@@ -32,8 +31,8 @@ type CommonProps = {
   action?: string;
   custom?: boolean;
   icon?: string;
-  centerTitle?: boolean;
   titleTagType?: string;
+  href?: string;
 };
 
 type HighlightProps = {
@@ -57,7 +56,6 @@ type ListLinkProps = {
   item: ListLinkItemProps;
   showTheme?: boolean;
   query?: string;
-  centerTitle?: boolean;
   disableAnalytics?: boolean;
   titleTagType?: string;
 };
@@ -77,7 +75,6 @@ export const ListLink = ({
   },
   showTheme = true,
   query,
-  centerTitle,
   disableAnalytics = false,
   titleTagType,
 }: ListLinkProps) => {
@@ -113,7 +110,6 @@ export const ListLink = ({
     title,
     wide: true,
     icon,
-    centerTitle,
     titleTagType,
   };
 
@@ -156,17 +152,10 @@ export const ListLink = ({
     tileCommonProps.custom = true;
   }
 
-  return (
-    <Link
-      href={`/${getRouteBySource(source)}/${rootSlug}${
-        query ? `?q=${query}` : ""
-      }${anchor ? `#${anchor}` : ""}`}
-      passHref
-      legacyBehavior
-    >
-      <ResultTile {...tileCommonProps} />
-    </Link>
-  );
+  tileCommonProps.href = `/${getRouteBySource(source)}/${rootSlug}${
+    query ? `?q=${query}` : ""
+  }${anchor ? `#${anchor}` : ""}`;
+  return <ResultTile {...tileCommonProps} />;
 };
 ListLink.propTypes = {
   item: PropTypes.shape({

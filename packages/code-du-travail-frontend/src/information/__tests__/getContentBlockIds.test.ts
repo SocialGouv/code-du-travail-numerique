@@ -1,10 +1,9 @@
 import { getContentBlockIds } from "../information.service";
 import {
-  BlockDisplayMode,
   Content,
   ContentBlockContent,
-  ContentType,
   ContentBlockContentItem,
+  ContentType,
 } from "cdtn-types";
 
 describe("function getContentBlockIds", () => {
@@ -16,7 +15,6 @@ describe("function getContentBlockIds", () => {
   };
   const mockedBlock: ContentBlockContent = {
     type: ContentType.content,
-    blockDisplayMode: BlockDisplayMode.line,
     contents: [],
     title: "title",
   };

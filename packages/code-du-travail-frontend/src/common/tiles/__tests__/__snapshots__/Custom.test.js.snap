@@ -2,9 +2,8 @@
 
 exports[`<CallToActionTile /> should render 1`] = `
 <div>
-  <a
+  <div
     class="sc-eGugkK gnEaJx sc-dvEHMn jfDXTj"
-    href="/test"
   >
     <div
       class="sc-ilhmMj gZOXXO"
@@ -105,6 +104,6 @@ exports[`<CallToActionTile /> should render 1`] = `
         </div>
       </div>
     </div>
-  </a>
+  </div>
 </div>
 `;

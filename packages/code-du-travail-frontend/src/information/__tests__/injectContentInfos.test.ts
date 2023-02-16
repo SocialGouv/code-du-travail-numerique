@@ -1,6 +1,5 @@
 import { injectContentInfos } from "../information.service";
 import {
-  BlockDisplayMode,
   Content,
   ContentBlockContent,
   ContentBlockContentItem,
@@ -17,7 +16,6 @@ describe("function injectContentInfos", () => {
   };
   const mockedBlock: ContentBlockContent = {
     type: ContentType.content,
-    blockDisplayMode: BlockDisplayMode.line,
     title: "title1",
     contents: [],
   };

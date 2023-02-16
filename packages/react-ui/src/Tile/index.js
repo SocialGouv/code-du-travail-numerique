@@ -26,7 +26,7 @@ export const Tile = React.forwardRef(
   ) => {
     const { href, onClick, ...propsLink } = props;
     const goToUrl = (e) => {
-      if (onClick) onClick();
+      if (onClick) onClick(e);
       if (!href) return;
       e.preventDefault();
       window.location.href = href;

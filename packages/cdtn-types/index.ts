@@ -3,11 +3,6 @@ export enum SectionDisplayMode {
   tab = "tab",
 }
 
-export enum BlockDisplayMode {
-  line = "line",
-  square = "square",
-}
-
 export enum ContentType {
   markdown = "markdown",
   graphic = "graphic",
@@ -55,7 +50,6 @@ export declare type ContentBlockGaphic = {
 export declare type ContentBlockContent = {
   type: ContentType.content;
   title: string;
-  blockDisplayMode: BlockDisplayMode;
   contents: ContentBlockContentItem[];
 };
 

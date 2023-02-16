@@ -1,47 +1,52 @@
-import { BlockDisplayMode } from "cdtn-types";
-import { theme } from "@socialgouv/cdtn-ui";
+import { icons, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
-import useWindowDimensions from "../../common/WindowDimension";
-import { ContentItem } from "./ContentItem";
+import { ListLink } from "../../search/SearchResults/Results";
 
 export const ContentList = ({ block, key }) => {
-  let forceBlockDisplayMode;
-  const { width } = useWindowDimensions();
-  if (width < theme.breakpoints.intDesktop) {
-    forceBlockDisplayMode = BlockDisplayMode.line;
-  }
-  const { blockDisplayMode, contents } = block;
-  const displayMode = forceBlockDisplayMode || blockDisplayMode;
+  const { contents } = block;
   return (
     <>
-      <ContentItemList square={displayMode === BlockDisplayMode.square}>
+      <ContentItemList>
         {contents?.map((item, ContentIndex) => (
-          <ContentItem
+          <ListLink
+            item={{
+              ...item,
+              icon: icons[item?.icon],
+            }}
             key={`${key}-${ContentIndex}`}
-            item={item}
-            centerTitle={displayMode === BlockDisplayMode.square}
-          ></ContentItem>
+            disableAnalytics
+          ></ListLink>
         ))}
       </ContentItemList>
     </>
   );
 };
+const { breakpoints } = theme;
 
 const ContentItemList = styled.div`
-  ${({ square }) =>
-    square &&
-    `
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      & > div {
-        min-height: 341px;
-        margin: 12px auto;
-      }
-      p,
-      button {
-        width: 100%;
-        text-align: center;
-      }
-  `}
+  @media (max-width: ${breakpoints.mobile}) {
+    & > div {
+      margin-bottom: 12px;
+    }
+  }
+  @media (min-width: ${breakpoints.mobile}) {
+    margin-bottom: 12px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    & > div {
+      min-height: 341px;
+      margin: 12px;
+      flex-basis: 40%;
+      max-width: 45%;
+    }
+  }
+
+  p,
+  a {
+    width: 100%;
+    text-align: center;
+  }
 `;

@@ -1,4 +1,4 @@
-import { ContentType, BlockDisplayMode, Content } from "cdtn-types";
+import { Content, ContentType } from "cdtn-types";
 
 export const mockedContents: Content[] = [
   {
@@ -22,7 +22,6 @@ export const mockedContents: Content[] = [
       {
         type: ContentType.content,
         title: "myContentTitle",
-        blockDisplayMode: BlockDisplayMode.line,
         contents: [
           {
             cdtnId: "id1",

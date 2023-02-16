@@ -3883,9 +3883,8 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -3907,14 +3906,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Salaires minimaux
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -3936,14 +3934,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Salaire mensuel
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -3965,14 +3962,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Déduction des heures non travaillées
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -3994,7 +3990,7 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Barèmes de salaires minimaux
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4074,9 +4070,8 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4098,14 +4093,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Contingent d'heures supplémentaires non soumis à autorisation
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4127,14 +4121,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Heures supplémentaires exceptionnelles
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4156,14 +4149,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Plafonds
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4185,14 +4177,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Définition de la durée du travail
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4214,14 +4205,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Majoration pour heures supplémentaires.
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4243,14 +4233,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Equivalences et dérogations permanentes
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4272,14 +4261,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Semaine de travail en 5 jours
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4301,14 +4289,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Exceptions à la semaine de travail en 5 jours
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4330,14 +4317,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Horaires individualisés
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4359,14 +4345,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Horaires à temps partiel
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4388,14 +4373,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Récupération des heures perdues pour intempéries
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4417,7 +4401,7 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Cas des chefs d'équipe
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4497,9 +4481,8 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4521,14 +4504,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Préambule
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4550,14 +4532,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Définitions générales des critères et des niveaux
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4579,14 +4560,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Coefficients hiérarchiques
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4608,14 +4588,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Prise en compte des diplômes professionnels bâtiment
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4637,14 +4616,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Polyvalence
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4666,14 +4644,13 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Evolution de carrière
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4695,7 +4672,7 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Suivi de l'application dans l'entreprise
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
