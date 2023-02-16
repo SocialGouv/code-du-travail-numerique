@@ -66,16 +66,16 @@ jobs:
       - name: Set output
         id: output
         run: |
-          echo "API_URL=$(echo "https://${{ steps.yq_apiurl.outputs.result }}" | base64)" >> $GITHUB_OUTPUT
-          echo "SITE_URL=$(echo "https://${{ steps.yq_url.outputs.result }}") | base64)" >> $GITHUB_OUTPUT
-          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_OUTPUT
+          echo "API_URL=$(echo "https://${{ steps.yq_apiurl.outputs.result }}" | base64)" >> $GITHUB_ENV
+          echo "SITE_URL=$(echo "https://${{ steps.yq_url.outputs.result }}" | base64)" >> $GITHUB_ENV
+          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
 
   register-frontend:
     name: Register frontend
     runs-on: ubuntu-latest
     needs: [ manifests ]
     steps:
-      - name: Unseal url
+      - name: Decode url
         run: |
           echo "API_URL=$(echo "${{ needs.manifests.outputs.API_URL }}" | base64 -d)" >> $GITHUB_ENV
           echo "SITE_URL=$(echo "${{ needs.manifests.outputs.SITE_URL }}" | base64 -d)" >> $GITHUB_ENV
@@ -144,7 +144,7 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --prefer-offline --frozen-lockfile
-      - name: Unseal url
+      - name: Decode url
         run: |
           echo "SITE_URL=$(echo "${{ needs.manifests.outputs.SITE_URL }}" | base64 -d)" >> $GITHUB_ENV
       - name: Run test e2e
@@ -182,7 +182,7 @@ jobs:
           - "/information/la-prime-de-partage-de-la-valeur-infographie"
           - "/contribution/les-conges-pour-evenements-familiaux"
     steps:
-      - name: Unseal url
+      - name: Decode url
         run: |
           echo "SITE_URL=$(echo "${{ needs.manifests.outputs.SITE_URL }}" | base64 -d)" >> $GITHUB_ENV
       - name: Run lhci
