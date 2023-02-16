@@ -55,6 +55,10 @@ const StyledTile = styled(LinkedTile)`
 `;
 
 const StyledDiv = styled.div`
+  a {
+    text-decoration: none;
+  }
+
   padding-top: ${({ hasContentAbove }) =>
     hasContentAbove ? spacings.base : spacings.small};
 `;
