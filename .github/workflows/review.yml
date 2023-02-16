@@ -66,8 +66,8 @@ jobs:
       - name: Set output
         id: output
         run: |
-          echo "API_URL=$(gpg --symmetric --batch --passphrase "abc" --output - <(echo "https://${{ steps.yq_apiurl.outputs.result }}") | base64 -w0)" >> $GITHUB_OUTPUT
-          echo "SITE_URL=$(gpg --symmetric --batch --passphrase "abc" --output - <(echo "https://${{ steps.yq_url.outputs.result }}") | base64 -w0)" >> $GITHUB_OUTPUT
+          echo "API_URL=$(echo "https://${{ steps.yq_apiurl.outputs.result }}" | base64)" >> $GITHUB_OUTPUT
+          echo "SITE_URL=$(echo "https://${{ steps.yq_url.outputs.result }}") | base64)" >> $GITHUB_OUTPUT
           echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_OUTPUT
 
   register-frontend:
@@ -77,8 +77,8 @@ jobs:
     steps:
       - name: Unseal url
         run: |
-          echo "API_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <<< "${{ needs.manifests.outputs.API_URL }}" | base64 --decode)" >> $GITHUB_ENV
-          echo "SITE_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <<< "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode)" >> $GITHUB_ENV
+          echo "API_URL=$(echo "${{ needs.manifests.outputs.API_URL }}" | base64 -d)" >> $GITHUB_ENV
+          echo "SITE_URL=$(echo "${{ needs.manifests.outputs.SITE_URL }}" | base64 -d)" >> $GITHUB_ENV
       - name: Register docker images
         uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
         with:
@@ -146,7 +146,7 @@ jobs:
           yarn install --prefer-offline --frozen-lockfile
       - name: Unseal url
         run: |
-          echo "SITE_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <<< "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode)" >> $GITHUB_ENV
+          echo "SITE_URL=$(echo "${{ needs.manifests.outputs.SITE_URL }}" | base64 -d)" >> $GITHUB_ENV
       - name: Run test e2e
         run: |
           CODECEPT_BASEURL=${{ env.SITE_URL }} yarn test:e2e
@@ -184,7 +184,7 @@ jobs:
     steps:
       - name: Unseal url
         run: |
-          echo "SITE_URL=$(gpg --decrypt --quiet --batch --passphrase "abc" --output - <<< "${{ needs.manifests.outputs.SITE_URL }}" | base64 --decode)" >> $GITHUB_ENV
+          echo "SITE_URL=$(echo "${{ needs.manifests.outputs.SITE_URL }}" | base64 -d)" >> $GITHUB_ENV
       - name: Run lhci
         run: npx --yes @lhci/cli@latest autorun --collect.url=${{ env.SITE_URL }}${{ matrix.paths }}
         env:
