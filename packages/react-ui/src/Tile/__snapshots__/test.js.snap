@@ -2,7 +2,7 @@
 
 exports[`<Tile /> renders a tile with a custom badge 1`] = `
 <div>
-  <a
+  <div
     class="sc-jSUZER fYeXas"
   >
     <div
@@ -56,7 +56,7 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
 
 exports[`<Tile /> renders a tile with a stripe 1`] = `
 <div>
-  <a
+  <div
     class="sc-jSUZER fYeXas"
   >
     <div
@@ -86,7 +86,7 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 
 exports[`<Tile /> renders a tile with an icon 1`] = `
 <div>
-  <a
+  <div
     class="sc-jSUZER fYeXas"
   >
     <div
@@ -142,7 +142,7 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
 
 exports[`<Tile /> renders a tile with text inside 1`] = `
 <div>
-  <a
+  <div
     class="sc-jSUZER fYeXas"
   >
     <div
