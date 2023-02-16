@@ -1,30 +1,28 @@
-import Engine from "publicodes";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
-import { getNotifications } from "../../../../common";
-
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 test.each`
-  seniority | expectedNotice
-  ${5}      | ${0}
-  ${6}      | ${1}
-  ${24}     | ${2}
+  seniority | expectedNotice | expectedUnit
+  ${5}      | ${0}           | ${"semaines"}
+  ${6}      | ${1}           | ${"mois"}
+  ${24}     | ${2}           | ${"mois"}
 `(
   "Pour un employé possédant $seniority mois d'ancienneté, son préavis de départ à la retraite devrait être $expectedNotice mois",
-  ({ seniority, expectedNotice }) => {
-    const result = engine
-      .setSituation({
+  ({ seniority, expectedNotice, expectedUnit }) => {
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.nodeValue).toEqual(expectedNotice);
-    expect(result.unit?.numerators).toEqual(["mois"]);
-    expect(result.missingVariables).toEqual({});
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual(expectedUnit);
+    expect(missingArgs).toEqual([]);
   }
 );
 
@@ -48,19 +46,20 @@ test.each`
 `(
   "Pour un $category possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedNotice mois",
   ({ seniority, category, expectedNotice }) => {
-    const result = engine
-      .setSituation({
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.nodeValue).toEqual(expectedNotice);
-    expect(result.unit?.numerators).toEqual(["mois"]);
-    expect(result.missingVariables).toEqual({});
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual("mois");
+    expect(missingArgs).toEqual([]);
   }
 );
 
@@ -72,14 +71,13 @@ test.each`
 `(
   "Pour un employé possédant $seniority mois d'ancienneté en mise à la retraite, on ne doit pas afficher de notification",
   ({ seniority }) => {
-    const result = getNotifications(
-      engine.setSituation({
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective": "'IDCC0573'",
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": seniority,
+      "contrat salarié . convention collective": "'IDCC0573'",
+      "contrat salarié . mise à la retraite": "non",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const result = engine.getNotifications();
 
     expect(result).toHaveLength(0);
   }
@@ -105,15 +103,14 @@ test.each`
 `(
   "Pour un $category possédant $seniority mois d'ancienneté en mise à la retraite, on ne doit pas afficher de notification",
   ({ seniority, category }) => {
-    const result = getNotifications(
-      engine.setSituation({
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective": "'IDCC0573'",
-        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": seniority,
+      "contrat salarié . convention collective": "'IDCC0573'",
+      "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
+      "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const result = engine.getNotifications();
 
     expect(result).toHaveLength(0);
   }

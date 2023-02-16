@@ -1,32 +1,10 @@
 import {
-  Absence,
-  DISABLE_ABSENCE,
+  SeniorityFactory,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
-import { differenceInMonths } from "date-fns";
 import { AncienneteStoreInput } from "./types";
 import { Agreement } from "../../../../../conventions/Search/api/type";
-import { parse } from "../../../../common/utils";
 import { CommonInformationsStoreInput } from "../../../../CommonSteps/Informations/store";
-
-const getTotalAbsence = (
-  absencePeriods: Absence[],
-  agreement?: Agreement
-): number => {
-  return agreement &&
-    DISABLE_ABSENCE.includes(
-      `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
-    )
-    ? 0
-    : absencePeriods
-        .filter((period) => Boolean(period.durationInMonth))
-        .reduce((total, item) => {
-          if (!item.durationInMonth) {
-            return total;
-          }
-          return total + item.durationInMonth * item.motif.value;
-        }, 0);
-};
 
 export const getErrorEligibility = (
   state: AncienneteStoreInput,
@@ -34,29 +12,54 @@ export const getErrorEligibility = (
   isInaptitude: boolean,
   agreement?: Agreement
 ) => {
-  if (isInaptitude || !state.dateEntree || !state.dateNotification) {
+  if (
+    isInaptitude ||
+    !state.dateEntree ||
+    !state.dateNotification ||
+    !state.dateSortie
+  ) {
     return;
   }
-  const dEntree = parse(state.dateEntree);
-  const dNotification = parse(state.dateNotification);
-  const totalAbsence = getTotalAbsence(state.absencePeriods, agreement);
-  let minimalSeniority = 8;
+
+  const factory = new SeniorityFactory().create(
+    SupportedCcIndemniteLicenciement.default
+  );
+  const requiredSeniorityLegal = factory.computeRequiredSeniority({
+    dateEntree: state.dateEntree,
+    dateNotification: state.dateNotification,
+    dateSortie: state.dateSortie,
+    absencePeriods: state.absencePeriods,
+  }).value;
+
+  let requiredSeniorityAgreement = 0;
+  if (agreement) {
+    const factoryAgreement = new SeniorityFactory().create(
+      `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
+    );
+    requiredSeniorityAgreement = factoryAgreement.computeRequiredSeniority({
+      dateEntree: state.dateEntree,
+      dateNotification: state.dateNotification,
+      dateSortie: state.dateSortie,
+      absencePeriods: state.absencePeriods,
+    }).value;
+  }
+
+  let minimalSeniorityInMonth = 8;
   let minimalSeniorityError =
     "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.";
-  let diff = differenceInMonths(dNotification, dEntree);
+  let requiredSeniorityInYear = Math.max(
+    requiredSeniorityLegal,
+    requiredSeniorityAgreement
+  );
   switch (agreement?.num) {
     case 3239:
       if (stateInfo.publicodesInformations[0].info === "'Assistant maternel'") {
-        minimalSeniority = 9;
+        minimalSeniorityInMonth = 9;
         minimalSeniorityError =
           "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois.";
       }
       break;
-    case 1517:
-      const dSortie = parse(state.dateSortie);
-      diff = differenceInMonths(dSortie, dEntree);
-      break;
   }
-  const isEligible = diff < 0 || diff - totalAbsence >= minimalSeniority;
+  const isEligible = requiredSeniorityInYear >= minimalSeniorityInMonth / 12;
   return !isEligible ? minimalSeniorityError : undefined;
 };

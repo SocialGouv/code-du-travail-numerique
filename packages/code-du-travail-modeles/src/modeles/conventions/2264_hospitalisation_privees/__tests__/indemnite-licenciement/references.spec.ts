@@ -1,4 +1,9 @@
-import { getReferences } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "2264"
+);
 
 const references = [
   {
@@ -34,17 +39,17 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
     `(
       "ancienneté: $seniority an, salaire de référence: $salary",
       ({ seniority, salary, category }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC2264'",
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
             "'Non'",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = getReferences(situation, "résultat conventionnel");
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(references.length);
         expect(result).toEqual(expect.arrayContaining(references));
@@ -84,7 +89,7 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, seniorityNonCadres: $seniorityNonCadres => $expectedCompensation €",
       ({ seniority, salary, seniorityNonCadres }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC2264'",
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
             "'Cadres'",
@@ -92,10 +97,10 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
             "'Oui'",
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": seniorityNonCadres,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
-        const result = getReferences(situation, "résultat conventionnel");
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(references.length);
         expect(result).toEqual(expect.arrayContaining(references));

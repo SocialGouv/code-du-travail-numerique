@@ -1,4 +1,9 @@
-import { getReferences } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "1501"
+);
 
 describe("Références juridique pour l'indemnité conventionnel de licenciement pour la CC 1501", () => {
   test.each`
@@ -28,18 +33,18 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
   `(
     "licenciement eco: $economicFiring, ancienneté: $seniority an, salaire de référence: $salary, age: $age an, catégorie $category",
     ({ seniority, salary, economicFiring, category, age }) => {
-      const situation = engine.setSituation({
+      engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1501'",
         "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
         "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique": `'${economicFiring}'`,
         "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": age,
         "contrat salarié . indemnité de licenciement": "oui",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
       });
 
-      const result = getReferences(situation, "résultat conventionnel");
+      const result = engine.getReferences("résultat conventionnel");
 
       expect(result).toHaveLength(1);
       expect(result).toEqual(

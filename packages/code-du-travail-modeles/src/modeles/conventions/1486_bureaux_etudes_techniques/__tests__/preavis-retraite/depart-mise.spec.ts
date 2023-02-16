@@ -1,32 +1,31 @@
-import Engine from "publicodes";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
-
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 describe("Préavis retraite pour la CC 1486", () => {
   describe("Départ à la retraite", () => {
     test.each`
-      seniority | expectedResult
-      ${2}      | ${0}
-      ${7}      | ${1}
-      ${24}     | ${2}
-      ${32}     | ${2}
+      seniority | expectedResult | expectedUnit
+      ${2}      | ${0}           | ${"semaines"}
+      ${7}      | ${1}           | ${"mois"}
+      ${24}     | ${2}           | ${"mois"}
+      ${32}     | ${2}           | ${"mois"}
     `(
       "Pour un salarié disposant d'une ancienneté $seniority, son préavis de départ à la retraite devrait être $expectedResult mois",
-      ({ expectedResult, seniority }) => {
-        const result = engine
-          .setSituation({
+      ({ expectedResult, seniority, expectedUnit }) => {
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . ancienneté": seniority,
             "contrat salarié . convention collective": "'IDCC1486'",
             "contrat salarié . mise à la retraite": "non",
             "contrat salarié . travailleur handicapé": "non",
-          })
-          .evaluate("contrat salarié . préavis de retraite");
+          },
+          "contrat salarié . préavis de retraite en jours"
+        );
 
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedResult);
-        expect(result.unit?.numerators).toEqual(["mois"]);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual(expectedUnit);
       }
     );
 
@@ -44,19 +43,20 @@ describe("Préavis retraite pour la CC 1486", () => {
       `(
         "Pour un $category possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedResult mois",
         ({ seniority, category, expectedResult }) => {
-          const result = engine
-            .setSituation({
+          const { result, missingArgs } = engine.setSituation(
+            {
               "contrat salarié . ancienneté": seniority,
               "contrat salarié . convention collective": "'IDCC1486'",
               "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle": `'${category}'`,
               "contrat salarié . mise à la retraite": "oui",
               "contrat salarié . travailleur handicapé": "non",
-            })
-            .evaluate("contrat salarié . préavis de retraite");
+            },
+            "contrat salarié . préavis de retraite en jours"
+          );
 
-          expect(result.missingVariables).toEqual({});
-          expect(result.nodeValue).toEqual(expectedResult);
-          expect(result.unit?.numerators).toEqual(["mois"]);
+          expect(missingArgs).toEqual([]);
+          expect(result.value).toEqual(expectedResult);
+          expect(result.unit).toEqual("mois");
         }
       );
     });

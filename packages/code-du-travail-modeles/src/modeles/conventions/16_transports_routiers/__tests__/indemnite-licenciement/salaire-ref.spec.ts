@@ -88,10 +88,26 @@ describe("Calcul du salaire pour la CC 16", () => {
       { month: "décembre", value: 2551 },
     ];
 
+    const employeesSalariesWithPrimes = [
+      { month: "janvier", value: 2451 },
+      { month: "février", value: 2522 },
+      { month: "mars", value: 2444 },
+      { month: "avril", value: 2432 },
+      { month: "mai", value: 2585 },
+      { month: "juin", value: 2583 },
+      { month: "juillet", value: 2443 },
+      { month: "août", value: 2410 },
+      { month: "septembre", value: 2537 },
+      { month: "octobre", value: 2428, prime: 1000 },
+      { month: "novembre", value: 2434, prime: 2000 },
+      { month: "décembre", value: 2551, prime: 1000 },
+    ];
+
     test.each`
-      salaries             | expectedResult
-      ${[]}                | ${0}
-      ${employeesSalaries} | ${2471}
+      salaries                       | expectedResult
+      ${[]}                          | ${0}
+      ${employeesSalaries}           | ${2471}
+      ${employeesSalariesWithPrimes} | ${1471}
     `(
       "Salaires : $salaries => $expectedResult €",
       ({ salaries, expectedResult }) => {
@@ -122,10 +138,26 @@ describe("Calcul du salaire pour la CC 16", () => {
       { month: "décembre", value: 2602 },
     ];
 
+    const workerSalariesWithPrimes = [
+      { month: "janvier", value: 2404 },
+      { month: "février", value: 2540 },
+      { month: "mars", value: 2487 },
+      { month: "avril", value: 2410 },
+      { month: "mai", value: 2403 },
+      { month: "juin", value: 2591 },
+      { month: "juillet", value: 2525 },
+      { month: "août", value: 2412 },
+      { month: "septembre", value: 2411 },
+      { month: "octobre", value: 2460, prime: 500 },
+      { month: "novembre", value: 2486, prime: 750 },
+      { month: "décembre", value: 2602, prime: 600 },
+    ];
+
     test.each`
-      salaries          | expectedResult
-      ${[]}             | ${0}
-      ${workerSalaries} | ${2516}
+      salaries                    | expectedResult
+      ${[]}                       | ${0}
+      ${workerSalaries}           | ${2516}
+      ${workerSalariesWithPrimes} | ${2053.5}
     `(
       "Salaires : $salaries => $expectedResult €",
       ({ salaries, expectedResult }) => {

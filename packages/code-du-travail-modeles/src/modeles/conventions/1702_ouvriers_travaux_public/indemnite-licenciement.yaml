@@ -11,7 +11,7 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age:
   applicable si: licenciement économique
   titre: Âge du salarié
-  question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non) &nbsp;?
+  question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?
   cdtn:
     type: entier
 
@@ -23,7 +23,7 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
   unité: an
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . base:
-  applicable si: indemnité de licenciement . ancienneté requise en année <= 5
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année <= 5
   valeur: indemnité de licenciement . salaire de référence conventionnel * indemnité de licenciement . ancienneté conventionnelle en année * 0.1
   unité: €
   cdtn:
@@ -37,8 +37,8 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
   remplace: base
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté requise en année > 5
-      - indemnité de licenciement . ancienneté requise en année < 15
+      - indemnité de licenciement . ancienneté conventionnelle requise en année > 5
+      - indemnité de licenciement . ancienneté conventionnelle requise en année <= 15
   valeur: indemnité de licenciement . salaire de référence conventionnel * indemnité de licenciement . ancienneté conventionnelle en année * 0.15
   unité: €
   cdtn:
@@ -50,7 +50,7 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . base plus de 15 ans:
   remplace: base
-  applicable si: indemnité de licenciement . ancienneté requise en année > 15
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année > 15
   somme:
     - indemnité de licenciement . salaire de référence conventionnel * indemnité de licenciement . ancienneté conventionnelle en année * 0.15
     - indemnité de licenciement . salaire de référence conventionnel * ancienneté au-dela de 15 ans * 0.05
@@ -65,7 +65,7 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: indemnité de licenciement . ancienneté requise en année >= 2
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 2
   valeur: base + majoration plus de 55ans + majoration licenciement économique
   unité: €
   arrondi: 2 décimales
@@ -91,7 +91,7 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . majoration licenciement économique . moins de 5 ans:
   remplace: majoration licenciement économique
-  applicable si: indemnité de licenciement . ancienneté requise en année < 5
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année < 5
   valeur: base * 0.7
   unité: €
   cdtn:
@@ -100,7 +100,7 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . majoration licenciement économique . plus de 5 ans:
   remplace: majoration licenciement économique
-  applicable si: indemnité de licenciement . ancienneté requise en année >= 5
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 5
   valeur: indemnité de licenciement . salaire de référence conventionnel * 0.35
   unité: €
   cdtn:

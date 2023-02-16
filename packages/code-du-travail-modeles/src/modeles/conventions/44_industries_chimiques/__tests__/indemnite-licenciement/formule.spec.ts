@@ -1,5 +1,10 @@
-import { getFormule } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 import { CategoryPro44 } from "../../salary";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "44"
+);
 
 describe("Formule indemnité licenciement -  CC 44", () => {
   describe("Défaut", () => {
@@ -18,7 +23,7 @@ describe("Formule indemnité licenciement -  CC 44", () => {
         expectedFormula,
         expectedExplanations,
       }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0044'",
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
@@ -27,11 +32,12 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
         });
 
-        const formule = getFormule(situation);
+        const formule = engine.getFormule();
 
         expect(formule.formula).toEqual(expectedFormula);
         expect(formule.explanations).toEqual(expectedExplanations);
@@ -65,7 +71,7 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           expectedFormula,
           expectedExplanations,
         }) => {
-          const situation = engine.setSituation({
+          engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
@@ -74,11 +80,12 @@ describe("Formule indemnité licenciement -  CC 44", () => {
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              "1000",
           });
 
-          const formule = getFormule(situation);
+          const formule = engine.getFormule();
 
           expect(formule.formula).toEqual(expectedFormula);
           expect(formule.explanations).toEqual(expectedExplanations);
@@ -120,7 +127,7 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           expectedFormula,
           expectedExplanations,
         }) => {
-          const situation = engine.setSituation({
+          engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
@@ -129,11 +136,12 @@ describe("Formule indemnité licenciement -  CC 44", () => {
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              "1000",
           });
 
-          const formule = getFormule(situation);
+          const formule = engine.getFormule();
 
           expect(formule.formula).toEqual(expectedFormula);
           expect(formule.explanations).toEqual(expectedExplanations);
@@ -178,7 +186,7 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           expectedFormula,
           expectedExplanations,
         }) => {
-          const situation = engine.setSituation({
+          engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
@@ -187,11 +195,12 @@ describe("Formule indemnité licenciement -  CC 44", () => {
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              "1000",
           });
 
-          const formule = getFormule(situation);
+          const formule = engine.getFormule();
 
           expect(formule.formula).toEqual(expectedFormula);
           expect(formule.explanations).toEqual(expectedExplanations);
@@ -232,7 +241,7 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           expectedFormula,
           expectedExplanations,
         }) => {
-          const situation = engine.setSituation({
+          engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
@@ -241,11 +250,12 @@ describe("Formule indemnité licenciement -  CC 44", () => {
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              "1000",
           });
 
-          const formule = getFormule(situation);
+          const formule = engine.getFormule();
 
           expect(formule.formula).toEqual(expectedFormula);
           expect(formule.explanations).toEqual(expectedExplanations);
@@ -284,7 +294,7 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           expectedFormula,
           expectedExplanations,
         }) => {
-          const situation = engine.setSituation({
+          engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
@@ -293,11 +303,12 @@ describe("Formule indemnité licenciement -  CC 44", () => {
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              "1000",
           });
 
-          const formule = getFormule(situation);
+          const formule = engine.getFormule();
 
           expect(formule.formula).toEqual(expectedFormula);
           expect(formule.explanations).toEqual(expectedExplanations);
@@ -336,7 +347,7 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           expectedFormula,
           expectedExplanations,
         }) => {
-          const situation = engine.setSituation({
+          engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
@@ -345,11 +356,12 @@ describe("Formule indemnité licenciement -  CC 44", () => {
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              "1000",
           });
 
-          const formule = getFormule(situation);
+          const formule = engine.getFormule();
 
           expect(formule.formula).toEqual(expectedFormula);
           expect(formule.explanations).toEqual(expectedExplanations);

@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getNotifications, getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const DepartRetraiteReferencesEmployes = [
   ...DepartRetraiteReferences,
@@ -138,25 +135,21 @@ describe("Préavis de retraite de la CC 86", () => {
         expectedResult,
         expectedReferences,
       }: InputType) => {
-        const situation = engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC0086'",
-          "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . mise à la retraite": "non",
-          "contrat salarié . travailleur handicapé": "non",
-        });
-        const result = situation.evaluate(
-          "contrat salarié . préavis de retraite"
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . ancienneté": seniority.toString(),
+            "contrat salarié . convention collective": "'IDCC0086'",
+            "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "non",
+            "contrat salarié . travailleur handicapé": "non",
+          },
+          "contrat salarié . préavis de retraite en jours"
         );
-        const maximumResult = situation.evaluate(
-          "contrat salarié . préavis de retraite collective maximum"
-        );
-        const references = getReferences(situation);
+        const references = engine.getReferences();
 
-        expect(maximumResult.nodeValue).toBe(false);
-        expect(result.nodeValue).toEqual(expectedResult);
-        expect(result.unit?.numerators).toEqual(["mois"]);
-        expect(result.missingVariables).toEqual({});
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual("mois");
+        expect(missingArgs).toEqual([]);
         expect(references).toHaveLength(expectedReferences.length);
         expect(references).toEqual(expect.arrayContaining(expectedReferences));
       }
@@ -182,27 +175,22 @@ describe("Préavis de retraite de la CC 86", () => {
         seniority,
         expectedResult,
         expectedReferences,
-        maximumValue,
       }: MiseInputType) => {
-        const situation = engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC0086'",
-          "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . mise à la retraite": "oui",
-          "contrat salarié . travailleur handicapé": "non",
-        });
-        const result = situation.evaluate(
-          "contrat salarié . préavis de retraite"
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . ancienneté": seniority.toString(),
+            "contrat salarié . convention collective": "'IDCC0086'",
+            "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "oui",
+            "contrat salarié . travailleur handicapé": "non",
+          },
+          "contrat salarié . préavis de retraite en jours"
         );
-        const references = getReferences(situation);
-        const maximumResult = situation.evaluate(
-          "contrat salarié . préavis de retraite collective maximum"
-        );
+        const references = engine.getReferences();
 
-        expect(maximumResult.nodeValue).toBe(maximumValue);
-        expect(result.nodeValue).toEqual(expectedResult);
-        expect(result.unit?.numerators).toEqual(["mois"]);
-        expect(result.missingVariables).toEqual({});
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual("mois");
+        expect(missingArgs).toEqual([]);
         expect(references).toHaveLength(expectedReferences.length);
         expect(references).toEqual(expect.arrayContaining(expectedReferences));
       }
@@ -212,42 +200,39 @@ describe("Préavis de retraite de la CC 86", () => {
 
 describe("Vérification des notifications", () => {
   test("Pour un départ à la retraite, une notification doit s'afficher si son ancienneté est inférieur à 6 mois", () => {
-    const notifications = getNotifications(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 5,
-        "contrat salarié . convention collective": "'IDCC0086'",
-        "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${Category.employes}'`,
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": "5",
+      "contrat salarié . convention collective": "'IDCC0086'",
+      "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${Category.employes}'`,
+      "contrat salarié . mise à la retraite": "non",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const notifications = engine.getNotifications();
     expect(notifications).toHaveLength(1);
     expect(notifications[0].description).toBe(NotificationDeDepartALaRetraite);
   });
 
   test("Pour un départ à la retraite, une notification doit s'afficher si son ancienneté est  supérieur à 6 mois", () => {
-    const notifications = getNotifications(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 7,
-        "contrat salarié . convention collective": "'IDCC0086'",
-        "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${Category.employes}'`,
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": "7",
+      "contrat salarié . convention collective": "'IDCC0086'",
+      "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${Category.employes}'`,
+      "contrat salarié . mise à la retraite": "non",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const notifications = engine.getNotifications();
     expect(notifications).toHaveLength(0);
   });
 
   test("Pour une  mise à la retraite, une notification doit s'afficher", () => {
-    const notifications = getNotifications(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 5,
-        "contrat salarié . convention collective": "'IDCC0086'",
-        "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${Category.employes}'`,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": "5",
+      "contrat salarié . convention collective": "'IDCC0086'",
+      "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${Category.employes}'`,
+      "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const notifications = engine.getNotifications();
     expect(notifications).toHaveLength(2);
     expect(notifications[0].description).toBe(NotificationDeMiseALaRetraite);
     expect(notifications[1].description).toBe(NotificationDeMiseALaRetraite2);

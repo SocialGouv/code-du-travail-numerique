@@ -1,10 +1,15 @@
-import { getFormule } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "1518"
+);
 
 describe("Formule indemnité licenciement - CC 1518", () => {
   test.each`
     seniority | expectedFormula                            | expectedExplanations
     ${7 / 12} | ${""}                                      | ${[]}
-    ${8 / 12} | ${""}                                      | ${[]}
+    ${8 / 12} | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
     ${9 / 12} | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (0.75 an)", "Sref : Salaire de référence (1000 €)"]}
     ${7}      | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (7 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${10}     | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (10 ans)", "Sref : Salaire de référence (1000 €)"]}
@@ -13,15 +18,16 @@ describe("Formule indemnité licenciement - CC 1518", () => {
   `(
     "Formule $expectedFormula avec $seniority ans",
     ({ seniority, expectedFormula, expectedExplanations }) => {
-      const situation = engine.setSituation({
+      engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1518'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "1000",
       });
-      const result = getFormule(situation);
+      const result = engine.getFormule();
       expect(result.formula).toEqual(expectedFormula);
       expect(result.explanations).toEqual(expectedExplanations);
     }

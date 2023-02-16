@@ -1,14 +1,12 @@
-import Engine from "publicodes";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
-
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 test.each`
   accommodation | coefficient | expectedResult | expectedPeriod | seniority
-  ${"Non"}      | ${602}      | ${8}           | ${"jour"}      | ${1}
-  ${"Non"}      | ${602}      | ${8}           | ${"jour"}      | ${6}
-  ${"Non"}      | ${602}      | ${8}           | ${"jour"}      | ${24}
+  ${"Non"}      | ${602}      | ${8}           | ${"jours"}     | ${1}
+  ${"Non"}      | ${602}      | ${8}           | ${"jours"}     | ${6}
+  ${"Non"}      | ${602}      | ${8}           | ${"jours"}     | ${24}
   ${"Non"}      | ${603}      | ${1}           | ${"mois"}      | ${1}
   ${"Non"}      | ${603}      | ${1}           | ${"mois"}      | ${6}
   ${"Non"}      | ${603}      | ${1}           | ${"mois"}      | ${24}
@@ -27,20 +25,21 @@ test.each`
     expectedPeriod,
     seniority,
   }) => {
-    const result = engine
-      .setSituation({
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC1043'",
         "contrat salarié . convention collective . gardien concierge . coefficient": coefficient,
         "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.missingVariables).toEqual({});
-    expect(result.nodeValue).toEqual(expectedResult);
-    expect(result.unit?.numerators).toEqual([expectedPeriod]);
+    expect(missingArgs).toEqual([]);
+    expect(result.value).toEqual(expectedResult);
+    expect(result.unit).toEqual(expectedPeriod);
   }
 );
 
@@ -53,18 +52,19 @@ test.each`
 `(
   "Pour un salarié de tel $category possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedResult mois",
   ({ seniority, category, expectedResult }) => {
-    const result = engine
-      .setSituation({
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC1043'",
         "contrat salarié . convention collective . gardien concierge . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.missingVariables).toEqual({});
-    expect(result.nodeValue).toEqual(expectedResult);
-    expect(result.unit?.numerators).toEqual(["mois"]);
+    expect(missingArgs).toEqual([]);
+    expect(result.value).toEqual(expectedResult);
+    expect(result.unit).toEqual("mois");
   }
 );

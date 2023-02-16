@@ -1,25 +1,37 @@
 import { CalculateurIndemnite, loadPublicodesRules } from "../..";
 import { ui } from "./ui";
 
-import { render, fireEvent, waitFor } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-jest.mock("../../../conventions/Search/api/agreements.service");
+jest.spyOn(Storage.prototype, "setItem");
+Storage.prototype.getItem = jest.fn(
+  () => `
+{
+  "num": 16,
+  "shortTitle": "Transports routiers et activités auxiliaires du transport",
+  "id": "KALICONT000005635624",
+  "title": "Transports routiers et activités auxiliaires du transport",
+  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
+  "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
+}
+`
+);
 
 describe(`Tests des erreurs d'éligibilité`, () => {
-  beforeEach(async () => {
-    await render(
+  beforeEach(() => {
+    render(
       <CalculateurIndemnite
         icon={""}
         title={""}
         displayTitle={""}
-        publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+        slug={"indemnite-licenciement"}
       />
     );
     fireEvent.click(ui.introduction.startButton.get());
   });
 
-  test("Vérifier l'affichage de l'erreur légal cdd", async () => {
+  test("Vérifier l'affichage de l'erreur légal cdd", () => {
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.next.get());
     fireEvent.click(ui.contract.type.cdd.get());
@@ -33,7 +45,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     ).not.toBeInTheDocument();
   });
 
-  test("Vérifier l'affichage de l'erreur légal faute grave", async () => {
+  test("Vérifier l'affichage de l'erreur légal faute grave", () => {
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.fauteGrave.non.get());
     fireEvent.click(ui.next.get());
@@ -47,19 +59,12 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     expect(ui.result.infoWarning.message.mayBeCC.query()).toBeInTheDocument();
   });
 
-  test("Vérifier l'affichage de l'erreur ancienneté < 8 mois", async () => {
+  test("Vérifier l'affichage de l'erreur ancienneté < 8 mois", () => {
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.fauteGrave.non.get());
     fireEvent.click(ui.contract.inaptitude.non.get());
     fireEvent.click(ui.contract.arretTravail.non.get());
     fireEvent.click(ui.next.get());
-    fireEvent.click(ui.agreement.agreement.get());
-    fireEvent.change(ui.agreement.agreementInput.get(), {
-      target: { value: "16" },
-    });
-    await waitFor(() =>
-      fireEvent.click(ui.agreement.searchItem.agreement16.get())
-    );
     fireEvent.click(ui.next.get());
     userEvent.selectOptions(
       ui.information.agreement16.proCategory.get(),

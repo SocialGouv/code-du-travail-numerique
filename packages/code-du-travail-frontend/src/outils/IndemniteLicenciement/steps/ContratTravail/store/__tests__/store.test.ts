@@ -1,5 +1,6 @@
 import { loadPublicodesRules } from "../../../../../api";
 import { createIndemniteLicenciementStore } from "../../../../store";
+import { ValidationResponse } from "../../../../../Components/SimulatorLayout";
 
 describe("Contrat de travail store", () => {
   let store: ReturnType<typeof createIndemniteLicenciementStore>;
@@ -51,19 +52,19 @@ describe("Contrat de travail store", () => {
   });
 
   it("should update properties", () => {
-    store
-      .getState()
-      .contratTravailFunction.onChangeLicenciementFauteGrave("non");
     store.getState().contratTravailFunction.onChangeTypeContratTravail("cdi");
     store
       .getState()
+      .contratTravailFunction.onChangeLicenciementFauteGrave("non");
+    store
+      .getState()
       .contratTravailFunction.onChangeLicenciementInaptitude("non");
-    expect(
-      store.getState().contratTravailData.input.licenciementFauteGrave
-    ).toBe("non");
     expect(store.getState().contratTravailData.input.typeContratTravail).toBe(
       "cdi"
     );
+    expect(
+      store.getState().contratTravailData.input.licenciementFauteGrave
+    ).toBe("non");
     expect(
       store.getState().contratTravailData.input.licenciementInaptitude
     ).toBe("non");
@@ -72,32 +73,26 @@ describe("Contrat de travail store", () => {
   it("should render an error for field uncompleted", () => {
     const isValid = store
       .getState()
-      .contratTravailFunction.onValidateStepInfo();
-    expect(isValid).toBe(false);
-    expect(
-      store.getState().contratTravailData.error.errorLicenciementFauteGrave
-    ).toBe("Vous devez répondre à cette question");
-    expect(
-      store.getState().contratTravailData.error.errorLicenciementInaptitude
-    ).toBe("Vous devez répondre à cette question");
+      .contratTravailFunction.onValidateWithEligibility();
+    expect(isValid).toBe(ValidationResponse.NotValid);
     expect(
       store.getState().contratTravailData.error.errorTypeContratTravail
     ).toBe("Vous devez répondre à cette question");
   });
 
   it("should validate the step 🚀", () => {
+    store.getState().contratTravailFunction.onChangeTypeContratTravail("cdi");
     store
       .getState()
       .contratTravailFunction.onChangeLicenciementFauteGrave("non");
-    store.getState().contratTravailFunction.onChangeTypeContratTravail("cdi");
     store
       .getState()
       .contratTravailFunction.onChangeLicenciementInaptitude("non");
     store.getState().contratTravailFunction.onChangeArretTravail("non");
     const isValid = store
       .getState()
-      .contratTravailFunction.onValidateStepInfo();
-    expect(isValid).toBe(true);
+      .contratTravailFunction.onValidateWithEligibility();
+    expect(isValid).toBe(ValidationResponse.Valid);
     expect(
       store.getState().contratTravailData.error.errorLicenciementFauteGrave
     ).toBe(undefined);

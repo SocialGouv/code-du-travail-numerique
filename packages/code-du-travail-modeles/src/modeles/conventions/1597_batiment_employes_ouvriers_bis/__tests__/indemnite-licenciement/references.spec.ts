@@ -1,4 +1,9 @@
-import { getReferences } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "1597"
+);
 
 const references = [
   {
@@ -31,17 +36,17 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, age $age",
       ({ seniority, salary, age }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1597'",
           "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age": parseFloat(
             age
-          ),
+          ).toString(),
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = getReferences(situation, "résultat conventionnel");
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(references.length);
         expect(result).toEqual(expect.arrayContaining(references));
@@ -61,16 +66,16 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
     `(
       "ancienneté: $seniority an, salaire de référence: $salary",
       ({ seniority, salary }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1597'",
           "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age":
             "55",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = getReferences(situation, "résultat conventionnel");
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(references.length);
         expect(result).toEqual(expect.arrayContaining(references));

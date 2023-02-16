@@ -26,9 +26,6 @@ export const createAgreement1527StoreSalaires: StoreSlice<
     onChangeHasCommission: (value) => {
       applyGenericValidation(get, set, "hasCommission", value);
     },
-    onChangeContractSalary: (value) => {
-      applyGenericValidation(get, set, "contractSalary", value);
-    },
   },
 });
 
@@ -52,7 +49,7 @@ const applyGenericValidation = (
         state.agreement1527Data.input[paramName] = value;
       })
     );
-    get().salairesFunction.onValidateStepSalaires();
+    get().salairesFunction.onValidateStep();
   } else {
     set(
       produce((state: Agreement1527StoreSlice) => {

@@ -1,4 +1,9 @@
-import { getFormule } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "2264"
+);
 
 describe("Formule indemnité licenciement - 2264", () => {
   describe("Cas normal", () => {
@@ -14,16 +19,17 @@ describe("Formule indemnité licenciement - 2264", () => {
     `(
       "Formule $expectedFormula avec $seniority ans et comme catégorie $category, et ancienneté non cadre : $seniorityNonCadre",
       ({ category, seniority, expectedFormula, expectedExplanations }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC2264'",
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
             "'Non'",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
         });
-        const formule = getFormule(situation);
+        const formule = engine.getFormule();
 
         expect(formule.formula).toEqual(expectedFormula);
         expect(formule.explanations).toEqual(expectedExplanations);
@@ -50,17 +56,18 @@ describe("Formule indemnité licenciement - 2264", () => {
         expectedFormula,
         expectedExplanations,
       }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC2264'",
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
             "'Oui'",
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": seniorityNonCadre,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
         });
-        const formule = getFormule(situation);
+        const formule = engine.getFormule();
         expect(formule.formula).toEqual(expectedFormula);
         expect(formule.explanations).toEqual(expectedExplanations);
       }

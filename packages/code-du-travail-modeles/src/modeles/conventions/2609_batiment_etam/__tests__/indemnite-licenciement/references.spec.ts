@@ -1,9 +1,9 @@
-import Engine from "publicodes";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-import { getReferences } from "../../../../common";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "2609"
+);
 
 describe("Vérification des références juridiques pour la CC 2609", () => {
   const references = [
@@ -46,18 +46,16 @@ describe("Vérification des références juridiques pour la CC 2609", () => {
   `(
     "avec une ancienneté de $seniority ans, un age de $age et un salaire ref de $salaireRef",
     ({ seniority, age, expectedReferences }) => {
-      const result = getReferences(
-        engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC2609'",
-          "contrat salarié . convention collective . batiment etam . indemnité de licenciement . age à la fin de son préavis": age,
-          "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            "1000",
-        }),
-        "résultat conventionnel"
-      );
+      engine.setSituation({
+        "contrat salarié . convention collective": "'IDCC2609'",
+        "contrat salarié . convention collective . batiment etam . indemnité de licenciement . age à la fin de son préavis": age,
+        "contrat salarié . indemnité de licenciement": "oui",
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "1000",
+      });
+      const result = engine.getReferences("résultat conventionnel");
 
       expect(result).toHaveLength(expectedReferences.length);
       expect(result).toEqual(expect.arrayContaining(expectedReferences));

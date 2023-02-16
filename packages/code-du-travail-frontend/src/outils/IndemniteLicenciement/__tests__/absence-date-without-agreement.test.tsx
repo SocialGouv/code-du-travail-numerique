@@ -1,9 +1,6 @@
 import { render, RenderResult } from "@testing-library/react";
 import { UserAction } from "../../../common";
-import {
-  CalculateurIndemnite,
-  loadPublicodesRules,
-} from "../../../../src/outils";
+import { CalculateurIndemnite } from "../../../../src/outils";
 import React from "react";
 import { ui } from "./ui";
 
@@ -20,7 +17,7 @@ describe("Indemnité licenciement - Validation du comportement avec l'absence de
           icon={""}
           title={""}
           displayTitle={""}
-          publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+          slug={"indemnite-licenciement"}
         />
       );
       userAction = new UserAction();

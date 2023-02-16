@@ -1,9 +1,6 @@
 import { fireEvent, render, waitFor, screen } from "@testing-library/react";
 import React from "react";
-import {
-  CalculateurIndemnite,
-  loadPublicodesRules,
-} from "../../../../src/outils";
+import { CalculateurIndemnite } from "../../../../src/outils";
 import { ui } from "./ui";
 
 jest.spyOn(Storage.prototype, "setItem");
@@ -27,7 +24,7 @@ describe("Indemnité licenciement - CC 1517", () => {
         icon={""}
         title={""}
         displayTitle={""}
-        publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+        slug={"indemnite-licenciement"}
       />
     );
     fireEvent.click(ui.introduction.startButton.get());
@@ -57,19 +54,5 @@ describe("Indemnité licenciement - CC 1517", () => {
     });
     fireEvent.click(ui.next.get());
     expect(ui.result.formula.get()).toHaveTextContent("Formule");
-  });
-  test("vérifier l'ineligibilite pour ancienneté (entree -> sortie) < 8mois", async () => {
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "01/10/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "15/08/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
-    expect(ui.result.legalError.seniorityToLow.get()).toBeInTheDocument();
   });
 });

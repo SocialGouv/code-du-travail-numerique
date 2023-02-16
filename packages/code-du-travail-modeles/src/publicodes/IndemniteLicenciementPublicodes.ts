@@ -8,7 +8,11 @@ import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
 class IndemniteLicenciementPublicodes
   extends PublicodesBase<PublicodesIndemniteLicenciementResult>
   implements Publicodes<PublicodesIndemniteLicenciementResult> {
-  constructor(rules: any) {
+  constructor(models: any, idcc?: string) {
+    const rules = {
+      ...models.base,
+      ...(idcc ? models[idcc] : {}),
+    };
     super(
       rules,
       PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_LICENCIEMENT]

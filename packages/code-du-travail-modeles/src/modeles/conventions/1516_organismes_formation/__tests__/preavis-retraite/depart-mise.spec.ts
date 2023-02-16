@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const CommonReferences = [
   {
@@ -25,28 +22,28 @@ const MiseRetraiteCcReferences = [
 describe("Convention collective 1702", () => {
   describe("Pour un départ à la retraite", () => {
     test.each`
-      seniority | expectedResult
-      ${5}      | ${0}
-      ${6}      | ${1}
-      ${24}     | ${2}
-      ${25}     | ${2}
+      seniority | expectedResult | expectedUnit
+      ${5}      | ${0}           | ${"semaines"}
+      ${6}      | ${1}           | ${"mois"}
+      ${24}     | ${2}           | ${"mois"}
+      ${25}     | ${2}           | ${"mois"}
     `(
       "Pour un employé possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
-      ({ seniority, expectedResult }) => {
-        const situation = engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC1516'",
-          "contrat salarié . mise à la retraite": "non",
-          "contrat salarié . travailleur handicapé": "non",
-        });
-        const result = situation.evaluate(
-          "contrat salarié . préavis de retraite"
+      ({ seniority, expectedResult, expectedUnit }) => {
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . ancienneté": seniority,
+            "contrat salarié . convention collective": "'IDCC1516'",
+            "contrat salarié . mise à la retraite": "non",
+            "contrat salarié . travailleur handicapé": "non",
+          },
+          "contrat salarié . préavis de retraite en jours"
         );
-        const references = getReferences(situation);
+        const references = engine.getReferences();
 
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedResult);
-        expect(result.unit?.numerators).toEqual(["mois"]);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual(expectedUnit);
         expect(references).toHaveLength(DepartRetraiteReferences.length);
         expect(references).toEqual(
           expect.arrayContaining(DepartRetraiteReferences)
@@ -73,21 +70,21 @@ describe("Convention collective 1702", () => {
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ seniority, category, expectedResult }) => {
-        const situation = engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC1516'",
-          "contrat salarié . convention collective . organismes de formation . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . mise à la retraite": "oui",
-          "contrat salarié . travailleur handicapé": "non",
-        });
-        const result = situation.evaluate(
-          "contrat salarié . préavis de retraite"
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . ancienneté": seniority,
+            "contrat salarié . convention collective": "'IDCC1516'",
+            "contrat salarié . convention collective . organismes de formation . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "oui",
+            "contrat salarié . travailleur handicapé": "non",
+          },
+          "contrat salarié . préavis de retraite en jours"
         );
-        const references = getReferences(situation);
+        const references = engine.getReferences();
 
-        expect(result.nodeValue).toEqual(expectedResult);
-        expect(result.unit?.numerators).toEqual(["mois"]);
-        expect(result.missingVariables).toEqual({});
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual("mois");
+        expect(missingArgs).toEqual([]);
         expect(references).toHaveLength(MiseRetraiteCcReferences.length);
         expect(references).toEqual(
           expect.arrayContaining(MiseRetraiteCcReferences)

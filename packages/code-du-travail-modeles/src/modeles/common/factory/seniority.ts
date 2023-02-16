@@ -1,13 +1,22 @@
 import { SeniorityLegal } from "../../base";
-import { Seniority413 } from "../../conventions";
-import { Seniority16 } from "../../conventions/16_transports_routiers";
-import { Seniority44 } from "../../conventions/44_industries_chimiques";
-import { Seniority1090 } from "../../conventions/1090_automobiles";
-import { Seniority1486 } from "../../conventions/1486_bureaux_etudes_techniques";
-import { SenioritY1527 } from "../../conventions/1527_immobilier";
-import { Seniority2216 } from "../../conventions/2216_commerces_detail_alimentation";
-import { Seniority2941 } from "../../conventions/2941_aide_accompagnement_soins_services_domicile";
-import { getMotifs } from "../motifs";
+import {
+  Seniority16,
+  Seniority44,
+  Seniority413,
+  Seniority650,
+  Seniority1090,
+  Seniority1486,
+  Seniority1518,
+  Seniority1527,
+  Seniority2098,
+  Seniority2216,
+  Seniority2511,
+  Seniority2609,
+  Seniority2941,
+  Seniority3043,
+  Seniority3239,
+} from "../../conventions";
+import { Seniority1517 } from "../../conventions/1517_commerces_de_detail_non_alimentaires";
 import type { ISeniority } from "../types";
 import { SupportedCcIndemniteLicenciement } from "../types";
 
@@ -15,70 +24,40 @@ export class SeniorityFactory {
   create<T extends SupportedCcIndemniteLicenciement>(idcc: T): ISeniority<T> {
     switch (idcc) {
       case SupportedCcIndemniteLicenciement.IDCC2511:
-        return new SeniorityLegal(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC2511)
-        ) as ISeniority<T>;
+        return new Seniority2511();
       case SupportedCcIndemniteLicenciement.IDCC3043:
-        return new SeniorityLegal(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC3043)
-        ) as ISeniority<T>;
+        return new Seniority3043();
       case SupportedCcIndemniteLicenciement.IDCC1090:
-        return new Seniority1090(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC1090)
-        ) as ISeniority<T>;
+        return new Seniority1090();
       case SupportedCcIndemniteLicenciement.IDCC1518:
-        return new SeniorityLegal(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC1518)
-        ) as ISeniority<T>;
+        return new Seniority1518();
       case SupportedCcIndemniteLicenciement.IDCC2941:
-        return new Seniority2941(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC2941)
-        ) as ISeniority<T>;
+        return new Seniority2941();
       case SupportedCcIndemniteLicenciement.IDCC1486:
-        return new Seniority1486(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC1486)
-        ) as ISeniority<T>;
+        return new Seniority1486();
       case SupportedCcIndemniteLicenciement.IDCC1527:
-        return new SenioritY1527(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC1527)
-        ) as ISeniority<T>;
+        return new Seniority1527();
       case SupportedCcIndemniteLicenciement.IDCC0016:
-        return new Seniority16(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC0016)
-        ) as ISeniority<T>;
+        return new Seniority16() as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.IDCC3239:
-        return new SeniorityLegal(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC3239)
-        ) as ISeniority<T>;
+        return new Seniority3239();
       case SupportedCcIndemniteLicenciement.IDCC650:
-        return new SeniorityLegal(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC650)
-        );
+        return new Seniority650();
       case SupportedCcIndemniteLicenciement.IDCC2216:
-        return new Seniority2216(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC2216)
-        ) as ISeniority<T>;
+        return new Seniority2216();
       case SupportedCcIndemniteLicenciement.IDCC0044:
-        return new Seniority44(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC0044)
-        ) as ISeniority<T>;
+        return new Seniority44();
       case SupportedCcIndemniteLicenciement.IDCC2098:
-        return new SeniorityLegal(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC2098)
-        ) as ISeniority<T>;
+        return new Seniority2098();
       case SupportedCcIndemniteLicenciement.IDCC2609:
-        return new SeniorityLegal(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC2609)
-        ) as ISeniority<T>;
+        return new Seniority2609();
       case SupportedCcIndemniteLicenciement.IDCC413:
-        return new Seniority413(
-          getMotifs(SupportedCcIndemniteLicenciement.IDCC413)
-        ) as ISeniority<T>;
+        return new Seniority413() as ISeniority<T>;
+      case SupportedCcIndemniteLicenciement.IDCC1517:
+        return new Seniority1517();
       case SupportedCcIndemniteLicenciement.default:
       default:
-        return new SeniorityLegal(
-          getMotifs(SupportedCcIndemniteLicenciement.default)
-        ) as ISeniority<T>;
+        return new SeniorityLegal();
     }
   }
 }
