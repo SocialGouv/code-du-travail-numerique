@@ -1,15 +1,16 @@
 import { getRouteBySource } from "@socialgouv/cdtn-sources";
-import { Grid, Tile, Title } from "@socialgouv/cdtn-ui";
+import { Grid, Title } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import { reportSelectionToMatomo, summarize } from "../utils";
+import { LinkedTile } from "../../common/tiles/LinkedTile";
 
 export const Law = ({ items, query }) => (
   <>
     <Title>Que dit le code du travail&nbsp;?</Title>
     <Grid columns={3}>
       {items.map(({ algo, description, slug, source, title, url }) => (
-        <Tile
+        <LinkedTile
           wide
           title={title}
           onClick={() => reportSelectionToMatomo(source, slug, url, algo)}
@@ -19,7 +20,7 @@ export const Law = ({ items, query }) => (
           }`}
         >
           {summarize(description)}
-        </Tile>
+        </LinkedTile>
       ))}
     </Grid>
   </>

@@ -1,17 +1,11 @@
 import { SOURCES } from "@socialgouv/cdtn-sources";
-import {
-  AlertWithIcon,
-  Button,
-  Paragraph,
-  theme,
-  Tile as TileUi,
-} from "@socialgouv/cdtn-ui";
-import Link from "next/link";
+import { AlertWithIcon, Button, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
 import { ScreenType } from "../common/NavContext";
 import { TrackingProps, UserAction } from "../types";
+import { LinkedTile } from "../../../common/tiles/LinkedTile";
 
 type Props = TrackingProps;
 
@@ -32,39 +26,34 @@ const IntroductionStep = ({ onUserAction }: Props): JSX.Element => {
         </Paragraph>
       </AlertWithIcon>
       <Flex>
-        <Link
+        <Tile
+          onClick={() => onUserAction(UserAction.SelectAgreementRoute)}
           href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreement}`}
-          passHref
-          legacyBehavior
         >
-          <Tile onClick={() => onUserAction(UserAction.SelectAgreementRoute)}>
-            <Paragraph noMargin fontWeight="700">
-              Je connais
-              <br /> ma convention collective
-            </Paragraph>
-            <ButtonWrapper>
-              <Button variant="link" as="div">
-                Je la saisis
-              </Button>
-            </ButtonWrapper>
-          </Tile>
-        </Link>
-        <Link
+          <Paragraph noMargin fontWeight="700">
+            Je connais
+            <br /> ma convention collective
+          </Paragraph>
+          <ButtonWrapper>
+            <Button variant="link" as="div">
+              Je la saisis
+            </Button>
+          </ButtonWrapper>
+        </Tile>
+
+        <Tile
+          onClick={() => onUserAction(UserAction.SelectEnterpriseRoute)}
           href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.enterprise}`}
-          passHref
-          legacyBehavior
         >
-          <Tile onClick={() => onUserAction(UserAction.SelectEnterpriseRoute)}>
-            <Paragraph noMargin fontWeight="700">
-              Je ne connais <br /> pas ma convention collective
-            </Paragraph>
-            <ButtonWrapper>
-              <Button variant="link" as="div">
-                Je la recherche
-              </Button>
-            </ButtonWrapper>
-          </Tile>
-        </Link>
+          <Paragraph noMargin fontWeight="700">
+            Je ne connais <br /> pas ma convention collective
+          </Paragraph>
+          <ButtonWrapper>
+            <Button variant="link" as="div">
+              Je la recherche
+            </Button>
+          </ButtonWrapper>
+        </Tile>
       </Flex>
     </>
   );
@@ -82,7 +71,7 @@ const Flex = styled.div`
   }
 `;
 
-const Tile = styled(TileUi)`
+const Tile = styled(LinkedTile)`
   flex: 0 1 auto;
   width: 28rem;
   @media (max-width: ${theme.breakpoints.mobile}) {

@@ -24,16 +24,8 @@ export const Tile = React.forwardRef(
     },
     ref
   ) => {
-    const { href, onClick, ...propsLink } = props;
-    const goToUrl = (e) => {
-      if (onClick) onClick(e);
-      if (!href) return;
-      e.preventDefault();
-      window.location.href = href;
-    };
-
     return (
-      <StyledTile ref={ref} wide={wide} {...propsLink} onClick={goToUrl}>
+      <StyledTile ref={ref} wide={wide} {...props}>
         {custom && <Badge />}
         <TopWrapper>
           {striped && <Stripe length="5rem" />}
@@ -61,9 +53,7 @@ Tile.propTypes = {
   centerTitle: PropTypes.bool,
   children: PropTypes.node,
   custom: PropTypes.bool,
-  href: PropTypes.string,
   icon: PropTypes.elementType,
-  onClick: PropTypes.elementType,
   striped: PropTypes.bool,
   subtitle: PropTypes.string,
   title: PropTypes.string,
@@ -74,7 +64,6 @@ Tile.propTypes = {
 Tile.defaultProps = {
   centerTitle: false,
   custom: false,
-  href: undefined,
   icon: null,
   striped: false,
   subtitle: "",

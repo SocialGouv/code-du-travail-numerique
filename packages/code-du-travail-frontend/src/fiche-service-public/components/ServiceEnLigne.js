@@ -1,9 +1,10 @@
-import { theme, Tile } from "@socialgouv/cdtn-ui";
+import { theme } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
 import { getText } from "../utils.js";
+import { LinkedTile } from "../../common/tiles/LinkedTile";
 
 class ServiceEnLigne extends React.PureComponent {
   render() {
@@ -36,6 +37,6 @@ ServiceEnLigne.propTypes = {
 export default ServiceEnLigne;
 const { spacings } = theme;
 
-const StyledTile = styled(Tile)`
+const StyledTile = styled(LinkedTile)`
   margin-bottom: ${spacings.base};
 `;

@@ -7,15 +7,13 @@ import { Tile } from "./index.js";
 describe("<Tile />", () => {
   it("renders a tile with text inside", () => {
     const { container } = render(
-      <Tile href="#" title="Hello !">
-        There is text inside
-      </Tile>
+      <Tile title="Hello !">There is text inside</Tile>
     );
     expect(container).toMatchSnapshot();
   });
   it("renders a tile with a custom badge", () => {
     const { container } = render(
-      <Tile href="#" custom title="Hello !">
+      <Tile custom title="Hello !">
         There is text inside
       </Tile>
     );
@@ -23,7 +21,7 @@ describe("<Tile />", () => {
   });
   it("renders a tile with an icon", () => {
     const { container } = render(
-      <Tile href="#" title="Hello !" icon={Time}>
+      <Tile title="Hello !" icon={Time}>
         There is text inside
       </Tile>
     );
@@ -31,7 +29,7 @@ describe("<Tile />", () => {
   });
   it("renders a tile with a stripe", () => {
     const { container } = render(
-      <Tile href="#" title="Hello !" striped>
+      <Tile title="Hello !" striped>
         There is text inside
       </Tile>
     );
@@ -39,7 +37,7 @@ describe("<Tile />", () => {
   });
   it("renders a tile with title with titleTagType", () => {
     render(
-      <Tile href="#" title="Hello !" titleTagType="h2">
+      <Tile title="Hello !" titleTagType="h2">
         There is text inside
       </Tile>
     );

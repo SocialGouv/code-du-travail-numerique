@@ -23,34 +23,28 @@ export const base = ({ handler }) => (
     }}
   >
     <Section>
-      <Tile href="#" title="Basic tile" />
+      <Tile title="Basic tile" />
     </Section>
     <Section>
-      <Tile href="#" icon={Time} title="Basic tile">
+      <Tile icon={Time} title="Basic tile">
         With some basic content only to see how it behaves
       </Tile>
     </Section>
     <Section>
-      <Tile href="#" custom title="Custom tile with purposely long title">
+      <Tile custom title="Custom tile with purposely long title">
         Make sure there is no collision with custom icon. Beware of mobile.
       </Tile>
     </Section>
     <Section>
-      <Tile href="#" icon={Salary} title="Tile with an icon" />
+      <Tile icon={Salary} title="Tile with an icon" />
     </Section>
     <Section>
-      <Tile href="#" striped title="Tile with an stripe" />
+      <Tile striped title="Tile with an stripe" />
     </Section>
     <Section>
-      <Tile href="#" icon={Holidays} custom title="Tile custom with an icon">
+      <Tile icon={Holidays} custom title="Tile custom with an icon">
         And some basic content only to see how it behaves
       </Tile>
-    </Section>
-    <Section>
-      <Tile
-        title="Button tile, no href prop, should have an onClick"
-        onClick={() => handler("button tile clicked")}
-      />
     </Section>
     <Section>
       <Tile
@@ -75,17 +69,16 @@ export const wide = ({ handler }) => (
     }}
   >
     <Section>
-      <Tile wide href="#" title="Wide tile" subtitle="Some theme here " />
+      <Tile wide title="Wide tile" subtitle="Some theme here " />
     </Section>
     <Section>
-      <Tile wide href="#" title="Wide tile">
+      <Tile wide title="Wide tile">
         With some basic content only to see how it behaves
       </Tile>
     </Section>
     <Section>
       <Tile
         wide
-        href="#"
         custom
         title="Custom tile with purposely long title to see how it goes with custom icon"
       >
@@ -95,20 +88,12 @@ export const wide = ({ handler }) => (
     <Section>
       <Tile
         wide
-        href="#"
         custom
         subtitle="Custom tile with purposely long title to see how it goes with custom icon"
         title="Some title"
       >
         Make sure there is no collision with custom icon. Beware of mobile.
       </Tile>
-    </Section>
-    <Section>
-      <Tile
-        onClick={() => handler("wide button tile clicked")}
-        wide
-        title="Button tile, no href prop, should have an onClick"
-      />
     </Section>
   </div>
 );

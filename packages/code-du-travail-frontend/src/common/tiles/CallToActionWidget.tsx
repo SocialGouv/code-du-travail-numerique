@@ -17,7 +17,6 @@ export default function CallToActionWidget({
 }: Props): JSX.Element {
   return (
     <CallToActionTile
-      noCustom
       action="Installer"
       title={title}
       titleTagType="h2"
