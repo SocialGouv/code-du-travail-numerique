@@ -15,33 +15,14 @@ import React from "react";
 import styled from "styled-components";
 import Metas from "../src/common/Metas";
 import { CallToActionTile } from "../src/common/tiles/CallToAction";
-import { Highlights } from "../src/home/Highlights";
-import { Themes } from "../src/home/Themes";
 import { Layout } from "../src/layout/Layout";
 import SearchHero from "../src/search/SearchHero";
 import { fetchTools } from "../src/outils/service";
 import { API_URL } from "../src/config";
-
-const DocumentsTile = (
-  <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref legacyBehavior>
-    <CallToActionTile
-      action="Découvrir"
-      custom
-      icon={icons.Document}
-      title="Modèles de documents"
-      titleTagType="h2"
-      centerTitle
-    >
-      <Paragraph noMargin>
-        Téléchargez et utilisez des modèles de lettres et de documents
-        personnalisables
-      </Paragraph>
-    </CallToActionTile>
-  </Link>
-);
+import { Highlights, Themes } from "../src/home";
 
 const Home = ({ themes = [], highlights = [], tools }) => (
-  <Layout currentPage="home" initialTitle="Code du travail numérique">
+  <Layout currentPage="home">
     <Metas
       title="Code du travail numérique - Ministère du Travail"
       noTitleAdd
@@ -51,7 +32,6 @@ const Home = ({ themes = [], highlights = [], tools }) => (
     {highlights.length > 0 && (
       <Highlights highlights={highlights.slice(0, 4)} />
     )}
-    {themes.length > 0 && <Themes themes={themes} />}
 
     <Section>
       <Container>
@@ -86,7 +66,6 @@ const Home = ({ themes = [], highlights = [], tools }) => (
               </Link>
             );
           })}
-          {DocumentsTile}
         </Grid>
         <ButtonWrapper>
           <Link href="/outils" passHref legacyBehavior>
@@ -97,13 +76,14 @@ const Home = ({ themes = [], highlights = [], tools }) => (
         </ButtonWrapper>
       </Container>
     </Section>
+    <Themes themes={themes} />
   </Layout>
 );
 
-Home.getInitialProps = async () => {
+export async function getStaticProps() {
   let themes = [];
   let highlights = [];
-  let tools = [];
+  let tools: any = [];
   try {
     const [themesResponse, highlightsResponse, toolsResponse] =
       await Promise.all([
@@ -128,8 +108,18 @@ Home.getInitialProps = async () => {
     console.error(e);
     Sentry.captureException(e);
   }
-  return { highlights, themes, tools };
-};
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      highlights,
+      themes,
+      tools,
+    },
+    revalidate: 60 * 10, // 10 minutes
+  };
+}
 
 export default Home;
 

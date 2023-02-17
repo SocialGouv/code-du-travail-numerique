@@ -14,7 +14,15 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
-export const Themes = ({ themes = [] }) => {
+type Props = {
+  themes: Array<{
+    icon: string;
+    slug: string;
+    title: string;
+  }>;
+};
+
+export const Themes = ({ themes = [] }: Props) => {
   const enrichedThemes = themes.map(({ icon, slug, title }) => {
     return (
       <GridCell key={slug}>

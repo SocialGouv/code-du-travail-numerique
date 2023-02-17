@@ -33,7 +33,6 @@ export function Partners() {
               src="/static/assets/img/ministere-travail.png"
               width="170"
               height="141"
-              unoptimized="true"
             />
           </Link>
           <Link
@@ -46,7 +45,6 @@ export function Partners() {
               alt="legifrance.gouv.fr - le service public de la diffusion du droit"
               width="236"
               height="62"
-              unoptimized="true"
             />
           </Link>
         </Flex>

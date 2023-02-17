@@ -3,8 +3,16 @@ import React from "react";
 
 import { ListLink } from "../../src/search/SearchResults/Results";
 
-export const Highlights = ({ highlights = [] }) => {
-  if (!highlights.length) return null;
+type Props = {
+  highlights: Array<{
+    slug: string;
+    title: string;
+    description: string;
+    date: string;
+  }>;
+};
+
+export const Highlights = ({ highlights = [] }: Props) => {
   return (
     <Section>
       <Container>
