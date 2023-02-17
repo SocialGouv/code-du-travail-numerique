@@ -13,4 +13,4 @@ if (ELASTICSEARCH_TOKEN_API) {
   esClientConfig.auth = { apiKey: ELASTICSEARCH_TOKEN_API };
 }
 
-export const elasticClient = new Client(esClientConfig);
+export const elasticsearchClient = new Client(esClientConfig);

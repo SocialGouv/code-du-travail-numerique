@@ -9,11 +9,7 @@ export class HomeController {
     this.res = res;
   }
 
-  public get(): NextApiResponse<{ voiture: string }> {
-    return {
-      props: {
-        voiture: "BMW",
-      },
-    };
+  public get() {
+    this.res.status(200).json({ voiture: "BMW" });
   }
 }
