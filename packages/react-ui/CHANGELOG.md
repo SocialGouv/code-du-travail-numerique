@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.91.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.90.1...v4.91.0) (2023-02-17)
+
+### Bug Fixes
+
+- **react-ui:** amélioration du bundling en rust ([#4953](https://github.com/SocialGouv/code-du-travail-numerique/issues/4953)) ([6e2ae57](https://github.com/SocialGouv/code-du-travail-numerique/commit/6e2ae57acdd40df288c4d8d8e05c7c162007d77d))
+
+### Features
+
+- **dependencies:** upgrade next to 13 + react to 18 ([#4894](https://github.com/SocialGouv/code-du-travail-numerique/issues/4894)) ([380ea32](https://github.com/SocialGouv/code-du-travail-numerique/commit/380ea324c829aaa6214ecc65b8605a62032e8d80))
+
 ## [4.90.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.90.0...v4.90.1) (2023-02-06)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui
