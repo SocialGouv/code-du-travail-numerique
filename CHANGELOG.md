@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.91.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.91.0...v4.91.1) (2023-02-17)
+
+### Bug Fixes
+
+- **actions:** production workflow is fixed ([7240383](https://github.com/SocialGouv/code-du-travail-numerique/commit/724038337227710c228b8749c470b4a8eb8ab552))
+
 # [4.91.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.90.1...v4.91.0) (2023-02-17)
 
 ### Bug Fixes
