@@ -1,20 +1,20 @@
 import { elasticIndex, elasticsearchClient, NotFoundError } from "../utils";
-import { getThemeBySlugQuery, getThemes } from "./queries";
+import { getModeleBySlug, getModeles } from "./queries";
 
-export class ThemesService {
+export class ModelesService {
   public async getAll() {
-    const body = getThemes();
+    const body = getModeles();
     const response = await elasticsearchClient.search({
       body,
       index: elasticIndex,
     });
-    return {
-      children: response.body.hits.hits.map((t) => t._source),
-    };
+    return response.body.hits.total.value > 0
+      ? response.body.hits.hits.map(({ _source }) => _source)
+      : [];
   }
 
   public async getBySlug(slug: string) {
-    const body = getThemeBySlugQuery(slug);
+    const body = getModeleBySlug(slug);
 
     const response = await elasticsearchClient.search({
       body,
@@ -23,8 +23,8 @@ export class ThemesService {
 
     if (response.body.hits.hits.length === 0) {
       throw new NotFoundError({
-        message: `There is no theme that match ${slug}`,
-        name: "THEME_NOT_FOUND",
+        message: `There is no modele that match ${slug}`,
+        name: "MODELE_NOT_FOUND",
         cause: null,
       });
     }

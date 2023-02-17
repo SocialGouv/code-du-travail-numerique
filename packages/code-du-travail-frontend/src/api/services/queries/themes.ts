@@ -1,5 +1,21 @@
 import { SOURCES } from "cdtn-types";
 
+export function getThemes() {
+  return {
+    _source: ["icon", "children", "title", "slug", "position"],
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.THEMES } },
+          { term: { isPublished: true } },
+        ],
+        must_not: { exists: { field: "breadcrumbs" } },
+      },
+    },
+    sort: [{ position: { order: "asc" } }],
+  };
+}
+
 export function getThemeBySlugQuery(slug: string) {
   return {
     _source: [
