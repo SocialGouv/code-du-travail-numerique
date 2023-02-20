@@ -1,25 +1,11 @@
 import * as Sentry from "@sentry/nextjs";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import {
-  Button,
-  Container,
-  Grid,
-  icons,
-  PageTitle,
-  Paragraph,
-  Section,
-  theme,
-} from "@socialgouv/cdtn-ui";
-import Link from "next/link";
 import React from "react";
-import styled from "styled-components";
 import Metas from "../src/common/Metas";
-import { CallToActionTile } from "../src/common/tiles/CallToAction";
 import { Layout } from "../src/layout/Layout";
 import SearchHero from "../src/search/SearchHero";
 import { fetchTools } from "../src/outils/service";
 import { API_URL } from "../src/config";
-import { Highlights, Themes } from "../src/home";
+import { Highlights, HomeSlice, Themes, Tools } from "../src/home";
 
 const Home = ({ themes = [], highlights = [], tools }) => (
   <Layout currentPage="home">
@@ -32,50 +18,28 @@ const Home = ({ themes = [], highlights = [], tools }) => (
     {highlights.length > 0 && (
       <Highlights highlights={highlights.slice(0, 4)} />
     )}
-
-    <Section>
-      <Container>
-        <PageTitle
-          as="h2"
-          subtitle="Trouvez des réponses personnalisées selon votre situation"
-          stripe="left"
-        >
-          Boîte à outils
-        </PageTitle>
-        <Grid>
-          {tools.map(({ action, description, href, icon, slug, title }) => {
-            const linkProps = {
-              href,
-              passHref: true,
-            };
-            if (!href) {
-              linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
-            }
-            return (
-              <Link {...linkProps} key={slug || href} legacyBehavior>
-                <CallToActionTile
-                  action={action}
-                  custom
-                  icon={icons[icon]}
-                  title={title}
-                  titleTagType="h3"
-                  centerTitle
-                >
-                  <Paragraph noMargin>{description}</Paragraph>
-                </CallToActionTile>
-              </Link>
-            );
-          })}
-        </Grid>
-        <ButtonWrapper>
-          <Link href="/outils" passHref legacyBehavior>
-            <Button variant="primary" as="a">
-              Voir tous les outils <StyledArrowRight />
-            </Button>
-          </Link>
-        </ButtonWrapper>
-      </Container>
-    </Section>
+    <Tools tools={tools} />
+    <HomeSlice
+      title="Modèles de documents"
+      subtitle="Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
+      triggerName="Voir tous les modèles de documents"
+      triggerLink="/modeles-de-courriers"
+      content={highlights.slice(0, 4)}
+    />
+    <HomeSlice
+      title="Vos fiches pratiques"
+      subtitle="Obtenez une réponse personnalisée selon votre convention collective"
+      triggerName="Voir toutes les fiches pratiques"
+      triggerLink="/contribution"
+      content={highlights.slice(0, 4)}
+    />
+    <HomeSlice
+      title="Votre convention collective"
+      subtitle="Retrouvez les questions-réponses fréquentes organisées par thème sur votre convention collective"
+      triggerName="Voir toutes les conventions collectives"
+      triggerLink="/convention-collective"
+      content={highlights.slice(0, 4)}
+    />
     <Themes themes={themes} />
   </Layout>
 );
@@ -91,9 +55,10 @@ export async function getStaticProps() {
         fetch(`${API_URL}/highlights/homepage`),
         fetchTools({
           slugs: [
-            "convention-collective",
-            "preavis-demission",
             "simulateur-embauche",
+            "indemnite-licenciement",
+            "preavis-demission",
+            "preavis-licenciement",
           ],
         }),
       ]);
@@ -122,15 +87,3 @@ export async function getStaticProps() {
 }
 
 export default Home;
-
-const { spacings } = theme;
-
-const ButtonWrapper = styled.div`
-  text-align: center;
-`;
-
-const StyledArrowRight = styled(icons.DirectionRight)`
-  width: 2.8rem;
-  height: 1.5rem;
-  margin-left: ${spacings.base};
-`;
