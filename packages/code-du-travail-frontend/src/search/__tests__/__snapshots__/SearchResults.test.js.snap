@@ -133,7 +133,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 </p>
               </div>
               <div
-                class="sc-jsTgWu jWQdLI"
+                class="sc-jsTgWu kLairx"
               >
                 <button
                   class="sc-hhOBVt bxVHUw"
@@ -162,8 +162,6 @@ exports[`<SearchResults/> should render results 1`] = `
         <div
           aria-label="Outils externes telerc description undefined (nouvelle fenêtre)"
           class="sc-eGugkK cJzHzy sc-dvEHMn jfDXTj no-after"
-          rel="noreferer noopener"
-          target="_blank"
         >
           <div
             class="sc-dEVLtI ijCjkg"
@@ -181,6 +179,8 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 <a
                   href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14"
+                  rel="noreferer noopener"
+                  target="_blank"
                 >
                   telerc
                 </a>
@@ -203,7 +203,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 </p>
               </div>
               <div
-                class="sc-jsTgWu jWQdLI"
+                class="sc-jsTgWu kLairx"
               >
                 <button
                   class="sc-hhOBVt bxVHUw"
@@ -297,7 +297,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 </p>
               </div>
               <div
-                class="sc-jsTgWu jWQdLI"
+                class="sc-jsTgWu kLairx"
               >
                 <button
                   class="sc-hhOBVt bxVHUw"

@@ -460,8 +460,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
                       class="sc-eGugkK cJzHzy sc-kiPvrU bNJyhQ no-after"
-                      rel="noopener noreferrer"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
@@ -479,6 +477,8 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           >
                             <a
                               href="https://www.service-public.fr/simulateur/calcul/Demission"
+                              rel="noopener noreferrer"
+                              target="_blank"
                             >
                               Lettre de démission du salarié
                             </a>
@@ -1501,8 +1501,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
     <div
       aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
       class="sc-eGugkK cJzHzy sc-kiPvrU bNJyhQ no-after"
-      rel="noopener noreferrer"
-      target="_blank"
     >
       <div
         class="sc-dEVLtI ijCjkg"
@@ -1520,6 +1518,8 @@ exports[`<FicheServicePublic /> should render 1`] = `
           >
             <a
               href="https://www.service-public.fr/simulateur/calcul/Demission"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               Lettre de démission du salarié
             </a>

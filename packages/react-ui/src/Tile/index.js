@@ -21,6 +21,8 @@ export const Tile = React.forwardRef(
       wide,
       titleTagType,
       centerTitle,
+      target,
+      rel,
       ...props
     },
     ref
@@ -41,7 +43,13 @@ export const Tile = React.forwardRef(
             )}
             {title && (
               <StyledHeading as={titleTagType}>
-                {href ? <a href={href}>{title}</a> : title}
+                {href ? (
+                  <a href={href} target={target} rel={rel}>
+                    {title}
+                  </a>
+                ) : (
+                  title
+                )}
               </StyledHeading>
             )}
           </HeadingWrapper>
@@ -60,8 +68,10 @@ Tile.propTypes = {
   custom: PropTypes.bool,
   href: PropTypes.string,
   icon: PropTypes.elementType,
+  rel: PropTypes.string,
   striped: PropTypes.bool,
   subtitle: PropTypes.string,
+  target: PropTypes.string,
   title: PropTypes.string,
   titleTagType: PropTypes.string,
   wide: PropTypes.bool,
