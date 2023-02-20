@@ -36,10 +36,10 @@ const getGlossary = memoizee(_getGlossaryData, {
 router.get("/glossary", async (ctx) => {
   const response = await getGlossary();
 
-  if (response.body.hits.total.value === 0) {
+  if (response.hits.total.value === 0) {
     ctx.throw(404, `there is no glossary data`);
   }
-  const glossaryData = response.body.hits.hits[0]._source.data;
+  const glossaryData = response.hits.hits[0]._source.data;
 
   ctx.body = glossaryData;
 });
@@ -56,10 +56,10 @@ router.get("/glossary/:slug", async (ctx) => {
   const { slug } = ctx.params;
   const response = await getGlossary();
 
-  if (response.body.hits.total.value === 0) {
+  if (response.hits.total.value === 0) {
     ctx.throw(404, `there is no highlights data`);
   }
-  const glossaryData = response.body.hits.hits[0]._source.data;
+  const glossaryData = response.hits.hits[0]._source.data;
 
   const [term] = glossaryData.filter((term) => slug === term.slug);
   if (!term) {

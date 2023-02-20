@@ -31,7 +31,7 @@ router.get("/contributions/generics", async (ctx) => {
     index,
   });
 
-  ctx.body = response.body.hits.hits
+  ctx.body = response.hits.hits
     .map(({ _source }) => _source)
     .map((contrib) => {
       contrib.theme = contrib.breadcrumbs[0].label;

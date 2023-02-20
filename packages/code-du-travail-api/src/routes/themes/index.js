@@ -25,7 +25,7 @@ router.get("/themes", async (ctx) => {
     index,
   });
   ctx.body = {
-    children: response.body.hits.hits.map((t) => t._source),
+    children: response.hits.hits.map((t) => t._source),
   };
 });
 
@@ -45,11 +45,11 @@ router.get("/themes/:slug", async (ctx) => {
     body,
     index,
   });
-  if (response.body.hits.hits.length === 0) {
+  if (response.hits.hits.length === 0) {
     ctx.throw(404, `there is no theme that match ${slug}`);
   }
 
-  const theme = response.body.hits.hits[0];
+  const theme = response.hits.hits[0];
 
   ctx.body = {
     ...theme._source,

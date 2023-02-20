@@ -134,6 +134,58 @@ Object {
     Object {
       "children": Array [
         Object {
+          "label": "Embauche",
+          "slug": "embauche",
+        },
+        Object {
+          "label": "Contrat de travail",
+          "slug": "contrat-de-travail",
+        },
+      ],
+      "icon": "Contract",
+      "position": 1,
+      "slug": "embauche-et-contrat-de-travail",
+      "title": "Embauche et contrat de travail",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "label": "Documents à remettre au salarié",
+          "slug": "documents-a-remettre-au-salarie",
+        },
+        Object {
+          "label": "Démission",
+          "slug": "demission",
+        },
+        Object {
+          "label": "Fin d’un CDD - CTT",
+          "slug": "fin-dun-cdd-ctt",
+        },
+        Object {
+          "label": "Rupture conventionnelle",
+          "slug": "rupture-conventionnelle",
+        },
+        Object {
+          "label": "Licenciement : droits des salariés et procédures",
+          "slug": "licenciement-droits-des-salaries-et-procedures",
+        },
+        Object {
+          "label": "Retraite",
+          "slug": "retraite",
+        },
+        Object {
+          "label": "Autres départs",
+          "slug": "autres-departs",
+        },
+      ],
+      "icon": "Depart",
+      "position": 8,
+      "slug": "depart-de-lentreprise",
+      "title": "Départ de l’entreprise",
+    },
+    Object {
+      "children": Array [
+        Object {
           "label": "Documents à remettre au salarié",
           "slug": "documents-a-remettre-au-salarie",
         },

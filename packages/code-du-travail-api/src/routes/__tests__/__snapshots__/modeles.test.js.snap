@@ -69,5 +69,72 @@ Array [
     "source": "modeles_de_courriers",
     "title": "Certificat de travail",
   },
+  Object {
+    "breadcrumbs": Array [
+      Object {
+        "label": "Départ de l’entreprise",
+        "position": 8,
+        "slug": "/themes/depart-de-lentreprise",
+      },
+      Object {
+        "label": "Rupture conventionnelle",
+        "position": 3,
+        "slug": "/themes/rupture-conventionnelle",
+      },
+      Object {
+        "label": "Rupture conventionnelle individuelle",
+        "position": 1,
+        "slug": "/themes/rupture-conventionnelle-individuelle",
+      },
+    ],
+    "cdtnId": "a712ecb976",
+    "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
+    "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
+    "source": "modeles_de_courriers",
+    "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
+  },
+  Object {
+    "breadcrumbs": Array [
+      Object {
+        "label": "Embauche et contrat de travail",
+        "position": 1,
+        "slug": "/themes/embauche-et-contrat-de-travail",
+      },
+      Object {
+        "label": "Embauche",
+        "position": 1,
+        "slug": "/themes/embauche",
+      },
+      Object {
+        "label": "Période d’essai",
+        "position": 3,
+        "slug": "/themes/periode-dessai",
+      },
+    ],
+    "cdtnId": "772cb955ce",
+    "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l’employeur. L’employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
+    "slug": "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
+    "source": "modeles_de_courriers",
+    "title": "Rupture de période d’essai à l’initiative de l’employeur",
+  },
+  Object {
+    "breadcrumbs": Array [
+      Object {
+        "label": "Départ de l’entreprise",
+        "position": 8,
+        "slug": "/themes/depart-de-lentreprise",
+      },
+      Object {
+        "label": "Documents à remettre au salarié",
+        "position": 0,
+        "slug": "/themes/documents-a-remettre-au-salarie",
+      },
+    ],
+    "cdtnId": "19837df114",
+    "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail.",
+    "slug": "certificat-de-travail",
+    "source": "modeles_de_courriers",
+    "title": "Certificat de travail",
+  },
 ]
 `;

@@ -25,11 +25,11 @@ router.get("/highlights/:slug", async (ctx) => {
 
   const response = await elasticsearchClient.search({ body, index });
 
-  if (response.body.hits.total.value === 0) {
+  if (response.hits.total.value === 0) {
     ctx.throw(404, `there is no highlight that matches "${slug}"`);
   }
 
-  ctx.body = response.body.hits.hits[0]._source.refs;
+  ctx.body = response.hits.hits[0]._source.refs;
 });
 
 export default router;

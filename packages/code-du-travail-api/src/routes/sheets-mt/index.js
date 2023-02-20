@@ -27,11 +27,11 @@ router.get("/sheets-mt/:slug", async (ctx) => {
     body,
     index,
   });
-  if (response.body.hits.hits.length === 0) {
+  if (response.hits.hits.length === 0) {
     ctx.throw(404, `there is no sheet mt that match ${slug}`);
   }
 
-  const sheetMT = response.body.hits.hits[0];
+  const sheetMT = response.hits.hits[0];
 
   const relatedItems = await getRelatedItems({
     covisits: sheetMT._source.covisits,

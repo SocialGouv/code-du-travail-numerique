@@ -217,14 +217,14 @@ async function msearch({ client, searches }) {
     keys.push(key);
   }
 
-  const { body, error } = await client.msearch({ body: requests });
+  const { responses, error } = await client.msearch({ body: requests });
 
   if (error) {
     throw error;
   }
 
   const results = keys.reduce((state, key, index) => {
-    const resp = body.responses[index];
+    const resp = responses[index];
 
     if (resp.error) {
       logger.error(
@@ -240,7 +240,7 @@ async function msearch({ client, searches }) {
     return state;
   }, {});
 
-  results.took = body.took;
+  results.took = responses.took;
 
   return results;
 }

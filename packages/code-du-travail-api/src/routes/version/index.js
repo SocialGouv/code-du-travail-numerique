@@ -37,10 +37,10 @@ router.get("/version", async (ctx) => {
 
   const response = await getVersions();
 
-  if (response.body.hits.hits.length == 0) {
+  if (response.hits.hits.length == 0) {
     ctx.throw(500, "Cannot read package versions in Elastic.");
   } else {
-    const { data } = response.body.hits.hits[0]._source;
+    const { data } = response.hits.hits[0]._source;
     ctx.body = { data, version };
   }
 });

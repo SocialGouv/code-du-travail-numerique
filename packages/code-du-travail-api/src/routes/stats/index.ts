@@ -25,9 +25,10 @@ router.get("/stats", async (ctx: Context) => {
     return;
   }
 
-  const {
-    body: { aggregations },
-  } = await elasticsearchClient.search({ body: docsCountBody, index });
+  const { aggregations }: any = await elasticsearchClient.search({
+    body: docsCountBody,
+    index,
+  });
   let nbDocuments = 0;
   const { buckets = [] } = aggregations.sources;
   for (const { doc_count } of buckets) {

@@ -47,7 +47,7 @@ router.get("/conventions/with-contributions", async (ctx) => {
     index,
   });
 
-  ctx.body = response.body.hits.hits
+  ctx.body = response.hits.hits
     .map(({ _source }) => _source)
     .sort(orderByAlphaAndMetalurgieLast);
 });
@@ -65,11 +65,11 @@ router.get("/conventions/:slug", async (ctx) => {
   const { slug } = ctx.params;
   const body = getAgreementBySlugBody(slug);
   const response = await elasticsearchClient.search({ body, index });
-  if (response.body.hits.total.value === 0) {
+  if (response.hits.total.value === 0) {
     ctx.throw(404, `agreement not found, no agreement match ${slug}`);
   }
 
-  ctx.body = { ...response.body.hits.hits[0]._source };
+  ctx.body = { ...response.hits.hits[0]._source };
 });
 
 export default router;

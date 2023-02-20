@@ -48,11 +48,11 @@ async function _getPrequalified() {
     index,
   });
 
-  if (response.body.hits.total.value === 0) {
+  if (response.hits.total.value === 0) {
     return null;
   }
 
-  const knownQueriesSet = response.body.hits.hits.reduce(
+  const knownQueriesSet = response.hits.hits.reduce(
     (queries, { _source: query }) => {
       for (const variant of query.variants) {
         const prepro = preprocess(variant);

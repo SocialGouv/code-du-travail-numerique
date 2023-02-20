@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "dependencies": {
-    "@elastic/elasticsearch": "7",
+    "@elastic/elasticsearch": "^8.6.0",
     "@koa/cors": "^4.0.0",
     "@socialgouv/cdtn-elasticsearch": "2.0.1",
     "@socialgouv/cdtn-logger": "^2.0.0",

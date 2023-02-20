@@ -55,8 +55,8 @@ const populateAgreements = async (
       SearchResponse<Agreement>
     >({ body, index });
 
-    if (response.body.hits.total.value > 0) {
-      const agreements = response.body.hits.hits.reduce(
+    if (response.hits.total.value > 0) {
+      const agreements = response.hits.hits.reduce(
         (acc: Record<number, Agreement>, curr) => {
           acc[curr._source.num] = curr._source;
           return acc;

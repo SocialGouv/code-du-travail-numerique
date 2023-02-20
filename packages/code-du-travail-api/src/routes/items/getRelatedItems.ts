@@ -57,9 +57,7 @@ export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {
     .msearch({
       body,
     })
-    .then((resp) =>
-      resp.body.responses.map((r) => r.hits.hits[0]).filter((r) => r)
-    )
+    .then((resp) => resp.responses.map((r) => r.hits.hits[0]).filter((r) => r))
     .catch((err) => {
       logger.error(
         "Error when querying covisits : " + JSON.stringify(err.meta.body)
@@ -106,13 +104,11 @@ export const getSearchBasedItems = async ({
   }
 
   const {
-    body: {
-      responses: [esResponse = {}, semResponse = {}],
-    },
-  } = await elasticsearchClient.msearch({ body: requestBodies });
+    responses: [esResponse, semResponse],
+  } = await elasticsearchClient.msearch({ searches: requestBodies });
 
-  const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
-  const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
+  const { hits: { hits: semanticHits } = { hits: [] } } = semResponse as any;
+  const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse as any;
 
   return (
     utils

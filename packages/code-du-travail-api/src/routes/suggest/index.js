@@ -30,7 +30,7 @@ router.get("/suggest", async (ctx) => {
       body,
       index,
     });
-    ctx.body = response.body.hits.hits.map((t) => t._source.title);
+    ctx.body = response.hits.hits.map((t) => t._source.title);
   } else {
     ctx.body = [];
   }

@@ -23,8 +23,8 @@ const router = new Router({ prefix: API_BASE_URL });
 router.get("/modeles", async (ctx) => {
   const body = getModeleBody();
   const response = await elasticsearchClient.search({ body, index });
-  if (response.body.hits.total.value > 0) {
-    ctx.body = response.body.hits.hits.map(({ _source }) => _source);
+  if (response.hits.total.value > 0) {
+    ctx.body = response.hits.hits.map(({ _source }) => _source);
   } else {
     ctx.body = [];
   }
