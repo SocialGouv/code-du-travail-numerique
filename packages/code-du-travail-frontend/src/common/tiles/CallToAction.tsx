@@ -16,7 +16,7 @@ export const CallToActionTile = React.forwardRef<
     <StyledTile centerTitle={centerTitle} {...props} ref={ref}>
       <TileChildren>
         {children}
-        <StyledDiv hasContentAbove={Boolean(children)}>
+        <StyledDiv>
           <Button variant="link" hasText>
             {action}
           </Button>
@@ -55,6 +55,10 @@ const StyledTile = styled(LinkedTile)`
 `;
 
 const StyledDiv = styled.div`
-  padding-top: ${({ hasContentAbove }) =>
-    hasContentAbove ? spacings.base : spacings.small};
+  text-align: center;
+  padding-top: ${spacings.base};
+
+  &:first-child {
+    padding-top: ${spacings.small};
+  }
 `;

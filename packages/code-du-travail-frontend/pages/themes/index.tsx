@@ -59,7 +59,7 @@ const ThemesPage = ({ children = [] }) => (
               >
                 <TileChildren>
                   <SubThemes>{children}</SubThemes>
-                  <StyledDiv hasContentAbove={Boolean(children)}>
+                  <StyledDiv>
                     <Button variant="link" as="div" />
                   </StyledDiv>
                 </TileChildren>
@@ -108,6 +108,9 @@ const StyledTile = styled(LinkedTile)`
 `;
 
 const StyledDiv = styled.div`
-  margin-top: ${({ hasContentAbove }) =>
-    hasContentAbove ? spacings.base : spacings.small};
+  margin-top: ${spacings.base};
+
+  &:first-child {
+    margin-top: ${spacings.small};
+  }
 `;
