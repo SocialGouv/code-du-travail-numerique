@@ -30,7 +30,7 @@
     "test:update": "jest --silent -u"
   },
   "dependencies": {
-    "@maxgfr/react-accessible-accordion": "4.0.1",
+    "@socialgouv/react-accessible-accordion": "4.1.1",
     "@reach/dialog": "0.15.3",
     "polished": "^4.2.2",
     "react-feather": "^2.0.9",
