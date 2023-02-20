@@ -56,7 +56,7 @@ jobs:
   deploy-prod:
     name: Deploy production
     runs-on: ubuntu-latest
-    needs: [register-frontend, register-api, branch-info]
+    needs: [register-frontend, register-api]
     environment:
       name: production
       url: https://code.travail.gouv.fr/

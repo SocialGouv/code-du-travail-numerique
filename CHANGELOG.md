@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.91.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.91.0...v4.91.1) (2023-02-17)
+
+### Bug Fixes
+
+- **actions:** production workflow is fixed ([7240383](https://github.com/SocialGouv/code-du-travail-numerique/commit/724038337227710c228b8749c470b4a8eb8ab552))
+
+# [4.91.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.90.1...v4.91.0) (2023-02-17)
+
+### Bug Fixes
+
+- **dependencies:** update lockfile ([#4950](https://github.com/SocialGouv/code-du-travail-numerique/issues/4950)) ([0aeda16](https://github.com/SocialGouv/code-du-travail-numerique/commit/0aeda16a6e6c421004a27608bd8c20b551b9179b))
+- **dep:** retours next 13 ([#4944](https://github.com/SocialGouv/code-du-travail-numerique/issues/4944)) ([b53caa8](https://github.com/SocialGouv/code-du-travail-numerique/commit/b53caa83270f7d18d6d47c461f57bf7a64fae26c))
+- **indemnite-licenciement:** matomo event is now binded to `currentStepIndex` instead of trigger `nextStep` or `previousStep` ([#4956](https://github.com/SocialGouv/code-du-travail-numerique/issues/4956)) ([7c259db](https://github.com/SocialGouv/code-du-travail-numerique/commit/7c259db44e780f15026dfca0cdb65e8066690019))
+- **lit:** remove deprecated dependency lit-element ([#4933](https://github.com/SocialGouv/code-du-travail-numerique/issues/4933)) ([5c1482a](https://github.com/SocialGouv/code-du-travail-numerique/commit/5c1482a0866ef121886ce2646f75f0f1c38d98af))
+- **react-ui:** amélioration du bundling en rust ([#4953](https://github.com/SocialGouv/code-du-travail-numerique/issues/4953)) ([6e2ae57](https://github.com/SocialGouv/code-du-travail-numerique/commit/6e2ae57acdd40df288c4d8d8e05c7c162007d77d))
+
+### Features
+
+- **dependencies:** upgrade next to 13 + react to 18 ([#4894](https://github.com/SocialGouv/code-du-travail-numerique/issues/4894)) ([380ea32](https://github.com/SocialGouv/code-du-travail-numerique/commit/380ea324c829aaa6214ecc65b8605a62032e8d80))
+
 ## [4.90.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.90.0...v4.90.1) (2023-02-06)
 
 ### Bug Fixes
