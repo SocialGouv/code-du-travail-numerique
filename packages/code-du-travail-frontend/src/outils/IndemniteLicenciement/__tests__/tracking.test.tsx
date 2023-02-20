@@ -260,7 +260,7 @@ describe("Indemnité licenciement - Tracking", () => {
       "trackEvent",
       "outil",
       "cc_select_traitée",
-      "idcc16",
+      16,
     ]);
   });
 
@@ -281,7 +281,7 @@ describe("Indemnité licenciement - Tracking", () => {
       "trackEvent",
       "outil",
       "cc_select_non_traitée",
-      "idcc1261",
+      1261,
     ]);
   });
 });

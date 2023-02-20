@@ -45,7 +45,7 @@ describe("Push agreement events on click next", () => {
     };
     it("should send a search type of users matomo event", () => {
       const pageTitle = "Préavis de retraite";
-      pushAgreementEvents(pageTitle, data, []);
+      pushAgreementEvents(pageTitle, data, false);
       expect(matopush).toHaveBeenCalledTimes(1);
       expect(matopush).toHaveBeenCalledWith([
         MatomoBaseEvent.TRACK_EVENT,
@@ -64,7 +64,7 @@ describe("Push agreement events on click next", () => {
     describe("agreement not treated", () => {
       it("should send matomo events", () => {
         const pageTitle = "Préavis de retraite";
-        pushAgreementEvents(pageTitle, data, []);
+        pushAgreementEvents(pageTitle, data, false);
         expect(matopush).toHaveBeenCalledTimes(3);
         expect(matopush).toHaveBeenNthCalledWith(1, [
           MatomoBaseEvent.TRACK_EVENT,
@@ -89,13 +89,7 @@ describe("Push agreement events on click next", () => {
     describe("agreement treated", () => {
       it("should send matomo events", () => {
         const pageTitle = "Préavis de retraite";
-        pushAgreementEvents(pageTitle, data, [
-          {
-            fullySupported: true,
-            idcc: agreement.num,
-            withoutLegal: false,
-          },
-        ]);
+        pushAgreementEvents(pageTitle, data, true);
         expect(matopush).toHaveBeenCalledTimes(3);
         expect(matopush).toHaveBeenNthCalledWith(1, [
           MatomoBaseEvent.TRACK_EVENT,
@@ -128,7 +122,7 @@ describe("Push agreement events on click next", () => {
 
     it("should send matomo events", () => {
       const pageTitle = "Préavis de retraite";
-      pushAgreementEvents(pageTitle, data, []);
+      pushAgreementEvents(pageTitle, data, false);
       expect(matopush).toHaveBeenCalledTimes(4);
       expect(matopush).toHaveBeenNthCalledWith(1, [
         MatomoBaseEvent.TRACK_EVENT,

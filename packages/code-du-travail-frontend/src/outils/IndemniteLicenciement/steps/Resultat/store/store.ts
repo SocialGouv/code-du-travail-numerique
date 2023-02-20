@@ -72,15 +72,16 @@ const createResultStore: StoreSlice<
   },
   resultFunction: {
     init: () => {
-      const contratTravailEligibility = !get().contratTravailData.error
-        .errorEligibility;
+      const contratTravailEligibility =
+        !get().contratTravailData.error.errorEligibility;
       const isCdd = get().contratTravailData.input.typeContratTravail === "cdd";
-      const ancienneteEligibility = !get().ancienneteData.error
-        .errorEligibility;
-      const informationEligibility = !get().informationsData.error
-        .errorEligibility;
+      const ancienneteEligibility =
+        !get().ancienneteData.error.errorEligibility;
+      const informationEligibility =
+        !get().informationsData.error.errorEligibility;
       const agreement = get().agreementData.input.agreement;
-      const hasSelectedAgreement = get().agreementData.input.route !== "none";
+      const hasSelectedAgreement =
+        get().agreementData.input.route !== "not-selected";
       const isAgreementSupported = !!getSupportedCcIndemniteLicenciement().find(
         (v) =>
           v.fullySupported &&
@@ -107,10 +108,10 @@ const createResultStore: StoreSlice<
       );
     },
     getEligibilityError: () => {
-      const contratTravailEligibility = get().contratTravailData.error
-        .errorEligibility;
-      const informationEligibility = get().informationsData.error
-        .errorEligibility;
+      const contratTravailEligibility =
+        get().contratTravailData.error.errorEligibility;
+      const informationEligibility =
+        get().informationsData.error.errorEligibility;
       const ancienneteEligibility = get().ancienneteData.error.errorEligibility;
       return (
         contratTravailEligibility ||
@@ -236,15 +237,19 @@ const createResultStore: StoreSlice<
           state.resultData.input.legalSeniority = legalSeniority.value;
           state.resultData.input.legalFormula = legalFormula;
           state.resultData.input.legalReferences = legalReferences;
-          state.resultData.input.publicodesLegalResult = publicodesSituationLegal;
-          state.resultData.input.publicodesAgreementResult = publicodesSituationConventionnel;
+          state.resultData.input.publicodesLegalResult =
+            publicodesSituationLegal;
+          state.resultData.input.publicodesAgreementResult =
+            publicodesSituationConventionnel;
           state.resultData.input.agreementSeniority = agreementSeniority;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
           state.resultData.input.agreementInformations = agreementInformations;
-          state.resultData.input.agreementNotifications = agreementNotifications;
-          state.resultData.input.agreementHasNoLegalIndemnity = agreementHasNoLegalIndemnity;
+          state.resultData.input.agreementNotifications =
+            agreementNotifications;
+          state.resultData.input.agreementHasNoLegalIndemnity =
+            agreementHasNoLegalIndemnity;
         })
       );
     },

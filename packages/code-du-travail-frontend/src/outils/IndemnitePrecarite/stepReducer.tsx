@@ -25,11 +25,10 @@ export const initialState = {
       label: "Convention collective",
       name: "info_cc",
       onStepDone: (title: string, data: FormContent): void => {
-        pushAgreementEvents(
-          title,
-          data.ccn,
-          getSupportedCCWithoutConventionalProvision()
+        const isTreated = getSupportedCCWithoutConventionalProvision().find(
+          (agreement) => agreement.idcc === data.ccn?.selected?.num
         );
+        pushAgreementEvents(title, data.ccn, !!isTreated);
       },
     },
     {
