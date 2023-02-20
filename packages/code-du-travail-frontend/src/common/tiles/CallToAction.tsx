@@ -55,7 +55,6 @@ const StyledTile = styled(LinkedTile)`
 `;
 
 const StyledDiv = styled.div`
-  text-align: center;
   padding-top: ${spacings.base};
 
   &:first-child {

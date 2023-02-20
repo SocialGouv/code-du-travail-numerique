@@ -45,7 +45,8 @@ const ContentItemList = styled.div`
   }
 
   p,
-  a {
+  a,
+  button {
     width: 100%;
     text-align: center;
   }
