@@ -133,7 +133,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 </p>
               </div>
               <div
-                class="sc-jsTgWu kNvrCw"
+                class="sc-jsTgWu jWQdLI"
               >
                 <button
                   class="sc-hhOBVt bxVHUw"
@@ -203,7 +203,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 </p>
               </div>
               <div
-                class="sc-jsTgWu kNvrCw"
+                class="sc-jsTgWu jWQdLI"
               >
                 <button
                   class="sc-hhOBVt bxVHUw"
@@ -297,7 +297,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 </p>
               </div>
               <div
-                class="sc-jsTgWu kNvrCw"
+                class="sc-jsTgWu jWQdLI"
               >
                 <button
                   class="sc-hhOBVt bxVHUw"

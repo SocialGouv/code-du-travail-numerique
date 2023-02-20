@@ -59,7 +59,7 @@ exports[`<CallToActionTile /> should render 1`] = `
           Cette tuile vous fera dire bonjour !
         </p>
         <div
-          class="sc-jsTgWu kNvrCw"
+          class="sc-jsTgWu jWQdLI"
         >
           <button
             class="sc-hhOBVt bxVHUw"
