@@ -8,7 +8,8 @@ on:
       - v*
   push:
     branches:
-      - dev
+      - "dev"
+      - "!master"
 
 concurrency:
   cancel-in-progress: true
