@@ -86,7 +86,7 @@ exports[`<CallToActionTile /> should render 1`] = `
           class="sc-jsTgWu kNvrCw"
         >
           <button
-            class="sc-hhOBVt jCWxxm"
+            class="sc-hhOBVt bxVHUw"
           >
             Bonjour
             <svg

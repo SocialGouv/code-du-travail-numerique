@@ -1,154 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Collapse /> renders 1`] = `
-<<<<<<< HEAD
-.c3 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c2,
-[aria-selected="true"] .c3 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 100%;
-  padding: 0 1.9rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c0:link,
-.c0:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c0:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c0[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c5 {
-  display: none;
-}
-
-.c1 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c1:hover,
-.c1:focus,
-.c1:focus-within,
-.c1[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c4 {
-  margin-left: 1rem;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-=======
->>>>>>> dev
 <div>
   <div>
     <button
       aria-expanded="false"
-<<<<<<< HEAD
-      class="c0 c1"
+      class="sc-dmctIk dglopR sc-fLcnxK eTOEpx"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="c2 c3"
-=======
-      class="sc-bBABsx brxyKp"
-      role="button"
-    >
-      <svg
-        aria-hidden="true"
         class="sc-dkrFOg fpzKWB"
->>>>>>> dev
         fill="none"
         height="24"
         stroke="currentColor"
@@ -163,21 +25,16 @@ exports[`<Collapse /> renders 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-<<<<<<< HEAD
       <div
-        class="c4"
+        class="sc-bBABsx hQSeNL"
         font-size="hsmall"
         font-weight="600"
-=======
-      <p
-        class="sc-kgTSHT htBEDr sc-iveFHk cEsaJQ"
->>>>>>> dev
       >
         Hello
       </div>
     </button>
     <div
-      class="sc-fLcnxK fOHigB"
+      class="sc-kgTSHT jKKqTz"
     >
       <p>
         Hi

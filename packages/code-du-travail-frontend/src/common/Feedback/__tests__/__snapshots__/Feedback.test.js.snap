@@ -28,12 +28,12 @@ exports[`<Feedback/> should render 1`] = `
             class="sc-fxTzYC HSEkf"
           >
             <button
-              class="sc-hhOBVt gNwDiq sc-iWOQzb bcMcTx"
+              class="sc-hhOBVt gQDoEE sc-iWOQzb bcMcTx"
             >
               Non
             </button>
             <button
-              class="sc-hhOBVt gNwDiq sc-iWOQzb bcMcTx"
+              class="sc-hhOBVt gQDoEE sc-iWOQzb bcMcTx"
             >
               Oui
             </button>
@@ -166,7 +166,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             class="sc-dTjBdT jOYlIr"
           >
             <button
-              class="sc-hhOBVt gzEkar sc-iWOQzb bcMcTx"
+              class="sc-hhOBVt foDcLd sc-iWOQzb bcMcTx"
             >
               Envoyer
             </button>
@@ -176,7 +176,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre
            
           <button
-            class="sc-hhOBVt cDewmZ"
+            class="sc-hhOBVt ipLPsD"
             type="button"
           >
             les services du ministère du Travail en région
@@ -259,7 +259,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
             class="sc-dTjBdT jOYlIr"
           >
             <button
-              class="sc-hhOBVt gzEkar sc-iWOQzb bcMcTx"
+              class="sc-hhOBVt foDcLd sc-iWOQzb bcMcTx"
             >
               Envoyer
             </button>

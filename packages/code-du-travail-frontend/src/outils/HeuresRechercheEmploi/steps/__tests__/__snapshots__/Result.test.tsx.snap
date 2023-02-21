@@ -10,10 +10,12 @@ exports[`<StepResult /> should render no results 1`] = `
   <p>
     D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.
   </p>
-  <div>
+  <div
+    class="sc-ZqGJI kWmAjg"
+  >
     <button
       aria-expanded="false"
-      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg
@@ -174,10 +176,12 @@ exports[`<StepResult /> should render with duration 1`] = `
   <p>
     Le salarié fixe par accord avec l'employeur la période de la journée pendant laquelle il prend ces 2 heures. Si l'employeur et le salarié le décident ensemble, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. En cas d'absence d'accord entre l'employeur et le salarié, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en informer l'employeur et ne pourra plus utiliser les heures d'absence autorisée pour rechercher un emploi.
   </p>
-  <div>
+  <div
+    class="sc-ZqGJI kWmAjg"
+  >
     <button
       aria-expanded="false"
-      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg

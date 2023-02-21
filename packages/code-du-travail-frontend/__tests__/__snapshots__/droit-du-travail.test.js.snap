@@ -102,7 +102,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt hjpTeI sc-gukea eiceyH"
+              class="sc-hhOBVt cizsts sc-gukea eiceyH"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -147,14 +147,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
           class="sc-liQGml dMULtD"
         >
           <button
-            class="sc-hhOBVt clLQVO sc-eeMvmM sc-itMJkM bDyXUw eXofZB"
+            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-itMJkM bDyXUw eXofZB"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt euGdTx sc-cjibBx mHCxp sc-ciEjBl idNOvf"
+          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-ciEjBl idNOvf"
         >
           <svg
             aria-hidden="true"
@@ -2254,7 +2254,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             Ce principe ne s’applique pas dans
                              
                             <button
-                              class="sc-hhOBVt cDewmZ"
+                              class="sc-hhOBVt ipLPsD"
                             >
                               13 matières
                               <svg
@@ -2273,7 +2273,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             où la loi reconnaît la primauté à la convention collective de branche et
                              
                             <button
-                              class="sc-hhOBVt cDewmZ"
+                              class="sc-hhOBVt ipLPsD"
                             >
                               4 matières
                               <svg
@@ -2694,7 +2694,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hhOBVt hqeNIF"
+              class="sc-hhOBVt irUZZv"
             >
               Contacter nos services en région
               <svg
@@ -2814,7 +2814,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="sc-hhOBVt clLQVO sc-iXGltN jfbOGR"
+                    class="sc-hhOBVt eyKsVw sc-iXGltN jfbOGR"
                   >
                     Contact
                   </button>

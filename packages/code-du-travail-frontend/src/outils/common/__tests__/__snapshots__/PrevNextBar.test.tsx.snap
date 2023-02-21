@@ -22,7 +22,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
     class="sc-dvEHMn eogJxR"
   >
     <button
-      class="sc-hhOBVt dNuRXt sc-kSGOQU sc-jsTgWu gbmcaq bUBxhA"
+      class="sc-hhOBVt fRaRnn sc-kSGOQU sc-jsTgWu gbmcaq bUBxhA"
     >
       Commencer
       <svg
@@ -48,7 +48,7 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
     class="sc-dvEHMn eogJxR"
   >
     <button
-      class="sc-hhOBVt gzEkar sc-kSGOQU gbmcaq"
+      class="sc-hhOBVt foDcLd sc-kSGOQU gbmcaq"
       type="button"
     >
       Précédent

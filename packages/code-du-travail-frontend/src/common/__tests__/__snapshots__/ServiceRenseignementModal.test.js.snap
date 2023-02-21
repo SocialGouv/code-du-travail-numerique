@@ -6,7 +6,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
     aria-hidden="true"
   >
     <button
-      class="sc-hhOBVt hqeNIF"
+      class="sc-hhOBVt irUZZv"
     >
       texte dans le bouton
     </button>
@@ -99,7 +99,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </span>
               <button
                 aria-label="Recherchez le service"
-                class="sc-hhOBVt hjpTeI sc-cLNonn iNvkZn"
+                class="sc-hhOBVt cizsts sc-cLNonn iNvkZn"
                 title="Lancer une recherche"
                 type="submit"
               >
@@ -139,7 +139,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </ul>
             </div>
             <button
-              class="sc-hhOBVt hjpTeI sc-GhhNo bwxyfF"
+              class="sc-hhOBVt cizsts sc-GhhNo bwxyfF"
               title="fermer la modale"
             >
               <div

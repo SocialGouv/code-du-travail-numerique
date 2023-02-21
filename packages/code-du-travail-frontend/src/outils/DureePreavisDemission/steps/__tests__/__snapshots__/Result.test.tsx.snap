@@ -56,10 +56,12 @@ exports[`<StepResult /> should render CC answer 1`] = `
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
     </span>
   </p>
-  <div>
+  <div
+    class="sc-knEsKG iwANYs"
+  >
     <button
       aria-expanded="false"
-      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg

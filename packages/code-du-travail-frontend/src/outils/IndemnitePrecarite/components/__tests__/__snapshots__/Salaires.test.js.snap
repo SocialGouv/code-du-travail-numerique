@@ -57,7 +57,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
       </span>
     </div>
     <button
-      class="sc-hhOBVt hjpTeI sc-ZqGJI iGodws"
+      class="sc-hhOBVt cizsts sc-ZqGJI iGodws"
       type="button"
     >
       Supprimer
@@ -78,7 +78,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
     </button>
   </div>
   <button
-    class="sc-hhOBVt hjpTeI sc-kSGOQU byxAuQ"
+    class="sc-hhOBVt cizsts sc-kSGOQU byxAuQ"
     type="button"
   >
     <svg
@@ -118,7 +118,7 @@ exports[`<Salaires /> should delete a salaires 1`] = `
     </span>
   </legend>
   <button
-    class="sc-hhOBVt hjpTeI sc-kSGOQU byxAuQ"
+    class="sc-hhOBVt cizsts sc-kSGOQU byxAuQ"
     type="button"
   >
     <svg
@@ -197,7 +197,7 @@ exports[`<Salaires /> should render 1`] = `
       </span>
     </div>
     <button
-      class="sc-hhOBVt hjpTeI sc-ZqGJI iGodws"
+      class="sc-hhOBVt cizsts sc-ZqGJI iGodws"
       type="button"
     >
       Supprimer
@@ -218,7 +218,7 @@ exports[`<Salaires /> should render 1`] = `
     </button>
   </div>
   <button
-    class="sc-hhOBVt hjpTeI sc-kSGOQU byxAuQ"
+    class="sc-hhOBVt cizsts sc-kSGOQU byxAuQ"
     type="button"
   >
     <svg

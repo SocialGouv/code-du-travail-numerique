@@ -102,7 +102,7 @@ exports[`<Glossaire /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt hjpTeI sc-ehVsHJ kCoenY"
+              class="sc-hhOBVt cizsts sc-ehVsHJ kCoenY"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -147,14 +147,14 @@ exports[`<Glossaire /> should render 1`] = `
           class="sc-dcntqk kpnQJG"
         >
           <button
-            class="sc-hhOBVt clLQVO sc-eeMvmM sc-ciEjBl bDyXUw fgfViG"
+            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-ciEjBl bDyXUw fgfViG"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt euGdTx sc-cjibBx mHCxp sc-djTcra gicOTe"
+          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-djTcra gicOTe"
         >
           <svg
             aria-hidden="true"
@@ -456,7 +456,7 @@ exports[`<Glossaire /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hhOBVt hqeNIF"
+              class="sc-hhOBVt irUZZv"
             >
               Contacter nos services en région
               <svg
@@ -576,7 +576,7 @@ exports[`<Glossaire /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="sc-hhOBVt clLQVO sc-gGWvLE bJZTVN"
+                    class="sc-hhOBVt eyKsVw sc-gGWvLE bJZTVN"
                   >
                     Contact
                   </button>

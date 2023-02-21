@@ -30,7 +30,7 @@ exports[`<Search /> should render 1`] = `
       Consultez
        
       <button
-        class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
+        class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
         type="button"
       >
         notre aide
@@ -80,7 +80,7 @@ exports[`<Search /> should show no results when no result 1`] = `
       Consultez
        
       <button
-        class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
+        class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
         type="button"
       >
         notre aide
@@ -175,7 +175,7 @@ exports[`<Search /> should show spinner when loading 1`] = `
       Consultez
        
       <button
-        class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
+        class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
         type="button"
       >
         notre aide
@@ -272,7 +272,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
       Consultez
        
       <button
-        class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
+        class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
         type="button"
       >
         notre aide
@@ -351,7 +351,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
       Consultez
        
       <button
-        class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
+        class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
         type="button"
       >
         notre aide
@@ -401,7 +401,7 @@ exports[`<Search /> when searching by text, should use enterprise API 1`] = `
       Consultez
        
       <button
-        class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
+        class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
         type="button"
       >
         notre aide

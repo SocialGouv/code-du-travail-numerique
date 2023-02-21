@@ -102,7 +102,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt hjpTeI sc-kAuIVs bIWiNJ"
+              class="sc-hhOBVt cizsts sc-kAuIVs bIWiNJ"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -147,14 +147,14 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           class="sc-cPIbRQ Szlyq"
         >
           <button
-            class="sc-hhOBVt clLQVO sc-eeMvmM sc-hxOqGs bDyXUw dNQGPT"
+            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-hxOqGs bDyXUw dNQGPT"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt euGdTx sc-cjibBx mHCxp sc-gInZnl dofhcI"
+          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-gInZnl dofhcI"
         >
           <svg
             aria-hidden="true"
@@ -450,7 +450,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       class="sc-bJYTlW dAAEFa"
                     >
                       <a
-                        class="sc-hhOBVt hLERAX no-after"
+                        class="sc-hhOBVt hPTCsq no-after"
                         href="azure.url/cdtn/filename.pdf"
                       >
                         <svg
@@ -513,7 +513,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   class="sc-bugHcy iRjmTy"
                 >
                   <a
-                    class="sc-hhOBVt dNuRXt no-after"
+                    class="sc-hhOBVt fRaRnn no-after"
                     href="azure.url/cdtn/filename.pdf"
                   >
                     Télécharger le modèle (
@@ -681,12 +681,12 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     class="sc-hGglLj imOAZj"
                   >
                     <button
-                      class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
+                      class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                     >
                       Non
                     </button>
                     <button
-                      class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
+                      class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                     >
                       Oui
                     </button>
@@ -732,7 +732,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hhOBVt hqeNIF"
+              class="sc-hhOBVt irUZZv"
             >
               Contacter nos services en région
               <svg
@@ -852,7 +852,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="sc-hhOBVt clLQVO sc-jWOkvS dTRift"
+                    class="sc-hhOBVt eyKsVw sc-jWOkvS dTRift"
                   >
                     Contact
                   </button>
