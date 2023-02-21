@@ -13,6 +13,7 @@ export const StyledButton = styled.button`
   box-sizing: content-box;
   font-weight: 500;
   font-size: ${fonts.sizes.default};
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
@@ -104,7 +105,6 @@ export const StyledButton = styled.button`
     }
 
     if (narrow) {
-      height = "100%";
       padding = small ? "0 1rem" : "0 1.9rem";
     }
 

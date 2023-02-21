@@ -6,7 +6,13 @@ import { AccordionArrow } from "../Accordion";
 import { Button } from "../Button";
 import { spacings } from "../theme.js";
 
-export const Collapse = ({ title, children, onClickHandler, textProps }) => {
+export const Collapse = ({
+  title,
+  children,
+  onClickHandler,
+  textProps,
+  className,
+}) => {
   const [active, setActive] = React.useState(false);
   const [height, setHeight] = React.useState("0px");
   const contentSpace = React.useRef(null);
@@ -18,7 +24,7 @@ export const Collapse = ({ title, children, onClickHandler, textProps }) => {
   }
 
   return (
-    <div>
+    <div className={className}>
       <StyledLink
         onClick={toggleAccordion}
         aria-expanded={active}
@@ -66,6 +72,7 @@ const StyledText = styled.div`
 
 Collapse.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   onClickHandler: PropTypes.func,
   textProps: PropTypes.object,
   title: PropTypes.string,
