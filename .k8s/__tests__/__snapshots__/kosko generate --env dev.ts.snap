@@ -368,6 +368,12 @@ spec:
             periodSeconds: 5
             initialDelaySeconds: 10
             timeoutSeconds: 15
+          env:
+            - name: ELASTIC_APM_ENVIRONMENT
+            - name: ES_INDEX_PREFIX
+              value: cdtn-preprod
+            - name: VERSION
+              value: refs/heads/mybranch
           envFrom:
             - secretRef:
                 name: www-secret
