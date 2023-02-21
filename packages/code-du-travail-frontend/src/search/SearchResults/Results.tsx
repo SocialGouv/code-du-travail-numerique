@@ -60,6 +60,7 @@ type ListLinkProps = {
   centerTitle?: boolean;
   disableAnalytics?: boolean;
   titleTagType?: string;
+  disableAction?: boolean;
 };
 
 export const ListLink = ({
@@ -79,6 +80,7 @@ export const ListLink = ({
   query,
   centerTitle,
   disableAnalytics = false,
+  disableAction = false,
   titleTagType,
 }: ListLinkProps) => {
   let subtitle = "";
@@ -120,7 +122,7 @@ export const ListLink = ({
   if (source === SOURCES.EXTERNALS) {
     return (
       <CallToActionTile
-        action={action || "Consulter"}
+        action={disableAction ? undefined : action ?? "Consulter"}
         href={url}
         target="_blank"
         rel="noreferer noopener"
@@ -153,7 +155,7 @@ export const ListLink = ({
   let ResultTile = Tile;
   if (source === SOURCES.TOOLS || source === SOURCES.LETTERS) {
     ResultTile = CallToActionTile;
-    tileCommonProps.action = action || "Consulter";
+    tileCommonProps.action = disableAction ? undefined : action ?? "Consulter";
     tileCommonProps.custom = true;
   }
   if (source === SOURCES.CONTRIBUTIONS) {

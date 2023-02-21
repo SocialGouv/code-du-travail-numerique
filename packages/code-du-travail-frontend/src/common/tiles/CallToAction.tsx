@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 type Props = {
   children: React.ReactNode | null;
-  action: string;
+  action?: string;
   title?: string;
   icon?: string;
   titleTagType: string;
@@ -19,7 +19,7 @@ type Props = {
 
 export const CallToActionTile = React.forwardRef<HTMLAnchorElement, Props>(
   function _CallToActionTile(
-    { action = "", noCustom, children, centerTitle, ...props }: Props,
+    { action, noCustom, children, centerTitle, ...props }: Props,
     ref: ForwardedRef<any>
   ): JSX.Element {
     return (
@@ -31,11 +31,13 @@ export const CallToActionTile = React.forwardRef<HTMLAnchorElement, Props>(
       >
         <TileChildren>
           {children}
-          <StyledDiv hasContentAbove={Boolean(children)}>
-            <Button variant="link" hasText>
-              {action}
-            </Button>
-          </StyledDiv>
+          {action && (
+            <StyledDiv hasContentAbove={Boolean(children)}>
+              <Button variant="link" hasText>
+                {action}
+              </Button>
+            </StyledDiv>
+          )}
         </TileChildren>
       </StyledTile>
     );
