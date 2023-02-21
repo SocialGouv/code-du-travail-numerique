@@ -47,6 +47,12 @@ function addWidget(info) {
     );
   };
 
+  window.addEventListener("message", function (evt) {
+    if (evt.data.kind === "resize-height") {
+      iframe.style.height = evt.data.value + "px";
+    }
+  });
+
   iframe.src = info.url;
   return iframe;
 }

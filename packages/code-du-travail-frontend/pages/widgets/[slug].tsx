@@ -3,6 +3,7 @@ import { GetServerSideProps } from "next";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
+import { useIframeResizer } from "../../src/common/hooks";
 
 import {
   DureePreavisLicenciement,
@@ -25,6 +26,7 @@ interface Props {
 }
 
 function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
+  useIframeResizer();
   const Tool = toolsBySlug[slug];
 
   return (
