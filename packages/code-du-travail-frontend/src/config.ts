@@ -1,11 +1,5 @@
 const { version } = require("../package.json");
 
-export const API_ENTREPRISE_URL =
-  process.env.NEXT_PUBLIC_API_ENTREPRISE_URL ??
-  "https://entreprise.data.gouv.fr/api/sirene";
-export const API_SIRET2IDCC_URL =
-  process.env.NEXT_PUBLIC_API_SIRET2IDCC_URL ??
-  "https://siret2idcc.fabrique.social.gouv.fr/api/v2";
 export const API_URL =
   process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:1337/api/v1";
 export const AZURE_BASE_URL =

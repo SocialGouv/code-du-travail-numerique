@@ -144,7 +144,7 @@ export default function Eligible() {
         />
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
-            hasSelectedAgreement={route !== "none"}
+            hasSelectedAgreement={route !== "not-selected"}
             isAgreementSupported={!!supportedCc}
             legalResult={publicodesLegalResult.value?.toString() ?? ""}
             agreementResult={publicodesAgreementResult?.value?.toString()}

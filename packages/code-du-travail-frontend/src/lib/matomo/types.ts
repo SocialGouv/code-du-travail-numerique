@@ -59,6 +59,8 @@ export enum MatomoActionEvent {
   PREAVIS_DEMISSION = "view_step_Préavis de démission",
   PREAVIS_LICENCIEMENT = "view_step_Préavis de licenciement",
   INDEMNITE_LICENCIEMENT = "view_step_Indemnité de licenciement",
+  VIEW_STEP = "view_step",
+  CLICK_PREVIOUS = "click_previous",
 }
 
 type Mapping = Array<{
