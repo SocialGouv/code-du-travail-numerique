@@ -41,7 +41,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  staticPageGenerationTimeout: 60 * 5, // 5 minutes
+  staticPageGenerationTimeout: 60 * 2, // 2 minutes
 };
 
 module.exports = {
