@@ -7,6 +7,7 @@ exports[`<Modal /> does not render at first and then render 1`] = `
 `;
 
 exports[`<Modal /> does not render at first and then render 2`] = `
+<<<<<<< HEAD
 .c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -153,6 +154,8 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <body>
   <div
     aria-hidden="true"
@@ -168,24 +171,24 @@ exports[`<Modal /> does not render at first and then render 2`] = `
     >
       <div>
         <div
-          class="c0"
+          class="sc-dkrFOg glAKPc"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="title"
             aria-modal="true"
-            class="c1"
+            class="sc-hLBbgP bBfuTN"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             Some content
             <button
-              class="c2 c3"
+              class="sc-bcXHqe cLiQC sc-eDvSVe gSHKrE"
               title="fermer la modale"
             >
               <div
-                class="c4"
+                class="sc-gswNZR ktYOxb"
               >
                 fermer la modale
               </div>
@@ -229,6 +232,7 @@ exports[`<Modal /> does not render at first and then render 2`] = `
 `;
 
 exports[`<Modal /> renders the provided wrapper 1`] = `
+<<<<<<< HEAD
 .c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -345,6 +349,8 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <body>
   <div
     aria-hidden="true"
@@ -360,20 +366,20 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
     >
       <div>
         <div
-          class="c0"
+          class="sc-dkrFOg glAKPc"
           data-reach-dialog-overlay=""
         >
           <span
             aria-label="title"
-            class="c1"
+            class="sc-jSUZER kkCEeL"
           >
             This won't be displayed
             <button
-              class="c2 c3"
+              class="sc-bcXHqe cLiQC sc-eDvSVe gSHKrE"
               title="fermer la modale"
             >
               <div
-                class="c4"
+                class="sc-gswNZR ktYOxb"
               >
                 fermer la modale
               </div>

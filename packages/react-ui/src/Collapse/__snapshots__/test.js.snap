@@ -1,6 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Collapse /> renders 1`] = `
+<<<<<<< HEAD
 .c3 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -127,16 +128,27 @@ exports[`<Collapse /> renders 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <div>
   <div>
     <button
       aria-expanded="false"
+<<<<<<< HEAD
       class="c0 c1"
       type="button"
     >
       <svg
         aria-hidden="true"
         class="c2 c3"
+=======
+      class="sc-bBABsx brxyKp"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="sc-dkrFOg fpzKWB"
+>>>>>>> dev
         fill="none"
         height="24"
         stroke="currentColor"
@@ -151,16 +163,21 @@ exports[`<Collapse /> renders 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
+<<<<<<< HEAD
       <div
         class="c4"
         font-size="hsmall"
         font-weight="600"
+=======
+      <p
+        class="sc-kgTSHT htBEDr sc-iveFHk cEsaJQ"
+>>>>>>> dev
       >
         Hello
       </div>
     </button>
     <div
-      class="c5"
+      class="sc-fLcnxK fOHigB"
     >
       <p>
         Hi

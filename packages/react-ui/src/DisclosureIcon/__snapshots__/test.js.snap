@@ -1,6 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tooltip /> renders simple tooltip 1`] = `
+<<<<<<< HEAD
 .c2 {
   margin-bottom: 1.6rem;
   padding: 1.6rem 2rem;
@@ -96,10 +97,12 @@ exports[`<Tooltip /> renders simple tooltip 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <div>
   <button
     aria-label="Find out what lies beneath"
-    class="c0 c1"
+    class="sc-hLBbgP cVqbls sc-eDvSVe hvGRmO"
     title="Find out what lies beneath"
     type="button"
   >
@@ -132,7 +135,7 @@ exports[`<Tooltip /> renders simple tooltip 1`] = `
     </svg>
   </button>
   <div
-    class="c2 c3"
+    class="sc-bcXHqe sc-jSUZER kDJaxK eubWVK"
   >
     Here I am! I am the buried treasure!
   </div>

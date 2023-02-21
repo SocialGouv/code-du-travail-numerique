@@ -1,6 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BurgerStyles renders 1`] = `
+<<<<<<< HEAD
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -118,14 +119,16 @@ exports[`BurgerStyles renders 1`] = `
 
 }
 
+=======
+>>>>>>> dev
 <div>
   <button
     aria-label="menu principal"
-    class="c0 c1"
+    class="sc-bcXHqe cfGWSN sc-hLBbgP jnvKDS"
   >
     <svg
       aria-hidden="true"
-      class="c2"
+      class="sc-eDvSVe fqkEXR"
       fill="none"
       viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"

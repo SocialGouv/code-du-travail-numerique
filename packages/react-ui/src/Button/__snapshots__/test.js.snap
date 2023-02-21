@@ -1,6 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> it renders a Button flat 1`] = `
+<<<<<<< HEAD
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -226,23 +227,25 @@ exports[`<Button /> it renders a Button flat 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe kABrKC"
   >
     this is a Button 
     flat
      
   </button>
   <button
-    class="c1"
+    class="sc-bcXHqe eIGSgv"
   >
     this is a small Button 
     flat
      
   </button>
   <button
-    class="c2"
+    class="sc-bcXHqe hbiXmL"
   >
     this is a narrow Button 
     flat
@@ -252,6 +255,7 @@ exports[`<Button /> it renders a Button flat 1`] = `
 `;
 
 exports[`<Button /> it renders a Button link 1`] = `
+<<<<<<< HEAD
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -325,9 +329,11 @@ exports[`<Button /> it renders a Button link 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe hwiGht"
   >
     this is a Button 
     link
@@ -345,7 +351,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     </svg>
   </button>
   <button
-    class="c0"
+    class="sc-bcXHqe hwiGht"
   >
     this is a small Button 
     link
@@ -363,7 +369,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     </svg>
   </button>
   <button
-    class="c0"
+    class="sc-bcXHqe hwiGht"
   >
     this is a narrow Button 
     link
@@ -384,6 +390,7 @@ exports[`<Button /> it renders a Button link 1`] = `
 `;
 
 exports[`<Button /> it renders a Button naked 1`] = `
+<<<<<<< HEAD
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -609,23 +616,25 @@ exports[`<Button /> it renders a Button naked 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe cfGWSN"
   >
     this is a Button 
     naked
      
   </button>
   <button
-    class="c1"
+    class="sc-bcXHqe kdSVfY"
   >
     this is a small Button 
     naked
      
   </button>
   <button
-    class="c2"
+    class="sc-bcXHqe kxYXcw"
   >
     this is a narrow Button 
     naked
@@ -635,6 +644,7 @@ exports[`<Button /> it renders a Button naked 1`] = `
 `;
 
 exports[`<Button /> it renders a Button navLink 1`] = `
+<<<<<<< HEAD
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -695,23 +705,25 @@ exports[`<Button /> it renders a Button navLink 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe bdrMdS"
   >
     this is a Button 
     navLink
      
   </button>
   <button
-    class="c0"
+    class="sc-bcXHqe bdrMdS"
   >
     this is a small Button 
     navLink
      
   </button>
   <button
-    class="c0"
+    class="sc-bcXHqe bdrMdS"
   >
     this is a narrow Button 
     navLink
@@ -721,6 +733,7 @@ exports[`<Button /> it renders a Button navLink 1`] = `
 `;
 
 exports[`<Button /> it renders a Button primary 1`] = `
+<<<<<<< HEAD
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -946,23 +959,25 @@ exports[`<Button /> it renders a Button primary 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe giqjOB"
   >
     this is a Button 
     primary
      
   </button>
   <button
-    class="c1"
+    class="sc-bcXHqe guOFGk"
   >
     this is a small Button 
     primary
      
   </button>
   <button
-    class="c2"
+    class="sc-bcXHqe bUsDoQ"
   >
     this is a narrow Button 
     primary
@@ -972,6 +987,7 @@ exports[`<Button /> it renders a Button primary 1`] = `
 `;
 
 exports[`<Button /> it renders a Button secondary 1`] = `
+<<<<<<< HEAD
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1197,23 +1213,25 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe iRwlKl"
   >
     this is a Button 
     secondary
      
   </button>
   <button
-    class="c1"
+    class="sc-bcXHqe evPepU"
   >
     this is a small Button 
     secondary
      
   </button>
   <button
-    class="c2"
+    class="sc-bcXHqe liZAkQ"
   >
     this is a narrow Button 
     secondary
@@ -1223,6 +1241,7 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 `;
 
 exports[`<Button /> renders 1`] = `
+<<<<<<< HEAD
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1302,9 +1321,11 @@ exports[`<Button /> renders 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <div>
   <button
-    class="c0"
+    class="sc-bcXHqe iRwlKl"
   >
     A button
   </button>
@@ -1312,6 +1333,7 @@ exports[`<Button /> renders 1`] = `
 `;
 
 exports[`<Button /> renders as a link 1`] = `
+<<<<<<< HEAD
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1391,9 +1413,11 @@ exports[`<Button /> renders as a link 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <div>
   <a
-    class="c0"
+    class="sc-bcXHqe iRwlKl"
     href="http://www.turfu.com"
   >
     A button
@@ -1402,6 +1426,7 @@ exports[`<Button /> renders as a link 1`] = `
 `;
 
 exports[`<Button /> renders as div 1`] = `
+<<<<<<< HEAD
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1481,9 +1506,11 @@ exports[`<Button /> renders as div 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <div>
   <div
-    class="c0"
+    class="sc-bcXHqe iRwlKl"
   >
     A button
   </div>

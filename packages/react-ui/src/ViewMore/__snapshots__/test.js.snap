@@ -1,6 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ViewMore /> renders with an button 1`] = `
+<<<<<<< HEAD
 .c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -126,9 +127,11 @@ exports[`<ViewMore /> renders with an button 1`] = `
   }
 }
 
+=======
+>>>>>>> dev
 <div>
   <ul
-    class="c0"
+    class="sc-gswNZR jGPPhy"
   >
     <li>
       <a
@@ -181,10 +184,10 @@ exports[`<ViewMore /> renders with an button 1`] = `
     </li>
   </ul>
   <div
-    class="c1"
+    class="sc-dkrFOg cGyozt"
   >
     <button
-      class="c2 c3"
+      class="sc-bcXHqe iRwlKl sc-hLBbgP bmBDhR"
       type="button"
     >
       Voir plus

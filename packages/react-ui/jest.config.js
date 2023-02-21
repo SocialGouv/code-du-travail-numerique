@@ -7,7 +7,6 @@ module.exports = {
   testEnvironment: "jest-environment-jsdom",
   testPathIgnorePatterns: ["<rootDir>/lib/", "<rootDir>/node_modules/"],
   transform: {
-    "^.+\\.jsx?$": ["babel-jest"],
-    "^.+\\.tsx?$": ["@swc/jest"],
+    "^.+\\.(t|j)sx?$": ["@swc/jest"],
   },
 };
