@@ -8,6 +8,7 @@ function linkToNewTab(iframe) {
 function setHeight(iframe) {
   const height = iframe.contentWindow.document.body.scrollHeight || 800;
   iframe.style.height = height + "px";
+  iframe.contentWindow.document.body.style = "overflow-y: hidden;";
 }
 
 function addWidget(info) {
