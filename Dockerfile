@@ -57,6 +57,8 @@ WORKDIR /app
 
 COPY --from=dist . /app/
 
+RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R node:node /app/packages/code-du-travail-frontend/.next
+
 USER 1000
 
 CMD [ "yarn", "start"]
