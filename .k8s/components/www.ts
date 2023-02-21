@@ -56,6 +56,20 @@ export default async () => {
         },
         resources:
           env.env === "prod" ? ressourcesConfigProd : ressourcesConfigDev,
+        env: [
+          {
+            name: "ELASTIC_APM_ENVIRONMENT",
+            value: process.env.ELASTIC_APM_ENVIRONMENT,
+          },
+          {
+            name: "ES_INDEX_PREFIX",
+            value: process.env.ES_INDEX_PREFIX,
+          },
+          {
+            name: "VERSION",
+            value: process.env.GITHUB_REF,
+          },
+        ],
       },
     },
   });
