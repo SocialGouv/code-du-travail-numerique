@@ -22,7 +22,6 @@ const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
 export default async () => {
   // extract computed url from API manifests for the frontend
   const apiManifests = await getApiManifests();
-  const API_URL = "https://" + getIngressHost(apiManifests) + "/api/v1";
 
   const productionConfig = {
     domain: "travail.gouv.fr",
