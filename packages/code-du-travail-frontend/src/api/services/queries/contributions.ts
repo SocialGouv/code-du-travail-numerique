@@ -28,6 +28,30 @@ export const getAllGenericsContributions = (): any => {
   };
 };
 
+export function getContributionsBySlugs(slugs: string[]) {
+  return {
+    _source: [
+      "title",
+      "shortTitle",
+      "description",
+      "url",
+      "slug",
+      "breadcrumbs",
+      "source",
+    ],
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.CONTRIBUTIONS } },
+          { term: { isPublished: true } },
+          { terms: { slug: slugs } },
+        ],
+      },
+    },
+    size: 100,
+  };
+}
+
 export const getAllContributionBySlug = (slug: string) => {
   return {
     query: {

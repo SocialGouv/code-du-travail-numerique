@@ -22,3 +22,17 @@ export type Agreement = {
     searchInfo?: string;
   };
 };
+
+export type ElasticSearchItem = {
+  description: string;
+  source: string;
+  title: string;
+  slug: string;
+  breadcrumbs: Breadcrumb[];
+};
+
+type Breadcrumb = {
+  label: string;
+  position: number;
+  slug: string;
+};

@@ -1,9 +1,25 @@
-import { elasticIndex, elasticsearchClient, NotFoundError } from "../utils";
-import { getModeleBySlug, getModeles } from "./queries";
+import {
+  elasticIndex,
+  elasticsearchClient,
+  ElasticSearchItem,
+  NotFoundError,
+} from "../utils";
+import { getModeleBySlug, getModeles, getModelesBySlugs } from "./queries";
 
 export class ModelesService {
   public async getAll() {
     const body = getModeles();
+    const response = await elasticsearchClient.search({
+      body,
+      index: elasticIndex,
+    });
+    return response.body.hits.total.value > 0
+      ? response.body.hits.hits.map(({ _source }) => _source)
+      : [];
+  }
+
+  public async getBySlugs(slugs: string[]): Promise<ElasticSearchItem[]> {
+    const body = getModelesBySlugs(slugs);
     const response = await elasticsearchClient.search({
       body,
       index: elasticIndex,

@@ -1,7 +1,13 @@
-import { elasticIndex, elasticsearchClient, NotFoundError } from "../utils";
+import {
+  elasticIndex,
+  elasticsearchClient,
+  ElasticSearchItem,
+  NotFoundError,
+} from "../utils";
 import {
   getAllContributionBySlug,
   getAllGenericsContributions,
+  getContributionsBySlugs,
 } from "./queries";
 
 export class ContributionsService {
@@ -19,6 +25,17 @@ export class ContributionsService {
         return contrib;
       })
       .reduce(groupByThemes, {});
+  }
+
+  public async getBySlugs(slugs: string[]): Promise<ElasticSearchItem[]> {
+    const body = getContributionsBySlugs(slugs);
+    const response = await elasticsearchClient.search({
+      body,
+      index: elasticIndex,
+    });
+    return response.body.hits.total.value > 0
+      ? response.body.hits.hits.map(({ _source }) => _source)
+      : [];
   }
 
   public async getBySlug(slug: string) {

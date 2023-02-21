@@ -1,3 +1,5 @@
+import { SOURCES } from "cdtn-types";
+
 export function getModeles() {
   return {
     _source: [
@@ -17,6 +19,30 @@ export function getModeles() {
       },
     },
     size: 1000,
+  };
+}
+
+export function getModelesBySlugs(slugs: string[]) {
+  return {
+    _source: [
+      "title",
+      "shortTitle",
+      "description",
+      "url",
+      "slug",
+      "breadcrumbs",
+      "source",
+    ],
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.LETTERS } },
+          { term: { isPublished: true } },
+          { terms: { slug: slugs } },
+        ],
+      },
+    },
+    size: 100,
   };
 }
 

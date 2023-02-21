@@ -2,11 +2,13 @@ import {
   Agreement,
   elasticIndex,
   elasticsearchClient,
+  ElasticSearchItem,
   NotFoundError,
   SearchResponse,
 } from "../utils";
 import {
   getAgreementBySlugBody,
+  getAgreementsBySlug,
   getAllAgreementsWithContributions,
 } from "./queries";
 
@@ -24,6 +26,17 @@ export class AgreementsService {
     return response.body.hits.hits
       .map(({ _source }) => _source)
       .sort(orderByAlphaAndMetalurgieLast);
+  }
+
+  public async getBySlugs(slugs: string[]): Promise<ElasticSearchItem[]> {
+    const body = getAgreementsBySlug(slugs);
+    const response = await elasticsearchClient.search({
+      body,
+      index: elasticIndex,
+    });
+    return response.body.hits.total.value > 0
+      ? response.body.hits.hits.map(({ _source }) => _source)
+      : [];
   }
 
   public async getBySlug(slug: string) {
