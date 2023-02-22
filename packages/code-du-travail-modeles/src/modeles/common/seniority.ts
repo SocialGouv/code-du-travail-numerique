@@ -1,4 +1,4 @@
-import { addDays, differenceInMonths, parse } from "date-fns";
+import { addDays, differenceInMonths } from "date-fns";
 
 import type {
   Absence,
@@ -9,6 +9,7 @@ import type {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "./index";
+import { parseDate } from "./index";
 
 export type DefaultSeniorityProps = {
   dateEntree: string;
@@ -45,8 +46,8 @@ export abstract class SeniorityDefault<
     to: string,
     absences: Absence[]
   ): SeniorityResult {
-    const dEntree = parse(from, "dd/MM/yyyy", new Date());
-    const dSortie = addDays(parse(to, "dd/MM/yyyy", new Date()), 1);
+    const dEntree = parseDate(from);
+    const dSortie = addDays(parseDate(to), 1);
     const totalAbsence =
       absences
         .filter((period) => Boolean(period.durationInMonth))
