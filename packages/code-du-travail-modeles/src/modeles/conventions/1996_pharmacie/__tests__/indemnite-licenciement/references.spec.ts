@@ -1,0 +1,85 @@
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "1996"
+);
+
+describe("Vérification des références juridiques pour la CC 1996", () => {
+  test.each`
+    seniority | licenciementEco
+    ${5}      | ${"non"}
+    ${5}      | ${"oui"}
+    ${12}     | ${"non"}
+    ${12}     | ${"oui"}
+    ${24}     | ${"non"}
+    ${24}     | ${"oui"}
+  `(
+    "pour un cadres avec une ancienneté de $seniority mois",
+    ({ seniority, licenciementEco }) => {
+      engine.setSituation({
+        "contrat salarié . convention collective": "'IDCC1996'",
+        "contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . licenciement économique question":
+          licenciementEco,
+        "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle": `'Cadres'`,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "2000",
+      });
+      const result = engine.getReferences("résultat conventionnel");
+
+      expect(result).toHaveLength(2);
+      expect(result).toEqual(
+        expect.arrayContaining([
+          {
+            article: "Article 7 de l'Annexe Cadres",
+            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106401?idConteneur=KALICONT000005635528",
+          },
+          {
+            article: "Article 11",
+            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106382?idConteneur=KALICONT000005635528&origin=list#KALIARTI000038106382",
+          },
+        ])
+      );
+    }
+  );
+
+  test.each`
+    seniority
+    ${5}
+    ${12}
+    ${24}
+  `(
+    "pour un non cadres avec une ancienneté de $seniority mois",
+    ({ seniority }) => {
+      engine.setSituation({
+        "contrat salarié . convention collective": "'IDCC1996'",
+        "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle": `'non-cadres'`,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "2000",
+      });
+      const result = engine.getReferences("résultat conventionnel");
+
+      expect(result).toHaveLength(2);
+      expect(result).toEqual(
+        expect.arrayContaining([
+          {
+            article: "Article 21",
+            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106393?idConteneur=KALICONT000005635528",
+          },
+          {
+            article: "Article 11",
+            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106382?idConteneur=KALICONT000005635528&origin=list#KALIARTI000038106382",
+          },
+        ])
+      );
+    }
+  );
+});

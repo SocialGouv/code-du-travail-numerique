@@ -1,0 +1,270 @@
+contrat salarié . convention collective . pharmacie . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Non-cadres: "'Non-cadres'"
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années jusqu'à dix ans ou moins:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 10 an
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années jusqu'à 15 ans ou moins:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 15 an
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années au dela de dix ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années entre 10 et 15ans:
+  somme:
+    - le minimum de:
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - 15an
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années au dessus de 15ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 15 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . dix ans ou moins:
+  valeur:
+    produit:
+      assiette: nombre d'années jusqu'à dix ans ou moins * indemnité de licenciement . salaire de référence conventionnel
+      facteur: 1 / 4
+  unité: €
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . plus de dix ans:
+  valeur:
+    produit:
+      assiette: nombre d'années au dela de dix ans * indemnité de licenciement . salaire de référence conventionnel
+      facteur: 3.34 / 10
+  unité: €
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres dix ans ou moins:
+  valeur:
+    produit:
+      assiette: nombre d'années jusqu'à dix ans ou moins * indemnité de licenciement . salaire de référence conventionnel
+      facteur: 3 / 10
+  unité: €
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres jusqu'à 15ans:
+  valeur:
+    produit:
+      assiette: nombre d'années jusqu'à 15 ans ou moins * indemnité de licenciement . salaire de référence conventionnel
+      facteur: 3 / 10
+  unité: €
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . entre 10 et 15ans:
+  valeur:
+    produit:
+      assiette: nombre d'années entre 10 et 15ans * indemnité de licenciement . salaire de référence conventionnel
+      facteur: 3.34 / 10
+  unité: €
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . plus de 15ans:
+  valeur:
+    produit:
+      assiette: nombre d'années au dessus de 15ans * indemnité de licenciement . salaire de référence conventionnel
+      facteur: 5 / 10
+  unité: €
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . non cadres:
+  applicable si: catégorie professionnelle = 'Non-cadres'
+  valeur: oui
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . non cadres . résultat conventionnel moins de 10 ans:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année <= 10 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: dix ans ou moins
+  unité: €
+  arrondi: 2 décimales
+  cdtn:
+    formule:
+      formula: 1/4 * Sref * A
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années jusqu'à dix ans ou moins
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 21: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106393?idConteneur=KALICONT000005635528
+    Article 11: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106382?idConteneur=KALICONT000005635528&origin=list#KALIARTI000038106382
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . non cadres . résultat conventionnel plus de 10 ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 10 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur:
+    somme:
+      - dix ans ou moins
+      - plus de dix ans
+  unité: €
+  arrondi: 2 décimales
+  cdtn:
+    formule:
+      formula: (1/4 * Sref * A1) + (3.34/10 * Sref * A2)
+      explanations:
+        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années jusqu'à dix ans ou moins
+        - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années au dela de dix ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 21: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106393?idConteneur=KALICONT000005635528
+    Article 11: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106382?idConteneur=KALICONT000005635528&origin=list#KALIARTI000038106382
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . résultat conventionnel moins de 5 ans:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 5 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: dix ans ou moins
+  unité: €
+  arrondi: 2 décimales
+  cdtn:
+    formule:
+      formula: 1/4 * Sref * A
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années jusqu'à dix ans ou moins
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 7 de l'Annexe Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106401?idConteneur=KALICONT000005635528
+    Article 11: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106382?idConteneur=KALICONT000005635528&origin=list#KALIARTI000038106382
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . licenciement économique question:
+  titre: Licenciement pour motif économique
+  question: Le motif du licenciement est-il économique ?
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . licenciement économique:
+  applicable si: licenciement économique question = 'Oui'
+  valeur: oui
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . licenciement économique . résultat conventionnel plus de 5 ans:
+  applicable si:
+    toutes ces conditions:
+      - indemnité de licenciement . ancienneté conventionnelle requise en année >= 5 ans
+      - indemnité de licenciement . ancienneté conventionnelle requise en année < 10 ans
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: cadres dix ans ou moins
+  unité: €
+  arrondi: 2 décimales
+  cdtn:
+    formule:
+      formula: 3/10 * Sref * A
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années jusqu'à dix ans ou moins
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 7 de l'Annexe Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106401?idConteneur=KALICONT000005635528
+    Article 11: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106382?idConteneur=KALICONT000005635528&origin=list#KALIARTI000038106382
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . licenciement économique . résultat conventionnel entre 10 et 15 ans:
+  applicable si:
+    toutes ces conditions:
+      - indemnité de licenciement . ancienneté conventionnelle requise en année >= 10 ans
+      - indemnité de licenciement . ancienneté conventionnelle requise en année < 15 ans
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur:
+    somme:
+      - cadres dix ans ou moins
+      - entre 10 et 15ans
+  unité: €
+  arrondi: 2 décimales
+  cdtn:
+    formule:
+      formula: (3/10 * Sref * A1) + (3.34/10 * Sref * A2)
+      explanations:
+        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années jusqu'à dix ans ou moins
+        - "A2 : Ancienneté au-delà de 10 ans jusqu'à 15 ans": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années entre 10 et 15ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 7 de l'Annexe Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106401?idConteneur=KALICONT000005635528
+    Article 11: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106382?idConteneur=KALICONT000005635528&origin=list#KALIARTI000038106382
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . licenciement économique . résultat conventionnel supérieur à 15 ans:
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 15 ans
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur:
+    somme:
+      - cadres dix ans ou moins
+      - entre 10 et 15ans
+      - plus de 15ans
+  unité: €
+  arrondi: 2 décimales
+  cdtn:
+    formule:
+      formula: (3/10 * Sref * A1) + (3.34/10 * Sref * A2) + (5/10 * Sref * A3)
+      explanations:
+        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années jusqu'à dix ans ou moins
+        - "A2 : Ancienneté au-delà de 10 ans jusqu'à 15 ans": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années entre 10 et 15ans
+        - "A3 : Ancienneté au-delà de 15 ans": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années au dessus de 15ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 7 de l'Annexe Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106401?idConteneur=KALICONT000005635528
+    Article 11: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106382?idConteneur=KALICONT000005635528&origin=list#KALIARTI000038106382
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . autre:
+  applicable si: licenciement économique question = 'Non'
+  valeur: oui
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . autre . plus de 5 ans:
+  applicable si:
+    toutes ces conditions:
+      - indemnité de licenciement . ancienneté conventionnelle requise en année >= 5 ans
+      - indemnité de licenciement . ancienneté conventionnelle requise en année < 15 ans
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: cadres jusqu'à 15ans
+  unité: €
+  arrondi: 2 décimales
+  cdtn:
+    formule:
+      formula: 3/10 * Sref * A
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années jusqu'à 15 ans ou moins
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 7 de l'Annexe Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106401?idConteneur=KALICONT000005635528
+    Article 11: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106382?idConteneur=KALICONT000005635528&origin=list#KALIARTI000038106382
+
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . autre . résultat conventionnel supérieur à 15 ans:
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 15 ans
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur:
+    somme:
+      - cadres jusqu'à 15ans
+      - plus de 15ans
+  unité: €
+  arrondi: 2 décimales
+  cdtn:
+    formule:
+      formula: (3/10 * Sref * A1) + (5/10 * Sref * A2)
+      explanations:
+        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années jusqu'à 15 ans ou moins
+        - "A2 : Ancienneté au-delà de 15 ans": contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années au dessus de 15ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 7 de l'Annexe Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106401?idConteneur=KALICONT000005635528
+    Article 11: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106382?idConteneur=KALICONT000005635528&origin=list#KALIARTI000038106382

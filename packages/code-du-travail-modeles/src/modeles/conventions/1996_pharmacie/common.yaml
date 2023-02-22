@@ -5,3 +5,4 @@ contrat salarié . convention collective . pharmacie:
   cdtn:
     idcc: 1996
     préavis-retraite: true
+    indemnité de licenciement: true
