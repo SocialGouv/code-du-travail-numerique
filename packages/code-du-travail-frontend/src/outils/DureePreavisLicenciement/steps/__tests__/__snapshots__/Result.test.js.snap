@@ -15,12 +15,10 @@ exports[`<StepResult /> should render with O duration 1`] = `
   <p>
     Le code du travail et la convention collective ne prévoient pas de préavis.
   </p>
-  <div
-    class="sc-iJbNxu bXYOgF"
-  >
+  <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg
@@ -40,13 +38,13 @@ exports[`<StepResult /> should render with O duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="sc-AHaJN iQQkLr"
+      <span
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
         Voir le détail du calcul
-      </div>
+      </span>
     </button>
     <div
       class="sc-bCfvAP iEBQCA"
@@ -154,7 +152,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
     </div>
   </div>
   <div
-    class="sc-lllmON sc-grxQYx hrCOuh dgCrKQ"
+    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
       class="sc-ehvNnt eQWqAO"
@@ -183,7 +181,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
         class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-ZqGJI hTYDW"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -212,7 +210,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       1 mois
     </strong>
     <sup
-      class="sc-knEsKG lkASYN"
+      class="sc-ZqGJI fwFBNd"
     >
       *
     </sup>
@@ -222,7 +220,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     class="sc-cLNonn cyfAkb"
   >
     <sup
-      class="sc-knEsKG lkASYN"
+      class="sc-ZqGJI fwFBNd"
     >
       * 
     </sup>
@@ -247,12 +245,10 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
     </span>
   </p>
-  <div
-    class="sc-iJbNxu bXYOgF"
-  >
+  <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg
@@ -272,13 +268,13 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="sc-AHaJN iQQkLr"
+      <span
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
         Voir le détail du calcul
-      </div>
+      </span>
     </button>
     <div
       class="sc-bCfvAP iEBQCA"
@@ -345,7 +341,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     </div>
   </div>
   <div
-    class="sc-lllmON sc-grxQYx hrCOuh dgCrKQ"
+    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
       class="sc-ehvNnt eQWqAO"
@@ -374,7 +370,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-ZqGJI hTYDW"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -411,12 +407,10 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   <p>
     Le code du travail ne prévoit pas de durée de préavis de licenciement sauf, cas particuliers.
   </p>
-  <div
-    class="sc-iJbNxu bXYOgF"
-  >
+  <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg
@@ -436,13 +430,13 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="sc-AHaJN iQQkLr"
+      <span
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
         Voir le détail du calcul
-      </div>
+      </span>
     </button>
     <div
       class="sc-bCfvAP iEBQCA"
@@ -509,7 +503,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     </div>
   </div>
   <div
-    class="sc-lllmON sc-grxQYx hrCOuh dgCrKQ"
+    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
       class="sc-ehvNnt eQWqAO"
@@ -538,7 +532,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-ZqGJI hTYDW"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -576,7 +570,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       2 mois
     </strong>
     <sup
-      class="sc-knEsKG lkASYN"
+      class="sc-ZqGJI fwFBNd"
     >
       *
     </sup>
@@ -586,7 +580,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     class="sc-cLNonn cyfAkb"
   >
     <sup
-      class="sc-knEsKG lkASYN"
+      class="sc-ZqGJI fwFBNd"
     >
       * 
     </sup>
@@ -611,12 +605,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
     </span>
   </p>
-  <div
-    class="sc-iJbNxu bXYOgF"
-  >
+  <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg
@@ -636,13 +628,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="sc-AHaJN iQQkLr"
+      <span
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
         Voir le détail du calcul
-      </div>
+      </span>
     </button>
     <div
       class="sc-bCfvAP iEBQCA"
@@ -699,7 +691,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     </div>
   </div>
   <div
-    class="sc-lllmON sc-grxQYx hrCOuh dgCrKQ"
+    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
       class="sc-ehvNnt eQWqAO"
@@ -728,7 +720,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-ZqGJI hTYDW"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -757,7 +749,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       2 mois
     </strong>
     <sup
-      class="sc-knEsKG lkASYN"
+      class="sc-ZqGJI fwFBNd"
     >
       *
     </sup>
@@ -767,7 +759,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     class="sc-cLNonn cyfAkb"
   >
     <sup
-      class="sc-knEsKG lkASYN"
+      class="sc-ZqGJI fwFBNd"
     >
       * 
     </sup>
@@ -792,12 +784,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
     </span>
   </p>
-  <div
-    class="sc-iJbNxu bXYOgF"
-  >
+  <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg
@@ -817,13 +807,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="sc-AHaJN iQQkLr"
+      <span
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
         Voir le détail du calcul
-      </div>
+      </span>
     </button>
     <div
       class="sc-bCfvAP iEBQCA"
@@ -890,7 +880,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </div>
   </div>
   <div
-    class="sc-lllmON sc-grxQYx hrCOuh dgCrKQ"
+    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
       class="sc-ehvNnt eQWqAO"
@@ -919,7 +909,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-ZqGJI hTYDW"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>

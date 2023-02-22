@@ -4,7 +4,7 @@ exports[`<Tooltip /> renders simple tooltip 1`] = `
 <div>
   <button
     aria-label="Find out what lies beneath"
-    class="sc-hLBbgP cVqbls sc-eDvSVe hvGRmO"
+    class="sc-hLBbgP iQyFze sc-eDvSVe hvGRmO"
     title="Find out what lies beneath"
     type="button"
   >

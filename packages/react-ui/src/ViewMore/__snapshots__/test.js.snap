@@ -59,7 +59,7 @@ exports[`<ViewMore /> renders with an button 1`] = `
     class="sc-dkrFOg cGyozt"
   >
     <button
-      class="sc-bcXHqe iRwlKl sc-hLBbgP bmBDhR"
+      class="sc-bcXHqe kJApzz sc-hLBbgP bmBDhR"
       type="button"
     >
       Voir plus

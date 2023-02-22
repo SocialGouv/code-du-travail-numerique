@@ -166,7 +166,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           Consultez
            
           <button
-            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
+            class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -345,7 +345,7 @@ exports[`<Contribution /> should render answer references 1`] = `
           Consultez
            
           <button
-            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
+            class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -524,7 +524,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           Consultez
            
           <button
-            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
+            class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -703,7 +703,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
           Consultez
            
           <button
-            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
+            class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -860,7 +860,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           Consultez
            
           <button
-            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
+            class="sc-hhOBVt clLQVO sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide

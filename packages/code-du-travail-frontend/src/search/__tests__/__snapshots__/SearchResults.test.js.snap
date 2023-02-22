@@ -130,7 +130,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-jsTgWu kNvrCw"
               >
                 <button
-                  class="sc-hhOBVt bxVHUw"
+                  class="sc-hhOBVt jCWxxm"
                 >
                   Consulter
                   <svg
@@ -197,7 +197,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-jsTgWu kNvrCw"
               >
                 <button
-                  class="sc-hhOBVt bxVHUw"
+                  class="sc-hhOBVt jCWxxm"
                 >
                   Consulter
                   <svg
@@ -288,7 +288,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-jsTgWu kNvrCw"
               >
                 <button
-                  class="sc-hhOBVt bxVHUw"
+                  class="sc-hhOBVt jCWxxm"
                 >
                   Consulter
                   <svg

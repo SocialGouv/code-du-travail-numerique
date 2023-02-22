@@ -56,12 +56,10 @@ exports[`<StepResult /> should render CC answer 1`] = `
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
     </span>
   </p>
-  <div
-    class="sc-knEsKG iwANYs"
-  >
+  <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg
@@ -81,13 +79,13 @@ exports[`<StepResult /> should render CC answer 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="sc-AHaJN iQQkLr"
+      <span
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
         Voir le détail du calcul
-      </div>
+      </span>
     </button>
     <div
       class="sc-bCfvAP iEBQCA"

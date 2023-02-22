@@ -18,12 +18,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     </strong>
     .
   </p>
-  <div
-    class="sc-dkKxlM hQYzga"
-  >
+  <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg
@@ -43,13 +41,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="sc-AHaJN iQQkLr"
+      <span
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
         Voir le détail du calcul
-      </div>
+      </span>
     </button>
     <div
       class="sc-bCfvAP iEBQCA"
@@ -393,7 +391,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     </div>
   </div>
   <div
-    class="sc-lllmON sc-gJFNMl hrCOuh kRTaVh"
+    class="sc-lllmON sc-dkKxlM hrCOuh elwyYc"
   >
     <div
       class="sc-ehvNnt eQWqAO"
@@ -422,7 +420,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-fxTzYC gtcjvD"
+          class="sc-GKYbw cUdVqX sc-gJFNMl bnuSNt"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -465,12 +463,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     </strong>
     .
   </p>
-  <div
-    class="sc-dkKxlM hQYzga"
-  >
+  <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg
@@ -490,13 +486,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="sc-AHaJN iQQkLr"
+      <span
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
         Voir le détail du calcul
-      </div>
+      </span>
     </button>
     <div
       class="sc-bCfvAP iEBQCA"
@@ -830,7 +826,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     </div>
   </div>
   <div
-    class="sc-lllmON sc-gJFNMl hrCOuh kRTaVh"
+    class="sc-lllmON sc-dkKxlM hrCOuh elwyYc"
   >
     <div
       class="sc-ehvNnt eQWqAO"
@@ -859,7 +855,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-fxTzYC gtcjvD"
+          class="sc-GKYbw cUdVqX sc-gJFNMl bnuSNt"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -905,12 +901,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     </strong>
     .
   </p>
-  <div
-    class="sc-dkKxlM hQYzga"
-  >
+  <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg
@@ -930,13 +924,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="sc-AHaJN iQQkLr"
+      <span
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
         Voir le détail du calcul
-      </div>
+      </span>
     </button>
     <div
       class="sc-bCfvAP iEBQCA"
@@ -1280,7 +1274,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     </div>
   </div>
   <div
-    class="sc-lllmON sc-gJFNMl hrCOuh kRTaVh"
+    class="sc-lllmON sc-dkKxlM hrCOuh elwyYc"
   >
     <div
       class="sc-ehvNnt eQWqAO"
@@ -1309,7 +1303,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-fxTzYC gtcjvD"
+          class="sc-GKYbw cUdVqX sc-gJFNMl bnuSNt"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1355,12 +1349,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     </strong>
     .
   </p>
-  <div
-    class="sc-dkKxlM hQYzga"
-  >
+  <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg
@@ -1380,13 +1372,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="sc-AHaJN iQQkLr"
+      <span
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
         Voir le détail du calcul
-      </div>
+      </span>
     </button>
     <div
       class="sc-bCfvAP iEBQCA"
@@ -1720,7 +1712,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     </div>
   </div>
   <div
-    class="sc-lllmON sc-gJFNMl hrCOuh kRTaVh"
+    class="sc-lllmON sc-dkKxlM hrCOuh elwyYc"
   >
     <div
       class="sc-ehvNnt eQWqAO"
@@ -1749,7 +1741,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-fxTzYC gtcjvD"
+          class="sc-GKYbw cUdVqX sc-gJFNMl bnuSNt"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1795,12 +1787,10 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     </strong>
     .
   </p>
-  <div
-    class="sc-dkKxlM hQYzga"
-  >
+  <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
+      class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
       type="button"
     >
       <svg
@@ -1820,13 +1810,13 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="sc-AHaJN iQQkLr"
+      <span
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
         Voir le détail du calcul
-      </div>
+      </span>
     </button>
     <div
       class="sc-bCfvAP iEBQCA"
@@ -2160,7 +2150,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     </div>
   </div>
   <div
-    class="sc-lllmON sc-gJFNMl hrCOuh kRTaVh"
+    class="sc-lllmON sc-dkKxlM hrCOuh elwyYc"
   >
     <div
       class="sc-ehvNnt eQWqAO"
@@ -2189,7 +2179,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-fxTzYC gtcjvD"
+          class="sc-GKYbw cUdVqX sc-gJFNMl bnuSNt"
         >
           Attention il peut exister un montant plus favorable
         </p>

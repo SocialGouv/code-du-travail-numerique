@@ -8,7 +8,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
     <div>
       <button
         aria-expanded="false"
-        class="sc-hhOBVt fANzfq sc-cOxWqc ioxulQ"
+        class="sc-hhOBVt libwqv sc-cOxWqc ioxulQ"
         type="button"
       >
         <svg
@@ -28,15 +28,15 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
             points="9 18 15 12 9 6"
           />
         </svg>
-        <div
+        <span
           aria-level="2"
-          class="sc-AHaJN iQQkLr"
+          class="sc-AHaJN jfcIdr"
           font-size="hsmall"
           font-weight="600"
           role="heading"
         >
           Références juridiques concernées :
-        </div>
+        </span>
       </button>
       <div
         class="sc-bCfvAP iEBQCA"

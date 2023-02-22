@@ -102,7 +102,7 @@ exports[`<FicheMT /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt cizsts sc-kAuIVs bIWiNJ"
+              class="sc-hhOBVt hjpTeI sc-kAuIVs bIWiNJ"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -147,14 +147,14 @@ exports[`<FicheMT /> should render 1`] = `
           class="sc-cPIbRQ Szlyq"
         >
           <button
-            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-hxOqGs bDyXUw dNQGPT"
+            class="sc-hhOBVt clLQVO sc-eeMvmM sc-hxOqGs bDyXUw dNQGPT"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-gInZnl dofhcI"
+          class="sc-hhOBVt euGdTx sc-cjibBx mHCxp sc-gInZnl dofhcI"
         >
           <svg
             aria-hidden="true"
@@ -700,12 +700,12 @@ exports[`<FicheMT /> should render 1`] = `
                     class="sc-hGglLj imOAZj"
                   >
                     <button
-                      class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                      class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                     >
                       Non
                     </button>
                     <button
-                      class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                      class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                     >
                       Oui
                     </button>
@@ -751,7 +751,7 @@ exports[`<FicheMT /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hhOBVt irUZZv"
+              class="sc-hhOBVt hqeNIF"
             >
               Contacter nos services en région
               <svg
@@ -871,7 +871,7 @@ exports[`<FicheMT /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="sc-hhOBVt eyKsVw sc-jWOkvS dTRift"
+                    class="sc-hhOBVt clLQVO sc-jWOkvS dTRift"
                   >
                     Contact
                   </button>

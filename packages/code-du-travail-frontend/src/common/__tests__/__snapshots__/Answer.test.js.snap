@@ -342,12 +342,12 @@ exports[`<Answer /> should renders 1`] = `
                 class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -794,12 +794,12 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -1155,12 +1155,12 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -1513,12 +1513,12 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -2039,12 +2039,12 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -2401,12 +2401,12 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -2764,12 +2764,12 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -3122,12 +3122,12 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
+                  class="sc-hhOBVt gNwDiq sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
