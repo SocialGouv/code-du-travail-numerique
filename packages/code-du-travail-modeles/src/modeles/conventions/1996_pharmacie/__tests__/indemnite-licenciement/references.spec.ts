@@ -8,14 +8,14 @@ const engine = new IndemniteLicenciementPublicodes(
 describe("Vérification des références juridiques pour la CC 1996", () => {
   test.each`
     seniority | licenciementEco
-    ${5}      | ${"non"}
-    ${5}      | ${"oui"}
-    ${12}     | ${"non"}
-    ${12}     | ${"oui"}
-    ${24}     | ${"non"}
-    ${24}     | ${"oui"}
+    ${5}      | ${"'Non'"}
+    ${5}      | ${"'Oui'"}
+    ${12}     | ${"'Non'"}
+    ${12}     | ${"'Oui'"}
+    ${24}     | ${"'Non'"}
+    ${24}     | ${"'Oui'"}
   `(
-    "pour un cadres avec une ancienneté de $seniority mois",
+    "pour un cadre avec une ancienneté de $seniority mois, licenciement éco: $licenciementEco",
     ({ seniority, licenciementEco }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1996'",
@@ -53,11 +53,11 @@ describe("Vérification des références juridiques pour la CC 1996", () => {
     ${12}
     ${24}
   `(
-    "pour un non cadres avec une ancienneté de $seniority mois",
+    "pour un non cadre avec une ancienneté de $seniority mois",
     ({ seniority }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1996'",
-        "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle": `'non-cadres'`,
+        "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle": `'Non-cadres'`,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           seniority,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":

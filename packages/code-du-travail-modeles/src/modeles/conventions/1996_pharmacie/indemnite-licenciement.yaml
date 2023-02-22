@@ -230,7 +230,7 @@ contrat salarié . convention collective . pharmacie . indemnité de licenciemen
   applicable si: licenciement économique question = 'Non'
   valeur: oui
 
-contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . autre . plus de 5 ans:
+contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . autre . résultat conventionnel plus de 5 ans:
   applicable si:
     toutes ces conditions:
       - indemnité de licenciement . ancienneté conventionnelle requise en année >= 5 ans
