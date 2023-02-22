@@ -30,7 +30,7 @@ export function Partners() {
           >
             <Image
               alt="le site du ministere du travail, de l'emploi et de l'insertion"
-              src="/static/assets/img/ministere-travail.png"
+              src="/static/assets/img/ministere_logo.svg"
               width="170"
               height="141"
             />
