@@ -91,9 +91,6 @@ function AgreementSearchTool({
   }
 
   useEffect(() => {
-    router.replace(`/${SOURCES.TOOLS}/convention-collective`, undefined, {
-      shallow: true,
-    });
     router.events.on("hashChangeStart", handleHashNavigation);
     return () => {
       router.events.off("hashChangeStart", handleHashNavigation);

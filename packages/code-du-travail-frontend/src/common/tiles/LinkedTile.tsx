@@ -25,16 +25,18 @@ export const LinkedTile = React.forwardRef<HTMLAnchorElement, LinkedTileProps>(
     ref: ForwardedRef<any>
   ): JSX.Element {
     const router = useRouter();
-    const handleClick = (e) => {
+    const handleClick = async (e) => {
       if (onClick) onClick();
       e.preventDefault();
       if (props.target === "_blank") {
-        return window.open(href, "_blank");
+        window.open(href, "_blank");
+        return false;
       }
       router.push(href);
+      return false;
     };
     return (
-      <Tile {...props} href={href} ref={ref} onClick={(e) => handleClick(e)}>
+      <Tile {...props} href={href} ref={ref} onClick={handleClick}>
         {children}
       </Tile>
     );
