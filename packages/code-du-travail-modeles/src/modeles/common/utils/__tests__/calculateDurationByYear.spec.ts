@@ -1,5 +1,5 @@
-import type { Absence } from "../../../../common";
-import { calculateDurationByYear } from "../../seniority";
+import type { Absence } from "../../index";
+import { calculateDurationByYear } from "../date";
 
 describe("Test de la méthode calculateDurationByYear", () => {
   test.each`

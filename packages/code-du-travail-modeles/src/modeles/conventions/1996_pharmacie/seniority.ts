@@ -1,6 +1,6 @@
 import { addDays, differenceInMonths } from "date-fns";
 
-import { LEGAL_MOTIFS } from "../../base";
+import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   Absence,
   ISeniority,
@@ -11,54 +11,9 @@ import type {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
-import { parseDate } from "../../common";
+import { calculateDurationByYear, parseDate } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
 
-export const calculateDurationByYear = (
-  absencePeriods: Absence[]
-): number[] => {
-  const absencePeriodsWithStartDate: {
-    startedAtDate: Date;
-    durationInMonth: number;
-  }[] = absencePeriods
-    .filter((absencePeriod) => !!absencePeriod.startedAt)
-    .filter((absencePeriod) => !!absencePeriod.durationInMonth)
-    .map((absencePeriod) => {
-      return {
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        durationInMonth: absencePeriod.durationInMonth!,
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        startedAtDate: parseDate(absencePeriod.startedAt!),
-      };
-    });
-
-  const durationByYear = absencePeriodsWithStartDate.reduce(
-    (total: Record<number, number>, abs) => {
-      const startYear = abs.startedAtDate.getFullYear();
-      let startMonth = abs.startedAtDate.getMonth();
-      let remainingDuration = abs.durationInMonth;
-
-      for (let year = startYear; remainingDuration > 0; year++) {
-        const remainingMonthsInYear = 12 - startMonth;
-        const durationInCurrentYear = Math.min(
-          remainingDuration,
-          remainingMonthsInYear
-        );
-
-        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-        total[year] = (total[year] ?? 0) + durationInCurrentYear;
-
-        remainingDuration -= durationInCurrentYear;
-        startMonth = 0;
-      }
-
-      return total;
-    },
-    {}
-  );
-
-  return Object.values(durationByYear);
-};
 const getTotalAbsenceNonPro = (absencePeriods: Absence[]): number => {
   const durationByYear = calculateDurationByYear(
     absencePeriods.filter((item) => item.motif.key === MotifKeys.maladieNonPro)
