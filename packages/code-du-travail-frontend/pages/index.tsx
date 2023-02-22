@@ -43,7 +43,7 @@ const Home = ({
     />
     <HomeSlice
       title="Votre convention collective"
-      subtitle="Retrouvez les questions-réponses fréquentes organisées par thème sur votre convention collective"
+      subtitle="Retrouvez les questions-réponses fréquentes organisées par thème pour votre convention collective"
       triggerName="Voir toutes les conventions collectives"
       triggerLink="/convention-collective"
       content={agreements}

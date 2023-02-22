@@ -44,7 +44,7 @@ export class HomeController {
     const highlights = await this.highlightsService.getBySlug("homepage");
     const tools = await this.toolsService.getAll(
       undefined,
-      "simulateur-embauche,indemnite-licenciement,preavis-demission,preavis-licenciement"
+      "simulateur-embauche,indemnite-licenciement,preavis-demission,convention-collective"
     );
     const modeles = await this.modelesService.getBySlugs([
       "lettre-de-demission",
@@ -59,7 +59,7 @@ export class HomeController {
       "est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe",
     ]);
     const agreements = await this.agreementsService.getBySlugs([
-      "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle",
+      "2609-batiment-etam",
       "650-metallurgie-ingenieurs-et-cadres",
       "3239-particuliers-employeurs-et-emploi-a-domicile",
       "573-commerces-de-gros",
