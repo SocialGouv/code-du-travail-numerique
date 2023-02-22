@@ -43,7 +43,7 @@ exports[`<Highlights /> should render 1`] = `
                     class="sc-brePNt dSrKNm"
                   >
                     <p
-                      class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
+                      class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                     >
                       Santé, sécurité et conditions de travail
                     </p>
@@ -86,7 +86,7 @@ exports[`<Highlights /> should render 1`] = `
                     class="sc-brePNt dSrKNm"
                   >
                     <p
-                      class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
+                      class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                     >
                       Santé, sécurité et conditions de travail
                     </p>

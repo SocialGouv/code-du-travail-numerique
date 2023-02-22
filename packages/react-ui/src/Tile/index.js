@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { Badge } from "../Badge";
 import { Stripe } from "../Stripe";
@@ -39,7 +39,15 @@ export const Tile = React.forwardRef(
           )}
           <HeadingWrapper custom centerTitle={centerTitle}>
             {subtitle && (
-              <StyledSubtitle noTitle={!title}>{subtitle}</StyledSubtitle>
+              <StyledSubtitle>
+                {href && !title ? (
+                  <a href={href} target={target} rel={rel}>
+                    {subtitle}
+                  </a>
+                ) : (
+                  subtitle
+                )}
+              </StyledSubtitle>
             )}
             {title && (
               <StyledHeading as={titleTagType}>
@@ -163,11 +171,9 @@ const HeadingWrapper = styled.div`
 `;
 
 const StyledSubtitle = styled(Subtitle)`
-  ${({ noTitle }) =>
-    noTitle &&
-    css`
-      margin-bottom: 0;
-    `}
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 const StyledHeading = styled(Heading)`
   margin: 0;

@@ -577,7 +577,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               </div>
             </div>
             <p
-              class="sc-bWOGAC sc-ewvfhA hCTtvv dCjsWo"
+              class="sc-bWOGAC sc-ewvfhA fhSYan dCjsWo"
             >
               tag2
             </p>

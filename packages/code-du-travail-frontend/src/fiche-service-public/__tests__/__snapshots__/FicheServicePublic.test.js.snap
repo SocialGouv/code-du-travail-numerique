@@ -468,7 +468,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
                             Modèle de document
                           </p>
@@ -1509,7 +1509,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           class="sc-brePNt dSrKNm"
         >
           <p
-            class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
+            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
           >
             Modèle de document
           </p>
