@@ -1,6 +1,6 @@
 import { addDays, differenceInMonths } from "date-fns";
 
-import { LEGAL_MOTIFS } from "../../base/seniority";
+import { LEGAL_MOTIFS } from "../../base";
 import type {
   Absence,
   ISeniority,

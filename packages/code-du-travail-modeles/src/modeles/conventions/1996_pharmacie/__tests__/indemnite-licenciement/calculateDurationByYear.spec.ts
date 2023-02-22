@@ -1,3 +1,4 @@
+import type { Absence } from "../../../../common";
 import { calculateDurationByYear } from "../../seniority";
 
 describe("Test de la méthode calculateDurationByYear", () => {
@@ -11,7 +12,7 @@ describe("Test de la méthode calculateDurationByYear", () => {
   `(
     "Calcul du total par année $absences a pour résultat $expectedResult",
     ({ absences, expectedResult }) => {
-      const result = calculateDurationByYear(absences);
+      const result = calculateDurationByYear(absences as Absence[]);
 
       expect(result).toEqual(expectedResult);
     }
