@@ -18,24 +18,10 @@ const ShowDetails = ({ children }: Props): JSX.Element => {
     ]);
 
   return (
-    <StyledCollapse
-      onClickHandler={trackClick}
-      title={"Voir le détail du calcul"}
-    >
+    <Collapse onClickHandler={trackClick} title={"Voir le détail du calcul"}>
       {children}
-    </StyledCollapse>
+    </Collapse>
   );
 };
 
 export default ShowDetails;
-
-const StyledCollapse = styled(Collapse)`
-  button {
-    height: 100%;
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-`;

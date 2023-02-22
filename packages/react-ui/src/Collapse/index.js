@@ -66,8 +66,9 @@ const StyledLink = styled(Button)`
     color: ${({ theme }) => theme.paragraph};
   }
 `;
-const StyledText = styled.div`
+const StyledText = styled.span`
   margin-left: ${spacings.small};
+  display: block;
 `;
 
 Collapse.propTypes = {
