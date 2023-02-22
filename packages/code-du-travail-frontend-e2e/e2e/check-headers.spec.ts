@@ -17,7 +17,7 @@ describe("Check security headers", () => {
   it("should contains security headers but x-frame-options", () => {
     cy.request({
       method: "GET",
-      url: "/outils/indemnite-licenciement",
+      url: "/widgets/preavis-retraite",
     }).then((response) => {
       expect(response.status).to.equal(200);
 

@@ -74,7 +74,7 @@ module.exports = {
         headers,
       },
       {
-        source: "/((?!outils|widget.html).*)", // all paths except those starting with "/outils" or /widget.html which are used in widgets
+        source: "/((?!widgets|widget.html$).*)", // all paths except those starting with "/outils" or /widget.html which are used in widgets
         headers: [
           {
             key: "X-Frame-Options",
