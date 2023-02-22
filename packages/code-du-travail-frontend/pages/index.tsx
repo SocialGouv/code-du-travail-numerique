@@ -24,7 +24,7 @@ const Home = ({
     />
     <SearchHero />
     {highlights.length > 0 && (
-      <Highlights highlights={highlights.slice(0, 4)} />
+      <Highlights id="highlights-element" highlights={highlights.slice(0, 4)} />
     )}
     <Tools tools={tools} />
     <HomeSlice

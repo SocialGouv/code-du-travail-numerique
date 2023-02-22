@@ -10,11 +10,12 @@ type Props = {
     description: string;
     date: string;
   }>;
+  id: string;
 };
 
-export const Highlights = ({ highlights = [] }: Props) => {
+export const Highlights = ({ highlights = [], id }: Props) => {
   return (
-    <Section>
+    <Section id={id}>
       <Container>
         <PageTitle as="h2" id="a-la-une">
           À la une

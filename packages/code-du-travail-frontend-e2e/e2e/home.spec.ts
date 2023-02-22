@@ -1,0 +1,33 @@
+describe("Page d'acceuil", () => {
+  it("Affiche les éléments requis", () => {
+    cy.visit("/");
+    cy.get("h1").should(
+      "have.text",
+      "Bienvenue sur le Code du travail numérique"
+    );
+    cy.contains("Recherchez par mots-clés");
+    cy.contains("Rechercher");
+
+    cy.get("h2").should("contain", "À la une");
+
+    cy.get("#highlights-element").find("a").should("have.length", 4);
+
+    cy.contains("Thèmes");
+    cy.contains("Embauche et contrat de travail");
+    cy.contains("Salaire et Rémunération");
+    cy.contains("Temps de travail");
+    cy.contains("Congés et repos");
+    cy.contains("Emploi et formation professionnelle");
+    cy.contains("Santé, sécurité et conditions de travail");
+    cy.contains("Représentation du personnel et négociation collective");
+    cy.contains("Départ de l’entreprise");
+    cy.contains("Conflits au travail et contrôle de la réglementation");
+    cy.contains("Voir tous les thèmes").should("have.attr", "href", "/themes");
+
+    cy.contains("Voir tous les outils").should("have.attr", "href", "/outils");
+  });
+
+  it("Retourne le status 200", () => {
+    cy.request("/").its("status").should("eq", 200);
+  });
+});
