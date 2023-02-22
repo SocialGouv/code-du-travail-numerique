@@ -130,5 +130,12 @@ const MOTIFS_1996: Motif[] = LEGAL_MOTIFS.map((item) => {
       value: 0,
     };
   }
+  if (item.key === MotifKeys.maladieNonPro) {
+    return {
+      ...item,
+      startAt: () => true,
+      value: 1,
+    };
+  }
   return item;
 });
