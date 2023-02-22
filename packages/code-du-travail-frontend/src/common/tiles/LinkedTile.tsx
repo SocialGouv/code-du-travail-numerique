@@ -15,13 +15,12 @@ export type Props = {
   centerTitle?: boolean;
   wide?: boolean;
   custom?: boolean;
+  onClick?: () => void;
 };
 
-type LinkedTileProps = Props & { onClick?: () => void };
-
-export const LinkedTile = React.forwardRef<HTMLAnchorElement, LinkedTileProps>(
+export const LinkedTile = React.forwardRef<HTMLAnchorElement, Props>(
   function _LinkedTile(
-    { children, onClick, href, ...props }: LinkedTileProps,
+    { children, onClick, href, ...props }: Props,
     ref: ForwardedRef<any>
   ): JSX.Element {
     const router = useRouter();

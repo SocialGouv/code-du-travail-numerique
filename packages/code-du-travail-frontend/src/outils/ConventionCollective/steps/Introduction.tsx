@@ -1,11 +1,11 @@
 import { SOURCES } from "@socialgouv/cdtn-sources";
-import { AlertWithIcon, Button, Paragraph, theme } from "@socialgouv/cdtn-ui";
+import { AlertWithIcon, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
 import { ScreenType } from "../common/NavContext";
 import { TrackingProps, UserAction } from "../types";
-import { LinkedTile } from "../../../common/tiles/LinkedTile";
+import { CallToActionTile } from "../../../common/tiles/CallToAction";
 
 type Props = TrackingProps;
 
@@ -27,6 +27,7 @@ const IntroductionStep = ({ onUserAction }: Props): JSX.Element => {
       </AlertWithIcon>
       <Flex>
         <Tile
+          action="Je la saisis"
           onClick={() => onUserAction(UserAction.SelectAgreementRoute)}
           href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreement}`}
         >
@@ -34,25 +35,16 @@ const IntroductionStep = ({ onUserAction }: Props): JSX.Element => {
             Je connais
             <br /> ma convention collective
           </Paragraph>
-          <ButtonWrapper>
-            <Button variant="link" as="div">
-              Je la saisis
-            </Button>
-          </ButtonWrapper>
         </Tile>
 
         <Tile
           onClick={() => onUserAction(UserAction.SelectEnterpriseRoute)}
           href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.enterprise}`}
+          action="Je la recherche"
         >
           <Paragraph noMargin fontWeight="700">
             Je ne connais <br /> pas ma convention collective
           </Paragraph>
-          <ButtonWrapper>
-            <Button variant="link" as="div">
-              Je la recherche
-            </Button>
-          </ButtonWrapper>
         </Tile>
       </Flex>
     </>
@@ -71,7 +63,7 @@ const Flex = styled.div`
   }
 `;
 
-const Tile = styled(LinkedTile)`
+const Tile = styled(CallToActionTile)`
   flex: 0 1 auto;
   width: 28rem;
   @media (max-width: ${theme.breakpoints.mobile}) {
@@ -79,8 +71,4 @@ const Tile = styled(LinkedTile)`
       margin-top: ${theme.spacings.medium};
     }
   }
-`;
-
-const ButtonWrapper = styled.div`
-  padding-top: ${theme.spacings.medium};
 `;
