@@ -2,8 +2,9 @@ import { SearchResponse, ElasticSearchItem, Agreement } from "cdtn-types";
 import { elasticsearchClient, elasticIndex, NotFoundError } from "../../utils";
 import {
   getAllAgreementsWithContributions,
-  getAgreementsBySlug,
+  getAgreementsBySlugs,
   getAgreementBySlugBody,
+  getAgreementsByIds,
 } from "./queries";
 
 export const getAllAgreements = async (): Promise<Agreement[]> => {
@@ -22,7 +23,20 @@ export const getAllAgreements = async (): Promise<Agreement[]> => {
 export const getBySlugsAgreements = async (
   slugs: string[]
 ): Promise<ElasticSearchItem[]> => {
-  const body = getAgreementsBySlug(slugs);
+  const body = getAgreementsBySlugs(slugs);
+  const response = await elasticsearchClient.search({
+    body,
+    index: elasticIndex,
+  });
+  return response.body.hits.total.value > 0
+    ? response.body.hits.hits.map(({ _source }) => _source)
+    : [];
+};
+
+export const getByIdsAgreements = async (
+  ids: string[]
+): Promise<ElasticSearchItem[]> => {
+  const body = getAgreementsByIds(ids);
   const response = await elasticsearchClient.search({
     body,
     index: elasticIndex,

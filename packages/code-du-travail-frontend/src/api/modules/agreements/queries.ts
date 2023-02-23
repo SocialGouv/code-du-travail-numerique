@@ -16,7 +16,7 @@ export const getAllAgreementsWithContributions = () => {
   };
 };
 
-export function getAgreementsBySlug(slugs: string[]) {
+export function getAgreementsBySlugs(slugs: string[]) {
   return {
     _source: [
       "title",
@@ -26,6 +26,7 @@ export function getAgreementsBySlug(slugs: string[]) {
       "slug",
       "breadcrumbs",
       "source",
+      "cdtnId",
     ],
     query: {
       bool: {
@@ -33,6 +34,31 @@ export function getAgreementsBySlug(slugs: string[]) {
           { term: { source: SOURCES.CCN } },
           { term: { isPublished: true } },
           { terms: { slug: slugs } },
+        ],
+      },
+    },
+    size: 100,
+  };
+}
+
+export function getAgreementsByIds(ids: string[]) {
+  return {
+    _source: [
+      "title",
+      "shortTitle",
+      "description",
+      "url",
+      "slug",
+      "breadcrumbs",
+      "source",
+      "cdtnId",
+    ],
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.CCN } },
+          { term: { isPublished: true } },
+          { terms: { cdtnId: ids } },
         ],
       },
     },

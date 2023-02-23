@@ -38,6 +38,7 @@ export function getContributionsBySlugs(slugs: string[]) {
       "slug",
       "breadcrumbs",
       "source",
+      "cdtnId",
     ],
     query: {
       bool: {
@@ -45,6 +46,31 @@ export function getContributionsBySlugs(slugs: string[]) {
           { term: { source: SOURCES.CONTRIBUTIONS } },
           { term: { isPublished: true } },
           { terms: { slug: slugs } },
+        ],
+      },
+    },
+    size: 100,
+  };
+}
+
+export function getContributionsByIds(ids: string[]) {
+  return {
+    _source: [
+      "title",
+      "shortTitle",
+      "description",
+      "url",
+      "slug",
+      "breadcrumbs",
+      "source",
+      "cdtnId",
+    ],
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.CONTRIBUTIONS } },
+          { term: { isPublished: true } },
+          { terms: { cdtnId: ids } },
         ],
       },
     },

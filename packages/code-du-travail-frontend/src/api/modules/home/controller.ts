@@ -1,12 +1,12 @@
 import { ElasticSearchItem } from "cdtn-types";
 import { NextApiRequest, NextApiResponse } from "next";
 import { NotFoundError } from "../../utils";
-import { getBySlugsAgreements } from "../agreements";
-import { getBySlugsContributions } from "../contributions";
+import { getByIdsAgreements } from "../agreements";
+import { getByIdsContributions } from "../contributions";
 import { getBySlugHighlights } from "../highlights";
-import { getBySlugsModeles } from "../modeles";
+import { getByIdsModeles } from "../modeles";
 import { getAllThemes } from "../themes";
-import { getAllTools } from "../tools";
+import { getToolsByIds } from "../tools";
 
 export type GetHomePage = {
   themes: any;
@@ -27,32 +27,32 @@ export class HomeController {
   }
 
   public async get() {
-    // modifier en passant en fonction
     try {
       const themes = await getAllThemes();
       const highlights = await getBySlugHighlights("homepage");
-      const tools = await getAllTools(
-        // modifier en passant un array
-        "df,dsds,dsds,dsds",
-        "simulateur-embauche,indemnite-licenciement,preavis-demission,convention-collective"
-      );
-      const modeles = await getBySlugsModeles([
-        "lettre-de-demission", // modfier en passant les id
-        "rupture-du-contrat-en-periode-dessai-par-le-salarie",
-        "rupture-de-periode-dessai-par-lemployeur",
-        "convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel",
+      const tools = await getToolsByIds([
+        "d7ad36850a", // simulateur-embauche
+        "d8a3605790", // indemnité-licenciement
+        "1eea193273", // preavis-demission
+        "db8ffe3574", // convention-collective
       ]);
-      const contributions = await getBySlugsContributions([
-        "quelle-est-la-duree-du-preavis-en-cas-de-demission",
-        "les-conges-pour-evenements-familiaux",
-        "en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
-        "est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe",
+      const modeles = await getByIdsModeles([
+        "72bd2d0080", // rupture-du-contrat-en-periode-dessai-par-le-salarie
+        "772cb955ce", // rupture-de-periode-dessai-par-lemployeur
+        "8122c6c3eb", // convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel
+        "9a6cf1b40c", // lettre-de-demission
       ]);
-      const agreements = await getBySlugsAgreements([
-        "2609-batiment-etam",
-        "650-metallurgie-ingenieurs-et-cadres",
-        "3239-particuliers-employeurs-et-emploi-a-domicile",
-        "573-commerces-de-gros",
+      const contributions = await getByIdsContributions([
+        "90c0113ee8", // en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire
+        "db4f1fe3fb", // quelle-est-la-duree-du-preavis-en-cas-de-demission
+        "eba7a4592f", // les-conges-pour-evenements-familiaux
+        "f6247840b2", // est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe
+      ]);
+      const agreements = await getByIdsAgreements([
+        "39ac98db5d", // 573-commerces-de-gros
+        "81c96604dc", // 2609-batiment-etam
+        "be72a669a7", // 650-metallurgie-ingenieurs-et-cadres
+        "d825ef1df2", // 3239-particuliers-employeurs-et-emploi-a-domicile
       ]);
       const response: GetHomePage = {
         themes,

@@ -7,13 +7,40 @@ import {
 } from "../../utils";
 import { getTools, getToolBySlug } from "./queries";
 
-export const getAllTools = async (
-  idsString?: string,
-  slugsString?: string
-): Promise<Tool[]> => {
-  const ids = idsString?.split(",");
-  const slugs = slugsString?.split(",");
-  const body = await getTools(ids, slugs);
+export const getAllTools = async (): Promise<Tool[]> => {
+  const body = await getTools();
+  const response = await elasticsearchClient.search({
+    body,
+    index: elasticIndex,
+  });
+  if (response.body.hits.total.value === 0) {
+    throw new NotFoundError({
+      message: `There is no tools that match query`,
+      name: "TOOLS_NOT_FOUND",
+      cause: null,
+    });
+  }
+  return response.body.hits.hits;
+};
+
+export const getToolsByIds = async (ids: string[]): Promise<Tool[]> => {
+  const body = await getTools(ids);
+  const response = await elasticsearchClient.search({
+    body,
+    index: elasticIndex,
+  });
+  if (response.body.hits.total.value === 0) {
+    throw new NotFoundError({
+      message: `There is no tools that match query`,
+      name: "TOOLS_NOT_FOUND",
+      cause: null,
+    });
+  }
+  return response.body.hits.hits;
+};
+
+export const getToolsBySlugs = async (slugs: string[]): Promise<Tool[]> => {
+  const body = await getTools(undefined, slugs);
   const response = await elasticsearchClient.search({
     body,
     index: elasticIndex,

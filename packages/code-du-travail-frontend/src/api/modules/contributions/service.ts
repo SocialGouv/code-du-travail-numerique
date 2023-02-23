@@ -4,6 +4,7 @@ import {
   getAllGenericsContributions,
   getContributionsBySlugs,
   getAllContributionBySlug,
+  getContributionsByIds,
 } from "./queries";
 
 export const getGenericContributions = async () => {
@@ -26,6 +27,19 @@ export const getBySlugsContributions = async (
   slugs: string[]
 ): Promise<ElasticSearchItem[]> => {
   const body = getContributionsBySlugs(slugs);
+  const response = await elasticsearchClient.search({
+    body,
+    index: elasticIndex,
+  });
+  return response.body.hits.total.value > 0
+    ? response.body.hits.hits.map(({ _source }) => _source)
+    : [];
+};
+
+export const getByIdsContributions = async (
+  ids: string[]
+): Promise<ElasticSearchItem[]> => {
+  const body = getContributionsByIds(ids);
   const response = await elasticsearchClient.search({
     body,
     index: elasticIndex,

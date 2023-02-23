@@ -32,6 +32,7 @@ export function getModelesBySlugs(slugs: string[]) {
       "slug",
       "breadcrumbs",
       "source",
+      "cdtnId",
     ],
     query: {
       bool: {
@@ -39,6 +40,31 @@ export function getModelesBySlugs(slugs: string[]) {
           { term: { source: SOURCES.LETTERS } },
           { term: { isPublished: true } },
           { terms: { slug: slugs } },
+        ],
+      },
+    },
+    size: 100,
+  };
+}
+
+export function getModelesByIds(ids: string[]) {
+  return {
+    _source: [
+      "title",
+      "shortTitle",
+      "description",
+      "url",
+      "slug",
+      "breadcrumbs",
+      "source",
+      "cdtnId",
+    ],
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.LETTERS } },
+          { term: { isPublished: true } },
+          { terms: { cdtnId: ids } },
         ],
       },
     },
