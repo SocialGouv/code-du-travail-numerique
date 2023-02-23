@@ -1,15 +1,13 @@
 name: Review
 
 on:
-  pull_request:
+  push:
     branches:
-      - "**"
-    tags-ignore:
-      - v*
+      - dev
 
 concurrency:
   cancel-in-progress: true
-  group: review-${{ github.ref }}
+  group: dev-${{ github.ref }}
 
 jobs:
   manifests:
@@ -33,29 +31,9 @@ jobs:
   register-frontend:
     name: Register frontend
     runs-on: ubuntu-latest
-    needs: [ manifests ]
     steps:
-      - name: Download k8s manifests
-        uses: actions/download-artifact@v3
-        with:
-          name: manifests-dev.yml
-
-      - name: Get deployment url for site
-        uses: mikefarah/yq@v4.30.5
-        id: yq_url
-        with:
-          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1
-
-      - name: Get api url for site
-        uses: mikefarah/yq@v4.30.5
-        id: yq_api_url
-        with:
-          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | head -n 1
-
       - name: Set env
         run: |
-          echo "API_URL=https://${{ steps.yq_api_url.outputs.result }}" >> $GITHUB_ENV
-          echo "SITE_URL=https://${{ steps.yq_url.outputs.result }}" >> $GITHUB_ENV
           echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
       - name: Register docker images
         uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
@@ -72,9 +50,9 @@ jobs:
               NEXT_PUBLIC_AZURE_CONTAINER=cdtn
               NEXT_PUBLIC_PIWIK_SITE_ID=3
               NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
-              NEXT_PUBLIC_API_URL=${{ env.API_URL }}/api/v1
+              NEXT_PUBLIC_API_URL=https://api-code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr/api/v1
               NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
-              NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
+              NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr/
   register-api:
     name: Register api
     runs-on: ubuntu-latest
@@ -121,21 +99,9 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --prefer-offline --frozen-lockfile
-      - name: Download k8s manifests
-        uses: actions/download-artifact@v3
-        with:
-          name: manifests-dev.yml
-      - name: Get deployment url for site
-        uses: mikefarah/yq@v4.30.5
-        id: yq_url
-        with:
-          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1
-      - name: Set env
-        run: |
-          echo "SITE_URL=https://${{ steps.yq_url.outputs.result }}" >> $GITHUB_ENV
       - name: Run test e2e
         run: |
-          CODECEPT_BASEURL=${{ env.SITE_URL }} yarn test:e2e
+          CODECEPT_BASEURL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr/ yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v3
