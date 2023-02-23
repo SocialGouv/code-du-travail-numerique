@@ -11,6 +11,7 @@ import type {
   CC2609ReferenceSalaryProps,
   CC3239ReferenceSalaryProps,
 } from "../../conventions";
+import type { CC675ReferenceSalaryProps } from "../../conventions/675_habillement_commerce_succursales";
 import type { SupportedCcIndemniteLicenciement } from "..";
 
 export type SalaryPeriods = {
@@ -44,4 +45,6 @@ export type ReferenceSalaryProps<T> =
     ? CC2098ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC2609
     ? CC2609ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC0675
+    ? CC675ReferenceSalaryProps
     : LegalReferenceSalaryProps;

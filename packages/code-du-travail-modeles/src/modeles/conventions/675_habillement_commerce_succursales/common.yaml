@@ -6,4 +6,4 @@ contrat salarié . convention collective . habillement commerce succursales:
   cdtn:
     idcc: 675
     préavis-retraite: true
-    indemnité-licenciement: false
+    indemnité-licenciement: true
