@@ -35,7 +35,7 @@ exports[`<Modal /> does not render at first and then render 2`] = `
           >
             Some content
             <button
-              class="sc-bcXHqe dafRoG sc-eDvSVe gSHKrE"
+              class="sc-bcXHqe cLiQC sc-eDvSVe gSHKrE"
               title="fermer la modale"
             >
               <div
@@ -107,7 +107,7 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
           >
             This won't be displayed
             <button
-              class="sc-bcXHqe dafRoG sc-eDvSVe gSHKrE"
+              class="sc-bcXHqe cLiQC sc-eDvSVe gSHKrE"
               title="fermer la modale"
             >
               <div

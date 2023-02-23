@@ -42,7 +42,7 @@ exports[`<SearchBar /> should render 1`] = `
     </div>
     <button
       aria-label="Lancer ma recherche"
-      class="sc-hhOBVt hjpTeI sc-ZqGJI dqEqjF"
+      class="sc-hhOBVt cizsts sc-ZqGJI dqEqjF"
       title="Lancer ma recherche"
       type="submit"
     >
@@ -179,7 +179,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
     </div>
     <button
       aria-label="Lancer ma recherche"
-      class="sc-hhOBVt hjpTeI sc-ZqGJI dqEqjF"
+      class="sc-hhOBVt cizsts sc-ZqGJI dqEqjF"
       title="Lancer ma recherche"
       type="submit"
     >

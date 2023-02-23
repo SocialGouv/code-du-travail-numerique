@@ -5,7 +5,7 @@ exports[`<Collapse /> renders 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-dmctIk jXSmEU sc-fLcnxK eTOEpx"
+      class="sc-dmctIk dglopR sc-fLcnxK cnolvE"
       type="button"
     >
       <svg

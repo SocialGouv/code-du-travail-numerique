@@ -3,21 +3,21 @@
 exports[`<Button /> it renders a Button flat 1`] = `
 <div>
   <button
-    class="sc-bcXHqe eTIMgs"
+    class="sc-bcXHqe kABrKC"
   >
     this is a Button 
     flat
      
   </button>
   <button
-    class="sc-bcXHqe bwOpOl"
+    class="sc-bcXHqe eIGSgv"
   >
     this is a small Button 
     flat
      
   </button>
   <button
-    class="sc-bcXHqe cETvbW"
+    class="sc-bcXHqe hbiXmL"
   >
     this is a narrow Button 
     flat
@@ -29,7 +29,7 @@ exports[`<Button /> it renders a Button flat 1`] = `
 exports[`<Button /> it renders a Button link 1`] = `
 <div>
   <button
-    class="sc-bcXHqe iKAPEb"
+    class="sc-bcXHqe hwiGht"
   >
     this is a Button 
     link
@@ -47,7 +47,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     </svg>
   </button>
   <button
-    class="sc-bcXHqe iKAPEb"
+    class="sc-bcXHqe hwiGht"
   >
     this is a small Button 
     link
@@ -65,7 +65,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     </svg>
   </button>
   <button
-    class="sc-bcXHqe iKAPEb"
+    class="sc-bcXHqe hwiGht"
   >
     this is a narrow Button 
     link
@@ -88,21 +88,21 @@ exports[`<Button /> it renders a Button link 1`] = `
 exports[`<Button /> it renders a Button naked 1`] = `
 <div>
   <button
-    class="sc-bcXHqe izIFDT"
+    class="sc-bcXHqe cfGWSN"
   >
     this is a Button 
     naked
      
   </button>
   <button
-    class="sc-bcXHqe iRbrte"
+    class="sc-bcXHqe kdSVfY"
   >
     this is a small Button 
     naked
      
   </button>
   <button
-    class="sc-bcXHqe dZazgx"
+    class="sc-bcXHqe kxYXcw"
   >
     this is a narrow Button 
     naked
@@ -114,21 +114,21 @@ exports[`<Button /> it renders a Button naked 1`] = `
 exports[`<Button /> it renders a Button navLink 1`] = `
 <div>
   <button
-    class="sc-bcXHqe gsHEKo"
+    class="sc-bcXHqe bdrMdS"
   >
     this is a Button 
     navLink
      
   </button>
   <button
-    class="sc-bcXHqe gsHEKo"
+    class="sc-bcXHqe bdrMdS"
   >
     this is a small Button 
     navLink
      
   </button>
   <button
-    class="sc-bcXHqe gsHEKo"
+    class="sc-bcXHqe bdrMdS"
   >
     this is a narrow Button 
     navLink
@@ -140,21 +140,21 @@ exports[`<Button /> it renders a Button navLink 1`] = `
 exports[`<Button /> it renders a Button primary 1`] = `
 <div>
   <button
-    class="sc-bcXHqe gjIRnj"
+    class="sc-bcXHqe giqjOB"
   >
     this is a Button 
     primary
      
   </button>
   <button
-    class="sc-bcXHqe fA-dSAK"
+    class="sc-bcXHqe guOFGk"
   >
     this is a small Button 
     primary
      
   </button>
   <button
-    class="sc-bcXHqe jXIPAR"
+    class="sc-bcXHqe bUsDoQ"
   >
     this is a narrow Button 
     primary
@@ -166,21 +166,21 @@ exports[`<Button /> it renders a Button primary 1`] = `
 exports[`<Button /> it renders a Button secondary 1`] = `
 <div>
   <button
-    class="sc-bcXHqe kJApzz"
+    class="sc-bcXHqe iRwlKl"
   >
     this is a Button 
     secondary
      
   </button>
   <button
-    class="sc-bcXHqe dIxqDi"
+    class="sc-bcXHqe evPepU"
   >
     this is a small Button 
     secondary
      
   </button>
   <button
-    class="sc-bcXHqe bsrXFN"
+    class="sc-bcXHqe liZAkQ"
   >
     this is a narrow Button 
     secondary
@@ -192,7 +192,7 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 exports[`<Button /> renders 1`] = `
 <div>
   <button
-    class="sc-bcXHqe kJApzz"
+    class="sc-bcXHqe iRwlKl"
   >
     A button
   </button>
@@ -202,7 +202,7 @@ exports[`<Button /> renders 1`] = `
 exports[`<Button /> renders as a link 1`] = `
 <div>
   <a
-    class="sc-bcXHqe kJApzz"
+    class="sc-bcXHqe iRwlKl"
     href="http://www.turfu.com"
   >
     A button
@@ -213,7 +213,7 @@ exports[`<Button /> renders as a link 1`] = `
 exports[`<Button /> renders as div 1`] = `
 <div>
   <div
-    class="sc-bcXHqe kJApzz"
+    class="sc-bcXHqe iRwlKl"
   >
     A button
   </div>

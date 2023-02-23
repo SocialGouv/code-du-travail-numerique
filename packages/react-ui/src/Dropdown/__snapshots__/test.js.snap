@@ -6,7 +6,7 @@ exports[`<Dropdown /> renders the button 1`] = `
     class="sc-gswNZR bAnNyH"
   >
     <button
-      class="sc-bcXHqe kJApzz"
+      class="sc-bcXHqe iRwlKl"
     >
       Click me
     </button>
