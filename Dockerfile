@@ -28,7 +28,6 @@ ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 
 # Copy all package.json
 COPY ./package.json ./package.json
-COPY ./packages/sources/package.json ./packages/sources/package.json
 COPY ./packages/slugify/package.json ./packages/slugify/package.json
 COPY ./packages/react-ui/package.json ./packages/react-ui/package.json
 COPY ./packages/cdtn-types/package.json ./packages/cdtn-types/package.json
