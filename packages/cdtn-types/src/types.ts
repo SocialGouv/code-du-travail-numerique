@@ -27,15 +27,6 @@ export type Reference = {
   links: ReferenceLink[];
 };
 
-export type ContentItem = {
-  cdtnId: string;
-  source: string;
-  title: string;
-  slug: string;
-  description: string;
-  icon?: string;
-};
-
 export declare type ContentBlockMarkdown = {
   type: ContentType.markdown;
   markdown: string;

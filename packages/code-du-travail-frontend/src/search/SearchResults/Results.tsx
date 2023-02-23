@@ -9,18 +9,17 @@ import {
   Heading,
   Paragraph,
   theme,
-  Tile,
   Title,
   ViewMore,
 } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
-import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
 import { CallToActionTile } from "../../common/tiles/CallToAction";
 import { reportSelectionToMatomo, summarize } from "../utils";
+import { LinkedTile } from "../../common/tiles/LinkedTile";
 
 type CommonProps = {
   children: JSX.Element;
@@ -34,6 +33,7 @@ type CommonProps = {
   icon?: string;
   centerTitle?: boolean;
   titleTagType?: string;
+  href: string;
 };
 
 type HighlightProps = {
@@ -48,7 +48,7 @@ type ListLinkItemProps = {
   source?: any;
   slug?: string;
   title?: string;
-  url?: string;
+  url: string;
   highlight?: HighlightProps;
   icon?: string;
 };
@@ -117,13 +117,13 @@ export const ListLink = ({
     icon,
     centerTitle,
     titleTagType,
+    href: url,
   };
 
   if (source === SOURCES.EXTERNALS) {
     return (
       <CallToActionTile
-        action={disableAction ? undefined : action ?? "Consulter"}
-        href={url}
+        action={action || "Consulter"}
         target="_blank"
         rel="noreferer noopener"
         className="no-after"
@@ -131,7 +131,7 @@ export const ListLink = ({
           description
         )} ${action} (nouvelle fenêtre)`}
         {...tileCommonProps}
-        noCustom={true}
+        custom={false}
         titleTagType="h3"
       />
     );
@@ -139,11 +139,7 @@ export const ListLink = ({
 
   // external links
   if (!slug) {
-    return (
-      <Link href={url ?? ""} passHref legacyBehavior>
-        <Tile {...tileCommonProps} />
-      </Link>
-    );
+    return <LinkedTile {...tileCommonProps} />;
   }
 
   let rootSlug = slug;
@@ -152,7 +148,7 @@ export const ListLink = ({
     [rootSlug, anchor] = slug.split("#");
   }
 
-  let ResultTile = Tile;
+  let ResultTile = LinkedTile;
   if (source === SOURCES.TOOLS || source === SOURCES.LETTERS) {
     ResultTile = CallToActionTile;
     tileCommonProps.action = disableAction ? undefined : action ?? "Consulter";
@@ -162,17 +158,10 @@ export const ListLink = ({
     tileCommonProps.custom = true;
   }
 
-  return (
-    <Link
-      href={`/${getRouteBySource(source)}/${rootSlug}${
-        query ? `?q=${query}` : ""
-      }${anchor ? `#${anchor}` : ""}`}
-      passHref
-      legacyBehavior
-    >
-      <ResultTile {...tileCommonProps} />
-    </Link>
-  );
+  tileCommonProps.href = `/${getRouteBySource(source)}/${rootSlug}${
+    query ? `?q=${query}` : ""
+  }${anchor ? `#${anchor}` : ""}`;
+  return <ResultTile {...tileCommonProps} />;
 };
 ListLink.propTypes = {
   item: PropTypes.shape({
@@ -252,4 +241,5 @@ const StyledParagraph = styled(Paragraph)`
 
 const StyledParagraphContainer = styled.div`
   flex: 1;
+  margin-bottom: ${spacings.small};
 `;

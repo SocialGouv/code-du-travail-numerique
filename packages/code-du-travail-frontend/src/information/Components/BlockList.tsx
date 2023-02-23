@@ -1,8 +1,6 @@
-import { BlockDisplayMode, Content, ContentType } from "cdtn-types";
-import { theme } from "@socialgouv/cdtn-ui";
+import { Content, ContentType } from "cdtn-types";
 import React from "react";
 import styled from "styled-components";
-import useWindowDimensions from "../../common/WindowDimension";
 import { BlockMarkdown } from "./BlockMarkdown";
 import { BlockGraphic } from "./BlockGraphic";
 import { ContentList } from "../../content";
@@ -10,12 +8,6 @@ import { ContentList } from "../../content";
 export const BlockList = ({
   blocks,
 }: Omit<Content, "title" | "references">) => {
-  let forceBlockDisplayMode;
-  const { width } = useWindowDimensions();
-  if (width < theme.breakpoints.intDesktop) {
-    forceBlockDisplayMode = BlockDisplayMode.line;
-  }
-
   return (
     <>
       {blocks.map((block, index: number) => {

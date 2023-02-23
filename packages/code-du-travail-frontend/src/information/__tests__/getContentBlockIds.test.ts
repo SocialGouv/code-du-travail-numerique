@@ -3,8 +3,8 @@ import {
   BlockDisplayMode,
   Content,
   ContentBlockContent,
-  ContentType,
   ContentBlockContentItem,
+  ContentType,
 } from "cdtn-types";
 
 describe("function getContentBlockIds", () => {

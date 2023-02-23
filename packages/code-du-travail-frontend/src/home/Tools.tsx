@@ -8,7 +8,6 @@ import {
   Paragraph,
   Section,
 } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
 import { CallToActionTile } from "../common/tiles/CallToAction";
 import { HomeButtonTrigger } from "./HomeButtonTrigger";
 
@@ -37,26 +36,22 @@ export const Tools = (props: Props) => {
         <Grid>
           {props.tools.map(
             ({ action, description, href, icon, slug, title }) => {
-              const linkProps = {
-                href,
-                passHref: true,
-              };
               if (!href) {
-                linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
+                href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
               }
               return (
-                <Link {...linkProps} key={slug || href} legacyBehavior>
-                  <CallToActionTile
-                    action={action}
-                    custom
-                    icon={icons[icon]}
-                    title={title}
-                    titleTagType="h3"
-                    centerTitle
-                  >
-                    <Paragraph noMargin>{description}</Paragraph>
-                  </CallToActionTile>
-                </Link>
+                <CallToActionTile
+                  action={action}
+                  custom
+                  icon={icons[icon]}
+                  title={title}
+                  titleTagType="h3"
+                  centerTitle
+                  href={href}
+                  key={slug || href}
+                >
+                  <Paragraph noMargin>{description}</Paragraph>
+                </CallToActionTile>
               );
             }
           )}

@@ -8,11 +8,11 @@ import {
   RootGrid,
   Section,
   theme,
-  Tile,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
+import { LinkedTile } from "../common/tiles/LinkedTile";
 
 type Props = {
   themes: Array<{
@@ -26,14 +26,13 @@ export const Themes = ({ themes = [] }: Props) => {
   const enrichedThemes = themes.map(({ icon, slug, title }) => {
     return (
       <GridCell key={slug}>
-        <Link
+        <LinkedTile
+          title={title}
+          icon={icons[icon]}
+          titleTagType="h3"
           key={slug}
           href={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
-          passHref
-          legacyBehavior
-        >
-          <Tile title={title} icon={icons[icon]} titleTagType="h3" />
-        </Link>
+        />
       </GridCell>
     );
   });
