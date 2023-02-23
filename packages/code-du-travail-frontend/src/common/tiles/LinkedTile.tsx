@@ -3,7 +3,7 @@ import React, { ForwardedRef } from "react";
 import { useRouter } from "next/router";
 
 export type Props = {
-  children: React.ReactNode | null;
+  children?: React.ReactNode;
   title?: string;
   subtitle?: string;
   icon?: string;

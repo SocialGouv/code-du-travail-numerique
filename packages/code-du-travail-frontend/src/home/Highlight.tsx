@@ -1,15 +1,13 @@
 import { Container, Grid, PageTitle, Section } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { ListLink } from "../../src/search/SearchResults/Results";
+import {
+  ListLink,
+  ListLinkItemProps,
+} from "../../src/search/SearchResults/Results";
 
 type Props = {
-  highlights: Array<{
-    slug: string;
-    title: string;
-    description: string;
-    date: string;
-  }>;
+  highlights: Array<ListLinkItemProps>;
   id: string;
 };
 

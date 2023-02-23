@@ -6,6 +6,7 @@ import SearchHero from "../src/search/SearchHero";
 import { SITE_URL } from "../src/config";
 import { Highlights, HomeSlice, Themes, Tools } from "../src/home";
 import { GetHomePage } from "../src/api";
+import { ListLinkItemProps } from "../src/search/SearchResults/Results";
 
 const Home = ({
   themes,
@@ -31,21 +32,21 @@ const Home = ({
       subtitle="Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
       triggerName="Voir tous les modèles de documents"
       triggerLink="/modeles-de-courriers"
-      content={modeles}
+      content={modeles as ListLinkItemProps[]}
     />
     <HomeSlice
       title="Vos fiches pratiques"
       subtitle="Obtenez une réponse personnalisée selon votre convention collective"
       triggerName="Voir toutes les fiches pratiques"
       triggerLink="/contribution"
-      content={contributions}
+      content={contributions as ListLinkItemProps[]}
     />
     <HomeSlice
       title="Votre convention collective"
       subtitle="Retrouvez les questions-réponses fréquentes organisées par thème pour votre convention collective"
       triggerName="Voir toutes les conventions collectives"
       triggerLink="/convention-collective"
-      content={agreements}
+      content={agreements as ListLinkItemProps[]}
     />
     <Themes themes={themes} />
   </Layout>

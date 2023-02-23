@@ -40,7 +40,7 @@ type HighlightProps = {
   searchInfo: string;
 };
 
-type ListLinkItemProps = {
+export type ListLinkItemProps = {
   action?: string;
   algo?: string;
   breadcrumbs?: any[];
@@ -60,7 +60,6 @@ type ListLinkProps = {
   centerTitle?: boolean;
   disableAnalytics?: boolean;
   titleTagType?: string;
-  disableAction?: boolean;
 };
 
 export const ListLink = ({
@@ -80,7 +79,6 @@ export const ListLink = ({
   query,
   centerTitle,
   disableAnalytics = false,
-  disableAction = false,
   titleTagType,
 }: ListLinkProps) => {
   let subtitle = "";
@@ -151,7 +149,7 @@ export const ListLink = ({
   let ResultTile = LinkedTile;
   if (source === SOURCES.TOOLS || source === SOURCES.LETTERS) {
     ResultTile = CallToActionTile;
-    tileCommonProps.action = disableAction ? undefined : action ?? "Consulter";
+    tileCommonProps.action = action ?? "Consulter";
     tileCommonProps.custom = true;
   }
   if (source === SOURCES.CONTRIBUTIONS) {
