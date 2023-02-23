@@ -1,4 +1,4 @@
-name: Review
+name: Dev
 
 on:
   push:
@@ -59,7 +59,7 @@ jobs:
               NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
               NEXT_PUBLIC_API_URL=https://api-code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr/api/v1
               NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
-              NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr/
+              NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr
   register-api:
     name: Register api
     runs-on: ubuntu-latest
