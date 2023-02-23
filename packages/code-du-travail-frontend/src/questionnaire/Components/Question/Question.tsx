@@ -7,7 +7,11 @@ import { ShowInfo } from "./ShowInfo";
 import { trackClickHelp } from "../../tracking";
 import { Text } from "@socialgouv/cdtn-ui";
 
-export const Question = () => {
+type QuestionProps = {
+  widgetMode: boolean;
+};
+
+export const Question = ({ widgetMode }: QuestionProps) => {
   const currentQuestion = useStore((state) => state.currentQuestion);
   const lastResponse = useStore((state) => state.lastResponse);
   const [openedTooltip, setOpenedTooltip] = useState(false);
@@ -15,7 +19,7 @@ export const Question = () => {
     setOpenedTooltip(false);
   }, [currentQuestion]);
   return lastResponse?.slug ? (
-    <ShowInfo slug={lastResponse.slug}></ShowInfo>
+    <ShowInfo slug={lastResponse.slug} widgetMode={widgetMode}></ShowInfo>
   ) : (
     <div>
       <QuestionHeaderWrapper>
