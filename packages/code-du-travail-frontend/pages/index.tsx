@@ -6,7 +6,6 @@ import SearchHero from "../src/search/SearchHero";
 import { SITE_URL } from "../src/config";
 import { Highlights, HomeSlice, Themes, Tools } from "../src/home";
 import { GetHomePage } from "../src/api";
-import { ElasticSearchItem } from "../src/api/utils";
 
 const Home = ({
   themes,
@@ -53,12 +52,12 @@ const Home = ({
 );
 
 export async function getStaticProps() {
-  let themes = [];
-  let highlights = [];
-  let tools = [];
-  let contributions: ElasticSearchItem[] = [];
-  let modeles: ElasticSearchItem[] = [];
-  let agreements: ElasticSearchItem[] = [];
+  let themes: GetHomePage["themes"] = [];
+  let highlights: GetHomePage["highlights"] = [];
+  let tools: GetHomePage["tools"] = [];
+  let contributions: GetHomePage["contributions"] = [];
+  let modeles: GetHomePage["modeles"] = [];
+  let agreements: GetHomePage["agreements"] = [];
 
   try {
     const response = await fetch(`${SITE_URL}/api/home`);
