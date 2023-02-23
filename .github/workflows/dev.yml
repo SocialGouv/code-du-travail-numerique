@@ -108,7 +108,7 @@ jobs:
           yarn install --prefer-offline --frozen-lockfile
       - name: Run test e2e
         run: |
-          CODECEPT_BASEURL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr/ yarn test:e2e
+          CODECEPT_BASEURL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v3
