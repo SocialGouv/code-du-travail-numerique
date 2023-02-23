@@ -35,9 +35,18 @@ describe("Découpage par année d'ancienneté", () => {
     entryDate          | exitDate          | expectedSplit
     ${date2021}        | ${date2020}       | ${[]}
     ${date2020}        | ${exitIn2020}     | ${[{ begin: date2020, end: exitIn2020 }]}
-    ${date2020}        | ${exitIn2021}     | ${[{ begin: date2020, end: date2021LessOneDay }, { begin: date2021, end: exitIn2021 }]}
-    ${date2020}        | ${exitIn2022}     | ${[{ begin: date2020, end: date2021LessOneDay }, { begin: date2021, end: date2022LessOneDay }, { begin: date2022, end: exitIn2022 }]}
-    ${date2020}        | ${exitIn2022}     | ${[{ begin: date2020, end: date2021LessOneDay }, { begin: date2021, end: date2022LessOneDay }, { begin: date2022, end: exitIn2022 }]}
+    ${date2020} | ${exitIn2021} | ${[{ begin: date2020, end: date2021LessOneDay }, {
+    begin: date2021,
+    end: exitIn2021,
+  }]}
+    ${date2020} | ${exitIn2022} | ${[{ begin: date2020, end: date2021LessOneDay }, {
+    begin: date2021,
+    end: date2022LessOneDay,
+  }, { begin: date2022, end: exitIn2022 }]}
+    ${date2020} | ${exitIn2022} | ${[{ begin: date2020, end: date2021LessOneDay }, {
+    begin: date2021,
+    end: date2022LessOneDay,
+  }, { begin: date2022, end: exitIn2022 }]}
     ${case1.entryData} | ${case1.exitDate} | ${case1.expectedSplit}
   `(
     "Avec $entryDate et $exitDate on attend le découpage par année suivant $expectedSplit",
@@ -55,7 +64,7 @@ const begin2021 = new Date(2021, 0, 1);
 const end2021 = new Date(2021, 11, 31);
 const begin2022 = new Date(2022, 0, 1);
 const end2022 = new Date(2022, 11, 31);
-describe("Découpage par année d'ancienneté cenlendait (janv -> déc)", () => {
+describe("Découpage par année d'ancienneté calendaire (janv -> déc)", () => {
   test.each`
     entryDate   | exitDate      | expectedSplit
     ${date2021} | ${date2020}   | ${[]}

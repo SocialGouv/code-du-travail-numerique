@@ -1,6 +1,6 @@
 import { parse } from "date-fns";
 
-import type { Absence, SalaryPeriods } from "..";
+import type { SalaryPeriods } from "..";
 
 /**
  *

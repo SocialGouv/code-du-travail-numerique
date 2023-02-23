@@ -9,7 +9,6 @@ import {
 } from "date-fns";
 
 import type { Absence } from "../types/seniority";
-import { parseDate } from "./date";
 
 export type YearDetail = {
   begin: Date;
@@ -41,7 +40,8 @@ export const splitBySeniorityYear = (begin: Date, end: Date): YearDetail[] => {
     end: end,
   });
 };
-
+const JANUARY = 0;
+const DECEMBER = 11;
 export const splitBySeniorityCalendarYear = (
   begin: Date,
   end: Date
@@ -51,18 +51,18 @@ export const splitBySeniorityCalendarYear = (
   }
   let periods: YearDetail[] = [];
   let currentYear = begin.getFullYear();
-  let nextYear = new Date(currentYear + 1, 0, 1);
+  let nextYear = new Date(currentYear + 1, JANUARY, 1);
   while (!isAfter(nextYear, end)) {
     periods = periods.concat({
-      begin: new Date(currentYear, 0, 1),
-      end: new Date(currentYear, 11, 31),
+      begin: new Date(currentYear, JANUARY, 1),
+      end: new Date(currentYear, DECEMBER, 31),
     });
     currentYear++;
-    nextYear = new Date(currentYear + 1, 0, 1);
+    nextYear = new Date(currentYear + 1, JANUARY, 1);
   }
   return periods.concat({
-    begin: new Date(currentYear, 0, 1),
-    end: new Date(currentYear, 11, 31),
+    begin: new Date(currentYear, JANUARY, 1),
+    end: new Date(currentYear, DECEMBER, 31),
   });
 };
 
