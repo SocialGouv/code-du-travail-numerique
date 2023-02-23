@@ -5,7 +5,13 @@ import { useRouter } from "next/router";
 import { useStore } from "../../store";
 const { DirectionRight } = icons;
 
-export const ShowInfo = ({ slug }: { slug: string }) => {
+export const ShowInfo = ({
+  slug,
+  widgetMode,
+}: {
+  slug: string;
+  widgetMode: boolean;
+}) => {
   const router = useRouter();
   const setQuestionnaireSlug = useStore((state) => state.setQuestionnaireSlug);
   return (
@@ -15,7 +21,12 @@ export const ShowInfo = ({ slug }: { slug: string }) => {
         onClick={() => {
           setQuestionnaireSlug(slug);
           trackClickViewPageInfo();
-          router.push(`/information/${slug}`);
+          const destination = `/information/${slug}`;
+          if (widgetMode) {
+            window.open(`${window.location.origin}${destination}`);
+            return;
+          }
+          router.push(destination);
         }}
       >
         Afficher les informations personnalisées
