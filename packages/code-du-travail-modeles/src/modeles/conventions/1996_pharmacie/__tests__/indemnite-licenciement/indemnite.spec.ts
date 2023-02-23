@@ -10,7 +10,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1996", () => {
     test.each`
       seniority | salary  | expectedCompensation
       ${0.5}    | ${2450} | ${0}
-      ${0.67}   | ${2450} | ${408.33}
+      ${8 / 12} | ${2450} | ${408.33}
       ${9}      | ${2450} | ${5512.5}
       ${17}     | ${2450} | ${11853.1}
     `(
