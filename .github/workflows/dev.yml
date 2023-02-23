@@ -9,7 +9,7 @@ on:
 
 concurrency:
   cancel-in-progress: true
-  group: review-${{ github.ref }}
+  group: dev-${{ github.ref }}
 
 jobs:
   manifests:
