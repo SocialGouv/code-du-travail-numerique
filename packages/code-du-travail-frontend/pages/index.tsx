@@ -61,6 +61,7 @@ export async function getStaticProps() {
 
   try {
     const response = await fetch(`${SITE_URL}/api/home`);
+    if (!response.ok) throw new Error(response.statusText);
     const data: GetHomePage = await response.json();
     themes = data.themes.children;
     highlights = data.highlights;

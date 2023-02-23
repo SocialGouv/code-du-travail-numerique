@@ -65,9 +65,11 @@ export class HomeController {
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {
-        this.res.status(404).json({ message: "Not found" });
+        this.res.status(404).json({ message: "Home element not found" });
       } else {
-        this.res.status(500).json({ message: "Internal server error" });
+        this.res
+          .status(500)
+          .json({ message: "Error during getting home element" });
       }
     }
   }
