@@ -42,6 +42,30 @@ export const splitBySeniorityYear = (begin: Date, end: Date): YearDetail[] => {
   });
 };
 
+export const splitBySeniorityCalendarYear = (
+  begin: Date,
+  end: Date
+): YearDetail[] => {
+  if (isAfter(begin, end)) {
+    return [];
+  }
+  let periods: YearDetail[] = [];
+  let currentYear = begin.getFullYear();
+  let nextYear = new Date(currentYear + 1, 0, 1);
+  while (!isAfter(nextYear, end)) {
+    periods = periods.concat({
+      begin: new Date(currentYear, 0, 1),
+      end: new Date(currentYear, 11, 31),
+    });
+    currentYear++;
+    nextYear = new Date(currentYear + 1, 0, 1);
+  }
+  return periods.concat({
+    begin: new Date(currentYear, 0, 1),
+    end: new Date(currentYear, 11, 31),
+  });
+};
+
 export const accumulateAbsenceByYear = (
   absences: Absence[],
   years: YearDetail[]
@@ -134,50 +158,4 @@ const absenceDurationRatio = (absence: Absence, year: YearDetail): number => {
       { end: year.end, start: year.begin }
     ) / DAYS_IN_ONE_MONTH
   );
-};
-
-export const calculateDurationByCalendarYear = (
-  absencePeriods: Absence[]
-): number[] => {
-  const absencePeriodsWithStartDate: {
-    startedAtDate: Date;
-    durationInMonth: number;
-  }[] = absencePeriods
-    .filter((absencePeriod) => !!absencePeriod.startedAt)
-    .filter((absencePeriod) => !!absencePeriod.durationInMonth)
-    .map((absencePeriod) => {
-      return {
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        durationInMonth: absencePeriod.durationInMonth!,
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        startedAtDate: parseDate(absencePeriod.startedAt!),
-      };
-    });
-
-  const durationByYear = absencePeriodsWithStartDate.reduce(
-    (total: Record<number, number>, abs) => {
-      const startYear = abs.startedAtDate.getFullYear();
-      let startMonth = abs.startedAtDate.getMonth();
-      let remainingDuration = abs.durationInMonth;
-
-      for (let year = startYear; remainingDuration > 0; year++) {
-        const remainingMonthsInYear = 12 - startMonth;
-        const durationInCurrentYear = Math.min(
-          remainingDuration,
-          remainingMonthsInYear
-        );
-
-        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-        total[year] = (total[year] ?? 0) + durationInCurrentYear;
-
-        remainingDuration -= durationInCurrentYear;
-        startMonth = 0;
-      }
-
-      return total;
-    },
-    {}
-  );
-
-  return Object.values(durationByYear);
 };

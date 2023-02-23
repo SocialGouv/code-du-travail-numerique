@@ -11,16 +11,27 @@ import type {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
-import { calculateDurationByYear, parseDate } from "../../common";
+import {
+  accumulateAbsenceByYear,
+  parseDate,
+  splitBySeniorityCalendarYear,
+} from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
 
-const getTotalAbsenceNonPro = (absencePeriods: Absence[]): number => {
-  const durationByYear = calculateDurationByYear(
-    absencePeriods.filter((item) => item.motif.key === MotifKeys.maladieNonPro)
+const getTotalAbsenceNonPro = (
+  dEntree: Date,
+  dSortie: Date,
+  absencePeriods: Absence[]
+): number => {
+  const absences = absencePeriods.filter(
+    (item) => item.motif.key === MotifKeys.maladieNonPro
   );
+  const years = splitBySeniorityCalendarYear(dEntree, dSortie);
 
-  return durationByYear.reduce((total, duration) => {
-    return total + Math.max(duration - 6, 0);
+  const absencesBySeniorityYear = accumulateAbsenceByYear(absences, years);
+
+  return absencesBySeniorityYear.reduce((total, item) => {
+    return total + Math.max(item.totalAbsenceInMonth - 6, 0);
   }, 0);
 };
 
@@ -55,7 +66,11 @@ export class Seniority1996
     const dEntree = parseDate(from);
     const dSortie = addDays(parseDate(to), 1);
 
-    const totalAbsenceNonPro = getTotalAbsenceNonPro(absences);
+    const totalAbsenceNonPro = getTotalAbsenceNonPro(
+      dEntree,
+      dSortie,
+      absences
+    );
 
     const totalAbsence = absences.reduce((total, item) => {
       const m = this.getMotifs().find((motif) => motif.key === item.motif.key);

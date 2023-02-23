@@ -1,6 +1,6 @@
 import { parse } from "date-fns";
 
-import { splitBySeniorityYear } from "../";
+import { splitBySeniorityCalendarYear, splitBySeniorityYear } from "../";
 
 const date2020 = parse("05/04/2020", "dd/MM/yyyy", new Date());
 const date2021LessOneDay = parse("04/04/2021", "dd/MM/yyyy", new Date());
@@ -43,6 +43,36 @@ describe("Découpage par année d'ancienneté", () => {
     "Avec $entryDate et $exitDate on attend le découpage par année suivant $expectedSplit",
     ({ entryDate, exitDate, expectedSplit }) => {
       const result = splitBySeniorityYear(entryDate, exitDate);
+
+      expect(result).toStrictEqual(expectedSplit);
+    }
+  );
+});
+
+const begin2020 = new Date(2020, 0, 1);
+const end2020 = new Date(2020, 11, 31);
+const begin2021 = new Date(2021, 0, 1);
+const end2021 = new Date(2021, 11, 31);
+const begin2022 = new Date(2022, 0, 1);
+const end2022 = new Date(2022, 11, 31);
+describe("Découpage par année d'ancienneté cenlendait (janv -> déc)", () => {
+  test.each`
+    entryDate   | exitDate      | expectedSplit
+    ${date2021} | ${date2020}   | ${[]}
+    ${date2020} | ${exitIn2020} | ${[{ begin: begin2020, end: end2020 }]}
+    ${date2020} | ${exitIn2021} | ${[{ begin: begin2020, end: end2020 }, { begin: begin2021, end: end2021 }]}
+    ${date2020} | ${exitIn2022} | ${[{ begin: begin2020, end: end2020 }, {
+    begin: begin2021,
+    end: end2021,
+  }, { begin: begin2022, end: end2022 }]}
+    ${date2020} | ${exitIn2022} | ${[{ begin: begin2020, end: end2020 }, {
+    begin: begin2021,
+    end: end2021,
+  }, { begin: begin2022, end: end2022 }]}
+  `(
+    "Avec $entryDate et $exitDate on attend le découpage par année suivant $expectedSplit",
+    ({ entryDate, exitDate, expectedSplit }) => {
+      const result = splitBySeniorityCalendarYear(entryDate, exitDate);
 
       expect(result).toStrictEqual(expectedSplit);
     }
