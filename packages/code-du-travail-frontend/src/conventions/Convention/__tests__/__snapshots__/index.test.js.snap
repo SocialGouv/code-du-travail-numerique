@@ -3883,22 +3883,25 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 1-4
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 1-4
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -3907,27 +3910,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Salaires minimaux
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 4-1
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 4-1
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -3936,27 +3942,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Salaire mensuel
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 4-2
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 4-2
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -3965,27 +3974,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Déduction des heures non travaillées
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 12-8
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 12-8
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -3994,7 +4006,7 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Barèmes de salaires minimaux
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4074,22 +4086,25 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 3-13
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 3-13
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4098,27 +4113,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Contingent d'heures supplémentaires non soumis à autorisation
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 3-14
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 3-14
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4127,27 +4145,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Heures supplémentaires exceptionnelles
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 3-15
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 3-15
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4156,27 +4177,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Plafonds
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 3-16
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 3-16
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4185,27 +4209,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Définition de la durée du travail
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 3-17
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 3-17
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4214,27 +4241,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Majoration pour heures supplémentaires.
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 3-18
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 3-18
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4243,27 +4273,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Equivalences et dérogations permanentes
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 3-21
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 3-21
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4272,27 +4305,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Semaine de travail en 5 jours
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 3-22
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 3-22
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4301,27 +4337,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Exceptions à la semaine de travail en 5 jours
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 3-24
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 3-24
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4330,27 +4369,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Horaires individualisés
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 3-25
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 3-25
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4359,27 +4401,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Horaires à temps partiel
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 3-28
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 3-28
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4388,27 +4433,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Récupération des heures perdues pour intempéries
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 3-29
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 3-29
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4417,7 +4465,7 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Cas des chefs d'équipe
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4497,22 +4545,25 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 12-1
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 12-1
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4521,27 +4572,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Préambule
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 12-2
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 12-2
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4550,27 +4604,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Définitions générales des critères et des niveaux
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 12-3
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 12-3
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4579,27 +4636,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Coefficients hiérarchiques
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 12-4
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 12-4
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4608,27 +4668,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Prise en compte des diplômes professionnels bâtiment
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 12-5
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 12-5
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4637,27 +4700,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Polyvalence
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 12-6
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 12-6
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4666,27 +4732,30 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Evolution de carrière
                       </div>
-                    </a>
+                    </div>
                   </div>
                   <div
                     class="sc-laZRCg FkEKn"
                   >
-                    <a
+                    <div
                       class="sc-eGugkK cJzHzy no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv iufNAU"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
-                            Article 12-7
+                            <a
+                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
+                              rel="nofollow noopener"
+                              target="_blank"
+                            >
+                              Article 12-7
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -4695,7 +4764,7 @@ exports[`<Convention /> renders 1`] = `
                       >
                         Suivi de l'application dans l'entreprise
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
