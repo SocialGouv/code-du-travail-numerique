@@ -1,9 +1,9 @@
 name: Review
 
 on:
-  pull_request:
+  push:
     branches:
-      - "**"
+      - dev
     tags-ignore:
       - v*
 
@@ -28,8 +28,6 @@ jobs:
         id: k8s
         shell: bash
         run: |
-          RAW_BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
-          BRANCH=$(npx @socialgouv/env-slug "${RAW_BRANCH}")
           echo "branch=$(echo ${BRANCH})" >> $GITHUB_OUTPUT
       - name: Use k8s manifests generation
         uses: SocialGouv/actions/k8s-manifests@v1
@@ -51,22 +49,10 @@ jobs:
         with:
           name: manifests-dev.yml
 
-      - name: Get deployment url for site
-        uses: mikefarah/yq@v4.30.5
-        id: yq_url
-        with:
-          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1
-
-      - name: Get api url for site
-        uses: mikefarah/yq@v4.30.5
-        id: yq_api_url
-        with:
-          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | head -n 1
-
       - name: Set env
         run: |
-          echo "API_URL=https://${{ steps.yq_api_url.outputs.result }}" >> $GITHUB_ENV
-          echo "SITE_URL=https://${{ steps.yq_url.outputs.result }}" >> $GITHUB_ENV
+          echo "API_URL=https://api-code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr/" >> $GITHUB_ENV
+          echo "SITE_URL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr/" >> $GITHUB_ENV
           echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
       - name: Register docker images
         uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
