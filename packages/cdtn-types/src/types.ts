@@ -83,6 +83,7 @@ export declare type Content = {
 export type Breadcrumb = {
   label: string;
   slug: string;
+  position?: number;
 };
 
 export type EditorialContent = {
@@ -133,4 +134,37 @@ export type Tool = {
   title_vector: number[];
   _id: string;
   displayTool?: boolean;
+};
+
+export type SearchResponse<T> = {
+  hits: {
+    total: {
+      value: number;
+    };
+    hits: {
+      _source: T;
+    }[];
+  };
+};
+
+export type Agreement = {
+  id: string;
+  num: number;
+  shortTitle: string;
+  slug?: string;
+  title: string;
+  url?: string;
+  highlight?: {
+    title: string;
+    content: string;
+    searchInfo?: string;
+  };
+};
+
+export type ElasticSearchItem = {
+  description: string;
+  source: string;
+  title: string;
+  slug: string;
+  breadcrumbs: Breadcrumb[];
 };
