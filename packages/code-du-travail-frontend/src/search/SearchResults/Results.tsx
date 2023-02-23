@@ -31,6 +31,7 @@ type CommonProps = {
   action?: string;
   custom?: boolean;
   icon?: string;
+  centerTitle?: boolean;
   titleTagType?: string;
   href: string;
 };
@@ -56,6 +57,7 @@ type ListLinkProps = {
   item: ListLinkItemProps;
   showTheme?: boolean;
   query?: string;
+  centerTitle?: boolean;
   disableAnalytics?: boolean;
   titleTagType?: string;
 };
@@ -75,6 +77,7 @@ export const ListLink = ({
   },
   showTheme = true,
   query,
+  centerTitle,
   disableAnalytics = false,
   titleTagType,
 }: ListLinkProps) => {
@@ -110,6 +113,7 @@ export const ListLink = ({
     title,
     wide: true,
     icon,
+    centerTitle,
     titleTagType,
     href: url,
   };
@@ -235,4 +239,5 @@ const StyledParagraph = styled(Paragraph)`
 
 const StyledParagraphContainer = styled.div`
   flex: 1;
+  margin-bottom: ${spacings.small};
 `;

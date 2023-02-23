@@ -1,13 +1,21 @@
+import { BlockDisplayMode } from "cdtn-types";
 import { icons, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 import { ListLink } from "../../search/SearchResults/Results";
+import useWindowDimensions from "../../common/WindowDimension";
 
 export const ContentList = ({ block, key }) => {
-  const { contents } = block;
+  let forceBlockDisplayMode;
+  const { width } = useWindowDimensions();
+  if (width < theme.breakpoints.intDesktop) {
+    forceBlockDisplayMode = BlockDisplayMode.line;
+  }
+  const { blockDisplayMode, contents } = block;
+  const displayMode = forceBlockDisplayMode || blockDisplayMode;
   return (
     <>
-      <ContentItemList>
+      <ContentItemList square={displayMode === BlockDisplayMode.square}>
         {contents?.map((item, ContentIndex) => (
           <ListLink
             item={{
@@ -16,38 +24,33 @@ export const ContentList = ({ block, key }) => {
             }}
             key={`${key}-${ContentIndex}`}
             disableAnalytics
+            centerTitle={displayMode === BlockDisplayMode.square}
           ></ListLink>
         ))}
       </ContentItemList>
     </>
   );
 };
-const { breakpoints } = theme;
 
 const ContentItemList = styled.div`
-  @media (max-width: ${breakpoints.mobile}) {
-    & > div {
-      margin-bottom: 12px;
-    }
-  }
-  @media (min-width: ${breakpoints.mobile}) {
-    margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: ${({ square }) =>
+    square ? "repeat(2, 1fr)" : "repeat(1, 1fr)"};
+  margin: ${theme.spacings.medium};
+  column-gap: ${theme.spacings.large};
+  row-gap: ${theme.spacings.large};
 
-    display: flex;
-    flex-wrap: wrap;
-
-    & > div {
-      min-height: 341px;
-      margin: 12px;
-      flex-basis: 40%;
-      max-width: 45%;
-    }
+  & > div {
+    ${({ square }) => square && "min-height: 341px;"};
+    padding: ${theme.spacings.large} ${theme.spacings.medium};
+    height: 100%;
   }
 
   p,
   a,
   button {
     width: 100%;
-    text-align: center;
+    text-align: ${({ square }) => (square ? "center" : "left")};
+    justify-content: ${({ square }) => (square ? "center" : "left")};
   }
 `;

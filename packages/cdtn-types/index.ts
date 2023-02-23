@@ -3,6 +3,11 @@ export enum SectionDisplayMode {
   tab = "tab",
 }
 
+export enum BlockDisplayMode {
+  line = "line",
+  square = "square",
+}
+
 export enum ContentType {
   markdown = "markdown",
   graphic = "graphic",
@@ -20,15 +25,6 @@ export type ReferenceLink = {
 export type Reference = {
   label: string;
   links: ReferenceLink[];
-};
-
-export type ContentItem = {
-  cdtnId: string;
-  source: string;
-  title: string;
-  slug: string;
-  description: string;
-  icon?: string;
 };
 
 export declare type ContentBlockMarkdown = {
@@ -50,6 +46,7 @@ export declare type ContentBlockGaphic = {
 export declare type ContentBlockContent = {
   type: ContentType.content;
   title: string;
+  blockDisplayMode: BlockDisplayMode;
   contents: ContentBlockContentItem[];
 };
 
