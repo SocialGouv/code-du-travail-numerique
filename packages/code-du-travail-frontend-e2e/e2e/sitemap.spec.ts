@@ -1,4 +1,3 @@
-/* eslint-disable jest/valid-expect */
 describe("Sitemap", () => {
   it("should be visible", () => {
     cy.request({

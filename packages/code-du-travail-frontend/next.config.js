@@ -45,33 +45,44 @@ const nextConfig = {
 
 module.exports = {
   async headers() {
-    let headers;
+    let headers = [
+      {
+        key: "X-Content-Type-Options",
+        value: "nosniff",
+      },
+    ];
     if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
-      headers = [
-        {
-          key: "X-Robots-Tag",
-          value: "all",
-        },
-        {
-          key: "Content-Security-Policy",
-          value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
-        },
-      ];
+      headers.push({
+        key: "X-Robots-Tag",
+        value: "all",
+      });
+      headers.push({
+        key: "Content-Security-Policy",
+        value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
+      });
     } else {
-      headers = [
-        {
-          key: "X-Robots-Tag",
-          value: "noindex, nofollow, nosnippet",
-        },
-      ];
+      headers.push({
+        key: "X-Robots-Tag",
+        value: "noindex, nofollow, nosnippet",
+      });
     }
     return [
       {
         source: "/:path*",
         headers,
       },
+      {
+        source: "/((?!widgets|widget.html$).*)", // all paths except those starting with "/widgets" or /widget.html used in widgets
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+        ],
+      },
     ];
   },
+
   async redirects() {
     return MappingReplacement;
   },
