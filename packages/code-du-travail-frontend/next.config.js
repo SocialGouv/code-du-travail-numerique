@@ -52,16 +52,14 @@ module.exports = {
       },
     ];
     if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
-      headers = headers.concat([
-        {
-          key: "X-Robots-Tag",
-          value: "all",
-        },
-        {
-          key: "Content-Security-Policy",
-          value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
-        },
-      ]);
+      headers.push({
+        key: "X-Robots-Tag",
+        value: "all",
+      });
+      headers.push({
+        key: "Content-Security-Policy",
+        value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
+      });
     } else {
       headers.push({
         key: "X-Robots-Tag",
@@ -74,7 +72,7 @@ module.exports = {
         headers,
       },
       {
-        source: "/((?!widgets|widget.html$).*)", // all paths except those starting with "/widgets" or /widget.html which are used in widgets
+        source: "/((?!widgets|widget.html$).*)", // all paths except those starting with "/widgets" or /widget.html used in widgets
         headers: [
           {
             key: "X-Frame-Options",
