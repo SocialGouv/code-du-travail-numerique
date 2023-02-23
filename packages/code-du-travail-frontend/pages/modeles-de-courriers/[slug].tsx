@@ -16,7 +16,7 @@ import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib";
-import { Breadcrumb } from "cdtn-types";
+import { Breadcrumb } from "@socialgouv/cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
 import { API_URL } from "../../src/config";
 

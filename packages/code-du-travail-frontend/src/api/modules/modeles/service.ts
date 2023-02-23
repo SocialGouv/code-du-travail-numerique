@@ -1,4 +1,4 @@
-import { ElasticSearchItem } from "cdtn-types";
+import { ElasticSearchItem } from "@socialgouv/cdtn-types";
 import { elasticsearchClient, elasticIndex, NotFoundError } from "../../utils";
 import {
   getModeles,

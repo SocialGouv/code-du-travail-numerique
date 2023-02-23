@@ -1,4 +1,4 @@
-import { SOURCES } from "cdtn-types";
+import { SOURCES } from "@socialgouv/cdtn-types";
 
 export function getHighlightsBySlug(slug: string) {
   return {

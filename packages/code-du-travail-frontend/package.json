@@ -87,7 +87,7 @@
     "@types/memoizee": "^0.4.6",
     "babel-jest": "^27.4.6",
     "babel-plugin-styled-components": "^2.0.2",
-    "cdtn-types": "^4.91.1",
+    "@socialgouv/cdtn-types": "^4.91.1",
     "eslint": "8.7.0",
     "eslint-config-next": "^13.1.2",
     "eslint-plugin-storybook": "^0.5.7",

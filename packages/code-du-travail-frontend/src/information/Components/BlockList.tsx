@@ -1,4 +1,4 @@
-import { Content, ContentType } from "cdtn-types";
+import { Content, ContentType } from "@socialgouv/cdtn-types";
 import React from "react";
 import styled from "styled-components";
 import { BlockMarkdown } from "./BlockMarkdown";

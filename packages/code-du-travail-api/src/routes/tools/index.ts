@@ -1,4 +1,4 @@
-import type { Tool } from "cdtn-types";
+import type { Tool } from "@socialgouv/cdtn-types";
 
 import { API_BASE_URL } from "../v1.prefix";
 import { getTool, getTools } from "./service";

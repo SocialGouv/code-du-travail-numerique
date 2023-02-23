@@ -1,6 +1,6 @@
 import { theme, Tabs, Accordion, Heading, Section } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
-import { Content, SectionDisplayMode } from "cdtn-types";
+import { Content, SectionDisplayMode } from "@socialgouv/cdtn-types";
 
 import { BlockList } from "./BlockList";
 

@@ -1,4 +1,8 @@
-import { Content, ContentType, EditorialContentData } from "cdtn-types";
+import {
+  Content,
+  ContentType,
+  EditorialContentData,
+} from "@socialgouv/cdtn-types";
 import { getContents } from "../content";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import { API_URL } from "../config";

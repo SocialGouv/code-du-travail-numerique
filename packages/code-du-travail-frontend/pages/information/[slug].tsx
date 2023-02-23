@@ -6,7 +6,7 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
-import { EditorialContentDataWrapper } from "cdtn-types";
+import { EditorialContentDataWrapper } from "@socialgouv/cdtn-types";
 import { getInformationBySlug } from "../../src/information";
 import { Contents } from "../../src/information/Components";
 import { QuestionnaireWrapper } from "../../src/questionnaire";

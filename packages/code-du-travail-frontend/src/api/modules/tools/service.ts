@@ -1,4 +1,4 @@
-import { Tool } from "cdtn-types";
+import { Tool } from "@socialgouv/cdtn-types";
 import {
   elasticsearchClient,
   elasticIndex,
