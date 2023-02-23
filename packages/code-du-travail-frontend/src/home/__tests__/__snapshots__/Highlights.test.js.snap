@@ -33,28 +33,25 @@ exports[`<Highlights /> should render 1`] = `
             <div
               class="sc-laZRCg iWIsUK"
             >
-              <div
+              <a
                 class="sc-eGugkK cJzHzy"
+                href="/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie"
               >
                 <div
                   class="sc-dEVLtI ijCjkg"
                 >
                   <div
-                    class="sc-brePNt dSrKNm"
+                    class="sc-brePNt jDJZCD"
                   >
                     <p
-                      class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
+                      class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
                     >
                       Santé, sécurité et conditions de travail
                     </p>
                     <h3
                       class="sc-evzXkX dtQFbH"
                     >
-                      <a
-                        href="/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie"
-                      >
-                        Coronavirus : je suis salarié
-                      </a>
+                      Coronavirus : je suis salarié
                     </h3>
                   </div>
                 </div>
@@ -62,7 +59,7 @@ exports[`<Highlights /> should render 1`] = `
                   class="sc-fHSyak ehflbW"
                 >
                   <div
-                    class="sc-iJbNxu hWSYxX"
+                    class="sc-iJbNxu hQEIiI"
                   >
                     <p
                       class="sc-cOxWqc bBCaVZ"
@@ -71,33 +68,30 @@ exports[`<Highlights /> should render 1`] = `
                     </p>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div
               class="sc-laZRCg iWIsUK"
             >
-              <div
+              <a
                 class="sc-eGugkK cJzHzy"
+                href="/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur"
               >
                 <div
                   class="sc-dEVLtI ijCjkg"
                 >
                   <div
-                    class="sc-brePNt dSrKNm"
+                    class="sc-brePNt jDJZCD"
                   >
                     <p
-                      class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
+                      class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
                     >
                       Santé, sécurité et conditions de travail
                     </p>
                     <h3
                       class="sc-evzXkX dtQFbH"
                     >
-                      <a
-                        href="/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur"
-                      >
-                        Coronavirus : je suis employeur
-                      </a>
+                      Coronavirus : je suis employeur
                     </h3>
                   </div>
                 </div>
@@ -105,7 +99,7 @@ exports[`<Highlights /> should render 1`] = `
                   class="sc-fHSyak ehflbW"
                 >
                   <div
-                    class="sc-iJbNxu hWSYxX"
+                    class="sc-iJbNxu hQEIiI"
                   >
                     <p
                       class="sc-cOxWqc bBCaVZ"
@@ -114,7 +108,7 @@ exports[`<Highlights /> should render 1`] = `
                     </p>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

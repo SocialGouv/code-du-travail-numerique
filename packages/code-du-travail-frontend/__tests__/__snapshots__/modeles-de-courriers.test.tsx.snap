@@ -266,8 +266,9 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             <li
               class="sc-hJVpLM hVeatV"
             >
-              <div
+              <a
                 class="sc-eGugkK cJzHzy"
+                href="modeles-de-courriers/rupture-de-periode-dessai-a-linitiative-de-lemployeur"
               >
                 <div
                   class="sc-ilhmMj gZOXXO"
@@ -300,16 +301,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   class="sc-dEVLtI ijCjkg"
                 >
                   <div
-                    class="sc-brePNt dSrKNm"
+                    class="sc-brePNt jDJZCD"
                   >
                     <h3
                       class="sc-evzXkX dtQFbH"
                     >
-                      <a
-                        href="modeles-de-courriers/rupture-de-periode-dessai-a-linitiative-de-lemployeur"
-                      >
-                        Rupture de période d’essai à l'initiative de l'employeur
-                      </a>
+                      Rupture de période d’essai à l'initiative de l'employeur
                     </h3>
                   </div>
                 </div>
@@ -318,7 +315,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 >
                   Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai…
                 </div>
-              </div>
+              </a>
             </li>
             <h2
               class="sc-cuOiQm inlBYd sc-iBYQkv iDmZxg"
@@ -329,8 +326,9 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             <li
               class="sc-hJVpLM hVeatV"
             >
-              <div
+              <a
                 class="sc-eGugkK cJzHzy"
+                href="modeles-de-courriers/demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle"
               >
                 <div
                   class="sc-ilhmMj gZOXXO"
@@ -363,16 +361,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   class="sc-dEVLtI ijCjkg"
                 >
                   <div
-                    class="sc-brePNt dSrKNm"
+                    class="sc-brePNt jDJZCD"
                   >
                     <h3
                       class="sc-evzXkX dtQFbH"
                     >
-                      <a
-                        href="modeles-de-courriers/demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle"
-                      >
-                        Demande de rendez-vous en vue d’une rupture conventionnelle
-                      </a>
+                      Demande de rendez-vous en vue d’une rupture conventionnelle
                     </h3>
                   </div>
                 </div>
@@ -381,7 +375,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 >
                   La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation…
                 </div>
-              </div>
+              </a>
             </li>
           </ul>
         </div>

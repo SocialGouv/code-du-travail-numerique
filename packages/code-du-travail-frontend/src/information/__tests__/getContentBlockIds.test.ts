@@ -1,5 +1,6 @@
 import { getContentBlockIds } from "../information.service";
 import {
+  BlockDisplayMode,
   Content,
   ContentBlockContent,
   ContentBlockContentItem,
@@ -15,6 +16,7 @@ describe("function getContentBlockIds", () => {
   };
   const mockedBlock: ContentBlockContent = {
     type: ContentType.content,
+    blockDisplayMode: BlockDisplayMode.line,
     contents: [],
     title: "title",
   };

@@ -92,8 +92,9 @@ exports[`<Themes /> should render 1`] = `
               <div
                 class="sc-laZRCg cupBig"
               >
-                <div
+                <a
                   class="sc-eGugkK gnEaJx"
+                  href="/themes/1-embauche-et-contrat-de-travail"
                 >
                   <div
                     class="sc-dEVLtI ijCjkg"
@@ -128,26 +129,23 @@ exports[`<Themes /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="sc-brePNt dSrKNm"
+                      class="sc-brePNt jDJZCD"
                     >
                       <h3
                         class="sc-evzXkX dtQFbH"
                       >
-                        <a
-                          href="/themes/1-embauche-et-contrat-de-travail"
-                        >
-                          Embauche et contrat de travail
-                        </a>
+                        Embauche et contrat de travail
                       </h3>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div
                 class="sc-laZRCg cupBig"
               >
-                <div
+                <a
                   class="sc-eGugkK gnEaJx"
+                  href="/themes/2-salaire-et-remuneration"
                 >
                   <div
                     class="sc-dEVLtI ijCjkg"
@@ -180,20 +178,16 @@ exports[`<Themes /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="sc-brePNt dSrKNm"
+                      class="sc-brePNt jDJZCD"
                     >
                       <h3
                         class="sc-evzXkX dtQFbH"
                       >
-                        <a
-                          href="/themes/2-salaire-et-remuneration"
-                        >
-                          Salaire et Rémunération
-                        </a>
+                        Salaire et Rémunération
                       </h3>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div
                 class="sc-laZRCg cupBig sc-kSGOQU diGwA"
@@ -764,8 +758,9 @@ exports[`<Themes /> should render 1`] = `
               <div
                 class="sc-laZRCg cupBig"
               >
-                <div
+                <a
                   class="sc-eGugkK gnEaJx"
+                  href="/themes/3-temps-de-travail"
                 >
                   <div
                     class="sc-dEVLtI ijCjkg"
@@ -800,20 +795,16 @@ exports[`<Themes /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="sc-brePNt dSrKNm"
+                      class="sc-brePNt jDJZCD"
                     >
                       <h3
                         class="sc-evzXkX dtQFbH"
                       >
-                        <a
-                          href="/themes/3-temps-de-travail"
-                        >
-                          Temps de travail
-                        </a>
+                        Temps de travail
                       </h3>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>

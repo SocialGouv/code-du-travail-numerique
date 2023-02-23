@@ -2,8 +2,9 @@
 
 exports[`<CallToActionTile /> should render 1`] = `
 <div>
-  <div
+  <a
     class="sc-eGugkK gnEaJx sc-dvEHMn jfDXTj"
+    href="/test"
   >
     <div
       class="sc-dEVLtI ijCjkg"
@@ -36,16 +37,12 @@ exports[`<CallToActionTile /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="sc-brePNt dSrKNm"
+        class="sc-brePNt jDJZCD"
       >
         <p
           class="sc-evzXkX dtQFbH"
         >
-          <a
-            href="/test"
-          >
-            Saluez moi
-          </a>
+          Saluez moi
         </p>
       </div>
     </div>
@@ -80,6 +77,6 @@ exports[`<CallToActionTile /> should render 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </a>
 </div>
 `;
