@@ -12,7 +12,6 @@
     "lint-css": "stylelint './{src,pages}/**/*.{js,ts,tsx,jsx,css}' --quiet",
     "lint": "yarn lint-css && next lint",
     "precommit": "lint-staged",
-    "prepush": "yarn test --bail --changedSince=dev",
     "start": "NODE_ENV=production next start",
     "prebuild": "node -r @swc-node/register scripts/prebuild.ts",
     "build": "next build",

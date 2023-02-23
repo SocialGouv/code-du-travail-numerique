@@ -15,10 +15,7 @@ import {
 } from "../../../../ConventionCollective/types";
 
 type Props = {
-  renderResults: (
-    renderProps: FetchReducerState<Agreement[]>,
-    query: string
-  ) => JSX.Element;
+  renderResults: (renderProps: FetchReducerState<Agreement[]>) => JSX.Element;
 } & TrackingProps;
 
 export const SearchAgreementInput = ({
@@ -40,9 +37,16 @@ export const SearchAgreementInput = ({
     const value = keyEvent.target.value;
     setQuery(value);
   };
+  const getFirstResultId = () => {
+    return state?.data?.length && state.data[0].id;
+  };
   return (
     <>
-      <InlineLabel htmlFor="agreement-search">
+      <InlineLabel
+        htmlFor="agreement-search"
+        id="agreement-search-label"
+        for="agreement-search"
+      >
         Nom de la convention collective ou son numéro d’identification{" "}
         <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
         <Text fontWeight="400" fontSize="small">
@@ -72,9 +76,15 @@ export const SearchAgreementInput = ({
         onChange={searchInputHandler}
         autoComplete="off"
         data-testid="agreement-search-input"
+        role="combobox"
+        aria-autocomplete="list"
+        aria-haspopup="listbox"
+        aria-expanded={!!query}
+        aria-controls="search-results"
+        aria-activedescendant={getFirstResultId()}
       />
 
-      {renderResults(state, query)}
+      {renderResults(state)}
     </>
   );
 };

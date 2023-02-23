@@ -2656,11 +2656,6 @@
   resolved "https://registry.yarnpkg.com/@matejmazur/react-katex/-/react-katex-3.1.3.tgz#f07404c848b93bfef9ed9653a4bb080dc8bf2bf0"
   integrity sha512-rBp7mJ9An7ktNoU653BWOYdO4FoR4YNwofHZi+vaytX/nWbIlmHVIF+X8VFOn6c3WYmrLT5FFBjKqCZ1sjR5uQ==
 
-"@maxgfr/react-accessible-accordion@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@maxgfr/react-accessible-accordion/-/react-accessible-accordion-4.0.1.tgz#a8ea3727bfbd404456e135435b6818b5b637167c"
-  integrity sha512-GxarHhmQp/qeA4BWhlz+LI+ERn+5wfEAmF1BqeASSA4taaIPJnmysiKCDk0PNvtK5eK9ohFAZjbylhPU3BIWKg==
-
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.22.tgz#8a723157bf90e78f17dc0f27995398e6c731f1ba"
@@ -3480,6 +3475,11 @@
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/@socialgouv/matomo-next/-/matomo-next-1.6.1.tgz#0080945dc0062fee7fe53e4c058dd40768a3c278"
   integrity sha512-O2lxMKZHVzvXGZNsKOnsSS+hzqxIX35CPRuVkuU8Z+EFORuO2R/iiBBfyY1d+XvexIsJOA2uHnxhJxsdeFIrRw==
+
+"@socialgouv/react-accessible-accordion@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@socialgouv/react-accessible-accordion/-/react-accessible-accordion-4.1.1.tgz#8626ba9b11b17f69a707bde9fa6cedcb157963db"
+  integrity sha512-Fv9pjgKYmWhcpCNUIo1GfBBAGufM50jV6YQsf31WfO0xKF619aZV4A4myjBq+Rl57fXT4iYe/t4POK3ccjRAfQ==
 
 "@socialgouv/reference-article@^1.0.1":
   version "1.0.1"
