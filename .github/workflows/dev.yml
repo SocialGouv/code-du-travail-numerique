@@ -18,6 +18,13 @@ jobs:
         shell: bash
         run: |
           yarn add @socialgouv/kosko-charts
+      - name: Get k8s infos
+        id: k8s
+        shell: bash
+        run: |
+          RAW_BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
+          BRANCH=$(npx @socialgouv/env-slug "${RAW_BRANCH}")
+          echo "branch=$(echo ${BRANCH})" >> $GITHUB_OUTPUT
       - name: Use k8s manifests generation
         uses: SocialGouv/actions/k8s-manifests@v1
         with:
