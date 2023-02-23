@@ -37,14 +37,13 @@ describe("<Tile />", () => {
     );
     expect(container).toMatchSnapshot();
   });
-  it("renders a wide tile as a button with a subtitle", () => {
+  it("renders a wide tile with a subtitle", () => {
     const { container } = render(
       <Tile wide subtitle="This is a theme" title="Hello !">
         There is text inside
       </Tile>
     );
     expect(container).toMatchSnapshot();
-    expect(container.getElementsByTagName("button").length).toBe(1);
   });
   it("renders a tile with title with titleTagType", () => {
     render(
