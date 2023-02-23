@@ -1,5 +1,5 @@
 import { formatIdcc } from "@socialgouv/modeles-social";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-types";
 import { Text } from "@socialgouv/cdtn-ui";
 import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";

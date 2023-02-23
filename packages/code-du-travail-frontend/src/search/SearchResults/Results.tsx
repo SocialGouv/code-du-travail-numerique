@@ -2,7 +2,7 @@ import {
   getLabelBySource,
   getRouteBySource,
   SOURCES,
-} from "@socialgouv/cdtn-sources";
+} from "@socialgouv/cdtn-types";
 import {
   Button,
   Container,

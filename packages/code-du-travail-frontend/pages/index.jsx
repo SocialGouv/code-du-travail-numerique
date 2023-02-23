@@ -1,5 +1,5 @@
 import * as Sentry from "@sentry/nextjs";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-types";
 import {
   Button,
   Container,

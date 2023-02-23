@@ -1,4 +1,4 @@
-import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-types";
 import { Alert } from "@socialgouv/cdtn-ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";

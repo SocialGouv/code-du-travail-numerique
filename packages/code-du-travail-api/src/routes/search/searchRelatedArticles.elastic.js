@@ -1,4 +1,4 @@
-const { SOURCES } = require("@socialgouv/cdtn-sources");
+const { SOURCES } = require("@socialgouv/cdtn-types");
 
 function getRelatedArticlesBody({ query, size = 5 }) {
   return {

@@ -1,5 +1,5 @@
 import React from "react";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-types";
 import {
   Container,
   Grid,

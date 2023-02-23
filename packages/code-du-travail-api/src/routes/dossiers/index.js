@@ -4,7 +4,7 @@ import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
 const Router = require("koa-router");
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
-const { SOURCES } = require("@socialgouv/cdtn-sources");
+const { SOURCES } = require("@socialgouv/cdtn-types");
 
 const router = new Router({ prefix: API_BASE_URL });
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";

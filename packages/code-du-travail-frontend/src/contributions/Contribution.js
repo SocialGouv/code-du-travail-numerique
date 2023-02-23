@@ -1,5 +1,5 @@
 import slugify from "@socialgouv/cdtn-slugify";
-import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-types";
 import {
   Alert,
   Badge,
