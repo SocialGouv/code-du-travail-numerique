@@ -58,6 +58,9 @@ const StyledLink = styled(Button)`
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
+  height: 100%;
+  line-height: inherit;
+  font-weight: 600;
 
   &:hover,
   &:focus,
