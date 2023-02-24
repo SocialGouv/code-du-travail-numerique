@@ -3415,7 +3415,15 @@
     "@socialgouv/cdtn-logger" "^2.0.1"
     got "^11.8.2"
 
-"@socialgouv/cdtn-logger@^2.0.0", "@socialgouv/cdtn-logger@^2.0.1":
+"@socialgouv/cdtn-elasticsearch@^2.5.2":
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/@socialgouv/cdtn-elasticsearch/-/cdtn-elasticsearch-2.5.2.tgz#8bdd2f30e01fdc6d07817617830d2850f7575513"
+  integrity sha512-v4+oJsjpb1F+MVjGsS9jpQiNhKOI+IMR7JrfKSXOZzjEbuR6npqHUXO5xCOWWHz7FstIbDf+1+q6esavG/Ancw==
+  dependencies:
+    "@socialgouv/cdtn-logger" "^2.5.2"
+    got "^11.8.2"
+
+"@socialgouv/cdtn-logger@^2.0.0", "@socialgouv/cdtn-logger@^2.0.1", "@socialgouv/cdtn-logger@^2.5.2":
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/@socialgouv/cdtn-logger/-/cdtn-logger-2.5.2.tgz#b9f3b5f965401f62018ef5c8ecdc6e5fb7e9da76"
   integrity sha512-0+6x6QIOZFQVb3cz+0qptv/yleU61ak6uPQSJnS59CL950iScD1JfE+xDvo2M+3kh9V3UOYt5b0Adttu8LC5Wg==
