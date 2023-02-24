@@ -7,9 +7,9 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
-    "build:npm": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/code-du-travail-utils}",
-    "build:frontend": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/code-du-travail-utils,@cdt/frontend}",
-    "build:api": "lerna run build --scope={@socialgouv/code-du-travail-utils,@cdt/api}",
+    "build:npm": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils}",
+    "build:frontend": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils,@cdt/frontend}",
+    "build:api": "lerna run build --scope={@socialgouv/cdtn-utils,@cdt/api}",
     "clean": "lerna clean",
     "dev:docker": "docker-compose up elasticsearch",
     "dev": "lerna run dev --parallel",
