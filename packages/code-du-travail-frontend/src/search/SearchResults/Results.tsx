@@ -1,4 +1,8 @@
-import { getLabelBySource, getRouteBySource, SOURCES } from "cdtn-types";
+import {
+  getLabelBySource,
+  getRouteBySource,
+  SOURCES,
+} from "../../../../code-du-travail-utils/build";
 import {
   Button,
   Container,

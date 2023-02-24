@@ -5,7 +5,7 @@ import {
   ContentBlockContent,
   ContentBlockContentItem,
   ContentType,
-} from "cdtn-types";
+} from "../../../../code-du-travail-utils/build";
 
 describe("function getContentBlockIds", () => {
   const mockedContent: Content = {

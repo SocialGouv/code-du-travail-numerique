@@ -1,5 +1,8 @@
-import slugify from "@socialgouv/cdtn-slugify";
-import { getLabelBySource, SOURCES } from "cdtn-types";
+import slugify from "../../../code-du-travail-utils/build";
+import {
+  getLabelBySource,
+  SOURCES,
+} from "../../../code-du-travail-utils/build";
 import {
   Alert,
   Badge,

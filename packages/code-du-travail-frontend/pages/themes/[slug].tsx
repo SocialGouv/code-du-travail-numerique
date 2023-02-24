@@ -14,7 +14,10 @@ import { Layout } from "../../src/layout/Layout";
 import { SearchResults } from "../../src/search/SearchResults";
 import { handleError } from "../../src/lib/fetch-error";
 import { API_URL } from "../../src/config";
-import { getRouteBySource, SOURCES } from "cdtn-types";
+import {
+  getRouteBySource,
+  SOURCES,
+} from "../../../code-du-travail-utils/build";
 
 interface Props {
   theme;

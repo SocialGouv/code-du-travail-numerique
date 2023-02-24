@@ -1,4 +1,7 @@
-import { getRouteBySource, SOURCES } from "cdtn-types";
+import {
+  getRouteBySource,
+  SOURCES,
+} from "../../../../code-du-travail-utils/build";
 import Link from "next/link";
 import React from "react";
 

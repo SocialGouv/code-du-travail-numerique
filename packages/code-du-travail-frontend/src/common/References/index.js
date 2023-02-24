@@ -1,4 +1,4 @@
-import { SOURCES } from "cdtn-types";
+import { SOURCES } from "../../../../code-du-travail-utils/build";
 import { Collapse, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";

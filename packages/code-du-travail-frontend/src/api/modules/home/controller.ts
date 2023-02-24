@@ -1,4 +1,4 @@
-import { ElasticSearchItem } from "cdtn-types";
+import { ElasticSearchItem } from "../../../../../code-du-travail-utils/build";
 import { NextApiRequest, NextApiResponse } from "next";
 import { NotFoundError } from "../../utils";
 import { getByIdsAgreements } from "../agreements";

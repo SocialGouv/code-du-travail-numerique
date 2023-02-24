@@ -1,4 +1,4 @@
-import { Content, ContentType } from "cdtn-types";
+import { Content, ContentType } from "../../../../code-du-travail-utils/build";
 import React from "react";
 import styled from "styled-components";
 import { BlockMarkdown } from "./BlockMarkdown";

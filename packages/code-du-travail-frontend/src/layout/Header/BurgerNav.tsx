@@ -9,7 +9,10 @@ import React from "react";
 import styled from "styled-components";
 
 import { AccessibilityModal } from "../../common/AccessibilityModal";
-import { getRouteBySource, SOURCES } from "cdtn-types";
+import {
+  getRouteBySource,
+  SOURCES,
+} from "../../../../code-du-travail-utils/build";
 
 export const SUB_MENU_HEIGHT = "5.5rem";
 type Props = {

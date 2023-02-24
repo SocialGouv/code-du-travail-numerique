@@ -1,4 +1,4 @@
-import { Tool } from "cdtn-types";
+import { Tool } from "../../../../../code-du-travail-utils/build";
 import {
   elasticsearchClient,
   elasticIndex,

@@ -1,14 +1,11 @@
-/**
- * @param {string} string
- */
-function slugify(string) {
+export function slugify(v: string) {
   const a =
     "àáäâãåăæąçćčđďèéěėëêęğǵḧìíïîįłḿǹńňñòóöôøṕŕřßşśšșťțùúüûǘůűūųẃẍÿýźžż·/_:;()";
   const b =
     "aaaaaaaaacccddeeeeeeegghiiiiilmnnnnoooooprrsssssttuuuuuuuuuwxyyzzz-------";
   const p = new RegExp(`[${a}]`, "g");
 
-  return string
+  return v
     .toString()
     .toLowerCase()
     .replace(/\s+/g, "-") // Replace spaces with -
@@ -21,5 +18,3 @@ function slugify(string) {
     .replace(/^-+/, "") // Trim - from start of text
     .replace(/-+$/, ""); // Trim - from end of text
 }
-
-module.exports = slugify;

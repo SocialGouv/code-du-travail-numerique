@@ -1,4 +1,4 @@
-import { SOURCES } from "cdtn-types";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { render } from "@testing-library/react";
 import React from "react";
 

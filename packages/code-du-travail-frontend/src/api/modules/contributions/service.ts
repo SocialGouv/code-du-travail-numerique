@@ -1,4 +1,4 @@
-import { ElasticSearchItem } from "cdtn-types";
+import { ElasticSearchItem } from "../../../../../code-du-travail-utils/build";
 import { elasticsearchClient, elasticIndex, NotFoundError } from "../../utils";
 import {
   getAllGenericsContributions,

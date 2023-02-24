@@ -1,7 +1,10 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { Contents } from "../Components";
 import { ui } from "./ui";
-import { ContentType, SectionDisplayMode } from "cdtn-types";
+import {
+  ContentType,
+  SectionDisplayMode,
+} from "../../../../code-du-travail-utils/build";
 
 jest.mock("../htmlProcess.service");
 

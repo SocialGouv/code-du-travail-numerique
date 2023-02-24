@@ -1,4 +1,8 @@
-import { ContentType, BlockDisplayMode, Content } from "cdtn-types";
+import {
+  ContentType,
+  BlockDisplayMode,
+  Content,
+} from "../../../../code-du-travail-utils/build";
 
 export const mockedContents: Content[] = [
   {

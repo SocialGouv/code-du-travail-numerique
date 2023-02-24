@@ -1,4 +1,4 @@
-const { SOURCES } = require("cdtn-types");
+const { SOURCES } = require("@socialgouv/cdtn-utils");
 
 function getHightlightsBody({ slug }) {
   return {

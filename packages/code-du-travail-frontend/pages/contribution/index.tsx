@@ -14,7 +14,7 @@ import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
 import styled from "styled-components";
 import { ListLink } from "../../src/search/SearchResults/Results";
-import { SOURCES } from "cdtn-types";
+import { SOURCES } from "../../../code-du-travail-utils/build";
 import { API_URL } from "../../src/config";
 
 const ALL = "all";

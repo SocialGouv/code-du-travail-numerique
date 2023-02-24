@@ -1,4 +1,8 @@
-import { SearchResponse, ElasticSearchItem, Agreement } from "cdtn-types";
+import {
+  SearchResponse,
+  ElasticSearchItem,
+  Agreement,
+} from "../../../../../code-du-travail-utils/build";
 import { elasticsearchClient, elasticIndex, NotFoundError } from "../../utils";
 import {
   getAllAgreementsWithContributions,

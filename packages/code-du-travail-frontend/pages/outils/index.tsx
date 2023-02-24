@@ -1,4 +1,7 @@
-import { getRouteBySource, SOURCES } from "cdtn-types";
+import {
+  getRouteBySource,
+  SOURCES,
+} from "../../../code-du-travail-utils/build";
 import {
   Container,
   Grid,

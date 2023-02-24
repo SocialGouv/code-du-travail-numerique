@@ -1,4 +1,4 @@
-const slugify = require("./");
+import { slugify } from "../slugify";
 
 test("slugify", () => {
   expect(slugify("pif paf")).toBe("pif-paf");

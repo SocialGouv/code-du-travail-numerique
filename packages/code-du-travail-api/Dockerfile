@@ -5,6 +5,7 @@ FROM node:$NODE_VERSION AS dist
 WORKDIR /
 
 COPY package.json ./
+COPY ../code-du-travail-utils/package.json ../code-du-travail-utils/package.json
 
 RUN yarn install --frozen-lockfile
 
@@ -18,6 +19,7 @@ FROM node:$NODE_VERSION AS node_modules
 WORKDIR /
 
 COPY package.json ./
+COPY ../code-du-travail-utils/package.json ../code-du-travail-utils/package.json
 
 RUN yarn install --frozen-lockfile --prod
 

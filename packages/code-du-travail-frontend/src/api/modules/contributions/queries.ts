@@ -1,4 +1,4 @@
-import { SOURCES } from "cdtn-types";
+import { SOURCES } from "../../../../../code-du-travail-utils/build";
 
 export const getAllGenericsContributions = (): any => {
   return {

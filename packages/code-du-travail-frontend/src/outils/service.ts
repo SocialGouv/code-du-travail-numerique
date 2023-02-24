@@ -1,4 +1,4 @@
-import { Tool } from "cdtn-types";
+import { Tool } from "../../../code-du-travail-utils/build";
 import { API_URL } from "../config";
 
 export type getToolsParams = {

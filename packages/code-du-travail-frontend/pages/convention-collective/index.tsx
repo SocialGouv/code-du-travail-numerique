@@ -15,7 +15,7 @@ import { handleError } from "../../src/lib/fetch-error";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import styled from "styled-components";
 import Link from "next/link";
-import { SOURCES } from "cdtn-types";
+import { SOURCES } from "../../../code-du-travail-utils/build";
 import { API_URL } from "../../src/config";
 
 function Page({ ccs }) {

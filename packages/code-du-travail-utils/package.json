@@ -1,5 +1,5 @@
 {
-  "name": "cdtn-types",
+  "name": "@socialgouv/cdtn-utils",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -9,6 +9,12 @@
   "module": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.3.36",
+    "@swc/jest": "^0.2.24",
+    "jest": "^29.4.3"
   }
 }

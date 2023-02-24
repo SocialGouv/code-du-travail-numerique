@@ -28,10 +28,8 @@ ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 
 # Copy all package.json
 COPY ./package.json ./package.json
-COPY ./packages/slugify/package.json ./packages/slugify/package.json
 COPY ./packages/react-ui/package.json ./packages/react-ui/package.json
-COPY ./packages/cdtn-types/package.json ./packages/cdtn-types/package.json
-COPY ./packages/code-du-travail-api/package.json ./packages/code-du-travail-api/package.json
+COPY ./packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/package.json
 COPY ./packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/package.json
 COPY ./packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/package.json
 
