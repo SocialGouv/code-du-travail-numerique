@@ -1,4 +1,4 @@
-import { getRouteBySource } from "../../../../code-du-travail-utils/build";
+import { getRouteBySource } from "@socialgouv/cdtn-utils";
 import { Grid, Title } from "@socialgouv/cdtn-ui";
 import React from "react";
 

@@ -1,4 +1,4 @@
-import { SOURCES } from "../../../../../code-du-travail-utils/build";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export function getModeles() {
   return {

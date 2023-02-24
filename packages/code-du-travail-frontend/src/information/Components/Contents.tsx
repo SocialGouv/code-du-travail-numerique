@@ -1,9 +1,6 @@
 import { theme, Tabs, Accordion, Heading, Section } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
-import {
-  Content,
-  SectionDisplayMode,
-} from "../../../../code-du-travail-utils/build";
+import { Content, SectionDisplayMode } from "@socialgouv/cdtn-utils";
 
 import { BlockList } from "./BlockList";
 

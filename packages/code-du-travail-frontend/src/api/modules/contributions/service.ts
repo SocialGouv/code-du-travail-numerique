@@ -1,4 +1,4 @@
-import { ElasticSearchItem } from "../../../../../code-du-travail-utils/build";
+import { ElasticSearchItem } from "@socialgouv/cdtn-utils";
 import { elasticsearchClient, elasticIndex, NotFoundError } from "../../utils";
 import {
   getAllGenericsContributions,

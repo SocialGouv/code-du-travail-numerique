@@ -1,4 +1,4 @@
-import { Tool } from "../../../code-du-travail-utils/build";
+import { Tool } from "@socialgouv/cdtn-utils";
 import { API_URL } from "../config";
 
 export type getToolsParams = {

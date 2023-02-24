@@ -1,7 +1,4 @@
-import {
-  getRouteBySource,
-  SOURCES,
-} from "../../../code-du-travail-utils/build";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import {
   Container,
   FlatList,

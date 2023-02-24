@@ -1,4 +1,4 @@
-import { ElasticSearchItem } from "../../../../../code-du-travail-utils/build";
+import { ElasticSearchItem } from "@socialgouv/cdtn-utils";
 import { NextApiRequest, NextApiResponse } from "next";
 import { NotFoundError } from "../../utils";
 import { getByIdsAgreements } from "../agreements";

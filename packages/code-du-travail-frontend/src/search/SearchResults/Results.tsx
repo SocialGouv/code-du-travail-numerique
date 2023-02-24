@@ -2,7 +2,7 @@ import {
   getLabelBySource,
   getRouteBySource,
   SOURCES,
-} from "../../../../code-du-travail-utils/build";
+} from "@socialgouv/cdtn-utils";
 import {
   Button,
   Container,

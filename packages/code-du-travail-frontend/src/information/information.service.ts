@@ -2,9 +2,9 @@ import {
   Content,
   ContentType,
   EditorialContentData,
-} from "../../../code-du-travail-utils/build";
+  SOURCES,
+} from "@socialgouv/cdtn-utils";
 import { getContents } from "../content";
-import { SOURCES } from "../../../code-du-travail-utils/build";
 import { API_URL } from "../config";
 
 export const getEditorialContentBySlug = async (

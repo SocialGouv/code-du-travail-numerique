@@ -1,4 +1,4 @@
-import { Content, ContentType } from "../../../../code-du-travail-utils/build";
+import { Content, ContentType } from "@socialgouv/cdtn-utils";
 import React from "react";
 import styled from "styled-components";
 import { BlockMarkdown } from "./BlockMarkdown";

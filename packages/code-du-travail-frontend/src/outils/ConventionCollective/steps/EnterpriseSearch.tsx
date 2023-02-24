@@ -1,4 +1,4 @@
-import { SOURCES } from "../../../../../code-du-travail-utils/build";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Button, Section as SectionUi, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";

@@ -1,5 +1,5 @@
 import * as Sentry from "@sentry/nextjs";
-import { SOURCES } from "../../../code-du-travail-utils/build";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { GetServerSideProps } from "next";

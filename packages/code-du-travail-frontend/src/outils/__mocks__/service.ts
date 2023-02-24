@@ -1,4 +1,4 @@
-import { Tool } from "../../../../code-du-travail-utils/build";
+import { Tool } from "@socialgouv/cdtn-utils";
 import { getToolsParams } from "../service";
 
 export const fetchTools = async (_params: getToolsParams): Promise<Tool[]> => {

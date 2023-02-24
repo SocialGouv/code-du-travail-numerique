@@ -1,7 +1,4 @@
-import {
-  getRouteBySource,
-  SOURCES,
-} from "../../../code-du-travail-utils/build";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { push as matopush } from "@socialgouv/matomo-next";
 
 export const summarize = (text = "") =>

@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { Contents } from "../Components";
 import { ui } from "./ui";
-import { SectionDisplayMode } from "../../../../code-du-travail-utils/build";
+import { SectionDisplayMode } from "@socialgouv/cdtn-utils";
 import { mockedContents } from "./mockedContent";
 
 jest.mock("../htmlProcess.service");

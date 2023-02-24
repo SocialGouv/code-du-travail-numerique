@@ -5,7 +5,7 @@ import InformationPage from "../pages/information/[slug]";
 import {
   EditorialContentDataWrapper,
   SectionDisplayMode,
-} from "../../code-du-travail-utils/build";
+} from "@socialgouv/cdtn-utils";
 
 const mockedProps: EditorialContentDataWrapper = {
   information: {

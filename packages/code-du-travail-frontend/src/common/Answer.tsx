@@ -22,7 +22,7 @@ import { Feedback } from "./Feedback";
 import Html from "./Html";
 import { RelatedItems } from "./RelatedItems";
 import { Share } from "./Share";
-import { Breadcrumb } from "../../../code-du-travail-utils/build";
+import { Breadcrumb } from "@socialgouv/cdtn-utils";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>

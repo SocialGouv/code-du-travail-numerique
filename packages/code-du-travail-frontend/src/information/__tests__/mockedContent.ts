@@ -1,8 +1,4 @@
-import {
-  ContentType,
-  BlockDisplayMode,
-  Content,
-} from "../../../../code-du-travail-utils/build";
+import { ContentType, BlockDisplayMode, Content } from "@socialgouv/cdtn-utils";
 
 export const mockedContents: Content[] = [
   {

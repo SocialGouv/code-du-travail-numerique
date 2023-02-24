@@ -1,4 +1,4 @@
-import { SOURCES } from "../../../../../code-du-travail-utils/build";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { AlertWithIcon, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";

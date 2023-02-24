@@ -2,7 +2,7 @@ import {
   SearchResponse,
   ElasticSearchItem,
   Agreement,
-} from "../../../../../code-du-travail-utils/build";
+} from "@socialgouv/cdtn-utils";
 import { elasticsearchClient, elasticIndex, NotFoundError } from "../../utils";
 import {
   getAllAgreementsWithContributions,
