@@ -82,6 +82,9 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
 
 export async function getServerSideProps() {
   const tools = await fetchTools();
+  console.log(
+    tools.filter((tool) => tool.displayTool && tool.source === SOURCES.TOOLS)
+  );
   return {
     props: {
       cdtnSimulators: tools.filter(
