@@ -1,0 +1,33 @@
+ARG NODE_VERSION=14.18.3-alpine
+# dist
+FROM node:$NODE_VERSION AS dist
+
+WORKDIR /
+
+# Copy all package.json
+COPY ./package.json ./package.json
+COPY ./packages/code-du-travail-api/package.json ./packages/code-du-travail-api/package.json
+COPY ./packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/package.json
+
+# Copy lockfile
+COPY ./yarn.lock ./yarn.lock
+
+# Install packages
+RUN yarn --frozen-lockfile && yarn cache clean
+
+COPY . ./
+
+RUN yarn build && yarn --frozen-lockfile --prod
+
+# app
+FROM node:$NODE_VERSION
+
+ENV NODE_ENV=production
+
+WORKDIR /app
+
+COPY --from=dist . /app/
+
+USER 1000
+
+CMD [ "yarn", "workspace", "@cdt/api", "start"]
