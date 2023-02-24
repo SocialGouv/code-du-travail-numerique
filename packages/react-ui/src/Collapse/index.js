@@ -61,6 +61,7 @@ const StyledLink = styled(Button)`
   height: 100%;
   line-height: inherit;
   font-weight: 600;
+  font-size: 18px;
 
   &:hover,
   &:focus,
