@@ -1,5 +1,5 @@
 export const getTools = (ids?: string[], slugs?: string[]) => {
-  const filter = [
+  const filter: any[] = [
     {
       bool: {
         must: [
@@ -45,6 +45,33 @@ export const getToolBySlug = async (slug: string) => {
           { term: { isPublished: true } },
           { term: { source: "outils" } },
           { term: { slug } },
+        ],
+      },
+    },
+  ];
+  return {
+    query: {
+      bool: {
+        filter,
+      },
+    },
+    size: 200,
+    sort: [
+      {
+        order: "asc",
+      },
+    ],
+  };
+};
+
+export const getToolByIds = async (cdtnIds: string[]) => {
+  const filter = [
+    {
+      bool: {
+        must: [
+          { term: { isPublished: true } },
+          { term: { source: "outils" } },
+          { term: { cdtnId: cdtnIds } },
         ],
       },
     },

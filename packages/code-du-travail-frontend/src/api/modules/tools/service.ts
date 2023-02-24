@@ -5,10 +5,10 @@ import {
   NotFoundError,
   InternalServerError,
 } from "../../utils";
-import { getTools, getToolBySlug } from "./queries";
+import { getTools, getToolBySlug, getToolByIds } from "./queries";
 
 export const getAllTools = async (): Promise<Tool[]> => {
-  const body = await getTools();
+  const body = getTools();
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
@@ -24,7 +24,7 @@ export const getAllTools = async (): Promise<Tool[]> => {
 };
 
 export const getToolsByIds = async (ids: string[]): Promise<Tool[]> => {
-  const body = await getTools(ids);
+  const body = getToolByIds(ids);
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
@@ -40,7 +40,7 @@ export const getToolsByIds = async (ids: string[]): Promise<Tool[]> => {
 };
 
 export const getToolsBySlugs = async (slugs: string[]): Promise<Tool[]> => {
-  const body = await getTools(undefined, slugs);
+  const body = getTools(undefined, slugs);
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
@@ -56,7 +56,7 @@ export const getToolsBySlugs = async (slugs: string[]): Promise<Tool[]> => {
 };
 
 export const getBySlugTools = async (slug: string): Promise<Tool> => {
-  const body = await getToolBySlug(slug);
+  const body = getToolBySlug(slug);
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
@@ -67,8 +67,7 @@ export const getBySlugTools = async (slug: string): Promise<Tool> => {
       name: "TOOL_NOT_FOUND",
       cause: null,
     });
-  }
-  if (response.body.hits.total.value > 1) {
+  } else if (response.body.hits.total.value > 1) {
     throw new InternalServerError({
       message: `There is more than one tool that match query ${slug}`,
       name: "TOO_MANY_TOOL_FOR_ONE_SLUG",

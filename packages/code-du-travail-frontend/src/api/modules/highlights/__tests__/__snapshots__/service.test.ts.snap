@@ -25,6 +25,7 @@ exports[`Highlights getBySlugHighlights 1`] = `
     ],
     "cdtnId": "d7ad36850a",
     "description": "Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur",
+    "order": 2,
     "slug": "simulateur-embauche",
     "source": "outils",
     "title": "Salaire brut/net",
