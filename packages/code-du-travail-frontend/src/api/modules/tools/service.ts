@@ -3,7 +3,6 @@ import {
   elasticsearchClient,
   elasticDocumentsIndex,
   NotFoundError,
-  InternalServerError,
 } from "../../utils";
 import { getTools, getToolBySlug, getToolByIds } from "./queries";
 
@@ -65,12 +64,6 @@ export const getBySlugTools = async (slug: string): Promise<Tool> => {
     throw new NotFoundError({
       message: `There is no tools that match query`,
       name: "TOOL_NOT_FOUND",
-      cause: null,
-    });
-  } else if (response.body.hits.total.value > 1) {
-    throw new InternalServerError({
-      message: `There is more than one tool that match query ${slug}`,
-      name: "TOO_MANY_TOOL_FOR_ONE_SLUG",
       cause: null,
     });
   }

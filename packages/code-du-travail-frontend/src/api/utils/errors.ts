@@ -26,5 +26,3 @@ export class NotFoundError extends ErrorBase<
   | "AGREEMENT_NOT_FOUND"
   | "CONTRIB_NOT_FOUND"
 > {}
-
-export class InternalServerError extends ErrorBase<"TOO_MANY_TOOL_FOR_ONE_SLUG"> {}

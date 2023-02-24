@@ -16,7 +16,7 @@
     "prebuild": "node -r @swc-node/register scripts/prebuild.ts",
     "build": "next build",
     "build:analyze": "ANALYZE=true next build",
-    "test": "NODE_ENV=test jest --silent",
+    "test": "NODE_ENV=test jest",
     "test:frontend": "npm run test -- --testPathIgnorePatterns=src/api",
     "pretest:api": "ES_INDEX_PREFIX=cdtn_test NODE_ENV=test node -r @swc-node/register scripts/generate-data.ts",
     "test:api": "ES_INDEX_PREFIX=cdtn_test NODE_ENV=test npm run test -- --testPathPattern=src/api",
