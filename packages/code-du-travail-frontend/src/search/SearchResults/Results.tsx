@@ -56,6 +56,7 @@ type ListLinkProps = {
   centerTitle?: boolean;
   disableAnalytics?: boolean;
   titleTagType?: string;
+  hideAction?: boolean;
 };
 
 export const ListLink = ({
@@ -76,6 +77,7 @@ export const ListLink = ({
   centerTitle,
   disableAnalytics = false,
   titleTagType,
+  hideAction = false,
 }: ListLinkProps) => {
   let subtitle = "";
   if (showTheme && !icon) {
@@ -117,7 +119,7 @@ export const ListLink = ({
   if (source === SOURCES.EXTERNALS) {
     return (
       <CallToActionTile
-        action={action || "Consulter"}
+        action={hideAction ? undefined : action ?? "Consulter"}
         target="_blank"
         rel="noreferer noopener"
         className="no-after"
@@ -145,7 +147,7 @@ export const ListLink = ({
   let ResultTile = LinkedTile;
   if (source === SOURCES.TOOLS || source === SOURCES.LETTERS) {
     ResultTile = CallToActionTile;
-    tileCommonProps.action = action ?? "Consulter";
+    tileCommonProps.action = hideAction ? undefined : action ?? "Consulter";
     tileCommonProps.custom = true;
   }
   if (source === SOURCES.CONTRIBUTIONS) {

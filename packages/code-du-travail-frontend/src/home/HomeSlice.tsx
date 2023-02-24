@@ -24,7 +24,12 @@ export const HomeSlice = (props: Props) => {
         </PageTitle>
         <Grid columns={2}>
           {props.content.map((element) => (
-            <ListLink item={element} key={element.slug} titleTagType="h3" />
+            <ListLink
+              item={element}
+              key={element.slug}
+              titleTagType="h3"
+              hideAction
+            />
           ))}
         </Grid>
         <HomeButtonTrigger name={props.triggerName} link={props.triggerLink} />
