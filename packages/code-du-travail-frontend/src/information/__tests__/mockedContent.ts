@@ -1,4 +1,4 @@
-import { ContentType, BlockDisplayMode, Content } from "@socialgouv/cdtn-types";
+import { ContentType, BlockDisplayMode, Content } from "cdtn-types";
 
 export const mockedContents: Content[] = [
   {

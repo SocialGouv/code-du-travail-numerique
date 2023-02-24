@@ -2,7 +2,7 @@ import router from "../search";
 
 const request = require("supertest");
 const Koa = require("koa");
-const { SOURCES } = require("@socialgouv/cdtn-types");
+const { SOURCES } = require("cdtn-types");
 
 const getSearchBody = require("../search/search.elastic");
 const getSemBody = require("../search/search.sem");

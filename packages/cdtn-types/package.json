@@ -1,5 +1,5 @@
 {
-  "name": "@socialgouv/cdtn-types",
+  "name": "cdtn-types",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

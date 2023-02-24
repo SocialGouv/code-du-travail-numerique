@@ -1,4 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-types";
+import { SOURCES } from "cdtn-types";
 import { Button, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";

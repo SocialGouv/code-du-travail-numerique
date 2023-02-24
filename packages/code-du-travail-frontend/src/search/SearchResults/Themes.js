@@ -1,4 +1,4 @@
-import { getRouteBySource } from "@socialgouv/cdtn-types";
+import { getRouteBySource } from "cdtn-types";
 import { Grid, Title } from "@socialgouv/cdtn-ui";
 import React from "react";
 

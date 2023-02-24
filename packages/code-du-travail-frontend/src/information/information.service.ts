@@ -1,10 +1,6 @@
-import {
-  Content,
-  ContentType,
-  EditorialContentData,
-} from "@socialgouv/cdtn-types";
+import { Content, ContentType, EditorialContentData } from "cdtn-types";
 import { getContents } from "../content";
-import { SOURCES } from "@socialgouv/cdtn-types";
+import { SOURCES } from "cdtn-types";
 import { API_URL } from "../config";
 
 export const getEditorialContentBySlug = async (

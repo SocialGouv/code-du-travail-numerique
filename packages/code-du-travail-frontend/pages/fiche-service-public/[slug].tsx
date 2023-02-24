@@ -6,7 +6,7 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
-import { Breadcrumb } from "@socialgouv/cdtn-types";
+import { Breadcrumb } from "cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
 import { API_URL } from "../../src/config";
 

@@ -1,8 +1,4 @@
-import {
-  getLabelBySource,
-  getRouteBySource,
-  SOURCES,
-} from "@socialgouv/cdtn-types";
+import { getLabelBySource, getRouteBySource, SOURCES } from "cdtn-types";
 import {
   Button,
   Container,

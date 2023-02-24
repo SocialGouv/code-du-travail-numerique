@@ -1,4 +1,4 @@
-const { SOURCES } = require("@socialgouv/cdtn-types");
+const { SOURCES } = require("cdtn-types");
 
 function getVersionsBody() {
   return {

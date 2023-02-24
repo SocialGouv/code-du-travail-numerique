@@ -1,4 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-types";
+import { SOURCES } from "cdtn-types";
 import { AlertWithIcon, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";

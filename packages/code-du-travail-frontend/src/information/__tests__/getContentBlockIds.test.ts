@@ -5,7 +5,7 @@ import {
   ContentBlockContent,
   ContentBlockContentItem,
   ContentType,
-} from "@socialgouv/cdtn-types";
+} from "cdtn-types";
 
 describe("function getContentBlockIds", () => {
   const mockedContent: Content = {

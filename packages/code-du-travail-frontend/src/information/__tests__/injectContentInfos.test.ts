@@ -6,7 +6,7 @@ import {
   ContentBlockContentItem,
   ContentType,
   EditorialContentData,
-} from "@socialgouv/cdtn-types";
+} from "cdtn-types";
 
 describe("function injectContentInfos", () => {
   const mockedContent: Content = {

@@ -1,9 +1,5 @@
 import { formatIdcc } from "@socialgouv/modeles-social";
-import {
-  getLabelBySource,
-  getRouteBySource,
-  SOURCES,
-} from "@socialgouv/cdtn-types";
+import { getLabelBySource, getRouteBySource, SOURCES } from "cdtn-types";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { Agreement } from "../../../../../conventions/Search/api/type";

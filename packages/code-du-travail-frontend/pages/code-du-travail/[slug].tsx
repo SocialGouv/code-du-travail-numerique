@@ -1,4 +1,4 @@
-import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-types";
+import { getLabelBySource, SOURCES } from "cdtn-types";
 import { Alert } from "@socialgouv/cdtn-ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
@@ -9,7 +9,7 @@ import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
-import { Breadcrumb } from "@socialgouv/cdtn-types";
+import { Breadcrumb } from "cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
 import { API_URL } from "../../src/config";
 

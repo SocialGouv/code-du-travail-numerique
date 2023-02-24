@@ -1,4 +1,4 @@
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-types";
+import { getRouteBySource, SOURCES } from "cdtn-types";
 import {
   ArrowLink,
   Container,

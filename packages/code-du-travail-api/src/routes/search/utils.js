@@ -1,4 +1,4 @@
-import { getRouteBySource } from "@socialgouv/cdtn-types";
+import { getRouteBySource } from "cdtn-types";
 // merge by one of each
 
 const merge = (res1, res2, max_result) => {

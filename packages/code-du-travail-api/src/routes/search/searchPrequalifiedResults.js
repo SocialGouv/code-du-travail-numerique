@@ -1,6 +1,6 @@
 import elasticsearchClient from "../../conf/elasticsearch";
 
-const { SOURCES } = require("@socialgouv/cdtn-types");
+const { SOURCES } = require("cdtn-types");
 const { logger } = require("@socialgouv/cdtn-logger");
 const fuzz = require("fuzzball");
 const deburr = require("lodash.deburr");

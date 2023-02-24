@@ -1,4 +1,4 @@
-import { ElasticSearchItem } from "@socialgouv/cdtn-types";
+import { ElasticSearchItem } from "cdtn-types";
 import { NextApiRequest, NextApiResponse } from "next";
 import { NotFoundError } from "../../utils";
 import { getByIdsAgreements } from "../agreements";

@@ -1,6 +1,6 @@
 import { Client } from "@elastic/elasticsearch";
 import { DOCUMENTS } from "@socialgouv/cdtn-elasticsearch";
-import { getSourceByRoute, SOURCES } from "@socialgouv/cdtn-types";
+import { getSourceByRoute, SOURCES } from "cdtn-types";
 import { writeFile as _writeFile } from "fs";
 import { join } from "path";
 import { promisify } from "util";

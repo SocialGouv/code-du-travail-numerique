@@ -1,8 +1,4 @@
-import {
-  SearchResponse,
-  ElasticSearchItem,
-  Agreement,
-} from "@socialgouv/cdtn-types";
+import { SearchResponse, ElasticSearchItem, Agreement } from "cdtn-types";
 import { elasticsearchClient, elasticIndex, NotFoundError } from "../../utils";
 import {
   getAllAgreementsWithContributions,

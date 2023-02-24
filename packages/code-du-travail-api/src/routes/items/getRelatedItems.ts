@@ -2,7 +2,7 @@ import elasticsearchClient from "../../conf/elasticsearch";
 import { getRelatedItemsBody } from "./relatedItems.es";
 import { getSearchBySourceSlugBody } from "./searchBySourceSlug.es";
 
-const { SOURCES, getSourceByRoute } = require("@socialgouv/cdtn-types");
+const { SOURCES, getSourceByRoute } = require("cdtn-types");
 const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
 const getSemBody = require("../search/search.sem");
 const utils = require("../search/utils");
