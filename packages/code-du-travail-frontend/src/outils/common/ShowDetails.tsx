@@ -1,7 +1,6 @@
 import { Collapse } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
 import React from "react";
-import styled from "styled-components";
 
 import { MatomoBaseEvent, MatomoSimulatorEvent } from "../../lib";
 
