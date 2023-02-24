@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contributions getByIdsContributions 1`] = `
+[
+  {
+    "breadcrumbs": [
+      {
+        "label": "Congés et repos",
+        "position": 3,
+        "slug": "/themes/conges-et-repos",
+      },
+      {
+        "label": "Congés",
+        "position": 1,
+        "slug": "/themes/conges",
+      },
+      {
+        "label": "Congés pour événement familial",
+        "position": 3,
+        "slug": "/themes/conges-pour-evenement-familial",
+      },
+    ],
+    "cdtnId": "eba7a4592f",
+    "description": "Le code du travail prévoit que le salarié bénéficie de congés à l’occasion de certains événements familiaux. Ils n’entrainent aucune diminution de la rémunération…",
+    "slug": "les-conges-pour-evenements-familiaux",
+    "source": "contributions",
+    "title": "Les congés pour événements familiaux",
+  },
+]
+`;
+
+exports[`Contributions getBySlugContributions 1`] = `undefined`;
+
+exports[`Contributions getBySlugsContributions 1`] = `[]`;
+
+exports[`Contributions getGenericContributions 1`] = `
+{
+  "Congés et repos": [
+    {
+      "breadcrumbs": [
+        {
+          "label": "Congés et repos",
+          "position": 3,
+          "slug": "/themes/conges-et-repos",
+        },
+        {
+          "label": "Congés",
+          "position": 1,
+          "slug": "/themes/conges",
+        },
+        {
+          "label": "Congés pour événement familial",
+          "position": 3,
+          "slug": "/themes/conges-pour-evenement-familial",
+        },
+      ],
+      "description": "Le code du travail prévoit que le salarié bénéficie de congés à l’occasion de certains événements familiaux. Ils n’entrainent aucune diminution de la rémunération…",
+      "slug": "les-conges-pour-evenements-familiaux",
+      "source": "contributions",
+      "theme": "Congés et repos",
+      "title": "Les congés pour événements familiaux",
+    },
+  ],
+  "Départ de l’entreprise": [
+    {
+      "breadcrumbs": [
+        {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        {
+          "label": "Autres départs",
+          "position": 6,
+          "slug": "/themes/autres-departs",
+        },
+      ],
+      "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
+      "slug": "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
+      "source": "contributions",
+      "theme": "Départ de l’entreprise",
+      "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
+    },
+  ],
+}
+`;

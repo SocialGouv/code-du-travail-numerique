@@ -1,5 +1,5 @@
 export const getTools = (ids?: string[], slugs?: string[]) => {
-  const filter: any[] = [
+  const filter = [
     {
       bool: {
         must: [
@@ -38,7 +38,7 @@ export const getTools = (ids?: string[], slugs?: string[]) => {
 };
 
 export const getToolBySlug = async (slug: string) => {
-  const filter: any[] = [
+  const filter = [
     {
       bool: {
         must: [

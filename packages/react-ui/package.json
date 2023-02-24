@@ -15,9 +15,9 @@
     "build:dev": "swc src -d lib",
     "type-check": "tsc --noEmit",
     "dev": "npm run build:dev -- --watch",
-    "lint-js": "eslint src/**/*.js",
-    "lint-css": "stylelint 'src/**/*.js'",
-    "lint": "yarn lint-css && yarn lint-js",
+    "lint:js": "eslint src/**/*.js",
+    "lint:css": "stylelint 'src/**/*.js'",
+    "lint": "yarn lint:css && yarn lint:js",
     "precommit": "lint-staged",
     "start": "start-storybook",
     "svg": "svgo --config=src/icons/mono.config.js -f src/icons/src/monochrome && svgo --config=src/icons/bi.config.js -f src/icons/src/bicolor && svgr --config-file=src/icons/svgr.config.js -d src/icons/components src/icons/src",
@@ -79,8 +79,8 @@
   ],
   "lint-staged": {
     "src/**/*.{ts,js}": [
-      "yarn lint-css",
-      "yarn lint-js --fix --quiet"
+      "yarn lint:css",
+      "yarn lint:js --fix --quiet"
     ]
   },
   "browserslist": [

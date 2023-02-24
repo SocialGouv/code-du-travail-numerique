@@ -70,7 +70,7 @@ export const getBySlugTools = async (slug: string): Promise<Tool> => {
   }
   if (response.body.hits.total.value > 1) {
     throw new InternalServerError({
-      message: `There is more than one tool that match query`,
+      message: `There is more than one tool that match query ${slug}`,
       name: "TOO_MANY_TOOL_FOR_ONE_SLUG",
       cause: null,
     });

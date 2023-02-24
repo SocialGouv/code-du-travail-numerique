@@ -21,7 +21,7 @@ describe("Tools", () => {
   });
 
   it("getBySlugTools", async () => {
-    const result = await getBySlugTools("preavis-demission");
+    const result = await getBySlugTools("indemnite-licenciement");
     expect(result).toMatchSnapshot();
   });
 });
