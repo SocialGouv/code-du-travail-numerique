@@ -21,7 +21,7 @@
     "pretest:api": "ES_INDEX_PREFIX=cdtn_test NODE_ENV=test node -r @swc-node/register scripts/generate-data.ts",
     "test:api": "ES_INDEX_PREFIX=cdtn_test NODE_ENV=test npm run test -- --testPathPattern=src/api",
     "test:api:update": "ES_INDEX_PREFIX=cdtn_test NODE_ENV=test npm run test:api -- --updateSnapshot",
-    "test:watch": "NODE_ENV=test jest --watch --silent",
+    "test:watch": "ES_INDEX_PREFIX=cdtn_test NODE_ENV=test jest --watch --silent",
     "test:update": "ES_INDEX_PREFIX=cdtn_test NODE_ENV=test jest -u --silent",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch"
