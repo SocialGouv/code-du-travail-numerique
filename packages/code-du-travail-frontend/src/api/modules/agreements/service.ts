@@ -3,7 +3,11 @@ import {
   ElasticSearchItem,
   Agreement,
 } from "@socialgouv/cdtn-utils";
-import { elasticsearchClient, elasticIndex, NotFoundError } from "../../utils";
+import {
+  elasticsearchClient,
+  elasticDocumentsIndex,
+  NotFoundError,
+} from "../../utils";
 import {
   getAllAgreementsWithContributions,
   getAgreementsBySlugs,
@@ -16,7 +20,7 @@ export const getAllAgreements = async (): Promise<Agreement[]> => {
 
   const response = await elasticsearchClient.search<SearchResponse<Agreement>>({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
 
   return response.body.hits.hits
@@ -30,7 +34,7 @@ export const getBySlugsAgreements = async (
   const body = getAgreementsBySlugs(slugs);
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
   return response.body.hits.total.value > 0
     ? response.body.hits.hits.map(({ _source }) => _source)
@@ -43,7 +47,7 @@ export const getByIdsAgreements = async (
   const body = getAgreementsByIds(ids);
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
   return response.body.hits.total.value > 0
     ? response.body.hits.hits.map(({ _source }) => _source)
@@ -55,7 +59,7 @@ export const getBySlugAgreements = async (slug: string) => {
 
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
   if (response.body.hits.total.value === 0) {
     throw new NotFoundError({

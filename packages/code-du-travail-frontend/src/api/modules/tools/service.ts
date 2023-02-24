@@ -1,7 +1,7 @@
 import { Tool } from "@socialgouv/cdtn-utils";
 import {
   elasticsearchClient,
-  elasticIndex,
+  elasticDocumentsIndex,
   NotFoundError,
   InternalServerError,
 } from "../../utils";
@@ -11,7 +11,7 @@ export const getAllTools = async (): Promise<Tool[]> => {
   const body = await getTools();
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
   if (response.body.hits.total.value === 0) {
     throw new NotFoundError({
@@ -27,7 +27,7 @@ export const getToolsByIds = async (ids: string[]): Promise<Tool[]> => {
   const body = await getTools(ids);
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
   if (response.body.hits.total.value === 0) {
     throw new NotFoundError({
@@ -43,7 +43,7 @@ export const getToolsBySlugs = async (slugs: string[]): Promise<Tool[]> => {
   const body = await getTools(undefined, slugs);
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
   if (response.body.hits.total.value === 0) {
     throw new NotFoundError({
@@ -59,7 +59,7 @@ export const getBySlugTools = async (slug: string): Promise<Tool> => {
   const body = await getToolBySlug(slug);
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
   if (response.body.hits.total.value === 0) {
     throw new NotFoundError({

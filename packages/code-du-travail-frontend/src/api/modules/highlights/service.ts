@@ -1,4 +1,8 @@
-import { elasticsearchClient, elasticIndex, NotFoundError } from "../../utils";
+import {
+  elasticsearchClient,
+  elasticDocumentsIndex,
+  NotFoundError,
+} from "../../utils";
 import { getHighlightsBySlug } from "./queries";
 
 export const getBySlugHighlights = async (slug: string) => {
@@ -6,7 +10,7 @@ export const getBySlugHighlights = async (slug: string) => {
 
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
 
   if (response.body.hits.hits.length === 0) {

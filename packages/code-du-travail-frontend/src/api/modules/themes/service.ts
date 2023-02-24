@@ -1,11 +1,15 @@
-import { elasticsearchClient, elasticIndex, NotFoundError } from "../../utils";
+import {
+  elasticsearchClient,
+  elasticDocumentsIndex,
+  NotFoundError,
+} from "../../utils";
 import { getThemes, getThemeBySlugQuery } from "./queries";
 
 export const getAllThemes = async () => {
   const body = getThemes();
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
   return {
     children: response.body.hits.hits.map((t) => t._source),
@@ -17,7 +21,7 @@ export const getBySlugThemes = async (slug: string) => {
 
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
 
   if (response.body.hits.hits.length === 0) {

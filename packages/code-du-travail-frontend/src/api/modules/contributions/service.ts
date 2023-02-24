@@ -1,5 +1,9 @@
 import { ElasticSearchItem } from "@socialgouv/cdtn-utils";
-import { elasticsearchClient, elasticIndex, NotFoundError } from "../../utils";
+import {
+  elasticsearchClient,
+  elasticDocumentsIndex,
+  NotFoundError,
+} from "../../utils";
 import {
   getAllGenericsContributions,
   getContributionsBySlugs,
@@ -12,7 +16,7 @@ export const getGenericContributions = async () => {
 
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
   return response.body.hits.hits
     .map(({ _source }) => _source)
@@ -29,7 +33,7 @@ export const getBySlugsContributions = async (
   const body = getContributionsBySlugs(slugs);
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
   return response.body.hits.total.value > 0
     ? response.body.hits.hits.map(({ _source }) => _source)
@@ -42,7 +46,7 @@ export const getByIdsContributions = async (
   const body = getContributionsByIds(ids);
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
   return response.body.hits.total.value > 0
     ? response.body.hits.hits.map(({ _source }) => _source)
@@ -54,7 +58,7 @@ export const getBySlugContributions = async (slug: string) => {
 
   const response = await elasticsearchClient.search({
     body,
-    index: elasticIndex,
+    index: elasticDocumentsIndex,
   });
 
   if (response.body.hits.hits.length === 0) {
