@@ -1,4 +1,8 @@
-export const getTools = (ids?: string[], slugs?: string[]) => {
+export const getTools = (
+  ids?: string[],
+  slugs?: string[],
+  cdtnIds?: string[]
+) => {
   const filter: any[] = [
     {
       bool: {
@@ -21,6 +25,9 @@ export const getTools = (ids?: string[], slugs?: string[]) => {
   }
   if (slugs) {
     filter.push({ terms: { slug: slugs } });
+  }
+  if (cdtnIds) {
+    filter.push({ terms: { cdtnId: cdtnIds } });
   }
   return {
     query: {
@@ -45,33 +52,6 @@ export const getToolBySlug = async (slug: string) => {
           { term: { isPublished: true } },
           { term: { source: "outils" } },
           { term: { slug } },
-        ],
-      },
-    },
-  ];
-  return {
-    query: {
-      bool: {
-        filter,
-      },
-    },
-    size: 200,
-    sort: [
-      {
-        order: "asc",
-      },
-    ],
-  };
-};
-
-export const getToolByIds = async (cdtnIds: string[]) => {
-  const filter = [
-    {
-      bool: {
-        must: [
-          { term: { isPublished: true } },
-          { term: { source: "outils" } },
-          { term: { cdtnId: cdtnIds } },
         ],
       },
     },
