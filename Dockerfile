@@ -43,7 +43,7 @@ COPY . ./
 
 ENV NODE_ENV=production
 
-RUN yarn build && yarn --frozen-lockfile --prod
+RUN yarn build:frontend && yarn --frozen-lockfile --prod
 
 # app
 FROM node:$NODE_VERSION
