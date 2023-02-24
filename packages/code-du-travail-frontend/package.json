@@ -50,7 +50,7 @@
     "katex": "^0.13.13",
     "lit": "2.6.1",
     "memoizee": "^0.4.15",
-    "next": "^13.1.6",
+    "next": "^13.2.1",
     "p-debounce": "^2.1.0",
     "prop-types": "^15.8.1",
     "publicodes": "1.0.0-beta.60",
