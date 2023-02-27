@@ -5,6 +5,12 @@ function linkToNewTab(iframe) {
   }
 }
 
+function setHeight(iframe) {
+  const height = iframe.contentWindow.document.body.scrollHeight || 800;
+  iframe.style.height = height + "px";
+  iframe.contentWindow.document.body.style = "overflow-y: hidden;";
+}
+
 function addWidget(info) {
   const iframePrefix = "cdtn-iframe-";
   const targetIframe = document.querySelector("#" + iframePrefix + info.name);
@@ -32,6 +38,7 @@ function addWidget(info) {
   iframe.width = "100%";
   iframe.style = "border:none;";
   iframe.onload = function () {
+    setHeight(iframe);
     iframe.contentWindow.document.body.style = "overflow-y: hidden;";
     linkToNewTab(iframe);
     iframe.contentWindow.document.addEventListener(
