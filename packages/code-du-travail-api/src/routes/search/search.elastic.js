@@ -1,5 +1,5 @@
 const sourcesFilter = require("./sourcesFilter.elastic");
-const { SOURCES } = require("@socialgouv/cdtn-sources");
+const { SOURCES } = require("@socialgouv/cdtn-utils");
 
 function getSearchBody({ query, size, sources = [] }) {
   if (sources.length === 0) {

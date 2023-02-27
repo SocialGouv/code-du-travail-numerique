@@ -1,4 +1,4 @@
-import { BlockDisplayMode } from "cdtn-types";
+import { BlockDisplayMode } from "@socialgouv/cdtn-utils";
 import { icons, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";

@@ -17,7 +17,7 @@ import styled from "styled-components";
 import { ContactModal } from "../common/ContactModal";
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
 import { PACKAGE_VERSION } from "../config";
-import { Partners } from "../home/Partners";
+import { Partners } from "../home";
 
 const { DirectionRight: DirectionRightIcon } = icons;
 

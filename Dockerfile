@@ -28,11 +28,8 @@ ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 
 # Copy all package.json
 COPY ./package.json ./package.json
-COPY ./packages/sources/package.json ./packages/sources/package.json
-COPY ./packages/slugify/package.json ./packages/slugify/package.json
 COPY ./packages/react-ui/package.json ./packages/react-ui/package.json
-COPY ./packages/cdtn-types/package.json ./packages/cdtn-types/package.json
-COPY ./packages/code-du-travail-api/package.json ./packages/code-du-travail-api/package.json
+COPY ./packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/package.json
 COPY ./packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/package.json
 COPY ./packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/package.json
 
@@ -46,7 +43,7 @@ COPY . ./
 
 ENV NODE_ENV=production
 
-RUN yarn build && yarn --frozen-lockfile --prod
+RUN yarn build:frontend && yarn --frozen-lockfile --prod
 
 # app
 FROM node:$NODE_VERSION
@@ -56,6 +53,8 @@ ENV NODE_ENV=production
 WORKDIR /app
 
 COPY --from=dist . /app/
+
+RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R node:node /app/packages/code-du-travail-frontend/.next
 
 USER 1000
 
