@@ -371,7 +371,7 @@ exports[`<Theme /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-gukea gwhdUi fgVgvL"
+                class="sc-lbVpMG sc-gukea fqAvkB fgVgvL"
               >
                 <li>
                   <a
@@ -451,7 +451,7 @@ exports[`<Theme /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-gukea gwhdUi fgVgvL"
+                class="sc-lbVpMG sc-gukea fqAvkB fgVgvL"
               >
                 <li>
                   <button
@@ -496,7 +496,7 @@ exports[`<Theme /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-gukea gwhdUi fgVgvL"
+                class="sc-lbVpMG sc-gukea fqAvkB fgVgvL"
               >
                 <li>
                   <a

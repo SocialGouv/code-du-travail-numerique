@@ -2730,7 +2730,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-ifSILs gwhdUi fBVfBs"
+                class="sc-lbVpMG sc-ifSILs fqAvkB fBVfBs"
               >
                 <li>
                   <a
@@ -2810,7 +2810,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-ifSILs gwhdUi fBVfBs"
+                class="sc-lbVpMG sc-ifSILs fqAvkB fBVfBs"
               >
                 <li>
                   <button
@@ -2855,7 +2855,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-ifSILs gwhdUi fBVfBs"
+                class="sc-lbVpMG sc-ifSILs fqAvkB fBVfBs"
               >
                 <li>
                   <a

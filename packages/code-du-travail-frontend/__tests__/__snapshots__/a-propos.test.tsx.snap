@@ -431,7 +431,7 @@ exports[`<About /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-cVtpRj gwhdUi bVtHNH"
+                class="sc-lbVpMG sc-cVtpRj fqAvkB bVtHNH"
               >
                 <li>
                   <a
@@ -511,7 +511,7 @@ exports[`<About /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-cVtpRj gwhdUi bVtHNH"
+                class="sc-lbVpMG sc-cVtpRj fqAvkB bVtHNH"
               >
                 <li>
                   <button
@@ -556,7 +556,7 @@ exports[`<About /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-cVtpRj gwhdUi bVtHNH"
+                class="sc-lbVpMG sc-cVtpRj fqAvkB bVtHNH"
               >
                 <li>
                   <a

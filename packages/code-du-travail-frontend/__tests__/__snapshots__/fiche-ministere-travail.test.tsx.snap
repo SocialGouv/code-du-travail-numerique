@@ -787,7 +787,7 @@ exports[`<FicheMT /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-fFRahO gwhdUi dIzmEO"
+                class="sc-lbVpMG sc-fFRahO fqAvkB dIzmEO"
               >
                 <li>
                   <a
@@ -867,7 +867,7 @@ exports[`<FicheMT /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-fFRahO gwhdUi dIzmEO"
+                class="sc-lbVpMG sc-fFRahO fqAvkB dIzmEO"
               >
                 <li>
                   <button
@@ -912,7 +912,7 @@ exports[`<FicheMT /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-fFRahO gwhdUi dIzmEO"
+                class="sc-lbVpMG sc-fFRahO fqAvkB dIzmEO"
               >
                 <li>
                   <a
