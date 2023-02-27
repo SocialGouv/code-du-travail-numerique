@@ -35,8 +35,8 @@ describe("Vérification des références juridiques pour la CC 1996", () => {
       expect(result).toEqual(
         expect.arrayContaining([
           {
-            article: "Article 7 de l'Annexe Cadres",
-            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106401?idConteneur=KALICONT000005635528",
+            article: "Article 6 de l'Annexe Cadres",
+            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041761357?idConteneur=KALICONT000005635528&origin=list#KALIARTI0000417613577",
           },
           {
             article: "Article 11",
