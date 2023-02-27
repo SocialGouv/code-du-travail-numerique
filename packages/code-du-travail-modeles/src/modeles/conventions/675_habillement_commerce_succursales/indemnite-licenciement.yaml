@@ -3,8 +3,8 @@ contrat salarié . convention collective . habillement commerce succursales . in
   valeur: oui
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement:
-  titre: Le licenciement fait suite à un licenciement collectif dû à des difficultés économiques caractérisées
-  question: Le licenciement fait-il suite à un licenciement collectif dû à des difficultés économiques caractérisées?
+  titre: Le licenciement est un licenciement économique collectif
+  question: Le licenciement est-il un licenciement économique collectif ?
   cdtn:
     type: oui-non
 
@@ -20,8 +20,8 @@ contrat salarié . convention collective . habillement commerce succursales . in
   cdtn:
     type: liste
     valeurs:
-      ETAM: "'ETAM'"
-      Ingénieurs et cadres: "'Ingénieurs et cadres'"
+      Employés: "'Employés'"
+      Agents de maîtrise: "'Agents de maîtrise'"
       Chargés d'enquête intermittents: "'Chargés d'enquête intermittents'"
 
 # Formules
