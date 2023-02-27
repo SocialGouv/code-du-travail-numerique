@@ -1,11 +1,11 @@
-export function slugify(v: string) {
+export function slugify(text: string) {
   const a =
     "àáäâãåăæąçćčđďèéěėëêęğǵḧìíïîįłḿǹńňñòóöôøṕŕřßşśšșťțùúüûǘůűūųẃẍÿýźžż·/_:;()";
   const b =
     "aaaaaaaaacccddeeeeeeegghiiiiilmnnnnoooooprrsssssttuuuuuuuuuwxyyzzz-------";
   const p = new RegExp(`[${a}]`, "g");
 
-  return v
+  return text
     .toString()
     .toLowerCase()
     .replace(/\s+/g, "-") // Replace spaces with -

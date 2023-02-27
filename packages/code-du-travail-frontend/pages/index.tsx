@@ -28,6 +28,7 @@ const Home = ({
     )}
     <Tools tools={tools} />
     <HomeSlice
+      sectionId="home-modeles-de-courriers"
       title="Modèles de documents"
       subtitle="Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
       triggerName="Voir tous les modèles de documents"
@@ -35,6 +36,7 @@ const Home = ({
       content={modeles as ListLinkItemProps[]}
     />
     <HomeSlice
+      sectionId="home-fiches-pratiques"
       title="Vos fiches pratiques"
       subtitle="Obtenez une réponse personnalisée selon votre convention collective"
       triggerName="Voir toutes les fiches pratiques"
@@ -42,6 +44,7 @@ const Home = ({
       content={contributions as ListLinkItemProps[]}
     />
     <HomeSlice
+      sectionId="home-convention-collective"
       title="Votre convention collective"
       subtitle="Retrouvez les questions-réponses fréquentes organisées par thème pour votre convention collective"
       triggerName="Voir toutes les conventions collectives"

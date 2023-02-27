@@ -13,11 +13,12 @@ type Props = {
   subtitle: string;
   triggerName: string;
   triggerLink: string;
+  sectionId: string;
 };
 
 export const HomeSlice = (props: Props) => {
   return (
-    <Section>
+    <Section id={props.sectionId}>
       <Container>
         <PageTitle as="h2" subtitle={props.subtitle} stripe="left">
           {props.title}
