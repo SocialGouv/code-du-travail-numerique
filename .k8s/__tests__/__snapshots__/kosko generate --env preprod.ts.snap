@@ -367,6 +367,17 @@ spec:
             periodSeconds: 5
             initialDelaySeconds: 10
             timeoutSeconds: 15
+          env:
+            - name: ELASTIC_APM_ENVIRONMENT
+            - name: ES_INDEX_PREFIX
+              value: cdtn-preprod
+            - name: VERSION
+              value: refs/tags/v1.2.3
+          envFrom:
+            - secretRef:
+                name: www-secret
+            - configMapRef:
+                name: www-configmap
       initContainers:
         - args:
             - http://api
@@ -380,6 +391,84 @@ spec:
             requests:
               cpu: 5m
               memory: 16Mi
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/cluster-wide: 'true'
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/code-du-travail-numerique
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
+  name: www-secret
+  namespace: code-du-travail-numerique-preprod
+  labels:
+    application: code-du-travail-numerique
+    component: code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+spec:
+  encryptedData:
+    ELASTIC_APM_SECRET_TOKEN: >-
+      AgBBeMRkaP9LRKmHjuY7fcXeTR5WpEz/KQBZVf8wyOzNl8e/61dHQYDP/vN9V85DFRyYW9ofYI4y33yeNBzl0DDEX+1X00ckrdI0FuHa3Ii6moE+DYWsHUAF/BDfr3jM//Sm5EzROPl8L6Df0ir0f4W4MtCt/A3w/8DXi2wNv5cSOiIwYDlH/T8ot9Y3r9dIN/+CT4jOjizgVLIqmi5wgHhLqLziswGOS7bv07ctrdzxDNHTB47DytrsD9EhFYOtWqd2TSP76C/W295fpwCTHILmoWgxIAhMbijfxfFCNUP0rfXFr3STfp3umK0OVxAqCoBE9uD/ufwTW5y9DU+n6O6gfZyTs5P0ZktWM8Mcq5Bh3AMVUKa527QUdiMXSuYXVTHXp5w1noH0Lmzu6+Gc52tVG+5h0MgsNid7FFBipMydoCr80dXuP+GG8DkwJumEuun3olNa8smAeJAUE3VYy8NxQOCYxxHM1bXMpcc27jdc8ZvP3oBd/6N4r0u/nFC8KWNpDUFTnN5b/QAkc4vlcJ06VBSh3z6KaTpo3hsoyy9dgFZoJfUOHyz/p/fqLwMeTidAgl065JGNHzWRj9Q9+BxN844lvE3z9qocxnF9URl3ZzgDrOlFOLB44Ui/aQmLGThKrZ0gc2w8o2WRthnZWG1MBKDRThslQsWuB1GDsc0xudLgaJcG4iQm+Foms9+RSFsVULmr4s7SKFccahohwVvij7M=
+    ELASTIC_APM_SERVER_URL: >-
+      AgBNqvXJaEK4Y6aQUCNw9bqccGxo+28CGb85HL/x5drcX3JGUjxJ3UBx8zadVRhDy043rtBykGEpOCv0tBfdQWVbQjeNS3gib6WT05quRaSrrsXHP/Ry2cgQ1TIxry0ytJcdYM/GvIhlyKK35Av25guoaPLg0ymcJPaDbr6WNg/EFKYKTRfW+QmuFi/AWZo83SJnmriJEvcA5Lvk9jGiKFFGLOJjKZ2K6b2g2rMM8d3vJQGLXJ1i9kKaaS8u3nzDBqo8nL5x1Uo0KhhnFq6Pfy56Ym8H1cSn/Ro3CR0xJ2QCP4luIbM+b5LUESH5eyD5UQn617QmO01hLV5R54hDtvjCALlW9fs2cJ4Pi2BUcRa1XpreeoUfVrMf4+AF57Gqg3nhjVHhqfyILXNPua/KKAl5ucExMFCF8hG9eQ47EYtji0izP4c9T6ePCBdw2nsF9Ypvo8KsV/RUop+xPMQeLFtXn0ApM1YbkybCkn5NbcWUYLPFBV6uc/c1N7kwpcXKTOzg/U8zBoVn6MOoRG2aFiNBhRyJT6flUdETjcKu2UC3KKS53bc3V/T2Bv2s99cXZNXRZW/LqtSmBLpYpFG06ZC0fyyRl5Ij+jcFstwpE+Nteq6W9ETiRsRLbLYa7J6RmF9xvBFyJkJy78gewkOvimRiMHM1PmYTtJf4zE24Xjy/VJoE05w0optY9SqwE7FOBFT2MjGo7b5Fah5it7PoYHHt2r7ik1fk/DMKw26Pt6O9hhQRSOGk+xdbyqKJdlHaWBwK5TjIRvUX2VwnatLbnS0=
+    ELASTICSEARCH_URL: >-
+      AgCOIiDaHRKNdV8qEgKxmMTGVXbfo+K9hgpFH4E0gl4WQdbKf6TR6JxEojM4JY6C5ajQ25lAt7KKRVtrrBBCCwvSWaCSJY/wb1QtzeKFkdFhA2mPPAD2YMEfeoqLElRisTnKerTqnhMckjAR+z5rQ0B+FPNYPDbdELwQQqE25lFHLrnWYgjCRaJ4uXe5fh0KQySWuemuFrYVeikbaUYnRvR6w4nfu1oXzMIUevFD3rCu371ViR6cgA6BYPemNf42AFjuyX6lIA6DH9485f+/YCCNVybHRiJ4W2+45ciz9M2lN03kzMrXAgj7w4f8uPg9VBBkrbFN5tks1OqbqLlhur/7sUX3n/FjC5/xW95L4O8XjC90u4WFHuANmfY+t2uDmp3qpQ/xmskHV37kwb3wq6r5+67sYrx39I9OfXqpucSHboEB6nv3PuAe3M7uEGotlwHZkhraNXOKVo4Xv7M3HMWVFdWpB1OnDCl9gQnDydy0D+/Sqagcbl3xBcVxT5WLJhLs/8Yl80MmtGkWVFo/YZGLPxzCHxrMVQoZGsjUhflwBGHMxHTnxQWiT7aT+6eOk3yFmKx0sBtJkA8NY+7wXUG/Y0ZPtVme1/528CEvHH8mNRw8DD+F4ZdtE4eurf7bH52QaZxD8SCblNl5/JK/ExKQHVm70KbR4mNC4YVee1+bBXixNg/PU5i1b15qWV7xuH9l97BhRGZ+tSDF5m6rvOL9W0oE4vKJQZp6KQhMS/pXtAUHffbBikWTTrUnZOH+ZFLnbv3wONg8e1rixjbXuC67K/BA
+    ELASTICSEARCH_TOKEN_API: >-
+      AgBxNmw2Of1Jbw+qkaSIqyXQjjfvOV68UTw59sbQMW1p3cSXHzyQQtQJc4iQLPfqfTuSsxXgDac+Bq/8uhWvZfKl1sykBFvWfX8HzFfUCjSO87GTVj0K/ThTdZ/Xx9XKCjKcB79revXvzviKkOuieM90IS5Npx3QKsfdPLi1MQNEkahuRJ7E6SedOYnthGo2jGr0Io864ddREvV5vVBcnAYJ/BEHhAjSmmw22zIQO09wfsTd0pc2RiBbOKpKXm09Lbo1fce1cUhFSY5EbciMCIFDqbHb6LfpZB8Gil4g4D2X8FeZ0k5b7Hgj655cAHUcBfMBLMzdzjM5nXkpJqSkPb8c8NyyZ6Q5nmBmP5gpYrI1xtQ6hdJVirV9Q1X6b0iueTPBjtb460BBfz5RiCwcsQF20gNTwF/NAiTe2LMv34H3+VUhSpxpvDX8dkBAYsAJBRIFSlL7BWJPyM+xPBJou2QehTs3lHeVuOv5kHKTRRV18oPAQkgrtwdqz8jsTx0pI30V8ZAzB9DqC22j5sSpqa0dKK2pgx9pqspKSqLOMwUgFjel/Dj76LbdDAIKNTSBeDKCK+UcNbnwFB9iGzKkyi2J5BMZCaAD1rcyfoi1+P2YhpSUKERQRrAu0B4zFbqgA4kJx3qrpG4zJJYiuLyQZNMAuAU/Ev/18i6JfCEAU06mQ/7UFrnbGv5r3tK6SSW9hrDF+EUKQLFBqfFw9Aowu9A6kAnCaGOgRLNEf6tci7GxaPazZIy/oEaGbc39v6fkOGaG3BYwP52TSt6WxfQ=
+  template:
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/cluster-wide: 'true'
+        kapp.k14s.io/disable-default-ownership-label-rules: ''
+        kapp.k14s.io/disable-default-label-scoping-rules: ''
+        app.github.com/job: '5678'
+        app.github.com/ref: refs/tags/v1.2.3
+        app.github.com/repo: socialgouv/code-du-travail-numerique
+        app.github.com/run: '1234'
+        app.github.com/sha: '0123456'
+      name: api-secret
+      labels:
+        application: code-du-travail-numerique
+        component: code-du-travail-numerique
+        owner: code-du-travail-numerique
+        team: code-du-travail-numerique
+        cert: wildcard
+    type: Opaque
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: www-configmap
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/code-du-travail-numerique
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
+  labels:
+    application: code-du-travail-numerique
+    component: code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  namespace: code-du-travail-numerique-preprod
+data:
+  ELASTIC_APM_ACTIVE: 'false'
+  ELASTIC_APM_SERVICE_NAME: cdtn-api
+  ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME: 'true'
+  NLP_URL: https://serving-ml.fabrique.social.gouv.fr
+  NODE_ENV: production
+  PIWIK_SITE_ID: '3'
+  PIWIK_URL: https://matomo.fabrique.social.gouv.fr
 ---
 apiVersion: v1
 kind: Service

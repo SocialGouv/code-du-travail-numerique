@@ -4,7 +4,6 @@ import {
   InsertTitle,
   MoreContent,
   theme,
-  Tile,
   Title,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
@@ -13,6 +12,7 @@ import styled from "styled-components";
 
 import { blocs as blocsLabels } from "./blocs.data";
 import { trackAccordionPanelState } from "./utils";
+import { LinkedTile } from "../../common/tiles/LinkedTile";
 
 const { spacings } = theme;
 
@@ -39,7 +39,7 @@ function Articles({ blocs, containerId, convention }) {
           )}
           <Grid columns={3}>
             {articles.map(({ title, id, section }) => (
-              <Tile
+              <LinkedTile
                 key={id}
                 wide
                 target="_blank"
@@ -50,7 +50,7 @@ function Articles({ blocs, containerId, convention }) {
                 titleTagType="h3"
               >
                 {section}
-              </Tile>
+              </LinkedTile>
             ))}
           </Grid>
         </>

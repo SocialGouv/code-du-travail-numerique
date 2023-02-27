@@ -2,9 +2,8 @@
 
 exports[`<Tile /> renders a tile with a custom badge 1`] = `
 <div>
-  <a
+  <div
     class="sc-jSUZER fYeXas"
-    href="#"
   >
     <div
       class="sc-bcXHqe lmhoTQ"
@@ -37,12 +36,16 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
       class="sc-iBYQkv iFcAMU"
     >
       <div
-        class="sc-ftTHYK kvTyZc"
+        class="sc-ftTHYK cBdSwd"
       >
         <p
           class="sc-jrcTuL ivrcvT"
         >
-          Hello !
+          <a
+            href="#"
+          >
+            Hello !
+          </a>
         </p>
       </div>
     </div>
@@ -51,15 +54,14 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
     >
       There is text inside
     </div>
-  </a>
+  </div>
 </div>
 `;
 
 exports[`<Tile /> renders a tile with a stripe 1`] = `
 <div>
-  <a
+  <div
     class="sc-jSUZER fYeXas"
-    href="#"
   >
     <div
       class="sc-iBYQkv iFcAMU"
@@ -68,12 +70,16 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
         class="sc-dkrFOg fIhaAp"
       />
       <div
-        class="sc-ftTHYK kvTyZc"
+        class="sc-ftTHYK cBdSwd"
       >
         <p
           class="sc-jrcTuL ivrcvT"
         >
-          Hello !
+          <a
+            href="#"
+          >
+            Hello !
+          </a>
         </p>
       </div>
     </div>
@@ -82,15 +88,14 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
     >
       There is text inside
     </div>
-  </a>
+  </div>
 </div>
 `;
 
 exports[`<Tile /> renders a tile with an icon 1`] = `
 <div>
-  <a
+  <div
     class="sc-jSUZER fYeXas"
-    href="#"
   >
     <div
       class="sc-iBYQkv iFcAMU"
@@ -125,12 +130,16 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
         </svg>
       </div>
       <div
-        class="sc-ftTHYK kvTyZc"
+        class="sc-ftTHYK cBdSwd"
       >
         <p
           class="sc-jrcTuL ivrcvT"
         >
-          Hello !
+          <a
+            href="#"
+          >
+            Hello !
+          </a>
         </p>
       </div>
     </div>
@@ -139,26 +148,29 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
     >
       There is text inside
     </div>
-  </a>
+  </div>
 </div>
 `;
 
 exports[`<Tile /> renders a tile with text inside 1`] = `
 <div>
-  <a
+  <div
     class="sc-jSUZER fYeXas"
-    href="#"
   >
     <div
       class="sc-iBYQkv iFcAMU"
     >
       <div
-        class="sc-ftTHYK kvTyZc"
+        class="sc-ftTHYK cBdSwd"
       >
         <p
           class="sc-jrcTuL ivrcvT"
         >
-          Hello !
+          <a
+            href="#"
+          >
+            Hello !
+          </a>
         </p>
       </div>
     </div>
@@ -167,23 +179,23 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
     >
       There is text inside
     </div>
-  </a>
+  </div>
 </div>
 `;
 
-exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
+exports[`<Tile /> renders a wide tile with a subtitle 1`] = `
 <div>
-  <button
+  <div
     class="sc-jSUZER cZiRCn"
   >
     <div
       class="sc-iBYQkv iFcAMU"
     >
       <div
-        class="sc-ftTHYK kvTyZc"
+        class="sc-ftTHYK cBdSwd"
       >
         <p
-          class="sc-eDvSVe sc-pyfCe jvdTTT cebNzU"
+          class="sc-eDvSVe sc-pyfCe dBDFVj kNnkDh"
         >
           This is a theme
         </p>
@@ -199,6 +211,6 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
     >
       There is text inside
     </div>
-  </button>
+  </div>
 </div>
 `;

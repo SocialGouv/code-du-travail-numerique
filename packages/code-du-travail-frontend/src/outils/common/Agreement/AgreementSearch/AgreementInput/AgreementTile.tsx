@@ -3,15 +3,15 @@ import {
   getLabelBySource,
   getRouteBySource,
   SOURCES,
-} from "@socialgouv/cdtn-sources";
-import { Paragraph, Tile } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
+} from "@socialgouv/cdtn-utils";
+import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { Agreement } from "../../../../../conventions/Search/api/type";
 import {
   TrackingProps,
   UserAction,
 } from "../../../../ConventionCollective/types";
+import { LinkedTile } from "../../../../../common/tiles/LinkedTile";
 
 type Props = {
   agreement: Agreement;
@@ -22,23 +22,18 @@ export function AgreementTile({ agreement, onUserAction }: Props): JSX.Element {
     onUserAction(UserAction.SelectAgreement, `idcc${agreement.num.toString()}`);
   };
   return (
-    <Link
+    <LinkedTile
+      wide
+      title={`${agreement.shortTitle} IDCC${formatIdcc(agreement.num)}`}
+      subtitle={getLabelBySource(SOURCES.CCN)}
+      onClick={clickHandler}
       href={`/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`}
-      passHref
-      legacyBehavior
     >
-      <Tile
-        wide
-        title={`${agreement.shortTitle} IDCC${formatIdcc(agreement.num)}`}
-        subtitle={getLabelBySource(SOURCES.CCN)}
-        onClick={clickHandler}
-      >
-        <Paragraph noMargin>
-          Retrouvez les questions-réponses les plus fréquentes organisées par
-          thème et élaborées par le Ministère du travail concernant cette
-          convention collective
-        </Paragraph>
-      </Tile>
-    </Link>
+      <Paragraph noMargin>
+        Retrouvez les questions-réponses les plus fréquentes organisées par
+        thème et élaborées par le Ministère du travail concernant cette
+        convention collective
+      </Paragraph>
+    </LinkedTile>
   );
 }

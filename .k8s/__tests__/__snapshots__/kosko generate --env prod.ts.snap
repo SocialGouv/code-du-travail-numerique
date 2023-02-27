@@ -373,6 +373,17 @@ spec:
             periodSeconds: 5
             initialDelaySeconds: 10
             timeoutSeconds: 15
+          env:
+            - name: ELASTIC_APM_ENVIRONMENT
+            - name: ES_INDEX_PREFIX
+              value: cdtn-prod
+            - name: VERSION
+              value: refs/tags/v1.2.3
+          envFrom:
+            - secretRef:
+                name: www-secret
+            - configMapRef:
+                name: www-configmap
       initContainers:
         - args:
             - http://api
@@ -386,6 +397,79 @@ spec:
             requests:
               cpu: 5m
               memory: 16Mi
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
+  name: www-secret
+  namespace: cdtn
+  labels:
+    application: cdtn
+    component: cdtn
+    owner: cdtn
+    team: cdtn
+spec:
+  encryptedData:
+    ELASTIC_APM_SECRET_TOKEN: >-
+      AgCaJG19S1Ew042orhBEHOIzfctmb5yhjpBslibC6OZ+wf1wgqqAdVoz1SgK7bHcCLvj4eRjLS1SaHOlBtyF+chWsbUd0dxKp38OlfWMic+dFNDVGd7/VTgeBEydKEfUpfldL3WmHcWt9m8Fdvuq/EB7NxjZ0Ciy7jTo9wnCLXws+Jy87Gx6qnuIx9prQnB3KsmbcgYQsbylpJLqghOGW3THkeJUsjSxOzfqYq3qUwVJlu494TQ44ZxoXgSjq6EkSnW0SNrhTx6LsGJG7BWZP11ecHfj8746xTDiT5X3q7adHyd+a0mhxJ6Tw5j/9SzU+j7uEJJygUDdxPswF02wVgLs2ZhW3A808kSGQudqv7+rg8jU0UrBgQy2IUrcY3nUQlhNuX4uQuF90JdzBx8EaVCiVVG51ju6GiBKUms77WF+kx7D0T5gImd6tWRbJHtz9D0B0n7a3/NFjjP7QgOCn20VWMCAqc88Muka8ikTGUmJRQaKVZGKth+vEfcNYjp6cHNT3mkQaHpeMzOghVjpH0m4+ez996W2bn9WKkHxMEsIuBozfoeNrOFncJ2xOI4h0p8BpmeIy20WaeO/oX7yAJNw+JMnIPmj3PTvN7rnRiFOwIqFy4EvXaovBmv5QErlsBakHuuq6bnC2qMbDXOKSJeOuV1vLybPJV1/w/phXCck5kHSQQqF2sKpRgcPv+VDMPVW8DAidrYc775gHB8TvdEkMpU=
+    ELASTIC_APM_SERVER_URL: >-
+      AgBoJpYEUJ9WfLclF1VznZP0UrQDhvrYI6GfUVEabHd2HwSgwWLHy3Xc1hqNfHKwwJVDMZWb3Pz1MS1vkGAAe7m6YW4ykK6BQpGMLKQG8LIAjJD5JLJicSuGZhhsmwQuGkSMDaeGfnwTEy/v+wUVMtTe0ZdEaJ16Z/qIisbGjo7hCY+EasM1GohXAFglQUmFfAePyB10FxiueBuAf+30XwfRLbH3IkNaeM4qOnN7pAkzYhWZ++RePQjZjTZMw/NUhAQtx2oRrWjaCKUmkJwSlubUlhibqMxiyOi29nASgVNV6XW6FJinOscdvl3yXCVG4Hq3K6ePET34ju13xU36RJK2zL3WUO2xuDjXVD8q5LfyhbM7x+trWfbqpfy2wimMrdmThaY49V3/CunNOhsbpF96BgjJmmz0mGYlo+/7IBj5Jg9Qzp/4frpIdkg8WAaLDz2m5mmuEsx4jdXmLyYBEfYCmAWFkqJGiyFKJ/ZSc3SuRPrxyUe0NI6AXaZBBp+DI6ESWVXQZJ8q+oLLUcXNbizPE2KxNKjA78eCIXppVJtnzzqK5r6XVluyisS8ksU1Ur1TTL+mr6k0uOz2D2DRkH8TSh9GRdpkSZbaFlEyXZ4L+fkOKqOUjxV2MjOCDXOwWa9CM3LMyQSv3y8idFBwoDuEnVI6fbNGDbNd6s9905D/zKvzlZgcdOkzh/R4+nJJy/WQa0shjsUUi54bHTk1wzMNd+qyWa26Fb8buXMhTHpjiC5s99LsojDrrJcfviK09YG3tjU6xqykqKBnpJD1ikgx
+    ELASTICSEARCH_URL: >-
+      AgBK3W+fphmS+4r380ZAV7O/8ITBwNMKm/62LhRrb5hmmUzdnbFAdketPSDjIU8nbSMmydyfOG7RN1c7Q4exwW1G34IyzFoT5VD4brmPTnBAYYjS2ltv9biZJr6DgYtgyFsSBj6AayM8lKAyG/tcFwmS/n1HAZHaxHy3cZnix9XdkW8nR6AQoiIF6eBGHKY+pCgtpyed/WyOQ/vVGxIBmGAkl6iOIhArAWPvQ6Ulq8ggFHfgxa73aStxFEv6niJ4Zgqn9T2pmJVt47Z3ehn5aJyKkrCynp7P8gFaf0xrv0kjf2Lvyxsxi7SYU1mmaPUiggFkT8cKaqTUj6c0Ji1CQp4OOdX7Kjlvs+rY4mAudyOFzzTpx7YeT7kYqGUHnz6nbyKiibXNrw7lH9Y8Ge/bxXLJ9gTSYfLaRSmNM+OzWztY7b2Jqr++FezqfC6VvLrV3El3ntftQDSwGbXkH2ove869fGc4YtAEvtucqUaoE4plOCzNWQc83G7Q34x0V7wtWzKKaO5jIkZuOzDl8lNnzVI242BQM5mlKvcICOwhoze64HhXELB/fgZ48Z2gJeYWMzJnr1cGGyiuaqiczkM3eZwLl9CRFzosJZfAwn2jsyLIq4KSJebfgD4uLrA1zsLyRVM0Xxcith11oGew/3pMAgLhUmaNBjR0/2mA8eD8/WkzHxaUDh6zb70DB2aBxuHooc9ejOc7kM77d/wScb8UYuAzojqEDDl4mqxj5E4Akmr0LhP9srTS53pTMHERp5W4Yoesh6S6Ss2zX7/QDjpQqgGtLVBM4g==
+    ELASTICSEARCH_TOKEN_API: >-
+      AgClTekv2dklxJeowbm9RfmQtj/EnvlNNmuL8XNVtJGSGR+e/OQnP4NCvH1yNlMGJHAl1Um7n9qOSADjDM2Kym4c1K8bsNxwW0xKAH6HS3tqAJlDM6CkCMH8bkJC9NLIuHT1mNByE5x7XOCjCwnzCu5K7+YN84QHsgwtPii1HZ9TiE9GhPfNefe391AIdKn9rELNQaP0rTgPCjKAqNUV+I1IB8o+wI3U2r1E5VN3C3LFtwxw0hDZmhHcV6L3HNv0NhziVllXFqoyS/4nhSmPn66CQsHekrnFXwAs/EV0zwY9M9cjLjvjcx5voI9iYsU7P3Ms3J3XHvZeC2TLKYrmHUmQlOSIaA+bl3PPnXAvnMgnp/WzcMPrYV/bA71xDpudIk9EbSnMlG04K7tMKTuD5kBFDZSYhOsgIIqrr7jgZvbYKanfZ74ZzMBuIkFryiT7dIeW0E1dNYeF3KpzY1Fucn890sfaizNtn7d6b17kh97RyFT8//UmQHm/j8aQdWJjehQXvQUsiUpgm6FfIKjzstx9D15Br5M/+BNROUzwisd2hCE6fkGZrfcPOPV5ZmbYGhGBGyPTww7u+sKLNIpgxVUKKr1EKJec+8tTPaQuSYKKJRamhyErCQcPnjq+5qKlyR6sif+reMyWEgv0/dwz0hle4lAgfeTvyiqnBvEO+XxwcjLQasVl6jLYCjSJ5d0ghq1xTrAzK+6TLeivG7EZ9VeGyqQwDCCIo8oZDPB2mQ8u4SEjaaJlPP3P9jjb2G/zf3yEAVz/yXHR+soWHR0=
+  template:
+    metadata:
+      annotations:
+        kapp.k14s.io/disable-default-ownership-label-rules: ''
+        kapp.k14s.io/disable-default-label-scoping-rules: ''
+        app.github.com/job: '5678'
+        app.github.com/ref: refs/tags/v1.2.3
+        app.github.com/repo: socialgouv/cdtn
+        app.github.com/run: '1234'
+        app.github.com/sha: '0123456'
+      name: api-secret
+      labels:
+        application: cdtn
+        component: cdtn
+        owner: cdtn
+        team: cdtn
+    type: Opaque
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: www-configmap
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
+  labels:
+    application: cdtn
+    component: cdtn
+    owner: cdtn
+    team: cdtn
+  namespace: cdtn
+data:
+  ELASTIC_APM_ACTIVE: 'false'
+  ELASTIC_APM_SERVICE_NAME: cdtn-api
+  ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME: 'true'
+  NLP_URL: https://serving-ml.fabrique.social.gouv.fr
+  NODE_ENV: production
+  PIWIK_SITE_ID: '4'
+  PIWIK_URL: https://matomo.fabrique.social.gouv.fr
 ---
 apiVersion: v1
 kind: Service

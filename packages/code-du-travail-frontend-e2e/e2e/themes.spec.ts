@@ -1,4 +1,3 @@
-/* eslint-disable jest/valid-expect */
 describe("Navigation par thème", () => {
   beforeEach(() => {
     cy.visit("/themes");

@@ -10,12 +10,14 @@ type QuestionnaireProps = {
   slug: string;
   title: string;
   personnalizedTitle?: string;
+  widgetMode: boolean;
 };
 
 export const Questionnaire = ({
   slug,
   title,
   personnalizedTitle,
+  widgetMode,
 }: QuestionnaireProps) => {
   const init = useStore((state) => state.init);
   const getSlugResponses = useStore((state) => state.getSlugResponses);
@@ -40,7 +42,7 @@ export const Questionnaire = ({
         responses={slugResponses ?? previousResponses}
         withLink={!isPersonnalizedMode(slug)}
       />
-      {slug === toolSlug && <Question />}
+      {slug === toolSlug && <Question widgetMode={widgetMode} />}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-sources";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Wrapper } from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -91,9 +91,6 @@ function AgreementSearchTool({
   }
 
   useEffect(() => {
-    router.replace(`/${SOURCES.TOOLS}/convention-collective`, undefined, {
-      shallow: true,
-    });
     router.events.on("hashChangeStart", handleHashNavigation);
     return () => {
       router.events.off("hashChangeStart", handleHashNavigation);

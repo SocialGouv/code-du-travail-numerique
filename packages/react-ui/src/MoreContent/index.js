@@ -4,7 +4,7 @@ import {
   AccordionItemButton,
   AccordionItemHeading,
   AccordionItemPanel,
-} from "@maxgfr/react-accessible-accordion";
+} from "@socialgouv/react-accessible-accordion";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";

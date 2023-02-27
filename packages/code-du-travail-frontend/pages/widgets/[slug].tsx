@@ -3,16 +3,19 @@ import { GetServerSideProps } from "next";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
+import { useIframeResizer } from "../../src/common/hooks";
 
 import {
   DureePreavisLicenciement,
   DureePreavisRetraite,
+  DismissalProcess,
   fetchTool,
 } from "../../src/outils";
 
 const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": DureePreavisRetraite,
+  "procedure-licenciement": DismissalProcess,
 };
 
 interface Props {
@@ -23,12 +26,18 @@ interface Props {
 }
 
 function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
+  useIframeResizer();
   const Tool = toolsBySlug[slug];
 
   return (
-    <Container>
-      <Tool icon={icon} title={title} displayTitle={displayTitle} slug={slug} />
-
+    <StyledContainer>
+      <Tool
+        icon={icon}
+        title={title}
+        displayTitle={displayTitle}
+        slug={slug}
+        widgetMode
+      />
       <StyledFooter>
         <Link
           href="/politique-confidentialite"
@@ -43,7 +52,7 @@ function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
           </LeftLink>
         </Link>
       </StyledFooter>
-    </Container>
+    </StyledContainer>
   );
 }
 
@@ -70,6 +79,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     },
   };
 };
+
+const StyledContainer = styled(Container)`
+  padding: 0;
+  & > div:before {
+    box-shadow: none;
+  }
+`;
 
 const StyledFooter = styled.footer`
   display: flex;
