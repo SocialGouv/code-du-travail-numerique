@@ -56,7 +56,7 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
     Alors je vois "Conditions d’utilisation"
     Alors je vois "Les heures sont fixées un jour par l' employeur et le suivant par le salarié. Ils peuvent décider de regrouper tout ou partie de ces heures."
 
-    Quand j'ouvre l'accordion
+    Quand je clique sur "Voir le détail du calcul"
     Alors je vois "Boulangerie-pâtisserie (entreprises artisanales)"
     Alors je vois "Licenciement"
 
@@ -92,7 +92,7 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
     Alors je vois "Conditions d’utilisation"
     Alors je vois "Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures."
 
-    Quand j'ouvre l'accordion
+    Quand je clique sur "Voir le détail du calcul"
     Alors je vois "Personnel des cabinets d'experts-comptables et de commissaires aux comptes"
     Alors je vois "Démission"
     Alors je vois "Au moins 5 ans"

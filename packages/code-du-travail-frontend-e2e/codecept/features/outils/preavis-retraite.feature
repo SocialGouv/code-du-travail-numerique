@@ -46,7 +46,7 @@ Fonctionnalité: Outil - Préavis de retraite
     Alors je vois "Préavis de mise à la retraite"
     Alors je vois "2 mois"
 
-    Quand j'ouvre l'accordion
+    Quand je clique sur "Voir le détail du calcul"
     Alors je vois "Durée prévue par le code du travail (durée légale)"
 
   Scénario: Parcours en connaissant sa convention collective
@@ -88,7 +88,7 @@ Fonctionnalité: Outil - Préavis de retraite
     Alors je vois "Préavis de départ à la retraite"
     Alors je vois "2 mois"
 
-    Quand j'ouvre l'accordion
+    Quand je clique sur "Voir le détail du calcul"
     Alors je vois "Oui*"
     Alors je vois "Le salarié étant reconnu en tant que travailleur handicapé"
     Alors je vois "Boulangerie-pâtisserie (entreprises artisanales)"
@@ -146,7 +146,7 @@ Fonctionnalité: Outil - Préavis de retraite
     Alors je vois "Préavis de départ à la retraite"
     Alors je vois "2 mois"
 
-    Quand j'ouvre l'accordion
+    Quand je clique sur "Voir le détail du calcul"
     Alors je vois "Oui*"
     Alors je vois "Le salarié étant reconnu en tant que travailleur handicapé"
     Alors je vois "Boulangerie-pâtisserie (entreprises artisanales)"
