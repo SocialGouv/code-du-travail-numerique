@@ -6,10 +6,6 @@ on:
       - "**"
     tags-ignore:
       - v*
-  push:
-    branches:
-      - "dev"
-      - "!master"
 
 concurrency:
   cancel-in-progress: true
@@ -24,13 +20,6 @@ jobs:
         shell: bash
         run: |
           yarn add @socialgouv/kosko-charts
-      - name: Get k8s infos
-        id: k8s
-        shell: bash
-        run: |
-          RAW_BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
-          BRANCH=$(npx @socialgouv/env-slug "${RAW_BRANCH}")
-          echo "branch=$(echo ${BRANCH})" >> $GITHUB_OUTPUT
       - name: Use k8s manifests generation
         uses: SocialGouv/actions/k8s-manifests@v1
         with:
@@ -44,12 +33,8 @@ jobs:
   register-frontend:
     name: Register frontend
     runs-on: ubuntu-latest
-    needs: [manifests]
+    needs: [ manifests ]
     steps:
-      - name: Get commit sha
-        run: |
-          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
-
       - name: Download k8s manifests
         uses: actions/download-artifact@v3
         with:
@@ -57,16 +42,21 @@ jobs:
 
       - name: Get deployment url for site
         uses: mikefarah/yq@v4.30.5
-        id: url
+        id: yq_url
         with:
-          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
+          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1
 
       - name: Get api url for site
         uses: mikefarah/yq@v4.30.5
-        id: apiurl
+        id: yq_api_url
         with:
-          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | head -n 1)
+          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | head -n 1
 
+      - name: Set env
+        run: |
+          echo "API_URL=https://${{ steps.yq_api_url.outputs.result }}" >> $GITHUB_ENV
+          echo "SITE_URL=https://${{ steps.yq_url.outputs.result }}" >> $GITHUB_ENV
+          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
       - name: Register docker images
         uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
         with:
@@ -82,10 +72,9 @@ jobs:
               NEXT_PUBLIC_AZURE_CONTAINER=cdtn
               NEXT_PUBLIC_PIWIK_SITE_ID=3
               NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
-              NEXT_PUBLIC_API_URL=https://${{ steps.apiurl.outputs.result }}/api/v1
+              NEXT_PUBLIC_API_URL=${{ env.API_URL }}/api/v1
               NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
-              NEXT_PUBLIC_SITE_URL=https://${{ steps.url.outputs.result }}
-
+              NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
   register-api:
     name: Register api
     runs-on: ubuntu-latest
@@ -102,7 +91,7 @@ jobs:
   deploy:
     name: Deploy application
     runs-on: ubuntu-latest
-    needs: [ register-frontend, register-api, manifests ]
+    needs: [ register-frontend, register-api ]
     steps:
       - name: Use autodevops deployment
         uses: SocialGouv/actions/autodevops-deploy@v1
@@ -136,14 +125,17 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: manifests-dev.yml
-      - name: Get deployment url
+      - name: Get deployment url for site
         uses: mikefarah/yq@v4.30.5
-        id: url
+        id: yq_url
         with:
-          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
+          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1
+      - name: Set env
+        run: |
+          echo "SITE_URL=https://${{ steps.yq_url.outputs.result }}" >> $GITHUB_ENV
       - name: Run test e2e
         run: |
-          CODECEPT_BASEURL=https://${{ steps.url.outputs.result }} yarn test:e2e
+          CODECEPT_BASEURL=${{ env.SITE_URL }} yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v3

@@ -1,0 +1,42 @@
+{
+    "moteur-recherche": {
+        "metaTitle": "Intégrez le moteur de recherche du Code du travail numérique",
+        "metaDescription": "Intégrez le moteur de recherche du Code du travail numérique sur votre site grâce à un module (widget).",
+        "title": "Intégrez le moteur de recherche du Code du travail numérique",
+        "description": "Vous pouvez intégrer le moteur de recherche du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de faire une recherche depuis votre site dans la barre de recherche du module. Une fois la recherche lancée, cela ouvrira la page de recherche sur le site du Code du travail numérique.",
+        "shortTitle": "Moteur de recherche du Code du travail numérique",
+        "shortDescription": "Effectuer une recherche depuis votre site sur le Code du travail numérique",
+        "url": "/widget.html",
+        "id": "widget"
+    },
+    "preavis-licenciement": {
+        "metaTitle": "Intégrer l’outil de calcul du préavis de licenciement du Code du travail numérique",
+        "metaDescription": "Intégrez l’outil de calcul du préavis de licenciement du Code du travail numérique sur votre site grâce à un module (widget).",
+        "title": "Intégrer l’outil de calcul du préavis de licenciement du Code du travail numérique",
+        "description": "Vous pouvez intégrer l’outil de calcul du préavis de licenciement du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer la durée du préavis accordée au salarié en cas de licenciement. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective.",
+        "shortTitle": "Préavis de départ ou mise à la retraite",
+        "shortDescription": "Calculer la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite",
+        "url": "/widgets/preavis-licenciement",
+        "id": "preavis-licenciement"
+    },
+    "preavis-retraite": {
+        "metaTitle": "Intégrez l’outil de calcul du préavis de retraite du Code du travail numérique",
+        "metaDescription": "Intégrez l’outil de calcul du préavis de retraite du Code du travail numérique sur votre site grâce à un module (widget).",
+        "title": "Intégrez l’outil de calcul du préavis de retraite du Code du travail numérique",
+        "description": "Vous pouvez intégrer l’outil de calcul du préavis de retraite du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer la durée de préavis à respecter en cas de départ ou de mise à la retraite. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective.",
+        "shortTitle": "Préavis de licenciement",
+        "shortDescription": "Calculer la durée de préavis à respecter en cas de licenciement",
+        "url": "/widgets/preavis-retraite",
+        "id": "preavis-retraite"
+    },
+    "procedure-licenciement": {
+        "metaTitle": "Intégrez l’outil de procédure de licenciement du Code du travail numérique",
+        "metaDescription": "Intégrez l’outil de procédure de licenciement de retraite du Code du travail numérique sur votre site grâce à un module (widget).",
+        "title": "Intégrez l’outil permettant de comprendre sa procédure de licenciement",
+        "description": "Vous pouvez intégrer l’outil « comprendre sa procédure de licenciement » du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra dans un premier temps à l’utilisateur d’identifier la procédure de licenciement qui s’applique dans sa situation. Il pourra ensuite accéder à une page qui détaille les étapes de la procédure sous format infographie et texte. Des modèles de courrier téléchargeables, des simulateurs et d’autres ressources sont également associés à chacune des procédures.",
+        "shortTitle": "Comprendre sa procédure de licenciement",
+        "shortDescription": "Accédez à la procédure de licenciement qui correspond à votre situation",
+        "url": "/widgets/procedure-licenciement",
+        "id": "procedure-licenciement"
+    }
+}

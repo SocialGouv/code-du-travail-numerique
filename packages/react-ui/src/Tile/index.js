@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { Badge } from "../Badge";
 import { Stripe } from "../Stripe";
@@ -17,20 +17,18 @@ export const Tile = React.forwardRef(
       striped,
       subtitle,
       title,
+      href,
       wide,
       titleTagType,
       centerTitle,
+      target,
+      rel,
       ...props
     },
     ref
   ) => {
     return (
-      <StyledTile
-        as={props.href ? "a" : "button"}
-        ref={ref}
-        wide={wide}
-        {...props}
-      >
+      <StyledTile ref={ref} wide={wide} {...props}>
         {custom && <Badge />}
         <TopWrapper>
           {striped && <Stripe length="5rem" />}
@@ -41,9 +39,27 @@ export const Tile = React.forwardRef(
           )}
           <HeadingWrapper custom centerTitle={centerTitle}>
             {subtitle && (
-              <StyledSubtitle noTitle={!title}>{subtitle}</StyledSubtitle>
+              <StyledSubtitle>
+                {href && !title ? (
+                  <a href={href} target={target} rel={rel}>
+                    {subtitle}
+                  </a>
+                ) : (
+                  subtitle
+                )}
+              </StyledSubtitle>
             )}
-            {title && <StyledHeading as={titleTagType}>{title}</StyledHeading>}
+            {title && (
+              <StyledHeading as={titleTagType}>
+                {href ? (
+                  <a href={href} target={target} rel={rel}>
+                    {title}
+                  </a>
+                ) : (
+                  title
+                )}
+              </StyledHeading>
+            )}
           </HeadingWrapper>
         </TopWrapper>
         {children && <ChildrenWrapper>{children}</ChildrenWrapper>}
@@ -60,8 +76,10 @@ Tile.propTypes = {
   custom: PropTypes.bool,
   href: PropTypes.string,
   icon: PropTypes.elementType,
+  rel: PropTypes.string,
   striped: PropTypes.bool,
   subtitle: PropTypes.string,
+  target: PropTypes.string,
   title: PropTypes.string,
   titleTagType: PropTypes.string,
   wide: PropTypes.bool,
@@ -79,7 +97,7 @@ Tile.defaultProps = {
   wide: false,
 };
 
-const StyledTile = styled.a`
+const StyledTile = styled.div`
   position: relative;
   display: inline-flex;
   flex: 1 1; /* adding auto here breaks IE11 on card list, beware */
@@ -145,14 +163,17 @@ const HeadingWrapper = styled.div`
   align-items: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
   justify-content: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
   margin: ${({ centerTitle }) => (centerTitle ? "0" : "inherit")};
+
+  a,
+  a:hover {
+    text-decoration: none;
+  }
 `;
 
 const StyledSubtitle = styled(Subtitle)`
-  ${({ noTitle }) =>
-    noTitle &&
-    css`
-      margin-bottom: 0;
-    `}
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 const StyledHeading = styled(Heading)`
   margin: 0;

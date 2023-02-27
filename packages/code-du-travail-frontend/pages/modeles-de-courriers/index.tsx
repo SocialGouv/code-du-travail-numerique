@@ -7,9 +7,7 @@ import {
   Section,
   Select,
   theme as th,
-  Tile,
 } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
 
@@ -17,6 +15,7 @@ import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { summarize } from "../../src/search/utils";
 import { API_URL } from "../../src/config";
+import { LinkedTile } from "../../src/common/tiles/LinkedTile";
 
 const title = "Modèles de documents";
 const subtitle =
@@ -83,15 +82,15 @@ function Modeles(props) {
                 <Heading as={HeadingBlue}>{title}</Heading>
                 {items.map(({ description, slug, title }) => (
                   <StyledListItem key={slug}>
-                    <Link
+                    <LinkedTile
+                      wide
+                      custom
+                      title={title}
+                      titleTagType="h3"
                       href={`${getRouteBySource(SOURCES.LETTERS)}/${slug}`}
-                      passHref
-                      legacyBehavior
                     >
-                      <Tile wide custom title={title} titleTagType="h3">
-                        {summarize(description)}
-                      </Tile>
-                    </Link>
+                      {summarize(description)}
+                    </LinkedTile>
                   </StyledListItem>
                 ))}
               </React.Fragment>

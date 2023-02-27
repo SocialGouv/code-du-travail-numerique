@@ -31,7 +31,6 @@
     "lint": "prettier __tests__ components environments",
     "lint:fix": "yarn lint --write",
     "precommit": "lint-staged",
-    "prepush": "yarn test",
     "test": "jest",
     "test:update": "jest -u"
   },

@@ -6,11 +6,15 @@ import { Fieldset, Legend } from "@socialgouv/cdtn-ui";
 import { InfoBulle } from "../../../outils/common/InfoBulle";
 import { trackClickHelp } from "../../tracking";
 
-export const Question = () => {
+type QuestionProps = {
+  widgetMode: boolean;
+};
+
+export const Question = ({ widgetMode }: QuestionProps) => {
   const currentQuestion = useStore((state) => state.currentQuestion);
   const lastResponse = useStore((state) => state.lastResponse);
   return lastResponse?.slug ? (
-    <ShowInfo slug={lastResponse.slug}></ShowInfo>
+    <ShowInfo slug={lastResponse.slug} widgetMode={widgetMode}></ShowInfo>
   ) : (
     <Fieldset>
       <QuestionHeaderWrapper>

@@ -457,28 +457,31 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <p>
                       Il n'y a pas de procédure légale imposée pour signifier une démission. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de démission.
                     </p>
-                    <a
+                    <div
                       aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
                       class="sc-eGugkK cJzHzy sc-kiPvrU bNJyhQ no-after"
-                      href="https://www.service-public.fr/simulateur/calcul/Demission"
-                      rel="noopener noreferrer"
-                      target="_blank"
                     >
                       <div
                         class="sc-dEVLtI ijCjkg"
                       >
                         <div
-                          class="sc-brePNt jDJZCD"
+                          class="sc-brePNt dSrKNm"
                         >
                           <p
-                            class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
+                            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
                           >
                             Modèle de document
                           </p>
                           <p
                             class="sc-evzXkX dtQFbH"
                           >
-                            Lettre de démission du salarié
+                            <a
+                              href="https://www.service-public.fr/simulateur/calcul/Demission"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                            >
+                              Lettre de démission du salarié
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -488,7 +491,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         Source: 
                         Direction de l'information légale et administrative (Premier ministre)
                       </div>
-                    </a>
+                    </div>
                     <p>
                       
                   Des
@@ -1495,28 +1498,31 @@ exports[`<FicheServicePublic /> should render 1`] = `
         role="tabpanel"
       />
     </div>
-    <a
+    <div
       aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
       class="sc-eGugkK cJzHzy sc-kiPvrU bNJyhQ no-after"
-      href="https://www.service-public.fr/simulateur/calcul/Demission"
-      rel="noopener noreferrer"
-      target="_blank"
     >
       <div
         class="sc-dEVLtI ijCjkg"
       >
         <div
-          class="sc-brePNt jDJZCD"
+          class="sc-brePNt dSrKNm"
         >
           <p
-            class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
+            class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
           >
             Modèle de document
           </p>
           <p
             class="sc-evzXkX dtQFbH"
           >
-            Lettre de démission du salarié
+            <a
+              href="https://www.service-public.fr/simulateur/calcul/Demission"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Lettre de démission du salarié
+            </a>
           </p>
         </div>
       </div>
@@ -1526,7 +1532,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         Source: 
         Direction de l'information légale et administrative (Premier ministre)
       </div>
-    </a>
+    </div>
   </div>
 </div>
 `;
