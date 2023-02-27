@@ -11,8 +11,8 @@ import {
   elasticSuggestionsIndex,
 } from "../src/api/utils";
 
-import documents from "./__mocks__/documents_data.json";
-import suggestions from "./__mocks__/suggestions_data.json";
+import documents from "./data/documents_data.json";
+import suggestions from "./data/suggestions_data.json";
 
 async function main() {
   await version({ client: elasticsearchClient });
