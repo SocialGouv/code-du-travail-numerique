@@ -3,7 +3,7 @@ import React, { ForwardedRef } from "react";
 import styled from "styled-components";
 import { LinkedTile, Props } from "./LinkedTile";
 
-type CallToActionTileProps = Props & { action: string };
+type CallToActionTileProps = Props & { action?: string };
 
 export const CallToActionTile = React.forwardRef<
   HTMLAnchorElement,
@@ -16,11 +16,13 @@ export const CallToActionTile = React.forwardRef<
     <StyledTile centerTitle={centerTitle} {...props} ref={ref}>
       <TileChildren>
         {children}
-        <StyledDiv>
-          <Button variant="link" hasText>
-            {action}
-          </Button>
-        </StyledDiv>
+        {action && (
+          <StyledDiv>
+            <Button variant="link" hasText>
+              {action}
+            </Button>
+          </StyledDiv>
+        )}
       </TileChildren>
     </StyledTile>
   );

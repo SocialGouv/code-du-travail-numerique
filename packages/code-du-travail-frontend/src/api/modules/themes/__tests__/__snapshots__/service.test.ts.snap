@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Themes getAllThemes 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "label": "Embauche",
+          "slug": "embauche",
+        },
+        {
+          "label": "Contrat de travail",
+          "slug": "contrat-de-travail",
+        },
+      ],
+      "icon": "Contract",
+      "position": 1,
+      "slug": "embauche-et-contrat-de-travail",
+      "title": "Embauche et contrat de travail",
+    },
+    {
+      "children": [
+        {
+          "label": "Documents à remettre au salarié",
+          "slug": "documents-a-remettre-au-salarie",
+        },
+        {
+          "label": "Démission",
+          "slug": "demission",
+        },
+        {
+          "label": "Fin d’un CDD - CTT",
+          "slug": "fin-dun-cdd-ctt",
+        },
+        {
+          "label": "Rupture conventionnelle",
+          "slug": "rupture-conventionnelle",
+        },
+        {
+          "label": "Licenciement : droits des salariés et procédures",
+          "slug": "licenciement-droits-des-salaries-et-procedures",
+        },
+        {
+          "label": "Retraite",
+          "slug": "retraite",
+        },
+        {
+          "label": "Autres départs",
+          "slug": "autres-departs",
+        },
+      ],
+      "icon": "Depart",
+      "position": 8,
+      "slug": "depart-de-lentreprise",
+      "title": "Départ de l’entreprise",
+    },
+  ],
+}
+`;
+
+exports[`Themes getBySlugThemes 1`] = `
+{
+  "breadcrumbs": [],
+  "children": [
+    {
+      "label": "Embauche",
+      "slug": "embauche",
+    },
+    {
+      "label": "Contrat de travail",
+      "slug": "contrat-de-travail",
+    },
+  ],
+  "description": "Vous venez de trouver un travail, vous embauchez un salarié ou un apprenti ? Vous souhaitez faire une déclaration préalable à l’embauche, rédiger un contrat de travail (CDI, CDD, travail temporaire, temps plein, temps partiel) ? Retrouvez toutes nos réponses ici.  ",
+  "position": 1,
+  "refs": [
+    {
+      "cdtnId": "c87486b7f0",
+      "description": "Tout employeur, sauf s'il s'agit d'un particulier employeur, doit obligatoirement détenir plusieurs registres : registre unique du personnel, registres relatifs aux conditions du travail, registre du comité social et économique (CSE) et document unique d'évaluation des risques professionnels (DUER ou DUERP).",
+      "slug": "registres-du-personnel-obligatoires",
+      "source": "fiches_service_public",
+      "title": "Registres du personnel obligatoires",
+    },
+    {
+      "cdtnId": "59d6f71101",
+      "description": "Il assure la transparence des emplois dans chaque établissement avec l'identification des salariés, les dates d'embauche et de départ, les contrats de travail.",
+      "slug": "le-registre-unique-du-personnel",
+      "source": "page_fiche_ministere_travail",
+      "title": "Le registre unique du personnel",
+    },
+    {
+      "cdtnId": "f958c8b035",
+      "description": "Dans le contexte actuel sans précédent, les salariés inoccupés qui le souhaitent, peuvent être transférés provisoirement dans une entreprise confrontée (...)",
+      "slug": "mise-a-disposition-temporaire-de-salaries-volontaires-entre-deux-entreprises",
+      "source": "page_fiche_ministere_travail",
+      "title": "Mise à disposition temporaire de salariés volontaires entre deux entreprises",
+    },
+  ],
+  "slug": "embauche-et-contrat-de-travail",
+  "title": "Embauche et contrat de travail",
+}
+`;

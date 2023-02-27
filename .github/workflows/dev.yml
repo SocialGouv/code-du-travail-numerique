@@ -48,8 +48,8 @@ jobs:
           project: "cdtn"
           imageName: "cdtn/code-du-travail-api"
           token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "./packages/code-du-travail-api/Dockerfile"
-          dockercontext: "./packages/code-du-travail-api"
+          dockerfile: "./Dockerfile.api"
+          dockercontext: "."
 
   manifests:
     name: Dev manifests

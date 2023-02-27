@@ -20,3 +20,5 @@ jest.mock("../src/config", () => ({
   NEXT_PUBLIC_SENTRY_DSN: "https://xxxxxxx@sentry.test.com/n",
   PACKAGE_VERSION: "vX.Y.Z",
 }));
+
+global.setImmediate = jest.useRealTimers;

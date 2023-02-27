@@ -3,7 +3,7 @@ import {
   getLabelBySource,
   getRouteBySource,
   SOURCES,
-} from "@socialgouv/cdtn-sources";
+} from "@socialgouv/cdtn-utils";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { Agreement } from "../../../../../conventions/Search/api/type";

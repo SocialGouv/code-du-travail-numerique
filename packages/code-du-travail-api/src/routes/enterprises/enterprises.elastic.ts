@@ -1,4 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-sources";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export type SearchAgreementsBody = {
   _source: string[];
