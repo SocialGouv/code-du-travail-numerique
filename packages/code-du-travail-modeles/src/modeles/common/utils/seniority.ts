@@ -40,6 +40,31 @@ export const splitBySeniorityYear = (begin: Date, end: Date): YearDetail[] => {
     end: end,
   });
 };
+const JANUARY = 0;
+const DECEMBER = 11;
+export const splitBySeniorityCalendarYear = (
+  begin: Date,
+  end: Date
+): YearDetail[] => {
+  if (isAfter(begin, end)) {
+    return [];
+  }
+  let periods: YearDetail[] = [];
+  let currentYear = begin.getFullYear();
+  let nextYear = new Date(currentYear + 1, JANUARY, 1);
+  while (!isAfter(nextYear, end)) {
+    periods = periods.concat({
+      begin: new Date(currentYear, JANUARY, 1),
+      end: new Date(currentYear, DECEMBER, 31),
+    });
+    currentYear++;
+    nextYear = new Date(currentYear + 1, JANUARY, 1);
+  }
+  return periods.concat({
+    begin: new Date(currentYear, JANUARY, 1),
+    end: new Date(currentYear, DECEMBER, 31),
+  });
+};
 
 export const accumulateAbsenceByYear = (
   absences: Absence[],

@@ -9,6 +9,7 @@ export * from "./1486_bureaux_etudes_techniques";
 export * from "./1516_organismes_formation";
 export * from "./1518_education_loisirs";
 export * from "./1527_immobilier";
+export * from "./1996_pharmacie";
 export * from "./2098_personnel_presta_service_tertiaire";
 export * from "./2216_commerces_detail_alimentation";
 export * from "./2511_sport";

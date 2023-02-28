@@ -14,12 +14,29 @@ import type {
 import {
   accumulateAbsenceByYear,
   parseDate,
-  splitBySeniorityYear,
+  splitBySeniorityCalendarYear,
 } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
 
-export class Seniority2941
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC2941>
+const getTotalAbsenceNonPro = (
+  dEntree: Date,
+  dSortie: Date,
+  absencePeriods: Absence[]
+): number => {
+  const absences = absencePeriods.filter(
+    (item) => item.motif.key === MotifKeys.maladieNonPro
+  );
+  const years = splitBySeniorityCalendarYear(dEntree, dSortie);
+
+  const absencesBySeniorityYear = accumulateAbsenceByYear(absences, years);
+
+  return absencesBySeniorityYear.reduce((total, item) => {
+    return total + Math.max(item.totalAbsenceInMonth - 6, 0);
+  }, 0);
+};
+
+export class Seniority1996
+  implements ISeniority<SupportedCcIndemniteLicenciement.default>
 {
   computeSeniority({
     dateEntree,
@@ -38,7 +55,7 @@ export class Seniority2941
   }
 
   getMotifs(): Motif[] {
-    return MOTIFS_2941;
+    return MOTIFS_1996;
   }
 
   private compute(
@@ -49,46 +66,40 @@ export class Seniority2941
     const dEntree = parseDate(from);
     const dSortie = addDays(parseDate(to), 1);
 
-    const totalAbsenceWithoutProAbsence = absences.reduce((total, item) => {
-      if (item.durationInMonth === undefined) {
-        return 0;
-      }
+    const totalAbsenceNonPro = getTotalAbsenceNonPro(
+      dEntree,
+      dSortie,
+      absences
+    );
+
+    const totalAbsence = absences.reduce((total, item) => {
       const m = this.getMotifs().find((motif) => motif.key === item.motif.key);
-      if (!m) {
+      if (item.durationInMonth === undefined || !m) {
         return total;
       }
-      // Exclude maladie non pro which is compute later
-      if (m.key === MotifKeys.maladieNonPro) {
-        return 0;
+      if (item.motif.key === MotifKeys.maladieNonPro) {
+        return total;
       }
       return total + item.durationInMonth * m.value;
     }, 0);
 
-    const seniorityYears = splitBySeniorityYear(dEntree, dSortie);
-    const proAbsence = absences
-      .filter((absence) => Boolean(absence.durationInMonth))
-      .filter((absence) => {
-        const m = this.getMotifs().find(
-          (motif) => motif.key === absence.motif.key
-        );
-        return m?.key === MotifKeys.maladieNonPro;
-      });
-    const absenceProBySeniorityYear = accumulateAbsenceByYear(
-      proAbsence,
-      seniorityYears
-    );
-    const totalAbsencePro = absenceProBySeniorityYear.reduce((total, item) => {
-      return total + Math.max(item.totalAbsenceInMonth - 1, 0);
-    }, 0);
-
-    const totalAbsence = totalAbsenceWithoutProAbsence + totalAbsencePro;
     return {
-      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
+      value:
+        (differenceInMonths(dSortie, dEntree) -
+          totalAbsence -
+          totalAbsenceNonPro) /
+        12,
     };
   }
 }
 
-const MOTIFS_2941: Motif[] = LEGAL_MOTIFS.map((item) => {
+const MOTIFS_1996: Motif[] = LEGAL_MOTIFS.map((item) => {
+  if (item.key === MotifKeys.congesPaternite) {
+    return {
+      ...item,
+      value: 0,
+    };
+  }
   if (item.key === MotifKeys.maladieNonPro) {
     return {
       ...item,
