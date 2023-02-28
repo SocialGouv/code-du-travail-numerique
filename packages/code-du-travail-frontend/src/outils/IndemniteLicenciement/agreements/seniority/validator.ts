@@ -1,4 +1,7 @@
-import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import {
+  getSupportedAgreement,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { CommonInformationsStoreInput } from "../../../CommonSteps/Informations/store";
 import { AncienneteStoreInput } from "../../steps/Anciennete/store";
@@ -14,7 +17,7 @@ export const customSeniorityValidator = (
 ): any => {
   let idcc: SupportedCcIndemniteLicenciement | null = null;
   if (agreeement) {
-    idcc = `IDCC${agreeement.num}` as SupportedCcIndemniteLicenciement;
+    idcc = getSupportedAgreement(agreeement.num);
   }
   switch (idcc) {
     case SupportedCcIndemniteLicenciement.IDCC1517:

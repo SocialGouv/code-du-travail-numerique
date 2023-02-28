@@ -11,6 +11,7 @@ import { validateStep } from "./validator";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { validatorAgreement } from "../../../agreements";
 import {
+  getSupportedAgreement,
   ReferenceSalaryFactory,
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
@@ -129,7 +130,7 @@ const createSalairesStore: StoreSlice<
 
       if (agreement) {
         isAgreementValid = validatorAgreement(
-          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          getSupportedAgreement(agreement.num),
           IndemniteLicenciementStepName.Salaires,
           get,
           set
@@ -169,7 +170,7 @@ const applyGenericValidation = (
 
     if (agreement) {
       isAgreementValid = validatorAgreement(
-        `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+        getSupportedAgreement(agreement.num),
         IndemniteLicenciementStepName.Salaires,
         get,
         set

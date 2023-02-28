@@ -7,12 +7,10 @@ import { Agreement } from "../../../../conventions/Search/api/type";
 import type { Props } from "../EnterpriseSearch/EnterpriseSearch";
 import EnterpriseSearch from "../EnterpriseSearch/EnterpriseSearch";
 
-const callback: (
-  agreement: Agreement | null,
-  enterprise?: Enterprise
-) => void = () => {
-  /* nothing to do */
-};
+const callback: (agreement: Agreement | null, enterprise?: Enterprise) => void =
+  () => {
+    /* nothing to do */
+  };
 const onSelectAgreement = jest.fn(callback);
 const onUserAction = () => {
   /* dummy */
@@ -329,7 +327,6 @@ describe("EnterpriseSearch", () => {
           {
             fullySupported: true,
             idcc: selectedEnterpriseOneAgreement.conventions[0].num,
-            withoutLegal: false,
           },
         ],
       };
@@ -350,7 +347,6 @@ describe("EnterpriseSearch", () => {
           {
             fullySupported: true,
             idcc: selectedEnterpriseTwoAgreements.conventions[0].num,
-            withoutLegal: false,
           },
         ],
       };
