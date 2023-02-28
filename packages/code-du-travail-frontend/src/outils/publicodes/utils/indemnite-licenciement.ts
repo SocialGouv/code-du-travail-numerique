@@ -8,19 +8,14 @@ export const mapToPublicodesSituationForIndemniteLicenciementLegal = (
   inaptitude: boolean
 ): Record<string, string> => {
   return {
-    "contrat salarié . indemnité de licenciement": "oui",
-    "contrat salarié . indemnité de licenciement . salaire de référence": formatNumberAsString(
-      salaireRef
-    ),
-    "contrat salarié . indemnité de licenciement . ancienneté en année": formatNumberAsString(
-      seniority
-    ),
-    "contrat salarié . indemnité de licenciement . ancienneté requise en année": formatNumberAsString(
-      requiredSeniority
-    ),
-    "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": inaptitude
-      ? "oui"
-      : "non",
+    "contrat salarié . indemnité de licenciement . salaire de référence":
+      formatNumberAsString(salaireRef),
+    "contrat salarié . indemnité de licenciement . ancienneté en année":
+      formatNumberAsString(seniority),
+    "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+      formatNumberAsString(requiredSeniority),
+    "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+      inaptitude ? "oui" : "non",
   };
 };
 
@@ -31,7 +26,6 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
   return {
     ...agreementParameters,
     ...{
-      "contrat salarié . indemnité de licenciement": "oui",
       "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
         "non",
       "contrat salarié . convention collective": `'IDCC${ccn
@@ -41,29 +35,30 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
   };
 };
 
-export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues = (
-  ccn: number,
-  agreementSeniority: SeniorityResult,
-  agreementSalaireRef: number,
-  requiredSeniority: number,
-  notificationDate: string,
-  agreementParameters?: Record<string, any>
-): Record<string, string> => {
-  return mapToPublicodesSituationForIndemniteLicenciementConventionnel(ccn, {
-    ...agreementParameters,
-    ...(agreementSeniority?.extraInfos ?? {}),
-    ...{
-      "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": formatNumberAsString(
-        agreementSeniority.value
-      ),
-      "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": formatNumberAsString(
-        agreementSalaireRef
-      ),
-      "contrat salarié . indemnité de licenciement . date de notification": notificationDate,
-      "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": requiredSeniority,
-    },
-  });
-};
+export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues =
+  (
+    ccn: number,
+    agreementSeniority: SeniorityResult,
+    agreementSalaireRef: number,
+    requiredSeniority: number,
+    notificationDate: string,
+    agreementParameters?: Record<string, any>
+  ): Record<string, string> => {
+    return mapToPublicodesSituationForIndemniteLicenciementConventionnel(ccn, {
+      ...agreementParameters,
+      ...(agreementSeniority?.extraInfos ?? {}),
+      ...{
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          formatNumberAsString(agreementSeniority.value),
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          formatNumberAsString(agreementSalaireRef),
+        "contrat salarié . indemnité de licenciement . date de notification":
+          notificationDate,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          requiredSeniority,
+      },
+    });
+  };
 
 export const publicodesUnitTranslator = (value: string, unit?: string) => {
   if (!unit) return "";
