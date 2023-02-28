@@ -56,7 +56,6 @@ const dataWithSelectedAgreementNotFullySupported: Props = {
     {
       fullySupported: false,
       idcc: selectedAgreement.num,
-      withoutLegal: false,
     },
   ],
 };
@@ -68,7 +67,6 @@ const dataWithSelectedAgreementSupported: Props = {
     {
       fullySupported: true,
       idcc: selectedAgreement.num,
-      withoutLegal: false,
     },
   ],
 };

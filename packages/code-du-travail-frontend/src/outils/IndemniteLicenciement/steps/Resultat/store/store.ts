@@ -1,5 +1,6 @@
 import {
   Formula,
+  getSupportedAgreement,
   Notification,
   PublicodesIndemniteLicenciementResult,
   References,
@@ -175,7 +176,7 @@ const createResultStore: StoreSlice<
         );
 
         agreementRefSalary = getAgreementReferenceSalary(
-          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
 
@@ -192,11 +193,11 @@ const createResultStore: StoreSlice<
           .filter((v) => v !== "") as AgreementInformation[];
 
         agreementSeniority = getAgreementSeniority(
-          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
         const agreementRequiredSeniority = getAgreementRequiredSeniority(
-          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
         publicodesSituationConventionnel = publicodes.setSituation(
