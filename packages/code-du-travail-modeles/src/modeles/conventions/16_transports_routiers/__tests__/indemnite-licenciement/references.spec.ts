@@ -33,7 +33,7 @@ describe("Vérification des références juridiques pour la CC 16", () => {
             "'Non'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise":
             "'Oui'",
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -77,7 +77,7 @@ describe("Vérification des références juridiques pour la CC 16", () => {
             "'Non'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise":
             "'Oui'",
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -121,7 +121,7 @@ describe("Vérification des références juridiques pour la CC 16", () => {
             "'Oui'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise":
             "'Oui'",
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -163,7 +163,7 @@ describe("Vérification des références juridiques pour la CC 16", () => {
             "0",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien": `${"'Non'"}`,
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${"'Oui'"}`,
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -202,7 +202,7 @@ describe("Vérification des références juridiques pour la CC 16", () => {
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
             "'TAM'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${"'Oui'"}`,
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -241,7 +241,7 @@ describe("Vérification des références juridiques pour la CC 16", () => {
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
             "'Employés'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${"'Oui'"}`,
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
