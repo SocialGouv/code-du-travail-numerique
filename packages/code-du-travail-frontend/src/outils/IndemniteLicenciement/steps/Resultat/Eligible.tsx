@@ -1,4 +1,7 @@
-import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import {
+  getSupportedAgreement,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
 import React from "react";
 import { IndemniteLicenciementStepName } from "../..";
 import PubliReferences from "../../../common/PubliReferences";
@@ -126,9 +129,7 @@ export default function Eligible() {
           agreementRefSalaryInfo={
             agreement && (
               <AgreementsInjector
-                idcc={
-                  `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
-                }
+                idcc={getSupportedAgreement(agreement.num)}
                 step={IndemniteLicenciementStepName.Resultat}
               />
             )

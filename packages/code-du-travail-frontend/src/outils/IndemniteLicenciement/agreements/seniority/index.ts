@@ -11,7 +11,7 @@ import { AgreementSeniority16 } from "./16";
 import { AgreementSeniority413 } from "./413";
 
 export const getAgreementSeniority = (
-  idcc: SupportedCcIndemniteLicenciement,
+  idcc: SupportedCcIndemniteLicenciement | null,
   get: StoreApi<MainStore>["getState"]
 ): SeniorityResult => {
   const dateEntree = get().ancienneteData.input.dateEntree!;
@@ -39,7 +39,7 @@ export const getAgreementSeniority = (
 };
 
 export const getAgreementRequiredSeniority = (
-  idcc: SupportedCcIndemniteLicenciement,
+  idcc: SupportedCcIndemniteLicenciement | null,
   get: StoreApi<MainStore>["getState"]
 ): RequiredSeniorityResult => {
   const dateEntree = get().ancienneteData.input.dateEntree!;

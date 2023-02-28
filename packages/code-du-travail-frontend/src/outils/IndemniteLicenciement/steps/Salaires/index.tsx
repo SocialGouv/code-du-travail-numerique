@@ -2,7 +2,10 @@ import React from "react";
 import { useIndemniteLicenciementStore } from "../../store";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { TempsPartiel, SalaireTempsPlein, TooltipSalary } from "./components";
-import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import {
+  getSupportedAgreement,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../..";
 import { AgreementsInjector } from "../../agreements";
 import { icons } from "@socialgouv/cdtn-ui";
@@ -136,9 +139,7 @@ const StepSalaires = () => {
           {(hasSameSalary === "oui" || hasSameSalary === "non") &&
             agreement && (
               <AgreementsInjector
-                idcc={
-                  `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
-                }
+                idcc={getSupportedAgreement(agreement.num)}
                 step={IndemniteLicenciementStepName.Salaires}
               />
             )}

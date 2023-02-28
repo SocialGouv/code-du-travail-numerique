@@ -10,7 +10,7 @@ import { validateAgreement44 } from "./44-industries-chimiques";
 import { validateAgreement2609 } from "./2609-batiment-etam";
 
 const validatorAgreement = (
-  idcc: SupportedCcIndemniteLicenciement,
+  idcc: SupportedCcIndemniteLicenciement | null,
   step: IndemniteLicenciementStepName,
   get: StoreApi<any>["getState"],
   set: StoreApi<MainStore>["setState"]

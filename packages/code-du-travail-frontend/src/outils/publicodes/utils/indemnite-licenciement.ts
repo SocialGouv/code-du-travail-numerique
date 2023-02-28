@@ -1,5 +1,5 @@
 import { formatNumberAsString } from "./common";
-import { SeniorityResult } from "@socialgouv/modeles-social";
+import { formatIdcc, SeniorityResult } from "@socialgouv/modeles-social";
 
 export const mapToPublicodesSituationForIndemniteLicenciementLegal = (
   seniority: number,
@@ -28,9 +28,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
     ...{
       "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
         "non",
-      "contrat salarié . convention collective": `'IDCC${ccn
-        .toString()
-        .padStart(4, "0")}'`,
+      "contrat salarié . convention collective": `'IDCC${formatIdcc(ccn)}'`,
     },
   };
 };

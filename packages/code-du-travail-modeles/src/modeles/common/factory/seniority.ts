@@ -21,7 +21,9 @@ import { SupportedCcIndemniteLicenciement } from "../index";
 import type { ISeniority } from "../types";
 
 export class SeniorityFactory {
-  create<T extends SupportedCcIndemniteLicenciement>(idcc: T): ISeniority<T> {
+  create<T extends SupportedCcIndemniteLicenciement>(
+    idcc: T | null
+  ): ISeniority<T> {
     switch (idcc) {
       case SupportedCcIndemniteLicenciement.IDCC2511:
         return new Seniority2511();
