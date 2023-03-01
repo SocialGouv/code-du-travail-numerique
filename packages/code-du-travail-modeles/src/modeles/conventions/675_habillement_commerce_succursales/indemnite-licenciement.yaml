@@ -23,11 +23,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres:
   applicable si: catégorie = 'Cadres'
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . licenciement collectif:
-  applicable si:
-    une de ces conditions:
-      - catégorie = 'Agents de maîtrise'
-      - catégorie = 'Cadres'
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif:
   titre: Le licenciement est un licenciement économique collectif
   question: Le licenciement est-il un licenciement économique collectif ?
   cdtn:
@@ -46,6 +42,12 @@ contrat salarié . convention collective . habillement commerce succursales . in
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . collectif:
   applicable si: licenciement collectif = 'Oui'
   valeur: oui
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif:
+  titre: Le licenciement est un licenciement économique collectif
+  question: Le licenciement est-il un licenciement économique collectif ?
+  cdtn:
+    type: oui-non
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres:
   applicable si: licenciement collectif = 'Non'
@@ -214,9 +216,14 @@ contrat salarié . convention collective . habillement commerce succursales . in
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 9
   applicable si:
-    toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
-      - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age < 50 ans
+    une de ces conditions:
+      - toutes ces conditions:
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+        - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age < 50 ans
+      - toutes ces conditions:
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 20 ans
+        - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age >= 50 ans
   somme:
     - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence pour moins de 10 ans
     - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 10 ans

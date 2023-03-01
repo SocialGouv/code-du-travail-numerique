@@ -82,7 +82,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
     );
   });
 
-  describe("Agent", () => {
+  describe("Agents", () => {
     test.each`
       category                 | isCollectifFiring | age   | seniority | salary  | expectedCompensation
       ${CategoryPro675.agents} | ${false}          | ${22} | ${1}      | ${1950} | ${0}
@@ -112,10 +112,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
           {
             "contrat salarié . convention collective": "'IDCC0675'",
             "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie": `'${category}'`,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif":
+              isCollectifFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age":
               age,
-            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . licenciement collectif":
-              isCollectifFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
