@@ -150,7 +150,7 @@ exports[`<StepResult /> should render with duration 1`] = `
     D’après les éléments saisis, durant son préavis, le salarié peut s’absenter pour rechercher un emploi pendant
      : 
     <strong
-      class="sc-cLNonn sc-iJbNxu jeljMz dcxqHU"
+      class="sc-cLNonn sc-iJbNxu jeljMz csuprU"
     >
       2 heures par jour
     </strong>
