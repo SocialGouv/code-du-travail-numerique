@@ -1,37 +1,33 @@
 import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
-import { CategoryPro44 } from "../../salary";
+import { CategoryPro675 } from "../../types";
 
 const engine = new IndemniteLicenciementPublicodes(
   modelsIndemniteLicenciement,
-  "44"
+  "675"
 );
 
-describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
+describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
   describe("Défaut", () => {
     test.each`
-      category                     | isEconomicFiring | age   | seniority | salary  | expectedCompensation
-      ${CategoryPro44.ouvrier}     | ${false}         | ${45} | ${0}      | ${2500} | ${0}
-      ${CategoryPro44.techniciens} | ${false}         | ${45} | ${0}      | ${2500} | ${0}
-      ${CategoryPro44.inge}        | ${false}         | ${45} | ${0}      | ${2500} | ${0}
+      category                  | isCollectifFiring | seniority | salary  | expectedCompensation
+      ${CategoryPro675.employe} | ${false}          | ${0}      | ${2500} | ${0}
+      ${CategoryPro675.agents}  | ${false}          | ${0}      | ${2500} | ${0}
+      ${CategoryPro675.cadres}  | ${false}          | ${0}      | ${2500} | ${0}
     `(
-      "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
+      "Avec $seniority ans, catégorie $category, isCollectifFiring $isCollectifFiring et sref : $salary => $expectedCompensation €",
       ({
         category,
-        isEconomicFiring,
-        age,
+        isCollectifFiring,
         seniority,
         salary,
         expectedCompensation,
       }) => {
         const { result, missingArgs } = engine.setSituation(
           {
-            "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-              isEconomicFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-              age,
-            "contrat salarié . indemnité de licenciement": "oui",
+            "contrat salarié . convention collective": "'IDCC0675'",
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie": `'${category}'`,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . licenciement collectif":
+              isCollectifFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -48,324 +44,140 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
     );
   });
 
-  describe("Licenciement normal", () => {
-    describe("Ouvrier", () => {
-      test.each`
-        category                 | isEconomicFiring | age   | seniority | salary  | expectedCompensation
-        ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${1.25}   | ${2719} | ${0}
-        ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${1.99}   | ${2719} | ${0}
-        ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${2}      | ${2719} | ${1631.4}
-        ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${5}      | ${2719} | ${6797.5}
-        ${CategoryPro44.ouvrier} | ${false}         | ${55} | ${1.25}   | ${2719} | ${0}
-        ${CategoryPro44.ouvrier} | ${false}         | ${55} | ${2}      | ${2719} | ${1631.4}
-        ${CategoryPro44.ouvrier} | ${false}         | ${55} | ${5}      | ${2719} | ${9516.5}
-        ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${1.25}   | ${2719} | ${0}
-        ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${2}      | ${2719} | ${1631.4}
-        ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${5}      | ${2719} | ${9516.5}
-      `(
-        "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
-        ({
-          category,
-          isEconomicFiring,
-          age,
-          seniority,
-          salary,
-          expectedCompensation,
-        }) => {
-          const { result, missingArgs } = engine.setSituation(
-            {
-              "contrat salarié . convention collective": "'IDCC0044'",
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-                isEconomicFiring ? `'Oui'` : `'Non'`,
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-                age,
-              "contrat salarié . indemnité de licenciement": "oui",
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-                seniority,
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-                seniority,
-              "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-                salary,
-            },
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
-          expect(missingArgs).toEqual([]);
-          expect(result.unit?.numerators).toEqual(["€"]);
-          expect(result.value).toEqual(expectedCompensation);
-        }
-      );
-    });
-
-    describe("Technicien", () => {
-      test.each`
-        category                     | isEconomicFiring | age   | seniority | salary  | expectedCompensation
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${1.33}   | ${3140} | ${0}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${1.99}   | ${3140} | ${0}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${2}      | ${3140} | ${1884}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${3}      | ${3140} | ${2826}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${5}      | ${3140} | ${7850}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${10}     | ${3140} | ${15700}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${20}     | ${3140} | ${34540}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${1.33}   | ${3140} | ${0}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${3}      | ${3140} | ${2826}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${5}      | ${3140} | ${10990}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${10}     | ${3140} | ${18840}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${20}     | ${3140} | ${37680}
-        ${CategoryPro44.techniciens} | ${false}         | ${56} | ${1.33}   | ${3140} | ${0}
-        ${CategoryPro44.techniciens} | ${false}         | ${56} | ${3}      | ${3140} | ${2826}
-        ${CategoryPro44.techniciens} | ${false}         | ${56} | ${5}      | ${3140} | ${10990}
-        ${CategoryPro44.techniciens} | ${false}         | ${56} | ${10}     | ${3140} | ${18840}
-        ${CategoryPro44.techniciens} | ${false}         | ${56} | ${20}     | ${3140} | ${37680}
-      `(
-        "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
-        ({
-          category,
-          isEconomicFiring,
-          age,
-          seniority,
-          salary,
-          expectedCompensation,
-        }) => {
-          const { result, missingArgs } = engine.setSituation(
-            {
-              "contrat salarié . convention collective": "'IDCC0044'",
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-                isEconomicFiring ? `'Oui'` : `'Non'`,
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-                age,
-              "contrat salarié . indemnité de licenciement": "oui",
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-                seniority,
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-                seniority,
-              "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-                salary,
-            },
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
-          expect(missingArgs).toEqual([]);
-          expect(result.unit?.numerators).toEqual(["€"]);
-          expect(result.value).toEqual(expectedCompensation);
-        }
-      );
-    });
-
-    describe("Ingénieur", () => {
-      test.each`
-        category              | isEconomicFiring | age   | seniority | salary  | expectedCompensation
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${0.67}   | ${3541} | ${0}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${1.99}   | ${3541} | ${0}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${2}      | ${3541} | ${2832.8}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${2.5}    | ${3541} | ${3541}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${5}      | ${3541} | ${7082}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${10}     | ${3541} | ${14164}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${13}     | ${3541} | ${20537.8}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${17}     | ${3541} | ${30452.6}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${0.67}   | ${3541} | ${0}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${2.5}    | ${3541} | ${3541}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${5}      | ${3541} | ${7082}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${10}     | ${3541} | ${17705}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${13}     | ${3541} | ${24078.8}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${17}     | ${3541} | ${33993.6}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${0.67}   | ${3541} | ${0}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${2.5}    | ${3541} | ${3541}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${5}      | ${3541} | ${7082}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${10}     | ${3541} | ${21246}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${13}     | ${3541} | ${27619.8}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${17}     | ${3541} | ${37534.6}
-      `(
-        "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
-        ({
-          category,
-          isEconomicFiring,
-          age,
-          seniority,
-          salary,
-          expectedCompensation,
-        }) => {
-          const { result, missingArgs } = engine.setSituation(
-            {
-              "contrat salarié . convention collective": "'IDCC0044'",
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-                isEconomicFiring ? `'Oui'` : `'Non'`,
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-                age,
-              "contrat salarié . indemnité de licenciement": "oui",
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-                seniority,
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-                seniority,
-              "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-                salary,
-            },
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
-          expect(missingArgs).toEqual([]);
-          expect(result.unit?.numerators).toEqual(["€"]);
-          expect(result.value).toEqual(expectedCompensation);
-        }
-      );
-    });
+  describe("Employés", () => {
+    test.each`
+      category                  | isCollectifFiring | seniority | salary  | expectedCompensation
+      ${CategoryPro675.employe} | ${false}          | ${1}      | ${1488} | ${0}
+      ${CategoryPro675.employe} | ${false}          | ${5}      | ${1488} | ${744}
+      ${CategoryPro675.employe} | ${false}          | ${15}     | ${1488} | ${2976}
+      ${CategoryPro675.employe} | ${false}          | ${20}     | ${1488} | ${5952}
+    `(
+      "Avec $seniority ans, catégorie $category, isCollectifFiring $isCollectifFiring et sref : $salary => $expectedCompensation €",
+      ({
+        category,
+        isCollectifFiring,
+        seniority,
+        salary,
+        expectedCompensation,
+      }) => {
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC0675'",
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie": `'${category}'`,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . licenciement collectif":
+              isCollectifFiring ? `'Oui'` : `'Non'`,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        expect(missingArgs).toEqual([]);
+        expect(result.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+      }
+    );
   });
 
-  describe("Licenciement économique", () => {
-    describe("Ouvrier", () => {
-      test.each`
-        category                 | isEconomicFiring | age   | seniority | salary  | expectedCompensation
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${0.75}   | ${2500} | ${0}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${0.99}   | ${2500} | ${0}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${1}      | ${2500} | ${2500}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${2}      | ${2500} | ${5000}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${5}      | ${2500} | ${5000}
-        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${0.75}   | ${2500} | ${0}
-        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${2}      | ${2500} | ${5000}
-        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${5}      | ${2500} | ${8750}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${0.75}   | ${2500} | ${0}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${2}      | ${2500} | ${5000}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${5}      | ${2500} | ${8750}
-      `(
-        "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
-        ({
-          category,
-          isEconomicFiring,
-          age,
-          seniority,
-          salary,
-          expectedCompensation,
-        }) => {
-          const { result, missingArgs } = engine.setSituation(
-            {
-              "contrat salarié . convention collective": "'IDCC0044'",
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-                isEconomicFiring ? `'Oui'` : `'Non'`,
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-                age,
-              "contrat salarié . indemnité de licenciement": "oui",
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-                seniority,
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-                seniority,
-              "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-                salary,
-            },
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
-          expect(missingArgs).toEqual([]);
-          expect(result.unit?.numerators).toEqual(["€"]);
-          expect(result.value).toEqual(expectedCompensation);
-        }
-      );
-    });
+  describe("Agent", () => {
+    test.each`
+      category                 | isCollectifFiring | age   | seniority | salary  | expectedCompensation
+      ${CategoryPro675.agents} | ${false}          | ${22} | ${1}      | ${1950} | ${0}
+      ${CategoryPro675.agents} | ${false}          | ${22} | ${6}      | ${1950} | ${1170}
+      ${CategoryPro675.agents} | ${false}          | ${22} | ${20}     | ${1950} | ${9750}
+      ${CategoryPro675.agents} | ${false}          | ${22} | ${22}     | ${1950} | ${11310}
+      ${CategoryPro675.agents} | ${false}          | ${50} | ${1}      | ${1950} | ${0}
+      ${CategoryPro675.agents} | ${false}          | ${50} | ${6}      | ${1950} | ${1170}
+      ${CategoryPro675.agents} | ${false}          | ${50} | ${20}     | ${1950} | ${14625}
+      ${CategoryPro675.agents} | ${false}          | ${50} | ${22}     | ${1950} | ${16965}
+      ${CategoryPro675.agents} | ${true}           | ${35} | ${1}      | ${1950} | ${0}
+      ${CategoryPro675.agents} | ${true}           | ${35} | ${6}      | ${1950} | ${1170}
+      ${CategoryPro675.agents} | ${true}           | ${35} | ${20}     | ${1950} | ${9750}
+      ${CategoryPro675.agents} | ${true}           | ${35} | ${22}     | ${1950} | ${11310}
+      ${CategoryPro675.agents} | ${true}           | ${35} | ${25}     | ${1950} | ${11700}
+    `(
+      "Avec $seniority ans, catégorie $category, age $age,isCollectifFiring $isCollectifFiring et sref : $salary => $expectedCompensation €",
+      ({
+        category,
+        isCollectifFiring,
+        seniority,
+        salary,
+        age,
+        expectedCompensation,
+      }) => {
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC0675'",
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie": `'${category}'`,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age":
+              age,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . licenciement collectif":
+              isCollectifFiring ? `'Oui'` : `'Non'`,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        expect(missingArgs).toEqual([]);
+        expect(result.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+      }
+    );
+  });
 
-    describe("Technicien", () => {
-      test.each`
-        category                     | isEconomicFiring | age   | seniority | salary  | expectedCompensation
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${0.75}   | ${2500} | ${0}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${0.99}   | ${2500} | ${0}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${1}      | ${2500} | ${2500}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${2}      | ${2500} | ${5000}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${5}      | ${2500} | ${5000}
-        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${0.75}   | ${2500} | ${0}
-        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${2}      | ${2500} | ${5000}
-        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${5}      | ${2500} | ${8750}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${0.75}   | ${2500} | ${0}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${2}      | ${2500} | ${5000}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${5}      | ${2500} | ${8750}
-      `(
-        "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
-        ({
-          category,
-          isEconomicFiring,
-          age,
-          seniority,
-          salary,
-          expectedCompensation,
-        }) => {
-          const { result, missingArgs } = engine.setSituation(
-            {
-              "contrat salarié . convention collective": "'IDCC0044'",
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-                isEconomicFiring ? `'Oui'` : `'Non'`,
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-                age,
-              "contrat salarié . indemnité de licenciement": "oui",
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-                seniority,
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-                seniority,
-              "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-                salary,
-            },
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
-          expect(missingArgs).toEqual([]);
-          expect(result.unit?.numerators).toEqual(["€"]);
-          expect(result.value).toEqual(expectedCompensation);
-        }
-      );
-    });
-
-    describe("Ingénieur", () => {
-      test.each`
-        category              | isEconomicFiring | age   | seniority | salary  | expectedCompensation
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${0.75}   | ${2500} | ${0}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${0.99}   | ${2500} | ${0}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${1}      | ${2500} | ${2500}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${2}      | ${2500} | ${5000}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${5}      | ${2500} | ${5000}
-        ${CategoryPro44.inge} | ${true}          | ${52} | ${0.75}   | ${2500} | ${0}
-        ${CategoryPro44.inge} | ${true}          | ${52} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.inge} | ${true}          | ${52} | ${2}      | ${2500} | ${5000}
-        ${CategoryPro44.inge} | ${true}          | ${52} | ${5}      | ${2500} | ${10000}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${0.75}   | ${2500} | ${0}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${2}      | ${2500} | ${5000}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${5}      | ${2500} | ${10000}
-      `(
-        "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
-        ({
-          category,
-          isEconomicFiring,
-          age,
-          seniority,
-          salary,
-          expectedCompensation,
-        }) => {
-          const { result, missingArgs } = engine.setSituation(
-            {
-              "contrat salarié . convention collective": "'IDCC0044'",
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-                isEconomicFiring ? `'Oui'` : `'Non'`,
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-                age,
-              "contrat salarié . indemnité de licenciement": "oui",
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-                seniority,
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-                seniority,
-              "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-                salary,
-            },
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
-          expect(missingArgs).toEqual([]);
-          expect(result.unit?.numerators).toEqual(["€"]);
-          expect(result.value).toEqual(expectedCompensation);
-        }
-      );
-    });
+  describe("Cadres", () => {
+    test.each`
+      category                 | isCollectifFiring | age   | seniority | salary  | expectedCompensation
+      ${CategoryPro675.cadres} | ${false}          | ${35} | ${1.5}    | ${3132} | ${0}
+      ${CategoryPro675.cadres} | ${false}          | ${35} | ${4}      | ${3132} | ${1252.8}
+      ${CategoryPro675.cadres} | ${false}          | ${35} | ${5}      | ${3132} | ${1566}
+      ${CategoryPro675.cadres} | ${false}          | ${35} | ${20}     | ${3132} | ${15660}
+      ${CategoryPro675.cadres} | ${false}          | ${5}  | ${1.5}    | ${3132} | ${0}
+      ${CategoryPro675.cadres} | ${false}          | ${50} | ${4}      | ${3132} | ${1252.8}
+      ${CategoryPro675.cadres} | ${false}          | ${50} | ${5}      | ${3132} | ${1566}
+      ${CategoryPro675.cadres} | ${false}          | ${50} | ${20}     | ${3132} | ${23490}
+      ${CategoryPro675.cadres} | ${true}           | ${35} | ${1.5}    | ${3132} | ${0}
+      ${CategoryPro675.cadres} | ${true}           | ${35} | ${4}      | ${3132} | ${1252.8}
+      ${CategoryPro675.cadres} | ${true}           | ${35} | ${5}      | ${3132} | ${1566}
+      ${CategoryPro675.cadres} | ${true}           | ${35} | ${20}     | ${3132} | ${15660}
+    `(
+      "Avec $seniority ans, catégorie $category, age $age, isCollectifFiring $isCollectifFiring et sref : $salary => $expectedCompensation €",
+      ({
+        category,
+        isCollectifFiring,
+        seniority,
+        salary,
+        age,
+        expectedCompensation,
+      }) => {
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC0675'",
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie": `'${category}'`,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . age":
+              age,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . licenciement collectif":
+              isCollectifFiring ? `'Oui'` : `'Non'`,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        expect(missingArgs).toEqual([]);
+        expect(result.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+      }
+    );
   });
 });

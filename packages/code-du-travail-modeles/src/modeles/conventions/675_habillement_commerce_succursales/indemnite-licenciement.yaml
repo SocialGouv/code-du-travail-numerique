@@ -2,18 +2,8 @@ contrat salarié . convention collective . habillement commerce succursales . in
   applicable si: indemnité de licenciement
   valeur: oui
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement:
-  titre: Le licenciement est un licenciement économique collectif
-  question: Le licenciement est-il un licenciement économique collectif ?
-  cdtn:
-    type: oui-non
-
-## TYPE DE LICENCIEMENT : Autre
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . autres:
-  applicable si: type de licenciement = 'Non'
-  valeur: oui
-
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle:
+# Questions
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie:
   titre: Catégorie professionnelle
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est la catégorie professionnelle du salarié ?
@@ -24,7 +14,95 @@ contrat salarié . convention collective . habillement commerce succursales . in
       Agents de maîtrise: "'Agents de maîtrise'"
       Cadres: "'Cadres'"
 
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . employés:
+  applicable si: catégorie = 'Employés'
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents:
+  applicable si: catégorie = 'Agents de maîtrise'
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres:
+  applicable si: catégorie = 'Cadres'
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . licenciement collectif:
+  applicable si:
+    une de ces conditions:
+      - catégorie = 'Agents de maîtrise'
+      - catégorie = 'Cadres'
+  titre: Le licenciement est un licenciement économique collectif
+  question: Le licenciement est-il un licenciement économique collectif ?
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres:
+  applicable si: licenciement collectif = 'Non'
+  valeur: oui
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age:
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . collectif:
+  applicable si: licenciement collectif = 'Oui'
+  valeur: oui
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres:
+  applicable si: licenciement collectif = 'Non'
+  valeur: oui
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . age:
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . collectif:
+  applicable si: licenciement collectif = 'Oui'
+  valeur: oui
+
 # Formules
+
+## Périodes
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . jusqu'à dix ans:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 10 an
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . au delà de dix ans:
+  valeur:
+    le maximum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - 10 an
+      - 0 an
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . jusqu'à quinze ans:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 15 an
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . au delà de quinze ans:
+  valeur:
+    le maximum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - 15 an
+      - 0 an
+
+## Calculs
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence pour moins de 10 ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * jusqu'à dix ans
+      facteur: 1 / 10
+  unité: €
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux dixièmes du salaire de référence pour plus de 10 ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de dix ans
+      facteur: 2 / 10
+  unité: €
+
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un cinquième du salaire de référence:
   valeur:
     produit:
@@ -32,151 +110,275 @@ contrat salarié . convention collective . habillement commerce succursales . in
       facteur: 1 / 5
   unité: €
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un tiers du salaire de référence:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 10 ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de dix ans
+      facteur: 2 / 5
+  unité: €
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence pour moins de 10 ans avec 50%:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * jusqu'à dix ans
+      facteur: 1 / 20
+  unité: €
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 10 ans avec 50%:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de dix ans
+      facteur: 2 / 10
+  unité: €
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence:
   valeur:
     produit:
       assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-      facteur: 1 / 3
+      facteur: 1 / 10
   unité: €
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un quart du salaire de référence:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un cinquième du salaire de référence pour moins de 15 ans:
   valeur:
     produit:
-      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-      facteur: 0.25
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * jusqu'à quinze ans
+      facteur: 1 / 5
   unité: €
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . presque un tiers du salaire de référence:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 15 ans:
   valeur:
     produit:
-      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-      facteur: 0.30
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de quinze ans
+      facteur: 2 / 5
   unité: €
 
-# Etam
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . etam:
-  applicable si: catégorie professionnelle = 'ETAM'
-  valeur: oui
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un cinquième du salaire de référence pour moins de 15 ans avec 50%:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de quinze ans
+      facteur: 1 / 10
+  unité: €
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . etam . résultat conventionnel:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 15 ans avec 50%:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de quinze ans
+      facteur: 2 / 10
+  unité: €
+
+# Résultats
+
+## Employés
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . employés . résultat conventionnel entre deux et quinze ans:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année <= 15 ans
+  somme:
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence pour moins de 10 ans
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux dixièmes du salaire de référence pour plus de 10 ans
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 42: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851083?idConteneur=K
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+        - "A1 : Années d'ancienneté jusqu'à la 10ème année incluse": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . jusqu'à dix ans
+        - "A2 : Années d'ancienneté au-delà de la 10ème année": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . au delà de dix ans
+      formula: 1 / 10 * Sref * A1[ + 2 / 10 * Sref * A2]
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . employés . résultat conventionnel au delà de quinze ans:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 15 ans
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  valeur: contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un cinquième du salaire de référence
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 42: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851083?idConteneur=K
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+        - "A : Années d'ancienneté à partir de la première": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      formula: 1 / 5 * Sref * A
+
+## Agents de maîtrise
+
+### Avec autre licenciement
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . résultat conventionnel entre deux et vingt ans:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 9
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+      - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age < 50 ans
+  somme:
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence pour moins de 10 ans
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 10 ans
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 11 de l'Avenant Maîtrise: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851122?idConteneur=KALICONT000005635617
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+        - "A1 : Années d'ancienneté jusqu'à la 10ème année incluse": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . jusqu'à dix ans
+        - "A2 : Années d'ancienneté au-delà de la 10ème année": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . au delà de dix ans
+      formula: 1 / 10 * Sref * A1[ + 2 / 5 * Sref * A2]
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . résultat conventionnel au delà de vingt ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 20 ans
-  valeur: un quart du salaire de référence
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 20 ans
+      - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age >= 50 ans
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 13.5
+  somme:
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence pour moins de 10 ans
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 10 ans
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence pour moins de 10 ans avec 50%
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 10 ans avec 50%
   unité: €
   arrondi: 2 décimales
   références:
-    Article 18: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851444?idConteneur=KALICONT000005635173
-    Article 19: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851447?idConteneur=KALICONT000005635173
-    Article 12: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851428?idConteneur=KALICONT000005635173&origin=list#KALIARTI000005851428
+    Article 11 de l'Avenant Maîtrise: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851122?idConteneur=KALICONT000005635617
   cdtn:
     formule:
       explanations:
-        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: 0.25 * Sref * A
+        - "A1 : Années d'ancienneté jusqu'à la 10ème année incluse": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . jusqu'à dix ans
+        - "A2 : Années d'ancienneté au-delà de la 10ème année": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . au delà de dix ans
+      formula: 1 / 10 * Sref * A1[ + 2 / 5 * Sref * A2] + 50% * (1 / 10 * Sref * A1)[ + 50% * (2 / 5 * Sref * A2)]
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . etam . résultat conventionnel pour 20 ans et plus:
+# Avec licenciement collectif
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . collectif . résultat conventionnel au delà de deux ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 20 ans
-  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 10
-  valeur: presque un tiers du salaire de référence
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+  somme:
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence pour moins de 10 ans
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 10 ans
   unité: €
   arrondi: 2 décimales
   références:
-    Article 18: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851444?idConteneur=KALICONT000005635173
-    Article 19: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851447?idConteneur=KALICONT000005635173
-  cdtn:
-    formule:
-      explanations:
-        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: 0.30 * Sref * A
-
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . etam . résultat conventionnel pour 20 ans et plus . formul plafond:
-  applicable si: résultat conventionnel pour 20 ans et plus = indemnité de licenciement . salaire de référence conventionnel * 10
-  valeur: oui
+    Article 11 de l'Avenant Maîtrise: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851122?idConteneur=KALICONT000005635617
   cdtn:
     formule:
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: 10 * Sref
+        - "A1 : Années d'ancienneté jusqu'à la 10ème année incluse": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . jusqu'à dix ans
+        - "A2 : Années d'ancienneté au-delà de la 10ème année": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . au delà de dix ans
+      formula: 1 / 10 * Sref * A1[ + 2 / 5 * Sref * A2]
 
-# Ingénieurs et cadres
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . ingé:
-  applicable si: catégorie professionnelle = 'Ingénieurs et cadres'
-  valeur: oui
+## Cadres
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . ingé . résultat conventionnel:
+### Avec autres licenciement
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . résultat conventionnel entre deux et cinq ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année <= 5 ans
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
-  valeur: un tiers du salaire de référence
+  valeur: contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence
   unité: €
   arrondi: 2 décimales
   références:
-    Article 18: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851444?idConteneur=KALICONT000005635173
-    Article 19: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851447?idConteneur=KALICONT000005635173
-    Article 12: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851428?idConteneur=KALICONT000005635173&origin=list#KALIARTI000005851428
-  cdtn:
-    formule:
-      explanations:
-        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: 1/3 * Sref * A
-
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . ingé . résultat conventionnel . formule plafond:
-  applicable si: résultat conventionnel = indemnité de licenciement . salaire de référence conventionnel * 12
-  valeur: oui
+    Article 16 de l'Avenant Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851148?idConteneur=KALICONT000005635617
   cdtn:
     formule:
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: 12 * Sref
+        - "A : Années de présence": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      formula: 1 / 10 * Sref * A
 
-# Chargés d'enquête intermittent
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . chargés d'enquête:
-  applicable si: catégorie professionnelle = 'Chargés d'enquête intermittents'
-  valeur: oui
-
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . chargés d'enquête . résultat conventionnel:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . résultat conventionnel entre cinq et vingt ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 7
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
-  valeur: un cinquième du salaire de référence
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 5 ans
+      - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . age < 50 ans
+  somme:
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un cinquième du salaire de référence pour moins de 15 ans
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 15 ans
+  unité: €
+  arrondi: 2 décimales
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  références:
+    Article 16 de l'Avenant Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851148?idConteneur=KALICONT000005635617
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+        - "A1 : Années d'ancienneté depuis l'entrée dans l'entreprise jusqu'à 15 années révolues": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . jusqu'à quinze ans
+        - "A2 : Années d'ancienneté au delà de 15 ans" : contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . au delà de quinze ans
+      formula: 1 / 5 * Sref * A1[ + 2 / 5 * Sref * A2]
+
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . résultat conventionnel au delà de vingt ans:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 20 ans
+      - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . age >= 50 ans
+  somme:
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un cinquième du salaire de référence pour moins de 15 ans
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 15 ans
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un cinquième du salaire de référence pour moins de 15 ans avec 50%
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 15 ans avec 50%
+  unité: €
+  arrondi: 2 décimales
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  références:
+    Article 16 de l'Avenant Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851148?idConteneur=KALICONT000005635617
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+        - "A1 : Années d'ancienneté depuis l'entrée dans l'entreprise jusqu'à 15 années révolues": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . jusqu'à quinze ans
+        - "A2 : Années d'ancienneté au delà de 15 ans" : contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . au delà de quinze ans
+      formula: 1 / 5 * Sref * A1[ + 2 / 5 * Sref * A2] + 50% * (1 / 5 * Sref * A1)[ + 50% * (2 / 5 * Sref * A2)]
+
+### Avec licenciement collectif
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . collectif . résultat conventionnel entre deux et cinq ans:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année <= 5 ans
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  valeur: contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence
   unité: €
   arrondi: 2 décimales
   références:
-    Article 23 de l’Annexe IV. Enquêteurs. Accord du 16 décembre 1991: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851321?idConteneur=KALICONT000005635173
-    Article 24 de l’Annexe IV. Enquêteurs. Accord du 16 décembre 1991: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851322?idConteneur=KALICONT000005635173
-    Article 12: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851428?idConteneur=KALICONT000005635173&origin=list#KALIARTI000005851428
-  cdtn:
-    formule:
-      explanations:
-        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: 1/5 * Sref * A
-
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . chargés d'enquête . résultat conventionnel . formule plafond:
-  applicable si: résultat conventionnel = indemnité de licenciement . salaire de référence conventionnel * 7
-  valeur: oui
+    Article 16 de l'Avenant Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851148?idConteneur=KALICONT000005635617
   cdtn:
     formule:
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: 7 * Sref
+        - "A : Années de présence": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      formula: 1 / 10 * Sref * A
 
-## TYPE DE LICENCIEMENT: Refus
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . refus:
-  applicable si: type de licenciement = 'Oui'
-  valeur: oui
-
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . type de licenciement . refus . résultat conventionnel:
-  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
-  remplace: indemnité de licenciement . résultat conventionnel identique au légal
-  valeur: oui
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . collectif . résultat conventionnel au delà cinq ans:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 5 ans
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  somme:
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un cinquième du salaire de référence pour moins de 15 ans
+    - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 15 ans
+  unité: €
+  arrondi: 2 décimales
   références:
-    Article 61: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851537?idConteneur=KALICONT000005635173
-    Article 12: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851428?idConteneur=KALICONT000005635173&origin=list#KALIARTI000005851428
+    Article 16 de l'Avenant Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851148?idConteneur=KALICONT000005635617
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+        - "A1 : Années d'ancienneté depuis l'entrée dans l'entreprise jusqu'à 15 années révolues": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . jusqu'à quinze ans
+        - "A2 : Années d'ancienneté au delà de 15 ans" : contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . au delà de quinze ans
+      formula: 1 / 5 * Sref * A1[ + 2 / 5 * Sref * A2]
