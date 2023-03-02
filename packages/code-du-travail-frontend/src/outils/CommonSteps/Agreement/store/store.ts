@@ -20,9 +20,12 @@ import {
 } from "../../../../lib";
 import { pushAgreementEvents } from "../../../common/Agreement";
 import { AgreementRoute } from "../../../common/type/WizardType";
+import { isCcFullySupportedIndemniteLicenciement } from "../../../IndemniteLicenciement/common";
 
 const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
-  input: {},
+  input: {
+    isAgreementSupportedIndemniteLicenciement: true,
+  },
   error: {},
   hasBeenSubmit: false,
   isStepValid: true,
@@ -54,6 +57,8 @@ const createCommonAgreementStore: StoreSlicePublicode<
               set(
                 produce((state: CommonAgreementStoreSlice) => {
                   state.agreementData.publicodes = loadPublicodes(slug, idcc);
+                  state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
+                    isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
                 })
               );
               get().informationsFunction.generatePublicodesQuestions();
@@ -90,6 +95,8 @@ const createCommonAgreementStore: StoreSlicePublicode<
         set(
           produce((state: CommonAgreementStoreSlice) => {
             state.agreementData.publicodes = loadPublicodes(slug, idcc);
+            state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
+              isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
           })
         );
         get().informationsFunction.generatePublicodesQuestions();

@@ -83,11 +83,8 @@ const createResultStore: StoreSlice<
       const agreement = get().agreementData.input.agreement;
       const hasSelectedAgreement =
         get().agreementData.input.route !== "not-selected";
-      const isAgreementSupported = !!getSupportedCcIndemniteLicenciement().find(
-        (v) =>
-          v.fullySupported &&
-          v.idcc === get().agreementData.input.agreement?.num
-      );
+      const isAgreementSupported =
+        get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
 
       const infoWarning = getInfoWarning({
         hasSelectedAgreement,
