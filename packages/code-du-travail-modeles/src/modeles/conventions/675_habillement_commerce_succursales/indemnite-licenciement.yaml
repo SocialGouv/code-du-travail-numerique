@@ -24,6 +24,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
   applicable si: catégorie = 'Cadres'
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif:
+  applicable si: catégorie = 'Agents de maîtrise'
   titre: Le licenciement est un licenciement économique collectif
   question: Le licenciement est-il un licenciement économique collectif ?
   cdtn:
@@ -34,6 +35,10 @@ contrat salarié . convention collective . habillement commerce succursales . in
   valeur: oui
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age:
+  applicable si:
+    toutes ces conditions:
+      - catégorie = 'Agents de maîtrise'
+      - licenciement collectif = 'Non'
   titre: Âge du salarié
   question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   cdtn:
@@ -44,6 +49,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
   valeur: oui
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif:
+  applicable si: catégorie = 'Cadres'
   titre: Le licenciement est un licenciement économique collectif
   question: Le licenciement est-il un licenciement économique collectif ?
   cdtn:
@@ -54,6 +60,10 @@ contrat salarié . convention collective . habillement commerce succursales . in
   valeur: oui
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . age:
+  applicable si:
+    toutes ces conditions:
+      - catégorie = 'Cadres'
+      - licenciement collectif = 'Non'
   titre: Âge du salarié
   question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   cdtn:
