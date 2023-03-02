@@ -60,6 +60,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
           {
             "contrat salarié . convention collective": "'IDCC0675'",
             "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie": `'${category}'`,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . salaire mensuel des 3 derniers mois":
+              salary,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":

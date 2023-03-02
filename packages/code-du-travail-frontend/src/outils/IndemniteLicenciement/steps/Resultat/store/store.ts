@@ -26,7 +26,10 @@ import {
   getSupportedCcIndemniteLicenciement,
   hasNoLegalIndemnity,
 } from "../../../common";
-import { getAgreementReferenceSalary } from "../../../agreements";
+import {
+  getAgreementExtraInfoSalary,
+  getAgreementReferenceSalary,
+} from "../../../agreements";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
 import {
@@ -169,6 +172,7 @@ const createResultStore: StoreSlice<
       let agreementInformations: AgreementInformation[];
       let agreementNotifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
+      let agreementSalaryExtraInfo: Record<string, string | number> = {};
 
       if (agreement) {
         const infos = informationToSituation(
@@ -176,6 +180,11 @@ const createResultStore: StoreSlice<
         );
 
         agreementRefSalary = getAgreementReferenceSalary(
+          getSupportedAgreement(agreement.num),
+          get as StoreApi<MainStore>["getState"]
+        );
+
+        agreementSalaryExtraInfo = getAgreementExtraInfoSalary(
           getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
@@ -207,7 +216,7 @@ const createResultStore: StoreSlice<
             agreementRefSalary,
             agreementRequiredSeniority.value,
             get().ancienneteData.input.dateNotification!,
-            infos
+            { ...infos, ...agreementSalaryExtraInfo }
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         ).result;

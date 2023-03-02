@@ -22,6 +22,9 @@ export type SalaryPeriods = {
 
 export interface IReferenceSalary<T extends SupportedCcIndemniteLicenciement> {
   computeReferenceSalary: (args: ReferenceSalaryProps<T>) => number;
+  computeExtraInfo?: (
+    args: ReferenceSalaryProps<T>
+  ) => Record<string, number | string>;
 }
 
 export type ReferenceSalaryProps<T> =

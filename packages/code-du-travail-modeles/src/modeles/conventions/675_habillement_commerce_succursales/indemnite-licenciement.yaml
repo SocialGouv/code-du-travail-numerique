@@ -2,6 +2,9 @@ contrat salarié . convention collective . habillement commerce succursales . in
   applicable si: indemnité de licenciement
   valeur: oui
 
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . salaire mensuel des 3 derniers mois:
+  valeur: non
+
 # Questions
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie:
   titre: Catégorie professionnelle
@@ -183,7 +186,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
 ## Employés
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . employés . résultat conventionnel entre deux et quinze ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  plafond: salaire mensuel des 3 derniers mois * 6
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
@@ -206,7 +209,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . employés . résultat conventionnel au delà de quinze ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 15 ans
-  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  plafond: salaire mensuel des 3 derniers mois * 6
   valeur: contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un cinquième du salaire de référence
   unité: €
   arrondi: 2 décimales

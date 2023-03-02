@@ -45,4 +45,27 @@ export class ReferenceSalary675
       return Math.max(salaireMoyen12DerniersMois, salaireMoyen3DerniersMois);
     }
   }
+
+  computeExtraInfo({
+    salaires = [],
+    isAgentMaitriseOrCadre = false,
+  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0675>): Record<
+    string,
+    number | string
+  > {
+    const rankedSalaires = rankByMonthArrayDescFrench(salaires);
+    const salaryValues3DernierMois = rankedSalaires
+      .map((a) => a.value)
+      .filter(nonNullable)
+      .slice(0, 3);
+    const salaireMoyen3DerniersMois = sum(salaryValues3DernierMois) / 3;
+
+    if (!isAgentMaitriseOrCadre) {
+      return {
+        "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . salaire mensuel des 3 derniers mois":
+          salaireMoyen3DerniersMois,
+      };
+    }
+    return {};
+  }
 }
