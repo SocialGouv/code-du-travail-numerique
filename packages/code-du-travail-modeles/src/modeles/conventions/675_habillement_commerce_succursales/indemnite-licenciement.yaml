@@ -40,7 +40,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
       - catégorie = 'Agents de maîtrise'
       - licenciement collectif = 'Non'
   titre: Âge du salarié
-  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
+  question: Quel est l'âge du salarié à la date du départ de l'entreprise&nbsp;?
   cdtn:
     type: entier
 
@@ -65,7 +65,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
       - catégorie = 'Cadres'
       - licenciement collectif = 'Non'
   titre: Âge du salarié
-  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
+  question: Quel est l'âge du salarié à la date du départ de l'entreprise&nbsp;?
   cdtn:
     type: entier
 
