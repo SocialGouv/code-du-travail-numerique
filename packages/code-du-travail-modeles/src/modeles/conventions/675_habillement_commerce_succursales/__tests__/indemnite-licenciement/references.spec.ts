@@ -45,7 +45,8 @@ describe("Références juridiques pour l'indemnité conventionnel de licenciemen
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC0675'",
         "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie": `'${category}'`,
-        "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . licenciement collectif": `'Oui'`,
+        "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif": `'Oui'`,
+        "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif": `'Oui'`,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           seniority,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":

@@ -1,44 +1,35 @@
 import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
-import { CategoryPro44 } from "../../salary";
+import { CategoryPro675 } from "../../types";
 
 const engine = new IndemniteLicenciementPublicodes(
   modelsIndemniteLicenciement,
-  "44"
+  "675"
 );
 
-describe("Formule indemnité licenciement -  CC 44", () => {
-  describe("Défaut", () => {
+describe("Formule pour l'indemnité conventionnel de licenciement pour la CC 675", () => {
+  describe("Employés", () => {
     test.each`
-      category                     | isEconomicFiring | age   | seniority | expectedFormula | expectedExplanations
-      ${CategoryPro44.ouvrier}     | ${false}         | ${45} | ${0}      | ${""}           | ${[]}
-      ${CategoryPro44.techniciens} | ${false}         | ${45} | ${0}      | ${""}           | ${[]}
-      ${CategoryPro44.inge}        | ${false}         | ${45} | ${0}      | ${""}           | ${[]}
+      category                  | isCollectifFiring | seniority | expectedFormula                              | expectedExplanations
+      ${CategoryPro675.employe} | ${false}          | ${1}      | ${""}                                        | ${[]}
+      ${CategoryPro675.employe} | ${false}          | ${5}      | ${"1 / 10 * Sref * A1"}                      | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (5 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.employe} | ${false}          | ${15}     | ${"1 / 10 * Sref * A1 + 2 / 10 * Sref * A2"} | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (10 ans)", "A2 : Années d'ancienneté au-delà de la 10ème année (5 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.employe} | ${false}          | ${20}     | ${"1 / 5 * Sref * A"}                        | ${["A : Années d'ancienneté à partir de la première (20 ans)", "Sref : Salaire de référence (2000 €)"]}
     `(
-      "$#) Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring",
-      ({
-        category,
-        isEconomicFiring,
-        age,
-        seniority,
-        expectedFormula,
-        expectedExplanations,
-      }) => {
-        engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC0044'",
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-            isEconomicFiring ? `'Oui'` : `'Non'`,
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-            age,
-          "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            "1000",
-        });
-
+      "Avec $seniority ans, catégorie $category, isCollectifFiring $isCollectifFiring => $expectedFormula",
+      ({ category, seniority, expectedFormula, expectedExplanations }) => {
+        engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC0675'",
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie": `'${category}'`,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              "2000",
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
         const formule = engine.getFormule();
 
         expect(formule.formula).toEqual(expectedFormula);
@@ -47,340 +38,105 @@ describe("Formule indemnité licenciement -  CC 44", () => {
     );
   });
 
-  describe("Licenciement normal", () => {
-    describe("Ouvrier", () => {
-      test.each`
-        category                 | isEconomicFiring | age   | seniority | expectedFormula                   | expectedExplanations
-        ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${1.25}   | ${""}                             | ${[]}
-        ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${1.99}   | ${""}                             | ${[]}
-        ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${2}      | ${"3 / 10 * Sref * A"}            | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${5}      | ${"Sref + 3 / 10 * Sref * A"}     | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${false}         | ${55} | ${1.25}   | ${""}                             | ${[]}
-        ${CategoryPro44.ouvrier} | ${false}         | ${55} | ${1.99}   | ${""}                             | ${[]}
-        ${CategoryPro44.ouvrier} | ${false}         | ${55} | ${2}      | ${"3 / 10 * Sref * A"}            | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${false}         | ${55} | ${5}      | ${"2 * Sref + 3 / 10 * Sref * A"} | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${1.25}   | ${""}                             | ${[]}
-        ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${1.99}   | ${""}                             | ${[]}
-        ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${2}      | ${"3 / 10 * Sref * A"}            | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${5}      | ${"2 * Sref + 3 / 10 * Sref * A"} | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-      `(
-        "$#) Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring",
-        ({
-          category,
-          isEconomicFiring,
-          age,
-          seniority,
-          expectedFormula,
-          expectedExplanations,
-        }) => {
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-              isEconomicFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+  describe("Agents", () => {
+    test.each`
+      category                 | isCollectifFiring | age   | seniority | expectedFormula                                                                                      | expectedExplanations
+      ${CategoryPro675.agents} | ${false}          | ${22} | ${1}      | ${""}                                                                                                | ${[]}
+      ${CategoryPro675.agents} | ${false}          | ${22} | ${6}      | ${"1 / 10 * Sref * A1"}                                                                              | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (6 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.agents} | ${false}          | ${22} | ${20}     | ${"1 / 10 * Sref * A1 + 2 / 5 * Sref * A2"}                                                          | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (10 ans)", "A2 : Années d'ancienneté au-delà de la 10ème année (10 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.agents} | ${false}          | ${22} | ${22}     | ${"1 / 10 * Sref * A1 + 2 / 5 * Sref * A2"}                                                          | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (10 ans)", "A2 : Années d'ancienneté au-delà de la 10ème année (12 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.agents} | ${false}          | ${50} | ${1}      | ${""}                                                                                                | ${[]}
+      ${CategoryPro675.agents} | ${false}          | ${50} | ${6}      | ${"1 / 10 * Sref * A1"}                                                                              | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (6 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.agents} | ${false}          | ${50} | ${20}     | ${"1 / 10 * Sref * A1 + 2 / 5 * Sref * A2 + 50% * (1 / 10 * Sref * A1) + 50% * (2 / 5 * Sref * A2)"} | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (10 ans)", "A2 : Années d'ancienneté au-delà de la 10ème année (10 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.agents} | ${false}          | ${50} | ${22}     | ${"1 / 10 * Sref * A1 + 2 / 5 * Sref * A2 + 50% * (1 / 10 * Sref * A1) + 50% * (2 / 5 * Sref * A2)"} | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (10 ans)", "A2 : Années d'ancienneté au-delà de la 10ème année (12 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.agents} | ${true}           | ${35} | ${1}      | ${""}                                                                                                | ${[]}
+      ${CategoryPro675.agents} | ${true}           | ${35} | ${6}      | ${"1 / 10 * Sref * A1"}                                                                              | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (6 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.agents} | ${true}           | ${35} | ${20}     | ${"1 / 10 * Sref * A1 + 2 / 5 * Sref * A2"}                                                          | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (10 ans)", "A2 : Années d'ancienneté au-delà de la 10ème année (10 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.agents} | ${true}           | ${35} | ${22}     | ${"1 / 10 * Sref * A1 + 2 / 5 * Sref * A2"}                                                          | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (10 ans)", "A2 : Années d'ancienneté au-delà de la 10ème année (12 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.agents} | ${true}           | ${35} | ${25}     | ${"1 / 10 * Sref * A1 + 2 / 5 * Sref * A2"}                                                          | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (10 ans)", "A2 : Années d'ancienneté au-delà de la 10ème année (15 ans)", "Sref : Salaire de référence (2000 €)"]}
+    `(
+      "Avec $seniority ans, catégorie $category, age $age,isCollectifFiring $isCollectifFiring => $expectedFormula",
+      ({
+        category,
+        isCollectifFiring,
+        seniority,
+        age,
+        expectedFormula,
+        expectedExplanations,
+      }) => {
+        engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC0675'",
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie": `'${category}'`,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif":
+              isCollectifFiring ? `'Oui'` : `'Non'`,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age":
               age,
-            "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              "1000",
-          });
+              "2000",
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        const formule = engine.getFormule();
 
-          const formule = engine.getFormule();
-
-          expect(formule.formula).toEqual(expectedFormula);
-          expect(formule.explanations).toEqual(expectedExplanations);
-        }
-      );
-    });
-
-    describe("Technicien", () => {
-      test.each`
-        category                     | isEconomicFiring | age   | seniority | expectedFormula                                                              | expectedExplanations
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${1.33}   | ${""}                                                                        | ${[]}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${1.99}   | ${""}                                                                        | ${[]}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${2}      | ${"3 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${3}      | ${"3 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (3 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${5}      | ${"Sref + 3 / 10 * Sref * A1"}                                               | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${10}     | ${"Sref + 3 / 10 * Sref * A1 + 1 / 10 * Sref * A2"}                          | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (10 ans)", "A2 : A partir de 10 ans d'ancienneté : Années passées dans l'entreprise à compter de la date d'entrée (10 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${20}     | ${"Sref + 3 / 10 * Sref * A1 + 1 / 10 * Sref * A2 + 1 / 10 * Sref * A3"}     | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (20 ans)", "A2 : A partir de 10 ans d'ancienneté : Années passées dans l'entreprise à compter de la date d'entrée (20 ans)", "A3 : A partir de 20 ans d'ancienneté : Années passées dans l'entreprise à compter de la date d'entrée (20 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${1.33}   | ${""}                                                                        | ${[]}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${1.99}   | ${""}                                                                        | ${[]}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${2}      | ${"3 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${3}      | ${"3 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (3 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${5}      | ${"2 * Sref + 3 / 10 * Sref * A1"}                                           | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${10}     | ${"2 * Sref + 3 / 10 * Sref * A1 + 1 / 10 * Sref * A2"}                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (10 ans)", "A2 : A partir de 10 ans d'ancienneté : Années passées dans l'entreprise à compter de la date d'entrée (10 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${20}     | ${"2 * Sref + 3 / 10 * Sref * A1 + 1 / 10 * Sref * A2 + 1 / 10 * Sref * A3"} | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (20 ans)", "A2 : A partir de 10 ans d'ancienneté : Années passées dans l'entreprise à compter de la date d'entrée (20 ans)", "A3 : A partir de 20 ans d'ancienneté : Années passées dans l'entreprise à compter de la date d'entrée (20 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${56} | ${1.33}   | ${""}                                                                        | ${[]}
-        ${CategoryPro44.techniciens} | ${false}         | ${56} | ${1.99}   | ${""}                                                                        | ${[]}
-        ${CategoryPro44.techniciens} | ${false}         | ${56} | ${2}      | ${"3 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${56} | ${3}      | ${"3 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (3 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${56} | ${5}      | ${"2 * Sref + 3 / 10 * Sref * A1"}                                           | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${56} | ${10}     | ${"2 * Sref + 3 / 10 * Sref * A1 + 1 / 10 * Sref * A2"}                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (10 ans)", "A2 : A partir de 10 ans d'ancienneté : Années passées dans l'entreprise à compter de la date d'entrée (10 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${false}         | ${56} | ${20}     | ${"2 * Sref + 3 / 10 * Sref * A1 + 1 / 10 * Sref * A2 + 1 / 10 * Sref * A3"} | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (20 ans)", "A2 : A partir de 10 ans d'ancienneté : Années passées dans l'entreprise à compter de la date d'entrée (20 ans)", "A3 : A partir de 20 ans d'ancienneté : Années passées dans l'entreprise à compter de la date d'entrée (20 ans)", "Sref : Salaire de référence (1000 €)"]}
-      `(
-        "$#) Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring",
-        ({
-          category,
-          isEconomicFiring,
-          age,
-          seniority,
-          expectedFormula,
-          expectedExplanations,
-        }) => {
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-              isEconomicFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-              age,
-            "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              "1000",
-          });
-
-          const formule = engine.getFormule();
-
-          expect(formule.formula).toEqual(expectedFormula);
-          expect(formule.explanations).toEqual(expectedExplanations);
-        }
-      );
-    });
-
-    describe("Ingénieur", () => {
-      test.each`
-        category              | isEconomicFiring | age   | seniority | expectedFormula                                                              | expectedExplanations
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${0.67}   | ${""}                                                                        | ${[]}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${1.99}   | ${""}                                                                        | ${[]}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${2}      | ${"4 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${2.5}    | ${"4 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (2.5 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${5}      | ${"4 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${10}     | ${"4 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (10 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${13}     | ${"4 / 10 * Sref * A1 + 6 / 10 * Sref * A2"}                                 | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (10 ans)", "A2 : Années au-delà de 10 ans pour la tranche de 10 à 15 ans (3 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${40} | ${17}     | ${"4 / 10 * Sref * A1 + 6 / 10 * Sref * A2 + 8 / 10 * Sref * A3"}            | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (10 ans)", "A2 : Années au-delà de 10 ans pour la tranche de 10 à 15 ans (5 ans)", "A3 : Années au-delà de 15 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${0.67}   | ${""}                                                                        | ${[]}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${1.99}   | ${""}                                                                        | ${[]}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${2}      | ${"4 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${2.5}    | ${"4 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (2.5 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${5.01}   | ${"Sref + 4 / 10 * Sref * A1"}                                               | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (5.01 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${10}     | ${"Sref + 4 / 10 * Sref * A1"}                                               | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (10 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${13}     | ${"Sref + 4 / 10 * Sref * A1 + 6 / 10 * Sref * A2"}                          | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (10 ans)", "A2 : Années au-delà de 10 ans pour la tranche de 10 à 15 ans (3 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${48} | ${17}     | ${"Sref + 4 / 10 * Sref * A1 + 6 / 10 * Sref * A2 + 8 / 10 * Sref * A3"}     | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (10 ans)", "A2 : Années au-delà de 10 ans pour la tranche de 10 à 15 ans (5 ans)", "A3 : Années au-delà de 15 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${0.67}   | ${""}                                                                        | ${[]}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${1.99}   | ${""}                                                                        | ${[]}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${2}      | ${"4 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${2.5}    | ${"4 / 10 * Sref * A1"}                                                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (2.5 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${5.01}   | ${"2 * Sref + 4 / 10 * Sref * A1"}                                           | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (5.01 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${10}     | ${"2 * Sref + 4 / 10 * Sref * A1"}                                           | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (10 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${13}     | ${"2 * Sref + 4 / 10 * Sref * A1 + 6 / 10 * Sref * A2"}                      | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (10 ans)", "A2 : Années au-delà de 10 ans pour la tranche de 10 à 15 ans (3 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${false}         | ${58} | ${17}     | ${"2 * Sref + 4 / 10 * Sref * A1 + 6 / 10 * Sref * A2 + 8 / 10 * Sref * A3"} | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (10 ans)", "A2 : Années au-delà de 10 ans pour la tranche de 10 à 15 ans (5 ans)", "A3 : Années au-delà de 15 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-      `(
-        "$#) Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring",
-        ({
-          category,
-          isEconomicFiring,
-          age,
-          seniority,
-          expectedFormula,
-          expectedExplanations,
-        }) => {
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-              isEconomicFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-              age,
-            "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              "1000",
-          });
-
-          const formule = engine.getFormule();
-
-          expect(formule.formula).toEqual(expectedFormula);
-          expect(formule.explanations).toEqual(expectedExplanations);
-        }
-      );
-    });
+        expect(formule.formula).toEqual(expectedFormula);
+        expect(formule.explanations).toEqual(expectedExplanations);
+      }
+    );
   });
 
-  describe("Licenciement économique", () => {
-    describe("Ouvrier", () => {
-      test.each`
-        category                 | isEconomicFiring | age   | seniority | expectedFormula                   | expectedExplanations
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${0.75}   | ${""}                             | ${[]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${0.99}   | ${""}                             | ${[]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${1}      | ${"Sref"}                         | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${1.5}    | ${"Sref"}                         | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${2}      | ${"2 * Sref"}                     | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${5}      | ${"2 * Sref"}                     | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${0.75}   | ${""}                             | ${[]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${0.99}   | ${""}                             | ${[]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${1}      | ${"Sref"}                         | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${1.5}    | ${"Sref"}                         | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${2}      | ${"2 * Sref"}                     | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${5}      | ${"2 * Sref + 3 / 10 * Sref * A"} | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${0.75}   | ${""}                             | ${[]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${0.99}   | ${""}                             | ${[]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${1}      | ${"Sref"}                         | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${1.5}    | ${"Sref"}                         | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${2}      | ${"2 * Sref"}                     | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${5}      | ${"2 * Sref + 3 / 10 * Sref * A"} | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-      `(
-        "$#) Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring",
-        ({
-          category,
-          isEconomicFiring,
-          age,
-          seniority,
-          expectedFormula,
-          expectedExplanations,
-        }) => {
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-              isEconomicFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+  describe("Cadres", () => {
+    test.each`
+      category                 | isCollectifFiring | age   | seniority | expectedFormula                                                                                    | expectedExplanations
+      ${CategoryPro675.cadres} | ${false}          | ${35} | ${1.5}    | ${""}                                                                                              | ${[]}
+      ${CategoryPro675.cadres} | ${false}          | ${35} | ${4}      | ${"1 / 10 * Sref * A"}                                                                             | ${["A : Années de présence (4 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.cadres} | ${false}          | ${35} | ${5}      | ${"1 / 10 * Sref * A"}                                                                             | ${["A : Années de présence (5 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.cadres} | ${false}          | ${35} | ${20}     | ${"1 / 5 * Sref * A1 + 2 / 5 * Sref * A2"}                                                         | ${["A1 : Années d'ancienneté depuis l'entrée dans l'entreprise jusqu'à 15 années révolues (15 ans)", "A2 : Années d'ancienneté au delà de 15 ans (5 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.cadres} | ${false}          | ${5}  | ${1.5}    | ${""}                                                                                              | ${[]}
+      ${CategoryPro675.cadres} | ${false}          | ${50} | ${4}      | ${"1 / 10 * Sref * A"}                                                                             | ${["A : Années de présence (4 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.cadres} | ${false}          | ${50} | ${5}      | ${"1 / 10 * Sref * A"}                                                                             | ${["A : Années de présence (5 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.cadres} | ${false}          | ${50} | ${20}     | ${"1 / 5 * Sref * A1 + 2 / 5 * Sref * A2 + 50% * (1 / 5 * Sref * A1) + 50% * (2 / 5 * Sref * A2)"} | ${["A1 : Années d'ancienneté depuis l'entrée dans l'entreprise jusqu'à 15 années révolues (15 ans)", "A2 : Années d'ancienneté au delà de 15 ans (5 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.cadres} | ${true}           | ${35} | ${1.5}    | ${""}                                                                                              | ${[]}
+      ${CategoryPro675.cadres} | ${true}           | ${35} | ${4}      | ${"1 / 10 * Sref * A"}                                                                             | ${["A : Années de présence (4 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.cadres} | ${true}           | ${35} | ${5}      | ${"1 / 10 * Sref * A"}                                                                             | ${["A : Années de présence (5 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.cadres} | ${true}           | ${35} | ${20}     | ${"1 / 5 * Sref * A1 + 2 / 5 * Sref * A2"}                                                         | ${["A1 : Années d'ancienneté depuis l'entrée dans l'entreprise jusqu'à 15 années révolues (15 ans)", "A2 : Années d'ancienneté au delà de 15 ans (5 ans)", "Sref : Salaire de référence (2000 €)"]}
+    `(
+      "Avec $seniority ans, catégorie $category, age $age, isCollectifFiring $isCollectifFiring => $expectedFormula",
+      ({
+        category,
+        isCollectifFiring,
+        seniority,
+        age,
+        expectedFormula,
+        expectedExplanations,
+      }) => {
+        engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC0675'",
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie": `'${category}'`,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif":
+              isCollectifFiring ? `'Oui'` : `'Non'`,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . age":
               age,
-            "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
+
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              "1000",
-          });
+              "2000",
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        const formule = engine.getFormule();
 
-          const formule = engine.getFormule();
-
-          expect(formule.formula).toEqual(expectedFormula);
-          expect(formule.explanations).toEqual(expectedExplanations);
-        }
-      );
-    });
-
-    describe("Technicien", () => {
-      test.each`
-        category                     | isEconomicFiring | age   | seniority | expectedFormula                    | expectedExplanations
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${0.75}   | ${""}                              | ${[]}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${0.99}   | ${""}                              | ${[]}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${1}      | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${1.5}    | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${2}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${5}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${0.75}   | ${""}                              | ${[]}
-        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${0.99}   | ${""}                              | ${[]}
-        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${1}      | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${1.5}    | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${2}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${5}      | ${"2 * Sref + 3 / 10 * Sref * A1"} | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${0.75}   | ${""}                              | ${[]}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${0.99}   | ${""}                              | ${[]}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${1}      | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${1.5}    | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${2}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${5}      | ${"2 * Sref + 3 / 10 * Sref * A1"} | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-      `(
-        "$#) Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring",
-        ({
-          category,
-          isEconomicFiring,
-          age,
-          seniority,
-          expectedFormula,
-          expectedExplanations,
-        }) => {
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-              isEconomicFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-              age,
-            "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              "1000",
-          });
-
-          const formule = engine.getFormule();
-
-          expect(formule.formula).toEqual(expectedFormula);
-          expect(formule.explanations).toEqual(expectedExplanations);
-        }
-      );
-    });
-
-    describe("Ingénieur", () => {
-      test.each`
-        category              | isEconomicFiring | age   | seniority | expectedFormula                    | expectedExplanations
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${0.75}   | ${""}                              | ${[]}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${0.99}   | ${""}                              | ${[]}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${1}      | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${1.5}    | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${2}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${5}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${52} | ${0.75}   | ${""}                              | ${[]}
-        ${CategoryPro44.inge} | ${true}          | ${52} | ${0.99}   | ${""}                              | ${[]}
-        ${CategoryPro44.inge} | ${true}          | ${52} | ${1}      | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${52} | ${1.5}    | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${52} | ${2}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${52} | ${5}      | ${"2 * Sref + 4 / 10 * Sref * A1"} | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${0.75}   | ${""}                              | ${[]}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${0.99}   | ${""}                              | ${[]}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${1}      | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${1.5}    | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${2}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${5}      | ${"2 * Sref + 4 / 10 * Sref * A1"} | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-      `(
-        "$#) Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring",
-        ({
-          category,
-          isEconomicFiring,
-          age,
-          seniority,
-          expectedFormula,
-          expectedExplanations,
-        }) => {
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-              isEconomicFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-              age,
-            "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              "1000",
-          });
-
-          const formule = engine.getFormule();
-
-          expect(formule.formula).toEqual(expectedFormula);
-          expect(formule.explanations).toEqual(expectedExplanations);
-        }
-      );
-    });
+        expect(formule.formula).toEqual(expectedFormula);
+        expect(formule.explanations).toEqual(expectedExplanations);
+      }
+    );
   });
 });
