@@ -152,7 +152,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
 const applyGenericValidation = (
   get: StoreApi<CommonAgreementStoreSlice>["getState"],
   set: StoreApi<CommonAgreementStoreSlice>["setState"],
-  paramName: keyof CommonAgreementStoreInput,
+  paramName: any,
   value: any
 ) => {
   if (get().agreementData.hasBeenSubmit) {
