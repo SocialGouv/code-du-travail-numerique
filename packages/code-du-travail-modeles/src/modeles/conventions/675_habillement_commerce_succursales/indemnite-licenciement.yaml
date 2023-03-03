@@ -28,7 +28,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif:
   applicable si: catégorie = 'Agents de maîtrise'
-  titre: Le licenciement est un licenciement économique collectif
+  titre: Licenciement économique collectif
   question: Le licenciement est-il un licenciement économique collectif ?
   cdtn:
     type: oui-non
@@ -53,7 +53,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif:
   applicable si: catégorie = 'Cadres'
-  titre: Le licenciement est un licenciement économique collectif
+  titre: Licenciement économique collectif
   question: Le licenciement est-il un licenciement économique collectif ?
   cdtn:
     type: oui-non
