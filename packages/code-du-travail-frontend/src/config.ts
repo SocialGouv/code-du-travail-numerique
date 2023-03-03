@@ -13,8 +13,3 @@ export const SITE_URL =
 export const PACKAGE_VERSION = process.env.NEXT_PUBLIC_VERSION ?? version;
 export const PIWIK_SITE_ID = process.env.NEXT_PUBLIC_PIWIK_SITE_ID ?? "";
 export const PIWIK_URL = process.env.NEXT_PUBLIC_PIWIK_URL ?? "";
-
-export const isProdOrPreprod =
-  SITE_URL === "https://code.travail.gouv.fr" ||
-  SITE_URL ===
-    "https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr";

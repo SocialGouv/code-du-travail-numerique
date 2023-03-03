@@ -8,10 +8,9 @@ const productionNotReady: number[] = [
 
 const getSupportedCcIndemniteLicenciement = (): AgreementSupportInfo[] =>
   supportedCcn.map((item) => ({
-    fullySupported:
-      isProdOrPreprod && productionNotReady.includes(item.idcc)
-        ? false
-        : item.indemniteLicenciement,
+    fullySupported: productionNotReady.includes(item.idcc)
+      ? false
+      : item.indemniteLicenciement,
     idcc: item.idcc,
   }));
 
