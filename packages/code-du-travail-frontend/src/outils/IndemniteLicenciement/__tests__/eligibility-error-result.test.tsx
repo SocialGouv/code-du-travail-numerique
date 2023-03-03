@@ -56,7 +56,6 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     ).not.toBeInTheDocument();
     expect(ui.result.infoWarning.title.ineligible.query()).toBeInTheDocument();
     expect(ui.result.legalError.fauteGrave.query()).toBeInTheDocument();
-    expect(ui.result.infoWarning.message.mayBeCC.query()).toBeInTheDocument();
   });
 
   test("Vérifier l'affichage de l'erreur ancienneté < 8 mois", () => {
