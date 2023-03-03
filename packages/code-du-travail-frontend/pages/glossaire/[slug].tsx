@@ -27,6 +27,11 @@ interface Props {
 function Term(props: Props): JSX.Element {
   const { term, definition, references } = props;
 
+  const referrenceArrayWithoutNull = React.useMemo(
+    () => references && references.filter((ref) => ref !== null),
+    [references]
+  );
+
   return (
     <Layout>
       <Metas title={term} description={definition} />
@@ -42,27 +47,28 @@ function Term(props: Props): JSX.Element {
                     <Html>{definition}</Html>
                   </td>
                 </tr>
-                {references && references.length > 0 && (
-                  <tr>
-                    <th>Sources</th>
-                    <td>
-                      <StyledList>
-                        {references.map((url) => (
-                          <li key={url}>
-                            <A11yLink
-                              href={url}
-                              target="_blank"
-                              title="voir la référence"
-                              rel="nofollow noreferrer noopener"
-                            >
-                              {url}
-                            </A11yLink>
-                          </li>
-                        ))}
-                      </StyledList>
-                    </td>
-                  </tr>
-                )}
+                {referrenceArrayWithoutNull &&
+                  referrenceArrayWithoutNull.length > 0 && (
+                    <tr>
+                      <th>Sources</th>
+                      <td>
+                        <StyledList>
+                          {referrenceArrayWithoutNull.map((url) => (
+                            <li key={url}>
+                              <A11yLink
+                                href={url}
+                                target="_blank"
+                                title="voir la référence"
+                                rel="nofollow noreferrer noopener"
+                              >
+                                {url}
+                              </A11yLink>
+                            </li>
+                          ))}
+                        </StyledList>
+                      </td>
+                    </tr>
+                  )}
               </tbody>
             </Table>
             <p>
