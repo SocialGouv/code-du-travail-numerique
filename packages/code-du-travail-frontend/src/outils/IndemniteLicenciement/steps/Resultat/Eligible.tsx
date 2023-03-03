@@ -1,13 +1,10 @@
-import {
-  getSupportedAgreement,
-  SupportedCcIndemniteLicenciement,
-} from "@socialgouv/modeles-social";
+import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import React from "react";
 import { IndemniteLicenciementStepName } from "../..";
 import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";
 import ShowDetails from "../../../common/ShowDetails";
-import { AgreementsInjector } from "../../agreements";
+import { AgreementsInjector, getResultMessage } from "../../agreements";
 import { getSupportedCcIndemniteLicenciement } from "../../common";
 
 import { useIndemniteLicenciementStore } from "../../store";
@@ -18,6 +15,7 @@ import {
   FormulaInterpreter,
   Result,
 } from "./components";
+import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 
 export default function Eligible() {
   const {
@@ -50,6 +48,7 @@ export default function Eligible() {
     dateArretTravail,
     arretTravail,
     showHasTempsPartiel,
+    informationData,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -83,6 +82,9 @@ export default function Eligible() {
     dateArretTravail: state.contratTravailData.input.dateArretTravail,
     arretTravail: state.contratTravailData.input.arretTravail,
     showHasTempsPartiel: state.salairesData.input.showHasTempsPartiel,
+    informationData: informationToSituation(
+      state.informationsData.input.publicodesInformations
+    ),
   }));
 
   React.useEffect(() => {
@@ -106,6 +108,7 @@ export default function Eligible() {
             : publicodesLegalResult.value?.toString() ?? ""
         }
         notifications={isAgreementBetter ? agreementNotifications : []}
+        resultMessage={getResultMessage(informationData)}
       />
       <ShowDetails>
         <FilledElements
