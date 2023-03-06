@@ -1,6 +1,6 @@
 import { DureePreavisLicenciement } from "..";
 
-import { render, fireEvent, waitFor, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 
 import { ui } from "./ui";
 
@@ -21,6 +21,7 @@ test(`
   fireEvent.click(ui.next.get());
 
   fireEvent.click(ui.agreement.agreement.get());
+  fireEvent.focus(ui.agreement.agreementInput.get());
   fireEvent.change(ui.agreement.agreementInput.get(), {
     target: { value: "1351" },
   });

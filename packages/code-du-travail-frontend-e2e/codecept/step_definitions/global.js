@@ -30,7 +30,6 @@ Quand("je recherche {string}", (searchText) => {
 Quand("je renseigne {string} dans le champ {string}", async (text, input) => {
   I.resetInputFocus(input);
   I.fillField(input, text);
-  I.pressKey("Enter");
 });
 
 Quand(
