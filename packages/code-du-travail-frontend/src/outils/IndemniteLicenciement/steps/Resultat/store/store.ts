@@ -21,11 +21,7 @@ import produce from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
-import {
-  AgreementInformation,
-  getSupportedCcIndemniteLicenciement,
-  hasNoLegalIndemnity,
-} from "../../../common";
+import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
 import { getAgreementReferenceSalary } from "../../../agreements";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";

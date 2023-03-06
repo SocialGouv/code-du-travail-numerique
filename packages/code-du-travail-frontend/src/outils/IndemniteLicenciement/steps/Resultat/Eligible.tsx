@@ -8,7 +8,6 @@ import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";
 import ShowDetails from "../../../common/ShowDetails";
 import { AgreementsInjector } from "../../agreements";
-import { getSupportedCcIndemniteLicenciement } from "../../common";
 
 import { useIndemniteLicenciementStore } from "../../store";
 import {
