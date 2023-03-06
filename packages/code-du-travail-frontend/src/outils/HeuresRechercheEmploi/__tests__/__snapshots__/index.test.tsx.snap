@@ -25,7 +25,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="sc-bTUVah dRqLvD"
+            class="sc-bTUVah cvdtHX"
             fill="none"
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
             </defs>
           </svg>
           <span
-            class="sc-jKvnYE hNYWEi"
+            class="sc-jKvnYE dOipDS"
           >
             2 à 5 min
           </span>

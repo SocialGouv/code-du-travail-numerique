@@ -1,11 +1,10 @@
-import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import React from "react";
 import { IndemniteLicenciementStepName } from "../..";
 import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";
 import ShowDetails from "../../../common/ShowDetails";
 import { AgreementsInjector } from "../../agreements";
-import { getSupportedCcIndemniteLicenciement } from "../../common";
 
 import { useIndemniteLicenciementStore } from "../../store";
 import {
@@ -47,6 +46,7 @@ export default function Eligible() {
     dateArretTravail,
     arretTravail,
     showHasTempsPartiel,
+    isAgreementSupported,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -80,19 +80,13 @@ export default function Eligible() {
     dateArretTravail: state.contratTravailData.input.dateArretTravail,
     arretTravail: state.contratTravailData.input.arretTravail,
     showHasTempsPartiel: state.salairesData.input.showHasTempsPartiel,
+    isAgreementSupported:
+      state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
   }));
 
   React.useEffect(() => {
     getPublicodesResult();
   }, []);
-
-  const supportedCc = React.useMemo(
-    () =>
-      getSupportedCcIndemniteLicenciement().find(
-        (v) => v.fullySupported && v.idcc === agreement?.num
-      ),
-    [agreement]
-  );
 
   return (
     <>
@@ -126,9 +120,7 @@ export default function Eligible() {
           agreementRefSalaryInfo={
             agreement && (
               <AgreementsInjector
-                idcc={
-                  `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
-                }
+                idcc={getSupportedAgreement(agreement.num)}
                 step={IndemniteLicenciementStepName.Resultat}
               />
             )
@@ -145,7 +137,7 @@ export default function Eligible() {
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
             hasSelectedAgreement={route !== "not-selected"}
-            isAgreementSupported={!!supportedCc}
+            isAgreementSupported={isAgreementSupported}
             legalResult={publicodesLegalResult.value?.toString() ?? ""}
             agreementResult={publicodesAgreementResult?.value?.toString()}
           />

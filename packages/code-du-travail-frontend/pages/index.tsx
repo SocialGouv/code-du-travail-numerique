@@ -87,7 +87,7 @@ export async function getStaticProps() {
       modeles,
       agreements,
     },
-    revalidate: 60 * 10, // 10 minutes
+    revalidate: 600, // 10 minutes
   };
 }
 

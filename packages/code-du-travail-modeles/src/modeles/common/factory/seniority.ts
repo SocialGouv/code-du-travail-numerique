@@ -8,6 +8,7 @@ import {
   Seniority1486,
   Seniority1518,
   Seniority1527,
+  Seniority1996,
   Seniority2098,
   Seniority2216,
   Seniority2511,
@@ -21,7 +22,9 @@ import { SupportedCcIndemniteLicenciement } from "../index";
 import type { ISeniority } from "../types";
 
 export class SeniorityFactory {
-  create<T extends SupportedCcIndemniteLicenciement>(idcc: T): ISeniority<T> {
+  create<T extends SupportedCcIndemniteLicenciement>(
+    idcc: T | null
+  ): ISeniority<T> {
     switch (idcc) {
       case SupportedCcIndemniteLicenciement.IDCC2511:
         return new Seniority2511();
@@ -47,6 +50,8 @@ export class SeniorityFactory {
         return new Seniority2216();
       case SupportedCcIndemniteLicenciement.IDCC0044:
         return new Seniority44();
+      case SupportedCcIndemniteLicenciement.IDCC1996:
+        return new Seniority1996();
       case SupportedCcIndemniteLicenciement.IDCC2098:
         return new Seniority2098();
       case SupportedCcIndemniteLicenciement.IDCC2609:

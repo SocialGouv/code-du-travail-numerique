@@ -26,7 +26,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
             "contrat salarié . convention collective": "'IDCC1501'",
             "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique": `'Non'`,
-            "contrat salarié . indemnité de licenciement": "oui",
+
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -73,7 +73,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
             "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique": `'Oui'`,
             "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age":
               age,
-            "contrat salarié . indemnité de licenciement": "oui",
+
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":

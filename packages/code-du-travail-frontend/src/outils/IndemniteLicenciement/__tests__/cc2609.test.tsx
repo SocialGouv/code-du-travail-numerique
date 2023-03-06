@@ -1,6 +1,6 @@
 import { fireEvent, render, RenderResult } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
+import { CalculateurIndemnite } from "../..";
 import { ui } from "./ui";
 
 jest.spyOn(Storage.prototype, "setItem");

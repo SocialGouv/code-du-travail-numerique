@@ -1,34 +1,44 @@
 export enum SupportedCcIndemniteLicenciement {
-  IDCC1516 = "IDCC1516",
-  IDCC1518 = "IDCC1518",
-  IDCC2511 = "IDCC2511",
-  IDCC2264 = "IDCC2264",
-  IDCC1979 = "IDCC1979",
-  IDCC3043 = "IDCC3043",
-  IDCC1090 = "IDCC1090",
-  IDCC413 = "IDCC413",
-  IDCC3127 = "IDCC3127",
-  IDCC1351 = "IDCC1351",
-  IDCC2941 = "IDCC2941",
-  IDCC1486 = "IDCC1486",
-  IDCC1527 = "IDCC1527",
-  IDCC3239 = "IDCC3239",
-  IDCC650 = "IDCC650",
-  IDCC2216 = "IDCC2216",
-  IDCC0016 = "IDCC16",
-  IDCC0573 = "IDCC573",
-  IDCC1596 = "IDCC1596",
-  IDCC1702 = "IDCC1702",
-  IDCC0029 = "IDCC29",
-  IDCC0044 = "IDCC44",
-  IDCC1517 = "IDCC1517",
-  IDCC2098 = "IDCC2098",
-  IDCC2609 = "IDCC2609",
+  IDCC1516 = "1516",
+  IDCC1518 = "1518",
+  IDCC2511 = "2511",
+  IDCC2264 = "2264",
+  IDCC1979 = "1979",
+  IDCC1996 = "1996",
+  IDCC3043 = "3043",
+  IDCC1090 = "1090",
+  IDCC413 = "413",
+  IDCC3127 = "3127",
+  IDCC1351 = "1351",
+  IDCC2941 = "2941",
+  IDCC1486 = "1486",
+  IDCC1527 = "1527",
+  IDCC3239 = "3239",
+  IDCC650 = "650",
+  IDCC2216 = "2216",
+  IDCC0016 = "16",
+  IDCC0573 = "573",
+  IDCC1596 = "1596",
+  IDCC1702 = "1702",
+  IDCC0029 = "29",
+  IDCC0044 = "44",
+  IDCC1517 = "1517",
+  IDCC2098 = "2098",
+  IDCC2609 = "2609",
+  IDCC1501 = "1501",
+  IDCC1597 = "1597",
+  IDCC787 = "787",
+  IDCC843 = "843",
   default = "default",
 }
 
 export const getSupportedAgreement = (
   idcc: number
-): SupportedCcIndemniteLicenciement => {
-  return `IDCC${idcc}` as SupportedCcIndemniteLicenciement;
+): SupportedCcIndemniteLicenciement | null => {
+  for (const value of Object.values(SupportedCcIndemniteLicenciement)) {
+    if (value === idcc.toString()) {
+      return value as SupportedCcIndemniteLicenciement;
+    }
+  }
+  return null;
 };

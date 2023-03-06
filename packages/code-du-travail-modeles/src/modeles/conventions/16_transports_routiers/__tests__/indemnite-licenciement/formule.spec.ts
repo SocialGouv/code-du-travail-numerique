@@ -34,7 +34,7 @@ describe("Formule indemnité licenciement - CC 16", () => {
           }`,
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
             "'Non'",
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -66,7 +66,7 @@ describe("Formule indemnité licenciement - CC 16", () => {
             "'Oui'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive":
             "'Non'",
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -102,7 +102,7 @@ describe("Formule indemnité licenciement - CC 16", () => {
             "'Oui'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive":
             "'Oui'",
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -145,7 +145,7 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
             haveRightToRetirement ? "'Oui'" : "'Non'"
           }`,
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -191,7 +191,7 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
             haveRightToRetirement ? "'Oui'" : "'Non'"
           }`,
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -282,7 +282,7 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
             haveRightToRetirement ? "'Oui'" : "'Non'"
           }`,
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
