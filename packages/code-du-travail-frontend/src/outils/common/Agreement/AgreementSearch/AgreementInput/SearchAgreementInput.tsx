@@ -34,7 +34,9 @@ export const SearchAgreementInput = ({
 
   const onChange = () => {};
 
-  const onClear = () => {};
+  const onClear = () => {
+    setQuery("");
+  };
 
   const onSearch = async ({ value }) => {
     setQuery(value);
