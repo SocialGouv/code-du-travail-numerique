@@ -13,3 +13,7 @@ export const SITE_URL =
 export const PACKAGE_VERSION = process.env.NEXT_PUBLIC_VERSION ?? version;
 export const PIWIK_SITE_ID = process.env.NEXT_PUBLIC_PIWIK_SITE_ID ?? "";
 export const PIWIK_URL = process.env.NEXT_PUBLIC_PIWIK_URL ?? "";
+export const IS_PREPROD =
+  process.env.NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT ?? false;
+export const IS_PROD =
+  process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ?? false;

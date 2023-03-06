@@ -1,4 +1,5 @@
 import { supportedCcn } from "@socialgouv/modeles-social";
+import { IS_PREPROD, IS_PROD } from "../../../../config";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";
 
 const productionNotReady: number[] = [
@@ -7,9 +8,10 @@ const productionNotReady: number[] = [
 
 const getSupportedCcIndemniteLicenciement = (): AgreementSupportInfo[] =>
   supportedCcn.map((item) => ({
-    fullySupported: productionNotReady.includes(item.idcc)
-      ? false
-      : item.indemniteLicenciement,
+    fullySupported:
+      IS_PREPROD && IS_PROD && productionNotReady.includes(item.idcc)
+        ? false
+        : item.indemniteLicenciement,
     idcc: item.idcc,
   }));
 
