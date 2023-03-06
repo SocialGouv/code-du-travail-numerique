@@ -55,6 +55,7 @@ export const SearchAgreementInput = ({
     title: "Nom de la convention collective",
     type: "search",
     value: query,
+    "data-testid": "agreement-search-input",
   };
   return (
     <>
