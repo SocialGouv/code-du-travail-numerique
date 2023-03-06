@@ -21,11 +21,7 @@ import produce from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
-import {
-  AgreementInformation,
-  getSupportedCcIndemniteLicenciement,
-  hasNoLegalIndemnity,
-} from "../../../common";
+import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
 import { getAgreementReferenceSalary } from "../../../agreements";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
@@ -83,11 +79,8 @@ const createResultStore: StoreSlice<
       const agreement = get().agreementData.input.agreement;
       const hasSelectedAgreement =
         get().agreementData.input.route !== "not-selected";
-      const isAgreementSupported = !!getSupportedCcIndemniteLicenciement().find(
-        (v) =>
-          v.fullySupported &&
-          v.idcc === get().agreementData.input.agreement?.num
-      );
+      const isAgreementSupported =
+        get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
 
       const infoWarning = getInfoWarning({
         hasSelectedAgreement,
