@@ -1,7 +1,4 @@
-import {
-  getSupportedAgreement,
-  SupportedCcIndemniteLicenciement,
-} from "@socialgouv/modeles-social";
+import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import React from "react";
 import { IndemniteLicenciementStepName } from "../..";
 import PubliReferences from "../../../common/PubliReferences";
@@ -49,7 +46,7 @@ export default function Eligible() {
     dateArretTravail,
     arretTravail,
     showHasTempsPartiel,
-    isCcSupported,
+    isAgreementSupported,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -83,7 +80,7 @@ export default function Eligible() {
     dateArretTravail: state.contratTravailData.input.dateArretTravail,
     arretTravail: state.contratTravailData.input.arretTravail,
     showHasTempsPartiel: state.salairesData.input.showHasTempsPartiel,
-    isCcSupported:
+    isAgreementSupported:
       state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
   }));
 
@@ -140,7 +137,7 @@ export default function Eligible() {
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
             hasSelectedAgreement={route !== "not-selected"}
-            isAgreementSupported={isCcSupported}
+            isAgreementSupported={isAgreementSupported}
             legalResult={publicodesLegalResult.value?.toString() ?? ""}
             agreementResult={publicodesAgreementResult?.value?.toString()}
           />

@@ -24,7 +24,7 @@ import { isCcFullySupportedIndemniteLicenciement } from "../../../IndemniteLicen
 
 const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
   input: {
-    isAgreementSupportedIndemniteLicenciement: true,
+    isAgreementSupportedIndemniteLicenciement: false,
   },
   error: {},
   hasBeenSubmit: false,
