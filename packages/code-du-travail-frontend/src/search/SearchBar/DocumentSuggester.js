@@ -5,6 +5,7 @@ import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
 
 import Html from "../../common/Html";
+import { suggesterTheme } from "./DocumentSuggesterTheme";
 
 const { colors } = theme;
 
@@ -127,9 +128,6 @@ const renderSuggestion = (suggestion, query) => {
 };
 
 const SuggestionsContainer = styled.div`
-  ul {
-    z-index: 1;
-  }
   li[role="option"]:nth-child(2n + 1) {
     background: ${colors.bgSecondary};
   }
@@ -138,33 +136,3 @@ const SuggestionsContainer = styled.div`
 const renderSuggestionsContainer = ({ containerProps, children }) => (
   <SuggestionsContainer {...containerProps}>{children}</SuggestionsContainer>
 );
-
-// see https://github.com/moroshko/react-autosuggest#themeProp
-const suggesterTheme = {
-  container: {
-    flex: "1 1 auto",
-  },
-  suggestion: {
-    borderRadius: "3px",
-    cursor: "pointer",
-    lineHeight: "2rem",
-    listStyleType: "none",
-    padding: 5,
-  },
-  suggestionHighlighted: {
-    background: colors.bgTertiary,
-  },
-  suggestionsList: {
-    background: "white",
-    border: "1px solid silver",
-    borderRadius: "3px",
-    boxShadow: "0 10px 10px -10px #b7bcdf",
-    left: 0,
-    margin: 0,
-    marginTop: ".5em",
-    padding: 0,
-    paddingTop: "0",
-    position: "absolute",
-    right: 0,
-  },
-};

@@ -1,26 +1,25 @@
 import { Input, Label, Text, theme } from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import styled from "styled-components";
-
+import Autosuggest from "react-autosuggest";
+import { formatIdcc } from "@socialgouv/modeles-social";
+import { suggesterTheme } from "../../../../../search/SearchBar/DocumentSuggesterTheme";
 import { InfoBulle } from "../../../InfoBulle";
-import {
-  createSuggesterHook,
-  FetchReducerState,
-} from "../../components/Suggester";
+import { createSuggesterHook } from "../../components/Suggester";
 import { searchAgreements } from "../../../../../conventions/Search/api/agreements.service";
-import { Agreement } from "../../../../../conventions/Search/api/type";
 import {
   TrackingProps,
   UserAction,
 } from "../../../../ConventionCollective/types";
+import { renderResults } from "../AgreementNoResult";
 
 type Props = {
-  renderResults: (renderProps: FetchReducerState<Agreement[]>) => JSX.Element;
+  onSelectAgreement: (Agreement) => void;
 } & TrackingProps;
 
 export const SearchAgreementInput = ({
   onUserAction,
-  renderResults,
+  onSelectAgreement,
 }: Props): JSX.Element => {
   const [query, setQuery] = useState("");
 
@@ -33,20 +32,31 @@ export const SearchAgreementInput = ({
 
   const state = useAgreementSuggester(query);
 
-  const searchInputHandler = (keyEvent) => {
-    const value = keyEvent.target.value;
+  const onChange = () => {};
+
+  const onClear = () => {};
+
+  const onSearch = async ({ value }) => {
     setQuery(value);
   };
-  const getFirstResultId = () => {
-    return state?.data?.length && state.data[0].id;
+
+  const onSelect = async (event, data) => {
+    event.preventDefault();
+    onSelectAgreement(data.suggestion);
+  };
+  const inputProps = {
+    "aria-label": "agreement-search-label",
+    id: "agreement-search",
+    name: "agreement-search",
+    onChange: onChange,
+    placeholder: "Ex : Transports routiers ou 1486",
+    title: "Nom de la convention collective",
+    type: "search",
+    value: query,
   };
   return (
     <>
-      <InlineLabel
-        htmlFor="agreement-search"
-        id="agreement-search-label"
-        for="agreement-search"
-      >
+      <InlineLabel htmlFor="agreement-search" id="agreement-search-label">
         Nom de la convention collective ou son numéro d’identification{" "}
         <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
         <Text fontWeight="400" fontSize="small">
@@ -67,27 +77,45 @@ export const SearchAgreementInput = ({
           l’entreprise (Ex : 4752A).
         </p>
       </InfoBulle>
-      <BlockInput
-        placeholder="Ex : Transports routiers ou 1486"
-        value={query}
-        type="search"
-        name="agreement-search"
-        id="agreement-search"
-        onChange={searchInputHandler}
-        autoComplete="off"
-        data-testid="agreement-search-input"
-        role="combobox"
-        aria-autocomplete="list"
-        aria-haspopup="listbox"
-        aria-expanded={!!query}
-        aria-controls="search-results"
-        aria-activedescendant={getFirstResultId()}
-      />
 
-      {renderResults(state)}
+      <Autosuggest
+        theme={suggesterTheme}
+        suggestions={state.data ?? []}
+        alwaysRenderSuggestions={false}
+        onSuggestionSelected={onSelect}
+        onSuggestionsFetchRequested={onSearch}
+        onSuggestionsClearRequested={onClear}
+        getSuggestionValue={(suggestion) => suggestion}
+        renderSuggestion={renderSuggestion}
+        renderSuggestionsContainer={renderSuggestionsContainer}
+        renderInputComponent={renderInputComponent}
+        inputProps={inputProps}
+        focusInputOnSuggestionClick={false}
+      />
+      {renderResults({ onUserAction, state })}
     </>
   );
 };
+
+const renderInputComponent = (inputProps) => <BlockInput {...inputProps} />;
+
+const SuggestionsContainer = styled.div`
+  li[role="option"]:nth-child(2n + 1) {
+    background: ${theme.colors.bgSecondary};
+  }
+`;
+
+const renderSuggestion = (suggestion) => (
+  <div>
+    {suggestion.shortTitle} <IDCC>(IDCC {formatIdcc(suggestion.num)})</IDCC>
+  </div>
+);
+const IDCC = styled.span`
+  font-weight: normal;
+`;
+const renderSuggestionsContainer = ({ containerProps, children }) => (
+  <SuggestionsContainer {...containerProps}>{children}</SuggestionsContainer>
+);
 
 const BlockInput = styled(Input)`
   padding-top: ${theme.spacings.small};
