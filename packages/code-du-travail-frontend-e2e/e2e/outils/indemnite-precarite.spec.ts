@@ -19,7 +19,7 @@ describe("Outil - Indemnité de Precarite", () => {
     cy.contains("Suivant").click();
 
     cy.contains("montant total").click();
-    cy.get("#currency-2").type("2000");
+    cy.get("input[name=salaire]").type("2000");
     cy.contains("Suivant").click();
 
     cy.contains("La prime de précarité est estimée à").should("be.visible");
