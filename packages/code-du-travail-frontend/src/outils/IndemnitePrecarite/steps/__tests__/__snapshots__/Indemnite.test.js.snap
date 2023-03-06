@@ -11,7 +11,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     La prime d'intervention
      est estimée à : 
     <strong
-      class="sc-grxQYx sc-ZqGJI itwhbo jkYyjl"
+      class="sc-ZqGJI sc-knEsKG ffvloy fOYDld"
     >
       180
        €
@@ -456,7 +456,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     La prime de précarité
      est estimée à : 
     <strong
-      class="sc-grxQYx sc-ZqGJI itwhbo jkYyjl"
+      class="sc-ZqGJI sc-knEsKG ffvloy fOYDld"
     >
       300
        €
@@ -894,7 +894,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     La prime de précarité
      est estimée à : 
     <strong
-      class="sc-grxQYx sc-ZqGJI itwhbo jkYyjl"
+      class="sc-ZqGJI sc-knEsKG ffvloy fOYDld"
     >
       300
        €
@@ -1342,7 +1342,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     La prime de précarité
      est estimée à : 
     <strong
-      class="sc-grxQYx sc-ZqGJI itwhbo jkYyjl"
+      class="sc-ZqGJI sc-knEsKG ffvloy fOYDld"
     >
       300
        €
@@ -1780,7 +1780,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     La prime de précarité
      est estimée à : 
     <strong
-      class="sc-grxQYx sc-ZqGJI itwhbo jkYyjl"
+      class="sc-ZqGJI sc-knEsKG ffvloy fOYDld"
     >
       300
        €
