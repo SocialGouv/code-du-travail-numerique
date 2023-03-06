@@ -95,7 +95,7 @@ exports[`<FicheMT /> should render 1`] = `
                 value=""
               />
               <div
-                class="sc-hbWBzy ipzggO"
+                class="sc-hbWBzy mLbzO"
                 id="react-autowhatever-1"
                 role="listbox"
               />
