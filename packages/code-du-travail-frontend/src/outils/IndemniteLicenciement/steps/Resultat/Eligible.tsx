@@ -50,6 +50,7 @@ export default function Eligible() {
     dateArretTravail,
     arretTravail,
     showHasTempsPartiel,
+    isCcSupported,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -83,19 +84,13 @@ export default function Eligible() {
     dateArretTravail: state.contratTravailData.input.dateArretTravail,
     arretTravail: state.contratTravailData.input.arretTravail,
     showHasTempsPartiel: state.salairesData.input.showHasTempsPartiel,
+    isCcSupported:
+      state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
   }));
 
   React.useEffect(() => {
     getPublicodesResult();
   }, []);
-
-  const supportedCc = React.useMemo(
-    () =>
-      getSupportedCcIndemniteLicenciement().find(
-        (v) => v.fullySupported && v.idcc === agreement?.num
-      ),
-    [agreement]
-  );
 
   return (
     <>
@@ -146,7 +141,7 @@ export default function Eligible() {
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
             hasSelectedAgreement={route !== "not-selected"}
-            isAgreementSupported={!!supportedCc}
+            isAgreementSupported={isCcSupported}
             legalResult={publicodesLegalResult.value?.toString() ?? ""}
             agreementResult={publicodesAgreementResult?.value?.toString()}
           />
