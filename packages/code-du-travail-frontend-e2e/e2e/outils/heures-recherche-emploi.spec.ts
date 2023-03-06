@@ -59,7 +59,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
     cy.contains("Licenciement");
   });
 
-  it.only("Parcours en connaissant sa convention collective et avec informations complémentaires", () => {
+  it("Parcours en connaissant sa convention collective et avec informations complémentaires", () => {
     cy.visit("/outils/heures-recherche-emploi");
     cy.get("h1").should(
       "have.text",
