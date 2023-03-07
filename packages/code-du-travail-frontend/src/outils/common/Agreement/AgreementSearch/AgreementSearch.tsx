@@ -16,7 +16,6 @@ import { required } from "../../validators";
 import { AGREEMENT_NAME } from "../form-constants";
 import ShowAlert from "../components/ShowAlert";
 import { AgreementSupportInfo } from "../types";
-import { renderResults } from "./AgreementSearchResult";
 import { SearchAgreementInput } from "./AgreementInput/SearchAgreementInput";
 
 export type Props = {
@@ -63,10 +62,7 @@ const AgreementSearch = ({
       </Paragraph>
       <SearchAgreementInput
         onUserAction={onUserAction}
-        renderResults={renderResults({
-          onSelectAgreement,
-          onUserAction,
-        })}
+        onSelectAgreement={onSelectAgreement}
       />
       <ErrorField
         name={AGREEMENT_NAME}
@@ -89,6 +85,7 @@ const { spacings } = theme;
 
 const Section = styled(SectionUi)`
   padding-top: 0;
+
   label {
     font-weight: 400;
   }

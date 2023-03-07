@@ -12,7 +12,6 @@ import { Question } from "../../../common/Question";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";
 import ShowAlert from "../../../common/Agreement/components/ShowAlert";
 import { SearchAgreementInput } from "../../../common/Agreement/AgreementSearch/AgreementInput/SearchAgreementInput";
-import { renderResults } from "../../../common/Agreement/AgreementSearch/AgreementSearchResult";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export type Props = {
@@ -62,10 +61,7 @@ const AgreementSearch = ({
       </Paragraph>
       <SearchAgreementInput
         onUserAction={onUserAction}
-        renderResults={renderResults({
-          onSelectAgreement,
-          onUserAction,
-        })}
+        onSelectAgreement={onSelectAgreement}
       />
     </Section>
   );
@@ -75,6 +71,7 @@ const { spacings } = theme;
 
 const Section = styled(SectionUi)`
   padding-top: 0;
+
   label {
     font-weight: 400;
   }
