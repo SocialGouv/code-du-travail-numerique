@@ -6,10 +6,10 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
     class="sc-jSUZER kEfUQE"
   >
     <div>
-      <div
+      <button
         aria-expanded="false"
-        class="sc-khsqcC jyDCrc"
-        role="button"
+        class="sc-hhOBVt fANzfq sc-cOxWqc VPdUE"
+        type="button"
       >
         <svg
           aria-hidden="true"
@@ -28,19 +28,21 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
             points="9 18 15 12 9 6"
           />
         </svg>
-        <p
+        <span
           aria-level="2"
-          class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
+          class="sc-AHaJN jfcIdr"
+          font-size="hsmall"
+          font-weight="600"
           role="heading"
         >
           Références juridiques concernées :
-        </p>
-      </div>
+        </span>
+      </button>
       <div
-        class="sc-AHaJN dhcrLx"
+        class="sc-bCfvAP iEBQCA"
       >
         <ul
-          class="sc-jfvxQR sc-dvEHMn gwhdUi iZxhbo"
+          class="sc-lbVpMG sc-dvEHMn fqAvkB iZxhbo"
         >
           <li>
             <a

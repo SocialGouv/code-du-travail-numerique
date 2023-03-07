@@ -200,16 +200,16 @@ exports[`<Stats /> should render 1`] = `
             class="sc-jSUZER heYtoX"
           >
             <div
-              class="sc-eJDSGI hWSwY sc-hiDMwi gAYklG"
+              class="sc-iOeugr TLLGV sc-eJDSGI cnCImS"
             >
               <div
-                class="sc-oZIhv grJGZr"
+                class="sc-jfvxQR hUilgg"
               >
                 <div
-                  class="sc-ehvNnt jkVqcZ"
+                  class="sc-oZIhv eWwzHY"
                 >
                   <div
-                    class="sc-laZRCg FkEKn"
+                    class="sc-hiDMwi mnHoI"
                   >
                     <div
                       class="sc-jSUZER sc-ciyUsT cbQucy gKWTF"
@@ -221,14 +221,14 @@ exports[`<Stats /> should render 1`] = `
                         Contenus référencés
                       </h2>
                       <p
-                        class="sc-cOxWqc gHQTzK sc-kGFDUS gjtxUD"
+                        class="sc-GKYbw iqWWVn sc-kGFDUS gjtxUD"
                       >
                         16
                       </p>
                     </div>
                   </div>
                   <div
-                    class="sc-laZRCg FkEKn"
+                    class="sc-hiDMwi mnHoI"
                   >
                     <div
                       class="sc-jSUZER sc-ciyUsT cbQucy gKWTF"
@@ -240,14 +240,14 @@ exports[`<Stats /> should render 1`] = `
                         Visites
                       </h2>
                       <p
-                        class="sc-cOxWqc gHQTzK sc-kGFDUS gjtxUD"
+                        class="sc-GKYbw iqWWVn sc-kGFDUS gjtxUD"
                       >
                         20
                       </p>
                     </div>
                   </div>
                   <div
-                    class="sc-laZRCg FkEKn"
+                    class="sc-hiDMwi mnHoI"
                   >
                     <div
                       class="sc-jSUZER sc-ciyUsT cbQucy gKWTF"
@@ -259,14 +259,14 @@ exports[`<Stats /> should render 1`] = `
                         Recherches
                       </h2>
                       <p
-                        class="sc-cOxWqc gHQTzK sc-kGFDUS gjtxUD"
+                        class="sc-GKYbw iqWWVn sc-kGFDUS gjtxUD"
                       >
                         4
                       </p>
                     </div>
                   </div>
                   <div
-                    class="sc-laZRCg FkEKn"
+                    class="sc-hiDMwi mnHoI"
                   >
                     <div
                       class="sc-jSUZER sc-ciyUsT cbQucy gKWTF"
@@ -278,7 +278,7 @@ exports[`<Stats /> should render 1`] = `
                         Consultations
                       </h2>
                       <p
-                        class="sc-cOxWqc gHQTzK sc-kGFDUS gjtxUD"
+                        class="sc-GKYbw iqWWVn sc-kGFDUS gjtxUD"
                       >
                         10
                       </p>
@@ -364,7 +364,7 @@ exports[`<Stats /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-cVtpRj gwhdUi bVtHNH"
+                class="sc-lbVpMG sc-cVtpRj fqAvkB bVtHNH"
               >
                 <li>
                   <a
@@ -444,7 +444,7 @@ exports[`<Stats /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-cVtpRj gwhdUi bVtHNH"
+                class="sc-lbVpMG sc-cVtpRj fqAvkB bVtHNH"
               >
                 <li>
                   <button
@@ -489,7 +489,7 @@ exports[`<Stats /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-cVtpRj gwhdUi bVtHNH"
+                class="sc-lbVpMG sc-cVtpRj fqAvkB bVtHNH"
               >
                 <li>
                   <a

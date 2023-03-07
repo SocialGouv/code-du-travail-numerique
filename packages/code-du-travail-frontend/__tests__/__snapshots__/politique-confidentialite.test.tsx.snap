@@ -274,13 +274,13 @@ exports[`<CookiePolicy /> should render 1`] = `
               </h2>
             </div>
             <div
-              class="sc-eJDSGI dCXocf"
+              class="sc-iOeugr cfcIjK"
             >
               <div
-                class="sc-oZIhv bFEaYe"
+                class="sc-jfvxQR dxcKMx"
               >
                 <table
-                  class="sc-kImNAt jckCeo"
+                  class="sc-eKJbhj gytocM"
                 >
                   <thead>
                     <tr>
@@ -344,13 +344,13 @@ exports[`<CookiePolicy /> should render 1`] = `
               Nous collectons donc des données par l’intermédiaire de dispositifs appelés “cookies” permettant d’établir des mesures statistiques.
             </p>
             <div
-              class="sc-eJDSGI dCXocf"
+              class="sc-iOeugr cfcIjK"
             >
               <div
-                class="sc-oZIhv bFEaYe"
+                class="sc-jfvxQR dxcKMx"
               >
                 <table
-                  class="sc-kImNAt jckCeo"
+                  class="sc-eKJbhj gytocM"
                 >
                   <thead>
                     <tr>
@@ -512,7 +512,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-cVtpRj gwhdUi bVtHNH"
+                class="sc-lbVpMG sc-cVtpRj fqAvkB bVtHNH"
               >
                 <li>
                   <a
@@ -592,7 +592,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-cVtpRj gwhdUi bVtHNH"
+                class="sc-lbVpMG sc-cVtpRj fqAvkB bVtHNH"
               >
                 <li>
                   <button
@@ -637,7 +637,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-cVtpRj gwhdUi bVtHNH"
+                class="sc-lbVpMG sc-cVtpRj fqAvkB bVtHNH"
               >
                 <li>
                   <a

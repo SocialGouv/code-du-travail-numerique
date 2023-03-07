@@ -238,10 +238,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 class="sc-jSUZER cbQucy"
               >
                 <div
-                  class="sc-gGvHcT fhtJMY"
+                  class="sc-ehvNnt jLpEWC"
                 >
                   <div
-                    class="sc-ckEbSK fTbCHa"
+                    class="sc-laZRCg gxUMeY"
                   >
                     <svg
                       aria-hidden="true"
@@ -261,7 +261,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="sc-fbYMXx dVfpRL"
+                    class="sc-gGvHcT iaPnrK"
                   >
                     <p
                       aria-level="3"
@@ -271,7 +271,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       Le droit du travail, ce n’est pas…
                     </p>
                     <p
-                      class="sc-cOxWqc bBCaVZ"
+                      class="sc-GKYbw gcbROE"
                     >
                       Le droit du travail ne concerne pas les travailleurs qui sont soumis au droit public (par exemple, les fonctionnaires), les travailleurs indépendants (artisan, commerçant, professions libérales…), les bénévoles et les dirigeants d’entreprise.
                     </p>
@@ -2046,10 +2046,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       class="sc-jSUZER kEfUQE"
                     >
                       <div
-                        class="sc-gGvHcT fhtJMY"
+                        class="sc-ehvNnt jLpEWC"
                       >
                         <div
-                          class="sc-ckEbSK fTbCHa"
+                          class="sc-laZRCg gxUMeY"
                         >
                           <svg
                             aria-hidden="true"
@@ -2069,7 +2069,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="sc-fbYMXx dVfpRL"
+                          class="sc-gGvHcT iaPnrK"
                         >
                           <h4
                             class="sc-fmPOXC gDdYSH"
@@ -2223,10 +2223,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       class="sc-jSUZER kEfUQE"
                     >
                       <div
-                        class="sc-gGvHcT fhtJMY"
+                        class="sc-ehvNnt jLpEWC"
                       >
                         <div
-                          class="sc-ckEbSK fTbCHa"
+                          class="sc-laZRCg gxUMeY"
                         >
                           <svg
                             aria-hidden="true"
@@ -2246,7 +2246,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="sc-fbYMXx dVfpRL"
+                          class="sc-gGvHcT iaPnrK"
                         >
                           <p
                             class="sc-kiPvrU liMILW"
@@ -2730,7 +2730,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-ifSILs gwhdUi fBVfBs"
+                class="sc-lbVpMG sc-ifSILs fqAvkB fBVfBs"
               >
                 <li>
                   <a
@@ -2810,7 +2810,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-ifSILs gwhdUi fBVfBs"
+                class="sc-lbVpMG sc-ifSILs fqAvkB fBVfBs"
               >
                 <li>
                   <button
@@ -2855,7 +2855,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-ifSILs gwhdUi fBVfBs"
+                class="sc-lbVpMG sc-ifSILs fqAvkB fBVfBs"
               >
                 <li>
                   <a

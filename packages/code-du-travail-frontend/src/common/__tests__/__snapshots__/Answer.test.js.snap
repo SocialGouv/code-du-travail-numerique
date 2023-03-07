@@ -93,7 +93,7 @@ exports[`<Answer /> should renders 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-lbVpMG fQidUo"
+                  class="sc-jfTVlA aTmOx"
                 >
                   <button
                     class="sc-jhrdCu cYiOyd spacing-left"
@@ -145,7 +145,7 @@ exports[`<Answer /> should renders 1`] = `
               class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOxWqc imOahr"
+                class="sc-GKYbw hiUFFW"
               >
                 <span
                   class="sc-ktLMLx bCcQHN"
@@ -176,7 +176,7 @@ exports[`<Answer /> should renders 1`] = `
               class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOxWqc bBCaVZ"
+                class="sc-GKYbw gcbROE"
               >
                 intro de l'article
               </p>
@@ -203,7 +203,7 @@ exports[`<Answer /> should renders 1`] = `
         class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Partager ce contenu : 
         </p>
@@ -280,7 +280,7 @@ exports[`<Answer /> should renders 1`] = `
             </span>
           </button>
           <div
-            class="sc-lbVpMG fQidUo"
+            class="sc-jfTVlA aTmOx"
           >
             <button
               class="sc-jhrdCu cYiOyd spacing-left"
@@ -368,10 +368,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
     class="sc-gYpcnp bjipqg"
   >
     <div
-      class="sc-eJDSGI dCXocf"
+      class="sc-iOeugr cfcIjK"
     >
       <div
-        class="sc-oZIhv bFEaYe"
+        class="sc-jfvxQR dxcKMx"
       >
         <ol
           class="sc-bcXHqe sc-bGhRYA evAMOC iIZCtz"
@@ -540,7 +540,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-lbVpMG fQidUo"
+                  class="sc-jfTVlA aTmOx"
                 >
                   <button
                     class="sc-jhrdCu cYiOyd spacing-left"
@@ -597,7 +597,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOxWqc imOahr"
+                class="sc-GKYbw hiUFFW"
               >
                 <span
                   class="sc-ktLMLx bCcQHN"
@@ -628,7 +628,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOxWqc bBCaVZ"
+                class="sc-GKYbw gcbROE"
               >
                 intro de l'article
               </p>
@@ -655,7 +655,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Partager ce contenu : 
         </p>
@@ -732,7 +732,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </span>
           </button>
           <div
-            class="sc-lbVpMG fQidUo"
+            class="sc-jfTVlA aTmOx"
           >
             <button
               class="sc-jhrdCu cYiOyd spacing-left"
@@ -906,7 +906,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-lbVpMG fQidUo"
+                  class="sc-jfTVlA aTmOx"
                 >
                   <button
                     class="sc-jhrdCu cYiOyd spacing-left"
@@ -958,7 +958,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOxWqc imOahr"
+                class="sc-GKYbw hiUFFW"
               >
                 <span
                   class="sc-ktLMLx bCcQHN"
@@ -989,7 +989,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOxWqc bBCaVZ"
+                class="sc-GKYbw gcbROE"
               >
                 intro de l'article
               </p>
@@ -1016,7 +1016,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
         class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Partager ce contenu : 
         </p>
@@ -1093,7 +1093,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
             </span>
           </button>
           <div
-            class="sc-lbVpMG fQidUo"
+            class="sc-jfTVlA aTmOx"
           >
             <button
               class="sc-jhrdCu cYiOyd spacing-left"
@@ -1267,7 +1267,7 @@ exports[`<Answer /> should renders related content 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-lbVpMG fQidUo"
+                  class="sc-jfTVlA aTmOx"
                 >
                   <button
                     class="sc-jhrdCu cYiOyd spacing-left"
@@ -1319,7 +1319,7 @@ exports[`<Answer /> should renders related content 1`] = `
               class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOxWqc imOahr"
+                class="sc-GKYbw hiUFFW"
               >
                 <span
                   class="sc-ktLMLx bCcQHN"
@@ -1350,7 +1350,7 @@ exports[`<Answer /> should renders related content 1`] = `
               class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOxWqc bBCaVZ"
+                class="sc-GKYbw gcbROE"
               >
                 intro de l'article
               </p>
@@ -1374,7 +1374,7 @@ exports[`<Answer /> should renders related content 1`] = `
         class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Partager ce contenu : 
         </p>
@@ -1451,7 +1451,7 @@ exports[`<Answer /> should renders related content 1`] = `
             </span>
           </button>
           <div
-            class="sc-lbVpMG fQidUo"
+            class="sc-jfTVlA aTmOx"
           >
             <button
               class="sc-jhrdCu cYiOyd spacing-left"
@@ -1544,7 +1544,7 @@ exports[`<Answer /> should renders related content 1`] = `
            :
         </div>
         <ul
-          class="sc-jfvxQR gwhdUi"
+          class="sc-lbVpMG fqAvkB"
         >
           <li
             class="sc-fTJzqL bdwlqI"
@@ -1609,7 +1609,7 @@ exports[`<Answer /> should renders related content 1`] = `
            :
         </div>
         <ul
-          class="sc-jfvxQR gwhdUi"
+          class="sc-lbVpMG fqAvkB"
         >
           <li
             class="sc-fTJzqL bdwlqI"
@@ -1789,7 +1789,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-lbVpMG fQidUo"
+                  class="sc-jfTVlA aTmOx"
                 >
                   <button
                     class="sc-jhrdCu cYiOyd spacing-left"
@@ -1841,7 +1841,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOxWqc imOahr"
+                class="sc-GKYbw hiUFFW"
               >
                 <span
                   class="sc-ktLMLx bCcQHN"
@@ -1872,7 +1872,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOxWqc bBCaVZ"
+                class="sc-GKYbw gcbROE"
               >
                 intro de l'article
               </p>
@@ -1900,7 +1900,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
         class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Partager ce contenu : 
         </p>
@@ -1977,7 +1977,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
             </span>
           </button>
           <div
-            class="sc-lbVpMG fQidUo"
+            class="sc-jfTVlA aTmOx"
           >
             <button
               class="sc-jhrdCu cYiOyd spacing-left"
@@ -2151,7 +2151,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   </span>
                 </button>
                 <div
-                  class="sc-lbVpMG fQidUo"
+                  class="sc-jfTVlA aTmOx"
                 >
                   <button
                     class="sc-jhrdCu cYiOyd spacing-left"
@@ -2203,7 +2203,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOxWqc imOahr"
+                class="sc-GKYbw hiUFFW"
               >
                 <span
                   class="sc-ktLMLx bCcQHN"
@@ -2234,7 +2234,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOxWqc bBCaVZ"
+                class="sc-GKYbw gcbROE"
               >
                 intro de l'article
               </p>
@@ -2262,7 +2262,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Partager ce contenu : 
         </p>
@@ -2339,7 +2339,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </span>
           </button>
           <div
-            class="sc-lbVpMG fQidUo"
+            class="sc-jfTVlA aTmOx"
           >
             <button
               class="sc-jhrdCu cYiOyd spacing-left"
@@ -2513,7 +2513,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-lbVpMG fQidUo"
+                  class="sc-jfTVlA aTmOx"
                 >
                   <button
                     class="sc-jhrdCu cYiOyd spacing-left"
@@ -2565,7 +2565,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOxWqc imOahr"
+                class="sc-GKYbw hiUFFW"
               >
                 <span
                   class="sc-ktLMLx bCcQHN"
@@ -2596,7 +2596,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOxWqc bBCaVZ"
+                class="sc-GKYbw gcbROE"
               >
                 intro de l'article
               </p>
@@ -2625,7 +2625,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
         class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Partager ce contenu : 
         </p>
@@ -2702,7 +2702,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             </span>
           </button>
           <div
-            class="sc-lbVpMG fQidUo"
+            class="sc-jfTVlA aTmOx"
           >
             <button
               class="sc-jhrdCu cYiOyd spacing-left"
@@ -2876,7 +2876,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   </span>
                 </button>
                 <div
-                  class="sc-lbVpMG fQidUo"
+                  class="sc-jfTVlA aTmOx"
                 >
                   <button
                     class="sc-jhrdCu cYiOyd spacing-left"
@@ -2928,7 +2928,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOxWqc imOahr"
+                class="sc-GKYbw hiUFFW"
               >
                 <span
                   class="sc-ktLMLx bCcQHN"
@@ -2959,7 +2959,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOxWqc bBCaVZ"
+                class="sc-GKYbw gcbROE"
               >
                 intro de l'article
               </p>
@@ -2983,7 +2983,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOxWqc bBCaVZ"
+          class="sc-GKYbw gcbROE"
         >
           Partager ce contenu : 
         </p>
@@ -3060,7 +3060,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </span>
           </button>
           <div
-            class="sc-lbVpMG fQidUo"
+            class="sc-jfTVlA aTmOx"
           >
             <button
               class="sc-jhrdCu cYiOyd spacing-left"

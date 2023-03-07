@@ -183,10 +183,10 @@ exports[`<FicheMT /> should render 1`] = `
         class="sc-gYpcnp bjipqg"
       >
         <div
-          class="sc-eJDSGI dCXocf"
+          class="sc-iOeugr cfcIjK"
         >
           <div
-            class="sc-oZIhv bFEaYe"
+            class="sc-jfvxQR dxcKMx"
           >
             <ol
               class="sc-bcXHqe sc-bGhRYA evAMOC iIZCtz"
@@ -332,7 +332,7 @@ exports[`<FicheMT /> should render 1`] = `
                       </span>
                     </button>
                     <div
-                      class="sc-lbVpMG fQidUo"
+                      class="sc-jfTVlA aTmOx"
                     >
                       <button
                         class="sc-jhrdCu cYiOyd spacing-left"
@@ -389,7 +389,7 @@ exports[`<FicheMT /> should render 1`] = `
                   class="sc-djTcra gCMvWG"
                 >
                   <p
-                    class="sc-cOxWqc imOahr"
+                    class="sc-GKYbw hiUFFW"
                   >
                     <span
                       class="sc-ktLMLx bCcQHN"
@@ -428,7 +428,7 @@ exports[`<FicheMT /> should render 1`] = `
                   class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
                 >
                   <p
-                    class="sc-cOxWqc bBCaVZ"
+                    class="sc-GKYbw gcbROE"
                   >
                     lorem ipsum intro
                   </p>
@@ -561,7 +561,7 @@ exports[`<FicheMT /> should render 1`] = `
             class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
           >
             <p
-              class="sc-cOxWqc bBCaVZ"
+              class="sc-GKYbw gcbROE"
             >
               Partager ce contenu : 
             </p>
@@ -638,7 +638,7 @@ exports[`<FicheMT /> should render 1`] = `
                 </span>
               </button>
               <div
-                class="sc-lbVpMG fQidUo"
+                class="sc-jfTVlA aTmOx"
               >
                 <button
                   class="sc-jhrdCu cYiOyd spacing-left"
@@ -787,7 +787,7 @@ exports[`<FicheMT /> should render 1`] = `
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-jfvxQR sc-fFRahO gwhdUi dIzmEO"
+                class="sc-lbVpMG sc-fFRahO fqAvkB dIzmEO"
               >
                 <li>
                   <a
@@ -867,7 +867,7 @@ exports[`<FicheMT /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-jfvxQR sc-fFRahO gwhdUi dIzmEO"
+                class="sc-lbVpMG sc-fFRahO fqAvkB dIzmEO"
               >
                 <li>
                   <button
@@ -912,7 +912,7 @@ exports[`<FicheMT /> should render 1`] = `
                 En collaboration avec
               </strong>
               <ul
-                class="sc-jfvxQR sc-fFRahO gwhdUi dIzmEO"
+                class="sc-lbVpMG sc-fFRahO fqAvkB dIzmEO"
               >
                 <li>
                   <a

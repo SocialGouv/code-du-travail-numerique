@@ -35,7 +35,7 @@ Fonctionnalité: Outil - Préavis de licenciement
 
     Alors je vois "Durée du préavis"
     Alors je vois "2 mois"
-    Quand j'ouvre l'accordion
+    Quand je clique sur "Voir le détail du calcul"
     Alors je vois "Plus de 2 ans"
     Alors je vois "La convention collective n'a pas été renseignée"
 
@@ -76,7 +76,7 @@ Fonctionnalité: Outil - Préavis de licenciement
     Alors je vois "Durée du préavis"
     Alors je vois "2 mois"
 
-    Quand j'ouvre l'accordion
+    Quand je clique sur "Voir le détail du calcul"
     Alors je vois "Boulangerie-pâtisserie (entreprises artisanales)"
     Alors je vois "Personnel de fabrication, personnel de vente et personnel de services"
     Alors je vois "Plus de 2 ans"

@@ -87,7 +87,7 @@ exports[`<Article /> should render 1`] = `
               </span>
             </button>
             <div
-              class="sc-lbVpMG fQidUo"
+              class="sc-jfTVlA aTmOx"
             >
               <button
                 class="sc-dvEHMn dyLewL spacing-left"
@@ -139,7 +139,7 @@ exports[`<Article /> should render 1`] = `
           class="sc-gJFNMl paIVY"
         >
           <p
-            class="sc-cOxWqc imOahr"
+            class="sc-GKYbw hiUFFW"
           >
             <span
               class="sc-jKvnYE egIrG"

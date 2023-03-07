@@ -22,13 +22,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
     >
       <div>
         <div
-          class="sc-GhhNo iFhTCd"
+          class="sc-ckEbSK eDAEAk"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Service de renseignement"
             aria-modal="true"
-            class="sc-fXqpFg fffGxA"
+            class="sc-fbYMXx kKemne"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
@@ -139,7 +139,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </ul>
             </div>
             <button
-              class="sc-hhOBVt cizsts sc-dwnOUR jGPyvm"
+              class="sc-hhOBVt cizsts sc-GhhNo bwxyfF"
               title="fermer la modale"
             >
               <div

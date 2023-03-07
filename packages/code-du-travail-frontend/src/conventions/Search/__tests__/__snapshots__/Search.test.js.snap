@@ -65,7 +65,7 @@ exports[`<Search /> should show no results when no result 1`] = `
     class="sc-hZNxer kWwXln"
   >
     <p
-      class="sc-cOxWqc bBCaVZ"
+      class="sc-GKYbw gcbROE"
     >
       Aucun résultat n’a été trouvé.
     </p>
@@ -115,7 +115,7 @@ exports[`<Search /> should show spinner when loading 1`] = `
     class="sc-hZNxer kWwXln"
   >
     <p
-      class="sc-cOxWqc bBCaVZ"
+      class="sc-GKYbw gcbROE"
     >
       <svg
         aria-labelledby="title desc"
@@ -221,7 +221,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
         résultats)
       </h3>
       <ul
-        class="sc-jfvxQR gwhdUi"
+        class="sc-lbVpMG fqAvkB"
       >
         <li
           class="sc-iWOQzb bipHFP"
@@ -318,7 +318,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
         résultat)
       </h3>
       <ul
-        class="sc-jfvxQR gwhdUi"
+        class="sc-lbVpMG fqAvkB"
       >
         <li
           class="sc-iWOQzb bipHFP"
@@ -386,7 +386,7 @@ exports[`<Search /> when searching by text, should use enterprise API 1`] = `
     class="sc-hZNxer kWwXln"
   >
     <p
-      class="sc-cOxWqc bBCaVZ"
+      class="sc-GKYbw gcbROE"
     >
       Le service de recherche est indisponible.
     </p>

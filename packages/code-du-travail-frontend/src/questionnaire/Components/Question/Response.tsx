@@ -1,10 +1,9 @@
-import { useState } from "react";
 import styled from "styled-components";
-import { InputRadio, theme } from "@socialgouv/cdtn-ui";
+import { InputRadio } from "@socialgouv/cdtn-ui";
 import { useStore } from "../../store";
-import { Tooltip } from "../../../common/Tooltip";
 import { trackClickHelp } from "../../tracking";
 import { QuestionnaireResponse } from "../../type";
+import { InfoBulle } from "../../../outils/common/InfoBulle";
 
 export const Response = ({
   response: { text, description, info, trackingName },
@@ -14,11 +13,10 @@ export const Response = ({
   index: number;
 }) => {
   const answer = useStore((state) => state.answer);
-  const [openedTooltip, setOpenedTooltip] = useState(false);
   return (
     <ResponseWrapper>
       <ResponseInputWrapper>
-        <InputRadio
+        <StyledRadio
           id={text}
           name={text}
           label={`${text} ${description ? `(${description})` : ""}`}
@@ -27,23 +25,28 @@ export const Response = ({
           }}
         />
         {info && (
-          <TooltipWrapper>
-            <Tooltip
-              onChange={(opened) => {
-                setOpenedTooltip(opened);
-                if (opened) {
-                  trackClickHelp(trackingName);
-                }
-              }}
-              data-testid={`Tooltip-${text}`}
-            ></Tooltip>
-          </TooltipWrapper>
+          <StyledInfoBulle
+            title={"Plus d'informations"}
+            dataTestid={`Tooltip-${text}`}
+            onVisibilityChange={() => {
+              trackClickHelp(trackingName);
+            }}
+          >
+            {info}
+          </StyledInfoBulle>
         )}
       </ResponseInputWrapper>
-      {openedTooltip && <InformationWrapper>{info}</InformationWrapper>}
     </ResponseWrapper>
   );
 };
+
+const StyledRadio = styled(InputRadio)`
+  float: left;
+`;
+
+const StyledInfoBulle = styled(InfoBulle)`
+  padding: 0;
+`;
 
 const ResponseWrapper = styled.div`
   display: flex;
@@ -52,16 +55,7 @@ const ResponseWrapper = styled.div`
 `;
 
 const ResponseInputWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
   margin-right: 12px;
-`;
-
-const TooltipWrapper = styled.div`
-  margin-left: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
 const InformationWrapper = styled.div`

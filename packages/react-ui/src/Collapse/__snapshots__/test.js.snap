@@ -3,10 +3,10 @@
 exports[`<Collapse /> renders 1`] = `
 <div>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="sc-bBABsx brxyKp"
-      role="button"
+      class="sc-dmctIk dglopR sc-fLcnxK djyuFx"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -25,14 +25,16 @@ exports[`<Collapse /> renders 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="sc-kgTSHT htBEDr sc-iveFHk cEsaJQ"
+      <span
+        class="sc-bBABsx euKZUH"
+        font-size="hsmall"
+        font-weight="600"
       >
         Hello
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="sc-fLcnxK fOHigB"
+      class="sc-kgTSHT jKKqTz"
     >
       <p>
         Hi

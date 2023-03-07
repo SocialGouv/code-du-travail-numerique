@@ -57,10 +57,10 @@ exports[`<StepResult /> should render CC answer 1`] = `
     </span>
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="sc-khsqcC jyDCrc"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc VPdUE"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -79,14 +79,16 @@ exports[`<StepResult /> should render CC answer 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="sc-AHaJN dhcrLx"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
         class="sc-kiPvrU ceZDKl"
@@ -149,10 +151,10 @@ exports[`<StepResult /> should render CC answer 1`] = `
     class="sc-lllmON sc-kSGOQU hrCOuh bqQeuZ"
   >
     <div
-      class="sc-gGvHcT hSOEAU"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -172,10 +174,10 @@ exports[`<StepResult /> should render CC answer 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-cOxWqc fjmwyW sc-dvEHMn jfRMop"
+          class="sc-GKYbw cUdVqX sc-dvEHMn jfRMop"
         >
           Attention il peut exister une autre durée de préavis
         </p>

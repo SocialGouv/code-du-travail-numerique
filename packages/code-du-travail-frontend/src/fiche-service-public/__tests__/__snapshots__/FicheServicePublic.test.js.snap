@@ -21,24 +21,24 @@ exports[`<FicheServicePublic /> should render 1`] = `
          
     </p>
     <div
-      class="sc-cZFQFd icXAUe"
+      class="sc-hOzowv hOqXUB"
       data-rttabs="true"
     >
       <div
-        class="sc-eJDSGI dCXocf sc-jTjUTQ cGMshX"
+        class="sc-iOeugr cfcIjK sc-dsHJmm jqecJq"
       >
         <div
-          class="sc-oZIhv bFEaYe"
+          class="sc-jfvxQR dxcKMx"
         >
           <ul
-            class="sc-jRwbcX jKfYts"
+            class="sc-cZFQFd ivJWJy"
             role="tablist"
           >
             <li
               aria-controls="react-tabs-1"
               aria-disabled="false"
               aria-selected="true"
-              class="sc-fvEvSO ldYuBF react-tabs__tab--selected"
+              class="sc-jTjUTQ gfUtDS react-tabs__tab--selected"
               data-rttab="true"
               data-testid="undefined-0"
               id="react-tabs-0"
@@ -51,7 +51,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               aria-controls="react-tabs-3"
               aria-disabled="false"
               aria-selected="false"
-              class="sc-fvEvSO ldYuBF"
+              class="sc-jTjUTQ gfUtDS"
               data-rttab="true"
               data-testid="undefined-1"
               id="react-tabs-2"
@@ -63,7 +63,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               aria-controls="react-tabs-5"
               aria-disabled="false"
               aria-selected="false"
-              class="sc-fvEvSO ldYuBF"
+              class="sc-jTjUTQ gfUtDS"
               data-rttab="true"
               data-testid="undefined-2"
               id="react-tabs-4"
@@ -76,7 +76,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
       </div>
       <div
         aria-labelledby="react-tabs-0"
-        class="sc-fcCDlF dRxsCk react-tabs__tab-panel--selected"
+        class="sc-jRwbcX kihTQS react-tabs__tab-panel--selected"
         id="react-tabs-1"
         role="tabpanel"
       >
@@ -91,7 +91,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h2>
         </div>
         <div
-          class="sc-GKYbw cBcrOw"
+          class="sc-fvEvSO bsZtSz"
         >
           <div
             class="sc-kSGOQU IFGfd"
@@ -578,24 +578,24 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       Durée
                     </h4>
                     <div
-                      class="sc-cZFQFd icXAUe"
+                      class="sc-hOzowv hOqXUB"
                       data-rttabs="true"
                     >
                       <div
-                        class="sc-eJDSGI dCXocf sc-jTjUTQ cGMshX"
+                        class="sc-iOeugr cfcIjK sc-dsHJmm jqecJq"
                       >
                         <div
-                          class="sc-oZIhv bFEaYe"
+                          class="sc-jfvxQR dxcKMx"
                         >
                           <ul
-                            class="sc-jRwbcX jKfYts"
+                            class="sc-cZFQFd ivJWJy"
                             role="tablist"
                           >
                             <li
                               aria-controls="react-tabs-7"
                               aria-disabled="false"
                               aria-selected="true"
-                              class="sc-fvEvSO ldYuBF react-tabs__tab--selected"
+                              class="sc-jTjUTQ gfUtDS react-tabs__tab--selected"
                               data-rttab="true"
                               data-testid="undefined-0"
                               id="react-tabs-6"
@@ -608,7 +608,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-controls="react-tabs-9"
                               aria-disabled="false"
                               aria-selected="false"
-                              class="sc-fvEvSO ldYuBF"
+                              class="sc-jTjUTQ gfUtDS"
                               data-rttab="true"
                               data-testid="undefined-1"
                               id="react-tabs-8"
@@ -620,7 +620,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-controls="react-tabs-11"
                               aria-disabled="false"
                               aria-selected="false"
-                              class="sc-fvEvSO ldYuBF"
+                              class="sc-jTjUTQ gfUtDS"
                               data-rttab="true"
                               data-testid="undefined-2"
                               id="react-tabs-10"
@@ -633,7 +633,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       </div>
                       <div
                         aria-labelledby="react-tabs-6"
-                        class="sc-fcCDlF dRxsCk react-tabs__tab-panel--selected"
+                        class="sc-jRwbcX kihTQS react-tabs__tab-panel--selected"
                         id="react-tabs-7"
                         role="tabpanel"
                       >
@@ -648,7 +648,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           </h4>
                         </div>
                         <div
-                          class="sc-GKYbw cBcrOw"
+                          class="sc-fvEvSO bsZtSz"
                         >
                           <p>
                             La durée du préavis de démission est fixée :
@@ -705,13 +705,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       </div>
                       <div
                         aria-labelledby="react-tabs-8"
-                        class="sc-fcCDlF dRxsCk"
+                        class="sc-jRwbcX kihTQS"
                         id="react-tabs-9"
                         role="tabpanel"
                       />
                       <div
                         aria-labelledby="react-tabs-10"
-                        class="sc-fcCDlF dRxsCk"
+                        class="sc-jRwbcX kihTQS"
                         id="react-tabs-11"
                         role="tabpanel"
                       />
@@ -751,24 +751,24 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       En dehors de ces deux cas, vous pouvez être dispensé d'effectuer votre préavis, de votre propre initiative ou à la demande de votre employeur, dans les conditions suivantes :
                     </p>
                     <div
-                      class="sc-cZFQFd icXAUe"
+                      class="sc-hOzowv hOqXUB"
                       data-rttabs="true"
                     >
                       <div
-                        class="sc-eJDSGI dCXocf sc-jTjUTQ cGMshX"
+                        class="sc-iOeugr cfcIjK sc-dsHJmm jqecJq"
                       >
                         <div
-                          class="sc-oZIhv bFEaYe"
+                          class="sc-jfvxQR dxcKMx"
                         >
                           <ul
-                            class="sc-jRwbcX jKfYts"
+                            class="sc-cZFQFd ivJWJy"
                             role="tablist"
                           >
                             <li
                               aria-controls="react-tabs-13"
                               aria-disabled="false"
                               aria-selected="true"
-                              class="sc-fvEvSO ldYuBF react-tabs__tab--selected"
+                              class="sc-jTjUTQ gfUtDS react-tabs__tab--selected"
                               data-rttab="true"
                               data-testid="undefined-0"
                               id="react-tabs-12"
@@ -781,7 +781,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-controls="react-tabs-15"
                               aria-disabled="false"
                               aria-selected="false"
-                              class="sc-fvEvSO ldYuBF"
+                              class="sc-jTjUTQ gfUtDS"
                               data-rttab="true"
                               data-testid="undefined-1"
                               id="react-tabs-14"
@@ -794,7 +794,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       </div>
                       <div
                         aria-labelledby="react-tabs-12"
-                        class="sc-fcCDlF dRxsCk react-tabs__tab-panel--selected"
+                        class="sc-jRwbcX kihTQS react-tabs__tab-panel--selected"
                         id="react-tabs-13"
                         role="tabpanel"
                       >
@@ -809,7 +809,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           </h4>
                         </div>
                         <div
-                          class="sc-GKYbw cBcrOw"
+                          class="sc-fvEvSO bsZtSz"
                         >
                           <p>
                             Vous pouvez demander à votre employeur de vous dispenser d'effectuer votre préavis (par écrit ou par oral) :
@@ -961,7 +961,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       </div>
                       <div
                         aria-labelledby="react-tabs-14"
-                        class="sc-fcCDlF dRxsCk"
+                        class="sc-jRwbcX kihTQS"
                         id="react-tabs-15"
                         role="tabpanel"
                       />
@@ -1487,13 +1487,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
       </div>
       <div
         aria-labelledby="react-tabs-2"
-        class="sc-fcCDlF dRxsCk"
+        class="sc-jRwbcX kihTQS"
         id="react-tabs-3"
         role="tabpanel"
       />
       <div
         aria-labelledby="react-tabs-4"
-        class="sc-fcCDlF dRxsCk"
+        class="sc-jRwbcX kihTQS"
         id="react-tabs-5"
         role="tabpanel"
       />
