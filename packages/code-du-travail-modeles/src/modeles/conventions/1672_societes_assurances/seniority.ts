@@ -141,7 +141,7 @@ const MOTIFS_1672: Motif[] = LEGAL_MOTIFS.map((item) => ({
   startAt: (data) => {
     return (
       data[
-        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle"
+        "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle"
       ] === "'Cadres (Classes 5 à 7)'" &&
       data[
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . avant non cadres"
