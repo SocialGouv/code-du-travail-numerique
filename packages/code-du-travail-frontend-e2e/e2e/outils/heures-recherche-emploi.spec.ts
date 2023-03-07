@@ -54,7 +54,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       "Les heures sont fixées un jour par l' employeur et le suivant par le salarié. Ils peuvent décider de regrouper tout ou partie de ces heures."
     );
 
-    cy.get('div[role="button"]').contains("Voir le détail du calcul").click();
+    cy.contains("Voir le détail du calcul").click();
     cy.contains("Boulangerie-pâtisserie (entreprises artisanales)");
     cy.contains("Licenciement");
   });
@@ -97,7 +97,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
       "Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures."
     );
 
-    cy.get('div[role="button"]').contains("Voir le détail du calcul").click();
+    cy.contains("Voir le détail du calcul").click();
     cy.contains(
       "Personnel des cabinets d'experts-comptables et de commissaires aux comptes"
     );

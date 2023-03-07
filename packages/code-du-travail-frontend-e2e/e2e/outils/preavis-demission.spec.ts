@@ -40,7 +40,7 @@ describe("Outil - Préavis de démission", () => {
 
     cy.contains("Durée du préavis");
     cy.contains("2 semaines");
-    cy.get('div[role="button"]').contains("Voir le détail du calcul").click();
+    cy.contains("Voir le détail du calcul").click();
     cy.contains("Boulangerie-pâtisserie (entreprises artisanales)");
     cy.contains(
       "Personnel de fabrication, personnel de vente et personnel de services"
