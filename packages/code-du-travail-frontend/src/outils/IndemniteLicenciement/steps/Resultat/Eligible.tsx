@@ -4,7 +4,8 @@ import { IndemniteLicenciementStepName } from "../..";
 import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";
 import ShowDetails from "../../../common/ShowDetails";
-import { AgreementsInjector, getResultMessage } from "../../agreements";
+import { AgreementsInjector } from "../../agreements";
+import { getResultMessage } from "../../agreements/ui-customizations";
 import { useIndemniteLicenciementStore } from "../../store";
 import {
   DecryptResult,
