@@ -17,7 +17,7 @@ describe("Outil - Préavis de licenciement", () => {
     );
     cy.get('label:contains("Non")').eq(1).click();
     cy.contains("Quelle est l'ancienneté du salarié");
-    cy.get('[data-testid="cdt.ancienneté"]').select("Plus de 2 ans");
+    cy.get('[id="input-cdt.ancienneté"]').select("Plus de 2 ans");
     cy.contains("Suivant").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
@@ -53,7 +53,7 @@ describe("Outil - Préavis de licenciement", () => {
     );
     cy.get('label:contains("Non")').eq(1).click();
     cy.contains("Quelle est l'ancienneté du salarié");
-    cy.get('[data-testid="cdt.ancienneté"]').select("Plus de 2 ans");
+    cy.get('[id="input-cdt.ancienneté"]').select("Plus de 2 ans");
     cy.contains("Suivant").click();
 
     cy.contains("Quel est le nom de la convention collective applicable ?");
@@ -65,11 +65,11 @@ describe("Outil - Préavis de licenciement", () => {
     cy.get("button").contains("Suivant").click();
 
     cy.contains("Quelle est la catégorie professionnelle du salarié");
-    cy.get('[data-testid="criteria.catégorie professionnelle"]').select(
+    cy.get('[id="input-criteria.catégorie professionnelle"]').select(
       "Personnel de fabrication, personnel de vente et personnel de services"
     );
     cy.contains("Quelle est l'ancienneté du salarié");
-    cy.get('[data-testid="criteria.ancienneté"]').select("Plus de 2 ans");
+    cy.get('[id="input-criteria.ancienneté"]').select("Plus de 2 ans");
     cy.contains("Suivant").click();
 
     cy.contains("Durée du préavis");

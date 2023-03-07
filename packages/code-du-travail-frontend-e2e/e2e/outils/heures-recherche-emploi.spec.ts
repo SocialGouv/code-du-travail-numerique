@@ -83,7 +83,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
     cy.get("button").contains("Suivant").click();
 
     cy.contains("Quelle est l'ancienneté du salarié");
-    cy.get('[data-testid="criteria.ancienneté"]').select("Au moins 5 ans");
+    cy.get('[id="input-criteria.ancienneté"]').select("Au moins 5 ans");
     cy.get("button").contains("Suivant").click();
 
     cy.contains(
