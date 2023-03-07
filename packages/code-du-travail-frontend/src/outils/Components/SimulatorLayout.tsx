@@ -10,7 +10,13 @@ import {
 } from "../Simulator/createContext";
 import SimulatorNavigation from "./SimulatorNavigation";
 import { push as matopush } from "@socialgouv/matomo-next";
-import { MatomoActionEvent, MatomoBaseEvent } from "../../lib";
+import {
+  MatomoActionEvent,
+  MatomoBaseEvent,
+  MatomoSimulatorEvent,
+} from "../../lib";
+import { useIndemniteLicenciementStore } from "../IndemniteLicenciement/store";
+import { IndemniteLicenciementStepName } from "../IndemniteLicenciement";
 
 export enum ValidationResponse {
   NotValid = "not_valid",
@@ -52,6 +58,9 @@ const SimulatorContent = <StepName extends string>({
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
     (state) => state
   );
+  const { isEligible } = useIndemniteLicenciementStore((state) => ({
+    isEligible: state.resultData.input.isEligible,
+  }));
 
   const visibleSteps = useMemo(
     () =>
@@ -83,13 +92,18 @@ const SimulatorContent = <StepName extends string>({
   useEffect(() => {
     if (navigationAction !== "none") {
       const currentStepName = visibleSteps[currentStepIndex].name;
+      const currentStepNameIneligible =
+        !isEligible &&
+        currentStepName === IndemniteLicenciementStepName.Resultat
+          ? MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE
+          : currentStepName;
       matopush([
         MatomoBaseEvent.TRACK_EVENT,
         MatomoBaseEvent.OUTIL,
         navigationAction === "prev"
           ? MatomoActionEvent.CLICK_PREVIOUS + `_${title}`
           : MatomoActionEvent.VIEW_STEP + `_${title}`,
-        currentStepName,
+        currentStepNameIneligible,
       ]);
     }
   }, [currentStepIndex]);
