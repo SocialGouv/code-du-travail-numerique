@@ -46,8 +46,11 @@ export class Seniority1672
         }
         return total + Number(item.durationInMonth) * m.value;
       }, 0);
+
+    const extraInfoAbsence = this.getExtraInfoAbsence(absencePeriods);
     if (!isExecutive || !becameExecutiveAt) {
       return {
+        extraInfos: extraInfoAbsence,
         value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
       };
     }
@@ -59,6 +62,7 @@ export class Seniority1672
     if (isBefore(becameExecutiveDate, dEntree)) {
       return {
         extraInfos: {
+          ...extraInfoAbsence,
           "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . ancienneté non cadre": 0,
         },
         value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
@@ -85,6 +89,7 @@ export class Seniority1672
       12;
     return {
       extraInfos: {
+        ...extraInfoAbsence,
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . ancienneté non cadre":
           seniorityBeforeExecutive,
       },
@@ -133,6 +138,22 @@ export class Seniority1672
       }
       return absence;
     });
+  }
+
+  private getExtraInfoAbsence(
+    absencePeriods: Absence[]
+  ): Record<string, string> {
+    if (
+      absencePeriods.some(
+        (absence) => absence.motif.key === MotifKeys.maladieNonPro
+      )
+    ) {
+      return {
+        "contrat salarié . convention collective . sociétés d'assurances . congé maladie non professionnelle":
+          "oui",
+      };
+    }
+    return {};
   }
 }
 

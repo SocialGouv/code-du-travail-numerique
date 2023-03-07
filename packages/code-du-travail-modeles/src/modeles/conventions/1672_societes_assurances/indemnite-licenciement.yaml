@@ -47,8 +47,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   applicable si: contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . avant non cadres != 'Oui'
   valeur: oui
   références:
-    Article 92 (en vigueur étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792103?idConteneur=KALICONT000005635918
-    Article 92 (en vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792104?idConteneur=KALICONT000005635918
+    Article 92: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792103?idConteneur=KALICONT000005635918
     Article 35 b.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792023?idConteneur=KALICONT000005635918&origin=list#KALIARTI000005792023
     Article 86.e: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792094?idConteneur=KALICONT000005635918&origin=list#KALIARTI000005792094
 
@@ -281,3 +280,13 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   cdtn:
     formule:
       formula: ($formule) + (0.75% * Sref * A2)
+
+contrat salarié . convention collective . sociétés d'assurances . congé maladie non professionnelle:
+  valeur: non
+
+contrat salarié . convention collective . sociétés d'assurances . congé maladie non professionnelle . notification:
+  type: notification
+  description: |
+    Si lors de l’absence pour maladie non professionnelle le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (en plus des indemnités journalières de la sécurité sociale), le montant de l’indemnité de licenciement pourrait être plus élevé. En effet, dans ce cas, la période d’absence (jusqu’à 1 an d’absence) est intégrée dans l’ancienneté du salarié.
+    Par soucis de simplification, ce simulateur déduit toutes les absences pour maladie non professionnelle sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles aient été indemnisées ou pas.
+  valeur: oui

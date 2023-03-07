@@ -9,12 +9,8 @@ describe("Vérification des références juridiques pour la CC 1672", () => {
   describe("Non cadres", () => {
     const references = [
       {
-        article: "Article 92 (en vigueur étendu)",
+        article: "Article 92",
         url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792103?idConteneur=KALICONT000005635918",
-      },
-      {
-        article: "Article 92 (en vigueur non étendu)",
-        url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792104?idConteneur=KALICONT000005635918",
       },
       {
         article: "Article 35 b.4",
