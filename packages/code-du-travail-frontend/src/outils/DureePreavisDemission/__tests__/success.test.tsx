@@ -1,6 +1,6 @@
 import { DureePreavisDemission } from "..";
 
-import { render, fireEvent, waitFor } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 
 import { ui } from "./ui";
 
@@ -13,6 +13,7 @@ test(`
 
   fireEvent.click(ui.introduction.startButton.get());
   fireEvent.click(ui.agreement.agreement.get());
+  fireEvent.focus(ui.agreement.agreementInput.get());
   fireEvent.change(ui.agreement.agreementInput.get(), {
     target: { value: "1351" },
   });

@@ -145,7 +145,7 @@ exports[`<Recherche /> should render 1`] = `
                 value=""
               />
               <div
-                class="sc-cuOiQm bTESqq"
+                class="sc-cuOiQm dGYtPy"
                 id="react-autowhatever-1"
                 role="listbox"
               />
