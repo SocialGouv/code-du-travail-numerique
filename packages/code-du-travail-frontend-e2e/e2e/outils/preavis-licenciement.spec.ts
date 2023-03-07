@@ -31,7 +31,7 @@ describe("Outil - Préavis de licenciement", () => {
 
     cy.contains("Durée du préavis");
     cy.contains("2 mois");
-    cy.get('div[role="button"]').contains("Voir le détail du calcul").click();
+    cy.contains("Voir le détail du calcul").click();
     cy.contains("Plus de 2 ans");
     cy.contains("La convention collective n'a pas été renseignée");
   });
@@ -74,7 +74,7 @@ describe("Outil - Préavis de licenciement", () => {
 
     cy.contains("Durée du préavis");
     cy.contains("2 mois");
-    cy.get('div[role="button"]').contains("Voir le détail du calcul").click();
+    cy.contains("Voir le détail du calcul").click();
     cy.contains("Boulangerie-pâtisserie (entreprises artisanales)");
     cy.contains(
       "Personnel de fabrication, personnel de vente et personnel de services"
