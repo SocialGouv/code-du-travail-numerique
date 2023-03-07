@@ -1,4 +1,4 @@
-import { InputRadio, Text } from "@socialgouv/cdtn-ui";
+import { InputRadio, Text, Fieldset } from "@socialgouv/cdtn-ui";
 import { FormApi } from "final-form";
 import React from "react";
 import { Field } from "react-final-form";
@@ -26,92 +26,94 @@ const RouteSelection = ({
   const values = form.getState().values;
   return (
     <>
-      <Question
-        htmlFor={ROUTE_NAME}
-        required
-        tooltip={{
-          content: (
-            <p>
-              Vous pouvez trouver le nom de votre convention collective sur
-              votre <strong>bulletin de paie</strong>.
-            </p>
-          ),
-        }}
-      >
-        Quel est le nom de la convention collective applicable ?
-      </Question>
-      <RadioContainer>
-        <Field<AgreementRoute>
-          type="radio"
-          name={ROUTE_NAME}
-          value="agreement"
-          validate={required}
+      <Fieldset>
+        <Question
+          htmlFor={ROUTE_NAME}
+          required
+          tooltip={{
+            content: (
+              <p>
+                Vous pouvez trouver le nom de votre convention collective sur
+                votre <strong>bulletin de paie</strong>.
+              </p>
+            ),
+          }}
         >
-          {(props) => (
-            <InputRadio
-              label={
-                <Text>
-                  Je sais quelle est ma convention collective (je la saisis)
-                </Text>
-              }
-              id={`agreement`}
-              {...props.input}
-            />
-          )}
-        </Field>
-        <Field<AgreementRoute>
-          type="radio"
-          name={ROUTE_NAME}
-          value="enterprise"
-          validate={required}
-        >
-          {(props) => (
-            <InputRadio
-              label={
-                <Text>
-                  Je ne sais pas quelle est ma convention collective (je la
-                  recherche)
-                </Text>
-              }
-              id={`enterprise`}
-              {...props.input}
-            />
-          )}
-        </Field>
-        {canBeSkip && (
+          Quel est le nom de la convention collective applicable ?
+        </Question>
+        <RadioContainer>
           <Field<AgreementRoute>
             type="radio"
             name={ROUTE_NAME}
-            value="not-selected"
+            value="agreement"
             validate={required}
           >
             {(props) => (
               <InputRadio
                 label={
                   <Text>
-                    Je ne souhaite pas renseigner ma convention collective (je
-                    passe l&apos;étape)
+                    Je sais quelle est ma convention collective (je la saisis)
                   </Text>
                 }
-                id={`not-selected`}
+                id={`agreement`}
                 {...props.input}
               />
             )}
           </Field>
-        )}
-        <ErrorField name={ROUTE_NAME} />
-        {values.ccn && <ShowAlert route={values.ccn.route} />}
-        <OnChange name={ROUTE_NAME}>
-          {(
-            values: AgreementRoute | null | undefined,
-            _previous: AgreementRoute | null | undefined
-          ) => {
-            if (values) {
-              onChange(values);
-            }
-          }}
-        </OnChange>
-      </RadioContainer>
+          <Field<AgreementRoute>
+            type="radio"
+            name={ROUTE_NAME}
+            value="enterprise"
+            validate={required}
+          >
+            {(props) => (
+              <InputRadio
+                label={
+                  <Text>
+                    Je ne sais pas quelle est ma convention collective (je la
+                    recherche)
+                  </Text>
+                }
+                id={`enterprise`}
+                {...props.input}
+              />
+            )}
+          </Field>
+          {canBeSkip && (
+            <Field<AgreementRoute>
+              type="radio"
+              name={ROUTE_NAME}
+              value="not-selected"
+              validate={required}
+            >
+              {(props) => (
+                <InputRadio
+                  label={
+                    <Text>
+                      Je ne souhaite pas renseigner ma convention collective (je
+                      passe l&apos;étape)
+                    </Text>
+                  }
+                  id={`not-selected`}
+                  {...props.input}
+                />
+              )}
+            </Field>
+          )}
+          <ErrorField name={ROUTE_NAME} />
+          {values.ccn && <ShowAlert route={values.ccn.route} />}
+          <OnChange name={ROUTE_NAME}>
+            {(
+              values: AgreementRoute | null | undefined,
+              _previous: AgreementRoute | null | undefined
+            ) => {
+              if (values) {
+                onChange(values);
+              }
+            }}
+          </OnChange>
+        </RadioContainer>
+      </Fieldset>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { InputRadio } from "@socialgouv/cdtn-ui";
+import { InputRadio, Fieldset } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 import Html from "../../common/Html";
@@ -45,30 +45,32 @@ export default function RadioQuestion({
 
   return (
     <>
-      <Question required={showRequired} tooltip={tooltip}>
-        <Html as="span">{label}</Html>
-      </Question>
-      {subLabel && <SubLabel>{subLabel}</SubLabel>}
-      <RadioContainer>
-        {questions.map((question, index) => (
-          <InputRadio
-            key={index}
-            name={name}
-            label={question.label}
-            value={question.value}
-            id={question.id}
-            data-testid={`${name} - ${question.label}`}
-            checked={selectedOption === question.value}
-            onChange={() => onChange(question.value)}
-          />
-        ))}
-        {error && (
-          <ErrorWrapper>
-            <InlineError>{error}</InlineError>
-          </ErrorWrapper>
-        )}
-      </RadioContainer>
-      {note && <SmallText as="i">{note}</SmallText>}
+      <Fieldset>
+        <Question required={showRequired} tooltip={tooltip}>
+          <Html as="span">{label}</Html>
+        </Question>
+        {subLabel && <SubLabel>{subLabel}</SubLabel>}
+        <RadioContainer>
+          {questions.map((question, index) => (
+            <InputRadio
+              key={index}
+              name={name}
+              label={question.label}
+              value={question.value}
+              id={question.id}
+              data-testid={`${name} - ${question.label}`}
+              checked={selectedOption === question.value}
+              onChange={() => onChange(question.value)}
+            />
+          ))}
+          {error && (
+            <ErrorWrapper>
+              <InlineError>{error}</InlineError>
+            </ErrorWrapper>
+          )}
+        </RadioContainer>
+        {note && <SmallText as="i">{note}</SmallText>}
+      </Fieldset>
     </>
   );
 }

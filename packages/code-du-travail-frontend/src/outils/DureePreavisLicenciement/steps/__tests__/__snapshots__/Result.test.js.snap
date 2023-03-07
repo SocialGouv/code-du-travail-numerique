@@ -16,10 +16,10 @@ exports[`<StepResult /> should render with O duration 1`] = `
     Le code du travail et la convention collective ne prévoient pas de préavis.
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="sc-khsqcC jyDCrc"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc VPdUE"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -38,14 +38,16 @@ exports[`<StepResult /> should render with O duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="sc-AHaJN dhcrLx"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
         class="sc-jsTgWu jWEkmq"
@@ -153,10 +155,10 @@ exports[`<StepResult /> should render with O duration 1`] = `
     class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
-      class="sc-gGvHcT hSOEAU"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -176,10 +178,10 @@ exports[`<StepResult /> should render with O duration 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-cOxWqc fjmwyW sc-grxQYx hFitns"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -244,10 +246,10 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     </span>
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="sc-khsqcC jyDCrc"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc VPdUE"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -266,14 +268,16 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="sc-AHaJN dhcrLx"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
         class="sc-jsTgWu jWEkmq"
@@ -340,10 +344,10 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
-      class="sc-gGvHcT hSOEAU"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -363,10 +367,10 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-cOxWqc fjmwyW sc-grxQYx hFitns"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -404,10 +408,10 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     Le code du travail ne prévoit pas de durée de préavis de licenciement sauf, cas particuliers.
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="sc-khsqcC jyDCrc"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc VPdUE"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -426,14 +430,16 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="sc-AHaJN dhcrLx"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
         class="sc-jsTgWu jWEkmq"
@@ -500,10 +506,10 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
-      class="sc-gGvHcT hSOEAU"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -523,10 +529,10 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-cOxWqc fjmwyW sc-grxQYx hFitns"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -600,10 +606,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     </span>
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="sc-khsqcC jyDCrc"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc VPdUE"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -622,14 +628,16 @@ exports[`<StepResult /> should render with when no CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="sc-AHaJN dhcrLx"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
         class="sc-jsTgWu jWEkmq"
@@ -686,10 +694,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
-      class="sc-gGvHcT hSOEAU"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -709,10 +717,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-cOxWqc fjmwyW sc-grxQYx hFitns"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -777,10 +785,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </span>
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="sc-khsqcC jyDCrc"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc VPdUE"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -799,14 +807,16 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="sc-AHaJN dhcrLx"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
         class="sc-jsTgWu jWEkmq"
@@ -873,10 +883,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
-      class="sc-gGvHcT hSOEAU"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -896,10 +906,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-cOxWqc fjmwyW sc-grxQYx hFitns"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
