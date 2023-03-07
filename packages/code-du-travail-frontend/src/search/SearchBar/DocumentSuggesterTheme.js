@@ -27,3 +27,12 @@ export const suggesterTheme = {
     padding: 0,
   },
 };
+
+export const suggesterGlobalSearchTheme = {
+  ...suggesterTheme,
+  suggestionsList: {
+    ...suggesterTheme.suggestionsList,
+    position: "absolute",
+    width: "100%",
+  },
+};
