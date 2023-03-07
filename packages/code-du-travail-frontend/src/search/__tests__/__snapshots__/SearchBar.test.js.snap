@@ -104,7 +104,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
       >
         <ul
           role="listbox"
-          style="z-index: 1; background: rgb(255, 255, 255); border: 1px solid #bbcadf; border-radius: 3px; box-shadow: 0 10px 10px -10px #b7bcdf; margin: 0.4rem 0px 0px 0px; padding: 0px;"
+          style="z-index: 1; background: rgb(255, 255, 255); border: 1px solid #bbcadf; border-radius: 3px; box-shadow: 0 10px 10px -10px #b7bcdf; margin: 0.4rem 0px 0px 0px; padding: 0px; position: absolute; width: 100%;"
         >
           <li
             aria-selected="false"
