@@ -29,8 +29,8 @@
     "test:update": "jest --silent -u"
   },
   "dependencies": {
-    "@socialgouv/react-accessible-accordion": "4.1.1",
     "@reach/dialog": "0.15.3",
+    "@socialgouv/react-accessible-accordion": "4.1.1",
     "polished": "^4.2.2",
     "react-feather": "^2.0.9",
     "react-tabs": "^3.2.2",
