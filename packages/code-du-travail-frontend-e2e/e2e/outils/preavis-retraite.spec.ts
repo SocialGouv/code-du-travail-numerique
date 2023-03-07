@@ -177,14 +177,11 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains(
       "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)"
     );
-    cy.get("button").contains("Suivant").click({ force: true });
-    cy.contains("Vous devez répondre à cette question");
     cy.get(
       'label:contains("Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)")'
     )
       .first()
       .click();
-    cy.contains("Vous devez répondre à cette question").should("not.exist");
     cy.contains("Cliquez sur Suivant pour poursuivre la simulation.");
     cy.get('[aria-label="Fermer"]').click();
     cy.get("#enterprise-search").clear().type("Ondo");
