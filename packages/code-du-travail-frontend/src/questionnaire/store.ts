@@ -118,6 +118,10 @@ const createStore = (name: string) =>
     };
   });
 
-const { Provider } = createContext<StoreApi<Store>>({} as StoreApi<Store>);
+const DossierLicenciementContext = createContext<StoreApi<Store>>(
+  {} as StoreApi<Store>
+);
 
-export { Provider, createStore, useStore };
+const { Provider } = DossierLicenciementContext;
+
+export { Provider, createStore, useStore, DossierLicenciementContext };

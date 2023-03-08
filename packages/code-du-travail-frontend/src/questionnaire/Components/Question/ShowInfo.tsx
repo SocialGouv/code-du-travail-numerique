@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { Button, Section, icons } from "@socialgouv/cdtn-ui";
 import { trackClickViewPageInfo } from "../../tracking";
 import { useRouter } from "next/router";
-import { useStore } from "../../store";
+import { DossierLicenciementContext, useStore } from "../../store";
+import { useContext } from "react";
 const { DirectionRight } = icons;
 
 export const ShowInfo = ({
@@ -13,7 +14,11 @@ export const ShowInfo = ({
   widgetMode: boolean;
 }) => {
   const router = useRouter();
-  const setQuestionnaireSlug = useStore((state) => state.setQuestionnaireSlug);
+  const store = useContext(DossierLicenciementContext);
+  const setQuestionnaireSlug = useStore(
+    store,
+    (state) => state.setQuestionnaireSlug
+  );
   return (
     <ButtonSection>
       <Button
