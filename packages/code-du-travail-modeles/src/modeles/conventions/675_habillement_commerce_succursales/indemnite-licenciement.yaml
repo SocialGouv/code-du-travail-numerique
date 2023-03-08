@@ -9,7 +9,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle:
   titre: Catégorie professionnelle
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié&nbsp;?
   cdtn:
     type: liste
     valeurs:
@@ -18,16 +18,16 @@ contrat salarié . convention collective . habillement commerce succursales . in
       Cadres: "'Cadres'"
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . employés:
-  applicable si: catégorie professionnelle 'Employés'
+  applicable si: catégorie professionnelle = 'Employés'
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents:
-  applicable si: catégorie professionnelle 'Agents de maîtrise'
+  applicable si: catégorie professionnelle = 'Agents de maîtrise'
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres:
-  applicable si: catégorie professionnelle 'Cadres'
+  applicable si: catégorie professionnelle = 'Cadres'
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif:
-  applicable si: catégorie professionnelle 'Agents de maîtrise'
+  applicable si: catégorie professionnelle = 'Agents de maîtrise'
   titre: Licenciement économique collectif
   question: Le licenciement est-il un licenciement économique collectif ?
   cdtn:
@@ -40,7 +40,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif . autres . age:
   applicable si:
     toutes ces conditions:
-      - catégorie professionnelle 'Agents de maîtrise'
+      - catégorie professionnelle = 'Agents de maîtrise'
       - licenciement collectif = 'Non'
   titre: Âge du salarié
   question: Quel est l'âge du salarié à la date du départ de l'entreprise&nbsp;?
@@ -52,7 +52,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
   valeur: oui
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif:
-  applicable si: catégorie professionnelle 'Cadres'
+  applicable si: catégorie professionnelle = 'Cadres'
   titre: Licenciement économique collectif
   question: Le licenciement est-il un licenciement économique collectif ?
   cdtn:
@@ -65,7 +65,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif . autres . age:
   applicable si:
     toutes ces conditions:
-      - catégorie professionnelle 'Cadres'
+      - catégorie professionnelle = 'Cadres'
       - licenciement collectif = 'Non'
   titre: Âge du salarié
   question: Quel est l'âge du salarié à la date du départ de l'entreprise&nbsp;?
