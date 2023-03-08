@@ -79,7 +79,8 @@ const StyledLegend = styled(Legend)`
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
   }
-  p {
+  p,
+  div {
     font-weight: 100 !important;
   }
 `;

@@ -7,6 +7,7 @@ import {
 } from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
+import styled from "styled-components";
 
 type IntegrationContainerProps = {
   id: string;
@@ -42,7 +43,7 @@ const IntegrationContainer = ({
   useScript();
   return (
     <Container>
-      <PageTitle>{title}</PageTitle>
+      <StyledTitle>{title}</StyledTitle>
       <Wrapper variant="main">
         <p>{description}</p>
         <a href={`${host}${url}`}>{shortTitle}</a>
@@ -93,3 +94,9 @@ const IntegrationContainer = ({
 };
 
 export default IntegrationContainer;
+
+const StyledTitle = styled(PageTitle)`
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 40px;
+`;
