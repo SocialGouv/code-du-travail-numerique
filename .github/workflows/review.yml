@@ -135,7 +135,7 @@ jobs:
           echo "SITE_URL=https://${{ steps.yq_url.outputs.result }}" >> $GITHUB_ENV
       - name: Run test e2e
         run: |
-          CODECEPT_BASEURL=${{ env.SITE_URL }} yarn test:e2e
+          TEST_BASEURL=${{ env.SITE_URL }} yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v3
