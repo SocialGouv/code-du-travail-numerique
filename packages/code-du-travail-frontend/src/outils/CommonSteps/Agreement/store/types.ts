@@ -7,6 +7,7 @@ export type CommonAgreementStoreInput = {
   route?: AgreementRoute;
   agreement?: Agreement;
   enterprise?: Enterprise;
+  isAgreementSupportedIndemniteLicenciement: boolean;
 };
 
 export type CommonAgreementStoreError = {

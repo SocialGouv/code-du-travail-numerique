@@ -17,7 +17,7 @@ exports[`<SearchResults/> should render results 1`] = `
       Résultats de recherche pour “search test”
     </h2>
     <ul
-      class="sc-jfvxQR gwhdUi"
+      class="sc-lbVpMG fqAvkB"
     >
       <li
         class="sc-elAWhN hPRVLd"
@@ -54,7 +54,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="sc-iJbNxu hQEIiI"
             >
               <p
-                class="sc-cOxWqc bBCaVZ"
+                class="sc-GKYbw gcbROE"
               >
                 description
               </p>
@@ -127,7 +127,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-iJbNxu hQEIiI"
               >
                 <p
-                  class="sc-cOxWqc bBCaVZ"
+                  class="sc-GKYbw gcbROE"
                 >
                   description
                 </p>
@@ -197,7 +197,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-iJbNxu hQEIiI"
               >
                 <p
-                  class="sc-cOxWqc bBCaVZ"
+                  class="sc-GKYbw gcbROE"
                 >
                   description
                 </p>
@@ -291,7 +291,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-iJbNxu hQEIiI"
               >
                 <p
-                  class="sc-cOxWqc bBCaVZ"
+                  class="sc-GKYbw gcbROE"
                 >
                   description
                 </p>
@@ -382,7 +382,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="sc-iJbNxu hQEIiI"
             >
               <p
-                class="sc-cOxWqc bBCaVZ"
+                class="sc-GKYbw gcbROE"
               >
                 description
               </p>
@@ -417,16 +417,16 @@ exports[`<SearchResults/> should render results 1`] = `
           </h2>
         </div>
         <div
-          class="sc-eJDSGI hWSwY sc-hiDMwi gAYklG"
+          class="sc-iOeugr TLLGV sc-eJDSGI cnCImS"
         >
           <div
-            class="sc-oZIhv grJGZr"
+            class="sc-jfvxQR hUilgg"
           >
             <div
-              class="sc-ehvNnt jkVqcZ"
+              class="sc-oZIhv eWwzHY"
             >
               <div
-                class="sc-laZRCg FkEKn"
+                class="sc-hiDMwi mnHoI"
               >
                 <div
                   class="sc-eGugkK cJzHzy"
@@ -471,16 +471,16 @@ exports[`<SearchResults/> should render results 1`] = `
           </h2>
         </div>
         <div
-          class="sc-eJDSGI hWSwY sc-hiDMwi gAYklG"
+          class="sc-iOeugr TLLGV sc-eJDSGI cnCImS"
         >
           <div
-            class="sc-oZIhv grJGZr"
+            class="sc-jfvxQR hUilgg"
           >
             <div
-              class="sc-ehvNnt jkVqcZ"
+              class="sc-oZIhv eWwzHY"
             >
               <div
-                class="sc-laZRCg cupBig"
+                class="sc-hiDMwi cjLrkj"
               >
                 <div
                   class="sc-eGugkK gnEaJx"

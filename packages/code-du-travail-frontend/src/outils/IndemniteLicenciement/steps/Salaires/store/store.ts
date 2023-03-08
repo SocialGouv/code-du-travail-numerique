@@ -125,10 +125,12 @@ const createSalairesStore: StoreSlice<
       }
 
       const agreement = get().agreementData.input.agreement;
+      const isAgreementSupportedIndemniteLicenciement =
+        get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
 
       let isAgreementValid = true;
 
-      if (agreement) {
+      if (agreement && isAgreementSupportedIndemniteLicenciement) {
         isAgreementValid = validatorAgreement(
           getSupportedAgreement(agreement.num),
           IndemniteLicenciementStepName.Salaires,
@@ -165,10 +167,11 @@ const applyGenericValidation = (
     });
     const { isValid, errorState } = validateStep(nextState.salairesData.input);
     const agreement = get().agreementData.input.agreement;
-
+    const isAgreementSupportedIndemniteLicenciement =
+      get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
     let isAgreementValid = true;
 
-    if (agreement) {
+    if (agreement && isAgreementSupportedIndemniteLicenciement) {
       isAgreementValid = validatorAgreement(
         getSupportedAgreement(agreement.num),
         IndemniteLicenciementStepName.Salaires,

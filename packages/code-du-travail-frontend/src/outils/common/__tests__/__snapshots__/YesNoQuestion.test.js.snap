@@ -2,23 +2,23 @@
 
 exports[`<YesNoQuestion /> should render 1`] = `
 <div>
-  <label
-    class="sc-dvEHMn eummWX"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       lorem ipsum ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <div
-    class="sc-elAWhN UfAyd"
+    class="sc-kiPvrU gyqBYb"
   >
     <div
       class="sc-hjjlnc goUtYR"

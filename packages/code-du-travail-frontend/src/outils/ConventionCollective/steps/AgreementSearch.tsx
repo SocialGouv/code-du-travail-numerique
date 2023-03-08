@@ -3,7 +3,6 @@ import { Button, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import { TrackingProps } from "../types";
-import { renderResults } from "../../common/Agreement/AgreementSearch/AgreementSearchResult";
 import styled from "styled-components";
 import { SectionTitle } from "../../common/stepStyles";
 import { SearchAgreementInput } from "../../common/Agreement/AgreementSearch/AgreementInput/SearchAgreementInput";
@@ -27,10 +26,7 @@ const AgreementSearchStep = ({
         <form onSubmit={(event) => event.preventDefault()}>
           <SearchAgreementInput
             onUserAction={onUserAction}
-            renderResults={renderResults({
-              onSelectAgreement,
-              onUserAction,
-            })}
+            onSelectAgreement={onSelectAgreement}
           />
         </form>
       </Section>

@@ -2,23 +2,23 @@
 
 exports[`<StepStatus /> should render 1`] = `
 <div>
-  <label
-    class="sc-jsTgWu cXzRXb"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       Le licenciement est-il dû à une faute grave (ou lourde) ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <div
-    class="sc-grxQYx eLmzGx"
+    class="sc-ZqGJI fEhdqf"
   >
     <div
       class="sc-hjjlnc goUtYR"
@@ -62,23 +62,23 @@ exports[`<StepStatus /> should render 1`] = `
 
 exports[`<StepStatus /> should render coefficient 1`] = `
 <div>
-  <label
-    class="sc-jsTgWu cXzRXb"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       Le licenciement est-il dû à une faute grave (ou lourde) ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <div
-    class="sc-grxQYx eLmzGx"
+    class="sc-ZqGJI fEhdqf"
   >
     <div
       class="sc-hjjlnc goUtYR"
@@ -118,23 +118,23 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       </label>
     </div>
   </div>
-  <label
-    class="sc-jsTgWu cXzRXb"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <div
-    class="sc-grxQYx eLmzGx"
+    class="sc-ZqGJI fEhdqf"
   >
     <div
       class="sc-hjjlnc goUtYR"
@@ -175,65 +175,65 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     </div>
   </div>
   <div
-    class="sc-cLNonn kHAoQt"
+    class="sc-iJbNxu hWjAF"
   >
-    <label
-      class="sc-jsTgWu cXzRXb"
+    <legend
+      class="sc-hsWlPz dQgJqc"
       data-testid="question-label"
       for="input-cdt.ancienneté"
     >
       <span
-        class="sc-bCfvAP iHaZba"
+        class="sc-fcCDlF gZwBNq"
       >
         Quelle est l'ancienneté du salarié ?
         <span
-          class="sc-bCfvAP hEXzCO"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
-      </span>
-      <button
-        aria-label="Plus d'informations"
-        class="sc-hhOBVt eyKsVw sc-jfTVlA bLrpDO"
-        title="Plus d'informations"
-        type="button"
-      >
-        <svg
-          aria-label="?"
-          fill="none"
-          height="20"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="20"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-label="Plus d'informations"
+          class="sc-hhOBVt eyKsVw sc-khsqcC gCXQoM"
+          title="Plus d'informations"
+          type="button"
         >
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-          />
-          <path
-            d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
-          />
-          <line
-            x1="12"
-            x2="12.01"
-            y1="17"
-            y2="17"
-          />
-        </svg>
-      </button>
-    </label>
+          <svg
+            aria-label="?"
+            fill="none"
+            height="20"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <path
+              d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+            />
+            <line
+              x1="12"
+              x2="12.01"
+              y1="17"
+              y2="17"
+            />
+          </svg>
+        </button>
+      </span>
+    </legend>
     <label
-      class="sc-elAWhN hbcDCe"
+      class="sc-kiPvrU gMqTtY"
     >
       Choisissez parmi les catégories d'ancienneté telles que définies par le Code du travail
     </label>
     <div
-      class="sc-fWHiwC eYDYwl sc-kiPvrU fuxYJe"
+      class="sc-fWHiwC eYDYwl sc-cLNonn bbxTFr"
     >
       <select
         class="sc-gzrROc iRaQTV"
@@ -303,23 +303,23 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 
 exports[`<StepStatus /> should render seriousMisconduct 1`] = `
 <div>
-  <label
-    class="sc-jsTgWu cXzRXb"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       Le licenciement est-il dû à une faute grave (ou lourde) ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <div
-    class="sc-grxQYx eLmzGx"
+    class="sc-ZqGJI fEhdqf"
   >
     <div
       class="sc-hjjlnc goUtYR"
@@ -359,23 +359,23 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
       </label>
     </div>
   </div>
-  <label
-    class="sc-jsTgWu cXzRXb"
+  <legend
+    class="sc-hsWlPz dQgJqc"
     data-testid="question-label"
   >
     <span
-      class="sc-bCfvAP iHaZba"
+      class="sc-fcCDlF gZwBNq"
     >
       Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
       <span
-        class="sc-bCfvAP hEXzCO"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
-  </label>
+  </legend>
   <div
-    class="sc-grxQYx eLmzGx"
+    class="sc-ZqGJI fEhdqf"
   >
     <div
       class="sc-hjjlnc goUtYR"
