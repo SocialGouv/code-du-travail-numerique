@@ -101,7 +101,7 @@ describe("Indemnité licenciement - Tracking", () => {
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
-      "results",
+      "results_ineligible",
     ]);
     fireEvent.click(ui.previous.get());
     expect(push).toHaveBeenCalledWith([

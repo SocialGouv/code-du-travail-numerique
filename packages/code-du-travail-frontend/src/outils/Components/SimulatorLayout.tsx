@@ -17,6 +17,7 @@ import {
 } from "../../lib";
 import { useIndemniteLicenciementStore } from "../IndemniteLicenciement/store";
 import { IndemniteLicenciementStepName } from "../IndemniteLicenciement";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export enum ValidationResponse {
   NotValid = "not_valid",
@@ -40,6 +41,7 @@ type Props<StepName extends string> = {
   steps: Step<StepName>[];
   onStepChange: StepChange<StepName>[];
   hiddenStep?: StepName[];
+  simulator: PublicodesSimulator;
 };
 
 const SimulatorContent = <StepName extends string>({
@@ -51,6 +53,7 @@ const SimulatorContent = <StepName extends string>({
   steps,
   onStepChange,
   hiddenStep,
+  simulator,
 }: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
   const [navigationAction, setNavigationAction] =
@@ -94,7 +97,8 @@ const SimulatorContent = <StepName extends string>({
       const currentStepName = visibleSteps[currentStepIndex].name;
       const currentStepNameIneligible =
         !isEligible &&
-        currentStepName === IndemniteLicenciementStepName.Resultat
+        currentStepName === IndemniteLicenciementStepName.Resultat &&
+        simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT
           ? MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE
           : currentStepName;
       matopush([
