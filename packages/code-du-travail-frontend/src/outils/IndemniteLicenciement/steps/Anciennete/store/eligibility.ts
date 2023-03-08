@@ -55,6 +55,7 @@ export const getErrorEligibility = (
   switch (agreement?.num) {
     case 3239:
       if (stateInfo.publicodesInformations[0].info === "'Assistant maternel'") {
+        requiredSeniorityInYear = requiredSeniorityAgreement;
         minimalSeniorityInMonth = 9;
         minimalSeniorityError =
           "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois.";
