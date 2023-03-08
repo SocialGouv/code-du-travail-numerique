@@ -6,7 +6,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
   valeur: non
 
 # Questions
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle:
   titre: Catégorie professionnelle
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est la catégorie professionnelle du salarié ?
@@ -17,62 +17,62 @@ contrat salarié . convention collective . habillement commerce succursales . in
       Agents de maîtrise: "'Agents de maîtrise'"
       Cadres: "'Cadres'"
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . employés:
-  applicable si: catégorie = 'Employés'
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . employés:
+  applicable si: catégorie professionnelle 'Employés'
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents:
-  applicable si: catégorie = 'Agents de maîtrise'
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents:
+  applicable si: catégorie professionnelle 'Agents de maîtrise'
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres:
-  applicable si: catégorie = 'Cadres'
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres:
+  applicable si: catégorie professionnelle 'Cadres'
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif:
-  applicable si: catégorie = 'Agents de maîtrise'
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif:
+  applicable si: catégorie professionnelle 'Agents de maîtrise'
   titre: Licenciement économique collectif
   question: Le licenciement est-il un licenciement économique collectif ?
   cdtn:
     type: oui-non
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif . autres:
   applicable si: licenciement collectif = 'Non'
   valeur: oui
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif . autres . age:
   applicable si:
     toutes ces conditions:
-      - catégorie = 'Agents de maîtrise'
+      - catégorie professionnelle 'Agents de maîtrise'
       - licenciement collectif = 'Non'
   titre: Âge du salarié
   question: Quel est l'âge du salarié à la date du départ de l'entreprise&nbsp;?
   cdtn:
     type: entier
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . collectif:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif . collectif:
   applicable si: licenciement collectif = 'Oui'
   valeur: oui
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif:
-  applicable si: catégorie = 'Cadres'
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif:
+  applicable si: catégorie professionnelle 'Cadres'
   titre: Licenciement économique collectif
   question: Le licenciement est-il un licenciement économique collectif ?
   cdtn:
     type: oui-non
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif . autres:
   applicable si: licenciement collectif = 'Non'
   valeur: oui
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . age:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif . autres . age:
   applicable si:
     toutes ces conditions:
-      - catégorie = 'Cadres'
+      - catégorie professionnelle 'Cadres'
       - licenciement collectif = 'Non'
   titre: Âge du salarié
   question: Quel est l'âge du salarié à la date du départ de l'entreprise&nbsp;?
   cdtn:
     type: entier
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . collectif:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif . collectif:
   applicable si: licenciement collectif = 'Oui'
   valeur: oui
 
@@ -184,7 +184,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
 # Résultats
 
 ## Employés
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . employés . résultat conventionnel entre deux et quinze ans:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . employés . résultat conventionnel entre deux et quinze ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: salaire mensuel des 3 derniers mois * 6
   applicable si:
@@ -206,7 +206,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
         - "A2 : Années d'ancienneté au-delà de la 10ème année": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . au delà de dix ans
       formula: 1 / 10 * Sref * A1[ + 2 / 10 * Sref * A2]
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . employés . résultat conventionnel au delà de quinze ans:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . employés . résultat conventionnel au delà de quinze ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 15 ans
   plafond: salaire mensuel des 3 derniers mois * 6
@@ -225,18 +225,18 @@ contrat salarié . convention collective . habillement commerce succursales . in
 ## Agents de maîtrise
 
 ### Avec autre licenciement
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . résultat conventionnel entre deux et vingt ans:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif . autres . résultat conventionnel entre deux et vingt ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 9
   applicable si:
     une de ces conditions:
       - toutes ces conditions:
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
-        - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age < 50 ans
+        - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif . autres . age < 50 ans
       - toutes ces conditions:
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 20 ans
-        - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age >= 50 ans
+        - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif . autres . age >= 50 ans
   somme:
     - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence pour moins de 10 ans
     - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 10 ans
@@ -252,12 +252,12 @@ contrat salarié . convention collective . habillement commerce succursales . in
         - "A2 : Années d'ancienneté au-delà de la 10ème année": contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . au delà de dix ans
       formula: 1 / 10 * Sref * A1[ + 2 / 5 * Sref * A2]
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . résultat conventionnel au delà de vingt ans:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif . autres . résultat conventionnel au delà de vingt ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 20 ans
-      - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . autres . age >= 50 ans
+      - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif . autres . age >= 50 ans
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 13.5
   somme:
     - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence pour moins de 10 ans
@@ -277,7 +277,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
       formula: 1 / 10 * Sref * A1[ + 2 / 5 * Sref * A2] + 50% * (1 / 10 * Sref * A1)[ + 50% * (2 / 5 * Sref * A2)]
 
 # Avec licenciement collectif
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . agents . licenciement collectif . collectif . résultat conventionnel au delà de deux ans:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif . collectif . résultat conventionnel au delà de deux ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
@@ -299,7 +299,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
 ## Cadres
 
 ### Avec autres licenciement
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . résultat conventionnel entre deux et cinq ans:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif . autres . résultat conventionnel entre deux et cinq ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -318,17 +318,17 @@ contrat salarié . convention collective . habillement commerce succursales . in
         - "A : Années de présence": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
       formula: 1 / 10 * Sref * A
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . résultat conventionnel entre cinq et vingt ans:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif . autres . résultat conventionnel entre cinq et vingt ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     une de ces conditions:
       - toutes ces conditions:
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 5 ans
-        - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . age < 50 ans
+        - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif . autres . age < 50 ans
       - toutes ces conditions:
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 5 ans
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 20 ans
-        - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . age >= 50 ans
+        - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif . autres . age >= 50 ans
   somme:
     - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un cinquième du salaire de référence pour moins de 15 ans
     - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 15 ans
@@ -345,12 +345,12 @@ contrat salarié . convention collective . habillement commerce succursales . in
         - "A2 : Années d'ancienneté au delà de 15 ans" : contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . au delà de quinze ans
       formula: 1 / 5 * Sref * A1[ + 2 / 5 * Sref * A2]
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . résultat conventionnel au delà de vingt ans:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif . autres . résultat conventionnel au delà de vingt ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 20 ans
-      - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . autres . age >= 50 ans
+      - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif . autres . age >= 50 ans
   somme:
     - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un cinquième du salaire de référence pour moins de 15 ans
     - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 15 ans
@@ -370,7 +370,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
       formula: 1 / 5 * Sref * A1[ + 2 / 5 * Sref * A2] + 50% * (1 / 5 * Sref * A1)[ + 50% * (2 / 5 * Sref * A2)]
 
 ### Avec licenciement collectif
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . collectif . résultat conventionnel entre deux et cinq ans:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif . collectif . résultat conventionnel entre deux et cinq ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -389,7 +389,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
         - "A : Années de présence": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
       formula: 1 / 10 * Sref * A
 
-contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie . cadres . licenciement collectif . collectif . résultat conventionnel au delà cinq ans:
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif . collectif . résultat conventionnel au delà cinq ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 5 ans
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6

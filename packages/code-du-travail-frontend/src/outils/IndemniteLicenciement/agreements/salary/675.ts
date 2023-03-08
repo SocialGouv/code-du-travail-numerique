@@ -19,7 +19,7 @@ export class AgreementSalary675 implements AgreementSalary {
       .informationsData.input.publicodesInformations.find(
         (v) =>
           v.question.rule.nom ===
-          "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie"
+          "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle"
       )
       ?.info?.slice(1, -1) as any;
     const isAgentMaitriseOrCadre =
@@ -41,7 +41,7 @@ export class AgreementSalary675 implements AgreementSalary {
       .informationsData.input.publicodesInformations.find(
         (v) =>
           v.question.rule.nom ===
-          "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie"
+          "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle"
       )
       ?.info?.slice(1, -1) as any;
     const isAgentMaitriseOrCadre =
