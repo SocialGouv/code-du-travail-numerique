@@ -1,7 +1,13 @@
-import { useIndemniteLicenciementStore } from "../../store";
+import { useContext } from "react";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 
 export default function Agreement16Informations() {
+  const store = useContext(IndemniteLicenciementContext);
   const { showVariablePay, hasVariablePay } = useIndemniteLicenciementStore(
+    store,
     (state) => ({
       showVariablePay: state.agreement16Data.input.showVariablePay,
       hasVariablePay: state.agreement16Data.input.hasVariablePay,

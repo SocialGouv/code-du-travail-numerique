@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 
 const StepContratTravail = (): JSX.Element => {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     licenciementFauteGrave,
     onChangeLicenciementFauteGrave,
@@ -20,7 +24,7 @@ const StepContratTravail = (): JSX.Element => {
     dateArretTravail,
     onChangeDateArretTravail,
     errorDateArretTravail,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     licenciementFauteGrave:
       state.contratTravailData.input.licenciementFauteGrave,
     onChangeLicenciementFauteGrave:
