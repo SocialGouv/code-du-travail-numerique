@@ -13,7 +13,7 @@ const MiseRetraiteReferencesBad = [
   },
   {
     article: "Titre IV, article 29",
-    url: "https://wwww.legifrance.gouv.fr/conv_coll/article/KALIARTI000025805636#KALIARTI000025805636",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000025805636#KALIARTI000025805636",
   },
 ].concat(MiseRetraiteReferences);
 test("Vérification des références juridiques pour un employéen en depart à la retraite", () => {
