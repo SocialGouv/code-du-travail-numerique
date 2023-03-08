@@ -11,7 +11,7 @@ import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 import Html from "../../../../common/Html";
 // Do not optimize the following import
-import { getMessageMotifExample } from "../../agreements/messageMotifExample";
+import { getMessageMotifExample } from "../../agreements/ui-customizations";
 
 const StepAnciennete = () => {
   const store = useContext(IndemniteLicenciementContext);

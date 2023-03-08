@@ -54,6 +54,7 @@ export const getErrorEligibility = (
   );
   switch (agreement?.num) {
     case 3239:
+      requiredSeniorityInYear = requiredSeniorityAgreement;
       if (stateInfo.publicodesInformations[0].info === "'Assistant maternel'") {
         minimalSeniorityInMonth = 9;
         minimalSeniorityError =
