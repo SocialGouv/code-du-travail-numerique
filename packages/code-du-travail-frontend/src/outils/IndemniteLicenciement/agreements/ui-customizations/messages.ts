@@ -31,6 +31,13 @@ export const getResultMessage = (
     isAssMat = categoryPro3239 === `'${CatPro3239.assistantMaternel}'`;
   }
   if (isAssMat)
-    return "À partir des éléments que vous avez saisis, l’indemnité de licenciement (appelée indemnité de rupture pour les assistants maternels) est estimée à :";
+    return "À partir des éléments que vous avez saisis, l’indemnité de licenciement (appelée « indemnité de rupture » pour les assistants maternels) est estimée à :";
   return "À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à :";
+};
+
+export const getSalairesTempsPleinSubtitle = (
+  agreementNumber?: number
+): string | undefined => {
+  if (agreementNumber && agreementNumber === 3239) return undefined;
+  return "Indiquez le montant des salaires (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)";
 };

@@ -5,7 +5,10 @@ import { TempsPartiel, SalaireTempsPlein } from "./components";
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../..";
 import { AgreementsInjector } from "../../agreements";
-import { getTooltipSalairesMensuel } from "../../agreements/ui-customizations";
+import {
+  getSalairesTempsPleinSubtitle,
+  getTooltipSalairesMensuel,
+} from "../../agreements/ui-customizations";
 import { icons } from "@socialgouv/cdtn-ui";
 import {
   generateSalaireTempsPleinQuestion,
@@ -125,7 +128,7 @@ const StepSalaires = () => {
                 arretTravail,
                 salaryPeriods
               )}
-              subTitle="Indiquez le montant des salaires (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)"
+              subTitle={getSalairesTempsPleinSubtitle(agreement?.num)}
               tooltip={getTooltipSalairesMensuel(agreement?.num)}
               onSalariesChange={onSalariesChange}
               salaryPeriods={salaryPeriods}
