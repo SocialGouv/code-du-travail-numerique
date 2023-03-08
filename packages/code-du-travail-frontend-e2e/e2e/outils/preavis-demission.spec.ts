@@ -30,17 +30,17 @@ describe("Outil - Préavis de démission", () => {
     cy.get("button").contains("Suivant").click();
 
     cy.contains("Quelle est la catégorie professionnelle du salarié");
-    cy.get('[data-testid="criteria.catégorie professionnelle"]').select(
+    cy.get('[id="input-criteria.catégorie professionnelle"]').select(
       "Personnel de fabrication, personnel de vente et personnel de services"
     );
 
     cy.contains("Quelle est l'ancienneté du salarié");
-    cy.get('[data-testid="criteria.ancienneté"]').select("Plus de 6 mois");
+    cy.get('[id="input-criteria.ancienneté"]').select("Plus de 6 mois");
     cy.contains("Suivant").click();
 
     cy.contains("Durée du préavis");
     cy.contains("2 semaines");
-    cy.get('div[role="button"]').contains("Voir le détail du calcul").click();
+    cy.contains("Voir le détail du calcul").click();
     cy.contains("Boulangerie-pâtisserie (entreprises artisanales)");
     cy.contains(
       "Personnel de fabrication, personnel de vente et personnel de services"

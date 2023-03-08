@@ -5,7 +5,7 @@ import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
 
 import Html from "../../common/Html";
-import { suggesterTheme } from "./DocumentSuggesterTheme";
+import { suggesterGlobalSearchTheme } from "./DocumentSuggesterTheme";
 
 const { colors } = theme;
 
@@ -75,7 +75,7 @@ export class DocumentSuggester extends React.Component {
     return (
       <Autosuggest
         ref={this.focusInput}
-        theme={suggesterTheme}
+        theme={suggesterGlobalSearchTheme}
         suggestions={suggestions}
         alwaysRenderSuggestions={false}
         onSuggestionSelected={this.onSuggestionSelected}
