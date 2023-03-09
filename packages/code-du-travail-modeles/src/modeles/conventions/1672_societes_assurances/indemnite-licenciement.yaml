@@ -124,9 +124,9 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . avant non cadres:
-  titre: Avant d'être cadre, le salarié a été non-cadres dans l’entreprise
+  titre: Avant d'être cadre, le salarié a été non-cadre dans l’entreprise
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
-  question: Avant d'être cadre, le salarié a-t-il été non-cadres dans l’entreprise&nbsp;?
+  question: Avant d'être cadre, le salarié a-t-il été non-cadre dans l’entreprise&nbsp;?
   cdtn:
     type: oui-non
 
@@ -288,5 +288,5 @@ contrat salarié . convention collective . sociétés d'assurances . congé mala
   type: notification
   description: |
     Si lors de l’absence pour maladie non professionnelle le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (en plus des indemnités journalières de la sécurité sociale), le montant de l’indemnité de licenciement pourrait être plus élevé. En effet, dans ce cas, la période d’absence (jusqu’à 1 an d’absence) est intégrée dans l’ancienneté du salarié.
-    Par soucis de simplification, ce simulateur déduit toutes les absences pour maladie non professionnelle sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles aient été indemnisées ou pas.
+    Par soucis de simplification, ce simulateur déduit toutes les absences pour maladie non professionnelle sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas.
   valeur: oui

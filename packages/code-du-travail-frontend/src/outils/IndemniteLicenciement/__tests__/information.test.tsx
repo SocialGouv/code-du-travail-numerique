@@ -42,8 +42,7 @@ global.fetch = jest.fn(() =>
                 id: "KALICONT000044594539",
                 title: "Particuliers employeurs et emploi à domicile",
                 slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
-                url:
-                  "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+                url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
               },
             },
           ],
@@ -85,6 +84,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
        - validation que les champs sont retirés quand on revient à une question précédente
        - validation qu'un champ présent avant soit réinitialisé
        - validation que l'on peut valider la page quand tous les champs sont saisis
+       - validation que l'on n'affiche pas la question suivante tant que la date n'est pas valide
        - validation que les infos sont gardées quand on revient sur les étapes précédentes sans changer les infos
        - validation que les infos sont effacées quand on change de convention collective
     `, async () => {
@@ -148,13 +148,21 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       expect(rendering.getAllByTestId("question-label")).toHaveLength(2);
       expect(ui.information.agreement16.agentAge.query()).toHaveValue(null);
 
-      // validation que l'on peut valider la page quand tous les champs sont saisis
+      // validation que l'on n'affiche pas la question suivante tant que la date n'est pas valide
       userAction
         .changeInputList(
           ui.information.agreement16.proCategory.get(),
           "Ingénieurs et cadres"
         )
         .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
+        .setInput(ui.information.agreement16.dateProCategoryChanged.get(), "1");
+      expect(rendering.getAllByTestId("question-label")).toHaveLength(3);
+      expect(
+        ui.information.agreement16.engineerAge.query()
+      ).not.toBeInTheDocument();
+
+      // validation que l'on peut valider la page quand tous les champs sont saisis
+      userAction
         .setInput(
           ui.information.agreement16.dateProCategoryChanged.get(),
           "01/01/2010"
