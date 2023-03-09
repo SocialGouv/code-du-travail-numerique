@@ -11,6 +11,7 @@ import {
   DismissalProcess,
   fetchTool,
 } from "../../src/outils";
+import { SearchWidget } from "../../src/search/SearchWidget";
 
 const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
@@ -19,40 +20,44 @@ const toolsBySlug = {
 };
 
 interface Props {
-  icon: string;
+  icon?: string;
   slug: string;
-  title: string;
-  displayTitle: string;
+  title?: string;
+  displayTitle?: string;
 }
 
 function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
   useIframeResizer();
   const Tool = toolsBySlug[slug];
 
-  return (
-    <StyledContainer>
-      <Tool
-        icon={icon}
-        title={title}
-        displayTitle={displayTitle}
-        slug={slug}
-        widgetMode
-      />
-      <StyledFooter>
-        <Link
-          href="/politique-confidentialite"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Politique de confidentialité
-        </Link>
-        <Link passHref href="https://code.travail.gouv.fr/" legacyBehavior>
-          <LeftLink target="_blank">
-            <Logo />
-          </LeftLink>
-        </Link>
-      </StyledFooter>
-    </StyledContainer>
+  return Tool ? (
+    <>
+      <StyledContainer>
+        <Tool
+          icon={icon}
+          title={title}
+          displayTitle={displayTitle}
+          slug={slug}
+          widgetMode
+        />
+        <StyledFooter>
+          <Link
+            href="/politique-confidentialite"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Politique de confidentialité
+          </Link>
+          <Link passHref href="https://code.travail.gouv.fr/" legacyBehavior>
+            <LeftLink target="_blank">
+              <Logo />
+            </LeftLink>
+          </Link>
+        </StyledFooter>
+      </StyledContainer>
+    </>
+  ) : (
+    <SearchWidget></SearchWidget>
   );
 }
 
@@ -61,14 +66,22 @@ export default Widgets;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const tool = await fetchTool(query.slug as string);
+  const slug = query.slug as string;
+  if (slug === "search") {
+    return {
+      props: {
+        slug,
+      },
+    };
+  }
+  const tool = await fetchTool(slug);
   if (!tool) {
     return {
       notFound: true,
     };
   }
 
-  const { slug, icon, title, displayTitle } = tool;
+  const { icon, title, displayTitle } = tool;
 
   return {
     props: {
