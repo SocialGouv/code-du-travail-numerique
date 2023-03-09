@@ -6,4 +6,4 @@ export {
   getAgreementReferenceSalary,
   getAgreementExtraInfoSalary,
 } from "./salary";
-export * from "./messageMotifExample";
+export * from "./ui-customizations";

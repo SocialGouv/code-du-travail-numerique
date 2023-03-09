@@ -4,14 +4,11 @@ import { SectionTitle } from "../../../common/stepStyles";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { AbsencePeriods } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
-import {
-  getSupportedAgreement,
-  SupportedCcIndemniteLicenciement,
-} from "@socialgouv/modeles-social";
+import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 import Html from "../../../../common/Html";
 // Do not optimize the following import
-import { getMessageMotifExample } from "../../agreements/messageMotifExample";
+import { getMessageMotifExample } from "../../agreements/ui-customizations";
 
 const StepAnciennete = () => {
   const {

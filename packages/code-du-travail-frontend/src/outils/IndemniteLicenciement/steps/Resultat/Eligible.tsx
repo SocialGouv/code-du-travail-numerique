@@ -5,7 +5,7 @@ import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";
 import ShowDetails from "../../../common/ShowDetails";
 import { AgreementsInjector } from "../../agreements";
-
+import { getResultMessage } from "../../agreements/ui-customizations";
 import { useIndemniteLicenciementStore } from "../../store";
 import {
   DecryptResult,
@@ -14,6 +14,7 @@ import {
   FormulaInterpreter,
   Result,
 } from "./components";
+import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 
 export default function Eligible() {
   const {
@@ -46,6 +47,7 @@ export default function Eligible() {
     dateArretTravail,
     arretTravail,
     showHasTempsPartiel,
+    informationData,
     isAgreementSupported,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
@@ -80,6 +82,9 @@ export default function Eligible() {
     dateArretTravail: state.contratTravailData.input.dateArretTravail,
     arretTravail: state.contratTravailData.input.arretTravail,
     showHasTempsPartiel: state.salairesData.input.showHasTempsPartiel,
+    informationData: informationToSituation(
+      state.informationsData.input.publicodesInformations
+    ),
     isAgreementSupported:
       state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
   }));
@@ -97,6 +102,7 @@ export default function Eligible() {
             : publicodesLegalResult.value?.toString() ?? ""
         }
         notifications={isAgreementBetter ? agreementNotifications : []}
+        resultMessage={getResultMessage(informationData)}
       />
       <ShowDetails>
         <FilledElements
