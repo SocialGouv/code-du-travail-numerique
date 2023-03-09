@@ -59,7 +59,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc VPdUE"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
       type="button"
     >
       <svg
