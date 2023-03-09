@@ -6,7 +6,7 @@ const engine = new IndemniteLicenciementPublicodes(
 );
 
 describe("Vérification des références juridiques pour la CC 1505", () => {
-  test("Licenciement pour inaptitude non professionnelle", () => {
+  test("Licenciement", () => {
     engine.setSituation({
       "contrat salarié . convention collective": "'IDCC1505'",
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
