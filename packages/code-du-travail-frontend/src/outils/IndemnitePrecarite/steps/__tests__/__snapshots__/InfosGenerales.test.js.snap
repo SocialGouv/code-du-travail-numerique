@@ -4,7 +4,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
 <div>
   <form>
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
@@ -65,7 +65,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 <div>
   <form>
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
@@ -115,10 +115,10 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
       </label>
     </div>
     <div
-      class="sc-cLNonn kHAoQt"
+      class="sc-kiPvrU bNJyhQ"
     >
       <legend
-        class="sc-hsWlPz dQgJqc"
+        class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
         data-testid="question-label"
         for="input-criteria.cddType"
       >
@@ -134,7 +134,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         </span>
       </legend>
       <div
-        class="sc-fWHiwC eYDYwl sc-kiPvrU fuxYJe"
+        class="sc-fWHiwC eYDYwl sc-elAWhN gnhaNU"
       >
         <select
           class="sc-gzrROc iRaQTV"
@@ -242,7 +242,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 <div>
   <form>
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
@@ -292,10 +292,10 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
       </label>
     </div>
     <div
-      class="sc-cLNonn kHAoQt"
+      class="sc-kiPvrU bNJyhQ"
     >
       <legend
-        class="sc-hsWlPz dQgJqc"
+        class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
         data-testid="question-label"
         for="input-criteria.cddType"
       >
@@ -311,7 +311,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         </span>
       </legend>
       <div
-        class="sc-fWHiwC eYDYwl sc-kiPvrU fuxYJe"
+        class="sc-fWHiwC eYDYwl sc-elAWhN gnhaNU"
       >
         <select
           class="sc-gzrROc iRaQTV"
@@ -419,7 +419,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
 <div>
   <form>
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
@@ -469,7 +469,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </label>
     </div>
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
@@ -484,7 +484,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
     </legend>
     <div
-      class="sc-grxQYx eLmzGx"
+      class="sc-iJbNxu laMeKi"
       data-testid="cttFormation"
     >
       <div
@@ -525,7 +525,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
@@ -540,7 +540,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
     </legend>
     <div
-      class="sc-grxQYx eLmzGx"
+      class="sc-iJbNxu laMeKi"
       data-testid="ruptureContratFauteGrave"
     >
       <div
@@ -581,7 +581,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
@@ -596,7 +596,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
     </legend>
     <div
-      class="sc-grxQYx eLmzGx"
+      class="sc-iJbNxu laMeKi"
       data-testid="propositionCDIFinContrat"
     >
       <div
@@ -637,7 +637,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
@@ -652,7 +652,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
     </legend>
     <div
-      class="sc-grxQYx eLmzGx"
+      class="sc-iJbNxu laMeKi"
       data-testid="refusSouplesse"
     >
       <div

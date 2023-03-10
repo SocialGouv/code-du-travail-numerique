@@ -30,7 +30,11 @@ export const Question = ({
 }: Props): JSX.Element => {
   const [isLocalTooltipOpen, setIsLocalToolTipOpen] = React.useState(false);
   return (
-    <Legend htmlFor={htmlFor} {...otherProps} data-testid={"question-label"}>
+    <StyledLegend
+      htmlFor={htmlFor}
+      {...otherProps}
+      data-testid={"question-label"}
+    >
       <Text
         fontWeight="600"
         fontSize={otherProps.as === "p" ? "default" : "hsmall"}
@@ -61,7 +65,7 @@ export const Question = ({
           </InfoBulle>
         )}
       </Text>
-    </Legend>
+    </StyledLegend>
   );
 };
 
@@ -69,13 +73,14 @@ const { breakpoints, fonts, spacings } = theme;
 
 const StyledLegend = styled(Legend)`
   font-weight: 600;
-`;
-
-const LabelBlock = styled.label`
   display: block;
   margin: ${spacings.small} 0;
   cursor: ${(props) => (props.as ? "default" : "pointer")};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
+  }
+  p,
+  div {
+    font-weight: 100 !important;
   }
 `;

@@ -1,4 +1,4 @@
-import { InputRadio } from "@socialgouv/cdtn-ui";
+import { InputRadio, Fieldset } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
@@ -23,37 +23,39 @@ const YesNoPubliQuestion = ({
 }: Props): JSX.Element => {
   return (
     <>
-      <Question tooltip={tooltip} required>
-        {label}
-      </Question>
-      <RadioContainer>
-        <Field type="radio" name={name} value="oui" validate={required}>
-          {(props) => (
-            <InputRadio
-              label="Oui"
-              id={`${props.input.name}-oui`}
-              data-testid={`${props.input.name}-oui`}
-              {...props.input}
-            />
-          )}
-        </Field>
-        <Field type="radio" name={name} value="non" validate={required}>
-          {(props) => (
-            <InputRadio
-              label="Non"
-              id={`${props.input.name}-non`}
-              data-testid={`${props.input.name}-non`}
-              {...props.input}
-            />
-          )}
-        </Field>
-        <ErrorField name={name} />
-        <OnChange name={name}>
-          {(values) => {
-            onChange?.(values);
-          }}
-        </OnChange>
-      </RadioContainer>
+      <Fieldset>
+        <Question tooltip={tooltip} required>
+          {label}
+        </Question>
+        <RadioContainer>
+          <Field type="radio" name={name} value="oui" validate={required}>
+            {(props) => (
+              <InputRadio
+                label="Oui"
+                id={`${props.input.name}-oui`}
+                data-testid={`${props.input.name}-oui`}
+                {...props.input}
+              />
+            )}
+          </Field>
+          <Field type="radio" name={name} value="non" validate={required}>
+            {(props) => (
+              <InputRadio
+                label="Non"
+                id={`${props.input.name}-non`}
+                data-testid={`${props.input.name}-non`}
+                {...props.input}
+              />
+            )}
+          </Field>
+          <ErrorField name={name} />
+          <OnChange name={name}>
+            {(values) => {
+              onChange?.(values);
+            }}
+          </OnChange>
+        </RadioContainer>
+      </Fieldset>
     </>
   );
 };
