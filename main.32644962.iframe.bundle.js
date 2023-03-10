@@ -823,6 +823,7 @@
   &[aria-expanded="true"] {
     color: ${function(_ref3){return _ref3.theme.paragraph}};
   }
+  padding: 0;
 `,StyledText=styled_components_browser_esm.d.span`
   margin-left: ${theme.g.small};
   display: block;
