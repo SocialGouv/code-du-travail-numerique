@@ -91,6 +91,7 @@ const IndemniteLicenciementSimulator = ({
     isStepInformationsValid,
     isStepInformationsHidden,
     isStepSalaryHidden,
+    isEligible,
   } = useIndemniteLicenciementStore((state) => ({
     onNextStepContratTravail: state.contratTravailFunction.onNextStep,
     isStepContratTravailValid: state.contratTravailData.isStepValid,
@@ -104,6 +105,7 @@ const IndemniteLicenciementSimulator = ({
     isStepInformationsValid: state.informationsData.isStepValid,
     isStepInformationsHidden: state.informationsData.input.isStepHidden,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
+    isEligible: state.resultData.input.isEligible,
   }));
 
   const getHiddenSteps = (): IndemniteLicenciementStepName[] => {
@@ -153,6 +155,7 @@ const IndemniteLicenciementSimulator = ({
         },
       ]}
       hiddenStep={getHiddenSteps()}
+      isEligible={isEligible}
     />
   );
 };

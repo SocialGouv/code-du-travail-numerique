@@ -15,7 +15,6 @@ import {
   MatomoBaseEvent,
   MatomoSimulatorEvent,
 } from "../../lib";
-import { useIndemniteLicenciementStore } from "../IndemniteLicenciement/store";
 import { IndemniteLicenciementStepName } from "../IndemniteLicenciement";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
@@ -42,6 +41,7 @@ type Props<StepName extends string> = {
   onStepChange: StepChange<StepName>[];
   hiddenStep?: StepName[];
   simulator: PublicodesSimulator;
+  isEligible?: boolean;
 };
 
 const SimulatorContent = <StepName extends string>({
@@ -54,6 +54,7 @@ const SimulatorContent = <StepName extends string>({
   onStepChange,
   hiddenStep,
   simulator,
+  isEligible,
 }: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
   const [navigationAction, setNavigationAction] =
@@ -61,9 +62,6 @@ const SimulatorContent = <StepName extends string>({
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
     (state) => state
   );
-  const { isEligible } = useIndemniteLicenciementStore((state) => ({
-    isEligible: state.resultData.input.isEligible,
-  }));
 
   const visibleSteps = useMemo(
     () =>
@@ -92,25 +90,41 @@ const SimulatorContent = <StepName extends string>({
     }
   }, [currentStepIndex]);
 
+  console.log("eligible", isEligible);
+
   useEffect(() => {
-    if (navigationAction !== "none") {
-      const currentStepName = visibleSteps[currentStepIndex].name;
-      const currentStepNameIneligible =
-        !isEligible &&
-        currentStepName === IndemniteLicenciementStepName.Resultat &&
-        simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT
-          ? MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE
-          : currentStepName;
+    const currentStepName = visibleSteps[currentStepIndex].name;
+    if (
+      navigationAction !== "none" &&
+      currentStepName !== IndemniteLicenciementStepName.Resultat
+    ) {
       matopush([
         MatomoBaseEvent.TRACK_EVENT,
         MatomoBaseEvent.OUTIL,
         navigationAction === "prev"
           ? MatomoActionEvent.CLICK_PREVIOUS + `_${title}`
           : MatomoActionEvent.VIEW_STEP + `_${title}`,
-        currentStepNameIneligible,
+        currentStepName,
       ]);
     }
   }, [currentStepIndex]);
+
+  useEffect(() => {
+    const currentStepName = visibleSteps[currentStepIndex].name;
+    if (
+      navigationAction !== "none" &&
+      currentStepName === IndemniteLicenciementStepName.Resultat
+    ) {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoBaseEvent.OUTIL,
+        MatomoActionEvent.VIEW_STEP + `_${title}`,
+        isEligible
+          ? IndemniteLicenciementStepName.Resultat
+          : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
+      ]);
+    }
+  }, [isEligible]);
 
   const onNextStep = () => {
     const nextStepIndex = currentStepIndex + 1;
