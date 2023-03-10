@@ -80,7 +80,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . etam . résultat conventionnel pour 20 ans et plus:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 20 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 20 ans
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 10
   valeur: presque un tiers du salaire de référence
   unité: €
