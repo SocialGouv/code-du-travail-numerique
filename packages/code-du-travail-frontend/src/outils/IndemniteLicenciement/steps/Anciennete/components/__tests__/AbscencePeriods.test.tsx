@@ -29,7 +29,7 @@ describe("<AbsencePeriods />", () => {
         messageMotifExample="Ceci est un exemple"
       />
     );
-    expect(getAllByRole("option").length).toBe(8);
+    expect(getAllByRole("option").length).toBe(9);
     expect(
       getByRole("option", { name: "Congé pour création d'entreprise" })
     ).toBeInTheDocument();
