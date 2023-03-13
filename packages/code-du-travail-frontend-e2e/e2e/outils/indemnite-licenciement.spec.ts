@@ -32,7 +32,7 @@ describe("Outil - Indemnité de licenciement", () => {
       "contain",
       "À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à :"
     );
-    cy.get("form p strong").should("contain", "6444,44 € brut.");
+    cy.get("form p strong").should("contain", "6444,44\u00a0€\u00a0brut.");
     cy.get("form p").should(
       "contain",
       "Attention il peut exister un montant plus favorable"
