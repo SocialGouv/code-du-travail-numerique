@@ -86,21 +86,21 @@ const SimulatorContent = <StepName extends string>({
 
   useEffect(() => {
     const currentStepName = visibleSteps[currentStepIndex].name;
-    if (
-      navigationAction !== "none" &&
-      currentStepName !== IndemniteLicenciementStepName.Resultat &&
-      simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT
-    ) {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoBaseEvent.OUTIL,
-        navigationAction === "prev"
-          ? MatomoActionEvent.CLICK_PREVIOUS + `_${title}`
-          : MatomoActionEvent.VIEW_STEP + `_${title}`,
-        currentStepName,
-      ]);
-    }
+    if (doNotTriggerMatomo(currentStepName)) return;
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoBaseEvent.OUTIL,
+      navigationAction === "prev"
+        ? MatomoActionEvent.CLICK_PREVIOUS + `_${title}`
+        : MatomoActionEvent.VIEW_STEP + `_${title}`,
+      currentStepName,
+    ]);
   }, [currentStepIndex]);
+
+  const doNotTriggerMatomo = (stepName: string) =>
+    navigationAction === "none" ||
+    (stepName === IndemniteLicenciementStepName.Resultat &&
+      simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT);
 
   const onNextStep = () => {
     const nextStepIndex = currentStepIndex + 1;
