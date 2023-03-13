@@ -30,7 +30,7 @@ const StepResult = () => {
         ? IndemniteLicenciementStepName.Resultat
         : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
     ]);
-  }, [isEligible]);
+  }, []);
 
   return <>{isEligible ? <Eligible /> : <Ineligible />}</>;
 };
