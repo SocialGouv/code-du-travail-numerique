@@ -41,7 +41,7 @@ const IntegrationContainer = ({
   };
   useScript();
   return (
-    <Container narrow>
+    <Container>
       <PageTitle>{title}</PageTitle>
       <Wrapper variant="main">
         <p>{description}</p>

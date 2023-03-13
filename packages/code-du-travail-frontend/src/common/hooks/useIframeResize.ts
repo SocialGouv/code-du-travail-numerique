@@ -14,7 +14,7 @@ export const useIframeResizer = () => {
       return;
     }
 
-    const minHeight = 240;
+    const minHeight = 200;
     const observer = new ResizeObserver(([entry]) => {
       const value = Math.max(minHeight, entry.contentRect.height);
       window.parent?.postMessage({ kind: "resize-height", value }, "*");

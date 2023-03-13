@@ -96,6 +96,7 @@ const StyledRoot = styled.div`
   text-align: center;
   background: white;
   margin: auto;
+  min-height: 200px;
 `;
 
 const SearchLogo = styled.img`
