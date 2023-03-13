@@ -73,6 +73,11 @@ const IconWrapper = styled.span`
   width: 5.2rem;
   height: 5.2rem;
   margin-right: ${spacings.base};
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 4.2rem;
+    height: 4.2rem;
+    margin-right: ${spacings.small};
+  }
 `;
 
 const ToolDuration = styled.div`
@@ -85,7 +90,13 @@ const ToolDurationLabel = styled.span`
   left: 28px;
   font-size: ${fonts.sizes.tiny};
   color: ${({ theme }) => theme.paragraph};
+  @media (max-width: ${breakpoints.mobile}) {
+    left: 21px;
+  }
 `;
 const TimeWithLabel = styled(icons.TimeWithLabel)`
   width: 4.2rem;
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 3.5rem;
+  }
 `;

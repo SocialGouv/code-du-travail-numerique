@@ -149,7 +149,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           />
           <div>
             <span
-              class="sc-bCfvAP eYA-DYW"
+              class="sc-fcCDlF jtIrnS"
             >
               150
                caractères restants
@@ -242,7 +242,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
           />
           <div>
             <span
-              class="sc-bCfvAP eYA-DYW"
+              class="sc-fcCDlF jtIrnS"
             >
               150
                caractères restants

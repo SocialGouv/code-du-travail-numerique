@@ -249,7 +249,7 @@ export const ui = {
     absences: {
       motif: byTestId("absence-motif"),
       duration: byTestId("absence-duration"),
-    }
+    },
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),

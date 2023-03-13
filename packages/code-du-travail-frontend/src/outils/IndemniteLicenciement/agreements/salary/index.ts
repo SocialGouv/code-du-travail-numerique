@@ -17,7 +17,7 @@ import { AgreementSalary573 } from "./573";
 import { AgreementSalary2609 } from "./2609";
 
 const getAgreementReferenceSalary = (
-  idcc: SupportedCcIndemniteLicenciement,
+  idcc: SupportedCcIndemniteLicenciement | null,
   get: StoreApi<MainStore>["getState"]
 ): number => {
   const salaryInput = get().salairesData.input;

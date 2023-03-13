@@ -15,7 +15,7 @@ exports[`<RelatedItems /> should render 1`] = `
        :
     </div>
     <ul
-      class="sc-jfvxQR gwhdUi"
+      class="sc-lbVpMG fqAvkB"
     >
       <li
         class="sc-kSGOQU dLBXZT"
@@ -78,7 +78,7 @@ exports[`<RelatedItems /> should render 1`] = `
        :
     </div>
     <ul
-      class="sc-jfvxQR gwhdUi"
+      class="sc-lbVpMG fqAvkB"
     >
       <li
         class="sc-kSGOQU dLBXZT"

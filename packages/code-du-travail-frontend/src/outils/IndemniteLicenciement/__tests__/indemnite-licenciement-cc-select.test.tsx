@@ -2,6 +2,7 @@ import { CalculateurIndemnite } from "../../../../src/outils";
 import { ui } from "./ui";
 
 import { fireEvent, render, waitFor } from "@testing-library/react";
+import { UserAction } from "../../../common";
 
 jest.mock("../../../conventions/Search/api/agreements.service");
 jest.mock("../../../conventions/Search/api/enterprises.service");
@@ -24,14 +25,14 @@ describe("Indemnité licenciement - Sélection de CC", () => {
     fireEvent.click(ui.next.get());
   });
   test("Vérifier la recherche par cc", async () => {
-    fireEvent.click(ui.agreement.agreement.get());
-    fireEvent.change(ui.agreement.agreementInput.get(), {
-      target: { value: "16" },
-    });
-    await waitFor(() =>
-      fireEvent.click(ui.agreement.searchItem.agreement16.get())
-    );
-    fireEvent.click(ui.next.get());
+    const userAction = new UserAction();
+
+    userAction
+      .click(ui.agreement.agreement.get())
+      .setInput(ui.agreement.agreementInput.get(), "16")
+      .click(await waitFor(() => ui.agreement.searchItem.agreement16.get()))
+      .click(ui.next.get());
+
     fireEvent.click(ui.previous.get());
     expect(ui.agreement.agreementInputConfirm.query()).toBeInTheDocument();
     expect(ui.agreement.searchItem.agreement16.query()).toBeInTheDocument();

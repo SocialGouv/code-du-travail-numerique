@@ -40,6 +40,8 @@ export const Highlight = styled.strong`
 
 export const HighlightResult = styled(Highlight)`
   font-size: 1.5em;
+  word-break: keep-all;
+  white-space: nowrap;
 `;
 
 export const SmallText = styled.p`

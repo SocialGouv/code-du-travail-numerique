@@ -1,5 +1,6 @@
 import {
   Formula,
+  getSupportedAgreement,
   Notification,
   PublicodesIndemniteLicenciementResult,
   References,
@@ -20,11 +21,7 @@ import produce from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
-import {
-  AgreementInformation,
-  getSupportedCcIndemniteLicenciement,
-  hasNoLegalIndemnity,
-} from "../../../common";
+import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
 import { getAgreementReferenceSalary } from "../../../agreements";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
@@ -72,20 +69,18 @@ const createResultStore: StoreSlice<
   },
   resultFunction: {
     init: () => {
-      const contratTravailEligibility = !get().contratTravailData.error
-        .errorEligibility;
+      const contratTravailEligibility =
+        !get().contratTravailData.error.errorEligibility;
       const isCdd = get().contratTravailData.input.typeContratTravail === "cdd";
-      const ancienneteEligibility = !get().ancienneteData.error
-        .errorEligibility;
-      const informationEligibility = !get().informationsData.error
-        .errorEligibility;
+      const ancienneteEligibility =
+        !get().ancienneteData.error.errorEligibility;
+      const informationEligibility =
+        !get().informationsData.error.errorEligibility;
       const agreement = get().agreementData.input.agreement;
-      const hasSelectedAgreement = get().agreementData.input.route !== "none";
-      const isAgreementSupported = !!getSupportedCcIndemniteLicenciement().find(
-        (v) =>
-          v.fullySupported &&
-          v.idcc === get().agreementData.input.agreement?.num
-      );
+      const hasSelectedAgreement =
+        get().agreementData.input.route !== "not-selected";
+      const isAgreementSupported =
+        get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
 
       const infoWarning = getInfoWarning({
         hasSelectedAgreement,
@@ -107,10 +102,10 @@ const createResultStore: StoreSlice<
       );
     },
     getEligibilityError: () => {
-      const contratTravailEligibility = get().contratTravailData.error
-        .errorEligibility;
-      const informationEligibility = get().informationsData.error
-        .errorEligibility;
+      const contratTravailEligibility =
+        get().contratTravailData.error.errorEligibility;
+      const informationEligibility =
+        get().informationsData.error.errorEligibility;
       const ancienneteEligibility = get().ancienneteData.error.errorEligibility;
       return (
         contratTravailEligibility ||
@@ -174,7 +169,7 @@ const createResultStore: StoreSlice<
         );
 
         agreementRefSalary = getAgreementReferenceSalary(
-          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
 
@@ -191,11 +186,11 @@ const createResultStore: StoreSlice<
           .filter((v) => v !== "") as AgreementInformation[];
 
         agreementSeniority = getAgreementSeniority(
-          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
         const agreementRequiredSeniority = getAgreementRequiredSeniority(
-          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
         publicodesSituationConventionnel = publicodes.setSituation(
@@ -236,15 +231,19 @@ const createResultStore: StoreSlice<
           state.resultData.input.legalSeniority = legalSeniority.value;
           state.resultData.input.legalFormula = legalFormula;
           state.resultData.input.legalReferences = legalReferences;
-          state.resultData.input.publicodesLegalResult = publicodesSituationLegal;
-          state.resultData.input.publicodesAgreementResult = publicodesSituationConventionnel;
+          state.resultData.input.publicodesLegalResult =
+            publicodesSituationLegal;
+          state.resultData.input.publicodesAgreementResult =
+            publicodesSituationConventionnel;
           state.resultData.input.agreementSeniority = agreementSeniority;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
           state.resultData.input.agreementInformations = agreementInformations;
-          state.resultData.input.agreementNotifications = agreementNotifications;
-          state.resultData.input.agreementHasNoLegalIndemnity = agreementHasNoLegalIndemnity;
+          state.resultData.input.agreementNotifications =
+            agreementNotifications;
+          state.resultData.input.agreementHasNoLegalIndemnity =
+            agreementHasNoLegalIndemnity;
         })
       );
     },

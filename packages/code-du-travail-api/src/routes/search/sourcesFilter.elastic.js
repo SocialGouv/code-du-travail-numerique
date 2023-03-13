@@ -1,4 +1,4 @@
-const { SOURCES } = require("@socialgouv/cdtn-sources");
+const { SOURCES } = require("@socialgouv/cdtn-utils");
 
 // if convention collectives are required
 // we only return the one with contributions

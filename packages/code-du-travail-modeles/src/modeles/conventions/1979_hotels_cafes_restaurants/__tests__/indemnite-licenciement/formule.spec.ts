@@ -19,7 +19,7 @@ describe("Formule indemnité licenciement - 1979", () => {
     ({ seniority, expectedFormula, expectedExplanations }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1979'",
-        "contrat salarié . indemnité de licenciement": "oui",
+
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           seniority,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":

@@ -51,7 +51,7 @@ const createAncienneteStore: StoreSlice<
             state.ancienneteData.input.absencePeriods = cleanAbsence(
               get().ancienneteData.input.absencePeriods,
               get(),
-              idcc
+              idcc ?? undefined
             );
           }
         )
@@ -172,9 +172,7 @@ const cleanAbsence = (
 ): Absence[] => {
   if (idcc) {
     // clean absence
-    const motifs = new SeniorityFactory()
-      .create(idcc)
-      .getMotifs();
+    const motifs = new SeniorityFactory().create(idcc).getMotifs();
     absencePeriods = absencePeriods.filter((absence) =>
       motifs.some((motif) => motif.key === absence.motif.key)
     );

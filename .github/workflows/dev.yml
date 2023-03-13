@@ -1,0 +1,111 @@
+name: Dev
+
+on:
+  push:
+    branches:
+      - dev
+    tags-ignore:
+      - "v*"
+
+concurrency:
+  cancel-in-progress: true
+  group: dev
+
+jobs:
+  register-frontend:
+    name: Register frontend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get commit sha
+        run: |
+          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
+      - name: Register docker images
+        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
+        with:
+          project: "cdtn"
+          imageName: "cdtn/code-du-travail-frontend"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./Dockerfile"
+          dockercontext: "."
+          dockerbuildargs: |
+              NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+              NEXT_PUBLIC_SENTRY_ENV=preproduction
+              NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
+              NEXT_PUBLIC_AZURE_CONTAINER=cdtn
+              NEXT_PUBLIC_PIWIK_SITE_ID=3
+              NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
+              NEXT_PUBLIC_API_URL=https://api-code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr/api/v1
+              NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
+              NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr
+
+  register-api:
+    name: Register api
+    runs-on: ubuntu-latest
+    steps:
+      - name: Register docker images
+        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
+        with:
+          project: "cdtn"
+          imageName: "cdtn/code-du-travail-api"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./Dockerfile.api"
+          dockercontext: "."
+
+  manifests:
+    name: Dev manifests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use k8s manifests generation
+        uses: SocialGouv/actions/k8s-manifests@v1
+        with:
+          environment: "dev"
+          rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
+          socialgouvBaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
+        env:
+          ELASTIC_APM_ENVIRONMENT: cdtn-preprod
+          ES_INDEX_PREFIX: cdtn-preprod
+
+  deploy-dev:
+    name: Deploy dev
+    runs-on: ubuntu-latest
+    needs: [ register-frontend, register-api, manifests ]
+    steps:
+      - name: Use autodevops deployment
+        uses: SocialGouv/actions/autodevops-deploy@v1
+        with:
+          environment: "dev"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          kubeconfig: ${{ secrets.KUBECONFIG }}
+          rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
+
+  e2e:
+    name: End-to-end testing
+    runs-on: ubuntu-latest
+    needs: [ deploy-dev ]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
+      - name: Run test e2e
+        run: |
+          CODECEPT_BASEURL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr yarn test:e2e
+      - name: Archive generated screenshots
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: e2e-screenshots
+          path: |
+            packages/code-du-travail-frontend-e2e/cypress/screenshots
+            packages/code-du-travail-frontend-e2e/codecept/output

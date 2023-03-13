@@ -6,6 +6,7 @@ type QuestionnaireWrapperProps = {
   slug: string;
   title: string;
   personnalizedTitle?: string;
+  widgetMode?: boolean;
 };
 
 export const QuestionnaireWrapper = ({
@@ -13,6 +14,7 @@ export const QuestionnaireWrapper = ({
   slug,
   title,
   personnalizedTitle,
+  widgetMode = false,
 }: QuestionnaireWrapperProps) => {
   return (
     <Provider createStore={() => withStore(name)}>
@@ -20,6 +22,7 @@ export const QuestionnaireWrapper = ({
         slug={slug}
         title={title}
         personnalizedTitle={personnalizedTitle}
+        widgetMode={widgetMode}
       ></Questionnaire>
     </Provider>
   );

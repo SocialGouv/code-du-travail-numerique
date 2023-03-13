@@ -12,10 +12,13 @@
   },
   "rules": {
     "jest/valid-expect": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
     "@typescript-eslint/restrict-plus-operands": "warn"
   },
   "env": {
     "cypress/globals": true
   },
-  "ignorePatterns": ["*.js"]
+  "ignorePatterns": [
+    "*.js"
+  ]
 }

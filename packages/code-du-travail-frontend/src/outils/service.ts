@@ -1,4 +1,4 @@
-import { Tool } from "cdtn-types";
+import { Tool } from "@socialgouv/cdtn-utils";
 import { API_URL } from "../config";
 
 export type getToolsParams = {

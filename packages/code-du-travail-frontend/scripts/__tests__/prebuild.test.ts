@@ -15,12 +15,12 @@ describe("robots.txt", () => {
       "",
       `Sitemap: https://code.travail.gouv.fr/sitemap.xml`,
     ].join("\n");
-    generateRobotsTxt(true);
+    generateRobotsTxt(true, "code.travail.gouv.fr");
     expect(fs.writeFileSync).toHaveBeenCalledWith(filePath, robotsProd);
   });
   it("should generate development robots.txt", () => {
     const robotsDev = ["User-agent: *", "Disallow: /"].join("\n");
-    generateRobotsTxt(false);
+    generateRobotsTxt(false, "localhost");
     expect(fs.writeFileSync).toHaveBeenCalledWith(filePath, robotsDev);
   });
 });
