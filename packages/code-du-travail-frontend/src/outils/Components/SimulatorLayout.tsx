@@ -10,11 +10,7 @@ import {
 } from "../Simulator/createContext";
 import SimulatorNavigation from "./SimulatorNavigation";
 import { push as matopush } from "@socialgouv/matomo-next";
-import {
-  MatomoActionEvent,
-  MatomoBaseEvent,
-  MatomoSimulatorEvent,
-} from "../../lib";
+import { MatomoActionEvent, MatomoBaseEvent } from "../../lib";
 import { IndemniteLicenciementStepName } from "../IndemniteLicenciement";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
@@ -41,7 +37,6 @@ type Props<StepName extends string> = {
   onStepChange: StepChange<StepName>[];
   hiddenStep?: StepName[];
   simulator: PublicodesSimulator;
-  isEligible?: boolean;
 };
 
 const SimulatorContent = <StepName extends string>({
@@ -54,7 +49,6 @@ const SimulatorContent = <StepName extends string>({
   onStepChange,
   hiddenStep,
   simulator,
-  isEligible,
 }: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
   const [navigationAction, setNavigationAction] =
@@ -90,13 +84,12 @@ const SimulatorContent = <StepName extends string>({
     }
   }, [currentStepIndex]);
 
-  console.log("eligible", isEligible);
-
   useEffect(() => {
     const currentStepName = visibleSteps[currentStepIndex].name;
     if (
       navigationAction !== "none" &&
-      currentStepName !== IndemniteLicenciementStepName.Resultat
+      currentStepName !== IndemniteLicenciementStepName.Resultat &&
+      simulator !== PublicodesSimulator.INDEMNITE_LICENCIEMENT
     ) {
       matopush([
         MatomoBaseEvent.TRACK_EVENT,
@@ -108,23 +101,6 @@ const SimulatorContent = <StepName extends string>({
       ]);
     }
   }, [currentStepIndex]);
-
-  useEffect(() => {
-    const currentStepName = visibleSteps[currentStepIndex].name;
-    if (
-      navigationAction !== "none" &&
-      currentStepName === IndemniteLicenciementStepName.Resultat
-    ) {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoBaseEvent.OUTIL,
-        MatomoActionEvent.VIEW_STEP + `_${title}`,
-        isEligible
-          ? IndemniteLicenciementStepName.Resultat
-          : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
-      ]);
-    }
-  }, [isEligible]);
 
   const onNextStep = () => {
     const nextStepIndex = currentStepIndex + 1;
