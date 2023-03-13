@@ -3,7 +3,7 @@
 exports[`<Salaires /> should add a salaire 1`] = `
 <div>
   <legend
-    class="sc-hsWlPz dQgJqc"
+    class="sc-hsWlPz dQgJqc sc-kiPvrU fdpxVj"
     data-testid="question-label"
   >
     <span
@@ -18,16 +18,16 @@ exports[`<Salaires /> should add a salaire 1`] = `
     </span>
   </legend>
   <div
-    class="sc-knEsKG gPmAfU"
+    class="sc-ZqGJI eTHaMk"
   >
     <label
-      class="sc-grxQYx feXdnD"
+      class="sc-iJbNxu gJJDFs"
       for="5"
     >
       Montant :
     </label>
     <div
-      class="sc-iJbNxu dbzYfl"
+      class="sc-cLNonn hjsQlh"
     >
       <span
         class="sc-bQmOxr iqEHsz"
@@ -57,7 +57,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
       </span>
     </div>
     <button
-      class="sc-hhOBVt cizsts sc-ZqGJI iGodws"
+      class="sc-hhOBVt cizsts sc-grxQYx gEVZbe"
       type="button"
     >
       Supprimer
@@ -103,7 +103,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
 exports[`<Salaires /> should delete a salaires 1`] = `
 <div>
   <legend
-    class="sc-hsWlPz dQgJqc"
+    class="sc-hsWlPz dQgJqc sc-kiPvrU fdpxVj"
     data-testid="question-label"
   >
     <span
@@ -143,7 +143,7 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 exports[`<Salaires /> should render 1`] = `
 <div>
   <legend
-    class="sc-hsWlPz dQgJqc"
+    class="sc-hsWlPz dQgJqc sc-kiPvrU fdpxVj"
     data-testid="question-label"
   >
     <span
@@ -158,16 +158,16 @@ exports[`<Salaires /> should render 1`] = `
     </span>
   </legend>
   <div
-    class="sc-knEsKG gPmAfU"
+    class="sc-ZqGJI eTHaMk"
   >
     <label
-      class="sc-grxQYx feXdnD"
+      class="sc-iJbNxu gJJDFs"
       for="1"
     >
       Montant :
     </label>
     <div
-      class="sc-iJbNxu dbzYfl"
+      class="sc-cLNonn hjsQlh"
     >
       <span
         class="sc-bQmOxr iqEHsz"
@@ -197,7 +197,7 @@ exports[`<Salaires /> should render 1`] = `
       </span>
     </div>
     <button
-      class="sc-hhOBVt cizsts sc-ZqGJI iGodws"
+      class="sc-hhOBVt cizsts sc-grxQYx gEVZbe"
       type="button"
     >
       Supprimer

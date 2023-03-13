@@ -3,6 +3,7 @@ import { FormApi } from "final-form";
 import React from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
+import styled from "styled-components";
 
 import { ErrorField } from "../../ErrorField";
 import { Question } from "../../Question";
@@ -26,7 +27,7 @@ const RouteSelection = ({
   const values = form.getState().values;
   return (
     <>
-      <Fieldset>
+      <StyledFieldset>
         <Question
           htmlFor={ROUTE_NAME}
           required
@@ -113,9 +114,13 @@ const RouteSelection = ({
             }}
           </OnChange>
         </RadioContainer>
-      </Fieldset>
+      </StyledFieldset>
     </>
   );
 };
 
 export default RouteSelection;
+
+const StyledFieldset = styled(Fieldset)`
+  display: contents;
+`;

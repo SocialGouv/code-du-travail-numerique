@@ -3,10 +3,10 @@
 exports[`<SelectQuestion /> should render with default value 1`] = `
 <div>
   <div
-    class="sc-cLNonn kHAoQt"
+    class="sc-kiPvrU bNJyhQ"
   >
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
       for="input-foo"
     >
@@ -22,7 +22,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       </span>
     </legend>
     <div
-      class="sc-fWHiwC eYDYwl sc-kiPvrU fuxYJe"
+      class="sc-fWHiwC eYDYwl sc-elAWhN gnhaNU"
     >
       <select
         class="sc-gzrROc iRaQTV"
@@ -87,10 +87,10 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 <div>
   <div
-    class="sc-cLNonn kHAoQt"
+    class="sc-kiPvrU bNJyhQ"
   >
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
       for="input-foo"
     >
@@ -106,7 +106,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       </span>
     </legend>
     <div
-      class="sc-fWHiwC eYDYwl sc-kiPvrU fuxYJe"
+      class="sc-fWHiwC eYDYwl sc-elAWhN gnhaNU"
     >
       <select
         class="sc-gzrROc iRaQTV"

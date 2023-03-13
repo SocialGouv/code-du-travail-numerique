@@ -54,10 +54,11 @@ const LegendWrapper = styled(Legend)`
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
 `;
 
 const QuestionHeaderWrapper = styled.div`
-  margin: 0 0 11px;
+  margin: 0 0 4px;
   display: inline-block;
 `;
 
