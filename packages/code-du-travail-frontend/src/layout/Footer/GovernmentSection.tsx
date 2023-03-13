@@ -59,7 +59,7 @@ export const GouvernementSection = () => {
             <Separator>|</Separator>
           </li>
           <li>
-            <Link href={`${GITHUB_REPO}/tree/${PACKAGE_VERSION}`}>Contribuer sur Github</Link>
+            <Link rel="noopener noreferrer" href={`${GITHUB_REPO}/tree/${PACKAGE_VERSION}`}>Contribuer sur Github</Link>
             <Separator>|</Separator>
           </li>
           <li>
