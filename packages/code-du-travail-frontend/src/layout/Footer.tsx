@@ -8,25 +8,18 @@ import {
   theme,
   Title,
 } from "@socialgouv/cdtn-ui";
-import { push as matopush } from "@socialgouv/matomo-next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
-
-import { ContactModal } from "../common/ContactModal";
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
-import { PACKAGE_VERSION } from "../config";
 import { Partners } from "../home";
 import { GouvernementSection } from "./Footer/GovernmentSection";
 
 const { DirectionRight: DirectionRightIcon } = icons;
 
-const GITHUB_REPO = "https://github.com/SocialGouv/code-du-travail-numerique";
-
 const Footer = (): JSX.Element => {
-  const router = useRouter();
-  const path = router.asPath;
+  const router = useRouter()
 
   return (
     <OverflowWrapper>
@@ -59,7 +52,7 @@ const Footer = (): JSX.Element => {
         <NavSection>
           <Links>
             <div>
-              <Category>
+              <div>
                 <Heading as={StyledHeading} isFirst>
                   Code du travail numérique
                 </Heading>
@@ -92,10 +85,10 @@ const Footer = (): JSX.Element => {
                     </Link>
                   </li>
                 </StyledList>
-              </Category>
+              </div>
             </div>
             <div>
-              <Category>
+              <div>
                 <Heading as={StyledHeading} isFirst>
                   Outils populaires
                 </Heading>
@@ -131,8 +124,8 @@ const Footer = (): JSX.Element => {
                     </Link>
                   </li>
                 </StyledList>
-              </Category>
-              <Category>
+              </div>
+              <div>
                 <Heading as={StyledHeading} isFirst>
                   Modèles populaires
                 </Heading>
@@ -171,10 +164,10 @@ const Footer = (): JSX.Element => {
                     </Link>
                   </li>
                 </StyledList>
-              </Category>
+              </div>
             </div>
             <div>
-              <Category>
+              <div>
                 <Heading as={StyledHeading} isFirst>
                   Fiches pratiques populaires
                 </Heading>
@@ -209,8 +202,8 @@ const Footer = (): JSX.Element => {
                     </Link>
                   </li>
                 </StyledList>
-              </Category>
-              <Category>
+              </div>
+              <div>
                 <Heading as={StyledHeading} isFirst>
                   Conventions collectives populaires
                 </Heading>
@@ -243,7 +236,7 @@ const Footer = (): JSX.Element => {
                     </Link>
                   </li>
                 </StyledList>
-              </Category>
+              </div>
             </div>
           </Links>
         </NavSection>
@@ -322,8 +315,6 @@ const Links = styled(Container)`
   }
 `;
 
-const Category = styled.div``;
-
 const StyledList = styled(FlatList)`
   @media (max-width: ${breakpoints.mobile}) {
     text-align: center;
@@ -353,30 +344,4 @@ const StyledLink = styled.a.attrs((props) => ({
   cursor: pointer;
   padding: ${spacings.xsmall} 0;
   display: inline-block;
-`;
-const StyledButton = styled(Button)`
-  padding: ${spacings.tiny} 0;
-`;
-
-const GovernmentSection = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: ${({ theme }) => theme.bgSecondary};
-  list-style-type: none;
-  margin: 0;
-  padding-bottom: ${spacings.base};
-`;
-
-const StyledGovLink = styled(StyledLink)`
-  margin: 0 ${spacings.small} ${spacings.small} ${spacings.small};
-`;
-
-const Separator = styled.span`
-  margin-bottom: ${spacings.small};
-  user-select: none;
-  @media (max-width: ${breakpoints.tablet}) {
-    display: none;
-  }
 `;

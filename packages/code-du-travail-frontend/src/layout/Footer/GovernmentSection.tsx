@@ -2,8 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 import { theme } from "@socialgouv/cdtn-ui";
+import { GITHUB_REPO, PACKAGE_VERSION } from "../../config";
+import { ContactModal } from "../../common/ContactModal";
+import { useRouter } from "next/router";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 export const GouvernementSection = () => {
+  const router = useRouter();
+  const path = router.asPath;
   return (
     <StyledContainer>
       <StyledTopSection>
@@ -13,7 +19,7 @@ export const GouvernementSection = () => {
           width="170"
           height="141"
         />
-        <StyledUl>
+        <StyledTopUl>
           <li>
             <Link href={"https://travail-emploi.gouv.fr"}>
               travail-emploi.gouv.fr
@@ -35,16 +41,48 @@ export const GouvernementSection = () => {
           <li>
             <Link href={"https://www.gouvernement.fr"}>gouvernement.fr</Link>
           </li>
-        </StyledUl>
+        </StyledTopUl>
       </StyledTopSection>
       <SectionSeparator />
       <StyledBottomSection>
-        <StyledUl>
+        <StyledBottomUl>
           <li>
-            <Link href={"https://www.legifrance.gouv.fr"}>Legifrance</Link>
+            <Link href="/mentions-legales">Mentions légales</Link>
             <Separator>|</Separator>
           </li>
-        </StyledUl>
+          <li>
+            <Link href="/accessibilite">Accessibilité&nbsp;: partiellement conforme</Link>
+            <Separator>|</Separator>
+          </li>
+          <li>
+            <Link href="/politique-confidentialite">Politique de confidentialité</Link>
+            <Separator>|</Separator>
+          </li>
+          <li>
+            <Link href={`${GITHUB_REPO}/tree/${PACKAGE_VERSION}`}>Contribuer sur Github</Link>
+            <Separator>|</Separator>
+          </li>
+          <li>
+            <ContactModal>
+              {(openModal) => (
+                <StyledContactLink
+                  aria-label="Nous contacter"
+                  onClick={() => {
+                    matopush([
+                      "trackEvent",
+                      "contact",
+                      "click_contact_cdtn_team",
+                      path,
+                    ]);
+                    openModal();
+                  }}
+                >
+                  Nous contacter
+                </StyledContactLink>
+              )}
+            </ContactModal>
+          </li>
+        </StyledBottomUl>
       </StyledBottomSection>
     </StyledContainer>
   );
@@ -68,18 +106,7 @@ const StyledTopSection = styled.div`
   }
 `;
 
-const StyledBottomSection = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: ${spacings.medium};
-  @media (max-width: ${breakpoints.tablet}) {
-    padding: ${spacings.small};
-  }
-`;
-
-const StyledUl = styled.ul`
+const StyledTopUl = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -95,9 +122,6 @@ const StyledUl = styled.ul`
   }
   a {
     text-decoration: none;
-    @media (max-width: ${breakpoints.tablet}) {
-      font-size: 1rem;
-    }
     &:after {
       content: "" !important;
     }
@@ -107,11 +131,32 @@ const StyledUl = styled.ul`
   }
 `;
 
+const StyledBottomSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 10%;
+  align-items: center;
+  padding: ${spacings.medium};
+  @media (max-width: ${breakpoints.tablet}) {
+    padding: ${spacings.small};
+    margin-left: 0;
+    justify-content: center;
+  }
+`;
+
+const StyledBottomUl = styled(StyledTopUl)`
+  a {
+    color: #666;
+    font-weight: 400;
+  }
+`;
+
 const SectionSeparator = styled.div`
   width: 90%;
   align-self: center;
   height: 1px;
-  background-color: gray;
+  background-color: #666;
   margin: ${spacings.base} 0;
   @media (max-width: ${breakpoints.tablet}) {
     margin: ${spacings.small} 0;
@@ -119,9 +164,18 @@ const SectionSeparator = styled.div`
 `;
 
 const Separator = styled.span`
-  margin-bottom: ${spacings.small};
+  margin-left: ${spacings.small};
+  color: #666;
   user-select: none;
   @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }
 `;
+
+const StyledContactLink = styled.a.attrs({
+  role: "link",
+  tabindex: "0"
+})`
+  cursor: pointer;
+`;
+
