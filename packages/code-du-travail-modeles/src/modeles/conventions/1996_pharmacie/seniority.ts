@@ -94,12 +94,6 @@ export class Seniority1996
 }
 
 const MOTIFS_1996: Motif[] = LEGAL_MOTIFS.map((item) => {
-  if (item.key === MotifKeys.congesPaternite) {
-    return {
-      ...item,
-      value: 0,
-    };
-  }
   if (item.key === MotifKeys.maladieNonPro) {
     return {
       ...item,

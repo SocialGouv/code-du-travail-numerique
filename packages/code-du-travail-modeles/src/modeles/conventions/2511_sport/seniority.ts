@@ -4,10 +4,7 @@ import { MotifKeys } from "../../common/motif-keys";
 import { SeniorityDefault } from "../../common/seniority";
 
 const MOTIFS_2511: Motif[] = LEGAL_MOTIFS.map((item) => {
-  if (
-    item.key === MotifKeys.accidentTrajet ||
-    item.key === MotifKeys.congesPaternite
-  ) {
+  if (item.key === MotifKeys.accidentTrajet) {
     return {
       ...item,
       value: 0,

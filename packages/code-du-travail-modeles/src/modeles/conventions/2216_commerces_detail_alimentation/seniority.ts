@@ -34,7 +34,7 @@ export class Seniority2216
   }
 
   getMotifs(): Motif[] {
-    return MOTIFS_2216;
+    return LEGAL_MOTIFS;
   }
 
   private compute(
@@ -66,13 +66,3 @@ export class Seniority2216
     return { value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence };
   }
 }
-
-const MOTIFS_2216: Motif[] = LEGAL_MOTIFS.map((item) => {
-  if (item.key === MotifKeys.congesPaternite) {
-    return {
-      ...item,
-      value: 0,
-    };
-  }
-  return item;
-});
