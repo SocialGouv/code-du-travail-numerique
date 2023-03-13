@@ -29,23 +29,27 @@ describe("<AbsencePeriods />", () => {
         messageMotifExample="Ceci est un exemple"
       />
     );
-    expect(getAllByRole("option").length).toBe(9);
+    expect(getAllByRole("option").length).toBe(8);
     expect(
       getByRole("option", { name: "Congé pour création d'entreprise" })
     ).toBeInTheDocument();
     expect(
-      (getByRole("option", {
-        name: "Congé pour création d'entreprise",
-      }) as HTMLOptionElement).selected
+      (
+        getByRole("option", {
+          name: "Congé pour création d'entreprise",
+        }) as HTMLOptionElement
+      ).selected
     ).toBe(false);
     userEvent.selectOptions(
       getByRole("combobox"),
       getByRole("option", { name: "Congé pour création d'entreprise" })
     );
     expect(
-      (getByRole("option", {
-        name: "Congé pour création d'entreprise",
-      }) as HTMLOptionElement).selected
+      (
+        getByRole("option", {
+          name: "Congé pour création d'entreprise",
+        }) as HTMLOptionElement
+      ).selected
     ).toBe(true);
   });
 
@@ -84,14 +88,18 @@ describe("<AbsencePeriods />", () => {
       />
     );
     expect(
-      (getByRole("option", {
-        name: "Congé parental d'éducation",
-      }) as HTMLOptionElement).selected
+      (
+        getByRole("option", {
+          name: "Congé parental d'éducation",
+        }) as HTMLOptionElement
+      ).selected
     ).toBe(true);
     expect(
-      (getByRole("option", {
-        name: "Congé pour création d'entreprise",
-      }) as HTMLOptionElement).selected
+      (
+        getByRole("option", {
+          name: "Congé pour création d'entreprise",
+        }) as HTMLOptionElement
+      ).selected
     ).toBe(false);
     const input = getByLabelText("0.duration") as HTMLInputElement;
     expect(input.value).toBe("3");
