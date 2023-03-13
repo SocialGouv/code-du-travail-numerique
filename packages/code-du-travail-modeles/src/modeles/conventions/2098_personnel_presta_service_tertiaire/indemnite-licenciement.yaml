@@ -192,7 +192,6 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
     type: entier
 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . base:
-  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
   somme:
     - (3 / 10) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 0 et 5 ans
     - (4 / 10) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 6 et 10 ans

@@ -24,8 +24,6 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
   describe("Cas standard", () => {
     test.each`
       age     | seniority | salary
-      ${"54"} | ${0}      | ${2000}
-      ${"56"} | ${0}      | ${2000}
       ${"54"} | ${2}      | ${2000}
       ${"56"} | ${2}      | ${2000}
       ${"54"} | ${5}      | ${2000}

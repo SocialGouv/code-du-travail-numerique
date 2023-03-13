@@ -37,6 +37,7 @@ describe("CC 16", () => {
       ${23}          | ${23}     | ${0}                | ${61} | ${false}              | ${3374}    | ${31040.8}
       ${35}          | ${35}     | ${0}                | ${61} | ${false}              | ${3374}    | ${47236}
       ${22}          | ${12}     | ${10}               | ${64} | ${true}               | ${3000}    | ${13680}
+      ${66}          | ${1}      | ${0}                | ${66} | ${true}               | ${3000}    | ${0}
     `(
       "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
       ({
