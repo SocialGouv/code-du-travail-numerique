@@ -88,8 +88,7 @@ const SimulatorContent = <StepName extends string>({
     const currentStepName = visibleSteps[currentStepIndex].name;
     if (
       navigationAction !== "none" &&
-      currentStepName !== IndemniteLicenciementStepName.Resultat &&
-      simulator !== PublicodesSimulator.INDEMNITE_LICENCIEMENT
+      currentStepName !== IndemniteLicenciementStepName.Resultat
     ) {
       matopush([
         MatomoBaseEvent.TRACK_EVENT,
