@@ -29,7 +29,7 @@ describe("<AbsencePeriods />", () => {
         messageMotifExample="Ceci est un exemple"
       />
     );
-    expect(getAllByRole("option").length).toBe(9);
+    expect(getAllByRole("option").length).toBe(8);
     expect(
       getByRole("option", { name: "Congé pour création d'entreprise" })
     ).toBeInTheDocument();
@@ -63,9 +63,9 @@ describe("<AbsencePeriods />", () => {
         messageMotifExample="Ceci est un exemple"
       />
     );
-    expect(getAllByRole("option").length).toBe(9);
+    expect(getAllByRole("option").length).toBe(8);
     userEvent.click(getByText("Ajouter une absence"));
-    expect(getAllByRole("option").length).toBe(18);
+    expect(getAllByRole("option").length).toBe(16);
   });
 
   it("should render absences by default", () => {
