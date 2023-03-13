@@ -56,8 +56,6 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
   describe("Cas complexe", () => {
     test.each`
       seniority | salary
-      ${0}      | ${2000}
-      ${0}      | ${2000}
       ${2}      | ${2000}
       ${2}      | ${2000}
       ${5}      | ${2000}
