@@ -145,7 +145,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
       - catégorie professionnelle . licenciement économique = 'Oui'
   valeur: trois dixième sref
   plancher: plancher
@@ -324,7 +324,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
       - catégorie professionnelle . licenciement économique = 'Oui'
   valeur: somme agent de maîtrise
   plancher: plancher
@@ -514,7 +514,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Ingénieurs et cadres (Groupe V)'
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
       - catégorie professionnelle . licenciement économique = 'Oui'
   valeur: somme ingénieur
   plancher: plancher
