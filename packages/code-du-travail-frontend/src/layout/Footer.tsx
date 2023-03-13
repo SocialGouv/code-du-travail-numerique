@@ -18,6 +18,7 @@ import { ContactModal } from "../common/ContactModal";
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
 import { PACKAGE_VERSION } from "../config";
 import { Partners } from "../home";
+import { GouvernementSection } from "./Footer/GovernmentSection";
 
 const { DirectionRight: DirectionRightIcon } = icons;
 
@@ -57,229 +58,197 @@ const Footer = (): JSX.Element => {
 
         <NavSection>
           <Links>
-            <Category>
-              <Heading as={StyledHeading} isFirst>
-                Code du travail numérique
-              </Heading>
-              <StyledList>
-                <li>
-                  <Link passHref href="/droit-du-travail" legacyBehavior>
-                    <StyledLink>Le droit du travail</StyledLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link passHref href="/glossaire" legacyBehavior>
-                    <StyledLink>Glossaire</StyledLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link passHref href="/a-propos" legacyBehavior>
-                    <StyledLink>À propos</StyledLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link passHref href="/mentions-legales" legacyBehavior>
-                    <StyledLink>Mentions légales</StyledLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link passHref href="/accessibilite" legacyBehavior>
-                    <StyledLink>
-                      Accessibilité&nbsp;: partiellement conforme
-                    </StyledLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    passHref
-                    href="/politique-confidentialite"
-                    legacyBehavior
-                  >
-                    <StyledLink>Politique de confidentialité</StyledLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link passHref href="/stats" legacyBehavior>
-                    <StyledLink>Statistiques d’utilisation</StyledLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link passHref href="/integration" legacyBehavior>
-                    <StyledLink>
-                      Intégrer les outils du Code du travail numérique
-                    </StyledLink>
-                  </Link>
-                </li>
-              </StyledList>
-            </Category>
-            <Category>
-              <Heading as={StyledHeading} isFirst>
-                Aidez-nous à améliorer cet outil
-              </Heading>
-              <StyledList>
-                <li>
-                  <ContactModal>
-                    {(openModal) => (
-                      <StyledButton
-                        variant="navLink"
-                        onClick={() => {
-                          matopush([
-                            "trackEvent",
-                            "contact",
-                            "click_contact_cdtn_team",
-                            path,
-                          ]);
-                          openModal();
-                        }}
-                      >
-                        Contact
-                      </StyledButton>
-                    )}
-                  </ContactModal>
-                </li>
-                <li>
-                  <Link
-                    passHref
-                    href={`${GITHUB_REPO}/tree/${PACKAGE_VERSION}`}
-                    legacyBehavior
-                  >
-                    <StyledLink
-                      href={`${GITHUB_REPO}/tree/${PACKAGE_VERSION}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
+            <div>
+              <Category>
+                <Heading as={StyledHeading} isFirst>
+                  Code du travail numérique
+                </Heading>
+                <StyledList>
+                  <li>
+                    <Link passHref href="/droit-du-travail" legacyBehavior>
+                      <StyledLink>Le droit du travail</StyledLink>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link passHref href="/glossaire" legacyBehavior>
+                      <StyledLink>Glossaire</StyledLink>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link passHref href="/a-propos" legacyBehavior>
+                      <StyledLink>À propos</StyledLink>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link passHref href="/stats" legacyBehavior>
+                      <StyledLink>Statistiques d’utilisation</StyledLink>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link passHref href="/integration" legacyBehavior>
+                      <StyledLink>
+                        Intégrer les outils du Code du travail numérique
+                      </StyledLink>
+                    </Link>
+                  </li>
+                </StyledList>
+              </Category>
+            </div>
+            <div>
+              <Category>
+                <Heading as={StyledHeading} isFirst>
+                  Outils populaires
+                </Heading>
+                <StyledList>
+                  <li>
+                    <Link
+                      passHref
+                      href="/outils/simulateur-embauche"
+                      legacyBehavior
                     >
-                      Contribuer sur Github
-                    </StyledLink>
-                  </Link>
-                </li>
-                <li>
-                  {(() => {
-                    const packageVersion = PACKAGE_VERSION || "";
-                    const isTag = packageVersion[0] === "v";
-                    const path = isTag
-                      ? "releases/tag"
-                      : packageVersion === "master"
-                      ? "commits"
-                      : "compare";
-                    return (
-                      <Link
-                        href={`${GITHUB_REPO}/${path}/${packageVersion}`}
-                        passHref
-                        legacyBehavior
-                      >
-                        <StyledLink target="_blank" rel="noopener noreferrer">
-                          Journal des modifications
-                        </StyledLink>
-                      </Link>
-                    );
-                  })()}
-                </li>
-              </StyledList>
-            </Category>
-            <Category>
-              <Heading as={StyledHeading} isFirst>
-                En collaboration avec
-              </Heading>
-              <StyledList>
-                <li>
-                  <Link
-                    href={
-                      "https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
-                    }
-                    passHref
-                    legacyBehavior
-                  >
-                    <StyledLink target="_blank" rel="noopener noreferrer">
-                      La Direction Générale du Travail
-                    </StyledLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href={"https://fabrique.social.gouv.fr/"}
-                    passHref
-                    legacyBehavior
-                  >
-                    <StyledLink target="_blank" rel="noopener noreferrer">
-                      La fabrique des Ministères sociaux
-                    </StyledLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"https://beta.gouv.fr/"} passHref legacyBehavior>
-                    <StyledLink target="_blank" rel="noopener noreferrer">
-                      beta.gouv.fr
-                    </StyledLink>
-                  </Link>
-                </li>
-              </StyledList>
-            </Category>
+                      <StyledLink>Calcul du salaire brut/net</StyledLink>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      passHref
+                      href="/outils/indemnite-licenciement"
+                      legacyBehavior
+                    >
+                      <StyledLink>
+                        Calcul de l&apos;indemnité de licenciement de
+                        licenciement
+                      </StyledLink>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      passHref
+                      href="/outils/convention-collective"
+                      legacyBehavior
+                    >
+                      <StyledLink>Trouver sa convention collective</StyledLink>
+                    </Link>
+                  </li>
+                </StyledList>
+              </Category>
+              <Category>
+                <Heading as={StyledHeading} isFirst>
+                  Modèles populaires
+                </Heading>
+                <StyledList>
+                  <li>
+                    <Link
+                      passHref
+                      href="/modeles-de-courriers/lettre-de-demission"
+                      legacyBehavior
+                    >
+                      <StyledLink>Lettre de démission</StyledLink>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      passHref
+                      href="/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
+                      legacyBehavior
+                    >
+                      <StyledLink>
+                        Rupture du contrat en période d&apos;essai pour le
+                        salarié
+                      </StyledLink>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      passHref
+                      href="/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel"
+                      legacyBehavior
+                    >
+                      <StyledLink>
+                        Convocation à un entretien préalable au licenciement
+                        pour motif personnel
+                      </StyledLink>
+                    </Link>
+                  </li>
+                </StyledList>
+              </Category>
+            </div>
+            <div>
+              <Category>
+                <Heading as={StyledHeading} isFirst>
+                  Fiches pratiques populaires
+                </Heading>
+                <StyledList>
+                  <li>
+                    <Link
+                      passHref
+                      href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
+                      legacyBehavior
+                    >
+                      <StyledLink>Durée du préavis de démission</StyledLink>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      passHref
+                      href="/contribution/les-conges-pour-evenements-familiaux"
+                      legacyBehavior
+                    >
+                      <StyledLink>Congé pour évènements familiaux</StyledLink>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      passHref
+                      href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
+                      legacyBehavior
+                    >
+                      <StyledLink>
+                        Maintien du salaire en cas d&apos;arrêt maladie
+                      </StyledLink>
+                    </Link>
+                  </li>
+                </StyledList>
+              </Category>
+              <Category>
+                <Heading as={StyledHeading} isFirst>
+                  Conventions collectives populaires
+                </Heading>
+                <StyledList>
+                  <li>
+                    <Link
+                      passHref
+                      href="/convention-collective/1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
+                      legacyBehavior
+                    >
+                      <StyledLink>Services de l&apos;automobile</StyledLink>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      passHref
+                      href="/convention-collective/650-metallurgie-ingenieurs-et-cadres"
+                      legacyBehavior
+                    >
+                      <StyledLink>Métallurgie ingénieurs et cadres</StyledLink>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      passHref
+                      href="/convention-collective/573-commerces-de-gros"
+                      legacyBehavior
+                    >
+                      <StyledLink>Commerce de gros</StyledLink>
+                    </Link>
+                  </li>
+                </StyledList>
+              </Category>
+            </div>
           </Links>
         </NavSection>
-        <GovernmentSection>
-          <li>
-            <Link
-              href={"https://travail-emploi.gouv.fr"}
-              passHref
-              legacyBehavior
-            >
-              <StyledGovLink target="_blank" rel="noopener noreferrer">
-                travail-emploi.gouv.fr
-              </StyledGovLink>
-            </Link>
-            <Separator aria-hidden>|</Separator>
-          </li>
-          <li>
-            <Link
-              href={"https://www.service-public.fr"}
-              passHref
-              legacyBehavior
-            >
-              <StyledGovLink target="_blank" rel="noopener noreferrer">
-                service-public.fr
-              </StyledGovLink>
-            </Link>
-            <Separator aria-hidden>|</Separator>
-          </li>
-
-          <li>
-            <Link
-              href={"https://www.legifrance.gouv.fr"}
-              passHref
-              legacyBehavior
-            >
-              <StyledGovLink target="_blank" rel="noopener noreferrer">
-                legifrance.gouv.fr
-              </StyledGovLink>
-            </Link>
-            <Separator aria-hidden>|</Separator>
-          </li>
-
-          <li>
-            <Link href={"https://www.data.gouv.fr"} passHref legacyBehavior>
-              <StyledGovLink target="_blank" rel="noopener noreferrer">
-                data.gouv.fr
-              </StyledGovLink>
-            </Link>
-            <Separator aria-hidden>|</Separator>
-          </li>
-          <li>
-            <Link href={"https://www.gouvernement.fr"} passHref legacyBehavior>
-              <StyledGovLink target="_blank" rel="noopener noreferrer">
-                gouvernement.fr
-              </StyledGovLink>
-            </Link>
-            <Separator aria-hidden>|</Separator>
-          </li>
-          <li>
-            <Link href={"https://www.cnil.fr"} passHref legacyBehavior>
-              <StyledGovLink target="_blank" rel="noopener noreferrer">
-                cnil.fr
-              </StyledGovLink>
-            </Link>
-          </li>
-        </GovernmentSection>
       </StyledFooter>
+      <GouvernementSection />
     </OverflowWrapper>
   );
 };
@@ -353,14 +322,7 @@ const Links = styled(Container)`
   }
 `;
 
-const Category = styled.div`
-  & + & {
-    padding-left: ${spacings.base};
-    @media (max-width: ${breakpoints.mobile}) {
-      padding-left: 0;
-    }
-  }
-`;
+const Category = styled.div``;
 
 const StyledList = styled(FlatList)`
   @media (max-width: ${breakpoints.mobile}) {
@@ -372,6 +334,8 @@ const StyledHeading = styled.strong.attrs({
   "aria-level": "2",
   role: "heading",
 })`
+  margin-top: ${spacings.base};
+  margin-bottom: ${spacings.xsmall};
   font-size: ${fonts.sizes.default};
   @media (max-width: ${breakpoints.mobile}) {
     margin-top: ${spacings.small};
