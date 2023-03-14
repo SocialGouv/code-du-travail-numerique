@@ -240,8 +240,8 @@ const Footer = (): JSX.Element => {
             </div>
           </Links>
         </NavSection>
+        <GouvernementSection />
       </StyledFooter>
-      <GouvernementSection />
     </OverflowWrapper>
   );
 };
@@ -261,7 +261,6 @@ const StyledFooter = styled.footer`
   z-index: 1;
   margin-top: ${spacings.larger};
   padding-top: ${spacings.base};
-  background-color: ${({ theme }) => theme.bgSecondary};
 
   &:before {
     position: absolute;

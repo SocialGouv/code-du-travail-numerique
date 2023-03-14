@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
-import { theme } from "@socialgouv/cdtn-ui";
+import { theme, Container } from "@socialgouv/cdtn-ui";
 import { GITHUB_REPO, PACKAGE_VERSION } from "../../config";
 import { ContactModal } from "../../common/ContactModal";
 import { useRouter } from "next/router";
@@ -48,19 +48,15 @@ export const GouvernementSection = () => {
         <StyledBottomUl>
           <li>
             <Link href="/mentions-legales">Mentions légales</Link>
-            <Separator>|</Separator>
           </li>
           <li>
             <Link href="/accessibilite">Accessibilité&nbsp;: partiellement conforme</Link>
-            <Separator>|</Separator>
           </li>
           <li>
             <Link href="/politique-confidentialite">Politique de confidentialité</Link>
-            <Separator>|</Separator>
           </li>
           <li>
             <Link rel="noopener noreferrer" href={`${GITHUB_REPO}/tree/${PACKAGE_VERSION}`}>Contribuer sur Github</Link>
-            <Separator>|</Separator>
           </li>
           <li>
             <ContactModal>
@@ -90,7 +86,7 @@ export const GouvernementSection = () => {
 
 const { spacings, breakpoints } = theme;
 
-const StyledContainer = styled.div`
+const StyledContainer = styled(Container)`
   display: flex;
   flex-direction: column;
 `;
@@ -98,11 +94,13 @@ const StyledContainer = styled.div`
 const StyledTopSection = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: ${spacings.medium};
+  padding-bottom: ${spacings.medium};
+  padding-top: ${spacings.medium};
   @media (max-width: ${breakpoints.tablet}) {
-    padding: ${spacings.small};
+    padding-bottom: ${spacings.small};
+    padding-top: ${spacings.small};
   }
 `;
 
@@ -129,13 +127,13 @@ const StyledTopUl = styled.ul`
   @media (max-width: ${breakpoints.mobile}) {
     flex-direction: column;
   }
+  flex-wrap: wrap;
 `;
 
 const StyledBottomSection = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-left: 10%;
   align-items: center;
   padding: ${spacings.medium};
   @media (max-width: ${breakpoints.tablet}) {
@@ -153,22 +151,13 @@ const StyledBottomUl = styled(StyledTopUl)`
 `;
 
 const SectionSeparator = styled.div`
-  width: 90%;
+  width: 100%;
   align-self: center;
   height: 1px;
   background-color: #666;
   margin: ${spacings.base} 0;
   @media (max-width: ${breakpoints.tablet}) {
     margin: ${spacings.small} 0;
-  }
-`;
-
-const Separator = styled.span`
-  margin-left: ${spacings.small};
-  color: #666;
-  user-select: none;
-  @media (max-width: ${breakpoints.tablet}) {
-    display: none;
   }
 `;
 
