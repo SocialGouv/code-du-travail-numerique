@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { SimulatorLayout } from "../Components";
 import { Step } from "../Simulator";
 import {
@@ -12,6 +12,7 @@ import {
 } from "./steps";
 import {
   createIndemniteLicenciementStore,
+  IndemniteLicenciementContext,
   IndemniteLicenciementProvider,
   useIndemniteLicenciementStore,
 } from "./store";
@@ -78,6 +79,7 @@ const IndemniteLicenciementSimulator = ({
   icon,
   displayTitle,
 }: Omit<Props, "publicodesRules" | "slug">): JSX.Element => {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     onNextStepContratTravail,
     isStepContratTravailValid,
@@ -91,7 +93,7 @@ const IndemniteLicenciementSimulator = ({
     isStepInformationsValid,
     isStepInformationsHidden,
     isStepSalaryHidden,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     onNextStepContratTravail: state.contratTravailFunction.onNextStep,
     isStepContratTravailValid: state.contratTravailData.isStepValid,
     onNextStepAnciennete: state.ancienneteFunction.onNextStep,
@@ -163,12 +165,12 @@ export const CalculateurIndemnite = ({
   displayTitle,
   slug,
 }: Props): JSX.Element => {
+  const store = React.useRef(
+    createIndemniteLicenciementStore(slug, ToolName.INDEMNITE_LICENCIEMENT)
+  ).current;
+
   return (
-    <IndemniteLicenciementProvider
-      createStore={() =>
-        createIndemniteLicenciementStore(slug, ToolName.INDEMNITE_LICENCIEMENT)
-      }
-    >
+    <IndemniteLicenciementProvider value={store}>
       <IndemniteLicenciementSimulator
         icon={icon}
         title={title}

@@ -1,6 +1,6 @@
 {
   "name": "@cdt/api",
-  "version": "4.91.1",
+  "version": "4.92.1",
   "description": "",
   "private": true,
   "main": "dist/index.js",
@@ -38,7 +38,7 @@
     "@koa/cors": "^4.0.0",
     "@socialgouv/cdtn-elasticsearch": "2.0.1",
     "@socialgouv/cdtn-logger": "^2.0.0",
-    "@socialgouv/cdtn-utils": "*",
+    "@socialgouv/cdtn-utils": "^4.92.1",
     "date-fns": "^2.22.1",
     "elastic-apm-node": "^3.17.0",
     "fuzzball": "^2.0.2",
@@ -74,7 +74,7 @@
     "rimraf": "^3.0.2",
     "supertest": "^6.2.2",
     "ts-node": "^10.7.0",
-    "typescript": "^4.4.3"
+    "typescript": "^4.9.5"
   },
   "lint-staged": {
     "*.{js,ts}": [

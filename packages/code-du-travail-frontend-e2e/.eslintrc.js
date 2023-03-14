@@ -9,14 +9,13 @@ module.exports = {
     sourceType: "module",
     tsconfigRootDir: __dirname,
   },
-  rules: {
+  "rules": {
     "jest/valid-expect": "off",
-    "@typescript-eslint/no-unused-expressions": "off",
-    "@typescript-eslint/restrict-plus-operands": "warn",
     "jest/expect-expect": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
+    "@typescript-eslint/restrict-plus-operands": "warn"
   },
-  env: {
-    "cypress/globals": true,
+  "env": {
+    "cypress/globals": true
   },
-  ignorePatterns: ["*.js"],
 };

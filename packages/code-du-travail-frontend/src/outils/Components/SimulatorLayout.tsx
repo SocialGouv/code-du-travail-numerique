@@ -1,10 +1,11 @@
 import { theme, Wrapper } from "@socialgouv/cdtn-ui";
-import React, { useEffect, useMemo } from "react";
+import React, { useContext, useEffect, useMemo, useRef } from "react";
 import styled from "styled-components";
 import { printResult } from "../common/utils";
 import { StepList, Title } from "./SimulatorDecorator/Components";
 import { createSimulatorStore, Step } from "../Simulator";
 import {
+  SimulatorContext,
   SimulatorStepProvider,
   useSimulatorStepStore,
 } from "../Simulator/createContext";
@@ -53,7 +54,9 @@ const SimulatorContent = <StepName extends string>({
   const anchorRef = React.createRef<HTMLLIElement>();
   const [navigationAction, setNavigationAction] =
     React.useState<"next" | "prev" | "none">("none");
+  const store = useContext(SimulatorContext);
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
+    store,
     (state) => state
   );
 
@@ -200,8 +203,9 @@ const SimulatorContent = <StepName extends string>({
 const SimulatorLayout = <StepName extends string>(
   props: Props<StepName>
 ): JSX.Element => {
+  const store = useRef(createSimulatorStore()).current;
   return (
-    <SimulatorStepProvider createStore={() => createSimulatorStore()}>
+    <SimulatorStepProvider value={store}>
       <SimulatorContent {...props} />
     </SimulatorStepProvider>
   );
