@@ -27,8 +27,9 @@ describe("Outil - Trouver sa convention collective", () => {
       .should("have.prop", "href")
       .and(
         "equal",
-        Cypress.config().baseUrl +
-          "/convention-collective/1686-commerces-et-services-de-laudiovisuel-de-lelectronique-et-de-lequipemen"
+        `${
+          Cypress.config().baseUrl
+        }/convention-collective/1686-commerces-et-services-de-laudiovisuel-de-lelectronique-et-de-lequipemen`
       );
   });
 });
