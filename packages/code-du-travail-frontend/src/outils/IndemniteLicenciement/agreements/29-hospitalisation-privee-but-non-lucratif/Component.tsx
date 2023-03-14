@@ -1,9 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { RadioQuestion, TextQuestion } from "../../../Components";
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 import { icons } from "@socialgouv/cdtn-ui";
 
 export default function Agreement29() {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     hasSixBestSalaries,
     onChangeHasSixBestSalaries,
@@ -14,7 +18,7 @@ export default function Agreement29() {
     init,
     shouldAskSixBestSalaries,
     hasSameSalary,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     hasSixBestSalaries: state.agreement29Data.input.hasSixBestSalaries,
     onChangeHasSixBestSalaries:
       state.agreement29Function.onChangeHasSixBestSalaries,

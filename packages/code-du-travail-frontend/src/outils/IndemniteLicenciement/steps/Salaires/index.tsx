@@ -1,5 +1,8 @@
-import React from "react";
-import { useIndemniteLicenciementStore } from "../../store";
+import React, { useContext } from "react";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { TempsPartiel, SalaireTempsPlein } from "./components";
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
@@ -17,6 +20,7 @@ import {
 } from "../../utils/question";
 
 const StepSalaires = () => {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     hasTempsPartiel,
     onChangeHasTempsPartiel,
@@ -35,7 +39,7 @@ const StepSalaires = () => {
     arretTravail,
     showHasTempsPartiel,
     initShowHasTempsPartiel,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
     errorHasTempsPartiel: state.salairesData.error.errorHasTempsPartiel,

@@ -1,5 +1,6 @@
 import { Questionnaire } from "./Questionnaire";
 import { withStore, Provider } from "../store";
+import { useRef } from "react";
 
 type QuestionnaireWrapperProps = {
   name: string;
@@ -16,8 +17,9 @@ export const QuestionnaireWrapper = ({
   personnalizedTitle,
   widgetMode = false,
 }: QuestionnaireWrapperProps) => {
+  const store = useRef(withStore(name)).current;
   return (
-    <Provider createStore={() => withStore(name)}>
+    <Provider value={store}>
       <Questionnaire
         slug={slug}
         title={title}

@@ -1,6 +1,4 @@
-import create, { StoreApi } from "zustand";
-
-import createContext from "zustand/context";
+import { StoreApi, createStore as create, useStore } from "zustand";
 import {
   AgreementStoreError,
   AgreementStoreInput,
@@ -45,6 +43,7 @@ import {
 } from "../CommonSteps/Informations/store";
 
 import { ToolName } from "../types";
+import { createContext, useContext } from "react";
 
 export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
@@ -105,10 +104,15 @@ const createStore = (slug: string, toolName: ToolName) =>
     ) => createRootSlice(set, get, { slug, toolName })
   );
 
-const { Provider, useStore } = createContext<StoreApi<MainStore>>();
+const IndemniteLicenciementContext = createContext<StoreApi<MainStore>>(
+  {} as StoreApi<MainStore>
+);
+
+const { Provider } = IndemniteLicenciementContext;
 
 export {
   Provider as IndemniteLicenciementProvider,
   createStore as createIndemniteLicenciementStore,
+  IndemniteLicenciementContext,
   useStore as useIndemniteLicenciementStore,
 };
