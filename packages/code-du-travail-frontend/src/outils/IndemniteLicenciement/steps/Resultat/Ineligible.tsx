@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { HighlightResult, SectionTitle } from "../../../common/stepStyles";
 import Disclaimer from "../../../common/Disclaimer";
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 
 export default function Ineligible() {
-  const {
-    agreementHasNoLegalIndemnity,
-    getEligibilityError,
-    infoWarning,
-  } = useIndemniteLicenciementStore((state) => ({
-    agreementHasNoLegalIndemnity:
-      state.resultData.input.agreementHasNoLegalIndemnity,
-    getEligibilityError: state.resultFunction.getEligibilityError,
-    infoWarning: state.resultData.input.infoWarning,
-  }));
+  const store = useContext(IndemniteLicenciementContext);
+  const { agreementHasNoLegalIndemnity, getEligibilityError, infoWarning } =
+    useIndemniteLicenciementStore(store, (state) => ({
+      agreementHasNoLegalIndemnity:
+        state.resultData.input.agreementHasNoLegalIndemnity,
+      getEligibilityError: state.resultFunction.getEligibilityError,
+      infoWarning: state.resultData.input.infoWarning,
+    }));
   return (
     <>
       <SectionTitle hasSmallMarginTop>Indemnité de licenciement</SectionTitle>

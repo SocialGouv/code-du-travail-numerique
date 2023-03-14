@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.92.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.91.1...v4.92.0) (2023-03-14)
+
+### Bug Fixes
+
+- **husky:** delete prepush hook ([#4971](https://github.com/SocialGouv/code-du-travail-numerique/issues/4971)) ([5843984](https://github.com/SocialGouv/code-du-travail-numerique/commit/584398418084e9cdcda59e4e60477436d0f19724))
+- **indemnite-licenciement:** retours de la CC 3239 ([#4984](https://github.com/SocialGouv/code-du-travail-numerique/issues/4984)) ([8b65895](https://github.com/SocialGouv/code-du-travail-numerique/commit/8b65895916df4733c179e009f8b3fb4e2bcbe73e))
+
+### Features
+
+- **home:** ajout de nouvelles rebriques ([#4961](https://github.com/SocialGouv/code-du-travail-numerique/issues/4961) ([5ea49e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/5ea49e2f74f7752512ef6b4558f0e695e1b7b5ac))
+
 ## [4.91.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.91.0...v4.91.1) (2023-02-17)
 
 **Note:** Version bump only for package @cdt/api

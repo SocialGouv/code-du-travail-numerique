@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { theme } from "@socialgouv/cdtn-ui";
 import { Summary } from "./Summary";
 import { Question } from "./Question";
-import { useStore } from "../store";
+import { DossierLicenciementContext, useStore } from "../store";
 import { PreviousResponse } from "../type";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 type QuestionnaireProps = {
   slug: string;
@@ -19,11 +19,15 @@ export const Questionnaire = ({
   personnalizedTitle,
   widgetMode,
 }: QuestionnaireProps) => {
-  const init = useStore((state) => state.init);
-  const getSlugResponses = useStore((state) => state.getSlugResponses);
-  const isPersonnalizedMode = useStore((state) => state.isPersonnalizedMode);
-  const toolSlug = useStore((state) => state.toolSlug);
-  const previousResponses = useStore((state) => state.previousResponses);
+  const store = useContext(DossierLicenciementContext);
+  const init = useStore(store, (state) => state.init);
+  const getSlugResponses = useStore(store, (state) => state.getSlugResponses);
+  const isPersonnalizedMode = useStore(
+    store,
+    (state) => state.isPersonnalizedMode
+  );
+  const toolSlug = useStore(store, (state) => state.toolSlug);
+  const previousResponses = useStore(store, (state) => state.previousResponses);
   const [slugResponses, setSlugResponses] = useState<PreviousResponse[]>();
   init();
   useEffect(() => {

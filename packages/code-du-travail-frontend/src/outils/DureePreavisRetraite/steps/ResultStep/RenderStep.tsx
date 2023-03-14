@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import ResultStep from "./Step";
-import { usePreavisRetraiteStore } from "../../state";
+import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../../state";
 
 const RenderResultStep = (): JSX.Element => {
-  const result = usePreavisRetraiteStore((state) => state.steps.result);
+  const store = useContext(PreavisRetraiteContext);
+  const result = usePreavisRetraiteStore(store, (state) => state.steps.result);
   if (!result) {
     throw Error("Try to show result without computed result data");
   }
