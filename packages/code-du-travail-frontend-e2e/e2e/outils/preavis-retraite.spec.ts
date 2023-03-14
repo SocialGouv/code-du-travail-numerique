@@ -26,8 +26,9 @@ describe("Outil - Préavis de retraite", () => {
       .should("have.prop", "href")
       .and(
         "equal",
-        Cypress.config().baseUrl +
-          "/fiche-service-public/lemployeur-peut-il-mettre-doffice-un-salarie-a-la-retraite"
+        `${
+          Cypress.config().baseUrl
+        }/fiche-service-public/lemployeur-peut-il-mettre-doffice-un-salarie-a-la-retraite`
       );
     cy.get(
       'label:contains("Le salarié décide lui-même de partir à la retraite")'
