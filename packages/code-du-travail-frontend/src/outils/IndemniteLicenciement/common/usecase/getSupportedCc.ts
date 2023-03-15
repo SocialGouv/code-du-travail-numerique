@@ -3,7 +3,7 @@ import { IS_PREPROD, IS_PROD } from "../../../../config";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";
 
 const productionNotReady: number[] = [
-  1516, 1517, 1702, 2098, 2511, 2609, 787, 843, 1996,
+  1516, 1517, 1702, 2098, 2511, 2609, 787, 843, 1996, 2596,
 ];
 
 const getSupportedCcIndemniteLicenciement = (): AgreementSupportInfo[] =>

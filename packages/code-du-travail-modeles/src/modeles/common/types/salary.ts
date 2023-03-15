@@ -11,6 +11,7 @@ import type {
   CC2609ReferenceSalaryProps,
   CC3239ReferenceSalaryProps,
 } from "../../conventions";
+import type { CC2596ReferenceSalaryProps } from "../../conventions/2596_coiffure/salary";
 import type { SupportedCcIndemniteLicenciement } from "..";
 
 export type SalaryPeriods = {
@@ -24,24 +25,26 @@ export interface IReferenceSalary<T extends SupportedCcIndemniteLicenciement> {
 }
 
 export type ReferenceSalaryProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC1516
-    ? CC1516ReferenceSalaryProps
-    : T extends SupportedCcIndemniteLicenciement.IDCC1486
-    ? CC1486ReferenceSalaryProps
-    : T extends SupportedCcIndemniteLicenciement.IDCC1527
-    ? CC1527ReferenceSalaryProps
-    : T extends SupportedCcIndemniteLicenciement.IDCC3239
-    ? CC3239ReferenceSalaryProps
-    : T extends SupportedCcIndemniteLicenciement.IDCC0016
+  T extends SupportedCcIndemniteLicenciement.IDCC0016
     ? CC16ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC0029
+    ? CC29ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC0044
     ? CC44ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC0573
     ? CC573ReferenceSalaryProps
-    : T extends SupportedCcIndemniteLicenciement.IDCC0029
-    ? CC29ReferenceSalaryProps
-    : T extends SupportedCcIndemniteLicenciement.IDCC2098
-    ? CC2098ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC1486
+    ? CC1486ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC1516
+    ? CC1516ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC1527
+    ? CC1527ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC2609
     ? CC2609ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC2098
+    ? CC2098ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC2596
+    ? CC2596ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC3239
+    ? CC3239ReferenceSalaryProps
     : LegalReferenceSalaryProps;

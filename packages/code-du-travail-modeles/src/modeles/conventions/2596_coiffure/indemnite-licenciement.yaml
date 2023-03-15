@@ -1,0 +1,90 @@
+contrat salarié . convention collective . coiffure . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Emplois techniques et de coiffeurs, emplois de l'esthétique-cosmétique et emplois non techniques: "'Emplois techniques et de coiffeurs, emplois de l'esthétique-cosmétique et emplois non techniques'"
+      Cadres et agents de maitrise: "'Cadres et agents de maitrise'"
+
+contrat salarié . convention collective . coiffure . indemnité de licenciement . jusqu'à dix ans ou moins:
+  valeur:
+    le minimum de:
+      - indemnité de licenciement . ancienneté conventionnelle en année
+      - 10 an
+
+contrat salarié . convention collective . coiffure . indemnité de licenciement . au dela de dix ans:
+  somme:
+    - indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . coiffure . indemnité de licenciement . dix ans ou moins:
+  valeur:
+    produit:
+      assiette: jusqu'à dix ans ou moins * indemnité de licenciement . salaire de référence conventionnel
+      facteur: 1 / 4
+  unité: €
+
+contrat salarié . convention collective . coiffure . indemnité de licenciement . plus de dix ans:
+  valeur:
+    produit:
+      assiette: au dela de dix ans * indemnité de licenciement . salaire de référence conventionnel
+      facteur: 1 / 3
+  unité: €
+
+contrat salarié . convention collective . coiffure . indemnité de licenciement . cadre:
+  applicable si: catégorie professionnelle = 'Cadres et agents de maitrise'
+  valeur: oui
+
+contrat salarié . convention collective . coiffure . indemnité de licenciement . cadre . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 6
+  produit:
+    assiette: indemnité de licenciement . ancienneté conventionnelle en année * indemnité de licenciement . salaire de référence conventionnel
+    facteur: 1 / 4
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 7.5.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018563854?idConteneur=KALICONT000018563755
+  cdtn:
+    formule:
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 1/4 * Sref * A1
+
+contrat salarié . convention collective . coiffure . indemnité de licenciement . non cadre:
+  applicable si: catégorie professionnelle = 'Emplois techniques et de coiffeurs, emplois de l'esthétique-cosmétique et emplois non techniques'
+  valeur: oui
+
+contrat salarié . convention collective . coiffure . indemnité de licenciement . non cadre . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+  somme:
+    - plus de dix ans
+    - dix ans ou moins
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 7.5.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018563854?idConteneur=KALICONT000018563755
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . convention collective . coiffure . indemnité de licenciement . jusqu'à dix ans ou moins
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 1/4 * Sref * A1
+
+contrat salarié . convention collective . coiffure . indemnité de licenciement . non cadre . résultat conventionnel . formule plus de 10 ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . convention collective . coiffure . indemnité de licenciement . au dela de dix ans
+      formula: ($formule) + (1/3 * Sref * A2)
