@@ -11,7 +11,7 @@ contrat salarié . convention collective . commerces detail fruits legumes . au 
   plancher: 0 an
 
 contrat salarié . convention collective . commerces detail fruits legumes . résultat conventionnel . formule moins de 10 ans:
-  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année <= 10 an
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
   valeur: oui
   cdtn:
     formule:
