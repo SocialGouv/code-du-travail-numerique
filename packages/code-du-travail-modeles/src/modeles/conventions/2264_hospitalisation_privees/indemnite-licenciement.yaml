@@ -259,7 +259,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
   unité: €
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . résultat conventionnel en tant que non cadre:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 12 mois
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
   somme:
     - facteur 1 non cadre
     - facteur 2 non cadre

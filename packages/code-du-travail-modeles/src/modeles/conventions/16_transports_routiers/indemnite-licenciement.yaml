@@ -467,7 +467,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   applicable si:
     toutes ces conditions:
       - droit à la retraite au titre du régime en vigueur dans l'entreprise = 'Oui'
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 3 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 3 ans
   valeur: 0.2 * anciennete entre 60 et 65 ans * calcul 3 ans et plus d'ancienneté
   cdtn:
     formule:
