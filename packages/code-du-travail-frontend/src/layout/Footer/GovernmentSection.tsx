@@ -155,7 +155,7 @@ const SectionSeparator = styled.div`
   width: 100%;
   align-self: center;
   height: 1px;
-  background-color: #66666686;
+  background-color: #66666645;
   margin: ${spacings.base} 0;
   @media (max-width: ${breakpoints.tablet}) {
     margin: ${spacings.small} 0;
