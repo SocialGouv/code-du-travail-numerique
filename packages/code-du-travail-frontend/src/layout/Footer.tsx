@@ -109,8 +109,7 @@ const Footer = (): JSX.Element => {
                       legacyBehavior
                     >
                       <StyledLink>
-                        Calcul de l&apos;indemnité de licenciement de
-                        licenciement
+                        Calcul de l&apos;indemnité de licenciement
                       </StyledLink>
                     </Link>
                   </li>
@@ -146,7 +145,7 @@ const Footer = (): JSX.Element => {
                       legacyBehavior
                     >
                       <StyledLink>
-                        Rupture du contrat en période d&apos;essai pour le
+                        Rupture du contrat en période d&apos;essai par le
                         salarié
                       </StyledLink>
                     </Link>
@@ -187,7 +186,7 @@ const Footer = (): JSX.Element => {
                       href="/contribution/les-conges-pour-evenements-familiaux"
                       legacyBehavior
                     >
-                      <StyledLink>Congé pour évènements familiaux</StyledLink>
+                      <StyledLink>Congés pour événements familiaux</StyledLink>
                     </Link>
                   </li>
                   <li>
