@@ -135,7 +135,7 @@ const StyledBottomSection = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: ${spacings.medium};
+  padding: ${spacings.medium} 0;
   @media (max-width: ${breakpoints.tablet}) {
     padding: ${spacings.small};
     margin-left: 0;
