@@ -21,7 +21,7 @@ contrat salarié . convention collective . commerces detail fruits legumes . ré
       formula: 1/4 * Sref * A
 
 contrat salarié . convention collective . commerces detail fruits legumes . résultat conventionnel . formule au dela de 10 ans:
-  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année > 10 an
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année > 10 an
   valeur: oui
   cdtn:
     formule:
