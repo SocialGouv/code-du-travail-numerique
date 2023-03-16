@@ -12,7 +12,6 @@ import {
   CalculateurIndemnite,
   fetchTool,
 } from "../../src/outils";
-import { SearchWidget } from "../../src/search/SearchWidget";
 
 const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
@@ -22,17 +21,17 @@ const toolsBySlug = {
 };
 
 interface Props {
-  icon?: string;
+  icon: string;
   slug: string;
-  title?: string;
-  displayTitle?: string;
+  title: string;
+  displayTitle: string;
 }
 
 function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
   useIframeResizer();
   const Tool = toolsBySlug[slug];
 
-  return Tool ? (
+  return (
     <>
       <StyledContainer>
         <Tool
@@ -58,8 +57,6 @@ function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
         </StyledFooter>
       </StyledContainer>
     </>
-  ) : (
-    <SearchWidget></SearchWidget>
   );
 }
 
@@ -69,13 +66,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
   const slug = query.slug as string;
-  if (slug === "search") {
-    return {
-      props: {
-        slug,
-      },
-    };
-  }
   const tool = await fetchTool(slug);
   if (!tool) {
     return {
