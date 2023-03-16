@@ -1,16 +1,18 @@
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 import CommonInformationStep from "../../../CommonSteps/Informations";
+import { useContext } from "react";
 
 const InformationsStep = (): JSX.Element => {
-  const {
-    errorInformations,
-    onInformationsChange,
-    informations,
-  } = useIndemniteLicenciementStore((state) => ({
-    errorInformations: state.informationsData.error.errorInformations,
-    onInformationsChange: state.informationsFunction.onInformationsChange,
-    informations: state.informationsData.input.publicodesInformations,
-  }));
+  const store = useContext(IndemniteLicenciementContext);
+  const { errorInformations, onInformationsChange, informations } =
+    useIndemniteLicenciementStore(store, (state) => ({
+      errorInformations: state.informationsData.error.errorInformations,
+      onInformationsChange: state.informationsFunction.onInformationsChange,
+      informations: state.informationsData.input.publicodesInformations,
+    }));
 
   return (
     <CommonInformationStep
