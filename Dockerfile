@@ -39,13 +39,13 @@ COPY ./packages/code-du-travail-modeles/package.json ./packages/code-du-travail-
 COPY ./yarn.lock ./yarn.lock
 
 # Install packages
-RUN yarn --frozen-lockfile && yarn cache clean
+RUN yarn --frozen-lockfile --prefer-offline
 
 COPY . ./
 
 ENV NODE_ENV=production
 
-RUN yarn build:frontend && yarn --frozen-lockfile --prod
+RUN yarn build:frontend && yarn --frozen-lockfile --prod --prefer-offline
 
 # app
 FROM node:$NODE_VERSION
