@@ -48,7 +48,7 @@ export const createAgreement2596StoreSalaires: StoreSlice<
         dateNotification: ancienneteInput.dateSortie ?? "",
       });
       const period: SalaryPeriods[] = periods.map((v) => {
-        return { month: v, value: undefined, prime: 0 };
+        return { month: v, value: undefined };
       });
       const noticeSalaryPeriods = deepMergeArray(
         period,

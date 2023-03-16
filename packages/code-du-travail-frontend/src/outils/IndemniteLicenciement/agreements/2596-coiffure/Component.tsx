@@ -33,7 +33,9 @@ export default function Agreement2596() {
   React.useEffect(() => {
     init();
   }, []);
-  console.log("ICICIC", noticeSalaryPeriods);
+  const receivedSalaries = hasReceivedSalaries === "oui";
+  const hasMoreThanOneNoticeSalary = noticeSalaryPeriods.length > 1;
+  const S = hasMoreThanOneNoticeSalary ? "s" : "";
   return (
     <>
       {noticeSalaryPeriods.length > 0 && (
@@ -59,7 +61,9 @@ export default function Agreement2596() {
             showRequired
             note={
               hasReceivedSalaries === "non"
-                ? "Le calcul de l’indemnité nécessite les salaires perçus pendant le préavis. Pour réaliser cette simulation, nous considérerons que les salaires perçus pendant le préavis correspondent à la moyenne des salaires perçus au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation."
+                ? `Le calcul de l’indemnité nécessite le${S} salaire${S} perçu${S} pendant le préavis. Pour réaliser cette simulation, nous considérerons que le${S} salaire${S} perçu${S} pendant le préavis correspond${
+                    hasMoreThanOneNoticeSalary ? "ent" : ""
+                  } à la moyenne des salaires perçus au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation.`
                 : undefined
             }
           />

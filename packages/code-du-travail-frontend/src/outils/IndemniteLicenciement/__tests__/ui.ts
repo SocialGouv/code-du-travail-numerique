@@ -210,6 +210,7 @@ export const ui = {
     },
   },
   result: {
+    resultat: byText(/À partir des éléments que vous avez saisis/),
     formula: byTestId("formula"),
     legalError: {
       title: byText(
@@ -261,6 +262,7 @@ export const ui = {
       motif: byTestId("absence-motif"),
       duration: byTestId("absence-duration"),
     },
+    resultTableRows: byTestId("table-result-row"),
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),
