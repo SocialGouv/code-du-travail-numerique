@@ -4,12 +4,12 @@ import { StepData } from "../../../store";
 
 export type Agreement1516StoreInput = {
   hasReceivedSalaries?: OuiNon;
-  salaryPeriods?: SalaryPeriods[];
+  noticeSalaryPeriods?: SalaryPeriods[];
 };
 
 export type Agreement1516StoreError = {
   errorHasReceivedSalaries?: string;
-  errorSalaryPeriods?: string;
+  errorNoticeSalaryPeriods?: string;
 };
 
 export type Agreement1516StoreData = StepData<
@@ -20,7 +20,7 @@ export type Agreement1516StoreData = StepData<
 export type Agreement1516StoreFn = {
   onSalariesChange: (value: SalaryPeriods[]) => void;
   onChangeHasReceivedSalaries: (value: OuiNon) => void;
-  initSalaryPeriods: (withDefaultSalaryPeriod: boolean) => void;
+  onInit: () => void;
 };
 
 export type Agreement1516StoreSlice = {

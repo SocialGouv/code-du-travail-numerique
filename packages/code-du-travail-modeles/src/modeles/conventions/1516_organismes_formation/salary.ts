@@ -10,6 +10,7 @@ export type CC1516ReferenceSalaryProps = {
   salaires: SalaryPeriods[];
   salairesPendantPreavis: SalaryPeriods[];
 };
+
 export class ReferenceSalary1516
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1516>
 {
@@ -27,28 +28,22 @@ export class ReferenceSalary1516
     salairesPendantPreavis,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1516>): number {
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
+    const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
+    const moyenneSalaires = sum(salaryValues) / rankedSalaires.length;
+
     const rankedSalairesPendantPreavis = rankByMonthArrayDescFrench(
       salairesPendantPreavis
     );
-    const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
-
-    const moyenneSalaires = sum(salaryValues) / rankedSalaires.length;
-
-    const totalSalaryValues = [
-      ...rankedSalairesPendantPreavis.map((a) => a.value).filter(nonNullable),
-      ...salaryValues,
-    ];
-
-    const meilleurSalaireDes3DerniersMois: number = Math.max(
-      ...totalSalaryValues.slice(0, 3)
-    );
-
-    const primesPendantPreavis = rankedSalairesPendantPreavis
-      .map((v) => v.prime)
-      .filter(nonNullable);
+    const last3salaries = [...rankedSalairesPendantPreavis, ...rankedSalaires]
+      .filter((s) => nonNullable(s?.value))
+      .slice(0, 3)
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      .sort((first, second) => second.value! - first.value!);
+    const meilleurSalaireDes3DerniersMois = last3salaries[0];
 
     const formuleCc =
-      meilleurSalaireDes3DerniersMois + sum(primesPendantPreavis) / 12;
+      (meilleurSalaireDes3DerniersMois.value ?? 0) +
+      (meilleurSalaireDes3DerniersMois.prime ?? 0) / 12;
 
     return Math.max(moyenneSalaires, formuleCc);
   }

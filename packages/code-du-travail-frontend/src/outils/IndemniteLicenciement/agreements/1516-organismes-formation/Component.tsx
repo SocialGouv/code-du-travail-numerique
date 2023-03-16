@@ -9,32 +9,34 @@ import {
 export default function Agreement1516() {
   const store = useContext(IndemniteLicenciementContext);
   const {
-    salaryPeriods,
+    noticeSalaryPeriods,
     onSalariesChange,
-    errorSalaryPeriods,
+    errorNoticeSalaryPeriods,
     hasReceivedSalaries,
     onChangeHasReceivedSalaries,
     errorHasReceivedSalaries,
-    initSalaryPeriods,
+    init,
   } = useIndemniteLicenciementStore(store, (state) => ({
-    salaryPeriods: state.agreement1516Data.input.salaryPeriods ?? [],
+    noticeSalaryPeriods:
+      state.agreement1516Data.input.noticeSalaryPeriods ?? [],
     onSalariesChange: state.agreement1516Function.onSalariesChange,
-    errorSalaryPeriods: state.agreement1516Data.error.errorSalaryPeriods,
+    errorNoticeSalaryPeriods:
+      state.agreement1516Data.error.errorNoticeSalaryPeriods,
     hasReceivedSalaries: state.agreement1516Data.input.hasReceivedSalaries,
     onChangeHasReceivedSalaries:
       state.agreement1516Function.onChangeHasReceivedSalaries,
     errorHasReceivedSalaries:
       state.agreement1516Data.error.errorHasReceivedSalaries,
-    initSalaryPeriods: state.agreement1516Function.initSalaryPeriods,
+    init: state.agreement1516Function.onInit,
   }));
 
   React.useEffect(() => {
-    initSalaryPeriods(false);
+    init();
   }, []);
 
   return (
     <>
-      {salaryPeriods.length > 0 && (
+      {noticeSalaryPeriods.length > 0 && (
         <>
           <RadioQuestion
             questions={[
@@ -55,18 +57,18 @@ export default function Agreement1516() {
             onChangeSelectedOption={onChangeHasReceivedSalaries}
             error={errorHasReceivedSalaries}
             showRequired
+            note={
+              hasReceivedSalaries === "non"
+                ? "Le calcul de l’indemnité nécessecite le salaire le plus élevé perçu au cours des 3 derniers mois de travail (incluant le préavis). Pour réaliser cette simulation nous prendrons en considération le salaire le plus élevé perçu au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation."
+                : undefined
+            }
           />
-          {hasReceivedSalaries && (
+          {hasReceivedSalaries === "oui" && (
             <SalaireTempsPlein
               title="Salaires perçus pendant le préavis"
               onSalariesChange={onSalariesChange}
-              salaryPeriods={salaryPeriods}
-              error={errorSalaryPeriods}
-              note={
-                hasReceivedSalaries === "non"
-                  ? "Le calcul de l’indemnité nécessite le salaire le plus élevé perçu au cours des 3 derniers mois de travail (incluant le préavis). Pour réaliser cette simulation nous prendrons en considération le salaire le plus élevé perçu au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation."
-                  : undefined
-              }
+              salaryPeriods={noticeSalaryPeriods}
+              error={errorNoticeSalaryPeriods}
             />
           )}
         </>

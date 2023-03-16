@@ -15,7 +15,7 @@ import { validateStep } from "./validator";
 
 const initialState: Agreement1516StoreData = {
   input: {
-    salaryPeriods: [],
+    noticeSalaryPeriods: [],
   },
   error: {},
   hasBeenSubmit: false,
@@ -28,44 +28,38 @@ export const createAgreement1516StoreSalaires: StoreSlice<
 > = (set, get) => ({
   agreement1516Data: { ...initialState },
   agreement1516Function: {
-    initSalaryPeriods: (withDefaultSalaryPeriod: boolean) => {
+    onInit: () => {
       const ancienneteInput = get().ancienneteData.input;
-      const defaultSalaryPeriod = get().salairesData.input.salaryPeriods;
       const agreementSalaryPeriod =
-        get().agreement1516Data.input.salaryPeriods ?? [];
+        get().agreement1516Data.input.noticeSalaryPeriods ?? [];
       const periods = computeSalaryPeriods({
         dateEntree: ancienneteInput.dateNotification ?? "",
         dateNotification: ancienneteInput.dateSortie ?? "",
+      }).slice(0, 3);
+
+      const period: SalaryPeriods[] = periods.map((v) => {
+        return { month: v, value: undefined };
       });
-      const period: SalaryPeriods[] = periods.map((v) =>
-        Object.assign(
-          { month: v },
-          withDefaultSalaryPeriod &&
-            defaultSalaryPeriod[0].value && {
-              value: defaultSalaryPeriod[0].value,
-            },
-          withDefaultSalaryPeriod && {
-            prime: 0,
-          }
-        )
+      const noticeSalaryPeriods = deepMergeArray(
+        period,
+        agreementSalaryPeriod,
+        "month",
+        true
       );
-      const salaryPeriods = withDefaultSalaryPeriod
-        ? deepMergeArray(period, agreementSalaryPeriod, "month", true)
-        : period;
+
       set(
         produce((state: Agreement1516StoreSlice) => {
-          state.agreement1516Data.input.salaryPeriods = salaryPeriods;
+          state.agreement1516Data.input.noticeSalaryPeriods =
+            noticeSalaryPeriods;
         })
       );
     },
     onChangeHasReceivedSalaries: (value) => {
-      get().agreement1516Function.initSalaryPeriods(
-        value === "non" ? true : false
-      );
+      get().agreement1516Function.onInit();
       applyGenericValidation(get, set, "hasReceivedSalaries", value);
     },
     onSalariesChange: (value) => {
-      applyGenericValidation(get, set, "salaryPeriods", value);
+      applyGenericValidation(get, set, "noticeSalaryPeriods", value);
     },
   },
 });
