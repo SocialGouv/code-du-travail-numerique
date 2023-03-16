@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+
 import { RadioQuestion } from "../../../Components";
 import { SalaireTempsPlein } from "../../steps/Salaires/components";
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 
 export default function Agreement2596() {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     noticeSalaryPeriods,
     onSalariesChange,
@@ -12,7 +17,7 @@ export default function Agreement2596() {
     onChangeHasReceivedSalaries,
     errorHasReceivedSalaries,
     init,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     noticeSalaryPeriods:
       state.agreement2596Data.input.noticeSalaryPeriods ?? [],
     onSalariesChange: state.agreement2596Function.onSalariesChange,
@@ -25,7 +30,6 @@ export default function Agreement2596() {
       state.agreement2596Data.error.errorHasReceivedSalaries,
     init: state.agreement2596Function.onInit,
   }));
-
   React.useEffect(() => {
     init();
   }, []);

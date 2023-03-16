@@ -1,12 +1,18 @@
+import { useContext } from "react";
+
 import {
   StyledFilledElementSpan,
   StyledFilledElementTable,
 } from "../../steps/Resultat/components/FilledElements";
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 
 export default function Agreement2596Informations() {
+  const store = useContext(IndemniteLicenciementContext);
   const { noticeSalaryPeriods, hasReceivedSalaries } =
-    useIndemniteLicenciementStore((state) => ({
+    useIndemniteLicenciementStore(store, (state) => ({
       noticeSalaryPeriods:
         state.agreement2596Data.input.noticeSalaryPeriods ?? [],
       hasReceivedSalaries: state.agreement2596Data.input.hasReceivedSalaries,
