@@ -19,6 +19,7 @@ type Props = {
   tooltip?: Tooltip;
   dataTestidSalaries?: string;
   dataTestidPrimes?: string;
+  noPrime?: boolean;
 };
 
 export const SalaireTempsPlein = ({
@@ -31,6 +32,7 @@ export const SalaireTempsPlein = ({
   tooltip,
   dataTestidSalaries,
   dataTestidPrimes,
+  noPrime,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
@@ -100,7 +102,7 @@ export const SalaireTempsPlein = ({
           <tr>
             <Th>Mois</Th>
             <Th>Salaire mensuel brut</Th>
-            <Th>Dont primes</Th>
+            {!noPrime && <Th>Dont primes</Th>}
           </tr>
         </thead>
         <tbody>
@@ -132,7 +134,7 @@ export const SalaireTempsPlein = ({
                 )}
               </td>
               <td>
-                {index < 3 && (
+                {index < 3 && !noPrime && (
                   <>
                     <Input
                       title={`Renseignez la prime exceptionnelle pour le mois ${

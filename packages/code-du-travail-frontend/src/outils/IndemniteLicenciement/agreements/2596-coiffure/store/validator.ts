@@ -34,11 +34,6 @@ export const validateStep = (state: Agreement2596StoreInput) => {
   };
   const noticeSalaryPeriods = state.noticeSalaryPeriods ?? [];
 
-  console.log(
-    "validateStep",
-    noticeSalaryPeriods.length,
-    detectNullOrUndefinedOrNaNInArray(noticeSalaryPeriods)
-  );
   if (noticeSalaryPeriods.length > 0) {
     errorState = {
       errorHasReceivedSalaries: !state.hasReceivedSalaries

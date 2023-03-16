@@ -30,10 +30,10 @@ export default function Agreement2596() {
       state.agreement2596Data.error.errorHasReceivedSalaries,
     init: state.agreement2596Function.onInit,
   }));
+
   React.useEffect(() => {
     init();
   }, []);
-  const receivedSalaries = hasReceivedSalaries === "oui";
   const hasMoreThanOneNoticeSalary = noticeSalaryPeriods.length > 1;
   const S = hasMoreThanOneNoticeSalary ? "s" : "";
   return (
@@ -73,6 +73,7 @@ export default function Agreement2596() {
               onSalariesChange={onSalariesChange}
               salaryPeriods={noticeSalaryPeriods}
               error={errorNoticeSalaryPeriods}
+              noPrime
             />
           )}
         </>
