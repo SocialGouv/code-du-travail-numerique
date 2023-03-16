@@ -28,17 +28,6 @@ const StepResult = () => {
     init();
   }, []);
 
-  useEffect(() => {
-    matopush([
-      MatomoBaseEvent.TRACK_EVENT,
-      MatomoBaseEvent.OUTIL,
-      MatomoActionEvent.INDEMNITE_LICENCIEMENT,
-      isEligible
-        ? IndemniteLicenciementStepName.Resultat
-        : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
-    ]);
-  }, [isEligible]);
-
   return <>{isEligible ? <Eligible /> : <Ineligible />}</>;
 };
 
