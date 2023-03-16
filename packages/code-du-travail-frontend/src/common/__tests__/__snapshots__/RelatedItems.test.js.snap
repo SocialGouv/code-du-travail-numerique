@@ -1,13 +1,112 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<RelatedItems /> should render 1`] = `
+.c0 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c1 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: auto;
+  margin: 0;
+}
+
+.c7 {
+  -webkit-flex: 0 0 2.8rem;
+  -ms-flex: 0 0 2.8rem;
+  flex: 0 0 2.8rem;
+  width: 2.8rem;
+  height: 2.1rem;
+  margin: 0 1.6rem 0 0;
+  padding-top: 0.6rem;
+  color: #f66663;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.c4:hover .c6 {
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+.c2 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c3 {
+  margin: 0 0 1.6rem 0;
+  padding: 0;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    -webkit-flex: 0 0 2rem;
+    -ms-flex: 0 0 2rem;
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 1.7rem;
+    margin: 0 1rem 0 0;
+  }
+}
+
 <div>
   <div
-    class="sc-bcXHqe evAMOC"
+    class="c0"
   >
     <div
       aria-level="2"
-      class="sc-iBYQkv iDmZxg"
+      class="c1"
       data-testid="heading"
       role="heading"
     >
@@ -15,17 +114,17 @@ exports[`<RelatedItems /> should render 1`] = `
        :
     </div>
     <ul
-      class="sc-lbVpMG fqAvkB"
+      class="c2"
     >
       <li
-        class="sc-kSGOQU dLBXZT"
+        class="c3"
       >
         <a
-          class="sc-ezOQGI cmgTaR"
+          class="c4 c5"
         >
           <svg
             aria-hidden="true"
-            class="sc-kMjNwy dtEtzi"
+            class="c6 c7"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -36,21 +135,21 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <p
-            class="sc-bYMpWt gakFNM"
+            class="c8"
           >
             externalTool
           </p>
         </a>
       </li>
       <li
-        class="sc-kSGOQU dLBXZT"
+        class="c3"
       >
         <a
-          class="sc-ezOQGI cmgTaR"
+          class="c4 c5"
         >
           <svg
             aria-hidden="true"
-            class="sc-kMjNwy dtEtzi"
+            class="c6 c7"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +160,7 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <p
-            class="sc-bYMpWt gakFNM"
+            class="c8"
           >
             modele de courrier
           </p>
@@ -70,7 +169,7 @@ exports[`<RelatedItems /> should render 1`] = `
     </ul>
     <div
       aria-level="2"
-      class="sc-iBYQkv iDmZxg"
+      class="c1"
       data-testid="heading"
       role="heading"
     >
@@ -78,17 +177,17 @@ exports[`<RelatedItems /> should render 1`] = `
        :
     </div>
     <ul
-      class="sc-lbVpMG fqAvkB"
+      class="c2"
     >
       <li
-        class="sc-kSGOQU dLBXZT"
+        class="c3"
       >
         <a
-          class="sc-ezOQGI cmgTaR"
+          class="c4 c5"
         >
           <svg
             aria-hidden="true"
-            class="sc-kMjNwy dtEtzi"
+            class="c6 c7"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -99,21 +198,21 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <p
-            class="sc-bYMpWt gakFNM"
+            class="c8"
           >
             fiche sp
           </p>
         </a>
       </li>
       <li
-        class="sc-kSGOQU dLBXZT"
+        class="c3"
       >
         <a
-          class="sc-ezOQGI cmgTaR"
+          class="c4 c5"
         >
           <svg
             aria-hidden="true"
-            class="sc-kMjNwy dtEtzi"
+            class="c6 c7"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +223,7 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <p
-            class="sc-bYMpWt gakFNM"
+            class="c8"
           >
             contrib
           </p>

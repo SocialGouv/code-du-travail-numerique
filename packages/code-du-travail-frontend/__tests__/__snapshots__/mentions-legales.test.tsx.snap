@@ -1,40 +1,1271 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MentionLegales /> should render 1`] = `
+.c4 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c29 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 74rem;
+}
+
+.c46 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  padding: 0;
+  max-width: 74rem;
+}
+
+.c28 {
+  padding: 3.2rem 0;
+  background-color: transparent;
+  color: #3e486e;
+}
+
+.c33 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  position: relative;
+  padding: 4rem;
+  background-color: #fff;
+}
+
+.c33:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  max-height: 30rem;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  content: "";
+}
+
+.c33 > *:first-child {
+  margin-top: 0;
+}
+
+.c33 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c38 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+}
+
+.c38 > *:first-child {
+  margin-top: 0;
+}
+
+.c38 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c32 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c37 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c40 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
+.c54 {
+  position: relative;
+  display: block;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
+.c14 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+  will-change: transform;
+}
+
+.c14:link,
+.c14:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c14:not([disabled]):hover {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c14[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c20 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c20:focus {
+  color: #f66663;
+}
+
+.c48 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7994d4;
+  border-color: #7994d4;
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
+  opacity: 1;
+  will-change: transform;
+}
+
+.c48:link,
+.c48:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.c48:not([disabled]):hover {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #a0b3e0;
+  border-color: #a0b3e0;
+}
+
+.c48[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c23 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+  will-change: transform;
+}
+
+.c23:link,
+.c23:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c23:not([disabled]):hover {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c23[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+}
+
+.c24 {
+  height: auto;
+  padding: 0;
+}
+
+.c26 {
+  width: 5.4rem;
+  height: 5.4rem;
+  color: #7994d4;
+}
+
+.c21 {
+  position: relative;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  border: none;
+}
+
+.c55 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c30 {
+  margin-top: 0;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  text-align: center;
+}
+
+.c35 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c44 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  text-align: center;
+}
+
+.c31 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c36 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
+  text-align: left;
+}
+
+.c45 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
+}
+
+.c41 {
+  width: 100%;
+  padding-top: 4rem;
+  overflow-x: hidden;
+}
+
+.c42 {
+  position: relative;
+  z-index: 1;
+  margin-top: 4rem;
+  padding-top: 1.6rem;
+  background-color: #f2f5fa;
+}
+
+.c42:before {
+  position: absolute;
+  top: -27px;
+  left: -50%;
+  z-index: -1;
+  width: 200%;
+  height: 400px;
+  background-color: #f2f5fa;
+  border-radius: 100%;
+  content: "";
+}
+
+.c43 {
+  position: relative;
+  padding-bottom: 7rem;
+  text-align: center;
+}
+
+.c47 {
+  margin-bottom: 2rem;
+}
+
+.c49 {
+  width: 1.5em;
+  margin-left: 1.6rem;
+}
+
+.c50 {
+  padding: 5rem 0;
+  background-color: #e4e8ef;
+}
+
+.c51 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c52 + .c52 {
+  padding-left: 1.6rem;
+}
+
+.c53 {
+  font-size: 1.6rem;
+}
+
+.c57 {
+  font-weight: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.8rem 0;
+  display: inline-block;
+}
+
+.c58 {
+  padding: 0.4rem 0;
+}
+
+.c59 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #f2f5fa;
+  list-style-type: none;
+  margin: 0;
+  padding-bottom: 1.6rem;
+}
+
+.c60 {
+  margin: 0 1rem 1rem 1rem;
+}
+
+.c61 {
+  margin-bottom: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c13 li[role="option"]:nth-child(2n + 1) {
+  background: #f2f5fa;
+}
+
+.c10 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c16 {
+  width: 3rem;
+  height: 3rem;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 5.4rem;
+  margin: 0;
+  padding: 1rem 5.5rem 1rem 1.6rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c12::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c12::-moz-placeholder {
+  color: #9298af;
+}
+
+.c12:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c12::placeholder {
+  color: #9298af;
+}
+
+.c15 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 5.4rem;
+  color: #7994d4;
+}
+
+.c2 {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+}
+
+.c3 {
+  display: none;
+  text-align: right;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c22 {
+  padding: 0 0 0 30px;
+  background: url("/static/assets/img/acceccibility-logo.svg") 6px center no-repeat;
+  display: block !important;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 {
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 13.5rem;
+  height: 11.5rem;
+  background-color: white;
+}
+
+.c8 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 17.4rem;
+  height: 7rem;
+  margin-left: 4rem;
+  color: #f66663;
+}
+
+.c19 {
+  display: none;
+}
+
+.c18 {
+  display: none;
+  color: #7994d4;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 38rem;
+  margin-left: 1.6rem;
+}
+
+.c0 {
+  position: relative;
+  padding-top: calc(20rem);
+}
+
+.c1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 70rem;
+  overflow: hidden;
+  background: linear-gradient( #f2f5fa 40rem, #fff );
+}
+
+.c27 {
+  position: relative;
+  margin-top: 6rem;
+}
+
+.c34 {
+  display: block;
+  margin: 2rem 0;
+}
+
+.c39 {
+  margin-bottom: 2rem;
+}
+
+@media (max-width:600px) {
+  .c4 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c4 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c29 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c29 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c46 {
+    padding: 0;
+  }
+}
+
+@media print {
+  .c46 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media print {
+  .c33:before {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c33 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c33 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c38 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c38 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c40 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c54 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c14 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c20 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c48 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c48 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c48 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c23 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:600px) {
+  .c26 {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c21 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 5.4rem;
+    padding: 0;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    margin-bottom: 3.2rem;
+    margin-left: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c35 {
+    margin-bottom: 1rem;
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c44 {
+    margin-bottom: 1rem;
+    margin-left: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c31 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c36 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c36 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c45 {
+    font-size: 2.2rem;
+  }
+}
+
+@media print {
+  .c42 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c43 {
+    padding-top: 0;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c50 {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c51 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
+  .c52 + .c52 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c56 {
+    text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c53 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width:980px) {
+  .c61 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    height: 5.4rem;
+    padding: 1rem 5.5rem 1rem 1.6rem;
+  }
+}
+
+@media (min-width:980px) {
+  .c25 {
+    width: 100%;
+  }
+
+  .c25:before {
+    display: block;
+    position: absolute;
+    bottom: 5.5rem;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #e4e8ef;
+    content: "";
+  }
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:600px) {
+  .c2 {
+    height: 9rem;
+  }
+}
+
+@media print {
+  .c2 {
+    position: relative;
+    height: auto;
+    box-shadow: none;
+  }
+}
+
+@media print {
+  .c3 {
+    display: block;
+  }
+}
+
+@media (max-width:980px) {
+  .c22 {
+    display: none !important;
+  }
+}
+
+@media (max-width:980px) {
+  .c6 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: calc(50% + 9.5rem);
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(50% + 6.2rem);
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    width: auto;
+    height: 7.5rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    height: 5rem;
+    width: auto;
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width:980px) {
+  .c19 {
+    display: block;
+  }
+}
+
+@media print {
+  .c19 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c18 {
+    display: block;
+    width: 3.4rem;
+    height: 3.4rem;
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c18 {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c9 {
+    display: none;
+    width: 80%;
+  }
+}
+
+@media print {
+  .c9 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding-top: calc(9rem);
+  }
+}
+
+@media print {
+  .c0 {
+    padding-top: 0;
+  }
+}
+
+@media print {
+  .c1 {
+    background: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c27 {
+    margin-top: 3.2rem;
+  }
+}
+
 <div>
   <div
-    class="sc-gelMue bnliCS"
+    class="c0"
   >
     <div
-      class="sc-ckLdoV cstImJ"
+      class="c1"
     />
     <header
-      class="sc-cuOiQm gnPkEX"
+      class="c2"
     >
       <div
-        class="sc-fTJzqL ezEiId"
+        class="c3"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-bcXHqe sc-fSKiAx evAMOC dtOiWY"
+        class="c4 c5"
       >
         <a
-          class="sc-ACYlI bUMeJM"
+          class="c6"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-bjCGfv bwUReJ"
+            class="c7"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-hgRfpC jFjTPO"
+            class="c8"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,15 +1289,15 @@ exports[`<MentionLegales /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-gXnjX gtEzTc"
+          class="c9"
         >
           <form
             action="/recherche"
-            class="sc-gGfaQS dycnOO"
+            class="c10"
             role="search"
           >
             <div
-              class="sc-gYbzsP fCavdH"
+              class="c11"
             >
               <label
                 for="floating-search"
@@ -86,7 +1317,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 aria-controls="react-autowhatever-1"
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
-                class="sc-ehkVkK jYOJkL"
+                class="c12"
                 id="floating-search"
                 name="q"
                 placeholder="Rechercher"
@@ -95,20 +1326,20 @@ exports[`<MentionLegales /> should render 1`] = `
                 value=""
               />
               <div
-                class="sc-IQBGL jKvisz"
+                class="c13"
                 id="react-autowhatever-1"
                 role="listbox"
               />
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt cizsts sc-itMJkM iFKhvm"
+              class="c14 c15"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-iuuDEZ cBpkuP"
+                class="c16"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,11 +1353,11 @@ exports[`<MentionLegales /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-bTtZEv haeyCP"
+          class="c17"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-lgholE fodyPs"
+            class="c18"
             href="/recherche"
             rel="nofollow"
           >
@@ -144,21 +1375,21 @@ exports[`<MentionLegales /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-fiSPbx hurUBr"
+          class="c19"
         >
           <button
-            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-hQIyOC bDyXUw gnHQog"
+            class="c20 c21 c22"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-Dmqmp ftonNl"
+          class="c23 c24 c25"
         >
           <svg
             aria-hidden="true"
-            class="sc-jcMfQk bLExSq"
+            class="c26"
             fill="none"
             viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
@@ -174,30 +1405,30 @@ exports[`<MentionLegales /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-kIRMQU fLtnGy"
+      class="c27"
       id="content"
       tabindex="-1"
     >
       <div
-        class="sc-gswNZR uUAJC"
+        class="c28"
       >
         <div
-          class="sc-bcXHqe ePDXDD"
+          class="c29"
         >
           <header
-            class="sc-eYqcxL hMutTz"
+            class="c30"
           >
             <h1
-              class="sc-iqPaeV fejMbm"
+              class="c31"
             >
               <span
-                class="sc-gKPRtg efbYAr"
+                class="c32"
               />
               Mentions légales
             </h1>
           </header>
           <div
-            class="sc-jSUZER heYtoX"
+            class="c33"
           >
             <p>
               Le site est édité par la
@@ -211,7 +1442,7 @@ exports[`<MentionLegales /> should render 1`] = `
               située :
             </p>
             <address
-              class="sc-ciyUsT kGFHrH"
+              class="c34"
             >
               Tour Mirabeau
               <br />
@@ -223,13 +1454,13 @@ exports[`<MentionLegales /> should render 1`] = `
               </p>
             </address>
             <div
-              class="sc-eYqcxL jDQmmv"
+              class="c35"
             >
               <h2
-                class="sc-eVspGN hmna-du"
+                class="c36"
               >
                 <span
-                  class="sc-gKPRtg fPkQGb"
+                  class="c37"
                 />
                 Directeur de la publication
               </h2>
@@ -238,13 +1469,13 @@ exports[`<MentionLegales /> should render 1`] = `
               Pierre RAMAIN, Directeur Général du Travail
             </p>
             <div
-              class="sc-eYqcxL jDQmmv"
+              class="c35"
             >
               <h2
-                class="sc-eVspGN hmna-du"
+                class="c36"
               >
                 <span
-                  class="sc-gKPRtg fPkQGb"
+                  class="c37"
                 />
                 Hébergement
               </h2>
@@ -253,7 +1484,7 @@ exports[`<MentionLegales /> should render 1`] = `
               Ce site est hébergé par Microsoft Azure France (région France centre) :
             </p>
             <address
-              class="sc-ciyUsT kGFHrH"
+              class="c34"
             >
               Microsoft France
               <br />
@@ -262,7 +1493,7 @@ exports[`<MentionLegales /> should render 1`] = `
               92130 ISSY-LES-MOULINEAUX
             </address>
             <div
-              class="sc-jSUZER sc-kGFDUS cbQucy gApIgU"
+              class="c38 c39"
             >
               <p>
                 Le code du logiciel est libre, et peut donc être vérifié et amélioré par toutes et tous à l’adresse suivante:
@@ -276,13 +1507,13 @@ exports[`<MentionLegales /> should render 1`] = `
               </p>
             </div>
             <div
-              class="sc-eYqcxL jDQmmv"
+              class="c35"
             >
               <h2
-                class="sc-eVspGN hmna-du"
+                class="c36"
               >
                 <span
-                  class="sc-gKPRtg fPkQGb"
+                  class="c37"
                 />
                 Accessibilité
               </h2>
@@ -291,7 +1522,7 @@ exports[`<MentionLegales /> should render 1`] = `
               La conformité aux normes d’accessibilité numérique est un objectif ultérieur mais nous tâchons de rendre dès la conception, ce site accessible à toutes et à tous.
             </p>
             <h3
-              class="sc-iBYQkv iDmZxg"
+              class="c40"
               data-testid="heading"
             >
               Signaler un dysfonctionnement
@@ -310,7 +1541,7 @@ exports[`<MentionLegales /> should render 1`] = `
               Si vous n’obtenez pas de réponse rapide de notre part, vous êtes en droit de faire parvenir vos doléances ou une demande de saisine au Défenseur des droits.
             </p>
             <h3
-              class="sc-iBYQkv iDmZxg"
+              class="c40"
               data-testid="heading"
             >
               En savoir plus
@@ -325,13 +1556,13 @@ exports[`<MentionLegales /> should render 1`] = `
               </a>
             </p>
             <div
-              class="sc-eYqcxL jDQmmv"
+              class="c35"
             >
               <h2
-                class="sc-eVspGN hmna-du"
+                class="c36"
               >
                 <span
-                  class="sc-gKPRtg fPkQGb"
+                  class="c37"
                 />
                 Sécurité
               </h2>
@@ -344,45 +1575,45 @@ exports[`<MentionLegales /> should render 1`] = `
       </div>
     </main>
     <div
-      class="sc-edLOhm dRldNz"
+      class="c41"
     >
       <footer
-        class="sc-jmfXTE igBkKE"
+        class="c42"
       >
         <div
-          class="sc-gswNZR uUAJC sc-iXGltN BpYYY"
+          class="c28 c43"
         >
           <div
-            class="sc-bcXHqe evAMOC"
+            class="c4"
           >
             <div
               aria-level="2"
-              class="sc-eYqcxL doWTr"
+              class="c44"
               role="heading"
             >
               <p
-                class="sc-eVspGN gOEXxU"
+                class="c45"
               >
                 <span
-                  class="sc-gKPRtg efbYAr"
+                  class="c32"
                 />
                 Besoin de plus d’informations ?
               </p>
             </div>
             <div
-              class="sc-bcXHqe sc-hZDVde ljCEtE hSDPoh"
+              class="c46 c47"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
               </p>
             </div>
             <button
-              class="sc-hhOBVt irUZZv"
+              class="c48"
             >
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="sc-hLeiDn jdhOgu"
+                class="c49"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -396,28 +1627,28 @@ exports[`<MentionLegales /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-gswNZR uUAJC sc-ewvfhA cIva-dW"
+          class="c28 c50"
         >
           <div
-            class="sc-bcXHqe sc-ehVsHJ evAMOC icBfsn"
+            class="c4 c51"
           >
             <div
-              class="sc-djTcra kTNpwc"
+              class="c52 "
             >
               <strong
                 aria-level="2"
-                class="sc-kIlzlo dvzJkK sc-iBYQkv ETltB"
+                class="c53 c54"
                 data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
               </strong>
               <ul
-                class="sc-lbVpMG sc-cVtpRj fqAvkB bVtHNH"
+                class="c55 c56"
               >
                 <li>
                   <a
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
@@ -425,7 +1656,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="/glossaire"
                   >
                     Glossaire
@@ -433,7 +1664,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="/a-propos"
                   >
                     À propos
@@ -441,7 +1672,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="/mentions-legales"
                   >
                     Mentions légales
@@ -449,7 +1680,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="/accessibilite"
                   >
                     Accessibilité : partiellement conforme
@@ -457,7 +1688,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
@@ -465,7 +1696,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="/stats"
                   >
                     Statistiques d’utilisation
@@ -473,7 +1704,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="/integration"
                   >
                     Intégrer les outils du Code du travail numérique
@@ -482,22 +1713,22 @@ exports[`<MentionLegales /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="sc-djTcra kTNpwc"
+              class="c52 "
             >
               <strong
                 aria-level="2"
-                class="sc-kIlzlo dvzJkK sc-iBYQkv ETltB"
+                class="c53 c54"
                 data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="sc-lbVpMG sc-cVtpRj fqAvkB bVtHNH"
+                class="c55 c56"
               >
                 <li>
                   <button
-                    class="sc-hhOBVt eyKsVw sc-gYpcnp noiHe"
+                    class="c20 c58"
                   >
                     Contact
                   </button>
@@ -505,7 +1736,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -516,7 +1747,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -527,23 +1758,23 @@ exports[`<MentionLegales /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="sc-djTcra kTNpwc"
+              class="c52 "
             >
               <strong
                 aria-level="2"
-                class="sc-kIlzlo dvzJkK sc-iBYQkv ETltB"
+                class="c53 c54"
                 data-testid="heading"
                 role="heading"
               >
                 En collaboration avec
               </strong>
               <ul
-                class="sc-lbVpMG sc-cVtpRj fqAvkB bVtHNH"
+                class="c55 c56"
               >
                 <li>
                   <a
                     aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -554,7 +1785,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 <li>
                   <a
                     aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="https://fabrique.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -565,7 +1796,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 <li>
                   <a
                     aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="sc-ktLMLx kmVqfA"
+                    class="c57"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -578,12 +1809,12 @@ exports[`<MentionLegales /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="sc-bGhRYA glPwDA"
+          class="c59"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="sc-ktLMLx sc-fyBusP kmVqfA jjntEO"
+              class="c57 c60"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -592,7 +1823,7 @@ exports[`<MentionLegales /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="sc-gukea xvGxA"
+              class="c61"
             >
               |
             </span>
@@ -600,7 +1831,7 @@ exports[`<MentionLegales /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="sc-ktLMLx sc-fyBusP kmVqfA jjntEO"
+              class="c57 c60"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -609,7 +1840,7 @@ exports[`<MentionLegales /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="sc-gukea xvGxA"
+              class="c61"
             >
               |
             </span>
@@ -617,7 +1848,7 @@ exports[`<MentionLegales /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="sc-ktLMLx sc-fyBusP kmVqfA jjntEO"
+              class="c57 c60"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -626,7 +1857,7 @@ exports[`<MentionLegales /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="sc-gukea xvGxA"
+              class="c61"
             >
               |
             </span>
@@ -634,7 +1865,7 @@ exports[`<MentionLegales /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="sc-ktLMLx sc-fyBusP kmVqfA jjntEO"
+              class="c57 c60"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -643,7 +1874,7 @@ exports[`<MentionLegales /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="sc-gukea xvGxA"
+              class="c61"
             >
               |
             </span>
@@ -651,7 +1882,7 @@ exports[`<MentionLegales /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="sc-ktLMLx sc-fyBusP kmVqfA jjntEO"
+              class="c57 c60"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -660,7 +1891,7 @@ exports[`<MentionLegales /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="sc-gukea xvGxA"
+              class="c61"
             >
               |
             </span>
@@ -668,7 +1899,7 @@ exports[`<MentionLegales /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="sc-ktLMLx sc-fyBusP kmVqfA jjntEO"
+              class="c57 c60"
               href="https://www.cnil.fr"
               rel="noopener noreferrer"
               target="_blank"

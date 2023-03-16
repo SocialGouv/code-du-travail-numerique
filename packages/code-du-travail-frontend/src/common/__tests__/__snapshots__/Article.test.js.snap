@@ -1,33 +1,380 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Article /> should render 1`] = `
+.c0 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c1 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  position: relative;
+  padding: 4rem;
+  background-color: #fff;
+}
+
+.c1:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  max-height: 30rem;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  content: "";
+}
+
+.c1 > *:first-child {
+  margin-top: 0;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c13 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c9 {
+  position: relative;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 4rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c12 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  color: #7994d4;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+.c5:hover,
+.c5:focus {
+  color: #f66663;
+}
+
+.c5.spacing-left {
+  margin-left: 1rem;
+}
+
+.c5.spacing-top {
+  margin-top: 1rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  color: #7994d4;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8:hover,
+.c8:focus {
+  color: #f66663;
+}
+
+.c8.spacing-left {
+  margin-left: 1rem;
+}
+
+.c8.spacing-top {
+  margin-top: 1rem;
+}
+
+.c6 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0.8rem;
+  background-color: transparent;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+}
+
+.c7 {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  margin-bottom: 1rem;
+}
+
+.c11 {
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+  font-size: 1.4rem;
+}
+
+.c18 {
+  margin: 3.2rem 0 0 0;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c1:before {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c1 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    margin-bottom: 3.2rem;
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    font-size: 2.6rem;
+  }
+}
+
+@media print {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-order: 5;
+    -ms-flex-order: 5;
+    order: 5;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+@media print {
+  .c3 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width:600px) {
+  .c18 {
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c17 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    display: block;
+  }
+}
+
 <div>
   <div
-    class="sc-bcXHqe evAMOC"
+    class="c0"
   >
     <div
-      class="sc-jSUZER heYtoX"
+      class="c1"
     >
       <div
-        class="sc-ZqGJI hKjzCz"
+        class="c2"
       >
         <div
-          class="sc-knEsKG cuocNg"
+          class="c3"
         >
           <div
-            class="sc-kSGOQU fjTFqE"
+            class="c4"
           >
             <button
-              class="sc-dvEHMn dyLewL no-after spacing-left"
+              class="c5 no-after spacing-left"
               title="Partager sur Facebook"
               type="button"
             >
               <span
-                class="sc-elAWhN VzdIJ"
+                class="c6"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-kiPvrU jIZWeG"
+                  class="c7"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -40,16 +387,16 @@ exports[`<Article /> should render 1`] = `
               </span>
             </button>
             <a
-              class="sc-jsTgWu iidugI spacing-left"
+              class="c8 spacing-left"
               href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Contrat%20de%20travail%20et%20formalit%C3%A9s%20d'embauche%20de%20l'assistante%20maternelle&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
               title="Envoyer par email"
             >
               <span
-                class="sc-elAWhN VzdIJ"
+                class="c6"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-kiPvrU jIZWeG"
+                  class="c7"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -66,15 +413,15 @@ exports[`<Article /> should render 1`] = `
               </span>
             </a>
             <button
-              class="sc-dvEHMn dyLewL spacing-left"
+              class="c5 spacing-left"
               title="Partager sur LinkedIn"
             >
               <span
-                class="sc-elAWhN VzdIJ"
+                class="c6"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-kiPvrU jIZWeG"
+                  class="c7"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,18 +434,18 @@ exports[`<Article /> should render 1`] = `
               </span>
             </button>
             <div
-              class="sc-jfTVlA aTmOx"
+              class="c9"
             >
               <button
-                class="sc-dvEHMn dyLewL spacing-left"
+                class="c5 spacing-left"
                 title="Plus d’options"
               >
                 <span
-                  class="sc-elAWhN VzdIJ"
+                  class="c6"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-kiPvrU jIZWeG"
+                    class="c7"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -124,37 +471,37 @@ exports[`<Article /> should render 1`] = `
           </div>
         </div>
         <header
-          class="sc-eYqcxL iNvldS sc-dkKxlM hFCvpR"
+          class="c10 c11"
         >
           <h1
-            class="sc-iqPaeV dscZbM"
+            class="c12"
           >
             <span
-              class="sc-gKPRtg fPkQGb"
+              class="c13"
             />
             Contrat de travail et formalités d'embauche de l'assistante maternelle
           </h1>
         </header>
         <div
-          class="sc-gJFNMl paIVY"
+          class="c14"
         >
           <p
-            class="sc-GKYbw hiUFFW"
+            class="c15"
           >
             <span
-              class="sc-jKvnYE egIrG"
+              class="c16"
             >
               Source: 
               Fiche service public
             </span>
             <span
               aria-hidden="true"
-              class="sc-iWOQzb dlGCzw"
+              class="c17"
             >
                - 
             </span>
             <span
-              class="sc-jKvnYE egIrG"
+              class="c16"
             >
               Mis à jour le
                : 
@@ -164,7 +511,7 @@ exports[`<Article /> should render 1`] = `
         </div>
       </div>
       <div
-        class="sc-fxTzYC dznqBB"
+        class="c18"
       >
         this is an Article
       </div>

@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DocumentSuggester /> should render 1`] = `
+.c0 li[role="option"]:nth-child(2n + 1) {
+  background: #f2f5fa;
+}
+
 <div>
   <div
     aria-expanded="false"
@@ -20,7 +24,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
       value="foo"
     />
     <div
-      class="sc-jsTgWu dTyNRS"
+      class="c0"
       id="react-autowhatever-1"
       role="listbox"
     />
@@ -29,6 +33,14 @@ exports[`<DocumentSuggester /> should render 1`] = `
 `;
 
 exports[`<DocumentSuggester /> should render suggestions 1`] = `
+.c1 p {
+  margin: 0;
+}
+
+.c0 li[role="option"]:nth-child(2n + 1) {
+  background: #f2f5fa;
+}
+
 <div>
   <div
     aria-expanded="true"
@@ -48,7 +60,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
       value="foo"
     />
     <div
-      class="sc-jsTgWu dTyNRS"
+      class="c0"
       id="react-autowhatever-1"
       role="listbox"
     >
@@ -64,10 +76,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
         >
           <div
-            class="sc-dvEHMn dVSrXz"
+            class="c1"
           >
             <span
-              class="sc-kSGOQU"
+              class=""
             >
               <strong>
                 foo
@@ -83,10 +95,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
         >
           <div
-            class="sc-dvEHMn dVSrXz"
+            class="c1"
           >
             <span
-              class="sc-kSGOQU"
+              class=""
             >
               <strong>
                 foo
@@ -103,10 +115,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
         >
           <div
-            class="sc-dvEHMn dVSrXz"
+            class="c1"
           >
             <span
-              class="sc-kSGOQU"
+              class=""
             >
               <strong>
                 foo
@@ -123,10 +135,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
         >
           <div
-            class="sc-dvEHMn dVSrXz"
+            class="c1"
           >
             <span
-              class="sc-kSGOQU"
+              class=""
             >
               <strong>
                 foo

@@ -1,21 +1,140 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Share /> renders 1`] = `
+.c5 {
+  position: relative;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  color: #7994d4;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #f66663;
+}
+
+.c1.spacing-left {
+  margin-left: 1rem;
+}
+
+.c1.spacing-top {
+  margin-top: 1rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  color: #7994d4;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover,
+.c4:focus {
+  color: #f66663;
+}
+
+.c4.spacing-left {
+  margin-left: 1rem;
+}
+
+.c4.spacing-top {
+  margin-top: 1rem;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0.8rem;
+  background-color: transparent;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+}
+
+.c3 {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.4rem;
+  }
+}
+
 <div>
   <div
-    class="sc-kSGOQU fjTFqE"
+    class="c0"
   >
     <button
-      class="sc-dvEHMn dyLewL no-after spacing-left"
+      class="c1 no-after spacing-left"
       title="Partager sur Facebook"
       type="button"
     >
       <span
-        class="sc-elAWhN VzdIJ"
+        class="c2"
       >
         <svg
           aria-hidden="true"
-          class="sc-kiPvrU jIZWeG"
+          class="c3"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -28,16 +147,16 @@ exports[`<Share /> renders 1`] = `
       </span>
     </button>
     <a
-      class="sc-jsTgWu iidugI spacing-left"
+      class="c4 spacing-left"
       href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=undefined%0A%0Ahttp%3A%2F%2Flocalhost%2F"
       title="Envoyer par email"
     >
       <span
-        class="sc-elAWhN VzdIJ"
+        class="c2"
       >
         <svg
           aria-hidden="true"
-          class="sc-kiPvrU jIZWeG"
+          class="c3"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -54,15 +173,15 @@ exports[`<Share /> renders 1`] = `
       </span>
     </a>
     <button
-      class="sc-dvEHMn dyLewL spacing-left"
+      class="c1 spacing-left"
       title="Partager sur LinkedIn"
     >
       <span
-        class="sc-elAWhN VzdIJ"
+        class="c2"
       >
         <svg
           aria-hidden="true"
-          class="sc-kiPvrU jIZWeG"
+          class="c3"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -75,18 +194,18 @@ exports[`<Share /> renders 1`] = `
       </span>
     </button>
     <div
-      class="sc-jfTVlA aTmOx"
+      class="c5"
     >
       <button
-        class="sc-dvEHMn dyLewL spacing-left"
+        class="c1 spacing-left"
         title="Plus d’options"
       >
         <span
-          class="sc-elAWhN VzdIJ"
+          class="c2"
         >
           <svg
             aria-hidden="true"
-            class="sc-kiPvrU jIZWeG"
+            class="c3"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
