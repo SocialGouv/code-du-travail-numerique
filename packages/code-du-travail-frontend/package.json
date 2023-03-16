@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.91.1",
+  "version": "4.92.1",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -34,11 +34,11 @@
     "@sentry/nextjs": "^7.36.0",
     "@socialgouv/cdtn-elasticsearch": "^2.5.2",
     "@socialgouv/cdtn-logger": "^2.0.0",
-    "@socialgouv/cdtn-ui": "^4.91.1",
-    "@socialgouv/cdtn-utils": "*",
+    "@socialgouv/cdtn-ui": "^4.92.1",
+    "@socialgouv/cdtn-utils": "^4.92.1",
     "@socialgouv/fiches-travail-data": "^4.241.0",
     "@socialgouv/matomo-next": "^1.6.1",
-    "@socialgouv/modeles-social": "^4.91.1",
+    "@socialgouv/modeles-social": "^4.92.1",
     "@socialgouv/reference-article": "^1.0.1",
     "@ungap/url-search-params": "^0.2.2",
     "date-fns": "^2.22.1",
@@ -73,7 +73,7 @@
     "unified": "^9.2.2",
     "uuid": "^9.0.0",
     "xss": "^1.0.10",
-    "zustand": "^4.1.5"
+    "zustand": "^4.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
