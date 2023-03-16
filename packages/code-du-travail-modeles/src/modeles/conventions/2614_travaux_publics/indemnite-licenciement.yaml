@@ -1,0 +1,144 @@
+# Questions à poser
+contrat salarié . convention collective . travaux publics . age:
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?
+  cdtn:
+    type: entier
+
+# Formule de calculs
+contrat salarié . convention collective . travaux publics . ancienneté 10 ans ou moins:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 10 an
+
+contrat salarié . convention collective . travaux publics . ancienneté de plus de 10 ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . travaux publics . ancienneté 15 ans ou moins:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 15 an
+
+contrat salarié . convention collective . travaux publics . ancienneté de plus de 15 ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 15 an)
+  plancher: 0 an
+
+# Définition des variables
+contrat salarié . convention collective . travaux publics . vingt cinq pourcent de moins de quinze ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté 15 ans ou moins
+      facteur: 25 / 100
+  unité: €
+
+contrat salarié . convention collective . travaux publics . trente cinq pourcent de plus de quinze ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté de plus de 15 ans
+      facteur: 35 / 100
+  unité: €
+
+contrat salarié . convention collective . travaux publics . dix pourcent vingt cinq pourcent de moins de quinze ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté 15 ans ou moins
+      facteur: 25 / 100 * 10 / 100
+  unité: €
+
+contrat salarié . convention collective . travaux publics . dix pourcent trente cinq pourcent de plus de quinze ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté de plus de 15 ans
+      facteur: 35 / 100 * 10 / 100
+  unité: €
+
+contrat salarié . convention collective . travaux publics . vingt cinq pourcent de moins de dix ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté 10 ans ou moins
+      facteur: 15 / 100
+  unité: €
+
+contrat salarié . convention collective . travaux publics . trente cinq pourcent de plus de dix ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté de plus de 10 ans
+      facteur: 25 / 100
+  unité: €
+
+# Définitions des namespaces
+contrat salarié . convention collective . travaux publics . age . moins de  55 ans:
+  applicable si: age < 55
+  valeur: oui
+
+contrat salarié . convention collective . travaux publics . age . entre 55 ans et 65 ans:
+  applicable si:
+    toutes ces conditions:
+      - age > 55
+      - age <= 65
+  valeur: oui
+
+contrat salarié . convention collective . travaux publics . age . plus de 65 ans:
+  applicable si: age > 65
+  valeur: oui
+
+contrat salarié . convention collective . travaux publics . age . moins de  55 ans . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  somme:
+    - un dixième du salaire de reference
+    - un centième du salaire de reference
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 10.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778355?idConteneur=KALICONT000005635221#KALIARTI000005778355
+    Article 10.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778357?idConteneur=KALICONT000005635221#KALIARTI000005778357
+    Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778358?idConteneur=KALICONT000005635221#KALIARTI000005778358
+  cdtn:
+    formule:
+      explanations:
+        - "A : Années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (1/10 * Sref * A) + (1/100 * Sref * A)
+
+contrat salarié . convention collective . travaux publics . age . entre 55 ans et 65 ans . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  somme:
+    - un dixième du salaire de reference
+    - un centième du salaire de reference
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 10.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778355?idConteneur=KALICONT000005635221#KALIARTI000005778355
+    Article 10.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778357?idConteneur=KALICONT000005635221#KALIARTI000005778357
+    Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778358?idConteneur=KALICONT000005635221#KALIARTI000005778358
+  cdtn:
+    formule:
+      explanations:
+        - "A : Années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (1/10 * Sref * A) + (1/100 * Sref * A)
+
+contrat salarié . convention collective . travaux publics . age . plus de 65 ans. résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  somme:
+    - un dixième du salaire de reference
+    - un centième du salaire de reference
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 10.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778355?idConteneur=KALICONT000005635221#KALIARTI000005778355
+    Article 10.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778357?idConteneur=KALICONT000005635221#KALIARTI000005778357
+    Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778358?idConteneur=KALICONT000005635221#KALIARTI000005778358
+  cdtn:
+    formule:
+      explanations:
+        - "A : Années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (1/10 * Sref * A) + (1/100 * Sref * A)

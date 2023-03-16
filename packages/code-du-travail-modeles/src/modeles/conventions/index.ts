@@ -14,6 +14,7 @@ export * from "./2098_personnel_presta_service_tertiaire";
 export * from "./2216_commerces_detail_alimentation";
 export * from "./2511_sport";
 export * from "./2609_batiment_etam";
+export * from "./2614_travaux_publics";
 export * from "./2941_aide_accompagnement_soins_services_domicile";
 export * from "./3043_entreprises_proprete";
 export * from "./3239_particuliers_employeurs_domicile";
