@@ -165,15 +165,3 @@ contrat salarié . convention collective . batiment ouvriers employés . indemni
         - "A2 : Années d'ancienneté au-delà de 15 ans": contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . ancienneté supérieur à 15 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (3/20 * Sref * A1)[ + (1/20 * Sref * A2)]
-
-# Inférieur à 2 ans d'ancienneté
-contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 2
-  valeur: 0
-  unité: €
-  arrondi: 2 décimales
-  références:
-    Article 10.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778355?idConteneur=KALICONT000005635221#KALIARTI000005778355
-    Article 10.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778357?idConteneur=KALICONT000005635221#KALIARTI000005778357
-    Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778358?idConteneur=KALICONT000005635221#KALIARTI000005778358

@@ -62,9 +62,3 @@ contrat salarié . convention collective . hotels cafes restaurants . indemnité
         - "A1 : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
         - "A2 : Ancienneté au delà de 10 ans": contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . au dela de dix ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-
-contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . résultat conventionnel 3:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 2 ans
-  valeur: 0
-  unité: €

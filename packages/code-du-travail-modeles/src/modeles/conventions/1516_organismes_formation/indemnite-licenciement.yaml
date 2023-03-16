@@ -26,7 +26,7 @@ contrat salarié . convention collective . organismes de formation . indemnité 
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté conventionnelle requise en année > 24 mois
+      - indemnité de licenciement . ancienneté conventionnelle requise en année > 2 an
       - indemnité de licenciement . ancienneté conventionnelle en année <= 15 ans
   valeur: ancienneté totale
   unité: €
