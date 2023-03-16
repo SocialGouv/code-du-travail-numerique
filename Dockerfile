@@ -55,8 +55,13 @@ ENV NODE_ENV=production
 WORKDIR /app
 
 COPY --from=dist . /app/
+COPY --from=dist ./code-du-travail-frontend/.next /app/code-du-travail-frontend/.next
+COPY --from=dist ./code-du-travail-frontend/node_modules /app/code-du-travail-frontend/node_modules
+COPY --from=dist ./code-du-travail-frontend/package.json /app/code-du-travail-frontend/package.json
+COPY --from=dist ./package.json /app/package.json
+COPY --from=dist ./node_modules /app/node_modules
 
-RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R node:node /app/packages/code-du-travail-frontend/.next
+RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000 /app/packages/code-du-travail-frontend/.next
 
 USER 1000
 
