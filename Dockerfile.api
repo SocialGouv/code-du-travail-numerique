@@ -17,7 +17,9 @@ RUN yarn --frozen-lockfile --prefer-offline
 
 COPY . ./
 
-RUN yarn build:api && yarn --frozen-lockfile --prod --prefer-offline
+RUN yarn build:api
+
+RUN yarn --frozen-lockfile --prod --prefer-offline
 
 # app
 FROM node:$NODE_VERSION
