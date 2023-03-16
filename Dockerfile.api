@@ -13,11 +13,11 @@ COPY ./packages/code-du-travail-utils/package.json ./packages/code-du-travail-ut
 COPY ./yarn.lock ./yarn.lock
 
 # Install packages
-RUN yarn --frozen-lockfile && yarn cache clean
+RUN yarn --frozen-lockfile --prefer-offline
 
 COPY . ./
 
-RUN yarn build:api && yarn --frozen-lockfile --prod
+RUN yarn build:api && yarn --frozen-lockfile --prod --prefer-offline
 
 # app
 FROM node:$NODE_VERSION
@@ -26,7 +26,10 @@ ENV NODE_ENV=production
 
 WORKDIR /app
 
-COPY --from=dist . /app/
+COPY --from=dist ./code-du-travail-api/dist /app/code-du-travail-api/dist
+COPY --from=dist ./code-du-travail-api/node_modules /app/code-du-travail-api/node_modules
+COPY --from=dist ./code-du-travail-api/package.json /app/code-du-travail-api/package.json
+COPY --from=dist ./package.json /app/package.json
 
 USER 1000
 
