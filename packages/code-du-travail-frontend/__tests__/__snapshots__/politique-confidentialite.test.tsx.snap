@@ -3,38 +3,38 @@
 exports[`<CookiePolicy /> should render 1`] = `
 <div>
   <div
-    class="sc-kIRMQU RpamM"
+    class="sc-ciyUsT dTedbQ"
   >
     <div
-      class="sc-ciyUsT cvfdPh"
+      class="sc-kGFDUS dbExnU"
     />
     <header
-      class="sc-bTtZEv bVjGuE"
+      class="sc-hQIyOC cNYtWW"
     >
       <div
-        class="sc-hQIyOC hfuCSb"
+        class="sc-fSKiAx ldWxyQ"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-bcXHqe sc-bjCGfv evAMOC gzjPYO"
+        class="sc-bcXHqe sc-hgRfpC evAMOC iMuYpO"
       >
         <a
-          class="sc-hgRfpC ourBO"
+          class="sc-fiSPbx dfVAkI"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-fiSPbx igOVMb"
+            class="sc-lgholE kKlzYc"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-lgholE bXzStL"
+            class="sc-gXnjX cqJgOh"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<CookiePolicy /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-ckLdoV WYtUe"
+          class="sc-kIRMQU bCQbHO"
         >
           <form
             action="/recherche"
-            class="sc-dcntqk btnIxo"
+            class="sc-ehkVkK cGPvjj"
             role="search"
           >
             <div
@@ -86,7 +86,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 aria-controls="react-autowhatever-1"
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
-                class="sc-itMJkM GotnD"
+                class="sc-Dmqmp igzdkW"
                 id="floating-search"
                 name="q"
                 placeholder="Rechercher"
@@ -95,20 +95,20 @@ exports[`<CookiePolicy /> should render 1`] = `
                 value=""
               />
               <div
-                class="sc-iuuDEZ gvJbgA"
+                class="sc-dcntqk bdtakV"
                 id="react-autowhatever-1"
                 role="listbox"
               />
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt cizsts sc-dxtBLK ezyZLD"
+              class="sc-hhOBVt cizsts sc-gWoSmj fJungp"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-ehkVkK cSudHx"
+                class="sc-hGglLj gJhSPv"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,11 +122,11 @@ exports[`<CookiePolicy /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-fSKiAx fIdHLO"
+          class="sc-ACYlI kYoLwK"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-gelMue bqagxK"
+            class="sc-ckLdoV cCoRgY"
             href="/recherche"
             rel="nofollow"
           >
@@ -144,17 +144,17 @@ exports[`<CookiePolicy /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-gXnjX hoDJii"
+          class="sc-gelMue fynhAq"
         >
           <button
-            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-ACYlI bDyXUw bcphIn"
+            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-bjCGfv bDyXUw fbkRxl"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-gWoSmj clibjf"
+          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-hJVpLM eEkRFl"
         >
           <svg
             aria-hidden="true"
@@ -174,7 +174,7 @@ exports[`<CookiePolicy /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-kGFDUS kSlIEb"
+      class="sc-bATJPV eYizcY"
       id="content"
       tabindex="-1"
     >
@@ -239,7 +239,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               ou par voie postale :
             </p>
             <address
-              class="sc-bATJPV kCNODB"
+              class="sc-jZatrU bfJYjY"
             >
               Direction des systèmes d’information
               <br />
@@ -443,13 +443,13 @@ exports[`<CookiePolicy /> should render 1`] = `
       </div>
     </main>
     <div
-      class="sc-djTcra TXsQq"
+      class="sc-cVtpRj cbaSst"
     >
       <footer
-        class="sc-cVtpRj jtoSpQ"
+        class="sc-kIlzlo ijSKHu"
       >
         <div
-          class="sc-gswNZR uUAJC sc-kIlzlo kuTAIf"
+          class="sc-gswNZR uUAJC sc-ktLMLx cLzmua"
         >
           <div
             class="sc-bcXHqe evAMOC"
@@ -469,7 +469,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               </p>
             </div>
             <div
-              class="sc-bcXHqe sc-ktLMLx ljCEtE gofhzG"
+              class="sc-bcXHqe sc-gYpcnp ljCEtE kivNin"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
@@ -481,7 +481,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="sc-gYpcnp iabtQL"
+                class="sc-bGhRYA fXCkAb"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -495,27 +495,29 @@ exports[`<CookiePolicy /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-gswNZR uUAJC sc-bGhRYA krjyLC"
+          class="sc-gswNZR uUAJC sc-fyBusP haVrta"
         >
           <div
-            class="sc-bcXHqe sc-fyBusP evAMOC gFLZza"
+            class="sc-bcXHqe sc-gukea evAMOC fiQPGc"
           >
-            <div>
+            <div
+              class="sc-djTcra bHYlfB"
+            >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-ciEjBl gzDZuC sc-iBYQkv ETltB"
+                  class="sc-ifSILs jnbPbz sc-iBYQkv ETltB"
                   data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="sc-lbVpMG sc-gukea fqAvkB fgVgvL"
+                  class="sc-lbVpMG sc-ciEjBl fqAvkB eoqYxZ"
                 >
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
@@ -523,7 +525,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/glossaire"
                     >
                       Glossaire
@@ -531,7 +533,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/a-propos"
                     >
                       À propos
@@ -539,7 +541,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/stats"
                     >
                       Statistiques d’utilisation
@@ -547,7 +549,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/integration"
                     >
                       Intégrer les outils du Code du travail numérique
@@ -556,22 +558,24 @@ exports[`<CookiePolicy /> should render 1`] = `
                 </ul>
               </div>
             </div>
-            <div>
+            <div
+              class="sc-djTcra bHYlfB"
+            >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-ciEjBl gzDZuC sc-iBYQkv ETltB"
+                  class="sc-ifSILs jnbPbz sc-iBYQkv ETltB"
                   data-testid="heading"
                   role="heading"
                 >
                   Outils populaires
                 </strong>
                 <ul
-                  class="sc-lbVpMG sc-gukea fqAvkB fgVgvL"
+                  class="sc-lbVpMG sc-ciEjBl fqAvkB eoqYxZ"
                 >
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/outils/simulateur-embauche"
                     >
                       Calcul du salaire brut/net
@@ -579,15 +583,15 @@ exports[`<CookiePolicy /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/outils/indemnite-licenciement"
                     >
-                      Calcul de l'indemnité de licenciement de licenciement
+                      Calcul de l'indemnité de licenciement
                     </a>
                   </li>
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/outils/convention-collective"
                     >
                       Trouver sa convention collective
@@ -598,18 +602,18 @@ exports[`<CookiePolicy /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-ciEjBl gzDZuC sc-iBYQkv ETltB"
+                  class="sc-ifSILs jnbPbz sc-iBYQkv ETltB"
                   data-testid="heading"
                   role="heading"
                 >
                   Modèles populaires
                 </strong>
                 <ul
-                  class="sc-lbVpMG sc-gukea fqAvkB fgVgvL"
+                  class="sc-lbVpMG sc-ciEjBl fqAvkB eoqYxZ"
                 >
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/modeles-de-courriers/lettre-de-demission"
                     >
                       Lettre de démission
@@ -617,15 +621,15 @@ exports[`<CookiePolicy /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
                     >
-                      Rupture du contrat en période d'essai pour le salarié
+                      Rupture du contrat en période d'essai par le salarié
                     </a>
                   </li>
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel"
                     >
                       Convocation à un entretien préalable au licenciement pour motif personnel
@@ -634,22 +638,24 @@ exports[`<CookiePolicy /> should render 1`] = `
                 </ul>
               </div>
             </div>
-            <div>
+            <div
+              class="sc-djTcra bHYlfB"
+            >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-ciEjBl gzDZuC sc-iBYQkv ETltB"
+                  class="sc-ifSILs jnbPbz sc-iBYQkv ETltB"
                   data-testid="heading"
                   role="heading"
                 >
                   Fiches pratiques populaires
                 </strong>
                 <ul
-                  class="sc-lbVpMG sc-gukea fqAvkB fgVgvL"
+                  class="sc-lbVpMG sc-ciEjBl fqAvkB eoqYxZ"
                 >
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
                     >
                       Durée du préavis de démission
@@ -657,15 +663,15 @@ exports[`<CookiePolicy /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/contribution/les-conges-pour-evenements-familiaux"
                     >
-                      Congé pour évènements familiaux
+                      Congés pour événements familiaux
                     </a>
                   </li>
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                     >
                       Maintien du salaire en cas d'arrêt maladie
@@ -676,18 +682,18 @@ exports[`<CookiePolicy /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-ciEjBl gzDZuC sc-iBYQkv ETltB"
+                  class="sc-ifSILs jnbPbz sc-iBYQkv ETltB"
                   data-testid="heading"
                   role="heading"
                 >
                   Conventions collectives populaires
                 </strong>
                 <ul
-                  class="sc-lbVpMG sc-gukea fqAvkB fgVgvL"
+                  class="sc-lbVpMG sc-ciEjBl fqAvkB eoqYxZ"
                 >
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/convention-collective/1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
                     >
                       Services de l'automobile
@@ -695,7 +701,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/convention-collective/650-metallurgie-ingenieurs-et-cadres"
                     >
                       Métallurgie ingénieurs et cadres
@@ -703,7 +709,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-ifSILs lfkVvk"
+                      class="sc-IQBGL jEPKaL"
                       href="/convention-collective/573-commerces-de-gros"
                     >
                       Commerce de gros
@@ -771,13 +777,13 @@ exports[`<CookiePolicy /> should render 1`] = `
             </ul>
           </div>
           <div
-            class="sc-ewvfhA fAyMeH"
+            class="sc-ewvfhA hmdiSw"
           />
           <div
-            class="sc-hZDVde dGydWe"
+            class="sc-hZDVde cImvue"
           >
             <ul
-              class="sc-iXGltN sc-hLeiDn cyQLVB cslaL"
+              class="sc-iXGltN sc-hLeiDn cyQLVB jMzMOL"
             >
               <li>
                 <a
@@ -802,7 +808,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               </li>
               <li>
                 <a
-                  href="undefined/tree/vX.Y.Z"
+                  href="undefined/tree/vvX.Y.Z"
                   rel="noopener noreferrer"
                 >
                   Contribuer sur Github

@@ -3,38 +3,38 @@
 exports[`<ModelesDeCourrier /> should render 1`] = `
 <div>
   <div
-    class="sc-grBbyg bzHYGK"
+    class="sc-czurPZ bedOtF"
   >
     <div
-      class="sc-czurPZ hjfNGo"
+      class="sc-gpoSCe hmkcgV"
     />
     <header
-      class="sc-bugHcy iDVaPt"
+      class="sc-kNsGIp btuNBH"
     >
       <div
-        class="sc-kNsGIp kuGKda"
+        class="sc-hWdGLs czOZux"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-bcXHqe sc-hTRxPq evAMOC hfeBFp"
+        class="sc-bcXHqe sc-fJNrnh evAMOC jNDPeQ"
       >
         <a
-          class="sc-fJNrnh eTqoMs"
+          class="sc-cSyrqk hdxqBH"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-cSyrqk jdvOCU"
+            class="sc-lhlUkk lgeMmY"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-lhlUkk gzRPRT"
+            class="sc-hpfkCd lfRrnI"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-hmTbGb cWkqbV"
+          class="sc-grBbyg bSAFWo"
         >
           <form
             action="/recherche"
-            class="sc-cPIbRQ gTcdXc"
+            class="sc-kmXbIF koGHyE"
             role="search"
           >
             <div
@@ -86,7 +86,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 aria-controls="react-autowhatever-1"
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
-                class="sc-hbqYmb ehRmhu"
+                class="sc-cfQIsQ fHOeqY"
                 id="floating-search"
                 name="q"
                 placeholder="Rechercher"
@@ -95,20 +95,20 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 value=""
               />
               <div
-                class="sc-hLirLb juiGzn"
+                class="sc-cPIbRQ fWCfUJ"
                 id="react-autowhatever-1"
                 role="listbox"
               />
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt cizsts sc-jDfIjF gdLJLD"
+              class="sc-hhOBVt cizsts sc-bJYTlW cqjYoQ"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kmXbIF ifWApS"
+                class="sc-kTxHUi cZmmKi"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,11 +122,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-hWdGLs dNgZCr"
+          class="sc-kLgxMn gmMwWj"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-leZLoi kYoLDg"
+            class="sc-hmTbGb ewQklz"
             href="/recherche"
             rel="nofollow"
           >
@@ -144,17 +144,17 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-hpfkCd iMmhYX"
+          class="sc-leZLoi jQaszo"
         >
           <button
-            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-kLgxMn bDyXUw DUfVK"
+            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-hTRxPq bDyXUw ZXlSS"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-bJYTlW bwTpqm"
+          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-jhnTcL NHyzH"
         >
           <svg
             aria-hidden="true"
@@ -174,7 +174,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-gpoSCe eMpfzy"
+      class="sc-cxiiTX fMwhrI"
       id="content"
       tabindex="-1"
     >
@@ -444,10 +444,10 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   class="sc-gswNZR uUAJC"
                 >
                   <div
-                    class="sc-jSUZER sc-bnVMcY kEfUQE kCZnZN"
+                    class="sc-jSUZER sc-iLkLTN kEfUQE czdOEo"
                   >
                     <div
-                      class="sc-cxiiTX bYRGaL"
+                      class="sc-bnVMcY fLvfNd"
                     >
                       <a
                         class="sc-hhOBVt hPTCsq no-after"
@@ -455,7 +455,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-gMHJKX hdogcf"
+                          class="sc-hINMOq fjgKOk"
                           fill="none"
                           viewBox="0 0 32 32"
                           xmlns="http://www.w3.org/2000/svg"
@@ -494,7 +494,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </div>
                 </div>
                 <p
-                  class="sc-hINMOq fswEuQ"
+                  class="sc-jowtIB iRANFV"
                 >
                   Type: Modèle de document - Format: 
                   pdf
@@ -505,12 +505,12 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                    
                 </p>
                 <p
-                  class="sc-jSUZER sc-iLkLTN cbQucy boVXGh"
+                  class="sc-jSUZER sc-gMHJKX cbQucy fEklRO"
                 >
                   Attention, chaque modèle de document proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de règlementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
                 </p>
                 <p
-                  class="sc-jowtIB gUlxgR"
+                  class="sc-kkCwLU jDcBa-d"
                 >
                   <a
                     class="sc-hhOBVt fRaRnn no-after"
@@ -523,7 +523,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     Ko)  
                     <svg
                       aria-hidden="true"
-                      class="sc-gMHJKX hdogcf"
+                      class="sc-hINMOq fjgKOk"
                       fill="none"
                       viewBox="0 0 32 32"
                       xmlns="http://www.w3.org/2000/svg"
@@ -699,13 +699,13 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
       </div>
     </main>
     <div
-      class="sc-eJKXev jjvyCT"
+      class="sc-fFRahO jHphZA"
     >
       <footer
-        class="sc-fFRahO iemckd"
+        class="sc-hlzHbZ fVQEhf"
       >
         <div
-          class="sc-gswNZR uUAJC sc-hlzHbZ jGqKbG"
+          class="sc-gswNZR uUAJC sc-ihFKfs bjvFLV"
         >
           <div
             class="sc-bcXHqe evAMOC"
@@ -725,7 +725,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               </p>
             </div>
             <div
-              class="sc-bcXHqe sc-ihFKfs ljCEtE iCdueN"
+              class="sc-bcXHqe sc-dZTDFv ljCEtE gISzia"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
@@ -737,7 +737,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="sc-dZTDFv jmlJZK"
+                class="sc-eVZGIO fyfsew"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -751,27 +751,29 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-gswNZR uUAJC sc-eVZGIO iQJyyp"
+          class="sc-gswNZR uUAJC sc-gBInCZ egQCla"
         >
           <div
-            class="sc-bcXHqe sc-gBInCZ evAMOC dsCIxi"
+            class="sc-bcXHqe sc-hxOqGs evAMOC dtkDBj"
           >
-            <div>
+            <div
+              class="sc-eJKXev jizoQI"
+            >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-gfQywf duunEh sc-iBYQkv ETltB"
+                  class="sc-hbWBzy glPFqB sc-iBYQkv ETltB"
                   data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="sc-lbVpMG sc-hxOqGs fqAvkB htZTJc"
+                  class="sc-lbVpMG sc-gfQywf fqAvkB VANDy"
                 >
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
@@ -779,7 +781,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/glossaire"
                     >
                       Glossaire
@@ -787,7 +789,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/a-propos"
                     >
                       À propos
@@ -795,7 +797,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/stats"
                     >
                       Statistiques d’utilisation
@@ -803,7 +805,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/integration"
                     >
                       Intégrer les outils du Code du travail numérique
@@ -812,22 +814,24 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 </ul>
               </div>
             </div>
-            <div>
+            <div
+              class="sc-eJKXev jizoQI"
+            >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-gfQywf duunEh sc-iBYQkv ETltB"
+                  class="sc-hbWBzy glPFqB sc-iBYQkv ETltB"
                   data-testid="heading"
                   role="heading"
                 >
                   Outils populaires
                 </strong>
                 <ul
-                  class="sc-lbVpMG sc-hxOqGs fqAvkB htZTJc"
+                  class="sc-lbVpMG sc-gfQywf fqAvkB VANDy"
                 >
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/outils/simulateur-embauche"
                     >
                       Calcul du salaire brut/net
@@ -835,15 +839,15 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/outils/indemnite-licenciement"
                     >
-                      Calcul de l'indemnité de licenciement de licenciement
+                      Calcul de l'indemnité de licenciement
                     </a>
                   </li>
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/outils/convention-collective"
                     >
                       Trouver sa convention collective
@@ -854,18 +858,18 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-gfQywf duunEh sc-iBYQkv ETltB"
+                  class="sc-hbWBzy glPFqB sc-iBYQkv ETltB"
                   data-testid="heading"
                   role="heading"
                 >
                   Modèles populaires
                 </strong>
                 <ul
-                  class="sc-lbVpMG sc-hxOqGs fqAvkB htZTJc"
+                  class="sc-lbVpMG sc-gfQywf fqAvkB VANDy"
                 >
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/modeles-de-courriers/lettre-de-demission"
                     >
                       Lettre de démission
@@ -873,15 +877,15 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
                     >
-                      Rupture du contrat en période d'essai pour le salarié
+                      Rupture du contrat en période d'essai par le salarié
                     </a>
                   </li>
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel"
                     >
                       Convocation à un entretien préalable au licenciement pour motif personnel
@@ -890,22 +894,24 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 </ul>
               </div>
             </div>
-            <div>
+            <div
+              class="sc-eJKXev jizoQI"
+            >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-gfQywf duunEh sc-iBYQkv ETltB"
+                  class="sc-hbWBzy glPFqB sc-iBYQkv ETltB"
                   data-testid="heading"
                   role="heading"
                 >
                   Fiches pratiques populaires
                 </strong>
                 <ul
-                  class="sc-lbVpMG sc-hxOqGs fqAvkB htZTJc"
+                  class="sc-lbVpMG sc-gfQywf fqAvkB VANDy"
                 >
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
                     >
                       Durée du préavis de démission
@@ -913,15 +919,15 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/contribution/les-conges-pour-evenements-familiaux"
                     >
-                      Congé pour évènements familiaux
+                      Congés pour événements familiaux
                     </a>
                   </li>
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                     >
                       Maintien du salaire en cas d'arrêt maladie
@@ -932,18 +938,18 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-gfQywf duunEh sc-iBYQkv ETltB"
+                  class="sc-hbWBzy glPFqB sc-iBYQkv ETltB"
                   data-testid="heading"
                   role="heading"
                 >
                   Conventions collectives populaires
                 </strong>
                 <ul
-                  class="sc-lbVpMG sc-hxOqGs fqAvkB htZTJc"
+                  class="sc-lbVpMG sc-gfQywf fqAvkB VANDy"
                 >
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/convention-collective/1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
                     >
                       Services de l'automobile
@@ -951,7 +957,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/convention-collective/650-metallurgie-ingenieurs-et-cadres"
                     >
                       Métallurgie ingénieurs et cadres
@@ -959,7 +965,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-hbWBzy kpUkGi"
+                      class="sc-nTrUm ePSgli"
                       href="/convention-collective/573-commerces-de-gros"
                     >
                       Commerce de gros
@@ -1027,13 +1033,13 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </ul>
           </div>
           <div
-            class="sc-kAuIVs icbePv"
+            class="sc-kAuIVs brzseo"
           />
           <div
-            class="sc-islFiG kwgnUd"
+            class="sc-islFiG hQTxLh"
           >
             <ul
-              class="sc-eCrewB sc-eAeVAz bLcgDp cWjrlV"
+              class="sc-eCrewB sc-eAeVAz bLcgDp jmPiMt"
             >
               <li>
                 <a
@@ -1058,7 +1064,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               </li>
               <li>
                 <a
-                  href="undefined/tree/vX.Y.Z"
+                  href="undefined/tree/vvX.Y.Z"
                   rel="noopener noreferrer"
                 >
                   Contribuer sur Github

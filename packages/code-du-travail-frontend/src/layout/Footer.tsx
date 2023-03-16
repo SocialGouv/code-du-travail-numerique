@@ -51,7 +51,7 @@ const Footer = (): JSX.Element => {
 
         <NavSection>
           <Links>
-            <div>
+            <StyledLinksItem>
               <div>
                 <Heading as={StyledHeading} isFirst>
                   Code du travail numérique
@@ -86,8 +86,8 @@ const Footer = (): JSX.Element => {
                   </li>
                 </StyledList>
               </div>
-            </div>
-            <div>
+            </StyledLinksItem>
+            <StyledLinksItem>
               <div>
                 <Heading as={StyledHeading} isFirst>
                   Outils populaires
@@ -164,8 +164,8 @@ const Footer = (): JSX.Element => {
                   </li>
                 </StyledList>
               </div>
-            </div>
-            <div>
+            </StyledLinksItem>
+            <StyledLinksItem>
               <div>
                 <Heading as={StyledHeading} isFirst>
                   Fiches pratiques populaires
@@ -236,7 +236,7 @@ const Footer = (): JSX.Element => {
                   </li>
                 </StyledList>
               </div>
-            </div>
+            </StyledLinksItem>
           </Links>
         </NavSection>
         <GouvernementSection />
@@ -248,6 +248,13 @@ const Footer = (): JSX.Element => {
 export default Footer;
 
 const { breakpoints, fonts, spacings } = theme;
+
+const StyledLinksItem = styled.div`
+  padding: 0 ${spacings.small};
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: 0;
+  }
+`;
 
 const OverflowWrapper = styled.div`
   width: 100%;
