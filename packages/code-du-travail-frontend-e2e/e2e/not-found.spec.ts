@@ -16,7 +16,7 @@ describe("Not found", () => {
 
     cy.contains("Revenir à la page d’accueil")
       .should("have.prop", "href")
-      .and("equal", Cypress.config().baseUrl + "/");
+      .and("equal", `${Cypress.config().baseUrl}/`);
   });
 
   describe("page should return 404 if does not exists", () => {

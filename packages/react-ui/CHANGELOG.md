@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.92.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.92.0...v4.92.1) (2023-03-14)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+# [4.92.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.91.1...v4.92.0) (2023-03-14)
+
+### Bug Fixes
+
+- affichage radio outils & widgets ([#5000](https://github.com/SocialGouv/code-du-travail-numerique/issues/5000)) ([4a2ceef](https://github.com/SocialGouv/code-du-travail-numerique/commit/4a2ceef1e029618ecc4e8fa60efb71a24ca0a146))
+- **husky:** delete prepush hook ([#4971](https://github.com/SocialGouv/code-du-travail-numerique/issues/4971)) ([5843984](https://github.com/SocialGouv/code-du-travail-numerique/commit/584398418084e9cdcda59e4e60477436d0f19724))
+- **indemnite-licenciement:** retours de la CC 3239 ([#4984](https://github.com/SocialGouv/code-du-travail-numerique/issues/4984)) ([8b65895](https://github.com/SocialGouv/code-du-travail-numerique/commit/8b65895916df4733c179e009f8b3fb4e2bcbe73e))
+- **package:** move from `@maxgfr/react-accessible-accordion` to `@socialgouv/react-accessible-accordion` ([#4963](https://github.com/SocialGouv/code-du-travail-numerique/issues/4963)) ([c3d33d2](https://github.com/SocialGouv/code-du-travail-numerique/commit/c3d33d2a3208bd337c53c03b832d22112358a9dc))
+- **Tile:** make html valid by moving the anchor inside ([#4940](https://github.com/SocialGouv/code-du-travail-numerique/issues/4940)) ([b633454](https://github.com/SocialGouv/code-du-travail-numerique/commit/b63345447e24eaaa50f274988a732be18e1e321c))
+
+### Features
+
+- form accessibility ([#4951](https://github.com/SocialGouv/code-du-travail-numerique/issues/4951)) ([d8f5b90](https://github.com/SocialGouv/code-du-travail-numerique/commit/d8f5b907e364daeb858236e15e71b05a15b187c5))
+- **home:** ajout de nouvelles rebriques ([#4961](https://github.com/SocialGouv/code-du-travail-numerique/issues/4961) ([5ea49e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/5ea49e2f74f7752512ef6b4558f0e695e1b7b5ac))
+
 ## [4.91.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.91.0...v4.91.1) (2023-02-17)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui

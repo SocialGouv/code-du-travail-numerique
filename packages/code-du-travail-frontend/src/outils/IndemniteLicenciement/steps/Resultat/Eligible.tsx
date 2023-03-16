@@ -1,12 +1,15 @@
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
-import React from "react";
+import React, { useContext } from "react";
 import { IndemniteLicenciementStepName } from "../..";
 import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";
 import ShowDetails from "../../../common/ShowDetails";
 import { AgreementsInjector } from "../../agreements";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 import { getResultMessage } from "../../agreements/ui-customizations";
-import { useIndemniteLicenciementStore } from "../../store";
 import {
   DecryptResult,
   FilledElements,
@@ -17,6 +20,7 @@ import {
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 
 export default function Eligible() {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     publicodesLegalResult,
     publicodesAgreementResult,
@@ -49,7 +53,7 @@ export default function Eligible() {
     showHasTempsPartiel,
     informationData,
     isAgreementSupported,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
     getPublicodesResult: state.resultFunction.getPublicodesResult,

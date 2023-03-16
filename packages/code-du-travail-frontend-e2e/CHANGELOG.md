@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.92.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.92.0...v4.92.1) (2023-03-14)
+
+**Note:** Version bump only for package @cdt/e2e
+
+# [4.92.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.91.1...v4.92.0) (2023-03-14)
+
+### Bug Fixes
+
+- **cc search:** use the react-autosuggest component for cc search result to have full accessibility ([#4990](https://github.com/SocialGouv/code-du-travail-numerique/issues/4990)) ([d43a2ba](https://github.com/SocialGouv/code-du-travail-numerique/commit/d43a2baa698bff8a603efb1316edb6efd621ae6d))
+- cypress test e2e ([43179a5](https://github.com/SocialGouv/code-du-travail-numerique/commit/43179a5d074f3f45b81d1ed220304145260f362d))
+- **indemnité de licenciement:** retours à la ligne dans l'affichage du résultat ([#5015](https://github.com/SocialGouv/code-du-travail-numerique/issues/5015)) ([95a7947](https://github.com/SocialGouv/code-du-travail-numerique/commit/95a794792e00617f482e142adb331b64e8f97c52))
+- **indemnite-licenciement:** retours de la CC 3239 ([#4984](https://github.com/SocialGouv/code-du-travail-numerique/issues/4984)) ([8b65895](https://github.com/SocialGouv/code-du-travail-numerique/commit/8b65895916df4733c179e009f8b3fb4e2bcbe73e))
+- **Tile:** make html valid by moving the anchor inside ([#4940](https://github.com/SocialGouv/code-du-travail-numerique/issues/4940)) ([b633454](https://github.com/SocialGouv/code-du-travail-numerique/commit/b63345447e24eaaa50f274988a732be18e1e321c))
+
+### Features
+
+- form accessibility ([#4951](https://github.com/SocialGouv/code-du-travail-numerique/issues/4951)) ([d8f5b90](https://github.com/SocialGouv/code-du-travail-numerique/commit/d8f5b907e364daeb858236e15e71b05a15b187c5))
+- **home:** ajout de nouvelles rebriques ([#4961](https://github.com/SocialGouv/code-du-travail-numerique/issues/4961) ([5ea49e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/5ea49e2f74f7752512ef6b4558f0e695e1b7b5ac))
+- **security headers:** add missing security headers ([#4969](https://github.com/SocialGouv/code-du-travail-numerique/issues/4969)) ([a331615](https://github.com/SocialGouv/code-du-travail-numerique/commit/a33161579c102f7e6ca6dbdc6e274afe24a9d22c))
+
 ## [4.91.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.91.0...v4.91.1) (2023-02-17)
 
 **Note:** Version bump only for package @cdt/e2e

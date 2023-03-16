@@ -1,18 +1,20 @@
 import styled from "styled-components";
-import { useStore } from "../../store";
+import { DossierLicenciementContext, useStore } from "../../store";
 import { Response } from "./Response";
 import { ShowInfo } from "./ShowInfo";
 import { Fieldset, Legend } from "@socialgouv/cdtn-ui";
 import { InfoBulle } from "../../../outils/common/InfoBulle";
 import { trackClickHelp } from "../../tracking";
+import { useContext } from "react";
 
 type QuestionProps = {
   widgetMode: boolean;
 };
 
 export const Question = ({ widgetMode }: QuestionProps) => {
-  const currentQuestion = useStore((state) => state.currentQuestion);
-  const lastResponse = useStore((state) => state.lastResponse);
+  const store = useContext(DossierLicenciementContext);
+  const currentQuestion = useStore(store, (state) => state.currentQuestion);
+  const lastResponse = useStore(store, (state) => state.lastResponse);
   return lastResponse?.slug ? (
     <ShowInfo slug={lastResponse.slug} widgetMode={widgetMode}></ShowInfo>
   ) : (
