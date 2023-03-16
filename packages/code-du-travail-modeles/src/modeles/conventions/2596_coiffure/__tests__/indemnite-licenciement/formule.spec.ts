@@ -12,7 +12,7 @@ describe("Formule indemnité licenciement - 2596", () => {
     ${8 / 12} | ${"1/4 * Sref * A1"} | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
     ${2}      | ${"1/4 * Sref * A1"} | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${15}     | ${"1/4 * Sref * A1"} | ${["A : Ancienneté totale (15 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${30}     | ${"1/4 * Sref * A1"} | ${["A : Ancienneté totale (30 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${30}     | ${"6 * Sref"}        | ${["Sref : Salaire de référence (1000 €)"]}
   `(
     "Cadres : formule $expectedFormula avec $seniority ans",
     ({ seniority, expectedFormula, expectedExplanations }) => {

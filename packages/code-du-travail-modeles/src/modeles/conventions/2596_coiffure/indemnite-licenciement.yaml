@@ -59,6 +59,15 @@ contrat salarié . convention collective . coiffure . indemnité de licenciement
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 1/4 * Sref * A1
 
+contrat salarié . convention collective . coiffure . indemnité de licenciement . cadre . résultat conventionnel . formule plafond:
+  applicable si: résultat conventionnel = indemnité de licenciement . salaire de référence conventionnel * 6
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 6 * Sref
+
 contrat salarié . convention collective . coiffure . indemnité de licenciement . non cadre:
   applicable si: catégorie professionnelle = 'Emplois techniques et de coiffeurs, emplois de l'esthétique-cosmétique et emplois non techniques'
   valeur: oui
