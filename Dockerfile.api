@@ -28,9 +28,9 @@ ENV NODE_ENV=production
 
 WORKDIR /app
 
-COPY --from=dist ./code-du-travail-api/dist /app/code-du-travail-api/dist
-COPY --from=dist ./code-du-travail-api/node_modules /app/code-du-travail-api/node_modules
-COPY --from=dist ./code-du-travail-api/package.json /app/code-du-travail-api/package.json
+COPY --from=dist ./packages/code-du-travail-api/dist /app/packages/code-du-travail-api/dist
+COPY --from=dist ./packages/code-du-travail-api/node_modules /app/packages/code-du-travail-api/node_modules
+COPY --from=dist ./packages/code-du-travail-api/package.json /app/packages/code-du-travail-api/package.json
 COPY --from=dist ./package.json /app/package.json
 COPY --from=dist ./node_modules /app/node_modules
 
