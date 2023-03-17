@@ -8,10 +8,11 @@ import type {
   CC1516ReferenceSalaryProps,
   CC1527ReferenceSalaryProps,
   CC2098ReferenceSalaryProps,
+  CC2148ReferenceSalaryProps,
+  CC2596ReferenceSalaryProps,
   CC2609ReferenceSalaryProps,
   CC3239ReferenceSalaryProps,
 } from "../../conventions";
-import type { CC2596ReferenceSalaryProps } from "../../conventions/2596_coiffure/salary";
 import type { SupportedCcIndemniteLicenciement } from "..";
 
 export type SalaryPeriods = {
@@ -47,4 +48,6 @@ export type ReferenceSalaryProps<T> =
     ? CC2609ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC3239
     ? CC3239ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC2148
+    ? CC2148ReferenceSalaryProps
     : LegalReferenceSalaryProps;

@@ -1,16 +1,19 @@
 import { ReferenceSalaryLegal } from "../../base";
-import { ReferenceSalary2609 } from "../../conventions";
-import { ReferenceSalary16 } from "../../conventions/16_transports_routiers";
-import { ReferenceSalary0029 } from "../../conventions/29_hospitalisation_privee_but_non_lucratif";
-import { ReferenceSalary44 } from "../../conventions/44_industries_chimiques";
-import { ReferenceSalary413 } from "../../conventions/413_handicap";
-import { ReferenceSalary573 } from "../../conventions/573_commerces_de_gros";
-import { ReferenceSalary1486 } from "../../conventions/1486_bureaux_etudes_techniques";
-import { ReferenceSalary1516 } from "../../conventions/1516_organismes_formation";
-import { ReferenceSalary1527 } from "../../conventions/1527_immobilier";
-import { ReferenceSalary2098 } from "../../conventions/2098_personnel_presta_service_tertiaire";
-import { ReferenceSalary2596 } from "../../conventions/2596_coiffure/salary";
-import { ReferenceSalary3239 } from "../../conventions/3239_particuliers_employeurs_domicile";
+import {
+  ReferenceSalary16,
+  ReferenceSalary0029,
+  ReferenceSalary44,
+  ReferenceSalary413,
+  ReferenceSalary573,
+  ReferenceSalary1486,
+  ReferenceSalary1516,
+  ReferenceSalary1527,
+  ReferenceSalary2098,
+  ReferenceSalary2148,
+  ReferenceSalary2596,
+  ReferenceSalary2609,
+  ReferenceSalary3239,
+} from "../../conventions";
 import type { IReferenceSalary } from "..";
 import { SupportedCcIndemniteLicenciement } from "..";
 
@@ -43,6 +46,8 @@ export class ReferenceSalaryFactory {
         return new ReferenceSalary2098() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC2609:
         return new ReferenceSalary2609() as IReferenceSalary<T>;
+      case SupportedCcIndemniteLicenciement.IDCC2148:
+        return new ReferenceSalary2148() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new ReferenceSalaryLegal() as IReferenceSalary<T>;
