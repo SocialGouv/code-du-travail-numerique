@@ -66,4 +66,4 @@ RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown 
 
 USER 1000
 
-CMD [ "yarn", "start"]
+CMD [ "yarn", "workspace", "@cdt/frontend", "start"]
