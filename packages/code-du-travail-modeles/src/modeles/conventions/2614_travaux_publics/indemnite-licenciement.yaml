@@ -133,7 +133,7 @@ contrat salarié . convention collective . travaux publics . age . entre 55 ans 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 2.5 / 10 * Sref * A1[ + 3.5 / 10 * Sref * A2] + 10% * (2.5 / 10 * Sref * A1)[ + 10% * (3.5 / 10 * Sref * A2)]
 
-contrat salarié . convention collective . travaux publics . age . plus de 65 ans. résultat conventionnel:
+contrat salarié . convention collective . travaux publics . age . plus de 65 ans . résultat conventionnel:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:

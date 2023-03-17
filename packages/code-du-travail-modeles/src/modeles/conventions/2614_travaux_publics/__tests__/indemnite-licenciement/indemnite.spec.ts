@@ -8,14 +8,17 @@ const engine = new IndemniteLicenciementPublicodes(
 describe("CC 2614", () => {
   describe("Calcul de l'indemnité de licenciement", () => {
     test.each`
-      seniority | salaireRef | age      | expectedCompensation
-      ${0}      | ${3000}    | ${0}     | ${0}
-      ${7 / 12} | ${3000}    | ${0}     | ${0}
-      ${8 / 12} | ${3000}    | ${500}   | ${0}
-      ${2}      | ${3000}    | ${1500}  | ${0}
-      ${12}     | ${3000}    | ${9900}  | ${0}
-      ${15}     | ${1600}    | ${7200}  | ${0}
-      ${42}     | ${3000}    | ${45900} | ${0}
+      seniority | salaireRef | age   | expectedCompensation
+      ${0}      | ${2624}    | ${0}  | ${0}
+      ${1.5}    | ${2624}    | ${55} | ${0}
+      ${15}     | ${2624}    | ${55} | ${9840}
+      ${24}     | ${2624}    | ${55} | ${18105.6}
+      ${1.5}    | ${2624}    | ${59} | ${0}
+      ${15}     | ${2624}    | ${59} | ${10824}
+      ${24}     | ${2624}    | ${59} | ${19916.16}
+      ${1.5}    | ${2624}    | ${67} | ${0}
+      ${15}     | ${2624}    | ${67} | ${7216}
+      ${24}     | ${2624}    | ${67} | ${13120}
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef €, age $age => une compensation de base de $expectedCompensation €",
       ({ salaireRef, expectedCompensation, seniority, age }) => {

@@ -32,8 +32,8 @@ export class ReferenceSalary2614
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
     const salaireMoyen = sum(salaryValues) / 12;
-    const lastSalary = salaryValues[0];
-    if (hasVariablePay) return lastSalary + salaireMoyen;
+    const lastSalary = salaryValues[0] ?? 0;
+    if (hasVariablePay) return salaireMoyen;
     return lastSalary;
   }
 }
