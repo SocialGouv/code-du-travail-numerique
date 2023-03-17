@@ -88,6 +88,7 @@ const StyledInput = styled.input`
 
 const StyledRoot = styled.div`
   max-width: 500px;
+  min-height: 200px;
   line-height: 1.5;
   text-align: center;
   margin: auto;
