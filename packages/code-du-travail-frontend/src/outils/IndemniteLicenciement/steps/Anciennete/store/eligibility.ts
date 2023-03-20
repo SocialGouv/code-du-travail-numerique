@@ -64,8 +64,8 @@ export const getErrorEligibility = (
     case 2596:
       requiredSeniorityInYear = requiredSeniorityAgreement;
       if (
-        stateInfo.publicodesInformations[0].info ===
-        "'Cadres et agents de maitrise'"
+        stateInfo.publicodesInformations[0].info === "'Cadres'" ||
+        stateInfo.publicodesInformations[0].info === "'Agents de maîtrise'"
       ) {
         minimalSeniorityInMonth = 0;
       }

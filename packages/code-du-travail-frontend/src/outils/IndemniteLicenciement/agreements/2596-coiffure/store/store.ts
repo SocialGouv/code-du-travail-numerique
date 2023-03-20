@@ -17,7 +17,6 @@ import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informatio
 const initialState: Agreement2596StoreData = {
   input: {
     noticeSalaryPeriods: [],
-    hasReceivedSalaries: "non",
   },
   error: {},
   hasBeenSubmit: false,
@@ -37,8 +36,11 @@ export const createAgreement2596StoreSalaires: StoreSlice<
             item.question.name ===
             "contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle"
         )?.info;
-
-      if (categoryPro !== "'Cadres et agents de maitrise'") {
+      console.log("categoryPro", categoryPro);
+      if (
+        categoryPro !== "'Cadres'" &&
+        categoryPro !== "'Agents de maîtrise'"
+      ) {
         return set(
           produce((state: Agreement2596StoreSlice) => {
             state.agreement2596Data.input.noticeSalaryPeriods = [];

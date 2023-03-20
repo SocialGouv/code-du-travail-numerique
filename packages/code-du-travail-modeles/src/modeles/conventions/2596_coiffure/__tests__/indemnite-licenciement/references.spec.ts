@@ -19,7 +19,7 @@ describe("Vérification des références juridiques pour la CC 2511", () => {
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
         seniority,
       "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle":
-        "'Cadres et agents de maitrise'",
+        "'Cadres'",
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
         "1000",
     });
@@ -49,7 +49,7 @@ describe("Vérification des références juridiques pour la CC 2511", () => {
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           seniority,
         "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle":
-          "'Emplois techniques et de coiffeurs, emplois de l'esthétique-cosmétique et emplois non techniques'",
+          "'Emplois techniques et de coiffeurs'",
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
       });

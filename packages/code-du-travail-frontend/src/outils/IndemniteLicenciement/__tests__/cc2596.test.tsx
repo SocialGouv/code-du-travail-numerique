@@ -43,10 +43,7 @@ describe("Indemnité licenciement - CC 2596", () => {
   });
   test(`Cadres`, () => {
     userAction
-      .changeInputList(
-        ui.information.agreement2596.proCategory.get(),
-        "Cadres et agents de maitrise"
-      )
+      .changeInputList(ui.information.agreement2596.proCategory.get(), "Cadres")
       .click(ui.next.get());
 
     fireEvent.change(ui.seniority.startDate.get(), {
@@ -114,10 +111,7 @@ describe("Indemnité licenciement - CC 2596", () => {
   });
   test(`Cadres moins de 8 mois d'ancienneté`, () => {
     userAction
-      .changeInputList(
-        ui.information.agreement2596.proCategory.get(),
-        "Cadres et agents de maitrise"
-      )
+      .changeInputList(ui.information.agreement2596.proCategory.get(), "Cadres")
       .click(ui.next.get());
 
     fireEvent.change(ui.seniority.startDate.get(), {
@@ -150,7 +144,7 @@ describe("Indemnité licenciement - CC 2596", () => {
     userAction
       .changeInputList(
         ui.information.agreement2596.proCategory.get(),
-        "Emplois techniques et de coiffeurs, emplois de l'esthétique-cosmétique et emplois non techniques"
+        "Emplois techniques et de coiffeurs"
       )
       .click(ui.next.get());
 
