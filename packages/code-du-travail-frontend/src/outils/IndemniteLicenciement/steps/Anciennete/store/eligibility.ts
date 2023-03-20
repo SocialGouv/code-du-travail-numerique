@@ -61,6 +61,15 @@ export const getErrorEligibility = (
           "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois.";
       }
       break;
+    case 2596:
+      requiredSeniorityInYear = requiredSeniorityAgreement;
+      if (
+        stateInfo.publicodesInformations[0].info ===
+        "'Cadres et agents de maitrise'"
+      ) {
+        minimalSeniorityInMonth = 0;
+      }
+      break;
   }
   const isEligible = requiredSeniorityInYear >= minimalSeniorityInMonth / 12;
   return !isEligible ? minimalSeniorityError : undefined;

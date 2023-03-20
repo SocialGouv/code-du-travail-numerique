@@ -56,7 +56,7 @@ describe("Indemnité licenciement - CC 2596", () => {
       target: { value: "01/01/2022" },
     });
     fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "01/06/2022" },
+      target: { value: "01/02/2022" },
     });
     fireEvent.click(ui.seniority.hasAbsence.non.get());
     fireEvent.click(ui.next.get());
@@ -68,6 +68,16 @@ describe("Indemnité licenciement - CC 2596", () => {
       target: { value: "2500" },
     });
 
+    expect(
+      rendering.queryByText(
+        "Connaissez-vous le montant du salaire perçu pendant le préavis ?"
+      )
+    ).toBeInTheDocument();
+    userAction.click(ui.previous.get());
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "01/06/2022" },
+    });
+    fireEvent.click(ui.next.get());
     expect(
       rendering.queryByText(
         "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
