@@ -56,7 +56,7 @@ export const GouvernementSection = () => {
             <Link href="/politique-confidentialite">Politique de confidentialité</Link>
           </li>
           <li>
-            <Link rel="noopener noreferrer" href={`${GITHUB_REPO}/tree/v${PACKAGE_VERSION}`}>Contribuer sur Github</Link>
+            <Link rel="noopener noreferrer" href={`${GITHUB_REPO}/tree/v${PACKAGE_VERSION}`} target="_blank">Contribuer sur Github</Link>
           </li>
           <li>
             <ContactModal>
@@ -120,9 +120,6 @@ const StyledTopUl = styled.ul`
   }
   a {
     text-decoration: none;
-    &:after {
-      content: "" !important;
-    }
   }
   @media (max-width: ${breakpoints.mobile}) {
     flex-direction: column;
