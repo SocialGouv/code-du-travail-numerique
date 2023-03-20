@@ -12,6 +12,21 @@ concurrency:
   group: verification-production-${{ github.ref }}
 
 jobs:
+  live:
+    name: Check if the site is live
+    runs-on: ubuntu-18.04
+    steps:
+      - run: |
+          curl -sSfL https://code.travail.gouv.fr/ | grep -q "Code du travail numérique"
+      - name: Create the Mattermost Message
+        if: failure()
+        run: |
+          echo "{\"text\":\"Le site n'est pas accessible : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" > mattermost.json
+      - uses: mattermost/action-mattermost-notify@master
+        if: failure()
+        env:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+
   robots:
     name: Check robots.txt
     runs-on: ubuntu-18.04
