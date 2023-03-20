@@ -102,7 +102,7 @@ describe("Préavis de retraite de la CC 1672", () => {
         expect(result.value).toEqual(expectedResult);
         expect(result.unit).toEqual("mois");
         expect(missingArgs).toEqual([]);
-        expect(references).toHaveLength(expectedReferences.length);
+        expect(references).toEqual(expectedReferences);
         expect(references).toEqual(expect.arrayContaining(expectedReferences));
       }
     );

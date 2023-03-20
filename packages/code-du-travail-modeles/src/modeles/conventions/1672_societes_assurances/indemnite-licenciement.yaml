@@ -12,16 +12,6 @@ contrat salarié . convention collective . sociétés d'assurances . résultat c
   unité: €
   arrondi: 2 décimales
 
-contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle:
-  titre: Catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
-  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
-  cdtn:
-    type: liste
-    valeurs:
-      Non-cadres (Classes 1 à 4): "'Non-cadres (Classes 1 à 4)'"
-      Cadres (Classes 5 à 7): "'Cadres (Classes 5 à 7)'"
-
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . non cadres:
   applicable si:
     une de ces conditions:

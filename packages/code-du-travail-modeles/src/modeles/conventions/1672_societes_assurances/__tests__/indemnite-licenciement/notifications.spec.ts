@@ -6,7 +6,7 @@ const engine = new IndemniteLicenciementPublicodes(
 );
 
 const notification = `Si lors de l’absence pour maladie non professionnelle le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (en plus des indemnités journalières de la sécurité sociale), le montant de l’indemnité de licenciement pourrait être plus élevé. En effet, dans ce cas, la période d’absence (jusqu’à 1 an d’absence) est intégrée dans l’ancienneté du salarié.
-Par soucis de simplification, ce simulateur déduit toutes les absences pour maladie non professionnelle sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles aient été indemnisées ou pas.
+Par soucis de simplification, ce simulateur déduit toutes les absences pour maladie non professionnelle sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas.
 `;
 
 describe("Notification pour la CC 1672", () => {

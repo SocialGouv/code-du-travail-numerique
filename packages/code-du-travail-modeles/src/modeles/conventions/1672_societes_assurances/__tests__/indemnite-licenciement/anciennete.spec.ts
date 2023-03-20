@@ -34,8 +34,8 @@ describe("Calcul de l'ancienneté : CC 1672", () => {
   describe("Cadre", () => {
     test.each`
       absences                                                                                                   | entryDate       | exitDate        | becameExecutiveAt | expectedAnciennete | expectedExtras
-      ${[]}                                                                                                      | ${"20/02/2020"} | ${"20/02/2021"} | ${undefined}      | ${1}               | ${undefined}
-      ${[{ durationInMonth: "1", motif: { key: MotifKeys.congesSansSolde } }]}                                   | ${"20/02/2020"} | ${"20/02/2021"} | ${undefined}      | ${1 - 1 / 12}      | ${undefined}
+      ${[]}                                                                                                      | ${"20/02/2020"} | ${"20/02/2021"} | ${undefined}      | ${1}               | ${{}}
+      ${[{ durationInMonth: "1", motif: { key: MotifKeys.congesSansSolde } }]}                                   | ${"20/02/2020"} | ${"20/02/2021"} | ${undefined}      | ${1 - 1 / 12}      | ${{}}
       ${[]}                                                                                                      | ${"01/01/2020"} | ${"01/01/2022"} | ${"01/01/2021"}   | ${1}               | ${{ "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . ancienneté non cadre": 1 }}
       ${[{ durationInMonth: "1", motif: { key: MotifKeys.congesSansSolde }, startedAt: "01/05/2020" }]}          | ${"01/01/2020"} | ${"01/01/2022"} | ${"01/01/2021"}   | ${1}               | ${{ "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . ancienneté non cadre": 1 - 1 / 12 }}
       ${[{ durationInMonth: "12", motif: { key: MotifKeys.congesParentalEducation }, startedAt: "01/05/2020" }]} | ${"01/01/2020"} | ${"01/01/2022"} | ${"01/01/2021"}   | ${1}               | ${{ "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . ancienneté non cadre": 1 }}
