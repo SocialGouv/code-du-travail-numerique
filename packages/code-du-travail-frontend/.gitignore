@@ -1,7 +1,7 @@
 .next
 robots.txt
 widget.js
-output
 node_modules
-cypress
 .swc
+cypress/videos
+cypress/screenshots

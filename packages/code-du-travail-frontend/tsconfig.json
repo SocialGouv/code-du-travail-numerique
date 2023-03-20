@@ -15,9 +15,8 @@
     "jsx": "preserve",
     "strictNullChecks": true,
     "incremental": true,
-    "downlevelIteration": true,
-    "types": ["cypress"]
+    "downlevelIteration": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "e2e"]
+  "exclude": ["node_modules", "cypress"]
 }
