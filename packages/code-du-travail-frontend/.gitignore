@@ -1,6 +1,6 @@
-# Next.js      #
-################
 .next
-
 robots.txt
 widget.js
+output
+node_modules
+cypress
