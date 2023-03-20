@@ -9,7 +9,7 @@ export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
     "Disallow: /assets/",
     "Disallow: /images/",
     "",
-    `Sitemap: https://${host}/sitemap.xml`,
+    `Sitemap: ${host}/sitemap.xml`,
   ].join("\n");
 
   const robot = isOnProduction ? robotsProd : robotsDev;
