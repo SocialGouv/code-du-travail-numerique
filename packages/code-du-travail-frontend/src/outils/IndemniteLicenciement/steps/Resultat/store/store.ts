@@ -31,6 +31,13 @@ import {
 } from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
+import { IndemniteLicenciementStepName } from "../../..";
+import {
+  MatomoBaseEvent,
+  MatomoActionEvent,
+  MatomoSimulatorEvent,
+} from "../../../../../lib";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 const initialState: ResultStoreData = {
   input: {
@@ -91,12 +98,23 @@ const createResultStore: StoreSlice<
         isCdd,
         agreement,
       });
+      const isEligible =
+        contratTravailEligibility &&
+        ancienneteEligibility &&
+        informationEligibility;
+
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoBaseEvent.OUTIL,
+        MatomoActionEvent.INDEMNITE_LICENCIEMENT,
+        isEligible
+          ? IndemniteLicenciementStepName.Resultat
+          : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
+      ]);
+
       set(
         produce((state: ResultStoreSlice) => {
-          state.resultData.input.isEligible =
-            contratTravailEligibility &&
-            ancienneteEligibility &&
-            informationEligibility;
+          state.resultData.input.isEligible = isEligible;
           state.resultData.input.infoWarning = infoWarning;
         })
       );
