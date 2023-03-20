@@ -509,7 +509,7 @@ exports[`<Recherche /> should render 1`] = `
               width="170"
             />
             <ul
-              class="sc-gukea cfJwiQ"
+              class="sc-gukea dCJJRf"
             >
               <li>
                 <a
@@ -555,7 +555,7 @@ exports[`<Recherche /> should render 1`] = `
             class="sc-ciEjBl hBdWnQ"
           >
             <ul
-              class="sc-gukea sc-ifSILs cfJwiQ kkZHen"
+              class="sc-gukea sc-ifSILs dCJJRf kkZHen"
             >
               <li>
                 <a
@@ -582,6 +582,7 @@ exports[`<Recherche /> should render 1`] = `
                 <a
                   href="undefined/tree/vvX.Y.Z"
                   rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Contribuer sur Github
                 </a>

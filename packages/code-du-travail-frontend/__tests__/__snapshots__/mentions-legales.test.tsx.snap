@@ -638,7 +638,7 @@ exports[`<MentionLegales /> should render 1`] = `
               width="170"
             />
             <ul
-              class="sc-iXGltN cyQLVB"
+              class="sc-iXGltN bYGNcu"
             >
               <li>
                 <a
@@ -684,7 +684,7 @@ exports[`<MentionLegales /> should render 1`] = `
             class="sc-hZDVde cImvue"
           >
             <ul
-              class="sc-iXGltN sc-hLeiDn cyQLVB jMzMOL"
+              class="sc-iXGltN sc-hLeiDn bYGNcu jMzMOL"
             >
               <li>
                 <a
@@ -711,6 +711,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 <a
                   href="undefined/tree/vvX.Y.Z"
                   rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Contribuer sur Github
                 </a>

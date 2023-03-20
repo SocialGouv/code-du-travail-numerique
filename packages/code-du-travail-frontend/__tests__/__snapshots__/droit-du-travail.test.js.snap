@@ -2955,7 +2955,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               width="170"
             />
             <ul
-              class="sc-ktLMLx kyMIKT"
+              class="sc-ktLMLx gJKaOM"
             >
               <li>
                 <a
@@ -3001,7 +3001,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             class="sc-gYpcnp kOXXbs"
           >
             <ul
-              class="sc-ktLMLx sc-bGhRYA kyMIKT hNTTuG"
+              class="sc-ktLMLx sc-bGhRYA gJKaOM hNTTuG"
             >
               <li>
                 <a
@@ -3028,6 +3028,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <a
                   href="undefined/tree/vvX.Y.Z"
                   rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Contribuer sur Github
                 </a>

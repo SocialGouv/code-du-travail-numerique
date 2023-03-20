@@ -533,7 +533,7 @@ exports[`<Term /> should render 1`] = `
               width="170"
             />
             <ul
-              class="sc-hZDVde hRdeXc"
+              class="sc-hZDVde PAtoL"
             >
               <li>
                 <a
@@ -579,7 +579,7 @@ exports[`<Term /> should render 1`] = `
             class="sc-hLeiDn ffdyah"
           >
             <ul
-              class="sc-hZDVde sc-ewvfhA hRdeXc kmHuPy"
+              class="sc-hZDVde sc-ewvfhA PAtoL kmHuPy"
             >
               <li>
                 <a
@@ -606,6 +606,7 @@ exports[`<Term /> should render 1`] = `
                 <a
                   href="undefined/tree/vvX.Y.Z"
                   rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Contribuer sur Github
                 </a>

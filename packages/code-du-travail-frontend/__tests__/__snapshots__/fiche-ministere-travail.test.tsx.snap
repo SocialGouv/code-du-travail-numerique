@@ -1012,7 +1012,7 @@ exports[`<FicheMT /> should render 1`] = `
               width="170"
             />
             <ul
-              class="sc-eCrewB bLcgDp"
+              class="sc-eCrewB fGEWru"
             >
               <li>
                 <a
@@ -1058,7 +1058,7 @@ exports[`<FicheMT /> should render 1`] = `
             class="sc-islFiG hQTxLh"
           >
             <ul
-              class="sc-eCrewB sc-eAeVAz bLcgDp jmPiMt"
+              class="sc-eCrewB sc-eAeVAz fGEWru jmPiMt"
             >
               <li>
                 <a
@@ -1085,6 +1085,7 @@ exports[`<FicheMT /> should render 1`] = `
                 <a
                   href="undefined/tree/vvX.Y.Z"
                   rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Contribuer sur Github
                 </a>
