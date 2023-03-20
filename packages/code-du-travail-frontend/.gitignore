@@ -4,3 +4,4 @@ widget.js
 output
 node_modules
 cypress
+.swc
