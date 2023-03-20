@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.93.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.93.0...v4.93.1) (2023-03-20)
+
+### Bug Fixes
+
+- https in sitemap.xml ([ddd666f](https://github.com/SocialGouv/code-du-travail-numerique/commit/ddd666f798ce469c78293408cd05b24ab4de7b99))
+
 # [4.93.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.92.1...v4.93.0) (2023-03-20)
 
 ### Bug Fixes
