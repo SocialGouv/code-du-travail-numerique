@@ -1,0 +1,26 @@
+name: Vérification de la production
+
+on:
+  workflow_run:
+    workflows: ["Production"]
+    types:
+      - completed
+  workflow_dispatch:
+
+concurrency:
+  cancel-in-progress: true
+  group: verification-production-${{ github.ref }}
+
+jobs:
+  robots:
+    name: Check robots.txt
+    runs-on: ubuntu-18.04
+    steps:
+      - run: |
+          curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "User-agent: *"
+      - run: |
+          curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Disallow: /assets/"
+      - run: |
+          curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Disallow: /images/"
+      - run: |
+          curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Sitemap: https://code.travail.gouv.fr/sitemap.xml"
