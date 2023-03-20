@@ -202,11 +202,13 @@ export const ui = {
       salaries: byTestId("last-month-salary"),
       primes: byTestId("prime-last-month-salary"),
     },
-    agreement2596: {
+    agreementWithNoticeSalary: {
       knowingLastSalary: {
         oui: byTestId("hasReceivedSalaries - Oui"),
         non: byTestId("hasReceivedSalaries - Non"),
       },
+      salaries: byTestId("notice-salary"),
+      primes: byTestId("prime-notice-salary"),
     },
   },
   result: {

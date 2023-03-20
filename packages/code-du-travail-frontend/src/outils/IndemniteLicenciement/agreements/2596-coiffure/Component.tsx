@@ -76,6 +76,7 @@ export default function Agreement2596() {
               salaryPeriods={noticeSalaryPeriods}
               error={errorNoticeSalaryPeriods}
               noPrime
+              dataTestidSalaries="notice-salary"
             />
           )}
         </>

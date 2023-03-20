@@ -30,8 +30,11 @@ export const createAgreement1516StoreSalaires: StoreSlice<
   agreement1516Function: {
     onInit: () => {
       const ancienneteInput = get().ancienneteData.input;
+      const input = get().agreement1516Data.input;
       const agreementSalaryPeriod =
-        get().agreement1516Data.input.noticeSalaryPeriods ?? [];
+        input.hasReceivedSalaries !== "non" && input.noticeSalaryPeriods
+          ? input.noticeSalaryPeriods
+          : [];
       const periods = computeSalaryPeriods({
         dateEntree: ancienneteInput.dateNotification ?? "",
         dateNotification: ancienneteInput.dateSortie ?? "",
@@ -43,8 +46,7 @@ export const createAgreement1516StoreSalaires: StoreSlice<
       const noticeSalaryPeriods = deepMergeArray(
         period,
         agreementSalaryPeriod,
-        "month",
-        true
+        "month"
       );
 
       set(

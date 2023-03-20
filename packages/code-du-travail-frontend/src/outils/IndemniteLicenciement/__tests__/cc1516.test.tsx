@@ -66,14 +66,16 @@ describe("Indemnité licenciement - CC 1516", () => {
         "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
       )
     ).toBeInTheDocument();
-    fireEvent.click(ui.salary.agreement2596.knowingLastSalary.oui.get());
+    fireEvent.click(
+      ui.salary.agreementWithNoticeSalary.knowingLastSalary.oui.get()
+    );
     expect(
       rendering.queryByText("Salaires perçus pendant le préavis")
     ).toBeInTheDocument();
-    fireEvent.change(ui.salary.salaries.getAll()[0], {
+    fireEvent.change(ui.salary.agreementWithNoticeSalary.salaries.getAll()[0], {
       target: { value: "3000" },
     });
-    fireEvent.change(ui.salary.primes.getAll()[0], {
+    fireEvent.change(ui.salary.agreementWithNoticeSalary.primes.getAll()[0], {
       target: { value: "200" },
     });
 
@@ -85,9 +87,17 @@ describe("Indemnité licenciement - CC 1516", () => {
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
       "mai 20223000 €"
     );
+    userAction.click(ui.previous.get());
+
+    expect(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[0]
+    ).toHaveValue(3000);
+    expect(ui.salary.agreementWithNoticeSalary.primes.getAll()[0]).toHaveValue(
+      200
+    );
+
     userAction
-      .click(ui.previous.get())
-      .click(ui.salary.agreement2596.knowingLastSalary.non.get())
+      .click(ui.salary.agreementWithNoticeSalary.knowingLastSalary.non.get())
       .click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("2760,42 € brut");

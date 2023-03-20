@@ -33,7 +33,8 @@ export default function Agreement1516() {
   React.useEffect(() => {
     init();
   }, []);
-
+  const hasMoreThanOneNoticeSalary = noticeSalaryPeriods.length > 1;
+  const S = () => (noticeSalaryPeriods.length > 1 ? "s" : "");
   return (
     <>
       {noticeSalaryPeriods.length > 0 && (
@@ -52,7 +53,9 @@ export default function Agreement1516() {
               },
             ]}
             name="hasReceivedSalaries"
-            label="Connaissez-vous le montant des salaires perçus pendant le préavis ?"
+            label={`Connaissez-vous le montant ${
+              hasMoreThanOneNoticeSalary ? "des" : "du"
+            } salaire${S()} perçu${S()} pendant le préavis ?`}
             selectedOption={hasReceivedSalaries}
             onChangeSelectedOption={onChangeHasReceivedSalaries}
             error={errorHasReceivedSalaries}
@@ -65,10 +68,11 @@ export default function Agreement1516() {
           />
           {hasReceivedSalaries === "oui" && (
             <SalaireTempsPlein
-              title="Salaires perçus pendant le préavis"
+              title={`Salaire${S()} perçu${S()} pendant le préavis`}
               onSalariesChange={onSalariesChange}
               salaryPeriods={noticeSalaryPeriods}
               error={errorNoticeSalaryPeriods}
+              dataTestidSalaries="notice-salary"
             />
           )}
         </>
