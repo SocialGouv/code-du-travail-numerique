@@ -56,7 +56,7 @@ describe("Indemnité licenciement - CC 2596", () => {
       target: { value: "01/01/2022" },
     });
     fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "01/06/2022" },
+      target: { value: "01/02/2022" },
     });
     fireEvent.click(ui.seniority.hasAbsence.non.get());
     fireEvent.click(ui.next.get());
@@ -68,6 +68,16 @@ describe("Indemnité licenciement - CC 2596", () => {
       target: { value: "2500" },
     });
 
+    expect(
+      rendering.queryByText(
+        "Connaissez-vous le montant du salaire perçu pendant le préavis ?"
+      )
+    ).toBeInTheDocument();
+    userAction.click(ui.previous.get());
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "01/06/2022" },
+    });
+    fireEvent.click(ui.next.get());
     expect(
       rendering.queryByText(
         "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
@@ -89,13 +99,47 @@ describe("Indemnité licenciement - CC 2596", () => {
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
       "mai 20223000 €"
     );
+    userAction.click(ui.previous.get());
+    expect(ui.salary.salaries.getAll()[0]).toHaveValue(3000);
     userAction
-      .click(ui.previous.get())
       .click(ui.salary.agreement2596.knowingLastSalary.non.get())
       .click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("2760,42 € brut");
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
+  });
+  test(`Cadres moins de 8 mois d'ancienneté`, () => {
+    userAction
+      .changeInputList(
+        ui.information.agreement2596.proCategory.get(),
+        "Cadres et agents de maitrise"
+      )
+      .click(ui.next.get());
+
+    fireEvent.change(ui.seniority.startDate.get(), {
+      target: { value: "01/01/2022" },
+    });
+    fireEvent.change(ui.seniority.notificationDate.get(), {
+      target: { value: "01/03/2022" },
+    });
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "01/03/2022" },
+    });
+    fireEvent.click(ui.seniority.hasAbsence.non.get());
+    fireEvent.click(ui.next.get());
+    expect(ui.activeStep.query()).toHaveTextContent("Salaires");
+
+    fireEvent.click(ui.salary.hasPartialTime.non.get());
+    fireEvent.click(ui.salary.hasSameSalary.oui.get());
+    fireEvent.change(ui.salary.sameSalaryValue.get(), {
+      target: { value: "2500" },
+    });
+
+    fireEvent.click(ui.next.get());
+
+    expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    expect(ui.result.resultat.get()).toHaveTextContent("104,17 € brut");
+    expect(ui.result.resultatLegal.get()).toHaveTextContent("0 €");
   });
 
   test(`Non-cadres`, () => {

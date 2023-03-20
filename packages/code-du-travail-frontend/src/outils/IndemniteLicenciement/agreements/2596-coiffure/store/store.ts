@@ -17,6 +17,7 @@ import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informatio
 const initialState: Agreement2596StoreData = {
   input: {
     noticeSalaryPeriods: [],
+    hasReceivedSalaries: "non",
   },
   error: {},
   hasBeenSubmit: false,
@@ -37,11 +38,20 @@ export const createAgreement2596StoreSalaires: StoreSlice<
             "contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle"
         )?.info;
 
-      if (categoryPro !== "'Cadres et agents de maitrise'") return;
-
+      if (categoryPro !== "'Cadres et agents de maitrise'") {
+        return set(
+          produce((state: Agreement2596StoreSlice) => {
+            state.agreement2596Data.input.noticeSalaryPeriods = [];
+            state.agreement2596Data.input.hasReceivedSalaries = "non";
+          })
+        );
+      }
       const ancienneteInput = get().ancienneteData.input;
+      const input = get().agreement2596Data.input;
       const agreementSalaryPeriod =
-        get().agreement2596Data.input.noticeSalaryPeriods ?? [];
+        input.hasReceivedSalaries !== "non" && input.noticeSalaryPeriods
+          ? input.noticeSalaryPeriods
+          : [];
       const periods = computeSalaryPeriods({
         dateEntree: ancienneteInput.dateNotification ?? "",
         dateNotification: ancienneteInput.dateSortie ?? "",
@@ -52,8 +62,7 @@ export const createAgreement2596StoreSalaires: StoreSlice<
       const noticeSalaryPeriods = deepMergeArray(
         period,
         agreementSalaryPeriod,
-        "month",
-        true
+        "month"
       );
 
       set(
@@ -64,8 +73,8 @@ export const createAgreement2596StoreSalaires: StoreSlice<
       );
     },
     onChangeHasReceivedSalaries: (value) => {
-      get().agreement2596Function.onInit();
       applyGenericValidation(get, set, "hasReceivedSalaries", value);
+      get().agreement2596Function.onInit();
     },
     onSalariesChange: (value) => {
       applyGenericValidation(get, set, "noticeSalaryPeriods", value);
