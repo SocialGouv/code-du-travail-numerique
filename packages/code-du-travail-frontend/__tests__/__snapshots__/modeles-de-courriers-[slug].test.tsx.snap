@@ -1064,7 +1064,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               </li>
               <li>
                 <a
-                  href="undefined/tree/vvX.Y.Z"
+                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vvX.Y.Z"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
