@@ -72,8 +72,6 @@ docker-compose up elasticsearch
 
 To launch a local tf-serve instance, you can report to the README of our [serving-ml project](https://github.com/SocialGouv/serving-ml#using-a-tensorflow-model-with-tensorflowserving)
 
-You can also read the packages readme
-
 ## Contributions
 
 - See [code of conduct](./CODE_OF_CONDUCT.md)
