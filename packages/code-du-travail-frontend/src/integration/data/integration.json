@@ -6,7 +6,7 @@
         "description": "Vous pouvez intégrer le moteur de recherche du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de faire une recherche depuis votre site dans la barre de recherche du module. Une fois la recherche lancée, cela ouvrira la page de recherche sur le site du Code du travail numérique.",
         "shortTitle": "Moteur de recherche du Code du travail numérique",
         "shortDescription": "Effectuer une recherche depuis votre site sur le Code du travail numérique",
-        "url": "/widget.html",
+        "url": "/widgets/search",
         "id": "widget"
     },
     "preavis-licenciement": {
