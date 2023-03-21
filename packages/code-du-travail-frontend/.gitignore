@@ -5,3 +5,4 @@ node_modules
 .swc
 cypress/videos
 cypress/screenshots
+cypress/downloads
