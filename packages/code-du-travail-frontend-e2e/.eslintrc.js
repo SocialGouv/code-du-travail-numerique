@@ -1,14 +1,13 @@
-{
-  "plugins": [
-    "cypress"
-  ],
-  "extends": [
+module.exports = {
+  plugins: ["cypress"],
+  extends: [
     "@socialgouv/eslint-config-typescript",
-    "plugin:cypress/recommended"
+    "plugin:cypress/recommended",
   ],
-  "parserOptions": {
-    "project": "tsconfig.json",
-    "sourceType": "module"
+  parserOptions: {
+    project: "tsconfig.json",
+    sourceType: "module",
+    tsconfigRootDir: __dirname,
   },
   "rules": {
     "jest/valid-expect": "off",
@@ -18,5 +17,5 @@
   },
   "env": {
     "cypress/globals": true
-  }
-}
+  },
+};

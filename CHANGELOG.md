@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.93.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.93.0...v4.93.1) (2023-03-20)
+
+### Bug Fixes
+
+- https in sitemap.xml ([ddd666f](https://github.com/SocialGouv/code-du-travail-numerique/commit/ddd666f798ce469c78293408cd05b24ab4de7b99))
+
+# [4.93.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.92.1...v4.93.0) (2023-03-20)
+
+### Bug Fixes
+
+- **environment-variable:** production variable for `robots.txt` ([#5037](https://github.com/SocialGouv/code-du-travail-numerique/issues/5037)) ([7a5798c](https://github.com/SocialGouv/code-du-travail-numerique/commit/7a5798c204b3caa229b750e9ce4c8e846721bef2))
+- **indemnite-licencement:** event pour l'inégibilité ([#4992](https://github.com/SocialGouv/code-du-travail-numerique/issues/4992)) ([293907e](https://github.com/SocialGouv/code-du-travail-numerique/commit/293907ea87eac5afd20ea955775d14cdb3bbfca8))
+- **workflow:** action dev variable ([1e1aed1](https://github.com/SocialGouv/code-du-travail-numerique/commit/1e1aed1e1a5a2900cebb5996f0bb86e7336b2020))
+
+### Features
+
+- **e2e:** migrations des derniers tests codecepts vers cypress ([#5002](https://github.com/SocialGouv/code-du-travail-numerique/issues/5002)) ([8cec5cd](https://github.com/SocialGouv/code-du-travail-numerique/commit/8cec5cdb147cc5f042e022ce39aad201afeba47a))
+- **indemnite-licenciement:** ajout de la cc 1147 ([#5008](https://github.com/SocialGouv/code-du-travail-numerique/issues/5008)) ([b395c29](https://github.com/SocialGouv/code-du-travail-numerique/commit/b395c2927970b82b4dde942b42a2ddc6e21382a9))
+
 ## [4.92.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.92.0...v4.92.1) (2023-03-14)
 
 ### Bug Fixes

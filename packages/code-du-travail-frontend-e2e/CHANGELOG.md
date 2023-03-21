@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.93.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.93.0...v4.93.1) (2023-03-20)
+
+**Note:** Version bump only for package @cdt/e2e
+
+# [4.93.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.92.1...v4.93.0) (2023-03-20)
+
+### Bug Fixes
+
+- **indemnite-licencement:** event pour l'inégibilité ([#4992](https://github.com/SocialGouv/code-du-travail-numerique/issues/4992)) ([293907e](https://github.com/SocialGouv/code-du-travail-numerique/commit/293907ea87eac5afd20ea955775d14cdb3bbfca8))
+
+### Features
+
+- **e2e:** migrations des derniers tests codecepts vers cypress ([#5002](https://github.com/SocialGouv/code-du-travail-numerique/issues/5002)) ([8cec5cd](https://github.com/SocialGouv/code-du-travail-numerique/commit/8cec5cdb147cc5f042e022ce39aad201afeba47a))
+
 ## [4.92.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.92.0...v4.92.1) (2023-03-14)
 
 **Note:** Version bump only for package @cdt/e2e
