@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 import { theme, Container } from "@socialgouv/cdtn-ui";
-import { GITHUB_REPO, PACKAGE_VERSION } from "../../config";
+import { PACKAGE_VERSION } from "../../config";
 import { ContactModal } from "../../common/ContactModal";
 import { useRouter } from "next/router";
 import { push as matopush } from "@socialgouv/matomo-next";
@@ -56,7 +56,7 @@ export const GouvernementSection = () => {
             <Link href="/politique-confidentialite">Politique de confidentialité</Link>
           </li>
           <li>
-            <Link rel="noopener noreferrer" href={`${GITHUB_REPO}/tree/v${PACKAGE_VERSION}`} target="_blank">Contribuer sur Github</Link>
+            <Link rel="noopener noreferrer" href={`https://github.com/SocialGouv/code-du-travail-numerique/tree/v${PACKAGE_VERSION}`} target="_blank">Contribuer sur Github</Link>
           </li>
           <li>
             <ContactModal>

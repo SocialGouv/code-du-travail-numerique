@@ -11,8 +11,6 @@ export const COMMIT = process.env.NEXT_PUBLIC_COMMIT ?? "";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? `http://localhost:3000`;
 export const PACKAGE_VERSION = version;
-export const GITHUB_REPO =
-  "https://github.com/SocialGouv/code-du-travail-numerique";
 export const PIWIK_SITE_ID = process.env.NEXT_PUBLIC_PIWIK_SITE_ID ?? "";
 export const PIWIK_URL = process.env.NEXT_PUBLIC_PIWIK_URL ?? "";
 export const IS_PREPROD =
