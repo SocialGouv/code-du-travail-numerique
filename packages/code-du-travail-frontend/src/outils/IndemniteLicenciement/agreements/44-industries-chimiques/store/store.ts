@@ -68,10 +68,8 @@ export const createAgreement44StoreSalaires: StoreSlice<
       set(
         produce((state: Agreement44StoreSlice) => {
           state.agreement44Data.input.showVariablePay = showVariablePay;
-          state.agreement44Data.input.showKnowingLastSalary = !showVariablePay;
           if (sameDateNotificationDateSortie) {
             state.agreement44Data.input.showLastMonthSalary = false;
-            state.agreement44Data.input.showKnowingLastSalary = false;
             state.agreement44Data.input.lastMonthSalary =
               lastMonthSalaryProcess;
             state.agreement44Data.input.knowingLastSalary = undefined;
@@ -90,12 +88,16 @@ export const createAgreement44StoreSalaires: StoreSlice<
             state.agreement44Data.input = initialInputState;
           }
           if (
-            get().agreement44Data.input.hasVariablePay === "non" &&
-            !sameDateNotificationDateSortie
+            (get().agreement44Data.input.hasVariablePay === "non" &&
+              !sameDateNotificationDateSortie) ||
+            showVariablePay
           ) {
             state.agreement44Data.input.showKnowingLastSalary = true;
-          }
-          if (dateArretTravail) {
+          } else if (
+            dateArretTravail ||
+            sameDateNotificationDateSortie ||
+            !showVariablePay
+          ) {
             state.agreement44Data.input.showKnowingLastSalary = false;
           }
         })
