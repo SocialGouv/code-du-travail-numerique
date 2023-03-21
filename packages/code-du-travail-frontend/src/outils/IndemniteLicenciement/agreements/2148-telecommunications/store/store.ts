@@ -43,8 +43,7 @@ export const createAgreement2148StoreSalaires: StoreSlice<
       const noticeSalaryPeriods = deepMergeArray(
         period,
         agreementSalaryPeriod,
-        "month",
-        true
+        "month"
       );
 
       set(
@@ -55,8 +54,8 @@ export const createAgreement2148StoreSalaires: StoreSlice<
       );
     },
     onChangeHasReceivedSalaries: (value) => {
-      get().agreement2148Function.onInit();
       applyGenericValidation(get, set, "hasReceivedSalaries", value);
+      get().agreement2148Function.onInit();
     },
     onSalariesChange: (value) => {
       applyGenericValidation(get, set, "noticeSalaryPeriods", value);
