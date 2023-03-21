@@ -170,7 +170,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains("CARREFOUR HYPERMARCHES").click();
     cy.contains("Vous devez sélectionner une entreprise").should("not.exist");
     cy.contains(
-      "2 conventions collectives ont été trouvées pour cette entreprise"
+      "3 conventions collectives ont été trouvées pour cette entreprise"
     );
     cy.contains(
       "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
@@ -178,6 +178,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains(
       "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)"
     );
+    cy.contains("Commerce de détail alimentaire non spécialisé (IDCC 1505)");
     cy.get(
       'label:contains("Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)")'
     )
