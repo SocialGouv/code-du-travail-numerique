@@ -1,4 +1,4 @@
-import { ItemFilterType, ItemSortType } from "../../utils";
+import { ItemFilterType, ItemSortType } from "./types";
 
 export const getSearchBySourceSlugBody = ({
   source,

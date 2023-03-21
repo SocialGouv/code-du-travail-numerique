@@ -75,23 +75,11 @@ jobs:
               NEXT_PUBLIC_API_URL=${{ env.API_URL }}/api/v1
               NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
               NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
-  register-api:
-    name: Register api
-    runs-on: ubuntu-latest
-    steps:
-      - name: Register docker images
-        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
-        with:
-          project: "cdtn"
-          imageName: "cdtn/code-du-travail-api"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "./Dockerfile.api"
-          dockercontext: "."
 
   deploy:
     name: Deploy application
     runs-on: ubuntu-latest
-    needs: [ register-frontend, register-api ]
+    needs: [ register-frontend ]
     steps:
       - name: Use autodevops deployment
         uses: SocialGouv/actions/autodevops-deploy@v1

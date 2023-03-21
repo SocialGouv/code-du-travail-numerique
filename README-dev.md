@@ -29,7 +29,6 @@ yarn build
 
 | Package                                                         | description                     |
 | --------------------------------------------------------------- | ------------------------------- |
-| [code-du-travail-api](./packages/code-du-travail-api)           | NodeJS koa API                  |
 | [code-du-travail-frontend](./packages/code-du-travail-frontend) | Next.js frontend application    |
 | [react-ui](./packages/react-ui)                                 | React components and styleguide |
 
@@ -67,9 +66,6 @@ The provided [docker-compose.yml](./docker-compose.yml) provide all the environm
 ```sh
 # start elasticsearch
 docker-compose up elasticsearch
-
-# Start API in dev mode : runs on http://localhost:1337
-yarn workspace @cdt/api dev
 ```
 
 ## Howto
@@ -77,9 +73,6 @@ yarn workspace @cdt/api dev
 To launch a local tf-serve instance, you can report to the README of our [serving-ml project](https://github.com/SocialGouv/serving-ml#using-a-tensorflow-model-with-tensorflowserving)
 
 You can also read the packages readme
-
-- [API README](./packages/code-du-travail-api/README.md)
-- [e2e README](./packages/code-du-travail-frontend-e2e/README.md)
 
 ## Contributions
 
