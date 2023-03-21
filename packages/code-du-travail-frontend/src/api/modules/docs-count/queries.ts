@@ -1,6 +1,6 @@
-const { SOURCES } = require("@socialgouv/cdtn-utils");
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
-module.exports = {
+export const getDocsCountQuery = () => ({
   aggs: {
     sources: {
       terms: {
@@ -14,11 +14,9 @@ module.exports = {
         order: {
           _key: "asc",
         },
-        // to be changed if we ever have more than 100 different
-        // type of sources
         size: 100,
       },
     },
   },
   size: 0,
-};
+});

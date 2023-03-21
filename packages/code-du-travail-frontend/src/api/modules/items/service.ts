@@ -1,18 +1,8 @@
-import elasticsearchClient from "../../conf/elasticsearch";
-import { getRelatedItemsBody } from "./relatedItems.es";
-import { getSearchBySourceSlugBody } from "./searchBySourceSlug.es";
-
-const { SOURCES, getSourceByRoute } = require("@socialgouv/cdtn-utils");
-const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
-const getSemBody = require("../search/search.sem");
-const utils = require("../search/utils");
-const { logger } = require("@socialgouv/cdtn-logger");
-const { CDTN_ADMIN_VERSION } = require("../v1.prefix.js");
+import { getSourceByRoute, SOURCES } from "@socialgouv/cdtn-utils";
+import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
+import { getSearchBySourceSlugBody, getRelatedItemsBody } from "./queries";
 
 const MAX_RESULTS = 4;
-
-const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 // standard related items :
 const sources = [
@@ -46,10 +36,13 @@ export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {
     const [route, slug] = link.split("/");
     const source = getSourceByRoute(route);
     if (!(slug && source)) {
-      logger.error(`Unknown covisit : ${link}`);
+      console.error(`Unknown covisit : ${link}`);
       return [];
     } else {
-      return [{ index }, getSearchBySourceSlugBody({ slug, source })];
+      return [
+        { index: elasticDocumentsIndex },
+        getSearchBySourceSlugBody({ slug, source }),
+      ];
     }
   });
 
@@ -61,7 +54,7 @@ export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {
       resp.body.responses.map((r) => r.hits.hits[0]).filter((r) => r)
     )
     .catch((err) => {
-      logger.error(
+      console.error(
         "Error when querying covisits : " + JSON.stringify(err.meta.body)
       );
       return [];
@@ -84,11 +77,11 @@ export const getSearchBasedItems = async ({
   settings: any;
 }) => {
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
-  const requestBodies = [{ index }, relatedItemBody];
+  const requestBodies = [{ index: elasticDocumentsIndex }, relatedItemBody];
 
   const query_vector = await vectorizeQuery(title.toLowerCase()).catch(
     (error: any) => {
-      logger.error(error.message);
+      console.error(error.message);
     }
   );
 
@@ -102,7 +95,7 @@ export const getSearchBasedItems = async ({
     // we use relatedItem query _source to have the same prop returned
     // for both request
     // semBody._source = relatedItemBody._source;
-    requestBodies.push({ index }, semBody);
+    requestBodies.push({ index: elasticDocumentsIndex }, semBody);
   }
 
   const {

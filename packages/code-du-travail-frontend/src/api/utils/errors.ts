@@ -25,4 +25,5 @@ export class NotFoundError extends ErrorBase<
   | "HIGHLIGHT_NOT_FOUND"
   | "AGREEMENT_NOT_FOUND"
   | "CONTRIB_NOT_FOUND"
+  | "CONVENTIONS_NOT_FOUND"
 > {}
