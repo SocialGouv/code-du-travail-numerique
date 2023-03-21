@@ -1,9 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { AbsencePeriods } from "./components";
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 import Html from "../../../../common/Html";
@@ -11,6 +14,7 @@ import Html from "../../../../common/Html";
 import { getMessageMotifExample } from "../../agreements/ui-customizations";
 
 const StepAnciennete = () => {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     init,
     onChangeAbsencePeriods,
@@ -30,7 +34,7 @@ const StepAnciennete = () => {
     errorAbsencePeriods,
     agreement,
     informationData,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     init: state.ancienneteFunction.init,
     onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
     absencePeriods: state.ancienneteData.input.absencePeriods,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { createPreavisRetraiteStore, PreavisRetraiteProvider } from "./state";
 import { PreavisRetraiteSimulator } from "./Components";
 
@@ -14,16 +14,17 @@ const DureePreavisRetraite = ({
   title,
   displayTitle,
   slug,
-}: Props): JSX.Element => (
-  <PreavisRetraiteProvider
-    createStore={() => createPreavisRetraiteStore(title, slug)}
-  >
-    <PreavisRetraiteSimulator
-      icon={icon}
-      title={title}
-      displayTitle={displayTitle}
-    />
-  </PreavisRetraiteProvider>
-);
+}: Props): JSX.Element => {
+  const store = useRef(createPreavisRetraiteStore(title, slug)).current;
+  return (
+    <PreavisRetraiteProvider value={store}>
+      <PreavisRetraiteSimulator
+        icon={icon}
+        title={title}
+        displayTitle={displayTitle}
+      />
+    </PreavisRetraiteProvider>
+  );
+};
 
 export { DureePreavisRetraite };

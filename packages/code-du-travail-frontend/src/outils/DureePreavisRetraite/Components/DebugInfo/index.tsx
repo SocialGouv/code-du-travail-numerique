@@ -1,7 +1,9 @@
-import { usePreavisRetraiteStore } from "../../state";
+import { useContext } from "react";
+import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../../state";
 
 const DebugInfo = (): JSX.Element => {
-  const data = usePreavisRetraiteStore((state) => ({
+  const store = useContext(PreavisRetraiteContext);
+  const data = usePreavisRetraiteStore(store, (state) => ({
     formValues: state.formValues,
     steps: state.steps,
   }));

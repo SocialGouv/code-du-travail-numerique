@@ -1,6 +1,6 @@
 import { DebugInfo } from "../index";
-import React from "react";
-import { usePreavisRetraiteStore } from "../../state";
+import React, { useContext } from "react";
+import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../../state";
 import { Simulator } from "../../../Simulator";
 import { StepName } from "../../steps";
 import { PreavisRetraiteFormState } from "../../form";
@@ -16,10 +16,14 @@ const PreavisRetraiteSimulator = ({
   icon,
   displayTitle,
 }: Props): JSX.Element => {
-  const { onChange, onStepChange } = usePreavisRetraiteStore((state) => ({
-    onChange: state.onFormValuesChange,
-    onStepChange: state.onStepChange,
-  }));
+  const store = useContext(PreavisRetraiteContext);
+  const { onChange, onStepChange } = usePreavisRetraiteStore(
+    store,
+    (state) => ({
+      onChange: state.onFormValuesChange,
+      onStepChange: state.onStepChange,
+    })
+  );
 
   return (
     <Simulator<PreavisRetraiteFormState, StepName>

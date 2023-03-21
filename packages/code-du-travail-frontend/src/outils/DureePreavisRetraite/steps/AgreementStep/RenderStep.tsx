@@ -1,5 +1,5 @@
-import React from "react";
-import { usePreavisRetraiteStore } from "../../state";
+import React, { useContext } from "react";
+import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../../state";
 import { useForm } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 import { PreavisRetraiteFormState } from "../../form";
@@ -20,7 +20,8 @@ export const getSupportedCC = (): AgreementSupportInfo[] =>
   }));
 
 const RenderAgreementStep = (): JSX.Element => {
-  const { title, onChange } = usePreavisRetraiteStore((state) => ({
+  const store = useContext(PreavisRetraiteContext);
+  const { title, onChange } = usePreavisRetraiteStore(store, (state) => ({
     title: state.title,
     onChange: state.onAgreementChange,
   }));
