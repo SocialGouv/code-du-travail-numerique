@@ -50,7 +50,7 @@ describe("Footer", () => {
 
     cy.contains("Statistiques d’utilisation depuis le");
 
-    cy.contains(/^\s*Contact\s*$/).click();
+    cy.contains(/^\s*Nous contacter\s*$/).click();
 
     cy.contains("les services du ministère du Travail");
     cy.contains("vous pouvez nous contacter");
