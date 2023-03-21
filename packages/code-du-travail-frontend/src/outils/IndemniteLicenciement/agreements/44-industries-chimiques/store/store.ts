@@ -67,10 +67,12 @@ export const createAgreement44StoreSalaires: StoreSlice<
         isOuvrierOrAgent && get().salairesData.input.hasSameSalary === "non";
       set(
         produce((state: Agreement44StoreSlice) => {
+          let isShowingLastSalary = false;
           state.agreement44Data.input.showVariablePay = showVariablePay;
-          state.agreement44Data.input.showKnowingLastSalary = !showVariablePay;
+          isShowingLastSalary = !showVariablePay;
           if (sameDateNotificationDateSortie) {
             state.agreement44Data.input.showLastMonthSalary = false;
+            isShowingLastSalary = false;
             state.agreement44Data.input.lastMonthSalary =
               lastMonthSalaryProcess;
             state.agreement44Data.input.knowingLastSalary = undefined;
@@ -85,16 +87,19 @@ export const createAgreement44StoreSalaires: StoreSlice<
           if (state.agreement44Data.input.hasVariablePay === "non") {
             get().agreement44Function.onChangeHasVariablePay("non");
           }
-          if (!isOuvrierOrAgent) {
-            state.agreement44Data.input = initialInputState;
-          }
           if (
             get().agreement44Data.input.hasVariablePay === "non" &&
             !sameDateNotificationDateSortie
           ) {
-            state.agreement44Data.input.showKnowingLastSalary = true;
-          } else if (dateArretTravail || sameDateNotificationDateSortie) {
-            state.agreement44Data.input.showKnowingLastSalary = false;
+            isShowingLastSalary = true;
+          }
+          if (dateArretTravail) {
+            isShowingLastSalary = false;
+          }
+          state.agreement44Data.input.showKnowingLastSalary =
+            isShowingLastSalary;
+          if (!isOuvrierOrAgent) {
+            state.agreement44Data.input = initialInputState;
           }
         })
       );
