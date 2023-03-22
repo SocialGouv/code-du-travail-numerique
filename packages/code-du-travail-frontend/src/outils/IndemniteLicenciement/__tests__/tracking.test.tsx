@@ -283,4 +283,17 @@ describe("Indemnité licenciement - Tracking", () => {
       1261,
     ]);
   });
+
+
+  test("vérifier qu'on a un event ineligible sur la recherche entreprise", async () => {
+    fireEvent.click(ui.introduction.startButton.get());
+    fireEvent.click(ui.contract.type.cdd.get());
+    fireEvent.click(ui.next.get());
+    expect(push).toHaveBeenCalledWith([
+      "trackEvent",
+      "outil",
+      `view_step_Indemnité de licenciement`,
+      "results_ineligible",
+    ]);
+  });
 });

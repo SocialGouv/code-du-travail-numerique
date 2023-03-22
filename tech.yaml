@@ -47,6 +47,6 @@ stack:
   tests:
     - Jest unit tests
     - Jest integraton tests
-    - e2e Gherkin
+    - e2e
   ci:
     - Gitlab-ci

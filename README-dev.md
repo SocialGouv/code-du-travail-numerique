@@ -79,7 +79,6 @@ To launch a local tf-serve instance, you can report to the README of our [servin
 You can also read the packages readme
 
 - [API README](./packages/code-du-travail-api/README.md)
-- [e2e README](./packages/code-du-travail-frontend-e2e/README.md)
 
 ## Contributions
 

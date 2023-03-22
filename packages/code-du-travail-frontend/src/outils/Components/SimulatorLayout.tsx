@@ -12,6 +12,8 @@ import {
 import SimulatorNavigation from "./SimulatorNavigation";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoActionEvent, MatomoBaseEvent } from "../../lib";
+import { IndemniteLicenciementStepName } from "../IndemniteLicenciement";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export enum ValidationResponse {
   NotValid = "not_valid",
@@ -35,6 +37,7 @@ type Props<StepName extends string> = {
   steps: Step<StepName>[];
   onStepChange: StepChange<StepName>[];
   hiddenStep?: StepName[];
+  simulator: PublicodesSimulator;
 };
 
 const SimulatorContent = <StepName extends string>({
@@ -46,6 +49,7 @@ const SimulatorContent = <StepName extends string>({
   steps,
   onStepChange,
   hiddenStep,
+  simulator,
 }: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
   const [navigationAction, setNavigationAction] =
@@ -84,18 +88,22 @@ const SimulatorContent = <StepName extends string>({
   }, [currentStepIndex]);
 
   useEffect(() => {
-    if (navigationAction !== "none") {
-      const currentStepName = visibleSteps[currentStepIndex].name;
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoBaseEvent.OUTIL,
-        navigationAction === "prev"
-          ? MatomoActionEvent.CLICK_PREVIOUS + `_${title}`
-          : MatomoActionEvent.VIEW_STEP + `_${title}`,
-        currentStepName,
-      ]);
-    }
+    const currentStepName = visibleSteps[currentStepIndex].name;
+    if (doNotTriggerMatomo(currentStepName)) return;
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoBaseEvent.OUTIL,
+      navigationAction === "prev"
+        ? MatomoActionEvent.CLICK_PREVIOUS + `_${title}`
+        : MatomoActionEvent.VIEW_STEP + `_${title}`,
+      currentStepName,
+    ]);
   }, [currentStepIndex]);
+
+  const doNotTriggerMatomo = (stepName: string) =>
+    navigationAction === "none" ||
+    (stepName === IndemniteLicenciementStepName.Resultat &&
+      simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT);
 
   const onNextStep = () => {
     const nextStepIndex = currentStepIndex + 1;
