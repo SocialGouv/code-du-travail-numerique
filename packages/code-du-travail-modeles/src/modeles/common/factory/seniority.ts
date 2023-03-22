@@ -2,6 +2,7 @@ import { SeniorityLegal } from "../../base";
 import {
   Seniority16,
   Seniority44,
+  Seniority275,
   Seniority413,
   Seniority650,
   Seniority1090,
@@ -60,6 +61,8 @@ export class SeniorityFactory {
         return new Seniority413() as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.IDCC1517:
         return new Seniority1517();
+      case SupportedCcIndemniteLicenciement.IDCC275:
+        return new Seniority275();
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new SeniorityLegal();
