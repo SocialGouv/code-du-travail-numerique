@@ -10,6 +10,7 @@ import {
 type Props = {
   maxResult: string;
   notifications?: Notification[];
+  resultMessage: string;
 };
 
 export default function Result(props: Props) {
@@ -17,12 +18,10 @@ export default function Result(props: Props) {
     <>
       <SectionTitle hasSmallMarginTop>Indemnité</SectionTitle>
       <p>
-        À partir des éléments que vous avez saisis, l’indemnité de licenciement
-        est estimée à&nbsp;:{" "}
-        <HighlightResult>{`${props.maxResult.replace(
-          ".",
-          ","
-        )} € brut.`}</HighlightResult>
+        {props.resultMessage}{" "}
+        <HighlightResult>
+          {props.maxResult.replace(".", ",")}&nbsp;€&nbsp;brut.
+        </HighlightResult>
         {props.notifications && props.notifications.length > 0 && (
           <NoticeNote
             numberOfElements={props.notifications.length}

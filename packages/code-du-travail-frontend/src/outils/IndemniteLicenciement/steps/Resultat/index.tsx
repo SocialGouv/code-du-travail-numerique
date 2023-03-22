@@ -1,14 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
+import { IndemniteLicenciementStepName } from "../..";
+import {
+  MatomoBaseEvent,
+  MatomoActionEvent,
+  MatomoSimulatorEvent,
+} from "../../../../lib";
+import { push as matopush } from "@socialgouv/matomo-next";
 
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 import Eligible from "./Eligible";
 import Ineligible from "./Ineligible";
 
 const StepResult = () => {
-  const { isEligible, init } = useIndemniteLicenciementStore((state) => ({
-    isEligible: state.resultData.input.isEligible,
-    init: state.resultFunction.init,
-  }));
+  const store = useContext(IndemniteLicenciementContext);
+  const { isEligible, init } = useIndemniteLicenciementStore(
+    store,
+    (state) => ({
+      isEligible: state.resultData.input.isEligible,
+      init: state.resultFunction.init,
+    })
+  );
 
   useEffect(() => {
     init();

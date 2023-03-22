@@ -3,38 +3,38 @@
 exports[`<DroitDuTravail /> should render 1`] = `
 <div>
   <div
-    class="sc-jWOkvS dHXaNh"
+    class="sc-jephDI cPBZrr"
   >
     <div
-      class="sc-dGQEGF eGCfMu"
+      class="sc-fmixVB kSxRja"
     />
     <header
-      class="sc-fiSPbx dtRCVN"
+      class="sc-gelMue hUjBDc"
     >
       <div
-        class="sc-lgholE jbcpVv"
+        class="sc-ckLdoV htVsLj"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-bcXHqe sc-ckLdoV evAMOC cSSkgn"
+        class="sc-bcXHqe sc-kGFDUS evAMOC jfRCZy"
       >
         <a
-          class="sc-kIRMQU iObGpz"
+          class="sc-bATJPV kzZzFl"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-ciyUsT bTEAAw"
+            class="sc-jZatrU fZmsv"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-kGFDUS ifIJHi"
+            class="sc-byHATT dqKjBk"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-byHATT edXUgV"
+          class="sc-PBEJI bmRMCr"
         >
           <form
             action="/recherche"
-            class="sc-gWoSmj wxPdQ"
+            class="sc-cuOiQm efJUBv"
             role="search"
           >
             <div
@@ -86,7 +86,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 aria-controls="react-autowhatever-1"
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
-                class="sc-cuOiQm ijjPuH"
+                class="sc-hQIyOC dxkOZm"
                 id="floating-search"
                 name="q"
                 placeholder="Rechercher"
@@ -95,20 +95,20 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 value=""
               />
               <div
-                class="sc-dxtBLK chXzMj"
+                class="sc-liQGml JKpYk"
                 id="react-autowhatever-1"
                 role="listbox"
               />
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt cizsts sc-bTtZEv iDJNGh"
+              class="sc-hhOBVt cizsts sc-ACYlI chZA-dM"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-hJVpLM cIPNSo"
+                class="sc-fTJzqL flrTWK"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,11 +122,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-gXnjX bJgKzD"
+          class="sc-kIRMQU hwrtnx"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-jZatrU iATTNL"
+            class="sc-dGQEGF guPDXX"
             href="/recherche"
             rel="nofollow"
           >
@@ -144,17 +144,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-bATJPV gtRGBe"
+          class="sc-jWOkvS gTQorZ"
         >
           <button
-            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-gelMue bDyXUw kAeNRC"
+            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-ciyUsT bDyXUw bCvPdU"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-hQIyOC cdDZB"
+          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-bjCGfv bfHPvQ"
         >
           <svg
             aria-hidden="true"
@@ -174,7 +174,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-PBEJI bFDkBj"
+      class="sc-jccYHG doUbZH"
       id="content"
       tabindex="-1"
     >
@@ -200,7 +200,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             >
               Retrouvez la définition du droit du travail, les textes qui en sont à l’origine 
               <br
-                class="sc-jephDI lgIvbs"
+                class="sc-fjWoZz jXPoWy"
               />
               ainsi que leur articulation.
             </p>
@@ -2661,13 +2661,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </main>
     <div
-      class="sc-cVtpRj cbaSst"
+      class="sc-ifSILs fcUZdS"
     >
       <footer
-        class="sc-kIlzlo cCkfZL"
+        class="sc-IQBGL lnmtLA"
       >
         <div
-          class="sc-gswNZR uUAJC sc-ktLMLx cLzmua"
+          class="sc-gswNZR uUAJC sc-gGfaQS YvcBJ"
         >
           <div
             class="sc-bcXHqe evAMOC"
@@ -2687,7 +2687,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </p>
             </div>
             <div
-              class="sc-bcXHqe sc-gYpcnp ljCEtE kivNin"
+              class="sc-bcXHqe sc-iuuDEZ ljCEtE dQdlke"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
@@ -2699,7 +2699,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="sc-bGhRYA fXCkAb"
+                class="sc-dcntqk gImnuj"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2713,287 +2713,338 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-gswNZR uUAJC sc-fyBusP haVrta"
+          class="sc-gswNZR uUAJC sc-ehkVkK cZxVON"
         >
           <div
-            class="sc-bcXHqe sc-gukea evAMOC fiQPGc"
+            class="sc-bcXHqe sc-hGglLj evAMOC kAPsbz"
           >
             <div
-              class="sc-ciEjBl gawtPN"
+              class="sc-ciEjBl cSQMfQ"
             >
-              <strong
-                aria-level="2"
-                class="sc-IQBGL dYZrnM sc-iBYQkv ETltB"
-                data-testid="heading"
-                role="heading"
-              >
-                Code du travail numérique
-              </strong>
-              <ul
-                class="sc-lbVpMG sc-ifSILs fqAvkB fBVfBs"
-              >
-                <li>
-                  <a
-                    class="sc-gGfaQS fhJFtf"
-                    href="/droit-du-travail"
-                  >
-                    Le droit du travail
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-gGfaQS fhJFtf"
-                    href="/glossaire"
-                  >
-                    Glossaire
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-gGfaQS fhJFtf"
-                    href="/a-propos"
-                  >
-                    À propos
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-gGfaQS fhJFtf"
-                    href="/mentions-legales"
-                  >
-                    Mentions légales
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-gGfaQS fhJFtf"
-                    href="/accessibilite"
-                  >
-                    Accessibilité : partiellement conforme
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-gGfaQS fhJFtf"
-                    href="/politique-confidentialite"
-                  >
-                    Politique de confidentialité
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-gGfaQS fhJFtf"
-                    href="/stats"
-                  >
-                    Statistiques d’utilisation
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-gGfaQS fhJFtf"
-                    href="/integration"
-                  >
-                    Intégrer les outils du Code du travail numérique
-                  </a>
-                </li>
-              </ul>
+              <div>
+                <strong
+                  aria-level="2"
+                  class="sc-Dmqmp eaJnro sc-iBYQkv ETltB"
+                  data-testid="heading"
+                  role="heading"
+                >
+                  Code du travail numérique
+                </strong>
+                <ul
+                  class="sc-lbVpMG sc-itMJkM fqAvkB hkxdHe"
+                >
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/droit-du-travail"
+                    >
+                      Le droit du travail
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/glossaire"
+                    >
+                      Glossaire
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/a-propos"
+                    >
+                      À propos
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/stats"
+                    >
+                      Statistiques d’utilisation
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/integration"
+                    >
+                      Intégrer les outils du Code du travail numérique
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div
-              class="sc-ciEjBl gawtPN"
+              class="sc-ciEjBl cSQMfQ"
             >
-              <strong
-                aria-level="2"
-                class="sc-IQBGL dYZrnM sc-iBYQkv ETltB"
-                data-testid="heading"
-                role="heading"
-              >
-                Aidez-nous à améliorer cet outil
-              </strong>
-              <ul
-                class="sc-lbVpMG sc-ifSILs fqAvkB fBVfBs"
-              >
-                <li>
-                  <button
-                    class="sc-hhOBVt eyKsVw sc-iuuDEZ ldzOUb"
-                  >
-                    Contact
-                  </button>
-                </li>
-                <li>
-                  <a
-                    aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="sc-gGfaQS fhJFtf"
-                    href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Contribuer sur Github
-                  </a>
-                </li>
-                <li>
-                  <a
-                    aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="sc-gGfaQS fhJFtf"
-                    href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Journal des modifications
-                  </a>
-                </li>
-              </ul>
+              <div>
+                <strong
+                  aria-level="2"
+                  class="sc-Dmqmp eaJnro sc-iBYQkv ETltB"
+                  data-testid="heading"
+                  role="heading"
+                >
+                  Outils populaires
+                </strong>
+                <ul
+                  class="sc-lbVpMG sc-itMJkM fqAvkB hkxdHe"
+                >
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/outils/simulateur-embauche"
+                    >
+                      Calcul du salaire brut/net
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/outils/indemnite-licenciement"
+                    >
+                      Calcul de l'indemnité de licenciement
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/outils/convention-collective"
+                    >
+                      Trouver sa convention collective
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <strong
+                  aria-level="2"
+                  class="sc-Dmqmp eaJnro sc-iBYQkv ETltB"
+                  data-testid="heading"
+                  role="heading"
+                >
+                  Modèles populaires
+                </strong>
+                <ul
+                  class="sc-lbVpMG sc-itMJkM fqAvkB hkxdHe"
+                >
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/modeles-de-courriers/lettre-de-demission"
+                    >
+                      Lettre de démission
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
+                    >
+                      Rupture du contrat en période d'essai par le salarié
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel"
+                    >
+                      Convocation à un entretien préalable au licenciement pour motif personnel
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div
-              class="sc-ciEjBl gawtPN"
+              class="sc-ciEjBl cSQMfQ"
             >
-              <strong
-                aria-level="2"
-                class="sc-IQBGL dYZrnM sc-iBYQkv ETltB"
-                data-testid="heading"
-                role="heading"
-              >
-                En collaboration avec
-              </strong>
-              <ul
-                class="sc-lbVpMG sc-ifSILs fqAvkB fBVfBs"
-              >
-                <li>
-                  <a
-                    aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="sc-gGfaQS fhJFtf"
-                    href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    La Direction Générale du Travail
-                  </a>
-                </li>
-                <li>
-                  <a
-                    aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="sc-gGfaQS fhJFtf"
-                    href="https://fabrique.social.gouv.fr/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    La fabrique des Ministères sociaux
-                  </a>
-                </li>
-                <li>
-                  <a
-                    aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="sc-gGfaQS fhJFtf"
-                    href="https://beta.gouv.fr/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    beta.gouv.fr
-                  </a>
-                </li>
-              </ul>
+              <div>
+                <strong
+                  aria-level="2"
+                  class="sc-Dmqmp eaJnro sc-iBYQkv ETltB"
+                  data-testid="heading"
+                  role="heading"
+                >
+                  Fiches pratiques populaires
+                </strong>
+                <ul
+                  class="sc-lbVpMG sc-itMJkM fqAvkB hkxdHe"
+                >
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
+                    >
+                      Durée du préavis de démission
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/contribution/les-conges-pour-evenements-familiaux"
+                    >
+                      Congés pour événements familiaux
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
+                    >
+                      Maintien du salaire en cas d'arrêt maladie
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <strong
+                  aria-level="2"
+                  class="sc-Dmqmp eaJnro sc-iBYQkv ETltB"
+                  data-testid="heading"
+                  role="heading"
+                >
+                  Conventions collectives populaires
+                </strong>
+                <ul
+                  class="sc-lbVpMG sc-itMJkM fqAvkB hkxdHe"
+                >
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/convention-collective/1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
+                    >
+                      Services de l'automobile
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/convention-collective/650-metallurgie-ingenieurs-et-cadres"
+                    >
+                      Métallurgie ingénieurs et cadres
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-dxtBLK llfIXf"
+                      href="/convention-collective/573-commerces-de-gros"
+                    >
+                      Commerce de gros
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <ul
-          class="sc-dcntqk cinjxI"
+        <div
+          class="sc-bcXHqe sc-cVtpRj evAMOC dyoyJJ"
         >
-          <li>
-            <a
-              aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="sc-gGfaQS sc-ehkVkK fhJFtf bevpKR"
-              href="https://travail-emploi.gouv.fr"
-              rel="noopener noreferrer"
-              target="_blank"
+          <div
+            class="sc-kIlzlo iYYaeg"
+          >
+            <img
+              alt="le site du ministere du travail, de l'emploi et de l'insertion"
+              data-nimg="1"
+              decoding="async"
+              height="141"
+              loading="lazy"
+              src="/static/assets/img/ministere_logo.svg"
+              style="color: transparent;"
+              width="170"
+            />
+            <ul
+              class="sc-ktLMLx gJKaOM"
             >
-              travail-emploi.gouv.fr
-            </a>
-            <span
-              aria-hidden="true"
-              class="sc-hGglLj gjUmZD"
+              <li>
+                <a
+                  href="https://travail-emploi.gouv.fr"
+                >
+                  travail-emploi.gouv.fr
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.service-public.fr"
+                >
+                  service-public.fr
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.legifrance.gouv.fr"
+                >
+                  legifrance.gouv.fr
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.data.gouv.fr"
+                >
+                  data.gouv.fr
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.gouvernement.fr"
+                >
+                  gouvernement.fr
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="sc-fyBusP jXloiM"
+          />
+          <div
+            class="sc-gYpcnp kOXXbs"
+          >
+            <ul
+              class="sc-ktLMLx sc-bGhRYA gJKaOM hNTTuG"
             >
-              |
-            </span>
-          </li>
-          <li>
-            <a
-              aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="sc-gGfaQS sc-ehkVkK fhJFtf bevpKR"
-              href="https://www.service-public.fr"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              service-public.fr
-            </a>
-            <span
-              aria-hidden="true"
-              class="sc-hGglLj gjUmZD"
-            >
-              |
-            </span>
-          </li>
-          <li>
-            <a
-              aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="sc-gGfaQS sc-ehkVkK fhJFtf bevpKR"
-              href="https://www.legifrance.gouv.fr"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              legifrance.gouv.fr
-            </a>
-            <span
-              aria-hidden="true"
-              class="sc-hGglLj gjUmZD"
-            >
-              |
-            </span>
-          </li>
-          <li>
-            <a
-              aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="sc-gGfaQS sc-ehkVkK fhJFtf bevpKR"
-              href="https://www.data.gouv.fr"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              data.gouv.fr
-            </a>
-            <span
-              aria-hidden="true"
-              class="sc-hGglLj gjUmZD"
-            >
-              |
-            </span>
-          </li>
-          <li>
-            <a
-              aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="sc-gGfaQS sc-ehkVkK fhJFtf bevpKR"
-              href="https://www.gouvernement.fr"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              gouvernement.fr
-            </a>
-            <span
-              aria-hidden="true"
-              class="sc-hGglLj gjUmZD"
-            >
-              |
-            </span>
-          </li>
-          <li>
-            <a
-              aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="sc-gGfaQS sc-ehkVkK fhJFtf bevpKR"
-              href="https://www.cnil.fr"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              cnil.fr
-            </a>
-          </li>
-        </ul>
+              <li>
+                <a
+                  href="/mentions-legales"
+                >
+                  Mentions légales
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/accessibilite"
+                >
+                  Accessibilité : partiellement conforme
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/politique-confidentialite"
+                >
+                  Politique de confidentialité
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vvX.Y.Z"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Contribuer sur Github
+                </a>
+              </li>
+              <li>
+                <a
+                  aria-label="Nous contacter"
+                  class="sc-gukea dkYWtz"
+                  role="link"
+                >
+                  Nous contacter
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
   </div>

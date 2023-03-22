@@ -69,6 +69,7 @@ const StyledLink = styled(Button)`
   &[aria-expanded="true"] {
     color: ${({ theme }) => theme.paragraph};
   }
+  padding: 0;
 `;
 const StyledText = styled.span`
   margin-left: ${spacings.small};

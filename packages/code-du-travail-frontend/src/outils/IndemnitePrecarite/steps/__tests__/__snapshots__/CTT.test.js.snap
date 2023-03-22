@@ -4,7 +4,7 @@ exports[`<StepCTT /> should render 1`] = `
 <div>
   <form>
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
@@ -19,7 +19,7 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-kiPvrU gyqBYb"
+      class="sc-elAWhN UfAyd"
       data-testid="cttFormation"
     >
       <div
@@ -60,7 +60,7 @@ exports[`<StepCTT /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
@@ -75,7 +75,7 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-kiPvrU gyqBYb"
+      class="sc-elAWhN UfAyd"
       data-testid="ruptureContratFauteGrave"
     >
       <div
@@ -116,7 +116,7 @@ exports[`<StepCTT /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
@@ -131,7 +131,7 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-kiPvrU gyqBYb"
+      class="sc-elAWhN UfAyd"
       data-testid="propositionCDIFinContrat"
     >
       <div
@@ -172,7 +172,7 @@ exports[`<StepCTT /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-hsWlPz dQgJqc"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
@@ -187,7 +187,7 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-kiPvrU gyqBYb"
+      class="sc-elAWhN UfAyd"
       data-testid="refusSouplesse"
     >
       <div

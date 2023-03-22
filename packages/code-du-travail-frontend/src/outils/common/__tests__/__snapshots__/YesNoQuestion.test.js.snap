@@ -3,7 +3,7 @@
 exports[`<YesNoQuestion /> should render 1`] = `
 <div>
   <legend
-    class="sc-hsWlPz dQgJqc"
+    class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
     data-testid="question-label"
   >
     <span
@@ -18,7 +18,7 @@ exports[`<YesNoQuestion /> should render 1`] = `
     </span>
   </legend>
   <div
-    class="sc-kiPvrU gyqBYb"
+    class="sc-elAWhN UfAyd"
   >
     <div
       class="sc-hjjlnc goUtYR"

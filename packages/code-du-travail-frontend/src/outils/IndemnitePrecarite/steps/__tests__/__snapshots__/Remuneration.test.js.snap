@@ -3,7 +3,7 @@
 exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 <div>
   <legend
-    class="sc-hsWlPz dQgJqc"
+    class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
     data-testid="question-label"
   >
     <span
@@ -65,7 +65,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <legend
-    class="sc-hsWlPz dQgJqc"
+    class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
     data-testid="question-label"
   >
     <span
@@ -80,16 +80,16 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </span>
   </legend>
   <div
-    class="sc-jKvnYE ccQHbe"
+    class="sc-iWOQzb lmcSIn"
   >
     <label
-      class="sc-fxTzYC YReEU"
+      class="sc-gJFNMl kZDsq"
       for="2"
     >
       Montant :
     </label>
     <div
-      class="sc-elAWhN cFiJbq"
+      class="sc-jsTgWu dkEWbX"
     >
       <span
         class="sc-bQmOxr iqEHsz"
@@ -119,13 +119,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      class="sc-hhOBVt cizsts sc-iWOQzb hOmVGD"
+      class="sc-hhOBVt cizsts sc-fxTzYC bSIzNd"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-dkKxlM eSIfVb"
+        class="sc-cxdZMj bLMMYA"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -140,16 +140,16 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <div
-    class="sc-jKvnYE ccQHbe"
+    class="sc-iWOQzb lmcSIn"
   >
     <label
-      class="sc-fxTzYC YReEU"
+      class="sc-gJFNMl kZDsq"
       for="4"
     >
       Montant :
     </label>
     <div
-      class="sc-elAWhN cFiJbq"
+      class="sc-jsTgWu dkEWbX"
     >
       <span
         class="sc-bQmOxr iqEHsz"
@@ -179,13 +179,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      class="sc-hhOBVt cizsts sc-iWOQzb hOmVGD"
+      class="sc-hhOBVt cizsts sc-fxTzYC bSIzNd"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-dkKxlM eSIfVb"
+        class="sc-cxdZMj bLMMYA"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -200,12 +200,12 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <button
-    class="sc-hhOBVt cizsts sc-cxdZMj hyacni"
+    class="sc-hhOBVt cizsts sc-knEsKG jBERtL"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="sc-gJFNMl btgjl"
+      class="sc-dkKxlM bkWqkE"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +220,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     Ajouter un salaire
   </button>
   <p
-    class="sc-knEsKG cVPhka"
+    class="sc-ZqGJI nJtAW"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>
@@ -230,7 +230,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 exports[`<StepRemuneration /> should render one input 1`] = `
 <div>
   <legend
-    class="sc-hsWlPz dQgJqc"
+    class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
     data-testid="question-label"
   >
     <span
@@ -292,7 +292,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </label>
   </div>
   <legend
-    class="sc-hsWlPz dQgJqc"
+    class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
     data-testid="question-label"
     for="currency-1"
   >
@@ -308,7 +308,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </span>
   </legend>
   <div
-    class="sc-elAWhN cFiJbq"
+    class="sc-jsTgWu dkEWbX"
   >
     <span
       class="sc-bQmOxr iqEHsz"
@@ -338,7 +338,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </span>
   </div>
   <p
-    class="sc-knEsKG cVPhka"
+    class="sc-ZqGJI nJtAW"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>
