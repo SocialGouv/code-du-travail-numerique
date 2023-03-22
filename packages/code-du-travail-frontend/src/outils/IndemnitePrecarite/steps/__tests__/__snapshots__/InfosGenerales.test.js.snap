@@ -1,152 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepInfosGenerales /> should render 1`] = `
-.c2 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c0 {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c5 {
-  position: relative;
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  padding: 0;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-  box-shadow: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c5:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c5:checked {
-  background-color: #fff;
-  border-color: #f66663;
-}
-
-.c5:checked:before {
-  display: block;
-}
-
-.c1 {
-  font-weight: 600;
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c1 p,
-.c1 div {
-  font-weight: 100 !important;
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <form>
     <legend
-      class="c0 c1"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
-        class="c2"
+        class="sc-fcCDlF gZwBNq"
       >
         Quel est le type du contrat de travail ?
         <span
-          class="c3"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="c4"
+      class="sc-hjjlnc goUtYR"
     >
       <input
-        class="c5"
+        class="sc-gUJyNl cXHmkI"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="c6"
+        class="sc-caPbAK gsBMoC"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="c4"
+      class="sc-hjjlnc goUtYR"
     >
       <input
-        class="c5"
+        class="sc-gUJyNl cXHmkI"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="c6"
+        class="sc-caPbAK gsBMoC"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
@@ -162,271 +62,82 @@ exports[`<StepInfosGenerales /> should render 1`] = `
 `;
 
 exports[`<StepInfosGenerales /> should render with CDD 1`] = `
-.c2 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c0 {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c5 {
-  position: relative;
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  padding: 0;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-  box-shadow: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c5:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c5:checked {
-  background-color: #fff;
-  border-color: #f66663;
-}
-
-.c5:checked:before {
-  display: block;
-}
-
-.c8 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  text-align: center;
-}
-
-.c11 {
-  position: absolute;
-  top: 1.6rem;
-  right: 1.6rem;
-  width: 1.6rem;
-  height: 1.6rem;
-  color: #f66663;
-  pointer-events: none;
-}
-
-.c10 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem 0;
-  padding-right: 5rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  vertical-align: middle;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  cursor: pointer;
-  -webkit-transition: border-color 250ms ease;
-  transition: border-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c10::-ms-expand {
-  background-color: transparent;
-  border: 0 transparent;
-}
-
-.c10 *::-ms-backdrop,
-.c10 {
-  padding-right: 1.6rem;
-}
-
-.c10:invalid {
-  border-color: #eb5757;
-}
-
-.c10:disabled {
-  background-color: #e4e8ef;
-}
-
-.c1 {
-  font-weight: 600;
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c1 p,
-.c1 div {
-  font-weight: 100 !important;
-}
-
-.c9 {
-  width: 40rem;
-}
-
-.c7 {
-  margin-bottom: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c8 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    width: 100%;
-  }
-}
-
 <div>
   <form>
     <legend
-      class="c0 c1"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
-        class="c2"
+        class="sc-fcCDlF gZwBNq"
       >
         Quel est le type du contrat de travail ?
         <span
-          class="c3"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="c4"
+      class="sc-hjjlnc goUtYR"
     >
       <input
         checked=""
-        class="c5"
+        class="sc-gUJyNl cXHmkI"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="c6"
+        class="sc-caPbAK gsBMoC"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="c4"
+      class="sc-hjjlnc goUtYR"
     >
       <input
-        class="c5"
+        class="sc-gUJyNl cXHmkI"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="c6"
+        class="sc-caPbAK gsBMoC"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
     <div
-      class="c7"
+      class="sc-kiPvrU bNJyhQ"
     >
       <legend
-        class="c0 c1"
+        class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
         data-testid="question-label"
         for="input-criteria.cddType"
       >
         <span
-          class="c2"
+          class="sc-fcCDlF gZwBNq"
         >
           Quel est le type de CDD ?
           <span
-            class="c3"
+            class="sc-fcCDlF gePGde"
           >
              (obligatoire)
           </span>
         </span>
       </legend>
       <div
-        class="c8 c9"
+        class="sc-fWHiwC eYDYwl sc-elAWhN gnhaNU"
       >
         <select
-          class="c10"
+          class="sc-gzrROc iRaQTV"
           data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
@@ -488,7 +199,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         </select>
         <div
           aria-hidden="true"
-          class="c11"
+          class="sc-fIhvWL dDBodK"
         >
           <svg
             aria-hidden="true"
@@ -528,271 +239,82 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 `;
 
 exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] = `
-.c2 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c0 {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c5 {
-  position: relative;
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  padding: 0;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-  box-shadow: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c5:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c5:checked {
-  background-color: #fff;
-  border-color: #f66663;
-}
-
-.c5:checked:before {
-  display: block;
-}
-
-.c8 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  text-align: center;
-}
-
-.c11 {
-  position: absolute;
-  top: 1.6rem;
-  right: 1.6rem;
-  width: 1.6rem;
-  height: 1.6rem;
-  color: #f66663;
-  pointer-events: none;
-}
-
-.c10 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem 0;
-  padding-right: 5rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  vertical-align: middle;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  cursor: pointer;
-  -webkit-transition: border-color 250ms ease;
-  transition: border-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c10::-ms-expand {
-  background-color: transparent;
-  border: 0 transparent;
-}
-
-.c10 *::-ms-backdrop,
-.c10 {
-  padding-right: 1.6rem;
-}
-
-.c10:invalid {
-  border-color: #eb5757;
-}
-
-.c10:disabled {
-  background-color: #e4e8ef;
-}
-
-.c1 {
-  font-weight: 600;
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c1 p,
-.c1 div {
-  font-weight: 100 !important;
-}
-
-.c9 {
-  width: 40rem;
-}
-
-.c7 {
-  margin-bottom: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c8 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    width: 100%;
-  }
-}
-
 <div>
   <form>
     <legend
-      class="c0 c1"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
-        class="c2"
+        class="sc-fcCDlF gZwBNq"
       >
         Quel est le type du contrat de travail ?
         <span
-          class="c3"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="c4"
+      class="sc-hjjlnc goUtYR"
     >
       <input
         checked=""
-        class="c5"
+        class="sc-gUJyNl cXHmkI"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="c6"
+        class="sc-caPbAK gsBMoC"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="c4"
+      class="sc-hjjlnc goUtYR"
     >
       <input
-        class="c5"
+        class="sc-gUJyNl cXHmkI"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="c6"
+        class="sc-caPbAK gsBMoC"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
     <div
-      class="c7"
+      class="sc-kiPvrU bNJyhQ"
     >
       <legend
-        class="c0 c1"
+        class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
         data-testid="question-label"
         for="input-criteria.cddType"
       >
         <span
-          class="c2"
+          class="sc-fcCDlF gZwBNq"
         >
           Quel est le type de CDD ?
           <span
-            class="c3"
+            class="sc-fcCDlF gePGde"
           >
              (obligatoire)
           </span>
         </span>
       </legend>
       <div
-        class="c8 c9"
+        class="sc-fWHiwC eYDYwl sc-elAWhN gnhaNU"
       >
         <select
-          class="c10"
+          class="sc-gzrROc iRaQTV"
           data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
@@ -854,7 +376,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         </select>
         <div
           aria-hidden="true"
-          class="c11"
+          class="sc-fIhvWL dDBodK"
         >
           <svg
             aria-hidden="true"
@@ -894,201 +416,82 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 `;
 
 exports[`<StepInfosGenerales /> should render with CTT 1`] = `
-.c2 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c0 {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c5 {
-  position: relative;
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  padding: 0;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-  box-shadow: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c5:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c5:checked {
-  background-color: #fff;
-  border-color: #f66663;
-}
-
-.c5:checked:before {
-  display: block;
-}
-
-.c1 {
-  font-weight: 600;
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c1 p,
-.c1 div {
-  font-weight: 100 !important;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <form>
     <legend
-      class="c0 c1"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
-        class="c2"
+        class="sc-fcCDlF gZwBNq"
       >
         Quel est le type du contrat de travail ?
         <span
-          class="c3"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="c4"
+      class="sc-hjjlnc goUtYR"
     >
       <input
-        class="c5"
+        class="sc-gUJyNl cXHmkI"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="c6"
+        class="sc-caPbAK gsBMoC"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="c4"
+      class="sc-hjjlnc goUtYR"
     >
       <input
         checked=""
-        class="c5"
+        class="sc-gUJyNl cXHmkI"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="c6"
+        class="sc-caPbAK gsBMoC"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
     <legend
-      class="c0 c1"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
-        class="c2"
+        class="sc-fcCDlF gZwBNq"
       >
         S’agit-il d’un contrat de mission-formation ?
         <span
-          class="c3"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="c7"
+      class="sc-iJbNxu laMeKi"
       data-testid="cttFormation"
     >
       <div
-        class="c4"
+        class="sc-hjjlnc goUtYR"
       >
         <input
-          class="c5"
+          class="sc-gUJyNl cXHmkI"
           data-testid="cttFormation-oui"
           id="cttFormation-oui"
           name="cttFormation"
@@ -1096,17 +499,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="true"
         />
         <label
-          class="c6"
+          class="sc-caPbAK gsBMoC"
           for="cttFormation-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="sc-hjjlnc goUtYR"
       >
         <input
-          class="c5"
+          class="sc-gUJyNl cXHmkI"
           data-testid="cttFormation-non"
           id="cttFormation-non"
           name="cttFormation"
@@ -1114,7 +517,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="false"
         />
         <label
-          class="c6"
+          class="sc-caPbAK gsBMoC"
           for="cttFormation-non"
         >
           Non
@@ -1122,29 +525,29 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="c0 c1"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
-        class="c2"
+        class="sc-fcCDlF gZwBNq"
       >
         Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
         <span
-          class="c3"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="c7"
+      class="sc-iJbNxu laMeKi"
       data-testid="ruptureContratFauteGrave"
     >
       <div
-        class="c4"
+        class="sc-hjjlnc goUtYR"
       >
         <input
-          class="c5"
+          class="sc-gUJyNl cXHmkI"
           data-testid="ruptureContratFauteGrave-oui"
           id="ruptureContratFauteGrave-oui"
           name="ruptureContratFauteGrave"
@@ -1152,17 +555,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="true"
         />
         <label
-          class="c6"
+          class="sc-caPbAK gsBMoC"
           for="ruptureContratFauteGrave-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="sc-hjjlnc goUtYR"
       >
         <input
-          class="c5"
+          class="sc-gUJyNl cXHmkI"
           data-testid="ruptureContratFauteGrave-non"
           id="ruptureContratFauteGrave-non"
           name="ruptureContratFauteGrave"
@@ -1170,7 +573,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="false"
         />
         <label
-          class="c6"
+          class="sc-caPbAK gsBMoC"
           for="ruptureContratFauteGrave-non"
         >
           Non
@@ -1178,29 +581,29 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="c0 c1"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
-        class="c2"
+        class="sc-fcCDlF gZwBNq"
       >
         À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
         <span
-          class="c3"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="c7"
+      class="sc-iJbNxu laMeKi"
       data-testid="propositionCDIFinContrat"
     >
       <div
-        class="c4"
+        class="sc-hjjlnc goUtYR"
       >
         <input
-          class="c5"
+          class="sc-gUJyNl cXHmkI"
           data-testid="propositionCDIFinContrat-oui"
           id="propositionCDIFinContrat-oui"
           name="propositionCDIFinContrat"
@@ -1208,17 +611,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="true"
         />
         <label
-          class="c6"
+          class="sc-caPbAK gsBMoC"
           for="propositionCDIFinContrat-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="sc-hjjlnc goUtYR"
       >
         <input
-          class="c5"
+          class="sc-gUJyNl cXHmkI"
           data-testid="propositionCDIFinContrat-non"
           id="propositionCDIFinContrat-non"
           name="propositionCDIFinContrat"
@@ -1226,7 +629,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="false"
         />
         <label
-          class="c6"
+          class="sc-caPbAK gsBMoC"
           for="propositionCDIFinContrat-non"
         >
           Non
@@ -1234,29 +637,29 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="c0 c1"
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
     >
       <span
-        class="c2"
+        class="sc-fcCDlF gZwBNq"
       >
         Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
         <span
-          class="c3"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="c7"
+      class="sc-iJbNxu laMeKi"
       data-testid="refusSouplesse"
     >
       <div
-        class="c4"
+        class="sc-hjjlnc goUtYR"
       >
         <input
-          class="c5"
+          class="sc-gUJyNl cXHmkI"
           data-testid="refusSouplesse-oui"
           id="refusSouplesse-oui"
           name="refusSouplesse"
@@ -1264,17 +667,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="true"
         />
         <label
-          class="c6"
+          class="sc-caPbAK gsBMoC"
           for="refusSouplesse-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="sc-hjjlnc goUtYR"
       >
         <input
-          class="c5"
+          class="sc-gUJyNl cXHmkI"
           data-testid="refusSouplesse-non"
           id="refusSouplesse-non"
           name="refusSouplesse"
@@ -1282,7 +685,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="false"
         />
         <label
-          class="c6"
+          class="sc-caPbAK gsBMoC"
           for="refusSouplesse-non"
         >
           Non

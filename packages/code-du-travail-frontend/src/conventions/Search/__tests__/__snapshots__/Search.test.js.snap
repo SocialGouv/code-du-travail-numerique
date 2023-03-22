@@ -1,202 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Search /> should render 1`] = `
-.c6 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c6:focus {
-  color: #f66663;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c4 {
-  margin-top: 2.4rem;
-}
-
-.c5 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c7 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c6 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-dUipGc hgoSmo"
     for="convention-search"
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
-    class="c1 c2"
+    class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
   >
     <input
-      class="c3"
+      class="sc-fWQKxP iaRXHc"
       id="convention-search"
       name="q"
       placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -205,16 +21,16 @@ exports[`<Search /> should render 1`] = `
     />
   </span>
   <p
-    class="c4"
+    class="sc-bTUVah hXbUfO"
   >
     Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
     <span
-      class="c5"
+      class="sc-uokDu isqtOz"
     >
       Consultez
        
       <button
-        class="c6 c7"
+        class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
         type="button"
       >
         notre aide
@@ -226,213 +42,18 @@ exports[`<Search /> should render 1`] = `
 `;
 
 exports[`<Search /> should show no results when no result 1`] = `
-.c8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c8:focus {
-  color: #f66663;
-}
-
-.c5 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c6 {
-  margin-top: 2.4rem;
-}
-
-.c7 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c9 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c8 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c8 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-dUipGc hgoSmo"
     for="convention-search"
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
-    class="c1 c2"
+    class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
   >
     <input
-      class="c3"
+      class="sc-fWQKxP iaRXHc"
       id="convention-search"
       name="q"
       placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -441,25 +62,25 @@ exports[`<Search /> should show no results when no result 1`] = `
     />
   </span>
   <div
-    class="c4"
+    class="sc-hZNxer kWwXln"
   >
     <p
-      class="c5"
+      class="sc-GKYbw gcbROE"
     >
       Aucun résultat n’a été trouvé.
     </p>
   </div>
   <p
-    class="c6"
+    class="sc-bTUVah hXbUfO"
   >
     Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
     <span
-      class="c7"
+      class="sc-uokDu isqtOz"
     >
       Consultez
        
       <button
-        class="c8 c9"
+        class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
         type="button"
       >
         notre aide
@@ -471,213 +92,18 @@ exports[`<Search /> should show no results when no result 1`] = `
 `;
 
 exports[`<Search /> should show spinner when loading 1`] = `
-.c8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c8:focus {
-  color: #f66663;
-}
-
-.c5 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c6 {
-  margin-top: 2.4rem;
-}
-
-.c7 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c9 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c8 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c8 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-dUipGc hgoSmo"
     for="convention-search"
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
-    class="c1 c2"
+    class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
   >
     <input
-      class="c3"
+      class="sc-fWQKxP iaRXHc"
       id="convention-search"
       name="q"
       placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -686,10 +112,10 @@ exports[`<Search /> should show spinner when loading 1`] = `
     />
   </span>
   <div
-    class="c4"
+    class="sc-hZNxer kWwXln"
   >
     <p
-      class="c5"
+      class="sc-GKYbw gcbROE"
     >
       <svg
         aria-labelledby="title desc"
@@ -740,16 +166,16 @@ exports[`<Search /> should show spinner when loading 1`] = `
     </p>
   </div>
   <p
-    class="c6"
+    class="sc-bTUVah hXbUfO"
   >
     Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
     <span
-      class="c7"
+      class="sc-uokDu isqtOz"
     >
       Consultez
        
       <button
-        class="c8 c9"
+        class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
         type="button"
       >
         notre aide
@@ -761,296 +187,18 @@ exports[`<Search /> should show spinner when loading 1`] = `
 `;
 
 exports[`<Search /> when input is IDCC, should search conventions 1`] = `
-.c6 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c7 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c16:focus {
-  color: #f66663;
-}
-
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c11 {
-  display: block;
-  padding: 1.6rem 0;
-  padding-top: 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c13 {
-  display: block;
-  padding: 1.6rem 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c12 {
-  font-weight: normal;
-}
-
-.c5 + .c5 {
-  margin-top: 1.6rem;
-}
-
-.c9 + .c9 {
-  border-top: 1px solid #bbcadf;
-}
-
-.c10:last-of-type > *:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c14 {
-  margin-top: 2.4rem;
-}
-
-.c15 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c17 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c6 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c6 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c16 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-dUipGc hgoSmo"
     for="convention-search"
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
-    class="c1 c2"
+    class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
   >
     <input
-      class="c3"
+      class="sc-fWQKxP iaRXHc"
       id="convention-search"
       name="q"
       placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -1059,13 +207,13 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
     />
   </span>
   <div
-    class="c4"
+    class="sc-hZNxer kWwXln"
   >
     <div
-      class="c5 c6 "
+      class="sc-jSUZER sc-fxTzYC kEfUQE kvUoQU"
     >
       <h3
-        class="c7"
+        class="sc-iBYQkv iDmZxg"
         data-testid="heading"
       >
         CONVENTIONS COLLECTIVES (2
@@ -1073,19 +221,19 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
         résultats)
       </h3>
       <ul
-        class="c8"
+        class="sc-lbVpMG fqAvkB"
       >
         <li
-          class="c9 c10"
+          class="sc-iWOQzb bipHFP"
         >
           <a
-            class="c11"
+            class="sc-kSGOQU cSxfll"
             href="/convention-collective/275-small-titre"
           >
             small titre
              
             <span
-              class="c12"
+              class="sc-dvEHMn dWhOUW"
             >
               (IDCC 
               0275
@@ -1094,16 +242,16 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
           </a>
         </li>
         <li
-          class="c9 c10"
+          class="sc-iWOQzb bipHFP"
         >
           <a
-            class="c13"
+            class="sc-kSGOQU kUszRL"
             href="/convention-collective/276-smaller-convention-2"
           >
             smaller convention 2
              
             <span
-              class="c12"
+              class="sc-dvEHMn dWhOUW"
             >
               (IDCC 
               0276
@@ -1115,16 +263,16 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
     </div>
   </div>
   <p
-    class="c14"
+    class="sc-bTUVah hXbUfO"
   >
     Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
     <span
-      class="c15"
+      class="sc-uokDu isqtOz"
     >
       Consultez
        
       <button
-        class="c16 c17"
+        class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
         type="button"
       >
         notre aide
@@ -1136,286 +284,18 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 `;
 
 exports[`<Search /> when input is a valid IDCC, should show only the perfect match 1`] = `
-.c6 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c7 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c15 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c15:focus {
-  color: #f66663;
-}
-
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c11 {
-  display: block;
-  padding: 1.6rem 0;
-  padding-top: 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c12 {
-  font-weight: normal;
-}
-
-.c5 + .c5 {
-  margin-top: 1.6rem;
-}
-
-.c9 + .c9 {
-  border-top: 1px solid #bbcadf;
-}
-
-.c10:last-of-type > *:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c13 {
-  margin-top: 2.4rem;
-}
-
-.c14 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c16 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c6 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c6 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c15 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c15 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-dUipGc hgoSmo"
     for="convention-search"
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
-    class="c1 c2"
+    class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
   >
     <input
-      class="c3"
+      class="sc-fWQKxP iaRXHc"
       id="convention-search"
       name="q"
       placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -1424,13 +304,13 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
     />
   </span>
   <div
-    class="c4"
+    class="sc-hZNxer kWwXln"
   >
     <div
-      class="c5 c6 "
+      class="sc-jSUZER sc-fxTzYC kEfUQE kvUoQU"
     >
       <h3
-        class="c7"
+        class="sc-iBYQkv iDmZxg"
         data-testid="heading"
       >
         CONVENTIONS COLLECTIVES (1
@@ -1438,19 +318,19 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
         résultat)
       </h3>
       <ul
-        class="c8"
+        class="sc-lbVpMG fqAvkB"
       >
         <li
-          class="c9 c10"
+          class="sc-iWOQzb bipHFP"
         >
           <a
-            class="c11"
+            class="sc-kSGOQU cSxfll"
             href="/convention-collective/4567-smaller-convention-2"
           >
             smaller convention 2
              
             <span
-              class="c12"
+              class="sc-dvEHMn dWhOUW"
             >
               (IDCC 
               4567
@@ -1462,16 +342,16 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
     </div>
   </div>
   <p
-    class="c13"
+    class="sc-bTUVah hXbUfO"
   >
     Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
     <span
-      class="c14"
+      class="sc-uokDu isqtOz"
     >
       Consultez
        
       <button
-        class="c15 c16"
+        class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
         type="button"
       >
         notre aide
@@ -1483,213 +363,18 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 `;
 
 exports[`<Search /> when searching by text, should use enterprise API 1`] = `
-.c8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c8:focus {
-  color: #f66663;
-}
-
-.c5 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c6 {
-  margin-top: 2.4rem;
-}
-
-.c7 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c9 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c8 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c8 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-dUipGc hgoSmo"
     for="convention-search"
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
-    class="c1 c2"
+    class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
   >
     <input
-      class="c3"
+      class="sc-fWQKxP iaRXHc"
       id="convention-search"
       name="q"
       placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -1698,25 +383,25 @@ exports[`<Search /> when searching by text, should use enterprise API 1`] = `
     />
   </span>
   <div
-    class="c4"
+    class="sc-hZNxer kWwXln"
   >
     <p
-      class="c5"
+      class="sc-GKYbw gcbROE"
     >
       Le service de recherche est indisponible.
     </p>
   </div>
   <p
-    class="c6"
+    class="sc-bTUVah hXbUfO"
   >
     Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
     <span
-      class="c7"
+      class="sc-uokDu isqtOz"
     >
       Consultez
        
       <button
-        class="c8 c9"
+        class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
         type="button"
       >
         notre aide

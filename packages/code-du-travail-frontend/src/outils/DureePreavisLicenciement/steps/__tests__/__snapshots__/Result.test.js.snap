@@ -1,258 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepResult /> should render with O duration 1`] = `
-.c6 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c5,
-[aria-selected="true"] .c6 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c9 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c3:link,
-.c3:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c3:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c3[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c8 {
-  display: none;
-}
-
-.c4 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  height: 100%;
-  line-height: inherit;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0;
-}
-
-.c4:hover,
-.c4:focus,
-.c4:focus-within,
-.c4[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-  display: block;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c12 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c12 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c13 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c14 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c10 {
-  margin-top: 3.2rem;
-}
-
-.c15 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c3 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c12 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-jsTgWu jWEkmq"
   >
     Durée du préavis
   </h2>
   <strong
-    class="c1 c2"
+    class="sc-elAWhN sc-kiPvrU fgjNBQ hknIYB"
   >
     Aucun préavis
   </strong>
@@ -262,12 +18,12 @@ exports[`<StepResult /> should render with O duration 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="c3 c4"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="c5 c6"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -283,7 +39,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
         />
       </svg>
       <span
-        class="c7"
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
@@ -291,10 +47,10 @@ exports[`<StepResult /> should render with O duration 1`] = `
       </span>
     </button>
     <div
-      class="c8"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
-        class="c0"
+        class="sc-jsTgWu jWEkmq"
       >
         Résultat
       </h2>
@@ -318,7 +74,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-jsTgWu jWEkmq"
       >
         Éléments saisis
       </h2>
@@ -367,7 +123,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-jsTgWu jWEkmq"
       >
         Sources
       </h2>
@@ -396,13 +152,13 @@ exports[`<StepResult /> should render with O duration 1`] = `
     </div>
   </div>
   <div
-    class="c9 c10"
+    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
-      class="c11"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="c12"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -422,10 +178,10 @@ exports[`<StepResult /> should render with O duration 1`] = `
         </svg>
       </div>
       <div
-        class="c13"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="c14 c15"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -439,264 +195,9 @@ exports[`<StepResult /> should render with O duration 1`] = `
 `;
 
 exports[`<StepResult /> should render with both CC duration and CDT duration 1`] = `
-.c8 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c7,
-[aria-selected="true"] .c8 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c11 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c11 > *:first-child {
-  margin-top: 0;
-}
-
-.c11 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c5:link,
-.c5:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c5:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c5[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c10 {
-  display: none;
-}
-
-.c6 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  height: 100%;
-  line-height: inherit;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0;
-}
-
-.c6:hover,
-.c6:focus,
-.c6:focus-within,
-.c6[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c9 {
-  margin-left: 1rem;
-  display: block;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c14 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c14 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c15 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c16 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c4 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  margin-top: 0.8rem;
-}
-
-.c12 {
-  margin-top: 3.2rem;
-}
-
-.c17 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-.c3 {
-  font-size: 0.8em;
-  margin-right: 0.2em;
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c5 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c14 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-jsTgWu jWEkmq"
   >
     Durée du préavis
   </h2>
@@ -704,28 +205,28 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="c1 c2"
+      class="sc-elAWhN sc-kiPvrU fgjNBQ hknIYB"
     >
       1 mois
     </strong>
     <sup
-      class="c3"
+      class="sc-ZqGJI fwFBNd"
     >
       *
     </sup>
     .
   </p>
   <p
-    class="c4"
+    class="sc-cLNonn cyfAkb"
   >
     <sup
-      class="c3"
+      class="sc-ZqGJI fwFBNd"
     >
       * 
     </sup>
     Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
-      class="c4"
+      class="sc-cLNonn cyfAkb"
     >
        
       Exemple : si le salarié reçoit le courrier recommandé le
@@ -738,7 +239,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
     <span
-      class="c4"
+      class="sc-cLNonn cyfAkb"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -747,12 +248,12 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   <div>
     <button
       aria-expanded="false"
-      class="c5 c6"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="c7 c8"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -768,7 +269,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         />
       </svg>
       <span
-        class="c9"
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
@@ -776,10 +277,10 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       </span>
     </button>
     <div
-      class="c10"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
-        class="c0"
+        class="sc-jsTgWu jWEkmq"
       >
         Résultat
       </h2>
@@ -803,7 +304,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-jsTgWu jWEkmq"
       >
         Éléments saisis
       </h2>
@@ -840,13 +341,13 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     </div>
   </div>
   <div
-    class="c11 c12"
+    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
-      class="c13"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="c14"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -866,10 +367,10 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         </svg>
       </div>
       <div
-        class="c15"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="c16 c17"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -892,258 +393,14 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 `;
 
 exports[`<StepResult /> should render with only CC duration 1`] = `
-.c6 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c5,
-[aria-selected="true"] .c6 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c9 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c3:link,
-.c3:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c3:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c3[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c8 {
-  display: none;
-}
-
-.c4 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  height: 100%;
-  line-height: inherit;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0;
-}
-
-.c4:hover,
-.c4:focus,
-.c4:focus-within,
-.c4[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-  display: block;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c12 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c12 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c13 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c14 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c10 {
-  margin-top: 3.2rem;
-}
-
-.c15 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c3 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c12 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-jsTgWu jWEkmq"
   >
     Durée du préavis
   </h2>
   <strong
-    class="c1 c2"
+    class="sc-elAWhN sc-kiPvrU fgjNBQ hknIYB"
   >
     Aucun préavis
   </strong>
@@ -1153,12 +410,12 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="c3 c4"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="c5 c6"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -1174,7 +431,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         />
       </svg>
       <span
-        class="c7"
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
@@ -1182,10 +439,10 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       </span>
     </button>
     <div
-      class="c8"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
-        class="c0"
+        class="sc-jsTgWu jWEkmq"
       >
         Résultat
       </h2>
@@ -1209,7 +466,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-jsTgWu jWEkmq"
       >
         Éléments saisis
       </h2>
@@ -1246,13 +503,13 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     </div>
   </div>
   <div
-    class="c9 c10"
+    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
-      class="c11"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="c12"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -1272,10 +529,10 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         </svg>
       </div>
       <div
-        class="c13"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="c14 c15"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -1298,264 +555,9 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 `;
 
 exports[`<StepResult /> should render with when no CC 1`] = `
-.c8 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c7,
-[aria-selected="true"] .c8 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c11 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c11 > *:first-child {
-  margin-top: 0;
-}
-
-.c11 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c5:link,
-.c5:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c5:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c5[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c10 {
-  display: none;
-}
-
-.c6 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  height: 100%;
-  line-height: inherit;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0;
-}
-
-.c6:hover,
-.c6:focus,
-.c6:focus-within,
-.c6[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c9 {
-  margin-left: 1rem;
-  display: block;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c14 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c14 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c15 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c16 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c4 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  margin-top: 0.8rem;
-}
-
-.c12 {
-  margin-top: 3.2rem;
-}
-
-.c17 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-.c3 {
-  font-size: 0.8em;
-  margin-right: 0.2em;
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c5 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c14 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-jsTgWu jWEkmq"
   >
     Durée du préavis
   </h2>
@@ -1563,28 +565,28 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="c1 c2"
+      class="sc-elAWhN sc-kiPvrU fgjNBQ hknIYB"
     >
       2 mois
     </strong>
     <sup
-      class="c3"
+      class="sc-ZqGJI fwFBNd"
     >
       *
     </sup>
     .
   </p>
   <p
-    class="c4"
+    class="sc-cLNonn cyfAkb"
   >
     <sup
-      class="c3"
+      class="sc-ZqGJI fwFBNd"
     >
       * 
     </sup>
     Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
-      class="c4"
+      class="sc-cLNonn cyfAkb"
     >
        
       Exemple : si le salarié reçoit le courrier recommandé le
@@ -1597,7 +599,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
     <span
-      class="c4"
+      class="sc-cLNonn cyfAkb"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -1606,12 +608,12 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="c5 c6"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="c7 c8"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -1627,7 +629,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         />
       </svg>
       <span
-        class="c9"
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
@@ -1635,10 +637,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       </span>
     </button>
     <div
-      class="c10"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
-        class="c0"
+        class="sc-jsTgWu jWEkmq"
       >
         Résultat
       </h2>
@@ -1659,7 +661,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-jsTgWu jWEkmq"
       >
         Éléments saisis
       </h2>
@@ -1689,13 +691,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     </div>
   </div>
   <div
-    class="c11 c12"
+    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
-      class="c13"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="c14"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -1715,10 +717,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </svg>
       </div>
       <div
-        class="c15"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="c16 c17"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -1732,264 +734,9 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 `;
 
 exports[`<StepResult /> should render with when unhandled CC 1`] = `
-.c8 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c7,
-[aria-selected="true"] .c8 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c11 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c11 > *:first-child {
-  margin-top: 0;
-}
-
-.c11 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c5:link,
-.c5:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c5:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c5[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c10 {
-  display: none;
-}
-
-.c6 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  height: 100%;
-  line-height: inherit;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0;
-}
-
-.c6:hover,
-.c6:focus,
-.c6:focus-within,
-.c6[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c9 {
-  margin-left: 1rem;
-  display: block;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c14 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c14 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c15 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c16 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c4 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  margin-top: 0.8rem;
-}
-
-.c12 {
-  margin-top: 3.2rem;
-}
-
-.c17 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-.c3 {
-  font-size: 0.8em;
-  margin-right: 0.2em;
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c5 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c14 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-jsTgWu jWEkmq"
   >
     Durée du préavis
   </h2>
@@ -1997,28 +744,28 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="c1 c2"
+      class="sc-elAWhN sc-kiPvrU fgjNBQ hknIYB"
     >
       2 mois
     </strong>
     <sup
-      class="c3"
+      class="sc-ZqGJI fwFBNd"
     >
       *
     </sup>
     .
   </p>
   <p
-    class="c4"
+    class="sc-cLNonn cyfAkb"
   >
     <sup
-      class="c3"
+      class="sc-ZqGJI fwFBNd"
     >
       * 
     </sup>
     Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
-      class="c4"
+      class="sc-cLNonn cyfAkb"
     >
        
       Exemple : si le salarié reçoit le courrier recommandé le
@@ -2031,7 +778,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
     <span
-      class="c4"
+      class="sc-cLNonn cyfAkb"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -2040,12 +787,12 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="c5 c6"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="c7 c8"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -2061,7 +808,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         />
       </svg>
       <span
-        class="c9"
+        class="sc-AHaJN jfcIdr"
         font-size="hsmall"
         font-weight="600"
       >
@@ -2069,10 +816,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       </span>
     </button>
     <div
-      class="c10"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
-        class="c0"
+        class="sc-jsTgWu jWEkmq"
       >
         Résultat
       </h2>
@@ -2096,7 +843,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-jsTgWu jWEkmq"
       >
         Éléments saisis
       </h2>
@@ -2133,13 +880,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </div>
   </div>
   <div
-    class="c11 c12"
+    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
   >
     <div
-      class="c13"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="c14"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -2159,10 +906,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </svg>
       </div>
       <div
-        class="c15"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="c16 c17"
+          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
         >
           Attention il peut exister une durée plus favorable
         </p>

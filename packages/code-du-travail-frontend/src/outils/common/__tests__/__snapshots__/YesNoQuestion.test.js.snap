@@ -1,149 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<YesNoQuestion /> should render 1`] = `
-.c2 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c0 {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c6 {
-  position: relative;
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  padding: 0;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-  box-shadow: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c6:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c6:checked {
-  background-color: #fff;
-  border-color: #f66663;
-}
-
-.c6:checked:before {
-  display: block;
-}
-
-.c1 {
-  font-weight: 600;
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c1 p,
-.c1 div {
-  font-weight: 100 !important;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <legend
-    class="c0 c1"
+    class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
     data-testid="question-label"
   >
     <span
-      class="c2"
+      class="sc-fcCDlF gZwBNq"
     >
       lorem ipsum ?
       <span
-        class="c3"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="c4"
+    class="sc-elAWhN UfAyd"
   >
     <div
-      class="c5"
+      class="sc-hjjlnc goUtYR"
     >
       <input
-        class="c6"
+        class="sc-gUJyNl cXHmkI"
         data-testid="test-oui"
         id="test-oui"
         name="test"
@@ -151,17 +32,17 @@ exports[`<YesNoQuestion /> should render 1`] = `
         value="true"
       />
       <label
-        class="c7"
+        class="sc-caPbAK gsBMoC"
         for="test-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="c5"
+      class="sc-hjjlnc goUtYR"
     >
       <input
-        class="c6"
+        class="sc-gUJyNl cXHmkI"
         data-testid="test-non"
         id="test-non"
         name="test"
@@ -169,7 +50,7 @@ exports[`<YesNoQuestion /> should render 1`] = `
         value="false"
       />
       <label
-        class="c7"
+        class="sc-caPbAK gsBMoC"
         for="test-non"
       >
         Non
