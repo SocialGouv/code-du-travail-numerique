@@ -8,8 +8,11 @@ contrat salarié . convention collective . coiffure . indemnité de licenciement
   cdtn:
     type: liste
     valeurs:
-      Emplois techniques et de coiffeurs, emplois de l'esthétique-cosmétique et emplois non techniques: "'Emplois techniques et de coiffeurs, emplois de l'esthétique-cosmétique et emplois non techniques'"
-      Cadres et agents de maitrise: "'Cadres et agents de maitrise'"
+      Emplois techniques et de coiffeurs: "'Emplois techniques et de coiffeurs'"
+      Emplois de l'esthétique-cosmétique: "'Emplois de l'esthétique-cosmétique'"
+      Emplois non techniques: "'Emplois non techniques'"
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . coiffure . indemnité de licenciement . jusqu'à dix ans ou moins:
   valeur:
@@ -38,7 +41,10 @@ contrat salarié . convention collective . coiffure . indemnité de licenciement
   unité: €
 
 contrat salarié . convention collective . coiffure . indemnité de licenciement . cadre:
-  applicable si: catégorie professionnelle = 'Cadres et agents de maitrise'
+  applicable si:
+    une de ces conditions:
+      - catégorie professionnelle = 'Cadres'
+      - catégorie professionnelle = 'Agents de maîtrise'
   valeur: oui
 
 contrat salarié . convention collective . coiffure . indemnité de licenciement . cadre . résultat conventionnel:
@@ -68,7 +74,11 @@ contrat salarié . convention collective . coiffure . indemnité de licenciement
       formula: 6 * Sref
 
 contrat salarié . convention collective . coiffure . indemnité de licenciement . non cadre:
-  applicable si: catégorie professionnelle = 'Emplois techniques et de coiffeurs, emplois de l'esthétique-cosmétique et emplois non techniques'
+  applicable si:
+    une de ces conditions:
+      - catégorie professionnelle = 'Emplois techniques et de coiffeurs'
+      - catégorie professionnelle = 'Emplois de l'esthétique-cosmétique'
+      - catégorie professionnelle = 'Emplois non techniques'
   valeur: oui
 
 contrat salarié . convention collective . coiffure . indemnité de licenciement . non cadre . résultat conventionnel:
