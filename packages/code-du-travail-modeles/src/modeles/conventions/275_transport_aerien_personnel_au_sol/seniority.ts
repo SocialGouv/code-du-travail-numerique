@@ -1,3 +1,5 @@
+import { addDays, differenceInMonths } from "date-fns";
+
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   Absence,
@@ -9,6 +11,7 @@ import type {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
+import { parseDate } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
 
 export class Seniority275
@@ -18,17 +21,8 @@ export class Seniority275
     dateEntree,
     dateSortie,
     absencePeriods = [],
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC0044>): SeniorityResult {
-    if (
-      absencePeriods.some(
-        (absence) => absence.motif.key === MotifKeys.maladieNonPro
-      )
-    ) {
-      return {
-        "contrat salarié . convention collective . transport aérien personnel au sol . congé maladie non professionnelle":
-          "oui",
-      };
-    }
+  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC275>): SeniorityResult {
+    return this.compute(dateEntree, dateSortie, absencePeriods);
   }
 
   computeRequiredSeniority({
@@ -36,16 +30,7 @@ export class Seniority275
     dateNotification,
     absencePeriods = [],
   }: SeniorityRequiredProps): RequiredSeniorityResult {
-    if (
-      absencePeriods.some(
-        (absence) => absence.motif.key === MotifKeys.maladieNonPro
-      )
-    ) {
-      return {
-        "contrat salarié . convention collective . transport aérien personnel au sol . congé maladie non professionnelle":
-          "oui",
-      };
-    }
+    return this.compute(dateEntree, dateNotification, absencePeriods);
   }
 
   getMotifs(): Motif[] {
@@ -66,6 +51,31 @@ export class Seniority275
       };
     }
     return {};
+  }
+
+  private compute(
+    from: string,
+    to: string,
+    absences: Absence[]
+  ): SeniorityResult {
+    const dEntree = parseDate(from);
+    const dSortie = addDays(parseDate(to), 1);
+
+    const totalAbsence =
+      absences.reduce((total, item) => {
+        const m = this.getMotifs().find(
+          (motif) => motif.key === item.motif.key
+        );
+        if (item.durationInMonth === undefined || !m) {
+          return total;
+        }
+        return total + item.durationInMonth * m.value;
+      }, 0) / 12;
+
+    return {
+      extraInfos: this.getExtraInfoAbsence(absences),
+      value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence,
+    };
   }
 }
 
