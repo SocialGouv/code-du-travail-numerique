@@ -63,7 +63,7 @@ function loadWidgets() {
   [
     {
       name: "widget",
-      url: "__HOST__/widget.html",
+      url: "__HOST__/widgets/search",
     },
     {
       name: "preavis-licenciement",
