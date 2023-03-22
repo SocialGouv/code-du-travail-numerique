@@ -27,6 +27,8 @@ export class NotFoundError extends ErrorBase<
   | "CONTRIB_NOT_FOUND"
   | "CONVENTIONS_NOT_FOUND"
   | "THEMATIC_FILES_NOT_FOUND"
+  | "GLOSSARY_NOT_FOUND"
+  | "GLOSSARY_TERM_NOT_FOUND"
 > {}
 
 export class InvalidQueryError extends ErrorBase<"INVALID_QUERY"> {}

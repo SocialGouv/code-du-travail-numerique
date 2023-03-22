@@ -1,6 +1,10 @@
 import { getSourceByRoute, SOURCES } from "@socialgouv/cdtn-utils";
+import { vectorizeQuery } from "@socialgouv/cdtn-elasticsearch";
+
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getSearchBySourceSlugBody, getRelatedItemsBody } from "./queries";
+import { getSemQuery } from "../search/queries";
+import { mergePipe } from "../search/utils";
 
 const MAX_RESULTS = 4;
 
@@ -86,7 +90,7 @@ export const getSearchBasedItems = async ({
   );
 
   if (query_vector) {
-    const semBody = getSemBody({
+    const semBody = getSemQuery({
       query_vector,
       // we +1 the size to remove the document source that should match perfectly for the given vector
       size: MAX_RESULTS + 1,
@@ -108,8 +112,7 @@ export const getSearchBasedItems = async ({
   const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
 
   return (
-    utils
-      .mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
+    mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
       // we filter fields and add some info about recommandation type for evaluation purpose
       .map(({ _source }: any) => mapSource("search")(_source))
   );

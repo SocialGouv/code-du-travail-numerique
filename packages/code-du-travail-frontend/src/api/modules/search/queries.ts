@@ -1,8 +1,43 @@
-const { SOURCES } = require("@socialgouv/cdtn-utils");
+import { SOURCES } from "@socialgouv/cdtn-utils";
+
+export function getSemQuery({ query_vector, size, sources }) {
+  return {
+    _source: [
+      "title",
+      "source",
+      "slug",
+      "description",
+      "url",
+      "action",
+      "breadcrumbs",
+      "cdtnId",
+      "highlight",
+      "sectionDisplayMode",
+    ],
+    query: {
+      script_score: {
+        query: {
+          bool: {
+            filter: [
+              { term: { excludeFromSearch: false } },
+              { term: { isPublished: true } },
+              sourcesFilter(sources),
+            ],
+          },
+        },
+        script: {
+          params: { query_vector: query_vector },
+          source: "cosineSimilarity(params.query_vector, 'title_vector') + 1.0",
+        },
+      },
+    },
+    size: size,
+  };
+}
 
 // if convention collectives are required
 // we only return the one with contributions
-const sourcesFilter = (sources) =>
+export const sourcesFilter = (sources) =>
   sources.includes(SOURCES.CCN)
     ? {
         bool: {
@@ -34,5 +69,3 @@ const sourcesFilter = (sources) =>
         },
       }
     : { terms: { source: sources } };
-
-module.exports = sourcesFilter;

@@ -1,6 +1,6 @@
-const { SOURCES } = require("@socialgouv/cdtn-utils");
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
-function getIdccBody({ query, idccQuery }) {
+export function getIdccBody({ query, idccQuery }) {
   return {
     _source: [
       "id",
@@ -79,4 +79,3 @@ function getIdccBody({ query, idccQuery }) {
     size: 50,
   };
 }
-module.exports = getIdccBody;
