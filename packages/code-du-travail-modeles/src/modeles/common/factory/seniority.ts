@@ -8,6 +8,8 @@ import {
   Seniority1486,
   Seniority1518,
   Seniority1527,
+  Seniority1596,
+  Seniority1597,
   Seniority1996,
   Seniority2098,
   Seniority2216,
@@ -60,6 +62,10 @@ export class SeniorityFactory {
         return new Seniority413() as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.IDCC1517:
         return new Seniority1517();
+      case SupportedCcIndemniteLicenciement.IDCC1596:
+        return new Seniority1596();
+      case SupportedCcIndemniteLicenciement.IDCC1597:
+        return new Seniority1597();
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new SeniorityLegal();
