@@ -11,7 +11,7 @@ export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
     "Disallow: /assets/",
     "Disallow: /images/",
     "",
-    `Sitemap: https://${host}/sitemap.xml`,
+    `Sitemap: ${host}/sitemap.xml`,
   ].join("\n");
 
   const robot = isOnProduction ? robotsProd : robotsDev;
@@ -39,9 +39,9 @@ export const generateWidgetScript = (host: string) => {
 };
 
 const run = () => {
-  const isOnProduction = !!process.env.PRODUCTION;
+  const isProduction = !!process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT;
   const host = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-  generateRobotsTxt(isOnProduction, host);
+  generateRobotsTxt(isProduction, host);
   console.log("Robots.txt generated.");
   generateWidgetScript(host);
   console.log("widget.js generated.");

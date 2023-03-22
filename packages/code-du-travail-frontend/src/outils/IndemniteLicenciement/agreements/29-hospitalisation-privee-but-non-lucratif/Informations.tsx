@@ -1,13 +1,17 @@
-import { useEffect } from "react";
-import { useIndemniteLicenciementStore } from "../../store";
+import { useContext, useEffect } from "react";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 
 export default function Agreement29Informations() {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     hasSixBestSalaries,
     sixBestSalariesTotal,
     init,
     shouldAskSixBestSalaries,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     hasSixBestSalaries: state.agreement29Data.input.hasSixBestSalaries,
     sixBestSalariesTotal: state.agreement29Data.input.sixBestSalariesTotal,
     init: state.agreement29Function.init,

@@ -1,9 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { RadioQuestion } from "../../../Components";
 import { SalaireTempsPlein } from "../../steps/Salaires/components";
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 
 export default function Agreement44() {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     init,
     showVariablePay,
@@ -19,7 +23,7 @@ export default function Agreement44() {
     errorLastMonthSalary,
     lastMonthSalary,
     onChangeLastMonthSalary,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     init: state.agreement44Function.onInit,
     showVariablePay: state.agreement44Data.input.showVariablePay,
     hasSameSalary: state.salairesData.input.hasSameSalary,

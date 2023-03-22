@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { InputRadio } from "@socialgouv/cdtn-ui";
-import { useStore } from "../../store";
+import { DossierLicenciementContext, useStore } from "../../store";
 import { trackClickHelp } from "../../tracking";
 import { QuestionnaireResponse } from "../../type";
 import { InfoBulle } from "../../../outils/common/InfoBulle";
+import { useContext } from "react";
 
 export const Response = ({
   response: { text, description, info, trackingName },
@@ -12,7 +13,8 @@ export const Response = ({
   response: QuestionnaireResponse;
   index: number;
 }) => {
-  const answer = useStore((state) => state.answer);
+  const store = useContext(DossierLicenciementContext);
+  const answer = useStore(store, (state) => state.answer);
   return (
     <ResponseWrapper>
       <ResponseInputWrapper>
