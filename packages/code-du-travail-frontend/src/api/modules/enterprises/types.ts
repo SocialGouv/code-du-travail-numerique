@@ -33,3 +33,17 @@ export type Agreement = {
     searchInfo?: string;
   };
 };
+
+export type Convention = {
+  idcc: number;
+  shortTitle: string;
+  id: string;
+  title: string;
+  url?: string;
+};
+
+export type EnterpriseApiResponse = {
+  entreprises?: (Omit<Enterprise, "conventions"> & {
+    conventions: Convention[];
+  })[];
+};

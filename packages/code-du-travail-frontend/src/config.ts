@@ -17,3 +17,5 @@ export const IS_PREPROD =
   process.env.NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT ?? false;
 export const IS_PROD =
   process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ?? false;
+export const ENTERPRISE_API_URL =
+  "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1";

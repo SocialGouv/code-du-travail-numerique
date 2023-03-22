@@ -28,3 +28,5 @@ export class NotFoundError extends ErrorBase<
   | "CONVENTIONS_NOT_FOUND"
   | "THEMATIC_FILES_NOT_FOUND"
 > {}
+
+export class InvalidQueryError extends ErrorBase<"INVALID_QUERY"> {}
