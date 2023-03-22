@@ -28,7 +28,7 @@ export default function Agreement44Informations() {
           {knowingLastSalary === "oui" ? "Oui" : "Non"}
         </li>
       )}
-      {lastMonthSalary && lastMonthSalary.value && (
+      {knowingLastSalary && lastMonthSalary && lastMonthSalary.value && (
         <li>
           Salaire perçu au cours du dernier mois&nbsp;:&nbsp;
           {lastMonthSalary.value} €{" "}
