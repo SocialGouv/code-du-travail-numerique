@@ -1,6 +1,6 @@
-const { SOURCES } = require("@socialgouv/cdtn-utils");
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
-function getSheetMTQuery({ slug }) {
+export function getSheetMTQuery({ slug }) {
   return {
     _source: [
       "breadcrumbs",
@@ -25,7 +25,3 @@ function getSheetMTQuery({ slug }) {
     },
   };
 }
-
-module.exports = {
-  getSheetMTQuery,
-};

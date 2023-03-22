@@ -1,4 +1,4 @@
-function getSuggestQuery(query, size) {
+export function getSuggestQuery(query, size) {
   return {
     _source: ["title"],
     query: {
@@ -36,5 +36,3 @@ function getSuggestQuery(query, size) {
     size: size,
   };
 }
-
-module.exports = { getSuggestQuery };
