@@ -9,12 +9,12 @@ describe("Calcul de l'indemnité de licenciement CC 1505", () => {
   test.each`
     seniorityRight | seniority | expectedCompensation
     ${6 / 12}      | ${6 / 12} | ${0}
-    ${0.67}        | ${0.67}   | ${435.5}
-    ${3}           | ${6}      | ${3900}
-    ${6}           | ${6}      | ${3900}
-    ${11}          | ${11}     | ${7366.67}
-    ${14}          | ${11}     | ${7366.67}
-    ${20}          | ${20}     | ${15166.67}
+    ${8 / 12}      | ${0.67}   | ${435.5}
+    ${8 / 12}      | ${6}      | ${3900}
+    ${8 / 12}      | ${6}      | ${3900}
+    ${8 / 12}      | ${11}     | ${7366.67}
+    ${8 / 12}      | ${11}     | ${7366.67}
+    ${8 / 12}      | ${20}     | ${15166.67}
   `(
     "Avec une ancienneté $seniority ans, une ancienneté requise $seniorityRight et salaire de ref 2600€ => une compensation de base de $expectedCompensation €",
     ({ expectedCompensation, seniority, seniorityRight }) => {
