@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { NotFoundError } from "../../utils";
+import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
 import { getToolBySlug, getTools } from "./queries";
 
 export class ToolsController {
@@ -23,7 +23,7 @@ export class ToolsController {
         this.res.status(404).json({ message: error.message });
       } else {
         this.res.status(500).json({
-          message: "Error during fetching data",
+          message: DEFAULT_ERROR_500_MESSAGE,
         });
       }
     }
@@ -39,7 +39,7 @@ export class ToolsController {
         this.res.status(404).json({ message: error.message });
       } else {
         this.res.status(500).json({
-          message: "Error during fetching data",
+          message: DEFAULT_ERROR_500_MESSAGE,
         });
       }
     }

@@ -1,17 +1,39 @@
-import { elasticsearchClient, elasticDocumentsIndex } from "../../utils";
-import { getIdccBody } from "./queries";
+import {
+  elasticsearchClient,
+  elasticDocumentsIndex,
+  NotFoundError,
+} from "../../utils";
+import { getRelatedItems } from "../items";
+import { getSheetMTQuery } from "./queries";
 
-const parseIdcc = (query) =>
-  /^\d+$/.test(query) ? parseInt(query, 10) : undefined;
-
-export const getIdccByQuery = async (query: string) => {
-  const idccQuery = parseIdcc(query);
-
-  const body = getIdccBody({ idccQuery, query });
-
+export const getSheetsMtService = async (slug: string) => {
+  const body = getSheetMTQuery({ slug });
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
   });
-  return { ...response.body };
+
+  if (response.body.hits.hits.length === 0) {
+    throw new NotFoundError({
+      name: "AGREEMENT_NOT_FOUND",
+      message: `there is no sheet mt that match ${slug}`,
+      cause: null,
+    });
+  }
+
+  const sheetMT = response.body.hits.hits[0];
+
+  const relatedItems = await getRelatedItems({
+    covisits: sheetMT._source.covisits,
+    settings: sheetMT._source.title,
+    slug,
+    title: sheetMT._source.title,
+  });
+
+  delete sheetMT._source.covisits;
+
+  return {
+    ...sheetMT,
+    relatedItems,
+  };
 };

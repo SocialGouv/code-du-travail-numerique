@@ -1,8 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { NotFoundError } from "../../utils";
+import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
 import { getDossiers } from "./service";
-
-export type GetDossiers = any;
 
 export class DossiersController {
   private req: NextApiRequest;
@@ -16,17 +14,14 @@ export class DossiersController {
   public async get() {
     try {
       const slug = this.req.query.slug as string;
-      const result = await getDossiers(slug);
-      const response: GetDossiers = result;
+      const response = await getDossiers(slug);
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {
-        this.res
-          .status(404)
-          .json({ message: "No thematic files has been found" });
+        this.res.status(404).json({ message: error.message });
       } else {
         this.res.status(500).json({
-          message: "Error during getting thematic files",
+          message: DEFAULT_ERROR_500_MESSAGE,
         });
       }
     }

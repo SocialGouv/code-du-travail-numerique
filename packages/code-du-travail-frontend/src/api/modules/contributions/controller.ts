@@ -1,6 +1,6 @@
 import { ElasticSearchItem } from "@socialgouv/cdtn-utils";
 import { NextApiRequest, NextApiResponse } from "next";
-import { NotFoundError } from "../../utils";
+import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
 import { getGenericContributions } from "../contributions";
 
 export type GetGenericContributions = {
@@ -25,13 +25,11 @@ export class ContributionsController {
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {
-        this.res
-          .status(404)
-          .json({ message: "Contributions element not found" });
+        this.res.status(404).json({ message: error.message });
       } else {
-        this.res
-          .status(500)
-          .json({ message: "Error during getting contributions element" });
+        this.res.status(500).json({
+          message: DEFAULT_ERROR_500_MESSAGE,
+        });
       }
     }
   }

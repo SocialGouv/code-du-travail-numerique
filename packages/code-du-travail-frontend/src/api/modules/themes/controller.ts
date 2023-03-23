@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { NotFoundError } from "../../utils";
+import { NotFoundError, DEFAULT_ERROR_500_MESSAGE } from "../../utils";
 import { getThemeBySlugQuery, getThemes } from "./queries";
 
 export class ThemesController {
@@ -20,7 +20,7 @@ export class ThemesController {
         this.res.status(404).json({ message: error.message });
       } else {
         this.res.status(500).json({
-          message: "Error during fetching data",
+          message: DEFAULT_ERROR_500_MESSAGE,
         });
       }
     }
@@ -36,7 +36,7 @@ export class ThemesController {
         this.res.status(404).json({ message: error.message });
       } else {
         this.res.status(500).json({
-          message: "Error during fetching data",
+          message: DEFAULT_ERROR_500_MESSAGE,
         });
       }
     }

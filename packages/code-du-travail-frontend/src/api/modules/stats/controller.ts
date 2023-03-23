@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { NotFoundError } from "../../utils";
-import { getIdccByQuery } from "./service";
+import { NotFoundError, DEFAULT_ERROR_500_MESSAGE } from "../../utils";
+import { getStatsService } from "./service";
 
-export class IdccController {
+export class StatsController {
   private req: NextApiRequest;
   private res: NextApiResponse;
 
@@ -13,15 +13,14 @@ export class IdccController {
 
   public async get() {
     try {
-      const { q } = this.req.query;
-      const response = await getIdccByQuery(q as string);
+      const response = await getStatsService();
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {
-        this.res.status(404).json({ message: "No idcc has been counted" });
+        this.res.status(404).json({ message: error.message });
       } else {
         this.res.status(500).json({
-          message: "Error during fetching idcc",
+          message: DEFAULT_ERROR_500_MESSAGE,
         });
       }
     }

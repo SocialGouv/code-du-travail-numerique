@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { NotFoundError } from "../../utils";
+import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
 import { getBySlugHighlights } from "./service";
 
 export class HighlightsController {
@@ -21,7 +21,7 @@ export class HighlightsController {
         this.res.status(404).json({ message: error.message });
       } else {
         this.res.status(500).json({
-          message: "Error during getting highlights by slug",
+          message: DEFAULT_ERROR_500_MESSAGE,
         });
       }
     }

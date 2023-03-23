@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { NotFoundError } from "../../utils";
+import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
 import { getGlossary } from "./service";
 
 export class GlossaryController {
@@ -20,7 +20,7 @@ export class GlossaryController {
         this.res.status(404).json({ message: error.message });
       } else {
         this.res.status(500).json({
-          message: "Error during getting glossary",
+          message: DEFAULT_ERROR_500_MESSAGE,
         });
       }
     }
@@ -47,7 +47,7 @@ export class GlossaryController {
         this.res.status(404).json({ message: error.message });
       } else {
         this.res.status(500).json({
-          message: "Error during getting fetching the number of docs",
+          message: DEFAULT_ERROR_500_MESSAGE,
         });
       }
     }

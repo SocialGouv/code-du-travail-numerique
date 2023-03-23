@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { NotFoundError } from "../../utils";
+import { NotFoundError, DEFAULT_ERROR_500_MESSAGE } from "../../utils";
 import { getSuggestions } from "./service";
 
 export class SuggestController {
@@ -24,10 +24,10 @@ export class SuggestController {
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {
-        this.res.status(404).json({ message: "No idcc has been counted" });
+        this.res.status(404).json({ message: error.message });
       } else {
         this.res.status(500).json({
-          message: "Error during fetching idcc",
+          message: DEFAULT_ERROR_500_MESSAGE,
         });
       }
     }

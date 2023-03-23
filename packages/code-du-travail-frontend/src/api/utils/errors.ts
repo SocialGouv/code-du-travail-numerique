@@ -29,6 +29,10 @@ export class NotFoundError extends ErrorBase<
   | "THEMATIC_FILES_NOT_FOUND"
   | "GLOSSARY_NOT_FOUND"
   | "GLOSSARY_TERM_NOT_FOUND"
+  | "STATS_NOT_FOUND"
 > {}
+
+export const DEFAULT_ERROR_500_MESSAGE =
+  "Internal server error during fetching data";
 
 export class InvalidQueryError extends ErrorBase<"INVALID_QUERY"> {}
