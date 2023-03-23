@@ -172,7 +172,7 @@ export function getRelatedArticlesBody(query: any, size = 5) {
   };
 }
 
-export function getSearchBody(query, size, sources = []) {
+export function getSearchBody(query, size, sources) {
   return {
     _source: [
       "title",

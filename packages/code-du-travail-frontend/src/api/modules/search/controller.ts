@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
-import { getAllModeles } from "./service";
+import { searchWithQuery } from "./service";
 
-export class ModelesController {
+export class SearchController {
   private req: NextApiRequest;
   private res: NextApiResponse;
 
@@ -13,7 +13,8 @@ export class ModelesController {
 
   public async get() {
     try {
-      const response = await getAllModeles();
+      const { q } = this.req.query;
+      const response = await searchWithQuery(q as string);
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {

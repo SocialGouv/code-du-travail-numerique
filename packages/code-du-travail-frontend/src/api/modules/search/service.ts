@@ -1,17 +1,211 @@
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticsearchClient, elasticDocumentsIndex } from "../../utils";
-import { getIdccBody } from "./queries";
+import { getRelatedArticlesBody, getRelatedThemesBody, getSearchBody, getSemQuery } from "./queries";
+import { merge, mergePipe, removeDuplicate } from "./utils";
 
-const parseIdcc = (query) =>
-  /^\d+$/.test(query) ? parseInt(query, 10) : undefined;
+const MAX_RESULTS = 100;
+const DEFAULT_RESULTS_NUMBER = 25;
+const THEMES_RESULTS_NUMBER = 5;
+const CDT_RESULTS_NUMBER = 5;
+const SEMANTIC_THRESHOLD = 1.11;
+const DOCUMENTS_SEM = "documents_sem";
+const DOCUMENTS_ES = "documents_es";
+const THEMES_ES = "themes_es";
+const THEMES_SEM = "themes_sem";
+const CDT_ES = "cdt_es";
 
-export const getIdccByQuery = async (query: string) => {
-  const idccQuery = parseIdcc(query);
+export const searchWithQuery = async (query: string) => {
+  const sources = [
+    SOURCES.SHEET_MT,
+    SOURCES.SHEET_SP,
+    SOURCES.LETTERS,
+    SOURCES.TOOLS,
+    SOURCES.CONTRIBUTIONS,
+    SOURCES.EXTERNALS,
+    SOURCES.THEMATIC_FILES,
+    SOURCES.EDITORIAL_CONTENT,
+    SOURCES.CCN,
+  ];
+  const skipPrequalifiedResults =
+    ctx.query.skipSavedResults === "" || ctx.query.skipSavedResults === "true";
 
-  const body = getIdccBody({ idccQuery, query });
+  // check prequalified requests
+  const prequalifiedResults =
+    !skipPrequalifiedResults && (await getPrequalifiedResults(query));
+  let documents = [];
+  let articles = [];
+  let themes = [];
 
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
-  });
-  return { ...response.body };
+  if (prequalifiedResults) {
+    prequalifiedResults.forEach(
+      (item) => (item._source.algo = "pre-qualified")
+    );
+    documents = prequalifiedResults.filter(
+      ({ _source: { source } }) =>
+        ![SOURCES.CDT, SOURCES.THEMES].includes(source)
+    );
+    articles = prequalifiedResults.filter(
+      ({ _source: { source } }) => source === SOURCES.CDT
+    );
+    themes = prequalifiedResults.filter(
+      ({ _source: { source } }) => source === SOURCES.THEMES
+    );
+  }
+
+  const searches = {};
+  const shouldRequestCdt = articles.length < 5;
+  const shouldRequestThemes = themes.length < 5;
+  const size = Math.min(ctx.query.size || DEFAULT_RESULTS_NUMBER, MAX_RESULTS);
+
+  const query_vector = await vectorizeQuery(query.toLowerCase()).catch(
+    (error) => {
+      logger.error(error.message);
+    }
+  );
+
+  // if not enough prequalified results, we also trigger ES search
+  if (
+    !prequalifiedResults ||
+    prequalifiedResults.length < DEFAULT_RESULTS_NUMBER
+  ) {
+    searches[DOCUMENTS_ES] = [
+      { index: elasticDocumentsIndex },
+      getSearchBody(query, size, sources),
+    ];
+    if (query_vector) {
+      searches[DOCUMENTS_SEM] = [
+        { index: elasticDocumentsIndex },
+        getSemQuery(query_vector, sources, size),
+      ];
+    }
+  }
+
+  if (shouldRequestThemes) {
+    const themeNumber = THEMES_RESULTS_NUMBER - themes.length;
+    searches[THEMES_ES] = [
+      { index: elasticDocumentsIndex }, // we search in themeIndex here to try to match title in breadcrumb
+      getRelatedThemesBody(query, themeNumber),
+    ];
+    if (query_vector) {
+      searches[THEMES_SEM] = [
+        { index: elasticDocumentsIndex },
+        getSemQuery(
+          query_vector,
+          size: themeNumber,
+          sources: [SOURCES.THEMES],
+        ),
+      ];
+    }
+  }
+
+  if (shouldRequestCdt) {
+    const cdtNumber = CDT_RESULTS_NUMBER - articles.length;
+    searches[CDT_ES] = [
+      { index: elasticDocumentsIndex },
+      getRelatedArticlesBody(
+        query,
+cdtNumber,
+      ),
+    ];
+  }
+
+  const results = await msearch(
+    searches,
+  );
+
+  const fulltextHits = extractHits(results[DOCUMENTS_ES]);
+  fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
+
+  const semanticHits = extractHits(results[DOCUMENTS_SEM]);
+  semanticHits.forEach((item) => (item._source.algo = "semantic"));
+
+  // we only consider semantic results above a given threshold
+  const semanticHitsFiltered = semanticHits.filter(
+    (item) => item._score > SEMANTIC_THRESHOLD
+  );
+
+  // we merge prequalified + full text + semantic results
+  const mergedSearchResults = mergePipe(
+    fulltextHits,
+    semanticHitsFiltered,
+    size
+  );
+  documents.push(...mergedSearchResults);
+  documents = removeDuplicate(documents);
+
+  if (shouldRequestThemes) {
+    const fulltextHits = extractHits(results[THEMES_ES]);
+    const semanticHits = extractHits(results[THEMES_SEM]);
+    fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
+    semanticHits.forEach((item) => (item._source.algo = "semantic"));
+    themes = removeDuplicate(
+      themes
+        .concat(merge(fulltextHits, semanticHits, THEMES_RESULTS_NUMBER * 2))
+        .slice(0, THEMES_RESULTS_NUMBER)
+    );
+  }
+  if (shouldRequestCdt) {
+    articles = removeDuplicate(articles.concat(results[CDT_ES].hits.hits));
+  }
+
+  return {
+    articles: articles.map(({ _score, _source }) => ({ _score, ..._source })),
+    documents: documents.map(({ _score, _source }) => ({ _score, ..._source })),
+    // we add source prop since some result might come from dedicataed themes index
+    // wich has no source prop
+    themes: themes.map(({ _score, _source }) => ({
+      _score,
+      ..._source,
+      source: SOURCES.THEMES,
+    })),
+  };
 };
+
+function extractHits(response) {
+  if (response && response.hits) {
+    return response.hits.hits;
+  }
+  return [];
+}
+
+async function msearch(searches) {
+  const requests = [];
+  const keys = [];
+
+  // return an empty object if we receive an empty object
+  if (Object.keys(searches).length === 0) {
+    return {};
+  }
+
+  for (const [key, [index, query]] of Object.entries(searches)) {
+    requests.push(index, query);
+    keys.push(key);
+  }
+
+  const { body, error } = await elasticsearchClient.msearch({ body: requests });
+
+  if (error) {
+    throw error;
+  }
+
+  const results = keys.reduce((state, key, index) => {
+    const resp = body.responses[index];
+
+    if (resp.error) {
+      console.error(
+        `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(
+          resp.error,
+          null,
+          2
+        )}`
+      );
+    }
+
+    state[key] = resp;
+    return state;
+  }, {});
+
+  results.took = body.took;
+
+  return results;
+}
