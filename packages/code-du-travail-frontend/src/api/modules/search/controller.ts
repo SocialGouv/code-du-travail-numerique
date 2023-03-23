@@ -13,8 +13,12 @@ export class SearchController {
 
   public async get() {
     try {
-      const { q } = this.req.query;
-      const response = await searchWithQuery(q as string);
+      const { q, skipSavedResults, size } = this.req.query;
+      const response = await searchWithQuery(
+        q as string,
+        !!skipSavedResults,
+        size ? parseInt(size as string) : undefined
+      );
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {

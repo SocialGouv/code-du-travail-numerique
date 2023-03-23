@@ -1,7 +1,14 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { elasticsearchClient, elasticDocumentsIndex } from "../../utils";
-import { getRelatedArticlesBody, getRelatedThemesBody, getSearchBody, getSemQuery } from "./queries";
-import { merge, mergePipe, removeDuplicate } from "./utils";
+import { vectorizeQuery } from "@socialgouv/cdtn-elasticsearch";
+import { elasticsearchClient, elasticDocumentsIndex } from "../../../utils";
+import {
+  getRelatedArticlesBody,
+  getRelatedThemesBody,
+  getSearchBody,
+  getSemQuery,
+} from "../queries";
+import { merge, mergePipe, removeDuplicate } from "../utils";
+import { getPrequalifiedResults } from "./prequalified";
 
 const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;
@@ -14,7 +21,11 @@ const THEMES_ES = "themes_es";
 const THEMES_SEM = "themes_sem";
 const CDT_ES = "cdt_es";
 
-export const searchWithQuery = async (query: string) => {
+export const searchWithQuery = async (
+  query: string,
+  skipPrequalifiedResults: boolean,
+  sizeParams?: number
+) => {
   const sources = [
     SOURCES.SHEET_MT,
     SOURCES.SHEET_SP,
@@ -26,15 +37,13 @@ export const searchWithQuery = async (query: string) => {
     SOURCES.EDITORIAL_CONTENT,
     SOURCES.CCN,
   ];
-  const skipPrequalifiedResults =
-    ctx.query.skipSavedResults === "" || ctx.query.skipSavedResults === "true";
 
   // check prequalified requests
   const prequalifiedResults =
     !skipPrequalifiedResults && (await getPrequalifiedResults(query));
-  let documents = [];
-  let articles = [];
-  let themes = [];
+  let documents: any[] = [];
+  let articles: any[] = [];
+  let themes: any[] = [];
 
   if (prequalifiedResults) {
     prequalifiedResults.forEach(
@@ -55,11 +64,11 @@ export const searchWithQuery = async (query: string) => {
   const searches = {};
   const shouldRequestCdt = articles.length < 5;
   const shouldRequestThemes = themes.length < 5;
-  const size = Math.min(ctx.query.size || DEFAULT_RESULTS_NUMBER, MAX_RESULTS);
+  const size = Math.min(sizeParams || DEFAULT_RESULTS_NUMBER, MAX_RESULTS);
 
   const query_vector = await vectorizeQuery(query.toLowerCase()).catch(
     (error) => {
-      logger.error(error.message);
+      console.error(error.message);
     }
   );
 
@@ -89,11 +98,7 @@ export const searchWithQuery = async (query: string) => {
     if (query_vector) {
       searches[THEMES_SEM] = [
         { index: elasticDocumentsIndex },
-        getSemQuery(
-          query_vector,
-          size: themeNumber,
-          sources: [SOURCES.THEMES],
-        ),
+        getSemQuery(query_vector, [SOURCES.THEMES], themeNumber),
       ];
     }
   }
@@ -102,16 +107,11 @@ export const searchWithQuery = async (query: string) => {
     const cdtNumber = CDT_RESULTS_NUMBER - articles.length;
     searches[CDT_ES] = [
       { index: elasticDocumentsIndex },
-      getRelatedArticlesBody(
-        query,
-cdtNumber,
-      ),
+      getRelatedArticlesBody(query, cdtNumber),
     ];
   }
 
-  const results = await msearch(
-    searches,
-  );
+  const results = await msearch(searches);
 
   const fulltextHits = extractHits(results[DOCUMENTS_ES]);
   fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
@@ -169,24 +169,22 @@ function extractHits(response) {
 }
 
 async function msearch(searches) {
-  const requests = [];
-  const keys = [];
+  const requests: any[] = [];
+  const keys: any[] = [];
 
   // return an empty object if we receive an empty object
   if (Object.keys(searches).length === 0) {
     return {};
   }
 
-  for (const [key, [index, query]] of Object.entries(searches)) {
+  const entries: any[] = Object.entries(searches);
+
+  for (const [key, [index, query]] of entries) {
     requests.push(index, query);
     keys.push(key);
   }
 
-  const { body, error } = await elasticsearchClient.msearch({ body: requests });
-
-  if (error) {
-    throw error;
-  }
+  const { body } = await elasticsearchClient.msearch({ body: requests });
 
   const results = keys.reduce((state, key, index) => {
     const resp = body.responses[index];

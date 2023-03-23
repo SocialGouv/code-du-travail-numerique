@@ -1,15 +1,9 @@
-import elasticsearchClient from "../../conf/elasticsearch";
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import fuzz from "fuzzball";
+import deburr from "lodash.deburr";
+import memoizee from "memoizee";
+import { elasticDocumentsIndex, elasticsearchClient } from "../../../utils";
 
-const { SOURCES } = require("@socialgouv/cdtn-utils");
-const { logger } = require("@socialgouv/cdtn-logger");
-const fuzz = require("fuzzball");
-const deburr = require("lodash.deburr");
-const memoizee = require("memoizee");
-const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
-const { CDTN_ADMIN_VERSION } = require("../v1.prefix.js");
-
-const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 const THRESHOLD = 90;
 const NON_FUZZY_TOKENS = new Set(["cdd", "cdi", "csp"]);
 
@@ -36,16 +30,16 @@ async function _getPrequalified() {
     body: {
       query: prequalifiedQuery,
     },
-    index,
+    index: elasticDocumentsIndex,
   });
-  logger.info(`Loading ${count} prequalifiedQueries`);
+  console.info(`Loading ${count} prequalifiedQueries`);
 
   const response = await elasticsearchClient.search({
     body: {
       query: prequalifiedQuery,
       size: count,
     },
-    index,
+    index: elasticDocumentsIndex,
   });
 
   if (response.body.hits.total.value === 0) {
@@ -122,8 +116,8 @@ const testMatch = ({ query, knownQueriesSet, allVariants }) => {
 };
 
 // find known query if any
-const getPrequalifiedResults = async (query) => {
-  const { knownQueriesSet, allVariants } = await getPrequalified();
+export const getPrequalifiedResults = async (query) => {
+  const { knownQueriesSet, allVariants } = (await getPrequalified()) as any;
 
   // allow
   const knownQuery =
@@ -131,12 +125,10 @@ const getPrequalifiedResults = async (query) => {
 
   if (knownQuery && knownQuery.refs && knownQuery.refs.length > 0) {
     // get ES results for a known query
-    logger.info(`getSavedResult: ${knownQuery.title}`);
+    console.info(`getSavedResult: ${knownQuery.title}`);
     return knownQuery.refs.map((ref) => ({
       _source: ref,
     }));
   }
   return false;
 };
-
-module.exports = getPrequalifiedResults;
