@@ -6,7 +6,7 @@ export enum OrderDirection {
 export type ItemFilterType = {
   url?: string;
   source?: string;
-  ids?: string;
+  ids?: string[];
 };
 
 export type ItemSortType = {
