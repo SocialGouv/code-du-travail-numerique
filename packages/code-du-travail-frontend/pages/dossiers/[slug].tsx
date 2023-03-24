@@ -102,7 +102,7 @@ function DossierThematique(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query: { slug } }) => {
-  const responseContainer = await fetch(`${SITE_URL}/dossiers/${slug}`);
+  const responseContainer = await fetch(`${SITE_URL}/api/dossiers/${slug}`);
   if (!responseContainer.ok) {
     return handleError(responseContainer);
   }
