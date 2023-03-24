@@ -15,12 +15,13 @@ export function getNotifications(
   engine: Engine,
   option?: OptionsGetElement
 ): Notification[] {
-  return Object.values(engine.getParsedRules())
-    .filter(
-      (rule) =>
+  const result = Object.values(engine.getParsedRules())
+    .filter((rule) => {
+      return (
         rule.rawNode.type === "notification" &&
         !!engine.evaluate(rule.dottedName).nodeValue
-    )
+      );
+    })
     .filter(
       (rule: any) =>
         !rule.rawNode.cdtn ||
@@ -42,6 +43,8 @@ export function getNotifications(
       description,
       dottedName,
     }));
+  console.log(result);
+  return result;
 }
 
 export function getNotificationsBloquantes(
