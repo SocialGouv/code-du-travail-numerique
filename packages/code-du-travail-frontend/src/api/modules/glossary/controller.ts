@@ -26,8 +26,9 @@ export class GlossaryController {
     }
   }
 
-  public async getBySlug(slug: string) {
+  public async getBySlug() {
     try {
+      const { slug } = this.req.query;
       const glossaryData = await getGlossary();
 
       const [term] = glossaryData.filter((term) => slug === term.slug);

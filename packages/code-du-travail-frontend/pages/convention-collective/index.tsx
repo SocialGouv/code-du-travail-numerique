@@ -72,7 +72,7 @@ function Page({ ccs }) {
 export default Page;
 
 export const getServerSideProps = async () => {
-  const response = await fetch(`${SITE_URL}/api/agreements/with-contributions`);
+  const response = await fetch(`${SITE_URL}/api/agreements`);
   if (!response.ok) {
     return handleError(response);
   }

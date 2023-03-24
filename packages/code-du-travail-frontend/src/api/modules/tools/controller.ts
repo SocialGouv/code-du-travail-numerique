@@ -11,7 +11,7 @@ export class ToolsController {
     this.res = res;
   }
 
-  public async getAllTools() {
+  public async get() {
     try {
       const { ids: idsString, slugs: slugsString } = this.req.query as any;
       const ids = idsString?.split(",");

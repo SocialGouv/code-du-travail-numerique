@@ -27,10 +27,10 @@ export class ItemsController {
     }
   }
 
-  public async getById() {
+  public async getBySource() {
     try {
-      const { id } = this.req.query;
-      const response = await getByIdItems(id as string);
+      const { source } = this.req.query;
+      const response = await getByIdItems(source as string);
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {

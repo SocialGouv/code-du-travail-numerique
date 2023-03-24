@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
 import { getAllAgreements, getBySlugAgreements } from "./service";
 
-export class ModelesController {
+export class AgreementsController {
   private req: NextApiRequest;
   private res: NextApiResponse;
 

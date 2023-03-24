@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { SuggestController } from "../../src/api";
+import { ItemsController } from "../../../../src/api";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const controller = new SuggestController(req, res);
+  const controller = new ItemsController(req, res);
   if (req.method === "GET") {
-    controller.get();
+    controller.getBySource();
   }
 }

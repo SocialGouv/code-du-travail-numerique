@@ -11,7 +11,7 @@ export class SheetsMtController {
     this.res = res;
   }
 
-  public async get() {
+  public async getBySlug() {
     try {
       const { slug } = this.req.query;
       const response = await getSheetsMtService(slug as string);
