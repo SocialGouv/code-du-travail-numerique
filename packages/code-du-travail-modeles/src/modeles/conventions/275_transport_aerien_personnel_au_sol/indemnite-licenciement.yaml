@@ -11,7 +11,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . age:
   titre: Âge du salarié
-  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
+  question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?
   cdtn:
     type: entier
 
