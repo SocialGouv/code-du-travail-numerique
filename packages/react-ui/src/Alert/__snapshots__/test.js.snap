@@ -1,9 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Alert /> it should render a primary alert 1`] = `
+.c0 {
+  margin-bottom: 1.6rem;
+  padding: 1.6rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f66663;
+  border-radius: 0.6rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <div
-    class="sc-bcXHqe jLKkvd"
+    class="c0"
   >
     this is a 
     primary
@@ -13,9 +31,27 @@ exports[`<Alert /> it should render a primary alert 1`] = `
 `;
 
 exports[`<Alert /> it should render a secondary alert 1`] = `
+.c0 {
+  margin-bottom: 1.6rem;
+  padding: 1.6rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <div
-    class="sc-bcXHqe bSPmec"
+    class="c0"
   >
     this is a 
     secondary
@@ -25,9 +61,27 @@ exports[`<Alert /> it should render a secondary alert 1`] = `
 `;
 
 exports[`<Alert /> should render 1`] = `
+.c0 {
+  margin-bottom: 1.6rem;
+  padding: 1.6rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <div
-    class="sc-bcXHqe bSPmec"
+    class="c0"
   >
     this is an alert 
   </div>

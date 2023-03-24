@@ -1,9 +1,84 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MoreContent /> renders with an More icon 1`] = `
+.c0 {
+  margin-bottom: 2.4rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c1:hover,
+.c1:focus,
+.c1:focus-within,
+.c1[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 2.2rem;
+  height: 2.2rem;
+  color: #f66663;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+[aria-expanded="true"] .c2,
+[aria-selected="true"] .c3 {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c4 {
+  margin: 1rem 0 1rem 1rem;
+}
+
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c5 {
+  padding: 1rem 0 0 3.2rem;
+  -webkit-animation: iHsNqv 250ms ease-in;
+  animation: iHsNqv 250ms ease-in;
+}
+
+@media (max-width:600px) {
+  .c5 {
+    padding: 1rem 0;
+  }
+}
+
 <div>
   <div
-    class="sc-bcXHqe gcjDRL"
+    class="c0"
     data-accordion-component="Accordion"
   >
     <div
@@ -18,7 +93,7 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
           aria-controls="accordion__panel-raa-0"
           aria-disabled="false"
           aria-expanded="false"
-          class="sc-gswNZR kjNnjy"
+          class="c1"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-raa-0"
           role="button"
@@ -26,7 +101,7 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="sc-dkrFOg fFKuqS"
+            class="c2 c3"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,20 +114,20 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
             />
           </svg>
           <div
-            class="sc-hLBbgP dYDCZS"
+            class="c4"
           >
             Would you like to know more ?
           </div>
         </div>
       </div>
       <div
-        class="sc-jSUZER cpdKRR"
+        class="c5"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-raa-0"
       >
         <div
-          class="sc-eDvSVe fEqqYP"
+          class="c6"
         >
           Here’s some more
         </div>

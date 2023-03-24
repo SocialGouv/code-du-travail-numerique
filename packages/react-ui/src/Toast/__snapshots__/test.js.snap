@@ -1,12 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Toast /> Should render a wide toast 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7994d4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  -webkit-animation: none;
+  animation: none;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR iGunOq"
+    class="c0"
   >
     <div
-      class="sc-dkrFOg dlORJV"
+      class="c1"
       role="alert"
     >
       I’m big and beautiful
@@ -16,12 +57,53 @@ exports[`<Toast /> Should render a wide toast 1`] = `
 `;
 
 exports[`<Toast /> render default toast 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7994d4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR jHicpH"
+    class="c0"
   >
     <div
-      class="sc-dkrFOg dlORJV"
+      class="c1"
       role="alert"
     >
       Default content
@@ -31,12 +113,53 @@ exports[`<Toast /> render default toast 1`] = `
 `;
 
 exports[`<Toast /> render primary toast 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #f66663;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR bdwhLx"
+    class="c0"
   >
     <div
-      class="sc-dkrFOg dlORJV"
+      class="c1"
       role="alert"
     >
       primary
@@ -47,12 +170,53 @@ exports[`<Toast /> render primary toast 1`] = `
 `;
 
 exports[`<Toast /> render secondary toast 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7994d4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR jHicpH"
+    class="c0"
   >
     <div
-      class="sc-dkrFOg dlORJV"
+      class="c1"
       role="alert"
     >
       secondary
@@ -63,12 +227,53 @@ exports[`<Toast /> render secondary toast 1`] = `
 `;
 
 exports[`<Toast /> render with from-bottom animated toast 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7994d4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: iPLeYy 300ms ease-out;
+  animation: iPLeYy 300ms ease-out;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR gLMLbN"
+    class="c0"
   >
     <div
-      class="sc-dkrFOg dlORJV"
+      class="c1"
       role="alert"
     >
       from-bottom
@@ -79,12 +284,53 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
 `;
 
 exports[`<Toast /> render with from-left animated toast 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7994d4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: enLcaT 500ms ease-out;
+  animation: enLcaT 500ms ease-out;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR fxiFta"
+    class="c0"
   >
     <div
-      class="sc-dkrFOg dlORJV"
+      class="c1"
       role="alert"
     >
       from-left
@@ -95,12 +341,53 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
 `;
 
 exports[`<Toast /> render with from-right animated toast 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7994d4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: cRzqUi 500ms ease-out;
+  animation: cRzqUi 500ms ease-out;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR fAcLrx"
+    class="c0"
   >
     <div
-      class="sc-dkrFOg dlORJV"
+      class="c1"
       role="alert"
     >
       from-right
@@ -111,12 +398,53 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
 `;
 
 exports[`<Toast /> render with from-top animated toast 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7994d4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: jXHvrj 0.3s ease-out;
+  animation: jXHvrj 0.3s ease-out;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR FexLi"
+    class="c0"
   >
     <div
-      class="sc-dkrFOg dlORJV"
+      class="c1"
       role="alert"
     >
       from-top

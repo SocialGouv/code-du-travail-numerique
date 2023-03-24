@@ -1,12 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tooltip /> renders bottom tooltip 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
+  border: none;
+  background: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
 <div>
   <div
-    class="sc-bcXHqe kcDQFN"
+    class="c0"
   >
     <button
-      class="sc-gswNZR joaVWx"
+      class="c1"
     >
       A simple tooltip
     </button>
@@ -15,12 +36,33 @@ exports[`<Tooltip /> renders bottom tooltip 1`] = `
 `;
 
 exports[`<Tooltip /> renders custom color tooltip 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
+  border: none;
+  background: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
 <div>
   <div
-    class="sc-bcXHqe kcDQFN"
+    class="c0"
   >
     <button
-      class="sc-gswNZR joaVWx"
+      class="c1"
     >
       A simple tooltip
     </button>
@@ -29,12 +71,33 @@ exports[`<Tooltip /> renders custom color tooltip 1`] = `
 `;
 
 exports[`<Tooltip /> renders left tooltip 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
+  border: none;
+  background: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
 <div>
   <div
-    class="sc-bcXHqe kcDQFN"
+    class="c0"
   >
     <button
-      class="sc-gswNZR joaVWx"
+      class="c1"
     >
       A simple tooltip
     </button>
@@ -43,12 +106,33 @@ exports[`<Tooltip /> renders left tooltip 1`] = `
 `;
 
 exports[`<Tooltip /> renders right tooltip 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
+  border: none;
+  background: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
 <div>
   <div
-    class="sc-bcXHqe kcDQFN"
+    class="c0"
   >
     <button
-      class="sc-gswNZR joaVWx"
+      class="c1"
     >
       A simple tooltip
     </button>
@@ -57,12 +141,33 @@ exports[`<Tooltip /> renders right tooltip 1`] = `
 `;
 
 exports[`<Tooltip /> renders simple tooltip 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
+  border: none;
+  background: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
 <div>
   <div
-    class="sc-bcXHqe kcDQFN"
+    class="c0"
   >
     <button
-      class="sc-gswNZR joaVWx"
+      class="c1"
     >
       A simple tooltip
     </button>

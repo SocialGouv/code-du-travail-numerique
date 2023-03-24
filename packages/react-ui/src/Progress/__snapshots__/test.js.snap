@@ -1,17 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Progress /> renders progress bar 1`] = `
+.c0 {
+  width: 50%;
+  height: 0.2rem;
+  background-color: #f66663;
+}
+
 <div>
   <div
-    class="sc-bcXHqe cTQEzR"
+    class="c0"
   />
 </div>
 `;
 
 exports[`<Progress /> renders secondary progress secondary 1`] = `
+.c0 {
+  width: 80%;
+  height: 0.2rem;
+  background-color: #7994d4;
+}
+
 <div>
   <div
-    class="sc-bcXHqe eLHtPq"
+    class="c0"
   />
 </div>
 `;

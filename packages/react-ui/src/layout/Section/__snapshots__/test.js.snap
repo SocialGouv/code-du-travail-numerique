@@ -1,9 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Section /> it renders a dark Section 1`] = `
+.c0 {
+  padding: 3.2rem 0;
+  background-color: #e4e8ef;
+  color: #3e486e;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 2.4rem 0;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR jLeRGc"
+    class="c0"
   >
     this is a Button 
     dark
@@ -13,9 +25,21 @@ exports[`<Section /> it renders a dark Section 1`] = `
 `;
 
 exports[`<Section /> it renders a default Section 1`] = `
+.c0 {
+  padding: 3.2rem 0;
+  background-color: transparent;
+  color: #3e486e;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 2.4rem 0;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR uUAJC"
+    class="c0"
   >
     this is a Button 
     default
@@ -25,9 +49,21 @@ exports[`<Section /> it renders a default Section 1`] = `
 `;
 
 exports[`<Section /> it renders a light Section 1`] = `
+.c0 {
+  padding: 3.2rem 0;
+  background-color: #f2f5fa;
+  color: #3e486e;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 2.4rem 0;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR dLynAL"
+    class="c0"
   >
     this is a Button 
     light
@@ -37,9 +73,21 @@ exports[`<Section /> it renders a light Section 1`] = `
 `;
 
 exports[`<Section /> it renders a white Section 1`] = `
+.c0 {
+  padding: 3.2rem 0;
+  background-color: #fff;
+  color: #3e486e;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 2.4rem 0;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR clahId"
+    class="c0"
   >
     this is a Button 
     white
@@ -49,15 +97,54 @@ exports[`<Section /> it renders a white Section 1`] = `
 `;
 
 exports[`<Section /> renders large decorated section 1`] = `
+.c0 {
+  position: relative;
+  margin: 6rem 0;
+  padding: 6rem 0;
+  min-height: 10rem;
+  color: #3e486e;
+}
+
+.c1 {
+  position: absolute;
+  top: 0;
+  right: 30%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  background-color: #e4e8ef;
+  border-radius: 0 10rem 10rem 0;
+  content: "";
+}
+
+.c2 {
+  position: relative;
+  z-index: 0;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    margin: 3.2rem 0 4rem;
+    padding: 3.2rem 0 4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    right: 2rem;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR fGHcEH"
+    class="c0"
   >
     <div
-      class="sc-dkrFOg VmEAo"
+      class="c1"
     />
     <div
-      class="sc-eDvSVe dfRDwP"
+      class="c2"
     >
       A decorated dark section
     </div>
@@ -66,15 +153,47 @@ exports[`<Section /> renders large decorated section 1`] = `
 `;
 
 exports[`<Section /> renders with correct decoration 1`] = `
+.c0 {
+  position: relative;
+  margin: 5rem 0;
+  padding: 3.2rem 0;
+  min-height: 10rem;
+  color: #3e486e;
+}
+
+.c1 {
+  position: absolute;
+  top: 0;
+  right: 30%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  background-color: #e4e8ef;
+  border-radius: 0 10rem 10rem 0;
+  content: "";
+}
+
+.c2 {
+  position: relative;
+  z-index: 0;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    right: 2rem;
+  }
+}
+
 <div>
   <div
-    class="sc-gswNZR bPmTxc"
+    class="c0"
   >
     <div
-      class="sc-dkrFOg VmEAo"
+      class="c1"
     />
     <div
-      class="sc-eDvSVe dfRDwP"
+      class="c2"
     >
       A decorated dark section
     </div>
