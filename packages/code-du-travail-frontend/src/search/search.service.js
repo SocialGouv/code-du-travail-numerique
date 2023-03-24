@@ -1,9 +1,9 @@
 import memoizee from "memoizee";
 import pDebounce from "p-debounce";
-import { API_URL } from "../config";
+import { SITE_URL } from "../config";
 
 const fetchSearchResults = async (query = "", excludeSources = "") => {
-  const url = `${API_URL}/search?q=${encodeURIComponent(
+  const url = `${SITE_URL}/api/search?q=${encodeURIComponent(
     query
   )}&excludeSources=${encodeURIComponent(excludeSources)}`;
   const response = await fetch(url);
@@ -14,7 +14,7 @@ const fetchSearchResults = async (query = "", excludeSources = "") => {
 };
 
 const fetchSuggestResults = async (query) => {
-  const url = `${API_URL}/suggest?q=${query}`;
+  const url = `${SITE_URL}/api/suggest?q=${query}`;
   const response = await fetch(url);
 
   if (!response.ok) {

@@ -46,15 +46,8 @@ jobs:
         with:
           cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1
 
-      - name: Get api url for site
-        uses: mikefarah/yq@v4.30.5
-        id: yq_api_url
-        with:
-          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | head -n 1
-
       - name: Set env
         run: |
-          echo "API_URL=https://${{ steps.yq_api_url.outputs.result }}" >> $GITHUB_ENV
           echo "SITE_URL=https://${{ steps.yq_url.outputs.result }}" >> $GITHUB_ENV
           echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
       - name: Register docker images
@@ -72,7 +65,6 @@ jobs:
             NEXT_PUBLIC_AZURE_CONTAINER=cdtn
             NEXT_PUBLIC_PIWIK_SITE_ID=3
             NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
-            NEXT_PUBLIC_API_URL=${{ env.API_URL }}/api/v1
             NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
             NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
 

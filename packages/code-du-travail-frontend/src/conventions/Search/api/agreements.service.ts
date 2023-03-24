@@ -1,6 +1,6 @@
 import debounce from "debounce-promise";
 import memoizee from "memoizee";
-import { API_URL } from "../../../config";
+import { SITE_URL } from "../../../config";
 
 import { nafError } from "./error";
 import { Agreement } from "./type";
@@ -26,10 +26,10 @@ const apiIdcc = memoizee(
     if (/^\d{5,}$/.test(query.replace(/^(\s+)|(\s+)$/g, ""))) {
       return Promise.reject(onlyNumberError);
     }
-    let url = `${API_URL}/idcc?q=${encodeURIComponent(query)}`;
+    let url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(query)}`;
 
     if (/^\d+$/.test(query.replace(/\W/g, ""))) {
-      url = `${API_URL}/idcc?q=${encodeURIComponent(
+      url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(
         parseInt(query.replace(/\W/g, ""))
       )}`;
     }

@@ -1,7 +1,5 @@
 const { version } = require("../package.json");
 
-export const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:1337/api/v1";
 export const AZURE_BASE_URL =
   process.env.NEXT_PUBLIC_AZURE_BASE_URL ??
   "https://cdtnadmindev.blob.core.windows.net";

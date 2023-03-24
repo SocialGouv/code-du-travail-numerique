@@ -5,13 +5,13 @@ import {
   SOURCES,
 } from "@socialgouv/cdtn-utils";
 import { getContents } from "../content";
-import { API_URL } from "../config";
+import { SITE_URL } from "../config";
 
 export const getEditorialContentBySlug = async (
   slug: string
 ): Promise<EditorialContentData | undefined> => {
   const responseContainer = await fetch(
-    `${API_URL}/items/${SOURCES.EDITORIAL_CONTENT}/${slug}`
+    `${SITE_URL}/api/items/${SOURCES.EDITORIAL_CONTENT}/${slug}`
   );
   if (!responseContainer.ok) {
     return;

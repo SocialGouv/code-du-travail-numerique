@@ -1,9 +1,5 @@
 # Code du travail numérique - dev
 
-[![Build Status](https://travis-ci.com/SocialGouv/code-du-travail-numerique.svg?branch=master)](https://travis-ci.com/SocialGouv/code-du-travail-numerique)
-[![codecov](https://codecov.io/gh/SocialGouv/code-du-travail-numerique/branch/master/graph/badge.svg)](https://codecov.io/gh/SocialGouv/code-du-travail-numerique)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSocialGouv%2Fcode-du-travail-numerique.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FSocialGouv%2Fcode-du-travail-numerique?ref=badge_shield)
-
 ![schema](./schema.png)
 
 ## URLs
@@ -38,12 +34,6 @@ Run the frontend with our online latest API :
 
 ```sh
 yarn dev:frontend:preprod-api
-```
-
-If you need to work on both frontend and api, don't provide API_URL as it will fallback to `http://localhost:1337/api/v1`
-
-```sh
-yarn dev:frontend
 ```
 
 The React components are defined in the [react-ui](./packages/react-ui) package and showcased here: <https://socialgouv.github.io/code-du-travail-numerique/>

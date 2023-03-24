@@ -1,6 +1,6 @@
 import debounce from "debounce-promise";
 import memoizee from "memoizee";
-import { API_URL } from "../../../config";
+import { SITE_URL } from "../../../config";
 
 import { Agreement } from "./type";
 
@@ -52,15 +52,9 @@ const apiEnterprises = memoizee(function createFetcher(
     return Promise.reject(siretNumberError);
   }
 
-  const url = `${API_URL}/enterprises?q=${encodeURIComponent(query)}${
+  const url = `${SITE_URL}/api/enterprises?q=${encodeURIComponent(query)}${
     address ? `&a=${encodeURIComponent(address)}` : ""
   }`;
-
-  // if (/^\d{14}$/.test(query.replace(/\s/g, ""))) {
-  //   url = `${ENTERPRISE_API_URL}/etablissement/${query}`;
-  // } else if (/^\d{9}$/.test(query.replace(/\s/g, ""))) {
-  //   url = `${ENTERPRISE_API_URL}/entreprise/${query}`;
-  // }
 
   return fetch(url)
     .then(async (response) => {
