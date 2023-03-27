@@ -13,5 +13,4 @@ export * from "./items";
 export * from "./idcc";
 export * from "./glossary";
 export * from "./enterprises";
-export * from "./docs-count";
 export * from "./dossiers";

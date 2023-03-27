@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IDCC getIdccByQuery 1`] = `
+{
+  "_shards": {
+    "failed": 0,
+    "skipped": 0,
+    "successful": 1,
+    "total": 1,
+  },
+  "hits": {
+    "hits": [
+      {
+        "_id": "19",
+        "_index": "cdtn_test-v2_documents",
+        "_score": 6.9340725,
+        "_source": {
+          "cdtnId": "ceb38cca3c",
+          "effectif": 219,
+          "id": "KALICONT000023973390",
+          "num": 2701,
+          "shortTitle": "Banque : personnel des banques de la Guyane",
+          "slug": "2701-banque-personnel-des-banques-de-la-guyane",
+          "title": "Banque : personnel des banques de la Guyane",
+          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023973390",
+        },
+        "_type": "_doc",
+      },
+    ],
+    "max_score": 6.9340725,
+    "total": {
+      "relation": "eq",
+      "value": 1,
+    },
+  },
+  "timed_out": false,
+  "took": 3,
+}
+`;

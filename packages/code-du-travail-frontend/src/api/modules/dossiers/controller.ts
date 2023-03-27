@@ -11,9 +11,10 @@ export class DossiersController {
     this.res = res;
   }
 
-  public async get() {
+  public async getBySlug() {
     try {
-      const slug = this.req.query.slug as string;
+      const { slug } = this.req.query as any;
+      console.log(slug);
       const response = await getDossiers(slug);
       this.res.status(200).json(response);
     } catch (error) {

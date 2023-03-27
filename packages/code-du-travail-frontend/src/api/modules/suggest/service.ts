@@ -3,7 +3,7 @@ import { getSuggestQuery } from "./queries";
 
 const minQueryLength = 2;
 
-export const getSuggestions = async (q: string, size: number) => {
+export const getSuggestions = async (q: string, size = 5) => {
   if (q.length >= minQueryLength) {
     const body = getSuggestQuery(q, size);
     const response = await elasticsearchClient.search({

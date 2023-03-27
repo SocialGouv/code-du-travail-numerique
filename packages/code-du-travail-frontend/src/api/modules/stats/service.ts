@@ -4,7 +4,7 @@ import {
   elasticDocumentsIndex,
   NotFoundError,
 } from "../../utils";
-import { getDocsCountQuery } from "../docs-count/queries";
+import { getDocsCountQuery } from "./queries";
 
 export const getStatsService = async () => {
   const body = getDocsCountQuery();

@@ -56,9 +56,9 @@ export const getByIdItems = async (id: string) => {
 };
 
 export const getAll = async (
-  url: string,
-  source: string,
-  idsString: string
+  url?: string,
+  source?: string,
+  idsString?: string
 ) => {
   const ids = idsString?.split(",");
   const body = getDocumentBody({ ids, source, url });
