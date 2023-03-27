@@ -9,6 +9,7 @@ import {
   DureePreavisLicenciement,
   DureePreavisRetraite,
   DismissalProcess,
+  CalculateurIndemnite,
   fetchTool,
 } from "../../src/outils";
 
@@ -16,6 +17,7 @@ const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": DureePreavisRetraite,
   "procedure-licenciement": DismissalProcess,
+  "indemnite-licenciement": CalculateurIndemnite,
 };
 
 interface Props {
