@@ -3,10 +3,6 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
 import { getGenericContributions } from "../contributions";
 
-export type GetGenericContributions = {
-  contributions: ElasticSearchItem[];
-};
-
 export class ContributionsController {
   private req: NextApiRequest;
   private res: NextApiResponse;
@@ -18,10 +14,7 @@ export class ContributionsController {
 
   public async getGenericContributions() {
     try {
-      const contributions = await getGenericContributions();
-      const response: GetGenericContributions = {
-        contributions,
-      };
+      const response = await getGenericContributions();
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {

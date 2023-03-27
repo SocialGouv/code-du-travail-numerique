@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { NotFoundError, DEFAULT_ERROR_500_MESSAGE } from "../../utils";
-import { getThemeBySlugQuery, getThemes } from "./queries";
+import { getAllThemes, getBySlugThemes } from "./service";
 
 export class ThemesController {
   private req: NextApiRequest;
@@ -13,7 +13,7 @@ export class ThemesController {
 
   public async get() {
     try {
-      const response = await getThemes();
+      const response = await getAllThemes();
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {
@@ -29,7 +29,7 @@ export class ThemesController {
   public async getBySlug() {
     try {
       const { slug } = this.req.query;
-      const response = await getThemeBySlugQuery(slug as string);
+      const response = await getBySlugThemes(slug as string);
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {

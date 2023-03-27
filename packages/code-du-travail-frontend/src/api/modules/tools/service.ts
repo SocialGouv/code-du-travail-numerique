@@ -4,7 +4,7 @@ import {
   elasticDocumentsIndex,
   NotFoundError,
 } from "../../utils";
-import { getTools, getToolBySlug } from "./queries";
+import { getTools } from "./queries";
 
 export const getAllTools = async (): Promise<Tool[]> => {
   const body = getTools();
@@ -74,7 +74,7 @@ export const getToolsBySlugs = async (slugs: string[]): Promise<Tool[]> => {
 };
 
 export const getBySlugTools = async (slug: string): Promise<Tool> => {
-  const body = getToolBySlug(slug);
+  const body = getTools(undefined, [slug]);
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,

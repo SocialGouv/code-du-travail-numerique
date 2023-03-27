@@ -388,7 +388,52 @@ exports[`<Search /> when searching by text, should use enterprise API 1`] = `
     <p
       class="sc-GKYbw gcbROE"
     >
-      Le service de recherche est indisponible.
+      <svg
+        aria-labelledby="title desc"
+        class="__react-svg-spinner_circle"
+        height="1em"
+        role="img"
+        style="animation-duration: 750ms;"
+        viewBox="0 0 32 32"
+        width="1em"
+      >
+        <title
+          id="title"
+        >
+          Circle loading spinner
+        </title>
+        <desc
+          id="desc"
+        >
+          Image of a partial circle indicating "loading."
+        </desc>
+        <style>
+          
+      .__react-svg-spinner_circle{
+          transition-property: transform;
+          animation-name: __react-svg-spinner_infinite-spin;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+      }
+      @keyframes __react-svg-spinner_infinite-spin {
+          from {transform: rotate(0deg)}
+          to {transform: rotate(360deg)}
+      }
+    
+        </style>
+        <circle
+          cx="16"
+          cy="16"
+          fill="none"
+          r="12"
+          role="presentation"
+          stroke="rgba(0,0,0,0.4)"
+          stroke-dasharray="43.982297150257104"
+          stroke-linecap="round"
+          stroke-width="4"
+        />
+      </svg>
+       Recherche des convention collectives...
     </p>
   </div>
   <p
