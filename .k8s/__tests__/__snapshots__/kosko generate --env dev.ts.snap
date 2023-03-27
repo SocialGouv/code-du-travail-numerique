@@ -140,19 +140,6 @@ spec:
                 name: www-secret
             - configMapRef:
                 name: www-configmap
-      initContainers:
-        - args:
-            - http://api
-          image: ghcr.io/socialgouv/docker/wait-for-http:6.56.1
-          imagePullPolicy: Always
-          name: wait-for-www
-          resources:
-            limits:
-              cpu: 20m
-              memory: 32Mi
-            requests:
-              cpu: 5m
-              memory: 16Mi
 ---
 apiVersion: bitnami.com/v1alpha1
 kind: SealedSecret
