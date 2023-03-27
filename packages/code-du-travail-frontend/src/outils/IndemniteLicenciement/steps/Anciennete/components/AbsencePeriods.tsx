@@ -122,7 +122,6 @@ const AbsencePeriods = ({
     onChange(newAbsences);
   };
 
-  console.log("MMA - Render ", localAbsences);
   return (
     <>
       {messageMotifExample && <p>{messageMotifExample}</p>}
