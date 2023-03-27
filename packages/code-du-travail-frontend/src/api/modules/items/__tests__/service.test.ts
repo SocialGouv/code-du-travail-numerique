@@ -6,7 +6,7 @@ describe("Items", () => {
     expect(result).toMatchSnapshot();
   });
 
-  it("getAll", async () => {
+  it("getBySourceAndSlugItems", async () => {
     const result = await getBySourceAndSlugItems(
       "fiches_service_public",
       "demission-dun-salarie"
