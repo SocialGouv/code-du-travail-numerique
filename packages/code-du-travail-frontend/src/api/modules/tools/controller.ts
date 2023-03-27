@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
-import { getToolBySlug, getTools } from "./queries";
+import { getBySlugTools, getToolsByIdsAndSlugs } from "./service";
 
 export class ToolsController {
   private req: NextApiRequest;
@@ -13,10 +13,11 @@ export class ToolsController {
 
   public async get() {
     try {
+      console.log(this.req);
       const { ids: idsString, slugs: slugsString } = this.req.query as any;
       const ids = idsString?.split(",");
       const slugs = slugsString?.split(",");
-      const response = await getTools(ids, slugs);
+      const response = await getToolsByIdsAndSlugs(ids, slugs);
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {
@@ -32,7 +33,7 @@ export class ToolsController {
   public async getBySlug() {
     try {
       const { slug } = this.req.query as any;
-      const response = await getToolBySlug(slug);
+      const response = await getBySlugTools(slug);
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {

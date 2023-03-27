@@ -22,6 +22,25 @@ export const getAllTools = async (): Promise<Tool[]> => {
   return response.body.hits.hits;
 };
 
+export const getToolsByIdsAndSlugs = async (
+  ids?: string[],
+  slugs?: string[]
+): Promise<Tool[]> => {
+  const body = getTools(ids, slugs);
+  const response = await elasticsearchClient.search({
+    body,
+    index: elasticDocumentsIndex,
+  });
+  if (response.body.hits.total.value === 0) {
+    throw new NotFoundError({
+      message: `There is no tools that match query`,
+      name: "TOOLS_NOT_FOUND",
+      cause: null,
+    });
+  }
+  return response.body.hits.hits;
+};
+
 export const getToolsByIds = async (cdtnIds: string[]): Promise<Tool[]> => {
   const body = getTools(undefined, undefined, cdtnIds);
   const response = await elasticsearchClient.search({
