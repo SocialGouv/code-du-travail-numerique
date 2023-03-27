@@ -15,7 +15,7 @@ export function getNotifications(
   engine: Engine,
   option?: OptionsGetElement
 ): Notification[] {
-  const result = Object.values(engine.getParsedRules())
+  return Object.values(engine.getParsedRules())
     .filter((rule) => {
       return (
         rule.rawNode.type === "notification" &&
@@ -43,8 +43,6 @@ export function getNotifications(
       description,
       dottedName,
     }));
-  console.log(result);
-  return result;
 }
 
 export function getNotificationsBloquantes(
