@@ -203,7 +203,5 @@ async function msearch(searches) {
     return state;
   }, {});
 
-  results.took = body.took;
-
   return results;
 }
