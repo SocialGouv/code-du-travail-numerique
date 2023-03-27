@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       url: PIWIK_URL,
       onInitialization: () => {
         const referrerUrl =
-          document.referrer || getSourceUrlFromPath(SITE_URL + router.asPath);
+          document?.referrer || getSourceUrlFromPath(SITE_URL + router.asPath);
         if (referrerUrl) {
           push(["setReferrerUrl", referrerUrl]);
         }
