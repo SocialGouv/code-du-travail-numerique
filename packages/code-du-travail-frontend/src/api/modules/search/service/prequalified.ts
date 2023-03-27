@@ -1,5 +1,5 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import fuzz from "fuzzball";
+const fuzz = require("fuzzball");
 import deburr from "lodash.deburr";
 import memoizee from "memoizee";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../../utils";
