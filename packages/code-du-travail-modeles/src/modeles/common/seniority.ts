@@ -23,8 +23,7 @@ export type DefaultSeniorityRequiredProps = DefaultSeniorityProps & {
 
 export abstract class SeniorityDefault<
   T extends SupportedCcIndemniteLicenciement
-> implements ISeniority<T>
-{
+> implements ISeniority<T> {
   computeSeniority({
     dateEntree,
     dateSortie,
@@ -48,20 +47,19 @@ export abstract class SeniorityDefault<
   ): SeniorityResult {
     const dEntree = parseDate(from);
     const dSortie = addDays(parseDate(to), 1);
-    const totalAbsence =
-      absences
-        .filter((period) => Boolean(period.durationInMonth))
-        .reduce((total, item) => {
-          const m = this.getMotifs().find(
-            (motif) => motif.key === item.motif.key
-          );
-          if (!m || !item.durationInMonth) {
-            return total;
-          }
-          return total + item.durationInMonth * m.value;
-        }, 0) / 12;
+    const totalAbsence = absences
+      .filter((period) => Boolean(period.durationInMonth))
+      .reduce((total, item) => {
+        const m = this.getMotifs().find(
+          (motif) => motif.key === item.motif.key
+        );
+        if (!m || !item.durationInMonth) {
+          return total;
+        }
+        return total + item.durationInMonth * m.value;
+      }, 0);
     return {
-      value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence,
+      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
     };
   }
 

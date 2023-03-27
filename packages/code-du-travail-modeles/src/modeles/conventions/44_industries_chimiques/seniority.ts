@@ -15,8 +15,7 @@ import { parseDate } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
 
 export class Seniority44
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC0044>
-{
+  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC0044> {
   computeSeniority({
     dateEntree,
     dateSortie,
@@ -45,24 +44,23 @@ export class Seniority44
     const dEntree = parseDate(from);
     const dSortie = addDays(parseDate(to), 1);
 
-    const totalAbsence =
-      absences.reduce((total, item) => {
-        const m = this.getMotifs().find(
-          (motif) => motif.key === item.motif.key
-        );
-        if (item.durationInMonth === undefined || !m) {
-          return total;
-        }
-        if (
-          item.motif.key === MotifKeys.maladieNonPro &&
-          item.durationInMonth > 36
-        ) {
-          return total + (item.durationInMonth - 36);
-        }
-        return total + item.durationInMonth * m.value;
-      }, 0) / 12;
+    const totalAbsence = absences.reduce((total, item) => {
+      const m = this.getMotifs().find((motif) => motif.key === item.motif.key);
+      if (item.durationInMonth === undefined || !m) {
+        return total;
+      }
+      if (
+        item.motif.key === MotifKeys.maladieNonPro &&
+        item.durationInMonth > 36
+      ) {
+        return total + (item.durationInMonth - 36);
+      }
+      return total + item.durationInMonth * m.value;
+    }, 0);
 
-    return { value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence };
+    return {
+      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
+    };
   }
 }
 
