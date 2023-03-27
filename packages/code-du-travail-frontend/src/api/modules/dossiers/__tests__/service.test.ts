@@ -3,7 +3,7 @@ import { getDossiers } from "../service";
 describe("Dossiers", () => {
   it("getDossiers", async () => {
     const result = await getDossiers(
-      "ministere-du-travail-notre-dossier-sur-le-coronavirus"
+      "aides-et-accompagnement-embauche-et-perennisation-des-emplois"
     );
     expect(result).toMatchSnapshot();
   });
