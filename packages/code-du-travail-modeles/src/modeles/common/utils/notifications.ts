@@ -16,12 +16,11 @@ export function getNotifications(
   option?: OptionsGetElement
 ): Notification[] {
   return Object.values(engine.getParsedRules())
-    .filter((rule) => {
-      return (
+    .filter(
+      (rule) =>
         rule.rawNode.type === "notification" &&
         !!engine.evaluate(rule.dottedName).nodeValue
-      );
-    })
+    )
     .filter(
       (rule: any) =>
         !rule.rawNode.cdtn ||
