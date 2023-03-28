@@ -45,7 +45,7 @@ export default function RadioQuestion({
 
   return (
     <>
-      <Fieldset>
+      <StyledFieldset>
         <Question required={showRequired} tooltip={tooltip}>
           <Html as="span">{label}</Html>
         </Question>
@@ -70,11 +70,15 @@ export default function RadioQuestion({
           )}
         </RadioContainer>
         {note && <SmallText as="i">{note}</SmallText>}
-      </Fieldset>
+      </StyledFieldset>
     </>
   );
 }
 
 export const ErrorWrapper = styled.div`
   display: flex;
+`;
+
+export const StyledFieldset = styled(Fieldset)`
+  display: contents;
 `;

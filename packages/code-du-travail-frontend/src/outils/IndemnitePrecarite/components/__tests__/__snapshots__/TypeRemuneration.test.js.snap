@@ -3,7 +3,7 @@
 exports[`<TypeRemuneration /> should render 1`] = `
 <div>
   <legend
-    class="sc-hsWlPz dQgJqc"
+    class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
     data-testid="question-label"
   >
     <span

@@ -1,19 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { AbsencePeriods } from "./components";
-import { useIndemniteLicenciementStore } from "../../store";
-import { getSupportedAgreement } from "@socialgouv/modeles-social";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 import Html from "../../../../common/Html";
 // Do not optimize the following import
 import { getMessageMotifExample } from "../../agreements/ui-customizations";
 
 const StepAnciennete = () => {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     init,
     onChangeAbsencePeriods,
+    motifs,
     absencePeriods,
     onChangeHasAbsenceProlonge,
     hasAbsenceProlonge,
@@ -28,11 +32,11 @@ const StepAnciennete = () => {
     errorAbsenceProlonge,
     errorDateEntree,
     errorAbsencePeriods,
-    agreement,
     informationData,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     init: state.ancienneteFunction.init,
     onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
+    motifs: state.ancienneteData.input.motifs,
     absencePeriods: state.ancienneteData.input.absencePeriods,
     onChangeHasAbsenceProlonge:
       state.ancienneteFunction.onChangeHasAbsenceProlonge,
@@ -134,12 +138,8 @@ const StepAnciennete = () => {
       />
       {hasAbsenceProlonge === "oui" && (
         <AbsencePeriods
-          idcc={
-            agreement
-              ? getSupportedAgreement(agreement.num) ?? undefined
-              : undefined
-          }
           onChange={onChangeAbsencePeriods}
+          motifs={motifs}
           absences={absencePeriods}
           error={errorAbsencePeriods}
           informationData={informationData}

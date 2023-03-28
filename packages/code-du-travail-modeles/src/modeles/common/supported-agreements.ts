@@ -1,4 +1,5 @@
 export enum SupportedCcIndemniteLicenciement {
+  IDCC1505 = "1505",
   IDCC1516 = "1516",
   IDCC1518 = "1518",
   IDCC2511 = "2511",
@@ -30,8 +31,14 @@ export enum SupportedCcIndemniteLicenciement {
   IDCC1597 = "1597",
   IDCC787 = "787",
   IDCC843 = "843",
+  IDCC1147 = "1147",
   default = "default",
 }
+
+export const INDEMNITE_LICENCIEMENT_PRODUCTION_READY_CC: number[] = [
+  16, 29, 44, 413, 573, 650, 1090, 1351, 1486, 1501, 1518, 1527, 1596, 1597,
+  1979, 2216, 2264, 2941, 3043, 3127, 3239,
+];
 
 export const getSupportedAgreement = (
   idcc: number

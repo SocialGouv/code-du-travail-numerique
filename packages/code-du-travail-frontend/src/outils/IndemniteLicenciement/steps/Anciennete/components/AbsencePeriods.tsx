@@ -1,5 +1,4 @@
-import { Absence, SeniorityFactory } from "@socialgouv/modeles-social";
-import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social/bin";
+import { Absence, Motif } from "@socialgouv/modeles-social";
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
@@ -12,57 +11,65 @@ import type { AncienneteAbsenceStoreError } from "../store";
 
 type Props = {
   onChange: (absences: Absence[]) => void;
+  motifs: Motif[];
   absences: Absence[];
   informationData: Record<string, string | undefined>;
   error?: {
     global?: string;
     absences?: AncienneteAbsenceStoreError[];
   };
-  idcc?: SupportedCcIndemniteLicenciement;
   messageMotifExample?: string;
+};
+
+export type AbsenceWithKey = Absence & {
+  key: string;
+};
+
+const generateUniqueKey = (): string => {
+  return Math.random().toString(36).substring(2, 15);
+};
+
+const mapAbsences = (
+  absences: Absence[],
+  defaultMotif: Motif
+): AbsenceWithKey[] => {
+  return absences.length > 0
+    ? absences.map((absence) => ({ ...absence, key: generateUniqueKey() }))
+    : [
+        {
+          motif: defaultMotif,
+          durationInMonth: undefined,
+          key: generateUniqueKey(),
+        },
+      ];
 };
 
 const AbsencePeriods = ({
   onChange,
+  motifs,
   absences,
   error,
-  idcc,
   informationData,
   messageMotifExample,
 }: Props) => {
-  const motifs = new SeniorityFactory()
-    .create(idcc ?? SupportedCcIndemniteLicenciement.default)
-    .getMotifs();
-  const [localAbsences, setLocalAbsences] = React.useState<Absence[]>(
-    absences.length > 0
-      ? absences
-      : [
-          {
-            motif: motifs[0],
-            durationInMonth: undefined,
-          },
-        ]
+  const [localAbsences, setLocalAbsences] = React.useState<AbsenceWithKey[]>(
+    mapAbsences(absences, motifs[0])
   );
 
   useEffect(() => {
-    setLocalAbsences(
-      absences.length > 0
-        ? absences
-        : [
-            {
-              motif: motifs[0],
-              durationInMonth: undefined,
-            },
-          ]
-    );
-  }, [absences, motifs]);
+    if (absences.length != localAbsences.length) {
+      const newAbsence = mapAbsences(absences, motifs[0]);
+      setLocalAbsences(newAbsence);
+    }
+  }, [absences]);
 
   const [errorsInput, setErrorsInput] = React.useState({});
 
   const onAddButtonClick = () => {
-    const newAbsences = [
+    const newAbsences: AbsenceWithKey[] = [
       ...localAbsences,
       {
+        key: generateUniqueKey(),
         motif: motifs[0],
         durationInMonth: undefined,
       },
@@ -71,45 +78,45 @@ const AbsencePeriods = ({
     onChange(newAbsences);
   };
 
-  const onDeleteButtonClick = (index: number) => {
-    const newAbsences = localAbsences.filter((_, i) => i !== index);
+  const onDeleteButtonClick = (key: string) => {
+    const newAbsences = localAbsences.filter((absence) => absence.key !== key);
     setLocalAbsences(newAbsences);
     onChange(newAbsences);
   };
 
-  const onSetDurationDate = (index: number, value: string) => {
+  const onSetDurationDate = (key: string, value: string) => {
     const duration = parseFloat(value);
     if (isNaN(duration) && value.length > 0) {
       setErrorsInput({
         ...errorsInput,
-        [`${index}`]: "Veuillez entrer un nombre",
+        [`${key}`]: "Veuillez entrer un nombre",
       });
       return;
     } else {
       setErrorsInput({
         ...errorsInput,
-        [`${index}`]: undefined,
+        [`${key}`]: undefined,
       });
     }
-    const newAbsences = localAbsences.map((absence, i) =>
-      i === index ? { ...absence, durationInMonth: duration } : absence
+    const newAbsences = localAbsences.map((absence) =>
+      key === absence.key ? { ...absence, durationInMonth: duration } : absence
     );
     setLocalAbsences(newAbsences);
     onChange(newAbsences);
   };
 
-  const onSetAbsenceDate = (index: number, value: string) => {
-    const newAbsences = localAbsences.map((absence, i) =>
-      i === index ? { ...absence, startedAt: value } : absence
+  const onSetAbsenceDate = (key: string, value: string) => {
+    const newAbsences = localAbsences.map((absence) =>
+      key === absence.key ? { ...absence, startedAt: value } : absence
     );
     setLocalAbsences(newAbsences);
     onChange(newAbsences);
   };
 
-  const onSelectMotif = (index: number, value: string) => {
+  const onSelectMotif = (key: string, value: string) => {
     const motif = motifs.find((motif) => motif.label === value)!;
-    const newAbsences = localAbsences.map((absence, i) =>
-      i === index ? { ...absence, motif: motif } : absence
+    const newAbsences = localAbsences.map((absence) =>
+      key === absence.key ? { ...absence, motif: motif } : absence
     );
     setLocalAbsences(newAbsences);
     onChange(newAbsences);
@@ -128,14 +135,14 @@ const AbsencePeriods = ({
       </SmallText>
       {localAbsences.map((value, index) => (
         <AbsencePeriod
-          key={`${index}-${value.motif.key}-${value.durationInMonth}`}
+          key={value.key}
           index={index}
           onSelectMotif={onSelectMotif}
           onSetDurationDate={onSetDurationDate}
           onSetAbsenceDate={onSetAbsenceDate}
+          onDeleteAbsence={onDeleteButtonClick}
           motifs={motifs}
           showDeleteButton={localAbsences.length > 1}
-          onDeleteAbsence={onDeleteButtonClick}
           errors={{
             duration:
               errorsInput[`${index}`] ??

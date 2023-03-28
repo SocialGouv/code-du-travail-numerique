@@ -1,7 +1,15 @@
-import createContext from "zustand/context";
-import { StoreApi } from "zustand";
+import { createContext } from "react";
+import { StoreApi, useStore } from "zustand";
 import { SimulatorStore } from "./type";
 
-const { Provider, useStore } = createContext<StoreApi<SimulatorStore>>();
+const SimulatorContext = createContext<StoreApi<SimulatorStore>>(
+  {} as StoreApi<SimulatorStore>
+);
 
-export { Provider as SimulatorStepProvider, useStore as useSimulatorStepStore };
+const { Provider } = SimulatorContext;
+
+export {
+  Provider as SimulatorStepProvider,
+  useStore as useSimulatorStepStore,
+  SimulatorContext,
+};

@@ -1,8 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { RadioQuestion } from "../../../Components";
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 
 export default function Agreement16() {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     init,
     showVariablePay,
@@ -10,7 +14,7 @@ export default function Agreement16() {
     hasVariablePay,
     onChangeHasVariablePay,
     errorHasVariablePay,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     init: state.agreement16Function.onInit,
     showVariablePay: state.agreement16Data.input.showVariablePay,
     hasSameSalary: state.salairesData.input.hasSameSalary,
