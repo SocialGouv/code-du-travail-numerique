@@ -1,24 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<InsertTitle /> renders an insert title 1`] = `
-.c0 {
-  margin: 0 0 1rem 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <p
-    class="c0"
+    class="sc-bcXHqe eosFTh"
   >
     Lorem Ipsum
   </p>

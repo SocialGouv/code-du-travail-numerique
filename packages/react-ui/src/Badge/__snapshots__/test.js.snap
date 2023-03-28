@@ -1,43 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Badge /> renders 1`] = `
-.c0 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 0 0.6rem 0 0;
-}
-
-.c0:before {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent #f66663 transparent transparent;
-  border-style: solid;
-  border-width: 0 5rem 5rem 0;
-  content: "";
-}
-
-.c1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 3rem;
-  height: 3rem;
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-bcXHqe lmhoTQ"
   >
     <div
-      class="c1"
+      class="sc-gswNZR dQPqOZ"
     >
       <svg
         aria-hidden="true"
@@ -64,43 +33,12 @@ exports[`<Badge /> renders 1`] = `
 `;
 
 exports[`<Badge /> renders with correct styles and icon 1`] = `
-.c0 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 0 0.6rem 0 0;
-}
-
-.c0:before {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent #7994d4 transparent transparent;
-  border-style: solid;
-  border-width: 0 5rem 5rem 0;
-  content: "";
-}
-
-.c1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 3rem;
-  height: 3rem;
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-bcXHqe eRXbpm"
   >
     <div
-      class="c1"
+      class="sc-gswNZR dQPqOZ"
     >
       <svg
         aria-hidden="true"
