@@ -7,23 +7,24 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Indemnité conventionnel de licenciement pour la CC 1516", () => {
   test.each`
-    seniority  | salary  | expectedCompensation
-    ${0}       | ${0}    | ${0}
-    ${2}       | ${1000} | ${0}
-    ${25 / 12} | ${1000} | ${416.67}
-    ${5}       | ${1000} | ${1000}
-    ${10}      | ${2000} | ${4000}
-    ${42}      | ${3000} | ${33300}
+    seniorityRight | seniority  | salary  | expectedCompensation
+    ${0}           | ${0}       | ${0}    | ${0}
+    ${2}           | ${2}       | ${1000} | ${0}
+    ${2}           | ${25 / 12} | ${1000} | ${0}
+    ${25 / 12}     | ${25 / 12} | ${1000} | ${416.67}
+    ${25 / 12}     | ${5}       | ${1000} | ${1000}
+    ${25 / 12}     | ${10}      | ${2000} | ${4000}
+    ${25 / 12}     | ${42}      | ${3000} | ${33300}
   `(
     "ancienneté: $seniority an, salaire de référence: $salary, => $expectedCompensation €",
-    ({ seniority, salary, expectedCompensation }) => {
+    ({ seniority, seniorityRight, salary, expectedCompensation }) => {
       const { result, missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC1516'",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-            seniority,
+            seniorityRight,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
         },

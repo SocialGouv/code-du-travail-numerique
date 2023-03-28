@@ -59,7 +59,7 @@ describe("Vérification des références juridiques pour la CC 16", () => {
 
     test.each`
       seniority | expectedReferences
-      ${2}      | ${references}
+      ${3.2}    | ${references}
       ${6}      | ${references}
       ${24}     | ${references}
     `(
