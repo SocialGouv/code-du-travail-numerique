@@ -23,7 +23,8 @@ export type DefaultSeniorityRequiredProps = DefaultSeniorityProps & {
 
 export abstract class SeniorityDefault<
   T extends SupportedCcIndemniteLicenciement
-> implements ISeniority<T> {
+> implements ISeniority<T>
+{
   computeSeniority({
     dateEntree,
     dateSortie,
