@@ -104,7 +104,7 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
     toutes ces conditions:
       - age >= 50
       - age < 55
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 5 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
   valeur:
     le maximum de:
       - somme formule plus 20 pourcent
@@ -128,8 +128,8 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
     toutes ces conditions:
       - age >= 55
       - age < 60
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 5 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
   valeur:
     le maximum de:
       - somme formule
@@ -153,7 +153,7 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
     toutes ces conditions:
       - age >= 55
       - age < 60
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 5 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
   valeur:
     le maximum de:
       - somme formule plus 30 pourcent
