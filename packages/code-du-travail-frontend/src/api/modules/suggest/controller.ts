@@ -14,13 +14,20 @@ export class SuggestController {
   public async get() {
     try {
       let sizeNumber = 5;
+      let query = "";
       const { q, size } = this.req.query;
+      if (q && typeof q === "string") {
+        query = q;
+      }
 
+      if (!size) {
+        sizeNumber = 5;
+      }
       if (size && typeof size === "string") {
         sizeNumber = parseInt(size);
       }
 
-      const response = await getSuggestions(q as string, sizeNumber);
+      const response = await getSuggestions(query, sizeNumber);
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {
