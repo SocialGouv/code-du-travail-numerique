@@ -6,6 +6,8 @@ import {
   Seniority650,
   Seniority1090,
   Seniority1486,
+  Seniority1505,
+  Seniority1517,
   Seniority1518,
   Seniority1527,
   Seniority1996,
@@ -18,7 +20,6 @@ import {
   Seniority3043,
   Seniority3239,
 } from "../../conventions";
-import { Seniority1517 } from "../../conventions/1517_commerces_de_detail_non_alimentaires";
 import { SupportedCcIndemniteLicenciement } from "../index";
 import type { ISeniority } from "../types";
 
@@ -63,6 +64,8 @@ export class SeniorityFactory {
         return new Seniority1517();
       case SupportedCcIndemniteLicenciement.IDCC2614:
         return new Seniority2614();
+      case SupportedCcIndemniteLicenciement.IDCC1505:
+        return new Seniority1505();
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new SeniorityLegal();

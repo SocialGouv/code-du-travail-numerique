@@ -7,7 +7,11 @@ const customJestConfig = {
   setupFilesAfterEnv: ["<rootDir>/test/jest.setup.js"],
   testMatch: ["**/__tests__/**/*?(*.)+(test|spec).[jt]s?(x)"],
   collectCoverageFrom: ["!src/**/*mock.js", "src/**/*.js"],
-  testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"],
+  testPathIgnorePatterns: [
+    "<rootDir>/.next/",
+    "<rootDir>/node_modules/",
+    "<rootDir>/cypress/",
+  ],
 };
 
 module.exports = createJestConfig(customJestConfig);

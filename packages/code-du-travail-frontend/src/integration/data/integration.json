@@ -6,7 +6,7 @@
         "description": "Vous pouvez intégrer le moteur de recherche du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de faire une recherche depuis votre site dans la barre de recherche du module. Une fois la recherche lancée, cela ouvrira la page de recherche sur le site du Code du travail numérique.",
         "shortTitle": "Moteur de recherche du Code du travail numérique",
         "shortDescription": "Effectuer une recherche depuis votre site sur le Code du travail numérique",
-        "url": "/widget.html",
+        "url": "/widgets/search",
         "id": "widget"
     },
     "preavis-licenciement": {
@@ -38,5 +38,15 @@
         "shortDescription": "Accédez à la procédure de licenciement qui correspond à votre situation",
         "url": "/widgets/procedure-licenciement",
         "id": "procedure-licenciement"
+    },
+    "indemnite-licenciement": {
+        "metaTitle": "Intégrer l’outil de calcul de l'indemnité de licenciement du Code du travail numérique",
+        "metaDescription": "Intégrer l’outil de procédure de licenciement de retraite du Code du travail numérique sur votre site grâce à un module (widget).",
+        "title": "Intégrer l’outil de calcul de l'indemnité de licenciement du Code du travail numérique",
+        "description": "Vous pouvez intégrer l’outil de calcul de l'indemnité de licenciement du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer le montant de l'indemnité à verser au salarié en cas de licenciement. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective.",
+        "shortTitle": "Indemnité de licenciement",
+        "shortDescription": "Estimer le montant de l’indemnité à verser au salarié en cas de licenciement",
+        "url": "/widgets/indemnite-licenciement",
+        "id": "indemnite-licenciement"
     }
 }

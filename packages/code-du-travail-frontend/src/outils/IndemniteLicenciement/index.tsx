@@ -17,6 +17,7 @@ import {
   useIndemniteLicenciementStore,
 } from "./store";
 import { ToolName } from "../types";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 type Props = {
   icon: string;
@@ -120,6 +121,7 @@ const IndemniteLicenciementSimulator = ({
 
   return (
     <SimulatorLayout<IndemniteLicenciementStepName>
+      simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
       title={title}
       displayTitle={displayTitle}
       icon={icon}

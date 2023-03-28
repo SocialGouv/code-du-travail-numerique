@@ -15,7 +15,7 @@ describe("robots.txt", () => {
       "",
       `Sitemap: https://code.travail.gouv.fr/sitemap.xml`,
     ].join("\n");
-    generateRobotsTxt(true, "code.travail.gouv.fr");
+    generateRobotsTxt(true, "https://code.travail.gouv.fr");
     expect(fs.writeFileSync).toHaveBeenCalledWith(filePath, robotsProd);
   });
   it("should generate development robots.txt", () => {
