@@ -108,7 +108,7 @@ contrat salarié . convention collective . travaux publics . age . moins de  55 
         - "A1: Années d'ancienneté jusqu'à 15 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté 15 ans ou moins
         - "A2: Années d'ancienneté pour les années au-delà de 15 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté de plus de 15 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: 2.5 / 10 * Sref * A1[ + 3.5 / 10 * Sref * A2]
+      formula: (2.5 / 10 * Sref * A1)[ + (3.5 / 10 * Sref * A2)]
 
 contrat salarié . convention collective . travaux publics . age . entre 55 ans et 65 ans . résultat conventionnel:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
@@ -131,7 +131,7 @@ contrat salarié . convention collective . travaux publics . age . entre 55 ans 
         - "A1: Années d'ancienneté jusqu'à 15 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté 15 ans ou moins
         - "A2: Années d'ancienneté pour les années au-delà de 15 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté de plus de 15 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: 2.5 / 10 * Sref * A1[ + 3.5 / 10 * Sref * A2] + 10% * (2.5 / 10 * Sref * A1)[ + 10% * (3.5 / 10 * Sref * A2)]
+      formula: (2.5 / 10 * Sref * A1)[ + (3.5 / 10 * Sref * A2)] + (10% * (2.5 / 10 * Sref * A1))[ + (10% * (3.5 / 10 * Sref * A2))]
 
 contrat salarié . convention collective . travaux publics . age . plus de 65 ans . résultat conventionnel:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
@@ -152,4 +152,4 @@ contrat salarié . convention collective . travaux publics . age . plus de 65 an
         - "A1: Années d'ancienneté jusqu'à 10 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté 10 ans ou moins
         - "A2: Années au-delà de 10 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté de plus de 10 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: 1.5 / 10 * Sref * A1[ + 2.5 / 10 * Sref * A2]
+      formula: (1.5 / 10 * Sref * A1)[ + (2.5 / 10 * Sref * A2)]

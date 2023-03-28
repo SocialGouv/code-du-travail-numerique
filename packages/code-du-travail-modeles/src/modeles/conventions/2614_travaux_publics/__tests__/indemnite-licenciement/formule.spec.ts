@@ -7,17 +7,17 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Formule indemnité licenciement - 2614", () => {
   test.each`
-    seniority | age   | expectedFormula                                                                                                | expectedExplanations
-    ${0}      | ${0}  | ${""}                                                                                                          | ${[]}
-    ${1.5}    | ${55} | ${""}                                                                                                          | ${[]}
-    ${15}     | ${55} | ${"2.5 / 10 * Sref * A1"}                                                                                      | ${["A1: Années d'ancienneté jusqu'à 15 ans d'ancienneté (15 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${24}     | ${55} | ${"2.5 / 10 * Sref * A1 + 3.5 / 10 * Sref * A2"}                                                               | ${["A1: Années d'ancienneté jusqu'à 15 ans d'ancienneté (15 ans)", "A2: Années d'ancienneté pour les années au-delà de 15 ans d'ancienneté (9 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${1.5}    | ${59} | ${""}                                                                                                          | ${[]}
-    ${15}     | ${59} | ${"2.5 / 10 * Sref * A1 + 10% * (2.5 / 10 * Sref * A1)"}                                                       | ${["A1: Années d'ancienneté jusqu'à 15 ans d'ancienneté (15 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${24}     | ${59} | ${"2.5 / 10 * Sref * A1 + 3.5 / 10 * Sref * A2 + 10% * (2.5 / 10 * Sref * A1) + 10% * (3.5 / 10 * Sref * A2)"} | ${["A1: Années d'ancienneté jusqu'à 15 ans d'ancienneté (15 ans)", "A2: Années d'ancienneté pour les années au-delà de 15 ans d'ancienneté (9 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${1.5}    | ${67} | ${""}                                                                                                          | ${[]}
-    ${15}     | ${67} | ${"1.5 / 10 * Sref * A1 + 2.5 / 10 * Sref * A2"}                                                               | ${["A1: Années d'ancienneté jusqu'à 10 ans d'ancienneté (10 ans)", "A2: Années au-delà de 10 ans d'ancienneté (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${24}     | ${67} | ${"1.5 / 10 * Sref * A1 + 2.5 / 10 * Sref * A2"}                                                               | ${["A1: Années d'ancienneté jusqu'à 10 ans d'ancienneté (10 ans)", "A2: Années au-delà de 10 ans d'ancienneté (14 ans)", "Sref : Salaire de référence (1000 €)"]}
+    seniority | age   | expectedFormula                                                                                                        | expectedExplanations
+    ${0}      | ${0}  | ${""}                                                                                                                  | ${[]}
+    ${1.5}    | ${55} | ${""}                                                                                                                  | ${[]}
+    ${15}     | ${55} | ${"(2.5 / 10 * Sref * A1)"}                                                                                            | ${["A1: Années d'ancienneté jusqu'à 15 ans d'ancienneté (15 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${24}     | ${55} | ${"(2.5 / 10 * Sref * A1) + (3.5 / 10 * Sref * A2)"}                                                                   | ${["A1: Années d'ancienneté jusqu'à 15 ans d'ancienneté (15 ans)", "A2: Années d'ancienneté pour les années au-delà de 15 ans d'ancienneté (9 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${1.5}    | ${59} | ${""}                                                                                                                  | ${[]}
+    ${15}     | ${59} | ${"(2.5 / 10 * Sref * A1) + (10% * (2.5 / 10 * Sref * A1))"}                                                           | ${["A1: Années d'ancienneté jusqu'à 15 ans d'ancienneté (15 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${24}     | ${59} | ${"(2.5 / 10 * Sref * A1) + (3.5 / 10 * Sref * A2) + (10% * (2.5 / 10 * Sref * A1)) + (10% * (3.5 / 10 * Sref * A2))"} | ${["A1: Années d'ancienneté jusqu'à 15 ans d'ancienneté (15 ans)", "A2: Années d'ancienneté pour les années au-delà de 15 ans d'ancienneté (9 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${1.5}    | ${67} | ${""}                                                                                                                  | ${[]}
+    ${15}     | ${67} | ${"(1.5 / 10 * Sref * A1) + (2.5 / 10 * Sref * A2)"}                                                                   | ${["A1: Années d'ancienneté jusqu'à 10 ans d'ancienneté (10 ans)", "A2: Années au-delà de 10 ans d'ancienneté (5 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${24}     | ${67} | ${"(1.5 / 10 * Sref * A1) + (2.5 / 10 * Sref * A2)"}                                                                   | ${["A1: Années d'ancienneté jusqu'à 10 ans d'ancienneté (10 ans)", "A2: Années au-delà de 10 ans d'ancienneté (14 ans)", "Sref : Salaire de référence (1000 €)"]}
   `(
     "Formule $expectedFormula avec $seniority ans et age $age",
     ({ seniority, age, expectedFormula, expectedExplanations }) => {
