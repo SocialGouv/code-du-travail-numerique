@@ -9,21 +9,27 @@ const engine = new IndemniteLicenciementPublicodes(
 describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
   describe("Cas standard", () => {
     test.each`
-      category                                  | seniority | salary  | expectedCompensation
-      ${CatPro3239.salarieParticulierEmployeur} | ${0}      | ${2000} | ${0}
-      ${CatPro3239.salarieParticulierEmployeur} | ${8 / 12} | ${2000} | ${333.33}
-      ${CatPro3239.salarieParticulierEmployeur} | ${2}      | ${2000} | ${1000}
-      ${CatPro3239.salarieParticulierEmployeur} | ${10}     | ${2000} | ${5000}
-      ${CatPro3239.salarieParticulierEmployeur} | ${12}     | ${2000} | ${6333.33}
-      ${CatPro3239.assistantMaternel}           | ${0}      | ${2000} | ${0}
-      ${CatPro3239.assistantMaternel}           | ${8 / 12} | ${2000} | ${0}
-      ${CatPro3239.assistantMaternel}           | ${9 / 12} | ${2000} | ${25}
-      ${CatPro3239.assistantMaternel}           | ${2}      | ${2000} | ${25}
-      ${CatPro3239.assistantMaternel}           | ${10}     | ${2000} | ${25}
-      ${CatPro3239.assistantMaternel}           | ${12}     | ${2000} | ${25}
+      category                                  | seniorityRight | seniority | salary  | expectedCompensation
+      ${CatPro3239.salarieParticulierEmployeur} | ${7 / 12}      | ${1}      | ${2000} | ${0}
+      ${CatPro3239.salarieParticulierEmployeur} | ${8 / 12}      | ${8 / 12} | ${2000} | ${333.33}
+      ${CatPro3239.salarieParticulierEmployeur} | ${8 / 12}      | ${2}      | ${2000} | ${1000}
+      ${CatPro3239.salarieParticulierEmployeur} | ${8 / 12}      | ${10}     | ${2000} | ${5000}
+      ${CatPro3239.salarieParticulierEmployeur} | ${8 / 12}      | ${12}     | ${2000} | ${6333.33}
+      ${CatPro3239.assistantMaternel}           | ${7 / 12}      | ${1}      | ${2000} | ${0}
+      ${CatPro3239.assistantMaternel}           | ${8 / 12}      | ${8 / 12} | ${2000} | ${0}
+      ${CatPro3239.assistantMaternel}           | ${9 / 12}      | ${9 / 12} | ${2000} | ${25}
+      ${CatPro3239.assistantMaternel}           | ${9 / 12}      | ${2}      | ${2000} | ${25}
+      ${CatPro3239.assistantMaternel}           | ${9 / 12}      | ${10}     | ${2000} | ${25}
+      ${CatPro3239.assistantMaternel}           | ${9 / 12}      | ${12}     | ${2000} | ${25}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category => $expectedCompensation €",
-      ({ seniority, salary, expectedCompensation, category }) => {
+      ({
+        seniority,
+        seniorityRight,
+        salary,
+        expectedCompensation,
+        category,
+      }) => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC3239'",
@@ -34,7 +40,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-              seniority,
+              seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
           },
@@ -48,16 +54,16 @@ describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
 
     describe("Assistante maternelle qui a sélectionné comme motif un retrait d'agrément", () => {
       test.each`
-        seniority | salary  | expectedCompensation
-        ${0}      | ${2000} | ${0}
-        ${8 / 12} | ${2000} | ${0}
-        ${9 / 12} | ${2000} | ${0}
-        ${2}      | ${2000} | ${0}
-        ${10}     | ${2000} | ${0}
-        ${12}     | ${2000} | ${0}
+        seniorityRight | seniority | salary  | expectedCompensation
+        ${0}           | ${1}      | ${2000} | ${0}
+        ${8 / 12}      | ${1}      | ${2000} | ${0}
+        ${9 / 12}      | ${1}      | ${2000} | ${0}
+        ${9 / 12}      | ${2}      | ${2000} | ${0}
+        ${9 / 12}      | ${10}     | ${2000} | ${0}
+        ${9 / 12}      | ${12}     | ${2000} | ${0}
       `(
         "ancienneté: $seniority an, salaire de référence: $salary, => $expectedCompensation €",
-        ({ seniority, salary, expectedCompensation }) => {
+        ({ seniority, seniorityRight, salary, expectedCompensation }) => {
           const { result, missingArgs } = engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC3239'",
@@ -68,7 +74,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
                 seniority,
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-                seniority,
+                seniorityRight,
               "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
                 salary,
             },
