@@ -1,5 +1,5 @@
 import { Section } from "@socialgouv/cdtn-ui";
-import React from "react";
+import React, { useEffect } from "react";
 
 import Breadcrumbs from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
@@ -15,6 +15,7 @@ const IntegrationPage = ({ slug, hostname, protocol }): JSX.Element => {
     shortTitle,
     url,
     id,
+    messages,
   } = integrationData[slug];
   return (
     <Layout>
@@ -28,6 +29,7 @@ const IntegrationPage = ({ slug, hostname, protocol }): JSX.Element => {
           shortTitle={shortTitle}
           url={url}
           host={`${protocol}://${hostname}`}
+          messages={messages}
         ></IntegrationContainer>
       </Section>
     </Layout>
