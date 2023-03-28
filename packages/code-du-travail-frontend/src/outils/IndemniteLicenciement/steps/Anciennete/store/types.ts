@@ -1,6 +1,6 @@
 import { StepData } from "../../../store";
 import { OuiNon } from "../../../common";
-import { Absence } from "@socialgouv/modeles-social";
+import { Absence, Motif } from "@socialgouv/modeles-social";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 
 export type AncienneteStoreInput = {
@@ -8,6 +8,7 @@ export type AncienneteStoreInput = {
   dateSortie?: string;
   dateNotification?: string;
   absencePeriods: Absence[];
+  motifs: Motif[];
   hasAbsenceProlonge?: OuiNon;
 };
 
