@@ -60,24 +60,7 @@ function addWidget(info) {
 }
 
 function loadWidgets() {
-  [
-    {
-      name: "widget",
-      url: "__HOST__/widgets/search",
-    },
-    {
-      name: "preavis-licenciement",
-      url: "__HOST__/widgets/preavis-licenciement",
-    },
-    {
-      name: "preavis-retraite",
-      url: "__HOST__/widgets/preavis-retraite",
-    },
-    {
-      name: "procedure-licenciement",
-      url: "__HOST__/widgets/procedure-licenciement",
-    },
-  ].forEach((widget) => {
+  __WIDGETS__.forEach((widget) => {
     addWidget(widget);
   });
 }
