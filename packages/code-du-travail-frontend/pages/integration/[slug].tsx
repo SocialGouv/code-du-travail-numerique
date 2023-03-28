@@ -1,5 +1,5 @@
 import { Section } from "@socialgouv/cdtn-ui";
-import React, { useEffect } from "react";
+import React from "react";
 
 import Breadcrumbs from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
