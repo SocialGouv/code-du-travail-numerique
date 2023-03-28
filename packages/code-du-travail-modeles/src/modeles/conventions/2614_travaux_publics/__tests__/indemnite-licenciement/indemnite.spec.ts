@@ -8,17 +8,17 @@ const engine = new IndemniteLicenciementPublicodes(
 describe("CC 2614", () => {
   describe("Calcul de l'indemnité de licenciement", () => {
     test.each`
-      seniority | salaireRef | age   | expectedCompensation
-      ${0}      | ${2624}    | ${0}  | ${0}
-      ${1.5}    | ${2624}    | ${55} | ${0}
-      ${15}     | ${2624}    | ${55} | ${9840}
-      ${24}     | ${2624}    | ${55} | ${18105.6}
-      ${1.5}    | ${2624}    | ${59} | ${0}
-      ${15}     | ${2624}    | ${59} | ${10824}
-      ${24}     | ${2624}    | ${59} | ${19916.16}
-      ${1.5}    | ${2624}    | ${67} | ${0}
-      ${15}     | ${2624}    | ${67} | ${7216}
-      ${24}     | ${2624}    | ${67} | ${13120}
+      seniorityRight | seniority | salaireRef | age   | expectedCompensation
+      ${0}      | ${0}      | ${2624}    | ${0}  | ${0}
+      ${1.5}   | ${2}    | ${2624}    | ${55} | ${0}
+      ${2}      | ${15}     | ${2624}    | ${55} | ${9840}
+      ${2}      | ${24}     | ${2624}    | ${55} | ${18105.6}
+      ${1.5}      | ${2}    | ${2624}    | ${59} | ${0}
+      ${2}      | ${15}     | ${2624}    | ${59} | ${10824}
+      ${2}      | ${24}     | ${2624}    | ${59} | ${19916.16}
+      ${1.5}      | ${2}    | ${2624}    | ${67} | ${0}
+      ${2}      | ${15}     | ${2624}    | ${67} | ${7216}
+      ${2}      | ${24}     | ${2624}    | ${67} | ${13120}
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef €, age $age => une compensation de base de $expectedCompensation €",
       ({ salaireRef, expectedCompensation, seniority, age }) => {
