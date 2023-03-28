@@ -26,6 +26,7 @@ export enum SupportedCcIndemniteLicenciement {
   IDCC1517 = "1517",
   IDCC2098 = "2098",
   IDCC2609 = "2609",
+  IDCC0675 = "675",
   IDCC1501 = "1501",
   IDCC1597 = "1597",
   IDCC787 = "787",
