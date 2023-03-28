@@ -26,6 +26,7 @@ const IntegrationContainer = ({
   url,
   host,
   messages,
+  id,
 }: IntegrationContainerProps) => {
   const [message, setMessage] = useState("");
   const useScript = () => {
@@ -33,8 +34,9 @@ const IntegrationContainer = ({
       const script = document.createElement("script");
       window?.addEventListener(
         "message",
-        ({ data }) => {
-          if (data.action === "click") {
+        ({ data, source }) => {
+          const iframe = document.getElementById(`cdtn-iframe-${id}`) as any;
+          if (source === iframe?.contentWindow && data.kind === "click") {
             setMessage(data);
           }
         },
@@ -82,10 +84,14 @@ const IntegrationContainer = ({
       <>
         <CodeSnippet>
           {`
-      window?.addEventListener(
+      window.addEventListener(
         "message",
         ({ data }) => {
-          if (data.action === "click") {
+          const iframe = document.getElementById('cdtn-iframe-${id}');
+          if (
+            evt.source === iframe.contentWindow
+            && data.kind === "click"
+          ) {
             ${messages.click.map(
               ({ name, description }) => `
             data.name === '${name}' // ${description}`
