@@ -19,6 +19,7 @@ export const useIframeResizer = () => {
       const value = Math.max(minHeight, entry.contentRect.height);
       window.parent?.postMessage({ kind: "resize-height", value }, "*");
     });
+    document.body.style["overflow-y"] = "hidden";
     observer.observe(window.document.body);
 
     return () => observer.disconnect();
