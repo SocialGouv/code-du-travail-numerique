@@ -9,7 +9,6 @@ export type NavigationProps = {
   onPrint?: () => void;
   onNext: () => void;
   onStart: () => void;
-  className?: string;
 };
 
 const SimulatorNavigation = ({
@@ -19,46 +18,39 @@ const SimulatorNavigation = ({
   onPrevious,
   onNext,
   onStart,
-  className,
 }: NavigationProps): JSX.Element => {
   return (
-    <>
-      <StyledDiv className={className}>
-        {onPrevious && (
-          <StyledButton small type="button" onClick={onPrevious} variant="flat">
-            Précédent
-          </StyledButton>
-        )}
-        {showNext && !onPrevious && (
-          <StyledButtonReverse
-            disabled={hasError}
-            variant="primary"
-            type="button"
-            onClick={onStart}
-            data-testid="commencer"
-          >
-            Commencer
-            <ArrowIcon />
-          </StyledButtonReverse>
-        )}
-        {showNext && onPrevious && (
-          <StyledButton
-            disabled={hasError}
-            type="button"
-            variant="primary"
-            onClick={onNext}
-          >
-            Suivant
-            <ArrowIcon />
-          </StyledButton>
-        )}
-        {onPrint && (
-          <StyledButton type="button" onClick={onPrint}>
-            Imprimer le résultat
-          </StyledButton>
-        )}
-      </StyledDiv>
-    </>
+    <StyledDiv>
+      {onPrevious && (
+        <StyledButton small onClick={onPrevious} variant="flat">
+          Précédent
+        </StyledButton>
+      )}
+      {showNext && !onPrevious && (
+        <StyledButtonReverse
+          variant="primary"
+          onClick={onStart}
+          data-testid="commencer"
+        >
+          Commencer
+          <ArrowIcon />
+        </StyledButtonReverse>
+      )}
+      {showNext && onPrevious && (
+        <StyledButton
+          aria-disabled={hasError}
+          disabled={hasError}
+          variant="primary"
+          onClick={onNext}
+        >
+          Suivant
+          <ArrowIcon />
+        </StyledButton>
+      )}
+      {onPrint && (
+        <StyledButton onClick={onPrint}>Imprimer le résultat</StyledButton>
+      )}
+    </StyledDiv>
   );
 };
 

@@ -16,32 +16,32 @@ const Index = ({
   onPrevious,
 }: NavigationProps): JSX.Element => {
   return (
-    <>
-      <StyledDiv>
-        {onPrevious && (
-          <StyledButton small type="button" onClick={onPrevious} variant="flat">
-            Précédent
-          </StyledButton>
-        )}
-        {showNext && !onPrevious && (
-          <StyledButtonReverse disabled={hasError} variant="primary">
-            Commencer
-            <ArrowIcon />
-          </StyledButtonReverse>
-        )}
-        {showNext && onPrevious && (
-          <StyledButton disabled={hasError} variant="primary">
-            Suivant
-            <ArrowIcon />
-          </StyledButton>
-        )}
-        {onPrint && (
-          <StyledButton type="button" onClick={onPrint}>
-            Imprimer le résultat
-          </StyledButton>
-        )}
-      </StyledDiv>
-    </>
+    <StyledDiv>
+      {onPrevious && (
+        <StyledButton small onClick={onPrevious} variant="flat">
+          Précédent
+        </StyledButton>
+      )}
+      {showNext && !onPrevious && (
+        <StyledButtonReverse variant="primary">
+          Commencer
+          <ArrowIcon />
+        </StyledButtonReverse>
+      )}
+      {showNext && onPrevious && (
+        <StyledButton
+          disabled={hasError}
+          aria-disabled={hasError}
+          variant="primary"
+        >
+          Suivant
+          <ArrowIcon />
+        </StyledButton>
+      )}
+      {onPrint && (
+        <StyledButton onClick={onPrint}>Imprimer le résultat</StyledButton>
+      )}
+    </StyledDiv>
   );
 };
 
