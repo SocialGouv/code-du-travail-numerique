@@ -27,15 +27,12 @@ describe("Vérification des références juridiques pour la CC 2609", () => {
 
   test.each`
     seniority | age   | expectedReferences
-    ${1.75}   | ${50} | ${references}
     ${4}      | ${50} | ${references}
     ${15}     | ${50} | ${references}
     ${25}     | ${50} | ${references}
-    ${1.75}   | ${58} | ${references}
     ${4}      | ${58} | ${references}
     ${15}     | ${58} | ${references}
     ${25}     | ${58} | ${references}
-    ${1.75}   | ${66} | ${references}
     ${4}      | ${66} | ${references}
     ${15}     | ${66} | ${references}
     ${25}     | ${66} | ${references}

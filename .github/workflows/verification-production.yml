@@ -39,6 +39,8 @@ jobs:
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Disallow: /images/"
       - run: |
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Sitemap: https://code.travail.gouv.fr/sitemap.xml"
+      - run: |
+          curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "test :)"
       - name: Create the Mattermost Message
         if: failure()
         run: |
