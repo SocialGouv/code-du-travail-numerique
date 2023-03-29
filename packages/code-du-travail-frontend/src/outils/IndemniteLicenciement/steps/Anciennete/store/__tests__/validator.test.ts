@@ -9,6 +9,7 @@ describe("Ancienneté store", () => {
           dateEntree: "01/01/2020",
           dateSortie: "01/03/2022",
           dateNotification: "01/01/2022",
+          motifs: [],
           absencePeriods: [
             {
               motif: {
@@ -43,6 +44,7 @@ describe("Ancienneté store", () => {
           dateEntree: "01/01/2020",
           dateSortie: "01/03/2022",
           dateNotification: "01/01/2022",
+          motifs: [],
           absencePeriods: [
             {
               motif: {
@@ -79,6 +81,7 @@ describe("Ancienneté store", () => {
           dateEntree: "01/01/2020",
           dateSortie: "01/03/2022",
           dateNotification: "01/01/2022",
+          motifs: [],
           absencePeriods: [
             {
               motif: {
@@ -116,6 +119,7 @@ describe("Ancienneté store", () => {
           dateEntree: "01/01/2020",
           dateSortie: "01/03/2022",
           dateNotification: "01/01/2022",
+          motifs: [],
           absencePeriods: [
             {
               motif: {
@@ -150,6 +154,7 @@ describe("Ancienneté store", () => {
           dateEntree: "01/01/2020",
           dateSortie: "01/03/2022",
           dateNotification: "01/01/2022",
+          motifs: [],
           absencePeriods: [
             {
               motif: {
@@ -187,6 +192,7 @@ describe("Ancienneté store", () => {
           dateEntree: "01/01/2020",
           dateSortie: "01/03/2022",
           dateNotification: "01/01/2022",
+          motifs: [],
           absencePeriods: [
             {
               motif: {
@@ -223,6 +229,7 @@ describe("Ancienneté store", () => {
           dateEntree: "01/01/2020",
           dateSortie: "01/03/2022",
           dateNotification: "01/01/2022",
+          motifs: [],
           absencePeriods: [
             {
               motif: {
