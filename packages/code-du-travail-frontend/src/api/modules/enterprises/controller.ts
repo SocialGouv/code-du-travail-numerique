@@ -48,16 +48,7 @@ export class EnterprisesController {
 
       this.res.status(200).json(response);
     } catch (error) {
-      if (
-        error instanceof NotFoundError ||
-        error instanceof InvalidQueryError
-      ) {
-        this.res.status(404).json({ message: error.message });
-      } else {
-        this.res.status(500).json({
-          message: DEFAULT_ERROR_500_MESSAGE,
-        });
-      }
+      this.res.status(404).json({ message: "Not found" });
     }
   }
 
@@ -77,6 +68,9 @@ export class EnterprisesController {
       .filter((qp) => qp)
       .join("&");
 
-    return `${ENTERPRISE_API_URL}/search?${flattenParams}`;
+    return `${
+      ENTERPRISE_API_URL ??
+      "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1"
+    }/search?${flattenParams}`;
   };
 }

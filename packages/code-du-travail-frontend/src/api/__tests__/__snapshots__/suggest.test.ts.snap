@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Suggestion should return a list of suggestion 1`] = `
+[
+  "renseignements",
+  "retraite",
+  "repos",
+  "réintégration",
+  "déplacement régulier",
+]
+`;
+
+exports[`Suggestion should return nothing 1`] = `[]`;

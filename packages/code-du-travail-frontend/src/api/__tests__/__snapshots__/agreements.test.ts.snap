@@ -1,0 +1,1347 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Agreements should return a list for /agreements 1`] = `
+[
+  {
+    "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
+    "shortTitle": "Banque",
+    "slug": "2120-banque",
+    "source": "conventions_collectives",
+    "title": "Banque",
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780",
+  },
+  {
+    "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
+    "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",
+    "slug": "843-boulangerie-patisserie-entreprises-artisanales",
+    "source": "conventions_collectives",
+    "title": "Boulangerie-pâtisserie (entreprises artisanales)",
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
+  },
+  {
+    "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
+    "shortTitle": "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
+    "slug": "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle",
+    "source": "conventions_collectives",
+    "title": "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635191",
+  },
+  {
+    "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
+    "shortTitle": "Convention collective régionale test métallurgie",
+    "slug": "1234-cc-metalurgie-rest",
+    "source": "conventions_collectives",
+    "title": "Convention collective régionale test métallurgie",
+  },
+]
+`;
+
+exports[`Agreements should return an item for /agreements/[slug] 1`] = `
+{
+  "answers": [
+    {
+      "answer": "<p>Les durées de la période d'essai ont été fixées par une convention collective conclue avant le 26 juin 2008.</p>
+<p><strong>Pour les salariés en CDI</strong>, la durée maximale de la période d'essai est égale à :</p>
+<ul>
+<li>
+<p>Techniciens : 3 mois pour la période d'essai initiale, 3 mois pour la période d'essai renouvelée (soit 6 mois au total) ;</p>
+</li>
+<li>
+<p>Cadres : 6 mois. Toutefois, l'employeur et le salarié peut décider, par accord, prévoir une durée de 9 mois maximum. (Dans tous les cas, le renouvellement n'est pas possible).</p>
+</li>
+</ul>
+",
+      "index": 3,
+      "question": "Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005770247",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005770247",
+          "title": "Article 19",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005770247/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement",
+      "theme": "Embauche et contrat de travail",
+    },
+    {
+      "answer": "<p>Pour les salariés en CDD, la période d'essai ne peut pas être renouvelée.</p>
+<p>Pour les salariés en CDI de la catégorie professionnelle <strong>techniciens</strong>, la période d'essai peut être renouvelée :</p>
+<ul>
+<li>Une fois,</li>
+<li>Pour une durée maximum de 3 mois,</li>
+<li>Par accord écrit de l'employeur et du salarié,</li>
+<li>Un entretien est organisé au moins 5 jours ouvrés avant la fin de la période d'essai.</li>
+</ul>
+<p>Pour les salariés de la catégorie professionnelle <strong>cadres</strong>, la période d'essai ne peut pas être renouvelée.</p>
+",
+      "index": 4,
+      "question": "La période d’essai peut-elle être renouvelée ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005770247",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005770247",
+          "title": "Article 19",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005770247/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "la-periode-dessai-peut-elle-etre-renouvelee",
+      "theme": "Embauche et contrat de travail",
+    },
+    {
+      "answer": "<p>Si le salarié tombe malade pendant la période d'essai, celle-ci est prolongée de la durée exacte de l'absence pour maladie.</p>
+<p>Toutefois, la période d'essai, initiale ou renouvelée, n'est pas prolongée, si la durée totale des absences ne dépasse pas 7 jours calendaires.</p>
+",
+      "index": 6,
+      "question": "Arrêt maladie pendant la période d'essai : quelles sont les règles ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005770247",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005770247",
+          "title": "Article 19",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005770247/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "arret-maladie-pendant-la-periode-dessai-quelles-sont-les-regles",
+      "theme": "Embauche et contrat de travail",
+    },
+    {
+      "answer": "<p>L'employeur doit remettre au salarié un contrat de travail écrit au moment de son embauche.</p>
+",
+      "index": 7,
+      "question": "Est-il obligatoire d'avoir un contrat de travail écrit et signé ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005769205",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005769205",
+          "title": "Article 18",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005769205/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe",
+      "theme": "Embauche et contrat de travail",
+    },
+    {
+      "answer": "<p>En plus des matières visées par la loi, le contrat de travail doit préciser :</p>
+<ul>
+<li>La nature du contrat (CDI, CDD, etc.) ;</li>
+<li>Les conditions d'emploi, dont :
+<ul>
+<li>La classification du salarié ;</li>
+<li>Le montant et le mode de rémunération.</li>
+</ul>
+</li>
+</ul>
+",
+      "index": 8,
+      "question": "Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005769205",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005769205",
+          "title": "Article 18",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005769205/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement",
+      "theme": "Embauche et contrat de travail",
+    },
+    {
+      "answer": "<p>Le CDD des auxiliaires de vacances est conclu pour la durée des vacances scolaires ou universitaires.</p>
+<p>Pour les autres CDD, le code du travail s'applique.</p>
+",
+      "index": 12,
+      "question": "Quelle peut être la durée maximale d'un CDD ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005771942",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005771942",
+          "title": "Article 20",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005771942/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "quelle-peut-etre-la-duree-maximale-dun-cdd",
+      "theme": "Embauche et contrat de travail",
+    },
+    {
+      "answer": "<p>La société peut embaucher des jeunes en cours de scolarité pendant les vacances scolaires ou universitaires par CDD appelé contrat d'auxiliaire de vacances. Ces CDD d'usage peuvent être conclus à condition que le salarié occupe un emploi pour lequel il est d'usage constant de ne pas recourir à un CDI.</p>
+<p>Le contrat est conclu pour la durée des vacances scolaires ou universitaires.</p>
+<p>Les auxiliaires de vacances bénéficient de la convention collective à l'exception des dispositions relatives à la période d'essai, à la classification et à la rémunération. Toutefois, la rémunération que perçoit le salarié en CDD ne peut pas être inférieure au montant de la rémunération que percevrait dans la même entreprise, après période d'essai, un salarié en CDI de qualification équivalente et occupé à un poste identique.</p>
+<p>La période d'essai est fixée à un jour ouvré par semaine de travail prévue au contrat.</p>
+<p>Les auxiliaires de vacances perçoivent, à l'issue de la période travaillée, l'indemnité compensatrice légale de congés payés.</p>
+<p>Les auxiliaires de vacances bénéficient, enfin, des mêmes conditions de restauration et de prime de transport que l'ensemble du personnel.</p>
+",
+      "index": 15,
+      "question": "Embauche en contrat d'extra (CDD d'usage)",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005771942",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005771942",
+          "title": "Article 20",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005771942/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "embauche-en-contrat-dextra-cdd-dusage",
+      "theme": "Embauche et contrat de travail",
+    },
+    {
+      "answer": "<p>En cas de démission, la durée du préavis est égale à :</p>
+<ul>
+<li>Techniciens : 1 mois ;</li>
+<li>Cadres : 3 mois.</li>
+</ul>
+",
+      "index": 20,
+      "question": "Quelle est la durée du préavis en cas de démission ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005784453",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005784453",
+          "title": "Article 30",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005784453/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "quelle-est-la-duree-du-preavis-en-cas-de-demission",
+      "theme": "Départ de l’entreprise",
+    },
+    {
+      "answer": "<p>En cas de licenciement, la durée du préavis est égale à :</p>
+<ul>
+<li>
+<p>Techniciens :</p>
+<ul>
+<li>1 mois, si le salarié a moins de 2 ans d'ancienneté ;</li>
+<li>2 mois, si le salarié a au moins 2 ans d'ancienneté ;</li>
+</ul>
+</li>
+<li>
+<p>Cadres :</p>
+<ul>
+<li>3 mois, quelle que soit l'ancienneté du salarié.</li>
+</ul>
+</li>
+</ul>
+",
+      "index": 23,
+      "question": "Quelle est la durée de préavis en cas de licenciement ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005784453",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005784453",
+          "title": "Article 30",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005784453/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
+      "theme": "Départ de l’entreprise",
+    },
+    {
+      "answer": "<p>La convention collective ne prévoit pas la durée du préavis en cas de départ à la retraite. Elle prévoit seulement la durée du préavis en cas de licenciement, qui est égale à :</p>
+<ul>
+<li>
+<p>Techniciens :</p>
+<ul>
+<li>1 mois si le salarié a moins de 2 ans d'ancienneté ;</li>
+<li>2 mois si le salarié a au moins 2 ans d'ancienneté ;</li>
+</ul>
+</li>
+<li>
+<p>Cadres :</p>
+<ul>
+<li>3 mois, quelle que soit l'ancienneté du salarié.</li>
+</ul>
+</li>
+</ul>
+",
+      "index": 26,
+      "question": "Quelle est la durée de préavis en cas de départ à la retraite ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005784453",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005784453",
+          "title": "Article 30",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005784453/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite",
+      "theme": "Départ de l’entreprise",
+    },
+    {
+      "answer": "<p>En cas de mise à la retraite, la durée du préavis est égale à 3 mois, pour les techniciens et les cadres, quelle que soit leur ancienneté.</p>
+",
+      "index": 29,
+      "question": "Quelle est la durée de préavis en cas de mise à la retraite ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005787788",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005787790",
+          "title": "Article 32",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005787790/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
+      "theme": "Départ de l’entreprise",
+    },
+    {
+      "answer": "<p>La convention collective prévoit seulement que le salarié peut <a href="https://code.travail.gouv.fr/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis">s'absenter pour rechercher un emploi</a> sous certaines conditions.</p>
+",
+      "index": 33,
+      "question": "Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005784453",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005784453",
+          "title": "Article 30",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005784453/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "le-preavis-de-licenciement-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
+      "theme": "Départ de l’entreprise",
+    },
+    {
+      "answer": "<p>La convention collective prévoit seulement que le salarié peut <a href="https://code.travail.gouv.fr/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis">s'absenter pour rechercher un emploi</a> sous certaines conditions.</p>
+",
+      "index": 34,
+      "question": "Le préavis de démission doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005784453",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005784453",
+          "title": "Article 30",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005784453/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
+      "theme": "Départ de l’entreprise",
+    },
+    {
+      "answer": "<p>En cas de licenciement, pendant son préavis, le salarié peut s'absenter 2 heures chaque jour jusqu'à l'obtention d'un nouvel emploi.</p>
+<p>Ces 2 heures sont fixées par accord entre l'employeur et le salarié. En cas de désaccord, elles sont fixées un jour par l'employeur, un jour par le salarié. Avec l'accord de l'employeur, le salarié peut les regrouper en fin de préavis.</p>
+<p>La rémunération du salarié est maintenue pendant cette absence.</p>
+<p>Lorsque le salarié concerné travaille à temps partiel, les heures de recherche d'emploi sont attribuées proportionnellement au temps de travail.</p>
+<p>La convention collective ne prévoit pas d'heures d'absence autorisée pour la recherche d'emploi en cas de démission.</p>
+",
+      "index": 35,
+      "question": "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005784453",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005784453",
+          "title": "Article 30",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005784453/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
+      "theme": "Départ de l’entreprise",
+    },
+    {
+      "answer": "<p>La convention collective prévoit les conditions d'appréciation de l'ancienneté du salarié uniquement dans le cadre des critères d'ordre de licenciement en cas de licenciement économique. L'ancienneté est calculée dans l'entreprise, par année entière, entendue de date à date.</p>
+<p>Pour le calcul de l'ancienneté, doivent être prises en compte :</p>
+<ul>
+<li>Les périodes de présence effective au travail,</li>
+<li>Les périodes d'absence légalement assimilées au travail effectif,</li>
+<li>Les absences ayant donné lieu à un maintien de salaire notamment dans le cadre de la maladie, la maternité et l'accident (total ou partiel) pour les durées prévues par la convention collective.</li>
+</ul>
+<p>L'entreprise peut reconnaître l'ancienneté acquise par son salarié, au titre d'une activité salariée effectuée dans une autre entreprise du groupe, soit volontairement, soit au titre de la législation en vigueur.</p>
+",
+      "index": 38,
+      "question": "Comment déterminer l'ancienneté du salarié ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005783374",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005783374",
+          "title": "Article 29.2 - 3. L'ancienneté",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005783374/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "comment-determiner-lanciennete-du-salarie",
+      "theme": "Embauche et contrat de travail",
+    },
+    {
+      "answer": "<p>La convention collective ne prévoit pas de prime d'ancienneté.</p>
+",
+      "index": 39,
+      "question": "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
+      "references": [],
+      "slug": "quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+      "theme": "Salaire et Rémunération",
+    },
+    {
+      "answer": "<p>La convention collective prévoit une indemnité de départ à la retraite pour le salarié ayant au moins 10 ans d'ancienneté. Son montant est égal à :</p>
+<ul>
+<li>2/3 de mensualité de salaire pour une ancienneté de 10 à 14 ans ;</li>
+<li>1,25 mensualités de salaire pour une ancienneté de 15 à 19 ans ;</li>
+<li>2 mensualités de salaire pour une ancienneté de 20 à 29 ans ;</li>
+<li>2,5 mensualités de salaire pour une ancienneté d'au moins 30 ans. Ce montant est majoré de 1/20e du salaire mensuel par année d'ancienneté acquise, à compter de la 31e année.</li>
+</ul>
+<p>Pour les salariés qui ont été occupés à temps complet et à temps partiel, l'indemnité de départ à la retraite est calculée proportionnellement aux périodes d'emploi effectuées selon l'une et l'autre de ces deux modalités, depuis leur entrée dans l'entreprise.</p>
+<p>La mensualité qui sert de base au calcul de l'indemnité est égale à 1/13e du salaire de base annuel des 12 mois civils précédant la rupture du contrat de travail. En cas d'année incomplète, le salaire doit être reconstitué.
+.</p>
+",
+      "index": 42,
+      "question": "À quelles indemnités peut prétendre un salarié qui part à la retraite ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005785596",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005785598",
+          "title": "Article 31",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005785598/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite",
+      "theme": "Départ de l’entreprise",
+    },
+    {
+      "answer": "<p>Pendant son congé de maternité légal, la salariée, qui a au moins 9 mois d'ancienneté, a droit à une indemnité complétant les indemnités journalières versées par la sécurité sociale.</p>
+<p>Le complément de salaire versé par l'entreprise permet un maintien à 100 % du salaire mensuel de base. Le montant total des indemnités (indemnités journalières de sécurité sociale ou prestations en espèces de tout organisme de prévoyance et complément de l'employeur) ne peut pas être supérieur au salaire net que la salariée aurait perçu au titre de son salaire de base si elle avait travaillé pendant cette même période.</p>
+<p>Toutefois, lorsque le montant desdites indemnités et prestations est, à lui seul, supérieur au montant du salaire net, la salariée conserve la différence entre des deux montants.</p>
+<p>En outre, la salariée a droit à un congé supplémentaire rémunéré, si elle a bénéficié d'un maintien de salaire de la part de l'entreprise en application de la convention collective, pendant son congé de maternité légal. Pendant ce congé supplémentaire, la rémunération est maintenue dans les conditions suivantes  :</p>
+<ul>
+<li>Congé de 45 jours calendaires, rémunéré à 100%, ou</li>
+<li>Congé de 90 jours calendaires, rémunéré à 50%.</li>
+</ul>
+",
+      "index": 43,
+      "question": "Quelles sont les conditions d’indemnisation pendant le congé de maternité ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005816984",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005816984",
+          "title": "Article 51",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005816984/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite",
+      "theme": "Congés et repos",
+    },
+    {
+      "answer": "<p>La salariée bénéficie du congé de maternité légal.</p>
+<p>Elle a droit à un congé supplémentaire rémunéré, si elle a bénéficié d'un maintien de salaire de la part de l'entreprise en application de la convention collective, pendant son congé de maternité légal. Ce congé supplémentaire aura l'une des durées suivantes :</p>
+<ul>
+<li>Congé de 45 jours calendaires, rémunéré à 100%, ou</li>
+<li>Congé de 90 jours calendaires, rémunéré à 50%.</li>
+</ul>
+<p>La salariée doit informer son employeur, par lettre recommandée avec avis de réception, de son intention de bénéficier de ce congé supplémentaire, au moins un mois avant la fin de son congé de maternité. Dans son courrier, elle précise la durée du congé souhaitée.</p>
+<p>Cette période d'absence supplémentaire ne donne pas lieu à acquisition de droits à congés payés.</p>
+",
+      "index": 44,
+      "question": "Quelle est la durée du congé de maternité ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005816984",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005816984",
+          "title": "Article 51",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005816984/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "quelle-est-la-duree-du-conge-de-maternite",
+      "theme": "Congés et repos",
+    },
+    {
+      "answer": "<p>En cas d'absence pour accident, maladie ou cure thermale agréée donnant lieu au versement d'indemnités journalières de sécurité sociale, le salarié peut bénéficier d'un maintien de salaire.</p>
+<h4>1. Conditions d'ancienneté du salarié pour bénéficier du maintien de salaire</h4>
+<p>Le salarié doit avoir au moins 1 an d'ancienneté dans l'entreprise.</p>
+<p>Toutefois, il bénéficie du maintien de salaire dès son embauche, s'il justifie, pour tout type de contrat de travail, d'une ancienneté professionnelle bancaire d'au moins 3 ans consécutifs acquise chez son ou ses deux précédent(s) employeur(s) qui relève(nt) de la convention collective de la banque. Pendant la première année, le salaire est maintenu dans les mêmes conditions que s'il avait un an d'ancienneté (100 % pendant 2 mois puis à 50 % pendant les 2 mois).</p>
+<h4>2. Montant et durée du maintien de salaire pendant l'arrêt maladie</h4>
+<p>Le montant du maintien de salaire dépend de l'ancienneté du salarié :</p>
+<ul>
+<li>Ancienneté de 1 à 5 ans : pendant 2 mois maintien du salaire à 100%, puis pendant 2 mois maintien du salaire à 50% ;</li>
+<li>Ancienneté de 5 à 10 ans : pendant 3 mois maintien du salaire à 100%, puis pendant 3 mois maintien du salaire à 50% ;</li>
+<li>Ancienneté de 10 à 15 ans : pendant 4 mois maintien du salaire à 100%, puis pendant 4 mois maintien du salaire à 50% ;</li>
+<li>Ancienneté de 15 à 20 ans : pendant 5 mois maintien du salaire à 100%, puis pendant 5 mois maintien du salaire à 50% ;</li>
+<li>Ancienneté plus de 20 ans : pendant 6 mois maintien du salaire à 100%, puis pendant 6 mois maintien du salaire à 50%.</li>
+</ul>
+<p>Si le salarié a au moins un enfant à charge au sens fiscal du terme, la durée d'indemnisation à 50% du salaire est de :</p>
+<ul>
+<li>5 mois pour une ancienneté de 1 à 5 ans ;</li>
+<li>6 mois pour une ancienneté de 5 à 10 ans ;</li>
+<li>8 mois pour une ancienneté au-delà de 10 ans.</li>
+</ul>
+<p>Le montant total des indemnités (indemnités journalières de sécurité sociale ou prestations en espèces versées par un tiers mandaté et complément employeur) ne peut pas être supérieur au salaire net que le salarié aurait perçu, au titre du salaire de base, s'il avait travaillé pendant cette même période.</p>
+<p>Lorsque le montant de ces indemnités et prestations est, à lui seul, supérieur au montant du salaire net, le salarié conserve la différence entre ces deux montants.</p>
+<h4>3. Date de début du maintien de salaire</h4>
+<p>Le maintien de salaire (ou indemnisation) s'effectue à compter du :</p>
+<ul>
+<li>1er jour d'absence pour le 1er et le 2e arrêt maladie ;</li>
+<li>4e jour d'absence pour les arrêts maladie suivants ;</li>
+<li>1er jour d'absence en cas d’absences résultant d'accident de travail, de trajet ou de maladie professionnelle.</li>
+</ul>
+<p>La durée du maintien de salaire s'apprécie à compter du premier jour de l'arrêt de travail considéré. Les périodes d'absence rémunérées pour accident, maladie ou cures thermales agréées dont le salarié a déjà bénéficié durant les 12 mois consécutifs précédant cette date s'imputent sur la durée du maintien de salaire.</p>
+<h4>4. Organisation d'une contre-visite médicale</h4>
+<p>Si l'employeur le juge utile, il peut convoquer le salarié en arrêt maladie à une contre-visite ou faire effectuer une contre-visite à son domicile. Dans les deux cas, la contre-visite doit être effectuée par un médecin désigné par la Caisse primaire d'assurance maladie.</p>
+<p>Si l'arrêt de travail est confirmé, le salarié continue à bénéficier du maintien de salaire prévu par la convention collective. Si le résultat est négatif, l'employeur cesse de verser le maintien de salaire au salarié.</p>
+<h4>5. Cas de la maladie longue durée</h4>
+<p>En cas de maladie de longue durée prise en charge par la sécurité sociale, les salariés ayant au moins 10 années d'ancienneté bénéficient d'un maintien du salaire mensuel de base à 100 % pendant à 12 mois puis à 50 % pendant 12 mois.</p>
+<p>Le montant total des indemnités (indemnités journalières de sécurité sociale ou prestations en espèces versées par un tiers mandaté et complément employeur) ne peut pas être supérieur au salaire net que le salarié aurait perçu, au titre du salaire de base, s'il avait travaillé pendant cette même période.</p>
+",
+      "index": 45,
+      "question": "En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005820272",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000022008281",
+          "title": "Article 54",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000022008281/?idConteneur=KALICONT000005635780",
+        },
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005822423",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005822423",
+          "title": "Article 56",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005822423/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
+      "theme": "Santé, sécurité et conditions de travail",
+    },
+    {
+      "answer": "<p>La convention collective ne prévoit pas de prime pour travaux dangereux ni de prime pour travaux insalubres.</p>
+",
+      "index": 48,
+      "question": "Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?",
+      "references": [],
+      "slug": "quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres",
+      "theme": "Salaire et Rémunération",
+    },
+    {
+      "answer": "<p>Le salarié présent à son poste de travail a droit, quelle que soit son ancienneté, à des absences, non fractionnables, sur présentation d'un justificatif pour les événements suivants.</p>
+<h4>1. Les événements donnant droit à un congé exceptionnel</h4>
+<p>Le salarié bénéficie d'une autorisation d'absence pour les événements suivants :</p>
+<ul>
+<li>Mariage ou union par PACS du salarié : 5 jours ouvrés ;</li>
+<li>Mariage des descendants : 2 jours ouvrés ;</li>
+<li>Naissance ou adoption d'un enfant : 3 jours ouvrés ;</li>
+<li>Annonce de la survenue d'un handicap chez un enfant : 2 jours ouvrés ;</li>
+<li>Décès du conjoint ou du partenaire lié par un PACS : 5 jours ouvrés ;</li>
+<li>Décès des père et mère du salarié, de son conjoint ou du partenaire lié par un PACS : 3 jours ouvrés ;</li>
+<li>Décès des enfants du salarié, de son conjoint ou du partenaire lié par un PACS : 5 jours ouvrés ;</li>
+<li>Décès des collatéraux du salarié, de son conjoint ou du partenaire lié par un PACS (frère ou sœur du salarié, du conjoint ou du partenaire lié par PACS) : 3 jours ouvrés ;</li>
+<li>Décès des autres descendants et ascendants du salarié : 2 jours ouvrés ;</li>
+<li>Déménagement (au plus une fois par an hors déménagement professionnel) : 2 jours ouvrés.</li>
+</ul>
+<p>Pour les congés de paternité et d'accueil de l'enfant, l'employeur verse un complément aux indemnités journalières de sécurité sociale afin d'assurer le maintien du salaire, dans la limite du plafond de la sécurité sociale, pendant 5 jours consécutifs. Cette durée est portée à 11 jours consécutifs en cas de naissances multiples. La durée du congé de paternité et d'accueil de l'enfant est prise en compte pour la détermination des droits à l'ancienneté et dans le calcul des droits au titre de l'intéressement et de la participation.</p>
+<p>Les absences pour événements familiaux sont prises au moment où intervient l'événement. Seul le cumul des absences pour le mariage du salarié et pour le déménagement est admis.</p>
+<h4>2. Rémunération pendant les congés exceptionnels</h4>
+<p>Pour les salariés ayant moins d'un an d'ancienneté, la rémunération est maintenue pendant une durée égale à celle prévue par la loi pour le congé exceptionnel correspondant.</p>
+<p>Pour les salariés ayant au moins un an d'ancienneté, la rémunération est maintenue pendant toute la durée du congé exceptionnel.</p>
+<h4>3. Salariés à temps partiel ou travaillant en modulation</h4>
+<p>Les salariés à temps partiel ou travaillant en modulation bénéficient des mêmes droits à absence que les salariés à temps plein, selon les modalités de décompte propres à leur employeur.</p>
+<h4>4. Autorisations d'absence du salarié pour la maladie d'un membre de sa famille</h4>
+<p>Une autorisation d'absence rémunérée est accordée, au père ou à la mère, pour soigner l'enfant dont il assume la charge effective et permanente. La durée de cette absence est égale à :</p>
+<ul>
+<li>3 jours par an, si l'enfant a moins de 14 ans ;</li>
+<li>6 jours par an, si le salarié assume la charge de 2 enfants âgés de moins de 14 ans ;</li>
+<li>9 jours pour par an, si le salarié assume la charge de 3 enfants et plus âgés de moins de 14 ans.</li>
+</ul>
+<p>En outre, une autorisation d'absence rémunérée de 2 jours par exercice civil est accordée en cas d'hospitalisation, y compris hospitalisation de jour, d'un enfant de moins de 14 ans.</p>
+<p>Ces absences sont accordées sur production d'un certificat médical spécifiant que la présence du père ou de la mère est nécessaire auprès de l'enfant.</p>
+<p>Des autorisations d'absence complémentaire non rémunérée peuvent également être accordées aux salariés pour soigner leur conjoint, leurs enfants ou ascendants à charge. Tout salarié concerné doit fournir une attestation médicale précisant que sa présence est nécessaire auprès du malade.</p>
+",
+      "index": 50,
+      "question": "Les congés pour événements familiaux",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005825792",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000036551975",
+          "title": "Article 59",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000036551975/?idConteneur=KALICONT000005635780",
+        },
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005826876",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005826876",
+          "title": "Article 60",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005826876/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "les-conges-pour-evenements-familiaux",
+      "theme": "Congés et repos",
+    },
+    {
+      "answer": "<p>Les principales primes prévues par la convention collective sont les suivantes :</p>
+<ul>
+<li>
+<p><strong>Prime de diplôme</strong>, versée en une seule fois à l'occasion de l'obtention, par le biais de la formation continue et hors contrat d'apprentissage et de professionnalisation, des diplômes suivants :</p>
+<ul>
+<li>BP banque : 1 450 € ;</li>
+<li>ITB : 1 900 € ;</li>
+<li>BTS banque : 1 600 € ;</li>
+<li>Licence professionnelle bancaire/ Cycle de professionnalisation certifié « conseiller clientèle de professionnels »/ Cycle de développement professionnel certifié « conseiller patrimonial agence » : 1 700 €.</li>
+</ul>
+</li>
+<li>
+<p><strong>Prime de transport</strong> :</p>
+<ul>
+<li>4,57 € par mois pour les salariés dont le lieu de travail est situé en région parisienne et qui n’utilisent pas les transports en commun et  pour les salariés dont le lieu de travail est fixé dans les agglomérations de Lyon, Marseille, Aix-en-Provence, Lille, Bordeaux et Toulouse quel que soit leur mode de transport,</li>
+<li>3,50 € par mois pour les salariés travaillant dans les autres agglomérations composées de plus de 100 000 habitants.</li>
+</ul>
+</li>
+<li>
+<p><strong>Prise en charge des dépenses de déménagement et de réinstallation en de mutation à l'initiative de l'employeur</strong> : les modalités sont définies au niveau de chaque entreprise. Le salarié bénéficie d'un congé exceptionnel de 2 jours ouvrés se cumulant avec les 2 jours de déménagement.</p>
+</li>
+</ul>
+<p>L'indemnité de sous-sol et l'indemnité compensatrice d'habillement, dont bénéficiaient les salariés en décembre 1999, leur restent acquises tant que les conditions de travail justifiant leur versement n'auront pas été modifiées.</p>
+<p>Enfin, les salaires de base annuels sont versés en 13 mensualités égales. La 13ème mensualité, calculée pro rata temporis, est versée en même temps que le salaire du mois de décembre, sauf dispositions différentes d'entreprise.</p>
+",
+      "index": 51,
+      "question": "Quelles sont les primes prévues par la convention collective ?",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005797304",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005797304",
+          "title": "Article 37",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005797304/?idConteneur=KALICONT000005635780",
+        },
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005801232",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005801232",
+          "title": "Article 39",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005801232/?idConteneur=KALICONT000005635780",
+        },
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005806167",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000020406871",
+          "title": "Article 43",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000020406871/?idConteneur=KALICONT000005635780",
+        },
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005807362",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005807362",
+          "title": "Article 44",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005807362/?idConteneur=KALICONT000005635780",
+        },
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005808632",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005808632",
+          "title": "Article 45",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005808632/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "quelles-sont-les-primes-prevues-par-la-convention-collective",
+      "theme": "Salaire et Rémunération",
+    },
+    {
+      "answer": "<p>Le 1er mai est férié et chômé. Les autres jours fériés légaux sont des jours de repos pour les salariés et sont rémunérés.</p>
+<p>Par exception, les jours fériés légaux peuvent être travaillés en raison de spécificités de service ou d'activité. Dans ce cas, l'employeur doit conclure un accord d'entreprise ou d'établissement sur cette question.</p>
+",
+      "index": 52,
+      "question": "Jours fériés et ponts dans le secteur privé",
+      "references": [
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005830667",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005830667",
+          "title": "Article 67",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005830667/?idConteneur=KALICONT000005635780",
+        },
+        {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005830771",
+          "dila_container_id": "KALICONT000005635780",
+          "dila_id": "KALIARTI000005830771",
+          "title": "Article 68",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005830771/?idConteneur=KALICONT000005635780",
+        },
+      ],
+      "slug": "jours-feries-et-ponts-dans-le-secteur-prive",
+      "theme": "Congés et repos",
+    },
+  ],
+  "articlesByTheme": [
+    {
+      "articles": [
+        {
+          "cid": "KALIARTI000005801232",
+          "id": "KALIARTI000005801232",
+          "section": "Versement et composition des salaires de base",
+          "title": "39",
+        },
+        {
+          "cid": "KALIARTI000005802231",
+          "id": "KALIARTI000005802231",
+          "section": "Salaires minima conventionnels",
+          "title": "40",
+        },
+        {
+          "cid": "KALIARTI000005805105",
+          "id": "KALIARTI000005805105",
+          "section": "Négociation annuelle de branche",
+          "title": "42",
+        },
+        {
+          "cid": "KALIARTI000005810251",
+          "id": "KALIARTI000005810251",
+          "section": "Principe d'application",
+          "title": "46",
+        },
+      ],
+      "bloc": "1",
+    },
+    {
+      "articles": [
+        {
+          "cid": "KALIARTI000005791600",
+          "id": "KALIARTI000020406878",
+          "section": "Grille de classification",
+          "title": "33",
+        },
+        {
+          "cid": "KALIARTI000005792681",
+          "id": "KALIARTI000005792681",
+          "section": "Grille de correspondance",
+          "title": "34",
+        },
+        {
+          "cid": "KALIARTI000005793868",
+          "id": "KALIARTI000005793868",
+          "section": "Métiers-repères",
+          "title": "35",
+        },
+      ],
+      "bloc": "2",
+    },
+    {
+      "articles": [
+        {
+          "cid": "KALIARTI000005829140",
+          "id": "KALIARTI000005829140",
+          "section": "Temps de travail effectif",
+          "title": "61",
+        },
+        {
+          "cid": "KALIARTI000005830016",
+          "id": "KALIARTI000005830016",
+          "section": "Heures supplémentaires et repos compensateur",
+          "title": "62",
+        },
+        {
+          "cid": "KALIARTI000005830117",
+          "id": "KALIARTI000005830117",
+          "section": "Répartition du temps de travail",
+          "title": "63",
+        },
+      ],
+      "bloc": "6",
+    },
+    {
+      "articles": [
+        {
+          "cid": "KALIARTI000005775355",
+          "id": "KALIARTI000005775355",
+          "section": "Non-discrimination et égalité professionnelle",
+          "title": "23",
+        },
+      ],
+      "bloc": "9",
+    },
+    {
+      "articles": [
+        {
+          "cid": "KALIARTI000005770247",
+          "id": "KALIARTI000005770247",
+          "section": "Période d'essai",
+          "title": "19",
+        },
+      ],
+      "bloc": "10",
+    },
+    {
+      "articles": [
+        {
+          "cid": "KALIARTI000005766867",
+          "id": "KALIARTI000005766867",
+          "section": "Réintégration professionnelle",
+          "title": "17",
+        },
+      ],
+      "bloc": "16",
+    },
+  ],
+  "breadcrumbs": [],
+  "cdtnId": "a25dfc974f",
+  "contributions": true,
+  "date_publi": "2000-01-10T00:00:00.000Z",
+  "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
+  "effectif": 216431,
+  "excludeFromSearch": false,
+  "id": "KALICONT000005635780",
+  "isPublished": true,
+  "longTitle": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.",
+  "metaDescription": "Idcc 2120 : Banque",
+  "mtime": 1561580346,
+  "num": 2120,
+  "shortTitle": "Banque",
+  "slug": "2120-banque",
+  "source": "conventions_collectives",
+  "text": "IDCC 2120: Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004. Banque",
+  "title": "Banque",
+  "title_vector": [
+    0.00949695706,
+    -0.0318050049,
+    -0.0611935556,
+    -0.00698118657,
+    -0.0659291893,
+    -0.0120721189,
+    -0.0218811352,
+    0.0333890952,
+    0.000849013391,
+    -0.0739375576,
+    0.0600901619,
+    -0.000754292472,
+    -0.0406143963,
+    0.0570323132,
+    0.0575332455,
+    -0.0300151072,
+    0.0351515934,
+    0.0223915614,
+    -0.0781913,
+    -0.0234755445,
+    0.0274612345,
+    0.000790470513,
+    0.0735433,
+    0.0627899468,
+    0.0436086655,
+    0.0310898218,
+    -0.032621745,
+    0.0244509559,
+    0.063225843,
+    -0.0832791552,
+    0.012396,
+    0.00111066632,
+    0.0380255282,
+    -0.063747704,
+    0.00229454972,
+    -0.0443508662,
+    -0.0109443413,
+    0.0734012648,
+    -0.0549843758,
+    0.04372501,
+    -0.0509750322,
+    -0.0638086647,
+    -0.0058398894,
+    0.0236443877,
+    0.00773962447,
+    -0.0732125,
+    0.00302087213,
+    0.0465339646,
+    0.0598132834,
+    -0.0925859064,
+    -0.0646709055,
+    0.0545267686,
+    0.0460020117,
+    0.0773023143,
+    0.0427199043,
+    0.0296667758,
+    -0.052215457,
+    -0.0451651961,
+    0.00357417762,
+    0.00215767068,
+    0.0544759668,
+    -0.0372493118,
+    0.0462984815,
+    0.0590911582,
+    -0.0561631806,
+    0.0634698346,
+    -0.0754562393,
+    0.00700061722,
+    -0.0188197177,
+    0.0153754018,
+    0.0293214861,
+    0.0733467191,
+    -0.0373660289,
+    -0.0822766498,
+    -0.0667872578,
+    0.0710492283,
+    0.0561192594,
+    0.000761712203,
+    -0.0691761449,
+    -0.0321092568,
+    0.007614539,
+    -0.0745176822,
+    0.0640814304,
+    0.00235836557,
+    -0.0155218225,
+    -0.0273646954,
+    -0.0181924179,
+    0.00453111622,
+    0.0547417104,
+    -0.0284327492,
+    -0.00578653114,
+    -0.0305081755,
+    0.0539522581,
+    0.0196834821,
+    0.00689590583,
+    -0.0744777694,
+    -0.0358238779,
+    0.0448510796,
+    -0.0559023581,
+    -0.0208093766,
+    0.0826126933,
+    0.0541441143,
+    -0.0542022288,
+    0.00946527161,
+    -0.0614149533,
+    0.00660116039,
+    0.032438308,
+    0.0780266598,
+    -0.032497745,
+    0.0492712781,
+    0.0287261214,
+    0.0505870692,
+    0.0540980101,
+    0.0474049859,
+    0.0415988974,
+    0.0579533167,
+    -0.00656194147,
+    0.0659640953,
+    -0.0407307036,
+    0.0330033265,
+    -0.0239447169,
+    0.0306110531,
+    0.00942233,
+    0.0130093377,
+    0.0746428,
+    0.0114000114,
+    0.0674184933,
+    -0.00136893196,
+    -0.0499182642,
+    -0.036936529,
+    0.0387228429,
+    -0.0454597399,
+    -0.0659850761,
+    0.0516110137,
+    -0.0732167661,
+    -0.0189029966,
+    0.0318653286,
+    0.0406981148,
+    0.0591210723,
+    -0.0325019807,
+    -0.000945088919,
+    -0.021432247,
+    0.0657406151,
+    -0.0300290585,
+    0.00585489161,
+    0.0119839888,
+    -0.00394063024,
+    -0.0548857823,
+    0.0269227922,
+    -0.0351390876,
+    0.0014263842,
+    -0.0177833512,
+    -0.0203672685,
+    0.077156961,
+    -0.0313627757,
+    0.0283971559,
+    -0.0355758518,
+    0.0358626544,
+    -0.0646562949,
+    -0.0375995301,
+    -0.0404603668,
+    -0.0643705651,
+    0.00359931868,
+    0.0630702227,
+    0.0653533265,
+    0.0285736211,
+    -0.0309178513,
+    0.0412691347,
+    -0.0668517277,
+    0.0241476651,
+    -0.0670848116,
+    0.0456140116,
+    -0.0376348048,
+    0.00600847555,
+    0.00438431837,
+    -0.0172689501,
+    0.00964297261,
+    0.0425603203,
+    -0.0783807337,
+    0.0562519915,
+    0.0382035524,
+    -0.0535681956,
+    -0.0772733763,
+    -0.0223996192,
+    -0.066859521,
+    0.0289452914,
+    0.071318984,
+    -0.0391585492,
+    -0.0196412243,
+    0.032894183,
+    -0.0216635615,
+    -0.00519307377,
+    0.0497988462,
+    -0.0401563235,
+    -0.0689446405,
+    -0.01171258,
+    -0.0124699473,
+    0.0226921346,
+    0.0214036033,
+    0.0396030322,
+    0.0541120768,
+    0.0530296825,
+    -0.0467925742,
+    0.0292775333,
+    0.0528404,
+    -0.055456683,
+    -0.040423654,
+    -0.0149108414,
+    0.0253210906,
+    0.0523598492,
+    -0.00954887178,
+    -0.0348820649,
+    0.0884270743,
+    0.0190154351,
+    -0.0214604866,
+    -0.0507049598,
+    0.0196303,
+    0.0127262603,
+    0.0397991762,
+    -0.043690607,
+    0.0596219748,
+    0.0159301572,
+    -0.000293494581,
+    0.0210990477,
+    0.0389593802,
+    0.025143886,
+    -0.0128658665,
+    -0.0115345288,
+    -0.0484271571,
+    0.0537885,
+    0.0287131928,
+    0.0783542842,
+    -0.00655260496,
+    0.0449605323,
+    -0.0715121403,
+    -0.000785600452,
+    0.0644012168,
+    -0.059502665,
+    -0.040887557,
+    -0.0583287328,
+    0.0747116,
+    -0.092714712,
+    0.0768218786,
+    -0.0461384468,
+    -0.043941576,
+    0.02050885,
+    0.0216763783,
+    0.0261071064,
+    0.0650864094,
+    -0.00245262962,
+    -0.05470125,
+    0.03935159,
+    -0.00855462905,
+    -0.0322933942,
+    -0.00104022108,
+    -0.00631444715,
+    -0.00894238427,
+    0.0502731279,
+    -0.0108507713,
+    0.029815156,
+    -0.093583107,
+    0.0416849591,
+    -0.0541547462,
+    -0.0502025038,
+    -0.0855333209,
+    0.079102844,
+    0.0131723145,
+    0.0223768018,
+    0.015159945,
+    -0.0154081332,
+    -0.0574973226,
+    0.0497240201,
+    -0.0224769842,
+    0.00861398876,
+    -0.0442541353,
+    -0.00301953172,
+    -0.0226756427,
+    0.0673573464,
+    -0.0163200386,
+    -0.00779255899,
+    0.0534058,
+    0.0466719903,
+    -0.00568517484,
+    -0.0253052227,
+    -0.0484050959,
+    -0.0150322448,
+    0.0110025723,
+    -0.0405549072,
+    0.00336784939,
+    0.00264450908,
+    0.0315209031,
+    0.0556791537,
+    -0.0101387892,
+    -0.00356694846,
+    0.0909758732,
+    -0.077485837,
+    -0.00665332843,
+    0.00553323841,
+    -0.0296827555,
+    0.0598288327,
+    -0.0479644611,
+    -0.0616288446,
+    -0.00526307616,
+    0.081937179,
+    0.0127957454,
+    -0.0359045938,
+    0.020900378,
+    0.000487364479,
+    -0.053432595,
+    0.00767894369,
+    -0.0352421924,
+    -0.0542769209,
+    0.0227796659,
+    0.0533835292,
+    -0.00330241933,
+    -0.00760264648,
+    0.0351248309,
+    -0.0680766404,
+    -0.0710715577,
+    0.0369822197,
+    0.0612016283,
+    -0.0348061509,
+    0.0548888072,
+    0.0489530601,
+    0.0347464718,
+    0.0387375057,
+    -0.0487520918,
+    -0.00959341601,
+    0.0705205128,
+    -0.0128720524,
+    0.0590031222,
+    0.0609066114,
+    -0.0572393052,
+    -0.0520860069,
+    -0.0843109787,
+    -0.0443206467,
+    0.0473292358,
+    0.0613217317,
+    0.0624600239,
+    -0.0189103689,
+    -0.0035133143,
+    -0.0410286412,
+    0.00203553541,
+    0.0627939,
+    0.037918184,
+    0.0680899,
+    -0.0166252088,
+    0.0385359339,
+    0.0775013566,
+    0.0744611695,
+    -0.0473229252,
+    -0.0137325823,
+    -0.0255424026,
+    -0.00328182732,
+    -0.0252640881,
+    0.0250236914,
+    -0.0326418504,
+    -0.0538076125,
+    -0.0376706831,
+    0.0410004966,
+    0.060707204,
+    -0.00027111618,
+    0.0877012,
+    -0.00727244373,
+    0.0309314169,
+    0.0214097854,
+    -0.00986327231,
+    0.0631592,
+    -0.043577116,
+    0.0178140197,
+    -0.0563655607,
+    -0.0202062633,
+    -0.0231211279,
+    -0.0196693186,
+    -0.068599157,
+    -0.0840981156,
+    0.0684799105,
+    0.00800634827,
+    -0.0588151291,
+    -0.00592023227,
+    0.0362090953,
+    0.0131225735,
+    0.0200410876,
+    0.0116431788,
+    0.0241070911,
+    -0.0257386882,
+    0.0698224,
+    -0.0417201743,
+    0.037116874,
+    0.0369939022,
+    -0.0269664358,
+    -0.0030732255,
+    0.0173944756,
+    0.0281472,
+    0.0716081783,
+    -0.024388304,
+    0.0352830961,
+    0.00692691142,
+    0.00618099933,
+    -0.028946843,
+    0.0313111246,
+    -0.0683792904,
+    -0.0162925534,
+    0.04259222,
+    -0.0237439442,
+    0.0734701827,
+    -0.0299321059,
+    -0.00803498086,
+    0.0512862876,
+    0.0448583849,
+    -0.0158320796,
+    -0.0701220408,
+    -0.0315264277,
+    -0.0501674153,
+    0.0421534441,
+    0.0429985262,
+    0.0322964862,
+    -0.0588561073,
+    -0.0585181229,
+    -0.0486585349,
+    -0.0519860387,
+    0.062865831,
+    -0.0594916865,
+    0.039747417,
+    -0.00630980171,
+    -0.00506231,
+    -0.0236718878,
+    -0.0391440615,
+    -0.082676746,
+    -0.0433106124,
+    0.0220430959,
+    0.00906539243,
+    0.0533656366,
+    -0.0420291759,
+    0.00495795114,
+    0.021392962,
+    0.0102888756,
+    -0.0274163485,
+    -0.0316303447,
+    -0.00571400113,
+    -0.0124235246,
+    -0.0250732601,
+    0.0565988496,
+    0.0538732484,
+    0.0545259118,
+    -0.00881455187,
+    -0.0577698275,
+    0.0109000728,
+    -0.013629904,
+    0.0697324723,
+    -0.0115189413,
+    0.0637842938,
+    -0.0708321929,
+    0.0192985628,
+    0.0277133379,
+    -0.0167104658,
+    0.0441279896,
+    -0.0257953871,
+    0.0532758459,
+    -0.0518235192,
+    -0.0607259609,
+    -0.0155097833,
+    -0.0237488747,
+    -0.0505272932,
+    -0.0347369611,
+    0.0108085638,
+    -0.0326723,
+    0.00377711048,
+    0.0223099757,
+    -0.0608768351,
+    0.00938347634,
+    0.080892913,
+    -0.0729027614,
+    -0.0545298643,
+    -0.0614114553,
+    0.0679758787,
+    -0.0326148,
+    -0.0482875407,
+    -0.00778314145,
+    0.0241083428,
+    -0.0117860641,
+    -0.0564310327,
+    0.0574002974,
+    -0.0450218841,
+    0.0553875864,
+    0.0242294986,
+    -0.0334531479,
+    -0.0508356,
+    0.0534448847,
+    0.0339676328,
+    -0.0101432912,
+    -0.0227544606,
+    0.0713477954,
+    -0.0150252087,
+    0.0273113605,
+    -0.038589295,
+    -0.0411386155,
+    0.035681244,
+    0.0242459066,
+    0.0471555591,
+    0.00402655825,
+    -0.0292377807,
+    -0.0784630701,
+    -0.0183983818,
+    -0.00706065772,
+    0.0455755219,
+    -0.0553196035,
+    0.00551783433,
+    0.014902249,
+    0.018811224,
+    0.0681784749,
+    -0.0184910446,
+  ],
+  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780",
+}
+`;
