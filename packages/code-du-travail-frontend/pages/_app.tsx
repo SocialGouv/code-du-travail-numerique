@@ -36,7 +36,11 @@ if (typeof window !== "undefined") {
     });
 }
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({
+  Component,
+  pageProps,
+  referer,
+}: AppProps & { referer?: string }) {
   const router = useRouter();
 
   useEffect(() => {
@@ -45,7 +49,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       url: PIWIK_URL,
       onInitialization: () => {
         const referrerUrl =
-          document?.referrer || getSourceUrlFromPath(SITE_URL + router.asPath);
+          referer || getSourceUrlFromPath(SITE_URL + router.asPath);
         if (referrerUrl) {
           push(["setReferrerUrl", referrerUrl]);
         }
@@ -63,5 +67,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     </React.StrictMode>
   );
 }
+
+export const getServerSideProps = async ({ ctx }) => {
+  const referer = ctx.isServer ? ctx.req.headers.referer : undefined;
+  return { props: { referer } };
+};
 
 export default MyApp;
