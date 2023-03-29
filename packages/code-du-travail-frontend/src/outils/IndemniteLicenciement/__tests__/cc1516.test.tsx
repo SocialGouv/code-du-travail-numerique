@@ -73,7 +73,7 @@ describe("Indemnité licenciement - CC 1516", () => {
       rendering.queryByText("Salaires perçus pendant le préavis")
     ).toBeInTheDocument();
     fireEvent.change(ui.salary.agreementWithNoticeSalary.salaries.getAll()[0], {
-      target: { value: "3000" },
+      target: { value: "4000" },
     });
     fireEvent.change(ui.salary.agreementWithNoticeSalary.primes.getAll()[0], {
       target: { value: "200" },
@@ -82,16 +82,16 @@ describe("Indemnité licenciement - CC 1516", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 € brut");
+    expect(ui.result.resultat.get()).toHaveTextContent("3548,06 € brut");
     expect(ui.result.resultTableRows.getAll().length).toBe(3);
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
-      "mai 20223000 €"
+      "mai 20224000 €"
     );
     userAction.click(ui.previous.get());
 
     expect(
       ui.salary.agreementWithNoticeSalary.salaries.getAll()[0]
-    ).toHaveValue(3000);
+    ).toHaveValue(4000);
     expect(ui.salary.agreementWithNoticeSalary.primes.getAll()[0]).toHaveValue(
       200
     );

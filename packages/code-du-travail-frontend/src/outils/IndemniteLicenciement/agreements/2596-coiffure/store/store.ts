@@ -36,7 +36,6 @@ export const createAgreement2596StoreSalaires: StoreSlice<
             item.question.name ===
             "contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle"
         )?.info;
-      console.log("categoryPro", categoryPro);
       if (
         categoryPro !== "'Cadres'" &&
         categoryPro !== "'Agents de maîtrise'"

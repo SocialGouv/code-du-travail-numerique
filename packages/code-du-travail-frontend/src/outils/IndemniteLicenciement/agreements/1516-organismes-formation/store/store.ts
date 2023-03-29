@@ -57,8 +57,8 @@ export const createAgreement1516StoreSalaires: StoreSlice<
       );
     },
     onChangeHasReceivedSalaries: (value) => {
-      get().agreement1516Function.onInit();
       applyGenericValidation(get, set, "hasReceivedSalaries", value);
+      get().agreement1516Function.onInit();
     },
     onSalariesChange: (value) => {
       applyGenericValidation(get, set, "noticeSalaryPeriods", value);

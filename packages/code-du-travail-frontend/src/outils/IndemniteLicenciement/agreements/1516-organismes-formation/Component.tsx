@@ -69,6 +69,9 @@ export default function Agreement1516() {
           {hasReceivedSalaries === "oui" && (
             <SalaireTempsPlein
               title={`Salaire${S()} perçu${S()} pendant le préavis`}
+              subTitle={`Indiquez le montant ${
+                hasMoreThanOneNoticeSalary ? "des" : "du"
+              } salaire${S()} (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ`}
               onSalariesChange={onSalariesChange}
               salaryPeriods={noticeSalaryPeriods}
               error={errorNoticeSalaryPeriods}

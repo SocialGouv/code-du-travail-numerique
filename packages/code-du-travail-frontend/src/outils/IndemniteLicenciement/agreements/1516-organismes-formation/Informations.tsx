@@ -33,7 +33,6 @@ export default function Agreement1516Informations() {
               <Paragraph noMargin>
                 Salaires perçus pendant le préavis&nbsp;:
               </Paragraph>
-
               <StyledFilledElementTable data-testid={"result-table"}>
                 <thead>
                   <tr>
