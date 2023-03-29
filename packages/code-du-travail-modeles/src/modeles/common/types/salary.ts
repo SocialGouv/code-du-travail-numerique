@@ -11,8 +11,8 @@ import type {
   CC2609ReferenceSalaryProps,
   CC3239ReferenceSalaryProps,
 } from "../../conventions";
-import type { CC2596ReferenceSalaryProps } from "../../conventions/2596_coiffure/salary";
 import type { CC675ReferenceSalaryProps } from "../../conventions/675_habillement_commerce_succursales";
+import type { CC2596ReferenceSalaryProps } from "../../conventions/2596_coiffure/salary";
 import type { SupportedCcIndemniteLicenciement } from "..";
 
 export type SalaryPeriods = {
