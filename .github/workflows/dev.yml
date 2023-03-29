@@ -107,5 +107,4 @@ jobs:
         with:
           name: e2e-screenshots
           path: |
-            packages/code-du-travail-frontend-e2e/cypress/screenshots
-            packages/code-du-travail-frontend-e2e/codecept/output
+            packages/code-du-travail-frontend/cypress/screenshots

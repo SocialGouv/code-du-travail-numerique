@@ -4,6 +4,7 @@ import type {
   CC29ReferenceSalaryProps,
   CC44ReferenceSalaryProps,
   CC573ReferenceSalaryProps,
+  CC675ReferenceSalaryProps,
   CC1486ReferenceSalaryProps,
   CC1516ReferenceSalaryProps,
   CC1527ReferenceSalaryProps,
@@ -23,6 +24,9 @@ export type SalaryPeriods = {
 
 export interface IReferenceSalary<T extends SupportedCcIndemniteLicenciement> {
   computeReferenceSalary: (args: ReferenceSalaryProps<T>) => number;
+  computeExtraInfo?: (
+    args: ReferenceSalaryProps<T>
+  ) => Record<string, number | string>;
 }
 
 export type ReferenceSalaryProps<T> =
@@ -50,4 +54,6 @@ export type ReferenceSalaryProps<T> =
     ? CC3239ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC2148
     ? CC2148ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC0675
+    ? CC675ReferenceSalaryProps
     : LegalReferenceSalaryProps;

@@ -35,7 +35,7 @@ export default function Agreement2596() {
     init();
   }, []);
   const hasMoreThanOneNoticeSalary = noticeSalaryPeriods.length > 1;
-  const S = hasMoreThanOneNoticeSalary ? "s" : "";
+  const S = () => (noticeSalaryPeriods.length > 1 ? "s" : "");
   return (
     <>
       {noticeSalaryPeriods.length > 0 && (
@@ -54,14 +54,16 @@ export default function Agreement2596() {
               },
             ]}
             name="hasReceivedSalaries"
-            label="Connaissez-vous le montant des salaires perçus pendant le préavis ?"
+            label={`Connaissez-vous le montant ${
+              hasMoreThanOneNoticeSalary ? "des" : "du"
+            } salaire${S()} perçu${S()} pendant le préavis ?`}
             selectedOption={hasReceivedSalaries}
             onChangeSelectedOption={onChangeHasReceivedSalaries}
             error={errorHasReceivedSalaries}
             showRequired
             note={
               hasReceivedSalaries === "non"
-                ? `Le calcul de l’indemnité nécessite le${S} salaire${S} perçu${S} pendant le préavis. Pour réaliser cette simulation, nous considérerons que le${S} salaire${S} perçu${S} pendant le préavis correspond${
+                ? `Le calcul de l’indemnité nécessite le${S()} salaire${S()} perçu${S()} pendant le préavis. Pour réaliser cette simulation, nous considérerons que le${S()} salaire${S()} perçu${S()} pendant le préavis correspond${
                     hasMoreThanOneNoticeSalary ? "ent" : ""
                   } à la moyenne des salaires perçus au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation.`
                 : undefined
@@ -69,11 +71,12 @@ export default function Agreement2596() {
           />
           {hasReceivedSalaries === "oui" && (
             <SalaireTempsPlein
-              title="Salaires perçus pendant le préavis"
+              title={`Salaire${S()} perçu${S()} pendant le préavis`}
               onSalariesChange={onSalariesChange}
               salaryPeriods={noticeSalaryPeriods}
               error={errorNoticeSalaryPeriods}
               noPrime
+              dataTestidSalaries="notice-salary"
             />
           )}
         </>

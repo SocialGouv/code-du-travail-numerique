@@ -16,9 +16,10 @@ import { AgreementSalary29 } from "./29";
 import { AgreementSalary573 } from "./573";
 import { AgreementSalary2609 } from "./2609";
 import { AgreementSalary2596 } from "./2596";
+import { AgreementSalary675 } from "./675";
 import { AgreementSalary2148 } from "./2148";
 
-const getAgreementReferenceSalary = (
+export const getAgreementReferenceSalary = (
   idcc: SupportedCcIndemniteLicenciement | null,
   get: StoreApi<MainStore>["getState"]
 ): number => {
@@ -58,6 +59,8 @@ const getAgreementReferenceSalary = (
       return new AgreementSalary2596().computeSalary(salaries, get);
     case SupportedCcIndemniteLicenciement.IDCC2609 === idcc:
       return new AgreementSalary2609().computeSalary(salaries, get);
+    case SupportedCcIndemniteLicenciement.IDCC0675 === idcc:
+      return new AgreementSalary675().computeSalary(salaries, get);
     case SupportedCcIndemniteLicenciement.IDCC2148 === idcc:
       return new AgreementSalary2148().computeSalary(salaries, get);
     default: {
@@ -71,11 +74,39 @@ const getAgreementReferenceSalary = (
   }
 };
 
-export default getAgreementReferenceSalary;
+export const getAgreementExtraInfoSalary = (
+  idcc: SupportedCcIndemniteLicenciement | null,
+  get: StoreApi<MainStore>["getState"]
+): Record<string, string | number> => {
+  const salaryInput = get().salairesData.input;
+  let salaries = salaryInput.salaryPeriods;
+  const { salary } = salaryInput;
+
+  if (salary) {
+    const parseSalary = parseFloat(salary);
+    salaries = salaryInput.salaryPeriods.map((v) => ({
+      ...v,
+      value: parseSalary,
+      prime: undefined,
+    }));
+  }
+
+  switch (true) {
+    case SupportedCcIndemniteLicenciement.IDCC0675 === idcc:
+      return new AgreementSalary675().computeExtraInfo(salaries, get);
+    default: {
+      return {};
+    }
+  }
+};
 
 export interface AgreementSalary {
   computeSalary: (
     salaryPeriods: SalaryPeriods[],
     get: StoreApi<MainStore>["getState"]
   ) => number;
+  computeExtraInfo?: (
+    salaryPeriods: SalaryPeriods[],
+    get: StoreApi<MainStore>["getState"]
+  ) => Record<string, string | number>;
 }

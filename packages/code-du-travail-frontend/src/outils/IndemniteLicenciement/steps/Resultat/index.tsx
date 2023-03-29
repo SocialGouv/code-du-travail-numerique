@@ -1,4 +1,11 @@
 import React, { useContext, useEffect } from "react";
+import { IndemniteLicenciementStepName } from "../..";
+import {
+  MatomoBaseEvent,
+  MatomoActionEvent,
+  MatomoSimulatorEvent,
+} from "../../../../lib";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 import {
   IndemniteLicenciementContext,

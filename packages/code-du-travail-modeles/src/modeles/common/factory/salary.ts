@@ -5,6 +5,7 @@ import {
   ReferenceSalary44,
   ReferenceSalary413,
   ReferenceSalary573,
+  ReferenceSalary675,
   ReferenceSalary1486,
   ReferenceSalary1516,
   ReferenceSalary1527,
@@ -46,6 +47,8 @@ export class ReferenceSalaryFactory {
         return new ReferenceSalary2098() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC2609:
         return new ReferenceSalary2609() as IReferenceSalary<T>;
+      case SupportedCcIndemniteLicenciement.IDCC0675:
+        return new ReferenceSalary675() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC2148:
         return new ReferenceSalary2148() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.default:

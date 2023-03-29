@@ -25,7 +25,7 @@ describe("Formule indemnité licenciement - 2596", () => {
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
         "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle":
-          "'Cadres et agents de maitrise'",
+          "'Cadres'",
       });
 
       const result = engine.getFormule();
@@ -54,7 +54,7 @@ describe("Formule indemnité licenciement - 2596", () => {
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
         "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle":
-          "'Emplois techniques et de coiffeurs, emplois de l'esthétique-cosmétique et emplois non techniques'",
+          "'Emplois techniques et de coiffeurs'",
       });
 
       const result = engine.getFormule();

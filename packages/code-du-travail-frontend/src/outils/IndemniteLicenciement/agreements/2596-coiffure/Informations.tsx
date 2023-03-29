@@ -44,7 +44,6 @@ export default function Agreement2596Informations() {
                         (primes et avantages en nature inclus)
                       </StyledFilledElementSpan>
                     </th>
-                    <th>Dont primes</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -55,9 +54,6 @@ export default function Agreement2596Informations() {
                     >
                       <td>{salary.month}</td>
                       <td>{salary.value} €</td>
-                      <td>
-                        {salary.prime} {salary.prime !== undefined && "€"}
-                      </td>
                     </tr>
                   ))}
                 </tbody>

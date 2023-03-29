@@ -202,15 +202,18 @@ export const ui = {
       salaries: byTestId("last-month-salary"),
       primes: byTestId("prime-last-month-salary"),
     },
-    agreement2596: {
+    agreementWithNoticeSalary: {
       knowingLastSalary: {
         oui: byTestId("hasReceivedSalaries - Oui"),
         non: byTestId("hasReceivedSalaries - Non"),
       },
+      salaries: byTestId("notice-salary"),
+      primes: byTestId("prime-notice-salary"),
     },
   },
   result: {
     resultat: byText(/À partir des éléments que vous avez saisis/),
+    resultatLegal: byText(/Montant prévu par le code du travail/),
     formula: byTestId("formula"),
     legalError: {
       title: byText(
