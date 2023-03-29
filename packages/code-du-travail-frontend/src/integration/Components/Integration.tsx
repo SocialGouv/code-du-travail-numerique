@@ -1,5 +1,4 @@
 import {
-  Accordion,
   CodeSnippet,
   Container,
   PageTitle,
@@ -7,6 +6,7 @@ import {
 } from "@socialgouv/cdtn-ui";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import Title from "../../fiche-service-public/components/Title";
 import { WidgetMessage } from "../data";
 
 type IntegrationContainerProps = {
@@ -54,71 +54,6 @@ const IntegrationContainer = ({
     }, []);
   };
   useScript();
-  const accordionItems = [
-    {
-      body: (
-        <>
-          <p>
-            L’installation se passe en deux temps.
-            <br />
-            Premièrement, ajoutez le code suivant dans la balise{" "}
-            <code>&lt;body&gt;</code> de votre page&nbsp;:
-          </p>
-          <CodeSnippet>
-            {`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}
-          </CodeSnippet>
-          <p>
-            Ensuite, intégrez le code suivant à l’endroit où vous souhaitez voir
-            le module s’afficher&nbsp;:
-          </p>
-
-          <CodeSnippet>{`<a href="https://code.travail.gouv.fr${url}">${shortTitle}</a>`}</CodeSnippet>
-        </>
-      ),
-      id: "id-js",
-      title: "javascript",
-    },
-  ];
-  if (messages) {
-    const messageCode = (
-      <>
-        <CodeSnippet>
-          {`
-      window.addEventListener(
-        "message",
-        ({ data }) => {
-          const iframe = document.getElementById('cdtn-iframe-${id}');
-          if (
-            evt.source === iframe.contentWindow
-            && data.kind === "click"
-          ) {
-            ${messages.click.map(
-              ({ name, description }) => `
-            data.name === '${name}' // ${description}`
-            )}
-
-          }
-        },
-        false
-      );
-    `}
-        </CodeSnippet>
-      </>
-    );
-    accordionItems.push({
-      body: (
-        <>
-          <p>
-            Il est possible d&apos;intercepter des messages provenant de clicks
-            sur ce widget avec le code qui suit :
-          </p>
-          {messageCode}
-        </>
-      ),
-      id: "id-js",
-      title: "messages",
-    });
-  }
   return (
     <Container>
       <StyledTitle>{title}</StyledTitle>
@@ -139,11 +74,53 @@ const IntegrationContainer = ({
           Comment faire ? Voici la méthode pour intégrer ce module à votre site
           :
         </p>
-        <Accordion
-          titleLevel={2}
-          preExpanded={["id-js"]}
-          items={accordionItems}
-        />
+        <Title>Javascript</Title>
+        <p>
+          L’installation se passe en deux temps.
+          <br />
+          Premièrement, ajoutez le code suivant dans la balise{" "}
+          <code>&lt;body&gt;</code> de votre page&nbsp;:
+        </p>
+        <CodeSnippet>
+          {`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}
+        </CodeSnippet>
+        <p>
+          Ensuite, intégrez le code suivant à l’endroit où vous souhaitez voir
+          le module s’afficher&nbsp;:
+        </p>
+
+        <CodeSnippet>{`<a href="https://code.travail.gouv.fr${url}">${shortTitle}</a>`}</CodeSnippet>
+
+        {messages && (
+          <>
+            <Title>Messages</Title>
+            <p>
+              Il est possible d&apos;effectuer du tracking sur nos liens et
+              boutons en interceptant les messages envoyés par le widget avec le
+              code qui suit :
+            </p>
+            <CodeSnippet>
+              {`window.addEventListener(
+  "message",
+  ({ data }) => {
+    const iframe = document.getElementById('cdtn-iframe-${id}');
+    if (
+      evt.source === iframe.contentWindow
+      && data.kind === "click"
+    ) {
+      ${messages.click.map(
+        ({ name, description }) => `
+      data.name === '${name}' // ${description}`
+      )}
+
+    }
+  },
+  false
+);`}
+            </CodeSnippet>
+          </>
+        )}
+        <br />
         <p>
           En cas de difficulté, nous vous invitons à nous contacter à l’adresse
           suivante&nbsp;:{" "}
