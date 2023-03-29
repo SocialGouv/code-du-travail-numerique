@@ -13,6 +13,7 @@ import {
 } from "./types";
 import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
 
 const initialState: Agreement2148StoreData = {
   input: {
@@ -25,11 +26,23 @@ const initialState: Agreement2148StoreData = {
 
 export const createAgreement2148StoreSalaires: StoreSlice<
   Agreement2148StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice & CommonInformationsStoreSlice
+  SalairesStoreSlice &
+    AncienneteStoreSlice &
+    CommonInformationsStoreSlice &
+    ContratTravailStoreSlice
 > = (set, get) => ({
   agreement2148Data: { ...initialState },
   agreement2148Function: {
     onInit: () => {
+      const dateArretTravail = get().contratTravailData.input.dateArretTravail;
+
+      if (dateArretTravail) {
+        return set(
+          produce((state: Agreement2148StoreSlice) => {
+            state.agreement2148Data.input.noticeSalaryPeriods = [];
+          })
+        );
+      }
       const ancienneteInput = get().ancienneteData.input;
       const agreementSalaryPeriod =
         get().agreement2148Data.input.noticeSalaryPeriods ?? [];
@@ -55,8 +68,8 @@ export const createAgreement2148StoreSalaires: StoreSlice<
       );
     },
     onChangeHasReceivedSalaries: (value) => {
-      get().agreement2148Function.onInit();
       applyGenericValidation(get, set, "hasReceivedSalaries", value);
+      get().agreement2148Function.onInit();
     },
     onSalariesChange: (value) => {
       applyGenericValidation(get, set, "noticeSalaryPeriods", value);
