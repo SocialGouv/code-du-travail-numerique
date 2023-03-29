@@ -2,9 +2,7 @@ import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   Absence,
   Motif,
-  RequiredSeniorityResult,
   SeniorityProps,
-  SeniorityRequiredProps,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
@@ -21,14 +19,6 @@ export class Seniority2511 extends SeniorityDefault<SupportedCcIndemniteLicencie
       ...this.compute(dateEntree, dateSortie, absencePeriods),
       extraInfos: this.getExtraInfoAbsence(absencePeriods),
     };
-  }
-
-  computeRequiredSeniority({
-    dateEntree,
-    dateNotification,
-    absencePeriods = [],
-  }: SeniorityRequiredProps): RequiredSeniorityResult {
-    return this.compute(dateEntree, dateNotification, absencePeriods);
   }
 
   getMotifs(): Motif[] {
