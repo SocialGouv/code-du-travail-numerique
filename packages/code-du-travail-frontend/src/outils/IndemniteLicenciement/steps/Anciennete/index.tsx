@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { RadioQuestion, TextQuestion } from "../../../Components";
-import { AbsencePeriods } from "./components";
+import { AbsencePeriods, SectionTitleWithTooltip } from "./components";
 import {
   IndemniteLicenciementContext,
   useIndemniteLicenciementStore,
@@ -115,7 +115,18 @@ const StepAnciennete = () => {
           ),
         }}
       />
-      <SectionTitle>Période d’absence prolongée</SectionTitle>
+      <SectionTitleWithTooltip
+        name="Période d’absence prolongée"
+        tooltip={{
+          content: (
+            <Html>
+              Pour rendre le saisie de l&apos;outil plus simple, les
+              absences de moins d&apos;un mois ne sont pas comptabilisées.
+              Or, ces absences peuvent impacter l&apos;ancienneté et
+              donner ainsi lieu à un montant d&apos;indemnité inférieur
+              à celui calculé par notre simulateur.
+            </Html>)
+        }} />
       <RadioQuestion
         questions={[
           {
