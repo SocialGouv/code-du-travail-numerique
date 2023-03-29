@@ -1,9 +1,6 @@
-import { addDays, differenceInMonths } from "date-fns";
-
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   Absence,
-  ISeniority,
   Motif,
   RequiredSeniorityResult,
   SeniorityProps,
@@ -11,18 +8,19 @@ import type {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
-import { parseDate } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
+import { SeniorityDefault } from "../../common/seniority";
 
-export class Seniority2511
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC2511>
-{
+export class Seniority2511 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC2511> {
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
   }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC2511>): SeniorityResult {
-    return this.compute(dateEntree, dateSortie, absencePeriods);
+    return {
+      ...this.compute(dateEntree, dateSortie, absencePeriods),
+      extraInfos: this.getExtraInfoAbsence(absencePeriods),
+    };
   }
 
   computeRequiredSeniority({
@@ -51,31 +49,6 @@ export class Seniority2511
       };
     }
     return {};
-  }
-
-  private compute(
-    from: string,
-    to: string,
-    absences: Absence[]
-  ): SeniorityResult {
-    const dEntree = parseDate(from);
-    const dSortie = addDays(parseDate(to), 1);
-
-    const totalAbsence =
-      absences.reduce((total, item) => {
-        const m = this.getMotifs().find(
-          (motif) => motif.key === item.motif.key
-        );
-        if (item.durationInMonth === undefined || !m) {
-          return total;
-        }
-        return total + item.durationInMonth * m.value;
-      }, 0) / 12;
-
-    return {
-      extraInfos: this.getExtraInfoAbsence(absences),
-      value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence,
-    };
   }
 }
 
