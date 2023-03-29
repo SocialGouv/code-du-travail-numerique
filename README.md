@@ -1,8 +1,6 @@
 # Code du travail numérique
 
-[![Build Status](https://travis-ci.com/SocialGouv/code-du-travail-numerique.svg?branch=master)](https://travis-ci.com/SocialGouv/code-du-travail-numerique)
-
-![Tests](https://github.com/SocialGouv/code-du-travail-numerique/actions/workflows/quality.yml/badge.svg)
+![Quality Status](https://github.com/SocialGouv/code-du-travail-numerique/actions/workflows/quality.yml/badge.svg)
 
 > Ce dépôt de code regroupe les informations techniques du projet Code du travail numérique
 
