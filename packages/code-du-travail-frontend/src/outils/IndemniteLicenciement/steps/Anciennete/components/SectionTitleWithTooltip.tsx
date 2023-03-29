@@ -16,7 +16,14 @@ const SectionTitleWithTooltip = ({ tooltip, name }: Props) => {
     <StyledContainer>
       <StyledDiv>
         <SectionTitle>{name}</SectionTitle>
-        {tooltip && (<StyledTooltip onChange={() => setIsLocalToolTipOpen(!isLocalTooltipOpen)} />)}
+        {tooltip && (
+          <StyledTooltip
+            title={tooltip.help ?? "Plus d'informations"}
+            onChange={() => {
+              setIsLocalToolTipOpen(!isLocalTooltipOpen)
+              tooltip.trackableFn?.(!isLocalTooltipOpen);
+            }}
+          />)}
       </StyledDiv>
       {tooltip && isLocalTooltipOpen &&
         (
