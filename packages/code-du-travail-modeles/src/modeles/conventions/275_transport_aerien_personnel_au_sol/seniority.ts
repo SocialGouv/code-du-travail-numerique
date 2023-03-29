@@ -1,36 +1,24 @@
-import { addDays, differenceInMonths } from "date-fns";
-
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   Absence,
-  ISeniority,
   Motif,
-  RequiredSeniorityResult,
   SeniorityProps,
-  SeniorityRequiredProps,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
-import { parseDate } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
+import { SeniorityDefault } from "../../common/seniority";
 
-export class Seniority275
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC275>
-{
+export class Seniority275 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC275> {
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
   }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC275>): SeniorityResult {
-    return this.compute(dateEntree, dateSortie, absencePeriods);
-  }
-
-  computeRequiredSeniority({
-    dateEntree,
-    dateNotification,
-    absencePeriods = [],
-  }: SeniorityRequiredProps): RequiredSeniorityResult {
-    return this.compute(dateEntree, dateNotification, absencePeriods);
+    return {
+      ...this.compute(dateEntree, dateSortie, absencePeriods),
+      extraInfos: this.getExtraInfoAbsence(absencePeriods),
+    };
   }
 
   getMotifs(): Motif[] {
@@ -51,28 +39,6 @@ export class Seniority275
       };
     }
     return {};
-  }
-
-  private compute(
-    from: string,
-    to: string,
-    absences: Absence[]
-  ): SeniorityResult {
-    const dEntree = parseDate(from);
-    const dSortie = addDays(parseDate(to), 1);
-
-    const totalAbsence = absences.reduce((total, item) => {
-      const m = this.getMotifs().find((motif) => motif.key === item.motif.key);
-      if (item.durationInMonth === undefined || !m) {
-        return total;
-      }
-      return total + item.durationInMonth * m.value;
-    }, 0);
-
-    return {
-      extraInfos: this.getExtraInfoAbsence(absences),
-      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
-    };
   }
 }
 
