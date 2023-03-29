@@ -13,6 +13,7 @@ import {
 } from "./types";
 import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
 
 const initialState: Agreement2596StoreData = {
   input: {
@@ -25,7 +26,10 @@ const initialState: Agreement2596StoreData = {
 
 export const createAgreement2596StoreSalaires: StoreSlice<
   Agreement2596StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice & CommonInformationsStoreSlice
+  SalairesStoreSlice &
+    AncienneteStoreSlice &
+    CommonInformationsStoreSlice &
+    ContratTravailStoreSlice
 > = (set, get) => ({
   agreement2596Data: { ...initialState },
   agreement2596Function: {
@@ -36,10 +40,12 @@ export const createAgreement2596StoreSalaires: StoreSlice<
             item.question.name ===
             "contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle"
         )?.info;
-      console.log("categoryPro", categoryPro);
+      const dateArretTravail = get().contratTravailData.input.dateArretTravail;
+
       if (
-        categoryPro !== "'Cadres'" &&
-        categoryPro !== "'Agents de maîtrise'"
+        (categoryPro !== "'Cadres'" &&
+          categoryPro !== "'Agents de maîtrise'") ||
+        dateArretTravail
       ) {
         return set(
           produce((state: Agreement2596StoreSlice) => {
