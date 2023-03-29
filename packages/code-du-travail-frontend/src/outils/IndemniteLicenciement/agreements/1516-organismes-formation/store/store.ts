@@ -12,6 +12,7 @@ import {
   Agreement1516StoreSlice,
 } from "./types";
 import { validateStep } from "./validator";
+import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
 
 const initialState: Agreement1516StoreData = {
   input: {
@@ -24,11 +25,20 @@ const initialState: Agreement1516StoreData = {
 
 export const createAgreement1516StoreSalaires: StoreSlice<
   Agreement1516StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice
+  SalairesStoreSlice & AncienneteStoreSlice & ContratTravailStoreSlice
 > = (set, get) => ({
   agreement1516Data: { ...initialState },
   agreement1516Function: {
     onInit: () => {
+      const dateArretTravail = get().contratTravailData.input.dateArretTravail;
+
+      if (dateArretTravail) {
+        return set(
+          produce((state: Agreement1516StoreSlice) => {
+            state.agreement1516Data.input.noticeSalaryPeriods = [];
+          })
+        );
+      }
       const ancienneteInput = get().ancienneteData.input;
       const input = get().agreement1516Data.input;
       const agreementSalaryPeriod =
