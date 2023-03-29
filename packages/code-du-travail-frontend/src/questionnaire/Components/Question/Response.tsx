@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { InputRadio } from "@socialgouv/cdtn-ui";
+import { InputRadio, Paragraph } from "@socialgouv/cdtn-ui";
 import { DossierLicenciementContext, useStore } from "../../store";
 import { trackClickHelp } from "../../tracking";
 import { QuestionnaireResponse } from "../../type";
@@ -15,36 +15,38 @@ export const Response = ({
 }) => {
   const store = useContext(DossierLicenciementContext);
   const answer = useStore(store, (state) => state.answer);
+  let label = (
+    <Paragraph noMargin>
+      {text} {description && description}
+      {info && (
+        <StyledInfoBulle
+          title={"Plus d'informations"}
+          dataTestid={`Tooltip-${text}`}
+          onVisibilityChange={() => {
+            trackClickHelp(trackingName);
+          }}
+        >
+          {info}
+        </StyledInfoBulle>
+      )}
+    </Paragraph>
+  );
+
   return (
     <ResponseWrapper>
-      <ResponseInputWrapper>
-        <StyledRadio
+      <div>
+        <InputRadio
           id={text}
           name={text}
-          label={`${text} ${description ? `(${description})` : ""}`}
+          label={label}
           onChange={() => {
             answer(index);
           }}
         />
-        {info && (
-          <StyledInfoBulle
-            title={"Plus d'informations"}
-            dataTestid={`Tooltip-${text}`}
-            onVisibilityChange={() => {
-              trackClickHelp(trackingName);
-            }}
-          >
-            {info}
-          </StyledInfoBulle>
-        )}
-      </ResponseInputWrapper>
+      </div>
     </ResponseWrapper>
   );
 };
-
-const StyledRadio = styled(InputRadio)`
-  float: left;
-`;
 
 const StyledInfoBulle = styled(InfoBulle)`
   padding: 0;
@@ -54,16 +56,4 @@ const ResponseWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 12px;
-`;
-
-const ResponseInputWrapper = styled.div`
-  margin-right: 12px;
-`;
-
-const InformationWrapper = styled.div`
-  background: #f2f5fa;
-  border-radius: 6px;
-  padding: 13px 20px;
-  font-size: 14px;
-  margin: 5px;
 `;

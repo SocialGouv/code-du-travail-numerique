@@ -68,11 +68,3 @@ const Description = styled.i`
   display: block;
   margin-top: 7px;
 `;
-
-const InformationWrapper = styled.div`
-  background: #f2f5fa;
-  border-radius: 6px;
-  padding: 13px 20px;
-  font-size: 14px;
-  margin: 11px 5px;
-`;
