@@ -1,6 +1,8 @@
 import path from "path";
 import fs from "fs";
 
+import { integrationData } from "../src/integration/data";
+
 export const filePath = path.join(__dirname, "../public/robots.txt");
 export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
   const robotsDev = ["User-agent: *", "Disallow: /"].join("\n");
@@ -9,7 +11,7 @@ export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
     "Disallow: /assets/",
     "Disallow: /images/",
     "",
-    `Sitemap: https://${host}/sitemap.xml`,
+    `Sitemap: ${host}/sitemap.xml`,
   ].join("\n");
 
   const robot = isOnProduction ? robotsProd : robotsDev;
@@ -25,15 +27,21 @@ export const generateWidgetScript = (host: string) => {
     flag: "r",
   });
   if (!data) return;
-  const hostedData = data.replace(/__HOST__/g, host);
+  const widgets = Object.values(integrationData).map(
+    ({ id: name, url: integrationUrl }) => ({
+      name,
+      url: `${host}${integrationUrl}`,
+    })
+  );
+  const hostedData = data.replace(/__WIDGETS__/g, JSON.stringify(widgets));
 
   fs.writeFileSync(widgetOutputScriptPath, hostedData);
 };
 
 const run = () => {
-  const isOnProduction = !!process.env.PRODUCTION;
+  const isProduction = !!process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT;
   const host = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-  generateRobotsTxt(isOnProduction, host);
+  generateRobotsTxt(isProduction, host);
   console.log("Robots.txt generated.");
   generateWidgetScript(host);
   console.log("widget.js generated.");

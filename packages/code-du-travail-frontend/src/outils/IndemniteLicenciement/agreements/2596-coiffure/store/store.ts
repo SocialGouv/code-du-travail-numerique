@@ -13,6 +13,7 @@ import {
 } from "./types";
 import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
 
 const initialState: Agreement2596StoreData = {
   input: {
@@ -25,7 +26,10 @@ const initialState: Agreement2596StoreData = {
 
 export const createAgreement2596StoreSalaires: StoreSlice<
   Agreement2596StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice & CommonInformationsStoreSlice
+  SalairesStoreSlice &
+    AncienneteStoreSlice &
+    CommonInformationsStoreSlice &
+    ContratTravailStoreSlice
 > = (set, get) => ({
   agreement2596Data: { ...initialState },
   agreement2596Function: {
@@ -36,12 +40,26 @@ export const createAgreement2596StoreSalaires: StoreSlice<
             item.question.name ===
             "contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle"
         )?.info;
+      const dateArretTravail = get().contratTravailData.input.dateArretTravail;
 
-      if (categoryPro !== "'Cadres et agents de maitrise'") return;
-
+      if (
+        (categoryPro !== "'Cadres'" &&
+          categoryPro !== "'Agents de maîtrise'") ||
+        dateArretTravail
+      ) {
+        return set(
+          produce((state: Agreement2596StoreSlice) => {
+            state.agreement2596Data.input.noticeSalaryPeriods = [];
+            state.agreement2596Data.input.hasReceivedSalaries = "non";
+          })
+        );
+      }
       const ancienneteInput = get().ancienneteData.input;
+      const input = get().agreement2596Data.input;
       const agreementSalaryPeriod =
-        get().agreement2596Data.input.noticeSalaryPeriods ?? [];
+        input.hasReceivedSalaries !== "non" && input.noticeSalaryPeriods
+          ? input.noticeSalaryPeriods
+          : [];
       const periods = computeSalaryPeriods({
         dateEntree: ancienneteInput.dateNotification ?? "",
         dateNotification: ancienneteInput.dateSortie ?? "",
@@ -52,8 +70,7 @@ export const createAgreement2596StoreSalaires: StoreSlice<
       const noticeSalaryPeriods = deepMergeArray(
         period,
         agreementSalaryPeriod,
-        "month",
-        true
+        "month"
       );
 
       set(
@@ -64,8 +81,8 @@ export const createAgreement2596StoreSalaires: StoreSlice<
       );
     },
     onChangeHasReceivedSalaries: (value) => {
-      get().agreement2596Function.onInit();
       applyGenericValidation(get, set, "hasReceivedSalaries", value);
+      get().agreement2596Function.onInit();
     },
     onSalariesChange: (value) => {
       applyGenericValidation(get, set, "noticeSalaryPeriods", value);
