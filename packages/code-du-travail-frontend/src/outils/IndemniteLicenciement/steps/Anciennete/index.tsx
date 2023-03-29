@@ -7,7 +7,6 @@ import {
   IndemniteLicenciementContext,
   useIndemniteLicenciementStore,
 } from "../../store";
-import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 import Html from "../../../../common/Html";
 // Do not optimize the following import
@@ -18,6 +17,7 @@ const StepAnciennete = () => {
   const {
     init,
     onChangeAbsencePeriods,
+    motifs,
     absencePeriods,
     onChangeHasAbsenceProlonge,
     hasAbsenceProlonge,
@@ -32,11 +32,11 @@ const StepAnciennete = () => {
     errorAbsenceProlonge,
     errorDateEntree,
     errorAbsencePeriods,
-    agreement,
     informationData,
   } = useIndemniteLicenciementStore(store, (state) => ({
     init: state.ancienneteFunction.init,
     onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
+    motifs: state.ancienneteData.input.motifs,
     absencePeriods: state.ancienneteData.input.absencePeriods,
     onChangeHasAbsenceProlonge:
       state.ancienneteFunction.onChangeHasAbsenceProlonge,
@@ -138,12 +138,8 @@ const StepAnciennete = () => {
       />
       {hasAbsenceProlonge === "oui" && (
         <AbsencePeriods
-          idcc={
-            agreement
-              ? getSupportedAgreement(agreement.num) ?? undefined
-              : undefined
-          }
           onChange={onChangeAbsencePeriods}
+          motifs={motifs}
           absences={absencePeriods}
           error={errorAbsencePeriods}
           informationData={informationData}
