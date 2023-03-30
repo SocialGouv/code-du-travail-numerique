@@ -17,7 +17,7 @@ export const Response = ({
   const answer = useStore(store, (state) => state.answer);
   let label = (
     <Paragraph noMargin>
-      {text} {description && description}
+      {text} {description && `(${description})`}
       {info && (
         <StyledInfoBulle
           title={"Plus d'informations"}
