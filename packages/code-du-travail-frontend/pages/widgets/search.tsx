@@ -7,6 +7,8 @@ function Widgets(): JSX.Element {
   useIframeResizer();
   useEffect(() => {
     push(["setCookieSameSite", "None"]);
+    // @ts-ignore
+    push(["setSecureCookie", true]);
   }, []);
 
   return <SearchWidget></SearchWidget>;
