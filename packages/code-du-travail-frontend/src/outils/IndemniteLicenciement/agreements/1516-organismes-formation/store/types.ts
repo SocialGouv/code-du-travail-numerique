@@ -5,6 +5,7 @@ import { StepData } from "../../../store";
 export type Agreement1516StoreInput = {
   hasReceivedSalaries?: OuiNon;
   noticeSalaryPeriods?: SalaryPeriods[];
+  noticePeriodsMoreThan3Months?: boolean;
 };
 
 export type Agreement1516StoreError = {

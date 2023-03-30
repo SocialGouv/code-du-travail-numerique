@@ -48,9 +48,10 @@ export const createAgreement1516StoreSalaires: StoreSlice<
       const periods = computeSalaryPeriods({
         dateEntree: ancienneteInput.dateNotification ?? "",
         dateNotification: ancienneteInput.dateSortie ?? "",
-      }).slice(0, 3);
+      });
 
-      const period: SalaryPeriods[] = periods.map((v) => {
+      const last3MonthsPeriods = periods.slice(0, 3);
+      const period: SalaryPeriods[] = last3MonthsPeriods.map((v) => {
         return { month: v, value: undefined };
       });
       const noticeSalaryPeriods = deepMergeArray(
@@ -63,6 +64,8 @@ export const createAgreement1516StoreSalaires: StoreSlice<
         produce((state: Agreement1516StoreSlice) => {
           state.agreement1516Data.input.noticeSalaryPeriods =
             noticeSalaryPeriods;
+          state.agreement1516Data.input.noticePeriodsMoreThan3Months =
+            periods.length > 3;
         })
       );
     },

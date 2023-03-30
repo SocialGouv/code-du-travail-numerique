@@ -70,7 +70,9 @@ describe("Indemnité licenciement - CC 1516", () => {
       ui.salary.agreementWithNoticeSalary.knowingLastSalary.oui.get()
     );
     expect(
-      rendering.queryByText("Salaires perçus pendant le préavis")
+      rendering.queryByText(
+        "Salaires perçus pendant les 3 derniers mois du préavis"
+      )
     ).toBeInTheDocument();
     fireEvent.change(ui.salary.agreementWithNoticeSalary.salaries.getAll()[0], {
       target: { value: "4000" },

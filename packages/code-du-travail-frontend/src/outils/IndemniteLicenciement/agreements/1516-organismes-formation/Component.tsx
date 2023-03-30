@@ -15,6 +15,7 @@ export default function Agreement1516() {
     hasReceivedSalaries,
     onChangeHasReceivedSalaries,
     errorHasReceivedSalaries,
+    noticePeriodsMoreThan3Months,
     init,
   } = useIndemniteLicenciementStore(store, (state) => ({
     noticeSalaryPeriods:
@@ -23,6 +24,8 @@ export default function Agreement1516() {
     errorNoticeSalaryPeriods:
       state.agreement1516Data.error.errorNoticeSalaryPeriods,
     hasReceivedSalaries: state.agreement1516Data.input.hasReceivedSalaries,
+    noticePeriodsMoreThan3Months:
+      state.agreement1516Data.input.noticePeriodsMoreThan3Months,
     onChangeHasReceivedSalaries:
       state.agreement1516Function.onChangeHasReceivedSalaries,
     errorHasReceivedSalaries:
@@ -68,7 +71,9 @@ export default function Agreement1516() {
           />
           {hasReceivedSalaries === "oui" && (
             <SalaireTempsPlein
-              title={`Salaire${S()} perçu${S()} pendant le préavis`}
+              title={`Salaire${S()} perçu${S()} pendant ${
+                noticePeriodsMoreThan3Months ? "les 3 derniers mois du" : "le"
+              } préavis`}
               subTitle={`Indiquez le montant ${
                 hasMoreThanOneNoticeSalary ? "des" : "du"
               } salaire${S()} (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ`}
