@@ -17,4 +17,12 @@ describe("Search", () => {
     expect(res.status).toBe(200);
     expect(res.body).toMatchSnapshot();
   });
+
+  it("returns 3 search results for demission from elastic if size = 3", async () => {
+    const response = await request(server).get(
+      "/api/search?q=démission&skipSavedResults&size=3"
+    );
+    expect(response.status).toBe(200);
+    expect(response.body.documents.length).toBe(3);
+  });
 });
