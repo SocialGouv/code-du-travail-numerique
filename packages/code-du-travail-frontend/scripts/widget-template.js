@@ -38,7 +38,8 @@ function addWidget(info) {
     ) {
       const bodyPosition = document.body.getBoundingClientRect();
       const iframePosition = iframe.getBoundingClientRect();
-      window.scrollTo(0, iframePosition.top - bodyPosition.top);
+      const marginTop = (bodyPosition.height * 5) / 100;
+      window.scrollTo(0, iframePosition.top - bodyPosition.top - marginTop);
     }
   });
 
