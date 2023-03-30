@@ -6,6 +6,12 @@ exports[`search service should make a request once 1`] = `
 }
 `;
 
+exports[`search service should make a request twice 1`] = `
+{
+  "foo": "bar",
+}
+`;
+
 exports[`suggest service should make a request once 1`] = `
 {
   "foo": "bar",
