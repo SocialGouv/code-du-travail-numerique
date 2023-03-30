@@ -39,8 +39,7 @@ export default SectionTitleWithTooltip;
 const { spacings } = theme;
 
 const StyledContainer = styled.div`
-  margin-top: ${(props) =>
-    props.hasSmallMarginTop ? spacings.small : spacings.large};
+  margin-top: ${spacings.large};
   margin-bottom: ${spacings.small};
 `;
 

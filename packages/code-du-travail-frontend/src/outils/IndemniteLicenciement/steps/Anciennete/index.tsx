@@ -106,12 +106,12 @@ const StepAnciennete = () => {
         dataTestId={"date-sortie"}
         tooltip={{
           content: (
-            <Html as="p">
+            <p>
               En cas de dispense de préavis à l&apos;initiative de
               l&apos;employeur, ou si le licenciement intervient à la suite d’un
               avis d’inaptitude non professionnelle, indiquer la date de fin du
               préavis «&nbsp;théorique&nbsp;» non effectué.
-            </Html>
+            </p>
           ),
         }}
       />
@@ -119,13 +119,13 @@ const StepAnciennete = () => {
         name="Période d’absence prolongée"
         tooltip={{
           content: (
-            <Html as="p">
+            <p>
               Pour rendre le saisie de l&apos;outil plus simple, les
               absences de moins d&apos;un mois ne sont pas comptabilisées.
               Or, ces absences peuvent impacter l&apos;ancienneté et
               donner ainsi lieu à un montant d&apos;indemnité inférieur
               à celui calculé par notre simulateur.
-            </Html>)
+            </p>)
         }} />
       <RadioQuestion
         questions={[
