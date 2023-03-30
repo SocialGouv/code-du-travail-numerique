@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { theme, Alert } from "@socialgouv/cdtn-ui"
+import { theme } from "@socialgouv/cdtn-ui"
 import { Tooltip as TooltipProps } from "../../../../common/Question";
-import { Tooltip } from "../../../../../common/Tooltip";
+import { InfoBulle } from "../../../../common/InfoBulle";
+import { SectionTitle } from "../../../../common/stepStyles";
 
 type Props = {
   name: string;
@@ -14,54 +15,41 @@ const SectionTitleWithTooltip = ({ tooltip, name }: Props) => {
 
   return (
     <StyledContainer>
-      <StyledDiv>
-        <SectionTitle>{name}</SectionTitle>
-        {tooltip && (
-          <StyledTooltip
-            title={tooltip.help ?? "Plus d'informations"}
-            onChange={() => {
-              setIsLocalToolTipOpen(!isLocalTooltipOpen)
-              tooltip.trackableFn?.(!isLocalTooltipOpen);
-            }}
-          />)}
-      </StyledDiv>
-      {tooltip && isLocalTooltipOpen &&
-        (
-          <Alert size="small" variant="secondary">
-            {tooltip?.content}
-          </Alert>
-        )
-      }
+      <StyledSectionTitle>{name}</StyledSectionTitle>
+      {tooltip && (
+        <StyledInfoBulle
+          title={tooltip.help ?? "Plus d'informations"}
+          onVisibilityChange={() => {
+            tooltip.trackableFn?.(
+              !isLocalTooltipOpen
+            );
+            setIsLocalToolTipOpen(
+              !isLocalTooltipOpen
+            );
+          }}>
+          {tooltip.content}
+        </StyledInfoBulle>
+      )}
     </StyledContainer>
   )
 }
 
 export default SectionTitleWithTooltip;
 
-const { fonts, spacings } = theme;
+const { spacings } = theme;
 
 const StyledContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const StyledDiv = styled.div`
-  display: flex;
   margin-top: ${(props) =>
     props.hasSmallMarginTop ? spacings.small : spacings.large};
   margin-bottom: ${spacings.small};
-  align-items: center;
 `;
 
-const SectionTitle = styled.h2`
-  color: ${({ theme }) => theme.altText};
-  font-weight: 600;
-  font-size: ${fonts.sizes.headings.small};
-  font-family: "Open Sans", sans-serif;
+const StyledSectionTitle = styled(SectionTitle)`
+  display: inline;
   margin: 0;
   padding: 0;
 `;
 
-const StyledTooltip = styled(Tooltip)`
+const StyledInfoBulle = styled(InfoBulle)`
   margin-left: ${spacings.xsmall};
 `
