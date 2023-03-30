@@ -102,7 +102,7 @@ const IntegrationContainer = ({
             <CodeSnippet>
               {`window.addEventListener(
   "message",
-  ({ data }) => {
+  ({ data, evt }) => {
     const iframe = document.getElementById('cdtn-iframe-${id}');
     if (
       evt.source === iframe.contentWindow
