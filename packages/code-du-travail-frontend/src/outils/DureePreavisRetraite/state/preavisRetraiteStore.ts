@@ -1,4 +1,4 @@
-import create from "zustand";
+import { createStore as create } from "zustand";
 import { PreavisRetraiteState, PreavisRetraiteStore } from "./types";
 import {
   askAccurateSeniority,

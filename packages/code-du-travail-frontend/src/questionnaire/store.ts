@@ -1,5 +1,3 @@
-import create, { StoreApi } from "zustand";
-import createContext from "zustand/context";
 import { getCurrentQuestion, slugSummaryRecursive } from "./utils";
 import { getQuestionnaire } from "./service";
 import {
@@ -9,6 +7,8 @@ import {
   QuestionnaireResponse,
 } from "./type";
 import { trackSelectResponse, trackViewQuestion } from "./tracking";
+import { createContext } from "react";
+import { StoreApi, useStore, createStore as create } from "zustand";
 
 export type Store = {
   questionTree?: QuestionnaireQuestion;
@@ -118,6 +118,10 @@ const createStore = (name: string) =>
     };
   });
 
-const { Provider, useStore } = createContext<StoreApi<Store>>();
+const DossierLicenciementContext = createContext<StoreApi<Store>>(
+  {} as StoreApi<Store>
+);
 
-export { Provider, createStore, useStore };
+const { Provider } = DossierLicenciementContext;
+
+export { Provider, createStore, useStore, DossierLicenciementContext };

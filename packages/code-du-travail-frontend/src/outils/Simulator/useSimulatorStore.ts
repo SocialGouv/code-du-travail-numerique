@@ -1,4 +1,4 @@
-import create from "zustand";
+import { createStore } from "zustand";
 import { SimulatorState, SimulatorStore } from "./type";
 
 const initialState: SimulatorState = {
@@ -7,7 +7,7 @@ const initialState: SimulatorState = {
 };
 
 export const createSimulatorStore = () =>
-  create<SimulatorStore>((set) => ({
+  createStore<SimulatorStore>((set) => ({
     ...initialState,
     nextStep: (stepIndex?: number) =>
       set((state) => ({

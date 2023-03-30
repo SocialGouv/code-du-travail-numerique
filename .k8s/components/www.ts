@@ -3,15 +3,10 @@ import { ok } from "assert";
 
 import { create } from "@socialgouv/kosko-charts/components/app";
 import { addWaitForHttp } from "@socialgouv/kosko-charts/utils/addWaitForHttp";
-import { addEnv } from "@socialgouv/kosko-charts/utils/addEnv";
-import { getIngressHost } from "@socialgouv/kosko-charts/utils/getIngressHost";
 import { getGithubRegistryImagePath } from "@socialgouv/kosko-charts/utils/getGithubRegistryImagePath";
-import { EnvVar } from "kubernetes-models/v1/EnvVar";
 import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
 import type { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
 import { HorizontalPodAutoscaler } from "kubernetes-models/autoscaling/v2beta2/HorizontalPodAutoscaler";
-
-import getApiManifests from "./api";
 
 // all probes httpGet
 const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
@@ -21,9 +16,6 @@ const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
 
 export default async () => {
   // extract computed url from API manifests for the frontend
-  const apiManifests = await getApiManifests();
-  const API_URL = "https://" + getIngressHost(apiManifests) + "/api/v1";
-
   const productionConfig = {
     domain: "travail.gouv.fr",
     subdomain: "code",
@@ -56,6 +48,20 @@ export default async () => {
         },
         resources:
           env.env === "prod" ? ressourcesConfigProd : ressourcesConfigDev,
+        env: [
+          {
+            name: "ELASTIC_APM_ENVIRONMENT",
+            value: process.env.ELASTIC_APM_ENVIRONMENT,
+          },
+          {
+            name: "ES_INDEX_PREFIX",
+            value: process.env.ES_INDEX_PREFIX,
+          },
+          {
+            name: "VERSION",
+            value: process.env.GITHUB_REF,
+          },
+        ],
       },
     },
   });

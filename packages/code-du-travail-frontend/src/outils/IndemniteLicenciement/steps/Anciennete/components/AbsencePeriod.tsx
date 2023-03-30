@@ -11,7 +11,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Error } from "../../../../common/ErrorField";
 import { DelButton } from "../../../../common/Buttons";
-import { Absence, Motif } from "@socialgouv/modeles-social";
+import { Motif } from "@socialgouv/modeles-social";
+import { AbsenceWithKey } from "./AbsencePeriods";
 
 type Errors = {
   duration?: string;
@@ -20,14 +21,14 @@ type Errors = {
 
 type Props = {
   index: number;
-  onSelectMotif: (index: number, motif: string) => void;
-  onSetDurationDate: (index: number, value: string) => void;
-  onSetAbsenceDate: (index: number, value: string) => void;
+  onSelectMotif: (key: string, motif: string) => void;
+  onSetDurationDate: (key: string, value: string) => void;
+  onSetAbsenceDate: (key: string, value: string) => void;
+  onDeleteAbsence: (key: string) => void;
   motifs: Motif[];
-  absence?: Absence;
+  absence: AbsenceWithKey;
   errors?: Errors;
   showDeleteButton: boolean;
-  onDeleteAbsence: (index: number) => void;
   informationData: Record<string, string | undefined>;
 };
 
@@ -51,10 +52,10 @@ const AbsencePeriod = ({
           motifs[0].startAt(informationData)
   );
 
-  const selectMotif = (index: number, value: string) => {
+  const selectMotif = (key: string, value: string) => {
     const motif = motifs.find((motif) => motif.label === value);
     askAbsenceDate(motif?.startAt && motif.startAt(informationData));
-    onSelectMotif(index, value);
+    onSelectMotif(key, value);
   };
 
   const DurationWrapper = shouldAskAbsenceDate
@@ -62,7 +63,7 @@ const AbsencePeriod = ({
     : FieldWrapperNoMargin;
 
   return (
-    <RelativeDiv key={index}>
+    <RelativeDiv key={absence?.key}>
       <RowTitle>
         <Text
           variant="secondary"
@@ -86,11 +87,11 @@ const AbsencePeriod = ({
         <FieldWrapper>
           <StyledSelect
             id={`${index}.type`}
-            onChange={(e) => selectMotif(index, e.target.value)}
+            onChange={(e) => selectMotif(absence.key, e.target.value)}
             value={absence?.motif?.label}
             data-testid={`absence-motif-${index}`}
           >
-            {motifs.map(({ label, startAt }) => (
+            {motifs.map(({ label }) => (
               <option key={label} value={label}>
                 {label}
               </option>
@@ -101,7 +102,7 @@ const AbsencePeriod = ({
         <DurationWrapper>
           <Input
             id={`${index}.duration`}
-            onChange={(e) => onSetDurationDate(index, e.target.value)}
+            onChange={(e) => onSetDurationDate(absence.key, e.target.value)}
             invalid={errors?.duration !== undefined}
             value={absence?.durationInMonth}
             type="number"
@@ -120,7 +121,7 @@ const AbsencePeriod = ({
             <div>
               <InputDate
                 id={`${index}.dateAbsence`}
-                onChange={(e) => onSetAbsenceDate(index, e)}
+                onChange={(e) => onSetAbsenceDate(absence.key, e)}
                 placeholder={"jj/mm/aaaa"}
                 invalid={errors?.absenceDate !== undefined}
                 value={absence?.startedAt}
@@ -137,7 +138,7 @@ const AbsencePeriod = ({
           </>
         )}
         {showDeleteButton && (
-          <StyledDelButton onClick={() => onDeleteAbsence(index)}>
+          <StyledDelButton onClick={() => onDeleteAbsence(absence.key)}>
             Supprimer
           </StyledDelButton>
         )}

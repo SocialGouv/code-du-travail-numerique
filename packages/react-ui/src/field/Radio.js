@@ -4,9 +4,24 @@ import styled from "styled-components";
 
 import { box } from "../theme.js";
 
-export const InputRadio = ({ label, name, id, size, ...props }) => (
-  <StyledDiv>
-    <StyledRadio type="radio" name={name} id={id} size={size} {...props} />
+export const InputRadio = ({
+  label,
+  name,
+  id,
+  size,
+  onChange,
+  className,
+  ...props
+}) => (
+  <StyledDiv className={className}>
+    <StyledRadio
+      type="radio"
+      name={name}
+      id={id}
+      size={size}
+      onChange={onChange}
+      {...props}
+    />
     <StyledLabel htmlFor={id} size={size}>
       {label}
     </StyledLabel>
@@ -15,6 +30,7 @@ export const InputRadio = ({ label, name, id, size, ...props }) => (
 
 InputRadio.propTypes = {
   checked: PropTypes.bool,
+  className: PropTypes.string,
   id: PropTypes.string.isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   name: PropTypes.string.isRequired,
@@ -29,7 +45,7 @@ InputRadio.defaultProps = {
 
 const StyledLabel = styled.label`
   display: flex;
-  font-size: ${(props) => props.size};
+  font-size: ${({ size }) => size};
   cursor: pointer;
 `;
 

@@ -5,12 +5,11 @@ import {
 } from "../../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { ConventionCollective } from "../../type/WizardType";
-import { AgreementSupportInfo } from "../types";
 
 const pushAgreementEvents = (
   title: string,
   values: ConventionCollective | undefined,
-  supportedAgreements: AgreementSupportInfo[]
+  isAgreementTreated: boolean
 ): void => {
   if (!values) {
     // no agreement section, no event to send. Should never happen.
@@ -55,13 +54,10 @@ const pushAgreementEvents = (
       `idcc${values.selected.num?.toString()}`,
     ]);
     const idcc = values.selected.num;
-    const isTreated = supportedAgreements.find(
-      (agreement) => agreement.idcc === idcc
-    );
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
       MatomoBaseEvent.OUTIL,
-      isTreated
+      isAgreementTreated
         ? MatomoAgreementEvent.CC_TREATED
         : MatomoAgreementEvent.CC_UNTREATED,
       idcc,

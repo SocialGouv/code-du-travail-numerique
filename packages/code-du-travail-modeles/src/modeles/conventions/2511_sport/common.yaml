@@ -5,7 +5,6 @@ contrat salarié . convention collective . sport:
   cdtn:
     idcc: 2511
     préavis-retraite: true
-    indemnité-licenciement: true
 
 contrat salarié . convention collective . sport . catégorie professionnelle:
   titre: Catégorie professionnelle

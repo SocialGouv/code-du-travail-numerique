@@ -50,13 +50,13 @@ jobs:
           project: "cdtn"
           imageName: "cdtn/code-du-travail-api"
           token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "./packages/code-du-travail-api/Dockerfile"
-          dockercontext: "./packages/code-du-travail-api"
+          dockerfile: "./Dockerfile.api"
+          dockercontext: "."
 
   deploy-prod:
     name: Deploy production
     runs-on: ubuntu-latest
-    needs: [register-frontend, register-api, branch-info]
+    needs: [register-frontend, register-api]
     environment:
       name: production
       url: https://code.travail.gouv.fr/

@@ -1,15 +1,19 @@
 import { theme, Wrapper } from "@socialgouv/cdtn-ui";
-import React, { useEffect, useMemo } from "react";
+import React, { useContext, useEffect, useMemo, useRef } from "react";
 import styled from "styled-components";
 import { printResult } from "../common/utils";
 import { StepList, Title } from "./SimulatorDecorator/Components";
 import { createSimulatorStore, Step } from "../Simulator";
 import {
+  SimulatorContext,
   SimulatorStepProvider,
   useSimulatorStepStore,
 } from "../Simulator/createContext";
 import SimulatorNavigation from "./SimulatorNavigation";
 import { push as matopush } from "@socialgouv/matomo-next";
+import { MatomoActionEvent, MatomoBaseEvent } from "../../lib";
+import { IndemniteLicenciementStepName } from "../IndemniteLicenciement";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export enum ValidationResponse {
   NotValid = "not_valid",
@@ -33,6 +37,7 @@ type Props<StepName extends string> = {
   steps: Step<StepName>[];
   onStepChange: StepChange<StepName>[];
   hiddenStep?: StepName[];
+  simulator: PublicodesSimulator;
 };
 
 const SimulatorContent = <StepName extends string>({
@@ -44,9 +49,14 @@ const SimulatorContent = <StepName extends string>({
   steps,
   onStepChange,
   hiddenStep,
+  simulator,
 }: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
+  const [navigationAction, setNavigationAction] =
+    React.useState<"next" | "prev" | "none">("none");
+  const store = useContext(SimulatorContext);
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
+    store,
     (state) => state
   );
 
@@ -77,14 +87,33 @@ const SimulatorContent = <StepName extends string>({
     }
   }, [currentStepIndex]);
 
+  useEffect(() => {
+    const currentStepName = visibleSteps[currentStepIndex].name;
+    if (doNotTriggerMatomo(currentStepName)) return;
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoBaseEvent.OUTIL,
+      navigationAction === "prev"
+        ? MatomoActionEvent.CLICK_PREVIOUS + `_${title}`
+        : MatomoActionEvent.VIEW_STEP + `_${title}`,
+      currentStepName,
+    ]);
+  }, [currentStepIndex]);
+
+  const doNotTriggerMatomo = (stepName: string) =>
+    navigationAction === "none" ||
+    (stepName === IndemniteLicenciementStepName.Resultat &&
+      simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT);
+
   const onNextStep = () => {
     const nextStepIndex = currentStepIndex + 1;
     if (nextStepIndex >= visibleSteps.length) {
       throw Error("Can't show the next step with index more than steps");
     } else {
-      const nextStepName = visibleSteps[currentStepIndex].name;
+      const currentStepName = visibleSteps[currentStepIndex].name;
+
       const stepChange = onStepChange.find(
-        (validator) => validator.stepName === nextStepName
+        (validator) => validator.stepName === currentStepName
       );
 
       let validationResponse = ValidationResponse.Valid;
@@ -96,15 +125,11 @@ const SimulatorContent = <StepName extends string>({
       switch (validationResponse) {
         case ValidationResponse.NotEligible:
           nextStep(visibleSteps.length - 1);
+          setNavigationAction("next");
           break;
         case ValidationResponse.Valid:
           nextStep();
-          matopush([
-            "trackEvent",
-            "outil",
-            `view_step_${title}`,
-            steps[nextStepIndex].name,
-          ]);
+          setNavigationAction("next");
           window?.scrollTo(0, 0);
           break;
       }
@@ -123,12 +148,7 @@ const SimulatorContent = <StepName extends string>({
 
     if (previousStepIndex >= 0) {
       previousStep();
-      matopush([
-        "trackEvent",
-        "outil",
-        `click_previous_${title}`,
-        visibleSteps[previousStepIndex].name,
-      ]);
+      setNavigationAction("prev");
       window?.scrollTo(0, 0);
     } else {
       throw Error("Can't show the previous step with index less than 0");
@@ -183,8 +203,9 @@ const SimulatorContent = <StepName extends string>({
 const SimulatorLayout = <StepName extends string>(
   props: Props<StepName>
 ): JSX.Element => {
+  const store = useRef(createSimulatorStore()).current;
   return (
-    <SimulatorStepProvider createStore={() => createSimulatorStore()}>
+    <SimulatorStepProvider value={store}>
       <SimulatorContent {...props} />
     </SimulatorStepProvider>
   );

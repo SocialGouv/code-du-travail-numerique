@@ -38,6 +38,7 @@ export enum MatomoSimulatorEvent {
   SELECT_POSITION = "select_value_position",
   SELECT_COEFFICIENT = "select_value_coefficient",
   CLICK_PRINT = "click_print",
+  STEP_RESULT_INELIGIBLE = "results_ineligible",
 }
 
 export enum MatomoAgreementEvent {
@@ -59,6 +60,8 @@ export enum MatomoActionEvent {
   PREAVIS_DEMISSION = "view_step_Préavis de démission",
   PREAVIS_LICENCIEMENT = "view_step_Préavis de licenciement",
   INDEMNITE_LICENCIEMENT = "view_step_Indemnité de licenciement",
+  VIEW_STEP = "view_step",
+  CLICK_PREVIOUS = "click_previous",
 }
 
 type Mapping = Array<{

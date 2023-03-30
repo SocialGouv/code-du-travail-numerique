@@ -13,6 +13,7 @@ export class UserAction {
   }
 
   setInput(element: HTMLElement, value: string): UserAction {
+    element.focus();
     fireEvent.change(element, { target: { value } });
     return this;
   }
