@@ -37,7 +37,7 @@ const siretNumberError =
 
 const apiEnterprises = memoizee(function createFetcher(
   query: string,
-  address: string | undefined | null = undefined
+  address: string | undefined | null
 ): Promise<Enterprise[]> {
   if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {
     return Promise.reject(siretSirenError);
