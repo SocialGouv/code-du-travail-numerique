@@ -31,7 +31,6 @@ interface Props {
 function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
   useIframeResizer();
   const Tool = toolsBySlug[slug];
-  push(["disableMediaAnalytics"]);
 
   return (
     <>
