@@ -36,11 +36,13 @@ if (typeof window !== "undefined") {
     });
 }
 
+const disableMatomoList = ["/widgets/[slug]", "/widgets/search"];
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.asPath.includes("/widgets")) {
+    if (disableMatomoList.indexOf(router.pathname) !== -1) {
       return;
     }
     init({
