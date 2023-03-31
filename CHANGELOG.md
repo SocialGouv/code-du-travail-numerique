@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.95.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.94.0...v4.95.0) (2023-03-31)
+
+### Bug Fixes
+
+- **company search:** should not ignore the address field ([#5064](https://github.com/SocialGouv/code-du-travail-numerique/issues/5064)) ([f134a01](https://github.com/SocialGouv/code-du-travail-numerique/commit/f134a01e88b09493cebf9712e26e4ab8d5428187))
+- widget cookies & erreur sur logo search ([#5067](https://github.com/SocialGouv/code-du-travail-numerique/issues/5067)) ([1fe54ba](https://github.com/SocialGouv/code-du-travail-numerique/commit/1fe54ba7f7ab4bb80e04e7469eb0b501047a818b))
+
+### Features
+
+- **convention-collective:** ajout d'une redirection pour le changement nom de la CC 1518 ([#5069](https://github.com/SocialGouv/code-du-travail-numerique/issues/5069)) ([b6660de](https://github.com/SocialGouv/code-du-travail-numerique/commit/b6660deecdd709b26519cc696660ebc77e706941))
+
 # [4.94.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.93.1...v4.94.0) (2023-03-30)
 
 ### Bug Fixes
