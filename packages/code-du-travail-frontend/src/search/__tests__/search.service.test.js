@@ -25,24 +25,16 @@ describe("suggest service", () => {
     expect(fetch.mock.calls[0][0]).toMatch("api.url/api/suggest?q=foo");
     expect(results).toMatchSnapshot();
   });
-  it("should make a request once", () => {
-    fetchSuggestResults(query);
-    fetchSuggestResults(query);
-    jest.runAllTimers();
-    expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fetch.mock.calls[0][0]).toMatch("api.url/api/suggest?q=foo");
-    expect(results).toMatchSnapshot();
-  });
 });
 describe("search service", () => {
   beforeEach(() => {
     fetch.mockClear();
   });
-  it("should make a request once", () => {
+  it("should make a request twice", () => {
     fetchSearchResults(query);
     fetchSearchResults(query);
 
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(2);
     expect(fetch.mock.calls[0][0]).toMatch(
       /api\.url\/api\/search\?q=foo&excludeSources=$/
     );

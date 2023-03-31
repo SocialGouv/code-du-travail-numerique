@@ -1,5 +1,4 @@
 import debounce from "debounce-promise";
-import memoizee from "memoizee";
 import { SITE_URL } from "../../../config";
 
 import { Agreement } from "./type";
@@ -35,7 +34,7 @@ const siretLengthError =
 const siretNumberError =
   "Veuillez indiquer un numéro Siret (14 chiffres uniquement)";
 
-const apiEnterprises = memoizee(function createFetcher(
+const apiEnterprises = function createFetcher(
   query: string,
   address: string | undefined | null = undefined
 ): Promise<Enterprise[]> {
@@ -70,7 +69,7 @@ const apiEnterprises = memoizee(function createFetcher(
     .then((result: ApiEnterpriseData) => {
       return result.entreprises;
     });
-});
+};
 
 const searchEnterprises = debounce(apiEnterprises, 300);
 

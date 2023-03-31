@@ -102,10 +102,10 @@ const IntegrationContainer = ({
             <CodeSnippet>
               {`window.addEventListener(
   "message",
-  ({ data }) => {
+  ({ data, source }) => {
     const iframe = document.getElementById('cdtn-iframe-${id}');
     if (
-      evt.source === iframe.contentWindow
+      source === iframe.contentWindow
       && data.kind === "click"
     ) {
       ${messages.click.map(
@@ -114,8 +114,7 @@ const IntegrationContainer = ({
       )}
 
     }
-  },
-  false
+  }
 );`}
             </CodeSnippet>
           </>
