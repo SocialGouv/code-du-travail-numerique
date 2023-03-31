@@ -114,8 +114,7 @@ const IntegrationContainer = ({
       )}
 
     }
-  },
-  false
+  }
 );`}
             </CodeSnippet>
           </>
