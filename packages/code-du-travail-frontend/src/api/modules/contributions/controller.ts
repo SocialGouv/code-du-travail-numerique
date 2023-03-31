@@ -1,4 +1,3 @@
-import { ElasticSearchItem } from "@socialgouv/cdtn-utils";
 import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
 import { getGenericContributions } from "../contributions";
