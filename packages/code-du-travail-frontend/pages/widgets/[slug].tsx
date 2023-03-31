@@ -3,6 +3,7 @@ import { GetServerSideProps } from "next";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
+import { push } from "@socialgouv/matomo-next";
 import { useIframeResizer } from "../../src/common/hooks";
 
 import {
@@ -30,6 +31,7 @@ interface Props {
 function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
   useIframeResizer();
   const Tool = toolsBySlug[slug];
+  push(["disableMediaAnalytics"]);
 
   return (
     <>
