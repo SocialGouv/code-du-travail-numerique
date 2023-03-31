@@ -1,9 +1,8 @@
 import { Container, icons, theme } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { push } from "@socialgouv/matomo-next";
 import { useIframeResizer } from "../../src/common/hooks";
 
 import {
@@ -30,9 +29,6 @@ interface Props {
 
 function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
   useIframeResizer();
-  useEffect(() => {
-    push(["setCookieSameSite", "None"]);
-  }, []);
   const Tool = toolsBySlug[slug];
 
   return (

@@ -40,6 +40,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
+    if (router.asPath.includes("/widgets")) {
+      return;
+    }
     init({
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
