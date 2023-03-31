@@ -276,6 +276,6 @@ export function getSearchBody(query, size, sources) {
         ],
       },
     },
-    size: size,
+    size,
   };
 }

@@ -1,6 +1,6 @@
 import request from "supertest";
 import server from "nextjs-http-supertest";
-import { parseIdcc } from "../modules";
+import { parseIdcc } from "../modules/idcc";
 
 describe("IDCC", () => {
   afterAll(() => {
