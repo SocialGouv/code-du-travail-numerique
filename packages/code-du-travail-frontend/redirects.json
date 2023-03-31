@@ -128,5 +128,10 @@
     "destination": "/widgets/search",
     "permanent": true,
     "source": "/widget.html"
+  },
+  {
+    "destination": "/convention-collective/1518-animation",
+    "permanent": true,
+    "source": "/convention-collective/1518-education-culture-loisirs-et-animation-au-service-des-territoires-eclat"
   }
 ]
