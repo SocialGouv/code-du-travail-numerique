@@ -64,7 +64,7 @@ export const searchWithQuery = async (
   const searches = {};
   const shouldRequestCdt = articles.length < 5;
   const shouldRequestThemes = themes.length < 5;
-  const size = Math.min(sizeParams ?? 3, MAX_RESULTS);
+  const size = Math.min(sizeParams ?? DEFAULT_RESULTS_NUMBER, MAX_RESULTS);
 
   const query_vector = await vectorizeQuery(query.toLowerCase()).catch(
     (error) => {
