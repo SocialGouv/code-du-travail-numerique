@@ -7,7 +7,19 @@
         "shortTitle": "Moteur de recherche du Code du travail numérique",
         "shortDescription": "Effectuer une recherche depuis votre site sur le Code du travail numérique",
         "url": "/widgets/search",
-        "id": "widget"
+        "id": "widget",
+        "messages": {
+            "click": [
+                {
+                    "name": "logo-link",
+                    "description": "le message envoyé lors d'un click sur le logo \"code du travail numérique\""
+                },
+                {
+                    "name": "search-button",
+                    "description": "le message envoyé lors d'un click sur la loupe de la recherche"
+                }
+            ]
+        }
     },
     "preavis-licenciement": {
         "metaTitle": "Intégrer l’outil de calcul du préavis de licenciement du Code du travail numérique",
@@ -38,5 +50,15 @@
         "shortDescription": "Accédez à la procédure de licenciement qui correspond à votre situation",
         "url": "/widgets/procedure-licenciement",
         "id": "procedure-licenciement"
+    },
+    "indemnite-licenciement": {
+        "metaTitle": "Intégrer l’outil de calcul de l'indemnité de licenciement du Code du travail numérique",
+        "metaDescription": "Intégrer l’outil de procédure de licenciement de retraite du Code du travail numérique sur votre site grâce à un module (widget).",
+        "title": "Intégrer l’outil de calcul de l'indemnité de licenciement du Code du travail numérique",
+        "description": "Vous pouvez intégrer l’outil de calcul de l'indemnité de licenciement du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer le montant de l'indemnité à verser au salarié en cas de licenciement. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective.",
+        "shortTitle": "Indemnité de licenciement",
+        "shortDescription": "Estimer le montant de l’indemnité à verser au salarié en cas de licenciement",
+        "url": "/widgets/indemnite-licenciement",
+        "id": "indemnite-licenciement"
     }
 }

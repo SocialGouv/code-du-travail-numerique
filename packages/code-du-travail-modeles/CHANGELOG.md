@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.95.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.94.0...v4.95.0) (2023-03-31)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.94.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.93.1...v4.94.0) (2023-03-30)
+
+### Bug Fixes
+
+- **indemnite de licenciement:** 1596 & 1597 remove "absence pour maladie non professionnelle" and "arrêt maladie lié à un accident de trajet" from ancienneté ([#5032](https://github.com/SocialGouv/code-du-travail-numerique/issues/5032)) ([19bd5e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/19bd5e2c1a1c3d2083b7ca7ba664c6920a3d4859))
+- **indemnite-licenciement:** refacto au niveau de l'ancienneté requise ([#5012](https://github.com/SocialGouv/code-du-travail-numerique/issues/5012)) ([c151f53](https://github.com/SocialGouv/code-du-travail-numerique/commit/c151f533a8f0aeb46f5169472ffb3a2282b71c9b))
+- **preavis démission:** add ref juridique to résultat ([#5033](https://github.com/SocialGouv/code-du-travail-numerique/issues/5033)) ([2c8c803](https://github.com/SocialGouv/code-du-travail-numerique/commit/2c8c8037a83e067c47b13db9d7366281012ff763))
+
+### Features
+
+- ajout de la notif cc 2511 ([#5053](https://github.com/SocialGouv/code-du-travail-numerique/issues/5053)) ([268eb15](https://github.com/SocialGouv/code-du-travail-numerique/commit/268eb15653a277b5798ebbf9cbb20b3bfc91b75e))
+- implement cc 1505 ([#4994](https://github.com/SocialGouv/code-du-travail-numerique/issues/4994)) ([f9d9b2a](https://github.com/SocialGouv/code-du-travail-numerique/commit/f9d9b2a97e056b2cf99cbf47a77804ce213a0448))
+- **indemnite-licenciement:** add supported cc ([#5058](https://github.com/SocialGouv/code-du-travail-numerique/issues/5058)) ([3242e2f](https://github.com/SocialGouv/code-du-travail-numerique/commit/3242e2f521b52cfc39410e453f74127ffb8ed131))
+- **indemnite-licenciement:** ajout de la cc 675 ([#4980](https://github.com/SocialGouv/code-du-travail-numerique/issues/4980))Co-authored-by: Martial Maillot <martial.maillot@gmail.com> ([c34adbe](https://github.com/SocialGouv/code-du-travail-numerique/commit/c34adbe4265a4427f54cdc8c69ec8271f5135cf3))
+
 ## [4.93.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.93.0...v4.93.1) (2023-03-20)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

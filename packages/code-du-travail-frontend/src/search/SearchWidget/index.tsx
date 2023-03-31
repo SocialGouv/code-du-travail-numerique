@@ -6,38 +6,48 @@ const { Search: SearchIcon } = icons;
 
 export const SearchWidget = () => {
   return (
-    <>
-      <StyledRoot>
-        <LogoLink
-          href="/?source=widget"
-          title="Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail."
-        >
-          <Logo />
-        </LogoLink>
-        <StyledForm target="_blank" action="/recherche">
-          <StyledLabel>
-            Trouvez les réponses à vos questions en droit du travail
-          </StyledLabel>
-          <SearchBar>
-            <SearchLogo
-              alt="Recherche"
-              src="/static/assets/img/logo-marianne.png"
-            />
-            <StyledInput
-              name="q"
-              autocomplete="off"
-              type="text"
-              id="cdtn-search"
-              placeholder="période d'essai"
-              aria-label="Votre recherche"
-            />
-            <StyledButton id="button-search">
-              <StyledSearchIcon />
-            </StyledButton>
-          </SearchBar>
-        </StyledForm>
-      </StyledRoot>
-    </>
+    <StyledRoot>
+      <LogoLink
+        href="/?source=widget"
+        title="Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail."
+        onClick={() => {
+          window.parent?.postMessage({ name: "logo-link", kind: "click" }, "*");
+        }}
+        target="_blank"
+      >
+        <Logo />
+      </LogoLink>
+      <StyledForm target="_blank" action="/recherche">
+        <StyledLabel>
+          Trouvez les réponses à vos questions en droit du travail
+        </StyledLabel>
+        <SearchBar>
+          <SearchLogo
+            alt="Recherche"
+            src="/static/assets/img/logo-marianne.png"
+          />
+          <StyledInput
+            name="q"
+            autocomplete="off"
+            type="text"
+            id="cdtn-search"
+            placeholder="période d'essai"
+            aria-label="Votre recherche"
+          />
+          <StyledButton
+            id="button-search"
+            onClick={() => {
+              window.parent?.postMessage(
+                { name: "button-search", kind: "click" },
+                "*"
+              );
+            }}
+          >
+            <StyledSearchIcon />
+          </StyledButton>
+        </SearchBar>
+      </StyledForm>
+    </StyledRoot>
   );
 };
 

@@ -29,8 +29,7 @@ export default function Metas({
       />
 
       <title>
-        {title}
-        {noTitleAdd ? "" : " - Code du travail numérique"}
+        {`${title}${noTitleAdd ? "" : " - Code du travail numérique"}`}
       </title>
       <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
       <meta key="desc" name="description" content={description} />
