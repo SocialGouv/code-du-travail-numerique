@@ -31,7 +31,7 @@ export function getSemQuery(queryVector: any, sources: any, size: number) {
         },
       },
     },
-    size: size,
+    size,
   };
 }
 
