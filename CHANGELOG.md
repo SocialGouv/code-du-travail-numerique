@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.96.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.95.0...v4.96.0) (2023-03-31)
+
+### Bug Fixes
+
+- widget scroll hidden ([#5072](https://github.com/SocialGouv/code-du-travail-numerique/issues/5072)) ([89e8ab4](https://github.com/SocialGouv/code-du-travail-numerique/commit/89e8ab45d6ac58c7ffb87268ffa53a0a278c161d))
+
+### Features
+
+- **indemnite-licenciement:** ajout de la CC 1266 ([#5041](https://github.com/SocialGouv/code-du-travail-numerique/issues/5041)) ([8982ee0](https://github.com/SocialGouv/code-du-travail-numerique/commit/8982ee06b7b541de5dbdfb2c20e11318c03b6a61))
+
 # [4.95.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.94.0...v4.95.0) (2023-03-31)
 
 ### Bug Fixes

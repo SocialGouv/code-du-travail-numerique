@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.96.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.95.0...v4.96.0) (2023-03-31)
+
+### Features
+
+- **indemnite-licenciement:** ajout de la CC 1266 ([#5041](https://github.com/SocialGouv/code-du-travail-numerique/issues/5041)) ([8982ee0](https://github.com/SocialGouv/code-du-travail-numerique/commit/8982ee06b7b541de5dbdfb2c20e11318c03b6a61))
+
 # [4.95.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.94.0...v4.95.0) (2023-03-31)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
