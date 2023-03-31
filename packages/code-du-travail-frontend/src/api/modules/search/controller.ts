@@ -16,7 +16,7 @@ export class SearchController {
       const { q, skipSavedResults, size } = this.req.query;
       const response = await searchWithQuery(
         q as string,
-        !!skipSavedResults,
+        skipSavedResults === "" ? true : false,
         size ? parseInt(size as string) : undefined
       );
       this.res.status(200).json(response);

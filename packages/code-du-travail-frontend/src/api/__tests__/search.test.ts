@@ -23,7 +23,6 @@ describe("Search", () => {
       "/api/search?q=démission&skipSavedResults&size=3"
     );
     expect(response.status).toBe(200);
-    console.log(response.body);
     expect(response.body.documents.length).toBe(3);
   });
 });
