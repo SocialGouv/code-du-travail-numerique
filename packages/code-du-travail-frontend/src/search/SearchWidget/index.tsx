@@ -13,6 +13,7 @@ export const SearchWidget = () => {
         onClick={() => {
           window.parent?.postMessage({ name: "logo-link", kind: "click" }, "*");
         }}
+        target="_blank"
       >
         <Logo />
       </LogoLink>
