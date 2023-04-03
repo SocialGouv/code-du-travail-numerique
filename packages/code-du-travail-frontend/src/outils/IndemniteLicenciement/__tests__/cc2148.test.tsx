@@ -41,20 +41,20 @@ describe("Indemnité licenciement - CC 2148", () => {
       .click(ui.next.get())
       .click(ui.next.get());
   });
-  test(`Validation de l'affichage de la question demandant les salaires après le préavis`, () => {
+  test(`Cas nominal`, () => {
     fireEvent.change(ui.information.agreement2148.age.get(), {
       target: { value: "42" },
     });
     fireEvent.click(ui.next.get());
 
     fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2000" },
+      target: { value: "01/01/2018" },
     });
     fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "01/01/2023" },
+      target: { value: "01/01/2022" },
     });
     fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "01/04/2023" },
+      target: { value: "01/01/2022" },
     });
     fireEvent.click(ui.seniority.hasAbsence.non.get());
     fireEvent.click(ui.next.get());
@@ -68,7 +68,17 @@ describe("Indemnité licenciement - CC 2148", () => {
 
     expect(
       rendering.queryByText(
-        /Connaissez-vous le montant des salaires perçus pendant le préavis/
+        "Connaissez-vous le montant du salaire perçu pendant le préavis ?"
+      )
+    ).not.toBeInTheDocument();
+    userAction.click(ui.previous.get());
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "01/06/2022" },
+    });
+    fireEvent.click(ui.next.get());
+    expect(
+      rendering.queryByText(
+        "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
       )
     ).toBeInTheDocument();
     fireEvent.click(
@@ -80,17 +90,64 @@ describe("Indemnité licenciement - CC 2148", () => {
     fireEvent.change(ui.salary.agreementWithNoticeSalary.salaries.getAll()[0], {
       target: { value: "3000" },
     });
-    fireEvent.change(ui.salary.agreementWithNoticeSalary.salaries.getAll()[1], {
-      target: { value: "3000" },
-    });
-    fireEvent.change(ui.salary.agreementWithNoticeSalary.salaries.getAll()[2], {
-      target: { value: "3000" },
-    });
 
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("26460 € brut");
-    expect(ui.result.resultTableRows.getAll().length).toBe(3);
+    expect(ui.result.resultat.get()).toHaveTextContent("4306,25 € brut");
+    expect(ui.result.resultTableRows.getAll().length).toBe(5);
+    expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
+      "mai 20223000 €"
+    );
+    userAction.click(ui.previous.get());
+    expect(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[0]
+    ).toHaveValue(3000);
+    userAction
+      .click(ui.salary.agreementWithNoticeSalary.knowingLastSalary.non.get())
+      .click(ui.next.get());
+    expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    expect(ui.result.resultat.get()).toHaveTextContent("4306,25 € brut");
+    expect(ui.result.resultTableRows.queryAll().length).toBe(0);
+  });
+  test(`Cas avec arrêt de travail`, () => {
+    userAction
+      .click(ui.previous.get())
+      .click(ui.previous.get())
+      .click(ui.contract.arretTravail.oui.get());
+
+    fireEvent.change(ui.contract.dateArretTravail.get(), {
+      target: { value: "01/01/2022" },
+    });
+    userAction.click(ui.next.get()).click(ui.next.get());
+
+    fireEvent.change(ui.information.agreement2148.age.get(), {
+      target: { value: "42" },
+    });
+    fireEvent.click(ui.next.get());
+
+    fireEvent.change(ui.seniority.startDate.get(), {
+      target: { value: "01/01/2018" },
+    });
+    fireEvent.change(ui.seniority.notificationDate.get(), {
+      target: { value: "01/01/2022" },
+    });
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "01/06/2022" },
+    });
+    fireEvent.click(ui.seniority.hasAbsence.non.get());
+    fireEvent.click(ui.next.get());
+    expect(ui.activeStep.query()).toHaveTextContent("Salaires");
+
+    fireEvent.click(ui.salary.hasPartialTime.non.get());
+    fireEvent.click(ui.salary.hasSameSalary.oui.get());
+    fireEvent.change(ui.salary.sameSalaryValue.get(), {
+      target: { value: "2500" },
+    });
+    expect(
+      rendering.queryByText(
+        "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
+      )
+    ).not.toBeInTheDocument();
   });
 });
