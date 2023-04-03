@@ -36,6 +36,8 @@ if (typeof window !== "undefined") {
     });
 }
 
+const WIDGETS_PATH = /\/widgets\/.*/;
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   useEffect(() => {
@@ -48,8 +50,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         if (referrerUrl) {
           push(["setReferrerUrl", referrerUrl]);
         }
+        if (router.pathname.match(WIDGETS_PATH)) {
+          push(["setCookieSameSite", "None"]);
+        }
       },
-      excludeUrlsPatterns: [/\/widgets\/.*/],
+      excludeUrlsPatterns: [WIDGETS_PATH],
     });
   }, []);
 
