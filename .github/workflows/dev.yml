@@ -28,28 +28,14 @@ jobs:
           dockerfile: "./Dockerfile"
           dockercontext: "."
           dockerbuildargs: |
-              NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
-              NEXT_PUBLIC_SENTRY_ENV=preproduction
-              NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
-              NEXT_PUBLIC_AZURE_CONTAINER=cdtn
-              NEXT_PUBLIC_PIWIK_SITE_ID=3
-              NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
-              NEXT_PUBLIC_API_URL=https://api-code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr/api/v1
-              NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
-              NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr
-
-  register-api:
-    name: Register api
-    runs-on: ubuntu-latest
-    steps:
-      - name: Register docker images
-        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
-        with:
-          project: "cdtn"
-          imageName: "cdtn/code-du-travail-api"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "./Dockerfile.api"
-          dockercontext: "."
+            NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+            NEXT_PUBLIC_SENTRY_ENV=preproduction
+            NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
+            NEXT_PUBLIC_AZURE_CONTAINER=cdtn
+            NEXT_PUBLIC_PIWIK_SITE_ID=3
+            NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
+            NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
+            NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr
 
   manifests:
     name: Dev manifests
@@ -68,7 +54,7 @@ jobs:
   deploy-dev:
     name: Deploy dev
     runs-on: ubuntu-latest
-    needs: [ register-frontend, register-api, manifests ]
+    needs: [register-frontend, manifests]
     steps:
       - name: Use autodevops deployment
         uses: SocialGouv/actions/autodevops-deploy@v1
@@ -81,7 +67,7 @@ jobs:
   e2e:
     name: End-to-end testing
     runs-on: ubuntu-latest
-    needs: [ deploy-dev ]
+    needs: [deploy-dev]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -98,14 +84,25 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --prefer-offline --frozen-lockfile
+      - name: Download k8s manifests
+        uses: actions/download-artifact@v3
+        with:
+          name: manifests-dev.yml
+      - name: Get deployment url for site
+        uses: mikefarah/yq@v4.30.5
+        id: yq_url
+        with:
+          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1
+      - name: Set env
+        run: |
+          echo "SITE_URL=https://${{ steps.yq_url.outputs.result }}" >> $GITHUB_ENV
       - name: Run test e2e
         run: |
-          TEST_BASEURL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr yarn test:e2e
+          TEST_BASEURL=${{ env.SITE_URL }} yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v3
         with:
           name: e2e-screenshots
           path: |
-            packages/code-du-travail-frontend-e2e/cypress/screenshots
-            packages/code-du-travail-frontend-e2e/codecept/output
+            packages/code-du-travail-frontend/cypress/screenshots

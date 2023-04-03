@@ -16,7 +16,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import Metas from "../../src/common/Metas";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
 
@@ -102,7 +102,7 @@ function DossierThematique(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query: { slug } }) => {
-  const responseContainer = await fetch(`${API_URL}/dossiers/${slug}`);
+  const responseContainer = await fetch(`${SITE_URL}/api/dossiers/${slug}`);
   if (!responseContainer.ok) {
     return handleError(responseContainer);
   }

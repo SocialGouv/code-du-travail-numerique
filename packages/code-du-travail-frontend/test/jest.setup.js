@@ -1,4 +1,3 @@
-import "jest-styled-components";
 import "@testing-library/jest-dom";
 
 import MockDate from "mockdate";
@@ -14,10 +13,9 @@ require("@reach/utils").checkStyles = jest.fn();
 window.scrollTo = jest.fn();
 
 jest.mock("../src/config", () => ({
-  API_URL: "api.url",
+  SITE_URL: "api.url",
   AZURE_BASE_URL: "azure.url",
   AZURE_CONTAINER: "cdtn",
-  NEXT_PUBLIC_SENTRY_DSN: "https://xxxxxxx@sentry.test.com/n",
   PACKAGE_VERSION: "vX.Y.Z",
 }));
 
