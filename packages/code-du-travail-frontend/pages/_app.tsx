@@ -36,26 +36,22 @@ if (typeof window !== "undefined") {
     });
 }
 
-const disableMatomoList = ["/widgets/[slug]", "/widgets/search"];
-
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
-    if (disableMatomoList.indexOf(router.pathname) !== -1) {
-      return;
-    }
     init({
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
       onInitialization: () => {
         const referrerUrl =
           document?.referrer || getSourceUrlFromPath(SITE_URL + router.asPath);
-        console.log("onInitialization")
+        console.log("onInitialization");
         if (referrerUrl) {
           push(["setReferrerUrl", referrerUrl]);
         }
       },
+      excludeUrlsPatterns: [/\/widgets\/.*/],
     });
   }, []);
 
