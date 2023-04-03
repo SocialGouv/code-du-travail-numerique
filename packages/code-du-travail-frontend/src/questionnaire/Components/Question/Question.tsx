@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { DossierLicenciementContext, useStore } from "../../store";
 import { Response } from "./Response";
 import { ShowInfo } from "./ShowInfo";
-import { Fieldset, Legend, Text } from "@socialgouv/cdtn-ui";
+import { Fieldset, Legend, Text, Paragraph } from "@socialgouv/cdtn-ui";
 import { InfoBulle } from "../../../outils/common/InfoBulle";
 import { trackClickHelp } from "../../tracking";
-import { useContext } from "react";
+import React, { useContext } from "react";
 
 type QuestionProps = {
   widgetMode: boolean;
@@ -20,8 +20,8 @@ export const Question = ({ widgetMode }: QuestionProps) => {
   ) : (
     <Fieldset>
       <Legend>
-        <Text fontWeight="600">
-          {currentQuestion?.text}
+        <Paragraph>
+          <Text fontWeight="600">{currentQuestion?.text}</Text>
           {currentQuestion?.info && (
             <StyledInfoBulle
               title={"Plus d'informations"}
@@ -33,7 +33,7 @@ export const Question = ({ widgetMode }: QuestionProps) => {
               {currentQuestion.info}
             </StyledInfoBulle>
           )}
-        </Text>
+        </Paragraph>
       </Legend>
 
       {currentQuestion?.responses.map((response, index: number) => (
