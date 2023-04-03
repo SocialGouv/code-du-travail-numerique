@@ -38,7 +38,6 @@ if (typeof window !== "undefined") {
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-
   useEffect(() => {
     init({
       siteId: PIWIK_SITE_ID,
@@ -46,7 +45,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       onInitialization: () => {
         const referrerUrl =
           document?.referrer || getSourceUrlFromPath(SITE_URL + router.asPath);
-        console.log("onInitialization");
         if (referrerUrl) {
           push(["setReferrerUrl", referrerUrl]);
         }
