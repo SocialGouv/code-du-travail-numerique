@@ -51,6 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       onInitialization: () => {
         const referrerUrl =
           document?.referrer || getSourceUrlFromPath(SITE_URL + router.asPath);
+        console.log("onInitialization")
         if (referrerUrl) {
           push(["setReferrerUrl", referrerUrl]);
         }
