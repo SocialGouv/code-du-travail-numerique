@@ -75,18 +75,18 @@ contrat salarié . convention collective . travaux publics . vingt cinq pourcent
 
 # Définitions des namespaces
 contrat salarié . convention collective . travaux publics . age . moins de  55 ans:
-  applicable si: age <= 55
+  applicable si: age < 55
   valeur: oui
 
 contrat salarié . convention collective . travaux publics . age . entre 55 ans et 65 ans:
   applicable si:
     toutes ces conditions:
-      - age > 55
-      - age <= 65
+      - age >= 55
+      - age < 65
   valeur: oui
 
 contrat salarié . convention collective . travaux publics . age . plus de 65 ans:
-  applicable si: age > 65
+  applicable si: age >= 65
   valeur: oui
 
 contrat salarié . convention collective . travaux publics . age . moins de  55 ans . résultat conventionnel:
