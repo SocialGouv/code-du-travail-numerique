@@ -16,7 +16,7 @@ export const Response = ({
   const store = useContext(DossierLicenciementContext);
   const answer = useStore(store, (state) => state.answer);
   let label = (
-    <Paragraph noMargin>
+    <StyledDiv>
       {text} {description && `(${description})`}
       {info && (
         <StyledInfoBulle
@@ -29,7 +29,7 @@ export const Response = ({
           {info}
         </StyledInfoBulle>
       )}
-    </Paragraph>
+    </StyledDiv>
   );
 
   return (
@@ -52,6 +52,11 @@ const StyledInfoBulle = styled(InfoBulle)`
   padding: 0;
 `;
 
+const StyledDiv = styled.div`
+  div {
+    margin-left: -30px;
+  }
+`;
 const ResponseWrapper = styled.div`
   display: flex;
   flex-direction: column;

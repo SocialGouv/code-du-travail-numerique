@@ -20,20 +20,18 @@ export const Question = ({ widgetMode }: QuestionProps) => {
   ) : (
     <Fieldset>
       <Legend>
-        <Paragraph>
-          <Text fontWeight="600">{currentQuestion?.text}</Text>
-          {currentQuestion?.info && (
-            <StyledInfoBulle
-              title={"Plus d'informations"}
-              dataTestid={`Tooltip-${currentQuestion?.text}`}
-              onVisibilityChange={() => {
-                trackClickHelp(currentQuestion.trackingName);
-              }}
-            >
-              {currentQuestion.info}
-            </StyledInfoBulle>
-          )}
-        </Paragraph>
+        <Text fontWeight="600">{currentQuestion?.text}</Text>
+        {currentQuestion?.info && (
+          <StyledInfoBulle
+            title={"Plus d'informations"}
+            dataTestid={`Tooltip-${currentQuestion?.text}`}
+            onVisibilityChange={() => {
+              trackClickHelp(currentQuestion.trackingName);
+            }}
+          >
+            {currentQuestion.info}
+          </StyledInfoBulle>
+        )}
       </Legend>
 
       {currentQuestion?.responses.map((response, index: number) => (
