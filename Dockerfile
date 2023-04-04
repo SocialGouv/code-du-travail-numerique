@@ -37,13 +37,13 @@ COPY ./packages/code-du-travail-modeles/package.json ./packages/code-du-travail-
 COPY ./yarn.lock ./yarn.lock
 
 # Install packages
-RUN yarn --frozen-lockfile && yarn cache clean
+RUN yarn --frozen-lockfile --prefer-offline
 
 COPY . ./
 
 ENV NODE_ENV=production
 
-RUN yarn build:frontend && yarn --frozen-lockfile --prod
+RUN yarn build:frontend && yarn --frozen-lockfile --prod --prefer-offline
 
 # app
 FROM node:$NODE_VERSION
@@ -52,10 +52,20 @@ ENV NODE_ENV=production
 
 WORKDIR /app
 
-COPY --from=dist . /app/
+COPY --from=dist ./packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
+COPY --from=dist ./packages/code-du-travail-frontend/node_modules /app/packages/code-du-travail-frontend/node_modules
+COPY --from=dist ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
+COPY --from=dist ./packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
+COPY --from=dist ./packages/code-du-travail-frontend/next.config.js /app/packages/code-du-travail-frontend/next.config.js
+COPY --from=dist ./packages/code-du-travail-frontend/sentry.client.config.js /app/packages/code-du-travail-frontend/sentry.client.config.js
+COPY --from=dist ./packages/code-du-travail-frontend/sentry.server.config.js /app/packages/code-du-travail-frontend/sentry.server.config.js
+COPY --from=dist ./packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
+COPY --from=dist ./packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
+COPY --from=dist ./package.json /app/package.json
+COPY --from=dist ./node_modules /app/node_modules
 
-RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R node:node /app/packages/code-du-travail-frontend/.next
+RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000 /app/packages/code-du-travail-frontend/.next
 
 USER 1000
 
-CMD [ "yarn", "start"]
+CMD [ "yarn", "workspace", "@cdt/frontend", "start"]
