@@ -57,6 +57,8 @@ WORKDIR /app
 COPY --from=dist ./packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
 COPY --from=dist ./packages/code-du-travail-frontend/node_modules /app/packages/code-du-travail-frontend/node_modules
 COPY --from=dist ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
+COPY --from=dist ./packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
+COPY --from=dist ./packages/code-du-travail-frontend/next.config.js /app/packages/code-du-travail-frontend/next.config.js
 COPY --from=dist ./package.json /app/package.json
 COPY --from=dist ./node_modules /app/node_modules
 
