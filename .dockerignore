@@ -1,0 +1,7 @@
+*.md
+*.log
+.git
+**/dist/
+**/build/
+**/node_modules/
+**/.next/
