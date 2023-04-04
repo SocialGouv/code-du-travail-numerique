@@ -59,6 +59,10 @@ COPY --from=dist ./packages/code-du-travail-frontend/node_modules /app/packages/
 COPY --from=dist ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
 COPY --from=dist ./packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
 COPY --from=dist ./packages/code-du-travail-frontend/next.config.js /app/packages/code-du-travail-frontend/next.config.js
+COPY --from=dist ./packages/code-du-travail-frontend/sentry.client.config.js /app/packages/code-du-travail-frontend/sentry.client.config.js
+COPY --from=dist ./packages/code-du-travail-frontend/sentry.server.config.js /app/packages/code-du-travail-frontend/sentry.server.config.js
+COPY --from=dist ./packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
+COPY --from=dist ./packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
 COPY --from=dist ./package.json /app/package.json
 COPY --from=dist ./node_modules /app/node_modules
 
