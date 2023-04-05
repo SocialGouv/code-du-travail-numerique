@@ -19,6 +19,7 @@ import { fetchSearchResults } from "../src/search/search.service";
 import SearchBar from "../src/search/SearchBar";
 import { SearchResults } from "../src/search/SearchResults";
 import { useRouter } from "next/router";
+import { GetServerSideProps } from "next";
 
 const SEARCH_ID = "search-input";
 
@@ -102,8 +103,9 @@ const SearchPage = ({ items = { articles: [], documents: [], themes: [] } }) => 
 
 }
 
-export const getServerSideProps = async ({ query }) => {
-  const items = await fetchSearchResults(query.q);
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const q = (context.query.q as string) ?? "";
+  const items = await fetchSearchResults(q);
   return { props: { items } };
 };
 
