@@ -22,7 +22,7 @@ contrat salarié . convention collective . bricolage . indemnité de licenciemen
   applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
   somme:
     - résultat conventionnel base
-    - cadres . majoration
+    - cadres . résultat conventionnel majoration
   unité: €
   arrondi: 2 décimales
   références:
@@ -45,7 +45,7 @@ contrat salarié . convention collective . bricolage . indemnité de licenciemen
   cdtn:
     type: entier
 
-contrat salarié . convention collective . bricolage . indemnité de licenciement . cadres . majoration:
+contrat salarié . convention collective . bricolage . indemnité de licenciement . cadres . résultat conventionnel majoration:
   applicable si: age >= 50
   valeur: résultat conventionnel base / 2
   unité: €
