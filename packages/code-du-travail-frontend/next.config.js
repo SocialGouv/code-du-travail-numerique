@@ -24,10 +24,6 @@ const compose =
 
 const nextConfig = {
   poweredByHeader: false,
-  sentry: {
-    disableClientWebpackPlugin: true,
-    disableServerWebpackPlugin: true,
-  },
   compiler: {
     reactRemoveProperties:
       process.env.NODE_ENV === "production"
@@ -39,6 +35,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
+  productionBrowserSourceMaps: true,
 };
 
 module.exports = {
