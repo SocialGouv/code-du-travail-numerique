@@ -102,10 +102,10 @@ function Modeles(props) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const response = await fetch(`${SITE_URL}/api/modeles`);
   if (!response.ok) {
-    return { statusCode: response.status };
+    throw new Error(response.statusText);
   }
   const data = await response.json();
 
