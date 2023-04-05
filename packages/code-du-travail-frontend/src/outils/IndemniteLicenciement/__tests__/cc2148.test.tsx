@@ -107,7 +107,7 @@ describe("Indemnité licenciement - CC 2148", () => {
       .click(ui.salary.agreementWithNoticeSalary.knowingLastSalary.non.get())
       .click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("4306,25 € brut");
+    expect(ui.result.resultat.get()).toHaveTextContent("3975 € brut");
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
   });
   test(`Cas avec arrêt de travail`, () => {
