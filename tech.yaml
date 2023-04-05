@@ -30,7 +30,6 @@ stack:
   frontend:
     - NextJS
   api:
-    - Koa
     - ElasticSearch
   nlp:
     - tensorflow
