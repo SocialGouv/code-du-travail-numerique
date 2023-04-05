@@ -1,0 +1,422 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dossiers should return an item for /dossiers/[slug] 1`] = `
+{
+  "breadcrumbs": [],
+  "cdtnId": "9bde52414a",
+  "description": "Retrouvez ici l’essentiel des aides au recrutement et des dispositifs d’accompagnement dans le but de maintenir l’emploi, notamment pour les entreprises en difficulté.",
+  "id": "3af23771-fd6d-48ae-b1b1-60b368d0816a",
+  "metaDescription": "Trouver les mesures et dispositifs d’aide à l'embauche de jeunes, d’apprentis, de travailleurs handicapés, de professions particulières ou de territoires spécifiques. Tout savoir des mesures d'aides et dispositifs pour les entreprises en difficultés, et des mesures d'adaptation",
+  "populars": [
+    {
+      "title": "Toutes les aides à l’embauche : Pôle emploi",
+      "url": "https://entreprise.pole-emploi.fr/aides-embauche/touteslesaides",
+    },
+    {
+      "title": "Le mentorat",
+      "url": "https://www.1jeune1solution.gouv.fr/mentorat",
+    },
+    {
+      "title": "Les emplois francs",
+      "url": "/fiche-ministere-travail/embaucher-une-personne-en-emploi-franc ",
+    },
+    {
+      "title": "Activité partielle de longue durée",
+      "url": "/fiche-service-public/lactivite-partielle-de-longue-duree-apld-existe-t-elle-toujours?",
+    },
+    {
+      "title": "Aide à l’embauche pour un contrat d’apprentissage",
+      "url": "/fiche-service-public/aides-a-lembauche-pour-un-contrat-dapprentissage",
+    },
+    {
+      "title": "Embauche jusqu’au 49ème salarié (ZRR)",
+      "url": "/fiche-service-public/exonerations-de-cotisations-sociales-en-zone-de-revitalisation-rurale-zrr",
+    },
+  ],
+  "refs": [],
+  "sections": [
+    {
+      "categories": [
+        {
+          "icon": "Youth",
+          "id": "jeunes",
+          "refs": [
+            {
+              "title": "Portail du programme “1 jeune 1 solution”",
+              "url": "https://www.1jeune1solution.gouv.fr",
+            },
+            {
+              "title": "Le mentorat",
+              "url": "https://www.1jeune1solution.gouv.fr/mentorat",
+            },
+            {
+              "title": "Parcours Emploi Compétences Jeunes (PEC Jeunes)",
+              "url": "https://travail-emploi.gouv.fr/le-ministere-en-action/relance-activite/plan-1jeune-1solution/faciliter-l-entree-dans-la-vie-professionnelle-10878/aide-embauche-pec-jeunes ",
+            },
+            {
+              "title": "Emploi franc + : aide de 8000 à 17000 euros pour un jeune",
+              "url": "/fiche-ministere-travail/embaucher-une-personne-en-emploi-franc",
+            },
+            {
+              "title": "Contrat d'engagement jeune : accompagnement pour trouver un travail",
+              "url": "/fiche-service-public/contrat-dengagement-jeune-accompagnement-pour-trouver-un-travail",
+            },
+            {
+              "title": "Contrat Initiative Emploi Jeunes (CIE Jeunes)",
+              "url": "https://travail-emploi.gouv.fr/cie-employeurs ",
+            },
+            {
+              "title": "Volontariat Territorial en Entreprise Vert : Aide de 8000 euros",
+              "url": "https://travail-emploi.gouv.fr/le-ministere-en-action/relance-activite/plan-1jeune-1solution/faciliter-l-entree-dans-la-vie-professionnelle-10878/article/aide-volontariat-territorial-en-entreprise-vert-vte-vert",
+            },
+            {
+              "title": "Projet initiative jeune et création d’entreprise : Aide maximale de 7320 €",
+              "url": "https://travail-emploi.gouv.fr/emploi/creation-ou-reprise-d-activite/article/projet-initiative-jeune-pij-creation-d-entreprise ",
+            },
+          ],
+          "title": "Jeunes",
+        },
+        {
+          "icon": "Apprenticeship",
+          "id": "alternance",
+          "refs": [
+            {
+              "title": "Portail de l’alternance",
+              "url": "https://www.alternance.emploi.gouv.fr",
+            },
+            {
+              "title": "Aide aux employeurs qui recrutent en apprentissage",
+              "url": "/fiche-ministere-travail/aide-exceptionnelle-aux-employeurs-qui-recrutent-en-apprentissage",
+            },
+            {
+              "title": "Simulateur de rémunération et d’aides aux employeurs",
+              "url": "https://www.alternance.emploi.gouv.fr/portail_alternance/jcms/gc_5504/simulateur-employeur",
+            },
+            {
+              "title": "Aides aux contrats en alternance : Guide à destinatation des employeurs et organismes de formation",
+              "url": "https://travail-emploi.gouv.fr/demarches-ressources-documentaires/documentation-et-publications-officielles/guides/article/aides-aux-contrats-en-alternance-guide-a-destination-des-employeurs-et-des",
+            },
+            {
+              "title": "Contrat d’apprentissage : aide maximale de 8000 euros",
+              "url": "/fiche-service-public/aides-a-lembauche-pour-un-contrat-dapprentissage",
+            },
+            {
+              "title": "Aides à l'embauche en alternance par un contrat de professionnalisation",
+              "url": "/fiche-service-public/aides-a-lembauche-en-alternance-par-un-contrat-de-professionnalisation",
+            },
+            {
+              "title": "Aide à l'embauche de demandeurs d'emploi de longue durée en contrat de professionnalisation",
+              "url": "https://travail-emploi.gouv.fr/formation-professionnelle/entreprise-et-alternance/article/aide-a-l-embauche-de-demandeurs-d-emploi-de-longue-duree-en-contrat-de",
+            },
+            {
+              "title": "Aide à l’embauche d’un demandeur d’emploi de 45 ans et plus en contrat de professionnalisation",
+              "url": "/fiche-ministere-travail/laide-a-lembauche-dun-demandeur-demploi-de-45-ans-et-plus-en-contrat-de-professionnalisation",
+            },
+          ],
+          "shortTitle": "Alternance - Apprentissage",
+          "title": "Alternance - Apprentissage - Professionnalisation",
+        },
+        {
+          "icon": "Unemployment",
+          "id": "senior",
+          "refs": [
+            {
+              "title": "CUI - Parcours Emploi Compétences (PEC)",
+              "url": "/fiche-service-public/contrat-unique-dinsertion-cui-parcours-emploi-competences-pec",
+            },
+            {
+              "title": "Emplois francs pour les 26 ans et plus : aide de 5000 à 15000 euros",
+              "url": "/fiche-ministere-travail/embaucher-une-personne-en-emploi-franc",
+            },
+            {
+              "title": "Aide à l’embauche d’un demandeur d’emploi de 45 ans et plus en contrat de professionnalisation",
+              "url": "/fiche-ministere-travail/laide-a-lembauche-dun-demandeur-demploi-de-45-ans-et-plus-en-contrat-de-professionnalisation",
+            },
+            {
+              "title": "Aide à l'embauche de demandeurs d'emploi de longue durée en contrat de professionnalisation",
+              "url": "https://travail-emploi.gouv.fr/formation-professionnelle/entreprise-et-alternance/article/aide-a-l-embauche-de-demandeurs-d-emploi-de-longue-duree-en-contrat-de",
+            },
+            {
+              "title": "Contrat adultes relais",
+              "url": "/fiche-service-public/contrat-adultes-relais",
+            },
+          ],
+          "title": "Demandeurs d’emploi",
+        },
+        {
+          "icon": "Handicap",
+          "id": "handicap",
+          "refs": [
+            {
+              "title": "Toutes les aides de l’Agefiph",
+              "url": "/fiche-ministere-travail/les-aides-de-lagefiph",
+            },
+            {
+              "title": "Aides financières à l’embauche d’une personne en situation de handicap",
+              "url": "/fiche-service-public/aides-financieres-pour-lembauche-dun-travailleur-handicape",
+            },
+            {
+              "title": "Travailleur handicapé : contrat d'apprentissage",
+              "url": "/fiche-service-public/travailleur-handicape-contrat-dapprentissage",
+            },
+            {
+              "title": "L’emploi accompagné",
+              "url": "/fiche-service-public/quest-ce-que-le-dispositif-demploi-accompagne-des-travailleurs-handicapes",
+            },
+            {
+              "title": "Le contrat de rééducation professionnelle",
+              "url": "/fiche-ministere-travail/handicap-le-contrat-de-reeducation-professionnelle",
+            },
+            {
+              "title": "Entreprises adaptées",
+              "url": "/fiche-ministere-travail/emploi-et-handicap-les-entreprises-adaptees-ea",
+            },
+            {
+              "title": "Le parcours emploi compétences (PEC)",
+              "url": "/fiche-service-public/contrat-unique-dinsertion-cui-parcours-emploi-competences-pec",
+            },
+          ],
+          "title": "Personnes handicapées",
+        },
+        {
+          "icon": "SpecificJob",
+          "id": "prof-part",
+          "refs": [
+            {
+              "title": "Aide à l’emploi d’un(e) assistant(e) maternel(le)",
+              "url": "/fiche-ministere-travail/les-aides-a-lemploi-dun-assistant-maternel",
+            },
+            {
+              "title": "Aides à l’embauche de travailleurs saisonniers agricoles",
+              "url": "/fiche-service-public/aide-a-lembauche-de-travailleurs-saisonniers-agricoles",
+            },
+            {
+              "title": "Les emplois à domicile : exonérations de cotisations",
+              "url": "/fiche-service-public/emploi-a-domicile-lemployeur-peut-il-etre-exonere-des-cotisations-sociales",
+            },
+            {
+              "title": "Portail Pajemploi",
+              "url": "https://www.pajemploi.urssaf.fr/",
+            },
+            {
+              "title": "Utiliser l’APA ou la PCH pour payer un salarié ou un aidant familial ?",
+              "url": "/fiche-service-public/peut-on-utiliser-lapa-ou-la-pch-pour-payer-un-salarie-ou-un-aidant-familial",
+            },
+            {
+              "title": "Guichet unique du spectacle occasionnel",
+              "url": "https://www.guso.fr/",
+            },
+            {
+              "title": "Fonds national pour l’emploi pérenne dans le spectacle (FONPEPS)",
+              "url": "https://www.culture.gouv.fr/Aides-demarches/Dispositifs-specifiques/Fonds-national-pour-l-emploi-perenne-dans-le-spectacle-FONPEPS",
+            },
+          ],
+          "title": "Professions particulières",
+        },
+        {
+          "icon": "France",
+          "id": "Territoire",
+          "refs": [
+            {
+              "title": " Quartiers prioritaires de la ville QPV : allègements fiscaux",
+              "url": "/fiche-service-public/allegements-fiscaux-dans-les-quartiers-prioritaires-de-la-ville-qpv",
+            },
+            {
+              "title": " Zones de restructuration de la défense (ZRD) : exonérations fiscales et sociales",
+              "url": "/fiche-service-public/exonerations-en-zones-de-restructuration-de-la-defense-zrd",
+            },
+            {
+              "title": " Zone de revitalisation rurale (ZRR) : exonérations de cotisations sociales",
+              "url": "/fiche-service-public/exonerations-de-cotisations-sociales-en-zone-de-revitalisation-rurale-zrr",
+            },
+            {
+              "title": " Bassin d’emploi à redynamiser (BER) : exonérations",
+              "url": "/fiche-service-public/bassin-demploi-a-redynamiser-ber-exonerations-dimpot-et-de-cotisations?q=ber",
+            },
+            {
+              "title": " Zone de revitalisation rurale (ZRR) : exonérations d’impôts",
+              "url": "/fiche-service-public/exonerations-dimpots-en-zone-de-revitalisation-rurale-zrr",
+            },
+            {
+              "title": " Zone franche urbaine territoire entrepreneur (ZFU-TE): exonérations sur les bénéfices",
+              "url": "/fiche-service-public/exonerations-sur-les-benefices-en-zone-franche-urbaine-territoire-entrepreneur-zfu-te?",
+            },
+            {
+              "title": " Emploi franc dans un quartier prioritaire de la politique de la ville (QPV)",
+              "url": "/fiche-ministere-travail/embaucher-une-personne-en-emploi-franc",
+            },
+            {
+              "title": "CUI - Parcours emploi compétences (PEC)",
+              "url": "/fiche-service-public/contrat-unique-dinsertion-cui-parcours-emploi-competences-pec",
+            },
+          ],
+          "shortTitle": "Territoires spécifiques",
+          "title": "Territoires spécifiques : ZRR, ZRD, BER, QPV…",
+        },
+      ],
+      "label": "Aides pour recruter",
+    },
+    {
+      "categories": [
+        {
+          "icon": "CrisisCompagny",
+          "id": "entreprise-difficultes",
+          "refs": [
+            {
+              "title": "Alertes pour la prévention des difficultés des entreprises",
+              "url": "/fiche-service-public/alertes-pour-la-prevention-des-difficultes-des-entreprises",
+            },
+            {
+              "title": "Activité partielle",
+              "url": "/fiche-ministere-travail/activite-partielle-chomage-partiel",
+            },
+            {
+              "title": "Activité partielle de longue durée",
+              "url": "/fiche-service-public/lactivite-partielle-de-longue-duree-apld-existe-t-elle-toujours?",
+            },
+            {
+              "title": "La procédure de sauvegarde (ordinaire ou accélérée)",
+              "url": "/fiche-service-public/procedure-de-sauvegarde",
+            },
+            {
+              "title": "Exonération d’impôt pour la reprise d’une entreprise industrielle en difficulté",
+              "url": "https://bpifrance-creation.fr/encyclopedie/aides-a-creation-a-reprise-dentreprise/aides-fiscales/exoneration-dimpot-reprise-dune",
+            },
+            {
+              "title": "Accords de maintien en emploi",
+              "url": "/fiche-ministere-travail/accords-de-maintien-de-lemploi",
+            },
+          ],
+          "title": "Entreprises en difficultés",
+        },
+        {
+          "icon": "PartialActivity",
+          "id": "mesures-adaptation",
+          "refs": [
+            {
+              "title": "Prêt de main d’œuvre entre entreprises",
+              "url": "/fiche-service-public/pret-de-main-doeuvre-entre-entreprises",
+            },
+          ],
+          "title": "Mesures d’adaptation",
+        },
+      ],
+      "label": "Aides pour maintenir l’emploi",
+    },
+    {
+      "categories": [
+        {
+          "icon": "Lens",
+          "id": "plus-loin",
+          "refs": [
+            {
+              "title": "Formalités pour embaucher",
+              "url": "/themes/formalites-dembauche",
+            },
+            {
+              "title": "Formalités pour embaucher un jeune",
+              "url": "/themes/jeunes",
+            },
+            {
+              "title": "Protection des jeunes travailleurs",
+              "url": "/themes/jeunes-travailleurs",
+            },
+            {
+              "title": "Formalités pour embaucher un apprenti",
+              "url": "/themes/contrat-dapprentissage",
+            },
+            {
+              "title": "Plus d’informations sur les dispositifs d’emploi",
+              "url": "/themes/emploi",
+            },
+          ],
+          "title": "Pour aller plus loin",
+        },
+        {
+          "icon": "Resources",
+          "id": "outils-ressources",
+          "refs": [
+            {
+              "title": "Toute les aides pour aller vers l'emploi",
+              "url": "https://mes-aides.pole-emploi.fr/",
+            },
+            {
+              "title": "Toute les aides pour les entreprises sur aides-entreprises.fr",
+              "url": "https://www.aides-entreprises.fr/",
+            },
+            {
+              "title": "Portail “1 jeune 1 solution”",
+              "url": "https://www.1jeune1solution.gouv.fr",
+            },
+            {
+              "title": "Trouver les aides auxquelles les jeunes ont droit.",
+              "url": "https://www.1jeune1solution.gouv.fr/mes-aides",
+            },
+            {
+              "title": "Plan de relance (Ministère de l’économie)",
+              "url": "https://www.economie.gouv.fr/plan-de-relance  ",
+            },
+            {
+              "title": "Pôle Emploi- Toutes les aides à l’embauche",
+              "url": "https://entreprise.pole-emploi.fr/aides-embauche/touteslesaides ",
+            },
+            {
+              "title": "Estimation des coûts d’embauche",
+              "url": "/outils/simulateur-embauche",
+            },
+            {
+              "title": "Alternance: Simulateur aides et rémunération (employeur)",
+              "url": "https://www.alternance.emploi.gouv.fr/portail_alternance/jcms/gc_5504/simulateur-employeur",
+            },
+            {
+              "title": "Alternance: Simulateur aides et rémunération (alternant)",
+              "url": "https://www.alternance.emploi.gouv.fr/portail_alternance/jcms/hl_6238/simulateur-alternant",
+            },
+            {
+              "title": "Portail “Mon Compte Formation”",
+              "url": "https://www.moncompteformation.gouv.fr/espace-prive",
+            },
+            {
+              "title": "Portail “Mon CEP” (Conseil en Evolution professionnelle)",
+              "url": "https://mon-cep.org/",
+            },
+            {
+              "title": "Portail de l’alternance",
+              "url": "https://www.alternance.emploi.gouv.fr",
+            },
+            {
+              "title": "Assurance-maladie: Cotisations et gestion ",
+              "url": "https://www.ameli.fr/entreprise/votre-entreprise/",
+            },
+            {
+              "title": "Prêt Croissance Industrie",
+              "url": "https://www.bpifrance.fr/Toutes-nos-solutions/Prets/Prets-thematiques/Pret-Croissance-Industrie",
+            },
+            {
+              "title": "Portail Pajemploi  ",
+              "url": "https://www.pajemploi.urssaf.fr/",
+            },
+            {
+              "title": "Guichet unique du spectacle occasionnel",
+              "url": "https://www.guso.fr/",
+            },
+            {
+              "title": "Agence de service et de paiement",
+              "url": "https://www.asp-public.fr/",
+            },
+            {
+              "title": "Fonds national pour l’emploi pérenne dans le spectacle (FONPEPS)",
+              "url": "https://www.culture.gouv.fr/Aides-demarches/Dispositifs-specifiques/Fonds-national-pour-l-emploi-perenne-dans-le-spectacle-FONPEPS",
+            },
+          ],
+          "title": "Outils et Ressources",
+        },
+      ],
+      "label": "Outils et Ressources utiles",
+    },
+  ],
+  "slug": "aides-et-accompagnement-embauche-et-perennisation-des-emplois",
+  "source": "dossiers",
+  "title": "Dossier : Les aides à l'embauche et aux entreprises",
+}
+`;

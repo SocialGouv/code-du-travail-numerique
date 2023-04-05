@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Suggestions getSuggestions should return an empty array if query is too short 1`] = `[]`;
+
+exports[`Suggestions getSuggestions should return the same with ré 1`] = `
+[
+  "renseignements",
+  "retraite",
+  "repos",
+  "réintégration",
+  "déplacement régulier",
+]
+`;
+
+exports[`Suggestions getSuggestions should work with re 1`] = `
+[
+  "renseignements",
+  "retraite",
+  "repos",
+  "réintégration",
+  "déplacement régulier",
+]
+`;
