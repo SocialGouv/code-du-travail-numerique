@@ -33,7 +33,7 @@ jobs:
   register-frontend:
     name: Register frontend
     runs-on: ubuntu-latest
-    needs: [ manifests ]
+    needs: [manifests]
     steps:
       - name: Download k8s manifests
         uses: actions/download-artifact@v3
@@ -46,15 +46,8 @@ jobs:
         with:
           cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1
 
-      - name: Get api url for site
-        uses: mikefarah/yq@v4.30.5
-        id: yq_api_url
-        with:
-          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | head -n 1
-
       - name: Set env
         run: |
-          echo "API_URL=https://${{ steps.yq_api_url.outputs.result }}" >> $GITHUB_ENV
           echo "SITE_URL=https://${{ steps.yq_url.outputs.result }}" >> $GITHUB_ENV
           echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
       - name: Register docker images
@@ -66,32 +59,19 @@ jobs:
           dockerfile: "./Dockerfile"
           dockercontext: "."
           dockerbuildargs: |
-              NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
-              NEXT_PUBLIC_SENTRY_ENV=dev
-              NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
-              NEXT_PUBLIC_AZURE_CONTAINER=cdtn
-              NEXT_PUBLIC_PIWIK_SITE_ID=3
-              NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
-              NEXT_PUBLIC_API_URL=${{ env.API_URL }}/api/v1
-              NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
-              NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
-  register-api:
-    name: Register api
-    runs-on: ubuntu-latest
-    steps:
-      - name: Register docker images
-        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
-        with:
-          project: "cdtn"
-          imageName: "cdtn/code-du-travail-api"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "./Dockerfile.api"
-          dockercontext: "."
+            NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+            NEXT_PUBLIC_SENTRY_ENV=dev
+            NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
+            NEXT_PUBLIC_AZURE_CONTAINER=cdtn
+            NEXT_PUBLIC_PIWIK_SITE_ID=3
+            NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
+            NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
+            NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
 
   deploy:
     name: Deploy application
     runs-on: ubuntu-latest
-    needs: [ register-frontend, register-api ]
+    needs: [register-frontend]
     steps:
       - name: Use autodevops deployment
         uses: SocialGouv/actions/autodevops-deploy@v1
@@ -104,7 +84,7 @@ jobs:
   e2e:
     name: End-to-end testing
     runs-on: ubuntu-latest
-    needs: [ deploy ]
+    needs: [deploy]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

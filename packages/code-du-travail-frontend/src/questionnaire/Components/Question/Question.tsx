@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { DossierLicenciementContext, useStore } from "../../store";
 import { Response } from "./Response";
 import { ShowInfo } from "./ShowInfo";
-import { Fieldset, Legend } from "@socialgouv/cdtn-ui";
+import { Fieldset, Legend, Text, Paragraph } from "@socialgouv/cdtn-ui";
 import { InfoBulle } from "../../../outils/common/InfoBulle";
 import { trackClickHelp } from "../../tracking";
-import { useContext } from "react";
+import React, { useContext } from "react";
 
 type QuestionProps = {
   widgetMode: boolean;
@@ -19,8 +19,8 @@ export const Question = ({ widgetMode }: QuestionProps) => {
     <ShowInfo slug={lastResponse.slug} widgetMode={widgetMode}></ShowInfo>
   ) : (
     <Fieldset>
-      <QuestionHeaderWrapper>
-        <LegendWrapper>{currentQuestion?.text}</LegendWrapper>
+      <Legend>
+        <Text fontWeight="600">{currentQuestion?.text}</Text>
         {currentQuestion?.info && (
           <StyledInfoBulle
             title={"Plus d'informations"}
@@ -29,10 +29,10 @@ export const Question = ({ widgetMode }: QuestionProps) => {
               trackClickHelp(currentQuestion.trackingName);
             }}
           >
-            {currentQuestion?.info}
+            {currentQuestion.info}
           </StyledInfoBulle>
         )}
-      </QuestionHeaderWrapper>
+      </Legend>
 
       {currentQuestion?.responses.map((response, index: number) => (
         <Response
@@ -50,29 +50,7 @@ const StyledInfoBulle = styled(InfoBulle)`
   padding: 0;
 `;
 
-const LegendWrapper = styled(Legend)`
-  font-weight: 600;
-  float: left;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-`;
-
-const QuestionHeaderWrapper = styled.div`
-  margin: 0 0 4px;
-  display: inline-block;
-`;
-
 const Description = styled.i`
   display: block;
   margin-top: 7px;
-`;
-
-const InformationWrapper = styled.div`
-  background: #f2f5fa;
-  border-radius: 6px;
-  padding: 13px 20px;
-  font-size: 14px;
-  margin: 11px 5px;
 `;

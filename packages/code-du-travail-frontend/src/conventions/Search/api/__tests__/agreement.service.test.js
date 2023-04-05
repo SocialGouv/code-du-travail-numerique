@@ -10,7 +10,7 @@ describe("agreement service", () => {
     fetch.mockResolvedValue(fetchResponse(idccPayload));
     const results = await searchAgreement("foo");
     expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fetch.mock.calls[0][0]).toMatch(/api\.url\/idcc\?q=foo$/);
+    expect(fetch.mock.calls[0][0]).toMatch(/api\.url\/api\/idcc\?q=foo$/);
     expect(results).toMatchSnapshot();
   });
 });

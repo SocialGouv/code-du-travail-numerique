@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        images: ["code-du-travail-frontend", "code-du-travail-api"]
+        images: ["code-du-travail-frontend"]
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
