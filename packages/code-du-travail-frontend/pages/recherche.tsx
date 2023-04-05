@@ -103,7 +103,7 @@ const SearchPage = ({ items = { articles: [], documents: [], themes: [] } }) => 
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const items = await fetchSearchResults(query);
+  const items = await fetchSearchResults(query.q);
   return { props: { items } };
 };
 
