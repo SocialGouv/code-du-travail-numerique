@@ -21,6 +21,7 @@ import { deepMergeArray } from "../../../../../lib";
 import { computeSalaryPeriods } from "../../../common";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
+import { parse, dateToString } from "../../../../common/utils";
 
 const initialState: SalairesStoreData = {
   input: {
@@ -42,11 +43,14 @@ const createSalairesStore: StoreSlice<
     initFieldSalaries: () => {
       const ancienneteInput = get().ancienneteData.input;
       const contratTravailInput = get().contratTravailData.input;
+      const dateNotification = parse(
+        contratTravailInput.dateArretTravail ??
+          ancienneteInput.dateNotification!
+      );
+      dateNotification.setDate(dateNotification.getDate() + 1);
       const periods = computeSalaryPeriods({
         dateEntree: ancienneteInput.dateEntree!,
-        dateNotification:
-          contratTravailInput.dateArretTravail ??
-          ancienneteInput.dateNotification!,
+        dateNotification: dateToString(dateNotification),
       });
       const p: SalaryPeriods[] = periods.map((v) => ({
         month: v,
