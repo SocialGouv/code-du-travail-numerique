@@ -41,9 +41,10 @@ export class ReferenceSalary1516
       .sort((first, second) => second.value! - first.value!);
     const meilleurSalaireDes3DerniersMois = last3salaries[0];
 
-    const formuleCc =
-      (meilleurSalaireDes3DerniersMois.value ?? 0) +
-      (meilleurSalaireDes3DerniersMois.prime ?? 0) / 12;
+    const primeMeilleurSalaire = meilleurSalaireDes3DerniersMois.prime ?? 0;
+    const meilleurSalaire =
+      (meilleurSalaireDes3DerniersMois.value ?? 0) - primeMeilleurSalaire;
+    const formuleCc = meilleurSalaire + primeMeilleurSalaire / 12;
 
     return Math.max(moyenneSalaires, formuleCc);
   }
