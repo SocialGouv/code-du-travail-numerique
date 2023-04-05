@@ -13,7 +13,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
-import { API_URL } from "../src/config";
+import { SITE_URL } from "../src/config";
 import { Layout } from "../src/layout/Layout";
 
 type PropsData = {
@@ -84,7 +84,7 @@ const Stats = ({ data }: Props): JSX.Element => {
   );
 };
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const props = await fetch(`${API_URL}/stats`)
+  const props = await fetch(`${SITE_URL}/api/stats`)
     .then((res) => {
       if (res.ok) return res.json();
       throw new Error("Error fetching stats");

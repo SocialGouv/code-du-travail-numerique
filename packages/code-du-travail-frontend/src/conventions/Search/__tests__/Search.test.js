@@ -43,7 +43,7 @@ describe("<Search />", () => {
   });
 
   it("should show spinner when loading", () => {
-    mockFetch({ "api.url/idcc": {} });
+    mockFetch({ "api.url/api/idcc": {} });
     const { container, getByPlaceholderText } = renderSearchForm({
       onSelectConvention: null,
     });
@@ -58,7 +58,7 @@ describe("<Search />", () => {
 
   it("when input is IDCC, should search conventions", async () => {
     mockFetch({
-      "api.url/idcc": {
+      "api.url/api/idcc": {
         hits: {
           hits: [
             {
@@ -94,13 +94,13 @@ describe("<Search />", () => {
     );
     jest.runAllTimers();
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
-    expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=1234");
+    expect(fetch).toHaveBeenCalledWith("api.url/api/idcc?q=1234");
     expect(container).toMatchSnapshot();
   });
 
   it("when input is a valid IDCC, should show only the perfect match", async () => {
     mockFetch({
-      "api.url/idcc": {
+      "api.url/api/idcc": {
         hits: {
           hits: [
             {
@@ -136,13 +136,13 @@ describe("<Search />", () => {
     );
     jest.runAllTimers();
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
-    expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=4567");
+    expect(fetch).toHaveBeenCalledWith("api.url/api/idcc?q=4567");
     expect(container).toMatchSnapshot();
   });
 
   it("should show no results when no result", async () => {
     mockFetch({
-      "api.url/idcc": {
+      "api.url/api/idcc": {
         hits: {
           hits: [],
         },
@@ -161,12 +161,12 @@ describe("<Search />", () => {
     await waitFor(() => findByText(/Aucun résultat/i), { container });
     expect(container).toMatchSnapshot();
     expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=9999");
+    expect(fetch).toHaveBeenCalledWith("api.url/api/idcc?q=9999");
   });
 
   it("should use onSelectConvention callback when given", async () => {
     mockFetch({
-      "api.url/idcc": {
+      "api.url/api/idcc": {
         hits: {
           hits: [
             {

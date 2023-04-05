@@ -12,7 +12,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
@@ -72,7 +72,7 @@ const ThemesPage = ({ children = [] }) => (
 );
 
 export const getServerSideProps = async () => {
-  const response = await fetch(`${API_URL}/themes`);
+  const response = await fetch(`${SITE_URL}/api/themes`);
   if (!response.ok) {
     return handleError(response);
   }

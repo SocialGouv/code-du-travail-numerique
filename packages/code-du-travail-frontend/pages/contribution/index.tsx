@@ -15,7 +15,7 @@ import { handleError } from "../../src/lib/fetch-error";
 import styled from "styled-components";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 
 const ALL = "all";
 
@@ -85,7 +85,7 @@ function Page({ contribs }) {
 export default Page;
 
 export const getServerSideProps = async () => {
-  const response = await fetch(`${API_URL}/contributions/generics`);
+  const response = await fetch(`${SITE_URL}/api/contributions`);
   if (!response.ok) {
     return handleError(response);
   }

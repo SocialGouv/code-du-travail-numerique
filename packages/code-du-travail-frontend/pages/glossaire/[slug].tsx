@@ -14,7 +14,7 @@ import styled from "styled-components";
 import { A11yLink } from "../../src/common/A11yLink";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
 
@@ -76,7 +76,7 @@ function Term(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query: { slug } }) => {
-  const responseContainer = await fetch(`${API_URL}/glossary/${slug}`);
+  const responseContainer = await fetch(`${SITE_URL}/api/glossary/${slug}`);
   if (!responseContainer.ok) {
     return handleError(responseContainer);
   }
