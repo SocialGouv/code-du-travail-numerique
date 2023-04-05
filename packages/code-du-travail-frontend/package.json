@@ -87,6 +87,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "@types/cors": "^2.8.13",
     "@types/debounce-promise": "^3.1.4",
     "@types/jest": "^29.5.0",
     "@types/react-autosuggest": "^10.1.6",
