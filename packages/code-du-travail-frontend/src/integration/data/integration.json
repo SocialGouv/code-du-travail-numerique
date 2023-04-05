@@ -7,7 +7,19 @@
         "shortTitle": "Moteur de recherche du Code du travail numérique",
         "shortDescription": "Effectuer une recherche depuis votre site sur le Code du travail numérique",
         "url": "/widgets/search",
-        "id": "widget"
+        "id": "widget",
+        "messages": {
+            "click": [
+                {
+                    "name": "logo-link",
+                    "description": "le message envoyé lors d'un click sur le logo \"code du travail numérique\""
+                },
+                {
+                    "name": "search-button",
+                    "description": "le message envoyé lors d'un click sur la loupe de la recherche"
+                }
+            ]
+        }
     },
     "preavis-licenciement": {
         "metaTitle": "Intégrer l’outil de calcul du préavis de licenciement du Code du travail numérique",

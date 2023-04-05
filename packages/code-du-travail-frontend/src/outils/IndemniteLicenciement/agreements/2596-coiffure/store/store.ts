@@ -50,7 +50,6 @@ export const createAgreement2596StoreSalaires: StoreSlice<
         return set(
           produce((state: Agreement2596StoreSlice) => {
             state.agreement2596Data.input.noticeSalaryPeriods = [];
-            state.agreement2596Data.input.hasReceivedSalaries = "non";
           })
         );
       }

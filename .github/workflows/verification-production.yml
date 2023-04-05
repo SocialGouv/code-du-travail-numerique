@@ -39,12 +39,10 @@ jobs:
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Disallow: /images/"
       - run: |
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Sitemap: https://code.travail.gouv.fr/sitemap.xml"
-      - run: |
-          curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "test :)"
       - name: Create the Mattermost Message
         if: failure()
         run: |
-          echo "{\"text\":\"La page robots.txt dispose d'une erreur : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" > mattermost.json
+          echo "{\"text\":\"Erreur sur le robots.txt 😱😱😱😱😱😱😱😱 ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
         env:
