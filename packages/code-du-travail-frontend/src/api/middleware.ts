@@ -10,7 +10,7 @@ const cors = Cors({
 
 export function runMiddleware(req: NextApiRequest, res: NextApiResponse) {
   return new Promise((resolve, reject) => {
-    if (IS_PROD) {
+    if (!IS_PROD) {
       cors(req, res, (result: any) => {
         if (result instanceof Error) {
           return reject(result);
