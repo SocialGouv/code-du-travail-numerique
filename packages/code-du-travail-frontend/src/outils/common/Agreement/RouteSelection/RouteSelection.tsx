@@ -58,6 +58,7 @@ const RouteSelection = ({
                 }
                 id={`agreement`}
                 {...props.input}
+                checked={!!values.ccn?.selected}
               />
             )}
           </Field>
