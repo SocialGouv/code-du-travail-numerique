@@ -1,5 +1,5 @@
 import debounce from "debounce-promise";
-import { API_URL } from "../../../config";
+import { SITE_URL } from "../../../config";
 
 import { Agreement } from "./type";
 
@@ -13,7 +13,7 @@ const formatCCn = ({ num, id, slug, title, shortTitle, highlight }) => ({
 });
 
 const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
-  const url = `${API_URL}/idcc?q=${encodeURIComponent(query)}`;
+  const url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(query)}`;
 
   return fetch(url).then(async (response) => {
     if (response.ok) {
