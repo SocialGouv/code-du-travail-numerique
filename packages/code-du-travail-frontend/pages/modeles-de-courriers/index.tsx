@@ -77,7 +77,7 @@ function Modeles(props) {
               )}
           </LargeSelect>
           <StyledList>
-            {Object.values(documents).map(({ title, items }) => (
+            {Object.values(documents).map(({ title, items }: any) => (
               <React.Fragment key={title}>
                 <Heading as={HeadingBlue}>{title}</Heading>
                 {items.map(({ description, slug, title }) => (
@@ -102,13 +102,17 @@ function Modeles(props) {
   );
 }
 
-Modeles.getInitialProps = async function () {
+export const getStaticProps = async () => {
   const response = await fetch(`${SITE_URL}/api/modeles`);
   if (!response.ok) {
     return { statusCode: response.status };
   }
   const data = await response.json();
-  return { data };
+
+  return {
+    props: { data },
+    revalidate: 600, // 10 minutes
+  };
 };
 
 const { spacings } = th;
