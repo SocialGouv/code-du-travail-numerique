@@ -1,0 +1,58 @@
+contrat salarié . convention collective . bricolage . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+contrat salarié . convention collective . bricolage . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Non-cadres: "'Non-cadres'"
+
+contrat salarié . convention collective . bricolage . indemnité de licenciement . résultat conventionnel base:
+  valeur: (2 / 100) * indemnité de licenciement . ancienneté conventionnelle en année * indemnité de licenciement . salaire de référence conventionnel
+  unité: €
+  arrondi: 2 décimales
+
+contrat salarié . convention collective . bricolage . indemnité de licenciement . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+  somme:
+    - résultat conventionnel base
+    - cadres . majoration
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 9.2.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870734?idConteneur=KALICONT000005635871
+  cdtn:
+    formule:
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 2% * Sref * A
+
+contrat salarié . convention collective . bricolage . indemnité de licenciement . cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
+
+contrat salarié . convention collective . bricolage . indemnité de licenciement . cadres . age:
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
+  unité: an
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . bricolage . indemnité de licenciement . cadres . majoration:
+  applicable si: age >= 50
+  valeur: résultat conventionnel base / 2
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 9.2.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870734?idConteneur=KALICONT000005635871
+    Article 10 de l'Annexe Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870788?idConteneur=KALICONT000005635871
+  cdtn:
+    formule:
+      formula: ($formule) + (50% * (2% * Sref * A)
