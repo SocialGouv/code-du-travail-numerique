@@ -4,9 +4,7 @@ import { IS_PROD } from "../config";
 
 // Initializing the cors middleware
 // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
-const cors = Cors({
-  methods: ["GET"],
-});
+const cors = Cors();
 
 export function runMiddleware(req: NextApiRequest, res: NextApiResponse) {
   return new Promise((resolve, reject) => {
