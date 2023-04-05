@@ -36,9 +36,10 @@ if (typeof window !== "undefined") {
     });
 }
 
+const WIDGETS_PATH = /\/widgets\/.*/;
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-
   useEffect(() => {
     init({
       siteId: PIWIK_SITE_ID,
@@ -49,7 +50,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         if (referrerUrl) {
           push(["setReferrerUrl", referrerUrl]);
         }
+        if (router.pathname.match(WIDGETS_PATH)) {
+          push(["setCookieSameSite", "None"]);
+        }
       },
+      excludeUrlsPatterns: [WIDGETS_PATH],
     });
   }, []);
 

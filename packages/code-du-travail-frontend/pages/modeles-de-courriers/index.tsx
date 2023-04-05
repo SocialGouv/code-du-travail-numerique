@@ -14,7 +14,7 @@ import styled from "styled-components";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { summarize } from "../../src/search/utils";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
 
 const title = "Modèles de documents";
@@ -103,7 +103,7 @@ function Modeles(props) {
 }
 
 Modeles.getInitialProps = async function () {
-  const response = await fetch(`${API_URL}/modeles`);
+  const response = await fetch(`${SITE_URL}/api/modeles`);
   if (!response.ok) {
     return { statusCode: response.status };
   }
