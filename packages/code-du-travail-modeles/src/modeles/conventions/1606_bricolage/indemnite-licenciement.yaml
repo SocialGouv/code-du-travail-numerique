@@ -55,4 +55,4 @@ contrat salarié . convention collective . bricolage . indemnité de licenciemen
     Article 10 de l'Annexe Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870788?idConteneur=KALICONT000005635871
   cdtn:
     formule:
-      formula: ($formule) + (50% * (2% * Sref * A)
+      formula: ($formule) + (50% * (2% * Sref * A))
