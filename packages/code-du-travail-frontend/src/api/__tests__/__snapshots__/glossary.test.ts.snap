@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Glossary should return a list for /glossary 1`] = `
+[
+  {
+    "abbreviations": [],
+    "definition": "<p>Mesure d'urgence prise par précaution.</p>",
+    "references": [
+      "https://www.service-public.fr/particuliers/glossaire/R37450",
+    ],
+    "slug": "a-titre-conservatoire",
+    "title": "A titre conservatoire",
+    "variants": [],
+  },
+]
+`;
+
+exports[`Glossary should return an item for /glossary/[slug] 1`] = `
+{
+  "abbreviations": [],
+  "definition": "<p>Mesure d'urgence prise par précaution.</p>",
+  "references": [
+    "https://www.service-public.fr/particuliers/glossaire/R37450",
+  ],
+  "slug": "a-titre-conservatoire",
+  "title": "A titre conservatoire",
+  "variants": [],
+}
+`;
