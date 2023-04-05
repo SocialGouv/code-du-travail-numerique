@@ -1,7 +1,11 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { DossiersController } from "../../../src/api";
+import { DossiersController, runMiddleware } from "../../../src/api";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  await runMiddleware(req, res);
   const controller = new DossiersController(req, res);
   if (req.method === "GET") {
     controller.getBySlug();
