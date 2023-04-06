@@ -1,4 +1,5 @@
 import {
+  IReferenceSalary,
   ReferenceSalaryFactory,
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
@@ -62,7 +63,7 @@ export const getAgreementReferenceSalary = (
       return new AgreementSalary675().computeSalary(salaries, get);
     default: {
       const sReference = new ReferenceSalaryFactory().create(
-        SupportedCcIndemniteLicenciement.default
+        idcc ?? SupportedCcIndemniteLicenciement.default
       );
       return sReference.computeReferenceSalary({
         salaires: salaries,
