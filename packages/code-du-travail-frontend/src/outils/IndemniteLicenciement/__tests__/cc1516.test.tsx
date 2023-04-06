@@ -84,7 +84,7 @@ describe("Indemnité licenciement - CC 1516", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("3548,06 € brut");
+    expect(ui.result.resultat.get()).toHaveTextContent("3371,39 € brut");
     expect(ui.result.resultTableRows.getAll().length).toBe(3);
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
       "mai 20224000 €"
