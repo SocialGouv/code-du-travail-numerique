@@ -26,6 +26,7 @@ const nextConfig = {
   poweredByHeader: false,
   sentry: {
     hideSourceMaps: false,
+    widenClientFileUpload: true,
   },
   compiler: {
     reactRemoveProperties:
