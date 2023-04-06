@@ -12,8 +12,8 @@ describe("Formule indemnité licenciement - 3127", () => {
     ${1}       | ${"1/5 * Sref * A"}                         | ${["A : Ancienneté totale (1 an)", "Sref : Salaire de référence (1000 €)"]}
     ${7}       | ${"1/5 * Sref * A"}                         | ${["A : Ancienneté totale (7 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${10}      | ${"1/5 * Sref * A"}                         | ${["A : Ancienneté totale (10 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${11}      | ${"(1/5 * Sref * A1) + (2/15 * Sref * A2)"} | ${["A1 : Ancienneté de 10 ans ou moins (10 ans)", "A2 : Ancienneté au-delà de 10 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
-    ${12}      | ${"(1/5 * Sref * A1) + (2/15 * Sref * A2)"} | ${["A1 : Ancienneté de 10 ans ou moins (10 ans)", "A2 : Ancienneté au-delà de 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${11}      | ${"(1/5 * Sref * A1) + (2/15 * Sref * A2)"} | ${["A1 : Ancienneté totale (11 ans)", "A2 : Ancienneté au-delà de 10 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
+    ${12}      | ${"(1/5 * Sref * A1) + (2/15 * Sref * A2)"} | ${["A1 : Ancienneté totale (12 ans)", "A2 : Ancienneté au-delà de 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
   `(
     "Formule $expectedFormula avec $seniority ans",
     ({ seniority, expectedFormula, expectedExplanations }) => {
