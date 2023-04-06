@@ -1,7 +1,11 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { EnterprisesController } from "../../src/api";
+import { EnterprisesController, runMiddleware } from "../../src/api";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  await runMiddleware(req, res);
   const controller = new EnterprisesController(req, res);
   if (req.method === "GET") {
     controller.get();
