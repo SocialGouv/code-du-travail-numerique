@@ -10,6 +10,10 @@ export const SearchWidget = () => {
       <LogoLink
         href="/?source=widget"
         title="Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail."
+        onClick={() => {
+          window.parent?.postMessage({ name: "logo-link", kind: "click" }, "*");
+        }}
+        target="_blank"
       >
         <Logo />
       </LogoLink>
@@ -30,7 +34,15 @@ export const SearchWidget = () => {
             placeholder="période d'essai"
             aria-label="Votre recherche"
           />
-          <StyledButton id="button-search">
+          <StyledButton
+            id="button-search"
+            onClick={() => {
+              window.parent?.postMessage(
+                { name: "button-search", kind: "click" },
+                "*"
+              );
+            }}
+          >
             <StyledSearchIcon />
           </StyledButton>
         </SearchBar>
