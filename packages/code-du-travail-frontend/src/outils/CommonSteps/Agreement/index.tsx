@@ -1,6 +1,5 @@
 import React from "react";
 import { RadioQuestion } from "../../Components";
-import { Route } from "./store";
 import { AgreementSearch, EnterpriseSearch } from "./components";
 import { Agreement } from "../../../conventions/Search/api/type";
 import {
@@ -15,10 +14,11 @@ import { AgreementSearchValue } from "./store";
 import { SectionTitle } from "../../common/stepStyles";
 import styled from "styled-components";
 import { Paragraph, theme } from "@socialgouv/cdtn-ui";
+import { AgreementRoute } from "../../common/type/WizardType";
 
 type Props = {
-  selectedRoute?: Route;
-  onRouteChange: (Route) => void;
+  selectedRoute?: AgreementRoute;
+  onRouteChange: (AgreementRoute) => void;
   onInitAgreementPage: () => void;
   supportedAgreements: AgreementSupportInfo[];
   selectedEnterprise?: Enterprise;
@@ -59,19 +59,19 @@ function AgreementStep({
         questions={[
           {
             label: "Je sais quelle est ma convention collective (je la saisis)",
-            value: Route.agreement,
+            value: "agreement" as AgreementRoute,
             id: "route-agreement",
           },
           {
             label:
               "Je ne sais pas quelle est ma convention collective (je la recherche)",
-            value: Route.enterprise,
+            value: "enterprise" as AgreementRoute,
             id: "route-enterprise",
           },
           {
             label:
               "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)",
-            value: Route.none,
+            value: "not-selected" as AgreementRoute,
             id: "route-none",
           },
         ]}
@@ -90,9 +90,9 @@ function AgreementStep({
           ),
         }}
       />
-      {selectedRoute === Route.none && <ShowAlert route="not-selected" />}
+      {selectedRoute === "not-selected" && <ShowAlert route="not-selected" />}
 
-      {selectedRoute === Route.agreement && (
+      {selectedRoute === "agreement" && (
         <>
           <AgreementSearch
             supportedAgreements={supportedAgreements}
@@ -107,7 +107,7 @@ function AgreementStep({
           {error?.agreement && <InlineError>{error.agreement}</InlineError>}
         </>
       )}
-      {selectedRoute === Route.enterprise && (
+      {selectedRoute === "enterprise" && (
         <>
           <RadioQuestion
             questions={[

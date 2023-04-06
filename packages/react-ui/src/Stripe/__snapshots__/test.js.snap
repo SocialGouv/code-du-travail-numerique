@@ -1,43 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Stripe /> renders 1`] = `
-.c0 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
 <div>
   <span
-    class="c0"
+    class="sc-bcXHqe bRpDoB"
   />
 </div>
 `;
 
 exports[`<Stripe /> renders with correct styles 1`] = `
-.c0 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 <div>
   <span
-    class="c0"
+    class="sc-bcXHqe hvvIXl"
   />
 </div>
 `;

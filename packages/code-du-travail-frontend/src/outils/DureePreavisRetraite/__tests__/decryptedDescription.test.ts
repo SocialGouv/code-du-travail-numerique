@@ -109,13 +109,11 @@ describe("Validation de l'aggregation des données", () => {
       idcc: 292,
       preavisRetraite: true,
       indemniteLicenciement: true,
-      indemniteLicenciementSansLegal: false,
     },
     {
       idcc: 321,
       preavisRetraite: false,
       indemniteLicenciement: true,
-      indemniteLicenciementSansLegal: false,
     },
   ];
 

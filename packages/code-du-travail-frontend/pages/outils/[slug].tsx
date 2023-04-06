@@ -1,5 +1,5 @@
 import * as Sentry from "@sentry/nextjs";
-import { SOURCES } from "@socialgouv/cdtn-sources";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { GetServerSideProps } from "next";
@@ -11,7 +11,7 @@ import { Feedback } from "../../src/common/Feedback";
 import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import {
   AgreementSearch,
@@ -111,7 +111,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   } = tool;
   let relatedItems = [];
   try {
-    const response = await fetch(`${API_URL}/items/${SOURCES.TOOLS}/${slug}`);
+    const response = await fetch(`${SITE_URL}/api/items/${SOURCES.TOOLS}/${slug}`);
     if (response.ok) {
       relatedItems = await response.json().then((data) => data.relatedItems);
     }

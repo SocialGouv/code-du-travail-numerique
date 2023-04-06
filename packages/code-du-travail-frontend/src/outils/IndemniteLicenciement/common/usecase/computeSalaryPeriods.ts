@@ -8,21 +8,25 @@ type Props = {
 };
 
 function computeSalaryPeriods({
-
   dateEntree,
   dateNotification,
 }: Props): string[] {
   const dEntree = parse(dateEntree);
   const dNotification = parse(dateNotification);
 
-  const nbMonths = Math.min(
-    differenceInMonths(dNotification, dEntree),
-    12
-  );
+  const nbMonths = Math.min(differenceInMonths(dNotification, dEntree), 12);
   return Array.from({ length: nbMonths }).map((_, index) => {
-    return format(subMonths(dNotification, index + 1), "MMMM yyyy", {
+    const notificationLessOneMonth = subMonths(dNotification, index + 1);
+    const formattedData = format(notificationLessOneMonth, "MMMM yyyy", {
       locale: frLocale,
     });
+    // HACK: sometimes the formattedData return an empty string
+    if (!formattedData?.trim()) {
+      return `${
+        notificationLessOneMonth.getMonth() + 1
+      }/${notificationLessOneMonth.getFullYear()}`;
+    }
+    return formattedData;
   });
 }
 

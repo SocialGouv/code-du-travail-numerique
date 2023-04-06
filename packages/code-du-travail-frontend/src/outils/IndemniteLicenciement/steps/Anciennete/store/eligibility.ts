@@ -1,4 +1,5 @@
 import {
+  getSupportedAgreement,
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
@@ -34,7 +35,7 @@ export const getErrorEligibility = (
   let requiredSeniorityAgreement = 0;
   if (agreement) {
     const factoryAgreement = new SeniorityFactory().create(
-      `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
+      getSupportedAgreement(agreement.num)
     );
     requiredSeniorityAgreement = factoryAgreement.computeRequiredSeniority({
       dateEntree: state.dateEntree,
@@ -53,6 +54,7 @@ export const getErrorEligibility = (
   );
   switch (agreement?.num) {
     case 3239:
+      requiredSeniorityInYear = requiredSeniorityAgreement;
       if (stateInfo.publicodesInformations[0].info === "'Assistant maternel'") {
         minimalSeniorityInMonth = 9;
         minimalSeniorityError =

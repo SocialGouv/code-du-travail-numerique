@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { SummaryItem } from "./SummaryItem";
-import { useStore } from "../../store";
+import { DossierLicenciementContext, useStore } from "../../store";
 import { useRouter } from "next/router";
 import { PreviousResponse } from "../../type";
 import { Button } from "@socialgouv/cdtn-ui";
+import { useContext } from "react";
 
 export const Summary = ({
   responses,
@@ -12,9 +13,10 @@ export const Summary = ({
   responses: PreviousResponse[];
   withLink: boolean;
 }) => {
-  const toolSlug = useStore((state) => state.toolSlug);
+  const store = useContext(DossierLicenciementContext);
+  const toolSlug = useStore(store, (state) => state.toolSlug);
   const router = useRouter();
-  const goTo = useStore((state) => state.goTo);
+  const goTo = useStore(store, (state) => state.goTo);
   const displayableResponses = responses.filter(({ text }) => !!text);
   return (
     <SummaryWrapper>

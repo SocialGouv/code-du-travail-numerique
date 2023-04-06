@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Suggestion accentuation is ignored 1`] = `
+[
+  "renseignements",
+  "retraite",
+  "repos",
+  "réintégration",
+  "déplacement régulier",
+]
+`;
+
+exports[`Suggestion ensure results are only returned when enough characters passed 1`] = `[]`;
+
+exports[`Suggestion fuzzy matching results are lower than exact matchs 1`] = `
+[
+  "contractuelle",
+  "composition",
+]
+`;
+
+exports[`Suggestion fuzzy matching works 1`] = `
+[
+  "retraite",
+]
+`;
+
+exports[`Suggestion should return a list of suggestion 1`] = `
+[
+  "renseignements",
+  "retraite",
+  "repos",
+  "réintégration",
+  "déplacement régulier",
+]
+`;
+
+exports[`Suggestion should return nothing 1`] = `[]`;

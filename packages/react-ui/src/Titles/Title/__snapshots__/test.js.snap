@@ -1,66 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Title /> renders a H2 title 1`] = `
-.c2 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 2.2rem;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-gswNZR bnttDR"
   >
     <h2
-      class="c1"
+      class="sc-hLBbgP dNVHJv"
     >
       <span
-        class="c2"
+        class="sc-bcXHqe ebNMxn"
       />
       Lorem Ipsum
     </h2>
@@ -69,66 +18,15 @@ exports[`<Title /> renders a H2 title 1`] = `
 `;
 
 exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the left) 1`] = `
-.c2 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: -10rem;
-  text-align: left;
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 10rem;
-  text-align: left;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin-bottom: 1rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 2.2rem;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-gswNZR hBEZdJ"
   >
     <h2
-      class="c1"
+      class="sc-hLBbgP gUFmAN"
     >
       <span
-        class="c2"
+        class="sc-bcXHqe ebNMxn"
       />
       Lorem Ipsum
     </h2>
@@ -137,42 +35,12 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
 `;
 
 exports[`<Title /> renders a unstriped H2 title 1`] = `
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 2.2rem;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-gswNZR bnttDR"
   >
     <h2
-      class="c1"
+      class="sc-hLBbgP fvFwrK"
     >
       Lorem Ipsum
     </h2>

@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import SeniorityStep from "./Step";
-import { usePreavisRetraiteStore } from "../../state";
+import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../../state";
 import { useForm } from "react-final-form";
 
 const RenderSeniorityStep = (): JSX.Element => {
+  const store = useContext(PreavisRetraiteContext);
   const { minYearCount, showAccurateSeniority, onChange } =
-    usePreavisRetraiteStore((state) => ({
+    usePreavisRetraiteStore(store, (state) => ({
       minYearCount: state.steps.seniority.minYearCount,
       showAccurateSeniority: state.steps.seniority.showAccurateSeniority,
       onChange: state.onSeniorityChange,

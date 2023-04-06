@@ -27,6 +27,7 @@ const initialState: AncienneteStoreData = {
   isStepValid: true,
   input: {
     absencePeriods: [],
+    motifs: [],
   },
   error: {},
 };
@@ -45,14 +46,18 @@ const createAncienneteStore: StoreSlice<
       const idcc = selectedAgreementIdcc
         ? getSupportedAgreement(selectedAgreementIdcc)
         : SupportedCcIndemniteLicenciement.default;
+      const motifs = new SeniorityFactory()
+        .create(idcc ?? SupportedCcIndemniteLicenciement.default)
+        .getMotifs();
       set(
         produce(
           (state: AncienneteStoreSlice & CommonInformationsStoreSlice) => {
             state.ancienneteData.input.absencePeriods = cleanAbsence(
               get().ancienneteData.input.absencePeriods,
               get(),
-              idcc
+              idcc ?? undefined
             );
+            state.ancienneteData.input.motifs = motifs;
           }
         )
       );
@@ -77,14 +82,30 @@ const createAncienneteStore: StoreSlice<
       applyGenericValidation(get, set, "absencePeriods", absence);
     },
     onChangeHasAbsenceProlonge: (value) => {
-      set(
-        produce((state: AncienneteStoreSlice) => {
-          state.ancienneteData.input.absencePeriods =
-            value === "non"
-              ? initialState.input.absencePeriods
-              : get().ancienneteData.input.absencePeriods;
-        })
-      );
+      if (value === "non") {
+        set(
+          produce((state: AncienneteStoreSlice) => {
+            state.ancienneteData.input.absencePeriods =
+              initialState.input.absencePeriods;
+          })
+        );
+      } else {
+        const selectedAgreementIdcc = get().agreementData.input.agreement?.num;
+        const idcc = selectedAgreementIdcc
+          ? getSupportedAgreement(selectedAgreementIdcc)
+          : SupportedCcIndemniteLicenciement.default;
+        const motifs = new SeniorityFactory()
+          .create(idcc ?? SupportedCcIndemniteLicenciement.default)
+          .getMotifs();
+
+        set(
+          produce((state: AncienneteStoreSlice) => {
+            state.ancienneteData.input.absencePeriods =
+              get().ancienneteData.input.absencePeriods;
+            state.ancienneteData.input.motifs = motifs;
+          })
+        );
+      }
       applyGenericValidation(get, set, "hasAbsenceProlonge", value);
     },
     onNextStep: () => {
@@ -172,14 +193,11 @@ const cleanAbsence = (
 ): Absence[] => {
   if (idcc) {
     // clean absence
-    const motifs = new SeniorityFactory()
-      .create(idcc)
-      .getMotifs();
+    const motifs = new SeniorityFactory().create(idcc).getMotifs();
     absencePeriods = absencePeriods.filter((absence) =>
       motifs.some((motif) => motif.key === absence.motif.key)
     );
   }
-
   return absencePeriods.map((absence) => {
     const dateRequired = absence.motif.startAt
       ? absence.motif.startAt(
@@ -188,14 +206,10 @@ const cleanAbsence = (
           )
         )
       : false;
-    if (!dateRequired) {
-      return {
-        ...absence,
-        startedAt: undefined,
-      };
-    } else {
-      return absence;
-    }
+    return {
+      ...absence,
+      startedAt: dateRequired ? absence.startedAt : undefined,
+    };
   });
 };
 

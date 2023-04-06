@@ -9,11 +9,11 @@ import Answer from "../../src/common/Answer";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import { Breadcrumb } from "cdtn-types";
+import { Breadcrumb } from "@socialgouv/cdtn-utils";
 import { handleError } from "../../src/lib/fetch-error";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 
-const fetchSheetMT = ({ slug }) => fetch(`${API_URL}/sheets-mt/${slug}`);
+const fetchSheetMT = ({ slug }) => fetch(`${SITE_URL}/api/sheets-mt/${slug}`);
 
 const buildAccordionSections = (sections) =>
   sections

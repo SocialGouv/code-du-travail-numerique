@@ -1,5 +1,5 @@
 import { formatIdcc } from "@socialgouv/modeles-social";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { Text } from "@socialgouv/cdtn-ui";
 import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
@@ -10,7 +10,7 @@ import Metas from "../../src/common/Metas";
 import Convention from "../../src/conventions/Convention";
 import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 
 interface Props {
   convention;
@@ -81,7 +81,7 @@ function ConventionCollective(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const responseContainer = await fetch(`${API_URL}/conventions/${query.slug}`);
+  const responseContainer = await fetch(`${SITE_URL}/api/agreements/${query.slug}`);
   if (!responseContainer.ok) {
     return handleError(responseContainer);
   }

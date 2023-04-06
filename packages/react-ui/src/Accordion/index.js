@@ -1,4 +1,4 @@
-import { AccordionItemHeading } from "@maxgfr/react-accessible-accordion";
+import { AccordionItemHeading } from "@socialgouv/react-accessible-accordion";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";

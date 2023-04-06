@@ -15,8 +15,8 @@ import { handleError } from "../../src/lib/fetch-error";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import styled from "styled-components";
 import Link from "next/link";
-import { SOURCES } from "@socialgouv/cdtn-sources";
-import { API_URL } from "../../src/config";
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import { SITE_URL } from "../../src/config";
 
 function Page({ ccs }) {
   return (
@@ -72,7 +72,7 @@ function Page({ ccs }) {
 export default Page;
 
 export const getServerSideProps = async () => {
-  const response = await fetch(`${API_URL}/conventions/with-contributions`);
+  const response = await fetch(`${SITE_URL}/api/agreements`);
   if (!response.ok) {
     return handleError(response);
   }

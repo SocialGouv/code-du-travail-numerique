@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { RadioQuestion } from "../../../Components";
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 
 export default function Agreement1527() {
+  const store = useContext(IndemniteLicenciementContext);
   const { hasCommission, onChangeHasCommission, errorHasCommission } =
-    useIndemniteLicenciementStore((state) => ({
+    useIndemniteLicenciementStore(store, (state) => ({
       hasCommission: state.agreement1527Data.input.hasCommission,
       onChangeHasCommission: state.agreement1527Function.onChangeHasCommission,
       errorHasCommission: state.agreement1527Data.error.errorHasCommission,

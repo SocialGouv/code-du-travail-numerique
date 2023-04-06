@@ -29,18 +29,18 @@ test.each`
 );
 
 test.each`
-  seniority | category          | expectedNotice | expectedUnit | expectedNotif
-  ${1}      | ${"A, B, C ou D"} | ${1}           | ${"semaine"} | ${"1 semaine de date à date"}
-  ${6}      | ${"A, B, C ou D"} | ${1}           | ${"mois"}    | ${"1 mois de date à date"}
-  ${25}     | ${"A, B, C ou D"} | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
-  ${1}      | ${"E ou F"}       | ${1}           | ${"mois"}    | ${"1 mois de date à date"}
-  ${6}      | ${"E ou F"}       | ${1}           | ${"mois"}    | ${"1 mois de date à date"}
-  ${24}     | ${"E ou F"}       | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
-  ${25}     | ${"E ou F"}       | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
-  ${1}      | ${"G, H ou I"}    | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
-  ${6}      | ${"G, H ou I"}    | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
-  ${24}     | ${"G, H ou I"}    | ${4}           | ${"mois"}    | ${"4 mois de date à date"}
-  ${25}     | ${"G, H ou I"}    | ${4}           | ${"mois"}    | ${"4 mois de date à date"}
+  seniority | category                          | expectedNotice | expectedUnit | expectedNotif
+  ${1}      | ${"Employé"}                      | ${1}           | ${"semaine"} | ${"1 semaine de date à date"}
+  ${6}      | ${"Employé"}                      | ${1}           | ${"mois"}    | ${"1 mois de date à date"}
+  ${25}     | ${"Employé"}                      | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
+  ${1}      | ${"Technicien-agent de maîtrise"} | ${1}           | ${"mois"}    | ${"1 mois de date à date"}
+  ${6}      | ${"Technicien-agent de maîtrise"} | ${1}           | ${"mois"}    | ${"1 mois de date à date"}
+  ${24}     | ${"Technicien-agent de maîtrise"} | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
+  ${25}     | ${"Technicien-agent de maîtrise"} | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
+  ${1}      | ${"Cadre"}                        | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
+  ${6}      | ${"Cadre"}                        | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
+  ${24}     | ${"Cadre"}                        | ${4}           | ${"mois"}    | ${"4 mois de date à date"}
+  ${25}     | ${"Cadre"}                        | ${4}           | ${"mois"}    | ${"4 mois de date à date"}
 `(
   "Pour un employé de category $category possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedNotice mois",
   ({ seniority, category, expectedNotice, expectedUnit, expectedNotif }) => {
@@ -65,13 +65,13 @@ test.each`
   }
 );
 
-test("Pour un employé de category A, B, C ou D possédant 24 mois d'ancienneté, son préavis de mise à la retraite devrait être 2 mois mais il ne doit pas avoir de notif", () => {
+test("Pour un employé de category Employé possédant 24 mois d'ancienneté, son préavis de mise à la retraite devrait être 2 mois mais il ne doit pas avoir de notif", () => {
   const { result, missingArgs } = engine.setSituation(
     {
       "contrat salarié . ancienneté": "24",
       "contrat salarié . convention collective": "'IDCC2941'",
       "contrat salarié . convention collective . bad . catégorie professionnelle":
-        "'A, B, C ou D'",
+        "'Employé'",
       "contrat salarié . mise à la retraite": "oui",
       "contrat salarié . travailleur handicapé": "non",
     },

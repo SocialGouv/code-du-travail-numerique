@@ -1,4 +1,4 @@
-import { addDays, differenceInMonths, parse } from "date-fns";
+import { addDays, differenceInMonths } from "date-fns";
 
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
@@ -11,7 +11,11 @@ import type {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
-import { accumulateAbsenceByYear, splitBySeniorityYear } from "../../common";
+import {
+  accumulateAbsenceByYear,
+  parseDate,
+  splitBySeniorityYear,
+} from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
 
 export class Seniority2941
@@ -42,8 +46,8 @@ export class Seniority2941
     to: string,
     absences: Absence[]
   ): SeniorityResult {
-    const dEntree = parse(from, "dd/MM/yyyy", new Date());
-    const dSortie = addDays(parse(to, "dd/MM/yyyy", new Date()), 1);
+    const dEntree = parseDate(from);
+    const dSortie = addDays(parseDate(to), 1);
 
     const totalAbsenceWithoutProAbsence = absences.reduce((total, item) => {
       if (item.durationInMonth === undefined) {

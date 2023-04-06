@@ -1,57 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Grid /> renders 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c1 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c1 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c2 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c1 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-bcXHqe dJWvgo"
   >
     <div
-      class="c1"
+      class="sc-gswNZR hlnUEo"
     >
       <svg
         aria-hidden="true"
@@ -72,7 +27,7 @@ exports[`<Grid /> renders 1`] = `
       </svg>
     </div>
     <div
-      class="c2"
+      class="sc-dkrFOg bwZWZw"
     >
       Here is some content
     </div>
