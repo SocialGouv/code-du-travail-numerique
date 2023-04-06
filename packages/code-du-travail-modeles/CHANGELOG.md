@@ -3,6 +3,73 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.96.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.95.0...v4.96.0) (2023-03-31)
+
+### Features
+
+- **indemnite-licenciement:** ajout de la CC 1266 ([#5041](https://github.com/SocialGouv/code-du-travail-numerique/issues/5041)) ([8982ee0](https://github.com/SocialGouv/code-du-travail-numerique/commit/8982ee06b7b541de5dbdfb2c20e11318c03b6a61))
+
+# [4.95.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.94.0...v4.95.0) (2023-03-31)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.94.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.93.1...v4.94.0) (2023-03-30)
+
+### Bug Fixes
+
+- **indemnite de licenciement:** 1596 & 1597 remove "absence pour maladie non professionnelle" and "arrêt maladie lié à un accident de trajet" from ancienneté ([#5032](https://github.com/SocialGouv/code-du-travail-numerique/issues/5032)) ([19bd5e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/19bd5e2c1a1c3d2083b7ca7ba664c6920a3d4859))
+- **indemnite-licenciement:** refacto au niveau de l'ancienneté requise ([#5012](https://github.com/SocialGouv/code-du-travail-numerique/issues/5012)) ([c151f53](https://github.com/SocialGouv/code-du-travail-numerique/commit/c151f533a8f0aeb46f5169472ffb3a2282b71c9b))
+- **preavis démission:** add ref juridique to résultat ([#5033](https://github.com/SocialGouv/code-du-travail-numerique/issues/5033)) ([2c8c803](https://github.com/SocialGouv/code-du-travail-numerique/commit/2c8c8037a83e067c47b13db9d7366281012ff763))
+
+### Features
+
+- ajout de la notif cc 2511 ([#5053](https://github.com/SocialGouv/code-du-travail-numerique/issues/5053)) ([268eb15](https://github.com/SocialGouv/code-du-travail-numerique/commit/268eb15653a277b5798ebbf9cbb20b3bfc91b75e))
+- implement cc 1505 ([#4994](https://github.com/SocialGouv/code-du-travail-numerique/issues/4994)) ([f9d9b2a](https://github.com/SocialGouv/code-du-travail-numerique/commit/f9d9b2a97e056b2cf99cbf47a77804ce213a0448))
+- **indemnite-licenciement:** add supported cc ([#5058](https://github.com/SocialGouv/code-du-travail-numerique/issues/5058)) ([3242e2f](https://github.com/SocialGouv/code-du-travail-numerique/commit/3242e2f521b52cfc39410e453f74127ffb8ed131))
+- **indemnite-licenciement:** ajout de la cc 675 ([#4980](https://github.com/SocialGouv/code-du-travail-numerique/issues/4980))Co-authored-by: Martial Maillot <martial.maillot@gmail.com> ([c34adbe](https://github.com/SocialGouv/code-du-travail-numerique/commit/c34adbe4265a4427f54cdc8c69ec8271f5135cf3))
+
+## [4.93.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.93.0...v4.93.1) (2023-03-20)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.93.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.92.1...v4.93.0) (2023-03-20)
+
+### Features
+
+- **indemnite-licenciement:** ajout de la cc 1147 ([#5008](https://github.com/SocialGouv/code-du-travail-numerique/issues/5008)) ([b395c29](https://github.com/SocialGouv/code-du-travail-numerique/commit/b395c2927970b82b4dde942b42a2ddc6e21382a9))
+
+## [4.92.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.92.0...v4.92.1) (2023-03-14)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.92.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.91.1...v4.92.0) (2023-03-14)
+
+### Bug Fixes
+
+- **convention-collective:** CC 2941 changement nom des categories ([#4999](https://github.com/SocialGouv/code-du-travail-numerique/issues/4999)) ([02e4c5b](https://github.com/SocialGouv/code-du-travail-numerique/commit/02e4c5b2b068e539e9511c53d8ad0c4eb378ce09))
+- **indemnité de licenciement:** remove unused code ([#4968](https://github.com/SocialGouv/code-du-travail-numerique/issues/4968)) ([3a096fe](https://github.com/SocialGouv/code-du-travail-numerique/commit/3a096fe0aba181cceb66cd5cc3873e54660f7542))
+- **indemnite-licenciement:** correctif des retours de la selection des CCs non traitées ([#4983](https://github.com/SocialGouv/code-du-travail-numerique/issues/4983)) ([d9e9c18](https://github.com/SocialGouv/code-du-travail-numerique/commit/d9e9c186541ad8176d4b0aa6d2542d749ab0a080))
+- **indemnite-licenciement:** retours de la CC 3239 ([#4984](https://github.com/SocialGouv/code-du-travail-numerique/issues/4984)) ([8b65895](https://github.com/SocialGouv/code-du-travail-numerique/commit/8b65895916df4733c179e009f8b3fb4e2bcbe73e))
+
+### Features
+
+- feature flag pour les nouvelles CC ([#4979](https://github.com/SocialGouv/code-du-travail-numerique/issues/4979)) ([9810a9d](https://github.com/SocialGouv/code-du-travail-numerique/commit/9810a9d38e401fa82de9ab95c3e09d26d6246dfd))
+- **indemnité de licenciement:** ajout de la cc 1996 ([#4966](https://github.com/SocialGouv/code-du-travail-numerique/issues/4966))Co-authored-by: Martial Maillot <martial.maillot@gmail.com> ([9aad948](https://github.com/SocialGouv/code-du-travail-numerique/commit/9aad948ae0eb9c7947cbe64d4bd16b078b07410e))
+
+## [4.91.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.91.0...v4.91.1) (2023-02-17)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.91.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.90.1...v4.91.0) (2023-02-17)
+
+### Bug Fixes
+
+- **dep:** retours next 13 ([#4944](https://github.com/SocialGouv/code-du-travail-numerique/issues/4944)) ([b53caa8](https://github.com/SocialGouv/code-du-travail-numerique/commit/b53caa83270f7d18d6d47c461f57bf7a64fae26c))
+
+### Features
+
+- **dependencies:** upgrade next to 13 + react to 18 ([#4894](https://github.com/SocialGouv/code-du-travail-numerique/issues/4894)) ([380ea32](https://github.com/SocialGouv/code-du-travail-numerique/commit/380ea324c829aaa6214ecc65b8605a62032e8d80))
+
 ## [4.90.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.90.0...v4.90.1) (2023-02-06)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

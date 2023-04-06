@@ -1,9 +1,9 @@
-import { BlockDisplayMode } from "cdtn-types";
-import { theme } from "@socialgouv/cdtn-ui";
+import { BlockDisplayMode } from "@socialgouv/cdtn-utils";
+import { icons, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
+import { ListLink } from "../../search/SearchResults/Results";
 import useWindowDimensions from "../../common/WindowDimension";
-import { ContentItem } from "./ContentItem";
 
 export const ContentList = ({ block, key }) => {
   let forceBlockDisplayMode;
@@ -17,11 +17,15 @@ export const ContentList = ({ block, key }) => {
     <>
       <ContentItemList square={displayMode === BlockDisplayMode.square}>
         {contents?.map((item, ContentIndex) => (
-          <ContentItem
+          <ListLink
+            item={{
+              ...item,
+              icon: icons[item?.icon],
+            }}
             key={`${key}-${ContentIndex}`}
-            item={item}
+            disableAnalytics
             centerTitle={displayMode === BlockDisplayMode.square}
-          ></ContentItem>
+          ></ListLink>
         ))}
       </ContentItemList>
     </>
@@ -29,19 +33,24 @@ export const ContentList = ({ block, key }) => {
 };
 
 const ContentItemList = styled.div`
-  ${({ square }) =>
-    square &&
-    `
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      & > div {
-        min-height: 341px;
-        margin: 12px auto;
-      }
-      p,
-      button {
-        width: 100%;
-        text-align: center;
-      }
-  `}
+  display: grid;
+  grid-template-columns: ${({ square }) =>
+    square ? "repeat(2, 1fr)" : "repeat(1, 1fr)"};
+  margin: ${theme.spacings.medium};
+  column-gap: ${theme.spacings.large};
+  row-gap: ${theme.spacings.large};
+
+  & > div {
+    ${({ square }) => square && "min-height: 341px;"};
+    padding: ${theme.spacings.large} ${theme.spacings.medium};
+    height: 100%;
+  }
+
+  p,
+  a,
+  button {
+    width: 100%;
+    text-align: ${({ square }) => (square ? "center" : "left")};
+    justify-content: ${({ square }) => (square ? "center" : "left")};
+  }
 `;

@@ -4,7 +4,6 @@ export type AgreementInfo = {
   idcc: number;
   preavisRetraite: boolean;
   indemniteLicenciement: boolean;
-  indemniteLicenciementSansLegal: boolean;
 };
 
 export const supportedCcn: AgreementInfo[] = ccnSupported;

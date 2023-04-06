@@ -1,42 +1,38 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
-import { useStore } from "../../store";
+import { DossierLicenciementContext, useStore } from "../../store";
 import { Response } from "./Response";
-import { Tooltip } from "../../../common/Tooltip";
 import { ShowInfo } from "./ShowInfo";
+import { Fieldset, Legend, Text, Paragraph } from "@socialgouv/cdtn-ui";
+import { InfoBulle } from "../../../outils/common/InfoBulle";
 import { trackClickHelp } from "../../tracking";
-import { Text } from "@socialgouv/cdtn-ui";
+import React, { useContext } from "react";
 
-export const Question = () => {
-  const currentQuestion = useStore((state) => state.currentQuestion);
-  const lastResponse = useStore((state) => state.lastResponse);
-  const [openedTooltip, setOpenedTooltip] = useState(false);
-  useEffect(() => {
-    setOpenedTooltip(false);
-  }, [currentQuestion]);
+type QuestionProps = {
+  widgetMode: boolean;
+};
+
+export const Question = ({ widgetMode }: QuestionProps) => {
+  const store = useContext(DossierLicenciementContext);
+  const currentQuestion = useStore(store, (state) => state.currentQuestion);
+  const lastResponse = useStore(store, (state) => state.lastResponse);
   return lastResponse?.slug ? (
-    <ShowInfo slug={lastResponse.slug}></ShowInfo>
+    <ShowInfo slug={lastResponse.slug} widgetMode={widgetMode}></ShowInfo>
   ) : (
-    <div>
-      <QuestionHeaderWrapper>
-        <Text fontWeight="600" fontSize="default">
-          {currentQuestion?.text}
-        </Text>
+    <Fieldset>
+      <Legend>
+        <Text fontWeight="600">{currentQuestion?.text}</Text>
         {currentQuestion?.info && (
-          <Tooltip
-            onChange={(opened) => {
-              setOpenedTooltip(opened);
-              if (opened) {
-                trackClickHelp(currentQuestion.trackingName);
-              }
+          <StyledInfoBulle
+            title={"Plus d'informations"}
+            dataTestid={`Tooltip-${currentQuestion?.text}`}
+            onVisibilityChange={() => {
+              trackClickHelp(currentQuestion.trackingName);
             }}
-            data-testid={`Tooltip-${currentQuestion?.text}`}
-          />
+          >
+            {currentQuestion.info}
+          </StyledInfoBulle>
         )}
-      </QuestionHeaderWrapper>
-      {openedTooltip && (
-        <InformationWrapper>{currentQuestion?.info}</InformationWrapper>
-      )}
+      </Legend>
 
       {currentQuestion?.responses.map((response, index: number) => (
         <Response
@@ -46,25 +42,15 @@ export const Question = () => {
         ></Response>
       ))}
       <Description>{currentQuestion?.description}</Description>
-    </div>
+    </Fieldset>
   );
 };
 
-const QuestionHeaderWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin: 0 0 11px;
+const StyledInfoBulle = styled(InfoBulle)`
+  padding: 0;
 `;
 
 const Description = styled.i`
   display: block;
   margin-top: 7px;
-`;
-
-const InformationWrapper = styled.div`
-  background: #f2f5fa;
-  border-radius: 6px;
-  padding: 13px 20px;
-  font-size: 14px;
-  margin: 11px 5px;
 `;

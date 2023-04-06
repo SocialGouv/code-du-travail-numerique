@@ -1,9 +1,10 @@
-import React from "react";
-import { usePreavisRetraiteStore } from "../../state";
+import React, { useContext } from "react";
+import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../../state";
 import OriginStep from "./Step";
 
 function RenderOriginStep(): JSX.Element {
-  const { showWarning, onChange } = usePreavisRetraiteStore((state) => ({
+  const store = useContext(PreavisRetraiteContext);
+  const { showWarning, onChange } = usePreavisRetraiteStore(store, (state) => ({
     showWarning: state.steps.origin.showWarning,
     onChange: state.onOriginChange,
   }));

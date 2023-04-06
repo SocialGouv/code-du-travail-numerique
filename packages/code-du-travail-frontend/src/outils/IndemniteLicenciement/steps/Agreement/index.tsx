@@ -1,9 +1,14 @@
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 import CommonAgreementStep from "../../../CommonSteps/Agreement";
 import { getSupportedCcIndemniteLicenciement } from "../../common";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import { useContext } from "react";
 
 const AgreementStep = (): JSX.Element => {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     error,
     onRouteChange,
@@ -14,7 +19,7 @@ const AgreementStep = (): JSX.Element => {
     agreement,
     onAgreementSearch,
     onInitAgreementPage,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     error: state.agreementData.error,
     onRouteChange: state.agreementFunction.onRouteChange,
     route: state.agreementData.input.route,

@@ -1,15 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Text /> renders text 1`] = `
-.c0 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
 <div>
   <span
-    class="c0"
+    class="sc-bcXHqe gELUsL"
   >
     A simple text
   </span>
@@ -17,15 +11,9 @@ exports[`<Text /> renders text 1`] = `
 `;
 
 exports[`<Text /> renders text with fontSize 1`] = `
-.c0 {
-  color: #3e486e;
-  font-size: 3.2rem;
-  font-weight: 400;
-}
-
 <div>
   <span
-    class="c0"
+    class="sc-bcXHqe bTiWZp"
   >
     A large text
   </span>
@@ -33,15 +21,9 @@ exports[`<Text /> renders text with fontSize 1`] = `
 `;
 
 exports[`<Text /> renders text with fontWeight 1`] = `
-.c0 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
 <div>
   <span
-    class="c0"
+    class="sc-bcXHqe jOlIaU"
   >
     A bold text
   </span>
@@ -49,15 +31,9 @@ exports[`<Text /> renders text with fontWeight 1`] = `
 `;
 
 exports[`<Text /> renders text with variant 1`] = `
-.c0 {
-  color: #f66663;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
 <div>
   <span
-    class="c0"
+    class="sc-bcXHqe gTZfXn"
   >
     A colored text
   </span>

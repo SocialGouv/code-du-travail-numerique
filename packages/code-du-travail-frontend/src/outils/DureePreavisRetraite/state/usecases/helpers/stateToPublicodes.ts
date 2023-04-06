@@ -1,4 +1,5 @@
 import { PreavisRetraiteFormState } from "../../../form";
+import { formatIdcc } from "@socialgouv/modeles-social";
 
 export const stateToPublicode = (
   values: PreavisRetraiteFormState
@@ -6,9 +7,9 @@ export const stateToPublicode = (
   const { infos, origin, ccn, seniority } = values;
   const agreement: Record<string, string> = ccn?.selected?.num
     ? {
-        "contrat salarié - convention collective": `'IDCC${ccn.selected.num
-          .toString()
-          .padStart(4, "0")}'`,
+        "contrat salarié - convention collective": `'IDCC${formatIdcc(
+          ccn.selected.num
+        )}'`,
       }
     : {};
   const senioritySituation: Record<string, string> = seniority?.value

@@ -5,12 +5,12 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Contribution from "../../src/contributions/Contribution";
 import { Layout } from "../../src/layout/Layout";
-import { Breadcrumb } from "cdtn-types";
+import { Breadcrumb } from "@socialgouv/cdtn-utils";
 import { handleError } from "../../src/lib/fetch-error";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 
 const fetchQuestion = ({ slug }) =>
-  fetch(`${API_URL}/items/contributions/${slug}`);
+  fetch(`${SITE_URL}/api/items/contributions/${slug}`);
 
 interface Props {
   breadcrumbs: Breadcrumb[];
@@ -85,7 +85,7 @@ export const getServerSideProps = async ({ query }) => {
 
   const contentUrl = extractMdxContentUrl(markdown);
   if (contentUrl) {
-    const fetchContent = await fetch(`${API_URL}/items?url=${contentUrl}`);
+    const fetchContent = await fetch(`${SITE_URL}/api/items?url=${contentUrl}`);
     const [content] = await fetchContent.json();
     return {
       props: { relatedItems: data.relatedItems, ...data._source, content },

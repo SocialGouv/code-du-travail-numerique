@@ -16,12 +16,12 @@ import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib";
-import { Breadcrumb } from "cdtn-types";
+import { Breadcrumb } from "@socialgouv/cdtn-utils";
 import { handleError } from "../../src/lib/fetch-error";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 
 const fetchCourrier = ({ slug }) =>
-  fetch(`${API_URL}/items/modeles_de_courriers/${slug}`);
+  fetch(`${SITE_URL}/api/items/modeles_de_courriers/${slug}`);
 
 interface Props {
   breadcrumbs: Breadcrumb[];
@@ -54,9 +54,8 @@ function ModeleCourrier(props: Props): JSX.Element {
   const [filename] = fileUrl.match(/[^/]+$/);
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
   const filesizeFormated = Math.round((filesize / 1000) * 100) / 100;
-  const category = `Modèle ${
-    type !== "fichier" ? `de ${type}` : "à télécharger"
-  }`;
+  const category = `Modèle ${type !== "fichier" ? `de ${type}` : "à télécharger"
+    }`;
   return (
     <Layout>
       <Metas

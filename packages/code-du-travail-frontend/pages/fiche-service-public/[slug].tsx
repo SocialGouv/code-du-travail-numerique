@@ -6,12 +6,12 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
-import { Breadcrumb } from "cdtn-types";
+import { Breadcrumb } from "@socialgouv/cdtn-utils";
 import { handleError } from "../../src/lib/fetch-error";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 
 const fetchFiche = ({ slug }) =>
-  fetch(`${API_URL}/items/fiches_service_public/${slug}`);
+  fetch(`${SITE_URL}/api/items/fiches_service_public/${slug}`);
 
 interface Props {
   breadcrumbs: Breadcrumb[];

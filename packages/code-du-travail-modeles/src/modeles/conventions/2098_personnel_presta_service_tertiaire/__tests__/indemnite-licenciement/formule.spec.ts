@@ -19,7 +19,7 @@ describe("Formule de l'indemnité de licenciement - CC 2098", () => {
           "contrat salarié . convention collective": "'IDCC2098'",
           "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
             "'Oui'",
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -55,7 +55,7 @@ describe("Formule de l'indemnité de licenciement - CC 2098", () => {
             "'Non-cadres'",
           "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
             "'Non'",
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -99,7 +99,7 @@ describe("Formule de l'indemnité de licenciement - CC 2098", () => {
             "'Cadres'",
           "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
             "'Non'",
-          "contrat salarié . indemnité de licenciement": "oui",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":

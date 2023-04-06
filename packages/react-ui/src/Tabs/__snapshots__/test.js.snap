@@ -1,217 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tabs /> renders 1`] = `
-.c1 {
-  position: relative;
-  overflow: hidden;
-}
-
-.c1:before,
-.c1:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: block;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c1:before {
-  left: -2rem;
-}
-
-.c1:after {
-  right: -2rem;
-}
-
-.c3 {
-  overflow-x: auto;
-}
-
-.c7 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
-.c0 {
-  margin-bottom: 3.2rem;
-}
-
-.c2 {
-  margin-right: 0.4rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  max-width: 100%;
-  margin: 0;
-  padding: 0 0 0 0;
-  overflow: visible;
-  list-style-type: none;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  max-height: 11rem;
-  margin-left: 0.4rem;
-  padding: 1rem 1.6rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  background-color: #fff;
-  border: 1px solid #bbcadf;
-  border-bottom: 1px solid transparent;
-  border-radius: 0.6rem 0.6rem 0 0;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-transition: opacity 250ms linear;
-  transition: opacity 250ms linear;
-}
-
-.c5[aria-selected="false"]:hover {
-  opacity: 0.7;
-}
-
-.c5[aria-selected="true"] {
-  color: #fff;
-  background-color: #7994d4;
-}
-
-.c6 {
-  color: #3e486e;
-  background-color: #fff;
-}
-
-.c6.react-tabs__tab-panel--selected {
-  padding: 2.4rem;
-  border: 1px solid #bbcadf;
-  border-radius: 0.6rem;
-}
-
-.c8 > *:first-child {
-  margin-top: 0;
-}
-
-.c8 > *:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width:600px) {
-  .c1 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c1:before,
-  .c1:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c4 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c5 {
-    margin: 0.4rem;
-    border-bottom: 1px solid #bbcadf;
-    border-radius: 0.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.6rem;
-    max-width: 150px;
-    -webkit-flex: none !important;
-    -ms-flex: none !important;
-    flex: none !important;
-  }
-}
-
-@media (max-width:980px) {
-  .c6.react-tabs__tab-panel--selected {
-    margin-top: 0.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6.react-tabs__tab-panel--selected {
-    padding: 1rem;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-hLBbgP hxkLAR"
     data-rttabs="true"
   >
     <div
-      class="c1 c2"
+      class="sc-bcXHqe keQCoM sc-eDvSVe fDEJpY"
     >
       <div
-        class="c3"
+        class="sc-gswNZR gCRuQd"
       >
         <ul
-          class="c4"
+          class="sc-jSUZER uEzzv"
           role="tablist"
         >
           <li
             aria-controls="react-tabs-1"
             aria-disabled="false"
             aria-selected="true"
-            class="c5 react-tabs__tab--selected"
+            class="sc-gKPRtg ljSGEH react-tabs__tab--selected"
             data-rttab="true"
             data-testid="undefined-0"
             id="react-tabs-0"
@@ -224,7 +33,7 @@ exports[`<Tabs /> renders 1`] = `
             aria-controls="react-tabs-3"
             aria-disabled="false"
             aria-selected="false"
-            class="c5"
+            class="sc-gKPRtg ljSGEH"
             data-rttab="true"
             data-testid="undefined-1"
             id="react-tabs-2"
@@ -237,24 +46,24 @@ exports[`<Tabs /> renders 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-0"
-      class="c6 react-tabs__tab-panel--selected"
+      class="sc-iBYQkv fWrKRq react-tabs__tab-panel--selected"
       id="react-tabs-1"
       role="tabpanel"
     >
       <div
-        class="c7"
+        class="sc-dkrFOg iKqWrh"
       >
         Tab 1
       </div>
       <div
-        class="c8"
+        class="sc-ftTHYK cTYLik"
       >
         This panel can contain nodes
       </div>
     </div>
     <div
       aria-labelledby="react-tabs-2"
-      class="c6"
+      class="sc-iBYQkv fWrKRq"
       id="react-tabs-3"
       role="tabpanel"
     />

@@ -7,7 +7,6 @@ import {
   theme,
 } from "@socialgouv/cdtn-ui";
 import { RadioQuestion } from "../../Components";
-import { Route } from "./store";
 import { AgreementSearch, EnterpriseSearch } from "./components";
 import { Agreement } from "../../../conventions/Search/api/type";
 import {
@@ -21,10 +20,11 @@ import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
 import { AgreementSearchValue } from "./store";
 import { SectionTitle } from "../../common/stepStyles";
 import styled from "styled-components";
+import { AgreementRoute } from "../../common/type/WizardType";
 
 type Props = {
-  selectedRoute?: Route;
-  onRouteChange: (Route) => void;
+  selectedRoute?: AgreementRoute;
+  onRouteChange: (AgreementRoute) => void;
   onInitAgreementPage: () => void;
   supportedAgreements: AgreementSupportInfo[];
   selectedEnterprise?: Enterprise;
@@ -65,19 +65,19 @@ function AgreementStep({
         questions={[
           {
             label: "Je sais quelle est ma convention collective (je la saisis)",
-            value: Route.agreement,
+            value: "agreement" as AgreementRoute,
             id: "route-agreement",
           },
           {
             label:
               "Je ne sais pas quelle est ma convention collective (je la recherche)",
-            value: Route.enterprise,
+            value: "enterprise" as AgreementRoute,
             id: "route-enterprise",
           },
           {
             label:
               "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)",
-            value: Route.none,
+            value: "not-selected" as AgreementRoute,
             id: "route-none",
           },
         ]}
@@ -96,9 +96,9 @@ function AgreementStep({
           ),
         }}
       />
-      {selectedRoute === Route.none && <ShowAlert route="not-selected" />}
+      {selectedRoute === "not-selected" && <ShowAlert route="not-selected" />}
 
-      {selectedRoute === Route.agreement && (
+      {selectedRoute === "agreement" && (
         <>
           <AgreementSearch
             supportedAgreements={supportedAgreements}
@@ -113,7 +113,7 @@ function AgreementStep({
           {error?.agreement && <InlineError>{error.agreement}</InlineError>}
         </>
       )}
-      {selectedRoute === Route.enterprise && (
+      {selectedRoute === "enterprise" && (
         <>
           <EnterpriseSearch
             supportedAgreements={supportedAgreements}
@@ -146,15 +146,15 @@ function AgreementStep({
                       selectedAgreement?.num === 3239
                         ? null
                         : {
-                            url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
-                            id: "KALICONT000044594539",
-                            num: 3239,
-                            shortTitle:
-                              "Particuliers employeurs et emploi à domicile",
-                            slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
-                            title:
-                              "Particuliers employeurs et emploi à domicile",
-                          }
+                          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+                          id: "KALICONT000044594539",
+                          num: 3239,
+                          shortTitle:
+                            "Particuliers employeurs et emploi à domicile",
+                          slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
+                          title:
+                            "Particuliers employeurs et emploi à domicile",
+                        }
                     );
                   }}
                   checked={selectedAgreement?.num === 3239}

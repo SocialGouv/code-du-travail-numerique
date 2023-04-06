@@ -19,10 +19,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     .
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="sc-khsqcC jyDCrc"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -41,14 +41,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="sc-AHaJN dhcrLx"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
         class="sc-iJbNxu dKlwtU"
@@ -392,10 +394,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="sc-gGvHcT hSOEAU"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -415,10 +417,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-cOxWqc fjmwyW sc-dkKxlM JtcaM"
+          class="sc-GKYbw cUdVqX sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -462,10 +464,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     .
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="sc-khsqcC jyDCrc"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -484,14 +486,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="sc-AHaJN dhcrLx"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
         class="sc-iJbNxu dKlwtU"
@@ -825,10 +829,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="sc-gGvHcT hSOEAU"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -848,10 +852,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-cOxWqc fjmwyW sc-dkKxlM JtcaM"
+          class="sc-GKYbw cUdVqX sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -898,10 +902,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     .
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="sc-khsqcC jyDCrc"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -920,14 +924,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="sc-AHaJN dhcrLx"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
         class="sc-iJbNxu dKlwtU"
@@ -1271,10 +1277,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="sc-gGvHcT hSOEAU"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -1294,10 +1300,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-cOxWqc fjmwyW sc-dkKxlM JtcaM"
+          class="sc-GKYbw cUdVqX sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1344,10 +1350,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     .
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="sc-khsqcC jyDCrc"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -1366,14 +1372,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="sc-AHaJN dhcrLx"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
         class="sc-iJbNxu dKlwtU"
@@ -1707,10 +1715,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="sc-gGvHcT hSOEAU"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -1730,10 +1738,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-cOxWqc fjmwyW sc-dkKxlM JtcaM"
+          class="sc-GKYbw cUdVqX sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1780,10 +1788,10 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     .
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="sc-khsqcC jyDCrc"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -1802,14 +1810,16 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="sc-AHaJN dhcrLx"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
         class="sc-iJbNxu dKlwtU"
@@ -2143,10 +2153,10 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="sc-gGvHcT hSOEAU"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="sc-ckEbSK fTbCHa"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -2166,10 +2176,10 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbYMXx dVfpRL"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="sc-cOxWqc fjmwyW sc-dkKxlM JtcaM"
+          class="sc-GKYbw cUdVqX sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>

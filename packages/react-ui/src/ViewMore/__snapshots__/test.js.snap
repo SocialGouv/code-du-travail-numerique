@@ -1,135 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ViewMore /> renders with an button 1`] = `
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c2:link,
-.c2:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c2:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c2[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c0 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.c3 {
-  margin-top: 2.4rem;
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c2 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    -webkit-box-pack: stretch;
-    -webkit-justify-content: stretch;
-    -ms-flex-pack: stretch;
-    justify-content: stretch;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-  }
-}
-
 <div>
   <ul
-    class="c0"
+    class="sc-gswNZR jGPPhy"
   >
     <li>
       <a
@@ -182,10 +56,10 @@ exports[`<ViewMore /> renders with an button 1`] = `
     </li>
   </ul>
   <div
-    class="c1"
+    class="sc-dkrFOg cGyozt"
   >
     <button
-      class="c2 c3"
+      class="sc-bcXHqe iRwlKl sc-hLBbgP bmBDhR"
       type="button"
     >
       Voir plus

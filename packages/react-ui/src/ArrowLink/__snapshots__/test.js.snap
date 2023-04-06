@@ -1,70 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ArrowLink /> renders an arrow on the left 1`] = `
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c2 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  width: auto;
-  margin: 0;
-}
-
-.c4 {
-  -webkit-flex: 0 0 2.8rem;
-  -ms-flex: 0 0 2.8rem;
-  flex: 0 0 2.8rem;
-  width: 2.8rem;
-  height: 2.1rem;
-  margin: 0 0.4rem 0 1rem;
-  padding-top: 0.6rem;
-  color: #f66663;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c0:hover .c3 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-@media (max-width:600px) {
-  .c4 {
-    -webkit-flex: 0 0 2rem;
-    -ms-flex: 0 0 2rem;
-    flex: 0 0 2rem;
-    width: 2rem;
-    height: 1.7rem;
-    margin: 0 0.4rem 0 0.4rem;
-  }
-}
-
 <div>
   <a
-    class="c0 c1"
+    class="sc-bcXHqe iQPtKX"
   >
     <p
-      class="c2"
+      class="sc-gswNZR eFMxHE"
     >
       Lorem Ipsum
     </p>
     <svg
       aria-hidden="true"
-      class="c3 c4"
+      class="sc-dkrFOg kenAYs"
       fill="none"
       viewBox="0 0 28 15"
       xmlns="http://www.w3.org/2000/svg"
@@ -79,70 +27,18 @@ exports[`<ArrowLink /> renders an arrow on the left 1`] = `
 `;
 
 exports[`<ArrowLink /> renders an arrow on the right 1`] = `
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c2 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  width: auto;
-  margin: 0;
-}
-
-.c4 {
-  -webkit-flex: 0 0 2.8rem;
-  -ms-flex: 0 0 2.8rem;
-  flex: 0 0 2.8rem;
-  width: 2.8rem;
-  height: 2.1rem;
-  margin: 0 0.4rem 0 1rem;
-  padding-top: 0.6rem;
-  color: #f66663;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c0:hover .c3 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-@media (max-width:600px) {
-  .c4 {
-    -webkit-flex: 0 0 2rem;
-    -ms-flex: 0 0 2rem;
-    flex: 0 0 2rem;
-    width: 2rem;
-    height: 1.7rem;
-    margin: 0 0.4rem 0 0.4rem;
-  }
-}
-
 <div>
   <a
-    class="c0 c1"
+    class="sc-bcXHqe iQPtKX"
   >
     <p
-      class="c2"
+      class="sc-gswNZR eFMxHE"
     >
       Lorem Ipsum
     </p>
     <svg
       aria-hidden="true"
-      class="c3 c4"
+      class="sc-dkrFOg kenAYs"
       fill="none"
       viewBox="0 0 28 15"
       xmlns="http://www.w3.org/2000/svg"

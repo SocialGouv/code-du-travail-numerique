@@ -1,3 +1,5 @@
+import { parse } from "date-fns";
+
 import type { SalaryPeriods } from "..";
 
 /**
@@ -40,6 +42,10 @@ export const getYear = (value: string): number => {
   if (!value) return 0;
   const v = value.split(" ")[1] ?? "";
   return Number(v.replace(/[^0-9]/g, ""));
+};
+
+export const parseDate = (value: string): Date => {
+  return parse(value, "dd/MM/yyyy", new Date());
 };
 
 export const monthToNumber = (month: string): number => {
