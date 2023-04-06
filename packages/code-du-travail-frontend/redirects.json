@@ -123,5 +123,15 @@
     "destination": "/information/covid-19-le-regime-post-crise-sanitaire-a-compter-du-14-mars-2022",
     "permanent": true,
     "source": "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-infographies"
+  },
+  {
+    "destination": "/widgets/search",
+    "permanent": true,
+    "source": "/widget.html"
+  },
+  {
+    "source": "/convention-collective/1518-animation",
+    "permanent": true,
+    "destination": "/convention-collective/1518-education-culture-loisirs-et-animation-au-service-des-territoires-eclat"
   }
 ]

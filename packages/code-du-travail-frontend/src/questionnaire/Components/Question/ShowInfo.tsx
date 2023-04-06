@@ -2,12 +2,23 @@ import styled from "styled-components";
 import { Button, Section, icons } from "@socialgouv/cdtn-ui";
 import { trackClickViewPageInfo } from "../../tracking";
 import { useRouter } from "next/router";
-import { useStore } from "../../store";
+import { DossierLicenciementContext, useStore } from "../../store";
+import { useContext } from "react";
 const { DirectionRight } = icons;
 
-export const ShowInfo = ({ slug }: { slug: string }) => {
+export const ShowInfo = ({
+  slug,
+  widgetMode,
+}: {
+  slug: string;
+  widgetMode: boolean;
+}) => {
   const router = useRouter();
-  const setQuestionnaireSlug = useStore((state) => state.setQuestionnaireSlug);
+  const store = useContext(DossierLicenciementContext);
+  const setQuestionnaireSlug = useStore(
+    store,
+    (state) => state.setQuestionnaireSlug
+  );
   return (
     <ButtonSection>
       <Button
@@ -15,7 +26,12 @@ export const ShowInfo = ({ slug }: { slug: string }) => {
         onClick={() => {
           setQuestionnaireSlug(slug);
           trackClickViewPageInfo();
-          router.push(`/information/${slug}`);
+          const destination = `/information/${slug}`;
+          if (widgetMode) {
+            window.open(`${window.location.origin}${destination}`);
+            return;
+          }
+          router.push(destination);
         }}
       >
         Afficher les informations personnalisées

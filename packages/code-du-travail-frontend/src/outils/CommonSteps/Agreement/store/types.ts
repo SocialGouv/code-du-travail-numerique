@@ -1,17 +1,13 @@
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
-
-export enum Route {
-  agreement = "agreement",
-  enterprise = "enterprise",
-  none = "none",
-}
+import { AgreementRoute } from "../../../common/type/WizardType";
 
 export type CommonAgreementStoreInput = {
-  route?: Route;
+  route?: AgreementRoute;
   agreement?: Agreement;
   enterprise?: Enterprise;
+  isAgreementSupportedIndemniteLicenciement: boolean;
 };
 
 export type CommonAgreementStoreError = {
@@ -34,7 +30,7 @@ export type AgreementSearchValue = {
 };
 
 export type CommonAgreementStoreFn = {
-  onRouteChange: (value: Route) => void;
+  onRouteChange: (value: AgreementRoute) => void;
   onInitAgreementPage: () => void;
   onAgreementChange: (
     agreement: Agreement | null,

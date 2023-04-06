@@ -1,4 +1,4 @@
-import { Text, theme } from "@socialgouv/cdtn-ui";
+import { Legend, Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
@@ -30,7 +30,7 @@ export const Question = ({
 }: Props): JSX.Element => {
   const [isLocalTooltipOpen, setIsLocalToolTipOpen] = React.useState(false);
   return (
-    <LabelBlock
+    <StyledLegend
       htmlFor={htmlFor}
       {...otherProps}
       data-testid={"question-label"}
@@ -41,37 +41,46 @@ export const Question = ({
       >
         {children}
         {required && <Text as="span">&nbsp;(obligatoire)</Text>}
+        {tooltip && (
+          <InfoBulle
+            title={tooltip.help ?? "Plus d'informations"}
+            isTooltipOpen={
+              isTooltipOpen === undefined ? isLocalTooltipOpen : isTooltipOpen
+            }
+            onVisibilityChange={() => {
+              tooltip.trackableFn?.(
+                isTooltipOpen === undefined
+                  ? !isLocalTooltipOpen
+                  : isTooltipOpen
+              );
+              setIsLocalToolTipOpen(
+                isTooltipOpen === undefined
+                  ? !isLocalTooltipOpen
+                  : isTooltipOpen
+              );
+              onSwitchTooltip?.();
+            }}
+          >
+            {tooltip.content}
+          </InfoBulle>
+        )}
       </Text>
-      {tooltip && (
-        <InfoBulle
-          title={tooltip.help ?? "Plus d'informations"}
-          isTooltipOpen={
-            isTooltipOpen === undefined ? isLocalTooltipOpen : isTooltipOpen
-          }
-          onVisibilityChange={() => {
-            tooltip.trackableFn?.(
-              isTooltipOpen === undefined ? !isLocalTooltipOpen : isTooltipOpen
-            );
-            setIsLocalToolTipOpen(
-              isTooltipOpen === undefined ? !isLocalTooltipOpen : isTooltipOpen
-            );
-            onSwitchTooltip?.();
-          }}
-        >
-          {tooltip.content}
-        </InfoBulle>
-      )}
-    </LabelBlock>
+    </StyledLegend>
   );
 };
 
 const { breakpoints, fonts, spacings } = theme;
 
-const LabelBlock = styled.label`
+const StyledLegend = styled(Legend)`
+  font-weight: 600;
   display: block;
   margin: ${spacings.small} 0;
   cursor: ${(props) => (props.as ? "default" : "pointer")};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
+  }
+  p,
+  div {
+    font-weight: 100 !important;
   }
 `;

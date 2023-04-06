@@ -158,7 +158,7 @@
       "answer": "2 semaines",
       "answer2": null,
       "answer3": "14",
-      "ref": "Accord au 18 avril 2002, article 30",
+      "ref": "Accord du 18 avril 2002, article 30",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=00D98259FC73011DA835156FEF965FBD.tplgfr24s_3?idArticle=KALIARTI000005850203&cidTexte=KALITEXT000005679055&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -174,7 +174,9 @@
       "answer2": null,
       "answer3": "14",
       "ref": "Annexe I, chapitre Ier, article 5",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id",
+      "ref2": "Accord du 3 février 2022, article 3",
+      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000045953114#KALIARTI000045953114"
     },
     {
       "criteria": {
@@ -4083,7 +4085,7 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "79| A",
+        "catégorie professionnelle": "79| Employé",
         "ancienneté": "15| Moins de 6 mois"
       },
       "type": "préavis de Démission",
@@ -4093,11 +4095,11 @@
       "answer2": null,
       "answer3": "7",
       "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523"
     },
     {
       "criteria": {
-        "catégorie professionnelle": "79| A",
+        "catégorie professionnelle": "79| Employé",
         "ancienneté": "35| 6 mois à 2 ans"
       },
       "type": "préavis de Démission",
@@ -4107,11 +4109,11 @@
       "answer2": null,
       "answer3": "30",
       "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523"
     },
     {
       "criteria": {
-        "catégorie professionnelle": "79| A",
+        "catégorie professionnelle": "79| Employé",
         "ancienneté": "43| Plus de 2 ans"
       },
       "type": "préavis de Démission",
@@ -4121,137 +4123,11 @@
       "answer2": null,
       "answer3": "60",
       "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523"
     },
     {
       "criteria": {
-        "catégorie professionnelle": "80| B",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "1 semaine (de date à date)",
-      "answer2": null,
-      "answer3": "7",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "80| B",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "1 mois (de date à date)",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "80| B",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "2 mois (de date à date)",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "81| C",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "1 semaine (de date à date)",
-      "answer2": null,
-      "answer3": "7",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "81| C",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "1 mois (de date à date)",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "81| C",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "2 mois (de date à date)",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "82| D",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "1 semaine (de date à date)",
-      "answer2": null,
-      "answer3": "7",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "82| D",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "1 mois (de date à date)",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "82| D",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "2 mois (de date à date)",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "84| E",
+        "catégorie professionnelle": "84| Technicien-agent de maîtrise",
         "ancienneté": "38| Moins de 2 ans"
       },
       "type": "préavis de Démission",
@@ -4261,11 +4137,11 @@
       "answer2": null,
       "answer3": "30",
       "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523"
     },
     {
       "criteria": {
-        "catégorie professionnelle": "84| E",
+        "catégorie professionnelle": "84| Technicien-agent de maîtrise",
         "ancienneté": "43| Plus de 2 ans"
       },
       "type": "préavis de Démission",
@@ -4275,39 +4151,11 @@
       "answer2": null,
       "answer3": "60",
       "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523"
     },
     {
       "criteria": {
-        "catégorie professionnelle": "85| F",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "1 mois (de date à date)",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "85| F",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "2 mois (de date à date)",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "86| G",
+        "catégorie professionnelle": "86| Cadre",
         "ancienneté": "38| Moins de 2 ans"
       },
       "type": "préavis de Démission",
@@ -4317,11 +4165,11 @@
       "answer2": null,
       "answer3": "60",
       "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523"
     },
     {
       "criteria": {
-        "catégorie professionnelle": "86| G",
+        "catégorie professionnelle": "86| Cadre",
         "ancienneté": "43| Plus de 2 ans"
       },
       "type": "préavis de Démission",
@@ -4331,63 +4179,7 @@
       "answer2": null,
       "answer3": "120",
       "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "87| H",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "2 mois (de date à date)",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "87| H",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "4 mois (de date à date)",
-      "answer2": null,
-      "answer3": "120",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "88| I",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "2 mois (de date à date)",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "88| I",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2941,
-      "typeRupture": null,
-      "answer": "4 mois (de date à date)",
-      "answer2": null,
-      "answer3": "120",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523"
     },
     {
       "criteria": {

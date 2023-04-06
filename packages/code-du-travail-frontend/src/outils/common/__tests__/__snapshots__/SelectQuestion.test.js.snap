@@ -5,22 +5,22 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   <div
     class="sc-kiPvrU bNJyhQ"
   >
-    <label
-      class="sc-dvEHMn eummWX"
+    <legend
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
       for="input-foo"
     >
       <span
-        class="sc-bCfvAP iHaZba"
+        class="sc-fcCDlF gZwBNq"
       >
         Une question ?
         <span
-          class="sc-bCfvAP hEXzCO"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
-    </label>
+    </legend>
     <div
       class="sc-fWHiwC eYDYwl sc-elAWhN gnhaNU"
     >
@@ -89,22 +89,22 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   <div
     class="sc-kiPvrU bNJyhQ"
   >
-    <label
-      class="sc-dvEHMn eummWX"
+    <legend
+      class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
       data-testid="question-label"
       for="input-foo"
     >
       <span
-        class="sc-bCfvAP iHaZba"
+        class="sc-fcCDlF gZwBNq"
       >
         Une question ?
         <span
-          class="sc-bCfvAP hEXzCO"
+          class="sc-fcCDlF gePGde"
         >
            (obligatoire)
         </span>
       </span>
-    </label>
+    </legend>
     <div
       class="sc-fWHiwC eYDYwl sc-elAWhN gnhaNU"
     >

@@ -3,11 +3,17 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import AbsencePeriod from "../AbsencePeriod";
 import {
+  motif1,
   motif2WithDate,
   sampleMotifs,
   sampleMotifsWithStartedDate,
 } from "./AbscencePeriod.data";
+import { AbsenceWithKey } from "../AbsencePeriods";
 
+const absence: AbsenceWithKey = {
+  key: "abc",
+  motif: motif1,
+};
 describe("<AbsencePeriod />", () => {
   it("should render", () => {
     expect(
@@ -21,6 +27,7 @@ describe("<AbsencePeriod />", () => {
           showDeleteButton={false}
           onDeleteAbsence={() => {}}
           informationData={{}}
+          absence={absence}
         />
       )
     ).toBeTruthy();
@@ -37,6 +44,7 @@ describe("<AbsencePeriod />", () => {
         showDeleteButton={false}
         onDeleteAbsence={() => {}}
         informationData={{}}
+        absence={absence}
       />
     );
     expect(getAllByRole("option").length).toBe(sampleMotifs.length);
@@ -64,6 +72,7 @@ describe("<AbsencePeriod />", () => {
         showDeleteButton={false}
         onDeleteAbsence={() => {}}
         informationData={{}}
+        absence={absence}
       />
     );
     expect(
@@ -82,6 +91,7 @@ describe("<AbsencePeriod />", () => {
         showDeleteButton={true}
         onDeleteAbsence={() => {}}
         informationData={{}}
+        absence={absence}
       />
     );
     expect(getByRole("button", { name: /supprimer/i })).toBeInTheDocument();
@@ -98,20 +108,18 @@ describe("<AbsencePeriod />", () => {
         showDeleteButton={false}
         onDeleteAbsence={() => {}}
         informationData={{}}
+        absence={{
+          ...absence,
+          motif: motif1,
+        }}
       />
     );
+
     userEvent.selectOptions(
       getByRole("combobox"),
       getByRole("option", { name: "Motif 2" })
     );
-    expect(
-      (
-        getByRole("option", {
-          name: "Motif 2",
-        }) as HTMLOptionElement
-      ).selected
-    ).toBe(true);
-    expect(getByRole("textbox", { name: "0.dateAbsence" })).toBeInTheDocument();
+    expect(getByRole("textbox", { name: `0.dateAbsence` })).toBeInTheDocument();
   });
 
   it("should show the absence date field if selected motif required date", () => {
@@ -125,6 +133,7 @@ describe("<AbsencePeriod />", () => {
         showDeleteButton={false}
         onDeleteAbsence={() => {}}
         absence={{
+          ...absence,
           motif: motif2WithDate,
           durationInMonth: 4,
           startedAt: "01/01/2021",
@@ -139,7 +148,7 @@ describe("<AbsencePeriod />", () => {
         }) as HTMLOptionElement
       ).selected
     ).toBe(true);
-    expect(getByRole("textbox", { name: "0.dateAbsence" })).toBeInTheDocument();
+    expect(getByRole("textbox", { name: `0.dateAbsence` })).toBeInTheDocument();
   });
 
   it("should call callbacks on user actions", () => {
@@ -157,6 +166,7 @@ describe("<AbsencePeriod />", () => {
         showDeleteButton={true}
         onDeleteAbsence={onDeleteAbsence}
         informationData={{}}
+        absence={absence}
       />
     );
     userEvent.selectOptions(
@@ -164,10 +174,10 @@ describe("<AbsencePeriod />", () => {
       getByRole("option", { name: "Motif 2" })
     );
     expect(onSelectModifMock.mock.calls.length).toBe(1);
-    userEvent.type(getByRole("spinbutton", { name: "0.duration" }), "5");
+    userEvent.type(getByRole("spinbutton", { name: `0.duration` }), "5");
     expect(onSetDurationDate.mock.calls.length).toBe(1);
     userEvent.type(
-      getByRole("textbox", { name: "0.dateAbsence" }),
+      getByRole("textbox", { name: `0.dateAbsence` }),
       "01/01/2020"
     );
     expect(onSetAbsenceDate.mock.calls.length).toBe(10);

@@ -1,4 +1,4 @@
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import {
   Button,
   Container,
@@ -7,16 +7,15 @@ import {
   PageTitle,
   Section,
   theme,
-  Tile,
 } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
+import { LinkedTile } from "../../src/common/tiles/LinkedTile";
 
 const SubThemes = ({ children = [] }) => {
   return (
@@ -51,21 +50,20 @@ const ThemesPage = ({ children = [] }) => (
         <Grid>
           {children &&
             children.map(({ children, icon, slug, title }) => (
-              <Link
+              <StyledTile
+                icon={icons[icon]}
+                title={title}
+                titleTagType="h2"
                 key={slug}
                 href={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
-                legacyBehavior
-                passHref
               >
-                <StyledTile icon={icons[icon]} title={title} titleTagType="h2">
-                  <TileChildren>
-                    <SubThemes>{children}</SubThemes>
-                    <StyledDiv hasContentAbove={Boolean(children)}>
-                      <Button variant="link" as="div" />
-                    </StyledDiv>
-                  </TileChildren>
-                </StyledTile>
-              </Link>
+                <TileChildren>
+                  <SubThemes>{children}</SubThemes>
+                  <StyledDiv>
+                    <Button variant="link" as="div" />
+                  </StyledDiv>
+                </TileChildren>
+              </StyledTile>
             ))}
         </Grid>
       </Container>
@@ -74,7 +72,7 @@ const ThemesPage = ({ children = [] }) => (
 );
 
 export const getServerSideProps = async () => {
-  const response = await fetch(`${API_URL}/themes`);
+  const response = await fetch(`${SITE_URL}/api/themes`);
   if (!response.ok) {
     return handleError(response);
   }
@@ -98,7 +96,7 @@ const PrimaryColored = styled.span`
   color: ${({ theme }) => theme.primary};
 `;
 
-const StyledTile = styled(Tile)`
+const StyledTile = styled(LinkedTile)`
   h2 {
     font-weight: 600;
     font-size: ${fonts.sizes.headings.small};
@@ -110,6 +108,9 @@ const StyledTile = styled(Tile)`
 `;
 
 const StyledDiv = styled.div`
-  margin-top: ${({ hasContentAbove }) =>
-    hasContentAbove ? spacings.base : spacings.small};
+  margin-top: ${spacings.base};
+
+  &:first-child {
+    margin-top: ${spacings.small};
+  }
 `;

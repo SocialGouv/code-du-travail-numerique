@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { RadioQuestion } from "../../../Components";
-import { useIndemniteLicenciementStore } from "../../store";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 
 export default function Agreement2609() {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     hasSameSalary,
     hasVariablePay,
     onChangeHasVariablePay,
     errorHasVariablePay,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     hasSameSalary: state.salairesData.input.hasSameSalary,
     hasVariablePay: state.agreement2609Data.input.hasVariablePay,
     onChangeHasVariablePay: state.agreement2609Function.onChangeHasVariablePay,

@@ -7,11 +7,16 @@ import styled from "styled-components";
 type Props = {
   icon: string;
   title: string;
+  widgetMode?: boolean;
 };
 
-const DismissalProcess = (props: Props): JSX.Element => (
-  <StyledWrapper variant="main">
-    <Title title={props.title} icon={props.icon} />
+const DismissalProcess = ({
+  icon,
+  title,
+  widgetMode = false,
+}: Props): JSX.Element => (
+  <StyledWrapper variant="main" noShadow>
+    <Title title={title} icon={icon} />
     <Alert variant="secondary">
       <p>
         Vous souhaitez obtenir des informations concernant une procédure de
@@ -23,6 +28,7 @@ const DismissalProcess = (props: Props): JSX.Element => (
       name="dismissalProcess"
       title="Quelle est votre situation ?"
       slug="procedure-licenciement"
+      widgetMode={widgetMode}
     />
   </StyledWrapper>
 );
@@ -30,6 +36,11 @@ const DismissalProcess = (props: Props): JSX.Element => (
 export { DismissalProcess };
 
 const StyledWrapper = styled(Wrapper)`
+  ${({ widgetMode }) => {
+    if (widgetMode) {
+      return "border: none;";
+    }
+  }};
   padding: 32px;
   max-width: 800px;
   margin: auto;

@@ -18,7 +18,7 @@ import {
 import { Agreement2609, Agreement2609Informations } from "./2609-batiment-etam";
 
 type Props = {
-  idcc: SupportedCcIndemniteLicenciement;
+  idcc: SupportedCcIndemniteLicenciement | null;
   step: IndemniteLicenciementStepName;
 };
 

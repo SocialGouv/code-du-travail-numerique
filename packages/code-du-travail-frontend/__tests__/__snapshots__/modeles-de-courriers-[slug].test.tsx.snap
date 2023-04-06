@@ -3,38 +3,38 @@
 exports[`<ModelesDeCourrier /> should render 1`] = `
 <div>
   <div
-    class="sc-hbqYmb jSppnU"
+    class="sc-czurPZ bedOtF"
   >
     <div
-      class="sc-cfQIsQ jfKZz"
+      class="sc-gpoSCe hmkcgV"
     />
     <header
-      class="sc-dZTDFv kPguEd"
+      class="sc-kNsGIp btuNBH"
     >
       <div
-        class="sc-eVZGIO bNyoku"
+        class="sc-hWdGLs czOZux"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-bcXHqe sc-gfQywf evAMOC dXRVue"
+        class="sc-bcXHqe sc-fJNrnh evAMOC jNDPeQ"
       >
         <a
-          class="sc-hbWBzy gbHNFe"
+          class="sc-cSyrqk hdxqBH"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-nTrUm cBMBTB"
+            class="sc-lhlUkk lgeMmY"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-hLirLb byhmQn"
+            class="sc-hpfkCd lfRrnI"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-kTxHUi dUMiUo"
+          class="sc-grBbyg bSAFWo"
         >
           <form
             action="/recherche"
-            class="sc-fjWoZz jcytmj"
+            class="sc-kmXbIF koGHyE"
             role="search"
           >
             <div
@@ -86,7 +86,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 aria-controls="react-autowhatever-1"
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
-                class="sc-islFiG lkIblN"
+                class="sc-cfQIsQ fHOeqY"
                 id="floating-search"
                 name="q"
                 placeholder="Rechercher"
@@ -95,20 +95,20 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 value=""
               />
               <div
-                class="sc-jccYHG jVLFDm"
+                class="sc-cPIbRQ fWCfUJ"
                 id="react-autowhatever-1"
                 role="listbox"
               />
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hhOBVt cizsts sc-kAuIVs bIWiNJ"
+              class="sc-hhOBVt cizsts sc-bJYTlW cqjYoQ"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-iuxOeI dOdXNW"
+                class="sc-kTxHUi cZmmKi"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,11 +122,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-gBInCZ gNjNJD"
+          class="sc-kLgxMn gmMwWj"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-kmXbIF bLmLqG"
+            class="sc-hmTbGb ewQklz"
             href="/recherche"
             rel="nofollow"
           >
@@ -144,17 +144,17 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-cPIbRQ Szlyq"
+          class="sc-leZLoi jQaszo"
         >
           <button
-            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-hxOqGs bDyXUw dNQGPT"
+            class="sc-hhOBVt eyKsVw sc-eeMvmM sc-hTRxPq bDyXUw ZXlSS"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-gInZnl dofhcI"
+          class="sc-hhOBVt iMRFhH sc-cjibBx mHCxp sc-jhnTcL NHyzH"
         >
           <svg
             aria-hidden="true"
@@ -174,7 +174,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-jDfIjF eGolam"
+      class="sc-cxiiTX fMwhrI"
       id="content"
       tabindex="-1"
     >
@@ -183,10 +183,10 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
         class="sc-gYpcnp bjipqg"
       >
         <div
-          class="sc-eJDSGI dCXocf"
+          class="sc-iOeugr cfcIjK"
         >
           <div
-            class="sc-oZIhv bFEaYe"
+            class="sc-jfvxQR dxcKMx"
           >
             <ol
               class="sc-bcXHqe sc-bGhRYA evAMOC iIZCtz"
@@ -332,7 +332,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       </span>
                     </button>
                     <div
-                      class="sc-lbVpMG fQidUo"
+                      class="sc-jfTVlA aTmOx"
                     >
                       <button
                         class="sc-jhrdCu cYiOyd spacing-left"
@@ -369,7 +369,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </div>
                 </div>
                 <p
-                  class="sc-bWOGAC sc-ewvfhA hCTtvv dCjsWo"
+                  class="sc-bWOGAC sc-ewvfhA fhSYan dCjsWo"
                 >
                   theme
                 </p>
@@ -389,7 +389,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   class="sc-djTcra gCMvWG"
                 >
                   <p
-                    class="sc-cOxWqc imOahr"
+                    class="sc-GKYbw hiUFFW"
                   >
                     <span
                       class="sc-ktLMLx bCcQHN"
@@ -408,7 +408,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
                 >
                   <p
-                    class="sc-cOxWqc bBCaVZ"
+                    class="sc-GKYbw gcbROE"
                   >
                     un description
                   </p>
@@ -444,10 +444,10 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   class="sc-gswNZR uUAJC"
                 >
                   <div
-                    class="sc-jSUZER sc-jhnTcL kEfUQE jqiEYH"
+                    class="sc-jSUZER sc-iLkLTN kEfUQE czdOEo"
                   >
                     <div
-                      class="sc-bJYTlW dAAEFa"
+                      class="sc-bnVMcY fLvfNd"
                     >
                       <a
                         class="sc-hhOBVt hPTCsq no-after"
@@ -455,7 +455,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-bwsPYA hfhSeO"
+                          class="sc-hINMOq fjgKOk"
                           fill="none"
                           viewBox="0 0 32 32"
                           xmlns="http://www.w3.org/2000/svg"
@@ -477,10 +477,10 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       </a>
                     </div>
                     <div
-                      class="sc-eJDSGI dCXocf"
+                      class="sc-iOeugr cfcIjK"
                     >
                       <div
-                        class="sc-oZIhv bFEaYe"
+                        class="sc-jfvxQR dxcKMx"
                       >
                         <div
                           class="sc-cuOiQm"
@@ -494,7 +494,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </div>
                 </div>
                 <p
-                  class="sc-elvGZv cffSLo"
+                  class="sc-jowtIB iRANFV"
                 >
                   Type: Modèle de document - Format: 
                   pdf
@@ -505,12 +505,12 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                    
                 </p>
                 <p
-                  class="sc-jSUZER sc-enHPVx cbQucy iDINjU"
+                  class="sc-jSUZER sc-gMHJKX cbQucy fEklRO"
                 >
                   Attention, chaque modèle de document proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de règlementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
                 </p>
                 <p
-                  class="sc-bugHcy iRjmTy"
+                  class="sc-kkCwLU jDcBa-d"
                 >
                   <a
                     class="sc-hhOBVt fRaRnn no-after"
@@ -523,7 +523,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     Ko)  
                     <svg
                       aria-hidden="true"
-                      class="sc-bwsPYA hfhSeO"
+                      class="sc-hINMOq fjgKOk"
                       fill="none"
                       viewBox="0 0 32 32"
                       xmlns="http://www.w3.org/2000/svg"
@@ -542,7 +542,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
           >
             <p
-              class="sc-cOxWqc bBCaVZ"
+              class="sc-GKYbw gcbROE"
             >
               Partager ce contenu : 
             </p>
@@ -619,7 +619,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 </span>
               </button>
               <div
-                class="sc-lbVpMG fQidUo"
+                class="sc-jfTVlA aTmOx"
               >
                 <button
                   class="sc-jhrdCu cYiOyd spacing-left"
@@ -699,13 +699,13 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
       </div>
     </main>
     <div
-      class="sc-fiSPbx eSgFty"
+      class="sc-fFRahO jHphZA"
     >
       <footer
-        class="sc-lgholE dvbHbF"
+        class="sc-hlzHbZ fVQEhf"
       >
         <div
-          class="sc-gswNZR uUAJC sc-gXnjX fZjdbv"
+          class="sc-gswNZR uUAJC sc-ihFKfs bjvFLV"
         >
           <div
             class="sc-bcXHqe evAMOC"
@@ -725,7 +725,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               </p>
             </div>
             <div
-              class="sc-bcXHqe sc-gelMue ljCEtE gOYZb"
+              class="sc-bcXHqe sc-dZTDFv ljCEtE gISzia"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
@@ -737,7 +737,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="sc-ckLdoV briwxl"
+                class="sc-eVZGIO fyfsew"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -751,287 +751,338 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-gswNZR uUAJC sc-kIRMQU dlvwLA"
+          class="sc-gswNZR uUAJC sc-gBInCZ egQCla"
         >
           <div
-            class="sc-bcXHqe sc-ciyUsT evAMOC jtZDeU"
+            class="sc-bcXHqe sc-hxOqGs evAMOC dtkDBj"
           >
             <div
-              class="sc-kGFDUS fmLzqy"
+              class="sc-eJKXev jizoQI"
             >
-              <strong
-                aria-level="2"
-                class="sc-jZatrU cCkdWz sc-iBYQkv ETltB"
-                data-testid="heading"
-                role="heading"
-              >
-                Code du travail numérique
-              </strong>
-              <ul
-                class="sc-jfvxQR sc-bATJPV gwhdUi gIsczB"
-              >
-                <li>
-                  <a
-                    class="sc-byHATT futyrs"
-                    href="/droit-du-travail"
-                  >
-                    Le droit du travail
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-byHATT futyrs"
-                    href="/glossaire"
-                  >
-                    Glossaire
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-byHATT futyrs"
-                    href="/a-propos"
-                  >
-                    À propos
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-byHATT futyrs"
-                    href="/mentions-legales"
-                  >
-                    Mentions légales
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-byHATT futyrs"
-                    href="/accessibilite"
-                  >
-                    Accessibilité : partiellement conforme
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-byHATT futyrs"
-                    href="/politique-confidentialite"
-                  >
-                    Politique de confidentialité
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-byHATT futyrs"
-                    href="/stats"
-                  >
-                    Statistiques d’utilisation
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="sc-byHATT futyrs"
-                    href="/integration"
-                  >
-                    Intégrer les outils du Code du travail numérique
-                  </a>
-                </li>
-              </ul>
+              <div>
+                <strong
+                  aria-level="2"
+                  class="sc-hbWBzy glPFqB sc-iBYQkv ETltB"
+                  data-testid="heading"
+                  role="heading"
+                >
+                  Code du travail numérique
+                </strong>
+                <ul
+                  class="sc-lbVpMG sc-gfQywf fqAvkB VANDy"
+                >
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/droit-du-travail"
+                    >
+                      Le droit du travail
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/glossaire"
+                    >
+                      Glossaire
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/a-propos"
+                    >
+                      À propos
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/stats"
+                    >
+                      Statistiques d’utilisation
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/integration"
+                    >
+                      Intégrer les outils du Code du travail numérique
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div
-              class="sc-kGFDUS fmLzqy"
+              class="sc-eJKXev jizoQI"
             >
-              <strong
-                aria-level="2"
-                class="sc-jZatrU cCkdWz sc-iBYQkv ETltB"
-                data-testid="heading"
-                role="heading"
-              >
-                Aidez-nous à améliorer cet outil
-              </strong>
-              <ul
-                class="sc-jfvxQR sc-bATJPV gwhdUi gIsczB"
-              >
-                <li>
-                  <button
-                    class="sc-hhOBVt eyKsVw sc-jWOkvS dTRift"
-                  >
-                    Contact
-                  </button>
-                </li>
-                <li>
-                  <a
-                    aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="sc-byHATT futyrs"
-                    href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Contribuer sur Github
-                  </a>
-                </li>
-                <li>
-                  <a
-                    aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="sc-byHATT futyrs"
-                    href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Journal des modifications
-                  </a>
-                </li>
-              </ul>
+              <div>
+                <strong
+                  aria-level="2"
+                  class="sc-hbWBzy glPFqB sc-iBYQkv ETltB"
+                  data-testid="heading"
+                  role="heading"
+                >
+                  Outils populaires
+                </strong>
+                <ul
+                  class="sc-lbVpMG sc-gfQywf fqAvkB VANDy"
+                >
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/outils/simulateur-embauche"
+                    >
+                      Calcul du salaire brut/net
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/outils/indemnite-licenciement"
+                    >
+                      Calcul de l'indemnité de licenciement
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/outils/convention-collective"
+                    >
+                      Trouver sa convention collective
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <strong
+                  aria-level="2"
+                  class="sc-hbWBzy glPFqB sc-iBYQkv ETltB"
+                  data-testid="heading"
+                  role="heading"
+                >
+                  Modèles populaires
+                </strong>
+                <ul
+                  class="sc-lbVpMG sc-gfQywf fqAvkB VANDy"
+                >
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/modeles-de-courriers/lettre-de-demission"
+                    >
+                      Lettre de démission
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
+                    >
+                      Rupture du contrat en période d'essai par le salarié
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel"
+                    >
+                      Convocation à un entretien préalable au licenciement pour motif personnel
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div
-              class="sc-kGFDUS fmLzqy"
+              class="sc-eJKXev jizoQI"
             >
-              <strong
-                aria-level="2"
-                class="sc-jZatrU cCkdWz sc-iBYQkv ETltB"
-                data-testid="heading"
-                role="heading"
-              >
-                En collaboration avec
-              </strong>
-              <ul
-                class="sc-jfvxQR sc-bATJPV gwhdUi gIsczB"
-              >
-                <li>
-                  <a
-                    aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="sc-byHATT futyrs"
-                    href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    La Direction Générale du Travail
-                  </a>
-                </li>
-                <li>
-                  <a
-                    aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="sc-byHATT futyrs"
-                    href="https://fabrique.social.gouv.fr/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    La fabrique des Ministères sociaux
-                  </a>
-                </li>
-                <li>
-                  <a
-                    aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="sc-byHATT futyrs"
-                    href="https://beta.gouv.fr/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    beta.gouv.fr
-                  </a>
-                </li>
-              </ul>
+              <div>
+                <strong
+                  aria-level="2"
+                  class="sc-hbWBzy glPFqB sc-iBYQkv ETltB"
+                  data-testid="heading"
+                  role="heading"
+                >
+                  Fiches pratiques populaires
+                </strong>
+                <ul
+                  class="sc-lbVpMG sc-gfQywf fqAvkB VANDy"
+                >
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
+                    >
+                      Durée du préavis de démission
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/contribution/les-conges-pour-evenements-familiaux"
+                    >
+                      Congés pour événements familiaux
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
+                    >
+                      Maintien du salaire en cas d'arrêt maladie
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <strong
+                  aria-level="2"
+                  class="sc-hbWBzy glPFqB sc-iBYQkv ETltB"
+                  data-testid="heading"
+                  role="heading"
+                >
+                  Conventions collectives populaires
+                </strong>
+                <ul
+                  class="sc-lbVpMG sc-gfQywf fqAvkB VANDy"
+                >
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/convention-collective/1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
+                    >
+                      Services de l'automobile
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/convention-collective/650-metallurgie-ingenieurs-et-cadres"
+                    >
+                      Métallurgie ingénieurs et cadres
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/convention-collective/573-commerces-de-gros"
+                    >
+                      Commerce de gros
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <ul
-          class="sc-dGQEGF hanEJZ"
+        <div
+          class="sc-bcXHqe sc-fjWoZz evAMOC iXcXxg"
         >
-          <li>
-            <a
-              aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="sc-byHATT sc-PBEJI futyrs eNwVht"
-              href="https://travail-emploi.gouv.fr"
-              rel="noopener noreferrer"
-              target="_blank"
+          <div
+            class="sc-iuxOeI ifWRCM"
+          >
+            <img
+              alt="le site du ministere du travail, de l'emploi et de l'insertion"
+              data-nimg="1"
+              decoding="async"
+              height="141"
+              loading="lazy"
+              src="/static/assets/img/ministere_logo.svg"
+              style="color: transparent;"
+              width="170"
+            />
+            <ul
+              class="sc-eCrewB fGEWru"
             >
-              travail-emploi.gouv.fr
-            </a>
-            <span
-              aria-hidden="true"
-              class="sc-jephDI yLaX"
+              <li>
+                <a
+                  href="https://travail-emploi.gouv.fr"
+                >
+                  travail-emploi.gouv.fr
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.service-public.fr"
+                >
+                  service-public.fr
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.legifrance.gouv.fr"
+                >
+                  legifrance.gouv.fr
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.data.gouv.fr"
+                >
+                  data.gouv.fr
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.gouvernement.fr"
+                >
+                  gouvernement.fr
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="sc-kAuIVs brzseo"
+          />
+          <div
+            class="sc-islFiG hQTxLh"
+          >
+            <ul
+              class="sc-eCrewB sc-eAeVAz fGEWru jmPiMt"
             >
-              |
-            </span>
-          </li>
-          <li>
-            <a
-              aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="sc-byHATT sc-PBEJI futyrs eNwVht"
-              href="https://www.service-public.fr"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              service-public.fr
-            </a>
-            <span
-              aria-hidden="true"
-              class="sc-jephDI yLaX"
-            >
-              |
-            </span>
-          </li>
-          <li>
-            <a
-              aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="sc-byHATT sc-PBEJI futyrs eNwVht"
-              href="https://www.legifrance.gouv.fr"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              legifrance.gouv.fr
-            </a>
-            <span
-              aria-hidden="true"
-              class="sc-jephDI yLaX"
-            >
-              |
-            </span>
-          </li>
-          <li>
-            <a
-              aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="sc-byHATT sc-PBEJI futyrs eNwVht"
-              href="https://www.data.gouv.fr"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              data.gouv.fr
-            </a>
-            <span
-              aria-hidden="true"
-              class="sc-jephDI yLaX"
-            >
-              |
-            </span>
-          </li>
-          <li>
-            <a
-              aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="sc-byHATT sc-PBEJI futyrs eNwVht"
-              href="https://www.gouvernement.fr"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              gouvernement.fr
-            </a>
-            <span
-              aria-hidden="true"
-              class="sc-jephDI yLaX"
-            >
-              |
-            </span>
-          </li>
-          <li>
-            <a
-              aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="sc-byHATT sc-PBEJI futyrs eNwVht"
-              href="https://www.cnil.fr"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              cnil.fr
-            </a>
-          </li>
-        </ul>
+              <li>
+                <a
+                  href="/mentions-legales"
+                >
+                  Mentions légales
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/accessibilite"
+                >
+                  Accessibilité : partiellement conforme
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/politique-confidentialite"
+                >
+                  Politique de confidentialité
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vvX.Y.Z"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Contribuer sur Github
+                </a>
+              </li>
+              <li>
+                <a
+                  aria-label="Nous contacter"
+                  class="sc-gInZnl iwKJSW"
+                  role="link"
+                >
+                  Nous contacter
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
   </div>

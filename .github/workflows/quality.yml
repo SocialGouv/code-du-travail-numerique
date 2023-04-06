@@ -30,6 +30,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
@@ -64,7 +68,6 @@ jobs:
             "@socialgouv/cdtn-ui",
             "@cdt/frontend",
             "@socialgouv/modeles-social",
-            "@cdt/api",
           ]
     steps:
       - uses: actions/cache@v3
@@ -84,7 +87,7 @@ jobs:
       fail-fast: false
       matrix:
         repositories:
-          ["@cdt/frontend", "@socialgouv/modeles-social", "@cdt/api"]
+          ["@cdt/frontend", "@socialgouv/modeles-social"]
     steps:
       - uses: actions/cache@v3
         name: Restore build
@@ -118,8 +121,7 @@ jobs:
           [
             "@socialgouv/cdtn-ui",
             "@cdt/frontend",
-            "@socialgouv/modeles-social",
-            "@cdt/api",
+            "@socialgouv/modeles-social"
           ]
     steps:
       - uses: actions/cache@v3

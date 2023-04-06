@@ -4,7 +4,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "4.90.1",
+  "version": "4.96.0",
   "description": "Composants ReactJS",
   "main": "lib/index.js",
   "files": [
@@ -15,11 +15,10 @@
     "build:dev": "swc src -d lib",
     "type-check": "tsc --noEmit",
     "dev": "npm run build:dev -- --watch",
-    "lint-js": "eslint src/**/*.js",
-    "lint-css": "stylelint 'src/**/*.js'",
-    "lint": "yarn lint-css && yarn lint-js",
+    "lint:js": "eslint src/**/*.js",
+    "lint:css": "stylelint 'src/**/*.js'",
+    "lint": "yarn lint:css && yarn lint:js",
     "precommit": "lint-staged",
-    "prepush": "yarn test --bail --changedSince=dev",
     "start": "start-storybook",
     "svg": "svgo --config=src/icons/mono.config.js -f src/icons/src/monochrome && svgo --config=src/icons/bi.config.js -f src/icons/src/bicolor && svgr --config-file=src/icons/svgr.config.js -d src/icons/components src/icons/src",
     "build-storybook": "build-storybook -c .storybook -o .out",
@@ -30,8 +29,8 @@
     "test:update": "jest --silent -u"
   },
   "dependencies": {
-    "@maxgfr/react-accessible-accordion": "4.0.1",
     "@reach/dialog": "0.15.3",
+    "@socialgouv/react-accessible-accordion": "4.1.1",
     "polished": "^4.2.2",
     "react-feather": "^2.0.9",
     "react-tabs": "^3.2.2",
@@ -55,9 +54,8 @@
     "@types/styled-components": "^5.1.26",
     "eslint": "^7.31.0",
     "gh-pages": "^4.0.0",
-    "jest": "^29.4.2",
-    "jest-environment-jsdom": "^29.4.2",
-    "jest-styled-components": "^7.0.5",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "lint-staged": "^13.0.0",
     "prop-types": "^15.7.2",
     "react": "^18.2.0",
@@ -80,8 +78,8 @@
   ],
   "lint-staged": {
     "src/**/*.{ts,js}": [
-      "yarn lint-css",
-      "yarn lint-js --fix --quiet"
+      "yarn lint:css",
+      "yarn lint:js --fix --quiet"
     ]
   },
   "browserslist": [

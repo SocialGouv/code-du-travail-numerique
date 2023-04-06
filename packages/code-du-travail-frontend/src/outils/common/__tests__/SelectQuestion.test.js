@@ -1,4 +1,4 @@
-import { fireEvent } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
 import React from "react";
 
 import { renderForm } from "../../../../test/renderForm";
@@ -33,10 +33,10 @@ describe("<SelectQuestion />", () => {
         onChange={onChange}
       />
     );
-    const { getByLabelText } = renderForm(ComponentWithOnchange, {
+    renderForm(ComponentWithOnchange, {
       foo: "foo",
     });
-    const select = getByLabelText(/question/i);
+    const select = screen.getAllByTestId("foo")[0];
     fireEvent.change(select, { target: { value: "baz" } });
 
     expect(onChange).toHaveBeenCalledWith("baz");

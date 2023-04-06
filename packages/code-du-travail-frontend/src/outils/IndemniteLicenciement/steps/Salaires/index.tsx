@@ -1,10 +1,17 @@
-import React from "react";
-import { useIndemniteLicenciementStore } from "../../store";
+import React, { useContext } from "react";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 import { RadioQuestion, TextQuestion } from "../../../Components";
-import { TempsPartiel, SalaireTempsPlein, TooltipSalary } from "./components";
-import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import { TempsPartiel, SalaireTempsPlein } from "./components";
+import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../..";
 import { AgreementsInjector } from "../../agreements";
+import {
+  getSalairesTempsPleinSubtitle,
+  getTooltipSalairesMensuel,
+} from "../../agreements/ui-customizations";
 import { icons } from "@socialgouv/cdtn-ui";
 import {
   generateSalaireTempsPleinQuestion,
@@ -13,6 +20,7 @@ import {
 } from "../../utils/question";
 
 const StepSalaires = () => {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     hasTempsPartiel,
     onChangeHasTempsPartiel,
@@ -31,7 +39,7 @@ const StepSalaires = () => {
     arretTravail,
     showHasTempsPartiel,
     initShowHasTempsPartiel,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore(store, (state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
     errorHasTempsPartiel: state.salairesData.error.errorHasTempsPartiel,
@@ -124,10 +132,8 @@ const StepSalaires = () => {
                 arretTravail,
                 salaryPeriods
               )}
-              subTitle="Indiquez le montant des salaires (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)              "
-              tooltip={{
-                content: <TooltipSalary />,
-              }}
+              subTitle={getSalairesTempsPleinSubtitle(agreement?.num)}
+              tooltip={getTooltipSalairesMensuel(agreement?.num)}
               onSalariesChange={onSalariesChange}
               salaryPeriods={salaryPeriods}
               error={errorSalaryPeriods}
@@ -136,9 +142,7 @@ const StepSalaires = () => {
           {(hasSameSalary === "oui" || hasSameSalary === "non") &&
             agreement && (
               <AgreementsInjector
-                idcc={
-                  `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
-                }
+                idcc={getSupportedAgreement(agreement.num)}
                 step={IndemniteLicenciementStepName.Salaires}
               />
             )}

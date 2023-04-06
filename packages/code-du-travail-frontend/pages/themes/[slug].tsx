@@ -13,8 +13,8 @@ import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { SearchResults } from "../../src/search/SearchResults";
 import { handleError } from "../../src/lib/fetch-error";
-import { API_URL } from "../../src/config";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { SITE_URL } from "../../src/config";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 
 interface Props {
   theme;
@@ -61,7 +61,7 @@ function Theme(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const searchThemeResponse = await fetch(`${API_URL}/themes/${query.slug}`);
+  const searchThemeResponse = await fetch(`${SITE_URL}/api/themes/${query.slug}`);
 
   if (!searchThemeResponse.ok) {
     return handleError(searchThemeResponse);

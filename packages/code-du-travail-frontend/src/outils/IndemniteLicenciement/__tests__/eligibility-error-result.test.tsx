@@ -1,4 +1,4 @@
-import { CalculateurIndemnite, loadPublicodesRules } from "../..";
+import { CalculateurIndemnite } from "../..";
 import { ui } from "./ui";
 
 import { render, fireEvent } from "@testing-library/react";

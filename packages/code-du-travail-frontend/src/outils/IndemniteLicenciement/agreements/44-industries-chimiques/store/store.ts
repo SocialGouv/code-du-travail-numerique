@@ -14,6 +14,7 @@ import { computeSalaryPeriods } from "../../../common";
 import { parse } from "../../../../common/utils";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import { generateFrenchDate } from "../../../../utils";
+import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
 
 const initialInputState = {
   showVariablePay: false,
@@ -30,17 +31,22 @@ const initialState: Agreement44StoreData = {
 
 export const createAgreement44StoreSalaires: StoreSlice<
   Agreement44StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice & CommonInformationsStoreSlice
+  SalairesStoreSlice &
+    AncienneteStoreSlice &
+    CommonInformationsStoreSlice &
+    ContratTravailStoreSlice
 > = (set, get) => ({
   agreement44Data: { ...initialState },
   agreement44Function: {
     onInit: () => {
-      const categoryPro = get().informationsData.input.publicodesInformations.find(
-        (item) =>
-          item.question.name ===
-          "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
-      )?.info;
+      const categoryPro =
+        get().informationsData.input.publicodesInformations.find(
+          (item) =>
+            item.question.name ===
+            "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
+        )?.info;
       const ancienneteInput = get().ancienneteData.input;
+      const dateArretTravail = get().contratTravailData.input.dateArretTravail;
       const periods = computeSalaryPeriods({
         dateEntree: generateFrenchDate(
           new Date(
@@ -61,12 +67,14 @@ export const createAgreement44StoreSalaires: StoreSlice<
         isOuvrierOrAgent && get().salairesData.input.hasSameSalary === "non";
       set(
         produce((state: Agreement44StoreSlice) => {
+          let isShowingLastSalary = false;
           state.agreement44Data.input.showVariablePay = showVariablePay;
-          state.agreement44Data.input.showKnowingLastSalary = !showVariablePay;
+          isShowingLastSalary = !showVariablePay;
           if (sameDateNotificationDateSortie) {
             state.agreement44Data.input.showLastMonthSalary = false;
-            state.agreement44Data.input.showKnowingLastSalary = false;
-            state.agreement44Data.input.lastMonthSalary = lastMonthSalaryProcess;
+            isShowingLastSalary = false;
+            state.agreement44Data.input.lastMonthSalary =
+              lastMonthSalaryProcess;
             state.agreement44Data.input.knowingLastSalary = undefined;
           } else {
             state.agreement44Data.input.lastMonthSalary =
@@ -79,30 +87,37 @@ export const createAgreement44StoreSalaires: StoreSlice<
           if (state.agreement44Data.input.hasVariablePay === "non") {
             get().agreement44Function.onChangeHasVariablePay("non");
           }
-          if (!isOuvrierOrAgent) {
-            state.agreement44Data.input = initialInputState;
-          }
           if (
             get().agreement44Data.input.hasVariablePay === "non" &&
             !sameDateNotificationDateSortie
           ) {
-            state.agreement44Data.input.showKnowingLastSalary = true;
+            isShowingLastSalary = true;
+          }
+          if (dateArretTravail) {
+            isShowingLastSalary = false;
+          }
+          state.agreement44Data.input.showKnowingLastSalary =
+            isShowingLastSalary;
+          if (!isOuvrierOrAgent) {
+            state.agreement44Data.input = initialInputState;
           }
         })
       );
     },
     onChangeHasVariablePay: (value) => {
-      const categoryPro = get().informationsData.input.publicodesInformations.find(
-        (item) =>
-          item.question.name ===
-          "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
-      )?.info;
+      const categoryPro =
+        get().informationsData.input.publicodesInformations.find(
+          (item) =>
+            item.question.name ===
+            "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
+        )?.info;
       const ancienneteInput = get().ancienneteData.input;
       const sameDateNotificationDateSortie =
         ancienneteInput.dateNotification === ancienneteInput.dateSortie;
       const isOuvrierOrAgent =
         categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
         categoryPro === "'Agents de maîtrise et techniciens (Groupe IV)'";
+      const dateArretTravail = get().contratTravailData.input.dateArretTravail;
       applyGenericValidation(get, set, [
         { paramName: "hasVariablePay", value: value },
         {
@@ -111,7 +126,8 @@ export const createAgreement44StoreSalaires: StoreSlice<
             value === "non" &&
             isOuvrierOrAgent &&
             get().agreement44Data.input.showVariablePay &&
-            !sameDateNotificationDateSortie,
+            !sameDateNotificationDateSortie &&
+            !dateArretTravail,
         },
       ]);
     },

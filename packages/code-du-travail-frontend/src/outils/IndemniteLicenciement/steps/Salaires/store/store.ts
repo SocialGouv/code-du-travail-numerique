@@ -11,6 +11,7 @@ import { validateStep } from "./validator";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { validatorAgreement } from "../../../agreements";
 import {
+  getSupportedAgreement,
   ReferenceSalaryFactory,
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
@@ -124,12 +125,14 @@ const createSalairesStore: StoreSlice<
       }
 
       const agreement = get().agreementData.input.agreement;
+      const isAgreementSupportedIndemniteLicenciement =
+        get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
 
       let isAgreementValid = true;
 
-      if (agreement) {
+      if (agreement && isAgreementSupportedIndemniteLicenciement) {
         isAgreementValid = validatorAgreement(
-          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          getSupportedAgreement(agreement.num),
           IndemniteLicenciementStepName.Salaires,
           get,
           set
@@ -164,12 +167,13 @@ const applyGenericValidation = (
     });
     const { isValid, errorState } = validateStep(nextState.salairesData.input);
     const agreement = get().agreementData.input.agreement;
-
+    const isAgreementSupportedIndemniteLicenciement =
+      get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
     let isAgreementValid = true;
 
-    if (agreement) {
+    if (agreement && isAgreementSupportedIndemniteLicenciement) {
       isAgreementValid = validatorAgreement(
-        `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+        getSupportedAgreement(agreement.num),
         IndemniteLicenciementStepName.Salaires,
         get,
         set

@@ -4,6 +4,7 @@ import { CalculateurIndemnite } from "../../../../src/outils";
 import { ui } from "./ui";
 import { push } from "@socialgouv/matomo-next";
 import userEvent from "@testing-library/user-event";
+import { UserAction } from "../../../common";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   push: jest.fn(),
@@ -22,6 +23,8 @@ describe("Indemnité licenciement - Tracking", () => {
       />
     );
   });
+  const userAction = new UserAction();
+
   test("vérifier le tracking sur la navigation", () => {
     jest.spyOn(Storage.prototype, "setItem");
     Storage.prototype.getItem = jest.fn(
@@ -160,20 +163,18 @@ describe("Indemnité licenciement - Tracking", () => {
   });
 
   test("vérifier le tracking sur la recherche CC", async () => {
-    fireEvent.click(ui.introduction.startButton.get());
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.contract.fauteGrave.non.get());
-    fireEvent.click(ui.contract.inaptitude.non.get());
-    fireEvent.click(ui.contract.arretTravail.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.agreement.noAgreement.get());
-    fireEvent.click(ui.agreement.agreement.get());
-    fireEvent.change(ui.agreement.agreementInput.get(), {
-      target: { value: "16" },
-    });
-    await waitFor(() =>
-      fireEvent.click(ui.agreement.searchItem.agreement16.get())
-    );
+    userAction
+      .click(ui.introduction.startButton.get())
+      .click(ui.contract.type.cdi.get())
+      .click(ui.contract.fauteGrave.non.get())
+      .click(ui.contract.inaptitude.non.get())
+      .click(ui.contract.arretTravail.non.get())
+      .click(ui.next.get())
+      .click(ui.agreement.noAgreement.get())
+      .click(ui.agreement.agreement.get())
+      .setInput(ui.agreement.agreementInput.get(), "16")
+      .click(await waitFor(() => ui.agreement.searchItem.agreement16.get()));
+
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "cc_search",
@@ -183,21 +184,19 @@ describe("Indemnité licenciement - Tracking", () => {
   });
 
   test("vérifier le tracking sur la selection CC", async () => {
-    fireEvent.click(ui.introduction.startButton.get());
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.contract.fauteGrave.non.get());
-    fireEvent.click(ui.contract.inaptitude.non.get());
-    fireEvent.click(ui.contract.arretTravail.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.agreement.noAgreement.get());
-    fireEvent.click(ui.agreement.agreement.get());
-    fireEvent.change(ui.agreement.agreementInput.get(), {
-      target: { value: "16" },
-    });
-    await waitFor(() =>
-      fireEvent.click(ui.agreement.searchItem.agreement16.get())
-    );
-    fireEvent.click(ui.next.get());
+    userAction
+      .click(ui.introduction.startButton.get())
+      .click(ui.contract.type.cdi.get())
+      .click(ui.contract.fauteGrave.non.get())
+      .click(ui.contract.inaptitude.non.get())
+      .click(ui.contract.arretTravail.non.get())
+      .click(ui.next.get())
+      .click(ui.agreement.noAgreement.get())
+      .click(ui.agreement.agreement.get())
+      .setInput(ui.agreement.agreementInput.get(), "16")
+      .click(await waitFor(() => ui.agreement.searchItem.agreement16.get()))
+      .click(ui.next.get());
+
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "cc_search_type_of_users",
@@ -260,7 +259,7 @@ describe("Indemnité licenciement - Tracking", () => {
       "trackEvent",
       "outil",
       "cc_select_traitée",
-      "idcc16",
+      16,
     ]);
   });
 
@@ -281,7 +280,20 @@ describe("Indemnité licenciement - Tracking", () => {
       "trackEvent",
       "outil",
       "cc_select_non_traitée",
-      "idcc1261",
+      1261,
+    ]);
+  });
+
+
+  test("vérifier qu'on a un event ineligible sur la recherche entreprise", async () => {
+    fireEvent.click(ui.introduction.startButton.get());
+    fireEvent.click(ui.contract.type.cdd.get());
+    fireEvent.click(ui.next.get());
+    expect(push).toHaveBeenCalledWith([
+      "trackEvent",
+      "outil",
+      `view_step_Indemnité de licenciement`,
+      "results_ineligible",
     ]);
   });
 });

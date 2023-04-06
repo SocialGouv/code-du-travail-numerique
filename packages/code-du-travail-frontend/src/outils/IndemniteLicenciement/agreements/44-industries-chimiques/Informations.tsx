@@ -1,8 +1,13 @@
-import { useIndemniteLicenciementStore } from "../../store";
+import { useContext } from "react";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 
 export default function Agreement44Informations() {
+  const store = useContext(IndemniteLicenciementContext);
   const { hasVariablePay, knowingLastSalary, lastMonthSalary } =
-    useIndemniteLicenciementStore((state) => ({
+    useIndemniteLicenciementStore(store, (state) => ({
       hasVariablePay: state.agreement44Data.input.hasVariablePay,
       lastMonthSalary: state.agreement44Data.input.lastMonthSalary,
       knowingLastSalary: state.agreement44Data.input.knowingLastSalary,
@@ -23,7 +28,7 @@ export default function Agreement44Informations() {
           {knowingLastSalary === "oui" ? "Oui" : "Non"}
         </li>
       )}
-      {lastMonthSalary && lastMonthSalary.value && (
+      {knowingLastSalary && lastMonthSalary && lastMonthSalary.value && (
         <li>
           Salaire perçu au cours du dernier mois&nbsp;:&nbsp;
           {lastMonthSalary.value} €{" "}

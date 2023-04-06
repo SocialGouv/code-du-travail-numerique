@@ -1,4 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-sources";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Wrapper } from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -16,6 +16,7 @@ import { TrackingProvider, useTrackingContext } from "./common/TrackingContext";
 import Steps from "./steps";
 import handleTrackEvent from "./tracking/HandleTrackEvent";
 import { OnUserAction, UserAction } from "./types";
+import scrollToTop from "../common/utils/scrollToTop";
 
 interface Props {
   icon: string;
@@ -66,7 +67,7 @@ function AgreementSearchTool({
 
   function handleHashNavigation(url) {
     const [, hash = ""] = url.split("#");
-    window.scrollTo(0, 0);
+    scrollToTop();
     const main: HTMLDivElement | null = document.querySelector("[role=main]");
     if (main) {
       main.focus();
@@ -91,9 +92,6 @@ function AgreementSearchTool({
   }
 
   useEffect(() => {
-    router.replace(`/${SOURCES.TOOLS}/convention-collective`, undefined, {
-      shallow: true,
-    });
     router.events.on("hashChangeStart", handleHashNavigation);
     return () => {
       router.events.off("hashChangeStart", handleHashNavigation);
