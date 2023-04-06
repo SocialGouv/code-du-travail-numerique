@@ -1,6 +1,5 @@
 import { StoreApi } from "zustand";
-import { MainStore } from "../store";
-import { StoreOptions } from "../store";
+import { MainStore, StoreOptions } from "../store";
 import {
   Agreement1516StoreError,
   Agreement1516StoreInput,
@@ -26,11 +25,17 @@ import {
   createAgreement29StoreSalaires,
 } from "./29-hospitalisation-privee-but-non-lucratif";
 import {
-  Agreement44StoreInput,
   Agreement44StoreError,
+  Agreement44StoreInput,
   Agreement44StoreSlice,
   createAgreement44StoreSalaires,
 } from "./44-industries-chimiques";
+import {
+  Agreement2596StoreError,
+  Agreement2596StoreInput,
+  Agreement2596StoreSlice,
+  createAgreement2596StoreSalaires,
+} from "./2596-coiffure";
 import {
   Agreement2609StoreError,
   Agreement2609StoreInput,
@@ -43,6 +48,7 @@ export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement16StoreInput &
   Agreement29StoreInput &
   Agreement44StoreInput &
+  Agreement2596StoreInput &
   Agreement2609StoreInput;
 
 export type AgreementStoreError = Agreement1516StoreError &
@@ -50,6 +56,7 @@ export type AgreementStoreError = Agreement1516StoreError &
   Agreement16StoreError &
   Agreement44StoreError &
   Agreement29StoreError &
+  Agreement2596StoreError &
   Agreement2609StoreError;
 
 export type AgreementStoreSlice = Agreement1516StoreSlice &
@@ -57,6 +64,7 @@ export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement16StoreSlice &
   Agreement44StoreSlice &
   Agreement29StoreSlice &
+  Agreement2596StoreSlice &
   Agreement2609StoreSlice;
 
 export const createRootAgreementsStore = (
@@ -69,5 +77,6 @@ export const createRootAgreementsStore = (
   ...createAgreement16StoreSalaires(set, get, options),
   ...createAgreement29StoreSalaires(set, get, options),
   ...createAgreement44StoreSalaires(set, get, options),
+  ...createAgreement2596StoreSalaires(set, get, options),
   ...createAgreement2609StoreSalaires(set, get, options),
 });
