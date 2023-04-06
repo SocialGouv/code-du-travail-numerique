@@ -9,6 +9,7 @@ import { validateAgreement16 } from "./16-transports-routiers";
 import { validateAgreement44 } from "./44-industries-chimiques";
 import { validateAgreement2609 } from "./2609-batiment-etam";
 import { validateAgreement2596 } from "./2596-coiffure";
+import { validateAgreement1672 } from "./1672-societes-assurances";
 
 const validatorAgreement = (
   idcc: SupportedCcIndemniteLicenciement | null,
@@ -35,6 +36,9 @@ const validatorAgreement = (
     case SupportedCcIndemniteLicenciement.IDCC2596 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement2596(get, set);
+    case SupportedCcIndemniteLicenciement.IDCC1672 === idcc &&
+      step === IndemniteLicenciementStepName.Salaires:
+      return validateAgreement1672(get, set);
     case SupportedCcIndemniteLicenciement.IDCC2609 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement2609(get, set);

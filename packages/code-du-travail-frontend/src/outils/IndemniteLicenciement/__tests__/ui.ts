@@ -162,6 +162,14 @@ export const ui = {
         "infos.contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle"
       ),
     },
+    agreement1672: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+      ),
+      age: byTestId(
+        "infos.contrat salarié - convention collective - sociétés d'assurances - age"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),

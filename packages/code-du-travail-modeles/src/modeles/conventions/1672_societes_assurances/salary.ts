@@ -1,20 +1,34 @@
 import type {
   IReferenceSalary,
   ReferenceSalaryProps,
+  SalaryPeriods,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
+import { rankByMonthArrayDescFrench } from "../../common";
+
+export type CC1672ReferenceSalaryProps = {
+  salaires: SalaryPeriods[];
+  salairesPendantPreavis: SalaryPeriods[];
+};
 
 export class ReferenceSalary1672
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1672>
 {
-  computeReferenceSalary(
-    props: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1672>
-  ): number {
-    if (props.salaires.length === 0) {
-      return 0;
-    }
+  computeReferenceSalary({
+    salaires,
+    salairesPendantPreavis,
+  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1672>): number {
+    const rankedSalaires = rankByMonthArrayDescFrench(salaires);
+    const rankedSalairesPendantPreavis = rankByMonthArrayDescFrench(
+      salairesPendantPreavis
+    );
 
-    return props.salaires.reduce(
+    const totalSalaryValues = [
+      ...rankedSalairesPendantPreavis,
+      ...rankedSalaires,
+    ].slice(0, 12);
+
+    return totalSalaryValues.reduce(
       (sref, current) => sref + (current.value ?? 0) + (current.prime ?? 0),
       0
     );
