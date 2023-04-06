@@ -25,4 +25,15 @@ export class NotFoundError extends ErrorBase<
   | "HIGHLIGHT_NOT_FOUND"
   | "AGREEMENT_NOT_FOUND"
   | "CONTRIB_NOT_FOUND"
+  | "CONVENTIONS_NOT_FOUND"
+  | "THEMATIC_FILES_NOT_FOUND"
+  | "GLOSSARY_NOT_FOUND"
+  | "GLOSSARY_TERM_NOT_FOUND"
+  | "STATS_NOT_FOUND"
+  | "ITEMS_NOT_FOUND"
 > {}
+
+export const DEFAULT_ERROR_500_MESSAGE =
+  "Internal server error during fetching data";
+
+export class InvalidQueryError extends ErrorBase<"INVALID_QUERY"> {}

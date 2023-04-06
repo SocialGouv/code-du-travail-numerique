@@ -1,6 +1,6 @@
 import { ElasticSearchItem } from "@socialgouv/cdtn-utils";
 import { NextApiRequest, NextApiResponse } from "next";
-import { NotFoundError } from "../../utils";
+import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
 import { getByIdsAgreements } from "../agreements";
 import { getByIdsContributions } from "../contributions";
 import { getBySlugHighlights } from "../highlights";
@@ -65,11 +65,11 @@ export class HomeController {
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {
-        this.res.status(404).json({ message: "Home element not found" });
+        this.res.status(404).json({ message: error.message });
       } else {
-        this.res
-          .status(500)
-          .json({ message: "Error during getting home element" });
+        this.res.status(500).json({
+          message: DEFAULT_ERROR_500_MESSAGE,
+        });
       }
     }
   }

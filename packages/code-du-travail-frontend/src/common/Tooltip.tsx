@@ -1,9 +1,10 @@
-import { icons } from "@socialgouv/cdtn-ui";
+import { icons, Button } from "@socialgouv/cdtn-ui";
 import { useState } from "react";
 import styled from "styled-components";
 const { HelpCircle: HelpIcon } = icons;
 
 type TooltipParameters = {
+  title: string;
   onChange: (boolean) => void;
   "data-testid"?: string;
 };
@@ -13,6 +14,7 @@ export const Tooltip = ({ onChange, ...parameters }: TooltipParameters) => {
   const [hovered, setHovered] = useState(false);
   return (
     <TooltipWrapper
+      type="button"
       onClick={() => {
         onChange(!opened);
         setOpened(!opened);
@@ -34,8 +36,8 @@ export const Tooltip = ({ onChange, ...parameters }: TooltipParameters) => {
   );
 };
 
-const TooltipWrapper = styled.div`
-  cursor: pointer;
+const TooltipWrapper = styled.button`
+  all: unset;
   display: flex;
   align-items: center;
   justify-content: center;

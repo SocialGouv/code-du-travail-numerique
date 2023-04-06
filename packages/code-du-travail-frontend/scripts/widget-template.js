@@ -32,6 +32,15 @@ function addWidget(info) {
     ) {
       iframe.style.height = evt.data.value + "px";
     }
+    if (
+      evt.source === iframe.contentWindow &&
+      evt.data.kind === "scroll-to-top"
+    ) {
+      const bodyPosition = document.body.getBoundingClientRect();
+      const iframePosition = iframe.getBoundingClientRect();
+      const marginTop = (bodyPosition.height * 5) / 100;
+      window.scrollTo(0, iframePosition.top - bodyPosition.top - marginTop);
+    }
   });
 
   iframe.src = info.url;
