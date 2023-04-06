@@ -12,6 +12,7 @@ import {
 import { printResult } from "./utils/";
 import { SimulatorDecorator } from "../Components";
 import DebugInfo from "./DebugInfo";
+import scrollToTop from "./utils/scrollToTop";
 
 const anchorRef = React.createRef<HTMLLIElement>();
 
@@ -66,7 +67,7 @@ export const Wizard = ({
       `click_previous_${title}`,
       state.steps[nextStepIndex].name,
     ]);
-    window?.scrollTo(0, 0);
+    scrollToTop();
   };
   const nextStep = (values) => {
     let nextStepIndex = stepIndex;
@@ -86,7 +87,7 @@ export const Wizard = ({
       `view_step_${title}`,
       state.steps[nextStepIndex].name,
     ]);
-    window?.scrollTo(0, 0);
+    scrollToTop();
   };
 
   const previousVisible = stepIndex > 0;
