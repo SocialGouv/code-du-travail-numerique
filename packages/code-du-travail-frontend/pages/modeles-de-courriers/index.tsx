@@ -16,6 +16,7 @@ import { Layout } from "../../src/layout/Layout";
 import { summarize } from "../../src/search/utils";
 import { SITE_URL } from "../../src/config";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
+import { handleError } from "../../src/lib/fetch-error";
 
 const title = "Modèles de documents";
 const subtitle =
@@ -105,7 +106,7 @@ function Modeles(props) {
 export const getServerSideProps = async () => {
   const response = await fetch(`${SITE_URL}/api/modeles`);
   if (!response.ok) {
-    return handleError(responseContainer);
+    return handleError(response);
   }
   const data = await response.json();
 
