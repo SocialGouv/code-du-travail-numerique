@@ -150,12 +150,14 @@ const absenceDurationRatio = (absence: Absence, year: YearDetail): number => {
     days: DAYS_IN_ONE_MONTH * absence.durationInMonth,
   });
   if (absenceStartAt >= year.begin && absenceEndAt <= year.end) {
-    return absence.durationInMonth;
+    return absence.durationInMonth * absence.motif.value;
   }
   return (
-    getOverlappingDaysInIntervals(
+    (getOverlappingDaysInIntervals(
       { end: absenceEndAt, start: absenceStartAt },
       { end: year.end, start: year.begin }
-    ) / DAYS_IN_ONE_MONTH
+    ) /
+      DAYS_IN_ONE_MONTH) *
+    absence.motif.value
   );
 };
