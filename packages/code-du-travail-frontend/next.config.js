@@ -24,6 +24,7 @@ const compose =
 
 const nextConfig = {
   poweredByHeader: false,
+  productionBrowserSourceMaps: true,
   sentry: {
     hideSourceMaps: false,
     widenClientFileUpload: true,
