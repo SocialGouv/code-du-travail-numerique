@@ -111,7 +111,6 @@ export const getServerSideProps = async () => {
 
   return {
     props: { data },
-    revalidate: 600, // 10 minutes
   };
 };
 
