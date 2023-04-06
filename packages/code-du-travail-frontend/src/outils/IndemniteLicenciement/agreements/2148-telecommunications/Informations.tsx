@@ -38,7 +38,7 @@ export default function Agreement2148Informations() {
                   <tr>
                     <th>Mois</th>
                     <th>
-                      Salaire
+                      Salaire{noticeSalaryPeriods.length > 1 && "s"}
                       <br />
                       <StyledFilledElementSpan>
                         (primes et avantages en nature inclus)

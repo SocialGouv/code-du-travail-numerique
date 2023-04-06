@@ -74,6 +74,9 @@ export default function Agreement2148() {
               title={`Salaire${S()} perçu${S()} pendant le préavis`}
               onSalariesChange={onSalariesChange}
               salaryPeriods={noticeSalaryPeriods}
+              subTitle={`Indiquez le montant ${
+                hasMoreThanOneNoticeSalary ? "des" : "du"
+              } salaire${S()} (en incluant les primes et avantages en nature)`}
               error={errorNoticeSalaryPeriods}
               noPrime
               dataTestidSalaries="notice-salary"
