@@ -1,4 +1,5 @@
 import {
+  IReferenceSalary,
   ReferenceSalaryFactory,
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,

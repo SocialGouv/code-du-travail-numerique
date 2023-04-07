@@ -168,7 +168,7 @@ describe("Indemnité licenciement - CC 44", () => {
       );
     });
 
-    test(`ne doit pas afficher la question sur le salaire pour le dernièr mois`, () => {
+    test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, () => {
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
