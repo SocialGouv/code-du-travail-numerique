@@ -73,19 +73,13 @@ contrat salarié . convention collective . travaux publics . vingt cinq pourcent
       facteur: 25 / 100
   unité: €
 
-contrat salarié . convention collective . travaux publics . dix pourcent du salaire de reference:
-  valeur:
-    produit:
-      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      facteur: 10 / 100
-  unité: €
-
-contrat salarié . convention collective . travaux publics . plafond de 10 mois avec dix pourcent en plus:
+contrat salarié . convention collective . travaux publics . somme avec majoration:
   somme:
-    - dix pourcent du salaire de reference
-    - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 10
+    - vingt cinq pourcent de moins de quinze ans
+    - trente cinq pourcent de plus de quinze ans
+    - dix pourcent vingt cinq pourcent de moins de quinze ans
+    - dix pourcent trente cinq pourcent de plus de quinze ans
   unité: €
-
 
 # Définitions des namespaces
 contrat salarié . convention collective . travaux publics . age . moins de  55 ans:
@@ -127,12 +121,8 @@ contrat salarié . convention collective . travaux publics . age . moins de  55 
 contrat salarié . convention collective . travaux publics . age . entre 55 ans et 65 ans . résultat conventionnel:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  somme:
-    - vingt cinq pourcent de moins de quinze ans
-    - trente cinq pourcent de plus de quinze ans
-    - dix pourcent vingt cinq pourcent de moins de quinze ans
-    - dix pourcent trente cinq pourcent de plus de quinze ans
-  plafond: plafond de 10 mois avec dix pourcent en plus
+  valeur: somme avec majoration
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 11
   unité: €
   arrondi: 2 décimales
   références:
