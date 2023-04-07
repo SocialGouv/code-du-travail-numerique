@@ -37,6 +37,7 @@ export const SummaryItem = ({
           {info && (
             <TooltipWrapper>
               <Tooltip
+                title={"Plus d'informations"}
                 onChange={(opened) => {
                   setOpenedTooltip(opened);
                 }}

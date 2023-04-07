@@ -10,10 +10,10 @@ import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
 import { handleError } from "../../src/lib/fetch-error";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 
 const fetchFiche = ({ slug }) =>
-  fetch(`${API_URL}/items/code_du_travail/${slug}`);
+  fetch(`${SITE_URL}/api/items/code_du_travail/${slug}`);
 
 interface Props {
   breadcrumbs: Breadcrumb[];

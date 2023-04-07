@@ -23,9 +23,6 @@ const compose =
     fns.reduceRight((arg, fn) => fn(arg), args);
 
 const nextConfig = {
-  devIndicators: {
-    autoPrerender: false,
-  },
   poweredByHeader: false,
   sentry: {
     disableClientWebpackPlugin: true,

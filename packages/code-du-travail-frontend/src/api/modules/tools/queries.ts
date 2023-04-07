@@ -43,30 +43,3 @@ export const getTools = (
     ],
   };
 };
-
-export const getToolBySlug = async (slug: string) => {
-  const filter = [
-    {
-      bool: {
-        must: [
-          { term: { isPublished: true } },
-          { term: { source: "outils" } },
-          { term: { slug } },
-        ],
-      },
-    },
-  ];
-  return {
-    query: {
-      bool: {
-        filter,
-      },
-    },
-    size: 200,
-    sort: [
-      {
-        order: "asc",
-      },
-    ],
-  };
-};

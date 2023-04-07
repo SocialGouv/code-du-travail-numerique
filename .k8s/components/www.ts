@@ -2,7 +2,6 @@ import env from "@kosko/env";
 import { ok } from "assert";
 
 import { create } from "@socialgouv/kosko-charts/components/app";
-import { addWaitForHttp } from "@socialgouv/kosko-charts/utils/addWaitForHttp";
 import { getGithubRegistryImagePath } from "@socialgouv/kosko-charts/utils/getGithubRegistryImagePath";
 import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
 import type { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
@@ -72,9 +71,6 @@ export default async () => {
   );
   ok(deployment);
   ok(deployment.spec);
-
-  // add a wait condition on the API service with an initContainer
-  addWaitForHttp(deployment, "http://api");
 
   const hpa = new HorizontalPodAutoscaler({
     metadata: deployment.metadata,

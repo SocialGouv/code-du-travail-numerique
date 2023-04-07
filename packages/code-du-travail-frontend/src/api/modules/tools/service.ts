@@ -4,10 +4,29 @@ import {
   elasticDocumentsIndex,
   NotFoundError,
 } from "../../utils";
-import { getTools, getToolBySlug } from "./queries";
+import { getTools } from "./queries";
 
 export const getAllTools = async (): Promise<Tool[]> => {
   const body = getTools();
+  const response = await elasticsearchClient.search({
+    body,
+    index: elasticDocumentsIndex,
+  });
+  if (response.body.hits.total.value === 0) {
+    throw new NotFoundError({
+      message: `There is no tools that match query`,
+      name: "TOOLS_NOT_FOUND",
+      cause: null,
+    });
+  }
+  return response.body.hits.hits;
+};
+
+export const getToolsByIdsAndSlugs = async (
+  ids?: string[],
+  slugs?: string[]
+): Promise<Tool[]> => {
+  const body = getTools(ids, slugs);
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
@@ -55,7 +74,7 @@ export const getToolsBySlugs = async (slugs: string[]): Promise<Tool[]> => {
 };
 
 export const getBySlugTools = async (slug: string): Promise<Tool> => {
-  const body = getToolBySlug(slug);
+  const body = getTools(undefined, [slug]);
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
