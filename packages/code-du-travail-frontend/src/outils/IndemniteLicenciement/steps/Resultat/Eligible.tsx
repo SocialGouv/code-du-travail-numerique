@@ -128,7 +128,7 @@ export default function Eligible() {
           isAgreementBetter={isAgreementBetter}
           agreementInformations={agreementInformations}
           agreementRefSalaryInfo={
-            agreement && (
+            agreement && isAgreementSupported && (
               <AgreementsInjector
                 idcc={getSupportedAgreement(agreement.num)}
                 step={IndemniteLicenciementStepName.Resultat}
