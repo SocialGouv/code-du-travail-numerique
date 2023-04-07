@@ -2,33 +2,34 @@ import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 
 const engine = new IndemniteLicenciementPublicodes(
   modelsIndemniteLicenciement,
-  "3127"
+  "86"
 );
 
-describe("Calcul de l'indemnité de licenciement - CC 3127", () => {
+describe("Indemnité conventionnel de licenciement pour la CC 86", () => {
   test.each`
-    seniorityRight | seniority  | salaireRef | expectedCompensation
-    ${11 / 12}     | ${1}       | ${2600}    | ${0}
-    ${1}           | ${1}       | ${2600}    | ${520}
-    ${1}           | ${13 / 12} | ${2600}    | ${563.33}
-    ${1}           | ${13}      | ${2600}    | ${7800}
+    seniority | seniorityRight | salary  | expectedCompensation
+    ${1.91}   | ${1.5}         | ${2420} | ${0}
+    ${2}      | ${1.95}        | ${2420} | ${0}
+    ${2}      | ${2}           | ${2420} | ${1597.2}
+    ${15}     | ${2}           | ${2420} | ${11979}
+    ${20}     | ${2}           | ${2420} | ${16819}
   `(
-    "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € => une compensation de base de $expectedCompensation €",
-    ({ salaireRef, expectedCompensation, seniority, seniorityRight }) => {
+    "Avec $seniority ans, et sref : $salary => $expectedCompensation €",
+    ({ seniority, salary, expectedCompensation, seniorityRight }) => {
       const { result, missingArgs } = engine.setSituation(
         {
-          "contrat salarié . convention collective": "'IDCC3127'",
+          "contrat salarié . convention collective": "'IDCC0086'",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             seniorityRight,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            salaireRef,
+            salary,
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      expect(result.unit?.numerators).toEqual(["€"]);
       expect(missingArgs).toEqual([]);
+      expect(result.unit?.numerators).toEqual(["€"]);
       expect(result.value).toEqual(expectedCompensation);
     }
   );
