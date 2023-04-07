@@ -1,4 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-sources";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Button, FlatList, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
@@ -46,6 +46,7 @@ const AgreementSelectionStep = ({
       <Link
         href={`/${SOURCES.TOOLS}/convention-collective#entreprise`}
         passHref
+        legacyBehavior
       >
         <Button as="a" small type="button" onClick={onBackClick} variant="flat">
           Précédent

@@ -1,9 +1,8 @@
-import { SOURCES } from "@socialgouv/cdtn-sources";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Button, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import { TrackingProps } from "../types";
-import { renderResults } from "../../common/Agreement/AgreementSearch/AgreementSearchResult";
 import styled from "styled-components";
 import { SectionTitle } from "../../common/stepStyles";
 import { SearchAgreementInput } from "../../common/Agreement/AgreementSearch/AgreementInput/SearchAgreementInput";
@@ -27,15 +26,16 @@ const AgreementSearchStep = ({
         <form onSubmit={(event) => event.preventDefault()}>
           <SearchAgreementInput
             onUserAction={onUserAction}
-            renderResults={renderResults({
-              onSelectAgreement,
-              onUserAction,
-            })}
+            onSelectAgreement={onSelectAgreement}
           />
         </form>
       </Section>
 
-      <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
+      <Link
+        href={`/${SOURCES.TOOLS}/convention-collective`}
+        passHref
+        legacyBehavior
+      >
         <Button as="a" small type="button" onClick={onBackClick} variant="flat">
           Précédent
         </Button>

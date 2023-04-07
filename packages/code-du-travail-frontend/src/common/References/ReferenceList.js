@@ -1,4 +1,4 @@
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { ArrowLink, FlatList, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
@@ -6,7 +6,7 @@ import { useUIDSeed } from "react-uid";
 import styled from "styled-components";
 
 const InternalLink = ({ title, type, slug }) => (
-  <Link href={`/${getRouteBySource(type)}/${slug}`} passHref>
+  <Link href={`/${getRouteBySource(type)}/${slug}`} passHref legacyBehavior>
     <StyledArrowLink arrowPosition="left">{title}</StyledArrowLink>
   </Link>
 );

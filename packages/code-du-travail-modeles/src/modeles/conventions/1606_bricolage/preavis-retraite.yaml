@@ -1,0 +1,79 @@
+contrat salarié . convention collective . bricolage . départ à la retraite:
+  applicable si: départ à la retraite
+  remplace: préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 1 mois
+        plafond: 25 mois
+      - montant: 2 mois
+  références:
+    Article 9.3.1: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005870737/?idConteneur=KALICONT000005635871
+
+contrat salarié . convention collective . bricolage . catégorie professionnelle:
+  applicable si: mise à la retraite
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      Employés: "'Employés'"
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Cadres: "'Cadres'"
+
+contrat salarié . convention collective . bricolage . employés:
+  applicable si: catégorie professionnelle = 'Employés'
+  valeur: oui
+
+contrat salarié . convention collective . bricolage . employés . mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 0 mois
+        plafond: 1 mois
+      - montant: 15 jour
+        plafond: 6 mois
+      - montant: 1 mois
+        plafond: 24 mois
+      - montant: 2 mois
+  références:
+    Article 9.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870734?idConteneur=KALICONT000005635871
+
+contrat salarié . convention collective . bricolage . agents:
+  applicable si: catégorie professionnelle = 'Agents de maîtrise'
+  valeur: oui
+
+contrat salarié . convention collective . bricolage . agents . mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 0 mois
+        plafond: 2 mois
+      - montant: 1 mois
+        plafond: 7 mois
+      - montant: 2 mois
+  références:
+    Annexe "agents de maîtrise", article 9: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005870772/?idConteneur=KALICONT000005635871
+
+contrat salarié . convention collective . bricolage . cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
+
+contrat salarié . convention collective . bricolage . cadres . mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 0 mois
+        plafond: 3 mois
+      - montant: 1 mois
+        plafond: 7 mois
+      - montant: 3 mois
+  références:
+    Annexe "cadres", article 9: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005870787/?idConteneur=KALICONT000005635871

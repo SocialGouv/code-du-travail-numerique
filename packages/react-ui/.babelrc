@@ -1,19 +1,17 @@
 {
   "presets": [
+    "@babel/preset-env",
     "@babel/preset-react",
-    [
-      "@babel/preset-env",
-      {
-        "modules": false
-      }
-    ]
+    "@babel/preset-typescript"
   ],
-  "plugins": ["@babel/plugin-proposal-class-properties", "@babel/plugin-proposal-export-namespace-from"],
-  "env": {
-    "test": {
-      "presets": [
-        ["@babel/preset-env", { "modules": "cjs" }]
-      ]
-    }
-  }
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-namespace-from"
+  ],
+  "exclude": [
+    "**/*.stories.js",
+    "**/*.stories.ts",
+    "story.js",
+    "story.ts"
+  ]
 }

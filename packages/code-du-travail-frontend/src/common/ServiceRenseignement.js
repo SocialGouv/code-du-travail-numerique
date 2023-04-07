@@ -1,4 +1,11 @@
-import { Button, Heading, icons, Input, theme } from "@socialgouv/cdtn-ui";
+import {
+  Button,
+  Heading,
+  icons,
+  Input,
+  PageTitle,
+  theme,
+} from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { useRouter } from "next/router";
 import React, { useCallback, useEffect, useState } from "react";
@@ -60,14 +67,15 @@ function ServiceRenseignement() {
 
   return (
     <>
-      <Heading as="h4">Contact téléphonique</Heading>
+      <PageTitle>Les services du ministère du Travail</PageTitle>
+      <Heading as="h2">Contact téléphonique</Heading>
       <NumberInsert href="tel:+0033806000126" onClick={trackTelClick}>
         <Number>0 806 000 126</Number>
         <Pricing>
           Service gratuit <span>+ prix appel</span>
         </Pricing>
       </NumberInsert>
-      <Heading as="h4">Contact par email et prise de rendez-vous</Heading>
+      <Heading as="h2">Contact par email et prise de rendez-vous</Heading>
       <Form
         onSubmit={onDepartmentInput}
         render={({ handleSubmit }) => (

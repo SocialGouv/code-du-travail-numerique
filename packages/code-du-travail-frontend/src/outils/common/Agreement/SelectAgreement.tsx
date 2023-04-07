@@ -14,6 +14,7 @@ import { handleTrackEvent } from "./tracking";
 import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
 import { SmallText } from "../stepStyles";
 import { ErrorField } from "../ErrorField";
+import { STORAGE_KEY_AGREEMENT } from "../../types";
 
 export type Props = {
   title: string;
@@ -37,7 +38,7 @@ const SelectAgreement = ({
   alertAgreementNotSupported,
 }: Props): JSX.Element => {
   const [storedConvention, setConvention] = useLocalStorage(
-    "convention",
+    STORAGE_KEY_AGREEMENT,
     defaultSelectedAgreement
   );
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(

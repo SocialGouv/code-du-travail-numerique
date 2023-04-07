@@ -22,7 +22,7 @@ import { Feedback } from "./Feedback";
 import Html from "./Html";
 import { RelatedItems } from "./RelatedItems";
 import { Share } from "./Share";
-import { Breadcrumb } from "cdtn-types";
+import { Breadcrumb } from "@socialgouv/cdtn-utils";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>
@@ -32,17 +32,17 @@ const BigError = ({ children }) => (
 type AnswerProps = {
   additionalContent?: any;
   breadcrumbs?: Breadcrumb[];
-  children: any[] | null;
+  children: any[] | any | null;
   className?: string;
   date?: string;
-  dateLabel: string;
+  dateLabel?: string;
   emptyMessage?: string;
   html?: string | null;
   intro?: string | null;
   metaDescription?: string;
-  relatedItems?: string[];
-  source?: string;
-  subtitle?: string;
+  relatedItems?: any[];
+  source?: any;
+  subtitle?: any;
   suptitle?: string;
   title: string;
 };

@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agreement service can search IDCCs 1`] = `
-Array [
-  Object {
+[
+  {
     "id": "KALICONT000005635886",
     "num": 843,
     "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",

@@ -1,4 +1,4 @@
-import { heuresRechercheEmploiData as data } from "@cdt/data";
+import { heuresRechercheEmploiData as data } from "@socialgouv/modeles-social";
 import { useEffect } from "react";
 
 import { SelectQuestion } from "../../common/SelectQuestion";
@@ -16,9 +16,7 @@ const question = questions.find((q) => q.name === "type de rupture");
 function StepTypeRupture({ form }) {
   const { values } = form.getState();
   const { ccn } = values;
-  useEffect(() => {
-    values.criteria = {};
-  });
+
   const idcc = ccn?.selected ? ccn.selected.num : 0;
 
   const initialSituations = getSituationsFor(allSituations, { idcc });
@@ -35,6 +33,7 @@ function StepTypeRupture({ form }) {
 
       <SelectQuestion
         name="typeRupture"
+        data-test-id="typeRupture"
         label={question?.question ?? ""}
         options={nextQuestionOptions}
       />

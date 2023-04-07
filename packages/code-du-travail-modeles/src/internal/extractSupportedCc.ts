@@ -1,7 +1,8 @@
 import type { Rule } from "publicodes";
 import type Engine from "publicodes";
 
-import type { AgreementInfo } from "..";
+import type { AgreementInfo } from "../modeles/common";
+import { getSupportedAgreement } from "../modeles/common";
 
 export type RuleNodeIdcc = Rule & {
   cdtn?: {
@@ -20,6 +21,7 @@ export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
         if (idcc) {
           return {
             idcc,
+            indemniteLicenciement: getSupportedAgreement(idcc) ? true : false,
             preavisRetraite: cdtnNode["préavis-retraite"] ?? false,
           };
         }

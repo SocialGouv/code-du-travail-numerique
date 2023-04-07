@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { RadioQuestion, TextQuestion } from "../../../Components";
-import { AbsencePeriods } from "./components";
-import { useIndemniteLicenciementStore } from "../../store";
+import { AbsencePeriods, SectionTitleWithTooltip } from "./components";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
+import { informationToSituation } from "../../../CommonSteps/Informations/utils";
+import Html from "../../../../common/Html";
+// Do not optimize the following import
+import { getMessageMotifExample } from "../../agreements/ui-customizations";
 
 const StepAnciennete = () => {
+  const store = useContext(IndemniteLicenciementContext);
   const {
+    init,
     onChangeAbsencePeriods,
+    motifs,
     absencePeriods,
     onChangeHasAbsenceProlonge,
     hasAbsenceProlonge,
@@ -22,8 +32,11 @@ const StepAnciennete = () => {
     errorAbsenceProlonge,
     errorDateEntree,
     errorAbsencePeriods,
-  } = useIndemniteLicenciementStore((state) => ({
+    informationData,
+  } = useIndemniteLicenciementStore(store, (state) => ({
+    init: state.ancienneteFunction.init,
     onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
+    motifs: state.ancienneteData.input.motifs,
     absencePeriods: state.ancienneteData.input.absencePeriods,
     onChangeHasAbsenceProlonge:
       state.ancienneteFunction.onChangeHasAbsenceProlonge,
@@ -39,12 +52,28 @@ const StepAnciennete = () => {
     errorAbsenceProlonge: state.ancienneteData.error.errorAbsenceProlonge,
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
     errorAbsencePeriods: state.ancienneteData.error.errorAbsencePeriods,
+    agreement: state.agreementData.input.agreement,
+    informationData: informationToSituation(
+      state.informationsData.input.publicodesInformations
+    ),
   }));
+
+  useEffect(() => {
+    init();
+  }, [init]);
+
+  const messageMotifsExample = React.useMemo(
+    () => getMessageMotifExample(informationData),
+    [informationData]
+  );
+
   return (
     <>
-      <SectionTitle>Dates d’entrée et de sortie de l’entreprise</SectionTitle>
+      <SectionTitle hasSmallMarginTop>
+        Dates de début et de fin de contrat
+      </SectionTitle>
       <TextQuestion
-        label="Quelle est la date d’entrée dans l’entreprise&nbsp;?"
+        label="Quelle est la date de début du contrat de travail&nbsp;?"
         inputType="date"
         placeholder="jj/mm/aaaa"
         value={dateEntree}
@@ -52,6 +81,7 @@ const StepAnciennete = () => {
         error={errorDateEntree}
         id="dateEntree"
         showRequired
+        dataTestId={"date-entree"}
       />
       <TextQuestion
         label="Quelle est la date de notification du licenciement&nbsp;?"
@@ -62,9 +92,10 @@ const StepAnciennete = () => {
         error={errorDateNotification}
         id="dateNotification"
         showRequired
+        dataTestId={"date-notification"}
       />
       <TextQuestion
-        label="Quelle est la date de sortie de l’entreprise&nbsp;?"
+        label="Quelle est la date de fin du contrat de travail&nbsp;?"
         inputType="date"
         placeholder="jj/mm/aaaa"
         value={dateSortie}
@@ -72,8 +103,30 @@ const StepAnciennete = () => {
         error={errorDateSortie}
         id="dateSortie"
         showRequired
+        dataTestId={"date-sortie"}
+        tooltip={{
+          content: (
+            <p>
+              En cas de dispense de préavis à l&apos;initiative de
+              l&apos;employeur, ou si le licenciement intervient à la suite d’un
+              avis d’inaptitude non professionnelle, indiquer la date de fin du
+              préavis «&nbsp;théorique&nbsp;» non effectué.
+            </p>
+          ),
+        }}
       />
-      <SectionTitle>Période d’absence prolongée</SectionTitle>
+      <SectionTitleWithTooltip
+        name="Période d’absence prolongée"
+        tooltip={{
+          content: (
+            <p>
+              Pour rendre le saisie de l&apos;outil plus simple, les
+              absences de moins d&apos;un mois ne sont pas comptabilisées.
+              Or, ces absences peuvent impacter l&apos;ancienneté et
+              donner ainsi lieu à un montant d&apos;indemnité inférieur
+              à celui calculé par notre simulateur.
+            </p>)
+        }} />
       <RadioQuestion
         questions={[
           {
@@ -97,8 +150,11 @@ const StepAnciennete = () => {
       {hasAbsenceProlonge === "oui" && (
         <AbsencePeriods
           onChange={onChangeAbsencePeriods}
+          motifs={motifs}
           absences={absencePeriods}
           error={errorAbsencePeriods}
+          informationData={informationData}
+          messageMotifExample={messageMotifsExample}
         />
       )}
     </>

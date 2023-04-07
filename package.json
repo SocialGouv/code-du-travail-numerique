@@ -6,20 +6,20 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "build": "lerna run build",
-    "build:ui": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@socialgouv/modeles-social,@cdt/frontend} --stream",
-    "build:npm": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public} --stream",
+    "build": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils,@cdt/frontend} --stream",
+    "build:npm": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils} --stream",
+    "build:frontend": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils,@cdt/frontend} --stream",
     "clean": "lerna clean",
     "dev:docker": "docker-compose up elasticsearch",
     "dev": "lerna run dev --parallel",
-    "dev:api": "lerna run dev --scope=@cdt/api --stream",
-    "dev:type-check": "lerna run type-check:watch --scope=@cdt/api --stream",
-    "dev:frontend": "lerna run dev --parallel --scope={@cdt/frontend,@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@socialgouv/modeles-social,@cdt/data} --stream",
-    "test:frontend": "lerna run test --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@cdt/frontend,@cdt/data} --stream",
-    "dev:frontend:preprod-api": "AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net AZURE_CONTAINER=cdtn-dev API_URL=https://api-code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/v1 yarn dev:frontend",
+    "type-check": "lerna run type-check --scope={@socialgouv/modeles-social,@cdt/frontend} --stream",
+    "dev:frontend": "lerna run dev --parallel --scope={@cdt/frontend,@socialgouv/cdtn-ui,@socialgouv/modeles-social} --stream",
+    "dev:frontend:preprod-api": "NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr yarn dev:frontend",
+    "dev:simulate-deployment": "NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr yarn workspace @cdt/frontend build && yarn workspace @cdt/frontend start",
     "k8s": "yarn --silent --cwd .k8s",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint -- --fix",
+    "lint:quiet": "lerna run lint -- --quiet",
     "start": "lerna run start --scope=@cdt/frontend --stream",
     "storybook:run": "lerna run start --scope=@socialgouv/cdtn-ui",
     "storybook:deploy": "lerna run deploy-storybook --scope=@socialgouv/cdtn-ui",
@@ -27,10 +27,10 @@
     "svg": "lerna run svg --scope=@socialgouv/cdtn-ui --stream",
     "test": "lerna run test",
     "test:modeles": "lerna exec --scope=@socialgouv/modeles-social -- yarn test",
-    "test:e2e": "lerna run test:e2e --scope=@cdt/e2e --stream",
-    "test:e2e:headed": "lerna run test:e2e:headed --scope=@cdt/e2e --stream",
-    "test:e2e:ui": "lerna run test:e2e:ui --scope=@cdt/e2e --stream",
-    "test:update": "lerna run test:update --scope={@cdt/data,@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@cdt/frontend} --stream",
+    "test:api": "lerna run test:api --scope=@cdt/frontend --stream",
+    "test:e2e": "lerna run test:e2e --scope=@cdt/frontend --stream",
+    "test:e2e:ui": "lerna run test:e2e:ui --scope=@cdt/frontend --stream",
+    "test:update": "lerna run test:update --scope={@socialgouv/cdtn-ui,@cdt/frontend} --stream",
     "prepare": "is-ci || husky install"
   },
   "repository": {
@@ -41,9 +41,9 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
-    "husky": "^7.0.1",
+    "husky": "^8.0.0",
     "is-ci": "^3.0.0",
-    "lerna": "^4.0.0"
+    "lerna": "^5.0.0"
   },
   "resolutions": {
     "@babel/core": "^7.14.8",
@@ -52,12 +52,14 @@
   },
   "workspaces": {
     "packages": [
-      "packages/*",
-      "packages/code-du-travail-data/*"
+      "packages/*"
     ]
   },
   "engines": {
-    "node": ">= v14.17.5"
+    "node": ">= v14.18.3"
+  },
+  "volta": {
+    "node": "14.18.3"
   },
   "version": "0.0.0"
 }

@@ -48,7 +48,7 @@ const SeniorityStep = ({
       {showAccurateSeniority && (
         <TextQuestion
           name={SeniorityValue}
-          label="Quelle est l'ancienneté du salarié dans l’entreprise en mois ?"
+          label="Quelle est l'ancienneté du salarié dans l'entreprise en mois ?"
           inputType="number"
           validate={isPositiveNumber}
           validateOnChange

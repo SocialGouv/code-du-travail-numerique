@@ -1,6 +1,5 @@
-import create from "zustand";
+import { createStore as create } from "zustand";
 import { PreavisRetraiteState, PreavisRetraiteStore } from "./types";
-import { PreavisRetraitePublicodes } from "@socialgouv/modeles-social";
 import {
   askAccurateSeniority,
   computeMinSeniorityYear,
@@ -12,7 +11,8 @@ import {
 } from "./usecases";
 import { updateFormValues } from "./utils";
 import removeOldQuestions from "./usecases/removeOldQuestions";
-import validateInformationAgreement3239 from "./usecases/validateInformationAgreement3239";
+import resetInfosLastQuestionNotAnsweredOnOriginChange from "./usecases/resetInfosLastQuestionNotAnsweredOnOriginChange";
+import { loadPublicodes } from "../../api";
 
 export const initialState: PreavisRetraiteState = {
   title: "",
@@ -31,25 +31,35 @@ export const initialState: PreavisRetraiteState = {
   formValues: {},
 };
 
-const createPreavisRetraiteStore = (rules: string, title: string) =>
+const createPreavisRetraiteStore = (title: string, slug: string) =>
   create<PreavisRetraiteStore>((set) => ({
     ...initialState,
     title: title,
-    publicodes: new PreavisRetraitePublicodes(rules),
+    publicodes: loadPublicodes(slug),
     onFormValuesChange: (values) =>
       set((state) => ({
         ...state,
         formValues: values,
       })),
-    onOriginChange: (type) => set((state) => showOriginWarning(state, type)),
-    onAgreementChange: (newValue, oldValue, form) =>
+    onOriginChange: (oldType, newType) =>
       set((state) =>
-        computeMinSeniorityYear(
-          computeNextQuestion(
-            resetInfos(newValue, oldValue, state, updateFormValues(form))
-          )
+        resetInfosLastQuestionNotAnsweredOnOriginChange(
+          oldType,
+          newType,
+          showOriginWarning(state, newType!!)
         )
       ),
+    onAgreementChange: (newValue, oldValue, form) =>
+      set((state) => {
+        return {
+          ...computeMinSeniorityYear(
+            computeNextQuestion(
+              resetInfos(newValue, oldValue, state, updateFormValues(form))
+            )
+          ),
+          publicodes: loadPublicodes(slug, newValue?.num?.toString()),
+        };
+      }),
     onInformationChange: (name, form) =>
       set((state) =>
         computeNextQuestion(

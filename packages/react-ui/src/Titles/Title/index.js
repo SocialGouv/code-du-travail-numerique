@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { Stripe } from "../../Stripe/index.js";
+import { Stripe } from "../../Stripe";
 import { breakpoints, fonts, spacings } from "../../theme.js";
 import { Header } from "../common/Header.js";
 import { TitleParagraph } from "../common/TitleParagraph.js";
@@ -46,8 +46,10 @@ export const Title = ({
 Title.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node,
+  id: PropTypes.string,
   isFirst: PropTypes.bool,
   isHeader: PropTypes.bool,
+  role: PropTypes.string,
   shift: PropTypes.string,
   stripe: PropTypes.oneOf(["left", "top", "none"]),
   subtitle: PropTypes.node,

@@ -1,6 +1,6 @@
 import { Step } from "../../../Simulator";
 import { StepName } from "../../steps";
-import { matopush } from "../../../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent, MatomoRetirementEvent } from "../../../../lib";
 import { pushAgreementEvents } from "../../../common";
 import { getSupportedCC } from "../../steps/AgreementStep/RenderStep";
@@ -23,7 +23,10 @@ const processAnalyticEvents = (
       ]);
       break;
     case oldStep.name === StepName.Agreement && newStep.name === StepName.Infos:
-      pushAgreementEvents(state.title, state.formValues.ccn, getSupportedCC());
+      const isTreated = getSupportedCC().find(
+        (agreement) => agreement.idcc === state.formValues.ccn?.selected?.num
+      );
+      pushAgreementEvents(state.title, state.formValues.ccn, !!isTreated);
       break;
     case oldStep.name === StepName.Seniority &&
       newStep.name === StepName.Result:

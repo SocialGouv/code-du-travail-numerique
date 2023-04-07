@@ -1,4 +1,4 @@
-import { formatIdcc } from "@cdt/data";
+import { formatIdcc } from "@socialgouv/modeles-social";
 import { theme } from "@socialgouv/cdtn-ui";
 import { format, parseISO } from "date-fns";
 import Link from "next/link";
@@ -32,7 +32,7 @@ const Info = ({ convention: { num, title, date_publi, url } }) => (
       </p>
     )}
     <p data-no-glossary>
-      <Link href="/glossaire/convention-collective" passHref>
+      <Link href="/glossaire/convention-collective" passHref legacyBehavior>
         <A11yLink target="_blank" rel="noopener noreferrer nofollow">
           Qu’est-ce qu’une convention collective&nbsp;?
         </A11yLink>

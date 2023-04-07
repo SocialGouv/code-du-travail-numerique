@@ -17,6 +17,10 @@ const formulae = `26 + (this (is) weird) / (45 (why not)) + 3
 
 6 / 3
 
+4 / 10 * Sref * A - 20% * (4 / 10 * Sref * A) + 3 * Sref
+
+20% - 30%
+
  no no / ok ok ok `;
 
 describe("asciiMathToTex", () => {
@@ -35,6 +39,10 @@ describe("asciiMathToTex", () => {
 \\frac{6}{(sref)}
 
 \\frac{6}{3}
+
+\\frac{4}{10} \\times Sref \\times A - 20\\% \\times (\\frac{4}{10} \\times Sref \\times A) + 3 \\times Sref
+
+20\\% - 30\\%
 
  no \\frac{no}{ok} ok ok `);
   });

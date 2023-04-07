@@ -1,0 +1,44 @@
+contrat salarié . convention collective . habillement textiles commerce de detail . départ à la retraite:
+  applicable si: départ à la retraite
+  remplace: préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 15 jour
+        plafond: 6 mois
+      - montant: 1 mois
+        plafond: 24 mois
+      - montant: 2 mois
+  références:
+    Chapitre I Article 19. a: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005840267/?idConteneur=KALICONT000005635594
+    Chapitre II Article 12: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023097315/?idConteneur=KALICONT000005635594
+
+contrat salarié . convention collective . habillement textiles commerce de detail . mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 15 jour
+        plafond: 6 mois
+      - montant: 1 mois
+        plafond: 24 mois
+      - montant: 3 mois
+  références:
+    Chapitre I Article 19. b: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005840267/?idConteneur=KALICONT000005635594
+    Chapitre II Article 12: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023097315/?idConteneur=KALICONT000005635594
+
+contrat salarié . convention collective . habillement textiles commerce de detail . départ à la retraite . notification:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
+      - ancienneté < 6 mois
+  type: notification
+  description: "Il s'agit d'un délai minimum."
+  valeur: oui
+
+contrat salarié . convention collective . habillement textiles commerce de detail . mise à la retraite . notification:
+  applicable si: contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
+  type: notification
+  description: "Il s'agit d'un délai minimum."
+  valeur: oui

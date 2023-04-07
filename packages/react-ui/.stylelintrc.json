@@ -1,0 +1,10 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-styled-components"
+  ],
+  "plugins": ["stylelint-order", "stylelint-config-rational-order/plugin"],
+  "customSyntax": "postcss-scss",
+  "defaultSeverity": "warning"
+}

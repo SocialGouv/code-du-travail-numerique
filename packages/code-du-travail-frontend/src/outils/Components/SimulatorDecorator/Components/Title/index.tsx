@@ -7,6 +7,7 @@ export type TitleProps = {
   hasNoMarginBottom?: boolean;
   icon?: string;
   title: string;
+  className?: string;
 };
 
 const Duration = ({ duration }: { duration: string }): JSX.Element => {
@@ -23,10 +24,11 @@ const Index = ({
   icon,
   duration,
   hasNoMarginBottom,
+  className,
 }: TitleProps): JSX.Element => {
-  const Icon = icons[icon];
+  const Icon = icon ? icons[icon] : null;
   return (
-    <ToolTitle hasNoMarginBottom={hasNoMarginBottom}>
+    <ToolTitle hasNoMarginBottom={hasNoMarginBottom} className={className}>
       <StyledTitleBox>
         {Icon && (
           <IconWrapper>
@@ -49,7 +51,7 @@ const ToolTitle = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: ${(props) =>
-    props.hasNoMarginBottom ? "0px" : spacings.large};
+    props.hasNoMarginBottom ? "0px" : spacings.medium};
   padding-bottom: ${spacings.base};
   border-bottom: 1px solid ${({ theme }) => theme.border};
   @media (max-width: ${breakpoints.tablet}) {
@@ -71,6 +73,11 @@ const IconWrapper = styled.span`
   width: 5.2rem;
   height: 5.2rem;
   margin-right: ${spacings.base};
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 4.2rem;
+    height: 4.2rem;
+    margin-right: ${spacings.small};
+  }
 `;
 
 const ToolDuration = styled.div`
@@ -83,7 +90,13 @@ const ToolDurationLabel = styled.span`
   left: 28px;
   font-size: ${fonts.sizes.tiny};
   color: ${({ theme }) => theme.paragraph};
+  @media (max-width: ${breakpoints.mobile}) {
+    left: 21px;
+  }
 `;
 const TimeWithLabel = styled(icons.TimeWithLabel)`
   width: 4.2rem;
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 3.5rem;
+  }
 `;

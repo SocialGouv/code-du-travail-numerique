@@ -1,0 +1,97 @@
+contrat salarié . convention collective . établissement handicap . catégorie professionnelle:
+  question: Quelle est la catégorie professionnelle du salarié ?
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      Non cadres: "'Non cadres'"
+      Directeurs de service: "'Directeurs de service'"
+      Directeurs d'établissement: "'Directeurs d'établissement'"
+      Directeurs de centre de formation en travail social: "'Directeurs de centre de formation en travail social'"
+      Directeurs généraux: "'Directeurs généraux'"
+      Autres cadres: "'Autres cadres'"
+
+contrat salarié . convention collective . établissement handicap . catégorie professionnelle . Non cadres:
+  applicable si: catégorie professionnelle = 'Non cadres'
+  valeur: oui
+
+contrat salarié . convention collective . établissement handicap . catégorie professionnelle . Autres cadres:
+  applicable si: catégorie professionnelle = 'Autres cadres'
+  valeur: oui
+
+contrat salarié . convention collective . établissement handicap . catégorie professionnelle . Cadres:
+  applicable si:
+    une de ces conditions:
+      - catégorie professionnelle = 'Directeurs de service'
+      - catégorie professionnelle = 'Directeurs d'établissement'
+      - catégorie professionnelle = 'Directeurs de centre de formation en travail social'
+      - catégorie professionnelle = 'Directeurs généraux'
+  valeur: oui
+
+contrat salarié . convention collective . établissement handicap . catégorie professionnelle . Non cadres . preavis de depart:
+  applicable si: départ à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 1 mois
+  références:
+    Article 16: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863125/?idConteneur=KALICONT000005635407
+    Article 18: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863127/?idConteneur=KALICONT000005635407
+
+contrat salarié . convention collective . établissement handicap . catégorie professionnelle . Autres cadres . preavis de depart:
+  applicable si: départ à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 2 mois
+  références:
+    Article 16: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863125/?idConteneur=KALICONT000005635407
+    Article 18: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863127/?idConteneur=KALICONT000005635407
+    Annexe n° 6 Dispositions spéciales aux cadres, article 9: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837394?idConteneur=KALICONT000005635407
+
+contrat salarié . convention collective . établissement handicap . catégorie professionnelle . Cadres . preavis de depart:
+  applicable si: départ à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 2 mois
+        plafond: 24 mois
+      - montant: 3 mois
+  références:
+    Article 16: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863125/?idConteneur=KALICONT000005635407
+    Article 18: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863127/?idConteneur=KALICONT000005635407
+    Annexe n° 6 Dispositions spéciales aux cadres, article 9: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837394?idConteneur=KALICONT000005635407
+
+contrat salarié . convention collective . établissement handicap . catégorie professionnelle . Non cadres . preavis de mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 1 mois
+        plafond: 24 mois
+      - montant: 2 mois
+  références:
+    Article 16: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863125/?idConteneur=KALICONT000005635407
+
+contrat salarié . convention collective . établissement handicap . catégorie professionnelle . Autres cadres . preavis de mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 4 mois
+  références:
+    Annexe n° 6 Dispositions spéciales aux cadres, article 9: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837394?idConteneur=KALICONT000005635407
+
+contrat salarié . convention collective . établissement handicap . catégorie professionnelle . Cadres . preavis de mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 4 mois
+        plafond: 24 mois
+      - montant: 6 mois
+  références:
+    Annexe n° 6 Dispositions spéciales aux cadres, article 9: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837394?idConteneur=KALICONT000005635407
+
+contrat salarié . convention collective . établissement handicap . notification:
+  type: notification
+  description: "Attention : L'article de la convention collective ou la convention collective saisie n’a pas été étendue au niveau national. Par conséquent, pour que ce résultat soit applicable à votre situation, il faut que l’employeur ait adhéré à l’organisation patronale signataire de cette convention. Sans cette adhésion, l'employeur n'a pas l'obligation d'appliquer les règles de la convention mais il applique le préavis prévu par le code du travail."
+  valeur: oui

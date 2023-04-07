@@ -1,4 +1,4 @@
-import { heuresRechercheEmploiData as data } from "@cdt/data";
+import { heuresRechercheEmploiData as data } from "@socialgouv/modeles-social";
 
 import { generateAgreement } from "../../../../test/generateAgreement";
 import { ActionName, SkipFn } from "../../common/type/WizardType";

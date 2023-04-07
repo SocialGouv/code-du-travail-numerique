@@ -1,0 +1,7 @@
+contrat salarié . convention collective . commerces de détail fruits et légumes:
+  description: Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988. Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988.
+  applicable si: convention collective = 'IDCC1505'
+  valeur: oui
+  cdtn:
+    idcc: 1505
+    préavis-retraite: true

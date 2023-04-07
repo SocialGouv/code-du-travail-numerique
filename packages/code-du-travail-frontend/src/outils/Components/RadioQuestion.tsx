@@ -1,9 +1,12 @@
-import { InputRadio } from "@socialgouv/cdtn-ui";
+import { InputRadio, Fieldset } from "@socialgouv/cdtn-ui";
 import React from "react";
+import styled from "styled-components";
+import Html from "../../common/Html";
 
 import { InlineError } from "../common/ErrorField";
-import { Question } from "../common/Question";
-import { RadioContainer } from "../common/stepStyles";
+import { Question, Tooltip } from "../common/Question";
+import { RadioContainer, SmallText } from "../common/stepStyles";
+import { SubLabel } from "./SelectQuestion";
 
 type Question = {
   label: string;
@@ -19,6 +22,9 @@ type Props = {
   questions: Question[];
   showRequired?: boolean;
   name: string;
+  tooltip?: Tooltip;
+  subLabel?: string;
+  note?: string;
 };
 
 export default function RadioQuestion({
@@ -29,30 +35,50 @@ export default function RadioQuestion({
   questions,
   showRequired,
   name,
+  tooltip,
+  subLabel,
+  note,
 }: Props) {
-  const [value, setValue] = React.useState(selectedOption ?? "");
   const onChange = (value: string) => {
-    setValue(value);
     onChangeSelectedOption(value);
   };
 
   return (
     <>
-      <Question required={showRequired}>{label}</Question>
-      <RadioContainer>
-        {questions.map((question, index) => (
-          <InputRadio
-            key={index}
-            name={name}
-            label={question.label}
-            value={question.value}
-            id={question.id}
-            checked={value === question.value}
-            onChange={() => onChange(question.value)}
-          />
-        ))}
-        {error && <InlineError>{error}</InlineError>}
-      </RadioContainer>
+      <StyledFieldset>
+        <Question required={showRequired} tooltip={tooltip}>
+          <Html as="span">{label}</Html>
+        </Question>
+        {subLabel && <SubLabel>{subLabel}</SubLabel>}
+        <RadioContainer>
+          {questions.map((question, index) => (
+            <InputRadio
+              key={index}
+              name={name}
+              label={question.label}
+              value={question.value}
+              id={question.id}
+              data-testid={`${name} - ${question.label}`}
+              checked={selectedOption === question.value}
+              onChange={() => onChange(question.value)}
+            />
+          ))}
+          {error && (
+            <ErrorWrapper>
+              <InlineError>{error}</InlineError>
+            </ErrorWrapper>
+          )}
+        </RadioContainer>
+        {note && <SmallText as="i">{note}</SmallText>}
+      </StyledFieldset>
     </>
   );
 }
+
+export const ErrorWrapper = styled.div`
+  display: flex;
+`;
+
+export const StyledFieldset = styled(Fieldset)`
+  display: contents;
+`;

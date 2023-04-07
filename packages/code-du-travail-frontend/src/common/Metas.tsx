@@ -1,13 +1,9 @@
-import getConfig from "next/config";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
+import { SITE_URL } from "../config";
 
 import { removeQueryParameters } from "../lib";
-
-const {
-  publicRuntimeConfig: { FRONTEND_HOST },
-} = getConfig();
 
 type Props = {
   title: string;
@@ -33,8 +29,7 @@ export default function Metas({
       />
 
       <title>
-        {title}
-        {noTitleAdd ? "" : " - Code du travail numérique"}
+        {`${title}${noTitleAdd ? "" : " - Code du travail numérique"}`}
       </title>
       <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
       <meta key="desc" name="description" content={description} />
@@ -46,7 +41,7 @@ export default function Metas({
           <link
             key="canonical"
             rel="canonical"
-            href={`${FRONTEND_HOST}${removeQueryParameters(router.asPath)}`}
+            href={`${SITE_URL}${removeQueryParameters(router.asPath)}`}
           />
         )
       )}
@@ -57,7 +52,7 @@ export default function Metas({
       <meta
         key="og:image"
         property="og:image"
-        content={`${FRONTEND_HOST}/static/assets/img/social-preview.png`}
+        content={`${SITE_URL}/static/assets/img/social-preview.png`}
       />
       <meta
         key="og:site"

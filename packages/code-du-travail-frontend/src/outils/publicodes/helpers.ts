@@ -1,6 +1,5 @@
+import { SituationElement } from "@socialgouv/modeles-social";
 import Engine, { EvaluatedNode } from "publicodes";
-
-import { SituationElement } from ".";
 
 export function handleExecute(
   engine: Engine,
@@ -59,11 +58,9 @@ export function updateSituation(
 const buildSituation = (
   map: Array<SituationElement>
 ): Record<string, string> => {
-  const situation: Record<string, string> = {};
-  map.forEach((arg) => {
-    situation[arg.rawNode.nom] = arg.value;
-  });
-  return situation;
+  return map.reduce((obj, arg) => {
+    return arg.rawNode.nom ? { ...obj, [arg.rawNode.nom]: arg.value } : obj;
+  }, {});
 };
 
 const buildMissingArgs = (

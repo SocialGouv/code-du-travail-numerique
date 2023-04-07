@@ -1,6 +1,13 @@
 export enum MatomoBaseEvent {
   TRACK_EVENT = "trackEvent",
   OUTIL = "outil",
+  PAGE_INFORMATION = "page_information",
+}
+
+export enum MatomoBaseAction {
+  SELECT = "select",
+  CLICK = "click",
+  VIEW = "view",
 }
 
 export enum MatomoSearchAgreementCategory {
@@ -31,6 +38,7 @@ export enum MatomoSimulatorEvent {
   SELECT_POSITION = "select_value_position",
   SELECT_COEFFICIENT = "select_value_coefficient",
   CLICK_PRINT = "click_print",
+  STEP_RESULT_INELIGIBLE = "results_ineligible",
 }
 
 export enum MatomoAgreementEvent {
@@ -48,9 +56,12 @@ export enum MatomoRetirementEvent {
 
 export enum MatomoActionEvent {
   PREAVIS_RETRAITE = "view_step_Préavis de départ ou de mise à la retraite",
-  HEURE_RECHERCHE_EMPLOI = "view_step_Heure recherche emploi",
+  HEURE_RECHERCHE_EMPLOI = "view_step_Heures d'absence pour rechercher un emploi",
   PREAVIS_DEMISSION = "view_step_Préavis de démission",
   PREAVIS_LICENCIEMENT = "view_step_Préavis de licenciement",
+  INDEMNITE_LICENCIEMENT = "view_step_Indemnité de licenciement",
+  VIEW_STEP = "view_step",
+  CLICK_PREVIOUS = "click_previous",
 }
 
 type Mapping = Array<{

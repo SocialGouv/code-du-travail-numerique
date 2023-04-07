@@ -68,4 +68,30 @@ describe("<StepInformations />", () => {
     ).toBeInTheDocument();
     expect(getByRole("option", { name: "Plus de 6 mois" })).toBeInTheDocument();
   });
+  it("should render questions for specific agreement on HEURE_RECHERCHE_EMPLOI", () => {
+    const { getByText, getAllByRole, getByRole } = render(
+      <EmbeddedInjectedForm<FormContent, Omit<StepInformationsProps, "form">>
+        Step={StepInformations}
+        formData={{
+          ccn: { route: "agreement", selected: generateAgreement(44) },
+          typeRupture: "1| Démission",
+        }}
+        props={{
+          actionEvent: MatomoActionEvent.HEURE_RECHERCHE_EMPLOI,
+        }}
+      />
+    );
+
+    expect(getByText(/Statut du salarié/)).toBeInTheDocument();
+    expect(
+      getByText(/Quelle est la catégorie professionnelle du salarié \?/)
+    ).toBeInTheDocument();
+    expect(getAllByRole("option").length).toBe(5);
+    userEvent.selectOptions(
+      getByRole("combobox"),
+      getByRole("option", { name: "Ingénieurs, Cadres" })
+    );
+
+    expect(getAllByRole("option").length).toBe(5);
+  });
 });

@@ -1,60 +1,62 @@
-import { internals as tools } from "@cdt/data";
 import { Container, icons, theme } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
+import { useIframeResizer } from "../../src/common/hooks";
 
 import {
   DureePreavisLicenciement,
   DureePreavisRetraite,
-  loadPublicodesRules,
+  DismissalProcess,
+  CalculateurIndemnite,
+  fetchTool,
 } from "../../src/outils";
 
 const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": DureePreavisRetraite,
+  "procedure-licenciement": DismissalProcess,
+  "indemnite-licenciement": CalculateurIndemnite,
 };
 
 interface Props {
   icon: string;
-  publicodesRules: any;
   slug: string;
   title: string;
   displayTitle: string;
 }
 
-function Widgets({
-  icon,
-  slug,
-  title,
-  displayTitle,
-  publicodesRules
-}: Props): JSX.Element {
+function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
+  useIframeResizer();
   const Tool = toolsBySlug[slug];
 
   return (
-    <Container>
-      <Tool
-        icon={icon}
-        title={title}
-        displayTitle={displayTitle}
-        publicodesRules={publicodesRules}
-      />
-
-      <StyledFooter>
-        <Link passHref href="/politique-confidentialite">
-          <a target="_blank" rel="noopener noreferrer">
+    <>
+      <StyledContainer>
+        <Tool
+          icon={icon}
+          title={title}
+          displayTitle={displayTitle}
+          slug={slug}
+          widgetMode
+        />
+        <StyledFooter>
+          <Link
+            href="/politique-confidentialite"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Politique de confidentialité
-          </a>
-        </Link>
-        <Link passHref href="https://code.travail.gouv.fr/">
-          <LeftLink target="_blank">
-            <Logo />
-          </LeftLink>
-        </Link>
-      </StyledFooter>
-    </Container>
+          </Link>
+          <Link passHref href="https://code.travail.gouv.fr/" legacyBehavior>
+            <LeftLink target="_blank">
+              <Logo />
+            </LeftLink>
+          </Link>
+        </StyledFooter>
+      </StyledContainer>
+    </>
   );
 }
 
@@ -63,27 +65,32 @@ export default Widgets;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const tool = tools.find((tool) => tool.slug === query.slug);
+  const slug = query.slug as string;
+  const tool = await fetchTool(slug);
   if (!tool) {
     return {
       notFound: true,
     };
   }
 
-  const { slug, icon, title, displayTitle } = tool;
-
-  const publicodesRules = loadPublicodesRules(slug);
+  const { icon, title, displayTitle } = tool;
 
   return {
     props: {
       icon,
-      publicodesRules,
       slug,
       title,
       displayTitle,
     },
   };
 };
+
+const StyledContainer = styled(Container)`
+  padding: 0;
+  & > div:before {
+    box-shadow: none;
+  }
+`;
 
 const StyledFooter = styled.footer`
   display: flex;

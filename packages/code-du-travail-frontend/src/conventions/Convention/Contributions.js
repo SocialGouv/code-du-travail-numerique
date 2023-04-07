@@ -1,4 +1,4 @@
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { Accordion, theme, Title } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
@@ -89,7 +89,7 @@ function AccordionContent({ answer, slug, references }) {
         Pour savoir si la mesure prévue par la convention collective s’applique
         à votre situation, reportez-vous{" "}
         <Link href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`}>
-          <a>à la réponse complète à cette question</a>
+          à la réponse complète à cette question
         </Link>
         .
       </strong>

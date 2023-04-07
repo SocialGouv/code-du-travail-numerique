@@ -1,0 +1,35 @@
+prix: 18 €
+
+panier: oui
+
+panier . quantité: 12 litre
+
+dimanche: oui
+
+majoration dimanche: 30 €
+
+panier . montant:
+  valeur: 20 / 100 * prix * panier . quantité
+  non applicable si: dimanche
+  cdtn:
+    formule:
+      formula: 20% * Prix * Quantité
+      explanations:
+        - "Prix": prix
+        - "Quantité": panier . quantité
+      annotations:
+        - "20% de majoration"
+
+panier . montant avec non applicable:
+  valeur: 20 / 100 * prix * panier . quantité + majoration dimanche
+  applicable si: dimanche
+  cdtn:
+    formule:
+      formula: 20% * Prix * Quantité
+      explanations:
+        - "Prix": prix
+        - "Quantité": panier . quantité
+        - "Majoration": majoration dimanche
+      annotations:
+        - "20% de majoration"
+        - "On est le dimanche"

@@ -1,18 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MathFormula /> renders 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-kSGOQU cZHFlg"
   >
-    <div>
+    <div
+      style="overflow: auto;"
+    >
       <span
         class="katex-display"
       >
@@ -81,7 +76,7 @@ exports[`<MathFormula /> renders 1`] = `
             >
               <span
                 class="strut"
-                style="height:2.00744em;vertical-align:-0.686em;"
+                style="height:2.0074em;vertical-align:-0.686em;"
               />
               <span
                 class="mord"
@@ -100,7 +95,7 @@ exports[`<MathFormula /> renders 1`] = `
                     >
                       <span
                         class="vlist"
-                        style="height:1.32144em;"
+                        style="height:1.3214em;"
                       >
                         <span
                           style="top:-2.314em;"
@@ -173,7 +168,7 @@ exports[`<MathFormula /> renders 1`] = `
               </span>
               <span
                 class="mspace"
-                style="margin-right:0.2222222222222222em;"
+                style="margin-right:0.2222em;"
               />
               <span
                 class="mbin"
@@ -182,7 +177,7 @@ exports[`<MathFormula /> renders 1`] = `
               </span>
               <span
                 class="mspace"
-                style="margin-right:0.2222222222222222em;"
+                style="margin-right:0.2222em;"
               />
             </span>
             <span
@@ -190,7 +185,7 @@ exports[`<MathFormula /> renders 1`] = `
             >
               <span
                 class="strut"
-                style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                style="height:0.8889em;vertical-align:-0.1944em;"
               />
               <span
                 class="mord mathnormal"
@@ -211,7 +206,7 @@ exports[`<MathFormula /> renders 1`] = `
               </span>
               <span
                 class="mspace"
-                style="margin-right:0.2222222222222222em;"
+                style="margin-right:0.2222em;"
               />
               <span
                 class="mbin"
@@ -220,7 +215,7 @@ exports[`<MathFormula /> renders 1`] = `
               </span>
               <span
                 class="mspace"
-                style="margin-right:0.2222222222222222em;"
+                style="margin-right:0.2222em;"
               />
             </span>
             <span
@@ -228,7 +223,7 @@ exports[`<MathFormula /> renders 1`] = `
             >
               <span
                 class="strut"
-                style="height:0.76666em;vertical-align:-0.08333em;"
+                style="height:0.7667em;vertical-align:-0.0833em;"
               />
               <span
                 class="mord mathnormal"
@@ -237,7 +232,7 @@ exports[`<MathFormula /> renders 1`] = `
               </span>
               <span
                 class="mspace"
-                style="margin-right:0.2222222222222222em;"
+                style="margin-right:0.2222em;"
               />
               <span
                 class="mbin"
@@ -246,7 +241,7 @@ exports[`<MathFormula /> renders 1`] = `
               </span>
               <span
                 class="mspace"
-                style="margin-right:0.2222222222222222em;"
+                style="margin-right:0.2222em;"
               />
             </span>
             <span
@@ -254,7 +249,7 @@ exports[`<MathFormula /> renders 1`] = `
             >
               <span
                 class="strut"
-                style="height:0.64444em;vertical-align:0em;"
+                style="height:0.6444em;"
               />
               <span
                 class="mord"

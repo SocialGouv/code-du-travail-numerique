@@ -5,11 +5,11 @@ import {
   MatomoActionEvent,
   MatomoAgreementEvent,
 } from "../../../../../lib";
-import { matopush } from "../../../../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import NotSupportedAgreementDisclaimer from "../NotSupportedAgreementDisclaimer";
 
-jest.mock("../../../../../piwik", () => ({
-  matopush: jest.fn(),
+jest.mock("@socialgouv/matomo-next", () => ({
+  push: jest.fn(),
 }));
 
 describe("<NotSupportedAgreementDisclaimer />", () => {

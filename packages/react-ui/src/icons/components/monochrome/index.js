@@ -1,5 +1,6 @@
 export { default as ArrowDown } from "./ArrowDown";
 export { default as ArrowRight } from "./ArrowRight";
+export { default as ArrowTurn } from "./ArrowTurn";
 export { default as Burger } from "./Burger";
 export { default as Calendar } from "./Calendar";
 export { default as Check } from "./Check";

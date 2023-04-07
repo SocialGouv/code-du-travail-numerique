@@ -3,7 +3,6 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import debounce from "debounce-promise";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 import { v4 as generateUUID } from "uuid";
 
@@ -11,7 +10,8 @@ import { CompanyTile } from "./CompanyTile";
 import { ConventionLink } from "./ConventionLink";
 import { HelpModal } from "./HelpModal";
 import { ResultList } from "./ResultList";
-import useSearchCC from "./searchHook";
+import useSearchCC, { Status } from "./searchHook";
+import Spinner from "react-svg-spinner";
 
 const trackInput = debounce((query, path, trackingUID) => {
   if (query.length > 1) {
@@ -25,8 +25,8 @@ type Props = {
 
 const Search = ({ onSelectConvention }: Props): JSX.Element => {
   const router = useRouter();
-  const [query, setQuery] = useState("");
-  const [trackingUID, setTrackingUID] = useState("");
+  const [query, setQuery] = useState<string>("");
+  const [trackingUID, setTrackingUID] = useState<string>("");
 
   useEffect(() => {
     // we want to connect events that are
@@ -41,8 +41,7 @@ const Search = ({ onSelectConvention }: Props): JSX.Element => {
   };
 
   //@ts-ignore
-  const [status, { conventions = [], entreprises = [] } = {}] =
-    useSearchCC(query);
+  const [status, { conventions, entreprises }] = useSearchCC(query);
 
   return (
     <>
@@ -60,20 +59,20 @@ const Search = ({ onSelectConvention }: Props): JSX.Element => {
       />
       {query && (
         <ResultsContainer>
-          {status === "loading" && (
+          {status === Status.LOADING && (
             <Paragraph noMargin>
               <Spinner /> Recherche des convention collectives...
             </Paragraph>
           )}
-          {status === "error" && (
+          {status === Status.ERROR && (
             <Paragraph noMargin>
               Le service de recherche est indisponible.
             </Paragraph>
           )}
-          {status === "empty" && (
+          {status === Status.EMPTY && (
             <Paragraph noMargin>Aucun résultat n’a été trouvé.</Paragraph>
           )}
-          {status === "success" && (
+          {status === Status.SUCCESS && (
             <>
               {conventions.length !== 0 && (
                 <ResultList

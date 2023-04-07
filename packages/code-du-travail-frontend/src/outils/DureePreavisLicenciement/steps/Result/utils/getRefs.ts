@@ -1,5 +1,5 @@
+import { OldReference } from "@socialgouv/modeles-social";
 import { Situations } from "./types";
-import { OldReference } from "../../../../publicodes";
 
 export const getRefs = ({ legal, agreement }: Situations): OldReference[] => {
   const refs: OldReference[] = [];

@@ -12,31 +12,6 @@ concurrency:
   group: review-${{ github.ref }}
 
 jobs:
-  register:
-    name: Register images
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - images: "code-du-travail-frontend"
-            path: "."
-            args: |
-              NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
-              NEXT_PUBLIC_SENTRY_ENV=dev
-          - images: "code-du-travail-api"
-            path: "./packages/code-du-travail-api/"
-    steps:
-      - name: Register docker images
-        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
-        with:
-          project: "cdtn"
-          imageName: cdtn/${{ matrix.images }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "${{ matrix.path }}/Dockerfile"
-          dockercontext: "${{ matrix.path }}"
-          dockerbuildargs: ${{ matrix.args }}
-
   manifests:
     name: Generate k8s manifests
     runs-on: ubuntu-latest
@@ -45,13 +20,6 @@ jobs:
         shell: bash
         run: |
           yarn add @socialgouv/kosko-charts
-      - name: Get k8s infos
-        id: k8s
-        shell: bash
-        run: |
-          RAW_BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
-          BRANCH=$(npx @socialgouv/env-slug "${RAW_BRANCH}")
-          echo "::set-output name=branch::$(echo ${BRANCH})"
       - name: Use k8s manifests generation
         uses: SocialGouv/actions/k8s-manifests@v1
         with:
@@ -62,10 +30,48 @@ jobs:
           ELASTIC_APM_ENVIRONMENT: cdtn-${{ steps.k8s.outputs.branch }}
           ES_INDEX_PREFIX: cdtn-preprod
 
+  register-frontend:
+    name: Register frontend
+    runs-on: ubuntu-latest
+    needs: [manifests]
+    steps:
+      - name: Download k8s manifests
+        uses: actions/download-artifact@v3
+        with:
+          name: manifests-dev.yml
+
+      - name: Get deployment url for site
+        uses: mikefarah/yq@v4.30.5
+        id: yq_url
+        with:
+          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1
+
+      - name: Set env
+        run: |
+          echo "SITE_URL=https://${{ steps.yq_url.outputs.result }}" >> $GITHUB_ENV
+          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
+      - name: Register docker images
+        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
+        with:
+          project: "cdtn"
+          imageName: "cdtn/code-du-travail-frontend"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./Dockerfile"
+          dockercontext: "."
+          dockerbuildargs: |
+            NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+            NEXT_PUBLIC_SENTRY_ENV=dev
+            NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
+            NEXT_PUBLIC_AZURE_CONTAINER=cdtn
+            NEXT_PUBLIC_PIWIK_SITE_ID=3
+            NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
+            NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
+            NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
+
   deploy:
     name: Deploy application
     runs-on: ubuntu-latest
-    needs: [register, manifests]
+    needs: [register-frontend]
     steps:
       - name: Use autodevops deployment
         uses: SocialGouv/actions/autodevops-deploy@v1
@@ -84,7 +90,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
       - name: Restore cache
         uses: actions/cache@v3
         with:
@@ -99,11 +105,21 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: manifests-dev.yml
-      - name: Get deployment url
-        uses: mikefarah/yq@v4.13.5
-        id: url
+      - name: Get deployment url for site
+        uses: mikefarah/yq@v4.30.5
+        id: yq_url
         with:
-          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
+          cmd: cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1
+      - name: Set env
+        run: |
+          echo "SITE_URL=https://${{ steps.yq_url.outputs.result }}" >> $GITHUB_ENV
       - name: Run test e2e
         run: |
-          CODECEPT_BASEURL=https://${{ steps.url.outputs.result }} yarn test:e2e
+          TEST_BASEURL=${{ env.SITE_URL }} yarn test:e2e
+      - name: Archive generated screenshots
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: e2e-screenshots
+          path: |
+            packages/code-du-travail-frontend/cypress/screenshots

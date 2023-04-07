@@ -28,6 +28,8 @@ export const convertPeriodToHumanDate = (
   ) {
     return null;
   }
+  // Retirer un jour si on a une unité en mois
+  if (unit === Unit.MONTH && !extra) date = convertDate(date, -1, Unit.DAY);
   return dateToString(date, withDay);
 };
 
@@ -72,3 +74,11 @@ export const getUnit = (input: string): Unit | null => {
 function isFloat(n) {
   return Number(n) === n && n % 1 !== 0;
 }
+
+export const generateFrenchDate = (date: Date): string => {
+  const day = date.getDate().toString().padStart(2, "0");
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
+  const year = date.getFullYear();
+  const formattedDate = `${day}/${month}/${year}`;
+  return formattedDate;
+};

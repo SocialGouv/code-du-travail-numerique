@@ -1,0 +1,8 @@
+# Convention collective nationale de commerces de gros du 23 juin 1970.
+contrat salarié . convention collective . commerces de gros:
+  description: Convention collective nationale de commerces de gros du 23 juin 1970.
+  applicable si: convention collective = 'IDCC0573'
+  valeur: oui
+  cdtn:
+    idcc: 573
+    préavis-retraite: true

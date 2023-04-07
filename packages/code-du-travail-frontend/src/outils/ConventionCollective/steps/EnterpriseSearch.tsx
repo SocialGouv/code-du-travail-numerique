@@ -1,4 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-sources";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Button, Section as SectionUi, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
@@ -46,7 +46,11 @@ const EnterpriseSearchStep = ({
           />
         </form>
       </Section>
-      <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
+      <Link
+        href={`/${SOURCES.TOOLS}/convention-collective`}
+        passHref
+        legacyBehavior
+      >
         <Button as="a" small type="button" onClick={onBackClick} variant="flat">
           Précédent
         </Button>

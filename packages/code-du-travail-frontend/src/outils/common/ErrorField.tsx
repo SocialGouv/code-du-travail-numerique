@@ -27,13 +27,6 @@ const ErrorField = ({ name, errorText }: Props): JSX.Element => (
   />
 );
 
-const ErrorComputedField = ({ name }: Props): JSX.Element => (
-  <Field
-    name={name}
-    render={({ meta: { error } }) => (error ? <Error>{error}</Error> : null)}
-  />
-);
-
 const Error = styled.p`
   margin: ${theme.spacings.small} 0 ${theme.spacings.base};
   color: ${({ theme }) => theme.error};
@@ -47,4 +40,4 @@ const InlineError = ({
   children: React.ReactNode;
 }): JSX.Element => <Error as="span">{children}</Error>;
 
-export { Error, ErrorComputedField, ErrorField, InlineError };
+export { Error, ErrorField, InlineError };

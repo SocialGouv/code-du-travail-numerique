@@ -1,4 +1,4 @@
-import { preavisDemissionData as data } from "@cdt/data";
+import { preavisDemissionData as data } from "@socialgouv/modeles-social";
 import React from "react";
 
 import { SelectAgreement } from "../../common";

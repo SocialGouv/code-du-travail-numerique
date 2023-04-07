@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Highlights getBySlugHighlights 1`] = `
+[
+  {
+    "breadcrumbs": [],
+    "cdtnId": "1d39921700",
+    "description": "L’essentiel à savoir sur le Coronavirus en tant que salarié ou employeur : des fiches pratiques, des liens utiles, des modèles de courriers téléchargeables, etc.",
+    "slug": "ministere-du-travail-notre-dossier-sur-le-coronavirus",
+    "source": "dossiers",
+    "title": "Ministère du travail : notre dossier sur le Coronavirus (Covid-19)",
+  },
+  {
+    "breadcrumbs": [
+      {
+        "label": "Salaire et Rémunération",
+        "position": 2,
+        "slug": "/themes/salaire-et-remuneration",
+      },
+      {
+        "label": "Salaire",
+        "position": 0,
+        "slug": "/themes/salaire",
+      },
+    ],
+    "cdtnId": "d7ad36850a",
+    "description": "Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur",
+    "order": 2,
+    "slug": "simulateur-embauche",
+    "source": "outils",
+    "title": "Salaire brut/net",
+  },
+  {
+    "breadcrumbs": [
+      {
+        "label": "Congés et repos",
+        "position": 4,
+        "slug": "/themes/conges-et-repos",
+      },
+      {
+        "label": "Congés",
+        "position": 1,
+        "slug": "/themes/conges",
+      },
+      {
+        "label": "Congés pour événément familial",
+        "position": 3,
+        "slug": "/themes/conges-pour-evenement-familial",
+      },
+    ],
+    "cdtnId": "eba7a4592f",
+    "description": "Le code du travail prévoit que le salarié bénéficie de congés à l’occasion de certains événements familiaux. Ils n’entrainent aucune diminution de la rémunération…",
+    "slug": "les-conges-pour-evenements-familiaux",
+    "source": "contributions",
+    "title": "Les congés pour événements familiaux",
+  },
+  {
+    "breadcrumbs": [
+      {
+        "label": "Départ de l’entreprise",
+        "position": 8,
+        "slug": "/themes/depart-de-lentreprise",
+      },
+      {
+        "label": "Licenciement : droits des salariés et procédures",
+        "position": 4,
+        "slug": "/themes/licenciement-droits-des-salaries-et-procedures",
+      },
+    ],
+    "cdtnId": "382462f424",
+    "description": "Tout savoir sur les différents types de licenciement (disciplinaire, économique, inaptitude...) : droits des salariés, procédures, indemnités, préavis, protections spécifiques. ",
+    "slug": "licenciement-droits-des-salaries-et-procedures",
+    "source": "themes",
+    "title": "Licenciement : droits des salariés et procédures",
+  },
+]
+`;

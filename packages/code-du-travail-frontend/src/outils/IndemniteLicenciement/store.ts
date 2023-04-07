@@ -1,6 +1,10 @@
-import create, { SetState, GetState, StoreApi } from "zustand";
-
-import createContext from "zustand/context";
+import { StoreApi, createStore as create, useStore } from "zustand";
+import {
+  AgreementStoreError,
+  AgreementStoreInput,
+  AgreementStoreSlice,
+  createRootAgreementsStore,
+} from "./agreements";
 import {
   AncienneteStoreSlice,
   AncienneteStoreInput,
@@ -25,29 +29,47 @@ import {
   SalairesStoreError,
   createSalairesStore,
 } from "./steps/Salaires/store";
+import {
+  CommonAgreementStoreError,
+  CommonAgreementStoreInput,
+  CommonAgreementStoreSlice,
+  createCommonAgreementStore,
+} from "../CommonSteps/Agreement/store";
+import {
+  CommonInformationsStoreError,
+  CommonInformationsStoreInput,
+  CommonInformationsStoreSlice,
+  createCommonInformationsStore,
+} from "../CommonSteps/Informations/store";
 
-export type StoreSlice<T extends object, E extends object = T> = (
-  set: SetState<E extends T ? E : E & T>,
-  get: GetState<E extends T ? E : E & T>,
-  publicodesRules?: string
-) => T;
+import { ToolName } from "../types";
+import { createContext, useContext } from "react";
 
 export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
   SalairesStoreSlice &
-  ResultStoreSlice;
+  ResultStoreSlice &
+  AgreementStoreSlice &
+  CommonAgreementStoreSlice &
+  CommonInformationsStoreSlice;
 
 export type StepData<
   T extends
     | AncienneteStoreInput
     | SalairesStoreInput
     | ContratTravailStoreInput
-    | ResultStoreInput,
+    | ResultStoreInput
+    | AgreementStoreInput
+    | CommonAgreementStoreInput
+    | CommonInformationsStoreInput,
   U extends
     | AncienneteStoreError
     | SalairesStoreError
     | ContratTravailStoreError
     | ResultStoreError
+    | AgreementStoreError
+    | CommonAgreementStoreError
+    | CommonInformationsStoreError
 > = {
   input: T;
   error: U;
@@ -55,26 +77,42 @@ export type StepData<
   isStepValid: boolean;
 };
 
+export type StoreOptions = {
+  publicodesRules?: string;
+  toolName: ToolName;
+};
+
 const createRootSlice = (
-  set: SetState<MainStore>,
-  get: GetState<MainStore>,
-  publicodesRules: string
+  set: StoreApi<MainStore>["setState"],
+  get: StoreApi<MainStore>["getState"],
+  { slug, toolName }
 ) => ({
-  ...createContratTravailStore(set, get),
-  ...createAncienneteStore(set, get),
-  ...createSalairesStore(set, get),
-  ...createResultStore(set, get, publicodesRules),
+  ...createContratTravailStore(set, get, { toolName }),
+  ...createAncienneteStore(set, get, { toolName }),
+  ...createSalairesStore(set, get, { toolName }),
+  ...createResultStore(set, get, { toolName }),
+  ...createRootAgreementsStore(set, get, { toolName }),
+  ...createCommonAgreementStore(set, get, { toolName, slug }),
+  ...createCommonInformationsStore(set, get, { toolName }),
 });
 
-const createStore = (publicodesRules: string) =>
-  create((set: SetState<MainStore>, get: GetState<MainStore>) =>
-    createRootSlice(set, get, publicodesRules)
+const createStore = (slug: string, toolName: ToolName) =>
+  create(
+    (
+      set: StoreApi<MainStore>["setState"],
+      get: StoreApi<MainStore>["getState"]
+    ) => createRootSlice(set, get, { slug, toolName })
   );
 
-const { Provider, useStore } = createContext<StoreApi<MainStore>>();
+const IndemniteLicenciementContext = createContext<StoreApi<MainStore>>(
+  {} as StoreApi<MainStore>
+);
+
+const { Provider } = IndemniteLicenciementContext;
 
 export {
   Provider as IndemniteLicenciementProvider,
   createStore as createIndemniteLicenciementStore,
+  IndemniteLicenciementContext,
   useStore as useIndemniteLicenciementStore,
 };

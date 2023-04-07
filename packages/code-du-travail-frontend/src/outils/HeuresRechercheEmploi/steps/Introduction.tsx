@@ -19,7 +19,7 @@ const StepIntro = (): JSX.Element => (
       <Link
         href={`/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis`}
       >
-        <a>cette fiche</a>
+        cette fiche
       </Link>
       .
     </p>

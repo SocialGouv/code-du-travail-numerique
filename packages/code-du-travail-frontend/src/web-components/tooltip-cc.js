@@ -1,6 +1,6 @@
 import { utils } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
-import { css, html, LitElement } from "lit-element";
+import { css, html, LitElement } from "lit";
 
 const { throttledDisplayInViewport } = utils;
 

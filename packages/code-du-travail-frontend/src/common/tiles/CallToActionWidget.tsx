@@ -1,6 +1,5 @@
 import { Paragraph, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
-import Link from "next/link";
 import { CallToActionTile } from "./CallToAction";
 import styled from "styled-components";
 
@@ -17,24 +16,22 @@ export default function CallToActionWidget({
   image,
 }: Props): JSX.Element {
   return (
-    <Link href={link} passHref>
-      <CallToActionTile
-        noCustom
-        action="Installer"
-        title={title}
-        titleTagType="h2"
-      >
-        <>
-          <Image src={`/static/assets/img/${image}`} alt={"Widget " + title} />
-          <ParagraphNarrow>{description}</ParagraphNarrow>
-        </>
-      </CallToActionTile>
-    </Link>
+    <CallToActionTile
+      action="Installer"
+      title={title}
+      titleTagType="h2"
+      href={link}
+    >
+      <>
+        <Image src={`/static/assets/img/${image}`} alt={"Widget " + title} />
+        <ParagraphNarrow>{description}</ParagraphNarrow>
+      </>
+    </CallToActionTile>
   );
 }
 
 const Image = styled.img`
-  margin: auto;
+  margin: ${theme.spacings.small} auto;
   height: auto;
   width: auto;
   max-width: 90%;

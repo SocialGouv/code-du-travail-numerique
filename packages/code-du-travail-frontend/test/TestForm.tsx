@@ -1,5 +1,5 @@
 import { FormApi } from "final-form";
-import React from "react";
+import React, { ReactNode } from "react";
 import { Form } from "react-final-form";
 
 type EmbeddedInjectedFormProps<FormContent, Props> = {
@@ -38,7 +38,7 @@ type EmbeddedFormProps<Props> = {
 function EmbeddedForm<FormContent>({
   Step,
   props,
-}: EmbeddedFormProps<FormContent>): JSX.Element {
+}: EmbeddedFormProps<FormContent & { children?: ReactNode }>): JSX.Element {
   return (
     <Form<FormContent>
       initialValues={{}}

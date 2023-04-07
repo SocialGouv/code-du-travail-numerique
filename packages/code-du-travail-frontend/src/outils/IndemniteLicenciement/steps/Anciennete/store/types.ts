@@ -1,12 +1,14 @@
 import { StepData } from "../../../store";
-import { Absence } from "../components/AbsencePeriods";
-import { OuiNon } from "../../../common/types";
+import { OuiNon } from "../../../common";
+import { Absence, Motif } from "@socialgouv/modeles-social";
+import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 
 export type AncienneteStoreInput = {
   dateEntree?: string;
   dateSortie?: string;
   dateNotification?: string;
   absencePeriods: Absence[];
+  motifs: Motif[];
   hasAbsenceProlonge?: OuiNon;
 };
 
@@ -15,7 +17,16 @@ export type AncienneteStoreError = {
   errorDateNotification?: string;
   errorAbsenceProlonge?: string;
   errorDateEntree?: string;
-  errorAbsencePeriods?: string;
+  errorAbsencePeriods?: {
+    global?: string;
+    absences?: AncienneteAbsenceStoreError[];
+  };
+  errorEligibility?: string;
+};
+
+export type AncienneteAbsenceStoreError = {
+  errorDuration?: string;
+  errorDate?: string;
 };
 
 export type AncienneteStoreData = StepData<
@@ -24,11 +35,12 @@ export type AncienneteStoreData = StepData<
 >;
 
 export type AncienneteStoreFn = {
+  init: () => void;
   onChangeDateEntree: (value: string) => void;
   onChangeDateSortie: (value: string) => void;
   onChangeDateNotification: (value: string) => void;
   onChangeAbsencePeriods: (value: Absence[]) => void;
-  onValidateStepAnciennete: () => boolean;
+  onNextStep: () => ValidationResponse;
   onChangeHasAbsenceProlonge: (value: OuiNon) => void;
 };
 

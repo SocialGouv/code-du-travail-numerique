@@ -1,8 +1,0 @@
-extends:
-  - "@socialgouv/eslint-config-react"
-overrides:
-  - files: ["test.js"]
-    env:
-      jest: true
-rules:
-  import/no-extraneous-dependencies: error

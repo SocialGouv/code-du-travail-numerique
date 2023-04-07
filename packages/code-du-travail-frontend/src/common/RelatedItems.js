@@ -1,4 +1,4 @@
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import {
   ArrowLink,
   Container,
@@ -44,7 +44,7 @@ export const RelatedItems = ({ items = [] }) => {
         ({ title, items }) =>
           items.length > 0 && (
             <React.Fragment key={title}>
-              <Heading as="div" aria-level="2" role="heading">
+              <Heading as="div" ariaLevel="2" role="heading">
                 {title}&nbsp;:
               </Heading>
               <FlatList>
@@ -57,7 +57,7 @@ export const RelatedItems = ({ items = [] }) => {
 
                   return (
                     <StyledLinkItem key={href}>
-                      <Link href={href} passHref>
+                      <Link href={href} passHref legacyBehavior>
                         <ArrowLink
                           arrowPosition="left"
                           onClick={() =>

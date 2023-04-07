@@ -1,0 +1,7 @@
+contrat salarié . convention collective . hospitalisation privées:
+  description: Convention collective nationale de l'hospitalisation privée du 18 avril 2002.
+  applicable si: convention collective = 'IDCC2264'
+  valeur: oui
+  cdtn:
+    idcc: 2264
+    préavis-retraite: true

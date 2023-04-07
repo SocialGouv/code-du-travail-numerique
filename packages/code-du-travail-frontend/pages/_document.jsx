@@ -50,7 +50,6 @@ export default class MyDocument extends Document {
             type="text/css"
             href="/static/fonts.css"
           />
-          <script key="smarttag" src="/static/smarttag.js" />
         </Head>
         <body>
           <noscript>

@@ -1,10 +1,8 @@
-import { internals as tools } from "@cdt/data";
 import * as Sentry from "@sentry/nextjs";
-import { SOURCES } from "@socialgouv/cdtn-sources";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { GetServerSideProps } from "next";
-import getConfig from "next/config";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import styled from "styled-components";
@@ -13,22 +11,20 @@ import { Feedback } from "../../src/common/Feedback";
 import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
+import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import {
   AgreementSearch,
   CalculateurIndemnite,
+  DismissalProcess,
   DureePreavisDemission,
   DureePreavisLicenciement,
   DureePreavisRetraite,
+  fetchTool,
   HeuresRechercheEmploi,
-  loadPublicodesRules,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
 } from "../../src/outils";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
 
 const toolsBySlug = {
   "convention-collective": AgreementSearch,
@@ -39,12 +35,12 @@ const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": DureePreavisRetraite,
   "simulateur-embauche": SimulateurEmbauche,
+  "procedure-licenciement": DismissalProcess,
 };
 
-interface Props {
+export interface Props {
   description: string;
   icon: string;
-  publicodesRules: any;
   relatedItems: Array<any>;
   slug: string;
   title: string;
@@ -62,7 +58,6 @@ function Outils({
   metaTitle,
   metaDescription,
   displayTitle,
-  publicodesRules,
 }: Props): JSX.Element {
   const Tool = toolsBySlug[slug];
   useEffect(() => {
@@ -72,14 +67,14 @@ function Outils({
   return (
     <Layout>
       <Metas title={metaTitle} description={metaDescription} />
-      <StyledSection>
+      <div>
         <Container>
           <Flex>
             <Tool
               icon={icon}
               title={title}
               displayTitle={displayTitle}
-              publicodesRules={publicodesRules}
+              slug={slug}
             />
             <ShareContainer>
               <Share title={title} metaDescription={description} />
@@ -88,7 +83,7 @@ function Outils({
           <RelatedItems items={relatedItems} />
           <Feedback url={router.asPath} />
         </Container>
-      </StyledSection>
+      </div>
     </Layout>
   );
 }
@@ -98,7 +93,7 @@ export default Outils;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const tool = tools.find((tool) => tool.slug === query.slug);
+  const tool = await fetchTool(query.slug as string);
   if (!tool) {
     return {
       notFound: true,
@@ -116,7 +111,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   } = tool;
   let relatedItems = [];
   try {
-    const response = await fetch(`${API_URL}/items/${SOURCES.TOOLS}/${slug}`);
+    const response = await fetch(`${SITE_URL}/api/items/${SOURCES.TOOLS}/${slug}`);
     if (response.ok) {
       relatedItems = await response.json().then((data) => data.relatedItems);
     }
@@ -125,13 +120,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     Sentry.captureException(e);
   }
 
-  const publicodesRules = loadPublicodesRules(slug);
-
   return {
     props: {
       description,
       icon,
-      publicodesRules,
       relatedItems,
       slug,
       title,
@@ -143,10 +135,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 };
 
 const { breakpoints, spacings } = theme;
-
-const StyledSection = styled(Section)`
-  padding-top: 0;
-`;
 
 const ShareContainer = styled.div`
   display: flex;

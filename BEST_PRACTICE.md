@@ -1,6 +1,6 @@
 # Bonnes pratiques de dev
 
-## Nommage des fichiers et répartoires
+## Nommage des fichiers et répertoires
 
 Nous utilisons `hyphen-case` (`kebab-case`) par défaut et du `PascalCase` si c'est composant react (même pour les tests) pour le nommage des fichiers et répertoires.
 

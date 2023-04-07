@@ -4,7 +4,6 @@ import {
   InsertTitle,
   MoreContent,
   theme,
-  Tile,
   Title,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
@@ -13,6 +12,7 @@ import styled from "styled-components";
 
 import { blocs as blocsLabels } from "./blocs.data";
 import { trackAccordionPanelState } from "./utils";
+import { LinkedTile } from "../../common/tiles/LinkedTile";
 
 const { spacings } = theme;
 
@@ -39,7 +39,7 @@ function Articles({ blocs, containerId, convention }) {
           )}
           <Grid columns={3}>
             {articles.map(({ title, id, section }) => (
-              <Tile
+              <LinkedTile
                 key={id}
                 wide
                 target="_blank"
@@ -50,7 +50,7 @@ function Articles({ blocs, containerId, convention }) {
                 titleTagType="h3"
               >
                 {section}
-              </Tile>
+              </LinkedTile>
             ))}
           </Grid>
         </>
@@ -85,18 +85,9 @@ function Articles({ blocs, containerId, convention }) {
           </p>
           <p>
             Sources:{" "}
-            <Link href="/code-du-travail/l2253-1">
-              <a>Article L2253-1</a>
-            </Link>
-            ,{" "}
-            <Link href="/code-du-travail/l2253-2">
-              <a>Article L2253-2</a>
-            </Link>
-            ,{" "}
-            <Link href="/code-du-travail/l2253-3">
-              <a>Article L2253-3</a>
-            </Link>
-            .
+            <Link href="/code-du-travail/l2253-1">Article L2253-1</Link>,{" "}
+            <Link href="/code-du-travail/l2253-2">Article L2253-2</Link>,{" "}
+            <Link href="/code-du-travail/l2253-3">rticle L2253-3</Link>.
           </p>
         </>
       </MoreContent>

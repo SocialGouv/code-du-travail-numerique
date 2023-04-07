@@ -1,4 +1,4 @@
-import { heuresRechercheEmploiData as data } from "@cdt/data";
+import { heuresRechercheEmploiData as data } from "@socialgouv/modeles-social";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 

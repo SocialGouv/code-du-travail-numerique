@@ -2,12 +2,12 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import { MatomoBaseEvent, MatomoSimulatorEvent } from "../../../lib";
-import { matopush } from "../../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { PrevNextBar } from "../PrevNextBar";
 import { printResult } from "../utils";
 
-jest.mock("../../../piwik.js", () => ({
-  matopush: jest.fn(),
+jest.mock("@socialgouv/matomo-next", () => ({
+  push: jest.fn(),
 }));
 
 jest.spyOn(window, "print").mockImplementation();

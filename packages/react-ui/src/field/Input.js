@@ -25,12 +25,22 @@ export const Input = ({
   );
 };
 
-Input.propTypes = {
+export const DefaultInputProps = {
   className: PropTypes.string,
   icon: PropTypes.elementType,
+  id: PropTypes.string,
+  invalid: PropTypes.bool,
   name: PropTypes.string.isRequired,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  title: PropTypes.string,
+  type: PropTypes.string,
   updateOnScrollDisabled: PropTypes.bool,
+  value: PropTypes.any,
 };
+
+Input.propTypes = DefaultInputProps;
 
 Input.defaultProps = {
   icon: null,

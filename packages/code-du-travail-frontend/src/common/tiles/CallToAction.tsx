@@ -1,33 +1,32 @@
-import { Button, theme, Tile } from "@socialgouv/cdtn-ui";
+import { Button, theme } from "@socialgouv/cdtn-ui";
 import React, { ForwardedRef } from "react";
 import styled from "styled-components";
+import { LinkedTile, Props } from "./LinkedTile";
 
-type Props = {
-  children: React.ReactNode | null;
-  action: string;
-  title: string;
-  icon?: string;
-  titleTagType: string;
-  noCustom?: boolean;
-};
+type CallToActionTileProps = Props & { action?: string };
 
-export const CallToActionTile = React.forwardRef<HTMLAnchorElement, Props>(
-  function _CallToActionTile(
-    { action = "", noCustom, children, ...props }: Props,
-    ref: ForwardedRef<any>
-  ): JSX.Element {
-    return (
-      <StyledTile custom={!noCustom} {...props} ref={ref}>
-        <TileChildren>
-          {children}
-          <StyledDiv hasContentAbove={Boolean(children)}>
-            <Button variant="link">{action}</Button>
+export const CallToActionTile = React.forwardRef<
+  HTMLAnchorElement,
+  CallToActionTileProps
+>(function _CallToActionTile(
+  { action = "", children, centerTitle, ...props }: CallToActionTileProps,
+  ref: ForwardedRef<any>
+): JSX.Element {
+  return (
+    <StyledTile centerTitle={centerTitle} {...props} ref={ref}>
+      <TileChildren>
+        {children}
+        {action && (
+          <StyledDiv>
+            <Button variant="link" hasText>
+              {action}
+            </Button>
           </StyledDiv>
-        </TileChildren>
-      </StyledTile>
-    );
-  }
-);
+        )}
+      </TileChildren>
+    </StyledTile>
+  );
+});
 
 CallToActionTile.displayName = "CallToActionTile";
 
@@ -36,11 +35,17 @@ const { spacings, breakpoints, fonts } = theme;
 const TileChildren = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
+  flex: 1 1 auto;
+
+  p {
+    margin: 0 auto;
+    flex: 1 0 auto;
+    display: flex;
+  }
 `;
 
-const StyledTile = styled(Tile)`
+const StyledTile = styled(LinkedTile)`
   h2 {
     font-weight: 600;
     font-size: ${fonts.sizes.headings.small};
@@ -52,6 +57,9 @@ const StyledTile = styled(Tile)`
 `;
 
 const StyledDiv = styled.div`
-  margin-top: ${({ hasContentAbove }) =>
-    hasContentAbove ? spacings.base : spacings.small};
+  padding-top: ${spacings.base};
+
+  &:first-child {
+    padding-top: ${spacings.small};
+  }
 `;

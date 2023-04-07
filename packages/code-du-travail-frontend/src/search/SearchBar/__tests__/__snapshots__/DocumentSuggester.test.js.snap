@@ -1,14 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DocumentSuggester /> should render 1`] = `
-.c0 ul {
-  z-index: 1;
-}
-
-.c0 li[role="option"]:nth-child(2n + 1) {
-  background: #f2f5fa;
-}
-
 <div>
   <div
     aria-expanded="false"
@@ -28,7 +20,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
       value="foo"
     />
     <div
-      class="c0"
+      class="sc-jsTgWu dTyNRS"
       id="react-autowhatever-1"
       role="listbox"
     />
@@ -37,22 +29,6 @@ exports[`<DocumentSuggester /> should render 1`] = `
 `;
 
 exports[`<DocumentSuggester /> should render suggestions 1`] = `
-.c2 {
-  display: inline-block;
-}
-
-.c1 p {
-  margin: 0;
-}
-
-.c0 ul {
-  z-index: 1;
-}
-
-.c0 li[role="option"]:nth-child(2n + 1) {
-  background: #f2f5fa;
-}
-
 <div>
   <div
     aria-expanded="true"
@@ -72,31 +48,31 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
       value="foo"
     />
     <div
-      class="c0"
+      class="sc-jsTgWu dTyNRS"
       id="react-autowhatever-1"
       role="listbox"
     >
       <ul
         role="listbox"
-        style="background: white; border: 1px solid silver; border-radius: 3px; box-shadow: 0 10px 10px -10px #b7bcdf; left: 0px; margin: .5em 0px 0px 0px; padding: 0px 0px 0px 0px; position: absolute; right: 0px;"
+        style="z-index: 1; background: rgb(255, 255, 255); border: 1px solid #bbcadf; border-radius: 3px; box-shadow: 0 10px 10px -10px #b7bcdf; margin: 0.4rem 0px 0px 0px; padding: 0px; position: absolute; width: 100%;"
       >
         <li
           aria-selected="false"
           data-suggestion-index="0"
           id="react-autowhatever-1--item-0"
           role="option"
-          style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
+          style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
         >
           <div
-            class="c1"
+            class="sc-dvEHMn dVSrXz"
           >
-            <div
-              class="c2"
+            <span
+              class="sc-kSGOQU"
             >
               <strong>
                 foo
               </strong>
-            </div>
+            </span>
           </div>
         </li>
         <li
@@ -104,19 +80,19 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           data-suggestion-index="1"
           id="react-autowhatever-1--item-1"
           role="option"
-          style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
+          style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
         >
           <div
-            class="c1"
+            class="sc-dvEHMn dVSrXz"
           >
-            <div
-              class="c2"
+            <span
+              class="sc-kSGOQU"
             >
               <strong>
                 foo
               </strong>
               bar
-            </div>
+            </span>
           </div>
         </li>
         <li
@@ -124,19 +100,19 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           data-suggestion-index="2"
           id="react-autowhatever-1--item-2"
           role="option"
-          style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
+          style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
         >
           <div
-            class="c1"
+            class="sc-dvEHMn dVSrXz"
           >
-            <div
-              class="c2"
+            <span
+              class="sc-kSGOQU"
             >
               <strong>
                 foo
               </strong>
                bar ?
-            </div>
+            </span>
           </div>
         </li>
         <li
@@ -144,19 +120,19 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           data-suggestion-index="3"
           id="react-autowhatever-1--item-3"
           role="option"
-          style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
+          style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
         >
           <div
-            class="c1"
+            class="sc-dvEHMn dVSrXz"
           >
-            <div
-              class="c2"
+            <span
+              class="sc-kSGOQU"
             >
               <strong>
                 foo
               </strong>
                bazzz
-            </div>
+            </span>
           </div>
         </li>
       </ul>

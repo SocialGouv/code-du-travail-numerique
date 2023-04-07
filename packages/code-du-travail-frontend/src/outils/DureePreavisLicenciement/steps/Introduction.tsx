@@ -15,7 +15,7 @@ const StepIntro = (): JSX.Element => (
     <p>
       Vous pouvez trouver plus d’informations sur le préavis de licenciement sur{" "}
       <Link href={`/fiche-service-public/preavis-de-licenciement`}>
-        <a>cette fiche</a>
+        cette fiche
       </Link>
       .
     </p>

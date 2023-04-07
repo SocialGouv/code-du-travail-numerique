@@ -1,26 +1,35 @@
-ARG NODE_VERSION=14.18-alpine3.13
+ARG NODE_VERSION=14.18.3-alpine
 # dist
 FROM node:$NODE_VERSION AS dist
 
 WORKDIR /
 
 # Add build-arg from github actions
+ARG NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+ARG NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT
+ENV NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT
+ARG NEXT_PUBLIC_AZURE_BASE_URL
+ENV NEXT_PUBLIC_AZURE_BASE_URL=$NEXT_PUBLIC_AZURE_BASE_URL
+ARG NEXT_PUBLIC_AZURE_CONTAINER
+ENV NEXT_PUBLIC_AZURE_CONTAINER=$NEXT_PUBLIC_AZURE_CONTAINER
+ARG NEXT_PUBLIC_PIWIK_SITE_ID
+ENV NEXT_PUBLIC_PIWIK_SITE_ID=$NEXT_PUBLIC_PIWIK_SITE_ID
+ARG NEXT_PUBLIC_PIWIK_URL
+ENV NEXT_PUBLIC_PIWIK_URL=$NEXT_PUBLIC_PIWIK_URL
 ARG NEXT_PUBLIC_SENTRY_DSN
 ENV NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN
 ARG NEXT_PUBLIC_SENTRY_ENV
 ENV NEXT_PUBLIC_SENTRY_ENV=$NEXT_PUBLIC_SENTRY_ENV
-ARG NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
-ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+ARG NEXT_PUBLIC_COMMIT
+ENV NEXT_PUBLIC_COMMIT=$NEXT_PUBLIC_COMMIT
+ARG NEXT_PUBLIC_SITE_URL
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 
 # Copy all package.json
 COPY ./package.json ./package.json
-COPY ./packages/code-du-travail-data/package.json ./packages/code-du-travail-data/package.json
-COPY ./packages/react-fiche-service-public/package.json ./packages/react-fiche-service-public/package.json
-COPY ./packages/sources/package.json ./packages/sources/package.json
-COPY ./packages/slugify/package.json ./packages/slugify/package.json
 COPY ./packages/react-ui/package.json ./packages/react-ui/package.json
-COPY ./packages/cdtn-types/package.json ./packages/cdtn-types/package.json
-COPY ./packages/code-du-travail-api/package.json ./packages/code-du-travail-api/package.json
+COPY ./packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/package.json
 COPY ./packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/package.json
 COPY ./packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/package.json
 
@@ -28,19 +37,35 @@ COPY ./packages/code-du-travail-modeles/package.json ./packages/code-du-travail-
 COPY ./yarn.lock ./yarn.lock
 
 # Install packages
-RUN yarn --frozen-lockfile && yarn cache clean
+RUN yarn --frozen-lockfile --prefer-offline
 
 COPY . ./
 
-RUN yarn build && yarn --frozen-lockfile --prod
+ENV NODE_ENV=production
+
+RUN yarn build:frontend && yarn --frozen-lockfile --prod --prefer-offline
 
 # app
 FROM node:$NODE_VERSION
 
+ENV NODE_ENV=production
+
 WORKDIR /app
 
-COPY --from=dist . /app/
+COPY --from=dist ./packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
+COPY --from=dist ./packages/code-du-travail-frontend/node_modules /app/packages/code-du-travail-frontend/node_modules
+COPY --from=dist ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
+COPY --from=dist ./packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
+COPY --from=dist ./packages/code-du-travail-frontend/next.config.js /app/packages/code-du-travail-frontend/next.config.js
+COPY --from=dist ./packages/code-du-travail-frontend/sentry.client.config.js /app/packages/code-du-travail-frontend/sentry.client.config.js
+COPY --from=dist ./packages/code-du-travail-frontend/sentry.server.config.js /app/packages/code-du-travail-frontend/sentry.server.config.js
+COPY --from=dist ./packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
+COPY --from=dist ./packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
+COPY --from=dist ./package.json /app/package.json
+COPY --from=dist ./node_modules /app/node_modules
+
+RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000 /app/packages/code-du-travail-frontend/.next
 
 USER 1000
 
-CMD [ "yarn", "start"]
+CMD [ "yarn", "workspace", "@cdt/frontend", "start"]

@@ -2,16 +2,10 @@ import env from "@kosko/env";
 import { ok } from "assert";
 
 import { create } from "@socialgouv/kosko-charts/components/app";
-import { addWaitForHttp } from "@socialgouv/kosko-charts/utils/addWaitForHttp";
-import { addEnv } from "@socialgouv/kosko-charts/utils/addEnv";
-import { getIngressHost } from "@socialgouv/kosko-charts/utils/getIngressHost";
 import { getGithubRegistryImagePath } from "@socialgouv/kosko-charts/utils/getGithubRegistryImagePath";
-import { EnvVar } from "kubernetes-models/v1/EnvVar";
 import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
 import type { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
 import { HorizontalPodAutoscaler } from "kubernetes-models/autoscaling/v2beta2/HorizontalPodAutoscaler";
-
-import getApiManifests from "./api";
 
 // all probes httpGet
 const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
@@ -21,9 +15,6 @@ const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
 
 export default async () => {
   // extract computed url from API manifests for the frontend
-  const apiManifests = await getApiManifests();
-  const API_URL = "https://" + getIngressHost(apiManifests) + "/api/v1";
-
   const productionConfig = {
     domain: "travail.gouv.fr",
     subdomain: "code",
@@ -54,24 +45,16 @@ export default async () => {
           initialDelaySeconds: 10,
           timeoutSeconds: 15,
         },
-        resources: {
-          requests: {
-            cpu: "300m",
-            memory: "512Mi",
-          },
-          limits: {
-            cpu: "500m",
-            memory: "768Mi",
-          },
-        },
+        resources:
+          env.env === "prod" ? ressourcesConfigProd : ressourcesConfigDev,
         env: [
           {
-            name: "API_URL",
-            value: String(API_URL),
+            name: "ELASTIC_APM_ENVIRONMENT",
+            value: process.env.ELASTIC_APM_ENVIRONMENT,
           },
           {
-            name: "COMMIT",
-            value: process.env.GITHUB_SHA,
+            name: "ES_INDEX_PREFIX",
+            value: process.env.ES_INDEX_PREFIX,
           },
           {
             name: "VERSION",
@@ -89,22 +72,11 @@ export default async () => {
   ok(deployment);
   ok(deployment.spec);
 
-  // add a wait condition on the API service with an initContainer
-  addWaitForHttp(deployment, "http://api");
-
-  // get frontend computed url and assign the env var
-  const ingressHost = new EnvVar({
-    name: "FRONTEND_HOST",
-    value: getIngressHost(manifests),
-  });
-
-  addEnv({ deployment, data: ingressHost });
-
   const hpa = new HorizontalPodAutoscaler({
     metadata: deployment.metadata,
     spec: {
       minReplicas: 2,
-      maxReplicas: 10,
+      maxReplicas: 20,
 
       metrics: [
         {
@@ -144,4 +116,26 @@ export default async () => {
   }
 
   return manifests;
+};
+
+const ressourcesConfigProd = {
+  requests: {
+    cpu: "250m",
+    memory: "768Mi",
+  },
+  limits: {
+    cpu: "500m",
+    memory: "1Gi",
+  },
+};
+
+const ressourcesConfigDev = {
+  requests: {
+    cpu: "50m",
+    memory: "256Mi",
+  },
+  limits: {
+    cpu: "250m",
+    memory: "512Mi",
+  },
 };

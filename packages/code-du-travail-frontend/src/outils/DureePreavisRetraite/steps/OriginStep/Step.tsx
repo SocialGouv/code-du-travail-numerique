@@ -13,7 +13,7 @@ import { OriginMandatoryName } from "../../form";
 
 export type OriginStepProps = {
   showWarning: boolean;
-  onChange: (type: Origin) => void;
+  onChange: (oldType: Origin | null, newType: Origin | null) => void;
 };
 
 function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
@@ -33,6 +33,7 @@ function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
             <InputRadio
               label="Le salarié décide lui-même de partir à la retraite"
               id={`${props.input.name}-depart`}
+              data-testid={"depart-a-la-retraite"}
               {...props.input}
             />
           )}
@@ -47,6 +48,7 @@ function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
             <InputRadio
               label="L'employeur décide de mettre le salarié à la retraite"
               id={`${props.input.name}-mise`}
+              data-testid={"mise-a-la-retraite"}
               {...props.input}
             />
           )}
@@ -74,14 +76,22 @@ function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
         )}
         <ErrorField name={OriginMandatoryName} />
         <OnChange name={OriginMandatoryName}>
-          {(values: "oui" | "non") => {
-            onChange?.(values === "oui" ? "mise" : "départ");
+          {(
+            values: "oui" | "non" | null,
+            _previous: "oui" | "non" | "" | null
+          ) => {
+            onChange(convertToOrigin(_previous), convertToOrigin(values));
           }}
         </OnChange>
       </RadioContainer>
     </>
   );
 }
+
+const convertToOrigin = (value: "oui" | "non" | "" | null): Origin | null => {
+  if (value === "" || value === null) return null;
+  return value === "oui" ? "mise" : "départ";
+};
 
 const { spacings } = theme;
 

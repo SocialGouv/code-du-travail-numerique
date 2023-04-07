@@ -1,191 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepIndemnite /> should render cdd indemnite with conventional provision message 1`] = `
-.c5 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c10 > *:first-child {
-  margin-top: 0;
-}
-
-.c10 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c15 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c8 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c3 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c13 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c13 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c14 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c16 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c13 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c13 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-iJbNxu dKlwtU"
   >
     Montant
   </h2>
@@ -193,7 +11,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     La prime d'intervention
      est estimée à : 
     <strong
-      class="c1 c2"
+      class="sc-grxQYx sc-ZqGJI itwhbo crLpbR"
     >
       180
        €
@@ -201,14 +19,14 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     .
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="c3"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      type="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -223,17 +41,19 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="c6 c7"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="c8"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Éléments saisis
       </h2>
@@ -254,14 +74,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Formule
       </h2>
       <div
-        class="c9"
+        class="sc-elAWhN iCDbqV"
       >
-        <div>
+        <div
+          style="overflow: auto;"
+        >
           <span
             class="katex-display"
           >
@@ -355,7 +177,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                 >
                   <span
                     class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    style="height:2.0074em;vertical-align:-0.686em;"
                   />
                   <span
                     class="mord"
@@ -374,7 +196,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                         >
                           <span
                             class="vlist"
-                            style="height:1.32144em;"
+                            style="height:1.3214em;"
                           >
                             <span
                               style="top:-2.314em;"
@@ -447,7 +269,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                   <span
                     class="mbin"
@@ -456,7 +278,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                 </span>
                 <span
@@ -464,7 +286,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                 >
                   <span
                     class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
+                    style="height:0.6944em;"
                   />
                   <span
                     class="mord"
@@ -530,7 +352,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </div>
       </div>
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Sources
       </h2>
@@ -541,7 +363,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
             href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005851689&cidTexte=KALITEXT000005679946&dateTexte=20190918"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’chapitre iii : contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès"
           >
             Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès
           </a>
@@ -552,7 +373,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-8 du code du travail"
           >
             Article L1243-8 du code du travail
           </a>
@@ -563,7 +383,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-9 du code du travail"
           >
             Article L1243-9 du code du travail
           </a>
@@ -572,13 +391,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="c12"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="c13"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -598,10 +417,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </svg>
       </div>
       <div
-        class="c14"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="c15 c16"
+          class="sc-GKYbw cUdVqX sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -627,191 +446,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] = `
-.c5 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c10 > *:first-child {
-  margin-top: 0;
-}
-
-.c10 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c15 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c8 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c3 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c13 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c13 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c14 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c16 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c13 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c13 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-iJbNxu dKlwtU"
   >
     Montant
   </h2>
@@ -819,7 +456,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     La prime de précarité
      est estimée à : 
     <strong
-      class="c1 c2"
+      class="sc-grxQYx sc-ZqGJI itwhbo crLpbR"
     >
       300
        €
@@ -827,14 +464,14 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     .
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="c3"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      type="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -849,17 +486,19 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="c6 c7"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="c8"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Éléments saisis
       </h2>
@@ -880,14 +519,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Formule
       </h2>
       <div
-        class="c9"
+        class="sc-elAWhN iCDbqV"
       >
-        <div>
+        <div
+          style="overflow: auto;"
+        >
           <span
             class="katex-display"
           >
@@ -981,7 +622,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                 >
                   <span
                     class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    style="height:2.0074em;vertical-align:-0.686em;"
                   />
                   <span
                     class="mord"
@@ -1000,7 +641,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                         >
                           <span
                             class="vlist"
-                            style="height:1.32144em;"
+                            style="height:1.3214em;"
                           >
                             <span
                               style="top:-2.314em;"
@@ -1073,7 +714,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                   <span
                     class="mbin"
@@ -1082,7 +723,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                 </span>
                 <span
@@ -1090,7 +731,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                 >
                   <span
                     class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
+                    style="height:0.6944em;"
                   />
                   <span
                     class="mord"
@@ -1156,7 +797,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </div>
       </div>
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Sources
       </h2>
@@ -1167,7 +808,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-8 du code du travail"
           >
             Article L1243-8 du code du travail
           </a>
@@ -1178,7 +818,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-9 du code du travail"
           >
             Article L1243-9 du code du travail
           </a>
@@ -1187,13 +826,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="c12"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="c13"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -1213,10 +852,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </svg>
       </div>
       <div
-        class="c14"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="c15 c16"
+          class="sc-GKYbw cUdVqX sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1245,191 +884,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with no conventional provision message 1`] = `
-.c5 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c10 > *:first-child {
-  margin-top: 0;
-}
-
-.c10 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c15 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c8 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c3 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c13 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c13 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c14 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c16 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c13 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c13 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-iJbNxu dKlwtU"
   >
     Montant
   </h2>
@@ -1437,7 +894,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     La prime de précarité
      est estimée à : 
     <strong
-      class="c1 c2"
+      class="sc-grxQYx sc-ZqGJI itwhbo crLpbR"
     >
       300
        €
@@ -1445,14 +902,14 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     .
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="c3"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      type="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -1467,17 +924,19 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="c6 c7"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="c8"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Éléments saisis
       </h2>
@@ -1498,14 +957,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Formule
       </h2>
       <div
-        class="c9"
+        class="sc-elAWhN iCDbqV"
       >
-        <div>
+        <div
+          style="overflow: auto;"
+        >
           <span
             class="katex-display"
           >
@@ -1599,7 +1060,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                 >
                   <span
                     class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    style="height:2.0074em;vertical-align:-0.686em;"
                   />
                   <span
                     class="mord"
@@ -1618,7 +1079,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                         >
                           <span
                             class="vlist"
-                            style="height:1.32144em;"
+                            style="height:1.3214em;"
                           >
                             <span
                               style="top:-2.314em;"
@@ -1691,7 +1152,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                   <span
                     class="mbin"
@@ -1700,7 +1161,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                 </span>
                 <span
@@ -1708,7 +1169,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                 >
                   <span
                     class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
+                    style="height:0.6944em;"
                   />
                   <span
                     class="mord"
@@ -1774,7 +1235,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </div>
       </div>
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Sources
       </h2>
@@ -1785,7 +1246,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
             href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B2ED091AF8ACCF6952BB5EA67D9DE5AE.tplgfr27s_1?idArticle=KALIARTI000005787408&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article 16.03 de la convention collective"
           >
             Article 16.03 de la convention collective
           </a>
@@ -1796,7 +1256,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-8 du code du travail"
           >
             Article L1243-8 du code du travail
           </a>
@@ -1807,7 +1266,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-9 du code du travail"
           >
             Article L1243-9 du code du travail
           </a>
@@ -1816,13 +1274,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="c12"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="c13"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -1842,10 +1300,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </svg>
       </div>
       <div
-        class="c14"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="c15 c16"
+          class="sc-GKYbw cUdVqX sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1874,191 +1332,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message 1`] = `
-.c5 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c10 > *:first-child {
-  margin-top: 0;
-}
-
-.c10 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c15 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c8 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c3 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c13 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c13 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c14 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c16 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c13 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c13 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-iJbNxu dKlwtU"
   >
     Montant
   </h2>
@@ -2066,7 +1342,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     La prime de précarité
      est estimée à : 
     <strong
-      class="c1 c2"
+      class="sc-grxQYx sc-ZqGJI itwhbo crLpbR"
     >
       300
        €
@@ -2074,14 +1350,14 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     .
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="c3"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      type="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -2096,17 +1372,19 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="c6 c7"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="c8"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Éléments saisis
       </h2>
@@ -2127,14 +1405,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Formule
       </h2>
       <div
-        class="c9"
+        class="sc-elAWhN iCDbqV"
       >
-        <div>
+        <div
+          style="overflow: auto;"
+        >
           <span
             class="katex-display"
           >
@@ -2228,7 +1508,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                 >
                   <span
                     class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    style="height:2.0074em;vertical-align:-0.686em;"
                   />
                   <span
                     class="mord"
@@ -2247,7 +1527,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                         >
                           <span
                             class="vlist"
-                            style="height:1.32144em;"
+                            style="height:1.3214em;"
                           >
                             <span
                               style="top:-2.314em;"
@@ -2320,7 +1600,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                   <span
                     class="mbin"
@@ -2329,7 +1609,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                 </span>
                 <span
@@ -2337,7 +1617,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                 >
                   <span
                     class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
+                    style="height:0.6944em;"
                   />
                   <span
                     class="mord"
@@ -2403,7 +1683,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </div>
       </div>
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Sources
       </h2>
@@ -2414,7 +1694,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-8 du code du travail"
           >
             Article L1243-8 du code du travail
           </a>
@@ -2425,7 +1704,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-9 du code du travail"
           >
             Article L1243-9 du code du travail
           </a>
@@ -2434,13 +1712,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="c12"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="c13"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -2460,10 +1738,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </svg>
       </div>
       <div
-        class="c14"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="c15 c16"
+          class="sc-GKYbw cUdVqX sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -2492,191 +1770,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 `;
 
 exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
-.c5 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c10 > *:first-child {
-  margin-top: 0;
-}
-
-.c10 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c15 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c8 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c3 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c13 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c13 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c14 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c16 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c13 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c13 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-iJbNxu dKlwtU"
   >
     Montant
   </h2>
@@ -2684,7 +1780,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     La prime de précarité
      est estimée à : 
     <strong
-      class="c1 c2"
+      class="sc-grxQYx sc-ZqGJI itwhbo crLpbR"
     >
       300
        €
@@ -2692,14 +1788,14 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     .
   </p>
   <div>
-    <div
+    <button
       aria-expanded="false"
-      class="c3"
-      role="button"
+      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      type="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -2714,17 +1810,19 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
-        class="c6 c7"
+      <span
+        class="sc-AHaJN jfcIdr"
+        font-size="hsmall"
+        font-weight="600"
       >
         Voir le détail du calcul
-      </p>
-    </div>
+      </span>
+    </button>
     <div
-      class="c8"
+      class="sc-bCfvAP iEBQCA"
     >
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Éléments saisis
       </h2>
@@ -2745,14 +1843,16 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Formule
       </h2>
       <div
-        class="c9"
+        class="sc-elAWhN iCDbqV"
       >
-        <div>
+        <div
+          style="overflow: auto;"
+        >
           <span
             class="katex-display"
           >
@@ -2846,7 +1946,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                 >
                   <span
                     class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    style="height:2.0074em;vertical-align:-0.686em;"
                   />
                   <span
                     class="mord"
@@ -2865,7 +1965,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                         >
                           <span
                             class="vlist"
-                            style="height:1.32144em;"
+                            style="height:1.3214em;"
                           >
                             <span
                               style="top:-2.314em;"
@@ -2938,7 +2038,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                   <span
                     class="mbin"
@@ -2947,7 +2047,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                 </span>
                 <span
@@ -2955,7 +2055,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                 >
                   <span
                     class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
+                    style="height:0.6944em;"
                   />
                   <span
                     class="mord"
@@ -3021,7 +2121,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </div>
       </div>
       <h2
-        class="c0"
+        class="sc-iJbNxu dKlwtU"
       >
         Sources
       </h2>
@@ -3032,7 +2132,6 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-8 du code du travail"
           >
             Article L1243-8 du code du travail
           </a>
@@ -3043,7 +2142,6 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-9 du code du travail"
           >
             Article L1243-9 du code du travail
           </a>
@@ -3052,13 +2150,13 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="c12"
+      class="sc-ehvNnt eQWqAO"
     >
       <div
-        class="c13"
+        class="sc-laZRCg gxUMeY"
       >
         <svg
           aria-hidden="true"
@@ -3078,10 +2176,10 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </svg>
       </div>
       <div
-        class="c14"
+        class="sc-gGvHcT iaPnrK"
       >
         <p
-          class="c15 c16"
+          class="sc-GKYbw cUdVqX sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>

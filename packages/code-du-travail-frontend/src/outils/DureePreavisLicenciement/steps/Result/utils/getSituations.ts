@@ -2,7 +2,7 @@ import {
   filterSituations,
   getSituationsFor,
 } from "../../../../common/situations.utils";
-import { Criteria, Situation } from "@cdt/data";
+import { Criteria, Situation } from "@socialgouv/modeles-social";
 import { Situations } from "./types";
 
 export const getSituations = (

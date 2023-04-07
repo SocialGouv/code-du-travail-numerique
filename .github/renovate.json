@@ -1,38 +1,29 @@
 {
+  "enable": true,
   "extends": [
-    "github>SocialGouv/renovate-config:socialgouv-data"
+    ":label(renovate)",
+    ":prConcurrentLimit10",
+    ":prNotPending",
+    ":timezone(Europe/Paris)",
+    ":disableDevDependencies"
   ],
-  "dependencyDashboardLabels": [":hammer_and_wrench: tech", "dependencies"],
-  "packageRules": [
-    {
-      "packagePatterns": [ "next" ],
-      "groupName": "@vercel/next",
-      "updateTypes": ["major"]
+  "npm": {
+    "extends": [":automergePatch", ":automergeMinor"],
+    "schedule": ["after 9pm", "before 9am"],
+    "rangeStrategy": "pin",
+    "lockFileMaintenance": {
+      "enabled": true,
+      "schedule": ["before 3am on the first day of the month"]
     },
-    {
-      "packagePatterns": [ "^react", "react-dom", "react-test-renderer" ],
-      "groupName": "react",
-      "updateTypes": ["major"]
-    },
-    {
-      "packagePatterns": [ "remark", "strip-markdown" ],
-      "groupName": "remark",
-      "updateTypes": ["major"]
-    },
-    {
-      "packagePatterns": [ "@rollup" ],
-      "groupName": "@rollup",
-      "updateTypes": ["major"]
-    },
-    {
-      "packagePatterns": [ "reach" ],
-      "groupName": "@reach",
-      "updateTypes": ["major"]
-    },
-    {
-      "packagePatterns": [ "final-form" ],
-      "groupName": "final-form",
-      "updateTypes": ["major"]
-    }
-  ]
+    "packageRules": [
+      {
+        "matchPackagePatterns": ["*"],
+        "semanticCommitType": "chore"
+      },
+      {
+        "matchDepTypes": ["dependencies", "peerDependencies"],
+        "semanticCommitType": "fix"
+      }
+    ]
+  }
 }

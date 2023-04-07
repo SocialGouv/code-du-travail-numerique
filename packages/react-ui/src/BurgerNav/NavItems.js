@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+import React from "react";
 import styled from "styled-components";
 
 import { Button } from "../Button/index.js";
@@ -10,7 +12,7 @@ export const BurgerNavButton = styled(Button).attrs(() => ({
   display: flex !important;
   align-items: center;
   height: 100%;
-  padding: 0 ${spacings.base};
+  padding: 0 ${spacings.medium};
   font-weight: normal;
   font-size: ${fonts.sizes.default};
   font-family: "Open Sans", sans-serif;
@@ -25,14 +27,25 @@ export const BurgerNavButton = styled(Button).attrs(() => ({
   }
 `;
 
-export const BurgerNavLink = styled(BurgerNavButton).attrs(() => ({ as: "a" }))`
+export const BurgerNavItem = ({ isCurrent, ...props }) =>
+  isCurrent ? (
+    <BurgerNavCurrent title="Page courante" {...props} />
+  ) : (
+    <BurgerNavLink {...props} />
+  );
+BurgerNavItem.propTypes = {
+  children: PropTypes.node.isRequired,
+  isCurrent: PropTypes.bool,
+};
+const BurgerNavLink = styled(BurgerNavButton).attrs(() => ({ as: "a" }))`
   text-decoration: none;
 `;
 
-export const BurgerNavCurrent = styled(BurgerNavButton).attrs(() => ({
+const BurgerNavCurrent = styled(BurgerNavButton).attrs(() => ({
   as: "span",
 }))`
   cursor: inherit;
+
   &:after {
     position: absolute;
     bottom: 0;
@@ -44,6 +57,7 @@ export const BurgerNavCurrent = styled(BurgerNavButton).attrs(() => ({
     transform: translateX(-50%);
     content: "";
   }
+
   @media (max-width: ${breakpoints.tablet}) {
     &:after {
       bottom: auto;

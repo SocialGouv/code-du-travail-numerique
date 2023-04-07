@@ -2,277 +2,6 @@
 
 exports[`kosko generate --prod 1`] = `
 "---
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  annotations:
-    kapp.k14s.io/disable-default-ownership-label-rules: ''
-    kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.github.com/job: '5678'
-    app.github.com/ref: refs/tags/v1.2.3
-    app.github.com/repo: socialgouv/cdtn
-    app.github.com/run: '1234'
-    app.github.com/sha: '0123456'
-  labels:
-    app: api
-    application: cdtn
-    component: cdtn
-    owner: cdtn
-    team: cdtn
-  name: api
-  namespace: cdtn
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: api
-  template:
-    metadata:
-      annotations:
-        kapp.k14s.io/disable-default-ownership-label-rules: ''
-        kapp.k14s.io/disable-default-label-scoping-rules: ''
-        app.github.com/job: '5678'
-        app.github.com/ref: refs/tags/v1.2.3
-        app.github.com/repo: socialgouv/cdtn
-        app.github.com/run: '1234'
-        app.github.com/sha: '0123456'
-      labels:
-        app: api
-        application: cdtn
-        component: cdtn
-        owner: cdtn
-        team: cdtn
-    spec:
-      containers:
-        - image: ghcr.io/socialgouv/cdtn/code-du-travail-api:1.2.3
-          livenessProbe:
-            failureThreshold: 6
-            httpGet:
-              path: /api/v1/version
-              port: http
-            initialDelaySeconds: 15
-            periodSeconds: 5
-            timeoutSeconds: 15
-          name: api
-          ports:
-            - containerPort: 1337
-              name: http
-          readinessProbe:
-            failureThreshold: 15
-            httpGet:
-              path: /api/v1/version
-              port: http
-            initialDelaySeconds: 5
-            periodSeconds: 5
-            successThreshold: 1
-            timeoutSeconds: 3
-          resources:
-            limits:
-              cpu: 500m
-              memory: 1Gi
-            requests:
-              cpu: 100m
-              memory: 320Mi
-          startupProbe:
-            failureThreshold: 12
-            httpGet:
-              path: /api/v1/version
-              port: http
-            periodSeconds: 5
-            initialDelaySeconds: 0
-            timeoutSeconds: 15
-          env:
-            - name: ELASTIC_APM_ENVIRONMENT
-            - name: ES_INDEX_PREFIX
-              value: cdtn-prod
-            - name: VERSION
-              value: refs/tags/v1.2.3
-          envFrom:
-            - secretRef:
-                name: api-secret
-            - configMapRef:
-                name: api-configmap
----
-apiVersion: bitnami.com/v1alpha1
-kind: SealedSecret
-metadata:
-  annotations:
-    kapp.k14s.io/disable-default-ownership-label-rules: ''
-    kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.github.com/job: '5678'
-    app.github.com/ref: refs/tags/v1.2.3
-    app.github.com/repo: socialgouv/cdtn
-    app.github.com/run: '1234'
-    app.github.com/sha: '0123456'
-  name: api-secret
-  namespace: cdtn
-  labels:
-    application: cdtn
-    component: cdtn
-    owner: cdtn
-    team: cdtn
-spec:
-  encryptedData:
-    ELASTIC_APM_SECRET_TOKEN: >-
-      AgCaJG19S1Ew042orhBEHOIzfctmb5yhjpBslibC6OZ+wf1wgqqAdVoz1SgK7bHcCLvj4eRjLS1SaHOlBtyF+chWsbUd0dxKp38OlfWMic+dFNDVGd7/VTgeBEydKEfUpfldL3WmHcWt9m8Fdvuq/EB7NxjZ0Ciy7jTo9wnCLXws+Jy87Gx6qnuIx9prQnB3KsmbcgYQsbylpJLqghOGW3THkeJUsjSxOzfqYq3qUwVJlu494TQ44ZxoXgSjq6EkSnW0SNrhTx6LsGJG7BWZP11ecHfj8746xTDiT5X3q7adHyd+a0mhxJ6Tw5j/9SzU+j7uEJJygUDdxPswF02wVgLs2ZhW3A808kSGQudqv7+rg8jU0UrBgQy2IUrcY3nUQlhNuX4uQuF90JdzBx8EaVCiVVG51ju6GiBKUms77WF+kx7D0T5gImd6tWRbJHtz9D0B0n7a3/NFjjP7QgOCn20VWMCAqc88Muka8ikTGUmJRQaKVZGKth+vEfcNYjp6cHNT3mkQaHpeMzOghVjpH0m4+ez996W2bn9WKkHxMEsIuBozfoeNrOFncJ2xOI4h0p8BpmeIy20WaeO/oX7yAJNw+JMnIPmj3PTvN7rnRiFOwIqFy4EvXaovBmv5QErlsBakHuuq6bnC2qMbDXOKSJeOuV1vLybPJV1/w/phXCck5kHSQQqF2sKpRgcPv+VDMPVW8DAidrYc775gHB8TvdEkMpU=
-    ELASTIC_APM_SERVER_URL: >-
-      AgBoJpYEUJ9WfLclF1VznZP0UrQDhvrYI6GfUVEabHd2HwSgwWLHy3Xc1hqNfHKwwJVDMZWb3Pz1MS1vkGAAe7m6YW4ykK6BQpGMLKQG8LIAjJD5JLJicSuGZhhsmwQuGkSMDaeGfnwTEy/v+wUVMtTe0ZdEaJ16Z/qIisbGjo7hCY+EasM1GohXAFglQUmFfAePyB10FxiueBuAf+30XwfRLbH3IkNaeM4qOnN7pAkzYhWZ++RePQjZjTZMw/NUhAQtx2oRrWjaCKUmkJwSlubUlhibqMxiyOi29nASgVNV6XW6FJinOscdvl3yXCVG4Hq3K6ePET34ju13xU36RJK2zL3WUO2xuDjXVD8q5LfyhbM7x+trWfbqpfy2wimMrdmThaY49V3/CunNOhsbpF96BgjJmmz0mGYlo+/7IBj5Jg9Qzp/4frpIdkg8WAaLDz2m5mmuEsx4jdXmLyYBEfYCmAWFkqJGiyFKJ/ZSc3SuRPrxyUe0NI6AXaZBBp+DI6ESWVXQZJ8q+oLLUcXNbizPE2KxNKjA78eCIXppVJtnzzqK5r6XVluyisS8ksU1Ur1TTL+mr6k0uOz2D2DRkH8TSh9GRdpkSZbaFlEyXZ4L+fkOKqOUjxV2MjOCDXOwWa9CM3LMyQSv3y8idFBwoDuEnVI6fbNGDbNd6s9905D/zKvzlZgcdOkzh/R4+nJJy/WQa0shjsUUi54bHTk1wzMNd+qyWa26Fb8buXMhTHpjiC5s99LsojDrrJcfviK09YG3tjU6xqykqKBnpJD1ikgx
-    ELASTICSEARCH_URL: >-
-      AgBK3W+fphmS+4r380ZAV7O/8ITBwNMKm/62LhRrb5hmmUzdnbFAdketPSDjIU8nbSMmydyfOG7RN1c7Q4exwW1G34IyzFoT5VD4brmPTnBAYYjS2ltv9biZJr6DgYtgyFsSBj6AayM8lKAyG/tcFwmS/n1HAZHaxHy3cZnix9XdkW8nR6AQoiIF6eBGHKY+pCgtpyed/WyOQ/vVGxIBmGAkl6iOIhArAWPvQ6Ulq8ggFHfgxa73aStxFEv6niJ4Zgqn9T2pmJVt47Z3ehn5aJyKkrCynp7P8gFaf0xrv0kjf2Lvyxsxi7SYU1mmaPUiggFkT8cKaqTUj6c0Ji1CQp4OOdX7Kjlvs+rY4mAudyOFzzTpx7YeT7kYqGUHnz6nbyKiibXNrw7lH9Y8Ge/bxXLJ9gTSYfLaRSmNM+OzWztY7b2Jqr++FezqfC6VvLrV3El3ntftQDSwGbXkH2ove869fGc4YtAEvtucqUaoE4plOCzNWQc83G7Q34x0V7wtWzKKaO5jIkZuOzDl8lNnzVI242BQM5mlKvcICOwhoze64HhXELB/fgZ48Z2gJeYWMzJnr1cGGyiuaqiczkM3eZwLl9CRFzosJZfAwn2jsyLIq4KSJebfgD4uLrA1zsLyRVM0Xxcith11oGew/3pMAgLhUmaNBjR0/2mA8eD8/WkzHxaUDh6zb70DB2aBxuHooc9ejOc7kM77d/wScb8UYuAzojqEDDl4mqxj5E4Akmr0LhP9srTS53pTMHERp5W4Yoesh6S6Ss2zX7/QDjpQqgGtLVBM4g==
-    ELASTICSEARCH_TOKEN_API: >-
-      AgClTekv2dklxJeowbm9RfmQtj/EnvlNNmuL8XNVtJGSGR+e/OQnP4NCvH1yNlMGJHAl1Um7n9qOSADjDM2Kym4c1K8bsNxwW0xKAH6HS3tqAJlDM6CkCMH8bkJC9NLIuHT1mNByE5x7XOCjCwnzCu5K7+YN84QHsgwtPii1HZ9TiE9GhPfNefe391AIdKn9rELNQaP0rTgPCjKAqNUV+I1IB8o+wI3U2r1E5VN3C3LFtwxw0hDZmhHcV6L3HNv0NhziVllXFqoyS/4nhSmPn66CQsHekrnFXwAs/EV0zwY9M9cjLjvjcx5voI9iYsU7P3Ms3J3XHvZeC2TLKYrmHUmQlOSIaA+bl3PPnXAvnMgnp/WzcMPrYV/bA71xDpudIk9EbSnMlG04K7tMKTuD5kBFDZSYhOsgIIqrr7jgZvbYKanfZ74ZzMBuIkFryiT7dIeW0E1dNYeF3KpzY1Fucn890sfaizNtn7d6b17kh97RyFT8//UmQHm/j8aQdWJjehQXvQUsiUpgm6FfIKjzstx9D15Br5M/+BNROUzwisd2hCE6fkGZrfcPOPV5ZmbYGhGBGyPTww7u+sKLNIpgxVUKKr1EKJec+8tTPaQuSYKKJRamhyErCQcPnjq+5qKlyR6sif+reMyWEgv0/dwz0hle4lAgfeTvyiqnBvEO+XxwcjLQasVl6jLYCjSJ5d0ghq1xTrAzK+6TLeivG7EZ9VeGyqQwDCCIo8oZDPB2mQ8u4SEjaaJlPP3P9jjb2G/zf3yEAVz/yXHR+soWHR0=
-  template:
-    metadata:
-      annotations:
-        kapp.k14s.io/disable-default-ownership-label-rules: ''
-        kapp.k14s.io/disable-default-label-scoping-rules: ''
-        app.github.com/job: '5678'
-        app.github.com/ref: refs/tags/v1.2.3
-        app.github.com/repo: socialgouv/cdtn
-        app.github.com/run: '1234'
-        app.github.com/sha: '0123456'
-      name: api-secret
-      labels:
-        application: cdtn
-        component: cdtn
-        owner: cdtn
-        team: cdtn
-    type: Opaque
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: api-configmap
-  annotations:
-    kapp.k14s.io/disable-default-ownership-label-rules: ''
-    kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.github.com/job: '5678'
-    app.github.com/ref: refs/tags/v1.2.3
-    app.github.com/repo: socialgouv/cdtn
-    app.github.com/run: '1234'
-    app.github.com/sha: '0123456'
-  labels:
-    application: cdtn
-    component: cdtn
-    owner: cdtn
-    team: cdtn
-  namespace: cdtn
-data:
-  ELASTIC_APM_ACTIVE: 'false'
-  ELASTIC_APM_SERVICE_NAME: cdtn-api
-  ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME: 'true'
-  NLP_URL: https://serving-ml.fabrique.social.gouv.fr
-  NODE_ENV: production
-  PIWIK_SITE_ID: '4'
-  PIWIK_URL: https://matomo.fabrique.social.gouv.fr
----
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: api
-    application: cdtn
-    component: cdtn
-    owner: cdtn
-    team: cdtn
-  name: api
-  annotations:
-    kapp.k14s.io/disable-default-ownership-label-rules: ''
-    kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.github.com/job: '5678'
-    app.github.com/ref: refs/tags/v1.2.3
-    app.github.com/repo: socialgouv/cdtn
-    app.github.com/run: '1234'
-    app.github.com/sha: '0123456'
-  namespace: cdtn
-spec:
-  ports:
-    - name: http
-      port: 80
-      targetPort: 1337
-  selector:
-    app: api
-  type: ClusterIP
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    kubernetes.io/tls-acme: 'true'
-    kapp.k14s.io/disable-default-ownership-label-rules: ''
-    kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.github.com/job: '5678'
-    app.github.com/ref: refs/tags/v1.2.3
-    app.github.com/repo: socialgouv/cdtn
-    app.github.com/run: '1234'
-    app.github.com/sha: '0123456'
-  labels:
-    app: api
-    application: cdtn
-    component: cdtn
-    owner: cdtn
-    team: cdtn
-  name: api
-  namespace: cdtn
-spec:
-  rules:
-    - host: api.cdtn.fabrique.social.gouv.fr
-      http:
-        paths:
-          - backend:
-              service:
-                name: api
-                port:
-                  name: http
-            path: /
-            pathType: Prefix
-  tls:
-    - hosts:
-        - api.cdtn.fabrique.social.gouv.fr
-      secretName: api-crt
----
-apiVersion: autoscaling/v2beta2
-kind: HorizontalPodAutoscaler
-metadata:
-  annotations:
-    kapp.k14s.io/disable-default-ownership-label-rules: ''
-    kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.github.com/job: '5678'
-    app.github.com/ref: refs/tags/v1.2.3
-    app.github.com/repo: socialgouv/cdtn
-    app.github.com/run: '1234'
-    app.github.com/sha: '0123456'
-  labels:
-    app: api
-    application: cdtn
-    component: cdtn
-    owner: cdtn
-    team: cdtn
-  name: api
-  namespace: cdtn
-spec:
-  minReplicas: 2
-  maxReplicas: 10
-  metrics:
-    - resource:
-        name: cpu
-        target:
-          averageUtilization: 80
-          type: Utilization
-      type: Resource
-    - resource:
-        name: memory
-        target:
-          averageUtilization: 80
-          type: Utilization
-      type: Resource
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: api
----
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -361,10 +90,10 @@ spec:
           resources:
             limits:
               cpu: 500m
-              memory: 768Mi
+              memory: 1Gi
             requests:
-              cpu: 300m
-              memory: 512Mi
+              cpu: 250m
+              memory: 768Mi
           startupProbe:
             failureThreshold: 12
             httpGet:
@@ -374,30 +103,64 @@ spec:
             initialDelaySeconds: 10
             timeoutSeconds: 15
           env:
-            - name: API_URL
-              value: https://api.cdtn.fabrique.social.gouv.fr/api/v1
-            - name: COMMIT
-              value: 0123456789abcdefghijklmnopqrstuvwxyz0123
+            - name: ELASTIC_APM_ENVIRONMENT
+            - name: ES_INDEX_PREFIX
+              value: cdtn-prod
             - name: VERSION
               value: refs/tags/v1.2.3
-            - name: FRONTEND_HOST
-              value: code.travail.gouv.fr
           envFrom:
+            - secretRef:
+                name: www-secret
             - configMapRef:
                 name: www-configmap
-      initContainers:
-        - args:
-            - http://api
-          image: ghcr.io/socialgouv/docker/wait-for-http:6.56.1
-          imagePullPolicy: Always
-          name: wait-for-www
-          resources:
-            limits:
-              cpu: 20m
-              memory: 32Mi
-            requests:
-              cpu: 5m
-              memory: 16Mi
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/namespace-wide: 'true'
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
+  name: www-secret
+  namespace: cdtn
+  labels:
+    application: cdtn
+    component: cdtn
+    owner: cdtn
+    team: cdtn
+spec:
+  encryptedData:
+    ELASTICSEARCH_TOKEN_API: >-
+      AgBAPhYKfmXscwlvKhxlAH8NI06n7hMZ6DfSwPrOpKi6lztYPT7j3n0rcY0KCDJk9kRVzdaWyN7rV/jRltxbgnVcWaYit7j+Q9385LCLO5AChyqh4aMLgyoO/xqB8WRG6G7J4yuuXi2XgK6ocJaSnCIYqLjN35JaAoDVd7tMMasoYFFiRW9fUMDz2GgQBWE8MEwPSQvXtW1h8YHDG5rm1oneSCbEJ/H+JWONDmvudZIYiqXQayT06gXz5n33v/HCyf0sQI1zJD+Mf4RlsBRYTdGresvPqgEHkCaM0f5aQmw3kyu6MssQqoeH57p6eVAQKf59qqY6pZ3yMTi/oHNgSX3thql+no+ptoZrOU5wrvQYk5XAsL2TU7O8JXJozn2nsyyhlxeZbl7gRfTBggz9+KbxaEnOB1priTgngUT/i5lxRWlhh+bnMXHReLa4KoA1YK+oeWRVhFD351l5ryszK6Ixzvmpp1tjG83/SVQSQ5+yhG3sJGPi4FE6TZrcnQ+mbKE/jKtNaCcofsHyrOkGaIMMI/4+fv0vxFq+7Mh9hL0EPv7EkgqAl0aHRPOqwo2GMh6Sw9lqbWKt8Z2DNJAgK1xPCn71qZPMoUPEltysSOXdyVHhdLYSqrcsUQNBrXZfojRVN3FmsTpOrqZzZejNB/lXLrIacXMtp/Aq12+ddpYCV97O97H2lOzPtHVpZ2HSfdTuekyH0U3GwUbovfi1b31QzHFR6TIoNbbadu0DjhcyNKcRILuTyvrZSGdnkzBP3+eQVp9XXlk9oW2fR4A=
+    ELASTICSEARCH_URL: >-
+      AgCgpC/yXYJSNUDqQXs+S/UpXSchhFl6w5AG+SsxyVsgGM3+NE+0W1dwJxHxIYc5SCBFy0wsHk0vf7LcjEWfW5CLICe5F22xLExMkdxoUBsMyhL2spPYmZg1o3wE0P+hjInAgUCst3KQQ1r4FqDL8dTSiCFkkxMXJZ98mzOJq9wv8cueOyxDJrZNWAiV4JKNnWLHRYs/Cv4PybEbfauw/uwjbv/KBcTCT95pQxx5K4zyoBiFxyybmShuLJKmZk233kIhlHpSzCK7RNn1x5MPYjWHKVKJyaCQxTNmI9EX23mQtCg6KV3WinFG536H36+XLagMY5q4gSj/S/E3hG80AB7kV8WldMz34Y4bgdz9txceQ1iatFqo1IZve9si4syRXV9LD7ZUUYdutOXAlyDxk+9f5Za1F/7nfPhsdveKZlH4tR35/wV7I4ANVDge6rXW2488wcVGR0d2+IiALBI7P2o5n9Z2F1llK6FN2zg7Xa2gPKcDFCdIbcIWbtSdyoqXpqzmmU+ArlxAWcX0eXCITBXconHml2B6MZQDlHVHuWUlK4AdQsiPBTj4EkQoRWMLTE/yav8c3PG/BLgWzVBY3U8EdjO9VqXAio1TIXIkak7Mk48QBHsaqHAIE5NZ0xjXsem0gI093CrGFEnODt2+RsnjwMNOtrUaopRc8Q93lpAtMEPtmUpYY/T0VaRT++zHa7Ty6dfZvvBVNhWTM/xq84o5UKFiLp9fcNaasXnvQIX1Fwd2DxzkrgQTCkmsPEuF9YZp2gn0X7YdU6JRJQm2KNGxssYFUw==
+    ELASTIC_APM_SECRET_TOKEN: >-
+      AgAxUCyEposdu101BJawxcvTXnylCaUgdbFayj8fYT/gVaDTn4FX/sJpA18ll7MGpSrXIJqylUbz5JTD2LRc2OZN+4E79ebEaT9VDRm5orBG6hVVtNsO7X00kzF6XQCLiG7aDHa3Hz0FsLp0++wWuMWzIeLeH9FUYW262nB2NZcf/T6HZe4xd9nSw2ty5Jk6/il3YFZ3Y2XIbroddS+uSyZXH5vtZNVMucqUmzLoekvRivIAbu/9xR4Spb1p3W0yEUjflt/PkIYOylu4uAKjecqF/3hNNNlvakHQXDOFZWNOUAjaXXQnjyuznlKGmuY6EAENQK+zSTF6/Xyt6xlmTFAV+0ygT316oUcoNIfbOOgZq2XRaYNXB2t5l5pCNoZFzAy8c3l1oaQtLpDI5VeeMtK2GRdiIqFWuFvUh/1l8T61rA3yrQ2cWXc73kbJmKWDmFFpoHu8VFhMLh33i/q38qPUmrlseEoLjFsYtv/OxoeWT5zRoo1IlYs7SnQgM2cipiv4U6G/xHBkMtZZsSo/nJnqMg7E48uQvAc+Rx0UlI252WR5trPPyMbjKloQlo2qCIqHjw8iNPqJ3zJ89Su8roakqmqByvOPGNKjUDZhv+rgADhFdCUsQ3Cz9b/G4szrAY3ZCjyQj3flwYR1tfsTEEoDGpUgQasPWoTan/rO2kjVJItLLbUm/QQC/Fm0GpDIKZef2mNZMTQ9xAsq4J/Hslxh32U=
+    ELASTIC_APM_SERVER_URL: >-
+      AgAtlEnPcgNeuW0t2GuqxBAGMSkTqc4ec8a2KY79BzD48MlETJlQckBfeHXLbdnSHU+2KrAP7lKgsPqYbVFrT2gaXwXljN8GWC26wXcO8WRZle5KAD0NnrKVrgzgHobMUe1bUehDdyFQXrOjkSsc5NatZ7JAUZKQTNstJIxn+sPHKv7pha4DKz6j36gMRCs8a28/VZkjP30jE70aYNg0qtThe1C7uz9suPTrermtsUzkrwto4n1Pm9YwYZ41Lv7GTJjYBYj5RYEZhxbpzRR1IufT2Nj1n6JZnyC4UUsJy4flJpTgKrSE2sZBYRZytZ5hAKthKKVFybiTygN+X+YGip8/qJLt4qXXMpTVdy/AUTniY1VcRHTJzDCUQl5x/ODE+28jB/xKws8Tn7oZ1t/5QDbfVi37NS78rusWwSX/ADSI52yM88TcvgmTqr2y2ix59fDZbkk2ZMHL20SKV98yACkNl7iNrdcyNA5hFhSK4LDY7ZetpwgDEP4BkZLThQGjq3wke8ABtG3TNTX109HH0dqRL1BKj+qg7xfVPEOtc1VeNTU87oWeKIMTpyeKsnEtP/hYCgmva+2h9Pa65JXyIln5VtIKr59tGBYC0YOcRc1jntt9rfPg+QPvXQE4o1KtptTRvh39SWexVvUt/pxClpUVnQk2ecyU+g9WaYNWfjgeOZ2KFDAys3Gtnl+9Utj3ffFimJNM8kXF8yIs7xZCyRb2MqhPiIzv+fZgd6+MUwJzz8Q5Hwd4Wbm/3kDatLXXlZs4LZfdwalo6LFTCdhanLP3
+  template:
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/namespace-wide: 'true'
+        kapp.k14s.io/disable-default-ownership-label-rules: ''
+        kapp.k14s.io/disable-default-label-scoping-rules: ''
+        app.github.com/job: '5678'
+        app.github.com/ref: refs/tags/v1.2.3
+        app.github.com/repo: socialgouv/cdtn
+        app.github.com/run: '1234'
+        app.github.com/sha: '0123456'
+      name: www-secret
+      labels:
+        application: cdtn
+        component: cdtn
+        owner: cdtn
+        team: cdtn
+    type: Opaque
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -418,14 +181,13 @@ metadata:
     team: cdtn
   namespace: cdtn
 data:
-  AZURE_BASE_URL: https://cdtnadminprod.blob.core.windows.net
-  AZURE_CONTAINER: cdtn
+  ELASTIC_APM_ACTIVE: 'false'
+  ELASTIC_APM_SERVICE_NAME: cdtn-api
+  ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME: 'true'
+  NLP_URL: https://serving-ml.fabrique.social.gouv.fr
   NODE_ENV: production
   PIWIK_SITE_ID: '4'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr
-  PROD_HOSTNAME: code.travail.gouv.fr
-  SENTRY_PUBLIC_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
-  SENTRY_ENV: production
 ---
 apiVersion: v1
 kind: Service
@@ -515,7 +277,7 @@ metadata:
   namespace: cdtn
 spec:
   minReplicas: 2
-  maxReplicas: 10
+  maxReplicas: 20
   metrics:
     - resource:
         name: cpu
