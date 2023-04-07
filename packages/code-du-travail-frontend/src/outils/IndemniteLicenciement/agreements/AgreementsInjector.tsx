@@ -16,6 +16,7 @@ import {
   Agreement44Informations,
 } from "./44-industries-chimiques";
 import { Agreement2609, Agreement2609Informations } from "./2609-batiment-etam";
+import { Agreement2614 } from "./2614-travaux-public";
 
 type Props = {
   idcc: SupportedCcIndemniteLicenciement | null;
@@ -57,6 +58,9 @@ export default function AgreementsInjector(props: Props) {
     case SupportedCcIndemniteLicenciement.IDCC2609 === props.idcc &&
       props.step === IndemniteLicenciementStepName.Salaires:
       return <Agreement2609 />;
+    case SupportedCcIndemniteLicenciement.IDCC2614 === props.idcc &&
+      props.step === IndemniteLicenciementStepName.Salaires:
+      return <Agreement2614 />;
     case SupportedCcIndemniteLicenciement.IDCC2609 === props.idcc &&
       props.step === IndemniteLicenciementStepName.Resultat:
       return <Agreement2609Informations />;

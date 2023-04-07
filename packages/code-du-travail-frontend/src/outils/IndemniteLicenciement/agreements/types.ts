@@ -37,27 +37,36 @@ import {
   Agreement2609StoreSlice,
   createAgreement2609StoreSalaires,
 } from "./2609-batiment-etam";
+import {
+  Agreement2614StoreError,
+  Agreement2614StoreInput,
+  Agreement2614StoreSlice,
+  createAgreement2614StoreSalaires,
+} from "./2614-travaux-public";
 
 export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement1527StoreInput &
   Agreement16StoreInput &
   Agreement29StoreInput &
   Agreement44StoreInput &
-  Agreement2609StoreInput;
+  Agreement2609StoreInput &
+  Agreement2614StoreInput;
 
 export type AgreementStoreError = Agreement1516StoreError &
   Agreement1527StoreError &
   Agreement16StoreError &
   Agreement44StoreError &
   Agreement29StoreError &
-  Agreement2609StoreError;
+  Agreement2609StoreError &
+  Agreement2614StoreError;
 
 export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement1527StoreSlice &
   Agreement16StoreSlice &
   Agreement44StoreSlice &
   Agreement29StoreSlice &
-  Agreement2609StoreSlice;
+  Agreement2609StoreSlice &
+  Agreement2614StoreSlice;
 
 export const createRootAgreementsStore = (
   set: StoreApi<MainStore>["setState"],
@@ -70,4 +79,5 @@ export const createRootAgreementsStore = (
   ...createAgreement29StoreSalaires(set, get, options),
   ...createAgreement44StoreSalaires(set, get, options),
   ...createAgreement2609StoreSalaires(set, get, options),
+  ...createAgreement2614StoreSalaires(set, get, options),
 });
