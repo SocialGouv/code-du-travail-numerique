@@ -3,11 +3,10 @@ apiVersion: v1
 metadata:
   name: www-configmap
 data:
-  AZURE_BASE_URL: "https://cdtnadmindev.blob.core.windows.net"
-  AZURE_CONTAINER: "cdtn-dev"
+  ELASTIC_APM_ACTIVE: "false"
+  ELASTIC_APM_SERVICE_NAME: "cdtn-api"
+  ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME: "true"
+  NLP_URL: "https://serving-ml-preprod.dev.fabrique.social.gouv.fr"
   NODE_ENV: "production"
   PIWIK_SITE_ID: "3"
-  PIWIK_URL: https://matomo.fabrique.social.gouv.fr
-  PROD_HOSTNAME: "code.travail.gouv.fr"
-  SENTRY_PUBLIC_DSN: "https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5"
-  SENTRY_ENV: "dev"
+  PIWIK_URL: "https://matomo.fabrique.social.gouv.fr"

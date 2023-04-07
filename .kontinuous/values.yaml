@@ -3,7 +3,7 @@ global:
 
 app-frontend:
   host: "{{.Values.global.host}}"
-  needs: [build-frontend, app-api]
+  needs: [build-frontend]
   imagePackage: frontend
   imageProject: cdtn
   probesPath: /api/health
@@ -13,29 +13,8 @@ app-frontend:
   envFrom:
     - secretRef:
         name: www-configmap
-
-app-api:
-  host: "api-{{.Values.global.host}}"
-  needs: [build-api]
-  containerPort: 1337
-  imagePackage: api
-  imageProject: cdtn
-  probesPath: /api/v1/version
-  autoscale:
-    minReplicas: 2
-    maxReplicas: 10
-  envFrom:
     - secretRef:
-        name: api-configmap
-    - secretRef:
-        name: api-secret
-  resources:
-    requests:
-      cpu: 100m
-      memory: 320Mi
-    limits:
-      cpu: 500m
-      memory: 1Gi
+        name: www-secret
 
 jobs:
   runs:
@@ -45,14 +24,5 @@ jobs:
         registrySecretRefName: harbor
         imagePackage: frontend
         imageProject: cdtn
-        buildArgs:
-          VERSION: "{{ $.Values.global.sha }}"
-    build-api:
-      use: SocialGouv/kontinuous/plugins/fabrique/jobs/build@v1
-      with:
-        registrySecretRefName: harbor
-        imagePackage: api
-        imageProject: cdtn
-        context: ./packages/code-du-travail-api
         buildArgs:
           VERSION: "{{ $.Values.global.sha }}"
