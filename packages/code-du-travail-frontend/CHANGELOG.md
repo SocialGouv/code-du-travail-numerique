@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.97.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.97.0...v4.97.1) (2023-04-11)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** bug affichage question salaire indemnite de licenciement ([#5101](https://github.com/SocialGouv/code-du-travail-numerique/issues/5101)) ([cf95e5f](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf95e5f08dc20716db5fc387d2f0ccbb47b6fd99))
+
 # [4.97.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.96.0...v4.97.0) (2023-04-07)
 
 ### Bug Fixes
