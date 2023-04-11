@@ -1,5 +1,10 @@
 import { SeniorityLegal } from "../../base";
 import {
+  Seniority16,
+  Seniority44,
+  Seniority275,
+  Seniority413,
+  Seniority650,
   Seniority1090,
   Seniority1486,
   Seniority1505,
@@ -8,20 +13,15 @@ import {
   Seniority1527,
   Seniority1596,
   Seniority1597,
-  Seniority16,
   Seniority1996,
   Seniority2098,
   Seniority2216,
   Seniority2511,
   Seniority2609,
   Seniority2614,
-  Seniority275,
   Seniority2941,
   Seniority3043,
   Seniority3239,
-  Seniority413,
-  Seniority44,
-  Seniority650,
 } from "../../conventions";
 import { SupportedCcIndemniteLicenciement } from "../index";
 import type { ISeniority } from "../types";
