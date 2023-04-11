@@ -12,6 +12,7 @@ import { Step } from "./type";
 
 const anchorRef = React.createRef<HTMLLIElement>();
 import arrayMutators from "final-form-arrays";
+import scrollToTop from "../common/utils/scrollToTop";
 
 type Props<FormState, StepName extends string> = {
   duration?: string;
@@ -75,7 +76,7 @@ const SimulatorContent = <FormState, StepName extends string>({
         steps[nextStepIndex].name,
       ]);
       onStepChange(currentStep, steps[nextStepIndex]);
-      window?.scrollTo(0, 0);
+      scrollToTop();
     }
   };
 
@@ -90,7 +91,7 @@ const SimulatorContent = <FormState, StepName extends string>({
         `click_previous_${title}`,
         steps[previousStepIndex].name,
       ]);
-      window?.scrollTo(0, 0);
+      scrollToTop();
     } else {
       throw Error("Can't show the previous step with index less than 0");
     }

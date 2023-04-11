@@ -1,8 +1,9 @@
 import { ReferenceSalaryLegal } from "../../base";
-import { ReferenceSalary2609 } from "../../conventions";
+import { ReferenceSalary2609, ReferenceSalary2614 } from "../../conventions";
 import { ReferenceSalary16 } from "../../conventions/16_transports_routiers";
 import { ReferenceSalary0029 } from "../../conventions/29_hospitalisation_privee_but_non_lucratif";
 import { ReferenceSalary44 } from "../../conventions/44_industries_chimiques";
+import { ReferenceSalary86 } from "../../conventions/86_publicite_francaise";
 import { ReferenceSalary413 } from "../../conventions/413_handicap";
 import { ReferenceSalary573 } from "../../conventions/573_commerces_de_gros";
 import { ReferenceSalary675 } from "../../conventions/675_habillement_commerce_succursales";
@@ -44,8 +45,12 @@ export class ReferenceSalaryFactory {
         return new ReferenceSalary2098() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC2609:
         return new ReferenceSalary2609() as IReferenceSalary<T>;
+      case SupportedCcIndemniteLicenciement.IDCC2614:
+        return new ReferenceSalary2614() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC0675:
         return new ReferenceSalary675() as IReferenceSalary<T>;
+      case SupportedCcIndemniteLicenciement.IDCC0086:
+        return new ReferenceSalary86() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new ReferenceSalaryLegal() as IReferenceSalary<T>;

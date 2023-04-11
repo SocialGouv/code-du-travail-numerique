@@ -45,25 +45,24 @@ export class Seniority2216
     const dEntree = parseDate(from);
     const dSortie = addDays(parseDate(to), 1);
 
-    const totalAbsence =
-      absences.reduce((total, item) => {
-        const m = this.getMotifs().find(
-          (motif) => motif.key === item.motif.key
-        );
-        if (
-          item.durationInMonth === undefined ||
-          !m ||
-          (item.motif.key === MotifKeys.maladieNonPro &&
-            item.durationInMonth <= 12) ||
-          (item.motif.key === MotifKeys.accidentTrajet &&
-            item.durationInMonth <= 12)
-        ) {
-          return total;
-        }
-        return total + item.durationInMonth * m.value;
-      }, 0) / 12;
+    const totalAbsence = absences.reduce((total, item) => {
+      const m = this.getMotifs().find((motif) => motif.key === item.motif.key);
+      if (
+        item.durationInMonth === undefined ||
+        !m ||
+        (item.motif.key === MotifKeys.maladieNonPro &&
+          item.durationInMonth <= 12) ||
+        (item.motif.key === MotifKeys.accidentTrajet &&
+          item.durationInMonth <= 12)
+      ) {
+        return total;
+      }
+      return total + item.durationInMonth * m.value;
+    }, 0);
 
-    return { value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence };
+    return {
+      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
+    };
   }
 }
 

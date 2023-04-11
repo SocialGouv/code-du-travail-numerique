@@ -4,15 +4,16 @@ import type {
   CC29ReferenceSalaryProps,
   CC44ReferenceSalaryProps,
   CC573ReferenceSalaryProps,
+  CC675ReferenceSalaryProps,
   CC1486ReferenceSalaryProps,
   CC1516ReferenceSalaryProps,
   CC1527ReferenceSalaryProps,
   CC2098ReferenceSalaryProps,
   CC2609ReferenceSalaryProps,
+  CC2614ReferenceSalaryProps,
   CC3239ReferenceSalaryProps,
+  CC2596ReferenceSalaryProps,
 } from "../../conventions";
-import type { CC675ReferenceSalaryProps } from "../../conventions/675_habillement_commerce_succursales";
-import type { CC2596ReferenceSalaryProps } from "../../conventions/2596_coiffure/salary";
 import type { SupportedCcIndemniteLicenciement } from "..";
 
 export type SalaryPeriods = {
@@ -49,6 +50,8 @@ export type ReferenceSalaryProps<T> =
     ? CC2596ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC2609
     ? CC2609ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC2614
+    ? CC2614ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC3239
     ? CC3239ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC0675
