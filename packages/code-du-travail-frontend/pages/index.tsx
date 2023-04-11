@@ -7,6 +7,7 @@ import { SITE_URL } from "../src/config";
 import { Highlights, HomeSlice, Themes, Tools } from "../src/home";
 import { GetHomePage } from "../src/api";
 import { ListLinkItemProps } from "../src/search/SearchResults/Results";
+import { handleError } from "../src/lib/fetch-error";
 
 const Home = ({
   themes,
@@ -65,7 +66,7 @@ export async function getStaticProps() {
 
   try {
     const response = await fetch(`${SITE_URL}/api/home`);
-    if (!response.ok) throw new Error(response.statusText);
+    if (!response.ok) handleError(response);
     const data: GetHomePage = await response.json();
     themes = data.themes.children;
     highlights = data.highlights;

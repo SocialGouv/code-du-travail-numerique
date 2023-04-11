@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.97.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.96.0...v4.97.0) (2023-04-07)
+
+### Features
+
+- **api:** Supression du projet `koa` pour utiliser l'API interne à `next` ([#5042](https://github.com/SocialGouv/code-du-travail-numerique/issues/5042)) ([f833e6b](https://github.com/SocialGouv/code-du-travail-numerique/commit/f833e6bf9bc1227043051222e07aaa2acc332c3f)), closes [#5068](https://github.com/SocialGouv/code-du-travail-numerique/issues/5068)
+
 # [4.96.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.95.0...v4.96.0) (2023-03-31)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui

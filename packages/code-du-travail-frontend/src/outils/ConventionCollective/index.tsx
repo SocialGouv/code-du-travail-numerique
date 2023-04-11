@@ -16,6 +16,7 @@ import { TrackingProvider, useTrackingContext } from "./common/TrackingContext";
 import Steps from "./steps";
 import handleTrackEvent from "./tracking/HandleTrackEvent";
 import { OnUserAction, UserAction } from "./types";
+import scrollToTop from "../common/utils/scrollToTop";
 
 interface Props {
   icon: string;
@@ -66,7 +67,7 @@ function AgreementSearchTool({
 
   function handleHashNavigation(url) {
     const [, hash = ""] = url.split("#");
-    window.scrollTo(0, 0);
+    scrollToTop();
     const main: HTMLDivElement | null = document.querySelector("[role=main]");
     if (main) {
       main.focus();

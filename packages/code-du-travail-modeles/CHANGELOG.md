@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.97.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.96.0...v4.97.0) (2023-04-07)
+
+### Bug Fixes
+
+- indemnite licenciement seniority with absence ([#5054](https://github.com/SocialGouv/code-du-travail-numerique/issues/5054)) ([00ea92c](https://github.com/SocialGouv/code-du-travail-numerique/commit/00ea92c2b38701cdbfbc22db178cca74af840cfd))
+- **indemnite-licenciement:** calcul de l'indemnité pour une ancienneté supérieure à 10 ans (CC 3127) ([#5071](https://github.com/SocialGouv/code-du-travail-numerique/issues/5071)) ([67321ae](https://github.com/SocialGouv/code-du-travail-numerique/commit/67321ae6e3b154cc0c3d46ae117d54963dbd7ec6))
+
+### Features
+
+- cc 275 transport aerien personnel au sol ([#5046](https://github.com/SocialGouv/code-du-travail-numerique/issues/5046)) ([7128cde](https://github.com/SocialGouv/code-du-travail-numerique/commit/7128cde9741b17687826f3c2bd39c1ee2d3e3f6a)), closes [#5008](https://github.com/SocialGouv/code-du-travail-numerique/issues/5008)
+- **indemnite-licenciement:** ajout de la cc 2614 ([#5035](https://github.com/SocialGouv/code-du-travail-numerique/issues/5035)) ([3690f50](https://github.com/SocialGouv/code-du-travail-numerique/commit/3690f5080e3f5e40c07d4baa8b89d2b0ee2a15ef))
+- **indemnite-licenciement:** ajout de la cc 86 ([#5073](https://github.com/SocialGouv/code-du-travail-numerique/issues/5073)) ([e020089](https://github.com/SocialGouv/code-du-travail-numerique/commit/e020089ea813d7ea36b03417a7458a882ac52269))
+
 # [4.96.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.95.0...v4.96.0) (2023-03-31)
 
 ### Features
