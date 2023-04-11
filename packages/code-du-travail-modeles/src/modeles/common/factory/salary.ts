@@ -1,5 +1,9 @@
 import { ReferenceSalaryLegal } from "../../base";
-import { ReferenceSalary2609, ReferenceSalary2614 } from "../../conventions";
+import {
+  ReferenceSalary1606,
+  ReferenceSalary2609,
+  ReferenceSalary2614,
+} from "../../conventions";
 import { ReferenceSalary16 } from "../../conventions/16_transports_routiers";
 import { ReferenceSalary0029 } from "../../conventions/29_hospitalisation_privee_but_non_lucratif";
 import { ReferenceSalary44 } from "../../conventions/44_industries_chimiques";
@@ -22,6 +26,8 @@ export class ReferenceSalaryFactory {
     switch (idcc) {
       case SupportedCcIndemniteLicenciement.IDCC1516:
         return new ReferenceSalary1516() as IReferenceSalary<T>;
+      case SupportedCcIndemniteLicenciement.IDCC1606:
+        return new ReferenceSalary1606() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC413:
         return new ReferenceSalary413() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC1486:

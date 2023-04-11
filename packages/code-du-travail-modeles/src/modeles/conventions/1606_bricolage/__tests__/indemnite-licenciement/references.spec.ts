@@ -27,7 +27,7 @@ describe("Vérification des références juridiques pour la CC 2511", () => {
     age   | catPro            | expectedReferences
     ${24} | ${"'Cadres'"}     | ${References}
     ${24} | ${"'Non-Cadres'"} | ${References}
-    ${50} | ${"'Cadres'"}     | ${ReferencesCadres50.concat(References)}
+    ${50} | ${"'Cadres'"}     | ${ReferencesCadres50}
     ${50} | ${"'Non-Cadres'"} | ${References}
   `(
     "pour un $catPro avec une age de $age ans",
