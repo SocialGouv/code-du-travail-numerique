@@ -9,10 +9,10 @@ import type {
   CC1516ReferenceSalaryProps,
   CC1527ReferenceSalaryProps,
   CC2098ReferenceSalaryProps,
+  CC2596ReferenceSalaryProps,
   CC2609ReferenceSalaryProps,
   CC2614ReferenceSalaryProps,
   CC3239ReferenceSalaryProps,
-  CC2596ReferenceSalaryProps,
 } from "../../conventions";
 import type { SupportedCcIndemniteLicenciement } from "..";
 
