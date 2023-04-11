@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { RadioQuestion, TextQuestion } from "../../../Components";
-import { AbsencePeriods } from "./components";
+import { AbsencePeriods, SectionTitleWithTooltip } from "./components";
 import {
   IndemniteLicenciementContext,
   useIndemniteLicenciementStore,
@@ -106,16 +106,27 @@ const StepAnciennete = () => {
         dataTestId={"date-sortie"}
         tooltip={{
           content: (
-            <Html>
+            <p>
               En cas de dispense de préavis à l&apos;initiative de
               l&apos;employeur, ou si le licenciement intervient à la suite d’un
               avis d’inaptitude non professionnelle, indiquer la date de fin du
               préavis «&nbsp;théorique&nbsp;» non effectué.
-            </Html>
+            </p>
           ),
         }}
       />
-      <SectionTitle>Période d’absence prolongée</SectionTitle>
+      <SectionTitleWithTooltip
+        name="Période d’absence prolongée"
+        tooltip={{
+          content: (
+            <p>
+              Pour rendre le saisie de l&apos;outil plus simple, les
+              absences de moins d&apos;un mois ne sont pas comptabilisées.
+              Or, ces absences peuvent impacter l&apos;ancienneté et
+              donner ainsi lieu à un montant d&apos;indemnité inférieur
+              à celui calculé par notre simulateur.
+            </p>)
+        }} />
       <RadioQuestion
         questions={[
           {

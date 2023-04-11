@@ -11,7 +11,7 @@ import { Feedback } from "../../src/common/Feedback";
 import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
-import { API_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import {
   AgreementSearch,
@@ -111,7 +111,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   } = tool;
   let relatedItems = [];
   try {
-    const response = await fetch(`${API_URL}/items/${SOURCES.TOOLS}/${slug}`);
+    const response = await fetch(`${SITE_URL}/api/items/${SOURCES.TOOLS}/${slug}`);
     if (response.ok) {
       relatedItems = await response.json().then((data) => data.relatedItems);
     }

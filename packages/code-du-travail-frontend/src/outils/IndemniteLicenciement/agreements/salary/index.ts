@@ -1,4 +1,5 @@
 import {
+  IReferenceSalary,
   ReferenceSalaryFactory,
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
@@ -15,6 +16,7 @@ import { AgreementSalary44 } from "./44";
 import { AgreementSalary29 } from "./29";
 import { AgreementSalary573 } from "./573";
 import { AgreementSalary2609 } from "./2609";
+import { AgreementSalary2614 } from "./2614";
 import { AgreementSalary675 } from "./675";
 
 export const getAgreementReferenceSalary = (
@@ -55,11 +57,13 @@ export const getAgreementReferenceSalary = (
       return new AgreementSalary573().computeSalary(salaries, get);
     case SupportedCcIndemniteLicenciement.IDCC2609 === idcc:
       return new AgreementSalary2609().computeSalary(salaries, get);
+    case SupportedCcIndemniteLicenciement.IDCC2614 === idcc:
+      return new AgreementSalary2614().computeSalary(salaries, get);
     case SupportedCcIndemniteLicenciement.IDCC0675 === idcc:
       return new AgreementSalary675().computeSalary(salaries, get);
     default: {
       const sReference = new ReferenceSalaryFactory().create(
-        SupportedCcIndemniteLicenciement.default
+        idcc ?? SupportedCcIndemniteLicenciement.default
       );
       return sReference.computeReferenceSalary({
         salaires: salaries,
