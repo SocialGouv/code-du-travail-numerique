@@ -15,6 +15,7 @@ import styled from "styled-components";
 import Metas from "../src/common/Metas";
 import { SITE_URL } from "../src/config";
 import { Layout } from "../src/layout/Layout";
+import { handleError } from "../src/lib/fetch-error";
 
 type PropsData = {
   nbDocuments: number;
@@ -86,8 +87,8 @@ const Stats = ({ data }: Props): JSX.Element => {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const props = await fetch(`${SITE_URL}/api/stats`)
     .then((res) => {
-      if (res.ok) return res.json();
-      throw new Error("Error fetching stats");
+      if (!res.ok) handleError(res);
+      return res.json();
     })
     .then((data: PropsData) => ({ props: { data } }))
     .catch(() => ({

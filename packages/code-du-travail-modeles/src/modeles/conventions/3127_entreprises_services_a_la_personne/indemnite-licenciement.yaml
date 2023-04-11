@@ -2,29 +2,23 @@ contrat salarié . convention collective . entreprises de services à la personn
   applicable si: indemnité de licenciement
   valeur: oui
 
-contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . jusqu'à dix ans ou moins:
-  valeur:
-    le minimum de:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-      - 10 an
-
-contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . au dela de dix ans:
+contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . ancienneté au dela de dix ans:
   somme:
     - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
     - (- 10 an)
   plancher: 0 an
 
-contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . dix ans ou moins:
+contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . calcul total:
   valeur:
     produit:
-      assiette: jusqu'à dix ans ou moins * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      assiette: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       facteur: 1 / 5
   unité: €
 
-contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . plus de dix ans:
+contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . calcul plus de dix ans:
   valeur:
     produit:
-      assiette: au dela de dix ans * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      assiette: ancienneté au dela de dix ans * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       facteur: 2 / 15
   unité: €
 
@@ -34,7 +28,7 @@ contrat salarié . convention collective . entreprises de services à la personn
     toutes ces conditions:
       - indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
       - indemnité de licenciement . ancienneté conventionnelle en année <= 10 ans
-  valeur: dix ans ou moins
+  valeur: calcul total
   unité: €
   arrondi: 2 décimales
   références:
@@ -42,7 +36,7 @@ contrat salarié . convention collective . entreprises de services à la personn
   cdtn:
     formule:
       explanations:
-        - "A : Ancienneté totale": contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . jusqu'à dix ans ou moins
+        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 1/5 * Sref * A
 
@@ -50,8 +44,8 @@ contrat salarié . convention collective . entreprises de services à la personn
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: indemnité de licenciement . ancienneté conventionnelle en année > 10 ans
   somme:
-    - dix ans ou moins
-    - plus de dix ans
+    - calcul total
+    - calcul plus de dix ans
   unité: €
   arrondi: 2 décimales
   références:
@@ -59,7 +53,7 @@ contrat salarié . convention collective . entreprises de services à la personn
   cdtn:
     formule:
       explanations:
-        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . jusqu'à dix ans ou moins
-        - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . au dela de dix ans
+        - "A1 : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . ancienneté au dela de dix ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/15 * Sref * A2)

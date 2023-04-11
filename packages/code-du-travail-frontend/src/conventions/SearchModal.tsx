@@ -4,7 +4,12 @@ import React, { useCallback, useEffect, useState } from "react";
 
 import ConventionSearch from "./Search";
 
-export const ConventionModal = ({ children: renderProp = null }) => {
+type Props = {
+  children?: (openModal: (e: React.MouseEvent) => void) => React.ReactNode;
+  renderProp?: () => any
+};
+
+export const ConventionModal = ({ children: renderProp }: Props) => {
   const [isModalVisible, setModalVisibility] = useState(false);
 
   useEffect(function setupListener() {
