@@ -9,9 +9,7 @@ describe("<Result />", () => {
     );
     expect(queryByText(/2000/i)).toBeInTheDocument();
     expect(
-      queryByText(
-        /Depuis le 11 mars 2023 les périodes d’absence pour congé paternité/
-      )
+      queryByText(/Ce montant est exonéré d’impôt sur le revenu/)
     ).toBeInTheDocument();
   });
 });

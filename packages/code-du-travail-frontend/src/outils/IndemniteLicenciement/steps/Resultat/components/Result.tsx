@@ -1,11 +1,14 @@
 import { Notification } from "@socialgouv/modeles-social";
 import React from "react";
 import { NoticeNote } from "../../../../common/NoticeNote";
+import { Paragraph, theme } from "@socialgouv/cdtn-ui";
+
 import {
   HighlightResult,
   SectionTitle,
   SmallText,
 } from "../../../../common/stepStyles";
+import styled from "styled-components";
 
 type Props = {
   maxResult: string;
@@ -21,14 +24,24 @@ export default function Result({
   const notifs = [
     {
       dottedName: "congé paternité",
-      description:
-        "Depuis le 11 mars 2023 les périodes d’absence pour congé paternité ne sont plus retirées de l’ancienneté du salarié. Si le salarié a pris un congé paternité avant cette date, il peut être décompté de son ancienneté et de ce fait, donner lieu à un montant d’indemnité moins favorable que celui de notre simulateur.",
+      description: (
+        <span>
+          Ce montant est exonéré d’impôt sur le revenu et de cotisations
+          sociales sous certaines conditions,{" "}
+          <StyledLink
+            href="/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi"
+            target="_blank"
+          >
+            en savoir plus
+          </StyledLink>
+        </span>
+      ),
     } as Notification,
   ].concat(notifications);
   return (
-    <>
+    <DIV>
       <SectionTitle hasSmallMarginTop>Indemnité</SectionTitle>
-      <p>
+      <Paragraph noMargin>
         {resultMessage}{" "}
         <HighlightResult>{maxResult.replace(".", ",")}&nbsp;€.</HighlightResult>
         <NoticeNote
@@ -36,19 +49,8 @@ export default function Result({
           currentElement={0}
           isList
         />
-      </p>
-      <p>
-        Ce montant est exonéré d’impôt sur le revenu et de cotisations sociales
-        sous certaines conditions (en savoir plus sur l’exonération de l’
-        <a
-          href="/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi"
-          target="_blank"
-        >
-          indemnité de licenciement
-        </a>
-        )
-      </p>
-      <SmallText>
+      </Paragraph>
+      <Paragraph fontSize="small" noMargin>
         {notifs.map((notification, index) => (
           <span key={index}>
             <NoticeNote
@@ -58,7 +60,14 @@ export default function Result({
             {notification.description}
           </span>
         ))}
-      </SmallText>
-    </>
+      </Paragraph>
+    </DIV>
   );
 }
+
+export const StyledLink = styled.a`
+  font-weight: normal;
+`;
+export const DIV = styled.div`
+  margin-bottom: ${theme.spacings.small};
+`;
