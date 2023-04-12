@@ -19,10 +19,9 @@ export default function Result(props: Props) {
       <SectionTitle hasSmallMarginTop>Indemnité</SectionTitle>
       <p>
         {props.resultMessage}{" "}
-        <HighlightResult>{`${props.maxResult.replace(
-          ".",
-          ","
-        )} € brut.`}</HighlightResult>
+        <HighlightResult>
+          {props.maxResult.replace(".", ",")}&nbsp;€&nbsp;brut.
+        </HighlightResult>
         {props.notifications && props.notifications.length > 0 && (
           <NoticeNote
             numberOfElements={props.notifications.length}

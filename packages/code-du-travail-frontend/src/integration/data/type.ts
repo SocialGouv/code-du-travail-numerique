@@ -1,3 +1,10 @@
+export type WidgetMessage = {
+  [action: string]: {
+    name: string;
+    description: string;
+  }[];
+};
+
 export type Widget = {
   metaTitle: string;
   metaDescription: string;
@@ -7,6 +14,7 @@ export type Widget = {
   shortDescription: string;
   url: string;
   id: string;
+  messages?: WidgetMessage;
 };
 
 export type Integration = {

@@ -155,4 +155,58 @@ describe("Indemnité licenciement - CC 44", () => {
       userEvent.click(ui.next.get());
     });
   });
+
+  describe("parcours avec une date d'arrêt", () => {
+    beforeEach(() => {
+      render(
+        <CalculateurIndemnite
+          icon={""}
+          title={""}
+          displayTitle={""}
+          slug={"indemnite-licenciement"}
+        />
+      );
+    });
+
+    test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, () => {
+      userEvent.click(ui.introduction.startButton.get());
+      userEvent.click(ui.contract.type.cdi.get());
+      userEvent.click(ui.contract.fauteGrave.non.get());
+      userEvent.click(ui.contract.inaptitude.non.get());
+      userEvent.click(ui.contract.arretTravail.oui.get());
+      fireEvent.change(ui.contract.dateArretTravail.get(), {
+        target: { value: "01/09/2022" },
+      });
+      userEvent.click(ui.next.get());
+      userEvent.click(ui.next.get());
+      userEvent.selectOptions(
+        ui.information.agreement44.proCategory.get(),
+        "Ouvriers et collaborateurs (Groupes I à III)"
+      );
+      userEvent.click(ui.information.agreement44.economicFire.oui.get());
+      fireEvent.change(ui.information.agreement44.age.get(), {
+        target: { value: "38" },
+      });
+      userEvent.click(ui.next.get());
+      fireEvent.change(ui.seniority.startDate.get(), {
+        target: { value: "01/01/2000" },
+      });
+      fireEvent.change(ui.seniority.notificationDate.get(), {
+        target: { value: "01/01/2023" },
+      });
+      fireEvent.change(ui.seniority.endDate.get(), {
+        target: { value: "01/03/2023" },
+      });
+      userEvent.click(ui.seniority.hasAbsence.non.get());
+      userEvent.click(ui.next.get());
+      userEvent.click(ui.salary.hasPartialTime.non.get());
+      userEvent.click(ui.salary.hasSameSalary.non.get());
+      userEvent.click(ui.salary.variablePart.non.get());
+      expect(
+        screen.queryByText(
+          "Connaissez-vous le montant du dernier salaire perçu (préavis inclus) ?"
+        )
+      ).not.toBeInTheDocument();
+    });
+  });
 });

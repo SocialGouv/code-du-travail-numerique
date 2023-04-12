@@ -21,8 +21,11 @@ import produce from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import {
+  getAgreementExtraInfoSalary,
+  getAgreementReferenceSalary,
+} from "../../../agreements";
 import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
-import { getAgreementReferenceSalary } from "../../../agreements";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
 import {
@@ -31,6 +34,13 @@ import {
 } from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
+import { IndemniteLicenciementStepName } from "../../..";
+import {
+  MatomoBaseEvent,
+  MatomoActionEvent,
+  MatomoSimulatorEvent,
+} from "../../../../../lib";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 const initialState: ResultStoreData = {
   input: {
@@ -91,12 +101,23 @@ const createResultStore: StoreSlice<
         isCdd,
         agreement,
       });
+      const isEligible =
+        contratTravailEligibility &&
+        ancienneteEligibility &&
+        informationEligibility;
+
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoBaseEvent.OUTIL,
+        MatomoActionEvent.INDEMNITE_LICENCIEMENT,
+        isEligible
+          ? IndemniteLicenciementStepName.Resultat
+          : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
+      ]);
+
       set(
         produce((state: ResultStoreSlice) => {
-          state.resultData.input.isEligible =
-            contratTravailEligibility &&
-            ancienneteEligibility &&
-            informationEligibility;
+          state.resultData.input.isEligible = isEligible;
           state.resultData.input.infoWarning = infoWarning;
         })
       );
@@ -121,6 +142,9 @@ const createResultStore: StoreSlice<
       const publicodes = get().agreementData.publicodes;
       const dateNotification = get().ancienneteData.input.dateNotification!;
       const dateSortie = get().ancienneteData.input.dateSortie!;
+      const isAgreementSupported =
+        get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
+
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
       }
@@ -162,6 +186,7 @@ const createResultStore: StoreSlice<
       let agreementInformations: AgreementInformation[];
       let agreementNotifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
+      let agreementSalaryExtraInfo: Record<string, string | number> = {};
 
       if (agreement) {
         const infos = informationToSituation(
@@ -169,6 +194,11 @@ const createResultStore: StoreSlice<
         );
 
         agreementRefSalary = getAgreementReferenceSalary(
+          getSupportedAgreement(agreement.num),
+          get as StoreApi<MainStore>["getState"]
+        );
+
+        agreementSalaryExtraInfo = getAgreementExtraInfoSalary(
           getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
@@ -200,7 +230,7 @@ const createResultStore: StoreSlice<
             agreementRefSalary,
             agreementRequiredSeniority.value,
             get().ancienneteData.input.dateNotification!,
-            infos
+            { ...infos, ...agreementSalaryExtraInfo }
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         ).result;
@@ -217,10 +247,11 @@ const createResultStore: StoreSlice<
 
         if (
           agreementHasNoLegalIndemnity ||
-          isConventionnelBetter(
+          (isConventionnelBetter(
             publicodesSituationLegal,
             publicodesSituationConventionnel
-          )
+          ) &&
+            isAgreementSupported)
         ) {
           isAgreementBetter = true;
         }

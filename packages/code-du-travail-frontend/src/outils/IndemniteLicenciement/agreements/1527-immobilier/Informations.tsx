@@ -1,7 +1,12 @@
-import { useIndemniteLicenciementStore } from "../../store";
+import { useContext } from "react";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 
 export default function Agreement1527Informations() {
-  const { hasCommission } = useIndemniteLicenciementStore((state) => ({
+  const store = useContext(IndemniteLicenciementContext);
+  const { hasCommission } = useIndemniteLicenciementStore(store, (state) => ({
     hasCommission: state.agreement1527Data.input.hasCommission,
   }));
 

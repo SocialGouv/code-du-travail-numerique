@@ -3,6 +3,154 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.97.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.97.0...v4.97.1) (2023-04-11)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** bug affichage question salaire indemnite de licenciement ([#5101](https://github.com/SocialGouv/code-du-travail-numerique/issues/5101)) ([cf95e5f](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf95e5f08dc20716db5fc387d2f0ccbb47b6fd99))
+
+# [4.97.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.96.0...v4.97.0) (2023-04-07)
+
+### Bug Fixes
+
+- **build:** add types for cors ([dd62b13](https://github.com/SocialGouv/code-du-travail-numerique/commit/dd62b1351767735dde8b99f467ccc6b311bed79f))
+- **docker:** optimize docker image ([#5030](https://github.com/SocialGouv/code-du-travail-numerique/issues/5030)) ([7ecd6ef](https://github.com/SocialGouv/code-du-travail-numerique/commit/7ecd6efd2eea22aff2e7ceb390545ee69482680d))
+- indemnite licenciement seniority with absence ([#5054](https://github.com/SocialGouv/code-du-travail-numerique/issues/5054)) ([00ea92c](https://github.com/SocialGouv/code-du-travail-numerique/commit/00ea92c2b38701cdbfbc22db178cca74af840cfd))
+- **indemnite-licenciement:** affichage du resultat légal pour les ccs non supporté ([#5098](https://github.com/SocialGouv/code-du-travail-numerique/issues/5098)) ([17aaea2](https://github.com/SocialGouv/code-du-travail-numerique/commit/17aaea24bd323cee41994a0d99c82893d4ccba16))
+- **indemnite-licenciement:** calcul de l'indemnité pour une ancienneté supérieure à 10 ans (CC 3127) ([#5071](https://github.com/SocialGouv/code-du-travail-numerique/issues/5071)) ([67321ae](https://github.com/SocialGouv/code-du-travail-numerique/commit/67321ae6e3b154cc0c3d46ae117d54963dbd7ec6))
+- **info bulle:** style on mobile ([#5060](https://github.com/SocialGouv/code-du-travail-numerique/issues/5060)) ([cf6d7c2](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf6d7c29f50b909ca34c7c009ecdfc463d52eed8))
+- **lockfile:** update dep ([219c417](https://github.com/SocialGouv/code-du-travail-numerique/commit/219c417151986642eb6eef75666012862c570ff0))
+- **pages:** remove last `getInitialProps` and transform some files in `tsx` ([#5091](https://github.com/SocialGouv/code-du-travail-numerique/issues/5091))Co-authored-by: Caroline <4971715+carolineBda@users.noreply.github.com> ([7214147](https://github.com/SocialGouv/code-du-travail-numerique/commit/7214147e6dedd2dd74b73fa4d0b200ebe9448e04))
+- **widget:** track widget click ([#5075](https://github.com/SocialGouv/code-du-travail-numerique/issues/5075)) ([fff82bf](https://github.com/SocialGouv/code-du-travail-numerique/commit/fff82bfe2bcc9f45a8af40ff073d4d982a9ce6b9))
+- **workflow:** dev action set automatic url ([8bda97a](https://github.com/SocialGouv/code-du-travail-numerique/commit/8bda97aff36c70cf122707d6e7c57c625593444f))
+
+### Features
+
+- **api:** ajout d'un middleware qui ajoute cors en `preprod` et `dev` ([#5089](https://github.com/SocialGouv/code-du-travail-numerique/issues/5089)) ([fb6ee11](https://github.com/SocialGouv/code-du-travail-numerique/commit/fb6ee11e6315b8656e3540da3c5e823ba4f5fb70))
+- **api:** Supression du projet `koa` pour utiliser l'API interne à `next` ([#5042](https://github.com/SocialGouv/code-du-travail-numerique/issues/5042)) ([f833e6b](https://github.com/SocialGouv/code-du-travail-numerique/commit/f833e6bf9bc1227043051222e07aaa2acc332c3f)), closes [#5068](https://github.com/SocialGouv/code-du-travail-numerique/issues/5068)
+- cc 275 transport aerien personnel au sol ([#5046](https://github.com/SocialGouv/code-du-travail-numerique/issues/5046)) ([7128cde](https://github.com/SocialGouv/code-du-travail-numerique/commit/7128cde9741b17687826f3c2bd39c1ee2d3e3f6a)), closes [#5008](https://github.com/SocialGouv/code-du-travail-numerique/issues/5008)
+- **indemnite-licenciement:** ajout d'un tooltip sur un `SectionTitle` ([#5059](https://github.com/SocialGouv/code-du-travail-numerique/issues/5059)) ([b554099](https://github.com/SocialGouv/code-du-travail-numerique/commit/b55409920c24b963a554aed9dfc7361bf0efab92))
+- **indemnite-licenciement:** ajout de la cc 2614 ([#5035](https://github.com/SocialGouv/code-du-travail-numerique/issues/5035)) ([3690f50](https://github.com/SocialGouv/code-du-travail-numerique/commit/3690f5080e3f5e40c07d4baa8b89d2b0ee2a15ef))
+- **indemnite-licenciement:** ajout de la cc 86 ([#5073](https://github.com/SocialGouv/code-du-travail-numerique/issues/5073)) ([e020089](https://github.com/SocialGouv/code-du-travail-numerique/commit/e020089ea813d7ea36b03417a7458a882ac52269))
+- scroll to top widget ([#5065](https://github.com/SocialGouv/code-du-travail-numerique/issues/5065)) ([73fe3e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/73fe3e252f47621de90ce3b043721a303ee1db32))
+
+# [4.96.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.95.0...v4.96.0) (2023-03-31)
+
+### Bug Fixes
+
+- widget scroll hidden ([#5072](https://github.com/SocialGouv/code-du-travail-numerique/issues/5072)) ([89e8ab4](https://github.com/SocialGouv/code-du-travail-numerique/commit/89e8ab45d6ac58c7ffb87268ffa53a0a278c161d))
+
+### Features
+
+- **indemnite-licenciement:** ajout de la CC 1266 ([#5041](https://github.com/SocialGouv/code-du-travail-numerique/issues/5041)) ([8982ee0](https://github.com/SocialGouv/code-du-travail-numerique/commit/8982ee06b7b541de5dbdfb2c20e11318c03b6a61))
+
+# [4.95.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.94.0...v4.95.0) (2023-03-31)
+
+### Bug Fixes
+
+- **company search:** should not ignore the address field ([#5064](https://github.com/SocialGouv/code-du-travail-numerique/issues/5064)) ([f134a01](https://github.com/SocialGouv/code-du-travail-numerique/commit/f134a01e88b09493cebf9712e26e4ab8d5428187))
+- widget cookies & erreur sur logo search ([#5067](https://github.com/SocialGouv/code-du-travail-numerique/issues/5067)) ([1fe54ba](https://github.com/SocialGouv/code-du-travail-numerique/commit/1fe54ba7f7ab4bb80e04e7469eb0b501047a818b))
+
+### Features
+
+- **convention-collective:** ajout d'une redirection pour le changement nom de la CC 1518 ([#5069](https://github.com/SocialGouv/code-du-travail-numerique/issues/5069)) ([b6660de](https://github.com/SocialGouv/code-du-travail-numerique/commit/b6660deecdd709b26519cc696660ebc77e706941))
+
+# [4.94.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.93.1...v4.94.0) (2023-03-30)
+
+### Bug Fixes
+
+- **actions:** modification du message d un workflow ([4048fd2](https://github.com/SocialGouv/code-du-travail-numerique/commit/4048fd20d3abbb22f296d86d6c0d3308f55c0058))
+- **actions:** test workflow verif prod ([03b9063](https://github.com/SocialGouv/code-du-travail-numerique/commit/03b9063c0d191b5c079f23a3f56378aaf6087abb))
+- correctif sur les tests unitaires de robots.txt ([#5038](https://github.com/SocialGouv/code-du-travail-numerique/issues/5038)) ([1871bf3](https://github.com/SocialGouv/code-du-travail-numerique/commit/1871bf36d65b609c88b45f45673b48d23d0ce4db))
+- **e2e:** add to .gitignore downloads folder ([0752489](https://github.com/SocialGouv/code-du-travail-numerique/commit/0752489b1d3e89787703886b90ab8f8db296eae7))
+- **e2e:** remove from documentation ([728d933](https://github.com/SocialGouv/code-du-travail-numerique/commit/728d9335c34a125d40db7e6a71fc0ee0ff5e1430))
+- **e2e:** suppression du repo ([f9aa2f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/f9aa2f9e5d96efcc6501d259eb09267a8079df7d))
+- **frontend:** affichage du meta title ([#5056](https://github.com/SocialGouv/code-du-travail-numerique/issues/5056)) ([0d56377](https://github.com/SocialGouv/code-du-travail-numerique/commit/0d563772c25cb2da7664ee139f26d136a1e285f5))
+- **indemnite de licenciement:** 1596 & 1597 remove "absence pour maladie non professionnelle" and "arrêt maladie lié à un accident de trajet" from ancienneté ([#5032](https://github.com/SocialGouv/code-du-travail-numerique/issues/5032)) ([19bd5e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/19bd5e2c1a1c3d2083b7ca7ba664c6920a3d4859))
+- **indemnite-licenciement:** à la saisie, perte du focus sur le champ date dans les absences ([#5040](https://github.com/SocialGouv/code-du-travail-numerique/issues/5040) ([5bad148](https://github.com/SocialGouv/code-du-travail-numerique/commit/5bad148bd93a68473f05f2911de798a0b8c7452f))
+- **indemnite-licenciement:** correctif de la cc 44 ([#5028](https://github.com/SocialGouv/code-du-travail-numerique/issues/5028) ([7ab9008](https://github.com/SocialGouv/code-du-travail-numerique/commit/7ab9008f451ec3e50b38af82323e0f19f6ffb38f))
+- **indemnite-licenciement:** refacto au niveau de l'ancienneté requise ([#5012](https://github.com/SocialGouv/code-du-travail-numerique/issues/5012)) ([c151f53](https://github.com/SocialGouv/code-du-travail-numerique/commit/c151f533a8f0aeb46f5169472ffb3a2282b71c9b))
+- **preavis démission:** add ref juridique to résultat ([#5033](https://github.com/SocialGouv/code-du-travail-numerique/issues/5033)) ([2c8c803](https://github.com/SocialGouv/code-du-travail-numerique/commit/2c8c8037a83e067c47b13db9d7366281012ff763))
+
+### Features
+
+- ajout de la notif cc 2511 ([#5053](https://github.com/SocialGouv/code-du-travail-numerique/issues/5053)) ([268eb15](https://github.com/SocialGouv/code-du-travail-numerique/commit/268eb15653a277b5798ebbf9cbb20b3bfc91b75e))
+- ajout des messages pour widget search ([#5057](https://github.com/SocialGouv/code-du-travail-numerique/issues/5057)) ([b29256a](https://github.com/SocialGouv/code-du-travail-numerique/commit/b29256a9ea60c1d68a8aca98deed22d4d60a905c))
+- ajout du widget indemnite licenciement ([#5018](https://github.com/SocialGouv/code-du-travail-numerique/issues/5018)) ([5184d93](https://github.com/SocialGouv/code-du-travail-numerique/commit/5184d93ea3e90970782b435f5be6a84846a99163))
+- **footer:** mise en place d'un footer DSFR ([#5020](https://github.com/SocialGouv/code-du-travail-numerique/issues/5020)) ([94fa245](https://github.com/SocialGouv/code-du-travail-numerique/commit/94fa24567641e86526a43f4ad4a8bf36f79a6101))
+- implement cc 1505 ([#4994](https://github.com/SocialGouv/code-du-travail-numerique/issues/4994)) ([f9d9b2a](https://github.com/SocialGouv/code-du-travail-numerique/commit/f9d9b2a97e056b2cf99cbf47a77804ce213a0448))
+- **indemnite-licenciement:** add supported cc ([#5058](https://github.com/SocialGouv/code-du-travail-numerique/issues/5058)) ([3242e2f](https://github.com/SocialGouv/code-du-travail-numerique/commit/3242e2f521b52cfc39410e453f74127ffb8ed131))
+- **indemnite-licenciement:** ajout de la cc 675 ([#4980](https://github.com/SocialGouv/code-du-travail-numerique/issues/4980))Co-authored-by: Martial Maillot <martial.maillot@gmail.com> ([c34adbe](https://github.com/SocialGouv/code-du-travail-numerique/commit/c34adbe4265a4427f54cdc8c69ec8271f5135cf3))
+- prendre referer au lieu de src_url ([#5051](https://github.com/SocialGouv/code-du-travail-numerique/issues/5051)) ([d9e83c4](https://github.com/SocialGouv/code-du-travail-numerique/commit/d9e83c41d4fb4de685fed462ce34d29cf86ed694))
+- refonte du widget search ([#5007](https://github.com/SocialGouv/code-du-travail-numerique/issues/5007)) ([762b02a](https://github.com/SocialGouv/code-du-travail-numerique/commit/762b02aa40aef1c6998a35af21b4244ea38716cd))
+- **workflow:** ajout d'un workflow pour vérifier que le site est bien live et que le `robots.txt` est carré ([#5039](https://github.com/SocialGouv/code-du-travail-numerique/issues/5039) ([bbc2e55](https://github.com/SocialGouv/code-du-travail-numerique/commit/bbc2e5567481c9050b25b1c9b5e218bd8d63171a))
+
+## [4.93.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.93.0...v4.93.1) (2023-03-20)
+
+### Bug Fixes
+
+- https in sitemap.xml ([ddd666f](https://github.com/SocialGouv/code-du-travail-numerique/commit/ddd666f798ce469c78293408cd05b24ab4de7b99))
+
+# [4.93.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.92.1...v4.93.0) (2023-03-20)
+
+### Bug Fixes
+
+- **environment-variable:** production variable for `robots.txt` ([#5037](https://github.com/SocialGouv/code-du-travail-numerique/issues/5037)) ([7a5798c](https://github.com/SocialGouv/code-du-travail-numerique/commit/7a5798c204b3caa229b750e9ce4c8e846721bef2))
+- **indemnite-licencement:** event pour l'inégibilité ([#4992](https://github.com/SocialGouv/code-du-travail-numerique/issues/4992)) ([293907e](https://github.com/SocialGouv/code-du-travail-numerique/commit/293907ea87eac5afd20ea955775d14cdb3bbfca8))
+- **workflow:** action dev variable ([1e1aed1](https://github.com/SocialGouv/code-du-travail-numerique/commit/1e1aed1e1a5a2900cebb5996f0bb86e7336b2020))
+
+### Features
+
+- **e2e:** migrations des derniers tests codecepts vers cypress ([#5002](https://github.com/SocialGouv/code-du-travail-numerique/issues/5002)) ([8cec5cd](https://github.com/SocialGouv/code-du-travail-numerique/commit/8cec5cdb147cc5f042e022ce39aad201afeba47a))
+- **indemnite-licenciement:** ajout de la cc 1147 ([#5008](https://github.com/SocialGouv/code-du-travail-numerique/issues/5008)) ([b395c29](https://github.com/SocialGouv/code-du-travail-numerique/commit/b395c2927970b82b4dde942b42a2ddc6e21382a9))
+
+## [4.92.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.92.0...v4.92.1) (2023-03-14)
+
+### Bug Fixes
+
+- **dependencies:** upgrade zustand and fix deprecated part ([#5003](https://github.com/SocialGouv/code-du-travail-numerique/issues/5003)) ([9fcbb7d](https://github.com/SocialGouv/code-du-travail-numerique/commit/9fcbb7d10d334ff08d2190e2b8c7784695493b5d))
+- **kubernetes:** sealed secret on production ([#5021](https://github.com/SocialGouv/code-du-travail-numerique/issues/5021) ([b29d75a](https://github.com/SocialGouv/code-du-travail-numerique/commit/b29d75a575856ca60d3001f58d0859596f66d63d))
+
+# [4.92.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.91.1...v4.92.0) (2023-03-14)
+
+### Bug Fixes
+
+- affichage radio outils & widgets ([#5000](https://github.com/SocialGouv/code-du-travail-numerique/issues/5000)) ([4a2ceef](https://github.com/SocialGouv/code-du-travail-numerique/commit/4a2ceef1e029618ecc4e8fa60efb71a24ca0a146))
+- **build:** error in getStaticProps ([fb7d7ef](https://github.com/SocialGouv/code-du-travail-numerique/commit/fb7d7efb092b65cc6363b81066e958dc3e4e3ce2))
+- **cc search:** use the react-autosuggest component for cc search result to have full accessibility ([#4990](https://github.com/SocialGouv/code-du-travail-numerique/issues/4990)) ([d43a2ba](https://github.com/SocialGouv/code-du-travail-numerique/commit/d43a2baa698bff8a603efb1316edb6efd621ae6d))
+- **convention-collective:** CC 2941 changement nom des categories ([#4999](https://github.com/SocialGouv/code-du-travail-numerique/issues/4999)) ([02e4c5b](https://github.com/SocialGouv/code-du-travail-numerique/commit/02e4c5b2b068e539e9511c53d8ad0c4eb378ce09))
+- cypress test e2e ([43179a5](https://github.com/SocialGouv/code-du-travail-numerique/commit/43179a5d074f3f45b81d1ed220304145260f362d))
+- dev workflow ([c5a59bf](https://github.com/SocialGouv/code-du-travail-numerique/commit/c5a59bf0ab1ae677033b27eaf2c8bdda78e46c94))
+- dev workflow ([3279a42](https://github.com/SocialGouv/code-du-travail-numerique/commit/3279a42f20cea7027b33cb08f54e1772c9ae52ac))
+- **husky:** delete prepush hook ([#4971](https://github.com/SocialGouv/code-du-travail-numerique/issues/4971)) ([5843984](https://github.com/SocialGouv/code-du-travail-numerique/commit/584398418084e9cdcda59e4e60477436d0f19724))
+- **indemnité de licenciement:** fix mobile style ([#4972](https://github.com/SocialGouv/code-du-travail-numerique/issues/4972)) ([7c18480](https://github.com/SocialGouv/code-du-travail-numerique/commit/7c18480cebefaa2e874e8491d1fcbdc3a1c66196))
+- **indemnité de licenciement:** remove unused code ([#4968](https://github.com/SocialGouv/code-du-travail-numerique/issues/4968)) ([3a096fe](https://github.com/SocialGouv/code-du-travail-numerique/commit/3a096fe0aba181cceb66cd5cc3873e54660f7542))
+- **indemnité de licenciement:** retours à la ligne dans l'affichage du résultat ([#5015](https://github.com/SocialGouv/code-du-travail-numerique/issues/5015)) ([95a7947](https://github.com/SocialGouv/code-du-travail-numerique/commit/95a794792e00617f482e142adb331b64e8f97c52))
+- **indemnite-licenciement:** correctif des retours de la selection des CCs non traitées ([#4983](https://github.com/SocialGouv/code-du-travail-numerique/issues/4983)) ([d9e9c18](https://github.com/SocialGouv/code-du-travail-numerique/commit/d9e9c186541ad8176d4b0aa6d2542d749ab0a080))
+- **indemnite-licenciement:** fallback when month label is missing ([#4946](https://github.com/SocialGouv/code-du-travail-numerique/issues/4946)) ([56b2734](https://github.com/SocialGouv/code-du-travail-numerique/commit/56b2734fb06d304956221b4bff90d16d0633a829))
+- **indemnite-licenciement:** retours de la CC 3239 ([#4984](https://github.com/SocialGouv/code-du-travail-numerique/issues/4984)) ([8b65895](https://github.com/SocialGouv/code-du-travail-numerique/commit/8b65895916df4733c179e009f8b3fb4e2bcbe73e))
+- **package:** move from `@maxgfr/react-accessible-accordion` to `@socialgouv/react-accessible-accordion` ([#4963](https://github.com/SocialGouv/code-du-travail-numerique/issues/4963)) ([c3d33d2](https://github.com/SocialGouv/code-du-travail-numerique/commit/c3d33d2a3208bd337c53c03b832d22112358a9dc))
+- **search:** affiche la suggestion de recherche en absolute ([#4996](https://github.com/SocialGouv/code-du-travail-numerique/issues/4996)) ([84959a8](https://github.com/SocialGouv/code-du-travail-numerique/commit/84959a8f07aabc00553cf2017aba6d940f6b20e7))
+- **Tile:** make html valid by moving the anchor inside ([#4940](https://github.com/SocialGouv/code-du-travail-numerique/issues/4940)) ([b633454](https://github.com/SocialGouv/code-du-travail-numerique/commit/b63345447e24eaaa50f274988a732be18e1e321c))
+- **trouver sa convention collective:** make combobox accessible ([#4939](https://github.com/SocialGouv/code-du-travail-numerique/issues/4939)) ([f4e5373](https://github.com/SocialGouv/code-du-travail-numerique/commit/f4e53732042b78a72c901cdc2ddd79a2c3ab7579))
+- widget recherche hauteur ([#4978](https://github.com/SocialGouv/code-du-travail-numerique/issues/4978)) ([1adc49b](https://github.com/SocialGouv/code-du-travail-numerique/commit/1adc49ba8ba06ee42a3d86e6f9139ba1cd4a0e7f))
+- **workflow:** change node version ([#4962](https://github.com/SocialGouv/code-du-travail-numerique/issues/4962)) ([f1bec54](https://github.com/SocialGouv/code-du-travail-numerique/commit/f1bec5460b65801291b04830bbf81de743380dad))
+- **workflow:** dev is not deploying ([#4974](https://github.com/SocialGouv/code-du-travail-numerique/issues/4974)) ([c0fddef](https://github.com/SocialGouv/code-du-travail-numerique/commit/c0fddef08b33738033f720d97b1d57e3fd170211))
+- **workflow:** otpimize `review.yml` ([#4973](https://github.com/SocialGouv/code-du-travail-numerique/issues/4973))Co-authored-by: Martial Maillot <martial.maillot@gmail.com> ([b2012e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/b2012e213e7606944f9e0fe6641578efa5279d07))
+- **workflow:** security is trigger only when dev is done ([4f0e78a](https://github.com/SocialGouv/code-du-travail-numerique/commit/4f0e78a8c96b22309f2c519beb1d6891e91f4d15))
+- **workflow:** set naming ([97537a4](https://github.com/SocialGouv/code-du-travail-numerique/commit/97537a424ed7a9382fbb72ac26ec2ad933cead96))
+- **workflow:** set output ([b576967](https://github.com/SocialGouv/code-du-travail-numerique/commit/b5769671b6989d8eb063e638cab67f17f5aace1e))
+- **workflow:** set url for codecept ([af4f250](https://github.com/SocialGouv/code-du-travail-numerique/commit/af4f250eaa0cf90b5093a0d09340aea901de7ef4))
+- **workflow:** setup node version for storybook ([d65b926](https://github.com/SocialGouv/code-du-travail-numerique/commit/d65b926f839a3d8ccd92c704a3385c756efff5f3))
+
+### Features
+
+- feature flag pour les nouvelles CC ([#4979](https://github.com/SocialGouv/code-du-travail-numerique/issues/4979)) ([9810a9d](https://github.com/SocialGouv/code-du-travail-numerique/commit/9810a9d38e401fa82de9ab95c3e09d26d6246dfd))
+- form accessibility ([#4951](https://github.com/SocialGouv/code-du-travail-numerique/issues/4951)) ([d8f5b90](https://github.com/SocialGouv/code-du-travail-numerique/commit/d8f5b907e364daeb858236e15e71b05a15b187c5))
+- **home:** ajout de nouvelles rebriques ([#4961](https://github.com/SocialGouv/code-du-travail-numerique/issues/4961) ([5ea49e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/5ea49e2f74f7752512ef6b4558f0e695e1b7b5ac))
+- **indemnité de licenciement:** ajout de la cc 1996 ([#4966](https://github.com/SocialGouv/code-du-travail-numerique/issues/4966))Co-authored-by: Martial Maillot <martial.maillot@gmail.com> ([9aad948](https://github.com/SocialGouv/code-du-travail-numerique/commit/9aad948ae0eb9c7947cbe64d4bd16b078b07410e))
+- **security headers:** add missing security headers ([#4969](https://github.com/SocialGouv/code-du-travail-numerique/issues/4969)) ([a331615](https://github.com/SocialGouv/code-du-travail-numerique/commit/a33161579c102f7e6ca6dbdc6e274afe24a9d22c))
+
 ## [4.91.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.91.0...v4.91.1) (2023-02-17)
 
 ### Bug Fixes

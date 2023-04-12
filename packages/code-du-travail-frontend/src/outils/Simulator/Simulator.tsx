@@ -1,13 +1,18 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useContext, useEffect, useMemo, useRef } from "react";
 import { SimulatorDecorator } from "../Components";
 import { printResult } from "../common/utils";
 import { createSimulatorStore } from "./useSimulatorStore";
 import { push as matopush } from "@socialgouv/matomo-next";
-import { SimulatorStepProvider, useSimulatorStepStore } from "./createContext";
+import {
+  SimulatorContext,
+  SimulatorStepProvider,
+  useSimulatorStepStore,
+} from "./createContext";
 import { Step } from "./type";
 
 const anchorRef = React.createRef<HTMLLIElement>();
 import arrayMutators from "final-form-arrays";
+import scrollToTop from "../common/utils/scrollToTop";
 
 type Props<FormState, StepName extends string> = {
   duration?: string;
@@ -30,7 +35,9 @@ const SimulatorContent = <FormState, StepName extends string>({
   onFormValuesChange,
   onStepChange,
 }: Props<FormState, StepName>): JSX.Element => {
+  const store = useContext(SimulatorContext);
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
+    store,
     (state) => state
   );
 
@@ -69,7 +76,7 @@ const SimulatorContent = <FormState, StepName extends string>({
         steps[nextStepIndex].name,
       ]);
       onStepChange(currentStep, steps[nextStepIndex]);
-      window?.scrollTo(0, 0);
+      scrollToTop();
     }
   };
 
@@ -84,7 +91,7 @@ const SimulatorContent = <FormState, StepName extends string>({
         `click_previous_${title}`,
         steps[previousStepIndex].name,
       ]);
-      window?.scrollTo(0, 0);
+      scrollToTop();
     } else {
       throw Error("Can't show the previous step with index less than 0");
     }
@@ -141,8 +148,9 @@ const SimulatorContent = <FormState, StepName extends string>({
 const Simulator = <FormState, StepName extends string>(
   props: Props<FormState, StepName>
 ): JSX.Element => {
+  const store = useRef(createSimulatorStore()).current;
   return (
-    <SimulatorStepProvider createStore={() => createSimulatorStore()}>
+    <SimulatorStepProvider value={store}>
       <SimulatorContent {...props} />
     </SimulatorStepProvider>
   );

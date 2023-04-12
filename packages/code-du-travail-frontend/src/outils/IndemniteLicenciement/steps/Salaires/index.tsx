@@ -1,5 +1,8 @@
-import React from "react";
-import { useIndemniteLicenciementStore } from "../../store";
+import React, { useContext } from "react";
+import {
+  IndemniteLicenciementContext,
+  useIndemniteLicenciementStore,
+} from "../../store";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { TempsPartiel, SalaireTempsPlein } from "./components";
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
@@ -17,6 +20,7 @@ import {
 } from "../../utils/question";
 
 const StepSalaires = () => {
+  const store = useContext(IndemniteLicenciementContext);
   const {
     hasTempsPartiel,
     onChangeHasTempsPartiel,
@@ -35,7 +39,8 @@ const StepSalaires = () => {
     arretTravail,
     showHasTempsPartiel,
     initShowHasTempsPartiel,
-  } = useIndemniteLicenciementStore((state) => ({
+    isAgreementSupported
+  } = useIndemniteLicenciementStore(store, (state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
     errorHasTempsPartiel: state.salairesData.error.errorHasTempsPartiel,
@@ -53,6 +58,7 @@ const StepSalaires = () => {
     arretTravail: state.contratTravailData.input.arretTravail,
     showHasTempsPartiel: state.salairesData.input.showHasTempsPartiel,
     initShowHasTempsPartiel: state.salairesFunction.initShowHasTempsPartiel,
+    isAgreementSupported: state.agreementData.input.isAgreementSupportedIndemniteLicenciement
   }));
 
   React.useEffect(() => {
@@ -136,7 +142,7 @@ const StepSalaires = () => {
             />
           )}
           {(hasSameSalary === "oui" || hasSameSalary === "non") &&
-            agreement && (
+            agreement && isAgreementSupported && (
               <AgreementsInjector
                 idcc={getSupportedAgreement(agreement.num)}
                 step={IndemniteLicenciementStepName.Salaires}

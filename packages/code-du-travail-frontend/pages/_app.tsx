@@ -36,19 +36,25 @@ if (typeof window !== "undefined") {
     });
 }
 
+const WIDGETS_PATH = /\/widgets\/.*/;
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-
   useEffect(() => {
     init({
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
       onInitialization: () => {
-        const referrerUrl = getSourceUrlFromPath(SITE_URL + router.asPath);
+        const referrerUrl =
+          document?.referrer || getSourceUrlFromPath(SITE_URL + router.asPath);
         if (referrerUrl) {
           push(["setReferrerUrl", referrerUrl]);
         }
+        if (router.pathname.match(WIDGETS_PATH)) {
+          push(["setCookieSameSite", "None"]);
+        }
       },
+      excludeUrlsPatterns: [WIDGETS_PATH],
     });
   }, []);
 

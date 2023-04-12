@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import AbsencePeriods from "../AbsencePeriods";
-import { MotifKeys } from "@socialgouv/modeles-social";
+import { motif1, sampleMotifs } from "./AbscencePeriod.data";
 
 describe("<AbsencePeriods />", () => {
   it("should render", () => {
@@ -11,6 +11,7 @@ describe("<AbsencePeriods />", () => {
         <AbsencePeriods
           onChange={jest.fn()}
           absences={[]}
+          motifs={sampleMotifs}
           error={undefined}
           informationData={{}}
           messageMotifExample="Ceci est un exemple"
@@ -19,66 +20,30 @@ describe("<AbsencePeriods />", () => {
     ).toBeTruthy();
   });
 
-  it("should select an absence", () => {
-    const { getByRole, getAllByRole } = render(
-      <AbsencePeriods
-        onChange={jest.fn()}
-        absences={[]}
-        error={undefined}
-        informationData={{}}
-        messageMotifExample="Ceci est un exemple"
-      />
-    );
-    expect(getAllByRole("option").length).toBe(8);
-    expect(
-      getByRole("option", { name: "Congé pour création d'entreprise" })
-    ).toBeInTheDocument();
-    expect(
-      (
-        getByRole("option", {
-          name: "Congé pour création d'entreprise",
-        }) as HTMLOptionElement
-      ).selected
-    ).toBe(false);
-    userEvent.selectOptions(
-      getByRole("combobox"),
-      getByRole("option", { name: "Congé pour création d'entreprise" })
-    );
-    expect(
-      (
-        getByRole("option", {
-          name: "Congé pour création d'entreprise",
-        }) as HTMLOptionElement
-      ).selected
-    ).toBe(true);
-  });
-
   it("should add a new absence line with absences and select one", () => {
     const { getByText, getAllByRole } = render(
       <AbsencePeriods
         onChange={jest.fn()}
         absences={[]}
+        motifs={sampleMotifs}
         error={undefined}
         informationData={{}}
         messageMotifExample="Ceci est un exemple"
       />
     );
-    expect(getAllByRole("option").length).toBe(8);
+    expect(getAllByRole("option").length).toBe(2);
     userEvent.click(getByText("Ajouter une absence"));
-    expect(getAllByRole("option").length).toBe(16);
+    expect(getAllByRole("option").length).toBe(4);
   });
 
   it("should render absences by default", () => {
     const { getByRole, getByLabelText } = render(
       <AbsencePeriods
         onChange={jest.fn()}
+        motifs={sampleMotifs}
         absences={[
           {
-            motif: {
-              key: MotifKeys.congesParentalEducation,
-              label: "Congé parental d'éducation",
-              value: 0.5,
-            },
+            motif: motif1,
             durationInMonth: 3,
           },
         ]}
@@ -90,18 +55,18 @@ describe("<AbsencePeriods />", () => {
     expect(
       (
         getByRole("option", {
-          name: "Congé parental d'éducation",
+          name: "Motif 1",
         }) as HTMLOptionElement
       ).selected
     ).toBe(true);
     expect(
       (
         getByRole("option", {
-          name: "Congé pour création d'entreprise",
+          name: "Motif 2",
         }) as HTMLOptionElement
       ).selected
     ).toBe(false);
-    const input = getByLabelText("0.duration") as HTMLInputElement;
+    const input = getByLabelText(/\.duration/) as HTMLInputElement;
     expect(input.value).toBe("3");
   });
 
@@ -109,6 +74,7 @@ describe("<AbsencePeriods />", () => {
     const { getByText } = render(
       <AbsencePeriods
         onChange={jest.fn()}
+        motifs={sampleMotifs}
         absences={[]}
         error={{ absences: [{ errorDuration: "Ceci est une erreur" }] }}
         informationData={{}}
