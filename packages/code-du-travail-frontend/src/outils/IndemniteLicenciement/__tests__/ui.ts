@@ -157,6 +157,11 @@ export const ui = {
         "infos.contrat salarié - convention collective - batiment etam - indemnité de licenciement - age à la fin de son préavis"
       ),
     },
+    agreement2596: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),
@@ -197,8 +202,18 @@ export const ui = {
       salaries: byTestId("last-month-salary"),
       primes: byTestId("prime-last-month-salary"),
     },
+    agreementWithNoticeSalary: {
+      knowingLastSalary: {
+        oui: byTestId("hasReceivedSalaries - Oui"),
+        non: byTestId("hasReceivedSalaries - Non"),
+      },
+      salaries: byTestId("notice-salary"),
+      primes: byTestId("prime-notice-salary"),
+    },
   },
   result: {
+    resultat: byText(/À partir des éléments que vous avez saisis/),
+    resultatLegal: byText(/Montant prévu par le code du travail/),
     formula: byTestId("formula"),
     legalError: {
       title: byText(
@@ -250,6 +265,7 @@ export const ui = {
       motif: byTestId("absence-motif"),
       duration: byTestId("absence-duration"),
     },
+    resultTableRows: byTestId("table-result-row"),
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),
