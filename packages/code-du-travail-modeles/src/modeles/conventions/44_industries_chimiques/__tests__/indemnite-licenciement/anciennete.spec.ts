@@ -139,7 +139,7 @@ describe("CC 44", () => {
   }, { durationInMonth: "1", motif: { key: MotifKeys.greve } }, {
     durationInMonth: "1",
     motif: { key: MotifKeys.miseAPied },
-  }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${0.45833333333333337}
+  }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${0.4583333333333333}
       ${[{ durationInMonth: "1", motif: { key: MotifKeys.maladieNonPro } }, {
     durationInMonth: "1",
     motif: { key: MotifKeys.accidentTrajet },
