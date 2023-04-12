@@ -57,7 +57,7 @@ export default function Result({
               numberOfElements={notifs.length}
               currentElement={1 + index}
             />
-            {notification.description}
+            {notification.description}{" "}
           </span>
         ))}
       </Paragraph>
