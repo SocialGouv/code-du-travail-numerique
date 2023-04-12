@@ -3,11 +3,7 @@ import React from "react";
 import { NoticeNote } from "../../../../common/NoticeNote";
 import { Paragraph, theme } from "@socialgouv/cdtn-ui";
 
-import {
-  HighlightResult,
-  SectionTitle,
-  SmallText,
-} from "../../../../common/stepStyles";
+import { HighlightResult, SectionTitle } from "../../../../common/stepStyles";
 import styled from "styled-components";
 
 type Props = {
@@ -50,17 +46,15 @@ export default function Result({
           isList
         />
       </Paragraph>
-      <Paragraph fontSize="small" noMargin>
-        {notifs.map((notification, index) => (
-          <span key={index}>
-            <NoticeNote
-              numberOfElements={notifs.length}
-              currentElement={1 + index}
-            />
-            {notification.description}{" "}
-          </span>
-        ))}
-      </Paragraph>
+      {notifs.map((notification, index) => (
+        <Paragraph fontSize="small" noMargin key={index}>
+          <NoticeNote
+            numberOfElements={notifs.length}
+            currentElement={1 + index}
+          />
+          {notification.description}
+        </Paragraph>
+      ))}
     </DIV>
   );
 }
