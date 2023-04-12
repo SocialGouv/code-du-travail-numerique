@@ -6,41 +6,42 @@ import {
 } from "../../../../../lib";
 import { MainStore } from "../../../store";
 import {
-  Agreement1516StoreError,
-  Agreement1516StoreInput,
-  Agreement1516StoreSlice,
+  Agreement2596StoreError,
+  Agreement2596StoreInput,
+  Agreement2596StoreSlice,
 } from "./types";
 
-export const validateAgreement1516 = (
+export const validateAgreement2596 = (
   get: StoreApi<MainStore>["getState"],
   set: StoreApi<MainStore>["setState"]
 ) => {
-  const { isValid, errorState } = validateStep(get().agreement1516Data.input);
+  const { isValid, errorState } = validateStep(get().agreement2596Data.input);
   set(
-    produce((state: Agreement1516StoreSlice) => {
-      state.agreement1516Data.hasBeenSubmit = isValid ? false : true;
-      state.agreement1516Data.isStepValid = isValid;
-      state.agreement1516Data.error = errorState;
+    produce((state: Agreement2596StoreSlice) => {
+      state.agreement2596Data.hasBeenSubmit = !isValid;
+      state.agreement2596Data.isStepValid = isValid;
+      state.agreement2596Data.error = errorState;
     })
   );
 
   return isValid;
 };
 
-export const validateStep = (state: Agreement1516StoreInput) => {
-  let errorState: Agreement1516StoreError = {
+export const validateStep = (state: Agreement2596StoreInput) => {
+  let errorState: Agreement2596StoreError = {
     errorHasReceivedSalaries: undefined,
-    errorSalaryPeriods: undefined,
+    errorNoticeSalaryPeriods: undefined,
   };
-  const salaryPeriods = state.salaryPeriods ?? [];
-  if (salaryPeriods.length > 0) {
+  const noticeSalaryPeriods = state.noticeSalaryPeriods ?? [];
+
+  if (noticeSalaryPeriods.length > 0) {
     errorState = {
       errorHasReceivedSalaries: !state.hasReceivedSalaries
         ? "Vous devez répondre à cette question"
         : undefined,
-      errorSalaryPeriods:
+      errorNoticeSalaryPeriods:
         state.hasReceivedSalaries === "oui" &&
-        detectNullOrUndefinedOrNaNInArray(salaryPeriods)
+        detectNullOrUndefinedOrNaNInArray(noticeSalaryPeriods)
           ? "Vous devez compléter l'ensemble des champs"
           : undefined,
     };
@@ -49,7 +50,7 @@ export const validateStep = (state: Agreement1516StoreInput) => {
   return {
     isValid: deepEqualObject(errorState, {
       errorHasReceivedSalaries: undefined,
-      errorSalaryPeriods: undefined,
+      errorNoticeSalaryPeriods: undefined,
     }),
     errorState,
   };
