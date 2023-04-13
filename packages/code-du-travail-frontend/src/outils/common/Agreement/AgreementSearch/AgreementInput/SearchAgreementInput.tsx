@@ -32,7 +32,7 @@ export const SearchAgreementInput = ({
 
   const state = useAgreementSuggester(query);
 
-  const onChange = () => {};
+  const onChange = () => { };
 
   const onClear = () => {
     setQuery("");
@@ -94,13 +94,14 @@ export const SearchAgreementInput = ({
         renderInputComponent={renderInputComponent}
         inputProps={inputProps}
         focusInputOnSuggestionClick={false}
+
       />
       {renderResults({ onUserAction, state })}
     </>
   );
 };
 
-const renderInputComponent = (inputProps) => <BlockInput {...inputProps} />;
+const renderInputComponent = (inputProps) => <BlockInput {...inputProps} onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }} />;
 
 const SuggestionsContainer = styled.div`
   li[role="option"]:nth-child(2n + 1) {

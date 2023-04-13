@@ -78,6 +78,7 @@ export const SearchEnterpriseInput = ({
             onChange={searchInputHandler}
             autoComplete="off"
             data-testid="agreement-company-search-input"
+            onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
           />
         </Box>
         <Box>
@@ -93,6 +94,7 @@ export const SearchEnterpriseInput = ({
             onChange={searchInputHandler}
             autoComplete="off"
             data-testid="agreement-postal-code-search-input"
+            onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
           />
         </Box>
       </Flex>
