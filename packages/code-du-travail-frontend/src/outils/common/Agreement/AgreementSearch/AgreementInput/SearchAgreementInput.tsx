@@ -94,7 +94,6 @@ export const SearchAgreementInput = ({
         renderInputComponent={renderInputComponent}
         inputProps={inputProps}
         focusInputOnSuggestionClick={false}
-
       />
       {renderResults({ onUserAction, state })}
     </>
