@@ -101,7 +101,7 @@ export const SearchAgreementInput = ({
   );
 };
 
-const renderInputComponent = (inputProps) => <BlockInput {...inputProps} onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }} />;
+const renderInputComponent = (inputProps) => <BlockInput {...inputProps} />;
 
 const SuggestionsContainer = styled.div`
   li[role="option"]:nth-child(2n + 1) {
