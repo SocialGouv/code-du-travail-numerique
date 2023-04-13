@@ -61,14 +61,14 @@
     "url": "/widgets/indemnite-licenciement",
     "id": "indemnite-licenciement"
   },
-  "recherche-cc": {
+  "convention-collective": {
     "metaTitle": "Intégrer l’outil de recherche de convention collective du Code du travail numérique",
     "metaDescription": "Intégrer l’outil de recherche de convention collective du Code du travail numérique sur votre site grâce à un module (widget).",
     "title": "Intégrer l’outil de calcul de recherche de convention collective du Code du travail numérique",
     "description": "Vous pouvez intégrer l’outil de recherche de convention collective du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de trouver sa convention collective.",
     "shortTitle": "Trouver sa convention collective",
     "shortDescription": "À partir du numéro de SIRET de son entreprise, trouver sa convention collective",
-    "url": "/widgets/recherche-convention-collectivet",
-    "id": "recherche-convention-collective"
+    "url": "/widgets/convention-collective",
+    "id": "convention-collective"
   }
 }
