@@ -32,7 +32,7 @@ export const SearchAgreementInput = ({
 
   const state = useAgreementSuggester(query);
 
-  const onChange = () => { };
+  const onChange = (e) => { setQuery(e.target.value) };
 
   const onClear = () => {
     setQuery("");
@@ -56,6 +56,11 @@ export const SearchAgreementInput = ({
     type: "search",
     value: query,
     "data-testid": "agreement-search-input",
+    onKeyPress: (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+      }
+    }
   };
   return (
     <>
@@ -84,7 +89,7 @@ export const SearchAgreementInput = ({
       <Autosuggest
         theme={suggesterTheme}
         suggestions={state.data ?? []}
-        alwaysRenderSuggestions={false}
+        alwaysRenderSuggestions={true}
         onSuggestionSelected={onSelect}
         onSuggestionsFetchRequested={onSearch}
         onSuggestionsClearRequested={onClear}
