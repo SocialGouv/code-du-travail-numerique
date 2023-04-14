@@ -89,7 +89,7 @@ export const SearchAgreementInput = ({
       <Autosuggest
         theme={suggesterTheme}
         suggestions={state.data ?? []}
-        alwaysRenderSuggestions={true}
+        alwaysRenderSuggestions={false}
         onSuggestionSelected={onSelect}
         onSuggestionsFetchRequested={onSearch}
         onSuggestionsClearRequested={onClear}
