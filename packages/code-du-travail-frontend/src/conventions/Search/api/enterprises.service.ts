@@ -55,20 +55,17 @@ const apiEnterprises = function createFetcher(
     address ? `&a=${encodeURIComponent(address)}` : ""
   }`;
 
-  return fetch(url)
-    .then(async (response) => {
-      if (response.ok) {
-        return response.json();
-      }
-      if (response.status === 404) {
-        return { entreprises: [] };
-      }
-      const errorMessage = await response.text();
-      return Promise.reject(errorMessage);
-    })
-    .then((result: ApiEnterpriseData) => {
-      return result.entreprises;
-    });
+  return fetch(url).then(async (response) => {
+    if (response.ok) {
+      const res = await response.json();
+      return res.entreprises;
+    }
+    if (response.status === 404 || !response.ok) {
+      return { entreprises: [] };
+    }
+    const errorMessage = (await response.json()).message;
+    return Promise.reject(errorMessage);
+  });
 };
 
 const searchEnterprises = debounce(apiEnterprises, 300);
