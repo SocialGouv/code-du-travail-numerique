@@ -63,8 +63,9 @@ const apiEnterprises = function createFetcher(
     if (response.status === 404 || !response.ok) {
       return { entreprises: [] };
     }
-    const errorMessage = (await response.json()).message;
-    return Promise.reject(errorMessage);
+    return Promise.reject(
+      "Ce service est momentanément indisponible. Vous pouvez tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
+    );
   });
 };
 
