@@ -22,7 +22,6 @@ export const SearchAgreementInput = ({
   onSelectAgreement,
 }: Props): JSX.Element => {
   const [query, setQuery] = useState("");
-  const [_value, setValue] = useState("");
 
   const useAgreementSuggester = createSuggesterHook(
     searchAgreements,
@@ -33,14 +32,14 @@ export const SearchAgreementInput = ({
 
   const state = useAgreementSuggester(query);
 
-  const onChange = (_e, { newValue }) => { setQuery(typeof newValue === "string" ? newValue : "") };
+  const onChange = () => { };
 
   const onClear = () => {
     setQuery("");
   };
 
   const onSearch = async ({ value }) => {
-    setValue(value)
+    setQuery(value);
   };
 
   const onSelect = async (event, data) => {
@@ -57,11 +56,6 @@ export const SearchAgreementInput = ({
     type: "search",
     value: query,
     "data-testid": "agreement-search-input",
-    onKeyPress: (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-      }
-    }
   };
   return (
     <>
@@ -90,7 +84,7 @@ export const SearchAgreementInput = ({
       <Autosuggest
         theme={suggesterTheme}
         suggestions={state.data ?? []}
-        alwaysRenderSuggestions={true}
+        alwaysRenderSuggestions={false}
         onSuggestionSelected={onSelect}
         onSuggestionsFetchRequested={onSearch}
         onSuggestionsClearRequested={onClear}
