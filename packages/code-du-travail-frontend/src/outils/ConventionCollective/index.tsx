@@ -22,14 +22,16 @@ interface Props {
   icon: string;
   title: string;
   displayTitle: string;
+  widgetMode?: boolean;
 }
 
 function AgreementSearchTool({
   icon,
   title,
   displayTitle,
+  widgetMode,
 }: Props): JSX.Element {
-  const [screen, setScreen] = useState<ScreenType | null>(null);
+  const [screen, setScreen] = useState<ScreenType | null>(widgetMode ? ScreenType.enterprise : null);
   const { setEnterprise, setSearchParams, searchParams } = useNavContext();
   const { uuid, trackEvent } = useTrackingContext();
   const router = useRouter();
@@ -125,6 +127,7 @@ function AgreementSearchTool({
           handleEnterpriseSelection={handleEnterpriseSelection}
           onBackClick={clearSearchType}
           onUserAction={onUserAction}
+          hidePreviousButton={widgetMode}
         />
       );
       break;
@@ -140,7 +143,7 @@ function AgreementSearchTool({
       Step = <Steps.IntroductionStep onUserAction={onUserAction} />;
   }
   return (
-    <WizardWrapper variant="main">
+    <WizardWrapper variant="main" hasMaxWidth={!widgetMode}>
       <Title title={displayTitle} icon={icon} />
       {Step}
     </WizardWrapper>
@@ -176,7 +179,7 @@ const AgreementSearchWithContext = (props: Props): JSX.Element => {
 
 const WizardWrapper = styled(Wrapper)`
   overflow: visible;
-  max-width: 86rem;
+  max-width: ${({ hasMaxWidth }) => (hasMaxWidth ? "86rem" : "100%")};
   width: 100%;
   margin: 0 auto;
 `;
