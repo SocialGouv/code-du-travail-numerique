@@ -143,7 +143,7 @@ function AgreementSearchTool({
         <Steps.AgreementSelectionStep
           onBackClick={clearSelection}
           onUserAction={onUserAction}
-          isPreviousButton={widgetMode}
+          isWidgetMode={widgetMode}
         />
       );
       break;
