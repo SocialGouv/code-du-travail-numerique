@@ -1,5 +1,4 @@
 global:
-  registry: harbor.fabrique.social.gouv.fr
 
 app-frontend:
   ~chart: app
