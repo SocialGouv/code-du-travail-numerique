@@ -4,7 +4,7 @@ global:
 app-frontend:
   ~chart: app
   host: "{{.Values.global.host}}"
-  needs: [build-frontend]
+  ~needs: [build-frontend]
   imagePackage: frontend
   imageProject: cdtn
   probesPath: /api/health
