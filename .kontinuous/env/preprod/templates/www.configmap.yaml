@@ -10,3 +10,5 @@ data:
   NODE_ENV: "production"
   PIWIK_SITE_ID: "3"
   PIWIK_URL: "https://matomo.fabrique.social.gouv.fr"
+  ELASTIC_APM_ENVIRONMENT: "cdtn-preprod"
+  ES_INDEX_PREFIX: "cdtn-preprod"

@@ -1,27 +1,9 @@
-global:
-
-app-frontend:
-  ~chart: app
-  ~needs: [build-frontend]
+app:
   imagePackage: frontend
   imageProject: cdtn
   probesPath: /api/health
-  autoscale:
-    minReplicas: 2
-    maxReplicas: 10
   envFrom:
     - secretRef:
         name: www-configmap
     - secretRef:
         name: www-secret
-
-jobs:
-  runs:
-    build-frontend:
-      use: build
-      with:
-        registrySecretRefName: harbor
-        imagePackage: frontend
-        imageProject: cdtn
-        buildArgs:
-          VERSION: "{{ $.Values.global.sha }}"

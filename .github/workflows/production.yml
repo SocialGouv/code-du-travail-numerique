@@ -38,26 +38,6 @@ jobs:
             NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
             NEXT_PUBLIC_SITE_URL=https://code.travail.gouv.fr
 
-  deploy-prod:
-    name: Deploy production
-    runs-on: ubuntu-latest
-    needs: [register-frontend]
-    environment:
-      name: production
-      url: https://code.travail.gouv.fr/
-    steps:
-      - name: Use autodevops manifests generation
-        uses: SocialGouv/actions/k8s-manifests@v1
-        with:
-          environment: "prod"
-          productionNamespace: "cdtn"
-          rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
-          socialgouvBaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
-        env:
-          ELASTIC_APM_ENVIRONMENT: cdtn-prod
-          ES_INDEX_PREFIX: cdtn-prod
-          KUBE_NAMESPACE: cdtn
-
       - name: Use autodevops deployment
         uses: SocialGouv/actions/autodevops-deploy@v1
         with:
