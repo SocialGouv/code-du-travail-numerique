@@ -41,7 +41,11 @@ function AgreementSearchTool({
   };
 
   function clearSelection() {
-    setEnterprise(null);
+    if (widgetMode) {
+      setScreen(ScreenType.enterprise)
+    } else {
+      setEnterprise(null);
+    }
     trackEvent("view_step_cc_search_p2", "back_step_cc_select_p2", title, uuid);
   }
 
@@ -87,10 +91,13 @@ function AgreementSearchTool({
   ) {
     setEnterprise(enterprise);
     setSearchParams(params);
-
-    router.push(
-      `/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreementSelection}`
-    );
+    if (widgetMode) {
+      setScreen(ScreenType.agreementSelection)
+    } else {
+      router.push(
+        `/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreementSelection}`
+      );
+    }
   }
 
   useEffect(() => {
@@ -136,6 +143,7 @@ function AgreementSearchTool({
         <Steps.AgreementSelectionStep
           onBackClick={clearSelection}
           onUserAction={onUserAction}
+          widgetMode={widgetMode}
         />
       );
       break;

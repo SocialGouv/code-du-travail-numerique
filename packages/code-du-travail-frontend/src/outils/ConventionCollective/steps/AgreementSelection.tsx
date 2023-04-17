@@ -11,11 +11,13 @@ import { AgreementTile } from "../../common/Agreement/AgreementSearch/AgreementI
 
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;
+  widgetMode?: boolean;
 } & TrackingProps;
 
 const AgreementSelectionStep = ({
   onBackClick,
   onUserAction,
+  widgetMode
 }: EnterpriseSearchStepProps): JSX.Element => {
   const { enterprise } = useNavContext();
 
@@ -25,9 +27,8 @@ const AgreementSelectionStep = ({
       <Paragraph noMargin variant="primary">
         {(enterprise?.conventions?.length ?? 0) > 1
           ? `${enterprise?.conventions.length} conventions collectives trouvées pour `
-          : `${
-              enterprise?.conventions.length ?? 0
-            } convention collective trouvée pour `}
+          : `${enterprise?.conventions.length ?? 0
+          } convention collective trouvée pour `}
         <strong>
           « {enterprise?.simpleLabel}
           {enterprise?.address &&
@@ -43,7 +44,11 @@ const AgreementSelectionStep = ({
         ))}
       </FlatList>
 
-      <Link
+      {widgetMode ? (
+        <Button small type="button" onClick={onBackClick} variant="flat">
+          Précédent
+        </Button>
+      ) : (<Link
         href={`/${SOURCES.TOOLS}/convention-collective#entreprise`}
         passHref
         legacyBehavior
@@ -51,7 +56,8 @@ const AgreementSelectionStep = ({
         <Button as="a" small type="button" onClick={onBackClick} variant="flat">
           Précédent
         </Button>
-      </Link>
+      </Link>)
+      }
     </>
   );
 };
