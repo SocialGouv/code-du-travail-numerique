@@ -40,6 +40,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   valeur: indemnité
   unité: €
   arrondi: 2 décimales
@@ -75,6 +76,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -113,6 +115,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -153,6 +156,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 20 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -190,6 +194,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté au dela de 20 ans . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 20 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -237,6 +242,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   valeur: indemnité
   unité: €
   arrondi: 2 décimales
@@ -275,7 +281,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 10 an
       - toutes ces conditions:
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année = 10 an
-        - age <= 50 an
+        - age < 50 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -297,8 +304,9 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année = 10 an
-      - age > 50 an
-      - age <= 55 an
+      - age >= 50 an
+      - age < 55 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 19
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -321,7 +329,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année = 10 an
-      - age > 55 an
+      - age >= 55 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 20
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -362,7 +371,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
-      - age <= 50 an
+      - age < 50 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -388,8 +398,9 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
-      - age > 50 an
-      - age <= 55 an
+      - age >= 50 an
+      - age < 55 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 19
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -416,7 +427,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
-      - age > 55 an
+      - age >= 55 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 20
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -456,7 +468,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
-      - age <= 50 an
+      - age < 50 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -483,8 +496,9 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
-      - age > 50 an
-      - age <= 55 an
+      - age >= 50 an
+      - age < 55 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 19
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -512,7 +526,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
-      - age > 55 an
+      - age >= 55 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 20
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
