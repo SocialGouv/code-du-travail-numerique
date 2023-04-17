@@ -18,7 +18,7 @@ app-frontend:
 jobs:
   runs:
     build-frontend:
-      use: SocialGouv/kontinuous/plugins/fabrique/jobs/build@v1
+      use: build
       with:
         registrySecretRefName: harbor
         imagePackage: frontend
