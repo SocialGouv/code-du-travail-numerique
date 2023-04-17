@@ -32,14 +32,14 @@ export const SearchAgreementInput = ({
 
   const state = useAgreementSuggester(query);
 
-  const onChange = (e) => { setQuery(e.target.value) };
+  const onChange = (_e, { newValue }) => { setQuery(typeof newValue === "string" ? newValue : "") };
 
   const onClear = () => {
     setQuery("");
   };
 
   const onSearch = async ({ value }) => {
-    setQuery(value);
+    setQuery(typeof value === "string" ? value : "")
   };
 
   const onSelect = async (event, data) => {
