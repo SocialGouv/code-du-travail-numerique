@@ -22,6 +22,7 @@ export const SearchAgreementInput = ({
   onSelectAgreement,
 }: Props): JSX.Element => {
   const [query, setQuery] = useState("");
+  const [_value, setValue] = useState("");
 
   const useAgreementSuggester = createSuggesterHook(
     searchAgreements,
@@ -39,7 +40,7 @@ export const SearchAgreementInput = ({
   };
 
   const onSearch = async ({ value }) => {
-    setQuery(typeof value === "string" ? value : "")
+    setValue(value)
   };
 
   const onSelect = async (event, data) => {
