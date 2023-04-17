@@ -11,13 +11,13 @@ import { AgreementTile } from "../../common/Agreement/AgreementSearch/AgreementI
 
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;
-  widgetMode?: boolean;
+  isPreviousButton?: boolean;
 } & TrackingProps;
 
 const AgreementSelectionStep = ({
   onBackClick,
   onUserAction,
-  widgetMode
+  isPreviousButton
 }: EnterpriseSearchStepProps): JSX.Element => {
   const { enterprise } = useNavContext();
 
@@ -44,7 +44,7 @@ const AgreementSelectionStep = ({
         ))}
       </FlatList>
 
-      {widgetMode ? (
+      {isPreviousButton ? (
         <Button small type="button" onClick={onBackClick} variant="flat">
           Précédent
         </Button>
