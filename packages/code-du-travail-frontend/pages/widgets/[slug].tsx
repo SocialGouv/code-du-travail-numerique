@@ -11,6 +11,7 @@ import {
   DismissalProcess,
   CalculateurIndemnite,
   fetchTool,
+  AgreementSearch,
 } from "../../src/outils";
 
 const toolsBySlug = {
@@ -18,6 +19,7 @@ const toolsBySlug = {
   "preavis-retraite": DureePreavisRetraite,
   "procedure-licenciement": DismissalProcess,
   "indemnite-licenciement": CalculateurIndemnite,
+  "convention-collective": AgreementSearch
 };
 
 interface Props {
