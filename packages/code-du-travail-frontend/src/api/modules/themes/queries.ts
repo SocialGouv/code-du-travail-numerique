@@ -16,6 +16,28 @@ export function getThemes() {
   };
 }
 
+export function getAllThemesQuery() {
+  return {
+    _source: [
+      "title",
+      "slug",
+      "position",
+      "breadcrumbs",
+      "children",
+      "description",
+    ],
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.THEMES } },
+          { term: { isPublished: true } },
+        ],
+      },
+    },
+    sort: [{ position: { order: "asc" } }],
+  };
+}
+
 export function getThemeBySlugQuery(slug: string) {
   return {
     _source: [

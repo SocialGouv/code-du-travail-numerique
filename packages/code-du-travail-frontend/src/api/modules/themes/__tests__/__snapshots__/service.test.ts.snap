@@ -59,6 +59,78 @@ exports[`Themes getAllThemes 1`] = `
 }
 `;
 
+exports[`Themes getAllThemesAndSubThemes 1`] = `
+[
+  {
+    "breadcrumbs": [
+      {
+        "label": "Départ de l’entreprise",
+        "position": 8,
+        "slug": "/themes/depart-de-lentreprise",
+      },
+    ],
+    "children": [],
+    "position": 1,
+    "slug": "demission",
+    "title": "Démission",
+  },
+  {
+    "breadcrumbs": [],
+    "children": [
+      {
+        "label": "Embauche",
+        "slug": "embauche",
+      },
+      {
+        "label": "Contrat de travail",
+        "slug": "contrat-de-travail",
+      },
+    ],
+    "description": "Vous venez de trouver un travail, vous embauchez un salarié ou un apprenti ? Vous souhaitez faire une déclaration préalable à l’embauche, rédiger un contrat de travail (CDI, CDD, travail temporaire, temps plein, temps partiel) ? Retrouvez toutes nos réponses ici.  ",
+    "position": 1,
+    "slug": "embauche-et-contrat-de-travail",
+    "title": "Embauche et contrat de travail",
+  },
+  {
+    "breadcrumbs": [],
+    "children": [
+      {
+        "label": "Documents à remettre au salarié",
+        "slug": "documents-a-remettre-au-salarie",
+      },
+      {
+        "label": "Démission",
+        "slug": "demission",
+      },
+      {
+        "label": "Fin d’un CDD - CTT",
+        "slug": "fin-dun-cdd-ctt",
+      },
+      {
+        "label": "Rupture conventionnelle",
+        "slug": "rupture-conventionnelle",
+      },
+      {
+        "label": "Licenciement : droits des salariés et procédures",
+        "slug": "licenciement-droits-des-salaries-et-procedures",
+      },
+      {
+        "label": "Retraite",
+        "slug": "retraite",
+      },
+      {
+        "label": "Autres départs",
+        "slug": "autres-departs",
+      },
+    ],
+    "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
+    "position": 8,
+    "slug": "depart-de-lentreprise",
+    "title": "Départ de l’entreprise",
+  },
+]
+`;
+
 exports[`Themes getBySlugThemes 1`] = `
 {
   "breadcrumbs": [],

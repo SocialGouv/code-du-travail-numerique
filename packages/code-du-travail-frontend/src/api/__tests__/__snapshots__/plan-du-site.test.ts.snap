@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Plan du site should return a list for /plan-du-site 1`] = `
+{
+  "agreements": [
+    {
+      "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
+      "shortTitle": "Banque",
+      "slug": "2120-banque",
+      "source": "conventions_collectives",
+      "title": "Banque",
+      "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780",
+    },
+    {
+      "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
+      "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",
+      "slug": "843-boulangerie-patisserie-entreprises-artisanales",
+      "source": "conventions_collectives",
+      "title": "Boulangerie-pâtisserie (entreprises artisanales)",
+      "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
+    },
+    {
+      "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
+      "shortTitle": "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
+      "slug": "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle",
+      "source": "conventions_collectives",
+      "title": "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
+      "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635191",
+    },
+    {
+      "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
+      "shortTitle": "Convention collective régionale test métallurgie",
+      "slug": "1234-cc-metalurgie-rest",
+      "source": "conventions_collectives",
+      "title": "Convention collective régionale test métallurgie",
+    },
+  ],
+  "contributions": [
+    {
+      "breadcrumbs": [
+        {
+          "label": "Congés et repos",
+          "position": 3,
+          "slug": "/themes/conges-et-repos",
+        },
+        {
+          "label": "Congés",
+          "position": 1,
+          "slug": "/themes/conges",
+        },
+        {
+          "label": "Congés pour événement familial",
+          "position": 3,
+          "slug": "/themes/conges-pour-evenement-familial",
+        },
+      ],
+      "description": "Le code du travail prévoit que le salarié bénéficie de congés à l’occasion de certains événements familiaux. Ils n’entrainent aucune diminution de la rémunération…",
+      "slug": "les-conges-pour-evenements-familiaux",
+      "source": "contributions",
+      "title": "Les congés pour événements familiaux",
+    },
+    {
+      "breadcrumbs": [
+        {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        {
+          "label": "Autres départs",
+          "position": 6,
+          "slug": "/themes/autres-departs",
+        },
+      ],
+      "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
+      "slug": "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
+      "source": "contributions",
+      "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
+    },
+  ],
+  "modeles": [
+    {
+      "breadcrumbs": [
+        {
+          "label": "Départ de l’entreprise",
+          "position": 8,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        {
+          "label": "Rupture conventionnelle",
+          "position": 3,
+          "slug": "/themes/rupture-conventionnelle",
+        },
+        {
+          "label": "Rupture conventionnelle individuelle",
+          "position": 1,
+          "slug": "/themes/rupture-conventionnelle-individuelle",
+        },
+      ],
+      "cdtnId": "a712ecb976",
+      "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
+      "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
+      "source": "modeles_de_courriers",
+      "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
+    },
+    {
+      "breadcrumbs": [
+        {
+          "label": "Embauche et contrat de travail",
+          "position": 1,
+          "slug": "/themes/embauche-et-contrat-de-travail",
+        },
+        {
+          "label": "Embauche",
+          "position": 1,
+          "slug": "/themes/embauche",
+        },
+        {
+          "label": "Période d’essai",
+          "position": 3,
+          "slug": "/themes/periode-dessai",
+        },
+      ],
+      "cdtnId": "772cb955ce",
+      "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l’employeur. L’employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
+      "slug": "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
+      "source": "modeles_de_courriers",
+      "title": "Rupture de période d’essai à l’initiative de l’employeur",
+    },
+    {
+      "breadcrumbs": [
+        {
+          "label": "Départ de l’entreprise",
+          "position": 8,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        {
+          "label": "Documents à remettre au salarié",
+          "position": 0,
+          "slug": "/themes/documents-a-remettre-au-salarie",
+        },
+      ],
+      "cdtnId": "19837df114",
+      "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail.",
+      "slug": "certificat-de-travail",
+      "source": "modeles_de_courriers",
+      "title": "Certificat de travail",
+    },
+  ],
+  "themes": [
+    {
+      "breadcrumbs": [
+        {
+          "label": "Départ de l’entreprise",
+          "position": 8,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+      ],
+      "children": [],
+      "position": 1,
+      "slug": "demission",
+      "title": "Démission",
+    },
+    {
+      "breadcrumbs": [],
+      "children": [
+        {
+          "label": "Embauche",
+          "slug": "embauche",
+        },
+        {
+          "label": "Contrat de travail",
+          "slug": "contrat-de-travail",
+        },
+      ],
+      "description": "Vous venez de trouver un travail, vous embauchez un salarié ou un apprenti ? Vous souhaitez faire une déclaration préalable à l’embauche, rédiger un contrat de travail (CDI, CDD, travail temporaire, temps plein, temps partiel) ? Retrouvez toutes nos réponses ici.  ",
+      "position": 1,
+      "slug": "embauche-et-contrat-de-travail",
+      "title": "Embauche et contrat de travail",
+    },
+    {
+      "breadcrumbs": [],
+      "children": [
+        {
+          "label": "Documents à remettre au salarié",
+          "slug": "documents-a-remettre-au-salarie",
+        },
+        {
+          "label": "Démission",
+          "slug": "demission",
+        },
+        {
+          "label": "Fin d’un CDD - CTT",
+          "slug": "fin-dun-cdd-ctt",
+        },
+        {
+          "label": "Rupture conventionnelle",
+          "slug": "rupture-conventionnelle",
+        },
+        {
+          "label": "Licenciement : droits des salariés et procédures",
+          "slug": "licenciement-droits-des-salaries-et-procedures",
+        },
+        {
+          "label": "Retraite",
+          "slug": "retraite",
+        },
+        {
+          "label": "Autres départs",
+          "slug": "autres-departs",
+        },
+      ],
+      "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
+      "position": 8,
+      "slug": "depart-de-lentreprise",
+      "title": "Départ de l’entreprise",
+    },
+  ],
+  "tools": [],
+}
+`;
