@@ -51,7 +51,7 @@ describe("CC 44", () => {
   }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.congesPaternite },
-  }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${0.9166666666666666}
+  }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
       ${[{ durationInMonth: 0, motif: { key: MotifKeys.maladieNonPro } }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.accidentTrajet },
@@ -176,7 +176,7 @@ describe("CC 44", () => {
   }, { durationInMonth: "1", motif: { key: MotifKeys.greve } }, {
     durationInMonth: "1",
     motif: { key: MotifKeys.miseAPied },
-  }, { durationInMonth: "1", motif: { key: MotifKeys.congesPaternite } }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${0.375}
+  }, { durationInMonth: "1", motif: { key: MotifKeys.congesPaternite } }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${0.4583333333333333}
       ${[{ durationInMonth: "1", motif: { key: MotifKeys.maladieNonPro } }, {
     durationInMonth: "1",
     motif: { key: MotifKeys.accidentTrajet },
@@ -192,7 +192,7 @@ describe("CC 44", () => {
   }, {
     durationInMonth: "1",
     motif: { key: MotifKeys.congesPaternite },
-  }]} | ${"20/01/2021"} | ${"20/02/2021"} | ${-0.5416666666666666}
+  }]} | ${"20/01/2021"} | ${"20/02/2021"} | ${-0.4583333333333333}
       ${[{ durationInMonth: 0, motif: { key: MotifKeys.maladieNonPro } }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.accidentTrajet },
@@ -218,7 +218,7 @@ describe("CC 44", () => {
   }, { durationInMonth: 0, motif: { key: MotifKeys.greve } }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.miseAPied },
-  }, { durationInMonth: 0, motif: { key: MotifKeys.congesPaternite } }]} | ${"01/01/1979"} | ${"01/01/2021"} | ${41}
+  }, { durationInMonth: 0, motif: { key: MotifKeys.congesPaternite } }]} | ${"01/01/1979"} | ${"01/01/2021"} | ${42}
       ${[{ durationInMonth: 12, motif: { key: MotifKeys.maladieNonPro } }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.accidentTrajet },

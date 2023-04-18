@@ -15,10 +15,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       Ingénieurs et cadres (Groupe V): "'Ingénieurs et cadres (Groupe V)'"
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique:
-  titre: Licenciement pour motif économique
-  question: Le motif du licenciement est-il économique ?
-  cdtn:
-    type: oui-non
+  valeur: "'Non'"
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age:
   titre: Âge du salarié
@@ -752,3 +749,8 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       formula: 2 * Sref
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . notification:
+  type: notification
+  description: "Le montant de l'indemnité pourrait être plus important si, avant le CDI, sous certaines conditions, le salarié a été lié à l’employeur par d'autres contrats."
+  valeur: oui
