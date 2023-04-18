@@ -21,7 +21,7 @@ const MOTIFS_3239: Motif[] = [
   },
   {
     key: MotifKeys.congesParentalEducation,
-    label: "Congé parental d'éducation",
+    label: "Congé parental d'éducation à temps plein",
     value: 0.5,
   },
   {
