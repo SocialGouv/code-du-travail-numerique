@@ -98,13 +98,13 @@ describe("Formule indemnité licenciement - CC 275", () => {
   describe("Cadres", () => {
     test.each([
       {
-        age: 50,
+        age: 45,
         expectedExplanations: [],
         expectedFormula: "",
         seniority: 7 / 12,
       },
       {
-        age: 50,
+        age: 45,
         expectedExplanations: [
           "A : Ancienneté totale (≈ 1.08 an : valeur arrondie)",
           "Sref : Salaire de référence (1000 €)",
@@ -113,7 +113,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
         seniority: 13 / 12,
       },
       {
-        age: 50,
+        age: 45,
         expectedExplanations: [
           "A : Ancienneté totale (5 ans)",
           "Sref : Salaire de référence (1000 €)",
@@ -122,7 +122,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
         seniority: 5,
       },
       {
-        age: 50,
+        age: 45,
         expectedExplanations: [
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
@@ -132,7 +132,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
         seniority: 10,
       },
       {
-        age: 55,
+        age: 50,
         expectedExplanations: [
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
@@ -152,7 +152,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
         seniority: 10,
       },
       {
-        age: 50,
+        age: 45,
         expectedExplanations: [
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
@@ -164,7 +164,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
         seniority: 15,
       },
       {
-        age: 55,
+        age: 50,
         expectedExplanations: [
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
@@ -188,7 +188,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
         seniority: 15,
       },
       {
-        age: 50,
+        age: 45,
         expectedExplanations: [
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
@@ -201,7 +201,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
         seniority: 20,
       },
       {
-        age: 55,
+        age: 50,
         expectedExplanations: [
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
