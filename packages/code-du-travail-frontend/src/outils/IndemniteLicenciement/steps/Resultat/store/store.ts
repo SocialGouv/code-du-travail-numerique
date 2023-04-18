@@ -142,6 +142,9 @@ const createResultStore: StoreSlice<
       const publicodes = get().agreementData.publicodes;
       const dateNotification = get().ancienneteData.input.dateNotification!;
       const dateSortie = get().ancienneteData.input.dateSortie!;
+      const isAgreementSupported =
+        get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
+
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
       }
@@ -244,10 +247,11 @@ const createResultStore: StoreSlice<
 
         if (
           agreementHasNoLegalIndemnity ||
-          isConventionnelBetter(
+          (isConventionnelBetter(
             publicodesSituationLegal,
             publicodesSituationConventionnel
-          )
+          ) &&
+            isAgreementSupported)
         ) {
           isAgreementBetter = true;
         }
