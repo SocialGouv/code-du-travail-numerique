@@ -55,20 +55,18 @@ const apiEnterprises = function createFetcher(
     address ? `&a=${encodeURIComponent(address)}` : ""
   }`;
 
-  return fetch(url)
-    .then(async (response) => {
-      if (response.ok) {
-        return response.json();
-      }
-      if (response.status === 404) {
-        return { entreprises: [] };
-      }
-      const errorMessage = await response.text();
-      return Promise.reject(errorMessage);
-    })
-    .then((result: ApiEnterpriseData) => {
-      return result.entreprises;
-    });
+  return fetch(url).then(async (response) => {
+    if (response.ok) {
+      const res = await response.json();
+      return res.entreprises;
+    }
+    if (response.status === 404 || !response.ok) {
+      return { entreprises: [] };
+    }
+    return Promise.reject(
+      "Ce service est momentanément indisponible. Vous pouvez tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
+    );
+  });
 };
 
 const searchEnterprises = debounce(apiEnterprises, 300);
