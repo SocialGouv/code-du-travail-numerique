@@ -15,7 +15,7 @@
           "description": "le message envoyé lors d'un click sur le logo \"code du travail numérique\""
         },
         {
-          "name": "search-button",
+          "name": "button-search",
           "description": "le message envoyé lors d'un click sur la loupe de la recherche"
         }
       ]
