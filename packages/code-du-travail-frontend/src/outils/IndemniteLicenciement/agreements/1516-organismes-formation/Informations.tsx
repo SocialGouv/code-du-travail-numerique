@@ -1,4 +1,6 @@
 import { useContext } from "react";
+import { Paragraph } from "@socialgouv/cdtn-ui";
+
 import {
   StyledFilledElementSpan,
   StyledFilledElementTable,
@@ -27,11 +29,12 @@ export default function Agreement1516Informations() {
             &nbsp;:&nbsp;{hasReceivedSalaries === "oui" ? "Oui" : "Non"}
           </li>
           <li>
-            Salaires perçus pendant le préavis
-            {hasReceivedSalaries === "non" && "*"}&nbsp;:&nbsp;
+            <Paragraph noMargin>
+              Salaires perçus pendant le préavis
+              {hasReceivedSalaries === "non" && "*"}&nbsp;:
+            </Paragraph>
             {hasReceivedSalaries === "non" && (
               <>
-                <br />
                 <i>
                   * Le calcul de l’indemnité nécessite le salaire le plus élevé
                   perçu au cours des 3 derniers mois de travail (incluant le
@@ -54,13 +57,7 @@ export default function Agreement1516Informations() {
                       (primes et avantages en nature inclus)
                     </StyledFilledElementSpan>
                   </th>
-                  <th>
-                    Dont primes
-                    <br />
-                    <StyledFilledElementSpan>
-                      (au cours des 3 derniers mois)
-                    </StyledFilledElementSpan>
-                  </th>
+                  <th>Dont primes</th>
                 </tr>
               </thead>
               <tbody>

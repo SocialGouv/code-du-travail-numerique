@@ -130,7 +130,6 @@ Le but de la règle est de remplacer la règle : `contrat salarié . indemnité 
 
 ```yml
 contrat salarié . convention collective . sport . indemnité de licenciement:
-  applicable si: indemnité de licenciement
   valeur: oui
 
 contrat salarié . convention collective . sport . indemnité de licenciement . jusqu'à dix ans ou moins:

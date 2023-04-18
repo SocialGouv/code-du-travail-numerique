@@ -1,13 +1,13 @@
 import produce from "immer";
 import { StoreApi } from "zustand";
 import {
-  detectNullOrUndefinedOrNaNInArray,
   deepEqualObject,
+  detectNullOrUndefinedOrNaNInArray,
 } from "../../../../../lib";
 import { MainStore } from "../../../store";
 import {
-  Agreement1516StoreInput,
   Agreement1516StoreError,
+  Agreement1516StoreInput,
   Agreement1516StoreSlice,
 } from "./types";
 
@@ -28,7 +28,10 @@ export const validateAgreement1516 = (
 };
 
 export const validateStep = (state: Agreement1516StoreInput) => {
-  let errorState: Agreement1516StoreError = {};
+  let errorState: Agreement1516StoreError = {
+    errorHasReceivedSalaries: undefined,
+    errorSalaryPeriods: undefined,
+  };
   const salaryPeriods = state.salaryPeriods ?? [];
   if (salaryPeriods.length > 0) {
     errorState = {
@@ -36,7 +39,7 @@ export const validateStep = (state: Agreement1516StoreInput) => {
         ? "Vous devez répondre à cette question"
         : undefined,
       errorSalaryPeriods:
-        salaryPeriods.length === 0 ||
+        state.hasReceivedSalaries === "oui" &&
         detectNullOrUndefinedOrNaNInArray(salaryPeriods)
           ? "Vous devez compléter l'ensemble des champs"
           : undefined,
