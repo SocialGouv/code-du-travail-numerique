@@ -39,6 +39,7 @@ const StepSalaires = () => {
     arretTravail,
     showHasTempsPartiel,
     initShowHasTempsPartiel,
+    isAgreementSupported
   } = useIndemniteLicenciementStore(store, (state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
@@ -57,6 +58,7 @@ const StepSalaires = () => {
     arretTravail: state.contratTravailData.input.arretTravail,
     showHasTempsPartiel: state.salairesData.input.showHasTempsPartiel,
     initShowHasTempsPartiel: state.salairesFunction.initShowHasTempsPartiel,
+    isAgreementSupported: state.agreementData.input.isAgreementSupportedIndemniteLicenciement
   }));
 
   React.useEffect(() => {
@@ -140,7 +142,7 @@ const StepSalaires = () => {
             />
           )}
           {(hasSameSalary === "oui" || hasSameSalary === "non") &&
-            agreement && (
+            agreement && isAgreementSupported && (
               <AgreementsInjector
                 idcc={getSupportedAgreement(agreement.num)}
                 step={IndemniteLicenciementStepName.Salaires}

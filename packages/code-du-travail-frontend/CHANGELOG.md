@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.97.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.97.0...v4.97.1) (2023-04-11)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** bug affichage question salaire indemnite de licenciement ([#5101](https://github.com/SocialGouv/code-du-travail-numerique/issues/5101)) ([cf95e5f](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf95e5f08dc20716db5fc387d2f0ccbb47b6fd99))
+
+# [4.97.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.96.0...v4.97.0) (2023-04-07)
+
+### Bug Fixes
+
+- **build:** add types for cors ([dd62b13](https://github.com/SocialGouv/code-du-travail-numerique/commit/dd62b1351767735dde8b99f467ccc6b311bed79f))
+- **indemnite-licenciement:** affichage du resultat légal pour les ccs non supporté ([#5098](https://github.com/SocialGouv/code-du-travail-numerique/issues/5098)) ([17aaea2](https://github.com/SocialGouv/code-du-travail-numerique/commit/17aaea24bd323cee41994a0d99c82893d4ccba16))
+- **info bulle:** style on mobile ([#5060](https://github.com/SocialGouv/code-du-travail-numerique/issues/5060)) ([cf6d7c2](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf6d7c29f50b909ca34c7c009ecdfc463d52eed8))
+- **pages:** remove last `getInitialProps` and transform some files in `tsx` ([#5091](https://github.com/SocialGouv/code-du-travail-numerique/issues/5091))Co-authored-by: Caroline <4971715+carolineBda@users.noreply.github.com> ([7214147](https://github.com/SocialGouv/code-du-travail-numerique/commit/7214147e6dedd2dd74b73fa4d0b200ebe9448e04))
+- **widget:** track widget click ([#5075](https://github.com/SocialGouv/code-du-travail-numerique/issues/5075)) ([fff82bf](https://github.com/SocialGouv/code-du-travail-numerique/commit/fff82bfe2bcc9f45a8af40ff073d4d982a9ce6b9))
+
+### Features
+
+- **api:** ajout d'un middleware qui ajoute cors en `preprod` et `dev` ([#5089](https://github.com/SocialGouv/code-du-travail-numerique/issues/5089)) ([fb6ee11](https://github.com/SocialGouv/code-du-travail-numerique/commit/fb6ee11e6315b8656e3540da3c5e823ba4f5fb70))
+- **api:** Supression du projet `koa` pour utiliser l'API interne à `next` ([#5042](https://github.com/SocialGouv/code-du-travail-numerique/issues/5042)) ([f833e6b](https://github.com/SocialGouv/code-du-travail-numerique/commit/f833e6bf9bc1227043051222e07aaa2acc332c3f)), closes [#5068](https://github.com/SocialGouv/code-du-travail-numerique/issues/5068)
+- **indemnite-licenciement:** ajout d'un tooltip sur un `SectionTitle` ([#5059](https://github.com/SocialGouv/code-du-travail-numerique/issues/5059)) ([b554099](https://github.com/SocialGouv/code-du-travail-numerique/commit/b55409920c24b963a554aed9dfc7361bf0efab92))
+- **indemnite-licenciement:** ajout de la cc 2614 ([#5035](https://github.com/SocialGouv/code-du-travail-numerique/issues/5035)) ([3690f50](https://github.com/SocialGouv/code-du-travail-numerique/commit/3690f5080e3f5e40c07d4baa8b89d2b0ee2a15ef))
+- **indemnite-licenciement:** ajout de la cc 86 ([#5073](https://github.com/SocialGouv/code-du-travail-numerique/issues/5073)) ([e020089](https://github.com/SocialGouv/code-du-travail-numerique/commit/e020089ea813d7ea36b03417a7458a882ac52269))
+- scroll to top widget ([#5065](https://github.com/SocialGouv/code-du-travail-numerique/issues/5065)) ([73fe3e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/73fe3e252f47621de90ce3b043721a303ee1db32))
+
 # [4.96.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.95.0...v4.96.0) (2023-03-31)
 
 ### Bug Fixes
