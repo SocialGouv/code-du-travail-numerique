@@ -351,6 +351,14 @@ exports[`<Term /> should render 1`] = `
                       Intégrer les outils du Code du travail numérique
                     </a>
                   </li>
+                  <li>
+                    <a
+                      class="sc-gGfaQS fhJFtf"
+                      href="/plan-du-site"
+                    >
+                      Plan du site
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

@@ -811,6 +811,14 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       Intégrer les outils du Code du travail numérique
                     </a>
                   </li>
+                  <li>
+                    <a
+                      class="sc-nTrUm ePSgli"
+                      href="/plan-du-site"
+                    >
+                      Plan du site
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
