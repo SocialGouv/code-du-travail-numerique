@@ -4,7 +4,6 @@ import { fireEvent, render, waitFor } from "@testing-library/react";
 
 import { ui } from "./ui";
 
-jest.mock("../../../conventions/Search/api/agreements.service");
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
   () => `
