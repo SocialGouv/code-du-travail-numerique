@@ -32,7 +32,7 @@ export const SearchAgreementInput = ({
 
   const state = useAgreementSuggester(query);
 
-  const onChange = () => {};
+  const onChange = () => { };
 
   const onClear = () => {
     setQuery("");
