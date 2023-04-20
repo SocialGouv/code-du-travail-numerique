@@ -25,8 +25,8 @@ const compose =
 const nextConfig = {
   poweredByHeader: false,
   sentry: {
-    disableClientWebpackPlugin: true,
-    disableServerWebpackPlugin: true,
+    hideSourceMaps: false,
+    widenClientFileUpload: true,
   },
   compiler: {
     reactRemoveProperties:

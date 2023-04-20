@@ -21,6 +21,7 @@ type EnterpriseSearchStepProps = {
   ) => void;
   searchParams?: SearchParams;
   onSearchParamsChange: (params: SearchParams) => void;
+  hidePreviousButton?: boolean;
 } & TrackingProps;
 
 const EnterpriseSearchStep = ({
@@ -29,6 +30,7 @@ const EnterpriseSearchStep = ({
   searchParams,
   onSearchParamsChange,
   onUserAction,
+  hidePreviousButton
 }: EnterpriseSearchStepProps): JSX.Element => {
   return (
     <>
@@ -46,15 +48,17 @@ const EnterpriseSearchStep = ({
           />
         </form>
       </Section>
-      <Link
-        href={`/${SOURCES.TOOLS}/convention-collective`}
-        passHref
-        legacyBehavior
-      >
-        <Button as="a" small type="button" onClick={onBackClick} variant="flat">
-          Précédent
-        </Button>
-      </Link>
+      {!hidePreviousButton && (
+        <Link
+          href={`/${SOURCES.TOOLS}/convention-collective`}
+          passHref
+          legacyBehavior
+        >
+          <Button as="a" small type="button" onClick={onBackClick} variant="flat">
+            Précédent
+          </Button>
+        </Link>
+      )}
     </>
   );
 };
