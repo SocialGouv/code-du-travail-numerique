@@ -33,6 +33,7 @@ describe("Not found", () => {
       "/modeles-de-courriers",
       "/themes",
       "/widgets",
+      "/integration",
       "",
     ].forEach((fragment) => {
       it("page: " + fragment + "/banane", () => {

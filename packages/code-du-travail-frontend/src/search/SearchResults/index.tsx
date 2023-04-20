@@ -22,7 +22,7 @@ const SearchResults = ({
     if (isSearch) {
       matopush(["trackEvent", "candidateResults", query]);
     } else {
-      matopush(["trackEvent", "themeResults", ""]);
+      matopush(["trackEvent", "themeResults", query]);
     }
   });
   let isArticleSearch = false;
