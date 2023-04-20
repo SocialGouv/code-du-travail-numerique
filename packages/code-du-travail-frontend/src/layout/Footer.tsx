@@ -84,13 +84,6 @@ const Footer = (): JSX.Element => {
                       </StyledLink>
                     </Link>
                   </li>
-                  <li>
-                    <Link passHref href="/plan-du-site" legacyBehavior>
-                      <StyledLink>
-                        Plan du site
-                      </StyledLink>
-                    </Link>
-                  </li>
                 </StyledList>
               </div>
             </StyledLinksItem>

@@ -145,8 +145,14 @@ const StyledSection = styled.div`
 `
 
 const StyledLi = styled.li`
+  margin: 5px 0;
   a {
     font-size: ${theme.fonts.sizes.small};
+    font-weight: 400;
+    padding: 5px 0;
+  }
+  ::marker {
+    font-size: 12px;
   }
 `
 
