@@ -52,10 +52,6 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
       .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
       .setInput(ui.seniority.endDate.get(), "01/03/2022")
       .click(ui.seniority.hasAbsence.oui.get())
-      .changeInputList(
-        ui.seniority.absences.motif(0).get(),
-        "Absence pour maladie non professionnelle"
-      )
       .setInput(ui.seniority.absences.duration(0).get(), "2")
       .click(ui.next.get())
 
@@ -71,7 +67,9 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
     expect(rendering.queryByText("Éléments saisis")).toBeInTheDocument();
     // On détecte le fait qu'il ait deux notifications.
     // La première notification étant celle par défaut, la seconde est celle qu'on souhaite tracker.
+    expect(rendering.queryByText("(1)")).toBeInTheDocument();
     expect(rendering.queryByText("(2)")).toBeInTheDocument();
+    expect(rendering.queryByText("(3)")).not.toBeInTheDocument();
 
   });
 
