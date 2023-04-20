@@ -70,6 +70,7 @@ describe("Formule indemnité licenciement - 2216", () => {
           seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Non'`,
       });
       const result = engine.getFormule();
 
