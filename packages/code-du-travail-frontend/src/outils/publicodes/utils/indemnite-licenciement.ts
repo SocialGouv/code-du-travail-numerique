@@ -44,8 +44,6 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
     inaptitude: boolean,
     agreementParameters?: Record<string, any>
   ): Record<string, string> => {
-    console.log("inaptitude", inaptitude ? "oui" : "non");
-
     return mapToPublicodesSituationForIndemniteLicenciementConventionnel(
       ccn,
       inaptitude,
