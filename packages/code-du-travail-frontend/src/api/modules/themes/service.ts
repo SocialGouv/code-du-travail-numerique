@@ -3,10 +3,10 @@ import {
   elasticDocumentsIndex,
   NotFoundError,
 } from "../../utils";
-import { getThemes, getThemeBySlugQuery, getAllThemesQuery } from "./queries";
+import { getAllThemesQuery, getThemeBySlugQuery } from "./queries";
 
 export const getAllThemes = async () => {
-  const body = getThemes();
+  const body = getAllThemesQuery();
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,

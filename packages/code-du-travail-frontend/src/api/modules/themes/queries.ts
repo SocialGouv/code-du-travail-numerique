@@ -1,31 +1,8 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
-export function getThemes() {
-  return {
-    _source: ["icon", "children", "title", "slug", "position"],
-    query: {
-      bool: {
-        filter: [
-          { term: { source: SOURCES.THEMES } },
-          { term: { isPublished: true } },
-        ],
-        must_not: { exists: { field: "breadcrumbs" } },
-      },
-    },
-    sort: [{ position: { order: "asc" } }],
-  };
-}
-
 export function getAllThemesQuery() {
   return {
-    _source: [
-      "title",
-      "slug",
-      "position",
-      "breadcrumbs",
-      "children",
-      "description",
-    ],
+    _source: ["icon", "children", "title", "slug", "position"],
     query: {
       bool: {
         filter: [
