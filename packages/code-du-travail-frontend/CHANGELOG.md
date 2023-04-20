@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.98.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.97.1...v4.98.0) (2023-04-20)
+
+### Bug Fixes
+
+- **2596:** fix ancienneté when cc is disabled (for prod) + remove event on theme as it is not working ([#5122](https://github.com/SocialGouv/code-du-travail-numerique/issues/5122)) ([f741e9c](https://github.com/SocialGouv/code-du-travail-numerique/commit/f741e9c4b26a2b5447bfa9e98bbd0295df2d40ec))
+- **500:** set an error 404 when page is not found on `slug` ([#5118](https://github.com/SocialGouv/code-du-travail-numerique/issues/5118)) ([34fb5dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/34fb5dd665f5a70ca04dbac09b3c1fcccfecbdcd))
+- **accessibility:** add aria-disabled when button is disabled ([#5061](https://github.com/SocialGouv/code-du-travail-numerique/issues/5061)) ([714ac05](https://github.com/SocialGouv/code-du-travail-numerique/commit/714ac058968edff9697b3fa69b51de20160cb3d3))
+- **cypress:** timeout linked to DOM element ([9eed808](https://github.com/SocialGouv/code-du-travail-numerique/commit/9eed8083bf40a1a8fc95871a22b1bdfe70c0186d))
+- erreur matomo console themes demission ([#5097](https://github.com/SocialGouv/code-du-travail-numerique/issues/5097)) ([1a2d0d5](https://github.com/SocialGouv/code-du-travail-numerique/commit/1a2d0d5f0c772c3d548bf7d24bd3870bbd5d3694))
+- **indemnite-licenciement:** ajout congé parental à temps partiel dans le texte d'intro d'absence ([#5102](https://github.com/SocialGouv/code-du-travail-numerique/issues/5102)) ([d4c3508](https://github.com/SocialGouv/code-du-travail-numerique/commit/d4c35082c78c0c6c11325fa8dec28942c39dc949))
+- **indemnite-licenciement:** desactivation du bouton entrer sur l'étape Convention Collective ([#5108](https://github.com/SocialGouv/code-du-travail-numerique/issues/5108)) ([e2bfbad](https://github.com/SocialGouv/code-du-travail-numerique/commit/e2bfbad461e78d1b2aa6d43845272f82f230534a))
+- **indemnite-licenciement:** retours sur la CC 44 ([#5113](https://github.com/SocialGouv/code-du-travail-numerique/issues/5113)) ([6275b0e](https://github.com/SocialGouv/code-du-travail-numerique/commit/6275b0eed42cee14b0b45df00635bd230ceb3736))
+- **null error:** when input is undefined ([#5076](https://github.com/SocialGouv/code-du-travail-numerique/issues/5076)) ([03b22b1](https://github.com/SocialGouv/code-du-travail-numerique/commit/03b22b184dc497db2f2a68c52ecfad8c6d32f3e6))
+- préavis retraite quand une cc est déjà enregistrée délai avant que le bouton radio soit coché ([#5090](https://github.com/SocialGouv/code-du-travail-numerique/issues/5090)) ([3c55be5](https://github.com/SocialGouv/code-du-travail-numerique/commit/3c55be5b166fe809f908f175540c1efd81f3c8cf))
+- search widget message wording ([#5114](https://github.com/SocialGouv/code-du-travail-numerique/issues/5114)) ([a113dd8](https://github.com/SocialGouv/code-du-travail-numerique/commit/a113dd875f388f56dc92cae634af656a92798c6b))
+- **simulator:** handle error when fetch `/api/idcc` and `/api/enterprise` ([#5109](https://github.com/SocialGouv/code-du-travail-numerique/issues/5109)) ([472fad6](https://github.com/SocialGouv/code-du-travail-numerique/commit/472fad64f36ab15f2dbac7687f1c7b96041635ac))
+
+### Features
+
+- indemnité de licenciement faire le +1 également pour le dernier salaire demandé comme pour la calcul dancienneté ([#5086](https://github.com/SocialGouv/code-du-travail-numerique/issues/5086)) ([2d2e205](https://github.com/SocialGouv/code-du-travail-numerique/commit/2d2e20537a99655705c1e6841806289116e87e8d))
+- **indemnite de licenciement:** add cc 2596 ([#5029](https://github.com/SocialGouv/code-du-travail-numerique/issues/5029)) ([6dc0f5a](https://github.com/SocialGouv/code-du-travail-numerique/commit/6dc0f5a763433c1034c85d1b943b406ba044fded))
+- **indemnité licenciement:** remove congé paternité as it is now included in the ancienneté ([#5017](https://github.com/SocialGouv/code-du-travail-numerique/issues/5017)) ([8a4ca24](https://github.com/SocialGouv/code-du-travail-numerique/commit/8a4ca2451382cdbfd7626fcdccf10668ec072046))
+- **sentry:** add source map ([#5092](https://github.com/SocialGouv/code-du-travail-numerique/issues/5092) ([9749c23](https://github.com/SocialGouv/code-du-travail-numerique/commit/9749c2327b177fdeb645a89d1fd16109388cd21d))
+- **widget recherche:** Add track event on click ([#5116](https://github.com/SocialGouv/code-du-travail-numerique/issues/5116)) ([f14f284](https://github.com/SocialGouv/code-du-travail-numerique/commit/f14f284a062c4bcad1aa0d57474b0372d3c19cab))
+- **widget:** ajout de l'indemnité de précarité ([#5103](https://github.com/SocialGouv/code-du-travail-numerique/issues/5103)) ([92d759a](https://github.com/SocialGouv/code-du-travail-numerique/commit/92d759aaea5936e63ed845114e2679694bc87700))
+- **widget:** ajout de la recherche convention collective ([#5107](https://github.com/SocialGouv/code-du-travail-numerique/issues/5107)) ([d837d4f](https://github.com/SocialGouv/code-du-travail-numerique/commit/d837d4fbcca6eb9467063fba476ebe3b2f68d4b3))
+
 ## [4.97.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.97.0...v4.97.1) (2023-04-11)
 
 ### Bug Fixes
