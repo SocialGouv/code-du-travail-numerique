@@ -34,7 +34,7 @@ export const getAllThemesAndSubThemes = async () => {
   });
   const themesWithChildren = themes.map((theme) => {
     const children = theme.children.map((child) => {
-      const childWithContent = data.find((d) => d.slug === child.slug);
+      const childWithContent = data.find((d: any) => d.slug === child.slug);
       return {
         ...child,
         ...childWithContent,

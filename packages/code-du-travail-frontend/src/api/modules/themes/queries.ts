@@ -32,6 +32,7 @@ export function getAllThemesQuery() {
           { term: { source: SOURCES.THEMES } },
           { term: { isPublished: true } },
         ],
+        must_not: { exists: { field: "breadcrumbs" } },
       },
     },
     sort: [{ position: { order: "asc" } }],
