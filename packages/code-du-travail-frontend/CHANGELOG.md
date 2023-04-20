@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.98.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.98.0...v4.98.1) (2023-04-20)
+
+### Bug Fixes
+
+- **csp:** remove prefetch-src property ([565790c](https://github.com/SocialGouv/code-du-travail-numerique/commit/565790c9e5e8b124d426f226b6f6eb0b8edb6030))
+
 # [4.98.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.97.1...v4.98.0) (2023-04-20)
 
 ### Bug Fixes
