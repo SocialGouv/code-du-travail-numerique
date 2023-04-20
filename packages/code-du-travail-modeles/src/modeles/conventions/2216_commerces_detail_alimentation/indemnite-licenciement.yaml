@@ -15,6 +15,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
       Cadres: "'Cadres'"
 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique:
+  applicable si: indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = 'Non'
   titre: Licenciement pour motif économique
   question: Le motif du licenciement est-il économique ?
   cdtn:
@@ -199,7 +200,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     une de ces conditions:
-      - catégorie professionnelle . licenciement économique = 'Non'
+      - catégorie professionnelle . licenciement économique != 'Oui'
       - toutes ces conditions:
           - catégorie professionnelle . licenciement économique = 'Oui'
           - catégorie professionnelle . licenciement économique . age < 50 ans
@@ -261,7 +262,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   applicable si:
     une de ces conditions:
       - toutes ces conditions:
-          - catégorie professionnelle . licenciement économique = 'Non'
+          - catégorie professionnelle . licenciement économique != 'Oui'
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 ans
       - toutes ces conditions:
           - catégorie professionnelle . licenciement économique = 'Oui'
@@ -292,7 +293,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   applicable si:
     une de ces conditions:
       - toutes ces conditions:
-          - catégorie professionnelle . licenciement économique = 'Non'
+          - catégorie professionnelle . licenciement économique != 'Oui'
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 ans
       - toutes ces conditions:
           - catégorie professionnelle . licenciement économique = 'Oui'

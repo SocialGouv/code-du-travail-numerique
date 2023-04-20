@@ -27,6 +27,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1996", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Non'`,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -71,6 +72,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1996", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Non'`,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -80,5 +82,26 @@ describe("Indemnité conventionnel de licenciement pour la CC 1996", () => {
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
+    test("Si l'inaptitude suite à un accident ou maladie professionnelle' alors pas de question pour motif eco", () => {
+      const { result, missingArgs } = engine.setSituation(
+        {
+          "contrat salarié . convention collective": "'IDCC1996'",
+
+          "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle": `'Cadres'`,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            "12",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            "12",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "2450",
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Oui'`,
+        },
+        "contrat salarié . indemnité de licenciement . résultat conventionnel"
+      );
+
+      expect(result.value).toEqual(8820);
+      expect(missingArgs).toEqual([]);
+      expect(result.unit?.numerators).toEqual(["€"]);
+    });
   });
 });
