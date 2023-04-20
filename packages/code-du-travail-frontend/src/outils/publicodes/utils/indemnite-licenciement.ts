@@ -24,7 +24,6 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
   inaptitude: boolean,
   agreementParameters?: Record<string, any>
 ): Record<string, string> => {
-  console.log(">>>>>> inaptitude", inaptitude ? "oui" : "non");
   return {
     ...agreementParameters,
     ...{
