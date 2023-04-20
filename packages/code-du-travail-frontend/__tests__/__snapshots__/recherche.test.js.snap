@@ -327,14 +327,6 @@ exports[`<Recherche /> should render 1`] = `
                       Intégrer les outils du Code du travail numérique
                     </a>
                   </li>
-                  <li>
-                    <a
-                      class="sc-cuOiQm dqomjK"
-                      href="/plan-du-site"
-                    >
-                      Plan du site
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -584,6 +576,13 @@ exports[`<Recherche /> should render 1`] = `
                   href="/politique-confidentialite"
                 >
                   Politique de confidentialité
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/plan-du-site"
+                >
+                  Plan du site
                 </a>
               </li>
               <li>
