@@ -149,19 +149,6 @@ exports[`Plan du site should return a list for /plan-du-site 1`] = `
   ],
   "themes": [
     {
-      "breadcrumbs": [
-        {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-      ],
-      "children": [],
-      "position": 1,
-      "slug": "demission",
-      "title": "Démission",
-    },
-    {
       "breadcrumbs": [],
       "children": [
         {
