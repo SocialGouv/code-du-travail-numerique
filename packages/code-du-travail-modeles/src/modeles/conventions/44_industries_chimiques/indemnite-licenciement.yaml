@@ -14,6 +14,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       Agents de maîtrise et techniciens (Groupe IV): "'Agents de maîtrise et techniciens (Groupe IV)'"
       Ingénieurs et cadres (Groupe V): "'Ingénieurs et cadres (Groupe V)'"
 
+# ! Nous retirons cette question car la règle est non étendue : https://github.com/SocialGouv/code-du-travail-numerique/issues/5066
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique:
   valeur: "'Non'"
 
