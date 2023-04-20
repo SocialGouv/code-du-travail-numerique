@@ -22,7 +22,7 @@ const SimulatorNavigation = ({
   return (
     <StyledDiv>
       {onPrevious && (
-        <StyledButton small onClick={onPrevious} variant="flat">
+        <StyledButton small type="button" onClick={onPrevious} variant="flat">
           Précédent
         </StyledButton>
       )}
@@ -40,6 +40,7 @@ const SimulatorNavigation = ({
         <StyledButton
           aria-disabled={hasError}
           disabled={hasError}
+          type="button"
           variant="primary"
           onClick={onNext}
         >
@@ -48,7 +49,9 @@ const SimulatorNavigation = ({
         </StyledButton>
       )}
       {onPrint && (
-        <StyledButton onClick={onPrint}>Imprimer le résultat</StyledButton>
+        <StyledButton type="button" onClick={onPrint}>
+          Imprimer le résultat
+        </StyledButton>
       )}
     </StyledDiv>
   );
