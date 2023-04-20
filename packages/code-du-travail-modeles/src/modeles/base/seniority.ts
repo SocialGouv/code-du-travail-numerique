@@ -27,7 +27,6 @@ export const LEGAL_MOTIFS: Motif[] = [
   { key: MotifKeys.congesSansSolde, label: "Congés sans solde", value: 1 },
   { key: MotifKeys.greve, label: "Grève", value: 1 },
   { key: MotifKeys.miseAPied, label: "Mise à pied", value: 1 },
-  { key: MotifKeys.congesPaternite, label: "Congé de paternité", value: 1 },
 ];
 
 export class SeniorityLegal extends SeniorityDefault<SupportedCcIndemniteLicenciement.default> {
