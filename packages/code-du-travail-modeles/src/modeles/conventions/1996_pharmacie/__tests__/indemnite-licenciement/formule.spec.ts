@@ -67,7 +67,8 @@ describe("Formule indemnité licenciement -  CC 1996", () => {
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Non'`,
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+            "non",
         });
 
         const formule = engine.getFormule();

@@ -39,7 +39,8 @@ describe("CC 1702", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
-            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Non'`,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -60,7 +61,8 @@ describe("CC 1702", () => {
           "3",
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "2700",
-        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Oui'`,
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "oui",
       },
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );

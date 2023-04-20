@@ -28,7 +28,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Non'`,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -62,7 +63,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Non'`,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -85,7 +87,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
             "15",
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1488",
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Oui'`,
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+            "oui",
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
@@ -138,7 +141,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Non'`,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -161,7 +165,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
             "22",
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1950",
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Oui'`,
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+            "oui",
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
@@ -213,7 +218,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Non'`,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -236,7 +242,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
             "20",
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "3132",
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Oui'`,
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+            "oui",
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );

@@ -27,7 +27,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
   applicable si: catégorie professionnelle = 'Cadres'
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif question:
-  applicable si: indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = 'Non'
+  applicable si: indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = non
   titre: Licenciement économique collectif
   question: Le licenciement est-il un licenciement économique collectif ?
   cdtn:
@@ -48,7 +48,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
   valeur: oui
 
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif question:
-  applicable si: indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = 'Non'
+  applicable si: indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = non
   titre: Licenciement économique collectif
   question: Le licenciement est-il un licenciement économique collectif ?
   cdtn:

@@ -8,12 +8,13 @@ import {
   PublicodesInformation,
 } from "./types";
 import { StoreSlice } from "../../../types";
-import { MissingArgs, CatPro3239 } from "@socialgouv/modeles-social";
+import { CatPro3239, MissingArgs } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
 import { informationToSituation } from "../utils";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
+import { ContratTravailStoreSlice } from "../../../IndemniteLicenciement/steps/ContratTravail/store";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -31,7 +32,7 @@ const initialState: CommonInformationsStoreData = {
 
 const createCommonInformationsStore: StoreSlice<
   CommonInformationsStoreSlice,
-  CommonAgreementStoreSlice
+  CommonAgreementStoreSlice & ContratTravailStoreSlice
 > = (set, get) => ({
   informationsData: {
     ...initialState,
@@ -42,11 +43,14 @@ const createCommonInformationsStore: StoreSlice<
       const agreement = get().agreementData.input.agreement;
       const isAgreementSupportedIndemniteLicenciement =
         get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
+      const isLicenciementInaptitude =
+        get().contratTravailData.input.licenciementInaptitude === "oui";
       if (agreement && isAgreementSupportedIndemniteLicenciement) {
         const missingArgs = publicodes
           .setSituation(
             mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-              agreement.num
+              agreement.num,
+              isLicenciementInaptitude
             ),
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           )
@@ -84,6 +88,8 @@ const createCommonInformationsStore: StoreSlice<
       const agreement = get().agreementData.input.agreement!;
       const publicodesInformations =
         get().informationsData.input.publicodesInformations;
+      const isLicenciementInaptitude =
+        get().contratTravailData.input.licenciementInaptitude === "oui";
       const questionAnswered = publicodesInformations.find(
         (question) => question.question.rule.nom === key
       );
@@ -110,6 +116,7 @@ const createCommonInformationsStore: StoreSlice<
           .setSituation(
             mapToPublicodesSituationForIndemniteLicenciementConventionnel(
               agreement.num,
+              isLicenciementInaptitude,
               rules
             ),
             "contrat salarié . indemnité de licenciement . résultat conventionnel"

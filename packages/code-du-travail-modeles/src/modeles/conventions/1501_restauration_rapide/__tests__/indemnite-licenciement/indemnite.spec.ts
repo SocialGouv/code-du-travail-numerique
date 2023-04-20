@@ -42,7 +42,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Non'`,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -100,7 +101,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Non'`,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -130,7 +132,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
               "23",
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               "3100",
-            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": `'Oui'`,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "oui",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );

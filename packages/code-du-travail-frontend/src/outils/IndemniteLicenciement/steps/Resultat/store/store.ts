@@ -230,6 +230,7 @@ const createResultStore: StoreSlice<
             agreementRefSalary,
             agreementRequiredSeniority.value,
             get().ancienneteData.input.dateNotification!,
+            isLicenciementInaptitude,
             { ...infos, ...agreementSalaryExtraInfo }
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
