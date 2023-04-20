@@ -18,11 +18,8 @@ const SearchResults = ({
   query,
 }: Props) => {
   useEffect(() => {
-    // distinction between actual search and theme search when logging
     if (isSearch) {
       matopush(["trackEvent", "candidateResults", query]);
-    } else {
-      matopush(["trackEvent", "themeResults", query]);
     }
   });
   let isArticleSearch = false;
