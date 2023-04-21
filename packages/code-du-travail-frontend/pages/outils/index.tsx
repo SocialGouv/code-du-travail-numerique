@@ -85,10 +85,10 @@ export async function getServerSideProps() {
   return {
     props: {
       cdtnSimulators: tools.filter(
-        (tool) => tool.displayTool && tool.source === SOURCES.TOOLS
+        (tool) => tool.source === SOURCES.TOOLS
       ),
       externalTools: tools.filter(
-        (tool) => tool.displayTool && tool.source === SOURCES.EXTERNALS
+        (tool) => tool.source === SOURCES.EXTERNALS
       ),
     },
   };

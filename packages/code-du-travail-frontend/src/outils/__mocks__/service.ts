@@ -47,44 +47,5 @@ export const fetchTools = async (_params: getToolsParams): Promise<Tool[]> => {
       _id: "d8a3605790",
       displayTool: true,
     },
-    {
-      date: "24/07/2019",
-      icon: "Rules",
-      order: 2,
-      action: "Calculer",
-      metaTitle: "Simulateur - Calcul du préavis de démission",
-      questions: [
-        "preavis de demission",
-        "preavis de demission CDI",
-        "délais avant démission",
-        "durée du préavis",
-        "calculer la durée de son préavis",
-        "calcul durée préavis démission",
-      ],
-      description:
-        "Estimez la durée de préavis à respecter en cas de démission",
-      displayTitle: "Calculer le préavis de démission",
-      breadcrumbs: [
-        {
-          label: "Départ de l’entreprise",
-          position: 7,
-          slug: "/themes/depart-de-lentreprise",
-        },
-        { label: "Démission", position: 1, slug: "/themes/demission" },
-      ],
-      cdtnId: "1eea193273",
-      excludeFromSearch: false,
-      id: "0a7cbd40-fe2f-4c21-9799-88564a45f30a",
-      isPublished: true,
-      metaDescription:
-        "Calculez la durée de préavis à respecter en cas de démission",
-      slug: "preavis-demission",
-      source: "outils",
-      text: "preavis de demission\npreavis de demission CDI\ndélais avant démission\ndurée du préavis\ncalculer la durée de son préavis\ncalcul durée préavis démission",
-      title: "Préavis de démission",
-      _id: "1eea193273",
-      title_vector: [],
-      displayTool: false,
-    },
   ]);
 };
