@@ -149,7 +149,6 @@ exports[`Plan du site should return a list for /plan-du-site 1`] = `
   ],
   "themes": [
     {
-      "breadcrumbs": [],
       "children": [
         {
           "label": "Embauche",
@@ -160,13 +159,12 @@ exports[`Plan du site should return a list for /plan-du-site 1`] = `
           "slug": "contrat-de-travail",
         },
       ],
-      "description": "Vous venez de trouver un travail, vous embauchez un salarié ou un apprenti ? Vous souhaitez faire une déclaration préalable à l’embauche, rédiger un contrat de travail (CDI, CDD, travail temporaire, temps plein, temps partiel) ? Retrouvez toutes nos réponses ici.  ",
+      "icon": "Contract",
       "position": 1,
       "slug": "embauche-et-contrat-de-travail",
       "title": "Embauche et contrat de travail",
     },
     {
-      "breadcrumbs": [],
       "children": [
         {
           "label": "Documents à remettre au salarié",
@@ -197,7 +195,7 @@ exports[`Plan du site should return a list for /plan-du-site 1`] = `
           "slug": "autres-departs",
         },
       ],
-      "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
+      "icon": "Depart",
       "position": 8,
       "slug": "depart-de-lentreprise",
       "title": "Départ de l’entreprise",
