@@ -27,6 +27,16 @@ export const getGenericContributions = async () => {
     .reduce(groupByThemes, {});
 };
 
+export const getAllContributions = async () => {
+  const body = getAllGenericsContributions();
+
+  const response = await elasticsearchClient.search({
+    body,
+    index: elasticDocumentsIndex,
+  });
+  return response.body.hits.hits.map(({ _source }) => _source);
+};
+
 export const getBySlugsContributions = async (
   slugs: string[]
 ): Promise<ElasticSearchItem[]> => {

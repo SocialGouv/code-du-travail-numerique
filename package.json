@@ -31,6 +31,7 @@
     "test:e2e": "lerna run test:e2e --scope=@cdt/frontend --stream",
     "test:e2e:ui": "lerna run test:e2e:ui --scope=@cdt/frontend --stream",
     "test:update": "lerna run test:update --scope={@socialgouv/cdtn-ui,@cdt/frontend} --stream",
+    "test:update:api": "lerna run test:api:update --scope=@cdt/frontend --stream",
     "prepare": "is-ci || husky install"
   },
   "repository": {
