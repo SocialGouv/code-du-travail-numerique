@@ -465,6 +465,7 @@
         "description": "Calculez la durée de préavis à respecter en cas de démission",
         "slug": "preavis-demission",
         "source": "outils",
+        "displayTool": true,
         "order": 1,
         "title": "Préavis de démission"
       },
@@ -742,6 +743,7 @@
         "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
         "slug": "heures-recherche-emploi",
         "source": "outils",
+        "displayTool": true,
         "order": 2,
         "title": "Heures d'absence pour rechercher un emploi"
       },
@@ -2063,6 +2065,7 @@
     "metaDescription": "Calculez la durée de préavis à respecter en cas de démission",
     "slug": "preavis-demission",
     "source": "outils",
+    "displayTool": true,
     "order": 3,
     "text": "preavis de demission\npreavis de demission CDI\ndélais avant démission\ndurée du préavis\ncalculer la durée de son préavis\ncalcul durée préavis démission",
     "title": "Préavis de démission",
@@ -2197,6 +2200,7 @@
     "metaDescription": "Estimez simplement le montant de l’indemnité de licenciement",
     "slug": "indemnite-licenciement",
     "source": "outils",
+    "displayTool": true,
     "order": 1,
     "text": "Quelle est mon indemnité de licenciement\nComment calculer mon indemnité de licenciement\nindemnité de licenciement pour inaptitude d’origine professionnelle\nindemnité de licenciement pour inaptitude d’origine professionnelle\nindemnité spéciale de licenciement pour inaptitude ’origine professionnelle\nindemnité de licenciement en cas d’alternance temps plein temps partiel\ncalculez le montant d’une indemnité de licenciement en fonction de votre situation",
     "title": "Indemnité de licenciement",
@@ -4586,6 +4590,7 @@
         "description": "Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur",
         "slug": "simulateur-embauche",
         "source": "outils",
+        "displayTool": true,
         "order": 2,
         "title": "Salaire brut/net"
       },
@@ -4901,6 +4906,7 @@
     "metaDescription": "Calculez le nombre d’heures pour recherche d’emploi prévues pendant le préavis",
     "slug": "heures-recherche-emploi",
     "source": "outils",
+    "displayTool": true,
     "order": 3,
     "text": "ai-je droit à des heures de recherche d’emploi\nquel est le nombre d’heures pour rechercher un emploi\nrechercher un emploi en période de préavis\ncomment prendre ses heures de recherche d’emploi\ndémission recherche emploi pendant préavis\nlicenciement recherche d emploi pendant préavis\nheures de recherche d’emploi en cas de licenciement\nAi-je droit aux heures pour recherche d’emploi dans le cadre d’une démission\nautorisation d absence pour recherche d emploi\nchercher un emploi pendant son préavis\nabsence 2h pour recherche d’emploi pendant préavis",
     "title": "Heures d'absence pour rechercher un emploi",

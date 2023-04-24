@@ -26,8 +26,7 @@ const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
             ) as Agreement[]
         );
     }
-    const errorMessage = await response.text();
-    return Promise.reject(new Error(errorMessage));
+    return Promise.reject("Ce service est momentanément indisponible.");
   });
 };
 

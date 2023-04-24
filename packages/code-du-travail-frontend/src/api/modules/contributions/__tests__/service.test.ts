@@ -2,7 +2,7 @@ import {
   getGenericContributions,
   getBySlugsContributions,
   getByIdsContributions,
-  getBySlugContributions,
+  getAllContributions,
 } from "../service";
 
 describe("Contributions", () => {
@@ -19,6 +19,11 @@ describe("Contributions", () => {
 
   it("getByIdsContributions", async () => {
     const result = await getByIdsContributions(["eba7a4592f"]);
+    expect(result).toMatchSnapshot();
+  });
+
+  it("getAllContributions", async () => {
+    const result = await getAllContributions();
     expect(result).toMatchSnapshot();
   });
 });

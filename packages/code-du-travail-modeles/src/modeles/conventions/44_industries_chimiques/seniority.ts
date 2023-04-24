@@ -66,7 +66,10 @@ export class Seniority44
 }
 
 const MOTIFS_44: Motif[] = LEGAL_MOTIFS.map((item) => {
-  if (item.key === MotifKeys.maladieNonPro) {
+  if (
+    item.key === MotifKeys.maladieNonPro ||
+    item.key === MotifKeys.accidentTrajet
+  ) {
     return {
       ...item,
       value: 0,
