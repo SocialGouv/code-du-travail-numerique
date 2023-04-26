@@ -10,7 +10,7 @@ contrat salarié . convention collective . gardien concierge . ancienneté total
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 1 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 7 an
   valeur: indemnité
   unité: €
@@ -42,6 +42,7 @@ contrat salarié . convention collective . gardien concierge . ancienneté au de
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 7 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 19 an
   somme:
@@ -75,7 +76,10 @@ contrat salarié . convention collective . gardien concierge . ancienneté au de
 
 contrat salarié . convention collective . gardien concierge . ancienneté au dela de 19 ans . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 19 an
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 19 an
   somme:
     - ancienneté totale . indemnité
     - ancienneté au dela de 7 ans . indemnité

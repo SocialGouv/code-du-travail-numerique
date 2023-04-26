@@ -10,9 +10,12 @@ describe("CC 1043", () => {
     test.each`
       seniorityRight | seniority | salaireRef | expectedCompensation
       ${0.91}        | ${1}      | ${2464}    | ${0}
-      ${0.91}        | ${7}      | ${2464}    | ${3449.6}
-      ${0.91}        | ${19}     | ${2464}    | ${13305.6}
-      ${0.91}        | ${27}     | ${2464}    | ${21847.47}
+      ${0.91}        | ${7}      | ${2464}    | ${0}
+      ${0.91}        | ${19}     | ${2464}    | ${0}
+      ${0.91}        | ${27}     | ${2464}    | ${0}
+      ${2}           | ${7}      | ${2464}    | ${3449.6}
+      ${2}           | ${19}     | ${2464}    | ${13305.6}
+      ${2}           | ${27}     | ${2464}    | ${21847.47}
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € => une compensation de base de $expectedCompensation €",
       ({ salaireRef, expectedCompensation, seniority, seniorityRight }) => {
