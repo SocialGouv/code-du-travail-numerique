@@ -99,7 +99,7 @@ describe("Indemnité licenciement - CC 1672", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("3588,54 € brut");
+    expect(ui.result.resultat.get()).toHaveTextContent("3588,54 €");
     expect(ui.result.resultTableRows.getAll().length).toBe(5);
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
       "mai 20223000 €"
@@ -112,7 +112,7 @@ describe("Indemnité licenciement - CC 1672", () => {
       .click(ui.salary.agreementWithNoticeSalary.knowingLastSalary.non.get())
       .click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 € brut");
+    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
   });
   test(`Cas avec arrêt de travail`, () => {

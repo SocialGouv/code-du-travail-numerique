@@ -210,7 +210,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       1 mois
     </strong>
     <sup
-      class="sc-ZqGJI fwFBNd"
+      class="sc-ZqGJI hkVsEl"
     >
       *
     </sup>
@@ -220,7 +220,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     class="sc-cLNonn cyfAkb"
   >
     <sup
-      class="sc-ZqGJI fwFBNd"
+      class="sc-ZqGJI hkVsEl"
     >
       * 
     </sup>
@@ -570,7 +570,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       2 mois
     </strong>
     <sup
-      class="sc-ZqGJI fwFBNd"
+      class="sc-ZqGJI hkVsEl"
     >
       *
     </sup>
@@ -580,7 +580,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     class="sc-cLNonn cyfAkb"
   >
     <sup
-      class="sc-ZqGJI fwFBNd"
+      class="sc-ZqGJI hkVsEl"
     >
       * 
     </sup>
@@ -749,7 +749,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       2 mois
     </strong>
     <sup
-      class="sc-ZqGJI fwFBNd"
+      class="sc-ZqGJI hkVsEl"
     >
       *
     </sup>
@@ -759,7 +759,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     class="sc-cLNonn cyfAkb"
   >
     <sup
-      class="sc-ZqGJI fwFBNd"
+      class="sc-ZqGJI hkVsEl"
     >
       * 
     </sup>

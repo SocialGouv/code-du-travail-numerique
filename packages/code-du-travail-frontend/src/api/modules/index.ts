@@ -14,3 +14,4 @@ export * from "./idcc";
 export * from "./glossary";
 export * from "./enterprises";
 export * from "./dossiers";
+export * from "./sitemap";

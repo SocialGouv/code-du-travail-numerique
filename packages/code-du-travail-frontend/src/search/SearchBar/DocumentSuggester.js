@@ -11,8 +11,8 @@ const { colors } = theme;
 
 export class DocumentSuggester extends React.Component {
   focusInput = (autoSuggest) => {
-    if (autoSuggest !== null && this.props.hasFocus) {
-      autoSuggest.input.focus();
+    if (autoSuggest && this.props.hasFocus) {
+      autoSuggest.input?.focus();
     }
   };
 

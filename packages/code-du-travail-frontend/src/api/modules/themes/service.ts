@@ -3,10 +3,10 @@ import {
   elasticDocumentsIndex,
   NotFoundError,
 } from "../../utils";
-import { getThemes, getThemeBySlugQuery } from "./queries";
+import { getAllThemesQuery, getThemeBySlugQuery } from "./queries";
 
 export const getAllThemes = async () => {
-  const body = getThemes();
+  const body = getAllThemesQuery();
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
@@ -14,6 +14,38 @@ export const getAllThemes = async () => {
   return {
     children: response.body.hits.hits.map((t) => t._source),
   };
+};
+
+export const getAllThemesAndSubThemes = async () => {
+  const body = getAllThemesQuery();
+  const response = await elasticsearchClient.search({
+    body,
+    index: elasticDocumentsIndex,
+  });
+  const themes = response.body.hits.hits.map((t) => t._source);
+  // for each theme of themes, we need to get slug of children
+  const childrenSlugs = themes.flatMap((theme) =>
+    theme.children.map((child) => child.slug)
+  );
+  const data = await Promise.all(
+    childrenSlugs.map((slug) => getBySlugThemes(slug))
+  ).catch(() => {
+    return [];
+  });
+  const themesWithChildren = themes.map((theme) => {
+    const children = theme.children.map((child) => {
+      const childWithContent = data.find((d: any) => d.slug === child.slug);
+      return {
+        ...child,
+        ...childWithContent,
+      };
+    });
+    return {
+      ...theme,
+      children,
+    };
+  });
+  return themesWithChildren;
 };
 
 export const getBySlugThemes = async (slug: string) => {

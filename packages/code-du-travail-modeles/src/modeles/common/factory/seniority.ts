@@ -2,10 +2,12 @@ import { SeniorityLegal } from "../../base";
 import {
   Seniority16,
   Seniority44,
+  Seniority275,
   Seniority413,
   Seniority650,
   Seniority1090,
   Seniority1486,
+  Seniority1505,
   Seniority1517,
   Seniority1518,
   Seniority1527,
@@ -17,11 +19,11 @@ import {
   Seniority2216,
   Seniority2511,
   Seniority2609,
+  Seniority2614,
   Seniority2941,
   Seniority3043,
   Seniority3239,
 } from "../../conventions";
-import { Seniority1505 } from "../../conventions/1505_commerces_detail_fruits_legumes";
 import { SupportedCcIndemniteLicenciement } from "../index";
 import type { ISeniority } from "../types";
 
@@ -64,12 +66,16 @@ export class SeniorityFactory {
         return new Seniority413() as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.IDCC1517:
         return new Seniority1517();
+      case SupportedCcIndemniteLicenciement.IDCC2614:
+        return new Seniority2614();
       case SupportedCcIndemniteLicenciement.IDCC1505:
         return new Seniority1505();
       case SupportedCcIndemniteLicenciement.IDCC1596:
         return new Seniority1596();
       case SupportedCcIndemniteLicenciement.IDCC1597:
         return new Seniority1597();
+      case SupportedCcIndemniteLicenciement.IDCC275:
+        return new Seniority275();
       case SupportedCcIndemniteLicenciement.IDCC1672:
         return new Seniority1672() as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.default:

@@ -93,7 +93,7 @@ describe("Indemnité licenciement - CC 2596", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2990,45 € brut");
+    expect(ui.result.resultat.get()).toHaveTextContent("2990,45 €");
     expect(ui.result.resultTableRows.getAll().length).toBe(5);
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
       "mai 20223000 €"
@@ -106,7 +106,7 @@ describe("Indemnité licenciement - CC 2596", () => {
       .click(ui.salary.agreementWithNoticeSalary.knowingLastSalary.non.get())
       .click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 € brut");
+    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
   });
   test(`Cadres moins de 8 mois d'ancienneté`, () => {
@@ -136,7 +136,7 @@ describe("Indemnité licenciement - CC 2596", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("104,17 € brut");
+    expect(ui.result.resultat.get()).toHaveTextContent("104,17 €");
     expect(ui.result.resultatLegal.get()).toHaveTextContent("0 €");
   });
   test(`Cadres avec arret de travail`, () => {
@@ -217,6 +217,6 @@ describe("Indemnité licenciement - CC 2596", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("16388,89 € brut");
+    expect(ui.result.resultat.get()).toHaveTextContent("16388,89 €");
   });
 });
