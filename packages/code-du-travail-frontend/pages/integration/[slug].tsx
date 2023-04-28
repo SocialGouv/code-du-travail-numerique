@@ -38,6 +38,12 @@ const IntegrationPage = ({ slug, hostname, protocol }): JSX.Element => {
 
 export const getServerSideProps = async ({ query, req }) => {
   const slug: string = query.slug;
+  const keys = Object.keys(integrationData);
+  if (!keys.includes(slug)) {
+    return {
+      notFound: true,
+    };
+  }
   const hostname: string = req.headers.host;
   const protocol =
     req.headers["x-forwarded-proto"] || req.connection.encrypted

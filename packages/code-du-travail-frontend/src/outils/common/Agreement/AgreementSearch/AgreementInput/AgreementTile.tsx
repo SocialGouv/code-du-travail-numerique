@@ -12,12 +12,14 @@ import {
   UserAction,
 } from "../../../../ConventionCollective/types";
 import { LinkedTile } from "../../../../../common/tiles/LinkedTile";
+import { SITE_URL } from "../../../../../config";
 
 type Props = {
   agreement: Agreement;
+  isWidgetMode?: boolean;
 } & TrackingProps;
 
-export function AgreementTile({ agreement, onUserAction }: Props): JSX.Element {
+export function AgreementTile({ agreement, onUserAction, isWidgetMode }: Props): JSX.Element {
   const clickHandler = () => {
     onUserAction(UserAction.SelectAgreement, `idcc${agreement.num.toString()}`);
   };
@@ -27,7 +29,8 @@ export function AgreementTile({ agreement, onUserAction }: Props): JSX.Element {
       title={`${agreement.shortTitle} IDCC${formatIdcc(agreement.num)}`}
       subtitle={getLabelBySource(SOURCES.CCN)}
       onClick={clickHandler}
-      href={`/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`}
+      href={`${isWidgetMode ? SITE_URL : ""}/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`}
+      target={isWidgetMode ? "_blank" : "_self"}
     >
       <Paragraph noMargin>
         Retrouvez les questions-réponses les plus fréquentes organisées par

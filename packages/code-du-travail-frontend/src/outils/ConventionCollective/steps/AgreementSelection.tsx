@@ -11,11 +11,13 @@ import { AgreementTile } from "../../common/Agreement/AgreementSearch/AgreementI
 
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;
+  isWidgetMode?: boolean;
 } & TrackingProps;
 
 const AgreementSelectionStep = ({
   onBackClick,
   onUserAction,
+  isWidgetMode
 }: EnterpriseSearchStepProps): JSX.Element => {
   const { enterprise } = useNavContext();
 
@@ -25,9 +27,8 @@ const AgreementSelectionStep = ({
       <Paragraph noMargin variant="primary">
         {(enterprise?.conventions?.length ?? 0) > 1
           ? `${enterprise?.conventions.length} conventions collectives trouvées pour `
-          : `${
-              enterprise?.conventions.length ?? 0
-            } convention collective trouvée pour `}
+          : `${enterprise?.conventions.length ?? 0
+          } convention collective trouvée pour `}
         <strong>
           « {enterprise?.simpleLabel}
           {enterprise?.address &&
@@ -38,12 +39,16 @@ const AgreementSelectionStep = ({
       <FlatList>
         {enterprise?.conventions.map((agreement) => (
           <Li key={agreement.id}>
-            <AgreementTile onUserAction={onUserAction} agreement={agreement} />
+            <AgreementTile onUserAction={onUserAction} agreement={agreement} isWidgetMode={isWidgetMode} />
           </Li>
         ))}
       </FlatList>
 
-      <Link
+      {isWidgetMode ? (
+        <Button small type="button" onClick={onBackClick} variant="flat">
+          Précédent
+        </Button>
+      ) : (<Link
         href={`/${SOURCES.TOOLS}/convention-collective#entreprise`}
         passHref
         legacyBehavior
@@ -51,7 +56,8 @@ const AgreementSelectionStep = ({
         <Button as="a" small type="button" onClick={onBackClick} variant="flat">
           Précédent
         </Button>
-      </Link>
+      </Link>)
+      }
     </>
   );
 };
