@@ -162,6 +162,47 @@ export const ui = {
         "infos.contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle"
       ),
     },
+    agreement1404: {
+      cdiOperation: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - sedima - question cdi opération - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - sedima - question cdi opération - Non"
+        ),
+      },
+      missionImpossible: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - sedima - cdi opération - question mission impossible - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - sedima - cdi opération - question mission impossible - Non"
+        ),
+      },
+      duree: byTestId(
+        "infos.contrat salarié - convention collective - sedima - cdi opération - mission possible - durée"
+      ),
+      salary1: byTestId(
+        "infos.contrat salarié - convention collective - sedima - cdi opération - mission possible - salaires 1e année"
+      ),
+      salary2: byTestId(
+        "infos.contrat salarié - convention collective - sedima - cdi opération - mission possible - salaires 2e année"
+      ),
+      salary3: byTestId(
+        "infos.contrat salarié - convention collective - sedima - cdi opération - mission possible - salaires 3e année et plus"
+      ),
+      trial: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - sedima - cdi opération - mission impossible - question période essai - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - sedima - cdi opération - mission impossible - question période essai - Non"
+        ),
+      },
+      salaryTotal: byTestId(
+        "infos.contrat salarié - convention collective - sedima - cdi opération - mission impossible - salaires total"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),

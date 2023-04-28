@@ -9,6 +9,11 @@ exports[`<Input /> should render input field 1`] = `
       class="sc-hLBbgP jKCDRQ"
       name="input"
     />
+    <div
+      class="sc-eDvSVe iQABlL"
+    >
+      <span />
+    </div>
   </span>
 </div>
 `;

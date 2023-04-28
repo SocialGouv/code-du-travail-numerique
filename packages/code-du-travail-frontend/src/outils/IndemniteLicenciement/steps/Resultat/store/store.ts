@@ -243,7 +243,10 @@ const createResultStore: StoreSlice<
 
         agreementNotifications = publicodes.getNotifications();
 
-        agreementHasNoLegalIndemnity = hasNoLegalIndemnity(agreement.num);
+        agreementHasNoLegalIndemnity = hasNoLegalIndemnity(
+          agreement.num,
+          agreementInformations
+        );
 
         if (
           agreementHasNoLegalIndemnity ||

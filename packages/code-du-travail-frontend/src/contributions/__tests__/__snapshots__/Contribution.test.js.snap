@@ -155,6 +155,11 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           type="search"
           value=""
         />
+        <div
+          class="sc-EJAja gSDUwR"
+        >
+          <span />
+        </div>
       </span>
       <p
         class="sc-bTUVah hXbUfO"
@@ -334,6 +339,11 @@ exports[`<Contribution /> should render answer references 1`] = `
           type="search"
           value=""
         />
+        <div
+          class="sc-EJAja gSDUwR"
+        >
+          <span />
+        </div>
       </span>
       <p
         class="sc-bTUVah hXbUfO"
@@ -513,6 +523,11 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           type="search"
           value=""
         />
+        <div
+          class="sc-EJAja gSDUwR"
+        >
+          <span />
+        </div>
       </span>
       <p
         class="sc-bTUVah hXbUfO"
@@ -692,6 +707,11 @@ exports[`<Contribution /> should render with both answers 1`] = `
           type="search"
           value=""
         />
+        <div
+          class="sc-EJAja gSDUwR"
+        >
+          <span />
+        </div>
       </span>
       <p
         class="sc-bTUVah hXbUfO"
@@ -849,6 +869,11 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           type="search"
           value=""
         />
+        <div
+          class="sc-EJAja gSDUwR"
+        >
+          <span />
+        </div>
       </span>
       <p
         class="sc-bTUVah hXbUfO"

@@ -19,6 +19,11 @@ exports[`<Search /> should render 1`] = `
       type="search"
       value=""
     />
+    <div
+      class="sc-EJAja gSDUwR"
+    >
+      <span />
+    </div>
   </span>
   <p
     class="sc-bTUVah hXbUfO"
@@ -60,6 +65,11 @@ exports[`<Search /> should show no results when no result 1`] = `
       type="search"
       value="9999"
     />
+    <div
+      class="sc-EJAja gSDUwR"
+    >
+      <span />
+    </div>
   </span>
   <div
     class="sc-hZNxer kWwXln"
@@ -110,6 +120,11 @@ exports[`<Search /> should show spinner when loading 1`] = `
       type="search"
       value="8888"
     />
+    <div
+      class="sc-EJAja gSDUwR"
+    >
+      <span />
+    </div>
   </span>
   <div
     class="sc-hZNxer kWwXln"
@@ -205,6 +220,11 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
       type="search"
       value="1234"
     />
+    <div
+      class="sc-EJAja gSDUwR"
+    >
+      <span />
+    </div>
   </span>
   <div
     class="sc-hZNxer kWwXln"
@@ -302,6 +322,11 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
       type="search"
       value="4567"
     />
+    <div
+      class="sc-EJAja gSDUwR"
+    >
+      <span />
+    </div>
   </span>
   <div
     class="sc-hZNxer kWwXln"
@@ -381,6 +406,11 @@ exports[`<Search /> when searching by text, should use enterprise API 1`] = `
       type="search"
       value="hello"
     />
+    <div
+      class="sc-EJAja gSDUwR"
+    >
+      <span />
+    </div>
   </span>
   <div
     class="sc-hZNxer kWwXln"

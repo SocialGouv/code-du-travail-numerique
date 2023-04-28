@@ -60,6 +60,11 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 type="search"
                 value=""
               />
+              <div
+                class="sc-EJAja gSDUwR"
+              >
+                <span />
+              </div>
             </span>
             <p
               class="sc-bTUVah hXbUfO"

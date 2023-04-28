@@ -172,18 +172,24 @@ const createCommonInformationsStore: StoreSlice<
       const agreement = get().agreementData.input.agreement!;
       let isStepHidden = false;
       if (
-        agreement &&
-        agreement.num === 3239 &&
-        publicodesInformations.find(
-          (v) =>
-            v.question.rule.nom ===
-            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
-        )?.info === `'${CatPro3239.assistantMaternel}'` &&
-        publicodesInformations.find(
-          (v) =>
-            v.question.rule.nom ===
-            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement"
-        )?.info === `'Non'`
+        (agreement &&
+          agreement.num === 3239 &&
+          publicodesInformations.find(
+            (v) =>
+              v.question.rule.nom ===
+              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
+          )?.info === `'${CatPro3239.assistantMaternel}'` &&
+          publicodesInformations.find(
+            (v) =>
+              v.question.rule.nom ===
+              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement"
+          )?.info === `'Non'`) ||
+        (agreement.num === 1404 &&
+          publicodesInformations.find(
+            (v) =>
+              v.question.rule.nom ===
+              "contrat salarié . convention collective . sedima . question cdi opération"
+          )?.info === `'Oui'`)
       ) {
         isStepHidden = true;
       }

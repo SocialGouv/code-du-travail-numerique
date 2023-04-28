@@ -1,0 +1,219 @@
+contrat salarié . convention collective . sedima . question cdi opération:
+  titre: CDI opération
+  question: Le contrat du salarié est-il un CDI d’opération&nbsp;?
+  cdtn:
+    type: oui-non
+
+# CDI classique
+contrat salarié . convention collective . sedima . cdi classique:
+  applicable si: question cdi opération = 'Non'
+  valeur: oui
+
+## ancienneté jusqu'à 10 ans
+contrat salarié . convention collective . sedima . cdi classique . ancienneté jusqu'à 10 ans . palier:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 10 an
+
+contrat salarié . convention collective . sedima . cdi classique . ancienneté jusqu'à 10 ans . indemnité:
+  valeur:
+    produit:
+      assiette: palier * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 1 / 4
+  unité: €
+
+contrat salarié . convention collective . sedima . cdi classique . ancienneté jusqu'à 10 ans . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
+  valeur: indemnité
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 3.42: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039412125?idConteneur=KALICONT000005635653
+    Article 6.51: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039412129?idConteneur=KALICONT000005635653
+    Article 0.21: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026355951?idConteneur=KALICONT000005635653&origin=list#KALIARTI000026355951
+  cdtn:
+    formule:
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . convention collective . sedima . cdi classique . ancienneté jusqu'à 10 ans . palier
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 1/4 * Sref * A
+
+## ancienneté jusqu'au delà de 10 ans
+contrat salarié . convention collective . sedima . cdi classique . ancienneté au-delà de 10 ans . palier:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . sedima . cdi classique . ancienneté au-delà de 10 ans . indemnité:
+  valeur:
+    produit:
+      assiette: palier * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 1 / 3
+  unité: €
+
+contrat salarié . convention collective . sedima . cdi classique . ancienneté au-delà de 10 ans . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
+  valeur: indemnité
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 3.42: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039412125?idConteneur=KALICONT000005635653
+    Article 6.51: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039412129?idConteneur=KALICONT000005635653
+    Article 0.21: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026355951?idConteneur=KALICONT000005635653&origin=list#KALIARTI000026355951
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Ancienneté totale": contrat salarié . convention collective . sedima . cdi classique . ancienneté jusqu'à 10 ans . palier
+        - "A2 : Ancienneté totale": contrat salarié . convention collective . sedima . cdi classique . ancienneté au-delà de 10 ans . palier
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (1/4 * Sref * A1) + (1/3 * Sref * A2)
+
+# CDI Opération
+contrat salarié . convention collective . sedima . cdi opération:
+  applicable si: question cdi opération = 'Oui'
+  valeur: oui
+
+contrat salarié . convention collective . sedima . cdi opération . question mission impossible:
+  titre: Mission ne peut pas se réaliser
+  description: Le salarié est-il licencié car la mission prévue ne peut pas se réaliser ou car un obstacle empêche la poursuite de la mission
+  question: Le salarié est-il licencié car la mission prévue ne peut pas se réaliser ou car un obstacle empêche la poursuite de la mission&nbsp;?
+  cdtn:
+    type: oui-non
+
+## Mission possible
+contrat salarié . convention collective . sedima . cdi opération . mission possible:
+  applicable si: question mission impossible = 'Non'
+  valeur: oui
+
+contrat salarié . convention collective . sedima . cdi opération . mission possible . durée:
+  titre: durée du CDI d'opération
+  question: Quelle est la durée du CDI d'opération ?
+  unité: mois
+  cdtn:
+    type: question
+
+contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année:
+  titre: Total des salaires perçus pendant la 1ère année du contrat
+  question: Indiquez le total des salaires bruts perçus pendant la 1ère année du contrat (du 1er au 12ème mois de contrat)
+  unité: €
+  cdtn:
+    type: montant
+
+contrat salarié . convention collective . sedima . cdi opération . mission possible . résultat ancienneté moins de 1 an:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 6 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 1 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: (8 / 100) * salaires 1e année
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 3 de l’accord du 5 juillet 2019: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041459010?idConteneur=KALICONT000005635653
+    Article 0.21: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026355951?idConteneur=KALICONT000005635653&origin=list#KALIARTI000026355951
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Rémunération brute versée pendant la première année": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année
+      formula: (8% * Sref)
+
+contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année:
+  applicable si: durée > 12
+  titre: Total des salaires perçus pendant la 2ème année du contrat
+  question: Indiquez le total des salaires bruts perçus pendant la 2ème année du contrat (du 13ème au 24ème mois de contrat)
+  unité: €
+  cdtn:
+    type: montant
+
+contrat salarié . convention collective . sedima . cdi opération . mission possible . résultat ancienneté entre 1 an et 2 ans:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 1 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 6 mois
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: (8 / 100) * salaires 1e année + (6 / 100) * salaires 2e année
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 3 de l’accord du 5 juillet 2019: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041459010?idConteneur=KALICONT000005635653
+    Article 0.21: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026355951?idConteneur=KALICONT000005635653&origin=list#KALIARTI000026355951
+  cdtn:
+    formule:
+      explanations:
+        - "Sref1 : Rémunération brute versée pendant la première année": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année
+        - "Sref2 : Rémunération brute versée pendant la deuxième année": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année
+      formula: (8% * Sref1) + (6% * Sref2)
+
+contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 3e année et plus:
+  applicable si: durée > 24
+  titre: Total des salaires perçus pendant la 3ème année du contrat et plus
+  question: Indiquez le total des salaires bruts perçus du 25ème mois de contrat jusqu'à la fin du contrat (préavis inclus)
+  unité: €
+  cdtn:
+    type: montant
+
+contrat salarié . convention collective . sedima . cdi opération . mission possible . résultat ancienneté au-delà de 2 ans:
+  applicable si: 
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 6 mois
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: (8 / 100) * salaires 1e année + (6 / 100) * salaires 2e année + (4 / 100) * salaires 3e année et plus
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 3 de l’accord du 5 juillet 2019: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041459010?idConteneur=KALICONT000005635653
+    Article 0.21: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026355951?idConteneur=KALICONT000005635653&origin=list#KALIARTI000026355951
+  cdtn:
+    formule:
+      explanations:
+        - "Sref1 : Rémunération brute versée pendant la première année": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année
+        - "Sref2 : Rémunération brute versée pendant la deuxième année": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année
+        - "Sref3 : Rémunération brute versée au-delà et jusqu'à l'expiration du préavis": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 3e année et plus
+      formula: (8% * Sref1) + (6% * Sref2) + (4% * Sref3)
+
+## Mission impossible
+contrat salarié . convention collective . sedima . cdi opération . mission impossible:
+  applicable si: question mission impossible = 'Oui'
+  valeur: oui
+
+contrat salarié . convention collective . sedima . cdi opération . mission impossible . question période essai:
+  titre: Licencié avant fin de Période d'essai
+  description: Répondre non si le salarié n'a pas de période d'essai
+  question: Le salarié est-il licencié avant la fin de sa période d’essai&nbsp;?
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total:
+  titre: Total des salaires perçus
+  question: Indiquez le total des salaires bruts perçus depuis le début du contrat
+  description: Total des salaires perçus
+  unité: €
+  cdtn:
+    type: montant
+
+contrat salarié . convention collective . sedima . cdi opération . mission impossible . résultat conventionnel:
+  applicable si:
+    toutes ces conditions:
+      - question période essai = 'Non'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 6 mois
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: (10 / 100) * salaires total
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 4 de l'accord du 5 juillet 2019: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041459011?idConteneur=KALICONT000005635653
+    Article 0.21: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026355951?idConteneur=KALICONT000005635653&origin=list#KALIARTI000026355951
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire brut versé depuis l'engagement hors congés payés": contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total
+      formula: (10% * Sref)

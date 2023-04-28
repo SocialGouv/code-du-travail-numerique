@@ -4812,6 +4812,11 @@ exports[`<Convention /> renders 1`] = `
           placeholder="Congés exceptionnels, prime"
           type="search"
         />
+        <div
+          class="sc-EJAja gSDUwR"
+        >
+          <span />
+        </div>
       </span>
       <input
         name="query"
