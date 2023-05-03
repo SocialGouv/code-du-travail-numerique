@@ -36,15 +36,19 @@ export class ReferenceSalary1516
     );
     const last3salaries = [...rankedSalairesPendantPreavis, ...rankedSalaires]
       .filter((s) => nonNullable(s?.value))
-      .slice(0, 3)
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      .sort((first, second) => second.value! - first.value!);
-    const meilleurSalaireDes3DerniersMois = last3salaries[0];
+      .slice(0, 3);
 
-    const primeMeilleurSalaire = meilleurSalaireDes3DerniersMois.prime ?? 0;
-    const meilleurSalaire =
-      (meilleurSalaireDes3DerniersMois.value ?? 0) - primeMeilleurSalaire;
-    const formuleCc = meilleurSalaire + primeMeilleurSalaire / 12;
+    const meilleurSalaireDes3DerniersMois = Math.max(
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      ...last3salaries.map((s) => s.value! - (s.prime ?? 0))
+    );
+
+    const primesLast3months = last3salaries
+      .map((a) => a.prime)
+      .filter(nonNullable);
+    const primesLast3monthsProrataTemporis = sum(primesLast3months) / 12;
+    const formuleCc =
+      meilleurSalaireDes3DerniersMois + primesLast3monthsProrataTemporis;
 
     return Math.max(moyenneSalaires, formuleCc);
   }

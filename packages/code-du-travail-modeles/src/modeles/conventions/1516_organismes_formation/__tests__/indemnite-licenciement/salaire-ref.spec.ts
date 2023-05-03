@@ -105,9 +105,9 @@ describe("Calcul du salaire pour la CC 1516", () => {
     ${MULTIPLE_WITH_PRIME_SALAIRES}                   | ${2333.3333333333335}
     ${ONE_SALAIRE_PREAVIS}                            | ${3500}
     ${MULTIPLE_SALAIRE_PREAVIS}                       | ${3500}
-    ${MULTIPLE_WITH_PRIME_SALAIRE_PREAVIS}            | ${3000}
+    ${MULTIPLE_WITH_PRIME_SALAIRE_PREAVIS}            | ${3080}
     ${MULTIPLE_SALAIRE_PREAVIS_BUT_LAST_SALARY_HIGER} | ${5000}
-    ${DIFFERENT_SALAIRES_WITH_PRIMES}                 | ${3004}
+    ${DIFFERENT_SALAIRES_WITH_PRIMES}                 | ${3031}
   `("$# $expectedSalary €", ({ salaires, expectedSalary }) => {
     expect(ReferenceSalary.computeReferenceSalary(salaires)).toEqual(
       expectedSalary
