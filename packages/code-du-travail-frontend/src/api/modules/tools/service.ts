@@ -19,7 +19,9 @@ export const getAllTools = async (): Promise<Tool[]> => {
       cause: null,
     });
   }
-  return response.body.hits.hits;
+  return response.body.hits.hits
+    .map(({ _id, _source }) => ({ ..._source, _id }))
+    .filter((tool) => tool.displayTool);
 };
 
 export const getToolsByIdsAndSlugs = async (

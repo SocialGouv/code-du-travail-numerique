@@ -6,21 +6,27 @@ import { ui } from "./ui";
 
 jest.mock("../../../conventions/Search/api/agreements.service");
 
+jest.spyOn(Storage.prototype, "setItem");
+Storage.prototype.getItem = jest.fn(
+  () => `
+{
+  "num": 1351,
+  "shortTitle": "CC 1351",
+  "id": "KALICONT",
+  "title": "CC 1351",
+  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT",
+  "slug": "cc-1351"
+}
+`
+);
+
 test(`
   - Vérifier l'affichage de la cc 1351 lorsque l'on change la sélection de catégorie
 `, async () => {
   await render(<DureePreavisDemission icon="" title="" displayTitle="" />);
 
   fireEvent.click(ui.introduction.startButton.get());
-  fireEvent.click(ui.agreement.agreement.get());
-  fireEvent.focus(ui.agreement.agreementInput.get());
-  fireEvent.change(ui.agreement.agreementInput.get(), {
-    target: { value: "1351" },
-  });
-  await waitFor(() =>
-    expect(ui.agreement1351.searchResult.query()).toBeInTheDocument()
-  );
-  fireEvent.click(ui.agreement1351.searchResult.get());
+  fireEvent.click(ui.next.get());
   fireEvent.click(ui.next.get());
 
   fireEvent.change(ui.agreement1351.categoryProInput.get(), {

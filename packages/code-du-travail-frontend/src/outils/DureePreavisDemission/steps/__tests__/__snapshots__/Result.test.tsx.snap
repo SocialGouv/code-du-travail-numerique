@@ -15,7 +15,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       2 mois
     </strong>
     <sup
-      class="sc-ZqGJI fwFBNd"
+      class="sc-ZqGJI hkVsEl"
     >
       *
     </sup>
@@ -25,7 +25,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
     class="sc-grxQYx fBsqss"
   >
     <sup
-      class="sc-ZqGJI fwFBNd"
+      class="sc-ZqGJI hkVsEl"
     >
       * 
     </sup>
