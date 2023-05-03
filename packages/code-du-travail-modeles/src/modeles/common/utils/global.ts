@@ -1,3 +1,7 @@
+function parseIdcc(idcc: string): number {
+  return parseInt(idcc, 10);
+}
+
 function formatIdcc(num: number | string): string {
   return `0000${num}`.slice(-4);
 }
@@ -14,4 +18,4 @@ function extractMdxContentUrl(
   )?.[0];
 }
 
-export { extractMdxContentUrl, formatIdcc };
+export { extractMdxContentUrl, formatIdcc, parseIdcc };
