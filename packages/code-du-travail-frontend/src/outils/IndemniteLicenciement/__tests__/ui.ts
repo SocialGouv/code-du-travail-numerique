@@ -25,7 +25,7 @@ export const ui = {
     },
     inaptitude: {
       question: byText(
-        "Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?"
+        "Le licenciement fait-il suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue) ?"
       ),
       oui: byTestId("licenciementInaptitude - Oui"),
       non: byTestId("licenciementInaptitude - Non"),
