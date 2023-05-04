@@ -43,12 +43,6 @@ import {
   createAgreement2148StoreSalaires,
 } from "./2148-telecommunications";
 import {
-  Agreement2596StoreError,
-  Agreement2596StoreInput,
-  Agreement2596StoreSlice,
-  createAgreement2596StoreSalaires,
-} from "./2596-coiffure";
-import {
   Agreement2609StoreError,
   Agreement2609StoreInput,
   Agreement2609StoreSlice,
