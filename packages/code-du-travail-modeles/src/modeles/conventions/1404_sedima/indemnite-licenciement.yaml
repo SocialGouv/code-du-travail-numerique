@@ -106,7 +106,7 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
   cdtn:
     type: montant
 
-contrat salarié . convention collective . sedima . cdi opération . mission possible . résultat ancienneté moins de 1 an:
+contrat salarié . convention collective . sedima . cdi opération . mission possible . résultat conventionnelle ancienneté moins de 1 an:
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 6 mois
@@ -132,7 +132,7 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
   cdtn:
     type: montant
 
-contrat salarié . convention collective . sedima . cdi opération . mission possible . résultat ancienneté entre 1 an et 2 ans:
+contrat salarié . convention collective . sedima . cdi opération . mission possible . résultat conventionnelle ancienneté entre 1 an et 2 ans:
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 1 an
@@ -160,7 +160,7 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
   cdtn:
     type: montant
 
-contrat salarié . convention collective . sedima . cdi opération . mission possible . résultat ancienneté au-delà de 2 ans:
+contrat salarié . convention collective . sedima . cdi opération . mission possible . résultat conventionnelle ancienneté au-delà de 2 ans:
   applicable si: 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 an

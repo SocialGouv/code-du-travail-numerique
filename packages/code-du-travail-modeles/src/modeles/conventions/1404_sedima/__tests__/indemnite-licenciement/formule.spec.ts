@@ -77,10 +77,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
           seniorityRight: 0.41,
         },
         {
-          expectedExplanations: [
-            "Sref : Salaire brut versé depuis l'engagement hors congés payés (3000 €)",
-          ],
-          expectedFormula: "(10% * Sref)",
+          expectedExplanations: [],
+          expectedFormula: "",
           seniority: 0.67,
           seniorityRight: 0.67,
         },
@@ -95,6 +93,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
           engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC1404'",
+              "contrat salarié . convention collective . sedima . cdi opération . mission impossible . question période essai":
+                "'Non'",
               "contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total":
                 "3000",
               "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":

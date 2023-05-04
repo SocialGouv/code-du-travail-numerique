@@ -64,13 +64,14 @@ describe("Vérification des références juridiques pour la CC 1404", () => {
         seniorityRight | seniority | salaireRef
         ${0.25}        | ${0.25}   | ${7749}
         ${0.41}        | ${0.41}   | ${12280}
-        ${0.67}        | ${0.67}   | ${20136}
       `(
         "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
         ({ seniorityRight, salaireRef, seniority }) => {
           engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC1404'",
+              "contrat salarié . convention collective . sedima . cdi opération . mission impossible . question période essai":
+                "'Non'",
               "contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total":
                 salaireRef,
               "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
@@ -148,9 +149,9 @@ describe("Vérification des références juridiques pour la CC 1404", () => {
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
 
-          const result = engine.getReferences("résultat conventionnel");
-          expect(result).toHaveLength(references.length);
-          expect(result).toEqual(expect.arrayContaining(references));
+          const refs = engine.getReferences("résultat conventionnel");
+          expect(refs).toHaveLength(references.length);
+          expect(refs).toEqual(expect.arrayContaining(references));
         }
       );
     });

@@ -33,10 +33,28 @@ describe("CC 1404 - Affiche les questions", () => {
     );
   });
 
+  it("doit demander période d'essai", () => {
+    const result = engine.setSituation(
+      {
+        "contrat salarié . convention collective": "'IDCC1404'",
+        "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
+          "'Oui'",
+        "contrat salarié . convention collective . sedima . question cdi opération":
+          "'Oui'",
+      },
+      "contrat salarié . indemnité de licenciement . résultat conventionnel"
+    );
+    expect(getFirstMissing(result.missingArgs)).toEqual(
+      "contrat salarié . convention collective . sedima . cdi opération . mission impossible . question période essai"
+    );
+  });
+
   it("doit demander le salaire total", () => {
     const result = engine.setSituation(
       {
         "contrat salarié . convention collective": "'IDCC1404'",
+        "contrat salarié . convention collective . sedima . cdi opération . mission impossible . question période essai":
+          "'Non'",
         "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
           "'Oui'",
         "contrat salarié . convention collective . sedima . question cdi opération":
