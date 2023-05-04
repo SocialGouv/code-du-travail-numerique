@@ -1,9 +1,15 @@
 import type {
   IReferenceSalary,
   ReferenceSalaryProps,
+  SalaryPeriods,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
+
+export type CC1702ReferenceSalaryProps = {
+  salaires: SalaryPeriods[];
+  salairesPendantPreavis: SalaryPeriods[];
+};
 
 export class ReferenceSalary1702
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1702>
@@ -19,9 +25,17 @@ export class ReferenceSalary1702
    *   S : total des salaires perçus lors des 12 derniers mois précédant le jour de l'envoi de la lettre de licenciement (brut)"
    **/
   computeReferenceSalary({
-    salaires = [],
+    salaires,
+    salairesPendantPreavis,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1702>): number {
-    const rankedSalaires = rankByMonthArrayDescFrench(salaires);
+    const rankedSalairesSansPréavis = rankByMonthArrayDescFrench(salaires);
+    const rankedSalairesPendantPreavis = rankByMonthArrayDescFrench(
+      salairesPendantPreavis
+    );
+    const rankedSalaires = [
+      ...rankedSalairesPendantPreavis,
+      ...rankedSalairesSansPréavis,
+    ].slice(0, 12);
 
     const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
     const moyenneSalaires = sum(salaryValues) / rankedSalaires.length;
