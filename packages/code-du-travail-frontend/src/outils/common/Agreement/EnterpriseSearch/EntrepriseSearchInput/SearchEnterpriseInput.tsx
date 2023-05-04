@@ -117,6 +117,7 @@ const Flex = styled.div`
   justify-content: space-between;
   @media (max-width: ${theme.breakpoints.mobile}) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 

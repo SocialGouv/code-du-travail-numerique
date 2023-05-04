@@ -1,0 +1,98 @@
+## ancienneté totale
+contrat salarié . convention collective . gardien concierge . ancienneté totale . indemnité:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 1 / 5
+  unité: €
+
+contrat salarié . convention collective . gardien concierge . ancienneté totale . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 7 an
+  valeur: indemnité
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 16: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000034978460
+  cdtn:
+    formule:
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 1/5 * Sref * A
+
+## ancienneté au-delà de 7 ans
+contrat salarié . convention collective . gardien concierge . ancienneté au dela de 7 ans . palier:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 7 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . gardien concierge . ancienneté au dela de 7 ans . indemnité:
+  valeur:
+    produit:
+      assiette: palier * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 2 / 15
+  unité: €
+
+contrat salarié . convention collective . gardien concierge . ancienneté au dela de 7 ans . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 7 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 19 an
+  somme:
+    - ancienneté totale . indemnité
+    - ancienneté au dela de 7 ans . indemnité
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 16: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000034978460
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Ancienneté au-delà de 7 ans": contrat salarié . convention collective . gardien concierge . ancienneté au dela de 7 ans . palier
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (1/5 * Sref * A1) + (2/15 * Sref * A2)
+
+## ancienneté au-delà de 19 ans
+contrat salarié . convention collective . gardien concierge . ancienneté au dela de 19 ans . palier:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 19 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . gardien concierge . ancienneté au dela de 19 ans . indemnité:
+  valeur:
+    produit:
+      assiette: palier * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 1 / 10
+  unité: €
+
+contrat salarié . convention collective . gardien concierge . ancienneté au dela de 19 ans . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 19 an
+  somme:
+    - ancienneté totale . indemnité
+    - ancienneté au dela de 7 ans . indemnité
+    - ancienneté au dela de 19 ans . indemnité
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 16: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000034978460
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Ancienneté au-delà de 7 ans": contrat salarié . convention collective . gardien concierge . ancienneté au dela de 7 ans . palier
+        - "A3 : Ancienneté au-delà de 19 ans": contrat salarié . convention collective . gardien concierge . ancienneté au dela de 19 ans . palier
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (1/5 * Sref * A1) + (2/15 * Sref * A2) + (1/10 * Sref * A3)

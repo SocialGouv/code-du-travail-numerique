@@ -14,6 +14,7 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoActionEvent, MatomoBaseEvent } from "../../lib";
 import { IndemniteLicenciementStepName } from "../IndemniteLicenciement";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import scrollToTop from "../common/utils/scrollToTop";
 
 export enum ValidationResponse {
   NotValid = "not_valid",
@@ -125,14 +126,13 @@ const SimulatorContent = <StepName extends string>({
       switch (validationResponse) {
         case ValidationResponse.NotEligible:
           nextStep(visibleSteps.length - 1);
-          setNavigationAction("next");
           break;
         case ValidationResponse.Valid:
           nextStep();
-          setNavigationAction("next");
-          window?.scrollTo(0, 0);
           break;
       }
+      setNavigationAction("next");
+      scrollToTop();
     }
   };
 
@@ -149,7 +149,7 @@ const SimulatorContent = <StepName extends string>({
     if (previousStepIndex >= 0) {
       previousStep();
       setNavigationAction("prev");
-      window?.scrollTo(0, 0);
+      scrollToTop();
     } else {
       throw Error("Can't show the previous step with index less than 0");
     }
@@ -160,7 +160,7 @@ const SimulatorContent = <StepName extends string>({
   );
   return (
     <StyledWrapper variant="main">
-      <StyledForm>
+      <StyledForm onSubmit={e => { e.preventDefault(); }}>
         <StyledStepList
           activeIndex={currentStepIndex}
           steps={stepItems}

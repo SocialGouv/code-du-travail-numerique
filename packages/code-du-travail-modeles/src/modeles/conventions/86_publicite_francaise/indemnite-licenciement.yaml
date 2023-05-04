@@ -1,0 +1,56 @@
+contrat salarié . convention collective . publicité française . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+# Formules
+
+## Périodes
+contrat salarié . convention collective . publicité française . indemnité de licenciement . jusqu'à quinze ans:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 15 an
+
+contrat salarié . convention collective . publicité française . indemnité de licenciement . au delà de quinze ans:
+  valeur:
+    le maximum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - 15 an
+      - 0 an
+
+## Calculs
+contrat salarié . convention collective . publicité française . indemnité de licenciement . facteur 1:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * jusqu'à quinze ans
+      facteur: 33 / 100
+  unité: €
+
+contrat salarié . convention collective . publicité française . indemnité de licenciement . facteur 2:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de quinze ans
+      facteur: 40 / 100
+  unité: €
+
+# Résultats
+
+## Résultat
+contrat salarié . convention collective . publicité française . indemnité de licenciement . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
+  somme:
+    - facteur 1
+    - facteur 2
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 31: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005753579/?idConteneur=KALICONT000005635630
+    Article 50: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005753598/?idConteneur=KALICONT000005635630
+    Article 69: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005753616/?idConteneur=KALICONT000005635630
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+        - "A1 : Tranche jusqu'à 15 ans": contrat salarié . convention collective . publicité française . indemnité de licenciement . jusqu'à quinze ans
+        - "A2 : Tranche au delà de 15 ans": contrat salarié . convention collective . publicité française . indemnité de licenciement . au delà de quinze ans
+      formula: (33 / 100 * Sref * A1)[ + (40 / 100 * Sref * A2)]

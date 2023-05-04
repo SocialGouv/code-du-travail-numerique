@@ -16,6 +16,7 @@ import { Layout } from "../../src/layout/Layout";
 import { summarize } from "../../src/search/utils";
 import { SITE_URL } from "../../src/config";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
+import { handleError } from "../../src/lib/fetch-error";
 
 const title = "Modèles de documents";
 const subtitle =
@@ -77,7 +78,7 @@ function Modeles(props) {
               )}
           </LargeSelect>
           <StyledList>
-            {Object.values(documents).map(({ title, items }) => (
+            {Object.values(documents).map(({ title, items }: any) => (
               <React.Fragment key={title}>
                 <Heading as={HeadingBlue}>{title}</Heading>
                 {items.map(({ description, slug, title }) => (
@@ -102,13 +103,16 @@ function Modeles(props) {
   );
 }
 
-Modeles.getInitialProps = async function () {
+export const getServerSideProps = async () => {
   const response = await fetch(`${SITE_URL}/api/modeles`);
   if (!response.ok) {
-    return { statusCode: response.status };
+    return handleError(response);
   }
   const data = await response.json();
-  return { data };
+
+  return {
+    props: { data },
+  };
 };
 
 const { spacings } = th;

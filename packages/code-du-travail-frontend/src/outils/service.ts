@@ -19,7 +19,9 @@ export const fetchTools = async ({ ids, slugs }: getToolsParams = {}): Promise<
   }
   const responseContainer = await fetch(`${SITE_URL}/api/tools?${query}`);
   const result = await responseContainer.json();
-  return result.map(({ _id, _source }) => ({ ..._source, _id }));
+  return result
+    .map(({ _id, _source }) => ({ ..._source, _id }))
+    .filter((tool) => tool.displayTool);
 };
 
 export const fetchTool = async (slug: string): Promise<Tool | undefined> => {

@@ -2,6 +2,7 @@ export enum MatomoBaseEvent {
   TRACK_EVENT = "trackEvent",
   OUTIL = "outil",
   PAGE_INFORMATION = "page_information",
+  WIDGET_SEARCH = "widget_search",
 }
 
 export enum MatomoBaseAction {

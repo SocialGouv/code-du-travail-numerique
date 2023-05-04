@@ -1,4 +1,4 @@
-import { parse as rootParse, parseISO } from "date-fns";
+import { parse as rootParse, parseISO, format } from "date-fns";
 
 export const dateFormat = "dd/MM/yyyy";
 
@@ -10,6 +10,10 @@ export const parse = (str: string | undefined) => {
     return rootParse(str, dateFormat, new Date());
   }
   return parseISO(str);
+};
+
+export const dateToString = (d: Date) => {
+  return format(d, dateFormat);
 };
 
 export default parse;

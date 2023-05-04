@@ -31,6 +31,12 @@ import {
   createAgreement44StoreSalaires,
 } from "./44-industries-chimiques";
 import {
+  Agreement2596StoreError,
+  Agreement2596StoreInput,
+  Agreement2596StoreSlice,
+  createAgreement2596StoreSalaires,
+} from "./2596-coiffure";
+import {
   Agreement2148StoreError,
   Agreement2148StoreInput,
   Agreement2148StoreSlice,
@@ -48,6 +54,12 @@ import {
   Agreement2609StoreSlice,
   createAgreement2609StoreSalaires,
 } from "./2609-batiment-etam";
+import {
+  Agreement2614StoreError,
+  Agreement2614StoreInput,
+  Agreement2614StoreSlice,
+  createAgreement2614StoreSalaires,
+} from "./2614-travaux-public";
 
 export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement1527StoreInput &
@@ -56,7 +68,8 @@ export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement44StoreInput &
   Agreement2596StoreInput &
   Agreement2148StoreInput &
-  Agreement2609StoreInput;
+  Agreement2609StoreInput &
+  Agreement2614StoreInput;
 
 export type AgreementStoreError = Agreement1516StoreError &
   Agreement1527StoreError &
@@ -65,13 +78,15 @@ export type AgreementStoreError = Agreement1516StoreError &
   Agreement29StoreError &
   Agreement2596StoreError &
   Agreement2148StoreError &
-  Agreement2609StoreError;
+  Agreement2609StoreError &
+  Agreement2614StoreError;
 
 export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement1527StoreSlice &
   Agreement16StoreSlice &
   Agreement44StoreSlice &
   Agreement29StoreSlice &
+  Agreement2614StoreSlice &
   Agreement2596StoreSlice &
   Agreement2148StoreSlice &
   Agreement2609StoreSlice;
@@ -89,4 +104,5 @@ export const createRootAgreementsStore = (
   ...createAgreement2596StoreSalaires(set, get, options),
   ...createAgreement2148StoreSalaires(set, get, options),
   ...createAgreement2609StoreSalaires(set, get, options),
+  ...createAgreement2614StoreSalaires(set, get, options),
 });

@@ -38,7 +38,6 @@ describe("Indemnité licenciement - CC 44", () => {
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
       );
-      userEvent.click(ui.information.agreement44.economicFire.oui.get());
       fireEvent.change(ui.information.agreement44.age.get(), {
         target: { value: "38" },
       });
@@ -85,7 +84,6 @@ describe("Indemnité licenciement - CC 44", () => {
         ui.information.agreement44.proCategory.get(),
         "Agents de maîtrise et techniciens (Groupe IV)"
       );
-      userEvent.click(ui.information.agreement44.economicFire.oui.get());
       fireEvent.change(ui.information.agreement44.age.get(), {
         target: { value: "36" },
       });
@@ -111,7 +109,6 @@ describe("Indemnité licenciement - CC 44", () => {
         ui.information.agreement44.proCategory.get(),
         "Ingénieurs et cadres (Groupe V)"
       );
-      userEvent.click(ui.information.agreement44.economicFire.oui.get());
       fireEvent.change(ui.information.agreement44.age.get(), {
         target: { value: "36" },
       });
@@ -168,7 +165,7 @@ describe("Indemnité licenciement - CC 44", () => {
       );
     });
 
-    test(`ne doit pas afficher la question sur le salaire pour le dernièr mois`, () => {
+    test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, () => {
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
@@ -183,7 +180,6 @@ describe("Indemnité licenciement - CC 44", () => {
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
       );
-      userEvent.click(ui.information.agreement44.economicFire.oui.get());
       fireEvent.change(ui.information.agreement44.age.get(), {
         target: { value: "38" },
       });
