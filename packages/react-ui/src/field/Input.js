@@ -118,7 +118,12 @@ const StyledInput = styled.input`
   appearance: none;
   @media (max-width: ${breakpoints.mobile}) {
     padding: 0 ${spacings.small};
-    padding-right: ${(props) => (props.hasIcon ? "5rem" : spacings.medium)};
+    padding-right: ${(props) => {
+      if (props.text) {
+        return "6rem";
+      }
+      return props.hasIcon ? "5rem" : spacings.medium;
+    }};
   }
 `;
 
