@@ -48,6 +48,12 @@ import {
   Agreement2614StoreSlice,
   createAgreement2614StoreSalaires,
 } from "./2614-travaux-public";
+import {
+  Agreement1702StoreError,
+  Agreement1702StoreInput,
+  Agreement1702StoreSlice,
+  createAgreement1702StoreSalaires,
+} from "./1702-ouvriers-travaux-public";
 
 export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement1527StoreInput &
@@ -56,6 +62,7 @@ export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement44StoreInput &
   Agreement2596StoreInput &
   Agreement2609StoreInput &
+  Agreement1702StoreInput &
   Agreement2614StoreInput;
 
 export type AgreementStoreError = Agreement1516StoreError &
@@ -65,6 +72,7 @@ export type AgreementStoreError = Agreement1516StoreError &
   Agreement29StoreError &
   Agreement2596StoreError &
   Agreement2609StoreError &
+  Agreement1702StoreError &
   Agreement2614StoreError;
 
 export type AgreementStoreSlice = Agreement1516StoreSlice &
@@ -74,6 +82,7 @@ export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement29StoreSlice &
   Agreement2614StoreSlice &
   Agreement2596StoreSlice &
+  Agreement1702StoreSlice &
   Agreement2609StoreSlice;
 
 export const createRootAgreementsStore = (
@@ -88,5 +97,6 @@ export const createRootAgreementsStore = (
   ...createAgreement44StoreSalaires(set, get, options),
   ...createAgreement2596StoreSalaires(set, get, options),
   ...createAgreement2609StoreSalaires(set, get, options),
+  ...createAgreement1702StoreSalaires(set, get, options),
   ...createAgreement2614StoreSalaires(set, get, options),
 });

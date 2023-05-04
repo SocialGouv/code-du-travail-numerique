@@ -139,6 +139,8 @@ const createResultStore: StoreSlice<
       const agreement = get().agreementData.input.agreement;
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
+      const longTermDisability =
+        get().contratTravailData.input.arretTravail === "oui";
       const publicodes = get().agreementData.publicodes;
       const dateNotification = get().ancienneteData.input.dateNotification!;
       const dateSortie = get().ancienneteData.input.dateSortie!;
@@ -170,7 +172,8 @@ const createResultStore: StoreSlice<
           legalSeniority.value,
           legalRequiredSeniority.value,
           refSalary,
-          isLicenciementInaptitude
+          isLicenciementInaptitude,
+          longTermDisability
         )
       ).result;
 
@@ -223,6 +226,18 @@ const createResultStore: StoreSlice<
           getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
+        console.log(
+          "Agreement situation : ",
+          mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
+            agreement.num,
+            agreementSeniority,
+            agreementRefSalary,
+            agreementRequiredSeniority.value,
+            get().ancienneteData.input.dateNotification!,
+            longTermDisability,
+            { ...infos, ...agreementSalaryExtraInfo }
+          )
+        );
         publicodesSituationConventionnel = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
             agreement.num,
@@ -230,6 +245,7 @@ const createResultStore: StoreSlice<
             agreementRefSalary,
             agreementRequiredSeniority.value,
             get().ancienneteData.input.dateNotification!,
+            longTermDisability,
             { ...infos, ...agreementSalaryExtraInfo }
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -242,6 +258,7 @@ const createResultStore: StoreSlice<
         agreementFormula = publicodes.getFormule();
 
         agreementNotifications = publicodes.getNotifications();
+        console.log("Agreement notifications : ", agreementNotifications);
 
         agreementHasNoLegalIndemnity = hasNoLegalIndemnity(agreement.num);
 
