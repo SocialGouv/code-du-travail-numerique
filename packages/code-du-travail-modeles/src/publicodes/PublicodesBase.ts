@@ -95,11 +95,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     situation: SituationElement[],
     rule: string
   ): EvaluatedNode {
-    console.log("Handle execute");
-    const situationBuilt = this.buildSituation(situation);
-
-    console.log("Situation : ", situationBuilt);
-    this.engine.setSituation(situationBuilt);
+    this.engine.setSituation(this.buildSituation(situation));
     return this.engine.evaluate(rule);
   }
 
@@ -112,7 +108,6 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     result: EvaluatedNode;
     situation: SituationElement[];
   } {
-    console.log("Update situation", situation);
     // Situation is an array to keep the order of the answers
     const currentSituation = situation;
     const newSituation: SituationElement[] = [];

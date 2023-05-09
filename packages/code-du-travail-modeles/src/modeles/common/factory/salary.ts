@@ -10,10 +10,10 @@ import { ReferenceSalary675 } from "../../conventions/675_habillement_commerce_s
 import { ReferenceSalary1486 } from "../../conventions/1486_bureaux_etudes_techniques";
 import { ReferenceSalary1516 } from "../../conventions/1516_organismes_formation";
 import { ReferenceSalary1527 } from "../../conventions/1527_immobilier";
+import { ReferenceSalary1702 } from "../../conventions/1702_ouvriers_travaux_public";
 import { ReferenceSalary2098 } from "../../conventions/2098_personnel_presta_service_tertiaire";
 import { ReferenceSalary2596 } from "../../conventions/2596_coiffure/salary";
 import { ReferenceSalary3239 } from "../../conventions/3239_particuliers_employeurs_domicile";
-import { ReferenceSalary1702 } from "../../conventions/1702_ouvriers_travaux_public";
 import type { IReferenceSalary } from "..";
 import { SupportedCcIndemniteLicenciement } from "..";
 

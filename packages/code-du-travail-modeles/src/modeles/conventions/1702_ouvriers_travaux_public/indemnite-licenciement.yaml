@@ -112,3 +112,11 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
   type: notification
   description: "Le montant de l’indemnité doit être calculé sur la base des salaires (reconstitués) que la salarié aurait dû percevoir au cours des 3 derniers mois précédant la rupture du contrat s’il n’avait pas été en arrêt de travail. Pour simplifier l'utilisation de ce simulateur, la calcul se base ici sur les salaires perçus avant l'arrêt travail et non sur les salaires reconstitués. Le montant de l'indemnité pourrait donc être plus important que celui donné par le simulateur."
   valeur: oui
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . notification licenciement économique:
+  applicable si: licenciement économique = 'Oui'
+  type: notification
+  description: "Notif obligatoire sur la 1702"
+  valeur: oui
+  cdtn:
+    affichage: légal
