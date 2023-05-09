@@ -46,6 +46,8 @@ describe("Notification pour la CC 1702", () => {
 
     const notifications = engine.getNotifications();
     expect(notifications).toHaveLength(1);
-    expect(notifications[0].description).toBe("Notif obligatoire sur la 1702");
+    expect(notifications[0].description).toBe(
+      "Ce résultat ne prend pas en compte le complément forfaitaire dont bénéficie le salarié en plus du montant de l'indemnité de licenciement lorsqu'il est licencié pour motif économique. Ce complément forfaitaire est égal à 70% du montant de l'indemnité de licenciement pour les salariés ayant entre 2 et 5 ans d'ancienneté et à 35% du salaire de référence du salarié (voir le détail du calcul) pour les salariés ayant au moins 5 ans d'ancienneté."
+    );
   });
 });
