@@ -9,8 +9,8 @@ const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 const DepartRetraiteCcReferences = [
   ...DepartRetraiteReferences,
   {
-    article: "Article 20",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851451/?idConteneur=KALICONT000005635173",
+    article: "Article 4.6",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833",
   },
   {
     article: "Annexe « Enquêteurs », article 26",
@@ -21,8 +21,8 @@ const DepartRetraiteCcReferences = [
 const MiseRetraiteCCReferencesAutre = [
   ...MiseRetraiteReferences,
   {
-    article: "Article 20",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851451/?idConteneur=KALICONT000005635173",
+    article: "Article 4.6",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833",
   },
 ];
 
