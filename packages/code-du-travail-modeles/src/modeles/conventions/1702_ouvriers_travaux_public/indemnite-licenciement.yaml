@@ -116,7 +116,7 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . notification licenciement économique:
   applicable si: licenciement économique = 'Oui'
   type: notification
-  description: "Notif obligatoire sur la 1702"
+  description: "Ce résultat ne prend pas en compte le complément forfaitaire dont bénéficie le salarié en plus du montant de l'indemnité de licenciement lorsqu'il est licencié pour motif économique. Ce complément forfaitaire est égal à 70% du montant de l'indemnité de licenciement pour les salariés ayant entre 2 et 5 ans d'ancienneté et à 35% du salaire de référence du salarié (voir le détail du calcul) pour les salariés ayant au moins 5 ans d'ancienneté."
   valeur: oui
   cdtn:
     affichage: légal

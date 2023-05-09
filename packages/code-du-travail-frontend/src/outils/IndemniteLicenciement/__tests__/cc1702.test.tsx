@@ -43,7 +43,7 @@ describe("Indemnité licenciement - CC 1702", () => {
   });
   test(`Autre licenciement`, () => {
     userAction
-      .click(ui.information.agreement1702.motif.oui.get())
+      .click(ui.information.agreement1702.motif.non.get())
       .setInput(ui.information.agreement1702.age.get(), "40")
       .click(ui.next.get());
 
@@ -120,6 +120,11 @@ describe("Indemnité licenciement - CC 1702", () => {
         "Le montant de l’indemnité doit être calculé sur la base des salaires (reconstitués) que la salarié aurait dû percevoir au cours des 3 derniers mois précédant la rupture du contrat s’il n’avait pas été en arrêt de travail. Pour simplifier l'utilisation de ce simulateur, la calcul se base ici sur les salaires perçus avant l'arrêt travail et non sur les salaires reconstitués. Le montant de l'indemnité pourrait donc être plus important que celui donné par le simulateur."
       )
     ).not.toBeInTheDocument();
+    expect(
+      rendering.queryByText(
+        /Ce résultat ne prend pas en compte le complément forfaitaire dont bénéficie le salarié en plus du montant de l'indemnité de licenciement/
+      )
+    ).not.toBeInTheDocument();
   });
 
   test(`Autre licenciement avec arret de travail`, () => {
@@ -134,7 +139,7 @@ describe("Indemnité licenciement - CC 1702", () => {
     userAction
       .click(ui.next.get())
       .click(ui.next.get())
-      .click(ui.information.agreement1702.motif.oui.get())
+      .click(ui.information.agreement1702.motif.non.get())
       .setInput(ui.information.agreement1702.age.get(), "40")
       .click(ui.next.get());
 
@@ -164,9 +169,6 @@ describe("Indemnité licenciement - CC 1702", () => {
     fireEvent.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
-    expect(
-      rendering.queryByText("Notif obligatoire sur la 1702")
-    ).not.toBeInTheDocument();
   });
 
   test(`Licenciement économique`, () => {
@@ -230,7 +232,9 @@ describe("Indemnité licenciement - CC 1702", () => {
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
     expect(
-      rendering.queryByText("Notif obligatoire sur la 1702")
+      rendering.queryByText(
+        /Ce résultat ne prend pas en compte le complément forfaitaire dont bénéficie le salarié en plus du montant de l'indemnité de licenciement/
+      )
     ).toBeInTheDocument();
   });
 });
