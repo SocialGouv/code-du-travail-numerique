@@ -28,4 +28,24 @@ describe("Notification pour la CC 1702", () => {
     expect(notifications).toHaveLength(1);
     expect(notifications[0].description).toBe(notification);
   });
+
+  test("l'utilisateur est en licenciement économique", () => {
+    engine.setSituation({
+      "contrat salarié . convention collective": "'IDCC1702'",
+      "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+      "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age":
+        "40",
+      "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . licenciement économique": `'Oui'`,
+      "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+        "10",
+      "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+        "10",
+      "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+        "2500",
+    });
+
+    const notifications = engine.getNotifications();
+    expect(notifications).toHaveLength(1);
+    expect(notifications[0].description).toBe("Notif obligatoire sur la 1702");
+  });
 });

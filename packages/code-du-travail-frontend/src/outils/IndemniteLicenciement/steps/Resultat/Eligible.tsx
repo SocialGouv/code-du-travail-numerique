@@ -45,7 +45,7 @@ export default function Eligible() {
     agreementInformations,
     salary,
     hasSameSalary,
-    agreementNotifications,
+    notifications,
     agreementHasNoLegalIndemnity,
     isStepSalaryHidden,
     infoWarning,
@@ -80,7 +80,7 @@ export default function Eligible() {
     agreementInformations: state.resultData.input.agreementInformations,
     salary: state.salairesData.input.salary,
     hasSameSalary: state.salairesData.input.hasSameSalary,
-    agreementNotifications: state.resultData.input.agreementNotifications,
+    notifications: state.resultData.input.notifications,
     agreementHasNoLegalIndemnity:
       state.resultData.input.agreementHasNoLegalIndemnity,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
@@ -107,7 +107,7 @@ export default function Eligible() {
             ? publicodesAgreementResult?.value?.toString() ?? ""
             : publicodesLegalResult.value?.toString() ?? ""
         }
-        notifications={isAgreementBetter || isAgreementEqualToLegal ? agreementNotifications : []}
+        notifications={notifications}
         resultMessage={getResultMessage(informationData)}
       />
       <ShowDetails>
@@ -130,7 +130,8 @@ export default function Eligible() {
           isAgreementBetter={isAgreementBetter}
           agreementInformations={agreementInformations}
           agreementRefSalaryInfo={
-            agreement && isAgreementSupported && (
+            agreement &&
+            isAgreementSupported && (
               <AgreementsInjector
                 idcc={getSupportedAgreement(agreement.num)}
                 step={IndemniteLicenciementStepName.Resultat}

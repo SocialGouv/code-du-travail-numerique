@@ -164,5 +164,73 @@ describe("Indemnité licenciement - CC 1702", () => {
     fireEvent.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
+    expect(
+      rendering.queryByText("Notif obligatoire sur la 1702")
+    ).not.toBeInTheDocument();
+  });
+
+  test(`Licenciement économique`, () => {
+    userAction
+      .click(ui.information.agreement1702.motif.oui.get())
+      .setInput(ui.information.agreement1702.age.get(), "40")
+      .click(ui.next.get());
+
+    fireEvent.change(ui.seniority.startDate.get(), {
+      target: { value: "01/01/2018" },
+    });
+    fireEvent.change(ui.seniority.notificationDate.get(), {
+      target: { value: "01/01/2022" },
+    });
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "01/01/2022" },
+    });
+    fireEvent.click(ui.seniority.hasAbsence.non.get());
+    fireEvent.click(ui.next.get());
+    expect(ui.activeStep.query()).toHaveTextContent("Salaires");
+
+    fireEvent.click(ui.salary.hasPartialTime.non.get());
+    fireEvent.click(ui.salary.hasSameSalary.non.get());
+    expect(
+      rendering.queryByText(
+        "Indiquez le montant des salaires (en incluant l’indemnité de congés payés, les primes, dont la prime de vacances, et les avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)"
+      )
+    ).toBeInTheDocument();
+    fireEvent.click(ui.salary.hasSameSalary.oui.get());
+    fireEvent.change(ui.salary.sameSalaryValue.get(), {
+      target: { value: "2500" },
+    });
+
+    expect(
+      rendering.queryByText(
+        "Connaissez-vous le montant du salaire perçu pendant le préavis ?"
+      )
+    ).not.toBeInTheDocument();
+    userAction.click(ui.previous.get());
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "01/06/2022" },
+    });
+    fireEvent.click(ui.next.get());
+    expect(
+      rendering.queryByText(
+        "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
+      )
+    ).toBeInTheDocument();
+    fireEvent.click(
+      ui.salary.agreementWithNoticeSalary.knowingLastSalary.oui.get()
+    );
+    expect(
+      rendering.queryByText("Salaires perçus pendant le préavis")
+    ).toBeInTheDocument();
+    fireEvent.change(ui.salary.agreementWithNoticeSalary.salaries.getAll()[0], {
+      target: { value: "3000" },
+    });
+
+    fireEvent.click(ui.next.get());
+
+    expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
+    expect(
+      rendering.queryByText("Notif obligatoire sur la 1702")
+    ).toBeInTheDocument();
   });
 });

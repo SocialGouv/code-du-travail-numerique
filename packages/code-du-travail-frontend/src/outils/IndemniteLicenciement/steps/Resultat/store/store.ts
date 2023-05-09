@@ -199,7 +199,8 @@ const createResultStore: StoreSlice<
       let isAgreementBetter = false;
       let isAgreementEqualToLegal = false;
       let agreementInformations: AgreementInformation[];
-      let agreementNotifications: Notification[];
+      let agreementNotifications: Notification[] = [];
+      let notifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
       let agreementSalaryExtraInfo: Record<string, string | number> = {};
 
@@ -238,18 +239,6 @@ const createResultStore: StoreSlice<
           getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
-        console.log(
-          "Agreement situation : ",
-          mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
-            agreement.num,
-            agreementSeniority,
-            agreementRefSalary,
-            agreementRequiredSeniority.value,
-            get().ancienneteData.input.dateNotification!,
-            longTermDisability,
-            { ...infos, ...agreementSalaryExtraInfo }
-          )
-        );
         publicodesSituationConventionnel = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
             agreement.num,
@@ -270,7 +259,6 @@ const createResultStore: StoreSlice<
         agreementFormula = publicodes.getFormule();
 
         agreementNotifications = publicodes.getNotifications();
-        console.log("Agreement notifications : ", agreementNotifications);
 
         agreementHasNoLegalIndemnity = hasNoLegalIndemnity(agreement.num);
 
@@ -295,6 +283,19 @@ const createResultStore: StoreSlice<
         }
       }
 
+      if (isAgreementBetter) {
+        notifications = agreementNotifications?.filter(
+          (item) =>
+            item.show === "conventionnel" ||
+            item.show === "légal et conventionnel"
+        );
+      } else {
+        notifications = agreementNotifications?.filter(
+          (item) =>
+            item.show === "légal" || item.show === "légal et conventionnel"
+        );
+      }
+
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.input.legalSeniority = legalSeniority.value;
@@ -311,8 +312,7 @@ const createResultStore: StoreSlice<
           state.resultData.input.isAgreementEqualToLegal =
             isAgreementEqualToLegal;
           state.resultData.input.agreementInformations = agreementInformations;
-          state.resultData.input.agreementNotifications =
-            agreementNotifications;
+          state.resultData.input.notifications = notifications;
           state.resultData.input.agreementHasNoLegalIndemnity =
             agreementHasNoLegalIndemnity;
         })

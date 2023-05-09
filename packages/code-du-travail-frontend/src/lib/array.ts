@@ -1,6 +1,6 @@
 import { hasObjectNullOrUndefined } from "./object";
 
-export const detectNullOrUndefinedOrNaNInArray = (array: any[]) => {
+export const detectNullOrUndefinedOrNaNInArray = (array: any[]): boolean => {
   return array.some((item) => {
     if (item && typeof item === "object") {
       const keys = Object.keys(item);
