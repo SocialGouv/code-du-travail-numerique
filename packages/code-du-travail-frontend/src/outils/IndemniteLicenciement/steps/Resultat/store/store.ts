@@ -56,7 +56,7 @@ const initialState: ResultStoreData = {
   isStepValid: true,
 };
 
-const isConventionnelBetter = (
+const isAgreementBetterDetection = (
   publicodesSituationLegal: PublicodesIndemniteLicenciementResult,
   publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult
 ) =>
@@ -65,6 +65,16 @@ const isConventionnelBetter = (
   publicodesSituationConventionnel.value !== undefined &&
   publicodesSituationConventionnel.value !== null &&
   publicodesSituationConventionnel.value > publicodesSituationLegal.value;
+
+const isAgreementSameDetection = (
+  publicodesSituationLegal: PublicodesIndemniteLicenciementResult,
+  publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult
+) =>
+  publicodesSituationLegal.value !== undefined &&
+  publicodesSituationLegal.value !== null &&
+  publicodesSituationConventionnel.value !== undefined &&
+  publicodesSituationConventionnel.value !== null &&
+  publicodesSituationConventionnel.value === publicodesSituationLegal.value;
 
 const createResultStore: StoreSlice<
   ResultStoreSlice,
@@ -186,6 +196,7 @@ const createResultStore: StoreSlice<
       let agreementReferences: References[];
       let agreementFormula: Formula;
       let isAgreementBetter = false;
+      let isAgreementEqualToLegal = false;
       let agreementInformations: AgreementInformation[];
       let agreementNotifications: Notification[] = [];
       let notifications: Notification[];
@@ -252,7 +263,7 @@ const createResultStore: StoreSlice<
 
         if (
           agreementHasNoLegalIndemnity ||
-          (isConventionnelBetter(
+          (isAgreementBetterDetection(
             publicodesSituationLegal,
             publicodesSituationConventionnel
           ) &&
@@ -260,9 +271,18 @@ const createResultStore: StoreSlice<
         ) {
           isAgreementBetter = true;
         }
+        if (
+          isAgreementSameDetection(
+            publicodesSituationLegal,
+            publicodesSituationConventionnel
+          ) &&
+          isAgreementSupported
+        ) {
+          isAgreementEqualToLegal = true;
+        }
       }
 
-      if (isAgreementBetter) {
+      if (isAgreementBetter || isAgreementEqualToLegal) {
         notifications = agreementNotifications?.filter(
           (item) =>
             item.show === "conventionnel" ||
