@@ -808,6 +808,13 @@ exports[`<CookiePolicy /> should render 1`] = `
               </li>
               <li>
                 <a
+                  href="/plan-du-site"
+                >
+                  Plan du site
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vvX.Y.Z"
                   rel="noopener noreferrer"
                   target="_blank"

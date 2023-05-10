@@ -1,3 +1,4 @@
+/* eslint @typescript-eslint/naming-convention: 0 */
 export enum SupportedCcIndemniteLicenciement {
   IDCC1505 = "1505",
   IDCC1516 = "1516",
@@ -36,6 +37,7 @@ export enum SupportedCcIndemniteLicenciement {
   IDCC2614 = "2614",
   IDCC1266 = "1266",
   IDCC275 = "275",
+  IDCC1043 = "1043",
   IDCC0086 = "86",
   default = "default",
 }

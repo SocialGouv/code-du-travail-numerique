@@ -1,7 +1,7 @@
 import { Absence, SalaryPeriods } from "@socialgouv/modeles-social";
 import { SectionTitle } from "../../../../common/stepStyles";
 import { AgreementInformation } from "../../../common";
-import { Table, theme } from "@socialgouv/cdtn-ui";
+import { Table, theme, Paragraph } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { publicodesUnitTranslator } from "../../../../publicodes";
 import AbsenceTable from "./AbsenceTable";
@@ -116,9 +116,19 @@ export default function FilledElements(props: Props) {
               {props.dateSortie}
             </li>
             <li>
-              Absences de plus d&apos;un mois durant le contrat de
-              travail&nbsp;:&nbsp;
+              Absences de plus d&apos;un mois durant le contrat de travail
+              <sup>*</sup>&nbsp;:&nbsp;
               {props.absencesPeriods.length > 0 ? "Oui" : "Non"}
+              <Paragraph fontSize="small" noMargin>
+                <i>
+                  <sup>*</sup> Depuis le 11 mars 2023 les périodes d’absence
+                  pour congé paternité ne sont plus retirées de l’ancienneté du
+                  salarié. Si le salarié a pris un congé paternité avant cette
+                  date, il peut être décompté de son ancienneté et de ce fait,
+                  donner lieu à un montant d’indemnité moins favorable que celui
+                  de notre simulateur.
+                </i>
+              </Paragraph>
             </li>
             <AbsenceTable absencesPeriods={props.absencesPeriods} />
           </ul>

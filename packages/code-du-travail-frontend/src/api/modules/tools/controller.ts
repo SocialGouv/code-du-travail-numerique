@@ -13,7 +13,6 @@ export class ToolsController {
 
   public async get() {
     try {
-      console.log(this.req);
       const { ids: idsString, slugs: slugsString } = this.req.query as any;
       const ids = idsString?.split(",");
       const slugs = slugsString?.split(",");
