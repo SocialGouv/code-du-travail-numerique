@@ -13,6 +13,7 @@ type Props = {
   subtitle: string;
   triggerName: string;
   triggerLink: string;
+  triggerOnClick?: () => void;
   sectionId: string;
 };
 
@@ -33,7 +34,7 @@ export const HomeSlice = (props: Props) => {
             />
           ))}
         </Grid>
-        <HomeButtonTrigger name={props.triggerName} link={props.triggerLink} />
+        <HomeButtonTrigger name={props.triggerName} link={props.triggerLink} onClick={props.triggerOnClick} />
       </Container>
     </Section>
   );
