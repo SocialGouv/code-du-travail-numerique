@@ -14,10 +14,10 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
           "38",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           "38",
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-          "2800",
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "2800",
       },
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );

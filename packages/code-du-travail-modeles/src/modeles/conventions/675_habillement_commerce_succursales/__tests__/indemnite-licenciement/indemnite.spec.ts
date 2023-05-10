@@ -26,10 +26,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
             "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
               "non",
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -61,10 +61,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniorityRight,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
             "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
               "non",
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -85,10 +85,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
             "15",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             "15",
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            "1488",
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "oui",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1488",
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
@@ -131,18 +131,18 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
           {
             "contrat salarié . convention collective": "'IDCC0675'",
             "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${CategoryPro675.agents}'`,
-            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . agents . licenciement collectif question":
-              isCollectifFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . agents . autres licenciement . age":
               age,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . agents . licenciement collectif question":
+              isCollectifFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniorityRight,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
             "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
               "non",
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -163,10 +163,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
             "22",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             "22",
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            "1950",
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "oui",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1950",
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
@@ -208,18 +208,18 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
           {
             "contrat salarié . convention collective": "'IDCC0675'",
             "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${CategoryPro675.cadres}'`,
-            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . licenciement collectif question":
-              isCollectifFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . autres licenciement . age":
               age,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . licenciement collectif question":
+              isCollectifFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniorityRight,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
             "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
               "non",
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -240,10 +240,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
             "20",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             "20",
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            "3132",
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "oui",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "3132",
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );

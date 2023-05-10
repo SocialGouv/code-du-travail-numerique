@@ -51,10 +51,10 @@ describe("Références juridiques pour l'indemnité conventionnel de licenciemen
           seniority,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           seniority,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-          "2000",
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "2000",
       });
 
       const result = engine.getReferences("résultat conventionnel");
