@@ -1,4 +1,4 @@
-import { Rule } from "publicodes";
+import { Rule } from "@socialgouv/modeles-social";
 import { ResultStepProps } from "../steps/ResultStep/Step";
 import { PreavisRetraiteFormState } from "../form";
 import { FormApi } from "final-form";

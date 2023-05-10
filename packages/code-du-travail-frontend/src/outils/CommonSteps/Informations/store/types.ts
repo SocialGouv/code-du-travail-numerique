@@ -1,4 +1,7 @@
-import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
+import {
+  IndemniteLicenciementPublicodes,
+  RuleType,
+} from "@socialgouv/modeles-social";
 import { Question } from "../../../DureePreavisRetraite/state";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
 
@@ -30,7 +33,11 @@ export type CommonInformationsStoreData = {
 };
 
 export type CommonInformationsStoreFn = {
-  onInformationsChange: (questionKey: string, value: string) => void;
+  onInformationsChange: (
+    questionKey: string,
+    value: string,
+    type: RuleType | undefined
+  ) => void;
   generatePublicodesQuestions: () => void;
   onNextStep: () => ValidationResponse;
   onSetStepHidden: () => void;
