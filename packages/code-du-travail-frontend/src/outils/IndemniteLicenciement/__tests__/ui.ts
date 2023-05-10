@@ -167,6 +167,14 @@ export const ui = {
         "infos.contrat salarié - convention collective - télécommunications - age"
       ),
     },
+    agreement1672: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+      ),
+      age: byTestId(
+        "infos.contrat salarié - convention collective - sociétés d'assurances - age"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),

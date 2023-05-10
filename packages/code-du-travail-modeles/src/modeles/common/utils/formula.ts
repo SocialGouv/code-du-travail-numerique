@@ -1,7 +1,7 @@
 import type Engine from "publicodes";
 import type { RuleNode } from "publicodes";
 
-import { nonNullable } from "./array";
+import { mergeTwoArray, nonNullable } from "./array";
 
 export type Formula = {
   formula: string;
@@ -72,7 +72,8 @@ export function getFormule(engine: Engine): Formula {
             formule.formula
           );
         }
-        formule.explanations = formule.explanations.concat(
+        formule.explanations = mergeTwoArray(
+          formule.explanations,
           rule.rawNode.cdtn.formule.explanations ?? []
         );
         formule.annotations = formule.annotations.concat(
