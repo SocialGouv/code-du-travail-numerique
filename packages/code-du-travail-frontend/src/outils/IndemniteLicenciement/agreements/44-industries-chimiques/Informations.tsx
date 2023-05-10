@@ -22,13 +22,13 @@ export default function Agreement44Informations() {
         </li>
       )}
 
-      {hasVariablePay && knowingLastSalary && (
+      {hasVariablePay && hasVariablePay === "oui" && knowingLastSalary && (
         <li>
           Connaissance du montant du dernier salaire perçu&nbsp;:&nbsp;
           {knowingLastSalary === "oui" ? "Oui" : "Non"}
         </li>
       )}
-      {knowingLastSalary && lastMonthSalary && lastMonthSalary.value && (
+      {knowingLastSalary && knowingLastSalary === "oui" && lastMonthSalary && lastMonthSalary.value && (
         <li>
           Salaire perçu au cours du dernier mois&nbsp;:&nbsp;
           {lastMonthSalary.value} €{" "}
