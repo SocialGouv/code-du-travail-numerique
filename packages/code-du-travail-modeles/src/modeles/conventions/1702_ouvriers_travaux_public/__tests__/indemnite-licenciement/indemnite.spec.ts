@@ -95,10 +95,12 @@ describe("CC 1702", () => {
       }
     );
 
-    test("Si l'inaptitude suite à un accident ou maladie professionnelle' alors pas de question pour motif eco", () => {
+    test("Si l'inaptitude suite à un accident ou maladie professionnelle alors pas de question pour motif eco", () => {
       const { result, missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC1702'",
+          "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age":
+            "30",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             "3",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
