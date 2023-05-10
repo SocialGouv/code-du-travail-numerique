@@ -3,22 +3,23 @@ import React from "react";
 import { CalculateurIndemnite } from "../..";
 import { ui } from "./ui";
 import { UserAction } from "../../../common";
+import userEvent from "@testing-library/user-event";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
   () => `
 {
-  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635557",
-  "id": "KALICONT000005635557",
-  "num": 2148,
-  "shortTitle": "Télécommunications",
-  "slug": "2148-telecommunications",
-  "title": "Télécommunications"
+  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635918",
+  "id": "KALICONT000005635918",
+  "num": 1672,
+  "shortTitle": "Sociétés d'assurances",
+  "slug": "1672-societes-dassurances",
+  "title": "Sociétés d'assurances"
 }
 `
 );
 
-describe("Indemnité licenciement - CC 2148", () => {
+describe("Indemnité licenciement - CC 1672", () => {
   let rendering: RenderResult;
   let userAction: UserAction;
   beforeEach(() => {
@@ -42,7 +43,11 @@ describe("Indemnité licenciement - CC 2148", () => {
       .click(ui.next.get());
   });
   test(`Cas nominal`, () => {
-    fireEvent.change(ui.information.agreement2148.age.get(), {
+    userEvent.selectOptions(
+      ui.information.agreement1672.proCategory.get(),
+      "Non-cadres (Classes 1 à 4)"
+    );
+    fireEvent.change(ui.information.agreement1672.age.get(), {
       target: { value: "42" },
     });
     fireEvent.click(ui.next.get());
@@ -94,7 +99,7 @@ describe("Indemnité licenciement - CC 2148", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("4306,25 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("3588,54 €");
     expect(ui.result.resultTableRows.getAll().length).toBe(5);
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
       "mai 20223000 €"
@@ -107,7 +112,7 @@ describe("Indemnité licenciement - CC 2148", () => {
       .click(ui.salary.agreementWithNoticeSalary.knowingLastSalary.non.get())
       .click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("3975 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
   });
   test(`Cas avec arrêt de travail`, () => {
@@ -121,7 +126,11 @@ describe("Indemnité licenciement - CC 2148", () => {
     });
     userAction.click(ui.next.get()).click(ui.next.get());
 
-    fireEvent.change(ui.information.agreement2148.age.get(), {
+    userEvent.selectOptions(
+      ui.information.agreement1672.proCategory.get(),
+      "Non-cadres (Classes 1 à 4)"
+    );
+    fireEvent.change(ui.information.agreement1672.age.get(), {
       target: { value: "42" },
     });
     fireEvent.click(ui.next.get());

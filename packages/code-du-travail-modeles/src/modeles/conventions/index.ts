@@ -18,6 +18,7 @@ export * from "./1597_batiment_employes_ouvriers_bis";
 export * from "./1672_societes_assurances";
 export * from "./1996_pharmacie";
 export * from "./2098_personnel_presta_service_tertiaire";
+export * from "./2148_telecommunications";
 export * from "./2216_commerces_detail_alimentation";
 export * from "./2511_sport";
 export * from "./2596_coiffure";
