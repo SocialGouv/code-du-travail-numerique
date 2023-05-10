@@ -29,7 +29,7 @@ const MiseRetraiteCCReferencesAutre = [
   ...MiseRetraiteReferences,
   {
     article: "Article 4.6",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513841#KALIARTI000047513841",
   },
 ];
 
