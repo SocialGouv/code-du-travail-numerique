@@ -37,6 +37,12 @@ import {
   createAgreement2596StoreSalaires,
 } from "./2596-coiffure";
 import {
+  Agreement2148StoreError,
+  Agreement2148StoreInput,
+  Agreement2148StoreSlice,
+  createAgreement2148StoreSalaires,
+} from "./2148-telecommunications";
+import {
   Agreement2609StoreError,
   Agreement2609StoreInput,
   Agreement2609StoreSlice,
@@ -48,6 +54,12 @@ import {
   Agreement2614StoreSlice,
   createAgreement2614StoreSalaires,
 } from "./2614-travaux-public";
+import {
+  Agreement1672StoreError,
+  Agreement1672StoreInput,
+  Agreement1672StoreSlice,
+  createAgreement1672StoreSalaires,
+} from "./1672-societes-assurances";
 
 export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement1527StoreInput &
@@ -55,8 +67,10 @@ export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement29StoreInput &
   Agreement44StoreInput &
   Agreement2596StoreInput &
+  Agreement2148StoreInput &
   Agreement2609StoreInput &
-  Agreement2614StoreInput;
+  Agreement2614StoreInput &
+  Agreement1672StoreInput;
 
 export type AgreementStoreError = Agreement1516StoreError &
   Agreement1527StoreError &
@@ -64,8 +78,10 @@ export type AgreementStoreError = Agreement1516StoreError &
   Agreement44StoreError &
   Agreement29StoreError &
   Agreement2596StoreError &
+  Agreement2148StoreError &
   Agreement2609StoreError &
-  Agreement2614StoreError;
+  Agreement2614StoreError &
+  Agreement1672StoreError;
 
 export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement1527StoreSlice &
@@ -74,7 +90,9 @@ export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement29StoreSlice &
   Agreement2614StoreSlice &
   Agreement2596StoreSlice &
-  Agreement2609StoreSlice;
+  Agreement2148StoreSlice &
+  Agreement2609StoreSlice &
+  Agreement1672StoreSlice;
 
 export const createRootAgreementsStore = (
   set: StoreApi<MainStore>["setState"],
@@ -87,6 +105,8 @@ export const createRootAgreementsStore = (
   ...createAgreement29StoreSalaires(set, get, options),
   ...createAgreement44StoreSalaires(set, get, options),
   ...createAgreement2596StoreSalaires(set, get, options),
+  ...createAgreement2148StoreSalaires(set, get, options),
   ...createAgreement2609StoreSalaires(set, get, options),
   ...createAgreement2614StoreSalaires(set, get, options),
+  ...createAgreement1672StoreSalaires(set, get, options),
 });
