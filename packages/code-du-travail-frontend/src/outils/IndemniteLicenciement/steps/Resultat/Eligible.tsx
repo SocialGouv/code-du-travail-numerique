@@ -40,6 +40,7 @@ export default function Eligible() {
     agreementReferences,
     hasTempsPartiel,
     isAgreementBetter,
+    isAgreementEqualToLegal,
     agreementFormula,
     agreementInformations,
     salary,
@@ -74,6 +75,7 @@ export default function Eligible() {
     agreementReferences: state.resultData.input.agreementReferences,
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     isAgreementBetter: state.resultData.input.isAgreementBetter,
+    isAgreementEqualToLegal: state.resultData.input.isAgreementEqualToLegal,
     agreementFormula: state.resultData.input.agreementFormula,
     agreementInformations: state.resultData.input.agreementInformations,
     salary: state.salairesData.input.salary,
@@ -105,7 +107,7 @@ export default function Eligible() {
             ? publicodesAgreementResult?.value?.toString() ?? ""
             : publicodesLegalResult.value?.toString() ?? ""
         }
-        notifications={isAgreementBetter ? agreementNotifications : []}
+        notifications={isAgreementBetter || isAgreementEqualToLegal ? agreementNotifications : []}
         resultMessage={getResultMessage(informationData)}
       />
       <ShowDetails>
