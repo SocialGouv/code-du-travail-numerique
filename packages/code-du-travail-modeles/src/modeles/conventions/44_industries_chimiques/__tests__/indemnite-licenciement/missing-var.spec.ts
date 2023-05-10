@@ -103,7 +103,6 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         );
         const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
         expect(keys).toEqual([
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique",
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age",
         ]);
       }
@@ -133,7 +132,6 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
       const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
       expect(keys).toEqual([
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle",
-        "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique",
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age",
       ]);
     });

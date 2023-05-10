@@ -3,7 +3,7 @@ import type Engine from "publicodes";
 
 export type Notification = {
   dottedName: RuleNode["dottedName"];
-  description: RuleNode["rawNode"]["description"];
+  description: JSX.Element | RuleNode["rawNode"]["description"];
 };
 
 export type OptionsGetElement = {

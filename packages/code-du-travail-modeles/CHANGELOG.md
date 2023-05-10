@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.98.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.98.0...v4.98.1) (2023-04-20)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.98.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.97.1...v4.98.0) (2023-04-20)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** ajout congé parental à temps partiel dans le texte d'intro d'absence ([#5102](https://github.com/SocialGouv/code-du-travail-numerique/issues/5102)) ([d4c3508](https://github.com/SocialGouv/code-du-travail-numerique/commit/d4c35082c78c0c6c11325fa8dec28942c39dc949))
+- **indemnite-licenciement:** retours sur la CC 44 ([#5113](https://github.com/SocialGouv/code-du-travail-numerique/issues/5113)) ([6275b0e](https://github.com/SocialGouv/code-du-travail-numerique/commit/6275b0eed42cee14b0b45df00635bd230ceb3736))
+
+### Features
+
+- **indemnite de licenciement:** add cc 2596 ([#5029](https://github.com/SocialGouv/code-du-travail-numerique/issues/5029)) ([6dc0f5a](https://github.com/SocialGouv/code-du-travail-numerique/commit/6dc0f5a763433c1034c85d1b943b406ba044fded))
+- **indemnité licenciement:** remove congé paternité as it is now included in the ancienneté ([#5017](https://github.com/SocialGouv/code-du-travail-numerique/issues/5017)) ([8a4ca24](https://github.com/SocialGouv/code-du-travail-numerique/commit/8a4ca2451382cdbfd7626fcdccf10668ec072046))
+
+## [4.97.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.97.0...v4.97.1) (2023-04-11)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
 # [4.97.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.96.0...v4.97.0) (2023-04-07)
 
 ### Bug Fixes
