@@ -40,6 +40,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   valeur: indemnité
   unité: €
   arrondi: 2 décimales
@@ -52,6 +53,15 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "A : Ancienneté totale": contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté jusqu'à 5 ans . palier
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 1/5 * Sref * A
+  
+contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté jusqu'à 5 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ## ancienneté entre 5 et 10ans
 contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 5 et 10 ans . palier:
@@ -75,6 +85,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -90,6 +101,15 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "A2 : Ancienneté entre 5 et 10 ans": contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 5 et 10 ans . palier
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2)
+
+contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 5 et 10 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ## ancienneté entre 10 et 15ans
 contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 10 et 15 ans . palier:
@@ -113,6 +133,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -130,6 +151,15 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "A3 : Ancienneté entre 10 et 15 ans": contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 10 et 15 ans . palier
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2) + (3/5 * Sref * A3)
+
+contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 10 et 15 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ## ancienneté entre 15 et 20ans
 contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 15 et 20 ans . palier:
@@ -153,6 +183,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 20 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -173,6 +204,15 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2) + (3/5 * Sref * A3) + (4/5 * Sref * A4)
 
+contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 15 et 20 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
 ## ancienneté au dela de 20ans
 contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté au dela de 20 ans . palier:
   somme:
@@ -190,6 +230,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté au dela de 20 ans . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 20 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -211,6 +252,15 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "A5 : Ancienneté au dela de 20 ans": contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté au dela de 20 ans . palier
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2) + (3/5 * Sref * A3) + (4/5 * Sref * A4) + (1 * Sref * A5)
+
+contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté au dela de 20 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 # cadres
 contrat salarié . convention collective . transport aérien personnel au sol . cadres:
@@ -237,6 +287,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   valeur: indemnité
   unité: €
   arrondi: 2 décimales
@@ -249,6 +300,16 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "A : Ancienneté totale": contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté jusqu'à 5 ans . palier
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 1/5 * Sref * A
+
+contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté jusqu'à 5 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
 
 ## ancienneté entre 5 et 10ans
 contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 5 et 10 ans . palier:
@@ -275,7 +336,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 10 an
       - toutes ces conditions:
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année = 10 an
-        - age <= 50 an
+        - age < 50 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -292,13 +354,23 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2)
 
+contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 5 et 10 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
 contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté 10 ans . age entre 50 et 55 ans . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année = 10 an
-      - age > 50 an
-      - age <= 55 an
+      - age >= 50 an
+      - age < 55 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 19
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -316,12 +388,22 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2) + (1 * Sref)
 
+contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté 10 ans . age entre 50 et 55 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 19
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 19 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
 contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté 10 ans . age supérieur à 55 ans . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année = 10 an
-      - age > 55 an
+      - age >= 55 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 20
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -338,6 +420,15 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "A2 : Ancienneté entre 5 et 10 ans": contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 5 et 10 ans . palier
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2) + (2 * Sref)
+
+contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté 10 ans . age supérieur à 55 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 20 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ## ancienneté entre 10 et 15ans
 contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 10 et 15 ans . palier:
@@ -362,7 +453,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
-      - age <= 50 an
+      - age < 50 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -381,6 +473,15 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3)
 
+contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 10 et 15 ans . age inférieur à 50 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
 ### 50ans < age <= 55 ans
 contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 10 et 15 ans . age entre 50 et 55 ans . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -388,8 +489,9 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
-      - age > 50 an
-      - age <= 55 an
+      - age >= 50 an
+      - age < 55 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 19
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -409,6 +511,15 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3) + (1 * Sref)
 
+contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 10 et 15 ans . age entre 50 et 55 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 19
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 19 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
 ### age > 55 ans
 contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 10 et 15 ans . age supérieur à 55 ans . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -416,7 +527,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
-      - age > 55 an
+      - age >= 55 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 20
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -435,6 +547,15 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "A3 : Ancienneté entre 10 et 15 ans": contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 10 et 15 ans . palier
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3) + (2 * Sref)
+
+contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 10 et 15 ans . age supérieur à 55 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 20 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ## ancienneté au dela de 15ans
 contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté au dela de 15 ans . palier:
@@ -456,7 +577,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
-      - age <= 50 an
+      - age < 50 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -477,14 +599,24 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3) + (1 * Sref * A4)
 
+contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté au dela de 15 ans . age inférieur à 50 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
 ### 50ans < age <= 55 ans
 contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté au dela de 15 ans . entre 50 et 55 ans . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
-      - age > 50 an
-      - age <= 55 an
+      - age >= 50 an
+      - age < 55 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 19
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -506,13 +638,23 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3) + (1 * Sref * A4) + (1 * Sref)
 
+contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté au dela de 15 ans . entre 50 et 55 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 19
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 19 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
 ### age > 55 ans
 contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté au dela de 15 ans . age supérieur à 55 ans . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
-      - age > 55 an
+      - age >= 55 an
+  plafond: indemnité de licenciement . salaire de référence conventionnel * 20
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
     - ancienneté entre 5 et 10 ans . indemnité
@@ -534,6 +676,16 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3) + (1 * Sref * A4) + (2 * Sref)
 
+contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté au dela de 15 ans . age supérieur à 55 ans . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 20 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+# notifications
 contrat salarié . convention collective . transport aérien personnel au sol . congé maladie non professionnelle:
   valeur: non
 

@@ -25,14 +25,14 @@ describe("Indemnité conventionnel de licenciement pour la CC 2596", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC2596'",
+            "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle":
+              catPro,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle":
-              catPro,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -56,14 +56,14 @@ describe("Indemnité conventionnel de licenciement pour la CC 2596", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC2596'",
+            "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle":
+              catPro,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle":
-              catPro,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );

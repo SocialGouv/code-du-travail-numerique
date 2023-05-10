@@ -16,7 +16,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
       {
         expectedExplanations: [
           "A : Ancienneté totale (≈ 1.08 an : valeur arrondie)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula: "1/5 * Sref * A",
         seniority: 13 / 12,
@@ -24,7 +24,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
       {
         expectedExplanations: [
           "A : Ancienneté totale (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula: "1/5 * Sref * A",
         seniority: 5,
@@ -33,7 +33,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
         expectedExplanations: [
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula: "(1/5 * Sref * A1) + (2/5 * Sref * A2)",
         seniority: 10,
@@ -43,7 +43,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
           "A3 : Ancienneté entre 10 et 15 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula:
           "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (3/5 * Sref * A3)",
@@ -55,7 +55,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
           "A3 : Ancienneté entre 10 et 15 ans (5 ans)",
           "A4 : Ancienneté entre 15 et 20 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula:
           "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (3/5 * Sref * A3) + (4/5 * Sref * A4)",
@@ -68,11 +68,16 @@ describe("Formule indemnité licenciement - CC 275", () => {
           "A3 : Ancienneté entre 10 et 15 ans (5 ans)",
           "A4 : Ancienneté entre 15 et 20 ans (5 ans)",
           "A5 : Ancienneté au dela de 20 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula:
           "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (3/5 * Sref * A3) + (4/5 * Sref * A4) + (1 * Sref * A5)",
         seniority: 25,
+      },
+      {
+        expectedExplanations: ["Sref : Salaire de référence (5000 €)"],
+        expectedFormula: "18 * Sref",
+        seniority: 50,
       },
     ])(
       "Formule $expectedFormula avec une ancienneté de $seniority ans",
@@ -86,7 +91,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             seniority.toString(),
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            "1000",
+            "5000",
         });
         const result = engine.getFormule();
         expect(result.formula).toEqual(expectedFormula);
@@ -98,58 +103,88 @@ describe("Formule indemnité licenciement - CC 275", () => {
   describe("Cadres", () => {
     test.each([
       {
-        age: 50,
+        age: 45,
         expectedExplanations: [],
         expectedFormula: "",
         seniority: 7 / 12,
       },
       {
-        age: 50,
+        age: 45,
         expectedExplanations: [
           "A : Ancienneté totale (≈ 1.08 an : valeur arrondie)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula: "1/5 * Sref * A",
         seniority: 13 / 12,
       },
       {
-        age: 50,
+        age: 45,
         expectedExplanations: [
           "A : Ancienneté totale (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula: "1/5 * Sref * A",
         seniority: 5,
       },
       {
-        age: 50,
+        age: 45,
         expectedExplanations: [
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula: "(1/5 * Sref * A1) + (2/5 * Sref * A2)",
         seniority: 10,
       },
       {
-        age: 55,
+        age: 45,
+        expectedExplanations: ["Sref : Salaire de référence (5000 €)"],
+        expectedFormula: "18 * Sref",
+        seniority: 50,
+      },
+      {
+        age: 50,
         expectedExplanations: [
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula: "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (1 * Sref)",
         seniority: 10,
+      },
+      {
+        age: 50,
+        expectedExplanations: ["Sref : Salaire de référence (5000 €)"],
+        expectedFormula: "19 * Sref",
+        seniority: 50,
       },
       {
         age: 56,
         expectedExplanations: [
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula: "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (2 * Sref)",
         seniority: 10,
+      },
+      {
+        age: 56,
+        expectedExplanations: ["Sref : Salaire de référence (5000 €)"],
+        expectedFormula: "20 * Sref",
+        seniority: 50,
+      },
+      {
+        age: 45,
+        expectedExplanations: [
+          "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
+          "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
+          "A3 : Ancienneté entre 10 et 15 ans (5 ans)",
+          "Sref : Salaire de référence (5000 €)",
+        ],
+        expectedFormula:
+          "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3)",
+        seniority: 15,
       },
       {
         age: 50,
@@ -157,19 +192,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
           "A3 : Ancienneté entre 10 et 15 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
-        ],
-        expectedFormula:
-          "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3)",
-        seniority: 15,
-      },
-      {
-        age: 55,
-        expectedExplanations: [
-          "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
-          "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
-          "A3 : Ancienneté entre 10 et 15 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula:
           "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3) + (1 * Sref)",
@@ -181,11 +204,24 @@ describe("Formule indemnité licenciement - CC 275", () => {
           "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
           "A3 : Ancienneté entre 10 et 15 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula:
           "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3) + (2 * Sref)",
         seniority: 15,
+      },
+      {
+        age: 45,
+        expectedExplanations: [
+          "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
+          "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
+          "A3 : Ancienneté entre 10 et 15 ans (5 ans)",
+          "A4 : Ancienneté au dela de 15 ans (5 ans)",
+          "Sref : Salaire de référence (5000 €)",
+        ],
+        expectedFormula:
+          "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3) + (1 * Sref * A4)",
+        seniority: 20,
       },
       {
         age: 50,
@@ -194,20 +230,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
           "A3 : Ancienneté entre 10 et 15 ans (5 ans)",
           "A4 : Ancienneté au dela de 15 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
-        ],
-        expectedFormula:
-          "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3) + (1 * Sref * A4)",
-        seniority: 20,
-      },
-      {
-        age: 55,
-        expectedExplanations: [
-          "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
-          "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
-          "A3 : Ancienneté entre 10 et 15 ans (5 ans)",
-          "A4 : Ancienneté au dela de 15 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula:
           "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3) + (1 * Sref * A4) + (1 * Sref)",
@@ -220,7 +243,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
           "A2 : Ancienneté entre 5 et 10 ans (5 ans)",
           "A3 : Ancienneté entre 10 et 15 ans (5 ans)",
           "A4 : Ancienneté au dela de 15 ans (5 ans)",
-          "Sref : Salaire de référence (1000 €)",
+          "Sref : Salaire de référence (5000 €)",
         ],
         expectedFormula:
           "(1/5 * Sref * A1) + (2/5 * Sref * A2) + (4/5 * Sref * A3) + (1 * Sref * A4) + (2 * Sref)",
@@ -240,7 +263,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             seniority.toString(),
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            "1000",
+            "5000",
         });
         const result = engine.getFormule();
         expect(result.formula).toEqual(expectedFormula);
