@@ -162,6 +162,11 @@ export const ui = {
         "infos.contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle"
       ),
     },
+    agreement2148: {
+      age: byTestId(
+        "infos.contrat salarié - convention collective - télécommunications - age"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),
