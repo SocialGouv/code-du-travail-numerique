@@ -20,7 +20,7 @@ describe("Formule pour l'indemnité conventionnel de licenciement pour la CC 675
         engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0675'",
-            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . salaire mensuel des 3 derniers mois":
               "2000",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -69,10 +69,10 @@ describe("Formule pour l'indemnité conventionnel de licenciement pour la CC 675
         engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0675'",
-            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . licenciement collectif question":
+            "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . agents . licenciement collectif question":
               isCollectifFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . agents . autres licenciement . age":
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . agents . autres licenciement . age":
               age,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
@@ -121,10 +121,10 @@ describe("Formule pour l'indemnité conventionnel de licenciement pour la CC 675
         engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0675'",
-            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . licenciement collectif question":
+            "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . licenciement collectif question":
               isCollectifFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle . cadres . autres licenciement . age":
+            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . autres licenciement . age":
               age,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
