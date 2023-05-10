@@ -29,7 +29,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
   remplace: préavis de retraite collective
   valeur: 4 mois
   références:
-    Article 4.6: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833
+    Article 4.6: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513841#KALIARTI000047513841
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . chargé d'enquête:
   applicable si: catégorie professionnelle = 'Chargés d'enquête intermittents'
