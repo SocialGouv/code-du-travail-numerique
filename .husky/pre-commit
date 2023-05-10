@@ -3,7 +3,7 @@
 
 yarn lerna run \
   --exclude-dependents \
-  --parallel 1 \
+  --parallel precommit \
   --since HEAD \
   --stream \
   ;
