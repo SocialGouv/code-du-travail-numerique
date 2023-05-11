@@ -1,4 +1,3 @@
-import type { OuiNon } from "@cdt/frontend/src/outils/IndemniteLicenciement/common";
 import type Engine from "publicodes";
 import type {
   Evaluation,
@@ -48,7 +47,7 @@ export interface NotificationRuleNode<Name extends string = string>
   extends PubliRuleNode<Name> {
   rawNode: PubliRule & {
     cdtn?: {
-      bloquante?: OuiNon;
+      bloquante?: "non" | "oui";
       affichage?: NotificationAffichage;
     };
   };
