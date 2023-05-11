@@ -22,7 +22,7 @@ export default function Agreement44Informations() {
         </li>
       )}
 
-      {hasVariablePay && hasVariablePay === "oui" && knowingLastSalary && (
+      {knowingLastSalary && (knowingLastSalary === "oui" || knowingLastSalary === "non") && (
         <li>
           Connaissance du montant du dernier salaire perçu&nbsp;:&nbsp;
           {knowingLastSalary === "oui" ? "Oui" : "Non"}
