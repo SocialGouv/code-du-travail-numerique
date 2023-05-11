@@ -1,5 +1,5 @@
 contrat salarié . convention collective . sedima . question cdi opération:
-  titre: CDI opération
+  titre: CDI d'opération
   question: Le contrat du salarié est-il un CDI d’opération&nbsp;?
   cdtn:
     type: oui-non
@@ -60,7 +60,9 @@ contrat salarié . convention collective . sedima . cdi classique . ancienneté 
 contrat salarié . convention collective . sedima . cdi classique . ancienneté au-delà de 10 ans . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
-  valeur: indemnité
+  somme:
+    - ancienneté jusqu'à 10 ans . indemnité
+    - ancienneté au-delà de 10 ans . indemnité
   unité: €
   arrondi: 2 décimales
   références:
@@ -81,8 +83,7 @@ contrat salarié . convention collective . sedima . cdi opération:
   valeur: oui
 
 contrat salarié . convention collective . sedima . cdi opération . question mission impossible:
-  titre: Mission ne peut pas se réaliser
-  description: Le salarié est-il licencié car la mission prévue ne peut pas se réaliser ou car un obstacle empêche la poursuite de la mission
+  titre: Licenciement car la mission ne peut pas se réaliser ou un obstacle empêche sa poursuite
   question: Le salarié est-il licencié car la mission prévue ne peut pas se réaliser ou car un obstacle empêche la poursuite de la mission&nbsp;?
   cdtn:
     type: oui-non
@@ -94,13 +95,13 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
 
 contrat salarié . convention collective . sedima . cdi opération . mission possible . durée:
   titre: durée du CDI d'opération
-  question: Quelle est la durée du CDI d'opération ?
+  question: Pendant combien de temps le salarié a-t-il été en CDI d'opération (en mois) ?
   unité: mois
   cdtn:
     type: question
 
 contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année:
-  titre: Total des salaires perçus pendant la 1ère année du contrat
+  titre: Total des salaires bruts perçus pendant la 1ère année du contrat
   question: Indiquez le total des salaires bruts perçus pendant la 1ère année du contrat (du 1er au 12ème mois de contrat)
   unité: €
   cdtn:
@@ -126,7 +127,7 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
 
 contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année:
   applicable si: durée > 12
-  titre: Total des salaires perçus pendant la 2ème année du contrat
+  titre: Total des salaires bruts perçus pendant la 2ème année du contrat
   question: Indiquez le total des salaires bruts perçus pendant la 2ème année du contrat (du 13ème au 24ème mois de contrat)
   unité: €
   cdtn:
@@ -154,7 +155,7 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
 
 contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 3e année et plus:
   applicable si: durée > 24
-  titre: Total des salaires perçus pendant la 3ème année du contrat et plus
+  titre: Total des salaires bruts perçus de la 3ème année jusqu'à la fin du contrat
   question: Indiquez le total des salaires bruts perçus du 25ème mois de contrat jusqu'à la fin du contrat (préavis inclus)
   unité: €
   cdtn:
@@ -186,14 +187,14 @@ contrat salarié . convention collective . sedima . cdi opération . mission imp
   valeur: oui
 
 contrat salarié . convention collective . sedima . cdi opération . mission impossible . question période essai:
-  titre: Licencié avant fin de Période d'essai
+  titre: Salarié licencié avant la fin de la période d'essai
   description: Répondre non si le salarié n'a pas de période d'essai
   question: Le salarié est-il licencié avant la fin de sa période d’essai&nbsp;?
   cdtn:
     type: oui-non
 
 contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total:
-  titre: Total des salaires perçus
+  titre: Total des salaires bruts perçus
   question: Indiquez le total des salaires bruts perçus depuis le début du contrat
   description: Total des salaires perçus
   unité: €
@@ -201,12 +202,11 @@ contrat salarié . convention collective . sedima . cdi opération . mission imp
     type: montant
 
 contrat salarié . convention collective . sedima . cdi opération . mission impossible . résultat conventionnel:
-  applicable si:
-    toutes ces conditions:
-      - question période essai = 'Non'
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 6 mois
+  variations:
+    - si: question période essai = 'Non'
+      alors: (10 / 100) * salaires total
+    - sinon: 0
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  valeur: (10 / 100) * salaires total
   unité: €
   arrondi: 2 décimales
   références:

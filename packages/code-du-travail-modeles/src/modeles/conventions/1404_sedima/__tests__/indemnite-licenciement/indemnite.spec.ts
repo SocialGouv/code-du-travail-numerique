@@ -10,6 +10,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
     test.each`
       seniorityRight | seniority | salaireRef | expectedCompensation
       ${8 / 12}      | ${8 / 12} | ${2400}    | ${400}
+      ${20.58}       | ${20.58}  | ${1896}    | ${11426.56}
     `(
       "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
       ({ seniorityRight, salaireRef, expectedCompensation, seniority }) => {
@@ -37,18 +38,23 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
   describe("CDI opération", () => {
     describe("Mission impossible", () => {
       test.each`
-        seniorityRight | seniority | salaireRef | expectedCompensation
-        ${0.25}        | ${0.25}   | ${7749}    | ${774.9}
-        ${0.41}        | ${0.41}   | ${12280}   | ${1228}
-        ${0.67}        | ${0.67}   | ${20136}   | ${0}
+        seniorityRight | seniority | salaireRef | expectedCompensation | beforeTrial
+        ${0.67}        | ${0.67}   | ${20136}   | ${0}                 | ${"'Oui'"}
+        ${0.67}        | ${0.67}   | ${20136}   | ${2013.6}            | ${"'Non'"}
       `(
         "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
-        ({ seniorityRight, salaireRef, expectedCompensation, seniority }) => {
+        ({
+          seniorityRight,
+          salaireRef,
+          expectedCompensation,
+          seniority,
+          beforeTrial,
+        }) => {
           const { missingArgs, result } = engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC1404'",
               "contrat salarié . convention collective . sedima . cdi opération . mission impossible . question période essai":
-                "'Non'",
+                beforeTrial,
               "contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total":
                 salaireRef,
               "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":

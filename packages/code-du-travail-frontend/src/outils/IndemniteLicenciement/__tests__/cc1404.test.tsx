@@ -71,13 +71,13 @@ describe("Indemnité licenciement - CC 1404", () => {
         userEvent.click(ui.information.agreement1404.trial.oui.get());
         userEvent.click(ui.next.get());
         fireEvent.change(ui.seniority.startDate.get(), {
-          target: { value: "01/01/2000" },
-        });
-        fireEvent.change(ui.seniority.notificationDate.get(), {
           target: { value: "01/01/2022" },
         });
+        fireEvent.change(ui.seniority.notificationDate.get(), {
+          target: { value: "01/04/2022" },
+        });
         fireEvent.change(ui.seniority.endDate.get(), {
-          target: { value: "01/03/2022" },
+          target: { value: "01/05/2022" },
         });
         fireEvent.click(ui.seniority.hasAbsence.non.get());
         fireEvent.click(ui.next.get());
@@ -90,13 +90,13 @@ describe("Indemnité licenciement - CC 1404", () => {
         });
         userEvent.click(ui.next.get());
         fireEvent.change(ui.seniority.startDate.get(), {
-          target: { value: "01/01/2000" },
-        });
-        fireEvent.change(ui.seniority.notificationDate.get(), {
           target: { value: "01/01/2022" },
         });
+        fireEvent.change(ui.seniority.notificationDate.get(), {
+          target: { value: "01/04/2022" },
+        });
         fireEvent.change(ui.seniority.endDate.get(), {
-          target: { value: "01/03/2022" },
+          target: { value: "01/05/2022" },
         });
         fireEvent.click(ui.seniority.hasAbsence.non.get());
         fireEvent.click(ui.next.get());
