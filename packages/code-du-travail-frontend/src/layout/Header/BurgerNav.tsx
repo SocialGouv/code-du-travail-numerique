@@ -10,12 +10,19 @@ import styled from "styled-components";
 
 import { AccessibilityModal } from "../../common/AccessibilityModal";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
+import { MatomoBaseEvent, MatomoHeaderEvent } from "../../lib";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 export const SUB_MENU_HEIGHT = "5.5rem";
 type Props = {
   currentPage: string;
 };
 const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
+
+  const onSendMatomoEvent = (eventName: MatomoHeaderEvent) => {
+    matopush([MatomoBaseEvent.TRACK_EVENT, MatomoBaseEvent.HEADER, eventName]);
+  }
+
   return (
     <StyledBurgerNav>
       <Nav id="navigation" aria-label="Navigation du site">
@@ -29,7 +36,7 @@ const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
           </LiMobileOnly>
           <Li>
             <Link href="/outils" passHref legacyBehavior>
-              <NavAnchor isCurrent={currentPage === "tools"}>
+              <NavAnchor isCurrent={currentPage === "tools"} onClick={() => onSendMatomoEvent(MatomoHeaderEvent.CLICK_BOITE_A_OUTILS)}>
                 Boîte&nbsp;à&nbsp;outils
               </NavAnchor>
             </Link>
@@ -40,7 +47,7 @@ const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
               passHref
               legacyBehavior
             >
-              <NavAnchor isCurrent={currentPage === SOURCES.LETTERS}>
+              <NavAnchor isCurrent={currentPage === SOURCES.LETTERS} onClick={() => onSendMatomoEvent(MatomoHeaderEvent.CLICK_MODELE_DE_DOCUMENTS)}>
                 Modèles de documents
               </NavAnchor>
             </Link>
@@ -51,7 +58,7 @@ const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
               passHref
               legacyBehavior
             >
-              <NavAnchor isCurrent={currentPage === SOURCES.CONTRIBUTIONS}>
+              <NavAnchor isCurrent={currentPage === SOURCES.CONTRIBUTIONS} onClick={() => onSendMatomoEvent(MatomoHeaderEvent.CLICK_FICHES_PRATIQUES)}>
                 Vos fiches pratiques
               </NavAnchor>
             </Link>
@@ -62,14 +69,14 @@ const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
               passHref
               legacyBehavior
             >
-              <NavAnchor isCurrent={currentPage === SOURCES.CCN}>
+              <NavAnchor isCurrent={currentPage === SOURCES.CCN} onClick={() => onSendMatomoEvent(MatomoHeaderEvent.CLICK_CONVENTION_COLLECTIVE)}>
                 Votre convention collective
               </NavAnchor>
             </Link>
           </Li>
           <Li>
             <Link href="/themes" passHref legacyBehavior>
-              <NavAnchor isCurrent={currentPage === "themes"}>Thèmes</NavAnchor>
+              <NavAnchor isCurrent={currentPage === "themes"} onClick={() => onSendMatomoEvent(MatomoHeaderEvent.CLICK_THEMES)}>Thèmes</NavAnchor>
             </Link>
           </Li>
         </Ul>

@@ -41,11 +41,7 @@ export const SearchAgreementInput = ({
   const onSearch = async ({ value }) => {
     setQuery(value);
   };
-  const focusInput = (autoSuggest) => {
-    if (autoSuggest) {
-      autoSuggest.input?.focus();
-    }
-  };
+
   const onSelect = async (event, data) => {
     event.preventDefault();
     onSelectAgreement(data.suggestion);
@@ -86,7 +82,6 @@ export const SearchAgreementInput = ({
       </InfoBulle>
 
       <Autosuggest
-        ref={focusInput}
         theme={suggesterTheme}
         suggestions={state.data ?? []}
         alwaysRenderSuggestions={false}

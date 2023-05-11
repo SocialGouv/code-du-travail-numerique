@@ -9,6 +9,7 @@ import { StoreApi } from "zustand";
 import { MainStore } from "../../store";
 import { AgreementSeniority16 } from "./16";
 import { AgreementSeniority413 } from "./413";
+import { AgreementSeniority1672 } from "./1672";
 
 export const getAgreementSeniority = (
   idcc: SupportedCcIndemniteLicenciement | null,
@@ -22,6 +23,11 @@ export const getAgreementSeniority = (
   switch (true) {
     case SupportedCcIndemniteLicenciement.IDCC0016 === idcc:
       return new AgreementSeniority16().computeSeniority({
+        ...defaultValues,
+        get,
+      });
+    case SupportedCcIndemniteLicenciement.IDCC1672 === idcc:
+      return new AgreementSeniority1672().computeSeniority({
         ...defaultValues,
         get,
       });
