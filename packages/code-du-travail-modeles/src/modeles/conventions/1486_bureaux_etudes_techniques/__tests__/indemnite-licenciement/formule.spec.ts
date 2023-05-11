@@ -36,7 +36,7 @@ describe("Formule indemnité licenciement - 1486", () => {
     );
   });
 
-  describe("Pour un Autre Licenciement", () => {
+  describe("Pour un Autre Licenciement (anciennes règles)", () => {
     test.each`
       category                    | seniority | expectedFormula      | expectedExplanations
       ${CatPro1486.ingeCadre}     | ${0}      | ${""}                | ${[]}
@@ -63,6 +63,51 @@ describe("Formule indemnité licenciement - 1486", () => {
           "contrat salarié . convention collective": "'IDCC1486'",
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${TypeLicenciement1486.autre}'`,
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
+            "oui",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
+        });
+
+        const result = engine.getFormule();
+
+        expect(result.formula).toEqual(expectedFormula);
+        expect(result.explanations).toEqual(expectedExplanations);
+      }
+    );
+  });
+
+  describe("Pour un Autre Licenciement", () => {
+    test.each`
+      category                    | seniority | expectedFormula                            | expectedExplanations
+      ${CatPro1486.ingeCadre}     | ${0}      | ${""}                                      | ${[]}
+      ${CatPro1486.ingeCadre}     | ${7 / 12} | ${""}                                      | ${[]}
+      ${CatPro1486.ingeCadre}     | ${8 / 12} | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.ingeCadre}     | ${2}      | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.ingeCadre}     | ${10}     | ${"(1/4 * Sref * A1) + (1/3 * Sref * A2)"} | ${["A1 : Ancienneté de 2 ans ou moins (2 ans)", "A2 : Ancienneté au-delà de 2 ans (8 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.chargeEnquete} | ${0}      | ${""}                                      | ${[]}
+      ${CatPro1486.chargeEnquete} | ${1.99}   | ${""}                                      | ${[]}
+      ${CatPro1486.chargeEnquete} | ${2}      | ${"1/5 * Sref * A"}                        | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.chargeEnquete} | ${19}     | ${"1/5 * Sref * A"}                        | ${["A : Ancienneté totale (19 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.chargeEnquete} | ${99}     | ${"7 * Sref"}                              | ${["Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.etam}          | ${0}      | ${""}                                      | ${[]}
+      ${CatPro1486.etam}          | ${7 / 12} | ${""}                                      | ${[]}
+      ${CatPro1486.etam}          | ${8 / 12} | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.etam}          | ${10}     | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (10 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.etam}          | ${15}     | ${"(1/4 * Sref * A1) + (1/3 * Sref * A2)"} | ${["A1 : Ancienneté de 10 ans ou moins (10 ans)", "A2 : Ancienneté au-delà de 10 ans (5 ans)", "Sref : Salaire de référence (1000 €)"]}
+    `(
+      "Formule $expectedFormula avec $seniority ans, catégorie $category",
+      ({ category, seniority, expectedFormula, expectedExplanations }) => {
+        engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC1486'",
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${TypeLicenciement1486.autre}'`,
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
+            "non",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":

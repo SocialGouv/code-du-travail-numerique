@@ -23,6 +23,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
           {
             "contrat salarié . convention collective": "'IDCC1486'",
             "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${TypeLicenciement1486.refus}'`,
+            "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
+              "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -40,6 +42,64 @@ describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
   });
 
   describe("Pour un Autre licenciement", () => {
+    test.each`
+      category                    | seniorityRight | seniority | salary  | expectedCompensation
+      ${CatPro1486.ingeCadre}     | ${0}           | ${0}      | ${2000} | ${0}
+      ${CatPro1486.ingeCadre}     | ${7 / 12}      | ${8 / 12} | ${2000} | ${0}
+      ${CatPro1486.ingeCadre}     | ${8 / 12}      | ${8 / 12} | ${2000} | ${333.33}
+      ${CatPro1486.ingeCadre}     | ${8 / 12}      | ${2}      | ${2000} | ${1000}
+      ${CatPro1486.ingeCadre}     | ${8 / 12}      | ${10}     | ${2000} | ${6333.33}
+      ${CatPro1486.chargeEnquete} | ${0}           | ${0}      | ${2000} | ${0}
+      ${CatPro1486.chargeEnquete} | ${1.99}        | ${1.99}   | ${2000} | ${0}
+      ${CatPro1486.chargeEnquete} | ${1.99}        | ${2}      | ${2000} | ${0}
+      ${CatPro1486.chargeEnquete} | ${2}           | ${2}      | ${2000} | ${800}
+      ${CatPro1486.chargeEnquete} | ${2}           | ${19}     | ${2000} | ${7600}
+      ${CatPro1486.chargeEnquete} | ${2}           | ${99}     | ${2000} | ${14000}
+      ${CatPro1486.chargeEnquete} | ${2}           | ${100}    | ${2000} | ${14000}
+      ${CatPro1486.etam}          | ${0}           | ${0}      | ${2000} | ${0}
+      ${CatPro1486.etam}          | ${7 / 12}      | ${8 / 12} | ${2000} | ${0}
+      ${CatPro1486.etam}          | ${8 / 12}      | ${8 / 12} | ${2000} | ${333.33}
+      ${CatPro1486.etam}          | ${8 / 12}      | ${10}     | ${2000} | ${5000}
+      ${CatPro1486.etam}          | ${8 / 12}      | ${15}     | ${2000} | ${8333.33}
+      ${CatPro1486.etam}          | ${8 / 12}      | ${20}     | ${2000} | ${11666.67}
+      ${CatPro1486.chargeEnquete} | ${1.41}        | ${1.41}   | ${6525} | ${0}
+      ${CatPro1486.chargeEnquete} | ${1.99}        | ${2}      | ${6525} | ${0}
+      ${CatPro1486.chargeEnquete} | ${2}           | ${2}      | ${6525} | ${2610}
+      ${CatPro1486.chargeEnquete} | ${2}           | ${2.08}   | ${6525} | ${2714.4}
+      ${CatPro1486.chargeEnquete} | ${2}           | ${20}     | ${6525} | ${26100}
+    `(
+      "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category => $expectedCompensation €",
+      ({
+        seniority,
+        seniorityRight,
+        salary,
+        category,
+        expectedCompensation,
+      }) => {
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC1486'",
+            "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'Non'`,
+            "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
+              "non",
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniorityRight,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        expect(missingArgs).toEqual([]);
+        expect(result.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+      }
+    );
+  });
+
+  describe("Pour un Autre licenciement (ancienne méthode de calcul)", () => {
     test.each`
       category                    | seniorityRight | seniority | salary    | expectedCompensation
       ${CatPro1486.ingeCadre}     | ${0}           | ${0}      | ${2000}   | ${0}
@@ -96,6 +156,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
             "contrat salarié . convention collective": "'IDCC1486'",
             "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'Non'`,
             "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
+              "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":

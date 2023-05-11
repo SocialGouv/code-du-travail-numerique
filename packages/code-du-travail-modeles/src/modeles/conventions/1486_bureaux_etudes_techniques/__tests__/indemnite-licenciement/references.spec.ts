@@ -5,6 +5,12 @@ const engine = new IndemniteLicenciementPublicodes(
   modelsIndemniteLicenciement,
   "1486"
 );
+const refEtamOuInge = [
+  {
+    article: "Article 4.5 Avenant n°46",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513839?idConteneur=KALICONT000005635173#KALIARTI000047513839",
+  },
+];
 
 const refEtamMoins20OuInge = [
   {
@@ -64,6 +70,47 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
   describe("Cas standard", () => {
     test.each`
       category                    | typeLicenciement              | seniority | salary  | expectedReferences
+      ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refEtamOuInge}
+      ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refChargeEnquete}
+      ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refEtamOuInge}
+      ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${25}     | ${2000} | ${refEtamOuInge}
+      ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.refus} | ${10}     | ${2000} | ${refRefus}
+      ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${10}     | ${2000} | ${refRefus}
+      ${CatPro1486.etam}          | ${TypeLicenciement1486.refus} | ${10}     | ${2000} | ${refRefus}
+    `(
+      "ancienneté: $seniority an, salaire de référence: $salary, type de licenciement $typeLicenciement, catégorie $category => $expectedReferences",
+      ({
+        seniority,
+        salary,
+        expectedReferences,
+        category,
+        typeLicenciement,
+      }) => {
+        engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC1486'",
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${typeLicenciement}'`,
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
+            "non",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            salary,
+        });
+
+        const result = engine.getReferences("résultat conventionnel");
+
+        expect(result).toHaveLength(expectedReferences.length);
+        expect(result).toEqual(expect.arrayContaining(expectedReferences));
+      }
+    );
+  });
+
+  describe("Cas standard (anciennes règles)", () => {
+    test.each`
+      category                    | typeLicenciement              | seniority | salary  | expectedReferences
       ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refEtamMoins20OuInge}
       ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refChargeEnquete}
       ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refEtamMoins20OuInge}
@@ -84,6 +131,8 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective": "'IDCC1486'",
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${typeLicenciement}'`,
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
+            "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
