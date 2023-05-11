@@ -1,6 +1,6 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
-import { validateStep } from "./validator";
+import { isValidField, validateStep } from "./validator";
 
 import {
   CommonInformationsStoreData,
@@ -8,7 +8,7 @@ import {
   PublicodesInformation,
 } from "./types";
 import { StoreSlice } from "../../../types";
-import { MissingArgs, CatPro3239 } from "@socialgouv/modeles-social";
+import { CatPro3239, MissingArgs } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
@@ -79,9 +79,9 @@ const createCommonInformationsStore: StoreSlice<
         })
       );
     },
-    onInformationsChange: (key, value) => {
-      const publicodes = get().agreementData.publicodes!;
-      const agreement = get().agreementData.input.agreement!;
+    onInformationsChange: (key, value, type) => {
+      let newPublicodesInformationsForNextQuestions: PublicodesInformation[];
+      let hasNoMissingQuestions = false;
       const publicodesInformations =
         get().informationsData.input.publicodesInformations;
       const questionAnswered = publicodesInformations.find(
@@ -102,56 +102,62 @@ const createCommonInformationsStore: StoreSlice<
           (el) => el.order < questionAnswered.order
         ),
       ].sort((a, b) => a.order - b.order);
-      const rules = informationToSituation(newPublicodesInformations);
-      let missingArgs: MissingArgs[] = [];
-      let blockingNotification: string | undefined = undefined;
-      try {
-        missingArgs = publicodes
-          .setSituation(
-            mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-              agreement.num,
-              rules
-            ),
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          )
-          .missingArgs.filter((item) => item.rawNode.cdtn);
-        const notifBloquante = publicodes.getNotificationsBloquantes();
-        if (notifBloquante.length > 0) {
-          blockingNotification = notifBloquante[0].description;
+      if (isValidField(value, type) === undefined) {
+        const publicodes = get().agreementData.publicodes!;
+        const agreement = get().agreementData.input.agreement!;
+        const rules = informationToSituation(newPublicodesInformations);
+        let missingArgs: MissingArgs[] = [];
+        let blockingNotification: string | undefined = undefined;
+        try {
+          missingArgs = publicodes
+            .setSituation(
+              mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+                agreement.num,
+                rules
+              ),
+              "contrat salarié . indemnité de licenciement . résultat conventionnel"
+            )
+            .missingArgs.filter((item) => item.rawNode.cdtn);
+          const notifBloquante = publicodes.getNotificationsBloquantes();
+          if (notifBloquante.length > 0) {
+            blockingNotification = notifBloquante[0].description;
+          }
+        } catch (e) {
+          console.error(e);
         }
-      } catch (e) {
-        console.error(e);
-      }
-      set(
-        produce((state: CommonInformationsStoreSlice) => {
-          state.informationsData.input.blockingNotification =
-            blockingNotification;
-        })
-      );
-      const newQuestions = missingArgs
-        .sort((a, b) => b.indice - a.indice)
-        .map((arg, index) => ({
-          question: {
-            name: arg.name,
-            rule: arg.rawNode,
-          },
-          order: questionAnswered.order + index + 1,
-          info: undefined,
-          id: Math.random().toString(36).substring(2, 15),
-        }))[0];
-      let newPublicodesInformationsForNextQuestions: PublicodesInformation[];
-      if (missingArgs.length === 0) {
-        newPublicodesInformationsForNextQuestions =
-          newPublicodesInformations.filter(
-            (el) => el.order <= questionAnswered.order
-          );
+        set(
+          produce((state: CommonInformationsStoreSlice) => {
+            state.informationsData.input.blockingNotification =
+              blockingNotification;
+          })
+        );
+        const newQuestions = missingArgs
+          .sort((a, b) => b.indice - a.indice)
+          .map((arg, index) => ({
+            question: {
+              name: arg.name,
+              rule: arg.rawNode,
+            },
+            order: questionAnswered.order + index + 1,
+            info: undefined,
+            id: Math.random().toString(36).substring(2, 15),
+          }))[0];
+        if (missingArgs.length === 0) {
+          newPublicodesInformationsForNextQuestions =
+            newPublicodesInformations.filter(
+              (el) => el.order <= questionAnswered.order
+            );
+        } else {
+          newPublicodesInformationsForNextQuestions = removeDuplicateObject(
+            [newQuestions, ...newPublicodesInformations].sort(
+              (a, b) => a.order - b.order
+            ),
+            "order"
+          ) as PublicodesInformation[];
+        }
+        hasNoMissingQuestions = missingArgs.length === 0;
       } else {
-        newPublicodesInformationsForNextQuestions = removeDuplicateObject(
-          [newQuestions, ...newPublicodesInformations].sort(
-            (a, b) => a.order - b.order
-          ),
-          "order"
-        ) as PublicodesInformation[];
+        newPublicodesInformationsForNextQuestions = newPublicodesInformations;
       }
       applyGenericValidation(
         get,
@@ -163,7 +169,7 @@ const createCommonInformationsStore: StoreSlice<
         get,
         set,
         "hasNoMissingQuestions",
-        missingArgs.length === 0
+        hasNoMissingQuestions
       );
     },
     onSetStepHidden: () => {

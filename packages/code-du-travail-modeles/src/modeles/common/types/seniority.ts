@@ -2,6 +2,7 @@ import type {
   CC0016SeniorityProps,
   CC0413SeniorityProps,
 } from "../../conventions";
+import type { CC1672SeniorityProps } from "../../conventions/1672_societes_assurances/seniority";
 import type { MotifKeys } from "../motif-keys";
 import type {
   DefaultSeniorityProps,
@@ -42,6 +43,8 @@ export type SeniorityProps<T> =
     ? CC0016SeniorityProps
     : T extends SupportedCcIndemniteLicenciement.IDCC413
     ? CC0413SeniorityProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC1672
+    ? CC1672SeniorityProps
     : DefaultSeniorityProps;
 
 export type SeniorityResult = {

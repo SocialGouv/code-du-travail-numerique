@@ -61,7 +61,7 @@ export default function FilledElements(props: Props) {
                     * Le salarié ayant été licencié pour inaptitude suite à un
                     accident du travail ou une maladie professionnelle reconnue,
                     le montant de l&apos;indemnité de licenciement légale est
-                    doublée
+                    doublé
                   </i>
                 </>
               )}

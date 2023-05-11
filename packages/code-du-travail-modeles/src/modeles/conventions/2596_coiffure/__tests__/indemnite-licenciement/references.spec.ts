@@ -14,12 +14,12 @@ describe("Vérification des références juridiques pour la CC 2511", () => {
   `("pour un cadre avec une ancienneté de $seniority mois", ({ seniority }) => {
     engine.setSituation({
       "contrat salarié . convention collective": "'IDCC2596'",
+      "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle":
+        "'Cadres'",
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
         seniority,
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
         seniority,
-      "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle":
-        "'Cadres'",
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
         "1000",
     });
@@ -44,12 +44,12 @@ describe("Vérification des références juridiques pour la CC 2511", () => {
     ({ seniority }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2596'",
+        "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle":
+          "'Emplois techniques et de coiffeurs'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           seniority,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           seniority,
-        "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle":
-          "'Emplois techniques et de coiffeurs'",
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
       });

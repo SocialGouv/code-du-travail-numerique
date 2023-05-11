@@ -49,6 +49,7 @@ const initialState: ResultStoreData = {
     legalReferences: [],
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
+    isAgreementEqualToLegal: false,
     isEligible: false,
   },
   error: {},
@@ -56,7 +57,7 @@ const initialState: ResultStoreData = {
   isStepValid: true,
 };
 
-const isConventionnelBetter = (
+const isAgreementBetterDetection = (
   publicodesSituationLegal: PublicodesIndemniteLicenciementResult,
   publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult
 ) =>
@@ -65,6 +66,16 @@ const isConventionnelBetter = (
   publicodesSituationConventionnel.value !== undefined &&
   publicodesSituationConventionnel.value !== null &&
   publicodesSituationConventionnel.value > publicodesSituationLegal.value;
+
+const isAgreementSameDetection = (
+  publicodesSituationLegal: PublicodesIndemniteLicenciementResult,
+  publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult
+) =>
+  publicodesSituationLegal.value !== undefined &&
+  publicodesSituationLegal.value !== null &&
+  publicodesSituationConventionnel.value !== undefined &&
+  publicodesSituationConventionnel.value !== null &&
+  publicodesSituationConventionnel.value === publicodesSituationLegal.value;
 
 const createResultStore: StoreSlice<
   ResultStoreSlice,
@@ -183,6 +194,7 @@ const createResultStore: StoreSlice<
       let agreementReferences: References[];
       let agreementFormula: Formula;
       let isAgreementBetter = false;
+      let isAgreementEqualToLegal = false;
       let agreementInformations: AgreementInformation[];
       let agreementNotifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
@@ -250,13 +262,22 @@ const createResultStore: StoreSlice<
 
         if (
           agreementHasNoLegalIndemnity ||
-          (isConventionnelBetter(
+          (isAgreementBetterDetection(
             publicodesSituationLegal,
             publicodesSituationConventionnel
           ) &&
             isAgreementSupported)
         ) {
           isAgreementBetter = true;
+        }
+        if (
+          isAgreementSameDetection(
+            publicodesSituationLegal,
+            publicodesSituationConventionnel
+          ) &&
+          isAgreementSupported
+        ) {
+          isAgreementEqualToLegal = true;
         }
       }
 
@@ -273,6 +294,8 @@ const createResultStore: StoreSlice<
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
+          state.resultData.input.isAgreementEqualToLegal =
+            isAgreementEqualToLegal;
           state.resultData.input.agreementInformations = agreementInformations;
           state.resultData.input.agreementNotifications =
             agreementNotifications;

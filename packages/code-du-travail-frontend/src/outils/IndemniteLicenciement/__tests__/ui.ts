@@ -25,7 +25,7 @@ export const ui = {
     },
     inaptitude: {
       question: byText(
-        "Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?"
+        "Le licenciement fait-il suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue) ?"
       ),
       oui: byTestId("licenciementInaptitude - Oui"),
       non: byTestId("licenciementInaptitude - Non"),
@@ -201,6 +201,19 @@ export const ui = {
       },
       salaryTotal: byTestId(
         "infos.contrat salarié - convention collective - sedima - cdi opération - mission impossible - salaires total"
+      ),
+    },
+    agreement2148: {
+      age: byTestId(
+        "infos.contrat salarié - convention collective - télécommunications - age"
+      ),
+    },
+    agreement1672: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+      ),
+      age: byTestId(
+        "infos.contrat salarié - convention collective - sociétés d'assurances - age"
       ),
     },
   },

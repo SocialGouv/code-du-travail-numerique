@@ -20,6 +20,7 @@ type Props = {
     slug: string;
     title: string;
   }>;
+  triggerOnClick?: () => void;
 };
 
 export const Tools = (props: Props) => {
@@ -56,7 +57,7 @@ export const Tools = (props: Props) => {
             }
           )}
         </Grid>
-        <HomeButtonTrigger name="Voir tous les outils" link="/outils" />
+        <HomeButtonTrigger name="Voir tous les outils" link="/outils" onClick={props.triggerOnClick} />
       </Container>
     </Section>
   );
