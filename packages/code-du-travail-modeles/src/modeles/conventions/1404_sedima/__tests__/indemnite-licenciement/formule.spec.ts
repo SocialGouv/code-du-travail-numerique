@@ -77,8 +77,10 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
           seniorityRight: 0.41,
         },
         {
-          expectedExplanations: [],
-          expectedFormula: "",
+          expectedExplanations: [
+            "Sref : Salaire brut versé depuis l'engagement hors congés payés (3000 €)",
+          ],
+          expectedFormula: "(10% * Sref)",
           seniority: 0.67,
           seniorityRight: 0.67,
         },
