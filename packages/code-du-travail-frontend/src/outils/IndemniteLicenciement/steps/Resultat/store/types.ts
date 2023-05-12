@@ -19,6 +19,7 @@ export type ResultStoreInput = {
   legalReferences: References[];
   agreementReferences?: References[];
   isAgreementBetter: boolean;
+  isAgreementEqualToLegal: boolean;
   agreementInformations?: AgreementInformation[];
   agreementNotifications?: Notification[];
   agreementHasNoLegalIndemnity?: boolean;

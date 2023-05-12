@@ -1,6 +1,9 @@
 module.exports = {
   roots: ["<rootDir>/src"],
-  setupFilesAfterEnv: ["./jest.setup.ts"],
+  setupFilesAfterEnv: [
+    "./src/__test__/common/publicode-matcher.ts",
+    "./jest.setup.ts",
+  ],
   testMatch: [
     "**/__tests__/**/*.+(ts|tsx|js)",
     "**/?(*.)+(spec|test).+(ts|tsx|js)",
