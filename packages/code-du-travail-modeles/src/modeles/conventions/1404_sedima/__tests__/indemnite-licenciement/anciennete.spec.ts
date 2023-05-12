@@ -9,8 +9,8 @@ describe("CC 1404", () => {
     test.each`
       absences                                                             | entryDate       | exitDate        | expectedAnciennete
       ${[]}                                                                | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
-      ${[{ durationInMonth: 1, motif: { key: MotifKeys.maladieNonPro } }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${11 / 12}
-      ${[{ durationInMonth: 5, motif: { key: MotifKeys.maladieNonPro } }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${9 / 12}
+      ${[{ durationInMonth: 1, motif: { key: MotifKeys.maladieNonPro } }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
+      ${[{ durationInMonth: 5, motif: { key: MotifKeys.maladieNonPro } }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${7 / 12}
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {

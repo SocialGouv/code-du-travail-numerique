@@ -46,29 +46,29 @@ export class Seniority1404
     const dSortie = addDays(parseDate(to), 1);
 
     const { total: totalAbsence } = absences.reduce(
-      ({ total, totalMaladieNonPro }, item) => {
+      ({ total, durationMaladieNonPro }, item) => {
         const m = this.getMotifs().find(
           (motif) => motif.key === item.motif.key
         );
         if (item.durationInMonth === undefined || !m) {
-          return { total, totalMaladieNonPro };
+          return { durationMaladieNonPro, total };
         }
         if (item.motif.key === MotifKeys.maladieNonPro) {
-          const value = item.motif.value + totalMaladieNonPro;
-          if (value > 3) {
+          const duration = (item.durationInMonth || 0) + durationMaladieNonPro;
+          if (duration > 3) {
             return {
-              total: total + value,
-              totalMaladieNonPro: value,
+              durationMaladieNonPro: duration,
+              total: total + duration,
             };
           }
-          return { total, totalMaladieNonPro: value };
+          return { durationMaladieNonPro: duration, total };
         }
         return {
+          durationMaladieNonPro,
           total: total + item.durationInMonth * m.value,
-          totalMaladieNonPro,
         };
       },
-      { total: 0, totalMaladieNonPro: 0 }
+      { durationMaladieNonPro: 0, total: 0 }
     );
 
     return {
