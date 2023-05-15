@@ -6,7 +6,7 @@ describe("Calcul du salaire pour la CC 1516", () => {
     salaires: [{ month: "janvier", value: 2000 }],
   };
 
-  const MULTIPLE_SALAIRES_1 = {
+  const SALAIRES_3_MOIS = {
     salaires: [
       { month: "janvier", value: 2000 },
       { month: "février", value: 3000 },
@@ -14,7 +14,7 @@ describe("Calcul du salaire pour la CC 1516", () => {
     ],
   };
 
-  const MULTIPLE_SALAIRES_2 = {
+  const SALAIRES_9_MOIS = {
     salaires: [
       { month: "septembre", value: 1000 },
       { month: "aout", value: 1000 },
@@ -27,7 +27,7 @@ describe("Calcul du salaire pour la CC 1516", () => {
       { month: "janvier", value: 3600 },
     ],
   };
-  const MULTIPLE_SALAIRES_3 = {
+  const SALAIRES_1_AN_AVEC_PRIME = {
     salaires: [
       { month: "janvier", value: 3010 },
       { month: "février", value: 2830 },
@@ -45,11 +45,11 @@ describe("Calcul du salaire pour la CC 1516", () => {
   };
 
   test.each`
-    salaires               | expectedSalary
-    ${UN_SALAIRE}          | ${2000}
-    ${MULTIPLE_SALAIRES_1} | ${7000}
-    ${MULTIPLE_SALAIRES_2} | ${11600}
-    ${MULTIPLE_SALAIRES_3} | ${36048}
+    salaires                    | expectedSalary
+    ${UN_SALAIRE}               | ${2000}
+    ${SALAIRES_3_MOIS}          | ${7000}
+    ${SALAIRES_9_MOIS}          | ${11600}
+    ${SALAIRES_1_AN_AVEC_PRIME} | ${36048}
   `("$# $expectedSalary €", ({ salaires, expectedSalary }) => {
     expect(ReferenceSalary.computeReferenceSalary(salaires)).toEqual(
       expectedSalary
