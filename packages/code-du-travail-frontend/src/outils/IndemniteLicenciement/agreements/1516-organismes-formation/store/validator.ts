@@ -30,17 +30,18 @@ export const validateAgreement1516 = (
 export const validateStep = (state: Agreement1516StoreInput) => {
   let errorState: Agreement1516StoreError = {
     errorHasReceivedSalaries: undefined,
-    errorSalaryPeriods: undefined,
+    errorNoticeSalaryPeriods: undefined,
   };
-  const salaryPeriods = state.salaryPeriods ?? [];
-  if (salaryPeriods.length > 0) {
+  const noticeSalaryPeriods = state.noticeSalaryPeriods ?? [];
+
+  if (noticeSalaryPeriods.length > 0) {
     errorState = {
       errorHasReceivedSalaries: !state.hasReceivedSalaries
         ? "Vous devez répondre à cette question"
         : undefined,
-      errorSalaryPeriods:
+      errorNoticeSalaryPeriods:
         state.hasReceivedSalaries === "oui" &&
-        detectNullOrUndefinedOrNaNInArray(salaryPeriods)
+        detectNullOrUndefinedOrNaNInArray(noticeSalaryPeriods)
           ? "Vous devez compléter l'ensemble des champs"
           : undefined,
     };
@@ -49,7 +50,7 @@ export const validateStep = (state: Agreement1516StoreInput) => {
   return {
     isValid: deepEqualObject(errorState, {
       errorHasReceivedSalaries: undefined,
-      errorSalaryPeriods: undefined,
+      errorNoticeSalaryPeriods: undefined,
     }),
     errorState,
   };
