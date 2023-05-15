@@ -67,29 +67,19 @@ const refChargeEnquete = [
 ];
 
 describe("Références juridique pour l'indemnité conventionnel de licenciement pour la CC 1486", () => {
-  describe("Cas standard", () => {
+  describe("Références à partir du 1er mai 2023", () => {
     test.each`
-      category                    | typeLicenciement              | seniority | salary  | expectedReferences
-      ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refEtamOuInge}
-      ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refChargeEnquete}
-      ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refEtamOuInge}
-      ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${25}     | ${2000} | ${refEtamOuInge}
-      ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.refus} | ${10}     | ${2000} | ${refRefus}
-      ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${10}     | ${2000} | ${refRefus}
-      ${CatPro1486.etam}          | ${TypeLicenciement1486.refus} | ${10}     | ${2000} | ${refRefus}
+      category                    | seniority | salary  | expectedReferences
+      ${CatPro1486.ingeCadre}     | ${10}     | ${2000} | ${refEtamOuInge}
+      ${CatPro1486.chargeEnquete} | ${10}     | ${2000} | ${refChargeEnquete}
+      ${CatPro1486.etam}          | ${10}     | ${2000} | ${refEtamOuInge}
+      ${CatPro1486.etam}          | ${25}     | ${2000} | ${refEtamOuInge}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, type de licenciement $typeLicenciement, catégorie $category => $expectedReferences",
-      ({
-        seniority,
-        salary,
-        expectedReferences,
-        category,
-        typeLicenciement,
-      }) => {
+      ({ seniority, salary, expectedReferences, category }) => {
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1486'",
-          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${typeLicenciement}'`,
-          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
             "non",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -108,7 +98,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
     );
   });
 
-  describe("Cas standard (anciennes règles)", () => {
+  describe("Références avant le 1er mai 2023", () => {
     test.each`
       category                    | typeLicenciement              | seniority | salary  | expectedReferences
       ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refEtamMoins20OuInge}
@@ -129,8 +119,8 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
       }) => {
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1486'",
-          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${typeLicenciement}'`,
-          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . anciennes règles . type de licenciement": `'${typeLicenciement}'`,
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
             "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
