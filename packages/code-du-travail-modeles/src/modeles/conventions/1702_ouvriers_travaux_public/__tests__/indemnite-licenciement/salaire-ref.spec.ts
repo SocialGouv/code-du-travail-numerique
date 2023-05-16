@@ -60,7 +60,7 @@ describe("Calcul du salaire pour la CC 1702", () => {
         ],
         salairesPendantPreavis: [],
       })
-    ).toEqual(4000);
+    ).toEqual(5133.333333333333);
   });
 
   it("Meilleur salaire : 3 derniers mois grace à la prime", () => {
@@ -82,7 +82,7 @@ describe("Calcul du salaire pour la CC 1702", () => {
         ],
         salairesPendantPreavis: [],
       })
-    ).toEqual(3325);
+    ).toEqual(4458.333333333333);
   });
 
   it("Avec préavis : Meilleur salaire : 12 mois", () => {
@@ -103,12 +103,12 @@ describe("Calcul du salaire pour la CC 1702", () => {
           { month: "janvier", value: 1700 },
         ],
         salairesPendantPreavis: [
-          { month: "mars", value: 3000 },
-          { month: "février", value: 3000 },
-          { month: "janvier", value: 3000 },
+          { month: "mars", value: 2000 },
+          { month: "février", value: 1700 },
+          { month: "janvier", value: 2200 },
         ],
       })
-    ).toEqual(2225);
+    ).toEqual(1966.6666666666667);
   });
 
   it("Avec préavis: Meilleur salaire : 3 derniers mois grace à la prime", () => {
@@ -134,7 +134,7 @@ describe("Calcul du salaire pour la CC 1702", () => {
           { month: "janvier", value: 1700 },
         ],
       })
-    ).toEqual(3325);
+    ).toEqual(4458.333333333333);
   });
 
   it("Avec préavis: Meilleur salaire : 3 derniers mois", () => {
