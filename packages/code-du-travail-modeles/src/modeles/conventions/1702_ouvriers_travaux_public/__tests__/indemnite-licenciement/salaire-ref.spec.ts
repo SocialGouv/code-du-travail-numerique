@@ -136,4 +136,30 @@ describe("Calcul du salaire pour la CC 1702", () => {
       })
     ).toEqual(3325);
   });
+
+  it("Avec préavis: Meilleur salaire : 3 derniers mois", () => {
+    expect(
+      ReferenceSalary.computeReferenceSalary({
+        salaires: [
+          { month: "décembre", value: 1700 },
+          { month: "novembre", value: 1700 },
+          { month: "octobre", value: 1700 },
+          { month: "septembre", value: 1700 },
+          { month: "aout", value: 2500 },
+          { month: "juillet", value: 2500 },
+          { month: "juin", value: 2500 },
+          { month: "mai", value: 1700 },
+          { month: "avril", value: 1700 },
+          { month: "mars", value: 1700 },
+          { month: "février", value: 1700 },
+          { month: "janvier", value: 1700 },
+        ],
+        salairesPendantPreavis: [
+          { month: "mars", value: 5000 },
+          { month: "février", value: 5000 },
+          { month: "janvier", value: 5000 },
+        ],
+      })
+    ).toEqual(5000);
+  });
 });
