@@ -4,6 +4,12 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul: "oui"
 
+contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement:
+  titre: Le licenciement fait suite au refus d'une clause de mobilité
+  question: Le licenciement fait-il suite au refus d'une clause de mobilité ?
+  cdtn:
+    type: oui-non
+
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle:
   titre: Catégorie professionnelle
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
@@ -47,16 +53,11 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
 ### ANCIENNES REGLES (avant le 1er mai 2023)
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . anciennes règles:
-  applicable si: utilisation des anciennes règles de calcul
+  applicable si:
+    toutes ces conditions:
+      - utilisation des anciennes règles de calcul
+      - contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle
   valeur: oui
-
-## Questions
-
-contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . anciennes règles . type de licenciement:
-  titre: Le licenciement fait suite au refus d'une clause de mobilité
-  question: Le licenciement fait-il suite au refus d'une clause de mobilité ?
-  cdtn:
-    type: oui-non
 
 ## TYPE DE LICENCIEMENT: Autres licenciements
 
