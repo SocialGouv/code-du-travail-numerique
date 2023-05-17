@@ -15,6 +15,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
       ${"Non-cadres"} | ${2}           | ${3}       | ${2300} | ${690}
       ${"Non-cadres"} | ${2}           | ${15}      | ${2300} | ${4216.67}
       ${"Non-cadres"} | ${2}           | ${17}      | ${2300} | ${6056.67}
+      ${"Non-cadres"} | ${2}           | ${23}      | ${3100} | ${12503.33}
       ${"Cadres"}     | ${11 / 12}     | ${11 / 12} | ${3100} | ${0}
       ${"Cadres"}     | ${11 / 12}     | ${1}       | ${3100} | ${0}
       ${"Cadres"}     | ${1}           | ${1}       | ${3100} | ${310}
@@ -41,6 +42,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -98,6 +101,39 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        expect(missingArgs).toEqual([]);
+        expect(result.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+      }
+    );
+  });
+
+  describe("Si l'inaptitude suite à un accident ou maladie professionnelle' alors pas de question pour motif eco", () => {
+    test.each`
+      category        | expectedCompensation
+      ${"Non-cadres"} | ${12503.33}
+      ${"Cadres"}     | ${22320}
+    `(
+      "catégorie $category: $expectedCompensation €",
+      ({ category, expectedCompensation }) => {
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC1501'",
+            "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              "23",
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              "23",
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              "3100",
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "oui",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );

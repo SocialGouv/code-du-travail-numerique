@@ -28,6 +28,8 @@ describe("Vérification des références juridiques pour la CC 1996", () => {
           seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "2000",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
       });
       const result = engine.getReferences("résultat conventionnel");
 
