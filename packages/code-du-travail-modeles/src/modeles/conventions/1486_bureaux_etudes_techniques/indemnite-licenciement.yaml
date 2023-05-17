@@ -264,7 +264,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 2 an
   valeur:
     produit:
       assiette: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
@@ -285,7 +285,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
   valeur:
     produit:
       assiette: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
@@ -332,3 +332,10 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 7 * Sref
+
+contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . résultat conventionnel références liées au refus:
+  applicable si: type de licenciement = 'Oui'
+  valeur: oui
+  références:
+    Article 3.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513827?idConteneur=KALICONT000005635173#KALIARTI000047513827
+    Article 11.6: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513898#KALIARTI000047513898

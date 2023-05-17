@@ -66,6 +66,17 @@ const refChargeEnquete = [
   },
 ];
 
+const refusAfterFirstMay2023 = [
+  {
+    article: "Article 3.5",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513827?idConteneur=KALICONT000005635173#KALIARTI000047513827",
+  },
+  {
+    article: "Article 11.6",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513898#KALIARTI000047513898",
+  },
+];
+
 describe("Références juridique pour l'indemnité conventionnel de licenciement pour la CC 1486", () => {
   describe("Références à partir du 1er mai 2023", () => {
     test.each`
@@ -79,6 +90,39 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
       ({ seniority, salary, expectedReferences, category }) => {
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1486'",
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'Non'`,
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
+            "non",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            salary,
+        });
+
+        const result = engine.getReferences("résultat conventionnel");
+
+        expect(result).toHaveLength(expectedReferences.length);
+        expect(result).toEqual(expect.arrayContaining(expectedReferences));
+      }
+    );
+  });
+
+  describe("Références à partir du 1er mai 2023 avec refus", () => {
+    test.each`
+      category                    | seniority | salary  | expectedReferences
+      ${CatPro1486.ingeCadre}     | ${10}     | ${2000} | ${[...refEtamOuInge, ...refusAfterFirstMay2023]}
+      ${CatPro1486.chargeEnquete} | ${10}     | ${2000} | ${[...refChargeEnquete, ...refusAfterFirstMay2023]}
+      ${CatPro1486.etam}          | ${10}     | ${2000} | ${[...refEtamOuInge, ...refusAfterFirstMay2023]}
+      ${CatPro1486.etam}          | ${25}     | ${2000} | ${[...refEtamOuInge, ...refusAfterFirstMay2023]}
+    `(
+      "ancienneté: $seniority an, salaire de référence: $salary, type de licenciement $typeLicenciement, catégorie $category => $expectedReferences",
+      ({ seniority, salary, expectedReferences, category }) => {
+        engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC1486'",
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'Oui'`,
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
             "non",

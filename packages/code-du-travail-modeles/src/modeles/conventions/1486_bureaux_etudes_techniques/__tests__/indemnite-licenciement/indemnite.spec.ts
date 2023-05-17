@@ -124,7 +124,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
       ${CatPro1486.ingeCadre}     | ${0}           | ${0}      | ${2000} | ${0}
       ${CatPro1486.ingeCadre}     | ${7 / 12}      | ${8 / 12} | ${2000} | ${0}
       ${CatPro1486.ingeCadre}     | ${8 / 12}      | ${8 / 12} | ${2000} | ${333.33}
-      ${CatPro1486.ingeCadre}     | ${8 / 12}      | ${2}      | ${2000} | ${1000}
+      ${CatPro1486.ingeCadre}     | ${8 / 12}      | ${2}      | ${2000} | ${1333.33}
       ${CatPro1486.ingeCadre}     | ${8 / 12}      | ${10}     | ${2000} | ${6666.67}
       ${CatPro1486.chargeEnquete} | ${0}           | ${0}      | ${2000} | ${0}
       ${CatPro1486.chargeEnquete} | ${1.99}        | ${1.99}   | ${2000} | ${0}

@@ -88,7 +88,7 @@ describe("Formule indemnité licenciement - 1486", () => {
       ${CatPro1486.ingeCadre}     | ${0}      | ${""}               | ${[]}
       ${CatPro1486.ingeCadre}     | ${7 / 12} | ${""}               | ${[]}
       ${CatPro1486.ingeCadre}     | ${8 / 12} | ${"1/4 * Sref * A"} | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
-      ${CatPro1486.ingeCadre}     | ${2}      | ${"1/4 * Sref * A"} | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${CatPro1486.ingeCadre}     | ${2}      | ${"1/3 * Sref * A"} | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
       ${CatPro1486.ingeCadre}     | ${10}     | ${"1/3 * Sref * A"} | ${["A : Ancienneté totale (10 ans)", "Sref : Salaire de référence (1000 €)"]}
       ${CatPro1486.chargeEnquete} | ${0}      | ${""}               | ${[]}
       ${CatPro1486.chargeEnquete} | ${1.99}   | ${""}               | ${[]}
