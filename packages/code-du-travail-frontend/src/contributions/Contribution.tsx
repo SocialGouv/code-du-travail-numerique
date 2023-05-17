@@ -1,4 +1,4 @@
-import { getLabelBySource, SOURCES, slugify } from "@socialgouv/cdtn-utils";
+import { getLabelBySource, slugify, SOURCES } from "@socialgouv/cdtn-utils";
 import {
   Alert,
   Badge,
@@ -13,7 +13,7 @@ import {
   Toast,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import Mdx from "../../src/common/Mdx";
@@ -53,7 +53,7 @@ const Contribution = ({ answers, content }) => {
   /**
    * conventionalAnswer are special kind of contribution that include
    * only one a single ccn answer
-   * this allow us to set conventional answer directly for a given ccn
+   * this allows us to set conventional answer directly for a given ccn
    */
   const isConventionalAnswer = Object.prototype.hasOwnProperty.call(
     answers,
@@ -71,10 +71,13 @@ const Contribution = ({ answers, content }) => {
     (answers.conventions && answers.conventions.length > 0) ||
     isConventionalAnswer;
 
-  const [convention, setConvention] = useLocalStorage("convention");
-
-  const isConventionDetected =
-    convention && convention.id && convention.num && convention.title;
+  const [convention, setConvention] = useLocalStorage("convention", undefined);
+  const [isConventionDetected, setConventionDetected] = useState(false);
+  useEffect(() => {
+    setConventionDetected(
+      convention && convention.id && convention.num && convention.title
+    );
+  }, [convention]);
 
   let conventionAnswer;
   if (isConventionalAnswer) {
@@ -95,18 +98,13 @@ const Contribution = ({ answers, content }) => {
               <StyledInsertTitle as="p">Page personnalisable</StyledInsertTitle>
               {isConventionDetected || isConventionalAnswer ? (
                 <Paragraph noMargin>
-                  Cette page a été personnalisée avec l’ajout des {}
-                  {isConventionalAnswer ? (
-                    <a href="#customisation">
-                      informations de la convention collective :{" "}
-                      {conventionAnswer.shortName}
-                    </a>
-                  ) : (
-                    <a href="#customisation">
-                      informations de la convention collective :{" "}
-                      {convention.shortTitle}
-                    </a>
-                  )}
+                  Cette page a été personnalisée avec l’ajout des{" "}
+                  <a href="#customisation">
+                    informations de la convention collective :{" "}
+                    {isConventionalAnswer
+                      ? conventionAnswer.shortName
+                      : convention.shortTitle}
+                  </a>
                 </Paragraph>
               ) : (
                 <Paragraph noMargin>
@@ -195,14 +193,14 @@ const Contribution = ({ answers, content }) => {
                     {conventionAnswer.highlight &&
                       conventionAnswer.highlight.content && (
                         <StyledAlert variant="primary">
-                          <TitleAlert
+                          <StyledParagraph
                             variant="primary"
                             fontSize="small"
                             fontWeight="700"
                             noMargin
                           >
                             {conventionAnswer.highlight.title}
-                          </TitleAlert>
+                          </StyledParagraph>
                           <Paragraph fontSize="small" noMargin>
                             <Html>{conventionAnswer.highlight.content}</Html>
                           </Paragraph>
@@ -218,6 +216,12 @@ const Contribution = ({ answers, content }) => {
                     <ReferencesJuridiques
                       references={conventionAnswer.references}
                     />
+                    <p>
+                      Consultez les questions-réponses fréquentes pour{" "}
+                      <a href={`/convention-collective/${convention.slug}`}>
+                        la convention collective {convention.title}
+                      </a>
+                    </p>
                   </>
                 ) : (
                   <>
@@ -281,10 +285,6 @@ const CustomWrapper = styled(Wrapper)`
 `;
 
 const StyledParagraph = styled(Paragraph)`
-  margin-bottom: ${spacings.tiny};
-`;
-
-const TitleAlert = styled(Paragraph)`
   margin-bottom: ${spacings.tiny};
 `;
 
