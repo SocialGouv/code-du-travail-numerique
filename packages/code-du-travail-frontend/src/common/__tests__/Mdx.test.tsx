@@ -6,7 +6,7 @@ import Mdx from "../Mdx";
 describe("<Mdx />", () => {
   it("should render", () => {
     const markdown = `Hello **world**`;
-    const { container } = render(<Mdx markdown={markdown} />);
+    const { container } = render(<Mdx markdown={markdown} components={{}} />);
     expect(container).toMatchSnapshot();
   });
   it("should render custom components", () => {
