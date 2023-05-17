@@ -22,9 +22,8 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
 
-    const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-    expect(keys).toEqual([
-      "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle",
-    ]);
+    expect(missingArgs).toHaveNextMissingRule(
+      "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle"
+    );
   });
 });
