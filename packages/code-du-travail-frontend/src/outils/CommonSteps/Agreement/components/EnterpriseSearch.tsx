@@ -13,7 +13,6 @@ import ShowAgreements from "./ShowAgreements";
 import ShowAgreement from "../../../common/Agreement/EnterpriseSearch/ShowAgreement";
 import SelectedEnterprise from "../../../common/Agreement/EnterpriseSearch/SelectedEnterprise";
 import { SearchEnterpriseInput } from "../../../common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
-import { renderResults } from "../../../common/Agreement/EnterpriseSearch/EntrepriseSearchResult";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export type Props = {
@@ -34,9 +33,8 @@ const EnterpriseSearch = ({
   alertAgreementNotSupported,
   simulator,
 }: Props): JSX.Element => {
-  const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
-    selectedEnterprise
-  );
+  const [enterprise, setEnterprise] =
+    useState<Enterprise | undefined>(selectedEnterprise);
   const [searchParams, setSearchParams] = useState<SearchParams>({
     address: "",
     query: "",
@@ -91,10 +89,7 @@ const EnterpriseSearch = ({
         searchParams={searchParams}
         onUserAction={onUserAction}
         onSearchParamsChange={setSearchParams}
-        renderResults={renderResults({
-          handleEnterpriseSelection,
-          onUserAction,
-        })}
+        handleEnterpriseSelection={handleEnterpriseSelection}
       />
     </Section>
   );

@@ -1,10 +1,7 @@
-import { Input, Label, Text, theme } from "@socialgouv/cdtn-ui";
-import React from "react";
+import { Button, icons, Input, Label, Text, theme } from "@socialgouv/cdtn-ui";
+import React, { useState } from "react";
 import styled from "styled-components";
-import {
-  createSuggesterHook,
-  FetchReducerState,
-} from "../../components/Suggester";
+import { createSuggesterHook } from "../../components/Suggester";
 import {
   Enterprise,
   searchEnterprises,
@@ -14,15 +11,18 @@ import {
   UserAction,
 } from "../../../../ConventionCollective/types";
 import { InfoBulle } from "../../../InfoBulle";
+import { EntrepriseSearchResults } from "../EntrepriseSearchResult";
+
+const { Search: SearchIcon } = icons;
 
 type Props = {
   searchParams?: SearchParams;
   placeholder?: string;
   onSearchParamsChange: (params: SearchParams) => void;
-  renderResults: (
-    state: FetchReducerState<Enterprise[]>,
-    params: SearchParams
-  ) => JSX.Element;
+  handleEnterpriseSelection: (
+    enterprise: Enterprise,
+    params?: SearchParams
+  ) => void;
 } & TrackingProps;
 export type SearchParams = {
   address: string;
@@ -32,7 +32,7 @@ export const SearchEnterpriseInput = ({
   searchParams = { address: "", query: "" },
   onUserAction,
   onSearchParamsChange,
-  renderResults,
+  handleEnterpriseSelection,
 }: Props): JSX.Element => {
   const useEnterpriseSuggester = createSuggesterHook(
     searchEnterprises,
@@ -44,10 +44,12 @@ export const SearchEnterpriseInput = ({
     searchParams.query,
     searchParams.address
   );
+  const [query, setQuery] = useState("");
+  const [address, setAddress] = useState("");
   const searchInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;
     const value = event.target.value;
-    onSearchParamsChange({ ...searchParams, [name]: value });
+    onSearchParamsChange({ ...searchParams, query: query, address: address });
   };
 
   return (
@@ -69,13 +71,13 @@ export const SearchEnterpriseInput = ({
             </p>
           </InfoBulle>
 
-          <BlockInput
-            placeholder="Ex : Café de la gare ou 40123778000127"
-            value={searchParams.query}
+          <BlockInputLeft
+            placeholder="Café de la gare ou 40123778000127"
+            value={query}
             type="text"
             name="query"
             id="enterprise-search"
-            onChange={searchInputHandler}
+            onChange={(e) => setQuery(e.target.value)}
             autoComplete="off"
             data-testid="agreement-company-search-input"
           />
@@ -84,27 +86,58 @@ export const SearchEnterpriseInput = ({
           <InlineLabel htmlFor="enterprise-search-address">
             Code postal ou ville
           </InlineLabel>
-          <BlockInput
-            placeholder="Ex : 31000 ou Toulouse "
-            value={searchParams.address}
-            type="text"
-            name="address"
-            id="enterprise-search-address"
-            onChange={searchInputHandler}
-            autoComplete="off"
-            data-testid="agreement-postal-code-search-input"
-          />
+          <InputWithButton>
+            <BlockInputRight
+              placeholder="31000 ou Toulouse"
+              value={address}
+              type="text"
+              name="address"
+              id="enterprise-search-address"
+              onChange={(e) => setAddress(e.target.value)}
+              autoComplete="off"
+              data-testid="agreement-postal-code-search-input"
+            />
+            <SubmitIcon
+              type="submit"
+              title="Lancer ma recherche"
+              aria-label="Lancer ma recherche"
+              onClick={searchInputHandler}
+              small
+              narrow
+              variant="secondary"
+              data-testid="agreement-company-search-button"
+            >
+              <StyledSearchIcon />
+            </SubmitIcon>
+          </InputWithButton>
         </Box>
       </Flex>
 
-      {renderResults(state, searchParams)}
+      <EntrepriseSearchResults
+        handleEnterpriseSelection={handleEnterpriseSelection}
+        onUserAction={onUserAction}
+        state={state}
+        params={searchParams}
+      />
     </>
   );
 };
 
 const BlockInput = styled(Input)`
-  padding-top: ${theme.spacings.small};
   width: 100%;
+`;
+
+const BlockInputLeft = styled(BlockInput)`
+  input {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+`;
+const BlockInputRight = styled(BlockInput)`
+  input {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
 `;
 
 const InlineLabel = styled(Label)`
@@ -125,14 +158,26 @@ const Box = styled.div`
   flex: 1;
 
   & + & {
-    flex: 0 1 25rem;
-    padding-left: ${theme.spacings.xmedium};
+    @media (min-width: ${theme.breakpoints.desktop}) {
+      flex: 0 1 30rem;
+    }
     @media (max-width: ${theme.breakpoints.mobile}) {
       padding-top: ${theme.spacings.xmedium};
-      padding-left: 0;
-    }
-    @media (max-width: ${theme.breakpoints.mobile}) {
-      flex: 0 1 auto;
     }
   }
+`;
+
+const InputWithButton = styled.div`
+  position: relative;
+`;
+const SubmitIcon = styled(Button)`
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 2.5rem;
+  color: ${({ theme }) => theme.secondary};
+`;
+
+const StyledSearchIcon = styled(SearchIcon)`
+  color: ${({ theme }) => theme.white};
 `;
