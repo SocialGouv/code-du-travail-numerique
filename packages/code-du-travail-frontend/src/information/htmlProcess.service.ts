@@ -1,4 +1,4 @@
-import { unified } from "unified";
+import unified from "unified";
 import React from "react";
 import { Link } from "./Components";
 import htmlToHtmlAst from "rehype-parse";
