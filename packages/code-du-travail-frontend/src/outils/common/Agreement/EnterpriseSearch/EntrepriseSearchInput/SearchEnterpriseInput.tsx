@@ -128,15 +128,19 @@ const BlockInput = styled(Input)`
 `;
 
 const BlockInputLeft = styled(BlockInput)`
-  input {
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
+  @media (min-width: ${theme.breakpoints.tablet}) {
+    input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
 `;
 const BlockInputRight = styled(BlockInput)`
-  input {
-    border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
+  @media (min-width: ${theme.breakpoints.tablet}) {
+    input {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
   }
 `;
 
@@ -156,6 +160,7 @@ const Flex = styled.div`
 
 const Box = styled.div`
   flex: 1;
+  width: 100%;
 
   & + & {
     @media (min-width: ${theme.breakpoints.desktop}) {
