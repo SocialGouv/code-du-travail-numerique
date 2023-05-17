@@ -72,7 +72,7 @@ export const SearchEnterpriseInput = ({
           </InfoBulle>
 
           <BlockInputLeft
-            placeholder="Café de la gare ou 40123778000127"
+            placeholder="Ex : Café de la gare ou 40123778000127"
             value={query}
             type="text"
             name="query"
@@ -88,7 +88,7 @@ export const SearchEnterpriseInput = ({
           </InlineLabel>
           <InputWithButton>
             <BlockInputRight
-              placeholder="31000 ou Toulouse"
+              placeholder="Ex : 31000 ou Toulouse"
               value={address}
               type="text"
               name="address"
