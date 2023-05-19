@@ -60,6 +60,12 @@ import {
   Agreement1672StoreSlice,
   createAgreement1672StoreSalaires,
 } from "./1672-societes-assurances";
+import {
+  Agreement1483StoreError,
+  Agreement1483StoreInput,
+  Agreement1483StoreSlice,
+  createAgreement1483StoreSalaires,
+} from "./1483-habillement-textiles-commerce-de-detail";
 
 export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement1527StoreInput &
@@ -70,7 +76,8 @@ export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement2148StoreInput &
   Agreement2609StoreInput &
   Agreement2614StoreInput &
-  Agreement1672StoreInput;
+  Agreement1672StoreInput &
+  Agreement1483StoreInput;
 
 export type AgreementStoreError = Agreement1516StoreError &
   Agreement1527StoreError &
@@ -81,7 +88,8 @@ export type AgreementStoreError = Agreement1516StoreError &
   Agreement2148StoreError &
   Agreement2609StoreError &
   Agreement2614StoreError &
-  Agreement1672StoreError;
+  Agreement1672StoreError &
+  Agreement1483StoreError;
 
 export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement1527StoreSlice &
@@ -92,7 +100,8 @@ export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement2596StoreSlice &
   Agreement2148StoreSlice &
   Agreement2609StoreSlice &
-  Agreement1672StoreSlice;
+  Agreement1672StoreSlice &
+  Agreement1483StoreSlice;
 
 export const createRootAgreementsStore = (
   set: StoreApi<MainStore>["setState"],
@@ -109,4 +118,5 @@ export const createRootAgreementsStore = (
   ...createAgreement2609StoreSalaires(set, get, options),
   ...createAgreement2614StoreSalaires(set, get, options),
   ...createAgreement1672StoreSalaires(set, get, options),
+  ...createAgreement1483StoreSalaires(set, get, options),
 });

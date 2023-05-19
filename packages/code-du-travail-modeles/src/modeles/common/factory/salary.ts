@@ -1,5 +1,6 @@
 import { ReferenceSalaryLegal } from "../../base";
 import {
+  ReferenceSalary1483,
   ReferenceSalary1606,
   ReferenceSalary2609,
   ReferenceSalary2614,
@@ -63,6 +64,8 @@ export class ReferenceSalaryFactory {
         return new ReferenceSalary1672() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC0086:
         return new ReferenceSalary86() as IReferenceSalary<T>;
+      case SupportedCcIndemniteLicenciement.IDCC1483:
+        return new ReferenceSalary1483() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new ReferenceSalaryLegal() as IReferenceSalary<T>;
