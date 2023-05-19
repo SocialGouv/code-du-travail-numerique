@@ -36,6 +36,8 @@ describe("Formule indemnité licenciement - 1501", () => {
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "2300",
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+            "non",
         });
         const formule = engine.getFormule();
 
@@ -75,6 +77,8 @@ describe("Formule indemnité licenciement - 1501", () => {
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "2300",
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+            "non",
         });
         const formule = engine.getFormule();
 

@@ -39,6 +39,8 @@ describe("CC 1702", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -82,6 +84,8 @@ describe("CC 1702", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -90,5 +94,27 @@ describe("CC 1702", () => {
         expect(result.value).toEqual(expectedCompensation);
       }
     );
+
+    test("Si l'inaptitude suite à un accident ou maladie professionnelle alors pas de question pour motif eco", () => {
+      const { result, missingArgs } = engine.setSituation(
+        {
+          "contrat salarié . convention collective": "'IDCC1702'",
+          "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age":
+            "30",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            "3",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            "3",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "2700",
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+            "oui",
+        },
+        "contrat salarié . indemnité de licenciement . résultat conventionnel"
+      );
+      expect(result.unit?.numerators).toEqual(["€"]);
+      expect(missingArgs).toEqual([]);
+      expect(result.value).toEqual(810);
+    });
   });
 });
