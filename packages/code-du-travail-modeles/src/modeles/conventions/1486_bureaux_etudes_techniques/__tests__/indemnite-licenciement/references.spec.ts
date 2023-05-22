@@ -66,6 +66,19 @@ const refChargeEnquete = [
   },
 ];
 
+const refChargeEnqueteAfterMay2023 = [
+  {
+    article:
+      "Article 23 de l’Annexe IV. Enquêteurs. Accord du 16 décembre 1991",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851321?idConteneur=KALICONT000005635173",
+  },
+  {
+    article:
+      "Article 24 de l’Annexe IV. Enquêteurs. Accord du 16 décembre 1991",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851322?idConteneur=KALICONT000005635173",
+  },
+];
+
 const refusAfterFirstMay2023 = [
   {
     article: "Article 3.5",
@@ -82,7 +95,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
     test.each`
       category                    | seniority | salary  | expectedReferences
       ${CatPro1486.ingeCadre}     | ${10}     | ${2000} | ${refEtamOuInge}
-      ${CatPro1486.chargeEnquete} | ${10}     | ${2000} | ${refChargeEnquete}
+      ${CatPro1486.chargeEnquete} | ${10}     | ${2000} | ${refChargeEnqueteAfterMay2023}
       ${CatPro1486.etam}          | ${10}     | ${2000} | ${refEtamOuInge}
       ${CatPro1486.etam}          | ${25}     | ${2000} | ${refEtamOuInge}
     `(
@@ -114,7 +127,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
     test.each`
       category                    | seniority | salary  | expectedReferences
       ${CatPro1486.ingeCadre}     | ${10}     | ${2000} | ${[...refEtamOuInge, ...refusAfterFirstMay2023]}
-      ${CatPro1486.chargeEnquete} | ${10}     | ${2000} | ${[...refChargeEnquete, ...refusAfterFirstMay2023]}
+      ${CatPro1486.chargeEnquete} | ${10}     | ${2000} | ${[...refChargeEnqueteAfterMay2023, ...refusAfterFirstMay2023]}
       ${CatPro1486.etam}          | ${10}     | ${2000} | ${[...refEtamOuInge, ...refusAfterFirstMay2023]}
       ${CatPro1486.etam}          | ${25}     | ${2000} | ${[...refEtamOuInge, ...refusAfterFirstMay2023]}
     `(
