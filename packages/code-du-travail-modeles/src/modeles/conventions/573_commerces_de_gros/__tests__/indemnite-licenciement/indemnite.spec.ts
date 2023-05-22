@@ -47,32 +47,31 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
 
   describe("Agents", () => {
     test.each`
-      age   | category            | typeLicenciement      | seniorityRight | seniority | salary  | expectedCompensation
-      ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${0.5}         | ${0.5}    | ${2700} | ${0}
-      ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${0.99}        | ${0.99}   | ${2700} | ${0}
-      ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${0.99}        | ${1}      | ${2700} | ${0}
-      ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${1}           | ${1}      | ${2700} | ${540}
-      ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${1}           | ${15}     | ${2700} | ${9900}
-      ${40} | ${CatPro573.agents} | ${QuestionOuiNon.oui} | ${1}           | ${1}      | ${2700} | ${540}
-      ${40} | ${CatPro573.agents} | ${QuestionOuiNon.oui} | ${1}           | ${14}     | ${2700} | ${9000}
-      ${57} | ${CatPro573.agents} | ${QuestionOuiNon.oui} | ${1}           | ${14}     | ${2700} | ${9000}
-      ${55} | ${CatPro573.agents} | ${QuestionOuiNon.oui} | ${1}           | ${15}     | ${2700} | ${11664}
-      ${56} | ${CatPro573.agents} | ${QuestionOuiNon.oui} | ${2}           | ${25}     | ${2700} | ${16200}
+      age   | typeLicenciement      | seniorityRight | seniority | salary  | expectedCompensation
+      ${32} | ${QuestionOuiNon.non} | ${0.5}         | ${0.5}    | ${2700} | ${0}
+      ${32} | ${QuestionOuiNon.non} | ${0.99}        | ${0.99}   | ${2700} | ${0}
+      ${32} | ${QuestionOuiNon.non} | ${0.99}        | ${1}      | ${2700} | ${0}
+      ${32} | ${QuestionOuiNon.non} | ${1}           | ${1}      | ${2700} | ${540}
+      ${32} | ${QuestionOuiNon.non} | ${1}           | ${15}     | ${2700} | ${9900}
+      ${40} | ${QuestionOuiNon.oui} | ${1}           | ${1}      | ${2700} | ${540}
+      ${40} | ${QuestionOuiNon.oui} | ${1}           | ${14}     | ${2700} | ${9000}
+      ${57} | ${QuestionOuiNon.oui} | ${1}           | ${14}     | ${2700} | ${9000}
+      ${55} | ${QuestionOuiNon.oui} | ${1}           | ${15}     | ${2700} | ${11664}
+      ${56} | ${QuestionOuiNon.oui} | ${2}           | ${25}     | ${2700} | ${16200}
     `(
-      "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category, age $age, typeLicenciement $typeLicenciement => $expectedCompensation €",
+      "ancienneté: $seniority an, salaire de référence: $salary, catégorie Agents, age $age, typeLicenciement $typeLicenciement => $expectedCompensation €",
       ({
         seniority,
         seniorityRight,
         salary,
         typeLicenciement,
         expectedCompensation,
-        category,
         age,
       }) => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0573'",
-            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${CatPro573.agents}'`,
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age":
               age,
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique question": `'${typeLicenciement}'`,
@@ -82,6 +81,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -91,6 +92,27 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
+    test("Si l'inaptitude suite à un accident ou maladie professionnelle' alors pas de question pour motif eco", () => {
+      const { result, missingArgs } = engine.setSituation(
+        {
+          "contrat salarié . convention collective": "'IDCC0573'",
+          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${CatPro573.agents}'`,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            "14",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            "14",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "2700",
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+            "oui",
+        },
+        "contrat salarié . indemnité de licenciement . résultat conventionnel"
+      );
+
+      expect(result.value).toEqual(9000);
+      expect(missingArgs).toEqual([]);
+      expect(result.unit?.numerators).toEqual(["€"]);
+    });
   });
 
   describe("Cadres", () => {
