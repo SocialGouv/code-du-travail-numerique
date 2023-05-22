@@ -41,6 +41,7 @@ import {
   MatomoSimulatorEvent,
 } from "../../../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
+import getSupportedCcIndemniteLicenciement from "../../../common/usecase/getSupportedCc";
 
 const initialState: ResultStoreData = {
   input: {
@@ -200,7 +201,12 @@ const createResultStore: StoreSlice<
       let agreementHasNoLegalIndemnity: boolean;
       let agreementSalaryExtraInfo: Record<string, string | number> = {};
 
-      if (agreement) {
+      if (
+        agreement &&
+        getSupportedCcIndemniteLicenciement().some(
+          (item) => item.idcc === agreement.num && item.fullySupported
+        )
+      ) {
         const infos = informationToSituation(
           get().informationsData.input.publicodesInformations
         );
