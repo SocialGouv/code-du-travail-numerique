@@ -48,6 +48,7 @@ export enum SupportedCcIndemniteLicenciement {
 export const INDEMNITE_LICENCIEMENT_PRODUCTION_READY_CC: number[] = [
   16, 29, 44, 413, 573, 650, 1090, 1351, 1486, 1501, 1518, 1527, 1596, 1597,
   1979, 2216, 2264, 2941, 3043, 3127, 3239, 1517, 2098, 2511, 2609, 787, 843,
+  675, 1996, 1505, 1147,
 ];
 
 export const getSupportedAgreement = (
