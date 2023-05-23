@@ -33,12 +33,15 @@ describe("Notification pour la CC 1702", () => {
       "contrat salarié . convention collective": "'IDCC1702'",
       "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age":
         "40",
-      "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . licenciement économique": `'Oui'`,
+      "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . licenciement économique":
+        "'Oui'",
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
         "10",
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
         "10",
       "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+        "non",
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
         "2500",
     });
