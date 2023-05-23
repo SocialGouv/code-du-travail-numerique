@@ -6,11 +6,13 @@ import {
 
 export default function Agreement44Informations() {
   const store = useContext(IndemniteLicenciementContext);
-  const { hasVariablePay, knowingLastSalary, lastMonthSalary } =
+  const { hasVariablePay, knowingLastSalary, lastMonthSalary, showKnowingLastSalary, showLastMonthSalary } =
     useIndemniteLicenciementStore(store, (state) => ({
       hasVariablePay: state.agreement44Data.input.hasVariablePay,
       lastMonthSalary: state.agreement44Data.input.lastMonthSalary,
       knowingLastSalary: state.agreement44Data.input.knowingLastSalary,
+      showKnowingLastSalary: state.agreement44Data.input.showKnowingLastSalary,
+      showLastMonthSalary: state.agreement44Data.input.showLastMonthSalary,
     }));
 
   return (
@@ -22,13 +24,13 @@ export default function Agreement44Informations() {
         </li>
       )}
 
-      {knowingLastSalary && (
+      {showKnowingLastSalary && (
         <li>
           Connaissance du montant du dernier salaire perçu&nbsp;:&nbsp;
           {knowingLastSalary === "oui" ? "Oui" : "Non"}
         </li>
       )}
-      {knowingLastSalary && lastMonthSalary && lastMonthSalary.value && (
+      {showKnowingLastSalary && showLastMonthSalary && lastMonthSalary && (
         <li>
           Salaire perçu au cours du dernier mois&nbsp;:&nbsp;
           {lastMonthSalary.value} €{" "}

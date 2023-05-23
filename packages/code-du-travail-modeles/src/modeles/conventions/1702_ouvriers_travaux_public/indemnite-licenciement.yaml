@@ -3,13 +3,13 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
   valeur: oui
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . licenciement économique:
+  applicable si: indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = non
   titre: Licenciement pour motif économique
   question: Le motif du licenciement est-il économique ?
   cdtn:
     type: oui-non
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age:
-  applicable si: licenciement économique
   titre: Âge du salarié
   question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?
   cdtn:

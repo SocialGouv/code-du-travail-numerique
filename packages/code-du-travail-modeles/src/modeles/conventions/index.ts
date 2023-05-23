@@ -15,6 +15,7 @@ export * from "./1518_education_loisirs";
 export * from "./1527_immobilier";
 export * from "./1596_batiment_ouvriers_employes";
 export * from "./1597_batiment_employes_ouvriers_bis";
+export * from "./1606_bricolage";
 export * from "./1672_societes_assurances";
 export * from "./1702_ouvriers_travaux_public";
 export * from "./1996_pharmacie";

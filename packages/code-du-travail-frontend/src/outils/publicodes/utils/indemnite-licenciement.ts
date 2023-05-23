@@ -24,6 +24,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementLegal = (
 
 export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
   ccn: number,
+  inaptitude: boolean,
   longTermDisability: boolean,
   agreementParameters?: Record<string, any>
 ): Record<string, string> => {
@@ -31,7 +32,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
     ...agreementParameters,
     ...{
       "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-        "non",
+        inaptitude ? "oui" : "non",
       "contrat salarié . indemnité de licenciement . arrêt de travail":
         longTermDisability ? "oui" : "non",
       "contrat salarié . convention collective": `'IDCC${formatIdcc(ccn)}'`,
@@ -46,11 +47,13 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
     agreementSalaireRef: number,
     requiredSeniority: number,
     notificationDate: string,
+    inaptitude: boolean,
     longTermDisability: boolean,
     agreementParameters?: Record<string, any>
   ): Record<string, string> => {
     return mapToPublicodesSituationForIndemniteLicenciementConventionnel(
       ccn,
+      inaptitude,
       longTermDisability,
       {
         ...agreementParameters,

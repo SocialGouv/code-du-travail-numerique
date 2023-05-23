@@ -10,12 +10,6 @@ import { suggesterGlobalSearchTheme } from "./DocumentSuggesterTheme";
 const { colors } = theme;
 
 export class DocumentSuggester extends React.Component {
-  focusInput = (autoSuggest) => {
-    if (autoSuggest && this.props.hasFocus) {
-      autoSuggest.input?.focus();
-    }
-  };
-
   onSuggestionSelected = (event, data) => {
     this.props.onSelect(data.suggestion, event);
   };
@@ -74,7 +68,6 @@ export class DocumentSuggester extends React.Component {
     };
     return (
       <Autosuggest
-        ref={this.focusInput}
         theme={suggesterGlobalSearchTheme}
         suggestions={suggestions}
         alwaysRenderSuggestions={false}
