@@ -43,8 +43,8 @@ describe("Indemnité licenciement - CC 1702", () => {
   });
   test(`Autre licenciement`, () => {
     userAction
-      .click(ui.information.agreement1702.motif.non.get())
       .setInput(ui.information.agreement1702.age.get(), "40")
+      .click(ui.information.agreement1702.motif.non.get())
       .click(ui.next.get());
 
     fireEvent.change(ui.seniority.startDate.get(), {
@@ -139,8 +139,8 @@ describe("Indemnité licenciement - CC 1702", () => {
     userAction
       .click(ui.next.get())
       .click(ui.next.get())
-      .click(ui.information.agreement1702.motif.non.get())
       .setInput(ui.information.agreement1702.age.get(), "40")
+      .click(ui.information.agreement1702.motif.non.get())
       .click(ui.next.get());
 
     fireEvent.change(ui.seniority.startDate.get(), {
@@ -173,8 +173,8 @@ describe("Indemnité licenciement - CC 1702", () => {
 
   test(`Licenciement économique`, () => {
     userAction
-      .click(ui.information.agreement1702.motif.oui.get())
       .setInput(ui.information.agreement1702.age.get(), "40")
+      .click(ui.information.agreement1702.motif.oui.get())
       .click(ui.next.get());
 
     fireEvent.change(ui.seniority.startDate.get(), {
