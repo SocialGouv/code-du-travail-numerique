@@ -65,9 +65,9 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
   describe("Pour un cadres", () => {
     test.each`
       age   | seniorityRight | seniority | salary  | expectedReferences
-      ${50} | ${1.01}        | ${2}      | ${3040} | ${refCadres}
-      ${50} | ${1.01}        | ${5}      | ${3040} | ${refCadres}
-      ${50} | ${1.01}        | ${17}     | ${3040} | ${refCadres}
+      ${49} | ${1.01}        | ${2}      | ${3040} | ${refCadres}
+      ${49} | ${1.01}        | ${5}      | ${3040} | ${refCadres}
+      ${49} | ${1.01}        | ${17}     | ${3040} | ${refCadres}
       ${51} | ${1.01}        | ${2}      | ${3040} | ${refCadres}
       ${51} | ${1.01}        | ${5}      | ${3040} | ${refCadres}
       ${51} | ${1.01}        | ${17}     | ${3040} | ${refCadres}

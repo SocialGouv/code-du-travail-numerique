@@ -46,11 +46,11 @@ describe("Formule indemnité licenciement - 1483", () => {
   describe("Pour un cadres", () => {
     test.each`
       age   | seniorityRight | seniority | expectedFormula                                                                                              | expectedExplanations
-      ${50} | ${1}           | ${0}      | ${""}                                                                                                        | ${[]}
-      ${50} | ${1}           | ${1}      | ${""}                                                                                                        | ${[]}
-      ${50} | ${1.01}        | ${2}      | ${"(1 / 5 * Sref * A)"}                                                                                      | ${["A: Années de présence dès la première année (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-      ${50} | ${1.01}        | ${5}      | ${"(1 / 4 * Sref * A1)"}                                                                                     | ${["A1: Années de présence dès la première année (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-      ${50} | ${1.01}        | ${17}     | ${"(1 / 4 * Sref * A1) + (1 / 3 * Sref * A2 )"}                                                              | ${["A1: Années de présence dès la première année (15 ans)", "A2: Années de présence après 16 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${49} | ${1}           | ${0}      | ${""}                                                                                                        | ${[]}
+      ${49} | ${1}           | ${1}      | ${""}                                                                                                        | ${[]}
+      ${49} | ${1.01}        | ${2}      | ${"(1 / 5 * Sref * A)"}                                                                                      | ${["A: Années de présence dès la première année (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${49} | ${1.01}        | ${5}      | ${"(1 / 4 * Sref * A1)"}                                                                                     | ${["A1: Années de présence dès la première année (5 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${49} | ${1.01}        | ${17}     | ${"(1 / 4 * Sref * A1) + (1 / 3 * Sref * A2 )"}                                                              | ${["A1: Années de présence dès la première année (15 ans)", "A2: Années de présence après 16 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
       ${51} | ${1}           | ${1}      | ${""}                                                                                                        | ${[]}
       ${51} | ${1.01}        | ${2}      | ${"(1 / 5 * Sref * A)"}                                                                                      | ${["A: Années de présence dès la première année (2 ans)", "Sref : Salaire de référence (1000 €)"]}
       ${51} | ${1.01}        | ${5}      | ${"(1 / 4 * Sref * A1)"}                                                                                     | ${["A1: Années de présence dès la première année (5 ans)", "Sref : Salaire de référence (1000 €)"]}
