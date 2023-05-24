@@ -56,24 +56,27 @@ export default function Agreement1483() {
               },
             ]}
             name="hasReceivedSalaries"
-            label={`Connaissez-vous le montant ${hasMoreThanOneNoticeSalary ? "des" : "du"
-              } salaire${S()} perçu${S()} pendant le préavis ?`}
+            label={`Connaissez-vous le montant ${
+              hasMoreThanOneNoticeSalary ? "des" : "du"
+            } salaire${S()} perçu${S()} pendant le préavis ?`}
             selectedOption={hasReceivedSalaries}
             onChangeSelectedOption={onChangeHasReceivedSalaries}
             error={errorHasReceivedSalaries}
             showRequired
             note={
               hasReceivedSalaries === "non"
-                ? "Le calcul de l’indemnité nécessecite le salaire le plus élevé perçu au cours des 3 derniers mois de travail (incluant le préavis). Pour réaliser cette simulation nous prendrons en considération le salaire le plus élevé perçu au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation."
+                ? "Le calcul de l’indemnité nécessite le total des salaires perçus au cours des 3 derniers mois de travail (incluant le préavis). Pour réaliser cette simulation nous prendrons en considération uniquement les salaires précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation."
                 : undefined
             }
           />
           {hasReceivedSalaries === "oui" && (
             <SalaireTempsPlein
-              title={`Salaire${S()} perçu${S()} pendant ${noticePeriodsMoreThan3Months ? "les 3 derniers mois du" : "le"
-                } préavis`}
-              subTitle={`Indiquez le montant ${hasMoreThanOneNoticeSalary ? "des" : "du"
-                } salaire${S()} (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ`}
+              title={`Salaire${S()} perçu${S()} pendant ${
+                noticePeriodsMoreThan3Months ? "les 3 derniers mois du" : "le"
+              } préavis`}
+              subTitle={`Indiquez le montant ${
+                hasMoreThanOneNoticeSalary ? "des" : "du"
+              } salaire${S()} (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ`}
               onSalariesChange={onSalariesChange}
               salaryPeriods={noticeSalaryPeriods}
               error={errorNoticeSalaryPeriods}

@@ -35,12 +35,12 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur:
     le minimum de:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-      - 15 an
+      - 16 an
 
 contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté au delà de seize ans:
   somme:
     - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-    - (- 15 an)
+    - (- 16 an)
   plancher: 0 an
 
 ## Facteurs
@@ -160,7 +160,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15 an
-      - age > 50 an
+      - age >= 50 an
   somme:
     - un quart du salaire de référence
     - un tiers du salaire de référence à partir de seize ans
