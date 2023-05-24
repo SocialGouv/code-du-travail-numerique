@@ -24,6 +24,7 @@ import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informatio
 import {
   getAgreementExtraInfoSalary,
   getAgreementReferenceSalary,
+  isParentalNoticeHiddenForAgreement,
 } from "../../../agreements";
 import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
 import { MainStore } from "../../../store";
@@ -51,6 +52,7 @@ const initialState: ResultStoreData = {
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
     isEligible: false,
+    isParentalNoticeHidden: false,
   },
   error: {},
   hasBeenSubmit: true,
@@ -203,6 +205,7 @@ const createResultStore: StoreSlice<
       let notifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
       let agreementSalaryExtraInfo: Record<string, string | number> = {};
+      let isParentalNoticeHidden = false;
 
       if (
         agreement &&
@@ -268,6 +271,10 @@ const createResultStore: StoreSlice<
 
         agreementHasNoLegalIndemnity = hasNoLegalIndemnity(agreement.num);
 
+        isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
+          agreement.num
+        );
+
         if (
           agreementHasNoLegalIndemnity ||
           (isAgreementBetterDetection(
@@ -319,6 +326,8 @@ const createResultStore: StoreSlice<
           state.resultData.input.notifications = notifications;
           state.resultData.input.agreementHasNoLegalIndemnity =
             agreementHasNoLegalIndemnity;
+          state.resultData.input.isParentalNoticeHidden =
+            isParentalNoticeHidden;
         })
       );
     },
