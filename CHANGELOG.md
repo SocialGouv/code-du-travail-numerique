@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.100.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.99.0...v4.100.0) (2023-05-24)
+
+### Bug Fixes
+
+- **preavis-retraite:** correctif sur la référence 4.6 pour la CC 1486 ([#5159](https://github.com/SocialGouv/code-du-travail-numerique/issues/5159)) ([3a76392](https://github.com/SocialGouv/code-du-travail-numerique/commit/3a76392ca855c2dbe392cd01c690b6b5468722a6))
+
+### Features
+
+- **indemnite-licenciement:** activation de la CC 1702 ([#5163](https://github.com/SocialGouv/code-du-travail-numerique/issues/5163)) ([5431442](https://github.com/SocialGouv/code-du-travail-numerique/commit/5431442ce53717a34f8d4a95129d1c9ff9d43eca))
+- **indemnite-licenciement:** retours suite aux tests de la cc 1702 ([#5139](https://github.com/SocialGouv/code-du-travail-numerique/issues/5139)) ([fb1514f](https://github.com/SocialGouv/code-du-travail-numerique/commit/fb1514f6a6be44991c52ac033b6c4e7c82ef1709))
+
 # [4.99.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.98.1...v4.99.0) (2023-05-23)
 
 ### Bug Fixes
