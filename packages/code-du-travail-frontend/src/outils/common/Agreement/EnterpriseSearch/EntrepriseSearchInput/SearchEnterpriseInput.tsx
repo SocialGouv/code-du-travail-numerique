@@ -57,10 +57,7 @@ export const SearchEnterpriseInput = ({
       <Flex>
         <Box>
           <InlineLabel htmlFor="enterprise-search">
-            Nom de votre entreprise ou numéro Siret{" "}
-            <Text fontWeight="400" fontSize="small">
-              (obligatoire)
-            </Text>
+            Nom de votre entreprise ou numéro Siret
           </InlineLabel>
           <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
             <p>
@@ -85,7 +82,10 @@ export const SearchEnterpriseInput = ({
         <Box>
           <InlineLabel htmlFor="enterprise-search-address">
             Code postal ou ville
-          </InlineLabel>
+          </InlineLabel>{" "}
+          <Text fontWeight="400" fontSize="small">
+            (facultatif)
+          </Text>
           <InputWithButton>
             <BlockInputRight
               placeholder="Ex : 31000 ou Toulouse"
@@ -185,4 +185,6 @@ const SubmitIcon = styled(Button)`
 
 const StyledSearchIcon = styled(SearchIcon)`
   color: ${({ theme }) => theme.white};
+  height: 25px;
+  width: 25px;
 `;
