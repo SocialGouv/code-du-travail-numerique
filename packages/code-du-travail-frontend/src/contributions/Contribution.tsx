@@ -72,10 +72,7 @@ const Contribution = ({ answers, content }) => {
     (answers.conventions && answers.conventions.length > 0) ||
     isConventionalAnswer;
 
-  const [convention, setConvention] = useLocalStorage<Agreement>(
-    "convention",
-    undefined
-  );
+  const [convention, setConvention] = useLocalStorage<Agreement>("convention");
   const isConventionDetected = () =>
     convention && convention.id && convention.num && convention.title;
 

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { Agreement } from "../conventions/Search/api/type";
 
 /**
  * This localStorage hooks
@@ -10,7 +11,7 @@ import { useCallback, useEffect, useState } from "react";
  */
 export function useLocalStorage<T>(
   key,
-  defaultValue
+  defaultValue?: Agreement
 ): [T | any, (a?: any) => void] {
   const initialValue = () => {
     try {
@@ -21,7 +22,7 @@ export function useLocalStorage<T>(
     }
   };
 
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(null);
 
   useEffect(() => {
     updateValue(initialValue());
