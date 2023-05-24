@@ -1,4 +1,4 @@
-import { addDays, differenceInMonths } from "date-fns";
+import { addDays, differenceInMonths, isBefore } from "date-fns";
 
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
@@ -43,6 +43,7 @@ export class Seniority1486
   ): SeniorityResult {
     const dEntree = parseDate(from);
     const dSortie = addDays(parseDate(to), 1);
+    const oldArticle = isBefore(parseDate(to), parseDate("01/05/2023"));
 
     const totalAbsence = absences.reduce((total, item) => {
       const m = this.getMotifs().find((motif) => motif.key === item.motif.key);
@@ -60,6 +61,10 @@ export class Seniority1486
 
     return {
       value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
+      extraInfos: {
+        "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
+          oldArticle ? "oui" : "non",
+      },
     };
   }
 }

@@ -1795,9 +1795,9 @@
       "typeRupture": "1| Démission",
       "answer": "6 jours ouvrés par mois",
       "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures de recherche d'emploi sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Elles sont fixées pour moitié par l'employeur et pour moitié par le salarié. Chacun en informe l'autre partie. Une attention particulière sera portée aux salariés licenciés pour raison économique.",
-      "ref": "Article 16",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=77FFB0EC2E6BD765EAE02D1B078BF784.tplgfr22s_2?idSectionTA=KALISCTA000005752517&cidTexte=KALITEXT000005679895&idConvention=KALICONT000005635173"
+      "answer3": "Les heures de recherche d'emploi sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Elles sont fixées pour moitié par l'employeur et pour moitié par le salarié. Chacun en informe l'autre partie.",
+      "ref": "Article 4.3",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513835#KALIARTI000047513835"
     },
     {
       "criteria": {
@@ -1809,8 +1809,8 @@
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": null,
-      "ref": "Article 16",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=77FFB0EC2E6BD765EAE02D1B078BF784.tplgfr22s_2?idSectionTA=KALISCTA000005752517&cidTexte=KALITEXT000005679895&idConvention=KALICONT000005635173"
+      "ref": "Article 3.4",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513825#KALIARTI000047513825"
     },
     {
       "criteria": {
@@ -1822,8 +1822,8 @@
       "answer": "2 heures par jour",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": null,
-      "ref": "Article 16",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=77FFB0EC2E6BD765EAE02D1B078BF784.tplgfr22s_2?idSectionTA=KALISCTA000005752517&cidTexte=KALITEXT000005679895&idConvention=KALICONT000005635173"
+      "ref": "Article 3.4",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513825#KALIARTI000047513825"
     },
     {
       "criteria": {},
@@ -1832,9 +1832,9 @@
       "typeRupture": "3| Licenciement",
       "answer": "6 jours ouvrés par mois",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures de recherche d'emploi sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Elles sont fixées pour moitié par l''employeur et pour moitié par le salarié. Chacun en informe l'autre partie. Une attention particulière sera portée aux salariés licenciés pour raison économique.",
-      "ref": "Article 16",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=77FFB0EC2E6BD765EAE02D1B078BF784.tplgfr22s_2?idSectionTA=KALISCTA000005752517&cidTexte=KALITEXT000005679895&idConvention=KALICONT000005635173"
+      "answer3": "Les heures de recherche d'emploi sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Elles sont fixées pour moitié par l''employeur et pour moitié par le salarié. Chacun en informe l'autre partie.",
+      "ref": "Article 4.3",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513835#KALIARTI000047513835"
     },
     {
       "criteria": {},
