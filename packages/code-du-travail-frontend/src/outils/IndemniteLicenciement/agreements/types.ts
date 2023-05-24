@@ -109,8 +109,9 @@ export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement2148StoreSlice &
   Agreement2609StoreSlice &
   Agreement1672StoreSlice &
-  Agreement1483StoreSlice;
-Agreement1702StoreSlice & Agreement1672StoreSlice;
+  Agreement1483StoreSlice &
+  Agreement1702StoreSlice &
+  Agreement1672StoreSlice;
 
 export const createRootAgreementsStore = (
   set: StoreApi<MainStore>["setState"],
