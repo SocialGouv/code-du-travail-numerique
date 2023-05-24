@@ -10,7 +10,7 @@ type Props = {
   components: any;
 };
 
-const Mdx: React.FC<Props> = ({ markdown, components = {} }) => {
+const Mdx: React.FC<Props> = ({ markdown, components }) => {
   // @lionelb: we wrapped the <Content /> tag with a div to avoid have it wrapped with a paragraph
   const wrappedMarkdown = markdown.replace(
     /(<Content [^>]+><\/Content>)/,
