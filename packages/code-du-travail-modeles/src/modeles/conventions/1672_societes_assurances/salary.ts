@@ -4,7 +4,7 @@ import type {
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
-import { nonNullable, rankByMonthArrayDescFrench } from "../../common";
+import { rankByMonthArrayDescFrench } from "../../common";
 
 export type CC1672ReferenceSalaryProps = {
   salaires: SalaryPeriods[];
@@ -18,12 +18,10 @@ export class ReferenceSalary1672
     salaires,
     salairesPendantPreavis,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1672>): number {
-    const rankedSalaires = rankByMonthArrayDescFrench(salaires).filter(
-      (s) => s.value
-    );
+    const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const rankedSalairesPendantPreavis = rankByMonthArrayDescFrench(
       salairesPendantPreavis
-    ).filter((s) => s.value);
+    );
 
     const totalSalaryValues = [
       ...rankedSalairesPendantPreavis,
