@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+
 /**
  * This localStorage hooks
  * does not use a storage event handler by default
@@ -7,7 +8,7 @@ import { useCallback, useEffect, useState } from "react";
  * @param {*} key the localStorage key
  * @param {*} defaultValue the key's initialValue
  */
-export function useLocalStorage(key, defaultValue, useStorageListener = false) {
+export function useLocalStorage(key, defaultValue) {
   const initialValue = () => {
     try {
       const data = window.localStorage && window.localStorage.getItem(key);
@@ -18,19 +19,6 @@ export function useLocalStorage(key, defaultValue, useStorageListener = false) {
   };
 
   const [value, setValue] = useState(initialValue);
-  const onStorage = useCallback(
-    (event) => {
-      if (event.storageArea === localStorage && event.key === key) {
-        try {
-          const data = JSON.parse(event.newValue);
-          setValue(data);
-        } catch (error) {
-          setValue(event.newValue);
-        }
-      }
-    },
-    [key, setValue]
-  );
 
   useEffect(() => {
     if (!window.localStorage) {
@@ -40,12 +28,6 @@ export function useLocalStorage(key, defaultValue, useStorageListener = false) {
       window.localStorage.setItem(key, JSON.stringify(value));
     } catch (error) {
       console.error(error);
-    }
-    if (useStorageListener) {
-      window.addEventListener("storage", onStorage);
-      return () => {
-        window.removeEventListener("storage", onStorage);
-      };
     }
 
     // INFO(@lionelb): we use the result of JSON.stringify as
