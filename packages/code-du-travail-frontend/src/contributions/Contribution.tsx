@@ -13,7 +13,7 @@ import {
   Toast,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import Mdx from "../../src/common/Mdx";
@@ -23,6 +23,7 @@ import Html from "../common/Html";
 import References from "../common/References";
 import { useLocalStorage } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
+import { Agreement } from "../conventions/Search/api/type";
 
 const ReferencesJuridiques = ({ references = [] }) => {
   const refs = references.flatMap(({ category, title, url }) => {
@@ -71,13 +72,12 @@ const Contribution = ({ answers, content }) => {
     (answers.conventions && answers.conventions.length > 0) ||
     isConventionalAnswer;
 
-  const [convention, setConvention] = useLocalStorage("convention", undefined);
-  const [isConventionDetected, setConventionDetected] = useState(false);
-  useEffect(() => {
-    setConventionDetected(
-      convention && convention.id && convention.num && convention.title
-    );
-  }, [convention]);
+  const [convention, setConvention] = useLocalStorage<Agreement>(
+    "convention",
+    undefined
+  );
+  const isConventionDetected = () =>
+    convention && convention.id && convention.num && convention.title;
 
   let conventionAnswer;
   if (isConventionalAnswer) {
@@ -96,7 +96,7 @@ const Contribution = ({ answers, content }) => {
           <CustomWrapper variant="dark">
             <IconStripe icon={icons.Custom}>
               <StyledInsertTitle as="p">Page personnalisable</StyledInsertTitle>
-              {isConventionDetected || isConventionalAnswer ? (
+              {isConventionDetected() || isConventionalAnswer ? (
                 <Paragraph noMargin>
                   Cette page a été personnalisée avec l’ajout des{" "}
                   <a href="#customisation">
@@ -168,7 +168,7 @@ const Contribution = ({ answers, content }) => {
                 <>Que dit votre convention collective&nbsp;?</>
               )}
             </StyledTitle>
-            {!isConventionDetected && !isConventionalAnswer ? (
+            {!isConventionDetected() && !isConventionalAnswer ? (
               <SearchConvention onSelectConvention={setConvention} />
             ) : (
               <>

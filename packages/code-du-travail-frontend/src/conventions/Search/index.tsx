@@ -12,6 +12,7 @@ import { HelpModal } from "./HelpModal";
 import { ResultList } from "./ResultList";
 import useSearchCC, { Status } from "./searchHook";
 import Spinner from "react-svg-spinner";
+import { Agreement } from "./api/type";
 
 const trackInput = debounce((query, path, trackingUID) => {
   if (query.length > 1) {
@@ -20,7 +21,7 @@ const trackInput = debounce((query, path, trackingUID) => {
 }, 2000);
 
 type Props = {
-  onSelectConvention?: () => void;
+  onSelectConvention?: (agreement: Agreement) => void;
 };
 
 const Search = ({ onSelectConvention }: Props): JSX.Element => {

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 /**
  * This localStorage hooks
@@ -8,7 +8,10 @@ import { useEffect, useState } from "react";
  * @param {*} key the localStorage key
  * @param {*} defaultValue the key's initialValue
  */
-export function useLocalStorage(key, defaultValue) {
+export function useLocalStorage<T>(
+  key,
+  defaultValue
+): [T | any, (a?: any) => void] {
   const initialValue = () => {
     try {
       const data = window.localStorage && window.localStorage.getItem(key);
@@ -18,22 +21,30 @@ export function useLocalStorage(key, defaultValue) {
     }
   };
 
-  const [value, setValue] = useState(initialValue);
+  const [value, setValue] = useState("");
 
   useEffect(() => {
-    if (!window.localStorage) {
-      return;
-    }
-    try {
-      window.localStorage.setItem(key, JSON.stringify(value));
-    } catch (error) {
-      console.error(error);
-    }
+    updateValue(initialValue());
+  }, []);
 
-    // INFO(@lionelb): we use the result of JSON.stringify as
-    // dependency so IE11 doesn't loop endlessly
-    // eslint-disable-next-line
-  }, [key, JSON.stringify(value)]);
+  const updateValue = useCallback(
+    (value) => {
+      setValue(value);
+      if (!window.localStorage) {
+        return;
+      }
+      try {
+        window.localStorage.setItem(key, JSON.stringify(value));
+      } catch (error) {
+        console.error(error);
+      }
 
-  return [value, setValue];
+      // INFO(@lionelb): we use the result of JSON.stringify as
+      // dependency so IE11 doesn't loop endlessly
+      // eslint-disable-next-line
+    },
+    [key, JSON.stringify(value)]
+  );
+
+  return [value, updateValue];
 }
