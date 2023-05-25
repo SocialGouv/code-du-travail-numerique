@@ -25,8 +25,8 @@ const nextConfig = {
   poweredByHeader: false,
   sentry: {
     hideSourceMaps: false,
-    widenClientFileUpload: true,
   },
+  productionBrowserSourceMaps: true,
   compiler: {
     reactRemoveProperties:
       process.env.NODE_ENV === "production"
