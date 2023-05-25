@@ -46,9 +46,7 @@ export const SearchEnterpriseInput = ({
   );
   const [query, setQuery] = useState("");
   const [address, setAddress] = useState("");
-  const searchInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const name = event.target.name;
-    const value = event.target.value;
+  const searchInputHandler = () => {
     onSearchParamsChange({ ...searchParams, query: query, address: address });
   };
 
@@ -114,7 +112,6 @@ export const SearchEnterpriseInput = ({
           </InputWithButton>
         </Box>
       </Flex>
-
       <EntrepriseSearchResults
         handleEnterpriseSelection={handleEnterpriseSelection}
         onUserAction={onUserAction}
