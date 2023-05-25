@@ -1,7 +1,7 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Wrapper } from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import { Enterprise } from "../../conventions/Search/api/enterprises.service";
@@ -16,13 +16,13 @@ import { TrackingProvider, useTrackingContext } from "./common/TrackingContext";
 import Steps from "./steps";
 import handleTrackEvent from "./tracking/HandleTrackEvent";
 import { OnUserAction, UserAction } from "./types";
-import scrollToTop from "../common/utils/scrollToTop";
 
 interface Props {
   icon: string;
   title: string;
   displayTitle: string;
   widgetMode?: boolean;
+  screenType?: ScreenType | null;
 }
 
 function AgreementSearchTool({
@@ -30,8 +30,11 @@ function AgreementSearchTool({
   title,
   displayTitle,
   widgetMode,
+  screenType = null,
 }: Props): JSX.Element {
-  const [screen, setScreen] = useState<ScreenType | null>(widgetMode ? ScreenType.enterprise : null);
+  const [screen, setScreen] = useState<ScreenType | null>(
+    widgetMode ? ScreenType.enterprise : screenType
+  );
   const { setEnterprise, setSearchParams, searchParams } = useNavContext();
   const { uuid, trackEvent } = useTrackingContext();
   const router = useRouter();
@@ -42,7 +45,7 @@ function AgreementSearchTool({
 
   function clearSelection() {
     if (widgetMode) {
-      setScreen(ScreenType.enterprise)
+      setScreen(ScreenType.enterprise);
     } else {
       setEnterprise(null);
     }
@@ -71,20 +74,6 @@ function AgreementSearchTool({
     setSearchParams({ address: "", query: "" });
   }
 
-  function handleHashNavigation(url) {
-    const [, hash = ""] = url.split("#");
-    scrollToTop();
-    const main: HTMLDivElement | null = document.querySelector("[role=main]");
-    if (main) {
-      main.focus();
-    }
-    handleSearchType(hash);
-  }
-
-  function handleSearchType(value) {
-    setScreen(value);
-  }
-
   function handleEnterpriseSelection(
     enterprise: Enterprise,
     params: SearchParams
@@ -92,20 +81,13 @@ function AgreementSearchTool({
     setEnterprise(enterprise);
     setSearchParams(params);
     if (widgetMode) {
-      setScreen(ScreenType.agreementSelection)
+      setScreen(ScreenType.agreementSelection);
     } else {
       router.push(
-        `/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreementSelection}`
+        `/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreementSelection}`
       );
     }
   }
-
-  useEffect(() => {
-    router.events.on("hashChangeStart", handleHashNavigation);
-    return () => {
-      router.events.off("hashChangeStart", handleHashNavigation);
-    };
-  }, []);
 
   let Step;
   switch (screen) {
