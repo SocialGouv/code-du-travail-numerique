@@ -16,10 +16,16 @@ font-src 'self' data: blob:;
 const { withSentryConfig } = require("@sentry/nextjs");
 const MappingReplacement = require("./redirects");
 
-const compose =
-  (...fns) =>
-  (args) =>
-    fns.reduceRight((arg, fn) => fn(arg), args);
+const sentryWebpackPluginOptions = {
+  // Additional config options for the Sentry Webpack plugin. Keep in mind that
+  // the following options are set automatically, and overriding them is not
+  // recommended:
+  //   release, url, org, project, authToken, configFile, stripPrefix,
+  //   urlPrefix, include, ignore
+  // For all available options, see:
+  // https://github.com/getsentry/sentry-webpack-plugin#options.
+  org: process.env.NEXT_PUBLIC_SENTRY_ORG ?? "incubateur",
+};
 
 const nextConfig = {
   poweredByHeader: false,
@@ -40,7 +46,8 @@ const nextConfig = {
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
 };
 
-module.exports = {
+const moduleExports = {
+  ...nextConfig,
   async headers() {
     let headers = [
       {
@@ -83,5 +90,10 @@ module.exports = {
   async redirects() {
     return MappingReplacement;
   },
-  ...compose(withBundleAnalyzer, withSentryConfig)(nextConfig),
+};
+
+module.exports = {
+  ...withBundleAnalyzer(
+    withSentryConfig(moduleExports, sentryWebpackPluginOptions)
+  ),
 };
