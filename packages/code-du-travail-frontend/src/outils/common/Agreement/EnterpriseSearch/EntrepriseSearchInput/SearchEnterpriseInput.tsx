@@ -77,6 +77,7 @@ export const SearchEnterpriseInput = ({
             onChange={(e) => setQuery(e.target.value)}
             autoComplete="off"
             data-testid="agreement-company-search-input"
+            required
           />
         </Box>
         <Box>
