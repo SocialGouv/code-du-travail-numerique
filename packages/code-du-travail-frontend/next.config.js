@@ -90,8 +90,6 @@ const moduleExports = {
   },
 };
 
-module.exports = {
-  ...withBundleAnalyzer(
-    withSentryConfig(moduleExports, sentryWebpackPluginOptions)
-  ),
-};
+module.exports = withBundleAnalyzer(
+  withSentryConfig(moduleExports, sentryWebpackPluginOptions)
+);
