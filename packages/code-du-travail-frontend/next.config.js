@@ -26,6 +26,8 @@ const sentryWebpackPluginOptions = {
 const nextConfig = {
   poweredByHeader: false,
   sentry: {
+    disableServerWebpackPlugin: true,
+    disableClientWebpackPlugin: true,
     hideSourceMaps: false,
   },
   productionBrowserSourceMaps: true,
