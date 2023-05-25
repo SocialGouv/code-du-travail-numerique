@@ -162,7 +162,7 @@ const Box = styled.div`
 
   & + & {
     @media (min-width: ${theme.breakpoints.mobile}) {
-      flex: 0 1 25rem;
+      flex: 0 1 26rem;
     }
     @media (max-width: ${theme.breakpoints.mobile}) {
       padding-top: ${theme.spacings.xmedium};
