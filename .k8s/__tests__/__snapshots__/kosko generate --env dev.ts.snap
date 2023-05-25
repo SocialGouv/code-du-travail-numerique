@@ -171,6 +171,8 @@ spec:
       AgCOIiDaHRKNdV8qEgKxmMTGVXbfo+K9hgpFH4E0gl4WQdbKf6TR6JxEojM4JY6C5ajQ25lAt7KKRVtrrBBCCwvSWaCSJY/wb1QtzeKFkdFhA2mPPAD2YMEfeoqLElRisTnKerTqnhMckjAR+z5rQ0B+FPNYPDbdELwQQqE25lFHLrnWYgjCRaJ4uXe5fh0KQySWuemuFrYVeikbaUYnRvR6w4nfu1oXzMIUevFD3rCu371ViR6cgA6BYPemNf42AFjuyX6lIA6DH9485f+/YCCNVybHRiJ4W2+45ciz9M2lN03kzMrXAgj7w4f8uPg9VBBkrbFN5tks1OqbqLlhur/7sUX3n/FjC5/xW95L4O8XjC90u4WFHuANmfY+t2uDmp3qpQ/xmskHV37kwb3wq6r5+67sYrx39I9OfXqpucSHboEB6nv3PuAe3M7uEGotlwHZkhraNXOKVo4Xv7M3HMWVFdWpB1OnDCl9gQnDydy0D+/Sqagcbl3xBcVxT5WLJhLs/8Yl80MmtGkWVFo/YZGLPxzCHxrMVQoZGsjUhflwBGHMxHTnxQWiT7aT+6eOk3yFmKx0sBtJkA8NY+7wXUG/Y0ZPtVme1/528CEvHH8mNRw8DD+F4ZdtE4eurf7bH52QaZxD8SCblNl5/JK/ExKQHVm70KbR4mNC4YVee1+bBXixNg/PU5i1b15qWV7xuH9l97BhRGZ+tSDF5m6rvOL9W0oE4vKJQZp6KQhMS/pXtAUHffbBikWTTrUnZOH+ZFLnbv3wONg8e1rixjbXuC67K/BA
     ELASTICSEARCH_TOKEN_API: >-
       AgBxNmw2Of1Jbw+qkaSIqyXQjjfvOV68UTw59sbQMW1p3cSXHzyQQtQJc4iQLPfqfTuSsxXgDac+Bq/8uhWvZfKl1sykBFvWfX8HzFfUCjSO87GTVj0K/ThTdZ/Xx9XKCjKcB79revXvzviKkOuieM90IS5Npx3QKsfdPLi1MQNEkahuRJ7E6SedOYnthGo2jGr0Io864ddREvV5vVBcnAYJ/BEHhAjSmmw22zIQO09wfsTd0pc2RiBbOKpKXm09Lbo1fce1cUhFSY5EbciMCIFDqbHb6LfpZB8Gil4g4D2X8FeZ0k5b7Hgj655cAHUcBfMBLMzdzjM5nXkpJqSkPb8c8NyyZ6Q5nmBmP5gpYrI1xtQ6hdJVirV9Q1X6b0iueTPBjtb460BBfz5RiCwcsQF20gNTwF/NAiTe2LMv34H3+VUhSpxpvDX8dkBAYsAJBRIFSlL7BWJPyM+xPBJou2QehTs3lHeVuOv5kHKTRRV18oPAQkgrtwdqz8jsTx0pI30V8ZAzB9DqC22j5sSpqa0dKK2pgx9pqspKSqLOMwUgFjel/Dj76LbdDAIKNTSBeDKCK+UcNbnwFB9iGzKkyi2J5BMZCaAD1rcyfoi1+P2YhpSUKERQRrAu0B4zFbqgA4kJx3qrpG4zJJYiuLyQZNMAuAU/Ev/18i6JfCEAU06mQ/7UFrnbGv5r3tK6SSW9hrDF+EUKQLFBqfFw9Aowu9A6kAnCaGOgRLNEf6tci7GxaPazZIy/oEaGbc39v6fkOGaG3BYwP52TSt6WxfQ=
+    SENTRY_AUTH_TOKEN: >-
+      AgCVPkeR3eydeRd3Ub1qjKkbojcfKsEHVKSZikuaq3mVeOJJpDHZpMmXOwYuZ3vDQi1pu6zNPs13nh8ndz+Xr8DFPEYv/jeMz/Q98X2AiBPhPBOB4aI8t1vmGZpoYuK3OMUvR9LMRDhmvZSuVOkoqqOqnU+iomnNqrMuuACmedqBzBcDsEuPw6aKfkPf3yrBl+XH5KOtKXjnYjgO3rLgYaghy97d734Xa2lqbjuW634Iy8t685OEqNUS0c0hpCxlJS1z2yGjwtJ3HsacnaRdBh+n4jYPIp/WduLKOXIa5kiGU2jVgPFROlhWOiA1VFplcWkEH7B/nQqBAHdOImcU2shoFQ6lNYF/uVtFdeXiSxdmBHvT3tmvcotAwLGETWAgryFZGfiMSZepdmOaOdWS0DudeK1VHHxbr2U4bbLvHXuT2dY/Gx6jf1h8demlXJtW9VEYV2dRnQ/wkw3tMv3vPIizfB1jF6dhPSBhusOWLQnGPetrUHAKsV4+SH08rSD0bxOnRaKIHay6R/9Nbp1kh9pC04VdWn2hHAOHBkjvOvh18qdrhY578GeWIKI7koeQJOHddA0CT3O3amBbWMHgRzPrWmNNhOAsLWLYNVB2qtu6hQ5s4oIKeRDkELyh5eIq3uPTeIJVbcW3rkh6T1eqM3lwK3TaE5g86D9UF6x5i8KIGYVjpSj/5A5Ju/8r2g0qw3pDKJupV8iNPnWOcSq6vZJqtIC1FWXpLtboylI61GU1mC9cE/sWXYwD9MiLq+fSPpm5LmRYwQMyB6KflldUAqJr
   template:
     metadata:
       annotations:
@@ -182,7 +184,7 @@ spec:
         app.github.com/repo: socialgouv/code-du-travail-numerique
         app.github.com/run: '1234'
         app.github.com/sha: '0123456'
-      name: api-secret
+      name: www-secret
       labels:
         application: code-du-travail-numerique
         component: code-du-travail-numerique
@@ -218,6 +220,8 @@ data:
   NODE_ENV: production
   PIWIK_SITE_ID: '3'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr
+  SENTRY_ORG: incubateur
+  SENTRY_PROJECT: code-du-travail-numerique
 ---
 apiVersion: v1
 kind: Service
