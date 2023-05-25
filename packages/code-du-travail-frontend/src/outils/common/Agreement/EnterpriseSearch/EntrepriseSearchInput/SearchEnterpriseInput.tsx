@@ -108,6 +108,7 @@ export const SearchEnterpriseInput = ({
               variant="secondary"
               data-testid="agreement-company-search-button"
             >
+              <MobileOnly>Rechercher</MobileOnly>
               <StyledSearchIcon />
             </SubmitIcon>
           </InputWithButton>
@@ -164,8 +165,8 @@ const Box = styled.div`
   width: 100%;
 
   & + & {
-    @media (min-width: ${theme.breakpoints.desktop}) {
-      flex: 0 1 30rem;
+    @media (min-width: ${theme.breakpoints.mobile}) {
+      flex: 0 1 25rem;
     }
     @media (max-width: ${theme.breakpoints.mobile}) {
       padding-top: ${theme.spacings.xmedium};
@@ -177,15 +178,31 @@ const InputWithButton = styled.div`
   position: relative;
 `;
 const SubmitIcon = styled(Button)`
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 2.5rem;
-  color: ${({ theme }) => theme.secondary};
+  @media (min-width: ${theme.breakpoints.mobile}) {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 2.5rem;
+  }
+  @media (max-width: ${theme.breakpoints.mobile}) {
+    width: 100%;
+    margin-top: ${theme.spacings.xmedium};
+    box-sizing: inherit;
+  }
+  color: ${({ theme }) => theme.white};
 `;
 
 const StyledSearchIcon = styled(SearchIcon)`
+  @media (max-width: ${theme.breakpoints.mobile}) {
+    display: none;
+  }
   color: ${({ theme }) => theme.white};
   height: 25px;
   width: 25px;
+`;
+
+const MobileOnly = styled.span`
+  @media (min-width: ${theme.breakpoints.mobile}) {
+    display: none;
+  }
 `;
