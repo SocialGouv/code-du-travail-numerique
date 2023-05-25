@@ -1,49 +1,56 @@
 import { useCallback, useEffect, useState } from "react";
 import { Agreement } from "../conventions/Search/api/type";
 
-/**
- * This localStorage hooks
- * does not use a storage event handler by default
- * since it double the render pass (setValue is called twice)
- *
- * @param {*} key the localStorage key
- * @param {*} defaultValue the key's initialValue
- */
-export function useLocalStorage<T>(
-  key,
+const initialValue = (key, defaultValue) => {
+  try {
+    const data = window.localStorage?.getItem(key);
+    return data !== null ? JSON.parse(data) : defaultValue;
+  } catch (error) {
+    return defaultValue;
+  }
+};
+
+const updateValueCallback = (key, setValue) => (value) => {
+  setValue(value);
+  if (!window.localStorage) {
+    return;
+  }
+  try {
+    window.localStorage.setItem(key, JSON.stringify(value));
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export function useLocalStorageOnPageLoad<T>(
+  key: string,
   defaultValue?: Agreement
 ): [T | any, (a?: any) => void] {
-  const initialValue = () => {
-    try {
-      const data = window.localStorage && window.localStorage.getItem(key);
-      return data !== null ? JSON.parse(data) : defaultValue;
-    } catch (error) {
-      return defaultValue;
-    }
-  };
-
   const [value, setValue] = useState(null);
 
   useEffect(() => {
-    updateValue(initialValue());
+    updateValue(initialValue(key, defaultValue));
   }, []);
 
   const updateValue = useCallback(
-    (value) => {
-      setValue(value);
-      if (!window.localStorage) {
-        return;
-      }
-      try {
-        window.localStorage.setItem(key, JSON.stringify(value));
-      } catch (error) {
-        console.error(error);
-      }
+    (value) => updateValueCallback(key, setValue)(value),
+    [key, JSON.stringify(value)]
+  );
 
-      // INFO(@lionelb): we use the result of JSON.stringify as
-      // dependency so IE11 doesn't loop endlessly
-      // eslint-disable-next-line
-    },
+  return [value, updateValue];
+}
+
+export function useLocalStorage<T>(
+  key: string,
+  defaultValue?: Agreement
+): [T | any, (a?: any) => void] {
+  const [value, setValue] = useState(initialValue(key, defaultValue));
+  const updateValue = useCallback(
+    (value) => updateValueCallback(key, setValue)(value),
+
+    // INFO(@lionelb): we use the result of JSON.stringify as
+    // dependency so IE11 doesn't loop endlessly
+    // eslint-disable-next-line
     [key, JSON.stringify(value)]
   );
 

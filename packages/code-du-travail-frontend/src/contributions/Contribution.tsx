@@ -21,7 +21,7 @@ import SearchConvention from "../../src/conventions/Search";
 import { A11yLink } from "../common/A11yLink";
 import Html from "../common/Html";
 import References from "../common/References";
-import { useLocalStorage } from "../lib/useLocalStorage";
+import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
 import { Agreement } from "../conventions/Search/api/type";
 
@@ -72,7 +72,8 @@ const Contribution = ({ answers, content }) => {
     (answers.conventions && answers.conventions.length > 0) ||
     isConventionalAnswer;
 
-  const [convention, setConvention] = useLocalStorage<Agreement>("convention");
+  const [convention, setConvention] =
+    useLocalStorageOnPageLoad<Agreement>("convention");
   const isConventionDetected = () =>
     convention && convention.id && convention.num && convention.title;
 
