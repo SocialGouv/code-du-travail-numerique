@@ -66,6 +66,7 @@
     "react-dom": "^18.2.0",
     "regenerator-runtime": "^0.13.9",
     "storybook": "^7.0.17",
+    "storybook-addon-swc": "^1.2.0",
     "styled-components": "^5.3.0",
     "stylelint": "^14.16.0",
     "stylelint-config-rational-order": "^0.1.2",
