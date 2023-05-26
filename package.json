@@ -5,7 +5,7 @@
   "description": "Code du travail",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap && lerna link",
     "build": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils,@cdt/frontend} --stream",
     "build:npm": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils} --stream",
     "build:frontend": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils,@cdt/frontend} --stream",
