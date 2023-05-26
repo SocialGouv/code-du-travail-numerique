@@ -5,7 +5,6 @@ const path = require("path");
 const config: StorybookConfig = {
   stories: ["../src/**/story.@(js|mdx|ts|tsx|jsx)"],
   addons: [
-    "storybook-addon-swc",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
@@ -22,7 +21,11 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: "@storybook/react-vite",
-    options: {},
+    options: {
+      builder: {
+        viteConfigPath: path.resolve(__dirname, "../vite.config.js"),
+      },
+    },
   },
   docs: {
     autodocs: "tag",
