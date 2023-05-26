@@ -18,8 +18,8 @@ const MappingReplacement = require("./redirects");
 
 const sentryWebpackPluginOptions = {
   // For all available options, see: https://github.com/getsentry/sentry-webpack-plugin#options.
-  org: process.env.SENTRY_ORG,
-  project: process.env.SENTRY_PROJECT,
+  org: process.env.NEXT_PUBLIC_SENTRY_ORG,
+  project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
   authToken: process.env.SENTRY_AUTH_TOKEN,
 };
 

@@ -31,6 +31,7 @@ jobs:
             NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
             NEXT_PUBLIC_SENTRY_ENV=preproduction
             NEXT_PUBLIC_SENTRY_ORG=incubateur
+            NEXT_PUBLIC_SENTRY_PROJECT=code-du-travail-numerique
             NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
             NEXT_PUBLIC_AZURE_CONTAINER=cdtn
             NEXT_PUBLIC_PIWIK_SITE_ID=3
