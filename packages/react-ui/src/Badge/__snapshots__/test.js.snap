@@ -3,10 +3,10 @@
 exports[`<Badge /> renders 1`] = `
 <div>
   <div
-    class="sc-bcXHqe lmhoTQ"
+    class="sc-aXZVg iHwzcx"
   >
     <div
-      class="sc-gswNZR dQPqOZ"
+      class="sc-gEvEer htfpNk"
     >
       <svg
         aria-hidden="true"
@@ -35,10 +35,10 @@ exports[`<Badge /> renders 1`] = `
 exports[`<Badge /> renders with correct styles and icon 1`] = `
 <div>
   <div
-    class="sc-bcXHqe eRXbpm"
+    class="sc-aXZVg eeFinL"
   >
     <div
-      class="sc-gswNZR dQPqOZ"
+      class="sc-gEvEer htfpNk"
     >
       <svg
         aria-hidden="true"
