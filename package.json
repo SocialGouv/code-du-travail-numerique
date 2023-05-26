@@ -47,11 +47,6 @@
     "is-ci": "^3.0.0",
     "lerna": "^5.0.0"
   },
-  "resolutions": {
-    "@babel/core": "^7.14.8",
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/preset-env": "^7.15.0"
-  },
   "workspaces": {
     "packages": [
       "packages/*"
