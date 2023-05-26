@@ -56,6 +56,24 @@ jobs:
           path: ./*
           key: ${{ github.sha }}
 
+  build-storybook:
+    name: Build Storybook
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/cache@v3
+        name: Restore build
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - name: Build Storybook
+        run: |
+          yarn workspace @socialgouv/cdtn-ui build-storybook
+      - name: Cache build
+        uses: actions/cache@v3
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+
   lint:
     name: Lint
     runs-on: ubuntu-latest
