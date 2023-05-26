@@ -21,6 +21,7 @@
     "lint:fix": "lerna run lint -- --fix",
     "lint:quiet": "lerna run lint -- --quiet",
     "start": "lerna run start --scope=@cdt/frontend --stream",
+    "storybook:build": "lerna run build-storybook --scope=@socialgouv/cdtn-ui",
     "storybook:run": "lerna run start --scope=@socialgouv/cdtn-ui",
     "storybook:deploy": "lerna run deploy-storybook --scope=@socialgouv/cdtn-ui",
     "storybook:deploy:action": "lerna run deploy-storybook:action --scope=@socialgouv/cdtn-ui",
