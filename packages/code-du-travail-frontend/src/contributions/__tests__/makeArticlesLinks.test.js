@@ -1,6 +1,5 @@
 import makeArticlesLinks from "../makeArticlesLinks";
 
-// Tus : TODO
 const tests = [
   "Article L3123-5",
   "Article R.3123-5",

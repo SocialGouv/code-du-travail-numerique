@@ -21,10 +21,6 @@ const MappingReplacement = require("./redirects");
 const nextConfig = {
   poweredByHeader: false,
   productionBrowserSourceMaps: true,
-  sentry: {
-    disableServerWebpackPlugin: true,
-    disableClientWebpackPlugin: true,
-  },
   compiler: {
     reactRemoveProperties:
       process.env.NODE_ENV === "production"

@@ -76,7 +76,7 @@ function ModeleCourrier(props: Props): JSX.Element {
       >
         <Badge />
         {/* TODO : remove it*/}
-        <button onClick={() => { throw new Error("error modele de courrier :)"); }}>
+        <button onClick={() => { throw new Error("Error Modèle SSR page de courrier :)"); }}>
           CREATE A FRONTEND ERROR
         </button>
         <Section>

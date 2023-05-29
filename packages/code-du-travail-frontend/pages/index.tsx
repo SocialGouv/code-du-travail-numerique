@@ -31,6 +31,10 @@ const Home = ({
         noTitleAdd
         description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
       />
+      {/* TODO: remove it */}
+      <button onClick={() => { throw new Error("error home :)"); }}>
+        CREATE A FRONTEND ERROR
+      </button>
       <SearchHero />
       {highlights.length > 0 && (
         <Highlights id="highlights-element" highlights={highlights.slice(0, 4)} />

@@ -11,7 +11,6 @@ export enum Status {
 }
 
 // a hook that return [status, searchResults]
-// todo: package as a module
 const useSearchCC = (query: string): [Status, ResultType] => {
   const [results, setResults] = useState<ResultType>({
     conventions: [],
