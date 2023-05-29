@@ -18,6 +18,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: Set revision env
+        run: echo "APP_REVISION=$(git describe --tags --always)" >> $GITHUB_ENV
       - name: Create Sentry release
         uses: getsentry/action-release@v1
         env:
@@ -27,6 +29,8 @@ jobs:
           SENTRY_URL: https://sentry.fabrique.social.gouv.fr/
         with:
           environment: dev
+          version: ${{ env.APP_REVISION }}
+          sourcemaps: packages/code-du-travail-frontend/_next
 
   manifests:
     name: Generate k8s manifests
