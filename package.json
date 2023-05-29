@@ -44,7 +44,8 @@
   "dependencies": {
     "husky": "^8.0.0",
     "is-ci": "^3.0.0",
-    "lerna": "^6.0.0"
+    "lerna": "^6.0.0",
+    "nx": "^16.2.2"
   },
   "workspaces": {
     "packages": [
