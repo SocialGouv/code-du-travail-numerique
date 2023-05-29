@@ -1,4 +1,4 @@
-ARG NODE_VERSION=20.2.0-alpine
+ARG NODE_VERSION=20.2.0
 # dist
 FROM node:$NODE_VERSION AS dist
 
@@ -47,7 +47,8 @@ COPY . ./
 
 ENV NODE_ENV=production
 
-RUN yarn build:frontend && yarn --frozen-lockfile --prod --prefer-offline
+RUN yarn build  && \
+  yarn --frozen-lockfile --prod --prefer-offline
 
 # app
 FROM node:$NODE_VERSION
