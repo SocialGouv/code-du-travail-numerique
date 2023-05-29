@@ -2,8 +2,6 @@ ARG NODE_VERSION=20.2.0
 # dist
 FROM node:$NODE_VERSION AS dist
 
-RUN apk add --no-cache python make g++
-
 WORKDIR /
 
 # Add build-arg from github actions
