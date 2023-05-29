@@ -16,6 +16,28 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
+      - name: Build code
+        run: |
+          yarn build
       - name: Set env
         run: echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
       - name: Create Sentry release
@@ -28,7 +50,7 @@ jobs:
         with:
           environment: dev
           sourcemaps: packages/code-du-travail-frontend/_next
-          version: ${{ env.GITHUB_SHA }}
+          version: ${{ github.sha }}
 
   manifests:
     name: Generate k8s manifests
