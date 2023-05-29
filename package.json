@@ -41,11 +41,10 @@
   "bugs": {
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
-  "dependencies": {
+  "devDependencies": {
     "husky": "^8.0.0",
     "is-ci": "^3.0.0",
-    "lerna": "^6.0.0",
-    "nx": "^16.2.2"
+    "lerna": "^5.0.0"
   },
   "workspaces": {
     "packages": [
