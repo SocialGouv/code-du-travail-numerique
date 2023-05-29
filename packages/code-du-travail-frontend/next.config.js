@@ -25,6 +25,7 @@ const sentryWebpackPluginOptions = {
 
 const nextConfig = {
   poweredByHeader: false,
+  swcMinify: false,
   sentry: {
     disableServerWebpackPlugin: true,
     disableClientWebpackPlugin: true,
