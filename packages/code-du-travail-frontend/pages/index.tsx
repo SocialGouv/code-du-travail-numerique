@@ -32,7 +32,7 @@ const Home = ({
         description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
       />
       <SearchHero />
-      <button onClick={() => { throw new Error("Encore un try de fix sur sentry"); }}>
+      <button onClick={() => { throw new Error("Encore :)"); }}>
         CREATE A FRONTEND ERROR
       </button>
       {highlights.length > 0 && (
