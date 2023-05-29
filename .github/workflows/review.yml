@@ -49,7 +49,7 @@ jobs:
           SENTRY_URL: https://sentry.fabrique.social.gouv.fr/
         with:
           environment: dev
-          sourcemaps: packages/code-du-travail-frontend/_next
+          sourcemaps: ./packages/code-du-travail-frontend/.next
           version: ${{ github.sha }}
           ignore_missing: true
 
