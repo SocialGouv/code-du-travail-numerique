@@ -111,7 +111,7 @@ jobs:
             NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
             NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
             SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
-            SENTRY_RELEASE=${{ env.GITHUB_SHA }}
+            NEXT_PUBLIC_SENTRY_RELEASE=${{ github.sha }}
 
   deploy:
     name: Deploy application

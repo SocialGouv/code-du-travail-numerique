@@ -10,6 +10,49 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  create-sentry-release:
+    name: Create Sentry release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
+      - name: Build code
+        run: |
+          yarn build
+      - name: Set env
+        run: echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
+      - name: Create Sentry release
+        uses: getsentry/action-release@v1
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: incubateur
+          SENTRY_PROJECT: code-du-travail-numerique
+          SENTRY_URL: https://sentry.fabrique.social.gouv.fr/
+        with:
+          environment: production
+          sourcemaps: ./packages/code-du-travail-frontend/.next
+          version: ${{ github.sha }}
+          ignore_missing: true
+
   register-frontend:
     name: Register frontend
     runs-on: ubuntu-latest
@@ -40,6 +83,7 @@ jobs:
             NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
             NEXT_PUBLIC_SITE_URL=https://code.travail.gouv.fr
             SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
+            NEXT_PUBLIC_SENTRY_RELEASE=${{ github.sha }}
 
   deploy-prod:
     name: Deploy production
