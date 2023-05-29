@@ -25,13 +25,14 @@ const sentryWebpackPluginOptions = {
 
 const nextConfig = {
   poweredByHeader: false,
+  productionBrowserSourceMaps: true,
   swcMinify: false,
   sentry: {
     disableServerWebpackPlugin: true,
     disableClientWebpackPlugin: true,
     hideSourceMaps: false,
+    widenClientFileUpload: true,
   },
-  productionBrowserSourceMaps: true,
   compiler: {
     reactRemoveProperties:
       process.env.NODE_ENV === "production"

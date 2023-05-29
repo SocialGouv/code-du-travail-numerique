@@ -50,6 +50,7 @@ jobs:
           sourcemaps: ./packages/code-du-travail-frontend/.next
           version: ${{ github.sha }}
           ignore_missing: true
+          url_prefix: "~/_next"
 
   manifests:
     name: Generate k8s manifests
