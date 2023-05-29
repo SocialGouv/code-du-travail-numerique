@@ -3424,6 +3424,19 @@
   dependencies:
     "@types/jest" "^27.0.1"
 
+"@socialgouv/cdtn-ui@file:packages/react-ui":
+  version "4.100.0"
+  dependencies:
+    "@reach/dialog" "0.15.3"
+    "@socialgouv/react-accessible-accordion" "4.1.1"
+    polished "^4.2.2"
+    react-feather "^2.0.9"
+    react-tabs "^3.2.2"
+    use-onclickoutside "^0.4.0"
+
+"@socialgouv/cdtn-utils@file:packages/code-du-travail-utils":
+  version "4.100.0"
+
 "@socialgouv/eslint-config-react@^1.75.0":
   version "1.131.0"
   resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-react/-/eslint-config-react-1.131.0.tgz#d52aafcb1595957b7f1623a97905dc335d7c9d7c"
@@ -3483,6 +3496,14 @@
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/@socialgouv/matomo-next/-/matomo-next-1.6.1.tgz#0080945dc0062fee7fe53e4c058dd40768a3c278"
   integrity sha512-O2lxMKZHVzvXGZNsKOnsSS+hzqxIX35CPRuVkuU8Z+EFORuO2R/iiBBfyY1d+XvexIsJOA2uHnxhJxsdeFIrRw==
+
+"@socialgouv/modeles-social@file:packages/code-du-travail-modeles":
+  version "4.100.0"
+  dependencies:
+    date-fns "^2.28.0"
+    fs-extra "^10.0.0"
+    publicodes "1.0.0-beta.60"
+    yaml "^2.0.0"
 
 "@socialgouv/react-accessible-accordion@4.1.1":
   version "4.1.1"

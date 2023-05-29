@@ -22,6 +22,11 @@ const compose =
     fns.reduceRight((arg, fn) => fn(arg), args);
 
 const nextConfig = {
+  transpilePackages: [
+    "@socialgouv/cdtn-ui",
+    "@socialgouv/modeles-social",
+    "@socialgouv/cdtn-utils",
+  ],
   poweredByHeader: false,
   sentry: {
     hideSourceMaps: false,
