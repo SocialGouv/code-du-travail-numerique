@@ -10,5 +10,3 @@ data:
   NODE_ENV: "production"
   PIWIK_SITE_ID: "3"
   PIWIK_URL: "https://matomo.fabrique.social.gouv.fr"
-  SENTRY_ORG: "incubateur"
-  SENTRY_PROJECT: "code-du-travail-numerique"
