@@ -12,6 +12,24 @@ concurrency:
   group: dev
 
 jobs:
+  create-sentry-release:
+    name: Create Sentry release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Create Sentry release
+        uses: getsentry/action-release@v1
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: incubateur
+          SENTRY_PROJECT: code-du-travail-numerique
+          SENTRY_URL: https://sentry.fabrique.social.gouv.fr/
+        with:
+          environment: dev
+
   register-frontend:
     name: Register frontend
     runs-on: ubuntu-latest
@@ -39,8 +57,6 @@ jobs:
             NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
             NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr
             SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
-            SENTRY_ORG=incubateur
-            SENTRY_PROJECT=code-du-travail-numerique
 
   manifests:
     name: Dev manifests
