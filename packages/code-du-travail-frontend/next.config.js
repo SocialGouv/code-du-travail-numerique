@@ -11,6 +11,8 @@ script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr htt
 frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
 style-src 'self' 'unsafe-inline';
 font-src 'self' data: blob:;
+worker-src 'self' blob:;
+child-src 'self' blob:;
 `;
 
 const { withSentryConfig } = require("@sentry/nextjs");
