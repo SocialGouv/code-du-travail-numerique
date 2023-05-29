@@ -43,7 +43,7 @@ COPY . ./
 
 ENV NODE_ENV=production
 
-RUN yarn build:frontend && yarn --frozen-lockfile --prod --prefer-offline
+RUN yarn build && yarn --frozen-lockfile --prod --prefer-offline
 
 # app
 FROM node:$NODE_VERSION
