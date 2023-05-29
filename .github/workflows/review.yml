@@ -51,6 +51,7 @@ jobs:
           environment: dev
           sourcemaps: packages/code-du-travail-frontend/_next
           version: ${{ github.sha }}
+          ignore_missing: true
 
   manifests:
     name: Generate k8s manifests
