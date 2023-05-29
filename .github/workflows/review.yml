@@ -10,25 +10,25 @@ concurrency:
   group: review-${{ github.ref }}
 
 jobs:
-  create-sentry-release:
-    name: Create Sentry release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Set revision env
-        run: echo "APP_REVISION=$(git describe --tags --always)" >> $GITHUB_ENV
-      - name: Create Sentry release
-        uses: getsentry/action-release@v1
-        env:
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: incubateur
-          SENTRY_PROJECT: code-du-travail-numerique
-          SENTRY_URL: https://sentry.fabrique.social.gouv.fr/
-        with:
-          environment: dev
-          version: ${{ env.APP_REVISION }}
-          sourcemaps: packages/code-du-travail-frontend/_next
+  # create-sentry-release:
+  #   name: Create Sentry release
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v3
+  #     - name: Set revision env
+  #       run: echo "APP_REVISION=$(git describe --tags --always)" >> $GITHUB_ENV
+  #     - name: Create Sentry release
+  #       uses: getsentry/action-release@v1
+  #       env:
+  #         SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+  #         SENTRY_ORG: incubateur
+  #         SENTRY_PROJECT: code-du-travail-numerique
+  #         SENTRY_URL: https://sentry.fabrique.social.gouv.fr/
+  #       with:
+  #         environment: dev
+  #         version: ${{ env.APP_REVISION }}
+  #         sourcemaps: packages/code-du-travail-frontend/_next
 
   manifests:
     name: Generate k8s manifests
