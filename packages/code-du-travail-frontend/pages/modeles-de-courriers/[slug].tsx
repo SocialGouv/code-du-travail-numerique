@@ -75,6 +75,10 @@ function ModeleCourrier(props: Props): JSX.Element {
         breadcrumbs={breadcrumbs}
       >
         <Badge />
+        {/* TODO : remove it*/}
+        <button onClick={() => { throw new Error("error modele de courrier :)"); }}>
+          CREATE A FRONTEND ERROR
+        </button>
         <Section>
           <LightWrapper>
             <FloatWrapper>

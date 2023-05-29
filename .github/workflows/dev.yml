@@ -40,8 +40,6 @@ jobs:
       - name: Build code
         run: |
           yarn build
-      - name: Set env
-        run: echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
       - name: Create Sentry release
         uses: getsentry/action-release@v1
         env:
@@ -59,9 +57,6 @@ jobs:
     name: Register frontend
     runs-on: ubuntu-latest
     steps:
-      - name: Get commit sha
-        run: |
-          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
       - name: Register docker images
         uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
         with:
@@ -75,14 +70,14 @@ jobs:
             NEXT_PUBLIC_SENTRY_ENV=preproduction
             NEXT_PUBLIC_SENTRY_ORG=incubateur
             NEXT_PUBLIC_SENTRY_PROJECT=code-du-travail-numerique
+            NEXT_PUBLIC_SENTRY_RELEASE=${{ github.sha }}
             NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
             NEXT_PUBLIC_AZURE_CONTAINER=cdtn
             NEXT_PUBLIC_PIWIK_SITE_ID=3
             NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
-            NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
+            NEXT_PUBLIC_COMMIT=${{ github.sha }}
             NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr
             SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
-            NEXT_PUBLIC_SENTRY_RELEASE=${{ github.sha }}
 
   manifests:
     name: Dev manifests
