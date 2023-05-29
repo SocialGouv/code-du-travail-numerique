@@ -100,8 +100,6 @@ jobs:
           dockerbuildargs: |
             NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
             NEXT_PUBLIC_SENTRY_ENV=dev
-            NEXT_PUBLIC_SENTRY_ORG=incubateur
-            NEXT_PUBLIC_SENTRY_PROJECT=code-du-travail-numerique
             NEXT_PUBLIC_SENTRY_RELEASE=${{ github.sha }}
             NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
             NEXT_PUBLIC_AZURE_CONTAINER=cdtn
@@ -109,7 +107,6 @@ jobs:
             NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
             NEXT_PUBLIC_COMMIT=${{ github.sha }}
             NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
-            SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
 
   deploy:
     name: Deploy application

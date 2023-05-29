@@ -16,11 +16,13 @@ font-src 'self' data: blob:;
 const { withSentryConfig } = require("@sentry/nextjs");
 const MappingReplacement = require("./redirects");
 
-const sentryWebpackPluginOptions = {};
-
 const nextConfig = {
   poweredByHeader: false,
   productionBrowserSourceMaps: true,
+  sentry: {
+    disableServerWebpackPlugin: true,
+    disableClientWebpackPlugin: true,
+  },
   compiler: {
     reactRemoveProperties:
       process.env.NODE_ENV === "production"
@@ -80,6 +82,4 @@ const moduleExports = {
   },
 };
 
-module.exports = withBundleAnalyzer(
-  withSentryConfig(moduleExports, sentryWebpackPluginOptions)
-);
+module.exports = withBundleAnalyzer(withSentryConfig(moduleExports));
