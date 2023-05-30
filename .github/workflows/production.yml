@@ -48,7 +48,7 @@ jobs:
         with:
           environment: production
           sourcemaps: ./packages/code-du-travail-frontend/.next
-          version: ${{ github.sha }}
+          version: ${{ github.ref_name }}
           ignore_missing: true
           url_prefix: "~/_next"
 
