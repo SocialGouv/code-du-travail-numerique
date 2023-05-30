@@ -3,7 +3,7 @@
 exports[`<Container /> renders 1`] = `
 <div>
   <div
-    class="sc-bcXHqe evAMOC"
+    class="sc-aXZVg gZgZQL"
   >
     One Aside title
   </div>
@@ -13,7 +13,7 @@ exports[`<Container /> renders 1`] = `
 exports[`<Container /> renders narrow 1`] = `
 <div>
   <div
-    class="sc-bcXHqe ePDXDD"
+    class="sc-aXZVg elbebC"
   >
     Narrow contained
   </div>
@@ -23,7 +23,7 @@ exports[`<Container /> renders narrow 1`] = `
 exports[`<Container /> renders narrow without padding 1`] = `
 <div>
   <div
-    class="sc-bcXHqe ljCEtE"
+    class="sc-aXZVg dPpwpV"
   >
     noPadding prop can only be used with the narrow prop
   </div>
@@ -33,7 +33,7 @@ exports[`<Container /> renders narrow without padding 1`] = `
 exports[`<Container /> renders without padding even if the prop is specified, because the narrow prop is not 1`] = `
 <div>
   <div
-    class="sc-bcXHqe evAMOC"
+    class="sc-aXZVg gZgZQL"
   >
     noPadding prop can only be used with the narrow prop
   </div>

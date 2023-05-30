@@ -33,14 +33,14 @@ describe("CC 2148", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC2148'",
+            "contrat salarié . convention collective . télécommunications . age":
+              age,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
-            "contrat salarié . convention collective . télécommunications . age":
-              age,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );

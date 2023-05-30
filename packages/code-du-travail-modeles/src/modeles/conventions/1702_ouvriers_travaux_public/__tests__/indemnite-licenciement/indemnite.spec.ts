@@ -37,10 +37,10 @@ describe("CC 1702", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniorityRight,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salaireRef,
             "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
               "non",
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salaireRef,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -82,10 +82,10 @@ describe("CC 1702", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniorityRight,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salaireRef,
             "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
               "non",
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salaireRef,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -105,10 +105,10 @@ describe("CC 1702", () => {
             "3",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             "3",
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            "2700",
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "oui",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "2700",
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
