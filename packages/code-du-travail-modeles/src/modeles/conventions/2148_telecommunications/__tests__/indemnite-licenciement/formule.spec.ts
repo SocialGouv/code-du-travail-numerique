@@ -25,14 +25,14 @@ describe("Formule indemnité licenciement - CC 2148", () => {
     ({ seniority, age, expectedFormula, expectedExplanations }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2148'",
+        "contrat salarié . convention collective . télécommunications . age":
+          age,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           seniority,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
-        "contrat salarié . convention collective . télécommunications . age":
-          age,
       });
       const result = engine.getFormule();
       expect(result.formula).toEqual(expectedFormula);

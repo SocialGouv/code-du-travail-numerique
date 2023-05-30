@@ -38,7 +38,7 @@ describe("Calcul du salaire pour la CC 1516", () => {
       { month: "juillet", value: 2758 },
       { month: "août", value: 3014 },
       { month: "septembre", value: 2920 },
-      { month: "octobre", value: 3487, prime: 600 },
+      { month: "octobre", prime: 600, value: 3487 },
       { month: "novembre", value: 2981 },
       { month: "décembre", value: 2898 },
     ],
