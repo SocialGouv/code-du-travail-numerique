@@ -68,7 +68,7 @@ jobs:
           dockerbuildargs: |
             NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
             NEXT_PUBLIC_SENTRY_ENV=production
-            NEXT_PUBLIC_SENTRY_RELEASE=${{ github.sha }}
+            NEXT_PUBLIC_SENTRY_RELEASE=${{ github.ref_name }}
             NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=true
             NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadminprod.blob.core.windows.net
             NEXT_PUBLIC_AZURE_CONTAINER=cdtn
