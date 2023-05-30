@@ -35,7 +35,7 @@ export class ReferenceSalary1516
       salairesPendantPreavis
     );
     const last3salaries = [...rankedSalairesPendantPreavis, ...rankedSalaires]
-      .filter((s) => nonNullable(s?.value))
+      .filter((s) => nonNullable(s.value))
       .slice(0, 3);
 
     const meilleurSalaireDes3DerniersMois = Math.max(

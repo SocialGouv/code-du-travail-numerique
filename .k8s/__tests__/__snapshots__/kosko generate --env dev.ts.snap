@@ -186,7 +186,7 @@ spec:
         app.github.com/repo: socialgouv/code-du-travail-numerique
         app.github.com/run: '1234'
         app.github.com/sha: '0123456'
-      name: api-secret
+      name: www-secret
       labels:
         application: code-du-travail-numerique
         component: code-du-travail-numerique
