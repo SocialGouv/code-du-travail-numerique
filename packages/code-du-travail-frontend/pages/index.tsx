@@ -11,7 +11,6 @@ import { handleError } from "../src/lib/fetch-error";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent, MatomoHomeEvent } from "../src/lib";
 
-
 const Home = ({
   themes,
   highlights,
@@ -21,8 +20,12 @@ const Home = ({
   modeles,
 }: GetHomePage) => {
   const onSendMatomoEvent = (eventName: MatomoHomeEvent) => {
-    matopush([MatomoBaseEvent.TRACK_EVENT, MatomoBaseEvent.PAGE_HOME, eventName]);
-  }
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoBaseEvent.PAGE_HOME,
+      eventName,
+    ]);
+  };
 
   return (
     <Layout currentPage="home">
@@ -31,15 +34,19 @@ const Home = ({
         noTitleAdd
         description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
       />
-      {/* TODO: remove it */}
-      <button onClick={() => { throw new Error("error home :)"); }}>
-        CREATE A FRONTEND ERROR
-      </button>
       <SearchHero />
       {highlights.length > 0 && (
-        <Highlights id="highlights-element" highlights={highlights.slice(0, 4)} />
+        <Highlights
+          id="highlights-element"
+          highlights={highlights.slice(0, 4)}
+        />
       )}
-      <Tools tools={tools} triggerOnClick={() => onSendMatomoEvent(MatomoHomeEvent.CLICK_VOIR_TOUS_LES_OUTILS)} />
+      <Tools
+        tools={tools}
+        triggerOnClick={() =>
+          onSendMatomoEvent(MatomoHomeEvent.CLICK_VOIR_TOUS_LES_OUTILS)
+        }
+      />
       <HomeSlice
         sectionId="home-modeles-de-courriers"
         title="Modèles de documents"
@@ -47,7 +54,9 @@ const Home = ({
         triggerName="Voir tous les modèles de documents"
         triggerLink="/modeles-de-courriers"
         content={modeles as ListLinkItemProps[]}
-        triggerOnClick={() => onSendMatomoEvent(MatomoHomeEvent.CLICK_VOIR_TOUS_LES_MODELES)}
+        triggerOnClick={() =>
+          onSendMatomoEvent(MatomoHomeEvent.CLICK_VOIR_TOUS_LES_MODELES)
+        }
       />
       <HomeSlice
         sectionId="home-fiches-pratiques"
@@ -56,7 +65,9 @@ const Home = ({
         triggerName="Voir toutes les fiches pratiques"
         triggerLink="/contribution"
         content={contributions as ListLinkItemProps[]}
-        triggerOnClick={() => onSendMatomoEvent(MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_FICHES)}
+        triggerOnClick={() =>
+          onSendMatomoEvent(MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_FICHES)
+        }
       />
       <HomeSlice
         sectionId="home-convention-collective"
@@ -65,13 +76,21 @@ const Home = ({
         triggerName="Voir toutes les conventions collectives"
         triggerLink="/convention-collective"
         content={agreements as ListLinkItemProps[]}
-        triggerOnClick={() => onSendMatomoEvent(MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_CONVENTIONS_COLLECTIVES)}
+        triggerOnClick={() =>
+          onSendMatomoEvent(
+            MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_CONVENTIONS_COLLECTIVES
+          )
+        }
       />
-      <Themes themes={themes} triggerOnClick={() => onSendMatomoEvent(MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_THEMES)} />
+      <Themes
+        themes={themes}
+        triggerOnClick={() =>
+          onSendMatomoEvent(MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_THEMES)
+        }
+      />
     </Layout>
   );
-}
-
+};
 
 export async function getStaticProps() {
   let themes: GetHomePage["themes"] = [];

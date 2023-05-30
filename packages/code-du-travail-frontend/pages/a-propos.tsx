@@ -25,10 +25,6 @@ const About = () => {
           <PageTitle subtitle="Apprenez-en plus sur notre histoire, notre équipe et nos méthodes">
             À propos
           </PageTitle>
-          {/* TODO: remove it */}
-          <button onClick={() => { throw new Error("error a props :)"); }}>
-            CREATE A FRONTEND ERROR
-          </button>
           <Wrapper variant="main">
             <Title shift={theme.spacings.larger}>
               Qu’est-ce que le Code du travail numérique&nbsp;?
