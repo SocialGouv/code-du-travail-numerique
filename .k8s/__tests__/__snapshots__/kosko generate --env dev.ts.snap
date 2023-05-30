@@ -53,6 +53,7 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
+    kapp.k14s.io/delete-strategy: orphan
     app.github.com/job: '5678'
     app.github.com/ref: refs/heads/mybranch
     app.github.com/repo: socialgouv/code-du-travail-numerique
@@ -77,6 +78,7 @@ spec:
       annotations:
         kapp.k14s.io/disable-default-ownership-label-rules: ''
         kapp.k14s.io/disable-default-label-scoping-rules: ''
+        kapp.k14s.io/delete-strategy: orphan
         app.github.com/job: '5678'
         app.github.com/ref: refs/heads/mybranch
         app.github.com/repo: socialgouv/code-du-travail-numerique
@@ -148,6 +150,7 @@ metadata:
     sealedsecrets.bitnami.com/cluster-wide: 'true'
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
+    kapp.k14s.io/delete-strategy: orphan
     app.github.com/job: '5678'
     app.github.com/ref: refs/heads/mybranch
     app.github.com/repo: socialgouv/code-du-travail-numerique
@@ -177,6 +180,7 @@ spec:
         sealedsecrets.bitnami.com/cluster-wide: 'true'
         kapp.k14s.io/disable-default-ownership-label-rules: ''
         kapp.k14s.io/disable-default-label-scoping-rules: ''
+        kapp.k14s.io/delete-strategy: orphan
         app.github.com/job: '5678'
         app.github.com/ref: refs/heads/mybranch
         app.github.com/repo: socialgouv/code-du-travail-numerique
@@ -198,6 +202,7 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
+    kapp.k14s.io/delete-strategy: orphan
     app.github.com/job: '5678'
     app.github.com/ref: refs/heads/mybranch
     app.github.com/repo: socialgouv/code-du-travail-numerique
@@ -233,6 +238,7 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
+    kapp.k14s.io/delete-strategy: orphan
     app.github.com/job: '5678'
     app.github.com/ref: refs/heads/mybranch
     app.github.com/repo: socialgouv/code-du-travail-numerique
@@ -255,6 +261,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
+    kapp.k14s.io/delete-strategy: orphan
     app.github.com/job: '5678'
     app.github.com/ref: refs/heads/mybranch
     app.github.com/repo: socialgouv/code-du-travail-numerique
