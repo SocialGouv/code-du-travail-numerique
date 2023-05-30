@@ -216,6 +216,19 @@ export const ui = {
         "infos.contrat salarié - convention collective - sociétés d'assurances - age"
       ),
     },
+    agreement1702: {
+      motif: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - ouvriers travaux public - indemnité de licenciement - licenciement économique - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - ouvriers travaux public - indemnité de licenciement - licenciement économique - Non"
+        ),
+      },
+      age: byTestId(
+        "infos.contrat salarié - convention collective - ouvriers travaux public - indemnité de licenciement - age"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),

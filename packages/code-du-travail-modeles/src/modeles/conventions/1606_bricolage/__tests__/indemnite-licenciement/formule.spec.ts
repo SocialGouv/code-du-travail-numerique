@@ -16,13 +16,13 @@ describe("Formule indemnité licenciement - 1606", () => {
     ({ seniority, expectedFormula, expectedExplanations }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1606'",
+        "contrat salarié . convention collective . bricolage . catégorie professionnelle": `'Non-Cadres'`,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           seniority,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
-        "contrat salarié . convention collective . bricolage . catégorie professionnelle": `'Non-Cadres'`,
       });
 
       const result = engine.getFormule();
@@ -44,15 +44,15 @@ describe("Formule indemnité licenciement - 1606", () => {
     ({ seniority, age, expectedFormula, expectedExplanations }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1606'",
+        "contrat salarié . convention collective . bricolage . catégorie professionnelle": `'Cadres'`,
+        "contrat salarié . convention collective . bricolage . indemnité de licenciement . cadres . age":
+          age,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           seniority,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
-        "contrat salarié . convention collective . bricolage . catégorie professionnelle": `'Cadres'`,
-        "contrat salarié . convention collective . bricolage . indemnité de licenciement . cadres . age":
-          age,
       });
 
       const result = engine.getFormule();

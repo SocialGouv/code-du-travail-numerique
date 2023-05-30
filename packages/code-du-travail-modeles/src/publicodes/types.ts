@@ -1,5 +1,10 @@
 import type Engine from "publicodes";
-import type { Evaluation, Rule as PubliRule, Unit } from "publicodes";
+import type {
+  Evaluation,
+  Rule as PubliRule,
+  RuleNode as PubliRuleNode,
+  Unit,
+} from "publicodes";
 
 import type { Notification, References } from "../modeles/common";
 
@@ -31,6 +36,21 @@ export type RuleCdtn = RuleListe;
 
 export interface Rule extends PubliRule {
   cdtn?: RuleCdtn;
+}
+
+export type NotificationAffichage =
+  | "conventionnel"
+  | "légal et conventionnel"
+  | "légal";
+
+export interface NotificationRuleNode<Name extends string = string>
+  extends PubliRuleNode<Name> {
+  rawNode: PubliRule & {
+    cdtn?: {
+      bloquante?: "non" | "oui";
+      affichage?: NotificationAffichage;
+    };
+  };
 }
 
 export interface SituationElement {
