@@ -10,6 +10,7 @@ import { validateStep } from "./validator";
 import { getErrorEligibility } from "./eligibility";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
+import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 
 const initialState: ContratTravailStoreData = {
   input: {},
@@ -23,7 +24,7 @@ const initialState: ContratTravailStoreData = {
 
 const createContratTravailStore: StoreSlice<
   ContratTravailStoreSlice,
-  AncienneteStoreSlice
+  AncienneteStoreSlice & CommonInformationsStoreSlice
 > = (set, get) => ({
   contratTravailData: { ...initialState },
   contratTravailFunction: {
@@ -37,6 +38,7 @@ const createContratTravailStore: StoreSlice<
       applyGenericValidation(get, set, "licenciementInaptitude", value);
       applyGenericValidation(get, set, "dateArretTravail", undefined);
       applyGenericValidation(get, set, "arretTravail", undefined);
+      get().informationsFunction.generatePublicodesQuestions();
     },
     onChangeArretTravail: (value) => {
       applyGenericValidation(get, set, "arretTravail", value);
@@ -59,7 +61,7 @@ const createContratTravailStore: StoreSlice<
 
       set(
         produce((state: ContratTravailStoreSlice) => {
-          state.contratTravailData.hasBeenSubmit = isValid ? false : true;
+          state.contratTravailData.hasBeenSubmit = !isValid;
           state.contratTravailData.isStepValid = isValid;
           state.contratTravailData.error = errorState;
           state.contratTravailData.error.errorEligibility = errorEligibility;

@@ -5,6 +5,10 @@ import {
 } from "../../../../common";
 
 describe("CC 1486", () => {
+  const seniority = new SeniorityFactory().create(
+    SupportedCcIndemniteLicenciement.IDCC1486
+  );
+
   describe("Calcul de l'ancienneté", () => {
     test.each`
       absences                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | entryDate       | exitDate        | expectedAnciennete
@@ -33,10 +37,6 @@ describe("CC 1486", () => {
     `(
       "$#) Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC1486
-        );
-
         const result = seniority.computeSeniority({
           absencePeriods: absences,
           dateEntree: entryDate,
@@ -46,5 +46,33 @@ describe("CC 1486", () => {
         expect(result.value).toEqual(expectedAnciennete);
       }
     );
+  });
+
+  describe("Utilisation de l'ancienne ou la nouvelle règle de calcul", () => {
+    test("avec une date de sortie avant le 01/05/2023", () => {
+      const result = seniority.computeSeniority({
+        absencePeriods: [],
+        dateEntree: "01/01/2020",
+        dateSortie: "30/04/2023",
+      });
+
+      expect(result.extraInfos).toEqual({
+        "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
+          "oui",
+      });
+    });
+
+    test("avec une date de sortie après le 01/05/2023", () => {
+      const result = seniority.computeSeniority({
+        absencePeriods: [],
+        dateEntree: "01/01/2020",
+        dateSortie: "01/05/2023",
+      });
+
+      expect(result.extraInfos).toEqual({
+        "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
+          "non",
+      });
+    });
   });
 });
