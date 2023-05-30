@@ -1,0 +1,1 @@
+{"version":3,"file":"index-6f3f7744.js","sources":["../../src/FlatList/index.js"],"sourcesContent":["import styled from \"styled-components\";\n\nexport const FlatList = styled.ul`\n  margin: 0;\n  padding: 0;\n  list-style-type: none;\n`;\n"],"names":["FlatList","styled"],"mappings":"gEAEO,MAAMA,EAAWC,EAAO;AAAA;AAAA;AAAA;"}
