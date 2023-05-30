@@ -20,7 +20,11 @@ const MappingReplacement = require("./redirects");
 
 const nextConfig = {
   poweredByHeader: false,
-  productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps:
+    process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ||
+    process.env.NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT
+      ? false
+      : true,
   compiler: {
     reactRemoveProperties:
       process.env.NODE_ENV === "production"
