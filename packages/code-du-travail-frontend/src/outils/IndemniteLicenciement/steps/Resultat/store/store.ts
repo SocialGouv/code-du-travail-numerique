@@ -24,8 +24,8 @@ import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informatio
 import {
   getAgreementExtraInfoSalary,
   getAgreementReferenceSalary,
-  isParentalNoticeHiddenForAgreement,
 } from "../../../agreements";
+import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
 import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
