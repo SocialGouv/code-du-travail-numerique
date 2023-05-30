@@ -52,6 +52,7 @@ jobs:
           sourcemaps: ./packages/code-du-travail-frontend/.next
           version: preprod-${{ github.sha }}
           ignore_missing: true
+          ignore_empty: true
           url_prefix: "~/_next"
 
   register-frontend:
