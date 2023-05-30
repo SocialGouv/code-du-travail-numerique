@@ -25,6 +25,10 @@ const nextConfig = {
     process.env.NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT
       ? false
       : true,
+  sentry: {
+    disableServerWebpackPlugin: true,
+    disableClientWebpackPlugin: true,
+  },
   compiler: {
     reactRemoveProperties:
       process.env.NODE_ENV === "production"
