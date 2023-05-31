@@ -51,6 +51,7 @@ const initialState: ResultStoreData = {
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
     isEligible: false,
+    hidePaternityLeave: false,
   },
   error: {},
   hasBeenSubmit: true,
@@ -203,6 +204,7 @@ const createResultStore: StoreSlice<
       let notifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
       let agreementSalaryExtraInfo: Record<string, string | number> = {};
+      let hidePaternityLeave: boolean = false;
 
       if (
         agreement &&
@@ -223,6 +225,8 @@ const createResultStore: StoreSlice<
           getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
+
+        hidePaternityLeave = agreement.num === 1404;
 
         agreementInformations = get()
           .informationsData.input.publicodesInformations.map(
@@ -322,6 +326,7 @@ const createResultStore: StoreSlice<
           state.resultData.input.notifications = notifications;
           state.resultData.input.agreementHasNoLegalIndemnity =
             agreementHasNoLegalIndemnity;
+          state.resultData.input.hidePaternityLeave = hidePaternityLeave;
         })
       );
     },

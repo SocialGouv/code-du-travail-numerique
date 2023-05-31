@@ -72,8 +72,8 @@ contrat salarié . convention collective . sedima . cdi classique . ancienneté 
   cdtn:
     formule:
       explanations:
-        - "A1 : Ancienneté totale": contrat salarié . convention collective . sedima . cdi classique . ancienneté jusqu'à 10 ans . palier
-        - "A2 : Ancienneté totale": contrat salarié . convention collective . sedima . cdi classique . ancienneté au-delà de 10 ans . palier
+        - "A1 : Ancienneté jusqu'à 10 ans": contrat salarié . convention collective . sedima . cdi classique . ancienneté jusqu'à 10 ans . palier
+        - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . convention collective . sedima . cdi classique . ancienneté au-delà de 10 ans . palier
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/4 * Sref * A1) + (1/3 * Sref * A2)
 
@@ -94,7 +94,7 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
   valeur: oui
 
 contrat salarié . convention collective . sedima . cdi opération . mission possible . durée:
-  titre: durée du CDI d'opération
+  titre: Durée du CDI d'opération
   question: Pendant combien de temps le salarié a-t-il été en CDI d'opération (en mois) ?
   unité: mois
   cdtn:
@@ -149,8 +149,8 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
   cdtn:
     formule:
       explanations:
-        - "Sref1 : Rémunération brute versée pendant la première année": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année
-        - "Sref2 : Rémunération brute versée pendant la deuxième année": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année
+        - "Sref1 : Total des salaires bruts perçus pendant la 1ère année du contrat": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année
+        - "Sref2 : Total des salaires bruts perçus pendant la 2ème année du contrat": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année
       formula: (8% * Sref1) + (6% * Sref2)
 
 contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 3e année et plus:
@@ -176,9 +176,9 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
   cdtn:
     formule:
       explanations:
-        - "Sref1 : Rémunération brute versée pendant la première année": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année
-        - "Sref2 : Rémunération brute versée pendant la deuxième année": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année
-        - "Sref3 : Rémunération brute versée au-delà et jusqu'à l'expiration du préavis": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 3e année et plus
+        - "Sref1 : Total des salaires bruts perçus pendant la 1ère année du contrat": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année
+        - "Sref2 : Total des salaires bruts perçus pendant la 2ème année du contrat": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année
+        - "Sref3 : Total des salaires bruts perçus de la 3ème année jusqu'à la fin du contrat": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 3e année et plus
       formula: (8% * Sref1) + (6% * Sref2) + (4% * Sref3)
 
 ## Mission impossible
@@ -215,5 +215,5 @@ contrat salarié . convention collective . sedima . cdi opération . mission imp
   cdtn:
     formule:
       explanations:
-        - "Sref : Salaire brut versé depuis l'engagement hors congés payés": contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total
+        - "Sref : Total des salaires bruts perçus depuis le début de l'engagement": contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total
       formula: (10% * Sref)

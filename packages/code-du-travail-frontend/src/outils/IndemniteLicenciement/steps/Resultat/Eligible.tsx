@@ -53,6 +53,7 @@ export default function Eligible() {
     showHasTempsPartiel,
     informationData,
     isAgreementSupported,
+    hidePaternityLeave,
   } = useIndemniteLicenciementStore(store, (state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -91,6 +92,7 @@ export default function Eligible() {
     ),
     isAgreementSupported:
       state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
+    hidePaternityLeave: state.resultData.input.hidePaternityLeave,
   }));
 
   React.useEffect(() => {
@@ -137,6 +139,7 @@ export default function Eligible() {
             )
           }
           isStepSalaryHidden={isStepSalaryHidden}
+          hidePaternityLeave={hidePaternityLeave}
         />
         <FormulaInterpreter
           formula={
