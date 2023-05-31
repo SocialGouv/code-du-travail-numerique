@@ -22,9 +22,16 @@ export const Input = ({
         {...onWheel}
         {...props}
       />
-      <StyledIcon text={text}>
-        {Icon ? <Icon /> : <span>{text}</span>}
-      </StyledIcon>
+      {Icon && (
+        <StyledIcon text={text}>
+          <Icon />
+        </StyledIcon>
+      )}
+      {text && (
+        <StyledIcon text={text}>
+          <span>{text}</span>
+        </StyledIcon>
+      )}
     </StyledWrapper>
   );
 };

@@ -96,11 +96,6 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                   type="text"
                   value=""
                 />
-                <div
-                  class="sc-EJAja gSDUwR"
-                >
-                  <span />
-                </div>
               </span>
               <button
                 aria-label="Recherchez le service"
