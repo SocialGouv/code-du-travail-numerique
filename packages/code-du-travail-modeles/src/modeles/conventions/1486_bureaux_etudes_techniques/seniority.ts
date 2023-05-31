@@ -60,11 +60,11 @@ export class Seniority1486
     }, 0);
 
     return {
-      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
       extraInfos: {
         "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
           oldArticle ? "oui" : "non",
       },
+      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
     };
   }
 }

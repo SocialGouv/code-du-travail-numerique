@@ -6,6 +6,9 @@ const engine = new IndemniteLicenciementPublicodes(
   "3239"
 );
 
+const assMatNotification =
+  "Le retrait de l'enfant met fin au contrat de travail de l’assistant maternel. Les règles de licenciement prévues par le code du travail ne sont pas applicables aux assistants maternels : l’employeur n’est pas tenu de motiver sa décision ni de convoquer l’assistant maternel à un entretien préalable.";
+
 const notification =
   "Si la rupture du contrat de travail a été notifiée avant le 01/01/2022, l’indemnité de licenciement peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable depuis le 01/01/2022.";
 
@@ -74,8 +77,9 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
           expect(notificationsBloquantes).toHaveLength(0);
 
           const notifications = engine.getNotifications();
-          expect(notifications).toHaveLength(1);
-          expect(notifications[0].description).toBe(notification);
+          expect(notifications).toHaveLength(2);
+          expect(notifications[0].description).toBe(assMatNotification);
+          expect(notifications[1].description).toBe(notification);
         }
       );
 
@@ -112,8 +116,9 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
             );
 
             const notifications = engine.getNotifications();
-            expect(notifications).toHaveLength(1);
-            expect(notifications[0].description).toBe(notification);
+            expect(notifications).toHaveLength(2);
+            expect(notifications[0].description).toBe(assMatNotification);
+            expect(notifications[1].description).toBe(notification);
           }
         );
       });
@@ -152,7 +157,7 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
             );
 
             const notifications = engine.getNotifications();
-            expect(notifications).toHaveLength(0);
+            expect(notifications).toHaveLength(1);
           }
         );
       });

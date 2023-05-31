@@ -14,6 +14,8 @@ import {
   SimulateurIndemnitePrecarite,
   AgreementSearch,
 } from "../../src/outils";
+import Metas from "../../src/common/Metas";
+import { SITE_URL } from "../../src/config";
 
 const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
@@ -29,14 +31,21 @@ interface Props {
   slug: string;
   title: string;
   displayTitle: string;
+  metaTitle: string;
+  metaDescription: string;
 }
 
-function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
+function Widgets({ metaTitle, metaDescription, icon, slug, title, displayTitle }: Props): JSX.Element {
   useIframeResizer();
   const Tool = toolsBySlug[slug];
 
   return (
     <>
+      <Metas
+        title={metaTitle}
+        description={metaDescription}
+        overrideCanonical={`${SITE_URL}/outils/${slug}`}
+      />
       <StyledContainer>
         <Tool
           icon={icon}
@@ -77,7 +86,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     };
   }
 
-  const { icon, title, displayTitle } = tool;
+  const { icon, title, displayTitle, metaDescription, metaTitle } = tool;
 
   return {
     props: {
@@ -85,6 +94,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
       slug,
       title,
       displayTitle,
+      metaDescription,
+      metaTitle,
     },
   };
 };

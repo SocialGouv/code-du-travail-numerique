@@ -11,21 +11,23 @@ script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr htt
 frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
 style-src 'self' 'unsafe-inline';
 font-src 'self' data: blob:;
+worker-src 'self' blob:;
+child-src 'self' blob:;
 `;
 
 const { withSentryConfig } = require("@sentry/nextjs");
 const MappingReplacement = require("./redirects");
 
-const compose =
-  (...fns) =>
-  (args) =>
-    fns.reduceRight((arg, fn) => fn(arg), args);
-
 const nextConfig = {
   poweredByHeader: false,
+  productionBrowserSourceMaps:
+    process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ||
+    process.env.NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT
+      ? false
+      : true,
   sentry: {
-    hideSourceMaps: false,
-    widenClientFileUpload: true,
+    disableServerWebpackPlugin: true,
+    disableClientWebpackPlugin: true,
   },
   compiler: {
     reactRemoveProperties:
@@ -40,7 +42,8 @@ const nextConfig = {
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
 };
 
-module.exports = {
+const moduleExports = {
+  ...nextConfig,
   async headers() {
     let headers = [
       {
@@ -83,5 +86,6 @@ module.exports = {
   async redirects() {
     return MappingReplacement;
   },
-  ...compose(withBundleAnalyzer, withSentryConfig)(nextConfig),
 };
+
+module.exports = withBundleAnalyzer(withSentryConfig(moduleExports));

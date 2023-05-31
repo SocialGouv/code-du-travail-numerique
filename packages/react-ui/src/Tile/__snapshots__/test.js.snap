@@ -3,13 +3,13 @@
 exports[`<Tile /> renders a tile with a custom badge 1`] = `
 <div>
   <div
-    class="sc-jSUZER fYeXas"
+    class="sc-iGgWBj eMNAQB"
   >
     <div
-      class="sc-bcXHqe lmhoTQ"
+      class="sc-aXZVg iHwzcx"
     >
       <div
-        class="sc-gswNZR dQPqOZ"
+        class="sc-gEvEer htfpNk"
       >
         <svg
           aria-hidden="true"
@@ -33,13 +33,13 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
       </div>
     </div>
     <div
-      class="sc-iBYQkv iFcAMU"
+      class="sc-kAyceB jqeMAr"
     >
       <div
-        class="sc-ftTHYK cBdSwd"
+        class="sc-imWYAI cRAzrp"
       >
         <p
-          class="sc-jrcTuL ivrcvT"
+          class="sc-dhKdcB fwlOSd"
         >
           <a
             href="#"
@@ -50,7 +50,7 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDvujY bkpTTX"
+      class="sc-kpDqfm esKnXL"
     >
       There is text inside
     </div>
@@ -61,19 +61,19 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
 exports[`<Tile /> renders a tile with a stripe 1`] = `
 <div>
   <div
-    class="sc-jSUZER fYeXas"
+    class="sc-iGgWBj eMNAQB"
   >
     <div
-      class="sc-iBYQkv iFcAMU"
+      class="sc-kAyceB jqeMAr"
     >
       <span
-        class="sc-dkrFOg fIhaAp"
+        class="sc-eqUAAy djBxaA"
       />
       <div
-        class="sc-ftTHYK cBdSwd"
+        class="sc-imWYAI cRAzrp"
       >
         <p
-          class="sc-jrcTuL ivrcvT"
+          class="sc-dhKdcB fwlOSd"
         >
           <a
             href="#"
@@ -84,7 +84,7 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDvujY bkpTTX"
+      class="sc-kpDqfm esKnXL"
     >
       There is text inside
     </div>
@@ -95,13 +95,13 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 exports[`<Tile /> renders a tile with an icon 1`] = `
 <div>
   <div
-    class="sc-jSUZER fYeXas"
+    class="sc-iGgWBj eMNAQB"
   >
     <div
-      class="sc-iBYQkv iFcAMU"
+      class="sc-kAyceB jqeMAr"
     >
       <div
-        class="sc-gKPRtg iepPym"
+        class="sc-gsFSXq bRfFpJ"
       >
         <svg
           aria-hidden="true"
@@ -130,10 +130,10 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
         </svg>
       </div>
       <div
-        class="sc-ftTHYK cBdSwd"
+        class="sc-imWYAI cRAzrp"
       >
         <p
-          class="sc-jrcTuL ivrcvT"
+          class="sc-dhKdcB fwlOSd"
         >
           <a
             href="#"
@@ -144,7 +144,7 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDvujY bkpTTX"
+      class="sc-kpDqfm esKnXL"
     >
       There is text inside
     </div>
@@ -155,16 +155,16 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
 exports[`<Tile /> renders a tile with text inside 1`] = `
 <div>
   <div
-    class="sc-jSUZER fYeXas"
+    class="sc-iGgWBj eMNAQB"
   >
     <div
-      class="sc-iBYQkv iFcAMU"
+      class="sc-kAyceB jqeMAr"
     >
       <div
-        class="sc-ftTHYK cBdSwd"
+        class="sc-imWYAI cRAzrp"
       >
         <p
-          class="sc-jrcTuL ivrcvT"
+          class="sc-dhKdcB fwlOSd"
         >
           <a
             href="#"
@@ -175,7 +175,7 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDvujY bkpTTX"
+      class="sc-kpDqfm esKnXL"
     >
       There is text inside
     </div>
@@ -186,28 +186,28 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
 exports[`<Tile /> renders a wide tile with a subtitle 1`] = `
 <div>
   <div
-    class="sc-jSUZER cZiRCn"
+    class="sc-iGgWBj hIJHri"
   >
     <div
-      class="sc-iBYQkv iFcAMU"
+      class="sc-kAyceB jqeMAr"
     >
       <div
-        class="sc-ftTHYK cBdSwd"
+        class="sc-imWYAI cRAzrp"
       >
         <p
-          class="sc-eDvSVe sc-pyfCe dBDFVj kNnkDh"
+          class="sc-dcJsrY sc-jXbUNg kKiCoz itTxai"
         >
           This is a theme
         </p>
         <p
-          class="sc-jrcTuL ivrcvT"
+          class="sc-dhKdcB fwlOSd"
         >
           Hello !
         </p>
       </div>
     </div>
     <div
-      class="sc-kDvujY bkpTTX"
+      class="sc-kpDqfm esKnXL"
     >
       There is text inside
     </div>

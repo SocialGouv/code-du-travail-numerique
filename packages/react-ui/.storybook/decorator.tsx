@@ -19,13 +19,12 @@ export const globalTypes = {
   },
 };
 
-const withThemeProvider = (Story, context) => {
-  const theme = context.globals.colors;
+const withThemeProvider = (Story) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={colors}>
       <GlobalStyles />
       <Wrapper>
-        <Story {...context} />
+        <Story />
       </Wrapper>
     </ThemeProvider>
   );
