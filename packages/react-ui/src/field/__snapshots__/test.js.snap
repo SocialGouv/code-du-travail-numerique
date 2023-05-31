@@ -3,10 +3,10 @@
 exports[`<Input /> should render input field 1`] = `
 <div>
   <span
-    class="sc-dkrFOg hOAQIr"
+    class="sc-eqUAAy gDroom"
   >
     <input
-      class="sc-hLBbgP jKCDRQ"
+      class="sc-fqkvVR HmIv"
       name="input"
     />
   </span>
@@ -16,11 +16,11 @@ exports[`<Input /> should render input field 1`] = `
 exports[`<InputCheckbox /> should render checkbox field 1`] = `
 <div>
   <label
-    class="sc-bcXHqe bhKJQZ"
+    class="sc-aXZVg kkgEtU"
     for="checkbox"
   >
     <input
-      class="sc-gswNZR fumLsN"
+      class="sc-gEvEer gsxbPM"
       id="checkbox"
       name="checkbox"
       type="checkbox"
@@ -33,19 +33,19 @@ exports[`<InputCheckbox /> should render checkbox field 1`] = `
 exports[`<InputDate /> should render input date field 1`] = `
 <div>
   <div
-    class="sc-jSUZER hWPdga"
+    class="sc-iGgWBj kZPIXv"
   >
     <input
-      class="sc-gKPRtg hVxgZL"
+      class="sc-gsFSXq heEHNM"
       name="input_date"
       placeholder="jj/mm/aaaa"
       value=""
     />
     <div
-      class="sc-iBYQkv FsPYJ"
+      class="sc-kAyceB koiqfG"
     >
       <div
-        class="sc-pyfCe ffblGX"
+        class="sc-jXbUNg dPutyI"
       >
         <svg
           fill="none"
@@ -64,7 +64,7 @@ exports[`<InputDate /> should render input date field 1`] = `
       </div>
       <input
         aria-disabled="false"
-        class="sc-ftTHYK fdhVdK"
+        class="sc-imWYAI NArQa"
         max="2100-01-01"
         min="1900-01-01"
         tabindex="-1"
@@ -79,16 +79,16 @@ exports[`<InputDate /> should render input date field 1`] = `
 exports[`<InputRadio /> should render input radio field 1`] = `
 <div>
   <div
-    class="sc-kDvujY fPYfon"
+    class="sc-kpDqfm haJMfv"
   >
     <input
-      class="sc-ipEyDJ dUSYAA"
+      class="sc-dAlyuH gaJvMQ"
       id="radio"
       name="radio"
       type="radio"
     />
     <label
-      class="sc-jrcTuL jDFStC"
+      class="sc-dhKdcB bLCTxE"
       for="radio"
     >
       option
@@ -100,10 +100,10 @@ exports[`<InputRadio /> should render input radio field 1`] = `
 exports[`<Select /> should render select field 1`] = `
 <div>
   <div
-    class="sc-csuSiG kvgJtt"
+    class="sc-jlZhew dfZIZB"
   >
     <select
-      class="sc-bqWxrE fRTWLf"
+      class="sc-jEACwC iWGvnz"
     >
       <option>
         ...
@@ -117,7 +117,7 @@ exports[`<Select /> should render select field 1`] = `
     </select>
     <div
       aria-hidden="true"
-      class="sc-eDWCr jmoPen"
+      class="sc-cwHptR Rygaw"
     >
       <svg
         aria-hidden="true"
@@ -152,7 +152,7 @@ exports[`<Select /> should render select field 1`] = `
 exports[`<Textarea /> should render textarea 1`] = `
 <div>
   <textarea
-    class="sc-fEXmlR dgqlhJ"
+    class="sc-eldPxv cYOfIA"
     name="textarea"
   />
 </div>

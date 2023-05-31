@@ -50,7 +50,8 @@ const createCommonInformationsStore: StoreSlice<
           .setSituation(
             mapToPublicodesSituationForIndemniteLicenciementConventionnel(
               agreement.num,
-              isLicenciementInaptitude
+              isLicenciementInaptitude,
+              false
             ),
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           )
@@ -120,6 +121,7 @@ const createCommonInformationsStore: StoreSlice<
               mapToPublicodesSituationForIndemniteLicenciementConventionnel(
                 agreement.num,
                 isLicenciementInaptitude,
+                false,
                 rules
               ),
               "contrat salarié . indemnité de licenciement . résultat conventionnel"

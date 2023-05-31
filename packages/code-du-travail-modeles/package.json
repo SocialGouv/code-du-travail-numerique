@@ -4,7 +4,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "4.98.1",
+  "version": "4.100.0",
   "description": "Les règles publicodes des simulateurs de code du travail numérique",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -23,7 +23,7 @@
     "jest": "^29.3.1",
     "lint-staged": "^13.0.0",
     "nodemon": "^2.0.12",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.4"
   },
   "scripts": {
     "precommit": "lint-staged",

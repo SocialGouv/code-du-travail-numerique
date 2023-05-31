@@ -25,6 +25,7 @@ import {
   getAgreementExtraInfoSalary,
   getAgreementReferenceSalary,
 } from "../../../agreements";
+import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
 import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
@@ -41,6 +42,7 @@ import {
   MatomoSimulatorEvent,
 } from "../../../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
+import getSupportedCcIndemniteLicenciement from "../../../common/usecase/getSupportedCc";
 
 const initialState: ResultStoreData = {
   input: {
@@ -49,8 +51,8 @@ const initialState: ResultStoreData = {
     legalReferences: [],
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
-    isAgreementEqualToLegal: false,
     isEligible: false,
+    isParentalNoticeHidden: false,
   },
   error: {},
   hasBeenSubmit: true,
@@ -150,6 +152,8 @@ const createResultStore: StoreSlice<
       const agreement = get().agreementData.input.agreement;
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
+      const longTermDisability =
+        get().contratTravailData.input.arretTravail === "oui";
       const publicodes = get().agreementData.publicodes;
       const dateNotification = get().ancienneteData.input.dateNotification!;
       const dateSortie = get().ancienneteData.input.dateSortie!;
@@ -181,7 +185,8 @@ const createResultStore: StoreSlice<
           legalSeniority.value,
           legalRequiredSeniority.value,
           refSalary,
-          isLicenciementInaptitude
+          isLicenciementInaptitude,
+          longTermDisability
         )
       ).result;
 
@@ -196,11 +201,18 @@ const createResultStore: StoreSlice<
       let isAgreementBetter = false;
       let isAgreementEqualToLegal = false;
       let agreementInformations: AgreementInformation[];
-      let agreementNotifications: Notification[];
+      let agreementNotifications: Notification[] = [];
+      let notifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
       let agreementSalaryExtraInfo: Record<string, string | number> = {};
+      let isParentalNoticeHidden = false;
 
-      if (agreement) {
+      if (
+        agreement &&
+        getSupportedCcIndemniteLicenciement().some(
+          (item) => item.idcc === agreement.num && item.fullySupported
+        )
+      ) {
         const infos = informationToSituation(
           get().informationsData.input.publicodesInformations
         );
@@ -243,6 +255,7 @@ const createResultStore: StoreSlice<
             agreementRequiredSeniority.value,
             get().ancienneteData.input.dateNotification!,
             isLicenciementInaptitude,
+            longTermDisability,
             { ...infos, ...agreementSalaryExtraInfo }
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -257,6 +270,10 @@ const createResultStore: StoreSlice<
         agreementNotifications = publicodes.getNotifications();
 
         agreementHasNoLegalIndemnity = hasNoLegalIndemnity(agreement.num);
+
+        isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
+          agreement.num
+        );
 
         if (
           agreementHasNoLegalIndemnity ||
@@ -279,6 +296,19 @@ const createResultStore: StoreSlice<
         }
       }
 
+      if (isAgreementBetter || isAgreementEqualToLegal) {
+        notifications = agreementNotifications?.filter(
+          (item) =>
+            item.show === "conventionnel" ||
+            item.show === "légal et conventionnel"
+        );
+      } else {
+        notifications = agreementNotifications?.filter(
+          (item) =>
+            item.show === "légal" || item.show === "légal et conventionnel"
+        );
+      }
+
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.input.legalSeniority = legalSeniority.value;
@@ -292,13 +322,12 @@ const createResultStore: StoreSlice<
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
-          state.resultData.input.isAgreementEqualToLegal =
-            isAgreementEqualToLegal;
           state.resultData.input.agreementInformations = agreementInformations;
-          state.resultData.input.agreementNotifications =
-            agreementNotifications;
+          state.resultData.input.notifications = notifications;
           state.resultData.input.agreementHasNoLegalIndemnity =
             agreementHasNoLegalIndemnity;
+          state.resultData.input.isParentalNoticeHidden =
+            isParentalNoticeHidden;
         })
       );
     },

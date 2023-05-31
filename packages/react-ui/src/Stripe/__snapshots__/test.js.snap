@@ -3,7 +3,7 @@
 exports[`<Stripe /> renders 1`] = `
 <div>
   <span
-    class="sc-bcXHqe bRpDoB"
+    class="sc-aXZVg kGRGmY"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`<Stripe /> renders 1`] = `
 exports[`<Stripe /> renders with correct styles 1`] = `
 <div>
   <span
-    class="sc-bcXHqe hvvIXl"
+    class="sc-aXZVg jZHzGo"
   />
 </div>
 `;
