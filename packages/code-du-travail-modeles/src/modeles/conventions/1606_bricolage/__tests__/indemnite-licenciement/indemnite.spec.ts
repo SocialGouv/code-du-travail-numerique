@@ -19,13 +19,13 @@ describe("Indemnité conventionnel de licenciement pour la CC 1606", () => {
       const { result, missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC1606'",
+          "contrat salarié . convention collective . bricolage . catégorie professionnelle": `'Non-Cadres'`,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             seniorityRight,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "contrat salarié . convention collective . bricolage . catégorie professionnelle": `'Non-Cadres'`,
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
@@ -50,15 +50,15 @@ describe("Indemnité conventionnel de licenciement pour la CC 1606", () => {
       const { result, missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC1606'",
+          "contrat salarié . convention collective . bricolage . catégorie professionnelle": `'Cadres'`,
+          "contrat salarié . convention collective . bricolage . indemnité de licenciement . cadres . age":
+            age,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             seniorityRight,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "contrat salarié . convention collective . bricolage . catégorie professionnelle": `'Cadres'`,
-          "contrat salarié . convention collective . bricolage . indemnité de licenciement . cadres . age":
-            age,
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );

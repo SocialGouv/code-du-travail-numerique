@@ -17,7 +17,7 @@ export class AgreementSeniority1672 implements AgreementSeniority {
         (item) =>
           item.question.name ===
           "contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
-      ).info;
+      )?.info;
     const becameExecutiveAt =
       get().informationsData.input.publicodesInformations.find(
         (item) =>

@@ -3,12 +3,12 @@
 exports[`<StepResult /> should render with O duration 1`] = `
 <div>
   <h2
-    class="sc-jsTgWu jWEkmq"
+    class="sc-eulNck hQsmqe"
   >
     Durée du préavis
   </h2>
   <strong
-    class="sc-elAWhN sc-kiPvrU fgjNBQ hknIYB"
+    class="sc-dExYaf sc-iapWAC eRIulc jbUgd"
   >
     Aucun préavis
   </strong>
@@ -18,12 +18,12 @@ exports[`<StepResult /> should render with O duration 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-ftTHYK jiFzuu"
+        class="sc-imWYAI gTeNha"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -39,7 +39,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
         />
       </svg>
       <span
-        class="sc-AHaJN jfcIdr"
+        class="sc-fBWQRz lqUBb"
         font-size="hsmall"
         font-weight="600"
       >
@@ -47,10 +47,10 @@ exports[`<StepResult /> should render with O duration 1`] = `
       </span>
     </button>
     <div
-      class="sc-bCfvAP iEBQCA"
+      class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-jsTgWu jWEkmq"
+        class="sc-eulNck hQsmqe"
       >
         Résultat
       </h2>
@@ -74,7 +74,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-jsTgWu jWEkmq"
+        class="sc-eulNck hQsmqe"
       >
         Éléments saisis
       </h2>
@@ -123,7 +123,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-jsTgWu jWEkmq"
+        class="sc-eulNck hQsmqe"
       >
         Sources
       </h2>
@@ -152,13 +152,13 @@ exports[`<StepResult /> should render with O duration 1`] = `
     </div>
   </div>
   <div
-    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
+    class="sc-jsJBEP sc-dxcDKg ftwa-dj MBzBQ"
   >
     <div
-      class="sc-ehvNnt eQWqAO"
+      class="sc-bypJrT cRnKsM"
     >
       <div
-        class="sc-laZRCg gxUMeY"
+        class="sc-ddjGPC bYORpp"
       >
         <svg
           aria-hidden="true"
@@ -178,10 +178,10 @@ exports[`<StepResult /> should render with O duration 1`] = `
         </svg>
       </div>
       <div
-        class="sc-gGvHcT iaPnrK"
+        class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
+          class="sc-jGKxIK chnJmR sc-gvZAcH erbkqm"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -197,7 +197,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
 exports[`<StepResult /> should render with both CC duration and CDT duration 1`] = `
 <div>
   <h2
-    class="sc-jsTgWu jWEkmq"
+    class="sc-eulNck hQsmqe"
   >
     Durée du préavis
   </h2>
@@ -205,28 +205,28 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-elAWhN sc-kiPvrU fgjNBQ hknIYB"
+      class="sc-dExYaf sc-iapWAC eRIulc jbUgd"
     >
       1 mois
     </strong>
     <sup
-      class="sc-ZqGJI hkVsEl"
+      class="sc-kRRyDe hETMnL"
     >
       *
     </sup>
     .
   </p>
   <p
-    class="sc-cLNonn cyfAkb"
+    class="sc-kqGoIF bhpxzi"
   >
     <sup
-      class="sc-ZqGJI hkVsEl"
+      class="sc-kRRyDe hETMnL"
     >
       * 
     </sup>
     Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
-      class="sc-cLNonn cyfAkb"
+      class="sc-kqGoIF bhpxzi"
     >
        
       Exemple : si le salarié reçoit le courrier recommandé le
@@ -239,7 +239,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
     <span
-      class="sc-cLNonn cyfAkb"
+      class="sc-kqGoIF bhpxzi"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -248,12 +248,12 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-ftTHYK jiFzuu"
+        class="sc-imWYAI gTeNha"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -269,7 +269,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         />
       </svg>
       <span
-        class="sc-AHaJN jfcIdr"
+        class="sc-fBWQRz lqUBb"
         font-size="hsmall"
         font-weight="600"
       >
@@ -277,10 +277,10 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       </span>
     </button>
     <div
-      class="sc-bCfvAP iEBQCA"
+      class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-jsTgWu jWEkmq"
+        class="sc-eulNck hQsmqe"
       >
         Résultat
       </h2>
@@ -304,7 +304,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         </li>
       </ul>
       <h2
-        class="sc-jsTgWu jWEkmq"
+        class="sc-eulNck hQsmqe"
       >
         Éléments saisis
       </h2>
@@ -341,13 +341,13 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     </div>
   </div>
   <div
-    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
+    class="sc-jsJBEP sc-dxcDKg ftwa-dj MBzBQ"
   >
     <div
-      class="sc-ehvNnt eQWqAO"
+      class="sc-bypJrT cRnKsM"
     >
       <div
-        class="sc-laZRCg gxUMeY"
+        class="sc-ddjGPC bYORpp"
       >
         <svg
           aria-hidden="true"
@@ -367,10 +367,10 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         </svg>
       </div>
       <div
-        class="sc-gGvHcT iaPnrK"
+        class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
+          class="sc-jGKxIK chnJmR sc-gvZAcH erbkqm"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -395,12 +395,12 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 exports[`<StepResult /> should render with only CC duration 1`] = `
 <div>
   <h2
-    class="sc-jsTgWu jWEkmq"
+    class="sc-eulNck hQsmqe"
   >
     Durée du préavis
   </h2>
   <strong
-    class="sc-elAWhN sc-kiPvrU fgjNBQ hknIYB"
+    class="sc-dExYaf sc-iapWAC eRIulc jbUgd"
   >
     Aucun préavis
   </strong>
@@ -410,12 +410,12 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-ftTHYK jiFzuu"
+        class="sc-imWYAI gTeNha"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -431,7 +431,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         />
       </svg>
       <span
-        class="sc-AHaJN jfcIdr"
+        class="sc-fBWQRz lqUBb"
         font-size="hsmall"
         font-weight="600"
       >
@@ -439,10 +439,10 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       </span>
     </button>
     <div
-      class="sc-bCfvAP iEBQCA"
+      class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-jsTgWu jWEkmq"
+        class="sc-eulNck hQsmqe"
       >
         Résultat
       </h2>
@@ -466,7 +466,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-jsTgWu jWEkmq"
+        class="sc-eulNck hQsmqe"
       >
         Éléments saisis
       </h2>
@@ -503,13 +503,13 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     </div>
   </div>
   <div
-    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
+    class="sc-jsJBEP sc-dxcDKg ftwa-dj MBzBQ"
   >
     <div
-      class="sc-ehvNnt eQWqAO"
+      class="sc-bypJrT cRnKsM"
     >
       <div
-        class="sc-laZRCg gxUMeY"
+        class="sc-ddjGPC bYORpp"
       >
         <svg
           aria-hidden="true"
@@ -529,10 +529,10 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         </svg>
       </div>
       <div
-        class="sc-gGvHcT iaPnrK"
+        class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
+          class="sc-jGKxIK chnJmR sc-gvZAcH erbkqm"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -557,7 +557,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 exports[`<StepResult /> should render with when no CC 1`] = `
 <div>
   <h2
-    class="sc-jsTgWu jWEkmq"
+    class="sc-eulNck hQsmqe"
   >
     Durée du préavis
   </h2>
@@ -565,28 +565,28 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-elAWhN sc-kiPvrU fgjNBQ hknIYB"
+      class="sc-dExYaf sc-iapWAC eRIulc jbUgd"
     >
       2 mois
     </strong>
     <sup
-      class="sc-ZqGJI hkVsEl"
+      class="sc-kRRyDe hETMnL"
     >
       *
     </sup>
     .
   </p>
   <p
-    class="sc-cLNonn cyfAkb"
+    class="sc-kqGoIF bhpxzi"
   >
     <sup
-      class="sc-ZqGJI hkVsEl"
+      class="sc-kRRyDe hETMnL"
     >
       * 
     </sup>
     Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
-      class="sc-cLNonn cyfAkb"
+      class="sc-kqGoIF bhpxzi"
     >
        
       Exemple : si le salarié reçoit le courrier recommandé le
@@ -599,7 +599,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
     <span
-      class="sc-cLNonn cyfAkb"
+      class="sc-kqGoIF bhpxzi"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -608,12 +608,12 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-ftTHYK jiFzuu"
+        class="sc-imWYAI gTeNha"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -629,7 +629,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         />
       </svg>
       <span
-        class="sc-AHaJN jfcIdr"
+        class="sc-fBWQRz lqUBb"
         font-size="hsmall"
         font-weight="600"
       >
@@ -637,10 +637,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       </span>
     </button>
     <div
-      class="sc-bCfvAP iEBQCA"
+      class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-jsTgWu jWEkmq"
+        class="sc-eulNck hQsmqe"
       >
         Résultat
       </h2>
@@ -661,7 +661,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-jsTgWu jWEkmq"
+        class="sc-eulNck hQsmqe"
       >
         Éléments saisis
       </h2>
@@ -691,13 +691,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     </div>
   </div>
   <div
-    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
+    class="sc-jsJBEP sc-dxcDKg ftwa-dj MBzBQ"
   >
     <div
-      class="sc-ehvNnt eQWqAO"
+      class="sc-bypJrT cRnKsM"
     >
       <div
-        class="sc-laZRCg gxUMeY"
+        class="sc-ddjGPC bYORpp"
       >
         <svg
           aria-hidden="true"
@@ -717,10 +717,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </svg>
       </div>
       <div
-        class="sc-gGvHcT iaPnrK"
+        class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
+          class="sc-jGKxIK chnJmR sc-gvZAcH erbkqm"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -736,7 +736,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 exports[`<StepResult /> should render with when unhandled CC 1`] = `
 <div>
   <h2
-    class="sc-jsTgWu jWEkmq"
+    class="sc-eulNck hQsmqe"
   >
     Durée du préavis
   </h2>
@@ -744,28 +744,28 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-elAWhN sc-kiPvrU fgjNBQ hknIYB"
+      class="sc-dExYaf sc-iapWAC eRIulc jbUgd"
     >
       2 mois
     </strong>
     <sup
-      class="sc-ZqGJI hkVsEl"
+      class="sc-kRRyDe hETMnL"
     >
       *
     </sup>
     .
   </p>
   <p
-    class="sc-cLNonn cyfAkb"
+    class="sc-kqGoIF bhpxzi"
   >
     <sup
-      class="sc-ZqGJI hkVsEl"
+      class="sc-kRRyDe hETMnL"
     >
       * 
     </sup>
     Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
-      class="sc-cLNonn cyfAkb"
+      class="sc-kqGoIF bhpxzi"
     >
        
       Exemple : si le salarié reçoit le courrier recommandé le
@@ -778,7 +778,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
     <span
-      class="sc-cLNonn cyfAkb"
+      class="sc-kqGoIF bhpxzi"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -787,12 +787,12 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-hhOBVt fANzfq sc-cOxWqc irVzGC"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-ftTHYK jiFzuu"
+        class="sc-imWYAI gTeNha"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -808,7 +808,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         />
       </svg>
       <span
-        class="sc-AHaJN jfcIdr"
+        class="sc-fBWQRz lqUBb"
         font-size="hsmall"
         font-weight="600"
       >
@@ -816,10 +816,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       </span>
     </button>
     <div
-      class="sc-bCfvAP iEBQCA"
+      class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-jsTgWu jWEkmq"
+        class="sc-eulNck hQsmqe"
       >
         Résultat
       </h2>
@@ -843,7 +843,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-jsTgWu jWEkmq"
+        class="sc-eulNck hQsmqe"
       >
         Éléments saisis
       </h2>
@@ -880,13 +880,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </div>
   </div>
   <div
-    class="sc-lllmON sc-iJbNxu hrCOuh bWMZqf"
+    class="sc-jsJBEP sc-dxcDKg ftwa-dj MBzBQ"
   >
     <div
-      class="sc-ehvNnt eQWqAO"
+      class="sc-bypJrT cRnKsM"
     >
       <div
-        class="sc-laZRCg gxUMeY"
+        class="sc-ddjGPC bYORpp"
       >
         <svg
           aria-hidden="true"
@@ -906,10 +906,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </svg>
       </div>
       <div
-        class="sc-gGvHcT iaPnrK"
+        class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-GKYbw cUdVqX sc-grxQYx hFitns"
+          class="sc-jGKxIK chnJmR sc-gvZAcH erbkqm"
         >
           Attention il peut exister une durée plus favorable
         </p>

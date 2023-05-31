@@ -39,14 +39,14 @@ describe("Notification pour la CC 1672", () => {
           "40",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
           "'Non-cadres (Classes 1 à 4)'",
+        "contrat salarié . convention collective . sociétés d'assurances . congé maladie non professionnelle":
+          "oui",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           "10",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           "10",
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "3000",
-        "contrat salarié . convention collective . sociétés d'assurances . congé maladie non professionnelle":
-          "oui",
       });
 
       const notifications = engine.getNotifications();
