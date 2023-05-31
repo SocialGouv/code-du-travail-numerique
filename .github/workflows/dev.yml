@@ -11,6 +11,15 @@ concurrency:
   cancel-in-progress: true
   group: dev
 
+env:
+  sentryDsn: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+  sentryEnv: dev
+  azureBaseUrl: https://cdtnadmindev.blob.core.windows.net
+  azureContainer: cdtn
+  piwikUrl: 3
+  piwikSiteId: https://matomo.fabrique.social.gouv.fr
+  siteUrl: https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr
+
 jobs:
   create-sentry-release:
     name: Create Sentry release
@@ -40,6 +49,16 @@ jobs:
       - name: Build code
         run: |
           yarn build
+        env:
+          NEXT_PUBLIC_SENTRY_DSN: ${{ env.sentryDsn }}
+          NEXT_PUBLIC_SENTRY_ENV: ${{ env.sentryEnv }}
+          NEXT_PUBLIC_SENTRY_RELEASE: ${{ github.sha }}
+          NEXT_PUBLIC_AZURE_BASE_URL: ${{ env.azureBaseUrl }}
+          NEXT_PUBLIC_AZURE_CONTAINER: ${{ env.azureContainer }}
+          NEXT_PUBLIC_PIWIK_SITE_ID: ${{ env.piwikSiteId }}
+          NEXT_PUBLIC_PIWIK_URL: ${{ env.piwikUrl }}
+          NEXT_PUBLIC_COMMIT: ${{ github.sha }}
+          NEXT_PUBLIC_SITE_URL: ${{ env.siteUrl }}
       - name: Create Sentry release
         uses: getsentry/action-release@v1
         env:
@@ -67,15 +86,15 @@ jobs:
           dockerfile: "./Dockerfile"
           dockercontext: "."
           dockerbuildargs: |
-            NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
-            NEXT_PUBLIC_SENTRY_ENV=preproduction
+            NEXT_PUBLIC_SENTRY_DSN=${{ env.sentryDsn }}
+            NEXT_PUBLIC_SENTRY_ENV=${{ env.sentryEnv }}
             NEXT_PUBLIC_SENTRY_RELEASE=${{ github.sha }}
-            NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
-            NEXT_PUBLIC_AZURE_CONTAINER=cdtn
-            NEXT_PUBLIC_PIWIK_SITE_ID=3
-            NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
+            NEXT_PUBLIC_AZURE_BASE_URL=${{ env.azureBaseUrl }}
+            NEXT_PUBLIC_AZURE_CONTAINER=${{ env.azureContainer }}
+            NEXT_PUBLIC_PIWIK_SITE_ID=${{ env.piwikSiteId }}
+            NEXT_PUBLIC_PIWIK_URL=${{ env.piwikUrl }}
             NEXT_PUBLIC_COMMIT=${{ github.sha }}
-            NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-dev.dev.fabrique.social.gouv.fr
+            NEXT_PUBLIC_SITE_URL=${{ env.siteUrl }}
 
   manifests:
     name: Dev manifests

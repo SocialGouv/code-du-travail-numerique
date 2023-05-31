@@ -18,11 +18,11 @@
     "build:analyze": "ANALYZE=true next build",
     "pretest:api": "ES_INDEX_PREFIX=cdtn_test NODE_ENV=test node -r @swc-node/register scripts/generate-data.ts",
     "test": "yarn pretest:api && ES_INDEX_PREFIX=cdtn_test NODE_ENV=test jest --silent",
-    "test:frontend": "npm run test -- --testPathIgnorePatterns=src/api",
-    "test:frontend:update": "npm run test:frontend -- --updateSnapshot",
-    "test:api": "yarn pretest:api && ES_INDEX_PREFIX=cdtn_test NODE_ENV=test npm run test -- --testPathPattern=src/api",
-    "test:api:update": "yarn pretest:api && ES_INDEX_PREFIX=cdtn_test NODE_ENV=test npm run test:api -- --updateSnapshot",
     "test:watch": "ES_INDEX_PREFIX=cdtn_test NODE_ENV=test jest --watch --silent",
+    "test:frontend": "jest --silent --testPathIgnorePatterns=src/api",
+    "test:frontend:update": "npm run test:frontend -- --updateSnapshot",
+    "test:api": "yarn pretest:api && npm run test -- --testPathPattern=src/api",
+    "test:api:update": "yarn pretest:api && npm run test:api -- --updateSnapshot",
     "test:update": "npm run test:frontend:update",
     "test:e2e": "cypress run",
     "test:e2e:ui": "cypress open",
@@ -111,6 +111,6 @@
     "stylelint-processor-styled-components": "^1.10.0",
     "supertest": "^6.3.3",
     "testing-library-selector": "0.2.1",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.4"
   }
 }
