@@ -12,7 +12,6 @@ import { Share } from "../../../src/common/Share";
 import { SITE_URL } from "../../../src/config";
 import { Layout } from "../../../src/layout/Layout";
 import { AgreementSearch, fetchTool } from "../../../src/outils";
-import { ScreenType } from "../../../src/outils/ConventionCollective/common/NavContext";
 import { Flex, ShareContainer } from "../[slug]";
 
 export interface Props {
@@ -23,7 +22,6 @@ export interface Props {
   displayTitle: string;
   metaTitle: string;
   metaDescription: string;
-  screenType: ScreenType;
 }
 
 function Outils({
@@ -34,7 +32,6 @@ function Outils({
   metaTitle,
   metaDescription,
   displayTitle,
-  screenType,
 }: Props): JSX.Element {
   const router = useRouter();
   return (
@@ -46,7 +43,6 @@ function Outils({
             icon={icon}
             title={title}
             displayTitle={displayTitle}
-            screenType={screenType}
           />
 
           <ShareContainer>
@@ -66,7 +62,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
   const slug = query.slug as string;
-  if (slug !== "convention" && slug !== "entreprise") {
+  if (slug !== "convention" && slug !== "entreprise" && slug !== "selection") {
     return {
       notFound: true,
     };
@@ -92,7 +88,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     console.error(e);
     Sentry.captureException(e);
   }
-
   return {
     props: {
       description,
@@ -102,8 +97,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
       displayTitle,
       metaTitle,
       metaDescription,
-      screenType:
-        slug === "convention" ? ScreenType.agreement : ScreenType.enterprise,
     },
   };
 };

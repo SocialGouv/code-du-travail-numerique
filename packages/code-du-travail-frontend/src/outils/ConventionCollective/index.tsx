@@ -1,7 +1,7 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Wrapper } from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { Enterprise } from "../../conventions/Search/api/enterprises.service";
@@ -22,7 +22,6 @@ interface Props {
   title: string;
   displayTitle: string;
   widgetMode?: boolean;
-  screenType?: ScreenType | null;
 }
 
 function AgreementSearchTool({
@@ -30,14 +29,28 @@ function AgreementSearchTool({
   title,
   displayTitle,
   widgetMode,
-  screenType = null,
 }: Props): JSX.Element {
+  const router = useRouter();
+
   const [screen, setScreen] = useState<ScreenType | null>(
-    widgetMode ? ScreenType.enterprise : screenType
+    widgetMode ? ScreenType.enterprise : null
   );
+
+  useEffect(() => {
+    const slug = router.query.slug;
+    setScreen(
+      slug === "convention"
+        ? ScreenType.agreement
+        : slug === "entreprise"
+        ? ScreenType.enterprise
+        : slug === "selection"
+        ? ScreenType.agreementSelection
+        : ScreenType.intro
+    );
+  }, [router.query.slug]);
+
   const { setEnterprise, setSearchParams, searchParams } = useNavContext();
   const { uuid, trackEvent } = useTrackingContext();
-  const router = useRouter();
 
   const onUserAction: OnUserAction = (action: UserAction, extra?: unknown) => {
     handleTrackEvent(trackEvent, uuid, title, action, extra);
