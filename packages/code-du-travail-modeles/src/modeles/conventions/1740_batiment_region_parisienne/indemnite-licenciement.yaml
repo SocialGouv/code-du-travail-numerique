@@ -63,7 +63,7 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 an
-      - age <= 55
+      - age < 55
   valeur: un dixième du salaire de référence
   unité: €
   arrondi: 2 décimales
@@ -84,7 +84,7 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 an
-      - age > 55
+      - age >= 55
   somme:
     - un dixième du salaire de référence
     - dix pourcent un dixième du salaire de référence
@@ -106,7 +106,7 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 an
-      - age <= 55
+      - age < 55
   somme:
     - trois vingtièmes du salaire de référence
     - un vingtième du salaire de référence au delà de quinze ans
@@ -129,7 +129,7 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 an
-      - age > 55
+      - age >= 55
   somme:
     - trois vingtièmes du salaire de référence
     - un vingtième du salaire de référence au delà de quinze ans
