@@ -178,3 +178,8 @@ contrat salarié . convention collective . habillement textiles commerce de deta
         - "A2: Années de présence après 16 ans": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté au delà de seize ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1 / 4 * Sref * A1)[ + (1 / 3 * Sref * A2 )] + (25% * (1 / 4 * Sref * A1))[ + (25% * (1 / 3 * Sref * A2 ))]
+
+contrat salarié . convention collective . habillement textiles commerce de detail . notification:
+  type: notification
+  description: Conformément aux règles de la convention collective, le montant de l’indemnité pourrait être plus important si le salarié a perçu une indemnité compensatrice de congés payés et/ou une indemnité compensatrice de préavis.
+  valeur: oui
