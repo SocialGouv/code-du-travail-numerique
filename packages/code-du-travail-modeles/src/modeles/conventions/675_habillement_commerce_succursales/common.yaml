@@ -6,3 +6,14 @@ contrat salarié . convention collective . habillement commerce succursales:
   cdtn:
     idcc: 675
     préavis-retraite: true
+
+contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle:
+  question: Quelle est la catégorie professionnelle du salarié ?
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      Employés: "'Employés'"
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Cadres: "'Cadres'"

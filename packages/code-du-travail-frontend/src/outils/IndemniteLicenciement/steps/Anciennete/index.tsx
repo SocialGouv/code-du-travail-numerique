@@ -120,13 +120,15 @@ const StepAnciennete = () => {
         tooltip={{
           content: (
             <p>
-              Pour rendre le saisie de l&apos;outil plus simple, les
-              absences de moins d&apos;un mois ne sont pas comptabilisées.
-              Or, ces absences peuvent impacter l&apos;ancienneté et
-              donner ainsi lieu à un montant d&apos;indemnité inférieur
-              à celui calculé par notre simulateur.
-            </p>)
-        }} />
+              Pour rendre la saisie de l&apos;outil plus simple, les absences de
+              moins d&apos;un mois ne sont pas comptabilisées. Or, ces absences
+              peuvent impacter l&apos;ancienneté et donner ainsi lieu à un
+              montant d&apos;indemnité inférieur à celui calculé par notre
+              simulateur.
+            </p>
+          ),
+        }}
+      />
       <RadioQuestion
         questions={[
           {

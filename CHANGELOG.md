@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.100.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.99.0...v4.100.0) (2023-05-24)
+
+### Bug Fixes
+
+- **preavis-retraite:** correctif sur la référence 4.6 pour la CC 1486 ([#5159](https://github.com/SocialGouv/code-du-travail-numerique/issues/5159)) ([3a76392](https://github.com/SocialGouv/code-du-travail-numerique/commit/3a76392ca855c2dbe392cd01c690b6b5468722a6))
+
+### Features
+
+- **indemnite-licenciement:** activation de la CC 1702 ([#5163](https://github.com/SocialGouv/code-du-travail-numerique/issues/5163)) ([5431442](https://github.com/SocialGouv/code-du-travail-numerique/commit/5431442ce53717a34f8d4a95129d1c9ff9d43eca))
+- **indemnite-licenciement:** retours suite aux tests de la cc 1702 ([#5139](https://github.com/SocialGouv/code-du-travail-numerique/issues/5139)) ([fb1514f](https://github.com/SocialGouv/code-du-travail-numerique/commit/fb1514f6a6be44991c52ac033b6c4e7c82ef1709))
+
+# [4.99.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.98.1...v4.99.0) (2023-05-23)
+
+### Bug Fixes
+
+- **error:** "undefined is not an object (evaluating 't.input.focus')" seen on sentry ([#5132](https://github.com/SocialGouv/code-du-travail-numerique/issues/5132)) ([f13356f](https://github.com/SocialGouv/code-du-travail-numerique/commit/f13356f1ac928f0a2fff239e22a348c7cac1439c))
+- **Indemnité de licenciement:** wording ([#5131](https://github.com/SocialGouv/code-du-travail-numerique/issues/5131)) ([37dabb7](https://github.com/SocialGouv/code-du-travail-numerique/commit/37dabb70832cbaedeb808da3fa3ee2a5ee9a109e))
+- **indemnite-licenciement:** ajout de la notification si le legal et le conventionnel sont égaux ([#5123](https://github.com/SocialGouv/code-du-travail-numerique/issues/5123)) ([f387bb7](https://github.com/SocialGouv/code-du-travail-numerique/commit/f387bb70b0759c1da3daf8dd815a227f69c109d9))
+- **indemnite-licenciement:** correction de l'étape résultat avec les informations en trop ([#5125](https://github.com/SocialGouv/code-du-travail-numerique/issues/5125)) ([4304c46](https://github.com/SocialGouv/code-du-travail-numerique/commit/4304c46b393d9c5a79f0fa04c8472b3f1328c33c))
+- ne pas calculer les données pour les CC non supportées ([#5158](https://github.com/SocialGouv/code-du-travail-numerique/issues/5158)) ([35c9498](https://github.com/SocialGouv/code-du-travail-numerique/commit/35c9498e2c73dd7b2f888b7724bbcd8ce14dc582))
+- **simulators:** maj de la 1486 ([#5137](https://github.com/SocialGouv/code-du-travail-numerique/issues/5137)) ([dc9247b](https://github.com/SocialGouv/code-du-travail-numerique/commit/dc9247b4b0f042aa4fe0278edcfa2ac1003f740e))
+
+### Features
+
+- **event:** ajout d'un event pour tracker le `header` et les voir plus de la page `home` ([#5124](https://github.com/SocialGouv/code-du-travail-numerique/issues/5124)) ([44a29d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/44a29d8e019cf5ea2ba3237b2dd5bdae33825472))
+- **indemnite de licenciement:** add cc 1516 ([#5031](https://github.com/SocialGouv/code-du-travail-numerique/issues/5031)) ([fb36106](https://github.com/SocialGouv/code-du-travail-numerique/commit/fb36106ba6541794fda293accc7d4801fd038671))
+- **indemnité de licenciement:** add cc 1606 ([#5087](https://github.com/SocialGouv/code-du-travail-numerique/issues/5087)) ([bdf36ed](https://github.com/SocialGouv/code-du-travail-numerique/commit/bdf36ed6092d3ff40a4bda1020b8876a4b7c29c0))
+- **indemnite de licenciement:** add cc 2148 ([#5034](https://github.com/SocialGouv/code-du-travail-numerique/issues/5034)) ([e191681](https://github.com/SocialGouv/code-du-travail-numerique/commit/e191681a59917c79009fc1ead846be5250ebb158))
+- **indemnité de licenciement:** Ne pas poser la question "le motif est-il économique ?" si l'usager a indiqué qu'il était en inaptitude pro à l'étape "contrat de travail" ([#5119](https://github.com/SocialGouv/code-du-travail-numerique/issues/5119)) ([60d9d12](https://github.com/SocialGouv/code-du-travail-numerique/commit/60d9d12fff0f449c42d811632d4b9a869dd4cb67))
+- indemnite licenciement 1043 ([#5129](https://github.com/SocialGouv/code-du-travail-numerique/issues/5129)) ([7dbec04](https://github.com/SocialGouv/code-du-travail-numerique/commit/7dbec0496453c2d48e79ac165d1d59a4a87397a9))
+- indemnite licenciement 275 fix métier ([#5112](https://github.com/SocialGouv/code-du-travail-numerique/issues/5112)) ([ca4fc4c](https://github.com/SocialGouv/code-du-travail-numerique/commit/ca4fc4c5082817fb2c4e85b3c2f763b9c788957a))
+- **indemnite-licenciement:** activation CC 675 - 1996 - 1505 - 1147 ([#5156](https://github.com/SocialGouv/code-du-travail-numerique/issues/5156)) ([e88a5e0](https://github.com/SocialGouv/code-du-travail-numerique/commit/e88a5e0502a8741ac3e6b1aa75f3756ab3143293))
+- **indemnite-licenciement:** ajout de la cc 1672 ([#4993](https://github.com/SocialGouv/code-du-travail-numerique/issues/4993)) ([adfeb7f](https://github.com/SocialGouv/code-du-travail-numerique/commit/adfeb7f7de3d6d4a22edfaf33a0dea5c8c3464a9))
+- **indemnite-licenciement:** nouvelles règles pour la CC 1486 ([#5143](https://github.com/SocialGouv/code-du-travail-numerique/issues/5143)) ([811b13f](https://github.com/SocialGouv/code-du-travail-numerique/commit/811b13f0230a36c403f36bc2025a5e34e03a5ee9))
+- **plan-du-site:** Ajout d'un plan du site qui permet de répertorier tout notre contenu généré ([#5117](https://github.com/SocialGouv/code-du-travail-numerique/issues/5117)) ([06a2909](https://github.com/SocialGouv/code-du-travail-numerique/commit/06a2909e70d0e1b01c34323b4070f78e967639ff))
+
 ## [4.98.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.98.0...v4.98.1) (2023-04-20)
 
 ### Bug Fixes

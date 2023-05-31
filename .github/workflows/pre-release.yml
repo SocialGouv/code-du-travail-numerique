@@ -16,10 +16,6 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 12
       - name: Rebase dev to master
         run: |
           git config --global user.name "${NAME}"
