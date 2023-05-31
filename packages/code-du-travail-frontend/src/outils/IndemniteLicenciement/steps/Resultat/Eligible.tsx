@@ -40,12 +40,11 @@ export default function Eligible() {
     agreementReferences,
     hasTempsPartiel,
     isAgreementBetter,
-    isAgreementEqualToLegal,
     agreementFormula,
     agreementInformations,
     salary,
     hasSameSalary,
-    agreementNotifications,
+    notifications,
     agreementHasNoLegalIndemnity,
     isStepSalaryHidden,
     infoWarning,
@@ -54,6 +53,7 @@ export default function Eligible() {
     showHasTempsPartiel,
     informationData,
     isAgreementSupported,
+    isParentalNoticeHidden,
   } = useIndemniteLicenciementStore(store, (state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -75,12 +75,11 @@ export default function Eligible() {
     agreementReferences: state.resultData.input.agreementReferences,
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     isAgreementBetter: state.resultData.input.isAgreementBetter,
-    isAgreementEqualToLegal: state.resultData.input.isAgreementEqualToLegal,
     agreementFormula: state.resultData.input.agreementFormula,
     agreementInformations: state.resultData.input.agreementInformations,
     salary: state.salairesData.input.salary,
     hasSameSalary: state.salairesData.input.hasSameSalary,
-    agreementNotifications: state.resultData.input.agreementNotifications,
+    notifications: state.resultData.input.notifications,
     agreementHasNoLegalIndemnity:
       state.resultData.input.agreementHasNoLegalIndemnity,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
@@ -93,6 +92,7 @@ export default function Eligible() {
     ),
     isAgreementSupported:
       state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
+    isParentalNoticeHidden: state.resultData.input.isParentalNoticeHidden,
   }));
 
   React.useEffect(() => {
@@ -107,7 +107,7 @@ export default function Eligible() {
             ? publicodesAgreementResult?.value?.toString() ?? ""
             : publicodesLegalResult.value?.toString() ?? ""
         }
-        notifications={isAgreementBetter || isAgreementEqualToLegal ? agreementNotifications : []}
+        notifications={notifications}
         resultMessage={getResultMessage(informationData)}
       />
       <ShowDetails>
@@ -130,7 +130,8 @@ export default function Eligible() {
           isAgreementBetter={isAgreementBetter}
           agreementInformations={agreementInformations}
           agreementRefSalaryInfo={
-            agreement && isAgreementSupported && (
+            agreement &&
+            isAgreementSupported && (
               <AgreementsInjector
                 idcc={getSupportedAgreement(agreement.num)}
                 step={IndemniteLicenciementStepName.Resultat}
@@ -138,6 +139,7 @@ export default function Eligible() {
             )
           }
           isStepSalaryHidden={isStepSalaryHidden}
+          disableParentalNotice={isParentalNoticeHidden}
         />
         <FormulaInterpreter
           formula={

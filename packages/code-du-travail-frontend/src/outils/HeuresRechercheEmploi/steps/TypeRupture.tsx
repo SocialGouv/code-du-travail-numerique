@@ -36,6 +36,9 @@ function StepTypeRupture({ form }) {
         data-test-id="typeRupture"
         label={question?.question ?? ""}
         options={nextQuestionOptions}
+        onChange={() => {
+          form.change("criteria", {});
+        }}
       />
     </>
   );

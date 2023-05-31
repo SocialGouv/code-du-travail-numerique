@@ -91,6 +91,12 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . notification:
   type: notification
+  applicable si: catégorie professionnelle = 'Assistant maternel'
+  description: "Le retrait de l'enfant met fin au contrat de travail de l’assistant maternel. Les règles de licenciement prévues par le code du travail ne sont pas applicables aux assistants maternels : l’employeur n’est pas tenu de motiver sa décision ni de convoquer l’assistant maternel à un entretien préalable."
+  valeur: oui
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . notification 2:
+  type: notification
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Assistant maternel'

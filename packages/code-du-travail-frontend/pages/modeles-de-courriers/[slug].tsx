@@ -54,8 +54,9 @@ function ModeleCourrier(props: Props): JSX.Element {
   const [filename] = fileUrl.match(/[^/]+$/);
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
   const filesizeFormated = Math.round((filesize / 1000) * 100) / 100;
-  const category = `Modèle ${type !== "fichier" ? `de ${type}` : "à télécharger"
-    }`;
+  const category = `Modèle ${
+    type !== "fichier" ? `de ${type}` : "à télécharger"
+  }`;
   return (
     <Layout>
       <Metas
