@@ -47,3 +47,9 @@ export const getSalairesTempsPleinSubtitle = (
       return "Indiquez le montant des salaires (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)";
   }
 };
+
+export const isParentalNoticeHiddenForAgreement = (
+  agreementNumber: number
+): boolean => {
+  return agreementNumber === 3239 || agreementNumber === 1404;
+};

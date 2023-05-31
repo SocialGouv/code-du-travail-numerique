@@ -1,4 +1,10 @@
-import { fireEvent, render, waitFor, screen } from "@testing-library/react";
+import {
+  fireEvent,
+  render,
+  waitFor,
+  screen,
+  queryByText,
+} from "@testing-library/react";
 import React from "react";
 import { CalculateurIndemnite } from "../../../../src/outils";
 import { ui } from "./ui";
@@ -167,6 +173,34 @@ describe("Indemnité licenciement - CC 3239", () => {
     expect(
       screen.queryByText(
         "Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?"
+      )
+    ).not.toBeInTheDocument();
+  });
+
+  test("vérifier qu'on affiche pas la notif sur le congé parental", async () => {
+    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
+      target: { value: "'Assistant maternel'" },
+    });
+    fireEvent.click(ui.information.agreement3239.congeMatSuspension.non.get());
+    fireEvent.change(ui.information.agreement3239.salaryInput.get(), {
+      target: { value: "3000" },
+    });
+    fireEvent.click(ui.next.get());
+    fireEvent.change(ui.seniority.startDate.get(), {
+      target: { value: "01/01/2000" },
+    });
+    fireEvent.change(ui.seniority.notificationDate.get(), {
+      target: { value: "15/09/2022" },
+    });
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "15/09/2022" },
+    });
+    fireEvent.click(ui.seniority.hasAbsence.non.get());
+    fireEvent.click(ui.next.get());
+    expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    expect(
+      screen.queryByText(
+        /Depuis le 11 mars 2023 les périodes d’absence pour congé paternité ne sont plus retirées/
       )
     ).not.toBeInTheDocument();
   });
