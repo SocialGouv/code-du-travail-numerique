@@ -20,11 +20,7 @@ const MappingReplacement = require("./redirects");
 
 const nextConfig = {
   poweredByHeader: false,
-  productionBrowserSourceMaps:
-    process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ||
-    process.env.NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT
-      ? false
-      : true,
+  productionBrowserSourceMaps: !!process.env.ENABLE_SOURCE_MAP,
   sentry: {
     disableServerWebpackPlugin: true,
     disableClientWebpackPlugin: true,
