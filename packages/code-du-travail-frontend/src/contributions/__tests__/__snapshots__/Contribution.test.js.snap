@@ -148,7 +148,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
       >
         <input
-          class="sc-fWQKxP iaRXHc"
+          class="sc-fWQKxP JkeSr"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -327,7 +327,7 @@ exports[`<Contribution /> should render answer references 1`] = `
         class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
       >
         <input
-          class="sc-fWQKxP iaRXHc"
+          class="sc-fWQKxP JkeSr"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -506,7 +506,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
       >
         <input
-          class="sc-fWQKxP iaRXHc"
+          class="sc-fWQKxP JkeSr"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -685,7 +685,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
         class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
       >
         <input
-          class="sc-fWQKxP iaRXHc"
+          class="sc-fWQKxP JkeSr"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -842,7 +842,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
       >
         <input
-          class="sc-fWQKxP iaRXHc"
+          class="sc-fWQKxP JkeSr"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
