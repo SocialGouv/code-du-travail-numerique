@@ -1,0 +1,4 @@
+[defaults]
+url = https://sentry.fabrique.social.gouv.fr/
+org = incubateur
+project = code-du-travail-numerique
