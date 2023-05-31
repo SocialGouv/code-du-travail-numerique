@@ -24,6 +24,7 @@ export type ResultStoreInput = {
   agreementHasNoLegalIndemnity?: boolean;
   isEligible: boolean;
   infoWarning?: { message: string; title: string };
+  isParentalNoticeHidden: boolean;
 };
 
 export type ResultStoreError = {};

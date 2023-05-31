@@ -3,7 +3,7 @@
 exports[`<Progress /> renders progress bar 1`] = `
 <div>
   <div
-    class="sc-bcXHqe cTQEzR"
+    class="sc-aXZVg cBzurQ"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`<Progress /> renders progress bar 1`] = `
 exports[`<Progress /> renders secondary progress secondary 1`] = `
 <div>
   <div
-    class="sc-bcXHqe eLHtPq"
+    class="sc-aXZVg lfbrmv"
   />
 </div>
 `;

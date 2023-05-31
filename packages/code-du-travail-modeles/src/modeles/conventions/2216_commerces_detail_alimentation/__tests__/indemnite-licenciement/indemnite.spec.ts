@@ -101,10 +101,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             seniorityRight,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            salary,
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "non",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            salary,
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
@@ -129,10 +129,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
             "11",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             "11",
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            "2000",
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "oui",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "2000",
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );

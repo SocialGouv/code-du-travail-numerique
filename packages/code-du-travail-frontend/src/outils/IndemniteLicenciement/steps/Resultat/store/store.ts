@@ -25,6 +25,7 @@ import {
   getAgreementExtraInfoSalary,
   getAgreementReferenceSalary,
 } from "../../../agreements";
+import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
 import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
@@ -51,6 +52,7 @@ const initialState: ResultStoreData = {
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
     isEligible: false,
+    isParentalNoticeHidden: false,
   },
   error: {},
   hasBeenSubmit: true,
@@ -203,6 +205,7 @@ const createResultStore: StoreSlice<
       let notifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
       let agreementSalaryExtraInfo: Record<string, string | number> = {};
+      let isParentalNoticeHidden = false;
 
       if (
         agreement &&
@@ -268,6 +271,10 @@ const createResultStore: StoreSlice<
 
         agreementHasNoLegalIndemnity = hasNoLegalIndemnity(agreement.num);
 
+        isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
+          agreement.num
+        );
+
         if (
           agreementHasNoLegalIndemnity ||
           (isAgreementBetterDetection(
@@ -319,6 +326,8 @@ const createResultStore: StoreSlice<
           state.resultData.input.notifications = notifications;
           state.resultData.input.agreementHasNoLegalIndemnity =
             agreementHasNoLegalIndemnity;
+          state.resultData.input.isParentalNoticeHidden =
+            isParentalNoticeHidden;
         })
       );
     },

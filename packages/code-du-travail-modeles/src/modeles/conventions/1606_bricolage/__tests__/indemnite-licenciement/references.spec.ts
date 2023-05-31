@@ -34,14 +34,14 @@ describe("Vérification des références juridiques pour la CC 2511", () => {
     ({ catPro, age, expectedReferences }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1606'",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-          "3",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-          "3",
         "contrat salarié . convention collective . bricolage . catégorie professionnelle":
           catPro,
         "contrat salarié . convention collective . bricolage . indemnité de licenciement . cadres . age":
           age,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          "3",
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          "3",
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
       });

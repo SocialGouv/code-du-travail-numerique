@@ -3,24 +3,24 @@
 exports[`<Tabs /> renders 1`] = `
 <div>
   <div
-    class="sc-hLBbgP hxkLAR"
+    class="sc-fqkvVR fnBjsq"
     data-rttabs="true"
   >
     <div
-      class="sc-bcXHqe keQCoM sc-eDvSVe fDEJpY"
+      class="sc-aXZVg iuhBAh sc-dcJsrY jhpMIs"
     >
       <div
-        class="sc-gswNZR gCRuQd"
+        class="sc-gEvEer jOaSPk"
       >
         <ul
-          class="sc-jSUZER uEzzv"
+          class="sc-iGgWBj lbTpJm"
           role="tablist"
         >
           <li
             aria-controls="react-tabs-1"
             aria-disabled="false"
             aria-selected="true"
-            class="sc-gKPRtg ljSGEH react-tabs__tab--selected"
+            class="sc-gsFSXq hIWlvg react-tabs__tab--selected"
             data-rttab="true"
             data-testid="undefined-0"
             id="react-tabs-0"
@@ -33,7 +33,7 @@ exports[`<Tabs /> renders 1`] = `
             aria-controls="react-tabs-3"
             aria-disabled="false"
             aria-selected="false"
-            class="sc-gKPRtg ljSGEH"
+            class="sc-gsFSXq hIWlvg"
             data-rttab="true"
             data-testid="undefined-1"
             id="react-tabs-2"
@@ -46,24 +46,24 @@ exports[`<Tabs /> renders 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-0"
-      class="sc-iBYQkv fWrKRq react-tabs__tab-panel--selected"
+      class="sc-kAyceB SoTBh react-tabs__tab-panel--selected"
       id="react-tabs-1"
       role="tabpanel"
     >
       <div
-        class="sc-dkrFOg iKqWrh"
+        class="sc-eqUAAy khphyw"
       >
         Tab 1
       </div>
       <div
-        class="sc-ftTHYK cTYLik"
+        class="sc-imWYAI jMRrPU"
       >
         This panel can contain nodes
       </div>
     </div>
     <div
       aria-labelledby="react-tabs-2"
-      class="sc-iBYQkv fWrKRq"
+      class="sc-kAyceB SoTBh"
       id="react-tabs-3"
       role="tabpanel"
     />

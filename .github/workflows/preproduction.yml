@@ -11,15 +11,75 @@ concurrency:
   group: pre-production
   cancel-in-progress: true
 
+env:
+  sentryDsn: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+  sentryEnv: preproduction
+  azureBaseUrl: https://cdtnadmindev.blob.core.windows.net
+  azureContainer: cdtn
+  piwikUrl: 3
+  piwikSiteId: https://matomo.fabrique.social.gouv.fr
+  siteUrl: https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr
+
 jobs:
+  create-sentry-release:
+    name: Create Sentry release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
+      - name: Build code
+        run: |
+          yarn build
+        env:
+          NEXT_PUBLIC_SENTRY_DSN: ${{ env.sentryDsn }}
+          NEXT_PUBLIC_SENTRY_ENV: ${{ env.sentryEnv }}
+          NEXT_PUBLIC_SENTRY_RELEASE: preprod-${{ github.sha }}
+          NEXT_PUBLIC_AZURE_BASE_URL: ${{ env.azureBaseUrl }}
+          NEXT_PUBLIC_AZURE_CONTAINER: ${{ env.azureContainer }}
+          NEXT_PUBLIC_PIWIK_SITE_ID: ${{ env.piwikSiteId }}
+          NEXT_PUBLIC_PIWIK_URL: ${{ env.piwikUrl }}
+          NEXT_PUBLIC_COMMIT: ${{ github.sha }}
+          NEXT_PUBLIC_SITE_URL: ${{ env.siteUrl }}
+          NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT: true
+          ENABLE_SOURCE_MAP: true
+      - name: Create Sentry release
+        uses: getsentry/action-release@v1
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: incubateur
+          SENTRY_PROJECT: code-du-travail-numerique
+          SENTRY_URL: https://sentry.fabrique.social.gouv.fr/
+        with:
+          environment: preproduction
+          sourcemaps: ./packages/code-du-travail-frontend/.next
+          version: preprod-${{ github.sha }}
+          ignore_missing: true
+          ignore_empty: true
+          url_prefix: "~/_next"
+
   register-frontend:
     name: Register frontend
     runs-on: ubuntu-latest
     steps:
-      - name: Get commit sha
-        run: |
-          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
-
       - name: Register docker images
         uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
         with:
@@ -30,14 +90,15 @@ jobs:
           dockerfile: "./Dockerfile"
           dockercontext: "."
           dockerbuildargs: |
-            NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
-            NEXT_PUBLIC_SENTRY_ENV=preproduction
-            NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
-            NEXT_PUBLIC_AZURE_CONTAINER=cdtn
-            NEXT_PUBLIC_PIWIK_SITE_ID=3
-            NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
-            NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
-            NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr
+            NEXT_PUBLIC_SENTRY_DSN=${{ env.sentryDsn }}
+            NEXT_PUBLIC_SENTRY_ENV=${{ env.sentryEnv }}
+            NEXT_PUBLIC_SENTRY_RELEASE=preprod-${{ github.sha }}
+            NEXT_PUBLIC_AZURE_BASE_URL=${{ env.azureBaseUrl }}
+            NEXT_PUBLIC_AZURE_CONTAINER=${{ env.azureContainer }}
+            NEXT_PUBLIC_PIWIK_SITE_ID=${{ env.piwikSiteId }}
+            NEXT_PUBLIC_PIWIK_URL=${{ env.piwikUrl }}
+            NEXT_PUBLIC_COMMIT=${{ github.sha }}
+            NEXT_PUBLIC_SITE_URL=${{ env.siteUrl }}
             NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT=true
 
   manifests:
@@ -58,9 +119,6 @@ jobs:
     name: Deploy preproduction
     runs-on: ubuntu-latest
     needs: [register-frontend, manifests]
-    environment:
-      name: preproduction
-      url: https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/
     steps:
       - name: Use autodevops deployment
         uses: SocialGouv/actions/autodevops-deploy@v1

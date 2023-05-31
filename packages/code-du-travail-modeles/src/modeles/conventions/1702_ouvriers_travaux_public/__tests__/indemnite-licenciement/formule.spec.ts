@@ -28,10 +28,10 @@ describe("Formule indemnité licenciement - 1702", () => {
           seniority,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           seniority,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-          salaireRef,
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          salaireRef,
       });
       const result = engine.getFormule();
 
@@ -62,10 +62,10 @@ describe("Formule indemnité licenciement - 1702", () => {
           seniority,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           seniority,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-          salaireRef,
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          salaireRef,
       });
       const result = engine.getFormule();
 

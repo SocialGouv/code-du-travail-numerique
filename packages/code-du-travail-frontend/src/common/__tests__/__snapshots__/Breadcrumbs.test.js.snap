@@ -4,28 +4,28 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
 <div>
   <nav
     aria-label="Fil d'ariane"
-    class="sc-kSGOQU kJOVaH"
+    class="sc-iXzfSG jAVVyA"
   >
     <div
-      class="sc-iOeugr cfcIjK"
+      class="sc-gFAWRd jDjoBq"
     >
       <div
-        class="sc-jfvxQR dxcKMx"
+        class="sc-gmPhUn kUNTdL"
       >
         <ol
-          class="sc-bcXHqe sc-dvEHMn evAMOC lgHRVY"
+          class="sc-aXZVg sc-lnPyaJ gZgZQL fAXdnW"
         >
           <li
-            class="sc-jsTgWu hMUuXw"
+            class="sc-eulNck jgEvHQ"
           >
             <a
-              class="sc-elAWhN bHnWxL"
+              class="sc-dExYaf cvAOmj"
               href="/"
               title="Retour à l'accueil"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kiPvrU ffqTcH"
+                class="sc-iapWAC hmxuyb"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,11 +39,11 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             </a>
           </li>
           <li
-            class="sc-jsTgWu hMUuXw"
+            class="sc-eulNck jgEvHQ"
           >
             <svg
               aria-hidden="true"
-              class="sc-cLNonn iBXzEN"
+              class="sc-kqGoIF iYYkqQ"
               fill="none"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
@@ -55,18 +55,18 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             </svg>
              
             <a
-              class="sc-elAWhN bHnWxL"
+              class="sc-dExYaf cvAOmj"
               href="/themes/item-1"
             >
               item 1
             </a>
           </li>
           <li
-            class="sc-jsTgWu hMUuXw"
+            class="sc-eulNck jgEvHQ"
           >
             <svg
               aria-hidden="true"
-              class="sc-cLNonn iBXzEN"
+              class="sc-kqGoIF iYYkqQ"
               fill="none"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             </svg>
              
             <a
-              class="sc-elAWhN bHnWxL"
+              class="sc-dExYaf cvAOmj"
               href="/themes/item-2"
             >
               item 2
