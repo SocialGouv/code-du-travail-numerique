@@ -65,6 +65,7 @@ jobs:
             NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
             NEXT_PUBLIC_COMMIT=${{ github.sha }}
             NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
+            SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
 
   deploy:
     name: Deploy application
