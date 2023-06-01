@@ -30,7 +30,7 @@ type Props = {
   salary?: string;
   isStepSalaryHidden: boolean;
   showHasTempsPartiel: boolean;
-  hidePaternityLeave: boolean;
+  disableParentalNotice?: boolean;
 };
 
 export default function FilledElements(props: Props) {
@@ -118,9 +118,9 @@ export default function FilledElements(props: Props) {
             </li>
             <li>
               Absences de plus d&apos;un mois durant le contrat de travail
-              <sup>*</sup>&nbsp;:&nbsp;
+              {!props.disableParentalNotice && <sup>*</sup>}&nbsp;:&nbsp;
               {props.absencesPeriods.length > 0 ? "Oui" : "Non"}
-              {!props.hidePaternityLeave && (
+              {!props.disableParentalNotice && (
                 <Paragraph fontSize="small" noMargin>
                   <i>
                     <sup>*</sup> Depuis le 11 mars 2023 les périodes d’absence
