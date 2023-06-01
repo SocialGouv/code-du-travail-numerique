@@ -80,5 +80,15 @@
     "shortDescription": "Trouver une convention collective à partir du nom de l'entreprise ou son SIRET",
     "url": "/widgets/convention-collective",
     "id": "convention-collective"
+  },
+  "modele": {
+    "metaTitle": "Intégrer l’outil permettant de trouver sa convention collective",
+    "metaDescription": "Vous pouvez intégrer l’outil permettant à un usager de trouver sa convention collective sur votre site grâce à un module (widget).",
+    "title": "Modele",
+    "description": "Vous pouvez intégrer l’outil permettant à un usager de trouver sa convention collective sur votre site grâce à un module (widget). Grâce à ce module l'utilisateur pourra dans un premier temps identifier sa convention collective à partir du nom de son entreprise (ou son siret). Il pourra ensuite accéder aux questions-réponses fréquentes de cette convention collective sur le site du code du travail numérique.",
+    "shortTitle": "Trouver sa convention collective",
+    "shortDescription": "Trouver une convention collective à partir du nom de l'entreprise ou son SIRET",
+    "url": "/widgets/modeles-de-courriers/document-dinformation-sur-le-conge-de-reclassement",
+    "id": "modele"
   }
 }
