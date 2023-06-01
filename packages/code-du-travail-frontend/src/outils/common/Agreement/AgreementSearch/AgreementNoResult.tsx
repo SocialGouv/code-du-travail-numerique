@@ -23,7 +23,7 @@ type Props = {
   state: FetchReducerState<Agreement[]>;
 } & TrackingProps;
 
-const renderResults = ({ onUserAction, state }: Props): JSX.Element => {
+const AgreementNoResult = ({ onUserAction, state }: Props): JSX.Element => {
   function openModalHandler(openModal: () => void) {
     onUserAction(UserAction.OpenAgreementHelp);
     openModal();
@@ -125,7 +125,7 @@ const renderResults = ({ onUserAction, state }: Props): JSX.Element => {
   return <></>;
 };
 
-export { renderResults };
+export { AgreementNoResult };
 
 const Section = styled(SectionUi)`
   padding-top: 1rem;
