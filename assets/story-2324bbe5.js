@@ -3,7 +3,7 @@ import{j as e,s as o}from"./styled-components.browser.esm-41178855.js";import{S 
   font-weight: 700;
   font-size: ${g.sizes.small};
   color: ${({theme:r})=>r.secondary};
-  margin-left: ${n.xsmall};
+  margin-left: ${n.tiny};
   padding: 0.5rem;
   height: 2rem;
   width: 2rem;
@@ -12,4 +12,4 @@ import{j as e,s as o}from"./styled-components.browser.esm-41178855.js";import{S 
 `,x=o(h)`
   margin-top: ${n.base};
 `;t.propTypes={children:i.node.isRequired,className:i.string,dataTestid:i.string,icon:i.node.isRequired,iconTitle:i.string.isRequired,isTooltipOpen:i.bool.isRequired,onVisibilityChange:i.func.isRequired};t.__docgenInfo={description:"",methods:[],displayName:"DisclosureIcon",props:{children:{type:{name:"node"},required:!0,description:""},className:{type:{name:"string"},required:!1,description:""},dataTestid:{type:{name:"string"},required:!1,description:""},icon:{type:{name:"node"},required:!0,description:""},iconTitle:{type:{name:"string"},required:!0,description:""},isTooltipOpen:{type:{name:"bool"},required:!0,description:""},onVisibilityChange:{type:{name:"func"},required:!0,description:""}}};const A={component:t,title:"Components/DisclosureIcon"},j=()=>e.jsx(e.Fragment,{children:e.jsxs(c,{children:[e.jsx("p",{children:e.jsx(u,{fontSize:"hsmall",fontWeight:"700",children:"Example:"})}),e.jsxs("p",{children:["Info button",e.jsx(t,{iconTitle:"Find out what lies beneath",icon:e.jsx(y,{size:"20","aria-label":"?"}),onVisibilityChange:()=>{},isTooltipOpen:!0,children:"Here I am! I am the buried treasure!"})]})]})});j.__docgenInfo={description:"",methods:[],displayName:"base"};export{j as base,A as default};
-//# sourceMappingURL=story-7726aafa.js.map
+//# sourceMappingURL=story-2324bbe5.js.map
