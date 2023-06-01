@@ -11,7 +11,7 @@ import {
   TrackingProps,
   UserAction,
 } from "../../../../ConventionCollective/types";
-import { renderResults } from "../AgreementNoResult";
+import { AgreementNoResult } from "../AgreementNoResult";
 
 type Props = {
   onSelectAgreement: (Agreement) => void;
@@ -32,7 +32,7 @@ export const SearchAgreementInput = ({
 
   const state = useAgreementSuggester(query);
 
-  const onChange = () => { };
+  const onChange = () => {};
 
   const onClear = () => {
     setQuery("");
@@ -95,7 +95,7 @@ export const SearchAgreementInput = ({
         inputProps={inputProps}
         focusInputOnSuggestionClick={false}
       />
-      {renderResults({ onUserAction, state })}
+      <AgreementNoResult onUserAction={onUserAction} state={state} />
     </>
   );
 };

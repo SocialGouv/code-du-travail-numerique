@@ -70,6 +70,7 @@ const StyledButton = styled(Button)`
 `;
 
 const StyledDiv = styled.div`
+  grid-area: d;
   display: flex;
   align-items: center;
   justify-content: space-between;
