@@ -59,6 +59,7 @@ jobs:
           NEXT_PUBLIC_PIWIK_URL: ${{ env.piwikUrl }}
           NEXT_PUBLIC_COMMIT: ${{ github.sha }}
           NEXT_PUBLIC_SITE_URL: ${{ env.siteUrl }}
+          ENABLE_SOURCE_MAP: true
       - name: Create Sentry release
         uses: getsentry/action-release@v1
         env:
