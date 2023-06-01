@@ -5,9 +5,10 @@ import React from "react";
 import styled from "styled-components";
 
 import { SectionTitle } from "../../common/stepStyles";
-import { useNavContext } from "../common/NavContext";
+import { ScreenType, useNavContext } from "../common/NavContext";
 import { TrackingProps } from "../types";
 import { AgreementTile } from "../../common/Agreement/AgreementSearch/AgreementInput/AgreementTile";
+import { useRouter } from "next/router";
 
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;
@@ -17,18 +18,26 @@ type EnterpriseSearchStepProps = {
 const AgreementSelectionStep = ({
   onBackClick,
   onUserAction,
-  isWidgetMode
+  isWidgetMode,
 }: EnterpriseSearchStepProps): JSX.Element => {
   const { enterprise } = useNavContext();
+  const router = useRouter();
 
+  if (!enterprise) {
+    router.push(
+      `/${SOURCES.TOOLS}/convention-collective/${ScreenType.enterprise}`
+    );
+    return <></>;
+  }
   return (
     <>
       <SectionTitle>Convention collective</SectionTitle>
       <Paragraph noMargin variant="primary">
         {(enterprise?.conventions?.length ?? 0) > 1
           ? `${enterprise?.conventions.length} conventions collectives trouvées pour `
-          : `${enterprise?.conventions.length ?? 0
-          } convention collective trouvée pour `}
+          : `${
+              enterprise?.conventions.length ?? 0
+            } convention collective trouvée pour `}
         <strong>
           « {enterprise?.simpleLabel}
           {enterprise?.address &&
@@ -39,7 +48,11 @@ const AgreementSelectionStep = ({
       <FlatList>
         {enterprise?.conventions.map((agreement) => (
           <Li key={agreement.id}>
-            <AgreementTile onUserAction={onUserAction} agreement={agreement} isWidgetMode={isWidgetMode} />
+            <AgreementTile
+              onUserAction={onUserAction}
+              agreement={agreement}
+              isWidgetMode={isWidgetMode}
+            />
           </Li>
         ))}
       </FlatList>
@@ -48,16 +61,23 @@ const AgreementSelectionStep = ({
         <Button small type="button" onClick={onBackClick} variant="flat">
           Précédent
         </Button>
-      ) : (<Link
-        href={`/${SOURCES.TOOLS}/convention-collective#entreprise`}
-        passHref
-        legacyBehavior
-      >
-        <Button as="a" small type="button" onClick={onBackClick} variant="flat">
-          Précédent
-        </Button>
-      </Link>)
-      }
+      ) : (
+        <Link
+          href={`/${SOURCES.TOOLS}/convention-collective/entreprise`}
+          passHref
+          legacyBehavior
+        >
+          <Button
+            as="a"
+            small
+            type="button"
+            onClick={onBackClick}
+            variant="flat"
+          >
+            Précédent
+          </Button>
+        </Link>
+      )}
     </>
   );
 };

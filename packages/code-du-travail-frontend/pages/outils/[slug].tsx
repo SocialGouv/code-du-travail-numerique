@@ -111,7 +111,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   } = tool;
   let relatedItems = [];
   try {
-    const response = await fetch(`${SITE_URL}/api/items/${SOURCES.TOOLS}/${slug}`);
+    const response = await fetch(
+      `${SITE_URL}/api/items/${SOURCES.TOOLS}/${slug}`
+    );
     if (response.ok) {
       relatedItems = await response.json().then((data) => data.relatedItems);
     }
@@ -136,7 +138,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 
 const { breakpoints, spacings } = theme;
 
-const ShareContainer = styled.div`
+export const ShareContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-bottom: ${spacings.base};
@@ -145,7 +147,7 @@ const ShareContainer = styled.div`
   }
 `;
 
-const Flex = styled.div`
+export const Flex = styled.div`
   display: flex;
   flex-direction: column-reverse;
 `;
