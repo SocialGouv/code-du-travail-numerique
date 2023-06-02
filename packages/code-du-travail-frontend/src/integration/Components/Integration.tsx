@@ -63,8 +63,7 @@ const IntegrationContainer = ({
       ) as any;
       if (iframe) {
         const a = document.createElement("a");
-        setParsedUrl(url.replace("[value]", selectValue ?? ""));
-        a.href = `http://localhost:3000${parsedUrl}`;
+        a.href = parsedUrl;
         iframe.after(a);
         iframe.remove();
       }
@@ -89,6 +88,12 @@ const IntegrationContainer = ({
               onChange={(v) => {
                 setOldSelectValue(selectValue);
                 setSelectValue(v.target.value);
+                setParsedUrl(
+                  `http://localhost:3000${url.replace(
+                    "[value]",
+                    v.target.value ?? ""
+                  )}`
+                );
               }}
             >
               {selectOptions.map(({ value, label }) => {
