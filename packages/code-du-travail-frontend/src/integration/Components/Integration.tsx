@@ -45,7 +45,7 @@ const IntegrationContainer = ({
   const [oldSelectValue, setOldSelectValue] = useState<string | undefined>();
   const [selectValue, setSelectValue] = useState(selectOptions?.[0].value);
   const [parsedUrl, setParsedUrl] = useState(
-    escape(url).replace("[value]", selectValue ?? "")
+    url.replace("[value]", selectValue ?? "")
   );
   const useScript = () => {
     useEffect(() => {
@@ -96,9 +96,7 @@ const IntegrationContainer = ({
               onChange={(v) => {
                 setOldSelectValue(selectValue);
                 setSelectValue(v.target.value);
-                setParsedUrl(
-                  escape(url).replace("[value]", v.target.value ?? "")
-                );
+                setParsedUrl(url.replace("[value]", v.target.value ?? ""));
               }}
             >
               {selectOptions.map(({ value, label }) => {
@@ -112,7 +110,7 @@ const IntegrationContainer = ({
           </>
         )}
 
-        <a href={`${host}${parsedUrl}`}>{shortTitle}</a>
+        <a href={escape(`${host}${parsedUrl}`)}>{shortTitle}</a>
 
         {message ? (
           <div>
