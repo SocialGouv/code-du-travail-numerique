@@ -76,22 +76,28 @@ const IntegrationContainer = ({
     <Container>
       <StyledTitle>{title}</StyledTitle>
       <Wrapper variant="main">
-        <p>{description}</p>
+        {description.map((text, index) => (
+          <p key={index}>{text}</p>
+        ))}
+        {/* <p>{description}</p> */}
         {selectOptions && (
-          <Select
-            onChange={(v) => {
-              setOldSelectValue(selectValue);
-              setSelectValue(v.target.value);
-            }}
-          >
-            {selectOptions.map(({ value, label }) => {
-              return (
-                <option key={label} value={value}>
-                  {label}
-                </option>
-              );
-            })}
-          </Select>
+          <>
+            <p></p>
+            <Select
+              onChange={(v) => {
+                setOldSelectValue(selectValue);
+                setSelectValue(v.target.value);
+              }}
+            >
+              {selectOptions.map(({ value, label }) => {
+                return (
+                  <option key={label} value={value}>
+                    {label}
+                  </option>
+                );
+              })}
+            </Select>
+          </>
         )}
 
         <a href={`${host}${url.replace("[value]", selectValue ?? "")}`}>

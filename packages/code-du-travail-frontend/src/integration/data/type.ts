@@ -15,7 +15,7 @@ export type Widget = {
   metaTitle: string;
   metaDescription: string;
   title: string;
-  description: string;
+  description: string[];
   shortTitle: string;
   shortDescription: string;
   url: string;
