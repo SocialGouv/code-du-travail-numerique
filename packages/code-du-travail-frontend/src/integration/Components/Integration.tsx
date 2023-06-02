@@ -129,7 +129,7 @@ const IntegrationContainer = ({
 
         <CodeSnippet>{`<a href="https://code.travail.gouv.fr${url.replace(
           "[value]",
-          selectValue
+          selectValue ?? ""
         )}">${shortTitle}</a>`}</CodeSnippet>
 
         {messages && (
