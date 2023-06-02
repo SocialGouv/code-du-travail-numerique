@@ -36,6 +36,9 @@ const IntegrationContainer = ({
   const [message, setMessage] = useState("");
   const [oldSelectValue, setOldSelectValue] = useState<string | undefined>();
   const [selectValue, setSelectValue] = useState(selectOptions?.[0].value);
+  const [parsedUrl, setParsedUrl] = useState(
+    url.replace("[value]", selectValue ?? "")
+  );
   const useScript = () => {
     useEffect(() => {
       const script = document.createElement("script");
@@ -60,10 +63,8 @@ const IntegrationContainer = ({
       ) as any;
       if (iframe) {
         const a = document.createElement("a");
-        a.href = `http://localhost:3000${url.replace(
-          "[value]",
-          selectValue ?? ""
-        )}`;
+        setParsedUrl(url.replace("[value]", selectValue ?? ""));
+        a.href = `http://localhost:3000${parsedUrl}`;
         iframe.after(a);
         iframe.remove();
       }
@@ -81,7 +82,6 @@ const IntegrationContainer = ({
         {description.map((text, index) => (
           <p key={index}>{text}</p>
         ))}
-        {/* <p>{description}</p> */}
         {selectOptions && (
           <>
             <p></p>
@@ -102,9 +102,7 @@ const IntegrationContainer = ({
           </>
         )}
 
-        <a href={`${host}${url.replace("[value]", selectValue ?? "")}`}>
-          {shortTitle}
-        </a>
+        <a href={`${host}${parsedUrl}`}>{shortTitle}</a>
 
         {message ? (
           <div>
@@ -135,10 +133,7 @@ const IntegrationContainer = ({
           le module s’afficher&nbsp;:
         </p>
 
-        <CodeSnippet>{`<a href="https://code.travail.gouv.fr${url.replace(
-          "[value]",
-          selectValue ?? ""
-        )}">${shortTitle}</a>`}</CodeSnippet>
+        <CodeSnippet>{`<a href="https://code.travail.gouv.fr${parsedUrl}">${shortTitle}</a>`}</CodeSnippet>
 
         {messages && (
           <>
