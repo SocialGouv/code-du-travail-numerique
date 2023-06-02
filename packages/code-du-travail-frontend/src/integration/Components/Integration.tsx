@@ -3,20 +3,24 @@ import {
   Container,
   PageTitle,
   Wrapper,
+  Select,
 } from "@socialgouv/cdtn-ui";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Title from "../../fiche-service-public/components/Title";
-import { WidgetMessage } from "../data";
+import { Widget } from "../data";
 
-type IntegrationContainerProps = {
-  id: string;
-  description: string;
-  title: string;
-  shortTitle: string;
-  url: string;
+type SelectItem = {
+  value: string;
+  label: string;
+};
+
+type IntegrationContainerProps = Omit<
+  Widget,
+  "shortDescription" | "metaTitle" | "metaDescription"
+> & {
   host: string;
-  messages?: WidgetMessage;
+  selectOptions?: SelectItem[];
 };
 
 const IntegrationContainer = ({
@@ -27,8 +31,11 @@ const IntegrationContainer = ({
   host,
   messages,
   id,
+  selectOptions,
 }: IntegrationContainerProps) => {
   const [message, setMessage] = useState("");
+  const [oldSelectValue, setOldSelectValue] = useState<string | undefined>();
+  const [selectValue, setSelectValue] = useState(selectOptions?.[0].value);
   const useScript = () => {
     useEffect(() => {
       const script = document.createElement("script");
@@ -48,10 +55,20 @@ const IntegrationContainer = ({
 
       document.body.appendChild(script);
 
+      const iframe = document.getElementById(
+        `cdtn-iframe-${id}-${oldSelectValue}`
+      ) as any;
+      if (iframe) {
+        const a = document.createElement("a");
+        a.href = "http://localhost:3000" + url.replace("[value]", selectValue);
+        iframe.after(a);
+        iframe.remove();
+      }
+
       return () => {
         document.body.removeChild(script);
       };
-    }, []);
+    }, [selectValue]);
   };
   useScript();
   return (
@@ -59,7 +76,27 @@ const IntegrationContainer = ({
       <StyledTitle>{title}</StyledTitle>
       <Wrapper variant="main">
         <p>{description}</p>
-        <a href={`${host}${url}`}>{shortTitle}</a>
+        {selectOptions && (
+          <Select
+            onChange={(v) => {
+              setOldSelectValue(selectValue);
+              setSelectValue(v.target.value);
+            }}
+          >
+            {selectOptions.map(({ value, label }) => {
+              return (
+                <option key={label} value={value}>
+                  {label}
+                </option>
+              );
+            })}
+          </Select>
+        )}
+
+        <a href={`${host}${url.replace("[value]", selectValue ?? "")}`}>
+          {shortTitle}
+        </a>
+
         {message ? (
           <div>
             Message envoyé:
@@ -89,7 +126,10 @@ const IntegrationContainer = ({
           le module s’afficher&nbsp;:
         </p>
 
-        <CodeSnippet>{`<a href="https://code.travail.gouv.fr${url}">${shortTitle}</a>`}</CodeSnippet>
+        <CodeSnippet>{`<a href="https://code.travail.gouv.fr${url.replace(
+          "[value]",
+          selectValue
+        )}">${shortTitle}</a>`}</CodeSnippet>
 
         {messages && (
           <>

@@ -5,6 +5,12 @@ export type WidgetMessage = {
   }[];
 };
 
+export type WidgetSelect = {
+  url: string;
+  labelPath: string;
+  valuePath: string;
+};
+
 export type Widget = {
   metaTitle: string;
   metaDescription: string;
@@ -15,6 +21,7 @@ export type Widget = {
   url: string;
   id: string;
   messages?: WidgetMessage;
+  select?: WidgetSelect;
 };
 
 export type Integration = {

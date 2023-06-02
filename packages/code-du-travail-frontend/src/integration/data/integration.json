@@ -81,14 +81,19 @@
     "url": "/widgets/convention-collective",
     "id": "convention-collective"
   },
-  "modele": {
-    "metaTitle": "Intégrer l’outil permettant de trouver sa convention collective",
-    "metaDescription": "Vous pouvez intégrer l’outil permettant à un usager de trouver sa convention collective sur votre site grâce à un module (widget).",
-    "title": "Modele",
-    "description": "Vous pouvez intégrer l’outil permettant à un usager de trouver sa convention collective sur votre site grâce à un module (widget). Grâce à ce module l'utilisateur pourra dans un premier temps identifier sa convention collective à partir du nom de son entreprise (ou son siret). Il pourra ensuite accéder aux questions-réponses fréquentes de cette convention collective sur le site du code du travail numérique.",
-    "shortTitle": "Trouver sa convention collective",
-    "shortDescription": "Trouver une convention collective à partir du nom de l'entreprise ou son SIRET",
-    "url": "/widgets/modeles-de-courriers/document-dinformation-sur-le-conge-de-reclassement",
-    "id": "modele"
+  "modeles-de-courriers": {
+    "metaTitle": "Intégrer les modèles de documents du Code du travail numérique",
+    "metaDescription": "Vous pouvez intégrer les modèles de documents et de lettres du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l'utilisateur d'avoir un aperçu du modèle puis de le télécharger au format docx pour le personnaliser.",
+    "title": "Intégrer les modèles de documents du Code du travail numérique",
+    "description": "Vous pouvez intégrer les modèles de documents et de lettres du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l'utilisateur d'avoir un aperçu du modèle puis de le télécharger au format docx pour le personnaliser.",
+    "shortTitle": "Modèles de documents",
+    "shortDescription": "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail",
+    "select": {
+      "url": "/api/modeles",
+      "labelPath": "title",
+      "valuePath": "cdtnId"
+    },
+    "url": "/widgets/modeles-de-courriers/[value]",
+    "id": "modeles-de-courriers"
   }
 }
