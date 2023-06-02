@@ -14,6 +14,7 @@ export const DisclosureIcon = ({
   isTooltipOpen,
   className,
   dataTestid,
+  isDisabled,
 }) => {
   return (
     <>
@@ -26,6 +27,7 @@ export const DisclosureIcon = ({
         onClick={onVisibilityChange}
         className={className}
         data-testid={dataTestid}
+        disabled={isDisabled}
       >
         {icon}
       </DisclosureIconButton>
@@ -42,7 +44,7 @@ const DisclosureIconButton = styled(Button)`
   display: inline-block;
   font-weight: 700;
   font-size: ${fonts.sizes.small};
-  color: ${({ theme }) => theme.secondary};
+  color: ${({ theme, disabled }) => (disabled ? "gray" : theme.secondary)};
   margin-left: ${spacings.tiny};
   padding: 0.5rem;
   height: 2rem;
@@ -60,6 +62,7 @@ DisclosureIcon.propTypes = {
   dataTestid: PropTypes.string,
   icon: PropTypes.node.isRequired,
   iconTitle: PropTypes.string.isRequired,
+  isDisabled: PropTypes.bool,
   isTooltipOpen: PropTypes.bool.isRequired,
   onVisibilityChange: PropTypes.func.isRequired,
 };

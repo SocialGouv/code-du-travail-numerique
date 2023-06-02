@@ -59,7 +59,10 @@ export const SearchEnterpriseInput = ({
           <InlineLabel htmlFor="enterprise-search" disabled={isDisabled}>
             Nom de votre entreprise ou numéro Siret
           </InlineLabel>
-          <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
+          <InfoBulle
+            title={"Qu’est ce qu’un n°siret ?"}
+            isDisabled={isDisabled}
+          >
             <p>
               Le numéro Siret est un <strong>numéro de 14 chiffres</strong>{" "}
               unique pour chaque entreprise. Il est présent sur la{" "}
@@ -87,9 +90,9 @@ export const SearchEnterpriseInput = ({
           >
             Code postal ou ville
           </InlineLabel>{" "}
-          <Text fontWeight="400" fontSize="small">
+          <InlineText fontWeight="400" fontSize="small" disabled={isDisabled}>
             (facultatif)
-          </Text>
+          </InlineText>
           <InputWithButton>
             <BlockInputRight
               placeholder="Ex : 31000 ou Toulouse"
@@ -128,6 +131,10 @@ export const SearchEnterpriseInput = ({
     </>
   );
 };
+
+const InlineText = styled(Text)`
+  color: ${({ theme, disabled }) => (disabled ? "gray" : theme.paragraph)};
+`;
 
 const BlockInput = styled(Input)`
   width: 100%;
