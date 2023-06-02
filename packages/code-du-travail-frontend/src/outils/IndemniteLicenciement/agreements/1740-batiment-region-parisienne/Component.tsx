@@ -78,7 +78,6 @@ export default function Agreement1740() {
                 hasMoreThanOneNoticeSalary ? "des" : "du"
               } salaire${S()} (en incluant les primes et avantages en nature)`}
               error={errorNoticeSalaryPeriods}
-              noPrime
               dataTestidSalaries="notice-salary"
             />
           )}
