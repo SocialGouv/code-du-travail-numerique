@@ -11,6 +11,7 @@ import type {
   CC1527ReferenceSalaryProps,
   CC1672ReferenceSalaryProps,
   CC1702ReferenceSalaryProps,
+  CC1740ReferenceSalaryProps,
   CC2098ReferenceSalaryProps,
   CC2148ReferenceSalaryProps,
   CC2596ReferenceSalaryProps,
@@ -68,4 +69,6 @@ export type ReferenceSalaryProps<T> =
     ? CC1483ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC1702
     ? CC1702ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC1740
+    ? CC1740ReferenceSalaryProps
     : LegalReferenceSalaryProps;

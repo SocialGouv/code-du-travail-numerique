@@ -19,6 +19,7 @@ export * from "./1597_batiment_employes_ouvriers_bis";
 export * from "./1606_bricolage";
 export * from "./1672_societes_assurances";
 export * from "./1702_ouvriers_travaux_public";
+export * from "./1740_batiment_region_parisienne";
 export * from "./1996_pharmacie";
 export * from "./2098_personnel_presta_service_tertiaire";
 export * from "./2148_telecommunications";

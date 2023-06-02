@@ -14,6 +14,7 @@ import { validateAgreement2148 } from "./2148-telecommunications";
 import { validateAgreement1672 } from "./1672-societes-assurances";
 import { validateAgreement1483 } from "./1483-habillement-textiles-commerce-de-detail";
 import { validateAgreement1702 } from "./1702-ouvriers-travaux-public";
+import { validateAgreement1740 } from "./1740-batiment-region-parisienne";
 
 const validatorAgreement = (
   idcc: SupportedCcIndemniteLicenciement | null,
@@ -58,6 +59,9 @@ const validatorAgreement = (
     case SupportedCcIndemniteLicenciement.IDCC1702 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement1702(get, set);
+    case SupportedCcIndemniteLicenciement.IDCC1740 === idcc &&
+      step === IndemniteLicenciementStepName.Salaires:
+      return validateAgreement1740(get, set);
     default:
       return true;
   }
