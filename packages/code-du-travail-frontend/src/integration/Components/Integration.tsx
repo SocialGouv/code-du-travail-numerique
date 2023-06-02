@@ -33,11 +33,19 @@ const IntegrationContainer = ({
   id,
   selectOptions,
 }: IntegrationContainerProps) => {
+  const escape = (url: string) => {
+    return url
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  };
   const [message, setMessage] = useState("");
   const [oldSelectValue, setOldSelectValue] = useState<string | undefined>();
   const [selectValue, setSelectValue] = useState(selectOptions?.[0].value);
   const [parsedUrl, setParsedUrl] = useState(
-    url.replace("[value]", selectValue ?? "")
+    escape(url).replace("[value]", selectValue ?? "")
   );
   const useScript = () => {
     useEffect(() => {
@@ -63,7 +71,7 @@ const IntegrationContainer = ({
       ) as any;
       if (iframe) {
         const a = document.createElement("a");
-        a.href = parsedUrl;
+        a.href = `${host}${parsedUrl}`;
         iframe.after(a);
         iframe.remove();
       }
@@ -89,10 +97,7 @@ const IntegrationContainer = ({
                 setOldSelectValue(selectValue);
                 setSelectValue(v.target.value);
                 setParsedUrl(
-                  `http://localhost:3000${url.replace(
-                    "[value]",
-                    v.target.value ?? ""
-                  )}`
+                  escape(url).replace("[value]", v.target.value ?? "")
                 );
               }}
             >
