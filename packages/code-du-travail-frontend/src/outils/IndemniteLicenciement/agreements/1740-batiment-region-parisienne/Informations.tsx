@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Paragraph } from "@socialgouv/cdtn-ui";
+
 import {
   StyledFilledElementSpan,
   StyledFilledElementTable,
@@ -44,6 +45,7 @@ export default function Agreement1740Informations() {
                         (primes et avantages en nature inclus)
                       </StyledFilledElementSpan>
                     </th>
+                    <th>Dont primes</th>
                   </tr>
                 </thead>
                 <tbody>
