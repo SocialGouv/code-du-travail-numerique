@@ -54,6 +54,9 @@ export default function Agreement1740Informations() {
                     >
                       <td>{salary.month}</td>
                       <td>{salary.value} €</td>
+                      <td>
+                        {salary.prime} {salary.prime !== undefined && "€"}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
