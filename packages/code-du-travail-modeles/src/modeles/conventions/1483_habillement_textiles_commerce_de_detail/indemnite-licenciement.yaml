@@ -183,3 +183,5 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   type: notification
   description: Conformément aux règles de la convention collective, le montant de l’indemnité pourrait être plus important si le salarié a perçu une indemnité compensatrice de congés payés et/ou une indemnité compensatrice de préavis.
   valeur: oui
+  cdtn:
+    affichage: légal
