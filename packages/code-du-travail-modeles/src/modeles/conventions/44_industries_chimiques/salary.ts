@@ -52,10 +52,11 @@ export class ReferenceSalary44
     if (
       !hasVariablePay &&
       lastMonthSalary &&
+      lastMonthSalary.value &&
       (category === CategoryPro44.ouvrier ||
         category === CategoryPro44.techniciens)
     ) {
-      dernierSalaire = lastMonthSalary.value ?? 0;
+      dernierSalaire = lastMonthSalary.value;
       dernierePrimeProraterise = (lastMonthSalary.prime ?? 0) / 12;
       dernierSalaireSansPrimes = dernierSalaire - (lastMonthSalary.prime ?? 0);
     }

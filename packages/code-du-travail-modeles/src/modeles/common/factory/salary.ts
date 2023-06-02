@@ -1,5 +1,9 @@
 import { ReferenceSalaryLegal } from "../../base";
-import { ReferenceSalary2609, ReferenceSalary2614 } from "../../conventions";
+import {
+  ReferenceSalary1606,
+  ReferenceSalary2609,
+  ReferenceSalary2614,
+} from "../../conventions";
 import { ReferenceSalary16 } from "../../conventions/16_transports_routiers";
 import { ReferenceSalary0029 } from "../../conventions/29_hospitalisation_privee_but_non_lucratif";
 import { ReferenceSalary44 } from "../../conventions/44_industries_chimiques";
@@ -11,6 +15,7 @@ import { ReferenceSalary1486 } from "../../conventions/1486_bureaux_etudes_techn
 import { ReferenceSalary1516 } from "../../conventions/1516_organismes_formation";
 import { ReferenceSalary1527 } from "../../conventions/1527_immobilier";
 import { ReferenceSalary1672 } from "../../conventions/1672_societes_assurances";
+import { ReferenceSalary1702 } from "../../conventions/1702_ouvriers_travaux_public";
 import { ReferenceSalary2098 } from "../../conventions/2098_personnel_presta_service_tertiaire";
 import { ReferenceSalary2148 } from "../../conventions/2148_telecommunications/salary";
 import { ReferenceSalary2596 } from "../../conventions/2596_coiffure/salary";
@@ -25,6 +30,8 @@ export class ReferenceSalaryFactory {
     switch (idcc) {
       case SupportedCcIndemniteLicenciement.IDCC1516:
         return new ReferenceSalary1516() as IReferenceSalary<T>;
+      case SupportedCcIndemniteLicenciement.IDCC1606:
+        return new ReferenceSalary1606() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC413:
         return new ReferenceSalary413() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC1486:
@@ -57,6 +64,8 @@ export class ReferenceSalaryFactory {
         return new ReferenceSalary1672() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC0086:
         return new ReferenceSalary86() as IReferenceSalary<T>;
+      case SupportedCcIndemniteLicenciement.IDCC1702:
+        return new ReferenceSalary1702() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new ReferenceSalaryLegal() as IReferenceSalary<T>;

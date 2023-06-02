@@ -1,4 +1,4 @@
-ARG NODE_VERSION=14.18.3-alpine
+ARG NODE_VERSION=20.2.0-alpine
 # dist
 FROM node:$NODE_VERSION AS dist
 
@@ -25,6 +25,8 @@ ARG NEXT_PUBLIC_COMMIT
 ENV NEXT_PUBLIC_COMMIT=$NEXT_PUBLIC_COMMIT
 ARG NEXT_PUBLIC_SITE_URL
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+ARG NEXT_PUBLIC_SENTRY_RELEASE
+ENV NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE
 
 # Copy all package.json
 COPY ./package.json ./package.json
@@ -43,7 +45,8 @@ COPY . ./
 
 ENV NODE_ENV=production
 
-RUN yarn build:frontend && yarn --frozen-lockfile --prod --prefer-offline
+RUN yarn build  && \
+  yarn --frozen-lockfile --prod --prefer-offline
 
 # app
 FROM node:$NODE_VERSION

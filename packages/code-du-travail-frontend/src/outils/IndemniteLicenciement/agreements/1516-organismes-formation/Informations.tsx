@@ -12,67 +12,58 @@ import {
 
 export default function Agreement1516Informations() {
   const store = useContext(IndemniteLicenciementContext);
-  const { salaryPeriods, hasReceivedSalaries } = useIndemniteLicenciementStore(
-    store,
-    (state) => ({
-      salaryPeriods: state.agreement1516Data.input.salaryPeriods ?? [],
+  const { noticeSalaryPeriods, hasReceivedSalaries } =
+    useIndemniteLicenciementStore(store, (state) => ({
+      noticeSalaryPeriods:
+        state.agreement1516Data.input.noticeSalaryPeriods ?? [],
       hasReceivedSalaries: state.agreement1516Data.input.hasReceivedSalaries,
-    })
-  );
+    }));
 
   return (
     <>
-      {salaryPeriods.length > 0 && (
+      {noticeSalaryPeriods.length > 0 && (
         <>
           <li>
             Connaissance du montant des salaires perçus pendant le préavis
             &nbsp;:&nbsp;{hasReceivedSalaries === "oui" ? "Oui" : "Non"}
           </li>
-          <li>
-            <Paragraph noMargin>
-              Salaires perçus pendant le préavis
-              {hasReceivedSalaries === "non" && "*"}&nbsp;:
-            </Paragraph>
-            {hasReceivedSalaries === "non" && (
-              <>
-                <i>
-                  * Le calcul de l’indemnité nécessite le salaire le plus élevé
-                  perçu au cours des 3 derniers mois de travail (incluant le
-                  préavis). Pour réaliser cette simulation nous avons pris en
-                  compte le salaire le plus élevé perçu au cours des 12 derniers
-                  mois précédant la notification du licenciement. En
-                  conséquence, le résultat obtenu pourrait ne pas correspondre
-                  exactement à votre situation.
-                </i>
-              </>
-            )}
-            <StyledFilledElementTable>
-              <thead>
-                <tr>
-                  <th>Mois</th>
-                  <th>
-                    Salaire
-                    <br />
-                    <StyledFilledElementSpan>
-                      (primes et avantages en nature inclus)
-                    </StyledFilledElementSpan>
-                  </th>
-                  <th>Dont primes</th>
-                </tr>
-              </thead>
-              <tbody>
-                {salaryPeriods.map((salary, index) => (
-                  <tr key={"salary-agreement-" + index}>
-                    <td>{salary.month}</td>
-                    <td>{salary.value} €</td>
-                    <td>
-                      {salary.prime} {salary.prime !== undefined && "€"}
-                    </td>
+
+          {hasReceivedSalaries === "oui" && (
+            <li>
+              <Paragraph noMargin>
+                Salaires perçus pendant le préavis&nbsp;:
+              </Paragraph>
+              <StyledFilledElementTable data-testid={"result-table"}>
+                <thead>
+                  <tr>
+                    <th>Mois</th>
+                    <th>
+                      Salaire
+                      <br />
+                      <StyledFilledElementSpan>
+                        (primes et avantages en nature inclus)
+                      </StyledFilledElementSpan>
+                    </th>
+                    <th>Dont primes</th>
                   </tr>
-                ))}
-              </tbody>
-            </StyledFilledElementTable>
-          </li>
+                </thead>
+                <tbody>
+                  {noticeSalaryPeriods.map((salary, index) => (
+                    <tr
+                      key={"salary-agreement-" + index}
+                      data-testid={"table-result-row"}
+                    >
+                      <td>{salary.month}</td>
+                      <td>{salary.value} €</td>
+                      <td>
+                        {salary.prime} {salary.prime !== undefined && "€"}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </StyledFilledElementTable>
+            </li>
+          )}
         </>
       )}
     </>

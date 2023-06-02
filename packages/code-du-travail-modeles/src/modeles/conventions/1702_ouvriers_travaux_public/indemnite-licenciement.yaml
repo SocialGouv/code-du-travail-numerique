@@ -3,13 +3,13 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
   valeur: oui
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . licenciement économique:
+  applicable si: indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = non
   titre: Licenciement pour motif économique
   question: Le motif du licenciement est-il économique ?
   cdtn:
     type: oui-non
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age:
-  applicable si: licenciement économique
   titre: Âge du salarié
   question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?
   cdtn:
@@ -106,3 +106,17 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
   cdtn:
     formule:
       formula: ($formule) + (35% * Sref)
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . notification arrêt travail:
+  applicable si: contrat salarié . indemnité de licenciement . arrêt de travail
+  type: notification
+  description: "Le montant de l’indemnité doit être calculé sur la base des salaires (reconstitués) que le salarié aurait dû percevoir au cours des 3 derniers mois précédant la rupture du contrat s’il n’avait pas été en arrêt de travail. Pour simplifier l'utilisation de ce simulateur, le calcul se base ici sur les salaires perçus avant l'arrêt travail et non sur les salaires reconstitués. Le montant de l'indemnité pourrait donc être plus important que celui donné par le simulateur."
+  valeur: oui
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . notification licenciement économique:
+  applicable si: licenciement économique = 'Oui'
+  type: notification
+  description: "Ce résultat ne prend pas en compte le complément forfaitaire dont bénéficie le salarié en plus du montant de l'indemnité de licenciement lorsqu'il est licencié pour motif économique. Ce complément forfaitaire est égal à 70% du montant de l'indemnité de licenciement pour les salariés ayant entre 2 et 5 ans d'ancienneté et à 35% du salaire de référence du salarié (voir le détail du calcul) pour les salariés ayant au moins 5 ans d'ancienneté."
+  valeur: oui
+  cdtn:
+    affichage: légal

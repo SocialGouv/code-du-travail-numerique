@@ -38,6 +38,18 @@ export const getResultMessage = (
 export const getSalairesTempsPleinSubtitle = (
   agreementNumber?: number
 ): string | undefined => {
-  if (agreementNumber && agreementNumber === 3239) return undefined;
-  return "Indiquez le montant des salaires (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)";
+  switch (agreementNumber) {
+    case 3239:
+      return undefined;
+    case 1702:
+      return "Indiquez le montant des salaires (en incluant l’indemnité de congés payés, les primes, dont la prime de vacances, et les avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)";
+    default:
+      return "Indiquez le montant des salaires (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)";
+  }
+};
+
+export const isParentalNoticeHiddenForAgreement = (
+  agreementNumber: number
+): boolean => {
+  return agreementNumber === 3239 || agreementNumber === 1404;
 };

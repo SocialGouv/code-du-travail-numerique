@@ -12,10 +12,11 @@ import {
   Agreement1516StoreSlice,
 } from "./types";
 import { validateStep } from "./validator";
+import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
 
 const initialState: Agreement1516StoreData = {
   input: {
-    salaryPeriods: [],
+    noticeSalaryPeriods: [],
   },
   error: {},
   hasBeenSubmit: false,
@@ -24,48 +25,56 @@ const initialState: Agreement1516StoreData = {
 
 export const createAgreement1516StoreSalaires: StoreSlice<
   Agreement1516StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice
+  SalairesStoreSlice & AncienneteStoreSlice & ContratTravailStoreSlice
 > = (set, get) => ({
   agreement1516Data: { ...initialState },
   agreement1516Function: {
-    initSalaryPeriods: (withDefaultSalaryPeriod: boolean) => {
+    onInit: () => {
+      const dateArretTravail = get().contratTravailData.input.dateArretTravail;
+
+      if (dateArretTravail) {
+        return set(
+          produce((state: Agreement1516StoreSlice) => {
+            state.agreement1516Data.input.noticeSalaryPeriods = [];
+          })
+        );
+      }
       const ancienneteInput = get().ancienneteData.input;
-      const defaultSalaryPeriod = get().salairesData.input.salaryPeriods;
+      const input = get().agreement1516Data.input;
       const agreementSalaryPeriod =
-        get().agreement1516Data.input.salaryPeriods ?? [];
+        input.hasReceivedSalaries !== "non" && input.noticeSalaryPeriods
+          ? input.noticeSalaryPeriods
+          : [];
       const periods = computeSalaryPeriods({
         dateEntree: ancienneteInput.dateNotification ?? "",
         dateNotification: ancienneteInput.dateSortie ?? "",
       });
-      const period: SalaryPeriods[] = periods.map((v) =>
-        Object.assign(
-          { month: v },
-          withDefaultSalaryPeriod &&
-            defaultSalaryPeriod[0].value && {
-              value: defaultSalaryPeriod[0].value,
-            },
-          withDefaultSalaryPeriod && {
-            prime: 0,
-          }
-        )
+
+      const last3MonthsPeriods = periods.slice(0, 3);
+      const period: SalaryPeriods[] = last3MonthsPeriods.map((v) => {
+        return { month: v, value: undefined };
+      });
+      const noticeSalaryPeriods = deepMergeArray(
+        period,
+        agreementSalaryPeriod,
+        "month"
       );
-      const salaryPeriods = withDefaultSalaryPeriod
-        ? deepMergeArray(period, agreementSalaryPeriod, "month", true)
-        : period;
+
       set(
         produce((state: Agreement1516StoreSlice) => {
-          state.agreement1516Data.input.salaryPeriods = salaryPeriods;
+          state.agreement1516Data.input.noticeSalaryPeriods =
+            noticeSalaryPeriods;
+          state.agreement1516Data.input.noticePeriodsMoreThan3Months =
+            periods.length > 3;
         })
       );
     },
     onChangeHasReceivedSalaries: (value) => {
-      get().agreement1516Function.initSalaryPeriods(
-        value === "non" ? true : false
-      );
       applyGenericValidation(get, set, "hasReceivedSalaries", value);
+      get().agreement1516Function.onInit();
     },
     onSalariesChange: (value) => {
-      applyGenericValidation(get, set, "salaryPeriods", value);
+      applyGenericValidation(get, set, "noticeSalaryPeriods", value);
     },
   },
 });
