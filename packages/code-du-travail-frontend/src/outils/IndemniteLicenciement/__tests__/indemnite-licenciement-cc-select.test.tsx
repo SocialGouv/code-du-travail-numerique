@@ -45,6 +45,7 @@ describe("Indemnité licenciement - Sélection de CC", () => {
     fireEvent.change(ui.agreement.agreementCompanyInput.get(), {
       target: { value: "carrefour" },
     });
+    fireEvent.click(ui.agreement.agreementCompanySearchButton.get());
     await waitFor(() => {
       fireEvent.click(ui.agreement.searchItem.carrefour.get());
     });

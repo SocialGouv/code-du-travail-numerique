@@ -77,8 +77,8 @@ describe("EnterpriseSearch", () => {
       expect(
         getByText(/Nom de votre entreprise ou numéro Siret/)
       ).toBeInTheDocument();
-      expect(getByText(/\(obligatoire\)/)).toBeInTheDocument();
       expect(getByText(/Code postal ou ville/)).toBeInTheDocument();
+      expect(getByText(/\(facultatif\)/)).toBeInTheDocument();
     });
 
     it("should show inputs to search the enterprise", () => {
