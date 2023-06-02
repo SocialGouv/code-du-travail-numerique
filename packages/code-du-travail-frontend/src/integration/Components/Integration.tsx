@@ -60,7 +60,8 @@ const IntegrationContainer = ({
       ) as any;
       if (iframe) {
         const a = document.createElement("a");
-        a.href = "http://localhost:3000" + url.replace("[value]", selectValue);
+        a.href =
+          "http://localhost:3000" + url.replace("[value]", selectValue ?? "");
         iframe.after(a);
         iframe.remove();
       }
