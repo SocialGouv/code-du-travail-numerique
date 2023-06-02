@@ -5,6 +5,19 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { ui } from "./ui";
 
 jest.mock("../../../conventions/Search/api/agreements.service");
+jest.spyOn(Storage.prototype, "setItem");
+Storage.prototype.getItem = jest.fn(
+  () => `
+{
+  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+  "id": "KALICONT000044594539",
+  "num": 3239,
+  "shortTitle": "Particuliers employeurs et emploi à domicile",
+  "slug": "3239-particuliers-employeurs-et-emploi-a-domicile",
+  "title": "Particuliers employeurs et emploi à domicile"
+}
+`
+);
 
 test(`
   - Vérifier qu'on ne peut pas passer à l'étape suivante sans avoir sélectionné toutes les informations de la CC
@@ -12,15 +25,7 @@ test(`
   await render(<HeuresRechercheEmploi icon="" title="" displayTitle="" />);
 
   fireEvent.click(ui.introduction.startButton.get());
-  fireEvent.click(ui.agreement.agreement.get());
-  fireEvent.focus(ui.agreement.agreementInput.get());
-  fireEvent.change(ui.agreement.agreementInput.get(), {
-    target: { value: "3239" },
-  });
-  await waitFor(() =>
-    expect(ui.agreement3239.searchResult.query()).toBeInTheDocument()
-  );
-  fireEvent.click(ui.agreement3239.searchResult.get());
+  fireEvent.click(ui.next.get());
   fireEvent.click(ui.next.get());
 
   fireEvent.change(ui.typeRupture.input.get(), {

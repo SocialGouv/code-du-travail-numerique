@@ -25,7 +25,7 @@ export const ui = {
     },
     inaptitude: {
       question: byText(
-        "Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?"
+        "Le licenciement fait-il suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue) ?"
       ),
       oui: byTestId("licenciementInaptitude - Oui"),
       non: byTestId("licenciementInaptitude - Non"),
@@ -54,6 +54,7 @@ export const ui = {
       /Vous avez sélectionné la convention collective/
     ),
     agreementCompanyInput: byTestId("agreement-company-search-input"),
+    agreementCompanySearchButton: byTestId("agreement-company-search-button"),
     agreementCompanyInputAsk: byText(
       "Précisez et sélectionnez votre entreprise"
     ),
@@ -157,6 +158,37 @@ export const ui = {
         "infos.contrat salarié - convention collective - batiment etam - indemnité de licenciement - age à la fin de son préavis"
       ),
     },
+    agreement2596: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle"
+      ),
+    },
+    agreement2148: {
+      age: byTestId(
+        "infos.contrat salarié - convention collective - télécommunications - age"
+      ),
+    },
+    agreement1672: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+      ),
+      age: byTestId(
+        "infos.contrat salarié - convention collective - sociétés d'assurances - age"
+      ),
+    },
+    agreement1702: {
+      motif: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - ouvriers travaux public - indemnité de licenciement - licenciement économique - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - ouvriers travaux public - indemnité de licenciement - licenciement économique - Non"
+        ),
+      },
+      age: byTestId(
+        "infos.contrat salarié - convention collective - ouvriers travaux public - indemnité de licenciement - age"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),
@@ -197,8 +229,18 @@ export const ui = {
       salaries: byTestId("last-month-salary"),
       primes: byTestId("prime-last-month-salary"),
     },
+    agreementWithNoticeSalary: {
+      knowingLastSalary: {
+        oui: byTestId("hasReceivedSalaries - Oui"),
+        non: byTestId("hasReceivedSalaries - Non"),
+      },
+      salaries: byTestId("notice-salary"),
+      primes: byTestId("prime-notice-salary"),
+    },
   },
   result: {
+    resultat: byText(/À partir des éléments que vous avez saisis/),
+    resultatLegal: byText(/Montant prévu par le code du travail/),
     formula: byTestId("formula"),
     legalError: {
       title: byText(
@@ -250,6 +292,7 @@ export const ui = {
       motif: byTestId("absence-motif"),
       duration: byTestId("absence-duration"),
     },
+    resultTableRows: byTestId("table-result-row"),
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),

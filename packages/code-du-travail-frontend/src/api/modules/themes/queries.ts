@@ -1,6 +1,6 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
-export function getThemes() {
+export function getAllThemesQuery() {
   return {
     _source: ["icon", "children", "title", "slug", "position"],
     query: {

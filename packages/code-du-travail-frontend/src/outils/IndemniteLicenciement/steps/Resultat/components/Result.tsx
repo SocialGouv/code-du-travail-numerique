@@ -1,11 +1,10 @@
 import { Notification } from "@socialgouv/modeles-social";
 import React from "react";
 import { NoticeNote } from "../../../../common/NoticeNote";
-import {
-  HighlightResult,
-  SectionTitle,
-  SmallText,
-} from "../../../../common/stepStyles";
+import { Paragraph, theme } from "@socialgouv/cdtn-ui";
+
+import { HighlightResult, SectionTitle } from "../../../../common/stepStyles";
+import styled from "styled-components";
 
 type Props = {
   maxResult: string;
@@ -13,36 +12,56 @@ type Props = {
   resultMessage: string;
 };
 
-export default function Result(props: Props) {
+export default function Result({
+  notifications = [],
+  resultMessage,
+  maxResult,
+}: Props) {
+  const notifs = [
+    {
+      dottedName: "congé paternité",
+      description: (
+        <span>
+          Ce montant est exonéré d’impôt sur le revenu et de cotisations
+          sociales sous certaines conditions,{" "}
+          <StyledLink
+            href="/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi"
+            target="_blank"
+          >
+            en savoir plus
+          </StyledLink>
+        </span>
+      ),
+    } as Notification,
+  ].concat(notifications);
   return (
-    <>
+    <DIV>
       <SectionTitle hasSmallMarginTop>Indemnité</SectionTitle>
-      <p>
-        {props.resultMessage}{" "}
-        <HighlightResult>
-          {props.maxResult.replace(".", ",")}&nbsp;€&nbsp;brut.
-        </HighlightResult>
-        {props.notifications && props.notifications.length > 0 && (
+      <Paragraph noMargin>
+        {resultMessage}{" "}
+        <HighlightResult>{maxResult.replace(".", ",")}&nbsp;€.</HighlightResult>
+        <NoticeNote
+          numberOfElements={notifs.length}
+          currentElement={0}
+          isList
+        />
+      </Paragraph>
+      {notifs.map((notification, index) => (
+        <Paragraph fontSize="small" noMargin key={index}>
           <NoticeNote
-            numberOfElements={props.notifications.length}
-            currentElement={0}
-            isList
+            numberOfElements={notifs.length}
+            currentElement={1 + index}
           />
-        )}
-      </p>
-      {props.notifications && props.notifications.length > 0 && (
-        <SmallText>
-          {props.notifications.map((notification, index) => (
-            <>
-              <NoticeNote
-                numberOfElements={props.notifications!.length}
-                currentElement={1 + index}
-              />
-              {notification.description}
-            </>
-          ))}
-        </SmallText>
-      )}
-    </>
+          {notification.description}
+        </Paragraph>
+      ))}
+    </DIV>
   );
 }
+
+export const StyledLink = styled.a`
+  font-weight: normal;
+`;
+export const DIV = styled.div`
+  margin-bottom: ${theme.spacings.small};
+`;

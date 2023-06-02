@@ -33,15 +33,17 @@ export const BurgerNavItem = ({ isCurrent, ...props }) =>
   ) : (
     <BurgerNavLink {...props} />
   );
+
 BurgerNavItem.propTypes = {
   children: PropTypes.node.isRequired,
   isCurrent: PropTypes.bool,
 };
-const BurgerNavLink = styled(BurgerNavButton).attrs(() => ({ as: "a" }))`
+
+export const BurgerNavLink = styled(BurgerNavButton).attrs(() => ({ as: "a" }))`
   text-decoration: none;
 `;
 
-const BurgerNavCurrent = styled(BurgerNavButton).attrs(() => ({
+export const BurgerNavCurrent = styled(BurgerNavButton).attrs(() => ({
   as: "span",
 }))`
   cursor: inherit;

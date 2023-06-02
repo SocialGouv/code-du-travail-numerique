@@ -21,7 +21,7 @@ export class AgreementSalary1486 implements AgreementSalary {
         .informationsData.input.publicodesInformations.find(
           (v) =>
             v.question.rule.nom ===
-            "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle"
+            "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle"
         )
         ?.info?.slice(1, -1) as any,
       typeLicenciement: get()

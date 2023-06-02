@@ -25,6 +25,7 @@ import {
   getAgreementExtraInfoSalary,
   getAgreementReferenceSalary,
 } from "../../../agreements";
+import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
 import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
@@ -41,6 +42,7 @@ import {
   MatomoSimulatorEvent,
 } from "../../../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
+import getSupportedCcIndemniteLicenciement from "../../../common/usecase/getSupportedCc";
 
 const initialState: ResultStoreData = {
   input: {
@@ -50,13 +52,14 @@ const initialState: ResultStoreData = {
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
     isEligible: false,
+    isParentalNoticeHidden: false,
   },
   error: {},
   hasBeenSubmit: true,
   isStepValid: true,
 };
 
-const isConventionnelBetter = (
+const isAgreementBetterDetection = (
   publicodesSituationLegal: PublicodesIndemniteLicenciementResult,
   publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult
 ) =>
@@ -65,6 +68,16 @@ const isConventionnelBetter = (
   publicodesSituationConventionnel.value !== undefined &&
   publicodesSituationConventionnel.value !== null &&
   publicodesSituationConventionnel.value > publicodesSituationLegal.value;
+
+const isAgreementSameDetection = (
+  publicodesSituationLegal: PublicodesIndemniteLicenciementResult,
+  publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult
+) =>
+  publicodesSituationLegal.value !== undefined &&
+  publicodesSituationLegal.value !== null &&
+  publicodesSituationConventionnel.value !== undefined &&
+  publicodesSituationConventionnel.value !== null &&
+  publicodesSituationConventionnel.value === publicodesSituationLegal.value;
 
 const createResultStore: StoreSlice<
   ResultStoreSlice,
@@ -139,9 +152,14 @@ const createResultStore: StoreSlice<
       const agreement = get().agreementData.input.agreement;
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
+      const longTermDisability =
+        get().contratTravailData.input.arretTravail === "oui";
       const publicodes = get().agreementData.publicodes;
       const dateNotification = get().ancienneteData.input.dateNotification!;
       const dateSortie = get().ancienneteData.input.dateSortie!;
+      const isAgreementSupported =
+        get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
+
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
       }
@@ -167,7 +185,8 @@ const createResultStore: StoreSlice<
           legalSeniority.value,
           legalRequiredSeniority.value,
           refSalary,
-          isLicenciementInaptitude
+          isLicenciementInaptitude,
+          longTermDisability
         )
       ).result;
 
@@ -180,12 +199,20 @@ const createResultStore: StoreSlice<
       let agreementReferences: References[];
       let agreementFormula: Formula;
       let isAgreementBetter = false;
+      let isAgreementEqualToLegal = false;
       let agreementInformations: AgreementInformation[];
-      let agreementNotifications: Notification[];
+      let agreementNotifications: Notification[] = [];
+      let notifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
       let agreementSalaryExtraInfo: Record<string, string | number> = {};
+      let isParentalNoticeHidden = false;
 
-      if (agreement) {
+      if (
+        agreement &&
+        getSupportedCcIndemniteLicenciement().some(
+          (item) => item.idcc === agreement.num && item.fullySupported
+        )
+      ) {
         const infos = informationToSituation(
           get().informationsData.input.publicodesInformations
         );
@@ -227,6 +254,8 @@ const createResultStore: StoreSlice<
             agreementRefSalary,
             agreementRequiredSeniority.value,
             get().ancienneteData.input.dateNotification!,
+            isLicenciementInaptitude,
+            longTermDisability,
             { ...infos, ...agreementSalaryExtraInfo }
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -242,15 +271,42 @@ const createResultStore: StoreSlice<
 
         agreementHasNoLegalIndemnity = hasNoLegalIndemnity(agreement.num);
 
+        isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
+          agreement.num
+        );
+
         if (
           agreementHasNoLegalIndemnity ||
-          isConventionnelBetter(
+          (isAgreementBetterDetection(
             publicodesSituationLegal,
             publicodesSituationConventionnel
-          )
+          ) &&
+            isAgreementSupported)
         ) {
           isAgreementBetter = true;
         }
+        if (
+          isAgreementSameDetection(
+            publicodesSituationLegal,
+            publicodesSituationConventionnel
+          ) &&
+          isAgreementSupported
+        ) {
+          isAgreementEqualToLegal = true;
+        }
+      }
+
+      if (isAgreementBetter || isAgreementEqualToLegal) {
+        notifications = agreementNotifications?.filter(
+          (item) =>
+            item.show === "conventionnel" ||
+            item.show === "légal et conventionnel"
+        );
+      } else {
+        notifications = agreementNotifications?.filter(
+          (item) =>
+            item.show === "légal" || item.show === "légal et conventionnel"
+        );
       }
 
       set(
@@ -267,10 +323,11 @@ const createResultStore: StoreSlice<
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
           state.resultData.input.agreementInformations = agreementInformations;
-          state.resultData.input.agreementNotifications =
-            agreementNotifications;
+          state.resultData.input.notifications = notifications;
           state.resultData.input.agreementHasNoLegalIndemnity =
             agreementHasNoLegalIndemnity;
+          state.resultData.input.isParentalNoticeHidden =
+            isParentalNoticeHidden;
         })
       );
     },

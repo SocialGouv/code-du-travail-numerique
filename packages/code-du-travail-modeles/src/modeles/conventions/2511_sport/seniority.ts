@@ -43,10 +43,7 @@ export class Seniority2511 extends SeniorityDefault<SupportedCcIndemniteLicencie
 }
 
 const MOTIFS_2511: Motif[] = LEGAL_MOTIFS.map((item) => {
-  if (
-    item.key === MotifKeys.accidentTrajet ||
-    item.key === MotifKeys.congesPaternite
-  ) {
+  if (item.key === MotifKeys.accidentTrajet) {
     return {
       ...item,
       value: 0,

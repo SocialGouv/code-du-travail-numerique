@@ -17,7 +17,7 @@ Storage.prototype.getItem = jest.fn(
 );
 
 describe("Indemnité licenciement - CC 44", () => {
-  describe("parcours avec la convention collective pour valider ses spécificités", () => {
+  describe("parcours avec la convention collective pour valider ses spécificités AVEC PREAVIS", () => {
     beforeEach(() => {
       render(
         <CalculateurIndemnite
@@ -38,7 +38,6 @@ describe("Indemnité licenciement - CC 44", () => {
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
       );
-      userEvent.click(ui.information.agreement44.economicFire.oui.get());
       fireEvent.change(ui.information.agreement44.age.get(), {
         target: { value: "38" },
       });
@@ -85,7 +84,6 @@ describe("Indemnité licenciement - CC 44", () => {
         ui.information.agreement44.proCategory.get(),
         "Agents de maîtrise et techniciens (Groupe IV)"
       );
-      userEvent.click(ui.information.agreement44.economicFire.oui.get());
       fireEvent.change(ui.information.agreement44.age.get(), {
         target: { value: "36" },
       });
@@ -111,7 +109,6 @@ describe("Indemnité licenciement - CC 44", () => {
         ui.information.agreement44.proCategory.get(),
         "Ingénieurs et cadres (Groupe V)"
       );
-      userEvent.click(ui.information.agreement44.economicFire.oui.get());
       fireEvent.change(ui.information.agreement44.age.get(), {
         target: { value: "36" },
       });
@@ -156,6 +153,92 @@ describe("Indemnité licenciement - CC 44", () => {
     });
   });
 
+  describe("parcours avec la convention collective pour valider ses spécificités SANS PREAVIS", () => {
+    beforeEach(() => {
+      render(
+        <CalculateurIndemnite
+          icon={""}
+          title={""}
+          displayTitle={""}
+          slug={"indemnite-licenciement"}
+        />
+      );
+      userEvent.click(ui.introduction.startButton.get());
+      userEvent.click(ui.contract.type.cdi.get());
+      userEvent.click(ui.contract.fauteGrave.non.get());
+      userEvent.click(ui.contract.inaptitude.non.get());
+      userEvent.click(ui.contract.arretTravail.non.get());
+      userEvent.click(ui.next.get());
+      userEvent.click(ui.next.get());
+      userEvent.selectOptions(
+        ui.information.agreement44.proCategory.get(),
+        "Ouvriers et collaborateurs (Groupes I à III)"
+      );
+      fireEvent.change(ui.information.agreement44.age.get(), {
+        target: { value: "40" },
+      });
+      userEvent.click(ui.next.get());
+      fireEvent.change(ui.seniority.startDate.get(), {
+        target: { value: "01/01/2000" },
+      });
+      fireEvent.change(ui.seniority.notificationDate.get(), {
+        target: { value: "01/01/2023" },
+      });
+      fireEvent.change(ui.seniority.endDate.get(), {
+        target: { value: "01/01/2023" },
+      });
+      userEvent.click(ui.seniority.hasAbsence.non.get());
+      userEvent.click(ui.next.get());
+      // Validation que l'on est bien sur l'étape ancienneté
+      expect(ui.activeStep.query()).toHaveTextContent("Salaires");
+    });
+
+    test("Vérification que la cc est privilégié grâce à un salaire de référence conventionnel import", () => {
+      userEvent.click(ui.salary.hasPartialTime.non.get());
+      userEvent.click(ui.salary.hasSameSalary.non.get());
+      fireEvent.change(ui.salary.salaries.getAll()[0], {
+        target: { value: "10000" },
+      });
+      fireEvent.change(ui.salary.salaries.getAll()[1], {
+        target: { value: "1000" },
+      });
+      fireEvent.change(ui.salary.salaries.getAll()[2], {
+        target: { value: "1000" },
+      });
+      fireEvent.change(ui.salary.salaries.getAll()[3], {
+        target: { value: "1000" },
+      });
+      fireEvent.change(ui.salary.salaries.getAll()[4], {
+        target: { value: "1000" },
+      });
+      fireEvent.change(ui.salary.salaries.getAll()[5], {
+        target: { value: "1000" },
+      });
+      fireEvent.change(ui.salary.salaries.getAll()[6], {
+        target: { value: "1000" },
+      });
+      fireEvent.change(ui.salary.salaries.getAll()[7], {
+        target: { value: "1000" },
+      });
+      fireEvent.change(ui.salary.salaries.getAll()[8], {
+        target: { value: "1000" },
+      });
+      fireEvent.change(ui.salary.salaries.getAll()[9], {
+        target: { value: "1000" },
+      });
+      fireEvent.change(ui.salary.salaries.getAll()[10], {
+        target: { value: "1000" },
+      });
+      fireEvent.change(ui.salary.salaries.getAll()[11], {
+        target: { value: "1000" },
+      });
+      userEvent.click(ui.salary.variablePart.non.get());
+      userEvent.click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+      expect(ui.result.resultat.get()).toHaveTextContent("69000 €");
+    });
+  });
+
   describe("parcours avec une date d'arrêt", () => {
     beforeEach(() => {
       render(
@@ -168,7 +251,7 @@ describe("Indemnité licenciement - CC 44", () => {
       );
     });
 
-    test(`ne doit pas afficher la question sur le salaire pour le dernièr mois`, () => {
+    test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, () => {
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
@@ -183,7 +266,6 @@ describe("Indemnité licenciement - CC 44", () => {
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
       );
-      userEvent.click(ui.information.agreement44.economicFire.oui.get());
       fireEvent.change(ui.information.agreement44.age.get(), {
         target: { value: "38" },
       });

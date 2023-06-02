@@ -56,6 +56,11 @@ export const GouvernementSection = () => {
             <Link href="/politique-confidentialite">Politique de confidentialité</Link>
           </li>
           <li>
+            <Link href="/plan-du-site">
+              Plan du site
+            </Link>
+          </li>
+          <li>
             <Link rel="noopener noreferrer" href={`https://github.com/SocialGouv/code-du-travail-numerique/tree/v${PACKAGE_VERSION}`} target="_blank">Contribuer sur Github</Link>
           </li>
           <li>

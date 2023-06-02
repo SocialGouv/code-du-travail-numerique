@@ -96,6 +96,26 @@ describe("Formula", () => {
     });
   });
 
+  describe("règle active contenant des explications mais avec une explication dupliquée", () => {
+    beforeEach(() => {
+      engine = new Engine(
+        parseData("formule_avec_explanations_dupliqués.yaml")
+      );
+    });
+
+    test("doit retirer l'explication dupliquée", () => {
+      const situation = engine.setSituation();
+      const formule = getFormule(situation);
+
+      expect(formule.formula).toEqual("Prix * Quantité * TVA");
+      expect(formule.explanations).toEqual([
+        "Prix (18 €)",
+        "Quantité (10 litres)",
+        "TVA (20 pourcents)",
+      ]);
+    });
+  });
+
   describe("règle contenant des annotations", () => {
     beforeEach(() => {
       engine = new Engine(parseData("formule_avec_annotations.yaml"));

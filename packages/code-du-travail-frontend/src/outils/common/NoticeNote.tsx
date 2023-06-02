@@ -41,5 +41,4 @@ export const NoticeNote = (props: NoticeNoteProps) => {
 
 const StyledSup = styled.sup`
   font-size: 0.8em;
-  margin-right: 0.2em;
 `;

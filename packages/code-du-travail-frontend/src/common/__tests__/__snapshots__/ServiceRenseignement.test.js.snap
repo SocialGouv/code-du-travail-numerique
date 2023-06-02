@@ -3,34 +3,34 @@
 exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 <div>
   <header
-    class="sc-eYqcxL hMutTz"
+    class="sc-ePDLzJ gBicpa"
   >
     <h1
-      class="sc-iqPaeV fejMbm"
+      class="sc-dPZUQH jEsYKE"
     >
       <span
-        class="sc-gKPRtg efbYAr"
+        class="sc-gsFSXq djREvw"
       />
       Les services du ministère du Travail
     </h1>
   </header>
   <h2
-    class="sc-iBYQkv iDmZxg"
+    class="sc-kAyceB dvmaTz"
     data-testid="heading"
   >
     Contact téléphonique
   </h2>
   <a
-    class="sc-kSGOQU izOznM"
+    class="sc-iXzfSG gmhyFv"
     href="tel:+0033806000126"
   >
     <strong
-      class="sc-dvEHMn kVzqkB"
+      class="sc-lnPyaJ hWyEOj"
     >
       0 806 000 126
     </strong>
     <em
-      class="sc-jsTgWu cUgWIk"
+      class="sc-eulNck kUSzmw"
     >
       Service gratuit 
       <span>
@@ -39,13 +39,13 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </em>
   </a>
   <h2
-    class="sc-iBYQkv iDmZxg"
+    class="sc-kAyceB dvmaTz"
     data-testid="heading"
   >
     Contact par email et prise de rendez-vous
   </h2>
   <form
-    class="sc-elAWhN ccrGUy"
+    class="sc-dExYaf jZHVsa"
   >
     <label
       for="search-service"
@@ -53,11 +53,11 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       Saisissez votre numéro de département :
     </label>
     <span
-      class="sc-bQmOxr iqEHsz sc-kiPvrU dKtVbe"
+      class="sc-dkmUuB ayeCS sc-iapWAC ehtufm"
     >
       <input
         autocomplete="off"
-        class="sc-fWQKxP iaRXHc"
+        class="sc-ejfMa-d dijxYa"
         id="search-service"
         maxlength="3"
         name="departement"
@@ -68,13 +68,13 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </span>
     <button
       aria-label="Recherchez le service"
-      class="sc-hhOBVt cizsts sc-cLNonn iNvkZn"
+      class="sc-kOPcWz kyVwqT sc-kqGoIF boDxRG"
       title="Lancer une recherche"
       type="submit"
     >
       <svg
         aria-hidden="true"
-        class="sc-iJbNxu jZHjAr"
+        class="sc-dxcDKg iTWxHM"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </button>
   </form>
   <div
-    class="sc-grxQYx jwxfll"
+    class="sc-gvZAcH kHwoPP"
   >
     <p>
       Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :

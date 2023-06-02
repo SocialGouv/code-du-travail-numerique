@@ -1,9 +1,14 @@
-import type { RuleNode } from "publicodes";
 import type Engine from "publicodes";
 
+import type {
+  NotificationAffichage,
+  NotificationRuleNode,
+} from "../../../publicodes";
+
 export type Notification = {
-  dottedName: RuleNode["dottedName"];
-  description: RuleNode["rawNode"]["description"];
+  dottedName: NotificationRuleNode["dottedName"];
+  description: JSX.Element | NotificationRuleNode["rawNode"]["description"];
+  show: NotificationAffichage;
 };
 
 export type OptionsGetElement = {
@@ -21,10 +26,9 @@ export function getNotifications(
         rule.rawNode.type === "notification" &&
         !!engine.evaluate(rule.dottedName).nodeValue
     )
+    .map((item) => item as NotificationRuleNode)
     .filter(
-      (rule: any) =>
-        !rule.rawNode.cdtn ||
-        (rule.rawNode.cdtn && rule.rawNode.cdtn.bloquante !== "oui")
+      (rule) => !rule.rawNode.cdtn || rule.rawNode.cdtn.bloquante !== "oui"
     )
     .filter((rules) => {
       if (option?.specificRule) {
@@ -38,9 +42,10 @@ export function getNotifications(
       }
       return true;
     })
-    .map(({ dottedName, rawNode: { description } }) => ({
+    .map(({ dottedName, rawNode: { description, cdtn } }) => ({
       description,
       dottedName,
+      show: cdtn?.affichage ?? "conventionnel",
     }));
 }
 
@@ -54,8 +59,9 @@ export function getNotificationsBloquantes(
         rule.rawNode.type === "notification" &&
         !!engine.evaluate(rule.dottedName).nodeValue
     )
+    .map((item) => item as NotificationRuleNode)
     .filter(
-      (rule: any) => rule.rawNode.cdtn && rule.rawNode.cdtn.bloquante === "oui"
+      (rule) => rule.rawNode.cdtn && rule.rawNode.cdtn.bloquante === "oui"
     )
     .filter((rules) => {
       if (option?.specificRule) {
@@ -69,8 +75,9 @@ export function getNotificationsBloquantes(
       }
       return true;
     })
-    .map(({ dottedName, rawNode: { description } }) => ({
+    .map(({ dottedName, rawNode: { description, cdtn } }) => ({
       description,
       dottedName,
+      show: cdtn?.affichage ?? "conventionnel",
     }));
 }

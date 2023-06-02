@@ -12,7 +12,6 @@ import { AgreementSupportInfo, OnSelectAgreementFn } from "../types";
 import SelectedEnterprise from "./SelectedEnterprise";
 import ShowAgreement from "./ShowAgreement";
 import ShowAgreements from "./ShowAgreements";
-import { renderResults } from "./EntrepriseSearchResult";
 import { SearchEnterpriseInput } from "./EntrepriseSearchInput/SearchEnterpriseInput";
 import styled from "styled-components";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
@@ -32,9 +31,8 @@ const EnterpriseSearch = ({
   onUserAction,
   alertAgreementNotSupported,
 }: Props): JSX.Element => {
-  const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
-    selectedEnterprise
-  );
+  const [enterprise, setEnterprise] =
+    useState<Enterprise | undefined>(selectedEnterprise);
   const [searchParams, setSearchParams] = useState<SearchParams>({
     address: "",
     query: "",
@@ -85,10 +83,7 @@ const EnterpriseSearch = ({
         searchParams={searchParams}
         onUserAction={onUserAction}
         onSearchParamsChange={setSearchParams}
-        renderResults={renderResults({
-          handleEnterpriseSelection,
-          onUserAction,
-        })}
+        handleEnterpriseSelection={handleEnterpriseSelection}
       />
       <ErrorField
         name={ENTERPRISE_NAME}

@@ -5,12 +5,12 @@ exports[`<Collapse /> renders 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-dmctIk dglopR sc-fLcnxK hrJZCj"
+      class="sc-feUZmu bOvDPL sc-hzhJZQ jezzmW"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-dkrFOg fpzKWB"
+        class="sc-eqUAAy eQjYoU"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -26,7 +26,7 @@ exports[`<Collapse /> renders 1`] = `
         />
       </svg>
       <span
-        class="sc-bBABsx euKZUH"
+        class="sc-fHjqPf iPYDRi"
         font-size="hsmall"
         font-weight="600"
       >
@@ -34,7 +34,7 @@ exports[`<Collapse /> renders 1`] = `
       </span>
     </button>
     <div
-      class="sc-kgTSHT jKKqTz"
+      class="sc-fUnMCh eUMXHJ"
     >
       <p>
         Hi

@@ -20,9 +20,10 @@ type Props = {
     slug: string;
     title: string;
   }>;
+  triggerOnClick?: () => void;
 };
 
-export const Themes = ({ themes = [] }: Props) => {
+export const Themes = ({ themes = [], triggerOnClick }: Props) => {
   const enrichedThemes = themes.map(({ icon, slug, title }) => {
     return (
       <GridCell key={slug}>
@@ -79,7 +80,7 @@ export const Themes = ({ themes = [] }: Props) => {
           {[titleCell, ghostCell, t1, t2, illustrationCell].concat(otherThemes)}
         </RootGrid>
         <Link href="/themes" passHref legacyBehavior>
-          <Button variant="primary" as="a">
+          <Button variant="primary" as="a" onClick={triggerOnClick}>
             Voir tous les thèmes <StyledArrowRight />
           </Button>
         </Link>

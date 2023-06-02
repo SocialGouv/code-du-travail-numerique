@@ -6,13 +6,14 @@ import styled from "styled-components";
 type Props = {
   name: string;
   link: string;
+  onClick?: () => void;
 };
 
 export const HomeButtonTrigger = (props: Props) => {
   return (
     <ButtonWrapper>
       <Link href={props.link} passHref legacyBehavior>
-        <Button variant="primary" as="a">
+        <Button variant="primary" as="a" onClick={props.onClick}>
           {props.name} <StyledArrowRight />
         </Button>
       </Link>

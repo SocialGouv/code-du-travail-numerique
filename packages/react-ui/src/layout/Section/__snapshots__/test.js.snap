@@ -3,7 +3,7 @@
 exports[`<Section /> it renders a dark Section 1`] = `
 <div>
   <div
-    class="sc-gswNZR jLeRGc"
+    class="sc-gEvEer hwxRvZ"
   >
     this is a Button 
     dark
@@ -15,7 +15,7 @@ exports[`<Section /> it renders a dark Section 1`] = `
 exports[`<Section /> it renders a default Section 1`] = `
 <div>
   <div
-    class="sc-gswNZR uUAJC"
+    class="sc-gEvEer hpVpdb"
   >
     this is a Button 
     default
@@ -27,7 +27,7 @@ exports[`<Section /> it renders a default Section 1`] = `
 exports[`<Section /> it renders a light Section 1`] = `
 <div>
   <div
-    class="sc-gswNZR dLynAL"
+    class="sc-gEvEer hBVizu"
   >
     this is a Button 
     light
@@ -39,7 +39,7 @@ exports[`<Section /> it renders a light Section 1`] = `
 exports[`<Section /> it renders a white Section 1`] = `
 <div>
   <div
-    class="sc-gswNZR clahId"
+    class="sc-gEvEer eEOWTk"
   >
     this is a Button 
     white
@@ -51,13 +51,13 @@ exports[`<Section /> it renders a white Section 1`] = `
 exports[`<Section /> renders large decorated section 1`] = `
 <div>
   <div
-    class="sc-gswNZR fGHcEH"
+    class="sc-gEvEer fhUQTO"
   >
     <div
-      class="sc-dkrFOg VmEAo"
+      class="sc-eqUAAy esbjkt"
     />
     <div
-      class="sc-eDvSVe dfRDwP"
+      class="sc-dcJsrY gQPQLH"
     >
       A decorated dark section
     </div>
@@ -68,13 +68,13 @@ exports[`<Section /> renders large decorated section 1`] = `
 exports[`<Section /> renders with correct decoration 1`] = `
 <div>
   <div
-    class="sc-gswNZR bPmTxc"
+    class="sc-gEvEer cHLyxF"
   >
     <div
-      class="sc-dkrFOg VmEAo"
+      class="sc-eqUAAy esbjkt"
     />
     <div
-      class="sc-eDvSVe dfRDwP"
+      class="sc-dcJsrY gQPQLH"
     >
       A decorated dark section
     </div>

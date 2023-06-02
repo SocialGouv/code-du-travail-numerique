@@ -110,7 +110,7 @@ const StepContratTravail = (): JSX.Element => {
             },
           ]}
           name="licenciementInaptitude"
-          label="Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue&nbsp;?"
+          label="Le licenciement fait-il suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue)&nbsp;?"
           selectedOption={licenciementInaptitude}
           onChangeSelectedOption={onChangeLicenciementInaptitude}
           error={errorLicenciementInaptitude}

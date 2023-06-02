@@ -45,29 +45,31 @@ export class Seniority44
     const dEntree = parseDate(from);
     const dSortie = addDays(parseDate(to), 1);
 
-    const totalAbsence =
-      absences.reduce((total, item) => {
-        const m = this.getMotifs().find(
-          (motif) => motif.key === item.motif.key
-        );
-        if (item.durationInMonth === undefined || !m) {
-          return total;
-        }
-        if (
-          item.motif.key === MotifKeys.maladieNonPro &&
-          item.durationInMonth > 36
-        ) {
-          return total + (item.durationInMonth - 36);
-        }
-        return total + item.durationInMonth * m.value;
-      }, 0) / 12;
+    const totalAbsence = absences.reduce((total, item) => {
+      const m = this.getMotifs().find((motif) => motif.key === item.motif.key);
+      if (item.durationInMonth === undefined || !m) {
+        return total;
+      }
+      if (
+        item.motif.key === MotifKeys.maladieNonPro &&
+        item.durationInMonth > 36
+      ) {
+        return total + (item.durationInMonth - 36);
+      }
+      return total + item.durationInMonth * m.value;
+    }, 0);
 
-    return { value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence };
+    return {
+      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
+    };
   }
 }
 
 const MOTIFS_44: Motif[] = LEGAL_MOTIFS.map((item) => {
-  if (item.key === MotifKeys.maladieNonPro) {
+  if (
+    item.key === MotifKeys.maladieNonPro ||
+    item.key === MotifKeys.accidentTrajet
+  ) {
     return {
       ...item,
       value: 0,
