@@ -111,6 +111,7 @@ export const SearchEnterpriseInput = ({
               narrow
               variant="secondary"
               data-testid="agreement-company-search-button"
+              disabled={isDisabled}
             >
               <MobileOnly>Rechercher</MobileOnly>
               <StyledSearchIcon />
@@ -194,6 +195,11 @@ const SubmitIcon = styled(Button)`
     box-sizing: inherit;
   }
   color: ${({ theme }) => theme.white};
+  background-color: ${({ theme, disabled }) =>
+    disabled ? "gray" : theme.secondary};
+  border-color: ${({ theme, disabled }) =>
+    disabled ? "gray" : theme.secondary};
+  transition: background-color 1.5s ease, border-color 1.5s ease;
 `;
 
 const StyledSearchIcon = styled(SearchIcon)`

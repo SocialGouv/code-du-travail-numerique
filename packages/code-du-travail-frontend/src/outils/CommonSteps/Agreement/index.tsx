@@ -132,11 +132,9 @@ function AgreementStep({
                 <InputCheckbox
                   label={
                     <span>
-                      <strong>
-                        Je suis particulier employeur ou salarié du particulier
-                        employeur
-                      </strong>{" "}
-                      (assistant maternel, employé maison)
+                      <strong>Je n&apos;ai pas d&apos;entreprise</strong> (ma
+                      recherche concerne les assistants maternels, employés de
+                      maison, etc.)
                     </span>
                   }
                   name="salarieParticulierEmployeur"
@@ -146,15 +144,15 @@ function AgreementStep({
                       selectedAgreement?.num === 3239
                         ? null
                         : {
-                          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
-                          id: "KALICONT000044594539",
-                          num: 3239,
-                          shortTitle:
-                            "Particuliers employeurs et emploi à domicile",
-                          slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
-                          title:
-                            "Particuliers employeurs et emploi à domicile",
-                        }
+                            url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+                            id: "KALICONT000044594539",
+                            num: 3239,
+                            shortTitle:
+                              "Particuliers employeurs et emploi à domicile",
+                            slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
+                            title:
+                              "Particuliers employeurs et emploi à domicile",
+                          }
                     );
                   }}
                   checked={selectedAgreement?.num === 3239}
@@ -171,11 +169,12 @@ function AgreementStep({
           {isInputVisible && (
             <AlertWithMargin>
               <p>
-                Sont des salariés du particulier employeur : les personnes
-                travaillant au domicile privé d&apos;un particulier (garde
-                d’enfants ou d’une personne dépendante, ménage, travaux de
-                jardinage, soutien scolaire...) et les assistants maternels (qui
-                accueillent des enfants à leur domicile).
+                Cochez cette case si votre recherche concerne des salariés du
+                particulier employeur : les personnes travaillant au domicile
+                privé d&apos;un particulier (garde d’enfants ou d’une personne
+                dépendante, ménage, travaux de jardinage, soutien scolaire...)
+                ou les assistants maternels (qui accueillent des enfants à leur
+                domicile).
               </p>
             </AlertWithMargin>
           )}
@@ -204,7 +203,7 @@ const { spacings } = theme;
 const RowWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `;
 
