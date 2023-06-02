@@ -71,7 +71,7 @@ const IntegrationContainer = ({
       ) as any;
       if (iframe) {
         const a = document.createElement("a");
-        a.href = `${host}${parsedUrl}`;
+        a.href = escape(`${host}${parsedUrl}`);
         iframe.after(a);
         iframe.remove();
       }
