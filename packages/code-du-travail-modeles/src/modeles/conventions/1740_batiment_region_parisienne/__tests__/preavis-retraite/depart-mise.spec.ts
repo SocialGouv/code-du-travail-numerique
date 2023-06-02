@@ -1,8 +1,8 @@
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
-} from "../../../../__test__/common/legal-references";
-import { PreavisRetraitePublicodes } from "../../../../publicodes";
+} from "../../../../../__test__/common/legal-references";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
 const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
