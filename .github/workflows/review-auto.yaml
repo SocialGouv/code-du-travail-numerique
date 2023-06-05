@@ -1,0 +1,16 @@
+name: 👓 Review Auto
+on:
+  push:
+    branches:
+      - "feat/**"
+      - "fix/**"
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.ref }}
+
+jobs:
+  socialgouv:
+    name: "🇫🇷 SocialGouv"
+    uses: socialgouv/workflows/.github/workflows/use-ks-gh-review-auto.yaml@v1
+    secrets: inherit

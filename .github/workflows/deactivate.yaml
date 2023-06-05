@@ -1,0 +1,23 @@
+name: ♻️ Deactivate
+on:
+  pull_request:
+    types: [closed]
+  delete:
+    branches:
+      - "**"
+      - "!v*"
+      - "!master"
+      - "!main"
+      - "!dev"
+      - "!develop"
+      - "!**/persist"
+      - "!persist/**"
+      - "!**/persist/**"
+      - "!persist-**"
+      - "!**-persist"
+      - "!**-persist-**"
+
+jobs:
+  socialgouv:
+    uses: socialgouv/workflows/.github/workflows/use-ks-gh-deactivate.yaml@v1
+    secrets: inherit
