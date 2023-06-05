@@ -64,10 +64,12 @@ contrat salarié . convention collective . organismes de formation . indemnité 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 6 * Sref
 
-contrat salarié . convention collective . organismes de formation . indemnité de licenciement . résultat conventionnel:
-  applicable si:
-    toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
-      - contrat salarié . indemnité de licenciement . date de notification >= 04/06/2023
+
+contrat salarié . convention collective . organismes de formation . indemnité de licenciement . après avenant 2023:
+  applicable si: contrat salarié . indemnité de licenciement . date de notification >= 04/06/2023
+  valeur: oui
+
+contrat salarié . convention collective . organismes de formation . indemnité de licenciement . après avenant 2023 . résultat conventionnel:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
   valeur: oui
