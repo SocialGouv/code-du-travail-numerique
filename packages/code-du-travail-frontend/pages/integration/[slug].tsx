@@ -52,9 +52,14 @@ export const getServerSideProps = async ({ query, req }) => {
     const responseContainer = await fetch(`${SITE_URL}${select?.url}`);
     selectOptions = await responseContainer.json();
     selectOptions =
-      selectOptions?.map((item) => {
-        return { label: item[select.labelPath], value: item[select.valuePath] };
-      }) ?? null;
+      selectOptions
+        ?.map((item) => {
+          return {
+            label: item[select.labelPath],
+            value: item[select.valuePath],
+          };
+        })
+        ?.sort((a, b) => a.label.localeCompare(b.label)) ?? null;
   }
 
   const hostname: string = req.headers.host;
