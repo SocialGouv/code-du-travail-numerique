@@ -29,7 +29,7 @@ const IntroductionStep = ({ onUserAction }: Props): JSX.Element => {
         <Tile
           action="Je la saisis"
           onClick={() => onUserAction(UserAction.SelectAgreementRoute)}
-          href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreement}`}
+          href={`/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreement}`}
         >
           <Paragraph noMargin fontWeight="700">
             Je connais
@@ -39,7 +39,7 @@ const IntroductionStep = ({ onUserAction }: Props): JSX.Element => {
 
         <Tile
           onClick={() => onUserAction(UserAction.SelectEnterpriseRoute)}
-          href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.enterprise}`}
+          href={`/${SOURCES.TOOLS}/convention-collective/${ScreenType.enterprise}`}
           action="Je la recherche"
         >
           <Paragraph noMargin fontWeight="700">

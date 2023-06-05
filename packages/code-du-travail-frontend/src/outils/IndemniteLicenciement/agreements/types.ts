@@ -1,4 +1,4 @@
-import { StoreApi } from "zustand";
+import { StoreApi, create } from "zustand";
 import { MainStore, StoreOptions } from "../store";
 import {
   Agreement1516StoreError,
@@ -66,6 +66,12 @@ import {
   Agreement1702StoreSlice,
   createAgreement1702StoreSalaires,
 } from "./1702-ouvriers-travaux-public";
+import {
+  Agreement1740StoreError,
+  Agreement1740StoreInput,
+  Agreement1740StoreSlice,
+  createAgreement1740StoreSalaires,
+} from "./1740-batiment-region-parisienne";
 
 export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement1527StoreInput &
@@ -77,7 +83,8 @@ export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement2609StoreInput &
   Agreement1702StoreInput &
   Agreement2614StoreInput &
-  Agreement1672StoreInput;
+  Agreement1672StoreInput &
+  Agreement1740StoreInput;
 
 export type AgreementStoreError = Agreement1516StoreError &
   Agreement1527StoreError &
@@ -89,7 +96,8 @@ export type AgreementStoreError = Agreement1516StoreError &
   Agreement2609StoreError &
   Agreement1702StoreError &
   Agreement2614StoreError &
-  Agreement1672StoreError;
+  Agreement1672StoreError &
+  Agreement1740StoreError;
 
 export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement1527StoreSlice &
@@ -101,7 +109,8 @@ export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement2148StoreSlice &
   Agreement2609StoreSlice &
   Agreement1702StoreSlice &
-  Agreement1672StoreSlice;
+  Agreement1672StoreSlice &
+  Agreement1740StoreSlice;
 
 export const createRootAgreementsStore = (
   set: StoreApi<MainStore>["setState"],
@@ -119,4 +128,5 @@ export const createRootAgreementsStore = (
   ...createAgreement1702StoreSalaires(set, get, options),
   ...createAgreement2614StoreSalaires(set, get, options),
   ...createAgreement1672StoreSalaires(set, get, options),
+  ...createAgreement1740StoreSalaires(set, get, options),
 });

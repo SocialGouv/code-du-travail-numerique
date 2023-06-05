@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../src/GlobalStyles";
 import { Wrapper } from "../src/layout/Wrapper/index.js";
 import { blackAndWhiteColors, colors } from "../src/theme.js";
+import type { Preview } from "@storybook/react";
 
 export const globalTypes = {
   colors: {
@@ -30,4 +31,17 @@ const withThemeProvider = (Story) => {
   );
 };
 
-export const decorators = [withThemeProvider];
+const preview: Preview = {
+  decorators: [withThemeProvider],
+  parameters: {
+    actions: { argTypesRegex: "^on[A-Z].*" },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
+    },
+  },
+};
+
+export default preview;
