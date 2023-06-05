@@ -36,7 +36,7 @@ describe("Convention collective 1702", () => {
             "contrat salarié . mise à la retraite": "non",
             "contrat salarié . travailleur handicapé": "non",
           },
-          "contrat salarié . préavis de retraite en jours"
+          "contrat salarié . préavis de retraite collective en jours"
         );
         const references = engine.getReferences();
 
@@ -53,19 +53,19 @@ describe("Convention collective 1702", () => {
 
   describe("Pour une mise à la retraite", () => {
     test.each`
-      seniority | category         | expectedResult
-      ${5}      | ${"Employés"}    | ${1}
-      ${6}      | ${"Employés"}    | ${1}
-      ${24}     | ${"Employés"}    | ${2}
-      ${25}     | ${"Employés"}    | ${2}
-      ${5}      | ${"Techniciens"} | ${2}
-      ${6}      | ${"Techniciens"} | ${2}
-      ${24}     | ${"Techniciens"} | ${2}
-      ${25}     | ${"Techniciens"} | ${2}
-      ${5}      | ${"Cadres"}      | ${3}
-      ${6}      | ${"Cadres"}      | ${3}
-      ${24}     | ${"Cadres"}      | ${3}
-      ${25}     | ${"Cadres"}      | ${3}
+      seniority | category                               | expectedResult
+      ${5}      | ${"Employés"}                          | ${1}
+      ${6}      | ${"Employés"}                          | ${1}
+      ${24}     | ${"Employés"}                          | ${2}
+      ${25}     | ${"Employés"}                          | ${2}
+      ${5}      | ${"Agents de maîtrise ou techniciens"} | ${2}
+      ${6}      | ${"Agents de maîtrise ou techniciens"} | ${2}
+      ${24}     | ${"Agents de maîtrise ou techniciens"} | ${2}
+      ${25}     | ${"Agents de maîtrise ou techniciens"} | ${2}
+      ${5}      | ${"Cadres"}                            | ${3}
+      ${6}      | ${"Cadres"}                            | ${3}
+      ${24}     | ${"Cadres"}                            | ${3}
+      ${25}     | ${"Cadres"}                            | ${3}
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ seniority, category, expectedResult }) => {

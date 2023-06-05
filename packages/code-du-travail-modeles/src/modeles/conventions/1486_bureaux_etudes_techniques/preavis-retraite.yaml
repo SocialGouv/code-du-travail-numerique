@@ -38,14 +38,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . chargé d'enquête . départ à la retraite:
   applicable si: départ à la retraite
   remplace: préavis de retraite collective
-  grille:
-    assiette: ancienneté
-    tranches:
-      - montant: 0 mois
-        plafond: 6 mois
-      - montant: 1 mois
-        plafond: 24 mois
-      - montant: 2 mois
+  valeur: contrat salarié . préavis de retraite tranches
   références:
     Article 4.6: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513841#KALIARTI000047513841
     Annexe « Enquêteurs », article 26: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851324/?idConteneur=KALICONT000005635173
