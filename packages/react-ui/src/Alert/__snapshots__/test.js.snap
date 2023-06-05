@@ -3,7 +3,7 @@
 exports[`<Alert /> it should render a primary alert 1`] = `
 <div>
   <div
-    class="sc-aXZVg NpQdk"
+    class="sc-bcXHqe jLKkvd"
   >
     this is a 
     primary
@@ -15,7 +15,7 @@ exports[`<Alert /> it should render a primary alert 1`] = `
 exports[`<Alert /> it should render a secondary alert 1`] = `
 <div>
   <div
-    class="sc-aXZVg ipCoiZ"
+    class="sc-bcXHqe bSPmec"
   >
     this is a 
     secondary
@@ -27,7 +27,7 @@ exports[`<Alert /> it should render a secondary alert 1`] = `
 exports[`<Alert /> should render 1`] = `
 <div>
   <div
-    class="sc-aXZVg ipCoiZ"
+    class="sc-bcXHqe bSPmec"
   >
     this is an alert 
   </div>

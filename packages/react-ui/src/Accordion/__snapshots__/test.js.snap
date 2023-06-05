@@ -8,7 +8,7 @@ exports[`<Accordion /> renders 1`] = `
   >
     <div>
       <div
-        class="sc-fqkvVR eJjnVN"
+        class="sc-hLBbgP fTgiIa"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -19,7 +19,7 @@ exports[`<Accordion /> renders 1`] = `
             aria-controls="accordion__panel-raa-0"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-iGgWBj ctXAVT"
+            class="sc-jSUZER FOjkG"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-0"
             role="button"
@@ -27,7 +27,7 @@ exports[`<Accordion /> renders 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-eqUAAy eQjYoU"
+              class="sc-dkrFOg fpzKWB"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -43,10 +43,10 @@ exports[`<Accordion /> renders 1`] = `
               />
             </svg>
             <div
-              class="sc-gsFSXq UOsQV"
+              class="sc-gKPRtg iLBxMm"
             >
               <h3
-                class="sc-gEvEer gGoEse"
+                class="sc-gswNZR dDyrDL"
                 data-testid="undefined-0"
                 style="margin: 0px;"
               >
@@ -57,13 +57,13 @@ exports[`<Accordion /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dcJsrY hEBJZA"
+          class="sc-eDvSVe gZVJSY"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-0"
         >
           <div
-            class="sc-dAbbOL OXowK"
+            class="sc-hHTYSt jLyUcE"
           >
             this is the body
           </div>
@@ -82,7 +82,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
   >
     <div>
       <div
-        class="sc-fqkvVR eJjnVN"
+        class="sc-hLBbgP fTgiIa"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -93,7 +93,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
             aria-controls="accordion__panel-raa-3"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-iGgWBj ctXAVT"
+            class="sc-jSUZER FOjkG"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-3"
             role="button"
@@ -101,7 +101,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-eqUAAy eQjYoU"
+              class="sc-dkrFOg fpzKWB"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -117,10 +117,10 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
               />
             </svg>
             <div
-              class="sc-gsFSXq UOsQV"
+              class="sc-gKPRtg iLBxMm"
             >
               <h3
-                class="sc-gEvEer gGoEse"
+                class="sc-gswNZR dDyrDL"
                 data-testid="undefined-0"
                 style="margin: 0px;"
               >
@@ -131,13 +131,13 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dcJsrY hEBJZA"
+          class="sc-eDvSVe gZVJSY"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-3"
         >
           <div
-            class="sc-dAbbOL OXowK"
+            class="sc-hHTYSt jLyUcE"
           >
             this is the body
           </div>
@@ -156,7 +156,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
   >
     <div>
       <div
-        class="sc-fqkvVR eJjnVN"
+        class="sc-hLBbgP fTgiIa"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -167,7 +167,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
             aria-controls="accordion__panel-raa-2"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-iGgWBj ctXAVT"
+            class="sc-jSUZER FOjkG"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-2"
             role="button"
@@ -175,7 +175,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-eqUAAy eQjYoU"
+              class="sc-dkrFOg fpzKWB"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -191,10 +191,10 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
               />
             </svg>
             <div
-              class="sc-gsFSXq UOsQV"
+              class="sc-gKPRtg iLBxMm"
             >
               <h1
-                class="sc-gEvEer gGoEse"
+                class="sc-gswNZR dDyrDL"
                 data-testid="undefined-0"
                 style="margin: 0px;"
               >
@@ -205,13 +205,13 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dcJsrY hEBJZA"
+          class="sc-eDvSVe gZVJSY"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-2"
         >
           <div
-            class="sc-dAbbOL OXowK"
+            class="sc-hHTYSt jLyUcE"
           >
             this is the body
           </div>
@@ -230,7 +230,7 @@ exports[`<Accordion /> renders as h2 1`] = `
   >
     <div>
       <div
-        class="sc-fqkvVR eJjnVN"
+        class="sc-hLBbgP fTgiIa"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -241,7 +241,7 @@ exports[`<Accordion /> renders as h2 1`] = `
             aria-controls="accordion__panel-raa-1"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-iGgWBj ctXAVT"
+            class="sc-jSUZER FOjkG"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-1"
             role="button"
@@ -249,7 +249,7 @@ exports[`<Accordion /> renders as h2 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-eqUAAy eQjYoU"
+              class="sc-dkrFOg fpzKWB"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -265,10 +265,10 @@ exports[`<Accordion /> renders as h2 1`] = `
               />
             </svg>
             <div
-              class="sc-gsFSXq UOsQV"
+              class="sc-gKPRtg iLBxMm"
             >
               <h2
-                class="sc-gEvEer gGoEse"
+                class="sc-gswNZR dDyrDL"
                 data-testid="undefined-0"
                 style="margin: 0px;"
               >
@@ -279,13 +279,13 @@ exports[`<Accordion /> renders as h2 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dcJsrY hEBJZA"
+          class="sc-eDvSVe gZVJSY"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-1"
         >
           <div
-            class="sc-dAbbOL OXowK"
+            class="sc-hHTYSt jLyUcE"
           >
             this is the body
           </div>

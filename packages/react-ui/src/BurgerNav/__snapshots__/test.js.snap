@@ -4,11 +4,11 @@ exports[`BurgerStyles renders 1`] = `
 <div>
   <button
     aria-label="menu principal"
-    class="sc-aXZVg fayrVA sc-fqkvVR idbyNV"
+    class="sc-bcXHqe cfGWSN sc-hLBbgP jnvKDS"
   >
     <svg
       aria-hidden="true"
-      class="sc-dcJsrY iVptCR"
+      class="sc-eDvSVe fqkEXR"
       fill="none"
       viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"

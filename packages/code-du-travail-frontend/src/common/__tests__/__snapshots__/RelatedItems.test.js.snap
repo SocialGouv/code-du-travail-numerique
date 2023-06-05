@@ -3,11 +3,11 @@
 exports[`<RelatedItems /> should render 1`] = `
 <div>
   <div
-    class="sc-aXZVg gZgZQL"
+    class="sc-bcXHqe evAMOC"
   >
     <div
       aria-level="2"
-      class="sc-kAyceB dvmaTz"
+      class="sc-iBYQkv iDmZxg"
       data-testid="heading"
       role="heading"
     >
@@ -15,17 +15,17 @@ exports[`<RelatedItems /> should render 1`] = `
        :
     </div>
     <ul
-      class="sc-cfxfcM kMmTaI"
+      class="sc-lbVpMG fqAvkB"
     >
       <li
-        class="sc-iXzfSG jAUdMA"
+        class="sc-kSGOQU dLBXZT"
       >
         <a
-          class="sc-bmzYkS hFAanY"
+          class="sc-ezOQGI cmgTaR"
         >
           <svg
             aria-hidden="true"
-            class="sc-dtBdUo hpIOmX"
+            class="sc-kMjNwy dtEtzi"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -36,21 +36,21 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <p
-            class="sc-iHGNWf hQSWKy"
+            class="sc-bYMpWt gakFNM"
           >
             externalTool
           </p>
         </a>
       </li>
       <li
-        class="sc-iXzfSG jAUdMA"
+        class="sc-kSGOQU dLBXZT"
       >
         <a
-          class="sc-bmzYkS hFAanY"
+          class="sc-ezOQGI cmgTaR"
         >
           <svg
             aria-hidden="true"
-            class="sc-dtBdUo hpIOmX"
+            class="sc-kMjNwy dtEtzi"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <p
-            class="sc-iHGNWf hQSWKy"
+            class="sc-bYMpWt gakFNM"
           >
             modele de courrier
           </p>
@@ -70,7 +70,7 @@ exports[`<RelatedItems /> should render 1`] = `
     </ul>
     <div
       aria-level="2"
-      class="sc-kAyceB dvmaTz"
+      class="sc-iBYQkv iDmZxg"
       data-testid="heading"
       role="heading"
     >
@@ -78,17 +78,17 @@ exports[`<RelatedItems /> should render 1`] = `
        :
     </div>
     <ul
-      class="sc-cfxfcM kMmTaI"
+      class="sc-lbVpMG fqAvkB"
     >
       <li
-        class="sc-iXzfSG jAUdMA"
+        class="sc-kSGOQU dLBXZT"
       >
         <a
-          class="sc-bmzYkS hFAanY"
+          class="sc-ezOQGI cmgTaR"
         >
           <svg
             aria-hidden="true"
-            class="sc-dtBdUo hpIOmX"
+            class="sc-kMjNwy dtEtzi"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -99,21 +99,21 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <p
-            class="sc-iHGNWf hQSWKy"
+            class="sc-bYMpWt gakFNM"
           >
             fiche sp
           </p>
         </a>
       </li>
       <li
-        class="sc-iXzfSG jAUdMA"
+        class="sc-kSGOQU dLBXZT"
       >
         <a
-          class="sc-bmzYkS hFAanY"
+          class="sc-ezOQGI cmgTaR"
         >
           <svg
             aria-hidden="true"
-            class="sc-dtBdUo hpIOmX"
+            class="sc-kMjNwy dtEtzi"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <p
-            class="sc-iHGNWf hQSWKy"
+            class="sc-bYMpWt gakFNM"
           >
             contrib
           </p>

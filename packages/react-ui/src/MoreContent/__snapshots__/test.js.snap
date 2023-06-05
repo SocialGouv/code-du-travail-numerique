@@ -3,7 +3,7 @@
 exports[`<MoreContent /> renders with an More icon 1`] = `
 <div>
   <div
-    class="sc-aXZVg gOYLgO"
+    class="sc-bcXHqe gcjDRL"
     data-accordion-component="Accordion"
   >
     <div
@@ -18,7 +18,7 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
           aria-controls="accordion__panel-raa-0"
           aria-disabled="false"
           aria-expanded="false"
-          class="sc-gEvEer cwFSFD"
+          class="sc-gswNZR kjNnjy"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-raa-0"
           role="button"
@@ -26,7 +26,7 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="sc-eqUAAy hlxmqX"
+            class="sc-dkrFOg fFKuqS"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,20 +39,20 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
             />
           </svg>
           <div
-            class="sc-fqkvVR hNXXAR"
+            class="sc-hLBbgP dYDCZS"
           >
             Would you like to know more ?
           </div>
         </div>
       </div>
       <div
-        class="sc-iGgWBj cOkZk"
+        class="sc-jSUZER cpdKRR"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-raa-0"
       >
         <div
-          class="sc-dcJsrY eXhZJz"
+          class="sc-eDvSVe fEqqYP"
         >
           Here’s some more
         </div>

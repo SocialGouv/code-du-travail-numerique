@@ -3,29 +3,29 @@
 exports[`<DureePreavisLicenciement /> should render 1`] = `
 <div>
   <div
-    class="sc-iGgWBj biWgIW"
+    class="sc-jSUZER heYtoX"
   >
     <form
-      class="sc-SrznA PDWsE"
+      class="sc-uokDu dUFZuK"
     >
       <div
-        class="sc-ERObt ktumJQ"
+        class="sc-cxdZMj gMkzO"
       >
         <div
-          class="sc-fulCBj QUZrm"
+          class="sc-gJFNMl cEdDoU"
         >
           <h1
-            class="sc-dNsVcS bvjznk"
+            class="sc-dkKxlM gYqVaA"
           >
             Calculer le préavis de licenciement
           </h1>
         </div>
         <div
-          class="sc-bdOgaJ inYENn"
+          class="sc-iWOQzb bvXiLU"
         >
           <svg
             aria-hidden="true"
-            class="sc-fThUAz gbAMVF"
+            class="sc-bTUVah cvdtHX"
             fill="none"
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg"
@@ -64,84 +64,84 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
             </defs>
           </svg>
           <span
-            class="sc-empnci kQpLoh"
+            class="sc-jKvnYE dOipDS"
           >
             2 à 5 min
           </span>
         </div>
       </div>
       <div
-        class="sc-iGgWBj sc-iapWAC cWzIZL kajMU"
+        class="sc-jSUZER sc-kiPvrU cbQucy iqXkBY"
       >
         <span
           aria-level="2"
-          class="sc-kqGoIF hohPkr"
+          class="sc-cLNonn htiQKC"
           role="heading"
         >
           Étape
           <span
-            class="sc-dxcDKg jBrRpy"
+            class="sc-iJbNxu cVIAbJ"
           >
             s
           </span>
           <span
-            class="sc-gvZAcH gvpUEM"
+            class="sc-grxQYx gyWELW"
           >
              
             1/5
           </span>
         </span>
         <ol
-          class="sc-cfxfcM kMmTaI"
+          class="sc-lbVpMG fqAvkB"
         >
           <li
             aria-live="polite"
-            class="sc-kRRyDe eIaigD"
+            class="sc-ZqGJI hnCHlZ"
             tabindex="-1"
             title="onglet actif"
           >
             <span
-              class="sc-knuQbY iMNMba"
+              class="sc-knEsKG gTNurZ"
             >
               1
             </span>
             Introduction
           </li>
           <li
-            class="sc-kRRyDe dEMfAZ"
+            class="sc-ZqGJI kqGqlL"
           >
             <span
-              class="sc-knuQbY hpfSPp"
+              class="sc-knEsKG fbzVnC"
             >
               2
             </span>
             Situation du salarié
           </li>
           <li
-            class="sc-kRRyDe dEMfAZ"
+            class="sc-ZqGJI kqGqlL"
           >
             <span
-              class="sc-knuQbY hpfSPp"
+              class="sc-knEsKG fbzVnC"
             >
               3
             </span>
             Convention collective
           </li>
           <li
-            class="sc-kRRyDe dEMfAZ"
+            class="sc-ZqGJI kqGqlL"
           >
             <span
-              class="sc-knuQbY hpfSPp"
+              class="sc-knEsKG fbzVnC"
             >
               4
             </span>
             Informations complémentaires
           </li>
           <li
-            class="sc-kRRyDe dEMfAZ"
+            class="sc-ZqGJI kqGqlL"
           >
             <span
-              class="sc-knuQbY hpfSPp"
+              class="sc-knEsKG fbzVnC"
             >
               5
             </span>
@@ -166,15 +166,15 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
         .
       </p>
       <div
-        class="sc-lnPyaJ cjInwL"
+        class="sc-dvEHMn eogJxR"
       >
         <button
-          class="sc-kOPcWz cefBoA sc-iXzfSG sc-eulNck jrhUSB kfCQDo"
+          class="sc-hhOBVt fRaRnn sc-kSGOQU sc-jsTgWu gbmcaq bUBxhA"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="sc-dExYaf cVwuim"
+            class="sc-elAWhN jDOhcS"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"

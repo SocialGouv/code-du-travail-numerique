@@ -4,18 +4,18 @@ exports[`<TableOfContent /> renders with nav items 1`] = `
 <div>
   <div>
     <a
-      class="sc-gEvEer jquCOh"
+      class="sc-gswNZR biGLyc"
       href="#it-works-1"
     >
       This should appear inside the table of content
     </a>
     <span
-      class="sc-aXZVg eVBLHU"
+      class="sc-bcXHqe eiklNx"
     >
       delimiter
     </span>
     <a
-      class="sc-gEvEer jquCOh"
+      class="sc-gswNZR biGLyc"
       href="#it-works-2"
     >
       this should appear

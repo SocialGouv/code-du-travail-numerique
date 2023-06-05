@@ -3,32 +3,32 @@
 exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 <div>
   <legend
-    class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+    class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iORupB"
+      class="sc-fcCDlF gZwBNq"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
       <span
-        class="sc-ibQAlb iapAQd"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-bDpDS cvgaoL"
+    class="sc-hjjlnc goUtYR"
   >
     <input
-      class="sc-bVHCgj drRyYL"
+      class="sc-gUJyNl cXHmkI"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="sc-kzqdkY dcQpmU"
+      class="sc-caPbAK gsBMoC"
       for="typeRemuneration-amount"
     >
       <span>
@@ -41,18 +41,18 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <div
-    class="sc-bDpDS cvgaoL"
+    class="sc-hjjlnc goUtYR"
   >
     <input
       checked=""
-      class="sc-bVHCgj drRyYL"
+      class="sc-gUJyNl cXHmkI"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="sc-kzqdkY dcQpmU"
+      class="sc-caPbAK gsBMoC"
       for="typeRemuneration-pay"
     >
       <span>
@@ -65,44 +65,44 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <legend
-    class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+    class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iORupB"
+      class="sc-fcCDlF gZwBNq"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-ibQAlb iapAQd"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-bdOgaJ bFBaXk"
+    class="sc-iWOQzb lmcSIn"
   >
     <label
-      class="sc-fulCBj bvZNyE"
+      class="sc-gJFNMl kZDsq"
       for="2"
     >
       Montant :
     </label>
     <div
-      class="sc-eulNck ctRWBf"
+      class="sc-jsTgWu dkEWbX"
     >
       <span
-        class="sc-dkmUuB ayeCS"
+        class="sc-bQmOxr iqEHsz"
       >
         <input
-          class="sc-ejfMa-d cojYrW"
+          class="sc-fWQKxP iOpVQL"
           id="2"
           name="salaires[0].salaire"
           type="number"
           value="2000"
         />
         <div
-          class="sc-iEXKAA jqdzTX"
+          class="sc-EJAja kKkiFD"
         >
           <svg
             aria-hidden="true"
@@ -119,13 +119,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      class="sc-kOPcWz kyVwqT sc-kMribo gTpCQl"
+      class="sc-hhOBVt cizsts sc-fxTzYC bSIzNd"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-ERObt cDiOkW"
+        class="sc-cxdZMj bLMMYA"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -140,29 +140,29 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <div
-    class="sc-bdOgaJ bFBaXk"
+    class="sc-iWOQzb lmcSIn"
   >
     <label
-      class="sc-fulCBj bvZNyE"
+      class="sc-gJFNMl kZDsq"
       for="4"
     >
       Montant :
     </label>
     <div
-      class="sc-eulNck ctRWBf"
+      class="sc-jsTgWu dkEWbX"
     >
       <span
-        class="sc-dkmUuB ayeCS"
+        class="sc-bQmOxr iqEHsz"
       >
         <input
-          class="sc-ejfMa-d cojYrW"
+          class="sc-fWQKxP iOpVQL"
           id="4"
           name="salaires[1].salaire"
           type="number"
           value="1500"
         />
         <div
-          class="sc-iEXKAA jqdzTX"
+          class="sc-EJAja kKkiFD"
         >
           <svg
             aria-hidden="true"
@@ -179,13 +179,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      class="sc-kOPcWz kyVwqT sc-kMribo gTpCQl"
+      class="sc-hhOBVt cizsts sc-fxTzYC bSIzNd"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-ERObt cDiOkW"
+        class="sc-cxdZMj bLMMYA"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -200,12 +200,12 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <button
-    class="sc-kOPcWz kyVwqT sc-knuQbY dasJFM"
+    class="sc-hhOBVt cizsts sc-knEsKG jBERtL"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="sc-dNsVcS guBeLo"
+      class="sc-dkKxlM bkWqkE"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +220,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     Ajouter un salaire
   </button>
   <p
-    class="sc-kRRyDe hWooKs"
+    class="sc-ZqGJI nJtAW"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>
@@ -230,33 +230,33 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 exports[`<StepRemuneration /> should render one input 1`] = `
 <div>
   <legend
-    class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+    class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iORupB"
+      class="sc-fcCDlF gZwBNq"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
       <span
-        class="sc-ibQAlb iapAQd"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-bDpDS cvgaoL"
+    class="sc-hjjlnc goUtYR"
   >
     <input
       checked=""
-      class="sc-bVHCgj drRyYL"
+      class="sc-gUJyNl cXHmkI"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="sc-kzqdkY dcQpmU"
+      class="sc-caPbAK gsBMoC"
       for="typeRemuneration-amount"
     >
       <span>
@@ -269,17 +269,17 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </label>
   </div>
   <div
-    class="sc-bDpDS cvgaoL"
+    class="sc-hjjlnc goUtYR"
   >
     <input
-      class="sc-bVHCgj drRyYL"
+      class="sc-gUJyNl cXHmkI"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="sc-kzqdkY dcQpmU"
+      class="sc-caPbAK gsBMoC"
       for="typeRemuneration-pay"
     >
       <span>
@@ -292,36 +292,36 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </label>
   </div>
   <legend
-    class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+    class="sc-hsWlPz dQgJqc sc-dvEHMn gvtJeA"
     data-testid="question-label"
     for="currency-1"
   >
     <span
-      class="sc-ibQAlb iORupB"
+      class="sc-fcCDlF gZwBNq"
     >
       Quelle est la rémunération totale brute perçue durant le contrat de travail ?
       <span
-        class="sc-ibQAlb iapAQd"
+        class="sc-fcCDlF gePGde"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-eulNck ctRWBf"
+    class="sc-jsTgWu dkEWbX"
   >
     <span
-      class="sc-dkmUuB ayeCS"
+      class="sc-bQmOxr iqEHsz"
     >
       <input
-        class="sc-ejfMa-d cojYrW"
+        class="sc-fWQKxP iOpVQL"
         id="currency-1"
         name="salaire"
         type="number"
         value="3000"
       />
       <div
-        class="sc-iEXKAA jqdzTX"
+        class="sc-EJAja kKkiFD"
       >
         <svg
           aria-hidden="true"
@@ -338,7 +338,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </span>
   </div>
   <p
-    class="sc-kRRyDe hWooKs"
+    class="sc-ZqGJI nJtAW"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>

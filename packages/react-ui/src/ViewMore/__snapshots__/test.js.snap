@@ -3,7 +3,7 @@
 exports[`<ViewMore /> renders with an button 1`] = `
 <div>
   <ul
-    class="sc-gEvEer XmUlL"
+    class="sc-gswNZR jGPPhy"
   >
     <li>
       <a
@@ -56,10 +56,10 @@ exports[`<ViewMore /> renders with an button 1`] = `
     </li>
   </ul>
   <div
-    class="sc-eqUAAy eciJos"
+    class="sc-dkrFOg cGyozt"
   >
     <button
-      class="sc-aXZVg qyujw sc-fqkvVR fWqitW"
+      class="sc-bcXHqe iRwlKl sc-hLBbgP bmBDhR"
       type="button"
     >
       Voir plus

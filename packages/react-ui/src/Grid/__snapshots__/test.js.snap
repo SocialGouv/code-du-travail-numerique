@@ -3,16 +3,16 @@
 exports[`<Grid /> should render 1`] = `
 <div>
   <div
-    class="sc-aXZVg gTptkG sc-eqUAAy dTWgtO"
+    class="sc-bcXHqe gsmOqz sc-dkrFOg kRTRTf"
   >
     <div
-      class="sc-gEvEer fFrSaF"
+      class="sc-gswNZR hpFsak"
     >
       <div
-        class="sc-fqkvVR iKRtny"
+        class="sc-hLBbgP hcRUfJ"
       >
         <div
-          class="sc-dcJsrY fuWujG"
+          class="sc-eDvSVe lohEUi"
         >
           <div>
             <strong>
@@ -24,7 +24,7 @@ exports[`<Grid /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-dcJsrY fuWujG"
+          class="sc-eDvSVe lohEUi"
         >
           <div>
             <strong>
@@ -44,16 +44,16 @@ exports[`<Grid /> should render 1`] = `
 exports[`<Grid /> should render 5columns 1`] = `
 <div>
   <div
-    class="sc-aXZVg gTptkG sc-eqUAAy dTWgtO"
+    class="sc-bcXHqe gsmOqz sc-dkrFOg kRTRTf"
   >
     <div
-      class="sc-gEvEer fFrSaF"
+      class="sc-gswNZR hpFsak"
     >
       <div
-        class="sc-fqkvVR iKRtny"
+        class="sc-hLBbgP hcRUfJ"
       >
         <div
-          class="sc-dcJsrY efeprV"
+          class="sc-eDvSVe lgESEp"
         >
           <div>
             <strong>
@@ -65,7 +65,7 @@ exports[`<Grid /> should render 5columns 1`] = `
           </div>
         </div>
         <div
-          class="sc-dcJsrY efeprV"
+          class="sc-eDvSVe lgESEp"
         >
           <div>
             <strong>

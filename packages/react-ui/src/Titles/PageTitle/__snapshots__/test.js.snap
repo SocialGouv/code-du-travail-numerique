@@ -3,13 +3,13 @@
 exports[`<PageTitle /> renders a H1 page title 1`] = `
 <div>
   <header
-    class="sc-gEvEer iwWTzJ"
+    class="sc-gswNZR eDYiWs"
   >
     <h1
-      class="sc-fqkvVR hZWjIQ"
+      class="sc-hLBbgP cpYAAb"
     >
       <span
-        class="sc-aXZVg ebuZrC"
+        class="sc-bcXHqe eafpDT"
       />
       Lorem Ipsum
     </h1>
@@ -20,13 +20,13 @@ exports[`<PageTitle /> renders a H1 page title 1`] = `
 exports[`<PageTitle /> renders a left striped shifted H1 page title 1`] = `
 <div>
   <header
-    class="sc-gEvEer bKmRPt"
+    class="sc-gswNZR gvmDjE"
   >
     <h1
-      class="sc-fqkvVR cshUl"
+      class="sc-hLBbgP jMohai"
     >
       <span
-        class="sc-aXZVg jHdfHu"
+        class="sc-bcXHqe ebNMxn"
       />
       Lorem Ipsum
     </h1>

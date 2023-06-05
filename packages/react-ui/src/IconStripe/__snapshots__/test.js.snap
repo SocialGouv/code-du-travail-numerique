@@ -3,10 +3,10 @@
 exports[`<Grid /> renders 1`] = `
 <div>
   <div
-    class="sc-aXZVg lbFxLd"
+    class="sc-bcXHqe dJWvgo"
   >
     <div
-      class="sc-gEvEer jioKGZ"
+      class="sc-gswNZR hlnUEo"
     >
       <svg
         aria-hidden="true"
@@ -27,7 +27,7 @@ exports[`<Grid /> renders 1`] = `
       </svg>
     </div>
     <div
-      class="sc-eqUAAy kKucrB"
+      class="sc-dkrFOg bwZWZw"
     >
       Here is some content
     </div>

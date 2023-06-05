@@ -3,16 +3,16 @@
 exports[`<ArrowLink /> renders an arrow on the left 1`] = `
 <div>
   <a
-    class="sc-aXZVg yBGrC"
+    class="sc-bcXHqe iQPtKX"
   >
     <p
-      class="sc-gEvEer bmpmGx"
+      class="sc-gswNZR eFMxHE"
     >
       Lorem Ipsum
     </p>
     <svg
       aria-hidden="true"
-      class="sc-eqUAAy cNwWgy"
+      class="sc-dkrFOg kenAYs"
       fill="none"
       viewBox="0 0 28 15"
       xmlns="http://www.w3.org/2000/svg"
@@ -29,16 +29,16 @@ exports[`<ArrowLink /> renders an arrow on the left 1`] = `
 exports[`<ArrowLink /> renders an arrow on the right 1`] = `
 <div>
   <a
-    class="sc-aXZVg yBGrC"
+    class="sc-bcXHqe iQPtKX"
   >
     <p
-      class="sc-gEvEer bmpmGx"
+      class="sc-gswNZR eFMxHE"
     >
       Lorem Ipsum
     </p>
     <svg
       aria-hidden="true"
-      class="sc-eqUAAy cNwWgy"
+      class="sc-dkrFOg kenAYs"
       fill="none"
       viewBox="0 0 28 15"
       xmlns="http://www.w3.org/2000/svg"

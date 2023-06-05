@@ -3,10 +3,10 @@
 exports[`<Toast /> Should render a wide toast 1`] = `
 <div>
   <div
-    class="sc-gEvEer fhOJbX"
+    class="sc-gswNZR iGunOq"
   >
     <div
-      class="sc-eqUAAy hCVxso"
+      class="sc-dkrFOg dlORJV"
       role="alert"
     >
       I’m big and beautiful
@@ -18,10 +18,10 @@ exports[`<Toast /> Should render a wide toast 1`] = `
 exports[`<Toast /> render default toast 1`] = `
 <div>
   <div
-    class="sc-gEvEer cKJCIq"
+    class="sc-gswNZR jHicpH"
   >
     <div
-      class="sc-eqUAAy hCVxso"
+      class="sc-dkrFOg dlORJV"
       role="alert"
     >
       Default content
@@ -33,10 +33,10 @@ exports[`<Toast /> render default toast 1`] = `
 exports[`<Toast /> render primary toast 1`] = `
 <div>
   <div
-    class="sc-gEvEer gBWKXk"
+    class="sc-gswNZR bdwhLx"
   >
     <div
-      class="sc-eqUAAy hCVxso"
+      class="sc-dkrFOg dlORJV"
       role="alert"
     >
       primary
@@ -49,10 +49,10 @@ exports[`<Toast /> render primary toast 1`] = `
 exports[`<Toast /> render secondary toast 1`] = `
 <div>
   <div
-    class="sc-gEvEer cKJCIq"
+    class="sc-gswNZR jHicpH"
   >
     <div
-      class="sc-eqUAAy hCVxso"
+      class="sc-dkrFOg dlORJV"
       role="alert"
     >
       secondary
@@ -65,10 +65,10 @@ exports[`<Toast /> render secondary toast 1`] = `
 exports[`<Toast /> render with from-bottom animated toast 1`] = `
 <div>
   <div
-    class="sc-gEvEer hLGimo"
+    class="sc-gswNZR gLMLbN"
   >
     <div
-      class="sc-eqUAAy hCVxso"
+      class="sc-dkrFOg dlORJV"
       role="alert"
     >
       from-bottom
@@ -81,10 +81,10 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
 exports[`<Toast /> render with from-left animated toast 1`] = `
 <div>
   <div
-    class="sc-gEvEer bzBQIr"
+    class="sc-gswNZR fxiFta"
   >
     <div
-      class="sc-eqUAAy hCVxso"
+      class="sc-dkrFOg dlORJV"
       role="alert"
     >
       from-left
@@ -97,10 +97,10 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
 exports[`<Toast /> render with from-right animated toast 1`] = `
 <div>
   <div
-    class="sc-gEvEer ggBycM"
+    class="sc-gswNZR fAcLrx"
   >
     <div
-      class="sc-eqUAAy hCVxso"
+      class="sc-dkrFOg dlORJV"
       role="alert"
     >
       from-right
@@ -113,10 +113,10 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
 exports[`<Toast /> render with from-top animated toast 1`] = `
 <div>
   <div
-    class="sc-gEvEer rauSz"
+    class="sc-gswNZR FexLi"
   >
     <div
-      class="sc-eqUAAy hCVxso"
+      class="sc-dkrFOg dlORJV"
       role="alert"
     >
       from-top

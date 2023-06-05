@@ -3,10 +3,10 @@
 exports[`<OverflowWrapper /> should render 1`] = `
 <div>
   <div
-    class="sc-aXZVg iuhBAh"
+    class="sc-bcXHqe keQCoM"
   >
     <div
-      class="sc-gEvEer jOaSPk"
+      class="sc-gswNZR gCRuQd"
     >
       Default shadow color
     </div>
@@ -17,10 +17,10 @@ exports[`<OverflowWrapper /> should render 1`] = `
 exports[`<OverflowWrapper /> should render with correct color 1`] = `
 <div>
   <div
-    class="sc-aXZVg bihbSj"
+    class="sc-bcXHqe gzwJnu"
   >
     <div
-      class="sc-gEvEer jOaSPk"
+      class="sc-gswNZR gCRuQd"
     >
       Red shadow color
     </div>

@@ -32,28 +32,28 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
     >
       <div>
         <div
-          class="sc-fxwrCY djSyec"
+          class="sc-ckEbSK eDAEAk"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Rechercher votre convention collective"
             aria-modal="true"
-            class="sc-hIUJlX FpoNy"
+            class="sc-fbYMXx kKemne"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <label
-              class="sc-ecPEgm jyWEST"
+              class="sc-dUipGc hgoSmo"
               for="convention-search"
             >
               Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
             </label>
             <span
-              class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
+              class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
             >
               <input
-                class="sc-ejfMa-d cuCpwx"
+                class="sc-fWQKxP iaRXHc"
                 id="convention-search"
                 name="q"
                 placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -62,16 +62,16 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               />
             </span>
             <p
-              class="sc-fThUAz bqJWec"
+              class="sc-bTUVah hXbUfO"
             >
               Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
               <span
-                class="sc-SrznA cZVzFV"
+                class="sc-uokDu isqtOz"
               >
                 Consultez
                  
                 <button
-                  class="sc-kOPcWz cOwJar sc-czkgLR dIDeLX"
+                  class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
                   type="button"
                 >
                   notre aide
@@ -80,11 +80,11 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               </span>
             </p>
             <button
-              class="sc-kOPcWz kyVwqT sc-jnOGJG fRzVjo"
+              class="sc-hhOBVt cizsts sc-GhhNo bwxyfF"
               title="fermer la modale"
             >
               <div
-                class="sc-cWSHoV bKtA-De"
+                class="sc-gYbzsP fCavdH"
               >
                 fermer la modale
               </div>
