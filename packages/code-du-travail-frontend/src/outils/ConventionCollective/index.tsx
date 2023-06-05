@@ -16,7 +16,6 @@ import { TrackingProvider, useTrackingContext } from "./common/TrackingContext";
 import Steps from "./steps";
 import handleTrackEvent from "./tracking/HandleTrackEvent";
 import { OnUserAction, UserAction } from "./types";
-import scrollToTop from "../common/utils/scrollToTop";
 
 interface Props {
   icon: string;
@@ -31,10 +30,27 @@ function AgreementSearchTool({
   displayTitle,
   widgetMode,
 }: Props): JSX.Element {
-  const [screen, setScreen] = useState<ScreenType | null>(widgetMode ? ScreenType.enterprise : null);
+  const router = useRouter();
+
+  const [screen, setScreen] = useState<ScreenType | null>(
+    widgetMode ? ScreenType.enterprise : null
+  );
+
+  useEffect(() => {
+    const slug = router.query.slug;
+    setScreen(
+      slug === "convention"
+        ? ScreenType.agreement
+        : slug === "entreprise"
+        ? ScreenType.enterprise
+        : slug === "selection"
+        ? ScreenType.agreementSelection
+        : ScreenType.intro
+    );
+  }, [router.query.slug]);
+
   const { setEnterprise, setSearchParams, searchParams } = useNavContext();
   const { uuid, trackEvent } = useTrackingContext();
-  const router = useRouter();
 
   const onUserAction: OnUserAction = (action: UserAction, extra?: unknown) => {
     handleTrackEvent(trackEvent, uuid, title, action, extra);
@@ -42,7 +58,7 @@ function AgreementSearchTool({
 
   function clearSelection() {
     if (widgetMode) {
-      setScreen(ScreenType.enterprise)
+      setScreen(ScreenType.enterprise);
     } else {
       setEnterprise(null);
     }
@@ -71,20 +87,6 @@ function AgreementSearchTool({
     setSearchParams({ address: "", query: "" });
   }
 
-  function handleHashNavigation(url) {
-    const [, hash = ""] = url.split("#");
-    scrollToTop();
-    const main: HTMLDivElement | null = document.querySelector("[role=main]");
-    if (main) {
-      main.focus();
-    }
-    handleSearchType(hash);
-  }
-
-  function handleSearchType(value) {
-    setScreen(value);
-  }
-
   function handleEnterpriseSelection(
     enterprise: Enterprise,
     params: SearchParams
@@ -92,20 +94,13 @@ function AgreementSearchTool({
     setEnterprise(enterprise);
     setSearchParams(params);
     if (widgetMode) {
-      setScreen(ScreenType.agreementSelection)
+      setScreen(ScreenType.agreementSelection);
     } else {
       router.push(
-        `/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreementSelection}`
+        `/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreementSelection}`
       );
     }
   }
-
-  useEffect(() => {
-    router.events.on("hashChangeStart", handleHashNavigation);
-    return () => {
-      router.events.off("hashChangeStart", handleHashNavigation);
-    };
-  }, []);
 
   let Step;
   switch (screen) {

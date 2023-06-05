@@ -160,7 +160,11 @@ const SimulatorContent = <StepName extends string>({
   );
   return (
     <StyledWrapper variant="main">
-      <StyledForm onSubmit={e => { e.preventDefault(); }}>
+      <StyledForm
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
         <StyledStepList
           activeIndex={currentStepIndex}
           steps={stepItems}

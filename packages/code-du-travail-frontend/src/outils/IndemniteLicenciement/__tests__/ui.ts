@@ -54,6 +54,7 @@ export const ui = {
       /Vous avez sélectionné la convention collective/
     ),
     agreementCompanyInput: byTestId("agreement-company-search-input"),
+    agreementCompanySearchButton: byTestId("agreement-company-search-button"),
     agreementCompanyInputAsk: byText(
       "Précisez et sélectionnez votre entreprise"
     ),
