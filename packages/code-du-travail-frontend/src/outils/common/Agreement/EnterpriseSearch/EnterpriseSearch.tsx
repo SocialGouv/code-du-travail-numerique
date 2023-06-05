@@ -98,15 +98,17 @@ const EnterpriseSearch = ({
         name={ENTERPRISE_NAME}
         errorText={"Vous devez sélectionner une entreprise"}
       />
-      <Field
-        type="input"
-        name={ENTERPRISE_NAME}
-        validate={required}
-        hidden
-        render={({ input, ...props }) => {
-          return <input {...input} {...props} />;
-        }}
-      />
+      {!isDisabled && (
+        <Field
+          type="input"
+          name={ENTERPRISE_NAME}
+          validate={required}
+          hidden
+          render={({ input, ...props }) => {
+            return <input {...input} {...props} />;
+          }}
+        />
+      )}
     </Section>
   );
 };

@@ -11,19 +11,49 @@ import styled from "styled-components";
 import { SectionTitle } from "../../../common/stepStyles";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 import { OnSelectAgreementFn } from "../../../common/Agreement/types";
+import { push as matopush } from "@socialgouv/matomo-next";
+import {
+  MatomoActionEvent,
+  MatomoBaseEvent,
+  MatomoSearchAgreementCategory,
+} from "../../../../lib";
 
 type Props = {
   selectedAgreement?: Agreement;
   selectedEnterprise?: Enterprise;
   onAgreementChange: OnSelectAgreementFn;
+  eventViewStep: MatomoActionEvent;
 };
 
 export function NoEnterprise({
   selectedAgreement,
   selectedEnterprise,
   onAgreementChange,
+  eventViewStep,
 }: Props): JSX.Element {
   const [isInputVisible, setIsInputVisible] = React.useState(false);
+
+  const onCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    onAgreementChange(
+      selectedAgreement?.num === 3239
+        ? null
+        : {
+            url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+            id: "KALICONT000044594539",
+            num: 3239,
+            shortTitle: "Particuliers employeurs et emploi à domicile",
+            slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
+            title: "Particuliers employeurs et emploi à domicile",
+          }
+    );
+    // TODO: okk
+    // matopush([
+    //   MatomoBaseEvent.OUTIL,
+    //   eventViewStep,
+    //   MatomoSearchAgreementCategory.NO_ENTERPRISE,
+    // ]);
+  };
 
   return (
     <>
@@ -40,21 +70,7 @@ export function NoEnterprise({
               }
               name="salarieParticulierEmployeur"
               id="salarieParticulierEmployeur"
-              onChange={() => {
-                onAgreementChange(
-                  selectedAgreement?.num === 3239
-                    ? null
-                    : {
-                        url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
-                        id: "KALICONT000044594539",
-                        num: 3239,
-                        shortTitle:
-                          "Particuliers employeurs et emploi à domicile",
-                        slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
-                        title: "Particuliers employeurs et emploi à domicile",
-                      }
-                );
-              }}
+              onChange={onCheckboxChange}
               checked={selectedAgreement?.num === 3239}
             />
           </InputWrapper>

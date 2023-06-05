@@ -119,6 +119,8 @@ function AgreementStep({
             selectedEnterprise={selectedEnterprise}
             selectedAgreement={selectedAgreement}
             onAgreementChange={onAgreementChange}
+            //TODO: okkk
+            // eventViewStep={}
           />
           {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
         </>

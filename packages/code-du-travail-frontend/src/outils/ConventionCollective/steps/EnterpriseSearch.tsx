@@ -11,6 +11,7 @@ import {
   SearchParams,
 } from "../../common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
 import { SectionTitle } from "../../common/stepStyles";
+import { NoEnterprise } from "../common/NoEnterprise";
 
 type EnterpriseSearchStepProps = {
   onBackClick?: () => void;
@@ -43,6 +44,7 @@ const EnterpriseSearchStep = ({
             handleEnterpriseSelection={handleEnterpriseSelection}
           />
         </form>
+        <NoEnterprise />
       </Section>
       {!hidePreviousButton && (
         <Link
