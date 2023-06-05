@@ -33,7 +33,7 @@ COPY yarn.lock .yarnrc.yml .
 COPY .yarn .yarn
 
 # Install packages
-RUN yarn fetch --immutable
+RUN yarn fetch --immutable && yarn cache clean
 
 COPY . ./
 
