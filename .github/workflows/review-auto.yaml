@@ -5,6 +5,7 @@ on:
       - "feat/**"
       - "fix/**"
       - "maxgfr/**"
+      - "dev"
 
 concurrency:
   cancel-in-progress: true
