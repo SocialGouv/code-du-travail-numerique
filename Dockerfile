@@ -29,7 +29,7 @@ ARG NEXT_PUBLIC_SENTRY_RELEASE
 ENV NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE
 
 # Copy lockfile
-COPY yarn.lock .yarnrc.yml .
+COPY ./yarn.lock ./.yarnrc.yml ./
 COPY .yarn .yarn
 
 # Install packages
