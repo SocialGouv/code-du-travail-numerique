@@ -49,21 +49,19 @@ FROM node:$NODE_VERSION
 ENV NODE_ENV=production
 
 WORKDIR /app
-
-COPY --from=dist /dep/packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
-COPY --from=dist /dep/packages/code-du-travail-frontend/node_modules /app/packages/code-du-travail-frontend/node_modules
-COPY --from=dist /dep/packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
-COPY --from=dist /dep/packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
-COPY --from=dist /dep/packages/code-du-travail-frontend/next.config.js /app/packages/code-du-travail-frontend/next.config.js
-COPY --from=dist /dep/packages/code-du-travail-frontend/sentry.client.config.js /app/packages/code-du-travail-frontend/sentry.client.config.js
-COPY --from=dist /dep/packages/code-du-travail-frontend/sentry.server.config.js /app/packages/code-du-travail-frontend/sentry.server.config.js
-COPY --from=dist /dep/packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
-COPY --from=dist /dep/packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
-COPY --from=dist /dep/package.json /app/package.json
-COPY --from=dist /dep/node_modules /app/node_modules
-
-RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000 /app/packages/code-du-travail-frontend/.next
-
 USER 1000
+
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/next.config.js /app/packages/code-du-travail-frontend/next.config.js
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.client.config.js /app/packages/code-du-travail-frontend/sentry.client.config.js
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.server.config.js /app/packages/code-du-travail-frontend/sentry.server.config.js
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
+COPY --from=dist --chown=1000:1000 /dep/package.json /app/package.json
+COPY --from=dist --chown=1000:1000 /dep/node_modules /app/node_modules
+
+RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images
 
 CMD [ "yarn", "workspace", "@cdt/frontend", "start"]
