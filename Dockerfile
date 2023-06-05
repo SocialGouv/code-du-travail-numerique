@@ -33,14 +33,15 @@ COPY ./yarn.lock ./.yarnrc.yml ./
 COPY .yarn .yarn
 
 # Install packages
-RUN yarn fetch --immutable && yarn cache clean
+RUN yarn fetch --immutable
 
 COPY . ./
 
 ENV NODE_ENV=production
 
 RUN yarn build  && \
-  yarn --immutable --production
+  yarn workspaces focus --production --all && \
+  yarn cache clean
 
 # app
 FROM node:$NODE_VERSION
