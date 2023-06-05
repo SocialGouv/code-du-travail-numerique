@@ -28,25 +28,19 @@ ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 ARG NEXT_PUBLIC_SENTRY_RELEASE
 ENV NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE
 
-# Copy all package.json
-COPY ./package.json ./package.json
-COPY ./packages/react-ui/package.json ./packages/react-ui/package.json
-COPY ./packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/package.json
-COPY ./packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/package.json
-COPY ./packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/package.json
-
 # Copy lockfile
-COPY ./yarn.lock ./yarn.lock
+COPY ./yarn.lock ./.yarnrc.yml ./
+COPY .yarn ./.yarn
 
 # Install packages
-RUN yarn --frozen-lockfile --prefer-offline
+RUN yarn fetch --immutable
 
 COPY . ./
 
 ENV NODE_ENV=production
 
 RUN yarn build  && \
-  yarn --frozen-lockfile --prod --prefer-offline
+  yarn --immutable --production
 
 # app
 FROM node:$NODE_VERSION
