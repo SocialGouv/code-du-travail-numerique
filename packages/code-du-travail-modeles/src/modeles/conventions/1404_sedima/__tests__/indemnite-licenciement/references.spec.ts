@@ -70,12 +70,12 @@ describe("Vérification des références juridiques pour la CC 1404", () => {
           engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC1404'",
-              "contrat salarié . convention collective . sedima . cdi opération . mission impossible . question période essai":
+              "contrat salarié . convention collective . sedima . cdi opération . durée":
+                "5",
+              "contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . question période essai":
                 "'Non'",
-              "contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total":
+              "contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . salaires total":
                 salaireRef,
-              "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
-                "'Oui'",
               "contrat salarié . convention collective . sedima . question cdi opération":
                 "'Oui'",
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -112,33 +112,31 @@ describe("Vérification des références juridiques pour la CC 1404", () => {
         "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
         ({ seniorityRight, salaire1, salaire2, salaire3, seniority }) => {
           const salarySituation: Record<string, number> = {
-            "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année":
+            "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année":
               salaire1,
           };
           if (salaire2) {
             salarySituation[
-              "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année"
+              "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 2e année"
             ] = salaire2;
           }
           if (salaire3) {
             salarySituation[
-              "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 3e année et plus"
+              "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 3e année et plus"
             ] = salaire3;
           }
           engine.setSituation(
             {
               ...salarySituation,
               "contrat salarié . convention collective": "'IDCC1404'",
-              "contrat salarié . convention collective . sedima . cdi opération . mission possible . durée":
+              "contrat salarié . convention collective . sedima . cdi opération . durée":
                 (seniorityRight * 12).toString(),
-              "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année":
+              "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année":
                 "3000",
-              "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année":
+              "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 2e année":
                 "3000",
-              "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 3e année et plus":
+              "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 3e année et plus":
                 "3000",
-              "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
-                "'Non'",
               "contrat salarié . convention collective . sedima . question cdi opération":
                 "'Oui'",
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":

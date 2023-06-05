@@ -95,7 +95,7 @@ contrat salarié . convention collective . sedima . cdi opération . durée:
   cdtn:
     type: question
 
-## Mission possible
+## Plus de 6 mois
 contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois:
   applicable si: durée >= 6 mois
   valeur: oui
@@ -122,7 +122,7 @@ contrat salarié . convention collective . sedima . cdi opération . plus de 6 m
   cdtn:
     formule:
       explanations:
-        - "Sref : Rémunération brute versée pendant la première année": contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année
+        - "Sref : Total des salaires bruts perçus pendant la 1ère année du contrat": contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année
       formula: (8% * Sref)
 
 contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 2e année:
@@ -181,7 +181,7 @@ contrat salarié . convention collective . sedima . cdi opération . plus de 6 m
         - "Sref3 : Total des salaires bruts perçus de la 3ème année jusqu'à la fin du contrat": contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 3e année et plus
       formula: (8% * Sref1) + (6% * Sref2) + (4% * Sref3)
 
-## Mission impossible
+## Moins de 6 mois
 contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois:
   applicable si: durée < 6 mois
   valeur: oui

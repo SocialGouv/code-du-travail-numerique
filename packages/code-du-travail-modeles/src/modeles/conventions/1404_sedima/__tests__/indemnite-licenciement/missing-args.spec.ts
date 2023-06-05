@@ -29,7 +29,7 @@ describe("CC 1404 - Affiche les questions", () => {
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . question mission impossible"
+      "contrat salarié . convention collective . sedima . cdi opération . durée"
     );
   });
 
@@ -37,15 +37,15 @@ describe("CC 1404 - Affiche les questions", () => {
     const result = engine.setSituation(
       {
         "contrat salarié . convention collective": "'IDCC1404'",
-        "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
-          "'Oui'",
+        "contrat salarié . convention collective . sedima . cdi opération . durée":
+          "5",
         "contrat salarié . convention collective . sedima . question cdi opération":
           "'Oui'",
       },
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . mission impossible . question période essai"
+      "contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . question période essai"
     );
   });
 
@@ -53,25 +53,9 @@ describe("CC 1404 - Affiche les questions", () => {
     const result = engine.setSituation(
       {
         "contrat salarié . convention collective": "'IDCC1404'",
-        "contrat salarié . convention collective . sedima . cdi opération . mission impossible . question période essai":
-          "'Non'",
-        "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
-          "'Oui'",
-        "contrat salarié . convention collective . sedima . question cdi opération":
-          "'Oui'",
-      },
-      "contrat salarié . indemnité de licenciement . résultat conventionnel"
-    );
-    expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total"
-    );
-  });
-
-  it("doit demander la durée dans l'entreprise", () => {
-    const result = engine.setSituation(
-      {
-        "contrat salarié . convention collective": "'IDCC1404'",
-        "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
+        "contrat salarié . convention collective . sedima . cdi opération . durée":
+          "5",
+        "contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . question période essai":
           "'Non'",
         "contrat salarié . convention collective . sedima . question cdi opération":
           "'Oui'",
@@ -79,7 +63,7 @@ describe("CC 1404 - Affiche les questions", () => {
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . mission possible . durée"
+      "contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . salaires total"
     );
   });
 
@@ -87,17 +71,15 @@ describe("CC 1404 - Affiche les questions", () => {
     const result = engine.setSituation(
       {
         "contrat salarié . convention collective": "'IDCC1404'",
-        "contrat salarié . convention collective . sedima . cdi opération . mission possible . durée":
+        "contrat salarié . convention collective . sedima . cdi opération . durée":
           "6",
-        "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
-          "'Non'",
         "contrat salarié . convention collective . sedima . question cdi opération":
           "'Oui'",
       },
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année"
+      "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année"
     );
   });
 
@@ -105,19 +87,17 @@ describe("CC 1404 - Affiche les questions", () => {
     const result = engine.setSituation(
       {
         "contrat salarié . convention collective": "'IDCC1404'",
-        "contrat salarié . convention collective . sedima . cdi opération . mission possible . durée":
+        "contrat salarié . convention collective . sedima . cdi opération . durée":
           "18",
-        "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année":
+        "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année":
           "3000",
-        "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
-          "'Non'",
         "contrat salarié . convention collective . sedima . question cdi opération":
           "'Oui'",
       },
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année"
+      "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 2e année"
     );
   });
 
@@ -125,21 +105,19 @@ describe("CC 1404 - Affiche les questions", () => {
     const result = engine.setSituation(
       {
         "contrat salarié . convention collective": "'IDCC1404'",
-        "contrat salarié . convention collective . sedima . cdi opération . mission possible . durée":
+        "contrat salarié . convention collective . sedima . cdi opération . durée":
           "30",
-        "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année":
+        "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année":
           "3000",
-        "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année":
+        "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 2e année":
           "3000",
-        "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
-          "'Non'",
         "contrat salarié . convention collective . sedima . question cdi opération":
           "'Oui'",
       },
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 3e année et plus"
+      "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 3e année et plus"
     );
   });
 });

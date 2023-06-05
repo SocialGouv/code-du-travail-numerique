@@ -36,11 +36,11 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
     );
   });
   describe("CDI opération", () => {
-    describe("Mission impossible", () => {
+    describe("moins de 6 mois", () => {
       test.each`
         seniorityRight | seniority | salaireRef | expectedCompensation | beforeTrial
-        ${0.67}        | ${0.67}   | ${20136}   | ${0}                 | ${"'Oui'"}
-        ${0.67}        | ${0.67}   | ${20136}   | ${2013.6}            | ${"'Non'"}
+        ${0}           | ${0}      | ${20136}   | ${0}                 | ${"'Oui'"}
+        ${5 / 12}      | ${5 / 12} | ${20136}   | ${2013.6}            | ${"'Non'"}
       `(
         "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
         ({
@@ -53,12 +53,12 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
           const { missingArgs, result } = engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC1404'",
-              "contrat salarié . convention collective . sedima . cdi opération . mission impossible . question période essai":
+              "contrat salarié . convention collective . sedima . cdi opération . durée":
+                (seniorityRight * 12).toString(),
+              "contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . question période essai":
                 beforeTrial,
-              "contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total":
+              "contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . salaires total":
                 salaireRef,
-              "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
-                "'Oui'",
               "contrat salarié . convention collective . sedima . question cdi opération":
                 "'Oui'",
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -76,12 +76,10 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
       );
     });
 
-    describe("Mission possible", () => {
+    describe("plus de 6 mois", () => {
       test.each`
         seniorityRight | seniority | salaire1 | salaire2     | salaire3     | expectedCompensation
-        ${0.25}        | ${0.25}   | ${7542}  | ${undefined} | ${undefined} | ${0}
-        ${0.41}        | ${0.41}   | ${12630} | ${undefined} | ${undefined} | ${0}
-        ${0.67}        | ${0.67}   | ${20296} | ${undefined} | ${undefined} | ${1623.68}
+        ${0.5}         | ${0.5}    | ${20296} | ${undefined} | ${undefined} | ${1623.68}
         ${2.5}         | ${2.5}    | ${29899} | ${29834}     | ${15297}     | ${4793.84}
       `(
         "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
@@ -94,27 +92,25 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
           seniority,
         }) => {
           const salarySituation: Record<string, number> = {
-            "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année":
+            "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année":
               salaire1,
           };
           if (salaire2) {
             salarySituation[
-              "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année"
+              "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 2e année"
             ] = salaire2;
           }
           if (salaire3) {
             salarySituation[
-              "contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 3e année et plus"
+              "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 3e année et plus"
             ] = salaire3;
           }
           const { missingArgs, result } = engine.setSituation(
             {
               ...salarySituation,
               "contrat salarié . convention collective": "'IDCC1404'",
-              "contrat salarié . convention collective . sedima . cdi opération . mission possible . durée":
+              "contrat salarié . convention collective . sedima . cdi opération . durée":
                 (seniorityRight * 12).toString(),
-              "contrat salarié . convention collective . sedima . cdi opération . question mission impossible":
-                "'Non'",
               "contrat salarié . convention collective . sedima . question cdi opération":
                 "'Oui'",
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
