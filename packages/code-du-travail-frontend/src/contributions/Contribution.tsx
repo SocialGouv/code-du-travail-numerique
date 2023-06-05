@@ -1,4 +1,4 @@
-import { getLabelBySource, SOURCES, slugify } from "@socialgouv/cdtn-utils";
+import { getLabelBySource, slugify, SOURCES } from "@socialgouv/cdtn-utils";
 import {
   Alert,
   Badge,
@@ -21,8 +21,9 @@ import SearchConvention from "../../src/conventions/Search";
 import { A11yLink } from "../common/A11yLink";
 import Html from "../common/Html";
 import References from "../common/References";
-import { useLocalStorage } from "../lib/useLocalStorage";
+import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
+import { Agreement } from "../conventions/Search/api/type";
 
 const ReferencesJuridiques = ({ references = [] }) => {
   const refs = references.flatMap(({ category, title, url }) => {
@@ -53,7 +54,7 @@ const Contribution = ({ answers, content }) => {
   /**
    * conventionalAnswer are special kind of contribution that include
    * only one a single ccn answer
-   * this allow us to set conventional answer directly for a given ccn
+   * this allows us to set conventional answer directly for a given ccn
    */
   const isConventionalAnswer = Object.prototype.hasOwnProperty.call(
     answers,
@@ -71,9 +72,9 @@ const Contribution = ({ answers, content }) => {
     (answers.conventions && answers.conventions.length > 0) ||
     isConventionalAnswer;
 
-  const [convention, setConvention] = useLocalStorage("convention");
-
-  const isConventionDetected =
+  const [convention, setConvention] =
+    useLocalStorageOnPageLoad<Agreement>("convention");
+  const isConventionDetected = () =>
     convention && convention.id && convention.num && convention.title;
 
   let conventionAnswer;
@@ -93,20 +94,15 @@ const Contribution = ({ answers, content }) => {
           <CustomWrapper variant="dark">
             <IconStripe icon={icons.Custom}>
               <StyledInsertTitle as="p">Page personnalisable</StyledInsertTitle>
-              {isConventionDetected || isConventionalAnswer ? (
+              {isConventionDetected() || isConventionalAnswer ? (
                 <Paragraph noMargin>
-                  Cette page a été personnalisée avec l’ajout des {}
-                  {isConventionalAnswer ? (
-                    <a href="#customisation">
-                      informations de la convention collective :{" "}
-                      {conventionAnswer.shortName}
-                    </a>
-                  ) : (
-                    <a href="#customisation">
-                      informations de la convention collective :{" "}
-                      {convention.shortTitle}
-                    </a>
-                  )}
+                  Cette page a été personnalisée avec l’ajout des{" "}
+                  <a href="#customisation">
+                    informations de la convention collective :{" "}
+                    {isConventionalAnswer
+                      ? conventionAnswer.shortName
+                      : convention.shortTitle}
+                  </a>
                 </Paragraph>
               ) : (
                 <Paragraph noMargin>
@@ -170,7 +166,7 @@ const Contribution = ({ answers, content }) => {
                 <>Que dit votre convention collective&nbsp;?</>
               )}
             </StyledTitle>
-            {!isConventionDetected && !isConventionalAnswer ? (
+            {!isConventionDetected() && !isConventionalAnswer ? (
               <SearchConvention onSelectConvention={setConvention} />
             ) : (
               <>
@@ -195,14 +191,14 @@ const Contribution = ({ answers, content }) => {
                     {conventionAnswer.highlight &&
                       conventionAnswer.highlight.content && (
                         <StyledAlert variant="primary">
-                          <TitleAlert
+                          <StyledParagraph
                             variant="primary"
                             fontSize="small"
                             fontWeight="700"
                             noMargin
                           >
                             {conventionAnswer.highlight.title}
-                          </TitleAlert>
+                          </StyledParagraph>
                           <Paragraph fontSize="small" noMargin>
                             <Html>{conventionAnswer.highlight.content}</Html>
                           </Paragraph>
@@ -218,6 +214,14 @@ const Contribution = ({ answers, content }) => {
                     <ReferencesJuridiques
                       references={conventionAnswer.references}
                     />
+                    {isConventionDetected() && (
+                      <p>
+                        Consultez les questions-réponses fréquentes pour{" "}
+                        <a href={`/convention-collective/${convention.slug}`}>
+                          la convention collective {convention.title}
+                        </a>
+                      </p>
+                    )}
                   </>
                 ) : (
                   <>
@@ -281,10 +285,6 @@ const CustomWrapper = styled(Wrapper)`
 `;
 
 const StyledParagraph = styled(Paragraph)`
-  margin-bottom: ${spacings.tiny};
-`;
-
-const TitleAlert = styled(Paragraph)`
   margin-bottom: ${spacings.tiny};
 `;
 

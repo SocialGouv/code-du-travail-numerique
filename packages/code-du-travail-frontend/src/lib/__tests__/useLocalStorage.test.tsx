@@ -15,8 +15,10 @@ function renderApp(key, initialValue) {
       </div>
     );
   }
+
   return render(<App />);
 }
+
 describe("useLocalStorage", () => {
   it("initializes value", () => {
     const { getByTestId } = renderApp("foo", "hello cdtn");

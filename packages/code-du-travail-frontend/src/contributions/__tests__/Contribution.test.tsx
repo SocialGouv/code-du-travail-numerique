@@ -11,12 +11,16 @@ beforeEach(() => {
 describe("<Contribution />", () => {
   it("should render with no answer", () => {
     const answers = {};
-    const { container } = render(<Contribution answers={answers} />);
+    const { container } = render(
+      <Contribution answers={answers} content={{}} />
+    );
     expect(container).toMatchSnapshot();
   });
   it("should render with generic answer", () => {
     const answers = { generic: { markdown: "hello **world**" } };
-    const { container } = render(<Contribution answers={answers} />);
+    const { container } = render(
+      <Contribution answers={answers} content={{}} />
+    );
     expect(container).toMatchSnapshot();
   });
   it("should render with generic answer and content", () => {
@@ -54,7 +58,9 @@ describe("<Contribution />", () => {
         },
       ],
     };
-    const { container } = render(<Contribution answers={answers} />);
+    const { container } = render(
+      <Contribution answers={answers} content={{}} />
+    );
     expect(container).toMatchSnapshot();
   });
   it("should render with both answers", () => {
@@ -68,7 +74,9 @@ describe("<Contribution />", () => {
       ],
       generic: { markdown: "hello **generic**" },
     };
-    const { container } = render(<Contribution answers={answers} />);
+    const { container } = render(
+      <Contribution answers={answers} content={{}} />
+    );
     expect(container).toMatchSnapshot();
   });
   it("should render preselected convention", () => {
@@ -95,7 +103,9 @@ describe("<Contribution />", () => {
       generic: { markdown: "hello **generic**" },
     };
 
-    const { container } = render(<Contribution answers={answers} />);
+    const { container } = render(
+      <Contribution answers={answers} content={{}} />
+    );
     expect(container).toMatchSnapshot();
   });
 
@@ -123,7 +133,9 @@ describe("<Contribution />", () => {
       generic: { markdown: "hello **generic**" },
     };
 
-    const { container } = render(<Contribution answers={answers} />);
+    const { container } = render(
+      <Contribution answers={answers} content={{}} />
+    );
     expect(container).toMatchSnapshot();
   });
 
@@ -166,7 +178,9 @@ describe("<Contribution />", () => {
       generic: { markdown: "hello **generic**" },
     };
 
-    const { container } = render(<Contribution answers={answers} />);
+    const { container } = render(
+      <Contribution answers={answers} content={{}} />
+    );
     expect(container).toMatchSnapshot();
   });
 });
