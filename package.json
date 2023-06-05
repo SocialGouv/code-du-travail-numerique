@@ -46,11 +46,9 @@
     "is-ci": "^3.0.0",
     "lerna": "^5.0.0"
   },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "engines": {
     "node": ">= v20"
   },
