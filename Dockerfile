@@ -2,7 +2,7 @@ ARG NODE_VERSION=20.2.0-alpine
 # dist
 FROM node:$NODE_VERSION AS dist
 
-WORKDIR /
+WORKDIR /dep
 
 # Add build-arg from github actions
 ARG NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
