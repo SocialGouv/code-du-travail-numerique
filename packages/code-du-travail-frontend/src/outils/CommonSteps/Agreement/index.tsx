@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  InputCheckbox,
-  Paragraph,
-  icons,
-  Alert,
-  theme,
-} from "@socialgouv/cdtn-ui";
 import { RadioQuestion } from "../../Components";
-import { AgreementSearch, EnterpriseSearch } from "./components";
+import { AgreementSearch, EnterpriseSearch, NoEnterprise } from "./components";
 import { Agreement } from "../../../conventions/Search/api/type";
 import {
   AgreementSupportInfo,
@@ -18,8 +11,6 @@ import { InlineError } from "../../common/ErrorField";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
 import { AgreementSearchValue } from "./store";
-import { SectionTitle } from "../../common/stepStyles";
-import styled from "styled-components";
 import { AgreementRoute } from "../../common/type/WizardType";
 
 type Props = {
@@ -56,8 +47,6 @@ function AgreementStep({
   React.useEffect(() => {
     onInitAgreementPage();
   }, [onInitAgreementPage]);
-
-  const [isInputVisible, setIsInputVisible] = React.useState(false);
 
   return (
     <>
@@ -126,69 +115,11 @@ function AgreementStep({
             simulator={simulator}
             isDisabled={selectedAgreement?.num === 3239}
           />
-          {!selectedEnterprise && (
-            <RowWrapper>
-              <InputWrapper>
-                <InputCheckbox
-                  label={
-                    <span>
-                      <strong>Je n&apos;ai pas d&apos;entreprise</strong> (ma
-                      recherche concerne les assistants maternels, employés de
-                      maison, etc.)
-                    </span>
-                  }
-                  name="salarieParticulierEmployeur"
-                  id="salarieParticulierEmployeur"
-                  onChange={() => {
-                    onAgreementChange(
-                      selectedAgreement?.num === 3239
-                        ? null
-                        : {
-                            url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
-                            id: "KALICONT000044594539",
-                            num: 3239,
-                            shortTitle:
-                              "Particuliers employeurs et emploi à domicile",
-                            slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
-                            title:
-                              "Particuliers employeurs et emploi à domicile",
-                          }
-                    );
-                  }}
-                  checked={selectedAgreement?.num === 3239}
-                />
-              </InputWrapper>
-              <ButtonClicker
-                onClick={() => setIsInputVisible(!isInputVisible)}
-                type="button"
-              >
-                <icons.HelpCircle size="20" aria-label="?" />
-              </ButtonClicker>
-            </RowWrapper>
-          )}
-          {isInputVisible && (
-            <AlertWithMargin>
-              <p>
-                Cochez cette case si votre recherche concerne des salariés du
-                particulier employeur : les personnes travaillant au domicile
-                privé d&apos;un particulier (garde d’enfants ou d’une personne
-                dépendante, ménage, travaux de jardinage, soutien scolaire...)
-                ou les assistants maternels (qui accueillent des enfants à leur
-                domicile).
-              </p>
-            </AlertWithMargin>
-          )}
-          {selectedAgreement?.num === 3239 && (
-            <>
-              <SectionTitle>Votre convention collective est :</SectionTitle>
-              <Paragraph noMargin fontWeight="600" fontSize="default">
-                Particulier employeur et emploi à domicile
-              </Paragraph>
-              <StyledParagraph>
-                Cliquez sur Suivant pour poursuivre la simulation.
-              </StyledParagraph>
-            </>
-          )}
+          <NoEnterprise
+            selectedEnterprise={selectedEnterprise}
+            selectedAgreement={selectedAgreement}
+            onAgreementChange={onAgreementChange}
+          />
           {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
         </>
       )}
@@ -197,39 +128,3 @@ function AgreementStep({
 }
 
 export default AgreementStep;
-
-const { spacings } = theme;
-
-const RowWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-`;
-
-const StyledParagraph = styled(Paragraph)`
-  margin-top: ${theme.spacings.large};
-`;
-
-const InputWrapper = styled.div`
-  display: flex;
-  flex-basis: max-content;
-  justify-content: center;
-  align-items: center;
-`;
-
-const ButtonClicker = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  margin-left: 0.5rem;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }) => theme.secondary};
-`;
-
-const AlertWithMargin = styled(Alert)`
-  margin-top: ${spacings.base};
-`;

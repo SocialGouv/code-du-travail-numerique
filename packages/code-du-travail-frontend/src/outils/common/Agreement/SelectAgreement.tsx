@@ -15,6 +15,7 @@ import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
 import { SmallText } from "../stepStyles";
 import { ErrorField } from "../ErrorField";
 import { STORAGE_KEY_AGREEMENT } from "../../types";
+import { NoEnterprise } from "../../CommonSteps/Agreement/components";
 
 export type Props = {
   title: string;
@@ -112,13 +113,21 @@ const SelectAgreement = ({
         />
       )}
       {values.ccn?.route === "enterprise" && (
-        <EnterpriseSearch
-          selectedEnterprise={enterprise}
-          onSelectAgreement={onSelectAgreement}
-          supportedAgreements={supportedAgreements}
-          onUserAction={onUserAction}
-          alertAgreementNotSupported={alertAgreementNotSupported}
-        />
+        <>
+          <EnterpriseSearch
+            selectedEnterprise={enterprise}
+            onSelectAgreement={onSelectAgreement}
+            supportedAgreements={supportedAgreements}
+            onUserAction={onUserAction}
+            alertAgreementNotSupported={alertAgreementNotSupported}
+            isDisabled={storedConvention?.num === 3239}
+          />
+          <NoEnterprise
+            onAgreementChange={onSelectAgreement}
+            selectedAgreement={storedConvention}
+            selectedEnterprise={enterprise}
+          />
+        </>
       )}
       <ErrorField
         name="agreementMissing"
