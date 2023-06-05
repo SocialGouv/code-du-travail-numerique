@@ -13,7 +13,7 @@ app:
   imageProject: cdtn
   probesPath: /api/health
   envFrom:
-    - secretRef:
+    - configMapRef:
         name: www-configmap
     - secretRef:
         name: www-secret
