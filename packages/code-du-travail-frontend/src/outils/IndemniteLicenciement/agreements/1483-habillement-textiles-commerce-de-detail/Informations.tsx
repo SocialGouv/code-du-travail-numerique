@@ -10,13 +10,13 @@ import {
   useIndemniteLicenciementStore,
 } from "../../store";
 
-export default function Agreement1740Informations() {
+export default function Agreement1483Informations() {
   const store = useContext(IndemniteLicenciementContext);
   const { noticeSalaryPeriods, hasReceivedSalaries } =
     useIndemniteLicenciementStore(store, (state) => ({
       noticeSalaryPeriods:
-        state.agreement1740Data.input.noticeSalaryPeriods ?? [],
-      hasReceivedSalaries: state.agreement1740Data.input.hasReceivedSalaries,
+        state.agreement1483Data.input.noticeSalaryPeriods ?? [],
+      hasReceivedSalaries: state.agreement1483Data.input.hasReceivedSalaries,
     }));
 
   return (
@@ -33,13 +33,12 @@ export default function Agreement1740Informations() {
               <Paragraph noMargin>
                 Salaires perçus pendant le préavis&nbsp;:
               </Paragraph>
-
               <StyledFilledElementTable data-testid={"result-table"}>
                 <thead>
                   <tr>
                     <th>Mois</th>
                     <th>
-                      Salaire{noticeSalaryPeriods.length > 1 && "s"}
+                      Salaire
                       <br />
                       <StyledFilledElementSpan>
                         (primes et avantages en nature inclus)
