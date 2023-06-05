@@ -88,26 +88,26 @@ contrat salarié . convention collective . sedima . cdi opération . question mi
   cdtn:
     type: oui-non
 
-## Mission possible
-contrat salarié . convention collective . sedima . cdi opération . mission possible:
-  applicable si: question mission impossible = 'Non'
-  valeur: oui
-
-contrat salarié . convention collective . sedima . cdi opération . mission possible . durée:
+contrat salarié . convention collective . sedima . cdi opération . durée:
   titre: Durée du CDI d'opération
   question: Pendant combien de temps le salarié a-t-il été en CDI d'opération (en mois) ?
   unité: mois
   cdtn:
     type: question
 
-contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année:
+## Mission possible
+contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois:
+  applicable si: durée >= 6 mois
+  valeur: oui
+
+contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année:
   titre: Total des salaires bruts perçus pendant la 1ère année du contrat
   question: Indiquez le total des salaires bruts perçus pendant la 1ère année du contrat (du 1er au 12ème mois de contrat)
   unité: €
   cdtn:
     type: montant
 
-contrat salarié . convention collective . sedima . cdi opération . mission possible . résultat conventionnelle ancienneté moins de 1 an:
+contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . résultat conventionnelle ancienneté moins de 1 an:
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 6 mois
@@ -122,10 +122,10 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
   cdtn:
     formule:
       explanations:
-        - "Sref : Rémunération brute versée pendant la première année": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année
+        - "Sref : Rémunération brute versée pendant la première année": contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année
       formula: (8% * Sref)
 
-contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année:
+contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 2e année:
   applicable si: durée > 12
   titre: Total des salaires bruts perçus pendant la 2ème année du contrat
   question: Indiquez le total des salaires bruts perçus pendant la 2ème année du contrat (du 13ème au 24ème mois de contrat)
@@ -133,7 +133,7 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
   cdtn:
     type: montant
 
-contrat salarié . convention collective . sedima . cdi opération . mission possible . résultat conventionnelle ancienneté entre 1 an et 2 ans:
+contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . résultat conventionnelle ancienneté entre 1 an et 2 ans:
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 1 an
@@ -149,11 +149,11 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
   cdtn:
     formule:
       explanations:
-        - "Sref1 : Total des salaires bruts perçus pendant la 1ère année du contrat": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année
-        - "Sref2 : Total des salaires bruts perçus pendant la 2ème année du contrat": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année
+        - "Sref1 : Total des salaires bruts perçus pendant la 1ère année du contrat": contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année
+        - "Sref2 : Total des salaires bruts perçus pendant la 2ème année du contrat": contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 2e année
       formula: (8% * Sref1) + (6% * Sref2)
 
-contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 3e année et plus:
+contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 3e année et plus:
   applicable si: durée > 24
   titre: Total des salaires bruts perçus de la 3ème année jusqu'à la fin du contrat
   question: Indiquez le total des salaires bruts perçus du 25ème mois de contrat jusqu'à la fin du contrat (préavis inclus)
@@ -161,7 +161,7 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
   cdtn:
     type: montant
 
-contrat salarié . convention collective . sedima . cdi opération . mission possible . résultat conventionnelle ancienneté au-delà de 2 ans:
+contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . résultat conventionnelle ancienneté au-delà de 2 ans:
   applicable si: 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 an
@@ -176,24 +176,24 @@ contrat salarié . convention collective . sedima . cdi opération . mission pos
   cdtn:
     formule:
       explanations:
-        - "Sref1 : Total des salaires bruts perçus pendant la 1ère année du contrat": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 1e année
-        - "Sref2 : Total des salaires bruts perçus pendant la 2ème année du contrat": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 2e année
-        - "Sref3 : Total des salaires bruts perçus de la 3ème année jusqu'à la fin du contrat": contrat salarié . convention collective . sedima . cdi opération . mission possible . salaires 3e année et plus
+        - "Sref1 : Total des salaires bruts perçus pendant la 1ère année du contrat": contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année
+        - "Sref2 : Total des salaires bruts perçus pendant la 2ème année du contrat": contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 2e année
+        - "Sref3 : Total des salaires bruts perçus de la 3ème année jusqu'à la fin du contrat": contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 3e année et plus
       formula: (8% * Sref1) + (6% * Sref2) + (4% * Sref3)
 
 ## Mission impossible
-contrat salarié . convention collective . sedima . cdi opération . mission impossible:
-  applicable si: question mission impossible = 'Oui'
+contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois:
+  applicable si: durée < 6 mois
   valeur: oui
 
-contrat salarié . convention collective . sedima . cdi opération . mission impossible . question période essai:
+contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . question période essai:
   titre: Salarié licencié avant la fin de la période d'essai
   description: Répondre non si le salarié n'a pas de période d'essai
   question: Le salarié est-il licencié avant la fin de sa période d’essai&nbsp;?
   cdtn:
     type: oui-non
 
-contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total:
+contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . salaires total:
   titre: Total des salaires bruts perçus
   question: Indiquez le total des salaires bruts perçus depuis le début du contrat
   description: Total des salaires perçus
@@ -201,7 +201,7 @@ contrat salarié . convention collective . sedima . cdi opération . mission imp
   cdtn:
     type: montant
 
-contrat salarié . convention collective . sedima . cdi opération . mission impossible . résultat conventionnel:
+contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . résultat conventionnel:
   variations:
     - si: question période essai = 'Non'
       alors: (10 / 100) * salaires total
@@ -215,5 +215,5 @@ contrat salarié . convention collective . sedima . cdi opération . mission imp
   cdtn:
     formule:
       explanations:
-        - "Sref : Total des salaires bruts perçus depuis le début de l'engagement": contrat salarié . convention collective . sedima . cdi opération . mission impossible . salaires total
+        - "Sref : Total des salaires bruts perçus depuis le début de l'engagement": contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . salaires total
       formula: (10% * Sref)

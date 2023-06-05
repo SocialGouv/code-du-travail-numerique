@@ -9,10 +9,10 @@ describe("CC 1404", () => {
     test.each`
       absences                                                                                                                                                                                                    | entryDate       | exitDate        | expectedAnciennete
       ${[]}                                                                                                                                                                                                       | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
-      ${[{ durationInMonth: 1, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "20/04/2020" }]}                                                                                                     | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
-      ${[{ durationInMonth: 5, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "20/04/2020" }]}                                                                                                     | ${"20/02/2020"} | ${"20/02/2021"} | ${7 / 12}
-      ${[{ durationInMonth: 4, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "20/04/2020" }, { durationInMonth: 2, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "20/09/2020" }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${6 / 12}
-      ${[{ durationInMonth: 6, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "31/08/2020" }]}                                                                                                     | ${"20/08/2020"} | ${"20/08/2021"} | ${0.6583333333333333}
+      ${[{ durationInMonth: 1, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "20/04/2020" }]}                                                                                                     | ${"20/02/2020"} | ${"20/02/2021"} | ${11 / 12}
+      ${[{ durationInMonth: 5, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "20/04/2020" }]}                                                                                                     | ${"20/02/2020"} | ${"20/02/2021"} | ${9 / 12}
+      ${[{ durationInMonth: 4, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "20/04/2020" }, { durationInMonth: 2, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "20/09/2020" }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${9 / 12}
+      ${[{ durationInMonth: 6, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "30/09/2020" }]}                                                                                                     | ${"20/08/2020"} | ${"20/08/2021"} | ${0.5083333333333333}
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
