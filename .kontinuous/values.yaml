@@ -1,0 +1,26 @@
+jobs:
+  ~chart: jobs
+  runs:
+    build-app:
+      use: build
+      with:
+        imagePackage: app
+
+app:
+  ~chart: app
+  ~needs: [build-app]
+  imagePackage: app
+  imageProject: cdtn
+  probesPath: /api/health
+  envFrom:
+    - configMapRef:
+        name: www-configmap
+    - secretRef:
+        name: www-secret
+  resources:
+    limits:
+      cpu: 250m
+      memory: 512Mi
+    requests:
+      cpu: 50m
+      memory: 256Mi

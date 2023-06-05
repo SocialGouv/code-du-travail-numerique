@@ -1,0 +1,20 @@
+name: 👀 Review
+on:
+  push:
+    branches:
+      - "**"
+      - "!master"
+      - "!main"
+      - "!feat/**"
+      - "!fix/**"
+      - "!maxgfr/**"
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.ref }}
+
+jobs:
+  socialgouv:
+    name: "🇫🇷 SocialGouv"
+    uses: socialgouv/workflows/.github/workflows/use-ks-gh-review.yaml@v1
+    secrets: inherit
