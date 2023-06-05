@@ -7,6 +7,7 @@ on:
       - "!main"
       - "!feat/**"
       - "!fix/**"
+      - "!maxgfr/**"
 
 concurrency:
   cancel-in-progress: true
