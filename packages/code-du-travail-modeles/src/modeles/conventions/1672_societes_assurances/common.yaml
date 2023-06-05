@@ -5,3 +5,13 @@ contrat salarié . convention collective . sociétés d'assurances:
   cdtn:
     idcc: 1672
     préavis-retraite: true
+
+contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      Non-cadres (Classes 1 à 4): "'Non-cadres (Classes 1 à 4)'"
+      Cadres (Classes 5 à 7): "'Cadres (Classes 5 à 7)'"

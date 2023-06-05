@@ -1,12 +1,11 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { Button, Section as SectionUi, theme } from "@socialgouv/cdtn-ui";
+import { Button, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import { TrackingProps } from "../types";
-import { renderResults } from "../../common/Agreement/EnterpriseSearch/EntrepriseSearchResult";
 import {
   SearchEnterpriseInput,
   SearchParams,
@@ -21,6 +20,7 @@ type EnterpriseSearchStepProps = {
   ) => void;
   searchParams?: SearchParams;
   onSearchParamsChange: (params: SearchParams) => void;
+  hidePreviousButton?: boolean;
 } & TrackingProps;
 
 const EnterpriseSearchStep = ({
@@ -29,6 +29,7 @@ const EnterpriseSearchStep = ({
   searchParams,
   onSearchParamsChange,
   onUserAction,
+  hidePreviousButton,
 }: EnterpriseSearchStepProps): JSX.Element => {
   return (
     <>
@@ -39,22 +40,27 @@ const EnterpriseSearchStep = ({
             searchParams={searchParams}
             onUserAction={onUserAction}
             onSearchParamsChange={onSearchParamsChange}
-            renderResults={renderResults({
-              handleEnterpriseSelection,
-              onUserAction,
-            })}
+            handleEnterpriseSelection={handleEnterpriseSelection}
           />
         </form>
       </Section>
-      <Link
-        href={`/${SOURCES.TOOLS}/convention-collective`}
-        passHref
-        legacyBehavior
-      >
-        <Button as="a" small type="button" onClick={onBackClick} variant="flat">
-          Précédent
-        </Button>
-      </Link>
+      {!hidePreviousButton && (
+        <Link
+          href={`/${SOURCES.TOOLS}/convention-collective`}
+          passHref
+          legacyBehavior
+        >
+          <Button
+            as="a"
+            small
+            type="button"
+            onClick={onBackClick}
+            variant="flat"
+          >
+            Précédent
+          </Button>
+        </Link>
+      )}
     </>
   );
 };

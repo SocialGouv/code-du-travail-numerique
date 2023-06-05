@@ -14,6 +14,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
       Non-Cadres: "'Non-cadres'"
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique:
+  applicable si: indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = non
   titre: Licenciement pour motif économique
   question: Le motif du licenciement est-il économique ?
   cdtn:
@@ -84,7 +85,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
   applicable si:
     une de ces conditions:
       - toutes ces conditions:
-          - licenciement économique = 'Non'
+          - licenciement économique != 'Oui'
       - toutes ces conditions:
           - licenciement économique = 'Oui'
           - licenciement économique . age < 50 an
@@ -235,7 +236,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
   applicable si:
     une de ces conditions:
       - toutes ces conditions:
-          - licenciement économique = 'Non'
+          - licenciement économique != 'Oui'
       - toutes ces conditions:
           - licenciement économique = 'Oui'
           - licenciement économique . age < 50 an
@@ -243,7 +244,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
           - licenciement économique = 'Oui'
           - licenciement économique . age >= 50 an
           - indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
-  valeur: contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . résultat conventionnel
+  valeur: cadre . résultat conventionnel
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . résultat conventionnel . moins de 5 ans:
   applicable si:

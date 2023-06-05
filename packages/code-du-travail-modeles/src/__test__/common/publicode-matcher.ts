@@ -1,11 +1,14 @@
 import type { Rule } from "publicodes";
 
+import type { MissingArgs } from "../../publicodes";
+
 declare global {
   namespace jest {
     interface Matchers<R> {
       toContainTitre: () => R;
       toContainQuestion: () => R;
       toContainValidCdtnType: () => R;
+      toHaveNextMissingRule: (rule: string | null) => R;
     }
   }
 }
@@ -58,6 +61,28 @@ expect.extend({
       pass: validCdtnType.includes(type),
     };
   },
+  toHaveNextMissingRule(missingVariables: MissingArgs[], rule: string | null) {
+    const missingVars = missingVariables
+      .filter((arg) => arg.rawNode.cdtn !== undefined)
+      .sort((a, b) => b.indice - a.indice);
+    if (missingVars.length === 0) {
+      return {
+        message: () =>
+          `Expected next question to be ${rule} but received no next question`,
+        pass: rule === null,
+      };
+    }
+    const nextRule = replaceAll(missingVars[0].name, " - ", " . ");
+    return {
+      message: () =>
+        `Expected next question to be ${rule} but received ${nextRule}`,
+      pass: nextRule === rule,
+    };
+  },
 });
+
+const replaceAll = (string: string, search: string, replace: string) => {
+  return string.split(search).join(replace);
+};
 
 export default undefined;

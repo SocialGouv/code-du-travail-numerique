@@ -2,6 +2,9 @@ export enum MatomoBaseEvent {
   TRACK_EVENT = "trackEvent",
   OUTIL = "outil",
   PAGE_INFORMATION = "page_information",
+  WIDGET_SEARCH = "widget_search",
+  HEADER = "header",
+  PAGE_HOME = "page_home",
 }
 
 export enum MatomoBaseAction {
@@ -18,6 +21,22 @@ export enum MatomoSearchAgreementCategory {
   ENTERPRISE_SEARCH = "enterprise_search",
   AGREEMENT_SEARCH = "cc_search",
   AGREEMENT_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
+}
+
+export enum MatomoHeaderEvent {
+  CLICK_BOITE_A_OUTILS = "click_boite_a_outils",
+  CLICK_MODELE_DE_DOCUMENTS = "click_modele_de_documents",
+  CLICK_FICHES_PRATIQUES = "click_fiches_pratiques",
+  CLICK_CONVENTION_COLLECTIVE = "click_convention_collective",
+  CLICK_THEMES = "click_themes",
+}
+
+export enum MatomoHomeEvent {
+  CLICK_VOIR_TOUS_LES_OUTILS = "click_voir_tous_les_outils",
+  CLICK_VOIR_TOUS_LES_MODELES = "Click_voir_tous_modeles_de_documents",
+  CLICK_VOIR_TOUTES_LES_FICHES = "click_voir_toutes_les_fiches_pratiques",
+  CLICK_VOIR_TOUTES_LES_CONVENTIONS_COLLECTIVES = "click_voir_toutes_les_conventions_collectives",
+  CLICK_VOIR_TOUTES_LES_THEMES = "click_voir_tous_les_themes",
 }
 
 export enum MatomoSimulatorEvent {

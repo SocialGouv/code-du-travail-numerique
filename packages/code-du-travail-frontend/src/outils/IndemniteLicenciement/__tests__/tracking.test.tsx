@@ -151,6 +151,7 @@ describe("Indemnité licenciement - Tracking", () => {
     fireEvent.change(ui.agreement.agreementCompanyInput.get(), {
       target: { value: "carrefour" },
     });
+    fireEvent.click(ui.agreement.agreementCompanySearchButton.get());
     await waitFor(() => {
       fireEvent.click(ui.agreement.searchItem.carrefour.get());
     });
@@ -214,6 +215,7 @@ describe("Indemnité licenciement - Tracking", () => {
     fireEvent.change(ui.agreement.agreementCompanyInput.get(), {
       target: { value: "carrefour" },
     });
+    fireEvent.click(ui.agreement.agreementCompanySearchButton.get());
     await waitFor(() => {
       fireEvent.click(ui.agreement.searchItem.carrefour.get());
     });
@@ -283,7 +285,6 @@ describe("Indemnité licenciement - Tracking", () => {
       1261,
     ]);
   });
-
 
   test("vérifier qu'on a un event ineligible sur la recherche entreprise", async () => {
     fireEvent.click(ui.introduction.startButton.get());

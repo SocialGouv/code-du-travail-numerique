@@ -3,13 +3,13 @@
 exports[`<Title /> renders a H2 title 1`] = `
 <div>
   <div
-    class="sc-gswNZR bnttDR"
+    class="sc-gEvEer hwJemA"
   >
     <h2
-      class="sc-hLBbgP dNVHJv"
+      class="sc-fqkvVR lnmEWQ"
     >
       <span
-        class="sc-bcXHqe ebNMxn"
+        class="sc-aXZVg jHdfHu"
       />
       Lorem Ipsum
     </h2>
@@ -20,13 +20,13 @@ exports[`<Title /> renders a H2 title 1`] = `
 exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the left) 1`] = `
 <div>
   <div
-    class="sc-gswNZR hBEZdJ"
+    class="sc-gEvEer fkOhBo"
   >
     <h2
-      class="sc-hLBbgP gUFmAN"
+      class="sc-fqkvVR AIxqu"
     >
       <span
-        class="sc-bcXHqe ebNMxn"
+        class="sc-aXZVg jHdfHu"
       />
       Lorem Ipsum
     </h2>
@@ -37,10 +37,10 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
 exports[`<Title /> renders a unstriped H2 title 1`] = `
 <div>
   <div
-    class="sc-gswNZR bnttDR"
+    class="sc-gEvEer hwJemA"
   >
     <h2
-      class="sc-hLBbgP fvFwrK"
+      class="sc-fqkvVR jnkCXF"
     >
       Lorem Ipsum
     </h2>

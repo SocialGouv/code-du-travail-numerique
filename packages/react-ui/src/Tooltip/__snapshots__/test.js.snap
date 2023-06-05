@@ -3,10 +3,10 @@
 exports[`<Tooltip /> renders bottom tooltip 1`] = `
 <div>
   <div
-    class="sc-bcXHqe kcDQFN"
+    class="sc-aXZVg jxBbRM"
   >
     <button
-      class="sc-gswNZR joaVWx"
+      class="sc-gEvEer XSTEk"
     >
       A simple tooltip
     </button>
@@ -17,10 +17,10 @@ exports[`<Tooltip /> renders bottom tooltip 1`] = `
 exports[`<Tooltip /> renders custom color tooltip 1`] = `
 <div>
   <div
-    class="sc-bcXHqe kcDQFN"
+    class="sc-aXZVg jxBbRM"
   >
     <button
-      class="sc-gswNZR joaVWx"
+      class="sc-gEvEer XSTEk"
     >
       A simple tooltip
     </button>
@@ -31,10 +31,10 @@ exports[`<Tooltip /> renders custom color tooltip 1`] = `
 exports[`<Tooltip /> renders left tooltip 1`] = `
 <div>
   <div
-    class="sc-bcXHqe kcDQFN"
+    class="sc-aXZVg jxBbRM"
   >
     <button
-      class="sc-gswNZR joaVWx"
+      class="sc-gEvEer XSTEk"
     >
       A simple tooltip
     </button>
@@ -45,10 +45,10 @@ exports[`<Tooltip /> renders left tooltip 1`] = `
 exports[`<Tooltip /> renders right tooltip 1`] = `
 <div>
   <div
-    class="sc-bcXHqe kcDQFN"
+    class="sc-aXZVg jxBbRM"
   >
     <button
-      class="sc-gswNZR joaVWx"
+      class="sc-gEvEer XSTEk"
     >
       A simple tooltip
     </button>
@@ -59,10 +59,10 @@ exports[`<Tooltip /> renders right tooltip 1`] = `
 exports[`<Tooltip /> renders simple tooltip 1`] = `
 <div>
   <div
-    class="sc-bcXHqe kcDQFN"
+    class="sc-aXZVg jxBbRM"
   >
     <button
-      class="sc-gswNZR joaVWx"
+      class="sc-gEvEer XSTEk"
     >
       A simple tooltip
     </button>

@@ -20,10 +20,11 @@ export type ResultStoreInput = {
   agreementReferences?: References[];
   isAgreementBetter: boolean;
   agreementInformations?: AgreementInformation[];
-  agreementNotifications?: Notification[];
+  notifications?: Notification[];
   agreementHasNoLegalIndemnity?: boolean;
   isEligible: boolean;
   infoWarning?: { message: string; title: string };
+  isParentalNoticeHidden: boolean;
 };
 
 export type ResultStoreError = {};

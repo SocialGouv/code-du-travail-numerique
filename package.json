@@ -5,10 +5,9 @@
   "description": "Code du travail",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap --force-local && lerna link --force-local",
     "build": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils,@cdt/frontend} --stream",
     "build:npm": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils} --stream",
-    "build:frontend": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils,@cdt/frontend} --stream",
     "clean": "lerna clean",
     "dev:docker": "docker-compose up elasticsearch",
     "dev": "lerna run dev --parallel",
@@ -21,6 +20,7 @@
     "lint:fix": "lerna run lint -- --fix",
     "lint:quiet": "lerna run lint -- --quiet",
     "start": "lerna run start --scope=@cdt/frontend --stream",
+    "storybook:build": "lerna run build-storybook --scope=@socialgouv/cdtn-ui",
     "storybook:run": "lerna run start --scope=@socialgouv/cdtn-ui",
     "storybook:deploy": "lerna run deploy-storybook --scope=@socialgouv/cdtn-ui",
     "storybook:deploy:action": "lerna run deploy-storybook:action --scope=@socialgouv/cdtn-ui",
@@ -31,6 +31,7 @@
     "test:e2e": "lerna run test:e2e --scope=@cdt/frontend --stream",
     "test:e2e:ui": "lerna run test:e2e:ui --scope=@cdt/frontend --stream",
     "test:update": "lerna run test:update --scope={@socialgouv/cdtn-ui,@cdt/frontend} --stream",
+    "test:update:api": "lerna run test:api:update --scope=@cdt/frontend --stream",
     "prepare": "is-ci || husky install"
   },
   "repository": {
@@ -40,15 +41,10 @@
   "bugs": {
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
-  "dependencies": {
+  "devDependencies": {
     "husky": "^8.0.0",
     "is-ci": "^3.0.0",
     "lerna": "^5.0.0"
-  },
-  "resolutions": {
-    "@babel/core": "^7.14.8",
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/preset-env": "^7.15.0"
   },
   "workspaces": {
     "packages": [
@@ -56,10 +52,7 @@
     ]
   },
   "engines": {
-    "node": ">= v14.18.3"
-  },
-  "volta": {
-    "node": "14.18.3"
+    "node": ">= v20"
   },
   "version": "0.0.0"
 }

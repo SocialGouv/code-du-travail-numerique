@@ -104,5 +104,4 @@ const MOTIFS_1090: Motif[] = [
   { key: MotifKeys.congesSansSolde, label: "Congés sans solde", value: 0 },
   { key: MotifKeys.greve, label: "Grève", value: 0 },
   { key: MotifKeys.miseAPied, label: "Mise à pied", value: 0 },
-  { key: MotifKeys.congesPaternite, label: "Congé de paternité", value: 0 },
 ];

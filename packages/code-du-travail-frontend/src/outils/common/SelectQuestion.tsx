@@ -4,7 +4,7 @@ import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
 
-import { Error, ErrorField } from "./ErrorField";
+import { ErrorField } from "./ErrorField";
 import { Question, Tooltip } from "./Question";
 import { required } from "./validators";
 

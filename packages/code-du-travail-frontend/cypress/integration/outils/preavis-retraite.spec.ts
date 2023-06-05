@@ -88,6 +88,7 @@ describe("Outil - Préavis de retraite", () => {
       "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale."
     );
   });
+
   it("Parcours en connaissant sa convention collective", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
@@ -143,6 +144,7 @@ describe("Outil - Préavis de retraite", () => {
       "Ce résultat tient compte de la majoration pour les travailleurs handicapés."
     );
   });
+
   it("Parcours en ne connaissant pas sa convention collective", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
@@ -167,6 +169,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.get("button").contains("Suivant").click();
     cy.contains("Vous devez sélectionner une entreprise");
     cy.get("#enterprise-search").type("carrefour");
+    cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR HYPERMARCHES").click();
     cy.contains("Vous devez sélectionner une entreprise").should("not.exist");
     cy.contains(
@@ -188,6 +191,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.get('[aria-label="Fermer"]').click();
     cy.get("#enterprise-search").clear().type("Ondo");
     cy.get("#enterprise-search-address").type("69007");
+    cy.get('button[type="submit"]').last().click();
     cy.contains("VERNIN").click();
     cy.contains(
       "Une convention collective a été trouvée pour cette entreprise"
