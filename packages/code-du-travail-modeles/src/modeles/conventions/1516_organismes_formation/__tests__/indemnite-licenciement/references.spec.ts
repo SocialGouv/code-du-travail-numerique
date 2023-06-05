@@ -34,6 +34,8 @@ describe("Vérification des références juridiques pour la CC 2511", () => {
           inaptitude,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/12/2022",
       });
       const result = engine.getReferences("résultat conventionnel");
 
