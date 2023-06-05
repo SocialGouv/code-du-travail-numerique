@@ -5,3 +5,17 @@
 **/build/
 **/node_modules/
 **/.next/
+.dockerignore
+Dockerfile
+CHANGELOG.md
+README.md
+/*.md
+.husky
+.github
+.kontinuous
+.gitignore
+.prettierignore
+.editorconfig
+docker-compose.yml
+schema.png
+tech.yaml
