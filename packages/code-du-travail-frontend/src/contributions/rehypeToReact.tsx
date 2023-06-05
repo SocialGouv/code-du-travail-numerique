@@ -1,5 +1,4 @@
 import { Accordion, Alert, Heading, theme, Wrapper } from "@socialgouv/cdtn-ui";
-import React from "react";
 import styled from "styled-components";
 
 import Html from "../common/Html";

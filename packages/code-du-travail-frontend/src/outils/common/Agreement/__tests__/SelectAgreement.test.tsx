@@ -1,4 +1,4 @@
-import { getByText, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
 
 import { EmbeddedInjectedForm } from "../../../../../test/TestForm";

@@ -25,6 +25,7 @@ function addWidget(info) {
   iframe.width = "100%";
   iframe.style = "border:none;";
 
+  const HEADER_MENU_HEIGHT = 50;
   window.addEventListener("message", function (evt) {
     if (
       evt.source === iframe.contentWindow &&
@@ -38,8 +39,7 @@ function addWidget(info) {
     ) {
       const bodyPosition = document.body.getBoundingClientRect();
       const iframePosition = iframe.getBoundingClientRect();
-      const marginTop = (bodyPosition.height * 5) / 100;
-      window.scrollTo(0, iframePosition.top - bodyPosition.top - marginTop);
+      window.scrollTo(0, iframePosition.top - bodyPosition.top - HEADER_MENU_HEIGHT);
     }
   });
 

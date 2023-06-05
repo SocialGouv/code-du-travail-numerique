@@ -110,6 +110,9 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         Que dit le code du travail ?
       </h2>
     </div>
+    <div
+      class="sc-bkSUFG ehEloh"
+    />
     <div>
       <p>
         hello 
@@ -126,7 +129,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       class="sc-iGgWBj cWzIZL"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-lbJcrp fMNeGe"
+        class="sc-ePDLzJ bEkCoG sc-iLsKjm dzskQt"
         id="customisation"
       >
         <h2
@@ -289,6 +292,9 @@ exports[`<Contribution /> should render answer references 1`] = `
         Que dit le code du travail ?
       </h2>
     </div>
+    <div
+      class="sc-bkSUFG ehEloh"
+    />
     <div>
       <p>
         hello 
@@ -305,7 +311,7 @@ exports[`<Contribution /> should render answer references 1`] = `
       class="sc-iGgWBj cWzIZL"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-lbJcrp fMNeGe"
+        class="sc-ePDLzJ bEkCoG sc-iLsKjm dzskQt"
         id="customisation"
       >
         <h2
@@ -468,6 +474,9 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         Que dit le code du travail ?
       </h2>
     </div>
+    <div
+      class="sc-bkSUFG ehEloh"
+    />
     <div>
       <p>
         hello 
@@ -484,7 +493,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       class="sc-iGgWBj cWzIZL"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-lbJcrp fMNeGe"
+        class="sc-ePDLzJ bEkCoG sc-iLsKjm dzskQt"
         id="customisation"
       >
         <h2
@@ -647,6 +656,9 @@ exports[`<Contribution /> should render with both answers 1`] = `
         Que dit le code du travail ?
       </h2>
     </div>
+    <div
+      class="sc-bkSUFG ehEloh"
+    />
     <div>
       <p>
         hello 
@@ -663,7 +675,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
       class="sc-iGgWBj cWzIZL"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-lbJcrp fMNeGe"
+        class="sc-ePDLzJ bEkCoG sc-iLsKjm dzskQt"
         id="customisation"
       >
         <h2
@@ -820,7 +832,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       class="sc-iGgWBj cWzIZL"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-lbJcrp eKZshv"
+        class="sc-ePDLzJ bEkCoG sc-iLsKjm cgsuXk"
         id="customisation"
       >
         <h2
@@ -888,6 +900,9 @@ exports[`<Contribution /> should render with generic answer 1`] = `
         Que dit le code du travail ?
       </h2>
     </div>
+    <div
+      class="sc-bkSUFG ehEloh"
+    />
     <div>
       <p>
         hello 
