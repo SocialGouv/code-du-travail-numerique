@@ -37,7 +37,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               class="sc-eYqcxL hMutTz"
             >
               <h1
-                class="sc-iqPaeV fejMbm"
+                class="sc-iqPaeV gZLqtK"
               >
                 <span
                   class="sc-gKPRtg efbYAr"
@@ -88,7 +88,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               >
                 <input
                   autocomplete="off"
-                  class="sc-fWQKxP iaRXHc"
+                  class="sc-fWQKxP JkeSr"
                   id="search-service"
                   maxlength="3"
                   name="departement"

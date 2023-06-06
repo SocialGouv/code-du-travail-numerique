@@ -133,7 +133,7 @@ exports[`<Answer /> should renders 1`] = `
               class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-iqPaeV dscZbM"
+                class="sc-iqPaeV gtvsiQ"
               >
                 <span
                   class="sc-gKPRtg fPkQGb"
@@ -585,7 +585,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-iqPaeV dscZbM"
+                class="sc-iqPaeV gtvsiQ"
               >
                 <span
                   class="sc-gKPRtg fPkQGb"
@@ -946,7 +946,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-iqPaeV dscZbM"
+                class="sc-iqPaeV gtvsiQ"
               >
                 <span
                   class="sc-gKPRtg fPkQGb"
@@ -1307,7 +1307,7 @@ exports[`<Answer /> should renders related content 1`] = `
               class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-iqPaeV dscZbM"
+                class="sc-iqPaeV gtvsiQ"
               >
                 <span
                   class="sc-gKPRtg fPkQGb"
@@ -1829,7 +1829,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-iqPaeV dscZbM"
+                class="sc-iqPaeV gtvsiQ"
               >
                 <span
                   class="sc-gKPRtg fPkQGb"
@@ -2191,7 +2191,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-iqPaeV dscZbM"
+                class="sc-iqPaeV gtvsiQ"
               >
                 <span
                   class="sc-gKPRtg fPkQGb"
@@ -2553,7 +2553,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-iqPaeV dscZbM"
+                class="sc-iqPaeV gtvsiQ"
               >
                 <span
                   class="sc-gKPRtg fPkQGb"
@@ -2916,7 +2916,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-iqPaeV dscZbM"
+                class="sc-iqPaeV gtvsiQ"
               >
                 <span
                   class="sc-gKPRtg fPkQGb"
