@@ -6,6 +6,7 @@ on:
       - "fix/**"
       - "maxgfr/**"
       - "dev"
+      - "persist-**"
 
 concurrency:
   cancel-in-progress: true

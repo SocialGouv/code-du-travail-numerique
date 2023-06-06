@@ -1,3 +1,9 @@
+global:
+  host: cdtn-indemnite-licenciement.dev.fabrique.social.gouv.fr
+
+app:
+  redirectFrom: ["code-du-travail-numerique-refs-pull-4619-merg-51fdsr.dev.fabrique.social.gouv.fr"]
+
 jobs:
   runs:
     build-app:
