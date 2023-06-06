@@ -103,6 +103,7 @@ contrat salarié . convention collective . sedima . cdi opération . plus de 6 m
 contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année:
   titre: Total des salaires bruts perçus pendant la 1ère année du contrat
   question: Indiquez le total des salaires bruts perçus pendant la 1ère année du contrat (du 1er au 12ème mois de contrat)
+  description: "Prendre en compte le salaire fixe et variable (ex : commissions), les primes et avantages en nature. L'indemnité compensatrice de congés payés doit cependant être exclue."
   unité: €
   cdtn:
     type: montant
@@ -129,6 +130,7 @@ contrat salarié . convention collective . sedima . cdi opération . plus de 6 m
   applicable si: durée > 12
   titre: Total des salaires bruts perçus pendant la 2ème année du contrat
   question: Indiquez le total des salaires bruts perçus pendant la 2ème année du contrat (du 13ème au 24ème mois de contrat)
+  description: "Prendre en compte le salaire fixe et variable (ex : commissions), les primes et avantages en nature. L'indemnité compensatrice de congés payés doit cependant être exclue."
   unité: €
   cdtn:
     type: montant
@@ -157,6 +159,7 @@ contrat salarié . convention collective . sedima . cdi opération . plus de 6 m
   applicable si: durée > 24
   titre: Total des salaires bruts perçus de la 3ème année jusqu'à la fin du contrat
   question: Indiquez le total des salaires bruts perçus du 25ème mois de contrat jusqu'à la fin du contrat (préavis inclus)
+  description: "Prendre en compte le salaire fixe et variable (ex : commissions), les primes et avantages en nature. L'indemnité compensatrice de congés payés doit cependant être exclue."
   unité: €
   cdtn:
     type: montant
@@ -196,7 +199,7 @@ contrat salarié . convention collective . sedima . cdi opération . moins de 6 
 contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . salaires total:
   titre: Total des salaires bruts perçus
   question: Indiquez le total des salaires bruts perçus depuis le début du contrat
-  description: Total des salaires perçus
+  description: "Prendre en compte le salaire fixe et variable (ex : commissions), les primes et avantages en nature. L'indemnité compensatrice de congés payés doit cependant être exclue."
   unité: €
   cdtn:
     type: montant
