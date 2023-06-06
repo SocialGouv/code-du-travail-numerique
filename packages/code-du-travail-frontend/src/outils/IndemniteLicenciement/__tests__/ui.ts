@@ -172,36 +172,28 @@ export const ui = {
           "infos.contrat salarié - convention collective - sedima - question cdi opération - Non"
         ),
       },
-      missionImpossible: {
-        oui: byTestId(
-          "infos.contrat salarié - convention collective - sedima - cdi opération - question mission impossible - Oui"
-        ),
-        non: byTestId(
-          "infos.contrat salarié - convention collective - sedima - cdi opération - question mission impossible - Non"
-        ),
-      },
       duree: byTestId(
-        "infos.contrat salarié - convention collective - sedima - cdi opération - mission possible - durée"
+        "infos.contrat salarié - convention collective - sedima - cdi opération - durée"
       ),
       salary1: byTestId(
-        "infos.contrat salarié - convention collective - sedima - cdi opération - mission possible - salaires 1e année"
+        "infos.contrat salarié - convention collective - sedima - cdi opération - plus de 6 mois - salaires 1e année"
       ),
       salary2: byTestId(
-        "infos.contrat salarié - convention collective - sedima - cdi opération - mission possible - salaires 2e année"
+        "infos.contrat salarié - convention collective - sedima - cdi opération - plus de 6 mois - salaires 2e année"
       ),
       salary3: byTestId(
-        "infos.contrat salarié - convention collective - sedima - cdi opération - mission possible - salaires 3e année et plus"
+        "infos.contrat salarié - convention collective - sedima - cdi opération - plus de 6 mois - salaires 3e année et plus"
       ),
       trial: {
         oui: byTestId(
-          "infos.contrat salarié - convention collective - sedima - cdi opération - mission impossible - question période essai - Oui"
+          "infos.contrat salarié - convention collective - sedima - cdi opération - moins de 6 mois - question période essai - Oui"
         ),
         non: byTestId(
-          "infos.contrat salarié - convention collective - sedima - cdi opération - mission impossible - question période essai - Non"
+          "infos.contrat salarié - convention collective - sedima - cdi opération - moins de 6 mois - question période essai - Non"
         ),
       },
       salaryTotal: byTestId(
-        "infos.contrat salarié - convention collective - sedima - cdi opération - mission impossible - salaires total"
+        "infos.contrat salarié - convention collective - sedima - cdi opération - moins de 6 mois - salaires total"
       ),
     },
     agreement2148: {

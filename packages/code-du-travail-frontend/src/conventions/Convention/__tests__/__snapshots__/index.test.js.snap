@@ -4806,7 +4806,7 @@ exports[`<Convention /> renders 1`] = `
       >
         <input
           autocomplete="off"
-          class="sc-ejfMa-d dijxYa"
+          class="sc-fWQKxP JkeSr"
           id="search-agreement"
           name="rawQuery"
           placeholder="Congés exceptionnels, prime"

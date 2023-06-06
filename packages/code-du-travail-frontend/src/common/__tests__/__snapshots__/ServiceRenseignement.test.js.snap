@@ -57,7 +57,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     >
       <input
         autocomplete="off"
-        class="sc-ejfMa-d dijxYa"
+        class="sc-fWQKxP JkeSr"
         id="search-service"
         maxlength="3"
         name="departement"

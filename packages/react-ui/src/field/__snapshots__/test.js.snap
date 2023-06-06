@@ -6,7 +6,7 @@ exports[`<Input /> should render input field 1`] = `
     class="sc-dkrFOg hOAQIr"
   >
     <input
-      class="sc-fqkvVR bbxaek"
+      class="sc-hLBbgP hVeiWX"
       name="input"
     />
   </span>

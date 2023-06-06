@@ -95,7 +95,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
         class="sc-bQmOxr iqEHsz"
       >
         <input
-          class="sc-ejfMa-d cBzXXF"
+          class="sc-fWQKxP kCVvZU"
           id="2"
           name="salaires[0].salaire"
           type="number"
@@ -155,7 +155,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
         class="sc-bQmOxr iqEHsz"
       >
         <input
-          class="sc-ejfMa-d cBzXXF"
+          class="sc-fWQKxP kCVvZU"
           id="4"
           name="salaires[1].salaire"
           type="number"
@@ -314,7 +314,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
       class="sc-bQmOxr iqEHsz"
     >
       <input
-        class="sc-ejfMa-d cBzXXF"
+        class="sc-fWQKxP kCVvZU"
         id="currency-1"
         name="salaire"
         type="number"

@@ -61,11 +61,11 @@ describe("Indemnité licenciement - CC 1404", () => {
     beforeEach(() =>
       userEvent.click(ui.information.agreement1404.cdiOperation.oui.get())
     );
-    describe("Etant donné une mission impossible", () => {
+    describe("Etant donné une ancienneté < 6 mois", () => {
       beforeEach(() =>
-        userEvent.click(
-          ui.information.agreement1404.missionImpossible.oui.get()
-        )
+        fireEvent.change(ui.information.agreement1404.duree.get(), {
+          target: { value: "5" },
+        })
       );
       test("Vérifier que le licenciement avant fin de la période d'essai amène au résultat", () => {
         userEvent.click(ui.information.agreement1404.trial.oui.get());
@@ -103,8 +103,7 @@ describe("Indemnité licenciement - CC 1404", () => {
         expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
       });
     });
-    test("Vérifier que la mission possible ammène au résultat", () => {
-      userEvent.click(ui.information.agreement1404.missionImpossible.non.get());
+    test("Vérifier qu'avec plus de 6 mois on arrive au résultat", () => {
       fireEvent.change(ui.information.agreement1404.duree.get(), {
         target: { value: "30" },
       });
