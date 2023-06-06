@@ -1,3 +1,0 @@
-dependencies:
-  fabrique:
-    import: socialgouv/kontinuous/plugins/fabrique@feat/build-using-secrets
