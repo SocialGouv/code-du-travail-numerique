@@ -109,9 +109,9 @@ const IntegrationContainer = ({
             </Select>
           </>
         )}
-
+        <Separator />
         <a href={escape(`${host}${parsedUrl}`)}>{shortTitle}</a>
-
+        <Separator />
         {message ? (
           <div>
             Message envoyé:
@@ -190,4 +190,9 @@ const StyledTitle = styled(PageTitle)`
   max-width: 700px;
   margin: auto;
   margin-bottom: 40px;
+`;
+
+const Separator = styled.div`
+  border-top: 1px solid #e4e8ef;
+  margin: 32px 0;
 `;
