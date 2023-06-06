@@ -27,6 +27,10 @@ ARG NEXT_PUBLIC_SITE_URL
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 ARG NEXT_PUBLIC_SENTRY_RELEASE
 ENV NEXT_PUBLIC_SENTRY_RELEASE=$NEXT_PUBLIC_SENTRY_RELEASE
+ARG NEXT_PUBLIC_SENTRY_ORG
+ENV NEXT_PUBLIC_SENTRY_ORG=$NEXT_PUBLIC_SENTRY_ORG
+ARG NEXT_PUBLIC_SENTRY_PROJECT
+ENV NEXT_PUBLIC_SENTRY_PROJECT=$NEXT_PUBLIC_SENTRY_PROJECT
 
 # Copy all package.json
 COPY ./package.json ./package.json
@@ -45,7 +49,7 @@ COPY . ./
 
 ENV NODE_ENV=production
 
-RUN yarn build  && \
+RUN --mount=type=secret,id=sentry_auth_token yarn build  && \
   yarn --frozen-lockfile --prod --prefer-offline
 
 # app
