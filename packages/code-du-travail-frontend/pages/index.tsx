@@ -35,6 +35,13 @@ const Home = ({
         description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
       />
       <SearchHero />
+      <button
+        onClick={() => {
+          throw new Error("test");
+        }}
+      >
+        test erreurrrr
+      </button>
       {highlights.length > 0 && (
         <Highlights
           id="highlights-element"
