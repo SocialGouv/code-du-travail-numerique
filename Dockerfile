@@ -49,6 +49,8 @@ COPY . ./
 
 ENV NODE_ENV=production
 
+RUN --mount=type=secret,id=foo FOO=$(cat /run/secrets/foo) ls -al /run/secrets
+
 RUN --mount=type=secret,id=foo FOO=$(cat /run/secrets/foo) \
   echo FOO=$FOO
 
