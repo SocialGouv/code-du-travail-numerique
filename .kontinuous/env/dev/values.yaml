@@ -1,6 +1,7 @@
 jobs:
   runs:
     build-app:
+      use: SocialGouv/kontinuous/plugins/contrib/jobs/build@feat/build-using-secrets
       with:
         buildArgs:
           NEXT_PUBLIC_SENTRY_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
@@ -14,3 +15,7 @@ jobs:
           NEXT_PUBLIC_SITE_URL: "https://{{.Values.global.host}}"
           NEXT_PUBLIC_SENTRY_ORG: "incubateur"
           NEXT_PUBLIC_SENTRY_PROJECT: "code-du-travail-numerique"
+        secrets:
+          sentry_auth_token: 
+            secretName: www-secret
+            secretKey: SENTRY_AUTH_TOKEN

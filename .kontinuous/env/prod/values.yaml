@@ -15,6 +15,10 @@ jobs:
           NEXT_PUBLIC_SITE_URL: https://code.travail.gouv.fr
           NEXT_PUBLIC_SENTRY_ORG: "incubateur"
           NEXT_PUBLIC_SENTRY_PROJECT: "code-du-travail-numerique"
+        secrets:
+          sentry_auth_token: 
+            secretName: www-secret
+            secretKey: SENTRY_AUTH_TOKEN
 
 app:
   host: code.travail.gouv.fr

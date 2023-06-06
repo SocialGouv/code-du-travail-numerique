@@ -15,3 +15,7 @@ jobs:
           NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT: "true"
           NEXT_PUBLIC_SENTRY_ORG: "incubateur"
           NEXT_PUBLIC_SENTRY_PROJECT: "code-du-travail-numerique"
+        secrets:
+          sentry_auth_token: 
+            secretName: www-secret
+            secretKey: SENTRY_AUTH_TOKEN
