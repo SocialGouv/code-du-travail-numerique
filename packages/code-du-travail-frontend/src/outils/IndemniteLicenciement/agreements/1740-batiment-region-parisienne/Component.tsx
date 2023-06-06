@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-
 import { RadioQuestion } from "../../../Components";
 import { SalaireTempsPlein } from "../../steps/Salaires/components";
 import {
@@ -76,9 +75,8 @@ export default function Agreement1740() {
               salaryPeriods={noticeSalaryPeriods}
               subTitle={`Indiquez le montant ${
                 hasMoreThanOneNoticeSalary ? "des" : "du"
-              } salaire${S()} (en incluant les primes et avantages en nature)`}
+              } salaire${S()} (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ`}
               error={errorNoticeSalaryPeriods}
-              noPrime
               dataTestidSalaries="notice-salary"
             />
           )}

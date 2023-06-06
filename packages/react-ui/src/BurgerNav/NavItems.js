@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { Button } from "../Button/index.js";
+import { Button } from "../Button";
 import { box, breakpoints, fonts, spacings } from "../theme.js";
 
 export const BurgerNavButton = styled(Button).attrs(() => ({

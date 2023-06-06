@@ -7,6 +7,7 @@ export * from "./573_commerces_de_gros";
 export * from "./650_metallurgie_ingenieurs_cadres";
 export * from "./675_habillement_commerce_succursales";
 export * from "./1090_automobiles";
+export * from "./1483_habillement_textiles_commerce_de_detail";
 export * from "./1486_bureaux_etudes_techniques";
 export * from "./1505_commerces_detail_fruits_legumes";
 export * from "./1516_organismes_formation";
