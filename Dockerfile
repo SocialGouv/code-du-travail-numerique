@@ -49,9 +49,11 @@ COPY . ./
 
 ENV NODE_ENV=production
 
-RUN --mount=type=secret,id=foo echo FOO=$FOO
+RUN --mount=type=secret,id=foo FOO=$(cat /run/secrets/foo) \
+  echo FOO=$FOO
 
-RUN --mount=type=secret,id=sentry_auth_token yarn build  && \
+RUN --mount=type=secret,id=sentry_auth_token SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token) \
+  yarn build  && \
   yarn --frozen-lockfile --prod --prefer-offline
 
 # app
