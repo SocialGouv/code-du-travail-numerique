@@ -18,6 +18,7 @@ child-src 'self' blob:;
 const { withSentryConfig } = require("@sentry/nextjs");
 const MappingReplacement = require("./redirects");
 
+// See config here : https://github.com/getsentry/sentry-webpack-plugin#options
 const sentryConfig = {
   org: process.env.NEXT_PUBLIC_SENTRY_ORG,
   project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
@@ -25,6 +26,10 @@ const sentryConfig = {
   release: process.env.NEXT_PUBLIC_SENTRY_RELEASE,
   urlPrefix: "~/_next",
   include: ".next",
+  ignore: ["node_modules"],
+  setCommits: {
+    auto: true,
+  },
 };
 
 const nextConfig = {
