@@ -2,8 +2,7 @@ ARG NODE_VERSION=20.2.0-alpine
 # dist
 FROM node:$NODE_VERSION AS dist
 
-RUN --mount=type=secret,id=foo FOO=$(cat /run/secrets/foo) ls -al /run/secrets && cat /run/secrets/foo
-RUN --mount=type=secret,id=foo FOO=$(cat /run/secrets/foo) FOO=$(cat /run/secrets/foo) echo $FOO
+RUN --mount=type=secret,id=foo export FOO=$(cat /run/secrets/foo) echo $FOO
 
 WORKDIR /
 
