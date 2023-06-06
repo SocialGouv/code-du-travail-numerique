@@ -27,12 +27,10 @@ export class ReferenceSalary1702
     salaires,
     salairesPendantPreavis,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1702>): number {
-    const rankedSalairesSansPréavis = rankByMonthArrayDescFrench(
-      salaires
-    ).filter((v) => nonNullable(v.value));
+    const rankedSalairesSansPréavis = rankByMonthArrayDescFrench(salaires);
     const rankedSalairesPendantPreavis = rankByMonthArrayDescFrench(
       salairesPendantPreavis
-    ).filter((v) => nonNullable(v.value));
+    );
     const rankedSalaires = [
       ...rankedSalairesPendantPreavis,
       ...rankedSalairesSansPréavis,
