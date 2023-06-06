@@ -33,6 +33,8 @@ ARG NEXT_PUBLIC_SENTRY_ORG
 ENV NEXT_PUBLIC_SENTRY_ORG=$NEXT_PUBLIC_SENTRY_ORG
 ARG NEXT_PUBLIC_SENTRY_PROJECT
 ENV NEXT_PUBLIC_SENTRY_PROJECT=$NEXT_PUBLIC_SENTRY_PROJECT
+ARG NEXT_PUBLIC_SENTRY_URL
+ENV NEXT_PUBLIC_SENTRY_URL=$NEXT_PUBLIC_SENTRY_URL
 
 # Copy all package.json
 COPY ./package.json ./package.json
@@ -50,9 +52,6 @@ RUN yarn --frozen-lockfile --prefer-offline
 COPY . ./
 
 ENV NODE_ENV=production
-
-RUN --mount=type=secret,id=foo export FOO=$(cat /run/secrets/foo);\
-  echo FOO=$FOO
 
 RUN --mount=type=secret,id=sentry_auth_token export SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token); \
   yarn build  && \

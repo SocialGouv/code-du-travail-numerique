@@ -15,6 +15,7 @@ jobs:
           NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT: "true"
           NEXT_PUBLIC_SENTRY_ORG: "incubateur"
           NEXT_PUBLIC_SENTRY_PROJECT: "code-du-travail-numerique"
+          NEXT_PUBLIC_SENTRY_URL: "https://sentry.fabrique.social.gouv.fr/"
         secrets:
           sentry_auth_token: 
             secretName: www-secret

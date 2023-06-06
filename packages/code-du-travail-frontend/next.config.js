@@ -24,11 +24,7 @@ const sentryConfig = {
   project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
   authToken: process.env.SENTRY_AUTH_TOKEN,
   release: process.env.NEXT_PUBLIC_SENTRY_RELEASE,
-  urlPrefix: "~/_next",
-  include: ".next",
-  setCommits: {
-    auto: true,
-  },
+  url: process.env.NEXT_PUBLIC_SENTRY_URL,
 };
 
 const nextConfig = {
