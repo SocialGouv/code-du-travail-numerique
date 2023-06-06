@@ -5,11 +5,13 @@ import type {
   CC44ReferenceSalaryProps,
   CC573ReferenceSalaryProps,
   CC675ReferenceSalaryProps,
+  CC1483ReferenceSalaryProps,
   CC1486ReferenceSalaryProps,
   CC1516ReferenceSalaryProps,
   CC1527ReferenceSalaryProps,
   CC1672ReferenceSalaryProps,
   CC1702ReferenceSalaryProps,
+  CC1740ReferenceSalaryProps,
   CC2098ReferenceSalaryProps,
   CC2148ReferenceSalaryProps,
   CC2596ReferenceSalaryProps,
@@ -63,6 +65,10 @@ export type ReferenceSalaryProps<T> =
     ? CC675ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC1672
     ? CC1672ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC1483
+    ? CC1483ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC1702
     ? CC1702ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC1740
+    ? CC1740ReferenceSalaryProps
     : LegalReferenceSalaryProps;

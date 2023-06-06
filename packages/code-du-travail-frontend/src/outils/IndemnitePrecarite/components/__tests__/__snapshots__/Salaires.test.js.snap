@@ -33,7 +33,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
         class="sc-bQmOxr iqEHsz"
       >
         <input
-          class="sc-fWQKxP iOpVQL"
+          class="sc-ejfMa-d cBzXXF"
           id="5"
           name="salaires[0].salaire"
           type="number"
@@ -173,7 +173,7 @@ exports[`<Salaires /> should render 1`] = `
         class="sc-bQmOxr iqEHsz"
       >
         <input
-          class="sc-fWQKxP iOpVQL"
+          class="sc-ejfMa-d cBzXXF"
           id="1"
           name="salaires[0].salaire"
           type="number"

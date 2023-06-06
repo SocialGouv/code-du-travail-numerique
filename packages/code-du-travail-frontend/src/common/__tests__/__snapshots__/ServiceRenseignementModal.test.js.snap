@@ -88,7 +88,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               >
                 <input
                   autocomplete="off"
-                  class="sc-fWQKxP iaRXHc"
+                  class="sc-ejfMa-d dijxYa"
                   id="search-service"
                   maxlength="3"
                   name="departement"

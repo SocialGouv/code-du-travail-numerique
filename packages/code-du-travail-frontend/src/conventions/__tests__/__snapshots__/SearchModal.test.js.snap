@@ -53,7 +53,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
             >
               <input
-                class="sc-fWQKxP iaRXHc"
+                class="sc-ejfMa-d dijxYa"
                 id="convention-search"
                 name="q"
                 placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"

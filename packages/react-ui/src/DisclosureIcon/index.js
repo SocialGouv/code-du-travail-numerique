@@ -43,7 +43,7 @@ const DisclosureIconButton = styled(Button)`
   font-weight: 700;
   font-size: ${fonts.sizes.small};
   color: ${({ theme }) => theme.secondary};
-  margin-left: ${spacings.xsmall};
+  margin-left: ${spacings.tiny};
   padding: 0.5rem;
   height: 2rem;
   width: 2rem;
