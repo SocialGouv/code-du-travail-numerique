@@ -111,7 +111,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       </h2>
     </div>
     <div
-      class="sc-bkSUFG ehEloh"
+      class="sc-kIlzlo OZGbS"
     />
     <div>
       <p>
@@ -129,7 +129,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       class="sc-jSUZER cbQucy"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-iLsKjm dzskQt"
+        class="sc-eYqcxL kwhHqj sc-ifSILs iercrP"
         id="customisation"
       >
         <h2
@@ -293,7 +293,7 @@ exports[`<Contribution /> should render answer references 1`] = `
       </h2>
     </div>
     <div
-      class="sc-bkSUFG ehEloh"
+      class="sc-kIlzlo OZGbS"
     />
     <div>
       <p>
@@ -311,7 +311,7 @@ exports[`<Contribution /> should render answer references 1`] = `
       class="sc-jSUZER cbQucy"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-iLsKjm dzskQt"
+        class="sc-eYqcxL kwhHqj sc-ifSILs iercrP"
         id="customisation"
       >
         <h2
@@ -475,7 +475,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       </h2>
     </div>
     <div
-      class="sc-bkSUFG ehEloh"
+      class="sc-kIlzlo OZGbS"
     />
     <div>
       <p>
@@ -493,7 +493,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       class="sc-jSUZER cbQucy"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-iLsKjm dzskQt"
+        class="sc-eYqcxL kwhHqj sc-ifSILs iercrP"
         id="customisation"
       >
         <h2
@@ -657,7 +657,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
       </h2>
     </div>
     <div
-      class="sc-bkSUFG ehEloh"
+      class="sc-kIlzlo OZGbS"
     />
     <div>
       <p>
@@ -675,7 +675,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
       class="sc-jSUZER cbQucy"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-iLsKjm dzskQt"
+        class="sc-eYqcxL kwhHqj sc-ifSILs iercrP"
         id="customisation"
       >
         <h2
@@ -832,7 +832,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       class="sc-jSUZER cbQucy"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-iLsKjm cgsuXk"
+        class="sc-eYqcxL kwhHqj sc-ifSILs bwAmDu"
         id="customisation"
       >
         <h2
@@ -901,7 +901,7 @@ exports[`<Contribution /> should render with generic answer 1`] = `
       </h2>
     </div>
     <div
-      class="sc-bkSUFG ehEloh"
+      class="sc-kIlzlo OZGbS"
     />
     <div>
       <p>
