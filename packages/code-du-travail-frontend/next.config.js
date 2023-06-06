@@ -26,7 +26,6 @@ const sentryConfig = {
   release: process.env.NEXT_PUBLIC_SENTRY_RELEASE,
   urlPrefix: "~/_next",
   include: ".next",
-  ignore: ["node_modules"],
   setCommits: {
     auto: true,
   },
