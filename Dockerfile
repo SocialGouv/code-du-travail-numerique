@@ -2,7 +2,7 @@ ARG NODE_VERSION=20.2.0-alpine
 # dist
 FROM node:$NODE_VERSION AS dist
 
-RUN --mount=type=secret,id=foo export FOO=$(cat /run/secrets/foo) echo $FOO
+RUN --mount=type=secret,id=foo export FOO=$(cat /run/secrets/foo); echo FOO=$FOO
 
 WORKDIR /
 
@@ -51,10 +51,9 @@ COPY . ./
 
 ENV NODE_ENV=production
 
-RUN --mount=type=secret,id=foo FOO=$(cat /run/secrets/foo) \
-  echo FOO=$FOO
+RUN --mount=type=secret,id=foo export FOO=$(cat /run/secrets/foo) echo FOO=$FOO
 
-RUN --mount=type=secret,id=sentry_auth_token SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token) \
+RUN --mount=type=secret,id=sentry_auth_token export SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token) \
   yarn build  && \
   yarn --frozen-lockfile --prod --prefer-offline
 
