@@ -1,7 +1,7 @@
 jobs:
   runs:
     build-app:
-      use: SocialGouv/kontinuous/plugins/contrib/jobs/build@feat/build-using-secrets
+      use: build
       with:
         buildArgs:
           NEXT_PUBLIC_SENTRY_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
