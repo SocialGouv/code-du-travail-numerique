@@ -55,9 +55,7 @@ RUN --mount=type=secret,id=sentry_auth_token export SENTRY_AUTH_TOKEN=$(cat /run
 FROM node:$NODE_VERSION
 
 # hadolint ignore=DL3018
-RUN apk --update --no-cache add ca-certificates
-# hadolint ignore=DL3059
-RUN apk upgrade
+RUN apk --update --no-cache add ca-certificates && apk upgrade
 
 ENV NODE_ENV=production
 

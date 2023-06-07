@@ -1,0 +1,20 @@
+name: Testing e2e
+
+on: pull_request
+
+concurrency:
+  cancel-in-progress: true
+  group: e2e-${{ github.ref }}
+
+jobs:
+  e2e:
+    name: Testing e2e
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+          build: yarn build
+          start: yarn start
