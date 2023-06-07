@@ -75,7 +75,7 @@
     "remark-parse": "^9.0.0",
     "remark-rehype": "^8.1.0",
     "styled-components": "^5.3.6",
-    "unified": "^9.2.2",
+    "unified": "^10.1.2",
     "uuid": "^9.0.0",
     "xss": "^1.0.10",
     "zustand": "^4.3.6"
