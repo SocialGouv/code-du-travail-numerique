@@ -2,7 +2,7 @@ name: 👀 Review
 on:
   push:
     branches:
-      - "dependabot/**"
+      - "renovate/**"
 
 concurrency:
   cancel-in-progress: true

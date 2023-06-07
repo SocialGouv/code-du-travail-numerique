@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - "**"
-      - "!dependabot/**"
+      - "!renovate/**"
       - "!master"
       - "!main"
 
