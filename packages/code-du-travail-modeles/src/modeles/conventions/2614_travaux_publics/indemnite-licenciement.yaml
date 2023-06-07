@@ -98,7 +98,7 @@ contrat salarié . convention collective . travaux publics . age . plus de 65 an
   valeur: oui
 
 contrat salarié . convention collective . travaux publics . age . moins de  55 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - vingt cinq pourcent de moins de quinze ans
