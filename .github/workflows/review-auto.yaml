@@ -2,10 +2,10 @@ name: 👓 Review Auto
 on:
   push:
     branches:
-      - "feat/**"
-      - "fix/**"
-      - "maxgfr/**"
-      - "dev"
+      - "**"
+      - "!dependabot/**"
+      - "!master"
+      - "!main"
 
 concurrency:
   cancel-in-progress: true
