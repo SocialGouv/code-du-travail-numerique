@@ -1938,7 +1938,7 @@ __metadata:
     react-uid: ^2.3.1
     rehype-parse: ^8.0.3
     rehype-raw: ^5.1.0
-    rehype-react: ^6.2.1
+    rehype-react: ^7.2.0
     remark-parse: ^9.0.0
     remark-rehype: ^8.1.0
     styled-components: ^5.3.6
@@ -13125,6 +13125,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hast-to-hyperscript@npm:^10.0.0":
+  version: 10.0.3
+  resolution: "hast-to-hyperscript@npm:10.0.3"
+  dependencies:
+    "@types/unist": ^2.0.0
+    comma-separated-tokens: ^2.0.0
+    property-information: ^6.0.0
+    space-separated-tokens: ^2.0.0
+    style-to-object: ^0.4.1
+    web-namespaces: ^2.0.0
+  checksum: a119071eb9cb8b60d8d892277a1cfc7ed736e2b3478ac7b90ebf0e6494516e7ac14d6530b726df693f3ae733065a25cd57efb32de82a69c8879ec34cb015ff29
+  languageName: node
+  linkType: hard
+
 "hast-to-hyperscript@npm:^9.0.0":
   version: 9.0.1
   resolution: "hast-to-hyperscript@npm:9.0.1"
@@ -13214,6 +13228,13 @@ __metadata:
     xtend: ^4.0.0
     zwitch: ^1.0.0
   checksum: 91a36244e37df1d63c8b7e865ab0c0a25bb7396155602be005cf71d95c348e709568f80e0f891681a3711d733ad896e70642dc41a05b574eddf2e07d285408a8
+  languageName: node
+  linkType: hard
+
+"hast-util-whitespace@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "hast-util-whitespace@npm:2.0.1"
+  checksum: 431be6b2f35472f951615540d7a53f69f39461e5e080c0190268bdeb2be9ab9b1dddfd1f467dd26c1de7e7952df67beb1307b6ee940baf78b24a71b5e0663868
   languageName: node
   linkType: hard
 
@@ -19590,13 +19611,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rehype-react@npm:^6.2.1":
-  version: 6.2.1
-  resolution: "rehype-react@npm:6.2.1"
+"rehype-react@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "rehype-react@npm:7.2.0"
   dependencies:
     "@mapbox/hast-util-table-cell-style": ^0.2.0
-    hast-to-hyperscript: ^9.0.0
-  checksum: 7f16a2cfc38d1fe0d40944f8f27309fc16440d69d3bb53f8e0ca6d6825572f7d1cac4212193a4f4de456b2342fea66ea0919648ad09c0663cfb1e4ca12bed647
+    "@types/hast": ^2.0.0
+    hast-to-hyperscript: ^10.0.0
+    hast-util-whitespace: ^2.0.0
+    unified: ^10.0.0
+  peerDependencies:
+    "@types/react": ">=17"
+  checksum: f2a0d83d905e2fabc6c2aa005b54fa05e54964329200b818886effb7e7e649a8dde4c25774a969bfc2b0218732615e911128fbcc7318adb0937ec48e2229e888
   languageName: node
   linkType: hard
 
@@ -21092,6 +21118,15 @@ __metadata:
   dependencies:
     inline-style-parser: 0.1.1
   checksum: 4d7084015207f2a606dfc10c29cb5ba569f2fe8005551df7396110dd694d6ff650f2debafa95bd5d147dfb4ca50f57868e2a7f91bf5d11ef734fe7ccbd7abf59
+  languageName: node
+  linkType: hard
+
+"style-to-object@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "style-to-object@npm:0.4.1"
+  dependencies:
+    inline-style-parser: 0.1.1
+  checksum: 2ea213e98eed21764ae1d1dc9359231a9f2d480d6ba55344c4c15eb275f0809f1845786e66d4caf62414a5cc8f112ce9425a58d251c77224060373e0db48f8c2
   languageName: node
   linkType: hard
 
