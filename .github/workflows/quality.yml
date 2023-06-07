@@ -20,7 +20,7 @@ jobs:
         with:
           project: "cdtn"
           imageName: cdtn/elasticsearch
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.SOCIALGROOVYBOT_PAT }}
           dockerfile: "./docker/elasticsearch/Dockerfile"
           dockercontext: "./docker/elasticsearch"
 
