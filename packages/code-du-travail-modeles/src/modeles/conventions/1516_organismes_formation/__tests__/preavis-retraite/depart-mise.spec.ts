@@ -18,6 +18,11 @@ const MiseRetraiteCcReferences = [
   ...CommonReferences,
 ];
 
+const DepartRetraiteCcReferences = [
+  ...DepartRetraiteReferences,
+  ...CommonReferences,
+];
+
 describe("Convention collective 1702", () => {
   describe("Pour un départ à la retraite", () => {
     test.each`
@@ -43,9 +48,9 @@ describe("Convention collective 1702", () => {
         expect(missingArgs).toEqual([]);
         expect(result.value).toEqual(expectedResult);
         expect(result.unit).toEqual(expectedUnit);
-        expect(references).toHaveLength(DepartRetraiteReferences.length);
+        expect(references).toHaveLength(DepartRetraiteCcReferences.length);
         expect(references).toEqual(
-          expect.arrayContaining(DepartRetraiteReferences)
+          expect.arrayContaining(DepartRetraiteCcReferences)
         );
       }
     );
