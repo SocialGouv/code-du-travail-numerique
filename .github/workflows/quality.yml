@@ -16,7 +16,7 @@ jobs:
     name: Register elasticsearch
     runs-on: ubuntu-latest
     steps:
-      - uses: SocialGouv/actions/autodevops-build-register@v1
+      - uses: socialgouv/workflows/actions/build-image@v1
         with:
           imageName: cdtn/elasticsearch
           token: ${{ secrets.SOCIALGROOVYBOT_PAT }}

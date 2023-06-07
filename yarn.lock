@@ -4591,7 +4591,7 @@ __metadata:
     stylelint-order: ^5.0.0
     stylelint-processor-styled-components: ^1.10.0
     svgo: ^2.3.1
-    typescript: ^5.0.4
+    typescript: ^4.9.5
     use-onclickoutside: ^0.4.0
     vite: ^4.3.9
   languageName: unknown
@@ -22166,7 +22166,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^3 || ^4":
+"typescript@npm:^3 || ^4, typescript@npm:^4.9.5":
   version: 4.9.5
   resolution: "typescript@npm:4.9.5"
   bin:
@@ -22186,7 +22186,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^3 || ^4#~builtin<compat/typescript>":
+"typescript@patch:typescript@^3 || ^4#~builtin<compat/typescript>, typescript@patch:typescript@^4.9.5#~builtin<compat/typescript>":
   version: 4.9.5
   resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"
   bin:
