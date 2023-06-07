@@ -183,5 +183,5 @@ import{$ as s,j as t,L as g}from"./styled-components.browser.esm-41178855.js";im
     ${({theme:e})=>Object.entries(e).reduce((m,[h,d])=>m+=`--color-${h}: ${d};
       `,"")};
   }
-`,l=()=>t.jsxs(t.Fragment,{children:[t.jsx(p,{}),t.jsx(x,{}),t.jsx($,{}),t.jsx(b,{}),t.jsx(u,{}),t.jsx(z,{}),t.jsx(y,{}),t.jsx(w,{})]});l.__docgenInfo={description:"",methods:[],displayName:"GlobalStyles"};const F={colors:{name:"Color toggle",description:"Change Color theme",defaultValue:n,toolbar:{icon:"circlehollow",items:[{value:n,title:"Default"},{value:c,title:"High contrast"}]}}},j=e=>t.jsxs(g,{theme:n,children:[t.jsx(l,{}),t.jsx(f,{children:t.jsx(e,{})})]}),H={decorators:[j],parameters:{actions:{argTypesRegex:"^on[A-Z].*"},controls:{matchers:{color:/(background|color)$/i,date:/Date$/}}}};export{H as default,F as globalTypes};
-//# sourceMappingURL=preview-ca04bc3d.js.map
+`,l=()=>t.jsxs(t.Fragment,{children:[t.jsx(p,{}),t.jsx(x,{}),t.jsx($,{}),t.jsx(b,{}),t.jsx(u,{}),t.jsx(z,{}),t.jsx(y,{}),t.jsx(w,{})]});l.__docgenInfo={description:"",methods:[],displayName:"GlobalStyles"};const C={colors:{name:"Color toggle",description:"Change Color theme",defaultValue:n,toolbar:{icon:"circlehollow",items:[{value:n,title:"Default"},{value:c,title:"High contrast"}]}}},F={actions:{argTypesRegex:"^on[A-Z].*"},controls:{matchers:{color:/(background|color)$/i,date:/Date$/}}},H=[e=>t.jsxs(g,{theme:n,children:[t.jsx(l,{}),t.jsx(f,{children:t.jsx(e,{})})]})];export{H as decorators,C as globalTypes,F as parameters};
+//# sourceMappingURL=preview-69525b79.js.map
