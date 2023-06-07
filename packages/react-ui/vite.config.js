@@ -17,7 +17,7 @@ export default defineConfig({
           setup(build) {
             build.onLoad({ filter: /src\/.*\.js$/ }, async (args) => ({
               contents: await fs.readFile(args.path, "utf8"),
-              loader: "tsx",
+              loader: "jsx",
             }));
           },
         },
