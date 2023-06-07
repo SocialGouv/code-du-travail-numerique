@@ -14,4 +14,11 @@ lerna-debug.log
 *.tsbuildinfo
 packages/code-du-travail-modeles/src/modeles/modeles-preavis-retraite.json
 packages/code-du-travail-modeles/src/modeles/modeles-indemnite-licenciement.json
-
+.pnp.*
+.yarn/*
+# !.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

@@ -2,7 +2,7 @@ ARG NODE_VERSION=20.2.0-alpine
 # dist
 FROM node:$NODE_VERSION AS dist
 
-WORKDIR /
+WORKDIR /dep
 
 # Add build-arg from github actions
 ARG NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
@@ -34,18 +34,12 @@ ENV NEXT_PUBLIC_SENTRY_PROJECT=$NEXT_PUBLIC_SENTRY_PROJECT
 ARG NEXT_PUBLIC_SENTRY_URL
 ENV NEXT_PUBLIC_SENTRY_URL=$NEXT_PUBLIC_SENTRY_URL
 
-# Copy all package.json
-COPY ./package.json ./package.json
-COPY ./packages/react-ui/package.json ./packages/react-ui/package.json
-COPY ./packages/code-du-travail-utils/package.json ./packages/code-du-travail-utils/package.json
-COPY ./packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/package.json
-COPY ./packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/package.json
-
 # Copy lockfile
-COPY ./yarn.lock ./yarn.lock
+COPY ./yarn.lock ./.yarnrc.yml ./
+COPY .yarn .yarn
 
 # Install packages
-RUN yarn --frozen-lockfile --prefer-offline
+RUN yarn fetch --immutable
 
 COPY . ./
 
@@ -54,7 +48,8 @@ ENV NODE_ENV=production
 # hadolint ignore=SC2046
 RUN --mount=type=secret,id=sentry_auth_token export SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token); \
   yarn build  && \
-  yarn --frozen-lockfile --prod --prefer-offline
+  yarn workspaces focus --production --all && \
+  yarn cache clean
 
 # app
 FROM node:$NODE_VERSION
@@ -62,21 +57,19 @@ FROM node:$NODE_VERSION
 ENV NODE_ENV=production
 
 WORKDIR /app
-
-COPY --from=dist ./packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
-COPY --from=dist ./packages/code-du-travail-frontend/node_modules /app/packages/code-du-travail-frontend/node_modules
-COPY --from=dist ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
-COPY --from=dist ./packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
-COPY --from=dist ./packages/code-du-travail-frontend/next.config.js /app/packages/code-du-travail-frontend/next.config.js
-COPY --from=dist ./packages/code-du-travail-frontend/sentry.client.config.js /app/packages/code-du-travail-frontend/sentry.client.config.js
-COPY --from=dist ./packages/code-du-travail-frontend/sentry.server.config.js /app/packages/code-du-travail-frontend/sentry.server.config.js
-COPY --from=dist ./packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
-COPY --from=dist ./packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
-COPY --from=dist ./package.json /app/package.json
-COPY --from=dist ./node_modules /app/node_modules
-
-RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000 /app/packages/code-du-travail-frontend/.next
-
 USER 1000
+
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/public /app/packages/code-du-travail-frontend/public
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/next.config.js /app/packages/code-du-travail-frontend/next.config.js
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.client.config.js /app/packages/code-du-travail-frontend/sentry.client.config.js
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.server.config.js /app/packages/code-du-travail-frontend/sentry.server.config.js
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
+COPY --from=dist --chown=1000:1000 /dep/package.json /app/package.json
+COPY --from=dist --chown=1000:1000 /dep/node_modules /app/node_modules
+
+RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images
 
 CMD [ "yarn", "workspace", "@cdt/frontend", "start"]

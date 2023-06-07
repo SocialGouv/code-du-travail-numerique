@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Container } from "../Container/index.js";
-import { Wrapper } from "../Wrapper/index.js";
 import { PageTitle } from "../../Titles/PageTitle/index.js";
 import { Title } from "../../Titles/Title/index.js";
+import { Container } from "../Container/index.js";
+import { Wrapper } from "../Wrapper/index.js";
 import { Section } from "./index.js";
 
 export default {
