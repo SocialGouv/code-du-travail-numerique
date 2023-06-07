@@ -18,7 +18,6 @@ jobs:
     steps:
       - uses: SocialGouv/actions/autodevops-build-register@v1
         with:
-          imagePackage: "cdtn"
           imageName: cdtn/elasticsearch
           token: ${{ secrets.SOCIALGROOVYBOT_PAT }}
           dockerfile: "./docker/elasticsearch/Dockerfile"
