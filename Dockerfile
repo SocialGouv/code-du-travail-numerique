@@ -55,13 +55,12 @@ RUN --mount=type=secret,id=sentry_auth_token export SENTRY_AUTH_TOKEN=$(cat /run
 FROM node:$NODE_VERSION
 
 # hadolint ignore=DL3018
-RUN apk --update --no-cache add ca-certificates
-# hadolint ignore=DL3059
-RUN apk upgrade
+RUN apk --update --no-cache add ca-certificates && apk upgrade
 
 ENV NODE_ENV=production
 
 WORKDIR /app
+
 USER 1000
 
 COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/.next /app/packages/code-du-travail-frontend/.next
@@ -75,6 +74,6 @@ COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/script
 COPY --from=dist --chown=1000:1000 /dep/package.json /app/package.json
 COPY --from=dist --chown=1000:1000 /dep/node_modules /app/node_modules
 
-RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images
+RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000:1000 /app/packages/code-du-travail-frontend/.next
 
 CMD [ "yarn", "workspace", "@cdt/frontend", "start"]
