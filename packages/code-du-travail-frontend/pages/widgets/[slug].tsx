@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import { useIframeResizer } from "../../src/common/hooks";
+import { Footer } from "../../src/widgets";
 
 import {
   DureePreavisLicenciement,
@@ -23,7 +24,7 @@ const toolsBySlug = {
   "procedure-licenciement": DismissalProcess,
   "indemnite-licenciement": CalculateurIndemnite,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
-  "convention-collective": AgreementSearch
+  "convention-collective": AgreementSearch,
 };
 
 interface Props {
@@ -35,7 +36,14 @@ interface Props {
   metaDescription: string;
 }
 
-function Widgets({ metaTitle, metaDescription, icon, slug, title, displayTitle }: Props): JSX.Element {
+function Widgets({
+  metaTitle,
+  metaDescription,
+  icon,
+  slug,
+  title,
+  displayTitle,
+}: Props): JSX.Element {
   useIframeResizer();
   const Tool = toolsBySlug[slug];
 
@@ -54,20 +62,7 @@ function Widgets({ metaTitle, metaDescription, icon, slug, title, displayTitle }
           slug={slug}
           widgetMode
         />
-        <StyledFooter>
-          <Link
-            href="/politique-confidentialite"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Politique de confidentialité
-          </Link>
-          <Link passHref href="https://code.travail.gouv.fr/" legacyBehavior>
-            <LeftLink target="_blank">
-              <Logo />
-            </LeftLink>
-          </Link>
-        </StyledFooter>
+        <Footer></Footer>
       </StyledContainer>
     </>
   );
