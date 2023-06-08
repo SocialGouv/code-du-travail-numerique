@@ -3,19 +3,24 @@ import { Heading, Toast, theme, Button } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import { push as matopush } from "@socialgouv/matomo-next";
-import { MatomoBaseAction, MatomoBaseEvent } from "../../../lib";
+import {
+  MatomoBaseEvent,
+  MatomoSearchAgreementCategory,
+  MatomoSimulatorEvent,
+  MatomoSimulatorNameEvent,
+} from "../../../lib";
 
 export function NoEnterprise(): JSX.Element {
   const router = useRouter();
 
   const onClick = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    // TODO: okkk
-    // matopush([
-    //   MatomoBaseEvent.OUTIL,
-    //   MatomoBaseEvent.TROUVER_SA_CC,
-    //   MatomoBaseAction.CLICK + "_je n'ai pas d'entreprise",
-    // ]);
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+      MatomoSimulatorEvent.CLICK_JE_N_AI_PAS_D_ENTREPRISE,
+      MatomoSimulatorNameEvent.TROUVER_SA_CC,
+    ]);
     router.push(
       `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`
     );

@@ -13,8 +13,7 @@ export enum MatomoBaseAction {
   VIEW = "view",
 }
 
-//TODO: okkk
-export enum MatomoSimulatorEventName {
+export enum MatomoSimulatorNameEvent {
   TROUVER_SA_CC = "Trouver sa convention collective",
 }
 
@@ -26,7 +25,6 @@ export enum MatomoSearchAgreementCategory {
   ENTERPRISE_SEARCH = "enterprise_search",
   AGREEMENT_SEARCH = "cc_search",
   AGREEMENT_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
-  NO_ENTERPRISE = "je_n_ai_pas_d_entreprise",
 }
 
 export enum MatomoHeaderEvent {
@@ -35,7 +33,6 @@ export enum MatomoHeaderEvent {
   CLICK_FICHES_PRATIQUES = "click_fiches_pratiques",
   CLICK_CONVENTION_COLLECTIVE = "click_convention_collective",
   CLICK_THEMES = "click_themes",
-  CLICK_JEN_4AI,
 }
 
 export enum MatomoHomeEvent {
@@ -65,6 +62,8 @@ export enum MatomoSimulatorEvent {
   SELECT_COEFFICIENT = "select_value_coefficient",
   CLICK_PRINT = "click_print",
   STEP_RESULT_INELIGIBLE = "results_ineligible",
+  CLICK_JE_N_AI_PAS_D_ENTREPRISE = "click_je_n_ai_pas_d_entreprise",
+  SELECT_JE_N_AI_PAS_D_ENTREPRISE = "select_je_n_ai_pas_d_entreprise",
 }
 
 export enum MatomoAgreementEvent {

@@ -8,6 +8,7 @@ export type CommonAgreementStoreInput = {
   agreement?: Agreement;
   enterprise?: Enterprise;
   isAgreementSupportedIndemniteLicenciement: boolean;
+  hasNoEnterpriseSelected: boolean;
 };
 
 export type CommonAgreementStoreError = {
@@ -39,6 +40,7 @@ export type CommonAgreementStoreFn = {
   onNextStep: () => ValidationResponse;
   onEnterpriseSearch: (value: AgreementSearchValue) => void;
   onAgreementSearch: (value: AgreementSearchValue) => void;
+  setHasNoEnterpriseSelected: (value: boolean) => void;
 };
 
 export type CommonAgreementStoreSlice = {

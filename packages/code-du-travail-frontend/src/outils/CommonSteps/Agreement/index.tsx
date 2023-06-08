@@ -24,6 +24,8 @@ type Props = {
   onAgreementSearch: (value: AgreementSearchValue) => void;
   onEnterpriseSearch: (value: AgreementSearchValue) => void;
   simulator: PublicodesSimulator;
+  hasNoEnterpriseSelected: boolean;
+  setHasNoEnterpriseSelected: (boolean) => void;
   error?: {
     route?: string;
     agreement?: string;
@@ -43,6 +45,8 @@ function AgreementStep({
   onInitAgreementPage,
   onEnterpriseSearch,
   onAgreementSearch,
+  hasNoEnterpriseSelected,
+  setHasNoEnterpriseSelected,
 }: Props): JSX.Element {
   React.useEffect(() => {
     onInitAgreementPage();
@@ -93,7 +97,7 @@ function AgreementStep({
             supportedAgreements={supportedAgreements}
             selectedAgreement={selectedAgreement}
             onSelectAgreement={onAgreementChange}
-            onUserAction={(action, value: AgreementSearchValue) =>
+            onUserAction={(_action, value: AgreementSearchValue) =>
               onAgreementSearch(value)
             }
             alertAgreementNotSupported={undefined}
@@ -117,10 +121,23 @@ function AgreementStep({
           />
           <NoEnterprise
             selectedEnterprise={selectedEnterprise}
-            selectedAgreement={selectedAgreement}
-            onAgreementChange={onAgreementChange}
-            //TODO: okkk
-            // eventViewStep={}
+            isCheckboxChecked={hasNoEnterpriseSelected}
+            setIsCheckboxChecked={setHasNoEnterpriseSelected}
+            onCheckboxChange={(isCheckboxChecked) => {
+              onAgreementChange(
+                isCheckboxChecked
+                  ? {
+                      url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+                      id: "KALICONT000044594539",
+                      num: 3239,
+                      shortTitle:
+                        "Particuliers employeurs et emploi à domicile",
+                      slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
+                      title: "Particuliers employeurs et emploi à domicile",
+                    }
+                  : null
+              );
+            }}
           />
           {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
         </>

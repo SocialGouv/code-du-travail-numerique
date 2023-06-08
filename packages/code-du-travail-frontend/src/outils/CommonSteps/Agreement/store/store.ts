@@ -25,6 +25,7 @@ import { isCcFullySupportedIndemniteLicenciement } from "../../../IndemniteLicen
 const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
   input: {
     isAgreementSupportedIndemniteLicenciement: false,
+    hasNoEnterpriseSelected: false,
   },
   error: {},
   hasBeenSubmit: false,
@@ -106,6 +107,14 @@ const createCommonAgreementStore: StoreSlicePublicode<
       }
       get().informationsFunction.generatePublicodesQuestions();
     },
+    setHasNoEnterpriseSelected: (value) => {
+      applyGenericValidation(
+        get,
+        set,
+        "hasNoEnterpriseSelected",
+        value ? value : false
+      );
+    },
     onNextStep: () => {
       const input = get().agreementData.input;
       const { isValid, errorState } = validateStep(input);
@@ -122,7 +131,8 @@ const createCommonAgreementStore: StoreSlicePublicode<
             selected: agreement,
             enterprise,
           },
-          isTreated
+          isTreated,
+          input.hasNoEnterpriseSelected
         );
       }
       set(

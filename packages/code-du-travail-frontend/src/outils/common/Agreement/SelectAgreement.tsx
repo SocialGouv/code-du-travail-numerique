@@ -123,9 +123,29 @@ const SelectAgreement = ({
             isDisabled={storedConvention?.num === 3239}
           />
           <NoEnterprise
-            onAgreementChange={onSelectAgreement}
-            selectedAgreement={storedConvention}
             selectedEnterprise={enterprise}
+            isCheckboxChecked={values.hasNoEnterpriseSelected}
+            setIsCheckboxChecked={() => {
+              form.change(
+                "hasNoEnterpriseSelected",
+                !values.hasNoEnterpriseSelected
+              );
+            }}
+            onCheckboxChange={(isCheckboxChecked) => {
+              onSelectAgreement(
+                isCheckboxChecked
+                  ? {
+                      url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+                      id: "KALICONT000044594539",
+                      num: 3239,
+                      shortTitle:
+                        "Particuliers employeurs et emploi à domicile",
+                      slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
+                      title: "Particuliers employeurs et emploi à domicile",
+                    }
+                  : null
+              );
+            }}
           />
         </>
       )}

@@ -45,6 +45,7 @@ export interface ConventionCollective {
   route: AgreementRoute;
   selected?: Agreement;
   enterprise?: Enterprise;
+  hasNoEnterprise?: boolean;
 }
 
 export type FormContent = {

@@ -6,54 +6,24 @@ import {
   Alert,
   theme,
 } from "@socialgouv/cdtn-ui";
-import { Agreement } from "../../../../conventions/Search/api/type";
 import styled from "styled-components";
 import { SectionTitle } from "../../../common/stepStyles";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { OnSelectAgreementFn } from "../../../common/Agreement/types";
-import { push as matopush } from "@socialgouv/matomo-next";
-import {
-  MatomoActionEvent,
-  MatomoBaseEvent,
-  MatomoSearchAgreementCategory,
-} from "../../../../lib";
 
 type Props = {
-  selectedAgreement?: Agreement;
   selectedEnterprise?: Enterprise;
-  onAgreementChange: OnSelectAgreementFn;
-  eventViewStep: MatomoActionEvent;
+  onCheckboxChange: (v: boolean) => void;
+  isCheckboxChecked: boolean;
+  setIsCheckboxChecked: (v: boolean) => void;
 };
 
 export function NoEnterprise({
-  selectedAgreement,
+  onCheckboxChange,
   selectedEnterprise,
-  onAgreementChange,
-  eventViewStep,
+  isCheckboxChecked,
+  setIsCheckboxChecked,
 }: Props): JSX.Element {
   const [isInputVisible, setIsInputVisible] = React.useState(false);
-
-  const onCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    onAgreementChange(
-      selectedAgreement?.num === 3239
-        ? null
-        : {
-            url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
-            id: "KALICONT000044594539",
-            num: 3239,
-            shortTitle: "Particuliers employeurs et emploi à domicile",
-            slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
-            title: "Particuliers employeurs et emploi à domicile",
-          }
-    );
-    // TODO: okk
-    // matopush([
-    //   MatomoBaseEvent.OUTIL,
-    //   eventViewStep,
-    //   MatomoSearchAgreementCategory.NO_ENTERPRISE,
-    // ]);
-  };
 
   return (
     <>
@@ -70,8 +40,12 @@ export function NoEnterprise({
               }
               name="salarieParticulierEmployeur"
               id="salarieParticulierEmployeur"
-              onChange={onCheckboxChange}
-              checked={selectedAgreement?.num === 3239}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                e.preventDefault();
+                setIsCheckboxChecked(!isCheckboxChecked);
+                onCheckboxChange(!isCheckboxChecked);
+              }}
+              checked={isCheckboxChecked}
             />
           </InputWrapper>
           <ButtonClicker
@@ -93,7 +67,7 @@ export function NoEnterprise({
           </p>
         </AlertWithMargin>
       )}
-      {selectedAgreement?.num === 3239 && (
+      {isCheckboxChecked && (
         <>
           <SectionTitle>Votre convention collective est :</SectionTitle>
           <Paragraph noMargin fontWeight="600" fontSize="default">
