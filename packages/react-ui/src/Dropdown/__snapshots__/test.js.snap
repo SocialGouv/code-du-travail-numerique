@@ -3,10 +3,10 @@
 exports[`<Dropdown /> renders the button 1`] = `
 <div>
   <div
-    class="sc-gswNZR bAnNyH"
+    class="sc-gEvEer giTMHq"
   >
     <button
-      class="sc-bcXHqe iRwlKl"
+      class="sc-aXZVg qyujw"
     >
       Click me
     </button>

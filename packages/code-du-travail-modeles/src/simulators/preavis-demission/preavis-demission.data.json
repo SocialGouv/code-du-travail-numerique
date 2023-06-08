@@ -2499,7 +2499,7 @@
     {
       "criteria": {
         "catégorie professionnelle": "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
-        "coefficient": "16| de 200 à 355",
+        "coefficient": "16| de 240 à 355",
         "ancienneté": "40| 2 ans ou moins"
       },
       "type": "préavis de Démission",
@@ -2508,13 +2508,13 @@
       "answer": "1 mois",
       "answer2": "L'employeur et le salarié peuvent décider d'une durée plus longue",
       "answer3": "30",
-      "ref": "Article 15 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 4.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833"
     },
     {
       "criteria": {
         "catégorie professionnelle": "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
-        "coefficient": "16| de 200 à 355",
+        "coefficient": "16| de 240 à 355",
         "ancienneté": "43| Plus de 2 ans"
       },
       "type": "préavis de Démission",
@@ -2523,8 +2523,8 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 15 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 4.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833"
     },
     {
       "criteria": {
@@ -2538,8 +2538,8 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 15 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 4.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833"
     },
     {
       "criteria": {
@@ -2553,8 +2553,8 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 15 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 4.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833"
     },
     {
       "criteria": {
@@ -2566,8 +2566,8 @@
       "answer": "3 mois",
       "answer2": null,
       "answer3": "90",
-      "ref": "Article 15 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 4.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833"
     },
     {
       "criteria": {
@@ -2762,7 +2762,7 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "28| Techniciens"
+        "catégorie professionnelle": "28| Agents de maîtrise ou techniciens"
       },
       "type": "préavis de Démission",
       "idcc": 1516,

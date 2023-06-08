@@ -4518,7 +4518,7 @@
     {
       "criteria": {
         "catégorie professionnelle": "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
-        "coefficient": "16| de 200 à 355",
+        "coefficient": "16| de 240 à 355",
         "ancienneté": "38| Moins de 2 ans"
       },
       "type": "préavis de Licenciement",
@@ -4527,13 +4527,13 @@
       "answer": "1 mois",
       "answer2": "L'employeur et le salarié peuvent décider d'une durée plus longue.",
       "answer3": "30",
-      "ref": "Article 15",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B5E7200BE4C18FB732B60185A6BB4E01.tplgfr27s_3?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 4.2",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833"
     },
     {
       "criteria": {
         "catégorie professionnelle": "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
-        "coefficient": "16| de 200 à 355",
+        "coefficient": "16| de 240 à 355",
         "ancienneté": "42| 2 ans ou plus"
       },
       "type": "préavis de Licenciement",
@@ -4542,8 +4542,8 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 15",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B5E7200BE4C18FB732B60185A6BB4E01.tplgfr27s_3?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 4.2",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833"
     },
     {
       "criteria": {
@@ -4556,8 +4556,8 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 15",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B5E7200BE4C18FB732B60185A6BB4E01.tplgfr27s_3?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 4.2",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833"
     },
     {
       "criteria": {
@@ -4569,8 +4569,8 @@
       "answer": "3 mois",
       "answer2": "L'employeur et le salarié peuvent décider d'une durée plus longue.",
       "answer3": "90",
-      "ref": "Article 15",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B5E7200BE4C18FB732B60185A6BB4E01.tplgfr27s_3?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 4.2",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833"
     },
     {
       "criteria": {
@@ -4752,7 +4752,7 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "28| Techniciens"
+        "catégorie professionnelle": "28| Agents de maîtrise ou techniciens"
       },
       "type": "préavis de Licenciement",
       "idcc": 1516,

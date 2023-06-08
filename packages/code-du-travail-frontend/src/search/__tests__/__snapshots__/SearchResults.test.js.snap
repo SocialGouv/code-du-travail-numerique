@@ -6,38 +6,38 @@ exports[`<SearchResults/> should render results 1`] = `
 <div>
   <div
     aria-label="Résultats de recherche"
-    class="sc-bcXHqe ePDXDD"
+    class="sc-aXZVg elbebC"
     role="region"
   >
     <h2
-      class="sc-iBYQkv iDmZxg"
+      class="sc-kAyceB dvmaTz"
       data-testid="heading"
       id="SearchResults"
     >
       Résultats de recherche pour “search test”
     </h2>
     <ul
-      class="sc-lbVpMG fqAvkB"
+      class="sc-cfxfcM kMmTaI"
     >
       <li
-        class="sc-elAWhN hPRVLd"
+        class="sc-dExYaf gvFybR"
       >
         <div
-          class="sc-eGugkK cJzHzy"
+          class="sc-fTFjTM hGmjIf"
         >
           <div
-            class="sc-dEVLtI ijCjkg"
+            class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-brePNt dSrKNm"
+              class="sc-kMkxaj ietOip"
             >
               <p
-                class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
+                class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
               >
                 test theme content
               </p>
               <h3
-                class="sc-evzXkX dtQFbH"
+                class="sc-jIGnZt issdxz"
               >
                 <a
                   href="/fiche-service-public/mer-il-est-fou?q=search test"
@@ -48,13 +48,13 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="sc-fHSyak ehflbW"
+            class="sc-fBdRDi mhKrF"
           >
             <div
-              class="sc-iJbNxu hQEIiI"
+              class="sc-dxcDKg jfRleH"
             >
               <p
-                class="sc-GKYbw gcbROE"
+                class="sc-jGKxIK cNijme"
               >
                 description
               </p>
@@ -63,16 +63,16 @@ exports[`<SearchResults/> should render results 1`] = `
         </div>
       </li>
       <li
-        class="sc-elAWhN hPRVLd"
+        class="sc-dExYaf gvFybR"
       >
         <div
-          class="sc-eGugkK cJzHzy sc-dvEHMn jfDXTj"
+          class="sc-fTFjTM hGmjIf sc-lnPyaJ loWhWN"
         >
           <div
-            class="sc-ilhmMj gZOXXO"
+            class="sc-kOHTFB fBWkdL"
           >
             <div
-              class="sc-jIRcFI ibhsCB"
+              class="sc-dtInlm krTdyM"
             >
               <svg
                 aria-hidden="true"
@@ -96,18 +96,18 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="sc-dEVLtI ijCjkg"
+            class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-brePNt dSrKNm"
+              class="sc-kMkxaj ietOip"
             >
               <p
-                class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
+                class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
               >
                 Outils
               </p>
               <h3
-                class="sc-evzXkX dtQFbH"
+                class="sc-jIGnZt issdxz"
               >
                 <a
                   href="/outils/simulateur-precarite?q=search test"
@@ -118,25 +118,25 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="sc-fHSyak ehflbW"
+            class="sc-fBdRDi mhKrF"
           >
             <div
-              class="sc-kSGOQU gmjlmt"
+              class="sc-iXzfSG jXIbFS"
             >
               <div
-                class="sc-iJbNxu hQEIiI"
+                class="sc-dxcDKg jfRleH"
               >
                 <p
-                  class="sc-GKYbw gcbROE"
+                  class="sc-jGKxIK cNijme"
                 >
                   description
                 </p>
               </div>
               <div
-                class="sc-jsTgWu kLairx"
+                class="sc-eulNck jyYvJd"
               >
                 <button
-                  class="sc-hhOBVt bxVHUw"
+                  class="sc-kOPcWz hwrncL"
                 >
                   Consulter
                   <svg
@@ -157,25 +157,25 @@ exports[`<SearchResults/> should render results 1`] = `
         </div>
       </li>
       <li
-        class="sc-elAWhN hPRVLd"
+        class="sc-dExYaf gvFybR"
       >
         <div
           aria-label="Outils externes telerc description undefined (nouvelle fenêtre)"
-          class="sc-eGugkK cJzHzy sc-dvEHMn jfDXTj no-after"
+          class="sc-fTFjTM hGmjIf sc-lnPyaJ loWhWN no-after"
         >
           <div
-            class="sc-dEVLtI ijCjkg"
+            class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-brePNt dSrKNm"
+              class="sc-kMkxaj ietOip"
             >
               <p
-                class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
+                class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
               >
                 Outils externes
               </p>
               <h3
-                class="sc-evzXkX dtQFbH"
+                class="sc-jIGnZt issdxz"
               >
                 <a
                   href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14"
@@ -188,25 +188,25 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="sc-fHSyak ehflbW"
+            class="sc-fBdRDi mhKrF"
           >
             <div
-              class="sc-kSGOQU gmjlmt"
+              class="sc-iXzfSG jXIbFS"
             >
               <div
-                class="sc-iJbNxu hQEIiI"
+                class="sc-dxcDKg jfRleH"
               >
                 <p
-                  class="sc-GKYbw gcbROE"
+                  class="sc-jGKxIK cNijme"
                 >
                   description
                 </p>
               </div>
               <div
-                class="sc-jsTgWu kLairx"
+                class="sc-eulNck jyYvJd"
               >
                 <button
-                  class="sc-hhOBVt bxVHUw"
+                  class="sc-kOPcWz hwrncL"
                 >
                   Consulter
                   <svg
@@ -227,16 +227,16 @@ exports[`<SearchResults/> should render results 1`] = `
         </div>
       </li>
       <li
-        class="sc-elAWhN hPRVLd"
+        class="sc-dExYaf gvFybR"
       >
         <div
-          class="sc-eGugkK cJzHzy sc-dvEHMn jfDXTj"
+          class="sc-fTFjTM hGmjIf sc-lnPyaJ loWhWN"
         >
           <div
-            class="sc-ilhmMj gZOXXO"
+            class="sc-kOHTFB fBWkdL"
           >
             <div
-              class="sc-jIRcFI ibhsCB"
+              class="sc-dtInlm krTdyM"
             >
               <svg
                 aria-hidden="true"
@@ -260,18 +260,18 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="sc-dEVLtI ijCjkg"
+            class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-brePNt dSrKNm"
+              class="sc-kMkxaj ietOip"
             >
               <p
-                class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
+                class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
               >
                 test root content
               </p>
               <h3
-                class="sc-evzXkX dtQFbH"
+                class="sc-jIGnZt issdxz"
               >
                 <a
                   href="/outils/mer-il-est-fou2?q=search test"
@@ -282,25 +282,25 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="sc-fHSyak ehflbW"
+            class="sc-fBdRDi mhKrF"
           >
             <div
-              class="sc-kSGOQU gmjlmt"
+              class="sc-iXzfSG jXIbFS"
             >
               <div
-                class="sc-iJbNxu hQEIiI"
+                class="sc-dxcDKg jfRleH"
               >
                 <p
-                  class="sc-GKYbw gcbROE"
+                  class="sc-jGKxIK cNijme"
                 >
                   description
                 </p>
               </div>
               <div
-                class="sc-jsTgWu kLairx"
+                class="sc-eulNck jyYvJd"
               >
                 <button
-                  class="sc-hhOBVt bxVHUw"
+                  class="sc-kOPcWz hwrncL"
                 >
                   Consulter
                   <svg
@@ -321,16 +321,16 @@ exports[`<SearchResults/> should render results 1`] = `
         </div>
       </li>
       <li
-        class="sc-elAWhN hPRVLd"
+        class="sc-dExYaf gvFybR"
       >
         <div
-          class="sc-eGugkK cJzHzy"
+          class="sc-fTFjTM hGmjIf"
         >
           <div
-            class="sc-ilhmMj gZOXXO"
+            class="sc-kOHTFB fBWkdL"
           >
             <div
-              class="sc-jIRcFI ibhsCB"
+              class="sc-dtInlm krTdyM"
             >
               <svg
                 aria-hidden="true"
@@ -354,18 +354,18 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="sc-dEVLtI ijCjkg"
+            class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-brePNt dSrKNm"
+              class="sc-kMkxaj ietOip"
             >
               <p
-                class="sc-bWOGAC sc-gJqSRm fhSYan jWZgQQ"
+                class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
               >
                 test theme content
               </p>
               <h3
-                class="sc-evzXkX dtQFbH"
+                class="sc-jIGnZt issdxz"
               >
                 <a
                   href="/contribution/mer-il-est-fou4?q=search test"
@@ -376,13 +376,13 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="sc-fHSyak ehflbW"
+            class="sc-fBdRDi mhKrF"
           >
             <div
-              class="sc-iJbNxu hQEIiI"
+              class="sc-dxcDKg jfRleH"
             >
               <p
-                class="sc-GKYbw gcbROE"
+                class="sc-jGKxIK cNijme"
               >
                 description
               </p>
@@ -393,52 +393,52 @@ exports[`<SearchResults/> should render results 1`] = `
     </ul>
   </div>
   <div
-    class="sc-gswNZR bPmTxc"
+    class="sc-gEvEer cHLyxF"
   >
     <div
-      class="sc-dkrFOg biaJUX"
+      class="sc-eqUAAy jedSti"
     />
     <div
-      class="sc-eDvSVe dfRDwP"
+      class="sc-dcJsrY gQPQLH"
     >
       <div
-        class="sc-bcXHqe evAMOC"
+        class="sc-aXZVg gZgZQL"
       >
         <div
-          class="sc-eYqcxL cojNYi"
+          class="sc-ePDLzJ gyQfvT"
         >
           <h2
-            class="sc-eVspGN fSOkVF"
+            class="sc-eBHhsj kDuOiA"
           >
             <span
-              class="sc-gKPRtg fPkQGb"
+              class="sc-gsFSXq ljkohw"
             />
             Que dit le code du travail ?
           </h2>
         </div>
         <div
-          class="sc-iOeugr TLLGV sc-eJDSGI cnCImS"
+          class="sc-gFAWRd RvAeB sc-hRJfrW jNzush"
         >
           <div
-            class="sc-jfvxQR hUilgg"
+            class="sc-gmPhUn fMbHzm"
           >
             <div
-              class="sc-oZIhv eWwzHY"
+              class="sc-iHbSHJ jtNhJK"
             >
               <div
-                class="sc-hiDMwi mnHoI"
+                class="sc-klVQfs bzxnQN"
               >
                 <div
-                  class="sc-eGugkK cJzHzy"
+                  class="sc-fTFjTM hGmjIf"
                 >
                   <div
-                    class="sc-dEVLtI ijCjkg"
+                    class="sc-gmgFlS dlfKdE"
                   >
                     <div
-                      class="sc-brePNt dSrKNm"
+                      class="sc-kMkxaj ietOip"
                     >
                       <p
-                        class="sc-evzXkX dtQFbH"
+                        class="sc-jIGnZt issdxz"
                       >
                         <a
                           href="/code-du-travail/L1243-1?q=search test"
@@ -449,7 +449,7 @@ exports[`<SearchResults/> should render results 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-fHSyak ehflbW"
+                    class="sc-fBdRDi mhKrF"
                   >
                     la description
                   </div>
@@ -459,43 +459,43 @@ exports[`<SearchResults/> should render results 1`] = `
           </div>
         </div>
         <div
-          class="sc-eYqcxL cojNYi"
+          class="sc-ePDLzJ gyQfvT"
         >
           <h2
-            class="sc-eVspGN fSOkVF"
+            class="sc-eBHhsj kDuOiA"
           >
             <span
-              class="sc-gKPRtg fPkQGb"
+              class="sc-gsFSXq ljkohw"
             />
             Les thèmes suivants peuvent vous intéresser
           </h2>
         </div>
         <div
-          class="sc-iOeugr TLLGV sc-eJDSGI cnCImS"
+          class="sc-gFAWRd RvAeB sc-hRJfrW jNzush"
         >
           <div
-            class="sc-jfvxQR hUilgg"
+            class="sc-gmPhUn fMbHzm"
           >
             <div
-              class="sc-oZIhv eWwzHY"
+              class="sc-iHbSHJ jtNhJK"
             >
               <div
-                class="sc-hiDMwi cjLrkj"
+                class="sc-klVQfs kmTVHW"
               >
                 <div
-                  class="sc-eGugkK gnEaJx"
+                  class="sc-fTFjTM fPpaeI"
                 >
                   <div
-                    class="sc-dEVLtI ijCjkg"
+                    class="sc-gmgFlS dlfKdE"
                   >
                     <span
-                      class="sc-gKPRtg hxXVnL"
+                      class="sc-gsFSXq efpSUc"
                     />
                     <div
-                      class="sc-brePNt dSrKNm"
+                      class="sc-kMkxaj ietOip"
                     >
                       <p
-                        class="sc-evzXkX dtQFbH"
+                        class="sc-jIGnZt issdxz"
                       >
                         <a
                           href="/themes/1-contrat?q=search test"

@@ -69,11 +69,12 @@ const StyledInput = styled.input`
   line-height: inherit;
   text-align: ${(props) => (props.type === "number" ? "right" : "left")};
   background: ${({ theme }) => theme.white};
-  border: 1px solid transparent;
+  border: 1px solid;
   border-color: ${({ invalid, theme }) =>
     invalid ? theme.error : "transparent"};
   border-radius: ${box.borderRadius};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
+  outline: none;
 
   /* stylelint-disable */
   &[type="number"] {

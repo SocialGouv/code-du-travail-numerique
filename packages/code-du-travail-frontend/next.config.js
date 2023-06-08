@@ -11,25 +11,27 @@ script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr htt
 frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
 style-src 'self' 'unsafe-inline';
 font-src 'self' data: blob:;
-prefetch-src 'self' *.fabrique.social.gouv.fr;
+worker-src 'self' blob:;
+child-src 'self' blob:;
 `;
 
 const { withSentryConfig } = require("@sentry/nextjs");
 const MappingReplacement = require("./redirects");
 
-const compose =
-  (...fns) =>
-  (args) =>
-    fns.reduceRight((arg, fn) => fn(arg), args);
+// See config here : https://github.com/getsentry/sentry-webpack-plugin#options
+const sentryConfig = {
+  org: process.env.NEXT_PUBLIC_SENTRY_ORG,
+  project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
+  authToken: process.env.SENTRY_AUTH_TOKEN,
+  release: process.env.NEXT_PUBLIC_SENTRY_RELEASE,
+  url: process.env.NEXT_PUBLIC_SENTRY_URL,
+};
 
 const nextConfig = {
-  devIndicators: {
-    autoPrerender: false,
-  },
   poweredByHeader: false,
   sentry: {
-    disableClientWebpackPlugin: true,
-    disableServerWebpackPlugin: true,
+    hideSourceMaps: true,
+    widenClientFileUpload: true,
   },
   compiler: {
     reactRemoveProperties:
@@ -44,7 +46,8 @@ const nextConfig = {
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
 };
 
-module.exports = {
+const moduleExports = {
+  ...nextConfig,
   async headers() {
     let headers = [
       {
@@ -87,5 +90,8 @@ module.exports = {
   async redirects() {
     return MappingReplacement;
   },
-  ...compose(withBundleAnalyzer, withSentryConfig)(nextConfig),
 };
+
+module.exports = withBundleAnalyzer(
+  withSentryConfig(moduleExports, sentryConfig)
+);

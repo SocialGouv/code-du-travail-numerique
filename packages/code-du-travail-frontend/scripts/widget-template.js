@@ -25,12 +25,21 @@ function addWidget(info) {
   iframe.width = "100%";
   iframe.style = "border:none;";
 
+  const HEADER_MENU_HEIGHT = 50;
   window.addEventListener("message", function (evt) {
     if (
       evt.source === iframe.contentWindow &&
       evt.data.kind === "resize-height"
     ) {
       iframe.style.height = evt.data.value + "px";
+    }
+    if (
+      evt.source === iframe.contentWindow &&
+      evt.data.kind === "scroll-to-top"
+    ) {
+      const bodyPosition = document.body.getBoundingClientRect();
+      const iframePosition = iframe.getBoundingClientRect();
+      window.scrollTo(0, iframePosition.top - bodyPosition.top - HEADER_MENU_HEIGHT);
     }
   });
 

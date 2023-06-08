@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { Button } from "../Button/index.js";
+import { Button } from "../Button";
 import { box, breakpoints, fonts, spacings } from "../theme.js";
 
 export const BurgerNavButton = styled(Button).attrs(() => ({
@@ -33,15 +33,17 @@ export const BurgerNavItem = ({ isCurrent, ...props }) =>
   ) : (
     <BurgerNavLink {...props} />
   );
+
 BurgerNavItem.propTypes = {
   children: PropTypes.node.isRequired,
   isCurrent: PropTypes.bool,
 };
-const BurgerNavLink = styled(BurgerNavButton).attrs(() => ({ as: "a" }))`
+
+export const BurgerNavLink = styled(BurgerNavButton).attrs(() => ({ as: "a" }))`
   text-decoration: none;
 `;
 
-const BurgerNavCurrent = styled(BurgerNavButton).attrs(() => ({
+export const BurgerNavCurrent = styled(BurgerNavButton).attrs(() => ({
   as: "span",
 }))`
   cursor: inherit;

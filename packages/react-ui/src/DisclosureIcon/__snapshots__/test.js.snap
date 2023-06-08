@@ -4,7 +4,7 @@ exports[`<Tooltip /> renders simple tooltip 1`] = `
 <div>
   <button
     aria-label="Find out what lies beneath"
-    class="sc-hLBbgP cVqbls sc-eDvSVe hvGRmO"
+    class="sc-fqkvVR cSsRDb sc-dcJsrY oJUki"
     title="Find out what lies beneath"
     type="button"
   >
@@ -37,7 +37,7 @@ exports[`<Tooltip /> renders simple tooltip 1`] = `
     </svg>
   </button>
   <div
-    class="sc-bcXHqe sc-jSUZER kDJaxK eubWVK"
+    class="sc-aXZVg sc-iGgWBj hOghNv dgoGHD"
   >
     Here I am! I am the buried treasure!
   </div>

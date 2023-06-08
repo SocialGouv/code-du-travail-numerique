@@ -105,7 +105,6 @@ export default function Agreement44() {
           }}
           salaryPeriods={lastMonthSalary ? [lastMonthSalary] : []}
           error={errorLastMonthSalary}
-          dataTestidPrimes="prime-last-month-salary"
           dataTestidSalaries="last-month-salary"
         />
       )}

@@ -21,24 +21,47 @@ interface Props {
   icon: string;
   title: string;
   displayTitle: string;
+  widgetMode?: boolean;
 }
 
 function AgreementSearchTool({
   icon,
   title,
   displayTitle,
+  widgetMode,
 }: Props): JSX.Element {
-  const [screen, setScreen] = useState<ScreenType | null>(null);
+  const router = useRouter();
+
+  const [screen, setScreen] = useState<ScreenType | null>(
+    widgetMode ? ScreenType.enterprise : null
+  );
+
+  useEffect(() => {
+    const slug = router.query.slug;
+    setScreen(
+      slug === "convention"
+        ? ScreenType.agreement
+        : slug === "entreprise"
+        ? ScreenType.enterprise
+        : slug === "selection"
+        ? ScreenType.agreementSelection
+        : ScreenType.intro
+    );
+  }, [router.query.slug]);
+
   const { setEnterprise, setSearchParams, searchParams } = useNavContext();
   const { uuid, trackEvent } = useTrackingContext();
-  const router = useRouter();
 
   const onUserAction: OnUserAction = (action: UserAction, extra?: unknown) => {
     handleTrackEvent(trackEvent, uuid, title, action, extra);
   };
 
   function clearSelection() {
-    setEnterprise(null);
+    if (widgetMode) {
+      setScreen(ScreenType.enterprise);
+    } else {
+      setEnterprise(null);
+    }
     trackEvent("view_step_cc_search_p2", "back_step_cc_select_p2", title, uuid);
   }
 
@@ -64,38 +87,20 @@ function AgreementSearchTool({
     setSearchParams({ address: "", query: "" });
   }
 
-  function handleHashNavigation(url) {
-    const [, hash = ""] = url.split("#");
-    window.scrollTo(0, 0);
-    const main: HTMLDivElement | null = document.querySelector("[role=main]");
-    if (main) {
-      main.focus();
-    }
-    handleSearchType(hash);
-  }
-
-  function handleSearchType(value) {
-    setScreen(value);
-  }
-
   function handleEnterpriseSelection(
     enterprise: Enterprise,
     params: SearchParams
   ) {
     setEnterprise(enterprise);
     setSearchParams(params);
-
-    router.push(
-      `/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreementSelection}`
-    );
+    if (widgetMode) {
+      setScreen(ScreenType.agreementSelection);
+    } else {
+      router.push(
+        `/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreementSelection}`
+      );
+    }
   }
-
-  useEffect(() => {
-    router.events.on("hashChangeStart", handleHashNavigation);
-    return () => {
-      router.events.off("hashChangeStart", handleHashNavigation);
-    };
-  }, []);
 
   let Step;
   switch (screen) {
@@ -124,6 +129,7 @@ function AgreementSearchTool({
           handleEnterpriseSelection={handleEnterpriseSelection}
           onBackClick={clearSearchType}
           onUserAction={onUserAction}
+          hidePreviousButton={widgetMode}
         />
       );
       break;
@@ -132,6 +138,7 @@ function AgreementSearchTool({
         <Steps.AgreementSelectionStep
           onBackClick={clearSelection}
           onUserAction={onUserAction}
+          isWidgetMode={widgetMode}
         />
       );
       break;
@@ -139,7 +146,7 @@ function AgreementSearchTool({
       Step = <Steps.IntroductionStep onUserAction={onUserAction} />;
   }
   return (
-    <WizardWrapper variant="main">
+    <WizardWrapper variant="main" hasMaxWidth={!widgetMode}>
       <Title title={displayTitle} icon={icon} />
       {Step}
     </WizardWrapper>
@@ -175,7 +182,7 @@ const AgreementSearchWithContext = (props: Props): JSX.Element => {
 
 const WizardWrapper = styled(Wrapper)`
   overflow: visible;
-  max-width: 86rem;
+  max-width: ${({ hasMaxWidth }) => (hasMaxWidth ? "86rem" : "100%")};
   width: 100%;
   margin: 0 auto;
 `;
