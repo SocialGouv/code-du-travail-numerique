@@ -40,7 +40,7 @@ jobs:
           subdomain: app
       - name: Set env
         run: |
-          echo "SITE_URL=https://${{ steps.env.outputs.app }}.dev.fabrique.social.gouv.fr" >> $GITHUB_ENV
+          echo "SITE_URL=https://${{ steps.env.outputs.subdomain_app }}.dev.fabrique.social.gouv.fr" >> $GITHUB_ENV
       - name: Run test e2e
         run: |
           TEST_BASEURL=${{ env.SITE_URL }} yarn test:e2e
