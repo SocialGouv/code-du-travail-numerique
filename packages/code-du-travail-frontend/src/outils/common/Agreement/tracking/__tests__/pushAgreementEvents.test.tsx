@@ -162,7 +162,7 @@ describe("Push agreement events on click next", () => {
     it("should send matomo events", () => {
       const pageTitle = "Préavis de retraite";
       pushAgreementEvents(pageTitle, data, false, true);
-      expect(matopush).toHaveBeenCalledTimes(2);
+      expect(matopush).toHaveBeenCalledTimes(4);
       expect(matopush).toHaveBeenNthCalledWith(1, [
         MatomoBaseEvent.TRACK_EVENT,
         MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
@@ -170,6 +170,18 @@ describe("Push agreement events on click next", () => {
         pageTitle,
       ]);
       expect(matopush).toHaveBeenNthCalledWith(2, [
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
+        pageTitle,
+        `idcc${agreement.num.toString()}`,
+      ]);
+      expect(matopush).toHaveBeenNthCalledWith(3, [
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoBaseEvent.OUTIL,
+        MatomoAgreementEvent.CC_UNTREATED,
+        agreement.num,
+      ]);
+      expect(matopush).toHaveBeenNthCalledWith(4, [
         MatomoBaseEvent.TRACK_EVENT,
         MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
         MatomoSimulatorEvent.SELECT_JE_N_AI_PAS_D_ENTREPRISE,
