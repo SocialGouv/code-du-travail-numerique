@@ -5,17 +5,15 @@
   "description": "Code du travail",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
-    "bootstrap": "lerna bootstrap --force-local && lerna link --force-local",
-    "build": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils,@cdt/frontend} --stream",
-    "build:npm": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@socialgouv/cdtn-utils} --stream",
+    "build": "lerna run build --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --scope=@socialgouv/cdtn-utils --scope=@cdt/frontend --stream",
+    "build:npm": "lerna run build --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --scope=@socialgouv/cdtn-utils --stream",
     "clean": "lerna clean",
     "dev:docker": "docker-compose up elasticsearch",
     "dev": "lerna run dev --parallel",
-    "type-check": "lerna run type-check --scope={@socialgouv/modeles-social,@cdt/frontend} --stream",
-    "dev:frontend": "lerna run dev --parallel --scope={@cdt/frontend,@socialgouv/cdtn-ui,@socialgouv/modeles-social} --stream",
+    "type-check": "lerna run type-check --scope=@socialgouv/modeles-social --scope=@cdt/frontend --stream",
+    "dev:frontend": "lerna run dev --parallel --scope=@cdt/frontend --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --stream",
     "dev:frontend:preprod-api": "NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr yarn dev:frontend",
     "dev:simulate-deployment": "NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr yarn workspace @cdt/frontend build && yarn workspace @cdt/frontend start",
-    "k8s": "yarn --silent --cwd .k8s",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint -- --fix",
     "lint:quiet": "lerna run lint -- --quiet",
@@ -23,14 +21,15 @@
     "storybook:build": "lerna run build-storybook --scope=@socialgouv/cdtn-ui",
     "storybook:run": "lerna run start --scope=@socialgouv/cdtn-ui",
     "storybook:deploy": "lerna run deploy-storybook --scope=@socialgouv/cdtn-ui",
-    "storybook:deploy:action": "lerna run deploy-storybook:action --scope=@socialgouv/cdtn-ui",
     "svg": "lerna run svg --scope=@socialgouv/cdtn-ui --stream",
     "test": "lerna run test",
     "test:modeles": "lerna exec --scope=@socialgouv/modeles-social -- yarn test",
+    "test:frontend": "lerna run test:frontend --scope=@cdt/frontend --stream",
     "test:api": "lerna run test:api --scope=@cdt/frontend --stream",
     "test:e2e": "lerna run test:e2e --scope=@cdt/frontend --stream",
     "test:e2e:ui": "lerna run test:e2e:ui --scope=@cdt/frontend --stream",
-    "test:update": "lerna run test:update --scope={@socialgouv/cdtn-ui,@cdt/frontend} --stream",
+    "test:update": "lerna run test:update --scope=@socialgouv/cdtn-ui --scope=@cdt/frontend --stream",
+    "test:update:frontend": "lerna run test:update --scope=@cdt/frontend --stream",
     "test:update:api": "lerna run test:api:update --scope=@cdt/frontend --stream",
     "prepare": "is-ci || husky install"
   },
@@ -46,13 +45,12 @@
     "is-ci": "^3.0.0",
     "lerna": "^5.0.0"
   },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "engines": {
     "node": ">= v20"
   },
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "packageManager": "yarn@3.6.0"
 }

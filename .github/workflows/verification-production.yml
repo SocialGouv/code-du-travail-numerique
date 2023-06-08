@@ -2,7 +2,7 @@ name: Vérification de la production
 
 on:
   workflow_run:
-    workflows: ["Production"]
+    workflows: ["🚀 Production"]
     types:
       - completed
   workflow_dispatch:

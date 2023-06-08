@@ -5,6 +5,7 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.contains("Je la recherche").click();
 
     cy.get("#enterprise-search").type("82129756100010");
+    cy.get('button[type="submit"]').last().click();
     cy.contains("BOUILLON PIGALLE").click();
 
     cy.get("p").should(
@@ -16,6 +17,7 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.get("#enterprise-search").clear();
     cy.get("#enterprise-search").type("fnac");
     cy.get("#enterprise-search-address").type("75001");
+    cy.get('button[type="submit"]').last().click();
     cy.contains("FNAC PARIS").click();
     cy.get("p").should(
       "contain",

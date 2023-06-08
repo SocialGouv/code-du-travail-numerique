@@ -1,0 +1,22 @@
+jobs:
+  runs:
+    build-app:
+      use: build
+      with:
+        buildArgs:
+          NEXT_PUBLIC_SENTRY_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+          NEXT_PUBLIC_SENTRY_ENV: dev
+          NEXT_PUBLIC_SENTRY_RELEASE: "{{.Values.global.sha}}"
+          NEXT_PUBLIC_AZURE_BASE_URL: https://cdtnadmindev.blob.core.windows.net
+          NEXT_PUBLIC_AZURE_CONTAINER: cdtn
+          NEXT_PUBLIC_PIWIK_SITE_ID: "3"
+          NEXT_PUBLIC_PIWIK_URL: https://matomo.fabrique.social.gouv.fr
+          NEXT_PUBLIC_COMMIT: "{{.Values.global.sha}}"
+          NEXT_PUBLIC_SITE_URL: "https://{{.Values.global.host}}"
+          NEXT_PUBLIC_SENTRY_ORG: "incubateur"
+          NEXT_PUBLIC_SENTRY_PROJECT: "code-du-travail-numerique"
+          NEXT_PUBLIC_SENTRY_URL: "https://sentry.fabrique.social.gouv.fr/"
+        secrets:
+          sentry_auth_token:
+            secretName: www-secret
+            secretKey: SENTRY_AUTH_TOKEN
