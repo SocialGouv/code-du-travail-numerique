@@ -80,11 +80,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Pouvez-vous nous en dire plus ?
             </legend>
             <label
-              class="sc-dBmzty kWkJnW"
+              class="sc-dBmzty fcjLqu"
               for="unclear"
             >
               <input
-                class="sc-fifgRP iExhwy"
+                class="sc-fifgRP cEkCmq"
                 id="unclear"
                 name="category"
                 type="checkbox"
@@ -93,11 +93,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Les informations ne sont pas claires.
             </label>
             <label
-              class="sc-dBmzty kWkJnW"
+              class="sc-dBmzty fcjLqu"
               for="unrelated"
             >
               <input
-                class="sc-fifgRP iExhwy"
+                class="sc-fifgRP cEkCmq"
                 id="unrelated"
                 name="category"
                 type="checkbox"
@@ -106,11 +106,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Cette page ne correspond pas à ma recherche ou à ma situation.
             </label>
             <label
-              class="sc-dBmzty kWkJnW"
+              class="sc-dBmzty fcjLqu"
               for="unsatisfied"
             >
               <input
-                class="sc-fifgRP iExhwy"
+                class="sc-fifgRP cEkCmq"
                 id="unsatisfied"
                 name="category"
                 type="checkbox"
@@ -119,11 +119,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Je ne suis pas satisfait de cette réglementation.
             </label>
             <label
-              class="sc-dBmzty kWkJnW"
+              class="sc-dBmzty fcjLqu"
               for="wrong"
             >
               <input
-                class="sc-fifgRP iExhwy"
+                class="sc-fifgRP cEkCmq"
                 id="wrong"
                 name="category"
                 type="checkbox"

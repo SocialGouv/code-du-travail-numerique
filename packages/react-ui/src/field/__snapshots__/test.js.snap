@@ -16,11 +16,11 @@ exports[`<Input /> should render input field 1`] = `
 exports[`<InputCheckbox /> should render checkbox field 1`] = `
 <div>
   <label
-    class="sc-aXZVg kkgEtU"
+    class="sc-aXZVg utbZE"
     for="checkbox"
   >
     <input
-      class="sc-gEvEer gsxbPM"
+      class="sc-gEvEer jFblLw"
       id="checkbox"
       name="checkbox"
       type="checkbox"
