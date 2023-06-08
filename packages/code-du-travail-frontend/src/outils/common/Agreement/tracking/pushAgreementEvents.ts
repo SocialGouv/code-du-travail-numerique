@@ -36,6 +36,15 @@ const pushAgreementEvents = (
     eventName,
     simulatorTitle,
   ]);
+  if (hasNoEnterpriseSelected) {
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+      MatomoSimulatorEvent.SELECT_JE_N_AI_PAS_D_ENTREPRISE,
+      simulatorTitle,
+    ]);
+    return;
+  }
   if (values.enterprise) {
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
@@ -64,14 +73,6 @@ const pushAgreementEvents = (
         ? MatomoAgreementEvent.CC_TREATED
         : MatomoAgreementEvent.CC_UNTREATED,
       idcc,
-    ]);
-  }
-  if (hasNoEnterpriseSelected) {
-    matopush([
-      MatomoBaseEvent.TRACK_EVENT,
-      MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-      MatomoSimulatorEvent.SELECT_JE_N_AI_PAS_D_ENTREPRISE,
-      simulatorTitle,
     ]);
   }
 };

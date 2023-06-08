@@ -4,13 +4,14 @@ import styled from "styled-components";
 
 import { box, spacings } from "../theme.js";
 
-export const InputCheckbox = ({ label, name, id, size, ...props }) => (
+export const InputCheckbox = ({ label, name, id, size, checked, ...props }) => (
   <StyledLabel htmlFor={id} size={size}>
     <StyledCheckbox
       type="checkbox"
       name={name}
       id={id}
       size={size}
+      checked={checked}
       {...props}
     />
     {label}
@@ -18,6 +19,7 @@ export const InputCheckbox = ({ label, name, id, size, ...props }) => (
 );
 
 InputCheckbox.propTypes = {
+  checked: PropTypes.bool,
   id: PropTypes.string.isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   name: PropTypes.string.isRequired,

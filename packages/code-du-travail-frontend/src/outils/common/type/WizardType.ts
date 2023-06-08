@@ -54,4 +54,5 @@ export type FormContent = {
   cdt?: Record<string, string>;
   disabledWorker?: boolean;
   typeRupture?: string;
+  hasNoEnterpriseSelected?: boolean;
 } & Record<string, unknown>;

@@ -124,7 +124,7 @@ const SelectAgreement = ({
           />
           <NoEnterprise
             selectedEnterprise={enterprise}
-            isCheckboxChecked={values.hasNoEnterpriseSelected}
+            isCheckboxChecked={values.hasNoEnterpriseSelected ? true : false}
             setIsCheckboxChecked={() => {
               form.change(
                 "hasNoEnterpriseSelected",

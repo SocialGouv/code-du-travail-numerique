@@ -40,8 +40,7 @@ export function NoEnterprise({
               }
               name="salarieParticulierEmployeur"
               id="salarieParticulierEmployeur"
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                e.preventDefault();
+              onChange={() => {
                 setIsCheckboxChecked(!isCheckboxChecked);
                 onCheckboxChange(!isCheckboxChecked);
               }}
