@@ -18,12 +18,20 @@ child-src 'self' blob:;
 const { withSentryConfig } = require("@sentry/nextjs");
 const MappingReplacement = require("./redirects");
 
+// See config here : https://github.com/getsentry/sentry-webpack-plugin#options
+const sentryConfig = {
+  org: process.env.NEXT_PUBLIC_SENTRY_ORG,
+  project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
+  authToken: process.env.SENTRY_AUTH_TOKEN,
+  release: process.env.NEXT_PUBLIC_SENTRY_RELEASE,
+  url: process.env.NEXT_PUBLIC_SENTRY_URL,
+};
+
 const nextConfig = {
   poweredByHeader: false,
-  productionBrowserSourceMaps: !!process.env.ENABLE_SOURCE_MAP,
   sentry: {
-    disableServerWebpackPlugin: true,
-    disableClientWebpackPlugin: true,
+    hideSourceMaps: true,
+    widenClientFileUpload: true,
   },
   compiler: {
     reactRemoveProperties:
@@ -84,4 +92,6 @@ const moduleExports = {
   },
 };
 
-module.exports = withBundleAnalyzer(withSentryConfig(moduleExports));
+module.exports = withBundleAnalyzer(
+  withSentryConfig(moduleExports, sentryConfig)
+);
