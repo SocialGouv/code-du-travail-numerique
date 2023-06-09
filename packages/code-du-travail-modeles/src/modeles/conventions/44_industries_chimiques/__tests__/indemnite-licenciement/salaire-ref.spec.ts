@@ -53,8 +53,8 @@ describe("Calcul du salaire pour la CC 44", () => {
           sref.computeReferenceSalary({
             category: CategoryPro44.ouvrier,
             hasVariablePay: false,
-            salaires: salaries,
             lastMonthSalary: { month: "décembre 2021" },
+            salaires: salaries,
           })
         ).toEqual(expectedResult);
       }
