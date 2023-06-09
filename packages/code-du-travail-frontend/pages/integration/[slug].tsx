@@ -8,6 +8,7 @@ import { integrationData, IntegrationContainer } from "../../src/integration";
 import { SITE_URL } from "../../src/config";
 
 const IntegrationPage = (props): JSX.Element => {
+  console.log(props);
   const {
     description,
     metaDescription,
