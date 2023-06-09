@@ -63,7 +63,8 @@ export const getServerSideProps = async ({ query, req }) => {
   }
 
   const hostname: string = req.headers.host;
-  const protocol = req.connection.encrypted ? "https" : "http";
+  const { protocol } = new URL(req.headers.referer);
+
   return {
     props: {
       hostname,
