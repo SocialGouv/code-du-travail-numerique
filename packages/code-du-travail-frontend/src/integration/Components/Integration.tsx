@@ -33,8 +33,6 @@ const IntegrationContainer = ({
   id,
   selectOptions,
 }: IntegrationContainerProps) => {
-  console.log("url", url);
-  console.log("host", host);
   const escape = (url: string) => {
     return url
       .replace(/&/g, "&amp;")
@@ -98,10 +96,6 @@ const IntegrationContainer = ({
               onChange={(v) => {
                 setOldSelectValue(selectValue);
                 setSelectValue(v.target.value);
-                console.log(
-                  "parsedUrl",
-                  url.replace("[value]", v.target.value ?? "")
-                );
                 setParsedUrl(url.replace("[value]", v.target.value ?? ""));
               }}
             >
