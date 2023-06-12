@@ -1881,11 +1881,11 @@ __metadata:
     "@sentry/nextjs": ^7.53.1
     "@socialgouv/cdtn-elasticsearch": ^2.5.2
     "@socialgouv/cdtn-logger": ^2.0.0
-    "@socialgouv/cdtn-ui": ^4.101.0
-    "@socialgouv/cdtn-utils": ^4.101.0
+    "@socialgouv/cdtn-ui": ^4.101.1
+    "@socialgouv/cdtn-utils": ^4.101.1
     "@socialgouv/fiches-travail-data": ^4.241.0
     "@socialgouv/matomo-next": ^1.6.1
-    "@socialgouv/modeles-social": ^4.101.0
+    "@socialgouv/modeles-social": ^4.101.1
     "@socialgouv/reference-article": ^1.0.1
     "@swc-node/register": ^1.6.5
     "@swc/core": ^1.3.60
@@ -4545,7 +4545,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@socialgouv/cdtn-ui@^4.101.0, @socialgouv/cdtn-ui@workspace:packages/react-ui":
+"@socialgouv/cdtn-ui@^4.101.1, @socialgouv/cdtn-ui@workspace:packages/react-ui":
   version: 0.0.0-use.local
   resolution: "@socialgouv/cdtn-ui@workspace:packages/react-ui"
   dependencies:
@@ -4597,7 +4597,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@socialgouv/cdtn-utils@^4.101.0, @socialgouv/cdtn-utils@workspace:packages/code-du-travail-utils":
+"@socialgouv/cdtn-utils@^4.101.1, @socialgouv/cdtn-utils@workspace:packages/code-du-travail-utils":
   version: 0.0.0-use.local
   resolution: "@socialgouv/cdtn-utils@workspace:packages/code-du-travail-utils"
   dependencies:
@@ -4701,7 +4701,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@socialgouv/modeles-social@^4.101.0, @socialgouv/modeles-social@workspace:packages/code-du-travail-modeles":
+"@socialgouv/modeles-social@^4.101.1, @socialgouv/modeles-social@workspace:packages/code-du-travail-modeles":
   version: 0.0.0-use.local
   resolution: "@socialgouv/modeles-social@workspace:packages/code-du-travail-modeles"
   dependencies:
