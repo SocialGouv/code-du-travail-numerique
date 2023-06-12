@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.101.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.0...v4.101.1) (2023-06-12)
+
+### Bug Fixes
+
+- **dependencies:** auto-increment version of local package ([20f7d3a](https://github.com/SocialGouv/code-du-travail-numerique/commit/20f7d3a93db5a8b2fa79bceef8556655851a8a6b))
+
 # [4.101.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.100.0...v4.101.0) (2023-06-12)
 
 ### Bug Fixes
