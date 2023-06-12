@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.101.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.1...v4.101.2) (2023-06-12)
+
+### Bug Fixes
+
+- dep ([34046be](https://github.com/SocialGouv/code-du-travail-numerique/commit/34046be79a8ea3d5da3d610f6ea0eec8cdedf5a0))
+- dep ([dc57529](https://github.com/SocialGouv/code-du-travail-numerique/commit/dc57529d27de12d9cd1a49c9986564d6130cea4d))
+- **kontinuous:** secret ([e93f15e](https://github.com/SocialGouv/code-du-travail-numerique/commit/e93f15ea7dbb59f9ccaae798fbc911d6e762b4d0))
+
 ## [4.101.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.0...v4.101.1) (2023-06-12)
 
 ### Bug Fixes
