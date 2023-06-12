@@ -6,6 +6,7 @@ import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { integrationData, IntegrationContainer } from "../../src/integration";
 import { SITE_URL } from "../../src/config";
+import { Cpu } from "react-feather";
 
 const IntegrationPage = (props): JSX.Element => {
   const {
@@ -29,7 +30,7 @@ const IntegrationPage = (props): JSX.Element => {
           title={title}
           shortTitle={shortTitle}
           url={url}
-          host={`${props.protocol}//${props.hostname}`}
+          host={`${props.protocol}://${props.hostname}`}
           messages={messages}
           selectOptions={props?.selectOptions}
         ></IntegrationContainer>
@@ -63,7 +64,7 @@ export const getServerSideProps = async ({ query, req }) => {
   }
 
   const hostname: string = req.headers.host;
-  const { protocol } = new URL(req.headers.referer);
+  const protocol = req.connection.encrypted ? "https" : "http";
 
   return {
     props: {
