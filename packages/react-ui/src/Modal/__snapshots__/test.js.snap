@@ -22,24 +22,24 @@ exports[`<Modal /> does not render at first and then render 2`] = `
     >
       <div>
         <div
-          class="sc-dkrFOg glAKPc"
+          class="sc-eqUAAy breLRF"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="title"
             aria-modal="true"
-            class="sc-hLBbgP bBfuTN"
+            class="sc-fqkvVR jXKVYi"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             Some content
             <button
-              class="sc-bcXHqe cLiQC sc-eDvSVe gSHKrE"
+              class="sc-aXZVg cmlGbr sc-dcJsrY kXKaBQ"
               title="fermer la modale"
             >
               <div
-                class="sc-gswNZR ktYOxb"
+                class="sc-gEvEer bGSueO"
               >
                 fermer la modale
               </div>
@@ -98,20 +98,20 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
     >
       <div>
         <div
-          class="sc-dkrFOg glAKPc"
+          class="sc-eqUAAy breLRF"
           data-reach-dialog-overlay=""
         >
           <span
             aria-label="title"
-            class="sc-jSUZER kkCEeL"
+            class="sc-iGgWBj qohFy"
           >
             This won't be displayed
             <button
-              class="sc-bcXHqe cLiQC sc-eDvSVe gSHKrE"
+              class="sc-aXZVg cmlGbr sc-dcJsrY kXKaBQ"
               title="fermer la modale"
             >
               <div
-                class="sc-gswNZR ktYOxb"
+                class="sc-gEvEer bGSueO"
               >
                 fermer la modale
               </div>

@@ -3,7 +3,7 @@
 exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
 <div>
   <div
-    class="sc-bcXHqe hfBrsm"
+    class="sc-aXZVg hXshfX"
   >
     this is a Button 
     dark
@@ -15,7 +15,7 @@ exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
 exports[`<Wrapper /> it renders a default Wrapper 1`] = `
 <div>
   <div
-    class="sc-bcXHqe iZNGAq"
+    class="sc-aXZVg etEKkr"
   >
     this is a Button 
     default
@@ -27,7 +27,7 @@ exports[`<Wrapper /> it renders a default Wrapper 1`] = `
 exports[`<Wrapper /> it renders a light Wrapper 1`] = `
 <div>
   <div
-    class="sc-bcXHqe jRVggQ"
+    class="sc-aXZVg gOIzcl"
   >
     this is a Button 
     light
@@ -39,7 +39,7 @@ exports[`<Wrapper /> it renders a light Wrapper 1`] = `
 exports[`<Wrapper /> it renders a main Wrapper 1`] = `
 <div>
   <div
-    class="sc-bcXHqe cNxiCn"
+    class="sc-aXZVg jIlhLi"
   >
     this is a Button 
     main
@@ -51,7 +51,7 @@ exports[`<Wrapper /> it renders a main Wrapper 1`] = `
 exports[`<Wrapper /> should render a large wrapper 1`] = `
 <div>
   <div
-    class="sc-bcXHqe cankcE"
+    class="sc-aXZVg iQEJPJ"
   >
     I am a large wrapper
   </div>
