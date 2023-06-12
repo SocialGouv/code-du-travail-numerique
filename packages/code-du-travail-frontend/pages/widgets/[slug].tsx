@@ -1,6 +1,5 @@
-import { Container, icons, theme } from "@socialgouv/cdtn-ui";
+import { Container } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
-import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import { useIframeResizer } from "../../src/common/hooks";
@@ -62,7 +61,7 @@ function Widgets({
           slug={slug}
           widgetMode
         />
-        <Footer></Footer>
+        <Footer />
       </StyledContainer>
     </>
   );
@@ -99,29 +98,5 @@ const StyledContainer = styled(Container)`
   padding: 0;
   & > div:before {
     box-shadow: none;
-  }
-`;
-
-const StyledFooter = styled.footer`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: ${theme.spacings.base};
-  @media print {
-    display: none;
-  }
-`;
-
-const Logo = styled(icons.Logo)`
-  width: auto;
-  height: 7rem;
-  color: ${({ theme }) => theme.primary};
-  @media (max-width: ${theme.breakpoints.mobile}) {
-    height: 5rem;
-  }
-`;
-const LeftLink = styled.a`
-  &:after {
-    content: "" !important;
   }
 `;
