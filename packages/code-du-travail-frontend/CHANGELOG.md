@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.101.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.100.0...v4.101.0) (2023-06-12)
+
+### Bug Fixes
+
+- **deps:** update dependency @next/bundle-analyzer to v13 ([#5204](https://github.com/SocialGouv/code-du-travail-numerique/issues/5204)) ([e7911af](https://github.com/SocialGouv/code-du-travail-numerique/commit/e7911af74125c4a4f061ef222d5d8deba2575c6f))
+- **e2e:** fix tests ([#5181](https://github.com/SocialGouv/code-du-travail-numerique/issues/5181)) ([bfb64a8](https://github.com/SocialGouv/code-du-travail-numerique/commit/bfb64a84085f365f6ade776494ae07d5ef3f2130))
+- **indemnite-licenciement:** ajout d'une notification pour la CC 3239 ([#5164](https://github.com/SocialGouv/code-du-travail-numerique/issues/5164)) ([e3f6ca5](https://github.com/SocialGouv/code-du-travail-numerique/commit/e3f6ca5d57f018066f9b854c2d8f5f1472057ef6))
+- **indemnite-licenciement:** salaire de reference non pris en compte sur la cc 44 ([#5162](https://github.com/SocialGouv/code-du-travail-numerique/issues/5162)) ([1d4362f](https://github.com/SocialGouv/code-du-travail-numerique/commit/1d4362f9101d1d3734e9236c3f87bf4d309712a3))
+- **package.json:** command update snapshot for frontend ([1198c9f](https://github.com/SocialGouv/code-du-travail-numerique/commit/1198c9f75050f1d74afe9c20b6c82fba21f72b19))
+- **sentry:** disable webpack plugin ([48aae3b](https://github.com/SocialGouv/code-du-travail-numerique/commit/48aae3b7f798b73d0f3ea00db8dccc006733fdd1))
+- **sentry:** getting source maps ([#5166](https://github.com/SocialGouv/code-du-travail-numerique/issues/5166)) ([c393785](https://github.com/SocialGouv/code-du-travail-numerique/commit/c393785d626b8b9da1bde689be870f766eff9bf6))
+- **source-maps:** remove for preproduction and production ([e309bd2](https://github.com/SocialGouv/code-du-travail-numerique/commit/e309bd29c689adee34478d9dfcedb3cd618222fb))
+- **trouver sa cc:** ajout d'urls spécifiques aux 2 outils pour rechercher sa CC (et suppression du mechanisme de redirection avec un hash dans l'url) ([#5173](https://github.com/SocialGouv/code-du-travail-numerique/issues/5173)) ([66aa66a](https://github.com/SocialGouv/code-du-travail-numerique/commit/66aa66a0c9254f6e2dc38dcbe8aa6346065f2fbf))
+- utilisation des maps pour sentry ([#5176](https://github.com/SocialGouv/code-du-travail-numerique/issues/5176)) ([538ed7a](https://github.com/SocialGouv/code-du-travail-numerique/commit/538ed7a906a6caea95020425531dde8a82d9adae))
+- **widget:** stop scrolling too much when widget is installed on very height page ([#5177](https://github.com/SocialGouv/code-du-travail-numerique/issues/5177)) ([5855b2d](https://github.com/SocialGouv/code-du-travail-numerique/commit/5855b2d72d16d0afcc04cd044cdec1fee00fe7ff))
+
+### Features
+
+- **accessibilité:** rendre la recherche de CC par entreprise accessible ([#5151](https://github.com/SocialGouv/code-du-travail-numerique/issues/5151)) ([22c92a8](https://github.com/SocialGouv/code-du-travail-numerique/commit/22c92a892f2c8a30e00f0b7a746372736677bb2d))
+- **dep:** optimize fetching of yarn dependencies ([#5190](https://github.com/SocialGouv/code-du-travail-numerique/issues/5190)) ([49878e3](https://github.com/SocialGouv/code-du-travail-numerique/commit/49878e3251b0d7aab82ce1c7652bd8cad829e67c))
+- **indemnite-licenciement:** ajout d'une note en bas de page sur le résultat ([#5172](https://github.com/SocialGouv/code-du-travail-numerique/issues/5172)) ([b852136](https://github.com/SocialGouv/code-du-travail-numerique/commit/b852136f7d6ba734bf86dbc053b076d3078387cb))
+- **indemnite-licenciement:** ajout de la cc 1483 ([#5154](https://github.com/SocialGouv/code-du-travail-numerique/issues/5154)) ([a8030e1](https://github.com/SocialGouv/code-du-travail-numerique/commit/a8030e18369777db579022f10d20a0de92b82ff5))
+- **indemnite-licenciement:** ajout de la cc 1740 ([#5155](https://github.com/SocialGouv/code-du-travail-numerique/issues/5155)) ([d66e652](https://github.com/SocialGouv/code-du-travail-numerique/commit/d66e652b92a3e47f10d0901f65165fdbae9ef89f))
+- **indemnite-licenciement:** retirer pour certaines cc un messages sur la page resultat ([#5165](https://github.com/SocialGouv/code-du-travail-numerique/issues/5165)) ([dd14970](https://github.com/SocialGouv/code-du-travail-numerique/commit/dd14970ac6d44c0aa5fc69099ea3fe6e0326b1d9))
+- **page contribution:** ajout d'un lien vers la CC quand la page est personalisée + passage en ts ([#5150](https://github.com/SocialGouv/code-du-travail-numerique/issues/5150)) ([f78a9eb](https://github.com/SocialGouv/code-du-travail-numerique/commit/f78a9eb8f78c9f32ced7e3af390c2f3271bd06f8))
+- **sentry:** ajout des source maps ([#5200](https://github.com/SocialGouv/code-du-travail-numerique/issues/5200)) ([700d656](https://github.com/SocialGouv/code-du-travail-numerique/commit/700d656c6e683a06648c0e9ac5c68978b2f2147f))
+- **widget:** ajout d'une balise meta et d'une balise canonical ([#5170](https://github.com/SocialGouv/code-du-travail-numerique/issues/5170)) ([861b8fa](https://github.com/SocialGouv/code-du-travail-numerique/commit/861b8fa3b9b7479fd68469b4238039af7b342dd6))
+
 # [4.100.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.99.0...v4.100.0) (2023-05-24)
 
 ### Features
