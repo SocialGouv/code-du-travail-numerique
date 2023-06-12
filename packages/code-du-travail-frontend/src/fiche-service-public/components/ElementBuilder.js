@@ -38,6 +38,7 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
   if (data.type === "text") {
     return data.text;
   }
+
   switch (data.name) {
     // Complex elements, we don't immediately parse their children
     case "BlocCas":
@@ -100,6 +101,7 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
       );
     case "Chapitre":
     case "SousChapitre":
+    case "FragmentConditionne":
       return (
         <ElementBuilder data={data.children} headingLevel={headingLevel} />
       );
