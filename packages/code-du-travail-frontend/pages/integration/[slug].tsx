@@ -64,9 +64,9 @@ export const getServerSideProps = async ({ query, req }) => {
   }
 
   const hostname: string = req.headers.host;
-  const protocol = req.connection.encrypted
-    ? "https"
-    : req.headers["x-forwarded-proto"];
+  const [protocol] = req.headers["x-forwarded-proto"]
+    ? req.headers["x-forwarded-proto"].split(",")
+    : ["https"];
 
   return {
     props: {
