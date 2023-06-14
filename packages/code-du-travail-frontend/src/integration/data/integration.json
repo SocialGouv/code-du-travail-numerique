@@ -104,7 +104,7 @@
       "Utilisez le menu déroulant ci-dessous pour afficher le modèle que vous souhaitez. Le code Javascript à intégrer dans votre page (disponible sous le modèle) se mettra automatiquement à jour selon le modèle sélectionné."
     ],
     "shortTitle": "Modèles de documents",
-    "shortDescription": "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail",
+    "shortDescription": "Télécharger et personnaliser les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail",
     "select": {
       "url": "/api/modeles",
       "labelPath": "title",
