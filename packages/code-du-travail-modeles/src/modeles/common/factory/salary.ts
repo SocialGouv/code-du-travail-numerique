@@ -24,6 +24,7 @@ import { ReferenceSalary2596 } from "../../conventions/2596_coiffure/salary";
 import { ReferenceSalary3239 } from "../../conventions/3239_particuliers_employeurs_domicile";
 import type { IReferenceSalary } from "..";
 import { SupportedCcIndemniteLicenciement } from "..";
+import { ReferenceSalary292 } from "../../conventions/292_plasturgie";
 
 export class ReferenceSalaryFactory {
   create<T extends SupportedCcIndemniteLicenciement>(
@@ -72,6 +73,8 @@ export class ReferenceSalaryFactory {
         return new ReferenceSalary1702() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC1740:
         return new ReferenceSalary1740() as IReferenceSalary<T>;
+      case SupportedCcIndemniteLicenciement.IDCC0292:
+        return new ReferenceSalary292() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new ReferenceSalaryLegal() as IReferenceSalary<T>;

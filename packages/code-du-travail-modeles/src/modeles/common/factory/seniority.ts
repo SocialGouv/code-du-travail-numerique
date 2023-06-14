@@ -1,10 +1,5 @@
 import { SeniorityLegal } from "../../base";
 import {
-  Seniority16,
-  Seniority44,
-  Seniority275,
-  Seniority413,
-  Seniority650,
   Seniority1090,
   Seniority1483,
   Seniority1486,
@@ -14,6 +9,7 @@ import {
   Seniority1527,
   Seniority1596,
   Seniority1597,
+  Seniority16,
   Seniority1606,
   Seniority1672,
   Seniority1702,
@@ -25,12 +21,17 @@ import {
   Seniority2511,
   Seniority2609,
   Seniority2614,
+  Seniority275,
   Seniority2941,
   Seniority3043,
   Seniority3239,
+  Seniority413,
+  Seniority44,
+  Seniority650,
 } from "../../conventions";
 import { SupportedCcIndemniteLicenciement } from "../index";
 import type { ISeniority } from "../types";
+import { Seniority0292 } from "../../conventions/292_plasturgie";
 
 export class SeniorityFactory {
   create<T extends SupportedCcIndemniteLicenciement>(
@@ -53,6 +54,8 @@ export class SeniorityFactory {
         return new Seniority1527();
       case SupportedCcIndemniteLicenciement.IDCC0016:
         return new Seniority16() as ISeniority<T>;
+      case SupportedCcIndemniteLicenciement.IDCC0292:
+        return new Seniority0292() as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.IDCC3239:
         return new Seniority3239();
       case SupportedCcIndemniteLicenciement.IDCC650:
