@@ -24,8 +24,8 @@ const FindAnswerPage = (): JSX.Element => {
           </Container>
           <p>
             L’équipe du Code du travail numérique vous propose d’intégrer son
-            moteur de recherche et certains de ses simulateurs sur votre site
-            grâce à un module (widget).
+            moteur de recherche, ses modèles de courriers ainsi que certains de
+            ses simulateurs et outils sur votre site grâce à un module (widget).
           </p>
           <Grid columns="2">
             {keys.map((key) => {
