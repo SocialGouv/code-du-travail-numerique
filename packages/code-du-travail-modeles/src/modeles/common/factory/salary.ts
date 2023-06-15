@@ -9,6 +9,7 @@ import { ReferenceSalary16 } from "../../conventions/16_transports_routiers";
 import { ReferenceSalary0029 } from "../../conventions/29_hospitalisation_privee_but_non_lucratif";
 import { ReferenceSalary44 } from "../../conventions/44_industries_chimiques";
 import { ReferenceSalary86 } from "../../conventions/86_publicite_francaise";
+import { ReferenceSalary292 } from "../../conventions/292_plasturgie";
 import { ReferenceSalary413 } from "../../conventions/413_handicap";
 import { ReferenceSalary573 } from "../../conventions/573_commerces_de_gros";
 import { ReferenceSalary675 } from "../../conventions/675_habillement_commerce_succursales";
@@ -24,7 +25,6 @@ import { ReferenceSalary2596 } from "../../conventions/2596_coiffure/salary";
 import { ReferenceSalary3239 } from "../../conventions/3239_particuliers_employeurs_domicile";
 import type { IReferenceSalary } from "..";
 import { SupportedCcIndemniteLicenciement } from "..";
-import { ReferenceSalary292 } from "../../conventions/292_plasturgie";
 
 export class ReferenceSalaryFactory {
   create<T extends SupportedCcIndemniteLicenciement>(
