@@ -178,11 +178,12 @@ const Contribution = ({ answers, content }) => {
                     </StyledParagraph>
                     <Toast variant="secondary" onRemove={() => setConvention()}>
                       {convention.shortTitle}
-                      {convention.highlight && convention.highlight.searchInfo && (
-                        <Paragraph variant="altText" noMargin>
-                          {convention.highlight.searchInfo}
-                        </Paragraph>
-                      )}
+                      {convention.highlight &&
+                        convention.highlight.searchInfo && (
+                          <Paragraph variant="altText" noMargin>
+                            {convention.highlight.searchInfo}
+                          </Paragraph>
+                        )}
                     </Toast>
                   </>
                 )}
@@ -214,14 +215,21 @@ const Contribution = ({ answers, content }) => {
                     <ReferencesJuridiques
                       references={conventionAnswer.references}
                     />
-                    {isConventionDetected() && (
-                      <p>
-                        Consultez les questions-réponses fréquentes pour{" "}
-                        <a href={`/convention-collective/${convention.slug}`}>
-                          la convention collective {convention.title}
-                        </a>
-                      </p>
-                    )}
+                    <p>
+                      Consultez les questions-réponses fréquentes pour{" "}
+                      <a
+                        href={`/convention-collective/${
+                          isConventionalAnswer
+                            ? conventionAnswer.ccSlug
+                            : convention.slug
+                        }`}
+                      >
+                        la convention collective{" "}
+                        {isConventionalAnswer
+                          ? conventionAnswer.shortName
+                          : convention.shortTitle}
+                      </a>
+                    </p>
                   </>
                 ) : (
                   <>
