@@ -254,6 +254,7 @@ const createResultStore: StoreSlice<
             agreementRefSalary,
             agreementRequiredSeniority.value,
             get().ancienneteData.input.dateNotification!,
+            get().ancienneteData.input.dateEntree!,
             isLicenciementInaptitude,
             longTermDisability,
             { ...infos, ...agreementSalaryExtraInfo }
