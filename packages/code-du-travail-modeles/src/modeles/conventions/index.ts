@@ -22,6 +22,7 @@ export * from "./1702_ouvriers_travaux_public";
 export * from "./1740_batiment_region_parisienne";
 export * from "./1996_pharmacie";
 export * from "./2098_personnel_presta_service_tertiaire";
+export * from "./2120_banque";
 export * from "./2148_telecommunications";
 export * from "./2216_commerces_detail_alimentation";
 export * from "./2511_sport";
