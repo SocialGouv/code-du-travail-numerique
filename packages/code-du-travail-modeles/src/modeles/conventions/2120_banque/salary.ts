@@ -28,8 +28,6 @@ export class ReferenceSalary2120
       0
     );
 
-    console.log(totalSalaryValues);
-
     if (isLicenciementEco === "Oui") {
       const averageSalary = totalSalaryValues / rankedSalaires.length;
       return isNaN(averageSalary) ? 0 : averageSalary;
