@@ -41,7 +41,7 @@ function AgreementSearchTool({
     setScreen(
       slug === "convention"
         ? ScreenType.agreement
-        : slug === "entreprise"
+        : slug === "entreprise" || widgetMode
         ? ScreenType.enterprise
         : slug === "selection"
         ? ScreenType.agreementSelection
