@@ -47,7 +47,6 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
     agreementSalaireRef: number,
     requiredSeniority: number,
     notificationDate: string,
-    entryDate: string,
     inaptitude: boolean,
     longTermDisability: boolean,
     agreementParameters?: Record<string, any>
@@ -66,8 +65,6 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
             formatNumberAsString(agreementSalaireRef),
           "contrat salarié . indemnité de licenciement . date de notification":
             notificationDate,
-          "contrat salarié . indemnité de licenciement . date d'entrée":
-            entryDate,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             requiredSeniority,
         },
