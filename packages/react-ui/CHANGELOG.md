@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.101.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.2...v4.101.3) (2023-06-12)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+## [4.101.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.1...v4.101.2) (2023-06-12)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+## [4.101.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.0...v4.101.1) (2023-06-12)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+# [4.101.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.100.0...v4.101.0) (2023-06-12)
+
+### Bug Fixes
+
+- **storybook:** probleme sur le deploiemenent en prod suite à l'upgrade de storybook ([#5183](https://github.com/SocialGouv/code-du-travail-numerique/issues/5183)) ([605ab40](https://github.com/SocialGouv/code-du-travail-numerique/commit/605ab4074e8869dbd8e53006713cc1146659c3b4))
+- **storybook:** typescript error in production environment ([18b795c](https://github.com/SocialGouv/code-du-travail-numerique/commit/18b795c068c4fafc57dfa28cb5b45e1fe11c12f9))
+- **workflow:** depreciate action has been replaced ([fa7c16c](https://github.com/SocialGouv/code-du-travail-numerique/commit/fa7c16c2a62e47bac52c5d8a93cf44dd4a3265c7))
+- **workflow:** storybook can be deployed to github ([46baeb8](https://github.com/SocialGouv/code-du-travail-numerique/commit/46baeb8d1caeffda65994cc795bd8e421649d5f6))
+- **workflow:** storybook deployment ([e5e3c33](https://github.com/SocialGouv/code-du-travail-numerique/commit/e5e3c33d438d8e84a62431c02b28ce2b8401343e))
+
+### Features
+
+- **accessibilité:** rendre la recherche de CC par entreprise accessible ([#5151](https://github.com/SocialGouv/code-du-travail-numerique/issues/5151)) ([22c92a8](https://github.com/SocialGouv/code-du-travail-numerique/commit/22c92a892f2c8a30e00f0b7a746372736677bb2d))
+- **dep:** optimize fetching of yarn dependencies ([#5190](https://github.com/SocialGouv/code-du-travail-numerique/issues/5190)) ([49878e3](https://github.com/SocialGouv/code-du-travail-numerique/commit/49878e3251b0d7aab82ce1c7652bd8cad829e67c))
+- **indemnite-licenciement:** retirer pour certaines cc un messages sur la page resultat ([#5165](https://github.com/SocialGouv/code-du-travail-numerique/issues/5165)) ([dd14970](https://github.com/SocialGouv/code-du-travail-numerique/commit/dd14970ac6d44c0aa5fc69099ea3fe6e0326b1d9))
+- **page contribution:** ajout d'un lien vers la CC quand la page est personalisée + passage en ts ([#5150](https://github.com/SocialGouv/code-du-travail-numerique/issues/5150)) ([f78a9eb](https://github.com/SocialGouv/code-du-travail-numerique/commit/f78a9eb8f78c9f32ced7e3af390c2f3271bd06f8))
+
 # [4.100.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.99.0...v4.100.0) (2023-05-24)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui
