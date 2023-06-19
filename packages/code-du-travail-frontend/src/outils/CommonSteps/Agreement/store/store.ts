@@ -3,14 +3,9 @@ import produce from "immer";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { validateStep } from "./validator";
 
-import {
-  CommonAgreementStoreData,
-  CommonAgreementStoreInput,
-  CommonAgreementStoreSlice,
-} from "./types";
+import { CommonAgreementStoreData, CommonAgreementStoreSlice } from "./types";
 import { STORAGE_KEY_AGREEMENT, StoreSlicePublicode } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
-import { Agreement } from "../../../../conventions/Search/api/type";
 import { loadPublicodes } from "../../../api";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
 import { supportedCcn } from "@socialgouv/modeles-social";
@@ -21,6 +16,7 @@ import {
 import { pushAgreementEvents } from "../../../common/Agreement";
 import { AgreementRoute } from "../../../common/type/WizardType";
 import { isCcFullySupportedIndemniteLicenciement } from "../../../IndemniteLicenciement/common";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
   input: {

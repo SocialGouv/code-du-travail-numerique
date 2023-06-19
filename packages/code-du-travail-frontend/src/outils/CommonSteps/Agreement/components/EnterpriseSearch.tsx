@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Paragraph, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import { SearchParams } from "../../../ConventionCollective/common/NavContext";
 import { TrackingProps } from "../../../ConventionCollective/types";
 import styled from "styled-components";

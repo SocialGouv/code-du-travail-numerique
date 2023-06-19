@@ -6,7 +6,7 @@ import {
 } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 
-import { Agreement } from "../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import { TrackingProps } from "../../../ConventionCollective/types";
 import { Question } from "../../../common/Question";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";

@@ -1,7 +1,6 @@
 import React from "react";
 import { RadioQuestion } from "../../Components";
 import { AgreementSearch, EnterpriseSearch, NoEnterprise } from "./components";
-import { Agreement } from "../../../conventions/Search/api/type";
 import {
   AgreementSupportInfo,
   OnSelectAgreementFn,
@@ -12,6 +11,8 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
 import { AgreementSearchValue } from "./store";
 import { AgreementRoute } from "../../common/type/WizardType";
+import { getCc3239Informations } from "../../api";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 type Props = {
   selectedRoute?: AgreementRoute;
@@ -123,20 +124,9 @@ function AgreementStep({
             selectedEnterprise={selectedEnterprise}
             isCheckboxChecked={hasNoEnterpriseSelected}
             setIsCheckboxChecked={setHasNoEnterpriseSelected}
-            onCheckboxChange={(isCheckboxChecked) => {
-              onAgreementChange(
-                isCheckboxChecked
-                  ? {
-                      url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
-                      id: "KALICONT000044594539",
-                      num: 3239,
-                      shortTitle:
-                        "Particuliers employeurs et emploi à domicile",
-                      slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
-                      title: "Particuliers employeurs et emploi à domicile",
-                    }
-                  : null
-              );
+            onCheckboxChange={async (isCheckboxChecked) => {
+              const cc3239 = await getCc3239Informations();
+              onAgreementChange(isCheckboxChecked ? cc3239 : null);
             }}
           />
           {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}

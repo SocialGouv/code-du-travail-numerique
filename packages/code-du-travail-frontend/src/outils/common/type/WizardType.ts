@@ -2,7 +2,7 @@ import { FormApi } from "final-form";
 import React from "react";
 
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
-import type { Agreement } from "../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import { MatomoActionEvent } from "../../../lib";
 
 export type SkipFn = (values: FormContent) => boolean;
