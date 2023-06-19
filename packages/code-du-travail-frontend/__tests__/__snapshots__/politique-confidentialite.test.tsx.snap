@@ -253,7 +253,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               Vous êtes également en droit de saisir la Commission Nationale de l’Informatique et des Libertés pour toute réclamation à
                
               <a
-                href="https://www.cnil.fr/fr/cnil-direct/question/adresser-une-reclamation-plainte-la-cnil-quelles-conditions-et-comment"
+                href="https://www.cnil.fr/fr/cnil-direct/question/844"
                 title="Adresser une réclamation (plainte) à la CNIL"
               >
                 l’adresse suivante
