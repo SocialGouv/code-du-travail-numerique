@@ -134,7 +134,19 @@ const SelectAgreement = ({
             }}
             onCheckboxChange={async (isCheckboxChecked) => {
               const cc3239 = await getCc3239Informations();
-              onSelectAgreement(isCheckboxChecked ? cc3239 : null);
+              onSelectAgreement(
+                isCheckboxChecked
+                  ? {
+                      url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+                      id: "KALICONT000044594539",
+                      num: 3239,
+                      shortTitle:
+                        "Particuliers employeurs et emploi à domicile",
+                      slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
+                      title: "Particuliers employeurs et emploi à domicile",
+                    }
+                  : null
+              );
             }}
           />
         </>
