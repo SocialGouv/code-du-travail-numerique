@@ -61,8 +61,28 @@ export class Seniority2120 extends SeniorityDefault<SupportedCcIndemniteLicencie
           semestersAfter2002,
         "contrat salarié . convention collective . banque . semestres complets avant 2002":
           semestersBefore2002,
+        ...this.getExtraInfoAbsence(absences),
       },
       value: result.value,
     };
+  }
+
+  private getExtraInfoAbsence(
+    absencePeriods: Absence[]
+  ): Record<string, string> {
+    if (
+      absencePeriods.some(
+        (absence) =>
+          absence.motif.key === MotifKeys.maladieNonPro &&
+          absence.durationInMonth &&
+          absence.durationInMonth > 0
+      )
+    ) {
+      return {
+        "contrat salarié . convention collective . banque . maladie non pro":
+          "oui",
+      };
+    }
+    return {};
   }
 }

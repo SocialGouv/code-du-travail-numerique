@@ -18,7 +18,7 @@ contrat salarié . convention collective . banque . licenciement économique:
 contrat salarié . convention collective . banque . licenciement pour motif disciplinaire:
   applicable si: licenciement économique = non
   titre: Licenciement pour motif disciplinaire
-  question: Le motif du licenciement est-il disciplinaire ?
+  question: Le licenciement fait-il suite à une faute du salarié (licenciement disciplinaire) ?
   cdtn:
     type: oui-non
 
@@ -239,3 +239,13 @@ contrat salarié . convention collective . banque . résultat conventionnel 7:
     Article 28: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005782174?idConteneur=KALICONT000005635780
     Article 29.2.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374
     Article 59.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975
+
+# Notifications
+contrat salarié . convention collective . banque . maladie non pro:
+
+contrat salarié . convention collective . banque . maladie non pro . notification:
+  type: notification
+  description: |
+    Si lors de l’absence pour maladie non professionnelle le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (maintien de salaire), en plus des indemnités journalières de la sécurité sociale, le montant de l’indemnité de licenciement pourrait être plus élevé. En effet, dans ce cas, la période d’absence est intégrée dans l’ancienneté du salarié.
+    Par soucis de simplification, ce simulateur déduit toutes les absences pour maladie non professionnelle sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas.
+  valeur: oui
