@@ -3,6 +3,7 @@
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
 import * as Sentry from "@sentry/nextjs";
+import { Replay } from "@sentry/browser";
 
 Sentry.init({
   dsn:
@@ -14,5 +15,5 @@ Sentry.init({
 
   replaysSessionSampleRate: 0.01,
   replaysOnErrorSampleRate: 1.0,
-  integrations: [new Sentry.Replay({ maskAllText: true, blockAllMedia: true })],
+  integrations: [new Replay()],
 });
