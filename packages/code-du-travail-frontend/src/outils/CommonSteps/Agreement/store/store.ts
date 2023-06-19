@@ -74,6 +74,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
         produce((state: CommonAgreementStoreSlice) => {
           state.agreementData.input.enterprise = undefined;
           state.agreementData.input.agreement = undefined;
+          state.agreementData.input.hasNoEnterpriseSelected = false;
         })
       );
       applyGenericValidation(get, set, "route", value);
@@ -81,15 +82,10 @@ const createCommonAgreementStore: StoreSlicePublicode<
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
-      if (window.localStorage) {
-        window.localStorage.setItem(
-          STORAGE_KEY_AGREEMENT,
-          JSON.stringify(agreement)
-        );
-        if (!agreement && !enterprise) {
-          window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
-        }
-      }
+      window.localStorage.setItem(
+        STORAGE_KEY_AGREEMENT,
+        JSON.stringify(agreement)
+      );
       applyGenericValidation(get, set, "enterprise", enterprise);
       const idcc = agreement?.num?.toString();
       if (idcc) {

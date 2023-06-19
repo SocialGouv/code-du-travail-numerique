@@ -39,9 +39,10 @@ export const getCc3239Informations = async (): Promise<Agreement> => {
     shortTitle: "Particuliers employeurs et emploi à domicile",
     slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
     title: "Particuliers employeurs et emploi à domicile",
-  };
+  } as Agreement;
   try {
-    defaultInformations = await searchAgreement("3239")[0];
+    const res = await searchAgreement("3239");
+    defaultInformations = res[0];
   } catch (e) {
     Sentry.captureException(e);
   }
