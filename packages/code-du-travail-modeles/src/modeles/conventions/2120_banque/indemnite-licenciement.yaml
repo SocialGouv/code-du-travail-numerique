@@ -10,6 +10,7 @@ contrat salarié . convention collective . banque . catégorie professionnelle:
       Non-cadres: "'Non-cadres'"
 
 contrat salarié . convention collective . banque . licenciement économique:
+  applicable si: catégorie professionnelle
   titre: Licenciement pour motif économique
   question: Le motif du licenciement est-il économique ?
   cdtn:
@@ -25,9 +26,11 @@ contrat salarié . convention collective . banque . licenciement disciplinaire:
 # Valeurs issues de l'ancienneté
 contrat salarié . convention collective . banque . semestres complets avant 2002:
   valeur: 0
+  unité: semestre
 
 contrat salarié . convention collective . banque . semestres complets après 2002:
   valeur: 0
+  unité: semestre
 
 # Formules
 contrat salarié . convention collective . banque . formule 1 avant janvier 2002:
@@ -223,7 +226,11 @@ contrat salarié . convention collective . banque . résultat conventionnel 6:
     Article 59.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975
     
 contrat salarié . convention collective . banque . résultat conventionnel 7:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+  applicable si: 
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - licenciement économique = 'Non'
+      - licenciement disciplinaire = 'Oui'
   non applicable si:
     une de ces conditions:
       - résultat conventionnel 1
