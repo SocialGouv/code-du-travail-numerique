@@ -15,8 +15,8 @@ contrat salarié . convention collective . banque . licenciement économique:
   cdtn:
     type: oui-non
 
-contrat salarié . convention collective . banque . licenciement pour motif disciplinaire:
-  applicable si: licenciement économique = non
+contrat salarié . convention collective . banque . licenciement disciplinaire:
+  applicable si: licenciement économique = 'Non'
   titre: Licenciement pour motif disciplinaire
   question: Le licenciement fait-il suite à une faute du salarié (licenciement disciplinaire) ?
   cdtn:
@@ -74,7 +74,7 @@ contrat salarié . convention collective . banque . résultat conventionnel 1:
       - formule 1 après janvier 2002
   unité: €
   arrondi: 2 décimales
-  plafond: 18 * 13 / 14,5 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel 
+  plafond: 18 * 13 / 14.5 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel 
   cdtn:
     formule:
       formula: (1/2 * (13/14,5) * Sref * A1) + (1/5 * Sref * A2)
@@ -102,7 +102,7 @@ contrat salarié . convention collective . banque . résultat conventionnel 2:
       - formule 1 après janvier 2002
   unité: €
   arrondi: 2 décimales
-  plafond: 24 * 13 / 14,5 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel 
+  plafond: 24 * 13 / 14.5 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel 
   cdtn:
     formule:
       formula: (1/2 * (13/14,5) * Sref * A1) + (1/5 * Sref * A2)
