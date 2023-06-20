@@ -1,5 +1,3 @@
-import { ca } from "date-fns/locale";
-
 import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 
 const engine = new IndemniteLicenciementPublicodes(
@@ -9,10 +7,39 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Indemnité conventionnel de licenciement pour la CC 2120", () => {
   test.each`
-    categoriePro    | semestresAvant2002 | semestresApres2002 | licenciementEco | licenciementDisciplinaire | seniorityRight | salary  | expectedCompensation
-    ${"Non-cadres"} | ${0}               | ${0}               | ${"Non"}        | ${"Non"}                  | ${0}           | ${2000} | ${0}
+    categoriePro    | semestresAvant2002 | semestresApres2002 | licenciementEco | licenciementDisciplinaire | seniorityRight | seniority | salary  | expectedCompensation
+    ${"Non-cadres"} | ${0}               | ${0}               | ${"Non"}        | ${"Non"}                  | ${0}           | ${0}      | ${2000} | ${0}
+    ${"Non-cadres"} | ${0}               | ${0}               | ${"Non"}        | ${"Oui"}                  | ${0.5}         | ${0.5}    | ${2000} | ${0}
+    ${"Non-cadres"} | ${0}               | ${0}               | ${"Non"}        | ${"Oui"}                  | ${0.67}        | ${0.67}   | ${2000} | ${335}
+    ${"Non-cadres"} | ${0}               | ${0}               | ${"Non"}        | ${"Oui"}                  | ${0.67}        | ${15}     | ${2000} | ${8333.33}
+    ${"Non-cadres"} | ${1}               | ${0}               | ${"Oui"}        | ${"Non"}                  | ${0.91}        | ${0.91}   | ${1991} | ${0}
+    ${"Non-cadres"} | ${2}               | ${0}               | ${"Oui"}        | ${"Non"}                  | ${1}           | ${1}      | ${1991} | ${1991}
+    ${"Non-cadres"} | ${6}               | ${34}              | ${"Oui"}        | ${"Non"}                  | ${1}           | ${20}     | ${1991} | ${22896.5}
+    ${"Non-cadres"} | ${6}               | ${25}              | ${"Oui"}        | ${"Non"}                  | ${1}           | ${15.67}  | ${1991} | ${18416.75}
+    ${"Non-cadres"} | ${6}               | ${19}              | ${"Oui"}        | ${"Non"}                  | ${1}           | ${12.5}   | ${1991} | ${15430.25}
+    ${"Cadres"}     | ${1}               | ${0}               | ${"Oui"}        | ${"Non"}                  | ${0.91}        | ${0.91}   | ${3064} | ${0}
+    ${"Cadres"}     | ${2}               | ${0}               | ${"Oui"}        | ${"Non"}                  | ${1}           | ${1}      | ${3064} | ${3064}
+    ${"Cadres"}     | ${6}               | ${34}              | ${"Oui"}        | ${"Non"}                  | ${1}           | ${20}     | ${3064} | ${35236}
+    ${"Cadres"}     | ${6}               | ${25}              | ${"Oui"}        | ${"Non"}                  | ${1}           | ${15.67}  | ${3064} | ${28342}
+    ${"Cadres"}     | ${6}               | ${19}              | ${"Oui"}        | ${"Non"}                  | ${1}           | ${12.5}   | ${3064} | ${23746}
+    ${"Non-cadres"} | ${0}               | ${1}               | ${"Oui"}        | ${"Non"}                  | ${0.91}        | ${0.91}   | ${1991} | ${0}
+    ${"Non-cadres"} | ${2}               | ${0}               | ${"Oui"}        | ${"Non"}                  | ${1}           | ${1}      | ${1991} | ${1991}
+    ${"Non-cadres"} | ${4}               | ${36}              | ${"Oui"}        | ${"Non"}                  | ${1}           | ${20}     | ${1991} | ${21901}
+    ${"Non-cadres"} | ${4}               | ${27}              | ${"Oui"}        | ${"Non"}                  | ${1}           | ${15.67}  | ${1991} | ${17421.25}
+    ${"Non-cadres"} | ${4}               | ${21}              | ${"Oui"}        | ${"Non"}                  | ${1}           | ${12.5}   | ${1991} | ${14434.75}
+    ${"Non-cadres"} | ${0}               | ${1}               | ${"Non"}        | ${"Oui"}                  | ${0.91}        | ${0.91}   | ${2772} | ${0}
+    ${"Non-cadres"} | ${2}               | ${0}               | ${"Non"}        | ${"Oui"}                  | ${1}           | ${1}      | ${2772} | ${2485.24}
+    ${"Non-cadres"} | ${6}               | ${34}              | ${"Non"}        | ${"Oui"}                  | ${1}           | ${20}     | ${2772} | ${26305.32}
+    ${"Non-cadres"} | ${6}               | ${25}              | ${"Non"}        | ${"Oui"}                  | ${1}           | ${15.67}  | ${2772} | ${21315.72}
+    ${"Non-cadres"} | ${6}               | ${19}              | ${"Non"}        | ${"Oui"}                  | ${1}           | ${12.5}   | ${2772} | ${17989.32}
+    ${"Cadres"}     | ${0}               | ${1}               | ${"Non"}        | ${"Oui"}                  | ${0.91}        | ${0.91}   | ${2772} | ${0}
+    ${"Cadres"}     | ${2}               | ${0}               | ${"Non"}        | ${"Oui"}                  | ${1}           | ${1}      | ${2772} | ${2485.24}
+    ${"Cadres"}     | ${6}               | ${34}              | ${"Non"}        | ${"Oui"}                  | ${1}           | ${20}     | ${2772} | ${26305.32}
+    ${"Cadres"}     | ${6}               | ${25}              | ${"Non"}        | ${"Oui"}                  | ${1}           | ${15.67}  | ${2772} | ${21315.72}
+    ${"Cadres"}     | ${6}               | ${19}              | ${"Non"}        | ${"Oui"}                  | ${1}           | ${12.5}   | ${2772} | ${17989.32}
+    ${"Non-cadres"} | ${1}               | ${0}               | ${"Oui"}        | ${"Non"}                  | ${0.91}        | ${0.91}   | ${2772} | ${0}
   `(
-    "$#) Catégorie pro : $categoriePro, ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation",
+    "$#) Catégorie pro $categoriePro, seniorityRight: $seniorityRight an, semestresAvant2002 $semestresAvant2002, semestresApres2002 $semestresApres2002, licenciementDisciplinaire $licenciementDisciplinaire, licenciementEco $licenciementEco, salaire de référence: $salary => $expectedCompensation",
     ({
       categoriePro,
       licenciementEco,
@@ -22,6 +49,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 2120", () => {
       seniorityRight,
       salary,
       expectedCompensation,
+      seniority,
     }) => {
       const { result, missingArgs } = engine.setSituation(
         {
@@ -33,6 +61,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 2120", () => {
             semestresAvant2002,
           "contrat salarié . convention collective . banque . semestres complets avant 2002":
             semestresApres2002,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             seniorityRight,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
