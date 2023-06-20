@@ -19,7 +19,10 @@ const MOTIFS_2120 = LEGAL_MOTIFS.map((item) => {
       value: 0,
     };
   }
-  return item;
+  return {
+    ...item,
+    startAt: () => true,
+  };
 });
 
 export class Seniority2120 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC2120> {
@@ -47,20 +50,58 @@ export class Seniority2120 extends SeniorityDefault<SupportedCcIndemniteLicencie
     });
     const dEntree = parseDate(from);
     const dSortie = addDays(parseDate(to), 1);
-    const semestersBefore2002 = Math.max(
-      Math.floor(differenceInMonths(new Date(2002, 0, 1), dEntree) / 6),
+    const totalAbsenceInMonthsBefore2002 = absences
+      .filter((period) => Boolean(period.durationInMonth))
+      .reduce((total, item) => {
+        const m = this.getMotifs().find(
+          (motif) => motif.key === item.motif.key
+        );
+        if (!m || !item.durationInMonth) {
+          return total;
+        }
+        const d = addDays(parseDate(item.startedAt ?? ""), 1);
+        if (d.getFullYear() >= 2002) {
+          return total;
+        }
+        return total + item.durationInMonth * m.value;
+      }, 0);
+    const totalAbsenceInMonthsAfter2002 = absences
+      .filter((period) => Boolean(period.durationInMonth))
+      .reduce((total, item) => {
+        const m = this.getMotifs().find(
+          (motif) => motif.key === item.motif.key
+        );
+        if (!m || !item.durationInMonth) {
+          return total;
+        }
+        const d = addDays(parseDate(item.startedAt ?? ""), 1);
+        if (d.getFullYear() < 2002) {
+          return total;
+        }
+        return total + item.durationInMonth * m.value;
+      }, 0);
+    const semestersBefore2002WithAbsence = Math.max(
+      Math.floor(
+        (differenceInMonths(new Date(2002, 0, 1), dEntree) -
+          totalAbsenceInMonthsBefore2002) /
+          6
+      ),
       0
     );
-    const semestersAfter2002 = Math.max(
-      Math.floor(differenceInMonths(dSortie, new Date(2002, 0, 1)) / 6),
+    const semestersAfter2002WithAbsence = Math.max(
+      Math.floor(
+        (differenceInMonths(dSortie, new Date(2002, 0, 1)) -
+          totalAbsenceInMonthsAfter2002) /
+          6
+      ),
       0
     );
     return {
       extraInfos: {
         "contrat salarié . convention collective . banque . semestres complets après 2002":
-          semestersAfter2002,
+          semestersAfter2002WithAbsence,
         "contrat salarié . convention collective . banque . semestres complets avant 2002":
-          semestersBefore2002,
+          semestersBefore2002WithAbsence,
         ...this.getExtraInfoAbsence(absences),
       },
       value: result.value,

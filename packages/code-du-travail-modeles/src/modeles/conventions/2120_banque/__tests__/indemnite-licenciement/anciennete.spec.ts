@@ -48,7 +48,7 @@ describe("CC 2120", () => {
       ${"01/01/1960"} | ${"20/02/2023"} | ${84}                      | ${42}
       ${"01/01/1980"} | ${"20/02/2024"} | ${44}                      | ${44}
     `(
-      "$#) Calcul de les extrasInfos avec $entryDate et $exitDate en attendant $expectedSemesterBefore2002 semestres avant 2002 et $expectedSemesterAfter2002 semestres après 2002",
+      "$#) Calcul des extrasInfos avec $entryDate et $exitDate en attendant $expectedSemesterBefore2002 semestres avant 2002 et $expectedSemesterAfter2002 semestres après 2002",
       ({
         entryDate,
         exitDate,
@@ -61,6 +61,50 @@ describe("CC 2120", () => {
 
         const result = seniority.computeSeniority({
           absencePeriods: [],
+          dateEntree: entryDate,
+          dateSortie: exitDate,
+        });
+
+        expect(
+          result.extraInfos?.[
+            "contrat salarié . convention collective . banque . semestres complets avant 2002"
+          ]
+        ).toEqual(expectedSemesterBefore2002);
+
+        expect(
+          result.extraInfos?.[
+            "contrat salarié . convention collective . banque . semestres complets après 2002"
+          ]
+        ).toEqual(expectedSemesterAfter2002);
+      }
+    );
+  });
+
+  describe("Calcul du nombre de semestres avec absences", () => {
+    test.each`
+      absences                                                                                                                                                                                  | entryDate       | exitDate        | expectedSemesterBefore2002 | expectedSemesterAfter2002
+      ${[{ durationInMonth: 3, motif: { key: MotifKeys.maladieNonPro }, startedAt: "01/03/2020" }]}                                                                                             | ${"01/01/1960"} | ${"20/02/2023"} | ${84}                      | ${42}
+      ${[{ durationInMonth: 3, motif: { key: MotifKeys.maladieNonPro }, startedAt: "01/03/1980" }]}                                                                                             | ${"01/01/1960"} | ${"20/02/2023"} | ${84}                      | ${42}
+      ${[{ durationInMonth: 3, motif: { key: MotifKeys.accidentTrajet }, startedAt: "01/03/2020" }]}                                                                                            | ${"01/01/1960"} | ${"20/02/2023"} | ${84}                      | ${41}
+      ${[{ durationInMonth: 3, motif: { key: MotifKeys.accidentTrajet }, startedAt: "01/03/1982" }]}                                                                                            | ${"01/01/1960"} | ${"20/02/2023"} | ${83}                      | ${42}
+      ${[{ durationInMonth: 3, motif: { key: MotifKeys.accidentTrajet }, startedAt: "01/03/2020" }, { durationInMonth: 3, motif: { key: MotifKeys.accidentTrajet }, startedAt: "01/03/1982" }]} | ${"01/01/1960"} | ${"20/02/2023"} | ${83}                      | ${41}
+      ${[{ durationInMonth: 1200, motif: { key: MotifKeys.accidentTrajet }, startedAt: "01/03/2020" }]}                                                                                         | ${"01/01/1960"} | ${"20/02/2023"} | ${84}                      | ${0}
+      ${[{ durationInMonth: 1200, motif: { key: MotifKeys.accidentTrajet }, startedAt: "01/03/1980" }]}                                                                                         | ${"01/01/1960"} | ${"20/02/2023"} | ${0}                       | ${42}
+    `(
+      "$#) Calcul des extrasInfos avec $entryDate et $exitDate en attendant $expectedSemesterBefore2002 semestres avant 2002 et $expectedSemesterAfter2002 semestres après 2002",
+      ({
+        entryDate,
+        exitDate,
+        expectedSemesterBefore2002,
+        expectedSemesterAfter2002,
+        absences,
+      }) => {
+        const seniority = new SeniorityFactory().create(
+          SupportedCcIndemniteLicenciement.IDCC2120
+        );
+
+        const result = seniority.computeSeniority({
+          absencePeriods: absences,
           dateEntree: entryDate,
           dateSortie: exitDate,
         });
