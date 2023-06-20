@@ -222,23 +222,23 @@ contrat salarié . convention collective . banque . résultat conventionnel 6:
     Article 29.2.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374
     Article 59.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975
     
-# contrat salarié . convention collective . banque . résultat conventionnel 7:
-#   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
-#   non applicable si:
-#     une de ces conditions:
-#       - résultat conventionnel 1
-#       - résultat conventionnel 2
-#       - résultat conventionnel 3
-#       - résultat conventionnel 4
-#       - résultat conventionnel 5
-#       - résultat conventionnel 6
-#   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
-#   valeur: oui
-#   références:
-#     Article 27: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005781062?idConteneur=KALICONT000005635780
-#     Article 28: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005782174?idConteneur=KALICONT000005635780
-#     Article 29.2.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374
-#     Article 59.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975
+contrat salarié . convention collective . banque . résultat conventionnel 7:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+  non applicable si:
+    une de ces conditions:
+      - résultat conventionnel 1
+      - résultat conventionnel 2
+      - résultat conventionnel 3
+      - résultat conventionnel 4
+      - résultat conventionnel 5
+      - résultat conventionnel 6
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
+  valeur: oui
+  références:
+    Article 27: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005781062?idConteneur=KALICONT000005635780
+    Article 28: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005782174?idConteneur=KALICONT000005635780
+    Article 29.2.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374
+    Article 59.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975
 
 # Notifications
 contrat salarié . convention collective . banque . maladie non pro:
