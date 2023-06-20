@@ -26,7 +26,11 @@ import {
   getAgreementReferenceSalary,
 } from "../../../agreements";
 import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
-import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
+import {
+  AgreementInformation,
+  hasNoLegalIndemnity,
+  hasNoBetterAllowance,
+} from "../../../common";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
 import {
@@ -204,6 +208,7 @@ const createResultStore: StoreSlice<
       let agreementNotifications: Notification[] = [];
       let notifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
+      let agreementHasNoBetterAllowance: boolean;
       let agreementSalaryExtraInfo: Record<string, string | number> = {};
       let isParentalNoticeHidden = false;
 
@@ -269,7 +274,12 @@ const createResultStore: StoreSlice<
 
         agreementNotifications = publicodes.getNotifications();
 
-        agreementHasNoLegalIndemnity = hasNoLegalIndemnity(agreement.num);
+        agreementHasNoLegalIndemnity = hasNoLegalIndemnity(
+          agreement.num,
+          agreementInformations
+        );
+
+        agreementHasNoBetterAllowance = hasNoBetterAllowance(agreement.num);
 
         isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
           agreement.num
@@ -326,6 +336,8 @@ const createResultStore: StoreSlice<
           state.resultData.input.notifications = notifications;
           state.resultData.input.agreementHasNoLegalIndemnity =
             agreementHasNoLegalIndemnity;
+          state.resultData.input.agreementHasNoBetterAllowance =
+            agreementHasNoBetterAllowance;
           state.resultData.input.isParentalNoticeHidden =
             isParentalNoticeHidden;
         })

@@ -23,6 +23,7 @@ type Props = {
   icon?: FunctionComponent;
   id: string;
   dataTestId?: string;
+  text?: string;
 };
 
 export default function TextQuestion({
@@ -39,6 +40,7 @@ export default function TextQuestion({
   icon,
   id,
   dataTestId,
+  text,
 }: Props) {
   const InputComponent = inputType === "date" ? InputDate : Input;
   return (
@@ -57,6 +59,7 @@ export default function TextQuestion({
           invalid={!!error}
           placeholder={placeholder}
           icon={icon}
+          text={text}
           type={inputType === "date" ? "text" : inputType}
           updateOnScrollDisabled
           data-testid={dataTestId}

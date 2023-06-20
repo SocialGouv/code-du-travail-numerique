@@ -40,7 +40,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
           value=""
         />
         <div
-          class="sc-iEXKAA jqdzTX"
+          class="sc-iEXKAA dVguAh"
         >
           <svg
             aria-hidden="true"
@@ -180,7 +180,7 @@ exports[`<Salaires /> should render 1`] = `
           value="3000"
         />
         <div
-          class="sc-iEXKAA jqdzTX"
+          class="sc-iEXKAA dVguAh"
         >
           <svg
             aria-hidden="true"
