@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.102.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.3...v4.102.0) (2023-06-20)
+
+### Bug Fixes
+
+- **react-ui:** set styled-components in dependencies ([c0226db](https://github.com/SocialGouv/code-du-travail-numerique/commit/c0226db4f4ae0892ffb09adb65b4070e32e0ef8b))
+
+### Features
+
+- indemnite licenciement 1404 ([#5133](https://github.com/SocialGouv/code-du-travail-numerique/issues/5133)) ([5fa2153](https://github.com/SocialGouv/code-du-travail-numerique/commit/5fa215383e48e04431817a28a7b5f9603f2b385d))
+- widgetiser les modeles ([#5182](https://github.com/SocialGouv/code-du-travail-numerique/issues/5182)) ([6664158](https://github.com/SocialGouv/code-du-travail-numerique/commit/6664158039337cdb0f173ac4796797f3218ef815))
+
 ## [4.101.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.2...v4.101.3) (2023-06-12)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui

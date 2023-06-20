@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.102.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.3...v4.102.0) (2023-06-20)
+
+### Bug Fixes
+
+- **fiche service public:** handle type FragmentConditionne in ElementBuilder ([#5209](https://github.com/SocialGouv/code-du-travail-numerique/issues/5209)) ([6859773](https://github.com/SocialGouv/code-du-travail-numerique/commit/68597733faf437bdbc92ffe7bfb762f65c32dda1))
+- **indemnité de licenciement:** Reformuler la question sur la date de fin de contrat ([#5210](https://github.com/SocialGouv/code-du-travail-numerique/issues/5210)) ([f18702a](https://github.com/SocialGouv/code-du-travail-numerique/commit/f18702a2d7544ba1efad9556fd18f06ea6eaf436))
+- **indemnite-licenciement:** ne pas inclure les années incomplètes pour le calcul de l'ancienneté CC 2148 ([#5206](https://github.com/SocialGouv/code-du-travail-numerique/issues/5206)) ([565c767](https://github.com/SocialGouv/code-du-travail-numerique/commit/565c7674b8aff534e5abe91017006ea2c09e477d))
+- **politique-confidentialite:** correctif du lien vers la CNIL ([#5223](https://github.com/SocialGouv/code-du-travail-numerique/issues/5223)) ([be26325](https://github.com/SocialGouv/code-du-travail-numerique/commit/be2632520529ada874fec8cfa7244b37d694f0ad))
+- **react-ui:** set styled-components in dependencies ([c0226db](https://github.com/SocialGouv/code-du-travail-numerique/commit/c0226db4f4ae0892ffb09adb65b4070e32e0ef8b))
+- wording ([#5215](https://github.com/SocialGouv/code-du-travail-numerique/issues/5215)) ([9969e22](https://github.com/SocialGouv/code-du-travail-numerique/commit/9969e22d98fe7ebfe1ced082e4f7d839da09bc64))
+
+### Features
+
+- indemnite licenciement 1404 ([#5133](https://github.com/SocialGouv/code-du-travail-numerique/issues/5133)) ([5fa2153](https://github.com/SocialGouv/code-du-travail-numerique/commit/5fa215383e48e04431817a28a7b5f9603f2b385d))
+- **indemnite-licenciement:** activation de nouvelles CCs ([eeab2b4](https://github.com/SocialGouv/code-du-travail-numerique/commit/eeab2b4ff4c8b49ae783cc2327d422eb7119e6e2))
+- **indemnite-licenciement:** désactivation de la CC 2596 ([04b6df4](https://github.com/SocialGouv/code-du-travail-numerique/commit/04b6df432e1bf97bcb8e5c2f3d2722d068960def))
+- **sentry:** add replay feature ([#5220](https://github.com/SocialGouv/code-du-travail-numerique/issues/5220)) ([3e2aec3](https://github.com/SocialGouv/code-du-travail-numerique/commit/3e2aec32a756d3c7f4799efb9c6101d33b370e65))
+- widgetiser les modeles ([#5182](https://github.com/SocialGouv/code-du-travail-numerique/issues/5182)) ([6664158](https://github.com/SocialGouv/code-du-travail-numerique/commit/6664158039337cdb0f173ac4796797f3218ef815))
+
 ## [4.101.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.2...v4.101.3) (2023-06-12)
 
 ### Bug Fixes
