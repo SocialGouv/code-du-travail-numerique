@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.102.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.0...v4.102.1) (2023-06-20)
+
+### Bug Fixes
+
+- **lerna:** remove useWorkspace ([7b2ef0a](https://github.com/SocialGouv/code-du-travail-numerique/commit/7b2ef0a391594b65f3e2c237646f01e8d3cbe535))
+
 # [4.102.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.3...v4.102.0) (2023-06-20)
 
 ### Bug Fixes
