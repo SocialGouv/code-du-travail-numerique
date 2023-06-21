@@ -71,6 +71,15 @@ export const getErrorEligibility = (
         minimalSeniorityInMonth = 0;
       }
       break;
+    case 1404:
+      requiredSeniorityInYear = requiredSeniorityAgreement;
+      if (
+        stateInfo.publicodesInformations?.length > 0 &&
+        stateInfo.publicodesInformations[0]?.info === "'Oui'" // CDI d'opération
+      ) {
+        minimalSeniorityInMonth = 0;
+      }
+      break;
   }
   const isEligible = requiredSeniorityInYear >= minimalSeniorityInMonth / 12;
   return !isEligible ? minimalSeniorityError : undefined;

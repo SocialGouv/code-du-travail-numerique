@@ -22,6 +22,7 @@ export type ResultStoreInput = {
   agreementInformations?: AgreementInformation[];
   notifications?: Notification[];
   agreementHasNoLegalIndemnity?: boolean;
+  agreementHasNoBetterAllowance?: boolean;
   isEligible: boolean;
   infoWarning?: { message: string; title: string };
   isParentalNoticeHidden: boolean;
