@@ -121,7 +121,7 @@ function AgreementStep({
             isDisabled={selectedAgreement?.num === 3239}
           />
           <NoEnterprise
-            selectedEnterprise={selectedEnterprise}
+            isHidden={!!selectedEnterprise}
             isCheckboxChecked={hasNoEnterpriseSelected}
             setIsCheckboxChecked={setHasNoEnterpriseSelected}
             onCheckboxChange={async (isCheckboxChecked) => {

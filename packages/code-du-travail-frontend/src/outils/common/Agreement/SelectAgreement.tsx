@@ -43,6 +43,7 @@ const SelectAgreement = ({
     STORAGE_KEY_AGREEMENT,
     defaultSelectedAgreement
   );
+  const [hasSelectedEnterprise, setHasSelectedEnterprise] = useState(false);
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
     form.getState().values.ccn?.enterprise
   );
@@ -94,6 +95,12 @@ const SelectAgreement = ({
         break;
       }
     }
+    initNoEnterprise();
+  };
+
+  const initNoEnterprise = () => {
+    form.change("hasNoEnterpriseSelected", undefined);
+    onSelectAgreement(null);
   };
 
   return (
@@ -122,9 +129,12 @@ const SelectAgreement = ({
             onUserAction={onUserAction}
             alertAgreementNotSupported={alertAgreementNotSupported}
             isDisabled={storedConvention?.num === 3239}
+            setHasSelectedEnterprise={(hasSelectedEnterprise) => {
+              setHasSelectedEnterprise(hasSelectedEnterprise);
+            }}
           />
           <NoEnterprise
-            selectedEnterprise={enterprise}
+            isHidden={hasSelectedEnterprise}
             isCheckboxChecked={values.hasNoEnterpriseSelected ? true : false}
             setIsCheckboxChecked={() => {
               form.change(

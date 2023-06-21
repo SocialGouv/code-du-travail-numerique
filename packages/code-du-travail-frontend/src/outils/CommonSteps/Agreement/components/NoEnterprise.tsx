@@ -8,10 +8,9 @@ import {
 } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { SectionTitle } from "../../../common/stepStyles";
-import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 
 type Props = {
-  selectedEnterprise?: Enterprise;
+  isHidden?: boolean;
   onCheckboxChange: (v: boolean) => void;
   isCheckboxChecked: boolean;
   setIsCheckboxChecked: (v: boolean) => void;
@@ -19,7 +18,7 @@ type Props = {
 
 export function NoEnterprise({
   onCheckboxChange,
-  selectedEnterprise,
+  isHidden,
   isCheckboxChecked,
   setIsCheckboxChecked,
 }: Props): JSX.Element {
@@ -27,54 +26,57 @@ export function NoEnterprise({
 
   return (
     <>
-      {!selectedEnterprise && (
-        <RowWrapper>
-          <InputWrapper>
-            <InputCheckbox
-              label={
-                <span>
-                  <strong>Je n&apos;ai pas d&apos;entreprise</strong> (ma
-                  recherche concerne les assistants maternels, employés de
-                  maison, etc.)
-                </span>
-              }
-              name="salarieParticulierEmployeur"
-              id="salarieParticulierEmployeur"
-              onChange={() => {
-                setIsCheckboxChecked(!isCheckboxChecked);
-                onCheckboxChange(!isCheckboxChecked);
-              }}
-              checked={isCheckboxChecked}
-            />
-          </InputWrapper>
-          <ButtonClicker
-            onClick={() => setIsInputVisible(!isInputVisible)}
-            type="button"
-          >
-            <icons.HelpCircle size="20" aria-label="?" />
-          </ButtonClicker>
-        </RowWrapper>
-      )}
-      {isInputVisible && (
-        <AlertWithMargin>
-          <p>
-            Cochez cette case si votre recherche concerne des salariés du
-            particulier employeur : les personnes travaillant au domicile privé
-            d&apos;un particulier (garde d’enfants ou d’une personne dépendante,
-            ménage, travaux de jardinage, soutien scolaire...) ou les assistants
-            maternels (qui accueillent des enfants à leur domicile).
-          </p>
-        </AlertWithMargin>
-      )}
-      {isCheckboxChecked && (
+      {!isHidden && (
         <>
-          <SectionTitle>Votre convention collective est :</SectionTitle>
-          <Paragraph noMargin fontWeight="600" fontSize="default">
-            Particulier employeur et emploi à domicile
-          </Paragraph>
-          <StyledParagraph>
-            Cliquez sur Suivant pour poursuivre la simulation.
-          </StyledParagraph>
+          <RowWrapper>
+            <InputWrapper>
+              <InputCheckbox
+                label={
+                  <span>
+                    <StrongItem>Je n&apos;ai pas d&apos;entreprise</StrongItem>{" "}
+                    (ma recherche concerne les assistants maternels, employés de
+                    maison)
+                  </span>
+                }
+                name="salarieParticulierEmployeur"
+                id="salarieParticulierEmployeur"
+                onChange={() => {
+                  setIsCheckboxChecked(!isCheckboxChecked);
+                  onCheckboxChange(!isCheckboxChecked);
+                }}
+                checked={isCheckboxChecked}
+              />
+            </InputWrapper>
+            <ButtonClicker
+              onClick={() => setIsInputVisible(!isInputVisible)}
+              type="button"
+            >
+              <icons.HelpCircle size="20" aria-label="?" />
+            </ButtonClicker>
+          </RowWrapper>
+          {isInputVisible && (
+            <AlertWithMargin>
+              <p>
+                Cochez cette case si votre recherche concerne des salariés du
+                particulier employeur : les personnes travaillant au domicile
+                privé d&apos;un particulier (garde d’enfants ou d’une personne
+                dépendante, ménage, travaux de jardinage, soutien scolaire...)
+                ou les assistants maternels (qui accueillent des enfants à leur
+                domicile).
+              </p>
+            </AlertWithMargin>
+          )}
+          {isCheckboxChecked && (
+            <>
+              <SectionTitle>Votre convention collective est :</SectionTitle>
+              <Paragraph noMargin fontWeight="600" fontSize="default">
+                Particulier employeur et emploi à domicile
+              </Paragraph>
+              <StyledParagraph>
+                Cliquez sur Suivant pour poursuivre la simulation.
+              </StyledParagraph>
+            </>
+          )}
         </>
       )}
     </>
@@ -82,6 +84,12 @@ export function NoEnterprise({
 }
 
 const { spacings } = theme;
+
+const StrongItem = styled.strong`
+  font-weight: 600;
+  font-size: ${theme.fonts.sizes.default};
+  color: ${theme.colors.paragraph};
+`;
 
 const RowWrapper = styled.div`
   display: flex;

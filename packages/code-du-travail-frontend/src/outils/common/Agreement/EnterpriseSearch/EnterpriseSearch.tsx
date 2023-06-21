@@ -23,6 +23,7 @@ export type Props = {
   onSelectAgreement: OnSelectAgreementFn;
   alertAgreementNotSupported?: (string) => JSX.Element;
   isDisabled?: boolean;
+  setHasSelectedEnterprise?: (hasSelectedEnterprise: boolean) => void;
 } & TrackingProps;
 
 const EnterpriseSearch = ({
@@ -32,6 +33,7 @@ const EnterpriseSearch = ({
   onUserAction,
   alertAgreementNotSupported,
   isDisabled,
+  setHasSelectedEnterprise,
 }: Props): JSX.Element => {
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
     selectedEnterprise
@@ -48,6 +50,7 @@ const EnterpriseSearch = ({
           enterprise={enterprise}
           onRemoveEnterprise={() => {
             setEnterprise(undefined);
+            setHasSelectedEnterprise?.(false);
             onSelectAgreement(null);
           }}
         />
@@ -76,6 +79,7 @@ const EnterpriseSearch = ({
       onSelectAgreement(enterprise.conventions[0], enterprise);
     }
     setEnterprise(enterprise);
+    setHasSelectedEnterprise?.(true);
   };
   return (
     <Section>
