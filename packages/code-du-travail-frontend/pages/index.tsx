@@ -125,6 +125,7 @@ export async function getStaticProps() {
       agreements,
     },
     revalidate: 600, // 10 minutes
+    fallback: "blocking",
   };
 }
 
