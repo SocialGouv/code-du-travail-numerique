@@ -1,87 +1,133 @@
 import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+import { QuestionOuiNon } from "../../../../common";
 
 const engine = new IndemniteLicenciementPublicodes(
   modelsIndemniteLicenciement,
-  "1996"
+  "2120"
 );
 
-describe("Vérification des références juridiques pour la CC 1996", () => {
+const refLicenciementDisciplinaire = [
+  {
+    article: "Article 26",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005779933?idConteneur=KALICONT000005635780",
+  },
+  {
+    article: "Article 29.2.3",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374",
+  },
+  {
+    article: "Article 59.3",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975",
+  },
+];
+
+const refLicenciementEco = [
+  {
+    article: "Article 29",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780",
+  },
+  {
+    article: "Article 29.2.3",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374",
+  },
+  {
+    article: "Article 59.3",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975",
+  },
+];
+
+const fallbackRef = [
+  {
+    article: "Article 27",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005781062?idConteneur=KALICONT000005635780",
+  },
+  {
+    article: "Article 28",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005782174?idConteneur=KALICONT000005635780",
+  },
+  {
+    article: "Article 29.2.3",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374",
+  },
+  {
+    article: "Article 59.3",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975",
+  },
+];
+
+describe("Vérification des références juridiques pour la CC 2120", () => {
   test.each`
-    seniority | licenciementEco
-    ${5}      | ${"'Non'"}
-    ${5}      | ${"'Oui'"}
-    ${12}     | ${"'Non'"}
-    ${12}     | ${"'Oui'"}
-    ${24}     | ${"'Non'"}
-    ${24}     | ${"'Oui'"}
+    entryDate       | categoriePro    | semestresAvant2002 | semestresApres2002 | licenciementEco       | licenciementDisciplinaire | seniorityRight | seniority | salary  | expectedRef
+    ${"01/01/1999"} | ${"Non-cadres"} | ${0}               | ${0}               | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui}     | ${0.67}        | ${0.67}   | ${2000} | ${fallbackRef}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${0}               | ${0}               | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui}     | ${0.67}        | ${15}     | ${2000} | ${fallbackRef}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${2}               | ${0}               | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${1}      | ${1991} | ${refLicenciementEco}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${34}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${20}     | ${1991} | ${refLicenciementEco}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${25}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${15.67}  | ${1991} | ${refLicenciementEco}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${19}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${12.5}   | ${1991} | ${refLicenciementEco}
+    ${"01/01/1999"} | ${"Cadres"}     | ${2}               | ${0}               | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${1}      | ${3064} | ${refLicenciementEco}
+    ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${34}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${20}     | ${3064} | ${refLicenciementEco}
+    ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${25}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${15.67}  | ${3064} | ${refLicenciementEco}
+    ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${19}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${12.5}   | ${3064} | ${refLicenciementEco}
+    ${"01/01/2000"} | ${"Non-cadres"} | ${2}               | ${0}               | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${1}      | ${1991} | ${refLicenciementEco}
+    ${"01/01/2000"} | ${"Non-cadres"} | ${4}               | ${36}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${20}     | ${1991} | ${refLicenciementEco}
+    ${"01/01/2000"} | ${"Non-cadres"} | ${4}               | ${27}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${15.67}  | ${1991} | ${refLicenciementEco}
+    ${"01/01/2000"} | ${"Non-cadres"} | ${4}               | ${21}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${12.5}   | ${1991} | ${refLicenciementEco}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${2}               | ${0}               | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${1}      | ${2772} | ${refLicenciementDisciplinaire}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${34}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${20}     | ${2772} | ${refLicenciementDisciplinaire}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${25}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${15.67}  | ${2772} | ${refLicenciementDisciplinaire}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${19}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${12.5}   | ${2772} | ${refLicenciementDisciplinaire}
+    ${"01/01/1999"} | ${"Cadres"}     | ${2}               | ${0}               | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${1}      | ${2772} | ${refLicenciementDisciplinaire}
+    ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${34}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${20}     | ${2772} | ${refLicenciementDisciplinaire}
+    ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${25}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${15.67}  | ${2772} | ${refLicenciementDisciplinaire}
+    ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${19}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${12.5}   | ${2772} | ${refLicenciementDisciplinaire}
+    ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${42}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${24}     | ${2772} | ${refLicenciementDisciplinaire}
   `(
-    "pour un cadre avec une ancienneté de $seniority mois, licenciement éco: $licenciementEco",
-    ({ seniority, licenciementEco }) => {
-      engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1996'",
-        "contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . licenciement économique question":
-          licenciementEco,
-        "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle": `'Cadres'`,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-          seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-          seniority,
-        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-          "non",
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-          "2000",
-      });
+    "$#) Catégorie pro $categoriePro, entryDate $entryDate, seniorityRight: $seniorityRight an, semestresAvant2002 $semestresAvant2002, semestresApres2002 $semestresApres2002, licenciementDisciplinaire $licenciementDisciplinaire, licenciementEco $licenciementEco, salaire de référence: $salary => $expectedRef",
+    ({
+      categoriePro,
+      licenciementEco,
+      licenciementDisciplinaire,
+      semestresAvant2002,
+      semestresApres2002,
+      seniorityRight,
+      salary,
+      expectedRef,
+      seniority,
+      entryDate,
+    }) => {
+      engine.setSituation(
+        Object.assign(
+          {
+            "contrat salarié . convention collective": "'IDCC2120'",
+            "contrat salarié . convention collective . banque . catégorie professionnelle": `'${categoriePro}'`,
+
+            "contrat salarié . convention collective . banque . licenciement économique": `'${licenciementEco}'`,
+            "contrat salarié . convention collective . banque . semestres complets après 2002":
+              semestresApres2002,
+            "contrat salarié . convention collective . banque . semestres complets avant 2002":
+              semestresAvant2002,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniorityRight,
+            "contrat salarié . indemnité de licenciement . date d'entrée":
+              entryDate,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
+          },
+          licenciementDisciplinaire
+            ? {
+                "contrat salarié . convention collective . banque . licenciement disciplinaire": `'${licenciementDisciplinaire}'`,
+              }
+            : {}
+        ),
+        "contrat salarié . indemnité de licenciement . résultat conventionnel"
+      );
+
       const result = engine.getReferences("résultat conventionnel");
 
-      expect(result).toHaveLength(2);
-      expect(result).toEqual(
-        expect.arrayContaining([
-          {
-            article: "Article 6 de l'Annexe Cadres",
-            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041761357?idConteneur=KALICONT000005635528&origin=list#KALIARTI0000417613577",
-          },
-          {
-            article: "Article 11",
-            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106382?idConteneur=KALICONT000005635528&origin=list#KALIARTI000038106382",
-          },
-        ])
-      );
-    }
-  );
-
-  test.each`
-    seniority
-    ${5}
-    ${12}
-    ${24}
-  `(
-    "pour un non cadre avec une ancienneté de $seniority mois",
-    ({ seniority }) => {
-      engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1996'",
-        "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle": `'Non-cadres'`,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-          seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-          seniority,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-          "2000",
-      });
-      const result = engine.getReferences("résultat conventionnel");
-
-      expect(result).toHaveLength(2);
-      expect(result).toEqual(
-        expect.arrayContaining([
-          {
-            article: "Article 21",
-            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106393?idConteneur=KALICONT000005635528",
-          },
-          {
-            article: "Article 11",
-            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038106382?idConteneur=KALICONT000005635528&origin=list#KALIARTI000038106382",
-          },
-        ])
-      );
+      expect(result).toHaveLength(expectedRef.length);
+      expect(result).toEqual(expectedRef);
     }
   );
 });
