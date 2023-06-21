@@ -99,8 +99,10 @@ const SelectAgreement = ({
   };
 
   const initNoEnterprise = () => {
+    if (values.hasNoEnterpriseSelected) {
+      onSelectAgreement(null);
+    }
     form.change("hasNoEnterpriseSelected", undefined);
-    onSelectAgreement(null);
   };
 
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Toast, theme, Button } from "@socialgouv/cdtn-ui";
+import { Heading, theme, Button } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import { push as matopush } from "@socialgouv/matomo-next";
@@ -9,6 +9,7 @@ import {
   MatomoSimulatorEvent,
   MatomoSimulatorNameEvent,
 } from "../../../lib";
+import { FeedbackWrapper } from "../../../common/Feedback/FeedbackWrapper";
 
 export function NoEnterprise(): JSX.Element {
   const router = useRouter();
@@ -28,12 +29,12 @@ export function NoEnterprise(): JSX.Element {
 
   return (
     <Container>
-      <Toast>
+      <FeedbackWrapper>
         <Heading
           as={StyledText}
           variant="primary"
           stripe="left"
-          shift={theme.spacings.medium}
+          shift={theme.spacings.xmedium}
         >
           <strong>Vous n&apos;avez pas d&apos;entreprise</strong> (votre
           recherche concerne les assistants maternels, employés de maison, etc.)
@@ -42,7 +43,7 @@ export function NoEnterprise(): JSX.Element {
         <StyledButton variant="link" hasText onClick={onClick}>
           Consultez votre convention collective
         </StyledButton>
-      </Toast>
+      </FeedbackWrapper>
     </Container>
   );
 }
