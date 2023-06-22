@@ -19,6 +19,13 @@ export class AgreementSalary2596 implements AgreementSalary {
     return sReference.computeReferenceSalary({
       salairesPendantPreavis: ccInput.noticeSalaryPeriods ?? [],
       salaires: salaryPeriods,
+      catPro: get()
+        .informationsData.input.publicodesInformations.find(
+          (v) =>
+            v.question.rule.nom ===
+            "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle"
+        )
+        ?.info?.slice(1, -1) as any,
     });
   };
 }
