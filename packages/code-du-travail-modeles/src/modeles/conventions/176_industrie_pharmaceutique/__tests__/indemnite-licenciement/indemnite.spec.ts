@@ -7,6 +7,17 @@ const engine = new IndemniteLicenciementPublicodes(
   "176"
 );
 
+const expectedReferences = [
+  {
+    article: "Article 36",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184",
+  },
+  {
+    article: "Article 25",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073",
+  },
+];
+
 describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
   describe("CDI classique", () => {
     test.each([
@@ -430,6 +441,10 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         expect(missingArgs).toEqual([]);
         expect(result.value).toEqual(expectedCompensation);
         expect(result.unit?.numerators).toEqual(["€"]);
+
+        const references = engine.getReferences("résultat conventionnel");
+        expect(references).toHaveLength(expectedReferences.length);
+        expect(references).toEqual(expect.arrayContaining(expectedReferences));
       }
     );
   });
