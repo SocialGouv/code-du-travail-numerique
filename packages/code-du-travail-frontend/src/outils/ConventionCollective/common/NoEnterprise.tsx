@@ -37,8 +37,7 @@ export function NoEnterprise(): JSX.Element {
           shift={theme.spacings.xmedium}
         >
           <strong>Vous n&apos;avez pas d&apos;entreprise</strong> (votre
-          recherche concerne les assistants maternels, employés de maison, etc.)
-          ?
+          recherche concerne les assistants maternels, employés de maison) ?
         </Heading>
         <StyledButton variant="link" hasText onClick={onClick}>
           Consultez votre convention collective
