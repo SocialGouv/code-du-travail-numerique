@@ -65,10 +65,10 @@ describe("Vérification juridique pour la CC 1505", () => {
       ${7}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Agents de maîtrise (AM1 et AM2)"}
       ${24}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Agents de maîtrise (AM1 et AM2)"}
       ${32}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Agents de maîtrise (AM1 et AM2)"}
-      ${2}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Cadres (C1 et C2)"}
-      ${7}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Cadres (C1 et C2)"}
-      ${24}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Cadres (C1 et C2)"}
-      ${32}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Cadres (C1 et C2)"}
+      ${2}      | ${3}           | ${MiseRetraiteCCReferences} | ${"Cadres (C1 et C2)"}
+      ${7}      | ${3}           | ${MiseRetraiteCCReferences} | ${"Cadres (C1 et C2)"}
+      ${24}     | ${3}           | ${MiseRetraiteCCReferences} | ${"Cadres (C1 et C2)"}
+      ${32}     | ${3}           | ${MiseRetraiteCCReferences} | ${"Cadres (C1 et C2)"}
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ seniority, category, expectedResult, expectedReferences }) => {
