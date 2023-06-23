@@ -95,7 +95,7 @@ const StepAnciennete = () => {
         dataTestId={"date-notification"}
       />
       <TextQuestion
-        label="Quelle est la date de fin du contrat de travail&nbsp;?"
+        label="Quelle est la date de fin du préavis de licenciement (date de fin du contrat)&nbsp;?"
         inputType="date"
         placeholder="jj/mm/aaaa"
         value={dateSortie}

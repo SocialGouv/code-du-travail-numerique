@@ -6,6 +6,7 @@ import {
   Seniority413,
   Seniority650,
   Seniority1090,
+  Seniority1404,
   Seniority1483,
   Seniority1486,
   Seniority1505,
@@ -20,6 +21,7 @@ import {
   Seniority1740,
   Seniority1996,
   Seniority2098,
+  Seniority2148,
   Seniority2216,
   Seniority2511,
   Seniority2609,
@@ -80,6 +82,8 @@ export class SeniorityFactory {
         return new Seniority1597();
       case SupportedCcIndemniteLicenciement.IDCC275:
         return new Seniority275();
+      case SupportedCcIndemniteLicenciement.IDCC1404:
+        return new Seniority1404();
       case SupportedCcIndemniteLicenciement.IDCC1606:
         return new Seniority1606();
       case SupportedCcIndemniteLicenciement.IDCC1672:
@@ -90,6 +94,8 @@ export class SeniorityFactory {
         return new Seniority1702();
       case SupportedCcIndemniteLicenciement.IDCC1740:
         return new Seniority1740();
+      case SupportedCcIndemniteLicenciement.IDCC2148:
+        return new Seniority2148();
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new SeniorityLegal();
