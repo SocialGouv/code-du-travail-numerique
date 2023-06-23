@@ -10,7 +10,7 @@ export function getReferences(
   specificRule?: string
 ): References[] {
   const refs = Object.values(engine.getParsedRules());
-  return refs
+  const filteredRefs = refs
     .filter(
       (rule) =>
         rule.rawNode.références &&
@@ -33,4 +33,10 @@ export function getReferences(
       }
       return [];
     });
+  return filteredRefs.filter(
+    ({ article }, index) =>
+      filteredRefs.findIndex(
+        ({ article: otherArticle }) => article === otherArticle
+      ) === index
+  );
 }
