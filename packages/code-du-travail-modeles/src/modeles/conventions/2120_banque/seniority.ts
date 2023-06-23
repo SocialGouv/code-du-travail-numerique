@@ -80,9 +80,14 @@ export class Seniority2120 extends SeniorityDefault<SupportedCcIndemniteLicencie
         }
         return total + item.durationInMonth * m.value;
       }, 0);
+
+    const minDate =
+      new Date(2002, 0, 1).getTime() < dEntree.getTime()
+        ? dEntree
+        : new Date(2002, 0, 1);
     const semestersBefore2002WithAbsence = Math.max(
       Math.floor(
-        (differenceInMonths(new Date(2002, 0, 1), dEntree) -
+        (differenceInMonths(minDate, dEntree) -
           totalAbsenceInMonthsBefore2002) /
           6
       ),
@@ -90,8 +95,7 @@ export class Seniority2120 extends SeniorityDefault<SupportedCcIndemniteLicencie
     );
     const semestersAfter2002WithAbsence = Math.max(
       Math.floor(
-        (differenceInMonths(dSortie, new Date(2002, 0, 1)) -
-          totalAbsenceInMonthsAfter2002) /
+        (differenceInMonths(dSortie, minDate) - totalAbsenceInMonthsAfter2002) /
           6
       ),
       0
