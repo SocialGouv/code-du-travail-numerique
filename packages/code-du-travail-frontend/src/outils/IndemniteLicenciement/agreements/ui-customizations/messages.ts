@@ -53,3 +53,12 @@ export const isParentalNoticeHiddenForAgreement = (
 ): boolean => {
   return agreementNumber === 3239 || agreementNumber === 1404;
 };
+
+export const getForMoreInfoMessage = (
+  agreementNumber?: number
+): string | undefined => {
+  if (agreementNumber === 44) {
+    return "Le montant donné n’est qu’une estimation, il est donné à titre indicatif. Pour simplifier l’utilisation de ce simulateur, certains paramètres complexes n’ont pas été pris en compte dans le calcul de l’indemnité et peuvent donner lieu à un montant différent. Par exemple, les absences de moins d’un mois ou les contrats antérieurs au CDI ne sont pas pris en compte dans le calcul de l’ancienneté du salarié. Des règles particulières peuvent également s’appliquer en cas de licenciement pour raisons économiques. L'outil n'a pas intégré ces règles car elles ne s’appliquent pas de façon uniforme à toutes les entreprises.";
+  }
+  return undefined;
+};

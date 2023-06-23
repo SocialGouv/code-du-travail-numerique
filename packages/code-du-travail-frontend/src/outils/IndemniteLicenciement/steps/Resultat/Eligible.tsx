@@ -10,6 +10,7 @@ import {
   useIndemniteLicenciementStore,
 } from "../../store";
 import { getResultMessage } from "../../agreements/ui-customizations";
+import { getForMoreInfoMessage } from "../../agreements/ui-customizations/messages";
 import {
   DecryptResult,
   FilledElements,
@@ -173,7 +174,7 @@ export default function Eligible() {
           <p>{infoWarning.message}</p>
         </Disclaimer>
       )}
-      <ForMoreInfo />
+      <ForMoreInfo message={getForMoreInfoMessage(agreement?.num)} />
     </>
   );
 }
