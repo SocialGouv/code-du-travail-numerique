@@ -57,7 +57,7 @@ export function NoEnterprise({
           {isInputVisible && (
             <AlertWithMargin>
               <p>
-                Cochez cette case si votre recherche concerne des salariés du
+                Cochez cette case si votre recherche concerne les salariés du
                 particulier employeur : les personnes travaillant au domicile
                 privé d&apos;un particulier (garde d’enfants ou d’une personne
                 dépendante, ménage, travaux de jardinage, soutien scolaire...)
