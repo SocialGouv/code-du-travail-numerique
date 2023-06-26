@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { box, breakpoints, fonts, spacings } from "../theme.js";
 
 export const Input = ({
   icon: Icon,
+  text,
   className,
   updateOnScrollDisabled,
   ...props
@@ -15,10 +16,20 @@ export const Input = ({
     : {};
   return (
     <StyledWrapper className={className}>
-      <StyledInput hasIcon={Boolean(Icon)} {...onWheel} {...props} />
+      <StyledInput
+        hasIcon={Boolean(Icon)}
+        text={text}
+        {...onWheel}
+        {...props}
+      />
       {Icon && (
-        <StyledIcon>
+        <StyledIcon text={text}>
           <Icon />
+        </StyledIcon>
+      )}
+      {text && (
+        <StyledIcon text={text}>
+          <span>{text}</span>
         </StyledIcon>
       )}
     </StyledWrapper>
@@ -34,6 +45,7 @@ export const DefaultInputProps = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
+  text: PropTypes.string,
   title: PropTypes.string,
   type: PropTypes.string,
   updateOnScrollDisabled: PropTypes.bool,
@@ -60,7 +72,15 @@ const StyledInput = styled.input`
   width: 100%;
   height: ${INPUT_HEIGHT};
   padding: 0 ${spacings.medium};
-  padding-right: ${(props) => (props.hasIcon ? "5rem" : spacings.medium)};
+  padding-right: ${(props) => {
+    if (props.hasIcon) {
+      return "5rem";
+    }
+    if (props.text) {
+      return "6rem";
+    }
+    return spacings.medium;
+  }};
   color: ${({ theme }) => theme.paragraph};
   font-weight: normal;
   font-size: ${fonts.sizes.default};
@@ -106,7 +126,12 @@ const StyledInput = styled.input`
   appearance: none;
   @media (max-width: ${breakpoints.mobile}) {
     padding: 0 ${spacings.small};
-    padding-right: ${(props) => (props.hasIcon ? "5rem" : spacings.medium)};
+    padding-right: ${(props) => {
+      if (props.text) {
+        return "6rem";
+      }
+      return props.hasIcon ? "5rem" : spacings.medium;
+    }};
   }
 `;
 
@@ -115,8 +140,19 @@ const StyledIcon = styled.div`
   top: 1rem;
   right: ${spacings.small};
   width: 100%;
-  max-width: ${spacings.large};
+  max-width: ${({ text }) => (text ? spacings.base : spacings.large)};
   height: 100%;
   max-height: ${spacings.large};
   color: ${({ theme }) => theme.placeholder};
+  font-size: 1.6rem;
+  ${({ text }) =>
+    text &&
+    css`
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: ${spacings.medium};
+      top: ${spacings.small};
+      user-select: none;
+    `};
 `;
