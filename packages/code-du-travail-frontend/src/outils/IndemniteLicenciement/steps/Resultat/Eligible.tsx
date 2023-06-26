@@ -174,7 +174,9 @@ export default function Eligible() {
           <p>{infoWarning.message}</p>
         </Disclaimer>
       )}
-      <ForMoreInfo message={getForMoreInfoMessage(agreement?.num)} />
+      <ForMoreInfo
+        message={getForMoreInfoMessage(isAgreementBetter, agreement?.num)}
+      />
     </>
   );
 }
