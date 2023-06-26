@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import dataMock from "./mocks/fragmentConditionne.json";
+import dataMock from "./mocks/image.json";
 import { ElementBuilder } from "../ElementBuilder";
 
-describe("FragmentConditionne", () => {
-  it("Should display element within", () => {
+describe("Image", () => {
+  it("should display image and caption", () => {
     const { container } = render(<ElementBuilder data={dataMock} />);
     expect(container).toMatchSnapshot();
   });
