@@ -623,9 +623,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
@@ -644,9 +641,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
@@ -663,9 +657,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
@@ -710,9 +701,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
@@ -731,9 +719,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
@@ -750,9 +735,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
@@ -794,9 +776,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
@@ -815,9 +794,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
@@ -834,9 +810,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
@@ -888,9 +861,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
@@ -909,9 +879,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
@@ -961,9 +928,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
@@ -982,9 +946,6 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
-  références:
-    Article 36: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494327?idConteneur=KALICONT000005635184
-    Article 25: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117073?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117073
   cdtn:
     formule:
       explanations:
