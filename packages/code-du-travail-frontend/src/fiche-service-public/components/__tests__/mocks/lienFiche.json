@@ -1,0 +1,13 @@
+{
+  "type": "element",
+  "name": "Fiche",
+  "attributes": {
+    "ID": "F24411"
+  },
+  "children": [
+    {
+      "type": "text",
+      "text": "Départ négocié (difficultés économiques)"
+    }
+  ]
+}
