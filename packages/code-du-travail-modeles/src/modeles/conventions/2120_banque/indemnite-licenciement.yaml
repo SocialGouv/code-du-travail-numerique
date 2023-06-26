@@ -82,8 +82,8 @@ contrat salarié . convention collective . banque . résultat conventionnel 1:
     formule:
       formula: '[(1/2 * (13/14,5) * Sref * A1) + ](1/5 * Sref * A2)'
       explanations:
-        - "A1: Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
-        - "A2: Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
+        - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
+        - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   références:
     Article 26: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005779933?idConteneur=KALICONT000005635780
@@ -110,8 +110,8 @@ contrat salarié . convention collective . banque . résultat conventionnel 2:
     formule:
       formula: '[(1/2 * (13/14,5) * Sref * A1) + ](1/5 * Sref * A2)'
       explanations:
-        - "A1: Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
-        - "A2: Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
+        - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
+        - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   références:
     Article 26: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005779933?idConteneur=KALICONT000005635780
@@ -137,8 +137,8 @@ contrat salarié . convention collective . banque . résultat conventionnel 3:
     formule:
       formula: '[(1/2 * (13/14,5) * Sref * A1) + ](1/5 * Sref * A2)'
       explanations:
-        - "A1: Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
-        - "A2: Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
+        - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
+        - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   références:
     Article 26: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005779933?idConteneur=KALICONT000005635780
@@ -164,8 +164,8 @@ contrat salarié . convention collective . banque . résultat conventionnel 4:
     formule:
       formula: '[(1/2 * Sref * A1) + ](1/4 * Sref * A2)'
       explanations:
-        - "A1: Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
-        - "A2: Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
+        - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
+        - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   références:
     Article 29: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780
@@ -191,8 +191,8 @@ contrat salarié . convention collective . banque . résultat conventionnel 5:
     formule:
       formula: '[(1/2 * Sref * A1) + ](1/4 * Sref * A2)'
       explanations:
-        - "A1: Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
-        - "A2: Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
+        - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
+        - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   références:
     Article 29: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780
@@ -217,8 +217,8 @@ contrat salarié . convention collective . banque . résultat conventionnel 6:
     formule:
       formula: '[(1/2 * Sref * A1) + ](1/4 * Sref * A2)'
       explanations:
-        - "A1: Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
-        - "A2: Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
+        - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
+        - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   références:
     Article 29: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780

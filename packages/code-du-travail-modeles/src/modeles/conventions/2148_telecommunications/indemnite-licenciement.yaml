@@ -51,8 +51,8 @@ contrat salarié . convention collective . télécommunications . base:
     formule:
       formula: (3% * Sref * A1)[ + (4% * Sref * A2)]
       explanations:
-        - "A1: Année complète d'ancienneté, décomptée à partir de la date d'entrée dans l'entreprise et jusqu'à 9 ans d'ancienneté révolus": contrat salarié . convention collective . télécommunications . jusqu'à 9 ans révolu
-        - "A2: Année entière d'ancienneté pour la tranche comprise entre 10 et 25 ans révolus": contrat salarié . convention collective . télécommunications . entre 9 ans révolu et 25 ans révolu
+        - "A1 : Année complète d'ancienneté, décomptée à partir de la date d'entrée dans l'entreprise et jusqu'à 9 ans d'ancienneté révolus": contrat salarié . convention collective . télécommunications . jusqu'à 9 ans révolu
+        - "A2 : Année entière d'ancienneté pour la tranche comprise entre 10 et 25 ans révolus": contrat salarié . convention collective . télécommunications . entre 9 ans révolu et 25 ans révolu
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . télécommunications . majoration: 0 €
