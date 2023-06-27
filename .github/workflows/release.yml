@@ -57,7 +57,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Deploy to npm
-        run: lerna publish from-package --yes
+        run: yarn lerna publish from-package --yes
       - name: Remove .npmrc
         if: always()
         run: rm .npmrc

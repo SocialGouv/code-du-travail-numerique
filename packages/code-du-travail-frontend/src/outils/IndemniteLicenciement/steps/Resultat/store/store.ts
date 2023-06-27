@@ -284,10 +284,6 @@ const createResultStore: StoreSlice<
 
         agreementHasNoBetterAllowance = hasNoBetterAllowance(agreement.num);
 
-        isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
-          agreement.num
-        );
-
         if (
           agreementHasNoLegalIndemnity ||
           (isAgreementBetterDetection(
@@ -307,6 +303,11 @@ const createResultStore: StoreSlice<
         ) {
           isAgreementEqualToLegal = true;
         }
+
+        isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
+          isAgreementBetter,
+          agreement.num
+        );
       }
 
       if (isAgreementBetter || isAgreementEqualToLegal) {

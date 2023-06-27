@@ -8,7 +8,7 @@ img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr ht
 script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr https://cdnjs.cloudflare.com ${
   process.env.NODE_ENV !== "production" && "'unsafe-eval'"
 };
-frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
+frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com https://cdtnadminprod.blob.core.windows.net;
 style-src 'self' 'unsafe-inline';
 font-src 'self' data: blob:;
 worker-src 'self' blob:;

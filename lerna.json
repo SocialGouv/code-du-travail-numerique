@@ -7,5 +7,6 @@
     }
   },
   "npmClient": "yarn",
-  "version": "4.102.1"
+  "useWorkspaces": true,
+  "version": "4.102.2"
 }
