@@ -49,7 +49,12 @@ export const getSalairesTempsPleinSubtitle = (
 };
 
 export const isParentalNoticeHiddenForAgreement = (
-  agreementNumber: number
+  agreementNumber: number,
+  isAgreementBetter: boolean
 ): boolean => {
-  return agreementNumber === 3239 || agreementNumber === 1404;
+  return (
+    agreementNumber === 3239 ||
+    agreementNumber === 1404 ||
+    (isAgreementBetter && agreementNumber === 176)
+  );
 };

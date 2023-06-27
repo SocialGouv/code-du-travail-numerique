@@ -1,6 +1,10 @@
 import React from "react";
 
-const TooltipSalary = (): JSX.Element => {
+const TooltipSalary = ({
+  agreementNumber,
+}: {
+  agreementNumber: number;
+}): JSX.Element => {
   return (
     <>
       <p>
@@ -24,6 +28,12 @@ const TooltipSalary = (): JSX.Element => {
           décide lui seul de dispenser le salarié d’exécuter un préavis
           obligatoire
         </li>
+        {agreementNumber === 276 && (
+          <li>
+            Les primes d&apos;insalubrité, de travaux salissants, de danger, de
+            froid et de pénibilité
+          </li>
+        )}
         <li>
           <strong>
             Une prime ou gratification librement versée par l’employeur

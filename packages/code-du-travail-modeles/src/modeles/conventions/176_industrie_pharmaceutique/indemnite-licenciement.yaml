@@ -626,7 +626,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A : Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 9 / 30 * Sref * A
 
@@ -644,8 +644,8 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
-        - "A2: Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
+        - "A1 :  Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A2 :  Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2)
 
@@ -660,9 +660,9 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
-        - "A2: Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
-        - "A3: Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
+        - "A1 :  Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A2 :  Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
+        - "A3 :  Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3)
 
@@ -704,7 +704,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A : Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A) + (1 * Sref)
 
@@ -722,8 +722,8 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
-        - "A2: Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
+        - "A1 :  Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A2 :  Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (1 * Sref)
 
@@ -738,9 +738,9 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
-        - "A2: Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
-        - "A3: Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
+        - "A1 :  Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A2 :  Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
+        - "A3 :  Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (1 * Sref)
 
@@ -779,7 +779,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A : Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A) + (2 * Sref)
 
@@ -797,8 +797,8 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
-        - "A2: Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
+        - "A1 :  Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A2 :  Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (2 * Sref)
 
@@ -813,9 +813,9 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
-        - "A2: Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
-        - "A3: Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
+        - "A1 :  Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A2 :  Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
+        - "A3 :  Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (2 * Sref)
 
@@ -864,10 +864,10 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
-        - "A2: Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
-        - "A3: Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
-        - "A4: Années pour la tranche de 15 ans et jusqu'à la veille des 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 15 et 20 ans
+        - "A1 :  Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A2 :  Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
+        - "A3 :  Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
+        - "A4 :  Années pour la tranche de 15 ans et jusqu'à la veille des 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 15 et 20 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (16 / 30 * Sref * A4) + (1 * Sref)
 
@@ -882,11 +882,11 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
-        - "A2: Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
-        - "A3: Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
-        - "A4: Années pour la tranche de 15 ans et jusqu'à la veille des 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 15 et 20 ans
-        - "A5: Années pour la tranche à partir de 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier plus de 20 ans
+        - "A1 :  Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A2 :  Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
+        - "A3 :  Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
+        - "A4 :  Années pour la tranche de 15 ans et jusqu'à la veille des 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 15 et 20 ans
+        - "A5 :  Années pour la tranche à partir de 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier plus de 20 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (16 / 30 * Sref * A4) + (18 / 30 * Sref * A5) + (1 * Sref)
 
@@ -931,10 +931,10 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
-        - "A2: Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
-        - "A3: Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
-        - "A4: Années pour la tranche de 15 ans et jusqu'à la veille des 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 15 et 20 ans
+        - "A1 :  Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A2 :  Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
+        - "A3 :  Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
+        - "A4 :  Années pour la tranche de 15 ans et jusqu'à la veille des 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 15 et 20 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (16 / 30 * Sref * A4) + (2 * Sref)
 
@@ -949,10 +949,10 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
-        - "A2: Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
-        - "A3: Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
-        - "A4: Années pour la tranche de 15 ans et jusqu'à la veille des 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 15 et 20 ans
-        - "A5: Années pour la tranche à partir de 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier plus de 20 ans
+        - "A1 :  Années d'ancienneté à compter de la date d'entrée dans l'entreprise jusqu'à la veille des 5 ans": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier jusqu'à 5 ans
+        - "A2 :  Années pour la tranche de 5 ans et jusqu'à la veille des 10 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 5 et 10 ans
+        - "A3 :  Années pour la tranche de 10 ans et jusqu'à la veille des 15 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans
+        - "A4 :  Années pour la tranche de 15 ans et jusqu'à la veille des 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 15 et 20 ans
+        - "A5 :  Années pour la tranche à partir de 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier plus de 20 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (16 / 30 * Sref * A4) + (18 / 30 * Sref * A5) + (2 * Sref)
