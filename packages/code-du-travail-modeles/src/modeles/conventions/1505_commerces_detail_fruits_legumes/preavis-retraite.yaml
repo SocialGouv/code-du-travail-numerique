@@ -53,7 +53,7 @@ contrat salarié . convention collective . commerces de détail fruits et légum
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . cadres . mise à la retraite:
   applicable si: mise à la retraite
   remplace: préavis de retraite collective
-  valeur: 2 mois
+  valeur: 3 mois
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . notification:
   applicable si:
