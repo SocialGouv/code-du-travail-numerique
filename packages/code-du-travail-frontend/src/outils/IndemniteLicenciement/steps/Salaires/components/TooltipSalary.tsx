@@ -3,7 +3,7 @@ import React from "react";
 const TooltipSalary = ({
   agreementNumber,
 }: {
-  agreementNumber: number;
+  agreementNumber?: number;
 }): JSX.Element => {
   return (
     <>
