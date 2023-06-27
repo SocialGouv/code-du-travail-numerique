@@ -69,7 +69,12 @@ function StepInfosGenerales({ form }) {
 
   return (
     <>
-      <TypeContrat name="contractType" />
+      <TypeContrat
+        name="contractType"
+        onChange={() => {
+          form.change(`criteria.cddType`, undefined);
+        }}
+      />
       <Field name="contractType">
         {({ input }) => {
           switch (input.value) {
