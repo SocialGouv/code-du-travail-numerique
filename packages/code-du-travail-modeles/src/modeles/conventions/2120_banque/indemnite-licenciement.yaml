@@ -61,6 +61,14 @@ contrat salarié . convention collective . banque . formule 2 après janvier 200
       facteur: 1 / 4
   unité: €
 
+contrat salarié . convention collective . banque . plafond 1:
+  valeur: 18 * 0.89 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel # 13 / 14.5 ne fonctionne pas
+  unité: €
+
+contrat salarié . convention collective . banque . plafond 2:
+  valeur: 24 * 0.89 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel # 13 / 14.5 ne fonctionne pas
+  unité: €
+
 # Résultats
 contrat salarié . convention collective . banque . résultat conventionnel 1:
   applicable si:
@@ -77,7 +85,7 @@ contrat salarié . convention collective . banque . résultat conventionnel 1:
       - formule 1 après janvier 2002
   unité: €
   arrondi: 2 décimales
-  plafond: 16 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel # ATTENTION C FAUX
+  plafond: plafond 1
   cdtn:
     formule:
       formula: "[(1/2 * (13/14,5) * Sref * A1) + ](1/5 * Sref * A2)"
@@ -105,7 +113,7 @@ contrat salarié . convention collective . banque . résultat conventionnel 2:
       - formule 1 après janvier 2002
   unité: €
   arrondi: 2 décimales
-  plafond: 21 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel # ATTENTION C FAUX
+  plafond: plafond 2
   cdtn:
     formule:
       formula: "[(1/2 * (13/14,5) * Sref * A1) + ](1/5 * Sref * A2)"
@@ -272,7 +280,7 @@ contrat salarié . convention collective . banque . accident trajet . notificati
 
 # Plafonds
 contrat salarié . convention collective . banque . résultat conventionnel avec plafond 1:
-  applicable si: résultat conventionnel 1 = 16 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  applicable si: résultat conventionnel 1 = plafond 1
   valeur: oui
   cdtn:
     formule:
@@ -281,7 +289,7 @@ contrat salarié . convention collective . banque . résultat conventionnel avec
       formula: 18 * 13 / 14.5 * Sref
 
 contrat salarié . convention collective . banque . résultat conventionnel avec plafond 2:
-  applicable si: résultat conventionnel 2 = 21 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  applicable si: résultat conventionnel 2 = plafond 2
   valeur: oui
   cdtn:
     formule:
