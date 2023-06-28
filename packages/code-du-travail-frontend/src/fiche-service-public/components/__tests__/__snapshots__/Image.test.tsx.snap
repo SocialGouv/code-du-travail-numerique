@@ -10,13 +10,12 @@ exports[`Image should display image and caption 1`] = `
       alt="Comment calculer un délai quand il y a un jour férié ?"
       src="https://www.service-public.fr/webapp/images/vdd/extralarge/I4596.jpg"
     />
-    <figcaption>
+    <figcaption
+      class="sc-kqGoIF bYqBFV"
+    >
       <span>
         Crédits : 
         Service Public (DILA)
-      </span>
-      <span>
-        Comment calculer un délai quand il y a un jour férié ?
       </span>
     </figcaption>
   </figure>
