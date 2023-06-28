@@ -14,7 +14,6 @@ import Table from "./Table.js";
 import Tabulator from "./Tabulator.js";
 import Title from "./Title.js";
 import { Image as ImageElement } from "./Image";
-import { LienFiche } from "./LienFiche";
 
 const { spacings } = theme;
 
