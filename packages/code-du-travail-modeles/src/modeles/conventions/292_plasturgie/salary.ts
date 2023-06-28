@@ -1,6 +1,7 @@
 import type {
   IReferenceSalary,
   ReferenceSalaryProps,
+  SalaryPeriods,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
@@ -29,13 +30,10 @@ export class ReferenceSalary292
 
     const last3salaries = rankedSalaires
       .filter((s) => nonNullable(s.value))
-      .slice(0, 3);
+      .slice(0, 3) as (SalaryPeriods & { value: number })[];
 
     const totalLast3SalariesWithoutPrime = sum(
-      last3salaries.map(
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        (s) => s.value! - (s.prime ?? 0)
-      )
+      last3salaries.map((s) => s.value - (s.prime ?? 0))
     );
     const primesLast3months = last3salaries
       .map((a) => a.prime)
@@ -46,8 +44,7 @@ export class ReferenceSalary292
 
     const lastSalary = last3salaries[0];
     const lastSalaryPrime = lastSalary.prime ?? 0;
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const lastSalaryValue = lastSalary.value! - lastSalaryPrime;
+    const lastSalaryValue = lastSalary.value - lastSalaryPrime;
     const lastSalaryWithPrimeTemporis = lastSalaryValue + lastSalaryPrime / 12;
 
     return Math.max(

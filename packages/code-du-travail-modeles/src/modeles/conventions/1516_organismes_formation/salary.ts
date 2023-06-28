@@ -36,11 +36,10 @@ export class ReferenceSalary1516
     );
     const last3salaries = [...rankedSalairesPendantPreavis, ...rankedSalaires]
       .filter((s) => nonNullable(s.value))
-      .slice(0, 3);
+      .slice(0, 3) as (SalaryPeriods & { value: number })[];
 
     const meilleurSalaireDes3DerniersMois = Math.max(
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      ...last3salaries.map((s) => s.value! - (s.prime ?? 0))
+      ...last3salaries.map((s) => s.value - (s.prime ?? 0))
     );
 
     const primesLast3months = last3salaries
