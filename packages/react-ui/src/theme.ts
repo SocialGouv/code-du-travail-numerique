@@ -43,7 +43,7 @@ export const colors = {
 
   primaryText: "#fff",
   secondaryText: "#fff",
-};
+} as const;
 
 export const blackAndWhiteColors = Object.entries(colors).reduce(
   (blackAndWhiteColors: any, [colorName, colorValue]) => {
@@ -64,7 +64,7 @@ export const spacings = {
   xmedium: "2.4rem",
   large: "3.2rem",
   larger: "4rem",
-};
+} as const;
 
 export const fonts = {
   lineHeight: "1.625",
@@ -82,7 +82,7 @@ export const fonts = {
     },
     medium: "2rem",
   },
-};
+} as const;
 
 export const breakpoints = {
   desktop: "1180px",
@@ -91,7 +91,7 @@ export const breakpoints = {
   intDesktop: 1180,
   intTablet: 980,
   intMobile: 600,
-};
+} as const;
 
 const shadow = "0 1rem 2rem";
 
@@ -108,8 +108,8 @@ export const box = {
       return `${shadow} ${rgba(color, 0.4)}`;
     },
   },
-};
+} as const;
 
 export const animations = {
   transitionTiming: "250ms",
-};
+} as const;
