@@ -42,7 +42,7 @@ contrat salarié . convention collective . télécommunications . facteur entre 
   unité: €
 
 contrat salarié . convention collective . télécommunications . base:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
   somme:
     - facteur moins de 9 ans révolu
     - facteur entre 9 ans révolu et 25 ans révolu

@@ -1,8 +1,6 @@
 import path from "path";
 import fs from "fs";
 
-import { integrationData } from "../src/integration/data";
-
 export const filePath = path.join(__dirname, "../public/robots.txt");
 export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
   const robotsDev = ["User-agent: *", "Disallow: /"].join("\n");
@@ -27,13 +25,7 @@ export const generateWidgetScript = (host: string) => {
     flag: "r",
   });
   if (!data) return;
-  const widgets = Object.values(integrationData).map(
-    ({ id: name, url: integrationUrl }) => ({
-      name,
-      url: `${host}${integrationUrl}`,
-    })
-  );
-  const hostedData = data.replace(/__WIDGETS__/g, JSON.stringify(widgets));
+  const hostedData = data.replace(/__HOST__/g, host);
 
   fs.writeFileSync(widgetOutputScriptPath, hostedData);
 };

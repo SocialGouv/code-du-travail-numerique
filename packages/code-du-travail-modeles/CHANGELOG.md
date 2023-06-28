@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.103.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.2...v4.103.0) (2023-06-27)
+
+### Bug Fixes
+
+- **indemnité de licenciement:** ne pas prendre que les années complètes pour le droit à l'indemnité pour la 2148 ([#5238](https://github.com/SocialGouv/code-du-travail-numerique/issues/5238)) ([5a1d9d9](https://github.com/SocialGouv/code-du-travail-numerique/commit/5a1d9d9dce0b4d81b8b422f9a2ad0a23d551cda9))
+- sref ([#5232](https://github.com/SocialGouv/code-du-travail-numerique/issues/5232)) ([5e5c231](https://github.com/SocialGouv/code-du-travail-numerique/commit/5e5c231a3e574068ebb68bbec8041de98448e00b))
+
+### Features
+
+- **indemnite-licenciement:** activation de nouvelles CCs ([c5d6a72](https://github.com/SocialGouv/code-du-travail-numerique/commit/c5d6a72b2e68d315384a99a27163c43b0038ef00))
+
+## [4.102.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.1...v4.102.2) (2023-06-22)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.102.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.0...v4.102.1) (2023-06-20)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.102.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.3...v4.102.0) (2023-06-20)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** ne pas inclure les années incomplètes pour le calcul de l'ancienneté CC 2148 ([#5206](https://github.com/SocialGouv/code-du-travail-numerique/issues/5206)) ([565c767](https://github.com/SocialGouv/code-du-travail-numerique/commit/565c7674b8aff534e5abe91017006ea2c09e477d))
+
+### Features
+
+- indemnite licenciement 1404 ([#5133](https://github.com/SocialGouv/code-du-travail-numerique/issues/5133)) ([5fa2153](https://github.com/SocialGouv/code-du-travail-numerique/commit/5fa215383e48e04431817a28a7b5f9603f2b385d))
+- **indemnite-licenciement:** activation de nouvelles CCs ([eeab2b4](https://github.com/SocialGouv/code-du-travail-numerique/commit/eeab2b4ff4c8b49ae783cc2327d422eb7119e6e2))
+- **indemnite-licenciement:** désactivation de la CC 2596 ([04b6df4](https://github.com/SocialGouv/code-du-travail-numerique/commit/04b6df432e1bf97bcb8e5c2f3d2722d068960def))
+
 ## [4.101.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.2...v4.101.3) (2023-06-12)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
