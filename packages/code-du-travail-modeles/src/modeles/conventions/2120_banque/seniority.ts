@@ -109,6 +109,7 @@ export class Seniority2120 extends SeniorityDefault<SupportedCcIndemniteLicencie
   private getExtraInfoAbsence(
     absencePeriods: Absence[]
   ): Record<string, string> {
+    let defaultObject = {};
     if (
       absencePeriods.some(
         (absence) =>
@@ -117,11 +118,30 @@ export class Seniority2120 extends SeniorityDefault<SupportedCcIndemniteLicencie
           absence.durationInMonth > 0
       )
     ) {
-      return {
-        "contrat salarié . convention collective . banque . maladie non pro":
-          "oui",
+      defaultObject = {
+        ...defaultObject,
+        ...{
+          "contrat salarié . convention collective . banque . maladie non pro":
+            "oui",
+        },
       };
     }
-    return {};
+    if (
+      absencePeriods.some(
+        (absence) =>
+          absence.motif.key === MotifKeys.accidentTrajet &&
+          absence.durationInMonth &&
+          absence.durationInMonth > 0
+      )
+    ) {
+      defaultObject = {
+        ...defaultObject,
+        ...{
+          "contrat salarié . convention collective . banque . accident trajet":
+            "oui",
+        },
+      };
+    }
+    return defaultObject;
   }
 }
