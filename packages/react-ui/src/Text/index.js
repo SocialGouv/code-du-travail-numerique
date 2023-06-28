@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { fonts } from "../theme.js";
+import { fonts } from "../theme";
 
 const sharedStyle = css`
   ${({ theme }) => {
@@ -11,13 +11,14 @@ const sharedStyle = css`
         props.$variant
           ? theme[props.$variant]
           : props.disabled
-          ? "gray"
+          ? theme.placeholder
           : theme.paragraph};
       font-size: ${(props) =>
         props.$fontSize && props.$fontSize.startsWith("h")
           ? fonts.sizes.headings[props.$fontSize.replace("h", "")]
           : fonts.sizes[props.$fontSize]};
       font-weight: ${(props) => props.$fontWeight};
+      transition: color 0.2s ease-in-out;
     `;
   }}
 `;

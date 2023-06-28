@@ -4,7 +4,7 @@ import { darken, getContrast, lighten, rgba } from "polished";
 const WCAG_AA_MINIMAL_CONTRAST = 3;
 const BORDER_BLACK_CONTRAST = 12.62;
 
-const maximiseContrast = (color) => {
+const maximiseContrast = (color: string) => {
   const whiteContrast = getContrast(color, "#fff");
   const blackContrast = getContrast(color, "#000");
   if (
@@ -40,13 +40,13 @@ export const colors = {
   // form colors
   error: "#eb5757",
   validate: "#7bd0ac",
+
+  primaryText: "#fff",
+  secondaryText: "#fff",
 };
 
-colors.primaryText = colors.white;
-colors.secondaryText = colors.white;
-
 export const blackAndWhiteColors = Object.entries(colors).reduce(
-  (blackAndWhiteColors, [colorName, colorValue]) => {
+  (blackAndWhiteColors: any, [colorName, colorValue]) => {
     blackAndWhiteColors[colorName] = maximiseContrast(colorValue);
     return blackAndWhiteColors;
   },
@@ -96,15 +96,15 @@ export const breakpoints = {
 const shadow = "0 1rem 2rem";
 
 export const box = {
-  border(color) {
+  border(color: string) {
     return `1px solid ${color}`;
   },
   borderRadius: "0.6rem",
   shadow: {
-    default(color) {
+    default(color: string) {
       return `${shadow} ${rgba(color, 0.2)}`;
     },
-    large(color) {
+    large(color: string) {
       return `${shadow} ${rgba(color, 0.4)}`;
     },
   },

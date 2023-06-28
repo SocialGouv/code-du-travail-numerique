@@ -44,7 +44,8 @@ const DisclosureIconButton = styled(Button)`
   display: inline-block;
   font-weight: 700;
   font-size: ${fonts.sizes.small};
-  color: ${({ theme, disabled }) => (disabled ? "gray" : theme.secondary)};
+  color: ${({ theme, disabled }) =>
+    disabled ? theme.placeholder : theme.secondary};
   margin-left: ${spacings.tiny};
   padding: 0.5rem;
   height: 2rem;

@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { box, breakpoints, fonts, spacings } from "../../../theme.js";
+import { box, breakpoints, fonts, spacings } from "../../../theme";
 import { VerticalArrow } from "../VerticalArrow/index.js";
 
 const ITEM_SPACING = spacings.base;

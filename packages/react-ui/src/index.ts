@@ -1,5 +1,5 @@
 export * as keyframes from "./keyframes.js";
-export * as theme from "./theme.js";
+export * as theme from "./theme";
 
 // Theme Provider
 export { ThemeProvider, useTheme } from "./ThemeProvider.js";

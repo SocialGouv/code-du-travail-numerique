@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { box } from "../theme.js";
+import { box } from "../theme";
 
 export const InputRadio = ({
   label,

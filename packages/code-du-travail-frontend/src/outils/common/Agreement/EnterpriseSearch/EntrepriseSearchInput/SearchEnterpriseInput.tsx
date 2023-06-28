@@ -133,7 +133,8 @@ export const SearchEnterpriseInput = ({
 };
 
 const InlineText = styled(Text)`
-  color: ${({ theme, disabled }) => (disabled ? "gray" : theme.paragraph)};
+  color: ${({ theme, disabled }) =>
+    disabled ? theme.placeholder : theme.paragraph};
 `;
 
 const BlockInput = styled(Input)`
@@ -159,7 +160,8 @@ const BlockInputRight = styled(BlockInput)`
 
 const InlineLabel = styled(Label)`
   display: inline;
-  color: ${({ theme, disabled }) => (disabled ? "gray" : theme.paragraph)};
+  color: ${({ theme, disabled }) =>
+    disabled ? theme.placeholder : theme.paragraph};
 `;
 
 const Flex = styled.div`
@@ -203,9 +205,9 @@ const SubmitIcon = styled(Button)`
   }
   color: ${({ theme }) => theme.white};
   background-color: ${({ theme, disabled }) =>
-    disabled ? "gray" : theme.secondary};
+    disabled ? theme.placeholder : theme.secondary};
   border-color: ${({ theme, disabled }) =>
-    disabled ? "gray" : theme.secondary};
+    disabled ? theme.placeholder : theme.secondary};
   transition: background-color 1.5s ease, border-color 1.5s ease;
 `;
 

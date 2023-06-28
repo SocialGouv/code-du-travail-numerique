@@ -184,7 +184,7 @@ describe("Push agreement events on click next", () => {
       expect(matopush).toHaveBeenNthCalledWith(4, [
         MatomoBaseEvent.TRACK_EVENT,
         MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-        MatomoSimulatorEvent.SELECT_JE_N_AI_PAS_D_ENTREPRISE,
+        MatomoSimulatorEvent.SELECT_NO_COMPANY,
         pageTitle,
       ]);
     });

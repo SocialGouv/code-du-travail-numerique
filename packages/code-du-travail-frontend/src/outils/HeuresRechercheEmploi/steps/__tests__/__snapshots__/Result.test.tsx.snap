@@ -128,7 +128,7 @@ exports[`<StepResult /> should render no results 1`] = `
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK chnJmR sc-lnPyaJ dsXzGD"
+          class="sc-jGKxIK eatBNA sc-lnPyaJ dsXzGD"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -285,7 +285,7 @@ exports[`<StepResult /> should render with duration 1`] = `
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK chnJmR sc-lnPyaJ dsXzGD"
+          class="sc-jGKxIK eatBNA sc-lnPyaJ dsXzGD"
         >
           Attention il peut exister une durée plus favorable
         </p>

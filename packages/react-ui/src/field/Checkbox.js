@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { box, spacings } from "../theme.js";
+import { box, spacings } from "../theme";
 
 export const InputCheckbox = ({ label, name, id, size, checked, ...props }) => (
   <StyledLabel htmlFor={id} size={size}>

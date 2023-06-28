@@ -420,7 +420,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK chnJmR sc-dNsVcS klvPyc"
+          class="sc-jGKxIK eatBNA sc-dNsVcS klvPyc"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -855,7 +855,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK chnJmR sc-dNsVcS klvPyc"
+          class="sc-jGKxIK eatBNA sc-dNsVcS klvPyc"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1303,7 +1303,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK chnJmR sc-dNsVcS klvPyc"
+          class="sc-jGKxIK eatBNA sc-dNsVcS klvPyc"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1741,7 +1741,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK chnJmR sc-dNsVcS klvPyc"
+          class="sc-jGKxIK eatBNA sc-dNsVcS klvPyc"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -2179,7 +2179,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK chnJmR sc-dNsVcS klvPyc"
+          class="sc-jGKxIK eatBNA sc-dNsVcS klvPyc"
         >
           Attention il peut exister un montant plus favorable
         </p>

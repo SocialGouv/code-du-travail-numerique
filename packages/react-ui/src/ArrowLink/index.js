@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { DirectionRight } from "../icons/index.js";
-import { animations, breakpoints, spacings } from "../theme.js";
+import { animations, breakpoints, spacings } from "../theme";
 
 export const ArrowLink = React.forwardRef(
   ({ arrowPosition, children, ...props }, ref) => (

@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 import { OverflowWrapper } from "../OverflowWrapper";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
-import { animations, box, breakpoints, fonts, spacings } from "../theme.js";
+import { animations, box, breakpoints, fonts, spacings } from "../theme";
 import { getTextFromComponent } from "../utils/getTextFromComponent.js";
 
 export const Tabs = (props) => {

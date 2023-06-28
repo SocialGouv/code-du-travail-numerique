@@ -19,8 +19,8 @@ export function NoEnterprise(): JSX.Element {
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
       MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-      MatomoSimulatorEvent.CLICK_JE_N_AI_PAS_D_ENTREPRISE,
-      MatomoSimulatorNameEvent.TROUVER_SA_CC,
+      MatomoSimulatorEvent.CLICK_NO_COMPANY,
+      MatomoSimulatorNameEvent.FIND_AGREEMENT,
     ]);
     router.push(
       `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`

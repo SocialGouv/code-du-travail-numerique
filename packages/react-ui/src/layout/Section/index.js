@@ -6,7 +6,7 @@ import {
   Container,
   CONTAINER_MAX_WIDTH,
 } from "../../layout/Container/index.js";
-import { breakpoints, spacings } from "../../theme.js";
+import { breakpoints, spacings } from "../../theme";
 
 const BORDER_RADIUS = "10rem";
 

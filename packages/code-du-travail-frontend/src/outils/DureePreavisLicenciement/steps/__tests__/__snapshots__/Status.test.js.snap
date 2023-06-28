@@ -7,11 +7,11 @@ exports[`<StepStatus /> should render 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iORupB"
+      class="sc-ibQAlb hWMswI"
     >
       Le licenciement est-il dû à une faute grave (ou lourde) ?
       <span
-        class="sc-ibQAlb iapAQd"
+        class="sc-ibQAlb iolCZA"
       >
          (obligatoire)
       </span>
@@ -67,11 +67,11 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iORupB"
+      class="sc-ibQAlb hWMswI"
     >
       Le licenciement est-il dû à une faute grave (ou lourde) ?
       <span
-        class="sc-ibQAlb iapAQd"
+        class="sc-ibQAlb iolCZA"
       >
          (obligatoire)
       </span>
@@ -123,11 +123,11 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iORupB"
+      class="sc-ibQAlb hWMswI"
     >
       Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
       <span
-        class="sc-ibQAlb iapAQd"
+        class="sc-ibQAlb iolCZA"
       >
          (obligatoire)
       </span>
@@ -183,11 +183,11 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       for="input-cdt.ancienneté"
     >
       <span
-        class="sc-ibQAlb iORupB"
+        class="sc-ibQAlb hWMswI"
       >
         Quelle est l'ancienneté du salarié ?
         <span
-          class="sc-ibQAlb iapAQd"
+          class="sc-ibQAlb iolCZA"
         >
            (obligatoire)
         </span>
@@ -308,11 +308,11 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iORupB"
+      class="sc-ibQAlb hWMswI"
     >
       Le licenciement est-il dû à une faute grave (ou lourde) ?
       <span
-        class="sc-ibQAlb iapAQd"
+        class="sc-ibQAlb iolCZA"
       >
          (obligatoire)
       </span>
@@ -364,11 +364,11 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iORupB"
+      class="sc-ibQAlb hWMswI"
     >
       Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
       <span
-        class="sc-ibQAlb iapAQd"
+        class="sc-ibQAlb iolCZA"
       >
          (obligatoire)
       </span>
