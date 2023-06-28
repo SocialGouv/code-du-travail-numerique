@@ -4,7 +4,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "4.102.2",
+  "version": "4.103.0",
   "description": "Les règles publicodes des simulateurs de code du travail numérique",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -15,8 +15,9 @@
   },
   "devDependencies": {
     "@socialgouv/eslint-config-typescript": "^1.93.0",
-    "@swc/core": "^1.3.21",
-    "@swc/jest": "^0.2.23",
+    "@swc/cli": "^0.1.62",
+    "@swc/core": "^1.3.66",
+    "@swc/jest": "^0.2.26",
     "@types/fs-extra": "^9.0.12",
     "@types/jest": "^27.0.1",
     "eslint": "^7.32.0",
@@ -30,9 +31,10 @@
     "prebuild": "tsc",
     "test": "jest --silent=true",
     "lint": "eslint \"./src/**/*.{js,ts}\"",
-    "dev": "nodemon --exec 'npm run build' --watch 'src/**' --ext 'ts,yaml'",
+    "dev": "nodemon --exec 'npm run build:dev' --watch 'src/**' --ext 'ts,yaml'",
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",
     "build": "yarn prebuild && node bin/internal/build.js",
+    "build:dev": "swc ./src --out-dir bin --copy-files && node bin/internal/build.js",
     "clean": "rimraf bin lib",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch"
