@@ -54,7 +54,10 @@ export const isParentalNoticeHiddenForAgreement = (
 ): boolean => {
   if (agreementNumber === 3239) return true;
   return (
-    isAgreementBetter && (agreementNumber === 1404 || agreementNumber === 2120)
+    isAgreementBetter &&
+    (agreementNumber === 1404 ||
+      agreementNumber === 2120 ||
+      agreementNumber === 292)
   );
 };
 
