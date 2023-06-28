@@ -220,7 +220,7 @@ const Contribution = ({ answers, content }) => {
                       <a
                         href={`/convention-collective/${
                           isConventionalAnswer
-                            ? conventionAnswer.ccSlug
+                            ? conventionAnswer.slug
                             : convention.slug
                         }`}
                       >
