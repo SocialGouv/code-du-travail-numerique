@@ -72,7 +72,26 @@ function StepInfosGenerales({ form }) {
       <TypeContrat
         name="contractType"
         onChange={() => {
-          form.change(`criteria.cddType`, undefined);
+          if (values) {
+            form.change("criteria", {});
+            Object.keys(values).forEach((key) => {
+              if (
+                [
+                  "cttFormation",
+                  "propositionCDIFinContrat",
+                  "refusSouplesse",
+                  "ruptureContratFauteGrave",
+                  "cttFormation",
+                  "finContratPeriodeDessai",
+                  "interruptionFauteGrave",
+                  "refusCDIFindeContrat",
+                  "refusRenouvellementAuto",
+                ].indexOf(key) !== -1
+              ) {
+                form.change(key, undefined);
+              }
+            });
+          }
         }}
       />
       <Field name="contractType">
