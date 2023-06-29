@@ -5,9 +5,10 @@ import {
   icons,
   Alert,
   theme,
+  Text,
 } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
-import { SectionTitle } from "../../../common/stepStyles";
+import { Question } from "../../../common/Question";
 
 type Props = {
   isHidden?: boolean;
@@ -67,15 +68,17 @@ export function NoEnterprise({
             </AlertWithMargin>
           )}
           {isCheckboxChecked && (
-            <>
-              <SectionTitle>Votre convention collective est :</SectionTitle>
-              <Paragraph noMargin fontWeight="600" fontSize="default">
+            <StyledDiv>
+              <Question required={false} as="p">
+                Votre convention collective est&nbsp;:
+              </Question>
+              <Text fontSize="default" fontWeight="600" variant="secondary">
                 Particulier employeur et emploi à domicile
-              </Paragraph>
+              </Text>
               <StyledParagraph>
                 Cliquez sur Suivant pour poursuivre la simulation.
               </StyledParagraph>
-            </>
+            </StyledDiv>
           )}
         </>
       )}
@@ -122,5 +125,9 @@ const StyledParagraph = styled(Paragraph)`
 `;
 
 const AlertWithMargin = styled(Alert)`
+  margin-top: ${spacings.base};
+`;
+
+const StyledDiv = styled.div`
   margin-top: ${spacings.base};
 `;

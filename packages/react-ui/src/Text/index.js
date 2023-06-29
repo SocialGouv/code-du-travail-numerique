@@ -18,7 +18,6 @@ const sharedStyle = css`
           ? fonts.sizes.headings[props.$fontSize.replace("h", "")]
           : fonts.sizes[props.$fontSize]};
       font-weight: ${(props) => props.$fontWeight};
-      transition: color 0.2s ease-in-out;
     `;
   }}
 `;

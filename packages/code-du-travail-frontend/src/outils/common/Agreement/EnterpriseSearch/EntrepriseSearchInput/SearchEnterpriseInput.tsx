@@ -208,7 +208,6 @@ const SubmitIcon = styled(Button)`
     disabled ? theme.placeholder : theme.secondary};
   border-color: ${({ theme, disabled }) =>
     disabled ? theme.placeholder : theme.secondary};
-  transition: background-color 1.5s ease, border-color 1.5s ease;
 `;
 
 const StyledSearchIcon = styled(SearchIcon)`
