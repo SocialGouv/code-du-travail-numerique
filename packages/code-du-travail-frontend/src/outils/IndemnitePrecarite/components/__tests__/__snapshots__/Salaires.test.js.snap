@@ -7,11 +7,11 @@ exports[`<Salaires /> should add a salaire 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb hWMswI"
+      class="sc-ibQAlb iORupB"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-ibQAlb iolCZA"
+        class="sc-ibQAlb iapAQd"
       >
          (obligatoire)
       </span>
@@ -107,11 +107,11 @@ exports[`<Salaires /> should delete a salaires 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb hWMswI"
+      class="sc-ibQAlb iORupB"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-ibQAlb iolCZA"
+        class="sc-ibQAlb iapAQd"
       >
          (obligatoire)
       </span>
@@ -147,11 +147,11 @@ exports[`<Salaires /> should render 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb hWMswI"
+      class="sc-ibQAlb iORupB"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-ibQAlb iolCZA"
+        class="sc-ibQAlb iapAQd"
       >
          (obligatoire)
       </span>

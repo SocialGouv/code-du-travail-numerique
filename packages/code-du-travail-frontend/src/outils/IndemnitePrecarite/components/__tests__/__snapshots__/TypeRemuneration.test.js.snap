@@ -7,11 +7,11 @@ exports[`<TypeRemuneration /> should render 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb hWMswI"
+      class="sc-ibQAlb iORupB"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
       <span
-        class="sc-ibQAlb iolCZA"
+        class="sc-ibQAlb iapAQd"
       >
          (obligatoire)
       </span>

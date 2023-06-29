@@ -221,7 +221,7 @@ exports[`<Stats /> should render 1`] = `
                         Contenus référencés
                       </h2>
                       <p
-                        class="sc-jGKxIK jpfpHQ sc-cyRcrZ cAvSoG"
+                        class="sc-jGKxIK jlhpER sc-cyRcrZ cAvSoG"
                       >
                         16
                       </p>
@@ -240,7 +240,7 @@ exports[`<Stats /> should render 1`] = `
                         Visites
                       </h2>
                       <p
-                        class="sc-jGKxIK jpfpHQ sc-cyRcrZ cAvSoG"
+                        class="sc-jGKxIK jlhpER sc-cyRcrZ cAvSoG"
                       >
                         20
                       </p>
@@ -259,7 +259,7 @@ exports[`<Stats /> should render 1`] = `
                         Recherches
                       </h2>
                       <p
-                        class="sc-jGKxIK jpfpHQ sc-cyRcrZ cAvSoG"
+                        class="sc-jGKxIK jlhpER sc-cyRcrZ cAvSoG"
                       >
                         4
                       </p>
@@ -278,7 +278,7 @@ exports[`<Stats /> should render 1`] = `
                         Consultations
                       </h2>
                       <p
-                        class="sc-jGKxIK jpfpHQ sc-cyRcrZ cAvSoG"
+                        class="sc-jGKxIK jlhpER sc-cyRcrZ cAvSoG"
                       >
                         10
                       </p>

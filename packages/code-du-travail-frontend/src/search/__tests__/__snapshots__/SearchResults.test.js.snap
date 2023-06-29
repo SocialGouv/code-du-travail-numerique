@@ -54,7 +54,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="sc-dxcDKg jfRleH"
             >
               <p
-                class="sc-jGKxIK lfTmVT"
+                class="sc-jGKxIK cNijme"
               >
                 description
               </p>
@@ -127,7 +127,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-dxcDKg jfRleH"
               >
                 <p
-                  class="sc-jGKxIK lfTmVT"
+                  class="sc-jGKxIK cNijme"
                 >
                   description
                 </p>
@@ -197,7 +197,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-dxcDKg jfRleH"
               >
                 <p
-                  class="sc-jGKxIK lfTmVT"
+                  class="sc-jGKxIK cNijme"
                 >
                   description
                 </p>
@@ -291,7 +291,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-dxcDKg jfRleH"
               >
                 <p
-                  class="sc-jGKxIK lfTmVT"
+                  class="sc-jGKxIK cNijme"
                 >
                   description
                 </p>
@@ -382,7 +382,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="sc-dxcDKg jfRleH"
             >
               <p
-                class="sc-jGKxIK lfTmVT"
+                class="sc-jGKxIK cNijme"
               >
                 description
               </p>

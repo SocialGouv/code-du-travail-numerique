@@ -3,7 +3,7 @@
 exports[`<Tag /> renders text 1`] = `
 <div>
   <span
-    class="sc-aXZVg hDxtiH sc-eqUAAy clFqmf"
+    class="sc-aXZVg gTwHaC sc-eqUAAy clFqmf"
   >
     A simple text
   </span>

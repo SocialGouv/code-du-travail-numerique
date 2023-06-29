@@ -7,11 +7,11 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb hWMswI"
+      class="sc-ibQAlb iORupB"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
       <span
-        class="sc-ibQAlb iolCZA"
+        class="sc-ibQAlb iapAQd"
       >
          (obligatoire)
       </span>
@@ -69,11 +69,11 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb hWMswI"
+      class="sc-ibQAlb iORupB"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-ibQAlb iolCZA"
+        class="sc-ibQAlb iapAQd"
       >
          (obligatoire)
       </span>
@@ -234,11 +234,11 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb hWMswI"
+      class="sc-ibQAlb iORupB"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
       <span
-        class="sc-ibQAlb iolCZA"
+        class="sc-ibQAlb iapAQd"
       >
          (obligatoire)
       </span>
@@ -297,11 +297,11 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     for="currency-1"
   >
     <span
-      class="sc-ibQAlb hWMswI"
+      class="sc-ibQAlb iORupB"
     >
       Quelle est la rémunération totale brute perçue durant le contrat de travail ?
       <span
-        class="sc-ibQAlb iolCZA"
+        class="sc-ibQAlb iapAQd"
       >
          (obligatoire)
       </span>

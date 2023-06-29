@@ -65,7 +65,7 @@ exports[`<Search /> should show no results when no result 1`] = `
     class="sc-dycYrt lbBSWD"
   >
     <p
-      class="sc-jGKxIK lfTmVT"
+      class="sc-jGKxIK cNijme"
     >
       Aucun résultat n’a été trouvé.
     </p>
@@ -115,7 +115,7 @@ exports[`<Search /> should show spinner when loading 1`] = `
     class="sc-dycYrt lbBSWD"
   >
     <p
-      class="sc-jGKxIK lfTmVT"
+      class="sc-jGKxIK cNijme"
     >
       <svg
         aria-labelledby="title desc"
@@ -386,7 +386,7 @@ exports[`<Search /> when searching by text, should use enterprise API 1`] = `
     class="sc-dycYrt lbBSWD"
   >
     <p
-      class="sc-jGKxIK lfTmVT"
+      class="sc-jGKxIK cNijme"
     >
       Le service de recherche est indisponible.
     </p>

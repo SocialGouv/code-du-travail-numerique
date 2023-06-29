@@ -83,7 +83,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           Page personnalisable
         </p>
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -265,7 +265,7 @@ exports[`<Contribution /> should render answer references 1`] = `
           Page personnalisable
         </p>
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -447,7 +447,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           Page personnalisable
         </p>
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -629,7 +629,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
           Page personnalisable
         </p>
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -811,7 +811,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           Page personnalisable
         </p>
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />

@@ -11,11 +11,11 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       for="input-foo"
     >
       <span
-        class="sc-ibQAlb hWMswI"
+        class="sc-ibQAlb iORupB"
       >
         Une question ?
         <span
-          class="sc-ibQAlb iolCZA"
+          class="sc-ibQAlb iapAQd"
         >
            (obligatoire)
         </span>
@@ -95,11 +95,11 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       for="input-foo"
     >
       <span
-        class="sc-ibQAlb hWMswI"
+        class="sc-ibQAlb iORupB"
       >
         Une question ?
         <span
-          class="sc-ibQAlb iolCZA"
+          class="sc-ibQAlb iapAQd"
         >
            (obligatoire)
         </span>

@@ -7,11 +7,11 @@ exports[`<YesNoQuestion /> should render 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb hWMswI"
+      class="sc-ibQAlb iORupB"
     >
       lorem ipsum ?
       <span
-        class="sc-ibQAlb iolCZA"
+        class="sc-ibQAlb iapAQd"
       >
          (obligatoire)
       </span>

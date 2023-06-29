@@ -7,11 +7,11 @@ exports[`<TypeContrat /> should render 1`] = `
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb hWMswI"
+      class="sc-ibQAlb iORupB"
     >
       Quel est le type du contrat de travail ?
       <span
-        class="sc-ibQAlb iolCZA"
+        class="sc-ibQAlb iapAQd"
       >
          (obligatoire)
       </span>

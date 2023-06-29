@@ -145,7 +145,7 @@ exports[`<Answer /> should renders 1`] = `
               class="sc-dGCmGc eKMRHH"
             >
               <p
-                class="sc-jGKxIK bhvaxp"
+                class="sc-jGKxIK biFdvs"
               >
                 <span
                   class="sc-deXhhX cpCGcE"
@@ -176,7 +176,7 @@ exports[`<Answer /> should renders 1`] = `
               class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
-                class="sc-jGKxIK lfTmVT"
+                class="sc-jGKxIK cNijme"
               >
                 intro de l'article
               </p>
@@ -203,7 +203,7 @@ exports[`<Answer /> should renders 1`] = `
         class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Partager ce contenu : 
         </p>
@@ -597,7 +597,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="sc-dGCmGc eKMRHH"
             >
               <p
-                class="sc-jGKxIK bhvaxp"
+                class="sc-jGKxIK biFdvs"
               >
                 <span
                   class="sc-deXhhX cpCGcE"
@@ -628,7 +628,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
-                class="sc-jGKxIK lfTmVT"
+                class="sc-jGKxIK cNijme"
               >
                 intro de l'article
               </p>
@@ -655,7 +655,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Partager ce contenu : 
         </p>
@@ -958,7 +958,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               class="sc-dGCmGc eKMRHH"
             >
               <p
-                class="sc-jGKxIK bhvaxp"
+                class="sc-jGKxIK biFdvs"
               >
                 <span
                   class="sc-deXhhX cpCGcE"
@@ -989,7 +989,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
-                class="sc-jGKxIK lfTmVT"
+                class="sc-jGKxIK cNijme"
               >
                 intro de l'article
               </p>
@@ -1016,7 +1016,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
         class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Partager ce contenu : 
         </p>
@@ -1319,7 +1319,7 @@ exports[`<Answer /> should renders related content 1`] = `
               class="sc-dGCmGc eKMRHH"
             >
               <p
-                class="sc-jGKxIK bhvaxp"
+                class="sc-jGKxIK biFdvs"
               >
                 <span
                   class="sc-deXhhX cpCGcE"
@@ -1350,7 +1350,7 @@ exports[`<Answer /> should renders related content 1`] = `
               class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
-                class="sc-jGKxIK lfTmVT"
+                class="sc-jGKxIK cNijme"
               >
                 intro de l'article
               </p>
@@ -1374,7 +1374,7 @@ exports[`<Answer /> should renders related content 1`] = `
         class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Partager ce contenu : 
         </p>
@@ -1841,7 +1841,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               class="sc-dGCmGc eKMRHH"
             >
               <p
-                class="sc-jGKxIK bhvaxp"
+                class="sc-jGKxIK biFdvs"
               >
                 <span
                   class="sc-deXhhX cpCGcE"
@@ -1872,7 +1872,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
-                class="sc-jGKxIK lfTmVT"
+                class="sc-jGKxIK cNijme"
               >
                 intro de l'article
               </p>
@@ -1900,7 +1900,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
         class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Partager ce contenu : 
         </p>
@@ -2203,7 +2203,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               class="sc-dGCmGc eKMRHH"
             >
               <p
-                class="sc-jGKxIK bhvaxp"
+                class="sc-jGKxIK biFdvs"
               >
                 <span
                   class="sc-deXhhX cpCGcE"
@@ -2234,7 +2234,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
-                class="sc-jGKxIK lfTmVT"
+                class="sc-jGKxIK cNijme"
               >
                 intro de l'article
               </p>
@@ -2262,7 +2262,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Partager ce contenu : 
         </p>
@@ -2565,7 +2565,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               class="sc-dGCmGc eKMRHH"
             >
               <p
-                class="sc-jGKxIK bhvaxp"
+                class="sc-jGKxIK biFdvs"
               >
                 <span
                   class="sc-deXhhX cpCGcE"
@@ -2596,7 +2596,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
-                class="sc-jGKxIK lfTmVT"
+                class="sc-jGKxIK cNijme"
               >
                 intro de l'article
               </p>
@@ -2625,7 +2625,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
         class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Partager ce contenu : 
         </p>
@@ -2928,7 +2928,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               class="sc-dGCmGc eKMRHH"
             >
               <p
-                class="sc-jGKxIK bhvaxp"
+                class="sc-jGKxIK biFdvs"
               >
                 <span
                   class="sc-deXhhX cpCGcE"
@@ -2959,7 +2959,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
-                class="sc-jGKxIK lfTmVT"
+                class="sc-jGKxIK cNijme"
               >
                 intro de l'article
               </p>
@@ -2983,7 +2983,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
-          class="sc-jGKxIK lfTmVT"
+          class="sc-jGKxIK cNijme"
         >
           Partager ce contenu : 
         </p>

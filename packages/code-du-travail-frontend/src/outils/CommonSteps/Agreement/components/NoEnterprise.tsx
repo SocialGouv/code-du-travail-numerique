@@ -129,5 +129,5 @@ const AlertWithMargin = styled(Alert)`
 `;
 
 const StyledDiv = styled.div`
-  margin-top: ${spacings.base};
+  margin-top: ${spacings.larger};
 `;
