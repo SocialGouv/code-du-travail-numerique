@@ -23,7 +23,7 @@ jobs:
           node-version: 20
           cache: "yarn"
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Set git
         run: |
           git config --global user.name "${NAME}"
@@ -57,7 +57,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Deploy to npm
-        run: lerna publish from-package --yes
+        run: yarn lerna publish from-package --yes
       - name: Remove .npmrc
         if: always()
         run: rm .npmrc

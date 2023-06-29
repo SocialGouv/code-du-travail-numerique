@@ -3,7 +3,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import { Stripe } from "../../Stripe";
-import { breakpoints, fonts, spacings } from "../../theme.js";
+import { breakpoints, fonts, spacings } from "../../theme";
 import { Header } from "../common/Header.js";
 import { TitleParagraph } from "../common/TitleParagraph.js";
 
@@ -14,10 +14,11 @@ export const PageTitle = ({
   shift = "",
   subtitle,
   variant,
+  small,
   ...props
 }) => (
   <Header pageTitle stripe={stripe} shift={shift} {...props}>
-    <StyledPageTitle stripe={stripe} as={as} shift={shift}>
+    <StyledPageTitle stripe={stripe} as={as} shift={shift} small={small}>
       <Stripe
         rounded={variant !== "primary"}
         variant={variant}
@@ -37,12 +38,14 @@ PageTitle.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node,
   shift: PropTypes.string,
+  small: PropTypes.boolean,
   stripe: PropTypes.oneOf(["left", "top"]),
   subtitle: PropTypes.node,
   variant: PropTypes.string,
 };
 
 PageTitle.defaultProps = {
+  small: false,
   stripe: "top",
   variant: "secondary",
 };
@@ -52,7 +55,13 @@ const StyledPageTitle = styled.h1`
   margin: 0;
   color: ${({ theme }) => theme.title};
   font-weight: normal;
-  font-size: ${fonts.sizes.headings.large};
+  ${({ small }) => {
+    return css`
+      font-size: ${small
+        ? fonts.sizes.headings.xmedium
+        : fonts.sizes.headings.large};
+    `;
+  }}
   font-family: "Merriweather", serif;
   line-height: ${fonts.lineHeightTitle};
   ${({ stripe, shift }) => {

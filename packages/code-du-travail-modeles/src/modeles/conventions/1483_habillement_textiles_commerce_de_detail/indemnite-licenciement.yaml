@@ -106,8 +106,8 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   cdtn:
     formule:
       explanations:
-        - "A1: Années de présence dès la première année": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté jusqu'à dix ans ou moins
-        - "A2: Années de présence à partir de 10 ans de présence": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté au delà de dix ans
+        - "A1 : Années de présence dès la première année": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté jusqu'à dix ans ou moins
+        - "A2 : Années de présence à partir de 10 ans de présence": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté au delà de dix ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1 / 5 * Sref * A1)[ + (1 / 3 * Sref * A2)]
 
@@ -150,8 +150,8 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   cdtn:
     formule:
       explanations:
-        - "A1: Années de présence dès la première année": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté jusqu'à seize ans ou moins
-        - "A2: Années de présence après 16 ans": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté au delà de seize ans
+        - "A1 : Années de présence dès la première année": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté jusqu'à seize ans ou moins
+        - "A2 : Années de présence après 16 ans": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté au delà de seize ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1 / 4 * Sref * A1)[ + (1 / 3 * Sref * A2 )]
 
@@ -174,8 +174,8 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   cdtn:
     formule:
       explanations:
-        - "A1: Années de présence dès la première année": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté jusqu'à seize ans ou moins
-        - "A2: Années de présence après 16 ans": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté au delà de seize ans
+        - "A1 : Années de présence dès la première année": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté jusqu'à seize ans ou moins
+        - "A2 : Années de présence après 16 ans": contrat salarié . convention collective . habillement textiles commerce de detail . ancienneté au delà de seize ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1 / 4 * Sref * A1)[ + (1 / 3 * Sref * A2 )] + (25% * (1 / 4 * Sref * A1))[ + (25% * (1 / 3 * Sref * A2 ))]
 

@@ -133,7 +133,7 @@ exports[`<Answer /> should renders 1`] = `
               class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
             >
               <h1
-                class="sc-dPZUQH gIWWuu"
+                class="sc-dPZUQH doubLW"
               >
                 <span
                   class="sc-gsFSXq ljkohw"
@@ -173,7 +173,7 @@ exports[`<Answer /> should renders 1`] = `
             class="sc-fAGzit jflOdq"
           >
             <div
-              class="sc-iGgWBj sc-kbdlSk cWzIZL iouTaZ"
+              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
                 class="sc-jGKxIK cNijme"
@@ -182,7 +182,7 @@ exports[`<Answer /> should renders 1`] = `
               </p>
             </div>
             <div
-              class="sc-hoLEA"
+              class="sc-bOhtcR"
             >
               <p
                 class="test-content"
@@ -200,7 +200,7 @@ exports[`<Answer /> should renders 1`] = `
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-camqpD gZgZQL hooaUI"
+        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
           class="sc-jGKxIK cNijme"
@@ -326,10 +326,10 @@ exports[`<Answer /> should renders 1`] = `
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-kgOKUu eEgSAf"
+              class="sc-bfhvDw feUtCS"
             >
               <h2
-                class="sc-bfhvDw bhtGgz sc-kAyceB kDiAsV"
+                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -339,15 +339,15 @@ exports[`<Answer /> should renders 1`] = `
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-cMa-dbN dSClTh"
+                class="sc-fUBkdm dNrvyY"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Oui
                 </button>
@@ -585,7 +585,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
             >
               <h1
-                class="sc-dPZUQH gIWWuu"
+                class="sc-dPZUQH doubLW"
               >
                 <span
                   class="sc-gsFSXq ljkohw"
@@ -625,7 +625,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             class="sc-fAGzit jflOdq"
           >
             <div
-              class="sc-iGgWBj sc-kbdlSk cWzIZL iouTaZ"
+              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
                 class="sc-jGKxIK cNijme"
@@ -634,7 +634,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               </p>
             </div>
             <div
-              class="sc-hoLEA"
+              class="sc-bOhtcR"
             >
               <p
                 class="test-content"
@@ -652,7 +652,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-camqpD gZgZQL hooaUI"
+        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
           class="sc-jGKxIK cNijme"
@@ -778,10 +778,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-kgOKUu eEgSAf"
+              class="sc-bfhvDw feUtCS"
             >
               <h2
-                class="sc-bfhvDw bhtGgz sc-kAyceB kDiAsV"
+                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -791,15 +791,15 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-cMa-dbN dSClTh"
+                class="sc-fUBkdm dNrvyY"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Oui
                 </button>
@@ -946,7 +946,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
             >
               <h1
-                class="sc-dPZUQH gIWWuu"
+                class="sc-dPZUQH doubLW"
               >
                 <span
                   class="sc-gsFSXq ljkohw"
@@ -986,7 +986,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
             class="sc-fAGzit jflOdq"
           >
             <div
-              class="sc-iGgWBj sc-kbdlSk cWzIZL iouTaZ"
+              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
                 class="sc-jGKxIK cNijme"
@@ -995,7 +995,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               </p>
             </div>
             <div
-              class="sc-hoLEA"
+              class="sc-bOhtcR"
             >
               <p
                 class="test-content"
@@ -1013,7 +1013,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-camqpD gZgZQL hooaUI"
+        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
           class="sc-jGKxIK cNijme"
@@ -1139,10 +1139,10 @@ exports[`<Answer /> should renders back to results link 1`] = `
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-kgOKUu eEgSAf"
+              class="sc-bfhvDw feUtCS"
             >
               <h2
-                class="sc-bfhvDw bhtGgz sc-kAyceB kDiAsV"
+                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -1152,15 +1152,15 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-cMa-dbN dSClTh"
+                class="sc-fUBkdm dNrvyY"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Oui
                 </button>
@@ -1307,7 +1307,7 @@ exports[`<Answer /> should renders related content 1`] = `
               class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
             >
               <h1
-                class="sc-dPZUQH gIWWuu"
+                class="sc-dPZUQH doubLW"
               >
                 <span
                   class="sc-gsFSXq ljkohw"
@@ -1347,7 +1347,7 @@ exports[`<Answer /> should renders related content 1`] = `
             class="sc-fAGzit jflOdq"
           >
             <div
-              class="sc-iGgWBj sc-kbdlSk cWzIZL iouTaZ"
+              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
                 class="sc-jGKxIK cNijme"
@@ -1356,7 +1356,7 @@ exports[`<Answer /> should renders related content 1`] = `
               </p>
             </div>
             <div
-              class="sc-hoLEA"
+              class="sc-bOhtcR"
             >
               <p
                 class="test-content"
@@ -1371,7 +1371,7 @@ exports[`<Answer /> should renders related content 1`] = `
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-camqpD gZgZQL hooaUI"
+        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
           class="sc-jGKxIK cNijme"
@@ -1497,10 +1497,10 @@ exports[`<Answer /> should renders related content 1`] = `
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-kgOKUu eEgSAf"
+              class="sc-bfhvDw feUtCS"
             >
               <h2
-                class="sc-bfhvDw bhtGgz sc-kAyceB kDiAsV"
+                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -1510,15 +1510,15 @@ exports[`<Answer /> should renders related content 1`] = `
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-cMa-dbN dSClTh"
+                class="sc-fUBkdm dNrvyY"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Oui
                 </button>
@@ -1547,7 +1547,7 @@ exports[`<Answer /> should renders related content 1`] = `
           class="sc-cfxfcM kMmTaI"
         >
           <li
-            class="sc-bOhtcR ldLnQd"
+            class="sc-fFlnrN bvwzbH"
           >
             <a
               class="sc-bmzYkS hFAanY"
@@ -1573,7 +1573,7 @@ exports[`<Answer /> should renders related content 1`] = `
             </a>
           </li>
           <li
-            class="sc-bOhtcR ldLnQd"
+            class="sc-fFlnrN bvwzbH"
           >
             <a
               class="sc-bmzYkS hFAanY"
@@ -1612,7 +1612,7 @@ exports[`<Answer /> should renders related content 1`] = `
           class="sc-cfxfcM kMmTaI"
         >
           <li
-            class="sc-bOhtcR ldLnQd"
+            class="sc-fFlnrN bvwzbH"
           >
             <a
               class="sc-bmzYkS hFAanY"
@@ -1638,7 +1638,7 @@ exports[`<Answer /> should renders related content 1`] = `
             </a>
           </li>
           <li
-            class="sc-bOhtcR ldLnQd"
+            class="sc-fFlnrN bvwzbH"
           >
             <a
               class="sc-bmzYkS hFAanY"
@@ -1664,7 +1664,7 @@ exports[`<Answer /> should renders related content 1`] = `
             </a>
           </li>
           <li
-            class="sc-bOhtcR ldLnQd"
+            class="sc-fFlnrN bvwzbH"
           >
             <a
               class="sc-bmzYkS hFAanY"
@@ -1829,7 +1829,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
             >
               <h1
-                class="sc-dPZUQH gIWWuu"
+                class="sc-dPZUQH doubLW"
               >
                 <span
                   class="sc-gsFSXq ljkohw"
@@ -1869,7 +1869,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
             class="sc-fAGzit jflOdq"
           >
             <div
-              class="sc-iGgWBj sc-kbdlSk cWzIZL iouTaZ"
+              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
                 class="sc-jGKxIK cNijme"
@@ -1878,7 +1878,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               </p>
             </div>
             <div
-              class="sc-hoLEA"
+              class="sc-bOhtcR"
             >
               <p
                 class="test-content"
@@ -1897,7 +1897,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-camqpD gZgZQL hooaUI"
+        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
           class="sc-jGKxIK cNijme"
@@ -2023,10 +2023,10 @@ exports[`<Answer /> should renders tooltip 1`] = `
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-kgOKUu eEgSAf"
+              class="sc-bfhvDw feUtCS"
             >
               <h2
-                class="sc-bfhvDw bhtGgz sc-kAyceB kDiAsV"
+                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -2036,15 +2036,15 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-cMa-dbN dSClTh"
+                class="sc-fUBkdm dNrvyY"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Oui
                 </button>
@@ -2191,7 +2191,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
             >
               <h1
-                class="sc-dPZUQH gIWWuu"
+                class="sc-dPZUQH doubLW"
               >
                 <span
                   class="sc-gsFSXq ljkohw"
@@ -2231,7 +2231,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             class="sc-fAGzit jflOdq"
           >
             <div
-              class="sc-iGgWBj sc-kbdlSk cWzIZL iouTaZ"
+              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
                 class="sc-jGKxIK cNijme"
@@ -2240,7 +2240,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               </p>
             </div>
             <div
-              class="sc-hoLEA"
+              class="sc-bOhtcR"
             >
               <p
                 class="test-content"
@@ -2259,7 +2259,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-camqpD gZgZQL hooaUI"
+        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
           class="sc-jGKxIK cNijme"
@@ -2385,10 +2385,10 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-kgOKUu eEgSAf"
+              class="sc-bfhvDw feUtCS"
             >
               <h2
-                class="sc-bfhvDw bhtGgz sc-kAyceB kDiAsV"
+                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -2398,15 +2398,15 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-cMa-dbN dSClTh"
+                class="sc-fUBkdm dNrvyY"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Oui
                 </button>
@@ -2553,7 +2553,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
             >
               <h1
-                class="sc-dPZUQH gIWWuu"
+                class="sc-dPZUQH doubLW"
               >
                 <span
                   class="sc-gsFSXq ljkohw"
@@ -2593,7 +2593,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             class="sc-fAGzit jflOdq"
           >
             <div
-              class="sc-iGgWBj sc-kbdlSk cWzIZL iouTaZ"
+              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
                 class="sc-jGKxIK cNijme"
@@ -2602,7 +2602,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               </p>
             </div>
             <div
-              class="sc-hoLEA"
+              class="sc-bOhtcR"
             >
               <p
                 class="test-content"
@@ -2622,7 +2622,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-camqpD gZgZQL hooaUI"
+        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
           class="sc-jGKxIK cNijme"
@@ -2748,10 +2748,10 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-kgOKUu eEgSAf"
+              class="sc-bfhvDw feUtCS"
             >
               <h2
-                class="sc-bfhvDw bhtGgz sc-kAyceB kDiAsV"
+                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -2761,15 +2761,15 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-cMa-dbN dSClTh"
+                class="sc-fUBkdm dNrvyY"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Oui
                 </button>
@@ -2916,7 +2916,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
             >
               <h1
-                class="sc-dPZUQH gIWWuu"
+                class="sc-dPZUQH doubLW"
               >
                 <span
                   class="sc-gsFSXq ljkohw"
@@ -2956,7 +2956,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             class="sc-fAGzit jflOdq"
           >
             <div
-              class="sc-iGgWBj sc-kbdlSk cWzIZL iouTaZ"
+              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
             >
               <p
                 class="sc-jGKxIK cNijme"
@@ -2965,7 +2965,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               </p>
             </div>
             <div
-              class="sc-hoLEA"
+              class="sc-bOhtcR"
             >
               <p
                 class="test-content"
@@ -2980,7 +2980,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-camqpD gZgZQL hooaUI"
+        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
       >
         <p
           class="sc-jGKxIK cNijme"
@@ -3106,10 +3106,10 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-kgOKUu eEgSAf"
+              class="sc-bfhvDw feUtCS"
             >
               <h2
-                class="sc-bfhvDw bhtGgz sc-kAyceB kDiAsV"
+                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -3119,15 +3119,15 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-cMa-dbN dSClTh"
+                class="sc-fUBkdm dNrvyY"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-fUBkdm evSAPs"
+                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
                 >
                   Oui
                 </button>

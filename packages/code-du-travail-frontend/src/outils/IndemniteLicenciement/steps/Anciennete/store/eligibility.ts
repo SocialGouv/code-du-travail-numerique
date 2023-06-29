@@ -4,7 +4,7 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { AncienneteStoreInput } from "./types";
-import { Agreement } from "../../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import { CommonInformationsStoreInput } from "../../../../CommonSteps/Informations/store";
 
 export const getErrorEligibility = (
@@ -67,6 +67,15 @@ export const getErrorEligibility = (
         stateInfo.publicodesInformations?.length > 0 &&
         (stateInfo.publicodesInformations[0]?.info === "'Cadres'" ||
           stateInfo.publicodesInformations[0]?.info === "'Agents de maîtrise'")
+      ) {
+        minimalSeniorityInMonth = 0;
+      }
+      break;
+    case 1404:
+      requiredSeniorityInYear = requiredSeniorityAgreement;
+      if (
+        stateInfo.publicodesInformations?.length > 0 &&
+        stateInfo.publicodesInformations[0]?.info === "'Oui'" // CDI d'opération
       ) {
         minimalSeniorityInMonth = 0;
       }

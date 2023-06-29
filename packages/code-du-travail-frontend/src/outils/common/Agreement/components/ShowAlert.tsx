@@ -2,7 +2,7 @@ import { Alert, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import { AgreementSupportInfo } from "../types";
-import { Agreement } from "../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import styled from "styled-components";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 

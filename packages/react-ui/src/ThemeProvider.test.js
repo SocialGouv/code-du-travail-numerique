@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
 import { render } from "@testing-library/react";
+import React, { useEffect } from "react";
+
 import {
   BLACK_AND_WHITE_STORAGE_KEY,
   ThemeProvider,

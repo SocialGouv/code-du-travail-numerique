@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import { animations, breakpoints } from "../../theme.js";
+import { animations, breakpoints } from "../../theme";
 
 export default createGlobalStyle`
   a {

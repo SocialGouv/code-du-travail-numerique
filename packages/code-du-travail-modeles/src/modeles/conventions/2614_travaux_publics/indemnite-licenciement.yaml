@@ -98,7 +98,7 @@ contrat salarié . convention collective . travaux publics . age . plus de 65 an
   valeur: oui
 
 contrat salarié . convention collective . travaux publics . age . moins de  55 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - vingt cinq pourcent de moins de quinze ans
@@ -113,8 +113,8 @@ contrat salarié . convention collective . travaux publics . age . moins de  55 
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté jusqu'à 15 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté 15 ans ou moins
-        - "A2: Années d'ancienneté pour les années au-delà de 15 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté de plus de 15 ans
+        - "A1 : Années d'ancienneté jusqu'à 15 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté 15 ans ou moins
+        - "A2 : Années d'ancienneté pour les années au-delà de 15 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté de plus de 15 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (2.5 / 10 * Sref * A1)[ + (3.5 / 10 * Sref * A2)]
 
@@ -132,8 +132,8 @@ contrat salarié . convention collective . travaux publics . age . entre 55 ans 
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté jusqu'à 15 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté 15 ans ou moins
-        - "A2: Années d'ancienneté pour les années au-delà de 15 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté de plus de 15 ans
+        - "A1 : Années d'ancienneté jusqu'à 15 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté 15 ans ou moins
+        - "A2 : Années d'ancienneté pour les années au-delà de 15 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté de plus de 15 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (2.5 / 10 * Sref * A1)[ + (3.5 / 10 * Sref * A2)] + (10% * (2.5 / 10 * Sref * A1))[ + (10% * (3.5 / 10 * Sref * A2))]
 
@@ -153,7 +153,34 @@ contrat salarié . convention collective . travaux publics . age . plus de 65 an
   cdtn:
     formule:
       explanations:
-        - "A1: Années d'ancienneté jusqu'à 10 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté 10 ans ou moins
-        - "A2: Années au-delà de 10 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté de plus de 10 ans
+        - "A1 : Années d'ancienneté jusqu'à 10 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté 10 ans ou moins
+        - "A2 : Années au-delà de 10 ans d'ancienneté": contrat salarié . convention collective . travaux publics . ancienneté de plus de 10 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1.5 / 10 * Sref * A1)[ + (2.5 / 10 * Sref * A2)]
+
+contrat salarié . convention collective . travaux publics . résultat conventionnel avec formule 1:
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = 8 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 8 * Sref
+
+contrat salarié . convention collective . travaux publics . résultat conventionnel avec formule 2:
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = 10 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 10 * Sref
+
+contrat salarié . convention collective . travaux publics . résultat conventionnel avec formule 3:
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = 11 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 11 * Sref

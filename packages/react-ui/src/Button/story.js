@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { Close, More, Search } from "../icons/index.js";
 import { Section } from "../layout/Section/index.js";
-import { spacings } from "../theme.js";
+import { spacings } from "../theme";
 import { Button } from "./index.js";
 
 export default {

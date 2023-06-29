@@ -13,7 +13,7 @@ import React from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 
-import { Agreement } from "../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import { FetchReducerState } from "../components/Suggester";
 import { TrackingProps, UserAction } from "../../../ConventionCollective/types";
 import { InlineError } from "../../ErrorField";

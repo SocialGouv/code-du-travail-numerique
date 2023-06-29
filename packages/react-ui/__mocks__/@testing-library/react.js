@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { ThemeProvider } from "styled-components";
 
-import { colors } from "../../src/theme.js";
+import { colors } from "../../src/theme";
 
 const AllTheProviders = ({ children }) => {
   return (

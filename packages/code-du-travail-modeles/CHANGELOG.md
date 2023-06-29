@@ -3,6 +3,69 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.103.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.2...v4.103.0) (2023-06-27)
+
+### Bug Fixes
+
+- **indemnité de licenciement:** ne pas prendre que les années complètes pour le droit à l'indemnité pour la 2148 ([#5238](https://github.com/SocialGouv/code-du-travail-numerique/issues/5238)) ([5a1d9d9](https://github.com/SocialGouv/code-du-travail-numerique/commit/5a1d9d9dce0b4d81b8b422f9a2ad0a23d551cda9))
+- sref ([#5232](https://github.com/SocialGouv/code-du-travail-numerique/issues/5232)) ([5e5c231](https://github.com/SocialGouv/code-du-travail-numerique/commit/5e5c231a3e574068ebb68bbec8041de98448e00b))
+
+### Features
+
+- **indemnite-licenciement:** activation de nouvelles CCs ([c5d6a72](https://github.com/SocialGouv/code-du-travail-numerique/commit/c5d6a72b2e68d315384a99a27163c43b0038ef00))
+
+## [4.102.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.1...v4.102.2) (2023-06-22)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.102.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.0...v4.102.1) (2023-06-20)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.102.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.3...v4.102.0) (2023-06-20)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** ne pas inclure les années incomplètes pour le calcul de l'ancienneté CC 2148 ([#5206](https://github.com/SocialGouv/code-du-travail-numerique/issues/5206)) ([565c767](https://github.com/SocialGouv/code-du-travail-numerique/commit/565c7674b8aff534e5abe91017006ea2c09e477d))
+
+### Features
+
+- indemnite licenciement 1404 ([#5133](https://github.com/SocialGouv/code-du-travail-numerique/issues/5133)) ([5fa2153](https://github.com/SocialGouv/code-du-travail-numerique/commit/5fa215383e48e04431817a28a7b5f9603f2b385d))
+- **indemnite-licenciement:** activation de nouvelles CCs ([eeab2b4](https://github.com/SocialGouv/code-du-travail-numerique/commit/eeab2b4ff4c8b49ae783cc2327d422eb7119e6e2))
+- **indemnite-licenciement:** désactivation de la CC 2596 ([04b6df4](https://github.com/SocialGouv/code-du-travail-numerique/commit/04b6df432e1bf97bcb8e5c2f3d2722d068960def))
+
+## [4.101.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.2...v4.101.3) (2023-06-12)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.101.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.1...v4.101.2) (2023-06-12)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.101.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.101.0...v4.101.1) (2023-06-12)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.101.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.100.0...v4.101.0) (2023-06-12)
+
+### Bug Fixes
+
+- **indemnité de licenciement:** derniers retours sur la 1516 suite au nouvel avenant ([#5208](https://github.com/SocialGouv/code-du-travail-numerique/issues/5208)) ([56d0a4c](https://github.com/SocialGouv/code-du-travail-numerique/commit/56d0a4cd5c962eded5157d14af7ce05f73b17875))
+- **indemnité de licenciement:** mise en place des modifs issues d'un avenant du 6 février 2023 sur la cc 1516 ([#5188](https://github.com/SocialGouv/code-du-travail-numerique/issues/5188)) ([48a571d](https://github.com/SocialGouv/code-du-travail-numerique/commit/48a571d5786c5598ef0ba551cdc36257abf37a1c))
+- **indemnite-licenciement:** ajout d'une notification pour la CC 3239 ([#5164](https://github.com/SocialGouv/code-du-travail-numerique/issues/5164)) ([e3f6ca5](https://github.com/SocialGouv/code-du-travail-numerique/commit/e3f6ca5d57f018066f9b854c2d8f5f1472057ef6))
+- **indemnite-licenciement:** revert sur salary 1672 et 1702 ([0d071fa](https://github.com/SocialGouv/code-du-travail-numerique/commit/0d071fae3d5df923d41626c357a1e585c2aec99d))
+- **indemnite-licenciement:** salaire de reference non pris en compte sur la cc 44 ([#5162](https://github.com/SocialGouv/code-du-travail-numerique/issues/5162)) ([1d4362f](https://github.com/SocialGouv/code-du-travail-numerique/commit/1d4362f9101d1d3734e9236c3f87bf4d309712a3))
+- **indemnite-licenciement:** tests unitaires pour la cc 1740 ([c961387](https://github.com/SocialGouv/code-du-travail-numerique/commit/c96138736c8bdf162e522bb817f6b46fbf1fee87))
+- **sentry:** getting source maps ([#5166](https://github.com/SocialGouv/code-du-travail-numerique/issues/5166)) ([c393785](https://github.com/SocialGouv/code-du-travail-numerique/commit/c393785d626b8b9da1bde689be870f766eff9bf6))
+- **simulateurs:** mise en place des modifs issues d'un avenant du 6 février 2023 sur la cc 1516 ([#5189](https://github.com/SocialGouv/code-du-travail-numerique/issues/5189)) ([b8903e9](https://github.com/SocialGouv/code-du-travail-numerique/commit/b8903e9bac57011d3ad08d4b883395d4b2b66ba0))
+
+### Features
+
+- **dep:** optimize fetching of yarn dependencies ([#5190](https://github.com/SocialGouv/code-du-travail-numerique/issues/5190)) ([49878e3](https://github.com/SocialGouv/code-du-travail-numerique/commit/49878e3251b0d7aab82ce1c7652bd8cad829e67c))
+- **indemnite-licenciement:** ajout de la cc 1483 ([#5154](https://github.com/SocialGouv/code-du-travail-numerique/issues/5154)) ([a8030e1](https://github.com/SocialGouv/code-du-travail-numerique/commit/a8030e18369777db579022f10d20a0de92b82ff5))
+- **indemnite-licenciement:** ajout de la cc 1740 ([#5155](https://github.com/SocialGouv/code-du-travail-numerique/issues/5155)) ([d66e652](https://github.com/SocialGouv/code-du-travail-numerique/commit/d66e652b92a3e47f10d0901f65165fdbae9ef89f))
+- **indemnite-licenciement:** retirer pour certaines cc un messages sur la page resultat ([#5165](https://github.com/SocialGouv/code-du-travail-numerique/issues/5165)) ([dd14970](https://github.com/SocialGouv/code-du-travail-numerique/commit/dd14970ac6d44c0aa5fc69099ea3fe6e0326b1d9))
+
 # [4.100.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.99.0...v4.100.0) (2023-05-24)
 
 ### Bug Fixes

@@ -163,6 +163,39 @@ export const ui = {
         "infos.contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle"
       ),
     },
+    agreement1404: {
+      cdiOperation: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - sedima - question cdi opération - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - sedima - question cdi opération - Non"
+        ),
+      },
+      duree: byTestId(
+        "infos.contrat salarié - convention collective - sedima - cdi opération - durée"
+      ),
+      salary1: byTestId(
+        "infos.contrat salarié - convention collective - sedima - cdi opération - plus de 6 mois - salaires 1e année"
+      ),
+      salary2: byTestId(
+        "infos.contrat salarié - convention collective - sedima - cdi opération - plus de 6 mois - salaires 2e année"
+      ),
+      salary3: byTestId(
+        "infos.contrat salarié - convention collective - sedima - cdi opération - plus de 6 mois - salaires 3e année et plus"
+      ),
+      trial: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - sedima - cdi opération - moins de 6 mois - question période essai - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - sedima - cdi opération - moins de 6 mois - question période essai - Non"
+        ),
+      },
+      salaryTotal: byTestId(
+        "infos.contrat salarié - convention collective - sedima - cdi opération - moins de 6 mois - salaires total"
+      ),
+    },
     agreement2148: {
       age: byTestId(
         "infos.contrat salarié - convention collective - télécommunications - age"

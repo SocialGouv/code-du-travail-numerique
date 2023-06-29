@@ -2,7 +2,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../src/GlobalStyles";
 import { Wrapper } from "../src/layout/Wrapper/index.js";
-import { blackAndWhiteColors, colors } from "../src/theme.js";
+import { blackAndWhiteColors, colors } from "../src/theme";
 import type { Preview } from "@storybook/react";
 
 export const globalTypes = {
@@ -20,28 +20,23 @@ export const globalTypes = {
   },
 };
 
-const withThemeProvider = (Story) => {
-  return (
+export const parameters: Preview["parameters"] = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+};
+
+export const decorators: Preview["decorators"] = [
+  (Story) => (
     <ThemeProvider theme={colors}>
       <GlobalStyles />
       <Wrapper>
         <Story />
       </Wrapper>
     </ThemeProvider>
-  );
-};
-
-const preview: Preview = {
-  decorators: [withThemeProvider],
-  parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
-    },
-  },
-};
-
-export default preview;
+  ),
+];

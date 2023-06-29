@@ -38,10 +38,14 @@ function copyJSFile() {
     path.resolve(inDir, "index.js"),
     path.resolve(outDir, "index.js")
   );
-  fs.copyFileSync(
-    path.resolve(inDir, "index.d.ts"),
-    path.resolve(outDir, "index.d.ts")
-  );
+  try {
+    fs.copyFileSync(
+      path.resolve(inDir, "index.d.ts"),
+      path.resolve(outDir, "index.d.ts")
+    );
+  } catch {
+    console.log("Cannot copy *.d.ts because we are in dev mode 👀");
+  }
   fse.copySync(`${inDir}/publicodes`, `${outDir}/publicodes`);
   fse.copySync(`${inDir}/modeles`, `${outDir}/modeles`);
   fse.copySync(`${inDir}/simulators`, `${outDir}/simulators`);
