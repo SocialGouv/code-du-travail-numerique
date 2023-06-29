@@ -1,9 +1,7 @@
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   Motif,
-  RequiredSeniorityResult,
   SeniorityProps,
-  SeniorityRequiredProps,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
@@ -16,18 +14,6 @@ export class Seniority2148 extends SeniorityDefault<SupportedCcIndemniteLicencie
     absencePeriods = [],
   }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC2148>): SeniorityResult {
     const result = this.compute(dateEntree, dateSortie, absencePeriods);
-    return {
-      ...result,
-      value: Math.trunc(result.value),
-    };
-  }
-
-  computeRequiredSeniority({
-    dateEntree,
-    dateNotification,
-    absencePeriods = [],
-  }: SeniorityRequiredProps): RequiredSeniorityResult {
-    const result = this.compute(dateEntree, dateNotification, absencePeriods);
     return {
       ...result,
       value: Math.trunc(result.value),
