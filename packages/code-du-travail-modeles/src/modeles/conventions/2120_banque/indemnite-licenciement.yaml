@@ -1,0 +1,336 @@
+# Questions
+contrat salarié . convention collective . banque . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Non-cadres: "'Non-cadres'"
+
+contrat salarié . convention collective . banque . licenciement économique:
+  applicable si: catégorie professionnelle
+  titre: Licenciement pour motif économique
+  question: Le motif du licenciement est-il économique ?
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . banque . licenciement disciplinaire:
+  applicable si: licenciement économique = 'Non'
+  titre: Licenciement pour motif disciplinaire
+  question: Le licenciement fait-il suite à une faute du salarié (licenciement disciplinaire) ?
+  cdtn:
+    type: oui-non
+
+# Valeurs issues de l'ancienneté
+contrat salarié . convention collective . banque . semestres complets avant 2002:
+  valeur: 0
+  unité: semestre
+
+contrat salarié . convention collective . banque . semestres complets après 2002:
+  valeur: 0
+  unité: semestre
+
+# Formules
+contrat salarié . convention collective . banque . formule 1 avant janvier 2002:
+  valeur:
+    produit:
+      assiette: 13 / 14.5 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel * semestres complets avant 2002
+      facteur: 1 / 2
+  unité: €
+
+contrat salarié . convention collective . banque . formule 1 après janvier 2002:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * semestres complets après 2002
+      facteur: 1 / 5
+  unité: €
+
+contrat salarié . convention collective . banque . formule 2 avant janvier 2002:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * semestres complets avant 2002
+      facteur: 1 / 2
+  unité: €
+
+contrat salarié . convention collective . banque . formule 2 après janvier 2002:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * semestres complets après 2002
+      facteur: 1 / 4
+  unité: €
+
+contrat salarié . convention collective . banque . plafond 1:
+  valeur:
+    produit:
+      assiette: 18 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel # 13 / 14.5 ne fonctionne pas
+      facteur: 13 / 14.5
+  unité: €
+  arrondi: 2 décimales
+
+contrat salarié . convention collective . banque . plafond 2:
+  valeur:
+    produit:
+      assiette: 24 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel # 13 / 14.5 ne fonctionne pas
+      facteur: 13 / 14.5
+  unité: €
+  arrondi: 2 décimales
+
+# Résultats
+contrat salarié . convention collective . banque . résultat conventionnel 1:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . date d'entrée <= 31/12/1999
+      - licenciement économique = 'Non'
+      - licenciement disciplinaire = 'Non'
+      - catégorie professionnelle = 'Non-cadres'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur:
+    somme:
+      - formule 1 avant janvier 2002
+      - formule 1 après janvier 2002
+  unité: €
+  arrondi: 2 décimales
+  plafond: plafond 1
+  cdtn:
+    formule:
+      formula: "[(1/2 * (13/14,5) * Sref * A1) + ](1/5 * Sref * A2)"
+      explanations:
+        - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
+        - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 26: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005779933?idConteneur=KALICONT000005635780
+    Article 29.2.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374
+    Article 59.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975
+
+contrat salarié . convention collective . banque . résultat conventionnel 2:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . date d'entrée <= 31/12/1999
+      - licenciement économique = 'Non'
+      - licenciement disciplinaire = 'Non'
+      - catégorie professionnelle = 'Cadres'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur:
+    somme:
+      - formule 1 avant janvier 2002
+      - formule 1 après janvier 2002
+  unité: €
+  arrondi: 2 décimales
+  plafond: plafond 2
+  cdtn:
+    formule:
+      formula: "[(1/2 * (13/14,5) * Sref * A1) + ](1/5 * Sref * A2)"
+      explanations:
+        - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
+        - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 26: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005779933?idConteneur=KALICONT000005635780
+    Article 29.2.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374
+    Article 59.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975
+
+contrat salarié . convention collective . banque . résultat conventionnel 3:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . date d'entrée >= 01/01/2000
+      - licenciement économique = 'Non'
+      - licenciement disciplinaire = 'Non'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur:
+    somme:
+      - formule 1 avant janvier 2002
+      - formule 1 après janvier 2002
+  unité: €
+  arrondi: 2 décimales
+  plafond: 15 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  cdtn:
+    formule:
+      formula: "[(1/2 * (13/14,5) * Sref * A1) + ](1/5 * Sref * A2)"
+      explanations:
+        - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
+        - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 26: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005779933?idConteneur=KALICONT000005635780
+    Article 29.2.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374
+    Article 59.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975
+
+contrat salarié . convention collective . banque . résultat conventionnel 4:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . date d'entrée <= 31/12/1999
+      - licenciement économique = 'Oui'
+      - catégorie professionnelle = 'Non-cadres'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur:
+    somme:
+      - formule 2 avant janvier 2002
+      - formule 2 après janvier 2002
+  unité: €
+  arrondi: 2 décimales
+  plafond: 18 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  cdtn:
+    formule:
+      formula: "[(1/2 * Sref * A1) + ](1/4 * Sref * A2)"
+      explanations:
+        - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
+        - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 29: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780
+    Article 29.2.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374
+    Article 59.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975
+
+contrat salarié . convention collective . banque . résultat conventionnel 5:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . date d'entrée <= 31/12/1999
+      - licenciement économique = 'Oui'
+      - catégorie professionnelle = 'Cadres'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur:
+    somme:
+      - formule 2 avant janvier 2002
+      - formule 2 après janvier 2002
+  unité: €
+  arrondi: 2 décimales
+  plafond: 24 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  cdtn:
+    formule:
+      formula: "[(1/2 * Sref * A1) + ](1/4 * Sref * A2)"
+      explanations:
+        - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
+        - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 29: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780
+    Article 29.2.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374
+    Article 59.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975
+
+contrat salarié . convention collective . banque . résultat conventionnel 6:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . date d'entrée >= 01/01/2000
+      - licenciement économique = 'Oui'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur:
+    somme:
+      - formule 2 avant janvier 2002
+      - formule 2 après janvier 2002
+  unité: €
+  arrondi: 2 décimales
+  plafond: 18 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  cdtn:
+    formule:
+      formula: "[(1/2 * Sref * A1) + ](1/4 * Sref * A2)"
+      explanations:
+        - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
+        - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  références:
+    Article 29: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780
+    Article 29.2.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374
+    Article 59.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975
+
+contrat salarié . convention collective . banque . résultat conventionnel 7:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - licenciement économique = 'Non'
+      - licenciement disciplinaire = 'Oui'
+  non applicable si:
+    une de ces conditions:
+      - résultat conventionnel 1
+      - résultat conventionnel 2
+      - résultat conventionnel 3
+      - résultat conventionnel 4
+      - résultat conventionnel 5
+      - résultat conventionnel 6
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
+  valeur: oui
+  références:
+    Article 27: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005781062?idConteneur=KALICONT000005635780
+    Article 28: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005782174?idConteneur=KALICONT000005635780
+    Article 29.2.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005783374?idConteneur=KALICONT000005635780&origin=list#KALIARTI000005783374
+    Article 59.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000036551975?idConteneur=KALICONT000005635780&origin=list#KALIARTI000036551975
+
+# Notifications
+contrat salarié . convention collective . banque . maladie non pro:
+  valeur: non
+
+contrat salarié . convention collective . banque . maladie non pro . notification:
+  type: notification
+  non applicable si: licenciement disciplinaire = 'Oui'
+  description: |
+    Si lors de l’absence pour maladie non professionnelle le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (maintien de salaire), en plus des indemnités journalières de la sécurité sociale, le montant de l’indemnité de licenciement pourrait être plus élevé. En effet, dans ce cas, la période d’absence est intégrée dans l’ancienneté du salarié.
+    Par soucis de simplification, ce simulateur déduit toutes les absences pour maladie non professionnelle sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas.
+  valeur: oui
+
+contrat salarié . convention collective . banque . accident trajet:
+  valeur: non
+
+contrat salarié . convention collective . banque . accident trajet . notification:
+  type: notification
+  non applicable si: licenciement disciplinaire = 'Oui'
+  description: |
+    Si lors de l’absence pour accident de trajet le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (maintien de salaire), en plus des indemnités journalières de la sécurité sociale, le montant de l’indemnité de licenciement pourrait être plus élevé. En effet, dans ce cas, la période d’absence est intégrée dans l’ancienneté du salarié.
+    Par soucis de simplification, ce simulateur déduit toutes les absences pour accident de trajet sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas.
+  valeur: oui
+
+# Plafonds
+contrat salarié . convention collective . banque . résultat conventionnel avec plafond 1:
+  applicable si: résultat conventionnel 1 = plafond 1
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 18 * 13 / 14.5 * Sref
+
+contrat salarié . convention collective . banque . résultat conventionnel avec plafond 2:
+  applicable si: résultat conventionnel 2 = plafond 2
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 24 * 13 / 14.5 * Sref
+
+contrat salarié . convention collective . banque . résultat conventionnel avec plafond 3:
+  applicable si: résultat conventionnel 3 = 15 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 15 * Sref
+
+contrat salarié . convention collective . banque . résultat conventionnel avec plafond 4:
+  applicable si:
+    une de ces conditions:
+      - résultat conventionnel 4 = 18 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      - résultat conventionnel 6 = 18 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 18 * Sref
+
+contrat salarié . convention collective . banque . résultat conventionnel avec plafond 5:
+  applicable si: résultat conventionnel 5 = 24 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 24 * Sref

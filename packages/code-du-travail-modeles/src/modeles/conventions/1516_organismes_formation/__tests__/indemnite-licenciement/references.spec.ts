@@ -31,12 +31,12 @@ describe("Vérification des références juridiques pour la CC 2511", () => {
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             seniority,
+          "contrat salarié . indemnité de licenciement . date de notification":
+            "01/12/2022",
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             inaptitude,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1000",
-          "contrat salarié . indemnité de licenciement . date de notification":
-            "01/12/2022",
         });
         const result = engine.getReferences("résultat conventionnel");
 
@@ -64,12 +64,12 @@ describe("Vérification des références juridiques pour la CC 2511", () => {
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             seniority,
+          "contrat salarié . indemnité de licenciement . date de notification":
+            "06/06/2023",
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             inaptitude,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1000",
-          "contrat salarié . indemnité de licenciement . date de notification":
-            "06/06/2023",
         });
         const result = engine.getReferences("résultat conventionnel");
 
