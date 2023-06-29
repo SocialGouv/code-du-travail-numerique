@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { OverflowWrapper } from "../OverflowWrapper/index.js";
-import { breakpoints, spacings } from "../theme.js";
+import { breakpoints, spacings } from "../theme";
 
 export const GridContext = React.createContext({ columns: 4 });
 

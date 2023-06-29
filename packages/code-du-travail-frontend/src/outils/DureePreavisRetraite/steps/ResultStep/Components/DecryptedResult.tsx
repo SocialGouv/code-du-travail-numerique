@@ -45,7 +45,7 @@ const ShowResult: React.FC<{
 
 const ShowResultAgreement: React.FC<{
   result: PublicodesPreavisRetraiteResult | null;
-  detail: Agreement | null;
+  detail: LocalAgreement | null;
   agreementMaximumResult: PublicodesPreavisRetraiteResult | null;
 }> = ({ result, detail, agreementMaximumResult }) => {
   if (!result) {
@@ -78,13 +78,13 @@ export enum AgreementStatus {
   NotSupported = "NotSupported",
 }
 
-type Agreement = {
+type LocalAgreement = {
   status: AgreementStatus;
   notice: number;
 };
 
 type RootData = {
-  agreement: Agreement | null;
+  agreement: LocalAgreement | null;
   handicap: boolean;
   isVoluntary: boolean;
   noticeUsed: NoticeUsed;
@@ -98,7 +98,7 @@ export const createRootData = (
   supportedCcn: AgreementInfo[],
   agreementResult: PublicodesPreavisRetraiteResult | null
 ): RootData => {
-  let agreement: Agreement | null = null;
+  let agreement: LocalAgreement | null = null;
   if (data.ccn?.selected) {
     const agreementFound = supportedCcn.find(
       (item) => item.idcc === data.ccn?.selected?.num

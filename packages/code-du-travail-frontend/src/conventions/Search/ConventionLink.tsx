@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
-import { Agreement } from "./api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 type Props = {
   convention: Agreement;

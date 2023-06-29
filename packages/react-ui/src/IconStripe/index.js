@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { breakpoints, spacings } from "../theme.js";
+import { breakpoints, spacings } from "../theme";
 
 const SIZE = "3.5rem";
 const SMALL_SIZE = "3rem";

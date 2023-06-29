@@ -95,5 +95,12 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "include": ["src/**/*"],
-  "exclude": ["**/story.js", "**/test.js"]
+  "exclude": [
+    "**/story.js",
+    "**/test.js",
+    "**/story.tsx",
+    "**/test.tsx",
+    "**/test.ts",
+    "**/story.ts"
+  ]
 }

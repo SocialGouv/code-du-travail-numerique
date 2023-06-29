@@ -52,11 +52,11 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
               Couleurs
             </h2>
             <label
-              class="sc-dBmzty kWkJnW"
+              class="sc-dBmzty fcjLqu"
               for="blackAndWhiteTheme"
             >
               <input
-                class="sc-fifgRP iExhwy"
+                class="sc-fifgRP cEkCmq"
                 id="blackAndWhiteTheme"
                 name="blackAndWhiteTheme"
                 type="checkbox"

@@ -28,7 +28,12 @@ export const initialState = {
         const isTreated = getSupportedCCWithoutConventionalProvision().find(
           (agreement) => agreement.idcc === data.ccn?.selected?.num
         );
-        pushAgreementEvents(title, data.ccn, !!isTreated);
+        pushAgreementEvents(
+          title,
+          data.ccn,
+          !!isTreated,
+          data.hasNoEnterpriseSelected ? true : false
+        );
       },
     },
     {

@@ -9,7 +9,9 @@ export const validateStep = (state: CommonAgreementStoreInput) => {
         ? "Vous devez sélectionner une convention collective"
         : undefined,
     enterprise:
-      state.route === "enterprise" && !state.enterprise
+      state.route === "enterprise" &&
+      !state.enterprise &&
+      !(state.agreement && state.agreement.num === 3239)
         ? "Vous devez sélectionner une entreprise"
         : state.route === "enterprise" && state.enterprise && !state.agreement
         ? "Vous devez sélectionner une convention collective"

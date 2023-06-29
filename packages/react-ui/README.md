@@ -24,7 +24,7 @@ React UI is a themed UI. In order to make it work in your project, you must prov
 
 ```js
 import { ThemeProvider } from "styled-components";
-import { theme } from "../../src/theme.js";
+import { theme } from "../../src/theme";
 
 const { colors } = theme;
 
@@ -42,7 +42,7 @@ export default class MyApp extends App {
 
 All you need is to wrap your root component inside the styled component's theme provider and give is a set of colors.
 
-Here, colors are React UI ones, but you can pick others. Simply follow the structure of the exported `colors` item here: [./src/theme.js](https://github.com/SocialGouv/code-du-travail-numerique/blob/master/packages/react-ui/src/theme.js)
+Here, colors are React UI ones, but you can pick others. Simply follow the structure of the exported `colors` item here: [./src/theme](https://github.com/SocialGouv/code-du-travail-numerique/blob/master/packages/react-ui/src/theme)
 
 ### Simpler option
 
@@ -88,12 +88,12 @@ Use the `theme` prop provided by styled-components.
 Not OK: ~~`color: ${theme.colors.paragraph};`~~<br />
 OK: `color: ${({theme }) => theme.paragraph};`
 
-Otherwise, the color won't change when the theme is dynamically modified. For eveything else, using the `theme.js` file is always the right thing to do.
+Otherwise, the color won't change when the theme is dynamically modified. For eveything else, using the `theme` file is always the right thing to do.
 
 While contributing to the project, for example, you should do:
 
 ```js
-import { box, spacings } from "../theme.js";
+import { box, spacings } from "../theme";
 const P = styled.p`
   margin: ${spacings.large};
   color: ${({ theme }) => theme.darkBlue};

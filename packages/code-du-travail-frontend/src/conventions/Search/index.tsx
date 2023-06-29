@@ -12,7 +12,7 @@ import { HelpModal } from "./HelpModal";
 import { ResultList } from "./ResultList";
 import useSearchCC, { Status } from "./searchHook";
 import Spinner from "react-svg-spinner";
-import { Agreement } from "./api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 const trackInput = debounce((query, path, trackingUID) => {
   if (query.length > 1) {

@@ -1,7 +1,7 @@
 import debounce from "debounce-promise";
 import { SITE_URL } from "../../../config";
 
-import { Agreement } from "./type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 export interface ApiEnterpriseData {
   entreprises: Enterprise[];

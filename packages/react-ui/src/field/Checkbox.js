@@ -2,15 +2,16 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { box, spacings } from "../theme.js";
+import { box, spacings } from "../theme";
 
-export const InputCheckbox = ({ label, name, id, size, ...props }) => (
+export const InputCheckbox = ({ label, name, id, size, checked, ...props }) => (
   <StyledLabel htmlFor={id} size={size}>
     <StyledCheckbox
       type="checkbox"
       name={name}
       id={id}
       size={size}
+      checked={checked}
       {...props}
     />
     {label}
@@ -18,8 +19,9 @@ export const InputCheckbox = ({ label, name, id, size, ...props }) => (
 );
 
 InputCheckbox.propTypes = {
+  checked: PropTypes.bool,
   id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   name: PropTypes.string.isRequired,
   size: PropTypes.string,
 };
@@ -32,6 +34,10 @@ const StyledLabel = styled.label`
   display: flex;
   font-size: ${(props) => props.size};
   cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 `;
 
 const StyledCheckbox = styled.input`
@@ -47,6 +53,10 @@ const StyledCheckbox = styled.input`
   border-radius: ${spacings.tiny};
   cursor: pointer;
   appearance: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   &:before {
     position: absolute;
     top: 50%;
