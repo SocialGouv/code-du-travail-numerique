@@ -118,7 +118,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
     formule:
       explanations:
         - "A1 : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - "A2: Années d'ancienneté au-delà de 10 ans": contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . au dela de dix ans
+        - "A2 : Années d'ancienneté au-delà de 10 ans": contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . au dela de dix ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/10 * Sref * A1) + (1/15 * Sref * A2)
 
@@ -129,7 +129,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
     formule:
       explanations:
         - "A1 : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - "A2: Années d'ancienneté au-delà de 10 ans": contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . au dela de dix ans
+        - "A2 : Années d'ancienneté au-delà de 10 ans": contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . au dela de dix ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/10 * Sref * A1) + (2/15 * Sref * A2)
 

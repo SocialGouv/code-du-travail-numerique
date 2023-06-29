@@ -25,10 +25,10 @@ describe("Formule indemnité licenciement - 1516", () => {
           seniority,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           seniority,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-          "1000",
         "contrat salarié . indemnité de licenciement . date de notification":
           "01/12/2022",
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "1000",
       });
 
       const result = engine.getFormule();
