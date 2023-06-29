@@ -23,8 +23,8 @@ describe("Calcul du salaire pour la CC 292", () => {
 
   const MULTIPLE_SALAIRES_WITH_PRIME = {
     salaires: [
-      { month: "septembre", value: 4000, prime: 960 },
-      { month: "aout", value: 4000, prime: 960 },
+      { month: "septembre", prime: 960, value: 4000 },
+      { month: "aout", prime: 960, value: 4000 },
       { month: "juillet", value: 4000 },
       { month: "juin", value: 4000 },
       { month: "mai", value: 1000 },
@@ -49,8 +49,8 @@ describe("Calcul du salaire pour la CC 292", () => {
   };
   const MULTIPLE_SALAIRE_3_LAST_BEST_WITH_PRIME = {
     salaires: [
-      { month: "septembre", value: 2000, prime: 960 },
-      { month: "aout", value: 5000, prime: 960 },
+      { month: "septembre", prime: 960, value: 2000 },
+      { month: "aout", prime: 960, value: 5000 },
       { month: "juillet", value: 5000 },
       { month: "juin", value: 4000 },
       { month: "mai", value: 1000 },

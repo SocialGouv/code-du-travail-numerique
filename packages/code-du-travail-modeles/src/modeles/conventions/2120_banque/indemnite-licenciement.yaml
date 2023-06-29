@@ -62,12 +62,20 @@ contrat salarié . convention collective . banque . formule 2 après janvier 200
   unité: €
 
 contrat salarié . convention collective . banque . plafond 1:
-  valeur: 18 * 0.89 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel # 13 / 14.5 ne fonctionne pas
+  valeur:
+    produit:
+      assiette: 18 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel # 13 / 14.5 ne fonctionne pas
+      facteur: 13 / 14.5
   unité: €
+  arrondi: 2 décimales
 
 contrat salarié . convention collective . banque . plafond 2:
-  valeur: 24 * 0.89 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel # 13 / 14.5 ne fonctionne pas
+  valeur:
+    produit:
+      assiette: 24 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel # 13 / 14.5 ne fonctionne pas
+      facteur: 13 / 14.5
   unité: €
+  arrondi: 2 décimales
 
 # Résultats
 contrat salarié . convention collective . banque . résultat conventionnel 1:
