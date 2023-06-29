@@ -1,2 +1,0 @@
-import{j as t}from"./styled-components.browser.esm-41178855.js";import{S as i}from"./index-2bbfe91f.js";import{S as o}from"./index-f1ab44fa.js";import"./index-8db94870.js";import"./_commonjsHelpers-042e6b4d.js";import"./index-1fc0ca9a.js";import"./theme-6e379713.js";import"./polished.esm-d698528e.js";const d={component:o,title:"Titles/Components/Subtitle"},s=()=>t.jsx(i,{children:t.jsx(o,{children:"This is a subtitle"})});s.__docgenInfo={description:"",methods:[],displayName:"base"};export{s as base,d as default};
-//# sourceMappingURL=story-a7cd74e2.js.map
