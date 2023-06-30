@@ -13,6 +13,7 @@ import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informatio
 import {
   Absence,
   getSupportedAgreement,
+  PublicodesSimulator,
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
@@ -35,7 +36,7 @@ const initialState: AncienneteStoreData = {
 const createAncienneteStore: StoreSlice<
   AncienneteStoreSlice,
   SalairesStoreSlice &
-    CommonAgreementStoreSlice &
+    CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
     CommonInformationsStoreSlice &
     ContratTravailStoreSlice
 > = (set, get) => ({
@@ -146,13 +147,13 @@ const createAncienneteStore: StoreSlice<
 const applyGenericValidation = (
   get: StoreApi<
     AncienneteStoreSlice &
-      CommonAgreementStoreSlice &
+      CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
       CommonInformationsStoreSlice &
       ContratTravailStoreSlice
   >["getState"],
   set: StoreApi<
     AncienneteStoreSlice &
-      CommonAgreementStoreSlice &
+      CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
       CommonInformationsStoreSlice &
       ContratTravailStoreSlice
   >["setState"],

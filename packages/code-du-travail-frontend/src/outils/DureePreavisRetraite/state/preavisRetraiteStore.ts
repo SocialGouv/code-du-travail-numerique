@@ -13,10 +13,7 @@ import { updateFormValues } from "./utils";
 import removeOldQuestions from "./usecases/removeOldQuestions";
 import resetInfosLastQuestionNotAnsweredOnOriginChange from "./usecases/resetInfosLastQuestionNotAnsweredOnOriginChange";
 import { loadPublicodes } from "../../api";
-import {
-  PublicodesSimulator,
-  SingletonPublicodesHelper,
-} from "@socialgouv/modeles-social";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export const initialState: PreavisRetraiteState = {
   title: "",
@@ -63,7 +60,7 @@ const createPreavisRetraiteStore = (title: string, slug: string) =>
               resetInfos(newValue, oldValue, state, updateFormValues(form))
             )
           ),
-          publicodes: loadPublicodes(
+          publicodes: loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
             PublicodesSimulator.PREAVIS_RETRAITE,
             newValue?.num?.toString()
           ),

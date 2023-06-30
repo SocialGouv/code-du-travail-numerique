@@ -12,6 +12,7 @@ import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { validatorAgreement } from "../../../agreements";
 import {
   getSupportedAgreement,
+  PublicodesSimulator,
   ReferenceSalaryFactory,
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
@@ -37,7 +38,9 @@ const initialState: SalairesStoreData = {
 
 const createSalairesStore: StoreSlice<
   SalairesStoreSlice,
-  AncienneteStoreSlice & ContratTravailStoreSlice & CommonAgreementStoreSlice
+  AncienneteStoreSlice &
+    ContratTravailStoreSlice &
+    CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT>
 > = (set, get) => ({
   salairesData: { ...initialState },
   salairesFunction: {
@@ -163,8 +166,14 @@ const createSalairesStore: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: StoreApi<SalairesStoreSlice & CommonAgreementStoreSlice>["getState"],
-  set: StoreApi<SalairesStoreSlice & CommonAgreementStoreSlice>["setState"],
+  get: StoreApi<
+    SalairesStoreSlice &
+      CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT>
+  >["getState"],
+  set: StoreApi<
+    SalairesStoreSlice &
+      CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT>
+  >["setState"],
   paramName: keyof SalairesStoreInput,
   value: any
 ) => {

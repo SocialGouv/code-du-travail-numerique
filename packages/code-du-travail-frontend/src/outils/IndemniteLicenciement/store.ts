@@ -51,7 +51,7 @@ export type MainStore = ContratTravailStoreSlice &
   SalairesStoreSlice &
   ResultStoreSlice &
   AgreementStoreSlice &
-  CommonAgreementStoreSlice &
+  CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
   CommonInformationsStoreSlice;
 
 export type StepData<

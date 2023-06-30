@@ -6,11 +6,7 @@ describe("SingletonPublicodesHelper", () => {
     it("should return the same instance for the same simulator and idcc", () => {
       const simulator = PublicodesSimulator.INDEMNITE_LICENCIEMENT;
       const idcc = "1234";
-      const instance1 =
-        SingletonPublicodesHelper.getInstance<PublicodesSimulator.INDEMNITE_LICENCIEMENT>(
-          simulator,
-          idcc
-        );
+      const instance1 = SingletonPublicodesHelper.getInstance(simulator, idcc);
       const instance2 =
         SingletonPublicodesHelper.getInstance<PublicodesSimulator.INDEMNITE_LICENCIEMENT>(
           simulator,
@@ -48,7 +44,7 @@ describe("SingletonPublicodesHelper", () => {
 
     it("should throw an error for unsupported simulators", () => {
       expect(() =>
-        SingletonPublicodesHelper.getInstance("unsupported" as any)
+        SingletonPublicodesHelper.getInstance<any>("unsupported" as any)
       ).toThrow("Simulator not supported");
     });
   });

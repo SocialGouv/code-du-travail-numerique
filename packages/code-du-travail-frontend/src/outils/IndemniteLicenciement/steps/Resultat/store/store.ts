@@ -3,6 +3,7 @@ import {
   getSupportedAgreement,
   Notification,
   PublicodesIndemniteLicenciementResult,
+  PublicodesSimulator,
   References,
   SeniorityFactory,
   SeniorityResult,
@@ -88,7 +89,7 @@ const createResultStore: StoreSlice<
   AncienneteStoreSlice &
     ContratTravailStoreSlice &
     SalairesStoreSlice &
-    CommonAgreementStoreSlice &
+    CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
     CommonInformationsStoreSlice
 > = (set, get) => ({
   resultData: {
