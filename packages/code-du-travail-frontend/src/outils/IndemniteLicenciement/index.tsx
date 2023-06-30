@@ -23,7 +23,6 @@ type Props = {
   icon: string;
   title: string;
   displayTitle: string;
-  slug: string;
 };
 
 export enum IndemniteLicenciementStepName {
@@ -163,10 +162,12 @@ export const CalculateurIndemnite = ({
   icon,
   title,
   displayTitle,
-  slug,
 }: Props): JSX.Element => {
   const store = React.useRef(
-    createIndemniteLicenciementStore(slug, ToolName.INDEMNITE_LICENCIEMENT)
+    createIndemniteLicenciementStore(
+      PublicodesSimulator.INDEMNITE_LICENCIEMENT,
+      ToolName.INDEMNITE_LICENCIEMENT
+    )
   ).current;
 
   return (

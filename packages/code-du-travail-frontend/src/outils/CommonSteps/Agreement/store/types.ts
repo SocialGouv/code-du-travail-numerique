@@ -2,6 +2,10 @@ import { Agreement } from "@socialgouv/cdtn-utils";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
 import { AgreementRoute } from "../../../common/type/WizardType";
+import {
+  PublicodesInstance,
+  PublicodesSimulator,
+} from "@socialgouv/modeles-social";
 
 export type CommonAgreementStoreInput = {
   route?: AgreementRoute;
@@ -22,7 +26,7 @@ export type CommonAgreementStoreData = {
   error: CommonAgreementStoreError;
   hasBeenSubmit: boolean;
   isStepValid: boolean;
-  publicodes: any;
+  publicodes: PublicodesInstance<PublicodesSimulator>;
 };
 
 export type AgreementSearchValue = {

@@ -31,8 +31,8 @@ const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
 const createCommonAgreementStore: StoreSlicePublicode<
   CommonAgreementStoreSlice,
   CommonInformationsStoreSlice
-> = (set, get, { slug, toolName }) => ({
-  agreementData: { ...initialState, publicodes: loadPublicodes(slug) },
+> = (set, get, { simulatorName, toolName }) => ({
+  agreementData: { ...initialState, publicodes: loadPublicodes(simulatorName) },
   agreementFunction: {
     onInitAgreementPage: () => {
       try {
@@ -53,7 +53,10 @@ const createCommonAgreementStore: StoreSlicePublicode<
             if (idcc) {
               set(
                 produce((state: CommonAgreementStoreSlice) => {
-                  state.agreementData.publicodes = loadPublicodes(slug, idcc);
+                  state.agreementData.publicodes = loadPublicodes(
+                    simulatorName,
+                    idcc
+                  );
                   state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
                     isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
                 })
@@ -91,7 +94,10 @@ const createCommonAgreementStore: StoreSlicePublicode<
       if (idcc) {
         set(
           produce((state: CommonAgreementStoreSlice) => {
-            state.agreementData.publicodes = loadPublicodes(slug, idcc);
+            state.agreementData.publicodes = loadPublicodes(
+              simulatorName,
+              idcc
+            );
             state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
               isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
           })

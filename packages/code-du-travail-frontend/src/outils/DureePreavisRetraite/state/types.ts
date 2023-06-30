@@ -1,9 +1,7 @@
-import { Rule } from "@socialgouv/modeles-social";
+import { PreavisRetraitePublicodes, Rule } from "@socialgouv/modeles-social";
 import { ResultStepProps } from "../steps/ResultStep/Step";
 import { PreavisRetraiteFormState } from "../form";
 import { FormApi } from "final-form";
-import { Publicodes } from "@socialgouv/modeles-social/bin";
-import { PublicodesPreavisRetraiteResult } from "@socialgouv/modeles-social/bin/publicodes/types";
 import { Step } from "../../Simulator";
 import { StepName } from "../steps";
 import { Agreement } from "@socialgouv/cdtn-utils";
@@ -28,7 +26,7 @@ export type PreavisRetraiteState = {
 };
 
 export type PublicodesState = {
-  publicodes: Publicodes<PublicodesPreavisRetraiteResult>;
+  publicodes: PreavisRetraitePublicodes;
 };
 
 export type PreavisRetraiteActions = {
