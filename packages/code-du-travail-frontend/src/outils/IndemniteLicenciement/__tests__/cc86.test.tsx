@@ -22,17 +22,8 @@ Storage.prototype.getItem = jest.fn(
 
 describe("Indemnité licenciement - CC 86", () => {
   beforeEach(() => {
-    render(
-      <CalculateurIndemnite
-        icon={""}
-        title={""}
-        displayTitle={""}
-        slug={"indemnite-licenciement"}
-      />
-    );
+    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
   });
-
-
 
   test(`Vérification du fait que le salaire de reference est bien celui issu de la formule de calcul de l'indemnité`, () => {
     userEvent.click(ui.introduction.startButton.get());
@@ -67,5 +58,4 @@ describe("Indemnité licenciement - CC 86", () => {
       "Sref : Salaire de référence (25000 €)"
     );
   });
-
 });

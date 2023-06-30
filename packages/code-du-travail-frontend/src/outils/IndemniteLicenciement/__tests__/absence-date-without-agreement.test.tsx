@@ -13,12 +13,7 @@ describe("Indemnité licenciement - Validation du comportement avec l'absence de
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          slug={"indemnite-licenciement"}
-        />
+        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
       );
       userAction = new UserAction();
       userAction

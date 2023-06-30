@@ -10,7 +10,8 @@
   "types": "build/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
     "@swc/core": "^1.3.36",

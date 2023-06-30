@@ -24,12 +24,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          slug={"indemnite-licenciement"}
-        />
+        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
       );
       userAction = new UserAction();
       userAction
@@ -175,12 +170,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          slug={"indemnite-licenciement"}
-        />
+        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
       );
       userAction = new UserAction();
       userAction
