@@ -78,7 +78,7 @@ function StepInfosGenerales({ form }) {
               if (
                 [
                   "cttFormation",
-                  "propositionCDIFinContrat",
+                  "propositionCDIFindeContrat",
                   "refusSouplesse",
                   "ruptureContratFauteGrave",
                   "cttFormation",
