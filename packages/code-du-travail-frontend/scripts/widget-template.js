@@ -21,7 +21,10 @@ function addWidget({ target, id, url }) {
     ) {
       const bodyPosition = document.body.getBoundingClientRect();
       const iframePosition = iframe.getBoundingClientRect();
-      window.scrollTo(0, iframePosition.top - bodyPosition.top - HEADER_MENU_HEIGHT);
+      window.scrollTo(
+        0,
+        iframePosition.top - bodyPosition.top - HEADER_MENU_HEIGHT
+      );
     }
   });
 
@@ -39,13 +42,15 @@ function loadWidgets() {
   }
   const targetLinks = document.querySelectorAll("a[href*='__HOST__/widgets/']");
   if (targetLinks.length) {
-    mappedTargetLinks = Object.values(targetLinks).map((target) => {
-      const url = target.attributes.href.nodeValue;
-      const id =
-        "cdtn-iframe-" +
-        url.replace("__HOST__/widgets/", "").replace(/\//, "-");
-      return { url, id, target };
-    });
+    mappedTargetLinks = Object.values(targetLinks)
+      .filter((target) => !!target?.attributes?.href)
+      .map((target) => {
+        const url = target.attributes.href.nodeValue;
+        const id =
+          "cdtn-iframe-" +
+          url.replace("__HOST__/widgets/", "").replace(/\//, "-");
+        return { url, id, target };
+      });
     widgets = widgets.concat(mappedTargetLinks);
   }
   widgets.forEach((widget) => {
