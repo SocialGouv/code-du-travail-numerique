@@ -6,12 +6,14 @@ describe("SingletonPublicodesHelper", () => {
     it("should return the same instance for the same simulator and idcc", () => {
       const simulator = PublicodesSimulator.INDEMNITE_LICENCIEMENT;
       const idcc = "1234";
-      const instance1 = SingletonPublicodesHelper.getInstance(simulator, idcc);
-      const instance2 =
-        SingletonPublicodesHelper.getInstance<PublicodesSimulator.INDEMNITE_LICENCIEMENT>(
-          simulator,
-          idcc
-        );
+      const instance1 = SingletonPublicodesHelper.getInstance<typeof simulator>(
+        simulator,
+        idcc
+      );
+      const instance2 = SingletonPublicodesHelper.getInstance<typeof simulator>(
+        simulator,
+        idcc
+      );
       expect(instance1).toBe(instance2);
     });
 
@@ -29,16 +31,14 @@ describe("SingletonPublicodesHelper", () => {
 
     it("should return different instances for different idcc", () => {
       const simulator = PublicodesSimulator.INDEMNITE_LICENCIEMENT;
-      const instance1 =
-        SingletonPublicodesHelper.getInstance<PublicodesSimulator.INDEMNITE_LICENCIEMENT>(
-          simulator,
-          "1234"
-        );
-      const instance2 =
-        SingletonPublicodesHelper.getInstance<PublicodesSimulator.INDEMNITE_LICENCIEMENT>(
-          simulator,
-          "5678"
-        );
+      const instance1 = SingletonPublicodesHelper.getInstance<typeof simulator>(
+        simulator,
+        "1234"
+      );
+      const instance2 = SingletonPublicodesHelper.getInstance<typeof simulator>(
+        simulator,
+        "5678"
+      );
       expect(instance1).not.toBe(instance2);
     });
 
