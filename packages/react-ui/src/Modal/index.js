@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 import { Button } from "../Button/index.js";
 import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
-import { box, breakpoints, spacings } from "../theme.js";
+import { box, breakpoints, spacings } from "../theme";
 
 export const Modal = ({
   children,

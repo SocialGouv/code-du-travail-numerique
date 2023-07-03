@@ -1,6 +1,6 @@
 import { PreavisRetraiteStore } from "../types";
 import { UpdateFormValues } from "../utils";
-import { Agreement } from "../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 const resetInfos = (
   newAgreement: Agreement | null,

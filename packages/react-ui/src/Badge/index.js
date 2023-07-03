@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Config } from "../icons/index.js";
-import { box } from "../theme.js";
+import { box } from "../theme";
 
 export const Badge = ({ icon: Icon, ...props }) => (
   <StyledBadge {...props}>

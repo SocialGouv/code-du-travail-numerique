@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { box } from "../theme.js";
+import { box } from "../theme";
 
 interface StripeProps {
   rounded: boolean;

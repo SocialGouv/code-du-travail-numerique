@@ -3,7 +3,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import { OverflowWrapper } from "../OverflowWrapper/index.js";
-import { box, spacings } from "../theme.js";
+import { box, spacings } from "../theme";
 
 export const Table = ({ children, ...props }) => (
   <OverflowWrapper>

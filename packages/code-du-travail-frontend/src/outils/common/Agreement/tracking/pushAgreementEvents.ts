@@ -1,15 +1,18 @@
 import {
+  MatomoActionEvent,
   MatomoAgreementEvent,
   MatomoBaseEvent,
   MatomoSearchAgreementCategory,
+  MatomoSimulatorEvent,
 } from "../../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { ConventionCollective } from "../../type/WizardType";
 
 const pushAgreementEvents = (
-  title: string,
+  simulatorTitle: string,
   values: ConventionCollective | undefined,
-  isAgreementTreated: boolean
+  isAgreementTreated: boolean,
+  hasNoEnterpriseSelected: boolean
 ): void => {
   if (!values) {
     // no agreement section, no event to send. Should never happen.
@@ -31,13 +34,13 @@ const pushAgreementEvents = (
     MatomoBaseEvent.TRACK_EVENT,
     MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
     eventName,
-    title,
+    simulatorTitle,
   ]);
   if (values.enterprise) {
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
       MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
-      title,
+      simulatorTitle,
       JSON.stringify({
         label: values.enterprise.label,
         siren: values.enterprise.siren,
@@ -50,7 +53,7 @@ const pushAgreementEvents = (
       values.route === "agreement"
         ? MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1
         : MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
-      title,
+      simulatorTitle,
       `idcc${values.selected.num?.toString()}`,
     ]);
     const idcc = values.selected.num;
@@ -61,6 +64,14 @@ const pushAgreementEvents = (
         ? MatomoAgreementEvent.CC_TREATED
         : MatomoAgreementEvent.CC_UNTREATED,
       idcc,
+    ]);
+  }
+  if (hasNoEnterpriseSelected) {
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+      MatomoSimulatorEvent.SELECT_NO_COMPANY,
+      simulatorTitle,
     ]);
   }
 };

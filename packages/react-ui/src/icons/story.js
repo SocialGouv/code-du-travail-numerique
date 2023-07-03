@@ -57,7 +57,7 @@ export const readme = () => (
     <Heading>Outside the UI repo</Heading>
     <p>
       <code>
-        {`import { icons } from "../theme.js"`}
+        {`import { icons } from "../theme"`}
         <br />
         {`const { Calculator } = icons;`}
         <br />

@@ -4,7 +4,7 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { AncienneteStoreInput } from "./types";
-import { Agreement } from "../../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import { CommonInformationsStoreInput } from "../../../../CommonSteps/Informations/store";
 
 export const getErrorEligibility = (

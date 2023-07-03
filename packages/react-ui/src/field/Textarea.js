@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
 import { Text } from "../Text";
-import { box, breakpoints, fonts, spacings } from "../theme.js";
+import { box, breakpoints, fonts, spacings } from "../theme";
 import { debounce } from "../utils/debounce";
 
 export const Textarea = ({

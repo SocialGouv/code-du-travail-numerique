@@ -1,9 +1,10 @@
 import { Enterprise } from "../../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "../../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import {
   MatomoAgreementEvent,
   MatomoBaseEvent,
   MatomoSearchAgreementCategory,
+  MatomoSimulatorEvent,
 } from "../../../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { ConventionCollective } from "../../../type/WizardType";
@@ -45,7 +46,7 @@ describe("Push agreement events on click next", () => {
     };
     it("should send a search type of users matomo event", () => {
       const pageTitle = "Préavis de retraite";
-      pushAgreementEvents(pageTitle, data, false);
+      pushAgreementEvents(pageTitle, data, false, false);
       expect(matopush).toHaveBeenCalledTimes(1);
       expect(matopush).toHaveBeenCalledWith([
         MatomoBaseEvent.TRACK_EVENT,
@@ -64,7 +65,7 @@ describe("Push agreement events on click next", () => {
     describe("agreement not treated", () => {
       it("should send matomo events", () => {
         const pageTitle = "Préavis de retraite";
-        pushAgreementEvents(pageTitle, data, false);
+        pushAgreementEvents(pageTitle, data, false, false);
         expect(matopush).toHaveBeenCalledTimes(3);
         expect(matopush).toHaveBeenNthCalledWith(1, [
           MatomoBaseEvent.TRACK_EVENT,
@@ -89,7 +90,7 @@ describe("Push agreement events on click next", () => {
     describe("agreement treated", () => {
       it("should send matomo events", () => {
         const pageTitle = "Préavis de retraite";
-        pushAgreementEvents(pageTitle, data, true);
+        pushAgreementEvents(pageTitle, data, true, false);
         expect(matopush).toHaveBeenCalledTimes(3);
         expect(matopush).toHaveBeenNthCalledWith(1, [
           MatomoBaseEvent.TRACK_EVENT,
@@ -122,7 +123,7 @@ describe("Push agreement events on click next", () => {
 
     it("should send matomo events", () => {
       const pageTitle = "Préavis de retraite";
-      pushAgreementEvents(pageTitle, data, false);
+      pushAgreementEvents(pageTitle, data, false, false);
       expect(matopush).toHaveBeenCalledTimes(4);
       expect(matopush).toHaveBeenNthCalledWith(1, [
         MatomoBaseEvent.TRACK_EVENT,
@@ -147,6 +148,44 @@ describe("Push agreement events on click next", () => {
         MatomoBaseEvent.OUTIL,
         MatomoAgreementEvent.CC_UNTREATED,
         agreement.num,
+      ]);
+    });
+  });
+
+  describe("user with no enterprise", () => {
+    const data: ConventionCollective = {
+      enterprise: undefined,
+      route: "enterprise",
+      selected: agreement,
+    };
+
+    it("should send matomo events", () => {
+      const pageTitle = "Préavis de retraite";
+      pushAgreementEvents(pageTitle, data, false, true);
+      expect(matopush).toHaveBeenCalledTimes(4);
+      expect(matopush).toHaveBeenNthCalledWith(1, [
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+        "click_p2",
+        pageTitle,
+      ]);
+      expect(matopush).toHaveBeenNthCalledWith(2, [
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
+        pageTitle,
+        `idcc${agreement.num.toString()}`,
+      ]);
+      expect(matopush).toHaveBeenNthCalledWith(3, [
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoBaseEvent.OUTIL,
+        MatomoAgreementEvent.CC_UNTREATED,
+        agreement.num,
+      ]);
+      expect(matopush).toHaveBeenNthCalledWith(4, [
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+        MatomoSimulatorEvent.SELECT_NO_COMPANY,
+        pageTitle,
       ]);
     });
   });

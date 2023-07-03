@@ -1,4 +1,4 @@
-import { Agreement } from "../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
 import { AgreementRoute } from "../../../common/type/WizardType";
@@ -8,6 +8,7 @@ export type CommonAgreementStoreInput = {
   agreement?: Agreement;
   enterprise?: Enterprise;
   isAgreementSupportedIndemniteLicenciement: boolean;
+  hasNoEnterpriseSelected: boolean;
 };
 
 export type CommonAgreementStoreError = {
@@ -39,6 +40,7 @@ export type CommonAgreementStoreFn = {
   onNextStep: () => ValidationResponse;
   onEnterpriseSearch: (value: AgreementSearchValue) => void;
   onAgreementSearch: (value: AgreementSearchValue) => void;
+  setHasNoEnterpriseSelected: (value: boolean) => void;
 };
 
 export type CommonAgreementStoreSlice = {

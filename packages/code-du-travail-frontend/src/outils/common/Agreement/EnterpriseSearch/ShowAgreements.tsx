@@ -5,7 +5,7 @@ import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import { ErrorField } from "../../ErrorField";
 import { Question } from "../../Question";
 import { RadioContainer } from "../../stepStyles";
