@@ -1,13 +1,11 @@
 import {
   Button,
-  Container,
   Heading,
   InputCheckbox,
   Section,
   Text,
   Textarea,
   theme,
-  Wrapper,
 } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
 import React, { useCallback, useEffect, useState } from "react";
@@ -15,6 +13,7 @@ import { Field, Form } from "react-final-form";
 import styled from "styled-components";
 
 import { ServiceRenseignementModal } from "../ServiceRenseignementModal";
+import { FeedbackWrapper } from "./FeedbackWrapper";
 
 function baseUrl(url) {
   return url.replace(/\?.*$/, "");
@@ -70,137 +69,133 @@ function Feedback({ url = document ? document.location.href : "" }) {
     return { suggestion: "Required" };
   };
   return (
-    <StyledSection>
-      <Container>
-        <Wrapper variant="light">
-          <Flex>
-            <Heading
-              as={StyledH2}
-              variant="primary"
-              stripe="left"
-              shift={theme.spacings.xmedium}
+    <FeedbackWrapper>
+      <Flex>
+        <Heading
+          as={StyledH2}
+          variant="primary"
+          stripe="left"
+          shift={theme.spacings.xmedium}
+        >
+          {isSatisfied === null ? (
+            <>Avez-vous trouvé la réponse à votre question&nbsp;?</>
+          ) : (
+            <>Merci pour votre réponse.</>
+          )}
+        </Heading>
+        {isSatisfied === null && (
+          <YesNo>
+            <StyledButton
+              variant="flat"
+              onClick={() => onSetSatisfaction(false)}
             >
-              {isSatisfied === null ? (
-                <>Avez-vous trouvé la réponse à votre question&nbsp;?</>
-              ) : (
-                <>Merci pour votre réponse.</>
-              )}
-            </Heading>
-            {isSatisfied === null && (
-              <YesNo>
-                <StyledButton
-                  variant="flat"
-                  onClick={() => onSetSatisfaction(false)}
-                >
-                  Non
-                </StyledButton>
-                <StyledButton
-                  variant="flat"
-                  onClick={() => onSetSatisfaction(true)}
-                >
-                  Oui
-                </StyledButton>
-              </YesNo>
-            )}
-          </Flex>
-          {isSatisfied !== null && (
-            <Form
-              onSubmit={submitCallback}
-              validate={validateForm}
-              render={({ handleSubmit, form }) => {
-                const state = form.getState();
-                if (state.submitSucceeded) {
-                  return (
-                    <FullWidthParagraph role="status">
-                      L’équipe du Code du travail numérique vous remercie pour
-                      votre réponse.
-                    </FullWidthParagraph>
-                  );
-                }
-                return (
-                  <form onSubmit={handleSubmit}>
-                    {isSatisfied === false && (
-                      <Fieldset>
-                        <Legend>Pouvez-vous nous en dire plus&nbsp;?</Legend>
-                        {responseType.map(([key, label]) => (
-                          <Field
-                            name="category"
-                            key={key}
-                            value={key}
-                            type="checkbox"
-                          >
-                            {(props) => (
-                              <InputCheckbox
-                                id={key}
-                                label={label}
-                                {...props.input}
-                              />
-                            )}
-                          </Field>
-                        ))}
-                      </Fieldset>
-                    )}
-                    <Label htmlFor="suggestion">
-                      Faire une suggestion pour améliorer cette page
-                    </Label>
-                    <Field name="suggestion">
-                      {(props) => (
-                        <>
-                          <StyledTextarea
-                            id="suggestion"
-                            placeholder="Une idée, une suggestion..."
-                            maxLength={150}
-                            showCounter
-                            rows={3}
-                            cols={50}
+              Non
+            </StyledButton>
+            <StyledButton
+              variant="flat"
+              onClick={() => onSetSatisfaction(true)}
+            >
+              Oui
+            </StyledButton>
+          </YesNo>
+        )}
+      </Flex>
+      {isSatisfied !== null && (
+        <Form
+          onSubmit={submitCallback}
+          validate={validateForm}
+          render={({ handleSubmit, form }) => {
+            const state = form.getState();
+            if (state.submitSucceeded) {
+              return (
+                <FullWidthParagraph role="status">
+                  L’équipe du Code du travail numérique vous remercie pour votre
+                  réponse.
+                </FullWidthParagraph>
+              );
+            }
+            return (
+              <form onSubmit={handleSubmit}>
+                {isSatisfied === false && (
+                  <Fieldset>
+                    <Legend>Pouvez-vous nous en dire plus&nbsp;?</Legend>
+                    {responseType.map(([key, label]) => (
+                      <Field
+                        name="category"
+                        key={key}
+                        value={key}
+                        type="checkbox"
+                      >
+                        {(props) => (
+                          <InputCheckbox
+                            id={key}
+                            label={label}
                             {...props.input}
                           />
-                          {props.meta.error && state.submitFailed && (
-                            <ErrorText fontWeight="600" role="alert">
-                              {isSatisfied === true
-                                ? "Veuillez renseigner le champ suggestion."
-                                : "Veuillez renseigner au moins un champ."}
-                            </ErrorText>
-                          )}
-                        </>
-                      )}
-                    </Field>
-                    <ButtonWrapper>
-                      <StyledButton
-                        disabled={state.submitting}
-                        variant="flat"
-                        small
-                      >
-                        Envoyer
-                      </StyledButton>
-                    </ButtonWrapper>
-                  </form>
-                );
-              }}
-            />
-          )}
-          {isSatisfied === false && (
-            <p>
-              Pour obtenir une réponse à votre question de droit du travail,
-              nous vous invitons à joindre{" "}
-              <ServiceRenseignementModal>
-                {(openSRModal) => (
-                  <Button
-                    type="button"
-                    variant="link"
-                    onClick={(e) => {
-                      openSRModal(e);
-                    }}
-                  >
-                    les services du ministère du Travail en région
-                  </Button>
+                        )}
+                      </Field>
+                    ))}
+                  </Fieldset>
                 )}
-              </ServiceRenseignementModal>
-            </p>
-          )}
-        </Wrapper>
-      </Container>
-    </StyledSection>
+                <Label htmlFor="suggestion">
+                  Faire une suggestion pour améliorer cette page
+                </Label>
+                <Field name="suggestion">
+                  {(props) => (
+                    <>
+                      <StyledTextarea
+                        id="suggestion"
+                        placeholder="Une idée, une suggestion..."
+                        maxLength={150}
+                        showCounter
+                        rows={3}
+                        cols={50}
+                        {...props.input}
+                      />
+                      {props.meta.error && state.submitFailed && (
+                        <ErrorText fontWeight="600" role="alert">
+                          {isSatisfied === true
+                            ? "Veuillez renseigner le champ suggestion."
+                            : "Veuillez renseigner au moins un champ."}
+                        </ErrorText>
+                      )}
+                    </>
+                  )}
+                </Field>
+                <ButtonWrapper>
+                  <StyledButton
+                    disabled={state.submitting}
+                    variant="flat"
+                    small
+                  >
+                    Envoyer
+                  </StyledButton>
+                </ButtonWrapper>
+              </form>
+            );
+          }}
+        />
+      )}
+      {isSatisfied === false && (
+        <p>
+          Pour obtenir une réponse à votre question de droit du travail, nous
+          vous invitons à joindre{" "}
+          <ServiceRenseignementModal>
+            {(openSRModal) => (
+              <Button
+                type="button"
+                variant="link"
+                onClick={(e) => {
+                  openSRModal(e);
+                }}
+              >
+                les services du ministère du Travail en région
+              </Button>
+            )}
+          </ServiceRenseignementModal>
+        </p>
+      )}
+    </FeedbackWrapper>
   );
 }
 

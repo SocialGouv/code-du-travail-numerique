@@ -19,6 +19,7 @@ type Props = {
   searchParams?: SearchParams;
   placeholder?: string;
   onSearchParamsChange: (params: SearchParams) => void;
+  isDisabled?: boolean;
   handleEnterpriseSelection: (
     enterprise: Enterprise,
     params?: SearchParams
@@ -32,6 +33,7 @@ export const SearchEnterpriseInput = ({
   searchParams = { address: "", query: "" },
   onUserAction,
   onSearchParamsChange,
+  isDisabled,
   handleEnterpriseSelection,
 }: Props): JSX.Element => {
   const useEnterpriseSuggester = createSuggesterHook(
@@ -54,10 +56,13 @@ export const SearchEnterpriseInput = ({
     <>
       <Flex>
         <Box>
-          <InlineLabel htmlFor="enterprise-search">
+          <InlineLabel htmlFor="enterprise-search" disabled={isDisabled}>
             Nom de votre entreprise ou numéro Siret
           </InlineLabel>
-          <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
+          <InfoBulle
+            title={"Qu’est ce qu’un n°siret ?"}
+            isDisabled={isDisabled}
+          >
             <p>
               Le numéro Siret est un <strong>numéro de 14 chiffres</strong>{" "}
               unique pour chaque entreprise. Il est présent sur la{" "}
@@ -75,15 +80,19 @@ export const SearchEnterpriseInput = ({
             onChange={(e) => setQuery(e.target.value)}
             autoComplete="off"
             data-testid="agreement-company-search-input"
+            disabled={isDisabled}
           />
         </Box>
         <Box>
-          <InlineLabel htmlFor="enterprise-search-address">
+          <InlineLabel
+            htmlFor="enterprise-search-address"
+            disabled={isDisabled}
+          >
             Code postal ou ville
           </InlineLabel>{" "}
-          <Text fontWeight="400" fontSize="small">
+          <InlineText fontWeight="400" fontSize="small" disabled={isDisabled}>
             (facultatif)
-          </Text>
+          </InlineText>
           <InputWithButton>
             <BlockInputRight
               placeholder="Ex : 31000 ou Toulouse"
@@ -94,6 +103,7 @@ export const SearchEnterpriseInput = ({
               onChange={(e) => setAddress(e.target.value)}
               autoComplete="off"
               data-testid="agreement-postal-code-search-input"
+              disabled={isDisabled}
             />
             <SubmitIcon
               type="submit"
@@ -104,6 +114,7 @@ export const SearchEnterpriseInput = ({
               narrow
               variant="secondary"
               data-testid="agreement-company-search-button"
+              disabled={isDisabled}
             >
               <MobileOnly>Rechercher</MobileOnly>
               <StyledSearchIcon />
@@ -120,6 +131,11 @@ export const SearchEnterpriseInput = ({
     </>
   );
 };
+
+const InlineText = styled(Text)`
+  color: ${({ theme, disabled }) =>
+    disabled ? theme.placeholder : theme.paragraph};
+`;
 
 const BlockInput = styled(Input)`
   width: 100%;
@@ -144,6 +160,8 @@ const BlockInputRight = styled(BlockInput)`
 
 const InlineLabel = styled(Label)`
   display: inline;
+  color: ${({ theme, disabled }) =>
+    disabled ? theme.placeholder : theme.paragraph};
 `;
 
 const Flex = styled.div`
@@ -186,6 +204,10 @@ const SubmitIcon = styled(Button)`
     box-sizing: inherit;
   }
   color: ${({ theme }) => theme.white};
+  background-color: ${({ theme, disabled }) =>
+    disabled ? theme.placeholder : theme.secondary};
+  border-color: ${({ theme, disabled }) =>
+    disabled ? theme.placeholder : theme.secondary};
 `;
 
 const StyledSearchIcon = styled(SearchIcon)`

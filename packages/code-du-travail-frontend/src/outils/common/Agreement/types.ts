@@ -1,5 +1,5 @@
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 export type AgreementSupportInfo = {
   fullySupported: boolean;

@@ -3,14 +3,16 @@ import React from "react";
 
 import { EmbeddedForm } from "../../../../../test/TestForm";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import type { Props } from "../EnterpriseSearch/EnterpriseSearch";
 import EnterpriseSearch from "../EnterpriseSearch/EnterpriseSearch";
 
-const callback: (agreement: Agreement | null, enterprise?: Enterprise) => void =
-  () => {
-    /* nothing to do */
-  };
+const callback: (
+  agreement: Agreement | null,
+  enterprise?: Enterprise
+) => void = () => {
+  /* nothing to do */
+};
 const onSelectAgreement = jest.fn(callback);
 const onUserAction = () => {
   /* dummy */

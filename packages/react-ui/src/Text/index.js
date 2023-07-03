@@ -2,13 +2,17 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { fonts } from "../theme.js";
+import { fonts } from "../theme";
 
 const sharedStyle = css`
   ${({ theme }) => {
     return css`
       color: ${(props) =>
-        props.$variant ? theme[props.$variant] : theme.paragraph};
+        props.$variant
+          ? theme[props.$variant]
+          : props.disabled
+          ? theme.placeholder
+          : theme.paragraph};
       font-size: ${(props) =>
         props.$fontSize && props.$fontSize.startsWith("h")
           ? fonts.sizes.headings[props.$fontSize.replace("h", "")]

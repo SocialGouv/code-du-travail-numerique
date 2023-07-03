@@ -9,7 +9,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import { fadeIn } from "../../../keyframes.js";
-import { box, breakpoints, fonts, spacings } from "../../../theme.js";
+import { box, breakpoints, fonts, spacings } from "../../../theme";
 import { VerticalArrow } from "../VerticalArrow/index.js";
 
 export const Accordion = styled(RootAccordion)`

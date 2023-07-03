@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { ArrowDown } from "../icons/index.js";
-import { animations, box, breakpoints, fonts, spacings } from "../theme.js";
+import { animations, box, breakpoints, fonts, spacings } from "../theme";
 
 export const Select = ({ children, disabled, className, ...props }) => (
   <StyledWrapper className={className}>

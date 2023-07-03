@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { AccordionArrow } from "../Accordion";
 import { Button } from "../Button";
-import { spacings } from "../theme.js";
+import { spacings } from "../theme";
 
 export const Collapse = ({
   title,

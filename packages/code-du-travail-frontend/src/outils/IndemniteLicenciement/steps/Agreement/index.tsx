@@ -19,6 +19,8 @@ const AgreementStep = (): JSX.Element => {
     agreement,
     onAgreementSearch,
     onInitAgreementPage,
+    hasNoEnterpriseSelected,
+    setHasNoEnterpriseSelected,
   } = useIndemniteLicenciementStore(store, (state) => ({
     error: state.agreementData.error,
     onRouteChange: state.agreementFunction.onRouteChange,
@@ -29,6 +31,9 @@ const AgreementStep = (): JSX.Element => {
     agreement: state.agreementData.input.agreement,
     onAgreementSearch: state.agreementFunction.onAgreementSearch,
     onInitAgreementPage: state.agreementFunction.onInitAgreementPage,
+    hasNoEnterpriseSelected: state.agreementData.input.hasNoEnterpriseSelected,
+    setHasNoEnterpriseSelected:
+      state.agreementFunction.setHasNoEnterpriseSelected,
   }));
 
   return (
@@ -44,6 +49,8 @@ const AgreementStep = (): JSX.Element => {
       simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
       onAgreementSearch={onAgreementSearch}
       onEnterpriseSearch={onEnterpriseSearch}
+      hasNoEnterpriseSelected={hasNoEnterpriseSelected}
+      setHasNoEnterpriseSelected={setHasNoEnterpriseSelected}
     />
   );
 };
