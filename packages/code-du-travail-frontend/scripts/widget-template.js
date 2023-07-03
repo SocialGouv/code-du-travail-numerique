@@ -33,7 +33,7 @@ function addWidget({ target, id, url }) {
 }
 
 function loadWidgets() {
-  let widgets = [];
+  const widgets = [];
   const oldWidget = document.querySelector("#cdtn-widget");
   if (oldWidget) {
     const id = "cdtn-iframe-widget";
@@ -42,15 +42,13 @@ function loadWidgets() {
   }
   const targetLinks = document.querySelectorAll('a[href="__HOST__/widgets/"]');
   if (targetLinks.length) {
-    let mappedTargetLinks = [];
     targetLinks.forEach((target) => {
       const url = target.attributes.href.nodeValue;
       const id =
         "cdtn-iframe-" +
         url.replace("__HOST__/widgets/", "").replace(/\//, "-");
-      mappedTargetLinks.push({ url, id, target });
+      widgets.push({ url, id, target });
     });
-    widgets = widgets.concat(mappedTargetLinks);
   }
   widgets.forEach((widget) => {
     addWidget(widget);
