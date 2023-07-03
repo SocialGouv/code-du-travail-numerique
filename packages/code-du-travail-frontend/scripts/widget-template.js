@@ -40,17 +40,16 @@ function loadWidgets() {
     const url = "__HOST__/widgets/search";
     widgets.push({ target: oldWidget, id, url });
   }
-  const targetLinks = document.querySelectorAll("a[href*='__HOST__/widgets/']");
+  const targetLinks = document.querySelectorAll('a[href="__HOST__/widgets/"]');
   if (targetLinks.length) {
-    mappedTargetLinks = Object.values(targetLinks)
-      .filter((target) => !!target?.attributes?.href)
-      .map((target) => {
-        const url = target.attributes.href.nodeValue;
-        const id =
-          "cdtn-iframe-" +
-          url.replace("__HOST__/widgets/", "").replace(/\//, "-");
-        return { url, id, target };
-      });
+    let mappedTargetLinks = [];
+    targetLinks.forEach((target) => {
+      const url = target.attributes.href.nodeValue;
+      const id =
+        "cdtn-iframe-" +
+        url.replace("__HOST__/widgets/", "").replace(/\//, "-");
+      mappedTargetLinks.push({ url, id, target });
+    });
     widgets = widgets.concat(mappedTargetLinks);
   }
   widgets.forEach((widget) => {
