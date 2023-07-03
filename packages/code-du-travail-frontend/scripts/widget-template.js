@@ -40,7 +40,7 @@ function loadWidgets() {
     const url = "__HOST__/widgets/search";
     widgets.push({ target: oldWidget, id, url });
   }
-  const targetLinks = document.querySelectorAll('a[href="__HOST__/widgets/"]');
+  const targetLinks = document.querySelectorAll('a[href*="__HOST__/widgets/"]');
   if (targetLinks.length) {
     targetLinks.forEach((target) => {
       const url = target.attributes.href.nodeValue;
