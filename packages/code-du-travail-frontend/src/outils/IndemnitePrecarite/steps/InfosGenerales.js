@@ -69,7 +69,32 @@ function StepInfosGenerales({ form }) {
 
   return (
     <>
-      <TypeContrat name="contractType" />
+      <TypeContrat
+        name="contractType"
+        onChange={() => {
+          if (values) {
+            form.change("criteria", {});
+            Object.keys(values).forEach((key) => {
+              if (
+                [
+                  "cttFormation",
+                  "propositionCDIFindeContrat",
+                  "propositionCDIFinContrat",
+                  "refusSouplesse",
+                  "ruptureContratFauteGrave",
+                  "cttFormation",
+                  "finContratPeriodeDessai",
+                  "interruptionFauteGrave",
+                  "refusCDIFindeContrat",
+                  "refusRenouvellementAuto",
+                ].indexOf(key) !== -1
+              ) {
+                form.change(key, undefined);
+              }
+            });
+          }
+        }}
+      />
       <Field name="contractType">
         {({ input }) => {
           switch (input.value) {
