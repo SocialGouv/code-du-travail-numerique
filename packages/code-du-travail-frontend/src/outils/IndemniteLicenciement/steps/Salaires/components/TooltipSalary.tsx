@@ -28,7 +28,7 @@ const TooltipSalary = ({
           décide lui seul de dispenser le salarié d’exécuter un préavis
           obligatoire
         </li>
-        {agreementNumber === 276 && (
+        {agreementNumber === 176 && (
           <li>
             Les primes d&apos;insalubrité, de travaux salissants, de danger, de
             froid et de pénibilité
