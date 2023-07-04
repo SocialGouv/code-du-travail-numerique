@@ -9,8 +9,14 @@ import {
   MatomoSimulatorNameEvent,
 } from "../../../lib";
 import { FeedbackWrapper } from "../../../common/Feedback/FeedbackWrapper";
+import { useRouter } from "next/router";
 
-export function NoEnterprise(): JSX.Element {
+type Props = {
+  widgetMode: boolean;
+};
+
+export function NoEnterprise(props: Props): JSX.Element {
+  const router = useRouter();
   const onClick = (event: React.SyntheticEvent) => {
     event.preventDefault();
     matopush([
@@ -19,10 +25,16 @@ export function NoEnterprise(): JSX.Element {
       MatomoSimulatorEvent.CLICK_NO_COMPANY,
       MatomoSimulatorNameEvent.FIND_AGREEMENT,
     ]);
-    window.open(
-      `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
-      "_blank"
-    );
+    if (props.widgetMode) {
+      window.open(
+        `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
+        "_blank"
+      );
+    } else {
+      router.push(
+        "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile"
+      );
+    }
   };
 
   return (
