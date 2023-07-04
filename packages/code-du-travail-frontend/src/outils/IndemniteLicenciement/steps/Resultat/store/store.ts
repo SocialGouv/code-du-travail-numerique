@@ -295,11 +295,6 @@ const createResultStore: StoreSlice<
           isAgreementBetter = true;
         }
 
-        isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
-          agreement.num,
-          isAgreementBetter
-        );
-
         if (
           isAgreementSameDetection(
             publicodesSituationLegal,
