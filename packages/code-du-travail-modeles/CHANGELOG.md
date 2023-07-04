@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.104.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.103.0...v4.104.0) (2023-07-04)
+
+### Bug Fixes
+
+- **preavis-retraite:** Mise a la retraite pour un Cadres de la 1505 ([#5236](https://github.com/SocialGouv/code-du-travail-numerique/issues/5236)) ([e105ecd](https://github.com/SocialGouv/code-du-travail-numerique/commit/e105ecd220fae61407566425e73170c5d6ad0ff2))
+
+### Features
+
+- **indemnité de licenciement:** implémentation de la CC 292 ([#5214](https://github.com/SocialGouv/code-du-travail-numerique/issues/5214)) ([0104fe5](https://github.com/SocialGouv/code-du-travail-numerique/commit/0104fe52e6141f14bb0d060900ae2046bf27aa20))
+- **indemnite-licenciement:** ajout de la cc 2120 ([#5230](https://github.com/SocialGouv/code-du-travail-numerique/issues/5230)) ([6593b38](https://github.com/SocialGouv/code-du-travail-numerique/commit/6593b383023293aad9f7bbd47588277124adb040))
+
 # [4.103.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.2...v4.103.0) (2023-06-27)
 
 ### Bug Fixes
