@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { colors } from "../theme.js";
+import { colors } from "../theme";
 
 export const CodeSnippet = ({ children }) => (
   <Code>

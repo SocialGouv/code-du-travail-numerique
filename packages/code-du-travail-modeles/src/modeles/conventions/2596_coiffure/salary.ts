@@ -1,3 +1,4 @@
+import { ReferenceSalaryLegal } from "../../base";
 import type {
   IReferenceSalary,
   ReferenceSalaryProps,
@@ -6,41 +7,56 @@ import type {
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
+export enum CatPro2596 {
+  agentsMaitrise = "Agents de maîtrise",
+  cadres = "Cadres",
+  coiffeur = "Emplois techniques et de coiffeurs",
+  esthetique = "Emplois de l'esthétique-cosmétique",
+  nonTechnique = "Emplois non techniques",
+}
+
 export type CC2596ReferenceSalaryProps = {
   salaires: SalaryPeriods[];
+  catPro: CatPro2596;
   salairesPendantPreavis: SalaryPeriods[];
 };
 
 export class ReferenceSalary2596
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2596>
 {
-  /**
-   * Règle :
-   * S/12
-   *  S : total des salaires perçus lors des 12 derniers mois de présence dans l'entreprise (brut, préavis inclu)
-   **/
   computeReferenceSalary({
-    salaires,
-    salairesPendantPreavis,
+    salaires = [],
+    salairesPendantPreavis = [],
+    catPro,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2596>): number {
-    const rankedSalaires = rankByMonthArrayDescFrench(salaires);
-    const rankedSalairesPendantPreavis = rankByMonthArrayDescFrench(
-      salairesPendantPreavis
-    );
-    const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
+    if (
+      catPro === CatPro2596.coiffeur ||
+      catPro === CatPro2596.esthetique ||
+      catPro === CatPro2596.nonTechnique
+    ) {
+      return new ReferenceSalaryLegal().computeReferenceSalary({ salaires });
+    } else {
+      const rankedSalaires = rankByMonthArrayDescFrench(salaires);
+      const rankedSalairesPendantPreavis = rankByMonthArrayDescFrench(
+        salairesPendantPreavis
+      );
+      const salaryValues = rankedSalaires
+        .map((a) => a.value)
+        .filter(nonNullable);
 
-    const totalSalaryValues = [
-      ...rankedSalairesPendantPreavis.map((a) => a.value).filter(nonNullable),
-      ...salaryValues,
-    ].slice(0, 12);
+      const totalSalaryValues = [
+        ...rankedSalairesPendantPreavis.map((a) => a.value).filter(nonNullable),
+        ...salaryValues,
+      ].slice(0, 12);
 
-    const primesPendantPreavis = rankedSalairesPendantPreavis
-      .map((v) => v.prime)
-      .filter(nonNullable);
+      const primesPendantPreavis = rankedSalairesPendantPreavis
+        .map((v) => v.prime)
+        .filter(nonNullable);
 
-    return (
-      (sum(totalSalaryValues) + sum(primesPendantPreavis)) /
-      totalSalaryValues.length
-    );
+      return (
+        (sum(totalSalaryValues) + sum(primesPendantPreavis)) /
+        totalSalaryValues.length
+      );
+    }
   }
 }

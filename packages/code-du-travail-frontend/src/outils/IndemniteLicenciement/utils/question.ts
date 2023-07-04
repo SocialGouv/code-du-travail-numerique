@@ -1,5 +1,5 @@
 import { SalaryPeriods } from "@socialgouv/modeles-social";
-import { Agreement } from "../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import { OuiNon } from "../common";
 
 export const generateSameSalaryQuestion = (

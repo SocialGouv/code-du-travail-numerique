@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { Button } from "../Button/index.js";
 import { FlatList } from "../FlatList/index.js";
-import { breakpoints, spacings } from "../theme.js";
+import { breakpoints, spacings } from "../theme";
 
 export const ViewMore = ({
   button,

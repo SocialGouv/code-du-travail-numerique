@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
-import { breakpoints, spacings } from "../../theme.js";
+import { breakpoints, spacings } from "../../theme";
 
 export const CONTAINER_MAX_WIDTH = "124rem";
 

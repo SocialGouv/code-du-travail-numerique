@@ -5,6 +5,7 @@ export type PreavisRetraiteFormState = Partial<{
   ccn: ConventionCollective;
   infos: Record<string, string>;
   seniority: PreavisRetraiteSeniorityFormState;
+  hasNoEnterpriseSelected: boolean;
 }>;
 
 export const OriginMandatoryName = "origin.isRetirementMandatory";

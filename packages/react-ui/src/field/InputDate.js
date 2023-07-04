@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { box, breakpoints, fonts, spacings } from "../theme.js";
+import { box, breakpoints, fonts, spacings } from "../theme";
 import { DefaultInputProps, INPUT_HEIGHT } from "./Input";
 
 function addSlashIfNeeded(newValue) {

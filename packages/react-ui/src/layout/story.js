@@ -21,7 +21,7 @@ export const notice = () => (
     <p>
       N.B. Although Wrapper is supposed to provide normalized spacings, you can
       always add paddings and marging anywhere needed. But you must use the
-      spacings variables in the `theme.js` file.
+      spacings variables in the `theme` file.
     </p>
     <Section>
       <Container>

@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.104.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.103.0...v4.104.0) (2023-07-04)
+
+### Bug Fixes
+
+- bug bouton suivant indemnite precarité ([#5242](https://github.com/SocialGouv/code-du-travail-numerique/issues/5242)) ([06009bb](https://github.com/SocialGouv/code-du-travail-numerique/commit/06009bb6cca3e1bafab690ad4d44dcb4e34c3570))
+- **contribs page:** add link to cc page on the contrib page ([#5216](https://github.com/SocialGouv/code-du-travail-numerique/issues/5216)) ([1be33c7](https://github.com/SocialGouv/code-du-travail-numerique/commit/1be33c7ec9968a3fab2cc642ba8fb7a3d621d743))
+- **fiche service public:** affichage des images ([#5240](https://github.com/SocialGouv/code-du-travail-numerique/issues/5240)) ([37175d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/37175d8f2cf1ad2261503b50d4870447298bc84e))
+- **indemnite-licenciement:** ajout d'un message specifique pour la CC 44 ([#5237](https://github.com/SocialGouv/code-du-travail-numerique/issues/5237)) ([e5ed301](https://github.com/SocialGouv/code-du-travail-numerique/commit/e5ed301f947ffbc1582c6843da02ddab5edcf177))
+- **link:** open in a new tab no enterprise link ([e0269b4](https://github.com/SocialGouv/code-du-travail-numerique/commit/e0269b4761cab7a2d84fe9d054cf065543a1455c))
+- test e2e sur les fiches SP ([#5243](https://github.com/SocialGouv/code-du-travail-numerique/issues/5243)) ([d101cc0](https://github.com/SocialGouv/code-du-travail-numerique/commit/d101cc0198fde0ab8283a07121e4e9b64dd3f961))
+- widget targets ([#5252](https://github.com/SocialGouv/code-du-travail-numerique/issues/5252)) ([94804d0](https://github.com/SocialGouv/code-du-travail-numerique/commit/94804d09521568370cb7487ffd35c818382cb891))
+- **widget:** put back query selector with "\*" ([#5259](https://github.com/SocialGouv/code-du-travail-numerique/issues/5259)) ([339d2bd](https://github.com/SocialGouv/code-du-travail-numerique/commit/339d2bde79ffca89a1f7a79803c6dc8b707aec64))
+
+### Features
+
+- **indemnité de licenciement:** implémentation de la CC 292 ([#5214](https://github.com/SocialGouv/code-du-travail-numerique/issues/5214)) ([0104fe5](https://github.com/SocialGouv/code-du-travail-numerique/commit/0104fe52e6141f14bb0d060900ae2046bf27aa20))
+- **indemnite-licenciement:** ajout de la cc 2120 ([#5230](https://github.com/SocialGouv/code-du-travail-numerique/issues/5230)) ([6593b38](https://github.com/SocialGouv/code-du-travail-numerique/commit/6593b383023293aad9f7bbd47588277124adb040))
+- **indemnite-licenciement:** Mise en place d'un module de recherche pour la CC 3239 ([#4958](https://github.com/SocialGouv/code-du-travail-numerique/issues/4958)) ([4e649a6](https://github.com/SocialGouv/code-du-travail-numerique/commit/4e649a67f659dbaaf73521fccbb9900e5276d623))
+
+# [4.103.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.2...v4.103.0) (2023-06-27)
+
+### Bug Fixes
+
+- sref ([#5232](https://github.com/SocialGouv/code-du-travail-numerique/issues/5232)) ([5e5c231](https://github.com/SocialGouv/code-du-travail-numerique/commit/5e5c231a3e574068ebb68bbec8041de98448e00b))
+
 ## [4.102.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.1...v4.102.2) (2023-06-22)
 
 ### Bug Fixes

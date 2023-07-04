@@ -405,7 +405,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 class="sc-ijDOKB LiMxE"
               >
                 <div
-                  class="sc-iGgWBj sc-DWsrX cWzIZL gkYJaG"
+                  class="sc-iGgWBj sc-iLWXdy cWzIZL gdxCJX"
                 >
                   <p
                     class="sc-jGKxIK cNijme"
@@ -539,7 +539,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </div>
           </div>
           <div
-            class="sc-aXZVg sc-iLWXdy gZgZQL gFmrRB"
+            class="sc-aXZVg sc-huFNyZ gZgZQL hGRaJQ"
           >
             <p
               class="sc-jGKxIK cNijme"
@@ -665,10 +665,10 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 class="sc-iGgWBj cRLRjd"
               >
                 <div
-                  class="sc-djVXDX wfOrL"
+                  class="sc-epRvzc fYfPSn"
                 >
                   <h2
-                    class="sc-epRvzc gDGuoy sc-kAyceB kDiAsV"
+                    class="sc-btwKTd jWmhxM sc-kAyceB kDiAsV"
                     data-testid="heading"
                   >
                     <span
@@ -678,15 +678,15 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     Avez-vous trouvé la réponse à votre question ?
                   </h2>
                   <p
-                    class="sc-btwKTd jUULWB"
+                    class="sc-gFnajm dysCpS"
                   >
                     <button
-                      class="sc-kOPcWz cpQXMn sc-gFnajm iYujXy"
+                      class="sc-kOPcWz cpQXMn sc-dISpDn bzxqhL"
                     >
                       Non
                     </button>
                     <button
-                      class="sc-kOPcWz cpQXMn sc-gFnajm iYujXy"
+                      class="sc-kOPcWz cpQXMn sc-dISpDn bzxqhL"
                     >
                       Oui
                     </button>

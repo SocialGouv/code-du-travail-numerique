@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.104.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.103.0...v4.104.0) (2023-07-04)
+
+### Bug Fixes
+
+- **preavis-retraite:** Mise a la retraite pour un Cadres de la 1505 ([#5236](https://github.com/SocialGouv/code-du-travail-numerique/issues/5236)) ([e105ecd](https://github.com/SocialGouv/code-du-travail-numerique/commit/e105ecd220fae61407566425e73170c5d6ad0ff2))
+
+### Features
+
+- **indemnité de licenciement:** implémentation de la CC 292 ([#5214](https://github.com/SocialGouv/code-du-travail-numerique/issues/5214)) ([0104fe5](https://github.com/SocialGouv/code-du-travail-numerique/commit/0104fe52e6141f14bb0d060900ae2046bf27aa20))
+- **indemnite-licenciement:** ajout de la cc 2120 ([#5230](https://github.com/SocialGouv/code-du-travail-numerique/issues/5230)) ([6593b38](https://github.com/SocialGouv/code-du-travail-numerique/commit/6593b383023293aad9f7bbd47588277124adb040))
+
+# [4.103.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.2...v4.103.0) (2023-06-27)
+
+### Bug Fixes
+
+- **indemnité de licenciement:** ne pas prendre que les années complètes pour le droit à l'indemnité pour la 2148 ([#5238](https://github.com/SocialGouv/code-du-travail-numerique/issues/5238)) ([5a1d9d9](https://github.com/SocialGouv/code-du-travail-numerique/commit/5a1d9d9dce0b4d81b8b422f9a2ad0a23d551cda9))
+- sref ([#5232](https://github.com/SocialGouv/code-du-travail-numerique/issues/5232)) ([5e5c231](https://github.com/SocialGouv/code-du-travail-numerique/commit/5e5c231a3e574068ebb68bbec8041de98448e00b))
+
+### Features
+
+- **indemnite-licenciement:** activation de nouvelles CCs ([c5d6a72](https://github.com/SocialGouv/code-du-travail-numerique/commit/c5d6a72b2e68d315384a99a27163c43b0038ef00))
+
 ## [4.102.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.1...v4.102.2) (2023-06-22)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

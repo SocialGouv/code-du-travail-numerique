@@ -47,7 +47,7 @@ describe("formule utils", () => {
     test("should work with a real example", () => {
       const formula =
         "[(1 / 5 * Sref * A1)][ + (2 / 5 * Sref * A2)][ + (1 / 2 * Sref * A3)][ + (Sref * A4)]";
-      expect(removePartFromFormula(formula, "A2: Années")).toEqual(
+      expect(removePartFromFormula(formula, "A2 : Années")).toEqual(
         "[(1 / 5 * Sref * A1)][ + (1 / 2 * Sref * A3)][ + (Sref * A4)]"
       );
     });

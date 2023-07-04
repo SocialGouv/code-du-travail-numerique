@@ -2,7 +2,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../src/GlobalStyles";
 import { Wrapper } from "../src/layout/Wrapper/index.js";
-import { blackAndWhiteColors, colors } from "../src/theme.js";
+import { blackAndWhiteColors, colors } from "../src/theme";
 import type { Preview } from "@storybook/react";
 
 export const globalTypes = {

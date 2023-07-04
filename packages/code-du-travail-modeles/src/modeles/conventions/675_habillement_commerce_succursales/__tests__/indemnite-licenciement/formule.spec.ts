@@ -55,7 +55,7 @@ describe("Formule pour l'indemnité conventionnel de licenciement pour la CC 675
       ${CategoryPro675.agents} | ${true}           | ${35} | ${6}      | ${"1 / 10 * Sref * A1"}                                                                              | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (6 ans)", "Sref : Salaire de référence (2000 €)"]}
       ${CategoryPro675.agents} | ${true}           | ${35} | ${20}     | ${"1 / 10 * Sref * A1 + 2 / 5 * Sref * A2"}                                                          | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (10 ans)", "A2 : Années d'ancienneté au-delà de la 10ème année (10 ans)", "Sref : Salaire de référence (2000 €)"]}
       ${CategoryPro675.agents} | ${true}           | ${35} | ${22}     | ${"1 / 10 * Sref * A1 + 2 / 5 * Sref * A2"}                                                          | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (10 ans)", "A2 : Années d'ancienneté au-delà de la 10ème année (12 ans)", "Sref : Salaire de référence (2000 €)"]}
-      ${CategoryPro675.agents} | ${true}           | ${35} | ${25}     | ${"1 / 10 * Sref * A1 + 2 / 5 * Sref * A2"}                                                          | ${["A1 : Années d'ancienneté jusqu'à la 10ème année incluse (10 ans)", "A2 : Années d'ancienneté au-delà de la 10ème année (15 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${CategoryPro675.agents} | ${true}           | ${35} | ${25}     | ${"6 * Sref"}                                                                                        | ${["Sref : Salaire de référence (2000 €)"]}
     `(
       "Avec $seniority ans, catégorie $category, age $age,isCollectifFiring $isCollectifFiring => $expectedFormula",
       ({

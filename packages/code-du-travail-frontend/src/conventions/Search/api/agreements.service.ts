@@ -2,7 +2,7 @@ import debounce from "debounce-promise";
 import { SITE_URL } from "../../../config";
 
 import { nafError } from "./error";
-import { Agreement } from "./type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 const formatCCn = ({ num, id, slug, url, title, shortTitle, highlight }) => ({
   ...(highlight ? { highlight } : {}),

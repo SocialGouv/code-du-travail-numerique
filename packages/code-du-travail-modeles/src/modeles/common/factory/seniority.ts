@@ -22,6 +22,7 @@ import {
   Seniority1740,
   Seniority1996,
   Seniority2098,
+  Seniority2120,
   Seniority2148,
   Seniority2216,
   Seniority2511,
@@ -31,6 +32,7 @@ import {
   Seniority3043,
   Seniority3239,
 } from "../../conventions";
+import { Seniority0292 } from "../../conventions/292_plasturgie";
 import { SupportedCcIndemniteLicenciement } from "../index";
 import type { ISeniority } from "../types";
 
@@ -55,6 +57,8 @@ export class SeniorityFactory {
         return new Seniority1527();
       case SupportedCcIndemniteLicenciement.IDCC0016:
         return new Seniority16() as ISeniority<T>;
+      case SupportedCcIndemniteLicenciement.IDCC0292:
+        return new Seniority0292() as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.IDCC3239:
         return new Seniority3239();
       case SupportedCcIndemniteLicenciement.IDCC650:
@@ -99,6 +103,8 @@ export class SeniorityFactory {
         return new Seniority2148();
       case SupportedCcIndemniteLicenciement.IDCC0176:
         return new Seniority176();
+      case SupportedCcIndemniteLicenciement.IDCC2120:
+        return new Seniority2120();
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new SeniorityLegal();

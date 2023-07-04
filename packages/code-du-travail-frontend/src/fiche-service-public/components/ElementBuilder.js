@@ -13,6 +13,7 @@ import ServiceEnLigne from "./ServiceEnLigne.js";
 import Table from "./Table.js";
 import Tabulator from "./Tabulator.js";
 import Title from "./Title.js";
+import { Image as ImageElement } from "./Image";
 
 const { spacings } = theme;
 
@@ -47,6 +48,8 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
       } else {
         return <Accordion data={data} headingLevel={headingLevel} />;
       }
+    case "Image":
+      return <ImageElement data={data} />;
     case "Introduction":
       if (ignoreParagraph(data)) {
         return (
@@ -100,8 +103,9 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
         </ANoter>
       );
     case "Chapitre":
-    case "SousChapitre":
+    case "Description":
     case "FragmentConditionne":
+    case "SousChapitre":
       return (
         <ElementBuilder data={data.children} headingLevel={headingLevel} />
       );

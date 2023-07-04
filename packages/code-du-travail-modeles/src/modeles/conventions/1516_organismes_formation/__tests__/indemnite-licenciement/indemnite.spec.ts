@@ -26,10 +26,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 1516", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniorityRight,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
             "contrat salarié . indemnité de licenciement . date de notification":
               "01/12/2022",
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -60,10 +60,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 1516", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniorityRight,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
             "contrat salarié . indemnité de licenciement . date de notification":
               "05/06/2023",
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );

@@ -6,7 +6,7 @@ import {
 } from "@socialgouv/cdtn-utils";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
-import { Agreement } from "../../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import {
   TrackingProps,
   UserAction,
@@ -19,7 +19,11 @@ type Props = {
   isWidgetMode?: boolean;
 } & TrackingProps;
 
-export function AgreementTile({ agreement, onUserAction, isWidgetMode }: Props): JSX.Element {
+export function AgreementTile({
+  agreement,
+  onUserAction,
+  isWidgetMode,
+}: Props): JSX.Element {
   const clickHandler = () => {
     onUserAction(UserAction.SelectAgreement, `idcc${agreement.num.toString()}`);
   };
@@ -29,7 +33,9 @@ export function AgreementTile({ agreement, onUserAction, isWidgetMode }: Props):
       title={`${agreement.shortTitle} IDCC${formatIdcc(agreement.num)}`}
       subtitle={getLabelBySource(SOURCES.CCN)}
       onClick={clickHandler}
-      href={`${isWidgetMode ? SITE_URL : ""}/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`}
+      href={`${isWidgetMode ? SITE_URL : ""}/${getRouteBySource(SOURCES.CCN)}/${
+        agreement.slug
+      }`}
       target={isWidgetMode ? "_blank" : "_self"}
     >
       <Paragraph noMargin>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should display element within FragmentConditionne should have two different levels of headings 1`] = `
+exports[`FragmentConditionne Should display element within 1`] = `
 <div>
   <div
     class="sc-ePDLzJ gyQfvT"

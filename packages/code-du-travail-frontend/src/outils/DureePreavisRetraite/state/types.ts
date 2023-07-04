@@ -6,7 +6,7 @@ import { Publicodes } from "@socialgouv/modeles-social/bin";
 import { PublicodesPreavisRetraiteResult } from "@socialgouv/modeles-social/bin/publicodes/types";
 import { Step } from "../../Simulator";
 import { StepName } from "../steps";
-import { Agreement } from "../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 export type PreavisRetraiteState = {
   title: string;

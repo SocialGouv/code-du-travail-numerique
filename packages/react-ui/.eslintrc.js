@@ -1,10 +1,5 @@
 module.exports = {
-  extends: [
-    "@socialgouv/eslint-config-react",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-  ],
+  extends: ["@socialgouv/eslint-config-react"],
   overrides: [
     {
       env: {
@@ -20,6 +15,7 @@ module.exports = {
   },
   rules: {
     "import/no-extraneous-dependencies": "error",
+    "import/no-unresolved": "off",
     "react/react-in-jsx-scope:": "off",
   },
 };
