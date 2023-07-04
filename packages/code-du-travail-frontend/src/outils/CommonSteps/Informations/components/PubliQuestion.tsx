@@ -127,7 +127,7 @@ const PubliQuestion: React.FC<Props> = ({
           inputType="number"
           value={value}
           onChange={onChange}
-          text={unité !== "an" ? unité : undefined}
+          text={unité}
           error={error}
           id={name}
           showRequired
