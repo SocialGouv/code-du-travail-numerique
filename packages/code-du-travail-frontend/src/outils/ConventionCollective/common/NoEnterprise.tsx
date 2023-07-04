@@ -1,7 +1,6 @@
 import React from "react";
 import { Heading, theme, Button } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
-import { useRouter } from "next/router";
 import { push as matopush } from "@socialgouv/matomo-next";
 import {
   MatomoBaseEvent,
@@ -12,8 +11,6 @@ import {
 import { FeedbackWrapper } from "../../../common/Feedback/FeedbackWrapper";
 
 export function NoEnterprise(): JSX.Element {
-  const router = useRouter();
-
   const onClick = (event: React.SyntheticEvent) => {
     event.preventDefault();
     matopush([
@@ -22,8 +19,9 @@ export function NoEnterprise(): JSX.Element {
       MatomoSimulatorEvent.CLICK_NO_COMPANY,
       MatomoSimulatorNameEvent.FIND_AGREEMENT,
     ]);
-    router.push(
-      `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`
+    window.open(
+      `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
+      "_blank"
     );
   };
 

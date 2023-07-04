@@ -219,14 +219,21 @@ const Contribution = ({ answers, content }) => {
                     <ReferencesJuridiques
                       references={conventionAnswer.references}
                     />
-                    {isConventionDetected() && (
-                      <p>
-                        Consultez les questions-réponses fréquentes pour{" "}
-                        <a href={`/convention-collective/${convention.slug}`}>
-                          la convention collective {convention.title}
-                        </a>
-                      </p>
-                    )}
+                    <p>
+                      Consultez les questions-réponses fréquentes pour{" "}
+                      <a
+                        href={`/convention-collective/${
+                          isConventionalAnswer
+                            ? conventionAnswer.slug
+                            : convention.slug
+                        }`}
+                      >
+                        la convention collective{" "}
+                        {isConventionalAnswer
+                          ? conventionAnswer.shortName
+                          : convention.shortTitle}
+                      </a>
+                    </p>
                   </>
                 ) : (
                   <>
