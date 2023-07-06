@@ -20,14 +20,7 @@ Storage.prototype.getItem = jest.fn(
 
 describe(`Tests des erreurs d'éligibilité`, () => {
   beforeEach(() => {
-    render(
-      <CalculateurIndemnite
-        icon={""}
-        title={""}
-        displayTitle={""}
-        slug={"indemnite-licenciement"}
-      />
-    );
+    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
     fireEvent.click(ui.introduction.startButton.get());
   });
 

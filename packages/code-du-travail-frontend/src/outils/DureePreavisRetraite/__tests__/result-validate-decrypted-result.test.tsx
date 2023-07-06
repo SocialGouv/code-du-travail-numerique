@@ -1,7 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { ui } from "./ui";
 import { DureePreavisRetraite } from "../index";
-import { loadPublicodesRules } from "../../api";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(

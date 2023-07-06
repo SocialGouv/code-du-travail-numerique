@@ -10,14 +10,7 @@ jest.spyOn(Storage.prototype, "getItem");
 describe("Indemnité licenciement - Step salaire", () => {
   describe("validation de la step salaire", () => {
     beforeEach(() => {
-      render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          slug={"indemnite-licenciement"}
-        />
-      );
+      render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());

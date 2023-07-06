@@ -85,14 +85,20 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        repositories: ["@cdt/frontend", "@socialgouv/modeles-social"]
+        repositories:
+          [
+            "@cdt/frontend",
+            "@socialgouv/modeles-social",
+            "@socialgouv/cdtn-utils",
+            "@socialgouv/cdtn-ui",
+          ]
     steps:
       - uses: actions/cache@v3
         name: Restore build
         with:
           path: ./*
           key: ${{ github.sha }}
-      - name: Lint ${{ matrix.repositories }}
+      - name: Type-check ${{ matrix.repositories }}
         run: |
           yarn workspace ${{ matrix.repositories }} type-check
 

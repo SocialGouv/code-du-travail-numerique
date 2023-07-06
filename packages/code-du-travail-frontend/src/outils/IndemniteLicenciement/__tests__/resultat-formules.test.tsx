@@ -94,14 +94,7 @@ describe("Page résultat: vérification de la formule affichée", () => {
           () => `{"num":${ccNum},"shortTitle":"${ccTitle}"}`
         );
 
-        render(
-          <CalculateurIndemnite
-            icon={""}
-            title={""}
-            displayTitle={""}
-            slug={"indemnite-licenciement"}
-          />
-        );
+        render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
         userEvent.click(ui.introduction.startButton.get());
         userEvent.click(ui.contract.type.cdi.get());
         userEvent.click(ui.contract.fauteGrave.non.get());

@@ -8,9 +8,10 @@ import {
   PublicodesData,
   PublicodesPreavisRetraiteResult,
 } from "@socialgouv/modeles-social/bin";
+import { PreavisRetraitePublicodes } from "@socialgouv/modeles-social";
 
 export const generateStore = (
-  publicodes: Publicodes<PublicodesPreavisRetraiteResult>,
+  publicodes: PreavisRetraitePublicodes,
   state: PreavisRetraiteState = initialState,
   onAgreementChange = () => {},
   onFormValuesChange = () => {},
@@ -39,12 +40,13 @@ export const publicodesData: PublicodesData<PublicodesPreavisRetraiteResult> = {
   situation: [],
 };
 
-class PublicodesStub implements Publicodes<PublicodesPreavisRetraiteResult> {
+class PublicodesStub extends PreavisRetraitePublicodes {
+  public data;
+
   constructor(data: PublicodesData<PublicodesPreavisRetraiteResult>) {
+    super(data);
     this.data = data;
   }
-
-  data;
 
   execute: (rule: string) => PublicodesPreavisRetraiteResult = () =>
     publicodesData.result;

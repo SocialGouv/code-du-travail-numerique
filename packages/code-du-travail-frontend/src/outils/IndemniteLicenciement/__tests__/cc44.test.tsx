@@ -19,14 +19,7 @@ Storage.prototype.getItem = jest.fn(
 describe("Indemnité licenciement - CC 44", () => {
   describe("parcours avec la convention collective pour valider ses spécificités AVEC PREAVIS", () => {
     beforeEach(() => {
-      render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          slug={"indemnite-licenciement"}
-        />
-      );
+      render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
@@ -155,14 +148,7 @@ describe("Indemnité licenciement - CC 44", () => {
 
   describe("parcours avec la convention collective pour valider ses spécificités SANS PREAVIS", () => {
     beforeEach(() => {
-      render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          slug={"indemnite-licenciement"}
-        />
-      );
+      render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
@@ -241,14 +227,7 @@ describe("Indemnité licenciement - CC 44", () => {
 
   describe("parcours avec une date d'arrêt", () => {
     beforeEach(() => {
-      render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          slug={"indemnite-licenciement"}
-        />
-      );
+      render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
     });
 
     test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, () => {

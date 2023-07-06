@@ -44,13 +44,14 @@ import {
 
 import { ToolName } from "../types";
 import { createContext, useContext } from "react";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
   SalairesStoreSlice &
   ResultStoreSlice &
   AgreementStoreSlice &
-  CommonAgreementStoreSlice &
+  CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
   CommonInformationsStoreSlice;
 
 export type StepData<
@@ -85,23 +86,23 @@ export type StoreOptions = {
 const createRootSlice = (
   set: StoreApi<MainStore>["setState"],
   get: StoreApi<MainStore>["getState"],
-  { slug, toolName }
+  { simulatorName, toolName }
 ) => ({
   ...createContratTravailStore(set, get, { toolName }),
   ...createAncienneteStore(set, get, { toolName }),
   ...createSalairesStore(set, get, { toolName }),
   ...createResultStore(set, get, { toolName }),
   ...createRootAgreementsStore(set, get, { toolName }),
-  ...createCommonAgreementStore(set, get, { toolName, slug }),
+  ...createCommonAgreementStore(set, get, { toolName, simulatorName }),
   ...createCommonInformationsStore(set, get, { toolName }),
 });
 
-const createStore = (slug: string, toolName: ToolName) =>
+const createStore = (simulatorName: PublicodesSimulator, toolName: ToolName) =>
   create(
     (
       set: StoreApi<MainStore>["setState"],
       get: StoreApi<MainStore>["getState"]
-    ) => createRootSlice(set, get, { slug, toolName })
+    ) => createRootSlice(set, get, { simulatorName, toolName })
   );
 
 const IndemniteLicenciementContext = createContext<StoreApi<MainStore>>(

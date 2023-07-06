@@ -19,7 +19,6 @@ describe("Indemnité licenciement - Tracking", () => {
         icon={""}
         title={"Indemnité de licenciement"}
         displayTitle={"Indemnité de licenciement"}
-        slug={"indemnite-licenciement"}
       />
     );
   });
