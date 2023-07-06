@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.104.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.104.1...v4.104.2) (2023-07-06)
+
+### Bug Fixes
+
+- **canonical:** `search` replaced by keyword `recherche` ([#5260](https://github.com/SocialGouv/code-du-travail-numerique/issues/5260)) ([362418c](https://github.com/SocialGouv/code-du-travail-numerique/commit/362418c541667cadf8a11cabd31b97d96e76309f))
+- widget console error ([#5264](https://github.com/SocialGouv/code-du-travail-numerique/issues/5264)) ([2e7020d](https://github.com/SocialGouv/code-du-travail-numerique/commit/2e7020d8dfceb887fe0c69d83e240be22767a3c5))
+- **widget:** le lien s'ouvre dans une nouvelle page pour la convention collective 3239 ([#5263](https://github.com/SocialGouv/code-du-travail-numerique/issues/5263)) ([afe9484](https://github.com/SocialGouv/code-du-travail-numerique/commit/afe9484e43e6e6d304117e683109eea22fed52b4))
+
 ## [4.104.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.104.0...v4.104.1) (2023-07-06)
 
 ### Bug Fixes
