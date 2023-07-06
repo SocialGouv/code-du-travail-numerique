@@ -41,7 +41,6 @@ contrat salarié . convention collective . bricolage . indemnité de licenciemen
 contrat salarié . convention collective . bricolage . indemnité de licenciement . cadres . age:
   titre: Âge du salarié
   question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
-  unité: an
   cdtn:
     type: entier
 
