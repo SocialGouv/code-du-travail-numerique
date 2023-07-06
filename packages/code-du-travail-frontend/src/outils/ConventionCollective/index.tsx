@@ -129,7 +129,7 @@ function AgreementSearchTool({
           handleEnterpriseSelection={handleEnterpriseSelection}
           onBackClick={clearSearchType}
           onUserAction={onUserAction}
-          hidePreviousButton={widgetMode}
+          widgetMode={!!widgetMode}
         />
       );
       break;
