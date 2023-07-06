@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.104.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.104.0...v4.104.1) (2023-07-06)
+
+### Bug Fixes
+
+- console error widget ([#5262](https://github.com/SocialGouv/code-du-travail-numerique/issues/5262)) ([b4f6499](https://github.com/SocialGouv/code-du-travail-numerique/commit/b4f6499043541f3396be2cb5631c46ca8a94ca22))
+- **image:** allow images coming from service public ([#5261](https://github.com/SocialGouv/code-du-travail-numerique/issues/5261)) ([44fce19](https://github.com/SocialGouv/code-du-travail-numerique/commit/44fce19bccdbdbc90ddeda5303756f4a7b407b93))
+- **services de renseignements:** updates url with redirect + test only once the duplicated url ([#5258](https://github.com/SocialGouv/code-du-travail-numerique/issues/5258)) ([eae64a8](https://github.com/SocialGouv/code-du-travail-numerique/commit/eae64a84af54dceee4d134b611cbf2c8dd591b08))
+
 # [4.104.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.103.0...v4.104.0) (2023-07-04)
 
 ### Bug Fixes
