@@ -61,7 +61,8 @@ const createPreavisRetraiteStore = (title: string, slug: string) =>
             )
           ),
           publicodes: loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
-            PublicodesSimulator.PREAVIS_RETRAITE
+            PublicodesSimulator.PREAVIS_RETRAITE,
+            newValue?.num?.toString()
           ),
         };
       }),
