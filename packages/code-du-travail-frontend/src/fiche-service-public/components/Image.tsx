@@ -37,7 +37,7 @@ function ImageComponent({ data }: ImageProps) {
 
   return (
     <>
-      <figure role="group" aria-label={legendText}>
+      <Figure role="group" aria-label={legendText}>
         <img
           src={`https://www.service-public.fr/webapp/images/vdd/extralarge/${name}`}
           alt={legendText}
@@ -45,7 +45,7 @@ function ImageComponent({ data }: ImageProps) {
         <Figcaption>
           {creditText && <span>Crédits : {creditText}</span>}
         </Figcaption>
-      </figure>
+      </Figure>
       {texteDeRemplacement && (
         <MoreContent noLeftPadding title="Voir en détail">
           <Wrapper variant="dark">{texteDeRemplacement}</Wrapper>
@@ -56,6 +56,12 @@ function ImageComponent({ data }: ImageProps) {
 }
 
 export const Image = memo(ImageComponent) as typeof ImageComponent;
+
+const Figure = styled.figure`
+  img {
+    max-width: 100%;
+  }
+`;
 
 const Figcaption = styled.figcaption`
   display: flex;
