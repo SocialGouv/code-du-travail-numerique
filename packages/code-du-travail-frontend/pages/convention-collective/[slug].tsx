@@ -11,6 +11,7 @@ import Convention from "../../src/conventions/Convention";
 import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
+import { apiIdcc } from "../../src/conventions/Search/api/agreement.service";
 
 interface Props {
   convention;
@@ -80,12 +81,20 @@ function ConventionCollective(props: Props): JSX.Element {
   );
 }
 
+const IDCC_ONLY = /^\d{4}$/;
 export const getServerSideProps = async ({ query }) => {
-  const responseContainer = await fetch(`${SITE_URL}/api/agreements/${query.slug}`);
-  if (!responseContainer.ok) {
-    return handleError(responseContainer);
+  if (IDCC_ONLY.test(query.slug)) {
+    const conventions = await apiIdcc(query.slug);
+    if (!conventions.length) {
+      return { notFound: true };
+    }
+    return { redirect: { destination: conventions[0].slug } };
   }
-  const convention = await responseContainer.json();
+  const res = await fetch(`${SITE_URL}/api/agreements/${query.slug}`);
+  if (!res.ok) {
+    return handleError(res);
+  }
+  const convention = await res.json();
   return { props: { convention } };
 };
 
