@@ -88,7 +88,7 @@ export const getServerSideProps = async ({ query }) => {
     if (!conventions.length) {
       return { notFound: true };
     }
-    return { redirect: { destination: conventions[0].slug } };
+    return { redirect: { destination: conventions[0].slug, permanent: true } };
   }
   const res = await fetch(`${SITE_URL}/api/agreements/${query.slug}`);
   if (!res.ok) {
