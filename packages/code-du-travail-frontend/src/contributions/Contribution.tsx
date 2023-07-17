@@ -9,8 +9,6 @@ import {
   Badge,
   Button,
   icons,
-  IconStripe,
-  InsertTitle,
   Paragraph,
   Section,
   theme,
@@ -95,34 +93,115 @@ const Contribution = ({ answers, content }) => {
       {hasConventionAnswers && (
         <>
           <Badge />
-          <CustomWrapper variant="dark">
-            <IconStripe icon={icons.Custom}>
-              <StyledInsertTitle as="p">Page personnalisable</StyledInsertTitle>
-              {isConventionDetected() || isConventionalAnswer ? (
-                <Paragraph noMargin>
-                  Cette page a été personnalisée avec l’ajout des{" "}
-                  <a href="#customisation">
-                    informations de la convention collective :{" "}
-                    {isConventionalAnswer
-                      ? conventionAnswer.shortName
-                      : convention.shortTitle}
-                  </a>
-                </Paragraph>
+          <section>
+            <Wrapper variant="dark">
+              <StyledTitle
+                shift={spacings.xmedium}
+                variant="primary"
+                hasMarginTop={Boolean(answers.generic)}
+                id="customisation"
+              >
+                {isConventionalAnswer ? (
+                  <>
+                    Que dit la convention <i>{conventionAnswer.shortName}</i>
+                    &nbsp;?
+                  </>
+                ) : (
+                  <>Que dit votre convention collective&nbsp;?</>
+                )}
+              </StyledTitle>
+              {!isConventionDetected() && !isConventionalAnswer ? (
+                <SearchConvention onSelectConvention={setConvention} />
               ) : (
-                <Paragraph noMargin>
-                  Le contenu de cette page peut être personnalisé en fonction de
-                  votre situation.
-                  <br />
-                  <a href="#customisation">Voir en bas de page</a> pour
-                  renseigner votre convention collective.
-                </Paragraph>
+                <>
+                  {!isConventionalAnswer && (
+                    <>
+                      <StyledParagraph noMargin>
+                        Ce contenu est personnalisé avec les informations de la
+                        convention collective&nbsp;:
+                      </StyledParagraph>
+                      <Toast
+                        variant="secondary"
+                        onRemove={() => setConvention()}
+                      >
+                        {convention.shortTitle}
+                        {convention.highlight &&
+                          convention.highlight.searchInfo && (
+                            <Paragraph variant="altText" noMargin>
+                              {convention.highlight.searchInfo}
+                            </Paragraph>
+                          )}
+                      </Toast>
+                    </>
+                  )}
+                  {conventionAnswer ? (
+                    <>
+                      {conventionAnswer.highlight &&
+                        conventionAnswer.highlight.content && (
+                          <StyledAlert variant="primary">
+                            <StyledParagraph
+                              variant="primary"
+                              fontSize="small"
+                              fontWeight="700"
+                              noMargin
+                            >
+                              {conventionAnswer.highlight.title}
+                            </StyledParagraph>
+                            <Paragraph fontSize="small" noMargin>
+                              <Html>{conventionAnswer.highlight.content}</Html>
+                            </Paragraph>
+                          </StyledAlert>
+                        )}
+                      <MdxWrapper>
+                        <Mdx
+                          markdown={conventionAnswer.markdown}
+                          components={rehypeToReact}
+                        />
+                      </MdxWrapper>
+
+                      <ReferencesJuridiques
+                        references={conventionAnswer.references}
+                      />
+                      <p>
+                        Consultez les questions-réponses fréquentes pour{" "}
+                        <a
+                          href={`/convention-collective/${
+                            isConventionalAnswer
+                              ? conventionAnswer.slug
+                              : convention.slug
+                          }`}
+                        >
+                          la convention collective{" "}
+                          {isConventionalAnswer
+                            ? conventionAnswer.shortName
+                            : convention.shortTitle}
+                        </a>
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <Section>
+                        Désolé, nous n’avons pas de réponse pour cette
+                        convention collective.
+                      </Section>
+                    </>
+                  )}
+                  {!isConventionalAnswer && (
+                    <ButtonWrapper>
+                      <Button variant="primary" onClick={() => setConvention()}>
+                        Changer de convention collective
+                        <StyledCloseIcon />
+                      </Button>
+                    </ButtonWrapper>
+                  )}
+                </>
               )}
-            </IconStripe>
-          </CustomWrapper>
+            </Wrapper>
+          </section>
         </>
       )}
       {answers.generic && (
-        <section>
+        <Section>
           <Title stripe="left">Que dit le code du travail&nbsp;?</Title>
           {content && (
             <Meta>
@@ -150,111 +229,7 @@ const Contribution = ({ answers, content }) => {
             components={rehypeToReact(content)}
           />
           <ReferencesJuridiques references={filteredRefs} />
-        </section>
-      )}
-      {hasConventionAnswers && (
-        <StyledSection>
-          <Wrapper variant="dark">
-            <StyledTitle
-              shift={spacings.xmedium}
-              variant="primary"
-              hasMarginTop={Boolean(answers.generic)}
-              id="customisation"
-            >
-              {isConventionalAnswer ? (
-                <>
-                  Que dit la convention <i>{conventionAnswer.shortName}</i>
-                  &nbsp;?
-                </>
-              ) : (
-                <>Que dit votre convention collective&nbsp;?</>
-              )}
-            </StyledTitle>
-            {!isConventionDetected() && !isConventionalAnswer ? (
-              <SearchConvention onSelectConvention={setConvention} />
-            ) : (
-              <>
-                {!isConventionalAnswer && (
-                  <>
-                    <StyledParagraph noMargin>
-                      Ce contenu est personnalisé avec les informations de la
-                      convention collective&nbsp;:
-                    </StyledParagraph>
-                    <Toast variant="secondary" onRemove={() => setConvention()}>
-                      {convention.shortTitle}
-                      {convention.highlight &&
-                        convention.highlight.searchInfo && (
-                          <Paragraph variant="altText" noMargin>
-                            {convention.highlight.searchInfo}
-                          </Paragraph>
-                        )}
-                    </Toast>
-                  </>
-                )}
-                {conventionAnswer ? (
-                  <>
-                    {conventionAnswer.highlight &&
-                      conventionAnswer.highlight.content && (
-                        <StyledAlert variant="primary">
-                          <StyledParagraph
-                            variant="primary"
-                            fontSize="small"
-                            fontWeight="700"
-                            noMargin
-                          >
-                            {conventionAnswer.highlight.title}
-                          </StyledParagraph>
-                          <Paragraph fontSize="small" noMargin>
-                            <Html>{conventionAnswer.highlight.content}</Html>
-                          </Paragraph>
-                        </StyledAlert>
-                      )}
-                    <MdxWrapper>
-                      <Mdx
-                        markdown={conventionAnswer.markdown}
-                        components={rehypeToReact}
-                      />
-                    </MdxWrapper>
-
-                    <ReferencesJuridiques
-                      references={conventionAnswer.references}
-                    />
-                    <p>
-                      Consultez les questions-réponses fréquentes pour{" "}
-                      <a
-                        href={`/convention-collective/${
-                          isConventionalAnswer
-                            ? conventionAnswer.slug
-                            : convention.slug
-                        }`}
-                      >
-                        la convention collective{" "}
-                        {isConventionalAnswer
-                          ? conventionAnswer.shortName
-                          : convention.shortTitle}
-                      </a>
-                    </p>
-                  </>
-                ) : (
-                  <>
-                    <Section>
-                      Désolé, nous n’avons pas de réponse pour cette convention
-                      collective.
-                    </Section>
-                  </>
-                )}
-                {!isConventionalAnswer && (
-                  <ButtonWrapper>
-                    <Button variant="primary" onClick={() => setConvention()}>
-                      Changer de convention collective
-                      <StyledCloseIcon />
-                    </Button>
-                  </ButtonWrapper>
-                )}
-              </>
-            )}
-          </Wrapper>
-        </StyledSection>
+        </Section>
       )}
     </>
   );
@@ -278,22 +253,6 @@ const HideOnMobile = styled.span`
 
 const MdxWrapper = styled.div`
   margin-bottom: ${spacings.medium};
-`;
-
-const StyledInsertTitle = styled(InsertTitle).attrs({
-  "aria-level": "2",
-  role: "heading",
-})``;
-
-const StyledSection = styled(Section)`
-  padding-bottom: 0;
-`;
-
-const CustomWrapper = styled(Wrapper)`
-  margin-bottom: ${spacings.large};
-  @media (max-width: ${breakpoints.mobile}) {
-    margin-bottom: ${spacings.medium};
-  }
 `;
 
 const StyledParagraph = styled(Paragraph)`
