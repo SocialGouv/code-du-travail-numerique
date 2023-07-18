@@ -22,7 +22,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
   describe("CDI classique", () => {
     test.each([
       {
-        age: 45,
+        age: 40,
         entryDate: "01/07/2019",
         expectedCompensation: 556,
         expectedFormula: "0.3 * Sref * A",
@@ -30,7 +30,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 8 / 12,
       },
       {
-        age: 45,
+        age: 40,
         entryDate: "01/07/2019",
         expectedCompensation: 2502,
         expectedFormula: "0.3 * Sref * A",
@@ -38,7 +38,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 3,
       },
       {
-        age: 50,
+        age: 45,
         entryDate: "01/07/2019",
         expectedCompensation: 3336,
         expectedFormula: "(0.3 * Sref * A) + (1 * Sref)",
@@ -46,7 +46,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 8 / 12,
       },
       {
-        age: 50,
+        age: 45,
         entryDate: "01/07/2019",
         expectedCompensation: 5282,
         expectedFormula: "(0.3 * Sref * A) + (1 * Sref)",
@@ -54,7 +54,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 3,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2019",
         expectedCompensation: 6116,
         expectedFormula: "(0.3 * Sref * A) + (2 * Sref)",
@@ -62,7 +62,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 8 / 12,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2019",
         expectedCompensation: 8062,
         expectedFormula: "(0.3 * Sref * A) + (2 * Sref)",
@@ -70,7 +70,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 3,
       },
       {
-        age: 45,
+        age: 40,
         entryDate: "01/07/2019",
         expectedCompensation: 4726,
         expectedFormula: "0.34 * Sref * A",
@@ -78,7 +78,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 5,
       },
       {
-        age: 45,
+        age: 40,
         entryDate: "01/07/2019",
         expectedCompensation: 7561.6,
         expectedFormula: "0.34 * Sref * A",
@@ -86,7 +86,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 8,
       },
       {
-        age: 50,
+        age: 45,
         entryDate: "01/07/2019",
         expectedCompensation: 7506,
         expectedFormula: "(0.34 * Sref * A) + (1 * Sref)",
@@ -94,7 +94,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 5,
       },
       {
-        age: 50,
+        age: 45,
         entryDate: "01/07/2019",
         expectedCompensation: 10341.6,
         expectedFormula: "(0.34 * Sref * A) + (1 * Sref)",
@@ -102,7 +102,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 8,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2019",
         expectedCompensation: 10286,
         expectedFormula: "(0.34 * Sref * A) + (2 * Sref)",
@@ -110,7 +110,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 5,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2019",
         expectedCompensation: 13121.6,
         expectedFormula: "(0.34 * Sref * A) + (2 * Sref)",
@@ -118,7 +118,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 8,
       },
       {
-        age: 45,
+        age: 40,
         entryDate: "01/07/2019",
         expectedCompensation: 10564,
         expectedFormula: "0.38 * Sref * A",
@@ -126,7 +126,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 10,
       },
       {
-        age: 50,
+        age: 45,
         entryDate: "01/07/2019",
         expectedCompensation: 13344,
         expectedFormula: "(0.38 * Sref * A) + (1 * Sref)",
@@ -134,7 +134,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 10,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2019",
         expectedCompensation: 16124,
         expectedFormula: "(0.38 * Sref * A) + (2 * Sref)",
@@ -142,7 +142,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 10,
       },
       {
-        age: 50,
+        age: 45,
         entryDate: "01/07/2019",
         expectedCompensation: 20294,
         expectedFormula: "(0.42 * Sref * A) + (1 * Sref)",
@@ -150,7 +150,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 15,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2019",
         expectedCompensation: 23074,
         expectedFormula: "(0.42 * Sref * A) + (2 * Sref)",
@@ -158,7 +158,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 15,
       },
       {
-        age: 50,
+        age: 45,
         entryDate: "01/07/2019",
         expectedCompensation: 27800,
         expectedFormula: "(0.45 * Sref * A) + (1 * Sref)",
@@ -166,7 +166,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 20,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2019",
         expectedCompensation: 30580,
         expectedFormula: "(0.45 * Sref * A) + (2 * Sref)",
@@ -174,7 +174,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 20,
       },
       {
-        age: 50,
+        age: 45,
         entryDate: "01/07/2019",
         expectedCompensation: 36140,
         expectedFormula: "(0.48 * Sref * A) + (1 * Sref)",
@@ -182,7 +182,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 25,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2019",
         expectedCompensation: 38920,
         expectedFormula: "(0.48 * Sref * A) + (2 * Sref)",
@@ -190,7 +190,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 25,
       },
       {
-        age: 50,
+        age: 45,
         entryDate: "01/07/2019",
         expectedCompensation: 43646,
         expectedFormula: "(0.49 * Sref * A) + (1 * Sref)",
@@ -198,7 +198,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 30,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2019",
         expectedCompensation: 46426,
         expectedFormula: "(0.49 * Sref * A) + (2 * Sref)",
@@ -206,7 +206,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 30,
       },
       {
-        age: 50,
+        age: 45,
         entryDate: "01/07/2019",
         expectedCompensation: 51430,
         expectedFormula: "(0.5 * Sref * A) + (1 * Sref)",
@@ -214,7 +214,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 35,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2019",
         expectedCompensation: 54210,
         expectedFormula: "(0.5 * Sref * A) + (2 * Sref)",
@@ -222,7 +222,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 35,
       },
       {
-        age: 45,
+        age: 40,
         entryDate: "30/06/2019",
         expectedCompensation: 625.5,
         expectedFormula: "0.3 * Sref * A",
@@ -231,7 +231,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 0.75,
       },
       {
-        age: 45,
+        age: 40,
         entryDate: "30/06/2019",
         expectedCompensation: 834,
         expectedFormula: "0.3 * Sref * A",
@@ -240,9 +240,9 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 1,
       },
       {
-        age: 45,
+        age: 40,
         entryDate: "01/07/2011",
-        expectedCompensation: 15750.92,
+        expectedCompensation: 16099.91,
         expectedFormula:
           "(9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3)",
         notificationDate: "01/06/2026",
@@ -250,7 +250,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 14.91,
       },
       {
-        age: 45,
+        age: 40,
         entryDate: "01/06/2011",
         expectedCompensation: 20294,
         expectedFormula: "(0.42 * Sref * A) + (1 * Sref)",
@@ -259,7 +259,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 15,
       },
       {
-        age: 45,
+        age: 40,
         entryDate: "01/06/2011",
         expectedCompensation: 25840.1,
         expectedFormula: "(0.42 * Sref * A) + (1 * Sref)",
@@ -268,7 +268,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 19.75,
       },
       {
-        age: 45,
+        age: 40,
         entryDate: "01/06/2011",
         expectedCompensation: 27800,
         expectedFormula: "(0.45 * Sref * A) + (1 * Sref)",
@@ -277,7 +277,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 20,
       },
       {
-        age: 46,
+        age: 45,
         entryDate: "30/06/2019",
         expectedCompensation: 3405.5,
         expectedFormula: "(0.3 * Sref * A) + (1 * Sref)",
@@ -286,7 +286,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 9 / 12,
       },
       {
-        age: 46,
+        age: 45,
         entryDate: "30/06/2019",
         expectedCompensation: 3614,
         expectedFormula: "(0.3 * Sref * A) + (1 * Sref)",
@@ -295,9 +295,9 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 1,
       },
       {
-        age: 46,
+        age: 45,
         entryDate: "01/07/2011",
-        expectedCompensation: 18530.92,
+        expectedCompensation: 18879.91,
         expectedFormula:
           "(9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (1 * Sref)",
         notificationDate: "01/06/2026",
@@ -305,7 +305,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 14.91,
       },
       {
-        age: 46,
+        age: 45,
         entryDate: "01/06/2011",
         expectedCompensation: 20294,
         expectedFormula: "(0.42 * Sref * A) + (1 * Sref)",
@@ -314,7 +314,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 15,
       },
       {
-        age: 46,
+        age: 45,
         entryDate: "01/09/2006",
         expectedCompensation: 25840.1,
         expectedFormula: "(0.42 * Sref * A) + (1 * Sref)",
@@ -323,7 +323,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 19.75,
       },
       {
-        age: 46,
+        age: 45,
         entryDate: "01/06/2006",
         expectedCompensation: 27800,
         expectedFormula: "(0.45 * Sref * A) + (1 * Sref)",
@@ -332,7 +332,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 20,
       },
       {
-        age: 46,
+        age: 45,
         entryDate: "01/06/2001",
         expectedCompensation: 36140,
         expectedFormula: "(0.48 * Sref * A) + (1 * Sref)",
@@ -341,7 +341,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 25,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "30/06/2019",
         expectedCompensation: 6185.5,
         expectedFormula: "(0.3 * Sref * A) + (2 * Sref)",
@@ -350,7 +350,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 9 / 12,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "30/06/2019",
         expectedCompensation: 6394,
         expectedFormula: "(0.3 * Sref * A) + (2 * Sref)",
@@ -359,9 +359,9 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 1,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2011",
-        expectedCompensation: 21310.92,
+        expectedCompensation: 21659.91,
         expectedFormula:
           "(9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (2 * Sref)",
         notificationDate: "01/06/2026",
@@ -369,7 +369,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 14.91,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2011",
         expectedCompensation: 23074,
         expectedFormula: "(0.42 * Sref * A) + (2 * Sref)",
@@ -378,7 +378,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 15,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/07/2011",
         expectedCompensation: 28620.1,
         expectedFormula: "(0.42 * Sref * A) + (2 * Sref)",
@@ -387,7 +387,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 19.75,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/06/2006",
         expectedCompensation: 30580,
         expectedFormula: "(0.45 * Sref * A) + (2 * Sref)",
@@ -396,7 +396,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         seniorityRight: 20,
       },
       {
-        age: 51,
+        age: 50,
         entryDate: "01/06/2001",
         expectedCompensation: 38920,
         expectedFormula: "(0.48 * Sref * A) + (2 * Sref)",

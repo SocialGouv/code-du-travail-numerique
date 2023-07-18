@@ -9,6 +9,9 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
 
 # après avenant
 
+contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . indemnité finale:
+  valeur: 0
+
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . moins de 5 ans d'ancienneté:
   applicable si:
     toutes ces conditions:
@@ -17,11 +20,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . moins de 5 ans d'ancienneté . moins de 45 ans d'age:
-  applicable si: age <= 45 ans
+  applicable si: age < 45 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . moins de 5 ans d'ancienneté . moins de 45 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     produit:
       assiette: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
@@ -42,12 +45,12 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . moins de 5 ans d'ancienneté . entre 45 et 50 ans d'age:
   applicable si:
     toutes ces conditions:
-      - age > 45 ans
-      - age <= 50 ans
+      - age >= 45 ans
+      - age < 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . moins de 5 ans d'ancienneté . entre 45 et 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -68,11 +71,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
       formula: (0.3 * Sref * A) + (1 * Sref)
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . moins de 5 ans d'ancienneté . plus de 50 ans d'age:
-  applicable si: age > 50 ans
+  applicable si: age >= 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . moins de 5 ans d'ancienneté . plus de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -100,11 +103,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 5 et 10 ans d'ancienneté . moins de 45 ans d'age:
-  applicable si: age <= 45 ans
+  applicable si: age < 45 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 5 et 10 ans d'ancienneté . moins de 45 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     produit:
       assiette: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
@@ -125,12 +128,12 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 5 et 10 ans d'ancienneté . entre 45 et 50 ans d'age:
   applicable si:
     toutes ces conditions:
-      - age > 45 ans
-      - age <= 50 ans
+      - age >= 45 ans
+      - age < 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 5 et 10 ans d'ancienneté . entre 45 et 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -151,11 +154,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
       formula: (0.34 * Sref * A) + (1 * Sref)
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 5 et 10 ans d'ancienneté . plus de 50 ans d'age:
-  applicable si: age > 50 ans
+  applicable si: age >= 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 5 et 10 ans d'ancienneté . plus de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -183,11 +186,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 10 et 15 ans d'ancienneté . moins de 45 ans d'age:
-  applicable si: age <= 45 ans
+  applicable si: age < 45 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 10 et 15 ans d'ancienneté . moins de 45 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     produit:
       assiette: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
@@ -208,12 +211,12 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 10 et 15 ans d'ancienneté . entre 45 et 50 ans d'age:
   applicable si:
     toutes ces conditions:
-      - age > 45 ans
-      - age <= 50 ans
+      - age >= 45 ans
+      - age < 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 10 et 15 ans d'ancienneté . entre 45 et 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -234,11 +237,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
       formula: (0.38 * Sref * A) + (1 * Sref)
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 10 et 15 ans d'ancienneté . plus de 50 ans d'age:
-  applicable si: age > 50 ans
+  applicable si: age >= 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 10 et 15 ans d'ancienneté . plus de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -266,11 +269,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 15 et 20 ans d'ancienneté . moins de 50 ans d'age:
-  applicable si: age <= 50 ans
+  applicable si: age < 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 15 et 20 ans d'ancienneté . moins de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -291,11 +294,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
       formula: (0.42 * Sref * A) + (1 * Sref)
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 15 et 20 ans d'ancienneté . plus de 50 ans d'age:
-  applicable si: age > 50 ans
+  applicable si: age >= 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 15 et 20 ans d'ancienneté . plus de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -323,11 +326,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 20 et 25 ans d'ancienneté . moins de 50 ans d'age:
-  applicable si: age <= 50 ans
+  applicable si: age < 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 20 et 25 ans d'ancienneté . moins de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -348,11 +351,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
       formula: (0.45 * Sref * A) + (1 * Sref)
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 20 et 25 ans d'ancienneté . plus de 50 ans d'age:
-  applicable si: age > 50 ans
+  applicable si: age >= 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 20 et 25 ans d'ancienneté . plus de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -380,11 +383,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 25 et 30 ans d'ancienneté . moins de 50 ans d'age:
-  applicable si: age <= 50 ans
+  applicable si: age < 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 25 et 30 ans d'ancienneté . moins de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -405,11 +408,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
       formula: (0.48 * Sref * A) + (1 * Sref)
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 25 et 30 ans d'ancienneté . plus de 50 ans d'age:
-  applicable si: age > 50 ans
+  applicable si: age >= 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 25 et 30 ans d'ancienneté . plus de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -437,11 +440,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 30 et 35 ans d'ancienneté . moins de 50 ans d'age:
-  applicable si: age <= 50 ans
+  applicable si: age < 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 30 et 35 ans d'ancienneté . moins de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -462,11 +465,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
       formula: (0.49 * Sref * A) + (1 * Sref)
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 30 et 35 ans d'ancienneté . plus de 50 ans d'age:
-  applicable si: age > 50 ans
+  applicable si: age >= 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . entre 30 et 35 ans d'ancienneté . plus de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -491,11 +494,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . plus de 35 ans d'ancienneté . moins de 50 ans d'age:
-  applicable si: age <= 50 ans
+  applicable si: age < 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . plus de 35 ans d'ancienneté . moins de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -516,11 +519,11 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
       formula: (0.5 * Sref * A) + (1 * Sref)
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . plus de 35 ans d'ancienneté . plus de 50 ans d'age:
-  applicable si: age > 50 ans
+  applicable si: age >= 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . plus de 35 ans d'ancienneté . plus de 50 ans d'age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: indemnité finale
   valeur:
     somme:
       - produit:
@@ -541,6 +544,9 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
       formula: (0.5 * Sref * A) + (2 * Sref)
 
 # avant avenant
+
+contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . indemnité finale:
+  valeur: 0
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019:
   applicable si:
@@ -593,7 +599,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . moins de 45 ans d'age:
-  applicable si: age <= 45 ans
+  applicable si: age < 45 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . moins de 45 ans d'age . indemnité:
@@ -620,7 +626,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . moins de 45 ans d'age . jusqu'à 5 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -638,7 +644,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . moins de 45 ans d'age . entre 5 et 10 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -654,7 +660,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . moins de 45 ans d'age . entre 10 et 15 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -669,8 +675,8 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . entre 45 et 50 ans d'age:
   applicable si:
     toutes ces conditions:
-      - age > 45 ans
-      - age <= 50 ans
+      - age >= 45 ans
+      - age < 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . entre 45 et 50 ans d'age . indemnité:
@@ -698,7 +704,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . entre 45 et 50 ans d'age . jusqu'à 5 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -716,7 +722,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . entre 45 et 50 ans d'age . entre 5 et 10 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -732,7 +738,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . entre 45 et 50 ans d'age . entre 10 et 15 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -745,7 +751,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (1 * Sref)
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . plus de 50 ans d'age:
-  applicable si: age > 50 ans
+  applicable si: age >= 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . plus de 50 ans d'age . indemnité:
@@ -773,7 +779,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . plus de 50 ans d'age . jusqu'à 5 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -791,7 +797,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . plus de 50 ans d'age . entre 5 et 10 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -807,7 +813,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté . plus de 50 ans d'age . entre 10 et 15 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -824,7 +830,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . moins de 50 ans d'age:
-  applicable si: age <= 50 ans
+  applicable si: age < 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . moins de 50 ans d'age . indemnité:
@@ -858,7 +864,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . moins de 50 ans d'age . entre 15 et 20 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -876,7 +882,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . moins de 50 ans d'age . plus de 20 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -891,7 +897,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (16 / 30 * Sref * A4) + (18 / 30 * Sref * A5) + (1 * Sref)
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . plus de 50 ans d'age:
-  applicable si: age > 50 ans
+  applicable si: age >= 50 ans
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . plus de 50 ans d'age . indemnité:
@@ -925,7 +931,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . plus de 50 ans d'age . entre 15 et 20 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -943,7 +949,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . plus de 50 ans d'age . plus de 20 ans . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel <= indemnité
+  applicable si: après avenant 1er juillet 2019 . indemnité finale <= indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité
   cdtn:
@@ -956,3 +962,8 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
         - "A5 :  Années pour la tranche à partir de 20 ans d'ancienneté": contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier plus de 20 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (16 / 30 * Sref * A4) + (18 / 30 * Sref * A5) + (2 * Sref)
+
+contrat salarié . convention collective . industrie pharmaceutique . résultat conventionnel après avenant:
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = 0
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: après avenant 1er juillet 2019 . indemnité finale
