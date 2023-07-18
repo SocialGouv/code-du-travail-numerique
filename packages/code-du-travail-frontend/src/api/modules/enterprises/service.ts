@@ -59,9 +59,11 @@ export const populateAgreements = async (
           .filter((convention) => convention !== undefined);
         result.entreprises = result.entreprises?.map((enterprise) => ({
           ...enterprise,
-          conventions: [...enterprise.conventions, ...conventionsToAdd].filter(
-            (convention) => convention.num !== idcc
-          ),
+          conventions: [...enterprise.conventions, ...conventionsToAdd]
+            .filter((convention) => convention.num !== idcc)
+            .filter(
+              (convention, index, self) => self.indexOf(convention) === index
+            ),
         }));
       }
 
