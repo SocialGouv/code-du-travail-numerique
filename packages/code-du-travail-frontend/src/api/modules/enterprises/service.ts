@@ -2,6 +2,7 @@ import { SearchResponse, Agreement } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getAgreements } from "./queries";
 import { EnterpriseApiResponse, ApiEnterpriseData, Convention } from "./types";
+import { IDCC_TO_REPLACE } from "../../config";
 
 const toAgreement = (convention: Convention): Agreement => ({
   id: convention.id,
@@ -18,6 +19,12 @@ export const populateAgreements = async (
     enterpriseApiResponse.entreprises?.flatMap((enterprise) =>
       enterprise.conventions.flatMap((convention) => convention.idcc)
     ) ?? [];
+  const idccKeys = Object.keys(IDCC_TO_REPLACE);
+  const idcc = idccList.find((idcc) => idccKeys.includes(idcc.toString()));
+  if (idcc) {
+    const idccToAdd = IDCC_TO_REPLACE[idcc] as number[];
+    idccList.push(...idccToAdd);
+  }
 
   if (idccList.length > 0) {
     const body = getAgreements(idccList);
@@ -33,7 +40,8 @@ export const populateAgreements = async (
         },
         {}
       );
-      return {
+
+      const result = {
         ...enterpriseApiResponse,
         entreprises: enterpriseApiResponse.entreprises?.map((enterprise) => ({
           ...enterprise,
@@ -43,6 +51,21 @@ export const populateAgreements = async (
           ),
         })),
       };
+
+      if (idcc) {
+        const idccToAdd = IDCC_TO_REPLACE[idcc] as number[];
+        const conventionsToAdd: Agreement[] = idccToAdd
+          .map((idcc) => agreements[idcc])
+          .filter((convention) => convention !== undefined);
+        result.entreprises = result.entreprises?.map((enterprise) => ({
+          ...enterprise,
+          conventions: [...enterprise.conventions, ...conventionsToAdd].filter(
+            (convention) => convention.num !== idcc
+          ),
+        }));
+      }
+
+      return result;
     }
   }
   return {
