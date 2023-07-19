@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.105.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.105.0...v4.105.1) (2023-07-19)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.105.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.104.2...v4.105.0) (2023-07-17)
+
+### Features
+
+- **simulator:** ajout d'un singleton pour charger les modèles ([#5251](https://github.com/SocialGouv/code-du-travail-numerique/issues/5251)) ([40faea2](https://github.com/SocialGouv/code-du-travail-numerique/commit/40faea2edd819f40efac5a7391d779c6ef189255))
+
 ## [4.104.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.104.1...v4.104.2) (2023-07-06)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils

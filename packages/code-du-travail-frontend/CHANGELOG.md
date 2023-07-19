@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.105.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.105.0...v4.105.1) (2023-07-19)
+
+### Bug Fixes
+
+- **1740:** ajout des redirections ([#5281](https://github.com/SocialGouv/code-du-travail-numerique/issues/5281)) ([ac99c01](https://github.com/SocialGouv/code-du-travail-numerique/commit/ac99c010610f5bf4679bef1c63ab14d226796ad5))
+
+# [4.105.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.104.2...v4.105.0) (2023-07-17)
+
+### Bug Fixes
+
+- **fiche service public:** fix image width on mobile ([#5269](https://github.com/SocialGouv/code-du-travail-numerique/issues/5269)) ([1bf5de6](https://github.com/SocialGouv/code-du-travail-numerique/commit/1bf5de68b85bfdbca14a199e118cfc6457a76de7))
+- **preavis-retraite:** rajout de l idcc ([9dde572](https://github.com/SocialGouv/code-du-travail-numerique/commit/9dde57273353380a7868362c2c055e8aaa0d2f34))
+- **preavis-retraite:** revert + fix unit test ([c8a5eaf](https://github.com/SocialGouv/code-du-travail-numerique/commit/c8a5eafb6443da80661acc6b2e2f31bf451b2032))
+
+### Features
+
+- **convention-collective:** ajout d'une redirection vers nos pages CC à partir d'une url contenant seulement l'IDCC ([#5277](https://github.com/SocialGouv/code-du-travail-numerique/issues/5277)) ([7532331](https://github.com/SocialGouv/code-du-travail-numerique/commit/7532331f32cd7c6f8d6db99b7b1a88a6e1dc1317))
+- **simulator:** ajout d'un singleton pour charger les modèles ([#5251](https://github.com/SocialGouv/code-du-travail-numerique/issues/5251)) ([40faea2](https://github.com/SocialGouv/code-du-travail-numerique/commit/40faea2edd819f40efac5a7391d779c6ef189255))
+
 ## [4.104.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.104.1...v4.104.2) (2023-07-06)
 
 ### Bug Fixes
