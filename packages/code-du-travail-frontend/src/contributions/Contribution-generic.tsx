@@ -20,21 +20,36 @@ import {
 } from "@socialgouv/cdtn-ui";
 import { RadioQuestion } from "../outils/Components";
 import { AgreementRoute } from "../outils/common/type/WizardType";
-import { SearchAgreementInput } from "../outils/common/Agreement/AgreementSearch/AgreementInput/SearchAgreementInput";
 import router from "next/router";
 import { Toast } from "@socialgouv/cdtn-ui/lib";
 import { EnterpriseSearch } from "../outils/CommonSteps/Agreement/components";
-import { AgreementSearchValue } from "../outils/CommonSteps/Agreement/store";
 import { AgreementSupportInfo } from "../outils/common/Agreement/types";
+import AgreementSearch from "../outils/CommonSteps/Agreement/components/AgreementSearch";
+import { useTrackingContext } from "../outils/ConventionCollective/common/TrackingContext";
+import { pushAgreementEvents } from "../outils/common";
+import { UserAction } from "../outils/ConventionCollective/types";
+import handleTrackEvent from "../outils/ConventionCollective/tracking/HandleTrackEvent";
 
 const { DirectionRight } = icons;
 
-const onUserAction = (agreement) => {
-  console.log("Track ?????", agreement);
-};
+const CC_NOT_SUPPORTED = (
+  <>
+    <p>
+      La convention collective sélectionnée n'est pas traitée par nos services.
+    </p>
+    <p>
+      Vous pouvez tout de même poursuivre pour obtenir les informations
+      générales
+    </p>
+  </>
+);
 
 const ContributionGeneric = ({ answers, content, slug }) => {
-  console.log(answers);
+  const { uuid, trackEvent } = useTrackingContext();
+
+  const onUserAction = (action: UserAction, extra?: unknown) => {
+    handleTrackEvent(trackEvent, uuid, router.asPath, action, extra);
+  };
   const hasConventionAnswers =
     answers.conventions && answers.conventions.length > 0;
   const [showAnswer, setShowAnswer] = useState(false);
@@ -58,6 +73,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
       };
     }
   );
+
   return (
     <>
       {hasConventionAnswers && (
@@ -88,6 +104,12 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                 label=" Quel est le nom de la convention collective applicable&nbsp;?"
                 selectedOption={selectedRoute}
                 onChangeSelectedOption={(value: AgreementRoute) => {
+                  pushAgreementEvents(
+                    router.asPath,
+                    { route: value },
+                    false,
+                    false
+                  );
                   setConvention();
                   setSelectedRoute(value);
                 }}
@@ -114,12 +136,13 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                     </Toast>
                   ) : (
                     <>
-                      <Paragraph noMargin fontWeight="600" fontSize="default">
-                        Précisez et sélectionnez votre convention collective
-                      </Paragraph>
-                      <SearchAgreementInput
-                        onUserAction={onUserAction}
+                      <AgreementSearch
+                        supportedAgreements={supportedAgreements}
+                        selectedAgreement={convention}
                         onSelectAgreement={onSelectAgreement}
+                        onUserAction={onUserAction}
+                        alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
+                        simulator="QUESTIONNAIRE"
                       />
                     </>
                   )}
@@ -130,10 +153,8 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                   supportedAgreements={supportedAgreements}
                   selectedAgreement={convention}
                   onSelectAgreement={setConvention}
-                  onUserAction={(action, value: AgreementSearchValue) =>
-                    onUserAction(value)
-                  }
-                  alertAgreementNotSupported={() => <></>}
+                  onUserAction={onUserAction}
+                  alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
                   simulator="QUESTIONNAIRE"
                 />
               )}
@@ -154,7 +175,18 @@ const ContributionGeneric = ({ answers, content, slug }) => {
 
             {!showAnswer && (
               <p>
-                <Button variant="navLink" onClick={() => setShowAnswer(true)}>
+                <Button
+                  variant="navLink"
+                  onClick={() => {
+                    pushAgreementEvents(
+                      router.asPath,
+                      { route: "not-selected" },
+                      false,
+                      false
+                    );
+                    setShowAnswer(true);
+                  }}
+                >
                   <ArrowLink arrowPosition="left">
                     Accéder aux informations générales sans renseigner ma
                     convention collective
