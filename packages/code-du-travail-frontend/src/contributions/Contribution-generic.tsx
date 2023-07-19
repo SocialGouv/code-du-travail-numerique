@@ -73,6 +73,8 @@ const ContributionGeneric = ({ answers, content, slug }) => {
       };
     }
   );
+  const isSupported = (agreement) =>
+    !!supportedAgreements.find((item) => item.idcc == agreement.num);
 
   return (
     <>
@@ -160,15 +162,28 @@ const ContributionGeneric = ({ answers, content, slug }) => {
               )}
               {convention && (
                 <Div>
-                  <Button
-                    variant="primary"
-                    onClick={() => {
-                      router.push(`/contribution/${convention.num}-${slug}`);
-                    }}
-                  >
-                    Afficher les informations
-                    <StyledDirectionRightIcon />
-                  </Button>
+                  {isSupported(convention) ? (
+                    <Button
+                      variant="primary"
+                      onClick={() => {
+                        router.push(`/contribution/${convention.num}-${slug}`);
+                      }}
+                    >
+                      Afficher les informations
+                      <StyledDirectionRightIcon />
+                    </Button>
+                  ) : (
+                    <>
+                      {!showAnswer && (
+                        <Button
+                          variant="primary"
+                          onClick={() => setShowAnswer(true)}
+                        >
+                          Afficher les informations générales
+                        </Button>
+                      )}
+                    </>
+                  )}
                 </Div>
               )}
             </Wrapper>
