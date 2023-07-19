@@ -140,7 +140,7 @@
     "destination": "/contribution/:slug"
   },
   {
-    "source": "/convention-collective/1740-batiment-de-la-region-parisienne-ouvriers-employes-techniciens-et-agent",
+    "source": "/contribution/1740:slug",
     "permanent": true,
     "destination": "/outils/convention-collective"
   }

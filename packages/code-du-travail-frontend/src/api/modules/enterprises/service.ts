@@ -54,17 +54,25 @@ export const populateAgreements = async (
 
       if (idcc) {
         const idccToAdd = IDCC_TO_REPLACE[idcc] as number[];
-        const conventionsToAdd: Agreement[] = idccToAdd
+        let conventionsToAdd: Agreement[] = idccToAdd
           .map((idcc) => agreements[idcc])
           .filter((convention) => convention !== undefined);
-        result.entreprises = result.entreprises?.map((enterprise) => ({
-          ...enterprise,
-          conventions: [...enterprise.conventions, ...conventionsToAdd]
-            .filter((convention) => convention.num !== idcc)
-            .filter(
-              (convention, index, self) => self.indexOf(convention) === index
-            ),
-        }));
+        result.entreprises = result.entreprises?.map((enterprise) => {
+          const hasAlreadyIdcc = enterprise.conventions.find((convention) =>
+            idccToAdd.includes(convention.num)
+          );
+          if (hasAlreadyIdcc) {
+            conventionsToAdd = [];
+          }
+          return {
+            ...enterprise,
+            conventions: [...enterprise.conventions, ...conventionsToAdd]
+              .filter((convention) => convention.num !== idcc)
+              .filter(
+                (convention, index, self) => self.indexOf(convention) === index
+              ),
+          };
+        });
       }
 
       return result;
