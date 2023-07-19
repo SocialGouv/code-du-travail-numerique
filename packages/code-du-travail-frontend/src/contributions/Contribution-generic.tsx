@@ -26,7 +26,6 @@ import { Toast } from "@socialgouv/cdtn-ui/lib";
 import { EnterpriseSearch } from "../outils/CommonSteps/Agreement/components";
 import { AgreementSearchValue } from "../outils/CommonSteps/Agreement/store";
 import { AgreementSupportInfo } from "../outils/common/Agreement/types";
-import NotSupportedAgreementDisclaimer from "../outils/DureePreavisDemission/steps/component/NotSupportedAgreementDisclaimer";
 
 const { DirectionRight } = icons;
 
@@ -134,9 +133,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                   onUserAction={(action, value: AgreementSearchValue) =>
                     onUserAction(value)
                   }
-                  alertAgreementNotSupported={(url: string) => (
-                    <NotSupportedAgreementDisclaimer agreementUrl={url} />
-                  )}
+                  alertAgreementNotSupported={() => <></>}
                   simulator="QUESTIONNAIRE"
                 />
               )}
