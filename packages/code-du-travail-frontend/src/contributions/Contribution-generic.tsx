@@ -104,25 +104,25 @@ const ContributionGeneric = ({ answers, content, slug }) => {
               {selectedRoute === "agreement" && (
                 <>
                   {convention ? (
-                    <>
-                      <Toast
-                        variant="secondary"
-                        onRemove={() => setConvention()}
-                      >
-                        {convention.shortTitle}
-                        {convention.highlight &&
-                          convention.highlight.searchInfo && (
-                            <Paragraph variant="altText" noMargin>
-                              {convention.highlight.searchInfo}
-                            </Paragraph>
-                          )}
-                      </Toast>
-                    </>
+                    <Toast variant="secondary" onRemove={() => setConvention()}>
+                      {convention.shortTitle}
+                      {convention.highlight &&
+                        convention.highlight.searchInfo && (
+                          <Paragraph variant="altText" noMargin>
+                            {convention.highlight.searchInfo}
+                          </Paragraph>
+                        )}
+                    </Toast>
                   ) : (
-                    <SearchAgreementInput
-                      onUserAction={onUserAction}
-                      onSelectAgreement={onSelectAgreement}
-                    />
+                    <>
+                      <Paragraph noMargin fontWeight="600" fontSize="default">
+                        Précisez et sélectionnez votre convention collective
+                      </Paragraph>
+                      <SearchAgreementInput
+                        onUserAction={onUserAction}
+                        onSelectAgreement={onSelectAgreement}
+                      />
+                    </>
                   )}
                 </>
               )}

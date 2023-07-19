@@ -11,7 +11,7 @@ type Props = {
   agreement: Agreement;
   supportedAgreements: AgreementSupportInfo[];
   alertAgreementNotSupported?: (string) => JSX.Element;
-  simulator?: PublicodesSimulator | "QUESTIONNAIRE";
+  simulator: PublicodesSimulator | "QUESTIONNAIRE";
 };
 
 const ShowAgreement = ({
