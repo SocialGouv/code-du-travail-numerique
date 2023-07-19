@@ -60,8 +60,8 @@ contrat salarié . convention collective . télécommunications . majoration: 0 
 contrat salarié . convention collective . télécommunications . majoration . plus de 10 ans d'ancienneté:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 20 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 10 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 20 an
       - age >= 50 an
   remplace: majoration
   produit:
@@ -74,7 +74,7 @@ contrat salarié . convention collective . télécommunications . majoration . p
 contrat salarié . convention collective . télécommunications . majoration . plus de 20 ans d'ancienneté:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 20 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 20 an
       - age >= 50 an
   remplace: majoration
   produit:
