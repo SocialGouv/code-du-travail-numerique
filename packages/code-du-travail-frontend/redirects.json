@@ -140,7 +140,12 @@
     "destination": "/contribution/:slug"
   },
   {
-    "source": "/convention-collective/1740:slug",
+    "source": "/convention-collective/1740",
+    "permanent": true,
+    "destination": "/outils/convention-collective"
+  },
+  {
+    "source": "/convention-collective/1740-:slug",
     "permanent": true,
     "destination": "/outils/convention-collective"
   }
