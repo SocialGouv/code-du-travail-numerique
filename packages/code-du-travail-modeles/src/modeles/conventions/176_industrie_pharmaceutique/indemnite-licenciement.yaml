@@ -587,9 +587,11 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier plus de 20 ans:
   valeur:
-    somme:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-      - (-20 an)
+    le maximum de:
+      - 0 an
+      - somme:
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - (-20 an)
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté:
   applicable si:
@@ -859,8 +861,8 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . moins de 50 ans d'age . entre 15 et 20 ans:
   applicable si:
     toutes ces conditions:
-      - palier entre 15 et 20 ans >= 0
-      - palier plus de 20 ans < 0
+      - palier entre 15 et 20 ans > 0
+      - palier plus de 20 ans = 0
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . moins de 50 ans d'age . entre 15 et 20 ans . résultat conventionnel:
@@ -878,7 +880,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (16 / 30 * Sref * A4) + (1 * Sref)
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . moins de 50 ans d'age . plus de 20 ans:
-  applicable si: palier plus de 20 ans >= 0
+  applicable si: palier plus de 20 ans > 0
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . moins de 50 ans d'age . plus de 20 ans . résultat conventionnel:
@@ -926,8 +928,8 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . plus de 50 ans d'age . entre 15 et 20 ans:
   applicable si:
     toutes ces conditions:
-      - palier entre 15 et 20 ans >= 0
-      - palier plus de 20 ans < 0
+      - palier entre 15 et 20 ans > 0
+      - palier plus de 20 ans = 0
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . plus de 50 ans d'age . entre 15 et 20 ans . résultat conventionnel:
@@ -945,7 +947,7 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
       formula: (9 / 30 * Sref * A1) + (12 / 30 * Sref * A2) + (14 / 30 * Sref * A3) + (16 / 30 * Sref * A4) + (2 * Sref)
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . plus de 50 ans d'age . plus de 20 ans:
-  applicable si: palier plus de 20 ans >= 0
+  applicable si: palier plus de 20 ans > 0
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . plus de 15 ans d'ancienneté . plus de 50 ans d'age . plus de 20 ans . résultat conventionnel:
