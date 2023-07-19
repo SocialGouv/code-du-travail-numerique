@@ -10,7 +10,7 @@ type Props = {
   currentAgreement: Agreement;
   supportedAgreements: AgreementSupportInfo[];
   alertAgreementNotSupported?: (string) => JSX.Element;
-  simulator?: PublicodesSimulator;
+  simulator?: PublicodesSimulator | "QUESTIONNAIRE";
 };
 
 const ShowAlert = ({
@@ -93,10 +93,12 @@ const ShowAlert = ({
     );
   }
 
-  return (
+  return simulator !== "QUESTIONNAIRE" ? (
     <StyledParagraph>
       Cliquez sur Suivant pour poursuivre la simulation.
     </StyledParagraph>
+  ) : (
+    <></>
   );
 };
 

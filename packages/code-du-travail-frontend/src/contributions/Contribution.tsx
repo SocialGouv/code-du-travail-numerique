@@ -1,9 +1,4 @@
-import {
-  Agreement,
-  getLabelBySource,
-  slugify,
-  SOURCES,
-} from "@socialgouv/cdtn-utils";
+import { Agreement, getLabelBySource } from "@socialgouv/cdtn-utils";
 import {
   Alert,
   Badge,
@@ -23,34 +18,9 @@ import Mdx from "../../src/common/Mdx";
 import SearchConvention from "../../src/conventions/Search";
 import { A11yLink } from "../common/A11yLink";
 import Html from "../common/Html";
-import References from "../common/References";
 import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
-
-const ReferencesJuridiques = ({ references = [] }) => {
-  const refs = references.flatMap(({ category, title, url }) => {
-    if (category === "labor_code") {
-      return {
-        slug: slugify(title),
-        title,
-        type: SOURCES.CDT,
-      };
-    }
-    if (category === "agreement") {
-      return {
-        title: `${title} de la convention collective`,
-        type: SOURCES.EXTERNALS,
-        url,
-      };
-    }
-    return { title, type: SOURCES.EXTERNALS, url };
-  });
-
-  if (references.length === 0) {
-    return null;
-  }
-  return <References label="Références" references={refs} accordionList="3" />;
-};
+import ReferencesJuridiques, { filteredRefs } from "./References";
 
 const Contribution = ({ answers, content }) => {
   /**
@@ -61,13 +31,6 @@ const Contribution = ({ answers, content }) => {
   const isConventionalAnswer = Object.prototype.hasOwnProperty.call(
     answers,
     "conventionAnswer"
-  );
-
-  const filteredRefs = answers?.generic?.references?.filter(
-    ({ category, url }) => {
-      if (category !== null) return true;
-      return url !== content.url;
-    }
   );
 
   const hasConventionAnswers =
@@ -87,7 +50,6 @@ const Contribution = ({ answers, content }) => {
       (answer) => parseInt(answer.idcc, 10) === convention.num
     );
   }
-  // ensure we have valid data in ccInfo
   return (
     <>
       {hasConventionAnswers && (
@@ -95,12 +57,7 @@ const Contribution = ({ answers, content }) => {
           <Badge />
           <section>
             <Wrapper variant="dark">
-              <StyledTitle
-                shift={spacings.xmedium}
-                variant="primary"
-                hasMarginTop={Boolean(answers.generic)}
-                id="customisation"
-              >
+              <Title shift={spacings.xmedium} variant="primary">
                 {isConventionalAnswer ? (
                   <>
                     Que dit la convention <i>{conventionAnswer.shortName}</i>
@@ -109,7 +66,7 @@ const Contribution = ({ answers, content }) => {
                 ) : (
                   <>Que dit votre convention collective&nbsp;?</>
                 )}
-              </StyledTitle>
+              </Title>
               {!isConventionDetected() && !isConventionalAnswer ? (
                 <SearchConvention onSelectConvention={setConvention} />
               ) : (
@@ -179,12 +136,10 @@ const Contribution = ({ answers, content }) => {
                       </p>
                     </>
                   ) : (
-                    <>
-                      <Section>
-                        Désolé, nous n’avons pas de réponse pour cette
-                        convention collective.
-                      </Section>
-                    </>
+                    <Section>
+                      Désolé, nous n’avons pas de réponse pour cette convention
+                      collective.
+                    </Section>
                   )}
                   {!isConventionalAnswer && (
                     <ButtonWrapper>
@@ -228,7 +183,9 @@ const Contribution = ({ answers, content }) => {
             markdown={answers.generic.markdown}
             components={rehypeToReact(content)}
           />
-          <ReferencesJuridiques references={filteredRefs} />
+          <ReferencesJuridiques
+            references={filteredRefs(answers?.generic?.references, content.url)}
+          />
         </Section>
       )}
     </>
@@ -257,10 +214,6 @@ const MdxWrapper = styled.div`
 
 const StyledParagraph = styled(Paragraph)`
   margin-bottom: ${spacings.tiny};
-`;
-
-const StyledTitle = styled(Title)`
-  margin-top: ${({ hasMarginTop }) => (hasMarginTop ? spacings.large : "0")};
 `;
 
 const ButtonWrapper = styled.div`

@@ -21,7 +21,7 @@ export type Props = {
   selectedAgreement?: Agreement;
   onSelectAgreement: OnSelectAgreementFn;
   alertAgreementNotSupported?: (string) => JSX.Element;
-  simulator: PublicodesSimulator;
+  simulator?: PublicodesSimulator | "QUESTIONNAIRE";
   isDisabled?: boolean;
 } & TrackingProps;
 

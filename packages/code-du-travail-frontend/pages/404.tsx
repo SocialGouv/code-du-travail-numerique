@@ -1,6 +1,5 @@
 import * as Sentry from "@sentry/nextjs";
 import { Button, Container, icons as Icons, theme } from "@socialgouv/cdtn-ui";
-import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import styled from "styled-components";
