@@ -1,6 +1,6 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import React from "react";
-import ContributionGeneric from "../Contribution-generic";
+import ContributionGeneric from "../ContributionGeneric";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { ui } from "../../outils/DureePreavisDemission/__tests__/ui";
 import { byTestId, byText } from "testing-library-selector";

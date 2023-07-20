@@ -8,7 +8,7 @@ import { Layout } from "../../src/layout/Layout";
 import { Breadcrumb } from "@socialgouv/cdtn-utils";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
-import ContributionGeneric from "../../src/contributions/Contribution-generic";
+import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);

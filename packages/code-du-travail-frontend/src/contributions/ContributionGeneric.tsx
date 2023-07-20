@@ -12,7 +12,6 @@ import {
   Badge,
   Button,
   icons,
-  Paragraph,
   Section,
   theme,
   Title,
@@ -21,7 +20,6 @@ import {
 import { RadioQuestion } from "../outils/Components";
 import { AgreementRoute } from "../outils/common/type/WizardType";
 import router from "next/router";
-import { Toast } from "@socialgouv/cdtn-ui/lib";
 import { EnterpriseSearch } from "../outils/CommonSteps/Agreement/components";
 import { AgreementSupportInfo } from "../outils/common/Agreement/types";
 import AgreementSearch from "../outils/CommonSteps/Agreement/components/AgreementSearch";
@@ -34,7 +32,7 @@ const { DirectionRight } = icons;
 const CC_NOT_SUPPORTED = (
   <>
     <p>
-      La convention collective sélectionnée n'est pas traitée par nos services.
+      La convention collective sélectionnée n’est pas traitée par nos services.
     </p>
     <p>
       Vous pouvez tout de même poursuivre pour obtenir les informations
@@ -114,43 +112,27 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                 }}
               />
               {selectedRoute === "agreement" && (
-                <>
-                  {convention ? (
-                    <Toast variant="secondary" onRemove={() => setConvention()}>
-                      {convention.shortTitle}
-                      {convention.highlight &&
-                        convention.highlight.searchInfo && (
-                          <Paragraph variant="altText" noMargin>
-                            {convention.highlight.searchInfo}
-                          </Paragraph>
-                        )}
-                    </Toast>
-                  ) : (
-                    <>
-                      <AgreementSearch
-                        supportedAgreements={supportedAgreements}
-                        selectedAgreement={convention}
-                        onSelectAgreement={(agreement) => {
-                          if (agreement) {
-                            pushAgreementEvents(
-                              getTitle(),
-                              {
-                                route: selectedRoute,
-                                selected: agreement,
-                              },
-                              isSupported(agreement),
-                              false
-                            );
-                          }
-                          setConvention(agreement);
-                        }}
-                        onUserAction={onUserAction}
-                        alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
-                        simulator="QUESTIONNAIRE"
-                      />
-                    </>
-                  )}
-                </>
+                <AgreementSearch
+                  supportedAgreements={supportedAgreements}
+                  selectedAgreement={convention}
+                  onSelectAgreement={(agreement) => {
+                    if (agreement) {
+                      pushAgreementEvents(
+                        getTitle(),
+                        {
+                          route: selectedRoute,
+                          selected: agreement,
+                        },
+                        isSupported(agreement),
+                        false
+                      );
+                    }
+                    setConvention(agreement);
+                  }}
+                  onUserAction={onUserAction}
+                  alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
+                  simulator="QUESTIONNAIRE"
+                />
               )}
               {selectedRoute === "enterprise" && (
                 <EnterpriseSearch

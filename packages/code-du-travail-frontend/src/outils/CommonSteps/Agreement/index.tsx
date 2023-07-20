@@ -94,6 +94,7 @@ function AgreementStep({
 
       {selectedRoute === "agreement" && (
         <>
+          AA
           <AgreementSearch
             supportedAgreements={supportedAgreements}
             selectedAgreement={selectedAgreement}
@@ -104,6 +105,7 @@ function AgreementStep({
             alertAgreementNotSupported={undefined}
             simulator={simulator}
           />
+          AA
           {error?.agreement && <InlineError>{error.agreement}</InlineError>}
         </>
       )}
