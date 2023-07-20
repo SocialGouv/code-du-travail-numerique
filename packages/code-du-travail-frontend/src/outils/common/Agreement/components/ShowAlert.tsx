@@ -26,14 +26,16 @@ const ShowAlert = ({
     return (
       <>
         <StyledAlert variant="primary">
-          <Paragraph
-            variant="primary"
-            fontSize="hsmall"
-            fontWeight="700"
-            noMargin
-          >
-            Convention collective non traitée
-          </Paragraph>
+          {simulator !== "QUESTIONNAIRE" && (
+            <Paragraph
+              variant="primary"
+              fontSize="hsmall"
+              fontWeight="700"
+              noMargin
+            >
+              Convention collective non traitée
+            </Paragraph>
+          )}
           {alertAgreementNotSupported ? (
             alertAgreementNotSupported(currentAgreement.url)
           ) : (

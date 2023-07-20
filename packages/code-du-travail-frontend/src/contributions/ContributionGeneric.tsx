@@ -13,6 +13,7 @@ import {
   Badge,
   Button,
   icons,
+  Paragraph,
   Section,
   theme,
   Title,
@@ -69,7 +70,9 @@ const ContributionGeneric = ({ answers, content, slug }) => {
 
   const CC_NOT_SUPPORTED = (
     <>
-      <p>Nous n’avons pas de réponse pour cette convention collective.</p>
+      <Paragraph variant="primary" fontSize="hsmall" fontWeight="700" noMargin>
+        Nous n’avons pas de réponse pour cette convention collective
+      </Paragraph>
       {showAnswer ? (
         <p>Vous pouvez consulter les informations générales ci-dessous.</p>
       ) : (
