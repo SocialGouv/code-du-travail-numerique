@@ -13,7 +13,10 @@ jest.mock("@socialgouv/matomo-next", () => ({
 }));
 jest.mock("../../conventions/Search/api/agreements.service");
 jest.mock("../../conventions/Search/api/enterprises.service");
-
+jest.mock("next/router", () => ({
+  push: jest.fn(),
+  asPath: "/contribution/my-contrib",
+}));
 describe("<ContributionGeneric />", () => {
   beforeEach(() => {
     const ma = matopush as jest.MockedFunction<typeof matopush>;
@@ -22,18 +25,18 @@ describe("<ContributionGeneric />", () => {
   const ANSWERS = {
     conventions: [
       {
-        id: 123,
-        idcc: "0044",
-        markdown: "hello **123**",
+        id: 1351,
+        idcc: "1351",
+        markdown: "hello **1351**",
       },
     ],
     generic: { markdown: "hello **generic**" },
   };
-  it("je connais ma CC", async () => {
+  it("je connais ma CC - cc traité", async () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
-    const { container } = render(
-      <ContributionGeneric slug="/hello" answers={ANSWERS} content={{}} />
+    render(
+      <ContributionGeneric slug="/my-contrib" answers={ANSWERS} content={{}} />
     );
     fireEvent.click(ui.agreement.agreement.get());
     fireEvent.focus(ui.agreement.agreementInput.get());
@@ -48,18 +51,99 @@ describe("<ContributionGeneric />", () => {
     expect(matopush).toHaveBeenCalledTimes(4);
     // @ts-ignore
     expect(matopush.mock.calls).toEqual([
-      [["trackEvent", "cc_search", undefined, '{"query":"1351"}']],
-      [["trackEvent", "cc_search_type_of_users", "click_p1", undefined]],
-      [["trackEvent", "cc_select_p1", undefined, "idcc1351"]],
-      [["trackEvent", "outil", "cc_select_non_traitée", 1351]],
+      [
+        [
+          "trackEvent",
+          "cc_search",
+          "/contribution/my-contrib",
+          '{"query":"1351"}',
+        ],
+      ],
+      [
+        [
+          "trackEvent",
+          "cc_search_type_of_users",
+          "click_p1",
+          "/contribution/my-contrib",
+        ],
+      ],
+      [["trackEvent", "cc_select_p1", "/contribution/my-contrib", "idcc1351"]],
+      [["trackEvent", "outil", "cc_select_traitée", 1351]],
+    ]);
+    fireEvent.click(byText("Afficher les informations").get());
+    expect(matopush).toHaveBeenCalledTimes(5);
+    expect(matopush).toHaveBeenLastCalledWith([
+      "trackEvent",
+      "contribution",
+      "click_afficher_les_informations_CC",
+      "/contribution/my-contrib",
     ]);
   });
+  it("je connais ma CC - cc non traité", async () => {
+    expect(matopush).toHaveBeenCalledTimes(0);
 
+    render(
+      <ContributionGeneric
+        slug="/my-contrib"
+        answers={{
+          conventions: [
+            {
+              id: 123,
+              idcc: "123",
+              markdown: "hello **123**",
+            },
+          ],
+          generic: { markdown: "hello **generic**" },
+        }}
+        content={{}}
+      />
+    );
+    fireEvent.click(ui.agreement.agreement.get());
+    fireEvent.focus(ui.agreement.agreementInput.get());
+    fireEvent.change(ui.agreement.agreementInput.get(), {
+      target: { value: "1351" },
+    });
+    await waitFor(() =>
+      expect(ui.agreement1351.searchResult.query()).toBeInTheDocument()
+    );
+    fireEvent.click(ui.agreement1351.searchResult.get());
+    expect(byText(/Afficher les informations/).get()).toBeInTheDocument();
+    expect(matopush).toHaveBeenCalledTimes(4);
+    // @ts-ignore
+    expect(matopush.mock.calls).toEqual([
+      [
+        [
+          "trackEvent",
+          "cc_search",
+          "/contribution/my-contrib",
+          '{"query":"1351"}',
+        ],
+      ],
+      [
+        [
+          "trackEvent",
+          "cc_search_type_of_users",
+          "click_p1",
+          "/contribution/my-contrib",
+        ],
+      ],
+      [["trackEvent", "cc_select_p1", "/contribution/my-contrib", "idcc1351"]],
+      [["trackEvent", "outil", "cc_select_non_traitée", 1351]],
+    ]);
+    fireEvent.click(byText("Afficher les informations générales").get());
+    expect(matopush).toHaveBeenCalledTimes(5);
+    expect(matopush).toHaveBeenLastCalledWith([
+      "trackEvent",
+      "contribution",
+      "click_afficher_les_informations_générales",
+      "/contribution/my-contrib",
+    ]);
+  });
   it("je ne connais pas ma CC", async () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
-    const { container } = render(
-      <ContributionGeneric slug="/hello" answers={ANSWERS} content={{}} />
+    render(
+      <ContributionGeneric slug="/my-contrib" answers={ANSWERS} content={{}} />
     );
     fireEvent.click(ui.agreement.unknownAgreement.get());
     fireEvent.focus(ui.agreement.agreementCompanyInput.get());
@@ -85,20 +169,27 @@ describe("<ContributionGeneric />", () => {
         [
           "trackEvent",
           "enterprise_search",
-          undefined,
+          "/contribution/my-contrib",
           '{"address":"","query":"carrefour"}',
         ],
       ],
-      [["trackEvent", "cc_search_type_of_users", "click_p2", undefined]],
+      [
+        [
+          "trackEvent",
+          "cc_search_type_of_users",
+          "click_p2",
+          "/contribution/my-contrib",
+        ],
+      ],
       [
         [
           "trackEvent",
           "enterprise_select",
-          undefined,
+          "/contribution/my-contrib",
           '{"label":"CARREFOUR HYPERMARCHES CARREOUR","siren":"451321335"}',
         ],
       ],
-      [["trackEvent", "cc_select_p2", undefined, "idcc2216"]],
+      [["trackEvent", "cc_select_p2", "/contribution/my-contrib", "idcc2216"]],
       [["trackEvent", "outil", "cc_select_non_traitée", 2216]],
     ]);
   });
@@ -107,7 +198,7 @@ describe("<ContributionGeneric />", () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
     render(
-      <ContributionGeneric slug="/hello" answers={ANSWERS} content={{}} />
+      <ContributionGeneric slug="/my-contrib" answers={ANSWERS} content={{}} />
     );
 
     fireEvent.click(
@@ -121,6 +212,7 @@ describe("<ContributionGeneric />", () => {
       "trackEvent",
       "cc_search_type_of_users",
       "click_p3",
+      "/contribution/my-contrib",
     ]);
   });
 });

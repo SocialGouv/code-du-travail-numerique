@@ -1,6 +1,7 @@
 import { Agreement, getLabelBySource } from "@socialgouv/cdtn-utils";
 import React, { useState } from "react";
 import styled from "styled-components";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 import Mdx from "../../src/common/Mdx";
 import { A11yLink } from "../common/A11yLink";
@@ -26,14 +27,13 @@ import AgreementSearch from "../outils/CommonSteps/Agreement/components/Agreemen
 import { pushAgreementEvents } from "../outils/common";
 import { OnUserAction } from "../outils/ConventionCollective/types";
 import { handleTrackEvent } from "../outils/common/Agreement/tracking";
+import { MatomoBaseEvent } from "../lib";
 
 const { DirectionRight } = icons;
 
 const CC_NOT_SUPPORTED = (
   <>
-    <p>
-      La convention collective sélectionnée n’est pas traitée par nos services.
-    </p>
+    <p>Nous n’avons pas de réponse pour cette convention collective.</p>
     <p>
       Vous pouvez tout de même poursuivre pour obtenir les informations
       générales
@@ -58,6 +58,9 @@ const ContributionGeneric = ({ answers, content, slug }) => {
     AgreementRoute | undefined
   >();
 
+  if (convention && !selectedRoute) {
+    setSelectedRoute("agreement");
+  }
   const supportedAgreements: AgreementSupportInfo[] = answers.conventions.map(
     (c) => {
       return {
@@ -159,12 +162,19 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                   simulator="QUESTIONNAIRE"
                 />
               )}
+
               {convention && (
                 <Div>
                   {isSupported(convention) ? (
                     <Button
                       variant="primary"
                       onClick={() => {
+                        matopush([
+                          MatomoBaseEvent.TRACK_EVENT,
+                          "contribution",
+                          "click_afficher_les_informations_CC",
+                          getTitle(),
+                        ]);
                         router.push(`/contribution/${convention.num}-${slug}`);
                       }}
                     >
@@ -176,7 +186,15 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                       {!showAnswer && (
                         <Button
                           variant="primary"
-                          onClick={() => setShowAnswer(true)}
+                          onClick={() => {
+                            matopush([
+                              MatomoBaseEvent.TRACK_EVENT,
+                              "contribution",
+                              "click_afficher_les_informations_générales",
+                              getTitle(),
+                            ]);
+                            setShowAnswer(true);
+                          }}
                         >
                           Afficher les informations générales
                         </Button>
