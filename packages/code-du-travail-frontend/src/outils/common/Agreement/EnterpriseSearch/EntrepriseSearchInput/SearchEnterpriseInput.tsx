@@ -57,7 +57,7 @@ export const SearchEnterpriseInput = ({
       <Flex>
         <Box>
           <InlineLabel htmlFor="enterprise-search" disabled={isDisabled}>
-            Nom de votre entreprise ou numéro Siret OO
+            Nom de votre entreprise ou numéro Siret
           </InlineLabel>
           <InfoBulle
             title={"Qu’est ce qu’un n°siret ?"}
