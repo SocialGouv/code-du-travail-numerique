@@ -887,9 +887,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 exports[`<Contribution /> should render with generic answer 1`] = `
 <div>
-  <div
-    class="sc-gEvEer hpVpdb"
-  >
+  <section>
     <div
       class="sc-ePDLzJ gyQfvT"
     >
@@ -913,7 +911,7 @@ exports[`<Contribution /> should render with generic answer 1`] = `
         </strong>
       </p>
     </div>
-  </div>
+  </section>
 </div>
 `;
 

@@ -9,6 +9,8 @@ import { Breadcrumb } from "@socialgouv/cdtn-utils";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
+import ContributionCC from "../../src/contributions/ContributionCC";
+import showNewContribPage from "../../src/contributions/slugFilter";
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);
@@ -44,14 +46,7 @@ const buildTitleAndDescription = (
     title,
   };
 };
-
-const SLUG_FOR_POC = [
-  "les-conges-pour-evenements-familiaux",
-  "quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
-];
-const showNewContribPage = (slug): boolean => {
-  return SLUG_FOR_POC.indexOf(slug) >= 0;
-};
+const SLUG_FOR_POC_GENERIC = ["les-conges-pour-evenements-familiaux"];
 
 function PageContribution(props: Props): JSX.Element {
   const {
@@ -78,17 +73,26 @@ function PageContribution(props: Props): JSX.Element {
         relatedItems={relatedItems}
         breadcrumbs={breadcrumbs}
       >
-        {showNewContribPage(slug) ? (
+        {SLUG_FOR_POC_GENERIC.indexOf(slug) >= 0 ? (
           <ContributionGeneric
             answers={answers}
             slug={slug}
             content={(content && content._source) || {}}
           />
         ) : (
-          <Contribution
-            answers={answers}
-            content={(content && content._source) || {}}
-          />
+          <>
+            {showNewContribPage(slug) ? (
+              <ContributionCC
+                answers={answers}
+                content={(content && content._source) || {}}
+              />
+            ) : (
+              <Contribution
+                answers={answers}
+                content={(content && content._source) || {}}
+              />
+            )}
+          </>
         )}
       </Answer>
     </Layout>
