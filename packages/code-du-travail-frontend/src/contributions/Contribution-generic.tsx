@@ -25,10 +25,9 @@ import { Toast } from "@socialgouv/cdtn-ui/lib";
 import { EnterpriseSearch } from "../outils/CommonSteps/Agreement/components";
 import { AgreementSupportInfo } from "../outils/common/Agreement/types";
 import AgreementSearch from "../outils/CommonSteps/Agreement/components/AgreementSearch";
-import { useTrackingContext } from "../outils/ConventionCollective/common/TrackingContext";
 import { pushAgreementEvents } from "../outils/common";
-import { UserAction } from "../outils/ConventionCollective/types";
-import handleTrackEvent from "../outils/ConventionCollective/tracking/HandleTrackEvent";
+import { OnUserAction } from "../outils/ConventionCollective/types";
+import { handleTrackEvent } from "../outils/common/Agreement/tracking";
 
 const { DirectionRight } = icons;
 
@@ -45,11 +44,11 @@ const CC_NOT_SUPPORTED = (
 );
 
 const ContributionGeneric = ({ answers, content, slug }) => {
-  const { uuid, trackEvent } = useTrackingContext();
-
-  const onUserAction = (action: UserAction, extra?: unknown) => {
-    handleTrackEvent(trackEvent, uuid, router.asPath, action, extra);
+  const onUserAction: OnUserAction = (action, extra) => {
+    handleTrackEvent(getTitle(), action, extra);
   };
+  const getTitle = () => router.asPath;
+
   const hasConventionAnswers =
     answers.conventions && answers.conventions.length > 0;
   const [showAnswer, setShowAnswer] = useState(false);
@@ -61,10 +60,6 @@ const ContributionGeneric = ({ answers, content, slug }) => {
     AgreementRoute | undefined
   >();
 
-  const onSelectAgreement = (agreement) => {
-    console.log("track event onSelectAgreement", agreement);
-    setConvention(agreement);
-  };
   const supportedAgreements: AgreementSupportInfo[] = answers.conventions.map(
     (c) => {
       return {
@@ -103,15 +98,9 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                   },
                 ]}
                 name="route"
-                label=" Quel est le nom de la convention collective applicable&nbsp;?"
+                label="Quel est le nom de la convention collective applicable&nbsp;?"
                 selectedOption={selectedRoute}
                 onChangeSelectedOption={(value: AgreementRoute) => {
-                  pushAgreementEvents(
-                    router.asPath,
-                    { route: value },
-                    false,
-                    false
-                  );
                   setConvention();
                   setSelectedRoute(value);
                 }}
@@ -141,7 +130,20 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                       <AgreementSearch
                         supportedAgreements={supportedAgreements}
                         selectedAgreement={convention}
-                        onSelectAgreement={onSelectAgreement}
+                        onSelectAgreement={(agreement) => {
+                          if (agreement) {
+                            pushAgreementEvents(
+                              getTitle(),
+                              {
+                                route: selectedRoute,
+                                selected: agreement,
+                              },
+                              isSupported(agreement),
+                              false
+                            );
+                          }
+                          setConvention(agreement);
+                        }}
                         onUserAction={onUserAction}
                         alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
                         simulator="QUESTIONNAIRE"
@@ -154,7 +156,22 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                 <EnterpriseSearch
                   supportedAgreements={supportedAgreements}
                   selectedAgreement={convention}
-                  onSelectAgreement={setConvention}
+                  onSelectAgreement={(agreement, enterprise) => {
+                    if (agreement) {
+                      pushAgreementEvents(
+                        getTitle(),
+                        {
+                          route: selectedRoute,
+                          enterprise: enterprise,
+                          selected: agreement,
+                        },
+                        isSupported(agreement),
+                        false
+                      );
+                    }
+
+                    setConvention(agreement);
+                  }}
                   onUserAction={onUserAction}
                   alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
                   simulator="QUESTIONNAIRE"
@@ -194,7 +211,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                   variant="navLink"
                   onClick={() => {
                     pushAgreementEvents(
-                      router.asPath,
+                      getTitle(),
                       { route: "not-selected" },
                       false,
                       false

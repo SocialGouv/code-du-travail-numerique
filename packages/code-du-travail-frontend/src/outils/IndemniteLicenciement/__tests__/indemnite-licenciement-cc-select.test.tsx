@@ -1,4 +1,4 @@
-import { CalculateurIndemnite } from "../../../../src/outils";
+import { CalculateurIndemnite } from "../index";
 import { ui } from "./ui";
 
 import { fireEvent, render, waitFor } from "@testing-library/react";
