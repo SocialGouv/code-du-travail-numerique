@@ -46,8 +46,8 @@ export const SearchEnterpriseInput = ({
     searchParams.query,
     searchParams.address
   );
-  const [query, setQuery] = useState("");
-  const [address, setAddress] = useState("");
+  const [query, setQuery] = useState(searchParams.query);
+  const [address, setAddress] = useState(searchParams.address);
   const searchInputHandler = () => {
     onSearchParamsChange({ ...searchParams, query: query, address: address });
   };
@@ -57,7 +57,7 @@ export const SearchEnterpriseInput = ({
       <Flex>
         <Box>
           <InlineLabel htmlFor="enterprise-search" disabled={isDisabled}>
-            Nom de votre entreprise ou numéro Siret
+            Nom de votre entreprise ou numéro Siret OO
           </InlineLabel>
           <InfoBulle
             title={"Qu’est ce qu’un n°siret ?"}
