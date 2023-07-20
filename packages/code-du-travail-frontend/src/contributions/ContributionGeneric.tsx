@@ -31,16 +31,6 @@ import { MatomoBaseEvent } from "../lib";
 
 const { DirectionRight } = icons;
 
-const CC_NOT_SUPPORTED = (
-  <>
-    <p>Nous n’avons pas de réponse pour cette convention collective.</p>
-    <p>
-      Vous pouvez tout de même poursuivre pour obtenir les informations
-      générales
-    </p>
-  </>
-);
-
 const ContributionGeneric = ({ answers, content, slug }) => {
   const onUserAction: OnUserAction = (action, extra) => {
     handleTrackEvent(getTitle(), action, extra);
@@ -72,6 +62,19 @@ const ContributionGeneric = ({ answers, content, slug }) => {
   const isSupported = (agreement) =>
     !!supportedAgreements.find((item) => item.idcc == agreement.num);
 
+  const CC_NOT_SUPPORTED = (
+    <>
+      <p>Nous n’avons pas de réponse pour cette convention collective.</p>
+      {showAnswer ? (
+        <p>Vous pouvez consulter les informations générales ci-dessous</p>
+      ) : (
+        <p>
+          Vous pouvez tout de même poursuivre pour obtenir les informations
+          générales
+        </p>
+      )}
+    </>
+  );
   return (
     <>
       {hasConventionAnswers && (

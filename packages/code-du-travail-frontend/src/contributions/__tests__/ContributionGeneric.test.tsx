@@ -4,6 +4,7 @@ import ContributionGeneric from "../ContributionGeneric";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { ui } from "../../outils/DureePreavisDemission/__tests__/ui";
 import { byTestId, byText } from "testing-library-selector";
+import router from "next/router";
 
 beforeEach(() => {
   localStorage.clear();
@@ -21,6 +22,8 @@ describe("<ContributionGeneric />", () => {
   beforeEach(() => {
     const ma = matopush as jest.MockedFunction<typeof matopush>;
     ma.mockReset();
+    const push = router.push as jest.MockedFunction<typeof router.push>;
+    push.mockReset();
   });
   const ANSWERS = {
     conventions: [
@@ -36,7 +39,7 @@ describe("<ContributionGeneric />", () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
     render(
-      <ContributionGeneric slug="/my-contrib" answers={ANSWERS} content={{}} />
+      <ContributionGeneric slug="my-contrib" answers={ANSWERS} content={{}} />
     );
     fireEvent.click(ui.agreement.agreement.get());
     fireEvent.focus(ui.agreement.agreementInput.get());
@@ -78,13 +81,14 @@ describe("<ContributionGeneric />", () => {
       "click_afficher_les_informations_CC",
       "/contribution/my-contrib",
     ]);
+    expect(router.push).toHaveBeenCalledWith("/contribution/1351-my-contrib");
   });
   it("je connais ma CC - cc non traité", async () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
     render(
       <ContributionGeneric
-        slug="/my-contrib"
+        slug="my-contrib"
         answers={{
           conventions: [
             {
@@ -138,12 +142,13 @@ describe("<ContributionGeneric />", () => {
       "click_afficher_les_informations_générales",
       "/contribution/my-contrib",
     ]);
+    expect(router.push).toHaveBeenCalledTimes(0);
   });
   it("je ne connais pas ma CC", async () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
     render(
-      <ContributionGeneric slug="/my-contrib" answers={ANSWERS} content={{}} />
+      <ContributionGeneric slug="my-contrib" answers={ANSWERS} content={{}} />
     );
     fireEvent.click(ui.agreement.unknownAgreement.get());
     fireEvent.focus(ui.agreement.agreementCompanyInput.get());
@@ -198,7 +203,7 @@ describe("<ContributionGeneric />", () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
     render(
-      <ContributionGeneric slug="/my-contrib" answers={ANSWERS} content={{}} />
+      <ContributionGeneric slug="my-contrib" answers={ANSWERS} content={{}} />
     );
 
     fireEvent.click(
@@ -214,5 +219,6 @@ describe("<ContributionGeneric />", () => {
       "click_p3",
       "/contribution/my-contrib",
     ]);
+    expect(router.push).toHaveBeenCalledTimes(0);
   });
 });
