@@ -47,7 +47,6 @@ const buildTitleAndDescription = (
 
 const SLUG_FOR_POC = [
   "les-conges-pour-evenements-familiaux",
-  "quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement",
   "quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
 ];
 const showNewContribPage = (slug): boolean => {

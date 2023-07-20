@@ -21,13 +21,17 @@ import {
 import { RadioQuestion } from "../outils/Components";
 import { AgreementRoute } from "../outils/common/type/WizardType";
 import router from "next/router";
-import { EnterpriseSearch } from "../outils/CommonSteps/Agreement/components";
+import {
+  EnterpriseSearch,
+  NoEnterprise,
+} from "../outils/CommonSteps/Agreement/components";
 import { AgreementSupportInfo } from "../outils/common/Agreement/types";
 import AgreementSearch from "../outils/CommonSteps/Agreement/components/AgreementSearch";
 import { pushAgreementEvents } from "../outils/common";
 import { OnUserAction } from "../outils/ConventionCollective/types";
 import { handleTrackEvent } from "../outils/common/Agreement/tracking";
 import { MatomoBaseEvent } from "../lib";
+import { getCc3239Informations } from "../outils";
 
 const { DirectionRight } = icons;
 
@@ -40,6 +44,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
   const hasConventionAnswers =
     answers.conventions && answers.conventions.length > 0;
   const [showAnswer, setShowAnswer] = useState(false);
+  const [hasNoEnterpriseSelected, setHasNoEnterpriseSelected] = useState(false);
 
   const [convention, setConvention] =
     useLocalStorageOnPageLoad<Agreement>("convention");
@@ -66,11 +71,11 @@ const ContributionGeneric = ({ answers, content, slug }) => {
     <>
       <p>Nous n’avons pas de réponse pour cette convention collective.</p>
       {showAnswer ? (
-        <p>Vous pouvez consulter les informations générales ci-dessous</p>
+        <p>Vous pouvez consulter les informations générales ci-dessous.</p>
       ) : (
         <p>
           Vous pouvez tout de même poursuivre pour obtenir les informations
-          générales
+          générales.
         </p>
       )}
     </>
@@ -81,6 +86,11 @@ const ContributionGeneric = ({ answers, content, slug }) => {
         <>
           <Badge />
           <section>
+            <p>
+              La réponse dépend de la convention collective à laquelle votre
+              entreprise est rattachée. Veuillez renseigner votre situation afin
+              d’obtenir une réponse adaptée :
+            </p>
             <Wrapper variant="light">
               <Title shift={spacings.xmedium} variant="primary">
                 Votre Situtation
@@ -106,6 +116,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                 selectedOption={selectedRoute}
                 onChangeSelectedOption={(value: AgreementRoute) => {
                   setConvention();
+                  setHasNoEnterpriseSelected(false);
                   setSelectedRoute(value);
                 }}
                 tooltip={{
@@ -141,29 +152,58 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                 />
               )}
               {selectedRoute === "enterprise" && (
-                <EnterpriseSearch
-                  supportedAgreements={supportedAgreements}
-                  selectedAgreement={convention}
-                  onSelectAgreement={(agreement, enterprise) => {
-                    if (agreement) {
-                      pushAgreementEvents(
-                        getTitle(),
-                        {
-                          route: selectedRoute,
-                          enterprise: enterprise,
-                          selected: agreement,
-                        },
-                        isSupported(agreement),
-                        false
-                      );
-                    }
+                <>
+                  {!hasNoEnterpriseSelected && (
+                    <EnterpriseSearch
+                      supportedAgreements={supportedAgreements}
+                      selectedAgreement={convention}
+                      onSelectAgreement={(agreement, enterprise) => {
+                        if (agreement) {
+                          pushAgreementEvents(
+                            getTitle(),
+                            {
+                              route: selectedRoute,
+                              enterprise: enterprise,
+                              selected: agreement,
+                            },
+                            isSupported(agreement),
+                            false
+                          );
+                        }
 
-                    setConvention(agreement);
-                  }}
-                  onUserAction={onUserAction}
-                  alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
-                  simulator="QUESTIONNAIRE"
-                />
+                        setConvention(agreement);
+                      }}
+                      onUserAction={onUserAction}
+                      alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
+                      simulator="QUESTIONNAIRE"
+                    />
+                  )}
+                  {(!convention || convention.num === 3239) && (
+                    <NoEnterprise
+                      isCheckboxChecked={hasNoEnterpriseSelected}
+                      setIsCheckboxChecked={setHasNoEnterpriseSelected}
+                      onCheckboxChange={async (isCheckboxChecked) => {
+                        console.log(isCheckboxChecked);
+                        if (isCheckboxChecked) {
+                          const cc3239 = await getCc3239Informations();
+
+                          pushAgreementEvents(
+                            getTitle(),
+                            {
+                              route: selectedRoute,
+                              selected: cc3239,
+                            },
+                            isSupported(cc3239),
+                            false
+                          );
+                          setConvention(cc3239);
+                        } else {
+                          setConvention(undefined);
+                        }
+                      }}
+                    />
+                  )}
+                </>
               )}
 
               {convention && (
