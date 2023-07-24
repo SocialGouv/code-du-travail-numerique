@@ -234,6 +234,7 @@ describe("Test enterprise endpoint", () => {
           conventions: [
             {
               num: 123456,
+              shortTitle: "Convention collective non reconnue",
             },
           ],
         },
