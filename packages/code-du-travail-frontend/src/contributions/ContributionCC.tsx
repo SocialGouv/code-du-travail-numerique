@@ -236,6 +236,22 @@ const ContributionCC = ({ answers, content, slug }) => {
             markdown={answers.generic.markdown}
             components={rehypeToReact(content)}
           />
+          {slug === "quelle-est-la-duree-de-preavis-en-cas-de-licenciement" &&
+            !conventionAnswer && (
+              <Alert>
+                <Heading as="p">Texte applicable</Heading>
+                <p>
+                  <p>
+                    Si la convention ou l’accord collectif ou un usage prévoit
+                    des conditions - durée du préavis et/ou ancienneté - plus
+                    favorables que le code du travail pour le salarié,
+                    l’employeur les applique.
+                  </p>
+                  Le contrat de travail peut toujours prévoir des mesures plus
+                  favorables, qui s’appliqueront.
+                </p>
+              </Alert>
+            )}
           <ReferencesJuridiques
             references={filteredRefs(answers?.generic?.references, content.url)}
           />
