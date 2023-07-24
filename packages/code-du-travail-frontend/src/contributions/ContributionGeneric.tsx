@@ -33,6 +33,7 @@ import { OnUserAction } from "../outils/ConventionCollective/types";
 import { handleTrackEvent } from "../outils/common/Agreement/tracking";
 import { MatomoBaseEvent } from "../lib";
 import { getCc3239Informations } from "../outils";
+import { Enterprise } from "../conventions/Search/api/enterprises.service";
 
 const { DirectionRight } = icons;
 
@@ -46,6 +47,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
     answers.conventions && answers.conventions.length > 0;
   const [showAnswer, setShowAnswer] = useState(false);
   const [hasNoEnterpriseSelected, setHasNoEnterpriseSelected] = useState(false);
+  const [entreprise, setEnterprise] = useState<Enterprise | undefined>();
 
   const [convention, setConvention] =
     useLocalStorageOnPageLoad<Agreement>("convention");
@@ -67,6 +69,33 @@ const ContributionGeneric = ({ answers, content, slug }) => {
   );
   const isSupported = (agreement) =>
     !!supportedAgreements.find((item) => item.idcc == agreement.num);
+
+  const onSelectAgreement = (
+    agreement,
+    enterprise?: Enterprise | undefined
+  ) => {
+    let agreementTreated;
+    if (agreement) {
+      agreementTreated = isSupported(agreement);
+
+      pushAgreementEvents(
+        getTitle(),
+        {
+          route: selectedRoute!,
+          enterprise: enterprise,
+          selected: agreement,
+        },
+        agreementTreated,
+        false
+      );
+    }
+
+    setConvention(agreement);
+    setEnterprise(enterprise);
+    if (agreementTreated) {
+      setShowAnswer(false);
+    }
+  };
 
   const CC_NOT_SUPPORTED = (
     <>
@@ -96,7 +125,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
             </p>
             <Wrapper variant="light">
               <Title shift={spacings.xmedium} variant="primary">
-                Votre Situtation
+                Votre Situation
               </Title>
 
               <RadioQuestion
@@ -135,20 +164,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                 <AgreementSearch
                   supportedAgreements={supportedAgreements}
                   selectedAgreement={convention}
-                  onSelectAgreement={(agreement) => {
-                    if (agreement) {
-                      pushAgreementEvents(
-                        getTitle(),
-                        {
-                          route: selectedRoute,
-                          selected: agreement,
-                        },
-                        isSupported(agreement),
-                        false
-                      );
-                    }
-                    setConvention(agreement);
-                  }}
+                  onSelectAgreement={onSelectAgreement}
                   onUserAction={onUserAction}
                   alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
                   simulator="QUESTIONNAIRE"
@@ -157,36 +173,22 @@ const ContributionGeneric = ({ answers, content, slug }) => {
               {selectedRoute === "enterprise" && (
                 <>
                   {!hasNoEnterpriseSelected && (
-                    <EnterpriseSearch
-                      supportedAgreements={supportedAgreements}
-                      selectedAgreement={convention}
-                      onSelectAgreement={(agreement, enterprise) => {
-                        if (agreement) {
-                          pushAgreementEvents(
-                            getTitle(),
-                            {
-                              route: selectedRoute,
-                              enterprise: enterprise,
-                              selected: agreement,
-                            },
-                            isSupported(agreement),
-                            false
-                          );
-                        }
-
-                        setConvention(agreement);
-                      }}
-                      onUserAction={onUserAction}
-                      alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
-                      simulator="QUESTIONNAIRE"
-                    />
+                    <form onSubmit={(event) => event.preventDefault()}>
+                      <EnterpriseSearch
+                        supportedAgreements={supportedAgreements}
+                        selectedAgreement={convention}
+                        onSelectAgreement={onSelectAgreement}
+                        onUserAction={onUserAction}
+                        alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
+                        simulator="QUESTIONNAIRE"
+                      />
+                    </form>
                   )}
-                  {(!convention || convention.num === 3239) && (
+                  {!entreprise && (
                     <NoEnterprise
                       isCheckboxChecked={hasNoEnterpriseSelected}
                       setIsCheckboxChecked={setHasNoEnterpriseSelected}
                       onCheckboxChange={async (isCheckboxChecked) => {
-                        console.log(isCheckboxChecked);
                         if (isCheckboxChecked) {
                           const cc3239 = await getCc3239Informations();
 
@@ -204,6 +206,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                           setConvention(undefined);
                         }
                       }}
+                      isQuestionnaire
                     />
                   )}
                 </>
@@ -251,7 +254,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
               )}
             </Wrapper>
 
-            {!showAnswer && (
+            {!showAnswer && !convention && (
               <p>
                 <Button
                   variant="navLink"

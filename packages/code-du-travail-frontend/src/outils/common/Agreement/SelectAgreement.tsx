@@ -135,20 +135,21 @@ const SelectAgreement = ({
               setHasSelectedEnterprise(hasSelectedEnterprise);
             }}
           />
-          <NoEnterprise
-            isHidden={hasSelectedEnterprise || !!enterprise}
-            isCheckboxChecked={!!values.hasNoEnterpriseSelected}
-            setIsCheckboxChecked={() => {
-              form.change(
-                "hasNoEnterpriseSelected",
-                !values.hasNoEnterpriseSelected
-              );
-            }}
-            onCheckboxChange={async (isCheckboxChecked) => {
-              const cc3239 = await getCc3239Informations();
-              onSelectAgreement(isCheckboxChecked ? cc3239 : null);
-            }}
-          />
+          {!hasSelectedEnterprise && !enterprise && (
+            <NoEnterprise
+              isCheckboxChecked={!!values.hasNoEnterpriseSelected}
+              setIsCheckboxChecked={() => {
+                form.change(
+                  "hasNoEnterpriseSelected",
+                  !values.hasNoEnterpriseSelected
+                );
+              }}
+              onCheckboxChange={async (isCheckboxChecked) => {
+                const cc3239 = await getCc3239Informations();
+                onSelectAgreement(isCheckboxChecked ? cc3239 : null);
+              }}
+            />
+          )}
         </>
       )}
       <ErrorField
