@@ -71,8 +71,9 @@ const ContributionGeneric = ({ answers, content, slug }) => {
     !!supportedAgreements.find((item) => item.idcc == agreement.num);
 
   const onSelectAgreement = (
-    agreement,
-    enterprise?: Enterprise | undefined
+    agreement: Agreement | null,
+    enterprise?: Enterprise | undefined,
+    hasNoEntrepriseSelected?: boolean
   ) => {
     let agreementTreated;
     if (agreement) {
@@ -86,7 +87,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
           selected: agreement,
         },
         agreementTreated,
-        false
+        !!hasNoEntrepriseSelected
       );
     }
 
@@ -189,22 +190,10 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                       isCheckboxChecked={hasNoEnterpriseSelected}
                       setIsCheckboxChecked={setHasNoEnterpriseSelected}
                       onCheckboxChange={async (isCheckboxChecked) => {
-                        if (isCheckboxChecked) {
-                          const cc3239 = await getCc3239Informations();
-
-                          pushAgreementEvents(
-                            getTitle(),
-                            {
-                              route: selectedRoute,
-                              selected: cc3239,
-                            },
-                            isSupported(cc3239),
-                            false
-                          );
-                          setConvention(cc3239);
-                        } else {
-                          setConvention(undefined);
-                        }
+                        const cc3239 = isCheckboxChecked
+                          ? await getCc3239Informations()
+                          : null;
+                        onSelectAgreement(cc3239, undefined, isCheckboxChecked);
                       }}
                       isQuestionnaire
                     />
