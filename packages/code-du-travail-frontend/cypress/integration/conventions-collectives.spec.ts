@@ -9,7 +9,7 @@ describe("Conventions collectives", () => {
       "contain",
       "Retrouvez les questions/réponses fréquentes organisées par thème"
     );
-    cy.get("#content li").should("have.length", 126);
+    cy.get("#content li").should("have.length", 125);
     cy.get("#content li").first().click();
     cy.url().should(
       "include",
