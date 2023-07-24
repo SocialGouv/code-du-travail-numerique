@@ -7,7 +7,7 @@ import { IDCC_TO_REPLACE } from "../../config";
 const toAgreement = (convention: Convention): Agreement => ({
   id: convention.id,
   num: convention.idcc,
-  shortTitle: convention.shortTitle,
+  shortTitle: convention.shortTitle ?? "Convention collective non reconnue",
   title: convention.title,
   ...(convention.url ? { url: convention.url } : {}),
 });
