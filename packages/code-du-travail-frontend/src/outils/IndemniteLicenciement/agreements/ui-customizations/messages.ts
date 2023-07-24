@@ -57,7 +57,8 @@ export const isParentalNoticeHiddenForAgreement = (
     isAgreementBetter &&
     (agreementNumber === 1404 ||
       agreementNumber === 2120 ||
-      agreementNumber === 292)
+      agreementNumber === 292 ||
+      agreementNumber === 176)
   );
 };
 

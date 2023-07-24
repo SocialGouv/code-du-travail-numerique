@@ -295,6 +295,7 @@ const createResultStore: StoreSlice<
         ) {
           isAgreementBetter = true;
         }
+
         if (
           isAgreementSameDetection(
             publicodesSituationLegal,
