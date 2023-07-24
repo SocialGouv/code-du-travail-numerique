@@ -2,6 +2,10 @@ import { Agreement } from "@socialgouv/cdtn-utils";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
 import { AgreementRoute } from "../../../common/type/WizardType";
+import {
+  PublicodesInstance,
+  PublicodesSimulator,
+} from "@socialgouv/modeles-social";
 
 export type CommonAgreementStoreInput = {
   route?: AgreementRoute;
@@ -17,12 +21,12 @@ export type CommonAgreementStoreError = {
   enterprise?: string;
 };
 
-export type CommonAgreementStoreData = {
+export type CommonAgreementStoreData<T extends PublicodesSimulator> = {
   input: CommonAgreementStoreInput;
   error: CommonAgreementStoreError;
   hasBeenSubmit: boolean;
   isStepValid: boolean;
-  publicodes: any;
+  publicodes: PublicodesInstance<T>;
 };
 
 export type AgreementSearchValue = {
@@ -43,7 +47,7 @@ export type CommonAgreementStoreFn = {
   setHasNoEnterpriseSelected: (value: boolean) => void;
 };
 
-export type CommonAgreementStoreSlice = {
-  agreementData: CommonAgreementStoreData;
+export type CommonAgreementStoreSlice<T extends PublicodesSimulator> = {
+  agreementData: CommonAgreementStoreData<T>;
   agreementFunction: CommonAgreementStoreFn;
 };

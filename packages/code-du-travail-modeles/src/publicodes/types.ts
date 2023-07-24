@@ -7,6 +7,10 @@ import type {
 } from "publicodes";
 
 import type { Notification, References } from "../modeles/common";
+import type {
+  IndemniteLicenciementPublicodes,
+  PreavisRetraitePublicodes,
+} from ".";
 
 export type OldReference = {
   ref: string | null;
@@ -125,3 +129,10 @@ export type PublicodesContextType = {
   situation: SituationElement[];
   setSituation: (values: Record<string, string>) => void;
 };
+
+export type PublicodesInstance<T extends PublicodesSimulator> =
+  T extends PublicodesSimulator.PREAVIS_RETRAITE
+    ? PreavisRetraitePublicodes
+    : T extends PublicodesSimulator.INDEMNITE_LICENCIEMENT
+    ? IndemniteLicenciementPublicodes
+    : never;

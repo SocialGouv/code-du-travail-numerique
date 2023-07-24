@@ -57,12 +57,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
     let userAction: UserAction;
     beforeEach(async () => {
       rendering = await render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          slug={"indemnite-licenciement"}
-        />
+        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
       );
       userAction = new UserAction();
       userAction

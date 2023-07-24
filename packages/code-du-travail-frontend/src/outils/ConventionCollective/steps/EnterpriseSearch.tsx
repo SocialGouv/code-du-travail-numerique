@@ -21,7 +21,7 @@ type EnterpriseSearchStepProps = {
   ) => void;
   searchParams?: SearchParams;
   onSearchParamsChange: (params: SearchParams) => void;
-  hidePreviousButton?: boolean;
+  widgetMode: boolean;
 } & TrackingProps;
 
 const EnterpriseSearchStep = ({
@@ -30,7 +30,7 @@ const EnterpriseSearchStep = ({
   searchParams,
   onSearchParamsChange,
   onUserAction,
-  hidePreviousButton,
+  widgetMode,
 }: EnterpriseSearchStepProps): JSX.Element => {
   return (
     <>
@@ -44,9 +44,9 @@ const EnterpriseSearchStep = ({
             handleEnterpriseSelection={handleEnterpriseSelection}
           />
         </form>
-        <NoEnterprise />
+        <NoEnterprise widgetMode={widgetMode} />
       </Section>
-      {!hidePreviousButton && (
+      {!widgetMode && (
         <Link
           href={`/${SOURCES.TOOLS}/convention-collective`}
           passHref

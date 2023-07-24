@@ -8,14 +8,7 @@ import { byText } from "testing-library-selector";
 describe("Arrêt de travail", () => {
   describe("Page contrat de travail: vérification des questions affichées", () => {
     beforeEach(async () => {
-      render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          slug={"indemnite-licenciement"}
-        />
-      );
+      render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
@@ -88,14 +81,7 @@ describe("Arrêt de travail", () => {
 
   describe("Page salaires: vérification de la liste affichée", () => {
     beforeEach(async () => {
-      render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          slug={"indemnite-licenciement"}
-        />
-      );
+      render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
     });
 
     test("should display with the good number of months at the 'Salaires' step if no inaptitude", async () => {

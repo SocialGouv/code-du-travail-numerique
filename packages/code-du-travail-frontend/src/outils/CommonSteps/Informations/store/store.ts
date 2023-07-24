@@ -8,7 +8,11 @@ import {
   PublicodesInformation,
 } from "./types";
 import { StoreSlice } from "../../../types";
-import { CatPro3239, MissingArgs } from "@socialgouv/modeles-social";
+import {
+  CatPro3239,
+  MissingArgs,
+  PublicodesSimulator,
+} from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
@@ -32,7 +36,7 @@ const initialState: CommonInformationsStoreData = {
 
 const createCommonInformationsStore: StoreSlice<
   CommonInformationsStoreSlice,
-  CommonAgreementStoreSlice & ContratTravailStoreSlice
+  CommonAgreementStoreSlice<PublicodesSimulator> & ContratTravailStoreSlice
 > = (set, get) => ({
   informationsData: {
     ...initialState,
@@ -114,7 +118,7 @@ const createCommonInformationsStore: StoreSlice<
         const agreement = get().agreementData.input.agreement!;
         const rules = informationToSituation(newPublicodesInformations);
         let missingArgs: MissingArgs[] = [];
-        let blockingNotification: string | undefined = undefined;
+        let blockingNotification: any = undefined;
         try {
           missingArgs = publicodes
             .setSituation(

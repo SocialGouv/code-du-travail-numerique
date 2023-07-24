@@ -10,12 +10,7 @@ jest.mock("../../../conventions/Search/api/enterprises.service");
 describe("Page salaire: vérification l'affichage des salaires mensuels", () => {
   test("should show 12 month", async () => {
     const { getByText } = render(
-      <CalculateurIndemnite
-        icon={""}
-        title={""}
-        displayTitle={""}
-        slug={"indemnite-licenciement"}
-      />
+      <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
     );
     userEvent.click(ui.introduction.startButton.get());
     userEvent.click(ui.contract.type.cdi.get());
