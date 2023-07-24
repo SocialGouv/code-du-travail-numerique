@@ -84,6 +84,7 @@ function PageContribution(props: Props): JSX.Element {
             {showNewContribPage(slug) ? (
               <ContributionCC
                 answers={answers}
+                slug={slug}
                 content={(content && content._source) || {}}
               />
             ) : (

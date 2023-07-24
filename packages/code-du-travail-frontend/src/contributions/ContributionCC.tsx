@@ -3,6 +3,7 @@ import {
   Alert,
   Badge,
   Button,
+  Heading,
   icons,
   Paragraph,
   Section,
@@ -22,7 +23,7 @@ import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
 import ReferencesJuridiques, { filteredRefs } from "./References";
 
-const ContributionCC = ({ answers, content }) => {
+const ContributionCC = ({ answers, content, slug }) => {
   /**
    * conventionalAnswer are special kind of contribution that include
    * only one a single ccn answer
@@ -161,6 +162,52 @@ const ContributionCC = ({ answers, content }) => {
           </section>
         </>
       )}
+      {conventionAnswer && (
+        <StyledSection>
+          <Alert>
+            <Heading as="p">Texte applicable</Heading>
+            {slug.endsWith("les-conges-pour-evenements-familiaux") ? (
+              <>
+                <p>
+                  Si les durées prévues par le code du travail sont plus longues
+                  que celles prévues par la convention collective, le salarié a
+                  droit aux congés prévus par le code du travail (voir
+                  ci-dessous).
+                </p>
+                <p>
+                  Un accord collectif d’entreprise peut également prévoir des
+                  durées plus longues qui s’appliqueront.
+                </p>
+                <p>
+                  Le code du travail ou un accord collectif d’entreprise peut
+                  aussi prévoir des congés pour d’autres événements familiaux
+                  qui ne sont pas prévus par la convention collective. Dans ce
+                  cas ces congés s’appliqueront aux salariés.
+                </p>
+                <p>
+                  Notez enfin que le contrat de travail peut toujours prévoir
+                  des mesures plus favorables pour le salarié, qui
+                  s’appliqueront.
+                </p>
+              </>
+            ) : (
+              <>
+                <p>
+                  Si le code du travail (voir ci-dessous), un accord collectif
+                  ou un usage prévoit des conditions - durée du préavis et/ou
+                  ancienneté - plus favorables que la convention collective pour
+                  le salarié, l’employeur les applique.
+                </p>
+
+                <p>
+                  Le contrat de travail peut toujours prévoir des mesures plus
+                  favorables, qui s’appliqueront.
+                </p>
+              </>
+            )}
+          </Alert>
+        </StyledSection>
+      )}
       {answers.generic && (
         <Section>
           <Title stripe="left">Que dit le code du travail&nbsp;?</Title>
@@ -235,6 +282,9 @@ const StyledCloseIcon = styled(icons.Close)`
 const StyledAlert = styled(Alert)`
   margin-top: ${spacings.base};
   background-color: ${({ theme }) => theme.bgPrimary};
+`;
+const StyledSection = styled(Section)`
+  margin-top: ${spacings.base};
 `;
 
 export default ContributionCC;

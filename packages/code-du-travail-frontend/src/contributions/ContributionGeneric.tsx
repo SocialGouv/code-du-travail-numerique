@@ -34,6 +34,7 @@ import { handleTrackEvent } from "../outils/common/Agreement/tracking";
 import { MatomoBaseEvent } from "../lib";
 import { getCc3239Informations } from "../outils";
 import { Enterprise } from "../conventions/Search/api/enterprises.service";
+import { Alert, Heading } from "@socialgouv/cdtn-ui/lib";
 
 const { DirectionRight } = icons;
 
@@ -295,6 +296,27 @@ const ContributionGeneric = ({ answers, content, slug }) => {
             markdown={answers.generic.markdown}
             components={rehypeToReact(content)}
           />
+          <Alert>
+            <Heading as="p">Texte applicable</Heading>
+            <p>
+              Une convention collective de branche ou un accord collectif
+              d’entreprise peut prévoir des durées plus longues. Si les durées
+              fixées sont plus courtes que celles prévues par le code du
+              travail, le salarié a droit aux congés prévus par le code du
+              travail.
+            </p>
+
+            <p>
+              Une convention collective de branche ou un accord collectif
+              d’entreprise peut aussi prévoir des congés pour d’autres
+              événements familiaux.
+            </p>
+
+            <p>
+              Le contrat de travail peut toujours prévoir des mesures plus
+              favorables, qui s’appliqueront.
+            </p>
+          </Alert>
           <ReferencesJuridiques
             references={filteredRefs(answers?.generic?.references, content.url)}
           />
