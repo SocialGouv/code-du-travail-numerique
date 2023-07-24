@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.104.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.104.0...v4.104.1) (2023-07-06)
+
+### Bug Fixes
+
+- enlevé an des unités dans champs texte ([#5249](https://github.com/SocialGouv/code-du-travail-numerique/issues/5249)) ([b4dc40b](https://github.com/SocialGouv/code-du-travail-numerique/commit/b4dc40be8bc4d0624a86ebd341db2bf2212db104))
+
 # [4.104.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.103.0...v4.104.0) (2023-07-04)
 
 ### Bug Fixes

@@ -47,7 +47,9 @@ function loadWidgets() {
       const id =
         "cdtn-iframe-" +
         url.replace("__HOST__/widgets/", "").replace(/\//, "-");
-      widgets.push({ url, id, target });
+      if (!widgets.find(({ id: oldId }) => oldId === id)) {
+        widgets.push({ url, id, target });
+      }
     });
   }
   widgets.forEach((widget) => {
