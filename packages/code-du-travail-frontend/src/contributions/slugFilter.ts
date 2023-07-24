@@ -3,7 +3,7 @@ const SLUG_FOR_POC_SWAP = [
   "quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
 ];
 const showNewContribPage = (slug): boolean => {
-  const match = SLUG_FOR_POC_SWAP.find((url) => slug.endsWith("-" + url));
+  const match = SLUG_FOR_POC_SWAP.find((url) => slug.endsWith(url));
   return !!match;
 };
 

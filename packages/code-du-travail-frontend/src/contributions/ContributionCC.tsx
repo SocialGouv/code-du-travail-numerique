@@ -137,8 +137,14 @@ const ContributionCC = ({ answers, content }) => {
                     </>
                   ) : (
                     <Section>
-                      Désolé, nous n’avons pas de réponse pour cette convention
-                      collective.
+                      <p>
+                        Désolé, nous n’avons pas de réponse pour cette
+                        convention collective.
+                      </p>
+                      <p>
+                        Vous pouvez consulter les informations prévues par le
+                        code du travail ci-dessous.
+                      </p>
                     </Section>
                   )}
                   {!isConventionalAnswer && (
