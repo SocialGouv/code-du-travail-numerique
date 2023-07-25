@@ -18,7 +18,7 @@ import {
 } from "./store";
 import { ToolName } from "../types";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
-import { Feedback } from "../../Feedback";
+import { Feedback } from "../common/Feedback";
 
 type Props = {
   icon: string;

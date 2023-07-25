@@ -1,4 +1,4 @@
-import { MatomoBaseEvent, MatomoBaseAction } from "../lib/matomo";
+import { MatomoBaseEvent } from "../../../lib/matomo";
 import { push as matopush } from "@socialgouv/matomo-next";
 
 const EVENT_CATEGORY = "feedback_simulateurs";
