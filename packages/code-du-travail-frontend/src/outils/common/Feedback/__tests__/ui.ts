@@ -23,23 +23,23 @@ export const ui = {
       good: byTestId("simulator-good"),
     },
     questionClarity: {
-      title: byText(/Les questions étaient-elles claires et compréhensible \?/),
+      title: byText(
+        /Les questions étaient-elles claires et compréhensibles \?/
+      ),
       bad: byTestId("questionClarity-bad"),
       average: byTestId("questionClarity-average"),
       good: byTestId("questionClarity-good"),
     },
     resultClarity: {
       title: byText(
-        /Les explications du résultat obtenu étaient-elles claires et compréhensible \?/
+        /Les explications du résultat obtenu étaient-elles claires et compréhensibles \?/
       ),
       bad: byTestId("resultClarity-bad"),
       average: byTestId("resultClarity-average"),
       good: byTestId("resultClarity-good"),
     },
     more: {
-      title: byText(
-        /Les explications du résultat obtenu étaient-elles claires et compréhensible \?/
-      ),
+      title: byText(/Vous souhaitez nous en dire davantage \?/),
       input: byTestId("more-input"),
     },
     requiredError: byText("Vous devez choisir une des réponses"),
