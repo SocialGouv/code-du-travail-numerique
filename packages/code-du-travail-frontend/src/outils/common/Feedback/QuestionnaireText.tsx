@@ -6,6 +6,7 @@ type QuestionnaireItemProps = {
   title?: string;
   placeholder?: string;
   onChange: (text: string) => void;
+  dataTestId?: string;
 };
 
 export const QuestionnaireText = ({
@@ -13,6 +14,7 @@ export const QuestionnaireText = ({
   title,
   placeholder,
   onChange,
+  dataTestId,
 }: QuestionnaireItemProps): JSX.Element => {
   const maxCharacters = 200;
   return (
@@ -22,6 +24,7 @@ export const QuestionnaireText = ({
         placeholder={placeholder}
         maxLength={maxCharacters}
         onChange={(event) => onChange(event.target.value)}
+        data-testid={dataTestId}
       />
       <MaxCharacterText>{maxCharacters} caractères maximum</MaxCharacterText>
     </StyledContainer>

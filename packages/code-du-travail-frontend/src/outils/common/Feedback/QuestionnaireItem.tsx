@@ -15,6 +15,7 @@ type QuestionnaireItemProps = {
   title?: string;
   displayError?: boolean;
   onChange: (status: FEEDBACK_RESULT) => void;
+  dataTestId?: string;
 };
 
 export enum Status {
@@ -34,10 +35,11 @@ export const QuestionnaireItem = ({
   title,
   displayError,
   onChange,
+  dataTestId,
 }: QuestionnaireItemProps): JSX.Element => {
   const [status, setStatus] = useState<Status>();
   return (
-    <div className={className}>
+    <div className={className} data-testId={dataTestId}>
       {title && <b>{title}</b>}
       <ButtonContainer>
         <StyledButton
@@ -46,6 +48,7 @@ export const QuestionnaireItem = ({
             setStatus(Status.BAD);
             onChange(badEventValue);
           }}
+          data-testId={`${dataTestId}-bad`}
         >
           <icons.Bad width="32px" />
           {badText ?? "Pas bien"}
@@ -56,6 +59,7 @@ export const QuestionnaireItem = ({
             setStatus(Status.AVERAGE);
             onChange(averageEventValue);
           }}
+          data-testId={`${dataTestId}-average`}
         >
           <icons.Medium width="32px" />
           {averageText ?? "Moyen"}
@@ -66,6 +70,7 @@ export const QuestionnaireItem = ({
             setStatus(Status.GOOD);
             onChange(goodEventValue);
           }}
+          data-testId={`${dataTestId}-good`}
         >
           <icons.Good width="32px" />
           {goodText ?? "Très bien"}

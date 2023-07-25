@@ -39,6 +39,7 @@ export const QuestionnaireAdvanced = ({
           onChange={(status) => {
             setStatusSimulator(status);
           }}
+          dataTestId="simulator"
         ></StyledQuestionnaireItem>
         <StyledQuestionnaireItem
           badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
@@ -50,6 +51,7 @@ export const QuestionnaireAdvanced = ({
           onChange={(status) => {
             setStatusQuestion(status);
           }}
+          dataTestId="questionClarity"
         ></StyledQuestionnaireItem>
         <StyledQuestionnaireItem
           badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
@@ -61,11 +63,13 @@ export const QuestionnaireAdvanced = ({
           onChange={(status) => {
             setStatusExplanation(status);
           }}
+          dataTestId="resultClarity"
         ></StyledQuestionnaireItem>
         <QuestionnaireText
           title="Vous souhaitez nous en dire davantage ?"
           placeholder="ex: la question sur la date de début du contrat n'est pas claire"
           onChange={setFeedbackText}
+          dataTestId="more-input"
         ></QuestionnaireText>
       </FormContainer>
       <StyledButton
