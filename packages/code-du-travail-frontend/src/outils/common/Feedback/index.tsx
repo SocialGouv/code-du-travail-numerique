@@ -11,6 +11,8 @@ export const Feedback = (): JSX.Element => {
     "questionnaire" | "questionnaireAdvanced" | "questionnaireEnd"
   >();
   const [closed, setClosed] = useState(false);
+  const [position, setPosition] = useState(0);
+  const [bodyPosition, setBodyPosition] = useState(0);
   return !closed ? (
     <>
       {!status && (
@@ -32,7 +34,15 @@ export const Feedback = (): JSX.Element => {
         </IntroContainer>
       )}
       {status && (
-        <StyledContainer variant="main">
+        <StyledContainer
+          variant="main"
+          ref={(el) => {
+            if (!el) return;
+
+            setPosition(el.getBoundingClientRect().top);
+            setBodyPosition(document.body.getBoundingClientRect().top);
+          }}
+        >
           <StyledCloseIcon
             onClick={() => setClosed(true)}
             data-testid="feedbackCloseButton"
@@ -48,6 +58,7 @@ export const Feedback = (): JSX.Element => {
             <QuestionnaireAdvanced
               onClick={() => {
                 setStatus("questionnaireEnd");
+                window.scrollTo(0, position - bodyPosition - 220);
               }}
             />
           )}
