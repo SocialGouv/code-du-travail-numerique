@@ -13,6 +13,7 @@ type QuestionnaireItemProps = {
   goodText?: string;
   className?: string;
   title?: string;
+  displayError?: boolean;
   onChange: (status: FEEDBACK_RESULT) => void;
 };
 
@@ -31,6 +32,7 @@ export const QuestionnaireItem = ({
   goodText,
   className,
   title,
+  displayError,
   onChange,
 }: QuestionnaireItemProps): JSX.Element => {
   const [status, setStatus] = useState<Status>();
@@ -69,6 +71,9 @@ export const QuestionnaireItem = ({
           {goodText ?? "Très bien"}
         </StyledButton>
       </ButtonContainer>
+      {displayError && (
+        <StyledError>Vous devez choisir une des réponses</StyledError>
+      )}
     </div>
   );
 };

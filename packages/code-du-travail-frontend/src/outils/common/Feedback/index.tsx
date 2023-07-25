@@ -12,34 +12,49 @@ export const Feedback = (): JSX.Element => {
   >();
   const [closed, setClosed] = useState(false);
   return !closed ? (
-    <StyledContainer variant="main">
-      <StyledCloseIcon
-        onClick={() => setClosed(true)}
-        data-testid="feedbackCloseButton"
-      />
+    <>
       {!status && (
-        <Introduction
+        <IntroContainer
           onClick={() => {
             setStatus("questionnaire");
           }}
-        />
+          variant="main"
+        >
+          <StyledCloseIcon
+            onClick={() => setClosed(true)}
+            data-testid="feedbackCloseButton"
+          />
+          <Introduction
+            onClick={() => {
+              setStatus("questionnaire");
+            }}
+          />
+        </IntroContainer>
       )}
-      {status === "questionnaire" && (
-        <Questionnaire
-          onClick={() => {
-            setStatus("questionnaireAdvanced");
-          }}
-        />
+      {status && (
+        <StyledContainer variant="main">
+          <StyledCloseIcon
+            onClick={() => setClosed(true)}
+            data-testid="feedbackCloseButton"
+          />
+          {status === "questionnaire" && (
+            <Questionnaire
+              onClick={() => {
+                setStatus("questionnaireAdvanced");
+              }}
+            />
+          )}
+          {status === "questionnaireAdvanced" && (
+            <QuestionnaireAdvanced
+              onClick={() => {
+                setStatus("questionnaireEnd");
+              }}
+            />
+          )}
+          {status === "questionnaireEnd" && <QuestionnaireEnd />}
+        </StyledContainer>
       )}
-      {status === "questionnaireAdvanced" && (
-        <QuestionnaireAdvanced
-          onClick={() => {
-            setStatus("questionnaireEnd");
-          }}
-        />
-      )}
-      {status === "questionnaireEnd" && <QuestionnaireEnd />}
-    </StyledContainer>
+    </>
   ) : (
     <></>
   );
@@ -47,16 +62,20 @@ export const Feedback = (): JSX.Element => {
 
 const { colors } = theme;
 
-const StyledContainer = styled(Wrapper)`
-  border: 2px solid ${colors.secondary};
+const IntroContainer = styled(Wrapper)`
+  border: 1px solid ${colors.secondary};
   border-radius: 6px;
-  width: 520px;
+  width: 460px;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   margin: 42px 0 0 auto;
   padding: 0 0 28px 0 !important;
   position: relative;
+`;
+
+const StyledContainer = styled(IntroContainer)`
+  width: 520px;
 `;
 
 const StyledCloseIcon = styled(icons.Close)`

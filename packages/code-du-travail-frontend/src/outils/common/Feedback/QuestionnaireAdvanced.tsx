@@ -93,9 +93,9 @@ export const QuestionnaireAdvanced = ({
 };
 
 const StyledHeading = styled(Heading)`
-  margin-left: 0 !important;
-  margin-bottom: 0 !important;
-  padding-top: 6px !important;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-top: 6px;
 `;
 
 const StyledButton = styled(Button)`

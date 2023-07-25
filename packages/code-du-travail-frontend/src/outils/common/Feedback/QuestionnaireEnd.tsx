@@ -15,8 +15,8 @@ export const QuestionnaireEnd = (): JSX.Element => {
 };
 
 const StyledHeading = styled(Heading)`
-  margin-left: 0 !important;
-  padding-top: 6px !important;
+  margin-left: 0;
+  padding-top: 6px;
 `;
 
 const StyledText = styled.span`
