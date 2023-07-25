@@ -45,7 +45,7 @@ export const QuestionnaireAdvanced = ({
           badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
           averageEventValue={FEEDBACK_RESULT.AVERAGE}
           goodEventValue={FEEDBACK_RESULT.YES}
-          title="Les questions étaient-elles claires et compréhensible ?"
+          title="Les questions étaient-elles claires et compréhensibles ?"
           badText="Pas du tout"
           goodText="Oui"
           onChange={(status) => {
@@ -57,7 +57,7 @@ export const QuestionnaireAdvanced = ({
           badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
           averageEventValue={FEEDBACK_RESULT.AVERAGE}
           goodEventValue={FEEDBACK_RESULT.YES}
-          title="Les explications du résultat obtenu étaient-elles claires et compréhensible ?"
+          title="Les explications du résultat obtenu étaient-elles claires et compréhensibles ?"
           badText="Pas du tout"
           goodText="Oui"
           onChange={(status) => {
