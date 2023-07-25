@@ -11,7 +11,6 @@ type QuestionnaireProps = {
 
 export const Questionnaire = ({ onClick }: QuestionnaireProps): JSX.Element => {
   const [status, setStatus] = useState<FEEDBACK_RESULT>();
-  const [displayError, setDisplayError] = useState(false);
   return (
     <>
       <StyledHeading variant="primary" stripe="left">
@@ -23,19 +22,15 @@ export const Questionnaire = ({ onClick }: QuestionnaireProps): JSX.Element => {
         goodEventValue={FEEDBACK_RESULT.GOOD}
         badText="Pas bien"
         onChange={(status: FEEDBACK_RESULT) => {
-          setDisplayError(false);
           setStatus(status);
         }}
-        displayError={displayError}
       />
       <StyledButton
         onClick={() => {
-          if (!status) {
-            setDisplayError(true);
-          } else {
+          if (status) {
             trackFeedback(EVENT_ACTION.GLOBAL, status);
-            onClick();
           }
+          onClick();
         }}
         variant="primary"
       >
@@ -47,6 +42,8 @@ export const Questionnaire = ({ onClick }: QuestionnaireProps): JSX.Element => {
 
 const StyledHeading = styled(Heading)`
   margin-left: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 6px !important;
 `;
 
 const StyledButton = styled(Button)`

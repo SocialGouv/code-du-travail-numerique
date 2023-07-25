@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme, icons } from "@socialgouv/cdtn-ui";
+import { theme, icons, Wrapper } from "@socialgouv/cdtn-ui";
 import { Introduction } from "./introduction";
 import { useState } from "react";
 import { Questionnaire } from "./Questionnaire";
@@ -12,7 +12,7 @@ export const Feedback = (): JSX.Element => {
   >();
   const [closed, setClosed] = useState(false);
   return !closed ? (
-    <StyledContainer>
+    <StyledContainer variant="main">
       <StyledCloseIcon
         onClick={() => setClosed(true)}
         data-testid="feedbackCloseButton"
@@ -47,22 +47,22 @@ export const Feedback = (): JSX.Element => {
 
 const { colors } = theme;
 
-const StyledContainer = styled.div`
-  border: 1px solid ${colors.secondary};
+const StyledContainer = styled(Wrapper)`
+  border: 2px solid ${colors.secondary};
   border-radius: 6px;
   width: 520px;
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 42px;
-  margin-left: auto;
+  margin: 42px 0 0 auto;
+  padding: 0 0 28px 0 !important;
   position: relative;
 `;
 
 const StyledCloseIcon = styled(icons.Close)`
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 8px;
+  right: 8px;
   width: 24px;
   cursor: pointer;
 `;

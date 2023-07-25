@@ -9,6 +9,7 @@ import {
   FEEDBACK_RESULT,
   EVENT_ACTION,
 } from "./tracking";
+import { useRouter } from "next/router";
 
 type QuestionnaireAdvancedProps = {
   onClick: () => void;
@@ -17,12 +18,10 @@ type QuestionnaireAdvancedProps = {
 export const QuestionnaireAdvanced = ({
   onClick,
 }: QuestionnaireAdvancedProps): JSX.Element => {
+  const router = useRouter();
   const [statusSimulator, setStatusSimulator] = useState<FEEDBACK_RESULT>();
-  const [displayErrorSimulator, setDisplayErrorSimulator] = useState(false);
   const [statusQuestion, setStatusQuestion] = useState<FEEDBACK_RESULT>();
-  const [displayErrorQuestion, setDisplayErrorQuestion] = useState(false);
   const [statusExplanation, setStatusExplanation] = useState<FEEDBACK_RESULT>();
-  const [displayErrorExplanation, setDisplayErrorExplanation] = useState(false);
   const [feedbackText, setFeedbackText] = useState<string>();
   return (
     <>
@@ -39,9 +38,7 @@ export const QuestionnaireAdvanced = ({
           goodText="Facile"
           onChange={(status) => {
             setStatusSimulator(status);
-            setDisplayErrorSimulator(false);
           }}
-          displayError={displayErrorSimulator}
         ></StyledQuestionnaireItem>
         <StyledQuestionnaireItem
           badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
@@ -52,9 +49,7 @@ export const QuestionnaireAdvanced = ({
           goodText="Oui"
           onChange={(status) => {
             setStatusQuestion(status);
-            setDisplayErrorQuestion(false);
           }}
-          displayError={displayErrorQuestion}
         ></StyledQuestionnaireItem>
         <StyledQuestionnaireItem
           badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
@@ -65,9 +60,7 @@ export const QuestionnaireAdvanced = ({
           goodText="Oui"
           onChange={(status) => {
             setStatusExplanation(status);
-            setDisplayErrorExplanation(false);
           }}
-          displayError={displayErrorExplanation}
         ></StyledQuestionnaireItem>
         <QuestionnaireText
           title="Vous souhaitez nous en dire davantage ?"
@@ -78,21 +71,19 @@ export const QuestionnaireAdvanced = ({
       <StyledButton
         variant="primary"
         onClick={() => {
-          if (!statusSimulator) {
-            setDisplayErrorSimulator(true);
-          } else if (!statusQuestion) {
-            setDisplayErrorQuestion(true);
-          } else if (!statusExplanation) {
-            setDisplayErrorExplanation(true);
-          } else {
+          if (statusSimulator) {
             trackFeedback(EVENT_ACTION.EASINESS, statusSimulator);
-            trackFeedback(EVENT_ACTION.QUESTION_CLARITY, statusQuestion);
-            trackFeedback(EVENT_ACTION.RESULT_CLARITY, statusExplanation);
-            if (feedbackText) {
-              trackFeedbackText(feedbackText);
-            }
-            onClick();
           }
+          if (statusQuestion) {
+            trackFeedback(EVENT_ACTION.QUESTION_CLARITY, statusQuestion);
+          }
+          if (statusExplanation) {
+            trackFeedback(EVENT_ACTION.RESULT_CLARITY, statusExplanation);
+          }
+          if (feedbackText) {
+            trackFeedbackText(feedbackText, router.asPath);
+          }
+          onClick();
         }}
       >
         Envoyer
@@ -103,6 +94,8 @@ export const QuestionnaireAdvanced = ({
 
 const StyledHeading = styled(Heading)`
   margin-left: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 6px !important;
 `;
 
 const StyledButton = styled(Button)`

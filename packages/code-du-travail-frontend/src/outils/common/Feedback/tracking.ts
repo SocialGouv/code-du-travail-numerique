@@ -26,11 +26,11 @@ export const trackFeedback = (
   matopush([MatomoBaseEvent.TRACK_EVENT, EVENT_CATEGORY, event, feedback]);
 };
 
-export const trackFeedbackText = (text: string) => {
+export const trackFeedbackText = (text: string, url: string) => {
   matopush([
-    MatomoBaseEvent.TRACK_EVENT,
-    EVENT_CATEGORY,
-    EVENT_ACTION.SUGGESTION,
+    "trackEvent",
+    "feedback_suggestion",
     text,
+    url.replace(/\?.*$/, ""),
   ]);
 };

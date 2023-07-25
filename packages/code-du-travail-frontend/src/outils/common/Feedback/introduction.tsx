@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button, theme, Heading } from "@socialgouv/cdtn-ui";
+import { Button, Heading } from "@socialgouv/cdtn-ui";
 
 type IntroductionProps = {
   onClick: () => void;
@@ -8,7 +8,7 @@ type IntroductionProps = {
 export const Introduction = ({ onClick }: IntroductionProps): JSX.Element => {
   return (
     <>
-      <StyledHeading variant="primary" stripe="left">
+      <StyledHeading variant="primary">
         Votre avis sur ce simulateur nous intéresse
       </StyledHeading>
       <StyledButton onClick={onClick}>Donner mon avis</StyledButton>
@@ -17,7 +17,7 @@ export const Introduction = ({ onClick }: IntroductionProps): JSX.Element => {
 };
 
 const StyledHeading = styled(Heading)`
-  margin-left: 0 !important;
+  text-align: center;
 `;
 
 const StyledButton = styled(Button)`
