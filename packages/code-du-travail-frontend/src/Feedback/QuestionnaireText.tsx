@@ -5,18 +5,24 @@ type QuestionnaireItemProps = {
   className?: string;
   title?: string;
   placeholder?: string;
+  onChange: (text: string) => void;
 };
 
 export const QuestionnaireText = ({
   className,
   title,
   placeholder,
+  onChange,
 }: QuestionnaireItemProps): JSX.Element => {
   const maxCharacters = 200;
   return (
     <StyledContainer className={className}>
       {title && <b>{title}</b>}
-      <StyledTextarea placeholder={placeholder} maxLength={maxCharacters} />
+      <StyledTextarea
+        placeholder={placeholder}
+        maxLength={maxCharacters}
+        onChange={(event) => onChange(event.target.value)}
+      />
       <MaxCharacterText>{maxCharacters} caractères maximum</MaxCharacterText>
     </StyledContainer>
   );
@@ -29,6 +35,7 @@ const StyledContainer = styled.div`
 
 const StyledTextarea = styled(Textarea)`
   width: 420px;
+  max-width: 100%;
 `;
 
 const MaxCharacterText = styled.span`

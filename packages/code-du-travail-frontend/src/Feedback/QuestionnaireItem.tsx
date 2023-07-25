@@ -2,56 +2,69 @@ import { Button } from "@socialgouv/cdtn-ui";
 import { icons, theme } from "@socialgouv/cdtn-ui";
 import { useState } from "react";
 import styled from "styled-components";
+import { FEEDBACK_RESULT } from "./tracking";
 
 type QuestionnaireItemProps = {
+  badEventValue: FEEDBACK_RESULT;
+  averageEventValue: FEEDBACK_RESULT;
+  goodEventValue: FEEDBACK_RESULT;
   badText?: string;
-  mediumText?: string;
+  averageText?: string;
   goodText?: string;
   className?: string;
   title?: string;
-  isDirty?: (isDirty: boolean) => void;
   displayError?: boolean;
+  onChange: (status: FEEDBACK_RESULT) => void;
 };
 
+export enum Status {
+  BAD = "bad",
+  AVERAGE = "average",
+  GOOD = "good",
+}
+
 export const QuestionnaireItem = ({
+  badEventValue,
+  averageEventValue,
+  goodEventValue,
   badText,
-  mediumText,
+  averageText,
   goodText,
   className,
   title,
-  isDirty = () => {},
   displayError = false,
+  onChange,
 }: QuestionnaireItemProps): JSX.Element => {
-  const [status, setStatus] = useState<"bad" | "medium" | "good">();
+  const [status, setStatus] = useState<Status>();
   return (
     <div className={className}>
       {title && <b>{title}</b>}
       <ButtonContainer>
         <StyledButton
-          variant={status === "bad" ? "light" : "naked"}
+          variant={status === Status.BAD ? "light" : "naked"}
           onClick={() => {
-            setStatus("bad");
-            isDirty(true);
+            setStatus(Status.BAD);
+            onChange(badEventValue);
           }}
         >
           <icons.Bad width="32px" />
           {badText ?? "Pas bien"}
         </StyledButton>
         <StyledButton
-          variant={status === "medium" ? "light" : "naked"}
+          variant={status === Status.AVERAGE ? "light" : "naked"}
           onClick={() => {
-            setStatus("medium");
-            isDirty(true);
+            setStatus(Status.AVERAGE);
+            onChange(averageEventValue);
           }}
         >
           <icons.Medium width="32px" />
-          {mediumText ?? "Moyen"}
+          {averageText ?? "Moyen"}
         </StyledButton>
         <StyledButton
-          variant={status === "good" ? "light" : "naked"}
+          variant={status === Status.GOOD ? "light" : "naked"}
           onClick={() => {
-            setStatus("good");
-            isDirty(true);
+            setStatus(Status.GOOD);
+            onChange(goodEventValue);
           }}
         >
           <icons.Good width="32px" />

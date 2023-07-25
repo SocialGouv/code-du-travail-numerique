@@ -13,7 +13,10 @@ export const Feedback = (): JSX.Element => {
   const [closed, setClosed] = useState(false);
   return !closed ? (
     <StyledContainer>
-      <StyledCloseIcon onClick={() => setClosed(true)} />
+      <StyledCloseIcon
+        onClick={() => setClosed(true)}
+        data-testid="feedbackCloseButton"
+      />
       {!status && (
         <Introduction
           onClick={() => {
@@ -47,7 +50,8 @@ const { colors } = theme;
 const StyledContainer = styled.div`
   border: 1px solid ${colors.secondary};
   border-radius: 6px;
-  width: 600px;
+  width: 520px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 42px;

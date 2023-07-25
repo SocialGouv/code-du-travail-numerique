@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Button, Heading } from "@socialgouv/cdtn-ui";
 
-import { QuestionnaireItem } from "./QuestionnaireItem";
+import { QuestionnaireItem, Status } from "./QuestionnaireItem";
+import { trackFeedback, EVENT_ACTION, FEEDBACK_RESULT } from "./tracking";
 import { useState } from "react";
 
 type QuestionnaireProps = {
@@ -9,26 +10,30 @@ type QuestionnaireProps = {
 };
 
 export const Questionnaire = ({ onClick }: QuestionnaireProps): JSX.Element => {
-  const [dirty, setDirty] = useState(false);
+  const [status, setStatus] = useState<FEEDBACK_RESULT>();
   const [displayError, setDisplayError] = useState(false);
   return (
     <>
-      <Heading variant="primary" stripe="left">
+      <StyledHeading variant="primary" stripe="left">
         Comment s&apos;est passée cette simulation pour vous ?
-      </Heading>
+      </StyledHeading>
       <StyledQuestionnaireItem
+        badEventValue={FEEDBACK_RESULT.NOT_GOOD}
+        averageEventValue={FEEDBACK_RESULT.AVERAGE}
+        goodEventValue={FEEDBACK_RESULT.GOOD}
         badText="Pas bien"
-        isDirty={(isDirty) => {
-          setDirty(isDirty);
-          setDisplayError(!isDirty);
+        onChange={(status: FEEDBACK_RESULT) => {
+          setDisplayError(false);
+          setStatus(status);
         }}
         displayError={displayError}
       />
       <StyledButton
         onClick={() => {
-          if (!dirty) {
+          if (!status) {
             setDisplayError(true);
           } else {
+            trackFeedback(EVENT_ACTION.GLOBAL, status);
             onClick();
           }
         }}
@@ -39,6 +44,10 @@ export const Questionnaire = ({ onClick }: QuestionnaireProps): JSX.Element => {
     </>
   );
 };
+
+const StyledHeading = styled(Heading)`
+  margin-left: 0 !important;
+`;
 
 const StyledButton = styled(Button)`
   margin: 12px auto 24px 24px;
