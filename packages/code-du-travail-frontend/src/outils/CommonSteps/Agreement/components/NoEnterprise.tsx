@@ -32,8 +32,8 @@ export function NoEnterprise({
           label={
             <span>
               <StrongItem>Je n&apos;ai pas d&apos;entreprise</StrongItem> (ma
-              recherche concerne les assistants maternels,
-              employés&nbsp;de&nbsp;maison)
+              recherche concerne les assistants maternels, employés
+              de&nbsp;maison)
             </span>
           }
           name="salarieParticulierEmployeur"
