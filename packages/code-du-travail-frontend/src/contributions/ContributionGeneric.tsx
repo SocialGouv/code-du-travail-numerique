@@ -351,8 +351,7 @@ const StyledDirectionRightIcon = styled(DirectionRight)`
   margin-left: ${spacings.base};
 `;
 const SectionNoPadding = styled(Section)`
-  margin-top: -${spacings.larger} !important;
-  padding-top: 0 !important;
+  padding: 0;
 `;
 
 export default ContributionGeneric;
