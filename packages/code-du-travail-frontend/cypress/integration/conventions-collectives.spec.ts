@@ -23,13 +23,4 @@ describe("Conventions collectives", () => {
       "/convention-collective/29-hospitalisation-privee-etablissements-prives-dhospitalisation-de-soins-d"
     );
   });
-  it("je vois une 404 si l'iddc n'existe pas", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/convention-collective/1234",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
 });

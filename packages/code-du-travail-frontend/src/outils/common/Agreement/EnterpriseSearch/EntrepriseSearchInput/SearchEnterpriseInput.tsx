@@ -46,8 +46,8 @@ export const SearchEnterpriseInput = ({
     searchParams.query,
     searchParams.address
   );
-  const [query, setQuery] = useState("");
-  const [address, setAddress] = useState("");
+  const [query, setQuery] = useState(searchParams.query);
+  const [address, setAddress] = useState(searchParams.address);
   const searchInputHandler = () => {
     onSearchParamsChange({ ...searchParams, query: query, address: address });
   };
