@@ -101,7 +101,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
 
   const CC_NOT_SUPPORTED = (
     <>
-      <Paragraph variant="primary" fontSize="hsmall" fontWeight="700" noMargin>
+      <Paragraph variant="primary" fontSize="default" fontWeight="700" noMargin>
         Nous n’avons pas de réponse pour cette convention collective
       </Paragraph>
       {showAnswer ? (
@@ -119,7 +119,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
       {hasConventionAnswers && (
         <>
           <Badge />
-          <section>
+          <SectionNoPadding>
             <p>
               La réponse dépend de la convention collective à laquelle votre
               entreprise est rattachée. Veuillez renseigner votre situation afin
@@ -127,7 +127,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
             </p>
             <Wrapper variant="light">
               <Title shift={spacings.xmedium} variant="primary">
-                Votre Situation
+                Votre situation
               </Title>
 
               <RadioQuestion
@@ -265,7 +265,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                 </Button>
               </p>
             )}
-          </section>
+          </SectionNoPadding>
         </>
       )}
       {showAnswer && answers.generic && (
@@ -349,6 +349,10 @@ const Div = styled.div`
 const StyledDirectionRightIcon = styled(DirectionRight)`
   width: 1.5em;
   margin-left: ${spacings.base};
+`;
+const SectionNoPadding = styled(Section)`
+  margin-top: -${spacings.larger} !important;
+  padding-top: 0 !important;
 `;
 
 export default ContributionGeneric;

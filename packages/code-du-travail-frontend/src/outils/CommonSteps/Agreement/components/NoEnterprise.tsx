@@ -28,24 +28,22 @@ export function NoEnterprise({
   return (
     <>
       <RowWrapper>
-        <InputWrapper>
-          <InputCheckbox
-            label={
-              <span>
-                <StrongItem>Je n&apos;ai pas d&apos;entreprise</StrongItem>{" "}(ma
-                recherche concerne les assistants maternels,
-                employés&nbsp;de&nbsp;maison)
-              </span>
-            }
-            name="salarieParticulierEmployeur"
-            id="salarieParticulierEmployeur"
-            onChange={() => {
-              setIsCheckboxChecked(!isCheckboxChecked);
-              onCheckboxChange(!isCheckboxChecked);
-            }}
-            checked={isCheckboxChecked}
-          />
-        </InputWrapper>
+        <InputCheckbox
+          label={
+            <span>
+              <StrongItem>Je n&apos;ai pas d&apos;entreprise</StrongItem> (ma
+              recherche concerne les assistants maternels,
+              employés&nbsp;de&nbsp;maison)
+            </span>
+          }
+          name="salarieParticulierEmployeur"
+          id="salarieParticulierEmployeur"
+          onChange={() => {
+            setIsCheckboxChecked(!isCheckboxChecked);
+            onCheckboxChange(!isCheckboxChecked);
+          }}
+          checked={isCheckboxChecked}
+        />
         <ButtonClicker
           onClick={() => setIsInputVisible(!isInputVisible)}
           type="button"
@@ -93,16 +91,8 @@ const StrongItem = styled.strong`
 
 const RowWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   align-items: start;
-`;
-
-const InputWrapper = styled.div`
-  display: flex;
-  flex-basis: max-content;
-  justify-content: center;
-  align-items: center;
 `;
 
 const ButtonClicker = styled.button`

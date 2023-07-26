@@ -137,7 +137,7 @@ const ContributionCC = ({ answers, content, slug }) => {
                       </p>
                     </>
                   ) : (
-                    <Section>
+                    <>
                       <p>
                         Désolé, nous n’avons pas de réponse pour cette
                         convention collective.
@@ -146,7 +146,7 @@ const ContributionCC = ({ answers, content, slug }) => {
                         Vous pouvez consulter les informations prévues par le
                         code du travail ci-dessous.
                       </p>
-                    </Section>
+                    </>
                   )}
                   {!isConventionalAnswer && (
                     <ButtonWrapper>
@@ -193,15 +193,21 @@ const ContributionCC = ({ answers, content, slug }) => {
             ) : (
               <>
                 <p>
-                  Si le code du travail (voir ci-dessous), un accord collectif
-                  ou un usage prévoit des conditions - durée du préavis et/ou
-                  ancienneté - plus favorables que la convention collective pour
-                  le salarié, l’employeur les applique.
+                  Si le code du travail (voir ci-dessous) prévoit des conditions
+                  - durée du préavis et/ou ancienneté - plus favorables que la
+                  convention collective pour le salarié, l’employeur les
+                  applique.
                 </p>
 
                 <p>
-                  Le contrat de travail peut toujours prévoir des mesures plus
-                  favorables, qui s’appliqueront.
+                  Un accord d’entreprise ou un usage peut également prévoir des
+                  conditions - durée du préavis et/ou ancienneté - plus
+                  favorables pour le salarié qui s’appliqueront.
+                </p>
+                <p>
+                  Notez enfin que le contrat de travail peut toujours prévoir
+                  des mesures plus favorables pour le salarié qui
+                  s’appliqueront.
                 </p>
               </>
             )}
@@ -209,7 +215,7 @@ const ContributionCC = ({ answers, content, slug }) => {
         </StyledSection>
       )}
       {answers.generic && (
-        <Section>
+        <SectionNoPadding>
           <Title stripe="left">Que dit le code du travail&nbsp;?</Title>
           {content && (
             <Meta>
@@ -255,7 +261,7 @@ const ContributionCC = ({ answers, content, slug }) => {
           <ReferencesJuridiques
             references={filteredRefs(answers?.generic?.references, content.url)}
           />
-        </Section>
+        </SectionNoPadding>
       )}
     </>
   );
@@ -301,6 +307,14 @@ const StyledAlert = styled(Alert)`
 `;
 const StyledSection = styled(Section)`
   margin-top: ${spacings.base};
+  padding-bottom: 0;
+
+  > div {
+    margin-bottom: 0;
+  }
+`;
+const SectionNoPadding = styled(Section)`
+  padding-top: 0;
 `;
 
 export default ContributionCC;
