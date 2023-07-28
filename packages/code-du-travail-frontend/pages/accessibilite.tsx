@@ -16,16 +16,13 @@ const Accessibilite = () => {
   return (
     <Layout>
       <Metas
-        title="Accessibilité"
+        title="Déclaration d'accessibilité"
         description="Accessibilité du site du Code du travail numérique"
       />
       <Section>
         <Container narrow>
-          <PageTitle>Accessibilité</PageTitle>
+          <PageTitle>Déclaration d&apos;accessibilité</PageTitle>
           <Wrapper variant="main">
-            <Title shift={theme.spacings.larger}>
-              Déclaration d’accessibilité
-            </Title>
             <p>
               Le Ministère du travail, de l’emploi et de l’insertion s’engage à
               rendre son service accessible conformément à l’article 47 de la
@@ -59,7 +56,9 @@ const Accessibilite = () => {
               Nous tâchons de rendre dès la conception, ce site accessible à
               toutes et à tous.
             </p>
-            <Title shift={theme.spacings.larger}>Résultat des tests</Title>
+            <Title as="h3" stripe="none" size="small">
+              Résultat des tests
+            </Title>
             <p>
               <ul>
                 <li>[75%] des critères du RGAA version 4.1 sont respectés</li>
@@ -122,8 +121,8 @@ const Accessibilite = () => {
               Cette déclaration a été établie le 12 avril 2021. Elle a été mise
               à jour le 13/01/2022.
             </p>
-            <Title shift={theme.spacings.larger}>
-              ​Technologies utilisées pour la réalisation du Code du travail
+            <Title as="h3" stripe="none" size="small">
+              Technologies utilisées pour la réalisation du Code du travail
               numérique
             </Title>
             <ul>
@@ -132,7 +131,9 @@ const Accessibilite = () => {
               <li>CSS</li>
               <li>JavaScript</li>
             </ul>
-            <Title shift={theme.spacings.larger}>Environnement de test</Title>
+            <Title as="h3" stripe="none" size="small">
+              Environnement de test
+            </Title>
             <p>
               Les vérifications de restitution de contenus ont été réalisées sur
               la base de la combinaison fournie par la base de référence du RGAA
@@ -142,7 +143,7 @@ const Accessibilite = () => {
               <li>Firefox</li>
               <li>NVDA</li>
             </ul>
-            <Title shift={theme.spacings.larger}>
+            <Title as="h3" stripe="none" size="small">
               Outils pour évaluer l’accessibilité
             </Title>
             <p>
@@ -164,6 +165,95 @@ const Accessibilite = () => {
                 </a>
               </li>
             </ul>
+            <Title as="h3" stripe="none" size="small">
+              Pages du site ayant fait l’objet de la vérification de conformité
+            </Title>
+            <ol>
+              <li>
+                Page d&apos;accueil :{" "}
+                <a href="https://code.travail.gouv.fr/">
+                  https://code.travail.gouv.fr/
+                </a>
+              </li>
+              <li>
+                Page mentions légales :{" "}
+                <a href="https://code.travail.gouv.fr/mentions-legales">
+                  https://code.travail.gouv.fr/mentions-legales
+                </a>
+              </li>
+              <li>
+                Page droit du travail :{" "}
+                <a href="https://code.travail.gouv.fr/droit-du-travail">
+                  https://code.travail.gouv.fr/droit-du-travail
+                </a>
+              </li>
+              <li>
+                Page boîte à outils :{" "}
+                <a href="https://code.travail.gouv.fr/outils">
+                  https://code.travail.gouv.fr/outils
+                </a>
+              </li>
+              <li>
+                Page service-public :{" "}
+                <a href="https://code.travail.gouv.fr/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie">
+                  https://code.travail.gouv.fr/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie
+                </a>
+              </li>
+              <li>
+                Page information :{" "}
+                <a href="https://code.travail.gouv.fr/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national">
+                  https://code.travail.gouv.fr/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national
+                </a>
+              </li>
+              <li>
+                Page statistiques :{" "}
+                <a href="https://code.travail.gouv.fr/stats">
+                  https://code.travail.gouv.fr/stats
+                </a>
+              </li>
+              <li>
+                Page thème :{" "}
+                <a href="https://code.travail.gouv.fr/themes/contrat-de-travail">
+                  https://code.travail.gouv.fr/themes/contrat-de-travail
+                </a>
+              </li>
+              <li>
+                Page recherche :{" "}
+                <a href="https://code.travail.gouv.fr/recherche?q=cong%C3%A9s+pay%C3%A9s">
+                  https://code.travail.gouv.fr/recherche?q=cong%C3%A9s+pay%C3%A9s
+                </a>
+              </li>
+              <li>
+                Page modèle de courrier :{" "}
+                <a href="https://code.travail.gouv.fr/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie">
+                  https://code.travail.gouv.fr/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie
+                </a>
+              </li>
+              <li>
+                Page ministère du travail :{" "}
+                <a href="https://code.travail.gouv.fr/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus">
+                  https://code.travail.gouv.fr/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus
+                </a>
+              </li>
+              <li>
+                Page contribution :{" "}
+                <a href="https://code.travail.gouv.fr/contribution/les-conges-pour-evenements-familiaux">
+                  https://code.travail.gouv.fr/contribution/les-conges-pour-evenements-familiaux
+                </a>
+              </li>
+              <li>
+                Page outil :{" "}
+                <a href="https://code.travail.gouv.fr/outils/indemnite-licenciement">
+                  https://code.travail.gouv.fr/outils/indemnite-licenciement
+                </a>
+              </li>
+              <li>
+                Page glossaire :{" "}
+                <a href="https://code.travail.gouv.fr/glossaire">
+                  https://code.travail.gouv.fr/glossaire
+                </a>
+              </li>
+            </ol>
             <Title shift={theme.spacings.larger}>Amélioration et contact</Title>
             <p>
               Si vous n’arrivez pas à accéder à un contenu ou à un service, vous
