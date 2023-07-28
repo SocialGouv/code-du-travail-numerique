@@ -230,7 +230,7 @@ const Accessibilite = () => {
                 </a>
               </li>
               <li>
-                Page ministère du travail :{" "}
+                Page dossier :{" "}
                 <a href="https://code.travail.gouv.fr/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus">
                   https://code.travail.gouv.fr/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus
                 </a>
