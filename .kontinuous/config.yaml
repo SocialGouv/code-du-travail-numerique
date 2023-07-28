@@ -1,0 +1,6 @@
+projectName: cdtn
+ciNamespace: cdtn-ci
+
+dependencies:
+  fabrique:
+    import: socialgouv/kontinuous/plugins/fabrique
