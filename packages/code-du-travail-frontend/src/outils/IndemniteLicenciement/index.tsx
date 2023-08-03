@@ -157,7 +157,7 @@ const IndemniteLicenciementSimulator = ({
         ]}
         hiddenStep={getHiddenSteps()}
       />
-      <Feedback></Feedback>
+      <Feedback />
     </>
   );
 };
