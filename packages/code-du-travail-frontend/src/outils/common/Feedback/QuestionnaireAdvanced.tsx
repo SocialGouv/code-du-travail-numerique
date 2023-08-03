@@ -70,7 +70,7 @@ export const QuestionnaireAdvanced = ({
           placeholder="ex: la question sur la date de début du contrat n'est pas claire"
           onChange={setFeedbackText}
           dataTestId="more-input"
-        ></QuestionnaireText>
+        />
       </FormContainer>
       <StyledButton
         variant="primary"
