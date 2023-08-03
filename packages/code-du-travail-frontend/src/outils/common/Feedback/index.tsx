@@ -95,4 +95,5 @@ const StyledCloseIcon = styled(icons.Close)`
   right: 8px;
   width: 24px;
   cursor: pointer;
+  margin: 3px;
 `;
