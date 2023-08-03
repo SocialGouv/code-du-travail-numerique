@@ -64,7 +64,7 @@ export const QuestionnaireAdvanced = ({
             setStatusExplanation(status);
           }}
           dataTestId="resultClarity"
-        ></StyledQuestionnaireItem>
+        />
         <QuestionnaireText
           title="Vous souhaitez nous en dire davantage ?"
           placeholder="ex: la question sur la date de début du contrat n'est pas claire"
