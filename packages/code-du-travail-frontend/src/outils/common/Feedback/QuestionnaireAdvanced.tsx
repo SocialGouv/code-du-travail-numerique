@@ -17,7 +17,7 @@ type QuestionnaireAdvancedProps = {
 
 export const QuestionnaireAdvanced = ({
   onClick,
-}: QuestionnaireAdvancedProps): JSX.Element => {
+}: QuestionnaireAdvancedProps): React.ReactElement => {
   const router = useRouter();
   const [statusSimulator, setStatusSimulator] = useState<FEEDBACK_RESULT>();
   const [statusQuestion, setStatusQuestion] = useState<FEEDBACK_RESULT>();
