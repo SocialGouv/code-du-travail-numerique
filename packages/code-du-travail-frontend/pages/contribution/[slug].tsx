@@ -48,7 +48,7 @@ const buildTitleAndDescription = (
 };
 const SLUG_FOR_POC_GENERIC = ["les-conges-pour-evenements-familiaux"];
 
-function PageContribution(props: Props): JSX.Element {
+function PageContribution(props: Props): React.ReactElement {
   const {
     breadcrumbs,
     title,
