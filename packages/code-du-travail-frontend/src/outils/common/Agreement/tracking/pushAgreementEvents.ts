@@ -17,41 +17,42 @@ const pushAgreementEvents = (
     // no agreement section, no event to send. Should never happen.
     return;
   }
-  let eventName = "";
+  let parcours: MatomoSearchAgreementCategory | undefined = undefined;
+  let agreementSelect: MatomoSearchAgreementCategory | undefined = undefined;
   switch (values.route) {
-    case "not-selected":
-      eventName = "click_p3";
-      break;
     case "agreement":
-      eventName = "click_p1";
+      parcours = MatomoSearchAgreementCategory.PARCOURS_1;
+      agreementSelect = MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1;
       break;
     case "enterprise":
-      eventName = "click_p2";
+      parcours = MatomoSearchAgreementCategory.PARCOURS_2;
+      agreementSelect = MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2;
+      break;
+    case "not-selected":
+      parcours = MatomoSearchAgreementCategory.PARCOURS_3;
       break;
   }
   matopush([
     MatomoBaseEvent.TRACK_EVENT,
     MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
-    eventName,
+    parcours,
     simulatorTitle,
   ]);
-  if (values.enterprise) {
+  if (values.selected && agreementSelect) {
+    if (values.enterprise) {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
+        simulatorTitle,
+        JSON.stringify({
+          label: values.enterprise.label,
+          siren: values.enterprise.siren,
+        }),
+      ]);
+    }
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
-      MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
-      simulatorTitle,
-      JSON.stringify({
-        label: values.enterprise.label,
-        siren: values.enterprise.siren,
-      }),
-    ]);
-  }
-  if (values.selected) {
-    matopush([
-      MatomoBaseEvent.TRACK_EVENT,
-      values.route === "agreement"
-        ? MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1
-        : MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
+      agreementSelect,
       simulatorTitle,
       `idcc${values.selected.num?.toString()}`,
     ]);
