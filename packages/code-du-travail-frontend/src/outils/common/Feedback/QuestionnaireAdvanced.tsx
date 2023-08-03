@@ -52,7 +52,7 @@ export const QuestionnaireAdvanced = ({
             setStatusQuestion(status);
           }}
           dataTestId="questionClarity"
-        ></StyledQuestionnaireItem>
+        />
         <StyledQuestionnaireItem
           badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
           averageEventValue={FEEDBACK_RESULT.AVERAGE}
