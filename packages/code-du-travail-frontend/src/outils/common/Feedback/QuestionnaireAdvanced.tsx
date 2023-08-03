@@ -40,7 +40,7 @@ export const QuestionnaireAdvanced = ({
             setStatusSimulator(status);
           }}
           dataTestId="simulator"
-        ></StyledQuestionnaireItem>
+        />
         <StyledQuestionnaireItem
           badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
           averageEventValue={FEEDBACK_RESULT.AVERAGE}
