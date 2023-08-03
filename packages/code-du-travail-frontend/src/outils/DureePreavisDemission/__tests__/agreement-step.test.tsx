@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import React from "react";
 import { DureePreavisDemission } from "../..";
 import { ui } from "./ui";
@@ -7,9 +7,7 @@ jest.mock("../../../conventions/Search/api/agreements.service");
 
 describe("Vérification que l'étape recherche convention collective fonctionne bien en mockant l'API", () => {
   beforeEach(() => {
-    render(
-      <DureePreavisDemission icon="" title="" displayTitle="" />
-    );
+    render(<DureePreavisDemission icon="" title="" displayTitle="" />);
   });
 
   test("Vérification qu'on arrive bien sur l'étape résultat en cherchant la CC", async () => {
@@ -39,6 +37,5 @@ describe("Vérification que l'étape recherche convention collective fonctionne 
     });
     fireEvent.click(ui.next.get());
     expect(ui.print.get()).toBeInTheDocument();
-
   });
 });
