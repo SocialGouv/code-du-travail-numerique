@@ -38,18 +38,18 @@ const pushAgreementEvents = (
     parcours,
     simulatorTitle,
   ]);
+  if (values.enterprise) {
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
+      simulatorTitle,
+      JSON.stringify({
+        label: values.enterprise.label,
+        siren: values.enterprise.siren,
+      }),
+    ]);
+  }
   if (values.selected && agreementSelect) {
-    if (values.enterprise) {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
-        simulatorTitle,
-        JSON.stringify({
-          label: values.enterprise.label,
-          siren: values.enterprise.siren,
-        }),
-      ]);
-    }
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
       agreementSelect,
