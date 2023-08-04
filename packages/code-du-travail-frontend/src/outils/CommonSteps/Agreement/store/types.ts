@@ -19,6 +19,7 @@ export type CommonAgreementStoreError = {
   route?: string;
   agreement?: string;
   enterprise?: string;
+  errorPublicodes: boolean;
 };
 
 export type CommonAgreementStoreData<T extends PublicodesSimulator> = {

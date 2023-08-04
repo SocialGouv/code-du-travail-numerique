@@ -26,7 +26,9 @@ const initialState: Omit<
     isAgreementSupportedIndemniteLicenciement: false,
     hasNoEnterpriseSelected: false,
   },
-  error: {},
+  error: {
+    errorPublicodes: false,
+  },
   hasBeenSubmit: false,
   isStepValid: true,
 };
@@ -66,7 +68,17 @@ const createCommonAgreementStore: StoreSlicePublicode<
                   }
                 )
               );
-              get().informationsFunction.generatePublicodesQuestions();
+              const isOk =
+                get().informationsFunction.generatePublicodesQuestions();
+              set(
+                produce(
+                  (state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+                    state.agreementData.error.errorPublicodes = isOk
+                      ? false
+                      : true;
+                  }
+                )
+              );
             }
           }
         }
@@ -86,7 +98,12 @@ const createCommonAgreementStore: StoreSlicePublicode<
         })
       );
       applyGenericValidation(get, set, "route", value);
-      get().informationsFunction.generatePublicodesQuestions();
+      const isOk = get().informationsFunction.generatePublicodesQuestions();
+      set(
+        produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+          state.agreementData.error.errorPublicodes = isOk ? false : true;
+        })
+      );
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
@@ -108,7 +125,12 @@ const createCommonAgreementStore: StoreSlicePublicode<
           })
         );
       }
-      get().informationsFunction.generatePublicodesQuestions();
+      const isOk = get().informationsFunction.generatePublicodesQuestions();
+      set(
+        produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+          state.agreementData.error.errorPublicodes = isOk ? false : true;
+        })
+      );
     },
     setHasNoEnterpriseSelected: (value) => {
       applyGenericValidation(
@@ -120,7 +142,8 @@ const createCommonAgreementStore: StoreSlicePublicode<
     },
     onNextStep: () => {
       const input = get().agreementData.input;
-      const { isValid, errorState } = validateStep(input);
+      const error = get().agreementData.error;
+      const { isValid, errorState } = validateStep(input, error);
       const { route, agreement, enterprise } = input;
       if (isValid && route) {
         const isTreated = !!supportedCcn.find(
@@ -176,7 +199,10 @@ const applyGenericValidation = (
     const nextState = produce(get(), (draft) => {
       draft.agreementData.input[paramName] = value;
     });
-    const { isValid, errorState } = validateStep(nextState.agreementData.input);
+    const { isValid, errorState } = validateStep(
+      nextState.agreementData.input,
+      nextState.agreementData.error
+    );
     set(
       produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
         state.agreementData.error = errorState;

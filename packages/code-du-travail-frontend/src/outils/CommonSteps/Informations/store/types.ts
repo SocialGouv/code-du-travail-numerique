@@ -23,6 +23,7 @@ export type CommonInformationsStoreInput = {
 export type CommonInformationsStoreError = {
   errorInformations: Record<string, string>;
   errorEligibility?: string;
+  errorPublicodes: boolean;
 };
 
 export type CommonInformationsStoreData = {
@@ -38,7 +39,7 @@ export type CommonInformationsStoreFn = {
     value: string,
     type: RuleType | undefined
   ) => void;
-  generatePublicodesQuestions: () => void;
+  generatePublicodesQuestions: () => boolean;
   onNextStep: () => ValidationResponse;
   onSetStepHidden: () => void;
 };

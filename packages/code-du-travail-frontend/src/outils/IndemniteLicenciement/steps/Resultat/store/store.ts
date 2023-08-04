@@ -48,6 +48,7 @@ import {
 } from "../../../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
 import getSupportedCcIndemniteLicenciement from "../../../common/usecase/getSupportedCc";
+import * as Sentry from "@sentry/nextjs";
 
 const initialState: ResultStoreData = {
   input: {
@@ -59,7 +60,9 @@ const initialState: ResultStoreData = {
     isEligible: false,
     isParentalNoticeHidden: false,
   },
-  error: {},
+  error: {
+    errorPublicodes: false,
+  },
   hasBeenSubmit: true,
   isStepValid: true,
 };
@@ -184,21 +187,34 @@ const createResultStore: StoreSlice<
         dateSortie: get().ancienneteData.input.dateSortie!,
         absencePeriods: get().ancienneteData.input.absencePeriods,
       });
+      let publicodesSituationLegal: PublicodesIndemniteLicenciementResult = {
+        value: null,
+      };
+      let errorPublicodes = false;
 
-      const publicodesSituationLegal = publicodes.setSituation(
-        mapToPublicodesSituationForIndemniteLicenciementLegal(
-          legalSeniority.value,
-          legalRequiredSeniority.value,
-          refSalary,
-          isLicenciementInaptitude,
-          longTermDisability
-        )
-      ).result;
+      try {
+        publicodesSituationLegal = publicodes.setSituation(
+          mapToPublicodesSituationForIndemniteLicenciementLegal(
+            legalSeniority.value,
+            legalRequiredSeniority.value,
+            refSalary,
+            isLicenciementInaptitude,
+            longTermDisability
+          )
+        ).result;
+      } catch (e) {
+        errorPublicodes = true;
+        Sentry.captureException(e);
+        console.error(e);
+      }
 
       const legalFormula = publicodes.getFormule();
       const legalReferences = publicodes.getReferences();
 
-      let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult;
+      let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult =
+        {
+          value: null,
+        };
       let agreementSeniority: SeniorityResult;
       let agreementRefSalary: number;
       let agreementReferences: References[];
@@ -255,20 +271,26 @@ const createResultStore: StoreSlice<
           get as StoreApi<MainStore>["getState"]
         );
 
-        publicodesSituationConventionnel = publicodes.setSituation(
-          mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
-            agreement.num,
-            agreementSeniority,
-            agreementRefSalary,
-            agreementRequiredSeniority.value,
-            get().ancienneteData.input.dateNotification!,
-            get().ancienneteData.input.dateEntree!,
-            isLicenciementInaptitude,
-            longTermDisability,
-            { ...infos, ...agreementSalaryExtraInfo }
-          ),
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        ).result;
+        try {
+          publicodesSituationConventionnel = publicodes.setSituation(
+            mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
+              agreement.num,
+              agreementSeniority,
+              agreementRefSalary,
+              agreementRequiredSeniority.value,
+              get().ancienneteData.input.dateNotification!,
+              get().ancienneteData.input.dateEntree!,
+              isLicenciementInaptitude,
+              longTermDisability,
+              { ...infos, ...agreementSalaryExtraInfo }
+            ),
+            "contrat salarié . indemnité de licenciement . résultat conventionnel"
+          ).result;
+        } catch (e) {
+          errorPublicodes = true;
+          Sentry.captureException(e);
+          console.error(e);
+        }
 
         agreementReferences = publicodes.getReferences(
           "résultat conventionnel"
@@ -327,6 +349,7 @@ const createResultStore: StoreSlice<
 
       set(
         produce((state: ResultStoreSlice) => {
+          state.resultData.error.errorPublicodes = errorPublicodes;
           state.resultData.input.legalSeniority = legalSeniority.value;
           state.resultData.input.legalFormula = legalFormula;
           state.resultData.input.legalReferences = legalReferences;

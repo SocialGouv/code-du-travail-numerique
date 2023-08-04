@@ -19,6 +19,7 @@ import { removeDuplicateObject } from "../../../../lib";
 import { informationToSituation } from "../utils";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
 import { ContratTravailStoreSlice } from "../../../IndemniteLicenciement/steps/ContratTravail/store";
+import * as Sentry from "@sentry/nextjs";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -29,6 +30,7 @@ const initialState: CommonInformationsStoreData = {
   },
   error: {
     errorInformations: {},
+    errorPublicodes: false,
   },
   hasBeenSubmit: false,
   isStepValid: true,
@@ -42,51 +44,63 @@ const createCommonInformationsStore: StoreSlice<
     ...initialState,
   },
   informationsFunction: {
-    generatePublicodesQuestions: () => {
+    generatePublicodesQuestions: (): boolean => {
       const publicodes = get().agreementData.publicodes;
       const agreement = get().agreementData.input.agreement;
       const isAgreementSupportedIndemniteLicenciement =
         get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
-      if (agreement && isAgreementSupportedIndemniteLicenciement) {
-        const missingArgs = publicodes
-          .setSituation(
-            mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-              agreement.num,
-              isLicenciementInaptitude,
-              false
-            ),
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          )
-          .missingArgs.filter((item) => item.rawNode.cdtn);
-        if (missingArgs.length > 0) {
-          const question = missingArgs.map((arg) => ({
-            name: arg.name,
-            rule: arg.rawNode,
-          }))[0];
-          set(
-            produce((state: CommonInformationsStoreSlice) => {
-              state.informationsData.input.publicodesInformations = [
-                {
-                  order: 0,
-                  id: Math.random().toString(36).substring(2, 15),
-                  question,
-                  info: undefined,
-                },
-              ];
-              state.informationsData.input.isStepHidden = false;
-            })
-          );
-          return;
+      try {
+        if (agreement && isAgreementSupportedIndemniteLicenciement) {
+          const missingArgs = publicodes
+            .setSituation(
+              mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+                agreement.num,
+                isLicenciementInaptitude,
+                false
+              ),
+              "contrat salarié . indemnité de licenciement . résultat conventionnel"
+            )
+            .missingArgs.filter((item) => item.rawNode.cdtn);
+          if (missingArgs.length > 0) {
+            const question = missingArgs.map((arg) => ({
+              name: arg.name,
+              rule: arg.rawNode,
+            }))[0];
+            set(
+              produce((state: CommonInformationsStoreSlice) => {
+                state.informationsData.input.publicodesInformations = [
+                  {
+                    order: 0,
+                    id: Math.random().toString(36).substring(2, 15),
+                    question,
+                    info: undefined,
+                  },
+                ];
+                state.informationsData.input.isStepHidden = false;
+              })
+            );
+            return true;
+          }
         }
+        set(
+          produce((state: CommonInformationsStoreSlice) => {
+            state.informationsData.input = initialState.input;
+            state.informationsData.error = initialState.error;
+          })
+        );
+        return true;
+      } catch (e) {
+        console.error(e);
+        Sentry.captureException(e);
+        set(
+          produce((state: CommonInformationsStoreSlice) => {
+            state.informationsData.error.errorPublicodes = true;
+          })
+        );
+        return false;
       }
-      set(
-        produce((state: CommonInformationsStoreSlice) => {
-          state.informationsData.input = initialState.input;
-          state.informationsData.error = initialState.error;
-        })
-      );
     },
     onInformationsChange: (key, value, type) => {
       let newPublicodesInformationsForNextQuestions: PublicodesInformation[];
@@ -136,6 +150,11 @@ const createCommonInformationsStore: StoreSlice<
             blockingNotification = notifBloquante[0].description;
           }
         } catch (e) {
+          set(
+            produce((state: CommonInformationsStoreSlice) => {
+              state.informationsData.error.errorPublicodes = true;
+            })
+          );
           console.error(e);
         }
         set(
@@ -220,7 +239,8 @@ const createCommonInformationsStore: StoreSlice<
     },
     onNextStep: () => {
       const state = get().informationsData.input;
-      const { isValid, errorState } = validateStep(state);
+      const currentError = get().informationsData.error;
+      const { isValid, errorState } = validateStep(state, currentError);
       let errorEligibility;
 
       if (isValid) {
@@ -257,7 +277,8 @@ const applyGenericValidation = (
       draft.informationsData.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.informationsData.input
+      nextState.informationsData.input,
+      nextState.informationsData.error
     );
     set(
       produce((state: CommonInformationsStoreSlice) => {

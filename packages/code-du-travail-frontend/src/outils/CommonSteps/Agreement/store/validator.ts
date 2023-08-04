@@ -1,7 +1,10 @@
 import { deepEqualObject } from "../../../../lib";
 import { CommonAgreementStoreError, CommonAgreementStoreInput } from "./types";
 
-export const validateStep = (state: CommonAgreementStoreInput) => {
+export const validateStep = (
+  state: CommonAgreementStoreInput,
+  error: CommonAgreementStoreError
+) => {
   const errorState: CommonAgreementStoreError = {
     route: !state.route ? "Vous devez répondre à cette question" : undefined,
     agreement:
@@ -16,12 +19,14 @@ export const validateStep = (state: CommonAgreementStoreInput) => {
         : state.route === "enterprise" && state.enterprise && !state.agreement
         ? "Vous devez sélectionner une convention collective"
         : undefined,
+    errorPublicodes: error.errorPublicodes,
   };
   return {
     isValid: deepEqualObject(errorState, {
       route: undefined,
       agreement: undefined,
       enterprise: undefined,
+      errorPublicodes: false,
     }),
     errorState,
   };

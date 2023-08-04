@@ -6,7 +6,10 @@ import {
 import { RuleType } from "@socialgouv/modeles-social";
 import { isDate, isPositiveNumber } from "../../../common/validators";
 
-export const validateStep = (state: CommonInformationsStoreInput) => {
+export const validateStep = (
+  state: CommonInformationsStoreInput,
+  error: CommonInformationsStoreError
+) => {
   const informations = state.publicodesInformations;
   let errorInformations: Record<string, string> = {};
   informations.forEach((info) => {
@@ -18,10 +21,12 @@ export const validateStep = (state: CommonInformationsStoreInput) => {
 
   let errorState: CommonInformationsStoreError = {
     errorInformations,
+    errorPublicodes: error.errorPublicodes,
   };
 
   const isValid = deepEqualObject(errorState, {
     errorInformations: {},
+    errorPublicodes: false,
   });
   return { isValid, errorState };
 };
@@ -45,5 +50,4 @@ export const isValidField = (
     default:
       return isPositiveNumber(value);
   }
-  return undefined;
 };
