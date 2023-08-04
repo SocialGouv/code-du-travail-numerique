@@ -25,10 +25,9 @@ const initialState: Omit<
   input: {
     isAgreementSupportedIndemniteLicenciement: false,
     hasNoEnterpriseSelected: false,
+    informationError: false,
   },
-  error: {
-    errorPublicodes: false,
-  },
+  error: {},
   hasBeenSubmit: false,
   isStepValid: true,
 };
@@ -73,7 +72,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
               set(
                 produce(
                   (state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-                    state.agreementData.error.errorPublicodes = isOk
+                    state.agreementData.input.informationError = isOk
                       ? false
                       : true;
                   }
@@ -101,7 +100,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
       const isOk = get().informationsFunction.generatePublicodesQuestions();
       set(
         produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-          state.agreementData.error.errorPublicodes = isOk ? false : true;
+          state.agreementData.input.informationError = isOk ? false : true;
         })
       );
     },
@@ -128,7 +127,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
       const isOk = get().informationsFunction.generatePublicodesQuestions();
       set(
         produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-          state.agreementData.error.errorPublicodes = isOk ? false : true;
+          state.agreementData.input.informationError = isOk ? false : true;
         })
       );
     },
@@ -143,7 +142,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
     onNextStep: () => {
       const input = get().agreementData.input;
       const error = get().agreementData.error;
-      const { isValid, errorState } = validateStep(input, error);
+      const { isValid, errorState } = validateStep(input);
       const { route, agreement, enterprise } = input;
       if (isValid && route) {
         const isTreated = !!supportedCcn.find(
@@ -199,10 +198,7 @@ const applyGenericValidation = (
     const nextState = produce(get(), (draft) => {
       draft.agreementData.input[paramName] = value;
     });
-    const { isValid, errorState } = validateStep(
-      nextState.agreementData.input,
-      nextState.agreementData.error
-    );
+    const { isValid, errorState } = validateStep(nextState.agreementData.input);
     set(
       produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
         state.agreementData.error = errorState;

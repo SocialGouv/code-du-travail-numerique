@@ -27,10 +27,10 @@ const initialState: CommonInformationsStoreData = {
     isStepHidden: true,
     isStepSalaryHidden: false,
     hasNoMissingQuestions: false,
+    informationError: false,
   },
   error: {
     errorInformations: {},
-    errorPublicodes: false,
   },
   hasBeenSubmit: false,
   isStepValid: true,
@@ -96,7 +96,7 @@ const createCommonInformationsStore: StoreSlice<
         Sentry.captureException(e);
         set(
           produce((state: CommonInformationsStoreSlice) => {
-            state.informationsData.error.errorPublicodes = true;
+            state.informationsData.input.informationError = true;
           })
         );
         return false;
@@ -105,6 +105,7 @@ const createCommonInformationsStore: StoreSlice<
     onInformationsChange: (key, value, type) => {
       let newPublicodesInformationsForNextQuestions: PublicodesInformation[];
       let hasNoMissingQuestions = false;
+      let informationError = false;
       const publicodesInformations =
         get().informationsData.input.publicodesInformations;
       const isLicenciementInaptitude =
@@ -150,11 +151,7 @@ const createCommonInformationsStore: StoreSlice<
             blockingNotification = notifBloquante[0].description;
           }
         } catch (e) {
-          set(
-            produce((state: CommonInformationsStoreSlice) => {
-              state.informationsData.error.errorPublicodes = true;
-            })
-          );
+          informationError = true;
           console.error(e);
         }
         set(
@@ -203,6 +200,7 @@ const createCommonInformationsStore: StoreSlice<
         "hasNoMissingQuestions",
         hasNoMissingQuestions
       );
+      applyGenericValidation(get, set, "informationError", informationError);
     },
     onSetStepHidden: () => {
       const publicodesInformations =
@@ -240,7 +238,7 @@ const createCommonInformationsStore: StoreSlice<
     onNextStep: () => {
       const state = get().informationsData.input;
       const currentError = get().informationsData.error;
-      const { isValid, errorState } = validateStep(state, currentError);
+      const { isValid, errorState } = validateStep(state);
       let errorEligibility;
 
       if (isValid) {
@@ -277,8 +275,7 @@ const applyGenericValidation = (
       draft.informationsData.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.informationsData.input,
-      nextState.informationsData.error
+      nextState.informationsData.input
     );
     set(
       produce((state: CommonInformationsStoreSlice) => {

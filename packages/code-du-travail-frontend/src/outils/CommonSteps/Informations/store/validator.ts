@@ -6,10 +6,7 @@ import {
 import { RuleType } from "@socialgouv/modeles-social";
 import { isDate, isPositiveNumber } from "../../../common/validators";
 
-export const validateStep = (
-  state: CommonInformationsStoreInput,
-  error: CommonInformationsStoreError
-) => {
+export const validateStep = (state: CommonInformationsStoreInput) => {
   const informations = state.publicodesInformations;
   let errorInformations: Record<string, string> = {};
   informations.forEach((info) => {
@@ -21,12 +18,14 @@ export const validateStep = (
 
   let errorState: CommonInformationsStoreError = {
     errorInformations,
-    errorPublicodes: error.errorPublicodes,
+    errorPublicodes: state.informationError
+      ? "Une erreur liée au moteur de calcul bloque la simulation."
+      : undefined,
   };
 
   const isValid = deepEqualObject(errorState, {
     errorInformations: {},
-    errorPublicodes: false,
+    errorPublicodes: undefined,
   });
   return { isValid, errorState };
 };

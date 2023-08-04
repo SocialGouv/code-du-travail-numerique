@@ -130,9 +130,7 @@ function AgreementStep({
         </>
       )}
       {error?.errorPublicodes && (
-        <InlineError>
-          Une erreur liée au moteur de calcul bloque la simulation.
-        </InlineError>
+        <InlineError>{error.errorPublicodes}</InlineError>
       )}
     </>
   );

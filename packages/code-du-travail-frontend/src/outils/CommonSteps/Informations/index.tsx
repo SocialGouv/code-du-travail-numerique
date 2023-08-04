@@ -34,9 +34,7 @@ const CommonInformationStep = ({
       );
     })}
     {errors.errorPublicodes && (
-      <InlineError>
-        Une erreur liée au moteur de calcul bloque la simulation.
-      </InlineError>
+      <InlineError>{errors.errorPublicodes}</InlineError>
     )}
   </>
 );

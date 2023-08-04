@@ -13,13 +13,14 @@ export type CommonAgreementStoreInput = {
   enterprise?: Enterprise;
   isAgreementSupportedIndemniteLicenciement: boolean;
   hasNoEnterpriseSelected: boolean;
+  informationError: boolean;
 };
 
 export type CommonAgreementStoreError = {
   route?: string;
   agreement?: string;
   enterprise?: string;
-  errorPublicodes: boolean;
+  errorPublicodes?: string;
 };
 
 export type CommonAgreementStoreData<T extends PublicodesSimulator> = {

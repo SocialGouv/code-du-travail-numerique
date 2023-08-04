@@ -18,12 +18,13 @@ export type CommonInformationsStoreInput = {
   isStepSalaryHidden: boolean;
   hasNoMissingQuestions: boolean;
   blockingNotification?: string;
+  informationError: boolean;
 };
 
 export type CommonInformationsStoreError = {
   errorInformations: Record<string, string>;
   errorEligibility?: string;
-  errorPublicodes: boolean;
+  errorPublicodes?: string;
 };
 
 export type CommonInformationsStoreData = {
