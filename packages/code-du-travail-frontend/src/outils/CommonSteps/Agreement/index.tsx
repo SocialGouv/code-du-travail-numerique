@@ -120,15 +120,16 @@ function AgreementStep({
             simulator={simulator}
             isDisabled={selectedAgreement?.num === 3239}
           />
-          <NoEnterprise
-            isHidden={!!selectedEnterprise}
-            isCheckboxChecked={hasNoEnterpriseSelected}
-            setIsCheckboxChecked={setHasNoEnterpriseSelected}
-            onCheckboxChange={async (isCheckboxChecked) => {
-              const cc3239 = await getCc3239Informations();
-              onAgreementChange(isCheckboxChecked ? cc3239 : null);
-            }}
-          />
+          {!selectedEnterprise && (
+            <NoEnterprise
+              isCheckboxChecked={hasNoEnterpriseSelected}
+              setIsCheckboxChecked={setHasNoEnterpriseSelected}
+              onCheckboxChange={async (isCheckboxChecked) => {
+                const cc3239 = await getCc3239Informations();
+                onAgreementChange(isCheckboxChecked ? cc3239 : null);
+              }}
+            />
+          )}
           {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
         </>
       )}

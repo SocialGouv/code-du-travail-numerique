@@ -21,14 +21,7 @@ Storage.prototype.getItem = jest.fn(
 describe("Indemnité licenciement", () => {
   describe("parcours avec la convention collective 413 pour tester le cas où il n'y a pas d'indemnité conventionnel", () => {
     beforeEach(() => {
-      render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          slug={"indemnite-licenciement"}
-        />
-      );
+      render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());

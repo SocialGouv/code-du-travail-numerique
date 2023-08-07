@@ -1,9 +1,4 @@
-import {
-  Agreement,
-  getLabelBySource,
-  slugify,
-  SOURCES,
-} from "@socialgouv/cdtn-utils";
+import { Agreement, getLabelBySource } from "@socialgouv/cdtn-utils";
 import {
   Alert,
   Badge,
@@ -25,34 +20,9 @@ import Mdx from "../../src/common/Mdx";
 import SearchConvention from "../../src/conventions/Search";
 import { A11yLink } from "../common/A11yLink";
 import Html from "../common/Html";
-import References from "../common/References";
 import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
-
-const ReferencesJuridiques = ({ references = [] }) => {
-  const refs = references.flatMap(({ category, title, url }) => {
-    if (category === "labor_code") {
-      return {
-        slug: slugify(title),
-        title,
-        type: SOURCES.CDT,
-      };
-    }
-    if (category === "agreement") {
-      return {
-        title: `${title} de la convention collective`,
-        type: SOURCES.EXTERNALS,
-        url,
-      };
-    }
-    return { title, type: SOURCES.EXTERNALS, url };
-  });
-
-  if (references.length === 0) {
-    return null;
-  }
-  return <References label="Références" references={refs} accordionList="3" />;
-};
+import ReferencesJuridiques, { filteredRefs } from "./References";
 
 const Contribution = ({ answers, content }) => {
   /**
@@ -63,13 +33,6 @@ const Contribution = ({ answers, content }) => {
   const isConventionalAnswer = Object.prototype.hasOwnProperty.call(
     answers,
     "conventionAnswer"
-  );
-
-  const filteredRefs = answers?.generic?.references?.filter(
-    ({ category, url }) => {
-      if (category !== null) return true;
-      return url !== content.url;
-    }
   );
 
   const hasConventionAnswers =
@@ -144,12 +107,13 @@ const Contribution = ({ answers, content }) => {
               {content.date && <span>Mis à jour le&nbsp;: {content.date}</span>}
             </Meta>
           )}
-
           <Mdx
             markdown={answers.generic.markdown}
             components={rehypeToReact(content)}
           />
-          <ReferencesJuridiques references={filteredRefs} />
+          <ReferencesJuridiques
+            references={filteredRefs(answers?.generic?.references, content.url)}
+          />
         </section>
       )}
       {hasConventionAnswers && (
@@ -219,22 +183,27 @@ const Contribution = ({ answers, content }) => {
                     <ReferencesJuridiques
                       references={conventionAnswer.references}
                     />
-                    {isConventionDetected() && (
-                      <p>
-                        Consultez les questions-réponses fréquentes pour{" "}
-                        <a href={`/convention-collective/${convention.slug}`}>
-                          la convention collective {convention.title}
-                        </a>
-                      </p>
-                    )}
+                    <p>
+                      Consultez les questions-réponses fréquentes pour{" "}
+                      <a
+                        href={`/convention-collective/${
+                          isConventionalAnswer
+                            ? conventionAnswer.slug
+                            : convention.slug
+                        }`}
+                      >
+                        la convention collective{" "}
+                        {isConventionalAnswer
+                          ? conventionAnswer.shortName
+                          : convention.shortTitle}
+                      </a>
+                    </p>
                   </>
                 ) : (
-                  <>
-                    <Section>
-                      Désolé, nous n’avons pas de réponse pour cette convention
-                      collective.
-                    </Section>
-                  </>
+                  <Section>
+                    Désolé, nous n’avons pas de réponse pour cette convention
+                    collective.
+                  </Section>
                 )}
                 {!isConventionalAnswer && (
                   <ButtonWrapper>

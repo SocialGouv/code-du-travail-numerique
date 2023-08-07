@@ -75,22 +75,22 @@ const tests = [
       expect(container).toMatchInlineSnapshot(`
         <div>
           <div
-            class="sc-iGgWBj sc-dxcDKg cWzIZL jgGuVi"
+            class="sc-iGgWBj sc-gvZAcH cWzIZL eawdqY"
           >
             stuff 0
           </div>
           <div
-            class="sc-iGgWBj sc-dxcDKg cWzIZL jgGuVi"
+            class="sc-iGgWBj sc-gvZAcH cWzIZL eawdqY"
           >
             stuff 1
           </div>
           <div
-            class="sc-iGgWBj sc-dxcDKg cWzIZL jgGuVi"
+            class="sc-iGgWBj sc-gvZAcH cWzIZL eawdqY"
           >
             stuff 2
           </div>
           <div
-            class="sc-iGgWBj sc-dxcDKg cWzIZL jgGuVi"
+            class="sc-iGgWBj sc-gvZAcH cWzIZL eawdqY"
           >
             stuff 3
           </div>

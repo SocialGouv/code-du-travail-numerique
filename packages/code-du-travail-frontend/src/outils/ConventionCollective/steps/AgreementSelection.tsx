@@ -1,4 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-utils";
+import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { Button, FlatList, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
@@ -9,6 +9,7 @@ import { ScreenType, useNavContext } from "../common/NavContext";
 import { TrackingProps } from "../types";
 import { AgreementTile } from "../../common/Agreement/AgreementSearch/AgreementInput/AgreementTile";
 import { useRouter } from "next/router";
+import { Tile } from "@socialgouv/cdtn-ui/lib";
 
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;
@@ -32,27 +33,40 @@ const AgreementSelectionStep = ({
   return (
     <>
       <SectionTitle>Convention collective</SectionTitle>
-      <Paragraph noMargin variant="primary">
-        {(enterprise?.conventions?.length ?? 0) > 1
-          ? `${enterprise?.conventions.length} conventions collectives trouvées pour `
+      <Paragraph variant="primary">
+        {(enterprise.conventions.length ?? 0) > 1
+          ? `${enterprise.conventions.length} conventions collectives trouvées pour `
           : `${
-              enterprise?.conventions.length ?? 0
+              enterprise.conventions.length ?? 0
             } convention collective trouvée pour `}
         <strong>
-          « {enterprise?.simpleLabel}
-          {enterprise?.address &&
-            ` , ${enterprise?.firstMatchingEtablissement?.address}`}{" "}
+          « {enterprise.simpleLabel}
+          {enterprise.address &&
+            ` , ${enterprise.firstMatchingEtablissement?.address}`}{" "}
           »
         </strong>
       </Paragraph>
       <FlatList>
-        {enterprise?.conventions.map((agreement) => (
+        {enterprise.conventions.map((agreement) => (
           <Li key={agreement.id}>
-            <AgreementTile
-              onUserAction={onUserAction}
-              agreement={agreement}
-              isWidgetMode={isWidgetMode}
-            />
+            {agreement.slug ? (
+              <AgreementTile
+                onUserAction={onUserAction}
+                agreement={agreement}
+                isWidgetMode={isWidgetMode}
+              />
+            ) : (
+              <DisabledTile
+                wide
+                subtitle={getLabelBySource(SOURCES.CCN)}
+                title={`IDCC${agreement.num}`}
+              >
+                <p>
+                  Cette convention collective déclarée par l’entreprise n’est
+                  pas reconnue par notre site
+                </p>
+              </DisabledTile>
+            )}
           </Li>
         ))}
       </FlatList>
@@ -91,5 +105,14 @@ const Li = styled.li`
 
   &:last-child {
     margin-bottom: ${theme.spacings.large};
+  }
+`;
+
+const DisabledTile = styled(Tile)`
+  cursor: auto;
+  color: ${theme.colors.placeholder};
+  :hover {
+    transform: none;
+    color: ${theme.colors.placeholder};
   }
 `;

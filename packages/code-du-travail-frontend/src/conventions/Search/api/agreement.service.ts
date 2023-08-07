@@ -32,4 +32,4 @@ const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
 
 const searchAgreement = debounce(apiIdcc, 300);
 
-export { searchAgreement };
+export { searchAgreement, apiIdcc };

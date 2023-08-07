@@ -133,5 +133,20 @@
     "source": "/convention-collective/1518-animation",
     "permanent": true,
     "destination": "/convention-collective/1518-education-culture-loisirs-et-animation-au-service-des-territoires-eclat"
+  },
+  {
+    "source": "/contribution/1740-:slug",
+    "permanent": true,
+    "destination": "/contribution/:slug"
+  },
+  {
+    "source": "/convention-collective/1740",
+    "permanent": true,
+    "destination": "/outils/convention-collective"
+  },
+  {
+    "source": "/convention-collective/1740-:slug",
+    "permanent": true,
+    "destination": "/outils/convention-collective"
   }
 ]

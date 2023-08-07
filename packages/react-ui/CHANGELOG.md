@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.105.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.105.0...v4.105.1) (2023-07-19)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+# [4.105.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.104.2...v4.105.0) (2023-07-17)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+## [4.104.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.104.1...v4.104.2) (2023-07-06)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+## [4.104.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.104.0...v4.104.1) (2023-07-06)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+# [4.104.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.103.0...v4.104.0) (2023-07-04)
+
+### Features
+
+- **indemnite-licenciement:** Mise en place d'un module de recherche pour la CC 3239 ([#4958](https://github.com/SocialGouv/code-du-travail-numerique/issues/4958)) ([4e649a6](https://github.com/SocialGouv/code-du-travail-numerique/commit/4e649a67f659dbaaf73521fccbb9900e5276d623))
+
 # [4.103.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.102.2...v4.103.0) (2023-06-27)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui

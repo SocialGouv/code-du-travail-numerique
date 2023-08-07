@@ -11,7 +11,7 @@ function Widgets(): JSX.Element {
       <Metas
         title="Recherche - Code du travail numérique"
         description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (formation, rupture de contrat, démission, indemnités)."
-        overrideCanonical={SITE_URL + "/search"}
+        overrideCanonical={SITE_URL + "/recherche"}
       />
       <SearchWidget />
     </>

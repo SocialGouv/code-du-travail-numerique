@@ -70,18 +70,20 @@ function Outils({
       <div>
         <Container>
           <Flex>
+            <ShareContainer>
+              <Share title={title} metaDescription={description} />
+            </ShareContainer>
             <Tool
               icon={icon}
               title={title}
               displayTitle={displayTitle}
               slug={slug}
             />
-            <ShareContainer>
-              <Share title={title} metaDescription={description} />
-            </ShareContainer>
           </Flex>
           <RelatedItems items={relatedItems} />
-          <Feedback url={router.asPath} />
+          {router.asPath !== "/outils/indemnite-licenciement" && (
+            <Feedback url={router.asPath} />
+          )}
         </Container>
       </div>
     </Layout>
@@ -149,5 +151,5 @@ export const ShareContainer = styled.div`
 
 export const Flex = styled.div`
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 `;

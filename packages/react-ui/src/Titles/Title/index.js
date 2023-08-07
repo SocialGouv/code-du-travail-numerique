@@ -16,6 +16,7 @@ export const Title = ({
   stripe,
   variant,
   isHeader,
+  size,
   ...props
 }) => (
   <Header
@@ -25,7 +26,7 @@ export const Title = ({
     shift={shift}
     {...props}
   >
-    <StyledTitle stripe={stripe} as={as} shift={shift}>
+    <StyledTitle stripe={stripe} as={as} shift={shift} size={size}>
       {stripe !== "none" && (
         <Stripe
           rounded={variant !== "primary"}
@@ -51,6 +52,7 @@ Title.propTypes = {
   isHeader: PropTypes.bool,
   role: PropTypes.string,
   shift: PropTypes.string,
+  size: PropTypes.oneOf(["small", "medium"]),
   stripe: PropTypes.oneOf(["left", "top", "none"]),
   subtitle: PropTypes.node,
   variant: PropTypes.string,
@@ -68,7 +70,10 @@ const StyledTitle = styled.h2`
   margin: 0;
   color: ${({ theme }) => theme.title};
   font-weight: normal;
-  font-size: ${fonts.sizes.headings.medium};
+  font-size: ${({ size }) =>
+    size === "small"
+      ? fonts.sizes.headings.xmedium
+      : fonts.sizes.headings.medium};
   font-family: "Merriweather", serif;
   line-height: ${fonts.lineHeightTitle};
   ${({ stripe, shift }) => {
@@ -88,6 +93,9 @@ const StyledTitle = styled.h2`
     }
   }}
   @media (max-width: ${breakpoints.mobile}) {
-    font-size: ${fonts.sizes.headings.xmedium};
+    font-size: ${({ size }) =>
+      size === "small"
+        ? fonts.sizes.headings.small
+        : fonts.sizes.headings.xmedium};
   }
 `;

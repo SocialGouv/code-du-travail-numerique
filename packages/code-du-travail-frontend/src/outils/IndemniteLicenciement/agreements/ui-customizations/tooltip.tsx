@@ -6,5 +6,5 @@ export const getTooltipSalairesMensuel = (
 ): Tooltip | undefined => {
   if (agreementNumber === 3239) return undefined;
 
-  return { content: <TooltipSalary /> };
+  return { content: <TooltipSalary agreementNumber={agreementNumber} /> };
 };

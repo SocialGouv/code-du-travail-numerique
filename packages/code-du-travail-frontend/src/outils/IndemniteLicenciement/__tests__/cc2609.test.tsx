@@ -22,12 +22,7 @@ describe("Indemnité licenciement - CC 2609", () => {
     let rendering: RenderResult;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          slug={"indemnite-licenciement"}
-        />
+        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
       );
       fireEvent.click(ui.introduction.startButton.get());
       fireEvent.click(ui.contract.type.cdi.get());

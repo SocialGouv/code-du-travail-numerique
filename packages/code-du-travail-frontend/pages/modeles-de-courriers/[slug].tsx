@@ -5,7 +5,7 @@ import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
-import { LetterModel, LetterModelProps } from "../../src/modeles";
+import { LetterModel, LetterModelProps, getTitle } from "../../src/modeles";
 import Answer from "../../src/common/Answer";
 
 const fetchCourrier = ({ slug }) =>
@@ -21,6 +21,7 @@ function ModeleCourrier(props: LetterModelProps): JSX.Element {
     relatedItems,
     date,
     breadcrumbs,
+    slug,
   } = props;
   const category = `Modèle ${
     type !== "fichier" ? `de ${type}` : "à télécharger"
@@ -35,7 +36,7 @@ function ModeleCourrier(props: LetterModelProps): JSX.Element {
         }
       />
       <Answer
-        title={`Modèle - ${title}`}
+        title={getTitle(slug, title)}
         relatedItems={relatedItems}
         emptyMessage="Modèle de document introuvable"
         intro={description}
@@ -57,6 +58,12 @@ export const getServerSideProps = async ({ query }) => {
   }
 
   const data = await response.json();
-  return { props: { relatedItems: data.relatedItems, ...data._source } };
+  return {
+    props: {
+      relatedItems: data.relatedItems,
+      ...data._source,
+      slug: query.slug,
+    },
+  };
 };
 export default ModeleCourrier;
