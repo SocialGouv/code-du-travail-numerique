@@ -85,7 +85,9 @@ const SimulatorDecorator = <FormValues,>({
 
               {hasErrorPublicodes && (
                 <InlineError>
-                  Une erreur liée au moteur de calcul bloque la simulation.{" "}
+                  Une erreur liée au moteur de calcul nous empêche de continuer
+                  la simulation. Veuillez vérifier les informations saisies ou
+                  rafraîchir la page si le problème persiste.
                 </InlineError>
               )}
 

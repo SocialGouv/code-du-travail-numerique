@@ -30,6 +30,7 @@ export const initialState: PreavisRetraiteState = {
     },
   },
   formValues: {},
+  errorPublicodes: undefined,
 };
 
 const createPreavisRetraiteStore = (title: string, slug: string) =>

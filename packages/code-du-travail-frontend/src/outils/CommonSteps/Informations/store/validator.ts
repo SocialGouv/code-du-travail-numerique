@@ -19,7 +19,7 @@ export const validateStep = (state: CommonInformationsStoreInput) => {
   let errorState: CommonInformationsStoreError = {
     errorInformations,
     errorPublicodes: state.informationError
-      ? "Une erreur liée au moteur de calcul bloque la simulation."
+      ? "Une erreur liée au moteur de calcul nous empêche de continuer la simulation. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
       : undefined,
   };
 
