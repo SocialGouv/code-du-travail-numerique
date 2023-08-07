@@ -286,7 +286,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     </button>
                     <a
                       class="sc-jBeBSR cAjBbM spacing-left"
-                      href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mod%C3%A8le%20-%20Courrier%20Epistolaire&body=un%20description%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+                      href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mod%C3%A8le%20de%20lettre%20-%20Courrier%20Epistolaire&body=un%20description%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                       title="Envoyer par email"
                     >
                       <span
@@ -382,7 +382,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     <span
                       class="sc-gsFSXq ljkohw"
                     />
-                    Modèle - Courrier Epistolaire
+                    Modèle de lettre - Courrier Epistolaire
                   </h1>
                 </header>
                 <div
@@ -507,7 +507,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 <p
                   class="sc-iGgWBj sc-kUdmhA cWzIZL jATFrJ"
                 >
-                  Attention, chaque modèle de document proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de règlementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
+                  Attention, chaque modèle de lettre proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de réglementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
                 </p>
                 <p
                   class="sc-gRtvSG dSSzDx"
@@ -573,7 +573,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               </button>
               <a
                 class="sc-jBeBSR cAjBbM spacing-left"
-                href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mod%C3%A8le%20-%20Courrier%20Epistolaire&body=un%20description%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+                href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mod%C3%A8le%20de%20lettre%20-%20Courrier%20Epistolaire&body=un%20description%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                 title="Envoyer par email"
               >
                 <span

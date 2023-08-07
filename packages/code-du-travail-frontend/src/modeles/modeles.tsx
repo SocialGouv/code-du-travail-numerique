@@ -13,6 +13,7 @@ import { Breadcrumb } from "@socialgouv/cdtn-utils";
 
 import Html from "../../src/common/Html";
 import { toUrl } from "../../src/lib";
+import { getDisclaimer } from "./helpers";
 
 export interface LetterModelProps {
   breadcrumbs: Breadcrumb[];
@@ -20,15 +21,21 @@ export interface LetterModelProps {
   description: string;
   title: string;
   relatedItems: Array<any>;
-  metaDescription;
-  filesize;
-  fileUrl;
-  html;
-  meta_title;
-  type;
+  metaDescription: string;
+  filesize: any;
+  fileUrl: any;
+  html: any;
+  meta_title: string;
+  type: any;
+  slug: string;
 }
 
-export const LetterModel = ({ fileUrl, filesize, html }: LetterModelProps) => {
+export const LetterModel = ({
+  fileUrl,
+  filesize,
+  html,
+  slug,
+}: LetterModelProps) => {
   const filesizeFormated = Math.round((filesize / 1000) * 100) / 100;
   const [filename] = fileUrl.match(/[^/]+$/);
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
@@ -61,12 +68,7 @@ export const LetterModel = ({ fileUrl, filesize, html }: LetterModelProps) => {
         Ko{" "}
       </Notice>
 
-      <Disclaimer as="p">
-        Attention, chaque modèle de document proposé est à personnaliser selon
-        votre situation et est susceptible d’évoluer suite à des changements de
-        règlementation. Assurez-vous d’avoir la dernière version mise à jour
-        avant toute utilisation.
-      </Disclaimer>
+      <Disclaimer as="p">{getDisclaimer(slug)}</Disclaimer>
       <Centered>
         <Button
           as="a"
