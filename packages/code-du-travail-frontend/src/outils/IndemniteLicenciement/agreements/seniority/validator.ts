@@ -2,7 +2,7 @@ import {
   getSupportedAgreement,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
-import { Agreement } from "../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import { CommonInformationsStoreInput } from "../../../CommonSteps/Informations/store";
 import { AncienneteStoreInput } from "../../steps/Anciennete/store";
 import { validateStep } from "../../steps/Anciennete/store/validator";

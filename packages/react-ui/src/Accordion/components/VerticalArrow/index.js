@@ -1,7 +1,7 @@
 import { ChevronRight } from "react-feather";
 import styled from "styled-components";
 
-import { animations } from "../../../theme.js";
+import { animations } from "../../../theme";
 
 const StyledChevronRight = styled(ChevronRight)`
   position: relative;

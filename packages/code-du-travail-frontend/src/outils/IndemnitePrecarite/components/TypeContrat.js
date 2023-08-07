@@ -12,7 +12,7 @@ export const CONTRACT_TYPE = {
   CTT: "CTT",
 };
 
-function TypeContrat({ name }) {
+function TypeContrat({ name, onChange }) {
   return (
     <>
       <Question required>
@@ -30,6 +30,10 @@ function TypeContrat({ name }) {
             id={`${name}-cdd`}
             label="Contrat à durée déterminée (CDD)"
             {...props.input}
+            onChange={(...changeProps) => {
+              onChange(...changeProps);
+              props.input.onChange(...changeProps);
+            }}
           />
         )}
       </Field>
@@ -45,6 +49,10 @@ function TypeContrat({ name }) {
             id={`${name}-ci`}
             label="Contrat de travail temporaire (Contrat d’intérim)"
             {...props.input}
+            onChange={(...changeProps) => {
+              onChange(...changeProps);
+              props.input.onChange(...changeProps);
+            }}
           />
         )}
       </Field>

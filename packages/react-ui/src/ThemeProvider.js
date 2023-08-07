@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 
-import { blackAndWhiteColors, colors } from "./theme.js";
+import { blackAndWhiteColors, colors } from "./theme";
 
 export const BLACK_AND_WHITE_STORAGE_KEY = "blackAndWhiteTheme";
 

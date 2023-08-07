@@ -2,7 +2,7 @@ import React from "react";
 
 import { Section } from "../layout/Section";
 import { Wrapper } from "../layout/Wrapper";
-import { spacings } from "../theme.js";
+import { spacings } from "../theme";
 import { Heading } from "./Heading";
 import { InsertTitle } from "./InsertTitle";
 import { PageTitle } from "./PageTitle";

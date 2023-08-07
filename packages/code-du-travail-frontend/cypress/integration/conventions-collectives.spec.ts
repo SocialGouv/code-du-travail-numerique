@@ -9,11 +9,18 @@ describe("Conventions collectives", () => {
       "contain",
       "Retrouvez les questions/réponses fréquentes organisées par thème"
     );
-    cy.get("#content li").should("have.length", 126);
+    cy.get("#content li").should("have.length", 125);
     cy.get("#content li").first().click();
     cy.url().should(
       "include",
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
+    );
+  });
+  it("je suis redirigé vers la cc si je mets seulement l'idcc dans l'url", () => {
+    cy.visit("/convention-collective/0029");
+    cy.url().should(
+      "include",
+      "/convention-collective/29-hospitalisation-privee-etablissements-prives-dhospitalisation-de-soins-d"
     );
   });
 });

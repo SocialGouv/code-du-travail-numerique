@@ -30,7 +30,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
     </div>
   </div>
   <div
-    class="sc-iGgWBj sc-dJiZtA cWzIZL gTpwHA"
+    class="sc-iGgWBj sc-iLsKjm cWzIZL fFDVSC"
   >
     <div
       class="sc-bypJrT gYlZec"
@@ -77,7 +77,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       >
         <p
           aria-level="2"
-          class="sc-cVzyXs sc-imwsjW kGZqPH"
+          class="sc-cVzyXs sc-dJiZtA kGZqPH"
           role="heading"
         >
           Page personnalisable
@@ -111,7 +111,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       </h2>
     </div>
     <div
-      class="sc-bkSUFG ehEloh"
+      class="sc-dQEtJz kssxrr"
     />
     <div>
       <p>
@@ -123,13 +123,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
     </div>
   </section>
   <div
-    class="sc-gEvEer hpVpdb sc-kCMKrZ drdEZo"
+    class="sc-gEvEer hpVpdb sc-epALIP hgwnOD"
   >
     <div
       class="sc-iGgWBj cWzIZL"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-iLsKjm dzskQt"
+        class="sc-ePDLzJ bEkCoG sc-eifrsQ bTMOhV"
         id="customisation"
       >
         <h2
@@ -212,7 +212,7 @@ exports[`<Contribution /> should render answer references 1`] = `
     </div>
   </div>
   <div
-    class="sc-iGgWBj sc-dJiZtA cWzIZL gTpwHA"
+    class="sc-iGgWBj sc-iLsKjm cWzIZL fFDVSC"
   >
     <div
       class="sc-bypJrT gYlZec"
@@ -259,7 +259,7 @@ exports[`<Contribution /> should render answer references 1`] = `
       >
         <p
           aria-level="2"
-          class="sc-cVzyXs sc-imwsjW kGZqPH"
+          class="sc-cVzyXs sc-dJiZtA kGZqPH"
           role="heading"
         >
           Page personnalisable
@@ -293,7 +293,7 @@ exports[`<Contribution /> should render answer references 1`] = `
       </h2>
     </div>
     <div
-      class="sc-bkSUFG ehEloh"
+      class="sc-dQEtJz kssxrr"
     />
     <div>
       <p>
@@ -305,13 +305,13 @@ exports[`<Contribution /> should render answer references 1`] = `
     </div>
   </section>
   <div
-    class="sc-gEvEer hpVpdb sc-kCMKrZ drdEZo"
+    class="sc-gEvEer hpVpdb sc-epALIP hgwnOD"
   >
     <div
       class="sc-iGgWBj cWzIZL"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-iLsKjm dzskQt"
+        class="sc-ePDLzJ bEkCoG sc-eifrsQ bTMOhV"
         id="customisation"
       >
         <h2
@@ -394,7 +394,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     </div>
   </div>
   <div
-    class="sc-iGgWBj sc-dJiZtA cWzIZL gTpwHA"
+    class="sc-iGgWBj sc-iLsKjm cWzIZL fFDVSC"
   >
     <div
       class="sc-bypJrT gYlZec"
@@ -441,7 +441,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       >
         <p
           aria-level="2"
-          class="sc-cVzyXs sc-imwsjW kGZqPH"
+          class="sc-cVzyXs sc-dJiZtA kGZqPH"
           role="heading"
         >
           Page personnalisable
@@ -475,7 +475,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       </h2>
     </div>
     <div
-      class="sc-bkSUFG ehEloh"
+      class="sc-dQEtJz kssxrr"
     />
     <div>
       <p>
@@ -487,13 +487,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     </div>
   </section>
   <div
-    class="sc-gEvEer hpVpdb sc-kCMKrZ drdEZo"
+    class="sc-gEvEer hpVpdb sc-epALIP hgwnOD"
   >
     <div
       class="sc-iGgWBj cWzIZL"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-iLsKjm dzskQt"
+        class="sc-ePDLzJ bEkCoG sc-eifrsQ bTMOhV"
         id="customisation"
       >
         <h2
@@ -576,7 +576,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
     </div>
   </div>
   <div
-    class="sc-iGgWBj sc-dJiZtA cWzIZL gTpwHA"
+    class="sc-iGgWBj sc-iLsKjm cWzIZL fFDVSC"
   >
     <div
       class="sc-bypJrT gYlZec"
@@ -623,7 +623,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
       >
         <p
           aria-level="2"
-          class="sc-cVzyXs sc-imwsjW kGZqPH"
+          class="sc-cVzyXs sc-dJiZtA kGZqPH"
           role="heading"
         >
           Page personnalisable
@@ -657,7 +657,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
       </h2>
     </div>
     <div
-      class="sc-bkSUFG ehEloh"
+      class="sc-dQEtJz kssxrr"
     />
     <div>
       <p>
@@ -669,13 +669,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
     </div>
   </section>
   <div
-    class="sc-gEvEer hpVpdb sc-kCMKrZ drdEZo"
+    class="sc-gEvEer hpVpdb sc-epALIP hgwnOD"
   >
     <div
       class="sc-iGgWBj cWzIZL"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-iLsKjm dzskQt"
+        class="sc-ePDLzJ bEkCoG sc-eifrsQ bTMOhV"
         id="customisation"
       >
         <h2
@@ -758,7 +758,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     </div>
   </div>
   <div
-    class="sc-iGgWBj sc-dJiZtA cWzIZL gTpwHA"
+    class="sc-iGgWBj sc-iLsKjm cWzIZL fFDVSC"
   >
     <div
       class="sc-bypJrT gYlZec"
@@ -805,7 +805,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       >
         <p
           aria-level="2"
-          class="sc-cVzyXs sc-imwsjW kGZqPH"
+          class="sc-cVzyXs sc-dJiZtA kGZqPH"
           role="heading"
         >
           Page personnalisable
@@ -826,13 +826,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     </div>
   </div>
   <div
-    class="sc-gEvEer hpVpdb sc-kCMKrZ drdEZo"
+    class="sc-gEvEer hpVpdb sc-epALIP hgwnOD"
   >
     <div
       class="sc-iGgWBj cWzIZL"
     >
       <div
-        class="sc-ePDLzJ bEkCoG sc-iLsKjm cgsuXk"
+        class="sc-ePDLzJ bEkCoG sc-eifrsQ cyjClI"
         id="customisation"
       >
         <h2
@@ -901,7 +901,7 @@ exports[`<Contribution /> should render with generic answer 1`] = `
       </h2>
     </div>
     <div
-      class="sc-bkSUFG ehEloh"
+      class="sc-dQEtJz kssxrr"
     />
     <div>
       <p>
@@ -931,7 +931,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
       </h2>
     </div>
     <div
-      class="sc-bkSUFG ehEloh"
+      class="sc-dQEtJz kssxrr"
     >
       <span>
         Source :
@@ -947,7 +947,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
       </span>
       <span
         aria-hidden="true"
-        class="sc-deXhhX isajtz"
+        class="sc-imwsjW cdmTVD"
       >
          - 
       </span>
@@ -968,16 +968,16 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
       class="sc-iGgWBj cRLRjd"
     >
       <div
-        class="sc-dWZqqJ jdrFGu"
+        class="sc-deXhhX kXWLYo"
       >
         Références
       </div>
       <ul
-        class="sc-cfxfcM sc-eoVZPG kMmTaI eiMzbL"
+        class="sc-cfxfcM sc-bkSUFG kMmTaI kkvFKw"
       >
         <li>
           <a
-            class="sc-bmzYkS hFAanY sc-lizKOf fqOfaA"
+            class="sc-bmzYkS hFAanY sc-fAGzit fmegKG"
             href="/code-du-travail/l-1243"
           >
             <svg

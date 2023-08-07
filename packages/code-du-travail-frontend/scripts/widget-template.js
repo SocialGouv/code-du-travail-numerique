@@ -1,27 +1,9 @@
-function addWidget(info) {
-  const iframePrefix = "cdtn-iframe-";
-  const targetIframe = document.querySelector("#" + iframePrefix + info.name);
-  if (targetIframe) {
-    return;
-  }
-  let target;
-  if (info.name === "widget") {
-    target = document.querySelector("#cdtn-" + info.name);
-  }
-  if (!target) {
-    const links = document.querySelectorAll("a[href='" + info.url + "']");
-    if (links.length) {
-      target = links[0];
-    } else {
-      return;
-    }
-  }
-
+function addWidget({ target, id, url }) {
   const iframe = document.createElement("iframe");
   target.parentNode.insertBefore(iframe, target);
   target.remove();
 
-  iframe.id = iframePrefix + info.name;
+  iframe.id = id;
   iframe.width = "100%";
   iframe.style = "border:none;";
 
@@ -31,7 +13,7 @@ function addWidget(info) {
       evt.source === iframe.contentWindow &&
       evt.data.kind === "resize-height"
     ) {
-      iframe.style.height = evt.data.value + "px";
+      iframe.style.height = evt.data.value + 16 + "px";
     }
     if (
       evt.source === iframe.contentWindow &&
@@ -39,16 +21,38 @@ function addWidget(info) {
     ) {
       const bodyPosition = document.body.getBoundingClientRect();
       const iframePosition = iframe.getBoundingClientRect();
-      window.scrollTo(0, iframePosition.top - bodyPosition.top - HEADER_MENU_HEIGHT);
+      window.scrollTo(
+        0,
+        iframePosition.top - bodyPosition.top - HEADER_MENU_HEIGHT
+      );
     }
   });
 
-  iframe.src = info.url;
+  iframe.src = url;
   return iframe;
 }
 
 function loadWidgets() {
-  __WIDGETS__.forEach((widget) => {
+  const widgets = [];
+  const oldWidget = document.querySelector("#cdtn-widget");
+  if (oldWidget) {
+    const id = "cdtn-iframe-widget";
+    const url = "__HOST__/widgets/search";
+    widgets.push({ target: oldWidget, id, url });
+  }
+  const targetLinks = document.querySelectorAll('a[href*="__HOST__/widgets/"]');
+  if (targetLinks.length) {
+    targetLinks.forEach((target) => {
+      const url = target.attributes.href.nodeValue;
+      const id =
+        "cdtn-iframe-" +
+        url.replace("__HOST__/widgets/", "").replace(/\//, "-");
+      if (!widgets.find(({ url: oldUrl }) => oldUrl === url)) {
+        widgets.push({ url, id, target });
+      }
+    });
+  }
+  widgets.forEach((widget) => {
     addWidget(widget);
   });
 }

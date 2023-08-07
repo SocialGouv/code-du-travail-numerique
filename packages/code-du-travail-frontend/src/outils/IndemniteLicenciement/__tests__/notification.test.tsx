@@ -24,12 +24,7 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
   let userAction: UserAction;
   beforeEach(() => {
     rendering = render(
-      <CalculateurIndemnite
-        icon={""}
-        title={""}
-        displayTitle={""}
-        slug={"indemnite-licenciement"}
-      />
+      <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
     );
   });
 
@@ -43,7 +38,7 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
       .click(ui.contract.fauteGrave.non.get())
       .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
-      .click(ui.next.get())
+      .click(ui.next.get());
     // Etape Convention collective
     userAction.click(ui.next.get());
     // Etape Ancienneté
@@ -53,7 +48,7 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
       .setInput(ui.seniority.endDate.get(), "01/03/2022")
       .click(ui.seniority.hasAbsence.oui.get())
       .setInput(ui.seniority.absences.duration(0).get(), "2")
-      .click(ui.next.get())
+      .click(ui.next.get());
 
     // Etape Salaires
     userAction
@@ -70,7 +65,5 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
     expect(rendering.queryByText("(1)")).toBeInTheDocument();
     expect(rendering.queryByText("(2)")).toBeInTheDocument();
     expect(rendering.queryByText("(3)")).not.toBeInTheDocument();
-
   });
-
 });

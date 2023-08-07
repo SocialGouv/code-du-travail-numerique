@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image should display image and caption 1`] = `
+<div>
+  <figure
+    aria-label="Comment calculer un délai quand il y a un jour férié ?"
+    class="sc-kqGoIF iUYKZa"
+    role="group"
+  >
+    <img
+      alt="Comment calculer un délai quand il y a un jour férié ?"
+      src="https://www.service-public.fr/webapp/images/vdd/extralarge/I4596.jpg"
+    />
+    <figcaption
+      class="sc-dxcDKg ednPSH"
+    >
+      <span>
+        Crédits : 
+        Service Public (DILA)
+      </span>
+    </figcaption>
+  </figure>
+  <div
+    class="sc-dZoequ kjOzCY"
+    data-accordion-component="Accordion"
+  >
+    <div
+      class="accordion__item"
+      data-accordion-component="AccordionItem"
+    >
+      <div
+        class="accordion__heading"
+        data-accordion-component="AccordionItemHeading"
+      >
+        <div
+          aria-controls="accordion__panel-raa-0"
+          aria-disabled="false"
+          aria-expanded="false"
+          class="sc-eZkCL bNqpkC"
+          data-accordion-component="AccordionItemButton"
+          id="accordion__heading-raa-0"
+          role="button"
+          tabindex="0"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-ggpjZQ kJjCoa"
+            fill="none"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3a1 1 0 0 0-1-1z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="sc-cmaqmh kmooEE"
+          >
+            Voir en détail
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-gFVvzn gApUFN"
+        data-accordion-component="AccordionItemPanel"
+        hidden=""
+        id="accordion__panel-raa-0"
+      >
+        <div
+          class="sc-kAkpmW lkGQTx"
+        >
+          <div
+            class="sc-iGgWBj cWzIZL"
+          >
+            <p>
+              Comment calculer un délai quand il y a un jour férié ?
+            </p>
+            <p>
+              Voici comment calculer un délai de 7 jours, selon que l'on parle de jours calendaires, francs, ouvrables ou ouvrés. Dans notre exemple, le délai commence un lundi et il y a un jour férié (le mercredi).
+            </p>
+            <p>
+              - Délai compté en jour calendaire : lundi + mardi + mercredi + jeudi + vendredi + samedi + dimanche
+            </p>
+            <p>
+              Chaque jour compte.
+            </p>
+            <p>
+              - Délai compté en jour franc : lundi + mardi + mercredi même si c'est un jour férié + jeudi + vendredi + samedi + lundi de la semaine suivante.
+            </p>
+            <p>
+              Report au jour suivant si le 7e jour tombe un samedi, un dimanche (comme c'est le cas dans notre exemple) ou un jour férié.
+            </p>
+            <p>
+              - Délai compté en jour ouvrable : lundi + mardi + jeudi + vendredi + samedi + lundi de la semaine suivante + mardi de la semaine suivante.
+            </p>
+            <p>
+              On ne compte pas le dimanche ni le jour férié.
+            </p>
+            <p>
+              - Délai compté en jour ouvré : lundi + mardi + jeudi + vendredi + lundi de la semaine suivante + mardi de la semaine suivante + mercredi de la semaine suivante.
+            </p>
+            <p>
+              On ne compte pas le jour férié (ici mercredi), le samedi ni le dimanche.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

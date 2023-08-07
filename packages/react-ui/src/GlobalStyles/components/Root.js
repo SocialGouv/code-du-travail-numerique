@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import { breakpoints, fonts } from "../../theme.js";
+import { breakpoints, fonts } from "../../theme";
 
 export default createGlobalStyle`
   html {

@@ -23,12 +23,7 @@ describe("Indemnité licenciement - CC 2148", () => {
   let userAction: UserAction;
   beforeEach(() => {
     rendering = render(
-      <CalculateurIndemnite
-        icon={""}
-        title={""}
-        displayTitle={""}
-        slug={"indemnite-licenciement"}
-      />
+      <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
     );
     userAction = new UserAction();
 
@@ -94,7 +89,7 @@ describe("Indemnité licenciement - CC 2148", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("4306,25 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("3900 €");
     expect(ui.result.resultTableRows.getAll().length).toBe(5);
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
       "mai 20223000 €"
@@ -107,7 +102,7 @@ describe("Indemnité licenciement - CC 2148", () => {
       .click(ui.salary.agreementWithNoticeSalary.knowingLastSalary.non.get())
       .click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("3975 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("3600 €");
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
   });
   test(`Cas avec arrêt de travail`, () => {

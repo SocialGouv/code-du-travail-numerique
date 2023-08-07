@@ -33,7 +33,7 @@ const PubliQuestion: React.FC<Props> = ({
     // to avoid collision with other components for YesNoQuestion
     Math.random().toString(36).substring(2, 15)
   );
-  const { question, titre, cdtn } = rule;
+  const { question, titre, cdtn, unité } = rule;
   const tooltip = rule.description
     ? {
         content: <Html>{rule.description}</Html>,
@@ -99,7 +99,7 @@ const PubliQuestion: React.FC<Props> = ({
           error={error}
           id={name}
           showRequired
-          icon={icons.Euro}
+          icon={unité === "€" ? icons.Euro : undefined}
           subLabel={cdtn.precision}
           dataTestId={name}
         />
@@ -127,6 +127,7 @@ const PubliQuestion: React.FC<Props> = ({
           inputType="number"
           value={value}
           onChange={onChange}
+          text={unité}
           error={error}
           id={name}
           showRequired

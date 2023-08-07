@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { Badge } from "../Badge";
 import { Stripe } from "../Stripe";
-import { animations, box, breakpoints, fonts, spacings } from "../theme.js";
+import { animations, box, breakpoints, fonts, spacings } from "../theme";
 import { Heading } from "../Titles/Heading";
 import { Subtitle } from "../Titles/Subtitle";
 

@@ -1,3 +1,5 @@
+import { Agreement } from "@socialgouv/cdtn-utils";
+
 export type ApiEnterpriseData = {
   entreprises: Enterprise[] | undefined;
 };
@@ -18,20 +20,6 @@ export type Enterprise = {
   siren: string;
   address?: string;
   firstMatchingEtablissement?: MatchingEtablissement;
-};
-
-export type Agreement = {
-  id: string;
-  num: number;
-  shortTitle: string;
-  slug?: string;
-  title: string;
-  url?: string;
-  highlight?: {
-    title: string;
-    content: string;
-    searchInfo?: string;
-  };
 };
 
 export type Convention = {

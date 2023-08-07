@@ -3,10 +3,10 @@
 exports[`<FicheServicePublic /> should render 1`] = `
 <div>
   <div
-    class="sc-gvZAcH gfsdJf"
+    class="sc-knuQbY jBLNho"
   >
     <p
-      class="sc-dxcDKg jALNRM"
+      class="sc-kRRyDe zFEco"
     >
       
             La démission vous permet de rompre votre contrat de travail de votre propre initiative. Cependant, pour être valable, elle doit respecter certaines conditions. Vous devez prévenir votre employeur de votre volonté de démissionner. Sauf en cas de dispense, vous poursuivez votre activité jusqu'au terme du préavis de démission. Des dispositions spécifiques de rupture anticipée du contrat de travail sont prévues selon votre situation au moment de votre démission (
@@ -689,7 +689,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             Si vous travaillez à temps partiel, la durée calendaire du préavis de démission est la même que celle d'un salarié à temps plein.
                           </p>
                           <div
-                            class="sc-iGgWBj sc-kqGoIF cWzIZL jVxPSE"
+                            class="sc-iGgWBj sc-gvZAcH cWzIZL eawdqY"
                           >
                             <h5
                               class="sc-kAyceB dvmaTz"

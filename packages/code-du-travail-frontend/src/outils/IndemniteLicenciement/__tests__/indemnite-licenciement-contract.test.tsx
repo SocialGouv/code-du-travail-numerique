@@ -9,14 +9,7 @@ test(`
   - Vérifier l'affichage de la question faute grave
   - Vérifier l'affichage de la question inaptitude
 `, async () => {
-  await render(
-    <CalculateurIndemnite
-      icon={""}
-      title={""}
-      displayTitle={""}
-      slug={"indemnite-licenciement"}
-    />
-  );
+  await render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
 
   // Vérifier l'affichage de l'intro
   expect(ui.introduction.startButton.query()).toBeInTheDocument();

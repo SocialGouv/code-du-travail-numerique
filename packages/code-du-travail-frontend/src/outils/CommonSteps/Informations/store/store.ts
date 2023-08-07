@@ -8,7 +8,11 @@ import {
   PublicodesInformation,
 } from "./types";
 import { StoreSlice } from "../../../types";
-import { CatPro3239, MissingArgs } from "@socialgouv/modeles-social";
+import {
+  CatPro3239,
+  MissingArgs,
+  PublicodesSimulator,
+} from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
@@ -32,7 +36,7 @@ const initialState: CommonInformationsStoreData = {
 
 const createCommonInformationsStore: StoreSlice<
   CommonInformationsStoreSlice,
-  CommonAgreementStoreSlice & ContratTravailStoreSlice
+  CommonAgreementStoreSlice<PublicodesSimulator> & ContratTravailStoreSlice
 > = (set, get) => ({
   informationsData: {
     ...initialState,
@@ -114,7 +118,7 @@ const createCommonInformationsStore: StoreSlice<
         const agreement = get().agreementData.input.agreement!;
         const rules = informationToSituation(newPublicodesInformations);
         let missingArgs: MissingArgs[] = [];
-        let blockingNotification: string | undefined = undefined;
+        let blockingNotification: any = undefined;
         try {
           missingArgs = publicodes
             .setSituation(
@@ -187,18 +191,24 @@ const createCommonInformationsStore: StoreSlice<
       const agreement = get().agreementData.input.agreement!;
       let isStepHidden = false;
       if (
-        agreement &&
-        agreement.num === 3239 &&
-        publicodesInformations.find(
-          (v) =>
-            v.question.rule.nom ===
-            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
-        )?.info === `'${CatPro3239.assistantMaternel}'` &&
-        publicodesInformations.find(
-          (v) =>
-            v.question.rule.nom ===
-            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement"
-        )?.info === `'Non'`
+        (agreement &&
+          agreement.num === 3239 &&
+          publicodesInformations.find(
+            (v) =>
+              v.question.rule.nom ===
+              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
+          )?.info === `'${CatPro3239.assistantMaternel}'` &&
+          publicodesInformations.find(
+            (v) =>
+              v.question.rule.nom ===
+              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement"
+          )?.info === `'Non'`) ||
+        (agreement.num === 1404 &&
+          publicodesInformations.find(
+            (v) =>
+              v.question.rule.nom ===
+              "contrat salarié . convention collective . sedima . question cdi opération"
+          )?.info === `'Oui'`)
       ) {
         isStepHidden = true;
       }

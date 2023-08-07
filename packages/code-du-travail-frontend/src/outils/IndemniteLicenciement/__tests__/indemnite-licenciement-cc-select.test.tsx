@@ -1,4 +1,4 @@
-import { CalculateurIndemnite } from "../../../../src/outils";
+import { CalculateurIndemnite } from "../index";
 import { ui } from "./ui";
 
 import { fireEvent, render, waitFor } from "@testing-library/react";
@@ -9,14 +9,7 @@ jest.mock("../../../conventions/Search/api/enterprises.service");
 
 describe("Indemnité licenciement - Sélection de CC", () => {
   beforeEach(() => {
-    render(
-      <CalculateurIndemnite
-        icon={""}
-        title={""}
-        displayTitle={""}
-        slug={"indemnite-licenciement"}
-      />
-    );
+    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
     fireEvent.click(ui.introduction.startButton.get());
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.fauteGrave.non.get());

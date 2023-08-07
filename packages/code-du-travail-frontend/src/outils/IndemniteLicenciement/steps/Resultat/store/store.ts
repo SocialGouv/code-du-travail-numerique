@@ -3,6 +3,7 @@ import {
   getSupportedAgreement,
   Notification,
   PublicodesIndemniteLicenciementResult,
+  PublicodesSimulator,
   References,
   SeniorityFactory,
   SeniorityResult,
@@ -26,7 +27,11 @@ import {
   getAgreementReferenceSalary,
 } from "../../../agreements";
 import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
-import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
+import {
+  AgreementInformation,
+  hasNoLegalIndemnity,
+  hasNoBetterAllowance,
+} from "../../../common";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
 import {
@@ -84,7 +89,7 @@ const createResultStore: StoreSlice<
   AncienneteStoreSlice &
     ContratTravailStoreSlice &
     SalairesStoreSlice &
-    CommonAgreementStoreSlice &
+    CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
     CommonInformationsStoreSlice
 > = (set, get) => ({
   resultData: {
@@ -204,6 +209,7 @@ const createResultStore: StoreSlice<
       let agreementNotifications: Notification[] = [];
       let notifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
+      let agreementHasNoBetterAllowance: boolean;
       let agreementSalaryExtraInfo: Record<string, string | number> = {};
       let isParentalNoticeHidden = false;
 
@@ -243,10 +249,12 @@ const createResultStore: StoreSlice<
           getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
+
         const agreementRequiredSeniority = getAgreementRequiredSeniority(
           getSupportedAgreement(agreement.num),
           get as StoreApi<MainStore>["getState"]
         );
+
         publicodesSituationConventionnel = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
             agreement.num,
@@ -254,6 +262,7 @@ const createResultStore: StoreSlice<
             agreementRefSalary,
             agreementRequiredSeniority.value,
             get().ancienneteData.input.dateNotification!,
+            get().ancienneteData.input.dateEntree!,
             isLicenciementInaptitude,
             longTermDisability,
             { ...infos, ...agreementSalaryExtraInfo }
@@ -269,11 +278,12 @@ const createResultStore: StoreSlice<
 
         agreementNotifications = publicodes.getNotifications();
 
-        agreementHasNoLegalIndemnity = hasNoLegalIndemnity(agreement.num);
-
-        isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
-          agreement.num
+        agreementHasNoLegalIndemnity = hasNoLegalIndemnity(
+          agreement.num,
+          agreementInformations
         );
+
+        agreementHasNoBetterAllowance = hasNoBetterAllowance(agreement.num);
 
         if (
           agreementHasNoLegalIndemnity ||
@@ -285,6 +295,7 @@ const createResultStore: StoreSlice<
         ) {
           isAgreementBetter = true;
         }
+
         if (
           isAgreementSameDetection(
             publicodesSituationLegal,
@@ -294,6 +305,11 @@ const createResultStore: StoreSlice<
         ) {
           isAgreementEqualToLegal = true;
         }
+
+        isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
+          isAgreementBetter,
+          agreement.num
+        );
       }
 
       if (isAgreementBetter || isAgreementEqualToLegal) {
@@ -326,6 +342,8 @@ const createResultStore: StoreSlice<
           state.resultData.input.notifications = notifications;
           state.resultData.input.agreementHasNoLegalIndemnity =
             agreementHasNoLegalIndemnity;
+          state.resultData.input.agreementHasNoBetterAllowance =
+            agreementHasNoBetterAllowance;
           state.resultData.input.isParentalNoticeHidden =
             isParentalNoticeHidden;
         })

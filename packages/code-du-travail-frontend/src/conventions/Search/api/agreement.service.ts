@@ -1,7 +1,7 @@
 import debounce from "debounce-promise";
 import { SITE_URL } from "../../../config";
 
-import { Agreement } from "./type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 const formatCCn = ({ num, id, slug, title, shortTitle, highlight }) => ({
   ...(highlight ? { highlight } : {}),
@@ -32,4 +32,4 @@ const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
 
 const searchAgreement = debounce(apiIdcc, 300);
 
-export { searchAgreement };
+export { searchAgreement, apiIdcc };

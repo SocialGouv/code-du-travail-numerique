@@ -2,7 +2,7 @@ import { formatIdcc, PublicodesSimulator } from "@socialgouv/modeles-social";
 import React from "react";
 
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import { RadioQuestion } from "../../../Components";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";
 import ShowAlert from "../../../common/Agreement/components/ShowAlert";
@@ -14,7 +14,7 @@ type Props = {
   supportedAgreements: AgreementSupportInfo[];
   error?: string;
   alertAgreementNotSupported?: (string) => JSX.Element;
-  simulator: PublicodesSimulator;
+  simulator: PublicodesSimulator | "QUESTIONNAIRE";
 };
 
 const ShowAgreements = ({
@@ -41,7 +41,7 @@ const ShowAgreements = ({
           id: `enterprise-agreement-${agreement.num}`,
         }))}
         name="agreement"
-        label={`${enterprise.conventions.length} conventions collectives ont été trouvées pour cette entreprise, sélectionnez la vôtre :`}
+        label={`${enterprise.conventions.length} conventions collectives ont été trouvées pour cette entreprise, sélectionnez la vôtre&nbsp:`}
         selectedOption={agreement?.num.toString()}
         onChangeSelectedOption={onAgreementChange}
         error={error}

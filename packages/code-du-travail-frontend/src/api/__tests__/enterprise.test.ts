@@ -203,11 +203,13 @@ describe("Test enterprise endpoint", () => {
       "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
     );
 
-    expect(
-      response.body.entreprises[0].conventions.find(
-        (agreement) => agreement.num === 99999
-      ).slug
-    ).toBeUndefined();
+    const agreementNoSlug = response.body.entreprises[0].conventions.find(
+      (agreement) => agreement.num === 99999
+    );
+    expect(agreementNoSlug.slug).toBeUndefined();
+    expect(agreementNoSlug.shortTitle).toEqual(
+      "Convention collective non reconnue"
+    );
   });
 
   test("Call retrieving agreement not in elastic from an enterprise", async () => {
@@ -232,6 +234,8 @@ describe("Test enterprise endpoint", () => {
           conventions: [
             {
               num: 123456,
+              shortTitle: "Convention collective non reconnue",
+              id: 123456,
             },
           ],
         },

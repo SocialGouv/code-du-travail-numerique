@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { InputRadio, Paragraph } from "@socialgouv/cdtn-ui";
+import { InputRadio } from "@socialgouv/cdtn-ui";
 import { DossierLicenciementContext, useStore } from "../../store";
 import { trackClickHelp } from "../../tracking";
 import { QuestionnaireResponse } from "../../type";

@@ -2,7 +2,6 @@ import { FormApi } from "final-form";
 import React, { useCallback, useEffect, useState } from "react";
 
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "../../../conventions/Search/api/type";
 import { useLocalStorage } from "../../../lib/useLocalStorage";
 import { OnUserAction } from "../../ConventionCollective/types";
 import { AgreementRoute, FormContent } from "../type/WizardType";
@@ -15,6 +14,9 @@ import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
 import { SmallText } from "../stepStyles";
 import { ErrorField } from "../ErrorField";
 import { STORAGE_KEY_AGREEMENT } from "../../types";
+import { NoEnterprise } from "../../CommonSteps/Agreement/components";
+import { getCc3239Informations } from "../../api";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 export type Props = {
   title: string;
@@ -41,6 +43,7 @@ const SelectAgreement = ({
     STORAGE_KEY_AGREEMENT,
     defaultSelectedAgreement
   );
+  const [hasSelectedEnterprise, setHasSelectedEnterprise] = useState(false);
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
     form.getState().values.ccn?.enterprise
   );
@@ -92,6 +95,14 @@ const SelectAgreement = ({
         break;
       }
     }
+    initNoEnterprise();
+  };
+
+  const initNoEnterprise = () => {
+    if (values.hasNoEnterpriseSelected) {
+      onSelectAgreement(null);
+    }
+    form.change("hasNoEnterpriseSelected", undefined);
   };
 
   return (
@@ -112,13 +123,34 @@ const SelectAgreement = ({
         />
       )}
       {values.ccn?.route === "enterprise" && (
-        <EnterpriseSearch
-          selectedEnterprise={enterprise}
-          onSelectAgreement={onSelectAgreement}
-          supportedAgreements={supportedAgreements}
-          onUserAction={onUserAction}
-          alertAgreementNotSupported={alertAgreementNotSupported}
-        />
+        <>
+          <EnterpriseSearch
+            selectedEnterprise={enterprise}
+            onSelectAgreement={onSelectAgreement}
+            supportedAgreements={supportedAgreements}
+            onUserAction={onUserAction}
+            alertAgreementNotSupported={alertAgreementNotSupported}
+            isDisabled={storedConvention?.num === 3239}
+            setHasSelectedEnterprise={(hasSelectedEnterprise) => {
+              setHasSelectedEnterprise(hasSelectedEnterprise);
+            }}
+          />
+          {!hasSelectedEnterprise && !enterprise && (
+            <NoEnterprise
+              isCheckboxChecked={!!values.hasNoEnterpriseSelected}
+              setIsCheckboxChecked={() => {
+                form.change(
+                  "hasNoEnterpriseSelected",
+                  !values.hasNoEnterpriseSelected
+                );
+              }}
+              onCheckboxChange={async (isCheckboxChecked) => {
+                const cc3239 = await getCc3239Informations();
+                onSelectAgreement(isCheckboxChecked ? cc3239 : null);
+              }}
+            />
+          )}
+        </>
       )}
       <ErrorField
         name="agreementMissing"

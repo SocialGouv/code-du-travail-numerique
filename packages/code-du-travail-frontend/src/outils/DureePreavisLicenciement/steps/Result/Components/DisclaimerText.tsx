@@ -1,6 +1,6 @@
 import React from "react";
 
-import type { Agreement } from "../../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import CCSearchInfo from "../../../../common/CCSearchInfo";
 import { isNotNearZero } from "../../../../common/utils";
 import { LicenciementSituation } from "../utils";

@@ -26,7 +26,12 @@ const processAnalyticEvents = (
       const isTreated = getSupportedCC().find(
         (agreement) => agreement.idcc === state.formValues.ccn?.selected?.num
       );
-      pushAgreementEvents(state.title, state.formValues.ccn, !!isTreated);
+      pushAgreementEvents(
+        state.title,
+        state.formValues.ccn,
+        !!isTreated,
+        state.formValues.hasNoEnterpriseSelected ? true : false
+      );
       break;
     case oldStep.name === StepName.Seniority &&
       newStep.name === StepName.Result:

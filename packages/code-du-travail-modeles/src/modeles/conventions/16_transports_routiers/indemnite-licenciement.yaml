@@ -141,7 +141,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
         - "A2 : Ancienneté dans les catégories Techniciens et agents de maîtrise et Employés": contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . ancienneté avant cadre
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
-contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . minoration A3:
+contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . minoration A3 :
   valeur: age - 60
   unité: an
 

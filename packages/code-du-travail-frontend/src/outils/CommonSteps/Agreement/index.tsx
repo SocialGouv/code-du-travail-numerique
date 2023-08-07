@@ -1,7 +1,6 @@
 import React from "react";
 import { RadioQuestion } from "../../Components";
-import { AgreementSearch, EnterpriseSearch } from "./components";
-import { Agreement } from "../../../conventions/Search/api/type";
+import { AgreementSearch, EnterpriseSearch, NoEnterprise } from "./components";
 import {
   AgreementSupportInfo,
   OnSelectAgreementFn,
@@ -12,6 +11,8 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
 import { AgreementSearchValue } from "./store";
 import { AgreementRoute } from "../../common/type/WizardType";
+import { getCc3239Informations } from "../../api";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 type Props = {
   selectedRoute?: AgreementRoute;
@@ -24,6 +25,8 @@ type Props = {
   onAgreementSearch: (value: AgreementSearchValue) => void;
   onEnterpriseSearch: (value: AgreementSearchValue) => void;
   simulator: PublicodesSimulator;
+  hasNoEnterpriseSelected: boolean;
+  setHasNoEnterpriseSelected: (boolean) => void;
   error?: {
     route?: string;
     agreement?: string;
@@ -43,6 +46,8 @@ function AgreementStep({
   onInitAgreementPage,
   onEnterpriseSearch,
   onAgreementSearch,
+  hasNoEnterpriseSelected,
+  setHasNoEnterpriseSelected,
 }: Props): JSX.Element {
   React.useEffect(() => {
     onInitAgreementPage();
@@ -93,7 +98,7 @@ function AgreementStep({
             supportedAgreements={supportedAgreements}
             selectedAgreement={selectedAgreement}
             onSelectAgreement={onAgreementChange}
-            onUserAction={(action, value: AgreementSearchValue) =>
+            onUserAction={(_action, value: AgreementSearchValue) =>
               onAgreementSearch(value)
             }
             alertAgreementNotSupported={undefined}
@@ -113,7 +118,18 @@ function AgreementStep({
               onEnterpriseSearch(value)
             }
             simulator={simulator}
+            isDisabled={selectedAgreement?.num === 3239}
           />
+          {!selectedEnterprise && (
+            <NoEnterprise
+              isCheckboxChecked={hasNoEnterpriseSelected}
+              setIsCheckboxChecked={setHasNoEnterpriseSelected}
+              onCheckboxChange={async (isCheckboxChecked) => {
+                const cc3239 = await getCc3239Informations();
+                onAgreementChange(isCheckboxChecked ? cc3239 : null);
+              }}
+            />
+          )}
           {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
         </>
       )}

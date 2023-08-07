@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { Button } from "../Button/index.js";
 import { Burger as BurgerIcon } from "../icons/index.js";
 import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
-import { box, breakpoints, spacings } from "../theme.js";
+import { box, breakpoints, spacings } from "../theme";
 
 const maxTabletWidth = parseInt(breakpoints.tablet.replace("px", ""), 10);
 

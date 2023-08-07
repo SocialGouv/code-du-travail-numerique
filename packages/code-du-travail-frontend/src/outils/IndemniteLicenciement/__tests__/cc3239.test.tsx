@@ -25,14 +25,7 @@ Storage.prototype.getItem = jest.fn(
 
 describe("Indemnité licenciement - CC 3239", () => {
   beforeEach(async () => {
-    render(
-      <CalculateurIndemnite
-        icon={""}
-        title={""}
-        displayTitle={""}
-        slug={"indemnite-licenciement"}
-      />
-    );
+    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
     fireEvent.click(ui.introduction.startButton.get());
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.fauteGrave.non.get());

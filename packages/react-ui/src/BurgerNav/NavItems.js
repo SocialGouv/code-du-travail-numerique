@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Button } from "../Button";
-import { box, breakpoints, fonts, spacings } from "../theme.js";
+import { box, breakpoints, fonts, spacings } from "../theme";
 
 export const BurgerNavButton = styled(Button).attrs(() => ({
   variant: "navLink",

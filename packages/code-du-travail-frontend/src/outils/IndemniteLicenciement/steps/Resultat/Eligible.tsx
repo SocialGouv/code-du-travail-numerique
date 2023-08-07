@@ -10,6 +10,7 @@ import {
   useIndemniteLicenciementStore,
 } from "../../store";
 import { getResultMessage } from "../../agreements/ui-customizations";
+import { getForMoreInfoMessage } from "../../agreements/ui-customizations/messages";
 import {
   DecryptResult,
   FilledElements,
@@ -46,6 +47,7 @@ export default function Eligible() {
     hasSameSalary,
     notifications,
     agreementHasNoLegalIndemnity,
+    agreementHasNoBetterAllowance,
     isStepSalaryHidden,
     infoWarning,
     dateArretTravail,
@@ -82,6 +84,8 @@ export default function Eligible() {
     notifications: state.resultData.input.notifications,
     agreementHasNoLegalIndemnity:
       state.resultData.input.agreementHasNoLegalIndemnity,
+    agreementHasNoBetterAllowance:
+      state.resultData.input.agreementHasNoBetterAllowance,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
     infoWarning: state.resultData.input.infoWarning,
     dateArretTravail: state.contratTravailData.input.dateArretTravail,
@@ -162,7 +166,7 @@ export default function Eligible() {
           }
         />
       </ShowDetails>
-      {!agreementHasNoLegalIndemnity && infoWarning && (
+      {!agreementHasNoBetterAllowance && infoWarning && (
         <Disclaimer
           title={infoWarning.title}
           dataTestId="eligible-cc-disclaimer"
@@ -170,7 +174,9 @@ export default function Eligible() {
           <p>{infoWarning.message}</p>
         </Disclaimer>
       )}
-      <ForMoreInfo />
+      <ForMoreInfo
+        message={getForMoreInfoMessage(isAgreementBetter, agreement?.num)}
+      />
     </>
   );
 }

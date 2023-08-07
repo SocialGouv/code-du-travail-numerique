@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Paragraph, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "../../../../conventions/Search/api/type";
+import { Agreement } from "@socialgouv/cdtn-utils";
 import { SearchParams } from "../../../ConventionCollective/common/NavContext";
 import { TrackingProps } from "../../../ConventionCollective/types";
 import styled from "styled-components";
@@ -21,7 +21,8 @@ export type Props = {
   selectedAgreement?: Agreement;
   onSelectAgreement: OnSelectAgreementFn;
   alertAgreementNotSupported?: (string) => JSX.Element;
-  simulator: PublicodesSimulator;
+  simulator: PublicodesSimulator | "QUESTIONNAIRE";
+  isDisabled?: boolean;
 } & TrackingProps;
 
 const EnterpriseSearch = ({
@@ -32,9 +33,11 @@ const EnterpriseSearch = ({
   onUserAction,
   alertAgreementNotSupported,
   simulator,
+  isDisabled,
 }: Props): JSX.Element => {
-  const [enterprise, setEnterprise] =
-    useState<Enterprise | undefined>(selectedEnterprise);
+  const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
+    selectedEnterprise
+  );
   const [searchParams, setSearchParams] = useState<SearchParams>({
     address: "",
     query: "",
@@ -82,13 +85,19 @@ const EnterpriseSearch = ({
   };
   return (
     <Section>
-      <Paragraph noMargin fontWeight="600" fontSize="default">
+      <Paragraph
+        noMargin
+        fontWeight="600"
+        fontSize="default"
+        disabled={isDisabled}
+      >
         Précisez et sélectionnez votre entreprise
       </Paragraph>
       <SearchEnterpriseInput
         searchParams={searchParams}
         onUserAction={onUserAction}
         onSearchParamsChange={setSearchParams}
+        isDisabled={isDisabled}
         handleEnterpriseSelection={handleEnterpriseSelection}
       />
     </Section>

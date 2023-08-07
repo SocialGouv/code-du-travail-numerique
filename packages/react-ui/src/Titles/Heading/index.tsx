@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import { Stripe } from "../../Stripe";
-import { breakpoints, fonts, spacings } from "../../theme.js";
+import { breakpoints, fonts, spacings } from "../../theme";
 
 type Props = {
   children: React.ReactNode;
@@ -16,6 +16,7 @@ type Props = {
   ariaLevel?: number | string;
   id?: string;
   dataTestid?: string;
+  className?: string;
 };
 
 export const Heading = (props: Props) => (
@@ -29,6 +30,7 @@ export const Heading = (props: Props) => (
     aria-level={props.ariaLevel}
     id={props.id}
     data-testid={props.dataTestid ?? "heading"}
+    className={props.className}
   >
     {props.stripe !== "none" && (
       <Stripe

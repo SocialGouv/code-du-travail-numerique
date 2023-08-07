@@ -77,7 +77,7 @@ const CookiePolicy = (): JSX.Element => {
               l’Informatique et des Libertés pour toute réclamation à{" "}
               <a
                 title="Adresser une réclamation (plainte) à la CNIL"
-                href="https://www.cnil.fr/fr/cnil-direct/question/adresser-une-reclamation-plainte-la-cnil-quelles-conditions-et-comment"
+                href="https://www.cnil.fr/fr/cnil-direct/question/844"
               >
                 l’adresse suivante
               </a>

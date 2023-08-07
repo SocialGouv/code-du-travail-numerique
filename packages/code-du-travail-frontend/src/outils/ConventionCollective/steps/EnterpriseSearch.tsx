@@ -11,6 +11,7 @@ import {
   SearchParams,
 } from "../../common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
 import { SectionTitle } from "../../common/stepStyles";
+import { NoEnterprise } from "../common/NoEnterprise";
 
 type EnterpriseSearchStepProps = {
   onBackClick?: () => void;
@@ -20,7 +21,7 @@ type EnterpriseSearchStepProps = {
   ) => void;
   searchParams?: SearchParams;
   onSearchParamsChange: (params: SearchParams) => void;
-  hidePreviousButton?: boolean;
+  widgetMode: boolean;
 } & TrackingProps;
 
 const EnterpriseSearchStep = ({
@@ -29,7 +30,7 @@ const EnterpriseSearchStep = ({
   searchParams,
   onSearchParamsChange,
   onUserAction,
-  hidePreviousButton,
+  widgetMode,
 }: EnterpriseSearchStepProps): JSX.Element => {
   return (
     <>
@@ -43,8 +44,9 @@ const EnterpriseSearchStep = ({
             handleEnterpriseSelection={handleEnterpriseSelection}
           />
         </form>
+        <NoEnterprise widgetMode={widgetMode} />
       </Section>
-      {!hidePreviousButton && (
+      {!widgetMode && (
         <Link
           href={`/${SOURCES.TOOLS}/convention-collective`}
           passHref

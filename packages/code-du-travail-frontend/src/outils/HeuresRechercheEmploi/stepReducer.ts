@@ -34,7 +34,12 @@ export const initialState = {
         const isTreated = getSupportedCC(data.situations).find(
           (agreement) => agreement.idcc === values.ccn?.selected?.num
         );
-        pushAgreementEvents(title, values.ccn, !!isTreated);
+        pushAgreementEvents(
+          title,
+          values.ccn,
+          !!isTreated,
+          values.hasNoEnterpriseSelected ? true : false
+        );
       },
     },
     {

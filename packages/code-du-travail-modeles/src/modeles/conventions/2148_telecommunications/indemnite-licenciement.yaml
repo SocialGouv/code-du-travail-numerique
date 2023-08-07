@@ -42,17 +42,17 @@ contrat salarié . convention collective . télécommunications . facteur entre 
   unité: €
 
 contrat salarié . convention collective . télécommunications . base:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
   somme:
     - facteur moins de 9 ans révolu
     - facteur entre 9 ans révolu et 25 ans révolu
   unité: €
   cdtn:
     formule:
-      formula: (3% * Sref * A1) + (4% * Sref * A2)
+      formula: (3% * Sref * A1)[ + (4% * Sref * A2)]
       explanations:
-        - "A1: Année complète d'ancienneté, décomptée à partir de la date d'entrée dans l'entreprise et jusqu'à 9 ans d'ancienneté révolus": contrat salarié . convention collective . télécommunications . jusqu'à 9 ans révolu
-        - "A2: Année entière d'ancienneté pour la tranche comprise entre 10 et 25 ans révolus": contrat salarié . convention collective . télécommunications . entre 9 ans révolu et 25 ans révolu
+        - "A1 : Année complète d'ancienneté, décomptée à partir de la date d'entrée dans l'entreprise et jusqu'à 9 ans d'ancienneté révolus": contrat salarié . convention collective . télécommunications . jusqu'à 9 ans révolu
+        - "A2 : Année entière d'ancienneté pour la tranche comprise entre 10 et 25 ans révolus": contrat salarié . convention collective . télécommunications . entre 9 ans révolu et 25 ans révolu
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . télécommunications . majoration: 0 €
@@ -60,8 +60,8 @@ contrat salarié . convention collective . télécommunications . majoration: 0 
 contrat salarié . convention collective . télécommunications . majoration . plus de 10 ans d'ancienneté:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 20 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 10 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 20 an
       - age >= 50 an
   remplace: majoration
   produit:
@@ -74,7 +74,7 @@ contrat salarié . convention collective . télécommunications . majoration . p
 contrat salarié . convention collective . télécommunications . majoration . plus de 20 ans d'ancienneté:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 20 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 20 an
       - age >= 50 an
   remplace: majoration
   produit:

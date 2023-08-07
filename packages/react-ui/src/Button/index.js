@@ -4,7 +4,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import { DirectionRight } from "../icons/index.js";
-import { animations, box, breakpoints, fonts, spacings } from "../theme.js";
+import { animations, box, breakpoints, fonts, spacings } from "../theme";
 
 export const StyledButton = styled.button`
   display: inline-flex;
@@ -84,6 +84,27 @@ export const StyledButton = styled.button`
         }
       `;
     }
+    if (variant === "light") {
+      return css`
+        padding: 0;
+        color: ${theme.paragraph};
+        font-weight: normal;
+        font-size: ${fonts.sizes.default};
+        line-height: ${fonts.lineHeight};
+        vertical-align: baseline;
+        text-decoration: none;
+        text-align: left;
+        background-color: rgba(
+          ${theme.secondary},
+          0.26
+        )};
+        border: none;
+        border-radius: 0;
+        overflow: visible;
+        transition: color ${animations.transitionTiming} linear,
+          text-decoration ${animations.transitionTiming} linear;
+      `;
+    }
 
     let height = "5.2rem";
     let backgroundColor = theme[variant];
@@ -128,7 +149,7 @@ export const StyledButton = styled.button`
       opacity = "0.6";
     }
 
-    if (variant === "primary") {
+    if (variant === "primary" || variant === "light") {
       boxShadow = `${largeShadow} ${rgba(
         theme.primary,
         0.26
@@ -212,6 +233,7 @@ Button.propTypes = {
     "naked",
     "primary",
     "secondary",
+    "light",
   ]),
 };
 

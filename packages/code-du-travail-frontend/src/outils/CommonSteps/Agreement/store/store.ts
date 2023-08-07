@@ -3,17 +3,12 @@ import produce from "immer";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { validateStep } from "./validator";
 
-import {
-  CommonAgreementStoreData,
-  CommonAgreementStoreInput,
-  CommonAgreementStoreSlice,
-} from "./types";
+import { CommonAgreementStoreData, CommonAgreementStoreSlice } from "./types";
 import { STORAGE_KEY_AGREEMENT, StoreSlicePublicode } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
-import { Agreement } from "../../../../conventions/Search/api/type";
 import { loadPublicodes } from "../../../api";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
-import { supportedCcn } from "@socialgouv/modeles-social";
+import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
 import {
   MatomoBaseEvent,
   MatomoSearchAgreementCategory,
@@ -21,10 +16,15 @@ import {
 import { pushAgreementEvents } from "../../../common/Agreement";
 import { AgreementRoute } from "../../../common/type/WizardType";
 import { isCcFullySupportedIndemniteLicenciement } from "../../../IndemniteLicenciement/common";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
-const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
+const initialState: Omit<
+  CommonAgreementStoreData<PublicodesSimulator>,
+  "publicodes"
+> = {
   input: {
     isAgreementSupportedIndemniteLicenciement: false,
+    hasNoEnterpriseSelected: false,
   },
   error: {},
   hasBeenSubmit: false,
@@ -32,10 +32,10 @@ const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
 };
 
 const createCommonAgreementStore: StoreSlicePublicode<
-  CommonAgreementStoreSlice,
+  CommonAgreementStoreSlice<PublicodesSimulator>,
   CommonInformationsStoreSlice
-> = (set, get, { slug, toolName }) => ({
-  agreementData: { ...initialState, publicodes: loadPublicodes(slug) },
+> = (set, get, { simulatorName, toolName }) => ({
+  agreementData: { ...initialState, publicodes: loadPublicodes(simulatorName) },
   agreementFunction: {
     onInitAgreementPage: () => {
       try {
@@ -55,11 +55,16 @@ const createCommonAgreementStore: StoreSlicePublicode<
             const idcc = parsedData?.num?.toString();
             if (idcc) {
               set(
-                produce((state: CommonAgreementStoreSlice) => {
-                  state.agreementData.publicodes = loadPublicodes(slug, idcc);
-                  state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-                    isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
-                })
+                produce(
+                  (state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+                    state.agreementData.publicodes = loadPublicodes(
+                      simulatorName,
+                      idcc
+                    );
+                    state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
+                      isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
+                  }
+                )
               );
               get().informationsFunction.generatePublicodesQuestions();
             }
@@ -74,9 +79,10 @@ const createCommonAgreementStore: StoreSlicePublicode<
         window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
       }
       set(
-        produce((state: CommonAgreementStoreSlice) => {
+        produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
           state.agreementData.input.enterprise = undefined;
           state.agreementData.input.agreement = undefined;
+          state.agreementData.input.hasNoEnterpriseSelected = false;
         })
       );
       applyGenericValidation(get, set, "route", value);
@@ -84,23 +90,33 @@ const createCommonAgreementStore: StoreSlicePublicode<
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
-      if (window.localStorage)
-        window.localStorage.setItem(
-          STORAGE_KEY_AGREEMENT,
-          JSON.stringify(agreement)
-        );
+      window.localStorage.setItem(
+        STORAGE_KEY_AGREEMENT,
+        JSON.stringify(agreement)
+      );
       applyGenericValidation(get, set, "enterprise", enterprise);
       const idcc = agreement?.num?.toString();
       if (idcc) {
         set(
-          produce((state: CommonAgreementStoreSlice) => {
-            state.agreementData.publicodes = loadPublicodes(slug, idcc);
+          produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+            state.agreementData.publicodes = loadPublicodes(
+              simulatorName,
+              idcc
+            );
             state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
               isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
           })
         );
-        get().informationsFunction.generatePublicodesQuestions();
       }
+      get().informationsFunction.generatePublicodesQuestions();
+    },
+    setHasNoEnterpriseSelected: (value) => {
+      applyGenericValidation(
+        get,
+        set,
+        "hasNoEnterpriseSelected",
+        value ? value : false
+      );
     },
     onNextStep: () => {
       const input = get().agreementData.input;
@@ -118,11 +134,12 @@ const createCommonAgreementStore: StoreSlicePublicode<
             selected: agreement,
             enterprise,
           },
-          isTreated
+          isTreated,
+          input.hasNoEnterpriseSelected
         );
       }
       set(
-        produce((state: CommonAgreementStoreSlice) => {
+        produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
           state.agreementData.hasBeenSubmit = !isValid;
           state.agreementData.isStepValid = isValid;
           state.agreementData.error = errorState;
@@ -150,8 +167,8 @@ const createCommonAgreementStore: StoreSlicePublicode<
 });
 
 const applyGenericValidation = (
-  get: StoreApi<CommonAgreementStoreSlice>["getState"],
-  set: StoreApi<CommonAgreementStoreSlice>["setState"],
+  get: StoreApi<CommonAgreementStoreSlice<PublicodesSimulator>>["getState"],
+  set: StoreApi<CommonAgreementStoreSlice<PublicodesSimulator>>["setState"],
   paramName: any,
   value: any
 ) => {
@@ -161,7 +178,7 @@ const applyGenericValidation = (
     });
     const { isValid, errorState } = validateStep(nextState.agreementData.input);
     set(
-      produce((state: CommonAgreementStoreSlice) => {
+      produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
         state.agreementData.error = errorState;
         state.agreementData.isStepValid = isValid;
         state.agreementData.input[paramName] = value;
@@ -169,7 +186,7 @@ const applyGenericValidation = (
     );
   } else {
     set(
-      produce((state: CommonAgreementStoreSlice) => {
+      produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
         state.agreementData.input[paramName] = value;
       })
     );
