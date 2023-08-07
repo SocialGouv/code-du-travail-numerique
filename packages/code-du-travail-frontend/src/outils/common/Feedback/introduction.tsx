@@ -18,7 +18,6 @@ export const Introduction = ({ onClick }: IntroductionProps): JSX.Element => {
 
 const StyledHeading = styled(Heading)`
   text-align: center;
-  margin-top: 16px;
 `;
 
 const StyledButton = styled(Button)`
