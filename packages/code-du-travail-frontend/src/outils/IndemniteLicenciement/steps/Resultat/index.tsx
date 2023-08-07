@@ -9,18 +9,23 @@ import { ErrorPublicodes } from "./components";
 
 const StepResult = () => {
   const store = useContext(IndemniteLicenciementContext);
-  const { isEligible, init, errorPublicodes } = useIndemniteLicenciementStore(
-    store,
-    (state) => ({
+  const { isEligible, init, errorPublicodes, getPublicodesResult } =
+    useIndemniteLicenciementStore(store, (state) => ({
       isEligible: state.resultData.input.isEligible,
       init: state.resultFunction.init,
       errorPublicodes: state.resultData.error.errorPublicodes,
-    })
-  );
+      getPublicodesResult: state.resultFunction.getPublicodesResult,
+    }));
 
   useEffect(() => {
     init();
   }, []);
+
+  useEffect(() => {
+    if (isEligible) {
+      getPublicodesResult();
+    }
+  }, [isEligible]);
 
   if (errorPublicodes) {
     return <ErrorPublicodes />;
