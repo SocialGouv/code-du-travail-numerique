@@ -10,7 +10,7 @@ type Props = {
   currentAgreement: Agreement;
   supportedAgreements: AgreementSupportInfo[];
   alertAgreementNotSupported?: (string) => JSX.Element;
-  simulator?: PublicodesSimulator;
+  simulator?: PublicodesSimulator | "QUESTIONNAIRE";
 };
 
 const ShowAlert = ({
@@ -26,14 +26,16 @@ const ShowAlert = ({
     return (
       <>
         <StyledAlert variant="primary">
-          <Paragraph
-            variant="primary"
-            fontSize="hsmall"
-            fontWeight="700"
-            noMargin
-          >
-            Convention collective non traitée
-          </Paragraph>
+          {simulator !== "QUESTIONNAIRE" && (
+            <Paragraph
+              variant="primary"
+              fontSize="hsmall"
+              fontWeight="700"
+              noMargin
+            >
+              Convention collective non traitée
+            </Paragraph>
+          )}
           {alertAgreementNotSupported ? (
             alertAgreementNotSupported(currentAgreement.url)
           ) : (
@@ -93,10 +95,12 @@ const ShowAlert = ({
     );
   }
 
-  return (
+  return simulator !== "QUESTIONNAIRE" ? (
     <StyledParagraph>
       Cliquez sur Suivant pour poursuivre la simulation.
     </StyledParagraph>
+  ) : (
+    <></>
   );
 };
 

@@ -17,6 +17,7 @@ describe("<ModelesDeCourrier />", () => {
       type: "the type",
       title: "Courrier Epistolaire",
       relatedItems: [],
+      slug: "courrier-epistolaire",
     };
     const { container } = render(<ModelesDeCourriers {...data} />);
     expect(container).toMatchSnapshot();

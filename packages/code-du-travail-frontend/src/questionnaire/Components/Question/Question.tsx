@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { DossierLicenciementContext, useStore } from "../../store";
 import { Response } from "./Response";
 import { ShowInfo } from "./ShowInfo";
-import { Fieldset, Legend, Text, Paragraph } from "@socialgouv/cdtn-ui";
+import { Fieldset, Legend, Text } from "@socialgouv/cdtn-ui";
 import { InfoBulle } from "../../../outils/common/InfoBulle";
 import { trackClickHelp } from "../../tracking";
 import React, { useContext } from "react";

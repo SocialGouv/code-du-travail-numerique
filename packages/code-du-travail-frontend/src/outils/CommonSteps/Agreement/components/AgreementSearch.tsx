@@ -19,7 +19,7 @@ export type Props = {
   selectedAgreement?: Agreement;
   onSelectAgreement: (agreement: Agreement | null) => void;
   alertAgreementNotSupported?: (string) => JSX.Element;
-  simulator: PublicodesSimulator;
+  simulator: PublicodesSimulator | "QUESTIONNAIRE";
 } & TrackingProps;
 
 const AgreementSearch = ({

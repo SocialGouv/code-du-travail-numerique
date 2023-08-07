@@ -1,4 +1,4 @@
-import { InputRadio, Fieldset } from "@socialgouv/cdtn-ui";
+import { Fieldset, InputRadio } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 import Html from "../../common/Html";
@@ -46,7 +46,7 @@ export default function RadioQuestion({
   return (
     <>
       <StyledFieldset>
-        <Question required={showRequired} tooltip={tooltip}>
+        <Question required={showRequired} tooltip={tooltip} as="p">
           <Html as="span">{label}</Html>
         </Question>
         {subLabel && <SubLabel>{subLabel}</SubLabel>}

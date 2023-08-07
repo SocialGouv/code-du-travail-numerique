@@ -16,6 +16,7 @@ import { TrackingProvider, useTrackingContext } from "./common/TrackingContext";
 import Steps from "./steps";
 import handleTrackEvent from "./tracking/HandleTrackEvent";
 import { OnUserAction, UserAction } from "./types";
+import { MatomoSearchAgreementCategory } from "../../lib";
 
 interface Props {
   icon: string;
@@ -110,7 +111,7 @@ function AgreementSearchTool({
           onBackClick={clearSearchType}
           onSelectAgreement={(agreement) => {
             trackEvent(
-              "cc_select_p1",
+              MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
               title,
               `idcc${agreement.num.toString()}`,
               uuid
