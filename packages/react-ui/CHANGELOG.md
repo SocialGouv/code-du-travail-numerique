@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.106.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.105.1...v4.106.0) (2023-08-09)
+
+### Features
+
+- 5271 indemnité de licenciement créer un questionnaire spécifique ([#5287](https://github.com/SocialGouv/code-du-travail-numerique/issues/5287)) ([969c330](https://github.com/SocialGouv/code-du-travail-numerique/commit/969c330a99e7f027775578ffbbc6e17cdd58fa92))
+- **accessibilité:** mise à jour de la page accessibilité ([#5295](https://github.com/SocialGouv/code-du-travail-numerique/issues/5295)) ([399b2e7](https://github.com/SocialGouv/code-du-travail-numerique/commit/399b2e7d6501f96b40f1bca38c245e0eab367658))
+
 ## [4.105.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.105.0...v4.105.1) (2023-07-19)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui

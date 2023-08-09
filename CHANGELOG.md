@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.106.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.105.1...v4.106.0) (2023-08-09)
+
+### Bug Fixes
+
+- **affichage des cc:** quand une cc est inconnue sur une entreprise ([#5284](https://github.com/SocialGouv/code-du-travail-numerique/issues/5284)) ([99aa96c](https://github.com/SocialGouv/code-du-travail-numerique/commit/99aa96ccf6799b5b419013725093fcee12e031e9))
+- **e2e:** change date for indemnite-licenciement ([9f55dde](https://github.com/SocialGouv/code-du-travail-numerique/commit/9f55dde1808c76a91973fc05c9e7348e60562c79))
+- **events:** refactor `pushAgreements` ([#5302](https://github.com/SocialGouv/code-du-travail-numerique/issues/5302)) ([7119a85](https://github.com/SocialGouv/code-du-travail-numerique/commit/7119a85d8aad97d00b3fe3b076d1ce97b459a3e1))
+- **indemite-licenciement:** modification de la margin du questionnaire a la premiere etape ([3f74e61](https://github.com/SocialGouv/code-du-travail-numerique/commit/3f74e61e4935eb6c1c5c793d26eea4e8a2ed5097))
+- **indemnite-licenciement:** cc 2148 majoration ([#5283](https://github.com/SocialGouv/code-du-travail-numerique/issues/5283)) ([6078aaa](https://github.com/SocialGouv/code-du-travail-numerique/commit/6078aaa9e19917ec37e511ad7fb509b4294808ee))
+- **modeles:** modification des disclaimers et des titres ([#5299](https://github.com/SocialGouv/code-du-travail-numerique/issues/5299)) ([61f06b3](https://github.com/SocialGouv/code-du-travail-numerique/commit/61f06b3fc70ce574c5f6abaeac18969cd22f07da))
+
+### Features
+
+- 5271 indemnité de licenciement créer un questionnaire spécifique ([#5287](https://github.com/SocialGouv/code-du-travail-numerique/issues/5287)) ([969c330](https://github.com/SocialGouv/code-du-travail-numerique/commit/969c330a99e7f027775578ffbbc6e17cdd58fa92))
+- **accessibilité:** mise à jour de la page accessibilité ([#5295](https://github.com/SocialGouv/code-du-travail-numerique/issues/5295)) ([399b2e7](https://github.com/SocialGouv/code-du-travail-numerique/commit/399b2e7d6501f96b40f1bca38c245e0eab367658))
+- add redirection ([#5307](https://github.com/SocialGouv/code-du-travail-numerique/issues/5307)) ([a0941c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/a0941c8ba87d26257f8ffdfcc690f577a1202f16))
+- **contributions:** nouvelle version pages personnalisables ([#5280](https://github.com/SocialGouv/code-du-travail-numerique/issues/5280)) ([1ba1342](https://github.com/SocialGouv/code-du-travail-numerique/commit/1ba134214330a469588e4ad5bd2b7bf62ff3cd00))
+- indemnite licenciement 176 ([#5234](https://github.com/SocialGouv/code-du-travail-numerique/issues/5234)) ([d803a58](https://github.com/SocialGouv/code-du-travail-numerique/commit/d803a582db59c9e644db94b9c6c4afbd1624da9e))
+- **indemnite-licenciement:** activation de nouvelles CC ([#5300](https://github.com/SocialGouv/code-du-travail-numerique/issues/5300)) ([8c513d5](https://github.com/SocialGouv/code-du-travail-numerique/commit/8c513d56a7562ddb4a48e4c6bba356353181e840))
+
 ## [4.105.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.105.0...v4.105.1) (2023-07-19)
 
 ### Bug Fixes
