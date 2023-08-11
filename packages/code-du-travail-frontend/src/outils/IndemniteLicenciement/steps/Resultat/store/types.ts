@@ -28,7 +28,9 @@ export type ResultStoreInput = {
   isParentalNoticeHidden: boolean;
 };
 
-export type ResultStoreError = {};
+export type ResultStoreError = {
+  errorPublicodes: boolean;
+};
 
 export type ResultStoreData = StepData<ResultStoreInput, ResultStoreError>;
 
