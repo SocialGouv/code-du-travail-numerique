@@ -336,7 +336,10 @@ const createResultStore: StoreSlice<
 
       if (isAgreementBetter) {
         notifications = agreementNotifications?.filter(
-          (item) => item.show === "conventionnel" || item.show === "default"
+          (item) =>
+            item.show === "conventionnel" ||
+            item.show === "légal et conventionnel" ||
+            item.show === "default"
         );
       } else if (isAgreementEqualToLegal) {
         notifications = agreementNotifications?.filter(
