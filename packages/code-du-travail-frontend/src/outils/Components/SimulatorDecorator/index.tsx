@@ -1,5 +1,5 @@
 import { Fieldset, Legend, theme, Wrapper } from "@socialgouv/cdtn-ui";
-import React from "react";
+import React, { useContext } from "react";
 import { Form } from "react-final-form";
 import styled from "styled-components";
 
@@ -10,6 +10,7 @@ import type {
   TitleProps,
 } from "./Components/types";
 import { Decorator, FormApi, Mutator, ValidationErrors } from "final-form";
+import { InlineError } from "../../common/ErrorField";
 
 type Props<FormValues> = {
   title: TitleProps;
@@ -33,6 +34,7 @@ type Props<FormValues> = {
     annotations?: JSX.Element;
     debug?: JSX.Element;
   };
+  hasErrorPublicodes?: boolean;
 };
 
 const SimulatorDecorator = <FormValues,>({
@@ -45,6 +47,7 @@ const SimulatorDecorator = <FormValues,>({
   formOptions,
   renderStep,
   options,
+  hasErrorPublicodes,
 }: Props<FormValues>): JSX.Element => {
   const onPrevious = navigation.onPrevious;
 
@@ -80,15 +83,24 @@ const SimulatorDecorator = <FormValues,>({
                 renderStep(form)
               )}
 
+              {hasErrorPublicodes && (
+                <InlineError>
+                  Une erreur liée au moteur de calcul nous empêche de continuer
+                  la simulation. Veuillez vérifier les informations saisies ou
+                  rafraîchir la page si le problème persiste.
+                </InlineError>
+              )}
+
               <Navigation
                 {...navigation}
-                hasError={invalid && submitFailed}
+                hasError={invalid && submitFailed && hasErrorPublicodes}
                 onPrevious={
                   onPrevious &&
                   (() => {
                     onPrevious(form.getState().values);
                   })
                 }
+                showNext={navigation.showNext && !hasErrorPublicodes}
               />
               {options?.annotations && <p>{options.annotations}</p>}
               {process.env.NODE_ENV !== "production" &&

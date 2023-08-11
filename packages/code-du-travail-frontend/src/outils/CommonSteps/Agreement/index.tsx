@@ -9,7 +9,7 @@ import { Enterprise } from "../../../conventions/Search/api/enterprises.service"
 import { InlineError } from "../../common/ErrorField";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
-import { AgreementSearchValue } from "./store";
+import { AgreementSearchValue, CommonAgreementStoreError } from "./store";
 import { AgreementRoute } from "../../common/type/WizardType";
 import { getCc3239Informations } from "../../api";
 import { Agreement } from "@socialgouv/cdtn-utils";
@@ -27,11 +27,7 @@ type Props = {
   simulator: PublicodesSimulator;
   hasNoEnterpriseSelected: boolean;
   setHasNoEnterpriseSelected: (boolean) => void;
-  error?: {
-    route?: string;
-    agreement?: string;
-    enterprise?: string;
-  };
+  error?: CommonAgreementStoreError;
 };
 
 function AgreementStep({
@@ -132,6 +128,9 @@ function AgreementStep({
           )}
           {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
         </>
+      )}
+      {error?.errorPublicodes && (
+        <InlineError>{error.errorPublicodes}</InlineError>
       )}
     </>
   );

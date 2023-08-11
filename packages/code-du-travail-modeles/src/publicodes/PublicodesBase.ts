@@ -29,6 +29,10 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
 
   execute(rule: string): TResult {
     const result = this.handleExecute(this.data.situation, rule);
+    if (!result)
+      throw new Error(
+        `Unable to evaluate ${rule} with ${JSON.stringify(this.data.situation)}`
+      );
     return this.convertedResult(result);
   }
 
@@ -94,9 +98,13 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   private handleExecute(
     situation: SituationElement[],
     rule: string
-  ): EvaluatedNode {
-    this.engine.setSituation(this.buildSituation(situation));
-    return this.engine.evaluate(rule);
+  ): EvaluatedNode | undefined {
+    try {
+      this.engine.setSituation(this.buildSituation(situation));
+      return this.engine.evaluate(rule);
+    } catch {
+      return undefined;
+    }
   }
 
   private updateSituation(
@@ -137,8 +145,12 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
       }
     });
 
-    this.engine.setSituation(this.buildSituation(newSituation));
-    const result = this.engine.evaluate(targetRule);
+    const result = this.handleExecute(newSituation, targetRule);
+
+    if (!result)
+      throw new Error(
+        `Unable to evaluate ${targetRule} with ${JSON.stringify(newSituation)}`
+      );
 
     return {
       missingArgs: this.buildMissingArgs(this.engine, result.missingVariables),
