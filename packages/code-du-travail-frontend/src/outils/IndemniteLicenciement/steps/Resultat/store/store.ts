@@ -343,10 +343,6 @@ const createResultStore: StoreSlice<
           (item) =>
             item.show === "légal et conventionnel" || item.show === "default"
         );
-      } else if (isAgreementEqualToLegal) {
-        notifications = agreementNotifications?.filter(
-          (item) => item.show === "légal et conventionnel"
-        );
       } else {
         notifications = agreementNotifications?.filter(
           (item) =>
