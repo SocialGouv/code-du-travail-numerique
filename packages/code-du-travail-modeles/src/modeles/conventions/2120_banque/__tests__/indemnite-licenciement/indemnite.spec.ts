@@ -59,7 +59,6 @@ describe("Indemnité conventionnel de licenciement pour la CC 2120", () => {
           {
             "contrat salarié . convention collective": "'IDCC2120'",
             "contrat salarié . convention collective . banque . catégorie professionnelle": `'${categoriePro}'`,
-
             "contrat salarié . convention collective . banque . licenciement économique": `'${licenciementEco}'`,
             "contrat salarié . convention collective . banque . semestres complets après 2002":
               semestresApres2002,
@@ -82,6 +81,59 @@ describe("Indemnité conventionnel de licenciement pour la CC 2120", () => {
               }
             : {}
         ),
+        "contrat salarié . indemnité de licenciement . résultat conventionnel"
+      );
+
+      expect(missingArgs).toEqual([]);
+      expect(result.value).toEqual(expectedCompensation);
+      expect(result.unit?.numerators).toEqual(["€"]);
+    }
+  );
+
+  test.each`
+    entryDate       | categoriePro    | semestresAvant2002 | semestresApres2002 | seniorityRight | seniority | salary  | expectedCompensation
+    ${"01/01/1999"} | ${"Non-cadres"} | ${0}               | ${1}               | ${0.91}        | ${0.91}   | ${2772} | ${0}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${2}               | ${0}               | ${1}           | ${1}      | ${2772} | ${2485.24}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${34}              | ${1}           | ${20}     | ${2772} | ${26305.32}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${25}              | ${1}           | ${15.67}  | ${2772} | ${21315.72}
+    ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${19}              | ${1}           | ${12.5}   | ${2772} | ${17989.32}
+    ${"01/01/1999"} | ${"Cadres"}     | ${0}               | ${1}               | ${0.91}        | ${0.91}   | ${2772} | ${0}
+    ${"01/01/1999"} | ${"Cadres"}     | ${2}               | ${0}               | ${1}           | ${1}      | ${2772} | ${2485.24}
+    ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${34}              | ${1}           | ${20}     | ${2772} | ${26305.32}
+    ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${25}              | ${1}           | ${15.67}  | ${2772} | ${21315.72}
+    ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${19}              | ${1}           | ${12.5}   | ${2772} | ${17989.32}
+    ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${42}              | ${1}           | ${24}     | ${2772} | ${30740.52}
+  `(
+    "$#) Catégorie pro $categoriePro, entryDate $entryDate, seniorityRight: $seniorityRight an, semestresAvant2002 $semestresAvant2002, semestresApres2002 $semestresApres2002, salaire de référence: $salary => $expectedCompensation",
+    ({
+      categoriePro,
+      semestresAvant2002,
+      semestresApres2002,
+      seniorityRight,
+      salary,
+      expectedCompensation,
+      seniority,
+      entryDate,
+    }) => {
+      const { result, missingArgs } = engine.setSituation(
+        {
+          "contrat salarié . convention collective": "'IDCC2120'",
+          "contrat salarié . convention collective . banque . catégorie professionnelle": `'${categoriePro}'`,
+          "contrat salarié . convention collective . banque . semestres complets après 2002":
+            semestresApres2002,
+          "contrat salarié . convention collective . banque . semestres complets avant 2002":
+            semestresAvant2002,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniorityRight,
+          "contrat salarié . indemnité de licenciement . date d'entrée":
+            entryDate,
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+            "oui",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            salary,
+        },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
 

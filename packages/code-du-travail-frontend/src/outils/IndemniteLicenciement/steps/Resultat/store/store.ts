@@ -272,6 +272,19 @@ const createResultStore: StoreSlice<
         );
 
         try {
+          console.log(
+            mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
+              agreement.num,
+              agreementSeniority,
+              agreementRefSalary,
+              agreementRequiredSeniority.value,
+              get().ancienneteData.input.dateNotification!,
+              get().ancienneteData.input.dateEntree!,
+              isLicenciementInaptitude,
+              longTermDisability,
+              { ...infos, ...agreementSalaryExtraInfo }
+            )
+          );
           publicodesSituationConventionnel = publicodes.setSituation(
             mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
               agreement.num,
