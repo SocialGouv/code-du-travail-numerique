@@ -272,19 +272,6 @@ const createResultStore: StoreSlice<
         );
 
         try {
-          console.log(
-            mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
-              agreement.num,
-              agreementSeniority,
-              agreementRefSalary,
-              agreementRequiredSeniority.value,
-              get().ancienneteData.input.dateNotification!,
-              get().ancienneteData.input.dateEntree!,
-              isLicenciementInaptitude,
-              longTermDisability,
-              { ...infos, ...agreementSalaryExtraInfo }
-            )
-          );
           publicodesSituationConventionnel = publicodes.setSituation(
             mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
               agreement.num,
@@ -349,13 +336,12 @@ const createResultStore: StoreSlice<
 
       if (isAgreementBetter) {
         notifications = agreementNotifications?.filter(
-          (item) =>
-            item.show === "conventionnel" ||
-            item.show === "légal et conventionnel"
+          (item) => item.show === "conventionnel" || item.show === "default"
         );
       } else if (isAgreementEqualToLegal) {
         notifications = agreementNotifications?.filter(
-          (item) => item.show === "légal et conventionnel"
+          (item) =>
+            item.show === "légal et conventionnel" || item.show === "default"
         );
       } else {
         notifications = agreementNotifications?.filter(
