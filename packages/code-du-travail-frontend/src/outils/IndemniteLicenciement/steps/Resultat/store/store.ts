@@ -312,11 +312,15 @@ const createResultStore: StoreSlice<
         );
       }
 
-      if (isAgreementBetter || isAgreementEqualToLegal) {
+      if (isAgreementBetter) {
         notifications = agreementNotifications?.filter(
           (item) =>
             item.show === "conventionnel" ||
             item.show === "légal et conventionnel"
+        );
+      } else if (isAgreementEqualToLegal) {
+        notifications = agreementNotifications?.filter(
+          (item) => item.show === "légal et conventionnel"
         );
       } else {
         notifications = agreementNotifications?.filter(
