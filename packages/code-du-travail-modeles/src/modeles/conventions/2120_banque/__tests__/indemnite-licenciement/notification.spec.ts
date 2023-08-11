@@ -8,7 +8,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 const defaultNotification = [
   {
-    description: `Si au cours des 12 derniers mois le salarié a perçu des primes, des éléments variables ou des avantages en nature, le montant de l’indemnité de licenciement pourrait être moins élevé. En effet, la convention collective prévoit que l’indemnité de licenciement est calculée sur la base du salaire sans ces éléments de rémunération alors que le simulateur les intègre.`,
+    description: `Si au cours des 12 derniers mois le salarié a perçu des primes, des éléments variables ou des avantages en nature, le montant de l’indemnité de licenciement pourrait être moins élevé. En effet, la convention collective prévoit que l’indemnité de licenciement doit être calculée sur la base du salaire sans ces éléments de rémunération alors que le simulateur les intègre.`,
   },
 ];
 
