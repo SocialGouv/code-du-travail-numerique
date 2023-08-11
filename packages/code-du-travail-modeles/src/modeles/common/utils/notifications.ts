@@ -45,7 +45,7 @@ export function getNotifications(
     .map(({ dottedName, rawNode: { description, cdtn } }) => ({
       description,
       dottedName,
-      show: cdtn?.affichage ?? "conventionnel",
+      show: cdtn?.affichage ?? "default",
     }));
 }
 
@@ -78,6 +78,6 @@ export function getNotificationsBloquantes(
     .map(({ dottedName, rawNode: { description, cdtn } }) => ({
       description,
       dottedName,
-      show: cdtn?.affichage ?? "conventionnel",
+      show: cdtn?.affichage ?? "default",
     }));
 }

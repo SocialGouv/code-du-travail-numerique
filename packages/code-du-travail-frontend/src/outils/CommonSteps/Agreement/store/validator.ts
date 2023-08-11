@@ -16,12 +16,16 @@ export const validateStep = (state: CommonAgreementStoreInput) => {
         : state.route === "enterprise" && state.enterprise && !state.agreement
         ? "Vous devez sélectionner une convention collective"
         : undefined,
+    errorPublicodes: state.informationError
+      ? "Une erreur liée au moteur de calcul nous empêche de continuer la simulation. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
+      : undefined,
   };
   return {
     isValid: deepEqualObject(errorState, {
       route: undefined,
       agreement: undefined,
       enterprise: undefined,
+      errorPublicodes: undefined,
     }),
     errorState,
   };

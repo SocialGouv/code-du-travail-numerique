@@ -2,13 +2,14 @@ import React from "react";
 
 import { PubliQuestion } from "./components";
 import { MatomoActionEvent } from "../../../lib";
-import { PublicodesInformation } from "./store";
+import { CommonInformationsStoreError, PublicodesInformation } from "./store";
 import { RuleType } from "@socialgouv/modeles-social";
+import { InlineError } from "../../common/ErrorField";
 
 export type InformationStepProps = {
   onChange: (key: string, value: unknown, type: RuleType | undefined) => void;
   informations: PublicodesInformation[];
-  errors: Record<string, string>;
+  errors: CommonInformationsStoreError;
 };
 
 const CommonInformationStep = ({
@@ -28,10 +29,13 @@ const CommonInformationStep = ({
           onChange={(v) =>
             onChange(info.question.rule.nom, v, info.question.rule.cdtn?.type)
           }
-          error={errors[info.question.rule.nom] ?? undefined}
+          error={errors.errorInformations[info.question.rule.nom] ?? undefined}
         />
       );
     })}
+    {errors.errorPublicodes && (
+      <InlineError>{errors.errorPublicodes}</InlineError>
+    )}
   </>
 );
 
