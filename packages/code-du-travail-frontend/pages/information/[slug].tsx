@@ -8,7 +8,7 @@ import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 import { EditorialContentDataWrapper } from "@socialgouv/cdtn-utils";
 import { getInformationBySlug } from "../../src/information";
-import { Contents } from "../../src/information/Components";
+import { Contents } from "../../src/information";
 import { QuestionnaireWrapper } from "../../src/questionnaire";
 import { useRouter } from "next/router";
 

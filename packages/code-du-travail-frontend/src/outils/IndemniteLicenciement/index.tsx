@@ -18,6 +18,7 @@ import {
 } from "./store";
 import { ToolName } from "../types";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import { Feedback } from "../common/Feedback";
 
 type Props = {
   icon: string;
@@ -119,42 +120,45 @@ const IndemniteLicenciementSimulator = ({
   };
 
   return (
-    <SimulatorLayout<IndemniteLicenciementStepName>
-      simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
-      title={title}
-      displayTitle={displayTitle}
-      icon={icon}
-      duration="5 à 10 min"
-      steps={steps}
-      onStepChange={[
-        {
-          stepName: IndemniteLicenciementStepName.ContratTravail,
-          isStepValid: isStepContratTravailValid,
-          onNextStep: onNextStepContratTravail,
-        },
-        {
-          stepName: IndemniteLicenciementStepName.Agreement,
-          isStepValid: isStepAgreementValid,
-          onNextStep: onNextStepAgreement,
-        },
-        {
-          stepName: IndemniteLicenciementStepName.Anciennete,
-          isStepValid: isStepAncienneteValid,
-          onNextStep: onNextStepAnciennete,
-        },
-        {
-          stepName: IndemniteLicenciementStepName.Salaires,
-          isStepValid: isStepSalairesValid,
-          onNextStep: onNextStepSalaires,
-        },
-        {
-          stepName: IndemniteLicenciementStepName.Informations,
-          isStepValid: isStepInformationsValid,
-          onNextStep: onNextStepInformations,
-        },
-      ]}
-      hiddenStep={getHiddenSteps()}
-    />
+    <>
+      <SimulatorLayout<IndemniteLicenciementStepName>
+        simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
+        title={title}
+        displayTitle={displayTitle}
+        icon={icon}
+        duration="5 à 10 min"
+        steps={steps}
+        onStepChange={[
+          {
+            stepName: IndemniteLicenciementStepName.ContratTravail,
+            isStepValid: isStepContratTravailValid,
+            onNextStep: onNextStepContratTravail,
+          },
+          {
+            stepName: IndemniteLicenciementStepName.Agreement,
+            isStepValid: isStepAgreementValid,
+            onNextStep: onNextStepAgreement,
+          },
+          {
+            stepName: IndemniteLicenciementStepName.Anciennete,
+            isStepValid: isStepAncienneteValid,
+            onNextStep: onNextStepAnciennete,
+          },
+          {
+            stepName: IndemniteLicenciementStepName.Salaires,
+            isStepValid: isStepSalairesValid,
+            onNextStep: onNextStepSalaires,
+          },
+          {
+            stepName: IndemniteLicenciementStepName.Informations,
+            isStepValid: isStepInformationsValid,
+            onNextStep: onNextStepInformations,
+          },
+        ]}
+        hiddenStep={getHiddenSteps()}
+      />
+      <Feedback />
+    </>
   );
 };
 

@@ -14,8 +14,8 @@ describe("Outil - Indemnité de licenciement", () => {
     cy.contains("Suivant").click();
 
     cy.get("#dateEntree").type("01/01/2000");
-    cy.get("#dateNotification").type("01/01/2022");
-    cy.get("#dateSortie").type("01/01/2022");
+    cy.get("#dateNotification").type("01/06/2023");
+    cy.get("#dateSortie").type("01/06/2023");
 
     cy.contains("Oui").click();
     cy.get("[name='0.duration']").type("1");
@@ -32,7 +32,7 @@ describe("Outil - Indemnité de licenciement", () => {
       "contain",
       "À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à :"
     );
-    cy.get("form p strong").should("contain", "6444,44\u00a0€.");
+    cy.get("form p strong").should("contain", "6916,67\u00a0€.");
     cy.get("form p").should(
       "contain",
       "Attention il peut exister un montant plus favorable"

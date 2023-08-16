@@ -16,6 +16,7 @@ type Props = {
   ariaLevel?: number | string;
   id?: string;
   dataTestid?: string;
+  className?: string;
 };
 
 export const Heading = (props: Props) => (
@@ -29,6 +30,7 @@ export const Heading = (props: Props) => (
     aria-level={props.ariaLevel}
     id={props.id}
     data-testid={props.dataTestid ?? "heading"}
+    className={props.className}
   >
     {props.stripe !== "none" && (
       <Stripe

@@ -23,6 +23,7 @@ export type PreavisRetraiteState = {
     result?: ResultStepProps;
   };
   formValues: PreavisRetraiteFormState;
+  errorPublicodes: boolean | undefined;
 };
 
 export type PublicodesState = {

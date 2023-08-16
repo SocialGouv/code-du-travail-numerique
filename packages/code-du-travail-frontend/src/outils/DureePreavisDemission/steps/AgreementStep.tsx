@@ -13,21 +13,19 @@ const supportedCC = getSupportedCC(data.situations);
 
 const AgreementStep = (props: WizardStepProps): JSX.Element => {
   return (
-    <>
-      <SelectAgreement
-        title={props.title}
-        form={props.form}
-        onChange={() => {
-          props.form.change("criteria", undefined);
-        }}
-        required
-        note="La convention collective est nécessaire pour obtenir un résultat, le code du travail ne prévoyant rien sur le préavis de démission."
-        supportedAgreements={supportedCC}
-        alertAgreementNotSupported={(url: string) => (
-          <NotSupportedAgreementDisclaimer agreementUrl={url} />
-        )}
-      />
-    </>
+    <SelectAgreement
+      title={props.title}
+      form={props.form}
+      onChange={() => {
+        props.form.change("criteria", undefined);
+      }}
+      required
+      note="La convention collective est nécessaire pour obtenir un résultat, le code du travail ne prévoyant rien sur le préavis de démission."
+      supportedAgreements={supportedCC}
+      alertAgreementNotSupported={(url: string) => (
+        <NotSupportedAgreementDisclaimer agreementUrl={url} />
+      )}
+    />
   );
 };
 

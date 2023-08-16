@@ -7,16 +7,16 @@ import { useContext } from "react";
 
 const InformationsStep = (): JSX.Element => {
   const store = useContext(IndemniteLicenciementContext);
-  const { errorInformations, onInformationsChange, informations } =
+  const { errors, onInformationsChange, informations } =
     useIndemniteLicenciementStore(store, (state) => ({
-      errorInformations: state.informationsData.error.errorInformations,
+      errors: state.informationsData.error,
       onInformationsChange: state.informationsFunction.onInformationsChange,
       informations: state.informationsData.input.publicodesInformations,
     }));
 
   return (
     <CommonInformationStep
-      errors={errorInformations}
+      errors={errors}
       onChange={onInformationsChange}
       informations={informations}
     />

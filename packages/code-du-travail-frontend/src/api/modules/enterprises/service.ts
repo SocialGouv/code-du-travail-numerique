@@ -5,9 +5,9 @@ import { EnterpriseApiResponse, ApiEnterpriseData, Convention } from "./types";
 import { IDCC_TO_REPLACE } from "../../config";
 
 const toAgreement = (convention: Convention): Agreement => ({
-  id: convention.id,
+  id: convention.id ?? convention.idcc,
   num: convention.idcc,
-  shortTitle: convention.shortTitle,
+  shortTitle: convention.shortTitle ?? "Convention collective non reconnue",
   title: convention.title,
   ...(convention.url ? { url: convention.url } : {}),
 });

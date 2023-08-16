@@ -17,11 +17,12 @@ const PreavisRetraiteSimulator = ({
   displayTitle,
 }: Props): JSX.Element => {
   const store = useContext(PreavisRetraiteContext);
-  const { onChange, onStepChange } = usePreavisRetraiteStore(
+  const { onChange, onStepChange, errorPublicodes } = usePreavisRetraiteStore(
     store,
     (state) => ({
       onChange: state.onFormValuesChange,
       onStepChange: state.onStepChange,
+      errorPublicodes: state.errorPublicodes,
     })
   );
 
@@ -35,6 +36,7 @@ const PreavisRetraiteSimulator = ({
       onFormValuesChange={onChange}
       onStepChange={onStepChange}
       steps={steps}
+      hasErrorPublicodes={errorPublicodes}
     />
   );
 };

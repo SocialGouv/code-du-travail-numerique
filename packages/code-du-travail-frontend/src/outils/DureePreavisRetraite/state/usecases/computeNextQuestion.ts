@@ -2,6 +2,7 @@ import { stateToPublicode } from "./helpers";
 import { PreavisRetraiteStore, Question } from "../types";
 import { MissingArgs } from "@socialgouv/modeles-social";
 import validateInformationAgreement3239 from "./validateInformationAgreement3239";
+import * as Sentry from "@sentry/nextjs";
 
 const excludedRules = [
   "contrat salarié - ancienneté",
@@ -47,20 +48,30 @@ const computeNextQuestion = (
   }
   const currentQuestions = state.steps.informations.questions;
   const newSituation = stateToPublicode(state.formValues);
-  const missingQuestions = getNextQuestion(
-    state.publicodes.setSituation(newSituation).missingArgs,
-    currentQuestions
-  );
-  const newQuestions = currentQuestions.concat(missingQuestions);
-  return {
-    ...state,
-    steps: {
-      ...state.steps,
-      informations: {
-        questions: newQuestions,
+  try {
+    const missingQuestions = getNextQuestion(
+      state.publicodes.setSituation(newSituation).missingArgs,
+      currentQuestions
+    );
+    const newQuestions = currentQuestions.concat(missingQuestions);
+    return {
+      ...state,
+      steps: {
+        ...state.steps,
+        informations: {
+          questions: newQuestions,
+        },
       },
-    },
-  };
+      errorPublicodes: false,
+    };
+  } catch (e) {
+    Sentry.captureException(e);
+    console.error(e);
+    return {
+      ...state,
+      errorPublicodes: true,
+    };
+  }
 };
 
 export default computeNextQuestion;
