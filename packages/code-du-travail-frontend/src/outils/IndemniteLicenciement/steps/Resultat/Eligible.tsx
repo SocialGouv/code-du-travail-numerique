@@ -108,7 +108,7 @@ export default function Eligible() {
         notifications={notifications}
         resultMessage={getResultMessage(informationData)}
       />
-      <ShowDetails>
+      <ShowDetails autoFocus>
         <FilledElements
           showHasTempsPartiel={showHasTempsPartiel}
           absencesPeriods={absencePeriods}

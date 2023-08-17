@@ -19,6 +19,7 @@ type Props = {
   tooltip?: Tooltip;
   dataTestidSalaries?: string;
   noPrime?: boolean;
+  autoFocus?: boolean;
 };
 
 export const SalaireTempsPlein = ({
@@ -31,6 +32,7 @@ export const SalaireTempsPlein = ({
   tooltip,
   dataTestidSalaries,
   noPrime,
+  autoFocus = false,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
@@ -124,6 +126,8 @@ export const SalaireTempsPlein = ({
                   onChange={(e) => onChangeSalaries(index, e.target.value)}
                   onBlur={() => setIsFirstEdit(false)}
                   data-testid={dataTestidSalaries ?? "salary-input"}
+                  autoFocus={autoFocus ? index === 0 : false}
+                  tabIndex={1}
                 />
                 {errorsSalaries[`${index}`] && (
                   <ErrorWrapper>
@@ -153,6 +157,7 @@ export const SalaireTempsPlein = ({
                           ? "prime-" + dataTestidSalaries
                           : "prime-input"
                       }
+                      tabIndex={1}
                     />
                     {errorsPrimes[`${index}`] && (
                       <ErrorWrapper>

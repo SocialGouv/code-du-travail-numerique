@@ -8,15 +8,19 @@ const SkipNavLink = (): JSX.Element => {
       <nav aria-label="liens d'évitements">
         <Ul>
           <Li>
-            <SkipLink as="a" href="#navigation">
+            <SkipLink as="a" href="#navigation" tabIndex={1}>
               Allez à la navigation
             </SkipLink>
           </Li>
           <Li>
-            <SkipLink href="#search">Allez à la recherche</SkipLink>
+            <SkipLink href="#search" tabIndex={1}>
+              Allez à la recherche
+            </SkipLink>
           </Li>
           <Li>
-            <SkipLink href="#content">Allez au contenu</SkipLink>
+            <SkipLink href="#content" tabIndex={1}>
+              Allez au contenu
+            </SkipLink>
           </Li>
         </Ul>
       </nav>

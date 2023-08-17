@@ -18,7 +18,7 @@ const CommonInformationStep = ({
   errors,
 }: InformationStepProps): JSX.Element => (
   <>
-    {informations.map((info) => {
+    {informations.map((info, index) => {
       return (
         <PubliQuestion
           key={info.id}
@@ -30,6 +30,7 @@ const CommonInformationStep = ({
             onChange(info.question.rule.nom, v, info.question.rule.cdtn?.type)
           }
           error={errors.errorInformations[info.question.rule.nom] ?? undefined}
+          autoFocus={index === 0}
         />
       );
     })}

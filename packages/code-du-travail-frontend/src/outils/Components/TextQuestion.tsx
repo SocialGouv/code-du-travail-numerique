@@ -24,6 +24,7 @@ type Props = {
   id: string;
   dataTestId?: string;
   text?: string;
+  autoFocus?: boolean;
 };
 
 export default function TextQuestion({
@@ -41,6 +42,7 @@ export default function TextQuestion({
   id,
   dataTestId,
   text,
+  autoFocus = false,
 }: Props) {
   const InputComponent = inputType === "date" ? InputDate : Input;
   return (
@@ -63,6 +65,8 @@ export default function TextQuestion({
           type={inputType === "date" ? "text" : inputType}
           updateOnScrollDisabled
           data-testid={dataTestId}
+          tabIndex={1}
+          autoFocus={autoFocus}
         />
       </QuestionWrapper>
       {error && (
