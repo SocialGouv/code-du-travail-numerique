@@ -25,7 +25,6 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
         class="sc-iGgWBj sc-kgOKUu cWzIZL dTskMB"
       >
         <span
-          aria-level="2"
           class="sc-bfhvDw jnggxr"
           role="heading"
         >
@@ -124,7 +123,6 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
         class="sc-iGgWBj sc-kgOKUu cWzIZL dTskMB"
       >
         <span
-          aria-level="2"
           class="sc-bfhvDw jnggxr"
           role="heading"
         >
@@ -229,7 +227,6 @@ exports[`<Wizard /> should handle initialValues 1`] = `
         class="sc-iGgWBj sc-kgOKUu cWzIZL dTskMB"
       >
         <span
-          aria-level="2"
           class="sc-bfhvDw jnggxr"
           role="heading"
         >
@@ -338,7 +335,6 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
         class="sc-iGgWBj sc-kgOKUu cWzIZL dTskMB"
       >
         <span
-          aria-level="2"
           class="sc-bfhvDw jnggxr"
           role="heading"
         >
@@ -443,7 +439,6 @@ exports[`<Wizard /> should render a step 1`] = `
         class="sc-iGgWBj sc-kgOKUu cWzIZL dTskMB"
       >
         <span
-          aria-level="2"
           class="sc-bfhvDw jnggxr"
           role="heading"
         >

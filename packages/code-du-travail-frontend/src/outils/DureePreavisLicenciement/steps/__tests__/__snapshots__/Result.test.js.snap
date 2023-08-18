@@ -19,6 +19,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
     <button
       aria-expanded="false"
       class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
+      tabindex="1"
       type="button"
     >
       <svg
@@ -249,6 +250,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     <button
       aria-expanded="false"
       class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
+      tabindex="1"
       type="button"
     >
       <svg
@@ -411,6 +413,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     <button
       aria-expanded="false"
       class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
+      tabindex="1"
       type="button"
     >
       <svg
@@ -609,6 +612,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     <button
       aria-expanded="false"
       class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
+      tabindex="1"
       type="button"
     >
       <svg
@@ -788,6 +792,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     <button
       aria-expanded="false"
       class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
+      tabindex="1"
       type="button"
     >
       <svg
