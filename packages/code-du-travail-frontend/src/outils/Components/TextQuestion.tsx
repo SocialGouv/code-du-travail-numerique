@@ -1,5 +1,5 @@
 import { Input, InputDate, theme } from "@socialgouv/cdtn-ui";
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useEffect, useRef, useState } from "react";
 
 import styled from "styled-components";
 import xss from "xss";
@@ -45,6 +45,12 @@ export default function TextQuestion({
   autoFocus = false,
 }: Props) {
   const InputComponent = inputType === "date" ? InputDate : Input;
+  const [inputRef, setInputRef] = useState<HTMLInputElement>();
+  useEffect(() => {
+    if (inputRef && error) {
+      inputRef?.focus();
+    }
+  }, [inputRef, error]);
   return (
     <Wrapper>
       <Question required={showRequired} tooltip={tooltip} htmlFor={id}>
@@ -52,7 +58,13 @@ export default function TextQuestion({
       </Question>
       {smallText && <SmallText>{smallText}</SmallText>}
       {subLabel && <SubLabel>{subLabel}</SubLabel>}
-      <QuestionWrapper>
+      <QuestionWrapper
+        ref={(elem) => {
+          if (elem) {
+            setInputRef(elem.children[0].children[0]);
+          }
+        }}
+      >
         <InputComponent
           id={id}
           name={id}

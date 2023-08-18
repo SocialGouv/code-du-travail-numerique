@@ -100,17 +100,17 @@ export const SalaireTempsPlein = ({
         </Caption>
         <thead>
           <tr>
-            <Th>Mois</Th>
-            <Th>Salaire mensuel brut</Th>
-            {!noPrime && <Th>Dont primes</Th>}
+            <Th scope="col">Mois</Th>
+            <Th scope="col">Salaire mensuel brut</Th>
+            {!noPrime && <Th scope="col">Dont primes</Th>}
           </tr>
         </thead>
         <tbody>
           {salaryPeriods.map((sPeriod, index) => (
             <tr key={sPeriod.month + index}>
-              <td>
+              <th scope="row">
                 <label htmlFor={`salary.${index}`}>{sPeriod.month}</label>
-              </td>
+              </th>
               <td>
                 <Input
                   id={`salary.${index}`}
@@ -195,6 +195,12 @@ const Table = styled.table`
 
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
+  }
+
+  tbody {
+    th {
+      font-weight: normal;
+    }
   }
 `;
 

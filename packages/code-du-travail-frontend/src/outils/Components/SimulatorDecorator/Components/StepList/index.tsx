@@ -81,7 +81,6 @@ const StyledWrapper = styled(Wrapper)<{ defaultWidth: string }>`
 `;
 
 const Title = styled.span.attrs({
-  "aria-level": "2",
   role: "heading",
 })`
   margin: ${spacings.medium} 0;

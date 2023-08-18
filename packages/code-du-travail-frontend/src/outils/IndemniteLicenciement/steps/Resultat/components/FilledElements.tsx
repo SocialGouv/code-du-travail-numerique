@@ -84,23 +84,24 @@ export default function FilledElements(props: Props) {
           {props.agreementName ??
             "La convention collective n’a pas été renseignée"}
         </li>
-        {props.agreementInformations && props.agreementInformations.length > 0 && (
-          <li>
-            <strong>Informations</strong>
-            <ul>
-              {props.agreementInformations.map((info, index) => (
-                <li key={"agreement-" + index}>
-                  {info.label}&nbsp;:&nbsp;{info.value.replace(/^'|'$/g, "")}
-                  &nbsp;
-                  {publicodesUnitTranslator(
-                    info.value.replace(/'/g, ""),
-                    info.unit
-                  )}
-                </li>
-              ))}
-            </ul>
-          </li>
-        )}
+        {props.agreementInformations &&
+          props.agreementInformations.length > 0 && (
+            <li>
+              <strong>Informations</strong>
+              <ul>
+                {props.agreementInformations.map((info, index) => (
+                  <li key={"agreement-" + index}>
+                    {info.label}&nbsp;:&nbsp;{info.value.replace(/^'|'$/g, "")}
+                    &nbsp;
+                    {publicodesUnitTranslator(
+                      info.value.replace(/'/g, ""),
+                      info.unit
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </li>
+          )}
         <li>
           <strong>Ancienneté (A)</strong>
           <ul>
@@ -169,17 +170,18 @@ export default function FilledElements(props: Props) {
                   )}
                   &nbsp;:&nbsp;
                   <StyledFilledElementTable>
+                    <Caption>Salaires et Primes mensuelles</Caption>
                     <thead>
                       <tr>
-                        <th>Mois</th>
-                        <th>
+                        <th scope="col">Mois</th>
+                        <th scope="col">
                           Salaires
                           <br />
                           <StyledFilledElementSpan>
                             (primes et avantages en nature inclus)
                           </StyledFilledElementSpan>
                         </th>
-                        <th>
+                        <th scope="col">
                           Dont primes
                           <br />
                           <StyledFilledElementSpan>
@@ -191,7 +193,7 @@ export default function FilledElements(props: Props) {
                     <tbody>
                       {props.salaryPeriods.map((salary, index) => (
                         <tr key={"salary-" + index}>
-                          <td>{salary.month}</td>
+                          <th scope="row">{salary.month}</th>
                           <td>{salary.value} €</td>
                           <td>
                             {salary.prime} {salary.prime !== undefined && "€"}
@@ -226,4 +228,13 @@ export const StyledFilledElementTable = styled(Table)`
   th {
     vertical-align: top;
   }
+  tbody {
+    th {
+      font-weight: normal;
+    }
+  }
+`;
+
+const Caption = styled.caption`
+  text-align: left;
 `;
