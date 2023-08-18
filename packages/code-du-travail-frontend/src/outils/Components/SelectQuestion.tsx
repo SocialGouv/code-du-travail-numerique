@@ -1,5 +1,5 @@
 import { Select, theme } from "@socialgouv/cdtn-ui";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import Html from "../../common/Html";
 import { InlineError } from "../common/ErrorField";
@@ -51,14 +51,6 @@ const SelectQuestion = ({
     }
   }, [options]);
 
-  const inputRef = useRef(null);
-  useEffect(() => {
-    const input: any = inputRef?.current;
-    if (input && error) {
-      input.focus();
-    }
-  }, [error]);
-
   return (
     <Wrapper>
       <Question
@@ -78,7 +70,6 @@ const SelectQuestion = ({
         data-testid={name}
         tabIndex={1}
         autoFocus={autoFocus}
-        ref={inputRef}
       >
         <option disabled value="">
           ...

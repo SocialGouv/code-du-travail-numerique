@@ -1,5 +1,5 @@
 import { Fieldset, InputRadio } from "@socialgouv/cdtn-ui";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import Html from "../../common/Html";
 
@@ -44,13 +44,6 @@ export default function RadioQuestion({
   const onChange = (value: string) => {
     onChangeSelectedOption(value);
   };
-  const inputRef = useRef(null);
-  useEffect(() => {
-    const input: any = inputRef?.current;
-    if (input && error) {
-      input.focus();
-    }
-  }, [error]);
 
   return (
     <>
@@ -72,7 +65,6 @@ export default function RadioQuestion({
               onChange={() => onChange(question.value)}
               tabIndex={1}
               autoFocus={autoFocus ? index === 0 : false}
-              ref={index === 0 ? inputRef : undefined}
             />
           ))}
           {error && (
