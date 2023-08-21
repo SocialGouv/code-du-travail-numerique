@@ -80,9 +80,7 @@ const StyledWrapper = styled(Wrapper)<{ defaultWidth: string }>`
   }
 `;
 
-const Title = styled.span.attrs({
-  role: "heading",
-})`
+const Title = styled.span`
   margin: ${spacings.medium} 0;
   font-weight: 600;
   @media (max-width: ${breakpoints.tablet}) {

@@ -237,4 +237,5 @@ export const StyledFilledElementTable = styled(Table)`
 
 const Caption = styled.caption`
   text-align: left;
+  display: none;
 `;
