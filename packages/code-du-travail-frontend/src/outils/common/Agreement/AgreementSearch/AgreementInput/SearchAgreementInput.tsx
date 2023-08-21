@@ -87,7 +87,12 @@ export const SearchAgreementInput = ({
         alwaysRenderSuggestions={false}
         onSuggestionSelected={onSelect}
         onSuggestionsFetchRequested={onSearch}
-        onSuggestionsClearRequested={onClear}
+        shouldRenderSuggestions={(value, reason) => {
+          if (reason === "escape-pressed") {
+            onClear();
+          }
+          return true;
+        }}
         getSuggestionValue={(suggestion) => suggestion}
         renderSuggestion={renderSuggestion}
         renderSuggestionsContainer={renderSuggestionsContainer}
