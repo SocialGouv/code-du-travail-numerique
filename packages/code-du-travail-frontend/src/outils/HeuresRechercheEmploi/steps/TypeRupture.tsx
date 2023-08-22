@@ -25,7 +25,7 @@ function StepTypeRupture({ form }) {
     .filter(Boolean)
     .sort(orderCriteria)
     .map(formatOption)
-    .concat([["Rupture Conventionnel", "Rupture Conventionnel"]]);
+    .concat([["Rupture conventionnelle", "Rupture conventionnelle"]]);
 
   return (
     <>

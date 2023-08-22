@@ -82,7 +82,7 @@ const ResultRuptureConventionnel = () => (
     </SectionTitle>
     <Paragraph noMargin>
       Il n’y a pas d’heures d’absence autorisée pour rechercher un emploi dans
-      le cas d’un rupture conventionnelle
+      le cas d’une rupture conventionnelle
     </Paragraph>
   </>
 );
@@ -129,7 +129,7 @@ export function StepResult({ form }: WizardStepProps): JSX.Element {
   const { values } = form.getState();
   const { ccn, criteria = {}, typeRupture } = values;
 
-  if (typeRupture === "Rupture Conventionnel") {
+  if (typeRupture === "Rupture conventionnelle") {
     return <ResultRuptureConventionnel></ResultRuptureConventionnel>;
   }
   const idcc = ccn?.selected ? ccn.selected.num : 0;
