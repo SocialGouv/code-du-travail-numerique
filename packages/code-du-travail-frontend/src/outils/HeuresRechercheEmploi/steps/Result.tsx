@@ -75,6 +75,18 @@ function DisclaimerBox({ duration }) {
   );
 }
 
+const ResultRuptureConventionnel = () => (
+  <>
+    <SectionTitle>
+      Nombre d’heures d’absence autorisée pour rechercher un emploi
+    </SectionTitle>
+    <Paragraph noMargin>
+      Il n’y a pas d’heures d’absence autorisée pour rechercher un emploi dans
+      le cas d’un rupture conventionnelle
+    </Paragraph>
+  </>
+);
+
 const NoResult = ({ idcc, ccn, legalRefs }) => (
   <>
     <SectionTitle>
@@ -116,6 +128,10 @@ const NoResult = ({ idcc, ccn, legalRefs }) => (
 export function StepResult({ form }: WizardStepProps): JSX.Element {
   const { values } = form.getState();
   const { ccn, criteria = {}, typeRupture } = values;
+
+  if (typeRupture === "Rupture Conventionnel") {
+    return <ResultRuptureConventionnel></ResultRuptureConventionnel>;
+  }
   const idcc = ccn?.selected ? ccn.selected.num : 0;
 
   const [situationCdt] = getSituationsFor(data.situations, {

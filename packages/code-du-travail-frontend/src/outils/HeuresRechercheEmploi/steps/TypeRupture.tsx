@@ -1,5 +1,4 @@
 import { heuresRechercheEmploiData as data } from "@socialgouv/modeles-social";
-import { useEffect } from "react";
 
 import { SelectQuestion } from "../../common/SelectQuestion";
 import {
@@ -25,7 +24,8 @@ function StepTypeRupture({ form }) {
   const nextQuestionOptions = [...new Set(dupValues)]
     .filter(Boolean)
     .sort(orderCriteria)
-    .map(formatOption);
+    .map(formatOption)
+    .concat([["Rupture Conventionnel", "Rupture Conventionnel"]]);
 
   return (
     <>
