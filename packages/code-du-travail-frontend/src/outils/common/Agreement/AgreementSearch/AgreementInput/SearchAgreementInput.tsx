@@ -56,6 +56,7 @@ export const SearchAgreementInput = ({
     type: "search",
     value: query,
     "data-testid": "agreement-search-input",
+    tabIndex: "1",
   };
   return (
     <>
