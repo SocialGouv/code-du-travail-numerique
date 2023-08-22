@@ -46,7 +46,7 @@ export const SearchAgreementInput = ({
     event.preventDefault();
     onSelectAgreement(data.suggestion);
   };
-  const inputProps = {
+  const inputProps: any = {
     "aria-label": "agreement-search-label",
     id: "agreement-search",
     name: "agreement-search",
