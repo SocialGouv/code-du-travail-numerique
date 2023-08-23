@@ -130,7 +130,7 @@ export function StepResult({ form }: WizardStepProps): JSX.Element {
   const { ccn, criteria = {}, typeRupture } = values;
 
   if (typeRupture === "Rupture conventionnelle") {
-    return <ResultRuptureConventionnel></ResultRuptureConventionnel>;
+    return <ResultRuptureConventionnel />;
   }
   const idcc = ccn?.selected ? ccn.selected.num : 0;
 
