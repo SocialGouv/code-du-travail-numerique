@@ -100,7 +100,6 @@ describe("Vérification des références juridiques pour la CC 2120", () => {
           {
             "contrat salarié . convention collective": "'IDCC2120'",
             "contrat salarié . convention collective . banque . catégorie professionnelle": `'${categoriePro}'`,
-
             "contrat salarié . convention collective . banque . licenciement économique": `'${licenciementEco}'`,
             "contrat salarié . convention collective . banque . semestres complets après 2002":
               semestresApres2002,
@@ -112,6 +111,8 @@ describe("Vérification des références juridiques pour la CC 2120", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . date d'entrée":
               entryDate,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
           },

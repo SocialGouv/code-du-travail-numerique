@@ -10,6 +10,7 @@ contrat salarié . convention collective . banque . catégorie professionnelle:
       Non-cadres: "'Non-cadres'"
 
 contrat salarié . convention collective . banque . licenciement économique:
+  non applicable si: contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = oui
   applicable si: catégorie professionnelle
   titre: Licenciement pour motif économique
   question: Le motif du licenciement est-il économique ?
@@ -17,11 +18,21 @@ contrat salarié . convention collective . banque . licenciement économique:
     type: oui-non
 
 contrat salarié . convention collective . banque . licenciement disciplinaire:
+  non applicable si: contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = oui
   applicable si: licenciement économique = 'Non'
   titre: Licenciement pour motif disciplinaire
   question: Le licenciement fait-il suite à une faute du salarié (licenciement disciplinaire) ?
   cdtn:
     type: oui-non
+
+contrat salarié . convention collective . banque . situation par défaut:
+  applicable si:
+    une de ces conditions:
+      - toutes ces conditions:
+          - licenciement économique = 'Non'
+          - licenciement disciplinaire = 'Non'
+      - contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = oui
+  valeur: oui
 
 # Valeurs issues de l'ancienneté
 contrat salarié . convention collective . banque . semestres complets avant 2002:
@@ -82,8 +93,7 @@ contrat salarié . convention collective . banque . résultat conventionnel 1:
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . date d'entrée <= 31/12/1999
-      - licenciement économique = 'Non'
-      - licenciement disciplinaire = 'Non'
+      - situation par défaut
       - catégorie professionnelle = 'Non-cadres'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -110,8 +120,7 @@ contrat salarié . convention collective . banque . résultat conventionnel 2:
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . date d'entrée <= 31/12/1999
-      - licenciement économique = 'Non'
-      - licenciement disciplinaire = 'Non'
+      - situation par défaut
       - catégorie professionnelle = 'Cadres'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -138,8 +147,7 @@ contrat salarié . convention collective . banque . résultat conventionnel 3:
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . date d'entrée >= 01/01/2000
-      - licenciement économique = 'Non'
-      - licenciement disciplinaire = 'Non'
+      - situation par défaut
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur:
@@ -334,3 +342,10 @@ contrat salarié . convention collective . banque . résultat conventionnel avec
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 24 * Sref
+
+contrat salarié . convention collective . banque . notification:
+  type: notification
+  description: Si au cours des 12 derniers mois le salarié a perçu des primes, des éléments variables ou des avantages en nature, le montant de l’indemnité de licenciement pourrait être moins élevé. En effet, la convention collective prévoit que l’indemnité de licenciement doit être calculée sur la base du salaire sans ces éléments de rémunération alors que le simulateur les intègre.
+  valeur: oui
+  cdtn:
+    affichage: conventionnel

@@ -84,7 +84,6 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
     formule:
       formula: ($formule) + (10% * ($formule))
 
-
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . majoration licenciement économique:
   applicable si: licenciement économique = 'Oui'
   valeur: 0
