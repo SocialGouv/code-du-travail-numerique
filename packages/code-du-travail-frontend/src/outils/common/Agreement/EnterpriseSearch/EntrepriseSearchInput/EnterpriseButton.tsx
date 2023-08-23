@@ -41,7 +41,12 @@ export function EnterpriseButton({
   };
   const showTitleWithHighlight = label === simpleLabel;
   return (
-    <ItemButton isFirst={isFirst} onClick={clickHandler}>
+    <ItemButton
+      isFirst={isFirst}
+      onClick={clickHandler}
+      autoFocus={isFirst}
+      tabIndex={1}
+    >
       {showTitleWithHighlight ? (
         <Title fontSize="hsmall" fontWeight="600">
           {highlightLabel}
