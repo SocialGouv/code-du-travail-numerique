@@ -546,7 +546,7 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "14| Ouvriers, collaborateurs et tehniciens",
+        "catégorie professionnelle": "14| Ouvriers et collaborateurs",
         "coefficient": "1| Inférieur à 160"
       },
       "type": "préavis de Démission",
@@ -560,7 +560,7 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "14| Ouvriers, collaborateurs et tehniciens",
+        "catégorie professionnelle": "14| Ouvriers et collaborateurs",
         "coefficient": "2| Entre 160 (inclus) et 175"
       },
       "type": "préavis de Démission",
@@ -574,7 +574,7 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "14| Ouvriers, collaborateurs et tehniciens",
+        "catégorie professionnelle": "14| Ouvriers et collaborateurs",
         "coefficient": "8| 190 et plus"
       },
       "type": "préavis de Démission",
