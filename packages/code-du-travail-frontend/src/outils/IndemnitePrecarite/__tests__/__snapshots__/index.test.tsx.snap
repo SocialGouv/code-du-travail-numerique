@@ -75,7 +75,6 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
       >
         <span
           class="sc-kqGoIF hohPkr"
-          role="heading"
         >
           Étape
           <span
