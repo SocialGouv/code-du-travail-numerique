@@ -19,6 +19,7 @@ type Props = {
   tooltip?: Tooltip;
   dataTestidSalaries?: string;
   noPrime?: boolean;
+  autoFocus?: boolean;
 };
 
 export const SalaireTempsPlein = ({
@@ -31,6 +32,7 @@ export const SalaireTempsPlein = ({
   tooltip,
   dataTestidSalaries,
   noPrime,
+  autoFocus = false,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
@@ -98,17 +100,17 @@ export const SalaireTempsPlein = ({
         </Caption>
         <thead>
           <tr>
-            <Th>Mois</Th>
-            <Th>Salaire mensuel brut</Th>
-            {!noPrime && <Th>Dont primes</Th>}
+            <Th scope="col">Mois</Th>
+            <Th scope="col">Salaire mensuel brut</Th>
+            {!noPrime && <Th scope="col">Dont primes</Th>}
           </tr>
         </thead>
         <tbody>
           {salaryPeriods.map((sPeriod, index) => (
             <tr key={sPeriod.month + index}>
-              <td>
+              <th scope="row">
                 <label htmlFor={`salary.${index}`}>{sPeriod.month}</label>
-              </td>
+              </th>
               <td>
                 <Input
                   id={`salary.${index}`}
@@ -124,6 +126,8 @@ export const SalaireTempsPlein = ({
                   onChange={(e) => onChangeSalaries(index, e.target.value)}
                   onBlur={() => setIsFirstEdit(false)}
                   data-testid={dataTestidSalaries ?? "salary-input"}
+                  autoFocus={autoFocus ? index === 0 : false}
+                  tabIndex={1}
                 />
                 {errorsSalaries[`${index}`] && (
                   <ErrorWrapper>
@@ -153,6 +157,7 @@ export const SalaireTempsPlein = ({
                           ? "prime-" + dataTestidSalaries
                           : "prime-input"
                       }
+                      tabIndex={1}
                     />
                     {errorsPrimes[`${index}`] && (
                       <ErrorWrapper>
@@ -190,6 +195,12 @@ const Table = styled.table`
 
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
+  }
+
+  tbody {
+    th {
+      font-weight: normal;
+    }
   }
 `;
 

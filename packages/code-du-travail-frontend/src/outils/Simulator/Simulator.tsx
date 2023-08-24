@@ -23,6 +23,7 @@ type Props<FormState, StepName extends string> = {
   debug: JSX.Element;
   onFormValuesChange: (values: FormState) => void;
   onStepChange: (oldStep: Step<StepName>, newStep: Step<StepName>) => void;
+  hasErrorPublicodes?: boolean;
 };
 
 const SimulatorContent = <FormState, StepName extends string>({
@@ -34,6 +35,7 @@ const SimulatorContent = <FormState, StepName extends string>({
   debug,
   onFormValuesChange,
   onStepChange,
+  hasErrorPublicodes,
 }: Props<FormState, StepName>): JSX.Element => {
   const store = useContext(SimulatorContext);
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
@@ -141,6 +143,7 @@ const SimulatorContent = <FormState, StepName extends string>({
         },
         legend: currentStep.options?.isForm ? currentStep.label : undefined,
       }}
+      hasErrorPublicodes={hasErrorPublicodes}
     />
   );
 };

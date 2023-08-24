@@ -42,7 +42,7 @@ const ShowAgreements = ({
               key={agreement.id}
               type="radio"
               name={AGREEMENT_ID_NAME}
-              value={`${agreement.id}`}
+              value={agreement.id}
               validate={required}
             >
               {(props) => (
@@ -61,11 +61,11 @@ const ShowAgreements = ({
         })}
         <OnChange name={AGREEMENT_ID_NAME}>
           {(values) => {
-            const agreement = enterprise?.conventions?.find(
-              (agreement) => agreement.id === values
+            const agreementChanged = enterprise?.conventions?.find(
+              (agreement) => agreement.id.toString() === values.toString()
             );
-            setAgreement(agreement);
-            onChange(enterprise, agreement ?? null);
+            setAgreement(agreementChanged);
+            onChange(enterprise, agreementChanged ?? null);
           }}
         </OnChange>
         <ErrorField name={AGREEMENT_ID_NAME} />

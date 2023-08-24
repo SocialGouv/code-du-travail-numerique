@@ -27,6 +27,7 @@ describe("Ancienneté store", () => {
           isStepHidden: false,
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
+          informationError: false,
         }
       );
       expect(result.isValid).toBe(false);
@@ -64,6 +65,7 @@ describe("Ancienneté store", () => {
           isStepHidden: false,
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
+          informationError: false,
         }
       );
       expect(result.isValid).toBe(false);
@@ -102,6 +104,7 @@ describe("Ancienneté store", () => {
           isStepHidden: false,
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
+          informationError: false,
         }
       );
       expect(result.isValid).toBe(false);
@@ -140,6 +143,7 @@ describe("Ancienneté store", () => {
           isStepHidden: false,
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
+          informationError: false,
         }
       );
       expect(result.isValid).toBe(true);
@@ -178,6 +182,7 @@ describe("Ancienneté store", () => {
           isStepHidden: false,
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
+          informationError: false,
         }
       );
       expect(result.isValid).toBe(false);
@@ -216,6 +221,7 @@ describe("Ancienneté store", () => {
           isStepHidden: false,
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
+          informationError: false,
         }
       );
       expect(result.isValid).toBe(false);
@@ -253,6 +259,7 @@ describe("Ancienneté store", () => {
           isStepHidden: false,
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
+          informationError: false,
         }
       );
       expect(result.isValid).toBe(true);

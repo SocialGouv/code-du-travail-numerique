@@ -11,7 +11,7 @@ function addSlashIfNeeded(newValue) {
   return newValue;
 }
 
-export const InputDate = ({ value, onChange, invalid, ...props }) => {
+export const InputDate = ({ value, onChange, invalid, ref, ...props }) => {
   const [date, setDate] = React.useState(value ?? "");
   const [isValid, setIsValid] = React.useState(true);
   const [isFocus, setIsFocus] = React.useState(false);
@@ -104,6 +104,7 @@ export const InputDate = ({ value, onChange, invalid, ...props }) => {
         onFocus={() => setIsFocus(true)}
         onBlur={onBlur}
         {...props}
+        ref={ref}
       />
       <StyledDiv>
         <StyledDateWrapper>

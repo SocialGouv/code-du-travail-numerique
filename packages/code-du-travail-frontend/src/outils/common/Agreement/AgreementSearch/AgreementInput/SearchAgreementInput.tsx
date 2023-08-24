@@ -46,7 +46,7 @@ export const SearchAgreementInput = ({
     event.preventDefault();
     onSelectAgreement(data.suggestion);
   };
-  const inputProps = {
+  const inputProps: any = {
     "aria-label": "agreement-search-label",
     id: "agreement-search",
     name: "agreement-search",
@@ -56,6 +56,8 @@ export const SearchAgreementInput = ({
     type: "search",
     value: query,
     "data-testid": "agreement-search-input",
+    tabIndex: "1",
+    autoFocus: true,
   };
   return (
     <>
@@ -87,7 +89,12 @@ export const SearchAgreementInput = ({
         alwaysRenderSuggestions={false}
         onSuggestionSelected={onSelect}
         onSuggestionsFetchRequested={onSearch}
-        onSuggestionsClearRequested={onClear}
+        shouldRenderSuggestions={(value, reason) => {
+          if (reason === "escape-pressed") {
+            onClear();
+          }
+          return true;
+        }}
         getSuggestionValue={(suggestion) => suggestion}
         renderSuggestion={renderSuggestion}
         renderSuggestionsContainer={renderSuggestionsContainer}

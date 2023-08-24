@@ -83,7 +83,7 @@ const AgreementNoResult = ({ onUserAction, state }: Props): JSX.Element => {
             )}
           >
             <Title stripe="none" as="h3">
-              Vous ne trouvez pas convention collective&nbsp;?
+              Vous ne trouvez pas votre convention collective&nbsp;?
             </Title>
             <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>
             <ul>
@@ -108,7 +108,7 @@ const AgreementNoResult = ({ onUserAction, state }: Props): JSX.Element => {
               <br />
               <Link
                 passHref
-                href={`/${SOURCES.TOOLS}/convention-collective#entreprise`}
+                href={`/${SOURCES.TOOLS}/convention-collective/entreprise`}
                 legacyBehavior
               >
                 <Button as="a" variant="link" narrow small>

@@ -77,6 +77,8 @@ describe("Formule indemnité licenciement pour la CC 2120", () => {
               seniorityRight,
             "contrat salarié . indemnité de licenciement . date d'entrée":
               entryDate,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
           },

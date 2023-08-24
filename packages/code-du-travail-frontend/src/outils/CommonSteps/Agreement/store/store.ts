@@ -25,6 +25,7 @@ const initialState: Omit<
   input: {
     isAgreementSupportedIndemniteLicenciement: false,
     hasNoEnterpriseSelected: false,
+    informationError: false,
   },
   error: {},
   hasBeenSubmit: false,
@@ -66,7 +67,17 @@ const createCommonAgreementStore: StoreSlicePublicode<
                   }
                 )
               );
-              get().informationsFunction.generatePublicodesQuestions();
+              const isOk =
+                get().informationsFunction.generatePublicodesQuestions();
+              set(
+                produce(
+                  (state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+                    state.agreementData.input.informationError = isOk
+                      ? false
+                      : true;
+                  }
+                )
+              );
             }
           }
         }
@@ -86,7 +97,12 @@ const createCommonAgreementStore: StoreSlicePublicode<
         })
       );
       applyGenericValidation(get, set, "route", value);
-      get().informationsFunction.generatePublicodesQuestions();
+      const isOk = get().informationsFunction.generatePublicodesQuestions();
+      set(
+        produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+          state.agreementData.input.informationError = isOk ? false : true;
+        })
+      );
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
@@ -108,7 +124,12 @@ const createCommonAgreementStore: StoreSlicePublicode<
           })
         );
       }
-      get().informationsFunction.generatePublicodesQuestions();
+      const isOk = get().informationsFunction.generatePublicodesQuestions();
+      set(
+        produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+          state.agreementData.input.informationError = isOk ? false : true;
+        })
+      );
     },
     setHasNoEnterpriseSelected: (value) => {
       applyGenericValidation(
@@ -120,6 +141,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
     },
     onNextStep: () => {
       const input = get().agreementData.input;
+      const error = get().agreementData.error;
       const { isValid, errorState } = validateStep(input);
       const { route, agreement, enterprise } = input;
       if (isValid && route) {

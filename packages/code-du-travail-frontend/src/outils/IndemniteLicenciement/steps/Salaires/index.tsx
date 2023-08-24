@@ -39,7 +39,7 @@ const StepSalaires = () => {
     arretTravail,
     showHasTempsPartiel,
     initShowHasTempsPartiel,
-    isAgreementSupported
+    isAgreementSupported,
   } = useIndemniteLicenciementStore(store, (state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
@@ -58,7 +58,8 @@ const StepSalaires = () => {
     arretTravail: state.contratTravailData.input.arretTravail,
     showHasTempsPartiel: state.salairesData.input.showHasTempsPartiel,
     initShowHasTempsPartiel: state.salairesFunction.initShowHasTempsPartiel,
-    isAgreementSupported: state.agreementData.input.isAgreementSupportedIndemniteLicenciement
+    isAgreementSupported:
+      state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
   }));
 
   React.useEffect(() => {
@@ -88,6 +89,7 @@ const StepSalaires = () => {
           onChangeSelectedOption={onChangeHasTempsPartiel}
           error={errorHasTempsPartiel}
           showRequired
+          autoFocus={showHasTempsPartiel}
         />
       )}
 
@@ -113,6 +115,7 @@ const StepSalaires = () => {
             onChangeSelectedOption={onChangeHasSameSalary}
             error={errorHasSameSalary}
             showRequired
+            autoFocus={hasTempsPartiel === "non"}
           />
           {hasSameSalary === "oui" && (
             <TextQuestion
@@ -126,6 +129,7 @@ const StepSalaires = () => {
               showRequired
               icon={icons.Euro}
               dataTestId={"same-salary-value"}
+              autoFocus={hasSameSalary === "oui"}
             />
           )}
           {hasSameSalary === "non" && (
@@ -139,10 +143,12 @@ const StepSalaires = () => {
               onSalariesChange={onSalariesChange}
               salaryPeriods={salaryPeriods}
               error={errorSalaryPeriods}
+              autoFocus={hasSameSalary === "non"}
             />
           )}
           {(hasSameSalary === "oui" || hasSameSalary === "non") &&
-            agreement && isAgreementSupported && (
+            agreement &&
+            isAgreementSupported && (
               <AgreementsInjector
                 idcc={getSupportedAgreement(agreement.num)}
                 step={IndemniteLicenciementStepName.Salaires}

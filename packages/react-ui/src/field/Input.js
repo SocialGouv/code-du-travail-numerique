@@ -9,6 +9,7 @@ export const Input = ({
   text,
   className,
   updateOnScrollDisabled,
+  ref,
   ...props
 }) => {
   const onWheel = updateOnScrollDisabled
@@ -21,6 +22,7 @@ export const Input = ({
         text={text}
         {...onWheel}
         {...props}
+        ref={ref}
       />
       {Icon && (
         <StyledIcon text={text}>
@@ -45,6 +47,7 @@ export const DefaultInputProps = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
+  ref: PropTypes.any,
   text: PropTypes.string,
   title: PropTypes.string,
   type: PropTypes.string,

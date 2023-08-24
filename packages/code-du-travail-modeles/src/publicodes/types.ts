@@ -44,6 +44,7 @@ export interface Rule extends PubliRule {
 
 export type NotificationAffichage =
   | "conventionnel"
+  | "default"
   | "légal et conventionnel"
   | "légal";
 

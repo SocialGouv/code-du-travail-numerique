@@ -25,7 +25,6 @@ export default function Eligible() {
   const {
     publicodesLegalResult,
     publicodesAgreementResult,
-    getPublicodesResult,
     typeContratTravail,
     licenciementInaptitude,
     licenciementFauteGrave,
@@ -59,7 +58,6 @@ export default function Eligible() {
   } = useIndemniteLicenciementStore(store, (state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
-    getPublicodesResult: state.resultFunction.getPublicodesResult,
     typeContratTravail: state.contratTravailData.input.typeContratTravail,
     licenciementInaptitude:
       state.contratTravailData.input.licenciementInaptitude,
@@ -99,10 +97,6 @@ export default function Eligible() {
     isParentalNoticeHidden: state.resultData.input.isParentalNoticeHidden,
   }));
 
-  React.useEffect(() => {
-    getPublicodesResult();
-  }, []);
-
   return (
     <>
       <Result
@@ -114,7 +108,7 @@ export default function Eligible() {
         notifications={notifications}
         resultMessage={getResultMessage(informationData)}
       />
-      <ShowDetails>
+      <ShowDetails autoFocus>
         <FilledElements
           showHasTempsPartiel={showHasTempsPartiel}
           absencesPeriods={absencePeriods}

@@ -81,6 +81,7 @@ export const SearchEnterpriseInput = ({
             autoComplete="off"
             data-testid="agreement-company-search-input"
             disabled={isDisabled}
+            tabIndex={1}
           />
         </Box>
         <Box>
@@ -104,6 +105,7 @@ export const SearchEnterpriseInput = ({
               autoComplete="off"
               data-testid="agreement-postal-code-search-input"
               disabled={isDisabled}
+              tabIndex={1}
             />
             <SubmitIcon
               type="submit"
@@ -115,6 +117,7 @@ export const SearchEnterpriseInput = ({
               variant="secondary"
               data-testid="agreement-company-search-button"
               disabled={isDisabled}
+              tabIndex={1}
             >
               <MobileOnly>Rechercher</MobileOnly>
               <StyledSearchIcon />

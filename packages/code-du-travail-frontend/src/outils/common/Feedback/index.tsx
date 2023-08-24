@@ -16,12 +16,7 @@ export const Feedback = (): JSX.Element => {
   return !closed ? (
     <>
       {!status && (
-        <IntroContainer
-          onClick={() => {
-            setStatus("questionnaire");
-          }}
-          variant="main"
-        >
+        <IntroContainer variant="main">
           <StyledCloseIcon
             onClick={() => setClosed(true)}
             data-testid="feedbackCloseButton"
@@ -95,5 +90,5 @@ const StyledCloseIcon = styled(icons.Close)`
   right: 8px;
   width: 24px;
   cursor: pointer;
-  margin: 3px;
+  z-index: 10;
 `;

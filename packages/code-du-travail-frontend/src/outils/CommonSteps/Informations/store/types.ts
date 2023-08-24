@@ -18,11 +18,13 @@ export type CommonInformationsStoreInput = {
   isStepSalaryHidden: boolean;
   hasNoMissingQuestions: boolean;
   blockingNotification?: string;
+  informationError: boolean;
 };
 
 export type CommonInformationsStoreError = {
   errorInformations: Record<string, string>;
   errorEligibility?: string;
+  errorPublicodes?: string;
 };
 
 export type CommonInformationsStoreData = {
@@ -38,7 +40,7 @@ export type CommonInformationsStoreFn = {
     value: string,
     type: RuleType | undefined
   ) => void;
-  generatePublicodesQuestions: () => void;
+  generatePublicodesQuestions: () => boolean;
   onNextStep: () => ValidationResponse;
   onSetStepHidden: () => void;
 };

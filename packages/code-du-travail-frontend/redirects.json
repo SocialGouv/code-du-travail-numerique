@@ -148,5 +148,15 @@
     "source": "/convention-collective/1740-:slug",
     "permanent": true,
     "destination": "/outils/convention-collective"
+  },
+  {
+    "source": "/fiche-service-public/peut-on-percevoir-lallocation-chomage-en-cas-de-demission",
+    "permanent": true,
+    "destination": "/fiche-service-public/un-salarie-peut-il-toucher-lallocation-chomage-en-cas-de-demission"
+  },
+  {
+    "source": "/fiche-service-public/regles-de-licenciement-dans-une-entreprise-en-difficulte",
+    "permanent": true,
+    "destination": "/fiche-service-public/licenciement-dans-une-entreprise-en-difficulte-quelles-sont-les-regles"
   }
 ]
