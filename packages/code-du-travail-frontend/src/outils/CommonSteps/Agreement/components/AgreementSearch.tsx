@@ -42,6 +42,7 @@ const AgreementSearch = ({
             event.preventDefault();
             onSelectAgreement(null);
           }}
+          tabIndex={1}
         >
           {selectedAgreement.shortTitle}
         </SelectedAgreement>

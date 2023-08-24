@@ -74,9 +74,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
         class="sc-iGgWBj sc-iapWAC cWzIZL kajMU"
       >
         <span
-          aria-level="2"
           class="sc-kqGoIF hohPkr"
-          role="heading"
         >
           Étape
           <span

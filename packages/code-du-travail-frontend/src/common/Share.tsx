@@ -41,6 +41,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
       >
         <Circle>
           <StyledIcon as={icons.ShareFacebook} />
+          <span className="sr-only">Facebook</span>
         </Circle>
       </StyledButton>
       <StyledLink
@@ -57,6 +58,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
       >
         <Circle>
           <StyledIcon as={icons.Mail} />
+          <span className="sr-only">Courriel</span>
         </Circle>
       </StyledLink>
       <StyledButton
@@ -75,6 +77,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
       >
         <Circle>
           <StyledIcon as={icons.ShareLinkedin} />
+          <span className="sr-only">Linkedin</span>
         </Circle>
       </StyledButton>
       <Dropdown
@@ -105,6 +108,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
           >
             <Circle>
               <StyledIcon as={icons.Share} />
+              <span className="sr-only">Partage</span>
             </Circle>
           </StyledButton>
         )}

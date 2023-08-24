@@ -28,6 +28,7 @@ export const Toast = ({ children, onRemove, timeout, variant, ...props }) => {
           small
           aria-label="Fermer"
           onClick={onRemove}
+          tabIndex={props.tabIndex}
         >
           <StyledX aria-hidden="true" variant={variant} />
         </Button>
@@ -47,6 +48,7 @@ Toast.propTypes = {
   onRemove: PropTypes.func,
   shadow: PropTypes.bool,
   squared: PropTypes.bool,
+  tabIndex: PropTypes.number,
   timeout: PropTypes.number,
   variant: PropTypes.oneOf(["primary", "secondary"]),
   wide: PropTypes.bool,

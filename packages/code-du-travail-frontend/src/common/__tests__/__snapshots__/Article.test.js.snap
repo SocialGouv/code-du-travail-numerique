@@ -37,6 +37,11 @@ exports[`<Article /> should render 1`] = `
                     fill="currentColor"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Facebook
+                </span>
               </span>
             </button>
             <a
@@ -63,6 +68,11 @@ exports[`<Article /> should render 1`] = `
                     fill="currentColor"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Courriel
+                </span>
               </span>
             </a>
             <button
@@ -84,6 +94,11 @@ exports[`<Article /> should render 1`] = `
                     fill="currentColor"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Linkedin
+                </span>
               </span>
             </button>
             <div
@@ -118,6 +133,11 @@ exports[`<Article /> should render 1`] = `
                       stroke-width="1.5"
                     />
                   </svg>
+                  <span
+                    class="sr-only"
+                  >
+                    Partage
+                  </span>
                 </span>
               </button>
             </div>

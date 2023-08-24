@@ -12,6 +12,7 @@ export const Collapse = ({
   onClickHandler,
   textProps,
   className,
+  autoFocus = false,
 }) => {
   const [active, setActive] = React.useState(false);
   const [height, setHeight] = React.useState("0px");
@@ -28,10 +29,13 @@ export const Collapse = ({
       <StyledLink
         onClick={toggleAccordion}
         aria-expanded={active}
-        tabindex="0"
         variant="naked"
         narrow
         type="button"
+        // eslint-disable-next-line jsx-a11y/no-autofocus
+        autoFocus={autoFocus}
+        // eslint-disable-next-line jsx-a11y/tabindex-no-positive
+        tabIndex={1}
       >
         <AccordionArrow aria-hidden="true" />
         <StyledText noMargin fontSize="hsmall" fontWeight="600" {...textProps}>
@@ -77,6 +81,7 @@ const StyledText = styled.span`
 `;
 
 Collapse.propTypes = {
+  autoFocus: PropTypes.boolean,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   onClickHandler: PropTypes.func,

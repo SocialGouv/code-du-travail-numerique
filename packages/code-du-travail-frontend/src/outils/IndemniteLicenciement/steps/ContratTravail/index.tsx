@@ -72,6 +72,7 @@ const StepContratTravail = (): JSX.Element => {
         onChangeSelectedOption={onChangeTypeContratTravail}
         error={errorTypeContratTravail}
         showRequired
+        autoFocus
       />
       {typeContratTravail === "cdi" && (
         <RadioQuestion
