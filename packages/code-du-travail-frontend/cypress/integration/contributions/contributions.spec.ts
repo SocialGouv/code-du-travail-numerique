@@ -12,7 +12,7 @@ describe("Contributions", () => {
     cy.get("#content h2")
       .first()
       .should("contain", "Embauche et contrat de travail");
-    cy.get("#content li").should("have.length", 41);
+    cy.get("#content li").should("have.length", 42);
     cy.get("#content li").first().click();
     cy.url().should(
       "include",
