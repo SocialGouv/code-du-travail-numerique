@@ -56,12 +56,12 @@ const StepContratTravail = (): JSX.Element => {
       <RadioQuestion
         questions={[
           {
-            label: "Contrat à durée determinée (CDD) ou contrat d’intérim",
+            label: "Contrat à durée déterminée (CDD) ou contrat d’intérim",
             value: "cdd",
             id: "cdd",
           },
           {
-            label: "Contrat à durée indeterminée (CDI)",
+            label: "Contrat à durée indéterminée (CDI)",
             value: "cdi",
             id: "cdi",
           },
