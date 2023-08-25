@@ -25,6 +25,7 @@ type Props = {
   tooltip?: Tooltip;
   subLabel?: string;
   note?: string;
+  autoFocus?: boolean;
 };
 
 export default function RadioQuestion({
@@ -38,6 +39,7 @@ export default function RadioQuestion({
   tooltip,
   subLabel,
   note,
+  autoFocus = false,
 }: Props) {
   const onChange = (value: string) => {
     onChangeSelectedOption(value);
@@ -61,6 +63,8 @@ export default function RadioQuestion({
               data-testid={`${name} - ${question.label}`}
               checked={selectedOption === question.value}
               onChange={() => onChange(question.value)}
+              tabIndex={1}
+              autoFocus={autoFocus ? index === 0 : false}
             />
           ))}
           {error && (

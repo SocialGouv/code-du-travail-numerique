@@ -43,6 +43,11 @@ exports[`<Answer /> should renders 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Facebook
+                    </span>
                   </span>
                 </button>
                 <a
@@ -69,6 +74,11 @@ exports[`<Answer /> should renders 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Courriel
+                    </span>
                   </span>
                 </a>
                 <button
@@ -90,6 +100,11 @@ exports[`<Answer /> should renders 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Linkedin
+                    </span>
                   </span>
                 </button>
                 <div
@@ -124,6 +139,11 @@ exports[`<Answer /> should renders 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
+                      <span
+                        class="sr-only"
+                      >
+                        Partage
+                      </span>
                     </span>
                   </button>
                 </div>
@@ -230,6 +250,11 @@ exports[`<Answer /> should renders 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Facebook
+              </span>
             </span>
           </button>
           <a
@@ -256,6 +281,11 @@ exports[`<Answer /> should renders 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Courriel
+              </span>
             </span>
           </a>
           <button
@@ -277,6 +307,11 @@ exports[`<Answer /> should renders 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Linkedin
+              </span>
             </span>
           </button>
           <div
@@ -311,6 +346,11 @@ exports[`<Answer /> should renders 1`] = `
                     stroke-width="1.5"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Partage
+                </span>
               </span>
             </button>
           </div>
@@ -490,6 +530,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Facebook
+                    </span>
                   </span>
                 </button>
                 <a
@@ -516,6 +561,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Courriel
+                    </span>
                   </span>
                 </a>
                 <button
@@ -537,6 +587,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Linkedin
+                    </span>
                   </span>
                 </button>
                 <div
@@ -571,6 +626,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
+                      <span
+                        class="sr-only"
+                      >
+                        Partage
+                      </span>
                     </span>
                   </button>
                 </div>
@@ -682,6 +742,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Facebook
+              </span>
             </span>
           </button>
           <a
@@ -708,6 +773,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Courriel
+              </span>
             </span>
           </a>
           <button
@@ -729,6 +799,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Linkedin
+              </span>
             </span>
           </button>
           <div
@@ -763,6 +838,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                     stroke-width="1.5"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Partage
+                </span>
               </span>
             </button>
           </div>
@@ -856,6 +936,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Facebook
+                    </span>
                   </span>
                 </button>
                 <a
@@ -882,6 +967,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Courriel
+                    </span>
                   </span>
                 </a>
                 <button
@@ -903,6 +993,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Linkedin
+                    </span>
                   </span>
                 </button>
                 <div
@@ -937,6 +1032,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
+                      <span
+                        class="sr-only"
+                      >
+                        Partage
+                      </span>
                     </span>
                   </button>
                 </div>
@@ -1043,6 +1143,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Facebook
+              </span>
             </span>
           </button>
           <a
@@ -1069,6 +1174,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Courriel
+              </span>
             </span>
           </a>
           <button
@@ -1090,6 +1200,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Linkedin
+              </span>
             </span>
           </button>
           <div
@@ -1124,6 +1239,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
                     stroke-width="1.5"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Partage
+                </span>
               </span>
             </button>
           </div>
@@ -1217,6 +1337,11 @@ exports[`<Answer /> should renders related content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Facebook
+                    </span>
                   </span>
                 </button>
                 <a
@@ -1243,6 +1368,11 @@ exports[`<Answer /> should renders related content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Courriel
+                    </span>
                   </span>
                 </a>
                 <button
@@ -1264,6 +1394,11 @@ exports[`<Answer /> should renders related content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Linkedin
+                    </span>
                   </span>
                 </button>
                 <div
@@ -1298,6 +1433,11 @@ exports[`<Answer /> should renders related content 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
+                      <span
+                        class="sr-only"
+                      >
+                        Partage
+                      </span>
                     </span>
                   </button>
                 </div>
@@ -1401,6 +1541,11 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Facebook
+              </span>
             </span>
           </button>
           <a
@@ -1427,6 +1572,11 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Courriel
+              </span>
             </span>
           </a>
           <button
@@ -1448,6 +1598,11 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Linkedin
+              </span>
             </span>
           </button>
           <div
@@ -1482,6 +1637,11 @@ exports[`<Answer /> should renders related content 1`] = `
                     stroke-width="1.5"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Partage
+                </span>
               </span>
             </button>
           </div>
@@ -1739,6 +1899,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Facebook
+                    </span>
                   </span>
                 </button>
                 <a
@@ -1765,6 +1930,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Courriel
+                    </span>
                   </span>
                 </a>
                 <button
@@ -1786,6 +1956,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Linkedin
+                    </span>
                   </span>
                 </button>
                 <div
@@ -1820,6 +1995,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
+                      <span
+                        class="sr-only"
+                      >
+                        Partage
+                      </span>
                     </span>
                   </button>
                 </div>
@@ -1927,6 +2107,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Facebook
+              </span>
             </span>
           </button>
           <a
@@ -1953,6 +2138,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Courriel
+              </span>
             </span>
           </a>
           <button
@@ -1974,6 +2164,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Linkedin
+              </span>
             </span>
           </button>
           <div
@@ -2008,6 +2203,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
                     stroke-width="1.5"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Partage
+                </span>
               </span>
             </button>
           </div>
@@ -2101,6 +2301,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Facebook
+                    </span>
                   </span>
                 </button>
                 <a
@@ -2127,6 +2332,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Courriel
+                    </span>
                   </span>
                 </a>
                 <button
@@ -2148,6 +2358,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Linkedin
+                    </span>
                   </span>
                 </button>
                 <div
@@ -2182,6 +2397,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                           stroke-width="1.5"
                         />
                       </svg>
+                      <span
+                        class="sr-only"
+                      >
+                        Partage
+                      </span>
                     </span>
                   </button>
                 </div>
@@ -2289,6 +2509,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Facebook
+              </span>
             </span>
           </button>
           <a
@@ -2315,6 +2540,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Courriel
+              </span>
             </span>
           </a>
           <button
@@ -2336,6 +2566,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Linkedin
+              </span>
             </span>
           </button>
           <div
@@ -2370,6 +2605,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                     stroke-width="1.5"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Partage
+                </span>
               </span>
             </button>
           </div>
@@ -2463,6 +2703,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Facebook
+                    </span>
                   </span>
                 </button>
                 <a
@@ -2489,6 +2734,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Courriel
+                    </span>
                   </span>
                 </a>
                 <button
@@ -2510,6 +2760,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Linkedin
+                    </span>
                   </span>
                 </button>
                 <div
@@ -2544,6 +2799,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
+                      <span
+                        class="sr-only"
+                      >
+                        Partage
+                      </span>
                     </span>
                   </button>
                 </div>
@@ -2652,6 +2912,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Facebook
+              </span>
             </span>
           </button>
           <a
@@ -2678,6 +2943,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Courriel
+              </span>
             </span>
           </a>
           <button
@@ -2699,6 +2969,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Linkedin
+              </span>
             </span>
           </button>
           <div
@@ -2733,6 +3008,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                     stroke-width="1.5"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Partage
+                </span>
               </span>
             </button>
           </div>
@@ -2826,6 +3106,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Facebook
+                    </span>
                   </span>
                 </button>
                 <a
@@ -2852,6 +3137,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Courriel
+                    </span>
                   </span>
                 </a>
                 <button
@@ -2873,6 +3163,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                         fill="currentColor"
                       />
                     </svg>
+                    <span
+                      class="sr-only"
+                    >
+                      Linkedin
+                    </span>
                   </span>
                 </button>
                 <div
@@ -2907,6 +3202,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                           stroke-width="1.5"
                         />
                       </svg>
+                      <span
+                        class="sr-only"
+                      >
+                        Partage
+                      </span>
                     </span>
                   </button>
                 </div>
@@ -3010,6 +3310,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Facebook
+              </span>
             </span>
           </button>
           <a
@@ -3036,6 +3341,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Courriel
+              </span>
             </span>
           </a>
           <button
@@ -3057,6 +3367,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   fill="currentColor"
                 />
               </svg>
+              <span
+                class="sr-only"
+              >
+                Linkedin
+              </span>
             </span>
           </button>
           <div
@@ -3091,6 +3406,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                     stroke-width="1.5"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Partage
+                </span>
               </span>
             </button>
           </div>

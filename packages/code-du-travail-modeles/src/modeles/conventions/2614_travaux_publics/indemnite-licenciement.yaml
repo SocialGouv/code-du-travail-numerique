@@ -184,3 +184,10 @@ contrat salarié . convention collective . travaux publics . résultat conventio
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 11 * Sref
+
+contrat salarié . convention collective . travaux publics . notification:
+  type: notification
+  description: Si le salarié a perçu une prime de vacances ou une indemnité de congés payés au cours des 12 mois précédant la notification du licenciement, le montant de l’indemnité de licenciement pourrait être moins élevé. En effet, la convention collective prévoit que l’indemnité doit être calculée sur la base du salaire sans ces éléments de rémunération, alors que le simulateur les intègre.
+  valeur: oui
+  cdtn:
+    affichage: conventionnel

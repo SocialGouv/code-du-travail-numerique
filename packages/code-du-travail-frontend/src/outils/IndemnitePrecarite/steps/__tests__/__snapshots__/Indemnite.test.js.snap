@@ -22,6 +22,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     <button
       aria-expanded="false"
       class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
+      tabindex="1"
       type="button"
     >
       <svg
@@ -467,6 +468,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     <button
       aria-expanded="false"
       class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
+      tabindex="1"
       type="button"
     >
       <svg
@@ -905,6 +907,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     <button
       aria-expanded="false"
       class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
+      tabindex="1"
       type="button"
     >
       <svg
@@ -1353,6 +1356,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     <button
       aria-expanded="false"
       class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
+      tabindex="1"
       type="button"
     >
       <svg
@@ -1791,6 +1795,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     <button
       aria-expanded="false"
       class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
+      tabindex="1"
       type="button"
     >
       <svg

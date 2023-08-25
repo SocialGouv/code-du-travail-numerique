@@ -6,9 +6,10 @@ import { MatomoBaseEvent, MatomoSimulatorEvent } from "../../lib";
 
 type Props = {
   children: React.ReactNode;
+  autoFocus?: boolean;
 };
 
-const ShowDetails = ({ children }: Props): JSX.Element => {
+const ShowDetails = ({ children, autoFocus = false }: Props): JSX.Element => {
   const trackClick = () =>
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
@@ -17,7 +18,11 @@ const ShowDetails = ({ children }: Props): JSX.Element => {
     ]);
 
   return (
-    <Collapse onClickHandler={trackClick} title={"Voir le détail du calcul"}>
+    <Collapse
+      onClickHandler={trackClick}
+      title={"Voir le détail du calcul"}
+      autoFocus={autoFocus}
+    >
       {children}
     </Collapse>
   );

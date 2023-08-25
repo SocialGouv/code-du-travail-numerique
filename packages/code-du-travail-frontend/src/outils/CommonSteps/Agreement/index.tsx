@@ -85,6 +85,7 @@ function AgreementStep({
             </p>
           ),
         }}
+        autoFocus
       />
       {selectedRoute === "not-selected" && <ShowAlert route="not-selected" />}
 

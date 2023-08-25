@@ -17,6 +17,7 @@ type Props = {
   error?: string;
   onChangeSelectedOption: (value: string) => void;
   selectedOption: string | undefined;
+  autoFocus?: boolean;
 };
 
 const SelectQuestion = ({
@@ -31,6 +32,7 @@ const SelectQuestion = ({
   showRequired,
   onChangeSelectedOption,
   selectedOption,
+  autoFocus = false,
 }: Props): JSX.Element => {
   const [optionsArray, setOptionsArray] = React.useState<[string, string][]>(
     []
@@ -66,6 +68,8 @@ const SelectQuestion = ({
         onChange={(v) => onChange(v.target.value)}
         value={value}
         data-testid={name}
+        tabIndex={1}
+        autoFocus={autoFocus}
       >
         <option disabled value="">
           ...

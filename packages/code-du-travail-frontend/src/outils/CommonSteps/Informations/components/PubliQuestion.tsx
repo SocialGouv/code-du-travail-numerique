@@ -19,6 +19,7 @@ interface Props {
   onChange: (value: unknown) => void;
   error?: string;
   alertError?: string;
+  autoFocus?: boolean;
 }
 
 const PubliQuestion: React.FC<Props> = ({
@@ -28,6 +29,7 @@ const PubliQuestion: React.FC<Props> = ({
   value,
   onChange,
   error,
+  autoFocus = false,
 }) => {
   const [randomId] = React.useState(
     // to avoid collision with other components for YesNoQuestion
@@ -61,6 +63,7 @@ const PubliQuestion: React.FC<Props> = ({
           tooltip={tooltip}
           showRequired
           subLabel={cdtn.precision}
+          autoFocus={autoFocus}
         />
       );
     case RuleType.OuiNon:
@@ -86,6 +89,7 @@ const PubliQuestion: React.FC<Props> = ({
           error={error}
           showRequired
           subLabel={cdtn.precision}
+          autoFocus={autoFocus}
         />
       );
     case RuleType.Montant:
@@ -102,6 +106,7 @@ const PubliQuestion: React.FC<Props> = ({
           icon={unité === "€" ? icons.Euro : undefined}
           subLabel={cdtn.precision}
           dataTestId={name}
+          autoFocus={autoFocus}
         />
       );
     case RuleType.Date:
@@ -117,6 +122,7 @@ const PubliQuestion: React.FC<Props> = ({
           placeholder={"jj/mm/aaaa"}
           showRequired
           dataTestId={name}
+          autoFocus={autoFocus}
         />
       );
     default:
@@ -133,6 +139,7 @@ const PubliQuestion: React.FC<Props> = ({
           showRequired
           subLabel={cdtn?.precision}
           dataTestId={name}
+          autoFocus={autoFocus}
         />
       );
   }
