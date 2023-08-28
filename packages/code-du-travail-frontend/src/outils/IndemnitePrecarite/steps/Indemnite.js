@@ -72,9 +72,21 @@ function StepIndemnite({ form }) {
       }
       bonusAltName = situation.bonusLabel || bonusAltName;
 
-      legalRefs = extractRefs(
-        idcc !== 0 ? [situation, situationCdt] : [situationCdt]
-      );
+      let refs;
+      switch (idcc) {
+        case 0:
+          refs = [situationCdt];
+          break;
+        case 1486:
+          if (criteria.cddType === "Enquêteurs vacataires") {
+            refs = [situation];
+            break;
+          }
+        default:
+          refs = [situation, situationCdt];
+      }
+
+      legalRefs = extractRefs(refs);
 
       break;
     }
