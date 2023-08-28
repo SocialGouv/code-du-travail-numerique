@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.107.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.106.0...v4.107.0) (2023-08-25)
+
+### Features
+
+- 5301 quick win accessibilité 2023 ([#5328](https://github.com/SocialGouv/code-du-travail-numerique/issues/5328)) ([e8b7e41](https://github.com/SocialGouv/code-du-travail-numerique/commit/e8b7e419c21948855d2929aaf12341e75134fe3e))
+
 # [4.106.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.105.1...v4.106.0) (2023-08-09)
 
 ### Features
