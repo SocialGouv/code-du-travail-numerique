@@ -1,10 +1,10 @@
 describe("Outil - Indemnité de licenciement", () => {
-  it("Calcul de l'ndemnité de licenciement", () => {
+  it("Calcul de l'indemnité de licenciement", () => {
     cy.visit("/outils/indemnite-licenciement");
     cy.get("h1").should("have.text", "Calculer l'indemnité de licenciement");
     cy.contains("Commencer").click();
 
-    cy.contains("Contrat à durée indeterminé (CDI)").click();
+    cy.contains("Contrat à durée indéterminée (CDI)").click();
     cy.get('label:contains("Non")').first().click();
     cy.get('label:contains("Non")').eq(1).click();
     cy.get('label:contains("Non")').eq(2).click();
