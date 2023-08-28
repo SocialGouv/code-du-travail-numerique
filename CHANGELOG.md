@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.107.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.106.0...v4.107.0) (2023-08-25)
+
+### Bug Fixes
+
+- bloc cc non traité qui ne s'affiche pas ([#5314](https://github.com/SocialGouv/code-du-travail-numerique/issues/5314)) ([519f73e](https://github.com/SocialGouv/code-du-travail-numerique/commit/519f73e9b209b94888d57e3573c129fc9e4142d1))
+- bug ouverture consulter notre aide ([#5331](https://github.com/SocialGouv/code-du-travail-numerique/issues/5331)) ([f321469](https://github.com/SocialGouv/code-du-travail-numerique/commit/f3214699b1aa96574930551ffb434db7e71e9841))
+- **e2e:** set number of li in contributions ([c85b7ae](https://github.com/SocialGouv/code-du-travail-numerique/commit/c85b7ae95c74b4e8ec51f488a8035b17423737cb))
+- **errors:** sentry error on publicodes ([#5304](https://github.com/SocialGouv/code-du-travail-numerique/issues/5304)) ([0a6ae69](https://github.com/SocialGouv/code-du-travail-numerique/commit/0a6ae696d5a25bf89594bcfd9aa0035642740855))
+- **indemnite-licenciement:** retour pour la cc 2120 ([#5309](https://github.com/SocialGouv/code-du-travail-numerique/issues/5309)) ([4c4725a](https://github.com/SocialGouv/code-du-travail-numerique/commit/4c4725a71af2992d471cdf049f81ddaca06e6d81))
+
+### Features
+
+- 5301 quick win accessibilité 2023 ([#5328](https://github.com/SocialGouv/code-du-travail-numerique/issues/5328)) ([e8b7e41](https://github.com/SocialGouv/code-du-travail-numerique/commit/e8b7e419c21948855d2929aaf12341e75134fe3e))
+- Activer la CC 176 ([#5344](https://github.com/SocialGouv/code-du-travail-numerique/issues/5344)) ([81b7982](https://github.com/SocialGouv/code-du-travail-numerique/commit/81b7982d585e38a3f02711cbd6f747549dbd0c91))
+- gestion des ruptures conventionnels dans l'outils heuresRechercheEmploi ([#5337](https://github.com/SocialGouv/code-du-travail-numerique/issues/5337)) ([6ef7b88](https://github.com/SocialGouv/code-du-travail-numerique/commit/6ef7b880c9f26d41f70710e449e4df99db144100))
+- indemnite licenciement desactiver cc176 ([#5348](https://github.com/SocialGouv/code-du-travail-numerique/issues/5348)) ([a26615b](https://github.com/SocialGouv/code-du-travail-numerique/commit/a26615b06b4b8958f440276565c6202eb2974a40))
+
 # [4.106.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.105.1...v4.106.0) (2023-08-09)
 
 ### Bug Fixes
