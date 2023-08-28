@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.107.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.106.0...v4.107.0) (2023-08-25)
+
+### Bug Fixes
+
+- **errors:** sentry error on publicodes ([#5304](https://github.com/SocialGouv/code-du-travail-numerique/issues/5304)) ([0a6ae69](https://github.com/SocialGouv/code-du-travail-numerique/commit/0a6ae696d5a25bf89594bcfd9aa0035642740855))
+- **indemnite-licenciement:** retour pour la cc 2120 ([#5309](https://github.com/SocialGouv/code-du-travail-numerique/issues/5309)) ([4c4725a](https://github.com/SocialGouv/code-du-travail-numerique/commit/4c4725a71af2992d471cdf049f81ddaca06e6d81))
+
+### Features
+
+- Activer la CC 176 ([#5344](https://github.com/SocialGouv/code-du-travail-numerique/issues/5344)) ([81b7982](https://github.com/SocialGouv/code-du-travail-numerique/commit/81b7982d585e38a3f02711cbd6f747549dbd0c91))
+- indemnite licenciement desactiver cc176 ([#5348](https://github.com/SocialGouv/code-du-travail-numerique/issues/5348)) ([a26615b](https://github.com/SocialGouv/code-du-travail-numerique/commit/a26615b06b4b8958f440276565c6202eb2974a40))
+
 # [4.106.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.105.1...v4.106.0) (2023-08-09)
 
 ### Bug Fixes
