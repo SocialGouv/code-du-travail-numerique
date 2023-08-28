@@ -8,9 +8,9 @@ export const ui = {
     type: {
       alert: byText("indemnité de précarité (nouvelle fenêtre)"),
       question: byText("Quel est le type du contrat de travail ?"),
-      cdi: byTestId("typeContratTravail - Contrat à durée indeterminé (CDI)"),
+      cdi: byTestId("typeContratTravail - Contrat à durée indéterminée (CDI)"),
       cdd: byTestId(
-        "typeContratTravail - Contrat à durée determiné (CDD) ou contrat d’intérim"
+        "typeContratTravail - Contrat à durée déterminée (CDD) ou contrat d’intérim"
       ),
     },
     fauteGrave: {
