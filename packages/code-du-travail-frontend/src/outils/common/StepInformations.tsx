@@ -156,6 +156,7 @@ export function StepInformations({
                     }
                   : undefined
               }
+              autoFocus={index === 0}
             />
           )}
         </div>

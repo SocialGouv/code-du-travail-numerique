@@ -126,7 +126,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
           {situation.note}
         </SmallText>
       )}
-      <ShowDetails>
+      <ShowDetails autoFocus>
         <SectionTitle>Éléments saisis</SectionTitle>
         {recapSituation({
           "Convention collective": `${ccn?.selected?.title} (${idcc})`,

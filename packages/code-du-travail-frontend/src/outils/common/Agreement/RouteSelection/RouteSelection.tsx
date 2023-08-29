@@ -1,6 +1,6 @@
 import { InputRadio, Text, Fieldset } from "@socialgouv/cdtn-ui";
 import { FormApi } from "final-form";
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
@@ -25,6 +25,13 @@ const RouteSelection = ({
   canBeSkip = true,
 }: Props): JSX.Element => {
   const values = form.getState().values;
+  const [focused, setFocused] = useState(false);
+  useEffect(() => {
+    if (!focused) {
+      document.getElementById("agreement")?.focus();
+      setFocused(true);
+    }
+  });
   return (
     <>
       <StyledFieldset>
@@ -59,6 +66,8 @@ const RouteSelection = ({
                 id={`agreement`}
                 {...props.input}
                 checked={values.ccn?.selected ?? props.input.checked}
+                tabIndex={1}
+                autoFocus
               />
             )}
           </Field>
@@ -78,6 +87,7 @@ const RouteSelection = ({
                 }
                 id={`enterprise`}
                 {...props.input}
+                tabIndex={1}
               />
             )}
           </Field>
@@ -98,6 +108,7 @@ const RouteSelection = ({
                   }
                   id={`not-selected`}
                   {...props.input}
+                  tabIndex={1}
                 />
               )}
             </Field>

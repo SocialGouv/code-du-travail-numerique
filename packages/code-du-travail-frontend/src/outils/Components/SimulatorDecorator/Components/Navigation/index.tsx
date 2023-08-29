@@ -18,12 +18,18 @@ const Index = ({
   return (
     <StyledDiv>
       {onPrevious && (
-        <StyledButton small type="button" onClick={onPrevious} variant="flat">
+        <StyledButton
+          small
+          type="button"
+          onClick={onPrevious}
+          variant="flat"
+          tabIndex={1}
+        >
           Précédent
         </StyledButton>
       )}
       {showNext && !onPrevious && (
-        <StyledButtonReverse variant="primary">
+        <StyledButtonReverse variant="primary" tabIndex={1}>
           Commencer
           <ArrowIcon />
         </StyledButtonReverse>
@@ -33,13 +39,14 @@ const Index = ({
           disabled={hasError}
           aria-disabled={hasError}
           variant="primary"
+          tabIndex={1}
         >
           Suivant
           <ArrowIcon />
         </StyledButton>
       )}
       {onPrint && (
-        <StyledButton type="button" onClick={onPrint}>
+        <StyledButton type="button" onClick={onPrint} tabIndex={1}>
           Imprimer le résultat
         </StyledButton>
       )}

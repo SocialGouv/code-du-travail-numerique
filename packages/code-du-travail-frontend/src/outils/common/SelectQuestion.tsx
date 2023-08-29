@@ -17,6 +17,7 @@ type Props = {
   onChange?: (values?: unknown) => void;
   isTooltipOpen?: boolean;
   onSwitchTooltip?: () => void;
+  autoFocus?: boolean;
 };
 
 const SelectQuestion = ({
@@ -28,6 +29,7 @@ const SelectQuestion = ({
   onChange,
   isTooltipOpen,
   onSwitchTooltip,
+  autoFocus = false,
 }: Props): JSX.Element => {
   const [uid] = React.useState(`input-${name}`);
   const [optionsArray, setOptionsArray] = React.useState<[string, string][]>(
@@ -41,6 +43,14 @@ const SelectQuestion = ({
       setOptionsArray(options);
     }
   }, [options]);
+
+  const [focused, setFocused] = React.useState(false);
+  React.useEffect(() => {
+    if (autoFocus && !focused) {
+      document.getElementById(uid)?.focus();
+      setFocused(true);
+    }
+  });
 
   return (
     <>
@@ -62,7 +72,13 @@ const SelectQuestion = ({
                 {label}
               </Question>
               {subLabel && <SubLabel>{subLabel}</SubLabel>}
-              <StyledSelect {...input} id={uid} data-testid={name}>
+              <StyledSelect
+                {...input}
+                id={uid}
+                data-testid={name}
+                tabIndex={1}
+                autoFocus
+              >
                 <option disabled value="">
                   ...
                 </option>
