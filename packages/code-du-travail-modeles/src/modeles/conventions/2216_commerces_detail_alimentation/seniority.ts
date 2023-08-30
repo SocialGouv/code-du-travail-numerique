@@ -56,6 +56,13 @@ export class Seniority2216
           item.durationInMonth <= 12)
       ) {
         return total;
+      } else if (
+        (item.motif.key === MotifKeys.maladieNonPro &&
+          item.durationInMonth > 12) ||
+        (item.motif.key === MotifKeys.accidentTrajet &&
+          item.durationInMonth > 12)
+      ) {
+        return total + (item.durationInMonth - 12) * m.value;
       }
       return total + item.durationInMonth * m.value;
     }, 0);
