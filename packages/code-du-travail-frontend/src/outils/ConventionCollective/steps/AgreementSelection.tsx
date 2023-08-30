@@ -47,13 +47,15 @@ const AgreementSelectionStep = ({
         </strong>
       </Paragraph>
       <FlatList>
-        {enterprise.conventions.map((agreement) => (
+        {enterprise.conventions.map((agreement, index) => (
           <Li key={agreement.id}>
             {agreement.slug ? (
               <AgreementTile
                 onUserAction={onUserAction}
                 agreement={agreement}
                 isWidgetMode={isWidgetMode}
+                tabIndex="1"
+                autoFocus={index === 0}
               />
             ) : (
               <DisabledTile
@@ -72,7 +74,13 @@ const AgreementSelectionStep = ({
       </FlatList>
 
       {isWidgetMode ? (
-        <Button small type="button" onClick={onBackClick} variant="flat">
+        <Button
+          small
+          type="button"
+          onClick={onBackClick}
+          variant="flat"
+          tabIndex={1}
+        >
           Précédent
         </Button>
       ) : (
@@ -87,6 +95,7 @@ const AgreementSelectionStep = ({
             type="button"
             onClick={onBackClick}
             variant="flat"
+            tabIndex={1}
           >
             Précédent
           </Button>

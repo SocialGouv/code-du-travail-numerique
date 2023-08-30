@@ -9,9 +9,11 @@ import { useContext } from "react";
 export const Summary = ({
   responses,
   withLink,
+  tabIndex,
 }: {
   responses: PreviousResponse[];
   withLink: boolean;
+  tabIndex?: string;
 }) => {
   const store = useContext(DossierLicenciementContext);
   const toolSlug = useStore(store, (state) => state.toolSlug);
@@ -35,6 +37,7 @@ export const Summary = ({
               }}
               noButton={withLink}
               noCheck={withLink && displayableResponses.length === 1}
+              tabIndex={tabIndex}
             ></SummaryItem>
           )
         );
@@ -47,6 +50,7 @@ export const Summary = ({
             onClick={async () => {
               await router.push(`/outils/${toolSlug}`);
             }}
+            tabIndex={tabIndex}
           >
             Changer de procédure
           </Button>

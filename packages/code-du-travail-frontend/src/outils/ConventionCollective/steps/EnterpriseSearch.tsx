@@ -58,6 +58,7 @@ const EnterpriseSearchStep = ({
             type="button"
             onClick={onBackClick}
             variant="flat"
+            tabIndex={1}
           >
             Précédent
           </Button>

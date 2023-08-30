@@ -58,7 +58,7 @@ function ResultStep({ notice, detail, warning }: ResultStepProps): JSX.Element {
         type={notice.type}
         notifications={notice.notifications}
       />
-      <ShowDetails>
+      <ShowDetails autoFocus>
         <Situation
           content={detail.values}
           elements={detail.situation}

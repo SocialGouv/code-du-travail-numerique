@@ -50,7 +50,7 @@ const SelectQuestion = ({
       document.getElementById(uid)?.focus();
       setFocused(true);
     }
-  });
+  }, [autoFocus]);
 
   return (
     <>
@@ -72,13 +72,7 @@ const SelectQuestion = ({
                 {label}
               </Question>
               {subLabel && <SubLabel>{subLabel}</SubLabel>}
-              <StyledSelect
-                {...input}
-                id={uid}
-                data-testid={name}
-                tabIndex={1}
-                autoFocus
-              >
+              <StyledSelect {...input} id={uid} data-testid={name} tabIndex={1}>
                 <option disabled value="">
                   ...
                 </option>

@@ -28,7 +28,10 @@ function Salaires({ name, visible = true, onChange }) {
                     <>
                       <MontantLabel htmlFor={uid}>Montant&nbsp;:</MontantLabel>
                       <CurrencyField name={`${name}.salaire`} id={uid}>
-                        <StyledDelButton onClick={() => fields.remove(index)}>
+                        <StyledDelButton
+                          onClick={() => fields.remove(index)}
+                          tabIndex={1}
+                        >
                           Supprimer
                         </StyledDelButton>
                       </CurrencyField>
@@ -38,7 +41,10 @@ function Salaires({ name, visible = true, onChange }) {
               </Row>
             ))}
             {visible > 0 && (
-              <AddButton onClick={() => fields.push({ salaire: null })}>
+              <AddButton
+                onClick={() => fields.push({ salaire: null })}
+                tabIndex={1}
+              >
                 Ajouter un salaire
               </AddButton>
             )}

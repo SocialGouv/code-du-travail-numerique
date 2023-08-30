@@ -13,6 +13,7 @@ type Props = {
   label: string | JSX.Element;
   tooltip?: Tooltip;
   onChange?: (values?: string) => void;
+  autoFocus?: boolean;
 };
 
 const YesNoPubliQuestion = ({
@@ -20,7 +21,15 @@ const YesNoPubliQuestion = ({
   label,
   tooltip,
   onChange,
+  autoFocus = false,
 }: Props): JSX.Element => {
+  const [focused, setFocused] = React.useState(false);
+  React.useEffect(() => {
+    if (autoFocus && !focused) {
+      document.getElementById(`${name}-oui`)?.focus();
+      setFocused(true);
+    }
+  }, [autoFocus]);
   return (
     <>
       <Fieldset>
@@ -35,6 +44,8 @@ const YesNoPubliQuestion = ({
                 id={`${props.input.name}-oui`}
                 data-testid={`${props.input.name}-oui`}
                 {...props.input}
+                autoFocus={autoFocus}
+                tabIndex={1}
               />
             )}
           </Field>
@@ -45,6 +56,7 @@ const YesNoPubliQuestion = ({
                 id={`${props.input.name}-non`}
                 data-testid={`${props.input.name}-non`}
                 {...props.input}
+                tabIndex={1}
               />
             )}
           </Field>

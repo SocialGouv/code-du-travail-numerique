@@ -41,7 +41,12 @@ export const Tile = React.forwardRef(
             {subtitle && (
               <StyledSubtitle>
                 {href && !title ? (
-                  <a href={href} target={target} rel={rel}>
+                  <a
+                    href={href}
+                    target={target}
+                    rel={rel}
+                    tabIndex={props.tabIndex}
+                  >
                     {subtitle}
                   </a>
                 ) : (
@@ -52,7 +57,12 @@ export const Tile = React.forwardRef(
             {title && (
               <StyledHeading as={titleTagType}>
                 {href ? (
-                  <a href={href} target={target} rel={rel}>
+                  <a
+                    href={href}
+                    target={target}
+                    rel={rel}
+                    tabIndex={props.tabIndex}
+                  >
                     {title}
                   </a>
                 ) : (
@@ -71,6 +81,7 @@ export const Tile = React.forwardRef(
 Tile.displayName = "Tile";
 
 Tile.propTypes = {
+  autoFocus: PropTypes.bool,
   centerTitle: PropTypes.bool,
   children: PropTypes.node,
   custom: PropTypes.bool,
@@ -79,6 +90,7 @@ Tile.propTypes = {
   rel: PropTypes.string,
   striped: PropTypes.bool,
   subtitle: PropTypes.string,
+  tabIndex: PropTypes.string,
   target: PropTypes.string,
   title: PropTypes.string,
   titleTagType: PropTypes.string,

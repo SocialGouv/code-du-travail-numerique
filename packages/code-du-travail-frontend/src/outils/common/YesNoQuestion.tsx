@@ -14,6 +14,7 @@ type Props = {
   tooltip?: Tooltip;
   required?: boolean;
   onChange?: (values: unknown) => void;
+  autoFocus?: boolean;
 };
 
 const YesNoQuestion = ({
@@ -21,56 +22,69 @@ const YesNoQuestion = ({
   label,
   tooltip,
   required = true,
+  autoFocus = false,
   onChange,
   ...otherProps
-}: Props): JSX.Element => (
-  <>
-    <Question required={required} tooltip={tooltip}>
-      {label}
-    </Question>
-    <RadioContainer {...otherProps}>
-      <Field
-        type="radio"
-        parse={(value) => value === "true"}
-        name={name}
-        value={true}
-        validate={requiredBoolean}
-      >
-        {(props) => (
-          <InputRadio
-            id={`${props.input.name}-oui`}
-            data-testid={`${props.input.name}-oui`}
-            label="Oui"
-            {...props.input}
-          />
-        )}
-      </Field>
-      <Field
-        type="radio"
-        parse={(value) => value === "true"}
-        name={name}
-        value={false}
-        validate={requiredBoolean}
-      >
-        {(props) => (
-          <InputRadio
-            label="Non"
-            id={`${props.input.name}-non`}
-            data-testid={`${props.input.name}-non`}
-            {...props.input}
-          />
-        )}
-      </Field>
-    </RadioContainer>
-    <ErrorField name={name} />
-    {onChange && (
-      <OnChange name={name}>
-        {(values) => {
-          onChange(values);
-        }}
-      </OnChange>
-    )}
-  </>
-);
+}: Props): JSX.Element => {
+  const [focused, setFocused] = React.useState(false);
+  React.useEffect(() => {
+    if (autoFocus && !focused) {
+      document.getElementById(`${name}-oui`)?.focus();
+      setFocused(true);
+    }
+  }, [autoFocus]);
+  return (
+    <>
+      <Question required={required} tooltip={tooltip}>
+        {label}
+      </Question>
+      <RadioContainer {...otherProps}>
+        <Field
+          type="radio"
+          parse={(value) => value === "true"}
+          name={name}
+          value={true}
+          validate={requiredBoolean}
+        >
+          {(props) => (
+            <InputRadio
+              id={`${props.input.name}-oui`}
+              data-testid={`${props.input.name}-oui`}
+              label="Oui"
+              {...props.input}
+              tabIndex={1}
+              autoFocus={autoFocus}
+            />
+          )}
+        </Field>
+        <Field
+          type="radio"
+          parse={(value) => value === "true"}
+          name={name}
+          value={false}
+          validate={requiredBoolean}
+        >
+          {(props) => (
+            <InputRadio
+              label="Non"
+              id={`${props.input.name}-non`}
+              data-testid={`${props.input.name}-non`}
+              {...props.input}
+              tabIndex={1}
+            />
+          )}
+        </Field>
+      </RadioContainer>
+      <ErrorField name={name} />
+      {onChange && (
+        <OnChange name={name}>
+          {(values) => {
+            onChange(values);
+          }}
+        </OnChange>
+      )}
+    </>
+  );
+};
 
 export { YesNoQuestion };

@@ -44,6 +44,7 @@ const SeniorityStep = ({
           },
         }}
         onChange={onChange}
+        autoFocus
       />
       {showAccurateSeniority && (
         <TextQuestion

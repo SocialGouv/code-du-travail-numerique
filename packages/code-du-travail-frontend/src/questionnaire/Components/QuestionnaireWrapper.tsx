@@ -8,6 +8,7 @@ type QuestionnaireWrapperProps = {
   title: string;
   personnalizedTitle?: string;
   widgetMode?: boolean;
+  tabIndex?: string;
 };
 
 export const QuestionnaireWrapper = ({
@@ -16,6 +17,7 @@ export const QuestionnaireWrapper = ({
   title,
   personnalizedTitle,
   widgetMode = false,
+  tabIndex,
 }: QuestionnaireWrapperProps) => {
   const store = useRef(withStore(name)).current;
   return (
@@ -25,6 +27,7 @@ export const QuestionnaireWrapper = ({
         title={title}
         personnalizedTitle={personnalizedTitle}
         widgetMode={widgetMode}
+        tabIndex={tabIndex}
       ></Questionnaire>
     </Provider>
   );

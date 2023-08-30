@@ -11,6 +11,7 @@ type QuestionnaireProps = {
   title: string;
   personnalizedTitle?: string;
   widgetMode: boolean;
+  tabIndex?: string;
 };
 
 export const Questionnaire = ({
@@ -18,6 +19,7 @@ export const Questionnaire = ({
   title,
   personnalizedTitle,
   widgetMode,
+  tabIndex,
 }: QuestionnaireProps) => {
   const store = useContext(DossierLicenciementContext);
   const init = useStore(store, (state) => state.init);
@@ -45,8 +47,11 @@ export const Questionnaire = ({
       <Summary
         responses={slugResponses ?? previousResponses}
         withLink={!isPersonnalizedMode(slug)}
+        tabIndex={tabIndex}
       />
-      {slug === toolSlug && <Question widgetMode={widgetMode} />}
+      {slug === toolSlug && (
+        <Question widgetMode={widgetMode} tabIndex={tabIndex} />
+      )}
     </div>
   );
 };

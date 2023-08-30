@@ -105,7 +105,7 @@ function StepInfosGenerales({ form }) {
               ) {
                 return (
                   <>
-                    {pastQuestions.map(([key, answers]) => (
+                    {pastQuestions.map(([key, answers], index) => (
                       <SelectQuestion
                         key={key}
                         name={`criteria.${key}`}
@@ -133,6 +133,7 @@ function StepInfosGenerales({ form }) {
                             );
                           });
                         }}
+                        autoFocus={index === 0}
                       />
                     ))}
                     {nextQuestionKey && nextQuestionOptions && (
@@ -153,6 +154,7 @@ function StepInfosGenerales({ form }) {
                     name="criteria.cddType"
                     options={excludeContracts.concat("Autres")}
                     label={questions.cddType}
+                    autoFocus={!values.ccn?.selected}
                   />
                   {values.criteria && values.criteria.cddType === "Autres" && (
                     <StepCDD />

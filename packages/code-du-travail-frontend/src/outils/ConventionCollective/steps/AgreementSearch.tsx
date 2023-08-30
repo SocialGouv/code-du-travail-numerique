@@ -36,7 +36,14 @@ const AgreementSearchStep = ({
         passHref
         legacyBehavior
       >
-        <Button as="a" small type="button" onClick={onBackClick} variant="flat">
+        <Button
+          as="a"
+          small
+          type="button"
+          onClick={onBackClick}
+          variant="flat"
+          tabIndex={1}
+        >
           Précédent
         </Button>
       </Link>

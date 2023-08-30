@@ -9,9 +9,13 @@ import { useContext } from "react";
 export const Response = ({
   response: { text, description, info, trackingName },
   index,
+  tabIndex,
+  autoFocus = false,
 }: {
   response: QuestionnaireResponse;
   index: number;
+  tabIndex?: string;
+  autoFocus?: boolean;
 }) => {
   const store = useContext(DossierLicenciementContext);
   const answer = useStore(store, (state) => state.answer);
@@ -25,6 +29,7 @@ export const Response = ({
           onVisibilityChange={() => {
             trackClickHelp(trackingName);
           }}
+          tabIndex={tabIndex}
         >
           {info}
         </StyledInfoBulle>
@@ -42,6 +47,8 @@ export const Response = ({
           onChange={() => {
             answer(index);
           }}
+          tabIndex={tabIndex}
+          autoFocus={autoFocus}
         />
       </div>
     </ResponseWrapper>

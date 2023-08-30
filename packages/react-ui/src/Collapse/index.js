@@ -13,6 +13,7 @@ export const Collapse = ({
   textProps,
   className,
   autoFocus = false,
+  id,
 }) => {
   const [active, setActive] = React.useState(false);
   const [height, setHeight] = React.useState("0px");
@@ -36,6 +37,7 @@ export const Collapse = ({
         autoFocus={autoFocus}
         // eslint-disable-next-line jsx-a11y/tabindex-no-positive
         tabIndex={1}
+        id={id}
       >
         <AccordionArrow aria-hidden="true" />
         <StyledText noMargin fontSize="hsmall" fontWeight="600" {...textProps}>
@@ -84,6 +86,7 @@ Collapse.propTypes = {
   autoFocus: PropTypes.boolean,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  id: PropTypes.string,
   onClickHandler: PropTypes.func,
   textProps: PropTypes.object,
   title: PropTypes.string,

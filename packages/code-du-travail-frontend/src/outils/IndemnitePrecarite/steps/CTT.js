@@ -32,6 +32,7 @@ function StepCTT() {
         label="S’agit-il d’un contrat de mission-formation&nbsp;?"
         name="cttFormation"
         data-testid="cttFormation"
+        autoFocus
       />
       <Field name="cttFormation">
         {({ input }) =>

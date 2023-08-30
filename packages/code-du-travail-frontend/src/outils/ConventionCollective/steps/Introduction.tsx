@@ -30,6 +30,7 @@ const IntroductionStep = ({ onUserAction }: Props): JSX.Element => {
           action="Je la saisis"
           onClick={() => onUserAction(UserAction.SelectAgreementRoute)}
           href={`/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreement}`}
+          tabIndex={1}
         >
           <Paragraph noMargin fontWeight="700">
             Je connais
@@ -41,6 +42,7 @@ const IntroductionStep = ({ onUserAction }: Props): JSX.Element => {
           onClick={() => onUserAction(UserAction.SelectEnterpriseRoute)}
           href={`/${SOURCES.TOOLS}/convention-collective/${ScreenType.enterprise}`}
           action="Je la recherche"
+          tabIndex={1}
         >
           <Paragraph noMargin fontWeight="700">
             Je ne connais <br /> pas ma convention collective

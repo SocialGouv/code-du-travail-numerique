@@ -18,7 +18,7 @@ export const CallToActionTile = React.forwardRef<
         {children}
         {action && (
           <StyledDiv>
-            <Button variant="link" hasText>
+            <Button variant="link" hasText tabIndex={props.tabIndex}>
               {action}
             </Button>
           </StyledDiv>

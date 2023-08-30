@@ -49,7 +49,7 @@ export function NoEnterprise(props: Props): JSX.Element {
           <strong>Vous n&apos;avez pas d&apos;entreprise</strong> (votre
           recherche concerne les assistants maternels, employés de maison) ?
         </Heading>
-        <StyledButton variant="link" hasText onClick={onClick}>
+        <StyledButton variant="link" hasText onClick={onClick} tabIndex={1}>
           Consultez votre convention collective
         </StyledButton>
       </FeedbackWrapper>

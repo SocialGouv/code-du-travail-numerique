@@ -17,6 +17,13 @@ export type OriginStepProps = {
 };
 
 function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
+  const [focused, setFocused] = React.useState(false);
+  React.useEffect(() => {
+    if (!focused) {
+      document.getElementById(`${OriginMandatoryName}-depart`)?.focus();
+      setFocused(true);
+    }
+  }, []);
   return (
     <>
       <Question required>
@@ -35,6 +42,8 @@ function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
               id={`${props.input.name}-depart`}
               data-testid={"depart-a-la-retraite"}
               {...props.input}
+              tabIndex={1}
+              autoFocus
             />
           )}
         </Field>
@@ -50,6 +59,7 @@ function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
               id={`${props.input.name}-mise`}
               data-testid={"mise-a-la-retraite"}
               {...props.input}
+              tabIndex={1}
             />
           )}
         </Field>

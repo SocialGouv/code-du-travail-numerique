@@ -29,6 +29,7 @@ const DismissalProcess = ({
       title="Quelle est votre situation ?"
       slug="procedure-licenciement"
       widgetMode={widgetMode}
+      tabIndex="1"
     />
   </StyledWrapper>
 );

@@ -17,12 +17,16 @@ import { SITE_URL } from "../../../../../config";
 type Props = {
   agreement: Agreement;
   isWidgetMode?: boolean;
+  tabIndex?: string;
+  autoFocus?: boolean;
 } & TrackingProps;
 
 export function AgreementTile({
   agreement,
   onUserAction,
   isWidgetMode,
+  tabIndex,
+  autoFocus = false,
 }: Props): JSX.Element {
   const clickHandler = () => {
     onUserAction(UserAction.SelectAgreement, `idcc${agreement.num.toString()}`);
@@ -37,6 +41,8 @@ export function AgreementTile({
         agreement.slug
       }`}
       target={isWidgetMode ? "_blank" : "_self"}
+      tabIndex={tabIndex}
+      autoFocus={autoFocus}
     >
       <Paragraph noMargin>
         Retrouvez les questions-réponses les plus fréquentes organisées par

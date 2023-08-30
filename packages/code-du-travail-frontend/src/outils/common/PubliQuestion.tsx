@@ -12,9 +12,15 @@ interface Props {
   name: string;
   rule: Rule;
   onChange?: (values?: unknown) => void;
+  autoFocus?: boolean;
 }
 
-const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
+const PubliQuestion: React.FC<Props> = ({
+  name,
+  rule,
+  onChange,
+  autoFocus = false,
+}) => {
   const { question, titre, cdtn } = rule;
   const tooltip = rule.description
     ? {
@@ -39,6 +45,7 @@ const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
           options={reverseValues(cdtn.valeurs)}
           onChange={onChange}
           tooltip={tooltip}
+          autoFocus={autoFocus}
         />
       );
     case RuleType.OuiNon:
@@ -48,6 +55,7 @@ const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
           label={question}
           tooltip={tooltip}
           onChange={onChange}
+          autoFocus={autoFocus}
         />
       );
     default:
@@ -57,6 +65,7 @@ const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
           label={question}
           tooltip={tooltip}
           validate={undefined}
+          autoFocus={autoFocus}
         />
       );
   }

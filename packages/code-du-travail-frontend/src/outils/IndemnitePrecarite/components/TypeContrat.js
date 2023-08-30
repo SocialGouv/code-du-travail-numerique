@@ -34,6 +34,8 @@ function TypeContrat({ name, onChange }) {
               onChange(...changeProps);
               props.input.onChange(...changeProps);
             }}
+            tabIndex={1}
+            autoFocus
           />
         )}
       </Field>
@@ -53,6 +55,7 @@ function TypeContrat({ name, onChange }) {
               onChange(...changeProps);
               props.input.onChange(...changeProps);
             }}
+            tabIndex={1}
           />
         )}
       </Field>

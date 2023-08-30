@@ -16,6 +16,7 @@ export type Props = {
   wide?: boolean;
   custom?: boolean;
   onClick?: () => void;
+  tabIndex?: string;
 };
 
 export const LinkedTile = React.forwardRef<HTMLAnchorElement, Props>(

@@ -42,7 +42,7 @@ const StepResult = ({ form }: WizardStepProps): JSX.Element => {
         legalSituation={situations.legal}
       />
 
-      <ShowDetails>
+      <ShowDetails autoFocus>
         <DisplayResult
           idcc={idcc}
           legalSituation={situations.legal}

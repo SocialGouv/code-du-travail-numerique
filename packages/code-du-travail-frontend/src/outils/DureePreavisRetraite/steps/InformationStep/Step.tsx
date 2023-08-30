@@ -22,13 +22,14 @@ const InformationStep = ({
   onChange,
 }: InformationStepProps): JSX.Element => (
   <>
-    {questions.map((question) => {
+    {questions.map((question, index) => {
       return (
         <PubliQuestion
           key={question.name}
           name={"infos." + question.name}
           rule={question.rule}
           onChange={(values) => onChange(question.name, values as string)}
+          autoFocus
         />
       );
     })}

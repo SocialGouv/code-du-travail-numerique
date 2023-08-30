@@ -9,9 +9,11 @@ const { DirectionRight } = icons;
 export const ShowInfo = ({
   slug,
   widgetMode,
+  tabIndex,
 }: {
   slug: string;
   widgetMode: boolean;
+  tabIndex?: string;
 }) => {
   const router = useRouter();
   const store = useContext(DossierLicenciementContext);
@@ -33,6 +35,7 @@ export const ShowInfo = ({
           }
           router.push(destination);
         }}
+        tabIndex={tabIndex}
       >
         Afficher les informations personnalisées
         <ArrowWrapper>

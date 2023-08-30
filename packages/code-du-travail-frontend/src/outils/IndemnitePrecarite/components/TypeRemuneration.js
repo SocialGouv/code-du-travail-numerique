@@ -33,6 +33,8 @@ function TypeRemuneration({ name, onChange }) {
               </span>
             }
             {...props.input}
+            tabIndex={1}
+            autoFocus
           />
         )}
       </Field>
@@ -54,6 +56,7 @@ function TypeRemuneration({ name, onChange }) {
               </span>
             }
             {...props.input}
+            tabIndex={1}
           />
         )}
       </Field>

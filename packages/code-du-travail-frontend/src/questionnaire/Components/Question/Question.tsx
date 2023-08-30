@@ -9,14 +9,19 @@ import React, { useContext } from "react";
 
 type QuestionProps = {
   widgetMode: boolean;
+  tabIndex?: string;
 };
 
-export const Question = ({ widgetMode }: QuestionProps) => {
+export const Question = ({ widgetMode, tabIndex }: QuestionProps) => {
   const store = useContext(DossierLicenciementContext);
   const currentQuestion = useStore(store, (state) => state.currentQuestion);
   const lastResponse = useStore(store, (state) => state.lastResponse);
   return lastResponse?.slug ? (
-    <ShowInfo slug={lastResponse.slug} widgetMode={widgetMode}></ShowInfo>
+    <ShowInfo
+      slug={lastResponse.slug}
+      widgetMode={widgetMode}
+      tabIndex={tabIndex}
+    ></ShowInfo>
   ) : (
     <Fieldset>
       <Legend>
@@ -28,6 +33,7 @@ export const Question = ({ widgetMode }: QuestionProps) => {
             onVisibilityChange={() => {
               trackClickHelp(currentQuestion.trackingName);
             }}
+            tabIndex={tabIndex}
           >
             {currentQuestion.info}
           </StyledInfoBulle>
@@ -39,6 +45,8 @@ export const Question = ({ widgetMode }: QuestionProps) => {
           key={`${response.text}${index}`}
           response={response}
           index={index}
+          tabIndex={tabIndex}
+          autoFocus={index === 0}
         ></Response>
       ))}
       <Description>{currentQuestion?.description}</Description>

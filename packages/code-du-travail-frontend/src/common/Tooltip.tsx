@@ -7,6 +7,7 @@ type TooltipParameters = {
   title: string;
   onChange: (boolean) => void;
   "data-testid"?: string;
+  tabIndex?: string;
 };
 
 export const Tooltip = ({ onChange, ...parameters }: TooltipParameters) => {

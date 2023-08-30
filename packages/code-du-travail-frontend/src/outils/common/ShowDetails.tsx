@@ -10,6 +10,13 @@ type Props = {
 };
 
 const ShowDetails = ({ children, autoFocus = false }: Props): JSX.Element => {
+  const [focused, setFocused] = React.useState(false);
+  React.useEffect(() => {
+    if (autoFocus && !focused) {
+      document.getElementById("Detail")?.focus();
+      setFocused(true);
+    }
+  }, [autoFocus]);
   const trackClick = () =>
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
@@ -22,6 +29,7 @@ const ShowDetails = ({ children, autoFocus = false }: Props): JSX.Element => {
       onClickHandler={trackClick}
       title={"Voir le détail du calcul"}
       autoFocus={autoFocus}
+      id="Detail"
     >
       {children}
     </Collapse>

@@ -13,6 +13,7 @@ type SymmaryItemProps = {
   onClick: () => void;
   noButton: boolean;
   noCheck: boolean;
+  tabIndex?: string;
 };
 
 export const SummaryItem = ({
@@ -21,6 +22,7 @@ export const SummaryItem = ({
   onClick,
   noButton = false,
   noCheck = false,
+  tabIndex,
 }: SymmaryItemProps) => {
   const { width } = useWindowDimensions();
   const [openedTooltip, setOpenedTooltip] = useState(false);
@@ -42,6 +44,7 @@ export const SummaryItem = ({
                   setOpenedTooltip(opened);
                 }}
                 data-testid={`Tooltip-${data}`}
+                tabIndex={tabIndex}
               ></Tooltip>
             </TooltipWrapper>
           )}
@@ -54,6 +57,7 @@ export const SummaryItem = ({
               onClick={onClick}
               icon={UpdateIcon}
               data-testid={`modify-${data}`}
+              tabIndex={tabIndex}
             >
               {width > breakpoints.intMobile && <div>Modifier</div>}
             </StyledButton>

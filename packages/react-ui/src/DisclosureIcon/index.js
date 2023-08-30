@@ -15,6 +15,7 @@ export const DisclosureIcon = ({
   className,
   dataTestid,
   isDisabled,
+  tabIndex,
 }) => {
   return (
     <>
@@ -28,6 +29,7 @@ export const DisclosureIcon = ({
         className={className}
         data-testid={dataTestid}
         disabled={isDisabled}
+        tabIndex={tabIndex}
       >
         {icon}
       </DisclosureIconButton>
@@ -66,4 +68,5 @@ DisclosureIcon.propTypes = {
   isDisabled: PropTypes.bool,
   isTooltipOpen: PropTypes.bool.isRequired,
   onVisibilityChange: PropTypes.func.isRequired,
+  tabIndex: PropTypes.func.string,
 };

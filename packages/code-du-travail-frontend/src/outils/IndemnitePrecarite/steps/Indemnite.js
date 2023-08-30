@@ -123,7 +123,7 @@ function StepIndemnite({ form }) {
         <HighlightResult>{indemnite}&nbsp;€</HighlightResult>.
       </p>
 
-      <ShowDetails>
+      <ShowDetails autoFocus>
         <SectionTitle>Éléments saisis</SectionTitle>
         {entries.length > 0 && (
           <ul>

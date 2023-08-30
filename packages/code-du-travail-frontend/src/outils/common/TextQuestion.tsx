@@ -18,6 +18,7 @@ type Props = {
   tooltip?: Tooltip;
   placeholder?: string;
   onChange?: (values?: unknown) => void;
+  autoFocus?: boolean;
 };
 
 const TextQuestion = ({
@@ -28,6 +29,7 @@ const TextQuestion = ({
   validateOnChange = false,
   tooltip,
   onChange,
+  autoFocus,
   ...props
 }: Props): JSX.Element => {
   const InputComponent = inputType === "date" ? InputDate : Input;
@@ -63,6 +65,8 @@ const TextQuestion = ({
                     id={id}
                     data-testid={name}
                     invalid={touched && invalid}
+                    tabIndex={1}
+                    autoFocus={autoFocus}
                   />
                   {invalid &&
                     ((!validateOnChange && submitFailed) ||
