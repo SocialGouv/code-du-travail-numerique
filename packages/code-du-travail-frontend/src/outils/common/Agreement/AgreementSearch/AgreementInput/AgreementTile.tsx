@@ -42,7 +42,6 @@ export function AgreementTile({
       }`}
       target={isWidgetMode ? "_blank" : "_self"}
       tabIndex={tabIndex}
-      autoFocus={autoFocus}
     >
       <Paragraph noMargin>
         Retrouvez les questions-réponses les plus fréquentes organisées par
