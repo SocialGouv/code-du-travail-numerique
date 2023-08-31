@@ -76,6 +76,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       >
         <button
           class="sc-kOPcWz cefBoA sc-iLsKjm sc-eifrsQ eQYdHK ehoSxM"
+          tabindex="1"
         >
           Commencer
           <svg
@@ -184,12 +185,14 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
       >
         <button
           class="sc-kOPcWz dSQWfG sc-iLsKjm eQYdHK"
+          tabindex="1"
           type="button"
         >
           Précédent
         </button>
         <button
           class="sc-kOPcWz gWtlVM sc-iLsKjm eQYdHK"
+          tabindex="1"
           type="button"
         >
           Imprimer le résultat
@@ -286,6 +289,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       >
         <button
           class="sc-kOPcWz cefBoA sc-iLsKjm sc-eifrsQ eQYdHK ehoSxM"
+          tabindex="1"
         >
           Commencer
           <svg
@@ -394,12 +398,14 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
       >
         <button
           class="sc-kOPcWz dSQWfG sc-iLsKjm eQYdHK"
+          tabindex="1"
           type="button"
         >
           Précédent
         </button>
         <button
           class="sc-kOPcWz gWtlVM sc-iLsKjm eQYdHK"
+          tabindex="1"
           type="button"
         >
           Imprimer le résultat
@@ -486,6 +492,7 @@ exports[`<Wizard /> should render a step 1`] = `
       >
         <button
           class="sc-kOPcWz cefBoA sc-iLsKjm sc-eifrsQ eQYdHK ehoSxM"
+          tabindex="1"
         >
           Commencer
           <svg

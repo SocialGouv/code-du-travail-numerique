@@ -29,6 +29,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
         data-testid="foo"
         id="input-foo"
         name="foo"
+        tabindex="1"
       >
         <option
           disabled=""
@@ -113,6 +114,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
         data-testid="foo"
         id="input-foo"
         name="foo"
+        tabindex="1"
       >
         <option
           disabled=""

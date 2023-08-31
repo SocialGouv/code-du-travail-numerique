@@ -168,6 +168,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
       >
         <button
           class="sc-kOPcWz cefBoA sc-iXzfSG sc-eulNck jrhUSB kfCQDo"
+          tabindex="1"
         >
           Commencer
           <svg

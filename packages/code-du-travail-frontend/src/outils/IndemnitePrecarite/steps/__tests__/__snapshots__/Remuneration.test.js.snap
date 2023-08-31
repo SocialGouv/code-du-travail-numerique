@@ -24,6 +24,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       class="sc-bVHCgj drRyYL"
       id="typeRemuneration-amount"
       name="typeRemuneration"
+      tabindex="1"
       type="radio"
       value="total"
     />
@@ -48,6 +49,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       class="sc-bVHCgj drRyYL"
       id="typeRemuneration-pay"
       name="typeRemuneration"
+      tabindex="1"
       type="radio"
       value="mensuel"
     />
@@ -98,6 +100,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
           class="sc-ejfMa-d cBzXXF"
           id="2"
           name="salaires[0].salaire"
+          tabindex="1"
           type="number"
           value="2000"
         />
@@ -120,6 +123,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </div>
     <button
       class="sc-kOPcWz kyVwqT sc-kMribo gTpCQl"
+      tabindex="1"
       type="button"
     >
       Supprimer
@@ -158,6 +162,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
           class="sc-ejfMa-d cBzXXF"
           id="4"
           name="salaires[1].salaire"
+          tabindex="1"
           type="number"
           value="1500"
         />
@@ -180,6 +185,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </div>
     <button
       class="sc-kOPcWz kyVwqT sc-kMribo gTpCQl"
+      tabindex="1"
       type="button"
     >
       Supprimer
@@ -201,6 +207,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   </div>
   <button
     class="sc-kOPcWz kyVwqT sc-knuQbY dasJFM"
+    tabindex="1"
     type="button"
   >
     <svg
@@ -252,6 +259,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
       class="sc-bVHCgj drRyYL"
       id="typeRemuneration-amount"
       name="typeRemuneration"
+      tabindex="1"
       type="radio"
       value="total"
     />
@@ -275,6 +283,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
       class="sc-bVHCgj drRyYL"
       id="typeRemuneration-pay"
       name="typeRemuneration"
+      tabindex="1"
       type="radio"
       value="mensuel"
     />
@@ -317,6 +326,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
         class="sc-ejfMa-d cBzXXF"
         id="currency-1"
         name="salaire"
+        tabindex="1"
         type="number"
         value="3000"
       />

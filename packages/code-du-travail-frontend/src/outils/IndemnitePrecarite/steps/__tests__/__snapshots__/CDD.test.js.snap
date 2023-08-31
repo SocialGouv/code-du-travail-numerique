@@ -30,6 +30,7 @@ exports[`<StepCDD /> should render 1`] = `
           data-testid="finContratPeriodeDessai-oui"
           id="finContratPeriodeDessai-oui"
           name="finContratPeriodeDessai"
+          tabindex="1"
           type="radio"
           value="true"
         />
@@ -48,6 +49,7 @@ exports[`<StepCDD /> should render 1`] = `
           data-testid="finContratPeriodeDessai-non"
           id="finContratPeriodeDessai-non"
           name="finContratPeriodeDessai"
+          tabindex="1"
           type="radio"
           value="false"
         />
@@ -86,6 +88,7 @@ exports[`<StepCDD /> should render 1`] = `
           data-testid="propositionCDIFindeContrat-oui"
           id="propositionCDIFindeContrat-oui"
           name="propositionCDIFindeContrat"
+          tabindex="1"
           type="radio"
           value="true"
         />
@@ -104,6 +107,7 @@ exports[`<StepCDD /> should render 1`] = `
           data-testid="propositionCDIFindeContrat-non"
           id="propositionCDIFindeContrat-non"
           name="propositionCDIFindeContrat"
+          tabindex="1"
           type="radio"
           value="false"
         />
@@ -142,6 +146,7 @@ exports[`<StepCDD /> should render 1`] = `
           data-testid="interruptionFauteGrave-oui"
           id="interruptionFauteGrave-oui"
           name="interruptionFauteGrave"
+          tabindex="1"
           type="radio"
           value="true"
         />
@@ -160,6 +165,7 @@ exports[`<StepCDD /> should render 1`] = `
           data-testid="interruptionFauteGrave-non"
           id="interruptionFauteGrave-non"
           name="interruptionFauteGrave"
+          tabindex="1"
           type="radio"
           value="false"
         />
@@ -198,6 +204,7 @@ exports[`<StepCDD /> should render 1`] = `
           data-testid="refusRenouvellementAuto-oui"
           id="refusRenouvellementAuto-oui"
           name="refusRenouvellementAuto"
+          tabindex="1"
           type="radio"
           value="true"
         />
@@ -216,6 +223,7 @@ exports[`<StepCDD /> should render 1`] = `
           data-testid="refusRenouvellementAuto-non"
           id="refusRenouvellementAuto-non"
           name="refusRenouvellementAuto"
+          tabindex="1"
           type="radio"
           value="false"
         />

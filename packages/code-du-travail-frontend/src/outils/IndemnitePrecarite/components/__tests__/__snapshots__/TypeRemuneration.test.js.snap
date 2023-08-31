@@ -24,6 +24,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
       class="sc-bVHCgj drRyYL"
       id="typeRemuneration-amount"
       name="typeRemuneration"
+      tabindex="1"
       type="radio"
       value="total"
     />
@@ -47,6 +48,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
       class="sc-bVHCgj drRyYL"
       id="typeRemuneration-pay"
       name="typeRemuneration"
+      tabindex="1"
       type="radio"
       value="mensuel"
     />

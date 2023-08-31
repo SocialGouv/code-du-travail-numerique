@@ -25,6 +25,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
         class="sc-bVHCgj drRyYL"
         id="contractType-cdd"
         name="contractType"
+        tabindex="1"
         type="radio"
         value="CDD"
       />
@@ -42,6 +43,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
         class="sc-bVHCgj drRyYL"
         id="contractType-ci"
         name="contractType"
+        tabindex="1"
         type="radio"
         value="CTT"
       />
@@ -87,6 +89,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         class="sc-bVHCgj drRyYL"
         id="contractType-cdd"
         name="contractType"
+        tabindex="1"
         type="radio"
         value="CDD"
       />
@@ -104,6 +107,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         class="sc-bVHCgj drRyYL"
         id="contractType-ci"
         name="contractType"
+        tabindex="1"
         type="radio"
         value="CTT"
       />
@@ -141,6 +145,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
           data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
+          tabindex="1"
         >
           <option
             disabled=""
@@ -264,6 +269,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         class="sc-bVHCgj drRyYL"
         id="contractType-cdd"
         name="contractType"
+        tabindex="1"
         type="radio"
         value="CDD"
       />
@@ -281,6 +287,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         class="sc-bVHCgj drRyYL"
         id="contractType-ci"
         name="contractType"
+        tabindex="1"
         type="radio"
         value="CTT"
       />
@@ -318,6 +325,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
           data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
+          tabindex="1"
         >
           <option
             disabled=""
@@ -440,6 +448,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
         class="sc-bVHCgj drRyYL"
         id="contractType-cdd"
         name="contractType"
+        tabindex="1"
         type="radio"
         value="CDD"
       />
@@ -458,6 +467,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
         class="sc-bVHCgj drRyYL"
         id="contractType-ci"
         name="contractType"
+        tabindex="1"
         type="radio"
         value="CTT"
       />
@@ -495,6 +505,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           data-testid="cttFormation-oui"
           id="cttFormation-oui"
           name="cttFormation"
+          tabindex="1"
           type="radio"
           value="true"
         />
@@ -513,6 +524,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           data-testid="cttFormation-non"
           id="cttFormation-non"
           name="cttFormation"
+          tabindex="1"
           type="radio"
           value="false"
         />
@@ -551,6 +563,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           data-testid="ruptureContratFauteGrave-oui"
           id="ruptureContratFauteGrave-oui"
           name="ruptureContratFauteGrave"
+          tabindex="1"
           type="radio"
           value="true"
         />
@@ -569,6 +582,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           data-testid="ruptureContratFauteGrave-non"
           id="ruptureContratFauteGrave-non"
           name="ruptureContratFauteGrave"
+          tabindex="1"
           type="radio"
           value="false"
         />
@@ -607,6 +621,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           data-testid="propositionCDIFinContrat-oui"
           id="propositionCDIFinContrat-oui"
           name="propositionCDIFinContrat"
+          tabindex="1"
           type="radio"
           value="true"
         />
@@ -625,6 +640,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           data-testid="propositionCDIFinContrat-non"
           id="propositionCDIFinContrat-non"
           name="propositionCDIFinContrat"
+          tabindex="1"
           type="radio"
           value="false"
         />
@@ -663,6 +679,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           data-testid="refusSouplesse-oui"
           id="refusSouplesse-oui"
           name="refusSouplesse"
+          tabindex="1"
           type="radio"
           value="true"
         />
@@ -681,6 +698,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           data-testid="refusSouplesse-non"
           id="refusSouplesse-non"
           name="refusSouplesse"
+          tabindex="1"
           type="radio"
           value="false"
         />

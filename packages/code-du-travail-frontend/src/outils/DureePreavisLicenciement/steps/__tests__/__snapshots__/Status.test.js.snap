@@ -28,6 +28,7 @@ exports[`<StepStatus /> should render 1`] = `
         data-testid="seriousMisconduct-oui"
         id="seriousMisconduct-oui"
         name="seriousMisconduct"
+        tabindex="1"
         type="radio"
         value="true"
       />
@@ -46,6 +47,7 @@ exports[`<StepStatus /> should render 1`] = `
         data-testid="seriousMisconduct-non"
         id="seriousMisconduct-non"
         name="seriousMisconduct"
+        tabindex="1"
         type="radio"
         value="false"
       />
@@ -88,6 +90,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         data-testid="seriousMisconduct-oui"
         id="seriousMisconduct-oui"
         name="seriousMisconduct"
+        tabindex="1"
         type="radio"
         value="true"
       />
@@ -107,6 +110,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         data-testid="seriousMisconduct-non"
         id="seriousMisconduct-non"
         name="seriousMisconduct"
+        tabindex="1"
         type="radio"
         value="false"
       />
@@ -145,6 +149,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         data-testid="disabledWorker-oui"
         id="disabledWorker-oui"
         name="disabledWorker"
+        tabindex="1"
         type="radio"
         value="true"
       />
@@ -163,6 +168,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         data-testid="disabledWorker-non"
         id="disabledWorker-non"
         name="disabledWorker"
+        tabindex="1"
         type="radio"
         value="false"
       />
@@ -240,6 +246,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         data-testid="cdt.ancienneté"
         id="input-cdt.ancienneté"
         name="cdt.ancienneté"
+        tabindex="1"
       >
         <option
           disabled=""
@@ -329,6 +336,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
         data-testid="seriousMisconduct-oui"
         id="seriousMisconduct-oui"
         name="seriousMisconduct"
+        tabindex="1"
         type="radio"
         value="true"
       />
@@ -348,6 +356,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
         data-testid="seriousMisconduct-non"
         id="seriousMisconduct-non"
         name="seriousMisconduct"
+        tabindex="1"
         type="radio"
         value="false"
       />
@@ -385,6 +394,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
         data-testid="disabledWorker-oui"
         id="disabledWorker-oui"
         name="disabledWorker"
+        tabindex="1"
         type="radio"
         value="true"
       />
@@ -403,6 +413,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
         data-testid="disabledWorker-non"
         id="disabledWorker-non"
         name="disabledWorker"
+        tabindex="1"
         type="radio"
         value="false"
       />

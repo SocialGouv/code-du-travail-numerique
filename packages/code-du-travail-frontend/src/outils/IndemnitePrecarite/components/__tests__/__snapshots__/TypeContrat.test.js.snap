@@ -24,6 +24,7 @@ exports[`<TypeContrat /> should render 1`] = `
       class="sc-bVHCgj drRyYL"
       id="contrat-cdd"
       name="contrat"
+      tabindex="1"
       type="radio"
       value="CDD"
     />
@@ -41,6 +42,7 @@ exports[`<TypeContrat /> should render 1`] = `
       class="sc-bVHCgj drRyYL"
       id="contrat-ci"
       name="contrat"
+      tabindex="1"
       type="radio"
       value="CTT"
     />
