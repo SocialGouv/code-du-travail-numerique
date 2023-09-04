@@ -118,7 +118,6 @@ const ContributionGeneric = ({ answers, content, slug }) => {
 
   const scrollToTitle = () => {
     setTimeout(() => {
-      console.log("pl", titleRef);
       titleRef &&
         titleRef.current &&
         titleRef.current.scrollIntoView({ behavior: "smooth" });
