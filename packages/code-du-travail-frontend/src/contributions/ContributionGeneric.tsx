@@ -1,5 +1,5 @@
 import { Agreement, getLabelBySource } from "@socialgouv/cdtn-utils";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { push as matopush } from "@socialgouv/matomo-next";
 
@@ -39,6 +39,7 @@ import { Alert, Heading } from "@socialgouv/cdtn-ui/lib";
 const { DirectionRight } = icons;
 
 const ContributionGeneric = ({ answers, content, slug }) => {
+  const titleRef = useRef<HTMLDivElement>(null);
   const onUserAction: OnUserAction = (action, extra) => {
     handleTrackEvent(getTitle(), action, extra);
   };
@@ -114,6 +115,15 @@ const ContributionGeneric = ({ answers, content, slug }) => {
       )}
     </>
   );
+
+  const scrollToTitle = () => {
+    setTimeout(() => {
+      titleRef &&
+        titleRef.current &&
+        titleRef.current.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
+
   return (
     <>
       {hasConventionAnswers && (
@@ -233,6 +243,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                               getTitle(),
                             ]);
                             setShowAnswer(true);
+                            scrollToTitle();
                           }}
                         >
                           Afficher les informations générales
@@ -256,6 +267,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                       false
                     );
                     setShowAnswer(true);
+                    scrollToTitle();
                   }}
                 >
                   <ArrowLink arrowPosition="left">
@@ -270,7 +282,9 @@ const ContributionGeneric = ({ answers, content, slug }) => {
       )}
       {showAnswer && answers.generic && (
         <Section>
-          <Title stripe="left">Que dit le code du travail&nbsp;?</Title>
+          <Title stripe="left" ref={titleRef}>
+            Que dit le code du travail&nbsp;?
+          </Title>
           {content && (
             <Meta>
               {content.url && (
