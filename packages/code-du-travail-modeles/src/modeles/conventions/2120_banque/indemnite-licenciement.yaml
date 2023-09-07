@@ -342,10 +342,3 @@ contrat salarié . convention collective . banque . résultat conventionnel avec
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 24 * Sref
-
-contrat salarié . convention collective . banque . notification:
-  type: notification
-  description: Si au cours des 12 derniers mois le salarié a perçu des primes, des éléments variables ou des avantages en nature, le montant de l’indemnité de licenciement pourrait être moins élevé. En effet, la convention collective prévoit que l’indemnité de licenciement doit être calculée sur la base du salaire sans ces éléments de rémunération alors que le simulateur les intègre.
-  valeur: oui
-  cdtn:
-    affichage: conventionnel
