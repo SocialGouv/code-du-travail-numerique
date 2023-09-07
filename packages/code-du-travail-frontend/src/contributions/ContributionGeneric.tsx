@@ -280,62 +280,59 @@ const ContributionGeneric = ({ answers, content, slug }) => {
           </SectionNoPadding>
         </>
       )}
-      {showAnswer && answers.generic && (
-        <Section>
-          <Title stripe="left" ref={titleRef}>
-            Que dit le code du travail&nbsp;?
-          </Title>
-          {content && (
-            <Meta>
-              {content.url && (
-                <span>
-                  Source&nbsp;:{" "}
-                  <A11yLink
-                    href={content.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {`Fiche: ${getLabelBySource(content.source)}`}
-                  </A11yLink>
-                </span>
-              )}
-              {content.url && content.date && (
-                <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
-              )}
-              {content.date && <span>Mis à jour le&nbsp;: {content.date}</span>}
-            </Meta>
-          )}
+      <SectionHidden show={showAnswer && answers.generic}>
+        <Title stripe="left" ref={titleRef}>
+          Que dit le code du travail&nbsp;?
+        </Title>
+        {content && (
+          <Meta>
+            {content.url && (
+              <span>
+                Source&nbsp;:{" "}
+                <A11yLink
+                  href={content.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {`Fiche: ${getLabelBySource(content.source)}`}
+                </A11yLink>
+              </span>
+            )}
+            {content.url && content.date && (
+              <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
+            )}
+            {content.date && <span>Mis à jour le&nbsp;: {content.date}</span>}
+          </Meta>
+        )}
 
-          <Mdx
-            markdown={answers.generic.markdown}
-            components={rehypeToReact(content)}
-          />
-          <Alert>
-            <Heading as="p">Texte applicable</Heading>
-            <p>
-              Une convention collective de branche ou un accord collectif
-              d’entreprise peut prévoir des durées plus longues. Si les durées
-              fixées sont plus courtes que celles prévues par le code du
-              travail, le salarié a droit aux congés prévus par le code du
-              travail.
-            </p>
+        <Mdx
+          markdown={answers.generic.markdown}
+          components={rehypeToReact(content)}
+        />
+        <Alert>
+          <Heading as="p">Texte applicable</Heading>
+          <p>
+            Une convention collective de branche ou un accord collectif
+            d’entreprise peut prévoir des durées plus longues. Si les durées
+            fixées sont plus courtes que celles prévues par le code du travail,
+            le salarié a droit aux congés prévus par le code du travail.
+          </p>
 
-            <p>
-              Une convention collective de branche ou un accord collectif
-              d’entreprise peut aussi prévoir des congés pour d’autres
-              événements familiaux.
-            </p>
+          <p>
+            Une convention collective de branche ou un accord collectif
+            d’entreprise peut aussi prévoir des congés pour d’autres événements
+            familiaux.
+          </p>
 
-            <p>
-              Le contrat de travail peut toujours prévoir des mesures plus
-              favorables, qui s’appliqueront.
-            </p>
-          </Alert>
-          <ReferencesJuridiques
-            references={filteredRefs(answers?.generic?.references, content.url)}
-          />
-        </Section>
-      )}
+          <p>
+            Le contrat de travail peut toujours prévoir des mesures plus
+            favorables, qui s’appliqueront.
+          </p>
+        </Alert>
+        <ReferencesJuridiques
+          references={filteredRefs(answers.generic.references, content.url)}
+        />
+      </SectionHidden>
     </>
   );
 };
@@ -354,6 +351,9 @@ const HideOnMobile = styled.span`
   @media (max-width: ${breakpoints.mobile}) {
     display: none;
   }
+`;
+const SectionHidden = styled(Section)`
+  display: ${({ show }) => (show ? "block" : "none")};
 `;
 const Div = styled.div`
   text-align: center;
