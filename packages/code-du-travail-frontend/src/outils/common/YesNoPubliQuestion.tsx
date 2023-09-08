@@ -26,7 +26,8 @@ const YesNoPubliQuestion = ({
   const [focused, setFocused] = React.useState(false);
   React.useEffect(() => {
     if (autoFocus && !focused) {
-      document.getElementById(`${name}-oui`)?.focus();
+      const element = document.getElementById(`${name}-oui`);
+      window.setTimeout(() => element?.focus(), 0);
       setFocused(true);
     }
   }, [autoFocus]);

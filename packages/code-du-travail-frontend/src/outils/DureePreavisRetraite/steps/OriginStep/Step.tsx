@@ -20,7 +20,8 @@ function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
   const [focused, setFocused] = React.useState(false);
   React.useEffect(() => {
     if (!focused) {
-      document.getElementById(`${OriginMandatoryName}-depart`)?.focus();
+      const element = document.getElementById(`${OriginMandatoryName}-depart`);
+      window.setTimeout(() => element?.focus(), 0);
       setFocused(true);
     }
   }, []);

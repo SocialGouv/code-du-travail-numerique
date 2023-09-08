@@ -13,7 +13,8 @@ const ShowDetails = ({ children, autoFocus = false }: Props): JSX.Element => {
   const [focused, setFocused] = React.useState(false);
   React.useEffect(() => {
     if (autoFocus && !focused) {
-      document.getElementById("Detail")?.focus();
+      const element = document.getElementById("Detail");
+      window.setTimeout(() => element?.focus(), 0);
       setFocused(true);
     }
   }, [autoFocus]);
