@@ -53,6 +53,7 @@ const ShowAgreements = ({
                     </Text>
                   }
                   id={`agreement-${agreement.id}`}
+                  tabIndex={1}
                   {...props.input}
                 />
               )}

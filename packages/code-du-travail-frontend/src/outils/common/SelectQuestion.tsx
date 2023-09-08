@@ -47,6 +47,7 @@ const SelectQuestion = ({
   const [focused, setFocused] = React.useState(false);
   React.useEffect(() => {
     if (autoFocus && !focused) {
+      console.log("setFocus");
       document.getElementById(uid)?.focus();
       setFocused(true);
     }
