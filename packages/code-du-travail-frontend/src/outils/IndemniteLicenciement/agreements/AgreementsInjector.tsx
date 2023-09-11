@@ -36,6 +36,7 @@ import {
   Agreement1740,
   Agreement1740Informations,
 } from "./1740-batiment-region-parisienne";
+import { Agreement2120, Agreement2120Informations } from "./2120-banques";
 
 type Props = {
   idcc: SupportedCcIndemniteLicenciement | null;
@@ -89,6 +90,12 @@ export default function AgreementsInjector(props: Props) {
     case SupportedCcIndemniteLicenciement.IDCC2609 === props.idcc &&
       props.step === IndemniteLicenciementStepName.Resultat:
       return <Agreement2609Informations />;
+    case SupportedCcIndemniteLicenciement.IDCC2120 === props.idcc &&
+      props.step === IndemniteLicenciementStepName.Salaires:
+      return <Agreement2120 />;
+    case SupportedCcIndemniteLicenciement.IDCC2120 === props.idcc &&
+      props.step === IndemniteLicenciementStepName.Resultat:
+      return <Agreement2120Informations />;
     case SupportedCcIndemniteLicenciement.IDCC2148 === props.idcc &&
       props.step === IndemniteLicenciementStepName.Salaires:
       return <Agreement2148 />;

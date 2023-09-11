@@ -7,11 +7,11 @@ import { RadioQuestion, TextQuestion } from "../../../Components";
 import { TempsPartiel, SalaireTempsPlein } from "./components";
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../..";
-import { AgreementsInjector } from "../../agreements";
 import {
+  AgreementsInjector,
   getSalairesTempsPleinSubtitle,
   getTooltipSalairesMensuel,
-} from "../../agreements/ui-customizations";
+} from "../../agreements";
 import { icons } from "@socialgouv/cdtn-ui";
 import {
   generateSalaireTempsPleinQuestion,

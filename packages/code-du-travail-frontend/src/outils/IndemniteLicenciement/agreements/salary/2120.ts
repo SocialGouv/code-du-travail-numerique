@@ -38,6 +38,8 @@ export class AgreementSalary2120 implements AgreementSalary {
 
     return sReference.computeReferenceSalary({
       salaires: salaryPeriods,
+      salariesVariablePart:
+        get().agreement2120Data.input.salariesVariablePart ?? 0,
       isLicenciementDisciplinaire: isLicenciementInaptitude
         ? QuestionOuiNon.non
         : isLicenciementDisciplinaire,

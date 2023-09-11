@@ -10,12 +10,12 @@ import { SmallText } from "../common/stepStyles";
 import { SubLabel } from "./SelectQuestion";
 
 type Props = {
-  onChange: (value: string) => void;
+  onChange: (value: string | number) => void;
   error?: string;
   label: string;
   tooltip?: Tooltip;
   inputType?: "date" | "number" | "text";
-  value: string | undefined;
+  value: string | number | undefined;
   placeholder?: string;
   subLabel?: string;
   smallText?: string;
