@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.108.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.107.0...v4.108.0) (2023-09-11)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** retours sur la cc 2216 ([#5356](https://github.com/SocialGouv/code-du-travail-numerique/issues/5356)) ([4687586](https://github.com/SocialGouv/code-du-travail-numerique/commit/46875866aa63c57ee7dc80af25284e9f6824cc3f))
+
+### Features
+
+- modifier le nom d'une catégorie pro CC 44 ([#5342](https://github.com/SocialGouv/code-du-travail-numerique/issues/5342)) ([e60ca0a](https://github.com/SocialGouv/code-du-travail-numerique/commit/e60ca0a5bc6ef08c9d48ba910a9fb329b47a751d))
+
 # [4.107.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.106.0...v4.107.0) (2023-08-25)
 
 ### Bug Fixes

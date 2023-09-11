@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.108.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.107.0...v4.108.0) (2023-09-11)
+
+### Bug Fixes
+
+- **contributions:** ajout d'un scroll automatique sur la partie code du travail ([#5357](https://github.com/SocialGouv/code-du-travail-numerique/issues/5357)) ([6b9129a](https://github.com/SocialGouv/code-du-travail-numerique/commit/6b9129a5170b21f6b16a9d4b364c925f369470e1))
+
 # [4.107.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.106.0...v4.107.0) (2023-08-25)
 
 ### Features
