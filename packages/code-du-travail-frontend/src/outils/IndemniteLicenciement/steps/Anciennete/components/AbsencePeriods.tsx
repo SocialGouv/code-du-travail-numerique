@@ -158,7 +158,9 @@ const AbsencePeriods = ({
         />
       ))}
       {error?.global && <StyledError>{error.global}</StyledError>}
-      <AddButton onClick={onAddButtonClick}>Ajouter une absence</AddButton>
+      <AddButton onClick={onAddButtonClick} tabIndex={1}>
+        Ajouter une absence
+      </AddButton>
     </>
   );
 };
