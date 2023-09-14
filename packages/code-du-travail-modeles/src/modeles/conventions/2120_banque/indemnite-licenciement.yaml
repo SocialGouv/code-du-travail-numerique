@@ -106,7 +106,7 @@ contrat salarié . convention collective . banque . résultat conventionnel 1:
   plafond: plafond 1
   cdtn:
     formule:
-      formula: "[(1/2 * (13/14,5) * Sref * A1) + ](1/5 * Sref * A2)"
+      formula: "[(1/2 * 13/14,5 * Sref * A1) + ](1/5 * Sref * A2)"
       explanations:
         - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
         - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
@@ -133,7 +133,7 @@ contrat salarié . convention collective . banque . résultat conventionnel 2:
   plafond: plafond 2
   cdtn:
     formule:
-      formula: "[(1/2 * (13/14,5) * Sref * A1) + ](1/5 * Sref * A2)"
+      formula: "[(1/2 * 13/14,5 * Sref * A1) + ](1/5 * Sref * A2)"
       explanations:
         - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
         - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
@@ -159,7 +159,7 @@ contrat salarié . convention collective . banque . résultat conventionnel 3:
   plafond: 15 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   cdtn:
     formule:
-      formula: "[(1/2 * (13/14,5) * Sref * A1) + ](1/5 * Sref * A2)"
+      formula: "[(1/2 * 13/14,5 * Sref * A1) + ](1/5 * Sref * A2)"
       explanations:
         - "A1 : Semestres complets d'ancienneté acquis dans l'entreprise antérieurement au 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets avant 2002
         - "A2 : Semestres complets d'ancienneté dans l'entreprise acquis à partir du 1er janvier 2002": contrat salarié . convention collective . banque . semestres complets après 2002
