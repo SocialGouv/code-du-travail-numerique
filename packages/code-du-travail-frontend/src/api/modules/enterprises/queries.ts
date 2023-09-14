@@ -16,7 +16,6 @@ export const getAgreements = (idccList: number[]): SearchAgreementsBody => {
         filter: [
           { terms: { num: idccList } },
           { term: { source: SOURCES.CCN } },
-          { term: { isPublished: true } },
         ],
       },
     },

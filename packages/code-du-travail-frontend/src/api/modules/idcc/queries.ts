@@ -15,10 +15,7 @@ export function getIdccBody({ query, idccQuery }) {
     ],
     query: {
       bool: {
-        filter: [
-          { term: { source: SOURCES.CCN } },
-          { term: { isPublished: true } },
-        ],
+        filter: [{ term: { source: SOURCES.CCN } }],
         must: {
           bool: {
             should: [

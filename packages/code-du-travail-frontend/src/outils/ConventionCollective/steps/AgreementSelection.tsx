@@ -50,11 +50,24 @@ const AgreementSelectionStep = ({
         {enterprise.conventions.map((agreement) => (
           <Li key={agreement.id}>
             {agreement.slug ? (
-              <AgreementTile
-                onUserAction={onUserAction}
-                agreement={agreement}
-                isWidgetMode={isWidgetMode}
-              />
+              agreement.url ? (
+                <AgreementTile
+                  onUserAction={onUserAction}
+                  agreement={agreement}
+                  isWidgetMode={isWidgetMode}
+                />
+              ) : (
+                <DisabledTile
+                  wide
+                  subtitle={getLabelBySource(SOURCES.CCN)}
+                  title={`${agreement.shortTitle} IDCC${agreement.num}`}
+                >
+                  <p>
+                    Nous n’avons pas d’informations concernant cette convention
+                    collective
+                  </p>
+                </DisabledTile>
+              )
             ) : (
               <DisabledTile
                 wide
@@ -111,6 +124,7 @@ const Li = styled.li`
 const DisabledTile = styled(Tile)`
   cursor: auto;
   color: ${theme.colors.placeholder};
+
   :hover {
     transform: none;
     color: ${theme.colors.placeholder};
