@@ -11,8 +11,8 @@ type SymmaryItemProps = {
   data: string;
   info?: string;
   onClick: () => void;
-  noButton: boolean;
-  noCheck: boolean;
+  noButton?: boolean;
+  noCheck?: boolean;
 };
 
 export const SummaryItem = ({

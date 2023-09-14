@@ -1,4 +1,4 @@
-const SLUG_FOR_POC_SWAP = [
+export const SLUG_FOR_POC_SWAP = [
   "les-conges-pour-evenements-familiaux",
   "quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
 ];

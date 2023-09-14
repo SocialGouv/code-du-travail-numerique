@@ -281,9 +281,16 @@ const ContributionGeneric = ({ answers, content, slug }) => {
         </>
       )}
       <SectionHidden show={showAnswer && answers.generic}>
-        <Title stripe="left" ref={titleRef}>
-          Que dit le code du travail&nbsp;?
+        <Title stripe="none" ref={titleRef}>
+          Informations générales
         </Title>
+
+        <i>
+          Cette réponse correspond à ce que prévoit le code du travail, elle ne
+          tient pas compte des spécifités de la convention collective{" "}
+          {convention ? convention.shortTitle : "dont vous dépendez"}.
+        </i>
+
         {content && (
           <Meta>
             {content.url && (
@@ -310,23 +317,33 @@ const ContributionGeneric = ({ answers, content, slug }) => {
           components={rehypeToReact(content)}
         />
         <Alert>
-          <Heading as="p">Texte applicable</Heading>
+          <Heading as="p">Attention</Heading>
           <p>
-            Une convention collective de branche ou un accord collectif
-            d’entreprise peut prévoir des durées plus longues. Si les durées
-            fixées sont plus courtes que celles prévues par le code du travail,
-            le salarié a droit aux congés prévus par le code du travail.
+            Les informations présentes sur cette page sont issues du Code du
+            travail. D’autres textes ou votre contrat de travail peuvent
+            également prévoir des règles spécifiques sur ce sujet qui
+            s’appliqueront à condition d’être au moins aussi favorables que le
+            Code du travail. Plusieurs cas de figure peuvent se présenter :
           </p>
 
-          <p>
-            Une convention collective de branche ou un accord collectif
-            d’entreprise peut aussi prévoir des congés pour d’autres événements
-            familiaux.
-          </p>
+          <ul>
+            <li>
+              si un accord d’entreprise (ou de groupe ou d’établissement) traite
+              de ce sujet : c’est ce texte qui s’appliquera ;
+            </li>
+            <li>
+              à défaut, si une convention de branche traite de ce sujet : c’est
+              ce texte qui s’appliquera ;
+            </li>
+            <li>
+              dans tous les cas, si le contrat de travail prévoit des règles
+              plus favorables que ces textes : il s’appliquera.
+            </li>
+          </ul>
 
           <p>
-            Le contrat de travail peut toujours prévoir des mesures plus
-            favorables, qui s’appliqueront.
+            Attention, d’autres règles non étendues peuvent potentiellement vous
+            être applicables.
           </p>
         </Alert>
         <ReferencesJuridiques

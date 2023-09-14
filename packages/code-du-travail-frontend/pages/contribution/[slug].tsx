@@ -10,7 +10,9 @@ import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
-import showNewContribPage from "../../src/contributions/slugFilter";
+import showNewContribPage, {
+  SLUG_FOR_POC_SWAP,
+} from "../../src/contributions/slugFilter";
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);
@@ -46,7 +48,6 @@ const buildTitleAndDescription = (
     title,
   };
 };
-const SLUG_FOR_POC_GENERIC = ["les-conges-pour-evenements-familiaux"];
 
 function PageContribution(props: Props): React.ReactElement {
   const {
@@ -68,12 +69,8 @@ function PageContribution(props: Props): React.ReactElement {
   return (
     <Layout>
       <Metas title={metas.title} description={metas.description} />
-      <Answer
-        title={title}
-        relatedItems={relatedItems}
-        breadcrumbs={breadcrumbs}
-      >
-        {SLUG_FOR_POC_GENERIC.indexOf(slug) >= 0 ? (
+      <Answer title={title} breadcrumbs={breadcrumbs}>
+        {SLUG_FOR_POC_SWAP.indexOf(slug) >= 0 ? (
           <ContributionGeneric
             answers={answers}
             slug={slug}
@@ -85,7 +82,7 @@ function PageContribution(props: Props): React.ReactElement {
               <ContributionCC
                 answers={answers}
                 slug={slug}
-                content={(content && content._source) || {}}
+                relatedItems={relatedItems}
               />
             ) : (
               <Contribution
