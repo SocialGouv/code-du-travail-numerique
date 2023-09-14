@@ -1,7 +1,7 @@
 import { StepData } from "../../../store";
 
 export type Agreement2120StoreInput = {
-  salariesVariablePart: number | undefined;
+  salariesVariablePart?: number;
 };
 
 export type Agreement2120StoreError = {
