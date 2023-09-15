@@ -106,13 +106,13 @@ const ContributionCC = ({ answers, slug, relatedItems }) => {
           </p>
         </Alert>
       </StyledSection>
-      <StyledSection>
-        <Title shift={spacings.xmedium} variant="secondary">
-          Pour aller plus loins
-        </Title>
-        <Grid columns={2}>
-          {relatedItems &&
-            relatedItems.map((item) => {
+      {relatedItems && (
+        <StyledSection>
+          <Title shift={spacings.xmedium} variant="secondary">
+            Pour aller plus loins
+          </Title>
+          <Grid columns={2}>
+            {relatedItems.map((item) => {
               return (
                 <ListLink
                   item={item}
@@ -122,8 +122,9 @@ const ContributionCC = ({ answers, slug, relatedItems }) => {
                 />
               );
             })}
-        </Grid>
-      </StyledSection>
+          </Grid>
+        </StyledSection>
+      )}
     </>
   );
 };

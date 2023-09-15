@@ -13,6 +13,7 @@ import {
   ArrowLink,
   Badge,
   Button,
+  Grid,
   Heading,
   icons,
   IconStripe,
@@ -37,10 +38,11 @@ import { handleTrackEvent } from "../outils/common/Agreement/tracking";
 import { MatomoBaseEvent } from "../lib";
 import { getCc3239Informations } from "../outils";
 import { Enterprise } from "../conventions/Search/api/enterprises.service";
+import { ListLink } from "../search/SearchResults/Results";
 
 const { DirectionRight } = icons;
 
-const ContributionGeneric = ({ answers, content, slug }) => {
+const ContributionGeneric = ({ answers, content, slug, relatedItems }) => {
   const titleRef = useRef<HTMLDivElement>(null);
   const onUserAction: OnUserAction = (action, extra) => {
     handleTrackEvent(getTitle(), action, extra);
@@ -353,6 +355,25 @@ const ContributionGeneric = ({ answers, content, slug }) => {
         <ReferencesJuridiques
           references={filteredRefs(answers.generic.references, content.url)}
         />
+        {relatedItems && (
+          <Section>
+            <Title shift={spacings.xmedium} variant="secondary">
+              Pour aller plus loins
+            </Title>
+            <Grid columns={2}>
+              {relatedItems.map((item) => {
+                return (
+                  <ListLink
+                    item={item}
+                    key={item.slug}
+                    titleTagType="h3"
+                    hideAction
+                  />
+                );
+              })}
+            </Grid>
+          </Section>
+        )}
       </SectionHidden>
     </>
   );

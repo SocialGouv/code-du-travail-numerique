@@ -75,6 +75,7 @@ function PageContribution(props: Props): React.ReactElement {
             answers={answers}
             slug={slug}
             content={(content && content._source) || {}}
+            relatedItems={relatedItems}
           />
         ) : (
           <>
