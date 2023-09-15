@@ -1,5 +1,5 @@
 import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { Button, FlatList, Paragraph, theme } from "@socialgouv/cdtn-ui";
+import { Button, FlatList, Tile, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -9,7 +9,6 @@ import { ScreenType, useNavContext } from "../common/NavContext";
 import { TrackingProps } from "../types";
 import { AgreementTile } from "../../common/Agreement/AgreementSearch/AgreementInput/AgreementTile";
 import { useRouter } from "next/router";
-import { Tile } from "@socialgouv/cdtn-ui/lib";
 
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;

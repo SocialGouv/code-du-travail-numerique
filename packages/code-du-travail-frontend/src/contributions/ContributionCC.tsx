@@ -1,7 +1,10 @@
 import {
   Alert,
   Badge,
+  Grid,
   Heading,
+  icons,
+  IconStripe,
   Paragraph,
   Section,
   theme,
@@ -17,8 +20,6 @@ import rehypeToReact from "./rehypeToReact";
 import ReferencesJuridiques from "./References";
 import { SummaryItem } from "../questionnaire/Components/Summary/SummaryItem";
 import { useRouter } from "next/router";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { Grid } from "@socialgouv/cdtn-ui/lib";
 import { ListLink } from "../search/SearchResults/Results";
 
 const removeCCNumberFromSlug = (slug: string): string =>
@@ -83,7 +84,9 @@ const ContributionCC = ({ answers, slug, relatedItems }) => {
 
       <StyledSection>
         <Alert>
-          <Heading as="p">Attention</Heading>
+          <Heading as="p" variant="primary">
+            <IconStripe icon={icons.Warning}>Attention</IconStripe>
+          </Heading>
           <p>
             Les informations présentes sur cette page sont issues de l’analyse
             des règles prévues par votre convention collective de branche

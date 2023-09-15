@@ -9,10 +9,13 @@ import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
 import ReferencesJuridiques, { filteredRefs } from "./References";
 import {
+  Alert,
   ArrowLink,
   Badge,
   Button,
+  Heading,
   icons,
+  IconStripe,
   Paragraph,
   Section,
   theme,
@@ -34,7 +37,6 @@ import { handleTrackEvent } from "../outils/common/Agreement/tracking";
 import { MatomoBaseEvent } from "../lib";
 import { getCc3239Informations } from "../outils";
 import { Enterprise } from "../conventions/Search/api/enterprises.service";
-import { Alert, Heading } from "@socialgouv/cdtn-ui/lib";
 
 const { DirectionRight } = icons;
 
@@ -317,7 +319,9 @@ const ContributionGeneric = ({ answers, content, slug }) => {
           components={rehypeToReact(content)}
         />
         <Alert>
-          <Heading as="p">Attention</Heading>
+          <Heading as="p" variant="primary">
+            <IconStripe icon={icons.Warning}>Attention</IconStripe>
+          </Heading>
           <p>
             Les informations présentes sur cette page sont issues du Code du
             travail. D’autres textes ou votre contrat de travail peuvent
@@ -383,6 +387,7 @@ const StyledDirectionRightIcon = styled(DirectionRight)`
 `;
 const SectionNoPadding = styled(Section)`
   padding: 0;
+  margin: 0;
 `;
 
 export default ContributionGeneric;
