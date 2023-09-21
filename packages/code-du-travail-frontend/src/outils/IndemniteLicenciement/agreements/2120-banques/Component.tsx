@@ -13,17 +13,28 @@ export default function Agreement2120() {
     salariesVariablePart,
     onChangeSalariesVariablePart,
     errorSalariesVariablePart,
+    isLicenciementDisciplinaire,
+    init,
   } = useIndemniteLicenciementStore(store, (state) => ({
     salariesVariablePart: state.agreement2120Data.input.salariesVariablePart,
     onChangeSalariesVariablePart:
       state.agreement2120Function.onChangeSalariesVariablePart,
     errorSalariesVariablePart:
       state.agreement2120Data.error.errorSalariesVariablePart,
+    isLicenciementDisciplinaire:
+      state.agreement2120Data.input.isLicenciementDisciplinaire,
+    init: state.agreement2120Function.init,
   }));
 
+  React.useEffect(() => {
+    init();
+  }, []);
+
+  if (isLicenciementDisciplinaire) return <></>;
   return (
     <TextQuestion
-      label="Indiquez le montant total des éléments variables, primes (à l’exception du 13ème mois) et avantages en nature perçus au cours des 12 derniers mois précédant la notification du licenciement"
+      label="Montant total des éléments variables perçus au cours des 12 derniers mois précédant la notification du licenciement"
+      subLabel="Indiquez le montant total des éléments variables, primes (à l’exception du 13ème mois) et avantages en nature perçus au cours des 12 derniers mois précédant la notification du licenciement"
       inputType="number"
       value={salariesVariablePart}
       onChange={onChangeSalariesVariablePart}
@@ -47,10 +58,10 @@ export default function Agreement2120() {
               Le montant renseigné nous permettra de calculer l’indemnité de
               licenciement prévue par la convention collective de la banque qui
               est calculée sur la base des salaires sans ces éléments de
-              rémunération. A l’inverse, l’indemnité prévue par le code du
-              travail est calculée sur la base des salaires avec ces éléments de
-              rémunération. Le montant indiqué sera donc déduit du/des salaires
-              renseigné(s) à la question précédente.
+              rémunération. Il sera donc déduit du/des salaires renseigné(s) à
+              la question précédente. A l’inverse, l’indemnité prévue par le
+              code du travail est calculée sur la base des salaires avec ces
+              éléments de rémunération.
             </p>
           </>
         ),

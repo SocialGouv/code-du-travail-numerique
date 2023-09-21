@@ -1,6 +1,5 @@
 import produce from "immer";
 import { GetState, SetState } from "zustand";
-import { deepEqualObject } from "../../../../../lib";
 import { MainStore } from "../../../store";
 import { Agreement2120StoreInput, Agreement2120StoreSlice } from "./types";
 
@@ -21,17 +20,18 @@ export const validateAgreement2120 = (
 };
 
 export const validateStep = (state: Agreement2120StoreInput) => {
+  const isValid =
+    state.isLicenciementDisciplinaire ||
+    state.salariesVariablePart !== undefined;
+
   const errorState = {
-    errorSalariesVariablePart:
-      state.salariesVariablePart === undefined
-        ? "Vous devez répondre à cette question"
-        : undefined,
+    errorSalariesVariablePart: !isValid
+      ? "Vous devez répondre à cette question"
+      : undefined,
   };
 
   return {
-    isValid: deepEqualObject(errorState, {
-      errorSalariesVariablePart: undefined,
-    }),
+    isValid: isValid,
     errorState,
   };
 };

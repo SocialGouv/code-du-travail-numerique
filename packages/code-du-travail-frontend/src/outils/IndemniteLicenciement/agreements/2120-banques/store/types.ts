@@ -1,6 +1,7 @@
 import { StepData } from "../../../store";
 
 export type Agreement2120StoreInput = {
+  isLicenciementDisciplinaire?: boolean;
   salariesVariablePart?: number;
 };
 
@@ -15,6 +16,7 @@ export type Agreement2120StoreData = StepData<
 
 export type Agreement2120StoreFn = {
   onChangeSalariesVariablePart: (value: string) => void;
+  init: () => void;
 };
 
 export type Agreement2120StoreSlice = {

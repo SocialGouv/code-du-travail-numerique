@@ -8,10 +8,12 @@ import {
   Agreement2120StoreSlice,
 } from "./types";
 import { validateStep } from "./validator";
+import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 
 const initialState: Agreement2120StoreData = {
   input: {
     salariesVariablePart: undefined,
+    isLicenciementDisciplinaire: false,
   },
   error: {},
   hasBeenSubmit: false,
@@ -20,10 +22,27 @@ const initialState: Agreement2120StoreData = {
 
 export const createAgreement2120StoreSalaires: StoreSlice<
   Agreement2120StoreSlice,
-  SalairesStoreSlice
+  SalairesStoreSlice & CommonInformationsStoreSlice
 > = (set, get) => ({
   agreement2120Data: { ...initialState },
   agreement2120Function: {
+    init: () => {
+      const isLicenciementDisciplinaire =
+        get()
+          .informationsData.input.publicodesInformations.find(
+            (v) =>
+              v.question.rule.nom ===
+              "contrat salarié . convention collective . banque . licenciement disciplinaire"
+          )
+          ?.info?.slice(1, -1) === "Oui";
+
+      set(
+        produce((state: Agreement2120StoreSlice) => {
+          state.agreement2120Data.input.isLicenciementDisciplinaire =
+            isLicenciementDisciplinaire;
+        })
+      );
+    },
     onChangeSalariesVariablePart: (value: string) => {
       const valueNumber = parseInt(value, 10);
       applyGenericValidation(

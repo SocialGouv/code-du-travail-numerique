@@ -13,6 +13,8 @@ export default function Agreement2120Informations() {
     })
   );
 
+  if (salariesVariablePart === undefined) return <></>;
+
   return (
     <li>
       Montant total des éléments variables, primes (à l’exception du 13ème mois)
