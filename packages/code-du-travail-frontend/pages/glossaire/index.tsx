@@ -60,9 +60,7 @@ function getGlossaryLetters(glossary) {
     letter,
     terms: glossary
       .filter(({ slug }) => slug.slice(0, 1).toUpperCase() === letter)
-      .sort((a, b) => {
-        return a.term > b.term ? 1 : -1;
-      }),
+      .sort((a, b) => a.term.localeCompare(b.term)),
   }));
 }
 
