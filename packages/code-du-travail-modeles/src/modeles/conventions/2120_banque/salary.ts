@@ -10,6 +10,7 @@ import { rankByMonthArrayDescFrench } from "../../common";
 
 export type CC2120ReferenceSalaryProps = {
   salaires: SalaryPeriods[];
+  salariesVariablePart: number;
   isLicenciementEco: QuestionOuiNon;
   isLicenciementDisciplinaire: QuestionOuiNon;
 };
@@ -19,6 +20,7 @@ export class ReferenceSalary2120
 {
   computeReferenceSalary({
     salaires,
+    salariesVariablePart,
     isLicenciementEco,
     isLicenciementDisciplinaire,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2120>): number {
@@ -27,13 +29,15 @@ export class ReferenceSalary2120
       (sum, current) => sum + (current.value ?? 0),
       0
     );
-
+    const salariesWithoutPrimes = Math.max(
+      totalSalaryValues - salariesVariablePart,
+      0
+    );
     if (isLicenciementEco === "Oui") {
-      const averageSalary = totalSalaryValues / rankedSalaires.length;
-      return isNaN(averageSalary) ? 0 : averageSalary;
+      return salariesWithoutPrimes / rankedSalaires.length;
     }
     if (isLicenciementDisciplinaire === "Non") {
-      return totalSalaryValues / (rankedSalaires.length + 1);
+      return salariesWithoutPrimes / (rankedSalaires.length + 1);
     }
     return new ReferenceSalaryLegal().computeReferenceSalary({
       salaires,

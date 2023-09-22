@@ -15,7 +15,7 @@ type Props = {
   label: string;
   tooltip?: Tooltip;
   inputType?: "date" | "number" | "text";
-  value: string | undefined;
+  value: string | number | undefined;
   placeholder?: string;
   subLabel?: string;
   smallText?: string;
