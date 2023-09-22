@@ -58,9 +58,11 @@ function getGlossaryLetters(glossary) {
   );
   return alphabet.map((letter) => ({
     letter,
-    terms: glossary.filter(
-      ({ slug }) => slug.slice(0, 1).toUpperCase() === letter
-    ),
+    terms: glossary
+      .filter(({ slug }) => slug.slice(0, 1).toUpperCase() === letter)
+      .sort((a, b) => {
+        return a.term > b.term ? 1 : -1;
+      }),
   }));
 }
 
