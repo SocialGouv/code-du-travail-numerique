@@ -3,7 +3,6 @@
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
 import * as Sentry from "@sentry/nextjs";
-import { Replay } from "@sentry/browser";
 
 Sentry.init({
   dsn:
@@ -12,8 +11,4 @@ Sentry.init({
     process.env.NEXT_PUBLIC_SENTRY_ENV || process.env.SENTRY_ENV || "dev",
   tracesSampleRate: 0.2,
   release: process.env.NEXT_PUBLIC_SENTRY_RELEASE || process.env.SENTRY_RELEASE,
-
-  replaysSessionSampleRate: 0.01,
-  replaysOnErrorSampleRate: 1.0,
-  integrations: [new Replay()],
 });
