@@ -10,7 +10,7 @@ import { SmallText } from "../common/stepStyles";
 import { SubLabel } from "./SelectQuestion";
 
 type Props = {
-  onChange: (value: string | number) => void;
+  onChange: (value: string) => void;
   error?: string;
   label: string;
   tooltip?: Tooltip;
