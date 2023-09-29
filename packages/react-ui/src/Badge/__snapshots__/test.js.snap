@@ -3,7 +3,7 @@
 exports[`<Badge /> renders 1`] = `
 <div>
   <div
-    class="sc-aXZVg iHwzcx"
+    class="sc-aXZVg kTinCf"
   >
     <div
       class="sc-gEvEer htfpNk"
@@ -35,7 +35,7 @@ exports[`<Badge /> renders 1`] = `
 exports[`<Badge /> renders with correct styles and icon 1`] = `
 <div>
   <div
-    class="sc-aXZVg eeFinL"
+    class="sc-aXZVg ibpnUB"
   >
     <div
       class="sc-gEvEer htfpNk"

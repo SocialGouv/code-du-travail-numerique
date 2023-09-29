@@ -1,31 +1,33 @@
-import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
 import { Config } from "../icons/index.js";
 import { box } from "../theme";
 
-export const Badge = ({ icon: Icon, ...props }) => (
-  <StyledBadge {...props}>
+type BadgeProps = {
+  icon?: React.ElementType;
+  variant?: "primary" | "secondary";
+};
+
+export const Badge = ({
+  icon: Icon = Config,
+  variant = "primary",
+  ...props
+}: BadgeProps) => (
+  <StyledBadge variant={variant} {...props}>
     <IconWrapper>
       <Icon />
     </IconWrapper>
   </StyledBadge>
 );
 
-Badge.propTypes = {
-  icon: PropTypes.elementType,
-  variant: PropTypes.oneOf(["primary", "secondary"]),
-};
-
-Badge.defaultProps = {
-  icon: Config,
-  variant: "primary",
-};
-
 const DIMENSION = "5rem";
 
-const StyledBadge = styled.div`
+type StyledBadgeProps = {
+  variant: "primary" | "secondary";
+};
+
+const StyledBadge = styled.div<StyledBadgeProps>`
   position: absolute;
   top: 0;
   right: 0;
@@ -34,6 +36,7 @@ const StyledBadge = styled.div`
   overflow: hidden;
   color: ${({ variant, theme }) => theme[variant + "Text"]};
   border-radius: 0 ${box.borderRadius} 0 0;
+
   &:before {
     position: absolute;
     display: block;

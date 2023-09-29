@@ -55,6 +55,11 @@ export const base = ({ handler }) => (
         It should look good ! And everything should be centered
       </Tile>
     </Section>
+    <Section>
+      <Tile title="Disabled tile" disabled>
+        Tile is disabled and can't be clicked
+      </Tile>
+    </Section>
   </div>
 );
 
