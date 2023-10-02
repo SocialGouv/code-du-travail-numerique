@@ -6,6 +6,7 @@ import { Fieldset, Legend, Text } from "@socialgouv/cdtn-ui";
 import { InfoBulle } from "../../../outils/common/InfoBulle";
 import { trackClickHelp } from "../../tracking";
 import React, { useContext } from "react";
+import { Paragraph } from "@socialgouv/cdtn-ui/lib";
 
 type QuestionProps = {
   widgetMode: boolean;
@@ -41,16 +42,11 @@ export const Question = ({ widgetMode }: QuestionProps) => {
           index={index}
         ></Response>
       ))}
-      <Description>{currentQuestion?.description}</Description>
+      <Paragraph italic>{currentQuestion?.description}</Paragraph>
     </Fieldset>
   );
 };
 
 const StyledInfoBulle = styled(InfoBulle)`
   padding: 0;
-`;
-
-const Description = styled.i`
-  display: block;
-  margin-top: 7px;
 `;

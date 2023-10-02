@@ -1,11 +1,12 @@
 import React from "react";
+import { Text } from "@socialgouv/cdtn-ui";
 
 const IntroAnnotation = (): JSX.Element => {
   return (
-    <i>
+    <Text italic>
       Attention&nbsp;: Le résultat affiché correspond à la durée légale ou
       conventionnelle, en fonction des informations renseignées.
-    </i>
+    </Text>
   );
 };
 

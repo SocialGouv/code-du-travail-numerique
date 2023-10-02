@@ -18,6 +18,7 @@ const sharedStyle = css`
           ? fonts.sizes.headings[props.$fontSize.replace("h", "")]
           : fonts.sizes[props.$fontSize]};
       font-weight: ${(props) => props.$fontWeight};
+      ${(props) => (props.$italic ? "font-style: italic" : "")};
     `;
   }}
 `;
@@ -36,13 +37,13 @@ const spanPropTypes = {
     "hlarge",
   ]),
   fontWeight: PropTypes.oneOf(["300", "400", "500", "600", "700"]),
-  noMargin: PropTypes.bool,
+  italic: PropTypes.bool,
   role: PropTypes.string,
   variant: PropTypes.oneOf(["primary", "secondary", "error", "placeholder"]),
 };
 
 const defaultSpanPropTypes = {
-  fontSize: "default",
+  fontSize: "inherit",
   fontWeight: "400",
 };
 
@@ -61,12 +62,20 @@ Text.defaultProps = defaultSpanPropTypes;
 Paragraph.propTypes = paragraphPropTypes;
 Paragraph.defaultProps = defaultParagraphPropTypes;
 
-export function Text({ children, fontSize, fontWeight, variant, ...props }) {
+export function Text({
+  children,
+  fontSize,
+  italic,
+  fontWeight,
+  variant,
+  ...props
+}) {
   return (
     <Span
       {...props}
-      $fontWeight={fontWeight}
       $fontSize={fontSize}
+      $fontWeight={fontWeight}
+      $italic={italic}
       $variant={variant}
     >
       {children}
@@ -78,6 +87,7 @@ export function Paragraph({
   children,
   fontSize,
   fontWeight,
+  italic,
   noMargin,
   variant,
   ...props
@@ -85,8 +95,9 @@ export function Paragraph({
   return (
     <P
       {...props}
-      $fontWeight={fontWeight}
       $fontSize={fontSize}
+      $italic={italic}
+      $fontWeight={fontWeight}
       $noMargin={noMargin}
       $variant={variant}
     >

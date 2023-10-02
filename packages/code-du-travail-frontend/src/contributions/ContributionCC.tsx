@@ -7,6 +7,7 @@ import {
   icons,
   Paragraph,
   Section,
+  Text,
   theme,
   Title,
   Toast,
@@ -61,7 +62,8 @@ const ContributionCC = ({ answers, content, slug }) => {
               <Title shift={spacings.xmedium} variant="primary">
                 {isConventionalAnswer ? (
                   <>
-                    Que dit la convention <i>{conventionAnswer.shortName}</i>
+                    Que dit la convention{" "}
+                    <Text italic>{conventionAnswer.shortName}</Text>
                     &nbsp;?
                   </>
                 ) : (

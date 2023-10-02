@@ -56,8 +56,8 @@ const PubliSituation = ({
     </ul>
     {annotations &&
       annotations.map((annotation, index) => (
-        <Paragraph key={index}>
-          <i>*&nbsp;{annotation}</i>
+        <Paragraph italic key={index}>
+          *&nbsp;{annotation}
         </Paragraph>
       ))}
   </>

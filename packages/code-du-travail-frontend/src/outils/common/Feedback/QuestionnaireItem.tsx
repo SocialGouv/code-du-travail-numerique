@@ -40,7 +40,7 @@ export const QuestionnaireItem = ({
   const [status, setStatus] = useState<Status>();
   return (
     <div className={className} data-testId={dataTestId}>
-      {title && <b>{title}</b>}
+      {title && <strong>{title}</strong>}
       <ButtonContainer>
         <StyledButton
           variant={status === Status.BAD ? "light" : "naked"}

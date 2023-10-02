@@ -8,6 +8,7 @@ import {
   InsertTitle,
   Paragraph,
   Section,
+  Text,
   theme,
   Title,
   Toast,
@@ -127,7 +128,8 @@ const Contribution = ({ answers, content }) => {
             >
               {isConventionalAnswer ? (
                 <>
-                  Que dit la convention <i>{conventionAnswer.shortName}</i>
+                  Que dit la convention{" "}
+                  <Text italic>{conventionAnswer.shortName}</Text>
                   &nbsp;?
                 </>
               ) : (
