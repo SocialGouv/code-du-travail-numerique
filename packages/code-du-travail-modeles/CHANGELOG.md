@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.108.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.108.0...v4.108.1) (2023-09-22)
+
+### Bug Fixes
+
+- **2120:** prise ne compte de la part variable du salaire dans le calcul du SRef ([#5371](https://github.com/SocialGouv/code-du-travail-numerique/issues/5371)) ([064cb24](https://github.com/SocialGouv/code-du-travail-numerique/commit/064cb24da78702f5f6b0cb2b716de085d6d3df60))
+
 # [4.108.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.107.0...v4.108.0) (2023-09-11)
 
 ### Bug Fixes
