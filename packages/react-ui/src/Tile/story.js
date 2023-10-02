@@ -2,7 +2,7 @@ import React from "react";
 
 import { Holidays, Salary, Time } from "../icons/index.js";
 import { Section } from "../layout/Section/index";
-import { Tile } from "./index.js";
+import { Tile } from "./index";
 
 export default {
   argTypes: {
