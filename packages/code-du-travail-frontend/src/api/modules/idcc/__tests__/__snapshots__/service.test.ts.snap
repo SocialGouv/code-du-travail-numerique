@@ -13,7 +13,7 @@ exports[`IDCC getIdccByQuery 1`] = `
       {
         "_id": "21",
         "_index": "cdtn_test-v2_documents",
-        "_score": 16.875479,
+        "_score": 17.099617,
         "_source": {
           "cdtnId": "a25dfc974f",
           "effectif": 216431,
@@ -29,7 +29,7 @@ exports[`IDCC getIdccByQuery 1`] = `
       {
         "_id": "20",
         "_index": "cdtn_test-v2_documents",
-        "_score": 10.143526,
+        "_score": 10.383809,
         "_source": {
           "cdtnId": "ceb38cca3c",
           "effectif": 219,
@@ -43,7 +43,7 @@ exports[`IDCC getIdccByQuery 1`] = `
         "_type": "_doc",
       },
     ],
-    "max_score": 16.875479,
+    "max_score": 17.099617,
     "total": {
       "relation": "eq",
       "value": 2,
