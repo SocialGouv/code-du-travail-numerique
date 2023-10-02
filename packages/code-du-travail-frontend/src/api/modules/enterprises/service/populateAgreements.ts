@@ -33,7 +33,6 @@ export const populateAgreements = async (
 
   if (idccList.length > 0) {
     const body = getAgreements(idccList);
-    console.log("Popuplate agreements", elasticDocumentsIndex);
     const response = await elasticsearchClient.search<SearchAgreementsResponse>(
       { body, index: elasticDocumentsIndex }
     );

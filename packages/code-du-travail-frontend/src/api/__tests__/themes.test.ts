@@ -8,7 +8,6 @@ describe("Themes", () => {
 
   it("should return a list for /themes", async () => {
     const res = await request(server).get("/api/themes");
-    console.log(res.body);
     expect(res.status).toBe(200);
     expect(res.body).toMatchSnapshot();
   });
