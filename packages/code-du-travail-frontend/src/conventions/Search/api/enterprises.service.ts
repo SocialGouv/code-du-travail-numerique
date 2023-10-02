@@ -1,29 +1,12 @@
 import debounce from "debounce-promise";
 import { SITE_URL } from "../../../config";
+import {
+  Enterprise as ApiEntreprise,
+  EnterpriseAgreement as ApiEnterpriseAgreement,
+} from "../../../api/modules/enterprises/types";
 
-import { Agreement } from "@socialgouv/cdtn-utils";
-
-export interface ApiEnterpriseData {
-  entreprises: Enterprise[];
-}
-
-export interface Enterprise {
-  activitePrincipale?: string;
-  conventions: Agreement[];
-  etablissements: number;
-  highlightLabel: string;
-  label: string;
-  matching: number;
-  simpleLabel: string;
-  siren: string;
-  address?: string;
-  firstMatchingEtablissement?: MatchingEtablissement;
-}
-
-export interface MatchingEtablissement {
-  siret: string;
-  address: string;
-}
+export type Enterprise = ApiEntreprise;
+export type EnterpriseAgreement = ApiEnterpriseAgreement;
 
 const siretSirenError =
   "Veuillez indiquer un numéro Siret (14 chiffres) ou Siren (9 chiffres) valide";

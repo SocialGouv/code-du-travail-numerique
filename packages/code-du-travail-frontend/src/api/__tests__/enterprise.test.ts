@@ -78,13 +78,14 @@ describe("Test enterprise endpoint", () => {
         // Conventions data should be extract from elastic
         conventions: Data.filter(
           (doc) => doc.num === enterprise.conventions[0].idcc
-        ).map(({ id, num, shortTitle, slug, title, url }) => ({
+        ).map(({ id, num, shortTitle, slug, title, url, answers }) => ({
           id,
           num,
           shortTitle,
           slug,
           title,
           url,
+          hasAnswers: (answers as unknown[])?.length ?? 0 > 0,
         })),
       })),
     };
@@ -236,6 +237,7 @@ describe("Test enterprise endpoint", () => {
               num: 123456,
               shortTitle: "Convention collective non reconnue",
               id: 123456,
+              hasAnswers: false,
             },
           ],
         },
@@ -330,5 +332,101 @@ describe("Test enterprise endpoint", () => {
       expect(enterprise.conventions[0].num).toEqual(1090);
       expect(enterprise.conventions[0].slug).not.toBeUndefined();
     });
+  });
+
+  test("A call to retrieve not supported agreements from an enterprise", async () => {
+    const enterpriseApiDataResponse = {
+      entreprises: [
+        {
+          activitePrincipale:
+            "Entretien et réparation de véhicules automobiles",
+          conventions: [
+            {
+              idcc: 1747,
+            },
+          ],
+          etablissements: 1,
+          highlightLabel: "<b><u>AUTOEXPRESS</b></u>",
+          label: "AUTOEXPRESS",
+          matching: 1,
+          matchingEtablissement: {
+            address: "1 Rue Clément Ader 08110 Carignan",
+            siret: "75280280100023",
+          },
+          simpleLabel: "AUTOEXPRESS",
+          siren: "752802801",
+        },
+      ],
+    };
+    const apiEnterpriseResponse = {
+      json: () => enterpriseApiDataResponse,
+      status: 200,
+    };
+
+    (global as any).fetch = jest.fn(() => apiEnterpriseResponse);
+
+    const response = await request(server).get(
+      "/api/enterprises?q=AUTOEXPRESS"
+    );
+
+    expect(response.status).toEqual(200);
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith(
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=true&employer=true&open=true&matchingLimit=0`,
+      { headers: { referer: "cdtn-api" } }
+    );
+
+    expect(response.body.entreprises[0].conventions[0].num).toEqual(1747);
+    expect(response.body.entreprises[0].conventions[0].hasAnswers).toEqual(
+      false
+    );
+  });
+
+  test("A call to retrieve supported agreements from an enterprise", async () => {
+    const enterpriseApiDataResponse = {
+      entreprises: [
+        {
+          activitePrincipale:
+            "Entretien et réparation de véhicules automobiles",
+          conventions: [
+            {
+              idcc: 843,
+            },
+          ],
+          etablissements: 1,
+          highlightLabel: "<b><u>AUTOEXPRESS</b></u>",
+          label: "AUTOEXPRESS",
+          matching: 1,
+          matchingEtablissement: {
+            address: "1 Rue Clément Ader 08110 Carignan",
+            siret: "75280280100023",
+          },
+          simpleLabel: "AUTOEXPRESS",
+          siren: "752802801",
+        },
+      ],
+    };
+    const apiEnterpriseResponse = {
+      json: () => enterpriseApiDataResponse,
+      status: 200,
+    };
+
+    (global as any).fetch = jest.fn(() => apiEnterpriseResponse);
+
+    const response = await request(server).get(
+      "/api/enterprises?q=AUTOEXPRESS"
+    );
+
+    expect(response.status).toEqual(200);
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith(
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=true&employer=true&open=true&matchingLimit=0`,
+      { headers: { referer: "cdtn-api" } }
+    );
+
+    expect(response.body.entreprises[0].conventions[0].num).toEqual(843);
+    expect(response.body.entreprises[0].conventions[0].hasAnswers).toEqual(
+      true
+    );
   });
 });

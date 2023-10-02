@@ -11,7 +11,7 @@ export type MatchingEtablissement = {
 
 export type Enterprise = {
   activitePrincipale?: string;
-  conventions: Agreement[];
+  conventions: EnterpriseAgreement[];
   etablissements: number;
   highlightLabel: string;
   label: string;
@@ -22,16 +22,6 @@ export type Enterprise = {
   firstMatchingEtablissement?: MatchingEtablissement;
 };
 
-export type Convention = {
-  idcc: number;
-  shortTitle: string;
-  id: string;
-  title: string;
-  url?: string;
-};
-
-export type EnterpriseApiResponse = {
-  entreprises?: (Omit<Enterprise, "conventions"> & {
-    conventions: Convention[];
-  })[];
+export type EnterpriseAgreement = Agreement & {
+  hasAnswers: boolean;
 };

@@ -1,5 +1,7 @@
-import { Enterprise } from "../../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import {
+  Enterprise,
+  EnterpriseAgreement,
+} from "../../../../../conventions/Search/api/enterprises.service";
 import {
   MatomoAgreementEvent,
   MatomoBaseEvent,
@@ -14,12 +16,13 @@ jest.mock("@socialgouv/matomo-next", () => ({
   push: jest.fn(),
 }));
 
-const agreement: Agreement = {
+const agreement: EnterpriseAgreement = {
   id: "AGREEMENT_ID",
   num: 3239,
   shortTitle: "Service à la personne",
   slug: "/convention/3239-service-a-la-personne",
   title: "Service à la personne",
+  hasAnswers: false,
 };
 
 const enterprise: Enterprise = {
