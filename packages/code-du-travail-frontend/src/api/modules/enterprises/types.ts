@@ -23,5 +23,5 @@ export type Enterprise = {
 };
 
 export type EnterpriseAgreement = Agreement & {
-  hasAnswers: boolean;
+  hasContributions: boolean;
 };

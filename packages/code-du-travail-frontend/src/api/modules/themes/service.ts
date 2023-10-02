@@ -7,6 +7,7 @@ import { getAllThemesQuery, getThemeBySlugQuery } from "./queries";
 
 export const getAllThemes = async () => {
   const body = getAllThemesQuery();
+  console.log("Get all themes from ", elasticDocumentsIndex);
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,

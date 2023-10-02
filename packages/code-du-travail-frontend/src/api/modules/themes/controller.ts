@@ -12,10 +12,13 @@ export class ThemesController {
   }
 
   public async get() {
+    console.log("API Themes 11 ");
     try {
+      console.log("API Themes 12");
       const response = await getAllThemes();
       this.res.status(200).json(response);
     } catch (error) {
+      console.error("API Themes ERROR", error);
       if (error instanceof NotFoundError) {
         this.res.status(404).json({ message: error.message });
       } else {

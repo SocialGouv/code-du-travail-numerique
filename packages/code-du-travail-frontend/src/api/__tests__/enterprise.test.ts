@@ -78,14 +78,14 @@ describe("Test enterprise endpoint", () => {
         // Conventions data should be extract from elastic
         conventions: Data.filter(
           (doc) => doc.num === enterprise.conventions[0].idcc
-        ).map(({ id, num, shortTitle, slug, title, url, answers }) => ({
+        ).map(({ id, num, shortTitle, slug, title, url, contributions }) => ({
           id,
           num,
           shortTitle,
           slug,
           title,
           url,
-          hasAnswers: (answers as unknown[])?.length ?? 0 > 0,
+          hasContributions: contributions ?? false,
         })),
       })),
     };
@@ -121,7 +121,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=hello&address=my%20address&convention=true&employer=true&open=true&matchingLimit=0",
+      "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=hello&convention=true&employer=true&open=true&matchingLimit=0&address=my%20address",
       { headers: { referer: "cdtn-api" } }
     );
   });
@@ -237,7 +237,7 @@ describe("Test enterprise endpoint", () => {
               num: 123456,
               shortTitle: "Convention collective non reconnue",
               id: 123456,
-              hasAnswers: false,
+              hasContributions: false,
             },
           ],
         },
@@ -377,9 +377,9 @@ describe("Test enterprise endpoint", () => {
     );
 
     expect(response.body.entreprises[0].conventions[0].num).toEqual(1747);
-    expect(response.body.entreprises[0].conventions[0].hasAnswers).toEqual(
-      false
-    );
+    expect(
+      response.body.entreprises[0].conventions[0].hasContributions
+    ).toEqual(false);
   });
 
   test("A call to retrieve supported agreements from an enterprise", async () => {
@@ -425,8 +425,8 @@ describe("Test enterprise endpoint", () => {
     );
 
     expect(response.body.entreprises[0].conventions[0].num).toEqual(843);
-    expect(response.body.entreprises[0].conventions[0].hasAnswers).toEqual(
-      true
-    );
+    expect(
+      response.body.entreprises[0].conventions[0].hasContributions
+    ).toEqual(true);
   });
 });

@@ -13,7 +13,7 @@ const toAgreement = (convention: Convention): EnterpriseAgreement => ({
   num: convention.idcc,
   shortTitle: convention.shortTitle ?? "Convention collective non reconnue",
   title: convention.title,
-  hasAnswers: false,
+  hasContributions: false,
   ...(convention.url ? { url: convention.url } : {}),
 });
 
@@ -33,6 +33,7 @@ export const populateAgreements = async (
 
   if (idccList.length > 0) {
     const body = getAgreements(idccList);
+    console.log("Popuplate agreements", elasticDocumentsIndex);
     const response = await elasticsearchClient.search<SearchAgreementsResponse>(
       { body, index: elasticDocumentsIndex }
     );
@@ -53,10 +54,11 @@ export const populateAgreements = async (
           conventions: enterprise.conventions.map(
             (convention): EnterpriseAgreement => {
               if (agreements[convention.idcc]) {
-                const { answers, ...agreement } = agreements[convention.idcc];
+                const { contributions, ...agreement } =
+                  agreements[convention.idcc];
                 return {
                   ...agreement,
-                  hasAnswers: answers.length > 0,
+                  hasContributions: contributions ?? false,
                 };
               }
               return toAgreement(convention);
@@ -70,7 +72,7 @@ export const populateAgreements = async (
         let conventionsToAdd: EnterpriseAgreement[] = idccToAdd
           .map((idcc) => ({
             ...agreements[idcc],
-            hasAnswers: agreements[idcc].answers.length > 0,
+            hasContributions: agreements[idcc].contributions ?? false,
           }))
           .filter((convention) => convention !== undefined);
         result.entreprises = result.entreprises?.map((enterprise) => {

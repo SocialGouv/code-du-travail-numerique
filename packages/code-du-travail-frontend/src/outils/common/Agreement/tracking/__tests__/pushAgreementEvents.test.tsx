@@ -22,7 +22,7 @@ const agreement: EnterpriseAgreement = {
   shortTitle: "Service à la personne",
   slug: "/convention/3239-service-a-la-personne",
   title: "Service à la personne",
-  hasAnswers: false,
+  hasContributions: false,
 };
 
 const enterprise: Enterprise = {

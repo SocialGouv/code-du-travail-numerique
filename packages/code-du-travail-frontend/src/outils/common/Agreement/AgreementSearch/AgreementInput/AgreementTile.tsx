@@ -39,7 +39,7 @@ export function AgreementTile({
       target={isWidgetMode ? "_blank" : "_self"}
     >
       <Paragraph noMargin>
-        {agreement.hasAnswers
+        {agreement.hasContributions
           ? "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective"
           : "Consultez les dispositions de cette convention collective"}
       </Paragraph>

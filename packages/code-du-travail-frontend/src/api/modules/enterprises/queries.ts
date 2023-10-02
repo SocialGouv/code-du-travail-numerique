@@ -8,7 +8,7 @@ type SearchAgreementsBody = {
 };
 
 export type AgreementResponse = Agreement & {
-  answers: unknown[];
+  contributions?: boolean;
 };
 
 export type SearchAgreementsResponse = SearchResponse<AgreementResponse>;
@@ -23,7 +23,7 @@ export const getAgreements = (idccList: number[]): SearchAgreementsBody => {
       "slug",
       "highlight",
       "url",
-      "answers",
+      "contributions",
     ],
     from: 0,
     query: {
