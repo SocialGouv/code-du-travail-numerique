@@ -191,7 +191,7 @@ exports[`<About /> should render 1`] = `
               class="sc-dPZUQH jWPXkw"
             >
               <span
-                class="sc-gsFSXq djREvw"
+                class="sc-gsFSXq lvWjJ"
               />
               À propos
             </h1>
@@ -382,7 +382,7 @@ exports[`<About /> should render 1`] = `
                 class="sc-eBHhsj bPBugd"
               >
                 <span
-                  class="sc-gsFSXq djREvw"
+                  class="sc-gsFSXq lvWjJ"
                 />
                 Besoin de plus d’informations ?
               </p>
