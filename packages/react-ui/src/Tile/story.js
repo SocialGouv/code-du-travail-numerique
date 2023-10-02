@@ -57,7 +57,7 @@ export const base = ({ handler }) => (
     </Section>
     <Section>
       <Tile title="Disabled tile" disabled>
-        Tile is disabled and can't be clicked
+        Tile is disabled and can&apos;t be clicked
       </Tile>
     </Section>
   </div>
