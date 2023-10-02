@@ -6,7 +6,7 @@ exports[`IDCC return idcc for number 27 1`] = `
     {
       "_id": "20",
       "_index": "cdtn_test-v2_documents",
-      "_score": 6.9340725,
+      "_score": 7.067604,
       "_source": {
         "cdtnId": "ceb38cca3c",
         "effectif": 219,
@@ -20,7 +20,7 @@ exports[`IDCC return idcc for number 27 1`] = `
       "_type": "_doc",
     },
   ],
-  "max_score": 6.9340725,
+  "max_score": 7.067604,
   "total": {
     "relation": "eq",
     "value": 1,
@@ -34,7 +34,7 @@ exports[`IDCC return idcc results for boulangerie 1`] = `
     {
       "_id": "19",
       "_index": "cdtn_test-v2_documents",
-      "_score": 15.246717,
+      "_score": 15.432665,
       "_source": {
         "cdtnId": "647c224c9b",
         "effectif": 134889,
@@ -50,7 +50,7 @@ exports[`IDCC return idcc results for boulangerie 1`] = `
     {
       "_id": "18",
       "_index": "cdtn_test-v2_documents",
-      "_score": 14.143356,
+      "_score": 14.329304,
       "_source": {
         "cdtnId": "16752da066",
         "effectif": 44699,
@@ -64,7 +64,7 @@ exports[`IDCC return idcc results for boulangerie 1`] = `
       "_type": "_doc",
     },
   ],
-  "max_score": 15.246717,
+  "max_score": 15.432665,
   "total": {
     "relation": "eq",
     "value": 2,
@@ -78,7 +78,7 @@ exports[`IDCC return idcc results for pati 1`] = `
     {
       "_id": "19",
       "_index": "cdtn_test-v2_documents",
-      "_score": 14.99322,
+      "_score": 15.144785,
       "_source": {
         "cdtnId": "647c224c9b",
         "effectif": 134889,
@@ -94,7 +94,7 @@ exports[`IDCC return idcc results for pati 1`] = `
     {
       "_id": "18",
       "_index": "cdtn_test-v2_documents",
-      "_score": 13.889859,
+      "_score": 14.041424,
       "_source": {
         "cdtnId": "16752da066",
         "effectif": 44699,
@@ -108,7 +108,7 @@ exports[`IDCC return idcc results for pati 1`] = `
       "_type": "_doc",
     },
   ],
-  "max_score": 14.99322,
+  "max_score": 15.144785,
   "total": {
     "relation": "eq",
     "value": 2,
@@ -122,7 +122,7 @@ exports[`IDCC return idcc results in correct order for banque 1`] = `
     {
       "_id": "21",
       "_index": "cdtn_test-v2_documents",
-      "_score": 16.875479,
+      "_score": 17.099617,
       "_source": {
         "cdtnId": "a25dfc974f",
         "effectif": 216431,
@@ -138,7 +138,7 @@ exports[`IDCC return idcc results in correct order for banque 1`] = `
     {
       "_id": "20",
       "_index": "cdtn_test-v2_documents",
-      "_score": 10.143526,
+      "_score": 10.383809,
       "_source": {
         "cdtnId": "ceb38cca3c",
         "effectif": 219,
@@ -152,7 +152,7 @@ exports[`IDCC return idcc results in correct order for banque 1`] = `
       "_type": "_doc",
     },
   ],
-  "max_score": 16.875479,
+  "max_score": 17.099617,
   "total": {
     "relation": "eq",
     "value": 2,
