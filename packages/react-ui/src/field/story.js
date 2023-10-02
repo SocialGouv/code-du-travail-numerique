@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Euro, Search } from "../icons/index.js";
-import { Section } from "../layout/Section/index.js";
+import { Section } from "../layout/Section/index";
 import { InputCheckbox } from "./Checkbox.js";
 import { Fieldset } from "./Fieldset.js";
 import { Input } from "./Input.js";

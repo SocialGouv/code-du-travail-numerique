@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Section } from "../layout/Section/index.js";
+import { Section } from "../layout/Section/index";
 import { Progress } from "./index.js";
 
 export default {

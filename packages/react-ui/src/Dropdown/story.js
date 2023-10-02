@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Button } from "../Button/index.js";
-import { Section } from "../layout/Section/index.js";
+import { Section } from "../layout/Section/index";
 import { Dropdown } from "./index.js";
 
 export default {

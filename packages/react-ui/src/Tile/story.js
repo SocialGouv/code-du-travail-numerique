@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Holidays, Salary, Time } from "../icons/index.js";
-import { Section } from "../layout/Section/index.js";
+import { Section } from "../layout/Section/index";
 import { Tile } from "./index.js";
 
 export default {
