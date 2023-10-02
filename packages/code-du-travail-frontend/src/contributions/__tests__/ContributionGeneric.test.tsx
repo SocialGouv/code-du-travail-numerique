@@ -39,7 +39,12 @@ describe("<ContributionGeneric />", () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
     render(
-      <ContributionGeneric slug="my-contrib" answers={ANSWERS} content={{}} />
+      <ContributionGeneric
+        slug="my-contrib"
+        answers={ANSWERS}
+        content={{}}
+        relatedItems={[]}
+      />
     );
     fireEvent.click(ui.agreement.agreement.get());
     fireEvent.focus(ui.agreement.agreementInput.get());
@@ -100,6 +105,7 @@ describe("<ContributionGeneric />", () => {
           generic: { markdown: "hello **generic**" },
         }}
         content={{}}
+        relatedItems={[]}
       />
     );
     fireEvent.click(ui.agreement.agreement.get());
@@ -148,7 +154,12 @@ describe("<ContributionGeneric />", () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
     render(
-      <ContributionGeneric slug="my-contrib" answers={ANSWERS} content={{}} />
+      <ContributionGeneric
+        slug="my-contrib"
+        answers={ANSWERS}
+        content={{}}
+        relatedItems={[]}
+      />
     );
     fireEvent.click(ui.agreement.unknownAgreement.get());
     fireEvent.focus(ui.agreement.agreementCompanyInput.get());
@@ -203,7 +214,12 @@ describe("<ContributionGeneric />", () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
     render(
-      <ContributionGeneric slug="my-contrib" answers={ANSWERS} content={{}} />
+      <ContributionGeneric
+        slug="my-contrib"
+        answers={ANSWERS}
+        content={{}}
+        relatedItems={[]}
+      />
     );
 
     fireEvent.click(
