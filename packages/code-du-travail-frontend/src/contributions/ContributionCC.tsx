@@ -51,6 +51,10 @@ const ContributionCC = ({ answers, slug, relatedItems }) => {
           Votre réponse
         </Title>
 
+        <Paragraph fontStyle="italic">
+          Cette réponse tient compte des spécificités de la convention
+          collective {conventionAnswer.shortName}.
+        </Paragraph>
         {conventionAnswer.highlight && conventionAnswer.highlight.content && (
           <StyledAlert variant="primary">
             <StyledParagraph
@@ -109,7 +113,7 @@ const ContributionCC = ({ answers, slug, relatedItems }) => {
       {relatedItems && (
         <StyledSection>
           <Title shift={spacings.xmedium} variant="secondary">
-            Pour aller plus loins
+            Pour aller plus loin
           </Title>
           <Grid columns={2}>
             {relatedItems.map((item) => {

@@ -289,11 +289,11 @@ const ContributionGeneric = ({ answers, content, slug, relatedItems }) => {
           Informations générales
         </Title>
 
-        <i>
+        <Paragraph fontStyle="italic">
           Cette réponse correspond à ce que prévoit le code du travail, elle ne
-          tient pas compte des spécifités de la convention collective{" "}
+          tient pas compte des spécificités de la convention collective{" "}
           {convention ? convention.shortTitle : "dont vous dépendez"}.
-        </i>
+        </Paragraph>
 
         {content && (
           <Meta>
@@ -358,7 +358,7 @@ const ContributionGeneric = ({ answers, content, slug, relatedItems }) => {
         {relatedItems && (
           <Section>
             <Title shift={spacings.xmedium} variant="secondary">
-              Pour aller plus loins
+              Pour aller plus loin
             </Title>
             <Grid columns={2}>
               {relatedItems.map((item) => {
