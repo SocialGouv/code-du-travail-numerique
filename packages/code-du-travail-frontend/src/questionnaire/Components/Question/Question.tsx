@@ -42,11 +42,17 @@ export const Question = ({ widgetMode }: QuestionProps) => {
           index={index}
         ></Response>
       ))}
-      <Paragraph italic>{currentQuestion?.description}</Paragraph>
+      <Description>{currentQuestion?.description}</Description>
     </Fieldset>
   );
 };
 
 const StyledInfoBulle = styled(InfoBulle)`
   padding: 0;
+`;
+
+const Description = styled.p`
+  margin-top: 7px;
+  margin-bottom: 0;
+  font-style: italic;
 `;
