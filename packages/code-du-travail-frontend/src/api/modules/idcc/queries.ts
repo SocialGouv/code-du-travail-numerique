@@ -12,6 +12,7 @@ export function getIdccBody({ query, idccQuery }) {
       "effectif",
       "cdtnId",
       "highlight",
+      "contributions",
     ],
     query: {
       bool: {

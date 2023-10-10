@@ -50,7 +50,7 @@ const AgreementSelectionStep = ({
         {enterprise.conventions.map((agreement) => (
           <Li key={agreement.id}>
             {agreement.slug ? (
-              agreement.url ? (
+              agreement.url || agreement.contributions ? (
                 <AgreementTile
                   onUserAction={onUserAction}
                   agreement={agreement}

@@ -13,7 +13,7 @@ const toAgreement = (convention: Convention): EnterpriseAgreement => ({
   num: convention.idcc,
   shortTitle: convention.shortTitle ?? "Convention collective non reconnue",
   title: convention.title,
-  hasContributions: false,
+  contributions: false,
   ...(convention.url ? { url: convention.url } : {}),
 });
 
@@ -57,7 +57,7 @@ export const populateAgreements = async (
                   agreements[convention.idcc];
                 return {
                   ...agreement,
-                  hasContributions: contributions ?? false,
+                  contributions: contributions ?? false,
                 };
               }
               return toAgreement(convention);
@@ -71,7 +71,7 @@ export const populateAgreements = async (
         let conventionsToAdd: EnterpriseAgreement[] = idccToAdd
           .map((idcc) => ({
             ...agreements[idcc],
-            hasContributions: agreements[idcc].contributions ?? false,
+            contributions: agreements[idcc].contributions ?? false,
           }))
           .filter((convention) => convention !== undefined);
         result.entreprises = result.entreprises?.map((enterprise) => {

@@ -112,7 +112,7 @@ function AgreementSearchTool({
           <Steps.AgreementSearchStep
             onBackClick={clearSearchType}
             onSelectAgreement={(agreement) => {
-              if (agreement.url !== undefined) {
+              if (agreement.url || agreement.contributions) {
                 trackEvent(
                   MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
                   title,

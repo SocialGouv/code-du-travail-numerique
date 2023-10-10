@@ -85,7 +85,7 @@ describe("Test enterprise endpoint", () => {
           slug,
           title,
           url,
-          hasContributions: contributions ?? false,
+          contributions: contributions ?? false,
         })),
       })),
     };
@@ -237,7 +237,7 @@ describe("Test enterprise endpoint", () => {
               num: 123456,
               shortTitle: "Convention collective non reconnue",
               id: 123456,
-              hasContributions: false,
+              contributions: false,
             },
           ],
         },
@@ -377,9 +377,9 @@ describe("Test enterprise endpoint", () => {
     );
 
     expect(response.body.entreprises[0].conventions[0].num).toEqual(1747);
-    expect(
-      response.body.entreprises[0].conventions[0].hasContributions
-    ).toEqual(false);
+    expect(response.body.entreprises[0].conventions[0].contributions).toEqual(
+      false
+    );
   });
 
   test("A call to retrieve supported agreements from an enterprise", async () => {
@@ -425,8 +425,8 @@ describe("Test enterprise endpoint", () => {
     );
 
     expect(response.body.entreprises[0].conventions[0].num).toEqual(843);
-    expect(
-      response.body.entreprises[0].conventions[0].hasContributions
-    ).toEqual(true);
+    expect(response.body.entreprises[0].conventions[0].contributions).toEqual(
+      true
+    );
   });
 });
