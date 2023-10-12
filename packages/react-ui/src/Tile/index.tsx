@@ -160,7 +160,7 @@ type HeadingWrapperProps = {
 };
 const HeadingWrapper = styled.div<HeadingWrapperProps>`
   padding-right: ${({ custom }) => (custom ? spacings.small : "0")};
-  height: ${({ centerTitle }) => (centerTitle ? "5rem" : "auto")};
+  min-height: ${({ centerTitle }) => (centerTitle ? "5rem" : "auto")};
   display: ${({ centerTitle }) => (centerTitle ? "flex" : "block")};
   align-items: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
   justify-content: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
