@@ -12,13 +12,11 @@ export function getIdccBody({ query, idccQuery }) {
       "effectif",
       "cdtnId",
       "highlight",
+      "contributions",
     ],
     query: {
       bool: {
-        filter: [
-          { term: { source: SOURCES.CCN } },
-          { term: { isPublished: true } },
-        ],
+        filter: [{ term: { source: SOURCES.CCN } }],
         must: {
           bool: {
             should: [

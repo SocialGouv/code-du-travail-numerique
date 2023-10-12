@@ -1,12 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Tile /> renders a disabled tile 1`] = `
+<div>
+  <div
+    class="sc-iGgWBj gDuDHf"
+    disabled=""
+  >
+    <div
+      class="sc-kAyceB jqeMAr"
+    >
+      <div
+        class="sc-imWYAI cRAzrp"
+      >
+        <p
+          class="sc-dcJsrY sc-jXbUNg kKiCoz itTxai"
+        >
+          This is a disabled tile
+        </p>
+        <p
+          class="sc-dhKdcB fwlOSd"
+        >
+          Goodbye !
+        </p>
+      </div>
+    </div>
+    <div
+      class="sc-kpDqfm esKnXL"
+    >
+      There is text inside
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Tile /> renders a tile with a custom badge 1`] = `
 <div>
   <div
-    class="sc-iGgWBj eMNAQB"
+    class="sc-iGgWBj ZNEbc"
   >
     <div
-      class="sc-aXZVg iHwzcx"
+      class="sc-aXZVg kTinCf"
     >
       <div
         class="sc-gEvEer htfpNk"
@@ -61,7 +94,7 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
 exports[`<Tile /> renders a tile with a stripe 1`] = `
 <div>
   <div
-    class="sc-iGgWBj eMNAQB"
+    class="sc-iGgWBj ZNEbc"
   >
     <div
       class="sc-kAyceB jqeMAr"
@@ -95,7 +128,7 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 exports[`<Tile /> renders a tile with an icon 1`] = `
 <div>
   <div
-    class="sc-iGgWBj eMNAQB"
+    class="sc-iGgWBj ZNEbc"
   >
     <div
       class="sc-kAyceB jqeMAr"
@@ -155,7 +188,7 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
 exports[`<Tile /> renders a tile with text inside 1`] = `
 <div>
   <div
-    class="sc-iGgWBj eMNAQB"
+    class="sc-iGgWBj ZNEbc"
   >
     <div
       class="sc-kAyceB jqeMAr"
@@ -186,7 +219,7 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
 exports[`<Tile /> renders a wide tile with a subtitle 1`] = `
 <div>
   <div
-    class="sc-iGgWBj hIJHri"
+    class="sc-iGgWBj hriIoH"
   >
     <div
       class="sc-kAyceB jqeMAr"

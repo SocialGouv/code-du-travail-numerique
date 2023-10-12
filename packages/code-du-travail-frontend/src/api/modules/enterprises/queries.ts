@@ -1,4 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-utils";
+import { Agreement, SearchResponse, SOURCES } from "@socialgouv/cdtn-utils";
 
 type SearchAgreementsBody = {
   _source: string[];
@@ -7,16 +7,30 @@ type SearchAgreementsBody = {
   size: number;
 };
 
+export type AgreementResponse = Agreement & {
+  contributions?: boolean;
+};
+
+export type SearchAgreementsResponse = SearchResponse<AgreementResponse>;
+
 export const getAgreements = (idccList: number[]): SearchAgreementsBody => {
   return {
-    _source: ["id", "title", "shortTitle", "num", "slug", "highlight", "url"],
+    _source: [
+      "id",
+      "title",
+      "shortTitle",
+      "num",
+      "slug",
+      "highlight",
+      "url",
+      "contributions",
+    ],
     from: 0,
     query: {
       bool: {
         filter: [
           { terms: { num: idccList } },
           { term: { source: SOURCES.CCN } },
-          { term: { isPublished: true } },
         ],
       },
     },

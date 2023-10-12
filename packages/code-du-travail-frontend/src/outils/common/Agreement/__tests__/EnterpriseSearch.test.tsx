@@ -6,6 +6,7 @@ import { Enterprise } from "../../../../conventions/Search/api/enterprises.servi
 import { Agreement } from "@socialgouv/cdtn-utils";
 import type { Props } from "../EnterpriseSearch/EnterpriseSearch";
 import EnterpriseSearch from "../EnterpriseSearch/EnterpriseSearch";
+import { EnterpriseAgreement } from "../../../../api/modules/enterprises/types";
 
 const callback: (
   agreement: Agreement | null,
@@ -18,7 +19,7 @@ const onUserAction = () => {
   /* dummy */
 };
 
-const agreement1: Agreement = {
+const agreement1: EnterpriseAgreement = {
   id: "KALICONT000005635093",
   url: "hello.com",
   num: 2156,
@@ -26,15 +27,17 @@ const agreement1: Agreement = {
   slug: "2156-grands-magasins-et-magasins-populaires",
   title:
     "Convention collective nationale des grand magasins et des magasins populaires du 30 juin 2000.  Etendue par arrêté du 20 décembre 2001 JORF 19 janvier 2002.",
+  contributions: true,
 };
 
-const agreement2: Agreement = {
+const agreement2: EnterpriseAgreement = {
   id: "KALICONT000005635085",
   num: 2216,
   shortTitle: "Commerce de détail et de gros à prédominance alimentaire",
   slug: "2216-commerce-de-detail-et-de-gros-a-predominance-alimentaire",
   title:
     "Convention collective nationale du commerce de détail et de gros à prédominance alimentaire du 12 juillet 2001.  Etendue par arrêté du 26 juillet 2002 JORF 6 août 2002.",
+  contributions: false,
 };
 
 const selectedEnterpriseOneAgreement: Enterprise = {

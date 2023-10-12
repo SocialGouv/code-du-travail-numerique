@@ -1,7 +1,7 @@
 import React from "react";
 
 import { PageTitle } from "../../Titles/PageTitle/index.js";
-import { Section } from "../Section/index.js";
+import { Section } from "../Section/index";
 import { Container } from "./index.js";
 
 export default {

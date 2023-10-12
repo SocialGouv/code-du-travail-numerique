@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Holidays, Salary, Time } from "../icons/index.js";
-import { Section } from "../layout/Section/index.js";
-import { Tile } from "./index.js";
+import { Section } from "../layout/Section/index";
+import { Tile } from "./index";
 
 export default {
   argTypes: {
@@ -53,6 +53,11 @@ export const base = ({ handler }) => (
         onClick={() => handler("button tile with icon clicked")}
       >
         It should look good ! And everything should be centered
+      </Tile>
+    </Section>
+    <Section>
+      <Tile title="Disabled tile" disabled>
+        Tile is disabled and can&apos;t be clicked
       </Tile>
     </Section>
   </div>

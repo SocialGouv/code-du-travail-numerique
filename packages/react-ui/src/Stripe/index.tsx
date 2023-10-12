@@ -3,17 +3,17 @@ import styled, { css } from "styled-components";
 import { box } from "../theme";
 
 interface StripeProps {
-  rounded: boolean;
-  variant: "primary" | "secondary";
-  position: "top" | "left";
-  length: string;
+  rounded?: boolean;
+  variant?: "primary" | "secondary";
+  position?: "top" | "left";
+  length?: string;
 }
 
 export const Stripe = styled.span<StripeProps>`
   position: absolute;
-  background-color: ${({ variant, theme }) => theme[variant]};
+  background-color: ${({ variant, theme }) => theme[variant ?? "secondary"]};
   border-radius: ${({ rounded }) => (rounded ? box.borderRadius : "0")};
-  ${({ position, length }) => {
+  ${({ position = "top", length }) => {
     return css`
       top: ${position === "top" ? "0" : "50%"};
       left: ${position === "left" ? "0" : "50%"};
@@ -23,10 +23,3 @@ export const Stripe = styled.span<StripeProps>`
     `;
   }}
 `;
-
-Stripe.defaultProps = {
-  length: "7rem",
-  position: "top",
-  rounded: false,
-  variant: "secondary",
-};

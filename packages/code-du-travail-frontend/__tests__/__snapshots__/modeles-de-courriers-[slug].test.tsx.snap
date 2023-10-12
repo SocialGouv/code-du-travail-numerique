@@ -434,7 +434,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </p>
                 </div>
                 <div
-                  class="sc-kOHTFB fBWkdL"
+                  class="sc-kOHTFB enIaVF"
                 >
                   <div
                     class="sc-dtInlm krTdyM"
@@ -759,7 +759,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 class="sc-eBHhsj bPBugd"
               >
                 <span
-                  class="sc-gsFSXq djREvw"
+                  class="sc-gsFSXq lvWjJ"
                 />
                 Besoin de plus d’informations ?
               </p>

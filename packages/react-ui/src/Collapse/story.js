@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Section } from "../layout/Section/index.js";
+import { Section } from "../layout/Section/index";
 import { Wrapper } from "../layout/Wrapper/index.js";
 import { Collapse } from "./index";
 

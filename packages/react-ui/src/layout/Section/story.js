@@ -4,7 +4,7 @@ import { PageTitle } from "../../Titles/PageTitle/index.js";
 import { Title } from "../../Titles/Title/index.js";
 import { Container } from "../Container/index.js";
 import { Wrapper } from "../Wrapper/index.js";
-import { Section } from "./index.js";
+import { Section } from "./index";
 
 export default {
   component: Section,
