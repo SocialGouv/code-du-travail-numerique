@@ -9,10 +9,10 @@ exports[`<Grid /> should render 1`] = `
       class="sc-gEvEer fFrSaF"
     >
       <div
-        class="sc-fqkvVR iKRtny"
+        class="sc-fqkvVR dwutvt"
       >
         <div
-          class="sc-dcJsrY fuWujG"
+          class="sc-dcJsrY fdVVVx"
         >
           <div>
             <strong>
@@ -24,7 +24,7 @@ exports[`<Grid /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-dcJsrY fuWujG"
+          class="sc-dcJsrY fdVVVx"
         >
           <div>
             <strong>
@@ -50,10 +50,10 @@ exports[`<Grid /> should render 5columns 1`] = `
       class="sc-gEvEer fFrSaF"
     >
       <div
-        class="sc-fqkvVR iKRtny"
+        class="sc-fqkvVR dwutvt"
       >
         <div
-          class="sc-dcJsrY efeprV"
+          class="sc-dcJsrY gxRSnW"
         >
           <div>
             <strong>
@@ -65,7 +65,7 @@ exports[`<Grid /> should render 5columns 1`] = `
           </div>
         </div>
         <div
-          class="sc-dcJsrY efeprV"
+          class="sc-dcJsrY gxRSnW"
         >
           <div>
             <strong>
