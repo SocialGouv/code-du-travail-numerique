@@ -19,7 +19,7 @@ export const QuestionnaireText = ({
   const maxCharacters = 200;
   return (
     <StyledContainer className={className}>
-      {title && <b>{title}</b>}
+      {title && <strong>{title}</strong>}
       <StyledTextarea
         placeholder={placeholder}
         maxLength={maxCharacters}

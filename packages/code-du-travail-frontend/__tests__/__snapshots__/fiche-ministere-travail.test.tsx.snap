@@ -409,7 +409,7 @@ exports[`<FicheMT /> should render 1`] = `
                   class="sc-dGCmGc eKMRHH"
                 >
                   <p
-                    class="sc-jGKxIK biFdvs"
+                    class="sc-jGKxIK ksIRLJ"
                   >
                     <span
                       class="sc-deXhhX cpCGcE"
@@ -448,7 +448,7 @@ exports[`<FicheMT /> should render 1`] = `
                   class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
                 >
                   <p
-                    class="sc-jGKxIK cNijme"
+                    class="sc-jGKxIK eoUrZA"
                   >
                     lorem ipsum intro
                   </p>
@@ -581,7 +581,7 @@ exports[`<FicheMT /> should render 1`] = `
             class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
           >
             <p
-              class="sc-jGKxIK cNijme"
+              class="sc-jGKxIK eoUrZA"
             >
               Partager ce contenu : 
             </p>

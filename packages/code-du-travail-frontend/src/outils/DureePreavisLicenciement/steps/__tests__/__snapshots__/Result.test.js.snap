@@ -182,7 +182,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK chnJmR sc-gvZAcH erbkqm"
+          class="sc-jGKxIK iOBtQr sc-gvZAcH erbkqm"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -372,7 +372,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK chnJmR sc-gvZAcH erbkqm"
+          class="sc-jGKxIK iOBtQr sc-gvZAcH erbkqm"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -535,7 +535,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK chnJmR sc-gvZAcH erbkqm"
+          class="sc-jGKxIK iOBtQr sc-gvZAcH erbkqm"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -724,7 +724,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK chnJmR sc-gvZAcH erbkqm"
+          class="sc-jGKxIK iOBtQr sc-gvZAcH erbkqm"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -914,7 +914,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK chnJmR sc-gvZAcH erbkqm"
+          class="sc-jGKxIK iOBtQr sc-gvZAcH erbkqm"
         >
           Attention il peut exister une durée plus favorable
         </p>

@@ -409,7 +409,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   class="sc-lfYzqA cUAqSf"
                 >
                   <p
-                    class="sc-jGKxIK biFdvs"
+                    class="sc-jGKxIK ksIRLJ"
                   >
                     <span
                       class="sc-bHnlcS fNuGBd"
@@ -428,7 +428,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   class="sc-iGgWBj sc-iLWXdy cWzIZL gdxCJX"
                 >
                   <p
-                    class="sc-jGKxIK cNijme"
+                    class="sc-jGKxIK eoUrZA"
                   >
                     un description
                   </p>
@@ -562,7 +562,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             class="sc-aXZVg sc-huFNyZ gZgZQL hGRaJQ"
           >
             <p
-              class="sc-jGKxIK cNijme"
+              class="sc-jGKxIK eoUrZA"
             >
               Partager ce contenu : 
             </p>

@@ -10,7 +10,6 @@ import {
 import IntroAnnotation from "../../steps/component/IntroAnnotation";
 import React from "react";
 import { Step } from "../../../Simulator";
-import { PreavisRetraiteFormState } from "../../form";
 
 export const steps: Step<StepName>[] = [
   {
