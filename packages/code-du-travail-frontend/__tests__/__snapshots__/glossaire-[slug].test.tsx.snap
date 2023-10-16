@@ -191,7 +191,7 @@ exports[`<Term /> should render 1`] = `
               class="sc-dPZUQH jWPXkw"
             >
               <span
-                class="sc-gsFSXq lvWjJ"
+                class="sc-gsFSXq djREvw"
               />
               Accord d'entreprise
             </h1>
@@ -259,7 +259,7 @@ exports[`<Term /> should render 1`] = `
                 class="sc-eBHhsj bPBugd"
               >
                 <span
-                  class="sc-gsFSXq lvWjJ"
+                  class="sc-gsFSXq djREvw"
                 />
                 Besoin de plus d’informations ?
               </p>

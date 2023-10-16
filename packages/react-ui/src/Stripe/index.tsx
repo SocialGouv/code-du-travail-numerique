@@ -13,7 +13,7 @@ export const Stripe = styled.span<StripeProps>`
   position: absolute;
   background-color: ${({ variant, theme }) => theme[variant ?? "secondary"]};
   border-radius: ${({ rounded }) => (rounded ? box.borderRadius : "0")};
-  ${({ position = "top", length }) => {
+  ${({ position = "top", length = "7rem" }) => {
     return css`
       top: ${position === "top" ? "0" : "50%"};
       left: ${position === "left" ? "0" : "50%"};
