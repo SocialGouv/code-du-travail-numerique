@@ -4,7 +4,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
 <div>
   <form>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
@@ -65,7 +65,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 <div>
   <form>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
@@ -118,7 +118,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
       class="sc-iapWAC huEEnQ"
     >
       <legend
-        class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+        class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
         data-testid="question-label"
         for="input-criteria.cddType"
       >
@@ -242,7 +242,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 <div>
   <form>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
@@ -295,7 +295,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
       class="sc-iapWAC huEEnQ"
     >
       <legend
-        class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+        class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
         data-testid="question-label"
         for="input-criteria.cddType"
       >
@@ -419,7 +419,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
 <div>
   <form>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
@@ -469,7 +469,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </label>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
@@ -525,7 +525,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
@@ -581,7 +581,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
@@ -637,7 +637,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span

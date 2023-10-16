@@ -4,7 +4,7 @@ exports[`<StepCDD /> should render 1`] = `
 <div>
   <form>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
@@ -60,7 +60,7 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
@@ -116,7 +116,7 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
@@ -172,7 +172,7 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span

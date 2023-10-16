@@ -31,7 +31,7 @@ const ShowAgreements = ({
 
   return (
     <>
-      <Question required={false} htmlFor="ccn.selected.id" as="p">
+      <Question required={false} htmlFor="ccn.selected.id">
         {enterprise.conventions.length} conventions collectives ont été trouvées
         pour cette entreprise, sélectionnez la vôtre&nbsp;:&nbsp;
       </Question>

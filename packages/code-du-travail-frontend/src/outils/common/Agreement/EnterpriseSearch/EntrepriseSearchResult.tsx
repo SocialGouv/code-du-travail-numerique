@@ -10,7 +10,7 @@ import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 import { FetchReducerState } from "../components/Suggester";
 import { TrackingProps, UserAction } from "../../../ConventionCollective/types";
-import { InlineError } from "../../ErrorField";
+import { Error } from "../../ErrorField";
 import { ListItem, ResultList } from "../components/ResultList";
 import { HelpModal } from "../components/Modal";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
@@ -49,13 +49,9 @@ const EntrepriseSearchResults = ({
 
   if (state.isError) {
     if (typeof state.error === "string") {
-      return (
-        <Section role="status">
-          <InlineError>{state.error}</InlineError>
-        </Section>
-      );
+      return <Error>{state.error}</Error>;
     }
-    return <Section role="status">{state.error}</Section>;
+    return <Section>{state.error}</Section>;
   }
   if (!state.data) {
     return <></>;

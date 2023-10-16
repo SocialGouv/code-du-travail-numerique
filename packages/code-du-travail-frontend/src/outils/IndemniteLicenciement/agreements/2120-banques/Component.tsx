@@ -41,7 +41,7 @@ export default function Agreement2120() {
       error={errorSalariesVariablePart}
       id="salariesVariablePart"
       showRequired
-      icon={icons.Euro}
+      text="€"
       tooltip={{
         content: (
           <>

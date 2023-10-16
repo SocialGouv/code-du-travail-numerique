@@ -32,10 +32,6 @@ export const Collapse = ({
         variant="naked"
         narrow
         type="button"
-        // eslint-disable-next-line jsx-a11y/no-autofocus
-        autoFocus={autoFocus}
-        // eslint-disable-next-line jsx-a11y/tabindex-no-positive
-        tabIndex={1}
       >
         <AccordionArrow aria-hidden="true" />
         <StyledText noMargin fontSize="hsmall" fontWeight="600" {...textProps}>

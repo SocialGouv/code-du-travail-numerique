@@ -113,7 +113,6 @@ export const InputDate = ({ value, onChange, invalid, ref, ...props }) => {
         <StyledDatePicker
           type="date"
           aria-disabled={!isValid}
-          tabIndex={-1}
           min="1900-01-01"
           max="2100-01-01"
           maxlength="11"
@@ -165,7 +164,7 @@ const StyledInput = styled.input`
   border-color: transparent;
   outline: none;
   border-radius: ${box.borderRadius};
-  width: 160px;
+  width: 15rem;
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
   }
@@ -181,7 +180,7 @@ const StyledDiv = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  width: 40px;
+  width: 4rem;
   height: 100%;
 `;
 

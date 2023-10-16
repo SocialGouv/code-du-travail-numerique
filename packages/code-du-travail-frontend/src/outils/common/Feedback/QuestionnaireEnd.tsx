@@ -1,12 +1,12 @@
-import { Heading } from "@socialgouv/cdtn-ui";
+import { Heading, theme } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 
 export const QuestionnaireEnd = (): JSX.Element => {
   return (
     <>
-      <StyledHeading variant="primary" stripe="left">
+      <Heading variant="primary" stripe="left">
         Merci pour votre aide !
-      </StyledHeading>
+      </Heading>
       <StyledText>
         Votre évaluation sera étudiée au plus vite par nos équipes
       </StyledText>
@@ -14,11 +14,6 @@ export const QuestionnaireEnd = (): JSX.Element => {
   );
 };
 
-const StyledHeading = styled(Heading)`
-  margin-left: 0;
-  padding-top: 6px;
-`;
-
-const StyledText = styled.span`
-  margin: 12px auto 24px 24px;
+const StyledText = styled.p`
+  padding: 0 ${theme.spacings.medium};
 `;

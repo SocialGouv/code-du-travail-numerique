@@ -52,8 +52,8 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     >
       Saisissez votre numéro de département :
     </label>
-    <span
-      class="sc-dkmUuB ayeCS sc-iapWAC ehtufm"
+    <div
+      class="sc-dkmUuB bSfMaa sc-iapWAC ehtufm"
     >
       <input
         autocomplete="off"
@@ -65,7 +65,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
         type="text"
         value="26"
       />
-    </span>
+    </div>
     <button
       aria-label="Recherchez le service"
       class="sc-kOPcWz kyVwqT sc-kqGoIF boDxRG"

@@ -37,7 +37,6 @@ const SimulatorNavigation = ({
           variant="primary"
           onClick={onStart}
           data-testid="commencer"
-          tabIndex={1}
         >
           Commencer
           <ArrowIcon />

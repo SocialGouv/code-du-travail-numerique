@@ -8,17 +8,6 @@ import { A11yLink } from "../common/A11yLink";
 import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
 import ReferencesJuridiques, { filteredRefs } from "./References";
-import {
-  ArrowLink,
-  Badge,
-  Button,
-  icons,
-  Paragraph,
-  Section,
-  theme,
-  Title,
-  Wrapper,
-} from "@socialgouv/cdtn-ui";
 import { RadioQuestion } from "../outils/Components";
 import { AgreementRoute } from "../outils/common/type/WizardType";
 import router from "next/router";
@@ -34,7 +23,19 @@ import { handleTrackEvent } from "../outils/common/Agreement/tracking";
 import { MatomoBaseEvent } from "../lib";
 import { getCc3239Informations } from "../outils";
 import { Enterprise } from "../conventions/Search/api/enterprises.service";
-import { Alert, Heading } from "@socialgouv/cdtn-ui/lib";
+import {
+  Alert,
+  ArrowLink,
+  Badge,
+  Button,
+  Heading,
+  icons,
+  Paragraph,
+  Section,
+  theme,
+  Title,
+  Wrapper,
+} from "@socialgouv/cdtn-ui";
 
 const { DirectionRight } = icons;
 

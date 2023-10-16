@@ -35,7 +35,7 @@ const AgreementSearch = ({
   if (selectedAgreement) {
     return (
       <>
-        <Question required={false} as="p">
+        <Question required={false}>
           Vous avez sélectionné la convention collective&nbsp;:&nbsp;
         </Question>
         <SelectedAgreement

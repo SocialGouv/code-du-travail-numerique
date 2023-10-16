@@ -10,28 +10,29 @@ exports[`<StepResult /> should render CC answer 1`] = `
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de démission est estimée à : 
     <strong
-      class="sc-kqGoIF sc-dxcDKg gukfdy igjtKH"
+      class="sc-kqGoIF eBNOvs"
+      role="alert"
     >
       2 mois
     </strong>
     <sup
-      class="sc-kRRyDe hETMnL"
+      class="sc-gvZAcH cpmNvN"
     >
       *
     </sup>
     .
   </p>
   <p
-    class="sc-gvZAcH iRgDqG"
+    class="sc-dxcDKg Knzco"
   >
     <sup
-      class="sc-kRRyDe hETMnL"
+      class="sc-gvZAcH cpmNvN"
     >
       * 
     </sup>
     Le préavis débute le jour où le salarié remet sa lettre de démission en main propre ou à la date de première présentation de la lettre recommandée, peu importe le jour de son retrait par l’employeur.
     <i
-      class="sc-gvZAcH iRgDqG"
+      class="sc-dxcDKg Knzco"
     >
        
       Exemple : si l’employeur reçoit le courrier recommandé le
@@ -41,7 +42,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       4 juin
       .
       <span
-        class="sc-gvZAcH iRgDqG"
+        class="sc-dxcDKg Knzco"
       >
          
         Si le 
@@ -50,7 +51,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       </span>
     </i>
     <span
-      class="sc-gvZAcH iRgDqG"
+      class="sc-dxcDKg Knzco"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -60,7 +61,6 @@ exports[`<StepResult /> should render CC answer 1`] = `
     <button
       aria-expanded="false"
       class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
-      tabindex="1"
       type="button"
     >
       <svg

@@ -22,7 +22,7 @@ const ShowAgreement = ({
 }: Props): JSX.Element => {
   return (
     <>
-      <Question required={false} as="p">
+      <Question required={false}>
         Une convention collective a été trouvée pour cette entreprise&nbsp;:
       </Question>
       <Text fontSize="default" fontWeight="600" variant="secondary">

@@ -20,7 +20,6 @@ export function StepList({ activeIndex = 0, items = [], anchorRef }) {
             index={index}
             isActive={activeIndex === index}
             ref={activeIndex === index ? anchorRef : undefined}
-            tabIndex={activeIndex === index ? "-1" : undefined}
             aria-live={activeIndex === index ? "polite" : undefined}
             title={activeIndex === index ? "onglet actif" : null}
           >

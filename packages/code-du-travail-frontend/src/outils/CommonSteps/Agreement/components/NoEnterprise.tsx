@@ -65,7 +65,7 @@ export function NoEnterprise({
       )}
       {isCheckboxChecked && (
         <StyledDiv>
-          <Question required={false} as="p">
+          <Question required={false}>
             Votre convention collective est&nbsp;:
           </Question>
           <Text fontSize="default" fontWeight="600" variant="secondary">
