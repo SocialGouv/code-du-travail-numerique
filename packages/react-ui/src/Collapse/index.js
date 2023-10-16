@@ -12,7 +12,6 @@ export const Collapse = ({
   onClickHandler,
   textProps,
   className,
-  autoFocus = false,
 }) => {
   const [active, setActive] = React.useState(false);
   const [height, setHeight] = React.useState("0px");
@@ -69,6 +68,7 @@ const StyledLink = styled(Button)`
   &[aria-expanded="true"] {
     color: ${({ theme }) => theme.paragraph};
   }
+
   padding: 0;
 `;
 const StyledText = styled.span`
@@ -77,7 +77,6 @@ const StyledText = styled.span`
 `;
 
 Collapse.propTypes = {
-  autoFocus: PropTypes.boolean,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   onClickHandler: PropTypes.func,
