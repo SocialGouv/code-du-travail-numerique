@@ -25,7 +25,6 @@ const SelectedEnterprise = ({
           event.preventDefault();
           onRemoveEnterprise();
         }}
-        tabIndex={1}
       >
         {enterprise.simpleLabel}
       </Selected>

@@ -68,7 +68,6 @@ const SelectQuestion = ({
         onChange={(v) => onChange(v.target.value)}
         value={value}
         data-testid={name}
-        tabIndex={1}
         autoFocus={autoFocus}
       >
         <option disabled value="">

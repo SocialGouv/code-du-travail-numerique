@@ -63,7 +63,6 @@ export default function RadioQuestion({
               data-testid={`${name} - ${question.label}`}
               checked={selectedOption === question.value}
               onChange={() => onChange(question.value)}
-              tabIndex={1}
               autoFocus={autoFocus ? index === 0 : false}
             />
           ))}

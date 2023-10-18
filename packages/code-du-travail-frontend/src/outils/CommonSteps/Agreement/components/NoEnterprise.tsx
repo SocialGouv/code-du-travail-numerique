@@ -43,7 +43,6 @@ export function NoEnterprise({
             onCheckboxChange(!isCheckboxChecked);
           }}
           checked={isCheckboxChecked}
-          tabIndex={1}
         />
         <ButtonClicker
           onClick={() => setIsInputVisible(!isInputVisible)}

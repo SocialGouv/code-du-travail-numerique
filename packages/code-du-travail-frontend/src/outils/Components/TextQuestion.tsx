@@ -79,7 +79,6 @@ export default function TextQuestion({
           type={inputType === "date" ? "text" : inputType}
           updateOnScrollDisabled
           data-testid={dataTestId}
-          tabIndex={1}
           autoFocus={autoFocus}
           title={title}
         />

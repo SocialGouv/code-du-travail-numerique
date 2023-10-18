@@ -126,7 +126,6 @@ export const SalaireTempsPlein = ({
                   onBlur={() => setIsFirstEdit(false)}
                   data-testid={dataTestidSalaries ?? "salary-input"}
                   autoFocus={autoFocus ? index === 0 : false}
-                  tabIndex={1}
                 />
                 {errorsSalaries[`${index}`] && (
                   <ErrorWrapper>
@@ -156,7 +155,6 @@ export const SalaireTempsPlein = ({
                           ? "prime-" + dataTestidSalaries
                           : "prime-input"
                       }
-                      tabIndex={1}
                     />
                     {errorsPrimes[`${index}`] && (
                       <ErrorWrapper>
