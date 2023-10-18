@@ -3,7 +3,7 @@
 exports[`<Text /> renders text 1`] = `
 <div>
   <span
-    class="sc-aXZVg eKDsjP"
+    class="sc-aXZVg jdzwbA"
   >
     A simple text
   </span>
@@ -23,7 +23,7 @@ exports[`<Text /> renders text with fontSize 1`] = `
 exports[`<Text /> renders text with fontWeight 1`] = `
 <div>
   <span
-    class="sc-aXZVg kVLjpI"
+    class="sc-aXZVg ciAQGT"
   >
     A bold text
   </span>
@@ -33,7 +33,7 @@ exports[`<Text /> renders text with fontWeight 1`] = `
 exports[`<Text /> renders text with variant 1`] = `
 <div>
   <span
-    class="sc-aXZVg krMWMP"
+    class="sc-aXZVg cFJopM"
   >
     A colored text
   </span>

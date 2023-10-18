@@ -1,7 +1,7 @@
 import { Absence, SalaryPeriods } from "@socialgouv/modeles-social";
 import { SectionTitle } from "../../../../common/stepStyles";
 import { AgreementInformation } from "../../../common";
-import { Table, theme, Paragraph } from "@socialgouv/cdtn-ui";
+import { Paragraph, Table, theme } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { publicodesUnitTranslator } from "../../../../publicodes";
 import AbsenceTable from "./AbsenceTable";
@@ -56,15 +56,12 @@ export default function FilledElements(props: Props) {
                 !props.isAgreementBetter &&
                 "*"}
               {props.isLicenciementInaptitude && !props.isAgreementBetter && (
-                <>
-                  <br />
-                  <i>
-                    * Le salarié ayant été licencié pour inaptitude suite à un
-                    accident du travail ou une maladie professionnelle reconnue,
-                    le montant de l&apos;indemnité de licenciement légale est
-                    doublé
-                  </i>
-                </>
+                <Paragraph italic noMargin>
+                  * Le salarié ayant été licencié pour inaptitude suite à un
+                  accident du travail ou une maladie professionnelle reconnue,
+                  le montant de l&apos;indemnité de licenciement légale est
+                  doublé
+                </Paragraph>
               )}
               <li>
                 Arrêt de travail au moment du licenciement&nbsp;:&nbsp;
@@ -122,15 +119,13 @@ export default function FilledElements(props: Props) {
               {!props.disableParentalNotice && <sup>*</sup>}&nbsp;:&nbsp;
               {props.absencesPeriods.length > 0 ? "Oui" : "Non"}
               {!props.disableParentalNotice && (
-                <Paragraph fontSize="small" noMargin>
-                  <i>
-                    <sup>*</sup> Depuis le 11 mars 2023 les périodes d’absence
-                    pour congé paternité ne sont plus retirées de l’ancienneté
-                    du salarié. Si le salarié a pris un congé paternité avant
-                    cette date, il peut être décompté de son ancienneté et de ce
-                    fait, donner lieu à un montant d’indemnité moins favorable
-                    que celui de notre simulateur.
-                  </i>
+                <Paragraph fontSize="small" noMargin italic>
+                  <sup>*</sup> Depuis le 11 mars 2023 les périodes d’absence
+                  pour congé paternité ne sont plus retirées de l’ancienneté du
+                  salarié. Si le salarié a pris un congé paternité avant cette
+                  date, il peut être décompté de son ancienneté et de ce fait,
+                  donner lieu à un montant d’indemnité moins favorable que celui
+                  de notre simulateur.
                 </Paragraph>
               )}
             </li>
@@ -228,6 +223,7 @@ export const StyledFilledElementTable = styled(Table)`
   th {
     vertical-align: top;
   }
+
   tbody {
     th {
       font-weight: normal;

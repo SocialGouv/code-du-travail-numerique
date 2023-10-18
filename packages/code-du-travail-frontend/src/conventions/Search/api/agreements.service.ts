@@ -4,7 +4,16 @@ import { SITE_URL } from "../../../config";
 import { nafError } from "./error";
 import { Agreement } from "@socialgouv/cdtn-utils";
 
-const formatCCn = ({ num, id, slug, url, title, shortTitle, highlight }) => ({
+const formatCCn = ({
+  num,
+  id,
+  slug,
+  url,
+  title,
+  shortTitle,
+  highlight,
+  contributions,
+}) => ({
   ...(highlight ? { highlight } : {}),
   ...(url ? { url } : {}),
   id,
@@ -12,6 +21,7 @@ const formatCCn = ({ num, id, slug, url, title, shortTitle, highlight }) => ({
   shortTitle,
   slug,
   title,
+  contributions,
 });
 export const onlyNumberError =
   "Numéro d’indentification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement.";

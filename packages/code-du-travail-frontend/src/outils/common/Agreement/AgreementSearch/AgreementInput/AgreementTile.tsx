@@ -6,16 +6,16 @@ import {
 } from "@socialgouv/cdtn-utils";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
-import { Agreement } from "@socialgouv/cdtn-utils";
 import {
   TrackingProps,
   UserAction,
 } from "../../../../ConventionCollective/types";
 import { LinkedTile } from "../../../../../common/tiles/LinkedTile";
 import { SITE_URL } from "../../../../../config";
+import { EnterpriseAgreement } from "../../../../../conventions/Search/api/enterprises.service";
 
 type Props = {
-  agreement: Agreement;
+  agreement: EnterpriseAgreement;
   isWidgetMode?: boolean;
 } & TrackingProps;
 
@@ -39,9 +39,9 @@ export function AgreementTile({
       target={isWidgetMode ? "_blank" : "_self"}
     >
       <Paragraph noMargin>
-        Retrouvez les questions-réponses les plus fréquentes organisées par
-        thème et élaborées par le Ministère du travail concernant cette
-        convention collective
+        {agreement.contributions
+          ? "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective"
+          : "Consultez les dispositions de cette convention collective"}
       </Paragraph>
     </LinkedTile>
   );

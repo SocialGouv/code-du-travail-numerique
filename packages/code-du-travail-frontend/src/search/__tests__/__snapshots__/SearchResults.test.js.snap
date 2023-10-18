@@ -23,7 +23,7 @@ exports[`<SearchResults/> should render results 1`] = `
         class="sc-dExYaf gvFybR"
       >
         <div
-          class="sc-fTFjTM hGmjIf"
+          class="sc-fTFjTM hkOnFS"
         >
           <div
             class="sc-gmgFlS dlfKdE"
@@ -66,10 +66,10 @@ exports[`<SearchResults/> should render results 1`] = `
         class="sc-dExYaf gvFybR"
       >
         <div
-          class="sc-fTFjTM hGmjIf sc-lnPyaJ loWhWN"
+          class="sc-fTFjTM hkOnFS sc-lnPyaJ loWhWN"
         >
           <div
-            class="sc-kOHTFB fBWkdL"
+            class="sc-kOHTFB enIaVF"
           >
             <div
               class="sc-dtInlm krTdyM"
@@ -161,7 +161,7 @@ exports[`<SearchResults/> should render results 1`] = `
       >
         <div
           aria-label="Outils externes telerc description undefined (nouvelle fenêtre)"
-          class="sc-fTFjTM hGmjIf sc-lnPyaJ loWhWN no-after"
+          class="sc-fTFjTM hkOnFS sc-lnPyaJ loWhWN no-after"
         >
           <div
             class="sc-gmgFlS dlfKdE"
@@ -230,10 +230,10 @@ exports[`<SearchResults/> should render results 1`] = `
         class="sc-dExYaf gvFybR"
       >
         <div
-          class="sc-fTFjTM hGmjIf sc-lnPyaJ loWhWN"
+          class="sc-fTFjTM hkOnFS sc-lnPyaJ loWhWN"
         >
           <div
-            class="sc-kOHTFB fBWkdL"
+            class="sc-kOHTFB enIaVF"
           >
             <div
               class="sc-dtInlm krTdyM"
@@ -324,10 +324,10 @@ exports[`<SearchResults/> should render results 1`] = `
         class="sc-dExYaf gvFybR"
       >
         <div
-          class="sc-fTFjTM hGmjIf"
+          class="sc-fTFjTM hkOnFS"
         >
           <div
-            class="sc-kOHTFB fBWkdL"
+            class="sc-kOHTFB enIaVF"
           >
             <div
               class="sc-dtInlm krTdyM"
@@ -429,7 +429,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-klVQfs bzxnQN"
               >
                 <div
-                  class="sc-fTFjTM hGmjIf"
+                  class="sc-fTFjTM hkOnFS"
                 >
                   <div
                     class="sc-gmgFlS dlfKdE"
@@ -483,7 +483,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-klVQfs kmTVHW"
               >
                 <div
-                  class="sc-fTFjTM fPpaeI"
+                  class="sc-fTFjTM gXLDjJ"
                 >
                   <div
                     class="sc-gmgFlS dlfKdE"

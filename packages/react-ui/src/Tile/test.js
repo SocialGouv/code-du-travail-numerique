@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import React from "react";
 
 import { Time } from "../icons/index.js";
-import { Tile } from "./index.js";
+import { Tile } from "./index";
 
 describe("<Tile />", () => {
   it("renders a tile with text inside", () => {
@@ -53,5 +53,13 @@ describe("<Tile />", () => {
     );
     const title = screen.getByRole("heading", { level: 2 });
     expect(title.textContent).toEqual("Hello !");
+  });
+  it("renders a disabled tile", () => {
+    const { container } = render(
+      <Tile wide subtitle="This is a disabled tile" title="Goodbye !" disabled>
+        There is text inside
+      </Tile>
+    );
+    expect(container).toMatchSnapshot();
   });
 });

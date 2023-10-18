@@ -152,6 +152,7 @@ describe("Validation de l'aggregation des données", () => {
             shortTitle: "ShortTitle",
             slug: "slug",
             title: "Title",
+            contributions: false,
           },
         };
       }

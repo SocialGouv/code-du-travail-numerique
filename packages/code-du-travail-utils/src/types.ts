@@ -150,6 +150,7 @@ export type Agreement = {
     content: string;
     searchInfo?: string;
   };
+  contributions: boolean;
 };
 
 export type ElasticSearchItem = {

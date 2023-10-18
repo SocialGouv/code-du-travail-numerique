@@ -23,6 +23,7 @@ describe("resetInfos", () => {
     shortTitle: "Particuliers employeurs et emploi à domicile",
     slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
     title: "Particuliers employeurs et emploi à domicile",
+    contributions: false,
   };
 
   describe("Aucune CC n'a été sélectionnée", () => {

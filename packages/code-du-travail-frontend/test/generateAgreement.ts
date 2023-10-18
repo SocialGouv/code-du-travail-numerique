@@ -6,4 +6,5 @@ export const generateAgreement = (idcc: number): Agreement => ({
   shortTitle: "TEST",
   slug: "TEST",
   title: "TEST",
+  contributions: false,
 });

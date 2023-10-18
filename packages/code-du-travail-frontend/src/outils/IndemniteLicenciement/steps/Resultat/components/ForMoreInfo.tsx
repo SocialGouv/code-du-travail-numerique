@@ -1,6 +1,5 @@
 import Link from "next/link";
-import styled from "styled-components";
-import { theme } from "@socialgouv/cdtn-ui";
+import { Paragraph } from "@socialgouv/cdtn-ui/lib";
 
 type Props = {
   message?: string;
@@ -24,12 +23,9 @@ export default function ForMoreInfo({ message = defaultMessage }: Props) {
         </Link>
         .
       </p>
-      <StyledI>{message}</StyledI>
+      <Paragraph italic fontSize="small">
+        {message}
+      </Paragraph>
     </>
   );
 }
-const { fonts } = theme;
-
-const StyledI = styled.i`
-  font-size: ${fonts.sizes.small};
-`;
