@@ -136,7 +136,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-eulNck bCoRam"
               >
                 <p
-                  class="sc-jGKxIK jvUYCL"
+                  class="sc-jGKxIK QfhnJ"
                 >
                   Consulter
                    
@@ -207,7 +207,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-eulNck bCoRam"
               >
                 <p
-                  class="sc-jGKxIK jvUYCL"
+                  class="sc-jGKxIK QfhnJ"
                 >
                   Consulter
                    
@@ -302,7 +302,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-eulNck bCoRam"
               >
                 <p
-                  class="sc-jGKxIK jvUYCL"
+                  class="sc-jGKxIK QfhnJ"
                 >
                   Consulter
                    

@@ -56,7 +56,7 @@ describe("<SalaireTempsPlein />", () => {
       />
     );
     const input1 = getByTitle(
-      /Salaire mensuel brut pour le mois/i
+      /Salaire mensuel brut en € pour le mois/i
     ) as HTMLInputElement;
     fireEvent.change(input1, { target: { value: "1500" } });
     expect(initObject[0].value).toBe(1500);

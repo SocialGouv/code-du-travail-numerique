@@ -1,10 +1,10 @@
 import { Input, InputDate, theme } from "@socialgouv/cdtn-ui";
-import React, { FunctionComponent, useEffect, useRef, useState } from "react";
+import React, { FunctionComponent, useEffect, useState } from "react";
 
 import styled from "styled-components";
 import xss from "xss";
 import Html from "../../common/Html";
-import { InlineError } from "../common/ErrorField";
+import { Error } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
 import { SmallText } from "../common/stepStyles";
 import { SubLabel } from "./SelectQuestion";
@@ -19,6 +19,7 @@ type Props = {
   placeholder?: string;
   subLabel?: string;
   smallText?: string;
+  title?: string;
   showRequired?: boolean;
   icon?: FunctionComponent;
   id: string;
@@ -37,6 +38,7 @@ export default function TextQuestion({
   onChange,
   smallText,
   subLabel,
+  title,
   showRequired,
   icon,
   id,
@@ -77,20 +79,18 @@ export default function TextQuestion({
           type={inputType === "date" ? "text" : inputType}
           updateOnScrollDisabled
           data-testid={dataTestId}
-          tabIndex={1}
           autoFocus={autoFocus}
+          title={title}
         />
       </QuestionWrapper>
       {error && (
-        <ErrorWrapper>
-          <InlineError>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: xss(error),
-              }}
-            />
-          </InlineError>
-        </ErrorWrapper>
+        <Error>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: xss(error),
+            }}
+          />
+        </Error>
       )}
     </Wrapper>
   );

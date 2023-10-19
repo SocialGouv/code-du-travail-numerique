@@ -2,7 +2,7 @@ import { Select, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 import Html from "../../common/Html";
-import { InlineError } from "../common/ErrorField";
+import { Error } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
 
 type Props = {
@@ -68,7 +68,6 @@ const SelectQuestion = ({
         onChange={(v) => onChange(v.target.value)}
         value={value}
         data-testid={name}
-        tabIndex={1}
         autoFocus={autoFocus}
       >
         <option disabled value="">
@@ -89,11 +88,7 @@ const SelectQuestion = ({
           );
         })}
       </StyledSelect>
-      {error && (
-        <ErrorWrapper>
-          <InlineError>{error}</InlineError>
-        </ErrorWrapper>
-      )}
+      {error && <Error>{error}</Error>}
     </Wrapper>
   );
 };
@@ -122,8 +117,4 @@ const StyledSelect = styled(Select)`
 
 const Wrapper = styled.div`
   margin-bottom: ${spacings.base};
-`;
-
-export const ErrorWrapper = styled.div`
-  display: flex;
 `;

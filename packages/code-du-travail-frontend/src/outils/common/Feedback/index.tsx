@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import { theme, icons, Wrapper } from "@socialgouv/cdtn-ui";
+import { icons, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import { Introduction } from "./introduction";
 import { useState } from "react";
 import { Questionnaire } from "./Questionnaire";
 import { QuestionnaireAdvanced } from "./QuestionnaireAdvanced";
 import { QuestionnaireEnd } from "./QuestionnaireEnd";
+import { Button } from "@socialgouv/cdtn-ui/lib";
 
 export const Feedback = (): JSX.Element => {
   const [status, setStatus] = useState<
@@ -13,14 +14,26 @@ export const Feedback = (): JSX.Element => {
   const [closed, setClosed] = useState(false);
   const [position, setPosition] = useState(0);
   const [bodyPosition, setBodyPosition] = useState(0);
+  const closeButton = (
+    <CloseButton
+      variant="naked"
+      small
+      narrow
+      title="fermer la modale"
+      onClick={() => setClosed(true)}
+    >
+      <icons.Close
+        onClick={() => setClosed(true)}
+        data-testid="feedbackCloseButton"
+        title="Fermer la modale"
+      />
+    </CloseButton>
+  );
   return !closed ? (
-    <>
+    <Div>
       {!status && (
         <IntroContainer variant="main">
-          <StyledCloseIcon
-            onClick={() => setClosed(true)}
-            data-testid="feedbackCloseButton"
-          />
+          {closeButton}
           <Introduction
             onClick={() => {
               setStatus("questionnaire");
@@ -38,10 +51,7 @@ export const Feedback = (): JSX.Element => {
             setBodyPosition(document.body.getBoundingClientRect().top);
           }}
         >
-          <StyledCloseIcon
-            onClick={() => setClosed(true)}
-            data-testid="feedbackCloseButton"
-          />
+          {closeButton}
           {status === "questionnaire" && (
             <Questionnaire
               onClick={() => {
@@ -60,35 +70,38 @@ export const Feedback = (): JSX.Element => {
           {status === "questionnaireEnd" && <QuestionnaireEnd />}
         </StyledContainer>
       )}
-    </>
+    </Div>
   ) : (
     <></>
   );
 };
 
-const { colors } = theme;
+const { colors, box } = theme;
 
-const IntroContainer = styled(Wrapper)`
-  border: 1px solid ${colors.secondary};
-  border-radius: 6px;
-  width: 460px;
-  max-width: 100%;
+const Div = styled.div`
   display: flex;
-  flex-direction: column;
-  margin: 42px 0 0 auto;
-  padding: 0 0 28px 0 !important;
+  justify-content: flex-end;
+`;
+
+const IntroContainer = styled.div`
+  border: 1px solid ${colors.secondary};
+  border-radius: ${box.borderRadius};
+  background-color: ${theme.colors.white};
+  min-width: 460px;
+  max-width: 100%;
+  padding: 0;
   position: relative;
 `;
 
 const StyledContainer = styled(IntroContainer)`
   width: 520px;
+  padding: ${theme.spacings.xmedium} 0;
 `;
 
-const StyledCloseIcon = styled(icons.Close)`
+const CloseButton = styled(Button)`
   position: absolute;
   top: 8px;
   right: 8px;
   width: 24px;
-  cursor: pointer;
-  z-index: 10;
+  color: ${({ theme }) => theme.secondary};
 `;

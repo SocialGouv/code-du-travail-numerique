@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import Html from "../../common/Html";
 
-import { InlineError } from "../common/ErrorField";
+import { Error } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
 import { RadioContainer, SmallText } from "../common/stepStyles";
 import { SubLabel } from "./SelectQuestion";
@@ -48,7 +48,7 @@ export default function RadioQuestion({
   return (
     <>
       <StyledFieldset>
-        <Question required={showRequired} tooltip={tooltip} as="p">
+        <Question required={showRequired} tooltip={tooltip}>
           <Html as="span">{label}</Html>
         </Question>
         {subLabel && <SubLabel>{subLabel}</SubLabel>}
@@ -63,25 +63,16 @@ export default function RadioQuestion({
               data-testid={`${name} - ${question.label}`}
               checked={selectedOption === question.value}
               onChange={() => onChange(question.value)}
-              tabIndex={1}
               autoFocus={autoFocus ? index === 0 : false}
             />
           ))}
-          {error && (
-            <ErrorWrapper>
-              <InlineError>{error}</InlineError>
-            </ErrorWrapper>
-          )}
+          {error && <Error>{error}</Error>}
         </RadioContainer>
         {note && <SmallText as="i">{note}</SmallText>}
       </StyledFieldset>
     </>
   );
 }
-
-export const ErrorWrapper = styled.div`
-  display: flex;
-`;
 
 export const StyledFieldset = styled(Fieldset)`
   display: contents;

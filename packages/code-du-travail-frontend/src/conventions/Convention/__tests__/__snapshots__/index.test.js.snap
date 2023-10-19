@@ -3357,8 +3357,7 @@ exports[`<Convention /> renders 1`] = `
                         <div>
                           <button
                             aria-expanded="false"
-                            class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
-                            tabindex="1"
+                            class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
                             type="button"
                           >
                             <svg
@@ -4802,8 +4801,8 @@ exports[`<Convention /> renders 1`] = `
     <div
       class="sc-dxcDKg jSDMIl"
     >
-      <span
-        class="sc-dkmUuB ayeCS sc-gvZAcH bzlFqK"
+      <div
+        class="sc-dkmUuB bSfMaa sc-gvZAcH bzlFqK"
       >
         <input
           autocomplete="off"
@@ -4813,7 +4812,7 @@ exports[`<Convention /> renders 1`] = `
           placeholder="Congés exceptionnels, prime"
           type="search"
         />
-      </span>
+      </div>
       <input
         name="query"
         type="hidden"

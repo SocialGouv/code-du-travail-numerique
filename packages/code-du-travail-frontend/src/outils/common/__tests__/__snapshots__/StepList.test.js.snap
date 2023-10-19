@@ -39,7 +39,6 @@ exports[`<StepList /> should render 1`] = `
       <li
         aria-live="polite"
         class="sc-iapWAC fhvlwJ"
-        tabindex="-1"
         title="onglet actif"
       >
         <span

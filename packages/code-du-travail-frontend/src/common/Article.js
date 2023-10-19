@@ -26,48 +26,50 @@ const Article = ({
   return (
     <Container>
       <Wrapper variant="main">
-        <Flex>
+        <FlexReverse>
+          <Content>{children}</Content>
+          <Flex>
+            {suptitle && <OrderedSuptitle as="p">{suptitle}</OrderedSuptitle>}
+            <StyledPageTitle
+              subtitle={subtitle}
+              stripe="left"
+              shift={theme.spacings.larger}
+            >
+              {title}
+            </StyledPageTitle>
+            <Meta>
+              <Paragraph noMargin fontSize="small">
+                {source &&
+                  (source.url ? (
+                    <StyledSpan>
+                      Source:{" "}
+                      <A11yLink
+                        href={source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {source.name}
+                      </A11yLink>
+                    </StyledSpan>
+                  ) : (
+                    <StyledSpan>Source: {source.name}</StyledSpan>
+                  ))}
+
+                {source && date && (
+                  <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
+                )}
+                {date && (
+                  <StyledSpan>
+                    {dateLabel}&nbsp;:&nbsp;{date}
+                  </StyledSpan>
+                )}
+              </Paragraph>
+            </Meta>
+          </Flex>
           <ShareContainer>
             <Share title={title} metaDescription={metaDescription} />
           </ShareContainer>
-          {suptitle && <OrderedSuptitle as="p">{suptitle}</OrderedSuptitle>}
-          <StyledPageTitle
-            subtitle={subtitle}
-            stripe="left"
-            shift={theme.spacings.larger}
-          >
-            {title}
-          </StyledPageTitle>
-          <Meta>
-            <Paragraph noMargin fontSize="small">
-              {source &&
-                (source.url ? (
-                  <StyledSpan>
-                    Source:{" "}
-                    <A11yLink
-                      href={source.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {source.name}
-                    </A11yLink>
-                  </StyledSpan>
-                ) : (
-                  <StyledSpan>Source: {source.name}</StyledSpan>
-                ))}
-
-              {source && date && (
-                <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
-              )}
-              {date && (
-                <StyledSpan>
-                  {dateLabel}&nbsp;:&nbsp;{date}
-                </StyledSpan>
-              )}
-            </Paragraph>
-          </Meta>
-        </Flex>
-        <Content>{children}</Content>
+        </FlexReverse>
       </Wrapper>
     </Container>
   );
@@ -111,6 +113,11 @@ const { breakpoints, fonts, spacings } = theme;
 const Flex = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const FlexReverse = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
 `;
 
 const ShareContainer = styled.div`

@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { Button, Heading } from "@socialgouv/cdtn-ui";
+import { Button, Heading, theme } from "@socialgouv/cdtn-ui";
 
-import { QuestionnaireItem, Status } from "./QuestionnaireItem";
-import { trackFeedback, EVENT_ACTION, FEEDBACK_RESULT } from "./tracking";
+import { QuestionnaireItem } from "./QuestionnaireItem";
+import { EVENT_ACTION, FEEDBACK_RESULT, trackFeedback } from "./tracking";
 import { useState } from "react";
 
 type QuestionnaireProps = {
@@ -14,10 +14,10 @@ export const Questionnaire = ({ onClick }: QuestionnaireProps): JSX.Element => {
   const [displayError, setDisplayError] = useState(false);
   return (
     <>
-      <StyledHeading variant="primary" stripe="left">
+      <Heading variant="primary" stripe="left">
         Comment s&apos;est passée cette simulation pour vous ?
-      </StyledHeading>
-      <StyledQuestionnaireItem
+      </Heading>
+      <QuestionnaireItem
         badEventValue={FEEDBACK_RESULT.NOT_GOOD}
         averageEventValue={FEEDBACK_RESULT.AVERAGE}
         goodEventValue={FEEDBACK_RESULT.GOOD}
@@ -45,16 +45,6 @@ export const Questionnaire = ({ onClick }: QuestionnaireProps): JSX.Element => {
   );
 };
 
-const StyledHeading = styled(Heading)`
-  margin-left: 0;
-  margin-bottom: 0;
-  padding-top: 6px;
-`;
-
 const StyledButton = styled(Button)`
-  margin: 12px auto 24px 24px;
-`;
-
-const StyledQuestionnaireItem = styled(QuestionnaireItem)`
-  padding: 24px;
+  margin: 0 ${theme.spacings.xmedium};
 `;

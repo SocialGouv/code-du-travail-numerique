@@ -8,7 +8,8 @@ exports[`<StepResult /> should render with O duration 1`] = `
     Durée du préavis
   </h2>
   <strong
-    class="sc-dExYaf sc-iapWAC eRIulc jbUgd"
+    class="sc-dExYaf fmRwFa"
+    role="alert"
   >
     Aucun préavis
   </strong>
@@ -18,8 +19,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
-      tabindex="1"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
       type="button"
     >
       <svg
@@ -153,7 +153,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-dxcDKg ftwa-dj MBzBQ"
+    class="sc-jsJBEP sc-kqGoIF ftwa-dj gxtvJq"
   >
     <div
       class="sc-bypJrT cRnKsM"
@@ -182,7 +182,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK iOBtQr sc-gvZAcH erbkqm"
+          class="sc-jGKxIK iOBtQr sc-dxcDKg vCQEI"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -206,28 +206,29 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-dExYaf sc-iapWAC eRIulc jbUgd"
+      class="sc-dExYaf fmRwFa"
+      role="alert"
     >
       1 mois
     </strong>
     <sup
-      class="sc-kRRyDe hETMnL"
+      class="sc-gvZAcH cpmNvN"
     >
       *
     </sup>
     .
   </p>
   <p
-    class="sc-kqGoIF bhpxzi"
+    class="sc-iapWAC iKJmJG"
   >
     <sup
-      class="sc-kRRyDe hETMnL"
+      class="sc-gvZAcH cpmNvN"
     >
       * 
     </sup>
     Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
-      class="sc-kqGoIF bhpxzi"
+      class="sc-iapWAC iKJmJG"
     >
        
       Exemple : si le salarié reçoit le courrier recommandé le
@@ -240,7 +241,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
     <span
-      class="sc-kqGoIF bhpxzi"
+      class="sc-iapWAC iKJmJG"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -249,8 +250,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   <div>
     <button
       aria-expanded="false"
-      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
-      tabindex="1"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
       type="button"
     >
       <svg
@@ -343,7 +343,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-dxcDKg ftwa-dj MBzBQ"
+    class="sc-jsJBEP sc-kqGoIF ftwa-dj gxtvJq"
   >
     <div
       class="sc-bypJrT cRnKsM"
@@ -372,7 +372,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK iOBtQr sc-gvZAcH erbkqm"
+          class="sc-jGKxIK iOBtQr sc-dxcDKg vCQEI"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -402,7 +402,8 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     Durée du préavis
   </h2>
   <strong
-    class="sc-dExYaf sc-iapWAC eRIulc jbUgd"
+    class="sc-dExYaf fmRwFa"
+    role="alert"
   >
     Aucun préavis
   </strong>
@@ -412,8 +413,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
-      tabindex="1"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
       type="button"
     >
       <svg
@@ -506,7 +506,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-dxcDKg ftwa-dj MBzBQ"
+    class="sc-jsJBEP sc-kqGoIF ftwa-dj gxtvJq"
   >
     <div
       class="sc-bypJrT cRnKsM"
@@ -535,7 +535,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK iOBtQr sc-gvZAcH erbkqm"
+          class="sc-jGKxIK iOBtQr sc-dxcDKg vCQEI"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -568,28 +568,29 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-dExYaf sc-iapWAC eRIulc jbUgd"
+      class="sc-dExYaf fmRwFa"
+      role="alert"
     >
       2 mois
     </strong>
     <sup
-      class="sc-kRRyDe hETMnL"
+      class="sc-gvZAcH cpmNvN"
     >
       *
     </sup>
     .
   </p>
   <p
-    class="sc-kqGoIF bhpxzi"
+    class="sc-iapWAC iKJmJG"
   >
     <sup
-      class="sc-kRRyDe hETMnL"
+      class="sc-gvZAcH cpmNvN"
     >
       * 
     </sup>
     Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
-      class="sc-kqGoIF bhpxzi"
+      class="sc-iapWAC iKJmJG"
     >
        
       Exemple : si le salarié reçoit le courrier recommandé le
@@ -602,7 +603,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
     <span
-      class="sc-kqGoIF bhpxzi"
+      class="sc-iapWAC iKJmJG"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -611,8 +612,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
-      tabindex="1"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
       type="button"
     >
       <svg
@@ -695,7 +695,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-dxcDKg ftwa-dj MBzBQ"
+    class="sc-jsJBEP sc-kqGoIF ftwa-dj gxtvJq"
   >
     <div
       class="sc-bypJrT cRnKsM"
@@ -724,7 +724,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK iOBtQr sc-gvZAcH erbkqm"
+          class="sc-jGKxIK iOBtQr sc-dxcDKg vCQEI"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -748,28 +748,29 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-dExYaf sc-iapWAC eRIulc jbUgd"
+      class="sc-dExYaf fmRwFa"
+      role="alert"
     >
       2 mois
     </strong>
     <sup
-      class="sc-kRRyDe hETMnL"
+      class="sc-gvZAcH cpmNvN"
     >
       *
     </sup>
     .
   </p>
   <p
-    class="sc-kqGoIF bhpxzi"
+    class="sc-iapWAC iKJmJG"
   >
     <sup
-      class="sc-kRRyDe hETMnL"
+      class="sc-gvZAcH cpmNvN"
     >
       * 
     </sup>
     Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
-      class="sc-kqGoIF bhpxzi"
+      class="sc-iapWAC iKJmJG"
     >
        
       Exemple : si le salarié reçoit le courrier recommandé le
@@ -782,7 +783,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
     <span
-      class="sc-kqGoIF bhpxzi"
+      class="sc-iapWAC iKJmJG"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -791,8 +792,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
-      tabindex="1"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
       type="button"
     >
       <svg
@@ -885,7 +885,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-dxcDKg ftwa-dj MBzBQ"
+    class="sc-jsJBEP sc-kqGoIF ftwa-dj gxtvJq"
   >
     <div
       class="sc-bypJrT cRnKsM"
@@ -914,7 +914,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         class="sc-dSCufp gAzXIi"
       >
         <p
-          class="sc-jGKxIK iOBtQr sc-gvZAcH erbkqm"
+          class="sc-jGKxIK iOBtQr sc-dxcDKg vCQEI"
         >
           Attention il peut exister une durée plus favorable
         </p>

@@ -15,10 +15,81 @@ exports[`<Answer /> should renders 1`] = `
           class="sc-iGgWBj biWgIW"
         >
           <div
-            class="sc-dhFUGM fmtmkn"
+            class="sc-fbKhjd eBWNnW"
           >
             <div
-              class="sc-fbKhjd jgqxms"
+              class="sc-bkSUFG emqylj"
+            >
+              <div
+                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+              >
+                <p
+                  class="sc-jGKxIK eoUrZA"
+                >
+                  intro de l'article
+                </p>
+              </div>
+              <div
+                class="sc-fFlnrN"
+              >
+                <p
+                  class="test-content"
+                >
+                  Contenu au format 
+                  <strong>
+                    html
+                  </strong>
+                </p>
+              </div>
+              <div>
+                Contenu supplémentaire
+              </div>
+            </div>
+            <div
+              class="sc-dhFUGM fmtmkn"
+            >
+              <header
+                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
+              >
+                <h1
+                  class="sc-dPZUQH doubLW"
+                >
+                  <span
+                    class="sc-gsFSXq ljkohw"
+                  />
+                  Article du code
+                </h1>
+              </header>
+              <div
+                class="sc-fAGzit kEwpYt"
+              >
+                <p
+                  class="sc-jGKxIK ksIRLJ"
+                >
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Source: 
+                    social groove
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="sc-deXhhX isajtz"
+                  >
+                     - 
+                  </span>
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Mis à jour le
+                     : 
+                    03/11/1979
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="sc-leSDtu dOeeyK"
             >
               <div
                 class="sc-dWZqqJ fRBaox"
@@ -149,78 +220,11 @@ exports[`<Answer /> should renders 1`] = `
                 </div>
               </div>
             </div>
-            <header
-              class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
-            >
-              <h1
-                class="sc-dPZUQH doubLW"
-              >
-                <span
-                  class="sc-gsFSXq ljkohw"
-                />
-                Article du code
-              </h1>
-            </header>
-            <div
-              class="sc-dGCmGc eKMRHH"
-            >
-              <p
-                class="sc-jGKxIK ksIRLJ"
-              >
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Source: 
-                  social groove
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="sc-bkSUFG cWHjQY"
-                >
-                   - 
-                </span>
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Mis à jour le
-                   : 
-                  03/11/1979
-                </span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="sc-fAGzit jflOdq"
-          >
-            <div
-              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
-            >
-              <p
-                class="sc-jGKxIK eoUrZA"
-              >
-                intro de l'article
-              </p>
-            </div>
-            <div
-              class="sc-bOhtcR"
-            >
-              <p
-                class="test-content"
-              >
-                Contenu au format 
-                <strong>
-                  html
-                </strong>
-              </p>
-            </div>
-            <div>
-              Contenu supplémentaire
-            </div>
           </div>
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
+        class="sc-aXZVg sc-eIcdZJ gZgZQL jbQppV"
       >
         <p
           class="sc-jGKxIK eoUrZA"
@@ -232,6 +236,7 @@ exports[`<Answer /> should renders 1`] = `
         >
           <button
             class="sc-isRoRg bfiCtj no-after spacing-left"
+            tabindex="-1"
             title="Partager sur Facebook"
             type="button"
           >
@@ -260,6 +265,7 @@ exports[`<Answer /> should renders 1`] = `
           <a
             class="sc-satoz eXuioF spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+            tabindex="-1"
             title="Envoyer par email"
           >
             <span
@@ -290,6 +296,7 @@ exports[`<Answer /> should renders 1`] = `
           </a>
           <button
             class="sc-isRoRg bfiCtj spacing-left"
+            tabindex="-1"
             title="Partager sur LinkedIn"
           >
             <span
@@ -319,6 +326,7 @@ exports[`<Answer /> should renders 1`] = `
           >
             <button
               class="sc-isRoRg bfiCtj spacing-left"
+              tabindex="-1"
               title="Plus d’options"
             >
               <span
@@ -357,7 +365,7 @@ exports[`<Answer /> should renders 1`] = `
         </div>
       </div>
       <div
-        class="sc-gEvEer hpVpdb sc-lbJcrp fqRoKz"
+        class="sc-gEvEer hpVpdb sc-eifrsQ fsFtkE"
       >
         <div
           class="sc-aXZVg gZgZQL"
@@ -366,10 +374,10 @@ exports[`<Answer /> should renders 1`] = `
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-bfhvDw feUtCS"
+              class="sc-cMa-dbN dtzqqp"
             >
               <h2
-                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
+                class="sc-fUBkdm hmEJTx sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -379,15 +387,15 @@ exports[`<Answer /> should renders 1`] = `
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-fUBkdm dNrvyY"
+                class="sc-hBtRBD eKbdLN"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Oui
                 </button>
@@ -405,7 +413,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 <div>
   <nav
     aria-label="Fil d'ariane"
-    class="sc-dQEtJz yKoSx"
+    class="sc-imwsjW bpxKEw"
   >
     <div
       class="sc-gFAWRd jDjoBq"
@@ -414,19 +422,19 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         class="sc-gmPhUn kUNTdL"
       >
         <ol
-          class="sc-aXZVg sc-imwsjW gZgZQL gvVbLf"
+          class="sc-aXZVg sc-kCMKrZ gZgZQL dbBtZw"
         >
           <li
-            class="sc-kCMKrZ dWUqlw"
+            class="sc-dJiZtA gdwA-dG"
           >
             <a
-              class="sc-dJiZtA drksaw"
+              class="sc-epALIP kkLIEh"
               href="/"
               title="Retour à l'accueil"
             >
               <svg
                 aria-hidden="true"
-                class="sc-epALIP hqUgCD"
+                class="sc-iLsKjm eOHgHI"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -440,11 +448,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </a>
           </li>
           <li
-            class="sc-kCMKrZ dWUqlw"
+            class="sc-dJiZtA gdwA-dG"
           >
             <svg
               aria-hidden="true"
-              class="sc-iLsKjm hgkhFr"
+              class="sc-lbJcrp bEhCdw"
               fill="none"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
@@ -456,18 +464,18 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </svg>
              
             <a
-              class="sc-dJiZtA drksaw"
+              class="sc-epALIP kkLIEh"
               href="/themes/tag-1"
             >
               tag1
             </a>
           </li>
           <li
-            class="sc-kCMKrZ dWUqlw"
+            class="sc-dJiZtA gdwA-dG"
           >
             <svg
               aria-hidden="true"
-              class="sc-iLsKjm hgkhFr"
+              class="sc-lbJcrp bEhCdw"
               fill="none"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
@@ -479,7 +487,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </svg>
              
             <a
-              class="sc-dJiZtA drksaw"
+              class="sc-epALIP kkLIEh"
               href="/themes/tag-2"
             >
               tag2
@@ -502,10 +510,86 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           class="sc-iGgWBj biWgIW"
         >
           <div
-            class="sc-dhFUGM fmtmkn"
+            class="sc-fbKhjd eBWNnW"
           >
             <div
-              class="sc-fbKhjd jgqxms"
+              class="sc-bkSUFG emqylj"
+            >
+              <div
+                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+              >
+                <p
+                  class="sc-jGKxIK eoUrZA"
+                >
+                  intro de l'article
+                </p>
+              </div>
+              <div
+                class="sc-fFlnrN"
+              >
+                <p
+                  class="test-content"
+                >
+                  Contenu au format 
+                  <strong>
+                    html
+                  </strong>
+                </p>
+              </div>
+              <div>
+                Contenu supplémentaire
+              </div>
+            </div>
+            <div
+              class="sc-dhFUGM fmtmkn"
+            >
+              <p
+                class="sc-hZDyAQ sc-bJBgwP bUgSfx hFcltn"
+              >
+                tag2
+              </p>
+              <header
+                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
+              >
+                <h1
+                  class="sc-dPZUQH doubLW"
+                >
+                  <span
+                    class="sc-gsFSXq ljkohw"
+                  />
+                  Article du code
+                </h1>
+              </header>
+              <div
+                class="sc-fAGzit kEwpYt"
+              >
+                <p
+                  class="sc-jGKxIK ksIRLJ"
+                >
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Source: 
+                    social groove
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="sc-deXhhX isajtz"
+                  >
+                     - 
+                  </span>
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Mis à jour le
+                     : 
+                    03/11/1979
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="sc-leSDtu dOeeyK"
             >
               <div
                 class="sc-dWZqqJ fRBaox"
@@ -636,83 +720,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 </div>
               </div>
             </div>
-            <p
-              class="sc-hZDyAQ sc-leSDtu bUgSfx bwewGm"
-            >
-              tag2
-            </p>
-            <header
-              class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
-            >
-              <h1
-                class="sc-dPZUQH doubLW"
-              >
-                <span
-                  class="sc-gsFSXq ljkohw"
-                />
-                Article du code
-              </h1>
-            </header>
-            <div
-              class="sc-dGCmGc eKMRHH"
-            >
-              <p
-                class="sc-jGKxIK ksIRLJ"
-              >
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Source: 
-                  social groove
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="sc-bkSUFG cWHjQY"
-                >
-                   - 
-                </span>
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Mis à jour le
-                   : 
-                  03/11/1979
-                </span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="sc-fAGzit jflOdq"
-          >
-            <div
-              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
-            >
-              <p
-                class="sc-jGKxIK eoUrZA"
-              >
-                intro de l'article
-              </p>
-            </div>
-            <div
-              class="sc-bOhtcR"
-            >
-              <p
-                class="test-content"
-              >
-                Contenu au format 
-                <strong>
-                  html
-                </strong>
-              </p>
-            </div>
-            <div>
-              Contenu supplémentaire
-            </div>
           </div>
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
+        class="sc-aXZVg sc-eIcdZJ gZgZQL jbQppV"
       >
         <p
           class="sc-jGKxIK eoUrZA"
@@ -724,6 +736,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         >
           <button
             class="sc-isRoRg bfiCtj no-after spacing-left"
+            tabindex="-1"
             title="Partager sur Facebook"
             type="button"
           >
@@ -752,6 +765,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           <a
             class="sc-satoz eXuioF spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+            tabindex="-1"
             title="Envoyer par email"
           >
             <span
@@ -782,6 +796,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           </a>
           <button
             class="sc-isRoRg bfiCtj spacing-left"
+            tabindex="-1"
             title="Partager sur LinkedIn"
           >
             <span
@@ -811,6 +826,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           >
             <button
               class="sc-isRoRg bfiCtj spacing-left"
+              tabindex="-1"
               title="Plus d’options"
             >
               <span
@@ -849,7 +865,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         </div>
       </div>
       <div
-        class="sc-gEvEer hpVpdb sc-lbJcrp fqRoKz"
+        class="sc-gEvEer hpVpdb sc-eifrsQ fsFtkE"
       >
         <div
           class="sc-aXZVg gZgZQL"
@@ -858,10 +874,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-bfhvDw feUtCS"
+              class="sc-cMa-dbN dtzqqp"
             >
               <h2
-                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
+                class="sc-fUBkdm hmEJTx sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -871,15 +887,15 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-fUBkdm dNrvyY"
+                class="sc-hBtRBD eKbdLN"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Oui
                 </button>
@@ -908,10 +924,81 @@ exports[`<Answer /> should renders back to results link 1`] = `
           class="sc-iGgWBj biWgIW"
         >
           <div
-            class="sc-dhFUGM fmtmkn"
+            class="sc-fbKhjd eBWNnW"
           >
             <div
-              class="sc-fbKhjd jgqxms"
+              class="sc-bkSUFG emqylj"
+            >
+              <div
+                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+              >
+                <p
+                  class="sc-jGKxIK eoUrZA"
+                >
+                  intro de l'article
+                </p>
+              </div>
+              <div
+                class="sc-fFlnrN"
+              >
+                <p
+                  class="test-content"
+                >
+                  Contenu au format 
+                  <strong>
+                    html
+                  </strong>
+                </p>
+              </div>
+              <div>
+                Contenu supplémentaire
+              </div>
+            </div>
+            <div
+              class="sc-dhFUGM fmtmkn"
+            >
+              <header
+                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
+              >
+                <h1
+                  class="sc-dPZUQH doubLW"
+                >
+                  <span
+                    class="sc-gsFSXq ljkohw"
+                  />
+                  Article du code
+                </h1>
+              </header>
+              <div
+                class="sc-fAGzit kEwpYt"
+              >
+                <p
+                  class="sc-jGKxIK ksIRLJ"
+                >
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Source: 
+                    social groove
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="sc-deXhhX isajtz"
+                  >
+                     - 
+                  </span>
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Mis à jour le
+                     : 
+                    03/11/1979
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="sc-leSDtu dOeeyK"
             >
               <div
                 class="sc-dWZqqJ fRBaox"
@@ -1042,78 +1129,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 </div>
               </div>
             </div>
-            <header
-              class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
-            >
-              <h1
-                class="sc-dPZUQH doubLW"
-              >
-                <span
-                  class="sc-gsFSXq ljkohw"
-                />
-                Article du code
-              </h1>
-            </header>
-            <div
-              class="sc-dGCmGc eKMRHH"
-            >
-              <p
-                class="sc-jGKxIK ksIRLJ"
-              >
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Source: 
-                  social groove
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="sc-bkSUFG cWHjQY"
-                >
-                   - 
-                </span>
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Mis à jour le
-                   : 
-                  03/11/1979
-                </span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="sc-fAGzit jflOdq"
-          >
-            <div
-              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
-            >
-              <p
-                class="sc-jGKxIK eoUrZA"
-              >
-                intro de l'article
-              </p>
-            </div>
-            <div
-              class="sc-bOhtcR"
-            >
-              <p
-                class="test-content"
-              >
-                Contenu au format 
-                <strong>
-                  html
-                </strong>
-              </p>
-            </div>
-            <div>
-              Contenu supplémentaire
-            </div>
           </div>
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
+        class="sc-aXZVg sc-eIcdZJ gZgZQL jbQppV"
       >
         <p
           class="sc-jGKxIK eoUrZA"
@@ -1125,6 +1145,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
         >
           <button
             class="sc-isRoRg bfiCtj no-after spacing-left"
+            tabindex="-1"
             title="Partager sur Facebook"
             type="button"
           >
@@ -1153,6 +1174,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
           <a
             class="sc-satoz eXuioF spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+            tabindex="-1"
             title="Envoyer par email"
           >
             <span
@@ -1183,6 +1205,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
           </a>
           <button
             class="sc-isRoRg bfiCtj spacing-left"
+            tabindex="-1"
             title="Partager sur LinkedIn"
           >
             <span
@@ -1212,6 +1235,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
           >
             <button
               class="sc-isRoRg bfiCtj spacing-left"
+              tabindex="-1"
               title="Plus d’options"
             >
               <span
@@ -1250,7 +1274,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
         </div>
       </div>
       <div
-        class="sc-gEvEer hpVpdb sc-lbJcrp fqRoKz"
+        class="sc-gEvEer hpVpdb sc-eifrsQ fsFtkE"
       >
         <div
           class="sc-aXZVg gZgZQL"
@@ -1259,10 +1283,10 @@ exports[`<Answer /> should renders back to results link 1`] = `
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-bfhvDw feUtCS"
+              class="sc-cMa-dbN dtzqqp"
             >
               <h2
-                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
+                class="sc-fUBkdm hmEJTx sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -1272,15 +1296,15 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-fUBkdm dNrvyY"
+                class="sc-hBtRBD eKbdLN"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Oui
                 </button>
@@ -1309,10 +1333,78 @@ exports[`<Answer /> should renders related content 1`] = `
           class="sc-iGgWBj biWgIW"
         >
           <div
-            class="sc-dhFUGM fmtmkn"
+            class="sc-fbKhjd eBWNnW"
           >
             <div
-              class="sc-fbKhjd jgqxms"
+              class="sc-bkSUFG emqylj"
+            >
+              <div
+                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+              >
+                <p
+                  class="sc-jGKxIK eoUrZA"
+                >
+                  intro de l'article
+                </p>
+              </div>
+              <div
+                class="sc-fFlnrN"
+              >
+                <p
+                  class="test-content"
+                >
+                  annualisation du temps de travail. Annualisation de l'annualisation.
+                </p>
+              </div>
+              <div>
+                Contenu supplémentaire
+              </div>
+            </div>
+            <div
+              class="sc-dhFUGM fmtmkn"
+            >
+              <header
+                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
+              >
+                <h1
+                  class="sc-dPZUQH doubLW"
+                >
+                  <span
+                    class="sc-gsFSXq ljkohw"
+                  />
+                  Article du code
+                </h1>
+              </header>
+              <div
+                class="sc-fAGzit kEwpYt"
+              >
+                <p
+                  class="sc-jGKxIK ksIRLJ"
+                >
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Source: 
+                    social groove
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="sc-deXhhX isajtz"
+                  >
+                     - 
+                  </span>
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Mis à jour le
+                     : 
+                    03/11/1979
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="sc-leSDtu dOeeyK"
             >
               <div
                 class="sc-dWZqqJ fRBaox"
@@ -1443,75 +1535,11 @@ exports[`<Answer /> should renders related content 1`] = `
                 </div>
               </div>
             </div>
-            <header
-              class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
-            >
-              <h1
-                class="sc-dPZUQH doubLW"
-              >
-                <span
-                  class="sc-gsFSXq ljkohw"
-                />
-                Article du code
-              </h1>
-            </header>
-            <div
-              class="sc-dGCmGc eKMRHH"
-            >
-              <p
-                class="sc-jGKxIK ksIRLJ"
-              >
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Source: 
-                  social groove
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="sc-bkSUFG cWHjQY"
-                >
-                   - 
-                </span>
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Mis à jour le
-                   : 
-                  03/11/1979
-                </span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="sc-fAGzit jflOdq"
-          >
-            <div
-              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
-            >
-              <p
-                class="sc-jGKxIK eoUrZA"
-              >
-                intro de l'article
-              </p>
-            </div>
-            <div
-              class="sc-bOhtcR"
-            >
-              <p
-                class="test-content"
-              >
-                annualisation du temps de travail. Annualisation de l'annualisation.
-              </p>
-            </div>
-            <div>
-              Contenu supplémentaire
-            </div>
           </div>
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
+        class="sc-aXZVg sc-eIcdZJ gZgZQL jbQppV"
       >
         <p
           class="sc-jGKxIK eoUrZA"
@@ -1523,6 +1551,7 @@ exports[`<Answer /> should renders related content 1`] = `
         >
           <button
             class="sc-isRoRg bfiCtj no-after spacing-left"
+            tabindex="-1"
             title="Partager sur Facebook"
             type="button"
           >
@@ -1551,6 +1580,7 @@ exports[`<Answer /> should renders related content 1`] = `
           <a
             class="sc-satoz eXuioF spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+            tabindex="-1"
             title="Envoyer par email"
           >
             <span
@@ -1581,6 +1611,7 @@ exports[`<Answer /> should renders related content 1`] = `
           </a>
           <button
             class="sc-isRoRg bfiCtj spacing-left"
+            tabindex="-1"
             title="Partager sur LinkedIn"
           >
             <span
@@ -1610,6 +1641,7 @@ exports[`<Answer /> should renders related content 1`] = `
           >
             <button
               class="sc-isRoRg bfiCtj spacing-left"
+              tabindex="-1"
               title="Plus d’options"
             >
               <span
@@ -1648,7 +1680,7 @@ exports[`<Answer /> should renders related content 1`] = `
         </div>
       </div>
       <div
-        class="sc-gEvEer hpVpdb sc-lbJcrp fqRoKz"
+        class="sc-gEvEer hpVpdb sc-eifrsQ fsFtkE"
       >
         <div
           class="sc-aXZVg gZgZQL"
@@ -1657,10 +1689,10 @@ exports[`<Answer /> should renders related content 1`] = `
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-bfhvDw feUtCS"
+              class="sc-cMa-dbN dtzqqp"
             >
               <h2
-                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
+                class="sc-fUBkdm hmEJTx sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -1670,15 +1702,15 @@ exports[`<Answer /> should renders related content 1`] = `
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-fUBkdm dNrvyY"
+                class="sc-hBtRBD eKbdLN"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Oui
                 </button>
@@ -1707,7 +1739,7 @@ exports[`<Answer /> should renders related content 1`] = `
           class="sc-cfxfcM kMmTaI"
         >
           <li
-            class="sc-fFlnrN bvwzbH"
+            class="sc-kbdlSk kBnlFg"
           >
             <a
               class="sc-bmzYkS hFAanY"
@@ -1733,7 +1765,7 @@ exports[`<Answer /> should renders related content 1`] = `
             </a>
           </li>
           <li
-            class="sc-fFlnrN bvwzbH"
+            class="sc-kbdlSk kBnlFg"
           >
             <a
               class="sc-bmzYkS hFAanY"
@@ -1772,7 +1804,7 @@ exports[`<Answer /> should renders related content 1`] = `
           class="sc-cfxfcM kMmTaI"
         >
           <li
-            class="sc-fFlnrN bvwzbH"
+            class="sc-kbdlSk kBnlFg"
           >
             <a
               class="sc-bmzYkS hFAanY"
@@ -1798,7 +1830,7 @@ exports[`<Answer /> should renders related content 1`] = `
             </a>
           </li>
           <li
-            class="sc-fFlnrN bvwzbH"
+            class="sc-kbdlSk kBnlFg"
           >
             <a
               class="sc-bmzYkS hFAanY"
@@ -1824,7 +1856,7 @@ exports[`<Answer /> should renders related content 1`] = `
             </a>
           </li>
           <li
-            class="sc-fFlnrN bvwzbH"
+            class="sc-kbdlSk kBnlFg"
           >
             <a
               class="sc-bmzYkS hFAanY"
@@ -1871,10 +1903,82 @@ exports[`<Answer /> should renders tooltip 1`] = `
           class="sc-iGgWBj biWgIW"
         >
           <div
-            class="sc-dhFUGM fmtmkn"
+            class="sc-fbKhjd eBWNnW"
           >
             <div
-              class="sc-fbKhjd jgqxms"
+              class="sc-bkSUFG emqylj"
+            >
+              <div
+                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+              >
+                <p
+                  class="sc-jGKxIK eoUrZA"
+                >
+                  intro de l'article
+                </p>
+              </div>
+              <div
+                class="sc-fFlnrN"
+              >
+                <p
+                  class="test-content"
+                >
+                  Contenu au format 
+                  <strong>
+                    html
+                  </strong>
+                   contenant des tooltip sur certains mot comme rescrit. match aussi les abbréviation comme APE mais pas ape ou ses variantes comme code ape
+                </p>
+              </div>
+              <div>
+                Contenu supplémentaire
+              </div>
+            </div>
+            <div
+              class="sc-dhFUGM fmtmkn"
+            >
+              <header
+                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
+              >
+                <h1
+                  class="sc-dPZUQH doubLW"
+                >
+                  <span
+                    class="sc-gsFSXq ljkohw"
+                  />
+                  Article du code
+                </h1>
+              </header>
+              <div
+                class="sc-fAGzit kEwpYt"
+              >
+                <p
+                  class="sc-jGKxIK ksIRLJ"
+                >
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Source: 
+                    social groove
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="sc-deXhhX isajtz"
+                  >
+                     - 
+                  </span>
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Mis à jour le
+                     : 
+                    03/11/1979
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="sc-leSDtu dOeeyK"
             >
               <div
                 class="sc-dWZqqJ fRBaox"
@@ -2005,79 +2109,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 </div>
               </div>
             </div>
-            <header
-              class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
-            >
-              <h1
-                class="sc-dPZUQH doubLW"
-              >
-                <span
-                  class="sc-gsFSXq ljkohw"
-                />
-                Article du code
-              </h1>
-            </header>
-            <div
-              class="sc-dGCmGc eKMRHH"
-            >
-              <p
-                class="sc-jGKxIK ksIRLJ"
-              >
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Source: 
-                  social groove
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="sc-bkSUFG cWHjQY"
-                >
-                   - 
-                </span>
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Mis à jour le
-                   : 
-                  03/11/1979
-                </span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="sc-fAGzit jflOdq"
-          >
-            <div
-              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
-            >
-              <p
-                class="sc-jGKxIK eoUrZA"
-              >
-                intro de l'article
-              </p>
-            </div>
-            <div
-              class="sc-bOhtcR"
-            >
-              <p
-                class="test-content"
-              >
-                Contenu au format 
-                <strong>
-                  html
-                </strong>
-                 contenant des tooltip sur certains mot comme rescrit. match aussi les abbréviation comme APE mais pas ape ou ses variantes comme code ape
-              </p>
-            </div>
-            <div>
-              Contenu supplémentaire
-            </div>
           </div>
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
+        class="sc-aXZVg sc-eIcdZJ gZgZQL jbQppV"
       >
         <p
           class="sc-jGKxIK eoUrZA"
@@ -2089,6 +2125,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
         >
           <button
             class="sc-isRoRg bfiCtj no-after spacing-left"
+            tabindex="-1"
             title="Partager sur Facebook"
             type="button"
           >
@@ -2117,6 +2154,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
           <a
             class="sc-satoz eXuioF spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+            tabindex="-1"
             title="Envoyer par email"
           >
             <span
@@ -2147,6 +2185,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
           </a>
           <button
             class="sc-isRoRg bfiCtj spacing-left"
+            tabindex="-1"
             title="Partager sur LinkedIn"
           >
             <span
@@ -2176,6 +2215,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
           >
             <button
               class="sc-isRoRg bfiCtj spacing-left"
+              tabindex="-1"
               title="Plus d’options"
             >
               <span
@@ -2214,7 +2254,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
         </div>
       </div>
       <div
-        class="sc-gEvEer hpVpdb sc-lbJcrp fqRoKz"
+        class="sc-gEvEer hpVpdb sc-eifrsQ fsFtkE"
       >
         <div
           class="sc-aXZVg gZgZQL"
@@ -2223,10 +2263,10 @@ exports[`<Answer /> should renders tooltip 1`] = `
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-bfhvDw feUtCS"
+              class="sc-cMa-dbN dtzqqp"
             >
               <h2
-                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
+                class="sc-fUBkdm hmEJTx sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -2236,15 +2276,15 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-fUBkdm dNrvyY"
+                class="sc-hBtRBD eKbdLN"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Oui
                 </button>
@@ -2273,10 +2313,82 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
           class="sc-iGgWBj biWgIW"
         >
           <div
-            class="sc-dhFUGM fmtmkn"
+            class="sc-fbKhjd eBWNnW"
           >
             <div
-              class="sc-fbKhjd jgqxms"
+              class="sc-bkSUFG emqylj"
+            >
+              <div
+                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+              >
+                <p
+                  class="sc-jGKxIK eoUrZA"
+                >
+                  intro de l'article
+                </p>
+              </div>
+              <div
+                class="sc-fFlnrN"
+              >
+                <p
+                  class="test-content"
+                >
+                  Contenu au format 
+                  <strong>
+                    indemnités
+                  </strong>
+                  comme code ape
+                </p>
+              </div>
+              <div>
+                Contenu supplémentaire
+              </div>
+            </div>
+            <div
+              class="sc-dhFUGM fmtmkn"
+            >
+              <header
+                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
+              >
+                <h1
+                  class="sc-dPZUQH doubLW"
+                >
+                  <span
+                    class="sc-gsFSXq ljkohw"
+                  />
+                  Article du code
+                </h1>
+              </header>
+              <div
+                class="sc-fAGzit kEwpYt"
+              >
+                <p
+                  class="sc-jGKxIK ksIRLJ"
+                >
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Source: 
+                    social groove
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="sc-deXhhX isajtz"
+                  >
+                     - 
+                  </span>
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Mis à jour le
+                     : 
+                    03/11/1979
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="sc-leSDtu dOeeyK"
             >
               <div
                 class="sc-dWZqqJ fRBaox"
@@ -2407,79 +2519,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 </div>
               </div>
             </div>
-            <header
-              class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
-            >
-              <h1
-                class="sc-dPZUQH doubLW"
-              >
-                <span
-                  class="sc-gsFSXq ljkohw"
-                />
-                Article du code
-              </h1>
-            </header>
-            <div
-              class="sc-dGCmGc eKMRHH"
-            >
-              <p
-                class="sc-jGKxIK ksIRLJ"
-              >
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Source: 
-                  social groove
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="sc-bkSUFG cWHjQY"
-                >
-                   - 
-                </span>
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Mis à jour le
-                   : 
-                  03/11/1979
-                </span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="sc-fAGzit jflOdq"
-          >
-            <div
-              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
-            >
-              <p
-                class="sc-jGKxIK eoUrZA"
-              >
-                intro de l'article
-              </p>
-            </div>
-            <div
-              class="sc-bOhtcR"
-            >
-              <p
-                class="test-content"
-              >
-                Contenu au format 
-                <strong>
-                  indemnités
-                </strong>
-                comme code ape
-              </p>
-            </div>
-            <div>
-              Contenu supplémentaire
-            </div>
           </div>
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
+        class="sc-aXZVg sc-eIcdZJ gZgZQL jbQppV"
       >
         <p
           class="sc-jGKxIK eoUrZA"
@@ -2491,6 +2535,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         >
           <button
             class="sc-isRoRg bfiCtj no-after spacing-left"
+            tabindex="-1"
             title="Partager sur Facebook"
             type="button"
           >
@@ -2519,6 +2564,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
           <a
             class="sc-satoz eXuioF spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+            tabindex="-1"
             title="Envoyer par email"
           >
             <span
@@ -2549,6 +2595,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
           </a>
           <button
             class="sc-isRoRg bfiCtj spacing-left"
+            tabindex="-1"
             title="Partager sur LinkedIn"
           >
             <span
@@ -2578,6 +2625,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
           >
             <button
               class="sc-isRoRg bfiCtj spacing-left"
+              tabindex="-1"
               title="Plus d’options"
             >
               <span
@@ -2616,7 +2664,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         </div>
       </div>
       <div
-        class="sc-gEvEer hpVpdb sc-lbJcrp fqRoKz"
+        class="sc-gEvEer hpVpdb sc-eifrsQ fsFtkE"
       >
         <div
           class="sc-aXZVg gZgZQL"
@@ -2625,10 +2673,10 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-bfhvDw feUtCS"
+              class="sc-cMa-dbN dtzqqp"
             >
               <h2
-                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
+                class="sc-fUBkdm hmEJTx sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -2638,15 +2686,15 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-fUBkdm dNrvyY"
+                class="sc-hBtRBD eKbdLN"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Oui
                 </button>
@@ -2675,10 +2723,83 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
           class="sc-iGgWBj biWgIW"
         >
           <div
-            class="sc-dhFUGM fmtmkn"
+            class="sc-fbKhjd eBWNnW"
           >
             <div
-              class="sc-fbKhjd jgqxms"
+              class="sc-bkSUFG emqylj"
+            >
+              <div
+                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+              >
+                <p
+                  class="sc-jGKxIK eoUrZA"
+                >
+                  intro de l'article
+                </p>
+              </div>
+              <div
+                class="sc-fFlnrN"
+              >
+                <p
+                  class="test-content"
+                >
+                  <a
+                    class="spip_in"
+                    href="emploi/accompagnement-des-mutations-economiques/csp"
+                  >
+                    le contrat de sécurisation professionnelle APE
+                  </a>
+                </p>
+              </div>
+              <div>
+                Contenu supplémentaire
+              </div>
+            </div>
+            <div
+              class="sc-dhFUGM fmtmkn"
+            >
+              <header
+                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
+              >
+                <h1
+                  class="sc-dPZUQH doubLW"
+                >
+                  <span
+                    class="sc-gsFSXq ljkohw"
+                  />
+                  Article du code
+                </h1>
+              </header>
+              <div
+                class="sc-fAGzit kEwpYt"
+              >
+                <p
+                  class="sc-jGKxIK ksIRLJ"
+                >
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Source: 
+                    social groove
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="sc-deXhhX isajtz"
+                  >
+                     - 
+                  </span>
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Mis à jour le
+                     : 
+                    03/11/1979
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="sc-leSDtu dOeeyK"
             >
               <div
                 class="sc-dWZqqJ fRBaox"
@@ -2809,80 +2930,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 </div>
               </div>
             </div>
-            <header
-              class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
-            >
-              <h1
-                class="sc-dPZUQH doubLW"
-              >
-                <span
-                  class="sc-gsFSXq ljkohw"
-                />
-                Article du code
-              </h1>
-            </header>
-            <div
-              class="sc-dGCmGc eKMRHH"
-            >
-              <p
-                class="sc-jGKxIK ksIRLJ"
-              >
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Source: 
-                  social groove
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="sc-bkSUFG cWHjQY"
-                >
-                   - 
-                </span>
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Mis à jour le
-                   : 
-                  03/11/1979
-                </span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="sc-fAGzit jflOdq"
-          >
-            <div
-              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
-            >
-              <p
-                class="sc-jGKxIK eoUrZA"
-              >
-                intro de l'article
-              </p>
-            </div>
-            <div
-              class="sc-bOhtcR"
-            >
-              <p
-                class="test-content"
-              >
-                <a
-                  class="spip_in"
-                  href="emploi/accompagnement-des-mutations-economiques/csp"
-                >
-                  le contrat de sécurisation professionnelle APE
-                </a>
-              </p>
-            </div>
-            <div>
-              Contenu supplémentaire
-            </div>
           </div>
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
+        class="sc-aXZVg sc-eIcdZJ gZgZQL jbQppV"
       >
         <p
           class="sc-jGKxIK eoUrZA"
@@ -2894,6 +2946,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
         >
           <button
             class="sc-isRoRg bfiCtj no-after spacing-left"
+            tabindex="-1"
             title="Partager sur Facebook"
             type="button"
           >
@@ -2922,6 +2975,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
           <a
             class="sc-satoz eXuioF spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+            tabindex="-1"
             title="Envoyer par email"
           >
             <span
@@ -2952,6 +3006,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
           </a>
           <button
             class="sc-isRoRg bfiCtj spacing-left"
+            tabindex="-1"
             title="Partager sur LinkedIn"
           >
             <span
@@ -2981,6 +3036,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
           >
             <button
               class="sc-isRoRg bfiCtj spacing-left"
+              tabindex="-1"
               title="Plus d’options"
             >
               <span
@@ -3019,7 +3075,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
         </div>
       </div>
       <div
-        class="sc-gEvEer hpVpdb sc-lbJcrp fqRoKz"
+        class="sc-gEvEer hpVpdb sc-eifrsQ fsFtkE"
       >
         <div
           class="sc-aXZVg gZgZQL"
@@ -3028,10 +3084,10 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-bfhvDw feUtCS"
+              class="sc-cMa-dbN dtzqqp"
             >
               <h2
-                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
+                class="sc-fUBkdm hmEJTx sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -3041,15 +3097,15 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-fUBkdm dNrvyY"
+                class="sc-hBtRBD eKbdLN"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Oui
                 </button>
@@ -3078,10 +3134,78 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
           class="sc-iGgWBj biWgIW"
         >
           <div
-            class="sc-dhFUGM fmtmkn"
+            class="sc-fbKhjd eBWNnW"
           >
             <div
-              class="sc-fbKhjd jgqxms"
+              class="sc-bkSUFG emqylj"
+            >
+              <div
+                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+              >
+                <p
+                  class="sc-jGKxIK eoUrZA"
+                >
+                  intro de l'article
+                </p>
+              </div>
+              <div
+                class="sc-fFlnrN"
+              >
+                <p
+                  class="test-content"
+                >
+                  annualisation du temps de travail. Annualisation de l'annualisation.
+                </p>
+              </div>
+              <div>
+                Contenu supplémentaire
+              </div>
+            </div>
+            <div
+              class="sc-dhFUGM fmtmkn"
+            >
+              <header
+                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
+              >
+                <h1
+                  class="sc-dPZUQH doubLW"
+                >
+                  <span
+                    class="sc-gsFSXq ljkohw"
+                  />
+                  Article du code
+                </h1>
+              </header>
+              <div
+                class="sc-fAGzit kEwpYt"
+              >
+                <p
+                  class="sc-jGKxIK ksIRLJ"
+                >
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Source: 
+                    social groove
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="sc-deXhhX isajtz"
+                  >
+                     - 
+                  </span>
+                  <span
+                    class="sc-dQEtJz bfhYDp"
+                  >
+                    Mis à jour le
+                     : 
+                    03/11/1979
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="sc-leSDtu dOeeyK"
             >
               <div
                 class="sc-dWZqqJ fRBaox"
@@ -3212,75 +3336,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 </div>
               </div>
             </div>
-            <header
-              class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
-            >
-              <h1
-                class="sc-dPZUQH doubLW"
-              >
-                <span
-                  class="sc-gsFSXq ljkohw"
-                />
-                Article du code
-              </h1>
-            </header>
-            <div
-              class="sc-dGCmGc eKMRHH"
-            >
-              <p
-                class="sc-jGKxIK ksIRLJ"
-              >
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Source: 
-                  social groove
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="sc-bkSUFG cWHjQY"
-                >
-                   - 
-                </span>
-                <span
-                  class="sc-deXhhX cpCGcE"
-                >
-                  Mis à jour le
-                   : 
-                  03/11/1979
-                </span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="sc-fAGzit jflOdq"
-          >
-            <div
-              class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
-            >
-              <p
-                class="sc-jGKxIK eoUrZA"
-              >
-                intro de l'article
-              </p>
-            </div>
-            <div
-              class="sc-bOhtcR"
-            >
-              <p
-                class="test-content"
-              >
-                annualisation du temps de travail. Annualisation de l'annualisation.
-              </p>
-            </div>
-            <div>
-              Contenu supplémentaire
-            </div>
           </div>
         </div>
       </div>
       <div
-        class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
+        class="sc-aXZVg sc-eIcdZJ gZgZQL jbQppV"
       >
         <p
           class="sc-jGKxIK eoUrZA"
@@ -3292,6 +3352,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         >
           <button
             class="sc-isRoRg bfiCtj no-after spacing-left"
+            tabindex="-1"
             title="Partager sur Facebook"
             type="button"
           >
@@ -3320,6 +3381,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
           <a
             class="sc-satoz eXuioF spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+            tabindex="-1"
             title="Envoyer par email"
           >
             <span
@@ -3350,6 +3412,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
           </a>
           <button
             class="sc-isRoRg bfiCtj spacing-left"
+            tabindex="-1"
             title="Partager sur LinkedIn"
           >
             <span
@@ -3379,6 +3442,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
           >
             <button
               class="sc-isRoRg bfiCtj spacing-left"
+              tabindex="-1"
               title="Plus d’options"
             >
               <span
@@ -3417,7 +3481,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         </div>
       </div>
       <div
-        class="sc-gEvEer hpVpdb sc-lbJcrp fqRoKz"
+        class="sc-gEvEer hpVpdb sc-eifrsQ fsFtkE"
       >
         <div
           class="sc-aXZVg gZgZQL"
@@ -3426,10 +3490,10 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             class="sc-iGgWBj cRLRjd"
           >
             <div
-              class="sc-bfhvDw feUtCS"
+              class="sc-cMa-dbN dtzqqp"
             >
               <h2
-                class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
+                class="sc-fUBkdm hmEJTx sc-kAyceB kDiAsV"
                 data-testid="heading"
               >
                 <span
@@ -3439,15 +3503,15 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-fUBkdm dNrvyY"
+                class="sc-hBtRBD eKbdLN"
               >
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                  class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                 >
                   Oui
                 </button>

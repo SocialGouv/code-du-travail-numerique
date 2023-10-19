@@ -1,5 +1,5 @@
 import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { Button, FlatList, Tile, Paragraph, theme } from "@socialgouv/cdtn-ui";
+import { Button, FlatList, Paragraph, theme, Tile } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";

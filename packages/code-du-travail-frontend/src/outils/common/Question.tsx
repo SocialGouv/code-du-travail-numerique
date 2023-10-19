@@ -10,7 +10,6 @@ export type Tooltip = {
   trackableFn?: (actualVisibility: boolean) => void;
 };
 type Props = {
-  as?: string;
   required?: boolean;
   tooltip?: Tooltip;
   children: React.ReactNode;
@@ -35,10 +34,7 @@ export const Question = ({
       {...otherProps}
       data-testid={"question-label"}
     >
-      <Text
-        fontWeight="600"
-        fontSize={otherProps.as === "p" ? "default" : "hsmall"}
-      >
+      <Text fontWeight="600" fontSize="hsmall">
         {children}
         {required && <Text as="span">&nbsp;(obligatoire)</Text>}
         {tooltip && (
@@ -69,18 +65,8 @@ export const Question = ({
   );
 };
 
-const { breakpoints, fonts, spacings } = theme;
+const { spacings } = theme;
 
 const StyledLegend = styled(Legend)`
-  font-weight: 600;
-  display: block;
   margin: ${spacings.small} 0;
-  cursor: ${(props) => (props.as ? "default" : "pointer")};
-  @media (max-width: ${breakpoints.mobile}) {
-    font-size: ${fonts.sizes.default};
-  }
-  p,
-  div {
-    font-weight: 100 !important;
-  }
 `;
