@@ -9,10 +9,58 @@ exports[`<Article /> should render 1`] = `
       class="sc-iGgWBj biWgIW"
     >
       <div
-        class="sc-kRRyDe cCTHol"
+        class="sc-knuQbY VlwRB"
       >
         <div
-          class="sc-knuQbY fwnjaX"
+          class="sc-bdOgaJ hSxqnk"
+        >
+          this is an Article
+        </div>
+        <div
+          class="sc-kRRyDe cCTHol"
+        >
+          <header
+            class="sc-ePDLzJ dXxftn sc-fulCBj kAfkKO"
+          >
+            <h1
+              class="sc-dPZUQH doubLW"
+            >
+              <span
+                class="sc-gsFSXq ljkohw"
+              />
+              Contrat de travail et formalités d'embauche de l'assistante maternelle
+            </h1>
+          </header>
+          <div
+            class="sc-kMribo dpZHIe"
+          >
+            <p
+              class="sc-jGKxIK ksIRLJ"
+            >
+              <span
+                class="sc-fThUAz hOrZPp"
+              >
+                Source: 
+                Fiche service public
+              </span>
+              <span
+                aria-hidden="true"
+                class="sc-empnci QtCOy"
+              >
+                 - 
+              </span>
+              <span
+                class="sc-fThUAz hOrZPp"
+              >
+                Mis à jour le
+                 : 
+                26/07/2018
+              </span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="sc-ERObt kbsBjX"
         >
           <div
             class="sc-iXzfSG brTvfb"
@@ -143,50 +191,6 @@ exports[`<Article /> should render 1`] = `
             </div>
           </div>
         </div>
-        <header
-          class="sc-ePDLzJ dXxftn sc-dNsVcS gjfhIB"
-        >
-          <h1
-            class="sc-dPZUQH doubLW"
-          >
-            <span
-              class="sc-gsFSXq ljkohw"
-            />
-            Contrat de travail et formalités d'embauche de l'assistante maternelle
-          </h1>
-        </header>
-        <div
-          class="sc-fulCBj bbTwFm"
-        >
-          <p
-            class="sc-jGKxIK ksIRLJ"
-          >
-            <span
-              class="sc-empnci fjeUKR"
-            >
-              Source: 
-              Fiche service public
-            </span>
-            <span
-              aria-hidden="true"
-              class="sc-bdOgaJ lkNCcz"
-            >
-               - 
-            </span>
-            <span
-              class="sc-empnci fjeUKR"
-            >
-              Mis à jour le
-               : 
-              26/07/2018
-            </span>
-          </p>
-        </div>
-      </div>
-      <div
-        class="sc-kMribo icbbyl"
-      >
-        this is an Article
       </div>
     </div>
   </div>

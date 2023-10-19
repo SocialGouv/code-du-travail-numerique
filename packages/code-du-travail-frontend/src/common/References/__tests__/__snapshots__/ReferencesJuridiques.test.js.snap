@@ -8,8 +8,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
     <div>
       <button
         aria-expanded="false"
-        class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
-        tabindex="1"
+        class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
         type="button"
       >
         <svg

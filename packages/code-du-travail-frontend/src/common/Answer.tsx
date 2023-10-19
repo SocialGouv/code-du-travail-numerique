@@ -102,7 +102,11 @@ function Answer({
           {additionalContent}
           <ShareContainer>
             <Paragraph noMargin>Partager ce contenu&nbsp;:&nbsp;</Paragraph>
-            <Share title={title} metaDescription={metaDescription} />
+            <Share
+              title={title}
+              metaDescription={metaDescription}
+              tabIndex={-1}
+            />
           </ShareContainer>
           <Feedback url={router.asPath} />
         </MainContent>
