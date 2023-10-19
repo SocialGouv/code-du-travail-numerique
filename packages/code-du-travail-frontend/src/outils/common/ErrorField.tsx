@@ -27,7 +27,9 @@ const ErrorField = ({ name, errorText }: Props): JSX.Element => (
   />
 );
 
-const Error = styled.p`
+const Error = styled.p.attrs(() => ({
+  role: "alert",
+}))`
   margin: ${theme.spacings.small} 0 ${theme.spacings.base};
   color: ${({ theme }) => theme.error};
   font-weight: 600;

@@ -37,7 +37,7 @@ function CurrencyField({
                   {...input}
                   type="number"
                   invalid={touched && invalid}
-                  icon={icons.Euro}
+                  text="€"
                 />
 
                 {error && touched && invalid ? (

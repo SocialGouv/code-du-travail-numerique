@@ -19,6 +19,7 @@ import {
 import { ToolName } from "../types";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Feedback } from "../common/Feedback";
+import styled from "styled-components";
 
 type Props = {
   icon: string;
@@ -120,7 +121,7 @@ const IndemniteLicenciementSimulator = ({
   };
 
   return (
-    <>
+    <Flex>
       <SimulatorLayout<IndemniteLicenciementStepName>
         simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
         title={title}
@@ -158,7 +159,7 @@ const IndemniteLicenciementSimulator = ({
         hiddenStep={getHiddenSteps()}
       />
       <Feedback />
-    </>
+    </Flex>
   );
 };
 
@@ -184,3 +185,7 @@ export const CalculateurIndemnite = ({
     </IndemniteLicenciementProvider>
   );
 };
+export const Flex = styled.div`
+  display: flex;
+  flex-direction: column;
+`;

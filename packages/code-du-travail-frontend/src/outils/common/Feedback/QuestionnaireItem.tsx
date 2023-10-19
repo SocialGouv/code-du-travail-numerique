@@ -39,7 +39,7 @@ export const QuestionnaireItem = ({
 }: QuestionnaireItemProps): JSX.Element => {
   const [status, setStatus] = useState<Status>();
   return (
-    <div className={className} data-testId={dataTestId}>
+    <Div className={className} data-testId={dataTestId}>
       {title && <strong>{title}</strong>}
       <ButtonContainer>
         <StyledButton
@@ -79,7 +79,7 @@ export const QuestionnaireItem = ({
       {displayError && (
         <StyledError>Vous devez choisir une des réponses</StyledError>
       )}
-    </div>
+    </Div>
   );
 };
 
@@ -107,4 +107,8 @@ const StyledButton = styled(Button)`
 
 const StyledError = styled.span`
   color: ${colors.error};
+`;
+
+const Div = styled.div`
+  padding: 0 ${theme.spacings.xmedium} ${theme.spacings.large};
 `;

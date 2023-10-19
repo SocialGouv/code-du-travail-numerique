@@ -1,4 +1,4 @@
-import { Button, Heading } from "@socialgouv/cdtn-ui";
+import { Button, Heading, theme } from "@socialgouv/cdtn-ui";
 import { QuestionnaireItem } from "./QuestionnaireItem";
 import { QuestionnaireText } from "./QuestionnaireText";
 import styled from "styled-components";
@@ -25,11 +25,11 @@ export const QuestionnaireAdvanced = ({
   const [feedbackText, setFeedbackText] = useState<string>();
   return (
     <>
-      <StyledHeading variant="primary" stripe="left">
+      <Heading variant="primary" stripe="left">
         Merci pour votre aide ! Pouvez-vous nous en dire plus ?
-      </StyledHeading>
-      <FormContainer>
-        <StyledQuestionnaireItem
+      </Heading>
+      <div>
+        <QuestionnaireItem
           badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
           averageEventValue={FEEDBACK_RESULT.AVERAGE}
           goodEventValue={FEEDBACK_RESULT.EASY}
@@ -41,7 +41,7 @@ export const QuestionnaireAdvanced = ({
           }}
           dataTestId="simulator"
         />
-        <StyledQuestionnaireItem
+        <QuestionnaireItem
           badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
           averageEventValue={FEEDBACK_RESULT.AVERAGE}
           goodEventValue={FEEDBACK_RESULT.YES}
@@ -53,7 +53,7 @@ export const QuestionnaireAdvanced = ({
           }}
           dataTestId="questionClarity"
         />
-        <StyledQuestionnaireItem
+        <QuestionnaireItem
           badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
           averageEventValue={FEEDBACK_RESULT.AVERAGE}
           goodEventValue={FEEDBACK_RESULT.YES}
@@ -71,7 +71,7 @@ export const QuestionnaireAdvanced = ({
           onChange={setFeedbackText}
           dataTestId="more-input"
         />
-      </FormContainer>
+      </div>
       <StyledButton
         variant="primary"
         onClick={() => {
@@ -96,20 +96,6 @@ export const QuestionnaireAdvanced = ({
   );
 };
 
-const StyledHeading = styled(Heading)`
-  margin-left: 0;
-  margin-bottom: 0;
-  padding-top: 6px;
-`;
-
 const StyledButton = styled(Button)`
-  margin: 12px auto 24px 24px;
-`;
-
-const FormContainer = styled.div`
-  padding: 0 24px;
-`;
-
-const StyledQuestionnaireItem = styled(QuestionnaireItem)`
-  margin: 24px 0;
+  margin: 0 ${theme.spacings.xmedium};
 `;

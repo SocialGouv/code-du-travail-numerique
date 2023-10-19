@@ -103,7 +103,7 @@ const PubliQuestion: React.FC<Props> = ({
           error={error}
           id={name}
           showRequired
-          icon={unité === "€" ? icons.Euro : undefined}
+          text={unité}
           subLabel={cdtn.precision}
           dataTestId={name}
           autoFocus={autoFocus}

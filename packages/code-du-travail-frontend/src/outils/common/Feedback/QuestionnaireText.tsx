@@ -1,4 +1,4 @@
-import { Textarea } from "@socialgouv/cdtn-ui";
+import { Textarea, theme } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 
 type QuestionnaireItemProps = {
@@ -34,6 +34,7 @@ export const QuestionnaireText = ({
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 0 ${theme.spacings.xmedium} ${theme.spacings.large};
 `;
 
 const StyledTextarea = styled(Textarea)`
@@ -41,7 +42,7 @@ const StyledTextarea = styled(Textarea)`
   max-width: 100%;
 `;
 
-const MaxCharacterText = styled.span`
+const MaxCharacterText = styled.p`
   margin: 12px 0;
   font-size: 14px;
 `;

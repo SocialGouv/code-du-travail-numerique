@@ -13,8 +13,7 @@ exports[`<StepResult /> should render no results 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
-      tabindex="1"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
       type="button"
     >
       <svg
@@ -153,7 +152,8 @@ exports[`<StepResult /> should render with duration 1`] = `
     D’après les éléments saisis, durant son préavis, le salarié peut s’absenter pour rechercher un emploi pendant
      : 
     <strong
-      class="sc-kqGoIF sc-dxcDKg gukfdy igjtKH"
+      class="sc-kqGoIF eBNOvs"
+      role="alert"
     >
       2 heures par jour
     </strong>
@@ -178,8 +178,7 @@ exports[`<StepResult /> should render with duration 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
-      tabindex="1"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
       type="button"
     >
       <svg

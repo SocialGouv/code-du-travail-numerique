@@ -63,9 +63,8 @@ Input.defaultProps = {
 
 export const INPUT_HEIGHT = "5.4rem";
 
-const StyledWrapper = styled.span`
+const StyledWrapper = styled.div`
   position: relative;
-  display: inline-block;
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
   }

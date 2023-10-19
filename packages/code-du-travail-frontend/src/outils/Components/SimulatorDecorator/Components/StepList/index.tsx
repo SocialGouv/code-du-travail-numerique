@@ -35,7 +35,6 @@ const StepList = ({
             index={index}
             isActive={activeIndex === index}
             ref={activeIndex === index ? listRef : undefined}
-            tabIndex={activeIndex === index ? "-1" : undefined}
             aria-live={activeIndex === index ? "polite" : undefined}
             title={activeIndex === index ? "onglet actif" : null}
           >

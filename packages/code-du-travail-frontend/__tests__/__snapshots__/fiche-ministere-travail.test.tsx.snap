@@ -3,38 +3,38 @@
 exports[`<FicheMT /> should render 1`] = `
 <div>
   <div
-    class="sc-eONNys eAGHQH"
+    class="sc-bStcSt epZoei"
   >
     <div
-      class="sc-bStcSt laxKxr"
+      class="sc-iaJaUu hZORTl"
     />
     <header
-      class="sc-cgjDci gTRCMB"
+      class="sc-djTQaJ gGSzHV"
     >
       <div
-        class="sc-djTQaJ ktUevE"
+        class="sc-pKqro iWIZqf"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-aXZVg sc-dBFDNq gZgZQL bxXhKr"
+        class="sc-aXZVg sc-ggqIjW gZgZQL jErsEx"
       >
         <a
-          class="sc-ggqIjW grjmnl"
+          class="sc-djVXDX jLVEVQ"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-djVXDX ijWLXX"
+            class="sc-epRvzc cMIeGH"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-epRvzc fDPiho"
+            class="sc-btwKTd lkBAne"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<FicheMT /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-dISpDn fNpgtR"
+          class="sc-eONNys jdaULF"
         >
           <form
             action="/recherche"
-            class="sc-iowXnY nIwvr"
+            class="sc-fscmHZ kHGePo"
             role="search"
           >
             <div
@@ -86,7 +86,7 @@ exports[`<FicheMT /> should render 1`] = `
                 aria-controls="react-autowhatever-1"
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
-                class="sc-kpKSZj dnWuUq"
+                class="sc-lfYzqA gtGQMQ"
                 id="floating-search"
                 name="q"
                 placeholder="Rechercher"
@@ -95,20 +95,20 @@ exports[`<FicheMT /> should render 1`] = `
                 value=""
               />
               <div
-                class="sc-lmUcrn diQquD"
+                class="sc-iowXnY gxwvOO"
                 id="react-autowhatever-1"
                 role="listbox"
               />
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz kyVwqT sc-ijDOKB cbDqql"
+              class="sc-kOPcWz kyVwqT sc-eBwKMn GXvok"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-fscmHZ OeuzG"
+                class="sc-bWJUgm hnzOMf"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,11 +122,11 @@ exports[`<FicheMT /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-pKqro iBPDjV"
+          class="sc-gvPdwL gTEglE"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-gFnajm guqPjy"
+            class="sc-dISpDn bUjvJf"
             href="/recherche"
             rel="nofollow"
           >
@@ -144,17 +144,17 @@ exports[`<FicheMT /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-btwKTd dCRdRR"
+          class="sc-gFnajm fKhFBy"
         >
           <button
-            class="sc-kOPcWz cOwJar sc-tagGq sc-gvPdwL bZXUzd izyjF"
+            class="sc-kOPcWz cOwJar sc-tagGq sc-dBFDNq bZXUzd lgnDyM"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-eBwKMn jfYcRq"
+          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-bHnlcS cNDlpq"
         >
           <svg
             aria-hidden="true"
@@ -174,13 +174,13 @@ exports[`<FicheMT /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-iaJaUu fFZLTW"
+      class="sc-feoqov cDtuzp"
       id="content"
       tabindex="-1"
     >
       <nav
         aria-label="Fil d'ariane"
-        class="sc-dQEtJz yKoSx"
+        class="sc-imwsjW bpxKEw"
       >
         <div
           class="sc-gFAWRd jDjoBq"
@@ -189,19 +189,19 @@ exports[`<FicheMT /> should render 1`] = `
             class="sc-gmPhUn kUNTdL"
           >
             <ol
-              class="sc-aXZVg sc-imwsjW gZgZQL gvVbLf"
+              class="sc-aXZVg sc-kCMKrZ gZgZQL dbBtZw"
             >
               <li
-                class="sc-kCMKrZ dWUqlw"
+                class="sc-dJiZtA gdwA-dG"
               >
                 <a
-                  class="sc-dJiZtA drksaw"
+                  class="sc-epALIP kkLIEh"
                   href="/"
                   title="Retour à l'accueil"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-epALIP hqUgCD"
+                    class="sc-iLsKjm eOHgHI"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -215,11 +215,11 @@ exports[`<FicheMT /> should render 1`] = `
                 </a>
               </li>
               <li
-                class="sc-kCMKrZ dWUqlw"
+                class="sc-dJiZtA gdwA-dG"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-iLsKjm hgkhFr"
+                  class="sc-lbJcrp bEhCdw"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +231,7 @@ exports[`<FicheMT /> should render 1`] = `
                 </svg>
                  
                 <a
-                  class="sc-dJiZtA drksaw"
+                  class="sc-epALIP kkLIEh"
                   href="/themes/6-sante-securite-et-conditions-de-travail"
                 >
                   Santé, sécurité et conditions de travail
@@ -245,7 +245,7 @@ exports[`<FicheMT /> should render 1`] = `
         class="sc-aXZVg sc-hTUWRQ gZgZQL fOEUQb"
       >
         <div
-          class="sc-lizKOf iTvhyR sc-gVJvzJ dSuhSh"
+          class="sc-lizKOf iTvhyR sc-dOoqMo hGxBMf"
         >
           <div
             class="sc-aXZVg gZgZQL"
@@ -254,10 +254,200 @@ exports[`<FicheMT /> should render 1`] = `
               class="sc-iGgWBj biWgIW"
             >
               <div
-                class="sc-dhFUGM fmtmkn"
+                class="sc-fbKhjd eBWNnW"
               >
                 <div
-                  class="sc-fbKhjd jgqxms"
+                  class="sc-bkSUFG emqylj"
+                >
+                  <div
+                    class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+                  >
+                    <p
+                      class="sc-jGKxIK eoUrZA"
+                    >
+                      lorem ipsum intro
+                    </p>
+                  </div>
+                  <div
+                    class="accordion"
+                    data-accordion-component="Accordion"
+                  >
+                    <div
+                      id="t1-Visite-d-information-et-de-prevention-pour-qui"
+                    >
+                      <div
+                        class="sc-jXbUNg heDTFL"
+                        data-accordion-component="AccordionItem"
+                      >
+                        <div
+                          class="accordion__heading"
+                          data-accordion-component="AccordionItemHeading"
+                        >
+                          <div
+                            aria-controls="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
+                            aria-disabled="false"
+                            aria-expanded="false"
+                            class="sc-kpDqfm heoudo"
+                            data-accordion-component="AccordionItemButton"
+                            id="accordion__heading-t1-Visite-d-information-et-de-prevention-pour-qui"
+                            role="button"
+                            tabindex="0"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="sc-imWYAI gTeNha"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <polyline
+                                points="9 18 15 12 9 6"
+                              />
+                            </svg>
+                            <div
+                              class="sc-dAlyuH cXMNBg"
+                            >
+                              <h2
+                                class="sc-kAyceB dvmaTz"
+                                data-testid="undefined-0"
+                                style="margin: 0px;"
+                              >
+                                1) Visite d’information et de prévention : pour qui ?
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          class="sc-dhKdcB fdfhnD"
+                          data-accordion-component="AccordionItemPanel"
+                          hidden=""
+                          id="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
+                        >
+                          <div
+                            class="sc-bXCLTC cqpPUq"
+                          >
+                            <div
+                              class="sc-fFlnrN sc-gVJvzJ ccLmnJ"
+                            >
+                              <p>
+                                Depuis le 1er janvier 2017, la 
+                                <strong>
+                                  visite d’information et de prévention
+                                </strong>
+                                 vient remplacer la traditionnelle visite médicale d’embauche qui devait être réalisée au plus tard avant la fin de la période d’essai.
+                              </p>
+                              <p>
+                                Désormais, la visite doit être organisée dans un délai maximum de trois mois à compter de l’occupation effective du poste de travail (sauf cas de dispense). Néanmoins, pour certains salariés, comme les jeunes de moins de 18 ans ou  les travailleurs de nuit, elle doit toujours avoir lieu avant la prise de fonction.
+                              </p>
+                              <p>
+                                <strong>
+                                  Bon à savoir !
+                                </strong>
+                                 Tout salarié affecté à un poste présentant des risques particuliers pour sa santé (exposition à l’amiante, au plomb, à des agents cancérogènes, etc.) doit passer, avant sa prise de fonction, 
+                                <strong>
+                                  un examen médical d’aptitude
+                                </strong>
+                                 et non une simple visite d’information et de prévention.
+                              </p>
+                              <p>
+                                <strong>
+                                  La visite d’information et de prévention
+                                </strong>
+                                 permet d’interroger le salarié sur son état de santé, et d’envisager, si besoin, son orientation spécifique vers le médecin du travail. Elle vise aussi à informer le salarié sur les risques éventuels auxquels l’expose son poste de travail, et à le sensibiliser sur les moyens de prévention.
+                              </p>
+                              <p>
+                                <strong>
+                                  Cette visite n’est pas toujours assurée par le médecin du travail lui-même
+                                </strong>
+                                . Le salarié peut être reçu par un professionnel de santé (par exemple, un infirmier) intervenant sous son autorité.. Toutefois, certains salariés comme par exemple les femmes enceintes, celles qui viennent d’accoucher ou allaitent leur enfant, ou encore les travailleurs handicapés, sont adressés au médecin du travail afin que leur soit proposé un suivi adapté à leur situation.
+                              </p>
+                              <p>
+                                <strong>
+                                  Pour davantage de détails
+                                </strong>
+                                 consultez 
+                                <a
+                                  class="spip_in"
+                                  href="https://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/article/le-suivi-de-l-etat-de-sante-des-salaries"
+                                  rel="nofollow, noopener"
+                                  target="_blank"
+                                >
+                                  notre fiche sur le suivi de l’état de santé des salariés
+                                </a>
+                                .
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-dhFUGM fmtmkn"
+                >
+                  <p
+                    class="sc-hZDyAQ sc-bJBgwP bUgSfx hFcltn"
+                  >
+                    Santé, sécurité et conditions de travail
+                  </p>
+                  <header
+                    class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
+                  >
+                    <h1
+                      class="sc-dPZUQH doubLW"
+                    >
+                      <span
+                        class="sc-gsFSXq ljkohw"
+                      />
+                      Fiche MT test
+                    </h1>
+                  </header>
+                  <div
+                    class="sc-fAGzit kEwpYt"
+                  >
+                    <p
+                      class="sc-jGKxIK ksIRLJ"
+                    >
+                      <span
+                        class="sc-dQEtJz bfhYDp"
+                      >
+                        Source:
+                         
+                        <a
+                          aria-label="Fiche Ministère du travail (nouvelle fenêtre)"
+                          href="fiche.travail.url"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          Fiche Ministère du travail
+                        </a>
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        class="sc-deXhhX isajtz"
+                      >
+                         - 
+                      </span>
+                      <span
+                        class="sc-dQEtJz bfhYDp"
+                      >
+                        Mis à jour le
+                         : 
+                        01/01/2020
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="sc-leSDtu dOeeyK"
                 >
                   <div
                     class="sc-dWZqqJ fRBaox"
@@ -388,197 +578,11 @@ exports[`<FicheMT /> should render 1`] = `
                     </div>
                   </div>
                 </div>
-                <p
-                  class="sc-hZDyAQ sc-leSDtu bUgSfx bwewGm"
-                >
-                  Santé, sécurité et conditions de travail
-                </p>
-                <header
-                  class="sc-ePDLzJ dXxftn sc-bJBgwP jgaPeM"
-                >
-                  <h1
-                    class="sc-dPZUQH doubLW"
-                  >
-                    <span
-                      class="sc-gsFSXq ljkohw"
-                    />
-                    Fiche MT test
-                  </h1>
-                </header>
-                <div
-                  class="sc-dGCmGc eKMRHH"
-                >
-                  <p
-                    class="sc-jGKxIK ksIRLJ"
-                  >
-                    <span
-                      class="sc-deXhhX cpCGcE"
-                    >
-                      Source:
-                       
-                      <a
-                        aria-label="Fiche Ministère du travail (nouvelle fenêtre)"
-                        href="fiche.travail.url"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        Fiche Ministère du travail
-                      </a>
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      class="sc-bkSUFG cWHjQY"
-                    >
-                       - 
-                    </span>
-                    <span
-                      class="sc-deXhhX cpCGcE"
-                    >
-                      Mis à jour le
-                       : 
-                      01/01/2020
-                    </span>
-                  </p>
-                </div>
-              </div>
-              <div
-                class="sc-fAGzit jflOdq"
-              >
-                <div
-                  class="sc-iGgWBj sc-camqpD cWzIZL jhaGPC"
-                >
-                  <p
-                    class="sc-jGKxIK eoUrZA"
-                  >
-                    lorem ipsum intro
-                  </p>
-                </div>
-                <div
-                  class="accordion"
-                  data-accordion-component="Accordion"
-                >
-                  <div
-                    id="t1-Visite-d-information-et-de-prevention-pour-qui"
-                  >
-                    <div
-                      class="sc-jXbUNg heDTFL"
-                      data-accordion-component="AccordionItem"
-                    >
-                      <div
-                        class="accordion__heading"
-                        data-accordion-component="AccordionItemHeading"
-                      >
-                        <div
-                          aria-controls="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
-                          aria-disabled="false"
-                          aria-expanded="false"
-                          class="sc-kpDqfm heoudo"
-                          data-accordion-component="AccordionItemButton"
-                          id="accordion__heading-t1-Visite-d-information-et-de-prevention-pour-qui"
-                          role="button"
-                          tabindex="0"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            class="sc-imWYAI gTeNha"
-                            fill="none"
-                            height="24"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <polyline
-                              points="9 18 15 12 9 6"
-                            />
-                          </svg>
-                          <div
-                            class="sc-dAlyuH cXMNBg"
-                          >
-                            <h2
-                              class="sc-kAyceB dvmaTz"
-                              data-testid="undefined-0"
-                              style="margin: 0px;"
-                            >
-                              1) Visite d’information et de prévention : pour qui ?
-                            </h2>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        aria-hidden="true"
-                        class="sc-dhKdcB fdfhnD"
-                        data-accordion-component="AccordionItemPanel"
-                        hidden=""
-                        id="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
-                      >
-                        <div
-                          class="sc-bXCLTC cqpPUq"
-                        >
-                          <div
-                            class="sc-bOhtcR sc-feoqov hriQMM"
-                          >
-                            <p>
-                              Depuis le 1er janvier 2017, la 
-                              <strong>
-                                visite d’information et de prévention
-                              </strong>
-                               vient remplacer la traditionnelle visite médicale d’embauche qui devait être réalisée au plus tard avant la fin de la période d’essai.
-                            </p>
-                            <p>
-                              Désormais, la visite doit être organisée dans un délai maximum de trois mois à compter de l’occupation effective du poste de travail (sauf cas de dispense). Néanmoins, pour certains salariés, comme les jeunes de moins de 18 ans ou  les travailleurs de nuit, elle doit toujours avoir lieu avant la prise de fonction.
-                            </p>
-                            <p>
-                              <strong>
-                                Bon à savoir !
-                              </strong>
-                               Tout salarié affecté à un poste présentant des risques particuliers pour sa santé (exposition à l’amiante, au plomb, à des agents cancérogènes, etc.) doit passer, avant sa prise de fonction, 
-                              <strong>
-                                un examen médical d’aptitude
-                              </strong>
-                               et non une simple visite d’information et de prévention.
-                            </p>
-                            <p>
-                              <strong>
-                                La visite d’information et de prévention
-                              </strong>
-                               permet d’interroger le salarié sur son état de santé, et d’envisager, si besoin, son orientation spécifique vers le médecin du travail. Elle vise aussi à informer le salarié sur les risques éventuels auxquels l’expose son poste de travail, et à le sensibiliser sur les moyens de prévention.
-                            </p>
-                            <p>
-                              <strong>
-                                Cette visite n’est pas toujours assurée par le médecin du travail lui-même
-                              </strong>
-                              . Le salarié peut être reçu par un professionnel de santé (par exemple, un infirmier) intervenant sous son autorité.. Toutefois, certains salariés comme par exemple les femmes enceintes, celles qui viennent d’accoucher ou allaitent leur enfant, ou encore les travailleurs handicapés, sont adressés au médecin du travail afin que leur soit proposé un suivi adapté à leur situation.
-                            </p>
-                            <p>
-                              <strong>
-                                Pour davantage de détails
-                              </strong>
-                               consultez 
-                              <a
-                                class="spip_in"
-                                href="https://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/article/le-suivi-de-l-etat-de-sante-des-salaries"
-                                rel="nofollow, noopener"
-                                target="_blank"
-                              >
-                                notre fiche sur le suivi de l’état de santé des salariés
-                              </a>
-                              .
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
           <div
-            class="sc-aXZVg sc-gweoQa gZgZQL dBuquk"
+            class="sc-aXZVg sc-eIcdZJ gZgZQL jbQppV"
           >
             <p
               class="sc-jGKxIK eoUrZA"
@@ -590,6 +594,7 @@ exports[`<FicheMT /> should render 1`] = `
             >
               <button
                 class="sc-isRoRg bfiCtj no-after spacing-left"
+                tabindex="-1"
                 title="Partager sur Facebook"
                 type="button"
               >
@@ -618,6 +623,7 @@ exports[`<FicheMT /> should render 1`] = `
               <a
                 class="sc-satoz eXuioF spacing-left"
                 href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Fiche%20MT%20test&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+                tabindex="-1"
                 title="Envoyer par email"
               >
                 <span
@@ -648,6 +654,7 @@ exports[`<FicheMT /> should render 1`] = `
               </a>
               <button
                 class="sc-isRoRg bfiCtj spacing-left"
+                tabindex="-1"
                 title="Partager sur LinkedIn"
               >
                 <span
@@ -677,6 +684,7 @@ exports[`<FicheMT /> should render 1`] = `
               >
                 <button
                   class="sc-isRoRg bfiCtj spacing-left"
+                  tabindex="-1"
                   title="Plus d’options"
                 >
                   <span
@@ -715,7 +723,7 @@ exports[`<FicheMT /> should render 1`] = `
             </div>
           </div>
           <div
-            class="sc-gEvEer hpVpdb sc-lbJcrp fqRoKz"
+            class="sc-gEvEer hpVpdb sc-eifrsQ fsFtkE"
           >
             <div
               class="sc-aXZVg gZgZQL"
@@ -724,10 +732,10 @@ exports[`<FicheMT /> should render 1`] = `
                 class="sc-iGgWBj cRLRjd"
               >
                 <div
-                  class="sc-bfhvDw feUtCS"
+                  class="sc-cMa-dbN dtzqqp"
                 >
                   <h2
-                    class="sc-cMa-dbN bDMaLU sc-kAyceB kDiAsV"
+                    class="sc-fUBkdm hmEJTx sc-kAyceB kDiAsV"
                     data-testid="heading"
                   >
                     <span
@@ -737,15 +745,15 @@ exports[`<FicheMT /> should render 1`] = `
                     Avez-vous trouvé la réponse à votre question ?
                   </h2>
                   <p
-                    class="sc-fUBkdm dNrvyY"
+                    class="sc-hBtRBD eKbdLN"
                   >
                     <button
-                      class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                      class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                     >
                       Non
                     </button>
                     <button
-                      class="sc-kOPcWz cpQXMn sc-hBtRBD lgIwwh"
+                      class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
                     >
                       Oui
                     </button>
@@ -758,13 +766,13 @@ exports[`<FicheMT /> should render 1`] = `
       </div>
     </main>
     <div
-      class="sc-boZgaH iIPCen"
+      class="sc-jwZKMi cptqUu"
     >
       <footer
-        class="sc-jwZKMi eeCfTT"
+        class="sc-gJCZQp iVIrmC"
       >
         <div
-          class="sc-gEvEer hpVpdb sc-gJCZQp iCXicX"
+          class="sc-gEvEer hpVpdb sc-dChVcU idFzFh"
         >
           <div
             class="sc-aXZVg gZgZQL"
@@ -784,7 +792,7 @@ exports[`<FicheMT /> should render 1`] = `
               </p>
             </div>
             <div
-              class="sc-aXZVg sc-dChVcU dPpwpV caTHtl"
+              class="sc-aXZVg sc-rPWID dPpwpV cSUueq"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
@@ -796,7 +804,7 @@ exports[`<FicheMT /> should render 1`] = `
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="sc-rPWID gwvrSG"
+                class="sc-izQBue ihxNdC"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -810,29 +818,29 @@ exports[`<FicheMT /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-gEvEer hpVpdb sc-izQBue kdxQFv"
+          class="sc-gEvEer hpVpdb sc-jBeBSR izOlxJ"
         >
           <div
-            class="sc-aXZVg sc-jBeBSR gZgZQL bIFVBl"
+            class="sc-aXZVg sc-gtJxfw gZgZQL cNVnMH"
           >
             <div
-              class="sc-ezreuY bwcPPt"
+              class="sc-boZgaH bXcgpE"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-jlGgGc gvKHtx sc-kAyceB jIzQpS"
+                  class="sc-gplwa-d eDkOmv sc-kAyceB jIzQpS"
                   data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-gtJxfw kMmTaI frGdUk"
+                  class="sc-cfxfcM sc-jlGgGc kMmTaI EqYpu"
                 >
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
@@ -840,7 +848,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/glossaire"
                     >
                       Glossaire
@@ -848,7 +856,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/a-propos"
                     >
                       À propos
@@ -856,7 +864,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/stats"
                     >
                       Statistiques d’utilisation
@@ -864,7 +872,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/integration"
                     >
                       Intégrer les outils du Code du travail numérique
@@ -874,23 +882,23 @@ exports[`<FicheMT /> should render 1`] = `
               </div>
             </div>
             <div
-              class="sc-ezreuY bwcPPt"
+              class="sc-boZgaH bXcgpE"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-jlGgGc gvKHtx sc-kAyceB jIzQpS"
+                  class="sc-gplwa-d eDkOmv sc-kAyceB jIzQpS"
                   data-testid="heading"
                   role="heading"
                 >
                   Outils populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-gtJxfw kMmTaI frGdUk"
+                  class="sc-cfxfcM sc-jlGgGc kMmTaI EqYpu"
                 >
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/outils/simulateur-embauche"
                     >
                       Calcul du salaire brut/net
@@ -898,7 +906,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/outils/indemnite-licenciement"
                     >
                       Calcul de l'indemnité de licenciement
@@ -906,7 +914,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/outils/convention-collective"
                     >
                       Trouver sa convention collective
@@ -917,18 +925,18 @@ exports[`<FicheMT /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-jlGgGc gvKHtx sc-kAyceB jIzQpS"
+                  class="sc-gplwa-d eDkOmv sc-kAyceB jIzQpS"
                   data-testid="heading"
                   role="heading"
                 >
                   Modèles populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-gtJxfw kMmTaI frGdUk"
+                  class="sc-cfxfcM sc-jlGgGc kMmTaI EqYpu"
                 >
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/modeles-de-courriers/lettre-de-demission"
                     >
                       Lettre de démission
@@ -936,7 +944,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
                     >
                       Rupture du contrat en période d'essai par le salarié
@@ -944,7 +952,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel"
                     >
                       Convocation à un entretien préalable au licenciement pour motif personnel
@@ -954,23 +962,23 @@ exports[`<FicheMT /> should render 1`] = `
               </div>
             </div>
             <div
-              class="sc-ezreuY bwcPPt"
+              class="sc-boZgaH bXcgpE"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-jlGgGc gvKHtx sc-kAyceB jIzQpS"
+                  class="sc-gplwa-d eDkOmv sc-kAyceB jIzQpS"
                   data-testid="heading"
                   role="heading"
                 >
                   Fiches pratiques populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-gtJxfw kMmTaI frGdUk"
+                  class="sc-cfxfcM sc-jlGgGc kMmTaI EqYpu"
                 >
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
                     >
                       Durée du préavis de démission
@@ -978,7 +986,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/contribution/les-conges-pour-evenements-familiaux"
                     >
                       Congés pour événements familiaux
@@ -986,7 +994,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                     >
                       Maintien du salaire en cas d'arrêt maladie
@@ -997,18 +1005,18 @@ exports[`<FicheMT /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-jlGgGc gvKHtx sc-kAyceB jIzQpS"
+                  class="sc-gplwa-d eDkOmv sc-kAyceB jIzQpS"
                   data-testid="heading"
                   role="heading"
                 >
                   Conventions collectives populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-gtJxfw kMmTaI frGdUk"
+                  class="sc-cfxfcM sc-jlGgGc kMmTaI EqYpu"
                 >
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/convention-collective/1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
                     >
                       Services de l'automobile
@@ -1016,7 +1024,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/convention-collective/650-metallurgie-ingenieurs-et-cadres"
                     >
                       Métallurgie ingénieurs et cadres
@@ -1024,7 +1032,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-gplwa-d bxjNoE"
+                      class="sc-cTTdyq ePcKD"
                       href="/convention-collective/573-commerces-de-gros"
                     >
                       Commerce de gros
@@ -1036,10 +1044,10 @@ exports[`<FicheMT /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-aXZVg sc-fUkmAC gZgZQL dSJfUV"
+          class="sc-aXZVg sc-cXPBUD gZgZQL jvHnUq"
         >
           <div
-            class="sc-cXPBUD juYQqV"
+            class="sc-edKZPI cAAiJI"
           >
             <img
               alt="le site du ministere du travail, de l'emploi et de l'insertion"
@@ -1052,7 +1060,7 @@ exports[`<FicheMT /> should render 1`] = `
               width="170"
             />
             <ul
-              class="sc-edKZPI bObTWJ"
+              class="sc-bhqpjJ knDSOr"
             >
               <li>
                 <a
@@ -1092,13 +1100,13 @@ exports[`<FicheMT /> should render 1`] = `
             </ul>
           </div>
           <div
-            class="sc-fPrdXf ejrPYn"
+            class="sc-hGMjit eMjDUg"
           />
           <div
-            class="sc-bhqpjJ dtBxdS"
+            class="sc-iLLODe hnUmAm"
           >
             <ul
-              class="sc-edKZPI sc-iLLODe bObTWJ iSCGLY"
+              class="sc-bhqpjJ sc-fPrdXf knDSOr jjgnoh"
             >
               <li>
                 <a
@@ -1140,7 +1148,7 @@ exports[`<FicheMT /> should render 1`] = `
               <li>
                 <a
                   aria-label="Nous contacter"
-                  class="sc-hGMjit hoCKkJ"
+                  class="sc-ezreuY hBGaHg"
                   role="link"
                 >
                   Nous contacter

@@ -6,7 +6,6 @@ import { Fieldset, Legend, Text } from "@socialgouv/cdtn-ui";
 import { InfoBulle } from "../../../outils/common/InfoBulle";
 import { trackClickHelp } from "../../tracking";
 import React, { useContext } from "react";
-import { Paragraph } from "@socialgouv/cdtn-ui/lib";
 
 type QuestionProps = {
   widgetMode: boolean;

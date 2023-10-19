@@ -1,4 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-utils";
+import { Agreement, SOURCES } from "@socialgouv/cdtn-utils";
 import {
   AlertWithIcon,
   Button,
@@ -12,11 +12,9 @@ import Link from "next/link";
 import React from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
-
-import { Agreement } from "@socialgouv/cdtn-utils";
 import { FetchReducerState } from "../components/Suggester";
 import { TrackingProps, UserAction } from "../../../ConventionCollective/types";
-import { InlineError } from "../../ErrorField";
+import { Error } from "../../ErrorField";
 import { HelpModal } from "../components/Modal";
 
 type Props = {
@@ -37,15 +35,11 @@ const AgreementNoResult = ({ onUserAction, state }: Props): JSX.Element => {
       </Section>
     );
   }
-  if (state.isError) {
+  if (state.error && state.isError) {
     if (typeof state.error === "string") {
-      return (
-        <Section role="status">
-          <InlineError>{state.error}</InlineError>
-        </Section>
-      );
+      return <Error>{state.error}</Error>;
     }
-    return <Section role="status"> {state.error}</Section>;
+    return <Section> {state.error}</Section>;
   }
 
   if (state.data && !state.data.length) {

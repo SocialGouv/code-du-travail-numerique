@@ -9,7 +9,7 @@ type Props = {
 
 export function ResultList({ query, children }: Props): JSX.Element {
   const viewMoreButton = (onClick) => (
-    <ViewMoreButton small onClick={onClick} tabIndex={1}>
+    <ViewMoreButton small onClick={onClick}>
       Voir plus
     </ViewMoreButton>
   );

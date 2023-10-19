@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Paragraph } from "@socialgouv/cdtn-ui/lib";
+import { Paragraph } from "@socialgouv/cdtn-ui";
 
 type Props = {
   message?: string;

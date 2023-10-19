@@ -6,7 +6,7 @@ import {
   OnSelectAgreementFn,
 } from "../../common/Agreement/types";
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
-import { InlineError } from "../../common/ErrorField";
+import { Error } from "../../common/ErrorField";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
 import { AgreementSearchValue, CommonAgreementStoreError } from "./store";
@@ -101,7 +101,7 @@ function AgreementStep({
             alertAgreementNotSupported={undefined}
             simulator={simulator}
           />
-          {error?.agreement && <InlineError>{error.agreement}</InlineError>}
+          {error?.agreement && <Error>{error.agreement}</Error>}
         </>
       )}
       {selectedRoute === "enterprise" && (
@@ -127,12 +127,10 @@ function AgreementStep({
               }}
             />
           )}
-          {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
+          {error?.enterprise && <Error>{error.enterprise}</Error>}
         </>
       )}
-      {error?.errorPublicodes && (
-        <InlineError>{error.errorPublicodes}</InlineError>
-      )}
+      {error?.errorPublicodes && <Error>{error.errorPublicodes}</Error>}
     </>
   );
 }
