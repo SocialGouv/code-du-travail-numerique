@@ -1,6 +1,6 @@
 import { extractMdxContentUrl } from "@socialgouv/modeles-social";
 import React from "react";
-
+import { Text, theme } from "@socialgouv/cdtn-ui";
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Contribution from "../../src/contributions/Contribution";
@@ -11,6 +11,7 @@ import { SITE_URL } from "../../src/config";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
 import showNewContribPage from "../../src/contributions/slugFilter";
+import styled from "styled-components";
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);
@@ -36,14 +37,24 @@ const buildTitleAndDescription = (
       breadcrumbs[breadcrumbs.length - 1].label +
       " - " +
       conventionAnswer.shortName;
+
+    const titleWithThemeAndCCHtml = (
+      <>
+        {breadcrumbs[breadcrumbs.length - 1].label}
+        <Hidden> - </Hidden>
+        <SubTitle fontSize="hxmedium">{conventionAnswer.shortName}</SubTitle>
+      </>
+    );
     return {
       description: title + " " + description,
       title: titleWithThemeAndCC,
+      titleHtml: titleWithThemeAndCCHtml,
     };
   }
   return {
     description,
     title,
+    titleHtml: title,
   };
 };
 const SLUG_FOR_POC_GENERIC = ["les-conges-pour-evenements-familiaux"];
@@ -69,7 +80,7 @@ function PageContribution(props: Props): React.ReactElement {
     <Layout>
       <Metas title={metas.title} description={metas.description} />
       <Answer
-        title={title}
+        title={metas.titleHtml}
         relatedItems={relatedItems}
         breadcrumbs={breadcrumbs}
       >
@@ -99,6 +110,16 @@ function PageContribution(props: Props): React.ReactElement {
     </Layout>
   );
 }
+
+const { spacings } = theme;
+
+const Hidden = styled.span`
+  display: none;
+`;
+const SubTitle = styled(Text)`
+  display: block;
+  margin-top: ${spacings.small};
+`;
 
 export const getServerSideProps = async ({ query }) => {
   const response = await fetchQuestion(query);
