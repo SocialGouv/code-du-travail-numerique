@@ -102,7 +102,7 @@ exports[`<Recherche /> should render 1`] = `
             class="sc-dPZUQH jWPXkw"
           >
             <span
-              class="sc-gsFSXq lvWjJ"
+              class="sc-gsFSXq djREvw"
             />
             Recherche
           </h1>
@@ -235,7 +235,7 @@ exports[`<Recherche /> should render 1`] = `
                 class="sc-eBHhsj bPBugd"
               >
                 <span
-                  class="sc-gsFSXq lvWjJ"
+                  class="sc-gsFSXq djREvw"
                 />
                 Besoin de plus d’informations ?
               </p>

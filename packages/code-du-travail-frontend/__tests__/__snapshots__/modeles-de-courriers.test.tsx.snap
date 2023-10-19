@@ -191,7 +191,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               class="sc-dPZUQH jWPXkw"
             >
               <span
-                class="sc-gsFSXq lvWjJ"
+                class="sc-gsFSXq djREvw"
               />
               Modèles de documents
             </h1>
@@ -300,7 +300,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   class="sc-gmgFlS dlfKdE"
                 >
                   <div
-                    class="sc-kMkxaj ietOip"
+                    class="sc-kMkxaj dwuMYa"
                   >
                     <h3
                       class="sc-jIGnZt issdxz"
@@ -363,7 +363,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   class="sc-gmgFlS dlfKdE"
                 >
                   <div
-                    class="sc-kMkxaj ietOip"
+                    class="sc-kMkxaj dwuMYa"
                   >
                     <h3
                       class="sc-jIGnZt issdxz"
@@ -408,7 +408,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 class="sc-eBHhsj bPBugd"
               >
                 <span
-                  class="sc-gsFSXq lvWjJ"
+                  class="sc-gsFSXq djREvw"
                 />
                 Besoin de plus d’informations ?
               </p>

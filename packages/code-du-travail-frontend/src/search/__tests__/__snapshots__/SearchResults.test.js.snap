@@ -29,7 +29,7 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-kMkxaj ietOip"
+              class="sc-kMkxaj dwuMYa"
             >
               <p
                 class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
@@ -99,7 +99,7 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-kMkxaj ietOip"
+              class="sc-kMkxaj dwuMYa"
             >
               <p
                 class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
@@ -133,12 +133,13 @@ exports[`<SearchResults/> should render results 1`] = `
                 </p>
               </div>
               <div
-                class="sc-eulNck jyYvJd"
+                class="sc-eulNck bCoRam"
               >
-                <button
-                  class="sc-kOPcWz hwrncL"
+                <p
+                  class="sc-jGKxIK jvUYCL"
                 >
                   Consulter
+                   
                   <svg
                     aria-hidden="true"
                     fill="none"
@@ -150,7 +151,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </button>
+                </p>
               </div>
             </div>
           </div>
@@ -167,7 +168,7 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-kMkxaj ietOip"
+              class="sc-kMkxaj dwuMYa"
             >
               <p
                 class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
@@ -203,12 +204,13 @@ exports[`<SearchResults/> should render results 1`] = `
                 </p>
               </div>
               <div
-                class="sc-eulNck jyYvJd"
+                class="sc-eulNck bCoRam"
               >
-                <button
-                  class="sc-kOPcWz hwrncL"
+                <p
+                  class="sc-jGKxIK jvUYCL"
                 >
                   Consulter
+                   
                   <svg
                     aria-hidden="true"
                     fill="none"
@@ -220,7 +222,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </button>
+                </p>
               </div>
             </div>
           </div>
@@ -263,7 +265,7 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-kMkxaj ietOip"
+              class="sc-kMkxaj dwuMYa"
             >
               <p
                 class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
@@ -297,12 +299,13 @@ exports[`<SearchResults/> should render results 1`] = `
                 </p>
               </div>
               <div
-                class="sc-eulNck jyYvJd"
+                class="sc-eulNck bCoRam"
               >
-                <button
-                  class="sc-kOPcWz hwrncL"
+                <p
+                  class="sc-jGKxIK jvUYCL"
                 >
                   Consulter
+                   
                   <svg
                     aria-hidden="true"
                     fill="none"
@@ -314,7 +317,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </button>
+                </p>
               </div>
             </div>
           </div>
@@ -357,7 +360,7 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-kMkxaj ietOip"
+              class="sc-kMkxaj dwuMYa"
             >
               <p
                 class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
@@ -423,10 +426,10 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-gmPhUn fMbHzm"
           >
             <div
-              class="sc-iHbSHJ jtNhJK"
+              class="sc-iHbSHJ bydwxp"
             >
               <div
-                class="sc-klVQfs bzxnQN"
+                class="sc-klVQfs hQsiuM"
               >
                 <div
                   class="sc-fTFjTM hkOnFS"
@@ -435,7 +438,7 @@ exports[`<SearchResults/> should render results 1`] = `
                     class="sc-gmgFlS dlfKdE"
                   >
                     <div
-                      class="sc-kMkxaj ietOip"
+                      class="sc-kMkxaj dwuMYa"
                     >
                       <p
                         class="sc-jIGnZt issdxz"
@@ -477,10 +480,10 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-gmPhUn fMbHzm"
           >
             <div
-              class="sc-iHbSHJ jtNhJK"
+              class="sc-iHbSHJ bydwxp"
             >
               <div
-                class="sc-klVQfs kmTVHW"
+                class="sc-klVQfs hPKRhx"
               >
                 <div
                   class="sc-fTFjTM gXLDjJ"
@@ -492,7 +495,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       class="sc-gsFSXq efpSUc"
                     />
                     <div
-                      class="sc-kMkxaj ietOip"
+                      class="sc-kMkxaj dwuMYa"
                     >
                       <p
                         class="sc-jIGnZt issdxz"

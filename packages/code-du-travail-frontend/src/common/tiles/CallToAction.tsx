@@ -1,7 +1,8 @@
-import { Button, theme } from "@socialgouv/cdtn-ui";
+import { Paragraph, theme } from "@socialgouv/cdtn-ui";
 import React, { ForwardedRef } from "react";
 import styled from "styled-components";
 import { LinkedTile, Props } from "./LinkedTile";
+import { DirectionRight } from "@socialgouv/cdtn-ui/lib/icons";
 
 type CallToActionTileProps = Props & { action?: string };
 
@@ -18,9 +19,9 @@ export const CallToActionTile = React.forwardRef<
         {children}
         {action && (
           <StyledDiv>
-            <Button variant="link" hasText>
-              {action}
-            </Button>
+            <Paragraph variant="primary" fontWeight="600">
+              {action} <DirectionRight></DirectionRight>
+            </Paragraph>
           </StyledDiv>
         )}
       </TileChildren>
@@ -61,5 +62,25 @@ const StyledDiv = styled.div`
 
   &:first-child {
     padding-top: ${spacings.small};
+  }
+  p {
+    display: inline-flex;
+    align-items: center;
+    &:hover {
+      text-decoration: underline;
+
+      svg {
+        align-self: center;
+        transform: translateX(4px);
+      }
+    }
+
+    svg {
+      width: 2.6rem;
+      height: 1.4rem;
+      margin: 0 ${spacings.tiny} 0 ${spacings.small};
+      transition: transform ${theme.animations.transitionTiming} linear;
+      fill: ${theme.primary};
+    }
   }
 `;

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.110.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.109.0...v4.110.0) (2023-10-16)
+
+### Bug Fixes
+
+- **accessibility:** remove b and i tags ([#5380](https://github.com/SocialGouv/code-du-travail-numerique/issues/5380)) ([f1d6204](https://github.com/SocialGouv/code-du-travail-numerique/commit/f1d620431bde3d9bf91d4a78abdc68414fee0a65))
+- **stripe:** valeur par défaut sur la longueur des Stripe ([#5391](https://github.com/SocialGouv/code-du-travail-numerique/issues/5391)) ([02fccd7](https://github.com/SocialGouv/code-du-travail-numerique/commit/02fccd7544eae2adb94e9538d5487c08e59e6104))
+
+### Features
+
+- ajout des conventions collectives sans page legifrance ([#5373](https://github.com/SocialGouv/code-du-travail-numerique/issues/5373)) ([605a0f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/605a0f9fc8ebb12a5c621675e563779d1ab58da5))
+
 # [4.109.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.108.1...v4.109.0) (2023-10-05)
 
 **Note:** Version bump only for package @cdt/frontend
