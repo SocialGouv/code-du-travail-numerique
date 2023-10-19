@@ -113,6 +113,7 @@ export const InputDate = ({ value, onChange, invalid, ref, ...props }) => {
         <StyledDatePicker
           type="date"
           aria-disabled={!isValid}
+          tabIndex={-1}
           min="1900-01-01"
           max="2100-01-01"
           maxlength="11"
