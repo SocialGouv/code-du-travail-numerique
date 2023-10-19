@@ -71,6 +71,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
     }
   );
   const isSupported = (agreement) =>
+    agreement &&
     !!supportedAgreements.find((item) => item.idcc == agreement.num);
 
   const onSelectAgreement = (
@@ -213,47 +214,47 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                 </>
               )}
 
-              {convention && (
-                <Div>
-                  {isSupported(convention) ? (
-                    <Button
-                      variant="primary"
-                      onClick={() => {
-                        matopush([
-                          MatomoBaseEvent.TRACK_EVENT,
-                          "contribution",
-                          "click_afficher_les_informations_CC",
-                          getTitle(),
-                        ]);
-                        router.push(`/contribution/${convention.num}-${slug}`);
-                      }}
-                    >
-                      Afficher les informations
-                      <StyledDirectionRightIcon />
-                    </Button>
-                  ) : (
-                    <>
-                      {!showAnswer && (
-                        <Button
-                          variant="primary"
-                          onClick={() => {
-                            matopush([
-                              MatomoBaseEvent.TRACK_EVENT,
-                              "contribution",
-                              "click_afficher_les_informations_générales",
-                              getTitle(),
-                            ]);
-                            setShowAnswer(true);
-                            scrollToTitle();
-                          }}
-                        >
-                          Afficher les informations générales
-                        </Button>
-                      )}
-                    </>
-                  )}
-                </Div>
-              )}
+              <Div>
+                {isSupported(convention) ? (
+                  <Button
+                    variant="primary"
+                    onClick={() => {
+                      matopush([
+                        MatomoBaseEvent.TRACK_EVENT,
+                        "contribution",
+                        "click_afficher_les_informations_CC",
+                        getTitle(),
+                      ]);
+                      router.push(`/contribution/${convention.num}-${slug}`);
+                    }}
+                  >
+                    Afficher les informations
+                    <StyledDirectionRightIcon />
+                  </Button>
+                ) : (
+                  <>
+                    {(!showAnswer || convention) && (
+                      <Button
+                        variant="primary"
+                        onClick={() => {
+                          matopush([
+                            MatomoBaseEvent.TRACK_EVENT,
+                            "contribution",
+                            convention
+                              ? "click_afficher_les_informations_générales"
+                              : "click_afficher_les_informations_sans_CC",
+                            getTitle(),
+                          ]);
+                          setShowAnswer(true);
+                          scrollToTitle();
+                        }}
+                      >
+                        Afficher les informations {convention && " générales"}
+                      </Button>
+                    )}
+                  </>
+                )}
+              </Div>
             </Wrapper>
 
             {!showAnswer && !convention && (
