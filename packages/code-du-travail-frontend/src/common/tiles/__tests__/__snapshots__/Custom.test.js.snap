@@ -36,7 +36,7 @@ exports[`<CallToActionTile /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="sc-kMkxaj dwuMYa"
+        class="sc-kMkxaj ietOip"
       >
         <p
           class="sc-jIGnZt issdxz"
@@ -62,7 +62,7 @@ exports[`<CallToActionTile /> should render 1`] = `
           class="sc-eulNck bCoRam"
         >
           <p
-            class="sc-jGKxIK jvUYCL"
+            class="sc-jGKxIK QfhnJ"
           >
             Bonjour
              

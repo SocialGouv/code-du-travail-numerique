@@ -29,8 +29,8 @@ exports[`<Salaires /> should add a salaire 1`] = `
     <div
       class="sc-kqGoIF hMUbvs"
     >
-      <div
-        class="sc-dkmUuB bSfMaa"
+      <span
+        class="sc-dkmUuB ayeCS"
       >
         <input
           class="sc-ejfMa-d kArqSZ"
@@ -46,7 +46,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
             €
           </span>
         </div>
-      </div>
+      </span>
     </div>
     <button
       class="sc-kOPcWz kyVwqT sc-gvZAcH csharU"
@@ -161,8 +161,8 @@ exports[`<Salaires /> should render 1`] = `
     <div
       class="sc-kqGoIF hMUbvs"
     >
-      <div
-        class="sc-dkmUuB bSfMaa"
+      <span
+        class="sc-dkmUuB ayeCS"
       >
         <input
           class="sc-ejfMa-d kArqSZ"
@@ -178,7 +178,7 @@ exports[`<Salaires /> should render 1`] = `
             €
           </span>
         </div>
-      </div>
+      </span>
     </div>
     <button
       class="sc-kOPcWz kyVwqT sc-gvZAcH csharU"

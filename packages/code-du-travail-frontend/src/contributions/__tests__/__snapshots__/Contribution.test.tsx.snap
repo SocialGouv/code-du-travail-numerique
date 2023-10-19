@@ -147,8 +147,8 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
-      <div
-        class="sc-dkmUuB bSfMaa sc-empnci dzkWPn"
+      <span
+        class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
       >
         <input
           class="sc-ejfMa-d dijxYa"
@@ -158,7 +158,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           type="search"
           value=""
         />
-      </div>
+      </span>
       <p
         class="sc-fThUAz bqJWec"
       >
@@ -329,8 +329,8 @@ exports[`<Contribution /> should render answer references 1`] = `
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
-      <div
-        class="sc-dkmUuB bSfMaa sc-empnci dzkWPn"
+      <span
+        class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
       >
         <input
           class="sc-ejfMa-d dijxYa"
@@ -340,7 +340,7 @@ exports[`<Contribution /> should render answer references 1`] = `
           type="search"
           value=""
         />
-      </div>
+      </span>
       <p
         class="sc-fThUAz bqJWec"
       >
@@ -511,8 +511,8 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
-      <div
-        class="sc-dkmUuB bSfMaa sc-empnci dzkWPn"
+      <span
+        class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
       >
         <input
           class="sc-ejfMa-d dijxYa"
@@ -522,7 +522,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           type="search"
           value=""
         />
-      </div>
+      </span>
       <p
         class="sc-fThUAz bqJWec"
       >
@@ -693,8 +693,8 @@ exports[`<Contribution /> should render with both answers 1`] = `
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
-      <div
-        class="sc-dkmUuB bSfMaa sc-empnci dzkWPn"
+      <span
+        class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
       >
         <input
           class="sc-ejfMa-d dijxYa"
@@ -704,7 +704,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
           type="search"
           value=""
         />
-      </div>
+      </span>
       <p
         class="sc-fThUAz bqJWec"
       >
@@ -850,8 +850,8 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
-      <div
-        class="sc-dkmUuB bSfMaa sc-empnci dzkWPn"
+      <span
+        class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
       >
         <input
           class="sc-ejfMa-d dijxYa"
@@ -861,7 +861,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           type="search"
           value=""
         />
-      </div>
+      </span>
       <p
         class="sc-fThUAz bqJWec"
       >

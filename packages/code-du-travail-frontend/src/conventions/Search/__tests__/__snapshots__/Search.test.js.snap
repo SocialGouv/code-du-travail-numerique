@@ -8,8 +8,8 @@ exports[`<Search /> should render 1`] = `
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
-  <div
-    class="sc-dkmUuB bSfMaa sc-empnci dzkWPn"
+  <span
+    class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
   >
     <input
       class="sc-ejfMa-d dijxYa"
@@ -19,7 +19,7 @@ exports[`<Search /> should render 1`] = `
       type="search"
       value=""
     />
-  </div>
+  </span>
   <p
     class="sc-fThUAz bqJWec"
   >
@@ -49,8 +49,8 @@ exports[`<Search /> should show no results when no result 1`] = `
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
-  <div
-    class="sc-dkmUuB bSfMaa sc-empnci dzkWPn"
+  <span
+    class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
   >
     <input
       class="sc-ejfMa-d dijxYa"
@@ -60,7 +60,7 @@ exports[`<Search /> should show no results when no result 1`] = `
       type="search"
       value="9999"
     />
-  </div>
+  </span>
   <div
     class="sc-dycYrt lbBSWD"
   >
@@ -99,8 +99,8 @@ exports[`<Search /> should show spinner when loading 1`] = `
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
-  <div
-    class="sc-dkmUuB bSfMaa sc-empnci dzkWPn"
+  <span
+    class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
   >
     <input
       class="sc-ejfMa-d dijxYa"
@@ -110,7 +110,7 @@ exports[`<Search /> should show spinner when loading 1`] = `
       type="search"
       value="8888"
     />
-  </div>
+  </span>
   <div
     class="sc-dycYrt lbBSWD"
   >
@@ -194,8 +194,8 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
-  <div
-    class="sc-dkmUuB bSfMaa sc-empnci dzkWPn"
+  <span
+    class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
   >
     <input
       class="sc-ejfMa-d dijxYa"
@@ -205,7 +205,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
       type="search"
       value="1234"
     />
-  </div>
+  </span>
   <div
     class="sc-dycYrt lbBSWD"
   >
@@ -291,8 +291,8 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
-  <div
-    class="sc-dkmUuB bSfMaa sc-empnci dzkWPn"
+  <span
+    class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
   >
     <input
       class="sc-ejfMa-d dijxYa"
@@ -302,7 +302,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
       type="search"
       value="4567"
     />
-  </div>
+  </span>
   <div
     class="sc-dycYrt lbBSWD"
   >
@@ -370,8 +370,8 @@ exports[`<Search /> when searching by text, should use enterprise API 1`] = `
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
-  <div
-    class="sc-dkmUuB bSfMaa sc-empnci dzkWPn"
+  <span
+    class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
   >
     <input
       class="sc-ejfMa-d dijxYa"
@@ -381,7 +381,7 @@ exports[`<Search /> when searching by text, should use enterprise API 1`] = `
       type="search"
       value="hello"
     />
-  </div>
+  </span>
   <div
     class="sc-dycYrt lbBSWD"
   >

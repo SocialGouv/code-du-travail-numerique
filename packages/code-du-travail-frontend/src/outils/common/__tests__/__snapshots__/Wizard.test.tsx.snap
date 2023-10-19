@@ -46,7 +46,6 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
           <li
             aria-live="polite"
             class="sc-fUBkdm kTxRgT"
-            tabindex="-1"
             title="onglet actif"
           >
             <span
@@ -153,7 +152,6 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
           <li
             aria-live="polite"
             class="sc-fUBkdm kTxRgT"
-            tabindex="-1"
             title="onglet actif"
           >
             <span
@@ -246,7 +244,6 @@ exports[`<Wizard /> should handle initialValues 1`] = `
           <li
             aria-live="polite"
             class="sc-fUBkdm kTxRgT"
-            tabindex="-1"
             title="onglet actif"
           >
             <span
@@ -363,7 +360,6 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
           <li
             aria-live="polite"
             class="sc-fUBkdm kTxRgT"
-            tabindex="-1"
             title="onglet actif"
           >
             <span
@@ -456,7 +452,6 @@ exports[`<Wizard /> should render a step 1`] = `
           <li
             aria-live="polite"
             class="sc-fUBkdm kTxRgT"
-            tabindex="-1"
             title="onglet actif"
           >
             <span

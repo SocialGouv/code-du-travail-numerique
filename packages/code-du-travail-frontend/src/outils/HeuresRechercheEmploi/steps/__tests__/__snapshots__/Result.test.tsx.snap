@@ -13,7 +13,8 @@ exports[`<StepResult /> should render no results 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
+      tabindex="1"
       type="button"
     >
       <svg
@@ -178,7 +179,8 @@ exports[`<StepResult /> should render with duration 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
+      class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
+      tabindex="1"
       type="button"
     >
       <svg
