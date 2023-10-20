@@ -459,7 +459,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <a
                               aria-label="l’Organisation internationale du travail (nouvelle fenêtre)"
                               href="https://www.ilo.org/global/lang--fr/index.htm"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               l’Organisation internationale du travail
@@ -477,7 +476,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <a
                                 aria-label="la Convention n°158 de l’OIT sur le licenciement (nouvelle fenêtre)"
                                 href="https://www.ilo.org/dyn/normlex/fr/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C158"
-                                rel="noopener noreferrer nofollow"
                                 target="_blank"
                               >
                                 la Convention n°158 de l’OIT sur le licenciement
@@ -495,7 +493,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <a
                                 aria-label="Le Pacte international relatif aux droits civils et politiques de 1966 (nouvelle fenêtre)"
                                 href="https://www.ohchr.org/fr/professionalinterest/pages/ccpr.aspx"
-                                rel="noopener noreferrer nofollow"
                                 target="_blank"
                               >
                                 Le Pacte international relatif aux droits civils et politiques de 1966
@@ -506,7 +503,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <a
                                 aria-label="le Pacte international relatif aux droits économiques, sociaux et culturels de 1966 (nouvelle fenêtre)"
                                 href="https://www.ohchr.org/FR/ProfessionalInterest/Pages/CESCR.aspx"
-                                rel="noopener noreferrer nofollow"
                                 target="_blank"
                               >
                                 le Pacte international relatif aux droits économiques, sociaux et culturels de 1966
@@ -610,7 +606,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <a
                               aria-label="l’Union Européenne (nouvelle fenêtre)"
                               href="https://europa.eu/european-union/index_fr"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               l’Union Européenne
@@ -621,7 +616,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <a
                               aria-label="le Conseil de l’Europe (nouvelle fenêtre)"
                               href="https://www.coe.int/fr/"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               le Conseil de l’Europe
@@ -647,7 +641,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <a
                                 aria-label="la Confédération européenne des syndicats (CES) (nouvelle fenêtre)"
                                 href="https://www.etuc.org/fr"
-                                rel="noopener noreferrer nofollow"
                                 target="_blank"
                               >
                                 la Confédération européenne des syndicats (CES)
@@ -657,7 +650,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <a
                                 aria-label="Business Europe (nouvelle fenêtre)"
                                 href="https://www.businesseurope.eu/"
-                                rel="noopener noreferrer nofollow"
                                 target="_blank"
                               >
                                 Business Europe
@@ -668,7 +660,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <a
                                 aria-label="le Centre européen des entreprises à participation publique (nouvelle fenêtre)"
                                 href="https://www.ceep.eu/"
-                                rel="noopener noreferrer nofollow"
                                 target="_blank"
                               >
                                 le Centre européen des entreprises à participation publique
@@ -685,7 +676,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <a
                                 aria-label="La Convention européenne de sauvegarde des droits de l’Homme et des libertés fondamentales (nouvelle fenêtre)"
                                 href="https://www.echr.coe.int/Pages/home.aspx?p=basictexts&c=fre"
-                                rel="noopener noreferrer nofollow"
                                 target="_blank"
                               >
                                 La Convention européenne de sauvegarde des droits de l’Homme et des libertés fondamentales
@@ -697,7 +687,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <a
                                 aria-label="La Charte sociale européenne (nouvelle fenêtre)"
                                 href="https://www.coe.int/en/web/european-social-charter"
-                                rel="noopener noreferrer nofollow"
                                 target="_blank"
                               >
                                 La Charte sociale européenne
@@ -806,7 +795,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <a
                               aria-label="la Constitution du 4 octobre 1958 (nouvelle fenêtre)"
                               href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               la Constitution du 4 octobre 1958

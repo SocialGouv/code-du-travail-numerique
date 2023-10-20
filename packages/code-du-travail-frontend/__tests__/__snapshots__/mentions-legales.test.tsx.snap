@@ -203,7 +203,7 @@ exports[`<MentionLegales /> should render 1`] = `
               Le site est édité par la
                
               <a
-                href="https://fabrique.social.gouv.fr/"
+                href="https://www.fabrique.social.gouv.fr/"
               >
                 fabrique des Ministères sociaux
               </a>

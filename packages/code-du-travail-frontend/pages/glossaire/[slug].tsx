@@ -53,7 +53,6 @@ function Term(props: Props): JSX.Element {
                               href={url}
                               target="_blank"
                               title="voir la référence"
-                              rel="nofollow noreferrer noopener"
                             >
                               {url}
                             </A11yLink>

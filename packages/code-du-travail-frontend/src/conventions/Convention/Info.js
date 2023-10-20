@@ -26,14 +26,14 @@ const Info = ({ convention: { num, title, date_publi, url } }) => (
     )}
     {url && (
       <p data-no-glossary>
-        <A11yLink target="_blank" rel="noopener noreferrer nofollow" href={url}>
+        <A11yLink target="_blank" href={url}>
           Voir la convention sur Légifrance
         </A11yLink>
       </p>
     )}
     <p data-no-glossary>
       <Link href="/glossaire/convention-collective" passHref legacyBehavior>
-        <A11yLink target="_blank" rel="noopener noreferrer nofollow">
+        <A11yLink target="_blank">
           Qu’est-ce qu’une convention collective&nbsp;?
         </A11yLink>
       </Link>

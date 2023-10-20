@@ -27,49 +27,51 @@ const Article = ({
     <Container>
       <Wrapper variant="main">
         <FlexReverse>
-          <Content>{children}</Content>
-          <Flex>
-            {suptitle && <OrderedSuptitle as="p">{suptitle}</OrderedSuptitle>}
-            <StyledPageTitle
-              subtitle={subtitle}
-              stripe="left"
-              shift={theme.spacings.larger}
-            >
-              {title}
-            </StyledPageTitle>
-            {(source || date) && (
-              <Meta>
-                <Paragraph noMargin fontSize="small">
-                  {source &&
-                    (source.url ? (
-                      <StyledSpan>
-                        Source:{" "}
-                        <A11yLink
-                          href={source.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {source.name}
-                        </A11yLink>
-                      </StyledSpan>
-                    ) : (
-                      <StyledSpan>Source: {source.name}</StyledSpan>
-                    ))}
+          <div>
+            <Flex>
+              {suptitle && <OrderedSuptitle as="p">{suptitle}</OrderedSuptitle>}
+              <StyledPageTitle
+                subtitle={subtitle}
+                stripe="left"
+                shift={theme.spacings.larger}
+              >
+                {title}
+              </StyledPageTitle>
+              {(source || date) && (
+                <Meta>
+                  <Paragraph noMargin fontSize="small">
+                    {source &&
+                      (source.url ? (
+                        <StyledSpan>
+                          Source:{" "}
+                          <A11yLink
+                            href={source.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {source.name}
+                          </A11yLink>
+                        </StyledSpan>
+                      ) : (
+                        <StyledSpan>Source: {source.name}</StyledSpan>
+                      ))}
 
-                  {source && date && (
-                    <HideOnMobile aria-hidden="true">
-                      &nbsp;-&nbsp;
-                    </HideOnMobile>
-                  )}
-                  {date && (
-                    <StyledSpan>
-                      {dateLabel}&nbsp;:&nbsp;{date}
-                    </StyledSpan>
-                  )}
-                </Paragraph>
-              </Meta>
-            )}
-          </Flex>
+                    {source && date && (
+                      <HideOnMobile aria-hidden="true">
+                        &nbsp;-&nbsp;
+                      </HideOnMobile>
+                    )}
+                    {date && (
+                      <StyledSpan>
+                        {dateLabel}&nbsp;:&nbsp;{date}
+                      </StyledSpan>
+                    )}
+                  </Paragraph>
+                </Meta>
+              )}
+            </Flex>
+            <Content>{children}</Content>
+          </div>
           <ShareContainer>
             <Share title={title} metaDescription={metaDescription} />
           </ShareContainer>

@@ -320,7 +320,7 @@ exports[`<About /> should render 1`] = `
               , conçu et développé au sein de
                
               <a
-                href="https://fabrique.social.gouv.fr/"
+                href="https://www.fabrique.social.gouv.fr/"
                 title="le site de la fabrique des Ministères sociaux"
               >
                 la fabrique des Ministères sociaux
