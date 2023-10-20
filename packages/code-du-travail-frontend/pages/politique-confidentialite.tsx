@@ -181,7 +181,6 @@ const CookiePolicy = (): JSX.Element => {
                 <a
                   title="Déclaration de confidentialité Microsoft"
                   target="_blank"
-                  rel="nofollow, noopener, noreferrer"
                   href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
                 >
                   Cookies et traceurs : que dit la loi ?
@@ -191,7 +190,6 @@ const CookiePolicy = (): JSX.Element => {
                 <a
                   title="Déclaration de confidentialité Microsoft"
                   target="_blank"
-                  rel="nofollow, noopener, noreferrer"
                   href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
                 >
                   Cookies : les outils pour les maîtriser

@@ -16,7 +16,6 @@ const ExternalLink = ({ title, url }) =>
     <StyledArrowLink
       className="no-after"
       href={url}
-      rel="noopener noreferrer nofollow"
       target="_blank"
       aria-label={`${title} (Nouvelle fenêtre)`}
       arrowPosition="left"
