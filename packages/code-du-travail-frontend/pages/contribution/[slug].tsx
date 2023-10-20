@@ -40,9 +40,9 @@ const buildTitleAndDescription = (
 
     const titleWithThemeAndCCHtml = (
       <>
-        {breadcrumbs[breadcrumbs.length - 1].label}
+        {title}
         <Hidden> - </Hidden>
-        <SubTitle fontSize="hxmedium">{conventionAnswer.shortName}</SubTitle>
+        <SubTitle fontSize="hsmall">{conventionAnswer.shortName}</SubTitle>
       </>
     );
     return {

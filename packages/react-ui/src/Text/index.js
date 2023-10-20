@@ -32,7 +32,6 @@ const spanPropTypes = {
     "small",
     "medium",
     "hsmall",
-    "hxmedium",
     "hmedium",
     "hmobileMedium",
     "hlarge",
