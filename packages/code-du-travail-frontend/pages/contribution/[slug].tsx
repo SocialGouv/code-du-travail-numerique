@@ -40,8 +40,7 @@ const buildTitleAndDescription = (
 
     const titleWithThemeAndCCHtml = (
       <>
-        {title}
-        <Hidden> - </Hidden>
+        {title}{" "}
         <SubTitle fontSize="hsmall">{conventionAnswer.shortName}</SubTitle>
       </>
     );
@@ -113,9 +112,6 @@ function PageContribution(props: Props): React.ReactElement {
 
 const { spacings } = theme;
 
-const Hidden = styled.span`
-  display: none;
-`;
 const SubTitle = styled(Text)`
   display: block;
   margin-top: ${spacings.small};
