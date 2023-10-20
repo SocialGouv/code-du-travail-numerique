@@ -202,12 +202,7 @@ describe("<ContributionGeneric />", () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
     render(
-      <ContributionGeneric
-        slug="my-contrib"
-        answers={ANSWERS}
-        content={{}}
-        relatedItems={[]}
-      />
+      <ContributionGeneric slug="my-contrib" answers={ANSWERS} content={{}} />
     );
     expect(byText(/Afficher les informations/).get()).toBeInTheDocument();
     fireEvent.click(byText("Afficher les informations").get());
