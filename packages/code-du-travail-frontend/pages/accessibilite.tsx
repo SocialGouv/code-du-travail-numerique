@@ -85,16 +85,6 @@ const Accessibilite = () => {
                 d’assistance&nbsp;?
               </li>
               <li>
-                Critère 8.7. Dans chaque page web, chaque changement de langue
-                est-il indiqué dans le code source (hors cas
-                particuliers)&nbsp;?
-              </li>
-              <li>
-                Critère 8.9. Dans chaque page web, les balises ne doivent pas
-                être utilisées uniquement à des fins de présentation. Cette
-                règle est-elle respectée&nbsp;?
-              </li>
-              <li>
                 Critère 11.4. Dans chaque formulaire, chaque étiquette de champ
                 et son champ associé sont-ils accolés (hors cas
                 particuliers)&nbsp;?
@@ -119,7 +109,7 @@ const Accessibilite = () => {
             </Title>
             <p>
               Cette déclaration a été établie le 12 avril 2021. Elle a été mise
-              à jour le 13/01/2022.
+              à jour le 20/10/2023.
             </p>
             <Title as="h3" stripe="none" size="small">
               Technologies utilisées pour la réalisation du Code du travail

@@ -23,9 +23,10 @@ import { GetServerSideProps } from "next";
 
 const SEARCH_ID = "search-input";
 
-const SearchPage = ({ items = { articles: [], documents: [], themes: [] } }) => {
-
-  const router = useRouter()
+const SearchPage = ({
+  items = { articles: [], documents: [], themes: [] },
+}) => {
+  const router = useRouter();
 
   const { q: query = "" } = router.query;
 
@@ -35,14 +36,12 @@ const SearchPage = ({ items = { articles: [], documents: [], themes: [] } }) => 
   };
 
   return (
-    <Layout
-      currentPage="search"
-    >
+    <Layout currentPage="search">
       <Head>
         <meta key="robots" name="robots" content="noindex, nofollow" />
       </Head>
       <Metas
-        title={`${"Recherche" + query} - Code du travail numérique`}
+        title={`${"Recherche " + query} - Code du travail numérique`}
         description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (formation, rupture de contrat, démission, indemnités)."
       />
       <Container narrow>
@@ -52,9 +51,9 @@ const SearchPage = ({ items = { articles: [], documents: [], themes: [] } }) => 
         </SearchBarWrapper>
       </Container>
       {query &&
-        items.documents.length === 0 &&
-        items.articles.length === 0 &&
-        items.themes.length === 0 ? (
+      items.documents.length === 0 &&
+      items.articles.length === 0 &&
+      items.themes.length === 0 ? (
         <Section>
           <Container narrow>
             <Alert>
@@ -100,8 +99,7 @@ const SearchPage = ({ items = { articles: [], documents: [], themes: [] } }) => 
       )}
     </Layout>
   );
-
-}
+};
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const q = (context.query.q as string) ?? "";
