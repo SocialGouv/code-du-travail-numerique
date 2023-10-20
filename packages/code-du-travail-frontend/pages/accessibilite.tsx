@@ -109,7 +109,7 @@ const Accessibilite = () => {
             </Title>
             <p>
               Cette déclaration a été établie le 12 avril 2021. Elle a été mise
-              à jour le 13/01/2022.
+              à jour le 20/10/2023.
             </p>
             <Title as="h3" stripe="none" size="small">
               Technologies utilisées pour la réalisation du Code du travail
