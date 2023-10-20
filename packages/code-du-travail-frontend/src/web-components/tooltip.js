@@ -16,6 +16,26 @@ class WebComponentsTooltip extends LitElement {
     this.visible = false;
   }
 
+  connectedCallback() {
+    super.connectedCallback();
+    window.addEventListener("copy", this._handleCopy);
+  }
+  disconnectedCallback() {
+    window.removeEventListener("copy", this._handleCopy);
+    super.disconnectedCallback();
+  }
+
+  _handleCopy = (e) => {
+    const selection = document.getSelection();
+    const text = selection.toString();
+    const fragmentElt = document.createElement("div");
+    fragmentElt.appendChild(selection.getRangeAt(0).cloneContents());
+    fragmentElt.setAttribute("style", "white-space: pre-wrap;");
+    e.clipboardData.setData("text/plain", text);
+    e.clipboardData.setData("text/html", fragmentElt.outerHTML);
+    e.preventDefault();
+  };
+
   static get styles() {
     return css`
       :host {
