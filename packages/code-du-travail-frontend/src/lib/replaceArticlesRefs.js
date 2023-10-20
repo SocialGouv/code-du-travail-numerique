@@ -6,5 +6,5 @@ const RE_ARTICLE_NUM = /href=["'](\/[^'"]+)["']/g;
 
 export const replaceArticlesRefs = (domain, html = "") =>
   html.replace(RE_ARTICLE_NUM, (_, href) => {
-    return `href='${domain}${href}' rel='nofollow noopener' target='_blank'`;
+    return `href='${domain}${href}' target='_blank'`;
   });

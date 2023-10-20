@@ -43,7 +43,6 @@ function Articles({ blocs, containerId, convention }) {
                 key={id}
                 wide
                 target="_blank"
-                rel="nofollow noopener"
                 href={getArticleUrl({ containerId, id })}
                 subtitle={`Article ${title}`}
                 className="no-after"

@@ -420,7 +420,6 @@ exports[`<CookiePolicy /> should render 1`] = `
               <li>
                 <a
                   href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
-                  rel="nofollow, noopener, noreferrer"
                   target="_blank"
                   title="Déclaration de confidentialité Microsoft"
                 >
@@ -430,7 +429,6 @@ exports[`<CookiePolicy /> should render 1`] = `
               <li>
                 <a
                   href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
-                  rel="nofollow, noopener, noreferrer"
                   target="_blank"
                   title="Déclaration de confidentialité Microsoft"
                 >
