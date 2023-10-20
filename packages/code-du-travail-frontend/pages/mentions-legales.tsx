@@ -27,7 +27,7 @@ const LegalPage = () => {
           <Wrapper variant="main">
             <p>
               Le site est édité par la{" "}
-              <a href="https://fabrique.social.gouv.fr/">
+              <a href="https://www.fabrique.social.gouv.fr/">
                 fabrique des Ministères sociaux
               </a>{" "}
               située :

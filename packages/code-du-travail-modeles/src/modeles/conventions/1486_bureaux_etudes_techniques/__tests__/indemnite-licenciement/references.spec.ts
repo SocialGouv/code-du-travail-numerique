@@ -53,7 +53,7 @@ const refChargeEnquete = [
   {
     article:
       "Article 23 de l’Annexe IV. Enquêteurs. Accord du 16 décembre 1991",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851321?idConteneur=KALICONT000005635173",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047651985#KALIARTI000047651985",
   },
   {
     article:
@@ -70,7 +70,7 @@ const refChargeEnqueteAfterMay2023 = [
   {
     article:
       "Article 23 de l’Annexe IV. Enquêteurs. Accord du 16 décembre 1991",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851321?idConteneur=KALICONT000005635173",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047651985#KALIARTI000047651985",
   },
   {
     article:
