@@ -17,75 +17,77 @@ exports[`<Answer /> should renders 1`] = `
           <div
             class="sc-fbKhjd eBWNnW"
           >
-            <div
-              class="sc-bkSUFG emqylj"
-            >
+            <div>
               <div
-                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+                class="sc-dhFUGM fmtmkn"
               >
-                <p
-                  class="sc-jGKxIK eoUrZA"
+                <header
+                  class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
                 >
-                  intro de l'article
-                </p>
+                  <h1
+                    class="sc-dPZUQH doubLW"
+                  >
+                    <span
+                      class="sc-gsFSXq ljkohw"
+                    />
+                    Article du code
+                  </h1>
+                </header>
+                <div
+                  class="sc-fAGzit kEwpYt"
+                >
+                  <p
+                    class="sc-jGKxIK ksIRLJ"
+                  >
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Source: 
+                      social groove
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="sc-deXhhX isajtz"
+                    >
+                       - 
+                    </span>
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Mis à jour le
+                       : 
+                      03/11/1979
+                    </span>
+                  </p>
+                </div>
               </div>
               <div
-                class="sc-fFlnrN"
+                class="sc-bkSUFG emqylj"
               >
-                <p
-                  class="test-content"
+                <div
+                  class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
                 >
-                  Contenu au format 
-                  <strong>
-                    html
-                  </strong>
-                </p>
-              </div>
-              <div>
-                Contenu supplémentaire
-              </div>
-            </div>
-            <div
-              class="sc-dhFUGM fmtmkn"
-            >
-              <header
-                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
-              >
-                <h1
-                  class="sc-dPZUQH doubLW"
+                  <p
+                    class="sc-jGKxIK eoUrZA"
+                  >
+                    intro de l'article
+                  </p>
+                </div>
+                <div
+                  class="sc-fFlnrN"
                 >
-                  <span
-                    class="sc-gsFSXq ljkohw"
-                  />
-                  Article du code
-                </h1>
-              </header>
-              <div
-                class="sc-fAGzit kEwpYt"
-              >
-                <p
-                  class="sc-jGKxIK ksIRLJ"
-                >
-                  <span
-                    class="sc-dQEtJz bfhYDp"
+                  <p
+                    class="test-content"
                   >
-                    Source: 
-                    social groove
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="sc-deXhhX isajtz"
-                  >
-                     - 
-                  </span>
-                  <span
-                    class="sc-dQEtJz bfhYDp"
-                  >
-                    Mis à jour le
-                     : 
-                    03/11/1979
-                  </span>
-                </p>
+                    Contenu au format 
+                    <strong>
+                      html
+                    </strong>
+                  </p>
+                </div>
+                <div>
+                  Contenu supplémentaire
+                </div>
               </div>
             </div>
             <div
@@ -512,80 +514,82 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           <div
             class="sc-fbKhjd eBWNnW"
           >
-            <div
-              class="sc-bkSUFG emqylj"
-            >
+            <div>
               <div
-                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+                class="sc-dhFUGM fmtmkn"
               >
                 <p
-                  class="sc-jGKxIK eoUrZA"
+                  class="sc-hZDyAQ sc-bJBgwP bUgSfx hFcltn"
                 >
-                  intro de l'article
+                  tag2
                 </p>
+                <header
+                  class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
+                >
+                  <h1
+                    class="sc-dPZUQH doubLW"
+                  >
+                    <span
+                      class="sc-gsFSXq ljkohw"
+                    />
+                    Article du code
+                  </h1>
+                </header>
+                <div
+                  class="sc-fAGzit kEwpYt"
+                >
+                  <p
+                    class="sc-jGKxIK ksIRLJ"
+                  >
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Source: 
+                      social groove
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="sc-deXhhX isajtz"
+                    >
+                       - 
+                    </span>
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Mis à jour le
+                       : 
+                      03/11/1979
+                    </span>
+                  </p>
+                </div>
               </div>
               <div
-                class="sc-fFlnrN"
+                class="sc-bkSUFG emqylj"
               >
-                <p
-                  class="test-content"
+                <div
+                  class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
                 >
-                  Contenu au format 
-                  <strong>
-                    html
-                  </strong>
-                </p>
-              </div>
-              <div>
-                Contenu supplémentaire
-              </div>
-            </div>
-            <div
-              class="sc-dhFUGM fmtmkn"
-            >
-              <p
-                class="sc-hZDyAQ sc-bJBgwP bUgSfx hFcltn"
-              >
-                tag2
-              </p>
-              <header
-                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
-              >
-                <h1
-                  class="sc-dPZUQH doubLW"
+                  <p
+                    class="sc-jGKxIK eoUrZA"
+                  >
+                    intro de l'article
+                  </p>
+                </div>
+                <div
+                  class="sc-fFlnrN"
                 >
-                  <span
-                    class="sc-gsFSXq ljkohw"
-                  />
-                  Article du code
-                </h1>
-              </header>
-              <div
-                class="sc-fAGzit kEwpYt"
-              >
-                <p
-                  class="sc-jGKxIK ksIRLJ"
-                >
-                  <span
-                    class="sc-dQEtJz bfhYDp"
+                  <p
+                    class="test-content"
                   >
-                    Source: 
-                    social groove
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="sc-deXhhX isajtz"
-                  >
-                     - 
-                  </span>
-                  <span
-                    class="sc-dQEtJz bfhYDp"
-                  >
-                    Mis à jour le
-                     : 
-                    03/11/1979
-                  </span>
-                </p>
+                    Contenu au format 
+                    <strong>
+                      html
+                    </strong>
+                  </p>
+                </div>
+                <div>
+                  Contenu supplémentaire
+                </div>
               </div>
             </div>
             <div
@@ -926,75 +930,77 @@ exports[`<Answer /> should renders back to results link 1`] = `
           <div
             class="sc-fbKhjd eBWNnW"
           >
-            <div
-              class="sc-bkSUFG emqylj"
-            >
+            <div>
               <div
-                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+                class="sc-dhFUGM fmtmkn"
               >
-                <p
-                  class="sc-jGKxIK eoUrZA"
+                <header
+                  class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
                 >
-                  intro de l'article
-                </p>
+                  <h1
+                    class="sc-dPZUQH doubLW"
+                  >
+                    <span
+                      class="sc-gsFSXq ljkohw"
+                    />
+                    Article du code
+                  </h1>
+                </header>
+                <div
+                  class="sc-fAGzit kEwpYt"
+                >
+                  <p
+                    class="sc-jGKxIK ksIRLJ"
+                  >
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Source: 
+                      social groove
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="sc-deXhhX isajtz"
+                    >
+                       - 
+                    </span>
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Mis à jour le
+                       : 
+                      03/11/1979
+                    </span>
+                  </p>
+                </div>
               </div>
               <div
-                class="sc-fFlnrN"
+                class="sc-bkSUFG emqylj"
               >
-                <p
-                  class="test-content"
+                <div
+                  class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
                 >
-                  Contenu au format 
-                  <strong>
-                    html
-                  </strong>
-                </p>
-              </div>
-              <div>
-                Contenu supplémentaire
-              </div>
-            </div>
-            <div
-              class="sc-dhFUGM fmtmkn"
-            >
-              <header
-                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
-              >
-                <h1
-                  class="sc-dPZUQH doubLW"
+                  <p
+                    class="sc-jGKxIK eoUrZA"
+                  >
+                    intro de l'article
+                  </p>
+                </div>
+                <div
+                  class="sc-fFlnrN"
                 >
-                  <span
-                    class="sc-gsFSXq ljkohw"
-                  />
-                  Article du code
-                </h1>
-              </header>
-              <div
-                class="sc-fAGzit kEwpYt"
-              >
-                <p
-                  class="sc-jGKxIK ksIRLJ"
-                >
-                  <span
-                    class="sc-dQEtJz bfhYDp"
+                  <p
+                    class="test-content"
                   >
-                    Source: 
-                    social groove
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="sc-deXhhX isajtz"
-                  >
-                     - 
-                  </span>
-                  <span
-                    class="sc-dQEtJz bfhYDp"
-                  >
-                    Mis à jour le
-                     : 
-                    03/11/1979
-                  </span>
-                </p>
+                    Contenu au format 
+                    <strong>
+                      html
+                    </strong>
+                  </p>
+                </div>
+                <div>
+                  Contenu supplémentaire
+                </div>
               </div>
             </div>
             <div
@@ -1335,72 +1341,74 @@ exports[`<Answer /> should renders related content 1`] = `
           <div
             class="sc-fbKhjd eBWNnW"
           >
-            <div
-              class="sc-bkSUFG emqylj"
-            >
+            <div>
               <div
-                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+                class="sc-dhFUGM fmtmkn"
               >
-                <p
-                  class="sc-jGKxIK eoUrZA"
+                <header
+                  class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
                 >
-                  intro de l'article
-                </p>
+                  <h1
+                    class="sc-dPZUQH doubLW"
+                  >
+                    <span
+                      class="sc-gsFSXq ljkohw"
+                    />
+                    Article du code
+                  </h1>
+                </header>
+                <div
+                  class="sc-fAGzit kEwpYt"
+                >
+                  <p
+                    class="sc-jGKxIK ksIRLJ"
+                  >
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Source: 
+                      social groove
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="sc-deXhhX isajtz"
+                    >
+                       - 
+                    </span>
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Mis à jour le
+                       : 
+                      03/11/1979
+                    </span>
+                  </p>
+                </div>
               </div>
               <div
-                class="sc-fFlnrN"
+                class="sc-bkSUFG emqylj"
               >
-                <p
-                  class="test-content"
+                <div
+                  class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
                 >
-                  annualisation du temps de travail. Annualisation de l'annualisation.
-                </p>
-              </div>
-              <div>
-                Contenu supplémentaire
-              </div>
-            </div>
-            <div
-              class="sc-dhFUGM fmtmkn"
-            >
-              <header
-                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
-              >
-                <h1
-                  class="sc-dPZUQH doubLW"
+                  <p
+                    class="sc-jGKxIK eoUrZA"
+                  >
+                    intro de l'article
+                  </p>
+                </div>
+                <div
+                  class="sc-fFlnrN"
                 >
-                  <span
-                    class="sc-gsFSXq ljkohw"
-                  />
-                  Article du code
-                </h1>
-              </header>
-              <div
-                class="sc-fAGzit kEwpYt"
-              >
-                <p
-                  class="sc-jGKxIK ksIRLJ"
-                >
-                  <span
-                    class="sc-dQEtJz bfhYDp"
+                  <p
+                    class="test-content"
                   >
-                    Source: 
-                    social groove
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="sc-deXhhX isajtz"
-                  >
-                     - 
-                  </span>
-                  <span
-                    class="sc-dQEtJz bfhYDp"
-                  >
-                    Mis à jour le
-                     : 
-                    03/11/1979
-                  </span>
-                </p>
+                    annualisation du temps de travail. Annualisation de l'annualisation.
+                  </p>
+                </div>
+                <div>
+                  Contenu supplémentaire
+                </div>
               </div>
             </div>
             <div
@@ -1905,76 +1913,78 @@ exports[`<Answer /> should renders tooltip 1`] = `
           <div
             class="sc-fbKhjd eBWNnW"
           >
-            <div
-              class="sc-bkSUFG emqylj"
-            >
+            <div>
               <div
-                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+                class="sc-dhFUGM fmtmkn"
               >
-                <p
-                  class="sc-jGKxIK eoUrZA"
+                <header
+                  class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
                 >
-                  intro de l'article
-                </p>
+                  <h1
+                    class="sc-dPZUQH doubLW"
+                  >
+                    <span
+                      class="sc-gsFSXq ljkohw"
+                    />
+                    Article du code
+                  </h1>
+                </header>
+                <div
+                  class="sc-fAGzit kEwpYt"
+                >
+                  <p
+                    class="sc-jGKxIK ksIRLJ"
+                  >
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Source: 
+                      social groove
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="sc-deXhhX isajtz"
+                    >
+                       - 
+                    </span>
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Mis à jour le
+                       : 
+                      03/11/1979
+                    </span>
+                  </p>
+                </div>
               </div>
               <div
-                class="sc-fFlnrN"
+                class="sc-bkSUFG emqylj"
               >
-                <p
-                  class="test-content"
+                <div
+                  class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
                 >
-                  Contenu au format 
-                  <strong>
-                    html
-                  </strong>
-                   contenant des tooltip sur certains mot comme rescrit. match aussi les abbréviation comme APE mais pas ape ou ses variantes comme code ape
-                </p>
-              </div>
-              <div>
-                Contenu supplémentaire
-              </div>
-            </div>
-            <div
-              class="sc-dhFUGM fmtmkn"
-            >
-              <header
-                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
-              >
-                <h1
-                  class="sc-dPZUQH doubLW"
+                  <p
+                    class="sc-jGKxIK eoUrZA"
+                  >
+                    intro de l'article
+                  </p>
+                </div>
+                <div
+                  class="sc-fFlnrN"
                 >
-                  <span
-                    class="sc-gsFSXq ljkohw"
-                  />
-                  Article du code
-                </h1>
-              </header>
-              <div
-                class="sc-fAGzit kEwpYt"
-              >
-                <p
-                  class="sc-jGKxIK ksIRLJ"
-                >
-                  <span
-                    class="sc-dQEtJz bfhYDp"
+                  <p
+                    class="test-content"
                   >
-                    Source: 
-                    social groove
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="sc-deXhhX isajtz"
-                  >
-                     - 
-                  </span>
-                  <span
-                    class="sc-dQEtJz bfhYDp"
-                  >
-                    Mis à jour le
-                     : 
-                    03/11/1979
-                  </span>
-                </p>
+                    Contenu au format 
+                    <strong>
+                      html
+                    </strong>
+                     contenant des tooltip sur certains mot comme rescrit. match aussi les abbréviation comme APE mais pas ape ou ses variantes comme code ape
+                  </p>
+                </div>
+                <div>
+                  Contenu supplémentaire
+                </div>
               </div>
             </div>
             <div
@@ -2315,76 +2325,78 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
           <div
             class="sc-fbKhjd eBWNnW"
           >
-            <div
-              class="sc-bkSUFG emqylj"
-            >
+            <div>
               <div
-                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+                class="sc-dhFUGM fmtmkn"
               >
-                <p
-                  class="sc-jGKxIK eoUrZA"
+                <header
+                  class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
                 >
-                  intro de l'article
-                </p>
+                  <h1
+                    class="sc-dPZUQH doubLW"
+                  >
+                    <span
+                      class="sc-gsFSXq ljkohw"
+                    />
+                    Article du code
+                  </h1>
+                </header>
+                <div
+                  class="sc-fAGzit kEwpYt"
+                >
+                  <p
+                    class="sc-jGKxIK ksIRLJ"
+                  >
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Source: 
+                      social groove
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="sc-deXhhX isajtz"
+                    >
+                       - 
+                    </span>
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Mis à jour le
+                       : 
+                      03/11/1979
+                    </span>
+                  </p>
+                </div>
               </div>
               <div
-                class="sc-fFlnrN"
+                class="sc-bkSUFG emqylj"
               >
-                <p
-                  class="test-content"
+                <div
+                  class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
                 >
-                  Contenu au format 
-                  <strong>
-                    indemnités
-                  </strong>
-                  comme code ape
-                </p>
-              </div>
-              <div>
-                Contenu supplémentaire
-              </div>
-            </div>
-            <div
-              class="sc-dhFUGM fmtmkn"
-            >
-              <header
-                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
-              >
-                <h1
-                  class="sc-dPZUQH doubLW"
+                  <p
+                    class="sc-jGKxIK eoUrZA"
+                  >
+                    intro de l'article
+                  </p>
+                </div>
+                <div
+                  class="sc-fFlnrN"
                 >
-                  <span
-                    class="sc-gsFSXq ljkohw"
-                  />
-                  Article du code
-                </h1>
-              </header>
-              <div
-                class="sc-fAGzit kEwpYt"
-              >
-                <p
-                  class="sc-jGKxIK ksIRLJ"
-                >
-                  <span
-                    class="sc-dQEtJz bfhYDp"
+                  <p
+                    class="test-content"
                   >
-                    Source: 
-                    social groove
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="sc-deXhhX isajtz"
-                  >
-                     - 
-                  </span>
-                  <span
-                    class="sc-dQEtJz bfhYDp"
-                  >
-                    Mis à jour le
-                     : 
-                    03/11/1979
-                  </span>
-                </p>
+                    Contenu au format 
+                    <strong>
+                      indemnités
+                    </strong>
+                    comme code ape
+                  </p>
+                </div>
+                <div>
+                  Contenu supplémentaire
+                </div>
               </div>
             </div>
             <div
@@ -2725,77 +2737,79 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
           <div
             class="sc-fbKhjd eBWNnW"
           >
-            <div
-              class="sc-bkSUFG emqylj"
-            >
+            <div>
               <div
-                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+                class="sc-dhFUGM fmtmkn"
               >
-                <p
-                  class="sc-jGKxIK eoUrZA"
+                <header
+                  class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
                 >
-                  intro de l'article
-                </p>
+                  <h1
+                    class="sc-dPZUQH doubLW"
+                  >
+                    <span
+                      class="sc-gsFSXq ljkohw"
+                    />
+                    Article du code
+                  </h1>
+                </header>
+                <div
+                  class="sc-fAGzit kEwpYt"
+                >
+                  <p
+                    class="sc-jGKxIK ksIRLJ"
+                  >
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Source: 
+                      social groove
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="sc-deXhhX isajtz"
+                    >
+                       - 
+                    </span>
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Mis à jour le
+                       : 
+                      03/11/1979
+                    </span>
+                  </p>
+                </div>
               </div>
               <div
-                class="sc-fFlnrN"
+                class="sc-bkSUFG emqylj"
               >
-                <p
-                  class="test-content"
+                <div
+                  class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
                 >
-                  <a
-                    class="spip_in"
-                    href="emploi/accompagnement-des-mutations-economiques/csp"
+                  <p
+                    class="sc-jGKxIK eoUrZA"
                   >
-                    le contrat de sécurisation professionnelle APE
-                  </a>
-                </p>
-              </div>
-              <div>
-                Contenu supplémentaire
-              </div>
-            </div>
-            <div
-              class="sc-dhFUGM fmtmkn"
-            >
-              <header
-                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
-              >
-                <h1
-                  class="sc-dPZUQH doubLW"
+                    intro de l'article
+                  </p>
+                </div>
+                <div
+                  class="sc-fFlnrN"
                 >
-                  <span
-                    class="sc-gsFSXq ljkohw"
-                  />
-                  Article du code
-                </h1>
-              </header>
-              <div
-                class="sc-fAGzit kEwpYt"
-              >
-                <p
-                  class="sc-jGKxIK ksIRLJ"
-                >
-                  <span
-                    class="sc-dQEtJz bfhYDp"
+                  <p
+                    class="test-content"
                   >
-                    Source: 
-                    social groove
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="sc-deXhhX isajtz"
-                  >
-                     - 
-                  </span>
-                  <span
-                    class="sc-dQEtJz bfhYDp"
-                  >
-                    Mis à jour le
-                     : 
-                    03/11/1979
-                  </span>
-                </p>
+                    <a
+                      class="spip_in"
+                      href="emploi/accompagnement-des-mutations-economiques/csp"
+                    >
+                      le contrat de sécurisation professionnelle APE
+                    </a>
+                  </p>
+                </div>
+                <div>
+                  Contenu supplémentaire
+                </div>
               </div>
             </div>
             <div
@@ -3136,72 +3150,74 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
           <div
             class="sc-fbKhjd eBWNnW"
           >
-            <div
-              class="sc-bkSUFG emqylj"
-            >
+            <div>
               <div
-                class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+                class="sc-dhFUGM fmtmkn"
               >
-                <p
-                  class="sc-jGKxIK eoUrZA"
+                <header
+                  class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
                 >
-                  intro de l'article
-                </p>
+                  <h1
+                    class="sc-dPZUQH doubLW"
+                  >
+                    <span
+                      class="sc-gsFSXq ljkohw"
+                    />
+                    Article du code
+                  </h1>
+                </header>
+                <div
+                  class="sc-fAGzit kEwpYt"
+                >
+                  <p
+                    class="sc-jGKxIK ksIRLJ"
+                  >
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Source: 
+                      social groove
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="sc-deXhhX isajtz"
+                    >
+                       - 
+                    </span>
+                    <span
+                      class="sc-dQEtJz bfhYDp"
+                    >
+                      Mis à jour le
+                       : 
+                      03/11/1979
+                    </span>
+                  </p>
+                </div>
               </div>
               <div
-                class="sc-fFlnrN"
+                class="sc-bkSUFG emqylj"
               >
-                <p
-                  class="test-content"
+                <div
+                  class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
                 >
-                  annualisation du temps de travail. Annualisation de l'annualisation.
-                </p>
-              </div>
-              <div>
-                Contenu supplémentaire
-              </div>
-            </div>
-            <div
-              class="sc-dhFUGM fmtmkn"
-            >
-              <header
-                class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
-              >
-                <h1
-                  class="sc-dPZUQH doubLW"
+                  <p
+                    class="sc-jGKxIK eoUrZA"
+                  >
+                    intro de l'article
+                  </p>
+                </div>
+                <div
+                  class="sc-fFlnrN"
                 >
-                  <span
-                    class="sc-gsFSXq ljkohw"
-                  />
-                  Article du code
-                </h1>
-              </header>
-              <div
-                class="sc-fAGzit kEwpYt"
-              >
-                <p
-                  class="sc-jGKxIK ksIRLJ"
-                >
-                  <span
-                    class="sc-dQEtJz bfhYDp"
+                  <p
+                    class="test-content"
                   >
-                    Source: 
-                    social groove
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="sc-deXhhX isajtz"
-                  >
-                     - 
-                  </span>
-                  <span
-                    class="sc-dQEtJz bfhYDp"
-                  >
-                    Mis à jour le
-                     : 
-                    03/11/1979
-                  </span>
-                </p>
+                    annualisation du temps de travail. Annualisation de l'annualisation.
+                  </p>
+                </div>
+                <div>
+                  Contenu supplémentaire
+                </div>
               </div>
             </div>
             <div

@@ -11,52 +11,54 @@ exports[`<Article /> should render 1`] = `
       <div
         class="sc-knuQbY VlwRB"
       >
-        <div
-          class="sc-bdOgaJ hSxqnk"
-        >
-          this is an Article
-        </div>
-        <div
-          class="sc-kRRyDe cCTHol"
-        >
-          <header
-            class="sc-ePDLzJ dXxftn sc-fulCBj kAfkKO"
-          >
-            <h1
-              class="sc-dPZUQH doubLW"
-            >
-              <span
-                class="sc-gsFSXq ljkohw"
-              />
-              Contrat de travail et formalités d'embauche de l'assistante maternelle
-            </h1>
-          </header>
+        <div>
           <div
-            class="sc-kMribo dpZHIe"
+            class="sc-kRRyDe cCTHol"
           >
-            <p
-              class="sc-jGKxIK ksIRLJ"
+            <header
+              class="sc-ePDLzJ dXxftn sc-fulCBj kAfkKO"
             >
-              <span
-                class="sc-fThUAz hOrZPp"
+              <h1
+                class="sc-dPZUQH doubLW"
               >
-                Source: 
-                Fiche service public
-              </span>
-              <span
-                aria-hidden="true"
-                class="sc-empnci QtCOy"
+                <span
+                  class="sc-gsFSXq ljkohw"
+                />
+                Contrat de travail et formalités d'embauche de l'assistante maternelle
+              </h1>
+            </header>
+            <div
+              class="sc-kMribo dpZHIe"
+            >
+              <p
+                class="sc-jGKxIK ksIRLJ"
               >
-                 - 
-              </span>
-              <span
-                class="sc-fThUAz hOrZPp"
-              >
-                Mis à jour le
-                 : 
-                26/07/2018
-              </span>
-            </p>
+                <span
+                  class="sc-fThUAz hOrZPp"
+                >
+                  Source: 
+                  Fiche service public
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="sc-empnci QtCOy"
+                >
+                   - 
+                </span>
+                <span
+                  class="sc-fThUAz hOrZPp"
+                >
+                  Mis à jour le
+                   : 
+                  26/07/2018
+                </span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="sc-bdOgaJ hSxqnk"
+          >
+            this is an Article
           </div>
         </div>
         <div

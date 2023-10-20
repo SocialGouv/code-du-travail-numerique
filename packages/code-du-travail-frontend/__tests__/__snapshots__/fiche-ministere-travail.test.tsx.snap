@@ -256,194 +256,196 @@ exports[`<FicheMT /> should render 1`] = `
               <div
                 class="sc-fbKhjd eBWNnW"
               >
-                <div
-                  class="sc-bkSUFG emqylj"
-                >
+                <div>
                   <div
-                    class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+                    class="sc-dhFUGM fmtmkn"
                   >
                     <p
-                      class="sc-jGKxIK eoUrZA"
+                      class="sc-hZDyAQ sc-bJBgwP bUgSfx hFcltn"
                     >
-                      lorem ipsum intro
+                      Santé, sécurité et conditions de travail
                     </p>
+                    <header
+                      class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
+                    >
+                      <h1
+                        class="sc-dPZUQH doubLW"
+                      >
+                        <span
+                          class="sc-gsFSXq ljkohw"
+                        />
+                        Fiche MT test
+                      </h1>
+                    </header>
+                    <div
+                      class="sc-fAGzit kEwpYt"
+                    >
+                      <p
+                        class="sc-jGKxIK ksIRLJ"
+                      >
+                        <span
+                          class="sc-dQEtJz bfhYDp"
+                        >
+                          Source:
+                           
+                          <a
+                            aria-label="Fiche Ministère du travail (nouvelle fenêtre)"
+                            href="fiche.travail.url"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            Fiche Ministère du travail
+                          </a>
+                        </span>
+                        <span
+                          aria-hidden="true"
+                          class="sc-deXhhX isajtz"
+                        >
+                           - 
+                        </span>
+                        <span
+                          class="sc-dQEtJz bfhYDp"
+                        >
+                          Mis à jour le
+                           : 
+                          01/01/2020
+                        </span>
+                      </p>
+                    </div>
                   </div>
                   <div
-                    class="accordion"
-                    data-accordion-component="Accordion"
+                    class="sc-bkSUFG emqylj"
                   >
                     <div
-                      id="t1-Visite-d-information-et-de-prevention-pour-qui"
+                      class="sc-iGgWBj sc-gweoQa cWzIZL kVRiFe"
+                    >
+                      <p
+                        class="sc-jGKxIK eoUrZA"
+                      >
+                        lorem ipsum intro
+                      </p>
+                    </div>
+                    <div
+                      class="accordion"
+                      data-accordion-component="Accordion"
                     >
                       <div
-                        class="sc-jXbUNg heDTFL"
-                        data-accordion-component="AccordionItem"
+                        id="t1-Visite-d-information-et-de-prevention-pour-qui"
                       >
                         <div
-                          class="accordion__heading"
-                          data-accordion-component="AccordionItemHeading"
+                          class="sc-jXbUNg heDTFL"
+                          data-accordion-component="AccordionItem"
                         >
                           <div
-                            aria-controls="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
-                            aria-disabled="false"
-                            aria-expanded="false"
-                            class="sc-kpDqfm heoudo"
-                            data-accordion-component="AccordionItemButton"
-                            id="accordion__heading-t1-Visite-d-information-et-de-prevention-pour-qui"
-                            role="button"
-                            tabindex="0"
+                            class="accordion__heading"
+                            data-accordion-component="AccordionItemHeading"
                           >
-                            <svg
-                              aria-hidden="true"
-                              class="sc-imWYAI gTeNha"
-                              fill="none"
-                              height="24"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              viewBox="0 0 24 24"
-                              width="24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <polyline
-                                points="9 18 15 12 9 6"
-                              />
-                            </svg>
                             <div
-                              class="sc-dAlyuH cXMNBg"
+                              aria-controls="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
+                              aria-disabled="false"
+                              aria-expanded="false"
+                              class="sc-kpDqfm heoudo"
+                              data-accordion-component="AccordionItemButton"
+                              id="accordion__heading-t1-Visite-d-information-et-de-prevention-pour-qui"
+                              role="button"
+                              tabindex="0"
                             >
-                              <h2
-                                class="sc-kAyceB dvmaTz"
-                                data-testid="undefined-0"
-                                style="margin: 0px;"
+                              <svg
+                                aria-hidden="true"
+                                class="sc-imWYAI gTeNha"
+                                fill="none"
+                                height="24"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
-                                1) Visite d’information et de prévention : pour qui ?
-                              </h2>
+                                <polyline
+                                  points="9 18 15 12 9 6"
+                                />
+                              </svg>
+                              <div
+                                class="sc-dAlyuH cXMNBg"
+                              >
+                                <h2
+                                  class="sc-kAyceB dvmaTz"
+                                  data-testid="undefined-0"
+                                  style="margin: 0px;"
+                                >
+                                  1) Visite d’information et de prévention : pour qui ?
+                                </h2>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div
-                          aria-hidden="true"
-                          class="sc-dhKdcB fdfhnD"
-                          data-accordion-component="AccordionItemPanel"
-                          hidden=""
-                          id="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
-                        >
                           <div
-                            class="sc-bXCLTC cqpPUq"
+                            aria-hidden="true"
+                            class="sc-dhKdcB fdfhnD"
+                            data-accordion-component="AccordionItemPanel"
+                            hidden=""
+                            id="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
                           >
                             <div
-                              class="sc-fFlnrN sc-gVJvzJ ccLmnJ"
+                              class="sc-bXCLTC cqpPUq"
                             >
-                              <p>
-                                Depuis le 1er janvier 2017, la 
-                                <strong>
-                                  visite d’information et de prévention
-                                </strong>
-                                 vient remplacer la traditionnelle visite médicale d’embauche qui devait être réalisée au plus tard avant la fin de la période d’essai.
-                              </p>
-                              <p>
-                                Désormais, la visite doit être organisée dans un délai maximum de trois mois à compter de l’occupation effective du poste de travail (sauf cas de dispense). Néanmoins, pour certains salariés, comme les jeunes de moins de 18 ans ou  les travailleurs de nuit, elle doit toujours avoir lieu avant la prise de fonction.
-                              </p>
-                              <p>
-                                <strong>
-                                  Bon à savoir !
-                                </strong>
-                                 Tout salarié affecté à un poste présentant des risques particuliers pour sa santé (exposition à l’amiante, au plomb, à des agents cancérogènes, etc.) doit passer, avant sa prise de fonction, 
-                                <strong>
-                                  un examen médical d’aptitude
-                                </strong>
-                                 et non une simple visite d’information et de prévention.
-                              </p>
-                              <p>
-                                <strong>
-                                  La visite d’information et de prévention
-                                </strong>
-                                 permet d’interroger le salarié sur son état de santé, et d’envisager, si besoin, son orientation spécifique vers le médecin du travail. Elle vise aussi à informer le salarié sur les risques éventuels auxquels l’expose son poste de travail, et à le sensibiliser sur les moyens de prévention.
-                              </p>
-                              <p>
-                                <strong>
-                                  Cette visite n’est pas toujours assurée par le médecin du travail lui-même
-                                </strong>
-                                . Le salarié peut être reçu par un professionnel de santé (par exemple, un infirmier) intervenant sous son autorité.. Toutefois, certains salariés comme par exemple les femmes enceintes, celles qui viennent d’accoucher ou allaitent leur enfant, ou encore les travailleurs handicapés, sont adressés au médecin du travail afin que leur soit proposé un suivi adapté à leur situation.
-                              </p>
-                              <p>
-                                <strong>
-                                  Pour davantage de détails
-                                </strong>
-                                 consultez 
-                                <a
-                                  class="spip_in"
-                                  href="https://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/article/le-suivi-de-l-etat-de-sante-des-salaries"
-                                  rel="nofollow, noopener"
-                                  target="_blank"
-                                >
-                                  notre fiche sur le suivi de l’état de santé des salariés
-                                </a>
-                                .
-                              </p>
+                              <div
+                                class="sc-fFlnrN sc-gVJvzJ ccLmnJ"
+                              >
+                                <p>
+                                  Depuis le 1er janvier 2017, la 
+                                  <strong>
+                                    visite d’information et de prévention
+                                  </strong>
+                                   vient remplacer la traditionnelle visite médicale d’embauche qui devait être réalisée au plus tard avant la fin de la période d’essai.
+                                </p>
+                                <p>
+                                  Désormais, la visite doit être organisée dans un délai maximum de trois mois à compter de l’occupation effective du poste de travail (sauf cas de dispense). Néanmoins, pour certains salariés, comme les jeunes de moins de 18 ans ou  les travailleurs de nuit, elle doit toujours avoir lieu avant la prise de fonction.
+                                </p>
+                                <p>
+                                  <strong>
+                                    Bon à savoir !
+                                  </strong>
+                                   Tout salarié affecté à un poste présentant des risques particuliers pour sa santé (exposition à l’amiante, au plomb, à des agents cancérogènes, etc.) doit passer, avant sa prise de fonction, 
+                                  <strong>
+                                    un examen médical d’aptitude
+                                  </strong>
+                                   et non une simple visite d’information et de prévention.
+                                </p>
+                                <p>
+                                  <strong>
+                                    La visite d’information et de prévention
+                                  </strong>
+                                   permet d’interroger le salarié sur son état de santé, et d’envisager, si besoin, son orientation spécifique vers le médecin du travail. Elle vise aussi à informer le salarié sur les risques éventuels auxquels l’expose son poste de travail, et à le sensibiliser sur les moyens de prévention.
+                                </p>
+                                <p>
+                                  <strong>
+                                    Cette visite n’est pas toujours assurée par le médecin du travail lui-même
+                                  </strong>
+                                  . Le salarié peut être reçu par un professionnel de santé (par exemple, un infirmier) intervenant sous son autorité.. Toutefois, certains salariés comme par exemple les femmes enceintes, celles qui viennent d’accoucher ou allaitent leur enfant, ou encore les travailleurs handicapés, sont adressés au médecin du travail afin que leur soit proposé un suivi adapté à leur situation.
+                                </p>
+                                <p>
+                                  <strong>
+                                    Pour davantage de détails
+                                  </strong>
+                                   consultez 
+                                  <a
+                                    class="spip_in"
+                                    href="https://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/article/le-suivi-de-l-etat-de-sante-des-salaries"
+                                    rel="nofollow, noopener"
+                                    target="_blank"
+                                  >
+                                    notre fiche sur le suivi de l’état de santé des salariés
+                                  </a>
+                                  .
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div
-                  class="sc-dhFUGM fmtmkn"
-                >
-                  <p
-                    class="sc-hZDyAQ sc-bJBgwP bUgSfx hFcltn"
-                  >
-                    Santé, sécurité et conditions de travail
-                  </p>
-                  <header
-                    class="sc-ePDLzJ dXxftn sc-dGCmGc cEICQD"
-                  >
-                    <h1
-                      class="sc-dPZUQH doubLW"
-                    >
-                      <span
-                        class="sc-gsFSXq ljkohw"
-                      />
-                      Fiche MT test
-                    </h1>
-                  </header>
-                  <div
-                    class="sc-fAGzit kEwpYt"
-                  >
-                    <p
-                      class="sc-jGKxIK ksIRLJ"
-                    >
-                      <span
-                        class="sc-dQEtJz bfhYDp"
-                      >
-                        Source:
-                         
-                        <a
-                          aria-label="Fiche Ministère du travail (nouvelle fenêtre)"
-                          href="fiche.travail.url"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          Fiche Ministère du travail
-                        </a>
-                      </span>
-                      <span
-                        aria-hidden="true"
-                        class="sc-deXhhX isajtz"
-                      >
-                         - 
-                      </span>
-                      <span
-                        class="sc-dQEtJz bfhYDp"
-                      >
-                        Mis à jour le
-                         : 
-                        01/01/2020
-                      </span>
-                    </p>
                   </div>
                 </div>
                 <div
