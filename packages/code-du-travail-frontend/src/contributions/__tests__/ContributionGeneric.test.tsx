@@ -198,6 +198,23 @@ describe("<ContributionGeneric />", () => {
       [["trackEvent", "outil", "cc_select_non_traitée", 2216]],
     ]);
   });
+  it("afficher les infos - sans CC", async () => {
+    expect(matopush).toHaveBeenCalledTimes(0);
+
+    render(
+      <ContributionGeneric slug="my-contrib" answers={ANSWERS} content={{}} />
+    );
+    expect(byText(/Afficher les informations/).get()).toBeInTheDocument();
+    fireEvent.click(byText("Afficher les informations").get());
+    expect(matopush).toHaveBeenCalledTimes(1);
+    expect(matopush).toHaveBeenLastCalledWith([
+      "trackEvent",
+      "contribution",
+      "click_afficher_les_informations_sans_CC",
+      "/contribution/my-contrib",
+    ]);
+    expect(router.push).toHaveBeenCalledTimes(0);
+  });
 
   it("voir les infos générales", () => {
     expect(matopush).toHaveBeenCalledTimes(0);
