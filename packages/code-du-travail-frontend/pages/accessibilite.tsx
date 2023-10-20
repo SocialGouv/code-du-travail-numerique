@@ -293,7 +293,7 @@ const Accessibilite = () => {
                 </li>
                 <li>
                   <A11yLink
-                    href="https://www.defenseurdesdroits.fr/saisir/delegues"
+                    href="https://www.defenseurdesdroits.fr/carte-des-delegues"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
