@@ -9,17 +9,17 @@ const SkipNavLink = (): JSX.Element => {
         <Ul>
           <Li>
             <SkipLink href="#content" tabIndex={1}>
-              Allez au contenu
+              Aller au contenu
             </SkipLink>
           </Li>
           <Li>
             <SkipLink as="a" href="#navigation" tabIndex={1}>
-              Allez à la navigation
+              Aller à la navigation
             </SkipLink>
           </Li>
           <Li>
             <SkipLink href="#search" tabIndex={1}>
-              Allez à la recherche
+              Aller à la recherche
             </SkipLink>
           </Li>
         </Ul>
