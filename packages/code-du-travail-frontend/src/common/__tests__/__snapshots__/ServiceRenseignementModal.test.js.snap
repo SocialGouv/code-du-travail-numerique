@@ -84,7 +84,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 Saisissez votre numéro de département :
               </label>
               <div
-                class="sc-dkmUuB bSfMaa sc-iapWAC ehtufm"
+                class="sc-dkmUuB ayeCS sc-iapWAC ehtufm"
               >
                 <input
                   autocomplete="off"

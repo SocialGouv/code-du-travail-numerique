@@ -92,7 +92,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       class="sc-eulNck ctRWBf"
     >
       <div
-        class="sc-dkmUuB bSfMaa"
+        class="sc-dkmUuB ayeCS"
       >
         <input
           class="sc-ejfMa-d kArqSZ"
@@ -144,7 +144,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       class="sc-eulNck ctRWBf"
     >
       <div
-        class="sc-dkmUuB bSfMaa"
+        class="sc-dkmUuB ayeCS"
       >
         <input
           class="sc-ejfMa-d kArqSZ"
@@ -295,7 +295,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     class="sc-eulNck ctRWBf"
   >
     <div
-      class="sc-dkmUuB bSfMaa"
+      class="sc-dkmUuB ayeCS"
     >
       <input
         class="sc-ejfMa-d kArqSZ"

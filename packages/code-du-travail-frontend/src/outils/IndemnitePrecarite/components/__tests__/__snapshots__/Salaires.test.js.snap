@@ -30,7 +30,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
       class="sc-kqGoIF hMUbvs"
     >
       <div
-        class="sc-dkmUuB bSfMaa"
+        class="sc-dkmUuB ayeCS"
       >
         <input
           class="sc-ejfMa-d kArqSZ"
@@ -162,7 +162,7 @@ exports[`<Salaires /> should render 1`] = `
       class="sc-kqGoIF hMUbvs"
     >
       <div
-        class="sc-dkmUuB bSfMaa"
+        class="sc-dkmUuB ayeCS"
       >
         <input
           class="sc-ejfMa-d kArqSZ"
