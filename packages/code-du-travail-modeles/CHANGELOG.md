@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.111.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.110.0...v4.111.0) (2023-10-23)
+
+### Bug Fixes
+
+- **indemnité de licenciement:** correction du lien sur une des références ([#5404](https://github.com/SocialGouv/code-du-travail-numerique/issues/5404)) ([853d070](https://github.com/SocialGouv/code-du-travail-numerique/commit/853d07029975794fe85be2dc2e7e40cb0ebfc71d))
+- **indemnite-licenciement:** retours de la cc 1516 ([#5392](https://github.com/SocialGouv/code-du-travail-numerique/issues/5392)) ([c674b32](https://github.com/SocialGouv/code-du-travail-numerique/commit/c674b325ffeec650cc765ebe138e1ff2a63514a7))
+
 # [4.110.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.109.0...v4.110.0) (2023-10-16)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

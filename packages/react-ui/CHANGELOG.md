@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.111.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.110.0...v4.111.0) (2023-10-23)
+
+### Bug Fixes
+
+- **accessibility:** meilleure accessibilité sur les outils ([#5390](https://github.com/SocialGouv/code-du-travail-numerique/issues/5390)) ([43e8ad3](https://github.com/SocialGouv/code-du-travail-numerique/commit/43e8ad327f0e5b4a6b8c93f690b9821f7900f5c7))
+- use display inline-block to avoid regression ([#5408](https://github.com/SocialGouv/code-du-travail-numerique/issues/5408)) ([7106024](https://github.com/SocialGouv/code-du-travail-numerique/commit/710602406e964d1bef953169cf007988c9bb1ec6))
+
+### Features
+
+- **accessibilité:** un seul lien sur les tuiles ([#5388](https://github.com/SocialGouv/code-du-travail-numerique/issues/5388)) ([88ead81](https://github.com/SocialGouv/code-du-travail-numerique/commit/88ead81f55e16d4d458cb7b044d24fe499859541))
+
 # [4.110.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.109.0...v4.110.0) (2023-10-16)
 
 ### Bug Fixes

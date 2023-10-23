@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.111.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.110.0...v4.111.0) (2023-10-23)
+
+### Bug Fixes
+
+- **accessibility:** meilleure accessibilité sur les outils ([#5390](https://github.com/SocialGouv/code-du-travail-numerique/issues/5390)) ([43e8ad3](https://github.com/SocialGouv/code-du-travail-numerique/commit/43e8ad327f0e5b4a6b8c93f690b9821f7900f5c7))
+- **contribs:** le bouton "afficher les informations" est visible des le début sur les nouvelles pages contribs ([#5403](https://github.com/SocialGouv/code-du-travail-numerique/issues/5403)) ([51d3fcd](https://github.com/SocialGouv/code-du-travail-numerique/commit/51d3fcd1a032a6373f82d031237ec62e015cffe8))
+- **contributions:** remise en place des éléments dans le bon ordre ([#5401](https://github.com/SocialGouv/code-du-travail-numerique/issues/5401)) ([c6374af](https://github.com/SocialGouv/code-du-travail-numerique/commit/c6374afe5d6f8c54ded441874650a64120b293f3))
+- **déclaration d'accessibilité:** mise à jour de la déclaration d'accessibilité ([#5405](https://github.com/SocialGouv/code-du-travail-numerique/issues/5405)) ([c46dcec](https://github.com/SocialGouv/code-du-travail-numerique/commit/c46dcec819918352bcb95c339914fb94c3417a57))
+- **indemnité de licenciement:** correction du lien sur une des références ([#5404](https://github.com/SocialGouv/code-du-travail-numerique/issues/5404)) ([853d070](https://github.com/SocialGouv/code-du-travail-numerique/commit/853d07029975794fe85be2dc2e7e40cb0ebfc71d))
+- **seo:** retrait de tout les nofollow ([#5402](https://github.com/SocialGouv/code-du-travail-numerique/issues/5402)) ([9ebe4f5](https://github.com/SocialGouv/code-du-travail-numerique/commit/9ebe4f52531af8578eb9d54f28ad990943e8c0dc))
+- **tooltip:** remove breaking space when copy to editor ([#5400](https://github.com/SocialGouv/code-du-travail-numerique/issues/5400)) ([d4d468b](https://github.com/SocialGouv/code-du-travail-numerique/commit/d4d468b32c40a8a0af9dccc53c60b2b4ab59d351))
+- use display inline-block to avoid regression ([#5408](https://github.com/SocialGouv/code-du-travail-numerique/issues/5408)) ([7106024](https://github.com/SocialGouv/code-du-travail-numerique/commit/710602406e964d1bef953169cf007988c9bb1ec6))
+
+### Features
+
+- **accessibilité:** un seul lien sur les tuiles ([#5388](https://github.com/SocialGouv/code-du-travail-numerique/issues/5388)) ([88ead81](https://github.com/SocialGouv/code-du-travail-numerique/commit/88ead81f55e16d4d458cb7b044d24fe499859541))
+
 # [4.110.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.109.0...v4.110.0) (2023-10-16)
 
 ### Bug Fixes
