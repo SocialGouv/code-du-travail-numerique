@@ -994,60 +994,6 @@
     },
     {
       "criteria": {
-        "groupe": "1| I",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 650,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "groupe": "1| I",
-        "ancienneté": "42| 2 ans ou plus"
-      },
-      "type": "préavis de Démission",
-      "idcc": 650,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "groupe": "4| II"
-      },
-      "type": "préavis de Démission",
-      "idcc": 650,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "groupe": "5| III"
-      },
-      "type": "préavis de Démission",
-      "idcc": 650,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
         "catégorie professionnelle": "23| Agents de maîtrise"
       },
       "type": "préavis de Démission",
@@ -4302,6 +4248,123 @@
       "answer3": "60",
       "ref": "Article 2 de la section 1 du Chapitre 4 de la Partie II de la convention collective",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000027029046&cidTexte=KALITEXT000026943196&idConvention=KALICONT000027084096&dateTexte=29990101"
+    },
+    {
+      "criteria": {
+        "groupe": "1| A"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "2 semaines calendaires",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Article 74.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+    },
+    {
+      "criteria": {
+        "groupe": "2| B"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "2 semaines calendaires",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Article 74.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+    },
+    {
+      "criteria": {
+        "groupe": "3| C"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "1 mois calendaire",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 74.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+    },
+    {
+      "criteria": {
+        "groupe": "4| D"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "2 mois calendaires",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 74.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+    },
+    {
+      "criteria": {
+        "groupe": "5| E"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "2 mois calendaires",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 74.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+    },
+    {
+      "criteria": {
+        "groupe": "6| F"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "3 mois calendaires",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 74.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+    },
+    {
+      "criteria": {
+        "groupe": "7| G"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "3 mois calendaires",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 74.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+    },
+    {
+      "criteria": {
+        "groupe": "8| H"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "3 mois calendaires",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 74.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+    },
+    {
+      "criteria": {
+        "groupe": "9| I"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "3 mois calendaires",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 74.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
     }
   ]
 }
