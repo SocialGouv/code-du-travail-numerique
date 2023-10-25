@@ -6,9 +6,10 @@ import {
   theme,
   Title,
   Wrapper,
+  Button,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import React from "react";
+import React, { useCallback } from "react";
 import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
@@ -17,6 +18,22 @@ import { Layout } from "../src/layout/Layout";
 const { spacings } = theme;
 
 const CookiePolicy = (): JSX.Element => {
+  const openTarteAuCitron = useCallback(() => {
+    // @ts-ignore
+    if (window && window.tarteaucitron) {
+      // @ts-ignore
+      window.tarteaucitron.userInterface.openPanel();
+    }
+  }, []);
+
+  const hasTarteAuCitron = useCallback(() => {
+    // @ts-ignore
+    return (
+      typeof document !== "undefined" &&
+      !!document.getElementById("tarteaucitronClosePanel")
+    );
+  }, []);
+
   return (
     <Layout>
       <Metas
@@ -140,6 +157,14 @@ const CookiePolicy = (): JSX.Element => {
               </thead>
               <tbody>
                 <tr>
+                  <td>Mesure d’audience</td>
+                  <td>Google Analytics</td>
+                  <td>13 mois</td>
+                  <td>Mesure d’audience et analyse comportementale</td>
+                  <td>Google</td>
+                  <td>Etats-Unis</td>
+                </tr>
+                <tr>
                   <td>Mesure d’audience anonymisée</td>
                   <td>Matomo</td>
                   <td>13 mois</td>
@@ -162,6 +187,16 @@ const CookiePolicy = (): JSX.Element => {
               Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox,
               Apple Safari et Opera).
             </p>
+            {hasTarteAuCitron() ? (
+              <Button onClick={openTarteAuCitron}>Modifier les réglages</Button>
+            ) : (
+              <p>
+                Seules certaines pages du site sont concernées par la mesure
+                d’audience et l’analyse comportementale avec Google Analytics et
+                vous n’avez visité aucune de ces pages. Aucun cookie Google
+                Analytics n’a donc été déposé sur votre terminal.
+              </p>
+            )}
             <p>
               Pour l’outil Matomo, vous pouvez décider de ne jamais être suivi,
               y compris anonymement&nbsp;:

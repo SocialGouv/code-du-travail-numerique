@@ -11,6 +11,7 @@ import { SITE_URL } from "../../src/config";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
 import showNewContribPage from "../../src/contributions/slugFilter";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);
@@ -96,6 +97,7 @@ function PageContribution(props: Props): React.ReactElement {
           </>
         )}
       </Answer>
+      <EventTracker />
     </Layout>
   );
 }
