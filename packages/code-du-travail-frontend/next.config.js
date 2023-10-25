@@ -50,10 +50,10 @@ const moduleExports = {
   ...nextConfig,
   async headers() {
     let headers = [
-      {
-        key: "X-Content-Type-Options",
-        value: "nosniff",
-      },
+      // {
+      //   key: "X-Content-Type-Options",
+      //   value: "nosniff",
+      // },
     ];
     if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
       headers.push({
