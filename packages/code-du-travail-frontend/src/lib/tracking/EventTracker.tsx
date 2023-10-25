@@ -24,11 +24,30 @@ export default function EventTracker(): JSX.Element {
       typeof (window as any).gtag !== "undefined" &&
       urlToTrack
     ) {
-      (window as any).gtag("event", "conversion", {
-        allow_custom_scripts: true,
-        send_to: `DC-3048978/emplo253/ttspages+unique`,
-        u1: `${window.location.origin}${urlToTrack.url}`,
+      (window as any)._adftrack = Array.isArray((window as any)._adftrack)
+        ? (window as any)._adftrack
+        : (window as any)._adftrack
+        ? [(window as any)._adftrack]
+        : [];
+      (window as any)._adftrack.push({
+        HttpHost: "server.adform.net",
+        pm: 2867419,
+        divider: encodeURIComponent("|"),
+        pagename: encodeURIComponent(
+          "2023-10-code.travail.gouv.fr-PageAccueil-ToutesPages"
+        ),
+        order: {
+          sv1: `${window.location.origin}${urlToTrack.url}`,
+        },
       });
+      (function () {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://s2.adform.net/banners/scripts/st/trackpoint-async.js";
+        var x: any = document.getElementsByTagName("script")[0];
+        x.parentNode.insertBefore(s, x);
+      })();
     }
   }, [urlToTrack, router.asPath]);
 
