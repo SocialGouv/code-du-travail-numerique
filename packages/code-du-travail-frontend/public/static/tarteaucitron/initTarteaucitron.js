@@ -162,7 +162,7 @@ tarteaucitron.user.gtagMore = function () {
           "2023-10-code.travail.gouv.fr-PageAccueil-ToutesPages"
         ),
         order: {
-          sv1: "<insert sv1 value here>",
+          sv1: `${location.origin}${URL_TRACKED[i].url}`,
         },
       });
       (function () {
