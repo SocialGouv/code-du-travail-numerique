@@ -144,8 +144,7 @@ tarteaucitron.init({
   readmoreLink:
     "/politique-confidentialite#cookie" /* Change the default readmore link */,
 });
-tarteaucitron.user.gtagUa = "DC-3048978";
-tarteaucitron.user.gtagMore = function () {
+tarteaucitron.user.adftrackMore = function () {
   // For DOM loading
   for (let i = 0; i < URL_TRACKED.length; i++) {
     if (URL_TRACKED[i].url === location.pathname) {
@@ -176,4 +175,4 @@ tarteaucitron.user.gtagMore = function () {
     }
   }
 };
-(tarteaucitron.job = tarteaucitron.job || []).push("gtag");
+(tarteaucitron.job = tarteaucitron.job || []).push("_adftrack");

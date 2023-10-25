@@ -21,7 +21,7 @@ export default function EventTracker(): JSX.Element {
   React.useEffect(() => {
     if (
       typeof window !== "undefined" &&
-      typeof (window as any).gtag !== "undefined" &&
+      typeof (window as any)._adftrack !== "undefined" &&
       urlToTrack
     ) {
       (window as any)._adftrack = Array.isArray((window as any)._adftrack)
