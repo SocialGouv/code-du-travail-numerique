@@ -2,7 +2,7 @@
 /*jslint regexp: true, nomen: true*/
 // google analytics
 tarteaucitron.services.adform = {
-  key: "_adftrack",
+  key: "adform",
   type: "analytic",
   name: "Google Analytics",
   uri: "https://support.google.com/analytics/answer/6004245",

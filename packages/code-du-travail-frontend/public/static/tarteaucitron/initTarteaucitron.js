@@ -161,4 +161,4 @@ tarteaucitron.user.adftrackMore = function () {
     }
   }
 };
-(tarteaucitron.job = tarteaucitron.job || []).push("_adftrack");
+(tarteaucitron.job = tarteaucitron.job || []).push("adform");
