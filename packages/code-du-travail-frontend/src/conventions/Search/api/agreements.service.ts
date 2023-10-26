@@ -42,11 +42,24 @@ const apiIdcc = function createFetcher(query) {
   }
   return fetch(url).then(async (response) => {
     if (response.ok) {
-      return response.json().then((results) => {
+      let result = await response.json().then((results) => {
         return results.hits.hits.map(({ _source }) =>
           formatCCn(_source)
         ) as Agreement[];
       });
+      const result3248 = result.find(({num}) => num === 3248);
+      if (!result3248) {
+        result = result.concat({
+          "url": "https://www.legifrance.gouv.fr/conv_coll/id/KALICONT000046993250",
+          "id": "KALICONT000046993250",
+          "num": 3248,
+          "shortTitle": "Convention collective nationale de la métallurgie",
+          "slug": "3248-convention-collective-nationale-de-la-metallurgie",
+          "title": "Convention collective nationale de la métallurgie",
+          "contributions": false
+      })
+      }
+      return result;
     }
     return Promise.reject(
       "Ce service est momentanément indisponible. Vous pouvez tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
