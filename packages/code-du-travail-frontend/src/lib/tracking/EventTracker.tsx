@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import React from "react";
-import Script from "next/script";
 
 import { URL_TRACKED } from "./constants";
 
@@ -38,12 +37,13 @@ export default function EventTracker(): JSX.Element {
     }
   }, [urlToTrack, router.asPath]);
 
-  if (!trackingEnabled) return <></>;
+  // if (!trackingEnabled) return <></>;
 
   return (
     <>
       {urlToTrack && (
-        <Script src="/static/tarteaucitron/initTarteaucitron.js" />
+        // eslint-disable-next-line @next/next/no-sync-scripts
+        <script src="/static/tarteaucitron/initTarteaucitron.js" />
       )}
     </>
   );
