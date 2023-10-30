@@ -56,7 +56,7 @@ test.each`
   ${6}
   ${24}
 `(
-  "Pour une employée avec une anciénneté de $seniority lors d'un départ à la retraite, on n'attend pas de notification",
+  "Pour une employée avec une ancienneté de $seniority lors d'un départ à la retraite, on attend une notification",
   ({ seniority }) => {
     engine.setSituation({
       "contrat salarié . ancienneté": seniority,
@@ -66,7 +66,7 @@ test.each`
     });
     const notifications = engine.getNotifications();
 
-    expect(notifications).toHaveLength(0);
+    expect(notifications).toHaveLength(1);
   }
 );
 
@@ -76,7 +76,7 @@ test.each`
   ${6}
   ${24}
 `(
-  "Pour une employée avec une anciénneté de $seniority lors d'une mise à la retraite, on n'attend pas de notification",
+  "Pour une employée avec une ancienneté de $seniority lors d'une mise à la retraite, on attend une notification",
   ({ seniority }) => {
     engine.setSituation({
       "contrat salarié . ancienneté": seniority,
@@ -86,6 +86,6 @@ test.each`
     });
     const notifications = engine.getNotifications();
 
-    expect(notifications).toHaveLength(0);
+    expect(notifications).toHaveLength(1);
   }
 );
