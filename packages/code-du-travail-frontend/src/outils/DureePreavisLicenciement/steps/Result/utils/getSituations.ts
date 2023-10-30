@@ -34,6 +34,7 @@ export const getSituations = (
         refUrl: agreementSituation.refUrl ?? undefined,
         ref2: agreementSituation.ref2,
         ref2Url: agreementSituation.ref2Url,
+        note: agreementSituation.note
       },
     };
   }
@@ -64,6 +65,7 @@ export const getSituations = (
       refUrl: agreementSituation.refUrl ?? undefined,
       ref2: agreementSituation.ref2,
       ref2Url: agreementSituation.ref2Url,
+      note: agreementSituation.note
     },
   };
 };
