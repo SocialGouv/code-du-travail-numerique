@@ -11,12 +11,6 @@ tarteaucitron.services.adform = {
   js: function () {
     "use strict";
     window.dataLayer = window.dataLayer || [];
-    tarteaucitron.addScript(
-      "https://s2.adform.net/banners/scripts/st/trackpoint-async.js",
-      "",
-      function () {
-        tarteaucitron.user.adftrackMore();
-      }
-    );
+    tarteaucitron.user.adftrackMore();
   },
 };
