@@ -157,14 +157,6 @@ const CookiePolicy = (): JSX.Element => {
               </thead>
               <tbody>
                 <tr>
-                  <td>Mesure d’audience</td>
-                  <td>Google Analytics</td>
-                  <td>13 mois</td>
-                  <td>Mesure d’audience et analyse comportementale</td>
-                  <td>Google</td>
-                  <td>Etats-Unis</td>
-                </tr>
-                <tr>
                   <td>Mesure d’audience anonymisée</td>
                   <td>Matomo</td>
                   <td>13 mois</td>
