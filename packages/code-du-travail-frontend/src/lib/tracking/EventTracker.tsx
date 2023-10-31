@@ -23,7 +23,6 @@ export default function EventTracker(): JSX.Element {
       typeof (window as any)._adftrack !== "undefined" &&
       urlToTrack
     ) {
-      console.log("coucou");
       (window as any)._adftrack.push({
         HttpHost: "server.adform.net",
         pm: 2867419,
