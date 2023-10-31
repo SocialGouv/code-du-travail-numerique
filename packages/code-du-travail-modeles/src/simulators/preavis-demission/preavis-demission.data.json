@@ -110,7 +110,8 @@
     },
     {
       "name": "anciennement cadre",
-      "question": "Le salarié était-il cadre dans son ancienne convention collective (avant le 01/01/2024) ?"
+      "question": "Le salarié était-il cadre dans l'ancienne convention collective de la métallurgie (avant le 01/01/2024) ?",
+      "note": "Si le salarié dépendait précédemment de la convention collective des ingénieurs et cadres de la métallurgie (IDCC 650) et qu’il est désormais classé non-cadre en raison de la nouvelle classification des emplois (depuis le 01/01/2024), il bénéficie quand même de la durée de préavis qui s’applique aux cadres."
     }
   ],
   "situations": [
