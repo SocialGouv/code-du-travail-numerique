@@ -157,6 +157,9 @@ exports[`<StepResult /> should render with duration 1`] = `
     >
       2 heures par jour
     </strong>
+    <sup
+      class="sc-gvZAcH cpmNvN"
+    />
     .
   </p>
   <h2
