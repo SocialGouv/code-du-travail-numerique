@@ -53,9 +53,8 @@ function Duration({ situation }) {
       </SmallText>
       )}
       {note && Array.isArray(note) && (
-        note.map((text, index) => <SmallText>
+        note.map((text, index) => <SmallText key={index}>
         <NoticeNote
-          key={index}
           numberOfElements={note.length}
           currentElement={index + 1}
         />
