@@ -45,7 +45,7 @@ export default function EventTracker(): JSX.Element {
     }
   }, [urlToTrack, router.asPath]);
 
-  // if (!trackingEnabled) return <></>;
+  if (!trackingEnabled) return <></>;
 
   return (
     <>
