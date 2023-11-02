@@ -164,6 +164,14 @@ const CookiePolicy = (): JSX.Element => {
                   <td>Matomo & Fabrique numérique</td>
                   <td>France</td>
                 </tr>
+                <tr>
+                  <td>Mesure d’audience</td>
+                  <td>Adform</td>
+                  <td>13 mois</td>
+                  <td>Mesure d’audience et analyse comportementale</td>
+                  <td>Adform</td>
+                  <td>Etats-Unis</td>
+                </tr>
               </tbody>
             </Table>
             <p>
@@ -184,9 +192,8 @@ const CookiePolicy = (): JSX.Element => {
             ) : (
               <p>
                 Seules certaines pages du site sont concernées par la mesure
-                d’audience et l’analyse comportementale avec Google Analytics et
-                vous n’avez visité aucune de ces pages. Aucun cookie Google
-                Analytics n’a donc été déposé sur votre terminal.
+                d’audience et l’analyse comportementale avec Adform et vous
+                n’avez visité aucune de ces pages.
               </p>
             )}
             <p>
