@@ -37,28 +37,13 @@ function Duration({ situation }) {
   return (
     <>
       <p>
-        {wording}&nbsp;: <HighlightResult>{situation.answer}</HighlightResult>
+        {wording}&nbsp;:<br/><HighlightResult>{situation.answer}</HighlightResult>
         <NoticeNote
           isList
           numberOfElements={Array.isArray(note) ? note.length : calculateNumberOfElements(note)}
         />
         .
-      </p>
-      {situation.answer2 && (
-        <>
-          <SectionTitle>
-            Rémunération pendant les heures d’absence autorisée
-          </SectionTitle>
-          <p>{situation.answer2}</p>
-        </>
-      )}
-      {situation.answer3 && (
-        <>
-          <SectionTitle>Conditions d’utilisation</SectionTitle>
-          <p>{situation.answer3}</p>
-        </>
-      )}
-      {note && !Array.isArray(note) && (
+        {note && !Array.isArray(note) && (
         <SmallText>
         <NoticeNote
           numberOfElements={calculateNumberOfElements(note)}
@@ -76,6 +61,21 @@ function Duration({ situation }) {
         />
         {text}
       </SmallText>)
+      )}
+      </p>
+      {situation.answer2 && (
+        <>
+          <SectionTitle>
+            Rémunération pendant les heures d’absence autorisée
+          </SectionTitle>
+          <p>{situation.answer2}</p>
+        </>
+      )}
+      {situation.answer3 && (
+        <>
+          <SectionTitle>Conditions d’utilisation</SectionTitle>
+          <p>{situation.answer3}</p>
+        </>
       )}
     </>
   );
