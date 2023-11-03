@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.112.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.111.0...v4.112.0) (2023-11-03)
+
+### Features
+
+- **sea:** ajout du bandeau tarteaucitron pour la campagne ([#5417](https://github.com/SocialGouv/code-du-travail-numerique/issues/5417)) ([83a0732](https://github.com/SocialGouv/code-du-travail-numerique/commit/83a07328f2b1ac68a859dfaaf03825afa43822ff))
+
 # [4.111.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.110.0...v4.111.0) (2023-10-23)
 
 ### Bug Fixes
