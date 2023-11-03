@@ -3179,7 +3179,8 @@
     {
       "criteria": {
         "initiative de la rupture de la période d'essai": "1| L'employeur",
-        "ancienneté": "48| moins d’un mois"
+        "ancienneté": "48| moins d’un mois",
+        "forfait jour": "1| Oui"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 3248,
@@ -3189,6 +3190,22 @@
       "answer3": "il n'y a pas d'heures d'absence autorisée pour rechercher un emploi pour ce cas.",
       "ref": "Article 70.5.3.2",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314504?idConteneur=KALICONT000046993250#KALIARTI000046314504",
+      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+    },
+    {
+      "criteria": {
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
+        "ancienneté": "48| moins d’un mois",
+        "forfait jour": "2| Non"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 3248,
+      "typeRupture": "7| Rupture de la période d'essai",
+      "answer": null,
+      "answer2": null,
+      "answer3": "il n'y a pas d'heures d'absence autorisée pour rechercher un emploi pour ce cas.",
+      "ref": "Article 70.5.3.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314503?idConteneur=KALICONT000046993250#KALIARTI000046314503",
       "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
     },
     {
@@ -3234,7 +3251,9 @@
       "answer2": null,
       "answer3": "il n'y a pas d'heures d'absence lorsque la rupture de la période d'essai est à l'initiative du salarié.",
       "ref": "Article 70.5.3.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314504?idConteneur=KALICONT000046993250#KALIARTI000046314504",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314503?idConteneur=KALICONT000046993250#KALIARTI000046314503",
+      "ref2": "Article 70.5.3.2",
+      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314504?idConteneur=KALICONT000046993250#KALIARTI000046314504",
       "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
     },
     {

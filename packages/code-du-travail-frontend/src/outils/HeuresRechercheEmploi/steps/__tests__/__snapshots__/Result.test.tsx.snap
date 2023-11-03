@@ -153,11 +153,12 @@ exports[`<StepResult /> should render with duration 1`] = `
      :
     <br />
     <strong
-      class="sc-kqGoIF eBNOvs"
+      class="sc-kqGoIF daJQrR"
       role="alert"
     >
       2 heures par jour
     </strong>
+     
     <sup
       class="sc-gvZAcH cpmNvN"
     />

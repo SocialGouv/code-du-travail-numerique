@@ -38,6 +38,7 @@ function Duration({ situation }) {
     <>
       <p>
         {wording}&nbsp;:<br/><HighlightResult>{situation.answer}</HighlightResult>
+        &nbsp;
         <NoticeNote
           isList
           numberOfElements={Array.isArray(note) ? note.length : calculateNumberOfElements(note)}

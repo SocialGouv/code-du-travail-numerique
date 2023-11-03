@@ -8,7 +8,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
     Durée du préavis
   </h2>
   <strong
-    class="sc-dExYaf fmRwFa"
+    class="sc-dExYaf jfKxvr"
     role="alert"
   >
     Aucun préavis
@@ -206,7 +206,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-dExYaf fmRwFa"
+      class="sc-dExYaf jfKxvr"
       role="alert"
     >
       1 mois
@@ -437,7 +437,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-dExYaf fmRwFa"
+      class="sc-dExYaf jfKxvr"
       role="alert"
     >
       1 mois
@@ -668,7 +668,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-dExYaf fmRwFa"
+      class="sc-dExYaf jfKxvr"
       role="alert"
     >
       2 mois
@@ -848,7 +848,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-dExYaf fmRwFa"
+      class="sc-dExYaf jfKxvr"
       role="alert"
     >
       2 mois
