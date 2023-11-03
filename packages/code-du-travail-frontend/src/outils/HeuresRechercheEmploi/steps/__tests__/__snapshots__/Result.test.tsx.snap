@@ -150,7 +150,8 @@ exports[`<StepResult /> should render with duration 1`] = `
   </h2>
   <p>
     D’après les éléments saisis, durant son préavis, le salarié peut s’absenter pour rechercher un emploi pendant
-     : 
+     :
+    <br />
     <strong
       class="sc-kqGoIF eBNOvs"
       role="alert"
