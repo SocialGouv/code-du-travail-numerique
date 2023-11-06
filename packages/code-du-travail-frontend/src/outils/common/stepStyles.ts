@@ -33,7 +33,7 @@ export const HighlightResult = styled.strong.attrs(() => ({
 }))`
   color: ${({ theme }) => theme.primary};
   font-weight: 700;
-  font-size: ${fonts.sizes.headings.xmedium};
+  font-size: ${fonts.sizes.headings.small};
   white-space: pre-line;
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.medium};
