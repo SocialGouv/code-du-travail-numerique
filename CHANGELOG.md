@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.113.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.112.0...v4.113.0) (2023-11-10)
+
+### Features
+
+- **redirect:** ajout d'une redirection sur une fiche SP ([6f73be3](https://github.com/SocialGouv/code-du-travail-numerique/commit/6f73be3fca97d3c4f1e901b2e2b84194ac1c8387))
+
 # [4.112.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.111.0...v4.112.0) (2023-11-03)
 
 ### Features
