@@ -525,6 +525,16 @@
     "permanent": true
   },
   {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1375-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1809-:slug",
+    "permanent": true
+  },
+  {
     "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
     "source": "/convention-collective/54-:slug",
     "permanent": true
@@ -907,6 +917,16 @@
   {
     "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
     "source": "/convention-collective/3053-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1375-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1809-:slug",
     "permanent": true
   }
 ]
