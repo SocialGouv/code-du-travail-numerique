@@ -1,0 +1,34 @@
+name: Debug kube
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "feat/**"
+      - "fix/**"
+
+      
+jobs:
+  dump:
+    name: Debug kubeconfig
+    runs-on: ubuntu-latest
+    steps:
+    - uses: azure/setup-kubectl@v3
+    - name: extract kubeconfig
+      run: |
+        echo -n "${{secrets.KUBECONFIG}}" | base64 --decode > kubeconfig
+    - name: list kube data
+      run: |
+        KUBECONFIG=./kubeconfig kubectl config get-contexts
+  dump-prod:
+    name: Debug kubeconfig production
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+    - uses: azure/setup-kubectl@v3
+    - name: extract kubeconfig
+      run: |
+        echo -n "${{secrets.KUBECONFIG}}" | base64 --decode > kubeconfig
+    - name: list kube data
+      run: |
+        KUBECONFIG=./kubeconfig kubectl config get-contexts
