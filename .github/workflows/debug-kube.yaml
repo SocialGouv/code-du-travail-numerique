@@ -6,8 +6,8 @@ on:
     branches:
       - "feat/**"
       - "fix/**"
-
-      
+    paths:
+      - ".github/workflows/**"
 jobs:
   dump:
     name: Debug kubeconfig
