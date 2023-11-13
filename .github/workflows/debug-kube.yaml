@@ -3,9 +3,9 @@ name: Debug kube
 on:
   workflow_dispatch:
   push:
-    branches:
-      - "feat/**"
-      - "fix/**"
+   # branches:
+   #   - "feat/**"
+   #   - "fix/**"
     paths:
       - ".github/workflows/**"
 jobs:
