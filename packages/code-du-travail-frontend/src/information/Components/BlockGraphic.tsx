@@ -1,12 +1,11 @@
 import { toUrl } from "../../lib";
-import { processToHtml } from "../htmlProcess.service";
 import ImageWrapper from "../../common/ImageWrapper";
 
 import {
-  icons,
-  theme,
   Button,
+  icons,
   MoreContent,
+  theme,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
@@ -30,7 +29,10 @@ export const BlockGraphic = ({ block }) => {
         </Button>
       </DownloadWrapper>
       <MoreContent noLeftPadding title="Voir en détail">
-        <Wrapper variant="dark">{processToHtml(htmlGraphic)}</Wrapper>
+        <Wrapper
+          variant="dark"
+          dangerouslySetInnerHTML={{ __html: htmlGraphic }}
+        ></Wrapper>
       </MoreContent>
     </>
   );

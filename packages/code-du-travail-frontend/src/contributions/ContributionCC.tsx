@@ -1,4 +1,5 @@
 import { Agreement, getLabelBySource } from "@socialgouv/cdtn-utils";
+
 import {
   Alert,
   Badge,
@@ -16,7 +17,6 @@ import {
 import React from "react";
 import styled from "styled-components";
 
-import Mdx from "../../src/common/Mdx";
 import SearchConvention from "../../src/conventions/Search";
 import { A11yLink } from "../common/A11yLink";
 import Html from "../common/Html";
@@ -112,12 +112,7 @@ const ContributionCC = ({ answers, content, slug }) => {
                             </Paragraph>
                           </StyledAlert>
                         )}
-                      <MdxWrapper>
-                        <Mdx
-                          markdown={conventionAnswer.markdown}
-                          components={rehypeToReact}
-                        />
-                      </MdxWrapper>
+                      {rehypeToReact(conventionAnswer.content)}
 
                       <ReferencesJuridiques
                         references={conventionAnswer.references}
@@ -240,10 +235,8 @@ const ContributionCC = ({ answers, content, slug }) => {
             </Meta>
           )}
 
-          <Mdx
-            markdown={answers.generic.markdown}
-            components={rehypeToReact(content)}
-          />
+          {rehypeToReact(content)}
+
           {slug === "quelle-est-la-duree-de-preavis-en-cas-de-licenciement" &&
             !conventionAnswer && (
               <Alert>

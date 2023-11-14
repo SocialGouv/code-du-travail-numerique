@@ -2,8 +2,6 @@ import { Agreement, getLabelBySource } from "@socialgouv/cdtn-utils";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { push as matopush } from "@socialgouv/matomo-next";
-
-import Mdx from "../../src/common/Mdx";
 import { A11yLink } from "../common/A11yLink";
 import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
@@ -306,11 +304,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
             {content.date && <span>Mis à jour le&nbsp;: {content.date}</span>}
           </Meta>
         )}
-
-        <Mdx
-          markdown={answers.generic.markdown}
-          components={rehypeToReact(content)}
-        />
+        {rehypeToReact(content)}
         <Alert>
           <Heading as="p">Texte applicable</Heading>
           <p>

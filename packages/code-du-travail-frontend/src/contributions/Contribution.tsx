@@ -17,7 +17,6 @@ import {
 import React from "react";
 import styled from "styled-components";
 
-import Mdx from "../../src/common/Mdx";
 import SearchConvention from "../../src/conventions/Search";
 import { A11yLink } from "../common/A11yLink";
 import Html from "../common/Html";
@@ -108,10 +107,7 @@ const Contribution = ({ answers, content }) => {
               {content.date && <span>Mis à jour le&nbsp;: {content.date}</span>}
             </Meta>
           )}
-          <Mdx
-            markdown={answers.generic.markdown}
-            components={rehypeToReact(content)}
-          />
+          {rehypeToReact(content)}
           <ReferencesJuridiques
             references={filteredRefs(answers?.generic?.references, content.url)}
           />
@@ -175,13 +171,7 @@ const Contribution = ({ answers, content }) => {
                           </Paragraph>
                         </StyledAlert>
                       )}
-                    <MdxWrapper>
-                      <Mdx
-                        markdown={conventionAnswer.markdown}
-                        components={rehypeToReact}
-                      />
-                    </MdxWrapper>
-
+                    {rehypeToReact(conventionAnswer.content)}
                     <ReferencesJuridiques
                       references={conventionAnswer.references}
                     />
