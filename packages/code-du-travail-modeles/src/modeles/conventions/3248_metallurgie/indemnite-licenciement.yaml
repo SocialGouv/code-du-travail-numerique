@@ -25,6 +25,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour:
   titre: Le salarié est au forfait jour
   question: Le salarié est-il au forfait jour&nbsp;?
+  description: Le dispositif du forfait en jours permet de rémunérer certains salariés sur la base d’un nombre de jours travaillés annuellement, sans décompte du temps de travail. Les salariés disposent d’une grande liberté pour organiser leur emploi du temps.
   cdtn:
     type: oui-non
 
@@ -37,8 +38,8 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour . date:
   applicable si: toujours au forfait jour = 'Non'
-  titre: Le salarié est au forfait jour depuis le
-  question: Depuis quand le salarié est-il au forfait jour&nbsp;?
+  titre: Date du passage au forfait jour du salarié
+  question: A quelle date le salarié est-il passé au forfait jour&nbsp;?
   cdtn:
     type: date
 
@@ -48,9 +49,9 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
       - toujours au forfait jour = 'Oui'
       - forfait jour . date
       - forfait jour = 'Non'
-  titre: Le salarié a été antérieurement classé « cadres » dans l’entreprise
+  titre: Le salarié était cadre dans l'ancienne convention collective de la métallurgie (avant le 01/01/2024)
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
-  question: Le salarié a-t-il été antérieurement classé « cadres » dans l’entreprise&nbsp;?
+  question: Le salarié était-il cadre dans l'ancienne convention collective de la métallurgie (avant le 01/01/2024)&nbsp;?
   cdtn:
     type: oui-non
 
