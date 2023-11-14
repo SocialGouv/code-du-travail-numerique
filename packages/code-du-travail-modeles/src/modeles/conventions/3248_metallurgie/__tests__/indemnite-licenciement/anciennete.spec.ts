@@ -20,8 +20,37 @@ describe("CC 3248", () => {
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
-          categoriePro: "E,F,G,H",
+          categoriePro: "'FGHI'",
           dateEntree: entryDate,
+          dateSortie: exitDate,
+          hasBeenDayContract: false,
+        });
+
+        expect(result.value).toEqual(expectedAnciennete);
+      }
+    );
+  });
+
+  describe("Calcul de l'ancienneté requise pour les groupes A,B,C,D,E (pas au forfait jour)", () => {
+    test.each`
+      absences                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | entryDate       | exitDate        | expectedAnciennete
+      ${[]}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
+      ${[{ durationInMonth: 1, motif: { key: MotifKeys.maladieNonPro } }]}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
+      ${[{ durationInMonth: 12, motif: { key: MotifKeys.maladieNonPro } }]}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | ${"20/02/2020"} | ${"20/02/2025"} | ${5}
+      ${[{ durationInMonth: 13, motif: { key: MotifKeys.maladieNonPro } }]}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | ${"20/02/2020"} | ${"20/02/2025"} | ${3.9166666666666665}
+      ${[{ durationInMonth: 1, motif: { key: MotifKeys.maladieNonPro } }, { durationInMonth: 1, motif: { key: MotifKeys.accidentTrajet } }, { durationInMonth: 1, motif: { key: MotifKeys.congesSabbatique } }, { durationInMonth: 1, motif: { key: MotifKeys.congesCreationEntreprise } }, { durationInMonth: 1, motif: { key: MotifKeys.congesParentalEducation } }, { durationInMonth: 1, motif: { key: MotifKeys.congesSansSolde } }, { durationInMonth: 1, motif: { key: MotifKeys.greve } }, { durationInMonth: 1, motif: { key: MotifKeys.miseAPied } }]} | ${"20/02/2020"} | ${"20/02/2025"} | ${5}
+    `(
+      "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
+      ({ absences, entryDate, exitDate, expectedAnciennete }) => {
+        const seniority = new SeniorityFactory().create(
+          SupportedCcIndemniteLicenciement.IDCC3248
+        );
+
+        const result = seniority.computeRequiredSeniority({
+          absencePeriods: absences,
+          categoriePro: "'ABCDE'",
+          dateEntree: entryDate,
+          dateNotification: exitDate,
           dateSortie: exitDate,
           hasBeenDayContract: false,
         });
@@ -48,7 +77,7 @@ describe("CC 3248", () => {
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
-          categoriePro: "A,B,C,D,E",
+          categoriePro: "'ABCDE'",
           dateEntree: entryDate,
           dateSortie: exitDate,
           hasBeenDayContract: false,
@@ -76,7 +105,7 @@ describe("CC 3248", () => {
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
-          categoriePro: "A,B,C,D,E",
+          categoriePro: "'ABCDE'",
           dateEntree: entryDate,
           dateSortie: exitDate,
           hasBeenDayContract: true,
@@ -103,7 +132,7 @@ describe("CC 3248", () => {
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
-          categoriePro: "A,B,C,D,E",
+          categoriePro: "'ABCDE'",
           dateBecomeDayContract: "20/02/2022",
           dateEntree: entryDate,
           dateSortie: exitDate,

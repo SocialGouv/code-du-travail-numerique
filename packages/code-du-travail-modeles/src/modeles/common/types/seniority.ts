@@ -3,6 +3,7 @@ import type {
   CC0413SeniorityProps,
   CC1672SeniorityProps,
   CC3248SeniorityProps,
+  CC3248SeniorityRequiredProps,
 } from "../../conventions";
 import type { MotifKeys } from "../motif-keys";
 import type {
@@ -32,12 +33,15 @@ export type Motif = {
 export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
   computeSeniority: (args: SeniorityProps<T>) => SeniorityResult;
   computeRequiredSeniority: (
-    args: SeniorityRequiredProps
+    args: SeniorityRequiredProps<T>
   ) => RequiredSeniorityResult;
   getMotifs: () => Motif[];
 }
 
-export type SeniorityRequiredProps = DefaultSeniorityRequiredProps;
+export type SeniorityRequiredProps<T> =
+  T extends SupportedCcIndemniteLicenciement.IDCC3248
+    ? CC3248SeniorityRequiredProps
+    : DefaultSeniorityRequiredProps;
 
 export type SeniorityProps<T> =
   T extends SupportedCcIndemniteLicenciement.IDCC0016

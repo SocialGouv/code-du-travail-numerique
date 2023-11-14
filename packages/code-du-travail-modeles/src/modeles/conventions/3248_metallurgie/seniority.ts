@@ -4,6 +4,7 @@ import { LEGAL_MOTIFS } from "../../base";
 import type {
   Absence,
   DefaultSeniorityProps,
+  DefaultSeniorityRequiredProps,
   Motif,
   RequiredSeniorityResult,
   SeniorityProps,
@@ -16,6 +17,12 @@ import { accumulateAbsenceByYear, parseDate } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
 
 export type CC3248SeniorityProps = DefaultSeniorityProps & {
+  categoriePro: "'ABCDE'" | "'FGHI'";
+  hasBeenDayContract: boolean;
+  dateBecomeDayContract?: string;
+};
+
+export type CC3248SeniorityRequiredProps = DefaultSeniorityRequiredProps & {
   categoriePro: "'ABCDE'" | "'FGHI'";
   hasBeenDayContract: boolean;
   dateBecomeDayContract?: string;
@@ -52,8 +59,22 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
     dateEntree,
     dateNotification,
     absencePeriods = [],
-  }: SeniorityRequiredProps): RequiredSeniorityResult {
-    return this.computeFGHI(dateEntree, dateNotification);
+    categoriePro,
+    hasBeenDayContract,
+    dateBecomeDayContract,
+  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC3248>): RequiredSeniorityResult {
+    switch (categoriePro) {
+      case "'ABCDE'":
+        return this.computeABCDE(
+          dateEntree,
+          dateNotification,
+          absencePeriods,
+          hasBeenDayContract,
+          dateBecomeDayContract
+        );
+      case "'FGHI'":
+        return this.computeFGHI(dateEntree, dateNotification);
+    }
   }
 
   protected computeFGHI(from: string, to: string): SeniorityResult {

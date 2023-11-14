@@ -12,7 +12,7 @@ export class Seniority1606 extends SeniorityDefault<SupportedCcIndemniteLicencie
     dateEntree,
     dateSortie,
     absencePeriods = [],
-  }: SeniorityRequiredProps): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.default>): RequiredSeniorityResult {
     return this.compute(dateEntree, dateSortie, absencePeriods);
   }
 

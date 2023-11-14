@@ -65,9 +65,19 @@ export const getAgreementRequiredSeniority = (
     absencePeriods,
   };
 
-  return new SeniorityFactory()
-    .create(idcc)
-    .computeRequiredSeniority(defaultValues);
+  switch (true) {
+    case SupportedCcIndemniteLicenciement.IDCC3248 === idcc:
+      return new AgreementSeniority3248().computeSeniority({
+        ...defaultValues,
+        dateSortie: dateNotification,
+        get,
+      });
+    default: {
+      return new SeniorityFactory()
+        .create(idcc)
+        .computeRequiredSeniority(defaultValues);
+    }
+  }
 };
 
 export interface AgreementSeniority {
