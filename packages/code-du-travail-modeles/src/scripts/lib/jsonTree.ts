@@ -42,15 +42,13 @@ function criteriaToArray(questions: Question[], situation: SituationHeuresRecher
 
   function mergeNodes(question1: TreeQuestion, question2: TreeQuestion): TreeQuestion {
     if (question1.text !== question2.text) {
-      return question1;
+      return question2;
     }
     let foundOption = question1.options.find(({text}) => text === question2.options[0].text);
     if (!foundOption) {
       question1.options.push(question2.options[0]);
-    } else {
-      if (foundOption?.nextQuestion && question2.options[0].nextQuestion) {
-        foundOption.nextQuestion = mergeNodes(foundOption.nextQuestion, question2.options[0].nextQuestion);
-      }
+    } else if (foundOption?.nextQuestion && question2.options[0].nextQuestion) {
+      foundOption.nextQuestion = mergeNodes(foundOption.nextQuestion, question2.options[0].nextQuestion);
     }
     return question1;
   }

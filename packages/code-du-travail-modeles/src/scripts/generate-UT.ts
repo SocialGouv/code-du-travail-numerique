@@ -109,17 +109,18 @@ function generatePreavisLicenciementTree() {
 }
 
 async function main() {
-  // const hre = generateHeureRechercheEmploiTree();
-  // await generateTestFiles(hre, "HeuresRechercheEmploi", "/home/victor/Workspace/dnum/code-du-travail-numerique/packages/code-du-travail-frontend/src/outils/HeuresRechercheEmploi/__tests__/agreements");
+  if (process.argv.length < 3) {
+    throw new Error("missing argument 'path'")
+  }
+  const path = process.argv[2];
+  const hre = generateHeureRechercheEmploiTree();
+  await generateTestFiles(hre, "HeuresRechercheEmploi", `${path}/src/outils/HeuresRechercheEmploi/__tests__/agreements`);
 
-  // const dpd = generatePreavisDemissionTree();
-  // await generateTestFiles(dpd, "DureePreavisDemission", "/home/victor/Workspace/dnum/code-du-travail-numerique/packages/code-du-travail-frontend/src/outils/DureePreavisDemission/__tests__/agreements");
+  const dpd = generatePreavisDemissionTree();
+  await generateTestFiles(dpd, "DureePreavisDemission", `${path}/src/outils/DureePreavisDemission/__tests__/agreements`);
 
   const dpl = generatePreavisLicenciementTree();
-  fs.writeFile(`${__dirname}/preavisLicenciement.json`, JSON.stringify(dpl), function (err) {
-    if (err) throw err;
-  });
-  // await generateTestFiles(dpl, "DureePreavisLicenciement", "/home/victor/Workspace/dnum/code-du-travail-numerique/packages/code-du-travail-frontend/src/outils/DureePreavisLicenciement/__tests__/agreements");
+  await generateTestFiles(dpl, "DureePreavisLicenciement", `${path}/src/outils/DureePreavisLicenciement/__tests__/agreements`);
 }
 
 main();

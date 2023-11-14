@@ -120,7 +120,7 @@
       "typeRupture": null,
       "answer": "1 mois",
       "answer2": null,
-      "answer3": null,
+      "answer3": "30",
       "ref": "Article 46",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C82F1F97F72A0703119C7E8E78BB85F7.tpdila10v_3?idArticle=KALIARTI000005786645&cidTexte=KALITEXT000005652402&dateTexte=20090818"
     },
@@ -133,7 +133,7 @@
       "typeRupture": null,
       "answer": "2 mois",
       "answer2": null,
-      "answer3": null,
+      "answer3": "60",
       "ref": "Article 46",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C82F1F97F72A0703119C7E8E78BB85F7.tpdila10v_3?idArticle=KALIARTI000005786645&cidTexte=KALITEXT000005652402&dateTexte=20090818"
     },
@@ -6958,8 +6958,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "38| Moins de 2 ans",
-        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
+        "ancienneté": "38| Moins de 2 ans"
       },
       "type": "préavis de Licenciement",
       "idcc": 2420,
