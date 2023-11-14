@@ -69,7 +69,6 @@ function getIdccQuestion(question: TreeQuestion): TreeQuestion | null {
   
 function generateTest(question: TreeQuestion, componentName: string): {filename: string; content: string}[] {
   const idccQuestion = getIdccQuestion(question);
-  // console.log("generateActionsUntilIdcc", generateActionsUntilIdcc(question));
   if (!idccQuestion) {
     return [];
   }
