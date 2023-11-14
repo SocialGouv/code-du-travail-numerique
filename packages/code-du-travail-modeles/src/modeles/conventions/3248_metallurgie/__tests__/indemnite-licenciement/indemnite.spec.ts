@@ -66,8 +66,18 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
   describe("Groupe A,B,C,D,E (jamais cadre)", () => {
     test.each([
       {
+        expectedCompensation: 0,
+        expectedFormula: "",
+        expectedReferences: [],
+        notificationDate: "31/12/2023",
+        refSalary: 2500,
+        seniority: 8 / 12,
+        seniorityRight: 8 / 12,
+      },
+      {
         expectedCompensation: 416.67,
         expectedFormula: "(1/4 * Sref * A1) + (1/3 * Sref * A2)",
+        expectedReferences: expectedReferencesGroupeABBCDEFNonCadre,
         notificationDate: "01/01/2024",
         refSalary: 2500,
         seniority: 8 / 12,
@@ -79,6 +89,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         seniorityRight,
         notificationDate,
         expectedCompensation,
+        expectedReferences,
         seniority,
         expectedFormula,
         refSalary,
@@ -112,18 +123,24 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         expect(formule.formula).toEqual(expectedFormula);
 
         const references = engine.getReferences("résultat conventionnel");
-        expect(references).toHaveLength(
-          expectedReferencesGroupeABBCDEFNonCadre.length
-        );
-        expect(references).toEqual(
-          expect.arrayContaining(expectedReferencesGroupeABBCDEFNonCadre)
-        );
+        expect(references).toHaveLength(expectedReferences.length);
+        expect(references).toEqual(expect.arrayContaining(expectedReferences));
       }
     );
   });
 
   describe("Groupe A,B,C,D,E (cadre)", () => {
     test.each([
+      {
+        age: 30,
+        expectedCompensation: 0,
+        expectedFormula: "",
+        expectedReferences: [],
+        notificationDate: "31/12/2023",
+        refSalary: 2000,
+        seniority: 20,
+        seniorityRight: 20,
+      },
       {
         age: 30,
         expectedCompensation: 18400,
@@ -197,6 +214,18 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
 
   describe("Groupe FGHI", () => {
     test.each([
+      {
+        age: 30,
+        expectedCompensation: 0,
+        expectedFormula: "",
+        expectedFormulaExplanations: [],
+        expectedRefs: [],
+        notificationDate: "31/12/2023",
+        refSalary: 2000,
+        retirementRight: undefined,
+        seniority: 4,
+        seniorityRight: 8 / 12,
+      },
       {
         age: 30,
         expectedCompensation: 2000,
