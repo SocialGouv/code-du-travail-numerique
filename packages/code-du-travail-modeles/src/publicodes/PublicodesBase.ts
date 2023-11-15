@@ -146,6 +146,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
       }
     });
 
+    console.log("Update situation: ", newSituation);
     const result = this.handleExecute(newSituation, targetRule);
 
     if (!result)

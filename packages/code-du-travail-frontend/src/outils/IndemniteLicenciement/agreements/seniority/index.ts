@@ -11,6 +11,7 @@ import { AgreementSeniority16 } from "./16";
 import { AgreementSeniority413 } from "./413";
 import { AgreementSeniority1672 } from "./1672";
 import { AgreementSeniority3248 } from "./3248";
+import { AgreementSeniority650 } from "./650";
 
 export const getAgreementSeniority = (
   idcc: SupportedCcIndemniteLicenciement | null,
@@ -42,6 +43,11 @@ export const getAgreementSeniority = (
         ...defaultValues,
         get,
       });
+    case SupportedCcIndemniteLicenciement.IDCC650 === idcc:
+      return new AgreementSeniority650().computeSeniority({
+        ...defaultValues,
+        get,
+      });
     default: {
       return new SeniorityFactory()
         .create(idcc)
@@ -68,6 +74,12 @@ export const getAgreementRequiredSeniority = (
   switch (true) {
     case SupportedCcIndemniteLicenciement.IDCC3248 === idcc:
       return new AgreementSeniority3248().computeSeniority({
+        ...defaultValues,
+        dateSortie: dateNotification,
+        get,
+      });
+    case SupportedCcIndemniteLicenciement.IDCC650 === idcc:
+      return new AgreementSeniority650().computeSeniority({
         ...defaultValues,
         dateSortie: dateNotification,
         get,

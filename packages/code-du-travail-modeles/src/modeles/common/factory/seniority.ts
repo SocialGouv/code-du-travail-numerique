@@ -64,7 +64,7 @@ export class SeniorityFactory {
       case SupportedCcIndemniteLicenciement.IDCC3239:
         return new Seniority3239();
       case SupportedCcIndemniteLicenciement.IDCC650:
-        return new Seniority650();
+        return new Seniority650() as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.IDCC2216:
         return new Seniority2216();
       case SupportedCcIndemniteLicenciement.IDCC0044:

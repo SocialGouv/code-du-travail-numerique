@@ -63,7 +63,6 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . non cadre . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . date de notification >= 01/01/2024
   somme:
     - contrat salarié . indemnité de licenciement . facteur dix ans ou moins cc
     - contrat salarié . indemnité de licenciement . facteur plus de dix ans cc
@@ -87,7 +86,6 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . date de notification >= 01/01/2024
   le maximum de:
     - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel défault
     - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul
@@ -131,7 +129,6 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . date de notification >= 01/01/2024
   valeur: contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul:

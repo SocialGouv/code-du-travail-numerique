@@ -1,6 +1,8 @@
 import type {
   CC0016SeniorityProps,
   CC0413SeniorityProps,
+  CC650SeniorityProps,
+  CC650SeniorityRequiredProps,
   CC1672SeniorityProps,
   CC3248SeniorityProps,
   CC3248SeniorityRequiredProps,
@@ -41,6 +43,8 @@ export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
 export type SeniorityRequiredProps<T> =
   T extends SupportedCcIndemniteLicenciement.IDCC3248
     ? CC3248SeniorityRequiredProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC650
+    ? CC650SeniorityRequiredProps
     : DefaultSeniorityRequiredProps;
 
 export type SeniorityProps<T> =
@@ -52,6 +56,8 @@ export type SeniorityProps<T> =
     ? CC1672SeniorityProps
     : T extends SupportedCcIndemniteLicenciement.IDCC3248
     ? CC3248SeniorityProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC650
+    ? CC650SeniorityProps
     : DefaultSeniorityProps;
 
 export type SeniorityResult = {
