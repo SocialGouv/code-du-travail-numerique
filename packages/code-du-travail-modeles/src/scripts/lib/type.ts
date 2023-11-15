@@ -8,7 +8,7 @@ export type CriteriaItem = {
   name: string;
   option: string;
   note?: string;
-  type: "select" | "radio" | "agreement";
+  type: "agreement" | "radio" | "select";
 };
 
 export type OptionResult = {
@@ -21,7 +21,7 @@ export type OptionResult = {
 
 export type TreeOption = {
   text: string;
-  type: "select" | "radio" | "agreement";
+  type: "agreement" | "radio" | "select";
   nextQuestion?: TreeQuestion;
   result?: OptionResult;
 };

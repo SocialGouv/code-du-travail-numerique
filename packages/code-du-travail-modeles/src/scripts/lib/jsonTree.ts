@@ -1,35 +1,34 @@
-import {
+import type {
   Question,
-  SituationHeuresRechercheEmploi,
   Situation,
+  SituationHeuresRechercheEmploi,
 } from "../../simulators/types";
-
-import { CriteriaItem, CriteriaContainer, TreeQuestion } from "./type";
+import type { CriteriaContainer, CriteriaItem, TreeQuestion } from "./type";
 
 type GenerateTreeProps = {
-  situations: (SituationHeuresRechercheEmploi | Situation)[];
+  situations: (Situation | SituationHeuresRechercheEmploi)[];
   questions: Question[];
   prependCriteria?: (
-    situation: SituationHeuresRechercheEmploi | Situation
+    situation: Situation | SituationHeuresRechercheEmploi
   ) => CriteriaItem[];
   appendCriteria?: (
-    situation: SituationHeuresRechercheEmploi | Situation
+    situation: Situation | SituationHeuresRechercheEmploi
   ) => CriteriaItem[];
-  getResult: (situation: SituationHeuresRechercheEmploi | Situation) => any;
+  getResult: (situation: Situation | SituationHeuresRechercheEmploi) => any;
 };
 
 function criteriaToArray(
   questions: Question[],
-  situation: SituationHeuresRechercheEmploi | Situation
+  situation: Situation | SituationHeuresRechercheEmploi
 ): CriteriaItem[] {
   return questions.reduce<CriteriaItem[]>((arr, { question, name, note }) => {
-    if (!!situation.criteria[name]) {
+    if (situation.criteria[name]) {
       const option = situation.criteria[name] ?? "";
       arr.push({
-        question,
         name: `criteria.${name}`,
-        option,
         note,
+        option,
+        question,
         type: "select",
       });
     }
@@ -39,27 +38,26 @@ function criteriaToArray(
 }
 
 function populateNode({ result, criterias }: CriteriaContainer): TreeQuestion {
-  const { question, option, note, name, type } =
-    criterias.shift() as CriteriaItem;
+  const { question, option, note, name, type } = criterias.shift()!;
   return {
     name,
-    text: question,
     note: note,
     options: criterias.length
       ? [
           {
+            nextQuestion: populateNode({ criterias, result }),
             text: option,
-            nextQuestion: populateNode({ result, criterias }),
             type,
           },
         ]
       : [
           {
-            text: option,
             result,
+            text: option,
             type,
           },
         ],
+    text: question,
   };
 }
 
@@ -70,12 +68,12 @@ function mergeNodes(
   if (question1.text !== question2.text) {
     return question2;
   }
-  let foundOption = question1.options.find(
+  const foundOption = question1.options.find(
     ({ text }) => text === question2.options[0].text
   );
   if (!foundOption) {
     question1.options.push(question2.options[0]);
-  } else if (foundOption?.nextQuestion && question2.options[0].nextQuestion) {
+  } else if (foundOption.nextQuestion && question2.options[0].nextQuestion) {
     foundOption.nextQuestion = mergeNodes(
       foundOption.nextQuestion,
       question2.options[0].nextQuestion
@@ -102,8 +100,8 @@ export function generateTree({
         ...appendCriterias,
       ];
       arr.push({
+        criterias: criterias,
         result: getResult(situation),
-        criterias: criterias as CriteriaItem[],
       });
       return arr;
     },

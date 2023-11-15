@@ -1,49 +1,49 @@
 import { heuresRechercheEmploiData } from "../simulators/heure-recherche-emploi";
 import { preavisDemissionData } from "../simulators/preavis-demission";
 import { preavisLicenciementData } from "../simulators/preavis-licenciement";
-import { SituationHeuresRechercheEmploi } from "../simulators/types";
-import { generateTree, generateTestFiles } from "./lib";
+import type { SituationHeuresRechercheEmploi } from "../simulators/types";
+import { generateTestFiles, generateTree } from "./lib";
 
 function generateHeureRechercheEmploiTree() {
   const situations = heuresRechercheEmploiData.situations;
   const questions = heuresRechercheEmploiData.questions;
   return generateTree({
-    situations,
-    questions,
+    getResult: ({ answer, answer2, answer3, ref, refUrl, ref2, ref2Url }) => ({
+      refs: [
+        { label: ref, url: refUrl },
+        ...(ref2 ? [{ label: ref2, url: ref2Url }] : []),
+      ],
+      texts: answer
+        ? [
+            answer.replace(/\n/g, " ").replace(/ {2}/g, " ").trim(),
+            answer2?.replace(/\n/g, " ").replace(/ {2}/g, " ").trim(),
+            answer3?.replace(/\n/g, " ").replace(/ {2}/g, " ").trim(),
+          ]
+        : [
+            "D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.",
+          ],
+    }),
     prependCriteria: (situation) => {
       const { idcc, typeRupture, type } =
         situation as SituationHeuresRechercheEmploi;
       return [
         {
-          question: "Vous avez sélectionné la convention collective",
-          option: idcc.toString(),
           name: "agreementSearch",
+          option: idcc.toString(),
+          question: "Vous avez sélectionné la convention collective",
           type: "agreement",
         },
         {
+          name: "typeRupture",
+          option: typeRupture ?? type,
           question:
             "Pour quelle raison le contrat de travail a-t-il été rompu ?",
-          option: typeRupture ?? type,
-          name: "typeRupture",
           type: "select",
         },
       ];
     },
-    getResult: ({ answer, answer2, answer3, ref, refUrl, ref2, ref2Url }) => ({
-      texts: answer
-        ? [
-            answer?.replace(/\n/g, " ").replace(/  /g, " ").trim(),
-            answer2?.replace(/\n/g, " ").replace(/  /g, " ").trim(),
-            answer3?.replace(/\n/g, " ").replace(/  /g, " ").trim(),
-          ]
-        : [
-            "D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.",
-          ],
-      refs: [
-        { label: ref, url: refUrl },
-        ...(ref2 ? [{ label: ref2, url: ref2Url }] : []),
-      ],
-    }),
+    questions,
+    situations,
   });
 }
 
@@ -51,26 +51,26 @@ function generatePreavisDemissionTree() {
   const situations = preavisDemissionData.situations;
   const questions = preavisDemissionData.questions;
   return generateTree({
-    situations,
-    questions,
-    prependCriteria: (situation) => {
-      const { idcc } = situation;
-      return [
-        {
-          question: "Vous avez sélectionné la convention collective",
-          option: idcc.toString(),
-          name: "agreementSearch",
-          type: "agreement",
-        },
-      ];
-    },
     getResult: ({ answer, ref, refUrl, ref2, ref2Url }) => ({
-      texts: [answer?.replace(/\n/g, " ").replace(/  /g, " ").trim()],
       refs: [
         { label: ref, url: refUrl },
         ...(ref2 ? [{ label: ref2, url: ref2Url }] : []),
       ],
+      texts: [answer?.replace(/\n/g, " ").replace(/ {2}/g, " ").trim()],
     }),
+    prependCriteria: (situation) => {
+      const { idcc } = situation;
+      return [
+        {
+          name: "agreementSearch",
+          option: idcc.toString(),
+          question: "Vous avez sélectionné la convention collective",
+          type: "agreement",
+        },
+      ];
+    },
+    questions,
+    situations,
   });
 }
 
@@ -78,48 +78,48 @@ function generatePreavisLicenciementTree() {
   const situations = preavisLicenciementData.situations;
   const questions = preavisLicenciementData.questions;
   return generateTree({
-    situations,
-    questions,
-    prependCriteria: (situation) => {
-      const { idcc } = situation;
-      return [
-        {
-          question: "Le licenciement est-il dû à une faute grave (ou lourde) ?",
-          name: "seriousMisconduct",
-          option: "non",
-          type: "radio",
-        },
-        {
-          question: "Le licenciement est-il dû à une faute grave (ou lourde) ?",
-          name: "disabledWorker",
-          option: "non",
-          type: "radio",
-        },
-        {
-          question: "Quelle est l'ancienneté du salarié ?",
-          name: "cdt.ancienneté",
-          option: "15| Moins de 6 mois",
-          type: "select",
-        },
-        {
-          question: "Vous avez sélectionné la convention collective",
-          option: idcc.toString(),
-          name: "agreementSearch",
-          type: "agreement",
-        },
-      ];
-    },
     getResult: ({ answer, answer3, ref, refUrl, ref2, ref2Url }) => ({
-      texts: [
-        answer3 !== "0"
-          ? answer?.replace(/\n/g, " ").replace(/  /g, " ").trim()
-          : "Aucun préavis",
-      ],
       refs: [
         { label: ref, url: refUrl },
         ...(ref2 ? [{ label: ref2, url: ref2Url }] : []),
       ],
+      texts: [
+        answer3 !== "0"
+          ? answer?.replace(/\n/g, " ").replace(/ {2}/g, " ").trim()
+          : "Aucun préavis",
+      ],
     }),
+    prependCriteria: (situation) => {
+      const { idcc } = situation;
+      return [
+        {
+          name: "seriousMisconduct",
+          option: "non",
+          question: "Le licenciement est-il dû à une faute grave (ou lourde) ?",
+          type: "radio",
+        },
+        {
+          name: "disabledWorker",
+          option: "non",
+          question: "Le licenciement est-il dû à une faute grave (ou lourde) ?",
+          type: "radio",
+        },
+        {
+          name: "cdt.ancienneté",
+          option: "15| Moins de 6 mois",
+          question: "Quelle est l'ancienneté du salarié ?",
+          type: "select",
+        },
+        {
+          name: "agreementSearch",
+          option: idcc.toString(),
+          question: "Vous avez sélectionné la convention collective",
+          type: "agreement",
+        },
+      ];
+    },
+    questions,
+    situations,
   });
 }
 

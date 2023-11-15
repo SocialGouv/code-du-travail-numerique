@@ -1,6 +1,6 @@
 import fs from "fs";
 
-import { TreeQuestion, TreeOption } from "./type";
+import type { TreeOption, TreeQuestion } from "./type";
 
 function generateAction(questionName: string, { text, type }: TreeOption) {
   switch (type) {
@@ -99,7 +99,6 @@ function generateTest(
   return idccQuestion.options
     .filter(({ text }) => text !== "0")
     .map(({ text, nextQuestion, result }) => ({
-      filename: `${text}.test.tsx`,
       content: `
         import { ${componentName} } from "../../index";
         import { ui } from "../ui";
@@ -153,6 +152,7 @@ function generateTest(
           }
         });
       `,
+      filename: `${text}.test.tsx`,
     }));
 }
 
@@ -167,11 +167,11 @@ export async function generateTestFiles(
     fs.mkdirSync(path);
   }
   await Promise.all(
-    tests.map(({ filename, content }) =>
+    tests.map(({ filename, content }) => {
       fs.writeFile(`${path}/${filename}`, content, function (err) {
         if (err) throw err;
         console.log(`${filename} Saved!`);
-      })
-    )
+      });
+    })
   );
 }
