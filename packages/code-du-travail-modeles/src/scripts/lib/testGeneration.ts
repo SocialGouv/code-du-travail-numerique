@@ -1,9 +1,9 @@
 import fs from "fs";
 
-import {TreeQuestion, TreeOption} from "./type";
+import { TreeQuestion, TreeOption } from "./type";
 
-function generateAction(questionName: string, {text, type}: TreeOption) {
-  switch(type) {
+function generateAction(questionName: string, { text, type }: TreeOption) {
+  switch (type) {
     case "select":
       return `
         fireEvent.change(screen.getByTestId("${questionName}"), {
@@ -21,42 +21,63 @@ function generateAction(questionName: string, {text, type}: TreeOption) {
         fireEvent.click(ui.next.get());
       `;
   }
-  
 }
 
-export function generateTestOption(questionName: string, option: TreeOption): string {
-  const {text, nextQuestion, result} = option;
-    return `
+export function generateTestOption(
+  questionName: string,
+  option: TreeOption
+): string {
+  const { text, nextQuestion, result } = option;
+  return `
       describe("${questionName} = ${text}", () => {
         
         beforeEach(() => {
           ${generateAction(questionName, option)}
         });
-        ${nextQuestion ? nextQuestion.options.map((option) => generateTestOption(nextQuestion.name, option)).join("") : ""}
-        ${result ? `
+        ${
+          nextQuestion
+            ? nextQuestion.options
+                .map((option) => generateTestOption(nextQuestion.name, option))
+                .join("")
+            : ""
+        }
+        ${
+          result
+            ? `
           it("should display expected answer", () => {
-            ${result.texts.map((text) => text ? `
+            ${result.texts
+              .map((text) =>
+                text
+                  ? `
               expect(screen.queryAllByText("${text}")[0]).toBeInTheDocument();
-            ` : "").join("")}
+            `
+                  : ""
+              )
+              .join("")}
           });
-        ` : ""}
+        `
+            : ""
+        }
       });
-    `
-  }
+    `;
+}
 
-function generateActionsUntilIdcc({name, options}: TreeQuestion): string {
+function generateActionsUntilIdcc({ name, options }: TreeQuestion): string {
   const firstOption = options[0];
   return `
     ${generateAction(name, firstOption)}
-    ${name !== "agreementSearch" && firstOption.nextQuestion ? generateActionsUntilIdcc(firstOption.nextQuestion) : ""}`
+    ${
+      name !== "agreementSearch" && firstOption.nextQuestion
+        ? generateActionsUntilIdcc(firstOption.nextQuestion)
+        : ""
+    }`;
 }
 
 function getIdccQuestion(question: TreeQuestion): TreeQuestion | null {
   if (question.name === "agreementSearch") {
-    return question
+    return question;
   }
   return question.options.reduce<TreeQuestion | null>((result, option) => {
-    
     if (option.nextQuestion) {
       const idccQuestion = getIdccQuestion(option.nextQuestion);
       if (idccQuestion) {
@@ -66,15 +87,20 @@ function getIdccQuestion(question: TreeQuestion): TreeQuestion | null {
     return result;
   }, null);
 }
-  
-function generateTest(question: TreeQuestion, componentName: string): {filename: string; content: string}[] {
+
+function generateTest(
+  question: TreeQuestion,
+  componentName: string
+): { filename: string; content: string }[] {
   const idccQuestion = getIdccQuestion(question);
   if (!idccQuestion) {
     return [];
   }
-    return idccQuestion.options.filter(({text}) => text !== "0").map(({text, nextQuestion, result}) => ({
-        filename: `${text}.test.tsx`,
-        content: `
+  return idccQuestion.options
+    .filter(({ text }) => text !== "0")
+    .map(({ text, nextQuestion, result }) => ({
+      filename: `${text}.test.tsx`,
+      content: `
         import { ${componentName} } from "../../index";
         import { ui } from "../ui";
         import { fireEvent, render, screen } from "@testing-library/react";
@@ -99,31 +125,53 @@ function generateTest(question: TreeQuestion, componentName: string): {filename:
                 fireEvent.click(ui.introduction.startButton.get());
                 ${generateActionsUntilIdcc(question)}
           });
-          ${nextQuestion ? nextQuestion.options.map((option) => generateTestOption(nextQuestion.name, option)).join("") : ""}
-          ${result ? `
+          ${
+            nextQuestion
+              ? nextQuestion.options
+                  .map((option) =>
+                    generateTestOption(nextQuestion.name, option)
+                  )
+                  .join("")
+              : ""
+          }
+          ${
+            result
+              ? `
           it("should display expected answer", () => {
-            ${result.texts.map((text) => text ? `
+            ${result.texts
+              .map((text) =>
+                text
+                  ? `
             expect(screen.queryAllByText("${text}")[0]).toBeInTheDocument();
-            ` : "").join("")}
+            `
+                  : ""
+              )
+              .join("")}
           });
-        ` : ""}
+        `
+              : ""
+          }
         });
-      `
-    }))
-  }
+      `,
+    }));
+}
 
-  export async function generateTestFiles(question: TreeQuestion, componentName: string, path: string) {
-    const tests = generateTest(question, componentName);
-    console.log(`Generating files for ${componentName}:`);
-    if (!fs.existsSync(path)){
-      fs.mkdirSync(path);
-    }
-    await Promise.all(
-      tests.map(({filename,content}) =>
-        fs.writeFile(`${path}/${filename}`, content, function (err) {
-          if (err) throw err;
-          console.log(`${filename} Saved!`);
-        })
-      )
-    )
+export async function generateTestFiles(
+  question: TreeQuestion,
+  componentName: string,
+  path: string
+) {
+  const tests = generateTest(question, componentName);
+  console.log(`Generating files for ${componentName}:`);
+  if (!fs.existsSync(path)) {
+    fs.mkdirSync(path);
   }
+  await Promise.all(
+    tests.map(({ filename, content }) =>
+      fs.writeFile(`${path}/${filename}`, content, function (err) {
+        if (err) throw err;
+        console.log(`${filename} Saved!`);
+      })
+    )
+  );
+}
