@@ -65,9 +65,7 @@ exports[`DisplayContentContribution should replace details element 1`] = `
         <div
           class="sc-bXCLTC cqpPUq"
         >
-          <div
-            data-type=" detailsContent"
-          >
+          <div>
             <p>
               Ceci est le body
             </p>
@@ -144,9 +142,7 @@ exports[`DisplayContentContribution should replace details element within detail
         <div
           class="sc-bXCLTC cqpPUq"
         >
-          <div
-            data-type=" detailsContent"
-          >
+          <div>
             <div
               class="sc-ERObt ekELNP"
               data-accordion-component="Accordion"
@@ -211,9 +207,7 @@ exports[`DisplayContentContribution should replace details element within detail
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        data-type=" detailsContent"
-                      >
+                      <div>
                         <p>
                           Ceci est le body
                         </p>

@@ -33,7 +33,18 @@ const options = (titleLevel) => ({
             items={[
               {
                 body: domToReact(domNode.children, options(titleLevel + 1)),
-                title: summaryText,
+                title: domToReact(summary.children, {
+                  transform: (reactNode, domNode) => {
+                    // @ts-ignore
+                    if (domNode.children) {
+                      // @ts-ignore
+                      return domNode.children[0].data;
+                    }
+                    // @ts-ignore
+                    return domNode.data;
+                  },
+                  trim: true,
+                }),
               },
             ]}
           />
@@ -53,7 +64,7 @@ type Props = {
 const DisplayContentContribution = ({
   content,
 }: Props): string | JSX.Element | JSX.Element[] => {
-  return parse(content, options(3));
+  return parse(xss(content), options(3));
 };
 
 const { spacings } = theme;
