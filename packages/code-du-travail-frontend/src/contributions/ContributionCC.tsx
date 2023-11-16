@@ -89,23 +89,7 @@ const ContributionCC = ({ contribution }: Props) => {
           <Heading as="p" variant="primary">
             <IconStripe icon={icons.Warning}>Attention</IconStripe>
           </Heading>
-          <p>
-            Les informations présentes sur cette page sont issues de l’analyse
-            des règles prévues par votre convention collective de branche
-            étendue et par le Code du travail. Elles s’appliqueront sauf si une
-            convention ou un accord d’entreprise (ou de groupe, ou
-            d’établissement) existant dans votre entreprise prévoit également
-            des règles sur le même sujet. En effet, dans ce cas, cette
-            convention ou accord s’appliquera, qu’il soit plus ou moins
-            favorable que la convention de branche, sous réserve d’être au moins
-            aussi favorable que le Code du travail. Dans tous les cas, reportez
-            vous à votre contrat de travail car s’il contient des règles plus
-            favorables, ce sont ces dernières qui s’appliqueront.
-          </p>
-          <p>
-            Attention, d’autres règles non étendues peuvent potentiellement vous
-            être applicables.
-          </p>
+          <p>Bloc 1</p>
         </Alert>
       </StyledSection>
       <LinkedContent linkedContent={contribution.linkedContent} />

@@ -6,25 +6,29 @@ type Props = {
   linkedContent: ElasticSearchContribution["linkedContent"];
 };
 
-export const LinkedContent = (props: Props) => {
+export const LinkedContent = ({ linkedContent }: Props) => {
   return (
-    <Section>
-      <Title shift={spacings.xmedium} variant="secondary">
-        Pour aller plus loin
-      </Title>
-      <Grid columns={2}>
-        {props.linkedContent.map((item) => {
-          return (
-            <ListLink
-              item={item}
-              key={item.slug}
-              titleTagType="h3"
-              hideAction
-            />
-          );
-        })}
-      </Grid>
-    </Section>
+    <>
+      {linkedContent.length > 0 && (
+        <Section>
+          <Title shift={spacings.xmedium} variant="secondary">
+            Pour aller plus loin
+          </Title>
+          <Grid columns={2}>
+            {linkedContent.map((item) => {
+              return (
+                <ListLink
+                  item={item}
+                  key={item.slug}
+                  titleTagType="h3"
+                  hideAction
+                />
+              );
+            })}
+          </Grid>
+        </Section>
+      )}
+    </>
   );
 };
 
