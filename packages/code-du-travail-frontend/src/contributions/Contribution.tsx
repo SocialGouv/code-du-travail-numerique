@@ -1,225 +1,340 @@
 import { Agreement, getLabelBySource } from "@socialgouv/cdtn-utils";
-import {
-  Alert,
-  Badge,
-  Button,
-  icons,
-  IconStripe,
-  InsertTitle,
-  Paragraph,
-  Section,
-  Text,
-  theme,
-  Title,
-  Toast,
-  Wrapper,
-} from "@socialgouv/cdtn-ui";
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 import Mdx from "../../src/common/Mdx";
-import SearchConvention from "../../src/conventions/Search";
 import { A11yLink } from "../common/A11yLink";
-import Html from "../common/Html";
 import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
 import ReferencesJuridiques, { filteredRefs } from "./References";
+import { RadioQuestion } from "../outils/Components";
+import { AgreementRoute } from "../outils/common/type/WizardType";
+import router from "next/router";
+import {
+  EnterpriseSearch,
+  NoEnterprise,
+} from "../outils/CommonSteps/Agreement/components";
+import { AgreementSupportInfo } from "../outils/common/Agreement/types";
+import AgreementSearch from "../outils/CommonSteps/Agreement/components/AgreementSearch";
+import { pushAgreementEvents } from "../outils/common";
+import { OnUserAction } from "../outils/ConventionCollective/types";
+import { handleTrackEvent } from "../outils/common/Agreement/tracking";
+import { MatomoBaseEvent } from "../lib";
+import { getCc3239Informations } from "../outils";
+import { Enterprise } from "../conventions/Search/api/enterprises.service";
+import {
+  Alert,
+  ArrowLink,
+  Badge,
+  Button,
+  Heading,
+  icons,
+  Paragraph,
+  Section,
+  theme,
+  Title,
+  Wrapper,
+} from "@socialgouv/cdtn-ui";
 
-const Contribution = ({ answers, content }) => {
-  /**
-   * conventionalAnswer are special kind of contribution that include
-   * only one a single ccn answer
-   * this allows us to set conventional answer directly for a given ccn
-   */
-  const isConventionalAnswer = Object.prototype.hasOwnProperty.call(
-    answers,
-    "conventionAnswer"
-  );
+const { DirectionRight } = icons;
+
+const ContributionGeneric = ({ answers, content, slug }) => {
+  const titleRef = useRef<HTMLDivElement>(null);
+  const onUserAction: OnUserAction = (action, extra) => {
+    handleTrackEvent(getTitle(), action, extra);
+  };
+  const getTitle = () => router.asPath;
 
   const hasConventionAnswers =
-    (answers.conventions && answers.conventions.length > 0) ||
-    isConventionalAnswer;
+    answers.conventions && answers.conventions.length > 0;
+  const [showAnswer, setShowAnswer] = useState(false);
+  const [hasNoEnterpriseSelected, setHasNoEnterpriseSelected] = useState(false);
+  const [entreprise, setEnterprise] = useState<Enterprise | undefined>();
 
   const [convention, setConvention] =
     useLocalStorageOnPageLoad<Agreement>("convention");
-  const isConventionDetected = () =>
-    convention && convention.id && convention.num && convention.title;
 
-  let conventionAnswer;
-  if (isConventionalAnswer) {
-    conventionAnswer = answers.conventionAnswer;
-  } else if (convention && answers.conventions) {
-    conventionAnswer = answers.conventions.find(
-      (answer) => parseInt(answer.idcc, 10) === convention.num
-    );
+  const [selectedRoute, setSelectedRoute] = useState<
+    AgreementRoute | undefined
+  >();
+
+  if (convention && !selectedRoute) {
+    setSelectedRoute("agreement");
   }
-  // ensure we have valid data in ccInfo
+  const supportedAgreements: AgreementSupportInfo[] = answers.conventions.map(
+    (c) => {
+      return {
+        idcc: parseInt(c.idcc, 10),
+        fullySupported: true,
+      };
+    }
+  );
+  const isSupported = (agreement) =>
+    agreement &&
+    !!supportedAgreements.find((item) => item.idcc == agreement.num);
+
+  const onSelectAgreement = (
+    agreement: Agreement | null,
+    enterprise?: Enterprise | undefined,
+    hasNoEntrepriseSelected?: boolean
+  ) => {
+    let agreementTreated;
+    if (agreement) {
+      agreementTreated = isSupported(agreement);
+
+      pushAgreementEvents(
+        getTitle(),
+        {
+          route: selectedRoute!,
+          enterprise: enterprise,
+          selected: agreement,
+        },
+        agreementTreated,
+        !!hasNoEntrepriseSelected
+      );
+    }
+
+    setConvention(agreement);
+    setEnterprise(enterprise);
+    if (agreementTreated) {
+      setShowAnswer(false);
+    }
+  };
+
+  const CC_NOT_SUPPORTED = (
+    <>
+      <Paragraph variant="primary" fontSize="default" fontWeight="700" noMargin>
+        Nous n’avons pas de réponse pour cette convention collective
+      </Paragraph>
+      {showAnswer ? (
+        <p>Vous pouvez consulter les informations générales ci-dessous.</p>
+      ) : (
+        <p>
+          Vous pouvez tout de même poursuivre pour obtenir les informations
+          générales.
+        </p>
+      )}
+    </>
+  );
+
+  const scrollToTitle = () => {
+    setTimeout(() => {
+      titleRef &&
+        titleRef.current &&
+        titleRef.current.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
+
   return (
     <>
       {hasConventionAnswers && (
         <>
           <Badge />
-          <CustomWrapper variant="dark">
-            <IconStripe icon={icons.Custom}>
-              <StyledInsertTitle as="p">Page personnalisable</StyledInsertTitle>
-              {isConventionDetected() || isConventionalAnswer ? (
-                <Paragraph noMargin>
-                  Cette page a été personnalisée avec l’ajout des{" "}
-                  <a href="#customisation">
-                    informations de la convention collective :{" "}
-                    {isConventionalAnswer
-                      ? conventionAnswer.shortName
-                      : convention.shortTitle}
-                  </a>
-                </Paragraph>
-              ) : (
-                <Paragraph noMargin>
-                  Le contenu de cette page peut être personnalisé en fonction de
-                  votre situation.
-                  <br />
-                  <a href="#customisation">Voir en bas de page</a> pour
-                  renseigner votre convention collective.
-                </Paragraph>
+          <SectionNoPadding>
+            <p>
+              La réponse dépend de la convention collective à laquelle votre
+              entreprise est rattachée. Veuillez renseigner votre situation afin
+              d’obtenir une réponse adaptée :
+            </p>
+            <Wrapper variant="light">
+              <Title shift={spacings.xmedium} variant="primary">
+                Votre situation
+              </Title>
+
+              <RadioQuestion
+                questions={[
+                  {
+                    label:
+                      "Je sais quelle est ma convention collective (je la saisis)",
+                    value: "agreement" as AgreementRoute,
+                    id: "route-agreement",
+                  },
+                  {
+                    label:
+                      "Je ne sais pas quelle est ma convention collective (je la recherche)",
+                    value: "enterprise" as AgreementRoute,
+                    id: "route-enterprise",
+                  },
+                ]}
+                name="route"
+                label="Quel est le nom de la convention collective applicable&nbsp;?"
+                selectedOption={selectedRoute}
+                onChangeSelectedOption={(value: AgreementRoute) => {
+                  setConvention();
+                  setHasNoEnterpriseSelected(false);
+                  setSelectedRoute(value);
+                }}
+                tooltip={{
+                  content: (
+                    <p>
+                      Vous pouvez trouver le nom de votre convention collective
+                      sur votre <strong>bulletin de paie</strong>.
+                    </p>
+                  ),
+                }}
+              />
+              {selectedRoute === "agreement" && (
+                <AgreementSearch
+                  supportedAgreements={supportedAgreements}
+                  selectedAgreement={convention}
+                  onSelectAgreement={onSelectAgreement}
+                  onUserAction={onUserAction}
+                  alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
+                  simulator="QUESTIONNAIRE"
+                />
               )}
-            </IconStripe>
-          </CustomWrapper>
+              {selectedRoute === "enterprise" && (
+                <>
+                  {!hasNoEnterpriseSelected && (
+                    <form onSubmit={(event) => event.preventDefault()}>
+                      <EnterpriseSearch
+                        supportedAgreements={supportedAgreements}
+                        selectedAgreement={convention}
+                        onSelectAgreement={onSelectAgreement}
+                        onUserAction={onUserAction}
+                        alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
+                        simulator="QUESTIONNAIRE"
+                      />
+                    </form>
+                  )}
+                  {!entreprise && (
+                    <NoEnterprise
+                      isCheckboxChecked={hasNoEnterpriseSelected}
+                      setIsCheckboxChecked={setHasNoEnterpriseSelected}
+                      onCheckboxChange={async (isCheckboxChecked) => {
+                        const cc3239 = isCheckboxChecked
+                          ? await getCc3239Informations()
+                          : null;
+                        onSelectAgreement(cc3239, undefined, isCheckboxChecked);
+                      }}
+                      isQuestionnaire
+                    />
+                  )}
+                </>
+              )}
+
+              <Div>
+                {isSupported(convention) ? (
+                  <Button
+                    variant="primary"
+                    onClick={() => {
+                      matopush([
+                        MatomoBaseEvent.TRACK_EVENT,
+                        "contribution",
+                        "click_afficher_les_informations_CC",
+                        getTitle(),
+                      ]);
+                      router.push(`/contribution/${convention.num}-${slug}`);
+                    }}
+                  >
+                    Afficher les informations
+                    <StyledDirectionRightIcon />
+                  </Button>
+                ) : (
+                  <>
+                    {(!showAnswer || convention) && (
+                      <Button
+                        variant="primary"
+                        onClick={() => {
+                          matopush([
+                            MatomoBaseEvent.TRACK_EVENT,
+                            "contribution",
+                            convention
+                              ? "click_afficher_les_informations_générales"
+                              : "click_afficher_les_informations_sans_CC",
+                            getTitle(),
+                          ]);
+                          setShowAnswer(true);
+                          scrollToTitle();
+                        }}
+                      >
+                        Afficher les informations {convention && " générales"}
+                      </Button>
+                    )}
+                  </>
+                )}
+              </Div>
+            </Wrapper>
+
+            {!showAnswer && !convention && (
+              <p>
+                <Button
+                  variant="navLink"
+                  onClick={() => {
+                    pushAgreementEvents(
+                      getTitle(),
+                      { route: "not-selected" },
+                      false,
+                      false
+                    );
+                    setShowAnswer(true);
+                    scrollToTitle();
+                  }}
+                >
+                  <ArrowLink arrowPosition="left">
+                    Accéder aux informations générales sans renseigner ma
+                    convention collective
+                  </ArrowLink>
+                </Button>
+              </p>
+            )}
+          </SectionNoPadding>
         </>
       )}
-      {answers.generic && (
-        <section>
-          <Title stripe="left">Que dit le code du travail&nbsp;?</Title>
-          {content && (
-            <Meta>
-              {content.url && (
-                <span>
-                  Source&nbsp;:{" "}
-                  <A11yLink
-                    href={content.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {`Fiche: ${getLabelBySource(content.source)}`}
-                  </A11yLink>
-                </span>
-              )}
-              {content.url && content.date && (
-                <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
-              )}
-              {content.date && <span>Mis à jour le&nbsp;: {content.date}</span>}
-            </Meta>
-          )}
-          <Mdx
-            markdown={answers.generic.markdown}
-            components={rehypeToReact(content)}
-          />
-          <ReferencesJuridiques
-            references={filteredRefs(answers?.generic?.references, content.url)}
-          />
-        </section>
-      )}
-      {hasConventionAnswers && (
-        <StyledSection>
-          <Wrapper variant="dark">
-            <StyledTitle
-              shift={spacings.xmedium}
-              variant="primary"
-              hasMarginTop={Boolean(answers.generic)}
-              id="customisation"
-            >
-              {isConventionalAnswer ? (
-                <>
-                  Que dit la convention{" "}
-                  <Text italic>{conventionAnswer.shortName}</Text>
-                  &nbsp;?
-                </>
-              ) : (
-                <>Que dit votre convention collective&nbsp;?</>
-              )}
-            </StyledTitle>
-            {!isConventionDetected() && !isConventionalAnswer ? (
-              <SearchConvention onSelectConvention={setConvention} />
-            ) : (
-              <>
-                {!isConventionalAnswer && (
-                  <>
-                    <StyledParagraph noMargin>
-                      Ce contenu est personnalisé avec les informations de la
-                      convention collective&nbsp;:
-                    </StyledParagraph>
-                    <Toast variant="secondary" onRemove={() => setConvention()}>
-                      {convention.shortTitle}
-                      {convention.highlight &&
-                        convention.highlight.searchInfo && (
-                          <Paragraph variant="altText" noMargin>
-                            {convention.highlight.searchInfo}
-                          </Paragraph>
-                        )}
-                    </Toast>
-                  </>
-                )}
-                {conventionAnswer ? (
-                  <>
-                    {conventionAnswer.highlight &&
-                      conventionAnswer.highlight.content && (
-                        <StyledAlert variant="primary">
-                          <StyledParagraph
-                            variant="primary"
-                            fontSize="small"
-                            fontWeight="700"
-                            noMargin
-                          >
-                            {conventionAnswer.highlight.title}
-                          </StyledParagraph>
-                          <Paragraph fontSize="small" noMargin>
-                            <Html>{conventionAnswer.highlight.content}</Html>
-                          </Paragraph>
-                        </StyledAlert>
-                      )}
-                    <MdxWrapper>
-                      <Mdx
-                        markdown={conventionAnswer.markdown}
-                        components={rehypeToReact}
-                      />
-                    </MdxWrapper>
-
-                    <ReferencesJuridiques
-                      references={conventionAnswer.references}
-                    />
-                    <p>
-                      Consultez les questions-réponses fréquentes pour{" "}
-                      <a
-                        href={`/convention-collective/${
-                          isConventionalAnswer
-                            ? conventionAnswer.slug
-                            : convention.slug
-                        }`}
-                      >
-                        la convention collective{" "}
-                        {isConventionalAnswer
-                          ? conventionAnswer.shortName
-                          : convention.shortTitle}
-                      </a>
-                    </p>
-                  </>
-                ) : (
-                  <Section>
-                    Désolé, nous n’avons pas de réponse pour cette convention
-                    collective.
-                  </Section>
-                )}
-                {!isConventionalAnswer && (
-                  <ButtonWrapper>
-                    <Button variant="primary" onClick={() => setConvention()}>
-                      Changer de convention collective
-                      <StyledCloseIcon />
-                    </Button>
-                  </ButtonWrapper>
-                )}
-              </>
+      <SectionHidden show={showAnswer && answers.generic}>
+        <Title stripe="left" ref={titleRef}>
+          Que dit le code du travail&nbsp;?
+        </Title>
+        {content && (
+          <Meta>
+            {content.url && (
+              <span>
+                Source&nbsp;:{" "}
+                <A11yLink
+                  href={content.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {`Fiche: ${getLabelBySource(content.source)}`}
+                </A11yLink>
+              </span>
             )}
-          </Wrapper>
-        </StyledSection>
-      )}
+            {content.url && content.date && (
+              <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
+            )}
+            {content.date && <span>Mis à jour le&nbsp;: {content.date}</span>}
+          </Meta>
+        )}
+
+        <Mdx
+          markdown={answers.generic.markdown}
+          components={rehypeToReact(content)}
+        />
+        <Alert>
+          <Heading as="p">Texte applicable</Heading>
+          <p>
+            Une convention collective de branche ou un accord collectif
+            d’entreprise peut prévoir des durées plus longues. Si les durées
+            fixées sont plus courtes que celles prévues par le code du travail,
+            le salarié a droit aux congés prévus par le code du travail.
+          </p>
+
+          <p>
+            Une convention collective de branche ou un accord collectif
+            d’entreprise peut aussi prévoir des congés pour d’autres événements
+            familiaux.
+          </p>
+
+          <p>
+            Le contrat de travail peut toujours prévoir des mesures plus
+            favorables, qui s’appliqueront.
+          </p>
+        </Alert>
+        <ReferencesJuridiques
+          references={filteredRefs(answers.generic.references, content.url)}
+        />
+      </SectionHidden>
     </>
   );
 };
@@ -239,48 +354,20 @@ const HideOnMobile = styled.span`
     display: none;
   }
 `;
-
-const MdxWrapper = styled.div`
-  margin-bottom: ${spacings.medium};
+const SectionHidden = styled(Section)`
+  display: ${({ show }) => (show ? "block" : "none")};
 `;
-
-const StyledInsertTitle = styled(InsertTitle).attrs({
-  "aria-level": "2",
-  role: "heading",
-})``;
-
-const StyledSection = styled(Section)`
-  padding-bottom: 0;
-`;
-
-const CustomWrapper = styled(Wrapper)`
-  margin-bottom: ${spacings.large};
-  @media (max-width: ${breakpoints.mobile}) {
-    margin-bottom: ${spacings.medium};
-  }
-`;
-
-const StyledParagraph = styled(Paragraph)`
-  margin-bottom: ${spacings.tiny};
-`;
-
-const StyledTitle = styled(Title)`
-  margin-top: ${({ hasMarginTop }) => (hasMarginTop ? spacings.large : "0")};
-`;
-
-const ButtonWrapper = styled.div`
-  margin: ${spacings.base} 0 !important;
+const Div = styled.div`
   text-align: center;
+  margin-top: ${spacings.large};
 `;
 
-const StyledCloseIcon = styled(icons.Close)`
-  width: 2.8rem;
+const StyledDirectionRightIcon = styled(DirectionRight)`
+  width: 1.5em;
   margin-left: ${spacings.base};
 `;
-
-const StyledAlert = styled(Alert)`
-  margin-top: ${spacings.base};
-  background-color: ${({ theme }) => theme.bgPrimary};
+const SectionNoPadding = styled(Section)`
+  padding: 0;
 `;
 
-export default Contribution;
+export default ContributionGeneric;
