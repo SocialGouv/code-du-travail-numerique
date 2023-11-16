@@ -7,7 +7,7 @@ import Mdx from "../common/Mdx";
 import { A11yLink } from "../common/A11yLink";
 import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
-import ReferencesJuridiques, { filteredRefs } from "./References";
+import ReferencesJuridiques, { filteredRefs } from "./OldReferences";
 import { RadioQuestion } from "../outils/Components";
 import { AgreementRoute } from "../outils/common/type/WizardType";
 import router from "next/router";

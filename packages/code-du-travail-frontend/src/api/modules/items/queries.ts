@@ -49,6 +49,10 @@ export const getSearchBySourceSlugBody = ({
       "dismissalProcess",
       "meta_title",
       "type",
+      "ccSupported", // pour une fiche service-public dans une contribution
+      "ccnSlug", // pour une contribution conventionnelle
+      "ccnShortTitle", // pour une contribution conventionnelle
+      "linkedContent", // pour les contributions
     ],
     query: {
       bool: {

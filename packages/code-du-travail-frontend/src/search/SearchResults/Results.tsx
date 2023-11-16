@@ -33,7 +33,7 @@ type CommonProps = {
   icon?: string;
   centerTitle?: boolean;
   titleTagType?: string;
-  href: string;
+  href?: string;
 };
 
 type HighlightProps = {
@@ -48,7 +48,7 @@ export type ListLinkItemProps = {
   source?: any;
   slug?: string;
   title?: string;
-  url: string;
+  url?: string;
   highlight?: HighlightProps;
   icon?: string;
 };
@@ -117,10 +117,9 @@ export const ListLink = ({
     icon,
     centerTitle,
     titleTagType,
-    href: url,
   };
 
-  if (source === SOURCES.EXTERNALS) {
+  if (source === SOURCES.EXTERNALS && url) {
     return (
       <CallToActionTile
         action={hideAction ? undefined : action ?? "Consulter"}
@@ -133,18 +132,19 @@ export const ListLink = ({
         {...tileCommonProps}
         custom={false}
         titleTagType="h3"
+        href={url}
       />
     );
   }
 
   // external links
-  if (!slug) {
-    return <LinkedTile {...tileCommonProps} />;
+  if (!slug && url) {
+    return <LinkedTile {...tileCommonProps} href={url} />;
   }
 
   let rootSlug = slug;
   let anchor = "";
-  if (slug.includes("#")) {
+  if (slug?.includes("#")) {
     [rootSlug, anchor] = slug.split("#");
   }
 
@@ -158,10 +158,10 @@ export const ListLink = ({
     tileCommonProps.custom = true;
   }
 
-  tileCommonProps.href = `/${getRouteBySource(source)}/${rootSlug}${
+  const href = `/${getRouteBySource(source)}/${rootSlug}${
     query ? `?q=${query}` : ""
   }${anchor ? `#${anchor}` : ""}`;
-  return <ResultTile {...tileCommonProps} />;
+  return <ResultTile {...tileCommonProps} href={href} />;
 };
 ListLink.propTypes = {
   item: PropTypes.shape({
