@@ -1,10 +1,13 @@
-import ToReact from "../rehypeToReact";
 import { render } from "@testing-library/react";
-import DisplayReact from "../DisplayReact";
+import DisplayContentContribution from "../DisplayContentContribution";
 
-describe("DisplayReact", () => {
+describe("DisplayContentContribution", () => {
   test(`should return html`, () => {
-    const { asFragment } = render(<ToReact content={`<p>hello</p>`}></ToReact>);
+    const { asFragment } = render(
+      <DisplayContentContribution
+        content={`<p>hello</p>`}
+      ></DisplayContentContribution>
+    );
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
       <p>
@@ -14,7 +17,9 @@ describe("DisplayReact", () => {
   });
   test(`should remove empty p tag`, () => {
     const { asFragment } = render(
-      <ToReact content={`<div>hello<p></p></div>`}></ToReact>
+      <DisplayContentContribution
+        content={`<div>hello<p></p></div>`}
+      ></DisplayContentContribution>
     );
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
@@ -25,26 +30,26 @@ describe("DisplayReact", () => {
   });
   test(`should replace details element`, () => {
     const { asFragment } = render(
-      <ToReact
+      <DisplayContentContribution
         content={`
-         <details className=" details"><summary>Ceci est un titre</summary>
+        <details className=" details"><summary>Ceci est un titre</summary>
           <div data-type=" detailsContent">
             <p>Ceci est le body</p>
             <p></p>
           </div>
         </details>`}
-      ></ToReact>
+      ></DisplayContentContribution>
     );
 
     expect(asFragment().firstChild).toMatchSnapshot();
   });
   test(`should replace details element within details element`, () => {
     const { asFragment } = render(
-      <ToReact
+      <DisplayContentContribution
         content={`
-         <details className=" details"><summary>Ceci est un titre</summary>
+        <details className=" details"><summary>Ceci est un titre</summary>
           <div data-type=" detailsContent">
-           <details className=" details"><summary>Ceci est un sous titre</summary>
+          <details className=" details"><summary>Ceci est un sous titre</summary>
             <div data-type=" detailsContent">
               <p>Ceci est le body</p>
               <p></p>
@@ -52,14 +57,14 @@ describe("DisplayReact", () => {
           </details>
           </div>
         </details>`}
-      ></ToReact>
+      ></DisplayContentContribution>
     );
 
     expect(asFragment().firstChild).toMatchSnapshot();
   });
   test(`should replace details element with rich summary`, () => {
     const { asFragment } = render(
-      <ToReact
+      <DisplayContentContribution
         content={`
          <details className=" details"><summary><strong>Ceci est un titre</strong> HELLO</summary>
           <div data-type=" detailsContent">
@@ -67,7 +72,7 @@ describe("DisplayReact", () => {
             <p></p>
           </div>
         </details>`}
-      ></ToReact>
+      ></DisplayContentContribution>
     );
 
     expect(asFragment().firstChild).toMatchSnapshot();
@@ -75,7 +80,7 @@ describe("DisplayReact", () => {
 
   test(`should start title level to 4 if heading 3 before`, () => {
     const { asFragment } = render(
-      <ToReact
+      <DisplayContentContribution
         content={`
 <div>
          <h3>HELLO</h3>
@@ -86,7 +91,7 @@ describe("DisplayReact", () => {
           </div>
         </details>
 </div>`}
-      ></ToReact>
+      ></DisplayContentContribution>
     );
 
     expect(asFragment().firstChild).toMatchSnapshot();

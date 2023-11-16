@@ -48,7 +48,7 @@ const options = (titleLevel) => ({
 type Props = {
   content: string;
 };
-const DisplayReact = ({
+const DisplayContentContribution = ({
   content,
 }: Props): string | JSX.Element | JSX.Element[] => {
   return parse(content, options(3));
@@ -66,4 +66,4 @@ const StyledContent = styled.div`
   margin-bottom: ${spacings.large};
 `;
 
-export default DisplayReact;
+export default DisplayContentContribution;

@@ -1,9 +1,30 @@
-import { Accordion, theme } from "@socialgouv/cdtn-ui";
+import { Accordion, Alert, Heading, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
-import { FicheServicePublic } from "../fiche-service-public";
-import parse, { domToReact } from "html-react-parser";
 
-export const ContentSP = ({ raw }) => {
+import Html from "../common/Html";
+import { FicheServicePublic } from "../fiche-service-public";
+
+//Custom MDX component
+const Tab = (props) => (
+  <StyledAccordion
+    titleLevel={3}
+    items={[
+      {
+        body: props.children,
+        title: props.title,
+      },
+    ]}
+  />
+);
+
+const Hdn = (props) => (
+  <Alert>
+    <Heading as="p">Texte applicable</Heading>
+    <div {...props} />
+  </Alert>
+);
+
+const ContentSP = ({ raw }) => {
   return (
     <>
       {raw && (
@@ -15,41 +36,40 @@ export const ContentSP = ({ raw }) => {
   );
 };
 
-const options = (titleLevel) => ({
-  replace(domNode) {
-    if (domNode.name === "h3") {
-      titleLevel = 4;
-    }
-    if (domNode.name === "details") {
-      const summary = domNode.children.shift();
-      if (summary.name === "summary") {
-        const summaryText = domToReact(summary.children, {});
-
-        return (
-          <StyledAccordion
-            titleLevel={titleLevel}
-            items={[
-              {
-                body: domToReact(domNode.children, options(titleLevel + 1)),
-                title: domToReact(summary, {}),
-              },
-            ]}
-          />
-        );
-      }
-    }
-    if (domNode.name === "p" && !domNode.children.length) {
-      return <></>;
-    }
-  },
-  trim: true,
-});
-
-type Props = {
-  content: string;
+const ContentMT = ({ intro, sections }) => {
+  return (
+    <>
+      {intro && (
+        <IntroWrapper>
+          <Intro>{intro}</Intro>
+        </IntroWrapper>
+      )}
+      {sections && (
+        <Accordion
+          levelTitle={3}
+          items={sections.map((section) => ({
+            body: <TabContent>{section.html}</TabContent>,
+            id: section.anchor,
+            title: section.title,
+          }))}
+        />
+      )}
+    </>
+  );
 };
-const ToReact = ({ content }: Props): string | JSX.Element | JSX.Element[] => {
-  return parse(content, options(3));
+
+const rehypeToReact = (content) => {
+  const contentComponent =
+    content && content.raw ? (
+      <ContentSP {...content} />
+    ) : (
+      <ContentMT {...content} />
+    );
+  return {
+    content: () => contentComponent,
+    hdn: Hdn,
+    tab: Tab,
+  };
 };
 
 const { spacings } = theme;
@@ -60,8 +80,32 @@ const StyledAccordion = styled(Accordion)`
   }
 `;
 
+const TabContent = styled(Html)`
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+`;
+
 const StyledContent = styled.div`
   margin-bottom: ${spacings.large};
 `;
 
-export default ToReact;
+const Intro = styled(Html)`
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+const IntroWrapper = styled(Wrapper)`
+  margin: ${spacings.base} auto;
+`;
+
+export default rehypeToReact;
