@@ -2,6 +2,7 @@ import { Accordion, theme } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { FicheServicePublic } from "../fiche-service-public";
 import parse, { domToReact } from "html-react-parser";
+import xss from "xss";
 
 export const ContentSP = ({ raw }) => {
   return (
@@ -51,7 +52,7 @@ type Props = {
 const DisplayContentContribution = ({
   content,
 }: Props): string | JSX.Element | JSX.Element[] => {
-  return parse(content, options(3));
+  return parse(xss(content), options(3));
 };
 
 const { spacings } = theme;
