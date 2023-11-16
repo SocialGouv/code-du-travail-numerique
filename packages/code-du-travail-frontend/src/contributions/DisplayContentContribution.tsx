@@ -24,15 +24,16 @@ const options = (titleLevel) => ({
     if (domNode.name === "details") {
       const summary = domNode.children.shift();
       if (summary.name === "summary") {
-        const summaryText = domToReact(summary.children, {});
+        const summaryText = summary.children[0].data;
 
         return (
           <StyledAccordion
             titleLevel={titleLevel}
+            data-testid="contrib-accordion"
             items={[
               {
                 body: domToReact(domNode.children, options(titleLevel + 1)),
-                title: domToReact(summary, {}),
+                title: summaryText,
               },
             ]}
           />
@@ -52,7 +53,7 @@ type Props = {
 const DisplayContentContribution = ({
   content,
 }: Props): string | JSX.Element | JSX.Element[] => {
-  return parse(xss(content), options(3));
+  return parse(content, options(3));
 };
 
 const { spacings } = theme;
