@@ -323,12 +323,6 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   description: "Le montant de l'indemnité pourrait être plus important si, avant le CDI, sous certaines conditions, le salarié a été lié à l’employeur par d'autres contrats."
   valeur: oui
 
-contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notification nouvelle convention collective:
-  application si: contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notifier avant le 1er janvier 2024 = 'Non'
-  type: notification
-  description: "Comme le licenciement a été notifié après le 01/01/2024, le montant de l'indemnité a été calculé avec les règles de la nouvelle convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024. En effet, les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient jusqu'au 31/12/2023 ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248)."
-  valeur: oui
-
 ## Plafond / plancher formules
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . calcul . résultat conventionnel avec plafond 1:
   applicable si:
@@ -382,7 +376,12 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
 ########################################
 
 contrat salarié . convention collective . métallurgie:
-  application si: contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notifier avant le 1er janvier 2024 = 'Non'
+  applicable si: contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notifier avant le 1er janvier 2024 = 'Non'
+  valeur: oui
+
+contrat salarié . convention collective . métallurgie . notification nouvelle convention collective:
+  type: notification
+  description: "Comme le licenciement a été notifié après le 01/01/2024, le montant de l'indemnité a été calculé avec les règles de la nouvelle convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024. En effet, les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient jusqu'au 31/12/2023 ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248)."
   valeur: oui
 
 #################################################
