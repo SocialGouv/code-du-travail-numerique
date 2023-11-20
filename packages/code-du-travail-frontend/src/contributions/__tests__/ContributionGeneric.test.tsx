@@ -111,7 +111,7 @@ describe("<ContributionGeneric />", () => {
       expect(ui.agreement1351.searchResult.query()).toBeInTheDocument()
     );
     fireEvent.click(ui.agreement1351.searchResult.get());
-    expect(byText(/Afficher les informations/).get()).toBeInTheDocument();
+    expect(byText(/Afficher les informations/).query()).not.toBeInTheDocument();
     expect(matopush).toHaveBeenCalledTimes(4);
     // @ts-ignore
     expect(matopush.mock.calls).toEqual([
@@ -133,14 +133,6 @@ describe("<ContributionGeneric />", () => {
       ],
       [["trackEvent", "cc_select_p1", "/contribution/my-contrib", "idcc1351"]],
       [["trackEvent", "outil", "cc_select_non_traitée", 1351]],
-    ]);
-    fireEvent.click(byText("Afficher les informations générales").get());
-    expect(matopush).toHaveBeenCalledTimes(5);
-    expect(matopush).toHaveBeenLastCalledWith([
-      "trackEvent",
-      "contribution",
-      "click_afficher_les_informations_générales",
-      "/contribution/my-contrib",
     ]);
     expect(router.push).toHaveBeenCalledTimes(0);
   });
@@ -197,45 +189,5 @@ describe("<ContributionGeneric />", () => {
       [["trackEvent", "cc_select_p2", "/contribution/my-contrib", "idcc2216"]],
       [["trackEvent", "outil", "cc_select_non_traitée", 2216]],
     ]);
-  });
-  it("afficher les infos - sans CC", async () => {
-    expect(matopush).toHaveBeenCalledTimes(0);
-
-    render(
-      <ContributionGeneric slug="my-contrib" answers={ANSWERS} content={{}} />
-    );
-    expect(byText(/Afficher les informations/).get()).toBeInTheDocument();
-    fireEvent.click(byText("Afficher les informations").get());
-    expect(matopush).toHaveBeenCalledTimes(1);
-    expect(matopush).toHaveBeenLastCalledWith([
-      "trackEvent",
-      "contribution",
-      "click_afficher_les_informations_sans_CC",
-      "/contribution/my-contrib",
-    ]);
-    expect(router.push).toHaveBeenCalledTimes(0);
-  });
-
-  it("voir les infos générales", () => {
-    expect(matopush).toHaveBeenCalledTimes(0);
-
-    render(
-      <ContributionGeneric slug="my-contrib" answers={ANSWERS} content={{}} />
-    );
-
-    fireEvent.click(
-      byText(
-        "Accéder aux informations générales sans renseigner ma convention collective"
-      ).get()
-    );
-
-    expect(matopush).toHaveBeenCalledTimes(1);
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "cc_search_type_of_users",
-      "click_p3",
-      "/contribution/my-contrib",
-    ]);
-    expect(router.push).toHaveBeenCalledTimes(0);
   });
 });
