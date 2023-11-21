@@ -226,78 +226,150 @@ exports[`DisplayContentContribution should replace details element within detail
 `;
 
 exports[`DisplayContentContribution should replace multiple details element by one accordion 1`] = `
-<div
-  class="sc-ERObt ekELNP"
-  data-accordion-component="Accordion"
-  data-testid="contrib-accordion"
->
+<body>
   <div>
     <div
-      class="sc-jXbUNg heDTFL"
-      data-accordion-component="AccordionItem"
+      class="sc-ERObt ekELNP"
+      data-accordion-component="Accordion"
+      data-testid="contrib-accordion"
     >
-      <div
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-      >
+      <div>
         <div
-          aria-controls="accordion__panel-raa-1"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="sc-kpDqfm heoudo"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-raa-1"
-          role="button"
-          tabindex="0"
+          class="sc-jXbUNg heDTFL"
+          data-accordion-component="AccordionItem"
         >
-          <svg
-            aria-hidden="true"
-            class="sc-imWYAI gTeNha"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
           <div
-            class="sc-dAlyuH cXMNBg"
+            class="accordion__heading"
+            data-accordion-component="AccordionItemHeading"
           >
-            <h3
-              class="sc-kAyceB dvmaTz"
-              data-testid="contrib-accordion-0"
-              style="margin: 0px;"
+            <div
+              aria-controls="accordion__panel-raa-1"
+              aria-disabled="false"
+              aria-expanded="false"
+              class="sc-kpDqfm heoudo"
+              data-accordion-component="AccordionItemButton"
+              id="accordion__heading-raa-1"
+              role="button"
+              tabindex="0"
             >
-              Ceci est un titre
-            </h3>
+              <svg
+                aria-hidden="true"
+                class="sc-imWYAI gTeNha"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="9 18 15 12 9 6"
+                />
+              </svg>
+              <div
+                class="sc-dAlyuH cXMNBg"
+              >
+                <h3
+                  class="sc-kAyceB dvmaTz"
+                  data-testid="contrib-accordion-0"
+                  style="margin: 0px;"
+                >
+                  Ceci est le titre 1
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="sc-dhKdcB fdfhnD"
+            data-accordion-component="AccordionItemPanel"
+            hidden=""
+            id="accordion__panel-raa-1"
+          >
+            <div
+              class="sc-bXCLTC cqpPUq"
+            >
+              <div>
+                <p>
+                  Ceci est le body 1
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div
-        aria-hidden="true"
-        class="sc-dhKdcB fdfhnD"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-raa-1"
-      >
+      <div>
         <div
-          class="sc-bXCLTC cqpPUq"
+          class="sc-jXbUNg crDDWD"
+          data-accordion-component="AccordionItem"
         >
-          <div>
-            <p>
-              Ceci est le body
-            </p>
+          <div
+            class="accordion__heading"
+            data-accordion-component="AccordionItemHeading"
+          >
+            <div
+              aria-controls="accordion__panel-raa-2"
+              aria-disabled="false"
+              aria-expanded="false"
+              class="sc-kpDqfm heoudo"
+              data-accordion-component="AccordionItemButton"
+              id="accordion__heading-raa-2"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                class="sc-imWYAI gTeNha"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="9 18 15 12 9 6"
+                />
+              </svg>
+              <div
+                class="sc-dAlyuH cXMNBg"
+              >
+                <h3
+                  class="sc-kAyceB dvmaTz"
+                  data-testid="contrib-accordion-1"
+                  style="margin: 0px;"
+                >
+                  Ceci est le titre 2
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="sc-dhKdcB fdfhnD"
+            data-accordion-component="AccordionItemPanel"
+            hidden=""
+            id="accordion__panel-raa-2"
+          >
+            <div
+              class="sc-bXCLTC cqpPUq"
+            >
+              <div>
+                <p>
+                  Ceci est le body 2
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</body>
 `;

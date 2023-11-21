@@ -17,27 +17,26 @@ export const ContentSP = ({ raw }) => {
   );
 };
 
-const mapSummary = (titleLevel, domNode, summary) => (
+const mapItem = (titleLevel, domNode, summary) => ({
+  body: domToReact(domNode.children, options(titleLevel + 1)),
+  title: domToReact(summary.children, {
+    transform: (reactNode, domNode) => {
+      // @ts-ignore
+      if (domNode.children) {
+        // @ts-ignore
+        return domNode.children[0].data;
+      }
+      // @ts-ignore
+      return domNode.data;
+    },
+    trim: true,
+  }),
+});
+const mapToAccordion = (titleLevel, items) => (
   <StyledAccordion
     titleLevel={titleLevel}
     data-testid="contrib-accordion"
-    items={[
-      {
-        body: domToReact(domNode.children, options(titleLevel + 1)),
-        title: domToReact(summary.children, {
-          transform: (reactNode, domNode) => {
-            // @ts-ignore
-            if (domNode.children) {
-              // @ts-ignore
-              return domNode.children[0].data;
-            }
-            // @ts-ignore
-            return domNode.data;
-          },
-          trim: true,
-        }),
-      },
-    ]}
+    items={items}
   />
 );
 
@@ -47,6 +46,14 @@ function getFirstElementChild(domNode) {
     child = domNode.children.shift();
   }
   return child;
+}
+
+function getNextFirstElement(domNode) {
+  let next = domNode.next;
+  while (next && next.type !== "tag") {
+    next = next.next;
+  }
+  return next;
 }
 
 const mapTbody = (tbody) => {
@@ -60,16 +67,33 @@ const mapTbody = (tbody) => {
   );
 };
 
+function getItem(domNode, titleLevel) {
+  const summary = getFirstElementChild(domNode);
+  if (summary.name === "summary") {
+    return mapItem(titleLevel, domNode, summary);
+  }
+}
+
 const options = (titleLevel) => ({
   replace(domNode) {
     if (domNode.name === "h3") {
       titleLevel = 4;
     }
     if (domNode.name === "details") {
-      const summary = getFirstElementChild(domNode);
-      if (summary.name === "summary") {
-        return mapSummary(titleLevel, domNode, summary);
+      const items: any[] = [];
+      const item = getItem(domNode, titleLevel);
+      if (item) {
+        items.push(item);
       }
+      let next = getNextFirstElement(domNode);
+      while (next && next.name === "details") {
+        const item = getItem(next, titleLevel);
+        if (item) {
+          items.push(item);
+        }
+        next = getNextFirstElement(next);
+      }
+      return items.length ? mapToAccordion(titleLevel, items) : <></>;
     }
     if (domNode.name === "table") {
       const tableContent = getFirstElementChild(domNode);

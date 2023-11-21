@@ -43,26 +43,27 @@ describe("DisplayContentContribution", () => {
 
     expect(asFragment().firstChild).toMatchSnapshot();
   });
+
   it(`should replace multiple details element by one accordion`, () => {
-    const { asFragment } = render(
+    const { baseElement } = render(
       <DisplayContentContribution
         content={`
-        <details className=" details"><summary>Ceci est un titre</summary>
+        <details className=" details"><summary>Ceci est le titre 1</summary>
           <div data-type=" detailsContent">
-            <p>Ceci est le body</p>
+            <p>Ceci est le body 1</p>
             <p></p>
           </div>
         </details>
-        <details className=" details"><summary>Ceci est un titre</summary>
+        <details className=" details"><summary>Ceci est le titre 2</summary>
           <div data-type=" detailsContent">
-            <p>Ceci est le body</p>
+            <p>Ceci est le body 2</p>
             <p></p>
           </div>
         </details>`}
       ></DisplayContentContribution>
     );
 
-    expect(asFragment().firstChild).toMatchSnapshot();
+    expect(baseElement).toMatchSnapshot();
   });
   it(`should replace details element within details element`, () => {
     const { asFragment } = render(
@@ -176,7 +177,7 @@ describe("DisplayContentContribution", () => {
                   rowspan="1"
                 >
                   <p>
-                    Pour les
+                    Pour les 
                     <strong>
                       cadres
                     </strong>
@@ -232,7 +233,7 @@ describe("DisplayContentContribution", () => {
               rowspan="1"
             >
               <p>
-                Pour les
+                Pour les 
                 <strong>
                   cadres
                 </strong>
