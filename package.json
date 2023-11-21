@@ -12,7 +12,7 @@
     "dev": "lerna run dev --parallel",
     "type-check": "lerna run type-check --stream",
     "dev:frontend": "lerna run dev --parallel --scope=@cdt/frontend --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --stream",
-    "dev:frontend:preprod-api": "NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr yarn dev:frontend",
+    "dev:frontend:preprod-api": "NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-carolinebda-front-new-contr-41nw57dd.dev.fabrique.social.gouv.fr yarn dev:frontend",
     "dev:simulate-deployment": "NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr yarn workspace @cdt/frontend build && yarn workspace @cdt/frontend start",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint -- --fix",

@@ -11,6 +11,7 @@ import { A11yLink } from "../common/A11yLink";
 import DisplayContentContribution, {
   ContentSP,
 } from "./DisplayContentContribution";
+import { Section } from "@socialgouv/cdtn-ui/lib";
 
 type Props = {
   contribution:
@@ -20,7 +21,7 @@ type Props = {
 
 export const ContributionContent = ({ contribution }: Props) => {
   return (
-    <>
+    <SectionNoPadding>
       {contribution.type === "fiche-sp" ? (
         <>
           <Meta>
@@ -48,7 +49,7 @@ export const ContributionContent = ({ contribution }: Props) => {
       ) : (
         <DisplayContentContribution content={contribution.content} />
       )}
-    </>
+    </SectionNoPadding>
   );
 };
 
@@ -66,4 +67,8 @@ const HideOnMobile = styled.span`
   @media (max-width: ${breakpoints.mobile}) {
     display: none;
   }
+`;
+
+const SectionNoPadding = styled(Section)`
+  padding-top: 0;
 `;

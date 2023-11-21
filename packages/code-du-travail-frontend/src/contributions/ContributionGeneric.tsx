@@ -70,7 +70,6 @@ const ContributionGeneric = ({ contribution }: Props) => {
         fullySupported: true,
       };
     });
-
   const isSupported = (agreement) =>
     agreement &&
     !!supportedAgreements.find((item) => item.idcc == agreement.num);

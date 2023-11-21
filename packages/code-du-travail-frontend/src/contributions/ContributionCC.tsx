@@ -49,8 +49,9 @@ const ContributionCC = ({ contribution }: Props) => {
         </Wrapper>
       </section>
       <section>
-        <Title shift={spacings.xmedium} variant="secondary" stripe="none">
-          Votre réponse
+        <Title variant="secondary" stripe="none" size="small">
+          Votre réponse pour la convention collective{" "}
+          {contribution.ccnShortTitle}
         </Title>
 
         <Paragraph fontStyle="italic">
@@ -78,7 +79,7 @@ const ContributionCC = ({ contribution }: Props) => {
 
         <p>
           Consultez les questions-réponses fréquentes pour{" "}
-          <a href={`/convention-collective/${contribution.slug}`}>
+          <a href={`/convention-collective/${contribution.ccnSlug}`}>
             la convention collective {contribution.ccnShortTitle}
           </a>
         </p>
