@@ -7,7 +7,6 @@ import Mdx from "../../src/common/Mdx";
 import { A11yLink } from "../common/A11yLink";
 import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
-import ReferencesJuridiques, { filteredRefs } from "./References";
 import { RadioQuestion } from "../outils/Components";
 import { AgreementRoute } from "../outils/common/type/WizardType";
 import router from "next/router";
@@ -36,6 +35,8 @@ import {
   Title,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
+import { ReferencesJuridiques } from "./References";
+import { filteredRefs } from "./OldReferences";
 
 const { DirectionRight } = icons;
 
