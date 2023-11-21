@@ -22,7 +22,7 @@ import { A11yLink } from "../common/A11yLink";
 import Html from "../common/Html";
 import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
-import ReferencesJuridiques, { filteredRefs } from "./References";
+import ReferencesJuridiques, { filteredRefs } from "./OldReferences";
 
 const ContributionCCPoc = ({ answers, content, slug }) => {
   /**

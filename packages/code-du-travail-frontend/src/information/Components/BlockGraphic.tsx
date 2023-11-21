@@ -1,4 +1,4 @@
-import { toUrl } from "../../lib";
+import { toUrl, xssWrapper } from "../../lib";
 import ImageWrapper from "../../common/ImageWrapper";
 
 import {
@@ -9,7 +9,6 @@ import {
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
-import xss from "xss";
 
 export const BlockGraphic = ({ block }) => {
   const { imgUrl, altText, fileUrl, html: htmlGraphic, size } = block;
@@ -32,7 +31,7 @@ export const BlockGraphic = ({ block }) => {
       <MoreContent noLeftPadding title="Voir en détail">
         <Wrapper
           variant="dark"
-          dangerouslySetInnerHTML={{ __html: xss(htmlGraphic) }}
+          dangerouslySetInnerHTML={{ __html: xssWrapper(htmlGraphic) }}
         ></Wrapper>
       </MoreContent>
     </>

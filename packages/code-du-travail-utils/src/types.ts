@@ -160,3 +160,55 @@ export type ElasticSearchItem = {
   slug: string;
   breadcrumbs: Breadcrumb[];
 };
+
+type ElasticSearchContributionFicheSp = {
+  type: "fiche-sp";
+  url: string;
+  date: string;
+  raw: string;
+};
+
+type ElasticSearchContributionContent = {
+  type: "content" | "cdt";
+  content: string;
+};
+
+type ContributionLinkedContent = {
+  slug: string;
+  source: string;
+  title: string;
+};
+
+type ContributionRef = {
+  url: string;
+  title: string;
+};
+
+type ContributionHighlight = {
+  title?: string;
+  content?: string;
+  searchInfo?: string;
+};
+
+type ElasticSearchContributionBase = ElasticSearchItem & {
+  source: "contributions";
+  linkedContent: ContributionLinkedContent[];
+  references: ContributionRef[];
+  idcc: string;
+  metaDescription: string; // WARNING: A virer car normalement on a une description
+} & (ElasticSearchContributionFicheSp | ElasticSearchContributionContent);
+
+export type ElasticSearchContributionGeneric = ElasticSearchContributionBase & {
+  ccSupported: string[];
+};
+
+export type ElasticSearchContributionConventionnelle =
+  ElasticSearchContributionBase & {
+    ccnSlug: string;
+    ccnShortTitle: string;
+    highlight?: ContributionHighlight;
+  };
+
+export type ElasticSearchContribution =
+  | ElasticSearchContributionGeneric
+  | ElasticSearchContributionConventionnelle;

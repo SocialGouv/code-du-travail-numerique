@@ -5,12 +5,17 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Contribution from "../../src/contributions/Contribution";
 import { Layout } from "../../src/layout/Layout";
-import { Breadcrumb } from "@socialgouv/cdtn-utils";
+import {
+  Breadcrumb,
+  ElasticSearchContribution,
+  ElasticSearchContributionConventionnelle,
+  ElasticSearchContributionGeneric,
+} from "@socialgouv/cdtn-utils";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import ContributionGenericPoc from "../../src/contributions/ContributionGenericPoc";
 import ContributionCCPoc from "../../src/contributions/ContributionCCPoc";
-import showNewContribPage from "../../src/contributions/slugFilter";
+import { showNewContribPage } from "../../src/contributions/utils";
 import EventTracker from "../../src/lib/tracking/EventTracker";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
@@ -19,24 +24,22 @@ const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);
 
 type NewProps = {
-  content?: string;
+  contribution: ElasticSearchContribution;
   isNewContribution: true;
-  idcc: string;
 };
 
 type OldProps = {
+  breadcrumbs: Breadcrumb[];
+  description: string;
+  title: string;
+  slug: string;
   answers;
   relatedItems: Array<any>;
   content;
   isNewContribution: false;
 };
 
-type Props = {
-  breadcrumbs: Breadcrumb[];
-  description: string;
-  title: string;
-  slug: string;
-} & (NewProps | OldProps);
+type Props = NewProps | OldProps;
 
 const buildTitleAndDescription = (
   breadcrumbs,
@@ -77,12 +80,26 @@ function PageContribution(props: Props): React.ReactElement {
     <Layout>
       {props.isNewContribution ? (
         <>
-          <Metas title={props.title} description={props.description} />
-          <Answer title={props.title} breadcrumbs={props.breadcrumbs}>
-            {props.idcc === "0000" ? (
-              <ContributionGeneric />
+          <Metas
+            title={props.contribution.title}
+            description={props.contribution.description}
+          />
+          <Answer
+            title={props.contribution.title}
+            breadcrumbs={props.contribution.breadcrumbs}
+          >
+            {props.contribution.idcc === "0000" ? (
+              <ContributionGeneric
+                contribution={
+                  props.contribution as ElasticSearchContributionGeneric
+                }
+              />
             ) : (
-              <ContributionCC />
+              <ContributionCC
+                contribution={
+                  props.contribution as ElasticSearchContributionConventionnelle
+                }
+              />
             )}
           </Answer>
         </>
@@ -138,7 +155,7 @@ export const getServerSideProps = async ({ query }) => {
   ) {
     return {
       props: {
-        ...data._source,
+        contribution: data._source,
         isNewContribution: true,
       },
     };
