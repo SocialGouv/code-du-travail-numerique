@@ -18,5 +18,10 @@ if (ELASTICSEARCH_TOKEN_API) {
 
 export const elasticsearchClient = new Client(esClientConfig);
 
-export const elasticDocumentsIndex = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_documents`;
+// TODO DO NOT MERGE !!!!!!
+// TODO DO NOT MERGE !!!!!!
+// TODO DO NOT MERGE !!!!!!
+// TODO DO NOT MERGE !!!!!!
+// TODO DO NOT MERGE !!!!!!
+export const elasticDocumentsIndex = `cdtn-dev-v2_documents-1700563178669`;
 export const elasticSuggestionsIndex = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_suggestions`;
