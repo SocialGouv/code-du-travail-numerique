@@ -48,7 +48,6 @@ const ContributionGeneric = ({ answers, content, slug }) => {
 
   const hasConventionAnswers =
     answers.conventions && answers.conventions.length > 0;
-  const [showAnswer, setShowAnswer] = useState(false);
   const [hasNoEnterpriseSelected, setHasNoEnterpriseSelected] = useState(false);
   const [entreprise, setEnterprise] = useState<Enterprise | undefined>();
 
@@ -97,9 +96,6 @@ const ContributionGeneric = ({ answers, content, slug }) => {
 
     setConvention(agreement);
     setEnterprise(enterprise);
-    if (agreementTreated) {
-      setShowAnswer(false);
-    }
   };
 
   const CC_NOT_SUPPORTED = (
@@ -107,14 +103,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
       <Paragraph variant="primary" fontSize="default" fontWeight="700" noMargin>
         Nous n’avons pas de réponse pour cette convention collective
       </Paragraph>
-      {showAnswer ? (
-        <p>Vous pouvez consulter les informations générales ci-dessous.</p>
-      ) : (
-        <p>
-          Vous pouvez tout de même poursuivre pour obtenir les informations
-          générales.
-        </p>
-      )}
+      <p>Vous pouvez consulter les informations générales ci-dessous.</p>
     </>
   );
 
@@ -215,7 +204,7 @@ const ContributionGeneric = ({ answers, content, slug }) => {
               )}
 
               <Div>
-                {isSupported(convention) ? (
+                {isSupported(convention) && (
                   <Button
                     variant="primary"
                     onClick={() => {
@@ -231,58 +220,13 @@ const ContributionGeneric = ({ answers, content, slug }) => {
                     Afficher les informations
                     <StyledDirectionRightIcon />
                   </Button>
-                ) : (
-                  <>
-                    {(!showAnswer || convention) && (
-                      <Button
-                        variant="primary"
-                        onClick={() => {
-                          matopush([
-                            MatomoBaseEvent.TRACK_EVENT,
-                            "contribution",
-                            convention
-                              ? "click_afficher_les_informations_générales"
-                              : "click_afficher_les_informations_sans_CC",
-                            getTitle(),
-                          ]);
-                          setShowAnswer(true);
-                          scrollToTitle();
-                        }}
-                      >
-                        Afficher les informations {convention && " générales"}
-                      </Button>
-                    )}
-                  </>
                 )}
               </Div>
             </Wrapper>
-
-            {!showAnswer && !convention && (
-              <p>
-                <Button
-                  variant="navLink"
-                  onClick={() => {
-                    pushAgreementEvents(
-                      getTitle(),
-                      { route: "not-selected" },
-                      false,
-                      false
-                    );
-                    setShowAnswer(true);
-                    scrollToTitle();
-                  }}
-                >
-                  <ArrowLink arrowPosition="left">
-                    Accéder aux informations générales sans renseigner ma
-                    convention collective
-                  </ArrowLink>
-                </Button>
-              </p>
-            )}
           </SectionNoPadding>
         </>
       )}
-      <SectionHidden show={showAnswer && answers.generic}>
+      <SectionHidden show={answers.generic}>
         <Title stripe="left" ref={titleRef}>
           Que dit le code du travail&nbsp;?
         </Title>
@@ -355,7 +299,7 @@ const HideOnMobile = styled.span`
   }
 `;
 const SectionHidden = styled(Section)`
-  display: ${({ show }) => (show ? "block" : "none")};
+  display: block;
 `;
 const Div = styled.div`
   text-align: center;
