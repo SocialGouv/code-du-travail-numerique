@@ -22,6 +22,22 @@ export const getAllGenericsContributions = () => {
             field: "split",
           },
         },
+        should: [
+          {
+            bool: {
+              must_not: {
+                exists: {
+                  field: "idcc",
+                },
+              },
+            },
+          },
+          {
+            match: {
+              idcc: "0000",
+            },
+          },
+        ],
       },
     },
     size: 200,
