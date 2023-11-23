@@ -1,4 +1,4 @@
-import { fireEvent, render, waitFor } from "@testing-library/react";
+import { fireEvent, render, waitFor, screen } from "@testing-library/react";
 import React from "react";
 import ContributionGeneric from "../ContributionGeneric";
 import { push as matopush } from "@socialgouv/matomo-next";
@@ -27,6 +27,7 @@ describe("<ContributionGeneric />", () => {
   });
   const contribution = {
     ccSupported: ["1351"],
+    type: "content",
     content: "<p>hello <strong>generic</strong></p>",
     source: "contributions",
     linkedContent: [],
@@ -84,6 +85,7 @@ describe("<ContributionGeneric />", () => {
     ]);
     expect(router.push).toHaveBeenCalledWith("/contribution/1351-my-contrib");
   });
+
   it("je connais ma CC - cc non traité", async () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
@@ -91,12 +93,16 @@ describe("<ContributionGeneric />", () => {
     fireEvent.click(ui.agreement.agreement.get());
     fireEvent.focus(ui.agreement.agreementInput.get());
     fireEvent.change(ui.agreement.agreementInput.get(), {
-      target: { value: "1388" },
+      target: { value: "3239" },
     });
     await waitFor(() =>
-      expect(byText(/Industrie du pétrole/).query()).toBeInTheDocument()
+      expect(
+        byText(/Particuliers employeurs et emploi à domicile/).query()
+      ).toBeInTheDocument()
     );
-    fireEvent.click(byText(/Industrie du pétrole/).get());
+    fireEvent.click(
+      byText(/Particuliers employeurs et emploi à domicile/).get()
+    );
     expect(byText(/Afficher les informations/).get()).toBeInTheDocument();
     expect(matopush).toHaveBeenCalledTimes(4);
     // @ts-ignore
@@ -106,7 +112,7 @@ describe("<ContributionGeneric />", () => {
           "trackEvent",
           "cc_search",
           "/contribution/my-contrib",
-          '{"query":"1388"}',
+          '{"query":"3239"}',
         ],
       ],
       [
@@ -117,8 +123,8 @@ describe("<ContributionGeneric />", () => {
           "/contribution/my-contrib",
         ],
       ],
-      [["trackEvent", "cc_select_p1", "/contribution/my-contrib", "idcc1388"]],
-      [["trackEvent", "outil", "cc_select_non_traitée", 1388]],
+      [["trackEvent", "cc_select_p1", "/contribution/my-contrib", "idcc3239"]],
+      [["trackEvent", "outil", "cc_select_non_traitée", 3239]],
     ]);
     fireEvent.click(byText("Afficher les informations générales").get());
     expect(matopush).toHaveBeenCalledTimes(5);
@@ -130,6 +136,7 @@ describe("<ContributionGeneric />", () => {
     ]);
     expect(router.push).toHaveBeenCalledTimes(0);
   });
+
   it("je ne connais pas ma CC", async () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
