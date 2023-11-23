@@ -35,6 +35,7 @@ import {
 import { ReferencesJuridiques } from "./References";
 import { LinkedContent } from "./LinkedContent";
 import { ContributionContent } from "./ContributionContent";
+import { ContributionMessageBlock } from "./ContributionMessageBlock";
 
 const { DirectionRight } = icons;
 
@@ -286,6 +287,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
         </Title>
         <ContributionContent contribution={contribution} />
         <ReferencesJuridiques references={contribution.references} />
+        <ContributionMessageBlock message={contribution.messageBlock} />
         <LinkedContent linkedContent={contribution.linkedContent} />
       </SectionHidden>
     </>

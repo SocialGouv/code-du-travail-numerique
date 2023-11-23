@@ -195,7 +195,7 @@ type ElasticSearchContributionBase = ElasticSearchItem & {
   linkedContent: ContributionLinkedContent[];
   references: ContributionRef[];
   idcc: string;
-  metaDescription: string; // WARNING: A virer car normalement on a une description
+  messageBlock: string;
 } & (ElasticSearchContributionFicheSp | ElasticSearchContributionContent);
 
 export type ElasticSearchContributionGeneric = ElasticSearchContributionBase & {

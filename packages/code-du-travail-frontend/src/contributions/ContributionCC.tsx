@@ -1,11 +1,7 @@
 import {
   Alert,
   Badge,
-  Heading,
-  icons,
-  IconStripe,
   Paragraph,
-  Section,
   theme,
   Title,
   Wrapper,
@@ -21,6 +17,7 @@ import { ElasticSearchContributionConventionnelle } from "@socialgouv/cdtn-utils
 import { removeCCNumberFromSlug } from "./utils";
 import { ContributionContent } from "./ContributionContent";
 import { LinkedContent } from "./LinkedContent";
+import { ContributionMessageBlock } from "./ContributionMessageBlock";
 
 type Props = {
   contribution: ElasticSearchContributionConventionnelle;
@@ -85,14 +82,8 @@ const ContributionCC = ({ contribution }: Props) => {
         </p>
       </section>
 
-      <StyledSection>
-        <Alert>
-          <Heading as="p" variant="primary">
-            <IconStripe icon={icons.Warning}>Attention</IconStripe>
-          </Heading>
-          <p>Bloc 1</p>
-        </Alert>
-      </StyledSection>
+      <ContributionMessageBlock message={contribution.messageBlock} />
+
       <LinkedContent linkedContent={contribution.linkedContent} />
     </>
   );
@@ -107,14 +98,6 @@ const StyledParagraph = styled(Paragraph)`
 const StyledAlert = styled(Alert)`
   margin-top: ${spacings.base};
   background-color: ${({ theme }) => theme.bgPrimary};
-`;
-const StyledSection = styled(Section)`
-  margin-top: ${spacings.base};
-  padding-bottom: 0;
-
-  > div {
-    margin-bottom: 0;
-  }
 `;
 
 export default ContributionCC;
