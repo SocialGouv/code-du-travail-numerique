@@ -1,10 +1,11 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import React from "react";
-import ContributionGeneric from "../ContributionGeneric";
+import ContributionGeneric from "../ContributionGenericPoc";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { ui } from "../../outils/DureePreavisDemission/__tests__/ui";
 import { byTestId, byText } from "testing-library-selector";
 import router from "next/router";
+import ContributionGenericPoc from "../ContributionGenericPoc";
 
 beforeEach(() => {
   localStorage.clear();
@@ -18,30 +19,33 @@ jest.mock("next/router", () => ({
   push: jest.fn(),
   asPath: "/contribution/my-contrib",
 }));
-describe("<ContributionGeneric />", () => {
+describe("<ContributionGenericPoc />", () => {
   beforeEach(() => {
     const ma = matopush as jest.MockedFunction<typeof matopush>;
     ma.mockReset();
     const push = router.push as jest.MockedFunction<typeof router.push>;
     push.mockReset();
   });
-  const contribution = {
-    ccSupported: ["1351"],
-    content: "<p>hello <strong>generic</strong></p>",
-    source: "contributions",
-    linkedContent: [],
-    references: [],
-    idcc: "0000",
-    title: "Ma contrib",
-    slug: "my-contrib",
-    metaDescription: "ma meta description",
-    description: "ma  description",
-    breadcrumbs: [],
+  const ANSWERS = {
+    conventions: [
+      {
+        id: 1351,
+        idcc: "1351",
+        markdown: "hello **1351**",
+      },
+    ],
+    generic: { markdown: "hello **generic**" },
   };
   it("je connais ma CC - cc traité", async () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(
+      <ContributionGenericPoc
+        slug="my-contrib"
+        answers={ANSWERS}
+        content={{}}
+      />
+    );
     fireEvent.click(ui.agreement.agreement.get());
     fireEvent.focus(ui.agreement.agreementInput.get());
     fireEvent.change(ui.agreement.agreementInput.get(), {
@@ -87,17 +91,32 @@ describe("<ContributionGeneric />", () => {
   it("je connais ma CC - cc non traité", async () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(
+      <ContributionGeneric
+        slug="my-contrib"
+        answers={{
+          conventions: [
+            {
+              id: 123,
+              idcc: "123",
+              markdown: "hello **123**",
+            },
+          ],
+          generic: { markdown: "hello **generic**" },
+        }}
+        content={{}}
+      />
+    );
     fireEvent.click(ui.agreement.agreement.get());
     fireEvent.focus(ui.agreement.agreementInput.get());
     fireEvent.change(ui.agreement.agreementInput.get(), {
-      target: { value: "1388" },
+      target: { value: "1351" },
     });
     await waitFor(() =>
-      expect(byText(/Industrie du pétrole/).query()).toBeInTheDocument()
+      expect(ui.agreement1351.searchResult.query()).toBeInTheDocument()
     );
-    fireEvent.click(byText(/Industrie du pétrole/).get());
-    expect(byText(/Afficher les informations/).get()).toBeInTheDocument();
+    fireEvent.click(ui.agreement1351.searchResult.get());
+    expect(byText(/Afficher les informations/).query()).not.toBeInTheDocument();
     expect(matopush).toHaveBeenCalledTimes(4);
     // @ts-ignore
     expect(matopush.mock.calls).toEqual([
@@ -106,7 +125,7 @@ describe("<ContributionGeneric />", () => {
           "trackEvent",
           "cc_search",
           "/contribution/my-contrib",
-          '{"query":"1388"}',
+          '{"query":"1351"}',
         ],
       ],
       [
@@ -117,23 +136,21 @@ describe("<ContributionGeneric />", () => {
           "/contribution/my-contrib",
         ],
       ],
-      [["trackEvent", "cc_select_p1", "/contribution/my-contrib", "idcc1388"]],
-      [["trackEvent", "outil", "cc_select_non_traitée", 1388]],
-    ]);
-    fireEvent.click(byText("Afficher les informations générales").get());
-    expect(matopush).toHaveBeenCalledTimes(5);
-    expect(matopush).toHaveBeenLastCalledWith([
-      "trackEvent",
-      "contribution",
-      "click_afficher_les_informations_générales",
-      "/contribution/my-contrib",
+      [["trackEvent", "cc_select_p1", "/contribution/my-contrib", "idcc1351"]],
+      [["trackEvent", "outil", "cc_select_non_traitée", 1351]],
     ]);
     expect(router.push).toHaveBeenCalledTimes(0);
   });
   it("je ne connais pas ma CC", async () => {
     expect(matopush).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(
+      <ContributionGenericPoc
+        slug="my-contrib"
+        answers={ANSWERS}
+        content={{}}
+      />
+    );
     fireEvent.click(ui.agreement.unknownAgreement.get());
     fireEvent.focus(ui.agreement.agreementCompanyInput.get());
     fireEvent.change(ui.agreement.agreementCompanyInput.get(), {
@@ -181,41 +198,5 @@ describe("<ContributionGeneric />", () => {
       [["trackEvent", "cc_select_p2", "/contribution/my-contrib", "idcc2216"]],
       [["trackEvent", "outil", "cc_select_non_traitée", 2216]],
     ]);
-  });
-  it("afficher les infos - sans CC", async () => {
-    expect(matopush).toHaveBeenCalledTimes(0);
-
-    render(<ContributionGeneric contribution={contribution} />);
-    expect(byText(/Afficher les informations/).get()).toBeInTheDocument();
-    fireEvent.click(byText("Afficher les informations").get());
-    expect(matopush).toHaveBeenCalledTimes(1);
-    expect(matopush).toHaveBeenLastCalledWith([
-      "trackEvent",
-      "contribution",
-      "click_afficher_les_informations_sans_CC",
-      "/contribution/my-contrib",
-    ]);
-    expect(router.push).toHaveBeenCalledTimes(0);
-  });
-
-  it("voir les infos générales", () => {
-    expect(matopush).toHaveBeenCalledTimes(0);
-
-    render(<ContributionGeneric contribution={contribution} />);
-
-    fireEvent.click(
-      byText(
-        "Accéder aux informations générales sans renseigner ma convention collective"
-      ).get()
-    );
-
-    expect(matopush).toHaveBeenCalledTimes(1);
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "cc_search_type_of_users",
-      "click_p3",
-      "/contribution/my-contrib",
-    ]);
-    expect(router.push).toHaveBeenCalledTimes(0);
   });
 });

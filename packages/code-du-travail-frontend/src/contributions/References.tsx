@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const ReferencesJuridiques = (props: Props) => {
-  if (props.references.length === 0) {
+  if (!props.references || props.references.length === 0) {
     return null;
   }
   const refs = props.references.flatMap(({ title, url }) => {
