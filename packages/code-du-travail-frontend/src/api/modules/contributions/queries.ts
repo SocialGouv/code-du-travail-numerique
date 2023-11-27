@@ -22,22 +22,26 @@ export const getAllGenericsContributions = () => {
             field: "split",
           },
         },
-        should: [
-          {
-            bool: {
-              must_not: {
-                exists: {
-                  field: "idcc",
+        must: {
+          bool: {
+            should: [
+              {
+                bool: {
+                  must_not: {
+                    exists: {
+                      field: "idcc",
+                    },
+                  },
                 },
               },
-            },
+              {
+                bool: {
+                  filter: [{ term: { idcc: "0000" } }],
+                },
+              },
+            ],
           },
-          {
-            match: {
-              idcc: "0000",
-            },
-          },
-        ],
+        },
       },
     },
     size: 200,

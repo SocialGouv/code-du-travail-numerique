@@ -2,7 +2,7 @@ import { Agreement, ElasticSearchItem, Tool } from "@socialgouv/cdtn-utils";
 import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
 import { getAllAgreements } from "../agreements";
-import { getAllContributions } from "../contributions";
+import { getGenericsContributions } from "../contributions";
 import { getAllModeles } from "../modeles";
 import { getAllThemesAndSubThemes } from "../themes";
 import { getAllTools } from "../tools";
@@ -29,7 +29,7 @@ export class SitemapController {
       const themes = await getAllThemesAndSubThemes();
       const tools = await getAllTools();
       const modeles = await getAllModeles();
-      const contributions = await getAllContributions();
+      const contributions = await getGenericsContributions();
       const agreements = await getAllAgreements();
       const response: GetSitemapPage = {
         themes,
