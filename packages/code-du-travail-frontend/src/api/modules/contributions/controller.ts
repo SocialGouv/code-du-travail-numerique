@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
-import { getGenericContributions } from "../contributions";
+import { getGenericContributionsGroupByThemes } from "../contributions";
 
 export class ContributionsController {
   private req: NextApiRequest;
@@ -13,7 +13,7 @@ export class ContributionsController {
 
   public async getGenericContributions() {
     try {
-      const response = await getGenericContributions();
+      const response = await getGenericContributionsGroupByThemes();
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {
