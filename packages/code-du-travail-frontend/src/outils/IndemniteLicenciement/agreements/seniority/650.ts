@@ -17,7 +17,7 @@ export class AgreementSeniority650 implements AgreementSeniority {
         (item) =>
           item.question.name ===
           "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle"
-      ).info;
+      )?.info;
     const hasBeenDayContract =
       get().informationsData.input.publicodesInformations.find(
         (item) =>
