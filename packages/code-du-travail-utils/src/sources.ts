@@ -40,7 +40,7 @@ export const routeBySource = {
 export const labelBySource = {
   [SOURCES.CCN]: "Conventions collectives",
   [SOURCES.CDT]: "Code du travail",
-  [SOURCES.CONTRIBUTIONS]: "Contributions",
+  [SOURCES.CONTRIBUTIONS]: "Fiches pratiques",
   [SOURCES.EDITORIAL_CONTENT]: "Information",
   [SOURCES.EXTERNALS]: "Outils externes",
   [SOURCES.LABOUR_LAW]: "Le droit du travail",

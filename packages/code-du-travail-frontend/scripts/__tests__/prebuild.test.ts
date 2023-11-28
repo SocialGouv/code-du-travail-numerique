@@ -12,6 +12,7 @@ describe("robots.txt", () => {
       "User-agent: *",
       "Disallow: /assets/",
       "Disallow: /images/",
+      "Disallow: /recherche",
       "",
       `Sitemap: https://code.travail.gouv.fr/sitemap.xml`,
     ].join("\n");
