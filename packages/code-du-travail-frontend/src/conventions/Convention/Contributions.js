@@ -3,10 +3,10 @@ import { Accordion, theme, Title } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-
-import Html from "../../common/Html";
+import Mdx from "../../common/Mdx";
 import References from "../../common/References";
 import { trackAccordionPanelState } from "./utils";
+import rehypeToReact from "../../contributions/rehypeToReact";
 
 const { spacings } = theme;
 
@@ -72,7 +72,7 @@ function Contributions({ contributions, convention }) {
 function AccordionContent({ answer, slug, references }) {
   return (
     <>
-      <Html>{answer}</Html>
+      <Mdx markdown={answer} components={rehypeToReact} />
       {references && (
         <StyledReferences
           references={references.map((reference) => ({
