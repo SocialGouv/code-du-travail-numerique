@@ -7,6 +7,8 @@ import Mdx from "../../common/Mdx";
 import References from "../../common/References";
 import { trackAccordionPanelState } from "./utils";
 import rehypeToReact from "../../contributions/rehypeToReact";
+import { AccordionContentContribution } from "./AccordionContentContribution";
+import { AgreementsNotes } from "./AgreementsNotes";
 
 const { spacings } = theme;
 
@@ -42,9 +44,12 @@ function Contributions({ contributions, convention }) {
           <Accordion
             titleLevel={4}
             items={contributionsByTheme[theme].map((item) => ({
-              body: AccordionContent(item),
+              body:
+                "type" in item // Pour detecter si c'est une nouvelle contribution
+                  ? AccordionContentContribution(item)
+                  : AccordionContent(item),
               id: item.slug,
-              title: item.question,
+              title: item.question ?? item.questionName,
             }))}
             onChange={trackAccordionPanelState(
               convention.shortTitle,
@@ -85,14 +90,9 @@ function AccordionContent({ answer, slug, references }) {
           }))}
         />
       )}
-      <strong>
-        Pour savoir si la mesure prévue par la convention collective s’applique
-        à votre situation, reportez-vous{" "}
-        <Link href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`}>
-          à la réponse complète à cette question
-        </Link>
-        .
-      </strong>
+      <AgreementsNotes
+        link={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`}
+      />
     </>
   );
 }
