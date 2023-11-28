@@ -44,6 +44,75 @@ describe("DisplayContentContribution", () => {
     expect(asFragment().firstChild).toMatchSnapshot();
   });
 
+  it(`should not fail if no summary tag`, () => {
+    const { baseElement } = render(
+      <DisplayContentContribution
+        content={`
+        <details class="details">
+    <summary>
+      <strong>Report ou suspension du préavis</strong>
+    </summary>
+    <div data-type="detailsContent">
+      <p>
+        En principe, le préavis de licenciement court de date à date sans
+        interruption, ni suspension. Dans certaines situations, il existe des
+        exceptions qui peuvent suspendre le déroulement du préavis.
+      </p>
+      <details class="details">
+        <summary>
+          <strong>Congés payés</strong>
+        </summary>
+        <div data-type="detailsContent">
+          <details class="details">
+            <summary>
+              <strong>
+                Dates des congés fixées avant la notification du licenciement
+              </strong>
+            </summary>
+            <div data-type="detailsContent">
+              <p>
+                Des congés payés qui interviennent pendant le préavis et qui ont
+                été demandés à l'employeur avant la notification du licenciement
+                suspendent le préavis. Par conséquent, le préavis est prolongé
+                d'une durée équivalente à celle des congés.
+              </p>
+            </div>
+          </details>
+          <details class="details">
+            <summary>
+              <strong>
+                Dates des congés fixées après la notification du licenciement
+              </strong>
+            </summary>
+            <div data-type="detailsContent">
+              <p>
+                Des congés payés qui interviennent pendant le préavis et qui ont
+                été&nbsp;demandés à l'employeur&nbsp;après la notification du
+                licenciement ne suspendent pas le préavis. Par conséquent, le
+                préavis n'est pas prolongé d'une durée équivalente à celle des
+                congés.
+              </p>
+            </div>
+          </details>
+          <details class="details">
+            <summary>
+              <strong>Licenciement notifié pendant les congés payés</strong>
+            </summary>
+            <div data-type="detailsContent">
+              <p>
+                Dans ce cas, le préavis ne commencera qu'après les congés payés.
+              </p>
+            </div>
+          </details>
+        </div>
+      </details>
+    </div>
+  </details>`}
+      ></DisplayContentContribution>
+    );
+
+    expect(baseElement.firstChild).toMatchSnapshot();
+  });
   it(`should replace multiple details element by one accordion`, () => {
     const { baseElement } = render(
       <DisplayContentContribution

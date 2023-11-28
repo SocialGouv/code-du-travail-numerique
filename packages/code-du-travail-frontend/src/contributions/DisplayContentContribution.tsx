@@ -69,7 +69,7 @@ const mapTbody = (tbody) => {
 
 function getItem(domNode, titleLevel) {
   const summary = getFirstElementChild(domNode);
-  if (summary.name === "summary") {
+  if (summary && summary.name === "summary") {
     return mapItem(titleLevel, domNode, summary);
   }
 }
