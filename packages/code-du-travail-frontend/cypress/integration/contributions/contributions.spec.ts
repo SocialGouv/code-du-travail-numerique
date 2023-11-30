@@ -38,11 +38,11 @@ describe("Contributions", () => {
     cy.get("body").should("contain", "Pour aller plus loin");
   });
 
-  it.only("je vois une page contribution pour une CC", () => {
+  it("je vois une page contribution pour une CC", () => {
     cy.visit("/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee");
     cy.get("h1").should(
       "have.text",
-      "Quelle peut être la durée maximale d'un CDD ?"
+      "La période d’essai peut-elle être renouvelée ?"
     );
     cy.get("h2").should(
       "contain",
@@ -60,6 +60,11 @@ describe("Contributions", () => {
       "have.attr",
       "href",
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
+    );
+    cy.get("h2").should("contain", "Pour aller plus loin");
+    cy.get("p").should(
+      "have.text",
+      "Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?"
     );
   });
 });

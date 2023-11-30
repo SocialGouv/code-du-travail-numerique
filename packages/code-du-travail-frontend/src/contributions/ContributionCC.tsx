@@ -31,7 +31,7 @@ const ContributionCC = ({ contribution }: Props) => {
       <Badge />
       <section>
         <Wrapper variant="light">
-          <Title shift={spacings.xmedium} variant="primary">
+          <Title size="small" as="p" shift={spacings.xmedium} variant="primary">
             Votre situation
           </Title>
 
