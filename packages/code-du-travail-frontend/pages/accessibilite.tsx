@@ -34,7 +34,7 @@ const Accessibilite = () => {
               <ul>
                 <li>
                   La réalisation d’un audit de conformité le 19 mai de l’année
-                  2021.
+                  2021
                 </li>
                 <li>
                   La réalisation d’un contre-audit d’ici la fin du premier
