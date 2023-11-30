@@ -192,6 +192,19 @@ const ContributionCCPoc = ({ answers, content, slug }) => {
                   s’appliqueront.
                 </p>
               </>
+            ) : slug.endsWith("la-periode-dessai-peut-elle-etre-renouvelee") ? (
+              <>
+                <p>
+                  Les mesures prévues par la convention ou l’accord collectif de
+                  branche ou le contrat de travail s’appliquent en plus de
+                  celles prévues par le code du travail (ci-dessous).
+                </p>
+                <p>
+                  Exemple : la convention collective peut prévoir que l’accord
+                  écrit pour le renouvellement de la période d’essai doit être
+                  signé 3 jours avant la fin de la période d’essai d’initiale.
+                </p>
+              </>
             ) : (
               <>
                 <p>
