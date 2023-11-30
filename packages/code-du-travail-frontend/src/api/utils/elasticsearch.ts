@@ -23,6 +23,6 @@ export const elasticsearchClient = new Client(esClientConfig);
 // TODO DO NOT MERGE !!!!!!
 // TODO DO NOT MERGE !!!!!!
 // TODO DO NOT MERGE !!!!!!
-export const elasticDocumentsIndex = `cdtn-dev-v2_documents-1701350910038`;
+export const elasticDocumentsIndex = `cdtn-dev-v2_documents-1701371666282`;
 // export const elasticDocumentsIndex = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_documents`;
 export const elasticSuggestionsIndex = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_suggestions`;
