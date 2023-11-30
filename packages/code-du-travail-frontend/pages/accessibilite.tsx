@@ -37,8 +37,12 @@ const Accessibilite = () => {
                   2021.
                 </li>
                 <li>
-                  La mise en œuvre des recommandations pour atteindre l’objectif
-                  de 75% d’ici la fin de l’année 2021.
+                  La réalisation d’un contre-audit d’ici la fin du premier
+                  semestre 2024
+                </li>
+                <li>
+                  La mise en œuvre des recommandations pour maintenir l’objectif
+                  de 75%
                 </li>
               </ul>
             </p>
@@ -59,11 +63,11 @@ const Accessibilite = () => {
             <Title as="h3" stripe="none" size="small">
               Résultat des tests
             </Title>
-            <p>
-              <ul>
-                <li>[75%] des critères du RGAA version 4.1 sont respectés</li>
-              </ul>
-            </p>
+            <p>L’audit de conformité réalisé par Alter Way révèle que :</p>
+            <ul>
+              <li>[75%] des critères du RGAA version 4.1 sont respectés</li>
+            </ul>
+
             <Title shift={theme.spacings.larger}>Non-conformité</Title>
             <ul>
               <li>
