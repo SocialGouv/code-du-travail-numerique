@@ -212,3 +212,7 @@ export type ElasticSearchContributionConventionnelle =
 export type ElasticSearchContribution =
   | ElasticSearchContributionGeneric
   | ElasticSearchContributionConventionnelle;
+
+export type ElasticSearchConventionCollective = ElasticSearchContribution & {
+  infoMessage: string;
+};

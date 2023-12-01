@@ -62,10 +62,7 @@ function Contributions({ contributions, convention }) {
 
   return (
     <>
-      <Title
-        subtitle="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective."
-        shift={spacings.larger}
-      >
+      <Title subtitle={convention.description} shift={spacings.larger}>
         Questions-réponses fréquentes
       </Title>
       <Accordion titleLevel={3} items={themes} />
