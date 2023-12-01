@@ -18,5 +18,5 @@ if (ELASTICSEARCH_TOKEN_API) {
 
 export const elasticsearchClient = new Client(esClientConfig);
 
-export const elasticDocumentsIndex = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_documents`;
-export const elasticSuggestionsIndex = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_suggestions`;
+export const elasticDocumentsIndex = `TEST_CC_documents`;
+export const elasticSuggestionsIndex = `TEST_CC_suggestions`;
