@@ -4,22 +4,18 @@ import {
 } from "@socialgouv/cdtn-utils";
 import { ContributionContent } from "../../contributions/ContributionContent";
 import { ReferencesJuridiques } from "../../contributions/References";
-import { AgreementsNotes } from "./AgreementsNotes";
-import { removeCCNumberFromSlug } from "../../contributions/utils";
+import { ContributionMessageBlock } from "../../contributions/ContributionMessageBlock";
 
 export function AccordionContentContribution(
-  contrib:
+  contribution:
     | ElasticSearchContributionGeneric
     | ElasticSearchContributionConventionnelle
 ) {
   return (
     <>
-      <ContributionContent contribution={contrib} />
-      <ReferencesJuridiques references={contrib.references} />
-      <AgreementsNotes
-        link={`/contribution/${removeCCNumberFromSlug(contrib.slug)}`}
-        containerStyle={{ marginTop: "15px" }}
-      />
+      <ContributionContent contribution={contribution} />
+      <ReferencesJuridiques references={contribution.references} />
+      <ContributionMessageBlock message={contribution.messageBlock} />
     </>
   );
 }

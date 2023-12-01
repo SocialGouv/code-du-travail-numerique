@@ -8,7 +8,6 @@ import References from "../../common/References";
 import { trackAccordionPanelState } from "./utils";
 import rehypeToReact from "../../contributions/rehypeToReact";
 import { AccordionContentContribution } from "./AccordionContentContribution";
-import { AgreementsNotes } from "./AgreementsNotes";
 
 const { spacings } = theme;
 
@@ -90,9 +89,14 @@ function AccordionContent({ answer, slug, references }) {
           }))}
         />
       )}
-      <AgreementsNotes
-        link={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`}
-      />
+      <strong>
+        Pour savoir si la mesure prévue par la convention collective s’applique
+        à votre situation, reportez-vous{" "}
+        <Link href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`}>
+          à la réponse complète à cette question
+        </Link>
+        .
+      </strong>
     </>
   );
 }
