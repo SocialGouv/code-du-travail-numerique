@@ -30,11 +30,7 @@ const ContributionCCPoc = ({ answers, content, slug }) => {
    * only one a single ccn answer
    * this allows us to set conventional answer directly for a given ccn
    */
-  const isConventionalAnswer = Object.prototype.hasOwnProperty.call(
-    answers,
-    "conventionAnswer"
-  );
-
+  const isConventionalAnswer = "conventionAnswer" in answers;
   const hasConventionAnswers =
     (answers.conventions && answers.conventions.length > 0) ||
     isConventionalAnswer;
