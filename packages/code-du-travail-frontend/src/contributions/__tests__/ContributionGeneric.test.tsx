@@ -5,6 +5,7 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import { ui } from "../../outils/DureePreavisDemission/__tests__/ui";
 import { byTestId, byText } from "testing-library-selector";
 import router from "next/router";
+import { ElasticSearchContributionGeneric } from "@socialgouv/cdtn-utils";
 
 beforeEach(() => {
   localStorage.clear();
@@ -25,7 +26,7 @@ describe("<ContributionGeneric />", () => {
     const push = router.push as jest.MockedFunction<typeof router.push>;
     push.mockReset();
   });
-  const contribution = {
+  const contribution: ElasticSearchContributionGeneric = {
     ccSupported: ["1351"],
     type: "content",
     content: "<p>hello <strong>generic</strong></p>",
@@ -35,8 +36,8 @@ describe("<ContributionGeneric />", () => {
     idcc: "0000",
     title: "Ma contrib",
     slug: "my-contrib",
-    metaDescription: "ma meta description",
-    description: "ma  description",
+    description: "ma meta description",
+    messageBlock: "mon message block",
     breadcrumbs: [],
   };
   it("je connais ma CC - cc traité", async () => {
