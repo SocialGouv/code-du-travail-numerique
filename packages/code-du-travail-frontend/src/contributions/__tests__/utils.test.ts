@@ -1,4 +1,4 @@
-import showNewContribPage from "../slugFilter";
+import { showNewContribPage } from "../utils";
 
 describe(`showNewContribPage`, () => {
   test(`should match`, () => {

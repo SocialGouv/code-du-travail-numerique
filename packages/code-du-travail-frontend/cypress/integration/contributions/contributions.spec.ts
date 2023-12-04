@@ -20,32 +20,38 @@ describe("Contributions", () => {
     );
   });
   it("je vois une page contribution", () => {
-    cy.visit("/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd");
+    cy.visit("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");
     cy.get("h1").should(
       "have.text",
-      "Quelle peut être la durée maximale d'un CDD ?"
+      "La période d’essai peut-elle être renouvelée ?"
     );
+    cy.contains(
+      "Accéder aux informations générales sans renseigner ma convention collective"
+    ).click();
     cy.get("body").should("contain", "Que dit le code du travail");
-    cy.get("body").should("contain", "Texte applicable");
+    cy.get("body").should(
+      "contain",
+      "La convention ou l’accord de branche étendu prévoit le renouvellement de la période d’essai"
+    );
     cy.get("body").should("contain", "Références");
-    cy.get("body").should("contain", "L1242-8-1");
-    cy.get("body").should("contain", "Que dit votre convention collective");
+    cy.get("body").should("contain", "L1221-21");
+    cy.get("body").should("contain", "Pour aller plus loin");
   });
 
   it("je vois une page contribution pour une CC", () => {
-    cy.visit("/contribution/2941-quelle-peut-etre-la-duree-maximale-dun-cdd");
+    cy.visit("/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee");
     cy.get("h1").should(
       "have.text",
-      "Quelle peut être la durée maximale d'un CDD ?"
+      "La période d’essai peut-elle être renouvelée ?"
     );
     cy.get("h2").should(
       "contain",
-      "Que dit la convention Aide, accompagnement, soins et services à domicile (BAD) ?"
+      "Votre réponse pour la convention collective Maisons à succursales de vente au détail d'habillement"
     );
 
     cy.get("body").should(
       "contain",
-      "Consultez les questions-réponses fréquentes pour la convention collective Aide, accompagnement, soins et services à domicile (BAD)"
+      "Les conditions de renouvellement de la période d’essai varient selon la catégorie professionnelle du salarié."
     );
 
     cy.contains(
@@ -54,6 +60,11 @@ describe("Contributions", () => {
       "have.attr",
       "href",
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
+    );
+    cy.get("h2").should("contain", "Pour aller plus loin");
+    cy.get("p").should(
+      "have.text",
+      "Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?"
     );
   });
 });
