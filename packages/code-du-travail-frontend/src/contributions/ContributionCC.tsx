@@ -31,7 +31,7 @@ const ContributionCC = ({ contribution }: Props) => {
       <Badge />
       <section>
         <Wrapper variant="light">
-          <Title shift={spacings.xmedium} variant="primary">
+          <Title size="small" as="p" shift={spacings.xmedium} variant="primary">
             Votre situation
           </Title>
 
@@ -51,10 +51,6 @@ const ContributionCC = ({ contribution }: Props) => {
           {contribution.ccnShortTitle}
         </Title>
 
-        <Paragraph fontStyle="italic">
-          Cette réponse tient compte des spécificités de la convention
-          collective {contribution.ccnShortTitle}.
-        </Paragraph>
         {contribution.highlight && contribution.highlight.content && (
           <StyledAlert variant="primary">
             <StyledParagraph

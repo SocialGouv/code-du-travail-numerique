@@ -30,11 +30,7 @@ const ContributionCCPoc = ({ answers, content, slug }) => {
    * only one a single ccn answer
    * this allows us to set conventional answer directly for a given ccn
    */
-  const isConventionalAnswer = Object.prototype.hasOwnProperty.call(
-    answers,
-    "conventionAnswer"
-  );
-
+  const isConventionalAnswer = "conventionAnswer" in answers;
   const hasConventionAnswers =
     (answers.conventions && answers.conventions.length > 0) ||
     isConventionalAnswer;
@@ -190,6 +186,19 @@ const ContributionCCPoc = ({ answers, content, slug }) => {
                   Notez enfin que le contrat de travail peut toujours prévoir
                   des mesures plus favorables pour le salarié, qui
                   s’appliqueront.
+                </p>
+              </>
+            ) : slug.endsWith("la-periode-dessai-peut-elle-etre-renouvelee") ? (
+              <>
+                <p>
+                  Les mesures prévues par la convention ou l’accord collectif de
+                  branche ou le contrat de travail s’appliquent en plus de
+                  celles prévues par le code du travail (ci-dessous).
+                </p>
+                <p>
+                  Exemple : la convention collective peut prévoir que l’accord
+                  écrit pour le renouvellement de la période d’essai doit être
+                  signé 3 jours avant la fin de la période d’essai d’initiale.
                 </p>
               </>
             ) : (
