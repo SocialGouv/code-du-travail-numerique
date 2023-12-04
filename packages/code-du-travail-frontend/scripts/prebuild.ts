@@ -8,6 +8,7 @@ export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
     "User-agent: *",
     "Disallow: /assets/",
     "Disallow: /images/",
+    "Disallow: /recherche",
     "",
     `Sitemap: ${host}/sitemap.xml`,
   ].join("\n");
