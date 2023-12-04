@@ -16,6 +16,7 @@ import {
 } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
+import { useRouter } from "next/router";
 
 import Mdx from "../../src/common/Mdx";
 import SearchConvention from "../../src/conventions/Search";
@@ -31,6 +32,7 @@ const Contribution = ({ answers, content }) => {
    * only one a single ccn answer
    * this allows us to set conventional answer directly for a given ccn
    */
+  const router = useRouter();
   const isConventionalAnswer = Object.prototype.hasOwnProperty.call(
     answers,
     "conventionAnswer"
@@ -44,6 +46,10 @@ const Contribution = ({ answers, content }) => {
     useLocalStorageOnPageLoad<Agreement>("convention");
   const isConventionDetected = () =>
     convention && convention.id && convention.num && convention.title;
+
+  const openNewContributionPage = () => {
+    router.push(`/contribution/${convention.num}-${content.slug}`);
+  };
 
   let conventionAnswer;
   if (isConventionalAnswer) {
@@ -201,18 +207,29 @@ const Contribution = ({ answers, content }) => {
                       </a>
                     </p>
                   </>
-                ) : (
+                ) : convention.num !== 3248 ? (
                   <Section>
                     Désolé, nous n’avons pas de réponse pour cette convention
                     collective.
                   </Section>
+                ) : (
+                  <></>
                 )}
                 {!isConventionalAnswer && (
                   <ButtonWrapper>
-                    <Button variant="primary" onClick={() => setConvention()}>
-                      Changer de convention collective
-                      <StyledCloseIcon />
-                    </Button>
+                    {convention.num === 3248 ? (
+                      <Button
+                        variant="primary"
+                        onClick={() => openNewContributionPage()}
+                      >
+                        Afficher les informations
+                      </Button>
+                    ) : (
+                      <Button variant="primary" onClick={() => setConvention()}>
+                        Changer de convention collective
+                        <StyledCloseIcon />
+                      </Button>
+                    )}
                   </ButtonWrapper>
                 )}
               </>
