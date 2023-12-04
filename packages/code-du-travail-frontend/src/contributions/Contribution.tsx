@@ -48,7 +48,7 @@ const Contribution = ({ answers, content }) => {
     convention && convention.id && convention.num && convention.title;
 
   const openNewContributionPage = () => {
-    router.push(`/contribution/${convention.num}-${content.slug}`);
+    router.push(`/contribution/${convention.num}-${router.query.slug}`);
   };
 
   let conventionAnswer;
