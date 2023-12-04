@@ -239,7 +239,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Démission d'une assistante maternelle",
     },
     {
-      "_score": 39.11317,
+      "_score": 39.30994,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": [
@@ -261,7 +261,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Préavis de démission",
     },
     {
-      "_score": 36.755974,
+      "_score": 36.84402,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": [
@@ -302,7 +302,7 @@ exports[`Search searchWithQuery 1`] = `
   ],
   "themes": [
     {
-      "_score": 2.262485,
+      "_score": 2.4238403,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "demission",
