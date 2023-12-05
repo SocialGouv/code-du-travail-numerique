@@ -15,9 +15,8 @@ describe("Outil - Trouver sa convention collective", () => {
     );
 
     cy.contains("Précédent").click();
-    cy.get("#enterprise-search").clear();
+    cy.get("#enterprise-search").clear().type("CARREFOUR BANQUE");
     cy.get("#enterprise-search-address").clear();
-    cy.get("#enterprise-search").type("CARREFOUR BANQUE");
     cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR BANQUE").click();
     cy.get("p").should(
