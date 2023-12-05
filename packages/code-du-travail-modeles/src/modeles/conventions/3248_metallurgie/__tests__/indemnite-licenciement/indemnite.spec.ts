@@ -76,7 +76,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
       },
       {
         expectedCompensation: 444.67,
-        expectedFormula: "(1/4 * Sref * A1) + (1/3 * Sref * A2)",
+        expectedFormula: "(1/4 * Sref * A1)",
         expectedReferences: expectedReferencesGroupeABBCDEFNonCadre,
         notificationDate: "01/01/2024",
         refSalary: 2668,
@@ -85,7 +85,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
       },
       {
         expectedCompensation: 611.42,
-        expectedFormula: "(1/4 * Sref * A1) + (1/3 * Sref * A2)",
+        expectedFormula: "(1/4 * Sref * A1)",
         expectedReferences: expectedReferencesGroupeABBCDEFNonCadre,
         notificationDate: "01/01/2024",
         refSalary: 2668,
@@ -107,7 +107,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
           {
             "contrat salarié . convention collective": "'IDCC3248'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-              "'ABCDE'",
+              "'A, B, C, D ou E'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
               "'Non'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
@@ -186,7 +186,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
           {
             "contrat salarié . convention collective": "'IDCC3248'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-              "'ABCDE'",
+              "'A, B, C, D ou E'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
               "'Oui'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
@@ -519,7 +519,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
           {
             "contrat salarié . convention collective": "'IDCC3248'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-              "'FGHI'",
+              "'F, G, H ou I'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age":
               age.toString(),
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":

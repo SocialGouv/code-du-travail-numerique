@@ -20,7 +20,7 @@ describe("CC 3248", () => {
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
-          categoriePro: "'FGHI'",
+          categoriePro: "'F, G, H ou I'",
           dateEntree: entryDate,
           dateSortie: exitDate,
           hasBeenDayContract: false,
@@ -48,7 +48,7 @@ describe("CC 3248", () => {
 
         const result = seniority.computeRequiredSeniority({
           absencePeriods: absences,
-          categoriePro: "'ABCDE'",
+          categoriePro: "'A, B, C, D ou E'",
           dateEntree: entryDate,
           dateNotification: exitDate,
           dateSortie: exitDate,
@@ -77,7 +77,7 @@ describe("CC 3248", () => {
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
-          categoriePro: "'ABCDE'",
+          categoriePro: "'A, B, C, D ou E'",
           dateEntree: entryDate,
           dateSortie: exitDate,
           hasBeenDayContract: false,
@@ -105,7 +105,7 @@ describe("CC 3248", () => {
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
-          categoriePro: "'ABCDE'",
+          categoriePro: "'A, B, C, D ou E'",
           dateEntree: entryDate,
           dateSortie: exitDate,
           hasBeenDayContract: true,
@@ -132,7 +132,7 @@ describe("CC 3248", () => {
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
-          categoriePro: "'ABCDE'",
+          categoriePro: "'A, B, C, D ou E'",
           dateBecomeDayContract: "20/02/2022",
           dateEntree: entryDate,
           dateSortie: exitDate,

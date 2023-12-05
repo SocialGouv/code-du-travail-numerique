@@ -17,13 +17,13 @@ import { accumulateAbsenceByYear, parseDate } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
 
 export type CC650SeniorityProps = DefaultSeniorityProps & {
-  categoriePro?: "'ABCDE'" | "'FGHI'";
+  categoriePro?: "'A, B, C, D ou E'" | "'F, G, H ou I'";
   hasBeenDayContract: boolean;
   dateBecomeDayContract?: string;
 };
 
 export type CC650SeniorityRequiredProps = DefaultSeniorityRequiredProps & {
-  categoriePro?: "'ABCDE'" | "'FGHI'";
+  categoriePro?: "'A, B, C, D ou E'" | "'F, G, H ou I'";
   hasBeenDayContract: boolean;
   dateBecomeDayContract?: string;
 };
@@ -50,7 +50,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     dateBecomeDayContract,
   }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC650>): SeniorityResult {
     switch (categoriePro) {
-      case "'ABCDE'":
+      case "'A, B, C, D ou E'":
         return this.computeABCDE(
           dateEntree,
           dateSortie,
@@ -58,7 +58,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
           hasBeenDayContract,
           dateBecomeDayContract
         );
-      case "'FGHI'":
+      case "'F, G, H ou I'":
         return this.computeFGHI(dateEntree, dateSortie);
       case undefined:
         return this.compute(dateEntree, dateSortie, absencePeriods);
@@ -74,7 +74,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     dateBecomeDayContract,
   }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC650>): RequiredSeniorityResult {
     switch (categoriePro) {
-      case "'ABCDE'":
+      case "'A, B, C, D ou E'":
         return this.computeABCDE(
           dateEntree,
           dateNotification,
@@ -82,7 +82,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
           hasBeenDayContract,
           dateBecomeDayContract
         );
-      case "'FGHI'":
+      case "'F, G, H ou I'":
         return this.computeFGHI(dateEntree, dateNotification);
       case undefined:
         return this.compute(dateEntree, dateNotification, absencePeriods);

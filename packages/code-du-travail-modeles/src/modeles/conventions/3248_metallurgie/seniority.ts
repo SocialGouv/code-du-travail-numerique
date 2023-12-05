@@ -17,13 +17,13 @@ import { accumulateAbsenceByYear, parseDate } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
 
 export type CC3248SeniorityProps = DefaultSeniorityProps & {
-  categoriePro: "'ABCDE'" | "'FGHI'";
+  categoriePro: "'A, B, C, D ou E'" | "'F, G, H ou I'";
   hasBeenDayContract: boolean;
   dateBecomeDayContract?: string;
 };
 
 export type CC3248SeniorityRequiredProps = DefaultSeniorityRequiredProps & {
-  categoriePro: "'ABCDE'" | "'FGHI'";
+  categoriePro: "'A, B, C, D ou E'" | "'F, G, H ou I'";
   hasBeenDayContract: boolean;
   dateBecomeDayContract?: string;
 };
@@ -42,7 +42,7 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
     dateBecomeDayContract,
   }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC3248>): SeniorityResult {
     switch (categoriePro) {
-      case "'ABCDE'":
+      case "'A, B, C, D ou E'":
         return this.computeABCDE(
           dateEntree,
           dateSortie,
@@ -50,7 +50,7 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
           hasBeenDayContract,
           dateBecomeDayContract
         );
-      case "'FGHI'":
+      case "'F, G, H ou I'":
         return this.computeFGHI(dateEntree, dateSortie);
     }
   }
@@ -64,7 +64,7 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
     dateBecomeDayContract,
   }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC3248>): RequiredSeniorityResult {
     switch (categoriePro) {
-      case "'ABCDE'":
+      case "'A, B, C, D ou E'":
         return this.computeABCDE(
           dateEntree,
           dateNotification,
@@ -72,7 +72,7 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
           hasBeenDayContract,
           dateBecomeDayContract
         );
-      case "'FGHI'":
+      case "'F, G, H ou I'":
         return this.computeFGHI(dateEntree, dateNotification);
     }
   }

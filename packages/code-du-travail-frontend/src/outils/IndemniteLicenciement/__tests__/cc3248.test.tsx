@@ -42,7 +42,7 @@ describe("Indemnité licenciement - CC 3248", () => {
       userAction
         .changeInputList(
           ui.information.agreement3248.proCategory.get(),
-          "'ABCDE'"
+          "'A, B, C, D ou E'"
         )
         .click(ui.information.agreement3248.dayContract.oui.get())
         .click(ui.information.agreement3248.alwaysDayContract.non.get())

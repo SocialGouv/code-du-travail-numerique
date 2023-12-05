@@ -404,13 +404,13 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   cdtn:
     type: liste
     valeurs:
-      A, B, C, D ou E: "'ABCDE'"
-      F, G, H ou I: "'FGHI'"
+      A, B, C, D ou E: "'A, B, C, D ou E'"
+      F, G, H ou I: "'F, G, H ou I'"
 
 ## Catégorie A, B, C, D et E (non cadre)
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE:
-  applicable si: contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle = 'ABCDE'
+  applicable si: contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle = 'A, B, C, D ou E'
   valeur: oui
 
 ## Catégorie A, B, C, D et E : Questions
@@ -501,7 +501,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI:
   applicable si:
     une de ces conditions:
-      - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle = 'FGHI'
+      - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle = 'F, G, H ou I'
       - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre
   valeur: oui
 

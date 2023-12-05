@@ -10,7 +10,7 @@ describe("Notification bloquante pour la CC 3248", () => {
     engine.setSituation({
       "contrat salarié . convention collective": "'IDCC3248'",
       "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-        "'ABCDE'",
+        "'A, B, C, D ou E'",
       "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
         "'Oui'",
       "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":

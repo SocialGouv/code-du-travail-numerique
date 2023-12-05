@@ -40,7 +40,7 @@ describe("Ordre des questions pour la CC 3248", () => {
           {
             ...defaultSituation,
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-              "'ABCDE'",
+              "'A, B, C, D ou E'",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -58,7 +58,7 @@ describe("Ordre des questions pour la CC 3248", () => {
             {
               ...defaultSituation,
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-                "'ABCDE'",
+                "'A, B, C, D ou E'",
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
                 "'Oui'",
             },
@@ -78,7 +78,7 @@ describe("Ordre des questions pour la CC 3248", () => {
               {
                 ...defaultSituation,
                 "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-                  "'ABCDE'",
+                  "'A, B, C, D ou E'",
                 "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
                   "'Oui'",
                 "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour":
@@ -99,7 +99,7 @@ describe("Ordre des questions pour la CC 3248", () => {
                 {
                   ...defaultSituation,
                   "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-                    "'ABCDE'",
+                    "'A, B, C, D ou E'",
                   "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
                     "'Oui'",
                   "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour . date":
@@ -125,7 +125,7 @@ describe("Ordre des questions pour la CC 3248", () => {
               {
                 ...defaultSituation,
                 "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-                  "'ABCDE'",
+                  "'A, B, C, D ou E'",
                 "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
                   "'Oui'",
                 "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour":
@@ -149,7 +149,7 @@ describe("Ordre des questions pour la CC 3248", () => {
             {
               ...defaultSituation,
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-                "'ABCDE'",
+                "'A, B, C, D ou E'",
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
                 "'Non'",
             },
@@ -171,7 +171,7 @@ describe("Ordre des questions pour la CC 3248", () => {
           {
             ...defaultSituation,
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-              "'FGHI'",
+              "'F, G, H ou I'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               "5",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -193,7 +193,7 @@ describe("Ordre des questions pour la CC 3248", () => {
             {
               ...defaultSituation,
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-                "'FGHI'",
+                "'F, G, H ou I'",
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age":
                 "61",
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -218,7 +218,7 @@ describe("Ordre des questions pour la CC 3248", () => {
             {
               ...defaultSituation,
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-                "'FGHI'",
+                "'F, G, H ou I'",
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age":
                 "60",
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
