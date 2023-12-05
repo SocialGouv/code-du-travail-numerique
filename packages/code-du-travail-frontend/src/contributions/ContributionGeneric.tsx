@@ -118,6 +118,27 @@ const ContributionGeneric = ({ contribution }: Props) => {
       )}
     </>
   );
+  const CC_SUPPORTED_NO_CONTENT_NO_CDT = (
+    <>
+      <Paragraph variant="primary" fontSize="default" fontWeight="700" noMargin>
+        Cette convention collective ne prévoit rien
+      </Paragraph>
+      <p>La convention collective sélectionnée ne prévoit rien sur ce sujet.</p>
+      {showAnswer ? (
+        <p>Vous pouvez consulter les informations générales ci-dessous.</p>
+      ) : (
+        <p>
+          Vous pouvez tout de même poursuivre pour obtenir les informations
+          générales.
+        </p>
+      )}
+    </>
+  );
+  const alertAgreementNotSupported = () => {
+    return contribution.type !== "generic-no-cdt"
+      ? CC_NOT_SUPPORTED
+      : CC_SUPPORTED_NO_CONTENT_NO_CDT;
+  };
 
   const scrollToTitle = () => {
     setTimeout(() => {
@@ -179,7 +200,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
               selectedAgreement={convention}
               onSelectAgreement={onSelectAgreement}
               onUserAction={onUserAction}
-              alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
+              alertAgreementNotSupported={alertAgreementNotSupported}
               simulator="QUESTIONNAIRE"
             />
           )}
@@ -192,7 +213,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
                     selectedAgreement={convention}
                     onSelectAgreement={onSelectAgreement}
                     onUserAction={onUserAction}
-                    alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
+                    alertAgreementNotSupported={alertAgreementNotSupported}
                     simulator="QUESTIONNAIRE"
                   />
                 </form>
