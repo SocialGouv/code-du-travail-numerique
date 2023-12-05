@@ -18,5 +18,8 @@ if (ELASTICSEARCH_TOKEN_API) {
 
 export const elasticsearchClient = new Client(esClientConfig);
 
-export const elasticDocumentsIndex = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_documents`;
-export const elasticSuggestionsIndex = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_suggestions`;
+const prefixIndex =
+  process.env.BRANCH_NAME_SLUG ?? `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}`;
+console.log(`Prefix index : ${prefixIndex}`);
+export const elasticDocumentsIndex = `${prefixIndex}_documents`;
+export const elasticSuggestionsIndex = `${prefixIndex}_suggestions`;
