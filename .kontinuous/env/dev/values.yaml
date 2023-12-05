@@ -24,4 +24,4 @@ jobs:
 app:
   env:
     - name: "BRANCH_NAME_SLUG"
-      value: "{{.Values.global.branchSlug}}"
+      value: "{{.Values.global.branchSlug32}}"
