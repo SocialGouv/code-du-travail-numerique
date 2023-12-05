@@ -95,6 +95,9 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
     const dEntree = parseDate(from);
     const dSortie = addDays(parseDate(to), 1);
     if (hasBeenDayContract && dateBecomeDayContract) {
+      const absencesWithExcludedAbsences = absences.filter(
+        (absence) => absence.durationInMonth && absence.durationInMonth > 12
+      );
       const dBecomeDayContract = parse(
         dateBecomeDayContract,
         "dd/MM/yyyy",
@@ -104,7 +107,10 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
         { begin: dEntree, end: dBecomeDayContract },
         { begin: dBecomeDayContract, end: dSortie },
       ];
-      const result = accumulateAbsenceByYear(absences, periods);
+      const result = accumulateAbsenceByYear(
+        absencesWithExcludedAbsences,
+        periods
+      );
       const totalAbsenceBeforeDayContract = result[0].totalAbsenceInMonth;
       const totalAbsenceAfterDayContract = result[1].totalAbsenceInMonth;
 
