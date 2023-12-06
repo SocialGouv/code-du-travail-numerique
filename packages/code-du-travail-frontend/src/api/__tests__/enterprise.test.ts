@@ -236,8 +236,9 @@ describe("Test enterprise endpoint", () => {
             {
               num: 123456,
               shortTitle: "Convention collective non reconnue",
-              id: 123456,
+              id: "123456",
               contributions: false,
+              title: "",
             },
           ],
         },
@@ -427,6 +428,106 @@ describe("Test enterprise endpoint", () => {
     expect(response.body.entreprises[0].conventions[0].num).toEqual(843);
     expect(response.body.entreprises[0].conventions[0].contributions).toEqual(
       true
+    );
+  });
+
+  test("A call to retrieve supported agreements from an enterprise", async () => {
+    const enterpriseApiDataResponse = {
+      entreprises: [
+        {
+          activitePrincipale:
+            "Entretien et réparation de véhicules automobiles",
+          conventions: [
+            {
+              idcc: 1740,
+            },
+          ],
+          etablissements: 1,
+          highlightLabel: "<b><u>AUTOEXPRESS</b></u>",
+          label: "AUTOEXPRESS",
+          matching: 1,
+          matchingEtablissement: {
+            address: "1 Rue Clément Ader 08110 Carignan",
+            siret: "75280280100023",
+          },
+          simpleLabel: "AUTOEXPRESS",
+          siren: "752802801",
+        },
+      ],
+    };
+    const apiEnterpriseResponse = {
+      json: () => enterpriseApiDataResponse,
+      status: 200,
+    };
+
+    (global as any).fetch = jest.fn(() => apiEnterpriseResponse);
+
+    const response = await request(server).get(
+      "/api/enterprises?q=AUTOEXPRESS"
+    );
+
+    expect(response.status).toEqual(200);
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith(
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=true&employer=true&open=true&matchingLimit=0`,
+      { headers: { referer: "cdtn-api" } }
+    );
+
+    expect(response.body.entreprises[0].conventions[0].num).toEqual(1596);
+    expect(response.body.entreprises[0].conventions[0].contributions).toEqual(
+      false
+    );
+    expect(response.body.entreprises[0].conventions[1].num).toEqual(1597);
+    expect(response.body.entreprises[0].conventions[1].contributions).toEqual(
+      false
+    );
+  });
+
+  test("A call to retrieve supported agreements from an enterprise", async () => {
+    const enterpriseApiDataResponse = {
+      entreprises: [
+        {
+          activitePrincipale:
+            "Entretien et réparation de véhicules automobiles",
+          conventions: [
+            {
+              idcc: 54,
+            },
+          ],
+          etablissements: 1,
+          highlightLabel: "<b><u>AUTOEXPRESS</b></u>",
+          label: "AUTOEXPRESS",
+          matching: 1,
+          matchingEtablissement: {
+            address: "1 Rue Clément Ader 08110 Carignan",
+            siret: "75280280100023",
+          },
+          simpleLabel: "AUTOEXPRESS",
+          siren: "752802801",
+        },
+      ],
+    };
+    const apiEnterpriseResponse = {
+      json: () => enterpriseApiDataResponse,
+      status: 200,
+    };
+
+    (global as any).fetch = jest.fn(() => apiEnterpriseResponse);
+
+    const response = await request(server).get(
+      "/api/enterprises?q=AUTOEXPRESS"
+    );
+
+    expect(response.status).toEqual(200);
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith(
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=true&employer=true&open=true&matchingLimit=0`,
+      { headers: { referer: "cdtn-api" } }
+    );
+
+    expect(response.body.entreprises[0].conventions[0].num).toEqual(3248);
+    expect(response.body.entreprises[0].conventions[0].contributions).toEqual(
+      false
     );
   });
 });
