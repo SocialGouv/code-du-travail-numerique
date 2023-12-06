@@ -137,7 +137,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
           d’obtenir une réponse adaptée :
         </p>
         <Wrapper variant="light">
-          <Title shift={spacings.xmedium} variant="primary">
+          <Title size="small" as="p" shift={spacings.xmedium} variant="primary">
             Votre situation
           </Title>
 
@@ -282,9 +282,17 @@ const ContributionGeneric = ({ contribution }: Props) => {
         )}
       </SectionNoPadding>
       <SectionHidden show={showAnswer}>
-        <Title stripe="left" ref={titleRef}>
+        <Title variant="secondary" stripe="none" size="small" ref={titleRef}>
           Que dit le code du travail&nbsp;?
         </Title>
+        {convention && !isSupported(convention) && (
+          <Paragraph>
+            Cette réponse correspond à ce que prévoit le code du travail, elle
+            ne tient pas compte des spécificités de la convention collective{" "}
+            {convention.shortTitle}
+          </Paragraph>
+        )}
+
         <ContributionContent contribution={contribution} />
         <ReferencesJuridiques references={contribution.references} />
         <ContributionMessageBlock message={contribution.messageBlock} />

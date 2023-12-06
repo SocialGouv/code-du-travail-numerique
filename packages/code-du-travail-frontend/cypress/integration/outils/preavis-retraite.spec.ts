@@ -170,21 +170,14 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains("Vous devez sélectionner une entreprise");
     cy.get("#enterprise-search").type("carrefour");
     cy.get('button[type="submit"]').last().click();
-    cy.contains("CARREFOUR HYPERMARCHES").click();
+    cy.contains("CARREFOUR BANQUE").click();
     cy.contains("Vous devez sélectionner une entreprise").should("not.exist");
     cy.contains(
-      "3 conventions collectives ont été trouvées pour cette entreprise"
+      "2 conventions collectives ont été trouvées pour cette entreprise"
     );
-    cy.contains(
-      "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
-    );
-    cy.contains(
-      "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)"
-    );
-    cy.contains("Commerce de détail alimentaire non spécialisé (IDCC 1505)");
-    cy.get(
-      'label:contains("Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)")'
-    )
+    cy.contains("Sociétés financières (IDCC 0478)");
+    cy.contains("Banque (IDCC 2120)");
+    cy.get('label:contains("Sociétés financières (IDCC 0478)")')
       .first()
       .click();
     cy.contains("Cliquez sur Suivant pour poursuivre la simulation.");
