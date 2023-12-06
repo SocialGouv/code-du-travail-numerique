@@ -5,6 +5,7 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.contains("Je la recherche").click();
 
     cy.get("#enterprise-search").type("82129756100010");
+    cy.get("#enterprise-search-address").type("75018");
     cy.get('button[type="submit"]').last().click();
     cy.contains("BOUILLON PIGALLE").click();
 
@@ -14,24 +15,19 @@ describe("Outil - Trouver sa convention collective", () => {
     );
 
     cy.contains("Précédent").click();
-    cy.get("#enterprise-search").clear();
-    cy.get("#enterprise-search").type("fnac");
-    cy.get("#enterprise-search-address").type("75001");
+    cy.get("#enterprise-search").clear().type("CARREFOUR BANQUE");
+    cy.get("#enterprise-search-address").clear();
     cy.get('button[type="submit"]').last().click();
-    cy.contains("FNAC PARIS").click();
+    cy.contains("CARREFOUR BANQUE").click();
     cy.get("p").should(
       "contain",
-      "2 conventions collectives trouvées pour « FNAC PARIS »"
+      "2 conventions collectives trouvées pour « CARREFOUR BANQUE »"
     );
-    cy.contains(
-      "Commerces et services de l'audiovisuel, de l'électronique et de l'équipement ménager IDCC1686"
-    )
+    cy.contains("Banque IDCC2120")
       .should("have.prop", "href")
       .and(
         "equal",
-        `${
-          Cypress.config().baseUrl
-        }/convention-collective/1686-commerces-et-services-de-laudiovisuel-de-lelectronique-et-de-lequipemen`
+        `${Cypress.config().baseUrl}/convention-collective/2120-banque`
       );
   });
 });
