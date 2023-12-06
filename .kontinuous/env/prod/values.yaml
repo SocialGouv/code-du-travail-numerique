@@ -17,7 +17,7 @@ jobs:
           NEXT_PUBLIC_SENTRY_PROJECT: "code-du-travail-numerique"
           NEXT_PUBLIC_SENTRY_URL: "https://sentry.fabrique.social.gouv.fr/"
         secrets:
-          sentry_auth_token: 
+          sentry_auth_token:
             secretName: www-secret
             secretKey: SENTRY_AUTH_TOKEN
 
@@ -33,7 +33,7 @@ app:
   resources:
     limits:
       cpu: 500m
-      memory: 1Gi
+      memory: 2048Mi
     requests:
-      cpu: 250m
-      memory: 768Mi
+      cpu: 300m
+      memory: 1536Mi
