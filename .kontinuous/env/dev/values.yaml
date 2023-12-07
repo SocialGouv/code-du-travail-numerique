@@ -20,3 +20,8 @@ jobs:
           sentry_auth_token:
             secretName: www-secret
             secretKey: SENTRY_AUTH_TOKEN
+
+app:
+  env:
+    - name: "BRANCH_NAME_SLUG"
+      value: "{{.Values.global.branchSlug32}}"
