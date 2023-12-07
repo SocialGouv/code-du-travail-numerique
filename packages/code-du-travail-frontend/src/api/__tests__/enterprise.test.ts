@@ -493,6 +493,9 @@ describe("Test enterprise endpoint", () => {
             {
               idcc: 54,
             },
+            {
+              idcc: 650,
+            },
           ],
           etablissements: 1,
           highlightLabel: "<b><u>AUTOEXPRESS</b></u>",
@@ -525,6 +528,7 @@ describe("Test enterprise endpoint", () => {
       { headers: { referer: "cdtn-api" } }
     );
 
+    expect(response.body.entreprises[0].conventions.length).toEqual(1);
     expect(response.body.entreprises[0].conventions[0].num).toEqual(3248);
     expect(response.body.entreprises[0].conventions[0].contributions).toEqual(
       false

@@ -22,7 +22,7 @@ export const populateAgreements = async (
       });
       const { body } = await fetchAgreements(idccList);
 
-      const conventions = idccList.map((num: number) => {
+      const conventionsWithDuplicates = idccList.map((num: number) => {
         const foundHandledIdcc = body.hits.hits.find(
           ({ _source }) => _source.num === num
         );
@@ -50,11 +50,12 @@ export const populateAgreements = async (
           contributions: false,
           ...(convention?.url ? { url: convention?.url } : {}),
         };
-      }, []);
-      return {
-        ...entreprise,
-        conventions,
-      };
+      });
+      const conventions = conventionsWithDuplicates.filter(
+        ({ num }, index) =>
+          conventions.findIndex((item) => item.num === num) === index
+      );
+      return { ...entreprise, conventions };
     }
   );
   const entreprises = entreprisePromises
