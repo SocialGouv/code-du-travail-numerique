@@ -170,6 +170,16 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         seniority: 20,
         seniorityRight: 20,
       },
+      {
+        age: 35,
+        expectedCompensation: 10138.4,
+        expectedFormula: "(1/5 * Sref * A1) + (3/5 * Sref * A2)",
+        expectedReferences: expectedReferencesGroupeABBCDEFCadre,
+        notificationDate: "31/12/2024",
+        refSalary: 2668,
+        seniority: 11,
+        seniorityRight: 11,
+      },
     ])(
       "Salarié notifié le $notificationDate, ayant une ancienneté de $seniority ans avec un salaire de référence $refSalary € (a été cadre: $hasBeenExecutive) => une compensation de base de $expectedCompensation €",
       ({

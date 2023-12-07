@@ -165,17 +165,13 @@ describe("Ordre des questions pour la CC 3248", () => {
       });
     });
 
-    describe("pour une catégorie FGHI avec plus de 5 ans d'ancienneté", () => {
+    describe("pour une catégorie FGHI", () => {
       beforeEach(() => {
         result = engine.setSituation(
           {
             ...defaultSituation,
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
               "'F, G, H ou I'",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              "5",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-              "5",
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -196,10 +192,6 @@ describe("Ordre des questions pour la CC 3248", () => {
                 "'F, G, H ou I'",
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age":
                 "61",
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-                "5",
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-                "5",
             },
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
@@ -221,10 +213,6 @@ describe("Ordre des questions pour la CC 3248", () => {
                 "'F, G, H ou I'",
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age":
                 "60",
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-                "5",
-              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-                "5",
             },
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
