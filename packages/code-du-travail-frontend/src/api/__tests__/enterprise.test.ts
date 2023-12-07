@@ -431,7 +431,7 @@ describe("Test enterprise endpoint", () => {
     );
   });
 
-  test("A call to retrieve supported agreements from an enterprise", async () => {
+  test("Check display of agreements with split", async () => {
     const enterpriseApiDataResponse = {
       entreprises: [
         {
@@ -483,7 +483,7 @@ describe("Test enterprise endpoint", () => {
     );
   });
 
-  test("A call to retrieve supported agreements from an enterprise", async () => {
+  test("Check display of agreements with merge", async () => {
     const enterpriseApiDataResponse = {
       entreprises: [
         {
