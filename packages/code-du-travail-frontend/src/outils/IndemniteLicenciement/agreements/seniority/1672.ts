@@ -1,9 +1,9 @@
+import { AgreementSeniority } from ".";
 import {
   SeniorityFactory,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
-import { AgreementSeniority } from ".";
 
 export class AgreementSeniority1672 implements AgreementSeniority {
   computeSeniority({
@@ -34,6 +34,22 @@ export class AgreementSeniority1672 implements AgreementSeniority {
       absencePeriods,
       isExecutive: professionalCategory === "'Cadres (Classes 5 à 7)'",
       becameExecutiveAt,
+    });
+  }
+
+  computeRequiredSeniority({
+    dateEntree,
+    dateNotification,
+    absencePeriods,
+    get,
+  }) {
+    const seniority = new SeniorityFactory().create(
+      SupportedCcIndemniteLicenciement.IDCC1672
+    );
+    return seniority.computeRequiredSeniority({
+      dateEntree,
+      dateNotification,
+      absencePeriods,
     });
   }
 }

@@ -36,6 +36,7 @@ describe("CC 650", () => {
           dateEntree: entryDate,
           dateSortie: exitDate,
           hasBeenDayContract: false,
+          hasBeenExecutive: false,
         });
 
         expect(result.value).toEqual(expectedAnciennete);

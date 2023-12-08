@@ -19,12 +19,14 @@ import { SeniorityDefault } from "../../common/seniority";
 export type CC650SeniorityProps = DefaultSeniorityProps & {
   categoriePro?: "'A, B, C, D ou E'" | "'F, G, H ou I'";
   hasBeenDayContract: boolean;
+  hasBeenExecutive: boolean;
   dateBecomeDayContract?: string;
 };
 
 export type CC650SeniorityRequiredProps = DefaultSeniorityRequiredProps & {
   categoriePro?: "'A, B, C, D ou E'" | "'F, G, H ou I'";
   hasBeenDayContract: boolean;
+  hasBeenExecutive: boolean;
   dateBecomeDayContract?: string;
 };
 
@@ -48,6 +50,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     categoriePro,
     hasBeenDayContract,
     dateBecomeDayContract,
+    hasBeenExecutive,
   }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC650>): SeniorityResult {
     switch (categoriePro) {
       case "'A, B, C, D ou E'":
@@ -55,6 +58,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
           dateEntree,
           dateSortie,
           absencePeriods,
+          hasBeenExecutive,
           hasBeenDayContract,
           dateBecomeDayContract
         );
@@ -72,6 +76,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     categoriePro,
     hasBeenDayContract,
     dateBecomeDayContract,
+    hasBeenExecutive,
   }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC650>): RequiredSeniorityResult {
     switch (categoriePro) {
       case "'A, B, C, D ou E'":
@@ -79,6 +84,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
           dateEntree,
           dateNotification,
           absencePeriods,
+          hasBeenExecutive,
           hasBeenDayContract,
           dateBecomeDayContract
         );
@@ -128,11 +134,18 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     from: string,
     to: string,
     absences: Absence[],
+    hasBeenExecutive: boolean,
     hasBeenDayContract: boolean,
     dateBecomeDayContract: string | undefined
   ): SeniorityResult {
     const dEntree = parseDate(from);
     const dSortie = addDays(parseDate(to), 1);
+    const absencesWithExcludedAbsences = !hasBeenExecutive
+      ? absences.filter(
+          (absence) => absence.durationInMonth && absence.durationInMonth > 12
+        )
+      : [];
+
     if (hasBeenDayContract && dateBecomeDayContract) {
       const dBecomeDayContract = parse(
         dateBecomeDayContract,
@@ -143,7 +156,10 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
         { begin: dEntree, end: dBecomeDayContract },
         { begin: dBecomeDayContract, end: dSortie },
       ];
-      const result = accumulateAbsenceByYear(absences, periods);
+      const result = accumulateAbsenceByYear(
+        absencesWithExcludedAbsences,
+        periods
+      );
       const totalAbsenceBeforeDayContract = result[0].totalAbsenceInMonth;
       const totalAbsenceAfterDayContract = result[1].totalAbsenceInMonth;
 
@@ -158,16 +174,12 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
             1.5,
       };
     }
-    const totalAbsence = absences
-      .filter(
-        (absence) => absence.durationInMonth && absence.durationInMonth > 12
-      )
-      .reduce((total, item) => {
-        if (item.durationInMonth) {
-          return total + item.durationInMonth;
-        }
-        return total;
-      }, 0);
+    const totalAbsence = absencesWithExcludedAbsences.reduce((total, item) => {
+      if (item.durationInMonth) {
+        return total + item.durationInMonth;
+      }
+      return total;
+    }, 0);
     if (hasBeenDayContract && !dateBecomeDayContract) {
       return {
         value:

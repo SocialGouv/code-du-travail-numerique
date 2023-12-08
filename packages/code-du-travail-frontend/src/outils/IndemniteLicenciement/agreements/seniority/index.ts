@@ -99,6 +99,13 @@ export interface AgreementSeniority {
     absencePeriods: Absence[];
     get: StoreApi<MainStore>["getState"];
   }) => SeniorityResult;
+
+  computeRequiredSeniority: (data: {
+    dateEntree: string;
+    dateNotification: string;
+    absencePeriods: Absence[];
+    get: StoreApi<MainStore>["getState"];
+  }) => SeniorityResult;
 }
 
 export * from "./validator";

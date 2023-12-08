@@ -36,4 +36,20 @@ export class AgreementSeniority16 implements AgreementSeniority {
       becameExecutiveAt,
     });
   }
+
+  computeRequiredSeniority({
+    dateEntree,
+    dateNotification,
+    absencePeriods,
+    get,
+  }) {
+    const seniority = new SeniorityFactory().create(
+      SupportedCcIndemniteLicenciement.IDCC1672
+    );
+    return seniority.computeRequiredSeniority({
+      dateEntree,
+      dateNotification,
+      absencePeriods,
+    });
+  }
 }
