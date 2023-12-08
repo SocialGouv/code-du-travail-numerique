@@ -11,6 +11,12 @@ const expectedReferencesGroupeABBCDEFNonCadre = [
     url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314537?idConteneur=KALICONT000046993250#KALIARTI000046314537",
   },
 ];
+
+const expectedReferenceForfaitJour = {
+  article: "Article 73",
+  url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314519?idConteneur=KALICONT000046993250#KALIARTI000046314519",
+};
+
 const expectedReferencesGroupeABBCDEFCadre = [
   {
     article: "Article 75.3.1.1",
@@ -25,6 +31,7 @@ const expectedReferencesGroupeABBCDEFCadre = [
     url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
   },
 ];
+
 const expectedReferencesGroupeABBCDEFCadreAvecMinoration = [
   {
     article: "Article 75.3.1.1",
@@ -93,7 +100,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         seniorityRight: 11 / 12,
       },
     ])(
-      "Salarié notifié le $notificationDate, ayant une ancienneté de $seniority ans avec un salaire de référence $refSalary € (a été cadre: $hasBeenExecutive) => une compensation de base de $expectedCompensation €",
+      "Salarié notifié le $notificationDate, ayant une ancienneté de $seniority ans avec un salaire de référence $refSalary € => une compensation de base de $expectedCompensation €",
       ({
         seniorityRight,
         notificationDate,
@@ -112,6 +119,87 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
               "'Non'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
               "'Non'",
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority.toString(),
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniorityRight.toString(),
+            "contrat salarié . indemnité de licenciement . date de notification":
+              notificationDate,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              refSalary.toString(),
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
+
+        const formule = engine.getFormule();
+        expect(formule.formula).toEqual(expectedFormula);
+
+        const references = engine.getReferences("résultat conventionnel");
+        expect(references).toHaveLength(expectedReferences.length);
+        expect(references).toEqual(expect.arrayContaining(expectedReferences));
+      }
+    );
+  });
+
+  describe("Groupe A,B,C,D,E (forfait jour - jamais cadre)", () => {
+    test.each([
+      {
+        expectedCompensation: 0,
+        expectedFormula: "",
+        expectedReferences: [],
+        notificationDate: "01/01/2024",
+        refSalary: 2668,
+        seniority: 6 / 12,
+        seniorityRight: 6 / 12,
+      },
+      {
+        expectedCompensation: 444.67,
+        expectedFormula: "(1/4 * Sref * A1)",
+        expectedReferences: expectedReferencesGroupeABBCDEFNonCadre.concat(
+          expectedReferenceForfaitJour
+        ),
+        notificationDate: "01/01/2024",
+        refSalary: 2668,
+        seniority: 8 / 12,
+        seniorityRight: 8 / 12,
+      },
+      {
+        expectedCompensation: 611.42,
+        expectedFormula: "(1/4 * Sref * A1)",
+        expectedReferences: expectedReferencesGroupeABBCDEFNonCadre.concat(
+          expectedReferenceForfaitJour
+        ),
+        notificationDate: "01/01/2024",
+        refSalary: 2668,
+        seniority: 11 / 12,
+        seniorityRight: 11 / 12,
+      },
+    ])(
+      "Salarié notifié le $notificationDate, ayant une ancienneté de $seniority ans avec un salaire de référence $refSalary € => une compensation de base de $expectedCompensation €",
+      ({
+        seniorityRight,
+        notificationDate,
+        expectedCompensation,
+        expectedReferences,
+        seniority,
+        expectedFormula,
+        refSalary,
+      }) => {
+        const { missingArgs, result } = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC3248'",
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
+              "'A, B, C, D ou E'",
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
+              "'Non'",
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
+              "'Oui'",
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour":
+              "'Oui'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority.toString(),
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -181,7 +269,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         seniorityRight: 11,
       },
     ])(
-      "Salarié notifié le $notificationDate, ayant une ancienneté de $seniority ans avec un salaire de référence $refSalary € (a été cadre: $hasBeenExecutive) => une compensation de base de $expectedCompensation €",
+      "Salarié notifié le $notificationDate, ayant une ancienneté de $seniority ans avec un salaire de référence $refSalary € => une compensation de base de $expectedCompensation €",
       ({
         seniorityRight,
         notificationDate,
@@ -201,6 +289,108 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
               "'Oui'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
               "'Non'",
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age":
+              age.toString(),
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . remplit conditions pour la retraite":
+              "'Oui'",
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority.toString(),
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniorityRight.toString(),
+            "contrat salarié . indemnité de licenciement . date de notification":
+              notificationDate,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              refSalary.toString(),
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
+
+        const formule = engine.getFormule();
+        expect(formule.formula).toEqual(expectedFormula);
+
+        const references = engine.getReferences("résultat conventionnel");
+        expect(references).toHaveLength(expectedReferences.length);
+        expect(references).toEqual(expect.arrayContaining(expectedReferences));
+      }
+    );
+  });
+
+  describe("Groupe A,B,C,D,E (forfait jour - cadre)", () => {
+    test.each([
+      {
+        age: 30,
+        expectedCompensation: 0,
+        expectedFormula: "",
+        expectedReferences: [],
+        notificationDate: "01/01/2024",
+        refSalary: 2668,
+        seniority: 7 / 12,
+        seniorityRight: 7 / 12,
+      },
+      {
+        age: 30,
+        expectedCompensation: 24545.6,
+        expectedFormula: "(1/5 * Sref * A1) + (3/5 * Sref * A2)",
+        expectedReferences: expectedReferencesGroupeABBCDEFCadre.concat(
+          expectedReferenceForfaitJour
+        ),
+        notificationDate: "01/01/2024",
+        refSalary: 2668,
+        seniority: 20,
+        seniorityRight: 20,
+      },
+      {
+        age: 64,
+        expectedCompensation: 11666.67,
+        expectedFormula: "(1/4 * Sref * A1) + (1/3 * Sref * A2)",
+        expectedReferences:
+          expectedReferencesGroupeABBCDEFCadreAvecMinoration.concat(
+            expectedReferenceForfaitJour
+          ),
+        notificationDate: "01/01/2024",
+        refSalary: 2000,
+        seniority: 20,
+        seniorityRight: 20,
+      },
+      {
+        age: 35,
+        expectedCompensation: 10138.4,
+        expectedFormula: "(1/5 * Sref * A1) + (3/5 * Sref * A2)",
+        expectedReferences: expectedReferencesGroupeABBCDEFCadre.concat(
+          expectedReferenceForfaitJour
+        ),
+        notificationDate: "31/12/2024",
+        refSalary: 2668,
+        seniority: 11,
+        seniorityRight: 11,
+      },
+    ])(
+      "Salarié notifié le $notificationDate, ayant une ancienneté de $seniority ans avec un salaire de référence $refSalary € => une compensation de base de $expectedCompensation €",
+      ({
+        seniorityRight,
+        notificationDate,
+        expectedCompensation,
+        seniority,
+        expectedFormula,
+        refSalary,
+        age,
+        expectedReferences,
+      }) => {
+        const { missingArgs, result } = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC3248'",
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
+              "'A, B, C, D ou E'",
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
+              "'Oui'",
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
+              "'Oui'",
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour":
+              "'Oui'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age":
               age.toString(),
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . remplit conditions pour la retraite":
