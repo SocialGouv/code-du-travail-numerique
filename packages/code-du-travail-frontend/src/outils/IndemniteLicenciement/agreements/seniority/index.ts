@@ -103,6 +103,7 @@ export interface AgreementSeniority {
   computeRequiredSeniority: (data: {
     dateEntree: string;
     dateNotification: string;
+    dateSortie: string;
     absencePeriods: Absence[];
     get: StoreApi<MainStore>["getState"];
   }) => SeniorityResult;
