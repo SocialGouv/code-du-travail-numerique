@@ -103,20 +103,9 @@ export class AgreementSeniority3248 implements AgreementSeniority {
     const seniority = new SeniorityFactory().create(
       SupportedCcIndemniteLicenciement.IDCC3248
     );
-    console.log(
-      `MMA - Compute seniority : ${JSON.stringify({
-        dateEntree,
-        dateNotification,
-        absencePeriods,
-        categoriePro,
-        hasBeenDayContract: hasBeenDayContract === "'Oui'",
-        dateBecomeDayContract: dateBeginDayContract,
-        hasBeenExecutive: hasBeenExecutive === "'Oui'",
-      })}`
-    );
     return seniority.computeSeniority({
       dateEntree,
-      dateNotification,
+      dateSortie: dateNotification,
       absencePeriods,
       categoriePro,
       hasBeenDayContract: hasBeenDayContract === "'Oui'",
