@@ -104,7 +104,7 @@ export class AgreementSeniority3248 implements AgreementSeniority {
     const seniority = new SeniorityFactory().create(
       SupportedCcIndemniteLicenciement.IDCC3248
     );
-    return seniority.computeSeniority({
+    return seniority.computeRequiredSeniority({
       dateEntree,
       dateSortie,
       dateNotification,
