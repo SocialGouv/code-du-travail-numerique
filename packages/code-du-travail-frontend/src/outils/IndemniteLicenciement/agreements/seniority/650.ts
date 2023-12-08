@@ -62,6 +62,7 @@ export class AgreementSeniority650 implements AgreementSeniority {
   computeRequiredSeniority({
     dateEntree,
     dateNotification,
+    dateSortie,
     absencePeriods,
     get,
   }) {
@@ -103,7 +104,8 @@ export class AgreementSeniority650 implements AgreementSeniority {
     );
     return seniority.computeRequiredSeniority({
       dateEntree,
-      dateSortie: dateNotification,
+      dateSortie,
+      dateNotification,
       absencePeriods,
       categoriePro,
       hasBeenDayContract: hasBeenDayContract === "'Oui'",
