@@ -11,9 +11,11 @@ import {
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
-import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import { HighlightResult, SectionTitle, SmallText } from "../../common/stepStyles";
 import { formatRefs } from "../../publicodes";
 import { WizardStepProps } from "../../common/type/WizardType";
+import { NoticeNote } from "../../common/NoticeNote";
+import { calculateNumberOfElements } from "../../utils";
 
 function Duration({ situation }) {
   if (!situation.answer) {
@@ -31,10 +33,35 @@ function Duration({ situation }) {
   )
     ? "D’après les éléments saisis, durant son préavis (ou délai de prévenance), le salarié peut s’absenter pour rechercher un emploi pendant"
     : "D’après les éléments saisis, durant son préavis, le salarié peut s’absenter pour rechercher un emploi pendant";
+  const note = situation?.note;
   return (
     <>
       <p>
-        {wording}&nbsp;: <HighlightResult>{situation.answer}</HighlightResult>.
+        {wording}&nbsp;:<br/><HighlightResult>{situation.answer}</HighlightResult>
+        &nbsp;
+        <NoticeNote
+          isList
+          numberOfElements={Array.isArray(note) ? note.length : calculateNumberOfElements(note)}
+        />
+        .
+        {note && !Array.isArray(note) && (
+        <SmallText>
+        <NoticeNote
+          numberOfElements={calculateNumberOfElements(note)}
+          currentElement={calculateNumberOfElements(note)}
+        />
+        {note}
+      </SmallText>
+      )}
+      {note && Array.isArray(note) && (
+        note.map((text, index) => <SmallText key={index}>
+        <NoticeNote
+          numberOfElements={note.length}
+          currentElement={index + 1}
+        />
+        {text}
+      </SmallText>)
+      )}
       </p>
       {situation.answer2 && (
         <>
