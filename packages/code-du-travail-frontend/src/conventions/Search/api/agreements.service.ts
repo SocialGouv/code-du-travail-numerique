@@ -47,18 +47,6 @@ const apiIdcc = function createFetcher(query) {
           formatCCn(_source)
         ) as Agreement[];
       });
-      const result3248 = result.find(({num}) => num === 3248);
-      if (!result3248) {
-        result = result.concat({
-          "url": "https://www.legifrance.gouv.fr/conv_coll/id/KALICONT000046993250",
-          "id": "KALICONT000046993250",
-          "num": 3248,
-          "shortTitle": "Convention collective nationale de la métallurgie",
-          "slug": "3248-convention-collective-nationale-de-la-metallurgie",
-          "title": "Convention collective nationale de la métallurgie",
-          "contributions": false
-      })
-      }
       return result;
     }
     return Promise.reject(
