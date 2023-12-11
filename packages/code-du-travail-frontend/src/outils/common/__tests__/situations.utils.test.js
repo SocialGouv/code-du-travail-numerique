@@ -83,7 +83,7 @@ describe("situations", () => {
     it("should return all situations", () => {
       expect(filterSituations(data).length).toEqual(data.length);
     });
-    it("should return no situation", () => {
+    it("should return no criteria case", () => {
       expect(filterSituations(data, { foo: "no" }).length).toBe(1);
     });
     it("should render only situation that match foo", () => {
