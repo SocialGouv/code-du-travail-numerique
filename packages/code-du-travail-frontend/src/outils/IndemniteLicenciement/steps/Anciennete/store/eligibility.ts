@@ -6,8 +6,15 @@ import {
 import { AncienneteStoreInput } from "./types";
 import { Agreement } from "@socialgouv/cdtn-utils";
 import { CommonInformationsStoreInput } from "../../../../CommonSteps/Informations/store";
+import {
+  getAgreementRequiredSeniority,
+  getAgreementSeniority,
+} from "../../../agreements/seniority";
+import { StoreApi } from "zustand";
+import { MainStore } from "../../../store";
 
 export const getErrorEligibility = (
+  get: StoreApi<MainStore>["getState"],
   state: AncienneteStoreInput,
   stateInfo: CommonInformationsStoreInput,
   isInaptitude: boolean,
@@ -34,15 +41,10 @@ export const getErrorEligibility = (
 
   let requiredSeniorityAgreement = 0;
   if (agreement) {
-    const factoryAgreement = new SeniorityFactory().create(
-      getSupportedAgreement(agreement.num)
-    );
-    requiredSeniorityAgreement = factoryAgreement.computeRequiredSeniority({
-      dateEntree: state.dateEntree,
-      dateNotification: state.dateNotification,
-      dateSortie: state.dateSortie,
-      absencePeriods: state.absencePeriods,
-    }).value;
+    requiredSeniorityAgreement = getAgreementRequiredSeniority(
+      getSupportedAgreement(agreement.num),
+      get as StoreApi<MainStore>["getState"]
+    ).value;
   }
 
   let minimalSeniorityInMonth = 8;

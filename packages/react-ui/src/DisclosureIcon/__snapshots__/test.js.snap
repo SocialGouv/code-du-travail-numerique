@@ -37,7 +37,7 @@ exports[`<Tooltip /> renders simple tooltip 1`] = `
     </svg>
   </button>
   <div
-    class="sc-aXZVg sc-iGgWBj hOghNv dgoGHD"
+    class="sc-aXZVg sc-iGgWBj hOghNv ehwDaN"
   >
     Here I am! I am the buried treasure!
   </div>
