@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.115.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.114.0...v4.115.0) (2023-12-07)
+
+### Bug Fixes
+
+- **deps:** update dependency @sentry/nextjs to v7.77.0 [security] ([#5434](https://github.com/SocialGouv/code-du-travail-numerique/issues/5434)) ([f265a0a](https://github.com/SocialGouv/code-du-travail-numerique/commit/f265a0aec252d8ee0fa67e2ef93edbc1ee92c8fe))
+- **kubernetes:** upgrade performance ([#5462](https://github.com/SocialGouv/code-du-travail-numerique/issues/5462)) ([9dce8c1](https://github.com/SocialGouv/code-du-travail-numerique/commit/9dce8c137d37c0f82fc673dfa2efbcf3bd70aed0))
+- **page accessibilté:** mise à jour de la page ([#5454](https://github.com/SocialGouv/code-du-travail-numerique/issues/5454)) ([e57e7bf](https://github.com/SocialGouv/code-du-travail-numerique/commit/e57e7bfdf487496b917fa62949e5fc7efe93bae9))
+- **seo:** "Contributions" renomé en "Fiches pratiques" + disallow /recherche in robots.txt ([#5451](https://github.com/SocialGouv/code-du-travail-numerique/issues/5451)) ([49268f2](https://github.com/SocialGouv/code-du-travail-numerique/commit/49268f25150193c5a01040112c8af03c7760a9df))
+
+### Features
+
+- **contribution:** handle new contrib display ([#5441](https://github.com/SocialGouv/code-du-travail-numerique/issues/5441)) ([0db0c23](https://github.com/SocialGouv/code-du-travail-numerique/commit/0db0c235a987f08a61132863465a636e183f39be)), closes [#5445](https://github.com/SocialGouv/code-du-travail-numerique/issues/5445)
+
 # [4.114.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.113.0...v4.114.0) (2023-11-21)
 
 ### Features
