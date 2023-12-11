@@ -1,4 +1,4 @@
-import { Input, Label, Text, theme } from "@socialgouv/cdtn-ui";
+import { Input, Label, Text, theme, Paragraph } from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import styled from "styled-components";
 import Autosuggest from "react-autosuggest";
@@ -118,10 +118,10 @@ const renderSuggestion = (suggestion: Agreement) => {
   return (
     <SuggestionContainer>
       {suggestion.shortTitle} <IDCC>(IDCC {formatIdcc(suggestion.num)})</IDCC>
-      <Highlight>
+      <Paragraph noMargin variant="secondary">
         {suggestion.highlight?.searchInfo &&
           `(${suggestion.highlight?.searchInfo})`}
-      </Highlight>
+      </Paragraph>
     </SuggestionContainer>
   );
 };
@@ -133,10 +133,6 @@ const IDCC = styled.span`
 const SuggestionContainer = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-const Highlight = styled.div`
-  color: ${theme.colors.secondary};
 `;
 
 const renderSuggestionsContainer = ({ containerProps, children }) => (
