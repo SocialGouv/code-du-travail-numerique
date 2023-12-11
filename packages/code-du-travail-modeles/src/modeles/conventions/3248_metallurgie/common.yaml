@@ -1,0 +1,8 @@
+# Convention collective nationale métallurgie
+contrat salarié . convention collective . métallurgie:
+  description: Convention collective nationale de la métallurgie
+  applicable si: convention collective = 'IDCC3248'
+  valeur: oui
+  cdtn:
+    idcc: 3248
+    préavis-retraite: true

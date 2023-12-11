@@ -55,6 +55,7 @@ const DisclosureIconButton = styled(Button)`
 `;
 const AlertWithMargin = styled(Alert)`
   margin-top: ${spacings.base};
+  font-weight: normal;
 `;
 
 DisclosureIcon.propTypes = {
