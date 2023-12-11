@@ -47,7 +47,7 @@ const Contribution = ({ answers, content }) => {
   const isConventionDetected = () =>
     convention && convention.id && convention.num && convention.title;
 
-  const openNewContributionPage = () => {
+  const openNewContributionPage = async () => {
     router.push(`/contribution/${convention.num}-${router.query.slug}`);
   };
 
@@ -207,7 +207,10 @@ const Contribution = ({ answers, content }) => {
                       </a>
                     </p>
                   </>
-                ) : convention.num !== 3248 ? (
+                ) : convention.num !== 3248 ||
+                  (convention.num === 3248 &&
+                    router.query.slug ===
+                      "quest-ce-quune-rupture-conventionnelle") ? (
                   <Section>
                     Désolé, nous n’avons pas de réponse pour cette convention
                     collective.
@@ -217,7 +220,9 @@ const Contribution = ({ answers, content }) => {
                 )}
                 {!isConventionalAnswer && (
                   <ButtonWrapper>
-                    {convention.num === 3248 ? (
+                    {convention.num === 3248 &&
+                    router.query.slug !==
+                      "quest-ce-quune-rupture-conventionnelle" ? (
                       <Button
                         variant="primary"
                         onClick={() => openNewContributionPage()}
