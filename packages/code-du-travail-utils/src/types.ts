@@ -68,7 +68,7 @@ export declare type Content = {
   name: string;
   title: string;
   blocks: ContentBlock[];
-  references: Reference[];
+  references?: Reference[];
 };
 
 export type Breadcrumb = {
