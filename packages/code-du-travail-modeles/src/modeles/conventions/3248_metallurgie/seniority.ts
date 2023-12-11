@@ -16,33 +16,25 @@ import type {
 import { accumulateAbsenceByYear, parseDate } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
 
-export type CC650SeniorityProps = DefaultSeniorityProps & {
-  categoriePro?: "'A, B, C, D ou E'" | "'F, G, H ou I'";
+export type CC3248SeniorityProps = DefaultSeniorityProps & {
+  categoriePro: "'A, B, C, D ou E'" | "'F, G, H ou I'";
   hasBeenDayContract: boolean;
   hasBeenExecutive: boolean;
   dateBecomeDayContract?: string;
 };
 
-export type CC650SeniorityRequiredProps = DefaultSeniorityRequiredProps & {
-  categoriePro?: "'A, B, C, D ou E'" | "'F, G, H ou I'";
+export type CC3248SeniorityRequiredProps = DefaultSeniorityRequiredProps & {
+  categoriePro: "'A, B, C, D ou E'" | "'F, G, H ou I'";
   hasBeenDayContract: boolean;
   hasBeenExecutive: boolean;
   dateBecomeDayContract?: string;
 };
 
-const MOTIFS_650: Motif[] = LEGAL_MOTIFS.map((item) => ({
-  ...item,
-  startAt: (data) => {
-    return (
-      data[
-        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour . date"
-      ] !== undefined
-    );
-  },
-  value: 0,
-}));
+export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC3248> {
+  getMotifs(): Motif[] {
+    return MOTIFS_3248;
+  }
 
-export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC650> {
   computeSeniority({
     dateEntree,
     dateSortie,
@@ -51,7 +43,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     hasBeenDayContract,
     dateBecomeDayContract,
     hasBeenExecutive,
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC650>): SeniorityResult {
+  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC3248>): SeniorityResult {
     switch (categoriePro) {
       case "'A, B, C, D ou E'":
         return this.computeABCDE(
@@ -64,8 +56,6 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
         );
       case "'F, G, H ou I'":
         return this.computeFGHI(dateEntree, dateSortie);
-      case undefined:
-        return this.compute(dateEntree, dateSortie, absencePeriods);
     }
   }
 
@@ -74,10 +64,10 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     dateNotification,
     absencePeriods = [],
     categoriePro,
+    hasBeenExecutive,
     hasBeenDayContract,
     dateBecomeDayContract,
-    hasBeenExecutive,
-  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC650>): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC3248>): RequiredSeniorityResult {
     switch (categoriePro) {
       case "'A, B, C, D ou E'":
         return this.computeABCDE(
@@ -90,36 +80,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
         );
       case "'F, G, H ou I'":
         return this.computeFGHI(dateEntree, dateNotification);
-      case undefined:
-        return this.compute(dateEntree, dateNotification, absencePeriods);
     }
-  }
-
-  getMotifs(): Motif[] {
-    return MOTIFS_650;
-  }
-
-  protected compute(
-    from: string,
-    to: string,
-    absences: Absence[]
-  ): SeniorityResult {
-    const dEntree = parseDate(from);
-    const dSortie = addDays(parseDate(to), 1);
-    const totalAbsence = absences
-      .filter((period) => Boolean(period.durationInMonth))
-      .reduce((total, item) => {
-        const m = this.getMotifs().find(
-          (motif) => motif.key === item.motif.key
-        );
-        if (!m || !item.durationInMonth) {
-          return total;
-        }
-        return total + item.durationInMonth * m.value;
-      }, 0);
-    return {
-      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
-    };
   }
 
   protected computeFGHI(from: string, to: string): SeniorityResult {
@@ -191,3 +152,14 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     };
   }
 }
+
+const MOTIFS_3248: Motif[] = LEGAL_MOTIFS.map((item) => ({
+  ...item,
+  startAt: (data) => {
+    return (
+      data[
+        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour . date"
+      ] !== undefined
+    );
+  },
+}));

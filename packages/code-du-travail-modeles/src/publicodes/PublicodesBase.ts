@@ -102,7 +102,8 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     try {
       this.engine.setSituation(this.buildSituation(situation));
       return this.engine.evaluate(rule);
-    } catch {
+    } catch (error: unknown) {
+      console.error("Failed to evaluate: ", error);
       return undefined;
     }
   }
