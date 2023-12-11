@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.114.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.113.0...v4.114.0) (2023-11-21)
+
+### Features
+
+- **contrib:** affichage de la réponse CDT dès le début pour essayer d'améliorer le SEO ([#5442](https://github.com/SocialGouv/code-du-travail-numerique/issues/5442)) ([311b967](https://github.com/SocialGouv/code-du-travail-numerique/commit/311b967adcc680325329837539c1802937e2bb75))
+
+# [4.113.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.112.0...v4.113.0) (2023-11-10)
+
+### Features
+
+- **redirect:** ajout d'une redirection sur une fiche SP ([6f73be3](https://github.com/SocialGouv/code-du-travail-numerique/commit/6f73be3fca97d3c4f1e901b2e2b84194ac1c8387))
+
+# [4.112.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.111.0...v4.112.0) (2023-11-03)
+
+### Features
+
+- **sea:** ajout du bandeau tarteaucitron pour la campagne ([#5417](https://github.com/SocialGouv/code-du-travail-numerique/issues/5417)) ([83a0732](https://github.com/SocialGouv/code-du-travail-numerique/commit/83a07328f2b1ac68a859dfaaf03825afa43822ff))
+
 # [4.111.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.110.0...v4.111.0) (2023-10-23)
 
 ### Bug Fixes

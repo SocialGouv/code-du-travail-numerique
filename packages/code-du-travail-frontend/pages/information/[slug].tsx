@@ -11,6 +11,7 @@ import { getInformationBySlug } from "../../src/information";
 import { Contents } from "../../src/information";
 import { QuestionnaireWrapper } from "../../src/questionnaire";
 import { useRouter } from "next/router";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 
 const Information = ({
   information: {
@@ -74,6 +75,7 @@ const Information = ({
             )
         )}
       </Answer>
+      <EventTracker />
     </Layout>
   );
 };

@@ -17,6 +17,7 @@ import { summarize } from "../../src/search/utils";
 import { SITE_URL } from "../../src/config";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
 import { handleError } from "../../src/lib/fetch-error";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 
 const title = "Modèles de documents";
 const subtitle =
@@ -99,6 +100,7 @@ function Modeles(props) {
           </StyledList>
         </Container>
       </Section>
+      <EventTracker />
     </Layout>
   );
 }

@@ -10,6 +10,7 @@ import { ListLinkItemProps } from "../src/search/SearchResults/Results";
 import { handleError } from "../src/lib/fetch-error";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent, MatomoHomeEvent } from "../src/lib";
+import EventTracker from "../src/lib/tracking/EventTracker";
 
 const Home = ({
   themes,
@@ -88,6 +89,7 @@ const Home = ({
           onSendMatomoEvent(MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_THEMES)
         }
       />
+      <EventTracker />
     </Layout>
   );
 };
