@@ -36,6 +36,7 @@ import { ReferencesJuridiques } from "./References";
 import { LinkedContent } from "./LinkedContent";
 import { ContributionContent } from "./ContributionContent";
 import { ContributionMessageBlock } from "./ContributionMessageBlock";
+import { AlertCCNotSupportedNoContent } from "./AlertCCNotSupportedNoContent";
 
 const { DirectionRight } = icons;
 
@@ -64,6 +65,15 @@ const ContributionGeneric = ({ contribution }: Props) => {
   if (convention && !selectedRoute) {
     setSelectedRoute("agreement");
   }
+  const supportedAgreementsNoContent: Pick<AgreementSupportInfo, "idcc">[] =
+    contribution.ccSupportedNoContent
+      ? contribution.ccSupportedNoContent.map((c) => {
+          return {
+            idcc: parseInt(c, 10),
+          };
+        })
+      : [];
+
   const supportedAgreements: AgreementSupportInfo[] =
     contribution.ccSupported.map((c) => {
       return {
@@ -71,9 +81,13 @@ const ContributionGeneric = ({ contribution }: Props) => {
         fullySupported: true,
       };
     });
+  const isSupportedInList = (agreements, agreement) =>
+    agreement && !!agreements.find((item) => item.idcc == agreement.num);
   const isSupported = (agreement) =>
-    agreement &&
-    !!supportedAgreements.find((item) => item.idcc == agreement.num);
+    isSupportedInList(supportedAgreements, agreement);
+
+  const isSupportedFromCCNOContent = (agreement) =>
+    isSupportedInList(supportedAgreementsNoContent, agreement);
 
   const onSelectAgreement = (
     agreement: Agreement | null,
@@ -118,26 +132,18 @@ const ContributionGeneric = ({ contribution }: Props) => {
       )}
     </>
   );
-  const CC_SUPPORTED_NO_CONTENT_NO_CDT = (
-    <>
-      <Paragraph variant="primary" fontSize="default" fontWeight="700" noMargin>
-        Cette convention collective ne prévoit rien
-      </Paragraph>
-      <p>La convention collective sélectionnée ne prévoit rien sur ce sujet.</p>
-      {showAnswer ? (
-        <p>Vous pouvez consulter les informations générales ci-dessous.</p>
-      ) : (
-        <p>
-          Vous pouvez tout de même poursuivre pour obtenir les informations
-          générales.
-        </p>
-      )}
-    </>
-  );
-  const alertAgreementNotSupported = () => {
-    return contribution.type !== "generic-no-cdt"
-      ? CC_NOT_SUPPORTED
-      : CC_SUPPORTED_NO_CONTENT_NO_CDT;
+
+  const alertAgreementNotSupported = (url: string) => {
+    return contribution.type !== "generic-no-cdt" ||
+      !isSupportedFromCCNOContent(convention) ? (
+      CC_NOT_SUPPORTED
+    ) : (
+      <AlertCCNotSupportedNoContent
+        url={url}
+        showAnswer={showAnswer}
+        message={contribution.messageBlockGenericNoCDT}
+      />
+    );
   };
 
   const scrollToTitle = () => {

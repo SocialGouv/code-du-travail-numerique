@@ -20,6 +20,8 @@ type Props = {
 };
 
 export const ContributionContent = ({ contribution }: Props) => {
+  if (contribution.type === "generic-no-cdt") return <></>;
+
   return (
     <SectionNoPadding>
       {contribution.type === "fiche-sp" ? (

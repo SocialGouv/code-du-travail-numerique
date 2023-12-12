@@ -209,6 +209,7 @@ type ElasticSearchContributionBase = ElasticSearchItem & {
 
 export type ElasticSearchContributionGeneric = ElasticSearchContributionBase & {
   ccSupported: string[];
+  ccSupportedNoContent?: string[];
 };
 
 export type ElasticSearchContributionConventionnelle =
