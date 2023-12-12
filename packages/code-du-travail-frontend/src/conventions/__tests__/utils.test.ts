@@ -13,7 +13,7 @@ describe("addPrefixAgreementTitle", () => {
   });
 
   it('should not modify text if "Convention" prefix already present', () => {
-    const text = "Convention blabla Metal";
+    const text = "Convention d'entreprise Metal";
     expect(addPrefixAgreementTitle(text)).toBe(text);
   });
 });
