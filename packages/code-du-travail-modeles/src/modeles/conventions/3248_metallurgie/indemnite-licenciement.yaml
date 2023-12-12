@@ -14,6 +14,62 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
       A, B, C, D ou E: "'A, B, C, D ou E'"
       F, G, H ou I: "'F, G, H ou I'"
 
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées:
+  titre: "Le salarié est licencié pour le motif suivant : \"absence prolongée ou absences répétées justifiées perturbant le fonctionnement de l'entreprise\""
+  question: "Le salarié est-il licencié pour le motif suivant : \"absence prolongée ou absences répétées justifiées perturbant le fonctionnement de l'entreprise\" ?"
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée:
+  applicable si: licenciement pour motif absence prolongée ou répétées = 'Oui'
+  titre: Durée totale des absences prolongée ou absences répétées justifiées perturbant le fonctionnement de l'entreprise
+  question: Quelle est la durée totale de ces absences ?
+  cdtn:
+    type: liste
+    valeurs:
+      moins de 2 mois: "'moins de 2 mois'"
+      de 2 mois à moins de 4 mois: "'de 2 mois à moins de 4 mois'"
+      de 4 mois à moins 6 mois: "'de 4 mois à moins 6 mois'"
+      6 mois ou plus: "'6 mois ou plus'"
+
+## Règle globale
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: base * majoration
+  unité: €
+  arrondi: 2 décimales
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . base:
+  valeur: 0
+  unité: €
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . majoration:
+  valeur: 1
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . majoration 50:
+  applicable si:
+    une de ces conditions:
+      - toutes ces conditions:
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1 an
+        - contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées = 'Oui'
+        - contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée = 'moins de 2 mois'
+      - toutes ces conditions:
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+        - contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées = 'Oui'
+        - une de ces conditions:
+          - contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée = 'moins de 2 mois'
+          - contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée = 'de 2 mois à moins de 4 mois'
+      - toutes ces conditions:
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 10 an
+        - contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées = 'Oui'
+        - une de ces conditions:
+          - contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée = 'moins de 2 mois'
+          - contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée = 'de 2 mois à moins de 4 mois'
+          - contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée = 'de 4 mois à moins 6 mois'
+  remplace: majoration
+  valeur: 1.5
+
 ## Catégorie A, B, C, D et E (non cadre)
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE:
@@ -66,7 +122,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . non cadre . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: contrat salarié . convention collective . métallurgie . indemnité de licenciement . base
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
   somme:
     - contrat salarié . indemnité de licenciement . facteur dix ans ou moins cc
@@ -107,7 +163,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: contrat salarié . convention collective . métallurgie . indemnité de licenciement . base
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
   le maximum de:
     - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel défault
@@ -161,7 +217,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 ## Catégories F, G, H et I: Calculs
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  remplace: contrat salarié . convention collective . métallurgie . indemnité de licenciement . base
   valeur: contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul:
@@ -405,6 +461,28 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
         - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . indemnité de licenciement . au dela de dix ans cc
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/4 * Sref * A1)[ + (1/3 * Sref * A2)]
+
+# Hack pour la formule quand le salarié a été licencié pour le motif suivant : "absence prolongée ou absences répétées justifiées perturbant le fonctionnement de l'entreprise"
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . formule résultat conventionnel avec majoration:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . convention collective . métallurgie . indemnité de licenciement . majoration 50 > 1
+  valeur: oui
+  cdtn:
+    formule:
+      formula: $formule * 1.5
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . résultat conventionnel référence licenciement absences prolongés ou répétés:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées = 'Oui'
+  valeur: oui
+  références:
+    Article 91.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314615#KALIARTI000046314615
+
+# Notification avant le 1er janvier 2024
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . pas supportée:
   applicable si: contrat salarié . indemnité de licenciement . date de notification < 01/01/2024

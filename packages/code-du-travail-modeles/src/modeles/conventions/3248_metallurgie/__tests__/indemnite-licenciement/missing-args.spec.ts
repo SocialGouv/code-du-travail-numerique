@@ -116,6 +116,31 @@ describe("Ordre des questions pour la CC 3248", () => {
                 "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre"
               );
             });
+
+            describe("si il a répondu non", () => {
+              beforeEach(() => {
+                result = engine.setSituation(
+                  {
+                    ...defaultSituation,
+                    "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
+                      "'A, B, C, D ou E'",
+                    "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
+                      "'Non'",
+                    "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
+                      "'Oui'",
+                    "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour":
+                      "'Oui'",
+                  },
+                  "contrat salarié . indemnité de licenciement . résultat conventionnel"
+                );
+              });
+
+              it("doit demander s'il a été licencié pour absences répétées ou prolongées", () => {
+                expect(result.missingArgs).toHaveNextMissingRule(
+                  "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées"
+                );
+              });
+            });
           });
         });
 
@@ -218,8 +243,54 @@ describe("Ordre des questions pour la CC 3248", () => {
           );
         });
 
-        it("ne doit plus poser de question", () => {
-          expect(result.missingArgs).toHaveNextMissingRule(null);
+        it("doit demander si il a été licencié pour absences répétées ou prolongées", () => {
+          expect(result.missingArgs).toHaveNextMissingRule(
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées"
+          );
+        });
+
+        describe("s'il a répondu non", () => {
+          beforeEach(() => {
+            result = engine.setSituation(
+              {
+                ...defaultSituation,
+                "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
+                  "'F, G, H ou I'",
+                "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age":
+                  "60",
+                "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+                  "'Non'",
+              },
+              "contrat salarié . indemnité de licenciement . résultat conventionnel"
+            );
+          });
+
+          it("ne doit plus demander de question", () => {
+            expect(result.missingArgs).toHaveNextMissingRule(null);
+          });
+        });
+
+        describe("s'il a répondu oui", () => {
+          beforeEach(() => {
+            result = engine.setSituation(
+              {
+                ...defaultSituation,
+                "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
+                  "'F, G, H ou I'",
+                "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age":
+                  "60",
+                "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+                  "'Oui'",
+              },
+              "contrat salarié . indemnité de licenciement . résultat conventionnel"
+            );
+          });
+
+          it("doit demander la durée", () => {
+            expect(result.missingArgs).toHaveNextMissingRule(
+              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée"
+            );
+          });
         });
       });
     });
