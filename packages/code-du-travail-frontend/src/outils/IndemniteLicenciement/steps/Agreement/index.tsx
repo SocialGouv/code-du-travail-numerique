@@ -6,7 +6,6 @@ import CommonAgreementStep from "../../../CommonSteps/Agreement";
 import { getSupportedCcIndemniteLicenciement } from "../../common";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { useContext } from "react";
-import { Agreement } from "@socialgouv/cdtn-utils";
 
 const AgreementStep = (): JSX.Element => {
   const store = useContext(IndemniteLicenciementContext);
@@ -52,42 +51,8 @@ const AgreementStep = (): JSX.Element => {
       onEnterpriseSearch={onEnterpriseSearch}
       hasNoEnterpriseSelected={hasNoEnterpriseSelected}
       setHasNoEnterpriseSelected={setHasNoEnterpriseSelected}
-      searchAgreementResultOverride={inject650IfDetected}
     />
   );
 };
 
-const inject650IfDetected = (
-  query: string,
-  results: Agreement[]
-): Agreement[] => {
-  const lowerQuery = query.toLowerCase();
-  const words = [
-    "métallurgie",
-    "ingénieurs",
-    "cadres",
-    "metallurgie",
-    "ingénieur",
-    "cadre",
-    "650",
-  ];
-  const detectInQuery = (word) => {
-    return lowerQuery.toLowerCase().includes(word);
-  };
-  const atLeastOneWordDetected = words.some(detectInQuery);
-  if (atLeastOneWordDetected) {
-    return results.concat([
-      {
-        url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
-        id: "KALICONT000005635842",
-        num: 650,
-        shortTitle: "Métallurgie : ingénieurs et cadres",
-        slug: "650-metallurgie-ingenieurs-et-cadres",
-        title: "Métallurgie : ingénieurs et cadres",
-        contributions: false,
-      },
-    ]);
-  }
-  return results;
-};
 export default AgreementStep;

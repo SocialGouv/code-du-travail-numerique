@@ -20,7 +20,6 @@ export type Props = {
   onSelectAgreement: (agreement: Agreement | null) => void;
   alertAgreementNotSupported?: (string) => JSX.Element;
   simulator: PublicodesSimulator | "QUESTIONNAIRE";
-  searchResultOverride?: (query: string, results: Agreement[]) => Agreement[];
 } & TrackingProps;
 
 const AgreementSearch = ({
@@ -30,7 +29,6 @@ const AgreementSearch = ({
   onUserAction,
   alertAgreementNotSupported,
   simulator,
-  searchResultOverride,
 }: Props): JSX.Element => {
   if (selectedAgreement) {
     return (
@@ -64,7 +62,6 @@ const AgreementSearch = ({
       <SearchAgreementInput
         onUserAction={onUserAction}
         onSelectAgreement={onSelectAgreement}
-        searchResultOverride={searchResultOverride}
       />
     </Section>
   );

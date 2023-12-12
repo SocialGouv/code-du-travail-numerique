@@ -107,11 +107,6 @@
     {
       "name": "convention collective",
       "question": "Quelle est la convention collective du salarié ?"
-    },
-    {
-      "name": "anciennement cadre",
-      "question": "Le salarié était-il cadre dans l'ancienne convention collective de la métallurgie (avant le 01/01/2024) ?",
-      "note": "Si le salarié dépendait précédemment de la convention collective des ingénieurs et cadres de la métallurgie (IDCC 650) et qu’il est désormais classé non-cadre en raison de la nouvelle classification des emplois (depuis le 01/01/2024), il bénéficie quand même de la durée de préavis qui s’applique aux cadres."
     }
   ],
   "situations": [
@@ -996,6 +991,60 @@
       "answer3": "60",
       "ref": "Article 35",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228"
+    },
+    {
+      "criteria": {
+        "groupe": "1| I",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "groupe": "1| I",
+        "ancienneté": "42| 2 ans ou plus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "groupe": "4| II"
+      },
+      "type": "préavis de Démission",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "groupe": "5| III"
+      },
+      "type": "préavis de Démission",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {
@@ -4253,116 +4302,6 @@
       "answer3": "60",
       "ref": "Article 2 de la section 1 du Chapitre 4 de la Partie II de la convention collective",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000027029046&cidTexte=KALITEXT000026943196&idConvention=KALICONT000027084096&dateTexte=29990101"
-    },
-    {
-      "criteria": {
-        "groupe": "1| A ou B",
-        "anciennement cadre": "2| Non"
-      },
-      "type": "préavis de Démission",
-      "idcc": 3248,
-      "typeRupture": null,
-      "answer": "2 semaines calendaires",
-      "answer2": null,
-      "answer3": "14",
-      "ref": "Article 74.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
-      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
-    },
-    {
-      "criteria": {
-        "groupe": "2| C",
-        "anciennement cadre": "2| Non"
-      },
-      "type": "préavis de Démission",
-      "idcc": 3248,
-      "typeRupture": null,
-      "answer": "1 mois calendaire",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 74.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
-      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
-    },
-    {
-      "criteria": {
-        "groupe": "3| D ou E",
-        "anciennement cadre": "2| Non"
-      },
-      "type": "préavis de Démission",
-      "idcc": 3248,
-      "typeRupture": null,
-      "answer": "2 mois calendaires",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 74.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
-      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
-    },
-    {
-      "criteria": {
-        "groupe": "1| A ou B",
-        "anciennement cadre": "1| Oui"
-      },
-      "type": "préavis de Démission",
-      "idcc": 3248,
-      "typeRupture": null,
-      "answer": "3 mois calendaires",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 74.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
-    },
-    {
-      "criteria": {
-        "groupe": "2| C",
-        "anciennement cadre": "1| Oui"
-      },
-      "type": "préavis de Démission",
-      "idcc": 3248,
-      "typeRupture": null,
-      "answer": "3 mois calendaires",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 74.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
-    },
-    {
-      "criteria": {
-        "groupe": "3| D ou E",
-        "anciennement cadre": "1| Oui"
-      },
-      "type": "préavis de Démission",
-      "idcc": 3248,
-      "typeRupture": null,
-      "answer": "3 mois calendaires",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 74.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
-    },
-    {
-      "criteria": {
-        "groupe": "4| F, G, H ou I"
-      },
-      "type": "préavis de Démission",
-      "idcc": 3248,
-      "typeRupture": null,
-      "answer": "3 mois calendaires",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 74.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
-      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
     }
   ]
 }

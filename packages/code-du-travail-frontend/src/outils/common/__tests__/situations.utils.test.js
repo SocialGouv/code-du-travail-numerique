@@ -83,18 +83,13 @@ describe("situations", () => {
     it("should return all situations", () => {
       expect(filterSituations(data).length).toEqual(data.length);
     });
-    it("should return no criteria case", () => {
-      expect(filterSituations(data, { foo: "no" }).length).toBe(1);
+    it("should return no situation", () => {
+      expect(filterSituations(data, { foo: "no" }).length).toBe(0);
     });
     it("should render only situation that match foo", () => {
       expect(filterSituations(data, { foo: "1| foo" })).toEqual([
         { criteria: { bar: "baz", foo: "1| foo" }, idcc: 10 },
         { criteria: { bar: "bar", foo: "1| foo" }, idcc: 10 },
-        {
-          criteria: {},
-          hasConventionalProvision: null,
-          idcc: 30,
-        },
       ]);
     });
   });

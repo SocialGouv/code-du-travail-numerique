@@ -42,12 +42,11 @@ const apiIdcc = function createFetcher(query) {
   }
   return fetch(url).then(async (response) => {
     if (response.ok) {
-      let result = await response.json().then((results) => {
+      return response.json().then((results) => {
         return results.hits.hits.map(({ _source }) =>
           formatCCn(_source)
         ) as Agreement[];
       });
-      return result;
     }
     return Promise.reject(
       "Ce service est momentanément indisponible. Vous pouvez tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""

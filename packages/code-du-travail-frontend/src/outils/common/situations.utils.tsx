@@ -4,7 +4,7 @@ import { Criteria, Situation } from "@socialgouv/modeles-social";
 const createValuesMatcher = (values: Criteria) => (item: Situation) => {
   function swallowEqual(a: Criteria, b: Criteria) {
     return Object.entries(a).every(([key, value]) => {
-      return b[key] === undefined || `${b[key]}`.toLowerCase() === `${value}`.toLowerCase();
+      return `${b[key]}`.toLowerCase() === `${value}`.toLowerCase();
     });
   }
 
