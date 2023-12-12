@@ -35,26 +35,6 @@
     "source": "/convention-collective/3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile"
   },
   {
-    "destination": "/contribution/3209-:slug",
-    "permanent": true,
-    "source": "/contribution/1375-:slug"
-  },
-  {
-    "destination": "/convention-collective/3209-convention-collective-metallurgie-doubs",
-    "permanent": true,
-    "source": "/convention-collective/1375-convention-collective-metallurgie-doubs"
-  },
-  {
-    "destination": "/contribution/3231-:slug",
-    "permanent": true,
-    "source": "/contribution/1809-:slug"
-  },
-  {
-    "destination": "/convention-collective/3231-convention-collective-territoriale-de-la-metallurgie-du-jura",
-    "permanent": true,
-    "source": "/convention-collective/1809-convention-collective-departementale-des-industries-metallurgiques-mecaniq"
-  },
-  {
     "destination": "/information/covid-19-pass-vaccinal-et-contrat-de-travail-infographie",
     "permanent": true,
     "source": "/information/pass-sanitaire-et-contrat-de-travail"
@@ -158,6 +138,796 @@
     "source": "/fiche-service-public/regles-de-licenciement-dans-une-entreprise-en-difficulte",
     "permanent": true,
     "destination": "/fiche-service-public/licenciement-dans-une-entreprise-en-difficulte-quelles-sont-les-regles"
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/54-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/650-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/714-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/822-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/827-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/828-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/829-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/836-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/860-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/863-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/878-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/887-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/898-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/899-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/911-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/914-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/920-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/923-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/930-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/934-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/937-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/943-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/948-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/965-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/979-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/984-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1007-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1059-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1159-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1164-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1274-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1315-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1353-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1365-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1369-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1387-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/3209-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1472-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1525-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1560-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1564-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1572-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1576-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1577-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1578-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1592-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1604-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1626-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1627-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1628-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1634-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1635-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1732-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/3231-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1813-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1867-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1885-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1902-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1912-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1960-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1966-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1967-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2003-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2126-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2221-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2266-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2294-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2489-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2542-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2579-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2615-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2630-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2700-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2755-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2980-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2992-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/3053-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1375-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1809-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/54-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/650-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/714-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/822-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/827-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/828-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/829-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/836-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/860-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/863-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/878-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/887-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/898-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/899-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/911-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/914-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/920-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/923-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/930-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/934-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/937-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/943-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/948-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/965-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/979-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/984-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1007-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1059-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1159-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1164-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1274-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1315-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1353-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1365-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1369-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1387-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/3209-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1472-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1525-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1560-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1564-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1572-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1576-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1577-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1578-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1592-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1604-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1626-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1627-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1628-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1634-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1635-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1732-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/3231-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1813-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1867-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1885-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1902-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1912-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1960-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1966-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1967-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2003-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2126-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2221-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2266-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2294-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2489-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2542-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2579-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2615-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2630-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2700-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2755-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2980-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/2992-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/3053-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1375-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-convention-collective-nationale-de-la-metallurgie",
+    "source": "/convention-collective/1809-:slug",
+    "permanent": true
   },
   {
     "source": "/fiche-service-public/arret-maladie-et-conges-payes-annuels",
