@@ -36,7 +36,10 @@ import { ReferencesJuridiques } from "./References";
 import { LinkedContent } from "./LinkedContent";
 import { ContributionContent } from "./ContributionContent";
 import { ContributionMessageBlock } from "./ContributionMessageBlock";
-import { AlertCCNotSupportedNoContent } from "./AlertCCNotSupportedNoContent";
+import {
+  AlertCCNotSupportedNoContent,
+  AlertCCSupportedNoContent,
+} from "./AlertCCNotSupportedNoContent";
 
 const { DirectionRight } = icons;
 
@@ -88,6 +91,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
 
   const isSupportedFromCCNOContent = (agreement) =>
     isSupportedInList(supportedAgreementsNoContent, agreement);
+  const isNoCDT = () => contribution && contribution.type == "generic-no-cdt";
 
   const onSelectAgreement = (
     agreement: Agreement | null,
@@ -134,13 +138,15 @@ const ContributionGeneric = ({ contribution }: Props) => {
   );
 
   const alertAgreementNotSupported = (url: string) => {
-    return contribution.type !== "generic-no-cdt" ||
-      !isSupportedFromCCNOContent(convention) ? (
+    return contribution.type !== "generic-no-cdt" ? (
       CC_NOT_SUPPORTED
+    ) : isSupportedFromCCNOContent(convention) ? (
+      <AlertCCSupportedNoContent
+        message={contribution.messageBlockGenericNoCDT}
+      />
     ) : (
       <AlertCCNotSupportedNoContent
         url={url}
-        showAnswer={showAnswer}
         message={contribution.messageBlockGenericNoCDT}
       />
     );
@@ -158,11 +164,19 @@ const ContributionGeneric = ({ contribution }: Props) => {
     <>
       <Badge />
       <SectionNoPadding>
-        <p>
-          La réponse dépend de la convention collective à laquelle votre
-          entreprise est rattachée. Veuillez renseigner votre situation afin
-          d’obtenir une réponse adaptée :
-        </p>
+        {isNoCDT() ? (
+          <p>
+            La convention collective est nécessaire pour obtenir une réponse car
+            le code du travail ne prévoit rien sur ce sujet :
+          </p>
+        ) : (
+          <p>
+            La réponse dépend de la convention collective à laquelle votre
+            entreprise est rattachée. Veuillez renseigner votre situation afin
+            d’obtenir une réponse adaptée :
+          </p>
+        )}
+
         <Wrapper variant="light">
           <Title size="small" as="p" shift={spacings.xmedium} variant="primary">
             Votre situation

@@ -1,30 +1,36 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
 
 type Props = {
-  url: string;
+  url?: string;
   message: string;
-  showAnswer: boolean;
 };
 
-export const AlertCCNotSupportedNoContent = ({
-  url,
-  showAnswer,
-  message,
-}: Props) => {
+export const AlertCCNotSupportedNoContent = ({ url, message }: Props) => {
   return (
     <>
-      <Paragraph variant="primary" fontSize="default" fontWeight="700" noMargin>
+      <Paragraph variant="primary" fontWeight="700" noMargin>
+        Nous n’avons pas de réponse pour cette convention collective
+      </Paragraph>
+      <p>
+        Nous vous invitons à consulter votre convention collective qui peut
+        prévoir une réponse. Vous pouvez consulter votre convention collective{" "}
+        <a target="_blank" href={url}>
+          ici
+        </a>
+        .
+      </p>
+      <p>{message}</p>
+    </>
+  );
+};
+
+export const AlertCCSupportedNoContent = ({ message }: Props) => {
+  return (
+    <>
+      <Paragraph variant="primary" fontWeight="700" noMargin>
         Cette convention collective ne prévoit rien
       </Paragraph>
       <p>La convention collective sélectionnée ne prévoit rien sur ce sujet.</p>
-      {showAnswer ? (
-        <p>Vous pouvez consulter les informations générales ci-dessous.</p>
-      ) : (
-        <p>
-          Vous pouvez tout de même poursuivre pour obtenir les informations
-          générales.
-        </p>
-      )}
       <p>{message}</p>
     </>
   );
