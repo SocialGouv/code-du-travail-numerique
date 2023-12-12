@@ -68,7 +68,7 @@ export declare type Content = {
   name: string;
   title: string;
   blocks: ContentBlock[];
-  references: Reference[];
+  references?: Reference[];
 };
 
 export type Breadcrumb = {
@@ -222,3 +222,7 @@ export type ElasticSearchContributionConventionnelle =
 export type ElasticSearchContribution =
   | ElasticSearchContributionGeneric
   | ElasticSearchContributionConventionnelle;
+
+export type ElasticSearchConventionCollective = ElasticSearchContribution & {
+  infoMessage: string;
+};

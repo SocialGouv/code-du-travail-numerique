@@ -54,17 +54,19 @@ describe("Contributions", () => {
       "Les conditions de renouvellement de la période d’essai varient selon la catégorie professionnelle du salarié."
     );
 
-    cy.contains(
-      "la convention collective Aide, accompagnement, soins et services à domicile (BAD)"
-    ).should(
-      "have.attr",
-      "href",
-      "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
-    );
+    cy.get("a")
+      .contains(
+        "la convention collective Maisons à succursales de vente au détail d'habillement"
+      )
+      .should(
+        "have.attr",
+        "href",
+        "/convention-collective/675-maisons-a-succursales-de-vente-au-detail-dhabillement"
+      );
     cy.get("h2").should("contain", "Pour aller plus loin");
-    cy.get("p").should(
-      "have.text",
-      "Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?"
+    cy.get("h3").should(
+      "contain",
+      "Demande d’accord du salarié pour le renouvellement d’une période d’essai"
     );
   });
 });

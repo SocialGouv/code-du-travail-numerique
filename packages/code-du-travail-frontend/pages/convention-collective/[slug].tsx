@@ -13,6 +13,7 @@ import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import { apiIdcc } from "../../src/conventions/Search/api/agreement.service";
 import EventTracker from "../../src/lib/tracking/EventTracker";
+import { addPrefixAgreementTitle } from "../../src/conventions/utils";
 
 interface Props {
   convention;
@@ -20,13 +21,10 @@ interface Props {
 
 function ConventionCollective(props: Props): JSX.Element {
   const { convention } = props;
-  const { shortTitle, longTitle } = convention;
+  const { shortTitle, title } = convention;
   return (
     <Layout>
-      <Metas
-        title={`Convention collective ${shortTitle}`}
-        description={longTitle}
-      />
+      <Metas title={addPrefixAgreementTitle(shortTitle)} description={title} />
       <Answer
         breadcrumbs={[
           {
@@ -70,7 +68,7 @@ function ConventionCollective(props: Props): JSX.Element {
         }
         subtitle={
           <Text fontSize="small">
-            {convention.title} (IDCC {formatIdcc(convention.num)})
+            {convention.shortTitle} (IDCC {formatIdcc(convention.num)})
           </Text>
         }
         suptitle="CONVENTION COLLECTIVE"

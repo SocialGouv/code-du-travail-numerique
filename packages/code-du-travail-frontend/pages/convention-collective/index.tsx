@@ -59,7 +59,11 @@ function Page({ ccs }) {
           <FlatList>
             {ccs.map((item) => (
               <ListItem key={`${item.source}-${item.slug}`}>
-                <ListLink item={item} showTheme={true} titleTagType="h2" />
+                <ListLink
+                  item={{ ...item, title: item.shortTitle }}
+                  showTheme={true}
+                  titleTagType="h2"
+                />
               </ListItem>
             ))}
           </FlatList>

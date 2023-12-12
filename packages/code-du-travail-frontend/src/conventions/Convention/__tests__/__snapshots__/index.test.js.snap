@@ -16,7 +16,7 @@ exports[`<Convention /> renders 1`] = `
     <p
       class="sc-bVVIoq iSPxRx"
     >
-      Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.
+      Description de la CC
     </p>
   </div>
   <div
@@ -147,9 +147,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.
                         </p>
@@ -163,11 +161,9 @@ exports[`<Convention /> renders 1`] = `
                         <p>
                           Le chômage des jours fériés ne peut pas donner lieu à récupération.
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -280,9 +276,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           Les salariées ont droit à un maintien de salaire à 100 % du dernier salaire mensuel, après déduction des indemnités de la sécurité sociale ou de tout autre régime de prévoyance, pendant une durée maximale de 6 semaines avant la date présumée de l'accouchement et de 10 semaines après.
                         </p>
@@ -335,11 +329,9 @@ exports[`<Convention /> renders 1`] = `
                           
 
                         </ul>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -478,9 +470,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :
                         </p>
@@ -530,11 +520,9 @@ exports[`<Convention /> renders 1`] = `
                         <p>
                           Ces absences s'ajoutent aux congés payés.
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -715,9 +703,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           En cas de licenciement, la durée du préavis est égale à :
                         </p>
@@ -752,11 +738,9 @@ exports[`<Convention /> renders 1`] = `
                         <p>
                           Le salarié n'a pas droit au préavis en cas de licenciement pour faute grave.
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -895,9 +879,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           En cas de démission, la durée du préavis est égale à :
                         </p>
@@ -917,11 +899,9 @@ exports[`<Convention /> renders 1`] = `
                           
 
                         </ul>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -1034,17 +1014,13 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           En cas de départ à la retraite du salarié, la durée du préavis est égale à 2 mois.
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -1183,17 +1159,13 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           En cas de mise à la retraite du salarié, la durée du préavis est égale à 2 mois.
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -1332,17 +1304,13 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           Si l'employeur ou le salarié ne respecte pas le préavis de licenciement ou de démission, l'autre partie peut obtenir le paiement d'une indemnité égale au salaire correspondant à la durée du préavis restant à courir.
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -1455,9 +1423,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           Pendant le préavis, l'ouvrier licencié ou démissionnaire est autorisé, s'il en fait la demande, à s'absenter pour rechercher un nouvel emploi, pendant :
                         </p>
@@ -1502,11 +1468,9 @@ exports[`<Convention /> renders 1`] = `
                         <p>
                           L'employeur ne doit pas payer d'indemnité au salarié, si ce dernier n'utilise pas ces heures pour recherche d'emploi.
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -1687,9 +1651,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           La durée de la période d'essai a été fixée par une convention collective conclue avant le 26 juin 2008.
                         </p>
@@ -1701,11 +1663,9 @@ exports[`<Convention /> renders 1`] = `
                           </strong>
                           , la durée maximale de la période d'essai est égale à 3 semaines (pas de renouvellement possible).
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -1818,9 +1778,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           L'ancienneté du salarié tient compte de :
                         </p>
@@ -1876,11 +1834,9 @@ exports[`<Convention /> renders 1`] = `
                           
 
                         </ul>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -2019,9 +1975,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant :
                         </p>
@@ -2096,11 +2050,9 @@ exports[`<Convention /> renders 1`] = `
                           
 
                         </ul>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -2213,17 +2165,13 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant les conditions du poste. Ce document doit être accepté et signé par l'employeur et le salarié.
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -2336,9 +2284,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           La convention collective ne prévoit pas le recours au contrat d'usage.
                         </p>
@@ -2351,8 +2297,6 @@ exports[`<Convention /> renders 1`] = `
                           </strong>
                           . En France, l'entreprise ne peut pas embaucher de salarié en CDD d'usage.
                         </p>
-                        
-
                       </div>
                       <strong>
                         Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
@@ -2429,17 +2373,13 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           Le salarié doit s'engager dans le contrat de travail à ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail.
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -2620,14 +2560,10 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           La convention collective ne prévoit pas de prime pour travaux dangereux ni de prime pour travaux insalubres.
                         </p>
-                        
-
                       </div>
                       <strong>
                         Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
@@ -2704,9 +2640,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           La convention collective prévoit une 
                           <strong>
@@ -2734,11 +2668,9 @@ exports[`<Convention /> renders 1`] = `
                         <p>
                           La prime de vacances est versée à l'ouvrier en même temps que son indemnité de congé. Elle ne se cumule pas avec les versements qui auraient le même objet.
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -2851,9 +2783,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           La convention collective ne prévoit pas de prime d'ancienneté.
                         </p>
@@ -2883,11 +2813,9 @@ exports[`<Convention /> renders 1`] = `
                           
 
                         </ul>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -3068,9 +2996,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           Le salarié a droit à un maintien de salaire pendant l'arrêt maladie dans les conditions suivantes.
                         </p>
@@ -3327,11 +3253,9 @@ exports[`<Convention /> renders 1`] = `
                         <p>
                           Les entreprises du bâtiment restant en dehors du régime professionnel mis en place en matière d'indemnisation des arrêts de travail pour maladie ou accident, professionnels ou non, inférieurs à 90 jours doivent verser elles-mêmes à leurs ouvriers remplissant les conditions prévues ci-dessus le montant des indemnités complémentaires aux indemnités journalières de la sécurité sociale.
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div>
                           <button
@@ -3581,9 +3505,7 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC cqpPUq"
                     >
-                      <div
-                        class="sc-iXzfSG"
-                      >
+                      <div>
                         <p>
                           En cas d'accident du travail ou de maladie professionnelle, le code du travail s'applique. 
                         </p>
@@ -3618,11 +3540,9 @@ exports[`<Convention /> renders 1`] = `
                         <p>
                           L'ouvrier qui veut bénéficier de cette priorité doit en informer par écrit le chef d'entreprise ou son représentant en indiquant l'adresse à laquelle il sera possible de le joindre. Le chef d'entreprise ou son représentant doit avertir l'ouvrier dès qu'un emploi correspondant à ses aptitudes sera disponible.
                         </p>
-                        
-
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-kqGoIF jLtGnB"
+                        class="sc-iGgWBj cRLRjd sc-eNSrOW bFrnaG"
                       >
                         <div
                           class="sc-iapWAC itOorw"
@@ -4745,14 +4665,14 @@ exports[`<Convention /> renders 1`] = `
   </div>
   <form
     action="https://legifrance.gouv.fr/search/kali#kali"
-    class="sc-knuQbY hRMMxm"
+    class="sc-bkEOxz glkDUB"
     target="_blank"
   >
     <div
-      class="sc-dxcDKg jSDMIl"
+      class="sc-fsvrbR gWbncT"
     >
       <div
-        class="sc-dkmUuB ayeCS sc-gvZAcH bzlFqK"
+        class="sc-dkmUuB ayeCS sc-jOnpCo cLFAAA"
       >
         <input
           autocomplete="off"
@@ -4795,14 +4715,14 @@ exports[`<Convention /> renders 1`] = `
       />
       <button
         aria-label="Recherchez dans la collection collective"
-        class="sc-kOPcWz kyVwqT sc-kRRyDe cAnfrv"
+        class="sc-kOPcWz kyVwqT sc-kFWlue gdVHZG"
         title="Lancer une recherche"
         type="submit"
       >
         <svg
           aria-hidden="true"
           aria-label="rechercher (nouvelle fenêtre)"
-          class="sc-ERObt wbfDF"
+          class="sc-dhFUGM cuvsAa"
           fill="none"
           viewBox="0 0 32 32"
           xmlns="http://www.w3.org/2000/svg"
