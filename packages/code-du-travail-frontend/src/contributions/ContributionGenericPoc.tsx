@@ -24,7 +24,6 @@ import { getCc3239Informations } from "../outils";
 import { Enterprise } from "../conventions/Search/api/enterprises.service";
 import {
   Alert,
-  ArrowLink,
   Badge,
   Button,
   Heading,
