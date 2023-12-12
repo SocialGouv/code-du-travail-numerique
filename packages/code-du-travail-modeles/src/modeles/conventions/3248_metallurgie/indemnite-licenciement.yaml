@@ -55,6 +55,10 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   cdtn:
     type: oui-non
 
+# Question alimentée par l'étape seniority (cf seniorty.ts)
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . congés plus de 12 mois:
+  valeur: non
+
 ## Catégorie A, B, C, D et E : Calculs non cadre
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . non cadre:
@@ -87,6 +91,14 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   valeur: oui
   références:
     Article 73: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314519?idConteneur=KALICONT000046993250#KALIARTI000046314519
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . non cadre . notification absence de plus de 12 mois:
+  applicable si: contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . congés plus de 12 mois
+  type: notification
+  description: Si le congé dont la durée continue supérieure à un an a été financé par un compte épargne-temps, le montant de l'indemnité pourrait être plus élevé. En effet, dans ce cas la durée de l'absence ne doit pas être retirée de l'ancienneté du salarié alors que notre simulateur retire ces absences.
+  valeur: oui
+  cdtn:
+    affichage: conventionnel
 
 ## Catégorie A, B, C, D et E : Calculs cadre
 

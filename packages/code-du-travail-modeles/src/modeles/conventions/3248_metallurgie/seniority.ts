@@ -13,7 +13,7 @@ import type {
   SupportedCcIndemniteLicenciement,
   YearDetail,
 } from "../../common";
-import { accumulateAbsenceByYear, parseDate } from "../../common";
+import { accumulateAbsenceByYear, MotifKeys, parseDate } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
 
 export type CC3248SeniorityProps = DefaultSeniorityProps & {
@@ -141,13 +141,32 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
       }
       return total;
     }, 0);
+    const hasLongAbsence = absencesWithExcludedAbsences.some(
+      (item) =>
+        item.durationInMonth &&
+        item.durationInMonth > 12 &&
+        [
+          MotifKeys.congesCreationEntreprise,
+          MotifKeys.congesSabbatique,
+          MotifKeys.congesSansSolde,
+        ].includes(item.motif.key)
+    );
+
     if (hasBeenDayContract && !dateBecomeDayContract) {
       return {
+        extraInfos: {
+          "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . congés plus de 12 mois":
+            hasLongAbsence ? "oui" : "non",
+        },
         value:
           ((differenceInMonths(dSortie, dEntree) - totalAbsence) / 12) * 1.5,
       };
     }
     return {
+      extraInfos: {
+        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . congés plus de 12 mois":
+          hasLongAbsence ? "oui" : "non",
+      },
       value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
     };
   }
