@@ -13,7 +13,7 @@ const Convention = ({ convention }) => {
 
   useEffect(() => {
     const { slug, id, num, shortTitle } = convention;
-    setCcInfo({ id, num, shortTitle, slug });
+    setCcInfo({ id, num, shortTitle, slug, title: shortTitle });
   }, [convention, setCcInfo]);
 
   return (
