@@ -17,11 +17,15 @@ type Props = {
   contribution:
     | ElasticSearchContributionGeneric
     | ElasticSearchContributionConventionnelle;
+  hasNoMarginTop?: boolean;
 };
 
-export const ContributionContent = ({ contribution }: Props) => {
+export const ContributionContent = ({
+  contribution,
+  hasNoMarginTop,
+}: Props) => {
   return (
-    <SectionNoPadding>
+    <SectionNoPadding hasNoMarginTop={hasNoMarginTop}>
       {contribution.type === "fiche-sp" ? (
         <>
           <Meta>
@@ -71,5 +75,5 @@ const HideOnMobile = styled.span`
 
 const SectionNoPadding = styled(Section)`
   padding-top: 0;
-  margin-top: ${spacings.large};
+  margin-top: ${(props) => (props.hasNoMarginTop ? "0px" : spacings.large)};
 `;
