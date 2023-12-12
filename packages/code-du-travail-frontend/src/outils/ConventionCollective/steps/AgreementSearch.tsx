@@ -1,4 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-utils";
+import { Agreement, SOURCES } from "@socialgouv/cdtn-utils";
 import { Button, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
@@ -8,7 +8,7 @@ import { SectionTitle } from "../../common/stepStyles";
 import { SearchAgreementInput } from "../../common/Agreement/AgreementSearch/AgreementInput/SearchAgreementInput";
 
 type AgreementSearchStepProps = {
-  onSelectAgreement: (agreement) => void;
+  onSelectAgreement: (agreement: Agreement) => void;
   onBackClick: () => void;
 } & TrackingProps;
 

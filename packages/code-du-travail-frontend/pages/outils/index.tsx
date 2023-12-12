@@ -13,6 +13,7 @@ import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
 import { fetchTools } from "../../src/outils/service";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 
 const Outils = ({ cdtnSimulators, externalTools }) => (
   <Layout currentPage="tools">
@@ -77,6 +78,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
         </Grid>
       </Container>
     </Section>
+    <EventTracker />
   </Layout>
 );
 
@@ -84,12 +86,8 @@ export async function getServerSideProps() {
   const tools = await fetchTools();
   return {
     props: {
-      cdtnSimulators: tools.filter(
-        (tool) => tool.source === SOURCES.TOOLS
-      ),
-      externalTools: tools.filter(
-        (tool) => tool.source === SOURCES.EXTERNALS
-      ),
+      cdtnSimulators: tools.filter((tool) => tool.source === SOURCES.TOOLS),
+      externalTools: tools.filter((tool) => tool.source === SOURCES.EXTERNALS),
     },
   };
 }

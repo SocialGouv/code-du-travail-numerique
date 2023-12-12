@@ -3,15 +3,15 @@
 exports[`<YesNoQuestion /> should render 1`] = `
 <div>
   <legend
-    class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+    class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iORupB"
+      class="sc-ibQAlb iRaavs"
     >
       lorem ipsum ?
       <span
-        class="sc-ibQAlb iapAQd"
+        class="sc-ibQAlb TTAtT"
       >
          (obligatoire)
       </span>

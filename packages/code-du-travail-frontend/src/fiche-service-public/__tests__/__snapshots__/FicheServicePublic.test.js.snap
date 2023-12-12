@@ -459,13 +459,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <div
                       aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
-                      class="sc-fTFjTM hGmjIf sc-iapWAC huEEnQ no-after"
+                      class="sc-fTFjTM hkOnFS sc-iapWAC huEEnQ no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
@@ -1500,13 +1500,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
     </div>
     <div
       aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
-      class="sc-fTFjTM hGmjIf sc-iapWAC huEEnQ no-after"
+      class="sc-fTFjTM hkOnFS sc-iapWAC huEEnQ no-after"
     >
       <div
         class="sc-gmgFlS dlfKdE"
       >
         <div
-          class="sc-kMkxaj ietOip"
+          class="sc-kMkxaj dwuMYa"
         >
           <p
             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"

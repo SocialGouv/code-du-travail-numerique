@@ -94,10 +94,7 @@ export const StyledButton = styled.button`
         vertical-align: baseline;
         text-decoration: none;
         text-align: left;
-        background-color: rgba(
-          ${theme.secondary},
-          0.26
-        )};
+        background-color: rgba(${theme.secondary}, 0.26);
         border: none;
         border-radius: 0;
         overflow: visible;

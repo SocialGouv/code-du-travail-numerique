@@ -1,5 +1,5 @@
 import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { Button, FlatList, Paragraph, theme } from "@socialgouv/cdtn-ui";
+import { Button, FlatList, Paragraph, theme, Tile } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -9,7 +9,6 @@ import { ScreenType, useNavContext } from "../common/NavContext";
 import { TrackingProps } from "../types";
 import { AgreementTile } from "../../common/Agreement/AgreementSearch/AgreementInput/AgreementTile";
 import { useRouter } from "next/router";
-import { Tile } from "@socialgouv/cdtn-ui/lib";
 
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;
@@ -50,22 +49,37 @@ const AgreementSelectionStep = ({
         {enterprise.conventions.map((agreement) => (
           <Li key={agreement.id}>
             {agreement.slug ? (
-              <AgreementTile
-                onUserAction={onUserAction}
-                agreement={agreement}
-                isWidgetMode={isWidgetMode}
-              />
+              agreement.url || agreement.contributions ? (
+                <AgreementTile
+                  onUserAction={onUserAction}
+                  agreement={agreement}
+                  isWidgetMode={isWidgetMode}
+                />
+              ) : (
+                <Tile
+                  wide
+                  subtitle={getLabelBySource(SOURCES.CCN)}
+                  title={`${agreement.shortTitle} IDCC${agreement.num}`}
+                  disabled
+                >
+                  <p>
+                    Nous n’avons pas d’informations concernant cette convention
+                    collective
+                  </p>
+                </Tile>
+              )
             ) : (
-              <DisabledTile
+              <Tile
                 wide
                 subtitle={getLabelBySource(SOURCES.CCN)}
                 title={`IDCC${agreement.num}`}
+                disabled
               >
                 <p>
                   Cette convention collective déclarée par l’entreprise n’est
                   pas reconnue par notre site
                 </p>
-              </DisabledTile>
+              </Tile>
             )}
           </Li>
         ))}
@@ -105,14 +119,5 @@ const Li = styled.li`
 
   &:last-child {
     margin-bottom: ${theme.spacings.large};
-  }
-`;
-
-const DisabledTile = styled(Tile)`
-  cursor: auto;
-  color: ${theme.colors.placeholder};
-  :hover {
-    transform: none;
-    color: ${theme.colors.placeholder};
   }
 `;

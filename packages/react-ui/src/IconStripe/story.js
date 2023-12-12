@@ -2,7 +2,7 @@ import React from "react";
 import { AlertCircle } from "react-feather";
 
 import { Custom, Document } from "../icons/index.js";
-import { Section } from "../layout/Section/index.js";
+import { Section } from "../layout/Section/index";
 import { IconStripe } from "./index.js";
 
 export default {

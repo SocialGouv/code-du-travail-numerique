@@ -49,7 +49,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
             >
               Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
             </label>
-            <span
+            <div
               class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
             >
               <input
@@ -60,7 +60,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 type="search"
                 value=""
               />
-            </span>
+            </div>
             <p
               class="sc-fThUAz bqJWec"
             >

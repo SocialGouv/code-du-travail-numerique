@@ -83,7 +83,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               >
                 Saisissez votre numéro de département :
               </label>
-              <span
+              <div
                 class="sc-dkmUuB ayeCS sc-iapWAC ehtufm"
               >
                 <input
@@ -96,7 +96,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                   type="text"
                   value=""
                 />
-              </span>
+              </div>
               <button
                 aria-label="Recherchez le service"
                 class="sc-kOPcWz kyVwqT sc-kqGoIF boDxRG"

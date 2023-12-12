@@ -34,11 +34,15 @@ const Accessibilite = () => {
               <ul>
                 <li>
                   La réalisation d’un audit de conformité le 19 mai de l’année
-                  2021.
+                  2021
                 </li>
                 <li>
-                  La mise en œuvre des recommandations pour atteindre l’objectif
-                  de 75% d’ici la fin de l’année 2021.
+                  La réalisation d’un contre-audit d’ici la fin du premier
+                  semestre 2024
+                </li>
+                <li>
+                  La mise en œuvre des recommandations pour maintenir l’objectif
+                  de 75%
                 </li>
               </ul>
             </p>
@@ -59,11 +63,11 @@ const Accessibilite = () => {
             <Title as="h3" stripe="none" size="small">
               Résultat des tests
             </Title>
-            <p>
-              <ul>
-                <li>[75%] des critères du RGAA version 4.1 sont respectés</li>
-              </ul>
-            </p>
+            <p>L’audit de conformité réalisé par Alter Way révèle que :</p>
+            <ul>
+              <li>[75%] des critères du RGAA version 4.1 sont respectés</li>
+            </ul>
+
             <Title shift={theme.spacings.larger}>Non-conformité</Title>
             <ul>
               <li>
@@ -83,16 +87,6 @@ const Accessibilite = () => {
                 Critère 7.5. Dans chaque page web, les messages de statut
                 sont-ils correctement restitués par les technologies
                 d’assistance&nbsp;?
-              </li>
-              <li>
-                Critère 8.7. Dans chaque page web, chaque changement de langue
-                est-il indiqué dans le code source (hors cas
-                particuliers)&nbsp;?
-              </li>
-              <li>
-                Critère 8.9. Dans chaque page web, les balises ne doivent pas
-                être utilisées uniquement à des fins de présentation. Cette
-                règle est-elle respectée&nbsp;?
               </li>
               <li>
                 Critère 11.4. Dans chaque formulaire, chaque étiquette de champ
@@ -119,7 +113,7 @@ const Accessibilite = () => {
             </Title>
             <p>
               Cette déclaration a été établie le 12 avril 2021. Elle a été mise
-              à jour le 13/01/2022.
+              à jour le 20/10/2023.
             </p>
             <Title as="h3" stripe="none" size="small">
               Technologies utilisées pour la réalisation du Code du travail
@@ -293,7 +287,7 @@ const Accessibilite = () => {
                 </li>
                 <li>
                   <A11yLink
-                    href="https://www.defenseurdesdroits.fr/saisir/delegues"
+                    href="https://www.defenseurdesdroits.fr/carte-des-delegues"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

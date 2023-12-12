@@ -182,7 +182,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 5-11 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -355,7 +354,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 6.121 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -382,7 +380,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 6.21 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -552,7 +549,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article  5-12 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -775,7 +771,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 10.11 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -802,7 +797,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 10.13 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -942,7 +936,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 10.11 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -1066,7 +1059,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -1093,7 +1085,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -1217,7 +1208,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -1244,7 +1234,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -1368,7 +1357,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 10.12 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -1533,7 +1521,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 10.2 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -1733,7 +1720,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 2-4 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -1909,7 +1895,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 10.4 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -1936,7 +1921,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 11-2 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -2131,7 +2115,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 2-3 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -2255,7 +2238,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 2-3 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -2472,7 +2454,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 2-3 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -2772,7 +2753,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 5-25 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -2922,7 +2902,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 5-24 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -3357,8 +3336,7 @@ exports[`<Convention /> renders 1`] = `
                         <div>
                           <button
                             aria-expanded="false"
-                            class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
-                            tabindex="1"
+                            class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
                             type="button"
                           >
                             <svg
@@ -3399,7 +3377,6 @@ exports[`<Convention /> renders 1`] = `
                                   aria-label="IDCC 1596 - Article 6-11 (Nouvelle fenêtre)"
                                   class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                  rel="noopener noreferrer nofollow"
                                   target="_blank"
                                 >
                                   <svg
@@ -3426,7 +3403,6 @@ exports[`<Convention /> renders 1`] = `
                                   aria-label="IDCC 1596 - Article 6-12 (Nouvelle fenêtre)"
                                   class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                  rel="noopener noreferrer nofollow"
                                   target="_blank"
                                 >
                                   <svg
@@ -3453,7 +3429,6 @@ exports[`<Convention /> renders 1`] = `
                                   aria-label="IDCC 1596 - Article 6-13 (Nouvelle fenêtre)"
                                   class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                  rel="noopener noreferrer nofollow"
                                   target="_blank"
                                 >
                                   <svg
@@ -3480,7 +3455,6 @@ exports[`<Convention /> renders 1`] = `
                                   aria-label="IDCC 1596 - Article 6-14 (Nouvelle fenêtre)"
                                   class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                  rel="noopener noreferrer nofollow"
                                   target="_blank"
                                 >
                                   <svg
@@ -3507,7 +3481,6 @@ exports[`<Convention /> renders 1`] = `
                                   aria-label="IDCC 1596 - Article 6-15 (Nouvelle fenêtre)"
                                   class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                  rel="noopener noreferrer nofollow"
                                   target="_blank"
                                 >
                                   <svg
@@ -3664,7 +3637,6 @@ exports[`<Convention /> renders 1`] = `
                               aria-label="IDCC 1596 - Article 6-11 (Nouvelle fenêtre)"
                               class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              rel="noopener noreferrer nofollow"
                               target="_blank"
                             >
                               <svg
@@ -3881,26 +3853,25 @@ exports[`<Convention /> renders 1`] = `
                 class="sc-gmPhUn fMbHzm"
               >
                 <div
-                  class="sc-iHbSHJ jtNhJK"
+                  class="sc-iHbSHJ bydwxp"
                 >
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 1-4
@@ -3916,23 +3887,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 4-1
@@ -3948,23 +3918,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 4-2
@@ -3980,23 +3949,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 12-8
@@ -4084,26 +4052,25 @@ exports[`<Convention /> renders 1`] = `
                 class="sc-gmPhUn fMbHzm"
               >
                 <div
-                  class="sc-iHbSHJ jtNhJK"
+                  class="sc-iHbSHJ bydwxp"
                 >
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 3-13
@@ -4119,23 +4086,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 3-14
@@ -4151,23 +4117,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 3-15
@@ -4183,23 +4148,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 3-16
@@ -4215,23 +4179,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 3-17
@@ -4247,23 +4210,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 3-18
@@ -4279,23 +4241,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 3-21
@@ -4311,23 +4272,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 3-22
@@ -4343,23 +4303,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 3-24
@@ -4375,23 +4334,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 3-25
@@ -4407,23 +4365,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 3-28
@@ -4439,23 +4396,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 3-29
@@ -4543,26 +4499,25 @@ exports[`<Convention /> renders 1`] = `
                 class="sc-gmPhUn fMbHzm"
               >
                 <div
-                  class="sc-iHbSHJ jtNhJK"
+                  class="sc-iHbSHJ bydwxp"
                 >
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 12-1
@@ -4578,23 +4533,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 12-2
@@ -4610,23 +4564,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 12-3
@@ -4642,23 +4595,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 12-4
@@ -4674,23 +4626,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 12-5
@@ -4706,23 +4657,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 12-6
@@ -4738,23 +4688,22 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
-                      class="sc-fTFjTM hGmjIf no-after"
+                      class="sc-fTFjTM hkOnFS no-after"
                     >
                       <div
                         class="sc-gmgFlS dlfKdE"
                       >
                         <div
-                          class="sc-kMkxaj ietOip"
+                          class="sc-kMkxaj dwuMYa"
                         >
                           <p
                             class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
                           >
                             <a
                               href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
-                              rel="nofollow noopener"
                               target="_blank"
                             >
                               Article 12-7
@@ -4802,7 +4751,7 @@ exports[`<Convention /> renders 1`] = `
     <div
       class="sc-dxcDKg jSDMIl"
     >
-      <span
+      <div
         class="sc-dkmUuB ayeCS sc-gvZAcH bzlFqK"
       >
         <input
@@ -4813,7 +4762,7 @@ exports[`<Convention /> renders 1`] = `
           placeholder="Congés exceptionnels, prime"
           type="search"
         />
-      </span>
+      </div>
       <input
         name="query"
         type="hidden"

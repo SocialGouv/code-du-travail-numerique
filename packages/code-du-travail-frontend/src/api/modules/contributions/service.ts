@@ -11,7 +11,7 @@ import {
   getContributionsByIds,
 } from "./queries";
 
-export const getGenericContributions = async () => {
+export const getGenericContributionsGroupByThemes = async () => {
   const body = getAllGenericsContributions();
 
   const response = await elasticsearchClient.search({
@@ -27,7 +27,7 @@ export const getGenericContributions = async () => {
     .reduce(groupByThemes, {});
 };
 
-export const getAllContributions = async () => {
+export const getGenericsContributions = async () => {
   const body = getAllGenericsContributions();
 
   const response = await elasticsearchClient.search({

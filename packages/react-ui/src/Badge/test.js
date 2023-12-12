@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import { Check } from "../icons/index.js";
-import { Badge } from "./index.js";
+import { Badge } from "./index";
 
 describe("<Badge />", () => {
   it("renders", () => {

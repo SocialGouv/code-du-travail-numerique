@@ -1,13 +1,13 @@
 import {
-  getGenericContributions,
+  getGenericContributionsGroupByThemes,
   getBySlugsContributions,
   getByIdsContributions,
-  getAllContributions,
+  getGenericsContributions,
 } from "../service";
 
 describe("Contributions", () => {
   it("getGenericContributions", async () => {
-    const result = await getGenericContributions();
+    const result = await getGenericContributionsGroupByThemes();
     expect(result).toMatchSnapshot();
   });
   it("getBySlugsContributions", async () => {
@@ -23,7 +23,7 @@ describe("Contributions", () => {
   });
 
   it("getAllContributions", async () => {
-    const result = await getAllContributions();
+    const result = await getGenericsContributions();
     expect(result).toMatchSnapshot();
   });
 });

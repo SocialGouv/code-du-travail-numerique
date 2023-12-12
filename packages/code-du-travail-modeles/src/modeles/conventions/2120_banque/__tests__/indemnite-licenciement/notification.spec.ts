@@ -6,19 +6,12 @@ const engine = new IndemniteLicenciementPublicodes(
   "2120"
 );
 
-const defaultNotification = [
-  {
-    description: `Si au cours des 12 derniers mois le salarié a perçu des primes, des éléments variables ou des avantages en nature, le montant de l’indemnité de licenciement pourrait être moins élevé. En effet, la convention collective prévoit que l’indemnité de licenciement doit être calculée sur la base du salaire sans ces éléments de rémunération alors que le simulateur les intègre.`,
-  },
-];
-
 const notification = [
   {
     description: `Si lors de l’absence pour maladie non professionnelle le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (maintien de salaire), en plus des indemnités journalières de la sécurité sociale, le montant de l’indemnité de licenciement pourrait être plus élevé. En effet, dans ce cas, la période d’absence est intégrée dans l’ancienneté du salarié.
 Par soucis de simplification, ce simulateur déduit toutes les absences pour maladie non professionnelle sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas.
 `,
   },
-  ...defaultNotification,
 ];
 
 const notification2 = [
@@ -27,7 +20,6 @@ const notification2 = [
 Par soucis de simplification, ce simulateur déduit toutes les absences pour accident de trajet sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas.
 `,
   },
-  ...defaultNotification,
 ];
 
 describe("Notifications pour la CC 650", () => {
@@ -102,16 +94,16 @@ describe("Notifications pour la CC 650", () => {
 
     describe("N'affiche pas la notification", () => {
       test.each`
-        entryDate       | categoriePro    | semestresAvant2002 | semestresApres2002 | licenciementEco       | licenciementDisciplinaire | seniorityRight | seniority | salary  | expectedNotif
-        ${"01/01/1999"} | ${"Non-cadres"} | ${0}               | ${0}               | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui}     | ${0.67}        | ${15}     | ${2000} | ${defaultNotification}
-        ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${34}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${20}     | ${3064} | ${defaultNotification}
-        ${"01/01/2000"} | ${"Non-cadres"} | ${4}               | ${27}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${15.67}  | ${1991} | ${defaultNotification}
-        ${"01/01/2000"} | ${"Non-cadres"} | ${4}               | ${21}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${12.5}   | ${1991} | ${defaultNotification}
-        ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${34}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${20}     | ${2772} | ${defaultNotification}
-        ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${42}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${24}     | ${2772} | ${defaultNotification}
-        ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${42}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui}     | ${1}           | ${24}     | ${2772} | ${defaultNotification}
+        entryDate       | categoriePro    | semestresAvant2002 | semestresApres2002 | licenciementEco       | licenciementDisciplinaire | seniorityRight | seniority | salary
+        ${"01/01/1999"} | ${"Non-cadres"} | ${0}               | ${0}               | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui}     | ${0.67}        | ${15}     | ${2000}
+        ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${34}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${20}     | ${3064}
+        ${"01/01/2000"} | ${"Non-cadres"} | ${4}               | ${27}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${15.67}  | ${1991}
+        ${"01/01/2000"} | ${"Non-cadres"} | ${4}               | ${21}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${12.5}   | ${1991}
+        ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${34}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${20}     | ${2772}
+        ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${42}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${24}     | ${2772}
+        ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${42}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui}     | ${1}           | ${24}     | ${2772}
       `(
-        "$#) Catégorie pro $categoriePro, entryDate $entryDate, seniorityRight: $seniorityRight an, semestresAvant2002 $semestresAvant2002, semestresApres2002 $semestresApres2002, licenciementDisciplinaire $licenciementDisciplinaire, licenciementEco $licenciementEco, salaire de référence: $salary => $expectedRef",
+        "$#) Catégorie pro $categoriePro, entryDate $entryDate, seniorityRight: $seniorityRight an, semestresAvant2002 $semestresAvant2002, semestresApres2002 $semestresApres2002, licenciementDisciplinaire $licenciementDisciplinaire, licenciementEco $licenciementEco, salaire de référence: $salary",
         ({
           categoriePro,
           licenciementEco,
@@ -122,7 +114,6 @@ describe("Notifications pour la CC 650", () => {
           salary,
           seniority,
           entryDate,
-          expectedNotif,
         }) => {
           engine.setSituation(
             Object.assign(
@@ -155,14 +146,7 @@ describe("Notifications pour la CC 650", () => {
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
 
-          const notifs = engine.getNotifications();
-          expect(notifs).toHaveLength(expectedNotif.length);
-          const notifsToCompare = notifs.map((notif) => {
-            return {
-              description: notif.description,
-            };
-          });
-          expect(notifsToCompare).toEqual(expectedNotif);
+          expect(engine.getNotifications()).toHaveLength(0);
         }
       );
     });
@@ -236,18 +220,18 @@ describe("Notifications pour la CC 650", () => {
       );
     });
 
-    describe("N'affiche que la notification de base", () => {
+    describe("N'affiche pas de notification", () => {
       test.each`
-        entryDate       | categoriePro    | semestresAvant2002 | semestresApres2002 | licenciementEco       | licenciementDisciplinaire | seniorityRight | seniority | salary  | expectedNotif
-        ${"01/01/1999"} | ${"Non-cadres"} | ${0}               | ${0}               | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui}     | ${0.67}        | ${15}     | ${2000} | ${defaultNotification}
-        ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${34}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${20}     | ${3064} | ${defaultNotification}
-        ${"01/01/2000"} | ${"Non-cadres"} | ${4}               | ${27}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${15.67}  | ${1991} | ${defaultNotification}
-        ${"01/01/2000"} | ${"Non-cadres"} | ${4}               | ${21}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${12.5}   | ${1991} | ${defaultNotification}
-        ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${34}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${20}     | ${2772} | ${defaultNotification}
-        ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${42}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${24}     | ${2772} | ${defaultNotification}
-        ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${42}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui}     | ${1}           | ${24}     | ${2772} | ${defaultNotification}
+        entryDate       | categoriePro    | semestresAvant2002 | semestresApres2002 | licenciementEco       | licenciementDisciplinaire | seniorityRight | seniority | salary
+        ${"01/01/1999"} | ${"Non-cadres"} | ${0}               | ${0}               | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui}     | ${0.67}        | ${15}     | ${2000}
+        ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${34}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${20}     | ${3064}
+        ${"01/01/2000"} | ${"Non-cadres"} | ${4}               | ${27}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${15.67}  | ${1991}
+        ${"01/01/2000"} | ${"Non-cadres"} | ${4}               | ${21}              | ${QuestionOuiNon.oui} | ${undefined}              | ${1}           | ${12.5}   | ${1991}
+        ${"01/01/1999"} | ${"Non-cadres"} | ${6}               | ${34}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${20}     | ${2772}
+        ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${42}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.non}     | ${1}           | ${24}     | ${2772}
+        ${"01/01/1999"} | ${"Cadres"}     | ${6}               | ${42}              | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui}     | ${1}           | ${24}     | ${2772}
       `(
-        "$#) Catégorie pro $categoriePro, entryDate $entryDate, seniorityRight: $seniorityRight an, semestresAvant2002 $semestresAvant2002, semestresApres2002 $semestresApres2002, licenciementDisciplinaire $licenciementDisciplinaire, licenciementEco $licenciementEco, salaire de référence: $salary => $expectedRef",
+        "$#) Catégorie pro $categoriePro, entryDate $entryDate, seniorityRight: $seniorityRight an, semestresAvant2002 $semestresAvant2002, semestresApres2002 $semestresApres2002, licenciementDisciplinaire $licenciementDisciplinaire, licenciementEco $licenciementEco, salaire de référence: $salary",
         ({
           categoriePro,
           licenciementEco,
@@ -258,7 +242,6 @@ describe("Notifications pour la CC 650", () => {
           salary,
           seniority,
           entryDate,
-          expectedNotif,
         }) => {
           engine.setSituation(
             Object.assign(
@@ -290,14 +273,7 @@ describe("Notifications pour la CC 650", () => {
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
 
-          const notifs = engine.getNotifications();
-          expect(notifs).toHaveLength(expectedNotif.length);
-          const notifsToCompare = notifs.map((notif) => {
-            return {
-              description: notif.description,
-            };
-          });
-          expect(notifsToCompare).toEqual(expectedNotif);
+          expect(engine.getNotifications()).toHaveLength(0);
         }
       );
     });

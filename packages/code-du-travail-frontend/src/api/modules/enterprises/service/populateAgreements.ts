@@ -1,14 +1,19 @@
-import { SearchResponse, Agreement } from "@socialgouv/cdtn-utils";
-import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
-import { getAgreements } from "./queries";
-import { EnterpriseApiResponse, ApiEnterpriseData, Convention } from "./types";
-import { IDCC_TO_REPLACE } from "../../config";
+import { elasticDocumentsIndex, elasticsearchClient } from "../../../utils";
+import {
+  AgreementResponse,
+  getAgreements,
+  SearchAgreementsResponse,
+} from "../queries";
+import { ApiEnterpriseData, EnterpriseAgreement } from "../types";
+import { IDCC_TO_REPLACE } from "../../../config";
+import { Convention, EnterpriseApiResponse } from "./fetchEnterprises";
 
-const toAgreement = (convention: Convention): Agreement => ({
+const toAgreement = (convention: Convention): EnterpriseAgreement => ({
   id: convention.id ?? convention.idcc,
   num: convention.idcc,
   shortTitle: convention.shortTitle ?? "Convention collective non reconnue",
   title: convention.title,
+  contributions: false,
   ...(convention.url ? { url: convention.url } : {}),
 });
 
@@ -28,13 +33,13 @@ export const populateAgreements = async (
 
   if (idccList.length > 0) {
     const body = getAgreements(idccList);
-    const response = await elasticsearchClient.search<
-      SearchResponse<Agreement>
-    >({ body, index: elasticDocumentsIndex });
+    const response = await elasticsearchClient.search<SearchAgreementsResponse>(
+      { body, index: elasticDocumentsIndex }
+    );
 
     if (response.body.hits.total.value > 0) {
       const agreements = response.body.hits.hits.reduce(
-        (acc: Record<number, Agreement>, curr) => {
+        (acc: Record<number, AgreementResponse>, curr) => {
           acc[curr._source.num] = curr._source;
           return acc;
         },
@@ -46,16 +51,28 @@ export const populateAgreements = async (
         entreprises: enterpriseApiResponse.entreprises?.map((enterprise) => ({
           ...enterprise,
           conventions: enterprise.conventions.map(
-            (convention): Agreement =>
-              agreements[convention.idcc] ?? toAgreement(convention)
+            (convention): EnterpriseAgreement => {
+              if (agreements[convention.idcc]) {
+                const { contributions, ...agreement } =
+                  agreements[convention.idcc];
+                return {
+                  ...agreement,
+                  contributions: contributions ?? false,
+                };
+              }
+              return toAgreement(convention);
+            }
           ),
         })),
       };
 
       if (idcc) {
         const idccToAdd = IDCC_TO_REPLACE[idcc] as number[];
-        let conventionsToAdd: Agreement[] = idccToAdd
-          .map((idcc) => agreements[idcc])
+        let conventionsToAdd: EnterpriseAgreement[] = idccToAdd
+          .map((idcc) => ({
+            ...agreements[idcc],
+            contributions: agreements[idcc].contributions ?? false,
+          }))
           .filter((convention) => convention !== undefined);
         result.entreprises = result.entreprises?.map((enterprise) => {
           const hasAlreadyIdcc = enterprise.conventions.find((convention) =>

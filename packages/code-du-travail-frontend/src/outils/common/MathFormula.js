@@ -1,7 +1,6 @@
 import TeX from "@matejmazur/react-katex";
 import PropTypes from "prop-types";
 import React from "react";
-import styled from "styled-components";
 
 export const asciiMathToTex = (ascii) => {
   // multiplications
@@ -23,19 +22,16 @@ export const asciiMathToTex = (ascii) => {
 
 export const MathFormula = ({ formula }) => {
   return (
-    <StyledFormula>
-      <TeX block style={{ width: "fit-content", overflow: "auto" }}>
-        {asciiMathToTex(formula)}
-      </TeX>
-    </StyledFormula>
+    <TeX
+      title={formula.replace(/\*/g, `x`)}
+      block
+      style={{ width: "fit-content", overflow: "auto" }}
+    >
+      {asciiMathToTex(formula)}
+    </TeX>
   );
 };
 
 MathFormula.propTypes = {
   formula: PropTypes.string.isRequired,
 };
-
-const StyledFormula = styled.div`
-  display: flex;
-  width: "fit-content";
-`;

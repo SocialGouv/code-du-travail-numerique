@@ -23,13 +23,13 @@ exports[`<SearchResults/> should render results 1`] = `
         class="sc-dExYaf gvFybR"
       >
         <div
-          class="sc-fTFjTM hGmjIf"
+          class="sc-fTFjTM hkOnFS"
         >
           <div
             class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-kMkxaj ietOip"
+              class="sc-kMkxaj dwuMYa"
             >
               <p
                 class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
@@ -54,7 +54,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="sc-dxcDKg jfRleH"
             >
               <p
-                class="sc-jGKxIK cNijme"
+                class="sc-jGKxIK eoUrZA"
               >
                 description
               </p>
@@ -66,10 +66,10 @@ exports[`<SearchResults/> should render results 1`] = `
         class="sc-dExYaf gvFybR"
       >
         <div
-          class="sc-fTFjTM hGmjIf sc-lnPyaJ loWhWN"
+          class="sc-fTFjTM hkOnFS sc-lnPyaJ loWhWN"
         >
           <div
-            class="sc-kOHTFB fBWkdL"
+            class="sc-kOHTFB enIaVF"
           >
             <div
               class="sc-dtInlm krTdyM"
@@ -99,7 +99,7 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-kMkxaj ietOip"
+              class="sc-kMkxaj dwuMYa"
             >
               <p
                 class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
@@ -127,18 +127,19 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-dxcDKg jfRleH"
               >
                 <p
-                  class="sc-jGKxIK cNijme"
+                  class="sc-jGKxIK eoUrZA"
                 >
                   description
                 </p>
               </div>
               <div
-                class="sc-eulNck jyYvJd"
+                class="sc-eulNck bCoRam"
               >
-                <button
-                  class="sc-kOPcWz hwrncL"
+                <p
+                  class="sc-jGKxIK QfhnJ"
                 >
                   Consulter
+                   
                   <svg
                     aria-hidden="true"
                     fill="none"
@@ -150,7 +151,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </button>
+                </p>
               </div>
             </div>
           </div>
@@ -161,13 +162,13 @@ exports[`<SearchResults/> should render results 1`] = `
       >
         <div
           aria-label="Outils externes telerc description undefined (nouvelle fenêtre)"
-          class="sc-fTFjTM hGmjIf sc-lnPyaJ loWhWN no-after"
+          class="sc-fTFjTM hkOnFS sc-lnPyaJ loWhWN no-after"
         >
           <div
             class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-kMkxaj ietOip"
+              class="sc-kMkxaj dwuMYa"
             >
               <p
                 class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
@@ -197,18 +198,19 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-dxcDKg jfRleH"
               >
                 <p
-                  class="sc-jGKxIK cNijme"
+                  class="sc-jGKxIK eoUrZA"
                 >
                   description
                 </p>
               </div>
               <div
-                class="sc-eulNck jyYvJd"
+                class="sc-eulNck bCoRam"
               >
-                <button
-                  class="sc-kOPcWz hwrncL"
+                <p
+                  class="sc-jGKxIK QfhnJ"
                 >
                   Consulter
+                   
                   <svg
                     aria-hidden="true"
                     fill="none"
@@ -220,7 +222,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </button>
+                </p>
               </div>
             </div>
           </div>
@@ -230,10 +232,10 @@ exports[`<SearchResults/> should render results 1`] = `
         class="sc-dExYaf gvFybR"
       >
         <div
-          class="sc-fTFjTM hGmjIf sc-lnPyaJ loWhWN"
+          class="sc-fTFjTM hkOnFS sc-lnPyaJ loWhWN"
         >
           <div
-            class="sc-kOHTFB fBWkdL"
+            class="sc-kOHTFB enIaVF"
           >
             <div
               class="sc-dtInlm krTdyM"
@@ -263,7 +265,7 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-kMkxaj ietOip"
+              class="sc-kMkxaj dwuMYa"
             >
               <p
                 class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
@@ -291,18 +293,19 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-dxcDKg jfRleH"
               >
                 <p
-                  class="sc-jGKxIK cNijme"
+                  class="sc-jGKxIK eoUrZA"
                 >
                   description
                 </p>
               </div>
               <div
-                class="sc-eulNck jyYvJd"
+                class="sc-eulNck bCoRam"
               >
-                <button
-                  class="sc-kOPcWz hwrncL"
+                <p
+                  class="sc-jGKxIK QfhnJ"
                 >
                   Consulter
+                   
                   <svg
                     aria-hidden="true"
                     fill="none"
@@ -314,7 +317,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </button>
+                </p>
               </div>
             </div>
           </div>
@@ -324,10 +327,10 @@ exports[`<SearchResults/> should render results 1`] = `
         class="sc-dExYaf gvFybR"
       >
         <div
-          class="sc-fTFjTM hGmjIf"
+          class="sc-fTFjTM hkOnFS"
         >
           <div
-            class="sc-kOHTFB fBWkdL"
+            class="sc-kOHTFB enIaVF"
           >
             <div
               class="sc-dtInlm krTdyM"
@@ -357,7 +360,7 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-gmgFlS dlfKdE"
           >
             <div
-              class="sc-kMkxaj ietOip"
+              class="sc-kMkxaj dwuMYa"
             >
               <p
                 class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
@@ -382,7 +385,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="sc-dxcDKg jfRleH"
             >
               <p
-                class="sc-jGKxIK cNijme"
+                class="sc-jGKxIK eoUrZA"
               >
                 description
               </p>
@@ -423,19 +426,19 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-gmPhUn fMbHzm"
           >
             <div
-              class="sc-iHbSHJ jtNhJK"
+              class="sc-iHbSHJ bydwxp"
             >
               <div
-                class="sc-klVQfs bzxnQN"
+                class="sc-klVQfs hQsiuM"
               >
                 <div
-                  class="sc-fTFjTM hGmjIf"
+                  class="sc-fTFjTM hkOnFS"
                 >
                   <div
                     class="sc-gmgFlS dlfKdE"
                   >
                     <div
-                      class="sc-kMkxaj ietOip"
+                      class="sc-kMkxaj dwuMYa"
                     >
                       <p
                         class="sc-jIGnZt issdxz"
@@ -477,13 +480,13 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-gmPhUn fMbHzm"
           >
             <div
-              class="sc-iHbSHJ jtNhJK"
+              class="sc-iHbSHJ bydwxp"
             >
               <div
-                class="sc-klVQfs kmTVHW"
+                class="sc-klVQfs hPKRhx"
               >
                 <div
-                  class="sc-fTFjTM fPpaeI"
+                  class="sc-fTFjTM gXLDjJ"
                 >
                   <div
                     class="sc-gmgFlS dlfKdE"
@@ -492,7 +495,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       class="sc-gsFSXq efpSUc"
                     />
                     <div
-                      class="sc-kMkxaj ietOip"
+                      class="sc-kMkxaj dwuMYa"
                     >
                       <p
                         class="sc-jIGnZt issdxz"

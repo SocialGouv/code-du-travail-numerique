@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Section } from "../layout/Section/index.js";
+import { Section } from "../layout/Section/index";
 import { Heading } from "../Titles/Heading/index.tsx";
 import { PageTitle } from "../Titles/PageTitle/index.js";
 import { Title } from "../Titles/Title/index.js";

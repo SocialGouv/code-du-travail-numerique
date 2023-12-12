@@ -4,15 +4,15 @@ exports[`<StepCDD /> should render 1`] = `
 <div>
   <form>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
-        class="sc-ibQAlb iORupB"
+        class="sc-ibQAlb iRaavs"
       >
         Le CDD a-t-il été rompu pendant la période d’essai du salarié ?
         <span
-          class="sc-ibQAlb iapAQd"
+          class="sc-ibQAlb TTAtT"
         >
            (obligatoire)
         </span>
@@ -60,15 +60,15 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
-        class="sc-ibQAlb iORupB"
+        class="sc-ibQAlb iRaavs"
       >
         À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
         <span
-          class="sc-ibQAlb iapAQd"
+          class="sc-ibQAlb TTAtT"
         >
            (obligatoire)
         </span>
@@ -116,15 +116,15 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
-        class="sc-ibQAlb iORupB"
+        class="sc-ibQAlb iRaavs"
       >
         Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave ou faute lourde du salarié, cas de force majeure ?
         <span
-          class="sc-ibQAlb iapAQd"
+          class="sc-ibQAlb TTAtT"
         >
            (obligatoire)
         </span>
@@ -172,15 +172,15 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
     >
       <span
-        class="sc-ibQAlb iORupB"
+        class="sc-ibQAlb iRaavs"
       >
         Le salarié a-t-il refusé de renouveler le CDD alors que le renouvellement et ses modalités étaient prévus dès l’origine dans son contrat ?
         <span
-          class="sc-ibQAlb iapAQd"
+          class="sc-ibQAlb TTAtT"
         >
            (obligatoire)
         </span>

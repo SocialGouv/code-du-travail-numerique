@@ -1,5 +1,5 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { Wrapper } from "@socialgouv/cdtn-ui";
+import { Wrapper, Modal, Button, Paragraph } from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -36,6 +36,7 @@ function AgreementSearchTool({
   const [screen, setScreen] = useState<ScreenType | null>(
     widgetMode ? ScreenType.enterprise : null
   );
+  const [isAgreementModalOpened, showAgreementModal] = useState(false);
 
   useEffect(() => {
     const slug = router.query.slug;
@@ -107,19 +108,47 @@ function AgreementSearchTool({
   switch (screen) {
     case ScreenType.agreement:
       Step = (
-        <Steps.AgreementSearchStep
-          onBackClick={clearSearchType}
-          onSelectAgreement={(agreement) => {
-            trackEvent(
-              MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
-              title,
-              `idcc${agreement.num.toString()}`,
-              uuid
-            );
-            router.push(`/convention-collective/${agreement.slug}`);
-          }}
-          onUserAction={onUserAction}
-        />
+        <>
+          <Steps.AgreementSearchStep
+            onBackClick={clearSearchType}
+            onSelectAgreement={(agreement) => {
+              if (agreement.url || agreement.contributions) {
+                trackEvent(
+                  MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
+                  title,
+                  `idcc${agreement.num.toString()}`,
+                  uuid
+                );
+                router.push(`/convention-collective/${agreement.slug}`);
+              } else {
+                showAgreementModal(true);
+              }
+            }}
+            onUserAction={onUserAction}
+          />
+          <Modal
+            title="Covention collective"
+            isOpen={isAgreementModalOpened}
+            onDismiss={() => {
+              showAgreementModal(false);
+            }}
+          >
+            <Paragraph>
+              Nous n&apos;avons pas d&apos;informations concernant cette
+              convention collective.
+            </Paragraph>
+            <Center>
+              <Button
+                variant="primary"
+                onClick={() => {
+                  showAgreementModal(false);
+                }}
+              >
+                Fermer
+              </Button>
+            </Center>
+          </Modal>
+        </>
       );
       break;
     case ScreenType.enterprise:
@@ -187,4 +216,10 @@ const WizardWrapper = styled(Wrapper)`
   width: 100%;
   margin: 0 auto;
 `;
+
+const Center = styled.div`
+  width: 100%;
+  text-align: center;
+`;
+
 export { AgreementSearchWithContext as AgreementSearch };

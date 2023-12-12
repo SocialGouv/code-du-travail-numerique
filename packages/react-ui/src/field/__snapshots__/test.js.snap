@@ -2,14 +2,14 @@
 
 exports[`<Input /> should render input field 1`] = `
 <div>
-  <span
+  <div
     class="sc-eqUAAy gDroom"
   >
     <input
       class="sc-fqkvVR bbxaek"
       name="input"
     />
-  </span>
+  </div>
 </div>
 `;
 
@@ -36,13 +36,13 @@ exports[`<InputDate /> should render input date field 1`] = `
     class="sc-iGgWBj kZPIXv"
   >
     <input
-      class="sc-gsFSXq heEHNM"
+      class="sc-gsFSXq iEYecB"
       name="input_date"
       placeholder="jj/mm/aaaa"
       value=""
     />
     <div
-      class="sc-kAyceB koiqfG"
+      class="sc-kAyceB cLXjdA"
     >
       <div
         class="sc-jXbUNg dPutyI"

@@ -18,9 +18,12 @@ export default function Ineligible() {
   return (
     <>
       <SectionTitle hasSmallMarginTop>Indemnité de licenciement</SectionTitle>
-      <HighlightResult>
-        Il n&apos;y a pas d&apos;indemnité de licenciement dans cette situation
-      </HighlightResult>
+      <p>
+        <HighlightResult>
+          Il n&apos;y a pas d&apos;indemnité de licenciement dans cette
+          situation
+        </HighlightResult>
+      </p>
       <p>{getEligibilityError()}</p>
       {!agreementHasNoLegalIndemnity && infoWarning && (
         <Disclaimer

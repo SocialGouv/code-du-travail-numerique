@@ -30,7 +30,7 @@ export const StyledOverflowWrapper = styled(OverflowWrapper)`
 `;
 
 export const List = styled.div`
-  display: flex; /* Flex layout so items have equal height. */
+  display: flex;
   flex-wrap: wrap;
   align-content: stretch;
   align-items: stretch;
@@ -43,10 +43,4 @@ export const List = styled.div`
   margin-left: calc(-1 * ${spacings.small});
   padding: 0;
   list-style-type: none;
-  @media (max-width: ${breakpoints.mobile}) {
-    flex-wrap: nowrap;
-    margin-right: 0;
-    margin-bottom: ${spacings.medium};
-    margin-left: 0;
-  }
 `;

@@ -5,25 +5,41 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Contribution from "../../src/contributions/Contribution";
 import { Layout } from "../../src/layout/Layout";
-import { Breadcrumb } from "@socialgouv/cdtn-utils";
+import {
+  Breadcrumb,
+  ElasticSearchContribution,
+  ElasticSearchContributionConventionnelle,
+  ElasticSearchContributionGeneric,
+} from "@socialgouv/cdtn-utils";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
+import ContributionGenericPoc from "../../src/contributions/ContributionGenericPoc";
+import ContributionCCPoc from "../../src/contributions/ContributionCCPoc";
+import { showNewContribPage } from "../../src/contributions/utils";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
-import showNewContribPage from "../../src/contributions/slugFilter";
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);
 
-interface Props {
+type NewProps = {
+  contribution: ElasticSearchContribution;
+  isNewContribution: true;
+};
+
+type OldProps = {
   breadcrumbs: Breadcrumb[];
   description: string;
   title: string;
   slug: string;
-  content;
   answers;
   relatedItems: Array<any>;
-}
+  content;
+  isNewContribution: false;
+};
+
+type Props = NewProps | OldProps;
 
 const buildTitleAndDescription = (
   breadcrumbs,
@@ -49,53 +65,78 @@ const buildTitleAndDescription = (
 const SLUG_FOR_POC_GENERIC = ["les-conges-pour-evenements-familiaux"];
 
 function PageContribution(props: Props): React.ReactElement {
-  const {
-    breadcrumbs,
-    title,
-    answers,
-    description,
-    relatedItems,
-    content,
-    slug,
-  } = props;
+  let metas: any = {};
 
-  const metas = buildTitleAndDescription(
-    breadcrumbs,
-    answers.conventionAnswer,
-    title,
-    description
-  );
+  if (!props.isNewContribution) {
+    metas = buildTitleAndDescription(
+      props.breadcrumbs,
+      props.answers.conventionAnswer,
+      props.title,
+      props.description
+    );
+  }
+
   return (
     <Layout>
-      <Metas title={metas.title} description={metas.description} />
-      <Answer
-        title={title}
-        relatedItems={relatedItems}
-        breadcrumbs={breadcrumbs}
-      >
-        {SLUG_FOR_POC_GENERIC.indexOf(slug) >= 0 ? (
-          <ContributionGeneric
-            answers={answers}
-            slug={slug}
-            content={(content && content._source) || {}}
+      {props.isNewContribution ? (
+        <>
+          <Metas
+            title={props.contribution.title}
+            description={props.contribution.description}
           />
-        ) : (
-          <>
-            {showNewContribPage(slug) ? (
-              <ContributionCC
-                answers={answers}
-                slug={slug}
-                content={(content && content._source) || {}}
+          <Answer
+            title={props.contribution.title}
+            breadcrumbs={props.contribution.breadcrumbs}
+          >
+            {props.contribution.idcc === "0000" ? (
+              <ContributionGeneric
+                contribution={
+                  props.contribution as ElasticSearchContributionGeneric
+                }
               />
             ) : (
-              <Contribution
-                answers={answers}
-                content={(content && content._source) || {}}
+              <ContributionCC
+                contribution={
+                  props.contribution as ElasticSearchContributionConventionnelle
+                }
               />
             )}
-          </>
-        )}
-      </Answer>
+          </Answer>
+        </>
+      ) : (
+        <>
+          <Metas title={metas.title} description={metas.description} />
+          <Answer
+            title={props.title}
+            relatedItems={props.relatedItems}
+            breadcrumbs={props.breadcrumbs}
+          >
+            {SLUG_FOR_POC_GENERIC.indexOf(props.slug) >= 0 ? (
+              <ContributionGenericPoc
+                answers={props.answers}
+                slug={props.slug}
+                content={(props.content && props.content._source) || {}}
+              />
+            ) : (
+              <>
+                {showNewContribPage(props.slug) ? (
+                  <ContributionCCPoc
+                    answers={props.answers}
+                    slug={props.slug}
+                    content={(props.content && props.content._source) || {}}
+                  />
+                ) : (
+                  <Contribution
+                    answers={props.answers}
+                    content={(props.content && props.content._source) || {}}
+                  />
+                )}
+              </>
+            )}
+          </Answer>
+        </>
+      )}
+      <EventTracker />
     </Layout>
   );
 }
@@ -107,20 +148,47 @@ export const getServerSideProps = async ({ query }) => {
   }
   const data = await response.json();
 
-  // Check Content tag exist on markdown
-  const markdown =
-    ((((data || {})._source || {}).answers || {}).generic || {}).markdown || "";
-
-  const contentUrl = extractMdxContentUrl(markdown);
-  if (contentUrl) {
-    const fetchContent = await fetch(`${SITE_URL}/api/items?url=${contentUrl}`);
-    const [content] = await fetchContent.json();
+  if (
+    data._source?.type === "content" ||
+    data._source?.type === "fiche-sp" ||
+    data._source?.type === "cdt"
+  ) {
     return {
-      props: { relatedItems: data.relatedItems, ...data._source, content },
+      props: {
+        contribution: data._source,
+        isNewContribution: true,
+      },
+    };
+  } else {
+    // Check Content tag exist on markdown
+    const markdown =
+      ((((data || {})._source || {}).answers || {}).generic || {}).markdown ||
+      "";
+
+    const contentUrl = extractMdxContentUrl(markdown);
+    if (contentUrl) {
+      const fetchContent = await fetch(
+        `${SITE_URL}/api/items?url=${contentUrl}`
+      );
+      const [content] = await fetchContent.json();
+      return {
+        props: {
+          relatedItems: data.relatedItems,
+          ...data._source,
+          content,
+          isNewContribution: false,
+        },
+      };
+    }
+
+    return {
+      props: {
+        relatedItems: data.relatedItems,
+        ...data._source,
+        isNewContribution: false,
+      },
     };
   }
-
-  return { props: { relatedItems: data.relatedItems, ...data._source } };
 };
 
 export default PageContribution;

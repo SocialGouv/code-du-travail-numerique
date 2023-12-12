@@ -46,7 +46,6 @@ const Origins = () => (
                     <A11yLink
                       href="https://www.ilo.org/global/lang--fr/index.htm"
                       target="_blank"
-                      rel="noopener noreferrer nofollow"
                     >
                       l’Organisation internationale du travail
                     </A11yLink>{" "}
@@ -67,7 +66,6 @@ const Origins = () => (
                       <A11yLink
                         href="https://www.ilo.org/dyn/normlex/fr/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C158"
                         target="_blank"
-                        rel="noopener noreferrer nofollow"
                       >
                         la Convention n°158 de l’OIT sur le licenciement
                       </A11yLink>
@@ -84,7 +82,6 @@ const Origins = () => (
                       <A11yLink
                         href="https://www.ohchr.org/fr/professionalinterest/pages/ccpr.aspx"
                         target="_blank"
-                        rel="noopener noreferrer nofollow"
                       >
                         Le Pacte international relatif aux droits civils et
                         politiques de 1966
@@ -93,7 +90,6 @@ const Origins = () => (
                       <A11yLink
                         href="https://www.ohchr.org/FR/ProfessionalInterest/Pages/CESCR.aspx"
                         target="_blank"
-                        rel="noopener noreferrer nofollow"
                       >
                         le Pacte international relatif aux droits économiques,
                         sociaux et culturels de 1966
@@ -114,16 +110,11 @@ const Origins = () => (
                     <A11yLink
                       href="https://europa.eu/european-union/index_fr"
                       target="_blank"
-                      rel="noopener noreferrer nofollow"
                     >
                       l’Union Européenne
                     </A11yLink>{" "}
                     et par{" "}
-                    <A11yLink
-                      href="https://www.coe.int/fr/"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                    >
+                    <A11yLink href="https://www.coe.int/fr/" target="_blank">
                       le Conseil de l’Europe
                     </A11yLink>
                     .
@@ -137,27 +128,18 @@ const Origins = () => (
                     <li>des directives</li>
                     <li>
                       des accords collectifs européens négociés par{" "}
-                      <A11yLink
-                        href="https://www.etuc.org/fr"
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                      >
+                      <A11yLink href="https://www.etuc.org/fr" target="_blank">
                         la Confédération européenne des syndicats (CES)
                       </A11yLink>
                       ,{" "}
                       <A11yLink
                         href="https://www.businesseurope.eu/"
                         target="_blank"
-                        rel="noopener noreferrer nofollow"
                       >
                         Business Europe
                       </A11yLink>{" "}
                       et{" "}
-                      <A11yLink
-                        href="https://www.ceep.eu/"
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                      >
+                      <A11yLink href="https://www.ceep.eu/" target="_blank">
                         le Centre européen des entreprises à participation
                         publique
                       </A11yLink>{" "}
@@ -174,7 +156,6 @@ const Origins = () => (
                       <A11yLink
                         href="https://www.echr.coe.int/Pages/home.aspx?p=basictexts&c=fre"
                         target="_blank"
-                        rel="noopener noreferrer nofollow"
                       >
                         La Convention européenne de sauvegarde des droits de
                         l’Homme et des libertés fondamentales
@@ -188,7 +169,6 @@ const Origins = () => (
                       <A11yLink
                         href="https://www.coe.int/en/web/european-social-charter"
                         target="_blank"
-                        rel="noopener noreferrer nofollow"
                       >
                         La Charte sociale européenne
                       </A11yLink>{" "}
@@ -210,7 +190,6 @@ const Origins = () => (
                     <A11yLink
                       href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
                       target="_blank"
-                      rel="noopener noreferrer nofollow"
                     >
                       la Constitution du 4 octobre 1958
                     </A11yLink>{" "}

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 
@@ -10,7 +9,15 @@ import { breakpoints, spacings } from "../../theme";
 
 const BORDER_RADIUS = "10rem";
 
-const assignBackgroundColor = ({ variant, theme }) => {
+type Variants = "default" | "white" | "light" | "dark";
+
+const assignBackgroundColor = ({
+  variant,
+  theme,
+}: {
+  variant?: Variants;
+  theme: any;
+}) => {
   let backgroundColor = "transparent";
   if (variant === "white") {
     backgroundColor = theme.white;
@@ -26,17 +33,25 @@ const assignBackgroundColor = ({ variant, theme }) => {
   `;
 };
 
+type SectionProps = {
+  decorated?: Boolean;
+  innerBottomContent?: React.ReactNode;
+  innerTopContent?: React.ReactNode;
+  large?: Boolean;
+  variant?: Variants;
+};
+
 export const Section = ({
-  decorated,
-  large,
+  decorated = false,
+  large = false,
   innerTopContent,
   innerBottomContent,
-  variant,
+  variant = "default",
   ...props
-}) => {
+}: React.PropsWithChildren<SectionProps>) => {
   if (decorated) {
     return (
-      <StyledSection large={large} decorated>
+      <StyledSection large={large} decorated={decorated}>
         <Decoration variant={variant} />
         {innerTopContent && (
           <PaddedContainer>{innerTopContent}</PaddedContainer>
@@ -51,7 +66,13 @@ export const Section = ({
   return <StyledSection variant={variant} {...props} />;
 };
 
-const StyledSection = styled.div`
+type StyledSectionProps = {
+  decorated?: Boolean;
+  large?: Boolean;
+  variant?: Variants;
+};
+
+const StyledSection = styled.div<StyledSectionProps>`
   ${({ decorated, large, theme }) => {
     if (!decorated || theme.noColors) {
       return css`
@@ -130,20 +151,3 @@ const Content = styled.div`
   position: relative;
   z-index: 0;
 `;
-
-Section.propTypes = {
-  children: PropTypes.node.isRequired,
-  decorated: PropTypes.bool,
-  innerBottomContent: PropTypes.node,
-  innerTopContent: PropTypes.node,
-  large: PropTypes.bool,
-  variant: PropTypes.oneOf(["default", "white", "light", "dark"]),
-};
-
-Section.defaultProps = {
-  decorated: false,
-  innerBottomContent: null,
-  innerTopContent: null,
-  large: false,
-  variant: "default",
-};

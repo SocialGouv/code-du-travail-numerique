@@ -3,6 +3,60 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.114.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.113.0...v4.114.0) (2023-11-21)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+# [4.113.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.112.0...v4.113.0) (2023-11-10)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+# [4.112.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.111.0...v4.112.0) (2023-11-03)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+# [4.111.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.110.0...v4.111.0) (2023-10-23)
+
+### Bug Fixes
+
+- **accessibility:** meilleure accessibilité sur les outils ([#5390](https://github.com/SocialGouv/code-du-travail-numerique/issues/5390)) ([43e8ad3](https://github.com/SocialGouv/code-du-travail-numerique/commit/43e8ad327f0e5b4a6b8c93f690b9821f7900f5c7))
+- use display inline-block to avoid regression ([#5408](https://github.com/SocialGouv/code-du-travail-numerique/issues/5408)) ([7106024](https://github.com/SocialGouv/code-du-travail-numerique/commit/710602406e964d1bef953169cf007988c9bb1ec6))
+
+### Features
+
+- **accessibilité:** un seul lien sur les tuiles ([#5388](https://github.com/SocialGouv/code-du-travail-numerique/issues/5388)) ([88ead81](https://github.com/SocialGouv/code-du-travail-numerique/commit/88ead81f55e16d4d458cb7b044d24fe499859541))
+
+# [4.110.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.109.0...v4.110.0) (2023-10-16)
+
+### Bug Fixes
+
+- **accessibility:** remove b and i tags ([#5380](https://github.com/SocialGouv/code-du-travail-numerique/issues/5380)) ([f1d6204](https://github.com/SocialGouv/code-du-travail-numerique/commit/f1d620431bde3d9bf91d4a78abdc68414fee0a65))
+- **stripe:** valeur par défaut sur la longueur des Stripe ([#5391](https://github.com/SocialGouv/code-du-travail-numerique/issues/5391)) ([02fccd7](https://github.com/SocialGouv/code-du-travail-numerique/commit/02fccd7544eae2adb94e9538d5487c08e59e6104))
+
+### Features
+
+- ajout des conventions collectives sans page legifrance ([#5373](https://github.com/SocialGouv/code-du-travail-numerique/issues/5373)) ([605a0f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/605a0f9fc8ebb12a5c621675e563779d1ab58da5))
+
+# [4.109.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.108.1...v4.109.0) (2023-10-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+## [4.108.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.108.0...v4.108.1) (2023-09-22)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+# [4.108.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.107.0...v4.108.0) (2023-09-11)
+
+### Bug Fixes
+
+- **contributions:** ajout d'un scroll automatique sur la partie code du travail ([#5357](https://github.com/SocialGouv/code-du-travail-numerique/issues/5357)) ([6b9129a](https://github.com/SocialGouv/code-du-travail-numerique/commit/6b9129a5170b21f6b16a9d4b364c925f369470e1))
+
+# [4.107.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.106.0...v4.107.0) (2023-08-25)
+
+### Features
+
+- 5301 quick win accessibilité 2023 ([#5328](https://github.com/SocialGouv/code-du-travail-numerique/issues/5328)) ([e8b7e41](https://github.com/SocialGouv/code-du-travail-numerique/commit/e8b7e419c21948855d2929aaf12341e75134fe3e))
+
 # [4.106.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.105.1...v4.106.0) (2023-08-09)
 
 ### Features

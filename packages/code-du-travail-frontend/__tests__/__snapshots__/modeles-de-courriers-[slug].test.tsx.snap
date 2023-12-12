@@ -180,7 +180,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
     >
       <nav
         aria-label="Fil d'ariane"
-        class="sc-cKXybt dmQQCC"
+        class="sc-lgjHQU dDTZGU"
       >
         <div
           class="sc-gFAWRd jDjoBq"
@@ -189,19 +189,19 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             class="sc-gmPhUn kUNTdL"
           >
             <ol
-              class="sc-aXZVg sc-lgjHQU gZgZQL cWeifL"
+              class="sc-aXZVg sc-fatcLD gZgZQL eZqwVq"
             >
               <li
-                class="sc-fatcLD gqBdgK"
+                class="sc-cgjDci fJSWkS"
               >
                 <a
-                  class="sc-cgjDci cNyyNY"
+                  class="sc-djTQaJ gsYwaE"
                   href="/"
                   title="Retour à l'accueil"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-djTQaJ fxUuIe"
+                    class="sc-pKqro jftNql"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -215,11 +215,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 </a>
               </li>
               <li
-                class="sc-fatcLD gqBdgK"
+                class="sc-cgjDci fJSWkS"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-pKqro eATtuG"
+                  class="sc-gvPdwL dHPTuP"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +231,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 </svg>
                  
                 <a
-                  class="sc-cgjDci cNyyNY"
+                  class="sc-djTQaJ gsYwaE"
                   href="/themes/theme"
                 >
                   theme
@@ -254,10 +254,183 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               class="sc-iGgWBj biWgIW"
             >
               <div
-                class="sc-iowXnY lcUKJc"
+                class="sc-fscmHZ jQkhUC"
               >
+                <div>
+                  <div
+                    class="sc-iowXnY lcUKJc"
+                  >
+                    <p
+                      class="sc-hZDyAQ sc-kpKSZj bUgSfx epCJIi"
+                    >
+                      theme
+                    </p>
+                    <header
+                      class="sc-ePDLzJ dXxftn sc-lfYzqA juRufr"
+                    >
+                      <h1
+                        class="sc-dPZUQH doubLW"
+                      >
+                        <span
+                          class="sc-gsFSXq ljkohw"
+                        />
+                        Modèle de lettre - Courrier Epistolaire
+                      </h1>
+                    </header>
+                    <div
+                      class="sc-ijDOKB hhwpPP"
+                    >
+                      <p
+                        class="sc-jGKxIK ksIRLJ"
+                      >
+                        <span
+                          class="sc-cKXybt cdnqXe"
+                        >
+                          Mis à jour le
+                           : 
+                          01/01/2020
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-eBwKMn hYAuTp"
+                  >
+                    <div
+                      class="sc-iGgWBj sc-huFNyZ cWzIZL isYmRq"
+                    >
+                      <p
+                        class="sc-jGKxIK eoUrZA"
+                      >
+                        un description
+                      </p>
+                    </div>
+                    <div
+                      class="sc-kOHTFB enIaVF"
+                    >
+                      <div
+                        class="sc-dtInlm krTdyM"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          fill="none"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M11.938 16.5a3.548 3.548 0 0 1 3.562-3.563 3.548 3.548 0 0 1 3.563 3.563 3.548 3.548 0 0 1-3.563 3.563 3.548 3.548 0 0 1-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      class="sc-gEvEer hpVpdb"
+                    >
+                      <div
+                        class="sc-iGgWBj sc-cyRcrZ cRLRjd GxDxp"
+                      >
+                        <div
+                          class="sc-bvgPty cXWyjw"
+                        >
+                          <a
+                            class="sc-kOPcWz eRFCst no-after"
+                            href="azure.url/cdtn/filename.pdf"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="sc-hgRRfv fGaHZZ"
+                              fill="none"
+                              viewBox="0 0 32 32"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M10.95 18.925a.737.737 0 0 1 1.02 0l3.299 3.313V4.718c0-.41.34-.718.714-.718a.72.72 0 0 1 .714.717v17.52l3.298-3.312a.737.737 0 0 1 1.02 0 .745.745 0 0 1 0 1.024l-4.522 4.543a.748.748 0 0 1-.51.205.748.748 0 0 1-.51-.205l-4.523-4.543a.687.687 0 0 1 0-1.024zM26 22c-.676 0-1 .624-1 1v4H7v-4c0-.41-.27-1-1-1s-1 .624-1 1v5.283c0 .41.34.717.714.717h20.572a.72.72 0 0 0 .714-.717V23c0-.41-.324-1-1-1z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                            <div
+                              class="sc-cWSHoV bKtA-De"
+                            >
+                              Télécharger le document (
+                              pdf
+                               - 
+                              12.35
+                              Ko)
+                            </div>
+                          </a>
+                        </div>
+                        <div
+                          class="sc-gFAWRd jDjoBq"
+                        >
+                          <div
+                            class="sc-gmPhUn kUNTdL"
+                          >
+                            <div
+                              class="sc-eifrsQ"
+                            >
+                              <p>
+                                youhou
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p
+                      class="sc-emIrwa foKRpz"
+                    >
+                      Type: Modèle de document - Format: 
+                      pdf
+                       - Taille:
+                       
+                      12.35
+                      Ko
+                       
+                    </p>
+                    <p
+                      class="sc-iGgWBj sc-kUdmhA cWzIZL jATFrJ"
+                    >
+                      Attention, chaque modèle de lettre proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de réglementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
+                    </p>
+                    <p
+                      class="sc-gRtvSG dSSzDx"
+                    >
+                      <a
+                        class="sc-kOPcWz cefBoA no-after"
+                        href="azure.url/cdtn/filename.pdf"
+                      >
+                        Télécharger le modèle (
+                        pdf
+                         - 
+                        12.35
+                        Ko)  
+                        <svg
+                          aria-hidden="true"
+                          class="sc-hgRRfv fGaHZZ"
+                          fill="none"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.95 18.925a.737.737 0 0 1 1.02 0l3.299 3.313V4.718c0-.41.34-.718.714-.718a.72.72 0 0 1 .714.717v17.52l3.298-3.312a.737.737 0 0 1 1.02 0 .745.745 0 0 1 0 1.024l-4.522 4.543a.748.748 0 0 1-.51.205.748.748 0 0 1-.51-.205l-4.523-4.543a.687.687 0 0 1 0-1.024zM26 22c-.676 0-1 .624-1 1v4H7v-4c0-.41-.27-1-1-1s-1 .624-1 1v5.283c0 .41.34.717.714.717h20.572a.72.72 0 0 0 .714-.717V23c0-.41-.324-1-1-1z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </a>
+                    </p>
+                  </div>
+                </div>
                 <div
-                  class="sc-fscmHZ ecZxKs"
+                  class="sc-bWJUgm jppDNF"
                 >
                   <div
                     class="sc-rPWID eZRgPG"
@@ -388,181 +561,14 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     </div>
                   </div>
                 </div>
-                <p
-                  class="sc-hZDyAQ sc-bWJUgm bUgSfx iMvnCt"
-                >
-                  theme
-                </p>
-                <header
-                  class="sc-ePDLzJ dXxftn sc-kpKSZj lnVASV"
-                >
-                  <h1
-                    class="sc-dPZUQH doubLW"
-                  >
-                    <span
-                      class="sc-gsFSXq ljkohw"
-                    />
-                    Modèle de lettre - Courrier Epistolaire
-                  </h1>
-                </header>
-                <div
-                  class="sc-lfYzqA cUAqSf"
-                >
-                  <p
-                    class="sc-jGKxIK biFdvs"
-                  >
-                    <span
-                      class="sc-bHnlcS fNuGBd"
-                    >
-                      Mis à jour le
-                       : 
-                      01/01/2020
-                    </span>
-                  </p>
-                </div>
-              </div>
-              <div
-                class="sc-ijDOKB LiMxE"
-              >
-                <div
-                  class="sc-iGgWBj sc-iLWXdy cWzIZL gdxCJX"
-                >
-                  <p
-                    class="sc-jGKxIK cNijme"
-                  >
-                    un description
-                  </p>
-                </div>
-                <div
-                  class="sc-kOHTFB fBWkdL"
-                >
-                  <div
-                    class="sc-dtInlm krTdyM"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      fill="none"
-                      viewBox="0 0 32 32"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M11.938 16.5a3.548 3.548 0 0 1 3.562-3.563 3.548 3.548 0 0 1 3.563 3.563 3.548 3.548 0 0 1-3.563 3.563 3.548 3.548 0 0 1-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="sc-gEvEer hpVpdb"
-                >
-                  <div
-                    class="sc-iGgWBj sc-cyRcrZ cRLRjd GxDxp"
-                  >
-                    <div
-                      class="sc-bvgPty cXWyjw"
-                    >
-                      <a
-                        class="sc-kOPcWz eRFCst no-after"
-                        href="azure.url/cdtn/filename.pdf"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class="sc-hgRRfv fGaHZZ"
-                          fill="none"
-                          viewBox="0 0 32 32"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10.95 18.925a.737.737 0 0 1 1.02 0l3.299 3.313V4.718c0-.41.34-.718.714-.718a.72.72 0 0 1 .714.717v17.52l3.298-3.312a.737.737 0 0 1 1.02 0 .745.745 0 0 1 0 1.024l-4.522 4.543a.748.748 0 0 1-.51.205.748.748 0 0 1-.51-.205l-4.523-4.543a.687.687 0 0 1 0-1.024zM26 22c-.676 0-1 .624-1 1v4H7v-4c0-.41-.27-1-1-1s-1 .624-1 1v5.283c0 .41.34.717.714.717h20.572a.72.72 0 0 0 .714-.717V23c0-.41-.324-1-1-1z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                        <div
-                          class="sc-cWSHoV bKtA-De"
-                        >
-                          Télécharger le document (
-                          pdf
-                           - 
-                          12.35
-                          Ko)
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      class="sc-gFAWRd jDjoBq"
-                    >
-                      <div
-                        class="sc-gmPhUn kUNTdL"
-                      >
-                        <div
-                          class="sc-eifrsQ"
-                        >
-                          <p>
-                            youhou
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <p
-                  class="sc-emIrwa foKRpz"
-                >
-                  Type: Modèle de document - Format: 
-                  pdf
-                   - Taille:
-                   
-                  12.35
-                  Ko
-                   
-                </p>
-                <p
-                  class="sc-iGgWBj sc-kUdmhA cWzIZL jATFrJ"
-                >
-                  Attention, chaque modèle de lettre proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de réglementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
-                </p>
-                <p
-                  class="sc-gRtvSG dSSzDx"
-                >
-                  <a
-                    class="sc-kOPcWz cefBoA no-after"
-                    href="azure.url/cdtn/filename.pdf"
-                  >
-                    Télécharger le modèle (
-                    pdf
-                     - 
-                    12.35
-                    Ko)  
-                    <svg
-                      aria-hidden="true"
-                      class="sc-hgRRfv fGaHZZ"
-                      fill="none"
-                      viewBox="0 0 32 32"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.95 18.925a.737.737 0 0 1 1.02 0l3.299 3.313V4.718c0-.41.34-.718.714-.718a.72.72 0 0 1 .714.717v17.52l3.298-3.312a.737.737 0 0 1 1.02 0 .745.745 0 0 1 0 1.024l-4.522 4.543a.748.748 0 0 1-.51.205.748.748 0 0 1-.51-.205l-4.523-4.543a.687.687 0 0 1 0-1.024zM26 22c-.676 0-1 .624-1 1v4H7v-4c0-.41-.27-1-1-1s-1 .624-1 1v5.283c0 .41.34.717.714.717h20.572a.72.72 0 0 0 .714-.717V23c0-.41-.324-1-1-1z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </a>
-                </p>
               </div>
             </div>
           </div>
           <div
-            class="sc-aXZVg sc-huFNyZ gZgZQL hGRaJQ"
+            class="sc-aXZVg sc-enkILE gZgZQL juUrLC"
           >
             <p
-              class="sc-jGKxIK cNijme"
+              class="sc-jGKxIK eoUrZA"
             >
               Partager ce contenu : 
             </p>
@@ -571,6 +577,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             >
               <button
                 class="sc-izQBue hGthJB no-after spacing-left"
+                tabindex="-1"
                 title="Partager sur Facebook"
                 type="button"
               >
@@ -599,6 +606,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <a
                 class="sc-jBeBSR cAjBbM spacing-left"
                 href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mod%C3%A8le%20de%20lettre%20-%20Courrier%20Epistolaire&body=un%20description%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+                tabindex="-1"
                 title="Envoyer par email"
               >
                 <span
@@ -629,6 +637,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               </a>
               <button
                 class="sc-izQBue hGthJB spacing-left"
+                tabindex="-1"
                 title="Partager sur LinkedIn"
               >
                 <span
@@ -658,6 +667,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               >
                 <button
                   class="sc-izQBue hGthJB spacing-left"
+                  tabindex="-1"
                   title="Plus d’options"
                 >
                   <span
@@ -696,7 +706,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </div>
           </div>
           <div
-            class="sc-gEvEer hpVpdb sc-gvPdwL kNyeGY"
+            class="sc-gEvEer hpVpdb sc-dBFDNq cYgRzZ"
           >
             <div
               class="sc-aXZVg gZgZQL"
@@ -705,10 +715,10 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 class="sc-iGgWBj cRLRjd"
               >
                 <div
-                  class="sc-epRvzc fYfPSn"
+                  class="sc-btwKTd MorJt"
                 >
                   <h2
-                    class="sc-btwKTd jWmhxM sc-kAyceB kDiAsV"
+                    class="sc-gFnajm qrzwP sc-kAyceB kDiAsV"
                     data-testid="heading"
                   >
                     <span
@@ -718,15 +728,15 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     Avez-vous trouvé la réponse à votre question ?
                   </h2>
                   <p
-                    class="sc-gFnajm dysCpS"
+                    class="sc-dISpDn cecFUn"
                   >
                     <button
-                      class="sc-kOPcWz cpQXMn sc-dISpDn bzxqhL"
+                      class="sc-kOPcWz cpQXMn sc-eONNys hqSqHb"
                     >
                       Non
                     </button>
                     <button
-                      class="sc-kOPcWz cpQXMn sc-dISpDn bzxqhL"
+                      class="sc-kOPcWz cpQXMn sc-eONNys hqSqHb"
                     >
                       Oui
                     </button>

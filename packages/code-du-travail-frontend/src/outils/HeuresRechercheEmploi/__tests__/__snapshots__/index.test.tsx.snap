@@ -95,7 +95,6 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
           <li
             aria-live="polite"
             class="sc-kRRyDe eIaigD"
-            tabindex="-1"
             title="onglet actif"
           >
             <span

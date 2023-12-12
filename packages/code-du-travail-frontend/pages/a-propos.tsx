@@ -113,7 +113,7 @@ const About = () => {
               , conçu et développé au sein de{" "}
               <a
                 title="le site de la fabrique des Ministères sociaux"
-                href="https://fabrique.social.gouv.fr/"
+                href="https://www.fabrique.social.gouv.fr/"
               >
                 la fabrique des Ministères sociaux
               </a>{" "}

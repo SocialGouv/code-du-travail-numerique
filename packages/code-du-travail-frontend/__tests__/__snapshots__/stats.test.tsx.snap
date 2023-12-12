@@ -206,10 +206,10 @@ exports[`<Stats /> should render 1`] = `
                 class="sc-gmPhUn fMbHzm"
               >
                 <div
-                  class="sc-iHbSHJ jtNhJK"
+                  class="sc-iHbSHJ bydwxp"
                 >
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
                       class="sc-iGgWBj sc-bvgPty cWzIZL lkVyZE"
@@ -221,14 +221,14 @@ exports[`<Stats /> should render 1`] = `
                         Contenus référencés
                       </h2>
                       <p
-                        class="sc-jGKxIK jlhpER sc-cyRcrZ cAvSoG"
+                        class="sc-jGKxIK igvbLD sc-cyRcrZ cAvSoG"
                       >
                         16
                       </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
                       class="sc-iGgWBj sc-bvgPty cWzIZL lkVyZE"
@@ -240,14 +240,14 @@ exports[`<Stats /> should render 1`] = `
                         Visites
                       </h2>
                       <p
-                        class="sc-jGKxIK jlhpER sc-cyRcrZ cAvSoG"
+                        class="sc-jGKxIK igvbLD sc-cyRcrZ cAvSoG"
                       >
                         20
                       </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
                       class="sc-iGgWBj sc-bvgPty cWzIZL lkVyZE"
@@ -259,14 +259,14 @@ exports[`<Stats /> should render 1`] = `
                         Recherches
                       </h2>
                       <p
-                        class="sc-jGKxIK jlhpER sc-cyRcrZ cAvSoG"
+                        class="sc-jGKxIK igvbLD sc-cyRcrZ cAvSoG"
                       >
                         4
                       </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs bzxnQN"
+                    class="sc-klVQfs hQsiuM"
                   >
                     <div
                       class="sc-iGgWBj sc-bvgPty cWzIZL lkVyZE"
@@ -278,7 +278,7 @@ exports[`<Stats /> should render 1`] = `
                         Consultations
                       </h2>
                       <p
-                        class="sc-jGKxIK jlhpER sc-cyRcrZ cAvSoG"
+                        class="sc-jGKxIK igvbLD sc-cyRcrZ cAvSoG"
                       >
                         10
                       </p>

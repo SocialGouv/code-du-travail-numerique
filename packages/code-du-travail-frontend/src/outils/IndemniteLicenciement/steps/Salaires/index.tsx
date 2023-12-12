@@ -4,7 +4,7 @@ import {
   useIndemniteLicenciementStore,
 } from "../../store";
 import { RadioQuestion, TextQuestion } from "../../../Components";
-import { TempsPartiel, SalaireTempsPlein } from "./components";
+import { SalaireTempsPlein, TempsPartiel } from "./components";
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../..";
 import { AgreementsInjector } from "../../agreements";
@@ -12,7 +12,6 @@ import {
   getSalairesTempsPleinSubtitle,
   getTooltipSalairesMensuel,
 } from "../../agreements/ui-customizations";
-import { icons } from "@socialgouv/cdtn-ui";
 import {
   generateSalaireTempsPleinQuestion,
   generateSameSalaryQuestion,
@@ -121,13 +120,14 @@ const StepSalaires = () => {
             <TextQuestion
               label="Quel a été le montant du salaire mensuel brut ?"
               smallText={generateSmallText(agreement)}
+              title="Salaire mensuel brut en € (prendre en compte les primes et avantages en nature)"
               inputType="number"
               value={salary}
               onChange={onChangeSalary}
               error={errorSalary}
               id="salary"
               showRequired
-              icon={icons.Euro}
+              text="€"
               dataTestId={"same-salary-value"}
               autoFocus={hasSameSalary === "oui"}
             />

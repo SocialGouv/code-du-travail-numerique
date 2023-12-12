@@ -6,16 +6,16 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
     class="sc-iapWAC huEEnQ"
   >
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
       for="input-foo"
     >
       <span
-        class="sc-ibQAlb iORupB"
+        class="sc-ibQAlb iRaavs"
       >
         Une question ?
         <span
-          class="sc-ibQAlb iapAQd"
+          class="sc-ibQAlb TTAtT"
         >
            (obligatoire)
         </span>
@@ -90,16 +90,16 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
     class="sc-iapWAC huEEnQ"
   >
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ mBNCq"
+      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
       data-testid="question-label"
       for="input-foo"
     >
       <span
-        class="sc-ibQAlb iORupB"
+        class="sc-ibQAlb iRaavs"
       >
         Une question ?
         <span
-          class="sc-ibQAlb iapAQd"
+          class="sc-ibQAlb TTAtT"
         >
            (obligatoire)
         </span>

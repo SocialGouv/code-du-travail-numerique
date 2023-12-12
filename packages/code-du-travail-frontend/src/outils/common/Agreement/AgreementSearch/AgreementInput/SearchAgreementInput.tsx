@@ -12,9 +12,10 @@ import {
   UserAction,
 } from "../../../../ConventionCollective/types";
 import { AgreementNoResult } from "../AgreementNoResult";
+import { Agreement } from "@socialgouv/cdtn-utils";
 
 type Props = {
-  onSelectAgreement: (Agreement) => void;
+  onSelectAgreement: (agreement: Agreement) => void;
 } & TrackingProps;
 
 export const SearchAgreementInput = ({
@@ -56,7 +57,6 @@ export const SearchAgreementInput = ({
     type: "search",
     value: query,
     "data-testid": "agreement-search-input",
-    tabIndex: "1",
     autoFocus: true,
   };
   return (

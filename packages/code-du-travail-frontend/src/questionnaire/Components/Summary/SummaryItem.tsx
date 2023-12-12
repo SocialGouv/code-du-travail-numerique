@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { icons, Button, theme } from "@socialgouv/cdtn-ui";
-const { Check: CheckIcon, ArrowTurn: UpdateIcon } = icons;
-import useWindowDimensions from "../../../common/WindowDimension";
+import { Button, icons, theme } from "@socialgouv/cdtn-ui";
 import { Tooltip } from "../../../common/Tooltip";
+
+const { Check: CheckIcon, ArrowTurn: UpdateIcon } = icons;
 
 const { breakpoints } = theme;
 
@@ -11,8 +11,8 @@ type SymmaryItemProps = {
   data: string;
   info?: string;
   onClick: () => void;
-  noButton: boolean;
-  noCheck: boolean;
+  noButton?: boolean;
+  noCheck?: boolean;
 };
 
 export const SummaryItem = ({
@@ -22,7 +22,6 @@ export const SummaryItem = ({
   noButton = false,
   noCheck = false,
 }: SymmaryItemProps) => {
-  const { width } = useWindowDimensions();
   const [openedTooltip, setOpenedTooltip] = useState(false);
   return (
     <>
@@ -55,7 +54,7 @@ export const SummaryItem = ({
               icon={UpdateIcon}
               data-testid={`modify-${data}`}
             >
-              {width > breakpoints.intMobile && <div>Modifier</div>}
+              <DesktopOnly>Modifier</DesktopOnly>
             </StyledButton>
           </StyledButtonWrapper>
         )}
@@ -122,4 +121,14 @@ const InformationWrapper = styled.div`
   padding: 13px 20px;
   font-size: 14px;
   margin: 5px;
+`;
+
+const DesktopOnly = styled.span`
+  display: none;
+  @media (min-width: ${breakpoints.tablet}) {
+    display: block;
+  }
+  @media print {
+    display: none;
+  }
 `;

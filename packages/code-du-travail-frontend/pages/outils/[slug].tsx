@@ -25,6 +25,7 @@ import {
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
 } from "../../src/outils";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 
 const toolsBySlug = {
   "convention-collective": AgreementSearch,
@@ -70,15 +71,15 @@ function Outils({
       <div>
         <Container>
           <Flex>
-            <ShareContainer>
-              <Share title={title} metaDescription={description} />
-            </ShareContainer>
             <Tool
               icon={icon}
               title={title}
               displayTitle={displayTitle}
               slug={slug}
             />
+            <ShareContainer>
+              <Share title={title} metaDescription={description} />
+            </ShareContainer>
           </Flex>
           <RelatedItems items={relatedItems} />
           {router.asPath !== "/outils/indemnite-licenciement" && (
@@ -86,6 +87,7 @@ function Outils({
           )}
         </Container>
       </div>
+      <EventTracker />
     </Layout>
   );
 }
@@ -151,5 +153,5 @@ export const ShareContainer = styled.div`
 
 export const Flex = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 `;

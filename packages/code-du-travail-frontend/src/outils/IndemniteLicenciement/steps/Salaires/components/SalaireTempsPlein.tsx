@@ -115,19 +115,17 @@ export const SalaireTempsPlein = ({
                 <Input
                   id={`salary.${index}`}
                   name={`salary.${index}`}
-                  title={`Salaire mensuel brut pour le mois ${
+                  title={`Salaire mensuel brut en € pour le mois ${
                     index + 1
                   } (prendre en compte les primes et avantages en nature)`}
                   type="number"
                   invalid={errorsSalaries[`${index}`]}
                   value={sPeriod.value ?? ""}
-                  icon={icons.Euro}
-                  updateOnScrollDisabled
+                  text="€"
                   onChange={(e) => onChangeSalaries(index, e.target.value)}
                   onBlur={() => setIsFirstEdit(false)}
                   data-testid={dataTestidSalaries ?? "salary-input"}
                   autoFocus={autoFocus ? index === 0 : false}
-                  tabIndex={1}
                 />
                 {errorsSalaries[`${index}`] && (
                   <ErrorWrapper>
@@ -146,7 +144,7 @@ export const SalaireTempsPlein = ({
                       name={`prime.${index}`}
                       type="number"
                       invalid={errorsPrimes[`${index}`]}
-                      icon={icons.Euro}
+                      text="€"
                       onChange={(e) =>
                         onChangeLocalPrimes(index, e.target.value)
                       }
@@ -157,7 +155,6 @@ export const SalaireTempsPlein = ({
                           ? "prime-" + dataTestidSalaries
                           : "prime-input"
                       }
-                      tabIndex={1}
                     />
                     {errorsPrimes[`${index}`] && (
                       <ErrorWrapper>

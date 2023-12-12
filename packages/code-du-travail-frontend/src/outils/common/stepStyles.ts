@@ -28,18 +28,16 @@ export const SectionTitle = styled.h2`
   font-family: "Open Sans", sans-serif;
 `;
 
-export const Highlight = styled.strong`
+export const HighlightResult = styled.strong.attrs(() => ({
+  role: "alert",
+}))`
   color: ${({ theme }) => theme.primary};
   font-weight: 700;
-  font-size: ${fonts.sizes.headings.small};
+  font-size: ${fonts.sizes.headings.xmedium};
   white-space: pre-line;
   @media (max-width: ${breakpoints.mobile}) {
-    font-size: ${fonts.sizes.default};
+    font-size: ${fonts.sizes.medium};
   }
-`;
-
-export const HighlightResult = styled(Highlight)`
-  font-size: 1.5em;
 `;
 
 export const SmallText = styled.p`

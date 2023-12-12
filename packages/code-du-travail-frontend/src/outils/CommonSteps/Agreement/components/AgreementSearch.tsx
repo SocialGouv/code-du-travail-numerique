@@ -33,7 +33,7 @@ const AgreementSearch = ({
   if (selectedAgreement) {
     return (
       <>
-        <Question required={false} as="p">
+        <Question required={false}>
           Vous avez sélectionné la convention collective&nbsp;:&nbsp;
         </Question>
         <SelectedAgreement
@@ -42,7 +42,6 @@ const AgreementSearch = ({
             event.preventDefault();
             onSelectAgreement(null);
           }}
-          tabIndex={1}
         >
           {selectedAgreement.shortTitle}
         </SelectedAgreement>

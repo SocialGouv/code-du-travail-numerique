@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { forwardRef } from "react";
 import styled, { css } from "styled-components";
 
 import { Stripe } from "../../Stripe";
@@ -7,42 +7,50 @@ import { breakpoints, fonts, spacings } from "../../theme";
 import { Header } from "../common/Header.js";
 import { TitleParagraph } from "../common/TitleParagraph.js";
 
-export const Title = ({
-  as,
-  children,
-  isFirst,
-  shift = "",
-  subtitle,
-  stripe,
-  variant,
-  isHeader,
-  size,
-  ...props
-}) => (
-  <Header
-    as={isHeader ? "header" : "div"}
-    isFirst={isFirst}
-    stripe={stripe}
-    shift={shift}
-    {...props}
-  >
-    <StyledTitle stripe={stripe} as={as} shift={shift} size={size}>
-      {stripe !== "none" && (
-        <Stripe
-          rounded={variant !== "primary"}
-          variant={variant}
-          {...(stripe === "left" && { length: "100%", position: "left" })}
-        />
+export const Title = forwardRef(
+  (
+    {
+      as,
+      children,
+      isFirst,
+      shift = "",
+      subtitle,
+      stripe,
+      variant,
+      isHeader,
+      size,
+      ...props
+    },
+    ref
+  ) => (
+    <Header
+      as={isHeader ? "header" : "div"}
+      isFirst={isFirst}
+      stripe={stripe}
+      shift={shift}
+      {...props}
+      ref={ref}
+    >
+      <StyledTitle stripe={stripe} as={as} shift={shift} size={size}>
+        {stripe !== "none" && (
+          <Stripe
+            rounded={variant !== "primary"}
+            variant={variant}
+            {...(stripe === "left" && { length: "100%", position: "left" })}
+          />
+        )}
+        {children}
+      </StyledTitle>
+      {subtitle && (
+        <TitleParagraph stripe={stripe} shift={shift}>
+          {subtitle}
+        </TitleParagraph>
       )}
-      {children}
-    </StyledTitle>
-    {subtitle && (
-      <TitleParagraph stripe={stripe} shift={shift}>
-        {subtitle}
-      </TitleParagraph>
-    )}
-  </Header>
+    </Header>
+  )
 );
+
+Title.displayName = "Title";
 
 Title.propTypes = {
   as: PropTypes.string,

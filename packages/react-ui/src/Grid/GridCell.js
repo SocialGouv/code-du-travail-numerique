@@ -11,26 +11,12 @@ export const GridCell = (props) => {
 
 // The "-1" in width calculation fixes a redenring issue on IE11 causing tile
 // supposed to stay on the same line to go to the next line
-export const ListItem = styled.div`
+const ListItem = styled.div`
   display: flex;
   flex-grow: 0;
   flex-shrink: 1;
   margin: ${spacings.small};
   padding: 0;
-  @media (max-width: ${breakpoints.mobile}) {
-    flex-shrink: 0;
-    min-width: 23rem;
-    &:first-of-type {
-      margin-left: ${spacings.medium};
-    }
-    &:last-of-type:after {
-      display: block;
-      width: ${spacings.medium};
-      height: 100%;
-      background-color: transparent;
-      content: "";
-    }
-  }
   ${({ columns }) => css`
     width: calc(100% / ${columns} - 2 * ${spacings.small} - 1px);
     @media (max-width: ${breakpoints.desktop}) {
@@ -44,7 +30,7 @@ export const ListItem = styled.div`
       );
     }
     @media (max-width: ${breakpoints.mobile}) {
-      width: ${Math.max(columns - 2, 1) < 2 ? "80%" : "60%"};
+      width: 100%;
     }
   `}
 `;

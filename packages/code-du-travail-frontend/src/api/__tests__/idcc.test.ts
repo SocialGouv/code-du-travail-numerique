@@ -42,4 +42,11 @@ describe("IDCC", () => {
     expect(res.status).toBe(200);
     expect(res.body).toMatchSnapshot();
   });
+
+  it("should return a not published agreement", async () => {
+    const res = await request(server).get("/api/idcc?q=1468");
+    expect(res.status).toBe(200);
+    expect(res.body.hits.hits).toHaveLength(1);
+    expect(res.body.hits.hits[0]._source.num).toBe(1468);
+  });
 });

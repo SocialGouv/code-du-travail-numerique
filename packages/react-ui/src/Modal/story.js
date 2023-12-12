@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Button } from "../Button/index.js";
-import { Section } from "../layout/Section/index.js";
+import { Section } from "../layout/Section/index";
 import { Title } from "../Titles/Title/index.js";
 import { Modal, ModalContentWrapper } from "./index.js";
 

@@ -4,13 +4,13 @@ exports[`<ServiceEnLigne /> should render 1`] = `
 <div>
   <div
     aria-label="Se retrouve dans en entête Texte qui se retrouve dans le lien (nouvelle fenêtre)"
-    class="sc-fTFjTM hGmjIf sc-iXzfSG akpvg no-after"
+    class="sc-fTFjTM hkOnFS sc-iXzfSG akpvg no-after"
   >
     <div
       class="sc-gmgFlS dlfKdE"
     >
       <div
-        class="sc-kMkxaj ietOip"
+        class="sc-kMkxaj dwuMYa"
       >
         <p
           class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"

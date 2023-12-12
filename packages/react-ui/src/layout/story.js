@@ -2,7 +2,7 @@ import React from "react";
 
 import { PageTitle } from "../Titles/PageTitle/index.js";
 import { Container } from "./Container/index.js";
-import { Section } from "./Section/index.js";
+import { Section } from "./Section/index";
 import { Wrapper } from "./Wrapper/index.js";
 
 export default {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Section } from "../layout/Section/index.js";
+import { Section } from "../layout/Section/index";
 import { Paragraph as P, Text } from "./index.js";
 
 export default {

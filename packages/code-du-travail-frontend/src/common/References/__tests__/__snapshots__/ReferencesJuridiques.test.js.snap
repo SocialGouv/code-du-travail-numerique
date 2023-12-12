@@ -8,8 +8,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
     <div>
       <button
         aria-expanded="false"
-        class="sc-kOPcWz ezOCpB sc-bbSZdi klJhHR"
-        tabindex="1"
+        class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
         type="button"
       >
         <svg
@@ -98,7 +97,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               aria-label="Article L3121-44 du JO (Nouvelle fenêtre)"
               class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk no-after"
               href="https://article.jo/L3121-44"
-              rel="noopener noreferrer nofollow"
               target="_blank"
             >
               <svg
@@ -125,7 +123,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               aria-label="Article foo du JPO (Nouvelle fenêtre)"
               class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk no-after"
               href="https://article.jo/foo"
-              rel="noopener noreferrer nofollow"
               target="_blank"
             >
               <svg
@@ -152,7 +149,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               aria-label="Convention foo (Nouvelle fenêtre)"
               class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk no-after"
               href="https://ma-convention-collective/ccc-foo"
-              rel="noopener noreferrer nofollow"
               target="_blank"
             >
               <svg

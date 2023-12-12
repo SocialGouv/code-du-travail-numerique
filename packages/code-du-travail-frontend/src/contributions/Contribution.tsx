@@ -8,6 +8,7 @@ import {
   InsertTitle,
   Paragraph,
   Section,
+  Text,
   theme,
   Title,
   Toast,
@@ -22,7 +23,7 @@ import { A11yLink } from "../common/A11yLink";
 import Html from "../common/Html";
 import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
-import ReferencesJuridiques, { filteredRefs } from "./References";
+import ReferencesJuridiques, { filteredRefs } from "./OldReferences";
 
 const Contribution = ({ answers, content }) => {
   /**
@@ -127,7 +128,8 @@ const Contribution = ({ answers, content }) => {
             >
               {isConventionalAnswer ? (
                 <>
-                  Que dit la convention <i>{conventionAnswer.shortName}</i>
+                  Que dit la convention{" "}
+                  <Text italic>{conventionAnswer.shortName}</Text>
                   &nbsp;?
                 </>
               ) : (

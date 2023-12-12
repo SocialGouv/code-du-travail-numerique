@@ -69,7 +69,7 @@ export default function Agreement29() {
           error={errorSixBestSalariesTotal}
           id="sixBestSalariesTotal"
           showRequired
-          icon={icons.Euro}
+          text="€"
           smallText="Prendre en compte les primes et avantages en nature."
         />
       )}

@@ -3,7 +3,7 @@ import React from "react";
 import { PageTitle } from "../../Titles/PageTitle/index.js";
 import { Title } from "../../Titles/Title/index.js";
 import { Container } from "../Container/index.js";
-import { Section } from "../Section/index.js";
+import { Section } from "../Section/index";
 import { Wrapper } from "./index.js";
 
 export default {

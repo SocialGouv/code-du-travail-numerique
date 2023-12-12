@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.114.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.113.0...v4.114.0) (2023-11-21)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.113.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.112.0...v4.113.0) (2023-11-10)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.112.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.111.0...v4.112.0) (2023-11-03)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.111.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.110.0...v4.111.0) (2023-10-23)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.110.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.109.0...v4.110.0) (2023-10-16)
+
+### Features
+
+- ajout des conventions collectives sans page legifrance ([#5373](https://github.com/SocialGouv/code-du-travail-numerique/issues/5373)) ([605a0f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/605a0f9fc8ebb12a5c621675e563779d1ab58da5))
+
+# [4.109.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.108.1...v4.109.0) (2023-10-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.108.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.108.0...v4.108.1) (2023-09-22)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.108.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.107.0...v4.108.0) (2023-09-11)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.107.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.106.0...v4.107.0) (2023-08-25)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
 # [4.106.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.105.1...v4.106.0) (2023-08-09)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils

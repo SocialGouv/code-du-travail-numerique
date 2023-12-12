@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Section } from "../layout/Section/index.js";
+import { Section } from "../layout/Section/index";
 import { breakpoints, fonts, spacings } from "../theme";
 import { TableOfContent } from "./index.js";
 

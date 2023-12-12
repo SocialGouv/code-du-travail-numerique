@@ -50,7 +50,8 @@ const StyledInfoBulle = styled(InfoBulle)`
   padding: 0;
 `;
 
-const Description = styled.i`
-  display: block;
+const Description = styled.p`
   margin-top: 7px;
+  margin-bottom: 0;
+  font-style: italic;
 `;

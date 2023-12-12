@@ -1,34 +1,49 @@
-import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
 import { Badge } from "../Badge";
 import { Stripe } from "../Stripe";
-import { animations, box, breakpoints, fonts, spacings } from "../theme";
+import { box, breakpoints, fonts, spacings } from "../theme";
 import { Heading } from "../Titles/Heading";
 import { Subtitle } from "../Titles/Subtitle";
+
+export type TileProps = {
+  centerTitle?: Boolean;
+  custom?: Boolean;
+  href?: string;
+  icon?: React.ElementType;
+  rel?: string;
+  striped?: Boolean;
+  subtitle?: string;
+  target?: string;
+  title?: string;
+  titleTagType?: React.ElementType;
+  wide?: Boolean;
+  disabled?: Boolean;
+};
 
 export const Tile = React.forwardRef(
   (
     {
       children,
-      custom,
+      custom = false,
       icon: Icon,
-      striped,
-      subtitle,
-      title,
+      striped = false,
+      subtitle = "",
+      title = "",
       href,
-      wide,
-      titleTagType,
-      centerTitle,
+      wide = false,
+      titleTagType = "p",
+      centerTitle = false,
       target,
       rel,
+      disabled = false,
       ...props
-    },
-    ref
+    }: React.PropsWithChildren<TileProps>,
+    ref: React.ForwardedRef<any>
   ) => {
     return (
-      <StyledTile ref={ref} wide={wide} {...props}>
+      <StyledTile ref={ref} wide={wide} disabled={disabled} {...props}>
         {custom && <Badge />}
         <TopWrapper>
           {striped && <Stripe length="5rem" />}
@@ -40,7 +55,7 @@ export const Tile = React.forwardRef(
           <HeadingWrapper custom centerTitle={centerTitle}>
             {subtitle && (
               <StyledSubtitle>
-                {href && !title ? (
+                {!disabled && href && !title ? (
                   <a href={href} target={target} rel={rel}>
                     {subtitle}
                   </a>
@@ -51,7 +66,7 @@ export const Tile = React.forwardRef(
             )}
             {title && (
               <StyledHeading as={titleTagType}>
-                {href ? (
+                {!disabled && href ? (
                   <a href={href} target={target} rel={rel}>
                     {title}
                   </a>
@@ -70,34 +85,12 @@ export const Tile = React.forwardRef(
 
 Tile.displayName = "Tile";
 
-Tile.propTypes = {
-  centerTitle: PropTypes.bool,
-  children: PropTypes.node,
-  custom: PropTypes.bool,
-  href: PropTypes.string,
-  icon: PropTypes.elementType,
-  rel: PropTypes.string,
-  striped: PropTypes.bool,
-  subtitle: PropTypes.string,
-  target: PropTypes.string,
-  title: PropTypes.string,
-  titleTagType: PropTypes.string,
-  wide: PropTypes.bool,
+type StyledTileProps = {
+  wide: Boolean;
+  disabled: Boolean;
 };
 
-Tile.defaultProps = {
-  centerTitle: false,
-  custom: false,
-  href: undefined,
-  icon: null,
-  striped: false,
-  subtitle: "",
-  title: "",
-  titleTagType: "p",
-  wide: false,
-};
-
-const StyledTile = styled.div`
+const StyledTile = styled.div<StyledTileProps>`
   position: relative;
   display: inline-flex;
   flex: 1 1; /* adding auto here breaks IE11 on card list, beware */
@@ -110,7 +103,8 @@ const StyledTile = styled.div`
     wide
       ? `${spacings.medium} ${spacings.medium}`
       : `${spacings.large} ${spacings.medium}`};
-  color: ${({ theme }) => theme.paragraph};
+  color: ${({ disabled, theme }) =>
+    disabled ? theme.placeholder : theme.paragraph};
   font-weight: normal;
   font-size: ${fonts.sizes.default};
   text-align: ${({ wide }) => (wide ? "left" : "center")};
@@ -119,18 +113,12 @@ const StyledTile = styled.div`
   border: none;
   border-radius: ${box.borderRadius};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
-  cursor: pointer;
-  transition: box-shadow ${animations.transitionTiming} linear,
-    transform 100ms linear;
+  cursor: ${({ disabled }) => (disabled ? "auto" : "pointer")};
+  transition: ${({ disabled }) =>
+    disabled
+      ? "none"
+      : "box-shadow ${animations.transitionTiming} linear, transform 100ms linear"};
   appearance: none;
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: ${({ theme }) => theme.paragraph};
-    box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
-    transform: translateY(-2px);
-  }
 
   @media (max-width: ${breakpoints.mobile}) {
     padding: ${({ wide }) =>
@@ -139,6 +127,16 @@ const StyledTile = styled.div`
         : `${spacings.medium} ${spacings.base}`};
     font-size: ${fonts.sizes.small};
   }
+
+  ${({ disabled, theme }) =>
+    !disabled &&
+    `&:hover,
+  &:active,
+  &:focus {
+    color: ${theme.paragraph};
+    box-shadow: ${box.shadow.large(theme.secondary)};
+    transform: translateY(-2px);
+  }`}
 `;
 
 const IconWrapper = styled.div`
@@ -156,9 +154,13 @@ const TopWrapper = styled.div`
   width: 100%;
 `;
 
-const HeadingWrapper = styled.div`
+type HeadingWrapperProps = {
+  custom: Boolean;
+  centerTitle: Boolean;
+};
+const HeadingWrapper = styled.div<HeadingWrapperProps>`
   padding-right: ${({ custom }) => (custom ? spacings.small : "0")};
-  height: ${({ centerTitle }) => (centerTitle ? "45px" : "auto")};
+  min-height: ${({ centerTitle }) => (centerTitle ? "5rem" : "auto")};
   display: ${({ centerTitle }) => (centerTitle ? "flex" : "block")};
   align-items: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
   justify-content: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
@@ -175,6 +177,7 @@ const StyledSubtitle = styled(Subtitle)`
     margin-bottom: 0;
   }
 `;
+
 const StyledHeading = styled(Heading)`
   margin: 0;
   font-size: ${fonts.sizes.headings.small};

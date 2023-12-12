@@ -3,7 +3,7 @@
 exports[`<Contribution /> should NOT render invalid preselected convention 1`] = `
 <div>
   <div
-    class="sc-kOHTFB fBWkdL"
+    class="sc-kOHTFB enIaVF"
   >
     <div
       class="sc-dtInlm krTdyM"
@@ -83,7 +83,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           Page personnalisable
         </p>
         <p
-          class="sc-jGKxIK cNijme"
+          class="sc-jGKxIK eoUrZA"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -147,7 +147,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
-      <span
+      <div
         class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
       >
         <input
@@ -158,7 +158,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           type="search"
           value=""
         />
-      </span>
+      </div>
       <p
         class="sc-fThUAz bqJWec"
       >
@@ -185,7 +185,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 exports[`<Contribution /> should render answer references 1`] = `
 <div>
   <div
-    class="sc-kOHTFB fBWkdL"
+    class="sc-kOHTFB enIaVF"
   >
     <div
       class="sc-dtInlm krTdyM"
@@ -265,7 +265,7 @@ exports[`<Contribution /> should render answer references 1`] = `
           Page personnalisable
         </p>
         <p
-          class="sc-jGKxIK cNijme"
+          class="sc-jGKxIK eoUrZA"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -329,7 +329,7 @@ exports[`<Contribution /> should render answer references 1`] = `
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
-      <span
+      <div
         class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
       >
         <input
@@ -340,7 +340,7 @@ exports[`<Contribution /> should render answer references 1`] = `
           type="search"
           value=""
         />
-      </span>
+      </div>
       <p
         class="sc-fThUAz bqJWec"
       >
@@ -367,7 +367,7 @@ exports[`<Contribution /> should render answer references 1`] = `
 exports[`<Contribution /> should render preselected convention 1`] = `
 <div>
   <div
-    class="sc-kOHTFB fBWkdL"
+    class="sc-kOHTFB enIaVF"
   >
     <div
       class="sc-dtInlm krTdyM"
@@ -447,7 +447,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           Page personnalisable
         </p>
         <p
-          class="sc-jGKxIK cNijme"
+          class="sc-jGKxIK eoUrZA"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -511,7 +511,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
-      <span
+      <div
         class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
       >
         <input
@@ -522,7 +522,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           type="search"
           value=""
         />
-      </span>
+      </div>
       <p
         class="sc-fThUAz bqJWec"
       >
@@ -549,7 +549,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 exports[`<Contribution /> should render with both answers 1`] = `
 <div>
   <div
-    class="sc-kOHTFB fBWkdL"
+    class="sc-kOHTFB enIaVF"
   >
     <div
       class="sc-dtInlm krTdyM"
@@ -629,7 +629,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
           Page personnalisable
         </p>
         <p
-          class="sc-jGKxIK cNijme"
+          class="sc-jGKxIK eoUrZA"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -693,7 +693,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
-      <span
+      <div
         class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
       >
         <input
@@ -704,7 +704,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
           type="search"
           value=""
         />
-      </span>
+      </div>
       <p
         class="sc-fThUAz bqJWec"
       >
@@ -731,7 +731,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
 exports[`<Contribution /> should render with conventions answer 1`] = `
 <div>
   <div
-    class="sc-kOHTFB fBWkdL"
+    class="sc-kOHTFB enIaVF"
   >
     <div
       class="sc-dtInlm krTdyM"
@@ -811,7 +811,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           Page personnalisable
         </p>
         <p
-          class="sc-jGKxIK cNijme"
+          class="sc-jGKxIK eoUrZA"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -850,7 +850,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
-      <span
+      <div
         class="sc-dkmUuB ayeCS sc-empnci dzkWPn"
       >
         <input
@@ -861,7 +861,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           type="search"
           value=""
         />
-      </span>
+      </div>
       <p
         class="sc-fThUAz bqJWec"
       >

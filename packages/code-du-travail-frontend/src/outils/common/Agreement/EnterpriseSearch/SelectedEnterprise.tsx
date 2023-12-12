@@ -16,7 +16,7 @@ const SelectedEnterprise = ({
 }: Props): JSX.Element => {
   return (
     <>
-      <Question required={false} as="p">
+      <Question required={false}>
         Vous avez sélectionné l&apos;entreprise&nbsp;:&nbsp;
       </Question>
       <Selected
@@ -25,7 +25,6 @@ const SelectedEnterprise = ({
           event.preventDefault();
           onRemoveEnterprise();
         }}
-        tabIndex={1}
       >
         {enterprise.simpleLabel}
       </Selected>

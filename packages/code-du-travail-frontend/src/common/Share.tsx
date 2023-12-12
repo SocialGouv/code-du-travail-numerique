@@ -11,9 +11,14 @@ const POPUP_OPTIONS =
 type Props = {
   title: string;
   metaDescription: string;
+  tabIndex?: number;
 };
 
-export const Share = ({ title, metaDescription }: Props): JSX.Element => {
+export const Share = ({
+  title,
+  metaDescription,
+  tabIndex,
+}: Props): JSX.Element => {
   const [currentPageUrl, setCurrentPageUrl] = useState("");
   const hiddenInputRef = useRef(null);
   const [isUrlCopied, setUrlCopied] = useState(false);
@@ -38,6 +43,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             POPUP_OPTIONS
           );
         }}
+        tabIndex={tabIndex}
       >
         <Circle>
           <StyledIcon as={icons.ShareFacebook} />
@@ -55,6 +61,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
         onClick={() => {
           matopush(["trackEvent", "clic_share", currentPageUrl, "email"]);
         }}
+        tabIndex={tabIndex}
       >
         <Circle>
           <StyledIcon as={icons.Mail} />
@@ -74,6 +81,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             POPUP_OPTIONS
           );
         }}
+        tabIndex={tabIndex}
       >
         <Circle>
           <StyledIcon as={icons.ShareLinkedin} />
@@ -85,6 +93,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
           <StyledButton
             className="spacing-left"
             title="Plus d’options"
+            tabIndex={tabIndex}
             onClick={async () => {
               matopush([
                 "trackEvent",
