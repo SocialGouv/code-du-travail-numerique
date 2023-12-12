@@ -213,7 +213,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
             </>
           )}
 
-          <Div>
+          <DivCentered>
             {isSupported(convention) ? (
               <Button
                 variant="primary"
@@ -255,11 +255,11 @@ const ContributionGeneric = ({ contribution }: Props) => {
                 )}
               </>
             )}
-          </Div>
+          </DivCentered>
         </Wrapper>
 
         {!showAnswer && !convention && (
-          <p>
+          <Div>
             <Button
               variant="navLink"
               onClick={() => {
@@ -278,7 +278,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
                 collective
               </ArrowLink>
             </Button>
-          </p>
+          </Div>
         )}
       </SectionNoPadding>
       <SectionHidden show={showAnswer}>
@@ -307,9 +307,13 @@ const { spacings } = theme;
 const SectionHidden = styled(Section)`
   display: ${({ show }) => (show ? "block" : "none")};
 `;
-const Div = styled.div`
+const DivCentered = styled.div`
   text-align: center;
   margin-top: ${spacings.large};
+`;
+
+const Div = styled.div`
+  margin-top: ${spacings.base};
 `;
 
 const StyledDirectionRightIcon = styled(DirectionRight)`
