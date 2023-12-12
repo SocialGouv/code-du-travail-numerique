@@ -7,7 +7,7 @@ exports[`Agreements getAllAgreements 1`] = `
     "shortTitle": "Banque",
     "slug": "2120-banque",
     "source": "conventions_collectives",
-    "title": "Banque",
+    "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.",
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780",
   },
   {
@@ -15,7 +15,7 @@ exports[`Agreements getAllAgreements 1`] = `
     "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",
     "slug": "843-boulangerie-patisserie-entreprises-artisanales",
     "source": "conventions_collectives",
-    "title": "Boulangerie-pâtisserie (entreprises artisanales)",
+    "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
   },
   {
@@ -23,7 +23,7 @@ exports[`Agreements getAllAgreements 1`] = `
     "shortTitle": "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
     "slug": "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle",
     "source": "conventions_collectives",
-    "title": "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
+    "title": "Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.",
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635191",
   },
   {
@@ -45,7 +45,7 @@ exports[`Agreements getByIdsAgreements 1`] = `
     "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",
     "slug": "843-boulangerie-patisserie-entreprises-artisanales",
     "source": "conventions_collectives",
-    "title": "Boulangerie-pâtisserie (entreprises artisanales)",
+    "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
   },
 ]
@@ -632,7 +632,6 @@ exports[`Agreements getBySlugAgreements 1`] = `
   "excludeFromSearch": false,
   "id": "KALICONT000005635886",
   "isPublished": true,
-  "longTitle": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
   "metaDescription": "Idcc 0843 : Boulangerie-pâtisserie (entreprises artisanales)",
   "mtime": 1561491771,
   "num": 843,
@@ -640,7 +639,7 @@ exports[`Agreements getBySlugAgreements 1`] = `
   "slug": "843-boulangerie-patisserie-entreprises-artisanales",
   "source": "conventions_collectives",
   "text": "IDCC 843: Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978. Boulangerie-pâtisserie (entreprises artisanales)",
-  "title": "Boulangerie-pâtisserie (entreprises artisanales)",
+  "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
   "title_vector": [
     0.0155928126,
     -0.0841808,
@@ -1168,7 +1167,7 @@ exports[`Agreements getBySlugsAgreements 1`] = `
     "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",
     "slug": "843-boulangerie-patisserie-entreprises-artisanales",
     "source": "conventions_collectives",
-    "title": "Boulangerie-pâtisserie (entreprises artisanales)",
+    "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
   },
 ]
