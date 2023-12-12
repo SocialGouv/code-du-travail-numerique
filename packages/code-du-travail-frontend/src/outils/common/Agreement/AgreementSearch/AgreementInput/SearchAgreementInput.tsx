@@ -16,13 +16,11 @@ import { Agreement } from "@socialgouv/cdtn-utils";
 
 type Props = {
   onSelectAgreement: (agreement: Agreement) => void;
-  searchResultOverride?: (query: string, results: Agreement[]) => Agreement[];
 } & TrackingProps;
 
 export const SearchAgreementInput = ({
   onUserAction,
   onSelectAgreement,
-  searchResultOverride,
 }: Props): JSX.Element => {
   const [query, setQuery] = useState("");
 
@@ -87,11 +85,7 @@ export const SearchAgreementInput = ({
 
       <Autosuggest
         theme={suggesterTheme}
-        suggestions={
-          !state.isLoading && searchResultOverride
-            ? searchResultOverride(query, state.data ?? [])
-            : state.data ?? []
-        }
+        suggestions={state.data ?? []}
         alwaysRenderSuggestions={false}
         onSuggestionSelected={onSelect}
         onSuggestionsFetchRequested={onSearch}

@@ -4,7 +4,7 @@ export type LicenciementSituation = {
   criteria: Criteria;
   duration: number;
   answer: string;
-  note?: string | string[];
+  note?: string;
   ref?: string;
   refUrl?: string;
   ref2?: string;

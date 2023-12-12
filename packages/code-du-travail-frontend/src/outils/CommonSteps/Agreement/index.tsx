@@ -28,10 +28,6 @@ type Props = {
   hasNoEnterpriseSelected: boolean;
   setHasNoEnterpriseSelected: (boolean) => void;
   error?: CommonAgreementStoreError;
-  searchAgreementResultOverride?: (
-    query: string,
-    results: Agreement[]
-  ) => Agreement[];
 };
 
 function AgreementStep({
@@ -48,7 +44,6 @@ function AgreementStep({
   onAgreementSearch,
   hasNoEnterpriseSelected,
   setHasNoEnterpriseSelected,
-  searchAgreementResultOverride,
 }: Props): JSX.Element {
   React.useEffect(() => {
     onInitAgreementPage();
@@ -105,7 +100,6 @@ function AgreementStep({
             }
             alertAgreementNotSupported={undefined}
             simulator={simulator}
-            searchResultOverride={searchAgreementResultOverride}
           />
           {error?.agreement && <Error>{error.agreement}</Error>}
         </>

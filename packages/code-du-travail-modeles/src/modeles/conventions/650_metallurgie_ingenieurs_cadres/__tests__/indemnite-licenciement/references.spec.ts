@@ -60,8 +60,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
             age,
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans":
             "'Oui'",
-          "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notifier avant le 1er janvier 2024":
-            "'Oui'",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -93,8 +92,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age":
             age,
-          "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notifier avant le 1er janvier 2024":
-            "'Oui'",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
@@ -126,8 +124,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age":
             age,
-          "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notifier avant le 1er janvier 2024":
-            "'Oui'",
+
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":

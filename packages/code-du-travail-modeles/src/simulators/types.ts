@@ -10,7 +10,7 @@ export type Situation = {
   criteria: Criteria;
   type: string;
   idcc: number;
-  note?: string[] | string | undefined;
+  note?: string;
   answer: string | null;
   answer2: string | null;
   answer3: string | null;
