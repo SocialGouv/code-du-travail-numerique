@@ -26,21 +26,22 @@ export const Contents = ({
     return (
       <>
         <BlockList key={name} name={name} blocks={blocks}></BlockList>
-        {references.map(
-          ({ label, links }, index) =>
-            links.length > 0 && (
-              <Section key={`section-${index}`}>
-                <References
-                  label={label}
-                  accordionDisplay={1}
-                  references={links.map((reference, index) => ({
-                    ...reference,
-                    id: reference.id || `${name}-${index}`,
-                  }))}
-                />
-              </Section>
-            )
-        )}
+        {references &&
+          references.map(
+            ({ label, links }, index) =>
+              links.length > 0 && (
+                <Section key={`section-${index}`}>
+                  <References
+                    label={label}
+                    accordionDisplay={1}
+                    references={links.map((reference, index) => ({
+                      ...reference,
+                      id: reference.id || `${name}-${index}`,
+                    }))}
+                  />
+                </Section>
+              )
+          )}
       </>
     );
   });
