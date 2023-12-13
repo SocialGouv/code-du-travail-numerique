@@ -1,0 +1,403 @@
+contrat salarié . convention collective . métallurgie . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+## Questions générales
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est la catégorie professionnelle du salarié&nbsp;?
+  cdtn:
+    type: liste
+    valeurs:
+      A, B, C, D ou E: "'A, B, C, D ou E'"
+      F, G, H ou I: "'F, G, H ou I'"
+
+## Catégorie A, B, C, D et E (non cadre)
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE:
+  applicable si: contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle = 'A, B, C, D ou E'
+  valeur: oui
+
+## Catégorie A, B, C, D et E : Questions
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour:
+  titre: Le salarié est au forfait jour
+  question: Le salarié est-il au forfait jour&nbsp;?
+  description: Le dispositif du forfait en jours permet de rémunérer certains salariés sur la base d’un nombre de jours travaillés annuellement, sans décompte du temps de travail. Les salariés disposent d’une grande liberté pour organiser leur emploi du temps.
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour:
+  applicable si: forfait jour = 'Oui'
+  titre: Le salarié a toujours été au forfait jour
+  question: Le salarié a-t-il toujours été au forfait jour&nbsp;?
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour . date:
+  applicable si: toujours au forfait jour = 'Non'
+  titre: Date du passage au forfait jour du salarié
+  question: A quelle date le salarié est-il passé au forfait jour&nbsp;?
+  cdtn:
+    type: date
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre:
+  applicable si:
+    une de ces conditions:
+      - toujours au forfait jour = 'Oui'
+      - forfait jour . date
+      - forfait jour = 'Non'
+  titre: Le salarié était cadre dans l'ancienne convention collective de la métallurgie (avant le 01/01/2024)
+  description: Si le salarié dépendait précédemment de la convention collective des ingénieurs et cadres de la métallurgie (IDCC 650) et qu’il est désormais classé non-cadre en raison de la nouvelle classification des emplois (depuis le 01/01/2024), il bénéficie quand même du calcul de l'indemnité qui s’applique aux cadres.
+  question: Le salarié était-il cadre dans l'ancienne convention collective de la métallurgie (avant le 01/01/2024)&nbsp;?
+  cdtn:
+    type: oui-non
+
+## Catégorie A, B, C, D et E : Calculs non cadre
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . non cadre:
+  applicable si: contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre = 'Non'
+  valeur: oui
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . non cadre . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+  somme:
+    - contrat salarié . indemnité de licenciement . facteur dix ans ou moins cc
+    - contrat salarié . indemnité de licenciement . facteur plus de dix ans cc
+  arrondi: 2 décimales
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins cc
+        - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . indemnité de licenciement . au dela de dix ans cc
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (1/4 * Sref * A1)[ + (1/3 * Sref * A2)]
+  références:
+    Article 75.3.1.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314537?idConteneur=KALICONT000046993250#KALIARTI000046314537
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . non cadre . résultat conventionnel référence forfait jour:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour = 'Oui'
+  valeur: oui
+  références:
+    Article 73: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314519?idConteneur=KALICONT000046993250#KALIARTI000046314519
+
+## Catégorie A, B, C, D et E : Calculs cadre
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre:
+  applicable si: contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre = 'Oui'
+  valeur: oui
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+  le maximum de:
+    - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel défault
+    - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul
+  références:
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel défault:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+  somme:
+    - contrat salarié . indemnité de licenciement . facteur dix ans ou moins cc
+    - contrat salarié . indemnité de licenciement . facteur plus de dix ans cc
+  arrondi: 2 décimales
+  unité: €
+  références:
+    Article 75.3.1.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314537?idConteneur=KALICONT000046993250#KALIARTI000046314537
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel référence forfait jour:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour = 'Oui'
+  valeur: oui
+  références:
+    Article 73: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314519?idConteneur=KALICONT000046993250#KALIARTI000046314519
+
+## Catégories F, G, H et I
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI:
+  applicable si:
+    une de ces conditions:
+      - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle = 'F, G, H ou I'
+      - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre
+  valeur: oui
+
+## Catégories F, G, H et I : Questions
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age:
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . remplit conditions pour la retraite:
+  applicable si: age >= 61
+  titre: Le salarié remplit les conditions pour partir à la retraite
+  question: Le salarié remplit-il les conditions pour partir à la retraite ?
+  description: Répondre oui si le salarié a les trimestres suffisants pour bénéficier d’une retraite à taux plein et s’il peut bénéficier d’une retraite complémentaire sans abattement
+  cdtn:
+    type: oui-non
+
+## Catégories F, G, H et I: Calculs
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+  valeur: base * majoration * minoration
+  unité: €
+  plancher: plancher
+  plafond: plafond
+  arrondi: 2 décimales
+  références:
+    Article 75.3.1.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314538?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046314538
+
+## Catégories F, G, H et I: Calculs de la base
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . base:
+  valeur: 0
+  unité: €
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . base . calcul simple:
+  valeur: 1 / 4 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+  arrondi: 2 décimales
+  unité: €
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . jusqu'à sept ans ou moins:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 7 an
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . au dela de sept ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 7 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . base . calcul complexe:
+  somme:
+    - 1 / 5 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . convention collective . métallurgie . indemnité de licenciement . jusqu'à sept ans ou moins
+    - 3 / 5 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . convention collective . métallurgie . indemnité de licenciement . au dela de sept ans
+  arrondi: 2 décimales
+  unité: €
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . base . résultat conventionel moins de 8 ans d'ancienneté:
+  remplace: base
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 8 an
+  valeur: calcul simple
+  cdtn:
+    formule:
+      explanations:
+        - "A : années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 1/4 * Sref * A
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . base . résultat conventionel plus de 8 ans d'ancienneté:
+  remplace: base
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 an
+  valeur: calcul complexe
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : 1 à 7 ans d'ancienneté": contrat salarié . convention collective . métallurgie . indemnité de licenciement . jusqu'à sept ans ou moins
+        - "A2 : au-delà de 7 ans d'ancienneté": contrat salarié . convention collective . métallurgie . indemnité de licenciement . au dela de sept ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (1/5 * Sref * A1) + (3/5 * Sref * A2)
+
+## Catégories F, G, H et I: Calculs de la majoration
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . majoration:
+  valeur: 1
+  unité: €
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . majoration . résultat conventionnel références:
+  applicable si: majoration > 1
+  valeur: oui
+  références:
+    Article 75.3.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314541?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046314541
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . majoration . entre 50 et 55 ans:
+  remplace: majoration
+  applicable si:
+    toutes ces conditions:
+      - age >= 50 an
+      - age < 55 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+  valeur: 1.2
+  cdtn:
+    formule:
+      formula: ($formule) * 20 %
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . majoration . entre 55 et 60 ans:
+  remplace: majoration
+  applicable si:
+    toutes ces conditions:
+      - age >= 55 an
+      - age < 60 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+  valeur: 1.3
+  cdtn:
+    formule:
+      formula: ($formule) * 30 %
+
+## Catégories F, G, H et I: Calculs de la minoration
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . minoration:
+  valeur: 1
+  unité: €
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . minoration . résultat conventionnel références:
+  applicable si: minoration < 1
+  valeur: oui
+  références:
+    Article 75.3.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314541?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046314541
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . minoration . à 61 ans:
+  remplace: minoration
+  applicable si:
+    toutes ces conditions:
+      - age = 61 an
+      - remplit conditions pour la retraite = 'Oui'
+  valeur: 0.95
+  cdtn:
+    formule:
+      formula: ($formule) * 0.95
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . minoration . à 62 ans:
+  remplace: minoration
+  applicable si:
+    toutes ces conditions:
+      - age = 62 an
+      - remplit conditions pour la retraite = 'Oui'
+  valeur: 0.90
+  cdtn:
+    formule:
+      formula: ($formule) * 0.90
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . minoration . à 63 ans:
+  remplace: minoration
+  applicable si:
+    toutes ces conditions:
+      - age = 63 an
+      - remplit conditions pour la retraite = 'Oui'
+  valeur: 0.80
+  cdtn:
+    formule:
+      formula: ($formule) * 0.80
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . minoration . à 64 ans et plus:
+  remplace: minoration
+  applicable si:
+    toutes ces conditions:
+      - age >= 64 an
+      - remplit conditions pour la retraite = 'Oui'
+  valeur: 0.60
+  cdtn:
+    formule:
+      formula: ($formule) * 0.60
+
+## Catégories F, G, H et I: Calculs du plancher
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . plancher:
+  valeur: 0
+  unité: €
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . plancher entre 50 et 55 ans:
+  remplace: plancher
+  applicable si:
+    toutes ces conditions:
+      - age >= 50 an
+      - age < 55 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+      - base * majoration * minoration < 3 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 3
+  arrondi: 2 décimales
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 3 * Sref
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . plancher entre 55 et 60 ans:
+  remplace: plancher
+  applicable si:
+    toutes ces conditions:
+      - age >= 55 an
+      - age < 60 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+      - base * majoration * minoration < 3 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 6
+  arrondi: 2 décimales
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 6 * Sref
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel . formule plafond:
+  applicable si: résultat conventionnel >= 18 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 18 * Sref
+
+## Catégories F, G, H et I: Calculs du plafond
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . plafond:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 18
+  arrondi: 2 décimales
+  unité: €
+
+## Hack pour afficher la formule si le calcul est celui du groupe A,B,C,D et E
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . formule résultat conventionnel défault:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel défault > contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins cc
+        - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . indemnité de licenciement . au dela de dix ans cc
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (1/4 * Sref * A1)[ + (1/3 * Sref * A2)]
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . pas supportée:
+  applicable si: contrat salarié . indemnité de licenciement . date de notification < 01/01/2024
+  type: notification
+  description: Attention, comme le licenciement a été notifié avant le 01/01/2024, le montant de l'indemnité peut ne pas correspondre au résultat donné. En effet, jusqu'au 31/12/2023 ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie (IDCC 650) qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024. Si le licenciement a été notifié avant le 01/01/2024 et que le salarié dépendait de la convention spécifique aux ingénieurs et cadres de la métallurgie (IDCC 650) il faut sélectionner cette convention collective à l'étape n°3 du simulateur pour obtenir le résultat correspondant.
+  valeur: oui
+  cdtn:
+    affichage: légal et conventionnel

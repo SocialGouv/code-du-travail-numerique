@@ -33,7 +33,7 @@ export class Seniority2941
     dateEntree,
     dateNotification,
     absencePeriods = [],
-  }: SeniorityRequiredProps): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.default>): RequiredSeniorityResult {
     return this.compute(dateEntree, dateNotification, absencePeriods);
   }
 

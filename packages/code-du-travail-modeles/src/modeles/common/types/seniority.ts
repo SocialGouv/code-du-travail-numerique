@@ -1,8 +1,12 @@
 import type {
   CC0016SeniorityProps,
   CC0413SeniorityProps,
+  CC650SeniorityProps,
+  CC650SeniorityRequiredProps,
+  CC1672SeniorityProps,
+  CC3248SeniorityProps,
+  CC3248SeniorityRequiredProps,
 } from "../../conventions";
-import type { CC1672SeniorityProps } from "../../conventions/1672_societes_assurances/seniority";
 import type { MotifKeys } from "../motif-keys";
 import type {
   DefaultSeniorityProps,
@@ -31,12 +35,17 @@ export type Motif = {
 export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
   computeSeniority: (args: SeniorityProps<T>) => SeniorityResult;
   computeRequiredSeniority: (
-    args: SeniorityRequiredProps
+    args: SeniorityRequiredProps<T>
   ) => RequiredSeniorityResult;
   getMotifs: () => Motif[];
 }
 
-export type SeniorityRequiredProps = DefaultSeniorityRequiredProps;
+export type SeniorityRequiredProps<T> =
+  T extends SupportedCcIndemniteLicenciement.IDCC3248
+    ? CC3248SeniorityRequiredProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC650
+    ? CC650SeniorityRequiredProps
+    : DefaultSeniorityRequiredProps;
 
 export type SeniorityProps<T> =
   T extends SupportedCcIndemniteLicenciement.IDCC0016
@@ -45,6 +54,10 @@ export type SeniorityProps<T> =
     ? CC0413SeniorityProps
     : T extends SupportedCcIndemniteLicenciement.IDCC1672
     ? CC1672SeniorityProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC3248
+    ? CC3248SeniorityProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC650
+    ? CC650SeniorityProps
     : DefaultSeniorityProps;
 
 export type SeniorityResult = {

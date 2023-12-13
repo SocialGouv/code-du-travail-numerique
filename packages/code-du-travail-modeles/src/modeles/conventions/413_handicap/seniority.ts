@@ -84,7 +84,7 @@ export class Seniority413
     dateEntree,
     dateNotification,
     absencePeriods = [],
-  }: SeniorityRequiredProps): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.default>): RequiredSeniorityResult {
     const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
     const dSortie = parse(dateNotification, "dd/MM/yyyy", new Date());
     const totalAbsence = absencePeriods
