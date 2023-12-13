@@ -1,4 +1,4 @@
-import { addDays, differenceInMonths, parse } from "date-fns";
+import { addDays, differenceInMonths } from "date-fns";
 
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
@@ -11,9 +11,8 @@ import type {
   SeniorityRequiredProps,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
-  YearDetail,
 } from "../../common";
-import { accumulateAbsenceByYear, parseDate } from "../../common";
+import { parseDate } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
 import { Seniority3248 } from "../3248_metallurgie";
 
