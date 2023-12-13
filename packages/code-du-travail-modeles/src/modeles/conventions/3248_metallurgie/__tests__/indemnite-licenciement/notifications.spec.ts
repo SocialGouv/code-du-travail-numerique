@@ -65,6 +65,6 @@ describe("Notification bloquante pour la CC 3248", () => {
     expect(notifications[0].description).toBe(
       "Si le congé dont la durée continue supérieure à un an a été financé par un compte épargne-temps, le montant de l'indemnité pourrait être plus élevé. En effet, dans ce cas la durée de l'absence ne doit pas être retirée de l'ancienneté du salarié alors que notre simulateur retire ces absences."
     );
-    expect(notifications[0].show).toBe("conventionnel");
+    expect(notifications[0].show).toBe("légal et conventionnel");
   });
 });
