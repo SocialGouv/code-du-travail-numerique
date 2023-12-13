@@ -1,8 +1,13 @@
-import { Accordion, Table as UITable, theme } from "@socialgouv/cdtn-ui";
+import { Accordion, Alert, Table as UITable, theme } from "@socialgouv/cdtn-ui";
 
 import styled from "styled-components";
 import { FicheServicePublic } from "../fiche-service-public";
-import parse, { domToReact } from "html-react-parser";
+import parse, {
+  DOMNode,
+  domToReact,
+  Element,
+  HTMLReactParserOptions,
+} from "html-react-parser";
 import { xssWrapper } from "../lib";
 
 export const ContentSP = ({ raw }) => {
@@ -17,9 +22,9 @@ export const ContentSP = ({ raw }) => {
   );
 };
 
-const mapItem = (titleLevel, domNode, summary) => ({
-  body: domToReact(domNode.children, options(titleLevel + 1)),
-  title: domToReact(summary.children, {
+const mapItem = (titleLevel: number, domNode: Element, summary: Element) => ({
+  body: domToReact(domNode.children as DOMNode[], options(titleLevel + 1)),
+  title: domToReact(summary.children as DOMNode[], {
     transform: (reactNode, domNode) => {
       // @ts-ignore
       if (domNode.children) {
@@ -32,7 +37,7 @@ const mapItem = (titleLevel, domNode, summary) => ({
     trim: true,
   }),
 });
-const mapToAccordion = (titleLevel, items) => (
+const mapToAccordion = (titleLevel: number, items) => (
   <StyledAccordion
     titleLevel={titleLevel}
     data-testid="contrib-accordion"
@@ -40,7 +45,7 @@ const mapToAccordion = (titleLevel, items) => (
   />
 );
 
-function getFirstElementChild(domNode) {
+function getFirstElementChild(domNode: Element) {
   let child = domNode.children.shift();
   while (child && child.type !== "tag") {
     child = domNode.children.shift();
@@ -48,7 +53,7 @@ function getFirstElementChild(domNode) {
   return child;
 }
 
-function getNextFirstElement(domNode) {
+function getNextFirstElement(domNode: Element) {
   let next = domNode.next;
   while (next && next.type !== "tag") {
     next = next.next;
@@ -56,55 +61,66 @@ function getNextFirstElement(domNode) {
   return next;
 }
 
-const mapTbody = (tbody) => {
+const mapTbody = (tbody: Element) => {
   const tr = getFirstElementChild(tbody);
 
   return (
     <UITable>
-      <thead>{domToReact(tr.children, { trim: true })}</thead>
-      <tbody>{domToReact(tbody.children, { trim: true })}</tbody>
+      {tr && (
+        <thead>{domToReact(tr.children as DOMNode[], { trim: true })}</thead>
+      )}
+      <tbody>{domToReact(tbody.children as DOMNode[], { trim: true })}</tbody>
     </UITable>
   );
 };
 
-function getItem(domNode, titleLevel) {
+function getItem(domNode: Element, titleLevel: number) {
   const summary = getFirstElementChild(domNode);
   if (summary && summary.name === "summary") {
     return mapItem(titleLevel, domNode, summary);
   }
 }
 
-const options = (titleLevel) => ({
+const options = (titleLevel: number): HTMLReactParserOptions => ({
   replace(domNode) {
-    if (domNode.name === "h3") {
-      titleLevel = 4;
-    }
-    if (domNode.name === "details") {
-      const items: any[] = [];
-      const item = getItem(domNode, titleLevel);
-      if (item) {
-        items.push(item);
+    if (domNode instanceof Element) {
+      if (domNode.name === "h3") {
+        titleLevel = 4;
       }
-      let next = getNextFirstElement(domNode);
-      while (next && next.name === "details") {
-        const item = getItem(next, titleLevel);
+      if (domNode.name === "details") {
+        const items: any[] = [];
+        const item = getItem(domNode, titleLevel);
         if (item) {
           items.push(item);
         }
-        next = getNextFirstElement(next);
+        let next = getNextFirstElement(domNode);
+        while (next && next.name === "details") {
+          const item = getItem(next, titleLevel);
+          if (item) {
+            items.push(item);
+          }
+          next = getNextFirstElement(next);
+        }
+        return items.length ? mapToAccordion(titleLevel, items) : <></>;
       }
-      return items.length ? mapToAccordion(titleLevel, items) : <></>;
-    }
-    if (domNode.name === "table") {
-      const tableContent = getFirstElementChild(domNode);
-      if (tableContent.name === "tbody") {
-        return mapTbody(tableContent);
-      } else {
-        return domNode;
+      if (domNode.name === "table") {
+        const tableContent = getFirstElementChild(domNode);
+        if (tableContent?.name === "tbody") {
+          return mapTbody(tableContent);
+        } else {
+          return domNode;
+        }
       }
-    }
-    if (domNode.name === "p" && !domNode.children.length) {
-      return <></>;
+      if (domNode.name === "div" && domNode.attribs.class === "alert") {
+        return (
+          <Alert>
+            {domToReact(domNode.children as DOMNode[], { trim: true })}
+          </Alert>
+        );
+      }
+      if (domNode.name === "p" && !domNode.children.length) {
+        return <></>;
+      }
     }
   },
   trim: true,
