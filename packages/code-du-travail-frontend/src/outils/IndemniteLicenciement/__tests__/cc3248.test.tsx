@@ -53,6 +53,7 @@ describe("Indemnité licenciement - CC 3248", () => {
         .click(ui.information.agreement3248.hasBeenCadre.oui.get())
         .setInput(ui.information.agreement3248.age.get(), "61")
         .click(ui.information.agreement3248.retirementRight.oui.get())
+        .click(ui.information.agreement3248.absencesProlongesRepetes.non.get())
         .click(ui.next.get())
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
         .setInput(ui.seniority.notificationDate.get(), "01/01/2023")

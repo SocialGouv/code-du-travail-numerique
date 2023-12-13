@@ -264,6 +264,14 @@ export const ui = {
           "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - FGHI - remplit conditions pour la retraite - Non"
         ),
       },
+      absencesProlongesRepetes: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - licenciement pour motif absence prolongée ou répétées - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - licenciement pour motif absence prolongée ou répétées - Non"
+        ),
+      },
     },
   },
   seniority: {
