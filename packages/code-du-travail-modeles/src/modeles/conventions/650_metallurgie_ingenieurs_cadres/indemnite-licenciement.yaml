@@ -547,7 +547,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   description: Si le congé dont la durée continue supérieure à un an a été financé par un compte épargne-temps, le montant de l'indemnité pourrait être plus élevé. En effet, dans ce cas la durée de l'absence ne doit pas être retirée de l'ancienneté du salarié alors que notre simulateur retire ces absences.
   valeur: oui
   cdtn:
-    affichage: conventionnel
+    affichage: légal et conventionnel
 
 ## Catégorie A, B, C, D et E : Calculs cadre
 
