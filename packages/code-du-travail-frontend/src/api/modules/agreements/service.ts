@@ -79,10 +79,10 @@ const orderByAlphaAndMetalurgieLast = (a, b) => {
   if (!a.url && b.url) {
     return 1;
   }
-  if (a.title < b.title) {
+  if (a.shortTitle < b.shortTitle) {
     return -1;
   }
-  if (a.title > b.title) {
+  if (a.shortTitle > b.shortTitle) {
     return 1;
   }
 

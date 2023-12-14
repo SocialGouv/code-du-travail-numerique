@@ -12,7 +12,6 @@ export const getAllAgreementsWithContributions = () => {
         ],
       },
     },
-    sort: [{ shortTitle: "asc" }],
     size: 200,
   };
 };
