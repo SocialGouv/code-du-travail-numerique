@@ -85,13 +85,13 @@ const ContributionGeneric = ({ contribution }: Props) => {
       };
     });
   const isSupportedInList = (agreements, agreement) =>
-    agreement && !!agreements.find((item) => item.idcc == agreement.num);
+    agreement && !!agreements.find((item) => item.idcc === agreement.num);
   const isSupported = (agreement) =>
     isSupportedInList(supportedAgreements, agreement);
 
   const isSupportedFromCCNOContent = (agreement) =>
     isSupportedInList(supportedAgreementsNoContent, agreement);
-  const isNoCDT = () => contribution && contribution.type == "generic-no-cdt";
+  const isNoCDT = () => contribution && contribution.type === "generic-no-cdt";
 
   const onSelectAgreement = (
     agreement: Agreement | null,
@@ -275,7 +275,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
               </Button>
             ) : (
               <>
-                {(!showAnswer || convention) && (
+                {(!showAnswer || (convention && !isNoCDT())) && (
                   <Button
                     variant="primary"
                     onClick={() => {
