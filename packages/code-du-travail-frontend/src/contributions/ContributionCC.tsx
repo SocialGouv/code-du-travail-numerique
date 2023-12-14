@@ -18,6 +18,7 @@ import { removeCCNumberFromSlug } from "./utils";
 import { ContributionContent } from "./ContributionContent";
 import { LinkedContent } from "./LinkedContent";
 import { ContributionMessageBlock } from "./ContributionMessageBlock";
+import { addPrefixLowerCaseAgreementTitle } from "../conventions/utils";
 
 type Props = {
   contribution: ElasticSearchContributionConventionnelle;
@@ -73,7 +74,7 @@ const ContributionCC = ({ contribution }: Props) => {
         <p>
           Consultez les questions-réponses fréquentes pour{" "}
           <a href={`/convention-collective/${contribution.ccnSlug}`}>
-            la convention collective {contribution.ccnShortTitle}
+            la {addPrefixLowerCaseAgreementTitle(contribution.ccnShortTitle)}
           </a>
         </p>
       </section>

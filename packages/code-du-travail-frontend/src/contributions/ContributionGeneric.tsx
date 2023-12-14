@@ -36,6 +36,10 @@ import { ReferencesJuridiques } from "./References";
 import { LinkedContent } from "./LinkedContent";
 import { ContributionContent } from "./ContributionContent";
 import { ContributionMessageBlock } from "./ContributionMessageBlock";
+import {
+  addPrefixAgreementTitle,
+  addPrefixLowerCaseAgreementTitle,
+} from "../conventions/utils";
 
 const { DirectionRight } = icons;
 
@@ -288,8 +292,8 @@ const ContributionGeneric = ({ contribution }: Props) => {
         {convention && !isSupported(convention) && (
           <Paragraph>
             Cette réponse correspond à ce que prévoit le code du travail, elle
-            ne tient pas compte des spécificités de la convention collective{" "}
-            {convention.shortTitle}
+            ne tient pas compte des spécificités de la
+            {addPrefixLowerCaseAgreementTitle(convention.shortTitle)}
           </Paragraph>
         )}
 
