@@ -30,6 +30,7 @@ export const convention = {
 };
 
 export const agreement = {
+  description: "Description de la CC",
   answers: [
     {
       answer:

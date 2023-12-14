@@ -12,8 +12,8 @@ const Convention = ({ convention }) => {
   const [, setCcInfo] = useLocalStorage("convention");
 
   useEffect(() => {
-    const { slug, id, num, title, shortTitle } = convention;
-    setCcInfo({ id, num, shortTitle, slug, title });
+    const { slug, id, num, shortTitle } = convention;
+    setCcInfo({ id, num, shortTitle, slug, title: shortTitle });
   }, [convention, setCcInfo]);
 
   return (

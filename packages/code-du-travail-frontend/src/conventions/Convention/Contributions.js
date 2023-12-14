@@ -3,10 +3,11 @@ import { Accordion, theme, Title } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-
-import Html from "../../common/Html";
+import Mdx from "../../common/Mdx";
 import References from "../../common/References";
 import { trackAccordionPanelState } from "./utils";
+import rehypeToReact from "../../contributions/rehypeToReact";
+import { AccordionContentContribution } from "./AccordionContentContribution";
 
 const { spacings } = theme;
 
@@ -42,9 +43,12 @@ function Contributions({ contributions, convention }) {
           <Accordion
             titleLevel={4}
             items={contributionsByTheme[theme].map((item) => ({
-              body: AccordionContent(item),
+              body:
+                "type" in item // Pour detecter si c'est une nouvelle contribution
+                  ? AccordionContentContribution(item)
+                  : AccordionContent(item),
               id: item.slug,
-              title: item.question,
+              title: item.question ?? item.questionName,
             }))}
             onChange={trackAccordionPanelState(
               convention.shortTitle,
@@ -58,10 +62,7 @@ function Contributions({ contributions, convention }) {
 
   return (
     <>
-      <Title
-        subtitle="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective."
-        shift={spacings.larger}
-      >
+      <Title subtitle={convention.description} shift={spacings.larger}>
         Questions-réponses fréquentes
       </Title>
       <Accordion titleLevel={3} items={themes} />
@@ -72,7 +73,7 @@ function Contributions({ contributions, convention }) {
 function AccordionContent({ answer, slug, references }) {
   return (
     <>
-      <Html>{answer}</Html>
+      <Mdx markdown={answer} components={rehypeToReact} />
       {references && (
         <StyledReferences
           references={references.map((reference) => ({
