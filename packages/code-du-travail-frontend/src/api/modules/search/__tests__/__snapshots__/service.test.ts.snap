@@ -239,7 +239,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Démission d'une assistante maternelle",
     },
     {
-      "_score": 39.30994,
+      "_score": 39.496887,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": [
@@ -302,7 +302,7 @@ exports[`Search searchWithQuery 1`] = `
   ],
   "themes": [
     {
-      "_score": 2.4238403,
+      "_score": 2.4956686,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "demission",
