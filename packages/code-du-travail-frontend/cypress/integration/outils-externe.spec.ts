@@ -4,6 +4,6 @@ describe("Outil externe", () => {
 
     cy.contains("Index Egapro")
       .should("have.prop", "href")
-      .and("equal", "https://index-egapro.travail.gouv.fr/");
+      .and("equal", "https://egapro.travail.gouv.fr/");
   });
 });

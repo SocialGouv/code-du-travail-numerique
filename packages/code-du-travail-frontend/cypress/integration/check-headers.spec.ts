@@ -1,4 +1,5 @@
 describe("Check security headers", () => {
+
   it("should contains security headers", () => {
     cy.request({
       method: "GET",
@@ -9,7 +10,9 @@ describe("Check security headers", () => {
       expect(response.headers["x-robots-tag"]).to.equal(
         "noindex, nofollow, nosnippet"
       );
-      expect(response.headers["x-content-type-options"]).to.equal("nosniff");
+
+      // On désactive ce test durant la campagne qui se termine fin janvier
+      // expect(response.headers["x-content-type-options"]).to.equal("nosniff");
       expect(response.headers["x-frame-options"]).to.equal("DENY");
     });
   });
@@ -24,7 +27,8 @@ describe("Check security headers", () => {
       expect(response.headers["x-robots-tag"]).to.equal(
         "noindex, nofollow, nosnippet"
       );
-      expect(response.headers["x-content-type-options"]).to.equal("nosniff");
+      // On désactive ce test durant la campagne qui se termine fin janvier
+      // expect(response.headers["x-content-type-options"]).to.equal("nosniff");
       expect(response.headers["x-frame-options"]).to.be.undefined;
     });
     cy.request({
@@ -36,7 +40,8 @@ describe("Check security headers", () => {
       expect(response.headers["x-robots-tag"]).to.equal(
         "noindex, nofollow, nosnippet"
       );
-      expect(response.headers["x-content-type-options"]).to.equal("nosniff");
+      // On désactive ce test durant la campagne qui se termine fin janvier
+      // expect(response.headers["x-content-type-options"]).to.equal("nosniff");
       expect(response.headers["x-frame-options"]).to.be.undefined;
     });
   });
