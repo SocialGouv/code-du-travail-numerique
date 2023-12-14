@@ -275,7 +275,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
               </Button>
             ) : (
               <>
-                {(!showAnswer || (convention && !isNoCDT())) && (
+                {!isNoCDT() && (!showAnswer || convention) && (
                   <Button
                     variant="primary"
                     onClick={() => {
