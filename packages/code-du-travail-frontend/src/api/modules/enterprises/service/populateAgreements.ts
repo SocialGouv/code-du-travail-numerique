@@ -1,105 +1,68 @@
-import { elasticDocumentsIndex, elasticsearchClient } from "../../../utils";
-import {
-  AgreementResponse,
-  getAgreements,
-  SearchAgreementsResponse,
-} from "../queries";
-import { ApiEnterpriseData, EnterpriseAgreement } from "../types";
-import { IDCC_TO_REPLACE } from "../../../config";
+import { ApiEnterpriseData } from "../types";
+import { IDCC_SPLIT, IDCC_MERGE } from "../../../config";
 import { Convention, EnterpriseApiResponse } from "./fetchEnterprises";
-
-const toAgreement = (convention: Convention): EnterpriseAgreement => ({
-  id: convention.id ?? convention.idcc,
-  num: convention.idcc,
-  shortTitle: convention.shortTitle ?? "Convention collective non reconnue",
-  title: convention.title,
-  contributions: false,
-  ...(convention.url ? { url: convention.url } : {}),
-});
+import { fetchAgreements } from "./fetchAgreements";
 
 export const populateAgreements = async (
   enterpriseApiResponse: EnterpriseApiResponse
 ): Promise<ApiEnterpriseData> => {
-  const idccList: number[] =
-    enterpriseApiResponse.entreprises?.flatMap((enterprise) =>
-      enterprise.conventions.flatMap((convention) => convention.idcc)
-    ) ?? [];
-  const idccKeys = Object.keys(IDCC_TO_REPLACE);
-  const idcc = idccList.find((idcc) => idccKeys.includes(idcc.toString()));
-  if (idcc) {
-    const idccToAdd = IDCC_TO_REPLACE[idcc] as number[];
-    idccList.push(...idccToAdd);
-  }
+  const entreprisePromises = enterpriseApiResponse.entreprises?.map(
+    async (entreprise) => {
+      const idccList = entreprise.conventions.flatMap(({ idcc }) => {
+        if (IDCC_SPLIT[idcc]) {
+          return IDCC_SPLIT[idcc];
+        }
+        const mergedIdcc = Object.entries(IDCC_MERGE).find(([_, values]) =>
+          values.some((value) => value === idcc)
+        );
+        if (mergedIdcc?.[0]) {
+          return [parseInt(mergedIdcc[0])];
+        }
+        return [idcc];
+      });
+      const { body } = await fetchAgreements(idccList);
 
-  if (idccList.length > 0) {
-    const body = getAgreements(idccList);
-    const response = await elasticsearchClient.search<SearchAgreementsResponse>(
-      { body, index: elasticDocumentsIndex }
-    );
-
-    if (response.body.hits.total.value > 0) {
-      const agreements = response.body.hits.hits.reduce(
-        (acc: Record<number, AgreementResponse>, curr) => {
-          acc[curr._source.num] = curr._source;
-          return acc;
-        },
-        {}
-      );
-
-      const result = {
-        ...enterpriseApiResponse,
-        entreprises: enterpriseApiResponse.entreprises?.map((enterprise) => ({
-          ...enterprise,
-          conventions: enterprise.conventions.map(
-            (convention): EnterpriseAgreement => {
-              if (agreements[convention.idcc]) {
-                const { contributions, ...agreement } =
-                  agreements[convention.idcc];
-                return {
-                  ...agreement,
-                  contributions: contributions ?? false,
-                };
-              }
-              return toAgreement(convention);
-            }
-          ),
-        })),
-      };
-
-      if (idcc) {
-        const idccToAdd = IDCC_TO_REPLACE[idcc] as number[];
-        let conventionsToAdd: EnterpriseAgreement[] = idccToAdd
-          .map((idcc) => ({
-            ...agreements[idcc],
-            contributions: agreements[idcc].contributions ?? false,
-          }))
-          .filter((convention) => convention !== undefined);
-        result.entreprises = result.entreprises?.map((enterprise) => {
-          const hasAlreadyIdcc = enterprise.conventions.find((convention) =>
-            idccToAdd.includes(convention.num)
-          );
-          if (hasAlreadyIdcc) {
-            conventionsToAdd = [];
-          }
+      const conventionsWithDuplicates = idccList.map((num: number) => {
+        const foundHandledIdcc = body.hits.hits.find(
+          ({ _source }) => _source.num === num
+        );
+        if (foundHandledIdcc) {
+          const agreement = foundHandledIdcc._source;
           return {
-            ...enterprise,
-            conventions: [...enterprise.conventions, ...conventionsToAdd]
-              .filter((convention) => convention.num !== idcc)
-              .filter(
-                (convention, index, self) => self.indexOf(convention) === index
-              ),
+            id: agreement.id,
+            contributions: agreement.contributions,
+            num: agreement.num,
+            shortTitle: agreement.shortTitle,
+            title: agreement.title,
+            url: agreement.url,
+            slug: agreement.slug,
           };
-        });
-      }
-
-      return result;
+        }
+        const convention = entreprise.conventions.find(
+          (convention: Convention) => convention.idcc === num
+        );
+        return {
+          id: convention?.id ?? convention?.idcc.toString() ?? num.toString(),
+          num,
+          shortTitle:
+            convention?.shortTitle ?? "Convention collective non reconnue",
+          title: convention?.title ?? "",
+          contributions: false,
+          ...(convention?.url ? { url: convention?.url } : {}),
+        };
+      });
+      const conventions = conventionsWithDuplicates.filter(
+        ({ num }, index) =>
+          conventions.findIndex((item) => item.num === num) === index
+      );
+      return { ...entreprise, conventions };
     }
-  }
+  );
+  const entreprises = entreprisePromises
+    ? await Promise.all(entreprisePromises)
+    : [];
   return {
     ...enterpriseApiResponse,
-    entreprises: enterpriseApiResponse.entreprises?.map((enterprise) => ({
-      ...enterprise,
-      conventions: enterprise.conventions.map(toAgreement),
-    })),
+    entreprises,
   };
 };
