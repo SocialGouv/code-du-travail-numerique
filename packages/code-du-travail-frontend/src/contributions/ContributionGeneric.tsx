@@ -292,7 +292,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
         {convention && !isSupported(convention) && (
           <Paragraph>
             Cette réponse correspond à ce que prévoit le code du travail, elle
-            ne tient pas compte des spécificités de la
+            ne tient pas compte des spécificités de la{" "}
             {addPrefixLowerCaseAgreementTitle(convention.shortTitle)}
           </Paragraph>
         )}
