@@ -1,5 +1,6 @@
 import type { ClientOptions } from "@elastic/elasticsearch";
 import { Client } from "@elastic/elasticsearch";
+import { removeLinked } from "./branch";
 
 const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL ?? "http://localhost:9200";
@@ -20,7 +21,7 @@ if (ELASTICSEARCH_TOKEN_API) {
 export const elasticsearchClient = new Client(esClientConfig);
 
 const prefixIndex = BRANCH_NAME_SLUG?.startsWith("linked")
-  ? `cdtn-${process.env.BRANCH_NAME_SLUG}`
+  ? `cdtn-${removeLinked(BRANCH_NAME_SLUG)}`
   : `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}`;
 console.log(`Prefix index : ${prefixIndex}`);
 export const elasticDocumentsIndex = `${prefixIndex}_documents`;
