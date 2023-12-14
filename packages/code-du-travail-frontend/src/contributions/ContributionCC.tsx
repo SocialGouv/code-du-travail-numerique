@@ -48,8 +48,8 @@ const ContributionCC = ({ contribution }: Props) => {
       </section>
       <section>
         <Title variant="secondary" stripe="none" size="small">
-          Votre réponse pour la convention collective{" "}
-          {contribution.ccnShortTitle}
+          Votre réponse pour la{" "}
+          {addPrefixLowerCaseAgreementTitle(contribution.ccnShortTitle)}
         </Title>
 
         {contribution.highlight && contribution.highlight.content && (
