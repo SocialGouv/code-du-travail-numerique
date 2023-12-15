@@ -15,6 +15,9 @@ type Props = {
 };
 
 export const ContributionMessageBlock = ({ message }: Props) => {
+  if (!message) {
+    return <></>;
+  }
   return (
     <StyledSection>
       <Alert>
