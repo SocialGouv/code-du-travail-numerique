@@ -53,13 +53,14 @@ export const populateAgreements = async (
       });
       const conventions = conventionsWithDuplicates.filter(
         ({ num }, index) =>
-          conventions.findIndex((item) => item.num === num) === index
+          conventionsWithDuplicates.findIndex((item) => item.num === num) ===
+          index
       );
       return { ...entreprise, conventions };
     }
   );
   const entreprises = entreprisePromises
-    ? await Promise.all(entreprisePromises)
+    ? await Promise.all(entreprisePromises?.slice(0, 1))
     : [];
   return {
     ...enterpriseApiResponse,
