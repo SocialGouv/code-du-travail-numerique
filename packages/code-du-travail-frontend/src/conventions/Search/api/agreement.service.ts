@@ -3,10 +3,11 @@ import { SITE_URL } from "../../../config";
 
 import { Agreement } from "@socialgouv/cdtn-utils";
 
-const formatCCn = ({ num, id, slug, title, shortTitle, highlight }) => ({
+const formatCCn = ({ num, id, slug, title, shortTitle, highlight, url }) => ({
   ...(highlight ? { highlight } : {}),
   id,
   num,
+  url,
   shortTitle,
   slug,
   title,

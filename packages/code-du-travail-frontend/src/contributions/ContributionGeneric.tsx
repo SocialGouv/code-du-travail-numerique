@@ -22,6 +22,7 @@ import { MatomoBaseEvent } from "../lib";
 import { getCc3239Informations } from "../outils";
 import { Enterprise } from "../conventions/Search/api/enterprises.service";
 import {
+  Alert,
   ArrowLink,
   Badge,
   Button,
@@ -92,6 +93,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
   const isSupportedFromCCNOContent = (agreement) =>
     isSupportedInList(supportedAgreementsNoContent, agreement);
   const isNoCDT = () => contribution && contribution.type === "generic-no-cdt";
+  const showButtonToShowCDT = () => !isNoCDT() && (!showAnswer || convention);
 
   const onSelectAgreement = (
     agreement: Agreement | null,
@@ -239,17 +241,26 @@ const ContributionGeneric = ({ contribution }: Props) => {
                 </form>
               )}
               {!entreprise && (
-                <NoEnterprise
-                  isCheckboxChecked={hasNoEnterpriseSelected}
-                  setIsCheckboxChecked={setHasNoEnterpriseSelected}
-                  onCheckboxChange={async (isCheckboxChecked) => {
-                    const cc3239 = isCheckboxChecked
-                      ? await getCc3239Informations()
-                      : null;
-                    onSelectAgreement(cc3239, undefined, isCheckboxChecked);
-                  }}
-                  isQuestionnaire
-                />
+                <>
+                  <NoEnterprise
+                    isCheckboxChecked={hasNoEnterpriseSelected}
+                    setIsCheckboxChecked={setHasNoEnterpriseSelected}
+                    onCheckboxChange={async (isCheckboxChecked) => {
+                      const cc3239 = isCheckboxChecked
+                        ? await getCc3239Informations()
+                        : null;
+                      onSelectAgreement(cc3239, undefined, isCheckboxChecked);
+                    }}
+                    isQuestionnaire
+                  />
+                  {convention && !isSupported(convention) && (
+                    <Div>
+                      <Alert variant="primary">
+                        {alertAgreementNotSupported(convention.url)}
+                      </Alert>
+                    </Div>
+                  )}
+                </>
               )}
             </>
           )}
@@ -275,7 +286,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
               </Button>
             ) : (
               <>
-                {!isNoCDT() && (!showAnswer || convention) && (
+                {showButtonToShowCDT() && (
                   <Button
                     variant="primary"
                     onClick={() => {
@@ -299,7 +310,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
           </DivCentered>
         </Wrapper>
 
-        {!showAnswer && !convention && (
+        {showButtonToShowCDT() && (
           <Div>
             <Button
               variant="navLink"
