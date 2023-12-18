@@ -2,6 +2,7 @@ import { ApiEnterpriseData } from "../types";
 import { IDCC_SPLIT, IDCC_MERGE } from "../../../config";
 import { Convention, EnterpriseApiResponse } from "./fetchEnterprises";
 import { fetchAgreements } from "./fetchAgreements";
+import { Enterprise } from "../../idcc/types";
 
 export const populateAgreements = async (
   enterpriseApiResponse: EnterpriseApiResponse
@@ -60,11 +61,14 @@ export const populateAgreements = async (
   );
 
   const entreprises = entreprisePromises
-    ? await entreprisePromises.reduce<any>(async (p, entreprisePromise) => {
-        const arr = await p;
-        arr.push(await entreprisePromise);
-        return arr;
-      }, Promise.resolve([]))
+    ? await entreprisePromises.reduce<Promise<Enterprise[]>>(
+        async (p, entreprisePromise) => {
+          const arr = await p;
+          arr.push(await entreprisePromise);
+          return arr;
+        },
+        Promise.resolve([])
+      )
     : [];
 
   return {
