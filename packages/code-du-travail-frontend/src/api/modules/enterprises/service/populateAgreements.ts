@@ -60,14 +60,11 @@ export const populateAgreements = async (
   );
 
   const entreprises = entreprisePromises
-    ? await entreprisePromises.reduce<any>(
-        async (p, entrepriseMappingPromise) => {
-          const arr = await p;
-          arr.push(await entrepriseMappingPromise);
-          return arr;
-        },
-        Promise.resolve([])
-      )
+    ? await entreprisePromises.reduce<any>(async (p, entreprisePromise) => {
+        const arr = await p;
+        arr.push(await entreprisePromise);
+        return arr;
+      }, Promise.resolve([]))
     : [];
 
   return {
