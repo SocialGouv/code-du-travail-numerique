@@ -139,7 +139,7 @@ const Origins = () => (
                         Business Europe
                       </A11yLink>{" "}
                       et{" "}
-                      <A11yLink href="https://www.ceep.eu/" target="_blank">
+                      <A11yLink href="https://sgieurope.org/" target="_blank">
                         le Centre européen des entreprises à participation
                         publique
                       </A11yLink>{" "}
