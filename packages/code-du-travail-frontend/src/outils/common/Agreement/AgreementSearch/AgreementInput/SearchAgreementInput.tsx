@@ -1,4 +1,4 @@
-import { Input, Label, Text, theme } from "@socialgouv/cdtn-ui";
+import { Input, Label, Text, theme, Paragraph } from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import styled from "styled-components";
 import Autosuggest from "react-autosuggest";
@@ -82,7 +82,6 @@ export const SearchAgreementInput = ({
           l’entreprise (Ex : 4752A).
         </p>
       </InfoBulle>
-
       <Autosuggest
         theme={suggesterTheme}
         suggestions={state.data ?? []}
@@ -95,7 +94,7 @@ export const SearchAgreementInput = ({
           }
           return true;
         }}
-        getSuggestionValue={(suggestion) => suggestion}
+        getSuggestionValue={(suggestion) => suggestion as any}
         renderSuggestion={renderSuggestion}
         renderSuggestionsContainer={renderSuggestionsContainer}
         renderInputComponent={renderInputComponent}
@@ -115,14 +114,27 @@ const SuggestionsContainer = styled.div`
   }
 `;
 
-const renderSuggestion = (suggestion) => (
-  <div>
-    {suggestion.shortTitle} <IDCC>(IDCC {formatIdcc(suggestion.num)})</IDCC>
-  </div>
-);
+const renderSuggestion = (suggestion: Agreement) => {
+  return (
+    <SuggestionContainer>
+      {suggestion.shortTitle} <IDCC>(IDCC {formatIdcc(suggestion.num)})</IDCC>
+      <Paragraph noMargin variant="secondary">
+        {suggestion.highlight?.searchInfo &&
+          `(${suggestion.highlight?.searchInfo})`}
+      </Paragraph>
+    </SuggestionContainer>
+  );
+};
+
 const IDCC = styled.span`
   font-weight: normal;
 `;
+
+const SuggestionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const renderSuggestionsContainer = ({ containerProps, children }) => (
   <SuggestionsContainer {...containerProps}>{children}</SuggestionsContainer>
 );

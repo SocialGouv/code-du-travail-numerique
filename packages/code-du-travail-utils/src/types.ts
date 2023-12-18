@@ -200,7 +200,7 @@ type ElasticSearchContributionBase = ElasticSearchItem & {
   linkedContent: ContributionLinkedContent[];
   references: ContributionRef[];
   idcc: string;
-  messageBlock: string;
+  messageBlock?: string;
 } & (
     | ElasticSearchContributionFicheSp
     | ElasticSearchContributionContent
