@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.116.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.115.0...v4.116.0) (2023-12-18)
+
+### Bug Fixes
+
+- désactive le test de sniff jusqu'à la fin de la campagne ([#5487](https://github.com/SocialGouv/code-du-travail-numerique/issues/5487)) ([a5b5014](https://github.com/SocialGouv/code-du-travail-numerique/commit/a5b5014876a515b9c15ba7c48362911cfbe01caf))
+- **e2e:** correction des test e2e avec les données entreprises mise à jour ([#5466](https://github.com/SocialGouv/code-du-travail-numerique/issues/5466)) ([db2c3f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/db2c3f969cfdcd217170d69fefe3179cec830e6c))
+- html valide sur le page contrib generic ([#5481](https://github.com/SocialGouv/code-du-travail-numerique/issues/5481)) ([0c1ca7b](https://github.com/SocialGouv/code-du-travail-numerique/commit/0c1ca7b421c6fd600464dec5735c9b0bfa52bc54))
+- **informations:** les références peuvent être `null` ([#5458](https://github.com/SocialGouv/code-du-travail-numerique/issues/5458)) ([15a8d5f](https://github.com/SocialGouv/code-du-travail-numerique/commit/15a8d5fa4a32cc2e74bcbddcb476f1a928c119b5))
+- url du "Centre européen des entreprises à participation publique" sur la page droit du travail ([#5495](https://github.com/SocialGouv/code-du-travail-numerique/issues/5495)) ([8f152d4](https://github.com/SocialGouv/code-du-travail-numerique/commit/8f152d48af149a2fd66f5d5e9abe8443d21a90a0))
+
+### Features
+
+- **contribution:** un message block peut être vide ([#5486](https://github.com/SocialGouv/code-du-travail-numerique/issues/5486)) ([916cdbc](https://github.com/SocialGouv/code-du-travail-numerique/commit/916cdbccf8d0dfeaf2037c133314253fd5ac74fe))
+- **conventions-collectives:** ajout des nouvelles conventions collectives ([#5450](https://github.com/SocialGouv/code-du-travail-numerique/issues/5450)) ([d2391ad](https://github.com/SocialGouv/code-du-travail-numerique/commit/d2391ad85514d31dde008574700c24a547c33e35)), closes [#5445](https://github.com/SocialGouv/code-du-travail-numerique/issues/5445) [#5466](https://github.com/SocialGouv/code-du-travail-numerique/issues/5466)
+- linked admin to frontend ([#5465](https://github.com/SocialGouv/code-du-travail-numerique/issues/5465)) ([8cb9d6b](https://github.com/SocialGouv/code-du-travail-numerique/commit/8cb9d6b8caf40b0ddb252c219fb8127613231009)), closes [#5466](https://github.com/SocialGouv/code-du-travail-numerique/issues/5466)
+- support de la 3248 dans l'ancien format des contributions ([#5477](https://github.com/SocialGouv/code-du-travail-numerique/issues/5477)) ([bcffbd4](https://github.com/SocialGouv/code-du-travail-numerique/commit/bcffbd4306bcdf754ef0fc0e5813fc7176159ad1))
+
+### Reverts
+
+- Revert "feat(3248): ajout des outils (⚠️ ne pas merger) (#5419)" ([45bf501](https://github.com/SocialGouv/code-du-travail-numerique/commit/45bf5014da6506b105bb58068bc6d3fe5e1c4265)), closes [#5419](https://github.com/SocialGouv/code-du-travail-numerique/issues/5419)
+
 # [4.115.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.114.0...v4.115.0) (2023-12-07)
 
 ### Bug Fixes

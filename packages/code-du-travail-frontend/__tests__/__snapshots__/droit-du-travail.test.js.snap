@@ -659,7 +659,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                                
                               <a
                                 aria-label="le Centre européen des entreprises à participation publique (nouvelle fenêtre)"
-                                href="https://www.ceep.eu/"
+                                href="https://sgieurope.org/"
                                 target="_blank"
                               >
                                 le Centre européen des entreprises à participation publique

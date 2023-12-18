@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.116.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.115.0...v4.116.0) (2023-12-18)
+
+### Bug Fixes
+
+- **informations:** les références peuvent être `null` ([#5458](https://github.com/SocialGouv/code-du-travail-numerique/issues/5458)) ([15a8d5f](https://github.com/SocialGouv/code-du-travail-numerique/commit/15a8d5fa4a32cc2e74bcbddcb476f1a928c119b5))
+
+### Features
+
+- **contribution:** un message block peut être vide ([#5486](https://github.com/SocialGouv/code-du-travail-numerique/issues/5486)) ([916cdbc](https://github.com/SocialGouv/code-du-travail-numerique/commit/916cdbccf8d0dfeaf2037c133314253fd5ac74fe))
+- **conventions-collectives:** ajout des nouvelles conventions collectives ([#5450](https://github.com/SocialGouv/code-du-travail-numerique/issues/5450)) ([d2391ad](https://github.com/SocialGouv/code-du-travail-numerique/commit/d2391ad85514d31dde008574700c24a547c33e35)), closes [#5445](https://github.com/SocialGouv/code-du-travail-numerique/issues/5445) [#5466](https://github.com/SocialGouv/code-du-travail-numerique/issues/5466)
+
 # [4.115.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.114.0...v4.115.0) (2023-12-07)
 
 ### Bug Fixes
