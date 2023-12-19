@@ -121,9 +121,17 @@ const options = (titleLevel: number): HTMLReactParserOptions => ({
       if (domNode.name === "p" && !domNode.children.length) {
         return <></>;
       }
+      if (domNode.name === 'strong') {
+        // Disable trim on strong
+        return <strong>{domToReact(domNode.children as DOMNode[], { trim: false })}</strong>;
+      }
+      if (domNode.name === 'em') {
+        // Disable trim on em
+        return <em>{domToReact(domNode.children as DOMNode[], { trim: false })}</em>;
+      }
     }
   },
-  trim: false,
+  trim: true,
 });
 
 type Props = {
