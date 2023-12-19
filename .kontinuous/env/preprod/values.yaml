@@ -22,10 +22,6 @@ jobs:
             secretKey: SENTRY_AUTH_TOKEN
 
 app:
-  autoscale:
-    minReplicas: 2
-    maxReplicas: 10
-    enabled: true
   resources:
     limits:
       cpu: 500m
