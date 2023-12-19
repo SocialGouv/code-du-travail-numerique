@@ -118,7 +118,7 @@ const renderSuggestion = (suggestion: Agreement) => {
   return (
     <SuggestionContainer>
       <Paragraph noMargin>
-        {suggestion.shortTitle} <IDCC>(IDCC {formatIdcc(suggestion.num)})</IDCC>
+        {suggestion.shortTitle} (IDCC {formatIdcc(suggestion.num)})
       </Paragraph>
       {suggestion.highlight?.searchInfo && (
         <Paragraph noMargin variant="secondary">
@@ -128,10 +128,6 @@ const renderSuggestion = (suggestion: Agreement) => {
     </SuggestionContainer>
   );
 };
-
-const IDCC = styled.span`
-  font-weight: normal;
-`;
 
 const SuggestionContainer = styled.div`
   display: flex;
