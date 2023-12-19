@@ -129,7 +129,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
       <ShowDetails>
         <SectionTitle>Éléments saisis</SectionTitle>
         {recapSituation({
-          "Convention collective": `${ccn?.selected?.title} (${idcc})`,
+          "Convention collective": `${ccn?.selected?.shortTitle} (${idcc})`,
           ...situation.criteria,
         })}
         <PubliReferences references={formatRefs(refs)} />
