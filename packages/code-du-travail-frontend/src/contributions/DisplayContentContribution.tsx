@@ -123,7 +123,7 @@ const options = (titleLevel: number): HTMLReactParserOptions => ({
       }
     }
   },
-  trim: true,
+  trim: false,
 });
 
 type Props = {
