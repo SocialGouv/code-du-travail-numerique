@@ -38,9 +38,9 @@ import { LinkedContent } from "./LinkedContent";
 import { ContributionContent } from "./ContributionContent";
 import { ContributionMessageBlock } from "./ContributionMessageBlock";
 import {
-  AlertCCNotSupportedNoContent,
-  AlertCCSupportedNoContent,
-} from "./AlertCCNotSupportedNoContent";
+  AlertAgreementNotSupportedNoContent,
+  AlertAgreementSupportedNoContent,
+} from "./AlertAgreementNotSupportedNoContent";
 
 const { DirectionRight } = icons;
 
@@ -70,13 +70,11 @@ const ContributionGeneric = ({ contribution }: Props) => {
     setSelectedRoute("agreement");
   }
   const supportedAgreementsNoContent: Pick<AgreementSupportInfo, "idcc">[] =
-    contribution.ccSupportedNoContent
-      ? contribution.ccSupportedNoContent.map((c) => {
-          return {
-            idcc: parseInt(c, 10),
-          };
-        })
-      : [];
+    contribution.ccSupportedNoContent?.map((c) => {
+      return {
+        idcc: parseInt(c, 10),
+      };
+    }) ?? [];
 
   const supportedAgreements: AgreementSupportInfo[] =
     contribution.ccSupported.map((c) => {
@@ -90,10 +88,11 @@ const ContributionGeneric = ({ contribution }: Props) => {
   const isSupported = (agreement) =>
     isSupportedInList(supportedAgreements, agreement);
 
-  const isSupportedFromCCNOContent = (agreement) =>
+  const isSupportedFromAgreementNOContent = (agreement) =>
     isSupportedInList(supportedAgreementsNoContent, agreement);
   const isNoCDT = () => contribution && contribution.type === "generic-no-cdt";
-  const showButtonToShowCDT = () => !isNoCDT() && (!showAnswer || convention);
+  const showButtonToDisplayCDTContent = () =>
+    !isNoCDT() && (!showAnswer || convention);
 
   const onSelectAgreement = (
     agreement: Agreement | null,
@@ -142,12 +141,12 @@ const ContributionGeneric = ({ contribution }: Props) => {
   const alertAgreementNotSupported = (url: string) => {
     return contribution.type !== "generic-no-cdt" ? (
       CC_NOT_SUPPORTED
-    ) : isSupportedFromCCNOContent(convention) ? (
-      <AlertCCSupportedNoContent
+    ) : isSupportedFromAgreementNOContent(convention) ? (
+      <AlertAgreementSupportedNoContent
         message={contribution.messageBlockGenericNoCDT}
       />
     ) : (
-      <AlertCCNotSupportedNoContent
+      <AlertAgreementNotSupportedNoContent
         url={url}
         message={contribution.messageBlockGenericNoCDT}
       />
@@ -286,7 +285,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
               </Button>
             ) : (
               <>
-                {showButtonToShowCDT() && (
+                {showButtonToDisplayCDTContent() && (
                   <Button
                     variant="primary"
                     onClick={() => {
@@ -310,7 +309,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
           </DivCentered>
         </Wrapper>
 
-        {showButtonToShowCDT() && (
+        {showButtonToDisplayCDTContent() && (
           <Div>
             <Button
               variant="navLink"

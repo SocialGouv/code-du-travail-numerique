@@ -5,7 +5,10 @@ type Props = {
   message: string;
 };
 
-export const AlertCCNotSupportedNoContent = ({ url, message }: Props) => {
+export const AlertAgreementNotSupportedNoContent = ({
+  url,
+  message,
+}: Props) => {
   return (
     <>
       <Paragraph variant="primary" fontWeight="700" noMargin>
@@ -24,7 +27,7 @@ export const AlertCCNotSupportedNoContent = ({ url, message }: Props) => {
   );
 };
 
-export const AlertCCSupportedNoContent = ({ message }: Props) => {
+export const AlertAgreementSupportedNoContent = ({ message }: Props) => {
   return (
     <>
       <Paragraph variant="primary" fontWeight="700" noMargin>
