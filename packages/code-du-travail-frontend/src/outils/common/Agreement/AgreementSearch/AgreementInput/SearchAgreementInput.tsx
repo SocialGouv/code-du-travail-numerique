@@ -117,7 +117,9 @@ const SuggestionsContainer = styled.div`
 const renderSuggestion = (suggestion: Agreement) => {
   return (
     <SuggestionContainer>
-      {suggestion.shortTitle} <IDCC>(IDCC {formatIdcc(suggestion.num)})</IDCC>
+      <Paragraph noMargin>
+        {suggestion.shortTitle} <IDCC>(IDCC {formatIdcc(suggestion.num)})</IDCC>
+      </Paragraph>
       {suggestion.highlight?.searchInfo && (
         <Paragraph noMargin variant="secondary">
           (${suggestion.highlight?.searchInfo})
