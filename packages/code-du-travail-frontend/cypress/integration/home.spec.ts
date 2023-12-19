@@ -1,6 +1,11 @@
 describe("Page d'acceuil", () => {
   it("Affiche les éléments requis", () => {
     cy.visit("/");
+    // The home is build in cache at the first visit.
+    // The first load can be wrong because cache is not ready.
+    // So we wait 2 seconds to start the test.
+    cy.wait(2000)
+    cy.visit("/")
     cy.get("h1").should(
       "have.text",
       "Bienvenue sur le Code du travail numérique"
