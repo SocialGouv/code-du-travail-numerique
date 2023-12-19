@@ -4,7 +4,7 @@ import { StepResult } from "../Result";
 describe("<StepResult />", () => {
   it("should render CC answer", () => {
     const { container } = renderForm(StepResult, {
-      ccn: { selected: { num: 292, title: "Plasturgie" } },
+      ccn: { selected: { num: 292, shortTitle: "Plasturgie" } },
       criteria: {
         "catégorie professionnelle": "42| Collaborateurs",
         coefficient: "28| 800 à 830 inclus",
