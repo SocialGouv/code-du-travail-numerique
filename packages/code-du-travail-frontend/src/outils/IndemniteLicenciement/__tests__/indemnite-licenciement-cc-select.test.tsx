@@ -23,7 +23,7 @@ describe("Indemnité licenciement - Sélection de CC", () => {
     userAction
       .click(ui.agreement.agreement.get())
       .setInput(ui.agreement.agreementInput.get(), "16")
-      .click(await waitFor(() => ui.agreement.searchItem.agreement16.get()))
+      .click(await waitFor(() => ui.agreement.ccChoice.transport.get()))
       .click(ui.next.get());
 
     fireEvent.click(ui.previous.get());
