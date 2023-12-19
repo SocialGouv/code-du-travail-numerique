@@ -21,7 +21,7 @@ function Widgets(props: LetterModelProps): JSX.Element {
       />
       <StyledHeader>
         <StyledTitle stripe="left" variant="secondary">
-          {props.title} oo
+          {props.title}
         </StyledTitle>
         <LogoLink></LogoLink>
       </StyledHeader>
