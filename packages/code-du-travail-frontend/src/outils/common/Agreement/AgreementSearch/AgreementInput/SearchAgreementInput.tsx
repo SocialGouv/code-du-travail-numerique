@@ -122,7 +122,7 @@ const renderSuggestion = (suggestion: Agreement) => {
       </Paragraph>
       {suggestion.highlight?.searchInfo && (
         <Paragraph noMargin variant="secondary">
-          (${suggestion.highlight?.searchInfo})
+          ({suggestion.highlight?.searchInfo})
         </Paragraph>
       )}
     </SuggestionContainer>
