@@ -11,7 +11,7 @@ export const ReferencesJuridiques = (props: Props) => {
     return null;
   }
   const refs = props.references
-    .flatMap(({ title, url }) => {
+    .map(({ title, url }) => {
       return { title, type: SOURCES.EXTERNALS, url };
     })
     .sort((a, b) => (a.url && !b.url ? -1 : !a.url && b.url ? 1 : 0));
