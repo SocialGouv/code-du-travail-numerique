@@ -36,7 +36,7 @@ export const buildRecap = (
         "Ancienneté selon la convention collective": seniorityCC,
       }),
       ...(ccn?.selected && {
-        "Convention collective": ccn.selected.title,
+        "Convention collective": ccn.selected.shortTitle,
       }),
     };
   }
@@ -46,7 +46,7 @@ export const buildRecap = (
     ...defaultRecap,
     ...agreementRecap,
     ...(ccn?.selected && {
-      "Convention collective": ccn.selected.title,
+      "Convention collective": ccn.selected.shortTitle,
     }),
   };
 };
