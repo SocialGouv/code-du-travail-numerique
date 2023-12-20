@@ -180,7 +180,7 @@ type ContributionLinkedContent = {
 };
 
 type ContributionRef = {
-  url: string;
+  url?: string | null;
   title: string;
 };
 
