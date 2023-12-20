@@ -286,7 +286,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
           Que dit le code du travail&nbsp;?
         </Title>
         {convention && !isSupported(convention) && (
-          <Paragraph>
+          <Paragraph italic>
             Cette réponse correspond à ce que prévoit le code du travail, elle
             ne tient pas compte des spécificités de la convention collective{" "}
             {convention.shortTitle}
