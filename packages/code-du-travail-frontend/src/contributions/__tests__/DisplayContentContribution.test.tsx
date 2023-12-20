@@ -326,4 +326,38 @@ describe("DisplayContentContribution", () => {
       </table>
     `);
   });
+
+  it(`should keep whitespace in specific tag`, () => {
+    const { asFragment } = render(
+      <DisplayContentContribution
+        content={`<p>Ceci est un<strong> </strong>texte généré<strong> </strong>par <em>tiptap </em>avec des<em> </em>résidus<em> </em>de balise</p>`}
+      ></DisplayContentContribution>
+    );
+
+    expect(asFragment().firstChild).toMatchInlineSnapshot(`
+      <p>
+        Ceci est un
+        <strong>
+           
+        </strong>
+        texte généré
+        <strong>
+           
+        </strong>
+        par 
+        <em>
+          tiptap 
+        </em>
+        avec des
+        <em>
+           
+        </em>
+        résidus
+        <em>
+           
+        </em>
+        de balise
+      </p>
+    `);
+  });
 });
