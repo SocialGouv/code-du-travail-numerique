@@ -4,8 +4,8 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.get("h1").should("have.text", "Trouver sa convention collective");
     cy.contains("Je la recherche").click();
 
-    cy.get("#enterprise-search").type("82129756100010", { delay: 100 });
-    cy.get("#enterprise-search-address").type("75018", { delay: 100 });
+    cy.get("#enterprise-search").type("82129756100010", { delay: 1000 });
+    cy.get("#enterprise-search-address").type("75018", { delay: 1000 });
     cy.get('button[type="submit"]').last().click();
     cy.contains("BOUILLON PIGALLE").click();
 
@@ -16,7 +16,7 @@ describe("Outil - Trouver sa convention collective", () => {
 
     cy.contains("Précédent").click();
     cy.get("#enterprise-search").clear();
-    cy.get("#enterprise-search").type("CARREFOUR BANQUE", { delay: 100 });
+    cy.get("#enterprise-search").type("CARREFOUR BANQUE", { delay: 1000 });
     cy.get("#enterprise-search-address").clear();
     cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR BANQUE").click();
