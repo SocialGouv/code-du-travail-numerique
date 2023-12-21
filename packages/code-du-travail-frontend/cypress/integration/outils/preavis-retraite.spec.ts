@@ -1,4 +1,23 @@
+import { mockOndo69007, mockCarrefour } from "./api-entreprise.mock";
+
 describe("Outil - Préavis de retraite", () => {
+  beforeEach(() => {
+    cy.intercept(
+      {
+        method: "GET",
+        url: "https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/enterprises?q=Ondo&a=69007",
+      },
+      mockOndo69007
+    ).as("getEnterpriseOndo69007");
+    cy.intercept(
+      {
+        method: "GET",
+        url: "https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/enterprises?q=carrefour",
+      },
+      mockCarrefour
+    ).as("getEnterpriseCarrefour");
+  });
+
   it("Parcours sans convention collective avec validation des erreurs", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
@@ -182,7 +201,8 @@ describe("Outil - Préavis de retraite", () => {
       .click();
     cy.contains("Cliquez sur Suivant pour poursuivre la simulation.");
     cy.get('[aria-label="Fermer"]').click();
-    cy.get("#enterprise-search").clear().type("Ondo");
+    cy.get("#enterprise-search").clear();
+    cy.get("#enterprise-search").type("Ondo");
     cy.get("#enterprise-search-address").type("69007");
     cy.get('button[type="submit"]').last().click();
     cy.contains("VERNIN").click();

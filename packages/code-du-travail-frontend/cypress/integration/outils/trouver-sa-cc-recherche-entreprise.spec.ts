@@ -1,4 +1,22 @@
+import { mock82129756100010, mockCarrefourBanque } from "./api-entreprise.mock";
+
 describe("Outil - Trouver sa convention collective", () => {
+  beforeEach(() => {
+    cy.intercept(
+      {
+        method: "GET",
+        url: "https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/enterprises?q=82129756100010*",
+      },
+      mock82129756100010
+    ).as("getEnterprise82129756100010");
+    cy.intercept(
+      {
+        method: "GET",
+        url: "https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/enterprises?q=CARREFOUR%20BANQUE*",
+      },
+      mockCarrefourBanque
+    ).as("getEnterpriseCarrefourBanque");
+  });
   it("Recherche de convention collective par entreprise", () => {
     cy.visit("/outils/convention-collective");
     cy.get("h1").should("have.text", "Trouver sa convention collective");
@@ -15,8 +33,9 @@ describe("Outil - Trouver sa convention collective", () => {
     );
 
     cy.contains("Précédent").click();
-    cy.get("#enterprise-search").clear().type("CARREFOUR BANQUE");
     cy.get("#enterprise-search-address").clear();
+    cy.get("#enterprise-search").clear();
+    cy.get("#enterprise-search").type("CARREFOUR BANQUE");
     cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR BANQUE").click();
     cy.get("p").should(
