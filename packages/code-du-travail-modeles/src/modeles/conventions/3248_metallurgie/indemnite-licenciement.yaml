@@ -22,8 +22,9 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée:
   applicable si: licenciement pour motif absence prolongée ou répétées = 'Oui'
-  titre: Durée totale des absences prolongée ou absences répétées justifiées perturbant le fonctionnement de l'entreprise
-  question: Quelle est la durée totale de ces absences ?
+  titre: Durée cumulée des absences prolongée ou absences répétées justifiées perturbant le fonctionnement de l'entreprise sur toute la période du contrat
+  question: Quelle est la durée cumulée de ces absences sur toute la période du contrat ?
+  description: La période saisie est nécessaire pour le calcul d'une éventuelle majoration de l'indemnité conventionnelle de licenciement.
   cdtn:
     type: liste
     valeurs:
