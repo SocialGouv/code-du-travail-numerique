@@ -168,6 +168,11 @@ type ElasticSearchContributionFicheSp = {
   raw: string;
 };
 
+type ElasticSearchContributionGenericNoCDT = {
+  type: "generic-no-cdt";
+  messageBlockGenericNoCDT: string;
+};
+
 type ElasticSearchContributionContent = {
   type: "content" | "cdt";
   content: string;
@@ -196,10 +201,15 @@ type ElasticSearchContributionBase = ElasticSearchItem & {
   references: ContributionRef[];
   idcc: string;
   messageBlock?: string;
-} & (ElasticSearchContributionFicheSp | ElasticSearchContributionContent);
+} & (
+    | ElasticSearchContributionFicheSp
+    | ElasticSearchContributionContent
+    | ElasticSearchContributionGenericNoCDT
+  );
 
 export type ElasticSearchContributionGeneric = ElasticSearchContributionBase & {
   ccSupported: string[];
+  ccSupportedNoContent?: string[];
 };
 
 export type ElasticSearchContributionConventionnelle =

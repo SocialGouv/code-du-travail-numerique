@@ -22,6 +22,7 @@ import { MatomoBaseEvent } from "../lib";
 import { getCc3239Informations } from "../outils";
 import { Enterprise } from "../conventions/Search/api/enterprises.service";
 import {
+  Alert,
   ArrowLink,
   Badge,
   Button,
@@ -36,6 +37,10 @@ import { ReferencesJuridiques } from "./References";
 import { LinkedContent } from "./LinkedContent";
 import { ContributionContent } from "./ContributionContent";
 import { ContributionMessageBlock } from "./ContributionMessageBlock";
+import {
+  AlertAgreementNotSupportedNoContent,
+  AlertAgreementSupportedNoContent,
+} from "./AlertAgreementNotSupportedNoContent";
 
 const { DirectionRight } = icons;
 
@@ -64,6 +69,13 @@ const ContributionGeneric = ({ contribution }: Props) => {
   if (convention && !selectedRoute) {
     setSelectedRoute("agreement");
   }
+  const supportedAgreementsNoContent: Pick<AgreementSupportInfo, "idcc">[] =
+    contribution.ccSupportedNoContent?.map((c) => {
+      return {
+        idcc: parseInt(c, 10),
+      };
+    }) ?? [];
+
   const supportedAgreements: AgreementSupportInfo[] =
     contribution.ccSupported.map((c) => {
       return {
@@ -71,9 +83,16 @@ const ContributionGeneric = ({ contribution }: Props) => {
         fullySupported: true,
       };
     });
+  const isSupportedInList = (agreements, agreement) =>
+    agreement && !!agreements.find((item) => item.idcc === agreement.num);
   const isSupported = (agreement) =>
-    agreement &&
-    !!supportedAgreements.find((item) => item.idcc == agreement.num);
+    isSupportedInList(supportedAgreements, agreement);
+
+  const isSupportedFromAgreementNOContent = (agreement) =>
+    isSupportedInList(supportedAgreementsNoContent, agreement);
+  const isNoCDT = () => contribution && contribution.type === "generic-no-cdt";
+  const showButtonToDisplayCDTContent = () =>
+    !isNoCDT() && (!showAnswer || convention);
 
   const onSelectAgreement = (
     agreement: Agreement | null,
@@ -119,6 +138,21 @@ const ContributionGeneric = ({ contribution }: Props) => {
     </>
   );
 
+  const alertAgreementNotSupported = (url: string) => {
+    return contribution.type !== "generic-no-cdt" ? (
+      CC_NOT_SUPPORTED
+    ) : isSupportedFromAgreementNOContent(convention) ? (
+      <AlertAgreementSupportedNoContent
+        message={contribution.messageBlockGenericNoCDT}
+      />
+    ) : (
+      <AlertAgreementNotSupportedNoContent
+        url={url}
+        message={contribution.messageBlockGenericNoCDT}
+      />
+    );
+  };
+
   const scrollToTitle = () => {
     setTimeout(() => {
       titleRef &&
@@ -131,11 +165,19 @@ const ContributionGeneric = ({ contribution }: Props) => {
     <>
       <Badge />
       <SectionNoPadding>
-        <p>
-          La réponse dépend de la convention collective à laquelle votre
-          entreprise est rattachée. Veuillez renseigner votre situation afin
-          d’obtenir une réponse adaptée :
-        </p>
+        {isNoCDT() ? (
+          <p>
+            La convention collective est nécessaire pour obtenir une réponse car
+            le code du travail ne prévoit rien sur ce sujet :
+          </p>
+        ) : (
+          <p>
+            La réponse dépend de la convention collective à laquelle votre
+            entreprise est rattachée. Veuillez renseigner votre situation afin
+            d’obtenir une réponse adaptée :
+          </p>
+        )}
+
         <Wrapper variant="light">
           <Title size="small" as="p" shift={spacings.xmedium} variant="primary">
             Votre situation
@@ -179,7 +221,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
               selectedAgreement={convention}
               onSelectAgreement={onSelectAgreement}
               onUserAction={onUserAction}
-              alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
+              alertAgreementNotSupported={alertAgreementNotSupported}
               simulator="QUESTIONNAIRE"
             />
           )}
@@ -192,23 +234,32 @@ const ContributionGeneric = ({ contribution }: Props) => {
                     selectedAgreement={convention}
                     onSelectAgreement={onSelectAgreement}
                     onUserAction={onUserAction}
-                    alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
+                    alertAgreementNotSupported={alertAgreementNotSupported}
                     simulator="QUESTIONNAIRE"
                   />
                 </form>
               )}
               {!entreprise && (
-                <NoEnterprise
-                  isCheckboxChecked={hasNoEnterpriseSelected}
-                  setIsCheckboxChecked={setHasNoEnterpriseSelected}
-                  onCheckboxChange={async (isCheckboxChecked) => {
-                    const cc3239 = isCheckboxChecked
-                      ? await getCc3239Informations()
-                      : null;
-                    onSelectAgreement(cc3239, undefined, isCheckboxChecked);
-                  }}
-                  isQuestionnaire
-                />
+                <>
+                  <NoEnterprise
+                    isCheckboxChecked={hasNoEnterpriseSelected}
+                    setIsCheckboxChecked={setHasNoEnterpriseSelected}
+                    onCheckboxChange={async (isCheckboxChecked) => {
+                      const cc3239 = isCheckboxChecked
+                        ? await getCc3239Informations()
+                        : null;
+                      onSelectAgreement(cc3239, undefined, isCheckboxChecked);
+                    }}
+                    isQuestionnaire
+                  />
+                  {convention && !isSupported(convention) && (
+                    <Div>
+                      <Alert variant="primary">
+                        {alertAgreementNotSupported(convention.url)}
+                      </Alert>
+                    </Div>
+                  )}
+                </>
               )}
             </>
           )}
@@ -234,7 +285,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
               </Button>
             ) : (
               <>
-                {(!showAnswer || convention) && (
+                {showButtonToDisplayCDTContent() && (
                   <Button
                     variant="primary"
                     onClick={() => {
@@ -258,7 +309,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
           </DivCentered>
         </Wrapper>
 
-        {!showAnswer && !convention && (
+        {showButtonToDisplayCDTContent() && (
           <Div>
             <Button
               variant="navLink"

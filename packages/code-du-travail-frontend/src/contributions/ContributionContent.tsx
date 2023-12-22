@@ -24,6 +24,8 @@ export const ContributionContent = ({
   contribution,
   hasNoMarginTop,
 }: Props) => {
+  if (contribution.type === "generic-no-cdt") return <></>;
+
   return (
     <SectionNoPadding hasNoMarginTop={hasNoMarginTop}>
       {contribution.type === "fiche-sp" ? (
