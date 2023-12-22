@@ -308,6 +308,13 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
   });
 
   describe("Test avec fallback sur la 3248", () => {
+    const expectedReferencesLicenciementAbsencesProlongesOrRepetes = [
+      {
+        article: "Article 91.2",
+        url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314615#KALIARTI000046314615",
+      },
+    ];
+
     const expectedReferencesGroupeABBCDEFNonCadre = [
       {
         article: "Article 75.3.1.1",
@@ -414,6 +421,147 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
                 "'Non'",
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
                 "'Non'",
+              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+                "'Non'",
+              "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notifier avant le 1er janvier 2024":
+                "'Non'",
+              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+                seniority.toString(),
+              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+                seniorityRight.toString(),
+              "contrat salarié . indemnité de licenciement . date de notification":
+                notificationDate,
+              "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+                refSalary.toString(),
+            },
+            "contrat salarié . indemnité de licenciement . résultat conventionnel"
+          );
+
+          expect(missingArgs).toEqual([]);
+          expect(result.value).toEqual(expectedCompensation);
+          expect(result.unit?.numerators).toEqual(["€"]);
+
+          const formule = engine.getFormule();
+          expect(formule.formula).toEqual(expectedFormula);
+
+          const references = engine.getReferences("résultat conventionnel");
+          expect(references).toHaveLength(expectedReferences.length);
+          expect(references).toEqual(
+            expect.arrayContaining(expectedReferences)
+          );
+        }
+      );
+    });
+
+    describe("Groupe A,B,C,D,E (jamais cadre) avec un licenciement pour le motif suivant : 'absence prolongée ou absences répétées justifiées perturbant le fonctionnement de l'entreprise'", () => {
+      test.each([
+        {
+          absenceDuration: "'moins de 2 mois'",
+          expectedCompensation: 0,
+          expectedFormula: "",
+          expectedReferences: [],
+          notificationDate: "01/01/2024",
+          refSalary: 2668,
+          seniority: 6 / 12,
+          seniorityRight: 6 / 12,
+        },
+        {
+          absenceDuration: "'moins de 2 mois'",
+          expectedCompensation: 444.67,
+          expectedFormula: "(1/4 * Sref * A1)",
+          expectedReferences: expectedReferencesGroupeABBCDEFNonCadre.concat(
+            expectedReferencesLicenciementAbsencesProlongesOrRepetes
+          ),
+          notificationDate: "01/01/2024",
+          refSalary: 2668,
+          seniority: 8 / 12,
+          seniorityRight: 8 / 12,
+        },
+        {
+          absenceDuration: "'moins de 2 mois'",
+          expectedCompensation: 1000.5,
+          expectedFormula: "(1/4 * Sref * A1) * 1.5",
+          expectedReferences: expectedReferencesGroupeABBCDEFNonCadre.concat(
+            expectedReferencesLicenciementAbsencesProlongesOrRepetes
+          ),
+          notificationDate: "01/01/2024",
+          refSalary: 2668,
+          seniority: 1,
+          seniorityRight: 8 / 12,
+        },
+        {
+          absenceDuration: "'de 2 mois à moins de 4 mois'",
+          expectedCompensation: 5002.5,
+          expectedFormula: "(1/4 * Sref * A1) * 1.5",
+          expectedReferences: expectedReferencesGroupeABBCDEFNonCadre.concat(
+            expectedReferencesLicenciementAbsencesProlongesOrRepetes
+          ),
+          notificationDate: "01/01/2024",
+          refSalary: 2668,
+          seniority: 5,
+          seniorityRight: 11 / 12,
+        },
+        {
+          absenceDuration: "'de 4 mois à moins 6 mois'",
+          expectedCompensation: 3335,
+          expectedFormula: "(1/4 * Sref * A1)",
+          expectedReferences: expectedReferencesGroupeABBCDEFNonCadre.concat(
+            expectedReferencesLicenciementAbsencesProlongesOrRepetes
+          ),
+          notificationDate: "01/01/2024",
+          refSalary: 2668,
+          seniority: 5,
+          seniorityRight: 11 / 12,
+        },
+        {
+          absenceDuration: "'de 4 mois à moins 6 mois'",
+          expectedCompensation: 10005,
+          expectedFormula: "(1/4 * Sref * A1) * 1.5",
+          expectedReferences: expectedReferencesGroupeABBCDEFNonCadre.concat(
+            expectedReferencesLicenciementAbsencesProlongesOrRepetes
+          ),
+          notificationDate: "01/01/2024",
+          refSalary: 2668,
+          seniority: 10,
+          seniorityRight: 11 / 12,
+        },
+        {
+          absenceDuration: "'6 mois ou plus'",
+          expectedCompensation: 6670,
+          expectedFormula: "(1/4 * Sref * A1)",
+          expectedReferences: expectedReferencesGroupeABBCDEFNonCadre.concat(
+            expectedReferencesLicenciementAbsencesProlongesOrRepetes
+          ),
+          notificationDate: "01/01/2024",
+          refSalary: 2668,
+          seniority: 10,
+          seniorityRight: 11 / 12,
+        },
+      ])(
+        "Salarié licencié pour absences $absenceDuration, ayant une ancienneté de $seniority ans => une compensation de base de $expectedCompensation €",
+        ({
+          seniorityRight,
+          notificationDate,
+          expectedCompensation,
+          expectedReferences,
+          seniority,
+          expectedFormula,
+          refSalary,
+          absenceDuration,
+        }) => {
+          const { missingArgs, result } = engine.setSituation(
+            {
+              "contrat salarié . convention collective": "'IDCC0650'",
+              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
+                "'A, B, C, D ou E'",
+              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
+                "'Non'",
+              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
+                "'Non'",
+              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+                "'Oui'",
+              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée":
+                absenceDuration,
               "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notifier avant le 1er janvier 2024":
                 "'Non'",
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -502,6 +650,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
                 age.toString(),
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . remplit conditions pour la retraite":
                 "'Oui'",
+              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+                "'Non'",
               "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notifier avant le 1er janvier 2024":
                 "'Non'",
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -833,6 +983,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
                 "'F, G, H ou I'",
               "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age":
                 age.toString(),
+              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+                "'Non'",
               "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notifier avant le 1er janvier 2024":
                 "'Non'",
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
