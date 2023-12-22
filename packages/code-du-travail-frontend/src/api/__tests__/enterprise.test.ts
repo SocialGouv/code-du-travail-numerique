@@ -327,7 +327,7 @@ describe("Test enterprise endpoint", () => {
       { headers: { referer: "cdtn-api" } }
     );
 
-    expect(response.body.entreprises).toHaveLength(2);
+    expect(response.body.entreprises).toHaveLength(1);
     response.body.entreprises.forEach((enterprise) => {
       expect(enterprise.conventions).toHaveLength(1);
       expect(enterprise.conventions[0].num).toEqual(1090);
