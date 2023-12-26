@@ -21,10 +21,10 @@ jobs:
             secretName: www-secret
             secretKey: SENTRY_AUTH_TOKEN
           elasticsearch_token_api:
-            secretName: elasticsearch-secret
+            secretName: www-secret
             secretKey: ELASTICSEARCH_TOKEN_API
           elasticsearch_url:
-            secretName: elasticsearch-secret
+            secretName: www-secret
             secretKey: ELASTICSEARCH_URL
 
 app:
