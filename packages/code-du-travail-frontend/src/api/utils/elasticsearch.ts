@@ -5,7 +5,7 @@ const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL ?? "http://localhost:9200";
 const ELASTICSEARCH_TOKEN_API: string | undefined =
   process.env.ELASTICSEARCH_TOKEN_API;
-const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX ?? "cdtn";
+const ES_INDEX_PREFIX = process.env.NEXT_PUBLIC_ES_INDEX_PREFIX ?? "cdtn";
 const CDTN_ADMIN_VERSION = process.env.CDTN_ADMIN_VERSION ?? "v2";
 const BRANCH_NAME_SLUG = process.env.BRANCH_NAME_SLUG;
 
