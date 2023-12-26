@@ -48,7 +48,10 @@ ENV NODE_ENV=production
 RUN --mount=type=secret,id=sentry_auth_token \
   --mount=type=secret,id=elasticsearch_token_api \
   --mount=type=secret,id=elasticsearch_url \
-  SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token) ELASTICSEARCH_TOKEN_API=$(cat /run/secrets/elasticsearch_token_api) ELASTICSEARCH_URL=$(cat /run/secrets/elasticsearch_url) yarn build && \
+  export SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token) && \
+  export ELASTICSEARCH_TOKEN_API=$(cat /run/secrets/elasticsearch_token_api) && \
+  export ELASTICSEARCH_URL=$(cat /run/secrets/elasticsearch_url) && \
+  yarn build && \
   yarn workspaces focus --production --all && \
   yarn cache clean
 
