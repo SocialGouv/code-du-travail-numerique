@@ -8,7 +8,6 @@ import {
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import { max, startOfDay, subMonths } from "date-fns";
-import { GetServerSideProps } from "next";
 import React from "react";
 import styled from "styled-components";
 
@@ -16,6 +15,8 @@ import Metas from "../src/common/Metas";
 import { SITE_URL } from "../src/config";
 import { Layout } from "../src/layout/Layout";
 import { handleError } from "../src/lib/fetch-error";
+import { getStatsData } from "../src/api/modules/stats/controller/get";
+import { captureException } from "@sentry/nextjs";
 
 type PropsData = {
   nbDocuments: number;
@@ -84,20 +85,28 @@ const Stats = ({ data }: Props): JSX.Element => {
     </Layout>
   );
 };
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const props = await fetch(`${SITE_URL}/api/stats`)
-    .then((res) => {
-      if (!res.ok) handleError(res);
-      return res.json();
-    })
-    .then((data: PropsData) => ({ props: { data } }))
-    .catch(() => ({
+
+export async function getStaticProps() {
+  try {
+    let data: PropsData;
+    if (process.env.NODE_ENV !== "production") {
+      const response = await fetch(`${SITE_URL}/api/stats`);
+      data = await response.json();
+    } else {
+      data = await getStatsData();
+    }
+    return { props: { data }, revalidate: 1800 };
+  } catch (e) {
+    console.error(e);
+    captureException(e);
+    return {
       props: {
         data: null,
       },
-    }));
-  return props;
-};
+      revalidate: 1800, // 30 minutes
+    };
+  }
+}
 
 const Tile = styled(Wrapper)`
   position: relative;
