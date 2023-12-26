@@ -119,7 +119,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
           Convention collective
            : 
           <strong>
-            Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
+            Transports routiers et activités auxiliaires du transport
           </strong>
         </li>
       </ul>
@@ -336,7 +336,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
           Convention collective
            : 
           <strong>
-            Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
+            Transports routiers et activités auxiliaires du transport
           </strong>
         </li>
       </ul>
@@ -499,7 +499,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
           Convention collective
            : 
           <strong>
-            Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
+            Transports routiers et activités auxiliaires du transport
           </strong>
         </li>
       </ul>
@@ -878,7 +878,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
           Convention collective
            : 
           <strong>
-            Convention collective nationale de la cordonnerie multiservice du 7 août 1989. Elargie au secteur des cordonniers industriels
+            Cordonnerie multiservice
           </strong>
         </li>
       </ul>

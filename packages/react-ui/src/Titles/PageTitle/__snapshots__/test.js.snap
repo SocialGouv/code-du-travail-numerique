@@ -6,7 +6,7 @@ exports[`<PageTitle /> renders a H1 page title 1`] = `
     class="sc-gEvEer iwWTzJ"
   >
     <h1
-      class="sc-fqkvVR jQMLfU"
+      class="sc-fqkvVR hZWjIQ"
     >
       <span
         class="sc-aXZVg ebuZrC"
@@ -23,7 +23,7 @@ exports[`<PageTitle /> renders a left striped shifted H1 page title 1`] = `
     class="sc-gEvEer bKmRPt"
   >
     <h1
-      class="sc-fqkvVR hDtvKt"
+      class="sc-fqkvVR cshUl"
     >
       <span
         class="sc-aXZVg jHdfHu"

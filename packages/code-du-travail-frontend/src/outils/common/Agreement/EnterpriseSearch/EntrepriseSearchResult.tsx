@@ -51,7 +51,7 @@ const EntrepriseSearchResults = ({
     if (typeof state.error === "string") {
       return <Error>{state.error}</Error>;
     }
-    return <Section>{state.error}</Section>;
+    return <Section>{JSON.stringify(state.error)}</Section>;
   }
   if (!state.data) {
     return <></>;

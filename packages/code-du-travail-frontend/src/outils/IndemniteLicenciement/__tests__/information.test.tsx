@@ -1,7 +1,7 @@
 import { render, RenderResult, waitFor } from "@testing-library/react";
 import { UserAction } from "../../../common";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
+import { CalculateurIndemnite } from "../index";
 import { ui } from "./ui";
 
 jest.spyOn(Storage.prototype, "setItem");
@@ -194,7 +194,9 @@ describe("Indemnité licenciement - Validation de la page information", () => {
         .setInput(ui.agreement.agreementInput.get(), "3239")
         .click(
           await waitFor(() =>
-            rendering.getByText("Particuliers employeurs et emploi à domicile")
+            rendering.getByText(
+              "Particuliers employeurs et emploi à domicile (IDCC 3239)"
+            )
           )
         )
         .click(ui.next.get());
