@@ -10,7 +10,7 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent, MatomoHomeEvent } from "../src/lib";
 import EventTracker from "../src/lib/tracking/EventTracker";
 import { getHomeData } from "../src/api/modules/home/controller/get";
-import { SITE_URL } from "../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 
 const Home = ({
   themes,
@@ -130,7 +130,7 @@ export async function getStaticProps() {
       modeles,
       agreements,
     },
-    revalidate: 1800, // 30 minutes
+    revalidate: REVALIDATE_TIME,
   };
 }
 

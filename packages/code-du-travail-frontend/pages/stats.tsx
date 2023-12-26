@@ -12,7 +12,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
-import { SITE_URL } from "../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 import { Layout } from "../src/layout/Layout";
 import { handleError } from "../src/lib/fetch-error";
 import { getStatsData } from "../src/api/modules/stats/controller/get";
@@ -95,7 +95,7 @@ export async function getStaticProps() {
     } else {
       data = await getStatsData();
     }
-    return { props: { data }, revalidate: 1800 };
+    return { props: { data }, revalidate: REVALIDATE_TIME };
   } catch (e) {
     console.error(e);
     captureException(e);
@@ -103,7 +103,7 @@ export async function getStaticProps() {
       props: {
         data: null,
       },
-      revalidate: 1800, // 30 minutes
+      revalidate: REVALIDATE_TIME,
     };
   }
 }

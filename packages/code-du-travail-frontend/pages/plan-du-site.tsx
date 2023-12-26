@@ -14,7 +14,7 @@ import Link from "next/link";
 import { GetSitemapPage } from "../src/api";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { getSitemapData } from "../src/api/modules/sitemap/controller/get";
-import { SITE_URL } from "../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 
 const PlanDuSite = ({
   tools,
@@ -185,7 +185,7 @@ export async function getStaticProps() {
       agreements,
       themes,
     },
-    revalidate: 1800, // 30 minutes
+    revalidate: REVALIDATE_TIME,
   };
 }
 
