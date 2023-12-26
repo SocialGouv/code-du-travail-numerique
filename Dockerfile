@@ -45,7 +45,7 @@ COPY . ./
 
 ENV NODE_ENV=production
 
-# hadolint ignore=SC2046
+# hadolint ignore=SC1070
 RUN --mount=type=secret,id=sentry_auth_token \
   export SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token); && \
   --mount=type=secret,id=elasticsearch_token_api \
