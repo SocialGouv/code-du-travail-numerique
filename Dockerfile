@@ -46,7 +46,9 @@ COPY . ./
 ENV NODE_ENV=production
 
 # hadolint ignore=SC2046
-RUN --mount=type=secret,id=sentry_auth_token export SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token); \
+RUN --mount=type=secret,id=sentry_auth_token export SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token) && \
+  --mount=type=secret,id=elasticsearch_token_api export ELASTICSEARCH_TOKEN_API=$(cat /run/secrets/elasticsearch_token_api) && \
+  --mount=type=secret,id=elasticsearch_url export ELASTICSEARCH_URL=$(cat /run/secrets/elasticsearch_url) && \
   yarn build  && \
   yarn workspaces focus --production --all && \
   yarn cache clean

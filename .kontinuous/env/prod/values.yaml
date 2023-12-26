@@ -20,6 +20,12 @@ jobs:
           sentry_auth_token:
             secretName: www-secret
             secretKey: SENTRY_AUTH_TOKEN
+          elasticsearch_token_api:
+            secretName: elasticsearch-secret
+            secretKey: ELASTICSEARCH_TOKEN_API
+          elasticsearch_url:
+            secretName: elasticsearch-secret
+            secretKey: ELASTICSEARCH_URL
 
 app:
   host: code.travail.gouv.fr
