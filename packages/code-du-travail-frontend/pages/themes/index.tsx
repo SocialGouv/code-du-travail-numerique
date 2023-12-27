@@ -71,7 +71,7 @@ const ThemesPage = ({ children = [] }) => (
   </Layout>
 );
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   let data: any;
   if (process.env.NODE_ENV !== "production") {
     const response = await fetch(`${SITE_URL}/api/themes`);
