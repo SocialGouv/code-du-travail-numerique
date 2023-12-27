@@ -73,7 +73,7 @@ const ThemesPage = ({ children = [] }) => (
 
 export async function getStaticProps() {
   let data: any;
-  if (process.env.NEXT_PUBLIC_APP_ENV !== "production") {
+  if (process.env.NEXT_PUBLIC_APP_ENV === "local") {
     const response = await fetch(`${SITE_URL}/api/themes`);
     data = await response.json();
   } else {

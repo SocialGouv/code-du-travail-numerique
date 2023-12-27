@@ -160,7 +160,7 @@ export async function getStaticProps() {
 
   try {
     let data: GetSitemapPage;
-    if (process.env.NEXT_PUBLIC_APP_ENV !== "production") {
+    if (process.env.NEXT_PUBLIC_APP_ENV === "local") {
       const response = await fetch(`${SITE_URL}/api/plan-du-site`);
       data = await response.json();
     } else {

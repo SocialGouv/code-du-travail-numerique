@@ -53,8 +53,9 @@ const SimulatorContent = <StepName extends string>({
   simulator,
 }: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
-  const [navigationAction, setNavigationAction] =
-    React.useState<"next" | "prev" | "none">("none");
+  const [navigationAction, setNavigationAction] = React.useState<
+    "next" | "prev" | "none"
+  >("none");
   const store = useContext(SimulatorContext);
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
     store,

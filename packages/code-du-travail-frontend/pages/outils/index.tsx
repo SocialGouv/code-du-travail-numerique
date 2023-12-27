@@ -84,7 +84,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
 
 export async function getStaticProps() {
   let result: any;
-  if (process.env.NEXT_PUBLIC_APP_ENV !== "production") {
+  if (process.env.NEXT_PUBLIC_APP_ENV === "local") {
     const response = await fetch(`${SITE_URL}/api/tools`);
     result = await response.json();
   } else {
