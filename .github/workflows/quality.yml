@@ -39,7 +39,7 @@ jobs:
           yarn install --immutable
       - name: Build code
         run: |
-          yarn build
+          NEXT_PUBLIC_APP_ENV=production yarn build
         env:
           NEXT_PUBLIC_APP_ENV: "production"
       - name: Cache build
