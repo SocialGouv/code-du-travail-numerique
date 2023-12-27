@@ -168,7 +168,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains("Précisez et sélectionnez votre entreprise");
     cy.get("button").contains("Suivant").click();
     cy.contains("Vous devez sélectionner une entreprise");
-    cy.get("#enterprise-search").type("carrefour", { delay: 0 });
+    cy.get("#enterprise-search").type("CARREFOUR BANQUE", { delay: 0 });
     cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR BANQUE").click();
     cy.contains("Vous devez sélectionner une entreprise").should("not.exist");
