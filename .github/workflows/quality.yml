@@ -40,6 +40,8 @@ jobs:
       - name: Build code
         run: |
           yarn build
+        env:
+          NODE_ENV: "dev"
       - name: Cache build
         uses: actions/cache@v3
         with:
