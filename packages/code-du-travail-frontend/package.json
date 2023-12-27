@@ -19,7 +19,7 @@
     "pretest:api": "NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test node -r @swc-node/register scripts/generate-data.ts",
     "test": "yarn pretest:api && NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test jest --silent",
     "test:watch": "NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test jest --watch --silent",
-    "test:frontend": "jest --silent --testPathIgnorePatterns=src/api",
+    "test:frontend": "NEXT_PUBLIC_APP_ENV=test jest --silent --testPathIgnorePatterns=src/api",
     "test:frontend:update": "npm run test:frontend -- --updateSnapshot",
     "test:api": "yarn pretest:api && npm run test -- --testPathPattern=src/api",
     "test:api:update": "yarn pretest:api && npm run test:api -- --updateSnapshot",

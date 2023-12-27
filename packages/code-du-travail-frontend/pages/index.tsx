@@ -114,7 +114,7 @@ export async function getStaticProps() {
     tools = data.tools.map(({ _id, _source }) => ({ ..._source, _id }));
     contributions = data.contributions;
     modeles = data.modeles;
-    agreements = data.agreements;
+    agreements = data.agreements.map((v) => ({ ...v, title: v.shortTitle }));
   } catch (e) {
     console.error(e);
     Sentry.captureException(e);

@@ -12,7 +12,7 @@ export type GetHomePage = {
   tools: any;
   modeles: ElasticSearchItem[];
   contributions: ElasticSearchItem[];
-  agreements: ElasticSearchItem[];
+  agreements: ElasticSearchItem<{ shortTitle: string }>[];
 };
 
 export const getHomeData = async (): Promise<GetHomePage> => {
