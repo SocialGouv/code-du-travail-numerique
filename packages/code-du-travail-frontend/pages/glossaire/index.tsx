@@ -42,7 +42,7 @@ function Glossaire({ glossary }) {
 
 export async function getStaticProps() {
   let data: any;
-  if (process.env.NODE_ENV !== "production") {
+  if (process.env.NEXT_PUBLIC_APP_ENV !== "production") {
     const response = await fetch(`${SITE_URL}/api/glossary`);
     data = await response.json();
   } else {

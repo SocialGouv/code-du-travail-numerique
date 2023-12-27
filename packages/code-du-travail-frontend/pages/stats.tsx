@@ -88,7 +88,7 @@ const Stats = ({ data }: Props): JSX.Element => {
 export async function getStaticProps() {
   try {
     let data: PropsData;
-    if (process.env.NODE_ENV !== "production") {
+    if (process.env.NEXT_PUBLIC_APP_ENV !== "production") {
       const response = await fetch(`${SITE_URL}/api/stats`);
       data = await response.json();
     } else {

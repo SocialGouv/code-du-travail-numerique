@@ -197,8 +197,8 @@ const SimulatorContent = <StepName extends string>({
           <p>{visibleSteps[currentStepIndex].options?.annotation}</p>
         )}
       </StyledForm>
-      {process.env.NODE_ENV !== "production" &&
-        process.env.NODE_ENV !== "test" &&
+      {process.env.NEXT_PUBLIC_APP_ENV !== "production" &&
+        process.env.NEXT_PUBLIC_APP_ENV !== "test" &&
         debug}
     </StyledWrapper>
   );
