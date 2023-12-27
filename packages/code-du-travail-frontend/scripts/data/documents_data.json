@@ -5029,7 +5029,7 @@
   },
   {
     "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
-    "title": "Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.",
+    "title": "Services de l'automobile Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.",
     "shortTitle": "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
     "num": 1090,
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635191",
@@ -5060,8 +5060,8 @@
   },
   {
     "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
-    "title": "Convention collective régionale test métallurgie",
-    "shortTitle": "Convention collective régionale test métallurgie",
+    "title": "Éducation, culture, loisirs et animation au service des territoires (ÉCLAT)",
+    "shortTitle": "Convention collective Éducation, culture, loisirs et animation au service des territoires (ÉCLAT)",
     "num": 1234,
     "date_publi": "1981-04-01T00:00:00.000Z",
     "cdtnId": "98b9c85aaaa",
@@ -5069,9 +5069,9 @@
     "id": "KALICONT000005635191",
     "isPublished": true,
     "metaDescription": "Idcc 1234 : test",
-    "slug": "1234-cc-metalurgie-rest",
+    "slug": "1518-education-culture-loisirs-et-animation-au-service-des-territoires-eclat",
     "source": "conventions_collectives",
-    "text": "Convention collective régionale test métallurgie",
+    "text": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
     "contributions": true
   },
   {

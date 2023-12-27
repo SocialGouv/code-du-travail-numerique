@@ -22,6 +22,7 @@ import { getErrorEligibility } from "./eligibility";
 import { customSeniorityValidator } from "../../../agreements/seniority";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
+import { MainStore } from "../../../store";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -120,6 +121,7 @@ const createAncienneteStore: StoreSlice<
       let errorEligibility;
       if (isValid) {
         errorEligibility = getErrorEligibility(
+          get as StoreApi<MainStore>["getState"],
           get().ancienneteData.input,
           get().informationsData.input,
           get().contratTravailData.input.licenciementInaptitude === "oui",

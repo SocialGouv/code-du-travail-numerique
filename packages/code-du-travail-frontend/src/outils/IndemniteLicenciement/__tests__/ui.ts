@@ -225,6 +225,57 @@ export const ui = {
         "infos.contrat salarié - convention collective - ouvriers travaux public - indemnité de licenciement - age"
       ),
     },
+    agreement3248: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle"
+      ),
+      dayContract: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - forfait jour - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - forfait jour - Non"
+        ),
+      },
+      alwaysDayContract: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - toujours au forfait jour - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - toujours au forfait jour - Non"
+        ),
+      },
+      dateDayContract: byTestId(
+        "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - forfait jour - date"
+      ),
+      hasBeenCadre: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - avant cadre - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - avant cadre - Non"
+        ),
+      },
+      age: byTestId(
+        "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - FGHI - age"
+      ),
+      retirementRight: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - FGHI - remplit conditions pour la retraite - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - FGHI - remplit conditions pour la retraite - Non"
+        ),
+      },
+      absencesProlongesRepetes: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - licenciement pour motif absence prolongée ou répétées - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - licenciement pour motif absence prolongée ou répétées - Non"
+        ),
+      },
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),

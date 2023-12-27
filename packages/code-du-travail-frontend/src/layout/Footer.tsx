@@ -19,7 +19,7 @@ import { GouvernementSection } from "./Footer/GovernmentSection";
 const { DirectionRight: DirectionRightIcon } = icons;
 
 const Footer = (): JSX.Element => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <OverflowWrapper>
@@ -219,10 +219,10 @@ const Footer = (): JSX.Element => {
                   <li>
                     <Link
                       passHref
-                      href="/convention-collective/650-metallurgie-ingenieurs-et-cadres"
+                      href="/convention-collective/3248-metallurgie"
                       legacyBehavior
                     >
-                      <StyledLink>Métallurgie ingénieurs et cadres</StyledLink>
+                      <StyledLink>Métallurgie</StyledLink>
                     </Link>
                   </li>
                   <li>

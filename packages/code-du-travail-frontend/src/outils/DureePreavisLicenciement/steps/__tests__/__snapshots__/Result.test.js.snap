@@ -8,7 +8,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
     Durée du préavis
   </h2>
   <strong
-    class="sc-dExYaf fmRwFa"
+    class="sc-dExYaf jfKxvr"
     role="alert"
   >
     Aucun préavis
@@ -206,7 +206,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-dExYaf fmRwFa"
+      class="sc-dExYaf jfKxvr"
       role="alert"
     >
       1 mois
@@ -301,7 +301,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
           Durée conventionnelle :
            
           <strong>
-            La convention collective n'a pas été traitée par nos services.
+            1 mois
           </strong>
         </li>
       </ul>
@@ -333,11 +333,52 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
           </strong>
         </li>
         <li>
+          Catégorie professionnelle
+           : 
+          <strong>
+            Employés
+          </strong>
+        </li>
+        <li>
+          Ancienneté selon la convention collective
+           : 
+          <strong>
+            1 mois à moins de 2 ans
+          </strong>
+        </li>
+        <li>
           Convention collective
            : 
           <strong>
             Transports routiers et activités auxiliaires du transport
           </strong>
+        </li>
+      </ul>
+      <h2
+        class="sc-eulNck hQsmqe"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label="Article L.1234-1 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Article L.1234-1 du code du travail
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Annexe II, article 13 (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Annexe II, article 13
+          </a>
         </li>
       </ul>
     </div>
@@ -379,16 +420,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       </div>
     </div>
     <p>
-      Une durée de préavis de licenciement ou une condition d’ancienneté plus favorable au salarié peut être prévue par une convention collective, un accord de branche, un accord d’entreprise ou le contrat de travail ou les usages.
-    </p>
-    <p>
-      Vous pouvez faire une recherche par mots-clés dans
-       
-      <a
-        href="/convention-collective/16-transports-routiers-et-activites-auxiliaires-du-transport"
-      >
-        votre convention collective
-      </a>
+      Une durée de préavis de licenciement ou une condition d’ancienneté plus favorable au salarié que ce que prévoit le code du travail peut être prévue par la loi pour certains cas particuliers, par un accord d’entreprise, le contrat de travail ou les usages.
     </p>
   </div>
 </div>
@@ -401,14 +433,50 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   >
     Durée du préavis
   </h2>
-  <strong
-    class="sc-dExYaf fmRwFa"
-    role="alert"
-  >
-    Aucun préavis
-  </strong>
   <p>
-    Le code du travail ne prévoit pas de durée de préavis de licenciement sauf, cas particuliers.
+    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
+     
+    <strong
+      class="sc-dExYaf jfKxvr"
+      role="alert"
+    >
+      1 mois
+    </strong>
+    <sup
+      class="sc-gvZAcH cpmNvN"
+    >
+      *
+    </sup>
+    .
+  </p>
+  <p
+    class="sc-iapWAC iKJmJG"
+  >
+    <sup
+      class="sc-gvZAcH cpmNvN"
+    >
+      * 
+    </sup>
+    Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
+    <i
+      class="sc-iapWAC iKJmJG"
+    >
+       
+      Exemple : si le salarié reçoit le courrier recommandé le
+       
+      5 avril
+       alors il effectuera son dernier jour dans l’entreprise le 
+      4 mai
+      . Si le 
+      4 mai
+       tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
+    </i>
+    <span
+      class="sc-iapWAC iKJmJG"
+    >
+      <br />
+      L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
+    </span>
   </p>
   <div>
     <button
@@ -464,7 +532,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
           Durée conventionnelle :
            
           <strong>
-            La convention collective n'a pas été traitée par nos services.
+            1 mois
           </strong>
         </li>
       </ul>
@@ -496,11 +564,52 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
           </strong>
         </li>
         <li>
+          Catégorie professionnelle
+           : 
+          <strong>
+            Employés
+          </strong>
+        </li>
+        <li>
+          Ancienneté selon la convention collective
+           : 
+          <strong>
+            1 mois à moins de 2 ans
+          </strong>
+        </li>
+        <li>
           Convention collective
            : 
           <strong>
             Transports routiers et activités auxiliaires du transport
           </strong>
+        </li>
+      </ul>
+      <h2
+        class="sc-eulNck hQsmqe"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label="Article L.1234-1 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Article L.1234-1 du code du travail
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Annexe II, article 13 (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Annexe II, article 13
+          </a>
         </li>
       </ul>
     </div>
@@ -542,16 +651,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       </div>
     </div>
     <p>
-      L’existence et la durée du préavis de licenciement peuvent être prévues dans la convention collective, un accord d’entreprise ou à défaut par un usage dans l’entreprise.
-    </p>
-    <p>
-      Vous pouvez faire une recherche par mots-clés dans
-       
-      <a
-        href="/convention-collective/16-transports-routiers-et-activites-auxiliaires-du-transport"
-      >
-        votre convention collective
-      </a>
+      L’existence ou la durée du préavis de licenciement peut aussi être prévue dans un accord d’entreprise ou à défaut par un usage dans l’entreprise.
     </p>
   </div>
 </div>
@@ -568,7 +668,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-dExYaf fmRwFa"
+      class="sc-dExYaf jfKxvr"
       role="alert"
     >
       2 mois
@@ -748,7 +848,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
      
     <strong
-      class="sc-dExYaf fmRwFa"
+      class="sc-dExYaf jfKxvr"
       role="alert"
     >
       2 mois

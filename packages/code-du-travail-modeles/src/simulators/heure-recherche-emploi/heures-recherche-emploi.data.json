@@ -26,16 +26,17 @@
       "question": "Quel est le motif de rupture du contrat de travail ?"
     },
     {
+      "name": "forfait jour",
+      "question": "Le salarié est-il au forfait jour ?",
+      "note": "Le dispositif du forfait en jours permet de rémunérer certains salariés sur la base d’un nombre de jours travaillés annuellement, sans décompte du temps de travail. Les salariés disposent d’une grande liberté pour organiser leur emploi du temps."
+    },
+    {
       "name": "durée du travail",
       "question": "Quelle est la durée du travail du salarié ?"
     },
     {
       "name": "durée du préavis",
       "question": "Quelle est la durée du préavis du salarié ?"
-    },
-    {
-      "name": "délai de prévenance",
-      "question": "Quelle est la durée du préavis (aussi appelé délai de prévenance) ?"
     },
     {
       "name": "type de rupture",
@@ -1101,83 +1102,6 @@
       "answer3": null,
       "ref": "Article 33",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802018&cidTexte=KALITEXT000005673619&dateTexte=20120223"
-    },
-    {
-      "criteria": {
-        "initiative de la rupture de la période d'essai": "1| L'employeur",
-        "délai de prévenance": "9| Moins de 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 650,
-      "typeRupture": "7| Rupture de la période d'essai",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 5",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=57F47D8854408E0F4430B9225AD446C2.tplgfr29s_2?idArticle=KALIARTI000023173728&cidTexte=KALITEXT000005673470&dateTexte=29981231&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "initiative de la rupture de la période d'essai": "1| L'employeur",
-        "délai de prévenance": "8| 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 650,
-      "typeRupture": "7| Rupture de la période d'essai",
-      "answer": "30 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les absences cessent d'être autorisées, dès que l'intéressé a trouvé un emploi. Les heures peuvent, avec l'accord de l'employeur, être bloquées.",
-      "ref": "Article 5",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=57F47D8854408E0F4430B9225AD446C2.tplgfr29s_2?idArticle=KALIARTI000023173728&cidTexte=KALITEXT000005673470&dateTexte=29981231&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "initiative de la rupture de la période d'essai": "1| L'employeur",
-        "délai de prévenance": "11| Un mois"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 650,
-      "typeRupture": "7| Rupture de la période d'essai",
-      "answer": "60 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les absences cessent d'être autorisées, dès que l'intéressé a trouvé un emploi. Les heures peuvent, avec l'accord de l'employeur, être bloquées.",
-      "ref": "Article 5",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=57F47D8854408E0F4430B9225AD446C2.tplgfr29s_2?idArticle=KALIARTI000023173728&cidTexte=KALITEXT000005673470&dateTexte=29981231&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "initiative de la rupture de la période d'essai": "2| Le salarié"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 650,
-      "typeRupture": "7| Rupture de la période d'essai",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 5",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=57F47D8854408E0F4430B9225AD446C2.tplgfr29s_2?idArticle=KALIARTI000023173728&cidTexte=KALITEXT000005673470&dateTexte=29981231&categorieLien=id"
-    },
-    {
-      "criteria": {},
-      "type": "heures pour recherche d'emploi",
-      "idcc": 650,
-      "typeRupture": "1| Démission",
-      "answer": "50 heures par mois",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Si le salarié n'utilise pas, sur la demande de son employeur, tout ou partie de ces heures et si ces heures n'ont pas été bloquées avant l'expiration du préavis en accord avec l'employeur, il percevra à son départ une indemnité correspondant au nombre d'heures inutilisées.",
-      "ref": "Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=35EAB16785909B4320F79BDE561E5E6A.tplgfr29s_2?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {},
-      "type": "heures pour recherche d'emploi",
-      "idcc": 650,
-      "typeRupture": "3| Licenciement",
-      "answer": "50 heures par mois",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Si le salarié n'utilise pas, sur la demande de son employeur, tout ou partie de ces heures et si ces heures n'ont pas été bloquées avant l'expiration du préavis en accord avec l'employeur, il percevra à son départ une indemnité correspondant au nombre d'heures inutilisées.",
-      "ref": "Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=35EAB16785909B4320F79BDE561E5E6A.tplgfr29s_2?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {},
@@ -3251,6 +3175,129 @@
       "answer3": null,
       "ref": "Section 2 Période d'essai du contrat de travail à durée indéterminée",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8F2D5914256C40BA951DD21EC1A2C521.tplgfr29s_3?idArticle=KALIARTI000026943300&cidTexte=KALITEXT000026943196&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
+        "ancienneté": "48| moins d’un mois",
+        "forfait jour": "1| Oui"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 3248,
+      "typeRupture": "7| Rupture de la période d'essai",
+      "answer": null,
+      "answer2": null,
+      "answer3": "il n'y a pas d'heures d'absence autorisée pour rechercher un emploi pour ce cas.",
+      "ref": "Article 70.5.3.2",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314504?idConteneur=KALICONT000046993250#KALIARTI000046314504",
+      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+    },
+    {
+      "criteria": {
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
+        "ancienneté": "48| moins d’un mois",
+        "forfait jour": "2| Non"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 3248,
+      "typeRupture": "7| Rupture de la période d'essai",
+      "answer": null,
+      "answer2": null,
+      "answer3": "il n'y a pas d'heures d'absence autorisée pour rechercher un emploi pour ce cas.",
+      "ref": "Article 70.5.3.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314503?idConteneur=KALICONT000046993250#KALIARTI000046314503",
+      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+    },
+    {
+      "criteria": {
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
+        "ancienneté": "49| un mois ou plus",
+        "forfait jour": "1| Oui"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 3248,
+      "typeRupture": "7| Rupture de la période d'essai",
+      "answer": "1 jour pour 15 jours travaillés",
+      "answer2": "Le salaire est maintenu.",
+      "answer3": "Cette journée est convenue entre l'employeur et le salarié. En l'absence d'accord, elle est fixée une fois par l’employeur et une fois par le salarié. Si la durée du préavis est égale à 2 semaines, la journée est fixée par l'employeur. Les absences cessent d'être autorisées, dès que le salarié a retrouvé un emploi.",
+      "ref": "Article 70.5.3.2",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314504?idConteneur=KALICONT000046993250#KALIARTI000046314504",
+      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+    },
+    {
+      "criteria": {
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
+        "ancienneté": "49| un mois ou plus",
+        "forfait jour": "2| Non"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 3248,
+      "typeRupture": "7| Rupture de la période d'essai",
+      "answer": "2h30 par jour travaillé",
+      "answer2": "Le salaire est maintenu.",
+      "answer3": "L’utilisation de ces heures, y compris leur regroupement éventuel, est convenue entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Les absences cessent d'être autorisées, dès que le salarié a retrouvé un emploi.",
+      "ref": "Article 70.5.3.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314503?idConteneur=KALICONT000046993250#KALIARTI000046314503",
+      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+    },
+    {
+      "criteria": {
+        "initiative de la rupture de la période d'essai": "2| Le salarié"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 3248,
+      "typeRupture": "7| Rupture de la période d'essai",
+      "answer": null,
+      "answer2": null,
+      "answer3": "il n'y a pas d'heures d'absence lorsque la rupture de la période d'essai est à l'initiative du salarié.",
+      "ref": "Article 70.5.3.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314503?idConteneur=KALICONT000046993250#KALIARTI000046314503",
+      "ref2": "Article 70.5.3.2",
+      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314504?idConteneur=KALICONT000046993250#KALIARTI000046314504",
+      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+    },
+    {
+      "criteria": {},
+      "type": "heures pour recherche d'emploi",
+      "idcc": 3248,
+      "typeRupture": "1| Démission",
+      "answer": null,
+      "answer2": null,
+      "answer3": "il n'y a pas d'heures d'absence pour recherche d'emploi en cas de démission.",
+      "ref": "Article 74.2.2",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314526?idConteneur=KALICONT000046993250#KALIARTI000046314526",
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+    },
+    {
+      "criteria": {
+        "forfait jour": "2| Non"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 3248,
+      "typeRupture": "3| Licenciement",
+      "answer": "2h30 maximum par jour travaillé (dans la limite de 50 heures par mois de préavis)",
+      "answer2": "Le salaire est maintenu.",
+      "answer3": "L'employeur et le salarié s’entendent sur les modalités de prise de ces heures (y compris sur leur regroupement éventuel). À défaut d'accord entre les parties, les heures sont fixées alternativement un jour par l'employeur et un jour par le salarié. Elles peuvent être regroupées si le salarié occupe un poste qui présente des contraintes d’organisation particulières. Les absences cessent d'être autorisées, dès que le salarié a retrouvé un emploi.",
+      "ref": "Article 75.2.3.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314533?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046314533",
+      "note": [
+        "Si la lettre de licenciement a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024.",
+        "Pour le salarié à temps partiel, le volume de 50 heures est réduit proportionnellement à son temps de travail"
+      ]
+    },
+    {
+      "criteria": {
+        "forfait jour": "1| Oui"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 3248,
+      "typeRupture": "3| Licenciement",
+      "answer": "1 jour pour 15 jours travaillés",
+      "answer2": "Le salaire est maintenu.",
+      "answer3": "Cette journée est convenue entre l'employeur et le salarié. En l'absence d'accord, elle est fixée une fois par l’employeur et une fois par le salarié. Les absences cessent d'être autorisées, dès que le salarié a retrouvé un emploi.",
+      "ref": "Article 75.2.3.2",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314534?idConteneur=KALICONT000046993250#KALIARTI000046314534",
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
     }
   ]
 }
