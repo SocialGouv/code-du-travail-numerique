@@ -4,12 +4,11 @@ import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 import SearchHero from "../src/search/SearchHero";
 import { Highlights, HomeSlice, Themes, Tools } from "../src/home";
-import { GetHomePage } from "../src/api";
+import { GetHomePage, getHomeData } from "../src/api";
 import { ListLinkItemProps } from "../src/search/SearchResults/Results";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent, MatomoHomeEvent } from "../src/lib";
 import EventTracker from "../src/lib/tracking/EventTracker";
-import { getHomeData } from "../src/api/modules/home/controller/get";
 import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 
 const Home = ({

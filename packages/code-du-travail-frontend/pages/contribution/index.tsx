@@ -15,7 +15,8 @@ import { handleError } from "../../src/lib/fetch-error";
 import styled from "styled-components";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { getGenericContributionsGroupByThemes } from "../../src/api";
 
 const ALL = "all";
 
@@ -85,12 +86,14 @@ function Page({ contribs }) {
 export default Page;
 
 export const getServerSideProps = async () => {
-  const response = await fetch(`${SITE_URL}/api/contributions`);
-  if (!response.ok) {
-    return handleError(response);
+  let data: any;
+  if (process.env.NODE_ENV !== "production") {
+    const response = await fetch(`${SITE_URL}/api/contributions`);
+    data = await response.json();
+  } else {
+    data = await getGenericContributionsGroupByThemes();
   }
-  const contribs = await response.json();
-  return { props: { contribs } };
+  return { props: { contribs: data }, revalidate: REVALIDATE_TIME };
 };
 const ListItem = styled.li`
   margin-top: ${theme.spacings.medium};

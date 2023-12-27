@@ -16,7 +16,8 @@ import { ListLink } from "../../src/search/SearchResults/Results";
 import styled from "styled-components";
 import Link from "next/link";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { getAllAgreements } from "../../src/api";
 
 function Page({ ccs }) {
   return (
@@ -80,12 +81,14 @@ function Page({ ccs }) {
 export default Page;
 
 export const getServerSideProps = async () => {
-  const response = await fetch(`${SITE_URL}/api/agreements`);
-  if (!response.ok) {
-    return handleError(response);
+  let data: any;
+  if (process.env.NODE_ENV !== "production") {
+    const response = await fetch(`${SITE_URL}/api/agreements`);
+    data = await response.json();
+  } else {
+    data = await getAllAgreements();
   }
-  const ccs = await response.json();
-  return { props: { ccs } };
+  return { props: { ccs: data }, revalidate: REVALIDATE_TIME };
 };
 const ListItem = styled.li`
   margin-top: ${theme.spacings.medium};

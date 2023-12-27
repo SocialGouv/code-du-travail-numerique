@@ -14,10 +14,11 @@ import styled from "styled-components";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { summarize } from "../../src/search/utils";
-import { SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
 import { handleError } from "../../src/lib/fetch-error";
 import EventTracker from "../../src/lib/tracking/EventTracker";
+import { getAllModeles } from "../../src/api";
 
 const title = "Modèles de documents";
 const subtitle =
@@ -106,15 +107,14 @@ function Modeles(props) {
 }
 
 export const getServerSideProps = async () => {
-  const response = await fetch(`${SITE_URL}/api/modeles`);
-  if (!response.ok) {
-    return handleError(response);
+  let data: any;
+  if (process.env.NODE_ENV !== "production") {
+    const response = await fetch(`${SITE_URL}/api/modeles`);
+    data = await response.json();
+  } else {
+    data = await getAllModeles();
   }
-  const data = await response.json();
-
-  return {
-    props: { data },
-  };
+  return { props: { data }, revalidate: REVALIDATE_TIME };
 };
 
 const { spacings } = th;

@@ -11,9 +11,8 @@ import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 import styled from "styled-components";
 import Link from "next/link";
-import { GetSitemapPage } from "../src/api";
+import { getSitemapData, GetSitemapPage } from "../src/api";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { getSitemapData } from "../src/api/modules/sitemap/controller/get";
 import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 
 const PlanDuSite = ({
