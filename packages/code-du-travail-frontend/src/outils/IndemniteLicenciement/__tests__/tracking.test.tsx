@@ -173,7 +173,7 @@ describe("Indemnité licenciement - Tracking", () => {
       .click(ui.agreement.noAgreement.get())
       .click(ui.agreement.agreement.get())
       .setInput(ui.agreement.agreementInput.get(), "16")
-      .click(await waitFor(() => ui.agreement.searchItem.agreement16.get()));
+      .click(await waitFor(() => ui.agreement.ccChoice.transport.get()));
 
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
@@ -194,7 +194,7 @@ describe("Indemnité licenciement - Tracking", () => {
       .click(ui.agreement.noAgreement.get())
       .click(ui.agreement.agreement.get())
       .setInput(ui.agreement.agreementInput.get(), "16")
-      .click(await waitFor(() => ui.agreement.searchItem.agreement16.get()))
+      .click(await waitFor(() => ui.agreement.ccChoice.transport.get()))
       .click(ui.next.get());
 
     expect(push).toHaveBeenCalledWith([

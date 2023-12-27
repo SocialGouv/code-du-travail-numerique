@@ -151,6 +151,7 @@ export const getServerSideProps = async ({ query }) => {
   if (
     data._source?.type === "content" ||
     data._source?.type === "fiche-sp" ||
+    data._source?.type === "generic-no-cdt" ||
     data._source?.type === "cdt"
   ) {
     return {

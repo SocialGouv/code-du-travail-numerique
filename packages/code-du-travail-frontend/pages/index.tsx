@@ -3,14 +3,14 @@ import React from "react";
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 import SearchHero from "../src/search/SearchHero";
-import { SITE_URL } from "../src/config";
 import { Highlights, HomeSlice, Themes, Tools } from "../src/home";
 import { GetHomePage } from "../src/api";
 import { ListLinkItemProps } from "../src/search/SearchResults/Results";
-import { handleError } from "../src/lib/fetch-error";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent, MatomoHomeEvent } from "../src/lib";
 import EventTracker from "../src/lib/tracking/EventTracker";
+import { getHomeData } from "../src/api/modules/home/controller/get";
+import { SITE_URL } from "../src/config";
 
 const Home = ({
   themes,
@@ -103,9 +103,13 @@ export async function getStaticProps() {
   let agreements: GetHomePage["agreements"] = [];
 
   try {
-    const response = await fetch(`${SITE_URL}/api/home`);
-    if (!response.ok) handleError(response);
-    const data: GetHomePage = await response.json();
+    let data: GetHomePage;
+    if (process.env.NODE_ENV !== "production") {
+      const response = await fetch(`${SITE_URL}/api/home`);
+      data = await response.json();
+    } else {
+      data = await getHomeData();
+    }
     themes = data.themes.children;
     highlights = data.highlights;
     tools = data.tools.map(({ _id, _source }) => ({ ..._source, _id }));
@@ -126,7 +130,7 @@ export async function getStaticProps() {
       modeles,
       agreements,
     },
-    revalidate: 600, // 10 minutes
+    revalidate: 1800, // 30 minutes
   };
 }
 

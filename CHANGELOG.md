@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.117.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.116.0...v4.117.0) (2023-12-21)
+
+### Bug Fixes
+
+- affichage du nom court de la CC sur la page de résultat des outils (fix des test e2e) ([#5499](https://github.com/SocialGouv/code-du-travail-numerique/issues/5499)) ([0826bbf](https://github.com/SocialGouv/code-du-travail-numerique/commit/0826bbf56207690d05baf83ae6df39c165078690))
+- ajout du support de la 3248 dans POC des contributions ([#5503](https://github.com/SocialGouv/code-du-travail-numerique/issues/5503)) ([20d80a0](https://github.com/SocialGouv/code-du-travail-numerique/commit/20d80a0c6b78595f0ce052c9d8e9eb0bbd277a38))
+- correction d'une erreur HTML dans le code ([#5510](https://github.com/SocialGouv/code-du-travail-numerique/issues/5510)) ([8bc4027](https://github.com/SocialGouv/code-du-travail-numerique/commit/8bc402741348af9acd067588122048a5c6265e8b))
+- mise à jour du sous-titre de la page convention collective ([#5498](https://github.com/SocialGouv/code-du-travail-numerique/issues/5498)) ([3beb637](https://github.com/SocialGouv/code-du-travail-numerique/commit/3beb6378e6417f3d876124de1c3fc9025a051776))
+- ne pas trim car on a des balises contenant un simple espace par moment ([#5504](https://github.com/SocialGouv/code-du-travail-numerique/issues/5504)) ([6deeedf](https://github.com/SocialGouv/code-du-travail-numerique/commit/6deeedf4ddc1fd7896a3defffb0d7c2342468b08))
+- **performance:** valeur de préprod mise en adéquation avec la prod ([#5500](https://github.com/SocialGouv/code-du-travail-numerique/issues/5500)) ([29ebdc8](https://github.com/SocialGouv/code-du-travail-numerique/commit/29ebdc8df8896cb3788f831143b2f42f6169dca4))
+- support du rowspan dans le thead des tableaux ([#5508](https://github.com/SocialGouv/code-du-travail-numerique/issues/5508)) ([6cc22f4](https://github.com/SocialGouv/code-du-travail-numerique/commit/6cc22f4b1082c7df25f7820f82b8fda71710fed8))
+- suppression d'un dollar en trop ([#5507](https://github.com/SocialGouv/code-du-travail-numerique/issues/5507)) ([b964219](https://github.com/SocialGouv/code-du-travail-numerique/commit/b964219d35186962db2d328ddf9844a1875539ae))
+
+### Features
+
+- placer les références sans url à la fin de la liste ([#5506](https://github.com/SocialGouv/code-du-travail-numerique/issues/5506)) ([923b7b2](https://github.com/SocialGouv/code-du-travail-numerique/commit/923b7b257e9996610dab77e712394adc1e64796c))
+
 # [4.116.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.115.0...v4.116.0) (2023-12-18)
 
 ### Bug Fixes

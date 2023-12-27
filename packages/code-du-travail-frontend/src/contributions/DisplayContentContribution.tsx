@@ -61,13 +61,47 @@ function getNextFirstElement(domNode: Element) {
   return next;
 }
 
+const theadMaxRowspan = (tr: Element) => {
+  const rowspans = tr.children.map((child) => {
+    if (child.type === "tag" && child.name === "td") {
+      return parseInt(child.attribs["rowspan"] ?? -1);
+    } else {
+      return -1;
+    }
+  });
+  const maxRowspan = rowspans.reduce(
+    (previousValue, currentValue, currentIndex, array) =>
+      currentValue > previousValue ? currentValue : previousValue,
+    0
+  );
+  return maxRowspan === -1 ? 1 : maxRowspan;
+};
+
 const mapTbody = (tbody: Element) => {
-  const tr = getFirstElementChild(tbody);
+  let theadChildren: Element[] = [];
+  const firstLine = getFirstElementChild(tbody);
+
+  if (firstLine) {
+    let maxRowspan = theadMaxRowspan(firstLine);
+    theadChildren.push(firstLine);
+    for (let i = 1; i < maxRowspan; i++) {
+      let child = getFirstElementChild(tbody);
+      if (child) {
+        theadChildren.push(child);
+      }
+    }
+  }
 
   return (
     <UITable>
-      {tr && (
-        <thead>{domToReact(tr.children as DOMNode[], { trim: true })}</thead>
+      {theadChildren.length > 0 && (
+        <thead>
+          {theadChildren.map((child, index) => (
+            <tr key={`tr-${index}`}>
+              {domToReact(child.children as DOMNode[], { trim: true })}
+            </tr>
+          ))}
+        </thead>
       )}
       <tbody>{domToReact(tbody.children as DOMNode[], { trim: true })}</tbody>
     </UITable>
@@ -120,6 +154,20 @@ const options = (titleLevel: number): HTMLReactParserOptions => ({
       }
       if (domNode.name === "p" && !domNode.children.length) {
         return <></>;
+      }
+      if (domNode.name === "strong") {
+        // Disable trim on strong
+        return (
+          <strong>
+            {domToReact(domNode.children as DOMNode[], { trim: false })}
+          </strong>
+        );
+      }
+      if (domNode.name === "em") {
+        // Disable trim on em
+        return (
+          <em>{domToReact(domNode.children as DOMNode[], { trim: false })}</em>
+        );
       }
     }
   },

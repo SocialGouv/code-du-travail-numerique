@@ -49,7 +49,11 @@ function Page({ ccs }) {
           </Toast>
           <p>
             Vous ne connaissez pas votre convention collective ?{" "}
-            <Link href={`/outils/convention-collective`} passHref>
+            <Link
+              href={`/outils/convention-collective`}
+              passHref
+              legacyBehavior
+            >
               <Button as="a" variant="link" hasText>
                 Trouvez la
               </Button>
