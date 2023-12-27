@@ -12,10 +12,10 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
-import { SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
+import { getAllThemes } from "../../src/api";
 
 const SubThemes = ({ children = [] }) => {
   return (
@@ -71,15 +71,24 @@ const ThemesPage = ({ children = [] }) => (
   </Layout>
 );
 
-export const getServerSideProps = async () => {
-  const response = await fetch(`${SITE_URL}/api/themes`);
-  if (!response.ok) {
-    return handleError(response);
+export async function getStaticProps() {
+  try {
+    let data: any;
+    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
+      const response = await fetch(`${SITE_URL}/api/themes`);
+      data = await response.json();
+    } else {
+      data = await getAllThemes();
+    }
+    return { props: { children: data.children }, revalidate: REVALIDATE_TIME };
+  } catch (error) {
+    console.error(error);
+    return {
+      props: { children: [] },
+      revalidate: REVALIDATE_TIME,
+    };
   }
-
-  const { children } = await response.json();
-  return { props: { children } };
-};
+}
 
 export default ThemesPage;
 

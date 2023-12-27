@@ -153,13 +153,13 @@ export type Agreement = {
   contributions: boolean;
 };
 
-export type ElasticSearchItem = {
+export type ElasticSearchItem<T = void> = {
   description: string;
   source: string;
   title: string;
   slug: string;
   breadcrumbs: Breadcrumb[];
-};
+} & T;
 
 type ElasticSearchContributionFicheSp = {
   type: "fiche-sp";
@@ -195,7 +195,7 @@ type ContributionHighlight = {
   searchInfo?: string;
 };
 
-type ElasticSearchContributionBase = ElasticSearchItem & {
+type ElasticSearchContributionBase = ElasticSearchItem<any> & {
   source: "contributions";
   linkedContent: ContributionLinkedContent[];
   references: ContributionRef[];

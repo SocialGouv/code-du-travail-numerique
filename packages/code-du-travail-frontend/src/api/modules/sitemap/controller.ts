@@ -1,19 +1,6 @@
-import { Agreement, ElasticSearchItem, Tool } from "@socialgouv/cdtn-utils";
 import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
-import { getAllAgreements } from "../agreements";
-import { getGenericsContributions } from "../contributions";
-import { getAllModeles } from "../modeles";
-import { getAllThemesAndSubThemes } from "../themes";
-import { getAllTools } from "../tools";
-
-export type GetSitemapPage = {
-  themes: any;
-  tools: Tool[];
-  modeles: ElasticSearchItem[];
-  contributions: ElasticSearchItem[];
-  agreements: Agreement[];
-};
+import { getSitemapData } from "./service";
 
 export class SitemapController {
   private req: NextApiRequest;
@@ -26,18 +13,7 @@ export class SitemapController {
 
   public async get() {
     try {
-      const themes = await getAllThemesAndSubThemes();
-      const tools = await getAllTools();
-      const modeles = await getAllModeles();
-      const contributions = await getGenericsContributions();
-      const agreements = await getAllAgreements();
-      const response: GetSitemapPage = {
-        themes,
-        tools,
-        modeles,
-        contributions,
-        agreements,
-      };
+      const response = await getSitemapData();
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {

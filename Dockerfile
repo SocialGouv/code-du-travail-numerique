@@ -45,7 +45,7 @@ RUN yarn fetch --immutable
 
 COPY . ./
 
-ENV NODE_ENV=production
+ENV NEXT_PUBLIC_APP_ENV=production
 
 # hadolint ignore=SC2046
 RUN --mount=type=secret,id=sentry_auth_token \
@@ -64,7 +64,7 @@ FROM node:$NODE_VERSION
 # hadolint ignore=DL3018
 RUN apk --update --no-cache add ca-certificates && apk upgrade
 
-ENV NODE_ENV=production
+ENV NEXT_PUBLIC_APP_ENV=production
 
 WORKDIR /app
 

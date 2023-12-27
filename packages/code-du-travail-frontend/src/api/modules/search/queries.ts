@@ -13,6 +13,7 @@ export function getSemQuery(queryVector: any, sources: any, size: number) {
       "cdtnId",
       "highlight",
       "sectionDisplayMode",
+      "shortTitle",
     ],
     query: {
       script_score: {
@@ -72,7 +73,7 @@ export const sourcesFilter = (sources: any) =>
 
 export function getRelatedThemesBody(query, size = 5) {
   return {
-    _source: ["icon", "title", "slug", "url", "source", "cdtnId"],
+    _source: ["icon", "title", "slug", "url", "source", "cdtnId", "shortTitle"],
     query: {
       bool: {
         filter: [
@@ -103,7 +104,15 @@ export function getRelatedThemesBody(query, size = 5) {
 
 export function getRelatedArticlesBody(query: any, size = 5) {
   return {
-    _source: ["title", "slug", "url", "source", "description", "cdtnId"],
+    _source: [
+      "title",
+      "slug",
+      "url",
+      "source",
+      "description",
+      "cdtnId",
+      "shortTitle",
+    ],
     query: {
       bool: {
         filter: [
@@ -185,6 +194,7 @@ export function getSearchBody(query, size, sources) {
       "cdtnId",
       "highlight",
       "sectionDisplayMode",
+      "shortTitle",
     ],
     query: {
       bool: {

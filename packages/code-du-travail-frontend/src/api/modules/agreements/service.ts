@@ -43,7 +43,7 @@ export const getBySlugsAgreements = async (
 
 export const getByIdsAgreements = async (
   ids: string[]
-): Promise<ElasticSearchItem[]> => {
+): Promise<ElasticSearchItem<{ shortTitle: string }>[]> => {
   const body = getAgreementsByIds(ids);
   const response = await elasticsearchClient.search({
     body,

@@ -1,9 +1,9 @@
 import { Agreement, ElasticSearchItem, Tool } from "@socialgouv/cdtn-utils";
-import { getAllAgreements } from "../../agreements";
-import { getGenericsContributions } from "../../contributions";
-import { getAllModeles } from "../../modeles";
-import { getAllThemesAndSubThemes } from "../../themes";
-import { getAllTools } from "../../tools";
+import { getAllAgreements } from "../agreements";
+import { getGenericsContributions } from "../contributions";
+import { getAllModeles } from "../modeles";
+import { getAllThemesAndSubThemes } from "../themes";
+import { getAllTools } from "../tools";
 
 export type GetSitemapPage = {
   themes: any;

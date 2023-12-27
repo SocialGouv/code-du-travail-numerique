@@ -4,13 +4,12 @@ import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 import SearchHero from "../src/search/SearchHero";
 import { Highlights, HomeSlice, Themes, Tools } from "../src/home";
-import { GetHomePage } from "../src/api";
+import { GetHomePage, getHomeData } from "../src/api";
 import { ListLinkItemProps } from "../src/search/SearchResults/Results";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent, MatomoHomeEvent } from "../src/lib";
 import EventTracker from "../src/lib/tracking/EventTracker";
-import { getHomeData } from "../src/api/modules/home/controller/get";
-import { SITE_URL } from "../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 
 const Home = ({
   themes,
@@ -104,7 +103,7 @@ export async function getStaticProps() {
 
   try {
     let data: GetHomePage;
-    if (process.env.NODE_ENV !== "production") {
+    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
       const response = await fetch(`${SITE_URL}/api/home`);
       data = await response.json();
     } else {
@@ -115,7 +114,7 @@ export async function getStaticProps() {
     tools = data.tools.map(({ _id, _source }) => ({ ..._source, _id }));
     contributions = data.contributions;
     modeles = data.modeles;
-    agreements = data.agreements;
+    agreements = data.agreements.map((v) => ({ ...v, title: v.shortTitle }));
   } catch (e) {
     console.error(e);
     Sentry.captureException(e);
@@ -130,7 +129,7 @@ export async function getStaticProps() {
       modeles,
       agreements,
     },
-    revalidate: 1800, // 30 minutes
+    revalidate: REVALIDATE_TIME,
   };
 }
 
