@@ -14,6 +14,7 @@ import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
 import { fetchTools } from "../../src/outils/service";
 import EventTracker from "../../src/lib/tracking/EventTracker";
+import { REVALIDATE_TIME } from "../../src/config";
 
 const Outils = ({ cdtnSimulators, externalTools }) => (
   <Layout currentPage="tools">
@@ -89,6 +90,7 @@ export async function getServerSideProps() {
       cdtnSimulators: tools.filter((tool) => tool.source === SOURCES.TOOLS),
       externalTools: tools.filter((tool) => tool.source === SOURCES.EXTERNALS),
     },
+    revalidate: REVALIDATE_TIME,
   };
 }
 

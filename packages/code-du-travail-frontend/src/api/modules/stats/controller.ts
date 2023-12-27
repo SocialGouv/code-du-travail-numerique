@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { NotFoundError, DEFAULT_ERROR_500_MESSAGE } from "../../../utils";
-import { getStatsData } from "./get";
+import { NotFoundError, DEFAULT_ERROR_500_MESSAGE } from "../../utils";
+import { getStatsService } from "./service";
 
 export class StatsController {
   private req: NextApiRequest;
@@ -13,7 +13,7 @@ export class StatsController {
 
   public async get() {
     try {
-      const response = await getStatsData();
+      const response = await getStatsService();
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {

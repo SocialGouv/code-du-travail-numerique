@@ -14,9 +14,8 @@ import styled from "styled-components";
 import Metas from "../src/common/Metas";
 import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 import { Layout } from "../src/layout/Layout";
-import { handleError } from "../src/lib/fetch-error";
-import { getStatsData } from "../src/api/modules/stats/controller/get";
 import { captureException } from "@sentry/nextjs";
+import { getStatsService } from "../src/api";
 
 type PropsData = {
   nbDocuments: number;
@@ -93,7 +92,7 @@ export async function getStaticProps() {
       const response = await fetch(`${SITE_URL}/api/stats`);
       data = await response.json();
     } else {
-      data = await getStatsData();
+      data = await getStatsService();
     }
     return { props: { data }, revalidate: REVALIDATE_TIME };
   } catch (e) {
