@@ -8,12 +8,12 @@ import {
   Section,
 } from "@socialgouv/cdtn-ui";
 import React from "react";
-
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
-import { fetchTools } from "../../src/outils/service";
 import EventTracker from "../../src/lib/tracking/EventTracker";
+import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { getToolsByIdsAndSlugs } from "../../src/api";
 
 const Outils = ({ cdtnSimulators, externalTools }) => (
   <Layout currentPage="tools">
@@ -82,14 +82,35 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
   </Layout>
 );
 
-export async function getServerSideProps() {
-  const tools = await fetchTools();
-  return {
-    props: {
-      cdtnSimulators: tools.filter((tool) => tool.source === SOURCES.TOOLS),
-      externalTools: tools.filter((tool) => tool.source === SOURCES.EXTERNALS),
-    },
-  };
+export async function getStaticProps() {
+  try {
+    let result: any;
+    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
+      const response = await fetch(`${SITE_URL}/api/tools`);
+      result = await response.json();
+    } else {
+      result = await getToolsByIdsAndSlugs();
+    }
+    const tools = result
+      .map(({ _id, _source }) => ({ ..._source, _id }))
+      .filter((tool) => tool.displayTool);
+
+    return {
+      props: {
+        cdtnSimulators: tools.filter((tool) => tool.source === SOURCES.TOOLS),
+        externalTools: tools.filter(
+          (tool) => tool.source === SOURCES.EXTERNALS
+        ),
+      },
+      revalidate: REVALIDATE_TIME,
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      props: { cdtnSimulators: [], externalTools: [] },
+      revalidate: REVALIDATE_TIME,
+    };
+  }
 }
 
 export default Outils;

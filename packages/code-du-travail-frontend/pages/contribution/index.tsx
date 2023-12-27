@@ -15,7 +15,8 @@ import { handleError } from "../../src/lib/fetch-error";
 import styled from "styled-components";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { getGenericContributionsGroupByThemes } from "../../src/api";
 
 const ALL = "all";
 
@@ -64,8 +65,8 @@ function Page({ contribs }) {
                 ))
               )}
           </LargeSelect>
-          {Object.keys(documents).map((theme) => (
-            <>
+          {Object.keys(documents).map((theme, index) => (
+            <div key={index.toString()}>
               <Heading as={HeadingBlue}>{theme}</Heading>
               <FlatList>
                 {contribs[theme].map((item) => (
@@ -74,7 +75,7 @@ function Page({ contribs }) {
                   </ListItem>
                 ))}
               </FlatList>
-            </>
+            </div>
           ))}
         </Container>
       </Section>
@@ -84,14 +85,22 @@ function Page({ contribs }) {
 
 export default Page;
 
-export const getServerSideProps = async () => {
-  const response = await fetch(`${SITE_URL}/api/contributions`);
-  if (!response.ok) {
-    return handleError(response);
+export async function getStaticProps() {
+  try {
+    let data: any;
+    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
+      const response = await fetch(`${SITE_URL}/api/contributions`);
+      data = await response.json();
+    } else {
+      data = await getGenericContributionsGroupByThemes();
+    }
+    return { props: { contribs: data }, revalidate: REVALIDATE_TIME };
+  } catch (error) {
+    console.error(error);
+    return { props: { contribs: {} }, revalidate: REVALIDATE_TIME };
   }
-  const contribs = await response.json();
-  return { props: { contribs } };
-};
+}
+
 const ListItem = styled.li`
   margin-top: ${theme.spacings.medium};
 `;

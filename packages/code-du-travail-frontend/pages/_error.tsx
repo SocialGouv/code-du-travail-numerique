@@ -32,12 +32,12 @@ const MyError = ({ statusCode, hasGetInitialPropsRun, err }) => {
 };
 
 MyError.getInitialProps = async ({ res, err, asPath }) => {
-  const errorInitialProps = {
+  const errorInitialProps: any = {
     message: err && err.message,
     ...(await NextErrorComponent.getInitialProps({
       err,
       res,
-    })),
+    } as any)),
   };
 
   // Workaround for https://github.com/vercel/next.js/issues/8592, mark when

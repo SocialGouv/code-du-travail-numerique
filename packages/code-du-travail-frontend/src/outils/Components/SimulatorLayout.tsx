@@ -53,8 +53,9 @@ const SimulatorContent = <StepName extends string>({
   simulator,
 }: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
-  const [navigationAction, setNavigationAction] =
-    React.useState<"next" | "prev" | "none">("none");
+  const [navigationAction, setNavigationAction] = React.useState<
+    "next" | "prev" | "none"
+  >("none");
   const store = useContext(SimulatorContext);
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
     store,
@@ -197,8 +198,8 @@ const SimulatorContent = <StepName extends string>({
           <p>{visibleSteps[currentStepIndex].options?.annotation}</p>
         )}
       </StyledForm>
-      {process.env.NODE_ENV !== "production" &&
-        process.env.NODE_ENV !== "test" &&
+      {process.env.NEXT_PUBLIC_APP_ENV !== "production" &&
+        process.env.NEXT_PUBLIC_APP_ENV !== "test" &&
         debug}
     </StyledWrapper>
   );

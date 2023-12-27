@@ -1,10 +1,10 @@
 import { ElasticSearchItem } from "@socialgouv/cdtn-utils";
-import { getByIdsAgreements } from "../../agreements";
-import { getByIdsContributions } from "../../contributions";
-import { getBySlugHighlights } from "../../highlights";
-import { getByIdsModeles } from "../../modeles";
-import { getAllThemes } from "../../themes";
-import { getToolsByIds } from "../../tools";
+import { getByIdsAgreements } from "../agreements";
+import { getByIdsContributions } from "../contributions";
+import { getBySlugHighlights } from "../highlights";
+import { getByIdsModeles } from "../modeles";
+import { getAllThemes } from "../themes";
+import { getToolsByIds } from "../tools";
 
 export type GetHomePage = {
   themes: any;
@@ -12,10 +12,10 @@ export type GetHomePage = {
   tools: any;
   modeles: ElasticSearchItem[];
   contributions: ElasticSearchItem[];
-  agreements: ElasticSearchItem[];
+  agreements: ElasticSearchItem<{ shortTitle: string }>[];
 };
 
-export const getHomeData = async () => {
+export const getHomeData = async (): Promise<GetHomePage> => {
   const themes = await getAllThemes();
   const highlights = await getBySlugHighlights("homepage");
   const tools = await getToolsByIds([
@@ -42,7 +42,7 @@ export const getHomeData = async () => {
     "be72a669a7", // 650-metallurgie-ingenieurs-et-cadres
     "d825ef1df2", // 3239-particuliers-employeurs-et-emploi-a-domicile
   ]);
-  const response: GetHomePage = {
+  const response = {
     themes,
     highlights,
     tools,

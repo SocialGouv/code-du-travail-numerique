@@ -19,7 +19,7 @@ export type Props = {
 };
 
 export const LinkedTile = React.forwardRef<HTMLAnchorElement, Props>(
-  function _LinkedTile(
+  function useLnkedTile(
     { children, onClick, href, ...props }: Props,
     ref: ForwardedRef<any>
   ): JSX.Element {

@@ -6,7 +6,7 @@ const ContentSecurityPolicy = `
 default-src 'self' *.travail.gouv.fr *.data.gouv.fr *.fabrique.social.gouv.fr;
 img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr https://www.service-public.fr https://cdtnadminprod.blob.core.windows.net https://cdtnadmindev.blob.core.windows.net *.adform.net;
 script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr https://cdnjs.cloudflare.com *.adform.net ${
-  process.env.NODE_ENV !== "production" && "'unsafe-eval'"
+  process.env.NEXT_PUBLIC_APP_ENV !== "production" && "'unsafe-eval'"
 };
 frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com https://cdtnadminprod.blob.core.windows.net;
 style-src 'self' 'unsafe-inline';
@@ -35,7 +35,7 @@ const nextConfig = {
   },
   compiler: {
     reactRemoveProperties:
-      process.env.NODE_ENV === "production"
+      process.env.NEXT_PUBLIC_APP_ENV === "production"
         ? { properties: ["data-testid"] }
         : false,
     styledComponents: true,
