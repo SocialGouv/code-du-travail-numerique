@@ -63,25 +63,6 @@ export const getByIdsContributions = async (
     : [];
 };
 
-export const getBySlugContributions = async (slug: string) => {
-  const body = getAllContributionBySlug(slug);
-
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
-  });
-
-  if (response.body.hits.hits.length === 0) {
-    throw new NotFoundError({
-      message: `There is no contribution that match ${slug}`,
-      name: "CONTRIB_NOT_FOUND",
-      cause: null,
-    });
-  }
-
-  return response.body.hits.hits[0]._source.refs;
-};
-
 const groupByThemes = (acc, item) => {
   if (item.theme in acc) acc[item.theme].push(item);
   else acc[item.theme] = [item];

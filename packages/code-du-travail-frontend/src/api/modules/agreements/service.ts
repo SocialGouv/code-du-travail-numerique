@@ -1,18 +1,18 @@
 import {
-  SearchResponse,
-  ElasticSearchItem,
   Agreement,
+  ElasticSearchItem,
+  SearchResponse,
 } from "@socialgouv/cdtn-utils";
 import {
-  elasticsearchClient,
   elasticDocumentsIndex,
+  elasticsearchClient,
   NotFoundError,
 } from "../../utils";
 import {
-  getAllAgreementsWithContributions,
-  getAgreementsBySlugs,
   getAgreementBySlugBody,
   getAgreementsByIds,
+  getAgreementsBySlugs,
+  getAllAgreementsWithContributions,
 } from "./queries";
 
 export const getAllAgreements = async (): Promise<Agreement[]> => {
@@ -25,7 +25,7 @@ export const getAllAgreements = async (): Promise<Agreement[]> => {
 
   return response.body.hits.hits
     .map(({ _source }) => _source)
-    .sort(orderByAlphaAndMetalurgieLast);
+    .sort(orderByAlpha);
 };
 
 export const getBySlugsAgreements = async (
@@ -72,19 +72,6 @@ export const getBySlugAgreements = async (slug: string) => {
   return { ...response.body.hits.hits[0]._source };
 };
 
-const orderByAlphaAndMetalurgieLast = (a, b) => {
-  if (a.url && !b.url) {
-    return -1;
-  }
-  if (!a.url && b.url) {
-    return 1;
-  }
-  if (a.shortTitle < b.shortTitle) {
-    return -1;
-  }
-  if (a.shortTitle > b.shortTitle) {
-    return 1;
-  }
-
-  return 0;
+const orderByAlpha = (a, b) => {
+  return a.shortTitle.localeCompare(b.shortTitle);
 };

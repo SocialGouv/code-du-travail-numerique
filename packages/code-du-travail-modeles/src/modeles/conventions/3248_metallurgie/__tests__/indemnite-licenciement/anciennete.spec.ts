@@ -91,6 +91,44 @@ describe("CC 3248", () => {
     );
   });
 
+  describe("Calcul de l'ancienneté pour les groupes A,B,C,D,E (absence de plus de 12 mois)", () => {
+    test.each`
+      absences                                                                         | hasLongPeriod
+      ${[]}                                                                            | ${"non"}
+      ${[{ durationInMonth: 6, motif: { key: MotifKeys.maladieNonPro } }]}             | ${"non"}
+      ${[{ durationInMonth: 13, motif: { key: MotifKeys.maladieNonPro } }]}            | ${"non"}
+      ${[{ durationInMonth: 11, motif: { key: MotifKeys.congesCreationEntreprise } }]} | ${"non"}
+      ${[{ durationInMonth: 13, motif: { key: MotifKeys.congesCreationEntreprise } }]} | ${"oui"}
+      ${[{ durationInMonth: 11, motif: { key: MotifKeys.congesSabbatique } }]}         | ${"non"}
+      ${[{ durationInMonth: 13, motif: { key: MotifKeys.congesSabbatique } }]}         | ${"oui"}
+      ${[{ durationInMonth: 11, motif: { key: MotifKeys.congesSansSolde } }]}          | ${"non"}
+      ${[{ durationInMonth: 13, motif: { key: MotifKeys.congesSansSolde } }]}          | ${"oui"}
+    `(
+      `Avec une absence longue $absences[1], on s'attend à la détection d'une longue période d'absence : $hasLongPeriod`,
+      ({ absences, hasLongPeriod }) => {
+        const seniority = new SeniorityFactory().create(
+          SupportedCcIndemniteLicenciement.IDCC3248
+        );
+
+        const result = seniority.computeSeniority({
+          absencePeriods: absences,
+          categoriePro: "'A, B, C, D ou E'",
+          dateEntree: "01/01/2010",
+          dateSortie: "01/01/2025",
+          hasBeenDayContract: false,
+          hasBeenExecutive: false,
+        });
+
+        const extraInfos = result.extraInfos ?? {};
+        expect(
+          extraInfos[
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . congés plus de 12 mois"
+          ]
+        ).toEqual(hasLongPeriod);
+      }
+    );
+  });
+
   describe("Calcul de l'ancienneté pour les groupes A,B,C,D,E (au forfait jour)", () => {
     test.each`
       absences                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | entryDate       | exitDate        | expectedAnciennete

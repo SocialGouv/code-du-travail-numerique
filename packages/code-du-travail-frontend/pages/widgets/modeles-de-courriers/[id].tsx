@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { theme, Paragraph, Wrapper, PageTitle } from "@socialgouv/cdtn-ui";
 import { LogoLink } from "../../../src/widgets";
 import Html from "../../../src/common/Html";
-import { isHTML } from "../../../src/lib/converter";
+import { isHTML } from "../../../src/lib";
 
 function Widgets(props: LetterModelProps): JSX.Element {
   useIframeResizer();
@@ -20,7 +20,7 @@ function Widgets(props: LetterModelProps): JSX.Element {
         overrideCanonical={SITE_URL + "/modeles-de-courriers"}
       />
       <StyledHeader>
-        <StyledTitle small stripe="left">
+        <StyledTitle stripe="left" variant="secondary">
           {props.title}
         </StyledTitle>
         <LogoLink></LogoLink>
@@ -55,7 +55,7 @@ export const getServerSideProps = async ({ query }) => {
 
 export default Widgets;
 
-const { spacings } = theme;
+const { spacings, fonts } = theme;
 
 const IntroWrapper = styled(Wrapper)`
   margin: ${spacings.base} auto;
@@ -80,4 +80,7 @@ const StyledHeader = styled.div`
 
 const StyledTitle = styled(PageTitle)`
   flex: 1;
+  h1 {
+    font-size: ${fonts.sizes.headings.xmedium};
+  }
 `;

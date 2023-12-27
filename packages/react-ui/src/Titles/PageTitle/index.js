@@ -14,11 +14,10 @@ export const PageTitle = ({
   shift = "",
   subtitle,
   variant,
-  small,
   ...props
 }) => (
   <Header pageTitle stripe={stripe} shift={shift} {...props}>
-    <StyledPageTitle stripe={stripe} as={as} shift={shift} small={small}>
+    <StyledPageTitle stripe={stripe} as={as} shift={shift}>
       <Stripe
         rounded={variant !== "primary"}
         variant={variant}
@@ -38,14 +37,12 @@ PageTitle.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node,
   shift: PropTypes.string,
-  small: PropTypes.boolean,
   stripe: PropTypes.oneOf(["left", "top"]),
   subtitle: PropTypes.node,
   variant: PropTypes.string,
 };
 
 PageTitle.defaultProps = {
-  small: false,
   stripe: "top",
   variant: "secondary",
 };
@@ -55,13 +52,7 @@ const StyledPageTitle = styled.h1`
   margin: 0;
   color: ${({ theme }) => theme.title};
   font-weight: normal;
-  ${({ small }) => {
-    return css`
-      font-size: ${small
-        ? fonts.sizes.headings.xmedium
-        : fonts.sizes.headings.large};
-    `;
-  }}
+  font-size: ${fonts.sizes.headings.large};
   font-family: "Merriweather", serif;
   line-height: ${fonts.lineHeightTitle};
   ${({ stripe, shift }) => {

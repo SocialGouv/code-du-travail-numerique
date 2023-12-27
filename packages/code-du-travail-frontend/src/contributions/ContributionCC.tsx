@@ -62,7 +62,7 @@ const ContributionCC = ({ contribution }: Props) => {
               {contribution.highlight.title}
             </StyledParagraph>
             <Paragraph fontSize="small" noMargin>
-              <Html>{contribution.highlight.content}</Html>
+              <Html as={"span"}>{contribution.highlight.content}</Html>
             </Paragraph>
           </StyledAlert>
         )}

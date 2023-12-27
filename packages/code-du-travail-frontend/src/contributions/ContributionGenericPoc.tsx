@@ -61,13 +61,18 @@ const ContributionGeneric = ({ answers, content, slug }) => {
   if (convention && !selectedRoute) {
     setSelectedRoute("agreement");
   }
-  const supportedAgreements: AgreementSupportInfo[] = answers.conventions.map(
-    (c) => {
+  const supportedAgreements: AgreementSupportInfo[] = [
+    {
+      idcc: 3248,
+      fullySupported: true,
+    },
+  ].concat(
+    answers.conventions.map((c) => {
       return {
         idcc: parseInt(c.idcc, 10),
         fullySupported: true,
       };
-    }
+    })
   );
   const isSupported = (agreement) =>
     agreement &&

@@ -168,7 +168,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains("Précisez et sélectionnez votre entreprise");
     cy.get("button").contains("Suivant").click();
     cy.contains("Vous devez sélectionner une entreprise");
-    cy.get("#enterprise-search").type("carrefour");
+    cy.get("#enterprise-search").type("carrefour", { delay: 0 });
     cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR BANQUE").click();
     cy.contains("Vous devez sélectionner une entreprise").should("not.exist");
@@ -182,8 +182,9 @@ describe("Outil - Préavis de retraite", () => {
       .click();
     cy.contains("Cliquez sur Suivant pour poursuivre la simulation.");
     cy.get('[aria-label="Fermer"]').click();
-    cy.get("#enterprise-search").clear().type("Ondo");
-    cy.get("#enterprise-search-address").type("69007");
+    cy.get("#enterprise-search").clear();
+    cy.get("#enterprise-search").type("Ondo", { delay: 0 });
+    cy.get("#enterprise-search-address").type("69007", { delay: 0 });
     cy.get('button[type="submit"]').last().click();
     cy.contains("VERNIN").click();
     cy.contains(

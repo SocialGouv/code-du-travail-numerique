@@ -68,7 +68,7 @@ function ConventionCollective(props: Props): JSX.Element {
         }
         subtitle={
           <Text fontSize="small">
-            {convention.shortTitle} (IDCC {formatIdcc(convention.num)})
+            {title} (IDCC {formatIdcc(convention.num)})
           </Text>
         }
         suptitle="CONVENTION COLLECTIVE"

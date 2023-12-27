@@ -326,4 +326,88 @@ describe("DisplayContentContribution", () => {
       </table>
     `);
   });
+
+  it(`should keep whitespace in specific tag`, () => {
+    const { asFragment } = render(
+      <DisplayContentContribution
+        content={`<p>Ceci est un<strong> </strong>texte généré<strong> </strong>par <em>tiptap </em>avec des<em> </em>résidus<em> </em>de balise</p>`}
+      ></DisplayContentContribution>
+    );
+
+    expect(asFragment().firstChild).toMatchInlineSnapshot(`
+      <p>
+        Ceci est un
+        <strong>
+           
+        </strong>
+        texte généré
+        <strong>
+           
+        </strong>
+        par 
+        <em>
+          tiptap 
+        </em>
+        avec des
+        <em>
+           
+        </em>
+        résidus
+        <em>
+           
+        </em>
+        de balise
+      </p>
+    `);
+  });
+
+  it(`should render correctly a table with multiple head lines`, () => {
+    const { baseElement } = render(
+      <DisplayContentContribution
+        content={`
+        <table>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2" colwidth="444">
+        <p>
+          <strong>Nature du contrat de mission</strong>
+        </p>
+      </td>
+      <td colspan="2" rowspan="1">
+        <p>
+          <strong>Durée maximale</strong>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1">
+        <p>
+          <strong>Contrat de date à date</strong>
+        </p>
+      </td>
+      <td colspan="1" rowspan="1">
+        <p>
+          <strong>Contrat sans terme certain</strong>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1" colwidth="444">
+        <p>Remplacement d’un salarié absent ou dont le contrat de travail est suspendu</p>
+      </td>
+      <td colspan="1" rowspan="1">
+        <p>18 mois</p>
+      </td>
+      <td colspan="1" rowspan="1">
+        <p>Fin de l’absence</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`}
+      ></DisplayContentContribution>
+    );
+
+    expect(baseElement.firstChild).toMatchSnapshot();
+  });
 });

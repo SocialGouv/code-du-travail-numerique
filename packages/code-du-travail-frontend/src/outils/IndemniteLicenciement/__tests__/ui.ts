@@ -71,6 +71,9 @@ export const ui = {
       commerce: byText(
         "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
       ),
+      transport: byText(
+        "Transports routiers et activités auxiliaires du transport (IDCC 0016)"
+      ),
       bureau: byText(
         "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)"
       ),
@@ -262,6 +265,14 @@ export const ui = {
         ),
         non: byTestId(
           "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - FGHI - remplit conditions pour la retraite - Non"
+        ),
+      },
+      absencesProlongesRepetes: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - licenciement pour motif absence prolongée ou répétées - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - métallurgie - indemnité de licenciement - licenciement pour motif absence prolongée ou répétées - Non"
         ),
       },
     },
