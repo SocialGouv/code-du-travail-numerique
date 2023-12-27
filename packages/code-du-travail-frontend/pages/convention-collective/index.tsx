@@ -81,14 +81,19 @@ function Page({ ccs }) {
 export default Page;
 
 export async function getStaticProps() {
-  let data: any;
-  if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-    const response = await fetch(`${SITE_URL}/api/agreements`);
-    data = await response.json();
-  } else {
-    data = await getAllAgreements();
+  try {
+    let data: any;
+    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
+      const response = await fetch(`${SITE_URL}/api/agreements`);
+      data = await response.json();
+    } else {
+      data = await getAllAgreements();
+    }
+    return { props: { ccs: data }, revalidate: REVALIDATE_TIME };
+  } catch (error) {
+    console.error(error);
+    return { props: { ccs: [] }, revalidate: REVALIDATE_TIME };
   }
-  return { props: { ccs: data }, revalidate: REVALIDATE_TIME };
 }
 const ListItem = styled.li`
   margin-top: ${theme.spacings.medium};

@@ -83,24 +83,34 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
 );
 
 export async function getStaticProps() {
-  let result: any;
-  if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-    const response = await fetch(`${SITE_URL}/api/tools`);
-    result = await response.json();
-  } else {
-    result = await getToolsByIdsAndSlugs();
-  }
-  const tools = result
-    .map(({ _id, _source }) => ({ ..._source, _id }))
-    .filter((tool) => tool.displayTool);
+  try {
+    let result: any;
+    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
+      const response = await fetch(`${SITE_URL}/api/tools`);
+      result = await response.json();
+    } else {
+      result = await getToolsByIdsAndSlugs();
+    }
+    const tools = result
+      .map(({ _id, _source }) => ({ ..._source, _id }))
+      .filter((tool) => tool.displayTool);
 
-  return {
-    props: {
-      cdtnSimulators: tools.filter((tool) => tool.source === SOURCES.TOOLS),
-      externalTools: tools.filter((tool) => tool.source === SOURCES.EXTERNALS),
-    },
-    revalidate: REVALIDATE_TIME,
-  };
+    return {
+      props: {
+        cdtnSimulators: tools.filter((tool) => tool.source === SOURCES.TOOLS),
+        externalTools: tools.filter(
+          (tool) => tool.source === SOURCES.EXTERNALS
+        ),
+      },
+      revalidate: REVALIDATE_TIME,
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      props: { cdtnSimulators: [], externalTools: [] },
+      revalidate: REVALIDATE_TIME,
+    };
+  }
 }
 
 export default Outils;

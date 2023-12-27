@@ -72,14 +72,22 @@ const ThemesPage = ({ children = [] }) => (
 );
 
 export async function getStaticProps() {
-  let data: any;
-  if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-    const response = await fetch(`${SITE_URL}/api/themes`);
-    data = await response.json();
-  } else {
-    data = await getAllThemes();
+  try {
+    let data: any;
+    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
+      const response = await fetch(`${SITE_URL}/api/themes`);
+      data = await response.json();
+    } else {
+      data = await getAllThemes();
+    }
+    return { props: { children: data.children }, revalidate: REVALIDATE_TIME };
+  } catch (error) {
+    console.error(error);
+    return {
+      props: { children: [] },
+      revalidate: REVALIDATE_TIME,
+    };
   }
-  return { props: { children: data.children }, revalidate: REVALIDATE_TIME };
 }
 
 export default ThemesPage;
