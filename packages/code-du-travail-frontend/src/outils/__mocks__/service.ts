@@ -1,7 +1,6 @@
 import { Tool } from "@socialgouv/cdtn-utils";
-import { getToolsParams } from "../service";
 
-export const fetchTools = async (_params: getToolsParams): Promise<Tool[]> => {
+export const fetchTools = async (_params: any): Promise<Tool[]> => {
   return Promise.resolve([
     {
       date: "18/10/2018",

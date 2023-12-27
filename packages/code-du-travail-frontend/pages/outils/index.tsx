@@ -8,13 +8,12 @@ import {
   Section,
 } from "@socialgouv/cdtn-ui";
 import React from "react";
-
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
-import { fetchTools } from "../../src/outils/service";
 import EventTracker from "../../src/lib/tracking/EventTracker";
-import { REVALIDATE_TIME } from "../../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { getToolsByIdsAndSlugs } from "../../src/api";
 
 const Outils = ({ cdtnSimulators, externalTools }) => (
   <Layout currentPage="tools">
@@ -84,7 +83,17 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
 );
 
 export async function getStaticProps() {
-  const tools = await fetchTools();
+  let result: any;
+  if (process.env.NODE_ENV !== "production") {
+    const response = await fetch(`${SITE_URL}/api/tools`);
+    result = await response.json();
+  } else {
+    result = await getToolsByIdsAndSlugs();
+  }
+  const tools = result
+    .map(({ _id, _source }) => ({ ..._source, _id }))
+    .filter((tool) => tool.displayTool);
+
   return {
     props: {
       cdtnSimulators: tools.filter((tool) => tool.source === SOURCES.TOOLS),

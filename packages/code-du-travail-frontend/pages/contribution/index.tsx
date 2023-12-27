@@ -65,8 +65,8 @@ function Page({ contribs }) {
                 ))
               )}
           </LargeSelect>
-          {Object.keys(documents).map((theme) => (
-            <>
+          {Object.keys(documents).map((theme, index) => (
+            <div key={index.toString()}>
               <Heading as={HeadingBlue}>{theme}</Heading>
               <FlatList>
                 {contribs[theme].map((item) => (
@@ -75,7 +75,7 @@ function Page({ contribs }) {
                   </ListItem>
                 ))}
               </FlatList>
-            </>
+            </div>
           ))}
         </Container>
       </Section>
@@ -85,7 +85,7 @@ function Page({ contribs }) {
 
 export default Page;
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   let data: any;
   if (process.env.NODE_ENV !== "production") {
     const response = await fetch(`${SITE_URL}/api/contributions`);
@@ -94,7 +94,8 @@ export const getStaticProps = async () => {
     data = await getGenericContributionsGroupByThemes();
   }
   return { props: { contribs: data }, revalidate: REVALIDATE_TIME };
-};
+}
+
 const ListItem = styled.li`
   margin-top: ${theme.spacings.medium};
 `;

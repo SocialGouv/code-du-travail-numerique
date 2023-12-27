@@ -7,7 +7,6 @@ import {
 import {
   getAllGenericsContributions,
   getContributionsBySlugs,
-  getAllContributionBySlug,
   getContributionsByIds,
 } from "./queries";
 

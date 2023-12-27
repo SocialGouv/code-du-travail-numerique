@@ -80,7 +80,7 @@ function Page({ ccs }) {
 
 export default Page;
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   let data: any;
   if (process.env.NODE_ENV !== "production") {
     const response = await fetch(`${SITE_URL}/api/agreements`);
@@ -89,7 +89,7 @@ export const getStaticProps = async () => {
     data = await getAllAgreements();
   }
   return { props: { ccs: data }, revalidate: REVALIDATE_TIME };
-};
+}
 const ListItem = styled.li`
   margin-top: ${theme.spacings.medium};
 `;

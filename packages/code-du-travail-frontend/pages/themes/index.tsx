@@ -71,7 +71,7 @@ const ThemesPage = ({ children = [] }) => (
   </Layout>
 );
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   let data: any;
   if (process.env.NODE_ENV !== "production") {
     const response = await fetch(`${SITE_URL}/api/themes`);
@@ -80,7 +80,7 @@ export const getStaticProps = async () => {
     data = await getAllThemes();
   }
   return { props: { children: data.children }, revalidate: REVALIDATE_TIME };
-};
+}
 
 export default ThemesPage;
 

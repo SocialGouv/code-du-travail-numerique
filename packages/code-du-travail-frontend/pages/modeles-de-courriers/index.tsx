@@ -106,7 +106,7 @@ function Modeles(props) {
   );
 }
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   let data: any;
   if (process.env.NODE_ENV !== "production") {
     const response = await fetch(`${SITE_URL}/api/modeles`);
@@ -115,7 +115,7 @@ export const getStaticProps = async () => {
     data = await getAllModeles();
   }
   return { props: { data }, revalidate: REVALIDATE_TIME };
-};
+}
 
 const { spacings } = th;
 
