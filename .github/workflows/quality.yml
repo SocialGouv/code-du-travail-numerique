@@ -39,9 +39,7 @@ jobs:
           yarn install --immutable
       - name: Build code
         run: |
-          yarn build
-        env:
-          NODE_ENV: "dev"
+          NODE_ENV=dev yarn build
       - name: Cache build
         uses: actions/cache@v3
         with:
