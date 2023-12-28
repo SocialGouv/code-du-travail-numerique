@@ -60,7 +60,7 @@ export const populateAgreements = async (
     }
   );
   const entreprises = entreprisePromises
-    ? await Promise.all(entreprisePromises?.slice(0, 1))
+    ? await Promise.all(entreprisePromises)
     : [];
   return {
     ...enterpriseApiResponse,
