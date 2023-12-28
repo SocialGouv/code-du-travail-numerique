@@ -159,7 +159,7 @@ export const searchWithQuery = async (
       ..._source,
       title: _source.shortTitle ?? _source.title,
     })),
-    // we add source prop since some result might come from dedicataed themes index
+    // we add source prop since some result might come from dedicated themes index
     // which has no source prop
     themes: themes.map(({ _score, _source }) => ({
       _score,
