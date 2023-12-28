@@ -39,7 +39,7 @@ export const getHomeData = async (): Promise<GetHomePage> => {
   const agreements = await getByIdsAgreements([
     "39ac98db5d", // 573-commerces-de-gros
     "81c96604dc", // 2609-batiment-etam
-    "be72a669a7", // 650-metallurgie-ingenieurs-et-cadres
+    "2f57b6af7c", // 3248-metallurgie
     "d825ef1df2", // 3239-particuliers-employeurs-et-emploi-a-domicile
   ]);
   const response = {
