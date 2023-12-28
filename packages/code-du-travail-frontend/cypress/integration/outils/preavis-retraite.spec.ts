@@ -183,7 +183,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains("Cliquez sur Suivant pour poursuivre la simulation.");
     cy.get('[aria-label="Fermer"]').click();
     cy.get("#enterprise-search").clear();
-    cy.get("#enterprise-search").type("Ondo", { delay: 0 });
+    cy.get("#enterprise-search").type("VERNIN", { delay: 0 });
     cy.get("#enterprise-search-address").type("69007", { delay: 0 });
     cy.get('button[type="submit"]').last().click();
     cy.contains("VERNIN").click();
