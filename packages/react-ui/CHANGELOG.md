@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.118.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.117.0...v4.118.0) (2023-12-28)
+
+### Features
+
+- **meta:** désactivation des anciennes CC Meta après 1er janvier ([#5488](https://github.com/SocialGouv/code-du-travail-numerique/issues/5488)) ([092069b](https://github.com/SocialGouv/code-du-travail-numerique/commit/092069b40e495547d2016d273ba1ac450921a40b)), closes [#5430](https://github.com/SocialGouv/code-du-travail-numerique/issues/5430) [#5419](https://github.com/SocialGouv/code-du-travail-numerique/issues/5419) [#5482](https://github.com/SocialGouv/code-du-travail-numerique/issues/5482) [#5423](https://github.com/SocialGouv/code-du-travail-numerique/issues/5423) [#5421](https://github.com/SocialGouv/code-du-travail-numerique/issues/5421)
+
 # [4.117.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.116.0...v4.117.0) (2023-12-21)
 
 ### Bug Fixes

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.118.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.117.0...v4.118.0) (2023-12-28)
+
+### Bug Fixes
+
+- **e2e:** remove delay when typing in `recherche-entreprise` ([#5509](https://github.com/SocialGouv/code-du-travail-numerique/issues/5509)) ([55a6a00](https://github.com/SocialGouv/code-du-travail-numerique/commit/55a6a002d51d1d636650ee558947f81029568362))
+- **e2e:** set carrefour banque instead of carrefour ([57649c6](https://github.com/SocialGouv/code-du-travail-numerique/commit/57649c66bd3cb488d33f8ff465c0b42e37d571a2))
+- **e2e:** set good enterprise name ([6e532c4](https://github.com/SocialGouv/code-du-travail-numerique/commit/6e532c4586f44ef8b19369c2feeb9732c3357880))
+- **meta:** retours sur les changements apportés par la nouvelle convention collective 3248 ([#5521](https://github.com/SocialGouv/code-du-travail-numerique/issues/5521)) ([04d3fbe](https://github.com/SocialGouv/code-du-travail-numerique/commit/04d3fbe4d71d0f9a12e8366af3ab1c32b1f2a795))
+
+### Features
+
+- gestion des contrib où le CDT ne prévoit rien ([#5479](https://github.com/SocialGouv/code-du-travail-numerique/issues/5479)) ([7421167](https://github.com/SocialGouv/code-du-travail-numerique/commit/742116778687e962d2665b418fc2cdc7852a6aec))
+- **meta:** désactivation des anciennes CC Meta après 1er janvier ([#5488](https://github.com/SocialGouv/code-du-travail-numerique/issues/5488)) ([092069b](https://github.com/SocialGouv/code-du-travail-numerique/commit/092069b40e495547d2016d273ba1ac450921a40b)), closes [#5430](https://github.com/SocialGouv/code-du-travail-numerique/issues/5430) [#5419](https://github.com/SocialGouv/code-du-travail-numerique/issues/5419) [#5482](https://github.com/SocialGouv/code-du-travail-numerique/issues/5482) [#5423](https://github.com/SocialGouv/code-du-travail-numerique/issues/5423) [#5421](https://github.com/SocialGouv/code-du-travail-numerique/issues/5421)
+- **next:** replacing call of the API in `getStaticProps` by direct call during build time ([#5514](https://github.com/SocialGouv/code-du-travail-numerique/issues/5514)) ([fc2385d](https://github.com/SocialGouv/code-du-travail-numerique/commit/fc2385d8010d3ffa24f617a7fd39f4f223ff91f8))
+- **next:** upgrade to v14 ([#5501](https://github.com/SocialGouv/code-du-travail-numerique/issues/5501)) ([ca6419b](https://github.com/SocialGouv/code-du-travail-numerique/commit/ca6419b889237f19bf69cd0c10b28f78862d497c))
+- **next:** use `getStaticProps` instead of `getServerSideProps` ([#5515](https://github.com/SocialGouv/code-du-travail-numerique/issues/5515)) ([6e6c936](https://github.com/SocialGouv/code-du-travail-numerique/commit/6e6c936b2e20b725f0a94dfb7c60ba591e58f033))
+
 # [4.117.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.116.0...v4.117.0) (2023-12-21)
 
 ### Bug Fixes

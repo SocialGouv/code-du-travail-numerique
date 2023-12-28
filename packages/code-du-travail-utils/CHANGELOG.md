@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.118.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.117.0...v4.118.0) (2023-12-28)
+
+### Features
+
+- gestion des contrib où le CDT ne prévoit rien ([#5479](https://github.com/SocialGouv/code-du-travail-numerique/issues/5479)) ([7421167](https://github.com/SocialGouv/code-du-travail-numerique/commit/742116778687e962d2665b418fc2cdc7852a6aec))
+- **next:** use `getStaticProps` instead of `getServerSideProps` ([#5515](https://github.com/SocialGouv/code-du-travail-numerique/issues/5515)) ([6e6c936](https://github.com/SocialGouv/code-du-travail-numerique/commit/6e6c936b2e20b725f0a94dfb7c60ba591e58f033))
+
 # [4.117.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.116.0...v4.117.0) (2023-12-21)
 
 ### Features
