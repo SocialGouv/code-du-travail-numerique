@@ -73,5 +73,7 @@ export const getBySlugAgreements = async (slug: string) => {
 };
 
 const orderByAlpha = (a, b) => {
-  return a.shortTitle.localeCompare(b.shortTitle);
+  return a.shortTitle.localeCompare(b.shortTitle, "fr", {
+    ignorePunctuation: true,
+  });
 };
