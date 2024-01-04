@@ -28,8 +28,8 @@ export const ContributionContent = ({
 
   return (
     <SectionNoPadding hasNoMarginTop={hasNoMarginTop}>
-      {contribution.type === "fiche-sp" ? (
-        <>
+      {"raw" in contribution ? (
+        <div>
           <Meta>
             {contribution.url && (
               <span>
@@ -51,7 +51,7 @@ export const ContributionContent = ({
             )}
           </Meta>
           <ContentSP raw={contribution.raw} />
-        </>
+        </div>
       ) : (
         <DisplayContentContribution content={contribution.content} />
       )}
