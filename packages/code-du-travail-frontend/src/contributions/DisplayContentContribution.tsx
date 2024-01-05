@@ -169,6 +169,12 @@ const options = (titleLevel: number): HTMLReactParserOptions => ({
           <em>{domToReact(domNode.children as DOMNode[], { trim: false })}</em>
         );
       }
+      if (domNode.name === "p") {
+        // Disable trim on p
+        return (
+          <p>{domToReact(domNode.children as DOMNode[], { trim: false })}</p>
+        );
+      }
     }
   },
   trim: true,
