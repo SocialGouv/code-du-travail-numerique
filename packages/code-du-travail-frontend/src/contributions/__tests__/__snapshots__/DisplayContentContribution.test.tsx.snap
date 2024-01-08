@@ -68,11 +68,11 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
           >
             <div>
               <p>
-
+                
         En principe, le préavis de licenciement court de date à date sans
         interruption, ni suspension. Dans certaines situations, il existe des
         exceptions qui peuvent suspendre le déroulement du préavis.
-
+      
               </p>
               <div
                 class="sc-ERObt ekELNP"
@@ -188,9 +188,9 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                         data-testid="contrib-accordion-0"
                                         style="margin: 0px;"
                                       >
-
+                                        
                 Dates des congés fixées avant la notification du licenciement
-
+              
                                       </h5>
                                     </div>
                                   </div>
@@ -207,12 +207,12 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                   >
                                     <div>
                                       <p>
-
+                                        
                 Des congés payés qui interviennent pendant le préavis et qui ont
                 été demandés à l'employeur avant la notification du licenciement
                 suspendent le préavis. Par conséquent, le préavis est prolongé
                 d'une durée équivalente à celle des congés.
-
+              
                                       </p>
                                     </div>
                                   </div>
@@ -263,9 +263,9 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                         data-testid="contrib-accordion-1"
                                         style="margin: 0px;"
                                       >
-
+                                        
                 Dates des congés fixées après la notification du licenciement
-
+              
                                       </h5>
                                     </div>
                                   </div>
@@ -282,13 +282,13 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                   >
                                     <div>
                                       <p>
-
+                                        
                 Des congés payés qui interviennent pendant le préavis et qui ont
                 été demandés à l'employeur après la notification du
                 licenciement ne suspendent pas le préavis. Par conséquent, le
                 préavis n'est pas prolongé d'une durée équivalente à celle des
                 congés.
-
+              
                                       </p>
                                     </div>
                                   </div>
@@ -356,9 +356,9 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                   >
                                     <div>
                                       <p>
-
+                                        
                 Dans ce cas, le préavis ne commencera qu'après les congés payés.
-
+              
                                       </p>
                                     </div>
                                   </div>
