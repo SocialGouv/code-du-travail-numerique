@@ -29,7 +29,7 @@ const Convention = ({ convention }) => {
             {convention.highlight.title}
           </TitleAlert>
           <Paragraph fontSize="small" noMargin>
-            <Html>{convention.highlight.content}</Html>
+            <Html as={"span"}>{convention.highlight.content}</Html>
           </Paragraph>
         </Alert>
       )}
