@@ -62,10 +62,10 @@ export const Item = styled(({ index, isLast, ...rest }) => (
 `;
 
 export const ItemPanel = styled(AccordionItemPanel)`
-  padding: ${spacings.base};
+  padding: 0 ${spacings.base} ${spacings.base};
   animation: ${fadeIn} 0.35s ease-in;
   @media (max-width: ${breakpoints.mobile}) {
-    padding: ${spacings.small};
+    padding: 0 ${spacings.small} ${spacings.small};
   }
 `;
 
