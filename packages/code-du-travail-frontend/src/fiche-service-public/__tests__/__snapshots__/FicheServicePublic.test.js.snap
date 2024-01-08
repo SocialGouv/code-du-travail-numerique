@@ -148,7 +148,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="sc-dhKdcB fdfhnD"
+                  class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-0"
@@ -223,7 +223,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="sc-dhKdcB fdfhnD"
+                  class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-1"
@@ -341,7 +341,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="sc-dhKdcB fdfhnD"
+                  class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-2"
@@ -443,7 +443,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="sc-dhKdcB fdfhnD"
+                  class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-3"
@@ -560,7 +560,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="sc-dhKdcB fdfhnD"
+                  class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-4"
@@ -869,7 +869,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 </div>
                                 <div
                                   aria-hidden="true"
-                                  class="sc-dhKdcB fdfhnD"
+                                  class="sc-dhKdcB hlTUsz"
                                   data-accordion-component="AccordionItemPanel"
                                   hidden=""
                                   id="accordion__panel-raa-5"
@@ -941,7 +941,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 </div>
                                 <div
                                   aria-hidden="true"
-                                  class="sc-dhKdcB fdfhnD"
+                                  class="sc-dhKdcB hlTUsz"
                                   data-accordion-component="AccordionItemPanel"
                                   hidden=""
                                   id="accordion__panel-raa-6"
@@ -1104,7 +1104,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             </div>
                             <div
                               aria-hidden="true"
-                              class="sc-dhKdcB fdfhnD"
+                              class="sc-dhKdcB hlTUsz"
                               data-accordion-component="AccordionItemPanel"
                               hidden=""
                               id="accordion__panel-raa-7"
@@ -1173,7 +1173,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             </div>
                             <div
                               aria-hidden="true"
-                              class="sc-dhKdcB fdfhnD"
+                              class="sc-dhKdcB hlTUsz"
                               data-accordion-component="AccordionItemPanel"
                               hidden=""
                               id="accordion__panel-raa-8"
@@ -1239,7 +1239,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             </div>
                             <div
                               aria-hidden="true"
-                              class="sc-dhKdcB fdfhnD"
+                              class="sc-dhKdcB hlTUsz"
                               data-accordion-component="AccordionItemPanel"
                               hidden=""
                               id="accordion__panel-raa-9"
@@ -1314,7 +1314,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="sc-dhKdcB fdfhnD"
+                  class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-10"
@@ -1437,7 +1437,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="sc-dhKdcB fdfhnD"
+                  class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-11"

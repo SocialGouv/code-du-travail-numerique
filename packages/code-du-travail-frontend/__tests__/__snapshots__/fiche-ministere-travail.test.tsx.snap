@@ -382,7 +382,7 @@ exports[`<FicheMT /> should render 1`] = `
                           </div>
                           <div
                             aria-hidden="true"
-                            class="sc-dhKdcB fdfhnD"
+                            class="sc-dhKdcB hlTUsz"
                             data-accordion-component="AccordionItemPanel"
                             hidden=""
                             id="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
