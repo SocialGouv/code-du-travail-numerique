@@ -29,7 +29,7 @@ exports[`<Button /> it renders a Button flat 1`] = `
 exports[`<Button /> it renders a Button link 1`] = `
 <div>
   <button
-    class="sc-aXZVg WRhGo"
+    class="sc-aXZVg doMvpz"
   >
     this is a Button 
     link
@@ -47,7 +47,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     </svg>
   </button>
   <button
-    class="sc-aXZVg WRhGo"
+    class="sc-aXZVg doMvpz"
   >
     this is a small Button 
     link
@@ -65,7 +65,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     </svg>
   </button>
   <button
-    class="sc-aXZVg WRhGo"
+    class="sc-aXZVg doMvpz"
   >
     this is a narrow Button 
     link

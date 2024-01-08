@@ -43,7 +43,6 @@ export const Summary = ({
         <LinkWrapper>
           <Button
             variant="link"
-            hasText
             onClick={async () => {
               await router.push(`/outils/${toolSlug}`);
             }}
