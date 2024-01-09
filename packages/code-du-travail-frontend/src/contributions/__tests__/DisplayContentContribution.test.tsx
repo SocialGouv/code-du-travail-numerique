@@ -410,4 +410,24 @@ describe("DisplayContentContribution", () => {
 
     expect(baseElement.firstChild).toMatchSnapshot();
   });
+
+  it(`should not remove space between strong and em tag in p tag`, () => {
+    const { asFragment } = render(
+      <DisplayContentContribution
+        content={`<p><strong>À noter :</strong> <em>L'échelon professionnel du salarié est habituellement mentionné </em></p>`}
+      ></DisplayContentContribution>
+    );
+
+    expect(asFragment().firstChild).toMatchInlineSnapshot(`
+    <p>
+      <strong>
+        À noter :
+      </strong>
+       
+      <em>
+        L'échelon professionnel du salarié est habituellement mentionné 
+      </em>
+    </p>
+    `);
+  });
 });
