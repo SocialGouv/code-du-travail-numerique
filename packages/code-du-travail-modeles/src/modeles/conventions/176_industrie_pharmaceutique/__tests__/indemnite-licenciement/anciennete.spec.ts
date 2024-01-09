@@ -10,8 +10,9 @@ describe("CC 176", () => {
       absences                                                                                                                                                                                                    | entryDate       | exitDate        | expectedAnciennete
       ${[]}                                                                                                                                                                                                       | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
       ${[{ durationInMonth: 5, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "20/04/2020" }]}                                                                                                     | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
-      ${[{ durationInMonth: 7, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/04/2020" }]}                                                                                                     | ${"20/02/2020"} | ${"20/02/2021"} | ${11 / 12}
-      ${[{ durationInMonth: 4, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/03/2020" }, { durationInMonth: 3, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/10/2020" }]} | ${"01/08/2020"} | ${"01/08/2021"} | ${11 / 12}
+      ${[{ durationInMonth: 7, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/03/2020" }]}                                                                                                     | ${"20/02/2020"} | ${"20/02/2022"} | ${17 / 12}
+      ${[{ durationInMonth: 3, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/08/2020" }, { durationInMonth: 4, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/03/2020" }]} | ${"20/02/2020"} | ${"20/02/2022"} | ${17 / 12}
+      ${[{ durationInMonth: 7, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/11/2020" }]}                                                                                                     | ${"20/02/2020"} | ${"20/02/2022"} | ${2}
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {

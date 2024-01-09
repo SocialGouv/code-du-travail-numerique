@@ -30,8 +30,13 @@ const getTotalAbsenceNonPro = (
 
   const absencesBySeniorityYear = accumulateAbsenceByYear(absences, years);
 
+  console.log(absencesBySeniorityYear);
+
   return absencesBySeniorityYear.reduce((total, item) => {
-    return total + Math.max(item.totalAbsenceInMonth - 6, 0);
+    if (item.totalAbsenceInMonth <= 6) {
+      return total;
+    }
+    return total + item.totalAbsenceInMonth;
   }, 0);
 };
 
