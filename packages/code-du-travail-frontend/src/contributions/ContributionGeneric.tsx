@@ -93,6 +93,8 @@ const ContributionGeneric = ({ contribution }: Props) => {
   const isNoCDT = () => contribution && contribution.type === "generic-no-cdt";
   const showButtonToDisplayCDTContent = () =>
     !isNoCDT() && (!showAnswer || convention);
+  const showGeneralInformationButton = () =>
+    !isNoCDT() && !showAnswer && !convention;
 
   const onSelectAgreement = (
     agreement: Agreement | null,
@@ -309,7 +311,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
           </DivCentered>
         </Wrapper>
 
-        {showButtonToDisplayCDTContent() && (
+        {showGeneralInformationButton() && (
           <Div>
             <Button
               variant="navLink"
