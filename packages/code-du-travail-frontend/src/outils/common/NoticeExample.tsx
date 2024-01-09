@@ -6,7 +6,7 @@ import { convertPeriodToHumanDate, Extra, getExtra } from "../utils";
 
 const FROM_DATE = new Date("2022-04-05");
 
-export const CCS_WITH_ONE_MORE_DAY = [573, 2120];
+const CCS_WITH_ONE_MORE_DAY = [573, 2120];
 
 type NoticeExampleProps = {
   simulator: Simulator;

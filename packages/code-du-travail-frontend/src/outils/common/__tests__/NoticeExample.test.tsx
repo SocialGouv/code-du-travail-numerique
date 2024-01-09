@@ -145,25 +145,17 @@ describe("<NoticeExample />", () => {
   });
 
   it("should display le lendemain if the right cc number is selected", () => {
-    jest.mock("../NoticeExample", () => ({
-      ...jest.requireActual("../NoticeExample"),
-      CCS_WITH_ONE_MORE_DAY: [1234],
-    }));
     const { queryByText } = render(
       <NoticeExample
         simulator={Simulator.PREAVIS_DEMISSION}
         period={"1 mois"}
-        idccNumber={1234}
+        idccNumber={573}
       />
     );
     expect(queryByText(/lendemain/)).toBeInTheDocument();
   });
 
   it("should not display le lendemain if the false cc number is selected", () => {
-    jest.mock("../NoticeExample", () => ({
-      ...jest.requireActual("../NoticeExample"),
-      CCS_WITH_ONE_MORE_DAY: [1234, 123],
-    }));
     const { queryByText } = render(
       <NoticeExample
         simulator={Simulator.PREAVIS_DEMISSION}
