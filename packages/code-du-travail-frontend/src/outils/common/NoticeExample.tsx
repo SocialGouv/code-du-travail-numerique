@@ -1,16 +1,19 @@
 import React from "react";
 
 import { SmallText } from "./stepStyles";
-import { dateToString } from "../../lib";
+import { Unit, convertDate, dateToString } from "../../lib";
 import { convertPeriodToHumanDate, Extra, getExtra } from "../utils";
 
 const FROM_DATE = new Date("2022-04-05");
+
+export const CCS_WITH_ONE_MORE_DAY = [573, 2120];
 
 type NoticeExampleProps = {
   simulator: Simulator;
   period: string;
   fromDate?: Date;
   note?: JSX.Element;
+  idccNumber?: number;
 };
 
 export enum Simulator {
@@ -25,10 +28,24 @@ export const NoticeExample = ({
   period,
   fromDate = FROM_DATE,
   note,
+  idccNumber,
 }: NoticeExampleProps): JSX.Element => {
+  const isCcsWithOneMoreDay =
+    idccNumber && CCS_WITH_ONE_MORE_DAY.includes(idccNumber);
+  const defaultDayPreavisDemissionMessage = isCcsWithOneMoreDay
+    ? "le lendemain du jour"
+    : "le jour";
+  const defaultDayPreavisLicenciementMessage = isCcsWithOneMoreDay
+    ? "le lendemain de la"
+    : "à la date de";
+  const fromDateCalculated = React.useMemo(
+    () => (isCcsWithOneMoreDay ? convertDate(fromDate, 1, Unit.DAY) : fromDate),
+    [fromDate, idccNumber]
+  );
+
   const periodCalculated = React.useMemo(
-    () => convertPeriodToHumanDate(period, fromDate),
-    [period, fromDate]
+    () => convertPeriodToHumanDate(period, fromDateCalculated),
+    [period, fromDateCalculated]
   );
   const extra = React.useMemo(() => getExtra(period), [period]);
 
@@ -38,9 +55,10 @@ export const NoticeExample = ({
         <SmallText>
           {note}
           <MorePrecision extra={extra} />
-          Le préavis débute le jour où le salarié remet sa lettre de démission
-          en main propre ou à la date de première présentation de la lettre
-          recommandée, peu importe le jour de son retrait par l’employeur.
+          Le préavis débute {defaultDayPreavisDemissionMessage} où le salarié
+          remet sa lettre de démission en main propre ou à la date de première
+          présentation de la lettre recommandée, peu importe le jour de son
+          retrait par l’employeur.
           {periodCalculated && (
             <SmallText as="i">
               {" "}
@@ -66,9 +84,9 @@ export const NoticeExample = ({
         <SmallText>
           {note}
           <MorePrecision extra={extra} />
-          Le préavis débute à la date de première présentation de la
-          notification du licenciement par lettre recommandée, peu importe le
-          jour de son retrait par le salarié.
+          Le préavis débute {defaultDayPreavisLicenciementMessage} première
+          présentation de la notification du licenciement par lettre
+          recommandée, peu importe le jour de son retrait par le salarié.
           {periodCalculated && (
             <SmallText as="i">
               {" "}

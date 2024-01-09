@@ -4,7 +4,7 @@ import {
 } from "@socialgouv/modeles-social";
 import React from "react";
 
-import { NoticeExample, Simulator } from "../../../../common/NoticeExample";
+import { NoticeExample, Simulator } from "../../../../common";
 import { NoticeNote } from "../../../../common/NoticeNote";
 import {
   HighlightResult,
@@ -17,6 +17,7 @@ type Props = {
   agreementMaximumResult: PublicodesPreavisRetraiteResult | null;
   type: "mise" | "départ";
   notifications: Notification[];
+  idccNumber?: number;
 };
 
 const ShowResult: React.FC<Props> = ({
@@ -24,6 +25,7 @@ const ShowResult: React.FC<Props> = ({
   agreementMaximumResult,
   type,
   notifications,
+  idccNumber,
 }: Props) => {
   return (
     <>
@@ -73,6 +75,7 @@ const ShowResult: React.FC<Props> = ({
               : Simulator.PREAVIS_DEPART_RETRAITE
           }
           period={`${result.value} ${result.unit}`}
+          idccNumber={idccNumber}
         />
       )}
       {notifications.length > 0 && (

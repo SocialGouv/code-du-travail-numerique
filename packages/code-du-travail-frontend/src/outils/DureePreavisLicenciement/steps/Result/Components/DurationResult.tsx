@@ -1,7 +1,7 @@
 import { HighlightResult, SmallText } from "../../../../common/stepStyles";
 import { NoticeNote } from "../../../../common/NoticeNote";
 import { calculateNumberOfElements } from "../../../../utils";
-import { NoticeExample, Simulator } from "../../../../common/NoticeExample";
+import { NoticeExample, Simulator } from "../../../../common";
 import { LicenciementSituation } from "../utils";
 
 type Props = {
@@ -55,6 +55,7 @@ const DurationResult = ({
       <NoticeExample
         simulator={Simulator.PREAVIS_LICENCIEMENT}
         period={duration}
+        idccNumber={agreementSituation?.idcc}
         note={
           <NoticeNote
             numberOfElements={calculateNumberOfElements(1, note)}

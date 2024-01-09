@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import { NoticeExample, Simulator } from "../NoticeExample";
+import { Simulator, NoticeExample } from "../NoticeExample";
 
 describe("<NoticeExample />", () => {
   it.each`
@@ -142,5 +142,35 @@ describe("<NoticeExample />", () => {
       />
     );
     expect(queryByText(/précédent/)).toBeNull();
+  });
+
+  it("should display le lendemain if the right cc number is selected", () => {
+    jest.mock("../NoticeExample", () => ({
+      ...jest.requireActual("../NoticeExample"),
+      CCS_WITH_ONE_MORE_DAY: [1234],
+    }));
+    const { queryByText } = render(
+      <NoticeExample
+        simulator={Simulator.PREAVIS_DEMISSION}
+        period={"1 mois"}
+        idccNumber={1234}
+      />
+    );
+    expect(queryByText(/lendemain/)).toBeInTheDocument();
+  });
+
+  it("should not display le lendemain if the false cc number is selected", () => {
+    jest.mock("../NoticeExample", () => ({
+      ...jest.requireActual("../NoticeExample"),
+      CCS_WITH_ONE_MORE_DAY: [1234, 123],
+    }));
+    const { queryByText } = render(
+      <NoticeExample
+        simulator={Simulator.PREAVIS_DEMISSION}
+        period={"1 mois"}
+        idccNumber={5678}
+      />
+    );
+    expect(queryByText(/lendemain/)).toBeNull();
   });
 });
