@@ -39,6 +39,7 @@ import { ContributionContent } from "./ContributionContent";
 import { ContributionMessageBlock } from "./ContributionMessageBlock";
 import {
   AlertAgreementNotSupportedNoContent,
+  AlertAgreementSupported,
   AlertAgreementSupportedNoContent,
 } from "./AlertAgreementNotSupportedNoContent";
 
@@ -124,29 +125,11 @@ const ContributionGeneric = ({ contribution }: Props) => {
     }
   };
 
-  const CC_NOT_SUPPORTED = (
-    <>
-      <Paragraph variant="primary" fontSize="default" fontWeight="700" noMargin>
-        Nous n’avons pas de réponse pour cette convention collective
-      </Paragraph>
-      {showAnswer ? (
-        <p>Vous pouvez consulter les informations générales ci-dessous.</p>
-      ) : (
-        <p>
-          Vous pouvez tout de même poursuivre pour obtenir les informations
-          générales.
-        </p>
-      )}
-    </>
-  );
-
   const alertAgreementNotSupported = (url: string) => {
     return contribution.type !== "generic-no-cdt" ? (
-      CC_NOT_SUPPORTED
+      <AlertAgreementSupported showAnswer={showAnswer} />
     ) : isSupportedFromAgreementNOContent(convention) ? (
-      <AlertAgreementSupportedNoContent
-        message={contribution.messageBlockGenericNoCDT}
-      />
+      <AlertAgreementSupportedNoContent />
     ) : (
       <AlertAgreementNotSupportedNoContent
         url={url}
