@@ -11,7 +11,6 @@ import React from "react";
 
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import styled from "styled-components";
 import Link from "next/link";
@@ -55,7 +54,7 @@ function Page({ ccs }) {
               passHref
               legacyBehavior
             >
-              <Button as="a" variant="link" hasText>
+              <Button as="a" variant="link">
                 Trouvez la
               </Button>
             </Link>
@@ -95,6 +94,7 @@ export async function getStaticProps() {
     return { props: { ccs: [] }, revalidate: REVALIDATE_TIME };
   }
 }
+
 const ListItem = styled.li`
   margin-top: ${theme.spacings.medium};
 `;

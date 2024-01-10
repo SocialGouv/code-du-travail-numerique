@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, theme, Button } from "@socialgouv/cdtn-ui";
+import { Button, Heading, theme } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { push as matopush } from "@socialgouv/matomo-next";
 import {
@@ -49,7 +49,7 @@ export function NoEnterprise(props: Props): JSX.Element {
           <strong>Vous n&apos;avez pas d&apos;entreprise</strong> (votre
           recherche concerne les assistants maternels, employés de maison) ?
         </Heading>
-        <StyledButton variant="link" hasText onClick={onClick}>
+        <StyledButton variant="link" onClick={onClick}>
           Consultez votre convention collective
         </StyledButton>
       </FeedbackWrapper>

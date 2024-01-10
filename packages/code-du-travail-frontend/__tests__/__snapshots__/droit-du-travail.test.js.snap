@@ -2242,7 +2242,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             Ce principe ne s’applique pas dans
                              
                             <button
-                              class="sc-kOPcWz gELDTc"
+                              class="sc-kOPcWz gACNan"
                             >
                               13 matières
                               <svg
@@ -2261,7 +2261,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             où la loi reconnaît la primauté à la convention collective de branche et
                              
                             <button
-                              class="sc-kOPcWz gELDTc"
+                              class="sc-kOPcWz gACNan"
                             >
                               4 matières
                               <svg
