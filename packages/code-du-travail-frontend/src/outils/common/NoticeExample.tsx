@@ -40,7 +40,7 @@ export const NoticeExample = ({
     : "à la date de";
   const fromDateCalculated = React.useMemo(
     () => (isCcsWithOneMoreDay ? convertDate(fromDate, 1, Unit.DAY) : fromDate),
-    [fromDate, idccNumber]
+    [fromDate, isCcsWithOneMoreDay]
   );
 
   const periodCalculated = React.useMemo(

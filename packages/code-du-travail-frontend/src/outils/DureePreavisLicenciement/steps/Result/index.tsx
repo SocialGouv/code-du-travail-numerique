@@ -37,6 +37,7 @@ const StepResult = ({ form }: WizardStepProps): JSX.Element => {
     <>
       <SectionTitle>Durée du préavis</SectionTitle>
       <DurationResult
+        idcc={idcc}
         duration={duration}
         agreementSituation={situations.agreement}
         legalSituation={situations.legal}

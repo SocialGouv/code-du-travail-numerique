@@ -9,12 +9,14 @@ type Props = {
   agreementSituation?: LicenciementSituation;
   legalSituation?: LicenciementSituation;
   note?: string;
+  idcc?: number;
 };
 
 const DurationResult = ({
   duration,
   agreementSituation,
   legalSituation,
+  idcc,
 }: Props): JSX.Element => {
   if (legalSituation && legalSituation.duration === 0) {
     if (!agreementSituation) {
@@ -55,7 +57,7 @@ const DurationResult = ({
       <NoticeExample
         simulator={Simulator.PREAVIS_LICENCIEMENT}
         period={duration}
-        idccNumber={agreementSituation?.idcc}
+        idccNumber={idcc}
         note={
           <NoticeNote
             numberOfElements={calculateNumberOfElements(1, note)}

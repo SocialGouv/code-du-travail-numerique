@@ -226,7 +226,9 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     >
       * 
     </sup>
-    Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
+    Le préavis débute 
+    à la date de
+     première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
       class="sc-iapWAC iKJmJG"
     >
@@ -457,7 +459,9 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     >
       * 
     </sup>
-    Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
+    Le préavis débute 
+    à la date de
+     première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
       class="sc-iapWAC iKJmJG"
     >
@@ -688,7 +692,9 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     >
       * 
     </sup>
-    Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
+    Le préavis débute 
+    à la date de
+     première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
       class="sc-iapWAC iKJmJG"
     >
@@ -868,7 +874,9 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     >
       * 
     </sup>
-    Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
+    Le préavis débute 
+    à la date de
+     première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
       class="sc-iapWAC iKJmJG"
     >
