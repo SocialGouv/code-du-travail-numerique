@@ -1033,5 +1033,10 @@
     "source": "/contribution/2148-quelles-sont-les-primes-prevues-par-la-convention-collective",
     "permanent": true,
     "destination": "/contribution/quelles-sont-les-primes-prevues-par-la-convention-collective"
+  },
+  {
+    "destination": "/convention-collective/275-transport-aerien-personnel-au-sol",
+    "source": "/convention-collective/1391-manutention-et-nettoyage-sur-les-aeroports-region-parisienne",
+    "permanent": true
   }
 ]
