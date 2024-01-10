@@ -1,7 +1,7 @@
 import { HighlightResult, SmallText } from "../../../../common/stepStyles";
 import { NoticeNote } from "../../../../common/NoticeNote";
 import { calculateNumberOfElements } from "../../../../utils";
-import { NoticeExample, Simulator } from "../../../../common";
+import { NoticeExample, Simulator } from "../../../../common/NoticeExample";
 import { LicenciementSituation } from "../utils";
 
 type Props = {

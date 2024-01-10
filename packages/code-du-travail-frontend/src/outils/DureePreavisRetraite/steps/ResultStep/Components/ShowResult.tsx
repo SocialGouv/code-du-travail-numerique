@@ -4,7 +4,7 @@ import {
 } from "@socialgouv/modeles-social";
 import React from "react";
 
-import { NoticeExample, Simulator } from "../../../../common";
+import { NoticeExample, Simulator } from "../../../../common/NoticeExample";
 import { NoticeNote } from "../../../../common/NoticeNote";
 import {
   HighlightResult,

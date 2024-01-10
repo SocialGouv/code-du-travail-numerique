@@ -3,7 +3,7 @@ import { preavisDemissionData as data } from "@socialgouv/modeles-social";
 import PropTypes from "prop-types";
 import React from "react";
 import Disclaimer from "../../common/Disclaimer";
-import { NoticeExample, Simulator } from "../../common";
+import { NoticeExample, Simulator } from "../../common/NoticeExample";
 import { NoticeNote } from "../../common/NoticeNote";
 import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
