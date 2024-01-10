@@ -1,10 +1,8 @@
 import { extractMdxContentUrl } from "@socialgouv/modeles-social";
 import React from "react";
 
-import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Contribution from "../../src/contributions/Contribution";
-import { Layout } from "../../src/layout/Layout";
 import {
   Breadcrumb,
   ElasticSearchContribution,
@@ -19,6 +17,8 @@ import { showNewContribPage } from "../../src/contributions/utils";
 import EventTracker from "../../src/lib/tracking/EventTracker";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
+import Layout from "../../src/layout-dsfr/Layout";
+import Answer from "../../src/common-dsfr/Answer";
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);
@@ -88,6 +88,28 @@ function PageContribution(props: Props): React.ReactElement {
             title={props.contribution.title}
             breadcrumbs={props.contribution.breadcrumbs}
           >
+            <h2>Test</h2>
+            {props.contribution.idcc === "0000" ? ("Contribution") : ("Contribution personnalisée")}
+          </Answer>
+        </>
+      ) : (
+        "Hello !"
+      )}
+    </Layout>
+  );
+  /*
+  return (
+    <Layout>
+      {props.isNewContribution ? (
+        <>
+          <Metas
+            title={props.contribution.title}
+            description={props.contribution.description}
+          />
+          <Answer
+            title={props.contribution.title}
+            breadcrumbs={props.contribution.breadcrumbs}
+          >
             {props.contribution.idcc === "0000" ? (
               <ContributionGeneric
                 contribution={
@@ -139,6 +161,7 @@ function PageContribution(props: Props): React.ReactElement {
       <EventTracker />
     </Layout>
   );
+  */
 }
 
 export const getServerSideProps = async ({ query }) => {
