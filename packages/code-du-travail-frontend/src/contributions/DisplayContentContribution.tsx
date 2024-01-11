@@ -152,6 +152,13 @@ const options = (titleLevel: number): HTMLReactParserOptions => ({
           </Alert>
         );
       }
+      if (domNode.name === "li") {
+        return (
+          <StyledLi>
+            {domToReact(domNode.children as DOMNode[], { trim: true })}
+          </StyledLi>
+        );
+      }
       if (domNode.name === "p" && !domNode.children.length) {
         return <></>;
       }
@@ -194,6 +201,12 @@ const { spacings } = theme;
 const StyledAccordion = styled(Accordion)`
   *[data-accordion-component="AccordionItemButton"] {
     padding-left: ${spacings.small};
+  }
+`;
+
+const StyledLi = styled.li`
+  p {
+    margin: 0;
   }
 `;
 

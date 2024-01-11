@@ -314,7 +314,9 @@ describe("DisplayContentContribution", () => {
               rowspan="1"
             >
               <ul>
-                <li>
+                <li
+                  class="sc-dNsVcS dZKEVC"
+                >
                   <p>
                     L’employeur et le salarié donnent par écrit ou par mail.
                   </p>
@@ -419,15 +421,15 @@ describe("DisplayContentContribution", () => {
     );
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
-    <p>
-      <strong>
-        À noter :
-      </strong>
-       
-      <em>
-        L'échelon professionnel du salarié est habituellement mentionné 
-      </em>
-    </p>
-    `);
+          <p>
+            <strong>
+              À noter :
+            </strong>
+             
+            <em>
+              L'échelon professionnel du salarié est habituellement mentionné 
+            </em>
+          </p>
+        `);
   });
 });
