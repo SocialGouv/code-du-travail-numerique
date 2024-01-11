@@ -27,19 +27,6 @@ export const AlertAgreementNotSupportedNoContent = ({
   );
 };
 
-export const AlertAgreementSupportedNoContent = () => (
-  <>
-    <Paragraph variant="primary" fontWeight="700" noMargin>
-      Cette convention collective ne prévoit rien
-    </Paragraph>
-    <p>La convention collective sélectionnée ne prévoit rien sur ce sujet.</p>
-    <p>
-      Un accord d’entreprise ou le contrat de travail peut cependant prévoir des
-      règles spécifiques sur ce sujet.
-    </p>
-  </>
-);
-
 export const AlertAgreementSupported = ({
   showAnswer,
 }: {

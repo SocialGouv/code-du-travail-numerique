@@ -40,7 +40,6 @@ import { ContributionMessageBlock } from "./ContributionMessageBlock";
 import {
   AlertAgreementNotSupportedNoContent,
   AlertAgreementSupported,
-  AlertAgreementSupportedNoContent,
 } from "./AlertAgreementNotSupportedNoContent";
 
 const { DirectionRight } = icons;
@@ -70,12 +69,6 @@ const ContributionGeneric = ({ contribution }: Props) => {
   if (convention && !selectedRoute) {
     setSelectedRoute("agreement");
   }
-  const supportedAgreementsNoContent: Pick<AgreementSupportInfo, "idcc">[] =
-    contribution.ccSupportedNoContent?.map((c) => {
-      return {
-        idcc: parseInt(c, 10),
-      };
-    }) ?? [];
 
   const supportedAgreements: AgreementSupportInfo[] =
     contribution.ccSupported.map((c) => {
@@ -89,8 +82,6 @@ const ContributionGeneric = ({ contribution }: Props) => {
   const isSupported = (agreement) =>
     isSupportedInList(supportedAgreements, agreement);
 
-  const isSupportedFromAgreementNOContent = (agreement) =>
-    isSupportedInList(supportedAgreementsNoContent, agreement);
   const isNoCDT = () => contribution && contribution.type === "generic-no-cdt";
   const showButtonToDisplayCDTContent = () =>
     !isNoCDT() && (!showAnswer || convention);
@@ -128,8 +119,6 @@ const ContributionGeneric = ({ contribution }: Props) => {
   const alertAgreementNotSupported = (url: string) => {
     return contribution.type !== "generic-no-cdt" ? (
       <AlertAgreementSupported showAnswer={showAnswer} />
-    ) : isSupportedFromAgreementNOContent(convention) ? (
-      <AlertAgreementSupportedNoContent />
     ) : (
       <AlertAgreementNotSupportedNoContent
         url={url}
