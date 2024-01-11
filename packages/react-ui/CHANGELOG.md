@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.119.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.118.0...v4.119.0) (2024-01-11)
+
+### Bug Fixes
+
+- **console warning:** react error in console ([#5546](https://github.com/SocialGouv/code-du-travail-numerique/issues/5546)) ([7a1a2b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/7a1a2b74368a8d089e32c9370c75385b28bc844c))
+
 # [4.118.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.117.0...v4.118.0) (2023-12-28)
 
 ### Features

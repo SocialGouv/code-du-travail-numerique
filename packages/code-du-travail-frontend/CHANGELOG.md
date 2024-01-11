@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.119.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.118.0...v4.119.0) (2024-01-11)
+
+### Bug Fixes
+
+- **alerts:** sur les contribs dont la générique ne prévoit rien ([#5549](https://github.com/SocialGouv/code-du-travail-numerique/issues/5549)) ([e409d64](https://github.com/SocialGouv/code-du-travail-numerique/commit/e409d64abcffb5dcd0f5fd78d86ca6b8fd3e3ad6))
+- **console warning:** react error in console ([#5546](https://github.com/SocialGouv/code-du-travail-numerique/issues/5546)) ([7a1a2b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/7a1a2b74368a8d089e32c9370c75385b28bc844c))
+- **contributions:** affichage des fiche-sp pour les contribs conventionnelles référençant une générique ([#5538](https://github.com/SocialGouv/code-du-travail-numerique/issues/5538)) ([b9c480a](https://github.com/SocialGouv/code-du-travail-numerique/commit/b9c480a69c16f1f061b580dc52fe1315ea3178da))
+- **contributions:** correction des espaces au sein des `p` ([#5543](https://github.com/SocialGouv/code-du-travail-numerique/issues/5543)) ([54aa4fe](https://github.com/SocialGouv/code-du-travail-numerique/commit/54aa4feb55cdc3f3f5f6b1e4cb7db0bc9b6a1c88))
+- li paragraphe enlever margin ([#5550](https://github.com/SocialGouv/code-du-travail-numerique/issues/5550)) ([f00ac4c](https://github.com/SocialGouv/code-du-travail-numerique/commit/f00ac4c18b7aa8fdc1c93e0bc8d39038573688e3))
+- **ui:** retours pour les contributions de la meta ([#5522](https://github.com/SocialGouv/code-du-travail-numerique/issues/5522)) ([66f2306](https://github.com/SocialGouv/code-du-travail-numerique/commit/66f230677f024d13c2f6542594784e98d5455671))
+- **warning:** one more warning ([#5548](https://github.com/SocialGouv/code-du-travail-numerique/issues/5548)) ([e5da6eb](https://github.com/SocialGouv/code-du-travail-numerique/commit/e5da6eb96df681af16610b5dc8bb75a24762c99b))
+
+### Features
+
+- **contributions:** mise en place de redirections pour les contrib personnalisées qui n'ont plus de page réponse ([#5553](https://github.com/SocialGouv/code-du-travail-numerique/issues/5553)) ([63980e8](https://github.com/SocialGouv/code-du-travail-numerique/commit/63980e85370fcaddc62d4e96e315ea5cd953fe5f))
+
 # [4.118.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.117.0...v4.118.0) (2023-12-28)
 
 ### Bug Fixes
