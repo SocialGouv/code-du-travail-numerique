@@ -63,7 +63,7 @@ exports[`<Accordion /> renders 1`] = `
           id="accordion__panel-raa-0"
         >
           <div
-            class="sc-dAbbOL OXowK"
+            class="sc-dAbbOL dhcuWT"
           >
             this is the body
           </div>
@@ -137,7 +137,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
           id="accordion__panel-raa-3"
         >
           <div
-            class="sc-dAbbOL OXowK"
+            class="sc-dAbbOL dhcuWT"
           >
             this is the body
           </div>
@@ -211,7 +211,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
           id="accordion__panel-raa-2"
         >
           <div
-            class="sc-dAbbOL OXowK"
+            class="sc-dAbbOL dhcuWT"
           >
             this is the body
           </div>
@@ -285,7 +285,7 @@ exports[`<Accordion /> renders as h2 1`] = `
           id="accordion__panel-raa-1"
         >
           <div
-            class="sc-dAbbOL OXowK"
+            class="sc-dAbbOL dhcuWT"
           >
             this is the body
           </div>

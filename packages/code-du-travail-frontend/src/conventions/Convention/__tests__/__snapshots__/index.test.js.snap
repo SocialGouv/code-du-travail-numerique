@@ -80,7 +80,7 @@ exports[`<Convention /> renders 1`] = `
           id="accordion__panel-raa-0"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="accordion"
@@ -145,7 +145,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -274,7 +274,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -468,7 +468,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-les-conges-pour-evenements-familiaux"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -636,7 +636,7 @@ exports[`<Convention /> renders 1`] = `
           id="accordion__panel-raa-4"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="accordion"
@@ -701,7 +701,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -877,7 +877,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1012,7 +1012,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1157,7 +1157,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1302,7 +1302,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1421,7 +1421,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1584,7 +1584,7 @@ exports[`<Convention /> renders 1`] = `
           id="accordion__panel-raa-11"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="accordion"
@@ -1649,7 +1649,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1776,7 +1776,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-comment-determiner-lanciennete-du-salarie"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1973,7 +1973,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2163,7 +2163,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2282,7 +2282,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2371,7 +2371,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2493,7 +2493,7 @@ exports[`<Convention /> renders 1`] = `
           id="accordion__panel-raa-18"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="accordion"
@@ -2558,7 +2558,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2638,7 +2638,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2781,7 +2781,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2929,7 +2929,7 @@ exports[`<Convention /> renders 1`] = `
           id="accordion__panel-raa-22"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="accordion"
@@ -2994,7 +2994,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -3503,7 +3503,7 @@ exports[`<Convention /> renders 1`] = `
                     id="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -3764,7 +3764,7 @@ exports[`<Convention /> renders 1`] = `
           id="accordion__panel-raa-26"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="sc-gFAWRd RvAeB sc-hRJfrW jNzush"
@@ -3963,7 +3963,7 @@ exports[`<Convention /> renders 1`] = `
           id="accordion__panel-raa-27"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="sc-gFAWRd RvAeB sc-hRJfrW jNzush"
@@ -4410,7 +4410,7 @@ exports[`<Convention /> renders 1`] = `
           id="accordion__panel-raa-28"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="sc-gFAWRd RvAeB sc-hRJfrW jNzush"

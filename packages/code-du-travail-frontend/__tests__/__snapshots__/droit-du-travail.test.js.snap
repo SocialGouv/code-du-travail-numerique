@@ -451,7 +451,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-0"
                       >
                         <div
-                          class="sc-bXCLTC cqpPUq"
+                          class="sc-bXCLTC fcbJdD"
                         >
                           <p>
                             Le droit du travail en France est influencé par les textes de
@@ -598,7 +598,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-1"
                       >
                         <div
-                          class="sc-bXCLTC cqpPUq"
+                          class="sc-bXCLTC fcbJdD"
                         >
                           <p>
                             Le droit du travail français est influencé par
@@ -787,7 +787,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-2"
                       >
                         <div
-                          class="sc-bXCLTC cqpPUq"
+                          class="sc-bXCLTC fcbJdD"
                         >
                           <p>
                             Texte le plus important du système juridique français,
@@ -941,7 +941,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-3"
                       >
                         <div
-                          class="sc-bXCLTC cqpPUq"
+                          class="sc-bXCLTC fcbJdD"
                         >
                           <p>
                             La loi est votée par le Parlement et fixe les principes fondamentaux du droit du travail et de la sécurité sociale.
@@ -1063,7 +1063,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-4"
                       >
                         <div
-                          class="sc-bXCLTC cqpPUq"
+                          class="sc-bXCLTC fcbJdD"
                         >
                           <p>
                             Les conventions et accords collectifs de travail sont des textes négociés entre un ou plusieurs employeurs et un ou plusieurs syndicats de salariés.
@@ -1182,7 +1182,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-5"
                       >
                         <div
-                          class="sc-bXCLTC cqpPUq"
+                          class="sc-bXCLTC fcbJdD"
                         >
                           <p>
                             L’usage d’entreprise est une pratique répétée de l’employeur attribuant un avantage aux salariés ou à un groupe de salariés de l’entreprise sans que la loi, la convention collective ou le contrat de travail ne le lui impose.
@@ -1282,7 +1282,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-6"
                       >
                         <div
-                          class="sc-bXCLTC cqpPUq"
+                          class="sc-bXCLTC fcbJdD"
                         >
                           Le règlement intérieur de l’entreprise est un acte écrit par l’employeur qui fixe les règles concernant la discipline, la santé et la sécurité dans l’entreprise.
                         </div>
@@ -1379,7 +1379,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-7"
                       >
                         <div
-                          class="sc-bXCLTC cqpPUq"
+                          class="sc-bXCLTC fcbJdD"
                         >
                           <p>
                             Le contrat de travail existe dès l’instant où une personne (le salarié) s’engage à travailler, moyennant rémunération, pour le compte et sous la direction d’une autre personne (l’employeur).
@@ -1582,7 +1582,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   id="accordion__panel-raa-8"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       Les textes nationaux doivent être conformes aux textes internationaux et européens.
@@ -1691,7 +1691,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   id="accordion__panel-raa-9"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       Tous les textes nationaux doivent être conformes à la Constitution française ainsi qu’au bloc de constitutionnalité.
@@ -1810,7 +1810,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   id="accordion__panel-raa-10"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <h4
                       class="sc-kAyceB dvmaTz"
@@ -1882,7 +1882,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             id="accordion__panel-raa-11"
                           >
                             <div
-                              class="sc-bXCLTC cqpPUq"
+                              class="sc-bXCLTC fcbJdD"
                             >
                               <p>
                                 Il existe des règles dans le Code du travail que les conventions et accords collectifs doivent respecter. Les conventions et accords collectifs peuvent toutefois prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
@@ -1948,7 +1948,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             id="accordion__panel-raa-12"
                           >
                             <div
-                              class="sc-bXCLTC cqpPUq"
+                              class="sc-bXCLTC fcbJdD"
                             >
                               <p>
                                 Il existe d’autres règles dans le Code du travail qui permettent aux conventions et accords collectifs, sous certaines conditions, de prévoir des règles différentes de celles de la loi. Dans ce cas, c’est l’accord collectif ou la convention collective qui s’applique même s’il est plus défavorable pour le salarié que la loi.
@@ -2017,7 +2017,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             id="accordion__panel-raa-13"
                           >
                             <div
-                              class="sc-bXCLTC cqpPUq"
+                              class="sc-bXCLTC fcbJdD"
                             >
                               <p>
                                 Il existe également des règles dans le Code du travail qui s’appliquent par défaut, c’est-à-dire uniquement lorsqu’il n’y a pas de convention ou d’accord collectif sur le sujet. S’il existe une convention ou un accord collectif sur le sujet alors la loi ne s’applique pas.
@@ -2193,7 +2193,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   id="accordion__panel-hierarchie"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       La règle qui détermine quel est le texte applicable est différente en fonction du niveau des textes comparés.
@@ -2423,7 +2423,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   id="accordion__panel-raa-15"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       Les usages et les engagements unilatéraux doivent respecter les textes situés en haut. Ils peuvent être plus avantageux pour le salarié. Dans ce cas, ce sont les textes les plus avantageux qui s’appliquent.
@@ -2524,7 +2524,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   id="accordion__panel-raa-16"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       Le règlement intérieur doit respecter les textes situés en haut. Il peut être plus avantageux pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
@@ -2635,7 +2635,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   id="accordion__panel-raa-17"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       Le contrat de travail doit respecter les textes situés en haut. Il peut prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le contrat de travail qui s’applique.

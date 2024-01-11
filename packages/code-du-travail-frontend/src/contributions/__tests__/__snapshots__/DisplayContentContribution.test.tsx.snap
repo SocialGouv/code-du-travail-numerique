@@ -64,7 +64,7 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
           id="accordion__panel-raa-1"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div>
               <p>
@@ -136,7 +136,7 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                       id="accordion__panel-raa-2"
                     >
                       <div
-                        class="sc-bXCLTC cqpPUq"
+                        class="sc-bXCLTC fcbJdD"
                       >
                         <div>
                           <div
@@ -203,7 +203,7 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                   id="accordion__panel-raa-3"
                                 >
                                   <div
-                                    class="sc-bXCLTC cqpPUq"
+                                    class="sc-bXCLTC fcbJdD"
                                   >
                                     <div>
                                       <p>
@@ -278,7 +278,7 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                   id="accordion__panel-raa-4"
                                 >
                                   <div
-                                    class="sc-bXCLTC cqpPUq"
+                                    class="sc-bXCLTC fcbJdD"
                                   >
                                     <div>
                                       <p>
@@ -352,7 +352,7 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                   id="accordion__panel-raa-5"
                                 >
                                   <div
-                                    class="sc-bXCLTC cqpPUq"
+                                    class="sc-bXCLTC fcbJdD"
                                   >
                                     <div>
                                       <p>
@@ -535,7 +535,7 @@ exports[`DisplayContentContribution should replace details element by one accord
         id="accordion__panel-raa-0"
       >
         <div
-          class="sc-bXCLTC cqpPUq"
+          class="sc-bXCLTC fcbJdD"
         >
           <div>
             <p>
@@ -612,7 +612,7 @@ exports[`DisplayContentContribution should replace details element within detail
         id="accordion__panel-raa-8"
       >
         <div
-          class="sc-bXCLTC cqpPUq"
+          class="sc-bXCLTC fcbJdD"
         >
           <div>
             <div
@@ -677,7 +677,7 @@ exports[`DisplayContentContribution should replace details element within detail
                     id="accordion__panel-raa-9"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -762,7 +762,7 @@ exports[`DisplayContentContribution should replace multiple details element by o
             id="accordion__panel-raa-6"
           >
             <div
-              class="sc-bXCLTC cqpPUq"
+              class="sc-bXCLTC fcbJdD"
             >
               <div>
                 <p>
@@ -830,7 +830,7 @@ exports[`DisplayContentContribution should replace multiple details element by o
             id="accordion__panel-raa-7"
           >
             <div
-              class="sc-bXCLTC cqpPUq"
+              class="sc-bXCLTC fcbJdD"
             >
               <div>
                 <p>

@@ -154,7 +154,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   id="accordion__panel-raa-0"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       La démission est un mode de rupture du contrat de travail qui  vous permet de quitter votre entreprise sans avoir à justifier cette décision.
@@ -229,7 +229,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   id="accordion__panel-raa-1"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       Le salarié peut mettre fin à son contrat de travail dans les cas suivants :
@@ -347,7 +347,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   id="accordion__panel-raa-2"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       Pour qu'une démission soit valable, vous devez manifester de façon claire et non équivoque votre volonté de mettre fin au contrat de travail.
@@ -449,7 +449,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   id="accordion__panel-raa-3"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       Pour manifester votre volonté claire et non équivoque de démissionner, vous devez nécessairement prévenir votre employeur.
@@ -566,7 +566,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   id="accordion__panel-raa-4"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       Vous ne pouvez pas quitter votre travail dès que vous avez signifié votre démission à votre employeur. Vous continuez de travailler jusqu'à la fin de votre contrat de travail, dans le respect du délai de préavis prévu (sauf en cas de dispense du préavis).
@@ -875,7 +875,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   id="accordion__panel-raa-5"
                                 >
                                   <div
-                                    class="sc-bXCLTC cqpPUq"
+                                    class="sc-bXCLTC fcbJdD"
                                   >
                                     <p>
                                       
@@ -947,7 +947,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   id="accordion__panel-raa-6"
                                 >
                                   <div
-                                    class="sc-bXCLTC cqpPUq"
+                                    class="sc-bXCLTC fcbJdD"
                                   >
                                     <p>
                                       Si votre employeur refuse, vous devez effectuer votre préavis, sous peine de devoir lui verser une indemnité d'un montant égal à la rémunération brute que vous auriez perçue si vous aviez travaillé.
@@ -1110,7 +1110,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               id="accordion__panel-raa-7"
                             >
                               <div
-                                class="sc-bXCLTC cqpPUq"
+                                class="sc-bXCLTC fcbJdD"
                               >
                                 <p>
                                   Du lundi au vendredi : de 9h à 17h
@@ -1179,7 +1179,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               id="accordion__panel-raa-8"
                             >
                               <div
-                                class="sc-bXCLTC cqpPUq"
+                                class="sc-bXCLTC fcbJdD"
                               >
                                 <p>
                                   http://www.secu-artistes-auteurs.fr/contact
@@ -1245,7 +1245,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               id="accordion__panel-raa-9"
                             >
                               <div
-                                class="sc-bXCLTC cqpPUq"
+                                class="sc-bXCLTC fcbJdD"
                               >
                                 <p>
                                   60 rue du Faubourg Poissonnière
@@ -1320,7 +1320,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   id="accordion__panel-raa-10"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       <strong>
@@ -1443,7 +1443,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   id="accordion__panel-raa-11"
                 >
                   <div
-                    class="sc-bXCLTC cqpPUq"
+                    class="sc-bXCLTC fcbJdD"
                   >
                     <p>
                       L'employeur doit remettre au salarié les documents suivants :
