@@ -5,7 +5,7 @@ import React from "react";
 import { ListLink } from "../../search/SearchResults/Results";
 import styled from "styled-components";
 
-export const ContentList = ({ block, key }) => {
+export const ContentList = ({ block, uniquKey }) => {
   const { blockDisplayMode, contents } = block;
   return (
     <>
@@ -19,7 +19,7 @@ export const ContentList = ({ block, key }) => {
               ...item,
               icon: icons[item?.icon],
             }}
-            key={`${key}-${ContentIndex}`}
+            key={`${uniquKey}-${ContentIndex}`}
             disableAnalytics
             centerTitle={blockDisplayMode === BlockDisplayMode.square}
           ></ListLink>
