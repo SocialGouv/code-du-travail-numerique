@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.119.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.119.0...v4.119.1) (2024-01-11)
+
+### Bug Fixes
+
+- **contribution:** nettoyage de la fonctionnalité spécifique au CC personalisé sans contenu quand la générique n'a pas de CDT. ([#5560](https://github.com/SocialGouv/code-du-travail-numerique/issues/5560)) ([0b596bb](https://github.com/SocialGouv/code-du-travail-numerique/commit/0b596bbe72bedb29c987a4bb191588296129e30a))
+
 # [4.119.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.118.0...v4.119.0) (2024-01-11)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils
