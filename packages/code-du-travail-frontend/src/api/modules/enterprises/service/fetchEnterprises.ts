@@ -22,7 +22,7 @@ export const fetchEnterprises = async (
   const params: { k: string; v: string }[] = [
     { k: "ranked", v: "true" },
     { k: "query", v: encodeURIComponent(query) },
-    { k: "convention", v: "true" },
+    { k: "convention", v: "false" },
     { k: "employer", v: "true" },
     { k: "open", v: "true" },
     { k: "matchingLimit", v: "0" },
@@ -36,16 +36,15 @@ export const fetchEnterprises = async (
     .filter((qp) => qp)
     .join("&");
 
-  const url = `${
-    ENTERPRISE_API_URL ??
-    "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1"
-  }/search?${flattenParams}`;
+  const url = `${ENTERPRISE_API_URL}/search?${flattenParams}`;
 
   const fetchReq = await fetch(url, {
     headers: { referer: "cdtn-api" },
   });
 
   const jsonResponse: EnterpriseApiResponse = await fetchReq.json();
+
+  console.log(jsonResponse);
 
   return jsonResponse;
 };
