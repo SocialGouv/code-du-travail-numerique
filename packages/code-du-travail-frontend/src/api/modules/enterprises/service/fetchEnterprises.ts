@@ -44,7 +44,5 @@ export const fetchEnterprises = async (
 
   const jsonResponse: EnterpriseApiResponse = await fetchReq.json();
 
-  console.log(jsonResponse);
-
   return jsonResponse;
 };
