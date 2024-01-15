@@ -28,6 +28,8 @@ describe("CC 275", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniorityRight,
+            "contrat salarié . indemnité de licenciement . date de notification":
+              "31/01/2024",
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
           },
@@ -84,6 +86,8 @@ describe("CC 275", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniorityRight,
+            "contrat salarié . indemnité de licenciement . date de notification":
+              "31/01/2024",
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
           },

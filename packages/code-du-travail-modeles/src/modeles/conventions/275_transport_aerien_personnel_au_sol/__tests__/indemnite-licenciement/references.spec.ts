@@ -32,11 +32,12 @@ describe("Vérification des références juridiques pour la CC 275", () => {
           "contrat salarié . convention collective": "'IDCC0275'",
           "contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle":
             "'Non-cadres'",
-
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             seniority,
+          "contrat salarié . indemnité de licenciement . date de notification":
+            "31/01/2024",
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1000",
         });
@@ -87,6 +88,8 @@ describe("Vérification des références juridiques pour la CC 275", () => {
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             seniority,
+          "contrat salarié . indemnité de licenciement . date de notification":
+            "31/01/2024",
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1000",
         });
