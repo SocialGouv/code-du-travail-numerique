@@ -6,7 +6,9 @@ import Alert from "@codegouvfr/react-dsfr/Alert";
 import Article from "./Article";
 import { Box } from "../design-system/base/Box";
 import { Container } from "../design-system/layout/Container";
-import { Grid, GridCol } from "../design-system/base/Grid";
+import Card from "@codegouvfr/react-dsfr/Card";
+import { Follow } from "./Follow";
+import { cdtnStyleEnabled } from "../layout-dsfr";
 
 type AnswerProps = {
   additionalContent?: any;
@@ -42,90 +44,51 @@ function Answer({
   suptitle,
   title,
 }: PropsWithChildren<AnswerProps>) {
-  const router = useRouter();
   return (
     <>
-      <Breadcrumbs items={breadcrumbs} currentPage={title} />
+      <div className={"fr-container"}>
+        <Breadcrumbs items={breadcrumbs} currentPage={title} />
+      </div>
+
       {!html && !children && (
         <Alert description={emptyMessage} severity="error" title="" />
       )}
-      <Box pt="1v" pb="1v">
-        <Container>
-          {(html || children) && (
-            <Article
-              suptitle={
-                suptitle ||
-                (breadcrumbs.length > 0 &&
-                  breadcrumbs[breadcrumbs.length - 1].label)
+
+        <div className="fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+          <div className="fr-col-12 fr-col-offset-md-2 fr-col-md-8 fr-col-offset-lg-3 fr-col-lg-6">
+            <Container
+              style={
+                cdtnStyleEnabled
+                  ? {
+                      backgroundColor: "#ffffff",
+                      borderRadius: "0.6rem",
+                      paddingTop: "1rem",
+                      boxShadow: "rgba(121, 148, 212, 0.2) 0px 1rem 2rem",
+                    }
+                  : undefined
               }
-              title={title}
-              metaDescription={metaDescription}
-              date={date}
-              dateLabel={dateLabel}
-              source={source}
             >
-              {children}
-            </Article>
-          )}
-        </Container>
-      </Box>
-    </>
-  );
-  /*
-  return (
-    <>
-      <Breadcrumbs items={breadcrumbs} />
-      <ConventionModal />
-      <MainAsideLayout>
-        <MainContent hasResults={relatedItems.length > 0} className={className}>
-          {!html && !children && <BigError>{emptyMessage}</BigError>}
-          {(html || children) && (
-            <Article
-              suptitle={
-                suptitle ||
-                (breadcrumbs.length > 0 &&
-                  breadcrumbs[breadcrumbs.length - 1].label)
-              }
-              subtitle={subtitle}
-              title={title}
-              metaDescription={metaDescription}
-              date={date}
-              dateLabel={dateLabel}
-              source={source}
-            >
-              {intro && (
-                <IntroWrapper variant="dark">
-                  {isHTML(intro) ? (
-                    <Html>{intro}</Html>
-                  ) : (
-                    <Paragraph noMargin>{intro}</Paragraph>
-                  )}
-                </IntroWrapper>
+              {(html || children) && (
+                <Article
+                  suptitle={
+                    suptitle ||
+                    (breadcrumbs.length > 0 &&
+                      breadcrumbs[breadcrumbs.length - 1].label)
+                  }
+                  title={title}
+                  metaDescription={metaDescription}
+                  date={date}
+                  dateLabel={dateLabel}
+                  source={source}
+                >
+                  {children}
+                </Article>
               )}
-              {html && <Html>{html}</Html>}
-              {children}
-            </Article>
-          )}
-          {additionalContent}
-          <ShareContainer>
-            <Paragraph noMargin>Partager ce contenu&nbsp;:&nbsp;</Paragraph>
-            <Share
-              title={title}
-              metaDescription={metaDescription}
-              tabIndex={-1}
-            />
-          </ShareContainer>
-          <Feedback url={router.asPath} />
-        </MainContent>
-        {relatedItems.length > 0 && (
-          <AsideContent sticky>
-            <RelatedItems items={relatedItems} />
-          </AsideContent>
-        )}
-      </MainAsideLayout>
+            </Container>
+          </div>
+        </div>
     </>
   );
-   */
 }
 
 export default Answer;
