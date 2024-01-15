@@ -5,9 +5,9 @@ export const Header = ({ currentPage = "" }) => {
     <HeaderDsfr
       brandTop={
         <>
-          INTITULE
+          RÉPUBLIQUE
           <br />
-          OFFICIEL
+          FRANÇAISE
         </>
       }
       homeLinkProps={{
@@ -15,14 +15,20 @@ export const Header = ({ currentPage = "" }) => {
         title:
           "Accueil - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)",
       }}
-      id="fr-header-simple-header"
+      id="fr-header-header-with-vertical-operator-logo"
+      onSearchButtonClick={function noRefCheck(){}}
+      operatorLogo={{
+        alt: '[À MODIFIER - texte alternatif de l’image]',
+        imgUrl: 'https://travail-emploi.gouv.fr/IMG/logo/arton377668.png?1581441256',
+        orientation: 'horizontal'
+      }}
       navigation={[
         {
           linkProps: {
             href: "#",
             target: "_self",
           },
-          text: "accès direct",
+          text: "Boîte à outils",
         },
         {
           isActive: true,
@@ -30,21 +36,28 @@ export const Header = ({ currentPage = "" }) => {
             href: "#",
             target: "_self",
           },
-          text: "accès direct",
+          text: "Modèles de documents",
         },
         {
           linkProps: {
             href: "#",
             target: "_self",
           },
-          text: "accès direct",
+          text: "Vos fiches pratiques",
         },
         {
           linkProps: {
             href: "#",
             target: "_self",
           },
-          text: "accès direct",
+          text: "Votre convention collective",
+        },
+        {
+          linkProps: {
+            href: "#",
+            target: "_self",
+          },
+          text: "Thèmes",
         },
       ]}
     />

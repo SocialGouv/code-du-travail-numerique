@@ -3,331 +3,152 @@ import { Footer as FooterDsfr } from "@codegouvfr/react-dsfr/Footer";
 export const Footer = () => {
   return (
     <FooterDsfr
-      accessibility="fully compliant"
-      contentDescription="
-    Ce message est à remplacer par les informations de votre site.
-
-    Comme exemple de contenu, vous pouvez indiquer les informations
-    suivantes : Le site officiel d’information administrative pour les entreprises.
-    Retrouvez toutes les informations et démarches administratives nécessaires à la création,
-    à la gestion et au développement de votre entreprise.
-    "
+      accessibility="partially compliant"
+      contentDescription=""
+      license={"Ma super licence !"}
+      brandTop={
+        <>
+          MINISTÈRE
+          <br />
+          DU TRAVAIL,
+          <br />
+          DU PLEIN EMPLOI
+          <br />
+          ET DE L&apos;INSERTION FRANÇAISE
+        </>
+      }
+      termsLinkProps={{
+        href: "#",
+      }}
+      websiteMapLinkProps={{
+        href: "#",
+      }}
+      homeLinkProps={{ title: "#", href: "#" }}
       linkList={[
         {
-          categoryName: "Nom de la catégorie",
+          categoryName: "Code du travail numérique",
           links: [
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
+              text: "Le droit du travail",
             },
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
+              text: "Glossaire",
             },
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
+              text: "À propos",
             },
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
+              text: "Statistiques d’utilisation",
             },
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
+              text: "Intégrer les outils du Code du travail numérique",
             },
           ],
         },
         {
-          categoryName: "Nom de la catégorie",
+          categoryName: "Outils populaires",
           links: [
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
+              text: "Calcul du salaire brut/net",
             },
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
+              text: "Calcul de l'indemnité de licenciement",
             },
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
+              text: "Trouver sa convention collective",
             },
           ],
         },
         {
-          categoryName: "Nom de la catégorie",
+          categoryName: "Modèles populaires",
           links: [
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
+              text: "Lettre de démission",
             },
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
+              text: "Rupture du contrat en période d'essai par le salarié",
             },
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
+              text: "Convocation à un entretien préalable au licenciement pour motif personnel",
             },
           ],
         },
         {
-          categoryName: "Nom de la catégorie",
+          categoryName: "Fiches pratiques populaires",
           links: [
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
+              text: "Durée du préavis de démission",
             },
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
+              text: "Congés pour événements familiaux",
             },
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
+              text: "Maintien du salaire en cas d'arrêt maladie",
             },
           ],
         },
         {
-          categoryName: "Nom de la catégorie",
+          categoryName: "Conventions collectives populaires",
           links: [
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
+              text: "Services de l'automobile",
             },
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
+              text: "Métallurgie",
             },
             {
               linkProps: {
                 href: "#",
               },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-          ],
-        },
-        {
-          categoryName: "Nom de la catégorie",
-          links: [
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
-            },
-            {
-              linkProps: {
-                href: "#",
-              },
-              text: "Lien de navigation",
+              text: "Commerce de gros",
             },
           ],
         },

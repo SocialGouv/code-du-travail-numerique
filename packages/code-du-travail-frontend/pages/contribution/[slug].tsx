@@ -2,23 +2,12 @@ import { extractMdxContentUrl } from "@socialgouv/modeles-social";
 import React from "react";
 
 import Metas from "../../src/common/Metas";
-import Contribution from "../../src/contributions/Contribution";
-import {
-  Breadcrumb,
-  ElasticSearchContribution,
-  ElasticSearchContributionConventionnelle,
-  ElasticSearchContributionGeneric,
-} from "@socialgouv/cdtn-utils";
+import { Breadcrumb, ElasticSearchContribution } from "@socialgouv/cdtn-utils";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
-import ContributionGenericPoc from "../../src/contributions/ContributionGenericPoc";
-import ContributionCCPoc from "../../src/contributions/ContributionCCPoc";
-import { showNewContribPage } from "../../src/contributions/utils";
-import EventTracker from "../../src/lib/tracking/EventTracker";
-import ContributionGeneric from "../../src/contributions/ContributionGeneric";
-import ContributionCC from "../../src/contributions/ContributionCC";
 import Layout from "../../src/layout-dsfr/Layout";
 import Answer from "../../src/common-dsfr/Answer";
+import { Contribution } from "../../src/contribution-dsfr";
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);
@@ -88,8 +77,7 @@ function PageContribution(props: Props): React.ReactElement {
             title={props.contribution.title}
             breadcrumbs={props.contribution.breadcrumbs}
           >
-            <h2>Test</h2>
-            {props.contribution.idcc === "0000" ? ("Contribution") : ("Contribution personnalisée")}
+            <Contribution contribution={props.contribution} />
           </Answer>
         </>
       ) : (

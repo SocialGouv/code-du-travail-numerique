@@ -4,6 +4,9 @@ import { Breadcrumb } from "@socialgouv/cdtn-utils";
 import Breadcrumbs from "./Breadcrumbs";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import Article from "./Article";
+import { Box } from "../design-system/base/Box";
+import { Container } from "../design-system/layout/Container";
+import { Grid, GridCol } from "../design-system/base/Grid";
 
 type AnswerProps = {
   additionalContent?: any;
@@ -42,27 +45,30 @@ function Answer({
   const router = useRouter();
   return (
     <>
-      <Breadcrumbs items={breadcrumbs} />
+      <Breadcrumbs items={breadcrumbs} currentPage={title} />
       {!html && !children && (
         <Alert description={emptyMessage} severity="error" title="" />
       )}
-      <div
-        className={
-          "fr-grid-row fr-grid-row--center fr-grid-row--middle fr-pb-8w"
-        }
-      >
-        {(html || children) && (
-          <Article
-            title={title}
-            metaDescription={metaDescription}
-            date={date}
-            dateLabel={dateLabel}
-            source={source}
-          >
-            {children}
-          </Article>
-        )}
-      </div>
+      <Box pt="1v" pb="1v">
+        <Container>
+          {(html || children) && (
+            <Article
+              suptitle={
+                suptitle ||
+                (breadcrumbs.length > 0 &&
+                  breadcrumbs[breadcrumbs.length - 1].label)
+              }
+              title={title}
+              metaDescription={metaDescription}
+              date={date}
+              dateLabel={dateLabel}
+              source={source}
+            >
+              {children}
+            </Article>
+          )}
+        </Container>
+      </Box>
     </>
   );
   /*
