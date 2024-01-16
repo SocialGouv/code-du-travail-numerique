@@ -24,15 +24,14 @@ export const LinkedContent = ({ linkedContent }: Props) => {
                   subtitle = getLabelBySource(source);
                 }
                 return (
-                  <div key={slug} className="fr-col-6 fr-pl-1w">
+                  <div key={slug} className="fr-col-6 fr-p-1w">
                     <div className="fr-card fr-enlarge-link">
                       <div className="fr-card__body">
                         <div className="fr-card__content">
                           <p
-                            className={"fr-text--sm"}
+                            className={"fr-text--xs fr-m-0"}
                             style={{
                               textTransform: "uppercase",
-                              margin: "1rem 0 0 0",
                               fontWeight: "bold",
                               color:
                                 fr.colors.decisions.text.actionHigh.blueCumulus
@@ -41,7 +40,7 @@ export const LinkedContent = ({ linkedContent }: Props) => {
                           >
                             {subtitle}
                           </p>
-                          <h3 className="fr-card__title">
+                          <h3 className="fr-card__title fr-mt-2w">
                             <a href="#">{title}</a>
                           </h3>
                           <p className="fr-card__desc">{description}</p>
