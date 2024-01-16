@@ -12,7 +12,7 @@ export function AccordionContentContribution(
       <Paragraph italic noMargin>
         {contribution.infoMessage}
       </Paragraph>
-      <ContributionContent contribution={contribution} hasNoMarginTop />
+      <ContributionContent contribution={contribution} />
       <ReferencesJuridiques references={contribution.references} />
       <ContributionMessageBlock message={contribution.messageBlock} />
     </>

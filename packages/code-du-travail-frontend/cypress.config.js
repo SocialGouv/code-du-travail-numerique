@@ -1,5 +1,6 @@
 import { defineConfig } from "cypress";
 import dotenv from "dotenv";
+import htmlvalidate from "cypress-html-validate/plugin";
 
 dotenv.config();
 
@@ -12,6 +13,9 @@ module.exports = defineConfig({
     viewportHeight: 1000,
     viewportWidth: 1280,
     chromeWebSecurity: false,
+    setupNodeEvents(on) {
+      htmlvalidate.install(on);
+    },
   },
   video: false,
 });
