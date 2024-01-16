@@ -73,5 +73,4 @@ const HideOnMobile = styled.span`
 
 const SectionNoPadding = styled(Section)`
   padding-top: 0;
-  margin-top: ${spacings.large};
 `;
