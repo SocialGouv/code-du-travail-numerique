@@ -1,6 +1,6 @@
 import "cypress-html-validate/commands";
 
-describe("Validate html validity", () => {
+describe("Validate html", () => {
   describe("page should be valid", () => {
     [
       "/convention-collective",
