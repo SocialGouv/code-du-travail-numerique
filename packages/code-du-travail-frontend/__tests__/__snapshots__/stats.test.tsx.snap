@@ -148,7 +148,6 @@ exports[`<Stats /> should render 1`] = `
         >
           <button
             class="sc-kOPcWz cOwJar sc-tagGq sc-eIcdZJ bZXUzd czWmmg"
-            type="button"
           >
             Accessibilité
           </button>
@@ -156,7 +155,6 @@ exports[`<Stats /> should render 1`] = `
         <button
           aria-label="menu principal"
           class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-eXsaLi bXscSU"
-          type="button"
         >
           <svg
             aria-hidden="true"
@@ -331,7 +329,6 @@ exports[`<Stats /> should render 1`] = `
             </div>
             <button
               class="sc-kOPcWz gWtlVM"
-              type="button"
             >
               Contacter nos services en région
               <svg

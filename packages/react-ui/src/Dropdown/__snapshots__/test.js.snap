@@ -7,7 +7,6 @@ exports[`<Dropdown /> renders the button 1`] = `
   >
     <button
       class="sc-aXZVg qyujw"
-      type="button"
     >
       Click me
     </button>

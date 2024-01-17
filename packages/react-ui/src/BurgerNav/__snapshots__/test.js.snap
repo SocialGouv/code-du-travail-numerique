@@ -5,7 +5,6 @@ exports[`BurgerStyles renders 1`] = `
   <button
     aria-label="menu principal"
     class="sc-aXZVg fayrVA sc-fqkvVR idbyNV"
-    type="button"
   >
     <svg
       aria-hidden="true"

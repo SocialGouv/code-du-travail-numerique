@@ -148,7 +148,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
         >
           <button
             class="sc-kOPcWz cOwJar sc-tagGq sc-dwalKd bZXUzd kUSeXi"
-            type="button"
           >
             Accessibilité
           </button>
@@ -156,7 +155,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
         <button
           aria-label="menu principal"
           class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-eIcdZJ fGURgN"
-          type="button"
         >
           <svg
             aria-hidden="true"
@@ -2245,7 +2243,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                              
                             <button
                               class="sc-kOPcWz gACNan"
-                              type="button"
                             >
                               13 matières
                               <svg
@@ -2265,7 +2262,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                              
                             <button
                               class="sc-kOPcWz gACNan"
-                              type="button"
                             >
                               4 matières
                               <svg
@@ -2687,7 +2683,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
             <button
               class="sc-kOPcWz gWtlVM"
-              type="button"
             >
               Contacter nos services en région
               <svg

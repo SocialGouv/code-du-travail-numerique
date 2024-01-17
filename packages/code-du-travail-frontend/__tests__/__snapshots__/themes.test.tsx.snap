@@ -148,7 +148,6 @@ exports[`<Theme /> should render 1`] = `
         >
           <button
             class="sc-kOPcWz cOwJar sc-tagGq sc-fmzyuX bZXUzd ePvxQq"
-            type="button"
           >
             Accessibilité
           </button>
@@ -156,7 +155,6 @@ exports[`<Theme /> should render 1`] = `
         <button
           aria-label="menu principal"
           class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-camqpD ElRaU"
-          type="button"
         >
           <svg
             aria-hidden="true"
@@ -272,35 +270,30 @@ exports[`<Theme /> should render 1`] = `
             <a
               class="sc-faUjhM tANmi sc-kOPcWz gWtlVM"
               href="/themes//themes/121-cdi"
-              type="button"
             >
               CDI
             </a>
             <a
               class="sc-faUjhM tANmi sc-kOPcWz gWtlVM"
               href="/themes//themes/122-cdd"
-              type="button"
             >
               CDD
             </a>
             <a
               class="sc-faUjhM tANmi sc-kOPcWz gWtlVM"
               href="/themes//themes/123-interim"
-              type="button"
             >
               Intérim
             </a>
             <a
               class="sc-faUjhM tANmi sc-kOPcWz gWtlVM"
               href="/themes//themes/124-contrat-dapprentissage"
-              type="button"
             >
               Contrat d'apprentissage
             </a>
             <a
               class="sc-faUjhM tANmi sc-kOPcWz gWtlVM"
               href="/themes//themes/125-contrat-de-professionnalisation"
-              type="button"
             >
               Contrat de professionnalisation
             </a>
@@ -343,7 +336,6 @@ exports[`<Theme /> should render 1`] = `
             </div>
             <button
               class="sc-kOPcWz gWtlVM"
-              type="button"
             >
               Contacter nos services en région
               <svg

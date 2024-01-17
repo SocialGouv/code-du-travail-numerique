@@ -219,7 +219,6 @@ Button.propTypes = {
   narrow: PropTypes.bool,
   onClick: PropTypes.func,
   small: PropTypes.bool,
-  type: PropTypes.oneOf(["button", "submit", "reset"]),
   variant: PropTypes.oneOf([
     "link",
     "navLink",
@@ -236,7 +235,6 @@ Button.defaultProps = {
   narrow: false,
   onClick: () => {},
   small: false,
-  type: "button",
   variant: "secondary",
   xsmall: false,
 };

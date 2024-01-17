@@ -147,7 +147,6 @@ exports[`<DureePreavisDemission /> should render 1`] = `
       >
         <button
           class="sc-kOPcWz cefBoA sc-iXzfSG sc-eulNck jrhUSB kfCQDo"
-          type="button"
         >
           Commencer
           <svg

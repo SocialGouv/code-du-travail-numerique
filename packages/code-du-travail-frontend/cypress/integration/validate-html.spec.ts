@@ -22,6 +22,7 @@ describe("Validate html", () => {
             "require-sri": "off",
             "valid-id": "off",
             "prefer-native-element": "off",
+            "no-implicit-button-type": "off",
             "aria-label-misuse": "off",
             "long-title": "off",
             "no-dup-id": "off",

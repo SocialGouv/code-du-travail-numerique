@@ -397,13 +397,11 @@ exports[`<Answer /> should renders 1`] = `
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Oui
                 </button>
@@ -905,13 +903,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Oui
                 </button>
@@ -1322,13 +1318,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Oui
                 </button>
@@ -1736,13 +1730,11 @@ exports[`<Answer /> should renders related content 1`] = `
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Oui
                 </button>
@@ -2318,13 +2310,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Oui
                 </button>
@@ -2736,13 +2726,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Oui
                 </button>
@@ -3155,13 +3143,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Oui
                 </button>
@@ -3569,13 +3555,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
-                  type="button"
                 >
                   Oui
                 </button>

@@ -37,7 +37,6 @@ exports[`<Modal /> does not render at first and then render 2`] = `
             <button
               class="sc-aXZVg cmlGbr sc-dcJsrY kXKaBQ"
               title="fermer la modale"
-              type="button"
             >
               <div
                 class="sc-gEvEer bGSueO"
@@ -110,7 +109,6 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
             <button
               class="sc-aXZVg cmlGbr sc-dcJsrY kXKaBQ"
               title="fermer la modale"
-              type="button"
             >
               <div
                 class="sc-gEvEer bGSueO"

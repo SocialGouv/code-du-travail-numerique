@@ -75,7 +75,6 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       >
         <button
           class="sc-kOPcWz cefBoA sc-epALIP sc-lbJcrp dyTjwR innUxH"
-          type="button"
         >
           Commencer
           <svg
@@ -284,7 +283,6 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       >
         <button
           class="sc-kOPcWz cefBoA sc-epALIP sc-lbJcrp dyTjwR innUxH"
-          type="button"
         >
           Commencer
           <svg
@@ -483,7 +481,6 @@ exports[`<Wizard /> should render a step 1`] = `
       >
         <button
           class="sc-kOPcWz cefBoA sc-epALIP sc-lbJcrp dyTjwR innUxH"
-          type="button"
         >
           Commencer
           <svg
