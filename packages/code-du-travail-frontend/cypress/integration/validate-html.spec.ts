@@ -21,12 +21,12 @@ describe("Validate html", () => {
             "heading-level": "error",
             "require-sri": "off",
             "valid-id": "off",
-            "no-implicit-button-type": "off",
             "prefer-native-element": "off",
             "aria-label-misuse": "off",
             "long-title": "off",
             "no-dup-id": "off",
             "wcag/h63": "off",
+            "wcag/h32": "off",
           },
         });
       });

@@ -204,7 +204,7 @@ export const Button = React.forwardRef(
   ({ children, icon: Icon, ...props }, ref) => {
     const StyledCustomIcon = Icon || DirectionRight;
     return (
-      <StyledButton {...props} ref={ref}>
+      <StyledButton {...props} ref={ref} type="button">
         {children}
         {props.variant === "link" && <StyledCustomIcon />}
       </StyledButton>
