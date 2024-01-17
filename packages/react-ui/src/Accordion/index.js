@@ -82,6 +82,7 @@ Accordion.defaultProps = {
 };
 
 const AccordionItemPanelContent = styled.div`
+  & > div:first-child > *:first-child,
   & > *:first-child {
     margin-top: 0;
   }
