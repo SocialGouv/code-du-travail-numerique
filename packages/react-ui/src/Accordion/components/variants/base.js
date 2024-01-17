@@ -26,10 +26,10 @@ export const Item = styled(({ ...props }) => {
 `;
 
 export const ItemPanel = styled(AccordionItemPanel)`
-  padding: ${spacings.base};
+  padding: 0 ${spacings.base} ${spacings.base};
   animation: ${fadeIn} ${animations.transitionTiming} ease-in;
   @media (max-width: ${breakpoints.mobile}) {
-    padding: ${spacings.small} 0;
+    padding: 0 0 ${spacings.small};
   }
 `;
 

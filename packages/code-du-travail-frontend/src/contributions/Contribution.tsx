@@ -177,7 +177,9 @@ const Contribution = ({ answers, content }) => {
                             {conventionAnswer.highlight.title}
                           </StyledParagraph>
                           <Paragraph fontSize="small" noMargin>
-                            <Html>{conventionAnswer.highlight.content}</Html>
+                            <Html as={"span"}>
+                              {conventionAnswer.highlight.content}
+                            </Html>
                           </Paragraph>
                         </StyledAlert>
                       )}

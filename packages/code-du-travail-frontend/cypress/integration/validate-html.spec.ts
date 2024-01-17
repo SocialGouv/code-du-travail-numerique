@@ -16,7 +16,6 @@ describe("Validate html", () => {
       it("page: " + url, () => {
         cy.visit(url);
         cy.htmlvalidate({
-          // extends: ["html-validate:document"],
           rules: {
             "heading-level": "error",
             "require-sri": "off",

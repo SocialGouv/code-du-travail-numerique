@@ -69,7 +69,7 @@ export const Item = styled(({ index, isLast, ...rest }) => (
 
 export const ItemPanel = styled(AccordionItemPanel)`
   margin-left: ${COUNTER_WIDTH};
-  padding: ${spacings.base};
+  padding: 0 ${spacings.base} ${spacings.base};
   background-color: ${({ theme }) => theme.bgSecondary};
   border: ${({ theme }) =>
     box.border(theme.noColors ? theme.border : theme.bgSecondary)};
