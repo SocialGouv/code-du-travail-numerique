@@ -20,6 +20,8 @@ export type AbsencePerYear = {
   totalAbsenceInMonth: number;
 };
 
+const DAYS_IN_ONE_MONTH = 31;
+
 export const splitBySeniorityYear = (begin: Date, end: Date): YearDetail[] => {
   if (isAfter(begin, end)) {
     return [];
@@ -124,8 +126,6 @@ const splitByTwelveMonthsRollingRec = (
   return splitByTwelveMonthsRollingRec(absences, year, acc.concat(year));
 };
 
-const DAYS_IN_ONE_MONTH = 30;
-
 const absenceInYear = (absence: Absence, year: YearDetail): boolean => {
   if (!absence.startedAt) return false;
   if (!absence.durationInMonth) return false;
@@ -152,12 +152,10 @@ const absenceDurationRatio = (absence: Absence, year: YearDetail): number => {
   if (absenceStartAt >= year.begin && absenceEndAt <= year.end) {
     return absence.durationInMonth * absence.motif.value;
   }
-  return (
-    (getOverlappingDaysInIntervals(
-      { end: absenceEndAt, start: absenceStartAt },
-      { end: year.end, start: year.begin }
-    ) /
-      DAYS_IN_ONE_MONTH) *
-    absence.motif.value
+  const overlappingDays = getOverlappingDaysInIntervals(
+    { end: absenceEndAt, start: absenceStartAt },
+    { end: year.end, start: year.begin }
   );
+  const overlappingMonth = overlappingDays / DAYS_IN_ONE_MONTH;
+  return overlappingMonth * absence.motif.value;
 };
