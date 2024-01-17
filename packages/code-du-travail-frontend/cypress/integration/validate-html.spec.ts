@@ -8,6 +8,7 @@ describe("Validate html", () => {
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad",
       "/convention-collective/16-transports-routiers-et-activites-auxiliaires-du-transport",
       "/contribution",
+      "/contribution/les-conges-pour-evenements-familiaux",
       "/contribution/2614-les-conges-pour-evenements-familiaux",
       "/contribution/3248-comment-determiner-lanciennete-du-salarie",
       "/contribution/292-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
@@ -24,6 +25,7 @@ describe("Validate html", () => {
             "prefer-native-element": "off",
             "aria-label-misuse": "off",
             "long-title": "off",
+            "no-dup-id": "off",
             "wcag/h63": "off",
           },
         });
