@@ -148,6 +148,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
         >
           <button
             class="sc-kOPcWz cOwJar sc-tagGq sc-eIcdZJ bZXUzd czWmmg"
+            type="button"
           >
             Accessibilité
           </button>
@@ -155,6 +156,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
         <button
           aria-label="menu principal"
           class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-eXsaLi bXscSU"
+          type="button"
         >
           <svg
             aria-hidden="true"
@@ -344,6 +346,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                           <a
                             class="sc-kOPcWz eRFCst no-after"
                             href="azure.url/cdtn/filename.pdf"
+                            type="button"
                           >
                             <svg
                               aria-hidden="true"
@@ -407,6 +410,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       <a
                         class="sc-kOPcWz cefBoA no-after"
                         href="azure.url/cdtn/filename.pdf"
+                        type="button"
                       >
                         Télécharger le modèle (
                         pdf
@@ -496,6 +500,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     <button
                       class="sc-izQBue hGthJB spacing-left"
                       title="Partager sur LinkedIn"
+                      type="button"
                     >
                       <span
                         class="sc-gtJxfw glGqDG"
@@ -525,6 +530,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       <button
                         class="sc-izQBue hGthJB spacing-left"
                         title="Plus d’options"
+                        type="button"
                       >
                         <span
                           class="sc-gtJxfw glGqDG"
@@ -639,6 +645,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 class="sc-izQBue hGthJB spacing-left"
                 tabindex="-1"
                 title="Partager sur LinkedIn"
+                type="button"
               >
                 <span
                   class="sc-gtJxfw glGqDG"
@@ -669,6 +676,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   class="sc-izQBue hGthJB spacing-left"
                   tabindex="-1"
                   title="Plus d’options"
+                  type="button"
                 >
                   <span
                     class="sc-gtJxfw glGqDG"
@@ -732,11 +740,13 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   >
                     <button
                       class="sc-kOPcWz cpQXMn sc-eONNys hqSqHb"
+                      type="button"
                     >
                       Non
                     </button>
                     <button
                       class="sc-kOPcWz cpQXMn sc-eONNys hqSqHb"
+                      type="button"
                     >
                       Oui
                     </button>
@@ -783,6 +793,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </div>
             <button
               class="sc-kOPcWz gWtlVM"
+              type="button"
             >
               Contacter nos services en région
               <svg

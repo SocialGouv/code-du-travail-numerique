@@ -29,11 +29,13 @@ exports[`<Feedback/> should render 1`] = `
           >
             <button
               class="sc-kOPcWz cpQXMn sc-empnci cprGLf"
+              type="button"
             >
               Non
             </button>
             <button
               class="sc-kOPcWz cpQXMn sc-empnci cprGLf"
+              type="button"
             >
               Oui
             </button>
@@ -167,6 +169,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           >
             <button
               class="sc-kOPcWz dSQWfG sc-empnci cprGLf"
+              type="button"
             >
               Envoyer
             </button>
@@ -260,6 +263,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
           >
             <button
               class="sc-kOPcWz dSQWfG sc-empnci cprGLf"
+              type="button"
             >
               Envoyer
             </button>

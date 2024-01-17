@@ -148,6 +148,7 @@ exports[`<FicheMT /> should render 1`] = `
         >
           <button
             class="sc-kOPcWz cOwJar sc-tagGq sc-dBFDNq bZXUzd lgnDyM"
+            type="button"
           >
             Accessibilité
           </button>
@@ -155,6 +156,7 @@ exports[`<FicheMT /> should render 1`] = `
         <button
           aria-label="menu principal"
           class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-bHnlcS cNDlpq"
+          type="button"
         >
           <svg
             aria-hidden="true"
@@ -515,6 +517,7 @@ exports[`<FicheMT /> should render 1`] = `
                     <button
                       class="sc-isRoRg bfiCtj spacing-left"
                       title="Partager sur LinkedIn"
+                      type="button"
                     >
                       <span
                         class="sc-eNSrOW hIGqAE"
@@ -544,6 +547,7 @@ exports[`<FicheMT /> should render 1`] = `
                       <button
                         class="sc-isRoRg bfiCtj spacing-left"
                         title="Plus d’options"
+                        type="button"
                       >
                         <span
                           class="sc-eNSrOW hIGqAE"
@@ -658,6 +662,7 @@ exports[`<FicheMT /> should render 1`] = `
                 class="sc-isRoRg bfiCtj spacing-left"
                 tabindex="-1"
                 title="Partager sur LinkedIn"
+                type="button"
               >
                 <span
                   class="sc-eNSrOW hIGqAE"
@@ -688,6 +693,7 @@ exports[`<FicheMT /> should render 1`] = `
                   class="sc-isRoRg bfiCtj spacing-left"
                   tabindex="-1"
                   title="Plus d’options"
+                  type="button"
                 >
                   <span
                     class="sc-eNSrOW hIGqAE"
@@ -751,11 +757,13 @@ exports[`<FicheMT /> should render 1`] = `
                   >
                     <button
                       class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                      type="button"
                     >
                       Non
                     </button>
                     <button
                       class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                      type="button"
                     >
                       Oui
                     </button>
@@ -802,6 +810,7 @@ exports[`<FicheMT /> should render 1`] = `
             </div>
             <button
               class="sc-kOPcWz gWtlVM"
+              type="button"
             >
               Contacter nos services en région
               <svg

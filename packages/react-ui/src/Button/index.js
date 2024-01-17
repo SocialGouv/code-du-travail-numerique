@@ -204,7 +204,7 @@ export const Button = React.forwardRef(
   ({ children, icon: Icon, ...props }, ref) => {
     const StyledCustomIcon = Icon || DirectionRight;
     return (
-      <StyledButton {...props} ref={ref} type="button">
+      <StyledButton {...props} ref={ref}>
         {children}
         {props.variant === "link" && <StyledCustomIcon />}
       </StyledButton>
@@ -219,6 +219,7 @@ Button.propTypes = {
   narrow: PropTypes.bool,
   onClick: PropTypes.func,
   small: PropTypes.bool,
+  type: PropTypes.oneOf(["button", "submit", "reset"]),
   variant: PropTypes.oneOf([
     "link",
     "navLink",
@@ -235,6 +236,7 @@ Button.defaultProps = {
   narrow: false,
   onClick: () => {},
   small: false,
+  type: "button",
   variant: "secondary",
   xsmall: false,
 };

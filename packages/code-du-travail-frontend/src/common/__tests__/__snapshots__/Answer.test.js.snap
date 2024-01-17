@@ -157,6 +157,7 @@ exports[`<Answer /> should renders 1`] = `
                 <button
                   class="sc-isRoRg bfiCtj spacing-left"
                   title="Partager sur LinkedIn"
+                  type="button"
                 >
                   <span
                     class="sc-eNSrOW hIGqAE"
@@ -186,6 +187,7 @@ exports[`<Answer /> should renders 1`] = `
                   <button
                     class="sc-isRoRg bfiCtj spacing-left"
                     title="Plus d’options"
+                    type="button"
                   >
                     <span
                       class="sc-eNSrOW hIGqAE"
@@ -300,6 +302,7 @@ exports[`<Answer /> should renders 1`] = `
             class="sc-isRoRg bfiCtj spacing-left"
             tabindex="-1"
             title="Partager sur LinkedIn"
+            type="button"
           >
             <span
               class="sc-eNSrOW hIGqAE"
@@ -330,6 +333,7 @@ exports[`<Answer /> should renders 1`] = `
               class="sc-isRoRg bfiCtj spacing-left"
               tabindex="-1"
               title="Plus d’options"
+              type="button"
             >
               <span
                 class="sc-eNSrOW hIGqAE"
@@ -393,11 +397,13 @@ exports[`<Answer /> should renders 1`] = `
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Oui
                 </button>
@@ -659,6 +665,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 <button
                   class="sc-isRoRg bfiCtj spacing-left"
                   title="Partager sur LinkedIn"
+                  type="button"
                 >
                   <span
                     class="sc-eNSrOW hIGqAE"
@@ -688,6 +695,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   <button
                     class="sc-isRoRg bfiCtj spacing-left"
                     title="Plus d’options"
+                    type="button"
                   >
                     <span
                       class="sc-eNSrOW hIGqAE"
@@ -802,6 +810,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             class="sc-isRoRg bfiCtj spacing-left"
             tabindex="-1"
             title="Partager sur LinkedIn"
+            type="button"
           >
             <span
               class="sc-eNSrOW hIGqAE"
@@ -832,6 +841,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="sc-isRoRg bfiCtj spacing-left"
               tabindex="-1"
               title="Plus d’options"
+              type="button"
             >
               <span
                 class="sc-eNSrOW hIGqAE"
@@ -895,11 +905,13 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Oui
                 </button>
@@ -1070,6 +1082,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 <button
                   class="sc-isRoRg bfiCtj spacing-left"
                   title="Partager sur LinkedIn"
+                  type="button"
                 >
                   <span
                     class="sc-eNSrOW hIGqAE"
@@ -1099,6 +1112,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   <button
                     class="sc-isRoRg bfiCtj spacing-left"
                     title="Plus d’options"
+                    type="button"
                   >
                     <span
                       class="sc-eNSrOW hIGqAE"
@@ -1213,6 +1227,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
             class="sc-isRoRg bfiCtj spacing-left"
             tabindex="-1"
             title="Partager sur LinkedIn"
+            type="button"
           >
             <span
               class="sc-eNSrOW hIGqAE"
@@ -1243,6 +1258,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               class="sc-isRoRg bfiCtj spacing-left"
               tabindex="-1"
               title="Plus d’options"
+              type="button"
             >
               <span
                 class="sc-eNSrOW hIGqAE"
@@ -1306,11 +1322,13 @@ exports[`<Answer /> should renders back to results link 1`] = `
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Oui
                 </button>
@@ -1478,6 +1496,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 <button
                   class="sc-isRoRg bfiCtj spacing-left"
                   title="Partager sur LinkedIn"
+                  type="button"
                 >
                   <span
                     class="sc-eNSrOW hIGqAE"
@@ -1507,6 +1526,7 @@ exports[`<Answer /> should renders related content 1`] = `
                   <button
                     class="sc-isRoRg bfiCtj spacing-left"
                     title="Plus d’options"
+                    type="button"
                   >
                     <span
                       class="sc-eNSrOW hIGqAE"
@@ -1621,6 +1641,7 @@ exports[`<Answer /> should renders related content 1`] = `
             class="sc-isRoRg bfiCtj spacing-left"
             tabindex="-1"
             title="Partager sur LinkedIn"
+            type="button"
           >
             <span
               class="sc-eNSrOW hIGqAE"
@@ -1651,6 +1672,7 @@ exports[`<Answer /> should renders related content 1`] = `
               class="sc-isRoRg bfiCtj spacing-left"
               tabindex="-1"
               title="Plus d’options"
+              type="button"
             >
               <span
                 class="sc-eNSrOW hIGqAE"
@@ -1714,11 +1736,13 @@ exports[`<Answer /> should renders related content 1`] = `
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Oui
                 </button>
@@ -1750,7 +1774,7 @@ exports[`<Answer /> should renders related content 1`] = `
             class="sc-kbdlSk kBnlFg"
           >
             <a
-              class="sc-bmzYkS hFAanY"
+              class="sc-bmzYkS eyKmWS"
               href="url.extrenal/tool"
             >
               <svg
@@ -1765,18 +1789,18 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <p
+              <span
                 class="sc-iHGNWf hQSWKy"
               >
                 related external title 1
-              </p>
+              </span>
             </a>
           </li>
           <li
             class="sc-kbdlSk kBnlFg"
           >
             <a
-              class="sc-bmzYkS hFAanY"
+              class="sc-bmzYkS eyKmWS"
               href="/outils/TOOL_1"
             >
               <svg
@@ -1791,11 +1815,11 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <p
+              <span
                 class="sc-iHGNWf hQSWKy"
               >
                 related tool title 1
-              </p>
+              </span>
             </a>
           </li>
         </ul>
@@ -1815,7 +1839,7 @@ exports[`<Answer /> should renders related content 1`] = `
             class="sc-kbdlSk kBnlFg"
           >
             <a
-              class="sc-bmzYkS hFAanY"
+              class="sc-bmzYkS eyKmWS"
               href="/fiche-service-public/LINK_1"
             >
               <svg
@@ -1830,18 +1854,18 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <p
+              <span
                 class="sc-iHGNWf hQSWKy"
               >
                 related sheet sp title 1
-              </p>
+              </span>
             </a>
           </li>
           <li
             class="sc-kbdlSk kBnlFg"
           >
             <a
-              class="sc-bmzYkS hFAanY"
+              class="sc-bmzYkS eyKmWS"
               href="/fiche-ministere-travail/LINK_2"
             >
               <svg
@@ -1856,18 +1880,18 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <p
+              <span
                 class="sc-iHGNWf hQSWKy"
               >
                 related sheet mt title 1
-              </p>
+              </span>
             </a>
           </li>
           <li
             class="sc-kbdlSk kBnlFg"
           >
             <a
-              class="sc-bmzYkS hFAanY"
+              class="sc-bmzYkS eyKmWS"
               href="/fiche-service-public/LINK_4"
             >
               <svg
@@ -1882,11 +1906,11 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <p
+              <span
                 class="sc-iHGNWf hQSWKy"
               >
                 related sheet sp title 2
-              </p>
+              </span>
             </a>
           </li>
         </ul>
@@ -2054,6 +2078,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 <button
                   class="sc-isRoRg bfiCtj spacing-left"
                   title="Partager sur LinkedIn"
+                  type="button"
                 >
                   <span
                     class="sc-eNSrOW hIGqAE"
@@ -2083,6 +2108,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   <button
                     class="sc-isRoRg bfiCtj spacing-left"
                     title="Plus d’options"
+                    type="button"
                   >
                     <span
                       class="sc-eNSrOW hIGqAE"
@@ -2197,6 +2223,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
             class="sc-isRoRg bfiCtj spacing-left"
             tabindex="-1"
             title="Partager sur LinkedIn"
+            type="button"
           >
             <span
               class="sc-eNSrOW hIGqAE"
@@ -2227,6 +2254,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               class="sc-isRoRg bfiCtj spacing-left"
               tabindex="-1"
               title="Plus d’options"
+              type="button"
             >
               <span
                 class="sc-eNSrOW hIGqAE"
@@ -2290,11 +2318,13 @@ exports[`<Answer /> should renders tooltip 1`] = `
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Oui
                 </button>
@@ -2466,6 +2496,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 <button
                   class="sc-isRoRg bfiCtj spacing-left"
                   title="Partager sur LinkedIn"
+                  type="button"
                 >
                   <span
                     class="sc-eNSrOW hIGqAE"
@@ -2495,6 +2526,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   <button
                     class="sc-isRoRg bfiCtj spacing-left"
                     title="Plus d’options"
+                    type="button"
                   >
                     <span
                       class="sc-eNSrOW hIGqAE"
@@ -2609,6 +2641,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             class="sc-isRoRg bfiCtj spacing-left"
             tabindex="-1"
             title="Partager sur LinkedIn"
+            type="button"
           >
             <span
               class="sc-eNSrOW hIGqAE"
@@ -2639,6 +2672,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               class="sc-isRoRg bfiCtj spacing-left"
               tabindex="-1"
               title="Plus d’options"
+              type="button"
             >
               <span
                 class="sc-eNSrOW hIGqAE"
@@ -2702,11 +2736,13 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Oui
                 </button>
@@ -2879,6 +2915,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 <button
                   class="sc-isRoRg bfiCtj spacing-left"
                   title="Partager sur LinkedIn"
+                  type="button"
                 >
                   <span
                     class="sc-eNSrOW hIGqAE"
@@ -2908,6 +2945,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   <button
                     class="sc-isRoRg bfiCtj spacing-left"
                     title="Plus d’options"
+                    type="button"
                   >
                     <span
                       class="sc-eNSrOW hIGqAE"
@@ -3022,6 +3060,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             class="sc-isRoRg bfiCtj spacing-left"
             tabindex="-1"
             title="Partager sur LinkedIn"
+            type="button"
           >
             <span
               class="sc-eNSrOW hIGqAE"
@@ -3052,6 +3091,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               class="sc-isRoRg bfiCtj spacing-left"
               tabindex="-1"
               title="Plus d’options"
+              type="button"
             >
               <span
                 class="sc-eNSrOW hIGqAE"
@@ -3115,11 +3155,13 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Oui
                 </button>
@@ -3287,6 +3329,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 <button
                   class="sc-isRoRg bfiCtj spacing-left"
                   title="Partager sur LinkedIn"
+                  type="button"
                 >
                   <span
                     class="sc-eNSrOW hIGqAE"
@@ -3316,6 +3359,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   <button
                     class="sc-isRoRg bfiCtj spacing-left"
                     title="Plus d’options"
+                    type="button"
                   >
                     <span
                       class="sc-eNSrOW hIGqAE"
@@ -3430,6 +3474,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             class="sc-isRoRg bfiCtj spacing-left"
             tabindex="-1"
             title="Partager sur LinkedIn"
+            type="button"
           >
             <span
               class="sc-eNSrOW hIGqAE"
@@ -3460,6 +3505,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               class="sc-isRoRg bfiCtj spacing-left"
               tabindex="-1"
               title="Plus d’options"
+              type="button"
             >
               <span
                 class="sc-eNSrOW hIGqAE"
@@ -3523,11 +3569,13 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               >
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Non
                 </button>
                 <button
                   class="sc-kOPcWz cpQXMn sc-hYmls dfErBQ"
+                  type="button"
                 >
                   Oui
                 </button>

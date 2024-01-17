@@ -7,6 +7,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   >
     <button
       class="sc-kOPcWz gWtlVM"
+      type="button"
     >
       texte dans le bouton
     </button>
@@ -141,6 +142,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             <button
               class="sc-kOPcWz kyVwqT sc-jnOGJG fRzVjo"
               title="fermer la modale"
+              type="button"
             >
               <div
                 class="sc-cWSHoV bKtA-De"
