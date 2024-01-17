@@ -17,6 +17,8 @@ jest.mock("../src/config", () => ({
   AZURE_BASE_URL: "azure.url",
   AZURE_CONTAINER: "cdtn",
   PACKAGE_VERSION: "vX.Y.Z",
+  ENTERPRISE_API_URL:
+    "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1",
 }));
 
 global.setImmediate = jest.useRealTimers;
