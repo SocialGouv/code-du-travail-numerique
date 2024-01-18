@@ -8,6 +8,7 @@ import {
   getAllGenericsContributions,
   getContributionsBySlugs,
   getContributionsByIds,
+  getAllContributionQuery,
 } from "./queries";
 
 export const getGenericContributionsGroupByThemes = async () => {
@@ -28,6 +29,16 @@ export const getGenericContributionsGroupByThemes = async () => {
 
 export const getGenericsContributions = async () => {
   const body = getAllGenericsContributions();
+
+  const response = await elasticsearchClient.search({
+    body,
+    index: elasticDocumentsIndex,
+  });
+  return response.body.hits.hits.map(({ _source }) => _source);
+};
+
+export const getAllContributions = async () => {
+  const body = getAllContributionQuery();
 
   const response = await elasticsearchClient.search({
     body,

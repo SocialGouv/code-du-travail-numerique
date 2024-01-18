@@ -19,6 +19,7 @@ import { showNewContribPage } from "../../src/contributions/utils";
 import EventTracker from "../../src/lib/tracking/EventTracker";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
+import { getAllContributions } from "../../src/api";
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);
@@ -141,8 +142,19 @@ function PageContribution(props: Props): React.ReactElement {
   );
 }
 
-export const getServerSideProps = async ({ query }) => {
-  const response = await fetchQuestion(query);
+export async function getStaticPaths() {
+  const contribs = await getAllContributions();
+  return {
+    paths: contribs.map((v) => ({
+      params: { slug: v.slug },
+    })),
+    fallback: false,
+  };
+}
+
+export const getStaticProps = async (context) => {
+  const params = context.params;
+  const response = await fetchQuestion(params);
   if (!response.ok) {
     return handleError(response);
   }
