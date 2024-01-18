@@ -19,10 +19,11 @@ import { showNewContribPage } from "../../src/contributions/utils";
 import EventTracker from "../../src/lib/tracking/EventTracker";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
-import { getAllContributions } from "../../src/api";
-
-const fetchQuestion = ({ slug }) =>
-  fetch(`${SITE_URL}/api/items/contributions/${slug}`);
+import {
+  getAll,
+  getAllContributions,
+  getBySourceAndSlugItems,
+} from "../../src/api";
 
 type NewProps = {
   contribution: ElasticSearchContribution;
@@ -153,12 +154,8 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async (context) => {
-  const params = context.params;
-  const response = await fetchQuestion(params);
-  if (!response.ok) {
-    return handleError(response);
-  }
-  const data = await response.json();
+  const slug = context.params.slug;
+  const data = await getBySourceAndSlugItems("contributions", slug);
 
   if (
     data._source?.type === "content" ||
@@ -180,10 +177,7 @@ export const getStaticProps = async (context) => {
 
     const contentUrl = extractMdxContentUrl(markdown);
     if (contentUrl) {
-      const fetchContent = await fetch(
-        `${SITE_URL}/api/items?url=${contentUrl}`
-      );
-      const [content] = await fetchContent.json();
+      const [content] = await getAll(contentUrl);
       return {
         props: {
           relatedItems: data.relatedItems,
