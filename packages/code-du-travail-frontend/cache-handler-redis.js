@@ -4,7 +4,7 @@ const createLruCache = require("@neshca/cache-handler/local-lru").default;
 const { createClient } = require("redis");
 
 const client = createClient({
-  url: "redis://redis:6379",
+  url: process.env.NEXT_PUBLIC_REDIS_URL ?? "redis://localhost:6379",
 });
 
 client.on("error", (error) => {
