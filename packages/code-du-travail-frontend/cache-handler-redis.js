@@ -4,7 +4,7 @@
 // const { createClient } = require("redis");
 
 // const client = createClient({
-//   url: process.env.NEXT_PUBLIC_REDIS_URL ?? "redis://localhost:6379",
+//   url: process.env.REDIS_URL ?? "redis://localhost:6379",
 // });
 
 // client.on("error", (error) => {
@@ -36,7 +36,7 @@
 
 const { createClient } = require("redis");
 const client = createClient({
-  url: "redis://redis:80",
+  url: process.env.REDIS_URL ?? "redis://localhost:6379",
 });
 
 client.on("error", (err) => console.error("Redis Client Error", err));

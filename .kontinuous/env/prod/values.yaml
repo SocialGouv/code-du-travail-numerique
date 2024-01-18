@@ -17,7 +17,7 @@ jobs:
           NEXT_PUBLIC_SENTRY_PROJECT: "code-du-travail-numerique"
           NEXT_PUBLIC_SENTRY_URL: "https://sentry.fabrique.social.gouv.fr/"
           NEXT_PUBLIC_ES_INDEX_PREFIX: "cdtn-prod"
-          NEXT_PUBLIC_REDIS_URL: "redis://redis:80"
+          REDIS_URL: "redis://redis:80"
         secrets:
           sentry_auth_token:
             secretName: www-secret
