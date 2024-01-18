@@ -36,7 +36,7 @@
 
 const { createClient } = require("redis");
 const client = createClient({
-  url: process.env.NEXT_PUBLIC_REDIS_URL || "redis://0.0.0.0:6379",
+  url: "redis://redis:80",
 });
 
 client.on("error", (err) => console.error("Redis Client Error", err));
