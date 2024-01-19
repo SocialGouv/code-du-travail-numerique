@@ -33,11 +33,11 @@ export const NoticeExample = ({
   const isCcsWithOneMoreDay =
     idccNumber && CCS_WITH_ONE_MORE_DAY.includes(idccNumber);
   const defaultDayPreavisDemissionMessage = isCcsWithOneMoreDay
-    ? "le lendemain du jour"
-    : "le jour";
+    ? "Le préavis débute le lendemain du jour où le salarié remet sa lettre de démission en main propre ou le lendemain de la première présentation de la lettre recommandée, peu importe le jour de son retrait par l’employeur."
+    : "Le préavis débute le jour où le salarié remet sa lettre de démission en main propre ou à la date de première présentation de la lettre recommandée, peu importe le jour de son retrait par l’employeur.";
   const defaultDayPreavisLicenciementMessage = isCcsWithOneMoreDay
-    ? "le lendemain de la"
-    : "à la date de";
+    ? "Le préavis débute le lendemain de la première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié."
+    : "Le préavis débute à la date de la première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.";
   const fromDateCalculated = React.useMemo(
     () => (isCcsWithOneMoreDay ? convertDate(fromDate, 1, Unit.DAY) : fromDate),
     [fromDate, isCcsWithOneMoreDay]
@@ -55,10 +55,7 @@ export const NoticeExample = ({
         <SmallText>
           {note}
           <MorePrecision extra={extra} />
-          Le préavis débute {defaultDayPreavisDemissionMessage} où le salarié
-          remet sa lettre de démission en main propre ou à la date de première
-          présentation de la lettre recommandée, peu importe le jour de son
-          retrait par l’employeur.
+          {defaultDayPreavisDemissionMessage}
           {periodCalculated && (
             <SmallText as="i">
               {" "}
@@ -84,9 +81,7 @@ export const NoticeExample = ({
         <SmallText>
           {note}
           <MorePrecision extra={extra} />
-          Le préavis débute {defaultDayPreavisLicenciementMessage} première
-          présentation de la notification du licenciement par lettre
-          recommandée, peu importe le jour de son retrait par le salarié.
+          {defaultDayPreavisLicenciementMessage}
           {periodCalculated && (
             <SmallText as="i">
               {" "}
