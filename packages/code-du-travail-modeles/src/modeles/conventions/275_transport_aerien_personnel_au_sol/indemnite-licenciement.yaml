@@ -15,10 +15,6 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   cdtn:
     type: entier
 
-contrat salarié . convention collective . transport aérien personnel au sol . date de notification:
-  remplace: contrat salarié . indemnité de licenciement . date de notification
-  valeur: 01/02/2024
-
 # Non-cadres
 contrat salarié . convention collective . transport aérien personnel au sol . non cadres:
   applicable si: catégorie professionnelle = 'Non-cadres'
