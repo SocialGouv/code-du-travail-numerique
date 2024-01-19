@@ -13,6 +13,24 @@ import { getSourceUrlFromPath } from "../src/lib";
 import { useRouter } from "next/router";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL } from "../src/config";
 
+import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
+import { createNextDsfrIntegrationApi } from "@codegouvfr/react-dsfr/next-pagesdir";
+import Link from "next/link";
+
+// Only in TypeScript projects
+declare module "@codegouvfr/react-dsfr/next-pagesdir" {
+  interface RegisterLink {
+    Link: typeof Link;
+  }
+}
+
+const { withDsfr, dsfrDocumentApi } = createNextDsfrIntegrationApi({
+  defaultColorScheme: "system",
+  Link,
+});
+
+export { dsfrDocumentApi };
+
 if (typeof window !== "undefined") {
   import("../src/web-components/tooltip")
     .then((module) => {
@@ -38,7 +56,7 @@ if (typeof window !== "undefined") {
 
 const WIDGETS_PATH = /\/widgets\/.*/;
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp(props: AppProps) {
   const router = useRouter();
   useEffect(() => {
     init({
@@ -58,6 +76,26 @@ function MyApp({ Component, pageProps }: AppProps) {
     });
   }, []);
 
+  console.log(`MMA - ${router.pathname}`);
+  if (router.pathname.startsWith("/contribution/")) {
+    return MyAppNew(props);
+  } else {
+    return MyAppOld(props);
+  }
+}
+
+function MyAppNew({ Component, pageProps }: AppProps) {
+  return (
+    <React.StrictMode>
+      <MuiDsfrThemeProvider>
+        <A11y />
+        <Component {...pageProps} />
+      </MuiDsfrThemeProvider>
+    </React.StrictMode>
+  );
+}
+
+function MyAppOld({ Component, pageProps }: AppProps) {
   return (
     <React.StrictMode>
       <ThemeProvider>
@@ -69,4 +107,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default withDsfr(MyApp);
