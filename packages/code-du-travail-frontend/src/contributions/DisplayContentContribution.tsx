@@ -34,7 +34,6 @@ const mapItem = (titleLevel: number, domNode: Element, summary: Element) => ({
       // @ts-ignore
       return domNode.data;
     },
-    trim: true,
   }),
 });
 const mapToAccordion = (titleLevel: number, items) => (
@@ -98,12 +97,12 @@ const mapTbody = (tbody: Element) => {
         <thead>
           {theadChildren.map((child, index) => (
             <tr key={`tr-${index}`}>
-              {domToReact(child.children as DOMNode[], { trim: true })}
+              {domToReact(child.children as DOMNode[])}
             </tr>
           ))}
         </thead>
       )}
-      <tbody>{domToReact(tbody.children as DOMNode[], { trim: true })}</tbody>
+      <tbody>{domToReact(tbody.children as DOMNode[])}</tbody>
     </UITable>
   );
 };
@@ -146,41 +145,25 @@ const options = (titleLevel: number): HTMLReactParserOptions => ({
         }
       }
       if (domNode.name === "div" && domNode.attribs.class === "alert") {
-        return (
-          <Alert>
-            {domToReact(domNode.children as DOMNode[], { trim: true })}
-          </Alert>
-        );
+        return <Alert>{domToReact(domNode.children as DOMNode[])}</Alert>;
       }
       if (domNode.name === "li") {
-        return (
-          <StyledLi>
-            {domToReact(domNode.children as DOMNode[], { trim: true })}
-          </StyledLi>
-        );
+        return <StyledLi>{domToReact(domNode.children as DOMNode[])}</StyledLi>;
       }
       if (domNode.name === "p" && !domNode.children.length) {
         return <></>;
       }
       if (domNode.name === "strong") {
         // Disable trim on strong
-        return (
-          <strong>
-            {domToReact(domNode.children as DOMNode[], { trim: false })}
-          </strong>
-        );
+        return <strong>{domToReact(domNode.children as DOMNode[])}</strong>;
       }
       if (domNode.name === "em") {
         // Disable trim on em
-        return (
-          <em>{domToReact(domNode.children as DOMNode[], { trim: false })}</em>
-        );
+        return <em>{domToReact(domNode.children as DOMNode[])}</em>;
       }
       if (domNode.name === "p") {
         // Disable trim on p
-        return (
-          <p>{domToReact(domNode.children as DOMNode[], { trim: false })}</p>
-        );
+        return <p>{domToReact(domNode.children as DOMNode[])}</p>;
       }
     }
   },

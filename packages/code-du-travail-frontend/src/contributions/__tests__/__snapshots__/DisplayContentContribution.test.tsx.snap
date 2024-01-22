@@ -51,7 +51,11 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                 data-testid="contrib-accordion-0"
                 style="margin: 0px;"
               >
+                
+      
                 Report ou suspension du préavis
+                
+    
               </h3>
             </div>
           </div>
@@ -123,7 +127,11 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                             data-testid="contrib-accordion-0"
                             style="margin: 0px;"
                           >
+                            
+          
                             Congés payés
+                            
+        
                           </h4>
                         </div>
                       </div>
@@ -189,8 +197,12 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                         style="margin: 0px;"
                                       >
                                         
+              
+                                        
                 Dates des congés fixées avant la notification du licenciement
               
+                                        
+            
                                       </h5>
                                     </div>
                                   </div>
@@ -264,8 +276,12 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                         style="margin: 0px;"
                                       >
                                         
+              
+                                        
                 Dates des congés fixées après la notification du licenciement
               
+                                        
+            
                                       </h5>
                                     </div>
                                   </div>
@@ -339,7 +355,11 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                         data-testid="contrib-accordion-2"
                                         style="margin: 0px;"
                                       >
+                                        
+              
                                         Licenciement notifié pendant les congés payés
+                                        
+            
                                       </h5>
                                     </div>
                                   </div>
@@ -398,21 +418,37 @@ exports[`DisplayContentContribution should render correctly a table with multipl
               colspan="1"
               rowspan="2"
             >
+              
+        
               <p>
+                
+          
                 <strong>
                   Nature du contrat de mission
                 </strong>
+                
+        
               </p>
+              
+      
             </td>
             <td
               colspan="2"
               rowspan="1"
             >
+              
+        
               <p>
+                
+          
                 <strong>
                   Durée maximale
                 </strong>
+                
+        
               </p>
+              
+      
             </td>
           </tr>
           <tr>
@@ -420,21 +456,37 @@ exports[`DisplayContentContribution should render correctly a table with multipl
               colspan="1"
               rowspan="1"
             >
+              
+        
               <p>
+                
+          
                 <strong>
                   Contrat de date à date
                 </strong>
+                
+        
               </p>
+              
+      
             </td>
             <td
               colspan="1"
               rowspan="1"
             >
+              
+        
               <p>
+                
+          
                 <strong>
                   Contrat sans terme certain
                 </strong>
+                
+        
               </p>
+              
+      
             </td>
           </tr>
         </thead>
@@ -444,25 +496,37 @@ exports[`DisplayContentContribution should render correctly a table with multipl
               colspan="1"
               rowspan="1"
             >
+              
+        
               <p>
                 Remplacement d’un salarié absent ou dont le contrat de travail est suspendu
               </p>
+              
+      
             </td>
             <td
               colspan="1"
               rowspan="1"
             >
+              
+        
               <p>
                 18 mois
               </p>
+              
+      
             </td>
             <td
               colspan="1"
               rowspan="1"
             >
+              
+        
               <p>
                 Fin de l’absence
               </p>
+              
+      
             </td>
           </tr>
         </tbody>
