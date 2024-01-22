@@ -22,6 +22,7 @@ import {
   getAllContributions,
   getBySourceAndSlugItems,
 } from "../../src/api";
+import { SITE_URL } from "../../src/config";
 
 type NewProps = {
   contribution: ElasticSearchContribution;
@@ -111,7 +112,7 @@ function PageContribution(props: Props): React.ReactElement {
             relatedItems={props.relatedItems}
             breadcrumbs={props.breadcrumbs}
           >
-            {SLUG_FOR_POC_GENERIC.indexOf(props.slug) >= 0 ? (
+            {SLUG_FOR_POC_GENERIC.indexOf(props.slug ?? "") >= 0 ? (
               <ContributionGenericPoc
                 answers={props.answers}
                 slug={props.slug}
@@ -153,14 +154,13 @@ export async function getStaticPaths() {
 
 export const getStaticProps = async (context) => {
   const slug = context.params.slug;
-  // const params = context.params;
-  // const response = await fetch(`${SITE_URL}/api/items/contributions/${params.slug}`);;
-  // if (!response.ok) {
-  //   return handleError(response);
-  // }
-  // const data = await response.json();
-
-  const data = await getBySourceAndSlugItems("contributions", slug);
+  let data: any;
+  if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
+    const response = await fetch(`${SITE_URL}/api/items/contributions/${slug}`);
+    data = await response.json();
+  } else {
+    data = await getBySourceAndSlugItems("contributions", slug);
+  }
 
   if (
     data._source?.type === "content" ||
@@ -182,7 +182,15 @@ export const getStaticProps = async (context) => {
 
     const contentUrl = extractMdxContentUrl(markdown);
     if (contentUrl) {
-      const [content] = await getAll(contentUrl);
+      let content: any;
+      if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
+        const fetchContent = await fetch(
+          `${SITE_URL}/api/items?url=${contentUrl}`
+        );
+        content = await fetchContent.json()[0];
+      } else {
+        content = await getAll(contentUrl)[0];
+      }
       return {
         props: {
           relatedItems: data.relatedItems,

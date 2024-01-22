@@ -3,8 +3,8 @@ const SLUG_FOR_POC_SWAP = [
   "quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
   "la-periode-dessai-peut-elle-etre-renouvelee",
 ];
-export const showNewContribPage = (slug): boolean => {
-  const match = SLUG_FOR_POC_SWAP.find((url) => slug.endsWith(url));
+export const showNewContribPage = (slug: string | undefined): boolean => {
+  const match = SLUG_FOR_POC_SWAP.find((url) => slug && slug.endsWith(url));
   return !!match;
 };
 
