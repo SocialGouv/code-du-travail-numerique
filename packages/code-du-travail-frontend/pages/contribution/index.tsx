@@ -87,13 +87,7 @@ export default Page;
 
 export async function getStaticProps() {
   try {
-    let data: any;
-    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-      const response = await fetch(`${SITE_URL}/api/contributions`);
-      data = await response.json();
-    } else {
-      data = await getGenericContributionsGroupByThemes();
-    }
+    const data: any = await getGenericContributionsGroupByThemes();
     return { props: { contribs: data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);
