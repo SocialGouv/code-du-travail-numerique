@@ -149,7 +149,7 @@ export async function getStaticPaths() {
     paths: contribs.map((v) => ({
       params: { slug: v.slug },
     })),
-    fallback: false,
+    fallback: "blocking",
   };
 }
 
