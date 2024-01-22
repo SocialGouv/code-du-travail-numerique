@@ -22,7 +22,6 @@ import {
   getAllContributions,
   getBySourceAndSlugItems,
 } from "../../src/api";
-import { SITE_URL } from "../../src/config";
 
 type NewProps = {
   contribution: ElasticSearchContribution;
@@ -154,14 +153,7 @@ export async function getStaticPaths() {
 
 export const getStaticProps = async (context) => {
   const slug = context.params.slug;
-  let data: any;
-  if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-    const response = await fetch(`${SITE_URL}/api/items/contributions/${slug}`);
-    data = await response.json();
-  } else {
-    data = await getBySourceAndSlugItems("contributions", slug);
-  }
-
+  const data = await getBySourceAndSlugItems("contributions", slug);
   if (
     data._source?.type === "content" ||
     data._source?.type === "fiche-sp" ||
@@ -182,15 +174,7 @@ export const getStaticProps = async (context) => {
 
     const contentUrl = extractMdxContentUrl(markdown);
     if (contentUrl) {
-      let content: any;
-      if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-        const fetchContent = await fetch(
-          `${SITE_URL}/api/items?url=${contentUrl}`
-        );
-        content = await fetchContent.json()[0];
-      } else {
-        content = await getAll(contentUrl)[0];
-      }
+      const [content] = await getAll(contentUrl);
       return {
         props: {
           relatedItems: data.relatedItems,
