@@ -57,6 +57,7 @@ function ResultStep({ notice, detail, warning }: ResultStepProps): JSX.Element {
         agreementMaximumResult={notice.agreement.maximum}
         type={notice.type}
         notifications={notice.notifications}
+        idccNumber={detail.values.ccn?.selected?.num}
       />
       <ShowDetails>
         <Situation
