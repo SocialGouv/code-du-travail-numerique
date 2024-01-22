@@ -11,8 +11,6 @@ import {
   ElasticSearchContributionConventionnelle,
   ElasticSearchContributionGeneric,
 } from "@socialgouv/cdtn-utils";
-import { handleError } from "../../src/lib/fetch-error";
-import { SITE_URL } from "../../src/config";
 import ContributionGenericPoc from "../../src/contributions/ContributionGenericPoc";
 import ContributionCCPoc from "../../src/contributions/ContributionCCPoc";
 import { showNewContribPage } from "../../src/contributions/utils";
@@ -72,7 +70,7 @@ function PageContribution(props: Props): React.ReactElement {
   if (!props.isNewContribution) {
     metas = buildTitleAndDescription(
       props.breadcrumbs,
-      props.answers.conventionAnswer,
+      props.answers?.conventionAnswer,
       props.title,
       props.description
     );
@@ -149,12 +147,19 @@ export async function getStaticPaths() {
     paths: contribs.map((v) => ({
       params: { slug: v.slug },
     })),
-    fallback: "blocking",
+    fallback: true,
   };
 }
 
 export const getStaticProps = async (context) => {
   const slug = context.params.slug;
+  // const params = context.params;
+  // const response = await fetch(`${SITE_URL}/api/items/contributions/${params.slug}`);;
+  // if (!response.ok) {
+  //   return handleError(response);
+  // }
+  // const data = await response.json();
+
   const data = await getBySourceAndSlugItems("contributions", slug);
 
   if (

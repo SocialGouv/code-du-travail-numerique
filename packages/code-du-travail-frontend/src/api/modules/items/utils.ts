@@ -5,6 +5,7 @@ import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getSearchBySourceSlugBody, getRelatedItemsBody } from "./queries";
 import { getSemQuery } from "../search/queries";
 import { mergePipe } from "../search/utils";
+import { removeUndefinedValues } from "../../utils/functions";
 
 const MAX_RESULTS = 4;
 
@@ -150,5 +151,7 @@ export const getRelatedItems = async ({
     }, new Map())
     .values();
 
-  return Array.from(filteredItems).slice(0, MAX_RESULTS);
+  return Array.from(filteredItems)
+    .slice(0, MAX_RESULTS)
+    .map((v: Record<string, any>) => removeUndefinedValues(v));
 };
