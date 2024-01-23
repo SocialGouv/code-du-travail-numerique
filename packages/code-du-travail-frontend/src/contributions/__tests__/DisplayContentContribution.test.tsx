@@ -226,6 +226,34 @@ describe("DisplayContentContribution", () => {
       );
       expect(getByTestId("contrib-accordion-0").tagName).toEqual("H4");
     });
+    it(`should handle title within nested accordion`, () => {
+      const { getByText } = render(
+        <DisplayContentContribution
+          content={`
+        <div>
+          <details>
+          <summary>Ceci est un titre</summary>
+          <div data-type=" detailsContent">
+            <details>
+              <summary>Ceci est un sous titre</summary>
+              <div data-type=" detailsContent">
+                <span class="title">Ceci est un titre dans un accordion</span>
+              </div>
+            </details>
+          </div>
+          </details>
+        </div>`}
+          titleLevel={4}
+        ></DisplayContentContribution>
+      );
+
+      expect(getByText("Ceci est un titre").tagName).toEqual("H4");
+      expect(getByText("Ceci est un sous titre").tagName).toEqual("H5");
+      expect(getByText("Ceci est un titre dans un accordion").tagName).toEqual(
+        "H6"
+      );
+    });
+
   });
 
   describe("Tables", () => {
