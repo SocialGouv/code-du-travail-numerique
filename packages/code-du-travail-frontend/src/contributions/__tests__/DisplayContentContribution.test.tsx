@@ -253,7 +253,6 @@ describe("DisplayContentContribution", () => {
         "H6"
       );
     });
-
   });
 
   describe("Tables", () => {
@@ -310,7 +309,7 @@ describe("DisplayContentContribution", () => {
                     rowspan="1"
                   >
                     <p>
-                      Pour les
+                      Pour les 
                       <strong>
                         cadres
                       </strong>
@@ -367,7 +366,7 @@ describe("DisplayContentContribution", () => {
                 rowspan="1"
               >
                 <p>
-                  Pour les
+                  Pour les 
                   <strong>
                     cadres
                   </strong>
@@ -485,23 +484,23 @@ describe("DisplayContentContribution", () => {
       <p>
         Ceci est un
         <strong>
-
+           
         </strong>
         texte généré
         <strong>
-
+           
         </strong>
-        par
+        par 
         <em>
-          tiptap
+          tiptap 
         </em>
         avec des
         <em>
-
+           
         </em>
         résidus
         <em>
-
+           
         </em>
         de balise
       </p>
@@ -520,9 +519,9 @@ describe("DisplayContentContribution", () => {
         <strong>
           À noter :
         </strong>
-
+         
         <em>
-          L'échelon professionnel du salarié est habituellement mentionné
+          L'échelon professionnel du salarié est habituellement mentionné 
         </em>
       </p>
     `);

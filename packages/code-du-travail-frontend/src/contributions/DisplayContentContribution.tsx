@@ -123,7 +123,7 @@ const options = (titleLevel: number): HTMLReactParserOptions => {
     replace(domNode) {
       if (domNode instanceof Element) {
         if (domNode.name === "span" && domNode.attribs.class === "title") {
-          accordionTitle++;
+          accordionTitle = titleLevel + 1;
           return (
             <Heading as={`h${titleLevel}`}>
               {domToReact(domNode.children as DOMNode[])}
@@ -131,7 +131,7 @@ const options = (titleLevel: number): HTMLReactParserOptions => {
           );
         }
         if (domNode.name === "span" && domNode.attribs.class === "sub-title") {
-          accordionTitle++;
+          accordionTitle = titleLevel + 1;
           return (
             <Heading as={`h${titleLevel + 1}`}>
               {domToReact(domNode.children as DOMNode[])}
