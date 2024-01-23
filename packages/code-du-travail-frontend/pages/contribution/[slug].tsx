@@ -70,7 +70,7 @@ function PageContribution(props: Props): React.ReactElement {
   if (!props.isNewContribution) {
     metas = buildTitleAndDescription(
       props.breadcrumbs,
-      props.answers?.conventionAnswer,
+      props.answers.conventionAnswer,
       props.title,
       props.description
     );

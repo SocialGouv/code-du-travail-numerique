@@ -43,12 +43,11 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  experimental: {
-    incrementalCacheHandlerPath:
-      process.env.NEXT_PUBLIC_APP_ENV === "production"
-        ? require.resolve("./cache-handler-redis.js")
-        : undefined,
-  },
+  cacheHandler:
+    process.env.NEXT_PUBLIC_APP_ENV === "production"
+      ? require.resolve("./cache-handler-redis.js")
+      : undefined,
+  cacheMaxMemorySize: 0,
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
 };
 
