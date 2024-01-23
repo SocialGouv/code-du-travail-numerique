@@ -8,22 +8,21 @@ const client = createClient({
 });
 
 client.on("error", (error) => {
-  console.error("Redis error:", error.message);
+  console.error("Redis error:", error);
 });
 
 IncrementalCache.onCreation(async () => {
   // read more about TTL limitations https://caching-tools.github.io/next-shared-cache/configuration/ttl
-  function useTtl(maxAge) {
-    const evictionAge = maxAge * 1.5;
-
-    return evictionAge;
-  }
+  const useTtl = false;
 
   await client.connect();
 
   const redisCache = await createRedisCache({
     client,
     useTtl,
+    // timeout for the Redis client operations like `get` and `set`
+    // afeter this timeout, the operation will be considered failed and the `localCache` will be used
+    timeoutMs: 5000,
   });
 
   const localCache = createLruCache({
@@ -32,8 +31,7 @@ IncrementalCache.onCreation(async () => {
 
   return {
     cache: [redisCache, localCache],
-    // read more about useFileSystem limitations https://caching-tools.github.io/next-shared-cache/configuration/use-file-system
-    useFileSystem: false,
+    useFileSystem: !useTtl,
   };
 });
 

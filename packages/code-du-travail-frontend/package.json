@@ -33,7 +33,6 @@
     "@elastic/elasticsearch": "7",
     "@matejmazur/react-katex": "^3.1.3",
     "@neshca/cache-handler": "^0.6.7",
-    "@neshca/json-replacer-reviver": "^1.1.0",
     "@next/bundle-analyzer": "^13.0.0",
     "@sentry/browser": "^7.55.2",
     "@sentry/nextjs": "^7.53.1",

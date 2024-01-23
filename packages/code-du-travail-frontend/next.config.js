@@ -45,9 +45,8 @@ const nextConfig = {
   },
   cacheHandler:
     process.env.NEXT_PUBLIC_APP_ENV === "production"
-      ? require.resolve("./cache-handler-redis.js")
+      ? require.resolve("./cache-handler.js")
       : undefined,
-  cacheMaxMemorySize: 0,
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
 };
 

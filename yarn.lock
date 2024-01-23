@@ -1887,7 +1887,6 @@ __metadata:
     "@elastic/elasticsearch": 7
     "@matejmazur/react-katex": ^3.1.3
     "@neshca/cache-handler": ^0.6.7
-    "@neshca/json-replacer-reviver": ^1.1.0
     "@next/bundle-analyzer": ^13.0.0
     "@sentry/browser": ^7.55.2
     "@sentry/nextjs": ^7.53.1
@@ -3596,7 +3595,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@neshca/json-replacer-reviver@npm:*, @neshca/json-replacer-reviver@npm:^1.1.0":
+"@neshca/json-replacer-reviver@npm:*":
   version: 1.1.0
   resolution: "@neshca/json-replacer-reviver@npm:1.1.0"
   checksum: 045f1e72d1ece52aaf16e87b839f0d3072fccbf92695321f493d872ebd327c34a5893ec1ded6ccce559d9fb999cca51c0c8bbc740449bb30fa3b20d98abdff7c
