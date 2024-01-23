@@ -21,7 +21,7 @@ export const ContributionMessageBlock = ({ message }: Props) => {
   return (
     <StyledSection>
       <Alert>
-        <Heading as="span" variant="primary">
+        <Heading as="div" variant="primary">
           <IconStripe icon={icons.Warning}>Attention</IconStripe>
         </Heading>
         <Html>{message}</Html>
