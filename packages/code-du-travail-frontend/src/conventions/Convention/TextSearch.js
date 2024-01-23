@@ -44,6 +44,7 @@ export function TextSearch({ containerId, convention }) {
             type="search"
             autoComplete="off"
             name="rawQuery"
+            aria-label="Recherchez dans la collection collective"
             placeholder="Congés exceptionnels, prime"
           />
           <input type="hidden" name="query" value={query} />

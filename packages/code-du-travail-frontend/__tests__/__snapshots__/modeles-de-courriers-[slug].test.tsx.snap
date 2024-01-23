@@ -496,6 +496,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     <button
                       class="sc-izQBue hGthJB spacing-left"
                       title="Partager sur LinkedIn"
+                      type="button"
                     >
                       <span
                         class="sc-gtJxfw glGqDG"
@@ -525,6 +526,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       <button
                         class="sc-izQBue hGthJB spacing-left"
                         title="Plus d’options"
+                        type="button"
                       >
                         <span
                           class="sc-gtJxfw glGqDG"
@@ -639,6 +641,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 class="sc-izQBue hGthJB spacing-left"
                 tabindex="-1"
                 title="Partager sur LinkedIn"
+                type="button"
               >
                 <span
                   class="sc-gtJxfw glGqDG"
@@ -669,6 +672,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   class="sc-izQBue hGthJB spacing-left"
                   tabindex="-1"
                   title="Plus d’options"
+                  type="button"
                 >
                   <span
                     class="sc-gtJxfw glGqDG"
