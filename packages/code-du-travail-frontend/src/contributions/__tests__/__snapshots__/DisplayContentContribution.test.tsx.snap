@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
+exports[`DisplayContentContribution Accordions should not fail if no summary tag 1`] = `
 <div>
   <div
     class="sc-ERObt ekELNP"
@@ -381,98 +381,7 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
 </div>
 `;
 
-exports[`DisplayContentContribution should render correctly a table with multiple head lines 1`] = `
-<div>
-  <div
-    class="sc-gFAWRd jDjoBq"
-  >
-    <div
-      class="sc-gmPhUn kUNTdL"
-    >
-      <table
-        class="sc-iMWBiJ Rlfrk"
-      >
-        <thead>
-          <tr>
-            <td
-              colspan="1"
-              rowspan="2"
-            >
-              <p>
-                <strong>
-                  Nature du contrat de mission
-                </strong>
-              </p>
-            </td>
-            <td
-              colspan="2"
-              rowspan="1"
-            >
-              <p>
-                <strong>
-                  Durée maximale
-                </strong>
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td
-              colspan="1"
-              rowspan="1"
-            >
-              <p>
-                <strong>
-                  Contrat de date à date
-                </strong>
-              </p>
-            </td>
-            <td
-              colspan="1"
-              rowspan="1"
-            >
-              <p>
-                <strong>
-                  Contrat sans terme certain
-                </strong>
-              </p>
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td
-              colspan="1"
-              rowspan="1"
-            >
-              <p>
-                Remplacement d’un salarié absent ou dont le contrat de travail est suspendu
-              </p>
-            </td>
-            <td
-              colspan="1"
-              rowspan="1"
-            >
-              <p>
-                18 mois
-              </p>
-            </td>
-            <td
-              colspan="1"
-              rowspan="1"
-            >
-              <p>
-                Fin de l’absence
-              </p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`DisplayContentContribution should replace details element by one accordion 1`] = `
+exports[`DisplayContentContribution Accordions should replace details element by one accordion 1`] = `
 <div
   class="sc-ERObt ekELNP"
   data-accordion-component="Accordion"
@@ -549,7 +458,7 @@ exports[`DisplayContentContribution should replace details element by one accord
 </div>
 `;
 
-exports[`DisplayContentContribution should replace details element within details element 1`] = `
+exports[`DisplayContentContribution Accordions should replace details element within details element 1`] = `
 <div
   class="sc-ERObt ekELNP"
   data-accordion-component="Accordion"
@@ -697,7 +606,7 @@ exports[`DisplayContentContribution should replace details element within detail
 </div>
 `;
 
-exports[`DisplayContentContribution should replace multiple details element by one accordion 1`] = `
+exports[`DisplayContentContribution Accordions should replace multiple details element by one accordion 1`] = `
 <body>
   <div>
     <div
@@ -844,4 +753,95 @@ exports[`DisplayContentContribution should replace multiple details element by o
     </div>
   </div>
 </body>
+`;
+
+exports[`DisplayContentContribution Tables should render correctly a table with multiple head lines 1`] = `
+<div>
+  <div
+    class="sc-gFAWRd jDjoBq"
+  >
+    <div
+      class="sc-gmPhUn kUNTdL"
+    >
+      <table
+        class="sc-iMWBiJ Rlfrk"
+      >
+        <thead>
+          <tr>
+            <td
+              colspan="1"
+              rowspan="2"
+            >
+              <p>
+                <strong>
+                  Nature du contrat de mission
+                </strong>
+              </p>
+            </td>
+            <td
+              colspan="2"
+              rowspan="1"
+            >
+              <p>
+                <strong>
+                  Durée maximale
+                </strong>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <p>
+                <strong>
+                  Contrat de date à date
+                </strong>
+              </p>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <p>
+                <strong>
+                  Contrat sans terme certain
+                </strong>
+              </p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <p>
+                Remplacement d’un salarié absent ou dont le contrat de travail est suspendu
+              </p>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <p>
+                18 mois
+              </p>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <p>
+                Fin de l’absence
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 `;
