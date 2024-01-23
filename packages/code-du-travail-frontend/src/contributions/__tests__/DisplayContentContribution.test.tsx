@@ -2,6 +2,60 @@ import { render } from "@testing-library/react";
 import DisplayContentContribution from "../DisplayContentContribution";
 
 describe("DisplayContentContribution", () => {
+  describe("Headings", () => {
+    it(`should replace span with class "title" and "sub-titles" with heading`, () => {
+      const { baseElement } = render(
+        <DisplayContentContribution
+          content={`<span class="title">Mon titre</span>
+                    <span class="sub-title">Mon sous titre</span>`}
+          titleLevel={2}
+        ></DisplayContentContribution>
+      );
+
+      expect(baseElement.firstChild).toMatchInlineSnapshot(`
+        <div>
+          <h2
+            class="sc-kAyceB dvmaTz"
+            data-testid="heading"
+          >
+            Mon titre
+          </h2>
+          <h3
+            class="sc-kAyceB dvmaTz"
+            data-testid="heading"
+          >
+            Mon sous titre
+          </h3>
+        </div>
+      `);
+    });
+    it(`should replace span with with heading according to given title level`, () => {
+      const { baseElement } = render(
+        <DisplayContentContribution
+          content={`<span class="title">Mon title</span><span class="sub-title">Mon title</span>`}
+          titleLevel={4}
+        ></DisplayContentContribution>
+      );
+
+      expect(baseElement.firstChild).toMatchInlineSnapshot(`
+        <div>
+          <h4
+            class="sc-kAyceB dvmaTz"
+            data-testid="heading"
+          >
+            Mon title
+          </h4>
+          <h5
+            class="sc-kAyceB dvmaTz"
+            data-testid="heading"
+          >
+            Mon title
+          </h5>
+        </div>
+      `);
+    });
+  });
+
   describe("Accordions", () => {
     it(`should replace details element by one accordion`, () => {
       const { asFragment } = render(
@@ -13,6 +67,7 @@ describe("DisplayContentContribution", () => {
             <p></p>
           </div>
         </details>`}
+          titleLevel={3}
         ></DisplayContentContribution>
       );
 
@@ -82,6 +137,7 @@ describe("DisplayContentContribution", () => {
       </details>
     </div>
   </details>`}
+          titleLevel={3}
         ></DisplayContentContribution>
       );
 
@@ -103,6 +159,7 @@ describe("DisplayContentContribution", () => {
             <p></p>
           </div>
         </details>`}
+          titleLevel={3}
         ></DisplayContentContribution>
       );
 
@@ -122,6 +179,7 @@ describe("DisplayContentContribution", () => {
           </details>
           </div>
         </details>`}
+          titleLevel={3}
         ></DisplayContentContribution>
       );
 
@@ -137,12 +195,36 @@ describe("DisplayContentContribution", () => {
             <p></p>
           </div>
         </details>`}
+          titleLevel={3}
         ></DisplayContentContribution>
       );
 
       expect(getByTestId("contrib-accordion-0").textContent).toEqual(
         "Ceci est un titre HELLO"
       );
+    });
+    it(`should start title level to 4 if heading 3 before`, () => {
+      const { getByTestId } = render(
+        <DisplayContentContribution
+          content={`
+        <div>
+          <span class="title">HELLO</span>
+          <details className=" details">
+          <summary>Ceci est un titre</summary>
+          <div data-type=" detailsContent">
+            <p>Ceci est le body</p>
+            <p></p>
+          </div>
+          </details>
+        </div>`}
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
+
+      expect(getByTestId("contrib-accordion-0").textContent).toEqual(
+        "Ceci est un titre"
+      );
+      expect(getByTestId("contrib-accordion-0").tagName).toEqual("H4");
     });
   });
 
@@ -163,6 +245,7 @@ describe("DisplayContentContribution", () => {
             </tr>
         </tbody>
         </table>`}
+          titleLevel={3}
         ></DisplayContentContribution>
       );
 
@@ -199,7 +282,7 @@ describe("DisplayContentContribution", () => {
                     rowspan="1"
                   >
                     <p>
-                      Pour les 
+                      Pour les
                       <strong>
                         cadres
                       </strong>
@@ -243,6 +326,7 @@ describe("DisplayContentContribution", () => {
             </tr>
         </tbody>
         </table>`}
+          titleLevel={3}
         ></DisplayContentContribution>
       );
 
@@ -255,7 +339,7 @@ describe("DisplayContentContribution", () => {
                 rowspan="1"
               >
                 <p>
-                  Pour les 
+                  Pour les
                   <strong>
                     cadres
                   </strong>
@@ -325,6 +409,7 @@ describe("DisplayContentContribution", () => {
   </tbody>
 </table>
 `}
+          titleLevel={3}
         ></DisplayContentContribution>
       );
 
@@ -336,6 +421,7 @@ describe("DisplayContentContribution", () => {
     const { asFragment } = render(
       <DisplayContentContribution
         content={`<p>hello</p>`}
+        titleLevel={3}
       ></DisplayContentContribution>
     );
 
@@ -349,6 +435,7 @@ describe("DisplayContentContribution", () => {
     const { asFragment } = render(
       <DisplayContentContribution
         content={`<div>hello<p></p></div>`}
+        titleLevel={3}
       ></DisplayContentContribution>
     );
 
@@ -358,34 +445,11 @@ describe("DisplayContentContribution", () => {
       </div>
     `);
   });
-
-  it(`should start title level to 4 if heading 3 before`, () => {
-    const { getByTestId } = render(
-      <DisplayContentContribution
-        content={`
-        <div>
-          <h3>HELLO</h3>
-          <details className=" details">
-          <summary>Ceci est un titre</summary>
-          <div data-type=" detailsContent">
-            <p>Ceci est le body</p>
-            <p></p>
-          </div>
-          </details>
-        </div>`}
-      ></DisplayContentContribution>
-    );
-
-    expect(getByTestId("contrib-accordion-0").textContent).toEqual(
-      "Ceci est un titre"
-    );
-    expect(getByTestId("contrib-accordion-0").tagName).toEqual("H4");
-  });
-
   it(`should keep whitespace in specific tag`, () => {
     const { asFragment } = render(
       <DisplayContentContribution
         content={`<p>Ceci est un<strong> </strong>texte généré<strong> </strong>par <em>tiptap </em>avec des<em> </em>résidus<em> </em>de balise</p>`}
+        titleLevel={3}
       ></DisplayContentContribution>
     );
 
@@ -393,33 +457,33 @@ describe("DisplayContentContribution", () => {
       <p>
         Ceci est un
         <strong>
-           
+
         </strong>
         texte généré
         <strong>
-           
+
         </strong>
-        par 
+        par
         <em>
-          tiptap 
+          tiptap
         </em>
         avec des
         <em>
-           
+
         </em>
         résidus
         <em>
-           
+
         </em>
         de balise
       </p>
     `);
   });
-
   it(`should not remove space between strong and em tag in p tag`, () => {
     const { asFragment } = render(
       <DisplayContentContribution
         content={`<p><strong>À noter :</strong> <em>L'échelon professionnel du salarié est habituellement mentionné </em></p>`}
+        titleLevel={3}
       ></DisplayContentContribution>
     );
 
@@ -428,9 +492,9 @@ describe("DisplayContentContribution", () => {
         <strong>
           À noter :
         </strong>
-         
+
         <em>
-          L'échelon professionnel du salarié est habituellement mentionné 
+          L'échelon professionnel du salarié est habituellement mentionné
         </em>
       </p>
     `);

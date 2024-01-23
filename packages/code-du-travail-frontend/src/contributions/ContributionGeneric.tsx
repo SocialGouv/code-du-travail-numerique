@@ -316,7 +316,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
           </Paragraph>
         )}
 
-        <ContributionContent contribution={contribution} />
+        <ContributionContent contribution={contribution} titleLevel={3} />
         <ReferencesJuridiques references={contribution.references} />
         <ContributionMessageBlock message={contribution.messageBlock} />
         <LinkedContent linkedContent={contribution.linkedContent} />

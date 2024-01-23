@@ -67,7 +67,7 @@ const ContributionCC = ({ contribution }: Props) => {
           </StyledAlert>
         )}
 
-        <ContributionContent contribution={contribution} />
+        <ContributionContent contribution={contribution}  titleLevel={3} />
         <ReferencesJuridiques references={contribution.references} />
 
         <p>
