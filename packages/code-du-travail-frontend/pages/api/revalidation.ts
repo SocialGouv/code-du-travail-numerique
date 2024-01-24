@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { getAllContributions } from "../../src/api";
+import pMap from "p-map";
 
 const MAIN_PAGES = [
   "/",
@@ -34,8 +35,13 @@ export default async function handler(
   }
 
   try {
-    const regens = await Promise.all(pages.map((path) => res.revalidate(path)));
-    await Promise.all(regens);
+    await pMap(
+      pages,
+      async (page: string) => {
+        await res.revalidate(page);
+      },
+      { concurrency: 5 }
+    );
     return res.json({ revalidated: true });
   } catch (err) {
     return res.status(500).send("Error revalidating");
