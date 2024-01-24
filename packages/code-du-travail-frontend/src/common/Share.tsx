@@ -69,6 +69,7 @@ export const Share = ({
         </Circle>
       </StyledLink>
       <StyledButton
+        type="button"
         className="spacing-left"
         title="Partager sur LinkedIn"
         onClick={() => {
@@ -91,6 +92,7 @@ export const Share = ({
       <Dropdown
         opener={(showDropdown) => (
           <StyledButton
+            type="button"
             className="spacing-left"
             title="Plus d’options"
             tabIndex={tabIndex}
@@ -125,6 +127,7 @@ export const Share = ({
       >
         <Center>Plus d’options</Center>
         <StyledButton
+          type="button"
           className="spacing-top"
           title="Partager sur Twitter"
           onClick={() => {
@@ -144,6 +147,7 @@ export const Share = ({
           <ActionLabel>Partager&nbsp;sur&nbsp;Twitter</ActionLabel>
         </StyledButton>
         <StyledButton
+          type="button"
           className="spacing-top"
           title="Copier le lien"
           onClick={() => {
@@ -171,6 +175,7 @@ export const Share = ({
         </StyledButton>
         <HiddenInput tabIndex="-1" ref={hiddenInputRef} />
         <StyledButton
+          type="button"
           className="spacing-top"
           title="Envoyer par Whatsapp"
           onClick={() => {

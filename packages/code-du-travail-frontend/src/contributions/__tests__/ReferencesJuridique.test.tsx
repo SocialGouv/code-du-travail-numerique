@@ -65,11 +65,9 @@ describe("ReferencesJuridiques", () => {
               />
             </svg>
             <span
-              aria-level="2"
               class="sc-fBWQRz lqUBb"
               font-size="hsmall"
               font-weight="600"
-              role="heading"
             >
               Références
             </span>
@@ -83,7 +81,7 @@ describe("ReferencesJuridiques", () => {
               <li>
                 <a
                   aria-label="Titre 2 (Nouvelle fenêtre)"
-                  class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk no-after"
+                  class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk no-after"
                   href="http://lien2"
                   target="_blank"
                 >
@@ -99,17 +97,17 @@ describe("ReferencesJuridiques", () => {
                       fill="currentColor"
                     />
                   </svg>
-                  <p
+                  <span
                     class="sc-iHGNWf hQSWKy"
                   >
                     Titre 2
-                  </p>
+                  </span>
                 </a>
               </li>
               <li>
                 <a
                   aria-label="Titre 5 (Nouvelle fenêtre)"
-                  class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk no-after"
+                  class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk no-after"
                   href="http://lien4"
                   target="_blank"
                 >
@@ -125,11 +123,11 @@ describe("ReferencesJuridiques", () => {
                       fill="currentColor"
                     />
                   </svg>
-                  <p
+                  <span
                     class="sc-iHGNWf hQSWKy"
                   >
                     Titre 5
-                  </p>
+                  </span>
                 </a>
               </li>
               <li>
