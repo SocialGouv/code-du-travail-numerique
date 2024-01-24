@@ -6,7 +6,11 @@ import type {
   Unit,
 } from "publicodes";
 
-import type { Notification, References } from "../modeles/common";
+import type {
+  Notification,
+  References,
+  SalaryPeriods,
+} from "../modeles/common";
 import type {
   IndemniteLicenciementPublicodes,
   PreavisRetraitePublicodes,
@@ -75,6 +79,12 @@ export type PublicodesData<TResult> = {
   result: TResult;
 };
 
+type PublicodesSituationBase = Record<string, string | undefined>;
+
+export type PublicodesSituations = PublicodesSituationBase & {
+  "grille de salaire & primes"?: SalaryPeriods[];
+};
+
 export type PublicodesProviderRule = {
   children: React.ReactNode;
   rules: any;
@@ -92,11 +102,14 @@ export enum PublicodesUnit {
 export enum PublicodesSimulator {
   INDEMNITE_LICENCIEMENT = "INDEMNITE_LICENCIEMENT",
   PREAVIS_RETRAITE = "PREAVIS_RETRAITE",
+  INDEMNITE_RUPTURE_CONVENTIONNELLE = "INDEMNITE_RUPTURE_CONVENTIONNELLE",
 }
 
 export const PublicodesDefaultRules = {
   [PublicodesSimulator.INDEMNITE_LICENCIEMENT]:
     "contrat salarié . indemnité de licenciement . résultat légal",
+  [PublicodesSimulator.INDEMNITE_RUPTURE_CONVENTIONNELLE]:
+    "résultat conventionnel légal",
   [PublicodesSimulator.PREAVIS_RETRAITE]:
     "contrat salarié . préavis de retraite en jours",
 };
@@ -117,6 +130,11 @@ export type PublicodesPreavisRetraiteResult = {
 };
 
 export type PublicodesIndemniteLicenciementResult = {
+  value: Evaluation;
+  unit?: Unit;
+};
+
+export type PublicodesIndemniteRuptureConventionnelleResult = {
   value: Evaluation;
   unit?: Unit;
 };

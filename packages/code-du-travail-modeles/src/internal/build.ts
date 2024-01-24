@@ -8,6 +8,7 @@ import { extractSupportedCc } from "./extractSupportedCc";
 import {
   mergeCommonModels,
   mergeIndemniteLicenciementModels,
+  mergeIndemniteRuptureConventionnelleModels,
   mergePreavisRetraiteModels,
 } from "./merger";
 
@@ -67,5 +68,9 @@ writeJsonModel({
 });
 writeJsonModel({
   merger: () => mergeIndemniteLicenciementModels(),
+  outputName: "modeles-indemnite-licenciement",
+});
+writeJsonModel({
+  merger: () => mergeIndemniteRuptureConventionnelleModels(),
   outputName: "modeles-indemnite-licenciement",
 });

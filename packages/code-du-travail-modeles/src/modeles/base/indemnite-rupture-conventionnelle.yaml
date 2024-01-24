@@ -1,0 +1,62 @@
+inaptitude professionnelle:
+  titre: Le licenciement fait-il suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue)
+
+en arrêt maladie:
+  titre: Le salarié est-il en arrêt de travail au moment du licenciement
+
+date arrêt maladie:
+  applicable si: en arrêt maladie = oui
+  titre: Depuis quelle date le salarié est-il en arrêt
+
+convention collective:
+  titre: Quel est le nom de la convention collective applicable
+
+salaire de référence:
+  titre: Quel a été le montant du salaire mensuel brut
+  unité: €
+
+date de début de contrat:
+  titre: Quelle est la date de début du contrat de travail
+
+date de fin de contrat:
+  titre: Quelle est la date de fin du préavis de licenciement (date de fin du contrat)
+
+ancienneté en année:
+  unité: an
+
+jusqu'à dix ans ou moins:
+  valeur:
+    le minimum de:
+      - ancienneté en année
+      - 10 an
+
+au dela de dix ans:
+  somme:
+    - ancienneté en année
+    - (- 10 an)
+  plancher: 0 an
+
+facteur dix ans ou moins:
+  valeur:
+    produit:
+      assiette: jusqu'à dix ans ou moins * salaire de référence
+      facteur: 1 / 4
+  unité: €
+
+facteur plus de dix ans:
+  valeur:
+    produit:
+      assiette: au dela de dix ans * salaire de référence
+      facteur: 1 / 3
+  unité: €
+
+résultat légal:
+  valeur:
+    somme:
+      - facteur dix ans ou moins
+      - facteur plus de dix ans
+  unité: €
+
+résultat conventionnel légal:
+  applicable si: convention collective = 0
+  valeur: résultat légal

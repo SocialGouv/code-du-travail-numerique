@@ -5,6 +5,7 @@ import { parse } from "yaml";
 import {
   commonFile,
   indemniteLicenciementFile,
+  indemniteRuptureConventionnelleFile,
   preavisRetraiteFile,
 } from "./constants";
 
@@ -16,6 +17,11 @@ export function mergePreavisRetraiteModels(): any {
 
 export function mergeIndemniteLicenciementModels(): any {
   return mergeModelsWithKeys([commonFile, indemniteLicenciementFile]);
+}
+
+export function mergeIndemniteRuptureConventionnelleModels(): any {
+  const merged = mergeModelsWithKeys([indemniteRuptureConventionnelleFile]);
+  return merged;
 }
 
 export function mergeCommonModels(): any {
