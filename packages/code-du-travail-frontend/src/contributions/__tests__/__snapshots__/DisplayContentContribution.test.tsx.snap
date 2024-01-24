@@ -552,6 +552,7 @@ exports[`DisplayContentContribution should replace details element by one accord
               <p>
                 Ceci est le body
               </p>
+              <br />
             </div>
           </div>
         </div>
@@ -698,6 +699,7 @@ exports[`DisplayContentContribution should replace details element within detail
                           <p>
                             Ceci est le body
                           </p>
+                          <br />
                         </div>
                       </div>
                     </div>
@@ -762,6 +764,7 @@ exports[`DisplayContentContribution should replace div with alert class in li co
           </strong>
            ; c'est-à-dire autant d'exemplaires que de parties au contrat. Chaque partie au contrat aura un exemplaire.
         </p>
+        <br />
         <div
           class="sc-jsJBEP ftwa-dj"
         >
@@ -869,6 +872,7 @@ exports[`DisplayContentContribution should replace multiple details element by o
                   <p>
                     Ceci est le body 1
                   </p>
+                  <br />
                 </div>
               </div>
             </div>
@@ -937,6 +941,7 @@ exports[`DisplayContentContribution should replace multiple details element by o
                   <p>
                     Ceci est le body 2
                   </p>
+                  <br />
                 </div>
               </div>
             </div>

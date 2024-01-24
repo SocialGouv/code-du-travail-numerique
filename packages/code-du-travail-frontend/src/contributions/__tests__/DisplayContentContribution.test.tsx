@@ -19,23 +19,6 @@ describe("DisplayContentContribution", () => {
       </div>
     `);
   });
-  it(`should remove empty p tag`, () => {
-    const { asFragment } = render(
-      <DisplayContentContribution
-        content={`<div>hello<p></p></div>`}
-      ></DisplayContentContribution>
-    );
-
-    expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <div
-        class="sc-ERObt zXiiV"
-      >
-        <div>
-          hello
-        </div>
-      </div>
-    `);
-  });
   it(`should replace details element by one accordion`, () => {
     const { asFragment } = render(
       <DisplayContentContribution

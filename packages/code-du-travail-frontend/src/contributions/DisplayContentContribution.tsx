@@ -118,6 +118,9 @@ function getItem(domNode: Element, titleLevel: number) {
 const options = (titleLevel: number): HTMLReactParserOptions => ({
   replace(domNode) {
     if (domNode instanceof Element) {
+      if (domNode.name === "p" && !domNode.children.length) {
+        return <br />;
+      }
       if (domNode.name === "h3") {
         titleLevel = 4;
       }
@@ -151,9 +154,6 @@ const options = (titleLevel: number): HTMLReactParserOptions => ({
             {domToReact(domNode.children as DOMNode[], { trim: true })}
           </Alert>
         );
-      }
-      if (domNode.name === "p" && !domNode.children.length) {
-        return <></>;
       }
       if (domNode.name === "strong") {
         // Disable trim on strong
