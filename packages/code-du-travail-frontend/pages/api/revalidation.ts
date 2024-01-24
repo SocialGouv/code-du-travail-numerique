@@ -17,15 +17,21 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.query.secret !== process.env.REVALIDATION_TOKEN) {
+  if (req.query.token !== process.env.REVALIDATION_TOKEN) {
     return res.status(401).json({ message: "Invalid token" });
   }
 
-  const contribs = await getAllContributions();
+  let pages: string[];
 
-  const CONTRIBUTIONS_PAGES = contribs.map((v) => `/contribution/${v.slug}`);
+  if (req.query.page && typeof req.query.page === "string") {
+    pages = [req.query.page];
+  } else {
+    const contribs = await getAllContributions();
 
-  const pages: string[] = [...MAIN_PAGES, ...CONTRIBUTIONS_PAGES];
+    const CONTRIBUTIONS_PAGES = contribs.map((v) => `/contribution/${v.slug}`);
+
+    pages = [...MAIN_PAGES, ...CONTRIBUTIONS_PAGES];
+  }
 
   try {
     const regens = await Promise.all(pages.map((path) => res.revalidate(path)));

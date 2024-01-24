@@ -21,7 +21,7 @@ IncrementalCache.onCreation(async () => {
 
   return {
     cache: [redisCache],
-    useFileSystem: true, // because there is a bug
+    useFileSystem: true, // Dans l'attente de la résolution du bug : https://github.com/vercel/next.js/issues/58094
   };
 });
 

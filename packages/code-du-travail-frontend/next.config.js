@@ -48,9 +48,6 @@ const nextConfig = {
       ? require.resolve("./cache-handler.js")
       : undefined,
   cacheMaxMemorySize: 0,
-  experimental: {
-    isrMemoryCacheSize: 0,
-  },
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
 };
 
