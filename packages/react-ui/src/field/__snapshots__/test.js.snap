@@ -103,7 +103,7 @@ exports[`<Select /> should render select field 1`] = `
     class="sc-jlZhew dfZIZB"
   >
     <select
-      class="sc-jEACwC iWGvnz"
+      class="sc-jEACwC dYSvzr"
     >
       <option>
         ...

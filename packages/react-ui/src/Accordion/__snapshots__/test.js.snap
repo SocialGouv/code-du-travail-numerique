@@ -57,13 +57,13 @@ exports[`<Accordion /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dcJsrY hEBJZA"
+          class="sc-dcJsrY dwmfbs"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-0"
         >
           <div
-            class="sc-dAbbOL OXowK"
+            class="sc-dAbbOL dhcuWT"
           >
             this is the body
           </div>
@@ -131,13 +131,13 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dcJsrY hEBJZA"
+          class="sc-dcJsrY dwmfbs"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-3"
         >
           <div
-            class="sc-dAbbOL OXowK"
+            class="sc-dAbbOL dhcuWT"
           >
             this is the body
           </div>
@@ -205,13 +205,13 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dcJsrY hEBJZA"
+          class="sc-dcJsrY dwmfbs"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-2"
         >
           <div
-            class="sc-dAbbOL OXowK"
+            class="sc-dAbbOL dhcuWT"
           >
             this is the body
           </div>
@@ -279,13 +279,13 @@ exports[`<Accordion /> renders as h2 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dcJsrY hEBJZA"
+          class="sc-dcJsrY dwmfbs"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-1"
         >
           <div
-            class="sc-dAbbOL OXowK"
+            class="sc-dAbbOL dhcuWT"
           >
             this is the body
           </div>

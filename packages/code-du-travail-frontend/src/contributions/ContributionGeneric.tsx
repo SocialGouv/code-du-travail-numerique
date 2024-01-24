@@ -285,8 +285,8 @@ const ContributionGeneric = ({ contribution }: Props) => {
 
         {showGeneralInformationButton() && (
           <Div>
-            <Button
-              variant="navLink"
+            <ArrowLink
+              arrowPosition="left"
               onClick={() => {
                 pushAgreementEvents(
                   getTitle(),
@@ -298,11 +298,9 @@ const ContributionGeneric = ({ contribution }: Props) => {
                 scrollToTitle();
               }}
             >
-              <ArrowLink arrowPosition="left">
-                Accéder aux informations générales sans renseigner ma convention
-                collective
-              </ArrowLink>
-            </Button>
+              Accéder aux informations générales sans renseigner ma convention
+              collective
+            </ArrowLink>
           </Div>
         )}
       </SectionNoPadding>

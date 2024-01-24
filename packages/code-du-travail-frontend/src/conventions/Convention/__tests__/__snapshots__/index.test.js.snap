@@ -74,13 +74,13 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB fdfhnD"
+          class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-0"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="accordion"
@@ -139,13 +139,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -176,7 +176,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 5-11 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -192,11 +192,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 5-11
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -268,13 +268,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -344,7 +344,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 6.121 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -360,17 +360,17 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 6.121
-                              </p>
+                              </span>
                             </a>
                           </li>
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 6.21 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -386,11 +386,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 6.21
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -462,13 +462,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-les-conges-pour-evenements-familiaux"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -535,7 +535,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article  5-12 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -551,11 +551,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article  5-12
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -630,13 +630,13 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB fdfhnD"
+          class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-4"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="accordion"
@@ -695,13 +695,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -753,7 +753,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 10.11 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -769,17 +769,17 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 10.11
-                              </p>
+                              </span>
                             </a>
                           </li>
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 10.13 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -795,11 +795,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 10.13
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -871,13 +871,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -914,7 +914,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 10.11 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -930,11 +930,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 10.11
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -1006,13 +1006,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1033,7 +1033,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1049,17 +1049,17 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </p>
+                              </span>
                             </a>
                           </li>
                           <li>
                             <a
                               aria-label="Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120"
                               target="_blank"
                             >
@@ -1075,11 +1075,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -1151,13 +1151,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1178,7 +1178,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120"
                               target="_blank"
                             >
@@ -1194,17 +1194,17 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </p>
+                              </span>
                             </a>
                           </li>
                           <li>
                             <a
                               aria-label="IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1220,11 +1220,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -1296,13 +1296,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1323,7 +1323,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 10.12 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1339,11 +1339,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 10.12
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -1415,13 +1415,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1483,7 +1483,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 10.2 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1499,11 +1499,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 10.2
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -1578,13 +1578,13 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB fdfhnD"
+          class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-11"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="accordion"
@@ -1643,13 +1643,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1678,7 +1678,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 2-4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1694,11 +1694,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 2-4
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -1770,13 +1770,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-comment-determiner-lanciennete-du-salarie"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -1849,7 +1849,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 10.4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1865,17 +1865,17 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 10.4
-                              </p>
+                              </span>
                             </a>
                           </li>
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 11-2 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1891,11 +1891,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 11-2
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -1967,13 +1967,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2065,7 +2065,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 2-3 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -2081,11 +2081,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 2-3
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -2157,13 +2157,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2184,7 +2184,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 2-3 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -2200,11 +2200,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 2-3
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -2276,13 +2276,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2365,13 +2365,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2392,7 +2392,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 2-3 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -2408,11 +2408,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 2-3
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -2487,13 +2487,13 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB fdfhnD"
+          class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-18"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="accordion"
@@ -2552,13 +2552,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2632,13 +2632,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2683,7 +2683,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 5-25 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -2699,11 +2699,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 5-25
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -2775,13 +2775,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -2828,7 +2828,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 5-24 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -2844,11 +2844,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 5-24
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -2923,13 +2923,13 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB fdfhnD"
+          class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-22"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="accordion"
@@ -2988,13 +2988,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -3281,11 +3281,9 @@ exports[`<Convention /> renders 1`] = `
                               />
                             </svg>
                             <span
-                              aria-level="2"
                               class="sc-fBWQRz lqUBb"
                               font-size="hsmall"
                               font-weight="600"
-                              role="heading"
                             >
                               Références juridiques concernées :
                             </span>
@@ -3299,7 +3297,7 @@ exports[`<Convention /> renders 1`] = `
                               <li>
                                 <a
                                   aria-label="IDCC 1596 - Article 6-11 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                                  class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                   target="_blank"
                                 >
@@ -3315,17 +3313,17 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <p
+                                  <span
                                     class="sc-iHGNWf hQSWKy"
                                   >
                                     IDCC 1596 - Article 6-11
-                                  </p>
+                                  </span>
                                 </a>
                               </li>
                               <li>
                                 <a
                                   aria-label="IDCC 1596 - Article 6-12 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                                  class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                   target="_blank"
                                 >
@@ -3341,17 +3339,17 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <p
+                                  <span
                                     class="sc-iHGNWf hQSWKy"
                                   >
                                     IDCC 1596 - Article 6-12
-                                  </p>
+                                  </span>
                                 </a>
                               </li>
                               <li>
                                 <a
                                   aria-label="IDCC 1596 - Article 6-13 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                                  class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                   target="_blank"
                                 >
@@ -3367,17 +3365,17 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <p
+                                  <span
                                     class="sc-iHGNWf hQSWKy"
                                   >
                                     IDCC 1596 - Article 6-13
-                                  </p>
+                                  </span>
                                 </a>
                               </li>
                               <li>
                                 <a
                                   aria-label="IDCC 1596 - Article 6-14 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                                  class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                   target="_blank"
                                 >
@@ -3393,17 +3391,17 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <p
+                                  <span
                                     class="sc-iHGNWf hQSWKy"
                                   >
                                     IDCC 1596 - Article 6-14
-                                  </p>
+                                  </span>
                                 </a>
                               </li>
                               <li>
                                 <a
                                   aria-label="IDCC 1596 - Article 6-15 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                                  class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                   target="_blank"
                                 >
@@ -3419,11 +3417,11 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <p
+                                  <span
                                     class="sc-iHGNWf hQSWKy"
                                   >
                                     IDCC 1596 - Article 6-15
-                                  </p>
+                                  </span>
                                 </a>
                               </li>
                             </ul>
@@ -3497,13 +3495,13 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="sc-dhKdcB fdfhnD"
+                    class="sc-dhKdcB hlTUsz"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                   >
                     <div
-                      class="sc-bXCLTC cqpPUq"
+                      class="sc-bXCLTC fcbJdD"
                     >
                       <div>
                         <p>
@@ -3555,7 +3553,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 6-11 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS hFAanY sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -3571,11 +3569,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="sc-iHGNWf hQSWKy"
                               >
                                 IDCC 1596 - Article 6-11
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -3758,13 +3756,13 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB fdfhnD"
+          class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-26"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="sc-gFAWRd RvAeB sc-hRJfrW jNzush"
@@ -3957,13 +3955,13 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB fdfhnD"
+          class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-27"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="sc-gFAWRd RvAeB sc-hRJfrW jNzush"
@@ -4404,13 +4402,13 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB fdfhnD"
+          class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-28"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div
               class="sc-gFAWRd RvAeB sc-hRJfrW jNzush"
@@ -4675,6 +4673,7 @@ exports[`<Convention /> renders 1`] = `
         class="sc-dkmUuB ayeCS sc-kFWlue fUxfhx"
       >
         <input
+          aria-label="Recherchez dans la collection collective"
           autocomplete="off"
           class="sc-ejfMa-d dijxYa"
           id="search-agreement"

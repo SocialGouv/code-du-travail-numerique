@@ -382,13 +382,13 @@ exports[`<FicheMT /> should render 1`] = `
                           </div>
                           <div
                             aria-hidden="true"
-                            class="sc-dhKdcB fdfhnD"
+                            class="sc-dhKdcB hlTUsz"
                             data-accordion-component="AccordionItemPanel"
                             hidden=""
                             id="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
                           >
                             <div
-                              class="sc-bXCLTC cqpPUq"
+                              class="sc-bXCLTC fcbJdD"
                             >
                               <div
                                 class="sc-fFlnrN sc-gVJvzJ ccLmnJ"
@@ -515,6 +515,7 @@ exports[`<FicheMT /> should render 1`] = `
                     <button
                       class="sc-isRoRg bfiCtj spacing-left"
                       title="Partager sur LinkedIn"
+                      type="button"
                     >
                       <span
                         class="sc-eNSrOW hIGqAE"
@@ -544,6 +545,7 @@ exports[`<FicheMT /> should render 1`] = `
                       <button
                         class="sc-isRoRg bfiCtj spacing-left"
                         title="Plus d’options"
+                        type="button"
                       >
                         <span
                           class="sc-eNSrOW hIGqAE"
@@ -658,6 +660,7 @@ exports[`<FicheMT /> should render 1`] = `
                 class="sc-isRoRg bfiCtj spacing-left"
                 tabindex="-1"
                 title="Partager sur LinkedIn"
+                type="button"
               >
                 <span
                   class="sc-eNSrOW hIGqAE"
@@ -688,6 +691,7 @@ exports[`<FicheMT /> should render 1`] = `
                   class="sc-isRoRg bfiCtj spacing-left"
                   tabindex="-1"
                   title="Plus d’options"
+                  type="button"
                 >
                   <span
                     class="sc-eNSrOW hIGqAE"
