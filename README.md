@@ -17,6 +17,13 @@
 
 ![schema](./schema.png)
 
+### Set environment variable
+
+```sh
+# Copy env file and fill it
+cp packages/code-du-travail-frontend/.env.sample packages/code-du-travail-frontend/.env
+```
+
 ### Installation
 
 ```sh
