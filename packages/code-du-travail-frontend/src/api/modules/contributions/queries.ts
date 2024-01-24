@@ -118,6 +118,6 @@ export const getAllContributionQuery = () => {
         ],
       },
     },
-    size: 2000, // Il y a 2000 contributions, comme ça, ça nous évite de faire plusieurs calls
+    size: 3000, // Il y a 2000 contributions, comme ça, ça nous évite de faire plusieurs calls
   };
 };
