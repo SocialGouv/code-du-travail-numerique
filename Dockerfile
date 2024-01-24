@@ -35,6 +35,10 @@ ARG NEXT_PUBLIC_SENTRY_URL
 ENV NEXT_PUBLIC_SENTRY_URL=$NEXT_PUBLIC_SENTRY_URL
 ARG NEXT_PUBLIC_ES_INDEX_PREFIX
 ENV NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX
+ARG NEXT_PUBLIC_REDIS_URL
+ENV NEXT_PUBLIC_REDIS_URL=$NEXT_PUBLIC_REDIS_URL
+ARG NEXT_PUBLIC_APP_ENV
+ENV NEXT_PUBLIC_APP_ENV=$NEXT_PUBLIC_APP_ENV
 
 # Copy lockfile
 COPY ./yarn.lock ./.yarnrc.yml ./
@@ -44,8 +48,6 @@ COPY .yarn .yarn
 RUN yarn fetch --immutable
 
 COPY . ./
-
-ENV NEXT_PUBLIC_APP_ENV=production
 
 # hadolint ignore=SC2046
 RUN --mount=type=secret,id=sentry_auth_token \
@@ -64,7 +66,8 @@ FROM node:$NODE_VERSION
 # hadolint ignore=DL3018
 RUN apk --update --no-cache add ca-certificates && apk upgrade
 
-ENV NEXT_PUBLIC_APP_ENV=production
+ARG NEXT_PUBLIC_APP_ENV
+ENV NEXT_PUBLIC_APP_ENV=$NEXT_PUBLIC_APP_ENV
 
 WORKDIR /app
 
