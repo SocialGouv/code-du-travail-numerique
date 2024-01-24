@@ -9,7 +9,6 @@ import { ListLinkItemProps } from "../src/search/SearchResults/Results";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent, MatomoHomeEvent } from "../src/lib";
 import EventTracker from "../src/lib/tracking/EventTracker";
-import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 
 const Home = ({
   themes,
@@ -123,7 +122,6 @@ export async function getStaticProps() {
       modeles,
       agreements,
     },
-    revalidate: REVALIDATE_TIME,
   };
 }
 

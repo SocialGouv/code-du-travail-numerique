@@ -12,7 +12,6 @@ import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
 import EventTracker from "../../src/lib/tracking/EventTracker";
-import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
 import { getToolsByIdsAndSlugs } from "../../src/api";
 
 const Outils = ({ cdtnSimulators, externalTools }) => (
@@ -96,13 +95,11 @@ export async function getStaticProps() {
           (tool) => tool.source === SOURCES.EXTERNALS
         ),
       },
-      revalidate: REVALIDATE_TIME,
     };
   } catch (error) {
     console.error(error);
     return {
       props: { cdtnSimulators: [], externalTools: [] },
-      revalidate: REVALIDATE_TIME,
     };
   }
 }

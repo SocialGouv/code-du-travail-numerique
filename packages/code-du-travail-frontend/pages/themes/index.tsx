@@ -12,7 +12,6 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
-import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
 import { getAllThemes } from "../../src/api";
@@ -74,12 +73,11 @@ const ThemesPage = ({ children = [] }) => (
 export async function getStaticProps() {
   try {
     const data: any = await getAllThemes();
-    return { props: { children: data.children }, revalidate: REVALIDATE_TIME };
+    return { props: { children: data.children } };
   } catch (error) {
     console.error(error);
     return {
       props: { children: [] },
-      revalidate: REVALIDATE_TIME,
     };
   }
 }

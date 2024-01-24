@@ -11,9 +11,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
-import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
 import { getGlossary } from "../../src/api";
 
 const subtitle =
@@ -43,10 +41,10 @@ function Glossaire({ glossary }) {
 export async function getStaticProps() {
   try {
     const data: any = await getGlossary();
-    return { props: { glossary: data }, revalidate: REVALIDATE_TIME };
+    return { props: { glossary: data } };
   } catch (error) {
     console.error(error);
-    return { props: { glossary: [] }, revalidate: REVALIDATE_TIME };
+    return { props: { glossary: [] } };
   }
 }
 

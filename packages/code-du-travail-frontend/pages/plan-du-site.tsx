@@ -13,7 +13,6 @@ import styled from "styled-components";
 import Link from "next/link";
 import { getSitemapData, GetSitemapPage } from "../src/api";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 
 const PlanDuSite = ({
   tools,
@@ -178,7 +177,6 @@ export async function getStaticProps() {
       agreements,
       themes,
     },
-    revalidate: REVALIDATE_TIME,
   };
 }
 

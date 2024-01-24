@@ -12,7 +12,6 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
-import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 import { Layout } from "../src/layout/Layout";
 import { captureException } from "@sentry/nextjs";
 import { getStatsService } from "../src/api";
@@ -88,7 +87,7 @@ const Stats = ({ data }: Props): JSX.Element => {
 export async function getStaticProps() {
   try {
     const data: PropsData = await getStatsService();
-    return { props: { data }, revalidate: REVALIDATE_TIME };
+    return { props: { data } };
   } catch (e) {
     console.error(e);
     captureException(e);
@@ -96,7 +95,6 @@ export async function getStaticProps() {
       props: {
         data: null,
       },
-      revalidate: REVALIDATE_TIME,
     };
   }
 }

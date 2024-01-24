@@ -21,7 +21,7 @@ IncrementalCache.onCreation(async () => {
 
   return {
     cache: [redisCache],
-    useFileSystem: false,
+    useFileSystem: true, // because there is a bug
   };
 });
 
