@@ -11,7 +11,6 @@ import React, { useCallback, useState } from "react";
 
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
 import styled from "styled-components";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import { SOURCES } from "@socialgouv/cdtn-utils";
@@ -51,7 +50,11 @@ function Page({ contribs }) {
           >
             Vos fiches pratiques
           </PageTitle>
-          <LargeSelect value={selectedTheme} onChange={selectThemeHandler}>
+          <LargeSelect
+            value={selectedTheme}
+            onChange={selectThemeHandler}
+            aria-label="Choississez un thème"
+          >
             {Object.keys(contribs) &&
               [
                 <option key={ALL} value={ALL}>

@@ -103,6 +103,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
         <NoticeExample
           simulator={Simulator.PREAVIS_DEMISSION}
           period={situation.answer}
+          idccNumber={ccn?.selected?.num}
           note={
             <NoticeNote
               numberOfElements={calculateNumberOfElements(

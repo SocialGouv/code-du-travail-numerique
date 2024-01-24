@@ -2,6 +2,7 @@ import { Criteria } from "@socialgouv/modeles-social";
 
 export type LicenciementSituation = {
   criteria: Criteria;
+  idcc?: number;
   duration: number;
   answer: string;
   note?: string | string[];
