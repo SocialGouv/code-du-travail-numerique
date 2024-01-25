@@ -316,7 +316,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5
   valeur: formule 3 agent
-  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  plafond: plafond 12 mois
   unité: €
   arrondi: 2 décimales
   références:
@@ -338,6 +338,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
   valeur: somme cadre avec majoration 20%
   unité: €
   arrondi: 2 décimales
+  plafond: plafond 12 mois majoré de 20 pourcent
   références:
     Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
     Article 4 de l’Avenant I relatif aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373
@@ -359,6 +360,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
       - age < 55
   valeur: somme cadre avec majoration 15%
   unité: €
+  plafond: plafond 12 mois majoré de 15 pourcent
   arrondi: 2 décimales
   références:
     Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
@@ -380,7 +382,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
       - cadre durant au moins de 15 ans . age . résultat conventionnel 50 ans
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5
   valeur: somme cadre sans majoration
-  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  plafond: plafond 12 mois
   unité: €
   arrondi: 2 décimales
   références:
@@ -404,12 +406,40 @@ contrat salarié . convention collective . commerces de gros . formule max 6:
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
+## Plafonds
 
-contrat salarié . convention collective . commerces de gros . formule max 12:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+contrat salarié . convention collective . commerces de gros . plafond 12 mois:
+  valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+
+contrat salarié . convention collective . commerces de gros . formule plafond 12 mois:
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = plafond 12 mois
   valeur: oui
   cdtn:
     formule:
       formula: 12 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . commerces de gros . plafond 12 mois majoré de 15 pourcent:
+  valeur: 12 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel + (12 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 0.15)
+
+contrat salarié . convention collective . commerces de gros . formule plafond 12 mois majoré de 15 pourcent:
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel >= plafond 12 mois majoré de 15 pourcent
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 12 * Sref + (15% * 12 * Sref)
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . commerces de gros . plafond 12 mois majoré de 20 pourcent:
+  valeur: 12 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel + (12 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 0.2)
+
+contrat salarié . convention collective . commerces de gros . formule plafond 12 mois majoré de 20 pourcent:
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel >= plafond 12 mois majoré de 20 pourcent
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 12 * Sref + (20% * 12 * Sref)
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
