@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.120.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.119.1...v4.120.0) (2024-01-25)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** mise en place d'un plafond sur la CC 573 ([#5579](https://github.com/SocialGouv/code-du-travail-numerique/issues/5579)) ([b961f10](https://github.com/SocialGouv/code-du-travail-numerique/commit/b961f10027e7e7b9254c5e988740f2dd154b8101))
+
 ## [4.119.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.119.0...v4.119.1) (2024-01-11)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
