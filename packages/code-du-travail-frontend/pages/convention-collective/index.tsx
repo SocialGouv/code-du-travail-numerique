@@ -16,6 +16,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { getAllAgreements } from "../../src/api";
+import { REVALIDATE_TIME } from "../../src/config";
 
 function Page({ ccs }) {
   return (
@@ -81,10 +82,10 @@ export default Page;
 export async function getStaticProps() {
   try {
     const data: any = await getAllAgreements();
-    return { props: { ccs: data } };
+    return { props: { ccs: data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);
-    return { props: { ccs: [] } };
+    return { props: { ccs: [] }, revalidate: REVALIDATE_TIME };
   }
 }
 

@@ -17,6 +17,7 @@ import { summarize } from "../../src/search/utils";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
 import EventTracker from "../../src/lib/tracking/EventTracker";
 import { getAllModeles } from "../../src/api";
+import { REVALIDATE_TIME } from "../../src/config";
 
 const title = "Modèles de documents";
 const subtitle =
@@ -107,10 +108,10 @@ function Modeles(props) {
 export async function getStaticProps() {
   try {
     const data = await getAllModeles();
-    return { props: { data } };
+    return { props: { data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);
-    return { props: { data: [] } };
+    return { props: { data: [] }, revalidate: REVALIDATE_TIME };
   }
 }
 

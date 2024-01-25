@@ -19,6 +19,7 @@ import {
   getAllContributions,
   getBySourceAndSlugItems,
 } from "../../src/api";
+import { REVALIDATE_TIME } from "../../src/config";
 
 type NewProps = {
   contribution: ElasticSearchContribution;
@@ -143,6 +144,7 @@ export const getStaticProps = async (context) => {
         contribution: data._source,
         isNewContribution: true,
       },
+      revalidate: REVALIDATE_TIME,
     };
   } else {
     // Check Content tag exist on markdown
@@ -160,6 +162,7 @@ export const getStaticProps = async (context) => {
           content,
           isNewContribution: false,
         },
+        revalidate: REVALIDATE_TIME,
       };
     }
 
@@ -169,6 +172,7 @@ export const getStaticProps = async (context) => {
         ...data._source,
         isNewContribution: false,
       },
+      revalidate: REVALIDATE_TIME,
     };
   }
 };

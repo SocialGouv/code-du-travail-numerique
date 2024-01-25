@@ -13,6 +13,7 @@ import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
 import EventTracker from "../../src/lib/tracking/EventTracker";
 import { getToolsByIdsAndSlugs } from "../../src/api";
+import { REVALIDATE_TIME } from "../../src/config";
 
 const Outils = ({ cdtnSimulators, externalTools }) => (
   <Layout currentPage="tools">
@@ -100,6 +101,7 @@ export async function getStaticProps() {
     console.error(error);
     return {
       props: { cdtnSimulators: [], externalTools: [] },
+      revalidate: REVALIDATE_TIME,
     };
   }
 }

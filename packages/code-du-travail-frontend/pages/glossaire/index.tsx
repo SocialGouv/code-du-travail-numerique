@@ -13,6 +13,7 @@ import styled from "styled-components";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { getGlossary } from "../../src/api";
+import { REVALIDATE_TIME } from "../../src/config";
 
 const subtitle =
   "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses, ont pour objectif d’améliorer la compréhension des termes juridiques. Elles ne se substituent pas à la définition juridique exacte de ces termes.";
@@ -41,10 +42,10 @@ function Glossaire({ glossary }) {
 export async function getStaticProps() {
   try {
     const data: any = await getGlossary();
-    return { props: { glossary: data } };
+    return { props: { glossary: data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);
-    return { props: { glossary: [] } };
+    return { props: { glossary: [] }, revalidate: REVALIDATE_TIME };
   }
 }
 

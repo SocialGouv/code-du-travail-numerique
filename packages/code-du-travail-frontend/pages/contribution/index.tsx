@@ -15,6 +15,7 @@ import styled from "styled-components";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { getGenericContributionsGroupByThemes } from "../../src/api";
+import { REVALIDATE_TIME } from "../../src/config";
 
 const ALL = "all";
 
@@ -90,10 +91,10 @@ export default Page;
 export async function getStaticProps() {
   try {
     const data: any = await getGenericContributionsGroupByThemes();
-    return { props: { contribs: data } };
+    return { props: { contribs: data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);
-    return { props: { contribs: {} } };
+    return { props: { contribs: {} }, revalidate: REVALIDATE_TIME };
   }
 }
 

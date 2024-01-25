@@ -15,6 +15,7 @@ import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 import { captureException } from "@sentry/nextjs";
 import { getStatsService } from "../src/api";
+import { REVALIDATE_TIME } from "../src/config";
 
 type PropsData = {
   nbDocuments: number;
@@ -95,6 +96,7 @@ export async function getStaticProps() {
       props: {
         data: null,
       },
+      revalidate: REVALIDATE_TIME,
     };
   }
 }

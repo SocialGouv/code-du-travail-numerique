@@ -35,6 +35,7 @@ const mapSource =
   });
 
 // rely on covisit links within the item, computed offline from usage logs (Monolog)
+//TODO: Fonction à supprimer car on a pas besoin des covisites
 export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {
   // covisits as related items
   const body = covisits.flatMap(({ link }: { link: string }) => {
