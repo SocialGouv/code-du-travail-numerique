@@ -712,7 +712,8 @@ exports[`<Glossaire /> should render 1`] = `
               decoding="async"
               height="141"
               loading="lazy"
-              src="/static/assets/img/ministere_logo.svg"
+              src="/_next/image?url=%2Fstatic%2Fassets%2Fimg%2Fministere_logo.jpeg&w=384&q=75"
+              srcset="/_next/image?url=%2Fstatic%2Fassets%2Fimg%2Fministere_logo.jpeg&w=256&q=75 1x, /_next/image?url=%2Fstatic%2Fassets%2Fimg%2Fministere_logo.jpeg&w=384&q=75 2x"
               style="color: transparent;"
               width="170"
             />
