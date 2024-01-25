@@ -6,3 +6,6 @@ node_modules
 cypress/videos
 cypress/screenshots
 cypress/downloads
+.env
+.env.prod
+.env.local

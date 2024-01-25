@@ -11,14 +11,15 @@ import {
   ElasticSearchContributionConventionnelle,
   ElasticSearchContributionGeneric,
 } from "@socialgouv/cdtn-utils";
-import { handleError } from "../../src/lib/fetch-error";
-import { SITE_URL } from "../../src/config";
 import EventTracker from "../../src/lib/tracking/EventTracker";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
-
-const fetchQuestion = ({ slug }) =>
-  fetch(`${SITE_URL}/api/items/contributions/${slug}`);
+import {
+  getAll,
+  getAllContributions,
+  getBySourceAndSlugItems,
+} from "../../src/api";
+import { REVALIDATE_TIME } from "../../src/config";
 
 type NewProps = {
   contribution: ElasticSearchContribution;
@@ -119,13 +120,19 @@ function PageContribution(props: Props): React.ReactElement {
   );
 }
 
-export const getServerSideProps = async ({ query }) => {
-  const response = await fetchQuestion(query);
-  if (!response.ok) {
-    return handleError(response);
-  }
-  const data = await response.json();
+export async function getStaticPaths() {
+  const contribs = await getAllContributions();
+  return {
+    paths: contribs.map((v) => ({
+      params: { slug: v.slug },
+    })),
+    fallback: false,
+  };
+}
 
+export const getStaticProps = async (context) => {
+  const slug = context.params.slug;
+  const data = await getBySourceAndSlugItems("contributions", slug);
   if (
     data._source?.type === "content" ||
     data._source?.type === "fiche-sp" ||
@@ -137,6 +144,7 @@ export const getServerSideProps = async ({ query }) => {
         contribution: data._source,
         isNewContribution: true,
       },
+      revalidate: REVALIDATE_TIME,
     };
   } else {
     // Check Content tag exist on markdown
@@ -146,10 +154,7 @@ export const getServerSideProps = async ({ query }) => {
 
     const contentUrl = extractMdxContentUrl(markdown);
     if (contentUrl) {
-      const fetchContent = await fetch(
-        `${SITE_URL}/api/items?url=${contentUrl}`
-      );
-      const [content] = await fetchContent.json();
+      const [content] = await getAll(contentUrl);
       return {
         props: {
           relatedItems: data.relatedItems,
@@ -157,6 +162,7 @@ export const getServerSideProps = async ({ query }) => {
           content,
           isNewContribution: false,
         },
+        revalidate: REVALIDATE_TIME,
       };
     }
 
@@ -166,6 +172,7 @@ export const getServerSideProps = async ({ query }) => {
         ...data._source,
         isNewContribution: false,
       },
+      revalidate: REVALIDATE_TIME,
     };
   }
 };

@@ -2,6 +2,7 @@ jobs:
   ~chart: jobs
   runs:
     build-app:
+      ~needs: [redis]
       use: build
       with:
         imagePackage: app
@@ -24,3 +25,10 @@ app:
     requests:
       cpu: 50m
       memory: 256Mi
+
+redis:
+  ~chart: redis
+  enabled: true
+  ingress:
+    enabled: false
+  ~forceRestart: false

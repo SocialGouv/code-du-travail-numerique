@@ -12,10 +12,10 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
-import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 import { Layout } from "../src/layout/Layout";
 import { captureException } from "@sentry/nextjs";
 import { getStatsService } from "../src/api";
+import { REVALIDATE_TIME } from "../src/config";
 
 type PropsData = {
   nbDocuments: number;
@@ -87,14 +87,8 @@ const Stats = ({ data }: Props): JSX.Element => {
 
 export async function getStaticProps() {
   try {
-    let data: PropsData;
-    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-      const response = await fetch(`${SITE_URL}/api/stats`);
-      data = await response.json();
-    } else {
-      data = await getStatsService();
-    }
-    return { props: { data }, revalidate: REVALIDATE_TIME };
+    const data: PropsData = await getStatsService();
+    return { props: { data } };
   } catch (e) {
     console.error(e);
     captureException(e);

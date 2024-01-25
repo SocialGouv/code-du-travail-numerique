@@ -40,6 +40,10 @@ jobs:
       - name: Build code
         run: |
           yarn build
+        env:
+          ELASTICSEARCH_URL: ${{ secrets.ELASTICSEARCH_URL }}
+          ELASTICSEARCH_TOKEN_API: ${{ secrets.ELASTICSEARCH_TOKEN_API }}
+          NEXT_PUBLIC_ES_INDEX_PREFIX: cdtn-preprod
       - name: Cache build
         uses: actions/cache@v3
         with:

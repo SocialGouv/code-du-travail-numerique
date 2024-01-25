@@ -15,8 +15,8 @@ import { ListLink } from "../../src/search/SearchResults/Results";
 import styled from "styled-components";
 import Link from "next/link";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
 import { getAllAgreements } from "../../src/api";
+import { REVALIDATE_TIME } from "../../src/config";
 
 function Page({ ccs }) {
   return (
@@ -81,13 +81,7 @@ export default Page;
 
 export async function getStaticProps() {
   try {
-    let data: any;
-    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-      const response = await fetch(`${SITE_URL}/api/agreements`);
-      data = await response.json();
-    } else {
-      data = await getAllAgreements();
-    }
+    const data: any = await getAllAgreements();
     return { props: { ccs: data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);

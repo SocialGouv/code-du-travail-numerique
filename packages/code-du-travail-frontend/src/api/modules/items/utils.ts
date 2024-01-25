@@ -5,6 +5,7 @@ import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getSearchBySourceSlugBody, getRelatedItemsBody } from "./queries";
 import { getSemQuery } from "../search/queries";
 import { mergePipe } from "../search/utils";
+import { removeUndefinedValues } from "../../utils/functions";
 
 const MAX_RESULTS = 4;
 
@@ -34,6 +35,7 @@ const mapSource =
   });
 
 // rely on covisit links within the item, computed offline from usage logs (Monolog)
+//TODO: Fonction à supprimer car on a pas besoin des covisites
 export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {
   // covisits as related items
   const body = covisits.flatMap(({ link }: { link: string }) => {
@@ -150,5 +152,7 @@ export const getRelatedItems = async ({
     }, new Map())
     .values();
 
-  return Array.from(filteredItems).slice(0, MAX_RESULTS);
+  return Array.from(filteredItems)
+    .slice(0, MAX_RESULTS)
+    .map((v: Record<string, any>) => removeUndefinedValues(v));
 };

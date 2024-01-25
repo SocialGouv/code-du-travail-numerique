@@ -98,17 +98,26 @@ export function getContributionsByIds(ids: string[]) {
   };
 }
 
-export const getAllContributionBySlug = (slug: string) => {
+export const getAllContributionQuery = () => {
   return {
+    _source: [
+      "title",
+      "shortTitle",
+      "description",
+      "url",
+      "slug",
+      "breadcrumbs",
+      "source",
+      "cdtnId",
+    ],
     query: {
       bool: {
         filter: [
-          { term: { slug } },
           { term: { source: SOURCES.CONTRIBUTIONS } },
           { term: { isPublished: true } },
         ],
       },
     },
-    size: 1,
+    size: 3000, // Il y a 2000 contributions, comme ça, ça nous évite de faire plusieurs calls
   };
 };

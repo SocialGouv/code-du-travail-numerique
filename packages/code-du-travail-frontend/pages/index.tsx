@@ -9,7 +9,7 @@ import { ListLinkItemProps } from "../src/search/SearchResults/Results";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent, MatomoHomeEvent } from "../src/lib";
 import EventTracker from "../src/lib/tracking/EventTracker";
-import { REVALIDATE_TIME, SITE_URL } from "../src/config";
+import { REVALIDATE_TIME } from "../src/config";
 
 const Home = ({
   themes,
@@ -102,13 +102,7 @@ export async function getStaticProps() {
   let agreements: GetHomePage["agreements"] = [];
 
   try {
-    let data: GetHomePage;
-    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-      const response = await fetch(`${SITE_URL}/api/home`);
-      data = await response.json();
-    } else {
-      data = await getHomeData();
-    }
+    const data: GetHomePage = await getHomeData();
     themes = data.themes.children;
     highlights = data.highlights;
     tools = data.tools.map(({ _id, _source }) => ({ ..._source, _id }));

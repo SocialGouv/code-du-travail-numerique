@@ -13,7 +13,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { getSitemapData, GetSitemapPage } from "../src/api";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { REVALIDATE_TIME, SITE_URL } from "../src/config";
+import { REVALIDATE_TIME } from "../src/config";
 
 const PlanDuSite = ({
   tools,
@@ -159,13 +159,7 @@ export async function getStaticProps() {
   let agreements: GetSitemapPage["agreements"] = [];
 
   try {
-    let data: GetSitemapPage;
-    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-      const response = await fetch(`${SITE_URL}/api/plan-du-site`);
-      data = await response.json();
-    } else {
-      data = await getSitemapData();
-    }
+    const data: GetSitemapPage = await getSitemapData();
     themes = data.themes;
     tools = data.tools.filter((tool) => tool.source === SOURCES.TOOLS);
     contributions = data.contributions;
