@@ -7,7 +7,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Missing variables pour l'indemnité conventionnel de licenciement pour la CC 275", () => {
   describe("Aucune", () => {
-    test("Pour un départ avant le 01/02/2024", () => {
+    test("Pour un départ avant le 31/01/2024", () => {
       const { missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC0275'",
@@ -20,7 +20,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             "40",
           "contrat salarié . indemnité de licenciement . date de notification":
-            "31/01/2024",
+            "30/01/2024",
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "10000",
         },
@@ -29,7 +29,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
       expect(missingArgs).toEqual([]);
     });
 
-    test("Pour un départ après le 01/02/2024", () => {
+    test("Pour un départ après le 31/01/2024", () => {
       const { missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC0275'",
@@ -53,7 +53,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
   });
 
   describe("Sur l'âge", () => {
-    test("Pour un départ avant le 01/02/2024", () => {
+    test("Pour un départ avant le 31/01/2024", () => {
       const { missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC0275'",
@@ -64,7 +64,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             "40",
           "contrat salarié . indemnité de licenciement . date de notification":
-            "31/01/2024",
+            "30/01/2024",
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "10000",
         },
@@ -76,7 +76,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
       ]);
     });
 
-    test("Pour un départ après le 01/02/2024", () => {
+    test("Pour un départ après le 31/01/2024", () => {
       const { missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC0275'",
@@ -101,7 +101,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
   });
 
   describe("Sur la catégorie pro", () => {
-    test("Pour un départ avant le 01/02/2024", () => {
+    test("Pour un départ avant le 31/01/2024", () => {
       const { missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC0275'",
@@ -110,7 +110,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             "40",
           "contrat salarié . indemnité de licenciement . date de notification":
-            "31/01/2024",
+            "30/01/2024",
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "10000",
         },
@@ -122,7 +122,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
       ]);
     });
 
-    test("Pour un départ après le 01/02/2024", () => {
+    test("Pour un départ après le 31/01/2024", () => {
       const { missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC0275'",
@@ -145,7 +145,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
   });
 
   describe("Sur l'âge dans le cas où une date de notification n'est pas renseignée", () => {
-    test("Pour un départ avant le 01/02/2024", () => {
+    test("Pour un départ avant le 31/01/2024", () => {
       const { missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC0275'",
@@ -166,7 +166,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
       ]);
     });
 
-    test("Pour un départ après le 01/02/2024", () => {
+    test("Pour un départ après le 31/01/2024", () => {
       const { missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC0275'",

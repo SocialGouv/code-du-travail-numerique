@@ -6,7 +6,7 @@ const engine = new IndemniteLicenciementPublicodes(
 );
 
 describe("CC 275", () => {
-  describe("Avant le 01/02/2024", () => {
+  describe("Avant le 31/01/2024", () => {
     describe("Calcul de l'indemnité de licenciement pour Non-cadres", () => {
       test.each`
         seniorityRight | seniority | salaireRef | expectedCompensation
@@ -30,7 +30,7 @@ describe("CC 275", () => {
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
                 seniorityRight,
               "contrat salarié . indemnité de licenciement . date de notification":
-                "31/01/2024",
+                "30/01/2024",
               "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
                 salaireRef,
             },
@@ -88,7 +88,7 @@ describe("CC 275", () => {
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
                 seniorityRight,
               "contrat salarié . indemnité de licenciement . date de notification":
-                "31/01/2024",
+                "30/01/2024",
               "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
                 salaireRef,
             },
@@ -102,7 +102,7 @@ describe("CC 275", () => {
     });
   });
 
-  describe("A partir du 01/02/2024", () => {
+  describe("A partir du 31/01/2024", () => {
     describe("Calcul de l'indemnité de licenciement pour Non-cadres", () => {
       test.each`
         seniorityRight | seniority | salaireRef | expectedCompensation
@@ -127,7 +127,7 @@ describe("CC 275", () => {
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
                 seniorityRight,
               "contrat salarié . indemnité de licenciement . date de notification":
-                "01/02/2024",
+                "31/01/2024",
               "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
                 salaireRef,
             },
@@ -188,7 +188,7 @@ describe("CC 275", () => {
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
                 seniorityRight,
               "contrat salarié . indemnité de licenciement . date de notification":
-                "01/02/2024",
+                "31/01/2024",
               "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
                 salaireRef,
             },

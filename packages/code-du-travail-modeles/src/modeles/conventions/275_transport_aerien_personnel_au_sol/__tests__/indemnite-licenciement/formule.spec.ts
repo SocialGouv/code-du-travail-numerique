@@ -6,7 +6,7 @@ const engine = new IndemniteLicenciementPublicodes(
 );
 
 describe("Formule indemnité licenciement - CC 275", () => {
-  describe("Avant le 01/02/2024", () => {
+  describe("Avant le 31/01/2024", () => {
     describe("Non-cadres", () => {
       test.each([
         {
@@ -92,7 +92,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniority.toString(),
             "contrat salarié . indemnité de licenciement . date de notification":
-              "31/01/2024",
+              "30/01/2024",
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               "5000",
           });
@@ -266,7 +266,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniority.toString(),
             "contrat salarié . indemnité de licenciement . date de notification":
-              "31/01/2024",
+              "30/01/2024",
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               "5000",
           });
@@ -278,7 +278,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
     });
   });
 
-  describe("Après le 01/02/2024", () => {
+  describe("Après le 31/01/2024", () => {
     describe("Non-cadres", () => {
       test.each([
         {
@@ -364,7 +364,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniority.toString(),
             "contrat salarié . indemnité de licenciement . date de notification":
-              "01/02/2024",
+              "31/01/2024",
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               "5000",
           });
@@ -538,7 +538,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
               seniority.toString(),
             "contrat salarié . indemnité de licenciement . date de notification":
-              "01/02/2024",
+              "31/01/2024",
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               "5000",
           });
