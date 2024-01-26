@@ -1,9 +1,13 @@
+import type { Interval } from "date-fns";
 import {
   add,
+  addMonths,
   areIntervalsOverlapping,
-  getOverlappingDaysInIntervals,
+  differenceInCalendarMonths,
   isAfter,
   isWithinInterval,
+  max,
+  min,
   parse,
   sub,
 } from "date-fns";
@@ -19,8 +23,6 @@ export type AbsencePerYear = {
   year: number;
   totalAbsenceInMonth: number;
 };
-
-const DAYS_IN_ONE_MONTH = 31;
 
 export const splitBySeniorityYear = (begin: Date, end: Date): YearDetail[] => {
   if (isAfter(begin, end)) {
@@ -130,9 +132,12 @@ const absenceInYear = (absence: Absence, year: YearDetail): boolean => {
   if (!absence.startedAt) return false;
   if (!absence.durationInMonth) return false;
   const absenceStartAt = parse(absence.startedAt, "dd/MM/yyyy", new Date());
-  const absenceEndAt = add(absenceStartAt, {
-    days: DAYS_IN_ONE_MONTH * absence.durationInMonth,
+  const integer = Math.floor(absence.durationInMonth);
+  const decimal = absence.durationInMonth - Math.floor(absence.durationInMonth);
+  let absenceEndAt = add(absenceStartAt, {
+    days: decimal,
   });
+  absenceEndAt = addMonths(absenceEndAt, integer);
   return areIntervalsOverlapping(
     {
       end: absenceEndAt,
@@ -146,16 +151,26 @@ const absenceDurationRatio = (absence: Absence, year: YearDetail): number => {
   if (!absence.startedAt) return 0;
   if (!absence.durationInMonth) return 0;
   const absenceStartAt = parse(absence.startedAt, "dd/MM/yyyy", new Date());
-  const absenceEndAt = add(absenceStartAt, {
-    days: DAYS_IN_ONE_MONTH * absence.durationInMonth,
+  const integer = Math.floor(absence.durationInMonth);
+  const decimal = absence.durationInMonth - Math.floor(absence.durationInMonth);
+  let absenceEndAt = add(absenceStartAt, {
+    days: decimal,
   });
+  absenceEndAt = addMonths(absenceEndAt, integer);
   if (absenceStartAt >= year.begin && absenceEndAt <= year.end) {
     return absence.durationInMonth * absence.motif.value;
   }
-  const overlappingDays = getOverlappingDaysInIntervals(
+  const overlappingMonth = getOverlappingMonthsInterval(
     { end: absenceEndAt, start: absenceStartAt },
     { end: year.end, start: year.begin }
   );
-  const overlappingMonth = overlappingDays / DAYS_IN_ONE_MONTH;
   return overlappingMonth * absence.motif.value;
+};
+
+const getOverlappingMonthsInterval = (r1: Interval, r2: Interval) => {
+  if (areIntervalsOverlapping(r1, r2)) {
+    const start = max([r1.start, r2.start]);
+    const end = min([r1.end, r2.end]);
+    return differenceInCalendarMonths(end, start);
+  } else return 0;
 };
