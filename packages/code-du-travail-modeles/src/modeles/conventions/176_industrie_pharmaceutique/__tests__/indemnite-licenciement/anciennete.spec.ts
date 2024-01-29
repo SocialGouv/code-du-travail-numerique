@@ -15,6 +15,7 @@ describe("CC 176", () => {
       ${[{ durationInMonth: 7, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/11/2020" }]}                                                                                                     | ${"20/02/2020"} | ${"20/02/2022"} | ${2}
       ${[{ durationInMonth: 6, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/07/2021" }]}                                                                                                     | ${"01/01/2020"} | ${"01/01/2023"} | ${3}
       ${[{ durationInMonth: 7, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/07/2021" }]}                                                                                                     | ${"01/01/2020"} | ${"01/01/2023"} | ${3}
+      ${[{ durationInMonth: 7, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "15/06/2021" }]}                                                                                                     | ${"01/01/2020"} | ${"01/01/2023"} | ${2.4555555555555557}
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
