@@ -236,7 +236,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       class="sc-dSIIpw gHcpgz sc-iapWAC dWlKKO"
     >
       <select
-        class="sc-ktPPKK dHFgAl"
+        class="sc-ktPPKK euGWnN"
         data-testid="cdt.ancienneté"
         id="input-cdt.ancienneté"
         name="cdt.ancienneté"

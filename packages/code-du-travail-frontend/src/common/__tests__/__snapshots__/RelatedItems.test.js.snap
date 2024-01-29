@@ -21,7 +21,7 @@ exports[`<RelatedItems /> should render 1`] = `
         class="sc-iXzfSG jAUdMA"
       >
         <a
-          class="sc-bmzYkS eyKmWS"
+          class="sc-bmzYkS hFAanY"
         >
           <svg
             aria-hidden="true"
@@ -35,18 +35,18 @@ exports[`<RelatedItems /> should render 1`] = `
               fill="currentColor"
             />
           </svg>
-          <span
+          <p
             class="sc-iHGNWf hQSWKy"
           >
             externalTool
-          </span>
+          </p>
         </a>
       </li>
       <li
         class="sc-iXzfSG jAUdMA"
       >
         <a
-          class="sc-bmzYkS eyKmWS"
+          class="sc-bmzYkS hFAanY"
         >
           <svg
             aria-hidden="true"
@@ -60,11 +60,11 @@ exports[`<RelatedItems /> should render 1`] = `
               fill="currentColor"
             />
           </svg>
-          <span
+          <p
             class="sc-iHGNWf hQSWKy"
           >
             modele de courrier
-          </span>
+          </p>
         </a>
       </li>
     </ul>
@@ -84,7 +84,7 @@ exports[`<RelatedItems /> should render 1`] = `
         class="sc-iXzfSG jAUdMA"
       >
         <a
-          class="sc-bmzYkS eyKmWS"
+          class="sc-bmzYkS hFAanY"
         >
           <svg
             aria-hidden="true"
@@ -98,18 +98,18 @@ exports[`<RelatedItems /> should render 1`] = `
               fill="currentColor"
             />
           </svg>
-          <span
+          <p
             class="sc-iHGNWf hQSWKy"
           >
             fiche sp
-          </span>
+          </p>
         </a>
       </li>
       <li
         class="sc-iXzfSG jAUdMA"
       >
         <a
-          class="sc-bmzYkS eyKmWS"
+          class="sc-bmzYkS hFAanY"
         >
           <svg
             aria-hidden="true"
@@ -123,11 +123,11 @@ exports[`<RelatedItems /> should render 1`] = `
               fill="currentColor"
             />
           </svg>
-          <span
+          <p
             class="sc-iHGNWf hQSWKy"
           >
             contrib
-          </span>
+          </p>
         </a>
       </li>
     </ul>

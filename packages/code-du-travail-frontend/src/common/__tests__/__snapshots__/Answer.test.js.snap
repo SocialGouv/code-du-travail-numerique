@@ -1766,7 +1766,7 @@ exports[`<Answer /> should renders related content 1`] = `
             class="sc-kbdlSk kBnlFg"
           >
             <a
-              class="sc-bmzYkS eyKmWS"
+              class="sc-bmzYkS hFAanY"
               href="url.extrenal/tool"
             >
               <svg
@@ -1781,18 +1781,18 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="sc-iHGNWf hQSWKy"
               >
                 related external title 1
-              </span>
+              </p>
             </a>
           </li>
           <li
             class="sc-kbdlSk kBnlFg"
           >
             <a
-              class="sc-bmzYkS eyKmWS"
+              class="sc-bmzYkS hFAanY"
               href="/outils/TOOL_1"
             >
               <svg
@@ -1807,11 +1807,11 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="sc-iHGNWf hQSWKy"
               >
                 related tool title 1
-              </span>
+              </p>
             </a>
           </li>
         </ul>
@@ -1831,7 +1831,7 @@ exports[`<Answer /> should renders related content 1`] = `
             class="sc-kbdlSk kBnlFg"
           >
             <a
-              class="sc-bmzYkS eyKmWS"
+              class="sc-bmzYkS hFAanY"
               href="/fiche-service-public/LINK_1"
             >
               <svg
@@ -1846,18 +1846,18 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="sc-iHGNWf hQSWKy"
               >
                 related sheet sp title 1
-              </span>
+              </p>
             </a>
           </li>
           <li
             class="sc-kbdlSk kBnlFg"
           >
             <a
-              class="sc-bmzYkS eyKmWS"
+              class="sc-bmzYkS hFAanY"
               href="/fiche-ministere-travail/LINK_2"
             >
               <svg
@@ -1872,18 +1872,18 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="sc-iHGNWf hQSWKy"
               >
                 related sheet mt title 1
-              </span>
+              </p>
             </a>
           </li>
           <li
             class="sc-kbdlSk kBnlFg"
           >
             <a
-              class="sc-bmzYkS eyKmWS"
+              class="sc-bmzYkS hFAanY"
               href="/fiche-service-public/LINK_4"
             >
               <svg
@@ -1898,11 +1898,11 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="sc-iHGNWf hQSWKy"
               >
                 related sheet sp title 2
-              </span>
+              </p>
             </a>
           </li>
         </ul>

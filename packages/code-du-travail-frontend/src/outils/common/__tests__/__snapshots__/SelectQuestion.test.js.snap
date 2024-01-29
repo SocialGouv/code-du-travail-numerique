@@ -25,7 +25,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       class="sc-dSIIpw gHcpgz sc-dExYaf jqKTZg"
     >
       <select
-        class="sc-ktPPKK dHFgAl"
+        class="sc-ktPPKK euGWnN"
         data-testid="foo"
         id="input-foo"
         name="foo"
@@ -109,7 +109,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       class="sc-dSIIpw gHcpgz sc-dExYaf jqKTZg"
     >
       <select
-        class="sc-ktPPKK dHFgAl"
+        class="sc-ktPPKK euGWnN"
         data-testid="foo"
         id="input-foo"
         name="foo"

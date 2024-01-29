@@ -44,7 +44,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
         >
           <li>
             <a
-              class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk"
+              class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk"
               href="/code-du-travail/l1244-3"
             >
               <svg
@@ -59,16 +59,16 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="sc-iHGNWf hQSWKy"
               >
                 Article L1244-3 du Code du travail
-              </span>
+              </p>
             </a>
           </li>
           <li>
             <a
-              class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk"
+              class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk"
               href="/code-du-travail/r1244-4"
             >
               <svg
@@ -83,17 +83,17 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="sc-iHGNWf hQSWKy"
               >
                 Article R1244-4 du Code du travail
-              </span>
+              </p>
             </a>
           </li>
           <li>
             <a
               aria-label="Article L3121-44 du JO (Nouvelle fenêtre)"
-              class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk no-after"
+              class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk no-after"
               href="https://article.jo/L3121-44"
               target="_blank"
             >
@@ -109,17 +109,17 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="sc-iHGNWf hQSWKy"
               >
                 Article L3121-44 du JO
-              </span>
+              </p>
             </a>
           </li>
           <li>
             <a
               aria-label="Article foo du JPO (Nouvelle fenêtre)"
-              class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk no-after"
+              class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk no-after"
               href="https://article.jo/foo"
               target="_blank"
             >
@@ -135,17 +135,17 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="sc-iHGNWf hQSWKy"
               >
                 Article foo du JPO
-              </span>
+              </p>
             </a>
           </li>
           <li>
             <a
               aria-label="Convention foo (Nouvelle fenêtre)"
-              class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk no-after"
+              class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk no-after"
               href="https://ma-convention-collective/ccc-foo"
               target="_blank"
             >
@@ -161,11 +161,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="sc-iHGNWf hQSWKy"
               >
                 Convention foo
-              </span>
+              </p>
             </a>
           </li>
         </ul>

@@ -72,13 +72,13 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-dhKdcB fdfhnD"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-0"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-bXCLTC cqpPUq"
           >
             <p>
               paragraphe 1-1
@@ -141,13 +141,13 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-dhKdcB fdfhnD"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-1"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-bXCLTC cqpPUq"
           >
             <p>
               paragraphe 2-1
@@ -216,13 +216,13 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-dhKdcB fdfhnD"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-2"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-bXCLTC cqpPUq"
           >
             <p>
               paragraphe 3-1
@@ -304,13 +304,13 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-dhKdcB fdfhnD"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-3"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-bXCLTC cqpPUq"
           >
             <p>
               paragraphe 1-1
@@ -373,13 +373,13 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-dhKdcB fdfhnD"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-4"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-bXCLTC cqpPUq"
           >
             <p>
               paragraphe 2-1
@@ -448,13 +448,13 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-dhKdcB fdfhnD"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-5"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-bXCLTC cqpPUq"
           >
             <p>
               paragraphe 3-1
