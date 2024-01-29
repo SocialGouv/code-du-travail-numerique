@@ -1,6 +1,7 @@
 import type { Interval } from "date-fns";
 import {
   add,
+  addDays,
   addMonths,
   areIntervalsOverlapping,
   differenceInCalendarMonths,
@@ -170,7 +171,11 @@ const getOverlappingMonthsInterval = (r1: Interval, r2: Interval) => {
     const end = min([r1.end, r2.end]);
     const diffInMonths = differenceInCalendarMonths(end, start);
     const startDateWithDifferenceInMonths = addMonths(start, diffInMonths);
-    const diffInDays = differenceInDays(end, startDateWithDifferenceInMonths);
+    const endWithOneDay = addDays(end, 1);
+    const diffInDays = differenceInDays(
+      endWithOneDay,
+      startDateWithDifferenceInMonths
+    );
     return diffInMonths + diffInDays / 30;
   } else return 0;
 };
