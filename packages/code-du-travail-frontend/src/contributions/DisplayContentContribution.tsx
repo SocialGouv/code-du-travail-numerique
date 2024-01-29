@@ -1,4 +1,10 @@
-import { Accordion, Alert, Table as UITable, theme } from "@socialgouv/cdtn-ui";
+import {
+  Accordion,
+  Alert,
+  Heading,
+  Table as UITable,
+  theme,
+} from "@socialgouv/cdtn-ui";
 
 import styled from "styled-components";
 import { FicheServicePublic } from "../fiche-service-public";
@@ -9,14 +15,16 @@ import parse, {
   HTMLReactParserOptions,
 } from "html-react-parser";
 import { xssWrapper } from "../lib";
-import { Heading } from "@socialgouv/cdtn-ui/lib";
 
 export const ContentSP = ({ raw, titleLevel }) => {
   return (
     <>
       {raw && (
         <StyledContent>
-          <FicheServicePublic data={JSON.parse(raw).children} headingLevel={titleLevel} />
+          <FicheServicePublic
+            data={JSON.parse(raw).children}
+            headingLevel={titleLevel}
+          />
         </StyledContent>
       )}
     </>
@@ -116,27 +124,33 @@ function getItem(domNode: Element, titleLevel: number) {
   }
 }
 
+function renderChildrenWithNoTrim(domNode) {
+  return domToReact(domNode.children as DOMNode[]);
+}
+
 const options = (titleLevel: number): HTMLReactParserOptions => {
   let accordionTitle = titleLevel;
 
   return {
     replace(domNode) {
       if (domNode instanceof Element) {
-        if (domNode.name === "span" && domNode.attribs.class === "title") {
-          accordionTitle = titleLevel + 1;
-          return (
-            <Heading as={`h${titleLevel}`}>
-              {domToReact(domNode.children as DOMNode[])}
-            </Heading>
-          );
-        }
-        if (domNode.name === "span" && domNode.attribs.class === "sub-title") {
-          accordionTitle = titleLevel + 1;
-          return (
-            <Heading as={`h${titleLevel + 1}`}>
-              {domToReact(domNode.children as DOMNode[])}
-            </Heading>
-          );
+        if (domNode.name === "span") {
+          if (
+            domNode.attribs.class === "title" ||
+            domNode.attribs.class === "sub-title"
+          ) {
+            accordionTitle = titleLevel + 1;
+            if (domNode.attribs.class === "sub-title") {
+              titleLevel++;
+            }
+            return titleLevel <= 6 ? (
+              <Heading as={`h${titleLevel}`}>
+                {renderChildrenWithNoTrim(domNode)}
+              </Heading>
+            ) : (
+              <strong>{renderChildrenWithNoTrim(domNode)}</strong>
+            );
+          }
         }
         if (domNode.name === "details") {
           const items: any[] = [];
@@ -171,28 +185,18 @@ const options = (titleLevel: number): HTMLReactParserOptions => {
         }
         if (domNode.name === "strong") {
           // Disable trim on strong
-          return (
-            <strong>
-              {domToReact(domNode.children as DOMNode[], { trim: false })}
-            </strong>
-          );
+          return <strong>{renderChildrenWithNoTrim(domNode)}</strong>;
         }
         if (domNode.name === "em") {
           // Disable trim on em
-          return (
-            <em>
-              {domToReact(domNode.children as DOMNode[], { trim: false })}
-            </em>
-          );
+          return <em>{renderChildrenWithNoTrim(domNode)}</em>;
         }
         if (domNode.name === "p") {
           if (!domNode.children.length) {
             return <br />;
           }
           // Disable trim on p
-          return (
-            <p>{domToReact(domNode.children as DOMNode[], { trim: false })}</p>
-          );
+          return <p>{renderChildrenWithNoTrim(domNode)}</p>;
         }
       }
     },
@@ -209,7 +213,9 @@ const DisplayContentContribution = ({
   titleLevel,
 }: Props): string | JSX.Element | JSX.Element[] => {
   return (
-    <ContentStyled>{parse(xssWrapper(content), options(titleLevel))}</ContentStyled>
+    <ContentStyled>
+      {parse(xssWrapper(content), options(titleLevel))}
+    </ContentStyled>
   );
 };
 

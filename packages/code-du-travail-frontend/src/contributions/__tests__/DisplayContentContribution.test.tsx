@@ -62,6 +62,46 @@ describe("DisplayContentContribution", () => {
         </div>
       `);
     });
+    it(`should not add headings higher than h6 for titles`, () => {
+      const { baseElement } = render(
+        <DisplayContentContribution
+          content={`<span class="title">Mon title</span><span class="sub-title">Mon title</span>`}
+          titleLevel={6}
+        ></DisplayContentContribution>
+      );
+
+      expect(baseElement.firstChild).toMatchInlineSnapshot(`
+        <div>
+          <div
+            class="sc-ERObt zXiiV"
+          >
+            <h6
+              class="sc-kAyceB dvmaTz"
+              data-testid="heading"
+            >
+              Mon title
+            </h6>
+            <strong>
+              Mon title
+            </strong>
+          </div>
+        </div>
+      `);
+    });
+    it(`should not add headings higher than h6 for accordion`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
+        <details className=" details"><summary>Ceci est un titre</summary>
+          <div data-type=" detailsContent">
+            <p>Ceci est le body</p>
+          </div>
+        </details>`}
+          titleLevel={6}
+        ></DisplayContentContribution>
+      );
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
   });
 
   describe("Accordions", () => {
@@ -320,7 +360,7 @@ describe("DisplayContentContribution", () => {
                       rowspan="1"
                     >
                       <p>
-                        Pour les
+                        Pour les 
                         <strong>
                           cadres
                         </strong>
@@ -381,7 +421,7 @@ describe("DisplayContentContribution", () => {
                   rowspan="1"
                 >
                   <p>
-                    Pour les
+                    Pour les 
                     <strong>
                       cadres
                     </strong>
@@ -422,23 +462,23 @@ describe("DisplayContentContribution", () => {
           <p>
             Ceci est un
             <strong>
-
+               
             </strong>
             texte généré
             <strong>
-
+               
             </strong>
-            par
+            par 
             <em>
-              tiptap
+              tiptap 
             </em>
             avec des
             <em>
-
+               
             </em>
             résidus
             <em>
-
+               
             </em>
             de balise
           </p>
@@ -531,23 +571,23 @@ describe("DisplayContentContribution", () => {
         <p>
           Ceci est un
           <strong>
-
+             
           </strong>
           texte généré
           <strong>
-
+             
           </strong>
-          par
+          par 
           <em>
-            tiptap
+            tiptap 
           </em>
           avec des
           <em>
-
+             
           </em>
           résidus
           <em>
-
+             
           </em>
           de balise
         </p>
@@ -570,36 +610,38 @@ describe("DisplayContentContribution", () => {
           <strong>
             À noter :
           </strong>
-
+           
           <em>
-            L'échelon professionnel du salarié est habituellement mentionné
+            L'échelon professionnel du salarié est habituellement mentionné 
           </em>
         </p>
       </div>
     `);
   });
 
-  it(`should replace div with alert class to Alert component`, () => {
-    const { asFragment } = render(
-      <DisplayContentContribution
-        content={`
+  describe("Alerts", () => {
+    it(`should replace div with alert class to Alert component`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
         <div class="alert"><p><strong>Attention : </strong>En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.</p></div>`}
-        titleLevel={3}
-      ></DisplayContentContribution>
-    );
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(asFragment().firstChild).toMatchSnapshot();
-  });
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
 
-  it(`should replace div with alert class in li component to Alert component`, () => {
-    const { asFragment } = render(
-      <DisplayContentContribution
-        content={`
+    it(`should replace div with alert class in li component to Alert component`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
         <div><p>Le contrat de mission (intérim) doit :</p><ul><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être<strong> écrit</strong> et <strong>rédigé</strong> en français (si conclu en France) ;</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être <strong>signé</strong>, dans un délai de <strong>2 jours</strong> suivant la mise à disposition du salarié auprès de l'entreprise ; si l’employeur transmet le CDD au salarié après le délai de 2 jours, il s'expose au paiement d'une indemnité égale à 1 mois de salaire maximum.</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être établi <strong>en plusieurs exemplaires</strong> ; c'est-à-dire autant d'exemplaires que de parties au contrat. Chaque partie au contrat aura un exemplaire.</p><p></p><div class="alert"><p><strong>Attention : </strong>En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.</p></div></li></ul></div>`}
-        titleLevel={3}
-      ></DisplayContentContribution>
-    );
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(asFragment().firstChild).toMatchSnapshot();
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
   });
 });

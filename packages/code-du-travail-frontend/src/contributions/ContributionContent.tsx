@@ -47,7 +47,7 @@ export const ContributionContent = ({ contribution, titleLevel }: Props) => {
               <span>Mis à jour le&nbsp;: {contribution.date}</span>
             )}
           </Meta>
-          <ContentSP raw={contribution.raw} titleLevel={titleLevel} />
+          <ContentSP raw={contribution.raw} titleLevel={titleLevel - 2} />
         </div>
       ) : (
         <DisplayContentContribution
