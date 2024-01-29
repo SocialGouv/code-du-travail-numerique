@@ -137,7 +137,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         class="sc-dSIIpw gHcpgz sc-dExYaf jqKTZg"
       >
         <select
-          class="sc-ktPPKK euGWnN"
+          class="sc-ktPPKK dHFgAl"
           data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
@@ -314,7 +314,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         class="sc-dSIIpw gHcpgz sc-dExYaf jqKTZg"
       >
         <select
-          class="sc-ktPPKK euGWnN"
+          class="sc-ktPPKK dHFgAl"
           data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"

@@ -61,13 +61,13 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
           </div>
           <div
             aria-hidden="true"
-            class="sc-dhKdcB fdfhnD"
+            class="sc-dhKdcB hlTUsz"
             data-accordion-component="AccordionItemPanel"
             hidden=""
             id="accordion__panel-raa-1"
           >
             <div
-              class="sc-bXCLTC cqpPUq"
+              class="sc-bXCLTC fcbJdD"
             >
               <div>
                 <p>
@@ -133,13 +133,13 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                       </div>
                       <div
                         aria-hidden="true"
-                        class="sc-dhKdcB fdfhnD"
+                        class="sc-dhKdcB hlTUsz"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""
                         id="accordion__panel-raa-2"
                       >
                         <div
-                          class="sc-bXCLTC cqpPUq"
+                          class="sc-bXCLTC fcbJdD"
                         >
                           <div>
                             <div
@@ -200,13 +200,13 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                   </div>
                                   <div
                                     aria-hidden="true"
-                                    class="sc-dhKdcB fdfhnD"
+                                    class="sc-dhKdcB hlTUsz"
                                     data-accordion-component="AccordionItemPanel"
                                     hidden=""
                                     id="accordion__panel-raa-3"
                                   >
                                     <div
-                                      class="sc-bXCLTC cqpPUq"
+                                      class="sc-bXCLTC fcbJdD"
                                     >
                                       <div>
                                         <p>
@@ -275,13 +275,13 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                   </div>
                                   <div
                                     aria-hidden="true"
-                                    class="sc-dhKdcB fdfhnD"
+                                    class="sc-dhKdcB hlTUsz"
                                     data-accordion-component="AccordionItemPanel"
                                     hidden=""
                                     id="accordion__panel-raa-4"
                                   >
                                     <div
-                                      class="sc-bXCLTC cqpPUq"
+                                      class="sc-bXCLTC fcbJdD"
                                     >
                                       <div>
                                         <p>
@@ -349,13 +349,13 @@ exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
                                   </div>
                                   <div
                                     aria-hidden="true"
-                                    class="sc-dhKdcB fdfhnD"
+                                    class="sc-dhKdcB hlTUsz"
                                     data-accordion-component="AccordionItemPanel"
                                     hidden=""
                                     id="accordion__panel-raa-5"
                                   >
                                     <div
-                                      class="sc-bXCLTC cqpPUq"
+                                      class="sc-bXCLTC fcbJdD"
                                     >
                                       <div>
                                         <p>
@@ -540,13 +540,13 @@ exports[`DisplayContentContribution should replace details element by one accord
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB fdfhnD"
+          class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-0"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div>
               <p>
@@ -622,13 +622,13 @@ exports[`DisplayContentContribution should replace details element within detail
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB fdfhnD"
+          class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-8"
         >
           <div
-            class="sc-bXCLTC cqpPUq"
+            class="sc-bXCLTC fcbJdD"
           >
             <div>
               <div
@@ -687,13 +687,13 @@ exports[`DisplayContentContribution should replace details element within detail
                     </div>
                     <div
                       aria-hidden="true"
-                      class="sc-dhKdcB fdfhnD"
+                      class="sc-dhKdcB hlTUsz"
                       data-accordion-component="AccordionItemPanel"
                       hidden=""
                       id="accordion__panel-raa-9"
                     >
                       <div
-                        class="sc-bXCLTC cqpPUq"
+                        class="sc-bXCLTC fcbJdD"
                       >
                         <div>
                           <p>
@@ -860,13 +860,13 @@ exports[`DisplayContentContribution should replace multiple details element by o
             </div>
             <div
               aria-hidden="true"
-              class="sc-dhKdcB fdfhnD"
+              class="sc-dhKdcB hlTUsz"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-raa-6"
             >
               <div
-                class="sc-bXCLTC cqpPUq"
+                class="sc-bXCLTC fcbJdD"
               >
                 <div>
                   <p>
@@ -929,13 +929,13 @@ exports[`DisplayContentContribution should replace multiple details element by o
             </div>
             <div
               aria-hidden="true"
-              class="sc-dhKdcB fdfhnD"
+              class="sc-dhKdcB hlTUsz"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-raa-7"
             >
               <div
-                class="sc-bXCLTC cqpPUq"
+                class="sc-bXCLTC fcbJdD"
               >
                 <div>
                   <p>

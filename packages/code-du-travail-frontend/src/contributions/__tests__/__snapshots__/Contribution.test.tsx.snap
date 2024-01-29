@@ -977,7 +977,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
       >
         <li>
           <a
-            class="sc-bmzYkS hFAanY sc-fAGzit fmegKG"
+            class="sc-bmzYkS eyKmWS sc-fAGzit fmegKG"
             href="/code-du-travail/l-1243"
           >
             <svg
@@ -992,11 +992,11 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
                 fill="currentColor"
               />
             </svg>
-            <p
+            <span
               class="sc-iHGNWf hQSWKy"
             >
               Article L-1243 du Code du travail
-            </p>
+            </span>
           </a>
         </li>
       </ul>
