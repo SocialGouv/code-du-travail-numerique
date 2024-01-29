@@ -38,16 +38,14 @@ type OldProps = {
 type Props = NewProps | OldProps;
 
 const buildTitleAndDescription = (
-  breadcrumbs,
-  conventionAnswer,
-  title,
-  description
+  breadcrumbs: Breadcrumb[],
+  conventionName: string | undefined,
+  title: string,
+  description: string
 ) => {
-  if (breadcrumbs && breadcrumbs.length > 0 && conventionAnswer) {
+  if (breadcrumbs && breadcrumbs.length > 0 && conventionName) {
     const titleWithThemeAndCC =
-      breadcrumbs[breadcrumbs.length - 1].label +
-      " - " +
-      conventionAnswer.shortName;
+      breadcrumbs[breadcrumbs.length - 1].label + " - " + conventionName;
     return {
       description: title + " " + description,
       title: titleWithThemeAndCC,
@@ -65,9 +63,16 @@ function PageContribution(props: Props): React.ReactElement {
   if (!props.isNewContribution) {
     metas = buildTitleAndDescription(
       props.breadcrumbs,
-      props.answers.conventionAnswer,
+      props.answers.conventionAnswer?.shortName,
       props.title,
       props.description
+    );
+  } else {
+    metas = buildTitleAndDescription(
+      props.contribution.breadcrumbs,
+      props.contribution.ccnShortTitle,
+      props.contribution.title,
+      props.contribution.description
     );
   }
 
@@ -75,10 +80,7 @@ function PageContribution(props: Props): React.ReactElement {
     <Layout>
       {props.isNewContribution ? (
         <>
-          <Metas
-            title={props.contribution.title}
-            description={props.contribution.description}
-          />
+          <Metas title={metas.title} description={metas.description} />
           <Answer
             title={props.contribution.title}
             breadcrumbs={props.contribution.breadcrumbs}
