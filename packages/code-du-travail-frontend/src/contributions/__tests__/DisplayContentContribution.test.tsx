@@ -320,7 +320,7 @@ describe("DisplayContentContribution", () => {
                       rowspan="1"
                     >
                       <p>
-                        Pour les 
+                        Pour les
                         <strong>
                           cadres
                         </strong>
@@ -381,7 +381,7 @@ describe("DisplayContentContribution", () => {
                   rowspan="1"
                 >
                   <p>
-                    Pour les 
+                    Pour les
                     <strong>
                       cadres
                     </strong>
@@ -411,6 +411,7 @@ describe("DisplayContentContribution", () => {
       const { asFragment } = render(
         <DisplayContentContribution
           content={`<p>Ceci est un<strong> </strong>texte généré<strong> </strong>par <em>tiptap </em>avec des<em> </em>résidus<em> </em>de balise</p>`}
+          titleLevel={3}
         ></DisplayContentContribution>
       );
 
@@ -421,23 +422,23 @@ describe("DisplayContentContribution", () => {
           <p>
             Ceci est un
             <strong>
-               
+
             </strong>
             texte généré
             <strong>
-               
+
             </strong>
-            par 
+            par
             <em>
-              tiptap 
+              tiptap
             </em>
             avec des
             <em>
-               
+
             </em>
             résidus
             <em>
-               
+
             </em>
             de balise
           </p>
@@ -530,23 +531,23 @@ describe("DisplayContentContribution", () => {
         <p>
           Ceci est un
           <strong>
-             
+
           </strong>
           texte généré
           <strong>
-             
+
           </strong>
-          par 
+          par
           <em>
-            tiptap 
+            tiptap
           </em>
           avec des
           <em>
-             
+
           </em>
           résidus
           <em>
-             
+
           </em>
           de balise
         </p>
@@ -569,9 +570,9 @@ describe("DisplayContentContribution", () => {
           <strong>
             À noter :
           </strong>
-           
+
           <em>
-            L'échelon professionnel du salarié est habituellement mentionné 
+            L'échelon professionnel du salarié est habituellement mentionné
           </em>
         </p>
       </div>
@@ -583,6 +584,7 @@ describe("DisplayContentContribution", () => {
       <DisplayContentContribution
         content={`
         <div class="alert"><p><strong>Attention : </strong>En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.</p></div>`}
+        titleLevel={3}
       ></DisplayContentContribution>
     );
 
@@ -594,6 +596,7 @@ describe("DisplayContentContribution", () => {
       <DisplayContentContribution
         content={`
         <div><p>Le contrat de mission (intérim) doit :</p><ul><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être<strong> écrit</strong> et <strong>rédigé</strong> en français (si conclu en France) ;</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être <strong>signé</strong>, dans un délai de <strong>2 jours</strong> suivant la mise à disposition du salarié auprès de l'entreprise ; si l’employeur transmet le CDD au salarié après le délai de 2 jours, il s'expose au paiement d'une indemnité égale à 1 mois de salaire maximum.</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être établi <strong>en plusieurs exemplaires</strong> ; c'est-à-dire autant d'exemplaires que de parties au contrat. Chaque partie au contrat aura un exemplaire.</p><p></p><div class="alert"><p><strong>Attention : </strong>En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.</p></div></li></ul></div>`}
+        titleLevel={3}
       ></DisplayContentContribution>
     );
 
