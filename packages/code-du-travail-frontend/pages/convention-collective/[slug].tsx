@@ -12,7 +12,6 @@ import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import { apiIdcc } from "../../src/conventions/Search/api/agreement.service";
-import EventTracker from "../../src/lib/tracking/EventTracker";
 import { addPrefixAgreementTitle } from "../../src/conventions/utils";
 
 interface Props {
@@ -76,7 +75,6 @@ function ConventionCollective(props: Props): JSX.Element {
       >
         <Convention convention={convention} />
       </Answer>
-      <EventTracker />
     </Layout>
   );
 }

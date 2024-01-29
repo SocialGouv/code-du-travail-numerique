@@ -128,6 +128,7 @@ exports[`<Article /> should render 1`] = `
             <button
               class="sc-lnPyaJ jfuGjJ spacing-left"
               title="Partager sur LinkedIn"
+              type="button"
             >
               <span
                 class="sc-dExYaf isrkSd"
@@ -157,6 +158,7 @@ exports[`<Article /> should render 1`] = `
               <button
                 class="sc-lnPyaJ jfuGjJ spacing-left"
                 title="Plus d’options"
+                type="button"
               >
                 <span
                   class="sc-dExYaf isrkSd"

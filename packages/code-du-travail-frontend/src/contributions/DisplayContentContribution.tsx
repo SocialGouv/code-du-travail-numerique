@@ -118,6 +118,9 @@ function getItem(domNode: Element, titleLevel: number) {
 const options = (titleLevel: number): HTMLReactParserOptions => ({
   replace(domNode) {
     if (domNode instanceof Element) {
+      if (domNode.name === "p" && !domNode.children.length) {
+        return <br />;
+      }
       if (domNode.name === "h3") {
         titleLevel = 4;
       }
@@ -152,9 +155,6 @@ const options = (titleLevel: number): HTMLReactParserOptions => ({
           </Alert>
         );
       }
-      if (domNode.name === "p" && !domNode.children.length) {
-        return <></>;
-      }
       if (domNode.name === "strong") {
         // Disable trim on strong
         return (
@@ -186,10 +186,22 @@ type Props = {
 const DisplayContentContribution = ({
   content,
 }: Props): string | JSX.Element | JSX.Element[] => {
-  return parse(xssWrapper(content), options(3));
+  return (
+    <ContentStyled>{parse(xssWrapper(content), options(3))}</ContentStyled>
+  );
 };
 
 const { spacings } = theme;
+
+const ContentStyled = styled("div")`
+  li {
+    margin-bottom: ${spacings.small};
+
+    p {
+      margin: 0;
+    }
+  }
+`;
 
 const StyledAccordion = styled(Accordion)`
   *[data-accordion-component="AccordionItemButton"] {

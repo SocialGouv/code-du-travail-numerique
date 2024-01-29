@@ -22,7 +22,7 @@ export const BlockList = ({
             comp = (
               <>
                 {title && <BlockContentTitle>{title}</BlockContentTitle>}
-                <ContentList block={block} key={index}></ContentList>
+                <ContentList block={block} uniquKey={index}></ContentList>
               </>
             );
             break;

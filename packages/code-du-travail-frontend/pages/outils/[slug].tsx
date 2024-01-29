@@ -25,7 +25,6 @@ import {
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
 } from "../../src/outils";
-import EventTracker from "../../src/lib/tracking/EventTracker";
 
 const toolsBySlug = {
   "convention-collective": AgreementSearch,
@@ -87,7 +86,6 @@ function Outils({
           )}
         </Container>
       </div>
-      <EventTracker />
     </Layout>
   );
 }

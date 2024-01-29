@@ -51,7 +51,6 @@ export const getSearchBySourceSlugBody = ({
       "type",
       "content", // pour les contributions génériques et conventionnelles
       "ccSupported", // pour les contributions génériques et conventionnelles
-      "ccSupportedNoContent", // pour les contributions génériques et conventionnelles
       "messageBlockGenericNoCDT", // pour les contributions génériques et conventionnelles
       "ccnSlug", // pour une contribution conventionnelle
       "ccnShortTitle", // pour une contribution conventionnelle

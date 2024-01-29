@@ -34,8 +34,9 @@ const StyledLink = styled.a`
   display: inline-flex;
   align-items: flex-start;
   text-decoration: none;
+  cursor: pointer;
 `;
-const StyledChildren = styled.p`
+const StyledChildren = styled.span`
   flex: 0 1 auto;
   width: auto;
   margin: 0;

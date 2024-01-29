@@ -33,11 +33,11 @@ const AgreementSelectionStep = ({
     <>
       <SectionTitle>Convention collective</SectionTitle>
       <Paragraph variant="primary">
-        {(enterprise.conventions.length ?? 0) > 1
-          ? `${enterprise.conventions.length} conventions collectives trouvées pour `
-          : `${
-              enterprise.conventions.length ?? 0
-            } convention collective trouvée pour `}
+        {enterprise.conventions.length === 0
+          ? `Aucune convention collective n'a été déclarée pour l'entreprise `
+          : enterprise.conventions.length === 1
+          ? `1 convention collective trouvée pour `
+          : `${enterprise.conventions.length} conventions collectives trouvées pour `}
         <strong>
           « {enterprise.simpleLabel}
           {enterprise.address &&

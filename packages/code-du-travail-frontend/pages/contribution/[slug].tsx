@@ -13,10 +13,6 @@ import {
 } from "@socialgouv/cdtn-utils";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
-import ContributionGenericPoc from "../../src/contributions/ContributionGenericPoc";
-import ContributionCCPoc from "../../src/contributions/ContributionCCPoc";
-import { showNewContribPage } from "../../src/contributions/utils";
-import EventTracker from "../../src/lib/tracking/EventTracker";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
 
@@ -42,16 +38,14 @@ type OldProps = {
 type Props = NewProps | OldProps;
 
 const buildTitleAndDescription = (
-  breadcrumbs,
-  conventionAnswer,
-  title,
-  description
+  breadcrumbs: Breadcrumb[],
+  conventionName: string | undefined,
+  title: string,
+  description: string
 ) => {
-  if (breadcrumbs && breadcrumbs.length > 0 && conventionAnswer) {
+  if (breadcrumbs && breadcrumbs.length > 0 && conventionName) {
     const titleWithThemeAndCC =
-      breadcrumbs[breadcrumbs.length - 1].label +
-      " - " +
-      conventionAnswer.shortName;
+      breadcrumbs[breadcrumbs.length - 1].label + " - " + conventionName;
     return {
       description: title + " " + description,
       title: titleWithThemeAndCC,
@@ -62,7 +56,6 @@ const buildTitleAndDescription = (
     title,
   };
 };
-const SLUG_FOR_POC_GENERIC = ["les-conges-pour-evenements-familiaux"];
 
 function PageContribution(props: Props): React.ReactElement {
   let metas: any = {};
@@ -70,9 +63,16 @@ function PageContribution(props: Props): React.ReactElement {
   if (!props.isNewContribution) {
     metas = buildTitleAndDescription(
       props.breadcrumbs,
-      props.answers.conventionAnswer,
+      props.answers.conventionAnswer?.shortName,
       props.title,
       props.description
+    );
+  } else {
+    metas = buildTitleAndDescription(
+      props.contribution.breadcrumbs,
+      props.contribution.ccnShortTitle,
+      props.contribution.title,
+      props.contribution.description
     );
   }
 
@@ -80,10 +80,7 @@ function PageContribution(props: Props): React.ReactElement {
     <Layout>
       {props.isNewContribution ? (
         <>
-          <Metas
-            title={props.contribution.title}
-            description={props.contribution.description}
-          />
+          <Metas title={metas.title} description={metas.description} />
           <Answer
             title={props.contribution.title}
             breadcrumbs={props.contribution.breadcrumbs}
@@ -111,32 +108,13 @@ function PageContribution(props: Props): React.ReactElement {
             relatedItems={props.relatedItems}
             breadcrumbs={props.breadcrumbs}
           >
-            {SLUG_FOR_POC_GENERIC.indexOf(props.slug) >= 0 ? (
-              <ContributionGenericPoc
-                answers={props.answers}
-                slug={props.slug}
-                content={(props.content && props.content._source) || {}}
-              />
-            ) : (
-              <>
-                {showNewContribPage(props.slug) ? (
-                  <ContributionCCPoc
-                    answers={props.answers}
-                    slug={props.slug}
-                    content={(props.content && props.content._source) || {}}
-                  />
-                ) : (
-                  <Contribution
-                    answers={props.answers}
-                    content={(props.content && props.content._source) || {}}
-                  />
-                )}
-              </>
-            )}
+            <Contribution
+              answers={props.answers}
+              content={(props.content && props.content._source) || {}}
+            />
           </Answer>
         </>
       )}
-      <EventTracker />
     </Layout>
   );
 }
