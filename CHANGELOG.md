@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.120.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.120.0...v4.120.1) (2024-01-29)
+
+### Bug Fixes
+
+- **contribution:** balise HTML non parsée dans un li ([#5577](https://github.com/SocialGouv/code-du-travail-numerique/issues/5577)) ([f07e8fc](https://github.com/SocialGouv/code-du-travail-numerique/commit/f07e8fc46d3220ebcc2ceb33732193925a6b94f3))
+- **contribution:** mise à jour des metas sur les nouvelles contributions ([#5599](https://github.com/SocialGouv/code-du-travail-numerique/issues/5599)) ([a22a1a5](https://github.com/SocialGouv/code-du-travail-numerique/commit/a22a1a5fe86cfe0a4294b8f0fc10ac2e16805a5a))
+- **sea:** suppression des trackers pour la campagne SEA ([#5598](https://github.com/SocialGouv/code-du-travail-numerique/issues/5598)) ([c5deb7a](https://github.com/SocialGouv/code-du-travail-numerique/commit/c5deb7a21643f889a25542f00ce7ef61076b9b84))
+
 # [4.120.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.119.1...v4.120.0) (2024-01-25)
 
 ### Bug Fixes
