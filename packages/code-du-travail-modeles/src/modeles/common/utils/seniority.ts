@@ -132,12 +132,7 @@ const absenceInYear = (absence: Absence, year: YearDetail): boolean => {
   if (!absence.startedAt) return false;
   if (!absence.durationInMonth) return false;
   const absenceStartAt = parse(absence.startedAt, "dd/MM/yyyy", new Date());
-  const integer = Math.floor(absence.durationInMonth);
-  const decimal = absence.durationInMonth - Math.floor(absence.durationInMonth);
-  let absenceEndAt = add(absenceStartAt, {
-    days: decimal,
-  });
-  absenceEndAt = addMonths(absenceEndAt, integer);
+  const absenceEndAt = addMonths(absenceStartAt, absence.durationInMonth);
   return areIntervalsOverlapping(
     {
       end: absenceEndAt,
@@ -151,12 +146,7 @@ const absenceDurationRatio = (absence: Absence, year: YearDetail): number => {
   if (!absence.startedAt) return 0;
   if (!absence.durationInMonth) return 0;
   const absenceStartAt = parse(absence.startedAt, "dd/MM/yyyy", new Date());
-  const integer = Math.floor(absence.durationInMonth);
-  const decimal = absence.durationInMonth - Math.floor(absence.durationInMonth);
-  let absenceEndAt = add(absenceStartAt, {
-    days: decimal,
-  });
-  absenceEndAt = addMonths(absenceEndAt, integer);
+  const absenceEndAt = addMonths(absenceStartAt, absence.durationInMonth);
   if (absenceStartAt >= year.begin && absenceEndAt <= year.end) {
     return absence.durationInMonth * absence.motif.value;
   }
