@@ -171,11 +171,7 @@ const getOverlappingMonthsInterval = (r1: Interval, r2: Interval) => {
     const end = min([r1.end, r2.end]);
     const diffInMonths = differenceInCalendarMonths(end, start);
     const startDateWithDifferenceInMonths = addMonths(start, diffInMonths);
-    const endWithOneDay = addDays(end, 1);
-    const diffInDays = differenceInDays(
-      endWithOneDay,
-      startDateWithDifferenceInMonths
-    );
-    return diffInMonths + diffInDays / 30;
+    const diffInDays = differenceInDays(end, startDateWithDifferenceInMonths);
+    return diffInMonths + diffInDays / DAYS_IN_MONTH;
   } else return 0;
 };
