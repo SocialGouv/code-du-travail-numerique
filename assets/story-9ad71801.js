@@ -1,0 +1,2 @@
+import{j as s}from"./styled-components.browser.esm-beddb3d4.js";import{F as i}from"./index-5c1ed3ed.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";const r={component:i,title:"Components/FlatList"},t=()=>s.jsx(s.Fragment,{children:s.jsxs(i,{children:[s.jsx("li",{children:"This is the most"}),s.jsx("li",{children:"minimalist"}),s.jsx("li",{children:"list"}),s.jsx("li",{children:"you’ll ever get"})]})});t.__docgenInfo={description:"",methods:[],displayName:"base"};export{t as base,r as default};
+//# sourceMappingURL=story-9ad71801.js.map
