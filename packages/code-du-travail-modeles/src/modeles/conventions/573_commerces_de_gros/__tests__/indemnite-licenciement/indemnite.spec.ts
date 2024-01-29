@@ -116,57 +116,102 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
   });
 
   describe("Cadres", () => {
-    test.each`
-      age   | category            | auMoins15AnsCadre     | seniorityRight | seniority | salary  | expectedCompensation
-      ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${0.99}        | ${0.99}   | ${3200} | ${0}
-      ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${0.99}        | ${1}      | ${3200} | ${0}
-      ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${1}      | ${3200} | ${640}
-      ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${4}      | ${3200} | ${2560}
-      ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${5}      | ${3200} | ${3200}
-      ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${6}      | ${3200} | ${5760}
-      ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${10}     | ${3200} | ${9920}
-      ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${23}     | ${3200} | ${27840}
-      ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${1}           | ${23}     | ${3200} | ${27840}
-      ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${6}      | ${3200} | ${5760}
-      ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${10}     | ${3200} | ${9920}
-      ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${23}     | ${3200} | ${32016}
-      ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${1}           | ${23}     | ${3200} | ${27840}
-      ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${6}      | ${3200} | ${5760}
-      ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${10}     | ${3200} | ${9920}
-      ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${23}     | ${3200} | ${33408}
-      ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${1}           | ${23}     | ${3200} | ${27840}
-    `(
-      "ancienneté: $seniority an, salaire de référence: $salary, age $age, type de licenciement $typeLicenciement, catégorie $category => $expectedCompensation €",
-      ({
-        seniority,
-        seniorityRight,
-        salary,
-        expectedCompensation,
-        category,
-        auMoins15AnsCadre,
-        age,
-      }) => {
-        const { result, missingArgs } = engine.setSituation(
-          {
-            "contrat salarié . convention collective": "'IDCC0573'",
-            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age":
-              age,
-            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans question": `'${auMoins15AnsCadre}'`,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-              seniorityRight,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
-          },
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        );
+    describe("moins de 50 ans", () => {
+      test.each`
+        age   | category            | auMoins15AnsCadre     | seniorityRight | seniority | salary  | expectedCompensation
+        ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${0.99}        | ${0.99}   | ${3200} | ${0}
+        ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${0.99}        | ${1}      | ${3200} | ${0}
+        ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${1}      | ${3200} | ${640}
+        ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${4}      | ${3200} | ${2560}
+        ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${5}      | ${3200} | ${3200}
+        ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${6}      | ${3200} | ${5760}
+        ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${10}     | ${3200} | ${9920}
+        ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${23}     | ${3200} | ${27840}
+        ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${1}           | ${23}     | ${3200} | ${27840}
+        ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${1}           | ${40}     | ${3200} | ${38400}
+      `(
+        "ancienneté: $seniority an, salaire de référence: $salary, age $age, type de licenciement $typeLicenciement, catégorie $category => $expectedCompensation €",
+        ({
+          seniority,
+          seniorityRight,
+          salary,
+          expectedCompensation,
+          category,
+          auMoins15AnsCadre,
+          age,
+        }) => {
+          const { result, missingArgs } = engine.setSituation(
+            {
+              "contrat salarié . convention collective": "'IDCC0573'",
+              "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
+              "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age":
+                age,
+              "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans question": `'${auMoins15AnsCadre}'`,
+              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+                seniority,
+              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+                seniorityRight,
+              "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+                salary,
+            },
+            "contrat salarié . indemnité de licenciement . résultat conventionnel"
+          );
 
-        expect(result.value).toEqual(expectedCompensation);
-        expect(missingArgs).toEqual([]);
-        expect(result.unit?.numerators).toEqual(["€"]);
-      }
-    );
+          expect(result.value).toEqual(expectedCompensation);
+          expect(missingArgs).toEqual([]);
+          expect(result.unit?.numerators).toEqual(["€"]);
+        }
+      );
+    });
+    describe("plus de 50 ans", () => {
+      // plafond : 12*Sref + (20%x12xSref)
+      test.each`
+        age   | category            | auMoins15AnsCadre     | seniorityRight | seniority | salary  | expectedCompensation
+        ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${6}      | ${3200} | ${5760}
+        ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${10}     | ${3200} | ${9920}
+        ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${23}     | ${3200} | ${32016}
+        ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${40}     | ${3200} | ${44160}
+        ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${1}           | ${23}     | ${3200} | ${27840}
+        ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${1}           | ${40}     | ${3200} | ${38400}
+        ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${6}      | ${3200} | ${5760}
+        ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${10}     | ${3200} | ${9920}
+        ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${23}     | ${3200} | ${33408}
+        ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}           | ${40}     | ${3200} | ${46080}
+        ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${1}           | ${23}     | ${3200} | ${27840}
+        ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${1}           | ${40}     | ${3200} | ${38400}
+      `(
+        "ancienneté: $seniority an, salaire de référence: $salary, age $age, type de licenciement $typeLicenciement, catégorie $category => $expectedCompensation €",
+        ({
+          seniority,
+          seniorityRight,
+          salary,
+          expectedCompensation,
+          category,
+          auMoins15AnsCadre,
+          age,
+        }) => {
+          const { result, missingArgs } = engine.setSituation(
+            {
+              "contrat salarié . convention collective": "'IDCC0573'",
+              "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
+              "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age":
+                age,
+              "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans question": `'${auMoins15AnsCadre}'`,
+              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+                seniority,
+              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+                seniorityRight,
+              "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+                salary,
+            },
+            "contrat salarié . indemnité de licenciement . résultat conventionnel"
+          );
+
+          expect(result.value).toEqual(expectedCompensation);
+          expect(missingArgs).toEqual([]);
+          expect(result.unit?.numerators).toEqual(["€"]);
+        }
+      );
+    });
   });
 });

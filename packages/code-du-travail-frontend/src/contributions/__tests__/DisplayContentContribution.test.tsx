@@ -14,18 +14,22 @@ describe("DisplayContentContribution", () => {
 
       expect(baseElement.firstChild).toMatchInlineSnapshot(`
         <div>
-          <h2
-            class="sc-kAyceB dvmaTz"
-            data-testid="heading"
+          <div
+            class="sc-ERObt zXiiV"
           >
-            Mon titre
-          </h2>
-          <h3
-            class="sc-kAyceB dvmaTz"
-            data-testid="heading"
-          >
-            Mon sous titre
-          </h3>
+            <h2
+              class="sc-kAyceB dvmaTz"
+              data-testid="heading"
+            >
+              Mon titre
+            </h2>
+            <h3
+              class="sc-kAyceB dvmaTz"
+              data-testid="heading"
+            >
+              Mon sous titre
+            </h3>
+          </div>
         </div>
       `);
     });
@@ -39,18 +43,22 @@ describe("DisplayContentContribution", () => {
 
       expect(baseElement.firstChild).toMatchInlineSnapshot(`
         <div>
-          <h4
-            class="sc-kAyceB dvmaTz"
-            data-testid="heading"
+          <div
+            class="sc-ERObt zXiiV"
           >
-            Mon title
-          </h4>
-          <h5
-            class="sc-kAyceB dvmaTz"
-            data-testid="heading"
-          >
-            Mon title
-          </h5>
+            <h4
+              class="sc-kAyceB dvmaTz"
+              data-testid="heading"
+            >
+              Mon title
+            </h4>
+            <h5
+              class="sc-kAyceB dvmaTz"
+              data-testid="heading"
+            >
+              Mon title
+            </h5>
+          </div>
         </div>
       `);
     });
@@ -278,59 +286,63 @@ describe("DisplayContentContribution", () => {
 
       expect(asFragment().firstChild).toMatchInlineSnapshot(`
         <div
-          class="sc-gFAWRd jDjoBq"
+          class="sc-ERObt zXiiV"
         >
           <div
-            class="sc-gmPhUn kUNTdL"
+            class="sc-gFAWRd jDjoBq"
           >
-            <table
-              class="sc-iMWBiJ Rlfrk"
+            <div
+              class="sc-gmPhUn kUNTdL"
             >
-              <thead>
-                <tr>
-                  <th
-                    colspan="1"
-                    rowspan="1"
-                  />
-                  <th
-                    colspan="1"
-                    rowspan="1"
-                  >
-                    <p>
-                      Titre 1
-                    </p>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td
-                    colspan="1"
-                    rowspan="1"
-                  >
-                    <p>
-                      Pour les 
-                      <strong>
-                        cadres
-                      </strong>
-                      , la prolongation ...
-                    </p>
-                  </td>
-                  <td
-                    colspan="1"
-                    rowspan="1"
-                  >
-                    <ul>
-                      <li>
-                        <p>
-                          L’employeur et le salarié donnent par écrit ou par mail.
-                        </p>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              <table
+                class="sc-iMWBiJ Rlfrk"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      colspan="1"
+                      rowspan="1"
+                    />
+                    <th
+                      colspan="1"
+                      rowspan="1"
+                    >
+                      <p>
+                        Titre 1
+                      </p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      colspan="1"
+                      rowspan="1"
+                    >
+                      <p>
+                        Pour les 
+                        <strong>
+                          cadres
+                        </strong>
+                        , la prolongation ...
+                      </p>
+                    </td>
+                    <td
+                      colspan="1"
+                      rowspan="1"
+                    >
+                      <ul>
+                        <li>
+                          <p>
+                            L’employeur et le salarié donnent par écrit ou par mail.
+                          </p>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       `);
@@ -358,40 +370,81 @@ describe("DisplayContentContribution", () => {
       );
 
       expect(asFragment().firstChild).toMatchInlineSnapshot(`
-        <table>
-          <tbody>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p>
-                  Pour les 
-                  <strong>
-                    cadres
-                  </strong>
-                  , la prolongation ...
-                </p>
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <ul>
-                  <li
-                    class="sc-dNsVcS dZKEVC"
-                  >
-                    <p>
-                      L’employeur et le salarié donnent par écrit ou par mail.
-                    </p>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div
+          class="sc-ERObt zXiiV"
+        >
+          <table>
+            <tbody>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  <p>
+                    Pour les 
+                    <strong>
+                      cadres
+                    </strong>
+                    , la prolongation ...
+                  </p>
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  <ul>
+                    <li>
+                      <p>
+                        L’employeur et le salarié donnent par écrit ou par mail.
+                      </p>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       `);
     });
+
+    it(`should keep whitespace in specific tag`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`<p>Ceci est un<strong> </strong>texte généré<strong> </strong>par <em>tiptap </em>avec des<em> </em>résidus<em> </em>de balise</p>`}
+        ></DisplayContentContribution>
+      );
+
+      expect(asFragment().firstChild).toMatchInlineSnapshot(`
+        <div
+          class="sc-ERObt zXiiV"
+        >
+          <p>
+            Ceci est un
+            <strong>
+               
+            </strong>
+            texte généré
+            <strong>
+               
+            </strong>
+            par 
+            <em>
+              tiptap 
+            </em>
+            avec des
+            <em>
+               
+            </em>
+            résidus
+            <em>
+               
+            </em>
+            de balise
+          </p>
+        </div>
+      `);
+    });
+
     it(`should render correctly a table with multiple head lines`, () => {
       const { baseElement } = render(
         <DisplayContentContribution
@@ -453,22 +506,12 @@ describe("DisplayContentContribution", () => {
     );
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <p>
-        hello
-      </p>
-    `);
-  });
-  it(`should remove empty p tag`, () => {
-    const { asFragment } = render(
-      <DisplayContentContribution
-        content={`<div>hello<p></p></div>`}
-        titleLevel={3}
-      ></DisplayContentContribution>
-    );
-
-    expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <div>
-        hello
+      <div
+        class="sc-ERObt zXiiV"
+      >
+        <p>
+          hello
+        </p>
       </div>
     `);
   });
@@ -481,29 +524,33 @@ describe("DisplayContentContribution", () => {
     );
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <p>
-        Ceci est un
-        <strong>
-           
-        </strong>
-        texte généré
-        <strong>
-           
-        </strong>
-        par 
-        <em>
-          tiptap 
-        </em>
-        avec des
-        <em>
-           
-        </em>
-        résidus
-        <em>
-           
-        </em>
-        de balise
-      </p>
+      <div
+        class="sc-ERObt zXiiV"
+      >
+        <p>
+          Ceci est un
+          <strong>
+             
+          </strong>
+          texte généré
+          <strong>
+             
+          </strong>
+          par 
+          <em>
+            tiptap 
+          </em>
+          avec des
+          <em>
+             
+          </em>
+          résidus
+          <em>
+             
+          </em>
+          de balise
+        </p>
+      </div>
     `);
   });
   it(`should not remove space between strong and em tag in p tag`, () => {
@@ -515,15 +562,41 @@ describe("DisplayContentContribution", () => {
     );
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <p>
-        <strong>
-          À noter :
-        </strong>
-         
-        <em>
-          L'échelon professionnel du salarié est habituellement mentionné 
-        </em>
-      </p>
+      <div
+        class="sc-ERObt zXiiV"
+      >
+        <p>
+          <strong>
+            À noter :
+          </strong>
+           
+          <em>
+            L'échelon professionnel du salarié est habituellement mentionné 
+          </em>
+        </p>
+      </div>
     `);
+  });
+
+  it(`should replace div with alert class to Alert component`, () => {
+    const { asFragment } = render(
+      <DisplayContentContribution
+        content={`
+        <div class="alert"><p><strong>Attention : </strong>En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.</p></div>`}
+      ></DisplayContentContribution>
+    );
+
+    expect(asFragment().firstChild).toMatchSnapshot();
+  });
+
+  it(`should replace div with alert class in li component to Alert component`, () => {
+    const { asFragment } = render(
+      <DisplayContentContribution
+        content={`
+        <div><p>Le contrat de mission (intérim) doit :</p><ul><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être<strong> écrit</strong> et <strong>rédigé</strong> en français (si conclu en France) ;</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être <strong>signé</strong>, dans un délai de <strong>2 jours</strong> suivant la mise à disposition du salarié auprès de l'entreprise ; si l’employeur transmet le CDD au salarié après le délai de 2 jours, il s'expose au paiement d'une indemnité égale à 1 mois de salaire maximum.</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être établi <strong>en plusieurs exemplaires</strong> ; c'est-à-dire autant d'exemplaires que de parties au contrat. Chaque partie au contrat aura un exemplaire.</p><p></p><div class="alert"><p><strong>Attention : </strong>En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.</p></div></li></ul></div>`}
+      ></DisplayContentContribution>
+    );
+
+    expect(asFragment().firstChild).toMatchSnapshot();
   });
 });

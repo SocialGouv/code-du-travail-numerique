@@ -13,9 +13,6 @@ import {
 } from "@socialgouv/cdtn-utils";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
-import ContributionGenericPoc from "../../src/contributions/ContributionGenericPoc";
-import ContributionCCPoc from "../../src/contributions/ContributionCCPoc";
-import { showNewContribPage } from "../../src/contributions/utils";
 import EventTracker from "../../src/lib/tracking/EventTracker";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
@@ -62,7 +59,6 @@ const buildTitleAndDescription = (
     title,
   };
 };
-const SLUG_FOR_POC_GENERIC = ["les-conges-pour-evenements-familiaux"];
 
 function PageContribution(props: Props): React.ReactElement {
   let metas: any = {};
@@ -111,28 +107,10 @@ function PageContribution(props: Props): React.ReactElement {
             relatedItems={props.relatedItems}
             breadcrumbs={props.breadcrumbs}
           >
-            {SLUG_FOR_POC_GENERIC.indexOf(props.slug) >= 0 ? (
-              <ContributionGenericPoc
-                answers={props.answers}
-                slug={props.slug}
-                content={(props.content && props.content._source) || {}}
-              />
-            ) : (
-              <>
-                {showNewContribPage(props.slug) ? (
-                  <ContributionCCPoc
-                    answers={props.answers}
-                    slug={props.slug}
-                    content={(props.content && props.content._source) || {}}
-                  />
-                ) : (
-                  <Contribution
-                    answers={props.answers}
-                    content={(props.content && props.content._source) || {}}
-                  />
-                )}
-              </>
-            )}
+            <Contribution
+              answers={props.answers}
+              content={(props.content && props.content._source) || {}}
+            />
           </Answer>
         </>
       )}

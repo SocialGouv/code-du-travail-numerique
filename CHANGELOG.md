@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.120.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.119.1...v4.120.0) (2024-01-25)
+
+### Bug Fixes
+
+- **html:** ajout d'un test pour vérifier la validité du html de certaines pages + fix des erreurs détéctées ([#5568](https://github.com/SocialGouv/code-du-travail-numerique/issues/5568)) ([54b6cac](https://github.com/SocialGouv/code-du-travail-numerique/commit/54b6cac950a224b437ad298751a40962f965d968))
+- **indemnite-licenciement:** mise en place d'un plafond sur la CC 573 ([#5579](https://github.com/SocialGouv/code-du-travail-numerique/issues/5579)) ([b961f10](https://github.com/SocialGouv/code-du-travail-numerique/commit/b961f10027e7e7b9254c5e988740f2dd154b8101))
+- **style des accordéon:** retrait de l'espace en haut des corps des accordéon ([#5545](https://github.com/SocialGouv/code-du-travail-numerique/issues/5545)) ([7539e12](https://github.com/SocialGouv/code-du-travail-numerique/commit/7539e1220f43b27aefa64cfd8355d03fac281389))
+
+### Features
+
+- **contribution:** Suppression du code pour les POCs ([#5581](https://github.com/SocialGouv/code-du-travail-numerique/issues/5581)) ([28411e1](https://github.com/SocialGouv/code-du-travail-numerique/commit/28411e1ee8db767935fcfd97089fd3a796a6b2d3))
+- **recherche-entreprise:** afficher les entreprises qui ont complété `9999` comme numéro d'idcc ([#5564](https://github.com/SocialGouv/code-du-travail-numerique/issues/5564)) ([a092d10](https://github.com/SocialGouv/code-du-travail-numerique/commit/a092d107787cbc02ec9ad1867f3ea973bde4b247))
+- **simulateurs:** ajout une possibilité pour certaines CCs de donner un example avec le lendemain ([#5555](https://github.com/SocialGouv/code-du-travail-numerique/issues/5555)) ([c400e94](https://github.com/SocialGouv/code-du-travail-numerique/commit/c400e94ad24df06ae17accea117614d3c8aa0c74))
+- utilisation du nouveau logo du ministère ([#5588](https://github.com/SocialGouv/code-du-travail-numerique/issues/5588)) ([51006eb](https://github.com/SocialGouv/code-du-travail-numerique/commit/51006ebf76a80b0a65bded90b35b91de8d247d6b))
+
 ## [4.119.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.119.0...v4.119.1) (2024-01-11)
 
 ### Bug Fixes
