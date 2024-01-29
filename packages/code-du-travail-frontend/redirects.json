@@ -933,5 +933,10 @@
     "source": "/fiche-service-public/arret-maladie-et-conges-payes-annuels",
     "permanent": true,
     "destination": "/fiche-service-public/un-salarie-peut-il-reporter-des-jours-de-conges-payes-pour-cause-de-maladie"
+  },
+  {
+    "destination": "/convention-collective/275-transport-aerien-personnel-au-sol",
+    "source": "/convention-collective/1391-manutention-et-nettoyage-sur-les-aeroports-region-parisienne",
+    "permanent": true
   }
 ]
