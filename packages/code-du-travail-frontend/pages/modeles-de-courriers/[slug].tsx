@@ -7,7 +7,6 @@ import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import { LetterModel, LetterModelProps, getTitle } from "../../src/modeles";
 import Answer from "../../src/common/Answer";
-import EventTracker from "../../src/lib/tracking/EventTracker";
 
 const fetchCourrier = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/modeles_de_courriers/${slug}`);
@@ -48,7 +47,6 @@ function ModeleCourrier(props: LetterModelProps): JSX.Element {
         <Badge />
         <LetterModel {...props}></LetterModel>
       </Answer>
-      <EventTracker />
     </Layout>
   );
 }

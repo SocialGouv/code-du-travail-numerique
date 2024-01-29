@@ -13,7 +13,6 @@ import {
 } from "@socialgouv/cdtn-utils";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
-import EventTracker from "../../src/lib/tracking/EventTracker";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
 
@@ -114,7 +113,6 @@ function PageContribution(props: Props): React.ReactElement {
           </Answer>
         </>
       )}
-      <EventTracker />
     </Layout>
   );
 }
