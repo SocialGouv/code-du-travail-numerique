@@ -46,13 +46,13 @@ const mapItem = (titleLevel: number, domNode: Element, summary: Element) => ({
     trim: true,
   }),
 });
-const mapToAccordion = (titleLevel: number, items) => (
-  <StyledAccordion
-    titleLevel={titleLevel}
-    data-testid="contrib-accordion"
-    items={items}
-  />
-);
+const mapToAccordion = (titleLevel: number, items) => {
+  const props = titleLevel <= 6 ? { titleLevel: titleLevel } : {};
+
+  return (
+    <StyledAccordion {...props} data-testid="contrib-accordion" items={items} />
+  );
+};
 
 function getFirstElementChild(domNode: Element) {
   let child = domNode.children.shift();
@@ -128,29 +128,27 @@ function renderChildrenWithNoTrim(domNode) {
   return domToReact(domNode.children as DOMNode[]);
 }
 
+const getHeadingElement = (titleLevel: number, domNode) => {
+  return titleLevel <= 6 ? (
+    <Heading as={`h${titleLevel}`}>{renderChildrenWithNoTrim(domNode)}</Heading>
+  ) : (
+    <strong>{renderChildrenWithNoTrim(domNode)}</strong>
+  );
+};
+
 const options = (titleLevel: number): HTMLReactParserOptions => {
   let accordionTitle = titleLevel;
 
   return {
     replace(domNode) {
       if (domNode instanceof Element) {
-        if (domNode.name === "span") {
-          if (
-            domNode.attribs.class === "title" ||
-            domNode.attribs.class === "sub-title"
-          ) {
-            accordionTitle = titleLevel + 1;
-            if (domNode.attribs.class === "sub-title") {
-              titleLevel++;
-            }
-            return titleLevel <= 6 ? (
-              <Heading as={`h${titleLevel}`}>
-                {renderChildrenWithNoTrim(domNode)}
-              </Heading>
-            ) : (
-              <strong>{renderChildrenWithNoTrim(domNode)}</strong>
-            );
-          }
+        if (domNode.name === "span" && domNode.attribs.class === "title") {
+          accordionTitle = titleLevel + 1;
+          return getHeadingElement(titleLevel, domNode);
+        }
+        if (domNode.name === "span" && domNode.attribs.class === "sub-title") {
+          accordionTitle = titleLevel + 1;
+          return getHeadingElement(titleLevel + 1, domNode);
         }
         if (domNode.name === "details") {
           const items: any[] = [];

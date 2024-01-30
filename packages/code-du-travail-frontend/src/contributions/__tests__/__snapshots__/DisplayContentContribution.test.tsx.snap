@@ -927,9 +927,9 @@ exports[`DisplayContentContribution Headings should not add headings higher than
             class="sc-bXCLTC fcbJdD"
           >
             <div>
-              <p>
-                Ceci est le body
-              </p>
+              <strong>
+                Mon title
+              </strong>
             </div>
           </div>
         </div>

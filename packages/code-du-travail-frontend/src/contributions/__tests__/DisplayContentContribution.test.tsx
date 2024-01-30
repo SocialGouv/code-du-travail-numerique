@@ -94,7 +94,7 @@ describe("DisplayContentContribution", () => {
           content={`
         <details className=" details"><summary>Ceci est un titre</summary>
           <div data-type=" detailsContent">
-            <p>Ceci est le body</p>
+            <span class="sub-title">Mon title</span>
           </div>
         </details>`}
           titleLevel={6}
@@ -286,6 +286,7 @@ describe("DisplayContentContribution", () => {
               <summary>Ceci est un sous titre</summary>
               <div data-type=" detailsContent">
                 <span class="title">Ceci est un titre dans un accordion</span>
+                <span class="sub-title">Ceci est un sous-titre dans un accordion</span>
               </div>
             </details>
           </div>
@@ -300,6 +301,9 @@ describe("DisplayContentContribution", () => {
       expect(getByText("Ceci est un titre dans un accordion").tagName).toEqual(
         "H6"
       );
+      expect(
+        getByText("Ceci est un sous-titre dans un accordion").tagName
+      ).toEqual("STRONG");
     });
   });
 
