@@ -485,10 +485,8 @@ exports[`<Glossaire /> should render 1`] = `
             >
               <div>
                 <strong
-                  aria-level="2"
                   class="sc-iLsKjm bHyFYd sc-kAyceB jIzQpS"
                   data-testid="heading"
-                  role="heading"
                 >
                   Code du travail numérique
                 </strong>
@@ -543,10 +541,8 @@ exports[`<Glossaire /> should render 1`] = `
             >
               <div>
                 <strong
-                  aria-level="2"
                   class="sc-iLsKjm bHyFYd sc-kAyceB jIzQpS"
                   data-testid="heading"
-                  role="heading"
                 >
                   Outils populaires
                 </strong>
@@ -581,10 +577,8 @@ exports[`<Glossaire /> should render 1`] = `
               </div>
               <div>
                 <strong
-                  aria-level="2"
                   class="sc-iLsKjm bHyFYd sc-kAyceB jIzQpS"
                   data-testid="heading"
-                  role="heading"
                 >
                   Modèles populaires
                 </strong>
@@ -623,10 +617,8 @@ exports[`<Glossaire /> should render 1`] = `
             >
               <div>
                 <strong
-                  aria-level="2"
                   class="sc-iLsKjm bHyFYd sc-kAyceB jIzQpS"
                   data-testid="heading"
-                  role="heading"
                 >
                   Fiches pratiques populaires
                 </strong>
@@ -661,10 +653,8 @@ exports[`<Glossaire /> should render 1`] = `
               </div>
               <div>
                 <strong
-                  aria-level="2"
                   class="sc-iLsKjm bHyFYd sc-kAyceB jIzQpS"
                   data-testid="heading"
-                  role="heading"
                 >
                   Conventions collectives populaires
                 </strong>
