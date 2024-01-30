@@ -39,18 +39,22 @@ describe("Notification pour la CC 2511", () => {
   describe("Si l'utilisateur sélectionne un congé parental d'éducation à temps plein", () => {
     test.each`
       seniority | salary
+      ${0}      | ${2000}
+      ${8 / 12} | ${2000}
+      ${2}      | ${2000}
+      ${10}     | ${2000}
       ${12}     | ${2000}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category => $expectedCompensation €",
       ({ seniority, salary }) => {
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC2511'",
-          "contrat salarié . indemnité de licenciement . avec congé maladie non professionnelle":
-            "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             seniority,
+          "contrat salarié . indemnité de licenciement . avec congé maladie non professionnelle":
+            "oui",
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
         });

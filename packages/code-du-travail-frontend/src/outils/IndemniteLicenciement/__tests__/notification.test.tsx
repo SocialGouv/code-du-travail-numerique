@@ -44,8 +44,8 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
     // Etape Ancienneté
     userAction
       .setInput(ui.seniority.startDate.get(), "01/01/2000")
-      .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
-      .setInput(ui.seniority.endDate.get(), "01/03/2024")
+      .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
+      .setInput(ui.seniority.endDate.get(), "01/03/2022")
       .click(ui.seniority.hasAbsence.oui.get())
       .setInput(ui.seniority.absences.duration(0).get(), "2")
       .click(ui.next.get());
