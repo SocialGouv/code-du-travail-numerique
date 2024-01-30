@@ -326,7 +326,10 @@ const StyledList = styled(FlatList)`
   }
 `;
 
-const StyledHeading = styled.strong`
+const StyledHeading = styled.strong.attrs({
+  "aria-level": "2",
+  role: "heading",
+})`
   margin-top: ${spacings.base};
   margin-bottom: ${spacings.xsmall};
   font-size: ${fonts.sizes.default};
