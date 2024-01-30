@@ -3,7 +3,6 @@ import { differenceInMonths, isBefore, parse } from "date-fns";
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   DefaultSeniorityProps,
-  ISeniority,
   Motif,
   RequiredSeniorityResult,
   SeniorityProps,
@@ -13,15 +12,35 @@ import type {
   YearDetail,
 } from "../../common";
 import { accumulateAbsenceByYear } from "../../common";
+import { SeniorityDefault } from "../../common/seniority";
 
 export type CC0413SeniorityProps = DefaultSeniorityProps & {
   isExecutive: boolean;
   becameExecutiveAt?: string;
 };
 
-export class Seniority413
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC413>
-{
+export class Seniority413 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC413> {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): SeniorityProps<SupportedCcIndemniteLicenciement.IDCC413> {
+    const categoriePro =
+      args[
+        "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle"
+      ];
+    const becameExecutiveAt =
+      args[
+        "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps"
+      ];
+    return {
+      ...super.mapSituation(args),
+      becameExecutiveAt,
+      isExecutive:
+        categoriePro === "'Cadres'" ||
+        categoriePro ===
+          "'Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service'",
+    };
+  }
+
   computeSeniority({
     dateEntree,
     dateSortie,

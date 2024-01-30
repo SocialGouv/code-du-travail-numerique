@@ -34,7 +34,7 @@ export class Seniority2511 extends SeniorityDefault<SupportedCcIndemniteLicencie
       )
     ) {
       return {
-        "contrat salarié . convention collective . sport . congé maladie non professionnelle":
+        "contrat salarié . indemnité de licenciement . avec congé maladie non professionnelle":
           "oui",
       };
     }

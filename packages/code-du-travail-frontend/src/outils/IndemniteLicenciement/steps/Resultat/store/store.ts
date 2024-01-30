@@ -11,6 +11,7 @@ import {
 } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../../types";
 import {
+  mapToPublicodesSituationForCalculation,
   mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues,
   mapToPublicodesSituationForIndemniteLicenciementLegal,
 } from "../../../../publicodes";
@@ -53,7 +54,6 @@ import * as Sentry from "@sentry/nextjs";
 const initialState: ResultStoreData = {
   input: {
     legalFormula: { formula: "", explanations: [] },
-    legalSeniority: 0,
     legalReferences: [],
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
@@ -163,6 +163,7 @@ const createResultStore: StoreSlice<
       const longTermDisability =
         get().contratTravailData.input.arretTravail === "oui";
       const publicodes = get().agreementData.publicodes;
+      const dateEntree = get().ancienneteData.input.dateEntree!;
       const dateNotification = get().ancienneteData.input.dateNotification!;
       const dateSortie = get().ancienneteData.input.dateSortie!;
       const isAgreementSupported =
@@ -172,36 +173,27 @@ const createResultStore: StoreSlice<
         throw new Error("Publicodes is not defined");
       }
 
-      const factory = new SeniorityFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
-      const legalSeniority = factory.computeSeniority({
-        dateEntree: get().ancienneteData.input.dateEntree!,
-        dateSortie,
-        absencePeriods: get().ancienneteData.input.absencePeriods,
-      });
-
-      const legalRequiredSeniority = factory.computeRequiredSeniority({
-        dateEntree: get().ancienneteData.input.dateEntree!,
-        dateNotification,
-        dateSortie: get().ancienneteData.input.dateSortie!,
-        absencePeriods: get().ancienneteData.input.absencePeriods,
-      });
       let publicodesSituationLegal: PublicodesIndemniteLicenciementResult = {
         value: null,
       };
       let errorPublicodes = false;
+      const absencePeriods = get().ancienneteData.input.absencePeriods;
 
       try {
-        publicodesSituationLegal = publicodes.setSituation(
-          mapToPublicodesSituationForIndemniteLicenciementLegal(
-            legalSeniority.value,
-            legalRequiredSeniority.value,
+        publicodesSituationLegal = publicodes.calculate({
+          ...mapToPublicodesSituationForCalculation(
+            dateEntree,
+            dateNotification,
+            dateSortie,
             refSalary,
             isLicenciementInaptitude,
             longTermDisability
-          )
-        ).result;
+          ),
+          absencePeriods:
+            absencePeriods && absencePeriods.length
+              ? JSON.stringify(absencePeriods)
+              : undefined,
+        }).result;
       } catch (e) {
         errorPublicodes = true;
         Sentry.captureException(e);
@@ -266,24 +258,25 @@ const createResultStore: StoreSlice<
           get as StoreApi<MainStore>["getState"]
         );
 
-        const agreementRequiredSeniority = getAgreementRequiredSeniority(
-          getSupportedAgreement(agreement.num),
-          get as StoreApi<MainStore>["getState"]
-        );
-
         try {
-          publicodesSituationConventionnel = publicodes.setSituation(
-            mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
+          const situation = {
+            ...mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
               agreement.num,
-              agreementSeniority,
               agreementRefSalary,
-              agreementRequiredSeniority.value,
               get().ancienneteData.input.dateNotification!,
               get().ancienneteData.input.dateEntree!,
+              get().ancienneteData.input.dateSortie!,
               isLicenciementInaptitude,
               longTermDisability,
               { ...infos, ...agreementSalaryExtraInfo }
             ),
+            absencePeriods:
+              absencePeriods && absencePeriods.length
+                ? JSON.stringify(absencePeriods)
+                : undefined,
+          };
+          publicodesSituationConventionnel = publicodes.calculate(
+            situation,
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           ).result;
         } catch (e) {
@@ -356,7 +349,6 @@ const createResultStore: StoreSlice<
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.error.errorPublicodes = errorPublicodes;
-          state.resultData.input.legalSeniority = legalSeniority.value;
           state.resultData.input.legalFormula = legalFormula;
           state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult =

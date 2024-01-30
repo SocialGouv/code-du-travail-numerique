@@ -33,6 +33,10 @@ export type Motif = {
 };
 
 export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
+  mapSituation: (args: Record<string, string | undefined>) => SeniorityProps<T>;
+  mapRequiredSituation: (
+    args: Record<string, string | undefined>
+  ) => SeniorityRequiredProps<T>;
   computeSeniority: (args: SeniorityProps<T>) => SeniorityResult;
   computeRequiredSeniority: (
     args: SeniorityRequiredProps<T>

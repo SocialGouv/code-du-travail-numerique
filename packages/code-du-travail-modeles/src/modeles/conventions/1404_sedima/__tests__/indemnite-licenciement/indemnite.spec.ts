@@ -121,8 +121,6 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
 
-          console.log(result);
-
           expect(missingArgs).toEqual([]);
           expect(result.value).toEqual(expectedCompensation);
           expect(result.unit?.numerators).toEqual(["€"]);

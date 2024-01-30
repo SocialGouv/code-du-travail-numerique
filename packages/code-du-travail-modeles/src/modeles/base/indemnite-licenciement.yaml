@@ -1,7 +1,7 @@
 contrat salarié . indemnité de licenciement:
   valeur: oui
 
-contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle:
+contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle: non
 
 contrat salarié . indemnité de licenciement . arrêt de travail: non
 
@@ -10,6 +10,18 @@ contrat salarié . indemnité de licenciement . salaire de référence:
 
 contrat salarié . indemnité de licenciement . salaire de référence conventionnel:
   unité: €
+
+contrat salarié . indemnité de licenciement . date d'entrée:
+  valeur: non
+
+contrat salarié . indemnité de licenciement . date de notification:
+  valeur: non
+
+contrat salarié . indemnité de licenciement . date de sortie:
+  valeur: non
+
+contrat salarié . indemnité de licenciement . avec congé maladie non professionnelle:
+  valeur: non
 
 contrat salarié . indemnité de licenciement . ancienneté en année:
   titre: Ancienneté calculée pour le calcul de l'indemnité de licenciement
@@ -189,9 +201,3 @@ contrat salarié . indemnité de licenciement . résultat conventionnel identiqu
 contrat salarié . indemnité de licenciement . résultat conventionnel:
   valeur: 0
   unité: €
-
-contrat salarié . indemnité de licenciement . date de notification:
-  valeur: non
-
-contrat salarié . indemnité de licenciement . date d'entrée:
-  valeur: non

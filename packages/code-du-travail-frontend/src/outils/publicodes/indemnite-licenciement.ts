@@ -1,6 +1,28 @@
 import { formatNumberAsString } from "./common";
 import { formatIdcc, SeniorityResult } from "@socialgouv/modeles-social";
 
+export const mapToPublicodesSituationForCalculation = (
+  startDate: string,
+  notificationDate: string,
+  endDate: string,
+  salaireRef: number,
+  inaptitude: boolean,
+  longTermDisability: boolean
+): Record<string, string> => {
+  return {
+    "contrat salarié . indemnité de licenciement . salaire de référence":
+      formatNumberAsString(salaireRef),
+    "contrat salarié . indemnité de licenciement . date d'entrée": startDate,
+    "contrat salarié . indemnité de licenciement . date de notification":
+      notificationDate,
+    "contrat salarié . indemnité de licenciement . date de sortie": endDate,
+    "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+      inaptitude ? "oui" : "non",
+    "contrat salarié . indemnité de licenciement . arrêt de travail":
+      longTermDisability ? "oui" : "non",
+  };
+};
+
 export const mapToPublicodesSituationForIndemniteLicenciementLegal = (
   seniority: number,
   requiredSeniority: number,
@@ -43,11 +65,10 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
 export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues =
   (
     ccn: number,
-    agreementSeniority: SeniorityResult,
     agreementSalaireRef: number,
-    requiredSeniority: number,
     notificationDate: string,
     entryDate: string,
+    endDate: string,
     inaptitude: boolean,
     longTermDisability: boolean,
     agreementParameters?: Record<string, any>
@@ -58,18 +79,15 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
       longTermDisability,
       {
         ...agreementParameters,
-        ...(agreementSeniority?.extraInfos ?? {}),
         ...{
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            formatNumberAsString(agreementSeniority.value),
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             formatNumberAsString(agreementSalaireRef),
           "contrat salarié . indemnité de licenciement . date de notification":
             notificationDate,
           "contrat salarié . indemnité de licenciement . date d'entrée":
             entryDate,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-            requiredSeniority,
+          "contrat salarié . indemnité de licenciement . date de sortie":
+            endDate,
         },
       }
     );

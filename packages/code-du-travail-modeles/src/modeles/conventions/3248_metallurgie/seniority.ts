@@ -31,6 +31,74 @@ export type CC3248SeniorityRequiredProps = DefaultSeniorityRequiredProps & {
 };
 
 export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC3248> {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): SeniorityProps<SupportedCcIndemniteLicenciement.IDCC3248> {
+    const categoriePro = args[
+      "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle"
+    ] as "'A, B, C, D ou E'" | "'F, G, H ou I'";
+    const hasBeenExecutive =
+      args[
+        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - avant cadre"
+      ];
+    const hasBeenDayContract =
+      args[
+        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - forfait jour"
+      ];
+    const hasAllwaysBeenDayContract =
+      args[
+        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - toujours au forfait jour"
+      ];
+
+    const dateBeginDayContract =
+      hasAllwaysBeenDayContract === "'Non'"
+        ? args[
+            "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - forfait jour - date"
+          ]
+        : undefined;
+    return {
+      ...super.mapSituation(args),
+      categoriePro,
+      dateBecomeDayContract: dateBeginDayContract,
+      hasBeenDayContract: hasBeenDayContract === "'Oui'",
+      hasBeenExecutive: hasBeenExecutive === "'Oui'",
+    } as SeniorityProps<SupportedCcIndemniteLicenciement.IDCC3248>;
+  }
+
+  mapRequiredSituation(
+    args: Record<string, string | undefined>
+  ): SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC3248> {
+    const categoriePro = args[
+      "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle"
+    ] as "'A, B, C, D ou E'" | "'F, G, H ou I'";
+    const hasBeenExecutive =
+      args[
+        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - avant cadre"
+      ];
+    const hasBeenDayContract =
+      args[
+        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - forfait jour"
+      ];
+    const hasAllwaysBeenDayContract =
+      args[
+        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - toujours au forfait jour"
+      ];
+
+    const dateBeginDayContract =
+      hasAllwaysBeenDayContract === "'Non'"
+        ? args[
+            "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - forfait jour - date"
+          ]
+        : undefined;
+    return {
+      ...super.mapRequiredSituation(args),
+      categoriePro,
+      dateBecomeDayContract: dateBeginDayContract,
+      hasBeenDayContract: hasBeenDayContract === "'Oui'",
+      hasBeenExecutive: hasBeenExecutive === "'Oui'",
+    } as SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC3248>;
+  }
+
   getMotifs(): Motif[] {
     return MOTIFS_3248;
   }

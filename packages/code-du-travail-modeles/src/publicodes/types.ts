@@ -128,6 +128,7 @@ export type PublicodesContextType = {
   result: PublicodesIndemniteLicenciementResult;
   missingArgs: MissingArgs[];
   situation: SituationElement[];
+  calculate: (values: Record<string, string>) => void;
   setSituation: (values: Record<string, string>) => void;
 };
 
