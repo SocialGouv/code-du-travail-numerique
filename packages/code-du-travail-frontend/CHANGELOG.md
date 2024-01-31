@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.121.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.121.0...v4.121.1) (2024-01-30)
+
+### Bug Fixes
+
+- **redirections:** cc 1391 fusionnée dans la 275 ([ad96f56](https://github.com/SocialGouv/code-du-travail-numerique/commit/ad96f5648d0b67f26af476119dda5ecc99448d7c))
+
+# [4.121.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.120.1...v4.121.0) (2024-01-30)
+
+### Features
+
+- **ccs:** fusion de la cc 1391 dans la 275 ([#5557](https://github.com/SocialGouv/code-du-travail-numerique/issues/5557)) ([6de51cc](https://github.com/SocialGouv/code-du-travail-numerique/commit/6de51cc817cb2b766a3fe711c7b72ae222d0cdad))
+
+## [4.120.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.120.0...v4.120.1) (2024-01-29)
+
+### Bug Fixes
+
+- **contribution:** balise HTML non parsée dans un li ([#5577](https://github.com/SocialGouv/code-du-travail-numerique/issues/5577)) ([f07e8fc](https://github.com/SocialGouv/code-du-travail-numerique/commit/f07e8fc46d3220ebcc2ceb33732193925a6b94f3))
+- **contribution:** mise à jour des metas sur les nouvelles contributions ([#5599](https://github.com/SocialGouv/code-du-travail-numerique/issues/5599)) ([a22a1a5](https://github.com/SocialGouv/code-du-travail-numerique/commit/a22a1a5fe86cfe0a4294b8f0fc10ac2e16805a5a))
+- **sea:** suppression des trackers pour la campagne SEA ([#5598](https://github.com/SocialGouv/code-du-travail-numerique/issues/5598)) ([c5deb7a](https://github.com/SocialGouv/code-du-travail-numerique/commit/c5deb7a21643f889a25542f00ce7ef61076b9b84))
+
+# [4.120.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.119.1...v4.120.0) (2024-01-25)
+
+### Bug Fixes
+
+- **html:** ajout d'un test pour vérifier la validité du html de certaines pages + fix des erreurs détéctées ([#5568](https://github.com/SocialGouv/code-du-travail-numerique/issues/5568)) ([54b6cac](https://github.com/SocialGouv/code-du-travail-numerique/commit/54b6cac950a224b437ad298751a40962f965d968))
+- **style des accordéon:** retrait de l'espace en haut des corps des accordéon ([#5545](https://github.com/SocialGouv/code-du-travail-numerique/issues/5545)) ([7539e12](https://github.com/SocialGouv/code-du-travail-numerique/commit/7539e1220f43b27aefa64cfd8355d03fac281389))
+
+### Features
+
+- **contribution:** Suppression du code pour les POCs ([#5581](https://github.com/SocialGouv/code-du-travail-numerique/issues/5581)) ([28411e1](https://github.com/SocialGouv/code-du-travail-numerique/commit/28411e1ee8db767935fcfd97089fd3a796a6b2d3))
+- **recherche-entreprise:** afficher les entreprises qui ont complété `9999` comme numéro d'idcc ([#5564](https://github.com/SocialGouv/code-du-travail-numerique/issues/5564)) ([a092d10](https://github.com/SocialGouv/code-du-travail-numerique/commit/a092d107787cbc02ec9ad1867f3ea973bde4b247))
+- **simulateurs:** ajout une possibilité pour certaines CCs de donner un example avec le lendemain ([#5555](https://github.com/SocialGouv/code-du-travail-numerique/issues/5555)) ([c400e94](https://github.com/SocialGouv/code-du-travail-numerique/commit/c400e94ad24df06ae17accea117614d3c8aa0c74))
+- utilisation du nouveau logo du ministère ([#5588](https://github.com/SocialGouv/code-du-travail-numerique/issues/5588)) ([51006eb](https://github.com/SocialGouv/code-du-travail-numerique/commit/51006ebf76a80b0a65bded90b35b91de8d247d6b))
+
 ## [4.119.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.119.0...v4.119.1) (2024-01-11)
 
 ### Bug Fixes

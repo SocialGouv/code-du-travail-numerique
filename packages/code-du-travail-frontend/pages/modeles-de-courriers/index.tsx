@@ -16,8 +16,6 @@ import { Layout } from "../../src/layout/Layout";
 import { summarize } from "../../src/search/utils";
 import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
-import { handleError } from "../../src/lib/fetch-error";
-import EventTracker from "../../src/lib/tracking/EventTracker";
 import { getAllModeles } from "../../src/api";
 
 const title = "Modèles de documents";
@@ -101,7 +99,6 @@ function Modeles(props) {
           </StyledList>
         </Container>
       </Section>
-      <EventTracker />
     </Layout>
   );
 }

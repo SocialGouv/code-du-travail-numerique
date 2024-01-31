@@ -3,705 +3,10 @@
 exports[`DisplayContentContribution should not fail if no summary tag 1`] = `
 <div>
   <div
-    class="sc-ERObt ekELNP"
-    data-accordion-component="Accordion"
-    data-testid="contrib-accordion"
-  >
-    <div>
-      <div
-        class="sc-jXbUNg heDTFL"
-        data-accordion-component="AccordionItem"
-      >
-        <div
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-1"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="sc-kpDqfm heoudo"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-1"
-            role="button"
-            tabindex="0"
-          >
-            <svg
-              aria-hidden="true"
-              class="sc-imWYAI gTeNha"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="sc-dAlyuH cXMNBg"
-            >
-              <h3
-                class="sc-kAyceB dvmaTz"
-                data-testid="contrib-accordion-0"
-                style="margin: 0px;"
-              >
-                Report ou suspension du préavis
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-1"
-        >
-          <div
-            class="sc-bXCLTC fcbJdD"
-          >
-            <div>
-              <p>
-                
-        En principe, le préavis de licenciement court de date à date sans
-        interruption, ni suspension. Dans certaines situations, il existe des
-        exceptions qui peuvent suspendre le déroulement du préavis.
-      
-              </p>
-              <div
-                class="sc-ERObt ekELNP"
-                data-accordion-component="Accordion"
-                data-testid="contrib-accordion"
-              >
-                <div>
-                  <div
-                    class="sc-jXbUNg heDTFL"
-                    data-accordion-component="AccordionItem"
-                  >
-                    <div
-                      class="accordion__heading"
-                      data-accordion-component="AccordionItemHeading"
-                    >
-                      <div
-                        aria-controls="accordion__panel-raa-2"
-                        aria-disabled="false"
-                        aria-expanded="false"
-                        class="sc-kpDqfm heoudo"
-                        data-accordion-component="AccordionItemButton"
-                        id="accordion__heading-raa-2"
-                        role="button"
-                        tabindex="0"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class="sc-imWYAI gTeNha"
-                          fill="none"
-                          height="24"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <polyline
-                            points="9 18 15 12 9 6"
-                          />
-                        </svg>
-                        <div
-                          class="sc-dAlyuH cXMNBg"
-                        >
-                          <h4
-                            class="sc-kAyceB dvmaTz"
-                            data-testid="contrib-accordion-0"
-                            style="margin: 0px;"
-                          >
-                            Congés payés
-                          </h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-hidden="true"
-                      class="sc-dhKdcB hlTUsz"
-                      data-accordion-component="AccordionItemPanel"
-                      hidden=""
-                      id="accordion__panel-raa-2"
-                    >
-                      <div
-                        class="sc-bXCLTC fcbJdD"
-                      >
-                        <div>
-                          <div
-                            class="sc-ERObt ekELNP"
-                            data-accordion-component="Accordion"
-                            data-testid="contrib-accordion"
-                          >
-                            <div>
-                              <div
-                                class="sc-jXbUNg heDTFL"
-                                data-accordion-component="AccordionItem"
-                              >
-                                <div
-                                  class="accordion__heading"
-                                  data-accordion-component="AccordionItemHeading"
-                                >
-                                  <div
-                                    aria-controls="accordion__panel-raa-3"
-                                    aria-disabled="false"
-                                    aria-expanded="false"
-                                    class="sc-kpDqfm heoudo"
-                                    data-accordion-component="AccordionItemButton"
-                                    id="accordion__heading-raa-3"
-                                    role="button"
-                                    tabindex="0"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="sc-imWYAI gTeNha"
-                                      fill="none"
-                                      height="24"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                      viewBox="0 0 24 24"
-                                      width="24"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <polyline
-                                        points="9 18 15 12 9 6"
-                                      />
-                                    </svg>
-                                    <div
-                                      class="sc-dAlyuH cXMNBg"
-                                    >
-                                      <h5
-                                        class="sc-kAyceB dvmaTz"
-                                        data-testid="contrib-accordion-0"
-                                        style="margin: 0px;"
-                                      >
-                                        
-                Dates des congés fixées avant la notification du licenciement
-              
-                                      </h5>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  aria-hidden="true"
-                                  class="sc-dhKdcB hlTUsz"
-                                  data-accordion-component="AccordionItemPanel"
-                                  hidden=""
-                                  id="accordion__panel-raa-3"
-                                >
-                                  <div
-                                    class="sc-bXCLTC fcbJdD"
-                                  >
-                                    <div>
-                                      <p>
-                                        
-                Des congés payés qui interviennent pendant le préavis et qui ont
-                été demandés à l'employeur avant la notification du licenciement
-                suspendent le préavis. Par conséquent, le préavis est prolongé
-                d'une durée équivalente à celle des congés.
-              
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div
-                                class="sc-jXbUNg crDDWD"
-                                data-accordion-component="AccordionItem"
-                              >
-                                <div
-                                  class="accordion__heading"
-                                  data-accordion-component="AccordionItemHeading"
-                                >
-                                  <div
-                                    aria-controls="accordion__panel-raa-4"
-                                    aria-disabled="false"
-                                    aria-expanded="false"
-                                    class="sc-kpDqfm heoudo"
-                                    data-accordion-component="AccordionItemButton"
-                                    id="accordion__heading-raa-4"
-                                    role="button"
-                                    tabindex="0"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="sc-imWYAI gTeNha"
-                                      fill="none"
-                                      height="24"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                      viewBox="0 0 24 24"
-                                      width="24"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <polyline
-                                        points="9 18 15 12 9 6"
-                                      />
-                                    </svg>
-                                    <div
-                                      class="sc-dAlyuH cXMNBg"
-                                    >
-                                      <h5
-                                        class="sc-kAyceB dvmaTz"
-                                        data-testid="contrib-accordion-1"
-                                        style="margin: 0px;"
-                                      >
-                                        
-                Dates des congés fixées après la notification du licenciement
-              
-                                      </h5>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  aria-hidden="true"
-                                  class="sc-dhKdcB hlTUsz"
-                                  data-accordion-component="AccordionItemPanel"
-                                  hidden=""
-                                  id="accordion__panel-raa-4"
-                                >
-                                  <div
-                                    class="sc-bXCLTC fcbJdD"
-                                  >
-                                    <div>
-                                      <p>
-                                        
-                Des congés payés qui interviennent pendant le préavis et qui ont
-                été demandés à l'employeur après la notification du
-                licenciement ne suspendent pas le préavis. Par conséquent, le
-                préavis n'est pas prolongé d'une durée équivalente à celle des
-                congés.
-              
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div
-                                class="sc-jXbUNg crDDWD"
-                                data-accordion-component="AccordionItem"
-                              >
-                                <div
-                                  class="accordion__heading"
-                                  data-accordion-component="AccordionItemHeading"
-                                >
-                                  <div
-                                    aria-controls="accordion__panel-raa-5"
-                                    aria-disabled="false"
-                                    aria-expanded="false"
-                                    class="sc-kpDqfm heoudo"
-                                    data-accordion-component="AccordionItemButton"
-                                    id="accordion__heading-raa-5"
-                                    role="button"
-                                    tabindex="0"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="sc-imWYAI gTeNha"
-                                      fill="none"
-                                      height="24"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                      viewBox="0 0 24 24"
-                                      width="24"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <polyline
-                                        points="9 18 15 12 9 6"
-                                      />
-                                    </svg>
-                                    <div
-                                      class="sc-dAlyuH cXMNBg"
-                                    >
-                                      <h5
-                                        class="sc-kAyceB dvmaTz"
-                                        data-testid="contrib-accordion-2"
-                                        style="margin: 0px;"
-                                      >
-                                        Licenciement notifié pendant les congés payés
-                                      </h5>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  aria-hidden="true"
-                                  class="sc-dhKdcB hlTUsz"
-                                  data-accordion-component="AccordionItemPanel"
-                                  hidden=""
-                                  id="accordion__panel-raa-5"
-                                >
-                                  <div
-                                    class="sc-bXCLTC fcbJdD"
-                                  >
-                                    <div>
-                                      <p>
-                                        
-                Dans ce cas, le préavis ne commencera qu'après les congés payés.
-              
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`DisplayContentContribution should render correctly a table with multiple head lines 1`] = `
-<div>
-  <div
-    class="sc-gFAWRd jDjoBq"
+    class="sc-ERObt zXiiV"
   >
     <div
-      class="sc-gmPhUn kUNTdL"
-    >
-      <table
-        class="sc-iMWBiJ Rlfrk"
-      >
-        <thead>
-          <tr>
-            <td
-              colspan="1"
-              rowspan="2"
-            >
-              <p>
-                <strong>
-                  Nature du contrat de mission
-                </strong>
-              </p>
-            </td>
-            <td
-              colspan="2"
-              rowspan="1"
-            >
-              <p>
-                <strong>
-                  Durée maximale
-                </strong>
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td
-              colspan="1"
-              rowspan="1"
-            >
-              <p>
-                <strong>
-                  Contrat de date à date
-                </strong>
-              </p>
-            </td>
-            <td
-              colspan="1"
-              rowspan="1"
-            >
-              <p>
-                <strong>
-                  Contrat sans terme certain
-                </strong>
-              </p>
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td
-              colspan="1"
-              rowspan="1"
-            >
-              <p>
-                Remplacement d’un salarié absent ou dont le contrat de travail est suspendu
-              </p>
-            </td>
-            <td
-              colspan="1"
-              rowspan="1"
-            >
-              <p>
-                18 mois
-              </p>
-            </td>
-            <td
-              colspan="1"
-              rowspan="1"
-            >
-              <p>
-                Fin de l’absence
-              </p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`DisplayContentContribution should replace details element by one accordion 1`] = `
-<div
-  class="sc-ERObt ekELNP"
-  data-accordion-component="Accordion"
-  data-testid="contrib-accordion"
->
-  <div>
-    <div
-      class="sc-jXbUNg heDTFL"
-      data-accordion-component="AccordionItem"
-    >
-      <div
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-      >
-        <div
-          aria-controls="accordion__panel-raa-0"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="sc-kpDqfm heoudo"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-raa-0"
-          role="button"
-          tabindex="0"
-        >
-          <svg
-            aria-hidden="true"
-            class="sc-imWYAI gTeNha"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
-          <div
-            class="sc-dAlyuH cXMNBg"
-          >
-            <h3
-              class="sc-kAyceB dvmaTz"
-              data-testid="contrib-accordion-0"
-              style="margin: 0px;"
-            >
-              Ceci est un titre
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden="true"
-        class="sc-dhKdcB hlTUsz"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-raa-0"
-      >
-        <div
-          class="sc-bXCLTC fcbJdD"
-        >
-          <div>
-            <p>
-              Ceci est le body
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`DisplayContentContribution should replace details element within details element 1`] = `
-<div
-  class="sc-ERObt ekELNP"
-  data-accordion-component="Accordion"
-  data-testid="contrib-accordion"
->
-  <div>
-    <div
-      class="sc-jXbUNg heDTFL"
-      data-accordion-component="AccordionItem"
-    >
-      <div
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-      >
-        <div
-          aria-controls="accordion__panel-raa-8"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="sc-kpDqfm heoudo"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-raa-8"
-          role="button"
-          tabindex="0"
-        >
-          <svg
-            aria-hidden="true"
-            class="sc-imWYAI gTeNha"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
-          <div
-            class="sc-dAlyuH cXMNBg"
-          >
-            <h3
-              class="sc-kAyceB dvmaTz"
-              data-testid="contrib-accordion-0"
-              style="margin: 0px;"
-            >
-              Ceci est un titre
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden="true"
-        class="sc-dhKdcB hlTUsz"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-raa-8"
-      >
-        <div
-          class="sc-bXCLTC fcbJdD"
-        >
-          <div>
-            <div
-              class="sc-ERObt ekELNP"
-              data-accordion-component="Accordion"
-              data-testid="contrib-accordion"
-            >
-              <div>
-                <div
-                  class="sc-jXbUNg heDTFL"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-raa-9"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-raa-9"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          data-testid="contrib-accordion-0"
-                          style="margin: 0px;"
-                        >
-                          Ceci est un sous titre
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-raa-9"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <div>
-                        <p>
-                          Ceci est le body
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`DisplayContentContribution should replace multiple details element by one accordion 1`] = `
-<body>
-  <div>
-    <div
-      class="sc-ERObt ekELNP"
+      class="sc-dNsVcS hThUYS"
       data-accordion-component="Accordion"
       data-testid="contrib-accordion"
     >
@@ -715,12 +20,12 @@ exports[`DisplayContentContribution should replace multiple details element by o
             data-accordion-component="AccordionItemHeading"
           >
             <div
-              aria-controls="accordion__panel-raa-6"
+              aria-controls="accordion__panel-raa-1"
               aria-disabled="false"
               aria-expanded="false"
               class="sc-kpDqfm heoudo"
               data-accordion-component="AccordionItemButton"
-              id="accordion__heading-raa-6"
+              id="accordion__heading-raa-1"
               role="button"
               tabindex="0"
             >
@@ -749,7 +54,7 @@ exports[`DisplayContentContribution should replace multiple details element by o
                   data-testid="contrib-accordion-0"
                   style="margin: 0px;"
                 >
-                  Ceci est le titre 1
+                  Report ou suspension du préavis
                 </h3>
               </div>
             </div>
@@ -759,83 +64,885 @@ exports[`DisplayContentContribution should replace multiple details element by o
             class="sc-dhKdcB hlTUsz"
             data-accordion-component="AccordionItemPanel"
             hidden=""
-            id="accordion__panel-raa-6"
+            id="accordion__panel-raa-1"
           >
             <div
               class="sc-bXCLTC fcbJdD"
             >
               <div>
                 <p>
-                  Ceci est le body 1
+                  
+        En principe, le préavis de licenciement court de date à date sans
+        interruption, ni suspension. Dans certaines situations, il existe des
+        exceptions qui peuvent suspendre le déroulement du préavis.
+      
                 </p>
+                <div
+                  class="sc-dNsVcS hThUYS"
+                  data-accordion-component="Accordion"
+                  data-testid="contrib-accordion"
+                >
+                  <div>
+                    <div
+                      class="sc-jXbUNg heDTFL"
+                      data-accordion-component="AccordionItem"
+                    >
+                      <div
+                        class="accordion__heading"
+                        data-accordion-component="AccordionItemHeading"
+                      >
+                        <div
+                          aria-controls="accordion__panel-raa-2"
+                          aria-disabled="false"
+                          aria-expanded="false"
+                          class="sc-kpDqfm heoudo"
+                          data-accordion-component="AccordionItemButton"
+                          id="accordion__heading-raa-2"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="sc-imWYAI gTeNha"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <polyline
+                              points="9 18 15 12 9 6"
+                            />
+                          </svg>
+                          <div
+                            class="sc-dAlyuH cXMNBg"
+                          >
+                            <h4
+                              class="sc-kAyceB dvmaTz"
+                              data-testid="contrib-accordion-0"
+                              style="margin: 0px;"
+                            >
+                              Congés payés
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="sc-dhKdcB hlTUsz"
+                        data-accordion-component="AccordionItemPanel"
+                        hidden=""
+                        id="accordion__panel-raa-2"
+                      >
+                        <div
+                          class="sc-bXCLTC fcbJdD"
+                        >
+                          <div>
+                            <div
+                              class="sc-dNsVcS hThUYS"
+                              data-accordion-component="Accordion"
+                              data-testid="contrib-accordion"
+                            >
+                              <div>
+                                <div
+                                  class="sc-jXbUNg heDTFL"
+                                  data-accordion-component="AccordionItem"
+                                >
+                                  <div
+                                    class="accordion__heading"
+                                    data-accordion-component="AccordionItemHeading"
+                                  >
+                                    <div
+                                      aria-controls="accordion__panel-raa-3"
+                                      aria-disabled="false"
+                                      aria-expanded="false"
+                                      class="sc-kpDqfm heoudo"
+                                      data-accordion-component="AccordionItemButton"
+                                      id="accordion__heading-raa-3"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class="sc-imWYAI gTeNha"
+                                        fill="none"
+                                        height="24"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <polyline
+                                          points="9 18 15 12 9 6"
+                                        />
+                                      </svg>
+                                      <div
+                                        class="sc-dAlyuH cXMNBg"
+                                      >
+                                        <h5
+                                          class="sc-kAyceB dvmaTz"
+                                          data-testid="contrib-accordion-0"
+                                          style="margin: 0px;"
+                                        >
+                                          
+                Dates des congés fixées avant la notification du licenciement
+              
+                                        </h5>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    aria-hidden="true"
+                                    class="sc-dhKdcB hlTUsz"
+                                    data-accordion-component="AccordionItemPanel"
+                                    hidden=""
+                                    id="accordion__panel-raa-3"
+                                  >
+                                    <div
+                                      class="sc-bXCLTC fcbJdD"
+                                    >
+                                      <div>
+                                        <p>
+                                          
+                Des congés payés qui interviennent pendant le préavis et qui ont
+                été demandés à l'employeur avant la notification du licenciement
+                suspendent le préavis. Par conséquent, le préavis est prolongé
+                d'une durée équivalente à celle des congés.
+              
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <div
+                                  class="sc-jXbUNg crDDWD"
+                                  data-accordion-component="AccordionItem"
+                                >
+                                  <div
+                                    class="accordion__heading"
+                                    data-accordion-component="AccordionItemHeading"
+                                  >
+                                    <div
+                                      aria-controls="accordion__panel-raa-4"
+                                      aria-disabled="false"
+                                      aria-expanded="false"
+                                      class="sc-kpDqfm heoudo"
+                                      data-accordion-component="AccordionItemButton"
+                                      id="accordion__heading-raa-4"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class="sc-imWYAI gTeNha"
+                                        fill="none"
+                                        height="24"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <polyline
+                                          points="9 18 15 12 9 6"
+                                        />
+                                      </svg>
+                                      <div
+                                        class="sc-dAlyuH cXMNBg"
+                                      >
+                                        <h5
+                                          class="sc-kAyceB dvmaTz"
+                                          data-testid="contrib-accordion-1"
+                                          style="margin: 0px;"
+                                        >
+                                          
+                Dates des congés fixées après la notification du licenciement
+              
+                                        </h5>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    aria-hidden="true"
+                                    class="sc-dhKdcB hlTUsz"
+                                    data-accordion-component="AccordionItemPanel"
+                                    hidden=""
+                                    id="accordion__panel-raa-4"
+                                  >
+                                    <div
+                                      class="sc-bXCLTC fcbJdD"
+                                    >
+                                      <div>
+                                        <p>
+                                          
+                Des congés payés qui interviennent pendant le préavis et qui ont
+                été demandés à l'employeur après la notification du
+                licenciement ne suspendent pas le préavis. Par conséquent, le
+                préavis n'est pas prolongé d'une durée équivalente à celle des
+                congés.
+              
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <div
+                                  class="sc-jXbUNg crDDWD"
+                                  data-accordion-component="AccordionItem"
+                                >
+                                  <div
+                                    class="accordion__heading"
+                                    data-accordion-component="AccordionItemHeading"
+                                  >
+                                    <div
+                                      aria-controls="accordion__panel-raa-5"
+                                      aria-disabled="false"
+                                      aria-expanded="false"
+                                      class="sc-kpDqfm heoudo"
+                                      data-accordion-component="AccordionItemButton"
+                                      id="accordion__heading-raa-5"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class="sc-imWYAI gTeNha"
+                                        fill="none"
+                                        height="24"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <polyline
+                                          points="9 18 15 12 9 6"
+                                        />
+                                      </svg>
+                                      <div
+                                        class="sc-dAlyuH cXMNBg"
+                                      >
+                                        <h5
+                                          class="sc-kAyceB dvmaTz"
+                                          data-testid="contrib-accordion-2"
+                                          style="margin: 0px;"
+                                        >
+                                          Licenciement notifié pendant les congés payés
+                                        </h5>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    aria-hidden="true"
+                                    class="sc-dhKdcB hlTUsz"
+                                    data-accordion-component="AccordionItemPanel"
+                                    hidden=""
+                                    id="accordion__panel-raa-5"
+                                  >
+                                    <div
+                                      class="sc-bXCLTC fcbJdD"
+                                    >
+                                      <div>
+                                        <p>
+                                          
+                Dans ce cas, le préavis ne commencera qu'après les congés payés.
+              
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DisplayContentContribution should render correctly a table with multiple head lines 1`] = `
+<div>
+  <div
+    class="sc-ERObt zXiiV"
+  >
+    <div
+      class="sc-gFAWRd jDjoBq"
+    >
+      <div
+        class="sc-gmPhUn kUNTdL"
+      >
+        <table
+          class="sc-iMWBiJ Rlfrk"
+        >
+          <thead>
+            <tr>
+              <td
+                colspan="1"
+                rowspan="2"
+              >
+                <p>
+                  <strong>
+                    Nature du contrat de mission
+                  </strong>
+                </p>
+              </td>
+              <td
+                colspan="2"
+                rowspan="1"
+              >
+                <p>
+                  <strong>
+                    Durée maximale
+                  </strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                <p>
+                  <strong>
+                    Contrat de date à date
+                  </strong>
+                </p>
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                <p>
+                  <strong>
+                    Contrat sans terme certain
+                  </strong>
+                </p>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                <p>
+                  Remplacement d’un salarié absent ou dont le contrat de travail est suspendu
+                </p>
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                <p>
+                  18 mois
+                </p>
+              </td>
+              <td
+                colspan="1"
+                rowspan="1"
+              >
+                <p>
+                  Fin de l’absence
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DisplayContentContribution should replace details element by one accordion 1`] = `
+<div
+  class="sc-ERObt zXiiV"
+>
+  <div
+    class="sc-dNsVcS hThUYS"
+    data-accordion-component="Accordion"
+    data-testid="contrib-accordion"
+  >
+    <div>
+      <div
+        class="sc-jXbUNg heDTFL"
+        data-accordion-component="AccordionItem"
+      >
         <div
-          class="sc-jXbUNg crDDWD"
-          data-accordion-component="AccordionItem"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
         >
           <div
-            class="accordion__heading"
-            data-accordion-component="AccordionItemHeading"
+            aria-controls="accordion__panel-raa-0"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-kpDqfm heoudo"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-0"
+            role="button"
+            tabindex="0"
           >
-            <div
-              aria-controls="accordion__panel-raa-7"
-              aria-disabled="false"
-              aria-expanded="false"
-              class="sc-kpDqfm heoudo"
-              data-accordion-component="AccordionItemButton"
-              id="accordion__heading-raa-7"
-              role="button"
-              tabindex="0"
+            <svg
+              aria-hidden="true"
+              class="sc-imWYAI gTeNha"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                aria-hidden="true"
-                class="sc-imWYAI gTeNha"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-dAlyuH cXMNBg"
+            >
+              <h3
+                class="sc-kAyceB dvmaTz"
+                data-testid="contrib-accordion-0"
+                style="margin: 0px;"
               >
-                <polyline
-                  points="9 18 15 12 9 6"
-                />
-              </svg>
+                Ceci est un titre
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-dhKdcB hlTUsz"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-0"
+        >
+          <div
+            class="sc-bXCLTC fcbJdD"
+          >
+            <div>
+              <p>
+                Ceci est le body
+              </p>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DisplayContentContribution should replace details element within details element 1`] = `
+<div
+  class="sc-ERObt zXiiV"
+>
+  <div
+    class="sc-dNsVcS hThUYS"
+    data-accordion-component="Accordion"
+    data-testid="contrib-accordion"
+  >
+    <div>
+      <div
+        class="sc-jXbUNg heDTFL"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-8"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-kpDqfm heoudo"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-8"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-imWYAI gTeNha"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-dAlyuH cXMNBg"
+            >
+              <h3
+                class="sc-kAyceB dvmaTz"
+                data-testid="contrib-accordion-0"
+                style="margin: 0px;"
+              >
+                Ceci est un titre
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-dhKdcB hlTUsz"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-8"
+        >
+          <div
+            class="sc-bXCLTC fcbJdD"
+          >
+            <div>
               <div
-                class="sc-dAlyuH cXMNBg"
+                class="sc-dNsVcS hThUYS"
+                data-accordion-component="Accordion"
+                data-testid="contrib-accordion"
               >
-                <h3
-                  class="sc-kAyceB dvmaTz"
-                  data-testid="contrib-accordion-1"
-                  style="margin: 0px;"
-                >
-                  Ceci est le titre 2
-                </h3>
+                <div>
+                  <div
+                    class="sc-jXbUNg heDTFL"
+                    data-accordion-component="AccordionItem"
+                  >
+                    <div
+                      class="accordion__heading"
+                      data-accordion-component="AccordionItemHeading"
+                    >
+                      <div
+                        aria-controls="accordion__panel-raa-9"
+                        aria-disabled="false"
+                        aria-expanded="false"
+                        class="sc-kpDqfm heoudo"
+                        data-accordion-component="AccordionItemButton"
+                        id="accordion__heading-raa-9"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="sc-imWYAI gTeNha"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="9 18 15 12 9 6"
+                          />
+                        </svg>
+                        <div
+                          class="sc-dAlyuH cXMNBg"
+                        >
+                          <h4
+                            class="sc-kAyceB dvmaTz"
+                            data-testid="contrib-accordion-0"
+                            style="margin: 0px;"
+                          >
+                            Ceci est un sous titre
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="sc-dhKdcB hlTUsz"
+                      data-accordion-component="AccordionItemPanel"
+                      hidden=""
+                      id="accordion__panel-raa-9"
+                    >
+                      <div
+                        class="sc-bXCLTC fcbJdD"
+                      >
+                        <div>
+                          <p>
+                            Ceci est le body
+                          </p>
+                          <br />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DisplayContentContribution should replace div with alert class in li component to Alert component 1`] = `
+<div
+  class="sc-ERObt zXiiV"
+>
+  <div>
+    <p>
+      Le contrat de mission (intérim) doit :
+    </p>
+    <ul>
+      <li
+        class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"
+      >
+        <p>
+          Être
+          <strong>
+             écrit
+          </strong>
+           et 
+          <strong>
+            rédigé
+          </strong>
+           en français (si conclu en France) ;
+        </p>
+      </li>
+      <li
+        class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"
+      >
+        <p>
+          Être 
+          <strong>
+            signé
+          </strong>
+          , dans un délai de 
+          <strong>
+            2 jours
+          </strong>
+           suivant la mise à disposition du salarié auprès de l'entreprise ; si l’employeur transmet le CDD au salarié après le délai de 2 jours, il s'expose au paiement d'une indemnité égale à 1 mois de salaire maximum.
+        </p>
+      </li>
+      <li
+        class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"
+      >
+        <p>
+          Être établi 
+          <strong>
+            en plusieurs exemplaires
+          </strong>
+           ; c'est-à-dire autant d'exemplaires que de parties au contrat. Chaque partie au contrat aura un exemplaire.
+        </p>
+        <br />
+        <div
+          class="sc-jsJBEP ftwa-dj"
+        >
+          <p>
+            <strong>
+              Attention : 
+            </strong>
+            En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`DisplayContentContribution should replace div with alert class to Alert component 1`] = `
+<div
+  class="sc-ERObt zXiiV"
+>
+  <div
+    class="sc-jsJBEP ftwa-dj"
+  >
+    <p>
+      <strong>
+        Attention : 
+      </strong>
+      En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DisplayContentContribution should replace multiple details element by one accordion 1`] = `
+<body>
+  <div>
+    <div
+      class="sc-ERObt zXiiV"
+    >
+      <div
+        class="sc-dNsVcS hThUYS"
+        data-accordion-component="Accordion"
+        data-testid="contrib-accordion"
+      >
+        <div>
           <div
-            aria-hidden="true"
-            class="sc-dhKdcB hlTUsz"
-            data-accordion-component="AccordionItemPanel"
-            hidden=""
-            id="accordion__panel-raa-7"
+            class="sc-jXbUNg heDTFL"
+            data-accordion-component="AccordionItem"
           >
             <div
-              class="sc-bXCLTC fcbJdD"
+              class="accordion__heading"
+              data-accordion-component="AccordionItemHeading"
             >
-              <div>
-                <p>
-                  Ceci est le body 2
-                </p>
+              <div
+                aria-controls="accordion__panel-raa-6"
+                aria-disabled="false"
+                aria-expanded="false"
+                class="sc-kpDqfm heoudo"
+                data-accordion-component="AccordionItemButton"
+                id="accordion__heading-raa-6"
+                role="button"
+                tabindex="0"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="sc-imWYAI gTeNha"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <div
+                  class="sc-dAlyuH cXMNBg"
+                >
+                  <h3
+                    class="sc-kAyceB dvmaTz"
+                    data-testid="contrib-accordion-0"
+                    style="margin: 0px;"
+                  >
+                    Ceci est le titre 1
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="sc-dhKdcB hlTUsz"
+              data-accordion-component="AccordionItemPanel"
+              hidden=""
+              id="accordion__panel-raa-6"
+            >
+              <div
+                class="sc-bXCLTC fcbJdD"
+              >
+                <div>
+                  <p>
+                    Ceci est le body 1
+                  </p>
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="sc-jXbUNg crDDWD"
+            data-accordion-component="AccordionItem"
+          >
+            <div
+              class="accordion__heading"
+              data-accordion-component="AccordionItemHeading"
+            >
+              <div
+                aria-controls="accordion__panel-raa-7"
+                aria-disabled="false"
+                aria-expanded="false"
+                class="sc-kpDqfm heoudo"
+                data-accordion-component="AccordionItemButton"
+                id="accordion__heading-raa-7"
+                role="button"
+                tabindex="0"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="sc-imWYAI gTeNha"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <div
+                  class="sc-dAlyuH cXMNBg"
+                >
+                  <h3
+                    class="sc-kAyceB dvmaTz"
+                    data-testid="contrib-accordion-1"
+                    style="margin: 0px;"
+                  >
+                    Ceci est le titre 2
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="sc-dhKdcB hlTUsz"
+              data-accordion-component="AccordionItemPanel"
+              hidden=""
+              id="accordion__panel-raa-7"
+            >
+              <div
+                class="sc-bXCLTC fcbJdD"
+              >
+                <div>
+                  <p>
+                    Ceci est le body 2
+                  </p>
+                  <br />
+                </div>
               </div>
             </div>
           </div>
