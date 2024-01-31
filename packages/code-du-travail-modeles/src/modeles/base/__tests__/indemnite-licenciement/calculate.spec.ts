@@ -52,10 +52,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
         "non",
       "contrat salarié . indemnité de licenciement . salaire de référence":
-        "875",
+        "2000",
     });
     expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(1000);
+    expect(result.value).toEqual(875);
     expect(result.unit?.numerators).toEqual(["€"]);
   });
 });

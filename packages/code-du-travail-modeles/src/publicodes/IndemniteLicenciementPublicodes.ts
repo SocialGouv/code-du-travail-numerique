@@ -1,10 +1,11 @@
 import type { EvaluatedNode } from "publicodes";
 
 import type {
-  Absence,
+  RequiredSeniorityResult,
+  SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../modeles/common";
-import { MotifKeys, SeniorityFactory } from "../modeles/common";
+import { SeniorityFactory } from "../modeles/common";
 import type { Publicodes } from "./Publicodes";
 import { PublicodesBase } from "./PublicodesBase";
 import type {
@@ -66,7 +67,7 @@ class IndemniteLicenciementPublicodes
     args: Record<string, string | undefined>,
     targetRule?: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
-    const newArgs = args;
+    let newArgs = args;
     const missingArg = this.getMissingArg(args, [
       "contrat salarié . indemnité de licenciement . date d'entrée",
       "contrat salarié . indemnité de licenciement . date de sortie",
@@ -79,13 +80,17 @@ class IndemniteLicenciementPublicodes
       !args["contrat salarié . indemnité de licenciement . ancienneté en année"]
     ) {
       const s = new SeniorityFactory().create(this.idcc);
-      const seniority = s.computeSeniority(s.mapSituation(args));
-      newArgs[
-        "contrat salarié . indemnité de licenciement . ancienneté en année"
-      ] = seniority.value.toString();
-      newArgs[
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
-      ] = seniority.value.toString();
+      const { value, extraInfos }: SeniorityResult = s.computeSeniority(
+        s.mapSituation(args)
+      );
+      newArgs = {
+        ...newArgs,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          value.toString(),
+        "contrat salarié . indemnité de licenciement . ancienneté en année":
+          value.toString(),
+        ...extraInfos,
+      };
     }
     if (
       !args[
@@ -93,28 +98,18 @@ class IndemniteLicenciementPublicodes
       ]
     ) {
       const s = new SeniorityFactory().create(this.idcc);
-      const seniority = s.computeRequiredSeniority(
+      const { value }: RequiredSeniorityResult = s.computeRequiredSeniority(
         s.mapRequiredSituation(args)
       );
-      newArgs[
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année"
-      ] = seniority.value.toString();
-      newArgs[
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
-      ] = seniority.value.toString();
-    }
-    if (newArgs.absencePeriods) {
-      const absencePeriods = JSON.parse(newArgs.absencePeriods) as Absence[];
-      newArgs[
-        "contrat salarié . indemnité de licenciement . avec congé maladie non professionnelle"
-      ] = absencePeriods.some(
-        (absence) => absence.motif.key === MotifKeys.maladieNonPro
-      )
-        ? "oui"
-        : "non";
+      newArgs = {
+        ...newArgs,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          value.toString(),
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+          value.toString(),
+      };
     }
     delete newArgs.absencePeriods;
-
     return super.setSituation(newArgs, targetRule);
   }
 
