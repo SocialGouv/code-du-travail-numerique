@@ -12,10 +12,10 @@ contrat salarié . indemnité de licenciement . salaire de référence conventio
   unité: €
 
 contrat salarié . indemnité de licenciement . date d'entrée:
-  valeur: non
+  valeur: 01/01/2024 # mettre une valeur par défaut pour éviter les erreurs liées aux missing-args
 
 contrat salarié . indemnité de licenciement . date de notification:
-  valeur: non
+  valeur: 01/01/2024 # mettre une valeur par défaut pour éviter les erreurs liées aux missing-args
 
 contrat salarié . indemnité de licenciement . date de sortie:
   valeur: non
