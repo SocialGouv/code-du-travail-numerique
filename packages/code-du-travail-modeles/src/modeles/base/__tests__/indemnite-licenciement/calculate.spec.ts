@@ -1,4 +1,5 @@
 import { IndemniteLicenciementPublicodes } from "../../../../publicodes";
+import type { SalaryPeriods } from "../../../common";
 
 const engine = new IndemniteLicenciementPublicodes(modelsIndemniteLicenciement);
 
@@ -53,6 +54,31 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "non",
       "contrat salarié . indemnité de licenciement . salaire de référence":
         "2000",
+    });
+    expect(missingArgs).toEqual([]);
+    expect(result.value).toEqual(875);
+    expect(result.unit?.numerators).toEqual(["€"]);
+  });
+
+  test("Vérifier que la grille de salaire est bien prise en compte", () => {
+    const salaryPeriods: SalaryPeriods[] = [
+      { month: "1", prime: 500, value: 2000 },
+      { month: "2", prime: 500, value: 1000 },
+      { month: "3", prime: 500, value: 3000 },
+    ];
+    const { result, missingArgs } = engine.calculate({
+      absencePeriods: JSON.stringify([
+        { motif: { key: "absenceMaladieNonPro" }, value: 6 },
+      ]),
+      "contrat salarié . indemnité de licenciement . date d'entrée":
+        "01/04/2022",
+      "contrat salarié . indemnité de licenciement . date de notification":
+        "01/01/2024",
+      "contrat salarié . indemnité de licenciement . date de sortie":
+        "01/01/2024",
+      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+        "non",
+      salaryPeriods: JSON.stringify(salaryPeriods),
     });
     expect(missingArgs).toEqual([]);
     expect(result.value).toEqual(875);

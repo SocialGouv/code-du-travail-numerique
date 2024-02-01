@@ -5,7 +5,7 @@ import type {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../modeles/common";
-import { SeniorityFactory } from "../modeles/common";
+import { ReferenceSalaryFactory, SeniorityFactory } from "../modeles/common";
 import type { Publicodes } from "./Publicodes";
 import { PublicodesBase } from "./PublicodesBase";
 import type {
@@ -110,6 +110,28 @@ class IndemniteLicenciementPublicodes
       };
     }
     delete newArgs.absencePeriods;
+    if (
+      !args[
+        "contrat salarié . indemnité de licenciement . salaire de référence"
+      ]
+    ) {
+      const s = new ReferenceSalaryFactory().create(this.idcc);
+      const value = s.computeReferenceSalary(
+        s.mapSituation
+          ? s.mapSituation(args)
+          : {
+              salaires: args.salaryPeriods
+                ? JSON.parse(args.salaryPeriods)
+                : [],
+            }
+      );
+      newArgs = {
+        ...newArgs,
+        "contrat salarié . indemnité de licenciement . salaire de référence":
+          value.toString(),
+      };
+    }
+    delete newArgs.salaryPeriods;
     return super.setSituation(newArgs, targetRule);
   }
 

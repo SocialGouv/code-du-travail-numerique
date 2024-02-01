@@ -23,6 +23,14 @@ export type CategoryPro16 =
 export class ReferenceSalary16
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0016>
 {
+  // mapSituation(
+  //   args: Record<string, string | undefined>
+  // ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0016> {
+  //   return {
+
+  //   };
+  // }
+
   computeReferenceSalary(
     props: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0016>
   ): number {

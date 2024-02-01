@@ -33,6 +33,9 @@ export interface IReferenceSalary<T extends SupportedCcIndemniteLicenciement> {
   computeExtraInfo?: (
     args: ReferenceSalaryProps<T>
   ) => Record<string, number | string>;
+  mapSituation?: (
+    args: Record<string, string | undefined>
+  ) => ReferenceSalaryProps<T>;
 }
 
 export type ReferenceSalaryProps<T> =
