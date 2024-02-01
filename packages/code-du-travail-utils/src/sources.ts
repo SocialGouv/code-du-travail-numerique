@@ -53,6 +53,7 @@ export const labelBySource = {
   [SOURCES.TOOLS]: "Outils",
   [SOURCES.HIGHLIGHTS]: "À la une",
   [SOURCES.PREQUALIFIED]: "Requêtes préqualifiées",
+  [SOURCES.GLOSSARY]: "Glossaire",
 };
 
 export const getLabelBySource = (src: string) => labelBySource[src];
