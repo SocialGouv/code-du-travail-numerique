@@ -36,7 +36,6 @@ import {
   Seniority3248,
 } from "../../conventions";
 import { SupportedCcIndemniteLicenciement } from "../index";
-import type { ISeniority } from "../types";
 
 export class SeniorityFactory {
   create<T extends SupportedCcIndemniteLicenciement>(idcc: T | null): any {
