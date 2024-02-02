@@ -23,13 +23,39 @@ export type CategoryPro16 =
 export class ReferenceSalary16
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0016>
 {
-  // mapSituation(
-  //   args: Record<string, string | undefined>
-  // ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0016> {
-  //   return {
-
-  //   };
-  // }
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0016> {
+    const category = args[
+      "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle"
+    ] as CategoryPro16;
+    let driveInability: "definitive" | "temporary" | undefined = undefined;
+    if (category === "'Ouvriers'") {
+      const driveInabilityTemporary =
+        args[
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite"
+        ];
+      const driveInabilityDefinitive =
+        args[
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive"
+        ];
+      driveInability =
+        driveInabilityTemporary === "'Oui'" &&
+        driveInabilityDefinitive === "'Oui'"
+          ? "definitive"
+          : driveInabilityTemporary === "'Oui'"
+          ? "temporary"
+          : undefined;
+    }
+    return {
+      category,
+      driveInability,
+      hasVariablePay: true,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
 
   computeReferenceSalary(
     props: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0016>

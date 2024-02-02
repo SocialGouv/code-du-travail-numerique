@@ -5,15 +5,12 @@ import {
   PublicodesIndemniteLicenciementResult,
   PublicodesSimulator,
   References,
-  SeniorityFactory,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../../types";
 import {
   mapToPublicodesSituationForCalculation,
   mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues,
-  mapToPublicodesSituationForIndemniteLicenciementLegal,
 } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
@@ -35,10 +32,7 @@ import {
 } from "../../../common";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
-import {
-  getAgreementRequiredSeniority,
-  getAgreementSeniority,
-} from "../../../agreements/seniority";
+import { getAgreementSeniority } from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
 import { IndemniteLicenciementStepName } from "../../..";
@@ -156,7 +150,7 @@ const createResultStore: StoreSlice<
       );
     },
     getPublicodesResult: () => {
-      const refSalary = get().salairesData.input.refSalary;
+      const salaryPeriods = get().salairesData.input.salaryPeriods;
       const agreement = get().agreementData.input.agreement;
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
@@ -185,7 +179,7 @@ const createResultStore: StoreSlice<
             dateEntree,
             dateNotification,
             dateSortie,
-            refSalary,
+            salaryPeriods,
             isLicenciementInaptitude,
             longTermDisability
           ),
@@ -208,7 +202,7 @@ const createResultStore: StoreSlice<
           value: null,
         };
       let agreementSeniority: SeniorityResult;
-      let agreementRefSalary: number;
+      // let agreementRefSalary: number;
       let agreementReferences: References[];
       let agreementFormula: Formula;
       let isAgreementBetter = false;
@@ -231,10 +225,10 @@ const createResultStore: StoreSlice<
           get().informationsData.input.publicodesInformations
         );
 
-        agreementRefSalary = getAgreementReferenceSalary(
-          getSupportedAgreement(agreement.num),
-          get as StoreApi<MainStore>["getState"]
-        );
+        // agreementRefSalary = getAgreementReferenceSalary(
+        //   getSupportedAgreement(agreement.num),
+        //   get as StoreApi<MainStore>["getState"]
+        // );
 
         agreementSalaryExtraInfo = getAgreementExtraInfoSalary(
           getSupportedAgreement(agreement.num),
@@ -262,7 +256,7 @@ const createResultStore: StoreSlice<
           const situation = {
             ...mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
               agreement.num,
-              agreementRefSalary,
+              salaryPeriods,
               get().ancienneteData.input.dateNotification!,
               get().ancienneteData.input.dateEntree!,
               get().ancienneteData.input.dateSortie!,

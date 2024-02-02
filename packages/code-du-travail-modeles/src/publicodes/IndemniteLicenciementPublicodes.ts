@@ -3,9 +3,12 @@ import type { EvaluatedNode } from "publicodes";
 import type {
   RequiredSeniorityResult,
   SeniorityResult,
+} from "../modeles/common";
+import {
+  ReferenceSalaryFactory,
+  SeniorityFactory,
   SupportedCcIndemniteLicenciement,
 } from "../modeles/common";
-import { ReferenceSalaryFactory, SeniorityFactory } from "../modeles/common";
 import type { Publicodes } from "./Publicodes";
 import { PublicodesBase } from "./PublicodesBase";
 import type {
@@ -115,6 +118,25 @@ class IndemniteLicenciementPublicodes
         "contrat salarié . indemnité de licenciement . salaire de référence"
       ]
     ) {
+      const s = new ReferenceSalaryFactory().create(
+        SupportedCcIndemniteLicenciement.default
+      );
+      const value = s.computeReferenceSalary({
+        salaires: args.salaryPeriods ? JSON.parse(args.salaryPeriods) : [],
+      });
+      if (value) {
+        newArgs = {
+          ...newArgs,
+          "contrat salarié . indemnité de licenciement . salaire de référence":
+            value.toString(),
+        };
+      }
+    }
+    if (
+      !args[
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+      ]
+    ) {
       const s = new ReferenceSalaryFactory().create(this.idcc);
       const value = s.computeReferenceSalary(
         s.mapSituation
@@ -125,12 +147,15 @@ class IndemniteLicenciementPublicodes
                 : [],
             }
       );
-      newArgs = {
-        ...newArgs,
-        "contrat salarié . indemnité de licenciement . salaire de référence":
-          value.toString(),
-      };
+      if (value) {
+        newArgs = {
+          ...newArgs,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            value.toString(),
+        };
+      }
     }
+    console.log("newArgs", newArgs);
     delete newArgs.salaryPeriods;
     return super.setSituation(newArgs, targetRule);
   }
