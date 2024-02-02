@@ -48,7 +48,7 @@ class IndemniteLicenciementPublicodes
     return missingArg;
   }
 
-  throwMissingArg(
+  mapMissingArg(
     name: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
     return {
@@ -70,6 +70,7 @@ class IndemniteLicenciementPublicodes
     args: Record<string, string | undefined>,
     targetRule?: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+    console.log(args);
     let newArgs = args;
     const missingArg = this.getMissingArg(args, [
       "contrat salarié . indemnité de licenciement . date d'entrée",
@@ -77,22 +78,29 @@ class IndemniteLicenciementPublicodes
       "contrat salarié . indemnité de licenciement . date de notification",
     ]);
     if (missingArg) {
-      return this.throwMissingArg(missingArg);
+      return this.mapMissingArg(missingArg);
     }
     if (
       !args["contrat salarié . indemnité de licenciement . ancienneté en année"]
     ) {
-      const s = new SeniorityFactory().create(this.idcc);
-      const { value, extraInfos }: SeniorityResult = s.computeSeniority(
-        s.mapSituation(args)
+      const agreement = new SeniorityFactory().create(this.idcc);
+      const agreementSeniority: SeniorityResult = agreement.computeSeniority(
+        agreement.mapSituation(args)
+      );
+      const legal = new SeniorityFactory().create(
+        SupportedCcIndemniteLicenciement.default
+      );
+      const legalSeniority: SeniorityResult = legal.computeSeniority(
+        legal.mapSituation(args)
       );
       newArgs = {
         ...newArgs,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-          value.toString(),
+          agreementSeniority.value.toString(),
         "contrat salarié . indemnité de licenciement . ancienneté en année":
-          value.toString(),
-        ...extraInfos,
+          legalSeniority.value.toString(),
+        ...legalSeniority.extraInfos,
+        ...agreementSeniority.extraInfos,
       };
     }
     if (
@@ -100,16 +108,22 @@ class IndemniteLicenciementPublicodes
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
       ]
     ) {
-      const s = new SeniorityFactory().create(this.idcc);
-      const { value }: RequiredSeniorityResult = s.computeRequiredSeniority(
-        s.mapRequiredSituation(args)
+      const agreement = new SeniorityFactory().create(this.idcc);
+      const agreementRequiredSeniority: RequiredSeniorityResult =
+        agreement.computeRequiredSeniority(
+          agreement.mapRequiredSituation(args)
+        );
+      const legal = new SeniorityFactory().create(
+        SupportedCcIndemniteLicenciement.default
       );
+      const legalRequiredSeniority: RequiredSeniorityResult =
+        legal.computeRequiredSeniority(legal.mapRequiredSituation(args));
       newArgs = {
         ...newArgs,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-          value.toString(),
+          agreementRequiredSeniority.value.toString(),
         "contrat salarié . indemnité de licenciement . ancienneté requise en année":
-          value.toString(),
+          legalRequiredSeniority.value.toString(),
       };
     }
     delete newArgs.absencePeriods;
