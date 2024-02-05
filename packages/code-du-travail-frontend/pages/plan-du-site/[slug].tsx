@@ -39,7 +39,7 @@ function ContributionList({
                 {contributions.map((c) => (
                   <StyledLi key={c.slug}>
                     <Link
-                      href={`/${getRouteBySource(SOURCES.TOOLS)}/${c.slug}`}
+                      href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${c.slug}`}
                     >
                       {c.title}
                     </Link>
