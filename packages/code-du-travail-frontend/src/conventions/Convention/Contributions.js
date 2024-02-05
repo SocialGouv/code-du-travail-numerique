@@ -5,9 +5,7 @@ import React from "react";
 import styled from "styled-components";
 import Mdx from "../../common/Mdx";
 import References from "../../common/References";
-import { trackAccordionPanelState } from "./utils";
 import rehypeToReact from "../../contributions/rehypeToReact";
-import { AccordionContentContribution } from "./AccordionContentContribution";
 
 const { spacings } = theme;
 
@@ -40,21 +38,19 @@ function Contributions({ contributions, convention }) {
     .map((theme) => {
       return {
         body: (
-          <Accordion
-            titleLevel={4}
-            items={contributionsByTheme[theme].map((item) => ({
-              body:
-                "type" in item // Pour detecter si c'est une nouvelle contribution
-                  ? AccordionContentContribution(item)
-                  : AccordionContent(item),
-              id: item.slug,
-              title: item.question ?? item.questionName,
-            }))}
-            onChange={trackAccordionPanelState(
-              convention.shortTitle,
-              "pagecc_clickcontrib"
-            )}
-          />
+          <ul>
+            {contributionsByTheme[theme].map((item) => (
+              <li key={item.slug}>
+                <Link
+                  href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${
+                    item.slug
+                  }`}
+                >
+                  {item.question ?? item.questionName}
+                </Link>
+              </li>
+            ))}
+          </ul>
         ),
         title: theme,
       };
