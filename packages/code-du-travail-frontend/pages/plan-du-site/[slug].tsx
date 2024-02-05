@@ -34,12 +34,20 @@ function ContributionList({
           <PageTitle>Fiches pratiques : {contribGeneric.title}</PageTitle>
           <Wrapper variant="main">
             <StyledSection>
-              <Link href={contribGeneric.slug}>{contribGeneric.title}</Link>
+              <Link
+                href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${
+                  contribGeneric.slug
+                }`}
+              >
+                {contribGeneric.title}
+              </Link>
               <ul>
                 {contributions.map((c) => (
                   <StyledLi key={c.slug}>
                     <Link
-                      href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${c.slug}`}
+                      href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${
+                        c.slug
+                      }`}
                     >
                       {c.title}
                     </Link>
@@ -72,7 +80,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   return {
     props: {
       contribGeneric: contribGeneric,
-      contributions: result.slice(1).sort((a, b) => a.title.localeCompare(b.title)) ,
+      contributions: result
+        .slice(1)
+        .sort((a, b) => a.title.localeCompare(b.title)),
     },
   };
 };
