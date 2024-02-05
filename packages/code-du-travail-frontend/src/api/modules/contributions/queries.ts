@@ -59,6 +59,8 @@ export function getContributionsBySlugs(slugs: string[]) {
       "breadcrumbs",
       "source",
       "cdtnId",
+      "idcc",
+      "ccSupported",
     ],
     query: {
       bool: {
@@ -98,17 +100,3 @@ export function getContributionsByIds(ids: string[]) {
   };
 }
 
-export const getAllContributionBySlug = (slug: string) => {
-  return {
-    query: {
-      bool: {
-        filter: [
-          { term: { slug } },
-          { term: { source: SOURCES.CONTRIBUTIONS } },
-          { term: { isPublished: true } },
-        ],
-      },
-    },
-    size: 1,
-  };
-};

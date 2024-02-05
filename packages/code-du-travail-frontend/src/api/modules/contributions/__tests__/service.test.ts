@@ -1,7 +1,7 @@
 import {
-  getGenericContributionsGroupByThemes,
-  getBySlugsContributions,
   getByIdsContributions,
+  getBySlugsContributions,
+  getGenericContributionsGroupByThemes,
   getGenericsContributions,
 } from "../service";
 

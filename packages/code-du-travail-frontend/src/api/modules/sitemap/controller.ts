@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
-import { getSitemapData } from "./service";
+import { getContributionSitemapData, getSitemapData } from "./service";
 
 export class SitemapController {
   private req: NextApiRequest;
@@ -14,6 +14,23 @@ export class SitemapController {
   public async get() {
     try {
       const response = await getSitemapData();
+      this.res.status(200).json(response);
+    } catch (error) {
+      if (error instanceof NotFoundError) {
+        this.res.status(404).json({ message: error.message });
+      } else {
+        this.res.status(500).json({
+          message: DEFAULT_ERROR_500_MESSAGE,
+        });
+      }
+    }
+  }
+
+  public async getAllContributionsMatchingSlug() {
+    const { slug } = this.req.query;
+
+    try {
+      const response = await getContributionSitemapData(slug as string);
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {

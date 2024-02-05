@@ -7,15 +7,15 @@ import {
 } from "@socialgouv/cdtn-ui";
 import * as Sentry from "@sentry/nextjs";
 import React from "react";
-import Metas from "../src/common/Metas";
-import { Layout } from "../src/layout/Layout";
+import Metas from "../../src/common/Metas";
+import { Layout } from "../../src/layout/Layout";
 import styled from "styled-components";
 import Link from "next/link";
-import { getSitemapData, GetSitemapPage } from "../src/api";
+import { getSitemapData, GetSitemapPage } from "../../src/api";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { REVALIDATE_TIME, SITE_URL } from "../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
 
-const PlanDuSite = ({
+const Index = ({
   tools,
   modeles,
   contributions,
@@ -188,22 +188,18 @@ export async function getStaticProps() {
   };
 }
 
-const StyledSection = styled.div`
-  display: flex;
-  flex-direction: column;
+export const StyledSection = styled.div`
   margin-top: ${theme.spacings.base};
 `;
 
-const StyledLi = styled.li`
-  margin: 5px 0;
+export const StyledLi = styled.li`
+  font-size: ${theme.fonts.sizes.small};
+
   a {
-    font-size: ${theme.fonts.sizes.small};
     font-weight: 400;
+    display: block;
     padding: 5px 0;
-  }
-  ::marker {
-    font-size: 12px;
   }
 `;
 
-export default PlanDuSite;
+export default Index;

@@ -1,13 +1,12 @@
-import { ElasticSearchItem } from "@socialgouv/cdtn-utils";
 import {
-  elasticsearchClient,
-  elasticDocumentsIndex,
-  NotFoundError,
-} from "../../utils";
+  ElasticSearchContributionGeneric,
+  ElasticSearchItem,
+} from "@socialgouv/cdtn-utils";
+import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import {
   getAllGenericsContributions,
-  getContributionsBySlugs,
   getContributionsByIds,
+  getContributionsBySlugs,
 } from "./queries";
 
 export const getGenericContributionsGroupByThemes = async () => {
@@ -38,7 +37,7 @@ export const getGenericsContributions = async () => {
 
 export const getBySlugsContributions = async (
   slugs: string[]
-): Promise<ElasticSearchItem[]> => {
+): Promise<ElasticSearchContributionGeneric[]> => {
   const body = getContributionsBySlugs(slugs);
   const response = await elasticsearchClient.search({
     body,
