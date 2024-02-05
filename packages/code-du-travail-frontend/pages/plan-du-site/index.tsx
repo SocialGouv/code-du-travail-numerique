@@ -68,11 +68,7 @@ const Index = ({
               <ul>
                 {contributions.map((contribution) => (
                   <StyledLi key={contribution.slug}>
-                    <Link
-                      href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${
-                        contribution.slug
-                      }`}
-                    >
+                    <Link href={`/plan-du-site/${contribution.slug}`}>
                       {contribution.title}
                     </Link>
                   </StyledLi>
