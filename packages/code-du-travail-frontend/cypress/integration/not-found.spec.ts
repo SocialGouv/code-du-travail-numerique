@@ -1,14 +1,4 @@
 describe("Not found", () => {
-  it("page should returns 404", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
-
   it("page should show valid page to user", () => {
     cy.visit("/banane", { failOnStatusCode: false });
     cy.get("main").should("contain", "ERREUR 404");
@@ -44,6 +34,16 @@ describe("Not found", () => {
         }).then((response) => {
           expect(response.status).to.equal(404);
         });
+      });
+    });
+
+    it("page /widgets/preavis-demission should returns 404", () => {
+      cy.request({
+        failOnStatusCode: false,
+        method: "GET",
+        url: "/widgets/preavis-demission",
+      }).then((response) => {
+        expect(response.status).to.equal(404);
       });
     });
   });
