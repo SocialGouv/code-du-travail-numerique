@@ -27,6 +27,22 @@ export type CC1486ReferenceSalaryProps = {
 export class ReferenceSalary1486
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1486>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1486> {
+    return {
+      catPro: args[
+        "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle"
+      ] as CatPro1486,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+      typeLicenciement: args[
+        "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement"
+      ] as TypeLicenciement1486,
+    };
+  }
+
   /**
    * Règle :
    * ETAM, Ingénieurs et Cadres - Autres licenciements :

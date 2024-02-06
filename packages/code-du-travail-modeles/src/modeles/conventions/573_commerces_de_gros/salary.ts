@@ -26,6 +26,26 @@ export type CC573ReferenceSalaryProps = {
 export class ReferenceSalary573
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0573>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0573> {
+    return {
+      licenciementEco: args[
+        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique"
+      ] as QuestionOuiNon,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
+  removeSpecificSituation(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    delete args.licenciementEco;
+    return args;
+  }
+
   /**
    * Règle :
    * - si le licenciement est pour des raisons économiques

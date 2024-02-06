@@ -14,6 +14,26 @@ export type CC1740ReferenceSalaryProps = {
 export class ReferenceSalary1740
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1740>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1740> {
+    return {
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+      salairesPendantPreavis: args.noticeSalaryPeriods
+        ? JSON.parse(args.noticeSalaryPeriods)
+        : [],
+    };
+  }
+
+  removeSpecificSituation(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    delete args.noticeSalaryPeriods;
+    return args;
+  }
+
   /**
    * - soit (S + ((P/12)*3))/3
    * S : total des salaires perçus lors des 3 derniers mois précédant le jour de l'envoi de la lettre de licenciement (brut) (brut)

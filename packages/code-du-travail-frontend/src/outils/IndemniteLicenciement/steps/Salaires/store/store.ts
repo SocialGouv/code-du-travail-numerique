@@ -59,11 +59,15 @@ const createSalairesStore: StoreSlice<
         month: v,
         value: undefined,
       }));
-      const salaryPeriods = deepMergeArray(
+      let salaryPeriods = deepMergeArray(
         p,
         get().salairesData.input.salaryPeriods,
         "month"
-      );
+      ).map(({ month, prime, value }) => ({
+        month,
+        value: value ?? 0,
+        prime: prime ?? 0,
+      }));
       set(
         produce((state: SalairesStoreSlice) => {
           state.salairesData.input.salaryPeriods = salaryPeriods;
@@ -92,7 +96,12 @@ const createSalairesStore: StoreSlice<
       }
     },
     onSalariesChange: (value) => {
-      applyGenericValidation(get, set, "salaryPeriods", value);
+      const salaryPeriods = value.map(({ month, prime, value }) => ({
+        month,
+        value: value ?? 0,
+        prime: prime ?? 0,
+      }));
+      applyGenericValidation(get, set, "salaryPeriods", salaryPeriods);
     },
     onChangeSalary(value) {
       applyGenericValidation(get, set, "salary", value);

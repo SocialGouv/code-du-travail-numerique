@@ -14,6 +14,24 @@ export type CC2614ReferenceSalaryProps = {
 export class ReferenceSalary2614
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2614>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2614> {
+    return {
+      hasVariablePay: args.hasVariablePay === "oui",
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
+  removeSpecificSituation(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    delete args.hasVariablePay;
+    return args;
+  }
+
   /**
    * Règle :
    * Si le salaire n'est pas variable

@@ -10,6 +10,7 @@ import {
 } from "./types";
 import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: Agreement16StoreData = {
   input: {
@@ -22,16 +23,20 @@ const initialState: Agreement16StoreData = {
 
 export const createAgreement16StoreSalaires: StoreSlice<
   Agreement16StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice & CommonInformationsStoreSlice
+  SalairesStoreSlice &
+    AncienneteStoreSlice &
+    CommonInformationsStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   agreement16Data: { ...initialState },
   agreement16Function: {
     onInit: () => {
-      const categoryPro = get().informationsData.input.publicodesInformations.find(
-        (item) =>
-          item.question.name ===
-          "contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle"
-      )?.info;
+      const categoryPro =
+        get().informationsData.input.publicodesInformations.find(
+          (item) =>
+            item.question.name ===
+            "contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle"
+        )?.info;
       set(
         produce((state: Agreement16StoreSlice) => {
           state.agreement16Data.input.showVariablePay =
@@ -42,6 +47,7 @@ export const createAgreement16StoreSalaires: StoreSlice<
       );
     },
     onChangeHasVariablePay: (value) => {
+      get().situationFunction.onSituationChange("hasVariablePay", value);
       applyGenericValidation(get, set, "hasVariablePay", value);
     },
   },

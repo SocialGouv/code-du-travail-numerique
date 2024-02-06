@@ -8,6 +8,7 @@ import {
   Agreement2609StoreSlice,
 } from "./types";
 import { validateStep } from "./validator";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: Agreement2609StoreData = {
   input: {},
@@ -18,11 +19,12 @@ const initialState: Agreement2609StoreData = {
 
 export const createAgreement2609StoreSalaires: StoreSlice<
   Agreement2609StoreSlice,
-  SalairesStoreSlice
+  SalairesStoreSlice & CommonSituationStoreSlice
 > = (set, get) => ({
   agreement2609Data: { ...initialState },
   agreement2609Function: {
     onChangeHasVariablePay: (value) => {
+      get().situationFunction.onSituationChange("hasVariablePay", value);
       applyGenericValidation(get, set, "hasVariablePay", value);
     },
   },

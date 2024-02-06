@@ -13,6 +13,7 @@ import {
 } from "./types";
 import { validateStep } from "./validator";
 import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: Agreement1516StoreData = {
   input: {
@@ -25,7 +26,10 @@ const initialState: Agreement1516StoreData = {
 
 export const createAgreement1516StoreSalaires: StoreSlice<
   Agreement1516StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice & ContratTravailStoreSlice
+  SalairesStoreSlice &
+    AncienneteStoreSlice &
+    ContratTravailStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   agreement1516Data: { ...initialState },
   agreement1516Function: {
@@ -74,6 +78,10 @@ export const createAgreement1516StoreSalaires: StoreSlice<
       get().agreement1516Function.onInit();
     },
     onSalariesChange: (value) => {
+      get().situationFunction.onSituationChange(
+        "noticeSalaryPeriods",
+        JSON.stringify(value)
+      );
       applyGenericValidation(get, set, "noticeSalaryPeriods", value);
     },
   },

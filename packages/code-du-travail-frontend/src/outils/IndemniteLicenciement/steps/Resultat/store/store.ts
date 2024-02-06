@@ -44,6 +44,7 @@ import {
 import { push as matopush } from "@socialgouv/matomo-next";
 import getSupportedCcIndemniteLicenciement from "../../../common/usecase/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: ResultStoreData = {
   input: {
@@ -87,7 +88,8 @@ const createResultStore: StoreSlice<
     ContratTravailStoreSlice &
     SalairesStoreSlice &
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
-    CommonInformationsStoreSlice
+    CommonInformationsStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   resultData: {
     ...initialState,
@@ -174,7 +176,7 @@ const createResultStore: StoreSlice<
       const absencePeriods = get().ancienneteData.input.absencePeriods;
 
       try {
-        publicodesSituationLegal = publicodes.calculate({
+        const situationLegal = {
           ...mapToPublicodesSituationForCalculation(
             dateEntree,
             dateNotification,
@@ -187,7 +189,8 @@ const createResultStore: StoreSlice<
             absencePeriods && absencePeriods.length
               ? JSON.stringify(absencePeriods)
               : undefined,
-        }).result;
+        };
+        publicodesSituationLegal = publicodes.calculate(situationLegal).result;
       } catch (e) {
         errorPublicodes = true;
         Sentry.captureException(e);
@@ -268,6 +271,7 @@ const createResultStore: StoreSlice<
               absencePeriods && absencePeriods.length
                 ? JSON.stringify(absencePeriods)
                 : undefined,
+            ...get().situationData.situation,
           };
           publicodesSituationConventionnel = publicodes.calculate(
             situation,

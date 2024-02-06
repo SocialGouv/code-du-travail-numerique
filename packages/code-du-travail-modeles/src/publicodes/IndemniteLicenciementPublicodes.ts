@@ -168,9 +168,12 @@ class IndemniteLicenciementPublicodes
             value.toString(),
         };
       }
+      if (s.removeSpecificSituation) {
+        newArgs = s.removeSpecificSituation(newArgs);
+      }
     }
-    console.log("newArgs", newArgs);
     delete newArgs.salaryPeriods;
+    console.log("newArgs", newArgs);
     return super.setSituation(newArgs, targetRule);
   }
 

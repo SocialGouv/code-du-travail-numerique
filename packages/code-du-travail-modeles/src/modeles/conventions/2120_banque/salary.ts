@@ -1,12 +1,11 @@
 import { ReferenceSalaryLegal } from "../../base";
 import type {
   IReferenceSalary,
-  QuestionOuiNon,
   ReferenceSalaryProps,
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
-import { rankByMonthArrayDescFrench } from "../../common";
+import { QuestionOuiNon, rankByMonthArrayDescFrench } from "../../common";
 
 export type CC2120ReferenceSalaryProps = {
   salaires: SalaryPeriods[];
@@ -18,6 +17,39 @@ export type CC2120ReferenceSalaryProps = {
 export class ReferenceSalary2120
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2120>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2120> {
+    const isLicenciementInaptitude = args.licenciementInaptitude === "oui";
+    const isLicenciementDisciplinaire = args[
+      "contrat salarié . convention collective . banque . licenciement disciplinaire"
+    ] as QuestionOuiNon;
+    const isLicenciementEco = args[
+      "contrat salarié . convention collective . banque . licenciement économique"
+    ] as QuestionOuiNon;
+    return {
+      isLicenciementDisciplinaire: isLicenciementInaptitude
+        ? QuestionOuiNon.non
+        : isLicenciementDisciplinaire,
+      isLicenciementEco: isLicenciementInaptitude
+        ? QuestionOuiNon.non
+        : isLicenciementEco,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+      salariesVariablePart: args.salariesVariablePart
+        ? parseInt(args.salariesVariablePart)
+        : 0,
+    };
+  }
+
+  removeSpecificSituation(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    delete args.noticeSalaryPeriods;
+    return args;
+  }
+
   computeReferenceSalary({
     salaires,
     salariesVariablePart,

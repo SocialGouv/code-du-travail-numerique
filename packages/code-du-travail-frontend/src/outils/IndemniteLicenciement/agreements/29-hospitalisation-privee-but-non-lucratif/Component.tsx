@@ -4,7 +4,6 @@ import {
   IndemniteLicenciementContext,
   useIndemniteLicenciementStore,
 } from "../../store";
-import { icons } from "@socialgouv/cdtn-ui";
 
 export default function Agreement29() {
   const store = useContext(IndemniteLicenciementContext);

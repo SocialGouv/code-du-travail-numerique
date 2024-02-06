@@ -14,6 +14,24 @@ export type CC2609ReferenceSalaryProps = {
 export class ReferenceSalary2609
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2609>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2609> {
+    return {
+      hasVariablePay: args.hasVariablePay === "oui",
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
+  removeSpecificSituation(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    delete args.hasVariablePay;
+    return args;
+  }
+
   computeReferenceSalary({
     hasVariablePay,
     salaires,

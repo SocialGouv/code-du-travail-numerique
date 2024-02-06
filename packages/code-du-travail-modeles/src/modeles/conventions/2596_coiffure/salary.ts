@@ -24,6 +24,29 @@ export type CC2596ReferenceSalaryProps = {
 export class ReferenceSalary2596
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2596>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2596> {
+    return {
+      catPro: args[
+        "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle"
+      ] as CatPro2596,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+      salairesPendantPreavis: args.noticeSalaryPeriods
+        ? JSON.parse(args.noticeSalaryPeriods)
+        : [],
+    };
+  }
+
+  removeSpecificSituation(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    delete args.noticeSalaryPeriods;
+    return args;
+  }
+
   computeReferenceSalary({
     salaires = [],
     salairesPendantPreavis = [],

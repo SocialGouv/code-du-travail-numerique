@@ -50,11 +50,18 @@ export class ReferenceSalary16
     return {
       category,
       driveInability,
-      hasVariablePay: true,
+      hasVariablePay: args.hasVariablePay === "oui",
       salaires: args.salaryPeriods
         ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
         : [],
     };
+  }
+
+  removeSpecificSituation(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    delete args.hasVariablePay;
+    return args;
   }
 
   computeReferenceSalary(

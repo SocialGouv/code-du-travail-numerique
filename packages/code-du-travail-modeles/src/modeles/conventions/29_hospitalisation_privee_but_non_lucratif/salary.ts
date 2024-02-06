@@ -22,6 +22,33 @@ export enum CategoryPro29 {
 export class ReferenceSalary0029
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0029>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0029> {
+    const category =
+      args[
+        "contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle"
+      ] ?? "";
+    return {
+      bestSalariesTotal:
+        args.hasSixBestSalaries === "oui"
+          ? Number(args.sixBestSalariesTotal)
+          : undefined,
+      professionalCategory: category,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
+  removeSpecificSituation(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    delete args.hasSixBestSalaries;
+    delete args.sixBestSalariesTotal;
+    return args;
+  }
+
   /**
    * Règle :
    * Pour la catégorie pro :

@@ -9,6 +9,7 @@ import {
 } from "./types";
 import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: Agreement2120StoreData = {
   input: {
@@ -22,7 +23,7 @@ const initialState: Agreement2120StoreData = {
 
 export const createAgreement2120StoreSalaires: StoreSlice<
   Agreement2120StoreSlice,
-  SalairesStoreSlice & CommonInformationsStoreSlice
+  SalairesStoreSlice & CommonInformationsStoreSlice & CommonSituationStoreSlice
 > = (set, get) => ({
   agreement2120Data: { ...initialState },
   agreement2120Function: {
@@ -44,13 +45,13 @@ export const createAgreement2120StoreSalaires: StoreSlice<
       );
     },
     onChangeSalariesVariablePart: (value: string) => {
-      const valueNumber = parseInt(value, 10);
-      applyGenericValidation(
-        get,
-        set,
+      const number = parseInt(value, 10);
+      const valueNumber = isNaN(number) ? undefined : number;
+      get().situationFunction.onSituationChange(
         "salariesVariablePart",
-        isNaN(valueNumber) ? undefined : valueNumber
+        valueNumber ? valueNumber.toString() : ""
       );
+      applyGenericValidation(get, set, "salariesVariablePart", valueNumber);
     },
   },
 });
