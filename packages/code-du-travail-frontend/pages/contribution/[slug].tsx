@@ -56,6 +56,17 @@ const buildTitleAndDescription = (
     title,
   };
 };
+const IDCC_WITH_SHORT_NAMES = ["2120", "1480", "3248", "292", "2511", "2148"];
+const getTitleFromNewContrib = (contribution) => {
+  if (
+    !IDCC_WITH_SHORT_NAMES.includes(contribution.idcc) ||
+    contribution.title.length > 50
+  ) {
+    return contribution.title;
+  }
+
+  return `${contribution.ccnShortTitle}: ${contribution.title}`;
+};
 
 function PageContribution(props: Props): React.ReactElement {
   let metas: any = {};
@@ -82,7 +93,7 @@ function PageContribution(props: Props): React.ReactElement {
         <>
           <Metas title={metas.title} description={metas.description} />
           <Answer
-            title={props.contribution.title}
+            title={getTitleFromNewContrib(props.contribution)}
             breadcrumbs={props.contribution.breadcrumbs}
           >
             {props.contribution.idcc === "0000" ? (
