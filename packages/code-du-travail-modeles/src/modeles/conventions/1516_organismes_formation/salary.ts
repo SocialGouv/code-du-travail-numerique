@@ -17,7 +17,6 @@ export class ReferenceSalary1516
   mapSituation(
     args: Record<string, string | undefined>
   ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1516> {
-    console.log("args", args);
     return {
       salaires: args.salaryPeriods
         ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])

@@ -20,10 +20,7 @@ import produce from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
-import {
-  getAgreementExtraInfoSalary,
-  getAgreementReferenceSalary,
-} from "../../../agreements";
+import { getAgreementExtraInfoSalary } from "../../../agreements";
 import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
 import {
   AgreementInformation,
@@ -205,7 +202,6 @@ const createResultStore: StoreSlice<
           value: null,
         };
       let agreementSeniority: SeniorityResult;
-      // let agreementRefSalary: number;
       let agreementReferences: References[];
       let agreementFormula: Formula;
       let isAgreementBetter = false;
@@ -227,11 +223,6 @@ const createResultStore: StoreSlice<
         const infos = informationToSituation(
           get().informationsData.input.publicodesInformations
         );
-
-        // agreementRefSalary = getAgreementReferenceSalary(
-        //   getSupportedAgreement(agreement.num),
-        //   get as StoreApi<MainStore>["getState"]
-        // );
 
         agreementSalaryExtraInfo = getAgreementExtraInfoSalary(
           getSupportedAgreement(agreement.num),

@@ -103,10 +103,6 @@ const createSalairesStore: StoreSlice<
       if (isValid) {
         const salaryInput = get().salairesData.input;
 
-        // const sReference = new ReferenceSalaryFactory().create(
-        //   SupportedCcIndemniteLicenciement.default
-        // );
-
         let salaries = salaryInput.salaryPeriods;
 
         const { salary } = salaryInput;
@@ -123,10 +119,6 @@ const createSalairesStore: StoreSlice<
             })
           );
         }
-
-        // const refSalary = sReference.computeReferenceSalary({
-        //   salaires: salaries,
-        // });
       }
 
       const agreement = get().agreementData.input.agreement;

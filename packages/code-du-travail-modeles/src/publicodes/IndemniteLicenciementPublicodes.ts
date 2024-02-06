@@ -70,7 +70,6 @@ class IndemniteLicenciementPublicodes
     args: Record<string, string | undefined>,
     targetRule?: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
-    console.log(args);
     let newArgs = args;
     const missingArg = this.getMissingArg(args, [
       "contrat salarié . indemnité de licenciement . date d'entrée",
@@ -173,7 +172,6 @@ class IndemniteLicenciementPublicodes
       }
     }
     delete newArgs.salaryPeriods;
-    console.log("newArgs", newArgs);
     return super.setSituation(newArgs, targetRule);
   }
 
