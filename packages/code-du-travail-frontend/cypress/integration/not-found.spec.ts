@@ -37,7 +37,7 @@ describe("Not found", () => {
       });
     });
 
-    it("page /widgets/preavis-demission should returns 404", () => {
+    it("page /widgets/simulateur-embauche should returns 404", () => {
       cy.request({
         failOnStatusCode: false,
         method: "GET",
