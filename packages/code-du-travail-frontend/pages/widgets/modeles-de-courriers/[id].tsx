@@ -4,10 +4,8 @@ import { SITE_URL } from "../../../src/config";
 import { LetterModel, LetterModelProps } from "../../../src/modeles";
 import { handleError } from "../../../src/lib/fetch-error";
 import styled from "styled-components";
-import { theme, Paragraph, Wrapper, PageTitle } from "@socialgouv/cdtn-ui";
+import { PageTitle, Paragraph, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import { LogoLink } from "../../../src/widgets";
-import Html from "../../../src/common/Html";
-import { isHTML } from "../../../src/lib";
 
 function Widgets(props: LetterModelProps): JSX.Element {
   useIframeResizer();
@@ -26,11 +24,7 @@ function Widgets(props: LetterModelProps): JSX.Element {
         <LogoLink></LogoLink>
       </StyledHeader>
       <IntroWrapper variant="dark">
-        {isHTML(props.description) ? (
-          <Html>{props.description}</Html>
-        ) : (
-          <Paragraph noMargin>{props.description}</Paragraph>
-        )}
+        <Paragraph noMargin>{props.description}</Paragraph>
       </IntroWrapper>
       <LetterModel {...props} />
     </>
@@ -73,6 +67,7 @@ const StyledHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   header {
     margin: 0;
   }
@@ -80,6 +75,7 @@ const StyledHeader = styled.div`
 
 const StyledTitle = styled(PageTitle)`
   flex: 1;
+
   h1 {
     font-size: ${fonts.sizes.headings.xmedium};
   }
