@@ -49,6 +49,7 @@ export const createAgreement2596StoreSalaires: StoreSlice<
           categoryPro !== "'Agents de maîtrise'") ||
         dateArretTravail
       ) {
+        get().situationFunction.onSituationChange("noticeSalaryPeriods", "[]");
         return set(
           produce((state: Agreement2596StoreSlice) => {
             state.agreement2596Data.input.noticeSalaryPeriods = [];

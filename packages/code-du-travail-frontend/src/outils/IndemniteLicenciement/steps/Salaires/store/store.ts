@@ -63,11 +63,7 @@ const createSalairesStore: StoreSlice<
         p,
         get().salairesData.input.salaryPeriods,
         "month"
-      ).map(({ month, prime, value }) => ({
-        month,
-        value: value ?? 0,
-        prime: prime ?? 0,
-      }));
+      );
       set(
         produce((state: SalairesStoreSlice) => {
           state.salairesData.input.salaryPeriods = salaryPeriods;
@@ -96,12 +92,7 @@ const createSalairesStore: StoreSlice<
       }
     },
     onSalariesChange: (value) => {
-      const salaryPeriods = value.map(({ month, prime, value }) => ({
-        month,
-        value: value ?? 0,
-        prime: prime ?? 0,
-      }));
-      applyGenericValidation(get, set, "salaryPeriods", salaryPeriods);
+      applyGenericValidation(get, set, "salaryPeriods", value);
     },
     onChangeSalary(value) {
       applyGenericValidation(get, set, "salary", value);
@@ -125,7 +116,6 @@ const createSalairesStore: StoreSlice<
           salaries = salaryInput.salaryPeriods.map((v) => ({
             ...v,
             value: parseSalary,
-            prime: undefined,
           }));
           set(
             produce((state: SalairesStoreSlice) => {

@@ -38,6 +38,8 @@ export class ReferenceSalary1672
     salaires,
     salairesPendantPreavis,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1672>): number {
+    console.log("salaires", salaires);
+    console.log("salairesPendantPreavis", salairesPendantPreavis);
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const rankedSalairesPendantPreavis = rankByMonthArrayDescFrench(
       salairesPendantPreavis

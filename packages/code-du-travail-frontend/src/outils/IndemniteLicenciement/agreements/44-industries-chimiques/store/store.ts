@@ -167,6 +167,10 @@ export const createAgreement44StoreSalaires: StoreSlice<
       ]);
     },
     onChangeLastMonthSalary: (value) => {
+      get().situationFunction.onSituationChange(
+        "lastMonthSalary",
+        JSON.stringify(value)
+      );
       applyGenericValidation(get, set, [
         { paramName: "lastMonthSalary", value },
       ]);
