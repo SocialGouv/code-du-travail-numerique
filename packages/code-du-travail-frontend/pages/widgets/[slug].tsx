@@ -9,6 +9,7 @@ import {
   AgreementSearch,
   CalculateurIndemnite,
   DismissalProcess,
+  DureePreavisDemission,
   DureePreavisLicenciement,
   DureePreavisRetraite,
   fetchTool,
@@ -24,6 +25,7 @@ const toolsBySlug = {
   "indemnite-licenciement": CalculateurIndemnite,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "convention-collective": AgreementSearch,
+  "preavis-demission": DureePreavisDemission,
 };
 const allowedSlugs = Object.keys(toolsBySlug);
 

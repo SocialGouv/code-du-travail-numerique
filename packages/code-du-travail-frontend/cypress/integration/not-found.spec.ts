@@ -41,7 +41,7 @@ describe("Not found", () => {
       cy.request({
         failOnStatusCode: false,
         method: "GET",
-        url: "/widgets/preavis-demission",
+        url: "/widgets/simulateur-embauche",
       }).then((response) => {
         expect(response.status).to.equal(404);
       });
