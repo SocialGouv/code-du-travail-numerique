@@ -1,4 +1,10 @@
-import { Accordion, Alert, Table as UITable, theme } from "@socialgouv/cdtn-ui";
+import {
+  Accordion,
+  Alert,
+  Heading,
+  Table as UITable,
+  theme,
+} from "@socialgouv/cdtn-ui";
 
 import styled from "styled-components";
 import { FicheServicePublic } from "../fiche-service-public";
@@ -10,12 +16,15 @@ import parse, {
 } from "html-react-parser";
 import { xssWrapper } from "../lib";
 
-export const ContentSP = ({ raw }) => {
+export const ContentSP = ({ raw, titleLevel }) => {
   return (
     <>
       {raw && (
         <StyledContent>
-          <FicheServicePublic data={JSON.parse(raw).children} />
+          <FicheServicePublic
+            data={JSON.parse(raw).children}
+            headingLevel={titleLevel}
+          />
         </StyledContent>
       )}
     </>
@@ -37,13 +46,13 @@ const mapItem = (titleLevel: number, domNode: Element, summary: Element) => ({
     trim: true,
   }),
 });
-const mapToAccordion = (titleLevel: number, items) => (
-  <StyledAccordion
-    titleLevel={titleLevel}
-    data-testid="contrib-accordion"
-    items={items}
-  />
-);
+const mapToAccordion = (titleLevel: number, items) => {
+  const props = titleLevel <= 6 ? { titleLevel: titleLevel } : {};
+
+  return (
+    <StyledAccordion {...props} data-testid="contrib-accordion" items={items} />
+  );
+};
 
 function getFirstElementChild(domNode: Element) {
   let child = domNode.children.shift();
@@ -115,79 +124,96 @@ function getItem(domNode: Element, titleLevel: number) {
   }
 }
 
-const options = (titleLevel: number): HTMLReactParserOptions => ({
-  replace(domNode) {
-    if (domNode instanceof Element) {
-      if (domNode.name === "p" && !domNode.children.length) {
-        return <br />;
-      }
-      if (domNode.name === "h3") {
-        titleLevel = 4;
-      }
-      if (domNode.name === "details") {
-        const items: any[] = [];
-        const item = getItem(domNode, titleLevel);
-        if (item) {
-          items.push(item);
+function renderChildrenWithNoTrim(domNode) {
+  return domToReact(domNode.children as DOMNode[]);
+}
+
+const getHeadingElement = (titleLevel: number, domNode) => {
+  return titleLevel <= 6 ? (
+    <Heading as={`h${titleLevel}`}>{renderChildrenWithNoTrim(domNode)}</Heading>
+  ) : (
+    <strong>{renderChildrenWithNoTrim(domNode)}</strong>
+  );
+};
+
+const options = (titleLevel: number): HTMLReactParserOptions => {
+  let accordionTitle = titleLevel;
+
+  return {
+    replace(domNode) {
+      if (domNode instanceof Element) {
+        if (domNode.name === "span" && domNode.attribs.class === "title") {
+          accordionTitle = titleLevel + 1;
+          return getHeadingElement(titleLevel, domNode);
         }
-        let next = getNextFirstElement(domNode);
-        while (next && next.name === "details") {
-          const item = getItem(next, titleLevel);
+        if (domNode.name === "span" && domNode.attribs.class === "sub-title") {
+          accordionTitle = titleLevel + 1;
+          return getHeadingElement(titleLevel + 1, domNode);
+        }
+        if (domNode.name === "details") {
+          const items: any[] = [];
+          const item = getItem(domNode, accordionTitle);
           if (item) {
             items.push(item);
           }
-          next = getNextFirstElement(next);
+          let next = getNextFirstElement(domNode);
+          while (next && next.name === "details") {
+            const item = getItem(next, accordionTitle);
+            if (item) {
+              items.push(item);
+            }
+            next = getNextFirstElement(next);
+          }
+          return items.length ? mapToAccordion(accordionTitle, items) : <></>;
         }
-        return items.length ? mapToAccordion(titleLevel, items) : <></>;
-      }
-      if (domNode.name === "table") {
-        const tableContent = getFirstElementChild(domNode);
-        if (tableContent?.name === "tbody") {
-          return mapTbody(tableContent);
-        } else {
-          return domNode;
+        if (domNode.name === "table") {
+          const tableContent = getFirstElementChild(domNode);
+          if (tableContent?.name === "tbody") {
+            return mapTbody(tableContent);
+          } else {
+            return domNode;
+          }
+        }
+        if (domNode.name === "div" && domNode.attribs.class === "alert") {
+          return (
+            <Alert>
+              {domToReact(domNode.children as DOMNode[], { trim: true })}
+            </Alert>
+          );
+        }
+        if (domNode.name === "strong") {
+          // Disable trim on strong
+          return <strong>{renderChildrenWithNoTrim(domNode)}</strong>;
+        }
+        if (domNode.name === "em") {
+          // Disable trim on em
+          return <em>{renderChildrenWithNoTrim(domNode)}</em>;
+        }
+        if (domNode.name === "p") {
+          if (!domNode.children.length) {
+            return <br />;
+          }
+          // Disable trim on p
+          return <p>{renderChildrenWithNoTrim(domNode)}</p>;
         }
       }
-      if (domNode.name === "div" && domNode.attribs.class === "alert") {
-        return (
-          <Alert>
-            {domToReact(domNode.children as DOMNode[], { trim: true })}
-          </Alert>
-        );
-      }
-      if (domNode.name === "strong") {
-        // Disable trim on strong
-        return (
-          <strong>
-            {domToReact(domNode.children as DOMNode[], { trim: false })}
-          </strong>
-        );
-      }
-      if (domNode.name === "em") {
-        // Disable trim on em
-        return (
-          <em>{domToReact(domNode.children as DOMNode[], { trim: false })}</em>
-        );
-      }
-      if (domNode.name === "p") {
-        // Disable trim on p
-        return (
-          <p>{domToReact(domNode.children as DOMNode[], { trim: false })}</p>
-        );
-      }
-    }
-  },
-  trim: true,
-});
+    },
+    trim: true,
+  };
+};
 
 type Props = {
   content: string;
+  titleLevel: number;
 };
 const DisplayContentContribution = ({
   content,
+  titleLevel,
 }: Props): string | JSX.Element | JSX.Element[] => {
   return (
-    <ContentStyled>{parse(xssWrapper(content), options(3))}</ContentStyled>
+    <ContentStyled>
+      {parse(xssWrapper(content), options(titleLevel))}
+    </ContentStyled>
   );
 };
 
