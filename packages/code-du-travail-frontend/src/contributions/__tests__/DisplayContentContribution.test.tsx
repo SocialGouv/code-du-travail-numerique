@@ -2,43 +2,129 @@ import { render } from "@testing-library/react";
 import DisplayContentContribution from "../DisplayContentContribution";
 
 describe("DisplayContentContribution", () => {
-  it(`should return html`, () => {
-    const { asFragment } = render(
-      <DisplayContentContribution
-        content={`<p>hello</p>`}
-      ></DisplayContentContribution>
-    );
+  describe("Headings", () => {
+    it(`should replace span with class "title" and "sub-titles" with heading`, () => {
+      const { baseElement } = render(
+        <DisplayContentContribution
+          content={`<span class="title">Mon titre</span>
+                    <span class="sub-title">Mon sous titre</span>`}
+          titleLevel={2}
+        ></DisplayContentContribution>
+      );
 
-    expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <div
-        class="sc-ERObt zXiiV"
-      >
-        <p>
-          hello
-        </p>
-      </div>
-    `);
+      expect(baseElement.firstChild).toMatchInlineSnapshot(`
+        <div>
+          <div
+            class="sc-ERObt zXiiV"
+          >
+            <h2
+              class="sc-kAyceB dvmaTz"
+              data-testid="heading"
+            >
+              Mon titre
+            </h2>
+            <h3
+              class="sc-kAyceB dvmaTz"
+              data-testid="heading"
+            >
+              Mon sous titre
+            </h3>
+          </div>
+        </div>
+      `);
+    });
+    it(`should replace span with with heading according to given title level`, () => {
+      const { baseElement } = render(
+        <DisplayContentContribution
+          content={`<span class="title">Mon title</span><span class="sub-title">Mon title</span>`}
+          titleLevel={4}
+        ></DisplayContentContribution>
+      );
+
+      expect(baseElement.firstChild).toMatchInlineSnapshot(`
+        <div>
+          <div
+            class="sc-ERObt zXiiV"
+          >
+            <h4
+              class="sc-kAyceB dvmaTz"
+              data-testid="heading"
+            >
+              Mon title
+            </h4>
+            <h5
+              class="sc-kAyceB dvmaTz"
+              data-testid="heading"
+            >
+              Mon title
+            </h5>
+          </div>
+        </div>
+      `);
+    });
+    it(`should not add headings higher than h6 for titles`, () => {
+      const { baseElement } = render(
+        <DisplayContentContribution
+          content={`<span class="title">Mon title</span><span class="sub-title">Mon title</span>`}
+          titleLevel={6}
+        ></DisplayContentContribution>
+      );
+
+      expect(baseElement.firstChild).toMatchInlineSnapshot(`
+        <div>
+          <div
+            class="sc-ERObt zXiiV"
+          >
+            <h6
+              class="sc-kAyceB dvmaTz"
+              data-testid="heading"
+            >
+              Mon title
+            </h6>
+            <strong>
+              Mon title
+            </strong>
+          </div>
+        </div>
+      `);
+    });
+    it(`should not add headings higher than h6 for accordion`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
+        <details className=" details"><summary>Ceci est un titre</summary>
+          <div data-type=" detailsContent">
+            <span class="sub-title">Mon title</span>
+          </div>
+        </details>`}
+          titleLevel={6}
+        ></DisplayContentContribution>
+      );
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
   });
-  it(`should replace details element by one accordion`, () => {
-    const { asFragment } = render(
-      <DisplayContentContribution
-        content={`
+
+  describe("Accordions", () => {
+    it(`should replace details element by one accordion`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
         <details className=" details"><summary>Ceci est un titre</summary>
           <div data-type=" detailsContent">
             <p>Ceci est le body</p>
             <p></p>
           </div>
         </details>`}
-      ></DisplayContentContribution>
-    );
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(asFragment().firstChild).toMatchSnapshot();
-  });
-
-  it(`should not fail if no summary tag`, () => {
-    const { baseElement } = render(
-      <DisplayContentContribution
-        content={`
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
+    it(`should not fail if no summary tag`, () => {
+      const { baseElement } = render(
+        <DisplayContentContribution
+          content={`
         <details class="details">
     <summary>
       <strong>Report ou suspension du préavis</strong>
@@ -99,15 +185,16 @@ describe("DisplayContentContribution", () => {
       </details>
     </div>
   </details>`}
-      ></DisplayContentContribution>
-    );
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(baseElement.firstChild).toMatchSnapshot();
-  });
-  it(`should replace multiple details element by one accordion`, () => {
-    const { baseElement } = render(
-      <DisplayContentContribution
-        content={`
+      expect(baseElement.firstChild).toMatchSnapshot();
+    });
+    it(`should replace multiple details element by one accordion`, () => {
+      const { baseElement } = render(
+        <DisplayContentContribution
+          content={`
         <details className=" details"><summary>Ceci est le titre 1</summary>
           <div data-type=" detailsContent">
             <p>Ceci est le body 1</p>
@@ -120,15 +207,16 @@ describe("DisplayContentContribution", () => {
             <p></p>
           </div>
         </details>`}
-      ></DisplayContentContribution>
-    );
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(baseElement).toMatchSnapshot();
-  });
-  it(`should replace details element within details element`, () => {
-    const { asFragment } = render(
-      <DisplayContentContribution
-        content={`
+      expect(baseElement).toMatchSnapshot();
+    });
+    it(`should replace details element within details element`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
         <details className=" details"><summary>Ceci est un titre</summary>
           <div data-type=" detailsContent">
           <details className=" details"><summary>Ceci est un sous titre</summary>
@@ -139,35 +227,36 @@ describe("DisplayContentContribution", () => {
           </details>
           </div>
         </details>`}
-      ></DisplayContentContribution>
-    );
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(asFragment().firstChild).toMatchSnapshot();
-  });
-  it(`should replace details element with rich summary`, () => {
-    const { getByTestId } = render(
-      <DisplayContentContribution
-        content={`
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
+    it(`should replace details element with rich summary`, () => {
+      const { getByTestId } = render(
+        <DisplayContentContribution
+          content={`
          <details className=" details"><summary><strong>Ceci est un titre</strong> HELLO</summary>
           <div data-type=" detailsContent">
             <p>Ceci est le body</p>
             <p></p>
           </div>
         </details>`}
-      ></DisplayContentContribution>
-    );
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(getByTestId("contrib-accordion-0").textContent).toEqual(
-      "Ceci est un titre HELLO"
-    );
-  });
-
-  it(`should start title level to 4 if heading 3 before`, () => {
-    const { getByTestId } = render(
-      <DisplayContentContribution
-        content={`
+      expect(getByTestId("contrib-accordion-0").textContent).toEqual(
+        "Ceci est un titre HELLO"
+      );
+    });
+    it(`should start title level to 4 if heading 3 before`, () => {
+      const { getByTestId } = render(
+        <DisplayContentContribution
+          content={`
         <div>
-          <h3>HELLO</h3>
+          <span class="title">HELLO</span>
           <details className=" details">
           <summary>Ceci est un titre</summary>
           <div data-type=" detailsContent">
@@ -176,19 +265,53 @@ describe("DisplayContentContribution", () => {
           </div>
           </details>
         </div>`}
-      ></DisplayContentContribution>
-    );
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(getByTestId("contrib-accordion-0").textContent).toEqual(
-      "Ceci est un titre"
-    );
-    expect(getByTestId("contrib-accordion-0").tagName).toEqual("H4");
+      expect(getByTestId("contrib-accordion-0").textContent).toEqual(
+        "Ceci est un titre"
+      );
+      expect(getByTestId("contrib-accordion-0").tagName).toEqual("H4");
+    });
+    it(`should handle title within nested accordion`, () => {
+      const { getByText } = render(
+        <DisplayContentContribution
+          content={`
+        <div>
+          <details>
+          <summary>Ceci est un titre</summary>
+          <div data-type=" detailsContent">
+            <details>
+              <summary>Ceci est un sous titre</summary>
+              <div data-type=" detailsContent">
+                <span class="title">Ceci est un titre dans un accordion</span>
+                <span class="sub-title">Ceci est un sous-titre dans un accordion</span>
+              </div>
+            </details>
+          </div>
+          </details>
+        </div>`}
+          titleLevel={4}
+        ></DisplayContentContribution>
+      );
+
+      expect(getByText("Ceci est un titre").tagName).toEqual("H4");
+      expect(getByText("Ceci est un sous titre").tagName).toEqual("H5");
+      expect(getByText("Ceci est un titre dans un accordion").tagName).toEqual(
+        "H6"
+      );
+      expect(
+        getByText("Ceci est un sous-titre dans un accordion").tagName
+      ).toEqual("STRONG");
+    });
   });
 
-  it(`should add thead to table if not present and move table into a Table element`, () => {
-    const { asFragment } = render(
-      <DisplayContentContribution
-        content={`
+  describe("Tables", () => {
+    it(`should add thead to table if not present and move table into a Table element`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
         <table>
         <tbody>
             <tr>
@@ -201,76 +324,77 @@ describe("DisplayContentContribution", () => {
             </tr>
         </tbody>
         </table>`}
-      ></DisplayContentContribution>
-    );
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <div
-        class="sc-ERObt zXiiV"
-      >
+      expect(asFragment().firstChild).toMatchInlineSnapshot(`
         <div
-          class="sc-gFAWRd jDjoBq"
+          class="sc-ERObt zXiiV"
         >
           <div
-            class="sc-gmPhUn kUNTdL"
+            class="sc-gFAWRd jDjoBq"
           >
-            <table
-              class="sc-iMWBiJ Rlfrk"
+            <div
+              class="sc-gmPhUn kUNTdL"
             >
-              <thead>
-                <tr>
-                  <th
-                    colspan="1"
-                    rowspan="1"
-                  />
-                  <th
-                    colspan="1"
-                    rowspan="1"
-                  >
-                    <p>
-                      Titre 1
-                    </p>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td
-                    colspan="1"
-                    rowspan="1"
-                  >
-                    <p>
-                      Pour les 
-                      <strong>
-                        cadres
-                      </strong>
-                      , la prolongation ...
-                    </p>
-                  </td>
-                  <td
-                    colspan="1"
-                    rowspan="1"
-                  >
-                    <ul>
-                      <li>
-                        <p>
-                          L’employeur et le salarié donnent par écrit ou par mail.
-                        </p>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              <table
+                class="sc-iMWBiJ Rlfrk"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      colspan="1"
+                      rowspan="1"
+                    />
+                    <th
+                      colspan="1"
+                      rowspan="1"
+                    >
+                      <p>
+                        Titre 1
+                      </p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      colspan="1"
+                      rowspan="1"
+                    >
+                      <p>
+                        Pour les 
+                        <strong>
+                          cadres
+                        </strong>
+                        , la prolongation ...
+                      </p>
+                    </td>
+                    <td
+                      colspan="1"
+                      rowspan="1"
+                    >
+                      <ul>
+                        <li>
+                          <p>
+                            L’employeur et le salarié donnent par écrit ou par mail.
+                          </p>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
-    `);
-  });
-  it(`should not change if thead is already present`, () => {
-    const { asFragment } = render(
-      <DisplayContentContribution
-        content={`
+      `);
+    });
+    it(`should not change if thead is already present`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
         <table>
         <thead>
             <tr>
@@ -285,89 +409,91 @@ describe("DisplayContentContribution", () => {
             </tr>
         </tbody>
         </table>`}
-      ></DisplayContentContribution>
-    );
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <div
-        class="sc-ERObt zXiiV"
-      >
-        <table>
-          <tbody>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p>
-                  Pour les 
-                  <strong>
-                    cadres
-                  </strong>
-                  , la prolongation ...
-                </p>
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <ul>
-                  <li>
-                    <p>
-                      L’employeur et le salarié donnent par écrit ou par mail.
-                    </p>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    `);
-  });
+      expect(asFragment().firstChild).toMatchInlineSnapshot(`
+        <div
+          class="sc-ERObt zXiiV"
+        >
+          <table>
+            <tbody>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  <p>
+                    Pour les 
+                    <strong>
+                      cadres
+                    </strong>
+                    , la prolongation ...
+                  </p>
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  <ul>
+                    <li>
+                      <p>
+                        L’employeur et le salarié donnent par écrit ou par mail.
+                      </p>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `);
+    });
 
-  it(`should keep whitespace in specific tag`, () => {
-    const { asFragment } = render(
-      <DisplayContentContribution
-        content={`<p>Ceci est un<strong> </strong>texte généré<strong> </strong>par <em>tiptap </em>avec des<em> </em>résidus<em> </em>de balise</p>`}
-      ></DisplayContentContribution>
-    );
+    it(`should keep whitespace in specific tag`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`<p>Ceci est un<strong> </strong>texte généré<strong> </strong>par <em>tiptap </em>avec des<em> </em>résidus<em> </em>de balise</p>`}
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <div
-        class="sc-ERObt zXiiV"
-      >
-        <p>
-          Ceci est un
-          <strong>
-             
-          </strong>
-          texte généré
-          <strong>
-             
-          </strong>
-          par 
-          <em>
-            tiptap 
-          </em>
-          avec des
-          <em>
-             
-          </em>
-          résidus
-          <em>
-             
-          </em>
-          de balise
-        </p>
-      </div>
-    `);
-  });
+      expect(asFragment().firstChild).toMatchInlineSnapshot(`
+        <div
+          class="sc-ERObt zXiiV"
+        >
+          <p>
+            Ceci est un
+            <strong>
+               
+            </strong>
+            texte généré
+            <strong>
+               
+            </strong>
+            par 
+            <em>
+              tiptap 
+            </em>
+            avec des
+            <em>
+               
+            </em>
+            résidus
+            <em>
+               
+            </em>
+            de balise
+          </p>
+        </div>
+      `);
+    });
 
-  it(`should render correctly a table with multiple head lines`, () => {
-    const { baseElement } = render(
-      <DisplayContentContribution
-        content={`
+    it(`should render correctly a table with multiple head lines`, () => {
+      const { baseElement } = render(
+        <DisplayContentContribution
+          content={`
         <table>
   <tbody>
     <tr>
@@ -408,16 +534,75 @@ describe("DisplayContentContribution", () => {
   </tbody>
 </table>
 `}
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
+
+      expect(baseElement.firstChild).toMatchSnapshot();
+    });
+  });
+
+  it(`should return html`, () => {
+    const { asFragment } = render(
+      <DisplayContentContribution
+        content={`<p>hello</p>`}
+        titleLevel={3}
       ></DisplayContentContribution>
     );
 
-    expect(baseElement.firstChild).toMatchSnapshot();
+    expect(asFragment().firstChild).toMatchInlineSnapshot(`
+      <div
+        class="sc-ERObt zXiiV"
+      >
+        <p>
+          hello
+        </p>
+      </div>
+    `);
   });
+  it(`should keep whitespace in specific tag`, () => {
+    const { asFragment } = render(
+      <DisplayContentContribution
+        content={`<p>Ceci est un<strong> </strong>texte généré<strong> </strong>par <em>tiptap </em>avec des<em> </em>résidus<em> </em>de balise</p>`}
+        titleLevel={3}
+      ></DisplayContentContribution>
+    );
 
+    expect(asFragment().firstChild).toMatchInlineSnapshot(`
+      <div
+        class="sc-ERObt zXiiV"
+      >
+        <p>
+          Ceci est un
+          <strong>
+             
+          </strong>
+          texte généré
+          <strong>
+             
+          </strong>
+          par 
+          <em>
+            tiptap 
+          </em>
+          avec des
+          <em>
+             
+          </em>
+          résidus
+          <em>
+             
+          </em>
+          de balise
+        </p>
+      </div>
+    `);
+  });
   it(`should not remove space between strong and em tag in p tag`, () => {
     const { asFragment } = render(
       <DisplayContentContribution
         content={`<p><strong>À noter :</strong> <em>L'échelon professionnel du salarié est habituellement mentionné </em></p>`}
+        titleLevel={3}
       ></DisplayContentContribution>
     );
 
@@ -438,25 +623,29 @@ describe("DisplayContentContribution", () => {
     `);
   });
 
-  it(`should replace div with alert class to Alert component`, () => {
-    const { asFragment } = render(
-      <DisplayContentContribution
-        content={`
+  describe("Alerts", () => {
+    it(`should replace div with alert class to Alert component`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
         <div class="alert"><p><strong>Attention : </strong>En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.</p></div>`}
-      ></DisplayContentContribution>
-    );
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(asFragment().firstChild).toMatchSnapshot();
-  });
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
 
-  it(`should replace div with alert class in li component to Alert component`, () => {
-    const { asFragment } = render(
-      <DisplayContentContribution
-        content={`
+    it(`should replace div with alert class in li component to Alert component`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
         <div><p>Le contrat de mission (intérim) doit :</p><ul><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être<strong> écrit</strong> et <strong>rédigé</strong> en français (si conclu en France) ;</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être <strong>signé</strong>, dans un délai de <strong>2 jours</strong> suivant la mise à disposition du salarié auprès de l'entreprise ; si l’employeur transmet le CDD au salarié après le délai de 2 jours, il s'expose au paiement d'une indemnité égale à 1 mois de salaire maximum.</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être établi <strong>en plusieurs exemplaires</strong> ; c'est-à-dire autant d'exemplaires que de parties au contrat. Chaque partie au contrat aura un exemplaire.</p><p></p><div class="alert"><p><strong>Attention : </strong>En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.</p></div></li></ul></div>`}
-      ></DisplayContentContribution>
-    );
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
 
-    expect(asFragment().firstChild).toMatchSnapshot();
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
   });
 });

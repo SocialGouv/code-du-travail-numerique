@@ -23,6 +23,60 @@
       ]
     }
   },
+  "modeles-de-courriers": {
+    "metaTitle": "Intégrer les modèles de documents du Code du travail numérique",
+    "metaDescription": "Vous pouvez intégrer les modèles de documents et de lettres du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l'utilisateur d'avoir un aperçu du modèle puis de le télécharger au format docx pour le personnaliser.",
+    "title": "Intégrer les modèles de documents du Code du travail numérique",
+    "description": [
+      "Vous pouvez intégrer les modèles de documents et de lettres du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l'utilisateur d'avoir un aperçu du modèle puis de le télécharger au format docx pour le personnaliser.",
+      "Utilisez le menu déroulant ci-dessous pour afficher le modèle que vous souhaitez. Le code Javascript à intégrer dans votre page (disponible sous le modèle) se mettra automatiquement à jour selon le modèle sélectionné."
+    ],
+    "shortTitle": "Modèles de documents",
+    "shortDescription": "Télécharger et personnaliser les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail",
+    "select": {
+      "url": "/api/modeles",
+      "labelPath": "title",
+      "valuePath": "cdtnId"
+    },
+    "url": "/widgets/modeles-de-courriers/[value]",
+    "id": "modeles-de-courriers"
+  },
+  "indemnite-licenciement": {
+    "metaTitle": "Intégrer l’outil de calcul de l'indemnité de licenciement du Code du travail numérique",
+    "metaDescription": "Intégrer l’outil d'indemnité de licenciement du Code du travail numérique sur votre site grâce à un module (widget).",
+    "title": "Intégrer l’outil de calcul de l'indemnité de licenciement du Code du travail numérique",
+    "description": [
+      "Vous pouvez intégrer l’outil de calcul de l'indemnité de licenciement du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer le montant de l'indemnité à verser au salarié en cas de licenciement. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective."
+    ],
+    "shortTitle": "Indemnité de licenciement",
+    "shortDescription": "Estimer le montant de l’indemnité à verser au salarié en cas de licenciement",
+    "url": "/widgets/indemnite-licenciement",
+    "id": "indemnite-licenciement"
+  },
+  "preavis-demission": {
+    "metaTitle": "Intégrer l’outil de calcul du préavis de démission du Code du travail numérique",
+    "metaDescription": "Intégrer l’outil de calcul du préavis de démission du Code du travail numérique sur votre site grâce à un module (widget).",
+    "title": "Intégrer l’outil de calcul du préavis de démission du Code du travail numérique",
+    "description": [
+      "Vous pouvez intégrer l’outil de calcul du préavis de démission du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer la durée du préavis accordée au salarié en cas de démission. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective."
+    ],
+    "shortTitle": "Préavis de démission",
+    "shortDescription": "Calculer la durée de préavis à respecter en cas de démission",
+    "url": "/widgets/preavis-demission",
+    "id": "preavis-demission"
+  },
+  "indemnite-precarite": {
+    "metaTitle": "Intégrer l’outil de calcul de l'indemnité de précarité du Code du travail numérique",
+    "metaDescription": "Intégrer l’outil d'indemnité de précarité du Code du travail numérique sur votre site grâce à un module (widget).",
+    "title": "Intégrer l’outil de calcul de l'indemnité de précarité du Code du travail numérique",
+    "description": [
+      "Vous pouvez intégrer l’outil de calcul de l'indemnité de précarité du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer le montant de l’indemnité de fin de contrat ou de fin de mission (dite “prime de précarité”) d’un salarié en CDD ou en contrat d’intérim. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective."
+    ],
+    "shortTitle": "Indemnité de précarité",
+    "shortDescription": "Estimer le montant de l'indemnité de fin de CDD ou intérim",
+    "url": "/widgets/indemnite-precarite",
+    "id": "indemnite-precarite"
+  },
   "preavis-licenciement": {
     "metaTitle": "Intégrer l’outil de calcul du préavis de licenciement du Code du travail numérique",
     "metaDescription": "Intégrer l’outil de calcul du préavis de licenciement du Code du travail numérique sur votre site grâce à un module (widget).",
@@ -34,6 +88,18 @@
     "shortDescription": "Calculer la durée de préavis à respecter en cas de licenciement",
     "url": "/widgets/preavis-licenciement",
     "id": "preavis-licenciement"
+  },
+  "convention-collective": {
+    "metaTitle": "Intégrer l’outil permettant de trouver sa convention collective",
+    "metaDescription": "Vous pouvez intégrer l’outil permettant à un usager de trouver sa convention collective sur votre site grâce à un module (widget).",
+    "title": "Intégrer l’outil permettant de trouver sa convention collective",
+    "description": [
+      "Vous pouvez intégrer l’outil permettant à un usager de trouver sa convention collective sur votre site grâce à un module (widget). Grâce à ce module l'utilisateur pourra dans un premier temps identifier sa convention collective à partir du nom de son entreprise (ou son siret). Il pourra ensuite accéder aux questions-réponses fréquentes de cette convention collective sur le site du code du travail numérique."
+    ],
+    "shortTitle": "Trouver sa convention collective",
+    "shortDescription": "Trouver une convention collective à partir du nom de l'entreprise ou son SIRET",
+    "url": "/widgets/convention-collective",
+    "id": "convention-collective"
   },
   "preavis-retraite": {
     "metaTitle": "Intégrer l’outil de calcul du préavis de retraite du Code du travail numérique",
@@ -58,59 +124,5 @@
     "shortDescription": "Accéder à la procédure de licenciement qui correspond à votre situation",
     "url": "/widgets/procedure-licenciement",
     "id": "procedure-licenciement"
-  },
-  "indemnite-licenciement": {
-    "metaTitle": "Intégrer l’outil de calcul de l'indemnité de licenciement du Code du travail numérique",
-    "metaDescription": "Intégrer l’outil d'indemnité de licenciement du Code du travail numérique sur votre site grâce à un module (widget).",
-    "title": "Intégrer l’outil de calcul de l'indemnité de licenciement du Code du travail numérique",
-    "description": [
-      "Vous pouvez intégrer l’outil de calcul de l'indemnité de licenciement du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer le montant de l'indemnité à verser au salarié en cas de licenciement. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective."
-    ],
-    "shortTitle": "Indemnité de licenciement",
-    "shortDescription": "Estimer le montant de l’indemnité à verser au salarié en cas de licenciement",
-    "url": "/widgets/indemnite-licenciement",
-    "id": "indemnite-licenciement"
-  },
-  "indemnite-precarite": {
-    "metaTitle": "Intégrer l’outil de calcul de l'indemnité de précarité du Code du travail numérique",
-    "metaDescription": "Intégrer l’outil d'indemnité de précarité du Code du travail numérique sur votre site grâce à un module (widget).",
-    "title": "Intégrer l’outil de calcul de l'indemnité de précarité du Code du travail numérique",
-    "description": [
-      "Vous pouvez intégrer l’outil de calcul de l'indemnité de précarité du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer le montant de l’indemnité de fin de contrat ou de fin de mission (dite “prime de précarité”) d’un salarié en CDD ou en contrat d’intérim. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective."
-    ],
-    "shortTitle": "Indemnité de précarité",
-    "shortDescription": "Estimer le montant de l'indemnité de fin de CDD ou intérim",
-    "url": "/widgets/indemnite-precarite",
-    "id": "indemnite-precarite"
-  },
-  "convention-collective": {
-    "metaTitle": "Intégrer l’outil permettant de trouver sa convention collective",
-    "metaDescription": "Vous pouvez intégrer l’outil permettant à un usager de trouver sa convention collective sur votre site grâce à un module (widget).",
-    "title": "Intégrer l’outil permettant de trouver sa convention collective",
-    "description": [
-      "Vous pouvez intégrer l’outil permettant à un usager de trouver sa convention collective sur votre site grâce à un module (widget). Grâce à ce module l'utilisateur pourra dans un premier temps identifier sa convention collective à partir du nom de son entreprise (ou son siret). Il pourra ensuite accéder aux questions-réponses fréquentes de cette convention collective sur le site du code du travail numérique."
-    ],
-    "shortTitle": "Trouver sa convention collective",
-    "shortDescription": "Trouver une convention collective à partir du nom de l'entreprise ou son SIRET",
-    "url": "/widgets/convention-collective",
-    "id": "convention-collective"
-  },
-  "modeles-de-courriers": {
-    "metaTitle": "Intégrer les modèles de documents du Code du travail numérique",
-    "metaDescription": "Vous pouvez intégrer les modèles de documents et de lettres du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l'utilisateur d'avoir un aperçu du modèle puis de le télécharger au format docx pour le personnaliser.",
-    "title": "Intégrer les modèles de documents du Code du travail numérique",
-    "description": [
-      "Vous pouvez intégrer les modèles de documents et de lettres du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l'utilisateur d'avoir un aperçu du modèle puis de le télécharger au format docx pour le personnaliser.",
-      "Utilisez le menu déroulant ci-dessous pour afficher le modèle que vous souhaitez. Le code Javascript à intégrer dans votre page (disponible sous le modèle) se mettra automatiquement à jour selon le modèle sélectionné."
-    ],
-    "shortTitle": "Modèles de documents",
-    "shortDescription": "Télécharger et personnaliser les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail",
-    "select": {
-      "url": "/api/modeles",
-      "labelPath": "title",
-      "valuePath": "cdtnId"
-    },
-    "url": "/widgets/modeles-de-courriers/[value]",
-    "id": "modeles-de-courriers"
   }
 }
