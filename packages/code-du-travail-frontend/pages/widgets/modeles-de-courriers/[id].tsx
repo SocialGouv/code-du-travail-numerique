@@ -73,6 +73,7 @@ const StyledHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   header {
     margin: 0;
   }
@@ -80,6 +81,7 @@ const StyledHeader = styled.div`
 
 const StyledTitle = styled(PageTitle)`
   flex: 1;
+
   h1 {
     font-size: ${fonts.sizes.headings.xmedium};
   }
