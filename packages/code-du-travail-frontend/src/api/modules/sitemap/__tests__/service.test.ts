@@ -1,30 +1,60 @@
-import { getContributionSitemapData } from "../service";
+import { getSitemapData } from "../service";
 
 describe("Sitemap", () => {
-  it("getAllContributionsMatchingSlug returns empty array if contrib does not exists", async () => {
-    const result = await getContributionSitemapData("not-found");
-    expect(result).toEqual([]);
-  });
-
-  it("getAllContributionsMatchingSlug returns the generic contrib and all the supported contribs", async () => {
-    const result = await getContributionSitemapData(
-      "la-periode-dessai-peut-elle-etre-renouvelee"
-    );
-    expect(result.length).toEqual(37);
-    expect(result[0]).toEqual({
-      slug: "la-periode-dessai-peut-elle-etre-renouvelee",
-      title: "La période d’essai peut-elle être renouvelée ?",
+  it("getSitemapData returns empty array if contrib does not exists", async () => {
+    const result = await getSitemapData();
+    expect(Object.keys(result)).toEqual([
+      "themes",
+      "tools",
+      "modeles",
+      "contributions",
+      "agreements",
+    ]);
+    expect(result.tools[0]).toEqual({
+      _id: "14",
+      displayTool: true,
+      slug: "indemnite-licenciement",
+      title: "Indemnité de licenciement",
     });
-    expect(result[1]).toEqual({
-      slug: "1043-la-periode-dessai-peut-elle-etre-renouvelee",
-      title:
-        "Gardiens, concierges et employés d'immeubles: La période d’essai peut-elle être renouvelée ?",
-    });
-  });
-  it("getAllContributionsMatchingSlug returns empty array if no cc supported", async () => {
-    const result = await getContributionSitemapData(
-      "quelles-sont-les-conditions-de-la-clause-de-non-concurrence"
-    );
-    expect(result.length).toEqual(0);
+    expect(result.contributions).toEqual([
+      {
+        CCs: [],
+        generic: {
+          slug: "les-conges-pour-evenements-familiaux",
+          title: "Les congés pour événements familiaux",
+        },
+      },
+      {
+        CCs: [
+          {
+            slug: "44-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
+            split: true,
+            title:
+              "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
+          },
+        ],
+        generic: {
+          slug: "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
+          title:
+            "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
+        },
+      },
+      {
+        CCs: [
+          {
+            idcc: "0044",
+            slug: "44-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+            title:
+              "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
+          },
+        ],
+        generic: {
+          idcc: "0000",
+          slug: "quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+          title:
+            "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
+        },
+      },
+    ]);
   });
 });

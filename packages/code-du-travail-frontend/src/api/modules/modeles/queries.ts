@@ -5,10 +5,6 @@ export function getModeles() {
     _source: [
       "title",
       "slug",
-      "description",
-      "source",
-      "breadcrumbs",
-      "cdtnId",
     ],
     query: {
       bool: {

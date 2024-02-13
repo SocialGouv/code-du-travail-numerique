@@ -2,7 +2,7 @@ import {
   getByIdsContributions,
   getBySlugsContributions,
   getGenericContributionsGroupByThemes,
-  getGenericsContributions,
+  getAllContributionsGroupByQuestion,
 } from "../service";
 
 describe("Contributions", () => {
@@ -23,7 +23,7 @@ describe("Contributions", () => {
   });
 
   it("getAllContributions", async () => {
-    const result = await getGenericsContributions();
+    const result = await getAllContributionsGroupByQuestion();
     expect(result).toMatchSnapshot();
   });
 });

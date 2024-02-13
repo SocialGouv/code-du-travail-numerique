@@ -1,5 +1,25 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
+export const getAllContributions = () => {
+  return {
+    _source: [
+      "title",
+      "shortTitle",
+      "slug",
+      "idcc",
+      "split",
+    ],
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.CONTRIBUTIONS } },
+          { term: { isPublished: true } },
+        ],
+      },
+    },
+  };
+};
+
 export const getAllGenericsContributions = () => {
   return {
     _source: [
@@ -99,4 +119,3 @@ export function getContributionsByIds(ids: string[]) {
     size: 100,
   };
 }
-

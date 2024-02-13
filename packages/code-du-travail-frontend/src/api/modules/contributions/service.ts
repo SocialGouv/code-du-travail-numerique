@@ -4,6 +4,7 @@ import {
 } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import {
+  getAllContributions,
   getAllGenericsContributions,
   getContributionsByIds,
   getContributionsBySlugs,
@@ -25,14 +26,28 @@ export const getGenericContributionsGroupByThemes = async () => {
     .reduce(groupByThemes, {});
 };
 
-export const getGenericsContributions = async () => {
-  const body = getAllGenericsContributions();
+const isGeneric = (contrib) =>
+  (contrib.idcc && contrib.idcc === "0000") ||
+  (!contrib.idcc && !contrib.split);
+
+export const getAllContributionsGroupByQuestion = async () => {
+  const body = getAllContributions();
 
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.hits.map(({ _source }) => _source);
+  const all = response.body.hits.hits.map(({ _source }) => _source);
+  const allGenerics = all.filter(isGeneric);
+
+  return allGenerics.map((generic) => {
+    return {
+      generic: generic,
+      CCs: all.filter((contrib) => {
+        return !isGeneric(contrib) && contrib.slug.includes(generic.slug);
+      }),
+    };
+  });
 };
 
 export const getBySlugsContributions = async (

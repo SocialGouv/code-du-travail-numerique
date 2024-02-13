@@ -16,10 +16,3 @@ export const getIdccByQuery = async (query: string) => {
   const { took, ...rest } = response.body;
   return { ...rest };
 };
-
-export const getCCByIdcc = async (query: string) => {
-  const responseBody = await getIdccByQuery(query);
-
-  const ccs = responseBody.hits.hits.map((t) => t._source);
-  return ccs[0];
-};
