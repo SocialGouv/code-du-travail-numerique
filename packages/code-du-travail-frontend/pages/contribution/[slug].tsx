@@ -56,6 +56,13 @@ const buildTitleAndDescription = (
     title,
   };
 };
+const getTitleFromNewContrib = (contribution) => {
+  if (!contribution.ccnShortTitle || contribution.ccnShortTitle.length > 14 || contribution.title.length > 50) {
+    return contribution.title;
+  }
+
+  return `${contribution.ccnShortTitle}: ${contribution.title}`;
+};
 
 function PageContribution(props: Props): React.ReactElement {
   let metas: any = {};
@@ -82,7 +89,7 @@ function PageContribution(props: Props): React.ReactElement {
         <>
           <Metas title={metas.title} description={metas.description} />
           <Answer
-            title={props.contribution.title}
+            title={getTitleFromNewContrib(props.contribution)}
             breadcrumbs={props.contribution.breadcrumbs}
           >
             {props.contribution.idcc === "0000" ? (
