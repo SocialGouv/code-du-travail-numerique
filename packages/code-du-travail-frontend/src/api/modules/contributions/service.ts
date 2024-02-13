@@ -71,7 +71,7 @@ export const getAllContributionsGroupByQuestion = async (
 
 export const getBySlugsContributions = async (
   slugs: string[]
-): Promise<ElasticSearchContributionGeneric[]> => {
+): Promise<ElasticSearchItem[]> => {
   const body = getContributionsBySlugs(slugs);
   const response = await elasticsearchClient.search({
     body,
