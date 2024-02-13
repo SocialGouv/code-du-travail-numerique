@@ -57,7 +57,7 @@ const buildTitleAndDescription = (
   };
 };
 const getTitleFromNewContrib = (contribution) => {
-  if (contribution.ccnShortTitle.length > 14 || contribution.title.length > 50) {
+  if (!contribution.ccnShortTitle || contribution.ccnShortTitle.length > 14 || contribution.title.length > 50) {
     return contribution.title;
   }
 
