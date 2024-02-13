@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.122.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.121.1...v4.122.0) (2024-02-06)
+
+### Bug Fixes
+
+- **utils:** ajout du type glossaire pour la mapping ([#5603](https://github.com/SocialGouv/code-du-travail-numerique/issues/5603)) ([3aed439](https://github.com/SocialGouv/code-du-travail-numerique/commit/3aed43929bbf7fc445e4a54c3a9efc75751eb343))
+
 ## [4.121.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.121.0...v4.121.1) (2024-01-30)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils

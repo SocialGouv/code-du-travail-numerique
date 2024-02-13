@@ -1,4 +1,4 @@
-import { getLabelBySource, SOURCES, Breadcrumb } from "@socialgouv/cdtn-utils";
+import { Breadcrumb, getLabelBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { Alert } from "@socialgouv/cdtn-ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";

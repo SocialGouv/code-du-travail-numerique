@@ -12,7 +12,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { A11yLink } from "../../src/common/A11yLink";
-import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
@@ -39,7 +38,7 @@ function Term(props: Props): JSX.Element {
                 <tr>
                   <th>Définition</th>
                   <td>
-                    <Html>{definition}</Html>
+                    <p>{definition}</p>
                   </td>
                 </tr>
                 {references && references.length > 0 && (

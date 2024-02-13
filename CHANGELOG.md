@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.122.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.121.1...v4.122.0) (2024-02-06)
+
+### Bug Fixes
+
+- **utils:** ajout du type glossaire pour la mapping ([#5603](https://github.com/SocialGouv/code-du-travail-numerique/issues/5603)) ([3aed439](https://github.com/SocialGouv/code-du-travail-numerique/commit/3aed43929bbf7fc445e4a54c3a9efc75751eb343))
+- **widgets:** ajout d'un nouveau widget pour le calcul du preavis de demission ([#5606](https://github.com/SocialGouv/code-du-travail-numerique/issues/5606)) ([ad2ec7e](https://github.com/SocialGouv/code-du-travail-numerique/commit/ad2ec7e7d8cf340bfa2d39f2d997530824aad7dc))
+
+### Features
+
+- **contributions:** gestion des headings dynamiques en fonction de la page où ils sont affichés ([#5585](https://github.com/SocialGouv/code-du-travail-numerique/issues/5585)) ([2d573c7](https://github.com/SocialGouv/code-du-travail-numerique/commit/2d573c734d71be887f8d5842a4256da6dcf926ea))
+
 ## [4.121.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.121.0...v4.121.1) (2024-01-30)
 
 ### Bug Fixes
