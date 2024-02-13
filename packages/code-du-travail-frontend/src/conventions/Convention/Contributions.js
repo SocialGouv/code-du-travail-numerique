@@ -3,7 +3,11 @@ import { Accordion, theme, Title } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
+import Mdx from "../../common/Mdx";
 import References from "../../common/References";
+import { trackAccordionPanelState } from "./utils";
+import rehypeToReact from "../../contributions/rehypeToReact";
+import { AccordionContentContribution } from "./AccordionContentContribution";
 
 const { spacings } = theme;
 
@@ -22,13 +26,6 @@ function Contributions({ contributions, convention }) {
     return state;
   }, {});
 
-  const getContribSlug = (item) => {
-    const slug = /^\d\d\d*-/.test(item.slug)
-      ? item.slug
-      : `${convention.num}-${item.slug}`;
-    return `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`;
-  };
-
   // show themes contents in Accordions
   const themes = Object.keys(contributionsByTheme)
     .sort((a, b) => {
@@ -43,15 +40,21 @@ function Contributions({ contributions, convention }) {
     .map((theme) => {
       return {
         body: (
-          <ul>
-            {contributionsByTheme[theme].map((item) => (
-              <li key={item.slug}>
-                <Link href={getContribSlug(item)}>
-                  {item.question ?? item.questionName}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <Accordion
+            titleLevel={4}
+            items={contributionsByTheme[theme].map((item) => ({
+              body:
+                "type" in item // Pour detecter si c'est une nouvelle contribution
+                  ? AccordionContentContribution(item)
+                  : AccordionContent(item),
+              id: item.slug,
+              title: item.question ?? item.questionName,
+            }))}
+            onChange={trackAccordionPanelState(
+              convention.shortTitle,
+              "pagecc_clickcontrib"
+            )}
+          />
         ),
         title: theme,
       };
@@ -63,6 +66,34 @@ function Contributions({ contributions, convention }) {
         Questions-réponses fréquentes
       </Title>
       <Accordion titleLevel={3} items={themes} />
+    </>
+  );
+}
+
+function AccordionContent({ answer, slug, references }) {
+  return (
+    <>
+      <Mdx markdown={answer} components={rehypeToReact} />
+      {references && (
+        <StyledReferences
+          references={references.map((reference) => ({
+            title: reference.title,
+            type:
+              reference.category === "labour_code"
+                ? SOURCES.CDT
+                : SOURCES.EXTERNALS,
+            url: reference.url,
+          }))}
+        />
+      )}
+      <strong>
+        Pour savoir si la mesure prévue par la convention collective s’applique
+        à votre situation, reportez-vous{" "}
+        <Link href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`}>
+          à la réponse complète à cette question
+        </Link>
+        .
+      </strong>
     </>
   );
 }
