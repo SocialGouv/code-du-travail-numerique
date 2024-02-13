@@ -7,13 +7,13 @@ import {
 } from "@socialgouv/cdtn-ui";
 import * as Sentry from "@sentry/nextjs";
 import React from "react";
-import Metas from "../../src/common/Metas";
-import { Layout } from "../../src/layout/Layout";
+import Metas from "../src/common/Metas";
+import { Layout } from "../src/layout/Layout";
 import styled from "styled-components";
 import Link from "next/link";
-import { getSitemapData, GetSitemapPage } from "../../src/api";
+import { getSitemapData, GetSitemapPage } from "../src/api";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 
 const Index = ({
   tools,
