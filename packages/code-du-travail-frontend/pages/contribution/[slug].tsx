@@ -56,12 +56,8 @@ const buildTitleAndDescription = (
     title,
   };
 };
-const IDCC_WITH_SHORT_NAMES = ["2120", "1480", "3248", "292", "2511", "2148"];
 const getTitleFromNewContrib = (contribution) => {
-  if (
-    !IDCC_WITH_SHORT_NAMES.includes(contribution.idcc) ||
-    contribution.title.length > 50
-  ) {
+  if (contribution.ccnShortTitle.length > 14 || contribution.title.length > 50) {
     return contribution.title;
   }
 
