@@ -68,6 +68,7 @@ export const getTools = (
       "source",
       "text",
       "title",
+      "url",
     ],
     query: {
       bool: {
