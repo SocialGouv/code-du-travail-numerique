@@ -14274,7 +14274,7 @@ absence 2h pour recherche d’emploi pendant préavis",
       "isPublished": true,
       "metaDescription": "Idcc 1090 : Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
       "num": 1090,
-      "shortTitle": "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
+      "shortTitle": "Services de l'automobile",
       "slug": "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle",
       "source": "conventions_collectives",
       "text": "IDCC 1090: Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981. Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
@@ -17338,6 +17338,879 @@ Lorsque l’employeur est un particulier, son décès peut entraîner la fin du 
       ],
       "cdtnId": "404b14a887",
       "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
+      "index": 41,
+      "isPublished": true,
+      "metaDescription": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
+      "slug": "1090-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
+      "source": "contributions",
+      "split": true,
+      "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
+    },
+    "_type": "_doc",
+  },
+  {
+    "_id": "36",
+    "_index": "cdtn_test-v2_documents",
+    "_score": 0,
+    "_source": {
+      "answers": {
+        "conventions": [
+          {
+            "id": "1e85348e-3fd0-465b-8320-7a6b416e28c3",
+            "idcc": "0016",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "a3c20d65-651a-4e52-9a0c-c97d754a98bc",
+            "idcc": "0029",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "15540029-655c-4bfd-b954-3771afdf9e87",
+            "idcc": "0044",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "1fc80218-e36e-4e4b-a1c2-c841cdbfeb98",
+            "idcc": "0054",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "02433fc2-bd6a-41d7-842c-1f269918c0a1",
+            "idcc": "0086",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "ec9bae09-c318-421e-9bee-1b0beff6e156",
+            "idcc": "0176",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "7ec07a0f-8863-4266-95da-3c73358dd75c",
+            "idcc": "0275",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "992e5886-4877-4274-bdfa-91b3ffaf79f1",
+            "idcc": "0292",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "8455e390-7522-4ba2-b6bb-4afcfeb5db9e",
+            "idcc": "0413",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "4fba8935-8c0c-4b98-8d77-072f7bbf5dc7",
+            "idcc": "0573",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "c490014a-7207-4277-97b0-7f6b62fc8e05",
+            "idcc": "0650",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "6cc9367f-acf3-4d52-9d1a-f912fd0d10ee",
+            "idcc": "0675",
+            "markdown": "La convention collective ne prévoit rien sur ce point. ",
+            "references": [],
+          },
+          {
+            "id": "901b2666-77b7-4dc3-880c-b5a22bb953bc",
+            "idcc": "0714",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "3ae26e2f-efaa-4cbb-89bf-d419fc645008",
+            "idcc": "0787",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "bf0eacb7-1d9d-4e1c-aab1-87c5a5d4cdc3",
+            "idcc": "0822",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "df04f170-972e-4dfe-8f71-881ef4026e55",
+            "idcc": "0827",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "aa3cef20-281a-4e21-b550-1c7acf877acd",
+            "idcc": "0828",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "1507f74d-1a84-4d91-9393-f50441ece472",
+            "idcc": "0829",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "8b6b2aee-50e6-48fe-ad84-0b884a16af06",
+            "idcc": "0836",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "405ed3c7-e992-4dc2-ba87-a2cf13b64ee5",
+            "idcc": "0843",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "3c036ece-a65f-4d38-b823-5d81addd2a41",
+            "idcc": "0860",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "e6fafc4b-8c6e-4f36-bb46-4668ff6dcff0",
+            "idcc": "0863",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "8ede3f75-02fd-4580-92ad-0b8f774b5595",
+            "idcc": "0878",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "d3af6889-e263-441c-b2d9-9b62f707d180",
+            "idcc": "0887",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "f336c900-cd25-4951-a17a-3b67a9cfa546",
+            "idcc": "0898",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "3abafc5a-3ba1-41d1-807d-2faca4300fba",
+            "idcc": "0899",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "93996885-6435-482e-9064-22731a6f5074",
+            "idcc": "0911",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "4af6cd69-7c25-4b3c-97f3-1defa907447a",
+            "idcc": "0914",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "c84f55eb-0c0e-4244-9b9a-60cd77ed201b",
+            "idcc": "0920",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "7a69dd41-bb9c-4fe7-aa83-01c715273711",
+            "idcc": "0923",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "df9ad9af-6e4c-4954-9b4e-cc74e840c702",
+            "idcc": "0930",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "8d09014a-49b6-4f95-9265-abe073608201",
+            "idcc": "0934",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "d593f2a8-32f6-499e-a129-26da35a4d8b1",
+            "idcc": "0937",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "7ded0cb3-1b44-4337-a5d0-2580090a5ea8",
+            "idcc": "0943",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "b2c6381c-cfee-4b2d-8b85-a2d8ce86b5a5",
+            "idcc": "0948",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "b93d87dc-c9dd-479b-83a2-cd7c17dcf813",
+            "idcc": "0965",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "d8513de9-5d46-44ad-a432-4d133bc4cde2",
+            "idcc": "0979",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "0b6cc34c-7bf5-475d-8192-e90cba590227",
+            "idcc": "0984",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "8e0868dd-4ca7-40a6-a660-37c9c0ff8e7d",
+            "idcc": "1007",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "9bba0c4b-0a2a-4c5c-bf6a-e22a1f9a2c88",
+            "idcc": "1043",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "c54e3545-d044-47a2-9236-78bf6f7ec28d",
+            "idcc": "1059",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "b215f648-94b2-4867-9f85-5ada59dd3277",
+            "idcc": "1090",
+            "markdown": "La convention collective ne prévoit rien sur ce point. ",
+            "references": [],
+          },
+          {
+            "id": "72ac4fc0-d360-4c2c-9756-c64f152bb2be",
+            "idcc": "1147",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "352c13f1-4b3b-4852-993d-5a80bf9b4902",
+            "idcc": "1159",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "9d770a24-7b36-4243-8a8b-52075963fdba",
+            "idcc": "1164",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "269f3e37-2d77-485b-8875-ea622e61f618",
+            "idcc": "1266",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "0331d59f-9382-490d-bd56-f5dce5a7aa57",
+            "idcc": "1274",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "629e7806-34fd-460a-9859-3560d4981e6a",
+            "idcc": "1315",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "ddc90d07-98b3-428a-825e-8b919f21542a",
+            "idcc": "1351",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "9ccc3be5-5a5c-478e-94c7-bfdfb29f72f7",
+            "idcc": "1353",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "50e2853d-3b04-4921-9c5d-d92a6af2ca1d",
+            "idcc": "1365",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "eb61ded9-7824-4b6a-b781-8eeb76a5195a",
+            "idcc": "1369",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "c069a3f9-bec5-4ada-ade5-6e259ca23523",
+            "idcc": "1387",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "1e6a8999-25d3-4f77-a1b1-2897e04a6e2b",
+            "idcc": "1404",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "7b63543d-654f-4a9f-86a1-eda8413f0f1f",
+            "idcc": "1472",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "5e6e95ef-8346-4ab3-b1f4-3bfcc4ff0408",
+            "idcc": "1480",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "4cea082f-b9c7-43b3-8845-85868f775494",
+            "idcc": "1483",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "89f082ee-c063-4494-a7b7-dae6e09adfee",
+            "idcc": "1486",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "fb887379-d471-4fc2-b4fc-bdc4f6eb2538",
+            "idcc": "1501",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "9308ca0b-c12b-49c7-9d91-7e7f065c7351",
+            "idcc": "1505",
+            "markdown": "La convention collective ne prévoit rien sur ce point. ",
+            "references": [],
+          },
+          {
+            "id": "5ca076d7-ae5d-47e6-8aa8-82171641792b",
+            "idcc": "1516",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "4a17f525-b401-4d66-b0fc-3e526407b554",
+            "idcc": "1517",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "f1ad6d4a-0fea-4bb1-aa8e-ca057f37521f",
+            "idcc": "1518",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "142bc7f4-1383-47fc-b72d-f5a8758972b4",
+            "idcc": "1525",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "3a24d44e-bbc8-499b-a7a6-4c09c997d27e",
+            "idcc": "1527",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "2f25911a-2b2e-4083-b439-a1c1318255af",
+            "idcc": "1560",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "95b42f3e-cf88-4de9-824c-27cbc7697930",
+            "idcc": "1564",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "a6f6948b-aee9-4173-abc4-f260616236ea",
+            "idcc": "1572",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "cb196483-22d5-4d68-a7f2-4ccf74a48808",
+            "idcc": "1576",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "3408e9d1-591a-437b-977c-5265dddc4dd1",
+            "idcc": "1577",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "02789bd1-266f-4667-8bad-c3d506f1ae94",
+            "idcc": "1578",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "77ed891a-3913-4ff5-8ec9-06ad560d0041",
+            "idcc": "1592",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "a3e613b3-6bab-45f5-bec0-3a141ef3cfa9",
+            "idcc": "1596",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "7b5e86f2-c4f9-4695-abe8-ef9ec65e9e45",
+            "idcc": "1597",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "f41f50d2-e32b-47c9-a7ee-4a60e9506ee0",
+            "idcc": "1604",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "d424b046-2521-4ffe-ab03-23223c82d5b5",
+            "idcc": "1606",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "8a6aa913-7ee1-47ce-ba2c-74499c5d2c21",
+            "idcc": "1626",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "00560192-6951-4cac-abdf-b8f35ce7ae26",
+            "idcc": "1627",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "10530e79-d663-4f4f-a2cc-efdecf729058",
+            "idcc": "1628",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "d7ebc6dd-ed2a-4217-bc6b-a703a831e89d",
+            "idcc": "1634",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "5e6ad8ba-9b98-425e-9186-3e2205623600",
+            "idcc": "1635",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "97cfcd8a-4563-435b-8c7e-b180b4f86cb8",
+            "idcc": "1672",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "2d4ae8b8-38c7-48b5-a552-aa0bb5cee5cc",
+            "idcc": "1702",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "faa12948-86f1-4556-bca0-b9cc1621209e",
+            "idcc": "1732",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "cb327b0c-1e91-423b-bbdb-333c4c0393e9",
+            "idcc": "1740",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "e781ef39-9020-4e93-882e-227a4e824f78",
+            "idcc": "1813",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "de2a00dd-e7e5-4081-b473-8c6fbd1f7a03",
+            "idcc": "1867",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "e09836b2-36e4-4a8c-9932-667e49093a0e",
+            "idcc": "1885",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "8a530e6f-50d1-4eff-bdc4-27a1e01b3c83",
+            "idcc": "1902",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "7975f6ae-8133-4665-907b-cd40cd101e95",
+            "idcc": "1912",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "63ea8f6c-e4b0-4061-a002-f6a3d88c95cc",
+            "idcc": "1960",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "0d16f1a4-9600-402c-8df9-9a3c0a3af0ad",
+            "idcc": "1966",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "4fc76f1e-fb0c-44f1-b9fc-d8be75de499b",
+            "idcc": "1967",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "e0560448-efc9-4af7-b433-612846e1b17c",
+            "idcc": "1979",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "282c2c04-b5c4-478c-b530-fa3a1fe12e6f",
+            "idcc": "1996",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "f67ce559-2710-4869-b336-d234543f3563",
+            "idcc": "2003",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "02426fcd-4b09-4855-bdaa-a3c955ba0665",
+            "idcc": "2098",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "08d0dd45-b814-41fc-9268-0c1e0997ea3c",
+            "idcc": "2120",
+            "markdown": "La convention collective ne prévoit rien sur ce point. ",
+            "references": [],
+          },
+          {
+            "id": "4af91f3b-3fde-47e5-b98c-877b2e9c896e",
+            "idcc": "2126",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "1b1be6c7-3a21-40d5-856b-df142237d779",
+            "idcc": "2148",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "79bde5d3-8b58-4bfe-85bd-298c9e4e4ed1",
+            "idcc": "2216",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "aa5bd534-5ffd-43ba-ba1b-907738199746",
+            "idcc": "2221",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "25f3aac2-ebb8-40c0-8e4d-313367b5b800",
+            "idcc": "2264",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "e8adfcc8-9054-4f23-83c5-52cd8bf4cbfa",
+            "idcc": "2266",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "6235c4f8-ce2e-4ec6-9e25-61cad775f1ae",
+            "idcc": "2294",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "339586b2-7513-4768-bbad-5ffe2778d9b4",
+            "idcc": "2420",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "cd2cccde-503f-409c-9d47-c50893327dd5",
+            "idcc": "2489",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "ece3b00f-5925-4557-89fa-19176766968d",
+            "idcc": "2511",
+            "markdown": "La convention collective ne prévoit rien sur ce point. ",
+            "references": [],
+          },
+          {
+            "id": "83b7d4a4-63a5-4b9b-97a4-b78f8fb748d9",
+            "idcc": "2542",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "5170bd52-83fe-409b-8376-be0e05d78a1c",
+            "idcc": "2579",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "a9b63dcf-7122-4723-89ae-afff5b268874",
+            "idcc": "2596",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "f2fbc883-0e4e-4e7a-a0f2-d5a21b2da00b",
+            "idcc": "2609",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "18988190-75bf-447f-838a-e42ddc6100a2",
+            "idcc": "2614",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "1ac4b07d-ae17-4d63-a3d0-7b87af63fab2",
+            "idcc": "2615",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "8a3d67fb-1819-48dc-87da-5c0a67de4af6",
+            "idcc": "2630",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "c02f3c2f-f890-44f3-8480-6c3f82e1af27",
+            "idcc": "2700",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "b601de8f-1ada-4220-a896-8a46148f738b",
+            "idcc": "2755",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "8389c2e7-97b8-458b-b658-cb57a3717d92",
+            "idcc": "2941",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "20534ea0-dc7f-49df-a8f4-1e83b4b68048",
+            "idcc": "2980",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "9fa1d1dc-4d14-406c-9b4d-e8e0984afc31",
+            "idcc": "2992",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "9eec9184-dcc0-4d45-88ff-7739f1605361",
+            "idcc": "3043",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "701aac73-51c4-4739-9a5c-3d74cbd11918",
+            "idcc": "3053",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "a5b1d3ee-f3d1-4d52-939f-f9cc99146913",
+            "idcc": "3127",
+            "markdown": "La convention collective ne prévoit rien sur ce point. ",
+            "references": [],
+          },
+          {
+            "id": "a66bda49-fac1-48af-ad28-930de6aa76a2",
+            "idcc": "3209",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "20630f00-2f3b-4a81-8f74-4df4741fc37d",
+            "idcc": "3231",
+            "markdown": "La convention collective ne prévoit rien sur ce point.",
+            "references": [],
+          },
+          {
+            "id": "29cd5ca1-306c-4cd1-8131-bb9d1bc14130",
+            "idcc": "3239",
+            "markdown": "### Pour les assistants maternels du particulier employeur
+
+#### Décès du particulier employeur
+
+La convention collective ne prévoit pas spécifiquement ce cas de figure.
+
+#### Décès de l'enfant du particulier employeur
+
+Le décès de l'enfant du particulier employeur entraîne la rupture du contrat de travail au jour du décès.
+
+Le particulier employeur ou, à défaut, un tiers, informe dès que possible par écrit l’assistant maternel de la date du décès de l’enfant.
+
+La rupture du contrat de travail entraîne le versement au salarié :
+
+- du dernier salaire dû au jour du décès ;
+- d’une indemnité égale à l’indemnité compensatrice de préavis (qui ne peut être exécuté) ;
+- d’une indemnité dont le montant est calculé de la même manière que l’indemnité de rupture en cas de retrait d’enfant ;
+- d’une indemnité compensatrice pour les congés payés acquis non rémunérés.
+
+Les documents de fin de contrat doivent être remis à l'assistant maternel, par l'employeur ou un tiers, dans un délai de 30 jours calendaires à compter du décès de l'enfant.
+
+### Pour les autres salariés du particulier employeur
+
+#### Décès du particulier employeur
+
+Le décès du particulier employeur entraîne la rupture du contrat de travail au jour du décès.
+
+Un ayant-droit ou, à défaut, un tiers, informe le salarié de la date du décès du particulier employeur dès que possible, par écrit.
+
+Si le salarié est embauché par un couple de particuliers employeurs, le contrat de travail peut subsister avec le membre survivant, qui le décide, dès lors qu'il est immatriculé comme particulier employeur. 
+
+La rupture du contrat de travail entraîne le versement au salarié :
+
+- du dernier salaire dû au jour du décès ;
+- d’une indemnité égale à l’indemnité compensatrice de préavis qui ne peut être exécuté ;
+- d’une indemnité dont le montant est calculé de la même manière que l’indemnité de licenciement ;
+- d’une indemnité compensatrice pour les congés payés acquis, non rémunérés.
+
+L’ayant-droit ou, à défaut, un tiers remet au salarié les documents de fin de contrat dans un délai de 30 jours calendaires à compter du décès.
+
+Le salarié dont le contrat de travail est rompu du fait du décès du particulier employeur présente, s'il le souhaite, une demande d’indemnisation auprès de l’organisme Pôle emploi pour l’ouverture des droits au chômage.
+
+#### Décès de l'enfant du particulier employeur (dans le cas d'un contrat de travail conclu exclusivement pour la garde de l'enfant)
+
+Lorsque le contrat de travail est conclu exclusivement pour la garde d’un enfant, le décès de ce dernier entraîne la rupture du contrat de travail au jour du décès.
+
+Le particulier employeur ou, à défaut, un tiers informe le salarié de la date du décès de l’enfant dès
+que possible, par écrit.
+
+La rupture du contrat de travail entraîne le versement au salarié :
+
+- du dernier salaire dû au jour du décès ;
+- d’une indemnité égale à l’indemnité compensatrice de préavis (qui ne peut être exécuté) ;
+- d’une indemnité dont le montant est calculé de la même manière que l’indemnité de licenciement ;
+- d’une indemnité compensatrice de congés payés acquis.
+
+L'employeur ou, à défaut, un tiers remet les documents de fin de contrat dans un délai de 30 jours calendaires à compter du décès de l'enfant.
+
+Le salarié dont le contrat de travail est rompu du fait du décès de l'enfant du particulier employeur présente une demande d’indemnisation auprès de l’organisme Pôle emploi pour l’ouverture des droits au chômage.",
+            "references": [],
+          },
+        ],
+        "generic": {
+          "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
+          "id": "875f5b33-5464-4eac-83d0-8ec51b92268f",
+          "markdown": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.
+
+Lorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :
+
+- Poursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;
+
+- Vendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.
+
+- Fermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.
+
+Lorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
+          "references": [],
+          "text": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.
+Lorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :
+
+Poursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;
+
+Vendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.
+
+Fermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.
+
+Lorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
+        },
+      },
+      "breadcrumbs": [
+        {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        {
+          "label": "Autres départs",
+          "position": 6,
+          "slug": "/themes/autres-departs",
+        },
+      ],
+      "cdtnId": "404b14a887",
+      "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
       "idcc": "0000",
       "index": 45,
       "isPublished": true,
@@ -17349,7 +18222,7 @@ Lorsque l’employeur est un particulier, son décès peut entraîner la fin du 
     "_type": "_doc",
   },
   {
-    "_id": "36",
+    "_id": "37",
     "_index": "cdtn_test-v2_documents",
     "_score": 0,
     "_source": {

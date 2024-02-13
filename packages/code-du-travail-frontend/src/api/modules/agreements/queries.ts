@@ -2,7 +2,7 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export const getAllAgreementsWithContributions = () => {
   return {
-    _source: ["title", "shortTitle", "slug"],
+    _source: ["title", "shortTitle", "slug", "num"],
     query: {
       bool: {
         filter: [

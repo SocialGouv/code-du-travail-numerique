@@ -1,4 +1,5 @@
 import {
+  Agreement,
   ElasticSearchContributionGeneric,
   ElasticSearchItem,
 } from "@socialgouv/cdtn-utils";
@@ -30,7 +31,15 @@ const isGeneric = (contrib) =>
   (contrib.idcc && contrib.idcc === "0000") ||
   (!contrib.idcc && !contrib.split);
 
-export const getAllContributionsGroupByQuestion = async () => {
+function getTitle(agreements: Agreement[], contrib) {
+  const idcc = contrib.idcc ?? contrib.slug.split("-")[0]
+  const agreement = agreements.find((a) => a.num === parseInt(idcc));
+  return agreement ? `${agreement.shortTitle}: ${contrib.title}` : contrib.title
+}
+
+export const getAllContributionsGroupByQuestion = async (
+  agreements: Agreement[]
+) => {
   const body = getAllContributions();
 
   const response = await elasticsearchClient.search({
@@ -43,9 +52,14 @@ export const getAllContributionsGroupByQuestion = async () => {
   return allGenerics.map((generic) => {
     return {
       generic: generic,
-      CCs: all.filter((contrib) => {
-        return !isGeneric(contrib) && contrib.slug.includes(generic.slug);
-      }),
+      CCs: all
+        .filter((contrib) => {
+          return !isGeneric(contrib) && contrib.slug.includes(generic.slug);
+        })
+        .map((contrib) => {
+          contrib.title = getTitle(agreements, contrib);
+          return contrib;
+        }),
     };
   });
 };

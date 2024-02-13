@@ -17,8 +17,8 @@ export const getSitemapData = async () => {
   const themes = await getAllThemesAndSubThemes();
   const tools = await getAllTools();
   const modeles = await getAllModeles();
-  const contributions = await getAllContributionsGroupByQuestion();
   const agreements = await getAllAgreements();
+  const contributions = await getAllContributionsGroupByQuestion(agreements);
   const response: GetSitemapPage = {
     themes,
     tools,

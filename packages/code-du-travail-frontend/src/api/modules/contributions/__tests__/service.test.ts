@@ -1,9 +1,10 @@
 import {
+  getAllContributionsGroupByQuestion,
   getByIdsContributions,
   getBySlugsContributions,
   getGenericContributionsGroupByThemes,
-  getAllContributionsGroupByQuestion,
 } from "../service";
+import { getAllAgreements } from "../../agreements";
 
 describe("Contributions", () => {
   it("getGenericContributions", async () => {
@@ -23,7 +24,8 @@ describe("Contributions", () => {
   });
 
   it("getAllContributions", async () => {
-    const result = await getAllContributionsGroupByQuestion();
+    const agreements = await getAllAgreements();
+    const result = await getAllContributionsGroupByQuestion(agreements);
     expect(result).toMatchSnapshot();
   });
 });
