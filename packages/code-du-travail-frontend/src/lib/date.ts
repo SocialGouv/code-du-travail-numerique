@@ -43,14 +43,14 @@ export const convertDate = (
   date: Date,
   value: number,
   unit: Unit,
-  isCalendar = false
+  isDateADate = false
 ): Date => {
   let localDate = new Date(date);
   switch (unit) {
     case Unit.DAY:
       return addDay(localDate, value);
     case Unit.WEEK:
-      return addWeek(localDate, value, isCalendar);
+      return addWeek(localDate, value, isDateADate);
     case Unit.MONTH:
       return addMonth(localDate, value);
   }
@@ -62,8 +62,8 @@ export const addDay = (date: Date, day: number): Date => {
   return newDate;
 };
 
-export const addWeek = (date: Date, week: number, isCalendar = false): Date =>
-  addDay(date, isCalendar ? week * 7 - 1 : week * 7);
+export const addWeek = (date: Date, week: number, isDateADate = false): Date =>
+  addDay(date, isDateADate ? week * 7 : week * 7 - 1);
 
 export const addMonth = (date: Date, month: number): Date => {
   const newDate = new Date(date);

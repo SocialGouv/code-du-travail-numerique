@@ -3190,7 +3190,7 @@
       "answer3": "il n'y a pas d'heures d'absence autorisée pour rechercher un emploi pour ce cas.",
       "ref": "Article 70.5.3.2",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314504?idConteneur=KALICONT000046993250#KALIARTI000046314504",
-      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -3206,7 +3206,7 @@
       "answer3": "il n'y a pas d'heures d'absence autorisée pour rechercher un emploi pour ce cas.",
       "ref": "Article 70.5.3.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314503?idConteneur=KALICONT000046993250#KALIARTI000046314503",
-      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -3217,12 +3217,12 @@
       "type": "heures pour recherche d'emploi",
       "idcc": 3248,
       "typeRupture": "7| Rupture de la période d'essai",
-      "answer": "1 jour pour 15 jours travaillés",
+      "answer": "1 jour pour 2 semaines de travail",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Cette journée est convenue entre l'employeur et le salarié. En l'absence d'accord, elle est fixée une fois par l’employeur et une fois par le salarié. Si la durée du préavis est égale à 2 semaines, la journée est fixée par l'employeur. Les absences cessent d'être autorisées, dès que le salarié a retrouvé un emploi.",
+      "answer3": "Cette journée est convenue entre l'employeur et le salarié. En l'absence d'accord, elle est fixée une fois par l’employeur et une fois par le salarié. Si la durée du délai de prévenance est égale à 2 semaines, la journée est fixée par l'employeur. Les absences cessent d'être autorisées, dès que le salarié a retrouvé un emploi.",
       "ref": "Article 70.5.3.2",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314504?idConteneur=KALICONT000046993250#KALIARTI000046314504",
-      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -3238,7 +3238,7 @@
       "answer3": "L’utilisation de ces heures, y compris leur regroupement éventuel, est convenue entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Les absences cessent d'être autorisées, dès que le salarié a retrouvé un emploi.",
       "ref": "Article 70.5.3.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314503?idConteneur=KALICONT000046993250#KALIARTI000046314503",
-      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -3254,7 +3254,7 @@
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314503?idConteneur=KALICONT000046993250#KALIARTI000046314503",
       "ref2": "Article 70.5.3.2",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314504?idConteneur=KALICONT000046993250#KALIARTI000046314504",
-      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de rupture de la période d'essai a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {},
@@ -3266,7 +3266,7 @@
       "answer3": "il n'y a pas d'heures d'absence pour recherche d'emploi en cas de démission.",
       "ref": "Article 74.2.2",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314526?idConteneur=KALICONT000046993250#KALIARTI000046314526",
-      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -3281,7 +3281,7 @@
       "ref": "Article 75.2.3.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314533?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046314533",
       "note": [
-        "Si la lettre de licenciement a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024.",
+        "Si la lettre de licenciement a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.",
         "Pour le salarié à temps partiel, le volume de 50 heures est réduit proportionnellement à son temps de travail"
       ]
     },
@@ -3292,12 +3292,12 @@
       "type": "heures pour recherche d'emploi",
       "idcc": 3248,
       "typeRupture": "3| Licenciement",
-      "answer": "1 jour pour 15 jours travaillés",
+      "answer": "1 jour pour 2 semaines de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Cette journée est convenue entre l'employeur et le salarié. En l'absence d'accord, elle est fixée une fois par l’employeur et une fois par le salarié. Les absences cessent d'être autorisées, dès que le salarié a retrouvé un emploi.",
       "ref": "Article 75.2.3.2",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314534?idConteneur=KALICONT000046993250#KALIARTI000046314534",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     }
   ]
 }

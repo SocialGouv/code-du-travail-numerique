@@ -112,7 +112,7 @@
     {
       "name": "anciennement cadre",
       "question": "Le salarié était-il cadre dans l'ancienne convention collective de la métallurgie (avant le 01/01/2024) ?",
-      "note": "Si le salarié dépendait précédemment de la convention collective des ingénieurs et cadres de la métallurgie (IDCC 650) et qu’il est désormais classé non-cadre en raison de la nouvelle classification des emplois (depuis le 01/01/2024), il bénéficie quand même de la durée de préavis qui s’applique aux cadres."
+      "note": "Si l'emploi du salarié était précédemment cadre (en application de l’ancienne Convention collective - Ingénieurs et cadres (IDCC 650)) et qu’il est classé non-cadre à partir du 1er janvier 2024, en raison de la nouvelle classification des emplois, le salarié bénéficie de la durée de préavis qui s’applique aux cadres."
     }
   ],
   "situations": [
@@ -7577,12 +7577,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "1 mois",
+      "answer": "1 mois calendaire",
       "answer2": null,
       "answer3": "30",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7592,12 +7592,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "1 mois",
+      "answer": "1 mois calendaire",
       "answer2": null,
       "answer3": "30",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7607,12 +7607,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "1 mois",
+      "answer": "1 mois calendaire",
       "answer2": null,
       "answer3": "30",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7623,12 +7623,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "2 mois",
+      "answer": "2 mois calendaires",
       "answer2": null,
       "answer3": "60",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7639,14 +7639,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "2 mois",
+      "answer": "2 mois calendaires",
       "answer2": null,
       "answer3": "60",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7656,12 +7656,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "2 mois",
+      "answer": "2 mois calendaires",
       "answer2": null,
       "answer3": "60",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7671,12 +7671,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "2 mois",
+      "answer": "2 mois calendaires",
       "answer2": null,
       "answer3": "60",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7687,12 +7687,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "3 mois",
+      "answer": "3 mois calendaires",
       "answer2": null,
       "answer3": "90",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7704,14 +7704,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "3 mois",
+      "answer": "3 mois calendaires",
       "answer2": null,
       "answer3": "90",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7723,14 +7723,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "4 mois",
+      "answer": "4 mois calendaires",
       "answer2": null,
       "answer3": "120",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7742,14 +7742,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "6 mois",
+      "answer": "6 mois calendaires",
       "answer2": null,
       "answer3": "180",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7761,14 +7761,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "3 mois",
+      "answer": "3 mois calendaires",
       "answer2": null,
       "answer3": "90",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7780,14 +7780,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "6 mois",
+      "answer": "6 mois calendaires",
       "answer2": null,
       "answer3": "180",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7799,14 +7799,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "6 mois",
+      "answer": "6 mois calendaires",
       "answer2": null,
       "answer3": "180",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7818,14 +7818,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "3 mois",
+      "answer": "3 mois calendaires",
       "answer2": null,
       "answer3": "90",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7837,14 +7837,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "4 mois",
+      "answer": "4 mois calendaires",
       "answer2": null,
       "answer3": "120",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7856,14 +7856,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "6 mois",
+      "answer": "6 mois calendaires",
       "answer2": null,
       "answer3": "180",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7875,14 +7875,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "3 mois",
+      "answer": "3 mois calendaires",
       "answer2": null,
       "answer3": "90",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7894,14 +7894,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "6 mois",
+      "answer": "6 mois calendaires",
       "answer2": null,
       "answer3": "180",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7913,14 +7913,14 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "6 mois",
+      "answer": "6 mois calendaires",
       "answer2": null,
       "answer3": "180",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
       "ref2": "Article 68",
       "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7931,12 +7931,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "3 mois",
+      "answer": "3 mois calendaires",
       "answer2": null,
       "answer3": "90",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7947,12 +7947,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "4 mois",
+      "answer": "4 mois calendaires",
       "answer2": null,
       "answer3": "120",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7963,12 +7963,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "6 mois",
+      "answer": "6 mois calendaires",
       "answer2": null,
       "answer3": "180",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7979,12 +7979,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "3 mois",
+      "answer": "3 mois calendaires",
       "answer2": null,
       "answer3": "90",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7995,12 +7995,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "6 mois",
+      "answer": "6 mois calendaires",
       "answer2": null,
       "answer3": "180",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -8011,13 +8011,12 @@
       "type": "préavis de Licenciement",
       "idcc": 3248,
       "typeRupture": null,
-      "answer": "6 mois",
+      "answer": "6 mois calendaires",
       "answer2": null,
       "answer3": "180",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     }
   ]
 }
-
