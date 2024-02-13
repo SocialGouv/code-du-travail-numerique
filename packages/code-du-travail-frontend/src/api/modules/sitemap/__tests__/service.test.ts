@@ -18,14 +18,14 @@ describe("Sitemap", () => {
     });
     expect(result.contributions).toEqual([
       {
-        CCs: [],
+        agreements: [],
         generic: {
           slug: "les-conges-pour-evenements-familiaux",
           title: "Les congés pour événements familiaux",
         },
       },
       {
-        CCs: [
+        agreements: [
           {
             idcc: "0044",
             slug: "44-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
@@ -41,7 +41,7 @@ describe("Sitemap", () => {
         },
       },
       {
-        CCs: [
+        agreements: [
           {
             slug: "44-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
             split: true,

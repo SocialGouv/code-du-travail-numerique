@@ -76,7 +76,7 @@ const PlanDuSite = ({
                       {contribution.generic.title}
                     </Link>
                     <ul>
-                      {contribution.CCs.map((c) => (
+                      {contribution.agreements.map((c) => (
                         <StyledLi key={c.slug}>
                           <Link
                             href={`/${getRouteBySource(

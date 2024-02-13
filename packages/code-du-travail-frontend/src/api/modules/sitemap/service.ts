@@ -9,7 +9,7 @@ export type GetSitemapPage = {
   themes: any;
   tools: Tool[];
   modeles: ElasticSearchItem[];
-  contributions: { generic: ElasticSearchItem; CCs: ElasticSearchItem[] }[];
+  contributions: { generic: ElasticSearchItem; agreements: ElasticSearchItem[] }[];
   agreements: Agreement[];
 };
 

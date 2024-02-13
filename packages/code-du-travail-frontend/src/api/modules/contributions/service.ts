@@ -56,7 +56,7 @@ export const getAllContributionsGroupByQuestion = async (
   return allGenerics.map((generic) => {
     return {
       generic: generic,
-      CCs: all
+      agreements: all
         .filter((contrib) => {
           return !isGeneric(contrib) && contrib.slug.includes(generic.slug);
         })
