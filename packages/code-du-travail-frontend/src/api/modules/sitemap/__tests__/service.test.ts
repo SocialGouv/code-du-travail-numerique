@@ -27,6 +27,22 @@ describe("Sitemap", () => {
       {
         CCs: [
           {
+            idcc: "0044",
+            slug: "44-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+            title:
+              "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
+          },
+        ],
+        generic: {
+          idcc: "0000",
+          slug: "quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+          title:
+            "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
+        },
+      },
+      {
+        CCs: [
+          {
             slug: "44-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
             split: true,
             title:
@@ -43,22 +59,6 @@ describe("Sitemap", () => {
           slug: "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
           title:
             "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
-        },
-      },
-      {
-        CCs: [
-          {
-            idcc: "0044",
-            slug: "44-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-            title:
-              "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
-          },
-        ],
-        generic: {
-          idcc: "0000",
-          slug: "quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-          title:
-            "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
         },
       },
     ]);

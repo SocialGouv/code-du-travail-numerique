@@ -17,6 +17,7 @@ export const getAllContributions = () => {
         ],
       },
     },
+    size: 3000,
   };
 };
 

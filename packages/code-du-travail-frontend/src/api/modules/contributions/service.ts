@@ -32,9 +32,11 @@ const isGeneric = (contrib) =>
   (!contrib.idcc && !contrib.split);
 
 function getTitle(agreements: Agreement[], contrib) {
-  const idcc = contrib.idcc ?? contrib.slug.split("-")[0]
+  const idcc = contrib.idcc ?? contrib.slug.split("-")[0];
   const agreement = agreements.find((a) => a.num === parseInt(idcc));
-  return agreement ? `${agreement.shortTitle}: ${contrib.title}` : contrib.title
+  return agreement
+    ? `${agreement.shortTitle}: ${contrib.title}`
+    : contrib.title;
 }
 
 export const getAllContributionsGroupByQuestion = async (
@@ -47,7 +49,9 @@ export const getAllContributionsGroupByQuestion = async (
     index: elasticDocumentsIndex,
   });
   const all = response.body.hits.hits.map(({ _source }) => _source);
-  const allGenerics = all.filter(isGeneric);
+  const allGenerics = all
+    .filter(isGeneric)
+    .sort((a, b) => a.title.localeCompare(b.title));
 
   return allGenerics.map((generic) => {
     return {
@@ -59,7 +63,8 @@ export const getAllContributionsGroupByQuestion = async (
         .map((contrib) => {
           contrib.title = getTitle(agreements, contrib);
           return contrib;
-        }),
+        })
+        .sort((a, b) => a.title.localeCompare(b.title)),
     };
   });
 };

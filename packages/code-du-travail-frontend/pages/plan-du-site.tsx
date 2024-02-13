@@ -180,7 +180,7 @@ export async function getStaticProps() {
       data = await getSitemapData();
     }
     themes = data.themes;
-    tools = data.tools.filter((tool) => tool.source === SOURCES.TOOLS);
+    tools = data.tools;
     contributions = data.contributions;
     modeles = data.modeles;
     agreements = data.agreements;

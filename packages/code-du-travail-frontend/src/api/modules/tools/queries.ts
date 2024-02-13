@@ -1,27 +1,12 @@
-const TOOL_FILTER = {
-  bool: {
-    must: [
-      { term: { isPublished: true } },
-      {
-        bool: {
-          should: [
-            { term: { source: "external" } },
-            { term: { source: "outils" } },
-          ],
-        },
-      },
-    ],
-  },
-};
-
 export const getAllToolsQuery = () => {
-  const filter: any[] = [TOOL_FILTER];
-
   return {
     _source: ["slug", "title", "displayTool"],
     query: {
       bool: {
-        filter,
+        must: [
+          { term: { isPublished: true } },
+          { term: { source: "outils" } },
+        ],
       },
     },
     size: 50,
@@ -38,7 +23,23 @@ export const getTools = (
   slugs?: string[],
   cdtnIds?: string[]
 ) => {
-  const filter: any[] = [TOOL_FILTER];
+  const filter: any[] = [
+    {
+      bool: {
+        must: [
+          { term: { isPublished: true } },
+          {
+            bool: {
+              should: [
+                { term: { source: "external" } },
+                { term: { source: "outils" } },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ];
   if (ids) {
     filter.push({ ids: { values: ids } });
   }
@@ -56,10 +57,12 @@ export const getTools = (
       "date",
       "description",
       "displayTool",
+      "displayTitle",
       "icon",
       "id",
       "isPublished",
       "metaDescription",
+      "metaTitle",
       "order",
       "slug",
       "source",
