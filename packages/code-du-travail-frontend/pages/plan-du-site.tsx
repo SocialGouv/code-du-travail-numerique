@@ -15,7 +15,7 @@ import { getSitemapData, GetSitemapPage } from "../src/api";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { REVALIDATE_TIME, SITE_URL } from "../src/config";
 
-const Index = ({
+const PlanDuSite = ({
   tools,
   modeles,
   contributions,
@@ -215,4 +215,4 @@ export const StyledLi = styled.li`
   }
 `;
 
-export default Index;
+export default PlanDuSite;

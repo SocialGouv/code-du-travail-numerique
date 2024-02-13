@@ -3,28 +3,39 @@
 exports[`Agreements should return a list for /agreements 1`] = `
 [
   {
+    "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
     "num": 2120,
     "shortTitle": "Banque",
     "slug": "2120-banque",
+    "source": "conventions_collectives",
     "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.",
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780",
   },
   {
+    "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
     "num": 843,
     "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",
     "slug": "843-boulangerie-patisserie-entreprises-artisanales",
+    "source": "conventions_collectives",
     "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
   },
   {
+    "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
     "num": 1234,
     "shortTitle": "Convention collective Éducation, culture, loisirs et animation au service des territoires (ÉCLAT)",
     "slug": "1518-education-culture-loisirs-et-animation-au-service-des-territoires-eclat",
+    "source": "conventions_collectives",
     "title": "Éducation, culture, loisirs et animation au service des territoires (ÉCLAT)",
   },
   {
+    "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
     "num": 1090,
     "shortTitle": "Services de l'automobile",
     "slug": "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle",
+    "source": "conventions_collectives",
     "title": "Services de l'automobile Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.",
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635191",
   },
 ]
 `;
