@@ -1,3 +1,23 @@
+export const getAllToolsQuery = () => {
+  return {
+    _source: ["slug", "title", "displayTool"],
+    query: {
+      bool: {
+        must: [
+          { term: { isPublished: true } },
+          { term: { source: "outils" } },
+        ],
+      },
+    },
+    size: 50,
+    sort: [
+      {
+        order: "asc",
+      },
+    ],
+  };
+};
+
 export const getTools = (
   ids?: string[],
   slugs?: string[],
@@ -30,6 +50,26 @@ export const getTools = (
     filter.push({ terms: { cdtnId: cdtnIds } });
   }
   return {
+    _source: [
+      "action",
+      "breadcrumbs",
+      "cdtnId",
+      "date",
+      "description",
+      "displayTool",
+      "displayTitle",
+      "icon",
+      "id",
+      "isPublished",
+      "metaDescription",
+      "metaTitle",
+      "order",
+      "slug",
+      "source",
+      "text",
+      "title",
+      "url",
+    ],
     query: {
       bool: {
         filter,

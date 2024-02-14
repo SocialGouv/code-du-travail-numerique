@@ -1,9 +1,10 @@
 import {
-  getGenericContributionsGroupByThemes,
-  getBySlugsContributions,
+  getAllContributionsGroupByQuestion,
   getByIdsContributions,
-  getGenericsContributions,
+  getBySlugsContributions,
+  getGenericContributionsGroupByThemes,
 } from "../service";
+import { getAllAgreements } from "../../agreements";
 
 describe("Contributions", () => {
   it("getGenericContributions", async () => {
@@ -23,7 +24,8 @@ describe("Contributions", () => {
   });
 
   it("getAllContributions", async () => {
-    const result = await getGenericsContributions();
+    const agreements = await getAllAgreements();
+    const result = await getAllContributionsGroupByQuestion(agreements);
     expect(result).toMatchSnapshot();
   });
 });

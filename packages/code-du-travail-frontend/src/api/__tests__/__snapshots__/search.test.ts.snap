@@ -15,7 +15,7 @@ exports[`Search should return a list of suggestion 1`] = `
   ],
   "documents": [
     {
-      "_score": 45.272427,
+      "_score": 44.999393,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -36,7 +36,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
     },
     {
-      "_score": 39.83683,
+      "_score": 39.666744,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -62,7 +62,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Les congés pour événements familiaux",
     },
     {
-      "_score": 36.02976,
+      "_score": 35.924004,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -83,7 +83,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Certificat de travail",
     },
     {
-      "_score": 33.682278,
+      "_score": 33.71013,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -109,7 +109,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Rupture de période d’essai à l’initiative de l’employeur",
     },
     {
-      "_score": 33.550087,
+      "_score": 33.577934,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": [
@@ -131,7 +131,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Préavis de démission",
     },
     {
-      "_score": 33.514717,
+      "_score": 33.542564,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -157,7 +157,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
     },
     {
-      "_score": 33.471485,
+      "_score": 33.33788,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -225,7 +225,7 @@ exports[`Search should return a list of suggestion 1`] = `
   ],
   "themes": [
     {
-      "_score": 1.9282949,
+      "_score": 1.8162875,
       "algo": "fulltext",
       "cdtnId": "5594695039",
       "icon": "Contract",
