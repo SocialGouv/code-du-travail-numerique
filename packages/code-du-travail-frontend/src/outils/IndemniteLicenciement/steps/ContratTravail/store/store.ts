@@ -33,15 +33,12 @@ const createContratTravailStore: StoreSlice<
   contratTravailData: { ...initialState },
   contratTravailFunction: {
     onChangeTypeContratTravail: (value) => {
-      get().situationFunction.onSituationChange(
-        "contrat salarié . indemnité de licenciement . type du contrat de travail",
-        value
-      );
+      get().situationFunction.onSituationChange("typeContratTravail", value);
       applyGenericValidation(get, set, "typeContratTravail", value);
     },
     onChangeLicenciementFauteGrave: (value) => {
       get().situationFunction.onSituationChange(
-        "contrat salarié . indemnité de licenciement . licenciement pour faute grave",
+        "licenciementFauteGrave",
         value
       );
       applyGenericValidation(get, set, "licenciementFauteGrave", value);

@@ -95,8 +95,7 @@ const createResultStore: StoreSlice<
     init: () => {
       const contratTravailEligibility =
         !get().contratTravailData.error.errorEligibility;
-      const isCdd =
-        get().contratTravailData.input.typeContratTravail === "'cdd'";
+      const isCdd = get().contratTravailData.input.typeContratTravail === "cdd";
       const ancienneteEligibility =
         !get().ancienneteData.error.errorEligibility;
       const informationEligibility =
@@ -152,9 +151,6 @@ const createResultStore: StoreSlice<
     getPublicodesResult: () => {
       const salaryPeriods = get().salairesData.input.salaryPeriods;
       const agreement = get().agreementData.input.agreement;
-      const contractType = get().contratTravailData.input.typeContratTravail;
-      const isDismissalSeriousMisconduct =
-        get().contratTravailData.input.licenciementFauteGrave;
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
       const longTermDisability =
@@ -184,9 +180,7 @@ const createResultStore: StoreSlice<
             dateSortie,
             salaryPeriods,
             isLicenciementInaptitude,
-            longTermDisability,
-            contractType,
-            isDismissalSeriousMisconduct
+            longTermDisability
           ),
           absencePeriods:
             absencePeriods && absencePeriods.length

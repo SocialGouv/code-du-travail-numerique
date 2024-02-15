@@ -8,9 +8,7 @@ export const mapToPublicodesSituationForCalculation = (
   endDate: string,
   salaryPeriods: SalaryPeriods[],
   inaptitude: boolean,
-  longTermDisability: boolean,
-  contractType: CdiCdd | undefined = "'cdi'",
-  isDismissalSeriousMisconduct: OuiNon | undefined = "non"
+  longTermDisability: boolean
 ): Record<string, string> => {
   return {
     salaryPeriods: JSON.stringify(salaryPeriods),
@@ -22,10 +20,6 @@ export const mapToPublicodesSituationForCalculation = (
       inaptitude ? "oui" : "non",
     "contrat salarié . indemnité de licenciement . arrêt de travail":
       longTermDisability ? "oui" : "non",
-    "contrat salarié . indemnité de licenciement . type du contrat de travail":
-      contractType,
-    "contrat salarié . indemnité de licenciement . licenciement pour faute grave":
-      isDismissalSeriousMisconduct,
   };
 };
 
@@ -33,9 +27,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
   ccn: number,
   inaptitude: boolean,
   longTermDisability: boolean,
-  agreementParameters?: Record<string, any>,
-  contractType: CdiCdd | undefined = "'cdi'",
-  isDismissalSeriousMisconduct: OuiNon | undefined = "non"
+  agreementParameters?: Record<string, any>
 ): Record<string, string> => {
   return {
     ...agreementParameters,
@@ -45,10 +37,6 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
       "contrat salarié . indemnité de licenciement . arrêt de travail":
         longTermDisability ? "oui" : "non",
       "contrat salarié . convention collective": `'IDCC${formatIdcc(ccn)}'`,
-      "contrat salarié . indemnité de licenciement . type du contrat de travail":
-        contractType,
-      "contrat salarié . indemnité de licenciement . licenciement pour faute grave":
-        isDismissalSeriousMisconduct,
     },
   };
 };
