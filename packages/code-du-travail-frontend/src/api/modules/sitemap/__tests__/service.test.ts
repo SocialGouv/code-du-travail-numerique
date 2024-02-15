@@ -52,7 +52,7 @@ describe("Sitemap", () => {
             slug: "1090-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
             split: true,
             title:
-              "Services de l'automobile: Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
+              "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ? - Services de l'automobile",
           },
         ],
         generic: {
