@@ -23,6 +23,8 @@ import { customSeniorityValidator } from "../../../agreements/seniority";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 import { MainStore } from "../../../store";
+import { loadPublicodes } from "../../../../api";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -39,7 +41,8 @@ const createAncienneteStore: StoreSlice<
   SalairesStoreSlice &
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
     CommonInformationsStoreSlice &
-    ContratTravailStoreSlice
+    ContratTravailStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   ancienneteData: { ...initialState },
   ancienneteFunction: {
@@ -118,15 +121,34 @@ const createAncienneteStore: StoreSlice<
         get().agreementData.input.agreement
       );
 
+      const publicodes = get().agreementData.publicodes;
+      const infos = informationToSituation(
+        get().informationsData.input.publicodesInformations
+      );
+      const { licenciementInaptitude, arretTravail } =
+        get().contratTravailData.input;
+      const { dateEntree, dateNotification, dateSortie } =
+        get().ancienneteData.input;
+      const situation = {
+        ...get().situationData.situation,
+        ...infos,
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          dateEntree,
+        "contrat salarié . indemnité de licenciement . date de notification":
+          dateNotification,
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          dateSortie,
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          licenciementInaptitude,
+        "contrat salarié . indemnité de licenciement . arrêt de travail":
+          arretTravail,
+      };
+      console.log("situation ancienneté", situation);
+      const { result, explanation } = publicodes.calculate(situation);
       let errorEligibility;
-      if (isValid) {
-        errorEligibility = getErrorEligibility(
-          get as StoreApi<MainStore>["getState"],
-          get().ancienneteData.input,
-          get().informationsData.input,
-          get().contratTravailData.input.licenciementInaptitude === "oui",
-          get().agreementData.input.agreement
-        );
+
+      if (isValid && result.value === 0 && explanation) {
+        errorEligibility = explanation;
       }
 
       set(

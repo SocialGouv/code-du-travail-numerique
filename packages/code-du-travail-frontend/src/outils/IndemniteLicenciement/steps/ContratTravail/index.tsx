@@ -9,6 +9,7 @@ import {
 const StepContratTravail = (): JSX.Element => {
   const store = useContext(IndemniteLicenciementContext);
   const {
+    data,
     licenciementFauteGrave,
     onChangeLicenciementFauteGrave,
     licenciementInaptitude,
@@ -25,6 +26,7 @@ const StepContratTravail = (): JSX.Element => {
     onChangeDateArretTravail,
     errorDateArretTravail,
   } = useIndemniteLicenciementStore(store, (state) => ({
+    data: state.contratTravailData.input,
     licenciementFauteGrave:
       state.contratTravailData.input.licenciementFauteGrave,
     onChangeLicenciementFauteGrave:
@@ -57,12 +59,12 @@ const StepContratTravail = (): JSX.Element => {
         questions={[
           {
             label: "Contrat à durée déterminée (CDD) ou contrat d’intérim",
-            value: "cdd",
+            value: "'cdd'",
             id: "cdd",
           },
           {
             label: "Contrat à durée indéterminée (CDI)",
-            value: "cdi",
+            value: "'cdi'",
             id: "cdi",
           },
         ]}
@@ -74,7 +76,7 @@ const StepContratTravail = (): JSX.Element => {
         showRequired
         autoFocus
       />
-      {typeContratTravail === "cdi" && (
+      {typeContratTravail === "'cdi'" && (
         <RadioQuestion
           questions={[
             {
@@ -96,7 +98,7 @@ const StepContratTravail = (): JSX.Element => {
           showRequired
         />
       )}
-      {typeContratTravail === "cdi" && licenciementFauteGrave === "non" && (
+      {typeContratTravail === "'cdi'" && licenciementFauteGrave === "non" && (
         <RadioQuestion
           questions={[
             {
@@ -118,7 +120,7 @@ const StepContratTravail = (): JSX.Element => {
           showRequired
         />
       )}
-      {typeContratTravail === "cdi" &&
+      {typeContratTravail === "'cdi'" &&
         licenciementFauteGrave === "non" &&
         licenciementInaptitude === "non" && (
           <RadioQuestion
@@ -142,7 +144,7 @@ const StepContratTravail = (): JSX.Element => {
             showRequired
           />
         )}
-      {typeContratTravail === "cdi" &&
+      {typeContratTravail === "'cdi'" &&
         licenciementFauteGrave === "non" &&
         licenciementInaptitude === "non" &&
         arretTravail === "oui" && (

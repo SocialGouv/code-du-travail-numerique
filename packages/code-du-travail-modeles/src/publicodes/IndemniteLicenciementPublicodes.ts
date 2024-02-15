@@ -5,6 +5,7 @@ import type {
   SeniorityResult,
 } from "../modeles/common";
 import {
+  IneligibilityFactory,
   ReferenceSalaryFactory,
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
@@ -66,47 +67,88 @@ class IndemniteLicenciementPublicodes
     };
   }
 
+  removeNonPublicodeFields(args: Record<string, string | undefined>) {
+    return Object.keys(args).reduce((filteredObj, key) => {
+      if (key.startsWith("contrat salarié . ") && args[key]) {
+        return {
+          ...filteredObj,
+          [key]: args[key],
+        };
+      }
+      return filteredObj;
+    }, {});
+  }
+
   calculate(
     args: Record<string, string | undefined>,
     targetRule?: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
-    let newArgs = args;
-    const missingArg = this.getMissingArg(args, [
-      "contrat salarié . indemnité de licenciement . date d'entrée",
-      "contrat salarié . indemnité de licenciement . date de sortie",
-      "contrat salarié . indemnité de licenciement . date de notification",
-    ]);
-    if (missingArg) {
-      return this.mapMissingArg(missingArg);
+    const { absencePeriods, salaryPeriods, ...situation } = args;
+    const result = super.setSituation(
+      this.removeNonPublicodeFields(args),
+      targetRule
+    );
+    const ineligibilityInstance = new IneligibilityFactory().create(this.idcc);
+    const ineligibility = ineligibilityInstance.getIneligibility(situation);
+    if (ineligibility) {
+      return {
+        explanation: ineligibility,
+        missingArgs: [],
+        result: {
+          value: 0,
+        },
+        situation: [],
+      };
     }
-    if (
-      !args["contrat salarié . indemnité de licenciement . ancienneté en année"]
-    ) {
+    const isSeniorityMissing = !Object.keys(args).find(
+      (name) =>
+        name ===
+        "contrat salarié . indemnité de licenciement . ancienneté en année"
+    );
+    console.log("isSeniorityMissing", isSeniorityMissing);
+    if (isSeniorityMissing) {
+      const missingArg = this.getMissingArg(args, [
+        "contrat salarié . indemnité de licenciement . date d'entrée",
+        "contrat salarié . indemnité de licenciement . date de sortie",
+      ]);
+      if (missingArg) {
+        return this.mapMissingArg(missingArg);
+      }
       const agreement = new SeniorityFactory().create(this.idcc);
       const agreementSeniority: SeniorityResult = agreement.computeSeniority(
-        agreement.mapSituation(args)
+        agreement.mapSituation({ absencePeriods, ...situation })
       );
       const legal = new SeniorityFactory().create(
         SupportedCcIndemniteLicenciement.default
       );
       const legalSeniority: SeniorityResult = legal.computeSeniority(
-        legal.mapSituation(args)
+        legal.mapSituation({ absencePeriods, ...situation })
       );
-      newArgs = {
-        ...newArgs,
+      return this.calculate({
+        ...situation,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           agreementSeniority.value.toString(),
         "contrat salarié . indemnité de licenciement . ancienneté en année":
           legalSeniority.value.toString(),
+        salaryPeriods,
         ...legalSeniority.extraInfos,
         ...agreementSeniority.extraInfos,
-      };
+      });
     }
-    if (
-      !args[
+    const isSeniorityRequiredMissing = !Object.keys(situation).find(
+      (name) =>
+        name ===
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
-      ]
-    ) {
+    );
+    if (isSeniorityRequiredMissing) {
+      const missingArg = this.getMissingArg(situation, [
+        "contrat salarié . indemnité de licenciement . date d'entrée",
+        "contrat salarié . indemnité de licenciement . date de sortie",
+        "contrat salarié . indemnité de licenciement . date de notification",
+      ]);
+      if (missingArg) {
+        return this.mapMissingArg(missingArg);
+      }
       const agreement = new SeniorityFactory().create(this.idcc);
       const agreementRequiredSeniority: RequiredSeniorityResult =
         agreement.computeRequiredSeniority(
@@ -117,62 +159,36 @@ class IndemniteLicenciementPublicodes
       );
       const legalRequiredSeniority: RequiredSeniorityResult =
         legal.computeRequiredSeniority(legal.mapRequiredSituation(args));
-      newArgs = {
-        ...newArgs,
+      return this.calculate({
+        ...situation,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           agreementRequiredSeniority.value.toString(),
         "contrat salarié . indemnité de licenciement . ancienneté requise en année":
           legalRequiredSeniority.value.toString(),
-      };
+        salaryPeriods,
+      });
     }
-    delete newArgs.absencePeriods;
-    if (
-      !args[
+    const isReferenceSalaryMissing = !Object.keys(args).find(
+      (name) =>
+        name ===
         "contrat salarié . indemnité de licenciement . salaire de référence"
-      ]
-    ) {
-      const s = new ReferenceSalaryFactory().create(
+    );
+    if (isReferenceSalaryMissing) {
+      const agreementReferenceSalary = new ReferenceSalaryFactory().create(
         SupportedCcIndemniteLicenciement.default
       );
-      const value = s.computeReferenceSalary({
-        salaires: args.salaryPeriods ? JSON.parse(args.salaryPeriods) : [],
+      const value = agreementReferenceSalary.computeReferenceSalary({
+        salaires: salaryPeriods ? JSON.parse(salaryPeriods) : [],
       });
       if (value) {
-        newArgs = {
-          ...newArgs,
+        return this.calculate({
+          ...situation,
           "contrat salarié . indemnité de licenciement . salaire de référence":
             value.toString(),
-        };
+        });
       }
     }
-    if (
-      !args[
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
-      ]
-    ) {
-      const s = new ReferenceSalaryFactory().create(this.idcc);
-      const value = s.computeReferenceSalary(
-        s.mapSituation
-          ? s.mapSituation(args)
-          : {
-              salaires: args.salaryPeriods
-                ? JSON.parse(args.salaryPeriods)
-                : [],
-            }
-      );
-      if (value) {
-        newArgs = {
-          ...newArgs,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            value.toString(),
-        };
-      }
-      if (s.removeSpecificSituation) {
-        newArgs = s.removeSpecificSituation(newArgs);
-      }
-    }
-    delete newArgs.salaryPeriods;
-    return super.setSituation(newArgs, targetRule);
+    return result;
   }
 
   protected convertedResult(

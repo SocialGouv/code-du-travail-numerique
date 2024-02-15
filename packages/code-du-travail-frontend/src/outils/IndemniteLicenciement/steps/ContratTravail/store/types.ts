@@ -2,7 +2,7 @@ import { StepData } from "../../../store";
 import { OuiNon } from "../../../common/types";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 
-type CdiCdd = "cdi" | "cdd";
+export type CdiCdd = "'cdi'" | "'cdd'";
 
 export type ContratTravailStoreInput = {
   typeContratTravail?: CdiCdd;

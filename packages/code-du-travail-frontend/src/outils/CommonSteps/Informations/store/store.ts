@@ -53,16 +53,17 @@ const createCommonInformationsStore: StoreSlice<
         get().contratTravailData.input.licenciementInaptitude === "oui";
       try {
         if (agreement && isAgreementSupportedIndemniteLicenciement) {
-          const missingArgs = publicodes
-            .setSituation(
-              mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-                agreement.num,
-                isLicenciementInaptitude,
-                false
-              ),
-              "contrat salarié . indemnité de licenciement . résultat conventionnel"
-            )
-            .missingArgs.filter((item) => item.rawNode.cdtn);
+          const result = publicodes.setSituation(
+            mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+              agreement.num,
+              isLicenciementInaptitude,
+              false
+            ),
+            "contrat salarié . indemnité de licenciement . résultat conventionnel"
+          );
+          const missingArgs = result.missingArgs.filter(
+            (item) => item.rawNode.cdtn
+          );
           if (missingArgs.length > 0) {
             const question = missingArgs.map((arg) => ({
               name: arg.name,
@@ -110,6 +111,9 @@ const createCommonInformationsStore: StoreSlice<
         get().informationsData.input.publicodesInformations;
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
+      const contractType = get().contratTravailData.input.typeContratTravail;
+      const isDismissalSeriousMisconduct =
+        get().contratTravailData.input.licenciementFauteGrave;
       const questionAnswered = publicodesInformations.find(
         (question) => question.question.rule.nom === key
       );
@@ -135,17 +139,19 @@ const createCommonInformationsStore: StoreSlice<
         let missingArgs: MissingArgs[] = [];
         let blockingNotification: any = undefined;
         try {
-          missingArgs = publicodes
-            .setSituation(
-              mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-                agreement.num,
-                isLicenciementInaptitude,
-                false,
-                rules
-              ),
-              "contrat salarié . indemnité de licenciement . résultat conventionnel"
-            )
-            .missingArgs.filter((item) => item.rawNode.cdtn);
+          const result = publicodes.setSituation(
+            mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+              agreement.num,
+              isLicenciementInaptitude,
+              false,
+              rules,
+              contractType,
+              isDismissalSeriousMisconduct
+            ),
+            "contrat salarié . indemnité de licenciement . résultat conventionnel"
+          );
+          console.log("result", result);
+          missingArgs = result.missingArgs.filter((item) => item.rawNode.cdtn);
           const notifBloquante = publicodes.getNotificationsBloquantes();
           if (notifBloquante.length > 0) {
             blockingNotification = notifBloquante[0].description;

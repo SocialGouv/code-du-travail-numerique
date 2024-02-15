@@ -7,7 +7,7 @@ export const validateStep = (state: ContratTravailStoreInput) => {
       ? "Vous devez répondre à cette question"
       : undefined,
     errorLicenciementFauteGrave:
-      !state.licenciementFauteGrave && state.typeContratTravail === "cdi"
+      !state.licenciementFauteGrave && state.typeContratTravail === "'cdi'"
         ? "Vous devez répondre à cette question"
         : undefined,
     errorLicenciementInaptitude:
