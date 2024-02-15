@@ -61,7 +61,7 @@ const getTitleFromNewContrib = (contribution) => {
     return contribution.title;
   }
 
-  return `${contribution.ccnShortTitle}: ${contribution.title}`;
+  return `${contribution.title} - ${contribution.ccnShortTitle}`;
 };
 
 function PageContribution(props: Props): React.ReactElement {
