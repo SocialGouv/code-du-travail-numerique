@@ -19,7 +19,7 @@ describe("<PageContribution />", () => {
     );
     const titreH1 = getByRole("heading", { level: 1 });
     expect(titreH1.textContent).toBe(
-      "Métallurgie: La période d’essai peut-elle être renouvelée ?"
+      "La période d’essai peut-elle être renouvelée ? - Métallurgie"
     );
   });
   it("should render title with only question", () => {
