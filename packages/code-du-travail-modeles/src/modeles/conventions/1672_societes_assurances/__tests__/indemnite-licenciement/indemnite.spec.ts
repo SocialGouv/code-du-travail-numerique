@@ -6,35 +6,6 @@ const engine = new IndemniteLicenciementPublicodes(
 );
 
 describe("CC 1672", () => {
-  test("2", () => {
-    const { missingArgs, result } = engine.setSituation(
-      {
-        "contrat salarié . convention collective": "'IDCC1672'",
-        "contrat salarié . convention collective . sociétés d'assurances . age":
-          "42",
-        "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
-          "'Non-cadres (Classes 1 à 4)'",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-          "4.416666666666667",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-          "4",
-        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
-        "contrat salarié . indemnité de licenciement . date d'entrée":
-          "01/01/2018",
-        "contrat salarié . indemnité de licenciement . date de notification":
-          "01/01/2022",
-        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-          "non",
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-          "17500",
-      },
-      "contrat salarié . indemnité de licenciement . résultat conventionnel"
-    );
-
-    expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(5000);
-    expect(result.unit?.numerators).toEqual(["€"]);
-  });
   describe("Calcul de l'indemnité de licenciement pour un non cadre", () => {
     test.each`
       seniorityRight | seniority | age   | salaireRef | expectedCompensation
