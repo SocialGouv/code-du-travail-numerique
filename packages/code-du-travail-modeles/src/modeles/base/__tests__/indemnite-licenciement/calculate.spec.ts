@@ -1,10 +1,7 @@
 import { IndemniteLicenciementPublicodes } from "../../../../publicodes";
 import type { SalaryPeriods } from "../../../common";
 
-const engine = new IndemniteLicenciementPublicodes(
-  modelsIndemniteLicenciement,
-  "3248"
-);
+const engine = new IndemniteLicenciementPublicodes(modelsIndemniteLicenciement);
 
 describe("Test de la fonctionnalité 'calculate'", () => {
   test("Vérifier que l'ancienneté peut être remplacer par les dates en input", () => {
@@ -94,38 +91,6 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     expect(missingArgs).toEqual([]);
     expect(result.value).toEqual(875);
     expect(result.unit?.numerators).toEqual(["€"]);
-  });
-  test("test1", () => {
-    const r = engine.calculate({
-      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
-        "'A, B, C, D ou E'",
-      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
-        "'Oui'",
-      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
-        "'Oui'",
-      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour . date":
-        "01/01/2010",
-      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour":
-        "'Non'",
-      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age":
-        "61",
-      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . remplit conditions pour la retraite":
-        "'Oui'",
-      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
-        "'Non'",
-      "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
-      "contrat salarié . indemnité de licenciement . date d'entrée":
-        "01/01/2000",
-      "contrat salarié . indemnité de licenciement . date de notification":
-        "01/01/2024",
-      "contrat salarié . indemnité de licenciement . date de sortie":
-        "01/06/2024",
-      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-        "non",
-      licenciementFauteGrave: "non",
-      typeContratTravail: "cdi",
-    });
-    expect(r).toEqual(0);
   });
   describe("Vérification que les ineligibilités fonctionnent", () => {
     test("Vérifier l'ineligibilite CDD", () => {

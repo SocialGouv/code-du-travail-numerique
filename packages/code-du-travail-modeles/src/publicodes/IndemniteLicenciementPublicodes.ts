@@ -67,7 +67,20 @@ class IndemniteLicenciementPublicodes
     };
   }
 
-  removeNonPublicodeFields(args: Record<string, string | undefined>) {
+  mapIneligibility(
+    text: string
+  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+    return {
+      ineligibility: text,
+      missingArgs: [],
+      result: { value: 0 },
+      situation: [],
+    };
+  }
+
+  removeNonPublicodeFields(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
     return Object.keys(args).reduce((filteredObj, key) => {
       if (key.startsWith("contrat salarié . ") && args[key]) {
         return {
@@ -87,18 +100,15 @@ class IndemniteLicenciementPublicodes
     const ineligibilityInstance = new IneligibilityFactory().create(this.idcc);
     const ineligibility = ineligibilityInstance.getIneligibility(newArgs);
     if (ineligibility) {
-      return {
-        ineligibility,
-        missingArgs: [],
-        result: {
-          value: 0,
-        },
-        situation: [],
-      };
+      return this.mapIneligibility(ineligibility);
     }
-
     if (
-      !args["contrat salarié . indemnité de licenciement . ancienneté en année"]
+      !args[
+        "contrat salarié . indemnité de licenciement . ancienneté en année"
+      ] ||
+      !args[
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+      ]
     ) {
       const missingArg = this.getMissingArg(args, [
         "contrat salarié . indemnité de licenciement . date d'entrée",
@@ -137,6 +147,9 @@ class IndemniteLicenciementPublicodes
     if (
       !args[
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
+      ] ||
+      !args[
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
       ]
     ) {
       const missingArg = this.getMissingArg(args, [
@@ -171,14 +184,7 @@ class IndemniteLicenciementPublicodes
     const ineligibilityWithSeniority =
       ineligibilityInstance.getIneligibility(newArgs);
     if (ineligibilityWithSeniority) {
-      return {
-        ineligibility: ineligibilityWithSeniority,
-        missingArgs: [],
-        result: {
-          value: 0,
-        },
-        situation: [],
-      };
+      return this.mapIneligibility(ineligibilityWithSeniority);
     }
     if (
       !args[
