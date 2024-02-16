@@ -144,9 +144,7 @@ const createCommonInformationsStore: StoreSlice<
               agreement.num,
               isLicenciementInaptitude,
               false,
-              rules,
-              contractType,
-              isDismissalSeriousMisconduct
+              rules
             ),
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );

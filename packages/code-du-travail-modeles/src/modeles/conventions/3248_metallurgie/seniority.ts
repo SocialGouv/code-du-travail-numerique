@@ -80,7 +80,6 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
     hasBeenDayContract,
     dateBecomeDayContract,
   }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC3248>): RequiredSeniorityResult {
-    console.log("categoriePro", categoriePro);
     switch (categoriePro) {
       case "'A, B, C, D ou E'":
         return this.computeABCDE(
