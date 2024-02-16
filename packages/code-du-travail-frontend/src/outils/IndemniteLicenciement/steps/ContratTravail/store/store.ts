@@ -66,13 +66,13 @@ const createContratTravailStore: StoreSlice<
         loadPublicodes<PublicodesSimulator.INDEMNITE_LICENCIEMENT>(
           PublicodesSimulator.INDEMNITE_LICENCIEMENT
         );
-      const { value, explanation } = publicodes.calculate(
+      const { result, ineligibility } = publicodes.calculate(
         get().situationData.situation
-      ).result;
+      );
       let errorEligibility;
 
-      if (value === 0 && explanation) {
-        errorEligibility = explanation;
+      if (result.value === 0 && ineligibility) {
+        errorEligibility = ineligibility;
       }
 
       set(

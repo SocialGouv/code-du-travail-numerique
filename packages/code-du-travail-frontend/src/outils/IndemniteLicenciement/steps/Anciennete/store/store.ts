@@ -127,7 +127,7 @@ const createAncienneteStore: StoreSlice<
       );
       const { licenciementInaptitude, arretTravail } =
         get().contratTravailData.input;
-      const { dateEntree, dateNotification, dateSortie } =
+      const { dateEntree, dateNotification, dateSortie, absencePeriods } =
         get().ancienneteData.input;
       const situation = {
         ...get().situationData.situation,
@@ -142,13 +142,16 @@ const createAncienneteStore: StoreSlice<
           licenciementInaptitude,
         "contrat salarié . indemnité de licenciement . arrêt de travail":
           arretTravail,
+        absencePeriods:
+          absencePeriods && absencePeriods.length
+            ? JSON.stringify(absencePeriods)
+            : undefined,
       };
-      console.log("situation ancienneté", situation);
-      const { result, explanation } = publicodes.calculate(situation);
+      const { result, ineligibility } = publicodes.calculate(situation);
       let errorEligibility;
 
-      if (isValid && result.value === 0 && explanation) {
-        errorEligibility = explanation;
+      if (isValid && result.value === 0 && ineligibility) {
+        errorEligibility = ineligibility;
       }
 
       set(
