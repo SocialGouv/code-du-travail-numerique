@@ -35,7 +35,7 @@ function getTitle(agreements: Agreement[], contrib) {
   const idcc = contrib.idcc ?? contrib.slug.split("-")[0];
   const agreement = agreements.find((a) => a.num === parseInt(idcc));
   return agreement
-    ? `${agreement.shortTitle}: ${contrib.title}`
+    ? `${contrib.title} - ${agreement.shortTitle}`
     : contrib.title;
 }
 
