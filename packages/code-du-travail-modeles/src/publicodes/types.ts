@@ -73,7 +73,7 @@ export type PublicodesData<TResult> = {
   situation: SituationElement[];
   missingArgs: MissingArgs[];
   result: TResult;
-  explanation?: string;
+  ineligibility?: string;
 };
 
 export type PublicodesProviderRule = {
@@ -115,13 +115,12 @@ export type PublicodesPreavisRetraiteResult = {
   value: number;
   unit: PublicodesConvertedUnit;
   valueInDays: number;
-  explanation?: string;
 };
 
 export type PublicodesIndemniteLicenciementResult = {
   value: Evaluation;
   unit?: Unit;
-  explanation?: string;
+  ineligibility?: string;
 };
 
 export type PublicodesContextType = {

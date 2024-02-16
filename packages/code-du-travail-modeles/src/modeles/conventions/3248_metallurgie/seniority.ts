@@ -80,6 +80,7 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
     hasBeenDayContract,
     dateBecomeDayContract,
   }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC3248>): RequiredSeniorityResult {
+    console.log("categoriePro", categoriePro);
     switch (categoriePro) {
       case "'A, B, C, D ou E'":
         return this.computeABCDE(
@@ -187,25 +188,25 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
     args: Record<string, string | undefined>
   ): SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC3248> {
     const categoriePro = args[
-      "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle"
+      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle"
     ] as "'A, B, C, D ou E'" | "'F, G, H ou I'";
     const hasBeenExecutive =
       args[
-        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - avant cadre"
+        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre"
       ];
     const hasBeenDayContract =
       args[
-        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - forfait jour"
+        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour"
       ];
     const hasAllwaysBeenDayContract =
       args[
-        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - toujours au forfait jour"
+        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour"
       ];
 
     const dateBeginDayContract =
       hasAllwaysBeenDayContract === "'Non'"
         ? args[
-            "contrat salarié - convention collective - métallurgie - indemnité de licenciement - catégorie professionnelle - ABCDE - forfait jour - date"
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour . date"
           ]
         : undefined;
     return {

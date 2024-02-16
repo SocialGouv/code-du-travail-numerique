@@ -8,7 +8,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Test de la fonctionnalité 'calculate'", () => {
   test("Vérifier l'ineligibilite Anciennete legal inférieur 9 mois", () => {
-    const { result, missingArgs, explanation } = engine.calculate({
+    const { result, missingArgs, ineligibility } = engine.calculate({
       "contrat salarié . convention collective": "'IDCC3239'",
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${CatPro3239.assistantMaternel}'`,
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
@@ -29,12 +29,12 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     });
     expect(missingArgs).toEqual([]);
     expect(result.value).toEqual(0);
-    expect(explanation).toEqual(
+    expect(ineligibility).toEqual(
       "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 9 mois."
     );
   });
   test("Vérifier l'ineligibilite Anciennete legal inférieur 9 mois bis", () => {
-    const { result, missingArgs, explanation } = engine.calculate({
+    const { result, missingArgs, ineligibility } = engine.calculate({
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
         "'Assistant maternel'",
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement":
@@ -57,7 +57,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     });
     expect(missingArgs).toEqual([]);
     expect(result.value).toEqual(0);
-    expect(explanation).toEqual(
+    expect(ineligibility).toEqual(
       "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 9 mois."
     );
   });

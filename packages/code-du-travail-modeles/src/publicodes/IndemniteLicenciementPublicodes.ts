@@ -42,9 +42,9 @@ class IndemniteLicenciementPublicodes
     names.some((name) => {
       if (!args[name]) {
         missingArg = name;
-        return false;
+        return true;
       }
-      return true;
+      return false;
     });
     return missingArg;
   }
@@ -83,15 +83,12 @@ class IndemniteLicenciementPublicodes
     args: Record<string, string | undefined>,
     targetRule?: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
-    const result = super.setSituation(
-      this.removeNonPublicodeFields(args),
-      targetRule
-    );
+    let newArgs = args;
     const ineligibilityInstance = new IneligibilityFactory().create(this.idcc);
-    const ineligibility = ineligibilityInstance.getIneligibility(args);
+    const ineligibility = ineligibilityInstance.getIneligibility(newArgs);
     if (ineligibility) {
       return {
-        explanation: ineligibility,
+        ineligibility,
         missingArgs: [],
         result: {
           value: 0,
@@ -99,12 +96,10 @@ class IndemniteLicenciementPublicodes
         situation: [],
       };
     }
-    const isSeniorityMissing = !Object.keys(args).find(
-      (name) =>
-        name ===
-        "contrat salarié . indemnité de licenciement . ancienneté en année"
-    );
-    if (isSeniorityMissing) {
+
+    if (
+      !args["contrat salarié . indemnité de licenciement . ancienneté en année"]
+    ) {
       const missingArg = this.getMissingArg(args, [
         "contrat salarié . indemnité de licenciement . date d'entrée",
         "contrat salarié . indemnité de licenciement . date de sortie",
@@ -122,22 +117,28 @@ class IndemniteLicenciementPublicodes
       const legalSeniority: SeniorityResult = legal.computeSeniority(
         legal.mapSituation(args)
       );
-      return this.calculate({
-        ...args,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-          agreementSeniority.value.toString(),
-        "contrat salarié . indemnité de licenciement . ancienneté en année":
-          legalSeniority.value.toString(),
-        ...legalSeniority.extraInfos,
-        ...agreementSeniority.extraInfos,
-      });
+      if (legalSeniority.value) {
+        newArgs = {
+          ...newArgs,
+          "contrat salarié . indemnité de licenciement . ancienneté en année":
+            legalSeniority.value.toString(),
+          ...legalSeniority.extraInfos,
+        };
+      }
+      if (agreementSeniority.value) {
+        newArgs = {
+          ...newArgs,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            agreementSeniority.value.toString(),
+          ...agreementSeniority.extraInfos,
+        };
+      }
     }
-    const isSeniorityRequiredMissing = !Object.keys(args).find(
-      (name) =>
-        name ===
+    if (
+      !args[
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
-    );
-    if (isSeniorityRequiredMissing) {
+      ]
+    ) {
       const missingArg = this.getMissingArg(args, [
         "contrat salarié . indemnité de licenciement . date d'entrée",
         "contrat salarié . indemnité de licenciement . date de sortie",
@@ -156,20 +157,53 @@ class IndemniteLicenciementPublicodes
       );
       const legalRequiredSeniority: RequiredSeniorityResult =
         legal.computeRequiredSeniority(legal.mapRequiredSituation(args));
-      return this.calculate({
-        ...args,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-          agreementRequiredSeniority.value.toString(),
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
-          legalRequiredSeniority.value.toString(),
-      });
+      if (legalRequiredSeniority.value) {
+        newArgs[
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année"
+        ] = legalRequiredSeniority.value.toString();
+      }
+      if (agreementRequiredSeniority.value) {
+        newArgs[
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
+        ] = agreementRequiredSeniority.value.toString();
+      }
     }
-    const isReferenceSalaryMissing = !Object.keys(args).find(
-      (name) =>
-        name ===
+    const ineligibilityWithSeniority =
+      ineligibilityInstance.getIneligibility(newArgs);
+    if (ineligibilityWithSeniority) {
+      return {
+        ineligibility: ineligibilityWithSeniority,
+        missingArgs: [],
+        result: {
+          value: 0,
+        },
+        situation: [],
+      };
+    }
+    if (
+      !args[
         "contrat salarié . indemnité de licenciement . salaire de référence"
-    );
-    if (isReferenceSalaryMissing) {
+      ]
+    ) {
+      const s = new ReferenceSalaryFactory().create(
+        SupportedCcIndemniteLicenciement.default
+      );
+      const value = s.computeReferenceSalary({
+        salaires: args.salaryPeriods ? JSON.parse(args.salaryPeriods) : [],
+      });
+      if (value) {
+        newArgs = {
+          ...newArgs,
+          "contrat salarié . indemnité de licenciement . salaire de référence":
+            value.toString(),
+        };
+      }
+    }
+    if (
+      !args[
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+      ]
+    ) {
       const s = new ReferenceSalaryFactory().create(this.idcc);
       const value = s.computeReferenceSalary(
         s.mapSituation
@@ -181,14 +215,18 @@ class IndemniteLicenciementPublicodes
             }
       );
       if (value) {
-        return this.calculate({
-          ...args,
-          "contrat salarié . indemnité de licenciement . salaire de référence":
+        newArgs = {
+          ...newArgs,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             value.toString(),
-        });
+        };
+      }
+      if (s.removeSpecificSituation) {
+        newArgs = s.removeSpecificSituation(newArgs);
       }
     }
-    return result;
+    const situation = this.removeNonPublicodeFields(newArgs);
+    return super.setSituation(situation, targetRule);
   }
 
   protected convertedResult(

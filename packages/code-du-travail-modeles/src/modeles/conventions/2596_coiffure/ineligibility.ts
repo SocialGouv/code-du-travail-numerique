@@ -21,12 +21,22 @@ export class Ineligibility2596 extends IneligibilityLegal {
         ]
       ) &&
       args[
-        "contrat salarié . indemnité de licenciement . ancienneté en année"
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année"
       ] &&
-      parseFloat(
-        args[
-          "contrat salarié . indemnité de licenciement . ancienneté en année"
-        ]
+      args[
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
+      ] &&
+      Math.max(
+        parseFloat(
+          args[
+            "contrat salarié . indemnité de licenciement . ancienneté requise en année"
+          ]
+        ),
+        parseFloat(
+          args[
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
+          ]
+        )
       ) < 8
     ) {
       return "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.";

@@ -10,7 +10,7 @@ export class Ineligibility3239 extends IneligibilityLegal {
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
       ] &&
       args[
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
       ] &&
       Math.max(
         parseFloat(
@@ -20,7 +20,7 @@ export class Ineligibility3239 extends IneligibilityLegal {
         ),
         parseFloat(
           args[
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
           ]
         )
       ) <
@@ -29,7 +29,7 @@ export class Ineligibility3239 extends IneligibilityLegal {
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
       ] === `'${CatPro3239.assistantMaternel}'`
     ) {
-      return "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 9 mois.";
+      return "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois.";
     } else {
       return super.getIneligibility(args);
     }
