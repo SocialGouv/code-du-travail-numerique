@@ -148,7 +148,6 @@ const createCommonInformationsStore: StoreSlice<
             ),
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
-          console.log("result", result);
           missingArgs = result.missingArgs.filter((item) => item.rawNode.cdtn);
           const notifBloquante = publicodes.getNotificationsBloquantes();
           if (notifBloquante.length > 0) {
