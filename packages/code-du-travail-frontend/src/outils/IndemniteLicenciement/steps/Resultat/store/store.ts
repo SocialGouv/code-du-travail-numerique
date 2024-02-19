@@ -20,15 +20,12 @@ import produce from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
-import { getAgreementExtraInfoSalary } from "../../../agreements";
 import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
 import {
   AgreementInformation,
   hasNoLegalIndemnity,
   hasNoBetterAllowance,
 } from "../../../common";
-import { MainStore } from "../../../store";
-import { StoreApi } from "zustand";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
 import { IndemniteLicenciementStepName } from "../../..";
@@ -209,7 +206,6 @@ const createResultStore: StoreSlice<
       let notifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
       let agreementHasNoBetterAllowance: boolean;
-      let agreementSalaryExtraInfo: Record<string, string | number> = {};
       let isParentalNoticeHidden = false;
 
       if (
@@ -220,11 +216,6 @@ const createResultStore: StoreSlice<
       ) {
         const infos = informationToSituation(
           get().informationsData.input.publicodesInformations
-        );
-
-        agreementSalaryExtraInfo = getAgreementExtraInfoSalary(
-          getSupportedAgreement(agreement.num),
-          get as StoreApi<MainStore>["getState"]
         );
 
         agreementInformations = get()
@@ -249,7 +240,7 @@ const createResultStore: StoreSlice<
               get().ancienneteData.input.dateSortie!,
               isLicenciementInaptitude,
               longTermDisability,
-              { ...infos, ...agreementSalaryExtraInfo }
+              { ...infos }
             ),
             absencePeriods:
               absencePeriods && absencePeriods.length
