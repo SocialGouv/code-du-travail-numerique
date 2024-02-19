@@ -227,9 +227,6 @@ class IndemniteLicenciementPublicodes
             value.toString(),
         };
       }
-      if (s.removeSpecificSituation) {
-        newArgs = s.removeSpecificSituation(newArgs);
-      }
     }
     const situation = this.removeNonPublicodeFields(newArgs);
     return super.setSituation(situation, targetRule);

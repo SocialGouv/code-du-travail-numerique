@@ -36,9 +36,6 @@ export interface IReferenceSalary<T extends SupportedCcIndemniteLicenciement> {
   mapSituation?: (
     args: Record<string, string | undefined>
   ) => ReferenceSalaryProps<T>;
-  removeSpecificSituation?: (
-    args: Record<string, string | undefined>
-  ) => Record<string, string | undefined>;
 }
 
 export type ReferenceSalaryProps<T> =

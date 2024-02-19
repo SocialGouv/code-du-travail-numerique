@@ -25,13 +25,6 @@ export class ReferenceSalary2609
     };
   }
 
-  removeSpecificSituation(
-    args: Record<string, string | undefined>
-  ): Record<string, string | undefined> {
-    delete args.hasVariablePay;
-    return args;
-  }
-
   computeReferenceSalary({
     hasVariablePay,
     salaires,

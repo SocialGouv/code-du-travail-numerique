@@ -25,13 +25,6 @@ export class ReferenceSalary2614
     };
   }
 
-  removeSpecificSituation(
-    args: Record<string, string | undefined>
-  ): Record<string, string | undefined> {
-    delete args.hasVariablePay;
-    return args;
-  }
-
   /**
    * Règle :
    * Si le salaire n'est pas variable

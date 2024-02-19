@@ -25,13 +25,6 @@ export class ReferenceSalary1527
     };
   }
 
-  removeSpecificSituation(
-    args: Record<string, string | undefined>
-  ): Record<string, string | undefined> {
-    delete args.hasCommission;
-    return args;
-  }
-
   /**
    * Règle :
    * - si les commissions ne constituent pas un élément contractuel de rémunération : S
