@@ -29,7 +29,6 @@ import {
 } from "../../../common";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
-import { getAgreementSeniority } from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
 import { IndemniteLicenciementStepName } from "../../..";
@@ -201,7 +200,6 @@ const createResultStore: StoreSlice<
         {
           value: null,
         };
-      let agreementSeniority: SeniorityResult;
       let agreementReferences: References[];
       let agreementFormula: Formula;
       let isAgreementBetter = false;
@@ -240,11 +238,6 @@ const createResultStore: StoreSlice<
               }
           )
           .filter((v) => v !== "") as AgreementInformation[];
-
-        agreementSeniority = getAgreementSeniority(
-          getSupportedAgreement(agreement.num),
-          get as StoreApi<MainStore>["getState"]
-        );
 
         try {
           const situation = {
@@ -344,7 +337,6 @@ const createResultStore: StoreSlice<
             publicodesSituationLegal;
           state.resultData.input.publicodesAgreementResult =
             publicodesSituationConventionnel;
-          state.resultData.input.agreementSeniority = agreementSeniority;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;

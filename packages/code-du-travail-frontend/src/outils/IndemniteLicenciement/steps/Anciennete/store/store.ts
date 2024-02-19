@@ -18,12 +18,9 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
-import { getErrorEligibility } from "./eligibility";
 import { customSeniorityValidator } from "../../../agreements/seniority";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
-import { MainStore } from "../../../store";
-import { loadPublicodes } from "../../../../api";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: AncienneteStoreData = {
