@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.123.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.122.0...v4.123.0) (2024-02-19)
+
+### Bug Fixes
+
+- **contributions:** reformatage des titres avec CC ([#5623](https://github.com/SocialGouv/code-du-travail-numerique/issues/5623)) ([86b888e](https://github.com/SocialGouv/code-du-travail-numerique/commit/86b888e0e69bbd257ad6dd47d24e11b32a7f0b52))
+- **renseignement:** correction de l'URL pour mayotte ([#5614](https://github.com/SocialGouv/code-du-travail-numerique/issues/5614)) ([f37fb98](https://github.com/SocialGouv/code-du-travail-numerique/commit/f37fb9850382e4a0be95aaa04419429d17774517))
+
+### Features
+
+- **contribution:** ajout de h1 uniques pour les contributions personnalisées qui ont un titre court et pour les CC avec un nom court ([#5611](https://github.com/SocialGouv/code-du-travail-numerique/issues/5611)) ([9529f49](https://github.com/SocialGouv/code-du-travail-numerique/commit/9529f492afa19c5a1cc0aba2ec4059ba27b64bb9))
+- **convention collective:** Intégration de la CC 1543 dans la CC 1586 et Intégration de la CC 2344 dans la CC 3248 ([#5616](https://github.com/SocialGouv/code-du-travail-numerique/issues/5616)) ([d230007](https://github.com/SocialGouv/code-du-travail-numerique/commit/d230007a74b5dfa67f10a5e848d90467de363294))
+- **glossaire:** retrait du markdown dans les définitions du glossaire ([#5607](https://github.com/SocialGouv/code-du-travail-numerique/issues/5607)) ([2977717](https://github.com/SocialGouv/code-du-travail-numerique/commit/2977717662affb520d70b27ab52dfa2a48b4ec20))
+- **page convention collective:** retrait des réponses des contribs dans les page CC 1518, ajout des liens vers les contribs personnalisés ([#5605](https://github.com/SocialGouv/code-du-travail-numerique/issues/5605)) ([8b415e8](https://github.com/SocialGouv/code-du-travail-numerique/commit/8b415e8e77244a728d20865bd14c63f67ba25add))
+- **plan-du-site:** ajout des pages contributions personnalisées dans le plan du site ([#5604](https://github.com/SocialGouv/code-du-travail-numerique/issues/5604)) ([c95168e](https://github.com/SocialGouv/code-du-travail-numerique/commit/c95168eb38395af898a37e9183bf3a36ce8f6c08))
+
 # [4.122.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.121.1...v4.122.0) (2024-02-06)
 
 ### Bug Fixes
