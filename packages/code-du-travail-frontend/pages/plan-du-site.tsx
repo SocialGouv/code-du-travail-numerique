@@ -67,14 +67,27 @@ const PlanDuSite = ({
               <Link href={"/contribution"}>Vos fiches pratiques</Link>
               <ul>
                 {contributions.map((contribution) => (
-                  <StyledLi key={contribution.slug}>
+                  <StyledLi key={contribution.generic.slug}>
                     <Link
                       href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${
-                        contribution.slug
+                        contribution.generic.slug
                       }`}
                     >
-                      {contribution.title}
+                      {contribution.generic.title}
                     </Link>
+                    <ul>
+                      {contribution.agreements.map((c) => (
+                        <StyledLi key={c.slug}>
+                          <Link
+                            href={`/${getRouteBySource(
+                              SOURCES.CONTRIBUTIONS
+                            )}/${c.slug}`}
+                          >
+                            {c.title}
+                          </Link>
+                        </StyledLi>
+                      ))}
+                    </ul>
                   </StyledLi>
                 ))}
               </ul>
@@ -167,7 +180,7 @@ export async function getStaticProps() {
       data = await getSitemapData();
     }
     themes = data.themes;
-    tools = data.tools.filter((tool) => tool.source === SOURCES.TOOLS);
+    tools = data.tools;
     contributions = data.contributions;
     modeles = data.modeles;
     agreements = data.agreements;
@@ -188,21 +201,17 @@ export async function getStaticProps() {
   };
 }
 
-const StyledSection = styled.div`
-  display: flex;
-  flex-direction: column;
+export const StyledSection = styled.div`
   margin-top: ${theme.spacings.base};
 `;
 
-const StyledLi = styled.li`
-  margin: 5px 0;
+export const StyledLi = styled.li`
+  font-size: ${theme.fonts.sizes.small};
+
   a {
-    font-size: ${theme.fonts.sizes.small};
     font-weight: 400;
+    display: block;
     padding: 5px 0;
-  }
-  ::marker {
-    font-size: 12px;
   }
 `;
 
