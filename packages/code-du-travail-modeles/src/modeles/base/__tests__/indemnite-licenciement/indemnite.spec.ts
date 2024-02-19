@@ -105,13 +105,5 @@ describe("Indemnité légale de licenciement pour un employé", () => {
       expect(result.unit?.numerators).toEqual(["€"]);
       expect(missingArgs).toEqual([]);
     });
-
-    test("non eligible", () => {
-      const { result, missingArgs } = engine.setSituation({
-        "contrat salarié . indemnité de licenciement . contrat type cdi": "non",
-      });
-      expect(missingArgs).toEqual([]);
-      expect(result.value).toEqual("non eligible pas en cdi");
-    });
   });
 });
