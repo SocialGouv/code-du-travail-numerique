@@ -1,4 +1,4 @@
-describe("Statistique", () => {
+describe("Statistiques", () => {
   it("should display the page correctly", () => {
     cy.visit("/stats");
 
