@@ -1,5 +1,6 @@
 import { ENTERPRISE_API_URL } from "../../../../config";
 import { Enterprise } from "../types";
+import { ApiRechercheEntrepriseResponse } from "./types";
 
 export type Convention = {
   idcc: number;
@@ -19,30 +20,49 @@ export const fetchEnterprises = async (
   query: string,
   address: string | undefined
 ): Promise<EnterpriseApiResponse> => {
-  const params: { k: string; v: string }[] = [
-    { k: "ranked", v: "true" },
-    { k: "query", v: encodeURIComponent(query) },
-    { k: "convention", v: "false" },
-    { k: "employer", v: "true" },
-    { k: "open", v: "true" },
-    { k: "matchingLimit", v: "0" },
-  ];
-  if (address) {
-    params.push({ k: "address", v: encodeURIComponent(address) });
-  }
+  const q = address
+    ? `${encodeURIComponent(address)} ${encodeURIComponent(query)}`
+    : encodeURIComponent(query);
+  const url = `${ENTERPRISE_API_URL}/search?q=${q}&page=1&per_page=25`;
 
-  const flattenParams = params
-    .map(({ k, v }) => (k && v ? `${k}=${v}` : undefined))
-    .filter((qp) => qp)
-    .join("&");
+  const fetchReq = await fetch(url);
 
-  const url = `${ENTERPRISE_API_URL}/search?${flattenParams}`;
+  const jsonResponse: ApiRechercheEntrepriseResponse = await fetchReq.json();
 
-  const fetchReq = await fetch(url, {
-    headers: { referer: "cdtn-api" },
+  // if(jsonResponse.erreur) {
+  // throw erreur
+  // }
+
+  console.error(jsonResponse);
+
+  const entreprises = jsonResponse.results.map((result) => {
+    const conventions =
+      result.siege.liste_idcc?.map((idccNumber) => {
+        return {
+          idcc: parseInt(idccNumber, 10),
+          shortTitle: `Convention collective ${idccNumber}`,
+          id: idccNumber,
+          title: `Convention collective ${idccNumber}`,
+        };
+      }) ?? [];
+    return {
+      activitePrincipale: result.activite_principale,
+      etablissements: result.nombre_etablissements_ouverts,
+      highlightLabel: result.nom_raison_sociale,
+      label: result.nom_complet,
+      simpleLabel: result.nom_complet,
+      matching: result.nombre_etablissements_ouverts,
+      siren: result.siren,
+      address: result.siege.adresse,
+      firstMatchingEtablissement: {
+        siret: result.matching_etablissements[0].siret,
+        address: result.matching_etablissements[0].adresse,
+      },
+      conventions,
+    };
   });
 
-  const jsonResponse: EnterpriseApiResponse = await fetchReq.json();
-
-  return jsonResponse;
+  return {
+    entreprises,
+  };
 };
