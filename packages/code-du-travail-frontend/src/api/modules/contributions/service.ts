@@ -1,13 +1,14 @@
-import { ElasticSearchItem } from "@socialgouv/cdtn-utils";
 import {
-  elasticsearchClient,
-  elasticDocumentsIndex,
-  NotFoundError,
-} from "../../utils";
+  Agreement,
+  ElasticSearchContributionGeneric,
+  ElasticSearchItem,
+} from "@socialgouv/cdtn-utils";
+import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import {
+  getAllContributions,
   getAllGenericsContributions,
-  getContributionsBySlugs,
   getContributionsByIds,
+  getContributionsBySlugs,
 } from "./queries";
 
 export const getGenericContributionsGroupByThemes = async () => {
@@ -26,14 +27,46 @@ export const getGenericContributionsGroupByThemes = async () => {
     .reduce(groupByThemes, {});
 };
 
-export const getGenericsContributions = async () => {
-  const body = getAllGenericsContributions();
+const isGeneric = (contrib) =>
+  (contrib.idcc && contrib.idcc === "0000") ||
+  (!contrib.idcc && !contrib.split);
+
+function getTitle(agreements: Agreement[], contrib) {
+  const idcc = contrib.idcc ?? contrib.slug.split("-")[0];
+  const agreement = agreements.find((a) => a.num === parseInt(idcc));
+  return agreement
+    ? `${contrib.title} - ${agreement.shortTitle}`
+    : contrib.title;
+}
+
+export const getAllContributionsGroupByQuestion = async (
+  agreements: Agreement[]
+) => {
+  const body = getAllContributions();
 
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.hits.map(({ _source }) => _source);
+  const all = response.body.hits.hits.map(({ _source }) => _source);
+  const allGenerics = all
+    .filter(isGeneric)
+    .sort((a, b) => a.title.localeCompare(b.title));
+
+  return allGenerics.map((generic) => {
+    return {
+      generic: generic,
+      agreements: all
+        .filter((contrib) => {
+          return !isGeneric(contrib) && contrib.slug.includes(generic.slug);
+        })
+        .map((contrib) => {
+          contrib.title = getTitle(agreements, contrib);
+          return contrib;
+        })
+        .sort((a, b) => a.title.localeCompare(b.title)),
+    };
+  });
 };
 
 export const getBySlugsContributions = async (

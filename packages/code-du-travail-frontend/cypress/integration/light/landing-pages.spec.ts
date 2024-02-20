@@ -13,6 +13,7 @@ describe("Landing pages", () => {
       "Conformément à l'article 9 I de l'ordonnance n° 2017-1386 du 22 septembre 2017, les présentes dispositions entrent en vigueur à la date d'entrée en vigueur des décrets pris pour leur application, et au plus tard le 1er janvier 2018."
     );
   });
+
   it("je vois une page fiche ministère du travail", () => {
     cy.visit("/fiche-ministere-travail/entreprises-dinsertion-ei");
     cy.get("h1").should("have.text", "Entreprises d’insertion (EI)");
@@ -21,12 +22,14 @@ describe("Landing pages", () => {
       .first()
       .should("contain", "Qu’est-ce qu’une entreprise d’insertion");
   });
+
   it("je vois une page fiche service public", () => {
     cy.visit("/fiche-service-public/conges-payes");
     cy.get("h1").should("have.text", "Congés payés");
     cy.get("body").should("contain", "Source: Fiche service-public.fr");
     cy.get("h2").first().should("contain", "Qui a droit aux congés payés");
   });
+
   it("je vois une page convention collective", () => {
     cy.visit(
       "/convention-collective/1686-commerces-et-services-de-laudiovisuel-de-lelectronique-et-de-lequipemen"
@@ -36,5 +39,36 @@ describe("Landing pages", () => {
       "Commerces et services de l'audiovisuel, de l'électronique et de l'équipement ménager"
     );
     cy.get("body").should("contain", "Source: Légifrance");
+  });
+
+  it("je vois la page à propos", () => {
+    cy.visit("/a-propos");
+
+    cy.contains("Qu’est-ce que le Code du travail numérique");
+    cy.contains("Qui sommes-nous");
+  });
+
+  it("je vois la page droit du travail", () => {
+    cy.visit("/droit-du-travail");
+
+    cy.contains("Qu’est-ce que le droit du travail");
+    cy.contains("Quels sont les textes à l’origine du droit du travail");
+    cy.contains("Existe-t-il une hiérarchie entre les textes");
+  });
+
+  it("je vois la page politique de confidentialité", () => {
+    cy.visit("/politique-confidentialite");
+
+    cy.contains("Traitement des données à caractère personnel");
+    cy.contains("Cookies");
+  });
+
+  it("je vois la page mention légale", () => {
+    cy.visit("/mentions-legales");
+
+    cy.contains("Directeur de la publication");
+    cy.contains("Hébergement");
+    cy.contains("Accessibilité");
+    cy.contains("Sécurité");
   });
 });

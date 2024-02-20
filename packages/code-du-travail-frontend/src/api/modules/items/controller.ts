@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
-import { getAll, getByIdItems, getBySourceAndSlugItems } from "./service";
+import { getAll, getBySourceAndSlugItems } from "./service";
 
 export class ItemsController {
   private req: NextApiRequest;
@@ -30,6 +30,10 @@ export class ItemsController {
   public async getAll() {
     try {
       const { id, url, source } = this.req.query;
+      if (!url && !source && !id) {
+        return this.res.status(400).json({ message: "No parameter provided" });
+      }
+
       const response = await getAll(
         url as string,
         source as string,

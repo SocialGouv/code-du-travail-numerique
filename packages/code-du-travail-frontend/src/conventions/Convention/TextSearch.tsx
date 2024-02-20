@@ -81,6 +81,7 @@ const Box = styled.div`
 
 const StyledInput = styled(Input)`
   width: 100%;
+
   input {
     padding-right: 5rem;
   }

@@ -1,4 +1,4 @@
-import { elasticsearchClient, elasticDocumentsIndex } from "../../utils";
+import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getIdccBody } from "./queries";
 
 export const parseIdcc = (query) =>

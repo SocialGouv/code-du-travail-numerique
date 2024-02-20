@@ -930,6 +930,16 @@
     "permanent": true
   },
   {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/2344-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/1586-industries-charcutieres-salaisons-charcuteries-conserves-de-viandes",
+    "source": "/convention-collective/1543-:slug",
+    "permanent": true
+  },
+  {
     "source": "/fiche-service-public/arret-maladie-et-conges-payes-annuels",
     "permanent": true,
     "destination": "/fiche-service-public/un-salarie-peut-il-reporter-des-jours-de-conges-payes-pour-cause-de-maladie"
