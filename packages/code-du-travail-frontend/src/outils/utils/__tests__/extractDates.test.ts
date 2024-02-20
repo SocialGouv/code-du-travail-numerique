@@ -39,10 +39,12 @@ describe("extractDates", () => {
       ${"1 an et demi"}             | ${new Date("2022-01-14")} | ${null}
       ${"1 mois de date à date"}    | ${new Date("2022-01-14")} | ${"14 février"}
       ${"1 semaine de date à date"} | ${new Date("2022-01-14")} | ${"21 janvier"}
-      ${"7 jours calendaires"}      | ${new Date("2022-01-14")} | ${"20 janvier"}
-      ${"7 jours"}                  | ${new Date("2022-01-14")} | ${"20 janvier"}
+      ${"7 jours calendaires"}      | ${new Date("2022-04-05")} | ${"11 avril"}
+      ${"7 jours"}                  | ${new Date("2022-04-05")} | ${"11 avril"}
       ${"2 semaines calendaires"}   | ${new Date("2022-04-05")} | ${"18 avril"}
       ${"2 semaines"}               | ${new Date("2022-04-05")} | ${"18 avril"}
+      ${"3 mois calendaires"}       | ${new Date("2022-04-05")} | ${"4 juillet"}
+      ${"3 mois"}                   | ${new Date("2022-04-05")} | ${"4 juillet"}
       ${"blabla"}                   | ${new Date("2022-01-14")} | ${null}
       ${"blabla jours"}             | ${new Date("2022-01-14")} | ${null}
     `(
