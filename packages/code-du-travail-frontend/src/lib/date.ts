@@ -1,3 +1,5 @@
+import { Extra } from "../outils/utils";
+
 export enum Month {
   janvier = 1,
   février = 2,
@@ -43,8 +45,9 @@ export const convertDate = (
   date: Date,
   value: number,
   unit: Unit,
-  isDateADate = false
+  extra?: Extra | null
 ): Date => {
+  const isDateADate = Extra.FROM_TO === extra;
   let localDate = new Date(date);
   switch (unit) {
     case Unit.DAY:

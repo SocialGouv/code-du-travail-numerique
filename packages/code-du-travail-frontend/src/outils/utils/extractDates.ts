@@ -19,7 +19,7 @@ export const convertPeriodToHumanDate = (
   if (!unit) return null;
   let extra = getExtra(input);
   if (unit === Unit.DAY && extra !== Extra.FROM_TO) value--;
-  date = convertDate(from, value, unit, extra === Extra.FROM_TO);
+  date = convertDate(from, value, unit, extra);
   if (extra === Extra.MID && unit === Unit.MONTH) {
     date = convertDate(date, 15, Unit.DAY);
   } else if (
