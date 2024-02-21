@@ -254,5 +254,3 @@ export default function AgreementsInjector(props: Props) {
 ```
 
 That's all folks !
-
-:)
