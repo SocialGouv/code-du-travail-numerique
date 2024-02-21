@@ -1,5 +1,3 @@
-import { Extra } from "../outils/utils";
-
 export enum Month {
   janvier = 1,
   février = 2,
@@ -45,15 +43,14 @@ export const convertDate = (
   date: Date,
   value: number,
   unit: Unit,
-  extra?: Extra | null
+  isCalendar = false
 ): Date => {
-  const isDateADate = Extra.FROM_TO === extra;
   let localDate = new Date(date);
   switch (unit) {
     case Unit.DAY:
       return addDay(localDate, value);
     case Unit.WEEK:
-      return addWeek(localDate, value, isDateADate);
+      return addWeek(localDate, value, isCalendar);
     case Unit.MONTH:
       return addMonth(localDate, value);
   }
@@ -65,8 +62,8 @@ export const addDay = (date: Date, day: number): Date => {
   return newDate;
 };
 
-export const addWeek = (date: Date, week: number, isDateADate = false): Date =>
-  addDay(date, isDateADate ? week * 7 : week * 7 - 1);
+export const addWeek = (date: Date, week: number, isCalendar = false): Date =>
+  addDay(date, isCalendar ? week * 7 - 1 : week * 7);
 
 export const addMonth = (date: Date, month: number): Date => {
   const newDate = new Date(date);

@@ -19,7 +19,7 @@ export const convertPeriodToHumanDate = (
   if (!unit) return null;
   let extra = getExtra(input);
   if (unit === Unit.DAY && extra !== Extra.FROM_TO) value--;
-  date = convertDate(from, value, unit, extra);
+  date = convertDate(from, value, unit, !extra);
   if (extra === Extra.MID && unit === Unit.MONTH) {
     date = convertDate(date, 15, Unit.DAY);
   } else if (
@@ -29,8 +29,7 @@ export const convertPeriodToHumanDate = (
     return null;
   }
   // Retirer un jour si on a une unité en mois
-  if (unit === Unit.MONTH && (!extra || extra === Extra.CALENDAR))
-    date = convertDate(date, -1, Unit.DAY);
+  if (unit === Unit.MONTH && !extra) date = convertDate(date, -1, Unit.DAY);
   return dateToString(date, withDay);
 };
 
