@@ -52,10 +52,11 @@ switch (idcc) {
 Enfin si on souhaite pimper les types, on peut le faire dans `types`.
 
 ```ts
-export type SeniorityProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC2511
-    ? LegalSeniorityProps
-    : LegalSeniorityProps;
+export type SeniorityProps<
+  T
+> = T extends SupportedCcIndemniteLicenciement.IDCC2511
+  ? LegalSeniorityProps
+  : LegalSeniorityProps;
 ```
 
 ### 3. Ajouter la formule de calcul (`code-du-travail-modeles`)
@@ -254,5 +255,3 @@ export default function AgreementsInjector(props: Props) {
 ```
 
 That's all folks !
-
-:)
