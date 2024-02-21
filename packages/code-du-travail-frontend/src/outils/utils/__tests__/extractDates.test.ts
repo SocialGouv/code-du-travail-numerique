@@ -45,6 +45,11 @@ describe("extractDates", () => {
       ${"2 semaines"}               | ${new Date("2022-04-05")} | ${"18 avril"}
       ${"3 mois calendaires"}       | ${new Date("2022-04-05")} | ${"4 juillet"}
       ${"3 mois"}                   | ${new Date("2022-04-05")} | ${"4 juillet"}
+      ${"7 jours calendaires"}      | ${new Date("2022-01-14")} | ${"20 janvier"}
+      ${"1 semaine calendaire"}     | ${new Date("2022-01-14")} | ${"20 janvier"}
+      ${"2 semaines calendaire"}    | ${new Date("2022-01-14")} | ${"27 janvier"}
+      ${"1 mois calendaire"}        | ${new Date("2022-01-14")} | ${"13 février"}
+      ${"2 mois calendaires"}       | ${new Date("2022-01-14")} | ${"13 mars"}
       ${"blabla"}                   | ${new Date("2022-01-14")} | ${null}
       ${"blabla jours"}             | ${new Date("2022-01-14")} | ${null}
     `(
