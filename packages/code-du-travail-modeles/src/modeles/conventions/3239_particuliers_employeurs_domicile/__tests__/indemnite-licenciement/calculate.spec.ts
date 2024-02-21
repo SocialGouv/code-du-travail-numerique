@@ -30,7 +30,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     expect(missingArgs).toEqual([]);
     expect(result.value).toEqual(0);
     expect(ineligibility).toEqual(
-      "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 9 mois."
+      "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois."
     );
   });
   test("Vérifier l'ineligibilite Anciennete legal inférieur 9 mois bis", () => {
@@ -58,7 +58,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     expect(missingArgs).toEqual([]);
     expect(result.value).toEqual(0);
     expect(ineligibility).toEqual(
-      "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 9 mois."
+      "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois."
     );
   });
 });
