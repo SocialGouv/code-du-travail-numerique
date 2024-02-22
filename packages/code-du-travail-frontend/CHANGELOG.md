@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.123.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.1...v4.123.2) (2024-02-22)
+
+### Bug Fixes
+
+- **error:** pas de fails si pas de description ([#5643](https://github.com/SocialGouv/code-du-travail-numerique/issues/5643)) ([b3804d6](https://github.com/SocialGouv/code-du-travail-numerique/commit/b3804d65032f02fea07360001af16e124dfc1745))
+
+## [4.123.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.0...v4.123.1) (2024-02-22)
+
+### Bug Fixes
+
+- api items id -> ids ([#5642](https://github.com/SocialGouv/code-du-travail-numerique/issues/5642)) ([146ac24](https://github.com/SocialGouv/code-du-travail-numerique/commit/146ac2486375b06f4b32c37b25def323d31810fc))
+- **e2e:** correction de la path + envoie à mattermost en erreur ([#5640](https://github.com/SocialGouv/code-du-travail-numerique/issues/5640)) ([37953b3](https://github.com/SocialGouv/code-du-travail-numerique/commit/37953b3e75d21b5a3c02eabfb849a2374484dbc4))
+- **e2e:** simplification du test `footer.spec.ts` + ajout d'un mode de test `heavy` ([#5629](https://github.com/SocialGouv/code-du-travail-numerique/issues/5629)) ([bfac7ec](https://github.com/SocialGouv/code-du-travail-numerique/commit/bfac7ec22afbebd71e4bfab2a9b8ec781656ae08))
+
 # [4.123.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.122.0...v4.123.0) (2024-02-19)
 
 ### Bug Fixes
