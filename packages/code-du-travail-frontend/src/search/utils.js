@@ -2,7 +2,7 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { push as matopush } from "@socialgouv/matomo-next";
 
 export const summarize = (text) =>
-  text?.length > 160 ? text.slice(0, text.indexOf(" ", 160)) + "…" : text;
+  text?.length > 160 ? text.slice(0, text.indexOf(" ", 160)) + "…" : (text ?? "");
 
 export const formatUrlMatomo = (source, slug, url) => {
   return source === SOURCES.EXTERNALS
