@@ -14,7 +14,7 @@ concurrency:
 jobs:
   live:
     name: Check if the site is live
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - run: |
           curl -sSfL https://code.travail.gouv.fr/ | grep -q "Code du travail numérique"
@@ -29,7 +29,7 @@ jobs:
 
   robots:
     name: Check robots.txt
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - run: |
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "User-agent: *"

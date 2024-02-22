@@ -49,6 +49,10 @@ jobs:
           name: e2e-screenshots
           path: |
             packages/code-du-travail-frontend/cypress/screenshots
+      - name: Create the Mattermost Message
+        if: failure()
+        run: |
+          echo "{\"text\":\"Les tests automatiques e2e ont échoué sur la pré-prod (cc: @max @victorz @carolinebda @martial)\"}" > mattermost.json
       - name: Send message to mattermost if failure
         uses: mattermost/action-mattermost-notify@master
         if: failure()
