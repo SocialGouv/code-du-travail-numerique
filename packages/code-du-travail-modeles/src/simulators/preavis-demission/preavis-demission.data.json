@@ -173,10 +173,16 @@
       "answer": "2 semaines",
       "answer2": null,
       "answer3": "14",
-      "ref": "Annexe I, chapitre Ier, article 5",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id",
-      "ref2": "Accord du 3 février 2022, article 3",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000045953114#KALIARTI000045953114"
+      "refs": [
+        {
+          "ref": "Annexe I, chapitre Ier, article 5",
+          "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id"
+        },
+        {
+          "ref": "Accord du 3 février 2022, article 3",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000045953114#KALIARTI000045953114"
+        }
+      ]
     },
     {
       "criteria": {
@@ -3534,10 +3540,16 @@
       "answer": null,
       "answer2": null,
       "answer3": "8",
-      "ref": "Art. L. 423-26 du Code de l'action sociale et des familles",
-      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
-      "ref2": "Art. 120 de la convention collective",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "refs": [
+        {
+          "ref": "Art. L. 423-26 du Code de l’action sociale et des familles",
+          "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054"
+        },
+        {
+          "ref": "Art. 120 de la convention collective",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318"
+        }
+      ],
       "note": "Il s’agit de la durée la plus favorable entre celle prévue par le Code de l’action sociale et des familles et celle prévue par la convention collective.",
       "disableLegal": true
     },
@@ -3552,10 +3564,16 @@
       "answer": "15 jours calendaires",
       "answer2": null,
       "answer3": "15",
-      "ref": "Art. L. 423-26 du Code de l'action sociale et des familles",
-      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
-      "ref2": "Art. 120 de la convention collective",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "refs": [
+        {
+          "ref": "Art. L. 423-26 du Code de l’action sociale et des familles",
+          "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054"
+        },
+        {
+          "ref": "Art. 120 de la convention collective",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318"
+        }
+      ],
       "disableLegal": true
     },
     {
@@ -3569,10 +3587,16 @@
       "answer": "1 mois",
       "answer2": null,
       "answer3": "30",
-      "ref": "Art. L. 423-26 du Code de l'action sociale et des familles",
-      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
-      "ref2": "Art. 120 de la convention collective",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "refs": [
+        {
+          "ref": "Art. L. 423-26 du Code de l’action sociale et des familles",
+          "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054"
+        },
+        {
+          "ref": "Art. 120 de la convention collective",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318"
+        }
+      ],
       "disableLegal": true
     },
     {
@@ -4259,10 +4283,20 @@
       "answer": "2 semaines",
       "answer2": null,
       "answer3": "14",
-      "ref": "Article 74.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
-      "ref2": "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit",
-      "ref2Url": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346",
+      "refs": [
+        {
+          "ref": "Article 74.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        },
+        {
+          "ref": "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit",
+          "refUrl": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346"
+        }
+      ],
       "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
@@ -4275,10 +4309,20 @@
       "answer": "1 mois",
       "answer2": null,
       "answer3": "30",
-      "ref": "Article 74.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
-      "ref2": "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit",
-      "ref2Url": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346",
+      "refs": [
+        {
+          "ref": "Article 74.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        },
+        {
+          "ref": "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit",
+          "refUrl": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346"
+        }
+      ],
       "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
@@ -4291,10 +4335,20 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 74.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
-      "ref2": "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit",
-      "ref2Url": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346",
+      "refs": [
+        {
+          "ref": "Article 74.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        },
+        {
+          "ref": "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit",
+          "refUrl": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346"
+        }
+      ],
       "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
@@ -4309,8 +4363,6 @@
       "answer3": "90",
       "ref": "Article 74.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
-      "ref2": "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit",
-      "ref2Url": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346",
       "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     }
   ]
