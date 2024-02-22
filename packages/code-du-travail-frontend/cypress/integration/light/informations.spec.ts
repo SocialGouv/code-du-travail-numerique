@@ -16,7 +16,10 @@ describe("Pages informations", () => {
     cy.visit(
       "/information/grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-conge-de-reclassement"
     );
-    cy.get("h1").should("have.text", "Grand licenciement collectif");
+    cy.get("h1").should(
+      "have.text",
+      "Grand licenciement collectif (au moins 10 salariés) pour motif économique dans une entreprise de 50 salariés et plus avec CSE : le congé de reclassement (CR)"
+    );
     cy.get("body").should("contain", "Négociation avec les syndicats");
   });
 
@@ -27,10 +30,5 @@ describe("Pages informations", () => {
       "contain",
       "Un licenciement suite à une faute qui est reprochée au salarié"
     );
-  });
-
-  it("je vois une page information lié à la procédure de licenciement pour motif disciplinaire", () => {
-    cy.visit("/information/licenciement-pour-motif-disciplinaire");
-    cy.get("h1").should("have.text", "blabla");
   });
 });

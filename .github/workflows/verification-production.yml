@@ -21,7 +21,7 @@ jobs:
       - name: Create the Mattermost Message
         if: failure()
         run: |
-          echo "{\"text\":\"Le site n'est pas accessible : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" > mattermost.json
+          echo "{\"text\":\"Le site n'est pas accessible : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} (cc: @max @victorz @carolinebda @martial)\"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
         env:
@@ -42,7 +42,7 @@ jobs:
       - name: Create the Mattermost Message
         if: failure()
         run: |
-          echo "{\"text\":\"Erreur sur le robots.txt 😱😱😱😱😱😱😱😱 ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" > mattermost.json
+          echo "{\"text\":\"Erreur sur le robots.txt 😱😱😱😱😱😱😱😱 ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} (cc: @max @victorz @carolinebda @martial)\"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
         env:
