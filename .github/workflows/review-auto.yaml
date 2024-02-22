@@ -49,3 +49,8 @@ jobs:
           name: e2e-screenshots
           path: |
             packages/code-du-travail-frontend/cypress/screenshots
+      - name: Send message to mattermost if failure
+        uses: mattermost/action-mattermost-notify@master
+        if: failure()
+        env:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
