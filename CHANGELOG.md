@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.124.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.2...v4.124.0) (2024-02-23)
+
+### Bug Fixes
+
+- **convention-collective:** gestion des redirection des anciennes CC de la méta vers la nouvelle pour la page CC quand seulement l'IDCC dans l'url (utilisé par annuaire entreprise) ([#5648](https://github.com/SocialGouv/code-du-travail-numerique/issues/5648)) ([2550a04](https://github.com/SocialGouv/code-du-travail-numerique/commit/2550a040b3deb94e3c8c8cec8190f7d09a376700))
+
+### Features
+
+- **e2e:** ajout de tests pour les pages informations ([#5645](https://github.com/SocialGouv/code-du-travail-numerique/issues/5645)) ([8e92995](https://github.com/SocialGouv/code-du-travail-numerique/commit/8e92995699603d257e0235d5f6abaf751b380f08))
+
 ## [4.123.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.1...v4.123.2) (2024-02-22)
 
 ### Bug Fixes
