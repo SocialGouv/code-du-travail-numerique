@@ -64,7 +64,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     dateBecomeDayContract,
     hasBeenExecutive,
   }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC650>): SeniorityResult {
-    const seniority3248 = new Seniority3248();
+    const seniority3248 = new Seniority3248("indemnite-licenciement");
     if (categoriePro) {
       return seniority3248.computeSeniority({
         absencePeriods,
@@ -89,7 +89,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     dateBecomeDayContract,
     hasBeenExecutive,
   }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC650>): RequiredSeniorityResult {
-    const seniority3248 = new Seniority3248();
+    const seniority3248 = new Seniority3248("indemnite-licenciement");
     if (categoriePro) {
       return seniority3248.computeRequiredSeniority({
         absencePeriods,

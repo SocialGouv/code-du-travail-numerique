@@ -9,6 +9,7 @@ import {
   mergeCommonModels,
   mergeIndemniteLicenciementModels,
   mergePreavisRetraiteModels,
+  mergeRuptureConventionnel,
 } from "./merger";
 
 const inDir = path.resolve(__dirname, "../../bin");
@@ -68,4 +69,8 @@ writeJsonModel({
 writeJsonModel({
   merger: () => mergeIndemniteLicenciementModels(),
   outputName: "modeles-indemnite-licenciement",
+});
+writeJsonModel({
+  merger: () => mergeRuptureConventionnel(),
+  outputName: "modeles-rupture-conventionnelle",
 });
