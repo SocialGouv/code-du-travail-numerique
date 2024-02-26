@@ -13,8 +13,10 @@ const formatCCn = ({ num, id, slug, title, shortTitle, highlight, url }) => ({
   title,
 });
 
-const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
-  const url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(query)}`;
+const apiIdcc = function createFetcher(query: number): Promise<Agreement[]> {
+  const url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(
+    query.toString().padStart(4, "0")
+  )}`;
 
   return fetch(url).then(async (response) => {
     if (response.ok) {
