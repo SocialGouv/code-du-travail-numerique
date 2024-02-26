@@ -14,10 +14,9 @@ export type Situation = {
   answer: string | null;
   answer2: string | null;
   answer3: string | null;
-  ref: string | null;
-  refUrl: string | null;
-  ref2?: string;
-  ref2Url?: string;
+  ref?: string | null;
+  refUrl?: string | null;
+  refs?: { ref: string; refUrl: string }[] | null;
   disableLegal?: boolean;
 };
 
