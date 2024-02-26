@@ -82,7 +82,7 @@ function ConventionCollective(props: Props): JSX.Element {
 const IDCC_ONLY = /^\d{2,4}$/;
 export const getServerSideProps = async ({ query }) => {
   if (IDCC_ONLY.test(query.slug)) {
-    const conventions = await apiIdcc(query.slug.padStart(4, "0"));
+    const conventions = await apiIdcc(parseInt(query.slug.padStart(4, "0")));
     if (!conventions.length) {
       return { notFound: true };
     }
