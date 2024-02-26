@@ -3,7 +3,7 @@ import { getIdccBody } from "./queries";
 
 export const parseIdcc = (query) =>
   /^\d+$/.test(query) ? parseInt(query, 10) : undefined;
-// TODO :warning:
+
 export const getIdccByQuery = async (query: string) => {
   const idccQuery = parseIdcc(query);
 
