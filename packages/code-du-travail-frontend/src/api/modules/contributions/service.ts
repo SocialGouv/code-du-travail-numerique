@@ -1,8 +1,4 @@
-import {
-  Agreement,
-  ElasticSearchContributionGeneric,
-  ElasticSearchItem,
-} from "@socialgouv/cdtn-utils";
+import { Agreement, ElasticSearchItem } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import {
   getAllContributions,
