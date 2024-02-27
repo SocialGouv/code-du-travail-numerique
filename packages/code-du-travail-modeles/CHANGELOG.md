@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.125.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.124.0...v4.125.0) (2024-02-27)
+
+### Bug Fixes
+
+- **3248:** application des retours métiers ([#5617](https://github.com/SocialGouv/code-du-travail-numerique/issues/5617)) ([5e75576](https://github.com/SocialGouv/code-du-travail-numerique/commit/5e75576227836cf9da324957190b5e61aed5dab9))
+
 # [4.124.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.2...v4.124.0) (2024-02-23)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
