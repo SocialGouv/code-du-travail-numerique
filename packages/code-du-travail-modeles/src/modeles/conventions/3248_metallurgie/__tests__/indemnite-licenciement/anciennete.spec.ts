@@ -243,4 +243,24 @@ describe("CC 3248", () => {
       }
     );
   });
+
+  describe("Calcul de l'ancienneté pour les groupes A,B,C,D,E (passage au forfait jour) - Cas spécifique issue #5634", () => {
+    test("Calcul de l'ancienneté", () => {
+      const seniority = new SeniorityFactory().create(
+        SupportedCcIndemniteLicenciement.IDCC3248
+      );
+
+      const result = seniority.computeSeniority({
+        absencePeriods: [],
+        categoriePro: "'A, B, C, D ou E'",
+        dateBecomeDayContract: "04/09/2022",
+        dateEntree: "02/01/2012",
+        dateSortie: "02/12/2024",
+        hasBeenDayContract: true,
+        hasBeenExecutive: false,
+      });
+
+      expect(result.value).toEqual(14);
+    });
+  });
 });

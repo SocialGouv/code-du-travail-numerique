@@ -114,25 +114,33 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
         new Date()
       );
       const periods: YearDetail[] = [
-        { begin: dEntree, end: dBecomeDayContract },
         { begin: dBecomeDayContract, end: dSortie },
       ];
       const result = accumulateAbsenceByYear(
         absencesWithExcludedAbsences,
         periods
       );
-      const totalAbsenceBeforeDayContract = result[0].totalAbsenceInMonth;
-      const totalAbsenceAfterDayContract = result[1].totalAbsenceInMonth;
+      const totalAbsenceAfterDayContract = result[0].totalAbsenceInMonth;
 
+      const totalAbsences = absencesWithExcludedAbsences.reduce(
+        (total, item) => {
+          if (item.durationInMonth) {
+            return total + item.durationInMonth;
+          }
+          return total;
+        },
+        0
+      );
+
+      const allSeniority = differenceInMonths(dSortie, dEntree);
+      const seniorityAfterDayContract = differenceInMonths(
+        dSortie,
+        dBecomeDayContract
+      );
+      const majoration =
+        (seniorityAfterDayContract - totalAbsenceAfterDayContract) * 0.5;
       return {
-        value:
-          (differenceInMonths(dBecomeDayContract, dEntree) -
-            totalAbsenceBeforeDayContract) /
-            12 +
-          ((differenceInMonths(dSortie, dBecomeDayContract) -
-            totalAbsenceAfterDayContract) /
-            12) *
-            1.5,
+        value: (allSeniority - totalAbsences + majoration) / 12,
       };
     }
     const totalAbsence = absencesWithExcludedAbsences.reduce((total, item) => {
