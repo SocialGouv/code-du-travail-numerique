@@ -44,6 +44,7 @@ describe("Conventions collectives", () => {
     cy.request({
       method: "GET",
       url: "/convention-collective/007",
+      failOnStatusCode: false,
     }).then((response) => {
       expect(response.status).to.equal(404);
     });
