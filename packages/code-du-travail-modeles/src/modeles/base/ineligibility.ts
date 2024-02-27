@@ -1,7 +1,7 @@
 import type { IInegibility } from "../common/types/ineligibility";
 
 export class IneligibilityLegal implements IInegibility {
-  getIneligibility(
+  getContractIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
     if (args.typeContratTravail && args.typeContratTravail === "cdd") {
@@ -11,7 +11,13 @@ export class IneligibilityLegal implements IInegibility {
       args.licenciementFauteGrave === "oui"
     ) {
       return "L’indemnité de licenciement n’est pas due en cas de faute grave (ou lourde). Lorsqu’il est invoqué, le motif de faute grave doit apparaître précisément dans le courrier. Reportez-vous à la lettre de notification de licenciement.";
-    } else if (
+    }
+  }
+
+  getSeniorityIneligibility(
+    args: Record<string, string | undefined>
+  ): string | undefined {
+    if (
       args[
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
       ] &&
@@ -33,6 +39,19 @@ export class IneligibilityLegal implements IInegibility {
         8 / 12
     ) {
       return "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.";
+    }
+  }
+
+  getIneligibility(
+    args: Record<string, string | undefined>
+  ): string | undefined {
+    const contractIneligility = this.getContractIneligibility(args);
+    if (contractIneligility) {
+      return contractIneligility;
+    }
+    const seniorityIneligibility = this.getSeniorityIneligibility(args);
+    if (seniorityIneligibility) {
+      return seniorityIneligibility;
     }
   }
 }
