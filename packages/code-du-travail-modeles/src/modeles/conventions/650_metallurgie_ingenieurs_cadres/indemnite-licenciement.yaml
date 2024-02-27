@@ -807,7 +807,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
       - age >= 55 an
       - age < 60 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-      - base * majoration * minoration < 3 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      - base * majoration * minoration < 6 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   valeur:
     produit:
       assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
@@ -874,6 +874,14 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   valeur: oui
   références:
     Article 91.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314615#KALIARTI000046314615
+
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . notification arrêt de travail au moment du licenciement :
+  applicable si: contrat salarié . indemnité de licenciement . arrêt de travail
+  type: notification
+  description: Le montant de l’indemnité de licenciement calculé pour la convention collective de la métallurgie pourrait être différent. En effet, les salaires pris en compte dans cette simulation sont ceux que le salarié a perçu avant l'arrêt de travail. Or, la convention collective indique que la rémunération à retenir est celle que le salarié aurait perçue s'il avait travaillé pendant la période d’absence pour maladie.
+  valeur: oui
+  cdtn:
+    affichage: légal et conventionnel
 
 # Notification avant le 1er janvier 2024
 
