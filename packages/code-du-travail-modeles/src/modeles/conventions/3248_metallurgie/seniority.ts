@@ -1,4 +1,10 @@
-import { addDays, differenceInMonths, parse } from "date-fns";
+import {
+  addDays,
+  differenceInMonths,
+  isBefore,
+  isEqual,
+  parse,
+} from "date-fns";
 
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
@@ -106,43 +112,15 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
           (absence) => absence.durationInMonth && absence.durationInMonth > 12
         )
       : [];
+    const increase = this.calculateDayContractIncrease(
+      dEntree,
+      dSortie,
+      absencesWithExcludedAbsences,
+      hasBeenDayContract,
+      hasBeenExecutive,
+      dateBecomeDayContract
+    );
 
-    if (hasBeenDayContract && dateBecomeDayContract) {
-      const dBecomeDayContract = parse(
-        dateBecomeDayContract,
-        "dd/MM/yyyy",
-        new Date()
-      );
-      const periods: YearDetail[] = [
-        { begin: dBecomeDayContract, end: dSortie },
-      ];
-      const result = accumulateAbsenceByYear(
-        absencesWithExcludedAbsences,
-        periods
-      );
-      const totalAbsenceAfterDayContract = result[0].totalAbsenceInMonth;
-
-      const totalAbsences = absencesWithExcludedAbsences.reduce(
-        (total, item) => {
-          if (item.durationInMonth) {
-            return total + item.durationInMonth;
-          }
-          return total;
-        },
-        0
-      );
-
-      const allSeniority = differenceInMonths(dSortie, dEntree);
-      const seniorityAfterDayContract = differenceInMonths(
-        dSortie,
-        dBecomeDayContract
-      );
-      const majoration =
-        (seniorityAfterDayContract - totalAbsenceAfterDayContract) * 0.5;
-      return {
-        value: (allSeniority - totalAbsences + majoration) / 12,
-      };
-    }
     const totalAbsence = absencesWithExcludedAbsences.reduce((total, item) => {
       if (item.durationInMonth) {
         return total + item.durationInMonth;
@@ -160,23 +138,74 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
         ].includes(item.motif.key)
     );
 
-    if (hasBeenDayContract && !dateBecomeDayContract) {
-      return {
-        extraInfos: {
-          "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . congés plus de 12 mois":
-            hasLongAbsence ? "oui" : "non",
-        },
-        value:
-          ((differenceInMonths(dSortie, dEntree) - totalAbsence) / 12) * 1.5,
-      };
-    }
     return {
       extraInfos: {
         "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . congés plus de 12 mois":
           hasLongAbsence ? "oui" : "non",
       },
-      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
+      value:
+        (differenceInMonths(dSortie, dEntree) - totalAbsence + increase) / 12,
     };
+  }
+
+  private calculateDayContractIncrease(
+    dEntree: Date,
+    dSortie: Date,
+    absences: Absence[],
+    hasBeenDayContract: boolean,
+    hasBeenExecutive: boolean,
+    dateBecomeDayContract: string | undefined
+  ): number {
+    if (!hasBeenDayContract) {
+      return 0;
+    }
+    const dStartMajoration = this.computeDateStartForDayContractIncrease(
+      dEntree,
+      hasBeenExecutive,
+      dateBecomeDayContract
+    );
+    const periods: YearDetail[] = [{ begin: dStartMajoration, end: dSortie }];
+    let totalAbsenceAfterDayContract = 0;
+    if (isEqual(dStartMajoration, dEntree)) {
+      totalAbsenceAfterDayContract = absences.reduce((total, item) => {
+        if (item.durationInMonth) {
+          return total + item.durationInMonth;
+        }
+        return total;
+      }, 0);
+    } else {
+      const result = accumulateAbsenceByYear(absences, periods);
+      totalAbsenceAfterDayContract = result[0].totalAbsenceInMonth;
+    }
+
+    const seniorityAfterDayContract = differenceInMonths(
+      dSortie,
+      dStartMajoration
+    );
+    return (seniorityAfterDayContract - totalAbsenceAfterDayContract) * 0.5;
+  }
+
+  private computeDateStartForDayContractIncrease(
+    dStart: Date,
+    hasBeenExecutive: boolean,
+    dateBecomeDayContract: string | undefined
+  ): Date {
+    const dBecomeDayContract = dateBecomeDayContract
+      ? parse(dateBecomeDayContract, "dd/MM/yyyy", new Date())
+      : undefined;
+
+    if (!hasBeenExecutive) {
+      return dBecomeDayContract ?? dStart;
+    }
+
+    const dStart3248 = parse("01/01/2024", "dd/MM/yyyy", new Date());
+    if (!dBecomeDayContract) {
+      return dStart3248;
+    }
+
+    return isBefore(dBecomeDayContract, dStart3248)
+      ? dStart3248
+      : dBecomeDayContract;
   }
 }
 
