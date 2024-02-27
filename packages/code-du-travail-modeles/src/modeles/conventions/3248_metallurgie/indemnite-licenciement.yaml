@@ -415,7 +415,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
       - age >= 55 an
       - age < 60 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-      - base * majoration * minoration < 3 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      - base * majoration * minoration < 6 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   valeur:
     produit:
       assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
