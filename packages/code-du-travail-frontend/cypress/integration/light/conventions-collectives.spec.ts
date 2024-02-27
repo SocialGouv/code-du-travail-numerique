@@ -16,11 +16,37 @@ describe("Conventions collectives", () => {
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
     );
   });
+
   it("je suis redirigé vers la cc si je mets seulement l'idcc dans l'url", () => {
     cy.visit("/convention-collective/0029");
     cy.url().should(
       "include",
       "/convention-collective/29-hospitalisation-privee-etablissements-prives-dhospitalisation-de-soins-d"
     );
+  });
+
+  it("je suis redirigé vers la cc si je mets l'idcc en 4 chiffres", () => {
+    cy.visit("/convention-collective/0650");
+    cy.url().should("include", "/convention-collective/3248-metallurgie");
+  });
+
+  it("je suis redirigé vers la cc si je mets l'idcc en 3 chiffres", () => {
+    cy.visit("/convention-collective/650");
+    cy.url().should("include", "/convention-collective/3248-metallurgie");
+  });
+
+  it("je suis redirigé vers la cc si je mets l'idcc en 4 chiffres et deux zeros", () => {
+    cy.visit("/convention-collective/0054");
+    cy.url().should("include", "/convention-collective/3248-metallurgie");
+  });
+
+  it("je ne dois pas être redirigé s'il n'y a pas de redirection", () => {
+    cy.request({
+      method: "GET",
+      url: "/convention-collective/007",
+      failOnStatusCode: false,
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
   });
 });
