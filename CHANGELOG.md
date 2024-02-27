@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.125.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.125.0...v4.125.1) (2024-02-27)
+
+### Bug Fixes
+
+- **workflow:** add `needs` on preproduction for e2e ([84fd34c](https://github.com/SocialGouv/code-du-travail-numerique/commit/84fd34c4e0d4531042672c78121dd335d9e3b4b5))
+
 # [4.125.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.124.0...v4.125.0) (2024-02-27)
 
 ### Bug Fixes
