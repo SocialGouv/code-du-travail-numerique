@@ -19,8 +19,12 @@ export function mergeIndemniteLicenciementModels(): any {
   return mergeModelsWithKeys([commonFile, indemniteLicenciementFile]);
 }
 
-export function mergeRuptureConventionnel(): any {
-  return mergeModelsWithKeys([commonFile, ruptureConventionnelFile]);
+export function mergeRuptureConventionnelle(): any {
+  return mergeModelsWithKeys([
+    commonFile,
+    indemniteLicenciementFile,
+    ruptureConventionnelFile,
+  ]);
 }
 
 export function mergeCommonModels(): any {

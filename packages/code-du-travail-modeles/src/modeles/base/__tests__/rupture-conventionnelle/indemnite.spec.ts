@@ -1,15 +1,15 @@
-import { RuptureConventionnelPublicodes } from "../../../../publicodes";
+import { RuptureConventionnellePublicodes } from "../../../../publicodes";
 
-const engine = new RuptureConventionnelPublicodes(modelsRuptureConventionnel);
+const engine = new RuptureConventionnellePublicodes(modelsRuptureConventionnel);
 
-describe("rupture conventionnelle légale de licenciement pour un employé", () => {
+describe("Rupture conventionnelle légale de licenciement pour un employé", () => {
   test.each`
     seniority             | salary  | expectedCompensation
     ${0}                  | ${0}    | ${0}
     ${1}                  | ${0}    | ${0}
     ${1.3}                | ${0}    | ${0}
-    ${0.12}               | ${1000} | ${0}
-    ${0.5}                | ${1000} | ${0}
+    ${0.12}               | ${1000} | ${30}
+    ${0.5}                | ${1000} | ${125}
     ${8 / 12}             | ${1000} | ${166.67}
     ${11 / 12}            | ${2000} | ${458.33}
     ${1.083333333}        | ${2000} | ${541.67}
@@ -23,11 +23,11 @@ describe("rupture conventionnelle légale de licenciement pour un employé", () 
     "ancienneté: $seniority mois, salaire de référence: $salary => $expectedCompensation €",
     ({ seniority, salary, expectedCompensation }) => {
       const { result, missingArgs } = engine.setSituation({
-        "contrat salarié . rupture conventionnelle . ancienneté en année":
+        "contrat salarié . indemnité de licenciement . ancienneté en année":
           seniority,
-        "contrat salarié . rupture conventionnelle . inaptitude suite à un accident ou maladie professionnelle":
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
-        "contrat salarié . rupture conventionnelle . salaire de référence":
+        "contrat salarié . indemnité de licenciement . salaire de référence":
           salary,
       });
       expect(result.value).toEqual(expectedCompensation);
@@ -55,11 +55,11 @@ describe("rupture conventionnelle légale de licenciement pour un employé", () 
     "licenciement pour inaptitude : ancienneté: $seniority mois, salaire de référence: $salary => $expectedCompensation €",
     ({ seniority, salary, expectedCompensation }) => {
       const { result, missingArgs } = engine.setSituation({
-        "contrat salarié . rupture conventionnelle . ancienneté en année":
+        "contrat salarié . indemnité de licenciement . ancienneté en année":
           seniority,
-        "contrat salarié . rupture conventionnelle . inaptitude suite à un accident ou maladie professionnelle":
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "oui",
-        "contrat salarié . rupture conventionnelle . salaire de référence":
+        "contrat salarié . indemnité de licenciement . salaire de référence":
           salary,
       });
       expect(result.value).toEqual(expectedCompensation);

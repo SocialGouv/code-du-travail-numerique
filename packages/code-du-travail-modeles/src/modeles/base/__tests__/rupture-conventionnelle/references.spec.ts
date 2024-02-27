@@ -2,9 +2,9 @@ import {
   IndemniteLicenciementInaptitudeReferences,
   IndemniteLicenciementReferences,
 } from "../../../../__test__/common/legal-references";
-import { RuptureConventionnelPublicodes } from "../../../../publicodes";
+import { RuptureConventionnellePublicodes } from "../../../../publicodes";
 
-const engine = new RuptureConventionnelPublicodes(modelsRuptureConventionnel);
+const engine = new RuptureConventionnellePublicodes(modelsRuptureConventionnel);
 
 describe("Vérification des références juridiques pour Indemnité légale de licenciement", () => {
   test.each`
@@ -16,11 +16,11 @@ describe("Vérification des références juridiques pour Indemnité légale de l
     "pour un employé avec une ancienneté de $seniority mois",
     ({ seniority, expectedReferences }) => {
       engine.setSituation({
-        "contrat salarié . rupture conventionnelle . ancienneté en année":
+        "contrat salarié . indemnité de licenciement . ancienneté en année":
           seniority,
-        "contrat salarié . rupture conventionnelle . inaptitude suite à un accident ou maladie professionnelle":
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
-        "contrat salarié . rupture conventionnelle . salaire de référence":
+        "contrat salarié . indemnité de licenciement . salaire de référence":
           "1000",
       });
       const result = engine.getReferences();
@@ -38,11 +38,11 @@ describe("Vérification des références juridiques pour Indemnité légale de l
     "pour un employé avec une ancienneté de $seniority mois licencié pour inaptitude",
     ({ seniority, expectedReferences }) => {
       engine.setSituation({
-        "contrat salarié . rupture conventionnelle . ancienneté en année":
+        "contrat salarié . indemnité de licenciement . ancienneté en année":
           seniority,
-        "contrat salarié . rupture conventionnelle . inaptitude suite à un accident ou maladie professionnelle":
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "oui",
-        "contrat salarié . rupture conventionnelle . salaire de référence":
+        "contrat salarié . indemnité de licenciement . salaire de référence":
           "1000",
       });
       const result = engine.getReferences();

@@ -1,8 +1,7 @@
 import type { EvaluatedNode } from "publicodes";
 
-import type { SeniorityResult } from "../modeles/common";
+import type { References, SeniorityResult } from "../modeles/common";
 import {
-  // IneligibilityFactory,
   ReferenceSalaryFactory,
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
@@ -15,7 +14,7 @@ import type {
 } from "./types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
 
-class RuptureConventionnelPublicodes
+class RuptureConventionnellePublicodes
   extends PublicodesBase<PublicodesIndemniteLicenciementResult>
   implements Publicodes<PublicodesIndemniteLicenciementResult>
 {
@@ -26,7 +25,7 @@ class RuptureConventionnelPublicodes
     };
     super(
       rules,
-      PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_LICENCIEMENT],
+      PublicodesDefaultRules[PublicodesSimulator.RUPTURE_CONVENTIONNELLE],
       idcc as SupportedCcIndemniteLicenciement
     );
   }
@@ -64,6 +63,10 @@ class RuptureConventionnelPublicodes
     };
   }
 
+  getReferences(): References[] {
+    return super.getReferences("rupture conventionnelle");
+  }
+
   mapIneligibility(
     text: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
@@ -94,36 +97,27 @@ class RuptureConventionnelPublicodes
     targetRule?: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
     let newArgs = args;
-    // const ineligibilityInstance = new IneligibilityFactory().create(this.idcc);
-    // const ineligibility = ineligibilityInstance.getIneligibility(newArgs);
-    // if (ineligibility) {
-    //   return this.mapIneligibility(ineligibility);
-    // }
     if (
       !args[
-        "contrat salarié . rupture conventionnelle . ancienneté en année"
+        "contrat salarié . indemnité de licenciement . ancienneté en année"
       ] ||
       !args[
-        "contrat salarié . rupture conventionnelle . ancienneté conventionnelle en année"
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
       ]
     ) {
       const missingArg = this.getMissingArg(args, [
-        "contrat salarié . rupture conventionnelle . date d'entrée",
-        "contrat salarié . rupture conventionnelle . date de sortie",
+        "contrat salarié . indemnité de licenciement . date d'entrée",
+        "contrat salarié . indemnité de licenciement . date de sortie",
       ]);
       if (missingArg) {
         return this.mapMissingArg(missingArg);
       }
-      const agreement = new SeniorityFactory().create(
-        this.idcc,
-        "rupture-conventionnelle"
-      );
+      const agreement = new SeniorityFactory().create(this.idcc);
       const agreementSeniority: SeniorityResult = agreement.computeSeniority(
         agreement.mapSituation(args)
       );
       const legal = new SeniorityFactory().create(
-        SupportedCcIndemniteLicenciement.default,
-        "rupture-conventionnelle"
+        SupportedCcIndemniteLicenciement.default
       );
       const legalSeniority: SeniorityResult = legal.computeSeniority(
         legal.mapSituation(args)
@@ -131,7 +125,7 @@ class RuptureConventionnelPublicodes
       if (legalSeniority.value) {
         newArgs = {
           ...newArgs,
-          "contrat salarié . rupture conventionnelle . ancienneté en année":
+          "contrat salarié . indemnité de licenciement . ancienneté en année":
             legalSeniority.value.toString(),
           ...legalSeniority.extraInfos,
         };
@@ -139,27 +133,25 @@ class RuptureConventionnelPublicodes
       if (agreementSeniority.value) {
         newArgs = {
           ...newArgs,
-          "contrat salarié . rupture conventionnelle . ancienneté conventionnelle en année":
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             agreementSeniority.value.toString(),
           ...agreementSeniority.extraInfos,
         };
       }
     }
     const missingArg = this.getMissingArg(args, [
-      "contrat salarié . rupture conventionnelle . date d'entrée",
-      "contrat salarié . rupture conventionnelle . date de sortie",
-      "contrat salarié . rupture conventionnelle . date de notification",
+      "contrat salarié . indemnité de licenciement . date d'entrée",
+      "contrat salarié . indemnité de licenciement . date de sortie",
+      "contrat salarié . indemnité de licenciement . date de notification",
     ]);
     if (missingArg) {
       return this.mapMissingArg(missingArg);
     }
-    // const ineligibilityWithSeniority =
-    //   ineligibilityInstance.getIneligibility(newArgs);
-    // if (ineligibilityWithSeniority) {
-    //   return this.mapIneligibility(ineligibilityWithSeniority);
-    // }
+
     if (
-      !args["contrat salarié . rupture conventionnelle . salaire de référence"]
+      !args[
+        "contrat salarié . indemnité de licenciement . salaire de référence"
+      ]
     ) {
       const s = new ReferenceSalaryFactory().create(
         SupportedCcIndemniteLicenciement.default
@@ -170,14 +162,14 @@ class RuptureConventionnelPublicodes
       if (value) {
         newArgs = {
           ...newArgs,
-          "contrat salarié . rupture conventionnelle . salaire de référence":
+          "contrat salarié . indemnité de licenciement . salaire de référence":
             value.toString(),
         };
       }
     }
     if (
       !args[
-        "contrat salarié . rupture conventionnelle . salaire de référence conventionnel"
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
       ]
     ) {
       const s = new ReferenceSalaryFactory().create(this.idcc);
@@ -193,7 +185,7 @@ class RuptureConventionnelPublicodes
       if (value) {
         newArgs = {
           ...newArgs,
-          "contrat salarié . rupture conventionnelle . salaire de référence conventionnel":
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             value.toString(),
         };
       }
@@ -212,4 +204,4 @@ class RuptureConventionnelPublicodes
   }
 }
 
-export default RuptureConventionnelPublicodes;
+export default RuptureConventionnellePublicodes;

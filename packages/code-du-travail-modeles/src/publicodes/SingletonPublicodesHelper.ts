@@ -8,7 +8,7 @@ import {
   IndemniteLicenciementPublicodes,
   PreavisRetraitePublicodes,
   PublicodesSimulator,
-  RuptureConventionnelPublicodes,
+  RuptureConventionnellePublicodes,
 } from ".";
 
 class SingletonPublicodesHelper<T extends PublicodesSimulator> {
@@ -59,7 +59,7 @@ class SingletonPublicodesHelper<T extends PublicodesSimulator> {
       case PublicodesSimulator.INDEMNITE_LICENCIEMENT:
         return new IndemniteLicenciementPublicodes(rules, idcc);
       case PublicodesSimulator.RUPTURE_CONVENTIONNELLE:
-        return new RuptureConventionnelPublicodes(rules, idcc);
+        return new RuptureConventionnellePublicodes(rules, idcc);
       default:
         throw new Error("Simulator not supported");
     }

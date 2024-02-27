@@ -1,7 +1,7 @@
 import {
   mergeIndemniteLicenciementModels,
   mergePreavisRetraiteModels,
-  mergeRuptureConventionnel,
+  mergeRuptureConventionnelle,
 } from "./src/internal/merger";
 
 (global as typeof globalThis).modelsIndemniteLicenciement =
@@ -9,4 +9,4 @@ import {
 (global as typeof globalThis).modelsPreavisRetraite =
   mergePreavisRetraiteModels();
 (global as typeof globalThis).modelsRuptureConventionnel =
-  mergeRuptureConventionnel();
+  mergeRuptureConventionnelle();

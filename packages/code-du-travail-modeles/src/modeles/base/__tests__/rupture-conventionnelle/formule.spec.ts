@@ -1,11 +1,13 @@
-import { IndemniteLicenciementPublicodes } from "../../../../publicodes";
+import {} from "../../../../publicodes";
+import RuptureConventionnellePublicodes from "../../../../publicodes/RuptureConventionnellePublicodes";
 
-const engine = new IndemniteLicenciementPublicodes(modelsIndemniteLicenciement);
+const engine = new RuptureConventionnellePublicodes(modelsRuptureConventionnel);
 
 describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée", () => {
   test.each`
     seniority | isForInaptitude | expectedFormula                                  | expectedExplanations
-    ${7 / 12} | ${"non"}        | ${"1/4 * Sref * A"}                              | ${[]}
+    ${1 / 12} | ${"non"}        | ${"1/4 * Sref * A"}                              | ${["A : Ancienneté totale (≈ 0.08 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
+    ${7 / 12} | ${"non"}        | ${"1/4 * Sref * A"}                              | ${["A : Ancienneté totale (≈ 0.58 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
     ${7 / 12} | ${"oui"}        | ${"(1/4 * Sref * A) * 2"}                        | ${["A : Ancienneté totale (≈ 0.58 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
     ${8 / 12} | ${"non"}        | ${"1/4 * Sref * A"}                              | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
     ${8 / 12} | ${"oui"}        | ${"(1/4 * Sref * A) * 2"}                        | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}

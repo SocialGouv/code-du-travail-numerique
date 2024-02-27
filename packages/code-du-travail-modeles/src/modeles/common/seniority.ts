@@ -22,46 +22,22 @@ export type DefaultSeniorityRequiredProps = DefaultSeniorityProps & {
   dateNotification: string;
 };
 
-export type SeniorityType =
-  | "indemnite-licenciement"
-  | "rupture-conventionnelle";
-
 export abstract class SeniorityDefault<
   T extends SupportedCcIndemniteLicenciement
 > implements ISeniority<T>
 {
-  private readonly dateEntreeNamespace: string;
-
-  private readonly dateSortieNamespace: string;
-
-  private readonly dateNotificationNamespace: string;
-
-  constructor(type: SeniorityType) {
-    if (type === "rupture-conventionnelle") {
-      this.dateEntreeNamespace =
-        "contrat salarié . rupture conventionnelle . date d'entrée";
-      this.dateSortieNamespace =
-        "contrat salarié . rupture conventionnelle . date de sortie";
-      this.dateNotificationNamespace =
-        "contrat salarié . rupture conventionnelle . date de notification";
-    } else {
-      this.dateEntreeNamespace =
-        "contrat salarié . indemnité de licenciement . date d'entrée";
-      this.dateSortieNamespace =
-        "contrat salarié . indemnité de licenciement . date de sortie";
-      this.dateNotificationNamespace =
-        "contrat salarié . indemnité de licenciement . date de notification";
-    }
-  }
-
   mapSituation(args: Record<string, string | undefined>): SeniorityProps<T> {
     const absencePeriods: Absence[] = args.absencePeriods
       ? JSON.parse(args.absencePeriods)
       : [];
     return {
       absencePeriods,
-      dateEntree: args[this.dateEntreeNamespace] ?? "",
-      dateSortie: args[this.dateSortieNamespace] ?? "",
+      dateEntree:
+        args["contrat salarié . indemnité de licenciement . date d'entrée"] ??
+        "",
+      dateSortie:
+        args["contrat salarié . indemnité de licenciement . date de sortie"] ??
+        "",
     } as SeniorityProps<T>;
   }
 
@@ -73,9 +49,16 @@ export abstract class SeniorityDefault<
       : [];
     return {
       absencePeriods,
-      dateEntree: args[this.dateEntreeNamespace] ?? "",
-      dateNotification: args[this.dateNotificationNamespace] ?? "",
-      dateSortie: args[this.dateSortieNamespace] ?? "",
+      dateEntree:
+        args["contrat salarié . indemnité de licenciement . date d'entrée"] ??
+        "",
+      dateNotification:
+        args[
+          "contrat salarié . indemnité de licenciement . date de notification"
+        ] ?? "",
+      dateSortie:
+        args["contrat salarié . indemnité de licenciement . date de sortie"] ??
+        "",
     } as SeniorityRequiredProps<T>;
   }
 
