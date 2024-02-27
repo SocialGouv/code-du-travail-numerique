@@ -41,7 +41,11 @@ describe("Conventions collectives", () => {
   });
 
   it("je ne dois pas être redirigé s'il n'y a pas de redirection", () => {
-    cy.visit("/convention-collective/007");
-    cy.url().should("include", "/convention-collective/007");
+    cy.request({
+      method: "GET",
+      url: "/convention-collective/007",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
   });
 });
