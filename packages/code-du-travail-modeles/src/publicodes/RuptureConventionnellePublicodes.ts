@@ -67,17 +67,6 @@ class RuptureConventionnellePublicodes
     return super.getReferences("rupture conventionnelle");
   }
 
-  mapIneligibility(
-    text: string
-  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
-    return {
-      ineligibility: text,
-      missingArgs: [],
-      result: { value: 0 },
-      situation: [],
-    };
-  }
-
   removeNonPublicodeFields(
     args: Record<string, string | undefined>
   ): Record<string, string | undefined> {
