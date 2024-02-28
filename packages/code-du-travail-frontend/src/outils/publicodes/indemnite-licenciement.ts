@@ -1,42 +1,21 @@
-import { formatNumberAsString } from "./common";
-import { formatIdcc, SeniorityResult } from "@socialgouv/modeles-social";
+import { OuiNon } from "../IndemniteLicenciement/common";
+import { CdiCdd } from "../IndemniteLicenciement/steps/ContratTravail/store";
+import { formatIdcc, SalaryPeriods } from "@socialgouv/modeles-social";
 
 export const mapToPublicodesSituationForCalculation = (
   startDate: string,
   notificationDate: string,
   endDate: string,
-  salaireRef: number,
+  salaryPeriods: SalaryPeriods[],
   inaptitude: boolean,
   longTermDisability: boolean
 ): Record<string, string> => {
   return {
-    "contrat salarié . indemnité de licenciement . salaire de référence":
-      formatNumberAsString(salaireRef),
+    salaryPeriods: JSON.stringify(salaryPeriods),
     "contrat salarié . indemnité de licenciement . date d'entrée": startDate,
     "contrat salarié . indemnité de licenciement . date de notification":
       notificationDate,
     "contrat salarié . indemnité de licenciement . date de sortie": endDate,
-    "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-      inaptitude ? "oui" : "non",
-    "contrat salarié . indemnité de licenciement . arrêt de travail":
-      longTermDisability ? "oui" : "non",
-  };
-};
-
-export const mapToPublicodesSituationForIndemniteLicenciementLegal = (
-  seniority: number,
-  requiredSeniority: number,
-  salaireRef: number,
-  inaptitude: boolean,
-  longTermDisability: boolean
-): Record<string, string> => {
-  return {
-    "contrat salarié . indemnité de licenciement . salaire de référence":
-      formatNumberAsString(salaireRef),
-    "contrat salarié . indemnité de licenciement . ancienneté en année":
-      formatNumberAsString(seniority),
-    "contrat salarié . indemnité de licenciement . ancienneté requise en année":
-      formatNumberAsString(requiredSeniority),
     "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
       inaptitude ? "oui" : "non",
     "contrat salarié . indemnité de licenciement . arrêt de travail":
@@ -65,7 +44,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
 export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues =
   (
     ccn: number,
-    agreementSalaireRef: number,
+    salaryPeriods: SalaryPeriods[],
     notificationDate: string,
     entryDate: string,
     endDate: string,
@@ -80,8 +59,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
       {
         ...agreementParameters,
         ...{
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            formatNumberAsString(agreementSalaireRef),
+          salaryPeriods: JSON.stringify(salaryPeriods),
           "contrat salarié . indemnité de licenciement . date de notification":
             notificationDate,
           "contrat salarié . indemnité de licenciement . date d'entrée":

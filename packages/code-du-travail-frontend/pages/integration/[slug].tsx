@@ -6,7 +6,6 @@ import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { integrationData, IntegrationContainer } from "../../src/integration";
 import { SITE_URL } from "../../src/config";
-import { Cpu } from "react-feather";
 
 const IntegrationPage = (props): JSX.Element => {
   const {

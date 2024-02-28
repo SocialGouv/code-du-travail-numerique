@@ -9,6 +9,7 @@ import {
 const StepContratTravail = (): JSX.Element => {
   const store = useContext(IndemniteLicenciementContext);
   const {
+    data,
     licenciementFauteGrave,
     onChangeLicenciementFauteGrave,
     licenciementInaptitude,
@@ -25,6 +26,7 @@ const StepContratTravail = (): JSX.Element => {
     onChangeDateArretTravail,
     errorDateArretTravail,
   } = useIndemniteLicenciementStore(store, (state) => ({
+    data: state.contratTravailData.input,
     licenciementFauteGrave:
       state.contratTravailData.input.licenciementFauteGrave,
     onChangeLicenciementFauteGrave:

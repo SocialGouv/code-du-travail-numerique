@@ -22,6 +22,25 @@ export type CC44ReferenceSalaryProps = {
 export class ReferenceSalary44
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0044>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0044> {
+    const category =
+      args[
+        "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
+      ] ?? "";
+    return {
+      category: category as CategoryPro44,
+      hasVariablePay: args.hasVariablePay === "oui",
+      lastMonthSalary: args.lastMonthSalary
+        ? JSON.parse(args.lastMonthSalary)
+        : undefined,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
   /**
    * (si le salaire ne comporte pas une partie fixe et une partie variable et Ouvriers et collaborateurs & Agents de maîtrise et techniciens) ou (Ingénieurs et Cadres)
    * - S1 + P / 12 (si >= S2/12)

@@ -5,15 +5,12 @@ import {
   PublicodesIndemniteLicenciementResult,
   PublicodesSimulator,
   References,
-  SeniorityFactory,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../../types";
 import {
   mapToPublicodesSituationForCalculation,
   mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues,
-  mapToPublicodesSituationForIndemniteLicenciementLegal,
 } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
@@ -23,22 +20,12 @@ import produce from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
-import {
-  getAgreementExtraInfoSalary,
-  getAgreementReferenceSalary,
-} from "../../../agreements";
 import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
 import {
   AgreementInformation,
   hasNoLegalIndemnity,
   hasNoBetterAllowance,
 } from "../../../common";
-import { MainStore } from "../../../store";
-import { StoreApi } from "zustand";
-import {
-  getAgreementRequiredSeniority,
-  getAgreementSeniority,
-} from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
 import { IndemniteLicenciementStepName } from "../../..";
@@ -50,6 +37,7 @@ import {
 import { push as matopush } from "@socialgouv/matomo-next";
 import getSupportedCcIndemniteLicenciement from "../../../common/usecase/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: ResultStoreData = {
   input: {
@@ -93,7 +81,8 @@ const createResultStore: StoreSlice<
     ContratTravailStoreSlice &
     SalairesStoreSlice &
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
-    CommonInformationsStoreSlice
+    CommonInformationsStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   resultData: {
     ...initialState,
@@ -156,7 +145,7 @@ const createResultStore: StoreSlice<
       );
     },
     getPublicodesResult: () => {
-      const refSalary = get().salairesData.input.refSalary;
+      const salaryPeriods = get().salairesData.input.salaryPeriods;
       const agreement = get().agreementData.input.agreement;
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
@@ -180,12 +169,12 @@ const createResultStore: StoreSlice<
       const absencePeriods = get().ancienneteData.input.absencePeriods;
 
       try {
-        publicodesSituationLegal = publicodes.calculate({
+        const situationLegal = {
           ...mapToPublicodesSituationForCalculation(
             dateEntree,
             dateNotification,
             dateSortie,
-            refSalary,
+            salaryPeriods,
             isLicenciementInaptitude,
             longTermDisability
           ),
@@ -193,7 +182,8 @@ const createResultStore: StoreSlice<
             absencePeriods && absencePeriods.length
               ? JSON.stringify(absencePeriods)
               : undefined,
-        }).result;
+        };
+        publicodesSituationLegal = publicodes.calculate(situationLegal).result;
       } catch (e) {
         errorPublicodes = true;
         Sentry.captureException(e);
@@ -207,8 +197,6 @@ const createResultStore: StoreSlice<
         {
           value: null,
         };
-      let agreementSeniority: SeniorityResult;
-      let agreementRefSalary: number;
       let agreementReferences: References[];
       let agreementFormula: Formula;
       let isAgreementBetter = false;
@@ -218,7 +206,6 @@ const createResultStore: StoreSlice<
       let notifications: Notification[];
       let agreementHasNoLegalIndemnity: boolean;
       let agreementHasNoBetterAllowance: boolean;
-      let agreementSalaryExtraInfo: Record<string, string | number> = {};
       let isParentalNoticeHidden = false;
 
       if (
@@ -229,16 +216,6 @@ const createResultStore: StoreSlice<
       ) {
         const infos = informationToSituation(
           get().informationsData.input.publicodesInformations
-        );
-
-        agreementRefSalary = getAgreementReferenceSalary(
-          getSupportedAgreement(agreement.num),
-          get as StoreApi<MainStore>["getState"]
-        );
-
-        agreementSalaryExtraInfo = getAgreementExtraInfoSalary(
-          getSupportedAgreement(agreement.num),
-          get as StoreApi<MainStore>["getState"]
         );
 
         agreementInformations = get()
@@ -253,27 +230,23 @@ const createResultStore: StoreSlice<
           )
           .filter((v) => v !== "") as AgreementInformation[];
 
-        agreementSeniority = getAgreementSeniority(
-          getSupportedAgreement(agreement.num),
-          get as StoreApi<MainStore>["getState"]
-        );
-
         try {
           const situation = {
             ...mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
               agreement.num,
-              agreementRefSalary,
+              salaryPeriods,
               get().ancienneteData.input.dateNotification!,
               get().ancienneteData.input.dateEntree!,
               get().ancienneteData.input.dateSortie!,
               isLicenciementInaptitude,
               longTermDisability,
-              { ...infos, ...agreementSalaryExtraInfo }
+              { ...infos }
             ),
             absencePeriods:
               absencePeriods && absencePeriods.length
                 ? JSON.stringify(absencePeriods)
                 : undefined,
+            ...get().situationData.situation,
           };
           publicodesSituationConventionnel = publicodes.calculate(
             situation,
@@ -355,7 +328,6 @@ const createResultStore: StoreSlice<
             publicodesSituationLegal;
           state.resultData.input.publicodesAgreementResult =
             publicodesSituationConventionnel;
-          state.resultData.input.agreementSeniority = agreementSeniority;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;

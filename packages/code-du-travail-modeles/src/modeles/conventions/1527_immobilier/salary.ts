@@ -14,6 +14,17 @@ export type CC1527ReferenceSalaryProps = {
 export class ReferenceSalary1527
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1527>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1527> {
+    return {
+      hasCommission: args.hasCommission === "oui",
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
   /**
    * Règle :
    * - si les commissions ne constituent pas un élément contractuel de rémunération : S

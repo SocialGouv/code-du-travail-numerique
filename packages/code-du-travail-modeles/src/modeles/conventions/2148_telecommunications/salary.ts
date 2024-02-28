@@ -14,6 +14,19 @@ export type CC2148ReferenceSalaryProps = {
 export class ReferenceSalary2148
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2148>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2148> {
+    return {
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+      salairesPendantPreavis: args.noticeSalaryPeriods
+        ? JSON.parse(args.noticeSalaryPeriods)
+        : [],
+    };
+  }
+
   /**
    * Règle :
    * S/12
