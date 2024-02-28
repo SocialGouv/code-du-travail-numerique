@@ -6,10 +6,9 @@ describe("Items", () => {
     server.close();
   });
 
-  it("should return a list for /items", async () => {
+  it("can not call /items with no paramter", async () => {
     const res = await request(server).get("/api/items");
-    expect(res.status).toBe(200);
-    expect(res.body).toMatchSnapshot();
+    expect(res.status).toBe(400);
   });
 
   test("ensure related items do not include queried item", async () => {

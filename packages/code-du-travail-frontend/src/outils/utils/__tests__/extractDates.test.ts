@@ -13,7 +13,6 @@ describe("extractDates", () => {
       period                        | fromDate                  | result
       ${"1 jour"}                   | ${new Date("2022-01-14")} | ${null}
       ${"2 jours"}                  | ${new Date("2022-01-14")} | ${"15 janvier"}
-      ${"7 jours"}                  | ${new Date("2022-01-14")} | ${"20 janvier"}
       ${"1 mois"}                   | ${new Date("2022-01-14")} | ${"13 février"}
       ${"2 mois"}                   | ${new Date("2022-01-14")} | ${"13 mars"}
       ${"12 mois"}                  | ${new Date("2022-01-14")} | ${"13 janvier"}
@@ -40,7 +39,17 @@ describe("extractDates", () => {
       ${"1 an et demi"}             | ${new Date("2022-01-14")} | ${null}
       ${"1 mois de date à date"}    | ${new Date("2022-01-14")} | ${"14 février"}
       ${"1 semaine de date à date"} | ${new Date("2022-01-14")} | ${"21 janvier"}
+      ${"7 jours calendaires"}      | ${new Date("2022-04-05")} | ${"11 avril"}
+      ${"7 jours"}                  | ${new Date("2022-04-05")} | ${"11 avril"}
+      ${"2 semaines calendaires"}   | ${new Date("2022-04-05")} | ${"19 avril"}
+      ${"2 semaines"}               | ${new Date("2022-04-05")} | ${"18 avril"}
+      ${"3 mois calendaires"}       | ${new Date("2022-04-05")} | ${"5 juillet"}
+      ${"3 mois"}                   | ${new Date("2022-04-05")} | ${"4 juillet"}
       ${"7 jours calendaires"}      | ${new Date("2022-01-14")} | ${"20 janvier"}
+      ${"1 semaine calendaire"}     | ${new Date("2022-01-14")} | ${"21 janvier"}
+      ${"2 semaines calendaire"}    | ${new Date("2022-01-14")} | ${"28 janvier"}
+      ${"1 mois calendaire"}        | ${new Date("2022-01-14")} | ${"14 février"}
+      ${"2 mois calendaires"}       | ${new Date("2022-01-14")} | ${"14 mars"}
       ${"blabla"}                   | ${new Date("2022-01-14")} | ${null}
       ${"blabla jours"}             | ${new Date("2022-01-14")} | ${null}
     `(
@@ -61,6 +70,8 @@ describe("extractDates", () => {
       ${"1 mois de date à date"}    | ${Extra.FROM_TO}
       ${"blabla"}                   | ${null}
       ${"7 jours calendaires"}      | ${Extra.CALENDAR}
+      ${"1 mois calendaire"}        | ${Extra.CALENDAR}
+      ${"2 mois calendaires"}       | ${Extra.CALENDAR}
       ${"1 semaine de date à date"} | ${Extra.FROM_TO}
     `("should return $result for $period", ({ period, result }) => {
       expect(getExtra(period)).toBe(result);

@@ -23,7 +23,6 @@ import { getCc3239Informations } from "../outils";
 import { Enterprise } from "../conventions/Search/api/enterprises.service";
 import {
   Alert,
-  ArrowLink,
   Badge,
   Button,
   icons,
@@ -284,24 +283,22 @@ const ContributionGeneric = ({ contribution }: Props) => {
         </Wrapper>
 
         {showGeneralInformationButton() && (
-          <Div>
-            <ArrowLink
-              arrowPosition="left"
-              onClick={() => {
-                pushAgreementEvents(
-                  getTitle(),
-                  { route: "not-selected" },
-                  false,
-                  false
-                );
-                setShowAnswer(true);
-                scrollToTitle();
-              }}
-            >
-              Accéder aux informations générales sans renseigner ma convention
-              collective
-            </ArrowLink>
-          </Div>
+          <StyledButton
+            variant="link"
+            onClick={() => {
+              pushAgreementEvents(
+                getTitle(),
+                { route: "not-selected" },
+                false,
+                false
+              );
+              setShowAnswer(true);
+              scrollToTitle();
+            }}
+          >
+            Accéder aux informations générales sans renseigner ma convention
+            collective
+          </StyledButton>
         )}
       </SectionNoPadding>
       <SectionHidden show={showAnswer}>
@@ -316,7 +313,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
           </Paragraph>
         )}
 
-        <ContributionContent contribution={contribution} />
+        <ContributionContent contribution={contribution} titleLevel={3} />
         <ReferencesJuridiques references={contribution.references} />
         <ContributionMessageBlock message={contribution.messageBlock} />
         <LinkedContent linkedContent={contribution.linkedContent} />
@@ -337,6 +334,14 @@ const DivCentered = styled.div`
 
 const Div = styled.div`
   margin-top: ${spacings.base};
+`;
+
+const StyledButton = styled(Button)`
+  margin-top: ${spacings.base};
+
+  :not(:hover) {
+    color: ${theme.colors.paragraph};
+  }
 `;
 
 const StyledDirectionRightIcon = styled(DirectionRight)`

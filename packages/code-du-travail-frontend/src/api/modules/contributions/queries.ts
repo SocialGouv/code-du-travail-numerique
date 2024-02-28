@@ -1,5 +1,26 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
+export const getAllContributions = () => {
+  return {
+    _source: [
+      "title",
+      "shortTitle",
+      "slug",
+      "idcc",
+      "split",
+    ],
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.CONTRIBUTIONS } },
+          { term: { isPublished: true } },
+        ],
+      },
+    },
+    size: 3000,
+  };
+};
+
 export const getAllGenericsContributions = () => {
   return {
     _source: [
@@ -59,6 +80,8 @@ export function getContributionsBySlugs(slugs: string[]) {
       "breadcrumbs",
       "source",
       "cdtnId",
+      "idcc",
+      "ccSupported",
     ],
     query: {
       bool: {
@@ -97,18 +120,3 @@ export function getContributionsByIds(ids: string[]) {
     size: 100,
   };
 }
-
-export const getAllContributionBySlug = (slug: string) => {
-  return {
-    query: {
-      bool: {
-        filter: [
-          { term: { slug } },
-          { term: { source: SOURCES.CONTRIBUTIONS } },
-          { term: { isPublished: true } },
-        ],
-      },
-    },
-    size: 1,
-  };
-};

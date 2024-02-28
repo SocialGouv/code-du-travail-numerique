@@ -6,13 +6,14 @@ import { useIframeResizer } from "../../src/common/hooks";
 import { Footer } from "../../src/widgets";
 
 import {
+  AgreementSearch,
+  CalculateurIndemnite,
+  DismissalProcess,
+  DureePreavisDemission,
   DureePreavisLicenciement,
   DureePreavisRetraite,
-  DismissalProcess,
-  CalculateurIndemnite,
   fetchTool,
   SimulateurIndemnitePrecarite,
-  AgreementSearch,
 } from "../../src/outils";
 import Metas from "../../src/common/Metas";
 import { SITE_URL } from "../../src/config";
@@ -24,7 +25,9 @@ const toolsBySlug = {
   "indemnite-licenciement": CalculateurIndemnite,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "convention-collective": AgreementSearch,
+  "preavis-demission": DureePreavisDemission,
 };
+const allowedSlugs = Object.keys(toolsBySlug);
 
 interface Props {
   icon: string;
@@ -73,6 +76,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
   const slug = query.slug as string;
+
+  if (!allowedSlugs.includes(slug)) {
+    return {
+      notFound: true,
+    };
+  }
+
   const tool = await fetchTool(slug);
   if (!tool) {
     return {
@@ -96,6 +106,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 
 const StyledContainer = styled(Container)`
   padding: 0;
+
   & > div:before {
     box-shadow: none;
   }

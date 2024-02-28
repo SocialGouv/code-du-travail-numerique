@@ -13,9 +13,9 @@ describe("Modèles de documents", () => {
   it("cherche un modèle", () => {
     cy.visit("/");
 
-    cy.get("#searchbar")
-      .type("modele rupture contrat periode d'essai")
-      .type("{enter}");
+    cy.get("#searchbar").type("modele rupture contrat periode d'essai");
+
+    cy.get("#searchbar").type("{enter}");
 
     cy.contains("Rupture du contrat en période d’essai par le salarié").click();
 

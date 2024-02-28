@@ -1,11 +1,6 @@
-import { getAll, getByIdItems, getBySourceAndSlugItems } from "../service";
+import { getAll, getBySourceAndSlugItems } from "../service";
 
 describe("Items", () => {
-  it("getById", async () => {
-    const result = await getByIdItems("9");
-    expect(result).toMatchSnapshot();
-  });
-
   it("getBySourceAndSlugItems", async () => {
     const result = await getBySourceAndSlugItems(
       "fiches_service_public",

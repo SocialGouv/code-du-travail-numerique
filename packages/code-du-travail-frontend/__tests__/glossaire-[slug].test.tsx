@@ -6,7 +6,7 @@ import Term from "../pages/glossaire/[slug]";
 const term = {
   abbreviations: [],
   definition:
-    "<p>Accord collectif de travail conclu au niveau d'une entreprise.</p>",
+    "Accord collectif de travail conclu au niveau d'une entreprise.",
   references: [],
   slug: "accord-dentreprise",
   term: "Accord d'entreprise",
