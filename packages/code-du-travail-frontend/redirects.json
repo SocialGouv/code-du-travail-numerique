@@ -110,7 +110,7 @@
     "source": "/widget.html"
   },
   {
-    "source": "/convention-collective/1518(.*)",
+    "source": "/convention-collective/1518-animation",
     "permanent": true,
     "destination": "/convention-collective/1518-education-culture-loisirs-et-animation-au-service-des-territoires-eclat"
   },
