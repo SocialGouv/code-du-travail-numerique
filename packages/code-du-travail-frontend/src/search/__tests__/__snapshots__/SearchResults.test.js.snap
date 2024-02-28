@@ -36,7 +36,7 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 test theme content
               </p>
-              <h3
+              <h2
                 class="sc-jIGnZt issdxz"
               >
                 <a
@@ -44,7 +44,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 >
                   Mer il est fou!
                 </a>
-              </h3>
+              </h2>
             </div>
           </div>
           <div
@@ -106,7 +106,7 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 Outils
               </p>
-              <h3
+              <h2
                 class="sc-jIGnZt issdxz"
               >
                 <a
@@ -114,7 +114,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 >
                   simulateur de prime de précarite
                 </a>
-              </h3>
+              </h2>
             </div>
           </div>
           <div
@@ -272,7 +272,7 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 test root content
               </p>
-              <h3
+              <h2
                 class="sc-jIGnZt issdxz"
               >
                 <a
@@ -280,7 +280,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 >
                   Mer il est fou 2!
                 </a>
-              </h3>
+              </h2>
             </div>
           </div>
           <div
@@ -367,7 +367,7 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 test theme content
               </p>
-              <h3
+              <h2
                 class="sc-jIGnZt issdxz"
               >
                 <a
@@ -375,7 +375,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 >
                   Mer il est fou 4!
                 </a>
-              </h3>
+              </h2>
             </div>
           </div>
           <div
