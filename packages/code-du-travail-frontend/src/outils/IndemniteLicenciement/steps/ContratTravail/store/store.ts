@@ -33,14 +33,11 @@ const createContratTravailStore: StoreSlice<
   contratTravailData: { ...initialState },
   contratTravailFunction: {
     onChangeTypeContratTravail: (value) => {
-      get().situationFunction.onSituationChange("typeContratTravail", value);
+      get().situationFunction.setSituation("typeContratTravail", value);
       applyGenericValidation(get, set, "typeContratTravail", value);
     },
     onChangeLicenciementFauteGrave: (value) => {
-      get().situationFunction.onSituationChange(
-        "licenciementFauteGrave",
-        value
-      );
+      get().situationFunction.setSituation("licenciementFauteGrave", value);
       applyGenericValidation(get, set, "licenciementFauteGrave", value);
     },
     onChangeLicenciementInaptitude: (value) => {

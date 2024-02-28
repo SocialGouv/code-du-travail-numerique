@@ -6,7 +6,7 @@ type CommonSituationStoreData = {
 };
 
 type CommonSituationStoreFn = {
-  onSituationChange: (key: string, value: string) => void;
+  setSituation: (key: string, value: string) => void;
 };
 
 export type CommonSituationStoreSlice = {
@@ -25,7 +25,7 @@ export const createCommonSituationStore: StoreSlice<
     ...initialState,
   },
   situationFunction: {
-    onSituationChange(key, value) {
+    setSituation(key, value) {
       set(
         produce((state: CommonSituationStoreSlice) => {
           state.situationData.situation[key] = value;

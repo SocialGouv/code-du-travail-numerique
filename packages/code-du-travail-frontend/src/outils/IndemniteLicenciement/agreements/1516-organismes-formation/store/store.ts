@@ -37,7 +37,7 @@ export const createAgreement1516StoreSalaires: StoreSlice<
       const dateArretTravail = get().contratTravailData.input.dateArretTravail;
 
       if (dateArretTravail) {
-        get().situationFunction.onSituationChange("noticeSalaryPeriods", "[]");
+        get().situationFunction.setSituation("noticeSalaryPeriods", "[]");
         return set(
           produce((state: Agreement1516StoreSlice) => {
             state.agreement1516Data.input.noticeSalaryPeriods = [];
@@ -64,7 +64,7 @@ export const createAgreement1516StoreSalaires: StoreSlice<
         agreementSalaryPeriod,
         "month"
       );
-      get().situationFunction.onSituationChange(
+      get().situationFunction.setSituation(
         "noticeSalaryPeriods",
         JSON.stringify(noticeSalaryPeriods)
       );
@@ -82,7 +82,7 @@ export const createAgreement1516StoreSalaires: StoreSlice<
       get().agreement1516Function.onInit();
     },
     onSalariesChange: (value) => {
-      get().situationFunction.onSituationChange(
+      get().situationFunction.setSituation(
         "noticeSalaryPeriods",
         JSON.stringify(value)
       );

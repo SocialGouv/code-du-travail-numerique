@@ -46,11 +46,11 @@ export const createAgreement29StoreSalaires: StoreSlice<
       );
     },
     onChangeSixBestSalariesTotal: (value) => {
-      get().situationFunction.onSituationChange("sixBestSalariesTotal", value);
+      get().situationFunction.setSituation("sixBestSalariesTotal", value);
       applyGenericValidation(get, set, "sixBestSalariesTotal", value);
     },
     onChangeHasSixBestSalaries: (value) => {
-      get().situationFunction.onSituationChange("hasSixBestSalaries", value);
+      get().situationFunction.setSituation("hasSixBestSalaries", value);
       applyGenericValidation(get, set, "hasSixBestSalaries", value);
     },
   },

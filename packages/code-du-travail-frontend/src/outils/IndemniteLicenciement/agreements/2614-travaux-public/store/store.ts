@@ -24,7 +24,7 @@ export const createAgreement2614StoreSalaires: StoreSlice<
   agreement2614Data: { ...initialState },
   agreement2614Function: {
     onChangeHasVariablePay: (value) => {
-      get().situationFunction.onSituationChange("hasVariablePay", value);
+      get().situationFunction.setSituation("hasVariablePay", value);
       applyGenericValidation(get, set, "hasVariablePay", value);
     },
   },
