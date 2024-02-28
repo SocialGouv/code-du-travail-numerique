@@ -370,7 +370,6 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
-
 ########################################
 ## Règle pour basculer sur la CC 3248 ##
 ########################################
@@ -408,8 +407,8 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
       F, G, H ou I: "'F, G, H ou I'"
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées:
-  titre: "Le salarié est licencié pour le motif suivant : \"absence prolongée ou absences répétées justifiées perturbant le fonctionnement de l'entreprise\""
-  question: "Le salarié est-il licencié pour le motif suivant : \"absence prolongée ou absences répétées justifiées perturbant le fonctionnement de l'entreprise\" ?"
+  titre: 'Le salarié est licencié pour le motif suivant : "absence prolongée ou absences répétées justifiées perturbant le fonctionnement de l''entreprise"'
+  question: 'Le salarié est-il licencié pour le motif suivant : "absence prolongée ou absences répétées justifiées perturbant le fonctionnement de l''entreprise" ?'
   cdtn:
     type: oui-non
 
@@ -500,7 +499,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
       - forfait jour . date
       - forfait jour = 'Non'
   titre: Le salarié était cadre dans l'ancienne convention collective de la métallurgie (avant le 01/01/2024)
-  description: Si le salarié dépendait précédemment de la convention collective des ingénieurs et cadres de la métallurgie (IDCC 650) et qu’il est désormais classé non-cadre en raison de la nouvelle classification des emplois (depuis le 01/01/2024), il bénéficie quand même du calcul de l'indemnité qui s’applique aux cadres.
+  description: Si l'emploi du salarié était précédemment cadre (en application de l’ancienne Convention collective - Ingénieurs et cadres (IDCC 650)) et qu’il est classé non-cadre à partir du 1er janvier 2024, en raison de la nouvelle classification des emplois, le salarié bénéficie quand même du calcul de l’indemnité qui s’applique aux cadres.
   question: Le salarié était-il cadre dans l'ancienne convention collective de la métallurgie (avant le 01/01/2024)&nbsp;?
   cdtn:
     type: oui-non
@@ -808,7 +807,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
       - age >= 55 an
       - age < 60 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-      - base * majoration * minoration < 3 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      - base * majoration * minoration < 6 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   valeur:
     produit:
       assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
@@ -876,12 +875,20 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   références:
     Article 91.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314615#KALIARTI000046314615
 
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . notification arrêt de travail au moment du licenciement :
+  applicable si: contrat salarié . indemnité de licenciement . arrêt de travail
+  type: notification
+  description: Le montant de l’indemnité de licenciement calculé pour la convention collective de la métallurgie pourrait être différent. En effet, les salaires pris en compte dans cette simulation sont ceux que le salarié a perçu avant l'arrêt de travail. Or, la convention collective indique que la rémunération à retenir est celle que le salarié aurait perçue s'il avait travaillé pendant la période d’absence pour maladie.
+  valeur: oui
+  cdtn:
+    affichage: légal et conventionnel
+
 # Notification avant le 1er janvier 2024
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . pas supportée:
   applicable si: contrat salarié . indemnité de licenciement . date de notification < 01/01/2024
   type: notification
-  description: Attention, comme le licenciement a été notifié avant le 01/01/2024, le montant de l'indemnité peut ne pas correspondre au résultat donné. En effet, jusqu'au 31/12/2023 ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie (IDCC 650) qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024. Si le licenciement a été notifié avant le 01/01/2024 et que le salarié dépendait de la convention spécifique aux ingénieurs et cadres de la métallurgie (IDCC 650) il faut sélectionner cette convention collective à l'étape n°3 du simulateur pour obtenir le résultat correspondant.
+  description: Attention, comme le licenciement a été notifié avant le 01/01/2024, le montant de l'indemnité peut ne pas correspondre au résultat donné. En effet, jusqu'au 31/12/2023 ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie (IDCC 650) qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024. Si le licenciement a été notifié avant le 01/01/2024 et que le salarié dépendait de la convention spécifique aux ingénieurs et cadres de la métallurgie (IDCC 650) il faut sélectionner cette convention collective à l'étape n°3 du simulateur pour obtenir le résultat correspondant.
   valeur: oui
   cdtn:
     affichage: légal et conventionnel

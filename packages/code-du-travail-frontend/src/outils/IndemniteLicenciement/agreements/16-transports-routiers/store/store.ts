@@ -47,7 +47,7 @@ export const createAgreement16StoreSalaires: StoreSlice<
       );
     },
     onChangeHasVariablePay: (value) => {
-      get().situationFunction.onSituationChange("hasVariablePay", value);
+      get().situationFunction.setSituation("hasVariablePay", value);
       applyGenericValidation(get, set, "hasVariablePay", value);
     },
   },

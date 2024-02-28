@@ -5,6 +5,10 @@ export class Ineligibility3239 extends IneligibilityLegal {
   getIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
+    const contractIneligibility = this.getContractIneligibility(args);
+    if (contractIneligibility) {
+      return contractIneligibility;
+    }
     if (
       args[
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
@@ -30,8 +34,10 @@ export class Ineligibility3239 extends IneligibilityLegal {
       ] === `'${CatPro3239.assistantMaternel}'`
     ) {
       return "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois.";
-    } else {
-      return super.getIneligibility(args);
+    }
+    const seniorityIneligibility = this.getSeniorityIneligibility(args);
+    if (seniorityIneligibility) {
+      return seniorityIneligibility;
     }
   }
 }

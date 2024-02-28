@@ -17,9 +17,10 @@ type Props = {
   contribution:
     | ElasticSearchContributionGeneric
     | ElasticSearchContributionConventionnelle;
+  titleLevel: number;
 };
 
-export const ContributionContent = ({ contribution }: Props) => {
+export const ContributionContent = ({ contribution, titleLevel }: Props) => {
   if (contribution.type === "generic-no-cdt") return <></>;
 
   return (
@@ -46,10 +47,13 @@ export const ContributionContent = ({ contribution }: Props) => {
               <span>Mis à jour le&nbsp;: {contribution.date}</span>
             )}
           </Meta>
-          <ContentSP raw={contribution.raw} />
+          <ContentSP raw={contribution.raw} titleLevel={titleLevel - 2} />
         </div>
       ) : (
-        <DisplayContentContribution content={contribution.content} />
+        <DisplayContentContribution
+          content={contribution.content}
+          titleLevel={titleLevel}
+        />
       )}
     </SectionNoPadding>
   );

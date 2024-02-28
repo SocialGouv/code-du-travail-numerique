@@ -38,9 +38,7 @@ import {
 import { SupportedCcIndemniteLicenciement } from "../index";
 
 export class SeniorityFactory {
-  create<T extends SupportedCcIndemniteLicenciement>(
-    idcc: T | null = null
-  ): any {
+  create<T extends SupportedCcIndemniteLicenciement>(idcc: T | null): any {
     switch (idcc) {
       case SupportedCcIndemniteLicenciement.IDCC2511:
         return new Seniority2511();

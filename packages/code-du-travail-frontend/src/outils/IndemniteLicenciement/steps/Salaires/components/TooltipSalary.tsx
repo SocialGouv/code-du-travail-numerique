@@ -39,7 +39,7 @@ const TooltipSalary = ({
             Une prime ou gratification librement versée par l’employeur
           </strong>{" "}
           à une catégorie de salariés et/ou à l’occasion d’un évènement unique
-          (exemple : prime exceptionnelle de pouvoir d’achat)
+          (exemple : prime de partage de la valeur)
         </li>
         <li>
           <strong>La participation aux résultats de l’entreprise</strong>{" "}

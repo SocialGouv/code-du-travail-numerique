@@ -47,7 +47,7 @@ export const createAgreement2120StoreSalaires: StoreSlice<
     onChangeSalariesVariablePart: (value: string) => {
       const number = parseInt(value, 10);
       const valueNumber = isNaN(number) ? undefined : number;
-      get().situationFunction.onSituationChange(
+      get().situationFunction.setSituation(
         "salariesVariablePart",
         valueNumber ? valueNumber.toString() : ""
       );

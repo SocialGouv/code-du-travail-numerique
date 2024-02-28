@@ -3,7 +3,7 @@ import {
   elasticsearchClient,
   NotFoundError,
 } from "../../utils";
-import { getSearchBySourceSlugBody, getDocumentBody } from "./queries";
+import { getDocumentBody, getSearchBySourceSlugBody } from "./queries";
 import { getRelatedItems } from "./utils";
 
 export const getBySourceAndSlugItems = async (source: any, slug: string) => {
@@ -41,18 +41,6 @@ export const getBySourceAndSlugItems = async (source: any, slug: string) => {
     ...item,
     relatedItems,
   };
-};
-
-export const getByIdItems = async (id: string) => {
-  const response = await elasticsearchClient.get({
-    id,
-    index: elasticDocumentsIndex,
-    type: "_doc",
-  });
-
-  delete response.body._source.title_vector;
-
-  return { ...response.body };
 };
 
 export const getAll = async (

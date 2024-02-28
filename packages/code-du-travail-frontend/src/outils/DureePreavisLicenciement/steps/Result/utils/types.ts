@@ -8,8 +8,7 @@ export type LicenciementSituation = {
   note?: string | string[];
   ref?: string;
   refUrl?: string;
-  ref2?: string;
-  ref2Url?: string;
+  refs?: Array<{ ref: string; refUrl: string }>;
 };
 
 export type Situations = {

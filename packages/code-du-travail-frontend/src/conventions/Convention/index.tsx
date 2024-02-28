@@ -7,6 +7,7 @@ import { useLocalStorage } from "../../lib/useLocalStorage";
 import { Articles } from "./Articles";
 import { Contributions } from "./Contributions";
 import { TextSearch } from "./TextSearch";
+import { ContributionsPOC } from "./ContributionsPOC";
 
 const Convention = ({ convention }) => {
   const [, setCcInfo] = useLocalStorage("convention");
@@ -33,12 +34,18 @@ const Convention = ({ convention }) => {
           </Paragraph>
         </Alert>
       )}
-      {convention.answers.length > 0 && (
-        <Contributions
-          contributions={convention.answers}
-          convention={convention}
-        />
-      )}
+      {convention.answers.length > 0 &&
+        (convention.num === 1518 ? (
+          <ContributionsPOC
+            contributions={convention.answers}
+            convention={convention}
+          />
+        ) : (
+          <Contributions
+            contributions={convention.answers}
+            convention={convention}
+          />
+        ))}
       {convention.articlesByTheme.length > 0 && (
         <Articles
           blocs={convention.articlesByTheme}

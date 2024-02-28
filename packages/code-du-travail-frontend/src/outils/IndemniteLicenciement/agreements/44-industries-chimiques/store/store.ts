@@ -122,7 +122,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
         categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
         categoryPro === "'Agents de maîtrise et techniciens (Groupe IV)'";
       const dateArretTravail = get().contratTravailData.input.dateArretTravail;
-      get().situationFunction.onSituationChange("hasVariablePay", value);
+      get().situationFunction.setSituation("hasVariablePay", value);
       applyGenericValidation(get, set, [
         { paramName: "hasVariablePay", value: value },
         {
@@ -153,7 +153,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
         value === "non"
           ? lastMonthSalaryProcess
           : get().agreement44Data.input.lastMonthSalary;
-      get().situationFunction.onSituationChange(
+      get().situationFunction.setSituation(
         "lastMonthSalary",
         JSON.stringify(lastMonthSalaryValue)
       );
@@ -167,7 +167,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
       ]);
     },
     onChangeLastMonthSalary: (value) => {
-      get().situationFunction.onSituationChange(
+      get().situationFunction.setSituation(
         "lastMonthSalary",
         JSON.stringify(value)
       );

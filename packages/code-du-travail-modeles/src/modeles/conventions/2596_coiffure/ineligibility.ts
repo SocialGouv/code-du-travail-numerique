@@ -4,14 +4,11 @@ export class Ineligibility2596 extends IneligibilityLegal {
   getIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
-    if (args.typeContratTravail && args.typeContratTravail === "'cdd'") {
-      return "L’indemnité de licenciement n’est pas due pour les CDD et contrats de travail temporaires. Sous certaines conditions, le salarié peut avoir le droit à une indemnité de précarité.";
-    } else if (
-      args.licenciementFauteGrave &&
-      args.licenciementFauteGrave === "oui"
-    ) {
-      return "L’indemnité de licenciement n’est pas due en cas de faute grave (ou lourde). Lorsqu’il est invoqué, le motif de faute grave doit apparaître précisément dans le courrier. Reportez-vous à la lettre de notification de licenciement.";
-    } else if (
+    const contractIneligibility = this.getContractIneligibility(args);
+    if (contractIneligibility) {
+      return contractIneligibility;
+    }
+    if (
       args[
         "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle"
       ] &&
