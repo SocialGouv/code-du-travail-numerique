@@ -39,13 +39,6 @@ export class ReferenceSalary573
     };
   }
 
-  removeSpecificSituation(
-    args: Record<string, string | undefined>
-  ): Record<string, string | undefined> {
-    delete args.licenciementEco;
-    return args;
-  }
-
   /**
    * Règle :
    * - si le licenciement est pour des raisons économiques

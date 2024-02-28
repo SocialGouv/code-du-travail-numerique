@@ -27,13 +27,6 @@ export class ReferenceSalary1483
     };
   }
 
-  removeSpecificSituation(
-    args: Record<string, string | undefined>
-  ): Record<string, string | undefined> {
-    delete args.salairesPendantPreavis;
-    return args;
-  }
-
   /**
    * Règle :
    * - soit 1/12 * S

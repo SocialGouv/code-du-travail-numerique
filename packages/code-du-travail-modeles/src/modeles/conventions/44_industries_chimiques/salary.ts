@@ -41,14 +41,6 @@ export class ReferenceSalary44
     };
   }
 
-  removeSpecificSituation(
-    args: Record<string, string | undefined>
-  ): Record<string, string | undefined> {
-    delete args.lastMonthSalary;
-    delete args.hasVariablePay;
-    return args;
-  }
-
   /**
    * (si le salaire ne comporte pas une partie fixe et une partie variable et Ouvriers et collaborateurs & Agents de maîtrise et techniciens) ou (Ingénieurs et Cadres)
    * - S1 + P / 12 (si >= S2/12)

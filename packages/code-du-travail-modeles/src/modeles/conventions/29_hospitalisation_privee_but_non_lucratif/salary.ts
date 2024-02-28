@@ -41,14 +41,6 @@ export class ReferenceSalary0029
     };
   }
 
-  removeSpecificSituation(
-    args: Record<string, string | undefined>
-  ): Record<string, string | undefined> {
-    delete args.hasSixBestSalaries;
-    delete args.sixBestSalariesTotal;
-    return args;
-  }
-
   /**
    * Règle :
    * Pour la catégorie pro :

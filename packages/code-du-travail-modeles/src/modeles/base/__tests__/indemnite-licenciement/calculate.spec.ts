@@ -1,10 +1,7 @@
 import { IndemniteLicenciementPublicodes } from "../../../../publicodes";
 import type { SalaryPeriods } from "../../../common";
 
-const engine = new IndemniteLicenciementPublicodes(
-  modelsIndemniteLicenciement,
-  "1672"
-);
+const engine = new IndemniteLicenciementPublicodes(modelsIndemniteLicenciement);
 
 describe("Test de la fonctionnalité 'calculate'", () => {
   test("Vérifier que l'ancienneté peut être remplacer par les dates en input", () => {
@@ -20,6 +17,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "non",
       "contrat salarié . indemnité de licenciement . salaire de référence":
         "2000",
+      licenciementFauteGrave: "non",
+      typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
     expect(result.value).toEqual(1000);
@@ -36,6 +35,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "non",
       "contrat salarié . indemnité de licenciement . salaire de référence":
         "2000",
+      licenciementFauteGrave: "non",
+      typeContratTravail: "cdi",
     });
     expect(missingArgs[0].name).toEqual(
       "contrat salarié . indemnité de licenciement . date d'entrée"
@@ -57,6 +58,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "non",
       "contrat salarié . indemnité de licenciement . salaire de référence":
         "2000",
+      licenciementFauteGrave: "non",
+      typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
     expect(result.value).toEqual(875);
@@ -81,10 +84,57 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "01/01/2024",
       "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
         "non",
+      licenciementFauteGrave: "non",
       salaryPeriods: JSON.stringify(salaryPeriods),
+      typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
     expect(result.value).toEqual(875);
     expect(result.unit?.numerators).toEqual(["€"]);
+  });
+  describe("Vérification que les ineligibilités fonctionnent", () => {
+    test("Vérifier l'ineligibilite CDD", () => {
+      const { result, missingArgs, ineligibility } = engine.calculate({
+        typeContratTravail: "cdd",
+      });
+      expect(missingArgs).toEqual([]);
+      expect(result.value).toEqual(0);
+      expect(ineligibility).toEqual(
+        "L’indemnité de licenciement n’est pas due pour les CDD et contrats de travail temporaires. Sous certaines conditions, le salarié peut avoir le droit à une indemnité de précarité."
+      );
+    });
+
+    test("Vérifier l'ineligibilite Faute grave", () => {
+      const { result, missingArgs, ineligibility } = engine.calculate({
+        licenciementFauteGrave: "oui",
+        typeContratTravail: "cdi",
+      });
+      expect(missingArgs).toEqual([]);
+      expect(result.value).toEqual(0);
+      expect(ineligibility).toEqual(
+        "L’indemnité de licenciement n’est pas due en cas de faute grave (ou lourde). Lorsqu’il est invoqué, le motif de faute grave doit apparaître précisément dans le courrier. Reportez-vous à la lettre de notification de licenciement."
+      );
+    });
+
+    test("Vérifier l'ineligibilite Anciennete legal inférieur 8 mois", () => {
+      const { result, missingArgs, ineligibility } = engine.calculate({
+        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          "01/01/2024",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/06/2024",
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          "01/06/2024",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        licenciementFauteGrave: "non",
+        typeContratTravail: "cdi",
+      });
+      expect(missingArgs).toEqual([]);
+      expect(result.value).toEqual(0);
+      expect(ineligibility).toEqual(
+        "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois."
+      );
+    });
   });
 });

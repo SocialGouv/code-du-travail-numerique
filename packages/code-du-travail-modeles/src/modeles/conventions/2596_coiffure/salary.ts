@@ -40,13 +40,6 @@ export class ReferenceSalary2596
     };
   }
 
-  removeSpecificSituation(
-    args: Record<string, string | undefined>
-  ): Record<string, string | undefined> {
-    delete args.noticeSalaryPeriods;
-    return args;
-  }
-
   computeReferenceSalary({
     salaires = [],
     salairesPendantPreavis = [],

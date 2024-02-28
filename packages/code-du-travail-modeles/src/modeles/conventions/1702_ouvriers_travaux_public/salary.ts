@@ -27,13 +27,6 @@ export class ReferenceSalary1702
     };
   }
 
-  removeSpecificSituation(
-    args: Record<string, string | undefined>
-  ): Record<string, string | undefined> {
-    delete args.noticeSalaryPeriods;
-    return args;
-  }
-
   /**
    * Règle :
    * - soit (S + ((P/12)*3))/3

@@ -7,10 +7,12 @@ import {
 import produce from "immer";
 import { StoreSlice } from "../../../../types";
 import { validateStep } from "./validator";
-import { getErrorEligibility } from "./eligibility";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { loadPublicodes } from "../../../../api";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: ContratTravailStoreData = {
   input: {},
@@ -24,14 +26,21 @@ const initialState: ContratTravailStoreData = {
 
 const createContratTravailStore: StoreSlice<
   ContratTravailStoreSlice,
-  AncienneteStoreSlice & CommonInformationsStoreSlice
+  AncienneteStoreSlice &
+    CommonInformationsStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   contratTravailData: { ...initialState },
   contratTravailFunction: {
     onChangeTypeContratTravail: (value) => {
+      get().situationFunction.onSituationChange("typeContratTravail", value);
       applyGenericValidation(get, set, "typeContratTravail", value);
     },
     onChangeLicenciementFauteGrave: (value) => {
+      get().situationFunction.onSituationChange(
+        "licenciementFauteGrave",
+        value
+      );
       applyGenericValidation(get, set, "licenciementFauteGrave", value);
     },
     onChangeLicenciementInaptitude: (value) => {
@@ -53,10 +62,17 @@ const createContratTravailStore: StoreSlice<
     onNextStep: () => {
       const state = get().contratTravailData.input;
       const { isValid, errorState } = validateStep(state);
+      const publicodes =
+        loadPublicodes<PublicodesSimulator.INDEMNITE_LICENCIEMENT>(
+          PublicodesSimulator.INDEMNITE_LICENCIEMENT
+        );
+      const { result, ineligibility } = publicodes.calculate(
+        get().situationData.situation
+      );
       let errorEligibility;
 
-      if (isValid) {
-        errorEligibility = getErrorEligibility(state);
+      if (result.value === 0 && ineligibility) {
+        errorEligibility = ineligibility;
       }
 
       set(
@@ -77,7 +93,9 @@ const createContratTravailStore: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: StoreApi<ContratTravailStoreSlice>["getState"],
+  get: StoreApi<
+    ContratTravailStoreSlice & CommonSituationStoreSlice
+  >["getState"],
   set: StoreApi<ContratTravailStoreSlice>["setState"],
   paramName: keyof ContratTravailStoreInput,
   value: any

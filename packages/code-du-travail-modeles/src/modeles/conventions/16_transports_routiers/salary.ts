@@ -57,13 +57,6 @@ export class ReferenceSalary16
     };
   }
 
-  removeSpecificSituation(
-    args: Record<string, string | undefined>
-  ): Record<string, string | undefined> {
-    delete args.hasVariablePay;
-    return args;
-  }
-
   computeReferenceSalary(
     props: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0016>
   ): number {
