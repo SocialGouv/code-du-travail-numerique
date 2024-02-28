@@ -6,7 +6,6 @@ import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 export type SalairesStoreInput = {
   hasTempsPartiel?: OuiNon;
   salaryPeriods: SalaryPeriods[];
-  refSalary: number;
   hasSameSalary?: OuiNon;
   salary?: string;
   showHasTempsPartiel: boolean;

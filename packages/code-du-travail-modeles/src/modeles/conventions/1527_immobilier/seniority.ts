@@ -3,7 +3,6 @@ import { addDays, differenceInMonths } from "date-fns";
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   Absence,
-  ISeniority,
   Motif,
   RequiredSeniorityResult,
   SeniorityProps,
@@ -17,10 +16,9 @@ import {
   splitByTwelveMonthsRolling,
 } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
+import { SeniorityDefault } from "../../common/seniority";
 
-export class Seniority1527
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC1527>
-{
+export class Seniority1527 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC1527> {
   computeSeniority({
     dateEntree,
     dateSortie,
@@ -41,7 +39,7 @@ export class Seniority1527
     return MOTIFS_1527;
   }
 
-  private compute(
+  protected compute(
     from: string,
     to: string,
     absences: Absence[]

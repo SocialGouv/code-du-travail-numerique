@@ -15,6 +15,7 @@ import { parse } from "../../../../common/utils";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import { generateFrenchDate } from "../../../../utils";
 import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialInputState = {
   showVariablePay: false,
@@ -34,7 +35,8 @@ export const createAgreement44StoreSalaires: StoreSlice<
   SalairesStoreSlice &
     AncienneteStoreSlice &
     CommonInformationsStoreSlice &
-    ContratTravailStoreSlice
+    ContratTravailStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   agreement44Data: { ...initialState },
   agreement44Function: {
@@ -120,6 +122,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
         categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
         categoryPro === "'Agents de maîtrise et techniciens (Groupe IV)'";
       const dateArretTravail = get().contratTravailData.input.dateArretTravail;
+      get().situationFunction.setSituation("hasVariablePay", value);
       applyGenericValidation(get, set, [
         { paramName: "hasVariablePay", value: value },
         {
@@ -146,19 +149,28 @@ export const createAgreement44StoreSalaires: StoreSlice<
         dateNotification: ancienneteInput.dateSortie!,
       });
       const lastMonthSalaryProcess: SalaryPeriods = { month: periods[0] };
+      const lastMonthSalaryValue =
+        value === "non"
+          ? lastMonthSalaryProcess
+          : get().agreement44Data.input.lastMonthSalary;
+      get().situationFunction.setSituation(
+        "lastMonthSalary",
+        JSON.stringify(lastMonthSalaryValue)
+      );
       applyGenericValidation(get, set, [
         { paramName: "showLastMonthSalary", value: value === "oui" },
         { paramName: "knowingLastSalary", value },
         {
           paramName: "lastMonthSalary",
-          value:
-            value === "non"
-              ? lastMonthSalaryProcess
-              : get().agreement44Data.input.lastMonthSalary,
+          value: lastMonthSalaryValue,
         },
       ]);
     },
     onChangeLastMonthSalary: (value) => {
+      get().situationFunction.setSituation(
+        "lastMonthSalary",
+        JSON.stringify(value)
+      );
       applyGenericValidation(get, set, [
         { paramName: "lastMonthSalary", value },
       ]);

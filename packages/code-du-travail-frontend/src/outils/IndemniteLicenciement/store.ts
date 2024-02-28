@@ -42,6 +42,11 @@ import {
   createCommonInformationsStore,
 } from "../CommonSteps/Informations/store";
 
+import {
+  createCommonSituationStore,
+  CommonSituationStoreSlice,
+} from "../common/situationStore";
+
 import { ToolName } from "../types";
 import { createContext, useContext } from "react";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
@@ -52,7 +57,8 @@ export type MainStore = ContratTravailStoreSlice &
   ResultStoreSlice &
   AgreementStoreSlice &
   CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
-  CommonInformationsStoreSlice;
+  CommonInformationsStoreSlice &
+  CommonSituationStoreSlice;
 
 export type StepData<
   T extends
@@ -95,6 +101,7 @@ const createRootSlice = (
   ...createRootAgreementsStore(set, get, { toolName }),
   ...createCommonAgreementStore(set, get, { toolName, simulatorName }),
   ...createCommonInformationsStore(set, get, { toolName }),
+  ...createCommonSituationStore(set, get, { toolName }),
 });
 
 const createStore = (simulatorName: PublicodesSimulator, toolName: ToolName) =>

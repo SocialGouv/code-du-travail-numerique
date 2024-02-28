@@ -47,11 +47,10 @@ export const validateStep = (state: Agreement1516StoreInput) => {
     };
   }
 
-  return {
-    isValid: deepEqualObject(errorState, {
-      errorHasReceivedSalaries: undefined,
-      errorNoticeSalaryPeriods: undefined,
-    }),
-    errorState,
-  };
+  const isValid = deepEqualObject(errorState, {
+    errorHasReceivedSalaries: undefined,
+    errorNoticeSalaryPeriods: undefined,
+  });
+
+  return { isValid, errorState };
 };
