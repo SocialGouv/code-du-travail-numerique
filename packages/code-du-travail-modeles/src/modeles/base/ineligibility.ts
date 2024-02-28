@@ -24,6 +24,9 @@ export class IneligibilityLegal implements IInegibility {
       args[
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
       ] &&
+      args[
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle"
+      ] === "non" &&
       Math.max(
         parseFloat(
           args[
