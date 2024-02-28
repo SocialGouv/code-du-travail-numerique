@@ -15,7 +15,7 @@ describe("Navigation par thème", () => {
     cy.get("a").should("contain", "Embauche");
     cy.get("a").should("contain", "Contrat de travail");
     cy.get("a").should("not.contain", "Méthodes de recrutement");
-    cy.get("h2").should("contain", "Contenu correspondant");
+    cy.get("span").should("contain", "Contenu correspondant");
   });
 
   it('redirige vers la page "/themes/embauche" lorsque je clique sur "Embauche"', () => {
