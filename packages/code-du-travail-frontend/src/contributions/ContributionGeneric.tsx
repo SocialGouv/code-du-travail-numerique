@@ -39,6 +39,7 @@ import { ContributionMessageBlock } from "./ContributionMessageBlock";
 import {
   AlertAgreementNotSupportedNoContent,
   AlertAgreementSupported,
+  AlertAgreementUnextended,
 } from "./AlertAgreementNotSupportedNoContent";
 
 const { DirectionRight } = icons;
@@ -123,12 +124,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
 
   const alertAgreementNotSupported = (url: string) => {
     if (isUnextended(convention)) {
-      return (
-        <AlertAgreementNotSupportedNoContent
-          url={url}
-          message={contribution.messageBlockGenericNoCDTUnextendedCC}
-        />
-      );
+      return <AlertAgreementUnextended url={url} />;
     } else if (contribution.type === "generic-no-cdt") {
       return (
         <AlertAgreementNotSupportedNoContent

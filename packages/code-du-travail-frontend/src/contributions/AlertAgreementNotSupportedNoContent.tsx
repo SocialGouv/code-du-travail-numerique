@@ -5,6 +5,25 @@ type Props = {
   message: string;
 };
 
+export const AlertAgreementUnextended = ({ url }) => {
+  return (
+    <>
+      <p>
+        Les dispositions de cette convention n’ont pas été étendues. Cela
+        signifie qu&apos;elles ne s&apos;appliquent qu&apos;aux entreprises
+        adhérentes à l&apos;une des organisations signataires de l&apos;accord.
+        Dans ce contexte, nous ne sommes pas en mesure d&apos;identifier si
+        cette règle s&apos;applique ou non au sein de votre entreprise. Vous
+        pouvez toutefois consulter la convention collective{" "}
+        <a target="_blank" href={url}>
+          ici
+        </a>{" "}
+        dans le cas où elle s&apos;applique à votre situation.
+      </p>
+    </>
+  );
+};
+
 export const AlertAgreementNotSupportedNoContent = ({
   url,
   message,
