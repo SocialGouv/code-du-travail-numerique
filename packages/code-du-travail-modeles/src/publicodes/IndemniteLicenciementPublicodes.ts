@@ -1,9 +1,5 @@
 import type { EvaluatedNode } from "publicodes";
 
-import type {
-  RequiredSeniorityResult,
-  SeniorityResult,
-} from "../modeles/common";
 import {
   IneligibilityFactory,
   ReferenceSalaryFactory,
@@ -118,15 +114,13 @@ class IndemniteLicenciementPublicodes
         return this.mapMissingArg(missingArg);
       }
       const agreement = new SeniorityFactory().create(this.idcc);
-      const agreementSeniority: SeniorityResult = agreement.computeSeniority(
+      const agreementSeniority = agreement.computeSeniority(
         agreement.mapSituation(args)
       );
       const legal = new SeniorityFactory().create(
         SupportedCcIndemniteLicenciement.default
       );
-      const legalSeniority: SeniorityResult = legal.computeSeniority(
-        legal.mapSituation(args)
-      );
+      const legalSeniority = legal.computeSeniority(legal.mapSituation(args));
       if (legalSeniority.value) {
         newArgs = {
           ...newArgs,
@@ -161,15 +155,15 @@ class IndemniteLicenciementPublicodes
         return this.mapMissingArg(missingArg);
       }
       const agreement = new SeniorityFactory().create(this.idcc);
-      const agreementRequiredSeniority: RequiredSeniorityResult =
-        agreement.computeRequiredSeniority(
-          agreement.mapRequiredSituation(args)
-        );
+      const agreementRequiredSeniority = agreement.computeRequiredSeniority(
+        agreement.mapRequiredSituation(args)
+      );
       const legal = new SeniorityFactory().create(
         SupportedCcIndemniteLicenciement.default
       );
-      const legalRequiredSeniority: RequiredSeniorityResult =
-        legal.computeRequiredSeniority(legal.mapRequiredSituation(args));
+      const legalRequiredSeniority = legal.computeRequiredSeniority(
+        legal.mapRequiredSituation(args)
+      );
       if (legalRequiredSeniority.value) {
         newArgs[
           "contrat salarié . indemnité de licenciement . ancienneté requise en année"

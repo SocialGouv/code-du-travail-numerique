@@ -15,7 +15,7 @@ import { accumulateAbsenceByYear } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
 
 export type CC0413SeniorityProps = DefaultSeniorityProps & {
-  isExecutive: boolean;
+  isExecutive?: boolean;
   becameExecutiveAt?: string;
 };
 
