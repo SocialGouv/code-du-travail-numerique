@@ -28,6 +28,7 @@ describe("<ContributionGeneric />", () => {
   });
   const contribution: ElasticSearchContributionGeneric = {
     ccSupported: ["1351"],
+    ccUnextended: [],
     type: "content",
     content: "<p>hello <strong>generic</strong></p>",
     source: "contributions",
