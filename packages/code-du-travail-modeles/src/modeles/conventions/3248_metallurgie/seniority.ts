@@ -23,16 +23,16 @@ import { accumulateAbsenceByYear, MotifKeys, parseDate } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
 
 export type CC3248SeniorityProps = DefaultSeniorityProps & {
-  categoriePro: "'A, B, C, D ou E'" | "'F, G, H ou I'";
-  hasBeenDayContract: boolean;
-  hasBeenExecutive: boolean;
+  categoriePro?: "'A, B, C, D ou E'" | "'F, G, H ou I'";
+  hasBeenDayContract?: boolean;
+  hasBeenExecutive?: boolean;
   dateBecomeDayContract?: string;
 };
 
 export type CC3248SeniorityRequiredProps = DefaultSeniorityRequiredProps & {
-  categoriePro: "'A, B, C, D ou E'" | "'F, G, H ou I'";
-  hasBeenDayContract: boolean;
-  hasBeenExecutive: boolean;
+  categoriePro?: "'A, B, C, D ou E'" | "'F, G, H ou I'";
+  hasBeenDayContract?: boolean;
+  hasBeenExecutive?: boolean;
   dateBecomeDayContract?: string;
 };
 
@@ -74,6 +74,11 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
         );
       case "'F, G, H ou I'":
         return this.computeFGHI(dateEntree, dateSortie);
+      case undefined: {
+        return {
+          value: 0,
+        };
+      }
     }
   }
 
@@ -98,6 +103,11 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
         );
       case "'F, G, H ou I'":
         return this.computeFGHI(dateEntree, dateNotification);
+      case undefined: {
+        return {
+          value: 0,
+        };
+      }
     }
   }
 
@@ -113,9 +123,9 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
     from: string,
     to: string,
     absences: Absence[],
-    hasBeenExecutive: boolean,
-    hasBeenDayContract: boolean,
-    dateBecomeDayContract: string | undefined
+    hasBeenExecutive?: boolean,
+    hasBeenDayContract?: boolean,
+    dateBecomeDayContract?: string
   ): SeniorityResult {
     const dEntree = parseDate(from);
     const dSortie = addDays(parseDate(to), 1);
@@ -198,9 +208,9 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
     dEntree: Date,
     dSortie: Date,
     absences: Absence[],
-    hasBeenDayContract: boolean,
-    hasBeenExecutive: boolean,
-    dateBecomeDayContract: string | undefined
+    hasBeenDayContract?: boolean,
+    hasBeenExecutive?: boolean,
+    dateBecomeDayContract?: string | undefined
   ): number {
     if (!hasBeenDayContract) {
       return 0;
@@ -233,8 +243,8 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
 
   private computeDateStartForDayContractIncrease(
     dStart: Date,
-    hasBeenExecutive: boolean,
-    dateBecomeDayContract: string | undefined
+    hasBeenExecutive?: boolean,
+    dateBecomeDayContract?: string | undefined
   ): Date {
     const dBecomeDayContract = dateBecomeDayContract
       ? parse(dateBecomeDayContract, "dd/MM/yyyy", new Date())

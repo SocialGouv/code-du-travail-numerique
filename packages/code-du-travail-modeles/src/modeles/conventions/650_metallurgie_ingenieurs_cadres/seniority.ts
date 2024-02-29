@@ -18,15 +18,15 @@ import { Seniority3248 } from "../3248_metallurgie";
 
 export type CC650SeniorityProps = DefaultSeniorityProps & {
   categoriePro?: "'A, B, C, D ou E'" | "'F, G, H ou I'";
-  hasBeenDayContract: boolean;
-  hasBeenExecutive: boolean;
+  hasBeenDayContract?: boolean;
+  hasBeenExecutive?: boolean;
   dateBecomeDayContract?: string;
 };
 
 export type CC650SeniorityRequiredProps = DefaultSeniorityRequiredProps & {
   categoriePro?: "'A, B, C, D ou E'" | "'F, G, H ou I'";
-  hasBeenDayContract: boolean;
-  hasBeenExecutive: boolean;
+  hasBeenDayContract?: boolean;
+  hasBeenExecutive?: boolean;
   dateBecomeDayContract?: string;
 };
 
