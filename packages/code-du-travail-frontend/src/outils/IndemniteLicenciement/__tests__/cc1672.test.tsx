@@ -154,4 +154,67 @@ describe("Indemnité licenciement - CC 1672", () => {
       )
     ).not.toBeInTheDocument();
   });
+
+  test(`Cas spécifique`, () => {
+    userAction
+      .changeInputList(
+        ui.information.agreement1672.proCategory.get(),
+        "Cadres (Classes 5 à 7)"
+      )
+      .click(ui.information.agreement1672.nonCadreAvant.oui.get())
+      .setInput(ui.information.agreement1672.dateDebutCadre.get(), "01/01/1999")
+      .setInput(ui.information.agreement1672.age.get(), "52")
+      .click(ui.next.get())
+      .setInput(ui.seniority.startDate.get(), "01/01/1994")
+      .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
+      .setInput(ui.seniority.endDate.get(), "01/01/2024")
+      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.salary.hasPartialTime.non.get())
+      .click(ui.salary.hasSameSalary.non.get());
+    expect(ui.salary.salaries.queryAll()).toHaveLength(12);
+
+    fireEvent.change(ui.salary.salaries.getAll()[0], {
+      target: { value: "2471" },
+    });
+    fireEvent.change(ui.salary.salaries.getAll()[1], {
+      target: { value: "2794" },
+    });
+    fireEvent.change(ui.salary.salaries.getAll()[2], {
+      target: { value: "2859" },
+    });
+    fireEvent.change(ui.salary.salaries.getAll()[3], {
+      target: { value: "2566" },
+    });
+    fireEvent.change(ui.salary.salaries.getAll()[4], {
+      target: { value: "2650" },
+    });
+    fireEvent.change(ui.salary.salaries.getAll()[5], {
+      target: { value: "2842" },
+    });
+    fireEvent.change(ui.salary.salaries.getAll()[6], {
+      target: { value: "2564" },
+    });
+    fireEvent.change(ui.salary.salaries.getAll()[7], {
+      target: { value: "2882" },
+    });
+    fireEvent.change(ui.salary.salaries.getAll()[8], {
+      target: { value: "2718" },
+    });
+    fireEvent.change(ui.salary.salaries.getAll()[9], {
+      target: { value: "2756" },
+    });
+    fireEvent.change(ui.salary.salaries.getAll()[10], {
+      target: { value: "2752" },
+    });
+    fireEvent.change(ui.salary.salaries.getAll()[11], {
+      target: { value: "2512" },
+    });
+
+    fireEvent.click(ui.next.get());
+
+    expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("51381.03 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("51381,03 €");
+  });
 });

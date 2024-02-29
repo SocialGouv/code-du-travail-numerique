@@ -26,11 +26,11 @@ export class Seniority1672 extends SeniorityDefault<SupportedCcIndemniteLicencie
   ): SeniorityProps<SupportedCcIndemniteLicenciement.IDCC1672> {
     const professionalCategory =
       args[
-        "contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+        "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle"
       ];
     const becameExecutiveAt =
       args[
-        "contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle - cadres - date du statut cadre"
+        "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . date du statut cadre"
       ];
     return {
       ...super.mapSituation(args),

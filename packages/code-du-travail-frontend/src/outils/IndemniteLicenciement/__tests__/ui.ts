@@ -208,6 +208,14 @@ export const ui = {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
       ),
+      nonCadreAvant: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle - cadres - avant non cadres - Oui"
+        ),
+      },
+      dateDebutCadre: byTestId(
+        "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle - cadres - date du statut cadre"
+      ),
       age: byTestId(
         "infos.contrat salarié - convention collective - sociétés d'assurances - age"
       ),
@@ -328,6 +336,7 @@ export const ui = {
   result: {
     resultat: byText(/À partir des éléments que vous avez saisis/),
     resultatLegal: byText(/Montant prévu par le code du travail/),
+    resultatAgreement: byText(/Montant prévu par la convention collective/),
     formula: byTestId("formula"),
     legalError: {
       title: byText(
