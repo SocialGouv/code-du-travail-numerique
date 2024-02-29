@@ -14,9 +14,9 @@ export type CC29ReferenceSalaryProps = {
 };
 
 export enum CategoryPro29 {
-  other = "Autres salariés",
-  assistant = "Assistants familiaux des services de placements familiaux spécialisés",
-  medic = "Médecins, pharmaciens et biologistes exerçant à titre permanent",
+  other = "'Autres salariés'",
+  assistant = "'Assistants familiaux des services de placements familiaux spécialisés'",
+  medic = "'Médecins, pharmaciens et biologistes exerçant à titre permanent'",
 }
 
 export class ReferenceSalary0029
@@ -27,7 +27,7 @@ export class ReferenceSalary0029
   ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0029> {
     const category =
       args[
-        "contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle"
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle"
       ] ?? "";
     return {
       bestSalariesTotal:

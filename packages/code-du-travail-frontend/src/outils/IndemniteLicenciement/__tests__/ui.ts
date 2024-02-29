@@ -284,6 +284,11 @@ export const ui = {
         ),
       },
     },
+    agreement29: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),
@@ -323,6 +328,12 @@ export const ui = {
       },
       salaries: byTestId("last-month-salary"),
       primes: byTestId("prime-last-month-salary"),
+    },
+    agreement29: {
+      hasSiwMonthBestSalary: {
+        oui: byTestId("hasSixBestSalaries - Oui"),
+        non: byTestId("hasSixBestSalaries - Non"),
+      }
     },
     agreementWithNoticeSalary: {
       knowingLastSalary: {
