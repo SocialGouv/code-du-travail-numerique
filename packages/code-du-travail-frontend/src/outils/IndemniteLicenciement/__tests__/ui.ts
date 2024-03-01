@@ -217,6 +217,19 @@ export const ui = {
         ),
       },
     },
+    agreement2120: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - banque - catégorie professionnelle"
+      ),
+      eco: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - banque - licenciement économique - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - banque - licenciement économique - Non"
+        ),
+      },
+    },
     agreement1672: {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
@@ -361,6 +374,9 @@ export const ui = {
         oui: byTestId("hasContractSalary - Oui"),
         non: byTestId("hasContractSalary - Non"),
       }
+    },
+    agreement2120: {
+      salariesVariablePart: byTestId("salariesVariablePart")
     }
   },
   result: {

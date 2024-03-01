@@ -5,13 +5,16 @@ import type {
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
-import { QuestionOuiNon, rankByMonthArrayDescFrench } from "../../common";
+import {
+  QuestionOuiNonWithQuote,
+  rankByMonthArrayDescFrench,
+} from "../../common";
 
 export type CC2120ReferenceSalaryProps = {
   salaires: SalaryPeriods[];
   salariesVariablePart: number;
-  isLicenciementEco: QuestionOuiNon;
-  isLicenciementDisciplinaire: QuestionOuiNon;
+  isLicenciementEco: QuestionOuiNonWithQuote;
+  isLicenciementDisciplinaire: QuestionOuiNonWithQuote;
 };
 
 export class ReferenceSalary2120
@@ -23,16 +26,16 @@ export class ReferenceSalary2120
     const isLicenciementInaptitude = args.licenciementInaptitude === "oui";
     const isLicenciementDisciplinaire = args[
       "contrat salarié . convention collective . banque . licenciement disciplinaire"
-    ] as QuestionOuiNon;
+    ] as QuestionOuiNonWithQuote;
     const isLicenciementEco = args[
       "contrat salarié . convention collective . banque . licenciement économique"
-    ] as QuestionOuiNon;
+    ] as QuestionOuiNonWithQuote;
     return {
       isLicenciementDisciplinaire: isLicenciementInaptitude
-        ? QuestionOuiNon.non
+        ? QuestionOuiNonWithQuote.non
         : isLicenciementDisciplinaire,
       isLicenciementEco: isLicenciementInaptitude
-        ? QuestionOuiNon.non
+        ? QuestionOuiNonWithQuote.non
         : isLicenciementEco,
       salaires: args.salaryPeriods
         ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
@@ -58,10 +61,10 @@ export class ReferenceSalary2120
       totalSalaryValues - salariesVariablePart,
       0
     );
-    if (isLicenciementEco === "Oui") {
+    if (isLicenciementEco === "'Oui'") {
       return salariesWithoutPrimes / rankedSalaires.length;
     }
-    if (isLicenciementDisciplinaire === "Non") {
+    if (isLicenciementDisciplinaire === "'Non'") {
       return salariesWithoutPrimes / (rankedSalaires.length + 1);
     }
     return new ReferenceSalaryLegal().computeReferenceSalary({
