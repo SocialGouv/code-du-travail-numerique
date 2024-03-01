@@ -8,6 +8,9 @@ type Props = {
 export const AlertAgreementUnextended = ({ url }) => {
   return (
     <>
+      <Paragraph variant="primary" fontWeight="700" noMargin>
+        Nous n’avons pas de réponse pour cette convention collective
+      </Paragraph>
       <p>
         Les dispositions de cette convention n’ont pas été étendues. Cela
         signifie qu&apos;elles ne s&apos;appliquent qu&apos;aux entreprises
