@@ -356,6 +356,12 @@ export const ui = {
       salaries: byTestId("notice-salary"),
       primes: byTestId("prime-notice-salary"),
     },
+    agreement1517: {
+      hasContractSalary: {
+        oui: byTestId("hasContractSalary - Oui"),
+        non: byTestId("hasContractSalary - Non"),
+      }
+    }
   },
   result: {
     resultat: byText(/À partir des éléments que vous avez saisis/),
