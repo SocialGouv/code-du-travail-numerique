@@ -204,6 +204,19 @@ export const ui = {
         "infos.contrat salarié - convention collective - télécommunications - age"
       ),
     },
+    agreement1486: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - bureaux études techniques - indemnité de licenciement - catégorie professionnelle"
+      ),
+      refus: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - bureaux études techniques - indemnité de licenciement - type de licenciement - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - bureaux études techniques - indemnité de licenciement - type de licenciement - Non"
+        ),
+      },
+    },
     agreement1672: {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
@@ -333,7 +346,7 @@ export const ui = {
       hasSiwMonthBestSalary: {
         oui: byTestId("hasSixBestSalaries - Oui"),
         non: byTestId("hasSixBestSalaries - Non"),
-      }
+      },
     },
     agreementWithNoticeSalary: {
       knowingLastSalary: {

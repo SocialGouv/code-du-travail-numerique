@@ -8,14 +8,14 @@ import type {
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
 export enum TypeLicenciement1486 {
-  autre = "Non",
-  refus = "Oui",
+  autre = "'Non'",
+  refus = "'Oui'",
 }
 
 export enum CatPro1486 {
-  etam = "ETAM",
-  ingeCadre = "Ingénieurs et cadres",
-  chargeEnquete = "Chargés d'enquête intermittents",
+  etam = "'ETAM'",
+  ingeCadre = "'Ingénieurs et cadres'",
+  chargeEnquete = "'Chargés d'enquête intermittents'",
 }
 
 export type CC1486ReferenceSalaryProps = {
