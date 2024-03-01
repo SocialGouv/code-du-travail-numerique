@@ -60,7 +60,6 @@ export class ReferenceSalary44
     category,
     lastMonthSalary,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0044>): number {
-    console.log(`MMA - Cat: ${category} - ${lastMonthSalary}`);
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
     const salaireMoyen = sum(salaryValues) / 12;

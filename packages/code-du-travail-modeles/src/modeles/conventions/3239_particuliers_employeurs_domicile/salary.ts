@@ -7,8 +7,8 @@ import type {
 } from "../../common";
 
 export enum CatPro3239 {
-  salarieParticulierEmployeur = "Salarié du particulier employeur",
-  assistantMaternel = "Assistant maternel",
+  salarieParticulierEmployeur = "'Salarié du particulier employeur'",
+  assistantMaternel = "'Assistant maternel'",
 }
 
 export type CC3239ReferenceSalaryProps = {

@@ -217,6 +217,20 @@ export const ui = {
         ),
       },
     },
+    agreement573: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle"
+      ),
+      eco: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle - agents - licenciement économique question - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle - agents - licenciement économique question - Non"
+        ),
+      },
+      age: byTestId("infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle - agents - licenciement économique - age")
+    },
     agreement2120: {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - banque - catégorie professionnelle"
@@ -435,6 +449,9 @@ export const ui = {
       duration: byTestId("absence-duration"),
     },
     resultTableRows: byTestId("table-result-row"),
+    agreement3239: {
+      result: byText(/À partir des éléments que vous avez saisis/),
+    }
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),

@@ -1,10 +1,4 @@
-import {
-  fireEvent,
-  render,
-  waitFor,
-  screen,
-  queryByText,
-} from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import { CalculateurIndemnite } from "../../../../src/outils";
 import { ui } from "./ui";
@@ -196,5 +190,55 @@ describe("Indemnité licenciement - CC 3239", () => {
         /Depuis le 11 mars 2023 les périodes d’absence pour congé paternité ne sont plus retirées/
       )
     ).not.toBeInTheDocument();
+  });
+
+  test("vérifier le calcul pour un salarié du particulier employeur", async () => {
+    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
+      target: { value: "'Salarié du particulier employeur'" },
+    });
+    fireEvent.click(ui.next.get());
+    fireEvent.change(ui.seniority.startDate.get(), {
+      target: { value: "01/01/2012" },
+    });
+    fireEvent.change(ui.seniority.notificationDate.get(), {
+      target: { value: "15/09/2024" },
+    });
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "15/09/2024" },
+    });
+    fireEvent.click(ui.seniority.hasAbsence.non.get());
+    fireEvent.click(ui.next.get());
+    fireEvent.click(ui.salary.hasSameSalary.oui.get());
+    fireEvent.change(ui.salary.sameSalaryValue.get(), {
+      target: { value: "2100" },
+    });
+    fireEvent.click(ui.next.get());
+
+
+    expect(ui.result.resultat.get()).toHaveTextContent("6711,33 €");
+  });
+
+  test("vérifier le calcul pour un assitant maternelle", async () => {
+    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
+      target: { value: "'Assistant maternel'" },
+    });
+    fireEvent.click(ui.information.agreement3239.congeMatSuspension.non.get());
+    fireEvent.change(ui.information.agreement3239.salaryInput.get(), {
+      target: { value: "5000" },
+    });
+    fireEvent.click(ui.next.get());
+    fireEvent.change(ui.seniority.startDate.get(), {
+      target: { value: "01/01/2020" },
+    });
+    fireEvent.change(ui.seniority.notificationDate.get(), {
+      target: { value: "15/09/2024" },
+    });
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "15/09/2024" },
+    });
+    fireEvent.click(ui.seniority.hasAbsence.non.get());
+    fireEvent.click(ui.next.get());
+
+    expect(ui.result.resultat.get()).toHaveTextContent("62,5 €");
   });
 });
