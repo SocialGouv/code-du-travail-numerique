@@ -80,7 +80,8 @@ describe("Références juridiques pour la CC 3239", () => {
   test("Notifications de l'assistante maternelle", () => {
     engine.setSituation({
       "contrat salarié . convention collective": "'IDCC3239'",
-      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${CatPro3239.assistantMaternel}'`,
+      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
+        CatPro3239.assistantMaternel,
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires":
         "2000",
@@ -97,7 +98,8 @@ describe("Références juridiques pour la CC 3239", () => {
   test("Notifications du salarié du particulier employeur", () => {
     engine.setSituation({
       "contrat salarié . convention collective": "'IDCC3239'",
-      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${CatPro3239.salarieParticulierEmployeur}'`,
+      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
+        CatPro3239.salarieParticulierEmployeur,
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
         "2",
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":

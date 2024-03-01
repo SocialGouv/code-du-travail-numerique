@@ -10,7 +10,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
   test("Vérifier l'ineligibilite Anciennete legal inférieur 9 mois", () => {
     const { result, missingArgs, ineligibility } = engine.calculate({
       "contrat salarié . convention collective": "'IDCC3239'",
-      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${CatPro3239.assistantMaternel}'`,
+      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
+        CatPro3239.assistantMaternel,
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires":
         "2000",
@@ -36,7 +37,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
   test("Vérifier l'ineligibilite Anciennete legal inférieur 9 mois bis", () => {
     const { result, missingArgs, ineligibility } = engine.calculate({
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
-        "'Assistant maternel'",
+        CatPro3239.assistantMaternel,
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement":
         "'Non'",
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires":

@@ -71,7 +71,6 @@ describe("Notifications pour la CC 3248", () => {
   test("le salarié est en arrêt de travail au moment du licenciement", () => {
     engine.setSituation({
       "contrat salarié . convention collective": "'IDCC3248'",
-      "contrat salarié . indemnité de licenciement . arrêt de travail": "oui",
       "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
         "'A, B, C, D ou E'",
       "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
@@ -82,6 +81,7 @@ describe("Notifications pour la CC 3248", () => {
         "20",
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
         "20",
+      "contrat salarié . indemnité de licenciement . arrêt de travail": "oui",
       "contrat salarié . indemnité de licenciement . date de notification":
         "01/01/2024",
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
@@ -99,7 +99,6 @@ describe("Notifications pour la CC 3248", () => {
   test("le salarié n'est pas en arrêt de travail au moment du licenciement", () => {
     engine.setSituation({
       "contrat salarié . convention collective": "'IDCC3248'",
-      "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
       "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
         "'A, B, C, D ou E'",
       "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
@@ -110,6 +109,7 @@ describe("Notifications pour la CC 3248", () => {
         "20",
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
         "20",
+      "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
       "contrat salarié . indemnité de licenciement . date de notification":
         "01/01/2024",
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
