@@ -25,11 +25,11 @@ export class Seniority16 extends SeniorityDefault<SupportedCcIndemniteLicencieme
   ): SeniorityProps<SupportedCcIndemniteLicenciement.IDCC0016> {
     const categoriePro =
       args[
-        "contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle"
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle"
       ];
     const becameExecutiveAt =
       args[
-        "contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - date du statut cadre"
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . date du statut cadre"
       ];
     return {
       ...super.mapSituation(args),
