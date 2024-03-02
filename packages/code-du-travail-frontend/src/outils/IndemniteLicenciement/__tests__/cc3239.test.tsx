@@ -201,10 +201,10 @@ describe("Indemnité licenciement - CC 3239", () => {
       target: { value: "01/01/2012" },
     });
     fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "15/09/2024" },
+      target: { value: "01/01/2024" },
     });
     fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "15/09/2024" },
+      target: { value: "01/01/2024" },
     });
     fireEvent.click(ui.seniority.hasAbsence.non.get());
     fireEvent.click(ui.next.get());
@@ -214,8 +214,7 @@ describe("Indemnité licenciement - CC 3239", () => {
     });
     fireEvent.click(ui.next.get());
 
-
-    expect(ui.result.resultat.get()).toHaveTextContent("6711,33 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("6651,92 €");
   });
 
   test("vérifier le calcul pour un assitant maternelle", async () => {
