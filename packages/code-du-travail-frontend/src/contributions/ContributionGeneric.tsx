@@ -39,6 +39,7 @@ import { ContributionMessageBlock } from "./ContributionMessageBlock";
 import {
   AlertAgreementNotSupportedNoContent,
   AlertAgreementSupported,
+  AlertAgreementUnextended,
 } from "./AlertAgreementNotSupportedNoContent";
 
 const { DirectionRight } = icons;
@@ -69,17 +70,23 @@ const ContributionGeneric = ({ contribution }: Props) => {
     setSelectedRoute("agreement");
   }
 
-  const supportedAgreements: AgreementSupportInfo[] =
-    contribution.ccSupported.map((c) => {
+  const ccUnextended =
+    (contribution.ccUnextended ?? []).map((cc) => parseInt(cc, 10)) ?? [];
+  const supportedAgreements: AgreementSupportInfo[] = contribution.ccSupported
+    .map((c) => {
       return {
         idcc: parseInt(c, 10),
         fullySupported: true,
       };
-    });
+    })
+    .filter(({ idcc }) => !ccUnextended.includes(idcc));
+
   const isSupportedInList = (agreements, agreement) =>
     agreement && !!agreements.find((item) => item.idcc === agreement.num);
   const isSupported = (agreement) =>
     isSupportedInList(supportedAgreements, agreement);
+  const isUnextended = (agreement) =>
+    contribution.ccUnextended.includes(agreement?.id);
 
   const isNoCDT = () => contribution && contribution.type === "generic-no-cdt";
   const showButtonToDisplayCDTContent = () =>
@@ -116,14 +123,18 @@ const ContributionGeneric = ({ contribution }: Props) => {
   };
 
   const alertAgreementNotSupported = (url: string) => {
-    return contribution.type !== "generic-no-cdt" ? (
-      <AlertAgreementSupported showAnswer={showAnswer} />
-    ) : (
-      <AlertAgreementNotSupportedNoContent
-        url={url}
-        message={contribution.messageBlockGenericNoCDT}
-      />
-    );
+    if (isUnextended(convention)) {
+      return <AlertAgreementUnextended url={url} />;
+    } else if (contribution.type === "generic-no-cdt") {
+      return (
+        <AlertAgreementNotSupportedNoContent
+          url={url}
+          message={contribution.messageBlockGenericNoCDT}
+        />
+      );
+    } else {
+      return <AlertAgreementSupported showAnswer={showAnswer} />;
+    }
   };
 
   const scrollToTitle = () => {
