@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.126.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.125.1...v4.126.0) (2024-03-04)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** erreur calcul sur certaines CC ([#5664](https://github.com/SocialGouv/code-du-travail-numerique/issues/5664)) ([e4b1684](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4b168480a1bcb678a87e0542db8d0891ba5cfaf))
+- **indemnite-licenciement:** erreur lors du calcul du légal suite refacto ([#5660](https://github.com/SocialGouv/code-du-travail-numerique/issues/5660)) ([a0105e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/a0105e25a094824c38447aa9c5a03a36a7ced190))
+- **redirections:** cc 1518 qui s'auto-redirigée ([#5657](https://github.com/SocialGouv/code-du-travail-numerique/issues/5657)) ([825026e](https://github.com/SocialGouv/code-du-travail-numerique/commit/825026e051a599078cc529cd381846e1fb1af296))
+
+### Features
+
+- **indemnite-licenciement:** renomage de la prime exceptionnelle de pouvoir d’achat ([#5656](https://github.com/SocialGouv/code-du-travail-numerique/issues/5656)) ([1d63f26](https://github.com/SocialGouv/code-du-travail-numerique/commit/1d63f261393aeef125a08f7319af8d950c502d56))
+- remove contenu correspondant from h2 ([#5658](https://github.com/SocialGouv/code-du-travail-numerique/issues/5658)) ([689681f](https://github.com/SocialGouv/code-du-travail-numerique/commit/689681fb749e8bfb56ef3d73934646d58bc1c335))
+
 ## [4.125.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.125.0...v4.125.1) (2024-02-27)
 
 **Note:** Version bump only for package @cdt/frontend
