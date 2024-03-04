@@ -19,6 +19,11 @@ export enum QuestionOuiNon {
   non = "Non",
 }
 
+export enum QuestionOuiNonWithQuote {
+  oui = "'Oui'",
+  non = "'Non'",
+}
+
 export type Absence = {
   motif: Motif;
   durationInMonth?: number;

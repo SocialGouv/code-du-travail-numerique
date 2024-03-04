@@ -40,6 +40,7 @@ export default function Agreement2120() {
       onChange={onChangeSalariesVariablePart}
       error={errorSalariesVariablePart}
       id="salariesVariablePart"
+      dataTestId="salariesVariablePart"
       showRequired
       text="€"
       tooltip={{

@@ -204,9 +204,57 @@ export const ui = {
         "infos.contrat salarié - convention collective - télécommunications - age"
       ),
     },
+    agreement1486: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - bureaux études techniques - indemnité de licenciement - catégorie professionnelle"
+      ),
+      refus: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - bureaux études techniques - indemnité de licenciement - type de licenciement - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - bureaux études techniques - indemnité de licenciement - type de licenciement - Non"
+        ),
+      },
+    },
+    agreement573: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle"
+      ),
+      eco: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle - agents - licenciement économique question - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle - agents - licenciement économique question - Non"
+        ),
+      },
+      age: byTestId("infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle - agents - licenciement économique - age")
+    },
+    agreement2120: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - banque - catégorie professionnelle"
+      ),
+      eco: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - banque - licenciement économique - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - banque - licenciement économique - Non"
+        ),
+      },
+    },
     agreement1672: {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+      ),
+      nonCadreAvant: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle - cadres - avant non cadres - Oui"
+        ),
+      },
+      dateDebutCadre: byTestId(
+        "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle - cadres - date du statut cadre"
       ),
       age: byTestId(
         "infos.contrat salarié - convention collective - sociétés d'assurances - age"
@@ -276,6 +324,11 @@ export const ui = {
         ),
       },
     },
+    agreement29: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),
@@ -316,6 +369,12 @@ export const ui = {
       salaries: byTestId("last-month-salary"),
       primes: byTestId("prime-last-month-salary"),
     },
+    agreement29: {
+      hasSiwMonthBestSalary: {
+        oui: byTestId("hasSixBestSalaries - Oui"),
+        non: byTestId("hasSixBestSalaries - Non"),
+      },
+    },
     agreementWithNoticeSalary: {
       knowingLastSalary: {
         oui: byTestId("hasReceivedSalaries - Oui"),
@@ -324,10 +383,20 @@ export const ui = {
       salaries: byTestId("notice-salary"),
       primes: byTestId("prime-notice-salary"),
     },
+    agreement1517: {
+      hasContractSalary: {
+        oui: byTestId("hasContractSalary - Oui"),
+        non: byTestId("hasContractSalary - Non"),
+      }
+    },
+    agreement2120: {
+      salariesVariablePart: byTestId("salariesVariablePart")
+    }
   },
   result: {
     resultat: byText(/À partir des éléments que vous avez saisis/),
     resultatLegal: byText(/Montant prévu par le code du travail/),
+    resultatAgreement: byText(/Montant prévu par la convention collective/),
     formula: byTestId("formula"),
     legalError: {
       title: byText(
@@ -380,6 +449,9 @@ export const ui = {
       duration: byTestId("absence-duration"),
     },
     resultTableRows: byTestId("table-result-row"),
+    agreement3239: {
+      result: byText(/À partir des éléments que vous avez saisis/),
+    }
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),

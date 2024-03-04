@@ -7,9 +7,9 @@ import type {
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
 export enum CategoryPro44 {
-  ouvrier = "Ouvriers et collaborateurs (Groupes I à III)",
-  techniciens = "Agents de maîtrise et techniciens (Groupe IV)",
-  inge = "Ingénieurs et cadres (Groupe V)",
+  ouvrier = "'Ouvriers et collaborateurs (Groupes I à III)'",
+  techniciens = "'Agents de maîtrise et techniciens (Groupe IV)'",
+  inge = "'Ingénieurs et cadres (Groupe V)'",
 }
 
 export type CC44ReferenceSalaryProps = {
@@ -27,7 +27,7 @@ export class ReferenceSalary44
   ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0044> {
     const category =
       args[
-        "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
+        "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle"
       ] ?? "";
     return {
       category: category as CategoryPro44,

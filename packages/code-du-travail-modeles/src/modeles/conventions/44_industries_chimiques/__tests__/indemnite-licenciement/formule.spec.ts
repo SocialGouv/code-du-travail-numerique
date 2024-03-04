@@ -25,7 +25,8 @@ describe("Formule indemnité licenciement -  CC 44", () => {
       }) => {
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0044'",
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+            category,
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
             isEconomicFiring ? `'Oui'` : `'Non'`,
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -75,7 +76,8 @@ describe("Formule indemnité licenciement -  CC 44", () => {
         }) => {
           engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
               isEconomicFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -133,7 +135,8 @@ describe("Formule indemnité licenciement -  CC 44", () => {
         }) => {
           engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
               isEconomicFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -194,7 +197,8 @@ describe("Formule indemnité licenciement -  CC 44", () => {
         }) => {
           engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
               isEconomicFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -251,7 +255,8 @@ describe("Formule indemnité licenciement -  CC 44", () => {
         }) => {
           engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
               isEconomicFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -306,7 +311,8 @@ describe("Formule indemnité licenciement -  CC 44", () => {
         }) => {
           engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
               isEconomicFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -361,7 +367,8 @@ describe("Formule indemnité licenciement -  CC 44", () => {
         }) => {
           engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
               isEconomicFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":

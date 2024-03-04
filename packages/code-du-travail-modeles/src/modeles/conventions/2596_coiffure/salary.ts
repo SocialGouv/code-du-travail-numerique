@@ -8,11 +8,11 @@ import type {
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
 export enum CatPro2596 {
-  agentsMaitrise = "Agents de maîtrise",
-  cadres = "Cadres",
-  coiffeur = "Emplois techniques et de coiffeurs",
-  esthetique = "Emplois de l'esthétique-cosmétique",
-  nonTechnique = "Emplois non techniques",
+  agentsMaitrise = "'Agents de maîtrise'",
+  cadres = "'Cadres'",
+  coiffeur = "'Emplois techniques et de coiffeurs'",
+  esthetique = "'Emplois de l'esthétique-cosmétique'",
+  nonTechnique = "'Emplois non techniques'",
 }
 
 export type CC2596ReferenceSalaryProps = {

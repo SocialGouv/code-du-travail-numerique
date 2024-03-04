@@ -3,6 +3,7 @@ import React from "react";
 import { CalculateurIndemnite } from "../../../../src/outils";
 import { ui } from "./ui";
 import userEvent from "@testing-library/user-event";
+import { UserAction } from "../../../common";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -269,5 +270,49 @@ describe("Indemnité licenciement - CC 44", () => {
         )
       ).not.toBeInTheDocument();
     });
+  });
+
+  test("parcours avec la convention collective pour valider le résultat", () => {
+    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+    const userAction = new UserAction();
+    userAction
+      .click(ui.introduction.startButton.get())
+      .click(ui.contract.type.cdi.get())
+      .click(ui.contract.fauteGrave.non.get())
+      .click(ui.contract.inaptitude.non.get())
+      .click(ui.contract.arretTravail.non.get())
+      .click(ui.next.get())
+      .click(ui.next.get())
+      .changeInputList(
+        ui.information.agreement44.proCategory.get(),
+        "Ouvriers et collaborateurs (Groupes I à III)"
+      )
+      .setInput(ui.information.agreement44.age.get(), "57")
+      .click(ui.next.get())
+      .setInput(ui.seniority.startDate.get(), "01/01/2019")
+      .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
+      .setInput(ui.seniority.endDate.get(), "01/01/2024")
+      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.salary.hasPartialTime.non.get())
+      .click(ui.salary.hasSameSalary.non.get())
+      .setInput(ui.salary.salaries.getAll()[0], "3541")
+      .setInput(ui.salary.salaries.getAll()[1], "3555")
+      .setInput(ui.salary.salaries.getAll()[2], "3512")
+      .setInput(ui.salary.salaries.getAll()[3], "3596")
+      .setInput(ui.salary.salaries.getAll()[4], "3310")
+      .setInput(ui.salary.salaries.getAll()[5], "3554")
+      .setInput(ui.salary.salaries.getAll()[6], "3560")
+      .setInput(ui.salary.salaries.getAll()[7], "3330")
+      .setInput(ui.salary.salaries.getAll()[8], "3530")
+      .setInput(ui.salary.salaries.getAll()[9], "3510")
+      .setInput(ui.salary.salaries.getAll()[10], "3580")
+      .setInput(ui.salary.salaries.getAll()[11], "3362")
+      .click(ui.salary.variablePart.oui.get())
+      .click(ui.next.get());
+
+    expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    expect(ui.result.resultat.get()).toHaveTextContent("12232,5");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("12232.5");
   });
 });

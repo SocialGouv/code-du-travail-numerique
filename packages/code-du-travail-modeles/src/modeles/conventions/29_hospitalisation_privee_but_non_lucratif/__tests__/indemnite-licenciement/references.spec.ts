@@ -60,7 +60,8 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
       ({ expectedReferences, category }) => {
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0029'",
-          "contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle":
+            category,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             "10",
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":

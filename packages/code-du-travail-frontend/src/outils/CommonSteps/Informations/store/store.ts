@@ -217,7 +217,7 @@ const createCommonInformationsStore: StoreSlice<
             (v) =>
               v.question.rule.nom ===
               "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
-          )?.info === `'${CatPro3239.assistantMaternel}'` &&
+          )?.info === CatPro3239.assistantMaternel &&
           publicodesInformations.find(
             (v) =>
               v.question.rule.nom ===
