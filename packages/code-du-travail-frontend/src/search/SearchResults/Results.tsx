@@ -188,7 +188,7 @@ export const Results = ({ id, isSearch, items, query }) => {
           id={id}
         >{`Résultats de recherche pour “${query}”`}</Heading>
       ) : (
-        <Title isFirst id={id}>
+        <Title isFirst id={id} isHeader={false} as="span">
           {"Contenu correspondant"}
         </Title>
       )}
@@ -212,7 +212,7 @@ export const Results = ({ id, isSearch, items, query }) => {
               item={item}
               showTheme={isSearch}
               query={query}
-              titleTagType="h3"
+              titleTagType="h2"
             />
           </StyledListItem>
         ))}
