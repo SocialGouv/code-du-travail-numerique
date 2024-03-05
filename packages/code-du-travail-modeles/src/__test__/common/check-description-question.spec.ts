@@ -1,8 +1,6 @@
 import Engine from "publicodes";
 
-import modeles from "../../../src/modeles/modeles-preavis-retraite.json";
-
-const engine = new Engine(modeles as any);
+const engine = new Engine(modelsPreavisRetraite);
 
 describe("Validation de la présence des descriptions pour afficher des aides", () => {
   describe.each`
