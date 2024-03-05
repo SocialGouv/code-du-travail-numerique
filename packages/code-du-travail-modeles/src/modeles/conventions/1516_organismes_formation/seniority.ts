@@ -4,7 +4,6 @@ import { LEGAL_MOTIFS } from "../../base";
 import type {
   Absence,
   DefaultSeniorityRequiredProps,
-  ISeniority,
   Motif,
   RequiredSeniorityResult,
   SeniorityProps,
@@ -12,10 +11,9 @@ import type {
   SupportedCcIndemniteLicenciement,
 } from "../../common";
 import { MotifKeys, parseDate } from "../../common";
+import { SeniorityDefault } from "../../common/seniority";
 
-export class Seniority1516
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC1516>
-{
+export class Seniority1516 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC1516> {
   getMotifs(): Motif[] {
     return LEGAL_MOTIFS;
   }

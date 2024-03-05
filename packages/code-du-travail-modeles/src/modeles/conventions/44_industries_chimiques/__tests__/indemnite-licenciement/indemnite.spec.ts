@@ -26,7 +26,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
               isEconomicFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -79,7 +80,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
           const { result, missingArgs } = engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC0044'",
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+                category,
               "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
                 isEconomicFiring ? `'Oui'` : `'Non'`,
               "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -138,7 +140,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
           const { result, missingArgs } = engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC0044'",
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+                category,
               "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
                 isEconomicFiring ? `'Oui'` : `'Non'`,
               "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -200,7 +203,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
           const { result, missingArgs } = engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC0044'",
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+                category,
               "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
                 isEconomicFiring ? `'Oui'` : `'Non'`,
               "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -258,7 +262,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
           const { result, missingArgs } = engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC0044'",
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+                category,
               "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
                 isEconomicFiring ? `'Oui'` : `'Non'`,
               "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -314,7 +319,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
           const { result, missingArgs } = engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC0044'",
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+                category,
               "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
                 isEconomicFiring ? `'Oui'` : `'Non'`,
               "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -370,7 +376,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
           const { result, missingArgs } = engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC0044'",
-              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+              "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+                category,
               "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
                 isEconomicFiring ? `'Oui'` : `'Non'`,
               "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":

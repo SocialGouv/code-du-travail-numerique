@@ -1,4 +1,7 @@
-import { heuresRechercheEmploiData as data } from "@socialgouv/modeles-social";
+import {
+  OldReference,
+  heuresRechercheEmploiData as data,
+} from "@socialgouv/modeles-social";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 
@@ -11,7 +14,11 @@ import {
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
-import { HighlightResult, SectionTitle, SmallText } from "../../common/stepStyles";
+import {
+  HighlightResult,
+  SectionTitle,
+  SmallText,
+} from "../../common/stepStyles";
 import { formatRefs } from "../../publicodes";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { NoticeNote } from "../../common/NoticeNote";
@@ -37,31 +44,37 @@ function Duration({ situation }) {
   return (
     <>
       <p>
-        {wording}&nbsp;:<br/><HighlightResult>{situation.answer}</HighlightResult>
+        {wording}&nbsp;:
+        <br />
+        <HighlightResult>{situation.answer}</HighlightResult>
         &nbsp;
         <NoticeNote
           isList
-          numberOfElements={Array.isArray(note) ? note.length : calculateNumberOfElements(note)}
+          numberOfElements={
+            Array.isArray(note) ? note.length : calculateNumberOfElements(note)
+          }
         />
         .
         {note && !Array.isArray(note) && (
-        <SmallText>
-        <NoticeNote
-          numberOfElements={calculateNumberOfElements(note)}
-          currentElement={calculateNumberOfElements(note)}
-        />
-        {note}
-      </SmallText>
-      )}
-      {note && Array.isArray(note) && (
-        note.map((text, index) => <SmallText key={index}>
-        <NoticeNote
-          numberOfElements={note.length}
-          currentElement={index + 1}
-        />
-        {text}
-      </SmallText>)
-      )}
+          <SmallText>
+            <NoticeNote
+              numberOfElements={calculateNumberOfElements(note)}
+              currentElement={calculateNumberOfElements(note)}
+            />
+            {note}
+          </SmallText>
+        )}
+        {note &&
+          Array.isArray(note) &&
+          note.map((text, index) => (
+            <SmallText key={index}>
+              <NoticeNote
+                numberOfElements={note.length}
+                currentElement={index + 1}
+              />
+              {text}
+            </SmallText>
+          ))}
       </p>
       {situation.answer2 && (
         <>
@@ -176,6 +189,17 @@ export function StepResult({ form }: WizardStepProps): JSX.Element {
   }
 
   const [situation] = possibleSituations;
+
+  const refs: OldReference[] =
+    situation.ref && situation.refUrl
+      ? [
+          {
+            ref: situation.ref,
+            refUrl: situation.refUrl,
+          },
+        ]
+      : situation.refs ?? [];
+
   return (
     <>
       <SectionTitle>
@@ -192,7 +216,7 @@ export function StepResult({ form }: WizardStepProps): JSX.Element {
           ...situation.criteria,
         })}
 
-        <PubliReferences references={formatRefs([situation])} />
+        <PubliReferences references={formatRefs(refs)} />
       </ShowDetails>
       <DisclaimerBox duration={situation.answer} />
     </>

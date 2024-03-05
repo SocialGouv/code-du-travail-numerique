@@ -79,13 +79,14 @@ const ContributionGeneric = ({ contribution }: Props) => {
         fullySupported: true,
       };
     })
-    .filter(({ idcc }) => !ccUnextended.includes(idcc));
+    .filter(({ idcc }) => !ccUnextended || !ccUnextended.includes(idcc));
 
   const isSupportedInList = (agreements, agreement) =>
     agreement && !!agreements.find((item) => item.idcc === agreement.num);
   const isSupported = (agreement) =>
     isSupportedInList(supportedAgreements, agreement);
   const isUnextended = (agreement) =>
+    contribution.ccUnextended &&
     contribution.ccUnextended.includes(agreement?.id);
 
   const isNoCDT = () => contribution && contribution.type === "generic-no-cdt";

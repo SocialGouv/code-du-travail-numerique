@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.127.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.126.0...v4.127.0) (2024-03-04)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.126.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.125.1...v4.126.0) (2024-03-04)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** correction de l'ancienneté calculée sur la 3248 ([#5654](https://github.com/SocialGouv/code-du-travail-numerique/issues/5654)) ([c9c27bc](https://github.com/SocialGouv/code-du-travail-numerique/commit/c9c27bc59b6b105f867f9e026870a8169fa08c33))
+- **indemnite-licenciement:** erreur calcul sur certaines CC ([#5664](https://github.com/SocialGouv/code-du-travail-numerique/issues/5664)) ([e4b1684](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4b168480a1bcb678a87e0542db8d0891ba5cfaf))
+- **indemnite-licenciement:** erreur lors du calcul du légal suite refacto ([#5660](https://github.com/SocialGouv/code-du-travail-numerique/issues/5660)) ([a0105e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/a0105e25a094824c38447aa9c5a03a36a7ced190))
+
+## [4.125.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.125.0...v4.125.1) (2024-02-27)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.125.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.124.0...v4.125.0) (2024-02-27)
+
+### Bug Fixes
+
+- **3248:** application des retours métiers ([#5617](https://github.com/SocialGouv/code-du-travail-numerique/issues/5617)) ([5e75576](https://github.com/SocialGouv/code-du-travail-numerique/commit/5e75576227836cf9da324957190b5e61aed5dab9))
+
+# [4.124.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.2...v4.124.0) (2024-02-23)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.123.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.1...v4.123.2) (2024-02-22)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.123.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.0...v4.123.1) (2024-02-22)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
 # [4.123.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.122.0...v4.123.0) (2024-02-19)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

@@ -45,7 +45,7 @@ export class ReferenceSalaryFactory {
       case SupportedCcIndemniteLicenciement.IDCC3239:
         return new ReferenceSalary3239() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC0016:
-        return new ReferenceSalary16() as IReferenceSalary<T>;
+        return new ReferenceSalary16() as any;
       case SupportedCcIndemniteLicenciement.IDCC0044:
         return new ReferenceSalary44() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC0573:

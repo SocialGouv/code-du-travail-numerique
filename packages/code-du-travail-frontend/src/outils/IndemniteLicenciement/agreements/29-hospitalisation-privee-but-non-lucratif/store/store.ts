@@ -10,6 +10,7 @@ import {
 } from "./types";
 import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: Agreement29StoreData = {
   input: {
@@ -22,7 +23,10 @@ const initialState: Agreement29StoreData = {
 
 export const createAgreement29StoreSalaires: StoreSlice<
   Agreement29StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice & CommonInformationsStoreSlice
+  SalairesStoreSlice &
+    AncienneteStoreSlice &
+    CommonInformationsStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   agreement29Data: { ...initialState },
   agreement29Function: {
@@ -36,14 +40,17 @@ export const createAgreement29StoreSalaires: StoreSlice<
         "'Assistants familiaux des services de placements familiaux spécialisés'";
       set(
         produce((state: Agreement29StoreSlice) => {
-          state.agreement29Data.input.shouldAskSixBestSalaries = shouldAskSixBestSalaries;
+          state.agreement29Data.input.shouldAskSixBestSalaries =
+            shouldAskSixBestSalaries;
         })
       );
     },
     onChangeSixBestSalariesTotal: (value) => {
+      get().situationFunction.setSituation("sixBestSalariesTotal", value);
       applyGenericValidation(get, set, "sixBestSalariesTotal", value);
     },
     onChangeHasSixBestSalaries: (value) => {
+      get().situationFunction.setSituation("hasSixBestSalaries", value);
       applyGenericValidation(get, set, "hasSixBestSalaries", value);
     },
   },

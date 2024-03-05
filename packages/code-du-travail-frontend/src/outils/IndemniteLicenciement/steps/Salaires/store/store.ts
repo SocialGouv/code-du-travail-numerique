@@ -13,9 +13,7 @@ import { validatorAgreement } from "../../../agreements";
 import {
   getSupportedAgreement,
   PublicodesSimulator,
-  ReferenceSalaryFactory,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../../..";
 import { deepMergeArray } from "../../../../../lib";
@@ -27,9 +25,8 @@ import { add } from "date-fns";
 
 const initialState: SalairesStoreData = {
   input: {
-    salaryPeriods: [],
-    refSalary: 0,
     showHasTempsPartiel: true,
+    salaryPeriods: [],
   },
   error: {},
   hasBeenSubmit: false,
@@ -62,7 +59,7 @@ const createSalairesStore: StoreSlice<
         month: v,
         value: undefined,
       }));
-      const salaryPeriods = deepMergeArray(
+      let salaryPeriods = deepMergeArray(
         p,
         get().salairesData.input.salaryPeriods,
         "month"
@@ -106,10 +103,6 @@ const createSalairesStore: StoreSlice<
       if (isValid) {
         const salaryInput = get().salairesData.input;
 
-        const sReference = new ReferenceSalaryFactory().create(
-          SupportedCcIndemniteLicenciement.default
-        );
-
         let salaries = salaryInput.salaryPeriods;
 
         const { salary } = salaryInput;
@@ -119,19 +112,13 @@ const createSalairesStore: StoreSlice<
           salaries = salaryInput.salaryPeriods.map((v) => ({
             ...v,
             value: parseSalary,
-            prime: undefined,
           }));
+          set(
+            produce((state: SalairesStoreSlice) => {
+              state.salairesData.input.salaryPeriods = salaries;
+            })
+          );
         }
-
-        const refSalary = sReference.computeReferenceSalary({
-          salaires: salaries,
-        });
-
-        set(
-          produce((state: SalairesStoreSlice) => {
-            state.salairesData.input.refSalary = refSalary;
-          })
-        );
       }
 
       const agreement = get().agreementData.input.agreement;

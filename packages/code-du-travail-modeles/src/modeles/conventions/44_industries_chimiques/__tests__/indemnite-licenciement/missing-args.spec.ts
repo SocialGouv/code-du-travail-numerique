@@ -22,7 +22,8 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         const { missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
               isEconomicFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -57,7 +58,8 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         const { missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
               isEconomicFiring ? `'Oui'` : `'Non'`,
 
@@ -90,7 +92,8 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         const { missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
 
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,

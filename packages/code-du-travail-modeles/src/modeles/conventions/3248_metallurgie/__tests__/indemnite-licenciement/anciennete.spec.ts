@@ -191,11 +191,11 @@ describe("CC 3248", () => {
   describe("Calcul de l'ancienneté pour les groupes A,B,C,D,E (passage au forfait jour et cadre)", () => {
     test.each`
       absences                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | entryDate       | exitDate        | expectedAnciennete
-      ${[]}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | ${"20/02/2020"} | ${"20/02/2025"} | ${7.5}
-      ${[{ durationInMonth: 13, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/05/2020" }]}                                                                                                                                                                                                                                                                                                                                                                                                                                                   | ${"20/02/2020"} | ${"20/02/2025"} | ${7.5}
-      ${[{ durationInMonth: 13, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/05/2022" }]}                                                                                                                                                                                                                                                                                                                                                                                                                                                   | ${"20/02/2020"} | ${"20/02/2025"} | ${7.5}
-      ${[{ durationInMonth: 1, motif: { key: MotifKeys.maladieNonPro } }, { durationInMonth: 1, motif: { key: MotifKeys.accidentTrajet } }, { durationInMonth: 1, motif: { key: MotifKeys.congesSabbatique } }, { durationInMonth: 1, motif: { key: MotifKeys.congesCreationEntreprise } }, { durationInMonth: 1, motif: { key: MotifKeys.congesParentalEducation } }, { durationInMonth: 1, motif: { key: MotifKeys.congesSansSolde } }, { durationInMonth: 1, motif: { key: MotifKeys.greve } }, { durationInMonth: 1, motif: { key: MotifKeys.miseAPied } }]} | ${"20/02/2020"} | ${"20/02/2025"} | ${7.5}
-      ${[{ durationInMonth: 3, motif: { key: MotifKeys.maladieNonPro }, startedAt: "01/01/2022" }]}                                                                                                                                                                                                                                                                                                                                                                                                                                                              | ${"20/02/2020"} | ${"20/02/2025"} | ${7.5}
+      ${[]}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | ${"20/02/2020"} | ${"20/02/2025"} | ${5.541666666666667}
+      ${[{ durationInMonth: 13, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/05/2020" }]}                                                                                                                                                                                                                                                                                                                                                                                                                                                   | ${"20/02/2020"} | ${"20/02/2025"} | ${5.541666666666667}
+      ${[{ durationInMonth: 13, motif: { key: MotifKeys.maladieNonPro, value: 1 }, startedAt: "01/05/2022" }]}                                                                                                                                                                                                                                                                                                                                                                                                                                                   | ${"20/02/2020"} | ${"20/02/2025"} | ${5.541666666666667}
+      ${[{ durationInMonth: 1, motif: { key: MotifKeys.maladieNonPro } }, { durationInMonth: 1, motif: { key: MotifKeys.accidentTrajet } }, { durationInMonth: 1, motif: { key: MotifKeys.congesSabbatique } }, { durationInMonth: 1, motif: { key: MotifKeys.congesCreationEntreprise } }, { durationInMonth: 1, motif: { key: MotifKeys.congesParentalEducation } }, { durationInMonth: 1, motif: { key: MotifKeys.congesSansSolde } }, { durationInMonth: 1, motif: { key: MotifKeys.greve } }, { durationInMonth: 1, motif: { key: MotifKeys.miseAPied } }]} | ${"20/02/2020"} | ${"20/02/2025"} | ${5.541666666666667}
+      ${[{ durationInMonth: 3, motif: { key: MotifKeys.maladieNonPro }, startedAt: "01/01/2022" }]}                                                                                                                                                                                                                                                                                                                                                                                                                                                              | ${"20/02/2020"} | ${"20/02/2025"} | ${5.541666666666667}
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
@@ -242,5 +242,44 @@ describe("CC 3248", () => {
         expect(result.value).toEqual(expectedAnciennete);
       }
     );
+  });
+
+  describe("Calcul de l'ancienneté pour les groupes A,B,C,D,E (passage au forfait jour) - Cas spécifique issue #5634", () => {
+    test("Calcul de l'ancienneté", () => {
+      const seniority = new SeniorityFactory().create(
+        SupportedCcIndemniteLicenciement.IDCC3248
+      );
+
+      const result = seniority.computeSeniority({
+        absencePeriods: [],
+        categoriePro: "'A, B, C, D ou E'",
+        dateBecomeDayContract: "04/09/2022",
+        dateEntree: "02/01/2012",
+        dateSortie: "02/12/2024",
+        hasBeenDayContract: true,
+        hasBeenExecutive: false,
+      });
+
+      expect(result.value).toEqual(14);
+    });
+  });
+
+  describe("Calcul de l'ancienneté pour les groupes A,B,C,D,E au forfait jour avant cadre - Cas spécifique issue #5635", () => {
+    test("Calcul de l'ancienneté", () => {
+      const seniority = new SeniorityFactory().create(
+        SupportedCcIndemniteLicenciement.IDCC3248
+      );
+
+      const result = seniority.computeSeniority({
+        absencePeriods: [],
+        categoriePro: "'A, B, C, D ou E'",
+        dateEntree: "01/01/2018",
+        dateSortie: "01/03/2024",
+        hasBeenDayContract: true,
+        hasBeenExecutive: true,
+      });
+
+      expect(result.value).toEqual(6.25);
+    });
   });
 });

@@ -19,6 +19,11 @@ export enum QuestionOuiNon {
   non = "Non",
 }
 
+export enum QuestionOuiNonWithQuote {
+  oui = "'Oui'",
+  non = "'Non'",
+}
+
 export type Absence = {
   motif: Motif;
   durationInMonth?: number;
@@ -33,6 +38,10 @@ export type Motif = {
 };
 
 export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
+  mapSituation: (args: Record<string, string | undefined>) => SeniorityProps<T>;
+  mapRequiredSituation: (
+    args: Record<string, string | undefined>
+  ) => SeniorityRequiredProps<T>;
   computeSeniority: (args: SeniorityProps<T>) => SeniorityResult;
   computeRequiredSeniority: (
     args: SeniorityRequiredProps<T>

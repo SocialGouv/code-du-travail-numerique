@@ -14,6 +14,7 @@ import {
 import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: Agreement2596StoreData = {
   input: {
@@ -29,7 +30,8 @@ export const createAgreement2596StoreSalaires: StoreSlice<
   SalairesStoreSlice &
     AncienneteStoreSlice &
     CommonInformationsStoreSlice &
-    ContratTravailStoreSlice
+    ContratTravailStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   agreement2596Data: { ...initialState },
   agreement2596Function: {
@@ -47,6 +49,7 @@ export const createAgreement2596StoreSalaires: StoreSlice<
           categoryPro !== "'Agents de maîtrise'") ||
         dateArretTravail
       ) {
+        get().situationFunction.setSituation("noticeSalaryPeriods", "[]");
         return set(
           produce((state: Agreement2596StoreSlice) => {
             state.agreement2596Data.input.noticeSalaryPeriods = [];
@@ -72,6 +75,10 @@ export const createAgreement2596StoreSalaires: StoreSlice<
         "month"
       );
 
+      get().situationFunction.setSituation(
+        "noticeSalaryPeriods",
+        JSON.stringify(noticeSalaryPeriods)
+      );
       set(
         produce((state: Agreement2596StoreSlice) => {
           state.agreement2596Data.input.noticeSalaryPeriods =
@@ -84,6 +91,10 @@ export const createAgreement2596StoreSalaires: StoreSlice<
       get().agreement2596Function.onInit();
     },
     onSalariesChange: (value) => {
+      get().situationFunction.setSituation(
+        "noticeSalaryPeriods",
+        JSON.stringify(value)
+      );
       applyGenericValidation(get, set, "noticeSalaryPeriods", value);
     },
   },

@@ -7,11 +7,14 @@ import {
   getNotifications,
   getNotificationsBloquantes,
   getReferences,
+  SupportedCcIndemniteLicenciement,
 } from "../modeles/common";
 import type { Publicodes } from "./Publicodes";
 import type { MissingArgs, PublicodesData, SituationElement } from "./types";
 
 export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
+  idcc: SupportedCcIndemniteLicenciement;
+
   engine: Engine;
 
   targetRule: string;
@@ -22,9 +25,14 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     situation: [],
   };
 
-  protected constructor(rules: any, targetRule: string) {
+  protected constructor(
+    rules: any,
+    targetRule: string,
+    idcc?: SupportedCcIndemniteLicenciement
+  ) {
     this.engine = new Engine(rules);
     this.targetRule = targetRule;
+    this.idcc = idcc ?? SupportedCcIndemniteLicenciement.default;
   }
 
   execute(rule: string): TResult {
@@ -34,6 +42,13 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
         `Unable to evaluate ${rule} with ${JSON.stringify(this.data.situation)}`
       );
     return this.convertedResult(result);
+  }
+
+  calculate(
+    args: Record<string, string | undefined>,
+    target?: string
+  ): PublicodesData<TResult> {
+    return this.setSituation(args, target);
   }
 
   setSituation(
@@ -147,7 +162,6 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     });
 
     const result = this.handleExecute(newSituation, targetRule);
-
     if (!result)
       throw new Error(
         `Unable to evaluate ${targetRule} with ${JSON.stringify(newSituation)}`

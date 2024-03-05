@@ -1,4 +1,4 @@
-import { QuestionOuiNon } from "../../../../common";
+import { QuestionOuiNonWithQuote } from "../../../../common";
 import { ReferenceSalary2120 } from "../../salary";
 
 describe("Calcul du salaire pour la CC 2120", () => {
@@ -28,8 +28,8 @@ describe("Calcul du salaire pour la CC 2120", () => {
       ({ salariesInput, salariesVariablePart, expectedResult }) => {
         expect(
           ReferenceSalary.computeReferenceSalary({
-            isLicenciementDisciplinaire: QuestionOuiNon.non,
-            isLicenciementEco: QuestionOuiNon.oui,
+            isLicenciementDisciplinaire: QuestionOuiNonWithQuote.non,
+            isLicenciementEco: QuestionOuiNonWithQuote.oui,
             salaires: salariesInput,
             salariesVariablePart: salariesVariablePart,
           })
@@ -48,8 +48,8 @@ describe("Calcul du salaire pour la CC 2120", () => {
       ({ salariesInput, expectedResult }) => {
         expect(
           ReferenceSalary.computeReferenceSalary({
-            isLicenciementDisciplinaire: QuestionOuiNon.oui,
-            isLicenciementEco: QuestionOuiNon.non,
+            isLicenciementDisciplinaire: QuestionOuiNonWithQuote.oui,
+            isLicenciementEco: QuestionOuiNonWithQuote.non,
             salaires: salariesInput,
             salariesVariablePart: 0,
           })
@@ -69,8 +69,8 @@ describe("Calcul du salaire pour la CC 2120", () => {
       ({ salariesInput, salariesVariablePart, expectedResult }) => {
         expect(
           ReferenceSalary.computeReferenceSalary({
-            isLicenciementDisciplinaire: QuestionOuiNon.non,
-            isLicenciementEco: QuestionOuiNon.non,
+            isLicenciementDisciplinaire: QuestionOuiNonWithQuote.non,
+            isLicenciementEco: QuestionOuiNonWithQuote.non,
             salaires: salariesInput,
             salariesVariablePart: salariesVariablePart,
           })

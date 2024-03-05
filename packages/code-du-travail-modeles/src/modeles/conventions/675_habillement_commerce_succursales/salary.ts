@@ -14,6 +14,23 @@ export type CC675ReferenceSalaryProps = {
 export class ReferenceSalary675
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0675>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0675> {
+    const catPro =
+      args[
+        "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle"
+      ];
+    const isAgentMaitriseOrCadre =
+      catPro === "Agents de maîtrise" || catPro === "Cadres";
+    return {
+      isAgentMaitriseOrCadre,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
   /**
    * si Agents de maîtrise et techniciens ou Cadres
    * - S/12

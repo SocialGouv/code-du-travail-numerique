@@ -3,6 +3,66 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.127.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.126.0...v4.127.0) (2024-03-04)
+
+### Features
+
+- cas specifique des CC non etendues - message d'alerte ([#5637](https://github.com/SocialGouv/code-du-travail-numerique/issues/5637)) ([656bc3f](https://github.com/SocialGouv/code-du-travail-numerique/commit/656bc3fee8929fc17dd72a2ca3592615cc333a75))
+
+# [4.126.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.125.1...v4.126.0) (2024-03-04)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** correction de l'ancienneté calculée sur la 3248 ([#5654](https://github.com/SocialGouv/code-du-travail-numerique/issues/5654)) ([c9c27bc](https://github.com/SocialGouv/code-du-travail-numerique/commit/c9c27bc59b6b105f867f9e026870a8169fa08c33))
+- **indemnite-licenciement:** erreur calcul sur certaines CC ([#5664](https://github.com/SocialGouv/code-du-travail-numerique/issues/5664)) ([e4b1684](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4b168480a1bcb678a87e0542db8d0891ba5cfaf))
+- **indemnite-licenciement:** erreur lors du calcul du légal suite refacto ([#5660](https://github.com/SocialGouv/code-du-travail-numerique/issues/5660)) ([a0105e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/a0105e25a094824c38447aa9c5a03a36a7ced190))
+- **redirections:** cc 1518 qui s'auto-redirigée ([#5657](https://github.com/SocialGouv/code-du-travail-numerique/issues/5657)) ([825026e](https://github.com/SocialGouv/code-du-travail-numerique/commit/825026e051a599078cc529cd381846e1fb1af296))
+
+### Features
+
+- **indemnite-licenciement:** renomage de la prime exceptionnelle de pouvoir d’achat ([#5656](https://github.com/SocialGouv/code-du-travail-numerique/issues/5656)) ([1d63f26](https://github.com/SocialGouv/code-du-travail-numerique/commit/1d63f261393aeef125a08f7319af8d950c502d56))
+- remove contenu correspondant from h2 ([#5658](https://github.com/SocialGouv/code-du-travail-numerique/issues/5658)) ([689681f](https://github.com/SocialGouv/code-du-travail-numerique/commit/689681fb749e8bfb56ef3d73934646d58bc1c335))
+
+## [4.125.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.125.0...v4.125.1) (2024-02-27)
+
+### Bug Fixes
+
+- **workflow:** add `needs` on preproduction for e2e ([84fd34c](https://github.com/SocialGouv/code-du-travail-numerique/commit/84fd34c4e0d4531042672c78121dd335d9e3b4b5))
+
+# [4.125.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.124.0...v4.125.0) (2024-02-27)
+
+### Bug Fixes
+
+- **3248:** application des retours métiers ([#5617](https://github.com/SocialGouv/code-du-travail-numerique/issues/5617)) ([5e75576](https://github.com/SocialGouv/code-du-travail-numerique/commit/5e75576227836cf9da324957190b5e61aed5dab9))
+
+### Features
+
+- **redirections:** ajout des redirections pour les idcc `0054`, `0650`, etc. ([#5652](https://github.com/SocialGouv/code-du-travail-numerique/issues/5652)) ([eddc374](https://github.com/SocialGouv/code-du-travail-numerique/commit/eddc374a7e1e2a962ff5fb269c7915a1856425db))
+
+# [4.124.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.2...v4.124.0) (2024-02-23)
+
+### Bug Fixes
+
+- **convention-collective:** gestion des redirection des anciennes CC de la méta vers la nouvelle pour la page CC quand seulement l'IDCC dans l'url (utilisé par annuaire entreprise) ([#5648](https://github.com/SocialGouv/code-du-travail-numerique/issues/5648)) ([2550a04](https://github.com/SocialGouv/code-du-travail-numerique/commit/2550a040b3deb94e3c8c8cec8190f7d09a376700))
+
+### Features
+
+- **e2e:** ajout de tests pour les pages informations ([#5645](https://github.com/SocialGouv/code-du-travail-numerique/issues/5645)) ([8e92995](https://github.com/SocialGouv/code-du-travail-numerique/commit/8e92995699603d257e0235d5f6abaf751b380f08))
+
+## [4.123.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.1...v4.123.2) (2024-02-22)
+
+### Bug Fixes
+
+- **error:** pas de fails si pas de description ([#5643](https://github.com/SocialGouv/code-du-travail-numerique/issues/5643)) ([b3804d6](https://github.com/SocialGouv/code-du-travail-numerique/commit/b3804d65032f02fea07360001af16e124dfc1745))
+
+## [4.123.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.0...v4.123.1) (2024-02-22)
+
+### Bug Fixes
+
+- api items id -> ids ([#5642](https://github.com/SocialGouv/code-du-travail-numerique/issues/5642)) ([146ac24](https://github.com/SocialGouv/code-du-travail-numerique/commit/146ac2486375b06f4b32c37b25def323d31810fc))
+- **e2e:** correction de la path + envoie à mattermost en erreur ([#5640](https://github.com/SocialGouv/code-du-travail-numerique/issues/5640)) ([37953b3](https://github.com/SocialGouv/code-du-travail-numerique/commit/37953b3e75d21b5a3c02eabfb849a2374484dbc4))
+- **e2e:** simplification du test `footer.spec.ts` + ajout d'un mode de test `heavy` ([#5629](https://github.com/SocialGouv/code-du-travail-numerique/issues/5629)) ([bfac7ec](https://github.com/SocialGouv/code-du-travail-numerique/commit/bfac7ec22afbebd71e4bfab2a9b8ec781656ae08))
+
 # [4.123.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.122.0...v4.123.0) (2024-02-19)
 
 ### Bug Fixes

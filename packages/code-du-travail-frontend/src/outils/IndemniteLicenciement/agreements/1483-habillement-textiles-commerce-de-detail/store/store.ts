@@ -13,6 +13,7 @@ import {
 } from "./types";
 import { validateStep } from "./validator";
 import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: Agreement1483StoreData = {
   input: {
@@ -25,7 +26,10 @@ const initialState: Agreement1483StoreData = {
 
 export const createAgreement1483StoreSalaires: StoreSlice<
   Agreement1483StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice & ContratTravailStoreSlice
+  SalairesStoreSlice &
+    AncienneteStoreSlice &
+    ContratTravailStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   agreement1483Data: { ...initialState },
   agreement1483Function: {
@@ -33,6 +37,7 @@ export const createAgreement1483StoreSalaires: StoreSlice<
       const dateArretTravail = get().contratTravailData.input.dateArretTravail;
 
       if (dateArretTravail) {
+        get().situationFunction.setSituation("noticeSalaryPeriods", "[]");
         return set(
           produce((state: Agreement1483StoreSlice) => {
             state.agreement1483Data.input.noticeSalaryPeriods = [];
@@ -60,6 +65,10 @@ export const createAgreement1483StoreSalaires: StoreSlice<
         "month"
       );
 
+      get().situationFunction.setSituation(
+        "noticeSalaryPeriods",
+        JSON.stringify(noticeSalaryPeriods)
+      );
       set(
         produce((state: Agreement1483StoreSlice) => {
           state.agreement1483Data.input.noticeSalaryPeriods =
@@ -74,6 +83,10 @@ export const createAgreement1483StoreSalaires: StoreSlice<
       get().agreement1483Function.onInit();
     },
     onSalariesChange: (value) => {
+      get().situationFunction.setSituation(
+        "noticeSalaryPeriods",
+        JSON.stringify(value)
+      );
       applyGenericValidation(get, set, "noticeSalaryPeriods", value);
     },
   },

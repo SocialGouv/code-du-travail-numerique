@@ -14,14 +14,33 @@ export type CC29ReferenceSalaryProps = {
 };
 
 export enum CategoryPro29 {
-  other = "Autres salariés",
-  assistant = "Assistants familiaux des services de placements familiaux spécialisés",
-  medic = "Médecins, pharmaciens et biologistes exerçant à titre permanent",
+  other = "'Autres salariés'",
+  assistant = "'Assistants familiaux des services de placements familiaux spécialisés'",
+  medic = "'Médecins, pharmaciens et biologistes exerçant à titre permanent'",
 }
 
 export class ReferenceSalary0029
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0029>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0029> {
+    const category =
+      args[
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle"
+      ] ?? "";
+    return {
+      bestSalariesTotal:
+        args.hasSixBestSalaries === "oui"
+          ? Number(args.sixBestSalariesTotal)
+          : undefined,
+      professionalCategory: category,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
   /**
    * Règle :
    * Pour la catégorie pro :

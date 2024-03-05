@@ -23,8 +23,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
           const { result, missingArgs } = engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC1486'",
-              "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `'${CatPro1486.etam}'`,
-              "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${TypeLicenciement1486.refus}'`,
+              "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `${CatPro1486.etam}`,
+              "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `${TypeLicenciement1486.refus}`,
               "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
                 "oui",
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -97,8 +97,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
             const { result, missingArgs } = engine.setSituation(
               {
                 "contrat salarié . convention collective": "'IDCC1486'",
-                "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-                "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${TypeLicenciement1486.autre}'`,
+                "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `${category}`,
+                "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `${TypeLicenciement1486.autre}`,
                 "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
                   "oui",
                 "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -156,7 +156,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC1486'",
-            "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `${category}`,
             "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
               "non",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":

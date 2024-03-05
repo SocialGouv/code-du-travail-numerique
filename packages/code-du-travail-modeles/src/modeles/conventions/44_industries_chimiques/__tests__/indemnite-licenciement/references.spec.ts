@@ -128,7 +128,8 @@ describe("Références juridiques pour l'indemnité conventionnel de licenciemen
         ({ category, isEconomicFiring, age, seniority, salary }) => {
           engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
               isEconomicFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -173,7 +174,8 @@ describe("Références juridiques pour l'indemnité conventionnel de licenciemen
         ({ category, isEconomicFiring, age, seniority, salary }) => {
           engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
               isEconomicFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -221,7 +223,8 @@ describe("Références juridiques pour l'indemnité conventionnel de licenciemen
         ({ category, isEconomicFiring, age, seniority, salary }) => {
           engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
               isEconomicFiring ? `'Oui'` : `'Non'`,
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
@@ -280,7 +283,8 @@ describe("Références juridiques pour l'indemnité conventionnel de licenciemen
       ({ category, isEconomicFiring, age, seniority, salary, expectedRef }) => {
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0044'",
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
+            category,
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
             isEconomicFiring ? `'Oui'` : `'Non'`,
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":

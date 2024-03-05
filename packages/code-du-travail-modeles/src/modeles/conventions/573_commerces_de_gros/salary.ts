@@ -7,7 +7,7 @@ import type {
 } from "../../common";
 import {
   nonNullable,
-  QuestionOuiNon,
+  QuestionOuiNonWithQuote,
   rankByMonthArrayDescFrench,
   sum,
 } from "../../common";
@@ -20,12 +20,25 @@ export enum CatPro573 {
 
 export type CC573ReferenceSalaryProps = {
   salaires: SalaryPeriods[];
-  licenciementEco: QuestionOuiNon;
+  licenciementEco: QuestionOuiNonWithQuote;
 };
 
 export class ReferenceSalary573
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0573>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0573> {
+    return {
+      licenciementEco: args[
+        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique"
+      ] as QuestionOuiNonWithQuote,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
   /**
    * Règle :
    * - si le licenciement est pour des raisons économiques
@@ -35,9 +48,9 @@ export class ReferenceSalary573
    **/
   computeReferenceSalary({
     salaires = [],
-    licenciementEco = QuestionOuiNon.non,
+    licenciementEco = QuestionOuiNonWithQuote.non,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0573>): number {
-    if (licenciementEco === QuestionOuiNon.oui) {
+    if (licenciementEco === QuestionOuiNonWithQuote.oui) {
       const rankedSalaires = rankByMonthArrayDescFrench(salaires);
       const salaryValues = rankedSalaires
         .map((a) => a.value)

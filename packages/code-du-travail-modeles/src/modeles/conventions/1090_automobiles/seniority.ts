@@ -2,7 +2,6 @@ import { addDays, differenceInMonths } from "date-fns";
 
 import type {
   Absence,
-  ISeniority,
   Motif,
   RequiredSeniorityResult,
   SeniorityProps,
@@ -12,10 +11,9 @@ import type {
 } from "../../common";
 import { parseDate } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
+import { SeniorityDefault } from "../../common/seniority";
 
-export class Seniority1090
-  implements ISeniority<SupportedCcIndemniteLicenciement.default>
-{
+export class Seniority1090 extends SeniorityDefault<SupportedCcIndemniteLicenciement.default> {
   computeSeniority({
     dateEntree,
     dateSortie,
@@ -36,7 +34,7 @@ export class Seniority1090
     return MOTIFS_1090;
   }
 
-  private compute(
+  protected compute(
     from: string,
     to: string,
     absences: Absence[]

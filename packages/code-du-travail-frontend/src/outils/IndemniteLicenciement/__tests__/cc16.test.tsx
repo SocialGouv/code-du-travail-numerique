@@ -47,13 +47,25 @@ describe("Indemnité licenciement - CC 16", () => {
         .setInput(ui.information.agreement16.engineerAge.get(), "38")
         .click(ui.next.get())
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
-        .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
-        .setInput(ui.seniority.endDate.get(), "01/03/2022")
+        .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
+        .setInput(ui.seniority.endDate.get(), "01/03/2024")
         .click(ui.seniority.hasAbsence.non.get())
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
     });
+
+    test("Validation d'un cas avec calculs spécifiques", () => {
+      userAction
+        .click(ui.salary.hasPartialTime.non.get())
+        .click(ui.salary.hasSameSalary.oui.get())
+        .setInput(ui.salary.sameSalaryValue.get(), "2500")
+        .click(ui.next.get())
+
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+      expect(ui.result.resultat.get()).toHaveTextContent("21666,67");
+      expect(ui.result.resultatAgreement.get()).toHaveTextContent("21666.67");
+    })
 
     test(`
      - vérification que l'on demande si le salaire a eu des primes pour un cadre

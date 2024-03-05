@@ -182,6 +182,7 @@ type ContributionLinkedContent = {
   slug: string;
   source: string;
   title: string;
+  description?: string;
 };
 
 type ContributionRef = {

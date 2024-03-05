@@ -7,8 +7,8 @@ import type {
 } from "../../common";
 
 export enum CatPro3239 {
-  salarieParticulierEmployeur = "Salarié du particulier employeur",
-  assistantMaternel = "Assistant maternel",
+  salarieParticulierEmployeur = "'Salarié du particulier employeur'",
+  assistantMaternel = "'Assistant maternel'",
 }
 
 export type CC3239ReferenceSalaryProps = {
@@ -19,6 +19,19 @@ export type CC3239ReferenceSalaryProps = {
 export class ReferenceSalary3239
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC3239>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC3239> {
+    return {
+      catPro: args[
+        "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
+      ] as CatPro3239,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
   /**
    * Règle :
    * - si la catégorie professionnelle est "Assistant maternel" et que le licenciement n'est pas dû à un retrait d'Agrément
