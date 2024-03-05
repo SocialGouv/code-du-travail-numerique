@@ -3,8 +3,8 @@ import { getSourceUrlFromPath, removeQueryParameters, toUrl } from "..";
 describe("toUrl", () => {
   test.each`
     input                       | expected
-    ${"io.md"}                  | ${"azure.url/cdtn/io.md"}
-    ${"complete.url/dev/io.md"} | ${"azure.url/cdtn/io.md"}
+    ${"io.md"}                  | ${"bucket.url/default/io.md"}
+    ${"complete.url/dev/io.md"} | ${"bucket.url/default/io.md"}
     ${""}                       | ${""}
   `("should return $expected for $input", ({ input, expected }) => {
     expect(toUrl(input)).toBe(expected);
