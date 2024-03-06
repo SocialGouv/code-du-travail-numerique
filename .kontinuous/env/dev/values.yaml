@@ -9,7 +9,7 @@ jobs:
           NEXT_PUBLIC_SENTRY_RELEASE: "{{.Values.global.sha}}"
           NEXT_PUBLIC_BUCKET_DEFAULT_FOLDER: "default"
           NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER: "sitemap"
-          NEXT_PUBLIC_BUCKET_URL: https://s3.gra.io.cloud.ovh.net/cdtn-prod-public/preview
+          NEXT_PUBLIC_BUCKET_URL: https://s3.gra.io.cloud.ovh.net/cdtn-dev-public/preview
           NEXT_PUBLIC_PIWIK_SITE_ID: "3"
           NEXT_PUBLIC_PIWIK_URL: https://matomo.fabrique.social.gouv.fr
           NEXT_PUBLIC_COMMIT: "{{.Values.global.sha}}"
