@@ -39,7 +39,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       typeContratTravail: "cdi",
     });
     expect(missingArgs[0].name).toEqual(
-      "contrat salarié . indemnité de licenciement . date d'entrée"
+      "contrat salarié - indemnité de licenciement - ancienneté en année"
     );
   });
 
