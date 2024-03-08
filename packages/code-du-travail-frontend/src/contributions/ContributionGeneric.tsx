@@ -31,6 +31,8 @@ import {
   theme,
   Title,
   Wrapper,
+  Heading,
+  Text,
 } from "@socialgouv/cdtn-ui";
 import { ReferencesJuridiques } from "./References";
 import { LinkedContent } from "./LinkedContent";
@@ -91,7 +93,8 @@ const ContributionGeneric = ({ contribution }: Props) => {
 
   const isNoCDT = () => contribution && contribution.type === "generic-no-cdt";
   const showButtonToDisplayCDTContent = () =>
-    !isNoCDT() && (!showAnswer || convention);
+    !isNoCDT() &&
+    (!showAnswer || convention || entreprise?.conventions.length === 0);
   const showGeneralInformationButton = () =>
     !isNoCDT() && !showAnswer && !convention;
 
@@ -221,6 +224,26 @@ const ContributionGeneric = ({ contribution }: Props) => {
                     onUserAction={onUserAction}
                     alertAgreementNotSupported={alertAgreementNotSupported}
                     simulator="QUESTIONNAIRE"
+                    noAgreementFoundComponent={
+                      isNoCDT() ? (
+                        <Alert variant="primary">
+                          Aucune convention collective n&apos;a été déclarée
+                          pour l&apos;entreprise {entreprise?.simpleLabel}.
+                          Rapprochez vous blabla....
+                        </Alert>
+                      ) : (
+                        <Alert>
+                          <Heading as="p">
+                            Aucune convention collective n&apos;a été déclarée
+                            pour cette entreprise.
+                          </Heading>
+                          <Text>
+                            Vous pouvez tout de même poursuivre pour obtenir les
+                            informations générales
+                          </Text>
+                        </Alert>
+                      )
+                    }
                   />
                 </form>
               )}

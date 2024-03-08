@@ -13,7 +13,10 @@ export const validateStep = (state: CommonAgreementStoreInput) => {
       !state.enterprise &&
       !(state.agreement && state.agreement.num === 3239)
         ? "Vous devez sélectionner une entreprise"
-        : state.route === "enterprise" && state.enterprise && !state.agreement
+        : state.route === "enterprise" &&
+          state.enterprise &&
+          state.enterprise.conventions.length !== 0 &&
+          !state.agreement
         ? "Vous devez sélectionner une convention collective"
         : undefined,
     errorPublicodes: state.informationError
