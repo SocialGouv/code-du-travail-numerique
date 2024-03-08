@@ -46,11 +46,6 @@ const ContributionCC = ({ contribution }: Props) => {
         </Wrapper>
       </section>
       <section>
-        <Title variant="secondary" stripe="none" size="small">
-          Votre réponse pour la convention collective{" "}
-          {contribution.ccnShortTitle}
-        </Title>
-
         {contribution.highlight && contribution.highlight.content && (
           <StyledAlert variant="primary">
             <StyledParagraph
@@ -67,13 +62,13 @@ const ContributionCC = ({ contribution }: Props) => {
           </StyledAlert>
         )}
 
-        <ContributionContent contribution={contribution}  titleLevel={3} />
+        <ContributionContent contribution={contribution} titleLevel={3} />
         <ReferencesJuridiques references={contribution.references} />
 
         <p>
           Consultez les questions-réponses fréquentes pour{" "}
           <a href={`/convention-collective/${contribution.ccnSlug}`}>
-            la convention collective {contribution.ccnShortTitle}
+            votre situation
           </a>
         </p>
       </section>
