@@ -1,4 +1,4 @@
-export * from "./dismissalReasons";
+export * from "./dismissal-reasons";
 export * from "./ineligibility";
 export * from "./salary";
 export * from "./seniority";

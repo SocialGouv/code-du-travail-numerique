@@ -2,6 +2,7 @@ import type { EvaluatedNode } from "publicodes";
 
 import type { References, SeniorityResult } from "../modeles/common";
 import {
+  DismissalReasonFactory,
   ReferenceSalaryFactory,
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
@@ -9,6 +10,7 @@ import {
 import type { Publicodes } from "./Publicodes";
 import { PublicodesBase } from "./PublicodesBase";
 import type {
+  MissingArgs,
   PublicodesData,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
@@ -45,24 +47,6 @@ class RuptureConventionnellePublicodes
     return missingArg;
   }
 
-  mapMissingArg(
-    name: string
-  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
-    return {
-      missingArgs: [
-        {
-          indice: 0,
-          name,
-          rawNode: {
-            nom: name,
-          },
-        },
-      ],
-      result: { value: 0 },
-      situation: [],
-    };
-  }
-
   getReferences(): References[] {
     return super.getReferences("rupture conventionnelle");
   }
@@ -85,22 +69,65 @@ class RuptureConventionnellePublicodes
     args: Record<string, string | undefined>,
     targetRule?: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+    const dismissalReason = new DismissalReasonFactory().create(this.idcc);
+    const reasons = dismissalReason.dismissalTypes();
+    if (reasons.length === 0) {
+      return this.calculateSituation(args, targetRule);
+    } else {
+      const situations = reasons.map(({ name, rule, value }) => {
+        console.log(`Compute for reason: ${name}`);
+        const newArgs = args;
+        newArgs[rule] = value;
+        return this.calculateSituation(newArgs, targetRule);
+      });
+      const missingArgsFinal = situations.reduce<MissingArgs[]>(
+        (previous, { missingArgs }) => {
+          if (missingArgs.length > 0) {
+            return previous.concat(missingArgs);
+          }
+          return previous;
+        },
+        []
+      );
+
+      const lowerSituations = situations.reduce((previous, current) => {
+        return previous.result.value
+          ? previous.result.value < (current.result.value ?? 0)
+            ? previous
+            : current
+          : current;
+      }, situations[0]);
+
+      return {
+        missingArgs: missingArgsFinal,
+        situation: lowerSituations.situation,
+        ineligibility: situations.find(
+          ({ ineligibility }) => ineligibility !== undefined
+        )?.ineligibility,
+        result: lowerSituations.result,
+      };
+    }
+  }
+
+  protected convertedResult(
+    evaluatedNode: EvaluatedNode
+  ): PublicodesIndemniteLicenciementResult {
+    return {
+      unit: evaluatedNode.unit,
+      value: evaluatedNode.nodeValue,
+    };
+  }
+
+  private calculateSituation(
+    args: Record<string, string | undefined>,
+    targetRule?: string
+  ) {
     let newArgs = args;
-    if (
-      !args[
-        "contrat salarié . indemnité de licenciement . ancienneté en année"
-      ] ||
-      !args[
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
-      ]
-    ) {
-      const missingArg = this.getMissingArg(args, [
-        "contrat salarié . indemnité de licenciement . date d'entrée",
-        "contrat salarié . indemnité de licenciement . date de sortie",
-      ]);
-      if (missingArg) {
-        return this.mapMissingArg(missingArg);
-      }
+    const missingArgSeniority = this.getMissingArg(args, [
+      "contrat salarié . indemnité de licenciement . date d'entrée",
+      "contrat salarié . indemnité de licenciement . date de sortie",
+    ]);
+    if (!missingArgSeniority) {
       const agreement = new SeniorityFactory().create(this.idcc);
       const agreementSeniority: SeniorityResult = agreement.computeSeniority(
         agreement.mapSituation(args)
@@ -127,14 +154,6 @@ class RuptureConventionnellePublicodes
           ...agreementSeniority.extraInfos,
         };
       }
-    }
-    const missingArg = this.getMissingArg(args, [
-      "contrat salarié . indemnité de licenciement . date d'entrée",
-      "contrat salarié . indemnité de licenciement . date de sortie",
-      "contrat salarié . indemnité de licenciement . date de notification",
-    ]);
-    if (missingArg) {
-      return this.mapMissingArg(missingArg);
     }
 
     if (
@@ -181,15 +200,6 @@ class RuptureConventionnellePublicodes
     }
     const situation = this.removeNonPublicodeFields(newArgs);
     return super.setSituation(situation, targetRule);
-  }
-
-  protected convertedResult(
-    evaluatedNode: EvaluatedNode
-  ): PublicodesIndemniteLicenciementResult {
-    return {
-      unit: evaluatedNode.unit,
-      value: evaluatedNode.nodeValue,
-    };
   }
 }
 
