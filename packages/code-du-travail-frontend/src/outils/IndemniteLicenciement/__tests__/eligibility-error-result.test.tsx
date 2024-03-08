@@ -1,5 +1,5 @@
-import { CalculateurIndemnite } from "../..";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../..";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 import { render, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -20,7 +20,7 @@ Storage.prototype.getItem = jest.fn(
 
 describe(`Tests des erreurs d'éligibilité`, () => {
   beforeEach(() => {
-    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+    render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
     fireEvent.click(ui.introduction.startButton.get());
   });
 

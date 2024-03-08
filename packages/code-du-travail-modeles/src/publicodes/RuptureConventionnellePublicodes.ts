@@ -99,12 +99,12 @@ class RuptureConventionnellePublicodes
       }, situations[0]);
 
       return {
-        missingArgs: missingArgsFinal,
-        situation: lowerSituations.situation,
         ineligibility: situations.find(
           ({ ineligibility }) => ineligibility !== undefined
         )?.ineligibility,
+        missingArgs: missingArgsFinal,
         result: lowerSituations.result,
+        situation: lowerSituations.situation,
       };
     }
   }

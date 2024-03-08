@@ -33,10 +33,10 @@ describe("Gestion des multiples types de licenciement pour la CC 573", () => {
       const input = {
         "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${CatPro573.agents}'`,
-        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-          "non",
         "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age":
           "45",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
       };
 
       const result = engine.calculate(

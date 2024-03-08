@@ -1,7 +1,7 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import { push } from "@socialgouv/matomo-next";
 import userEvent from "@testing-library/user-event";
 import { UserAction } from "../../../common";
@@ -15,7 +15,7 @@ jest.mock("../../../conventions/Search/api/enterprises.service");
 describe("Indemnité licenciement - Tracking", () => {
   beforeEach(() => {
     render(
-      <CalculateurIndemnite
+      <CalculateurIndemniteLicenciement
         icon={""}
         title={"Indemnité de licenciement"}
         displayTitle={"Indemnité de licenciement"}

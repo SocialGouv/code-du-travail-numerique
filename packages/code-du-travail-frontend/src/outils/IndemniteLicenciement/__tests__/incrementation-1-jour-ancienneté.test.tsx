@@ -1,7 +1,7 @@
 import { fireEvent, render } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import userEvent from "@testing-library/user-event";
 
 jest.mock("../../../conventions/Search/api/agreements.service");
@@ -10,7 +10,7 @@ jest.mock("../../../conventions/Search/api/enterprises.service");
 describe("Page salaire: vérification l'affichage des salaires mensuels", () => {
   test("should show 12 month", async () => {
     const { getByText } = render(
-      <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
+      <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
     );
     userEvent.click(ui.introduction.startButton.get());
     userEvent.click(ui.contract.type.cdi.get());

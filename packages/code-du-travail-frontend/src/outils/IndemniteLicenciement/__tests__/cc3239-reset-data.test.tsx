@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../index";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../index";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import userEvent from "@testing-library/user-event";
 
 jest.spyOn(Storage.prototype, "setItem");
@@ -20,7 +20,7 @@ Storage.prototype.getItem = jest.fn(
 
 describe("Indemnité licenciement - CC 3239 - changement de convention collective", () => {
   beforeEach(async () => {
-    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+    render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
     fireEvent.click(ui.introduction.startButton.get());
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.fauteGrave.non.get());

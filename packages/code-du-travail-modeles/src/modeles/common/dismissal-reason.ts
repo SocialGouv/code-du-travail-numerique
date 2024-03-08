@@ -1,4 +1,7 @@
-import type { DismissalReason, IDismissalReason } from "./types/dismissalReason";
+import type {
+  DismissalReason,
+  IDismissalReason,
+} from "./types/dismissalReason";
 
 export class DismissalReasonDefault implements IDismissalReason {
   dismissalTypes(): DismissalReason[] {
