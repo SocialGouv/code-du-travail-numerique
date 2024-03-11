@@ -84,11 +84,26 @@ export const isValidDate = (date: string): boolean => {
     const day = isNaN(Number(splitParts[0])) ? null : Number(splitParts[0]);
     const month = isNaN(Number(splitParts[1])) ? null : Number(splitParts[1]);
     const year = isNaN(Number(splitParts[2])) ? null : Number(splitParts[2]);
-    const isYearValid = year && year >= 1900 && year <= 2100 ? true : false;
-    const isMonthValid = month && month >= 1 && month <= 12 ? true : false;
-    const isDayValid = day && day >= 1 && day <= 31 ? true : false;
+    if (!year || !month || !day) return false;
+    const isYearValidated = isYearValid(year);
+    const isMonthValidated = isMonthValid(month, year);
+    const isDayValidated = isDayValid(day, month, year);
     const isValidDate = /^\d{2}\/\d{2}\/\d{4}$/.test(date);
-    return isYearValid && isMonthValid && isDayValid && isValidDate;
+    return isYearValidated && isMonthValidated && isDayValidated && isValidDate;
   }
   return false;
 };
+
+function isYearValid(year: number): boolean {
+  return year >= 1900 && year <= 2100;
+}
+
+function isMonthValid(month: number, year: number): boolean {
+  const date = new Date(year, month - 1, 1);
+  return date && date.getMonth() + 1 === month;
+}
+
+function isDayValid(day: number, month: number, year: number): boolean {
+  const date = new Date(year, month - 1, day);
+  return date && date.getMonth() + 1 === month && date.getDate() === day;
+}
