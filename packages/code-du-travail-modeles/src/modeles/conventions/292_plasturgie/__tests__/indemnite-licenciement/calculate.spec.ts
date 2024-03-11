@@ -6,7 +6,7 @@ const engine = new IndemniteLicenciementPublicodes(
 );
 
 describe("Test de la fonctionnalité 'calculate'", () => {
-  test("Vérifier que l'ancienneté peut être remplacer par les dates en input", () => {
+  test("Vérifier que le calculate n'essaye pas de calculer le salaire au niveau de la step ancienneté", () => {
     const { missingArgs } = engine.calculate({
       "contrat salarié . convention collective . plasturgie . indemnité de licenciement . catégorie professionnelle":
         "'Cadres (Coefficient 900 et plus)'",
