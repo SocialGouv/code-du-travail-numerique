@@ -1,9 +1,5 @@
 import { deepEqualObject } from "../../../../../../lib";
-import {
-  AncienneteStoreConfig,
-  AncienneteStoreError,
-  AncienneteStoreInput,
-} from "../types";
+import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 import { CommonInformationsStoreInput } from "../../../../../CommonSteps/Informations/store";
 
 import { getDateEntreeErrors } from "./dateEntree";
@@ -16,17 +12,13 @@ import { ContratTravailStoreInput } from "../../../ContratTravail/store";
 
 export const validateStep = (
   state: AncienneteStoreInput,
-  config: AncienneteStoreConfig,
   stateContratTravail: ContratTravailStoreInput,
   information?: CommonInformationsStoreInput
 ) => {
-  const dateNotificationsErrors = config.showNotificationDate
-    ? getDateNotificationErrors(state)
-    : { errorDateNotification: undefined };
   const errors: AncienneteStoreError = {
     ...getDateEntreeErrors(state),
     ...getDateSortieErrors(state),
-    ...dateNotificationsErrors,
+    ...getDateNotificationErrors(state),
     ...getAbsencePeriodsErrors(state, information),
     ...getAbsenceProlongeErrors(state),
     ...getDateArretTravailErrors(state, stateContratTravail),

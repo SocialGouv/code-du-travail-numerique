@@ -61,10 +61,7 @@ const createContratTravailStore: StoreSlice<
     },
     onNextStep: () => {
       const state = get().contratTravailData.input;
-      const { isValid, errorState } = validateStep(
-        state,
-        get().contratTravailConfig
-      );
+      const { isValid, errorState } = validateStep(state);
       const simulator =
         type === IndemniteDepartType.INDEMNITE_LICENCIEMENT
           ? PublicodesSimulator.INDEMNITE_LICENCIEMENT
@@ -109,8 +106,7 @@ const applyGenericValidation = (
       draft.contratTravailData.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.contratTravailData.input,
-      nextState.contratTravailConfig
+      nextState.contratTravailData.input
     );
     set(
       produce((state: ContratTravailStoreSlice) => {

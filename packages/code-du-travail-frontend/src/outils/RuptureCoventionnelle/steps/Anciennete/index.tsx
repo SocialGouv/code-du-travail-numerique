@@ -2,11 +2,17 @@ import React, { useContext, useEffect } from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { RadioQuestion, TextQuestion } from "../../../Components";
-import { AbsencePeriods, SectionTitleWithTooltip } from "./components";
-import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
+import {
+  AbsencePeriods,
+  SectionTitleWithTooltip,
+} from "../../../CommonIndemniteDepart/steps/Anciennete/components";
+import {
+  IndemniteDepartContext,
+  useIndemniteDepartStore,
+} from "../../../CommonIndemniteDepart/store";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 // Do not optimize the following import
-import { getMessageMotifExample } from "../../agreements/ui-customizations";
+import { getMessageMotifExample } from "../../../CommonIndemniteDepart/agreements/ui-customizations";
 
 const StepAnciennete = () => {
   const store = useContext(IndemniteDepartContext);
@@ -81,22 +87,14 @@ const StepAnciennete = () => {
         autoFocus
       />
       <TextQuestion
-        label="Quelle est la date de notification du licenciement&nbsp;?"
-        inputType="date"
-        placeholder="jj/mm/aaaa"
-        value={dateNotification}
-        onChange={onChangeDateNotification}
-        error={errorDateNotification}
-        id="dateNotification"
-        showRequired
-        dataTestId={"date-notification"}
-      />
-      <TextQuestion
         label="Quelle est la date de fin du préavis de licenciement (date de fin du contrat)&nbsp;?"
         inputType="date"
         placeholder="jj/mm/aaaa"
         value={dateSortie}
-        onChange={onChangeDateSortie}
+        onChange={(value) => {
+          onChangeDateNotification(value);
+          onChangeDateSortie(value);
+        }}
         error={errorDateSortie}
         id="dateSortie"
         showRequired

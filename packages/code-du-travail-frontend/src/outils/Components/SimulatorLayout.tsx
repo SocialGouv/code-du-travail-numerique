@@ -22,7 +22,7 @@ export enum ValidationResponse {
   Valid = "valid",
 }
 
-type StepChange<StepName extends string> = {
+export type StepChange<StepName extends string> = {
   onNextStep?: () => ValidationResponse;
   onPrevStep?: () => void;
   stepName: StepName;

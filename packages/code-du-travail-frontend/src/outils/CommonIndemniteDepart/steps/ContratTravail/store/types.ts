@@ -43,6 +43,5 @@ export type ContratTravailStoreConfig = {
 
 export type ContratTravailStoreSlice = {
   contratTravailData: ContratTravailStoreData;
-  contratTravailConfig: ContratTravailStoreConfig;
   contratTravailFunction: ContratTravailStoreFn;
 };

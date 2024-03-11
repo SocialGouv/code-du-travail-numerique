@@ -183,8 +183,7 @@ const createResultStore: StoreSlice<
               ? JSON.stringify(absencePeriods)
               : undefined,
         };
-        const resultLegal = publicodes.calculate(situationLegal)
-        publicodesSituationLegal = resultLegal.result;
+        publicodesSituationLegal = publicodes.calculate(situationLegal).result;
       } catch (e) {
         errorPublicodes = true;
         Sentry.captureException(e);
@@ -249,11 +248,10 @@ const createResultStore: StoreSlice<
                 : undefined,
             ...get().situationData.situation,
           };
-          const resulCC = publicodes.calculate(
+          publicodesSituationConventionnel = publicodes.calculate(
             situation,
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          )
-          publicodesSituationConventionnel = resulCC.result;
+          ).result;
         } catch (e) {
           errorPublicodes = true;
           Sentry.captureException(e);

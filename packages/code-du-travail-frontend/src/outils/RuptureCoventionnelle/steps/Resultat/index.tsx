@@ -1,35 +1,47 @@
-import { getSupportedAgreement } from "@socialgouv/modeles-social";
-import React, { useContext } from "react";
-import { IndemniteDepartStepName } from "../..";
-import PubliReferences from "../../../common/PubliReferences";
-import Disclaimer from "../../../common/Disclaimer";
-import ShowDetails from "../../../common/ShowDetails";
-import { AgreementsInjector } from "../../agreements";
-import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
-import { getResultMessage } from "../../agreements/ui-customizations";
-import { getForMoreInfoMessage } from "../../agreements/ui-customizations/messages";
+import React, { useContext, useEffect } from "react";
+import {
+  IndemniteDepartContext,
+  useIndemniteDepartStore,
+} from "../../../CommonIndemniteDepart/store";
+import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 import {
   DecryptResult,
+  ErrorPublicodes,
   FilledElements,
   ForMoreInfo,
   FormulaInterpreter,
   Result,
-} from "./components";
-import { informationToSituation } from "../../../CommonSteps/Informations/utils";
+} from "../../../CommonIndemniteDepart/steps/Resultat/components";
+import {
+  AgreementsInjector,
+  getForMoreInfoMessage,
+  getResultMessage,
+} from "../../../CommonIndemniteDepart/agreements";
+import ShowDetails from "../../../common/ShowDetails";
+import { getSupportedAgreement } from "@socialgouv/modeles-social";
+import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
+import PubliReferences from "../../../common/PubliReferences";
+import Disclaimer from "../../../common/Disclaimer";
 
-export default function Eligible() {
+const StepResult = () => {
   const store = useContext(IndemniteDepartContext);
+  const { init, errorPublicodes, getPublicodesResult } =
+    useIndemniteDepartStore(store, (state) => ({
+      isEligible: state.resultData.input.isEligible,
+      init: state.resultFunction.init,
+      errorPublicodes: state.resultData.error.errorPublicodes,
+      getPublicodesResult: state.resultFunction.getPublicodesResult,
+    }));
+
   const {
     publicodesLegalResult,
     publicodesAgreementResult,
     typeContratTravail,
     licenciementInaptitude,
-    licenciementFauteGrave,
     agreement,
     route,
     dateEntree,
     dateSortie,
-    dateNotification,
     absencePeriods,
     salaryPeriods,
     legalFormula,
@@ -94,35 +106,15 @@ export default function Eligible() {
     isParentalNoticeHidden: state.resultData.input.isParentalNoticeHidden,
   }));
 
-  /*
+  useEffect(() => {
+    init();
+    getPublicodesResult();
+  }, [init, getPublicodesResult]);
 
-            <li>
-              Licenciement dû à une inaptitude d’origine
-              professionnelle&nbsp;:&nbsp;
-              {props.isLicenciementInaptitude ? "Oui" : "Non"}
-              {props.isLicenciementInaptitude &&
-                !props.isAgreementBetter &&
-                "*"}
-              {props.isLicenciementInaptitude && !props.isAgreementBetter && (
-                <Paragraph italic noMargin>
-                  * Le salarié ayant été licencié pour inaptitude suite à un
-                  accident du travail ou une maladie professionnelle reconnue,
-                  le montant de l&apos;indemnité de licenciement légale est
-                  doublé
-                </Paragraph>
-              )}
-              <li>
-                Arrêt de travail au moment du licenciement&nbsp;:&nbsp;
-                {props.isArretTravail ? "Oui" : "Non"}
-              </li>
-              {props.dateArretTravail && (
-                <li>
-                  Date de début de l&apos;arrêt de travail &nbsp;:&nbsp;
-                  {props.dateArretTravail}
-                </li>
-              )}
-            </li>
- */
+  if (errorPublicodes) {
+    return <ErrorPublicodes />;
+  }
+
   return (
     <>
       <Result
@@ -142,11 +134,7 @@ export default function Eligible() {
               value: typeContratTravail!.toString().toUpperCase(),
             },
             {
-              text: "Licenciement dû à une faute grave (ou lourde)",
-              value: licenciementFauteGrave === "oui" ? "Oui" : "Non",
-            },
-            {
-              text: "Licenciement dû à une inaptitude d’origine professionnelle",
+              text: "Rupture conventionnelle dûe à une inaptitude d’origine professionnelle",
               value: licenciementInaptitude === "oui" ? "Oui" : "Non",
               detail:
                 isAgreementBetter && licenciementInaptitude === "oui"
@@ -154,7 +142,7 @@ export default function Eligible() {
                   : undefined,
             },
             {
-              text: "Arrêt de travail au moment du licenciement",
+              text: "Arrêt de travail au moment de la rupture conventionnelle",
               value: arretTravail === "oui" ? "Oui" : "Non",
             },
             {
@@ -162,13 +150,12 @@ export default function Eligible() {
               value: dateArretTravail ?? "",
             },
           ]}
-          isArretTravail={arretTravail === "oui"}
           showHasTempsPartiel={showHasTempsPartiel}
           absencesPeriods={absencePeriods}
           agreementName={agreement?.shortTitle}
+          isArretTravail={arretTravail === "oui"}
           dateEntree={dateEntree!}
           dateSortie={dateSortie!}
-          dateNotification={dateNotification}
           salaryPeriods={salaryPeriods}
           hasTempsPartiel={hasTempsPartiel === "oui"}
           hasSameSalary={hasSameSalary === "oui"}
@@ -221,4 +208,6 @@ export default function Eligible() {
       />
     </>
   );
-}
+};
+
+export default StepResult;

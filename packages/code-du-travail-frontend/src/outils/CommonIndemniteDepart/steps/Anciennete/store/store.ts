@@ -1,7 +1,7 @@
 import produce from "immer";
 import { StoreApi } from "zustand";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
-import { IndemniteDepartType, StoreSlice } from "../../../../types";
+import { StoreSlice } from "../../../../types";
 import { SalairesStoreSlice } from "../../Salaires/store";
 
 import {
@@ -40,11 +40,8 @@ const createAncienneteStore: StoreSlice<
     CommonInformationsStoreSlice &
     ContratTravailStoreSlice &
     CommonSituationStoreSlice
-> = (set, get, { type }) => ({
+> = (set, get) => ({
   ancienneteData: { ...initialState },
-  ancienneteConfig: {
-    showNotificationDate: type === IndemniteDepartType.INDEMNITE_LICENCIEMENT,
-  },
   ancienneteFunction: {
     init: () => {
       const selectedAgreementIdcc = get().agreementData.input.agreement?.num;
@@ -116,7 +113,6 @@ const createAncienneteStore: StoreSlice<
     onNextStep: () => {
       const { isValid, errorState } = customSeniorityValidator(
         get().ancienneteData.input,
-        get().ancienneteConfig,
         get().contratTravailData.input,
         get().informationsData.input,
         get().agreementData.input.agreement
@@ -195,7 +191,6 @@ const applyGenericValidation = (
 
     const { isValid, errorState } = customSeniorityValidator(
       nextState.ancienneteData.input,
-      nextState.ancienneteConfig,
       nextState.contratTravailData.input,
       get().informationsData.input,
       get().agreementData.input.agreement

@@ -2,15 +2,6 @@ import React, { useContext } from "react";
 import { SimulatorLayout } from "../Components";
 import { Step } from "../Simulator";
 import {
-  StepAgreement,
-  StepAnciennete,
-  StepContratTravail,
-  StepInformations,
-  StepIntro,
-  StepResultat,
-  StepSalaires,
-} from "./steps";
-import {
   createIndemniteDepartStore,
   IndemniteDepartContext,
   IndemniteDepartProvider,
@@ -26,6 +17,7 @@ type Props = {
   title: string;
   displayTitle: string;
   tool: IndemniteDepartType;
+  steps: Step<IndemniteDepartStepName>[];
 };
 
 type SimulateurProps = Props & {
@@ -45,49 +37,12 @@ export enum IndemniteDepartStepName {
   Informations = "infos",
 }
 
-const steps: Step<IndemniteDepartStepName>[] = [
-  {
-    label: "Introduction",
-    name: IndemniteDepartStepName.Introduction,
-    Component: StepIntro,
-  },
-  {
-    label: "Contrat de travail",
-    name: IndemniteDepartStepName.ContratTravail,
-    Component: StepContratTravail,
-  },
-  {
-    label: "Convention collective",
-    name: IndemniteDepartStepName.Agreement,
-    Component: StepAgreement,
-  },
-  {
-    label: "Informations",
-    name: IndemniteDepartStepName.Informations,
-    Component: StepInformations,
-  },
-  {
-    label: "Ancienneté",
-    name: IndemniteDepartStepName.Anciennete,
-    Component: StepAnciennete,
-  },
-  {
-    label: "Salaires",
-    name: IndemniteDepartStepName.Salaires,
-    Component: StepSalaires,
-  },
-  {
-    label: "Indemnité",
-    name: IndemniteDepartStepName.Resultat,
-    Component: StepResultat,
-  },
-];
-
 const IndemniteDepartSimulator = ({
   title,
   icon,
   displayTitle,
   tool,
+  steps,
 }: SimulateurProps): JSX.Element => {
   const store = useContext(IndemniteDepartContext);
   const {
@@ -177,6 +132,7 @@ export const CalculateurIndemnite = ({
   title,
   displayTitle,
   tool,
+  steps,
 }: Props): JSX.Element => {
   const store = React.useRef(createIndemniteDepartStore(tool)).current;
 
@@ -187,6 +143,7 @@ export const CalculateurIndemnite = ({
         title={title}
         displayTitle={displayTitle}
         tool={tool}
+        steps={steps}
       />
     </IndemniteDepartProvider>
   );

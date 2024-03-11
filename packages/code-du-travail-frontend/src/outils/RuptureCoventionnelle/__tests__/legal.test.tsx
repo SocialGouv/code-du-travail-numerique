@@ -50,8 +50,9 @@ describe("Rupture conventionnelle - légale", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("300");
-    expect(ui.result.resultatLegal.get()).toHaveTextContent("300");
+
+    expect(ui.result.resultat.get()).toHaveTextContent("83,33 €");
+    expect(ui.result.resultatLegal.get()).toHaveTextContent("83.33");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent(
       "Convention collective non renseignée"
     );

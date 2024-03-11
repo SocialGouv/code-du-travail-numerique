@@ -34,10 +34,6 @@ export type AncienneteStoreData = StepData<
   AncienneteStoreError
 >;
 
-export type AncienneteStoreConfig = {
-  showNotificationDate: boolean;
-};
-
 export type AncienneteStoreFn = {
   init: () => void;
   onChangeDateEntree: (value: string) => void;
@@ -50,6 +46,5 @@ export type AncienneteStoreFn = {
 
 export type AncienneteStoreSlice = {
   ancienneteData: AncienneteStoreData;
-  ancienneteConfig: AncienneteStoreConfig;
   ancienneteFunction: AncienneteStoreFn;
 };

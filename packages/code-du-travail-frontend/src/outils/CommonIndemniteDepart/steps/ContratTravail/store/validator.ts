@@ -5,23 +5,17 @@ import {
   ContratTravailStoreInput,
 } from "./types";
 
-export const validateStep = (
-  state: ContratTravailStoreInput,
-  config: ContratTravailStoreConfig
-) => {
-  const licenciementFauteGrave = config.showFauteGrave
-    ? state.licenciementFauteGrave
-    : "non";
+export const validateStep = (state: ContratTravailStoreInput) => {
   const errorState: ContratTravailStoreError = {
     errorTypeContratTravail: !state.typeContratTravail
       ? "Vous devez répondre à cette question"
       : undefined,
     errorLicenciementFauteGrave:
-      !licenciementFauteGrave && state.typeContratTravail === "cdi"
+      !state.licenciementFauteGrave && state.typeContratTravail === "cdi"
         ? "Vous devez répondre à cette question"
         : undefined,
     errorLicenciementInaptitude:
-      !state.licenciementInaptitude && licenciementFauteGrave === "non"
+      !state.licenciementInaptitude && state.licenciementFauteGrave === "non"
         ? "Vous devez répondre à cette question"
         : undefined,
     errorArretTravail:

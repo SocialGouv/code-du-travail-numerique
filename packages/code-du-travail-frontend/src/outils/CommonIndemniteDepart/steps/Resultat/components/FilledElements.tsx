@@ -33,7 +33,32 @@ type Props = {
   disableParentalNotice?: boolean;
 };
 
-export default function FilledElements(props: Props) {
+type SituationItem = {
+  text: string;
+  value: string;
+  detail?: string;
+};
+type NewProps = {
+  contractTravail: SituationItem[];
+  agreementName?: string;
+  isArretTravail: boolean;
+  agreementInformations?: AgreementInformation[];
+  agreementRefSalaryInfo: React.ReactNode;
+  dateEntree: string;
+  dateSortie: string;
+  dateNotification?: string;
+  absencesPeriods: Absence[];
+  salaryPeriods: SalaryPeriods[];
+  hasTempsPartiel: boolean;
+  isAgreementBetter: boolean;
+  hasSameSalary: boolean;
+  salary?: string;
+  isStepSalaryHidden: boolean;
+  showHasTempsPartiel: boolean;
+  disableParentalNotice?: boolean;
+};
+
+export default function FilledElements(props: NewProps) {
   return (
     <>
       <SectionTitle>Éléments saisis</SectionTitle>
@@ -41,41 +66,19 @@ export default function FilledElements(props: Props) {
         <li>
           <strong>Contrat de travail</strong>
           <ul>
-            <li>
-              Type de contrat&nbsp;:&nbsp;{props.typeContrat.toUpperCase()}
-            </li>
-            {props.isLicenciementFauteGrave && (
-              <li>
-                Licenciement dû à une faute grave (ou lourde)&nbsp;:&nbsp;
-                {props.isLicenciementFauteGrave ? "Oui" : "Non"}
-              </li>
-            )}
-            <li>
-              Licenciement dû à une inaptitude d’origine
-              professionnelle&nbsp;:&nbsp;
-              {props.isLicenciementInaptitude ? "Oui" : "Non"}
-              {props.isLicenciementInaptitude &&
-                !props.isAgreementBetter &&
-                "*"}
-              {props.isLicenciementInaptitude && !props.isAgreementBetter && (
-                <Paragraph italic noMargin>
-                  * Le salarié ayant été licencié pour inaptitude suite à un
-                  accident du travail ou une maladie professionnelle reconnue,
-                  le montant de l&apos;indemnité de licenciement légale est
-                  doublé
-                </Paragraph>
-              )}
-              <li>
-                Arrêt de travail au moment du licenciement&nbsp;:&nbsp;
-                {props.isArretTravail ? "Oui" : "Non"}
-              </li>
-              {props.dateArretTravail && (
-                <li>
-                  Date de début de l&apos;arrêt de travail &nbsp;:&nbsp;
-                  {props.dateArretTravail}
+            {props.contractTravail.map((item) => {
+              return (
+                <li key={item.text}>
+                  {item.text}&nbsp;:&nbsp;{item.value}
+                  {item.detail && "*"}
+                  {item.detail && (
+                    <Paragraph italic noMargin>
+                      * {item.detail}
+                    </Paragraph>
+                  )}
                 </li>
-              )}
-            </li>
+              );
+            })}
           </ul>
         </li>
         <li>
