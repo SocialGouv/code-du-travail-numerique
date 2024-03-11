@@ -78,9 +78,6 @@ const createContratTravailStore: StoreSlice<
         } catch (e) {
           console.error(e);
           Sentry.captureException(e);
-          Sentry.captureMessage(
-            "Error sur publicodes à l'étape Contrat de travail"
-          );
         }
       }
 
