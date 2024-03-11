@@ -22,6 +22,7 @@ describe("Validate html", () => {
   it("pages should be valid", () => {
     urls.forEach((url) => {
       cy.visit(url);
+      cy.log("Url: " + url);
       cy.htmlvalidate({
         rules: {
           "heading-level": "error",
