@@ -68,13 +68,3 @@ contrat salarié . convention collective . industrie pharmaceutique . préavis d
   références:
     Article 35: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005857748?idConteneur=KALICONT000005635184
     Article 38: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000039117114/?idConteneur=KALICONT000005635184
-
-contrat salarié . convention collective . industrie pharmaceutique . notification:
-  applicable si:
-    toutes ces conditions:
-      - conclu après 1 juillet 2019
-      - groupe >= 4
-      - contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
-  type: notification
-  description: Cette durée ne s'applique que si les salariés ne bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947.
-  valeur: oui
