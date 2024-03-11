@@ -4,7 +4,7 @@ describe("Validate html", () => {
   const urls: string[] = ["/convention-collective", "/contribution"];
   before(() => {
     cy.request(
-      "https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/plan-du-site"
+      "/api/plan-du-site"
     ).then((response) => {
       const agreements = response.body.agreements;
       const contributions = response.body.contributions;
