@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.128.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.127.0...v4.128.0) (2024-03-11)
+
+### Bug Fixes
+
+- bug calculate si pas de salaires ([#5683](https://github.com/SocialGouv/code-du-travail-numerique/issues/5683)) ([6f2acbc](https://github.com/SocialGouv/code-du-travail-numerique/commit/6f2acbca31c0dfd191ec529c6202d430940cbaf3))
+- **simulateurs:** modification pour la CC 176 ([#5677](https://github.com/SocialGouv/code-du-travail-numerique/issues/5677)) ([b432392](https://github.com/SocialGouv/code-du-travail-numerique/commit/b4323924ca595c5676fd2776757e2219302da2ab))
+- **simulateurs:** retours sur la 176 ([160aca4](https://github.com/SocialGouv/code-du-travail-numerique/commit/160aca4878867908df57d52015141a8519533ca9))
+
+### Features
+
+- **rupture-co:** ajout de la partie légale dans le modèle ([#5650](https://github.com/SocialGouv/code-du-travail-numerique/issues/5650)) ([e650a56](https://github.com/SocialGouv/code-du-travail-numerique/commit/e650a5683d75cd78749bc1c4ad7b396cabde7799))
+
 # [4.127.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.126.0...v4.127.0) (2024-03-04)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
