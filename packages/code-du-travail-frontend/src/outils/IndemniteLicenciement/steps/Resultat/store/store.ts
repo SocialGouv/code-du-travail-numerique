@@ -187,6 +187,7 @@ const createResultStore: StoreSlice<
       } catch (e) {
         errorPublicodes = true;
         Sentry.captureException(e);
+        Sentry.captureMessage("Error sur publicodes à l'étape Résultat");
         console.error(e);
       }
 
@@ -255,6 +256,7 @@ const createResultStore: StoreSlice<
         } catch (e) {
           errorPublicodes = true;
           Sentry.captureException(e);
+          Sentry.captureMessage("Error sur publicodes à l'étape Résultat");
           console.error(e);
         }
 

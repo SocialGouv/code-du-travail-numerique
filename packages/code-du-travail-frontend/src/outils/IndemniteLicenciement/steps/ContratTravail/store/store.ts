@@ -13,6 +13,7 @@ import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informatio
 import { loadPublicodes } from "../../../../api";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
+import * as Sentry from "@sentry/nextjs";
 
 const initialState: ContratTravailStoreData = {
   input: {},
@@ -59,17 +60,28 @@ const createContratTravailStore: StoreSlice<
     onNextStep: () => {
       const state = get().contratTravailData.input;
       const { isValid, errorState } = validateStep(state);
-      const publicodes =
-        loadPublicodes<PublicodesSimulator.INDEMNITE_LICENCIEMENT>(
-          PublicodesSimulator.INDEMNITE_LICENCIEMENT
-        );
-      const { result, ineligibility } = publicodes.calculate(
-        get().situationData.situation
-      );
       let errorEligibility;
 
-      if (result.value === 0 && ineligibility) {
-        errorEligibility = ineligibility;
+      if (isValid) {
+        try {
+          const publicodes =
+            loadPublicodes<PublicodesSimulator.INDEMNITE_LICENCIEMENT>(
+              PublicodesSimulator.INDEMNITE_LICENCIEMENT
+            );
+          const { result, ineligibility } = publicodes.calculate(
+            get().situationData.situation
+          );
+
+          if (result.value === 0 && ineligibility) {
+            errorEligibility = ineligibility;
+          }
+        } catch (e) {
+          console.error(e);
+          Sentry.captureException(e);
+          Sentry.captureMessage(
+            "Error sur publicodes à l'étape Contrat de travail"
+          );
+        }
       }
 
       set(
