@@ -200,6 +200,7 @@ class IndemniteLicenciementPublicodes
       }
     }
     if (
+      args.salaryPeriods &&
       !args[
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
       ]
