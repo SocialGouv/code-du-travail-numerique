@@ -139,13 +139,12 @@ class IndemniteLicenciementPublicodes
       }
     }
     if (
-      args.salaryPeriods &&
-      (!args[
+      !args[
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
       ] ||
-        !args[
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
-        ])
+      !args[
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
+      ]
     ) {
       const missingArg = this.getMissingArg(args, [
         "contrat salarié . indemnité de licenciement . date d'entrée",
