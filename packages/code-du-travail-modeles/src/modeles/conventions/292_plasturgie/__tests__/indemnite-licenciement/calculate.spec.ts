@@ -22,25 +22,23 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(missingArgs).toContain([
-      {
-        indice: 2,
-        name: "contrat salarié - indemnité de licenciement - ancienneté requise en année",
-        rawNode: {
-          nom: "contrat salarié . indemnité de licenciement . ancienneté requise en année",
-          titre:
-            "Ancienneté calculée pour le droit à l'indemnité de licenciement",
-          unité: "an",
-        },
+    expect(missingArgs[0]).toEqual({
+      indice: 2,
+      name: "contrat salarié - indemnité de licenciement - ancienneté requise en année",
+      rawNode: {
+        nom: "contrat salarié . indemnité de licenciement . ancienneté requise en année",
+        titre:
+          "Ancienneté calculée pour le droit à l'indemnité de licenciement",
+        unité: "an",
       },
-      {
-        indice: 1,
-        name: "contrat salarié - indemnité de licenciement - salaire de référence",
-        rawNode: {
-          nom: "contrat salarié . indemnité de licenciement . salaire de référence",
-          unité: "€",
-        },
+    });
+    expect(missingArgs[1]).toEqual({
+      indice: 1,
+      name: "contrat salarié - indemnité de licenciement - salaire de référence",
+      rawNode: {
+        nom: "contrat salarié . indemnité de licenciement . salaire de référence",
+        unité: "€",
       },
-    ]);
+    });
   });
 });
