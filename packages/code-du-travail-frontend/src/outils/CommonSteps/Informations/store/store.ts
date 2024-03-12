@@ -53,7 +53,7 @@ const createCommonInformationsStore: StoreSlice<
         get().contratTravailData.input.licenciementInaptitude === "oui";
       try {
         if (agreement && isAgreementSupportedIndemniteLicenciement) {
-          const result = publicodes.setSituation(
+          const result = publicodes.calculate(
             mapToPublicodesSituationForIndemniteLicenciementConventionnel(
               agreement.num,
               isLicenciementInaptitude,
@@ -139,7 +139,7 @@ const createCommonInformationsStore: StoreSlice<
         let missingArgs: MissingArgs[] = [];
         let blockingNotification: any = undefined;
         try {
-          const result = publicodes.setSituation(
+          const result = publicodes.calculate(
             mapToPublicodesSituationForIndemniteLicenciementConventionnel(
               agreement.num,
               isLicenciementInaptitude,

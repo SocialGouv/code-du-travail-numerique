@@ -45,24 +45,6 @@ class IndemniteLicenciementPublicodes
     return missingArg;
   }
 
-  mapMissingArg(
-    name: string
-  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
-    return {
-      missingArgs: [
-        {
-          indice: 0,
-          name,
-          rawNode: {
-            nom: name,
-          },
-        },
-      ],
-      result: { value: 0 },
-      situation: [],
-    };
-  }
-
   mapIneligibility(
     text: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
@@ -98,21 +80,11 @@ class IndemniteLicenciementPublicodes
     if (ineligibility) {
       return this.mapIneligibility(ineligibility);
     }
-    if (
-      !args[
-        "contrat salarié . indemnité de licenciement . ancienneté en année"
-      ] ||
-      !args[
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
-      ]
-    ) {
-      const missingArg = this.getMissingArg(args, [
-        "contrat salarié . indemnité de licenciement . date d'entrée",
-        "contrat salarié . indemnité de licenciement . date de sortie",
-      ]);
-      if (missingArg) {
-        return this.mapMissingArg(missingArg);
-      }
+    const missingArgSeniority = this.getMissingArg(args, [
+      "contrat salarié . indemnité de licenciement . date d'entrée",
+      "contrat salarié . indemnité de licenciement . date de sortie",
+    ]);
+    if (!missingArgSeniority) {
       const agreement = new SeniorityFactory().create(this.idcc);
       const agreementSeniority = agreement.computeSeniority(
         agreement.mapSituation(args)
@@ -138,22 +110,12 @@ class IndemniteLicenciementPublicodes
         };
       }
     }
-    if (
-      !args[
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année"
-      ] ||
-      !args[
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
-      ]
-    ) {
-      const missingArg = this.getMissingArg(args, [
-        "contrat salarié . indemnité de licenciement . date d'entrée",
-        "contrat salarié . indemnité de licenciement . date de sortie",
-        "contrat salarié . indemnité de licenciement . date de notification",
-      ]);
-      if (missingArg) {
-        return this.mapMissingArg(missingArg);
-      }
+    const missingArgRequiredSeniority = this.getMissingArg(args, [
+      "contrat salarié . indemnité de licenciement . date d'entrée",
+      "contrat salarié . indemnité de licenciement . date de sortie",
+      "contrat salarié . indemnité de licenciement . date de notification",
+    ]);
+    if (!missingArgRequiredSeniority) {
       const agreement = new SeniorityFactory().create(this.idcc);
       const agreementRequiredSeniority = agreement.computeRequiredSeniority(
         agreement.mapRequiredSituation(args)
@@ -175,6 +137,7 @@ class IndemniteLicenciementPublicodes
         ] = agreementRequiredSeniority.value.toString();
       }
     }
+
     const ineligibilityWithSeniority =
       ineligibilityInstance.getIneligibility(newArgs);
     if (ineligibilityWithSeniority) {
