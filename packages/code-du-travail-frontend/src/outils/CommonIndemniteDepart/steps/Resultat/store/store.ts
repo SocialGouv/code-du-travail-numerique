@@ -248,10 +248,11 @@ const createResultStore: StoreSlice<
                 : undefined,
             ...get().situationData.situation,
           };
-          publicodesSituationConventionnel = publicodes.calculate(
+          const resultCC = publicodes.calculate(
             situation,
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          ).result;
+          )
+          publicodesSituationConventionnel = resultCC.result;
         } catch (e) {
           errorPublicodes = true;
           Sentry.captureException(e);

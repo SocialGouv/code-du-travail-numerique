@@ -94,35 +94,6 @@ export default function Eligible() {
     isParentalNoticeHidden: state.resultData.input.isParentalNoticeHidden,
   }));
 
-  /*
-
-            <li>
-              Licenciement dû à une inaptitude d’origine
-              professionnelle&nbsp;:&nbsp;
-              {props.isLicenciementInaptitude ? "Oui" : "Non"}
-              {props.isLicenciementInaptitude &&
-                !props.isAgreementBetter &&
-                "*"}
-              {props.isLicenciementInaptitude && !props.isAgreementBetter && (
-                <Paragraph italic noMargin>
-                  * Le salarié ayant été licencié pour inaptitude suite à un
-                  accident du travail ou une maladie professionnelle reconnue,
-                  le montant de l&apos;indemnité de licenciement légale est
-                  doublé
-                </Paragraph>
-              )}
-              <li>
-                Arrêt de travail au moment du licenciement&nbsp;:&nbsp;
-                {props.isArretTravail ? "Oui" : "Non"}
-              </li>
-              {props.dateArretTravail && (
-                <li>
-                  Date de début de l&apos;arrêt de travail &nbsp;:&nbsp;
-                  {props.dateArretTravail}
-                </li>
-              )}
-            </li>
- */
   return (
     <>
       <Result
@@ -157,11 +128,16 @@ export default function Eligible() {
               text: "Arrêt de travail au moment du licenciement",
               value: arretTravail === "oui" ? "Oui" : "Non",
             },
-            {
-              text: "Date de début de l'arrêt de travail",
-              value: dateArretTravail ?? "",
-            },
-          ]}
+          ].concat(
+            dateArretTravail
+              ? [
+                  {
+                    text: "Date de début de l'arrêt de travail",
+                    value: dateArretTravail,
+                  },
+                ]
+              : []
+          )}
           isArretTravail={arretTravail === "oui"}
           showHasTempsPartiel={showHasTempsPartiel}
           absencesPeriods={absencePeriods}
@@ -200,6 +176,7 @@ export default function Eligible() {
             isAgreementSupported={isAgreementSupported}
             legalResult={publicodesLegalResult.value?.toString() ?? ""}
             agreementResult={publicodesAgreementResult?.value?.toString()}
+            label="licenciement"
           />
         )}
         <PubliReferences

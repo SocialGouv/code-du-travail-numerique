@@ -8,13 +8,15 @@ describe("<FilledElement />", () => {
     expect(
       render(
         <FilledElement
-          typeContrat="contrat"
-          isLicenciementFauteGrave={true}
+          contractTravail={[
+            {
+              text: "Type de contrat",
+              value: "CDI",
+            },
+          ]}
           agreementName="agreementName"
-          isLicenciementInaptitude={true}
           showHasTempsPartiel={true}
           isArretTravail={true}
-          dateArretTravail="01/01/2020"
           agreementInformations={[
             {
               label: "label",

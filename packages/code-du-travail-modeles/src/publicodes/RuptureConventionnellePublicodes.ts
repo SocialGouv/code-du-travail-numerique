@@ -156,6 +156,23 @@ class RuptureConventionnellePublicodes
       }
     }
 
+    const missingArgRequiredSeniority = this.getMissingArg(args, [
+      "contrat salarié . indemnité de licenciement . date d'entrée",
+      "contrat salarié . indemnité de licenciement . date de sortie",
+      "contrat salarié . indemnité de licenciement . date de notification",
+    ]);
+    if (!missingArgRequiredSeniority) {
+      const agreement = new SeniorityFactory().create(this.idcc);
+      const agreementRequiredSeniority = agreement.computeRequiredSeniority(
+        agreement.mapRequiredSituation(args)
+      );
+      if (agreementRequiredSeniority.value) {
+        newArgs[
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
+        ] = agreementRequiredSeniority.value.toString();
+      }
+    }
+
     if (
       !args[
         "contrat salarié . indemnité de licenciement . salaire de référence"

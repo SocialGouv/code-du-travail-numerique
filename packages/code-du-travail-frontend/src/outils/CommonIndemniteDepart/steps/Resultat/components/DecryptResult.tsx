@@ -6,21 +6,23 @@ type Props = {
   isAgreementSupported: boolean;
   legalResult: string;
   agreementResult?: string;
+  label: string;
 };
 
 export default function DecryptResult(props: Props) {
   const getExplanation = () => {
     const parseAgreementResult = parseFloat(props.agreementResult ?? "");
     const legalAgreementResult = parseFloat(props.legalResult);
+    const label = props.label;
     if (!props.hasSelectedAgreement) {
-      return "La convention collective n’ayant pas été renseignée, le montant de l’indemnité de licenciement affiché correspond au montant prévu par le code du travail.";
+      return `La convention collective n’ayant pas été renseignée, le montant de l’indemnité de ${label} affiché correspond au montant prévu par le code du travail.`;
     } else if (!props.isAgreementSupported) {
-      return "La convention collective n’ayant pas été traitée par nos services, le montant de l’indemnité de licenciement affiché correspond au montant prévu par le code du travail.";
+      return `La convention collective n’ayant pas été traitée par nos services, le montant de l’indemnité de ${label} affiché correspond au montant prévu par le code du travail.`;
     } else if (!isNaN(parseAgreementResult)) {
       if (parseAgreementResult === 0) {
-        return "En l’absence de montant prévu par la convention collective, le montant de l’indemnité de licenciement à appliquer pour le salarié est donc le montant prévu par le code du travail.";
+        return `En l’absence de montant prévu par la convention collective, le montant de l’indemnité de ${label} à appliquer pour le salarié est donc le montant prévu par le code du travail.`;
       } else if (legalAgreementResult === 0 && parseAgreementResult > 0) {
-        return "En l’absence de montant prévu par le code du travail, le montant de l’indemnité de licenciement à appliquer pour le salarié est donc le montant prévu par la convention collective.";
+        return `En l’absence de montant prévu par le code du travail, le montant de l’indemnité de ${label} à appliquer pour le salarié est donc le montant prévu par la convention collective.`;
       } else if (parseAgreementResult !== 0 && legalAgreementResult !== 0) {
         if (parseAgreementResult === legalAgreementResult) {
           return "Le montant prévu par le code du travail est le même que celui prévu par la convention collective.";

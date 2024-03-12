@@ -10,6 +10,7 @@ describe("<DecryptResult />", () => {
         isAgreementSupported={true}
         legalResult="0"
         agreementResult="0"
+        label="licenciement"
       />
     );
     expect(
@@ -25,6 +26,7 @@ describe("<DecryptResult />", () => {
         isAgreementSupported={true}
         legalResult="0"
         agreementResult="0"
+        label="licenciement"
       />
     );
     expect(
@@ -40,6 +42,7 @@ describe("<DecryptResult />", () => {
         isAgreementSupported={false}
         legalResult="0"
         agreementResult="0"
+        label="licenciement"
       />
     );
     expect(
@@ -56,6 +59,7 @@ describe("<DecryptResult />", () => {
         isAgreementSupported={true}
         legalResult="0"
         agreementResult="100"
+        label="licenciement"
       />
     );
     expect(
@@ -72,6 +76,7 @@ describe("<DecryptResult />", () => {
         isAgreementSupported={true}
         legalResult="10"
         agreementResult="100"
+        label="licenciement"
       />
     );
     expect(
@@ -88,6 +93,7 @@ describe("<DecryptResult />", () => {
         isAgreementSupported={true}
         legalResult="100"
         agreementResult="10"
+        label="licenciement"
       />
     );
     expect(
@@ -104,11 +110,28 @@ describe("<DecryptResult />", () => {
         isAgreementSupported={true}
         legalResult="100"
         agreementResult="100"
+        label="licenciement"
       />
     );
     expect(
       queryByText(
         /Le montant prévu par le code du travail est le même que celui prévu par la convention collective./i
+      )
+    ).toBeInTheDocument();
+  });
+  it("should render with the label provided", () => {
+    const { queryByText } = render(
+      <DecryptResult
+        hasSelectedAgreement={true}
+        isAgreementSupported={true}
+        legalResult="0"
+        agreementResult="0"
+        label="rupture conventionnelle"
+      />
+    );
+    expect(
+      queryByText(
+        /En l’absence de montant prévu par la convention collective, le montant de l’indemnité de rupture conventionnelle à appliquer pour le salarié est donc le montant prévu par le code du travail./i
       )
     ).toBeInTheDocument();
   });
