@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { ModelesController, runMiddleware } from "../../src/api";
+import { ModelesController, runMiddleware } from "../../../src/api";
 
 export default async function handler(
   req: NextApiRequest,
@@ -8,6 +8,6 @@ export default async function handler(
   await runMiddleware(req, res);
   const controller = new ModelesController(req, res);
   if (req.method === "GET") {
-    controller.get();
+    controller.getById();
   }
 }

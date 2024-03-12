@@ -37,8 +37,7 @@ function Widgets(props: LetterModelProps): JSX.Element {
   );
 }
 
-const fetchCourrier = ({ id }) =>
-  fetch(`${SITE_URL}/api/items?source=modeles_de_courriers&id=${id}`);
+const fetchCourrier = ({ id }) => fetch(`${SITE_URL}/api/modeles/${id}`);
 
 export const getServerSideProps = async ({ query }) => {
   const response = await fetchCourrier(query);
@@ -50,7 +49,7 @@ export const getServerSideProps = async ({ query }) => {
   if (!data.length) {
     return handleError({ status: 404 });
   }
-  return { props: { relatedItems: [], ...data[0]._source } };
+  return { props: { relatedItems: [], ...data[0] } };
 };
 
 export default Widgets;
