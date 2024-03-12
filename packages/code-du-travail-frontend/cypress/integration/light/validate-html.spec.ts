@@ -1,28 +1,12 @@
 import "cypress-html-validate/commands";
 
+import urls from "../../support/urls-to-validate.json"
+
 describe("Validate html", () => {
-  const urls: string[] = ["/convention-collective", "/contribution"];
-  before(() => {
-    cy.request(
-      "/api/plan-du-site"
-    ).then((response) => {
-      const agreements = response.body.agreements;
-      const contributions = response.body.contributions;
-      contributions.forEach((contrib) => {
-        urls.push("/contribution/" + contrib.generic.slug);
-        contrib.agreements.forEach((doc) => {
-          urls.push("/contribution/" + doc.slug);
-        });
-      });
-      agreements.forEach((doc) => {
-        urls.push("/convention-collective/" + doc.slug);
-      });
-    });
-  });
-  it("pages should be valid", () => {
-    urls.forEach((url) => {
+
+  urls.forEach((url) => {
+    it("pages should be valid: " + url, () => {
       cy.visit(url);
-      cy.log("Url: " + url);
       cy.htmlvalidate({
         rules: {
           "heading-level": "error",
