@@ -4,7 +4,9 @@ import fs from "fs";
 export const downloadAllUrlsToValidate = async () => {
   const urls: string[] = ["/convention-collective", "/contribution"];
 
-  const response = await fetch("/api/plan-du-site");
+  const response = await fetch(
+    "https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/plan-du-site"
+  );
   const data = await response.json();
 
   data.agreements.forEach((doc) => {
