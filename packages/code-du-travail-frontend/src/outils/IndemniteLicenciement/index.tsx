@@ -55,7 +55,7 @@ const steps: Step<IndemniteDepartStepName>[] = [
   {
     label: "Indemnité",
     name: IndemniteDepartStepName.Resultat,
-    Component: StepResultat,
+    Component: () => <StepResultat />,
   },
 ];
 
