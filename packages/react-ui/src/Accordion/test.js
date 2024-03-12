@@ -12,8 +12,11 @@ describe("<Accordion />", () => {
   });
   it("renders as h2", () => {
     const items = [{ body: "this is the body", title: "This is the title" }];
-    const { container } = render(<Accordion titleLevel={2} items={items} />);
+    const { container, getByText } = render(
+      <Accordion titleLevel={2} items={items} />
+    );
     expect(container).toMatchSnapshot();
+    expect(getByText("This is the title").tagName).toEqual("H2");
   });
   it("renders as a tile accordion with an icon", () => {
     const items = [{ body: "this is the body", title: "This is the title" }];
@@ -31,5 +34,16 @@ describe("<Accordion />", () => {
     ];
     const { container } = render(<Accordion titleLevel={3} items={items} />);
     expect(container).toMatchSnapshot();
+  });
+  it("do not render heading if titleLevel > 6", () => {
+    const items = [
+      {
+        body: "Body",
+        title: "Ceci est un titre",
+        variant: "hierarchy",
+      },
+    ];
+    const { getByText } = render(<Accordion titleLevel={7} items={items} />);
+    expect(getByText("Ceci est un titre").tagName).toEqual("P");
   });
 });
