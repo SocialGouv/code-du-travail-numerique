@@ -5,7 +5,7 @@ import urls from "../../support/urls-to-validate.json"
 describe("Validate html", () => {
 
   urls.forEach((url) => {
-    it("pages should be valid: " + url, () => {
+    it("page should be valid: " + url, () => {
       cy.visit(url);
       cy.htmlvalidate({
         rules: {

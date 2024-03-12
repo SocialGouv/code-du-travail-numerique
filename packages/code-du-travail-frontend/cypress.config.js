@@ -1,6 +1,7 @@
 import { defineConfig } from "cypress";
 import dotenv from "dotenv";
 import htmlvalidate from "cypress-html-validate/plugin";
+import { downloadAllUrlsToValidate } from "./cypress/support/before";
 
 dotenv.config();
 
@@ -17,6 +18,9 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     setupNodeEvents(on) {
       htmlvalidate.install(on);
+      on("before:run", () => {
+        downloadAllUrlsToValidate();
+      });
     },
   },
   video: false,
