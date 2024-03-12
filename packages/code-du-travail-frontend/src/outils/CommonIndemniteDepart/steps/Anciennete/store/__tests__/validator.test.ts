@@ -21,7 +21,6 @@ describe("Ancienneté store", () => {
           ],
           hasAbsenceProlonge: "oui",
         },
-        { showNotificationDate: true},
         {},
         {
           publicodesInformations: [],
@@ -60,7 +59,6 @@ describe("Ancienneté store", () => {
           ],
           hasAbsenceProlonge: "oui",
         },
-        { showNotificationDate: true},
         {},
         {
           publicodesInformations: [],
@@ -100,7 +98,6 @@ describe("Ancienneté store", () => {
           ],
           hasAbsenceProlonge: "oui",
         },
-        { showNotificationDate: true},
         {},
         {
           publicodesInformations: [],
@@ -140,7 +137,6 @@ describe("Ancienneté store", () => {
           ],
           hasAbsenceProlonge: "oui",
         },
-        { showNotificationDate: true},
         {},
         {
           publicodesInformations: [],
@@ -177,7 +173,6 @@ describe("Ancienneté store", () => {
           ],
           hasAbsenceProlonge: "oui",
         },
-        { showNotificationDate: true},
         {
           dateArretTravail: "01/01/2019",
           arretTravail: "oui",
@@ -217,7 +212,6 @@ describe("Ancienneté store", () => {
           ],
           hasAbsenceProlonge: "oui",
         },
-        { showNotificationDate: true},
         {
           dateArretTravail: "01/01/2023",
           arretTravail: "oui",
@@ -256,7 +250,6 @@ describe("Ancienneté store", () => {
           ],
           hasAbsenceProlonge: "oui",
         },
-        { showNotificationDate: true},
         {
           dateArretTravail: "01/01/2023",
           arretTravail: "non",

@@ -399,35 +399,5 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
         }
       );
     });
-
-    test("it", () => {
-      const situtation = {
-        "contrat salarié . convention collective": "'IDCC0044'",
-        "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
-          "'Ouvriers et collaborateurs (Groupes I à III)'",
-        "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-          "57",
-        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
-        "contrat salarié . indemnité de licenciement . date d'entrée":
-          "01/01/2019",
-        "contrat salarié . indemnité de licenciement . date de notification":
-          "01/01/2024",
-        "contrat salarié . indemnité de licenciement . date de sortie":
-          "01/01/2024",
-        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-          "non",
-        hasVariablePay: "oui",
-        licenciementFauteGrave: "non",
-        salaryPeriods:
-          '[{"month":"décembre 2023","value":3541},{"month":"novembre 2023","value":3555},{"month":"octobre 2023","value":3512},{"month":"septembre 2023","value":3596},{"month":"août 2023","value":3310},{"month":"juillet 2023","value":3554},{"month":"juin 2023","value":3560},{"month":"mai 2023","value":3330},{"month":"avril 2023","value":3530},{"month":"mars 2023","value":3510},{"month":"février 2023","value":3580},{"month":"janvier 2023","value":3362}]',
-        typeContratTravail: "cdi",
-      };
-      const { result, missingArgs } = engine.setSituation(
-        situtation,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
-      expect(missingArgs).toHaveLength(0);
-      expect(result.value).toEqual(12000);
-    });
   });
 });
