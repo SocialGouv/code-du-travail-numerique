@@ -16,7 +16,8 @@ export const getSearchBySourceSlugBody = ({
       "dateDebut", // code-du-travail
       "description", // modele de courrier,
       "filesize", // modele de courrier, informations
-      "fileUrl", // modele de courrier, informations
+      "fileUrl", // informations
+      "filename", // modele de courrier
       "imgUrl",
       "intro",
       "html",
