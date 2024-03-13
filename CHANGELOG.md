@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.129.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.128.0...v4.129.0) (2024-03-13)
+
+### Features
+
+- **indemnite-licenciement:** use calculate from information step ([#5675](https://github.com/SocialGouv/code-du-travail-numerique/issues/5675)) ([8534bfd](https://github.com/SocialGouv/code-du-travail-numerique/commit/8534bfd6d1f4afaa7f0166cc5c931c2489561136))
+- **upload:** use `s3` instead of `azure` ([#5672](https://github.com/SocialGouv/code-du-travail-numerique/issues/5672)) ([7110810](https://github.com/SocialGouv/code-du-travail-numerique/commit/7110810f0fab5ab841f6cff6b9d4ea07c53e4dfb))
+
 # [4.128.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.127.0...v4.128.0) (2024-03-11)
 
 ### Bug Fixes
