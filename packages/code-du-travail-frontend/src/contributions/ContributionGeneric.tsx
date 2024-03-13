@@ -228,19 +228,26 @@ const ContributionGeneric = ({ contribution }: Props) => {
                       isNoCDT() ? (
                         <Alert variant="primary">
                           Aucune convention collective n&apos;a été déclarée
-                          pour l&apos;entreprise {entreprise?.simpleLabel}.
-                          Rapprochez vous blabla....
+                          pour l&apos;entreprise {entreprise?.simpleLabel}. Or,
+                          la convention collective est nécessaire pour obtenir
+                          une réponse car le code du travail ne prévoit rien sur
+                          ce sujet.
                         </Alert>
                       ) : (
                         <Alert>
-                          <Heading as="p">
+                          <Paragraph
+                            variant="primary"
+                            fontSize="default"
+                            fontWeight="700"
+                            noMargin
+                          >
                             Aucune convention collective n&apos;a été déclarée
                             pour cette entreprise.
-                          </Heading>
-                          <Text>
+                          </Paragraph>
+                          <Paragraph>
                             Vous pouvez tout de même poursuivre pour obtenir les
                             informations générales
-                          </Text>
+                          </Paragraph>
                         </Alert>
                       )
                     }
