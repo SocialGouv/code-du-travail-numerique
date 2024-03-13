@@ -1,9 +1,5 @@
 import { deepEqualObject, isValidDate } from "../../../../../lib";
-import {
-  ContratTravailStoreConfig,
-  ContratTravailStoreError,
-  ContratTravailStoreInput,
-} from "./types";
+import { ContratTravailStoreError, ContratTravailStoreInput } from "./types";
 
 export const validateStep = (state: ContratTravailStoreInput) => {
   const errorState: ContratTravailStoreError = {

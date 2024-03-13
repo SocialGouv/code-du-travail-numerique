@@ -62,6 +62,7 @@ const createContratTravailStore: StoreSlice<
     onNextStep: () => {
       const state = get().contratTravailData.input;
       const { isValid, errorState } = validateStep(state);
+      console.log("onNextStep: ", isValid, errorState);
       const simulator =
         type === IndemniteDepartType.INDEMNITE_LICENCIEMENT
           ? PublicodesSimulator.INDEMNITE_LICENCIEMENT
@@ -70,6 +71,7 @@ const createContratTravailStore: StoreSlice<
       const { result, ineligibility } = publicodes.calculate(
         get().situationData.situation
       );
+      console.log("onNextStep: ", result, ineligibility);
       let errorEligibility;
 
       if (result.value === 0 && ineligibility) {

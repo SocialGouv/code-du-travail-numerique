@@ -5,6 +5,7 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "../../../CommonIndemniteDepart/store";
+import { CdiCdd } from "../../../CommonIndemniteDepart/steps/ContratTravail/store";
 
 const StepContratTravail = (): JSX.Element => {
   const store = useContext(IndemniteDepartContext);
@@ -47,10 +48,6 @@ const StepContratTravail = (): JSX.Element => {
     errorDateArretTravail: state.contratTravailData.error.errorDateArretTravail,
   }));
 
-  useEffect(() => {
-    onChangeLicenciementFauteGrave("non");
-  }, [onChangeLicenciementFauteGrave]);
-
   return (
     <>
       <RadioQuestion
@@ -69,7 +66,12 @@ const StepContratTravail = (): JSX.Element => {
         name="typeContratTravail"
         label="Quel est le type du contrat de travail&nbsp;?"
         selectedOption={typeContratTravail}
-        onChangeSelectedOption={onChangeTypeContratTravail}
+        onChangeSelectedOption={(value: CdiCdd) => {
+          onChangeTypeContratTravail(value);
+          if (value === "cdi") {
+            onChangeLicenciementFauteGrave("non");
+          }
+        }}
         error={errorTypeContratTravail}
         showRequired
         autoFocus

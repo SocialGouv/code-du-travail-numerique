@@ -3,6 +3,7 @@ import type { EvaluatedNode } from "publicodes";
 import type { References, SeniorityResult } from "../modeles/common";
 import {
   DismissalReasonFactory,
+  IneligibilityRuptureConventionnelleFactory,
   ReferenceSalaryFactory,
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
@@ -118,11 +119,28 @@ class RuptureConventionnellePublicodes
     };
   }
 
+  private mapIneligibility(
+    text: string
+  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+    return {
+      ineligibility: text,
+      missingArgs: [],
+      result: { value: 0 },
+      situation: [],
+    };
+  }
+
   private calculateSituation(
     args: Record<string, string | undefined>,
     targetRule?: string
   ) {
     let newArgs = args;
+    const ineligibilityInstance =
+      new IneligibilityRuptureConventionnelleFactory().create(this.idcc);
+    const ineligibility = ineligibilityInstance.getIneligibility(newArgs);
+    if (ineligibility) {
+      return this.mapIneligibility(ineligibility);
+    }
     const missingArgSeniority = this.getMissingArg(args, [
       "contrat salarié . indemnité de licenciement . date d'entrée",
       "contrat salarié . indemnité de licenciement . date de sortie",
