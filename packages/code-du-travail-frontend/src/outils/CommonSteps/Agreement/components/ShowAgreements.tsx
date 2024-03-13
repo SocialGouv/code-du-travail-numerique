@@ -1,12 +1,12 @@
 import { formatIdcc, PublicodesSimulator } from "@socialgouv/modeles-social";
 import React from "react";
-import { Alert } from "@socialgouv/cdtn-ui";
 
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 import { Agreement } from "@socialgouv/cdtn-utils";
 import { RadioQuestion } from "../../../Components";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";
 import ShowAlert from "../../../common/Agreement/components/ShowAlert";
+import { Alert } from "../../../../common/Alert";
 
 type Props = {
   enterprise: Enterprise;
@@ -56,10 +56,10 @@ const ShowAgreements = ({
       ) : (
         <>
           {noAgreementFoundComponent ?? (
-            <Alert variant="primary">
-              Aucune convention collective n&apos;a été déclarée pour cette
-              entreprise.
-            </Alert>
+            <Alert
+              title="Aucune convention collective n'a été déclarée pour cette entreprise."
+              message="Vous pouvez tout de même poursuivre pour obtenir les informations générales."
+            />
           )}
         </>
       )}

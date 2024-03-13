@@ -229,12 +229,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
                           title={`Aucune convention collective n'a été déclarée pour l'entreprise ${entreprise?.simpleLabel}.`}
                           message="Or, la convention collective est nécessaire pour obtenir une réponse car le code du travail ne prévoit rien sur ce sujet."
                         />
-                      ) : (
-                        <Alert
-                          title="Aucune convention collective n'a été déclarée pour cette entreprise."
-                          message="Vous pouvez tout de même poursuivre pour obtenir les informations générales."
-                        />
-                      )
+                      ) : undefined
                     }
                   />
                 </form>

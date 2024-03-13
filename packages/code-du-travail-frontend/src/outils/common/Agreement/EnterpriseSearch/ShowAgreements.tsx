@@ -13,7 +13,7 @@ import { required } from "../../validators";
 import { AGREEMENT_ID_NAME } from "../form-constants";
 import ShowAlert from "../components/ShowAlert";
 import { AgreementSupportInfo } from "../types";
-import { Alert } from "@socialgouv/cdtn-ui";
+import { Alert } from "../../../../common/Alert";
 
 type Props = {
   enterprise: Enterprise;
@@ -38,10 +38,10 @@ const ShowAgreements = ({
           trouvées pour cette entreprise, sélectionnez la vôtre&nbsp;:&nbsp;
         </Question>
       ) : (
-        <Alert>
-          Aucune convention collective n&apos;a été déclarée pour cette
-          entreprise.
-        </Alert>
+        <Alert
+          title="Aucune convention collective n'a été déclarée pour cette entreprise."
+          message="Vous pouvez tout de même poursuivre pour obtenir les informations générales."
+        />
       )}
       <RadioContainer>
         {enterprise.conventions.map((agreement) => {
