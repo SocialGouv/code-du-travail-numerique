@@ -343,7 +343,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                         >
                           <a
                             class="sc-kOPcWz eRFCst no-after"
-                            href="azure.url/cdtn/filename.pdf"
+                            href="bucket.url/default/filename.pdf"
                           >
                             <svg
                               aria-hidden="true"
@@ -406,7 +406,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     >
                       <a
                         class="sc-kOPcWz cefBoA no-after"
-                        href="azure.url/cdtn/filename.pdf"
+                        href="bucket.url/default/filename.pdf"
                       >
                         Télécharger le modèle (
                         pdf
