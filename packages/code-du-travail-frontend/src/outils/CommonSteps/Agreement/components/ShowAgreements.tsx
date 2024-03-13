@@ -56,7 +56,7 @@ const ShowAgreements = ({
       ) : (
         <>
           {noAgreementFoundComponent ?? (
-            <Alert>
+            <Alert variant="primary">
               Aucune convention collective n&apos;a été déclarée pour cette
               entreprise.
             </Alert>

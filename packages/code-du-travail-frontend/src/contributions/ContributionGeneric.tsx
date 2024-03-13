@@ -22,7 +22,6 @@ import { MatomoBaseEvent } from "../lib";
 import { getCc3239Informations } from "../outils";
 import { Enterprise } from "../conventions/Search/api/enterprises.service";
 import {
-  Alert,
   Badge,
   Button,
   icons,
@@ -31,8 +30,7 @@ import {
   theme,
   Title,
   Wrapper,
-  Heading,
-  Text,
+  Alert as UiAlert,
 } from "@socialgouv/cdtn-ui";
 import { ReferencesJuridiques } from "./References";
 import { LinkedContent } from "./LinkedContent";
@@ -43,6 +41,7 @@ import {
   AlertAgreementSupported,
   AlertAgreementUnextended,
 } from "./AlertAgreementNotSupportedNoContent";
+import { Alert } from "../common/Alert";
 
 const { DirectionRight } = icons;
 
@@ -226,29 +225,15 @@ const ContributionGeneric = ({ contribution }: Props) => {
                     simulator="QUESTIONNAIRE"
                     noAgreementFoundComponent={
                       isNoCDT() ? (
-                        <Alert variant="primary">
-                          Aucune convention collective n&apos;a été déclarée
-                          pour l&apos;entreprise {entreprise?.simpleLabel}. Or,
-                          la convention collective est nécessaire pour obtenir
-                          une réponse car le code du travail ne prévoit rien sur
-                          ce sujet.
-                        </Alert>
+                        <Alert
+                          title={`Aucune convention collective n'a été déclarée pour l'entreprise ${entreprise?.simpleLabel}.`}
+                          message="Or, la convention collective est nécessaire pour obtenir une réponse car le code du travail ne prévoit rien sur ce sujet."
+                        />
                       ) : (
-                        <Alert>
-                          <Paragraph
-                            variant="primary"
-                            fontSize="default"
-                            fontWeight="700"
-                            noMargin
-                          >
-                            Aucune convention collective n&apos;a été déclarée
-                            pour cette entreprise.
-                          </Paragraph>
-                          <Paragraph>
-                            Vous pouvez tout de même poursuivre pour obtenir les
-                            informations générales
-                          </Paragraph>
-                        </Alert>
+                        <Alert
+                          title="Aucune convention collective n'a été déclarée pour cette entreprise."
+                          message="Vous pouvez tout de même poursuivre pour obtenir les informations générales."
+                        />
                       )
                     }
                   />
@@ -269,9 +254,9 @@ const ContributionGeneric = ({ contribution }: Props) => {
                   />
                   {convention && !isSupported(convention) && (
                     <Div>
-                      <Alert variant="primary">
+                      <UiAlert variant="primary">
                         {alertAgreementNotSupported(convention.url)}
-                      </Alert>
+                      </UiAlert>
                     </Div>
                   )}
                 </>
