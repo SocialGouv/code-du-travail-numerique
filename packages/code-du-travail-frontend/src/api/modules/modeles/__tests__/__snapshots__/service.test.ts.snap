@@ -94,7 +94,6 @@ exports[`Modeles getByIdsModeles 1`] = `
     ],
     "cdtnId": "a712ecb976",
     "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
-    "fileUrl": "https://cdtnadminprod.blob.core.windows.net/cdtn/demande_rdv_rupture_conventionnelle.docx",
     "filesize": 14535,
     "html": "<style>
 .courrier-expediteur {display: flex; align-items: flex-start; flex-direction:column;}
