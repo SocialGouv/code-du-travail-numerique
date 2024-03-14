@@ -1,5 +1,3 @@
-import { ItemFilterType, ItemSortType } from "./types";
-
 export const getSearchBySourceSlugBody = ({
   source,
   slug,
