@@ -41,7 +41,7 @@ jobs:
         run: |
           yarn build
       - name: Cache build
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ./*
           key: ${{ github.sha }}
@@ -56,7 +56,7 @@ jobs:
         repositories:
           ["@socialgouv/cdtn-ui", "@cdt/frontend", "@socialgouv/modeles-social"]
     steps:
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Restore build
         with:
           path: ./*
@@ -70,7 +70,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Restore build
         with:
           path: ./*
@@ -93,7 +93,7 @@ jobs:
             "@socialgouv/cdtn-ui",
           ]
     steps:
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Restore build
         with:
           path: ./*
@@ -124,7 +124,7 @@ jobs:
         repositories:
           ["@socialgouv/cdtn-ui", "@cdt/frontend", "@socialgouv/modeles-social"]
     steps:
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Restore build
         with:
           path: ./*
