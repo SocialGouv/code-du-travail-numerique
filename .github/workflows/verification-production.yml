@@ -33,16 +33,16 @@ jobs:
     steps:
       - run: |
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "User-agent: *"
-      - run: |
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Disallow: /assets/"
-      - run: |
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Disallow: /images/"
-      - run: |
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Sitemap: https://code.travail.gouv.fr/sitemap.xml"
+      - run: |
+          curl -sSfL https://code.travail.gouv.fr/sitemap.xml -o sitemap.xml && grep -q "https://code.travail.gouv.fr/" sitemap.xml
+          curl -sSfLI https://code.travail.gouv.fr/sitemap.xml | grep -q "Content-Type: text/xml"
       - name: Create the Mattermost Message
         if: failure()
         run: |
-          echo "{\"text\":\"Erreur sur le robots.txt 😱😱😱😱😱😱😱😱 ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} (cc: @max @victorz @carolinebda @martial)\"}" > mattermost.json
+          echo "{\"text\":\"Erreur sur le robots.txt ou sitemap.xml 😱😱😱😱😱😱😱😱 ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} (cc: @max @victorz @carolinebda @martial)\"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
         env:

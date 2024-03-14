@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.129.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.1...v4.129.2) (2024-03-14)
+
+### Bug Fixes
+
+- **html:** bloqué la possibilité d'avoir des headings dans les titres des accordéons si le titleLevel > 6 ([#5688](https://github.com/SocialGouv/code-du-travail-numerique/issues/5688)) ([cf603f3](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf603f3845fd5da1b323fa55401d3d49da7df83e))
+
 ## [4.129.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.0...v4.129.1) (2024-03-13)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui
