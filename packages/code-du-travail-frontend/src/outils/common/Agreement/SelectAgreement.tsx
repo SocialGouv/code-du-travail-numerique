@@ -162,6 +162,12 @@ const SelectAgreement = ({
           "La simulation ne peut pas se poursuivre avec cette convention collective"
         }
       />
+      <ErrorField
+        name="noAgreementSelected"
+        errorText={
+          "La simulation ne peut pas se poursuivre si aucune convention collective n'est sélectionnée"
+        }
+      />
     </>
   );
 };
