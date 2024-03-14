@@ -1,14 +1,14 @@
 import http from "http";
 import https from "https";
-import { AZURE_BASE_URL } from "../src/config";
+import { BUCKET_URL, BUCKET_SITEMAP_FOLDER } from "../src/config";
 
 const Sitemap = () => {};
 
 export const getServerSideProps = async ({ res }) => {
   return new Promise(function SitemapStream(resolve, reject) {
-    const get = AZURE_BASE_URL.startsWith("https") ? https.get : http.get;
+    const get = BUCKET_URL.startsWith("https") ? https.get : http.get;
     const sitempaReq = get(
-      `${AZURE_BASE_URL}/sitemap/sitemap.xml`,
+      `${BUCKET_URL}/${BUCKET_SITEMAP_FOLDER}/sitemap.xml`,
       (response) => {
         response.pipe(res);
         response.on("end", () => {

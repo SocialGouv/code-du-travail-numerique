@@ -14,8 +14,9 @@ window.scrollTo = jest.fn();
 
 jest.mock("../src/config", () => ({
   SITE_URL: "api.url",
-  AZURE_BASE_URL: "azure.url",
-  AZURE_CONTAINER: "cdtn",
+  BUCKET_URL: "bucket.url",
+  BUCKET_DEFAULT_FOLDER: "default",
+  BUCKET_SITEMAP_FOLDER: "sitemap",
   PACKAGE_VERSION: "vX.Y.Z",
   ENTERPRISE_API_URL:
     "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1",
