@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.129.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.2...v4.129.3) (2024-03-14)
+
+### Bug Fixes
+
+- **actions:** set command for sitemap in different run ([23a7907](https://github.com/SocialGouv/code-du-travail-numerique/commit/23a790777d4337a08918aa24e81b93fafdae4b57))
+
 ## [4.129.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.1...v4.129.2) (2024-03-14)
 
 ### Bug Fixes
