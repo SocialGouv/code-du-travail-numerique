@@ -8,6 +8,7 @@ import {
 } from "../../common/situations.utils";
 import { WizardStepProps } from "../../common/type/WizardType";
 import NotSupportedAgreementDisclaimer from "./component/NotSupportedAgreementDisclaimer";
+import { Simulator } from "../../common/NoticeExample";
 
 const supportedCC = getSupportedCC(data.situations);
 
@@ -27,6 +28,7 @@ const AgreementStep = (props: WizardStepProps): JSX.Element => {
         alertAgreementNotSupported={(url: string) => (
           <NotSupportedAgreementDisclaimer agreementUrl={url} />
         )}
+        simulator={Simulator.HEURES_RECHERCHE_EMPLOI}
       />
     </>
   );

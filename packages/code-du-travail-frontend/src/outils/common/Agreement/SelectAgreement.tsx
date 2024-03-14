@@ -17,6 +17,7 @@ import { STORAGE_KEY_AGREEMENT } from "../../types";
 import { NoEnterprise } from "../../CommonSteps/Agreement/components";
 import { getCc3239Informations } from "../../api";
 import { Agreement } from "@socialgouv/cdtn-utils";
+import { Simulator } from "../NoticeExample";
 
 export type Props = {
   title: string;
@@ -27,6 +28,7 @@ export type Props = {
   required?: boolean;
   note?: string;
   alertAgreementNotSupported?: (string) => JSX.Element;
+  simulator: Simulator;
 };
 
 const SelectAgreement = ({
@@ -38,6 +40,7 @@ const SelectAgreement = ({
   required = false,
   note,
   alertAgreementNotSupported,
+  simulator,
 }: Props): JSX.Element => {
   const [storedConvention, setConvention] = useLocalStorage(
     STORAGE_KEY_AGREEMENT,
@@ -134,6 +137,7 @@ const SelectAgreement = ({
             setHasSelectedEnterprise={(hasSelectedEnterprise) => {
               setHasSelectedEnterprise(hasSelectedEnterprise);
             }}
+            simulator={simulator}
           />
           {!hasSelectedEnterprise && !enterprise && (
             <NoEnterprise
