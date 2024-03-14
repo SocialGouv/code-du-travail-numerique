@@ -5,6 +5,7 @@ import { BUCKET_URL, BUCKET_SITEMAP_FOLDER } from "../src/config";
 const Sitemap = () => {};
 
 export const getServerSideProps = async ({ res }) => {
+  res.setHeader("Content-Type", "text/xml");
   return new Promise(function SitemapStream(resolve, reject) {
     const get = BUCKET_URL.startsWith("https") ? https.get : http.get;
     const sitempaReq = get(
