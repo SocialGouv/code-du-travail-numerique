@@ -75,7 +75,8 @@ class IndemniteLicenciementPublicodes
     targetRule?: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
     let newArgs = args;
-    const ineligibilityInstance = new IneligibilityIndemniteLicenciementFactory().create(this.idcc);
+    const ineligibilityInstance =
+      new IneligibilityIndemniteLicenciementFactory().create(this.idcc);
     const ineligibility = ineligibilityInstance.getIneligibility(newArgs);
     if (ineligibility) {
       return this.mapIneligibility(ineligibility);

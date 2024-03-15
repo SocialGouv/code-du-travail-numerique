@@ -1,6 +1,6 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { CalculateurIndemniteLicenciement } from "../index";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import { push } from "@socialgouv/matomo-next";
 import userEvent from "@testing-library/user-event";
