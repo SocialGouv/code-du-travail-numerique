@@ -1,5 +1,6 @@
 import { AgreementSupportInfo } from "./Agreement/types";
 import { Criteria, Situation } from "@socialgouv/modeles-social";
+import { ConventionCollective } from "./type/WizardType";
 
 const createValuesMatcher = (values: Criteria) => (item: Situation) => {
   function swallowEqual(a: Criteria, b: Criteria) {
@@ -164,22 +165,34 @@ export const getSupportedCC = (data: Situation[]): AgreementSupportInfo[] => {
   });
 };
 
-export const validateUnsupportedAgreement =
-  (supportedAgreement) =>
-  ({ ccn }) => {
-    const errors: any = {};
-    if (ccn?.selected) {
-      const idccInfo = supportedAgreement.find(
-        (item) => item.idcc === ccn.selected.num
-      );
-      if (!idccInfo) {
-        errors.agreementMissing = true;
-      }
+export const validateUnsupportedAgreement = (
+  situations: Situation[],
+  ccn?: ConventionCollective
+) => {
+  const supportedAgreement = getSupportedCC(situations);
+  if (ccn && ccn.selected) {
+    const idccInfo = supportedAgreement.find(
+      (item) => item.idcc === ccn.selected!.num
+    );
+    if (!idccInfo) {
+      return {
+        agreementMissing: true,
+      };
     }
+  }
 
-    if (!ccn) {
-      errors.noAgreementSelected = true;
-    }
+  return {};
+};
 
-    return errors;
-  };
+export const detectNoAgreementInEnterprise = (ccn?: ConventionCollective) => {
+  if (
+    ccn &&
+    ccn.route === "enterprise" &&
+    (Object.keys(ccn).length === 1 || !ccn.selected)
+  ) {
+    return {
+      noAgreementSelected: true,
+    };
+  }
+  return {};
+};
