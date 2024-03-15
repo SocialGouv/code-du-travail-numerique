@@ -2,12 +2,14 @@ import { render } from "@testing-library/react";
 import React from "react";
 import FilledElement from "../FilledElements";
 import { MotifKeys } from "@socialgouv/modeles-social";
+import { IndemniteDepartType } from "../../../../../types";
 
 describe("<FilledElement />", () => {
   it("should render", () => {
     expect(
       render(
         <FilledElement
+          type={IndemniteDepartType.LICENCIEMENT}
           contractTravail={[
             {
               text: "Type de contrat",
