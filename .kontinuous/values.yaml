@@ -19,8 +19,8 @@ app:
         name: www-secret
   resources:
     limits:
-      cpu: 250m
-      memory: 512Mi
+      cpu: 300m
+      memory: 768Mi
     requests:
       cpu: 50m
       memory: 256Mi
