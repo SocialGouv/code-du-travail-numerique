@@ -2,17 +2,17 @@ import React, { useContext, useEffect } from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { RadioQuestion, TextQuestion } from "../../../Components";
-import {
-  AbsencePeriods,
-  SectionTitleWithTooltip,
-} from "../../../CommonIndemniteDepart/steps/Anciennete/components";
+import { informationToSituation } from "../../../CommonSteps/Informations/utils";
+// Do not optimize the following import
+import { getMessageMotifExample } from "../../../CommonIndemniteDepart/agreements/ui-customizations";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "../../../CommonIndemniteDepart/store";
-import { informationToSituation } from "../../../CommonSteps/Informations/utils";
-// Do not optimize the following import
-import { getMessageMotifExample } from "../../../CommonIndemniteDepart/agreements";
+import {
+  AbsencePeriods,
+  SectionTitleWithTooltip,
+} from "../../../CommonIndemniteDepart/steps";
 
 const StepAnciennete = () => {
   const store = useContext(IndemniteDepartContext);
@@ -27,7 +27,9 @@ const StepAnciennete = () => {
     onChangeDateEntree,
     dateSortie,
     onChangeDateSortie,
+    dateNotification,
     onChangeDateNotification,
+    errorDateNotification,
     errorDateSortie,
     errorAbsenceProlonge,
     errorDateEntree,
@@ -45,7 +47,9 @@ const StepAnciennete = () => {
     onChangeDateEntree: state.ancienneteFunction.onChangeDateEntree,
     dateSortie: state.ancienneteData.input.dateSortie,
     onChangeDateSortie: state.ancienneteFunction.onChangeDateSortie,
+    dateNotification: state.ancienneteData.input.dateNotification,
     onChangeDateNotification: state.ancienneteFunction.onChangeDateNotification,
+    errorDateNotification: state.ancienneteData.error.errorDateNotification,
     errorDateSortie: state.ancienneteData.error.errorDateSortie,
     errorAbsenceProlonge: state.ancienneteData.error.errorAbsenceProlonge,
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
@@ -83,18 +87,36 @@ const StepAnciennete = () => {
         autoFocus
       />
       <TextQuestion
-        label="Quelle est la date de fin du contrat&nbsp;?"
+        label="Quelle est la date de notification du licenciement&nbsp;?"
+        inputType="date"
+        placeholder="jj/mm/aaaa"
+        value={dateNotification}
+        onChange={onChangeDateNotification}
+        error={errorDateNotification}
+        id="dateNotification"
+        showRequired
+        dataTestId={"date-notification"}
+      />
+      <TextQuestion
+        label="Quelle est la date de fin du préavis de licenciement (date de fin du contrat)&nbsp;?"
         inputType="date"
         placeholder="jj/mm/aaaa"
         value={dateSortie}
-        onChange={(value) => {
-          onChangeDateNotification(value);
-          onChangeDateSortie(value);
-        }}
+        onChange={onChangeDateSortie}
         error={errorDateSortie}
         id="dateSortie"
         showRequired
         dataTestId={"date-sortie"}
+        tooltip={{
+          content: (
+            <p>
+              En cas de dispense de préavis à l&apos;initiative de
+              l&apos;employeur, ou si le licenciement intervient à la suite d’un
+              avis d’inaptitude non professionnelle, indiquer la date de fin du
+              préavis «&nbsp;théorique&nbsp;» non effectué.
+            </p>
+          ),
+        }}
       />
       <SectionTitleWithTooltip
         name="Période d’absence prolongée"

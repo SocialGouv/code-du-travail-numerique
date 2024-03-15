@@ -7,13 +7,15 @@ import { IndemniteDepartType } from "../types";
 import { Step } from "../Simulator";
 import {
   StepAgreement,
-  StepAnciennete,
-  StepContratTravail,
   StepInformations,
-  StepIntro,
-  StepResultat,
   StepSalaires,
 } from "../CommonIndemniteDepart/steps";
+import {
+  StepAnciennete,
+  StepContratTravail,
+  StepIntro,
+  StepResultat,
+} from "./steps";
 
 type Props = {
   icon: string;
@@ -50,12 +52,12 @@ const steps: Step<IndemniteDepartStepName>[] = [
   {
     label: "Salaires",
     name: IndemniteDepartStepName.Salaires,
-    Component: StepSalaires,
+    Component: () => <StepSalaires type={IndemniteDepartType.LICENCIEMENT} />,
   },
   {
     label: "Indemnité",
     name: IndemniteDepartStepName.Resultat,
-    Component: () => <StepResultat />,
+    Component: StepResultat,
   },
 ];
 
@@ -69,7 +71,7 @@ export const CalculateurIndemniteLicenciement = ({
       icon={icon}
       title={title}
       displayTitle={displayTitle}
-      tool={IndemniteDepartType.INDEMNITE_LICENCIEMENT}
+      tool={IndemniteDepartType.LICENCIEMENT}
       steps={steps}
     />
   );

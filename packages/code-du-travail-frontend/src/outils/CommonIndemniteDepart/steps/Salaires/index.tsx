@@ -1,8 +1,5 @@
 import React, { useContext } from "react";
-import {
-  IndemniteDepartContext,
-  useIndemniteDepartStore,
-} from "../../store";
+import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { SalaireTempsPlein, TempsPartiel } from "./components";
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
@@ -17,8 +14,13 @@ import {
   generateSameSalaryQuestion,
   generateSmallText,
 } from "../../utils/question";
+import { IndemniteDepartType } from "../../../types";
 
-const StepSalaires = () => {
+type Props = {
+  type: IndemniteDepartType;
+};
+
+const StepSalaires = ({ type }: Props) => {
   const store = useContext(IndemniteDepartContext);
   const {
     hasTempsPartiel,
@@ -92,7 +94,7 @@ const StepSalaires = () => {
         />
       )}
 
-      {hasTempsPartiel === "oui" && <TempsPartiel />}
+      {hasTempsPartiel === "oui" && <TempsPartiel type={type} />}
       {hasTempsPartiel === "non" && (
         <>
           <RadioQuestion
@@ -109,7 +111,11 @@ const StepSalaires = () => {
               },
             ]}
             name="hasSameSalary"
-            label={generateSameSalaryQuestion(arretTravail, salaryPeriods)}
+            label={generateSameSalaryQuestion(
+              type,
+              arretTravail,
+              salaryPeriods
+            )}
             selectedOption={hasSameSalary}
             onChangeSelectedOption={onChangeHasSameSalary}
             error={errorHasSameSalary}
@@ -135,6 +141,7 @@ const StepSalaires = () => {
           {hasSameSalary === "non" && (
             <SalaireTempsPlein
               title={generateSalaireTempsPleinQuestion(
+                type,
                 arretTravail,
                 salaryPeriods
               )}

@@ -37,7 +37,7 @@ const toolsBySlug = {
   "preavis-retraite": DureePreavisRetraite,
   "simulateur-embauche": SimulateurEmbauche,
   "procedure-licenciement": DismissalProcess,
-  "rupture-conventionnelle": CalculateurRuptureConventionnelle,
+  "indemnite-rupture-conventionnelle": CalculateurRuptureConventionnelle,
 };
 
 export interface Props {
@@ -97,18 +97,7 @@ export default Outils;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const tool =
-    query.slug === "rupture-conventionnelle"
-      ? {
-          slug: "rupture-conventionnelle",
-          description: "Rupture conventionnelle",
-          icon: "",
-          title: "Rupture conventionnelle",
-          displayTitle: "Rupture conventionnelle",
-          metaTitle: "Rupture conventionnelle",
-          metaDescription: "Rupture conventionnelle",
-        }
-      : await fetchTool(query.slug as string);
+  const tool = await fetchTool(query.slug as string);
   if (!tool) {
     return {
       notFound: true,

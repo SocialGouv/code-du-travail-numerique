@@ -29,7 +29,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     fireEvent.click(ui.next.get());
     fireEvent.click(ui.contract.type.cdd.get());
     fireEvent.click(ui.next.get());
-    expect(ui.result.legalError.cdd.query()).toBeInTheDocument();
+    expect(ui.result.legalError.cddLicenciement.query()).toBeInTheDocument();
     expect(
       ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();

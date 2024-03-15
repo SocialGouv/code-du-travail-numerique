@@ -1,5 +1,5 @@
 import { StepData } from "../../../store";
-import { OuiNon } from "../../../common/types";
+import { OuiNon } from "../../../common";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 
 export type CdiCdd = "cdi" | "cdd";
@@ -35,10 +35,6 @@ export type ContratTravailStoreFn = {
   onChangeArretTravail: (value: OuiNon) => void;
   onChangeDateArretTravail: (value: string) => void;
   onNextStep: () => ValidationResponse;
-};
-
-export type ContratTravailStoreConfig = {
-  showFauteGrave: boolean;
 };
 
 export type ContratTravailStoreSlice = {

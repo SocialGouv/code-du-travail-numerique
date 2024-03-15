@@ -2,6 +2,7 @@ import { CalculateurRuptureConventionnelle } from "../..";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 import { fireEvent, render } from "@testing-library/react";
+import {byText} from "testing-library-selector";
 
 describe(`Tests d'éligibilité`, () => {
   beforeEach(() => {
@@ -16,11 +17,9 @@ describe(`Tests d'éligibilité`, () => {
   });
 
   test("Vérifier l'affichage de l'erreur sur le type de contrat CDD", () => {
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.next.get());
     fireEvent.click(ui.contract.type.cdd.get());
     fireEvent.click(ui.next.get());
-    expect(ui.result.legalError.cdd.query()).toBeInTheDocument();
+    expect(ui.result.legalError.cddRupture.query()).toBeInTheDocument();
     expect(
       ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();

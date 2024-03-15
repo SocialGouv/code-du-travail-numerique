@@ -403,7 +403,8 @@ export const ui = {
       title: byText(
         "Il n'y a pas d'indemnité de licenciement dans cette situation"
       ),
-      cdd: byText(/L’indemnité de licenciement n’est pas due pour les CDD/),
+      cddLicenciement: byText(/L’indemnité de licenciement n’est pas due pour les CDD/),
+      cddRupture: byText(/L’indemnité de rupture conventionnelle n’est pas due pour les CDD/),
       fauteGrave: byText(
         /L’indemnité de licenciement n’est pas due en cas de faute grave/
       ),

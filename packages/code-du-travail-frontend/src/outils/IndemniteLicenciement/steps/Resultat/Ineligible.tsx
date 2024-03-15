@@ -4,7 +4,7 @@ import Disclaimer from "../../../common/Disclaimer";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
-} from "../../store";
+} from "../../../CommonIndemniteDepart/store";
 
 export default function Ineligible() {
   const store = useContext(IndemniteDepartContext);

@@ -1,7 +1,7 @@
-import { IneligibilityLegal } from "../../base";
+import { IneligibilityLegalIndemniteLicenciement } from "../../base";
 import { CatPro3239 } from "./salary";
 
-export class Ineligibility3239 extends IneligibilityLegal {
+export class Ineligibility3239 extends IneligibilityLegalIndemniteLicenciement {
   getIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {

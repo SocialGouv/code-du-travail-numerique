@@ -1,8 +1,10 @@
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import { Agreement } from "@socialgouv/cdtn-utils";
 import { OuiNon } from "../common";
+import { IndemniteDepartType } from "../../types";
 
 export const generateSameSalaryQuestion = (
+  type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
   salaryPeriods: SalaryPeriods[]
 ): string => {
@@ -13,11 +15,14 @@ export const generateSameSalaryQuestion = (
   } précédant ${
     arretTravail === "oui"
       ? `l'arrêt de travail`
-      : `la notification du licenciement`
+      : type === IndemniteDepartType.LICENCIEMENT
+      ? "la notification du licenciement"
+      : "la fin du contrat"
   }&nbsp;?`;
 };
 
 export const generateSalaireTempsPleinQuestion = (
+  type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
   salaryPeriods: SalaryPeriods[]
 ): string => {
@@ -32,11 +37,14 @@ export const generateSalaireTempsPleinQuestion = (
   } précédant ${
     arretTravail === "oui"
       ? "l'arrêt de travail"
-      : "la notification du licenciement"
+      : type === IndemniteDepartType.LICENCIEMENT
+      ? "la notification du licenciement"
+      : "la fin du contrat"
   }`;
 };
 
 export const generateResultSameSalary = (
+  type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
   salaryPeriods: SalaryPeriods[]
 ): string => {
@@ -47,11 +55,14 @@ export const generateResultSameSalary = (
   }précédant ${
     arretTravail === "oui"
       ? `l'arrêt de travail`
-      : `la notification du licenciement`
+      : type === IndemniteDepartType.LICENCIEMENT
+      ? "la notification du licenciement"
+      : "la fin du contrat"
   }`;
 };
 
 export const generateResultSalaireTempsPlein = (
+  type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
   salaryPeriods: SalaryPeriods[]
 ): string => {
@@ -62,7 +73,9 @@ export const generateResultSalaireTempsPlein = (
   } précédant ${
     arretTravail === "oui"
       ? "l'arrêt de travail"
-      : "la notification du licenciement"
+      : type === IndemniteDepartType.LICENCIEMENT
+      ? "la notification du licenciement"
+      : "la fin du contrat"
   }`;
 };
 

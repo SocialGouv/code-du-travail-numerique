@@ -1,21 +1,28 @@
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import React, { useContext } from "react";
-import { IndemniteDepartStepName } from "../..";
 import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";
 import ShowDetails from "../../../common/ShowDetails";
-import { AgreementsInjector } from "../../agreements";
-import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
-import { getResultMessage } from "../../agreements/ui-customizations";
-import { getForMoreInfoMessage } from "../../agreements/ui-customizations/messages";
 import {
   DecryptResult,
   FilledElements,
   ForMoreInfo,
   FormulaInterpreter,
   Result,
-} from "./components";
+} from "../../../CommonIndemniteDepart/steps/Resultat/components";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
+import {
+  IndemniteDepartContext,
+  useIndemniteDepartStore,
+} from "../../../CommonIndemniteDepart/store";
+import { getResultMessage } from "../../../RuptureCoventionnelle/steps/Resultat/utils";
+import {
+  AgreementsInjector,
+  getForMoreInfoMessage,
+} from "../../../CommonIndemniteDepart/agreements";
+import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
+import { IndemniteDepartType } from "../../../types";
+import Link from "next/link";
 
 export default function Eligible() {
   const store = useContext(IndemniteDepartContext);
@@ -107,6 +114,7 @@ export default function Eligible() {
       />
       <ShowDetails autoFocus>
         <FilledElements
+          type={IndemniteDepartType.LICENCIEMENT}
           contractTravail={[
             {
               text: "Type de contrat",
@@ -194,6 +202,20 @@ export default function Eligible() {
         </Disclaimer>
       )}
       <ForMoreInfo
+        article={
+          <p>
+            Pour en savoir plus sur l’indemnité de licenciement et son mode de
+            calcul, consultez{" "}
+            <Link
+              href={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}
+              passHref
+              target={"_blank"}
+            >
+              cet article
+            </Link>
+            .
+          </p>
+        }
         message={getForMoreInfoMessage(isAgreementBetter, agreement?.num)}
       />
     </>

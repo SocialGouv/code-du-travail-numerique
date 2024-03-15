@@ -7,7 +7,7 @@ import {
 import produce from "immer";
 import { IndemniteDepartType, StoreSlice } from "../../../../types";
 import { validateStep } from "./validator";
-import { AncienneteStoreSlice } from "../../Anciennete/store";
+import { AncienneteStoreSlice } from "../../Anciennete";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 import { loadPublicodes } from "../../../../api";
@@ -31,7 +31,7 @@ const createContratTravailStore: StoreSlice<
     CommonSituationStoreSlice
 > = (set, get, { type }) => ({
   contratTravailConfig: {
-    showFauteGrave: type === IndemniteDepartType.INDEMNITE_LICENCIEMENT,
+    showFauteGrave: type === IndemniteDepartType.LICENCIEMENT,
   },
   contratTravailData: { ...initialState },
   contratTravailFunction: {
@@ -62,16 +62,14 @@ const createContratTravailStore: StoreSlice<
     onNextStep: () => {
       const state = get().contratTravailData.input;
       const { isValid, errorState } = validateStep(state);
-      console.log("onNextStep: ", isValid, errorState);
       const simulator =
-        type === IndemniteDepartType.INDEMNITE_LICENCIEMENT
+        type === IndemniteDepartType.LICENCIEMENT
           ? PublicodesSimulator.INDEMNITE_LICENCIEMENT
           : PublicodesSimulator.RUPTURE_CONVENTIONNELLE;
       const publicodes = loadPublicodes<typeof simulator>(simulator);
       const { result, ineligibility } = publicodes.calculate(
         get().situationData.situation
       );
-      console.log("onNextStep: ", result, ineligibility);
       let errorEligibility;
 
       if (result.value === 0 && ineligibility) {

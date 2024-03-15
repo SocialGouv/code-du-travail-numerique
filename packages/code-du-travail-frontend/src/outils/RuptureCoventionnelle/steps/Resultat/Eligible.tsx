@@ -21,6 +21,7 @@ import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
 import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";
 import { getResultMessage } from "./utils";
+import { IndemniteDepartType } from "../../../types";
 
 const Eligible = () => {
   const store = useContext(IndemniteDepartContext);
@@ -58,6 +59,7 @@ const Eligible = () => {
       />
       <ShowDetails autoFocus>
         <FilledElements
+          type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
           contractTravail={[
             {
               text: "Type de contrat",

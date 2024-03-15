@@ -1,20 +1,20 @@
 import React, { useContext } from "react";
 import { RadioQuestion, TextQuestion } from "../../../Components";
-
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "../../../CommonIndemniteDepart/store";
-import { CdiCdd } from "../../../CommonIndemniteDepart/steps";
 
 const StepContratTravail = (): JSX.Element => {
   const store = useContext(IndemniteDepartContext);
   const {
+    licenciementFauteGrave,
     onChangeLicenciementFauteGrave,
     licenciementInaptitude,
     onChangeLicenciementInaptitude,
     typeContratTravail,
     onChangeTypeContratTravail,
+    errorLicenciementFauteGrave,
     errorLicenciementInaptitude,
     errorTypeContratTravail,
     arretTravail,
@@ -24,6 +24,8 @@ const StepContratTravail = (): JSX.Element => {
     onChangeDateArretTravail,
     errorDateArretTravail,
   } = useIndemniteDepartStore(store, (state) => ({
+    licenciementFauteGrave:
+      state.contratTravailData.input.licenciementFauteGrave,
     onChangeLicenciementFauteGrave:
       state.contratTravailFunction.onChangeLicenciementFauteGrave,
     licenciementInaptitude:
@@ -66,17 +68,34 @@ const StepContratTravail = (): JSX.Element => {
         name="typeContratTravail"
         label="Quel est le type du contrat de travail&nbsp;?"
         selectedOption={typeContratTravail}
-        onChangeSelectedOption={(value: CdiCdd) => {
-          onChangeTypeContratTravail(value);
-          if (value === "cdi") {
-            onChangeLicenciementFauteGrave("non");
-          }
-        }}
+        onChangeSelectedOption={onChangeTypeContratTravail}
         error={errorTypeContratTravail}
         showRequired
         autoFocus
       />
       {typeContratTravail === "cdi" && (
+        <RadioQuestion
+          questions={[
+            {
+              label: "Oui",
+              value: "oui",
+              id: "fauteGrave-oui",
+            },
+            {
+              label: "Non",
+              value: "non",
+              id: "fauteGrave-non",
+            },
+          ]}
+          name="licenciementFauteGrave"
+          label="Le licenciement est-il dû à une faute grave (ou lourde)&nbsp;?"
+          selectedOption={licenciementFauteGrave}
+          onChangeSelectedOption={onChangeLicenciementFauteGrave}
+          error={errorLicenciementFauteGrave}
+          showRequired
+        />
+      )}
+      {typeContratTravail === "cdi" && licenciementFauteGrave === "non" && (
         <RadioQuestion
           questions={[
             {
@@ -91,36 +110,39 @@ const StepContratTravail = (): JSX.Element => {
             },
           ]}
           name="licenciementInaptitude"
-          label="La rupture conventionnelle fait-elle suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue)&nbsp;?"
+          label="Le licenciement fait-il suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue)&nbsp;?"
           selectedOption={licenciementInaptitude}
           onChangeSelectedOption={onChangeLicenciementInaptitude}
           error={errorLicenciementInaptitude}
           showRequired
         />
       )}
-      {typeContratTravail === "cdi" && licenciementInaptitude === "non" && (
-        <RadioQuestion
-          questions={[
-            {
-              label: "Oui",
-              value: "oui",
-              id: "arretTravail-oui",
-            },
-            {
-              label: "Non",
-              value: "non",
-              id: "arretTravail-non",
-            },
-          ]}
-          name="licenciementArretTravail"
-          label="Le salarié est-il en arrêt de travail au moment de la rupture conventionnelle&nbsp;?"
-          selectedOption={arretTravail}
-          onChangeSelectedOption={onChangeArretTravail}
-          error={errorArretTravail}
-          showRequired
-        />
-      )}
       {typeContratTravail === "cdi" &&
+        licenciementFauteGrave === "non" &&
+        licenciementInaptitude === "non" && (
+          <RadioQuestion
+            questions={[
+              {
+                label: "Oui",
+                value: "oui",
+                id: "arretTravail-oui",
+              },
+              {
+                label: "Non",
+                value: "non",
+                id: "arretTravail-non",
+              },
+            ]}
+            name="licenciementArretTravail"
+            label="Le salarié est-il en arrêt de travail au moment du licenciement&nbsp;?"
+            selectedOption={arretTravail}
+            onChangeSelectedOption={onChangeArretTravail}
+            error={errorArretTravail}
+            showRequired
+          />
+        )}
+      {typeContratTravail === "cdi" &&
+        licenciementFauteGrave === "non" &&
         licenciementInaptitude === "non" &&
         arretTravail === "oui" && (
           <TextQuestion

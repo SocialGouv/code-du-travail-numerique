@@ -1,6 +1,6 @@
 import type { IInegibility } from "../common/types/ineligibility";
 
-export class IneligibilityLegal implements IInegibility {
+export class IneligibilityLegalIndemniteLicenciement implements IInegibility {
   getContractIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {

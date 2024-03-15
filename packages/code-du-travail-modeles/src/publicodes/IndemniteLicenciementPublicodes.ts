@@ -1,7 +1,7 @@
 import type { EvaluatedNode } from "publicodes";
 
 import {
-  IneligibilityFactory,
+  IneligibilityIndemniteLicenciementFactory,
   ReferenceSalaryFactory,
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
@@ -75,7 +75,7 @@ class IndemniteLicenciementPublicodes
     targetRule?: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
     let newArgs = args;
-    const ineligibilityInstance = new IneligibilityFactory().create(this.idcc);
+    const ineligibilityInstance = new IneligibilityIndemniteLicenciementFactory().create(this.idcc);
     const ineligibility = ineligibilityInstance.getIneligibility(newArgs);
     if (ineligibility) {
       return this.mapIneligibility(ineligibility);

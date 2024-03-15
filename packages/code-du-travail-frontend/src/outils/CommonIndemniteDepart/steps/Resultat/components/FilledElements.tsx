@@ -9,36 +9,15 @@ import {
   generateResultSalaireTempsPlein,
   generateResultSameSalary,
 } from "../../../utils/question";
-
-type Props = {
-  typeContrat: string;
-  isLicenciementFauteGrave?: boolean;
-  agreementName?: string;
-  isLicenciementInaptitude: boolean;
-  isArretTravail: boolean;
-  dateArretTravail?: string;
-  agreementInformations?: AgreementInformation[];
-  agreementRefSalaryInfo: React.ReactNode;
-  dateEntree: string;
-  dateSortie: string;
-  dateNotification?: string;
-  absencesPeriods: Absence[];
-  salaryPeriods: SalaryPeriods[];
-  hasTempsPartiel: boolean;
-  isAgreementBetter: boolean;
-  hasSameSalary: boolean;
-  salary?: string;
-  isStepSalaryHidden: boolean;
-  showHasTempsPartiel: boolean;
-  disableParentalNotice?: boolean;
-};
+import { IndemniteDepartType } from "../../../../types";
 
 type SituationItem = {
   text: string;
   value: string;
   detail?: string;
 };
-type NewProps = {
+
+type Props = {
   contractTravail: SituationItem[];
   agreementName?: string;
   isArretTravail: boolean;
@@ -56,9 +35,10 @@ type NewProps = {
   isStepSalaryHidden: boolean;
   showHasTempsPartiel: boolean;
   disableParentalNotice?: boolean;
+  type: IndemniteDepartType;
 };
 
-export default function FilledElements(props: NewProps) {
+export default function FilledElements(props: Props) {
   return (
     <>
       <SectionTitle>Éléments saisis</SectionTitle>
@@ -151,6 +131,7 @@ export default function FilledElements(props: NewProps) {
               )}
               <li>
                 {generateResultSameSalary(
+                  props.type,
                   props.isArretTravail ? "oui" : "non",
                   props.salaryPeriods
                 )}
@@ -167,6 +148,7 @@ export default function FilledElements(props: NewProps) {
               {props.salaryPeriods.length > 0 && !props.hasSameSalary && (
                 <li>
                   {generateResultSalaireTempsPlein(
+                    props.type,
                     props.isArretTravail ? "oui" : "non",
                     props.salaryPeriods
                   )}

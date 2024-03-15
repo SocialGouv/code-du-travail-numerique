@@ -1,18 +1,14 @@
 import React, { useContext, useEffect } from "react";
 import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
-import Eligible from "./Eligible";
-import Ineligible from "./Ineligible";
+
 import { ErrorPublicodes } from "./components";
 
 type Props = {
-  eligibleComponent?: () => JSX.Element;
-  ineligibleComponent?: () => JSX.Element;
+  eligibleComponent?: JSX.Element;
+  ineligibleComponent?: JSX.Element;
 };
 
-const StepResult = ({
-  eligibleComponent = Eligible,
-  ineligibleComponent = Ineligible,
-}: Props) => {
+const StepResult = ({ eligibleComponent, ineligibleComponent }: Props) => {
   const store = useContext(IndemniteDepartContext);
   const { isEligible, init, errorPublicodes, getPublicodesResult } =
     useIndemniteDepartStore(store, (state) => ({
@@ -36,7 +32,7 @@ const StepResult = ({
     return <ErrorPublicodes />;
   }
 
-  return <>{isEligible ? eligibleComponent() : ineligibleComponent()}</>;
+  return <>{isEligible ? eligibleComponent : ineligibleComponent}</>;
 };
 
 export default StepResult;
