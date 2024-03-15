@@ -2,8 +2,8 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { StoreApi } from "zustand";
 
 export enum IndemniteDepartType {
-  LICENCIEMENT = "licenciement",
-  RUPTURE_CONVENTIONNELLE = "rupture conventionnelle",
+  LICENCIEMENT = "Indemnité de licenciement",
+  RUPTURE_CONVENTIONNELLE = "Indemnité de rupture conventionnelle",
 }
 
 export type StoreSlice<T extends object, E extends object = T> = (

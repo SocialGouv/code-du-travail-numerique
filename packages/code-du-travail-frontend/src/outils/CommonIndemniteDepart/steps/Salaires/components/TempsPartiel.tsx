@@ -5,6 +5,7 @@ import { IndemniteDepartType } from "../../../../types";
 type Props = {
   type: IndemniteDepartType;
 };
+
 const TempsPartiel = ({ type }: Props): JSX.Element => {
   return (
     <Alert variant="primary">
@@ -13,8 +14,12 @@ const TempsPartiel = ({ type }: Props): JSX.Element => {
       </Text>
 
       <Paragraph noMargin>
-        Le calcul de l’indemnité de {type} dans le cas d’une alternance de temps
-        plein et de temps partiel est actuellement en cours de développement.
+        Le calcul de l’indemnité de{" "}
+        {type === IndemniteDepartType.LICENCIEMENT
+          ? "licenciement"
+          : "rupture conventionnelle"}{" "}
+        dans le cas d’une alternance de temps plein et de temps partiel est
+        actuellement en cours de développement.
       </Paragraph>
       <Paragraph noMargin>
         Les périodes à temps partiel ne sont actuellement pas prises en compte
