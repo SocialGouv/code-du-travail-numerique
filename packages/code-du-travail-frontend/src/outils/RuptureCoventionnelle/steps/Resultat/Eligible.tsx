@@ -11,10 +11,8 @@ import {
   FormulaInterpreter,
   Result,
 } from "../../../CommonIndemniteDepart/steps/Resultat/components";
-import {
-  AgreementsInjector,
-  getForMoreInfoMessage,
-} from "../../../CommonIndemniteDepart/agreements";
+// Do not optimize the following import
+import { getForMoreInfoMessage } from "../../../CommonIndemniteDepart/agreements/ui-customizations";
 import ShowDetails from "../../../common/ShowDetails";
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
@@ -22,6 +20,7 @@ import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";
 import { getResultMessage } from "./utils";
 import { IndemniteDepartType } from "../../../types";
+import { AgreementsInjector } from "../../../CommonIndemniteDepart/agreements";
 
 const Eligible = () => {
   const store = useContext(IndemniteDepartContext);

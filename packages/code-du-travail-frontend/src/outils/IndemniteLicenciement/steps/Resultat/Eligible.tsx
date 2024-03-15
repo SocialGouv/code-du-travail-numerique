@@ -16,13 +16,12 @@ import {
   useIndemniteDepartStore,
 } from "../../../CommonIndemniteDepart/store";
 import { getResultMessage } from "../../../RuptureCoventionnelle/steps/Resultat/utils";
-import {
-  AgreementsInjector,
-  getForMoreInfoMessage,
-} from "../../../CommonIndemniteDepart/agreements";
+// Do not optimize the following import
+import { getForMoreInfoMessage } from "../../../CommonIndemniteDepart/agreements/ui-customizations";
 import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
 import { IndemniteDepartType } from "../../../types";
 import Link from "next/link";
+import { AgreementsInjector } from "../../../CommonIndemniteDepart/agreements";
 
 export default function Eligible() {
   const store = useContext(IndemniteDepartContext);

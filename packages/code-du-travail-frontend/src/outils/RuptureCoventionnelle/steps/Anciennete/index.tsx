@@ -12,7 +12,7 @@ import {
 } from "../../../CommonIndemniteDepart/store";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 // Do not optimize the following import
-import { getMessageMotifExample } from "../../../CommonIndemniteDepart/agreements";
+import { getMessageMotifExample } from "../../../CommonIndemniteDepart/agreements/ui-customizations/messages";
 
 const StepAnciennete = () => {
   const store = useContext(IndemniteDepartContext);
@@ -56,6 +56,7 @@ const StepAnciennete = () => {
     ),
   }));
 
+  console.log("MMA - Ancienneté step ! ");
   useEffect(() => {
     init();
   }, [init]);
