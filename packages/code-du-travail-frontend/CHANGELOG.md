@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.129.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.2...v4.129.3) (2024-03-14)
+
+**Note:** Version bump only for package @cdt/frontend
+
+## [4.129.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.1...v4.129.2) (2024-03-14)
+
+### Bug Fixes
+
+- **xml:** set content-type header for the sitemap ([#5700](https://github.com/SocialGouv/code-du-travail-numerique/issues/5700)) ([7791021](https://github.com/SocialGouv/code-du-travail-numerique/commit/779102115703bb77211f4e65fedfe2257fee4795))
+
+## [4.129.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.0...v4.129.1) (2024-03-13)
+
+### Bug Fixes
+
+- **s3:** update csp config ([#5694](https://github.com/SocialGouv/code-du-travail-numerique/issues/5694)) ([ee3562d](https://github.com/SocialGouv/code-du-travail-numerique/commit/ee3562d90024ba7d377566a4fea7196d73033be5))
+
+# [4.129.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.128.0...v4.129.0) (2024-03-13)
+
+### Features
+
+- **indemnite-licenciement:** use calculate from information step ([#5675](https://github.com/SocialGouv/code-du-travail-numerique/issues/5675)) ([8534bfd](https://github.com/SocialGouv/code-du-travail-numerique/commit/8534bfd6d1f4afaa7f0166cc5c931c2489561136))
+- **upload:** use `s3` instead of `azure` ([#5672](https://github.com/SocialGouv/code-du-travail-numerique/issues/5672)) ([7110810](https://github.com/SocialGouv/code-du-travail-numerique/commit/7110810f0fab5ab841f6cff6b9d4ea07c53e4dfb))
+
+# [4.128.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.127.0...v4.128.0) (2024-03-11)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** correction des erreurs liées aux dates + `catch` des erreurs `publicodes` ([#5685](https://github.com/SocialGouv/code-du-travail-numerique/issues/5685)) ([7569990](https://github.com/SocialGouv/code-du-travail-numerique/commit/7569990e0951a863f0db624719b2db2d3a023c95))
+- unextended bug prod ([#5665](https://github.com/SocialGouv/code-du-travail-numerique/issues/5665)) ([8071498](https://github.com/SocialGouv/code-du-travail-numerique/commit/8071498a9b1ddee67226eb23bd8f207f86159246))
+
 # [4.127.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.126.0...v4.127.0) (2024-03-04)
 
 ### Features

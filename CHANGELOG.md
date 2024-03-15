@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.129.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.2...v4.129.3) (2024-03-14)
+
+### Bug Fixes
+
+- **actions:** set command for sitemap in different run ([23a7907](https://github.com/SocialGouv/code-du-travail-numerique/commit/23a790777d4337a08918aa24e81b93fafdae4b57))
+
+## [4.129.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.1...v4.129.2) (2024-03-14)
+
+### Bug Fixes
+
+- **actions:** verification du `sitemap.xml` ([#5701](https://github.com/SocialGouv/code-du-travail-numerique/issues/5701)) ([b4fbcb1](https://github.com/SocialGouv/code-du-travail-numerique/commit/b4fbcb11c130f2391cae10686c1da66eb150a0d0))
+- **html:** bloqué la possibilité d'avoir des headings dans les titres des accordéons si le titleLevel > 6 ([#5688](https://github.com/SocialGouv/code-du-travail-numerique/issues/5688)) ([cf603f3](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf603f3845fd5da1b323fa55401d3d49da7df83e))
+- **xml:** set content-type header for the sitemap ([#5700](https://github.com/SocialGouv/code-du-travail-numerique/issues/5700)) ([7791021](https://github.com/SocialGouv/code-du-travail-numerique/commit/779102115703bb77211f4e65fedfe2257fee4795))
+
+## [4.129.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.0...v4.129.1) (2024-03-13)
+
+### Bug Fixes
+
+- **s3:** update csp config ([#5694](https://github.com/SocialGouv/code-du-travail-numerique/issues/5694)) ([ee3562d](https://github.com/SocialGouv/code-du-travail-numerique/commit/ee3562d90024ba7d377566a4fea7196d73033be5))
+
+# [4.129.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.128.0...v4.129.0) (2024-03-13)
+
+### Features
+
+- **indemnite-licenciement:** use calculate from information step ([#5675](https://github.com/SocialGouv/code-du-travail-numerique/issues/5675)) ([8534bfd](https://github.com/SocialGouv/code-du-travail-numerique/commit/8534bfd6d1f4afaa7f0166cc5c931c2489561136))
+- **upload:** use `s3` instead of `azure` ([#5672](https://github.com/SocialGouv/code-du-travail-numerique/issues/5672)) ([7110810](https://github.com/SocialGouv/code-du-travail-numerique/commit/7110810f0fab5ab841f6cff6b9d4ea07c53e4dfb))
+
+# [4.128.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.127.0...v4.128.0) (2024-03-11)
+
+### Bug Fixes
+
+- bug calculate si pas de salaires ([#5683](https://github.com/SocialGouv/code-du-travail-numerique/issues/5683)) ([6f2acbc](https://github.com/SocialGouv/code-du-travail-numerique/commit/6f2acbca31c0dfd191ec529c6202d430940cbaf3))
+- **indemnite-licenciement:** correction des erreurs liées aux dates + `catch` des erreurs `publicodes` ([#5685](https://github.com/SocialGouv/code-du-travail-numerique/issues/5685)) ([7569990](https://github.com/SocialGouv/code-du-travail-numerique/commit/7569990e0951a863f0db624719b2db2d3a023c95))
+- **simulateurs:** modification pour la CC 176 ([#5677](https://github.com/SocialGouv/code-du-travail-numerique/issues/5677)) ([b432392](https://github.com/SocialGouv/code-du-travail-numerique/commit/b4323924ca595c5676fd2776757e2219302da2ab))
+- **simulateurs:** retours sur la 176 ([160aca4](https://github.com/SocialGouv/code-du-travail-numerique/commit/160aca4878867908df57d52015141a8519533ca9))
+- unextended bug prod ([#5665](https://github.com/SocialGouv/code-du-travail-numerique/issues/5665)) ([8071498](https://github.com/SocialGouv/code-du-travail-numerique/commit/8071498a9b1ddee67226eb23bd8f207f86159246))
+
+### Features
+
+- **rupture-co:** ajout de la partie légale dans le modèle ([#5650](https://github.com/SocialGouv/code-du-travail-numerique/issues/5650)) ([e650a56](https://github.com/SocialGouv/code-du-travail-numerique/commit/e650a5683d75cd78749bc1c4ad7b396cabde7799))
+
 # [4.127.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.126.0...v4.127.0) (2024-03-04)
 
 ### Features

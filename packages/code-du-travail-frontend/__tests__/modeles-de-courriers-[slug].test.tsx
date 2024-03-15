@@ -10,7 +10,7 @@ describe("<ModelesDeCourrier />", () => {
       date: "01/01/2020",
       description: "un description",
       metaDescription: "un description",
-      fileUrl: "api.url/docs/filename.pdf",
+      filename: "filename.pdf",
       filesize: "12345",
       html: "<p>youhou</p>",
       meta_title: "Courrier Epistolaire",

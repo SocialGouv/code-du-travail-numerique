@@ -36,7 +36,7 @@ export const Accordion = ({
                 isLast={index === items.length - 1}
                 disableStyles={disableStyles}
               >
-                {titleLevel ? (
+                {titleLevel && titleLevel <= 6 ? (
                   <Heading
                     as={"h" + titleLevel}
                     stripe="none"

@@ -1,10 +1,10 @@
-import { AZURE_BASE_URL, AZURE_CONTAINER } from "../config";
+import { BUCKET_URL, BUCKET_DEFAULT_FOLDER } from "../config";
 
 export const toUrl = (file: string): string => {
   if (!file) return "";
   const index = file.lastIndexOf("/");
   const filename = index !== -1 ? file.substring(index + 1) : file;
-  return `${AZURE_BASE_URL}/${AZURE_CONTAINER}/${filename}`;
+  return `${BUCKET_URL}/${BUCKET_DEFAULT_FOLDER}/${filename}`;
 };
 
 export const removeQueryParameters = (url: string): string => {
