@@ -58,7 +58,7 @@ const ShowAgreements = ({
           {noAgreementFoundComponent ?? (
             <Alert
               title="Aucune convention collective n'a été déclarée pour cette entreprise."
-              message="Vous pouvez tout de même poursuivre pour obtenir les informations générales."
+              message="Vous pouvez tout de même poursuivre pour obtenir les informations générales prévues par le code du travail."
             />
           )}
         </>
