@@ -89,7 +89,7 @@ export async function getStaticProps() {
     } else {
       result = await getToolsByIdsAndSlugs();
     }
-    const isProd = process.env.NEXT_PUBLIC_APP_ENV === "production"
+    const isProd = process.env.NEXT_PUBLIC_SENTRY_ENV === "production"
     const tools = result
       .map(({ _id, _source }) => ({ ..._source, _id }))
       .filter((tool) => isProd ? tool.displayTool : true);
