@@ -3,11 +3,16 @@ import React from "react";
 
 import { SelectAgreement } from "../../common";
 import {
+  detectNoAgreementInEnterprise,
   getSupportedCC,
   validateUnsupportedAgreement,
 } from "../../common/situations.utils";
-import { WizardStepProps } from "../../common/type/WizardType";
+import {
+  ConventionCollective,
+  WizardStepProps,
+} from "../../common/type/WizardType";
 import NotSupportedAgreementDisclaimer from "./component/NotSupportedAgreementDisclaimer";
+import { Simulator } from "../../common/NoticeExample";
 
 const supportedCC = getSupportedCC(data.situations);
 
@@ -25,11 +30,15 @@ const AgreementStep = (props: WizardStepProps): JSX.Element => {
       alertAgreementNotSupported={(url: string) => (
         <NotSupportedAgreementDisclaimer agreementUrl={url} />
       )}
+      simulator={Simulator.PREAVIS_DEMISSION}
     />
   );
 };
 
-AgreementStep.validate = validateUnsupportedAgreement(
-  getSupportedCC(data.situations)
-);
+AgreementStep.validate = ({ ccn }: { ccn?: ConventionCollective }) => {
+  return {
+    ...validateUnsupportedAgreement(data.situations, ccn),
+    ...detectNoAgreementInEnterprise(ccn),
+  };
+};
 export { AgreementStep };

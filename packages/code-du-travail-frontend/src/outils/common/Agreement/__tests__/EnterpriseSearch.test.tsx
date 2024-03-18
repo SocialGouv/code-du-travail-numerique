@@ -7,6 +7,7 @@ import { Agreement } from "@socialgouv/cdtn-utils";
 import type { Props } from "../EnterpriseSearch/EnterpriseSearch";
 import EnterpriseSearch from "../EnterpriseSearch/EnterpriseSearch";
 import { EnterpriseAgreement } from "../../../../api/modules/enterprises/types";
+import { Simulator } from "../../NoticeExample";
 
 const callback: (
   agreement: Agreement | null,
@@ -70,6 +71,7 @@ describe("EnterpriseSearch", () => {
       onSelectAgreement,
       onUserAction,
       supportedAgreements: [],
+      simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
     };
 
     it("should render the mandatory question 'Nom de votre entreprise ou numéro Siret' and not mandatory 'Code postal ou ville'", () => {
@@ -121,6 +123,7 @@ describe("EnterpriseSearch", () => {
       onUserAction,
       selectedEnterprise: selectedEnterpriseOneAgreement,
       supportedAgreements: [],
+      simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
     };
 
     it("should show the default agreement", () => {
@@ -207,6 +210,7 @@ describe("EnterpriseSearch", () => {
       onUserAction,
       selectedEnterprise: selectedEnterpriseTwoAgreements,
       supportedAgreements: [],
+      simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
     };
     it("should show the agreements selection", () => {
       const { getByText, queryByText } = render(
@@ -298,6 +302,7 @@ describe("EnterpriseSearch", () => {
         onUserAction,
         selectedEnterprise: selectedEnterpriseOneAgreement,
         supportedAgreements: [],
+        simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
       };
       const { getByText } = render(
         <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
@@ -313,6 +318,7 @@ describe("EnterpriseSearch", () => {
         onUserAction,
         selectedEnterprise: selectedEnterpriseTwoAgreements,
         supportedAgreements: [],
+        simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
       };
       const { getByText } = render(
         <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
@@ -334,6 +340,7 @@ describe("EnterpriseSearch", () => {
             idcc: selectedEnterpriseOneAgreement.conventions[0].num,
           },
         ],
+        simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
       };
       const { queryByText } = render(
         <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
@@ -354,6 +361,7 @@ describe("EnterpriseSearch", () => {
             idcc: selectedEnterpriseTwoAgreements.conventions[0].num,
           },
         ],
+        simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
       };
       const { getByText, queryByText } = render(
         <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
@@ -373,6 +381,7 @@ describe("EnterpriseSearch", () => {
         alertAgreementNotSupported: (agreementUrl: string) => (
           <p>This is my custom text with the url: {agreementUrl}</p>
         ),
+        simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
       };
       const { getByText } = render(
         <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />

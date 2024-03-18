@@ -6,6 +6,7 @@ import { Agreement } from "@socialgouv/cdtn-utils";
 import { RadioQuestion } from "../../../Components";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";
 import ShowAlert from "../../../common/Agreement/components/ShowAlert";
+import { Alert } from "../../../../common/Alert";
 
 type Props = {
   enterprise: Enterprise;
@@ -15,6 +16,7 @@ type Props = {
   error?: string;
   alertAgreementNotSupported?: (string) => JSX.Element;
   simulator: PublicodesSimulator | "QUESTIONNAIRE";
+  noAgreementFoundComponent?: JSX.Element;
 };
 
 const ShowAgreements = ({
@@ -25,6 +27,7 @@ const ShowAgreements = ({
   error,
   alertAgreementNotSupported,
   simulator,
+  noAgreementFoundComponent,
 }: Props): JSX.Element => {
   const onAgreementChange = (idcc: string) => {
     const agreement = enterprise.conventions.find(
@@ -34,19 +37,33 @@ const ShowAgreements = ({
   };
   return (
     <>
-      <RadioQuestion
-        questions={enterprise.conventions.map((agreement) => ({
-          label: `${agreement.shortTitle} (IDCC ${formatIdcc(agreement.num)})`,
-          value: `${agreement.num}`,
-          id: `enterprise-agreement-${agreement.num}`,
-        }))}
-        name="agreement"
-        label={`${enterprise.conventions.length} conventions collectives ont été trouvées pour cette entreprise, sélectionnez la vôtre&nbsp:`}
-        selectedOption={agreement?.num.toString()}
-        onChangeSelectedOption={onAgreementChange}
-        error={error}
-        showRequired
-      />
+      {enterprise.conventions.length > 0 ? (
+        <RadioQuestion
+          questions={enterprise.conventions.map((agreement) => ({
+            label: `${agreement.shortTitle} (IDCC ${formatIdcc(
+              agreement.num
+            )})`,
+            value: `${agreement.num}`,
+            id: `enterprise-agreement-${agreement.num}`,
+          }))}
+          name="agreement"
+          label={`${enterprise.conventions.length} conventions collectives ont été trouvées pour cette entreprise, sélectionnez la vôtre&nbsp:`}
+          selectedOption={agreement?.num.toString()}
+          onChangeSelectedOption={onAgreementChange}
+          error={error}
+          showRequired
+        />
+      ) : (
+        <>
+          {noAgreementFoundComponent ?? (
+            <Alert
+              title="Aucune convention collective n'a été déclarée pour cette entreprise."
+              message="Vous pouvez tout de même poursuivre pour obtenir les informations générales prévues par le code du travail."
+            />
+          )}
+        </>
+      )}
+
       {agreement && (
         <ShowAlert
           currentAgreement={agreement}

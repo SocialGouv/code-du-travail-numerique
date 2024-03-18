@@ -63,7 +63,7 @@ export const AlertAgreementSupported = ({
     ) : (
       <p>
         Vous pouvez tout de même poursuivre pour obtenir les informations
-        générales.
+        générales prévues par le code du travail.
       </p>
     )}
   </>
