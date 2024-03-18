@@ -7,12 +7,16 @@ import { Paragraph } from "@socialgouv/cdtn-ui";
 export function AccordionContentContribution(
   contribution: ElasticSearchConventionCollective
 ) {
+  const unextendedCC = ["0029", "0413", "2420"];
+  const isUnextendedCC = unextendedCC.includes(contribution.idcc);
   return (
     <>
       <Paragraph italic noMargin>
-        {contribution.infoMessage}
+        {!isUnextendedCC
+          ? contribution.infoMessage
+          : "Les informations ci-dessous sont issues du code du travail car les dispositions de la convention collective ne sont pas étendues"}
       </Paragraph>
-      <ContributionContent contribution={contribution}  titleLevel={5}/>
+      <ContributionContent contribution={contribution} titleLevel={5} />
       <ReferencesJuridiques references={contribution.references} />
       <ContributionMessageBlock message={contribution.messageBlock} />
     </>
