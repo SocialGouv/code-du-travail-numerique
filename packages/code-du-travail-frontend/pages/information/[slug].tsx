@@ -89,10 +89,6 @@ export const getServerSideProps = async ({ query }) => {
   }
   const information = await responseContainer.json();
 
-  if (!information) {
-    return { notFound: true };
-  }
-
   return { props: { information, slug: query.slug } };
 };
 
