@@ -58,7 +58,6 @@ export function getModelesByIds(ids: string[]) {
       "breadcrumbs",
       "source",
       "cdtnId",
-      "fileUrl",
       "filesize",
       "filename",
       "html",

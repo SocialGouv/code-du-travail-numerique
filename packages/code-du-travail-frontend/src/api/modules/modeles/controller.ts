@@ -30,7 +30,7 @@ export class ModelesController {
     try {
       const { id } = this.req.query;
       if (!id) {
-        this.res.status(500).json({ message: "missing parameter id" });
+        this.res.status(400).json({ message: "missing parameter id" });
         return;
       }
       const response = await getByIdsModeles([id as string]);
