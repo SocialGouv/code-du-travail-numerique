@@ -4,6 +4,7 @@ import React from "react";
 import { SelectAgreement } from "../../common";
 import { getSupportedCC } from "../../common/situations.utils";
 import { WizardStepProps } from "../../common/type/WizardType";
+import { Simulator } from "../../common/NoticeExample";
 
 export const AgreementStep = (props: WizardStepProps): JSX.Element => {
   return (
@@ -14,6 +15,7 @@ export const AgreementStep = (props: WizardStepProps): JSX.Element => {
         props.form.change("criteria", undefined);
       }}
       supportedAgreements={getSupportedCC(data.situations)}
+      simulator={Simulator.PREAVIS_LICENCIEMENT}
     />
   );
 };

@@ -11,6 +11,7 @@ import {
 } from "../../../common/Agreement/form-constants";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";
 import { Agreement } from "@socialgouv/cdtn-utils";
+import { Simulator } from "../../../common/NoticeExample";
 
 export const getSupportedCC = (): AgreementSupportInfo[] =>
   supportedCcn.map((item) => ({
@@ -47,6 +48,7 @@ const RenderAgreementStep = (): JSX.Element => {
         title={title}
         form={form}
         supportedAgreements={getSupportedCC()}
+        simulator={Simulator.PREAVIS_RETRAITE_BOTH}
       />
     </>
   );
