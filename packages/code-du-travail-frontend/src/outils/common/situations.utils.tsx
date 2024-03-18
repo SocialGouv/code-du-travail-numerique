@@ -170,7 +170,6 @@ export const validateUnsupportedAgreement = (
   ccn?: ConventionCollective
 ) => {
   const supportedAgreement = getSupportedCC(situations);
-  console.log(supportedAgreement, ccn);
   if (ccn && ccn.selected) {
     const idccInfo = supportedAgreement.find(
       (item) => item.idcc === ccn.selected!.num
