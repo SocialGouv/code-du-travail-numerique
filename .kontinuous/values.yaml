@@ -5,6 +5,11 @@ jobs:
       use: build
       with:
         imagePackage: app
+    build-nginx:
+      use: build
+      with:
+        imagePackage: nginx
+        context: packages/nginx
 
 app:
   ~chart: app
@@ -24,3 +29,32 @@ app:
     requests:
       cpu: 50m
       memory: 256Mi
+  ingress:
+    enabled: false
+
+nginx:
+  ~chart: app
+  ~needs: [build-nginx]
+  imagePackage: nginx
+  host: "{{ .Values.global.host }}"
+  containerPort: 8080
+  probesPath: /live
+  livenessProbe:
+    httpGet:
+      path: /live
+      port: 8080
+  readinessProbe:
+    httpGet:
+      path: /ready
+      port: 8080
+  lifecycle:
+    preStop:
+      exec:
+        command: ["/pre-stop.sh"]
+  resources:
+    requests:
+      cpu: 30m
+      memory: 256Mi
+    limits:
+      cpu: 2
+      memory: 1G
