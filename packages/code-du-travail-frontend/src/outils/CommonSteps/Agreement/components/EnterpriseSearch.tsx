@@ -23,6 +23,7 @@ export type Props = {
   alertAgreementNotSupported?: (string) => JSX.Element;
   simulator: PublicodesSimulator | "QUESTIONNAIRE";
   isDisabled?: boolean;
+  noAgreementFoundComponent?: JSX.Element;
 } & TrackingProps;
 
 const EnterpriseSearch = ({
@@ -34,6 +35,7 @@ const EnterpriseSearch = ({
   alertAgreementNotSupported,
   simulator,
   isDisabled,
+  noAgreementFoundComponent,
 }: Props): JSX.Element => {
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
     selectedEnterprise
@@ -70,6 +72,7 @@ const EnterpriseSearch = ({
             supportedAgreements={supportedAgreements}
             alertAgreementNotSupported={alertAgreementNotSupported}
             simulator={simulator}
+            noAgreementFoundComponent={noAgreementFoundComponent}
           />
         )}
       </>
