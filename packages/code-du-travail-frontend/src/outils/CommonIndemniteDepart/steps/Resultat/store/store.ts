@@ -1,11 +1,9 @@
 import {
   Formula,
-  getSupportedAgreement,
   Notification,
   PublicodesIndemniteLicenciementResult,
   PublicodesSimulator,
   References,
-  SeniorityResult,
 } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../../types";
 import {
@@ -23,15 +21,15 @@ import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informatio
 import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
 import {
   AgreementInformation,
-  hasNoLegalIndemnity,
   hasNoBetterAllowance,
+  hasNoLegalIndemnity,
 } from "../../../common";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
 import { IndemniteDepartStepName } from "../../..";
 import {
-  MatomoBaseEvent,
   MatomoActionEvent,
+  MatomoBaseEvent,
   MatomoSimulatorEvent,
 } from "../../../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
@@ -193,6 +191,7 @@ const createResultStore: StoreSlice<
       const legalFormula = publicodes.getFormule();
       const legalReferences = publicodes.getReferences();
 
+      // ajouter un PublicodesIndemniteRuptureCoResult ?
       let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult =
         {
           value: null,
@@ -250,6 +249,7 @@ const createResultStore: StoreSlice<
           };
           publicodesSituationConventionnel = publicodes.calculate(
             situation,
+            // ici on va  utiliser la même régle ?
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           ).result;
         } catch (e) {

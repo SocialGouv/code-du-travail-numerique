@@ -1,7 +1,11 @@
 contrat salarié . convention collective . éducation et loisirs . rupture conventionnelle:
-  applicable si: rupture conventionnelle
+  applicable si: contrat salarié . indemnité de licenciement . rupture conventionnelle
   valeur: oui
 
-contrat salarié . convention collective . éducation et loisirs . rupture conventionnelle . résultat conventionnel:
-  remplace: contrat salarié . rupture conventionnelle . résultat conventionnel identique au légal
-  valeur: O
+contrat salarié . convention collective . éducation et loisirs . rupture conventionnelle . hors ANI:
+  remplace: contrat salarié . indemnité de licenciement . rupture conventionnelle . hors ANI
+  valeur: oui
+
+contrat salarié . convention collective . éducation et loisirs . hors ANI:
+  remplace: contrat salarié . convention collective . éducation et loisirs . indemnité de licenciement
+  valeur: non
