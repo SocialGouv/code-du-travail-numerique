@@ -76,7 +76,6 @@ class RuptureConventionnellePublicodes
       return this.calculateSituation(args, targetRule);
     } else {
       const situations = reasons.map(({ name, rule, value }) => {
-        console.log(`Compute for reason: ${name}`);
         const newArgs = args;
         newArgs[rule] = value;
         return this.calculateSituation(newArgs, targetRule);
