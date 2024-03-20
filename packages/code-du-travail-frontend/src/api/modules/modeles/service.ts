@@ -50,7 +50,7 @@ export const getByIdsModeles = async (
       cause: null,
     });
   }
-  return response.body.hits.hits.map(({ _source }) => _source)[0];
+  return response.body.hits.hits.map(({ _source }) => _source);
 };
 
 export const getBySlugModeles = async (slug: string) => {
