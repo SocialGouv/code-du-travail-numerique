@@ -38,7 +38,7 @@ function Widgets(props: LetterModelProps): JSX.Element {
 }
 
 const fetchCourrier = ({ id }) =>
-  fetch(`${SITE_URL}/api/items?source=modeles_de_courriers&id=${id}`);
+  fetch(`${SITE_URL}/api/items/modeles_de_courriers/${id}`);
 
 export const getServerSideProps = async ({ query }) => {
   const response = await fetchCourrier(query);
