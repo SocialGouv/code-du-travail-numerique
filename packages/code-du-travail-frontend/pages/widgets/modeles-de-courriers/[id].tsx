@@ -46,7 +46,7 @@ export const getServerSideProps = async ({ query }) => {
   }
 
   const data = await response.json();
-  return { props: { relatedItems: [], ...data } };
+  return { props: { relatedItems: [], ...data[0] } };
 };
 
 export default Widgets;
