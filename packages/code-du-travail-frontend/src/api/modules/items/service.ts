@@ -43,13 +43,8 @@ export const getBySourceAndSlugItems = async (source: any, slug: string) => {
   };
 };
 
-export const getAll = async (
-  url?: string,
-  source?: string,
-  idsString?: string
-) => {
-  const ids = idsString?.split(",");
-  const body = getDocumentBody({ ids, source, url });
+export const getAll = async (url: string) => {
+  const body = getDocumentBody(url);
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
