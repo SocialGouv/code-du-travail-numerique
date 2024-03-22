@@ -17,7 +17,6 @@ export class ReferenceSalary1483
   mapSituation(
     args: Record<string, string | undefined>
   ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1483> {
-    console.log();
     return {
       salaires: args.salaryPeriods
         ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
@@ -41,8 +40,6 @@ export class ReferenceSalary1483
     salaires,
     salairesPendantPreavis,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1483>): number {
-    console.log("salaires", salaires);
-    console.log("salairesPendantPreavis", salairesPendantPreavis);
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
     const moyenneSalaires = sum(salaryValues) / rankedSalaires.length;
