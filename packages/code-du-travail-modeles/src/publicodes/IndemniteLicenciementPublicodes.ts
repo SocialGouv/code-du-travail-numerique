@@ -84,7 +84,6 @@ class IndemniteLicenciementPublicodes
       "contrat salarié . indemnité de licenciement . date d'entrée",
       "contrat salarié . indemnité de licenciement . date de sortie",
     ]);
-    console.log("missingArgSeniority", missingArgSeniority);
     if (!missingArgSeniority) {
       const agreement = new SeniorityFactory().create(this.idcc);
       const agreementSeniority = agreement.computeSeniority(
@@ -94,8 +93,6 @@ class IndemniteLicenciementPublicodes
         SupportedCcIndemniteLicenciement.default
       );
       const legalSeniority = legal.computeSeniority(legal.mapSituation(args));
-      console.log("legalSeniority", legalSeniority);
-      console.log("agreementSeniority", agreementSeniority);
       if (legalSeniority.value !== undefined) {
         newArgs = {
           ...newArgs,
@@ -190,7 +187,6 @@ class IndemniteLicenciementPublicodes
       }
     }
     const situation = this.removeNonPublicodeFields(newArgs);
-    console.log("situation", situation);
     return super.setSituation(situation, targetRule);
   }
 
