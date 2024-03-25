@@ -15,6 +15,7 @@ import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
+import { ultraShortNameCc } from "../../src/contributions/utils";
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);
@@ -56,12 +57,12 @@ const buildTitleAndDescription = (
     title,
   };
 };
-const getTitleFromNewContrib = (contribution) => {
-  if (!contribution.ccnShortTitle || contribution.ccnShortTitle.length > 14 || contribution.title.length > 50) {
-    return contribution.title;
+const getTitleFromNewContrib = (contrib: ElasticSearchContribution) => {
+  if (!contrib.ccnShortTitle) {
+    return contrib.title;
   }
 
-  return `${contribution.title} - ${contribution.ccnShortTitle}`;
+  return `${contrib.title} - ${ultraShortNameCc[contrib.idcc]}`;
 };
 
 function PageContribution(props: Props): React.ReactElement {
