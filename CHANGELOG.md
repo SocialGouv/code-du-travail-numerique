@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.131.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.130.0...v4.131.0) (2024-03-25)
+
+### Bug Fixes
+
+- bug sur le calculate salary 1483 ([#5711](https://github.com/SocialGouv/code-du-travail-numerique/issues/5711)) ([0b661dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/0b661dda4269bb5f4b4b18f954e4053a3fd3a8d1))
+- **migration ovh:** mise à jour des urls en dev de serving ml ([#5709](https://github.com/SocialGouv/code-du-travail-numerique/issues/5709)) ([39e9a85](https://github.com/SocialGouv/code-du-travail-numerique/commit/39e9a859f4f7062d899ab37b306bdc16ab19ed36))
+
+### Features
+
+- **information:** optimisation du chargement des contenus `relatedDocuments` pendant l'export ([#5699](https://github.com/SocialGouv/code-du-travail-numerique/issues/5699)) ([700fa13](https://github.com/SocialGouv/code-du-travail-numerique/commit/700fa131ca86a042c42bdffd74422e088d4a75ee))
+
 # [4.130.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.3...v4.130.0) (2024-03-19)
 
 ### Features

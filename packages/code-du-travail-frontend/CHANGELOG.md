@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.131.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.130.0...v4.131.0) (2024-03-25)
+
+### Features
+
+- **information:** optimisation du chargement des contenus `relatedDocuments` pendant l'export ([#5699](https://github.com/SocialGouv/code-du-travail-numerique/issues/5699)) ([700fa13](https://github.com/SocialGouv/code-du-travail-numerique/commit/700fa131ca86a042c42bdffd74422e088d4a75ee))
+
 # [4.130.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.3...v4.130.0) (2024-03-19)
 
 ### Features
