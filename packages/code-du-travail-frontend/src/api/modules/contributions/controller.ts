@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
-import { getGenericContributionsGroupByThemes } from "../contributions";
+import { getGenericContributionsGroupByThemes } from "./service";
 
 export class ContributionsController {
   private req: NextApiRequest;
