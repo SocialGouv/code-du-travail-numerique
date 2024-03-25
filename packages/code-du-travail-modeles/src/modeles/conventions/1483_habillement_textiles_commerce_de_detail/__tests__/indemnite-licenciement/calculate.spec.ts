@@ -6,7 +6,7 @@ const engine = new IndemniteLicenciementPublicodes(
 );
 
 describe("Test de la fonctionnalité 'calculate'", () => {
-  test("Vérifier qu'il n'y a pas l'eligibilite Anciennete inférieur 8 mois quand cdi opération", () => {
+  test("Vérifier que le salaires est bien pris en compte", () => {
     const { result, missingArgs, ineligibility } = engine.calculate({
       "contrat salarié . convention collective": "'IDCC1483'",
       "contrat salarié . convention collective . habillement textiles commerce de detail . age":
