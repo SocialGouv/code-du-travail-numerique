@@ -23,7 +23,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
         "non",
       licenciementFauteGrave: "non",
-      noticeSalaryPeriods: "[]",
+      noticeSalaryPeriods: undefined,
       salaryPeriods:
         '[{"month":"décembre 2023","value":3000},{"month":"novembre 2023","value":3000},{"month":"octobre 2023","value":3000},{"month":"septembre 2023","value":3000},{"month":"août 2023","value":3000},{"month":"juillet 2023","value":3000},{"month":"juin 2023","value":3000},{"month":"mai 2023","value":3000},{"month":"avril 2023","value":3000},{"month":"mars 2023","value":3000},{"month":"février 2023","value":3000},{"month":"janvier 2023","value":3000}]',
       typeContratTravail: "cdi",

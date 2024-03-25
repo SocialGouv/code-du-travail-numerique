@@ -23,7 +23,7 @@ export class ReferenceSalary1483
         : [],
       salairesPendantPreavis: args.noticeSalaryPeriods
         ? JSON.parse(args.noticeSalaryPeriods)
-        : undefined,
+        : [],
     };
   }
 
