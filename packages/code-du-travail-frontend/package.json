@@ -55,7 +55,7 @@
     "html-react-parser": "^5.0.6",
     "html-validate": "^8.9.1",
     "immer": "^9.0.14",
-    "katex": "^0.13.13",
+    "katex": "^0.16.0",
     "lit": "2.6.1",
     "lodash.deburr": "^4.1.0",
     "memoizee": "^0.4.15",

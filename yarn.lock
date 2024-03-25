@@ -1926,7 +1926,7 @@ __metadata:
     immer: ^9.0.14
     jest: ^29.5.0
     jest-environment-jsdom: ^29.5.0
-    katex: ^0.13.13
+    katex: ^0.16.0
     lint-staged: ^13.0.0
     lit: 2.6.1
     lodash.deburr: ^4.1.0
@@ -9475,7 +9475,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^8.0.0":
+"commander@npm:^8.3.0":
   version: 8.3.0
   resolution: "commander@npm:8.3.0"
   checksum: 0f82321821fc27b83bd409510bb9deeebcfa799ff0bf5d102128b500b7af22872c0c92cb6a0ebc5a4cf19c6b550fba9cedfa7329d18c6442a625f851377bacf0
@@ -15946,14 +15946,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"katex@npm:^0.13.13":
-  version: 0.13.24
-  resolution: "katex@npm:0.13.24"
+"katex@npm:^0.16.0":
+  version: 0.16.10
+  resolution: "katex@npm:0.16.10"
   dependencies:
-    commander: ^8.0.0
+    commander: ^8.3.0
   bin:
     katex: cli.js
-  checksum: 1b7c8295867073d0db4f6fb41ef1c0e3418b8e23924ff61b446b36134cb74cdadc7242dfbfb922d9c32f0b15eda6160a08cd30948c4e78141966ca2991a1726b
+  checksum: 108e9d810e17840c43eef8d46171096f4cc97852bfd1e2dd1890d9b3435846816e3e98678a31d38bd064eb97eea83b18ff224cb65d5f9511b54ce7ff4359b591
   languageName: node
   linkType: hard
 
