@@ -24,7 +24,6 @@ describe("Rupture conventionnelle - légale", () => {
     expect(ui.contract.fauteGrave.question.query()).not.toBeInTheDocument();
 
     userAction
-      .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get());
 

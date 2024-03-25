@@ -11,11 +11,9 @@ const StepContratTravail = (): JSX.Element => {
   const store = useContext(IndemniteDepartContext);
   const {
     onChangeLicenciementFauteGrave,
-    licenciementInaptitude,
     onChangeLicenciementInaptitude,
     typeContratTravail,
     onChangeTypeContratTravail,
-    errorLicenciementInaptitude,
     errorTypeContratTravail,
     arretTravail,
     onChangeArretTravail,
@@ -70,6 +68,7 @@ const StepContratTravail = (): JSX.Element => {
           onChangeTypeContratTravail(value);
           if (value === "cdi") {
             onChangeLicenciementFauteGrave("non");
+            onChangeLicenciementInaptitude("non");
           }
         }}
         error={errorTypeContratTravail}
@@ -77,28 +76,6 @@ const StepContratTravail = (): JSX.Element => {
         autoFocus
       />
       {typeContratTravail === "cdi" && (
-        <RadioQuestion
-          questions={[
-            {
-              label: "Oui",
-              value: "oui",
-              id: "inaptitude-oui",
-            },
-            {
-              label: "Non",
-              value: "non",
-              id: "inaptitude-non",
-            },
-          ]}
-          name="licenciementInaptitude"
-          label="La rupture conventionnelle fait-elle suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue)&nbsp;?"
-          selectedOption={licenciementInaptitude}
-          onChangeSelectedOption={onChangeLicenciementInaptitude}
-          error={errorLicenciementInaptitude}
-          showRequired
-        />
-      )}
-      {typeContratTravail === "cdi" && licenciementInaptitude === "non" && (
         <RadioQuestion
           questions={[
             {
@@ -120,21 +97,19 @@ const StepContratTravail = (): JSX.Element => {
           showRequired
         />
       )}
-      {typeContratTravail === "cdi" &&
-        licenciementInaptitude === "non" &&
-        arretTravail === "oui" && (
-          <TextQuestion
-            label="Depuis quelle date le salarié est-il en arrêt&nbsp;?"
-            inputType="date"
-            placeholder="jj/mm/aaaa"
-            value={dateArretTravail}
-            onChange={onChangeDateArretTravail}
-            error={errorDateArretTravail}
-            id="dateArretTravail"
-            showRequired
-            dataTestId={"date-arret-travail"}
-          />
-        )}
+      {typeContratTravail === "cdi" && arretTravail === "oui" && (
+        <TextQuestion
+          label="Depuis quelle date le salarié est-il en arrêt&nbsp;?"
+          inputType="date"
+          placeholder="jj/mm/aaaa"
+          value={dateArretTravail}
+          onChange={onChangeDateArretTravail}
+          error={errorDateArretTravail}
+          id="dateArretTravail"
+          showRequired
+          dataTestId={"date-arret-travail"}
+        />
+      )}
     </>
   );
 };
