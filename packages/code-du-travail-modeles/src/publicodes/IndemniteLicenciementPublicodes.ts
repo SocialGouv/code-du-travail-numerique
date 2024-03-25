@@ -84,6 +84,7 @@ class IndemniteLicenciementPublicodes
       "contrat salarié . indemnité de licenciement . date d'entrée",
       "contrat salarié . indemnité de licenciement . date de sortie",
     ]);
+    console.log("missingArgSeniority", missingArgSeniority);
     if (!missingArgSeniority) {
       const agreement = new SeniorityFactory().create(this.idcc);
       const agreementSeniority = agreement.computeSeniority(
@@ -93,7 +94,9 @@ class IndemniteLicenciementPublicodes
         SupportedCcIndemniteLicenciement.default
       );
       const legalSeniority = legal.computeSeniority(legal.mapSituation(args));
-      if (legalSeniority.value) {
+      console.log("legalSeniority", legalSeniority);
+      console.log("agreementSeniority", agreementSeniority);
+      if (legalSeniority.value !== undefined) {
         newArgs = {
           ...newArgs,
           "contrat salarié . indemnité de licenciement . ancienneté en année":
@@ -101,7 +104,7 @@ class IndemniteLicenciementPublicodes
           ...legalSeniority.extraInfos,
         };
       }
-      if (agreementSeniority.value) {
+      if (agreementSeniority.value !== undefined) {
         newArgs = {
           ...newArgs,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -126,12 +129,12 @@ class IndemniteLicenciementPublicodes
       const legalRequiredSeniority = legal.computeRequiredSeniority(
         legal.mapRequiredSituation(args)
       );
-      if (legalRequiredSeniority.value) {
+      if (legalRequiredSeniority.value !== undefined) {
         newArgs[
           "contrat salarié . indemnité de licenciement . ancienneté requise en année"
         ] = legalRequiredSeniority.value.toString();
       }
-      if (agreementRequiredSeniority.value) {
+      if (agreementRequiredSeniority.value !== undefined) {
         newArgs[
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
         ] = agreementRequiredSeniority.value.toString();
@@ -154,7 +157,7 @@ class IndemniteLicenciementPublicodes
       const value = s.computeReferenceSalary({
         salaires: args.salaryPeriods ? JSON.parse(args.salaryPeriods) : [],
       });
-      if (value) {
+      if (value !== undefined) {
         newArgs = {
           ...newArgs,
           "contrat salarié . indemnité de licenciement . salaire de référence":
@@ -187,6 +190,7 @@ class IndemniteLicenciementPublicodes
       }
     }
     const situation = this.removeNonPublicodeFields(newArgs);
+    console.log("situation", situation);
     return super.setSituation(situation, targetRule);
   }
 
