@@ -13,7 +13,7 @@ concurrency:
 jobs:
   socialgouv:
     name: "🇫🇷 SocialGouv"
-    uses: socialgouv/workflows/.github/workflows/use-ks-gh-preproduction.yaml@v1
+    uses: socialgouv/workflows/.github/workflows/use-ks-gh-with-env-preproduction.yaml@v1
     secrets: inherit
   e2e:
     name: End-to-end testing
@@ -32,7 +32,7 @@ jobs:
           yarn install --immutable
       - name: Run test e2e
         run: |
-          TEST_BASEURL=https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr ALL_TEST=true yarn test:e2e
+          TEST_BASEURL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr ALL_TEST=true yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v3
