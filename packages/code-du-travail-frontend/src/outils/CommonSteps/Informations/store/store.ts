@@ -18,7 +18,7 @@ import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
 import { informationToSituation } from "../utils";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
-import { ContratTravailStoreSlice } from "../../../IndemniteLicenciement/steps/ContratTravail/store";
+import { ContratTravailStoreSlice } from "../../../CommonIndemniteDepart/steps/ContratTravail/store";
 import * as Sentry from "@sentry/nextjs";
 
 const initialState: CommonInformationsStoreData = {

@@ -1,6 +1,6 @@
-import { IneligibilityLegal } from "../../base";
+import { IneligibilityLegalIndemniteLicenciement } from "../../base";
 
-export class Ineligibility1404 extends IneligibilityLegal {
+export class Ineligibility1404 extends IneligibilityLegalIndemniteLicenciement {
   getIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {

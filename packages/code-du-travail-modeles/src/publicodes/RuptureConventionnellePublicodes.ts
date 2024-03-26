@@ -2,6 +2,8 @@ import type { EvaluatedNode } from "publicodes";
 
 import type { References, SeniorityResult } from "../modeles/common";
 import {
+  DismissalReasonFactory,
+  IneligibilityRuptureConventionnelleFactory,
   ReferenceSalaryFactory,
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
@@ -13,6 +15,7 @@ import type {
   PublicodesIndemniteLicenciementResult,
 } from "./types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
+import { mergeMissingArgs } from "./utils";
 
 class RuptureConventionnellePublicodes
   extends PublicodesBase<PublicodesIndemniteLicenciementResult>
@@ -45,24 +48,6 @@ class RuptureConventionnellePublicodes
     return missingArg;
   }
 
-  mapMissingArg(
-    name: string
-  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
-    return {
-      missingArgs: [
-        {
-          indice: 0,
-          name,
-          rawNode: {
-            nom: name,
-          },
-        },
-      ],
-      result: { value: 0 },
-      situation: [],
-    };
-  }
-
   getReferences(): References[] {
     return super.getReferences("rupture conventionnelle");
   }
@@ -85,22 +70,75 @@ class RuptureConventionnellePublicodes
     args: Record<string, string | undefined>,
     targetRule?: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+    const dismissalReason = new DismissalReasonFactory().create(this.idcc);
+    const reasons = dismissalReason.dismissalTypes();
+    if (reasons.length === 0) {
+      return this.calculateSituation(args, targetRule);
+    } else {
+      const situations = reasons.map(({ rule, value }) => {
+        const newArgs = args;
+        newArgs[rule] = value;
+        return this.calculateSituation(newArgs, targetRule);
+      });
+      const missingArgsFinal = mergeMissingArgs(
+        situations.map((item) => item.missingArgs)
+      );
+
+      const lowerSituations = situations.reduce((previous, current) => {
+        return previous.result.value
+          ? previous.result.value < (current.result.value ?? 0)
+            ? previous
+            : current
+          : current;
+      }, situations[0]);
+
+      return {
+        ineligibility: situations.find(
+          ({ ineligibility }) => ineligibility !== undefined
+        )?.ineligibility,
+        missingArgs: missingArgsFinal,
+        result: lowerSituations.result,
+        situation: lowerSituations.situation,
+      };
+    }
+  }
+
+  protected convertedResult(
+    evaluatedNode: EvaluatedNode
+  ): PublicodesIndemniteLicenciementResult {
+    return {
+      unit: evaluatedNode.unit,
+      value: evaluatedNode.nodeValue,
+    };
+  }
+
+  private mapIneligibility(
+    text: string
+  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+    return {
+      ineligibility: text,
+      missingArgs: [],
+      result: { value: 0 },
+      situation: [],
+    };
+  }
+
+  private calculateSituation(
+    args: Record<string, string | undefined>,
+    targetRule?: string
+  ) {
     let newArgs = args;
-    if (
-      !args[
-        "contrat salarié . indemnité de licenciement . ancienneté en année"
-      ] ||
-      !args[
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
-      ]
-    ) {
-      const missingArg = this.getMissingArg(args, [
-        "contrat salarié . indemnité de licenciement . date d'entrée",
-        "contrat salarié . indemnité de licenciement . date de sortie",
-      ]);
-      if (missingArg) {
-        return this.mapMissingArg(missingArg);
-      }
+    const ineligibilityInstance =
+      new IneligibilityRuptureConventionnelleFactory().create(this.idcc);
+    const ineligibility = ineligibilityInstance.getIneligibility(newArgs);
+    if (ineligibility) {
+      return this.mapIneligibility(ineligibility);
+    }
+    const missingArgSeniority = this.getMissingArg(args, [
+      "contrat salarié . indemnité de licenciement . date d'entrée",
+      "contrat salarié . indemnité de licenciement . date de sortie",
+    ]);
+    if (!missingArgSeniority) {
       const agreement = new SeniorityFactory().create(this.idcc);
       const agreementSeniority: SeniorityResult = agreement.computeSeniority(
         agreement.mapSituation(args)
@@ -128,13 +166,22 @@ class RuptureConventionnellePublicodes
         };
       }
     }
-    const missingArg = this.getMissingArg(args, [
+
+    const missingArgRequiredSeniority = this.getMissingArg(args, [
       "contrat salarié . indemnité de licenciement . date d'entrée",
       "contrat salarié . indemnité de licenciement . date de sortie",
       "contrat salarié . indemnité de licenciement . date de notification",
     ]);
-    if (missingArg) {
-      return this.mapMissingArg(missingArg);
+    if (!missingArgRequiredSeniority) {
+      const agreement = new SeniorityFactory().create(this.idcc);
+      const agreementRequiredSeniority = agreement.computeRequiredSeniority(
+        agreement.mapRequiredSituation(args)
+      );
+      if (agreementRequiredSeniority.value) {
+        newArgs[
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
+        ] = agreementRequiredSeniority.value.toString();
+      }
     }
 
     if (
@@ -181,15 +228,6 @@ class RuptureConventionnellePublicodes
     }
     const situation = this.removeNonPublicodeFields(newArgs);
     return super.setSituation(situation, targetRule);
-  }
-
-  protected convertedResult(
-    evaluatedNode: EvaluatedNode
-  ): PublicodesIndemniteLicenciementResult {
-    return {
-      unit: evaluatedNode.unit,
-      value: evaluatedNode.nodeValue,
-    };
   }
 }
 

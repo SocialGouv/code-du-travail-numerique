@@ -2,14 +2,14 @@ import React, { useContext } from "react";
 import { HighlightResult, SectionTitle } from "../../../common/stepStyles";
 import Disclaimer from "../../../common/Disclaimer";
 import {
-  IndemniteLicenciementContext,
-  useIndemniteLicenciementStore,
-} from "../../store";
+  IndemniteDepartContext,
+  useIndemniteDepartStore,
+} from "../../../CommonIndemniteDepart/store";
 
 export default function Ineligible() {
-  const store = useContext(IndemniteLicenciementContext);
+  const store = useContext(IndemniteDepartContext);
   const { agreementHasNoLegalIndemnity, getEligibilityError, infoWarning } =
-    useIndemniteLicenciementStore(store, (state) => ({
+    useIndemniteDepartStore(store, (state) => ({
       agreementHasNoLegalIndemnity:
         state.resultData.input.agreementHasNoLegalIndemnity,
       getEligibilityError: state.resultFunction.getEligibilityError,

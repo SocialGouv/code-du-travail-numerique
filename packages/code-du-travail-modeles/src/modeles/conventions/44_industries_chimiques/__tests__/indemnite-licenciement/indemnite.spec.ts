@@ -66,6 +66,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
         ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${1.99}        | ${2}      | ${2719} | ${0}
         ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${2}           | ${2}      | ${2719} | ${1631.4}
         ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${2}           | ${5}      | ${2719} | ${9516.5}
+        ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${2}           | ${5}      | ${3495} | ${12232.5}
       `(
         "Avec $seniority ans (droit: $seniorityRight ans), catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
         ({

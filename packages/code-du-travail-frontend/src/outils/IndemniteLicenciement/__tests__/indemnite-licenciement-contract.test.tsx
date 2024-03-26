@@ -1,5 +1,5 @@
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 import { render, fireEvent } from "@testing-library/react";
 
@@ -9,7 +9,7 @@ test(`
   - Vérifier l'affichage de la question faute grave
   - Vérifier l'affichage de la question inaptitude
 `, async () => {
-  await render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+  await render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
 
   // Vérifier l'affichage de l'intro
   expect(ui.introduction.startButton.query()).toBeInTheDocument();

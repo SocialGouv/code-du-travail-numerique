@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import userEvent from "@testing-library/user-event";
 import { UserAction } from "../../../common";
 
@@ -20,7 +20,7 @@ Storage.prototype.getItem = jest.fn(
 describe("Indemnité licenciement - CC 44", () => {
   describe("parcours avec la convention collective pour valider ses spécificités AVEC PREAVIS", () => {
     beforeEach(() => {
-      render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+      render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
@@ -149,7 +149,7 @@ describe("Indemnité licenciement - CC 44", () => {
 
   describe("parcours avec la convention collective pour valider ses spécificités SANS PREAVIS", () => {
     beforeEach(() => {
-      render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+      render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
@@ -228,7 +228,7 @@ describe("Indemnité licenciement - CC 44", () => {
 
   describe("parcours avec une date d'arrêt", () => {
     beforeEach(() => {
-      render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+      render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
     });
 
     test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, () => {
@@ -273,7 +273,7 @@ describe("Indemnité licenciement - CC 44", () => {
   });
 
   test("parcours avec la convention collective pour valider le résultat", () => {
-    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+    render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
     const userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())
