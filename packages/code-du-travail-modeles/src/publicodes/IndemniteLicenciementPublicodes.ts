@@ -154,7 +154,7 @@ class IndemniteLicenciementPublicodes
       const value = s.computeReferenceSalary({
         salaires: args.salaryPeriods ? JSON.parse(args.salaryPeriods) : [],
       });
-      if (value !== undefined) {
+      if (value) {
         newArgs = {
           ...newArgs,
           "contrat salarié . indemnité de licenciement . salaire de référence":
