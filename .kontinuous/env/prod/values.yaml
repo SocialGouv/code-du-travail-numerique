@@ -40,8 +40,8 @@ app:
     enabled: true
   resources:
     limits:
-      cpu: 500m
-      memory: 2048Mi
+      cpu: 600m
+      memory: 1024Mi
     requests:
-      cpu: 300m
-      memory: 1536Mi
+      cpu: 500m
+      memory: 896Mi
