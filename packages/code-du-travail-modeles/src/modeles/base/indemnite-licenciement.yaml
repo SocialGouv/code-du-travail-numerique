@@ -161,6 +161,7 @@ contrat salarié . indemnité de licenciement . facteur plus de dix ans cc:
       facteur: 1 / 3
   unité: €
 
+# pourquoi on avait faisait ça ?
 contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal: non
 
 contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal moins de 10ans formule:
