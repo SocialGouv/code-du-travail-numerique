@@ -11,11 +11,11 @@ import {
 import type { Publicodes } from "./Publicodes";
 import { PublicodesBase } from "./PublicodesBase";
 import type {
-  MissingArgs,
   PublicodesData,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
+import { mergeMissingArgs } from "./utils";
 
 class RuptureConventionnellePublicodes
   extends PublicodesBase<PublicodesIndemniteLicenciementResult>
@@ -75,19 +75,13 @@ class RuptureConventionnellePublicodes
     if (reasons.length === 0) {
       return this.calculateSituation(args, targetRule);
     } else {
-      const situations = reasons.map(({ name, rule, value }) => {
+      const situations = reasons.map(({ rule, value }) => {
         const newArgs = args;
         newArgs[rule] = value;
         return this.calculateSituation(newArgs, targetRule);
       });
-      const missingArgsFinal = situations.reduce<MissingArgs[]>(
-        (previous, { missingArgs }) => {
-          if (missingArgs.length > 0) {
-            return previous.concat(missingArgs);
-          }
-          return previous;
-        },
-        []
+      const missingArgsFinal = mergeMissingArgs(
+        situations.map((item) => item.missingArgs)
       );
 
       const lowerSituations = situations.reduce((previous, current) => {
