@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.132.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.1...v4.132.0) (2024-03-26)
+
+### Features
+
+- bouger api modele de courrier ([#5690](https://github.com/SocialGouv/code-du-travail-numerique/issues/5690)) ([c6bcffe](https://github.com/SocialGouv/code-du-travail-numerique/commit/c6bcffe40e54b626252dd48d8271c4f769d58ebf))
+
 ## [4.131.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.0...v4.131.1) (2024-03-25)
 
 **Note:** Version bump only for package @cdt/frontend
