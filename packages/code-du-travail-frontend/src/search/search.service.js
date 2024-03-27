@@ -13,6 +13,8 @@ const fetchSearchResults = async (query = "", excludeSources = "") => {
 };
 
 const fetchSuggestResults = async (query) => {
+  console.log(`Env 1 : ${process.env.SITE_URL}`)
+  console.log(`Env 2 : ${process.env.NEXT_PUBLIC_SITE_URL}`)
   const url = `${SITE_URL}/api/suggest?q=${query}`;
   const response = await fetch(url);
 

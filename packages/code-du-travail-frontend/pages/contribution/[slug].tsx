@@ -16,8 +16,12 @@ import { SITE_URL } from "../../src/config";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
 
-const fetchQuestion = ({ slug }) =>
-  fetch(`${SITE_URL}/api/items/contributions/${slug}`);
+const fetchQuestion = ({ slug }) => {
+  console.log(`Env : ${process.env.SITE_URL} / ${process.env.NEXT_PUBLIC_SITE_URL}`)
+  console.log(`${SITE_URL}/api/items/contributions/${slug}`)
+  return fetch(`${SITE_URL}/api/items/contributions/${slug}`);
+}
+
 
 type NewProps = {
   contribution: ElasticSearchContribution;
