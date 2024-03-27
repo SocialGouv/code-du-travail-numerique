@@ -21,6 +21,7 @@ const PlanDuSite = ({
   contributions,
   agreements,
   themes,
+  informations,
 }: GetSitemapPage) => {
   return (
     <Layout>
@@ -58,6 +59,22 @@ const PlanDuSite = ({
                       }`}
                     >
                       {modele.title}
+                    </Link>
+                  </StyledLi>
+                ))}
+              </ul>
+            </StyledSection>
+            <StyledSection>
+              <b>Contenus éditoriaux</b>
+              <ul>
+                {informations.map((information) => (
+                  <StyledLi key={information.slug}>
+                    <Link
+                      href={`/${getRouteBySource(SOURCES.EDITORIAL_CONTENT)}/${
+                        information.slug
+                      }`}
+                    >
+                      {information.title}
                     </Link>
                   </StyledLi>
                 ))}
@@ -170,6 +187,7 @@ export async function getStaticProps() {
   let contributions: GetSitemapPage["contributions"] = [];
   let modeles: GetSitemapPage["modeles"] = [];
   let agreements: GetSitemapPage["agreements"] = [];
+  let informations: GetSitemapPage["informations"] = [];
 
   try {
     let data: GetSitemapPage;
@@ -184,6 +202,7 @@ export async function getStaticProps() {
     contributions = data.contributions;
     modeles = data.modeles;
     agreements = data.agreements;
+    informations = data.informations;
   } catch (e) {
     console.error(e);
     Sentry.captureException(e);
@@ -196,6 +215,7 @@ export async function getStaticProps() {
       contributions,
       agreements,
       themes,
+      informations,
     },
     revalidate: REVALIDATE_TIME,
   };
