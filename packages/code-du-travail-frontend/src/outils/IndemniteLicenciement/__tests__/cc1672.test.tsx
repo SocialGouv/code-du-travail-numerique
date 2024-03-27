@@ -1,7 +1,7 @@
 import { fireEvent, render, RenderResult } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../..";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../..";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import { UserAction } from "../../../common";
 import userEvent from "@testing-library/user-event";
 
@@ -24,7 +24,7 @@ describe("Indemnité licenciement - CC 1672", () => {
   let userAction: UserAction;
   beforeEach(() => {
     rendering = render(
-      <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
+      <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
     );
     userAction = new UserAction();
 

@@ -1,7 +1,7 @@
 import { fireEvent, render } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import userEvent from "@testing-library/user-event";
 import { byTestId } from "testing-library-selector";
 
@@ -94,7 +94,7 @@ describe("Page résultat: vérification de la formule affichée", () => {
           () => `{"num":${ccNum},"shortTitle":"${ccTitle}"}`
         );
 
-        render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+        render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
         userEvent.click(ui.introduction.startButton.get());
         userEvent.click(ui.contract.type.cdi.get());
         userEvent.click(ui.contract.fauteGrave.non.get());

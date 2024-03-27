@@ -1,5 +1,3 @@
-import { OuiNon } from "../IndemniteLicenciement/common";
-import { CdiCdd } from "../IndemniteLicenciement/steps/ContratTravail/store";
 import { formatIdcc, SalaryPeriods } from "@socialgouv/modeles-social";
 
 export const mapToPublicodesSituationForCalculation = (

@@ -1,8 +1,8 @@
 import { render, RenderResult } from "@testing-library/react";
 import { UserAction } from "../../../common";
-import { CalculateurIndemnite } from "../../../../src/outils";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
 import React from "react";
-import { ui } from "./ui";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -24,7 +24,7 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
   let userAction: UserAction;
   beforeEach(() => {
     rendering = render(
-      <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
+      <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
     );
   });
 

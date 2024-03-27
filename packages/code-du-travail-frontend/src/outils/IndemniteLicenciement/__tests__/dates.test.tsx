@@ -1,15 +1,19 @@
 import { fireEvent, render, RenderResult } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
 import userEvent from "@testing-library/user-event";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
+import { CalculateurIndemniteLicenciement } from "../index";
 
 describe("Indemnité licenciement - Gestion des erreurs sur l'étape ancienneté au niveau des dates", () => {
   let rendering: RenderResult;
 
   beforeEach(() => {
     rendering = render(
-      <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
     );
     userEvent.click(ui.introduction.startButton.get());
     userEvent.click(ui.contract.type.cdi.get());

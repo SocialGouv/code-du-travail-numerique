@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import userEvent from "@testing-library/user-event";
 
 jest.spyOn(Storage.prototype, "setItem");
@@ -22,7 +22,7 @@ Storage.prototype.getItem = jest.fn(
 
 describe("Indemnité licenciement - CC 86", () => {
   beforeEach(() => {
-    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+    render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
   });
 
   test(`Vérification du fait que le salaire de reference est bien celui issu de la formule de calcul de l'indemnité`, () => {

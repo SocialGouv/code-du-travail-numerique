@@ -1,8 +1,8 @@
 import { render, RenderResult, waitFor } from "@testing-library/react";
 import { UserAction } from "../../../common";
 import React from "react";
-import { CalculateurIndemnite } from "../index";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../index";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -57,7 +57,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
     let userAction: UserAction;
     beforeEach(async () => {
       rendering = await render(
-        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
       );
       userAction = new UserAction();
       userAction
