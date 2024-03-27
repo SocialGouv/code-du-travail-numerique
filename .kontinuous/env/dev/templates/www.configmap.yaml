@@ -10,3 +10,4 @@ data:
   NEXT_PUBLIC_APP_ENV: "production"
   PIWIK_SITE_ID: "3"
   PIWIK_URL: "https://matomo.fabrique.social.gouv.fr"
+  SITE_URL: "http://localhost:3000"
