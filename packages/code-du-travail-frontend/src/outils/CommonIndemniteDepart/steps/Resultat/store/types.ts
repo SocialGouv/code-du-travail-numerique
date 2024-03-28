@@ -13,8 +13,7 @@ export type ResultStoreInput = {
   publicodesLegalResult: PublicodesIndemniteLicenciementResult;
   publicodesAgreementResult?: PublicodesIndemniteLicenciementResult;
   agreementSeniority?: SeniorityResult;
-  legalFormula: Formula;
-  agreementFormula?: Formula;
+  formula: Formula;
   legalReferences: References[];
   agreementReferences?: References[];
   isAgreementBetter: boolean;

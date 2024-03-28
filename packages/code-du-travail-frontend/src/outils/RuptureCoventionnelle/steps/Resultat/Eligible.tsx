@@ -51,7 +51,7 @@ const Eligible = () => {
         maxResult={
           result.isAgreementBetter
             ? result.publicodesAgreementResult?.value?.toString() ?? ""
-            : result.publicodesLegalResult.value?.toString() ?? ""
+            : result.publicodesLegalResult?.value?.toString() ?? ""
         }
         notifications={result.notifications}
         resultMessage={getResultMessage(informationData)}
@@ -114,13 +114,7 @@ const Eligible = () => {
           isStepSalaryHidden={isStepSalaryHidden}
           disableParentalNotice={result.isParentalNoticeHidden}
         />
-        <FormulaInterpreter
-          formula={
-            result.isAgreementBetter && result.agreementFormula
-              ? result.agreementFormula
-              : result.legalFormula
-          }
-        />
+        <FormulaInterpreter formula={result.formula} />
         {!result.agreementHasNoLegalIndemnity && (
           <DecryptResult
             hasSelectedAgreement={agreement.route !== "not-selected"}

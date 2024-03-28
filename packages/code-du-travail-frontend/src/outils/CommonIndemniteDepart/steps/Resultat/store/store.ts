@@ -1,6 +1,7 @@
 import {
   Formula,
   Notification,
+  PublicodesDataWithFormula,
   PublicodesIndemniteLicenciementResult,
   PublicodesSimulator,
   References,
@@ -33,11 +34,10 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import getSupportedCcIndemniteLicenciement from "../../../common/usecase/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
-import type { PublicodesData } from "@socialgouv/modeles-social/bin";
 
 const initialState: ResultStoreData = {
   input: {
-    legalFormula: { formula: "", explanations: [] },
+    formula: { formula: "", explanations: [] },
     legalReferences: [],
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
@@ -127,15 +127,14 @@ const createResultStore: StoreSlice<
         throw new Error("Publicodes is not defined");
       }
 
-      let errorPublicodes;
+      let errorPublicodes: boolean;
       const absencePeriods = get().ancienneteData.input.absencePeriods;
 
-      const legalFormula = publicodes.getFormule();
       const legalReferences = publicodes.getReferences();
+      let publicodesSituation: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult>;
 
-      let publicodesSituation: PublicodesData<PublicodesIndemniteLicenciementResult>;
       let agreementReferences: References[];
-      let agreementFormula: Formula;
+      let formula: Formula;
       let isAgreementBetter = false;
       let isAgreementEqualToLegal = false;
       let agreementInformations: AgreementInformation[];
@@ -186,8 +185,11 @@ const createResultStore: StoreSlice<
             ...get().situationData.situation,
           };
           publicodesSituation = publicodes.calculateResult(situation);
-          isAgreementBetter = publicodesSituation.detail.chosenResult === "AGREEMENT";
-          isAgreementEqualToLegal = publicodesSituation.detail.chosenResult === "SAME";
+          isAgreementBetter =
+            publicodesSituation.detail.chosenResult === "AGREEMENT";
+          isAgreementEqualToLegal =
+            publicodesSituation.detail.chosenResult === "SAME";
+          formula = publicodesSituation.formula;
         } catch (e) {
           errorPublicodes = true;
           Sentry.captureException(e);
@@ -197,8 +199,6 @@ const createResultStore: StoreSlice<
         agreementReferences = publicodes.getReferences(
           "résultat conventionnel"
         );
-
-        agreementFormula = publicodes.getFormule();
 
         agreementNotifications = publicodes.getNotifications();
 
@@ -237,14 +237,13 @@ const createResultStore: StoreSlice<
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.error.errorPublicodes = errorPublicodes;
-          state.resultData.input.legalFormula = legalFormula;
+          state.resultData.input.formula = formula;
           state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult =
             publicodesSituation?.detail.legalResult;
           state.resultData.input.publicodesAgreementResult =
             publicodesSituation?.detail.agreementResult;
           state.resultData.input.agreementReferences = agreementReferences;
-          state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
           state.resultData.input.agreementInformations = agreementInformations;
           state.resultData.input.notifications = notifications;

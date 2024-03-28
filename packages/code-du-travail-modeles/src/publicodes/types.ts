@@ -6,6 +6,7 @@ import type {
   Unit,
 } from "publicodes";
 
+import type { Formula } from "../modeles";
 import type {
   IndemniteLicenciementPublicodes,
   PreavisRetraitePublicodes,
@@ -79,6 +80,9 @@ export type PublicodesData<TResult> = {
     legalResult: TResult;
     agreementResult?: TResult;
   };
+};
+export type PublicodesDataWithFormula<TResult> = PublicodesData<TResult> & {
+  formula: Formula;
 };
 
 export enum PublicodesSimulator {

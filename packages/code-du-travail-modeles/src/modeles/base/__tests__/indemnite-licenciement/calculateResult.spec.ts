@@ -26,6 +26,11 @@ describe("calculateResult", () => {
     expect(result.detail.legalResult.unit?.numerators).toEqual(["€"]);
     expect(result.result.value).toEqual(1000);
     expect(result.result.unit?.numerators).toEqual(["€"]);
+    expect(result.formula.formula).toEqual("1/4 * Sref * A");
+    expect(result.formula.explanations).toEqual([
+      "A : Ancienneté totale (2 ans)",
+      "Sref : Salaire de référence (2000 €)",
+    ]);
   });
 
   test("avec une idcc quand le legal est meilleur", () => {
@@ -61,6 +66,11 @@ describe("calculateResult", () => {
     expect(result.result.unit?.numerators).toEqual(["€"]);
     expect(result.detail.agreementResult?.value).toEqual(80);
     expect(result.detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+    expect(result.formula.formula).toEqual("2% * Sref * A");
+    expect(result.formula.explanations).toEqual([
+      "A : Ancienneté totale (2 ans)",
+      "Sref : Salaire de référence (2000 €)",
+    ]);
   });
 
   test("avec une idcc quand le legal et le conventionnelle sont identiques", () => {
@@ -95,6 +105,14 @@ describe("calculateResult", () => {
     expect(result.result.unit?.numerators).toEqual(["€"]);
     expect(result.detail.agreementResult?.value).toEqual(6333.33);
     expect(result.detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+    expect(result.formula.formula).toEqual(
+      "(1/4 * Sref * A1) + (1/3 * Sref * A2)"
+    );
+    expect(result.formula.explanations).toEqual([
+      "A1 : Ancienneté de 10 ans ou moins (10 ans)",
+      "A2 : Ancienneté au-delà de 10 ans (2 ans)",
+      "Sref : Salaire de référence (2000 €)",
+    ]);
   });
   test("avec une idcc quand le conventionnelle est meilleur", () => {
     const engine = new IndemniteLicenciementPublicodes(
@@ -135,5 +153,12 @@ describe("calculateResult", () => {
     expect(result.result.unit?.numerators).toEqual(["€"]);
     expect(result.detail.agreementResult?.value).toEqual(15120);
     expect(result.detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+    expect(result.formula.formula).toEqual(
+      "(4.5% * Sref * A2) + (0.75% * Sref * A2)"
+    );
+    expect(result.formula.explanations).toEqual([
+      "A2 : Années de présence dans l'entreprise en tant que cadre (12 ans)",
+      "Sref : Salaire de référence (24000 €)",
+    ]);
   });
 });

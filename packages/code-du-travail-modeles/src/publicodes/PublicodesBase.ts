@@ -13,6 +13,7 @@ import type { Publicodes } from "./Publicodes";
 import type {
   MissingArgs,
   PublicodesData,
+  PublicodesDataWithFormula,
   PublicodesIndemniteLicenciementResult,
   SituationElement,
 } from "./types";
@@ -92,8 +93,9 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   protected compareAndSetResult(
     legalResult: PublicodesData<PublicodesIndemniteLicenciementResult>,
     agreementResult: PublicodesData<PublicodesIndemniteLicenciementResult>,
-    result: PublicodesData<PublicodesIndemniteLicenciementResult>
-  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+    agreementFormula: Formula,
+    result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult>
+  ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
     if (
       legalResult.result.value !== undefined &&
       legalResult.result.value !== null &&
@@ -102,6 +104,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     ) {
       if (agreementResult.result.value > legalResult.result.value) {
         result.result = agreementResult.result;
+        result.formula = agreementFormula;
         result.detail.chosenResult = "AGREEMENT";
       } else if (agreementResult.result.value === legalResult.result.value) {
         result.detail.chosenResult = "SAME";

@@ -15,8 +15,7 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "../../../CommonIndemniteDepart/store";
-import { getResultMessage } from "../../../RuptureCoventionnelle/steps/Resultat/utils";
-// Do not optimize the following import
+import { getResultMessage } from "../../../RuptureCoventionnelle/steps/Resultat/utils"; // Do not optimize the following import
 import { getForMoreInfoMessage } from "../../../CommonIndemniteDepart/agreements/ui-customizations";
 import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
 import { IndemniteDepartType } from "../../../types";
@@ -38,12 +37,11 @@ export default function Eligible() {
     dateNotification,
     absencePeriods,
     salaryPeriods,
-    legalFormula,
+    formula,
     legalReferences,
     agreementReferences,
     hasTempsPartiel,
     isAgreementBetter,
-    agreementFormula,
     agreementInformations,
     salary,
     hasSameSalary,
@@ -73,12 +71,11 @@ export default function Eligible() {
     dateNotification: state.ancienneteData.input.dateNotification,
     absencePeriods: state.ancienneteData.input.absencePeriods,
     salaryPeriods: state.salairesData.input.salaryPeriods,
-    legalFormula: state.resultData.input.legalFormula,
+    formula: state.resultData.input.formula,
     legalReferences: state.resultData.input.legalReferences,
     agreementReferences: state.resultData.input.agreementReferences,
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     isAgreementBetter: state.resultData.input.isAgreementBetter,
-    agreementFormula: state.resultData.input.agreementFormula,
     agreementInformations: state.resultData.input.agreementInformations,
     salary: state.salairesData.input.salary,
     hasSameSalary: state.salairesData.input.hasSameSalary,
@@ -170,13 +167,7 @@ export default function Eligible() {
           isStepSalaryHidden={isStepSalaryHidden}
           disableParentalNotice={isParentalNoticeHidden}
         />
-        <FormulaInterpreter
-          formula={
-            isAgreementBetter && agreementFormula
-              ? agreementFormula
-              : legalFormula
-          }
-        />
+        <FormulaInterpreter formula={formula} />
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
             hasSelectedAgreement={route !== "not-selected"}

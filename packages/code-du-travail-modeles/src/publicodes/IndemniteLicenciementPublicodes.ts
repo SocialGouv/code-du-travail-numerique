@@ -10,6 +10,7 @@ import type { IInegibility } from "../modeles/common/types/ineligibility";
 import { PublicodesBase } from "./PublicodesBase";
 import type {
   PublicodesData,
+  PublicodesDataWithFormula,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
@@ -52,10 +53,14 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
 
   mapIneligibility(
     text: string
-  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+  ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
     return {
       detail: {
         legalResult: { value: 0 },
+      },
+      formula: {
+        explanations: [],
+        formula: "",
       },
       ineligibility: text,
       missingArgs: [],
@@ -102,7 +107,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
 
   calculateResult(
     args: Record<string, string | undefined>
-  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+  ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
     const ineligibility = this.ineligibilityInstance.getIneligibility(args);
     if (ineligibility) {
       return this.mapIneligibility(ineligibility);
@@ -123,14 +128,16 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
       "contrat salarié . indemnité de licenciement . résultat légal"
     );
 
-    const result: PublicodesData<PublicodesIndemniteLicenciementResult> = {
-      detail: {
-        legalResult: legalResult.result,
-      },
-      missingArgs: legalResult.missingArgs,
-      result: legalResult.result,
-      situation: this.data.situation,
-    };
+    const result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> =
+      {
+        detail: {
+          legalResult: legalResult.result,
+        },
+        formula: this.getFormule(),
+        missingArgs: legalResult.missingArgs,
+        result: legalResult.result,
+        situation: this.data.situation,
+      };
 
     if (this.idcc === SupportedCcIndemniteLicenciement.default) {
       return result;
@@ -140,12 +147,18 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
 
+    const agreementFormula = this.getFormule();
     // impossible à ce stade ?
     result.missingArgs = result.missingArgs.concat(agreementResult.missingArgs);
 
     result.detail.agreementResult = agreementResult.result;
 
-    return super.compareAndSetResult(legalResult, agreementResult, result);
+    return super.compareAndSetResult(
+      legalResult,
+      agreementResult,
+      agreementFormula,
+      result
+    );
   }
 
   protected convertedResult(
