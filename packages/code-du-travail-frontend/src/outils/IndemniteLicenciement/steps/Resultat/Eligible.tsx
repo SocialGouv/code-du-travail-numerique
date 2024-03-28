@@ -106,7 +106,7 @@ export default function Eligible() {
         maxResult={
           isAgreementBetter
             ? publicodesAgreementResult?.value?.toString() ?? ""
-            : publicodesLegalResult.value?.toString() ?? ""
+            : publicodesLegalResult?.value?.toString() ?? ""
         }
         notifications={notifications}
         resultMessage={getResultMessage(informationData)}
@@ -181,7 +181,7 @@ export default function Eligible() {
           <DecryptResult
             hasSelectedAgreement={route !== "not-selected"}
             isAgreementSupported={isAgreementSupported}
-            legalResult={publicodesLegalResult.value?.toString() ?? ""}
+            legalResult={publicodesLegalResult?.value?.toString() ?? ""}
             agreementResult={publicodesAgreementResult?.value?.toString()}
             label="licenciement"
           />

@@ -89,6 +89,29 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return getFormule(this.engine);
   }
 
+  protected compareAndSetResult(
+    legalResult: PublicodesData<PublicodesIndemniteLicenciementResult>,
+    agreementResult: PublicodesData<PublicodesIndemniteLicenciementResult>,
+    result: PublicodesData<PublicodesIndemniteLicenciementResult>
+  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+    if (
+      legalResult.result.value !== undefined &&
+      legalResult.result.value !== null &&
+      agreementResult.result.value !== undefined &&
+      agreementResult.result.value !== null
+    ) {
+      if (agreementResult.result.value > legalResult.result.value) {
+        result.result = agreementResult.result;
+        result.detail.chosenResult = "AGREEMENT";
+      } else if (agreementResult.result.value === legalResult.result.value) {
+        result.detail.chosenResult = "SAME";
+      } else {
+        result.detail.chosenResult = "LEGAL";
+      }
+    }
+    return result;
+  }
+
   private buildSituation(
     map: SituationElement[]
   ): Record<string, string | undefined> {
@@ -189,27 +212,4 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   ): PublicodesData<TResult>;
 
   protected abstract convertedResult(evaluatedNode: EvaluatedNode): TResult;
-
-  protected compareAndSetResult(
-    legalResult: PublicodesData<PublicodesIndemniteLicenciementResult>,
-    agreementResult: PublicodesData<PublicodesIndemniteLicenciementResult>,
-    result: PublicodesData<PublicodesIndemniteLicenciementResult>
-  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
-    if (
-      legalResult.result.value !== undefined &&
-      legalResult.result.value !== null &&
-      agreementResult.result.value !== undefined &&
-      agreementResult.result.value !== null
-    ) {
-      if (agreementResult.result.value > legalResult.result.value) {
-        result.result = agreementResult.result;
-        result.detail.chosenResult = "AGREEMENT";
-      } else if (agreementResult.result.value === legalResult.result.value) {
-        result.detail.chosenResult = "SAME";
-      } else {
-        result.detail.chosenResult = "LEGAL";
-      }
-    }
-    return result;
-  }
 }

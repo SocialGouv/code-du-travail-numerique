@@ -240,9 +240,9 @@ const createResultStore: StoreSlice<
           state.resultData.input.legalFormula = legalFormula;
           state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult =
-            publicodesSituation.detail.legalResult;
+            publicodesSituation?.detail.legalResult;
           state.resultData.input.publicodesAgreementResult =
-            publicodesSituation.detail.agreementResult;
+            publicodesSituation?.detail.agreementResult;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
