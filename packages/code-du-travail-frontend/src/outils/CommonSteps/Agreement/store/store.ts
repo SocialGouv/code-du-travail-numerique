@@ -18,7 +18,6 @@ import {
 } from "../../../../lib";
 import { pushAgreementEvents } from "../../../common/Agreement";
 import { AgreementRoute } from "../../../common/type/WizardType";
-import { isCcFullySupportedIndemniteLicenciement } from "../../../IndemniteLicenciement/common";
 import { Agreement } from "@socialgouv/cdtn-utils";
 
 const initialState: Omit<
