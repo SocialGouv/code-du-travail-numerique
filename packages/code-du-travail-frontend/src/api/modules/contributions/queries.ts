@@ -2,13 +2,7 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export const getAllContributions = () => {
   return {
-    _source: [
-      "title",
-      "shortTitle",
-      "slug",
-      "idcc",
-      "split",
-    ],
+    _source: ["title", "shortTitle", "slug", "idcc"],
     query: {
       bool: {
         filter: [
@@ -38,11 +32,6 @@ export const getAllGenericsContributions = () => {
           { term: { source: SOURCES.CONTRIBUTIONS } },
           { term: { isPublished: true } },
         ],
-        must_not: {
-          exists: {
-            field: "split",
-          },
-        },
         must: {
           bool: {
             should: [
