@@ -96,6 +96,8 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     agreementFormula: Formula,
     result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult>
   ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
+    result.detail.chosenResult = "LEGAL";
+
     if (
       legalResult.result.value !== undefined &&
       legalResult.result.value !== null &&
@@ -108,10 +110,9 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
         result.detail.chosenResult = "AGREEMENT";
       } else if (agreementResult.result.value === legalResult.result.value) {
         result.detail.chosenResult = "SAME";
-      } else {
-        result.detail.chosenResult = "LEGAL";
       }
     }
+
     return result;
   }
 

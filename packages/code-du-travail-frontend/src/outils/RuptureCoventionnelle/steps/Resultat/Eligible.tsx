@@ -51,7 +51,7 @@ const Eligible = () => {
         maxResult={
           result.isAgreementBetter
             ? result.publicodesAgreementResult?.value?.toString() ?? ""
-            : result.publicodesLegalResult?.value?.toString() ?? ""
+            : result.publicodesLegalResult.value?.toString() ?? ""
         }
         notifications={result.notifications}
         resultMessage={getResultMessage(informationData)}

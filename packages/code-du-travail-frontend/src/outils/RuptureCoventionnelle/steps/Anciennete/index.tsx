@@ -56,7 +56,6 @@ const StepAnciennete = () => {
     ),
   }));
 
-  console.log("MMA - Ancienneté step ! ");
   useEffect(() => {
     init();
   }, [init]);

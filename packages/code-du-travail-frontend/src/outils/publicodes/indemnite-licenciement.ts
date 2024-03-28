@@ -1,5 +1,26 @@
 import { formatIdcc, SalaryPeriods } from "@socialgouv/modeles-social";
 
+export const mapToPublicodesSituationForCalculation = (
+  startDate: string,
+  notificationDate: string,
+  endDate: string,
+  salaryPeriods: SalaryPeriods[],
+  inaptitude: boolean,
+  longTermDisability: boolean
+): Record<string, string> => {
+  return {
+    salaryPeriods: JSON.stringify(salaryPeriods),
+    "contrat salarié . indemnité de licenciement . date d'entrée": startDate,
+    "contrat salarié . indemnité de licenciement . date de notification":
+      notificationDate,
+    "contrat salarié . indemnité de licenciement . date de sortie": endDate,
+    "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+      inaptitude ? "oui" : "non",
+    "contrat salarié . indemnité de licenciement . arrêt de travail":
+      longTermDisability ? "oui" : "non",
+  };
+};
+
 export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
   ccn: number,
   inaptitude: boolean,
@@ -20,16 +41,16 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
 
 export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues =
   (
-    ccn: number,
+    ccn: number | undefined,
     salaryPeriods: SalaryPeriods[],
     notificationDate: string,
-    entryDate: string,
+    startDate: string,
     endDate: string,
     inaptitude: boolean,
     longTermDisability: boolean,
     agreementParameters?: Record<string, any>
   ): Record<string, string> => {
-    return mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+    return ccn ? mapToPublicodesSituationForIndemniteLicenciementConventionnel(
       ccn,
       inaptitude,
       longTermDisability,
@@ -40,12 +61,12 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
           "contrat salarié . indemnité de licenciement . date de notification":
             notificationDate,
           "contrat salarié . indemnité de licenciement . date d'entrée":
-            entryDate,
+          startDate,
           "contrat salarié . indemnité de licenciement . date de sortie":
             endDate,
         },
       }
-    );
+    ) : mapToPublicodesSituationForCalculation(startDate, notificationDate, endDate, salaryPeriods, inaptitude, longTermDisability);
   };
 
 export const publicodesUnitTranslator = (value: string, unit?: string) => {
