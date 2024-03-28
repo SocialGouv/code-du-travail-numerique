@@ -15,7 +15,7 @@ export const GouvernementSection = () => {
       <StyledTopSection>
         <Image
           alt="le site du ministere du travail, de l'emploi et de l'insertion"
-          src="/static/assets/img/ministere_logo.jpeg"
+          src="/static/assets/img/ministere_logo.png"
           width="170"
           height="141"
         />
@@ -50,18 +50,26 @@ export const GouvernementSection = () => {
             <Link href="/mentions-legales">Mentions légales</Link>
           </li>
           <li>
-            <Link href="/accessibilite">Accessibilité&nbsp;: partiellement conforme</Link>
-          </li>
-          <li>
-            <Link href="/politique-confidentialite">Politique de confidentialité</Link>
-          </li>
-          <li>
-            <Link href="/plan-du-site">
-              Plan du site
+            <Link href="/accessibilite">
+              Accessibilité&nbsp;: partiellement conforme
             </Link>
           </li>
           <li>
-            <Link rel="noopener noreferrer" href={`https://github.com/SocialGouv/code-du-travail-numerique/tree/v${PACKAGE_VERSION}`} target="_blank">Contribuer sur Github</Link>
+            <Link href="/politique-confidentialite">
+              Politique de confidentialité
+            </Link>
+          </li>
+          <li>
+            <Link href="/plan-du-site">Plan du site</Link>
+          </li>
+          <li>
+            <Link
+              rel="noopener noreferrer"
+              href={`https://github.com/SocialGouv/code-du-travail-numerique/tree/v${PACKAGE_VERSION}`}
+              target="_blank"
+            >
+              Contribuer sur Github
+            </Link>
           </li>
           <li>
             <ContactModal>
@@ -166,8 +174,7 @@ const SectionSeparator = styled.div`
 
 const StyledContactLink = styled.a.attrs({
   role: "link",
-  tabindex: "0"
+  tabindex: "0",
 })`
   cursor: pointer;
 `;
-

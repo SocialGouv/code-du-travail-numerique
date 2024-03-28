@@ -43,9 +43,14 @@ export const getByIdsModeles = async (
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.total.value > 0
-    ? response.body.hits.hits.map(({ _source }) => _source)
-    : [];
+  if (response.body.hits.total.value === 0) {
+    throw new NotFoundError({
+      message: `There is no modeles that match ${ids.join(", ")}`,
+      name: "MODELE_NOT_FOUND",
+      cause: null,
+    });
+  }
+  return response.body.hits.hits.map(({ _source }) => _source);
 };
 
 export const getBySlugModeles = async (slug: string) => {

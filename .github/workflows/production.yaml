@@ -12,5 +12,5 @@ concurrency:
 jobs:
   socialgouv:
     name: "🇫🇷 SocialGouv"
-    uses: socialgouv/workflows/.github/workflows/use-ks-gh-production.yaml@v1
+    uses: socialgouv/workflows/.github/workflows/use-ks-gh-with-env-production.yaml@v1
     secrets: inherit

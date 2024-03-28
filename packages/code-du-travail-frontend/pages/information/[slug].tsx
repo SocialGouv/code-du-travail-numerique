@@ -6,11 +6,11 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
-import { EditorialContentDataWrapper } from "@socialgouv/cdtn-utils";
-import { getInformationBySlug } from "../../src/information";
+import { EditorialContentDataWrapper, SOURCES } from "@socialgouv/cdtn-utils";
 import { Contents } from "../../src/information";
 import { QuestionnaireWrapper } from "../../src/questionnaire";
 import { useRouter } from "next/router";
+import { SITE_URL } from "../../src/config";
 
 const Information = ({
   information: {
@@ -81,10 +81,13 @@ const Information = ({
 export default Information;
 
 export const getServerSideProps = async ({ query }) => {
-  const information = await getInformationBySlug(query.slug);
-  if (!information) {
+  const responseContainer = await fetch(
+    `${SITE_URL}/api/items/${SOURCES.EDITORIAL_CONTENT}/${query.slug}`
+  );
+  if (!responseContainer.ok) {
     return { notFound: true };
   }
+  const information = await responseContainer.json();
 
   return { props: { information, slug: query.slug } };
 };
