@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.132.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.1...v4.132.0) (2024-03-26)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.131.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.0...v4.131.1) (2024-03-25)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.131.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.130.0...v4.131.0) (2024-03-25)
+
+### Bug Fixes
+
+- bug sur le calculate salary 1483 ([#5711](https://github.com/SocialGouv/code-du-travail-numerique/issues/5711)) ([0b661dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/0b661dda4269bb5f4b4b18f954e4053a3fd3a8d1))
+
+# [4.130.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.3...v4.130.0) (2024-03-19)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
 ## [4.129.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.2...v4.129.3) (2024-03-14)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

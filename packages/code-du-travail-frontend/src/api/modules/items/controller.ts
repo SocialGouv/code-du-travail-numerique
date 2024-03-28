@@ -29,17 +29,11 @@ export class ItemsController {
 
   public async getAll() {
     try {
-      let { ids, id, url, source } = this.req.query;
-      ids = ids || id;
-      if (!url && !source && !ids) {
+      let { url } = this.req.query;
+      if (!url && typeof url !== "string") {
         return this.res.status(400).json({ message: "No parameter provided" });
       }
-
-      const response = await getAll(
-        url as string,
-        source as string,
-        ids as string
-      );
+      const response = await getAll(url as string);
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {

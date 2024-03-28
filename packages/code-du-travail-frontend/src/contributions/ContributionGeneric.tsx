@@ -22,7 +22,6 @@ import { MatomoBaseEvent } from "../lib";
 import { getCc3239Informations } from "../outils";
 import { Enterprise } from "../conventions/Search/api/enterprises.service";
 import {
-  Alert,
   Badge,
   Button,
   icons,
@@ -31,6 +30,7 @@ import {
   theme,
   Title,
   Wrapper,
+  Alert as UiAlert,
 } from "@socialgouv/cdtn-ui";
 import { ReferencesJuridiques } from "./References";
 import { LinkedContent } from "./LinkedContent";
@@ -41,6 +41,7 @@ import {
   AlertAgreementSupported,
   AlertAgreementUnextended,
 } from "./AlertAgreementNotSupportedNoContent";
+import { Alert } from "../common/Alert";
 
 const { DirectionRight } = icons;
 
@@ -91,7 +92,8 @@ const ContributionGeneric = ({ contribution }: Props) => {
 
   const isNoCDT = () => contribution && contribution.type === "generic-no-cdt";
   const showButtonToDisplayCDTContent = () =>
-    !isNoCDT() && (!showAnswer || convention);
+    !isNoCDT() &&
+    (!showAnswer || convention || entreprise?.conventions.length === 0);
   const showGeneralInformationButton = () =>
     !isNoCDT() && !showAnswer && !convention;
 
@@ -221,6 +223,14 @@ const ContributionGeneric = ({ contribution }: Props) => {
                     onUserAction={onUserAction}
                     alertAgreementNotSupported={alertAgreementNotSupported}
                     simulator="QUESTIONNAIRE"
+                    noAgreementFoundComponent={
+                      isNoCDT() ? (
+                        <Alert
+                          title={`Aucune convention collective n'a été déclarée pour l'entreprise ${entreprise?.simpleLabel}.`}
+                          message="Or, la convention collective est nécessaire pour obtenir une réponse car le code du travail ne prévoit rien sur ce sujet."
+                        />
+                      ) : undefined
+                    }
                   />
                 </form>
               )}
@@ -239,9 +249,9 @@ const ContributionGeneric = ({ contribution }: Props) => {
                   />
                   {convention && !isSupported(convention) && (
                     <Div>
-                      <Alert variant="primary">
+                      <UiAlert variant="primary">
                         {alertAgreementNotSupported(convention.url)}
-                      </Alert>
+                      </UiAlert>
                     </Div>
                   )}
                 </>

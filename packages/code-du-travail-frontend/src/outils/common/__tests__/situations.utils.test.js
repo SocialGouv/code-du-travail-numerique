@@ -11,6 +11,7 @@ import {
   recapSituation,
   skipInformations,
   validateUnsupportedAgreement,
+  detectNoAgreementInEnterprise,
 } from "../situations.utils";
 
 const criteriaOrder = ["bar", "foo", "baz", "yolo"];
@@ -221,21 +222,69 @@ describe("situations", () => {
     });
   });
   describe("validateUnsupportedAgreement", () => {
-    const validate = validateUnsupportedAgreement(ccList);
-
     it("should return no error if no agreement", () => {
-      expect(validate({})).toStrictEqual({});
+      expect(validateUnsupportedAgreement(ccList, {})).toStrictEqual({});
     });
 
     it("should return no error if agreement is supported", () => {
-      expect(validate({ ccn: { selected: { num: 20 } } })).toStrictEqual({});
+      expect(
+        validateUnsupportedAgreement(ccList, { selected: { num: 20 } })
+      ).toStrictEqual({});
     });
 
     it("should return one error if agreement is not supported", () => {
       expect(
-        validate({ ccn: { selected: { num: "unsupported" } } })
+        validateUnsupportedAgreement(ccList, {
+          selected: { num: "unsupported" },
+        })
       ).toStrictEqual({
         agreementMissing: true,
+      });
+    });
+  });
+
+  describe("detectNoAgreementInEnterprise", () => {
+    it("should return an empty object when ccn is undefined", () => {
+      const result = detectNoAgreementInEnterprise(undefined);
+      expect(result).toEqual({});
+    });
+
+    it("should return an empty object when ccn is not of type 'enterprise'", () => {
+      const ccn = {
+        route: "other",
+        selected: true,
+      };
+      const result = detectNoAgreementInEnterprise(ccn);
+      expect(result).toEqual({});
+    });
+
+    it("should return an empty object when ccn has other properties in addition to 'route' and 'selected'", () => {
+      const ccn = {
+        route: "enterprise",
+        selected: true,
+        otherProperty: "value",
+      };
+      const result = detectNoAgreementInEnterprise(ccn);
+      expect(result).toEqual({});
+    });
+
+    it("should return an empty object when ccn is selected", () => {
+      const ccn = {
+        route: "enterprise",
+        selected: true,
+      };
+      const result = detectNoAgreementInEnterprise(ccn);
+      expect(result).toEqual({});
+    });
+
+    it("should return an object with 'noAgreementSelected' set to true when ccn is not selected", () => {
+      const ccn = {
+        route: "enterprise",
+        selected: false,
+      };
+      const result = detectNoAgreementInEnterprise(ccn);
+      expect(result).toEqual({
+        noAgreementSelected: true,
       });
     });
   });

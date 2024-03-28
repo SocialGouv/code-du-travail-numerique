@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.132.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.1...v4.132.0) (2024-03-26)
+
+### Features
+
+- bouger api modele de courrier ([#5690](https://github.com/SocialGouv/code-du-travail-numerique/issues/5690)) ([c6bcffe](https://github.com/SocialGouv/code-du-travail-numerique/commit/c6bcffe40e54b626252dd48d8271c4f769d58ebf))
+
+## [4.131.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.0...v4.131.1) (2024-03-25)
+
+### Bug Fixes
+
+- migration up workflows + urls review ([877635b](https://github.com/SocialGouv/code-du-travail-numerique/commit/877635b10811cc3349b69d6188a88708b2ceb26e))
+
+### Features
+
+- migration ovh ([341c6f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/341c6f9651171e71fe047ac8ce3303cfd81e7086))
+
+# [4.131.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.130.0...v4.131.0) (2024-03-25)
+
+### Bug Fixes
+
+- bug sur le calculate salary 1483 ([#5711](https://github.com/SocialGouv/code-du-travail-numerique/issues/5711)) ([0b661dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/0b661dda4269bb5f4b4b18f954e4053a3fd3a8d1))
+- **migration ovh:** mise à jour des urls en dev de serving ml ([#5709](https://github.com/SocialGouv/code-du-travail-numerique/issues/5709)) ([39e9a85](https://github.com/SocialGouv/code-du-travail-numerique/commit/39e9a859f4f7062d899ab37b306bdc16ab19ed36))
+
+### Features
+
+- **information:** optimisation du chargement des contenus `relatedDocuments` pendant l'export ([#5699](https://github.com/SocialGouv/code-du-travail-numerique/issues/5699)) ([700fa13](https://github.com/SocialGouv/code-du-travail-numerique/commit/700fa131ca86a042c42bdffd74422e088d4a75ee))
+
+# [4.130.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.3...v4.130.0) (2024-03-19)
+
+### Features
+
+- changement message info page CC non etendu ([#5689](https://github.com/SocialGouv/code-du-travail-numerique/issues/5689)) ([ed0fe31](https://github.com/SocialGouv/code-du-travail-numerique/commit/ed0fe31364c396df6c0894a37065287ef1d4a5b2))
+- **convention-collectives:** migration de nouvelles pages au nouveau format ([#5698](https://github.com/SocialGouv/code-du-travail-numerique/issues/5698)) ([706c2f0](https://github.com/SocialGouv/code-du-travail-numerique/commit/706c2f03e2ba4fb2e74de4625c0a57c397de9602))
+- **recherche-entreprise:** ajout de messages spécifiques lorsqu'il n'y a pas CCs présentes dans la liste de l'établissement ([#5680](https://github.com/SocialGouv/code-du-travail-numerique/issues/5680)) ([6ad6627](https://github.com/SocialGouv/code-du-travail-numerique/commit/6ad66278754b3cecfbb35fadca4f94e87f8c5798))
+
 ## [4.129.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.2...v4.129.3) (2024-03-14)
 
 ### Bug Fixes

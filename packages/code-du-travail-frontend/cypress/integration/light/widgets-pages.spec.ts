@@ -22,4 +22,11 @@ describe("Widgets", () => {
     cy.get("button").contains("Commencer").click();
     cy.contains("Le licenciement est-il dû à une faute grave (ou lourde)");
   });
+
+  it("Page widget modeles", () => {
+    cy.visit("/widgets/modeles-de-courriers/9a6cf1b40c");
+    cy.contains("Lettre de démission");
+
+    cy.contains("Télécharger le modèle");
+  });
 });

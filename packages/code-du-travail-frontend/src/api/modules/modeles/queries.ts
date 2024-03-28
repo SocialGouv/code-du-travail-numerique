@@ -58,6 +58,9 @@ export function getModelesByIds(ids: string[]) {
       "breadcrumbs",
       "source",
       "cdtnId",
+      "filesize",
+      "filename",
+      "html",
     ],
     query: {
       bool: {

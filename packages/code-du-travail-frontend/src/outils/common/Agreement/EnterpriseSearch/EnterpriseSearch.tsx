@@ -15,6 +15,7 @@ import ShowAgreements from "./ShowAgreements";
 import { SearchEnterpriseInput } from "./EntrepriseSearchInput/SearchEnterpriseInput";
 import styled from "styled-components";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import { Simulator } from "../../NoticeExample";
 
 export type Props = {
   supportedAgreements: AgreementSupportInfo[];
@@ -24,6 +25,7 @@ export type Props = {
   alertAgreementNotSupported?: (string) => JSX.Element;
   isDisabled?: boolean;
   setHasSelectedEnterprise?: (hasSelectedEnterprise: boolean) => void;
+  simulator: Simulator;
 } & TrackingProps;
 
 const EnterpriseSearch = ({
@@ -34,6 +36,7 @@ const EnterpriseSearch = ({
   alertAgreementNotSupported,
   isDisabled,
   setHasSelectedEnterprise,
+  simulator,
 }: Props): JSX.Element => {
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
     selectedEnterprise
@@ -69,6 +72,7 @@ const EnterpriseSearch = ({
             }}
             supportedAgreements={supportedAgreements}
             alertAgreementNotSupported={alertAgreementNotSupported}
+            simulator={simulator}
           />
         )}
       </>
