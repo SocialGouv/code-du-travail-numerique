@@ -52,18 +52,24 @@ export enum SupportedCcIndemniteLicenciement {
   default = "default",
 }
 
-export const INDEMNITE_LICENCIEMENT_PRODUCTION_READY_CC: number[] = [
-  16, 29, 44, 413, 573, 650, 1090, 1351, 1486, 1501, 1518, 1527, 1596, 1597,
-  1979, 2216, 2264, 2941, 3043, 3127, 3239, 1517, 2098, 2511, 2609, 787, 843,
-  675, 1996, 1505, 1147, 1702, 1266, 1672, 275, 86, 2614, 2596, 1043, 1483,
-  1516, 1606, 2148, 1404, 292, 2120, 3248, 176,
-];
+export enum ToolName {
+  INDEMNITE_LICENCIEMENT = "Indemnité de licenciement",
+}
+
+export const indemniteLicenciementSupportedCcList = [1480];
 
 export const getSupportedAgreement = (
-  idcc: number
+  idcc: number,
+  toolName?: string
 ): SupportedCcIndemniteLicenciement | null => {
   for (const value of Object.values(SupportedCcIndemniteLicenciement)) {
     if (value === idcc.toString()) {
+      if (
+        toolName === ToolName.INDEMNITE_LICENCIEMENT &&
+        indemniteLicenciementSupportedCcList.includes(idcc)
+      ) {
+        return null;
+      }
       return value as SupportedCcIndemniteLicenciement;
     }
   }

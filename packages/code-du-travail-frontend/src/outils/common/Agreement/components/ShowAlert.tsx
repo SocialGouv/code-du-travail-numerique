@@ -22,7 +22,7 @@ const ShowAlert = ({
   const idccInfo = supportedAgreements.find(
     (item) => item.idcc == currentAgreement.num
   );
-  if (!idccInfo) {
+  if (!idccInfo || idccInfo.fullySupported === null) {
     return (
       <>
         <StyledAlert variant="primary">
@@ -59,7 +59,7 @@ const ShowAlert = ({
       </>
     );
   }
-  if (!idccInfo.fullySupported) {
+  if (idccInfo.fullySupported === false) {
     return (
       <>
         <StyledAlert variant="primary">

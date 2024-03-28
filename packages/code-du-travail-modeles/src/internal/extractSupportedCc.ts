@@ -2,7 +2,7 @@ import type { Rule } from "publicodes";
 import type Engine from "publicodes";
 
 import type { AgreementInfo } from "../modeles/common";
-import { getSupportedAgreement } from "../modeles/common";
+import { getSupportedAgreement, ToolName } from "../modeles/common";
 
 export type RuleNodeIdcc = Rule & {
   cdtn?: {
@@ -19,9 +19,16 @@ export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
       if (cdtnNode) {
         const idcc = cdtnNode.idcc;
         if (idcc) {
+          const supportedIndemniteLicencimentCc = getSupportedAgreement(
+            idcc,
+            ToolName.INDEMNITE_LICENCIEMENT
+          );
           return {
             idcc,
-            indemniteLicenciement: getSupportedAgreement(idcc) ? true : false,
+            indemniteLicenciement:
+              supportedIndemniteLicencimentCc !== null
+                ? !!supportedIndemniteLicencimentCc
+                : null,
             preavisRetraite: cdtnNode["préavis-retraite"] ?? false,
           };
         }

@@ -8,7 +8,10 @@ import { STORAGE_KEY_AGREEMENT, StoreSlicePublicode } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { loadPublicodes } from "../../../api";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
-import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
+import {
+  PublicodesSimulator,
+  getSupportedAgreement,
+} from "@socialgouv/modeles-social";
 import {
   MatomoBaseEvent,
   MatomoSearchAgreementCategory,
@@ -63,7 +66,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
                       idcc
                     );
                     state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-                      isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
+                      !!getSupportedAgreement(parseInt(idcc), toolName);
                   }
                 )
               );
@@ -120,7 +123,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
               idcc
             );
             state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-              isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
+              !!getSupportedAgreement(parseInt(idcc), toolName);
           })
         );
       }
@@ -141,14 +144,11 @@ const createCommonAgreementStore: StoreSlicePublicode<
     },
     onNextStep: () => {
       const input = get().agreementData.input;
-      const error = get().agreementData.error;
       const { isValid, errorState } = validateStep(input);
       const { route, agreement, enterprise } = input;
       if (isValid && route) {
-        const isTreated = !!supportedCcn.find(
-          ({ indemniteLicenciement, idcc }) =>
-            indemniteLicenciement && idcc === agreement?.num
-        );
+        const isTreated =
+          !!agreement?.num && !!getSupportedAgreement(agreement?.num, toolName);
         pushAgreementEvents(
           toolName,
           {
