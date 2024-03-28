@@ -1,3 +1,4 @@
+import type Engine from "publicodes";
 import type {
   Evaluation,
   Rule as PubliRule,
@@ -10,6 +11,11 @@ import type {
   PreavisRetraitePublicodes,
   RuptureConventionnellePublicodes,
 } from ".";
+
+export type OldReference = {
+  ref: string | null;
+  refUrl: string | null;
+};
 
 export interface MissingArgs {
   name: string;
@@ -57,6 +63,11 @@ export interface SituationElement {
   rawNode: Rule;
   value?: string;
 }
+
+export type PublicodesState = {
+  engine: Engine;
+  targetRule: string;
+};
 
 export type PublicodesData<TResult> = {
   situation: SituationElement[];
