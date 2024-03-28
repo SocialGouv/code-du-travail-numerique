@@ -4,7 +4,7 @@ import type { SalaryPeriods } from "../../../common";
 const engine = new IndemniteLicenciementPublicodes(modelsIndemniteLicenciement);
 
 describe("Test de la fonctionnalité 'calculate'", () => {
-  test("Vérifier que l'ancienneté peut être remplacer par les dates en input", () => {
+  test("Vérifier que l'ancienneté peut être remplacé par les dates en input", () => {
     const { result, missingArgs } = engine.calculate({
       absencePeriods: "[]",
       "contrat salarié . indemnité de licenciement . date d'entrée":

@@ -1,17 +1,12 @@
 import {
   Formula,
-  getSupportedAgreement,
   Notification,
   PublicodesIndemniteLicenciementResult,
   PublicodesSimulator,
   References,
-  SeniorityResult,
 } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../../types";
-import {
-  mapToPublicodesSituationForCalculation,
-  mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues,
-} from "../../../../publicodes";
+import { mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { SalairesStoreSlice } from "../../Salaires/store";
@@ -23,21 +18,22 @@ import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informatio
 import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
 import {
   AgreementInformation,
-  hasNoLegalIndemnity,
   hasNoBetterAllowance,
+  hasNoLegalIndemnity,
 } from "../../../common";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
 import { IndemniteDepartStepName } from "../../..";
 import {
-  MatomoBaseEvent,
   MatomoActionEvent,
+  MatomoBaseEvent,
   MatomoSimulatorEvent,
 } from "../../../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
 import getSupportedCcIndemniteLicenciement from "../../../common/usecase/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
+import type { PublicodesData } from "@socialgouv/modeles-social/bin";
 
 const initialState: ResultStoreData = {
   input: {
@@ -54,26 +50,6 @@ const initialState: ResultStoreData = {
   hasBeenSubmit: true,
   isStepValid: true,
 };
-
-const isAgreementBetterDetection = (
-  publicodesSituationLegal: PublicodesIndemniteLicenciementResult,
-  publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult
-) =>
-  publicodesSituationLegal.value !== undefined &&
-  publicodesSituationLegal.value !== null &&
-  publicodesSituationConventionnel.value !== undefined &&
-  publicodesSituationConventionnel.value !== null &&
-  publicodesSituationConventionnel.value > publicodesSituationLegal.value;
-
-const isAgreementSameDetection = (
-  publicodesSituationLegal: PublicodesIndemniteLicenciementResult,
-  publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult
-) =>
-  publicodesSituationLegal.value !== undefined &&
-  publicodesSituationLegal.value !== null &&
-  publicodesSituationConventionnel.value !== undefined &&
-  publicodesSituationConventionnel.value !== null &&
-  publicodesSituationConventionnel.value === publicodesSituationLegal.value;
 
 const createResultStore: StoreSlice<
   ResultStoreSlice,
@@ -145,58 +121,19 @@ const createResultStore: StoreSlice<
       );
     },
     getPublicodesResult: () => {
-      const salaryPeriods = get().salairesData.input.salaryPeriods;
       const agreement = get().agreementData.input.agreement;
-      const isLicenciementInaptitude =
-        get().contratTravailData.input.licenciementInaptitude === "oui";
-      const longTermDisability =
-        get().contratTravailData.input.arretTravail === "oui";
       const publicodes = get().agreementData.publicodes;
-      const dateEntree = get().ancienneteData.input.dateEntree!;
-      const dateNotification = get().ancienneteData.input.dateNotification!;
-      const dateSortie = get().ancienneteData.input.dateSortie!;
-      const isAgreementSupported =
-        get().agreementData.input.isAgreementSupportedIndemniteLicenciement;
-
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
       }
 
-      let publicodesSituationLegal: PublicodesIndemniteLicenciementResult = {
-        value: null,
-      };
-      let errorPublicodes = false;
+      let errorPublicodes;
       const absencePeriods = get().ancienneteData.input.absencePeriods;
-
-      try {
-        const situationLegal = {
-          ...mapToPublicodesSituationForCalculation(
-            dateEntree,
-            dateNotification,
-            dateSortie,
-            salaryPeriods,
-            isLicenciementInaptitude,
-            longTermDisability
-          ),
-          absencePeriods:
-            absencePeriods && absencePeriods.length
-              ? JSON.stringify(absencePeriods)
-              : undefined,
-        };
-        publicodesSituationLegal = publicodes.calculate(situationLegal).result;
-      } catch (e) {
-        errorPublicodes = true;
-        Sentry.captureException(e);
-        console.error(e);
-      }
 
       const legalFormula = publicodes.getFormule();
       const legalReferences = publicodes.getReferences();
 
-      let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult =
-        {
-          value: null,
-        };
+      let publicodesSituation: PublicodesData<PublicodesIndemniteLicenciementResult>;
       let agreementReferences: References[];
       let agreementFormula: Formula;
       let isAgreementBetter = false;
@@ -234,12 +171,12 @@ const createResultStore: StoreSlice<
           const situation = {
             ...mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
               agreement.num,
-              salaryPeriods,
+              get().salairesData.input.salaryPeriods,
               get().ancienneteData.input.dateNotification!,
               get().ancienneteData.input.dateEntree!,
               get().ancienneteData.input.dateSortie!,
-              isLicenciementInaptitude,
-              longTermDisability,
+              get().contratTravailData.input.licenciementInaptitude === "oui",
+              get().contratTravailData.input.arretTravail === "oui",
               { ...infos }
             ),
             absencePeriods:
@@ -248,10 +185,9 @@ const createResultStore: StoreSlice<
                 : undefined,
             ...get().situationData.situation,
           };
-          publicodesSituationConventionnel = publicodes.calculate(
-            situation,
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          ).result;
+          publicodesSituation = publicodes.calculateResult(situation);
+          isAgreementBetter = publicodesSituation.detail.chosenResult === "AGREEMENT";
+          isAgreementEqualToLegal = publicodesSituation.detail.chosenResult === "SAME";
         } catch (e) {
           errorPublicodes = true;
           Sentry.captureException(e);
@@ -272,27 +208,6 @@ const createResultStore: StoreSlice<
         );
 
         agreementHasNoBetterAllowance = hasNoBetterAllowance(agreement.num);
-
-        if (
-          agreementHasNoLegalIndemnity ||
-          (isAgreementBetterDetection(
-            publicodesSituationLegal,
-            publicodesSituationConventionnel
-          ) &&
-            isAgreementSupported)
-        ) {
-          isAgreementBetter = true;
-        }
-
-        if (
-          isAgreementSameDetection(
-            publicodesSituationLegal,
-            publicodesSituationConventionnel
-          ) &&
-          isAgreementSupported
-        ) {
-          isAgreementEqualToLegal = true;
-        }
 
         isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
           isAgreementBetter,
@@ -325,9 +240,9 @@ const createResultStore: StoreSlice<
           state.resultData.input.legalFormula = legalFormula;
           state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult =
-            publicodesSituationLegal;
+            publicodesSituation.detail.legalResult;
           state.resultData.input.publicodesAgreementResult =
-            publicodesSituationConventionnel;
+            publicodesSituation.detail.agreementResult;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;

@@ -6,7 +6,7 @@ import {
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
 } from "../modeles/common";
-import type { Publicodes } from "./Publicodes";
+import type { IInegibility } from "../modeles/common/types/ineligibility";
 import { PublicodesBase } from "./PublicodesBase";
 import type {
   PublicodesData,
@@ -14,20 +14,25 @@ import type {
 } from "./types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
 
-class IndemniteLicenciementPublicodes
-  extends PublicodesBase<PublicodesIndemniteLicenciementResult>
-  implements Publicodes<PublicodesIndemniteLicenciementResult>
-{
+class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemniteLicenciementResult> {
+  ineligibilityInstance: IInegibility;
+
   constructor(models: any, idcc?: string) {
     const rules = {
       ...models.base,
       ...(idcc ? models[idcc] : {}),
     };
+
     super(
       rules,
       PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_LICENCIEMENT],
       idcc as SupportedCcIndemniteLicenciement
     );
+
+    this.ineligibilityInstance =
+      new IneligibilityIndemniteLicenciementFactory().create(
+        idcc as SupportedCcIndemniteLicenciement
+      );
   }
 
   getMissingArg(
@@ -49,6 +54,9 @@ class IndemniteLicenciementPublicodes
     text: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
     return {
+      detail: {
+        legalResult: { value: 0 },
+      },
       ineligibility: text,
       missingArgs: [],
       result: { value: 0 },
@@ -74,13 +82,86 @@ class IndemniteLicenciementPublicodes
     args: Record<string, string | undefined>,
     targetRule?: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
-    let newArgs = args;
-    const ineligibilityInstance =
-      new IneligibilityIndemniteLicenciementFactory().create(this.idcc);
-    const ineligibility = ineligibilityInstance.getIneligibility(newArgs);
+    const ineligibility = this.ineligibilityInstance.getIneligibility(args);
     if (ineligibility) {
       return this.mapIneligibility(ineligibility);
     }
+
+    const newArgs = this.mapSeniorityArgs(args);
+
+    const ineligibilityWithSeniority =
+      this.ineligibilityInstance.getIneligibility(newArgs);
+    if (ineligibilityWithSeniority) {
+      return this.mapIneligibility(ineligibilityWithSeniority);
+    }
+
+    const situation = this.mapSalaryArgs(newArgs);
+
+    return super.setSituation(situation, targetRule);
+  }
+
+  calculateResult(
+    args: Record<string, string | undefined>
+  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+    const ineligibility = this.ineligibilityInstance.getIneligibility(args);
+    if (ineligibility) {
+      return this.mapIneligibility(ineligibility);
+    }
+
+    const newArgs = this.mapSeniorityArgs(args);
+
+    const ineligibilityWithSeniority =
+      this.ineligibilityInstance.getIneligibility(newArgs);
+    if (ineligibilityWithSeniority) {
+      return this.mapIneligibility(ineligibilityWithSeniority);
+    }
+
+    const situation = this.mapSalaryArgs(newArgs);
+
+    const legalResult = super.setSituation(
+      situation,
+      "contrat salarié . indemnité de licenciement . résultat légal"
+    );
+
+    const result: PublicodesData<PublicodesIndemniteLicenciementResult> = {
+      detail: {
+        legalResult: legalResult.result,
+      },
+      missingArgs: legalResult.missingArgs,
+      result: legalResult.result,
+      situation: this.data.situation,
+    };
+
+    if (this.idcc === SupportedCcIndemniteLicenciement.default) {
+      return result;
+    }
+    const agreementResult = super.setSituation(
+      situation,
+      "contrat salarié . indemnité de licenciement . résultat conventionnel"
+    );
+
+    // impossible à ce stade ?
+    result.missingArgs = result.missingArgs.concat(agreementResult.missingArgs);
+
+    result.detail.agreementResult = agreementResult.result;
+
+    return super.compareAndSetResult(legalResult, agreementResult, result);
+  }
+
+  protected convertedResult(
+    evaluatedNode: EvaluatedNode
+  ): PublicodesIndemniteLicenciementResult {
+    return {
+      unit: evaluatedNode.unit,
+      value: evaluatedNode.nodeValue,
+    };
+  }
+
+  private mapSeniorityArgs(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    let newArgs = args;
+
     const missingArgSeniority = this.getMissingArg(args, [
       "contrat salarié . indemnité de licenciement . date d'entrée",
       "contrat salarié . indemnité de licenciement . date de sortie",
@@ -139,11 +220,14 @@ class IndemniteLicenciementPublicodes
       }
     }
 
-    const ineligibilityWithSeniority =
-      ineligibilityInstance.getIneligibility(newArgs);
-    if (ineligibilityWithSeniority) {
-      return this.mapIneligibility(ineligibilityWithSeniority);
-    }
+    return newArgs;
+  }
+
+  private mapSalaryArgs(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    let newArgs = args;
+
     if (
       !args[
         "contrat salarié . indemnité de licenciement . salaire de référence"
@@ -187,17 +271,7 @@ class IndemniteLicenciementPublicodes
         };
       }
     }
-    const situation = this.removeNonPublicodeFields(newArgs);
-    return super.setSituation(situation, targetRule);
-  }
-
-  protected convertedResult(
-    evaluatedNode: EvaluatedNode
-  ): PublicodesIndemniteLicenciementResult {
-    return {
-      unit: evaluatedNode.unit,
-      value: evaluatedNode.nodeValue,
-    };
+    return this.removeNonPublicodeFields(newArgs);
   }
 }
 

@@ -10,7 +10,12 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "../modeles/common";
 import type { Publicodes } from "./Publicodes";
-import type { MissingArgs, PublicodesData, SituationElement } from "./types";
+import type {
+  MissingArgs,
+  PublicodesData,
+  PublicodesIndemniteLicenciementResult,
+  SituationElement,
+} from "./types";
 
 export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   idcc: SupportedCcIndemniteLicenciement;
@@ -20,6 +25,9 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   targetRule: string;
 
   data: PublicodesData<TResult> = {
+    detail: {
+      legalResult: {} as TResult,
+    },
     missingArgs: [],
     result: {} as TResult,
     situation: [],
@@ -44,13 +52,6 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return this.convertedResult(result);
   }
 
-  calculate(
-    args: Record<string, string | undefined>,
-    target?: string
-  ): PublicodesData<TResult> {
-    return this.setSituation(args, target);
-  }
-
   setSituation(
     args: Record<string, string | undefined>,
     targetRule?: string
@@ -60,7 +61,11 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
       args,
       targetRule ?? this.targetRule
     );
+
     this.data = {
+      detail: {
+        legalResult: this.convertedResult(result), // juste pour que le ts compile
+      },
       missingArgs,
       result: this.convertedResult(result),
       situation,
@@ -174,5 +179,37 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     };
   }
 
+  abstract calculate(
+    args: Record<string, string | undefined>,
+    target?: string
+  ): PublicodesData<TResult>;
+
+  abstract calculateResult(
+    args: Record<string, string | undefined>
+  ): PublicodesData<TResult>;
+
   protected abstract convertedResult(evaluatedNode: EvaluatedNode): TResult;
+
+  protected compareAndSetResult(
+    legalResult: PublicodesData<PublicodesIndemniteLicenciementResult>,
+    agreementResult: PublicodesData<PublicodesIndemniteLicenciementResult>,
+    result: PublicodesData<PublicodesIndemniteLicenciementResult>
+  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+    if (
+      legalResult.result.value !== undefined &&
+      legalResult.result.value !== null &&
+      agreementResult.result.value !== undefined &&
+      agreementResult.result.value !== null
+    ) {
+      if (agreementResult.result.value > legalResult.result.value) {
+        result.result = agreementResult.result;
+        result.detail.chosenResult = "AGREEMENT";
+      } else if (agreementResult.result.value === legalResult.result.value) {
+        result.detail.chosenResult = "SAME";
+      } else {
+        result.detail.chosenResult = "LEGAL";
+      }
+    }
+    return result;
+  }
 }

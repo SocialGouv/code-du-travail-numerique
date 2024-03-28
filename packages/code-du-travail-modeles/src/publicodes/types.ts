@@ -1,4 +1,3 @@
-import type Engine from "publicodes";
 import type {
   Evaluation,
   Rule as PubliRule,
@@ -6,17 +5,11 @@ import type {
   Unit,
 } from "publicodes";
 
-import type { Notification, References } from "../modeles/common";
 import type {
   IndemniteLicenciementPublicodes,
   PreavisRetraitePublicodes,
   RuptureConventionnellePublicodes,
 } from ".";
-
-export type OldReference = {
-  ref: string | null;
-  refUrl: string | null;
-};
 
 export interface MissingArgs {
   name: string;
@@ -65,31 +58,17 @@ export interface SituationElement {
   value?: string;
 }
 
-export type PublicodesState = {
-  engine: Engine;
-  targetRule: string;
-};
-
 export type PublicodesData<TResult> = {
   situation: SituationElement[];
   missingArgs: MissingArgs[];
   result: TResult;
   ineligibility?: string;
+  detail: {
+    chosenResult?: "AGREEMENT" | "LEGAL" | "SAME";
+    legalResult: TResult;
+    agreementResult?: TResult;
+  };
 };
-
-export type PublicodesProviderRule = {
-  children: React.ReactNode;
-  rules: any;
-  simulator: PublicodesSimulator;
-};
-
-export enum PublicodesUnit {
-  DAY = "jour",
-  MONTH = "mois",
-  YEAR = "an",
-  EUROS = "€",
-  K_EUROS = "k/€",
-}
 
 export enum PublicodesSimulator {
   INDEMNITE_LICENCIEMENT = "INDEMNITE_LICENCIEMENT",
@@ -125,17 +104,6 @@ export type PublicodesIndemniteLicenciementResult = {
   value: Evaluation;
   unit?: Unit;
   ineligibility?: string;
-};
-
-export type PublicodesContextType = {
-  execute: (rule: string) => PublicodesIndemniteLicenciementResult;
-  getNotifications: () => Notification[];
-  getReferences: () => References[];
-  result: PublicodesIndemniteLicenciementResult;
-  missingArgs: MissingArgs[];
-  situation: SituationElement[];
-  calculate: (values: Record<string, string>) => void;
-  setSituation: (values: Record<string, string>) => void;
 };
 
 export type PublicodesInstance<T extends PublicodesSimulator> =
