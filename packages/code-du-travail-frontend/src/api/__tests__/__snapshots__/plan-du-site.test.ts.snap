@@ -41,13 +41,6 @@ exports[`Plan du site should return a list for /plan-du-site 1`] = `
   ],
   "contributions": [
     {
-      "agreements": [],
-      "generic": {
-        "slug": "les-conges-pour-evenements-familiaux",
-        "title": "Les congés pour événements familiaux",
-      },
-    },
-    {
       "agreements": [
         {
           "idcc": "0044",
@@ -59,22 +52,6 @@ exports[`Plan du site should return a list for /plan-du-site 1`] = `
         "idcc": "0000",
         "slug": "quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
         "title": "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
-      },
-    },
-    {
-      "agreements": [
-        {
-          "slug": "44-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
-          "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
-        },
-        {
-          "slug": "1090-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
-          "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ? - Services de l'automobile",
-        },
-      ],
-      "generic": {
-        "slug": "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
-        "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
       },
     },
   ],
