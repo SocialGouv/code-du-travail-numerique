@@ -10,6 +10,7 @@ import { AgreementInformation } from "../../../common";
 import { StepData } from "../../../store";
 
 export type ResultStoreInput = {
+  result: PublicodesIndemniteLicenciementResult;
   publicodesLegalResult: PublicodesIndemniteLicenciementResult;
   publicodesAgreementResult?: PublicodesIndemniteLicenciementResult;
   agreementSeniority?: SeniorityResult;

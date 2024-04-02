@@ -110,7 +110,7 @@ class RuptureConventionnellePublicodes extends PublicodesBase<PublicodesIndemnit
       args,
       "contrat salarié . indemnité de licenciement . résultat légal"
     );
-
+    console.log("calculateResult RC");
     const result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> =
       {
         detail: {
@@ -131,10 +131,22 @@ class RuptureConventionnellePublicodes extends PublicodesBase<PublicodesIndemnit
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     const agreementFormula = this.getFormule();
-    // impossible à ce stade ?
-    result.missingArgs = result.missingArgs.concat(agreementResult.missingArgs);
 
     result.detail.agreementResult = agreementResult.result;
+
+    const hasNoLegalIndemnity = this.engine.evaluate(
+      "contrat salarié . indemnité de licenciement . résultat légal doit être ignoré"
+    );
+
+    console.log(hasNoLegalIndemnity);
+    if (hasNoLegalIndemnity.nodeValue) {
+      result.missingArgs = agreementResult.missingArgs;
+      result.result = agreementResult.result;
+      result.formula = agreementFormula;
+      result.detail.chosenResult = "HAS_NO_LEGAL";
+      return result;
+    }
+    result.missingArgs = result.missingArgs.concat(agreementResult.missingArgs);
 
     return super.compareAndSetResult(
       legalResult,
@@ -172,6 +184,8 @@ class RuptureConventionnellePublicodes extends PublicodesBase<PublicodesIndemnit
     targetRule?: string
   ) {
     let newArgs = args;
+    console.log("calculateSituation");
+
     const ineligibilityInstance =
       new IneligibilityRuptureConventionnelleFactory().create(this.idcc);
     const ineligibility = ineligibilityInstance.getIneligibility(newArgs);

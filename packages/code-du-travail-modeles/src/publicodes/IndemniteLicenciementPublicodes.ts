@@ -112,7 +112,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
     if (ineligibility) {
       return this.mapIneligibility(ineligibility);
     }
-
+    console.log("calculateResult");
     const newArgs = this.mapSeniorityArgs(args);
 
     const ineligibilityWithSeniority =
@@ -148,10 +148,22 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
     );
 
     const agreementFormula = this.getFormule();
-    // impossible à ce stade ?
-    result.missingArgs = result.missingArgs.concat(agreementResult.missingArgs);
-
     result.detail.agreementResult = agreementResult.result;
+
+    const hasNoLegalIndemnity = this.engine.evaluate(
+      "contrat salarié . indemnité de licenciement . résultat légal doit être ignoré"
+    );
+
+    console.log(hasNoLegalIndemnity);
+    if (hasNoLegalIndemnity.nodeValue) {
+      result.missingArgs = agreementResult.missingArgs;
+      result.result = agreementResult.result;
+      result.formula = agreementFormula;
+      result.detail.chosenResult = "HAS_NO_LEGAL";
+      return result;
+    }
+
+    result.missingArgs = result.missingArgs.concat(agreementResult.missingArgs);
 
     return super.compareAndSetResult(
       legalResult,

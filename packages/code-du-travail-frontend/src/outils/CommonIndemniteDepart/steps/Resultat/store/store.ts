@@ -17,11 +17,7 @@ import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
-import {
-  AgreementInformation,
-  hasNoBetterAllowance,
-  hasNoLegalIndemnity,
-} from "../../../common";
+import { AgreementInformation, hasNoBetterAllowance } from "../../../common";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
 import { IndemniteDepartStepName } from "../../..";
@@ -39,6 +35,7 @@ const initialState: ResultStoreData = {
   input: {
     formula: { formula: "", explanations: [] },
     legalReferences: [],
+    result: { value: "" },
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
     isEligible: false,
@@ -171,6 +168,8 @@ const createResultStore: StoreSlice<
           publicodesSituation.detail.chosenResult === "AGREEMENT";
         isAgreementEqualToLegal =
           publicodesSituation.detail.chosenResult === "SAME";
+        agreementHasNoLegalIndemnity =
+          publicodesSituation.detail.chosenResult === "HAS_NO_LEGAL";
         formula = publicodesSituation.formula;
       } catch (e) {
         errorPublicodes = true;
@@ -202,11 +201,6 @@ const createResultStore: StoreSlice<
           )
           .filter((v) => v !== "") as AgreementInformation[];
 
-        agreementHasNoLegalIndemnity = hasNoLegalIndemnity(
-          agreement.num,
-          agreementInformations
-        );
-
         agreementHasNoBetterAllowance = hasNoBetterAllowance(agreement.num);
 
         isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
@@ -237,6 +231,7 @@ const createResultStore: StoreSlice<
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.error.errorPublicodes = errorPublicodes;
+          state.resultData.input.result = publicodesSituation.result;
           state.resultData.input.formula = formula;
           state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult =

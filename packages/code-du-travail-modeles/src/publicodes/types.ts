@@ -76,7 +76,7 @@ export type PublicodesData<TResult> = {
   result: TResult;
   ineligibility?: string;
   detail: {
-    chosenResult?: "AGREEMENT" | "LEGAL" | "SAME";
+    chosenResult?: "AGREEMENT" | "HAS_NO_LEGAL" | "LEGAL" | "SAME";
     legalResult: TResult;
     agreementResult?: TResult;
   };

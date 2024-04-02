@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { CalculateurIndemniteLicenciement } from "../index";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 jest.spyOn(Storage.prototype, "setItem");
@@ -217,7 +217,7 @@ describe("Indemnité licenciement - CC 3239", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("6651,92 €");
   });
 
-  test("vérifier le calcul pour un assitant maternelle", async () => {
+  test("vérifier le calcul pour un assistant maternelle", async () => {
     fireEvent.change(ui.information.agreement3239.proCategory.get(), {
       target: { value: "'Assistant maternel'" },
     });

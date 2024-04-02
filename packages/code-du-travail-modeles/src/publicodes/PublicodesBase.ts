@@ -97,7 +97,9 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult>
   ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
     result.detail.chosenResult = "LEGAL";
+    console.log("compareAndSetResultcompareAndSetResultcompareAndSetResult");
 
+    console.log(legalResult, agreementResult);
     if (
       legalResult.result.value !== undefined &&
       legalResult.result.value !== null &&

@@ -15,7 +15,8 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "../../../CommonIndemniteDepart/store";
-import { getResultMessage } from "../../../RuptureCoventionnelle/steps/Resultat/utils"; // Do not optimize the following import
+import { getResultMessage } from "../../../RuptureCoventionnelle/steps/Resultat/utils";
+// Do not optimize the following import
 import { getForMoreInfoMessage } from "../../../CommonIndemniteDepart/agreements/ui-customizations";
 import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
 import { IndemniteDepartType } from "../../../types";
@@ -25,6 +26,7 @@ import { AgreementsInjector } from "../../../CommonIndemniteDepart/agreements";
 export default function Eligible() {
   const store = useContext(IndemniteDepartContext);
   const {
+    result,
     publicodesLegalResult,
     publicodesAgreementResult,
     typeContratTravail,
@@ -57,6 +59,7 @@ export default function Eligible() {
     isAgreementSupported,
     isParentalNoticeHidden,
   } = useIndemniteDepartStore(store, (state) => ({
+    result: state.resultData.input.result,
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
     typeContratTravail: state.contratTravailData.input.typeContratTravail,
@@ -100,11 +103,7 @@ export default function Eligible() {
   return (
     <>
       <Result
-        maxResult={
-          isAgreementBetter
-            ? publicodesAgreementResult?.value?.toString() ?? ""
-            : publicodesLegalResult.value?.toString() ?? ""
-        }
+        maxResult={result?.value?.toString() ?? ""}
         notifications={notifications}
         resultMessage={getResultMessage(informationData)}
       />
