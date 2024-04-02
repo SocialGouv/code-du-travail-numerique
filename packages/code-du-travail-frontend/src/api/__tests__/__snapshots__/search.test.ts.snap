@@ -15,7 +15,7 @@ exports[`Search should return a list of suggestion 1`] = `
   ],
   "documents": [
     {
-      "_score": 45.603035,
+      "_score": 44.999393,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -36,7 +36,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
     },
     {
-      "_score": 40.046463,
+      "_score": 39.666744,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -62,7 +62,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Les congés pour événements familiaux",
     },
     {
-      "_score": 36.158157,
+      "_score": 35.924004,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -83,7 +83,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Certificat de travail",
     },
     {
-      "_score": 33.653706,
+      "_score": 33.71013,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -109,29 +109,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Rupture de période d’essai à l’initiative de l’employeur",
     },
     {
-      "_score": 33.628456,
-      "algo": "fulltext",
-      "breadcrumbs": [
-        {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        {
-          "label": "Documents à remettre au salarié",
-          "position": 0,
-          "slug": "/themes/documents-a-remettre-au-salarie",
-        },
-      ],
-      "cdtnId": "59a4d4173c",
-      "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",
-      "slug": "certificat-de-travail",
-      "source": "fiches_service_public",
-      "title": "Certificat de travail",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
-    },
-    {
-      "_score": 33.52151,
+      "_score": 33.577934,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": [
@@ -153,7 +131,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Préavis de démission",
     },
     {
-      "_score": 33.48614,
+      "_score": 33.542564,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -177,6 +155,28 @@ exports[`Search should return a list of suggestion 1`] = `
       "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
       "source": "modeles_de_courriers",
       "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
+    },
+    {
+      "_score": 33.33788,
+      "algo": "fulltext",
+      "breadcrumbs": [
+        {
+          "label": "Départ de l’entreprise",
+          "position": 8,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        {
+          "label": "Documents à remettre au salarié",
+          "position": 0,
+          "slug": "/themes/documents-a-remettre-au-salarie",
+        },
+      ],
+      "cdtnId": "59a4d4173c",
+      "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",
+      "slug": "certificat-de-travail",
+      "source": "fiches_service_public",
+      "title": "Certificat de travail",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
     },
     {
       "_score": 31.220566,
@@ -225,7 +225,7 @@ exports[`Search should return a list of suggestion 1`] = `
   ],
   "themes": [
     {
-      "_score": 2.0594633,
+      "_score": 1.8162875,
       "algo": "fulltext",
       "cdtnId": "5594695039",
       "icon": "Contract",
