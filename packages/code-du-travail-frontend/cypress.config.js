@@ -19,8 +19,8 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     setupNodeEvents(on) {
       htmlvalidate.install(on);
-      on("before:run", () => {
-        downloadAllUrlsToValidate();
+      on("before:run", async () => {
+        await downloadAllUrlsToValidate();
       });
     },
   },
