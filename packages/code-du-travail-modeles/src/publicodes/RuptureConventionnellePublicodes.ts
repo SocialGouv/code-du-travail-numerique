@@ -106,7 +106,7 @@ class RuptureConventionnellePublicodes extends PublicodesBase<PublicodesIndemnit
   calculateResult(
     args: Record<string, string | undefined>
   ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
-    const legalResult = this.calculate(
+    const legalResult = this.calculateSituation(
       args,
       "contrat salarié . indemnité de licenciement . résultat légal"
     );
