@@ -23,8 +23,7 @@ export const getGenericContributionsGroupByThemes = async () => {
     .reduce(groupByThemes, {});
 };
 
-const isGeneric = (contrib) =>
-  (contrib.idcc && contrib.idcc === "0000") || !contrib.idcc;
+const isGeneric = (contrib) => contrib.idcc === "0000";
 
 function getTitle(agreements: Agreement[], contrib) {
   const idcc = contrib.idcc ?? contrib.slug.split("-")[0];
