@@ -97,9 +97,18 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult>
   ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
     result.detail.chosenResult = "LEGAL";
-    console.log("compareAndSetResultcompareAndSetResultcompareAndSetResult");
+    result.detail.agreementResult = agreementResult.result;
 
-    console.log(legalResult, agreementResult);
+    if (this.hasNoLegalIndemnity()) {
+      result.missingArgs = agreementResult.missingArgs;
+      result.result = agreementResult.result;
+      result.formula = agreementFormula;
+      result.detail.chosenResult = "HAS_NO_LEGAL";
+      return result;
+    }
+
+    result.missingArgs = result.missingArgs.concat(agreementResult.missingArgs);
+
     if (
       legalResult.result.value !== undefined &&
       legalResult.result.value !== null &&
@@ -116,6 +125,14 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     }
 
     return result;
+  }
+
+  private hasNoLegalIndemnity(): boolean {
+    const hasNoLegalIndemnity = this.engine.evaluate(
+      "contrat salarié . indemnité de licenciement . résultat légal doit être ignoré"
+    );
+
+    return !!hasNoLegalIndemnity.nodeValue;
   }
 
   private buildSituation(
