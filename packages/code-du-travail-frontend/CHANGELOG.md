@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.132.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.1...v4.132.0) (2024-03-26)
+
+### Features
+
+- bouger api modele de courrier ([#5690](https://github.com/SocialGouv/code-du-travail-numerique/issues/5690)) ([c6bcffe](https://github.com/SocialGouv/code-du-travail-numerique/commit/c6bcffe40e54b626252dd48d8271c4f769d58ebf))
+
+## [4.131.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.0...v4.131.1) (2024-03-25)
+
+**Note:** Version bump only for package @cdt/frontend
+
+# [4.131.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.130.0...v4.131.0) (2024-03-25)
+
+### Features
+
+- **information:** optimisation du chargement des contenus `relatedDocuments` pendant l'export ([#5699](https://github.com/SocialGouv/code-du-travail-numerique/issues/5699)) ([700fa13](https://github.com/SocialGouv/code-du-travail-numerique/commit/700fa131ca86a042c42bdffd74422e088d4a75ee))
+
+# [4.130.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.3...v4.130.0) (2024-03-19)
+
+### Features
+
+- changement message info page CC non etendu ([#5689](https://github.com/SocialGouv/code-du-travail-numerique/issues/5689)) ([ed0fe31](https://github.com/SocialGouv/code-du-travail-numerique/commit/ed0fe31364c396df6c0894a37065287ef1d4a5b2))
+- **convention-collectives:** migration de nouvelles pages au nouveau format ([#5698](https://github.com/SocialGouv/code-du-travail-numerique/issues/5698)) ([706c2f0](https://github.com/SocialGouv/code-du-travail-numerique/commit/706c2f03e2ba4fb2e74de4625c0a57c397de9602))
+- **recherche-entreprise:** ajout de messages spécifiques lorsqu'il n'y a pas CCs présentes dans la liste de l'établissement ([#5680](https://github.com/SocialGouv/code-du-travail-numerique/issues/5680)) ([6ad6627](https://github.com/SocialGouv/code-du-travail-numerique/commit/6ad66278754b3cecfbb35fadca4f94e87f8c5798))
+
 ## [4.129.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.2...v4.129.3) (2024-03-14)
 
 **Note:** Version bump only for package @cdt/frontend
