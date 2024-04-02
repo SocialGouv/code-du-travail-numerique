@@ -39,7 +39,7 @@ export const downloadAllUrlsToValidate = async () => {
   ];
 
   const response = await fetch(
-    "https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/plan-du-site"
+    "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/api/plan-du-site"
   );
   const data = await response.json();
 
