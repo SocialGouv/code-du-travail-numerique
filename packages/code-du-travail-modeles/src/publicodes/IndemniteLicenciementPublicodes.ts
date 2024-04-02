@@ -93,7 +93,7 @@ class IndemniteLicenciementPublicodes
         SupportedCcIndemniteLicenciement.default
       );
       const legalSeniority = legal.computeSeniority(legal.mapSituation(args));
-      if (legalSeniority.value) {
+      if (legalSeniority.value !== undefined) {
         newArgs = {
           ...newArgs,
           "contrat salarié . indemnité de licenciement . ancienneté en année":
@@ -101,7 +101,7 @@ class IndemniteLicenciementPublicodes
           ...legalSeniority.extraInfos,
         };
       }
-      if (agreementSeniority.value) {
+      if (agreementSeniority.value !== undefined) {
         newArgs = {
           ...newArgs,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -126,12 +126,12 @@ class IndemniteLicenciementPublicodes
       const legalRequiredSeniority = legal.computeRequiredSeniority(
         legal.mapRequiredSituation(args)
       );
-      if (legalRequiredSeniority.value) {
+      if (legalRequiredSeniority.value !== undefined) {
         newArgs[
           "contrat salarié . indemnité de licenciement . ancienneté requise en année"
         ] = legalRequiredSeniority.value.toString();
       }
-      if (agreementRequiredSeniority.value) {
+      if (agreementRequiredSeniority.value !== undefined) {
         newArgs[
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
         ] = agreementRequiredSeniority.value.toString();
