@@ -250,16 +250,16 @@ exports[`<MentionLegales /> should render 1`] = `
               </h2>
             </div>
             <p>
-              Ce site est hébergé par Microsoft Azure France (région France centre) :
+              Ce site est hébergé par OVH SAS :
             </p>
             <address
               class="sc-bvgPty iGApiS"
             >
-              Microsoft France
+              2 rue Kellermann
               <br />
-              37 Quai du Président Roosevelt
+              56100 Roubaix
               <br />
-              92130 ISSY-LES-MOULINEAUX
+              France
             </address>
             <div
               class="sc-iGgWBj sc-cyRcrZ cWzIZL efzjDN"
