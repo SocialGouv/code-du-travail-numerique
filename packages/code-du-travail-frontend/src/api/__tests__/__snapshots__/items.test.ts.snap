@@ -82,11 +82,13 @@ exports[`Items return item from source and slug 1`] = `
       "title": "Les congés pour événements familiaux",
     },
     {
-      "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
+      "action": "Calculer",
+      "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
+      "icon": "Time",
       "reco": "search",
-      "slug": "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
-      "source": "contributions",
-      "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
+      "slug": "heures-recherche-emploi",
+      "source": "outils",
+      "title": "Heures d'absence pour rechercher un emploi",
     },
   ],
 }

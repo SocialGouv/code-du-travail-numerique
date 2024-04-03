@@ -45,7 +45,7 @@ exports[`Plan du site should return a list for /plan-du-site 1`] = `
         {
           "idcc": "0044",
           "slug": "44-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-          "title": "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
+          "title": "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
         },
       ],
       "generic": {
