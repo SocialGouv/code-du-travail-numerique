@@ -80,7 +80,6 @@ exports[`Plan du site should return a list for /plan-du-site 1`] = `
       },
     },
   ],
-  "informations": [],
   "modeles": [
     {
       "breadcrumbs": [
