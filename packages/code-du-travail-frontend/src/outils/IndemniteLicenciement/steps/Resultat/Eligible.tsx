@@ -15,7 +15,7 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "../../../CommonIndemniteDepart/store";
-import { getResultMessage } from "../../../RuptureCoventionnelle/steps/Resultat/utils";
+import { getResultMessage } from "./utils";
 // Do not optimize the following import
 import { getForMoreInfoMessage } from "../../../CommonIndemniteDepart/agreements/ui-customizations";
 import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
