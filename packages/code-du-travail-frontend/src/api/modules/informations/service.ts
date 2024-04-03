@@ -11,8 +11,8 @@ export const getAllInformations = async () => {
   return response.body.hits.hits
     .map(({ _source }) => _source)
     .sort((infoA, infoB) => {
-      if (infoA.title < infoB.title) return -1;
-      if (infoA.title > infoB.title) return 1;
-      return 0;
+      return infoA.title.localeCompare(infoB.title, "fr", {
+        ignorePunctuation: true,
+      });
     });
 };
