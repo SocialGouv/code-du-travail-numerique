@@ -66,8 +66,6 @@ describe("ReferencesJuridiques", () => {
             </svg>
             <span
               class="sc-fBWQRz lqUBb"
-              font-size="hsmall"
-              font-weight="600"
             >
               Références
             </span>

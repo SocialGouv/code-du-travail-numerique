@@ -30,8 +30,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
         </svg>
         <span
           class="sc-fBWQRz lqUBb"
-          font-size="hsmall"
-          font-weight="600"
         >
           Références juridiques concernées :
         </span>
