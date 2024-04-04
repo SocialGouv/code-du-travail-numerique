@@ -34,10 +34,10 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             tabindex="-1"
           >
             <header
-              class="sc-gdyeKB VBBcF"
+              class="sc-fMMURN bdACkg"
             >
               <h1
-                class="sc-bDpDS hOaNxX"
+                class="sc-YysOf QfOmM"
               >
                 <span
                   class="sc-gsFSXq djREvw"
@@ -52,16 +52,16 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               Contact téléphonique
             </h2>
             <a
-              class="sc-dSIIpw fjNIXu"
+              class="sc-ePDLzJ lbyfWL"
               href="tel:+0033806000126"
             >
               <strong
-                class="sc-fMMURN ikXVLY"
+                class="sc-bVVIoq dsOkHO"
               >
                 0 806 000 126
               </strong>
               <em
-                class="sc-ktPPKK cQEOGZ"
+                class="sc-dPZUQH eVmQMw"
               >
                 Service gratuit 
                 <span>
@@ -76,7 +76,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               Contact par email et prise de rendez-vous
             </h2>
             <form
-              class="sc-YysOf gansuv"
+              class="sc-eBHhsj dsjLcj"
             >
               <label
                 for="search-service"
@@ -84,11 +84,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 Saisissez votre numéro de département :
               </label>
               <div
-                class="sc-kYxDKI dNAUSa sc-cVzyXs jAbhFe"
+                class="sc-sLsrZ kGdGKi sc-iXzfSG bLBnXa"
               >
                 <input
                   autocomplete="off"
-                  class="sc-bpUBKd ktFmXQ"
+                  class="sc-dBmzty djgFPK"
                   id="search-service"
                   maxlength="3"
                   name="departement"
@@ -99,13 +99,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </div>
               <button
                 aria-label="Recherchez le service"
-                class="sc-kOPcWz kyVwqT sc-ePDLzJ cTeGcu"
+                class="sc-kOPcWz kyVwqT sc-lnPyaJ ezKCb"
                 title="Lancer une recherche"
                 type="submit"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-bVVIoq bMpFlC"
+                  class="sc-eulNck dshhnZ"
                   fill="none"
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </button>
             </form>
             <div
-              class="sc-dPZUQH eDdRkM"
+              class="sc-dExYaf fLnCXN"
             >
               <p>
                 Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :

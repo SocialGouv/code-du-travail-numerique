@@ -20,7 +20,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
       value="foo"
     />
     <div
-      class="sc-ktPPKK jplqpT"
+      class="sc-dPZUQH eZA-Dme"
       id="react-autowhatever-1"
       role="listbox"
     />
@@ -48,7 +48,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
       value="foo"
     />
     <div
-      class="sc-ktPPKK jplqpT"
+      class="sc-dPZUQH eZA-Dme"
       id="react-autowhatever-1"
       role="listbox"
     >
@@ -64,10 +64,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
         >
           <div
-            class="sc-fMMURN jdccYW"
+            class="sc-bVVIoq hSnMeY"
           >
             <span
-              class="sc-dSIIpw"
+              class="sc-ePDLzJ"
             >
               <strong>
                 foo
@@ -83,10 +83,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
         >
           <div
-            class="sc-fMMURN jdccYW"
+            class="sc-bVVIoq hSnMeY"
           >
             <span
-              class="sc-dSIIpw"
+              class="sc-ePDLzJ"
             >
               <strong>
                 foo
@@ -103,10 +103,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
         >
           <div
-            class="sc-fMMURN jdccYW"
+            class="sc-bVVIoq hSnMeY"
           >
             <span
-              class="sc-dSIIpw"
+              class="sc-ePDLzJ"
             >
               <strong>
                 foo
@@ -123,10 +123,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
         >
           <div
-            class="sc-fMMURN jdccYW"
+            class="sc-bVVIoq hSnMeY"
           >
             <span
-              class="sc-dSIIpw"
+              class="sc-ePDLzJ"
             >
               <strong>
                 foo

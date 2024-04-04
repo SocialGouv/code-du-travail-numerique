@@ -34,10 +34,10 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
             tabindex="-1"
           >
             <div
-              class="sc-gdyeKB llNjM"
+              class="sc-fMMURN lkJUCJ"
             >
               <h1
-                class="sc-bVHCgj bhHbBR"
+                class="sc-cVzyXs VIuCi"
               >
                 <span
                   class="sc-gsFSXq djREvw"
@@ -52,11 +52,11 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
               Couleurs
             </h2>
             <label
-              class="sc-kbhJrz cgxQAt"
+              class="sc-eyvILC erxqfW"
               for="blackAndWhiteTheme"
             >
               <input
-                class="sc-ehixzo iueOBP"
+                class="sc-gfoqjT UMmfj"
                 id="blackAndWhiteTheme"
                 name="blackAndWhiteTheme"
                 type="checkbox"

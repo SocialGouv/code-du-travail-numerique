@@ -40,11 +40,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
         class="sc-fjvvzt gtrYRc"
       >
         <ul
-          class="sc-cfxfcM sc-fMMURN kMmTaI ZGPWh"
+          class="sc-cfxfcM sc-bVVIoq kMmTaI gHXJXP"
         >
           <li>
             <a
-              class="sc-bmzYkS eyKmWS sc-dSIIpw lbJqnJ"
+              class="sc-bmzYkS eyKmWS sc-ePDLzJ kuuIgI"
               href="/code-du-travail/l1244-3"
             >
               <svg
@@ -68,7 +68,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           </li>
           <li>
             <a
-              class="sc-bmzYkS eyKmWS sc-dSIIpw lbJqnJ"
+              class="sc-bmzYkS eyKmWS sc-ePDLzJ kuuIgI"
               href="/code-du-travail/r1244-4"
             >
               <svg
@@ -93,7 +93,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           <li>
             <a
               aria-label="Article L3121-44 du JO (Nouvelle fenêtre)"
-              class="sc-bmzYkS eyKmWS sc-dSIIpw lbJqnJ no-after"
+              class="sc-bmzYkS eyKmWS sc-ePDLzJ kuuIgI no-after"
               href="https://article.jo/L3121-44"
               target="_blank"
             >
@@ -119,7 +119,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           <li>
             <a
               aria-label="Article foo du JPO (Nouvelle fenêtre)"
-              class="sc-bmzYkS eyKmWS sc-dSIIpw lbJqnJ no-after"
+              class="sc-bmzYkS eyKmWS sc-ePDLzJ kuuIgI no-after"
               href="https://article.jo/foo"
               target="_blank"
             >
@@ -145,7 +145,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           <li>
             <a
               aria-label="Convention foo (Nouvelle fenêtre)"
-              class="sc-bmzYkS eyKmWS sc-dSIIpw lbJqnJ no-after"
+              class="sc-bmzYkS eyKmWS sc-ePDLzJ kuuIgI no-after"
               href="https://ma-convention-collective/ccc-foo"
               target="_blank"
             >

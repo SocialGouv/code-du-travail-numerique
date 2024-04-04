@@ -4,22 +4,22 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
 <div>
   <nav
     aria-label="Fil d'ariane"
-    class="sc-dSIIpw dmvBhh"
+    class="sc-ePDLzJ gRDjDk"
   >
     <ol
-      class="sc-aXZVg sc-fMMURN gZgZQL fNateR"
+      class="sc-aXZVg sc-bVVIoq gZgZQL gXvIvn"
     >
       <li
-        class="sc-ktPPKK kPokJp"
+        class="sc-dPZUQH inviaw"
       >
         <a
-          class="sc-YysOf bMxqDa"
+          class="sc-eBHhsj kgIViq"
           href="/"
           title="Retour à l'accueil"
         >
           <svg
             aria-hidden="true"
-            class="sc-cVzyXs cqKWhf"
+            class="sc-iXzfSG khesnX"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
@@ -33,11 +33,11 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
         </a>
       </li>
       <li
-        class="sc-ktPPKK kPokJp"
+        class="sc-dPZUQH inviaw"
       >
         <svg
           aria-hidden="true"
-          class="sc-ePDLzJ gDMkbM"
+          class="sc-lnPyaJ gFPfvJ"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -49,18 +49,18 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
         </svg>
          
         <a
-          class="sc-YysOf bMxqDa"
+          class="sc-eBHhsj kgIViq"
           href="/themes/item-1"
         >
           item 1
         </a>
       </li>
       <li
-        class="sc-ktPPKK kPokJp"
+        class="sc-dPZUQH inviaw"
       >
         <svg
           aria-hidden="true"
-          class="sc-ePDLzJ gDMkbM"
+          class="sc-lnPyaJ gFPfvJ"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
         </svg>
          
         <a
-          class="sc-YysOf bMxqDa"
+          class="sc-eBHhsj kgIViq"
           href="/themes/item-2"
         >
           item 2

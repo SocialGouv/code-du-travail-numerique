@@ -3,10 +3,10 @@
 exports[`<FicheServicePublic /> should render 1`] = `
 <div>
   <div
-    class="sc-knuQbY jBLNho"
+    class="sc-kqGoIF djvxHj"
   >
     <p
-      class="sc-kRRyDe zFEco"
+      class="sc-iapWAC hOKVmi"
     >
       
             La démission vous permet de rompre votre contrat de travail de votre propre initiative. Cependant, pour être valable, elle doit respecter certaines conditions. Vous devez prévenir votre employeur de votre volonté de démissionner. Sauf en cas de dispense, vous poursuivez votre activité jusqu'au terme du préavis de démission. Des dispositions spécifiques de rupture anticipée du contrat de travail sont prévues selon votre situation au moment de votre démission (
@@ -21,62 +21,58 @@ exports[`<FicheServicePublic /> should render 1`] = `
          
     </p>
     <div
-      class="sc-ihgnxF eGpXle"
+      class="sc-brPLxw jqqklj"
       data-rttabs="true"
     >
       <div
-        class="sc-gFAWRd jDjoBq sc-jMakVo lbbYbN"
+        class="sc-iMWBiJ iZEClt"
       >
-        <div
-          class="sc-gmPhUn kUNTdL"
+        <ul
+          class="sc-fvtFIe cHMgmW"
+          role="tablist"
         >
-          <ul
-            class="sc-iMTnTL VAkgW"
-            role="tablist"
+          <li
+            aria-controls="react-tabs-1"
+            aria-disabled="false"
+            aria-selected="true"
+            class="sc-bBeLUv hoMOVm react-tabs__tab--selected"
+            data-rttab="true"
+            data-testid="undefined-0"
+            id="react-tabs-0"
+            role="tab"
+            tabindex="0"
           >
-            <li
-              aria-controls="react-tabs-1"
-              aria-disabled="false"
-              aria-selected="true"
-              class="sc-krNlru kTDoAg react-tabs__tab--selected"
-              data-rttab="true"
-              data-testid="undefined-0"
-              id="react-tabs-0"
-              role="tab"
-              tabindex="0"
-            >
-              CDI
-            </li>
-            <li
-              aria-controls="react-tabs-3"
-              aria-disabled="false"
-              aria-selected="false"
-              class="sc-krNlru kTDoAg"
-              data-rttab="true"
-              data-testid="undefined-1"
-              id="react-tabs-2"
-              role="tab"
-            >
-              CDD
-            </li>
-            <li
-              aria-controls="react-tabs-5"
-              aria-disabled="false"
-              aria-selected="false"
-              class="sc-krNlru kTDoAg"
-              data-rttab="true"
-              data-testid="undefined-2"
-              id="react-tabs-4"
-              role="tab"
-            >
-              Contrat de travail temporaire (intérim)
-            </li>
-          </ul>
-        </div>
+            CDI
+          </li>
+          <li
+            aria-controls="react-tabs-3"
+            aria-disabled="false"
+            aria-selected="false"
+            class="sc-bBeLUv hoMOVm"
+            data-rttab="true"
+            data-testid="undefined-1"
+            id="react-tabs-2"
+            role="tab"
+          >
+            CDD
+          </li>
+          <li
+            aria-controls="react-tabs-5"
+            aria-disabled="false"
+            aria-selected="false"
+            class="sc-bBeLUv hoMOVm"
+            data-rttab="true"
+            data-testid="undefined-2"
+            id="react-tabs-4"
+            role="tab"
+          >
+            Contrat de travail temporaire (intérim)
+          </li>
+        </ul>
       </div>
       <div
         aria-labelledby="react-tabs-0"
-        class="sc-hwdzOV bWfEVW react-tabs__tab-panel--selected"
+        class="sc-ihgnxF bbehlM react-tabs__tab-panel--selected"
         id="react-tabs-1"
         role="tabpanel"
       >
@@ -91,10 +87,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h2>
         </div>
         <div
-          class="sc-jaXxmE SGmXF"
+          class="sc-jMakVo gHeVja"
         >
           <div
-            class="sc-iXzfSG GeWyC"
+            class="sc-ePDLzJ eCkqUq"
             data-accordion-component="Accordion"
           >
             <div>
@@ -236,14 +232,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <ul>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           Dans le cadre d'une rupture volontaire du contrat de travail par le salarié
                         </p>
                       </li>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           
@@ -256,7 +252,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           
@@ -266,7 +262,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           
@@ -276,7 +272,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           
@@ -459,21 +455,21 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <div
                       aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
-                      class="sc-fTFjTM hkOnFS sc-iapWAC huEEnQ no-after"
+                      class="sc-ibQAlb fuLYQY sc-iXzfSG akpvg no-after"
                     >
                       <div
-                        class="sc-gmgFlS dlfKdE"
+                        class="sc-guJBdh jBpgpS"
                       >
                         <div
-                          class="sc-kMkxaj dwuMYa"
+                          class="sc-hZDyAQ tqlOz"
                         >
                           <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
+                            class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                           >
                             Modèle de document
                           </p>
                           <p
-                            class="sc-jIGnZt issdxz"
+                            class="sc-ktJbId fhphst"
                           >
                             <a
                               href="https://www.service-public.fr/simulateur/calcul/Demission"
@@ -486,7 +482,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="sc-fBdRDi mhKrF"
+                        class="sc-gmgFlS ikhbYa"
                       >
                         Source: 
                         Direction de l'information légale et administrative (Premier ministre)
@@ -578,62 +574,58 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       Durée
                     </h4>
                     <div
-                      class="sc-ihgnxF eGpXle"
+                      class="sc-brPLxw jqqklj"
                       data-rttabs="true"
                     >
                       <div
-                        class="sc-gFAWRd jDjoBq sc-jMakVo lbbYbN"
+                        class="sc-iMWBiJ iZEClt"
                       >
-                        <div
-                          class="sc-gmPhUn kUNTdL"
+                        <ul
+                          class="sc-fvtFIe cHMgmW"
+                          role="tablist"
                         >
-                          <ul
-                            class="sc-iMTnTL VAkgW"
-                            role="tablist"
+                          <li
+                            aria-controls="react-tabs-7"
+                            aria-disabled="false"
+                            aria-selected="true"
+                            class="sc-bBeLUv hoMOVm react-tabs__tab--selected"
+                            data-rttab="true"
+                            data-testid="undefined-0"
+                            id="react-tabs-6"
+                            role="tab"
+                            tabindex="0"
                           >
-                            <li
-                              aria-controls="react-tabs-7"
-                              aria-disabled="false"
-                              aria-selected="true"
-                              class="sc-krNlru kTDoAg react-tabs__tab--selected"
-                              data-rttab="true"
-                              data-testid="undefined-0"
-                              id="react-tabs-6"
-                              role="tab"
-                              tabindex="0"
-                            >
-                              Cas général
-                            </li>
-                            <li
-                              aria-controls="react-tabs-9"
-                              aria-disabled="false"
-                              aria-selected="false"
-                              class="sc-krNlru kTDoAg"
-                              data-rttab="true"
-                              data-testid="undefined-1"
-                              id="react-tabs-8"
-                              role="tab"
-                            >
-                              Journaliste
-                            </li>
-                            <li
-                              aria-controls="react-tabs-11"
-                              aria-disabled="false"
-                              aria-selected="false"
-                              class="sc-krNlru kTDoAg"
-                              data-rttab="true"
-                              data-testid="undefined-2"
-                              id="react-tabs-10"
-                              role="tab"
-                            >
-                              VRP
-                            </li>
-                          </ul>
-                        </div>
+                            Cas général
+                          </li>
+                          <li
+                            aria-controls="react-tabs-9"
+                            aria-disabled="false"
+                            aria-selected="false"
+                            class="sc-bBeLUv hoMOVm"
+                            data-rttab="true"
+                            data-testid="undefined-1"
+                            id="react-tabs-8"
+                            role="tab"
+                          >
+                            Journaliste
+                          </li>
+                          <li
+                            aria-controls="react-tabs-11"
+                            aria-disabled="false"
+                            aria-selected="false"
+                            class="sc-bBeLUv hoMOVm"
+                            data-rttab="true"
+                            data-testid="undefined-2"
+                            id="react-tabs-10"
+                            role="tab"
+                          >
+                            VRP
+                          </li>
+                        </ul>
                       </div>
                       <div
                         aria-labelledby="react-tabs-6"
-                        class="sc-hwdzOV bWfEVW react-tabs__tab-panel--selected"
+                        class="sc-ihgnxF bbehlM react-tabs__tab-panel--selected"
                         id="react-tabs-7"
                         role="tabpanel"
                       >
@@ -648,21 +640,21 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           </h4>
                         </div>
                         <div
-                          class="sc-jaXxmE SGmXF"
+                          class="sc-jMakVo gHeVja"
                         >
                           <p>
                             La durée du préavis de démission est fixée :
                           </p>
                           <ul>
                             <li
-                              class="sc-lnPyaJ kyZAcy"
+                              class="sc-bVVIoq hMTanr"
                             >
                               <p>
                                 Soit par convention collective ou accord collectif
                               </p>
                             </li>
                             <li
-                              class="sc-lnPyaJ kyZAcy"
+                              class="sc-bVVIoq hMTanr"
                             >
                               <p>
                                 
@@ -675,7 +667,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               </p>
                             </li>
                             <li
-                              class="sc-lnPyaJ kyZAcy"
+                              class="sc-bVVIoq hMTanr"
                             >
                               <p>
                                 Soit par le droit local (en Alsace-Moselle)
@@ -689,7 +681,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             Si vous travaillez à temps partiel, la durée calendaire du préavis de démission est la même que celle d'un salarié à temps plein.
                           </p>
                           <div
-                            class="sc-iGgWBj sc-gvZAcH cWzIZL eawdqY"
+                            class="sc-iGgWBj sc-dExYaf cWzIZL eSDbDW"
                           >
                             <h5
                               class="sc-kAyceB dvmaTz"
@@ -705,13 +697,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       </div>
                       <div
                         aria-labelledby="react-tabs-8"
-                        class="sc-hwdzOV bWfEVW"
+                        class="sc-ihgnxF bbehlM"
                         id="react-tabs-9"
                         role="tabpanel"
                       />
                       <div
                         aria-labelledby="react-tabs-10"
-                        class="sc-hwdzOV bWfEVW"
+                        class="sc-ihgnxF bbehlM"
                         id="react-tabs-11"
                         role="tabpanel"
                       />
@@ -727,7 +719,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <ul>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           
@@ -737,7 +729,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           
@@ -751,50 +743,46 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       En dehors de ces deux cas, vous pouvez être dispensé d'effectuer votre préavis, de votre propre initiative ou à la demande de votre employeur, dans les conditions suivantes :
                     </p>
                     <div
-                      class="sc-ihgnxF eGpXle"
+                      class="sc-brPLxw jqqklj"
                       data-rttabs="true"
                     >
                       <div
-                        class="sc-gFAWRd jDjoBq sc-jMakVo lbbYbN"
+                        class="sc-iMWBiJ iZEClt"
                       >
-                        <div
-                          class="sc-gmPhUn kUNTdL"
+                        <ul
+                          class="sc-fvtFIe cHMgmW"
+                          role="tablist"
                         >
-                          <ul
-                            class="sc-iMTnTL VAkgW"
-                            role="tablist"
+                          <li
+                            aria-controls="react-tabs-13"
+                            aria-disabled="false"
+                            aria-selected="true"
+                            class="sc-bBeLUv hoMOVm react-tabs__tab--selected"
+                            data-rttab="true"
+                            data-testid="undefined-0"
+                            id="react-tabs-12"
+                            role="tab"
+                            tabindex="0"
                           >
-                            <li
-                              aria-controls="react-tabs-13"
-                              aria-disabled="false"
-                              aria-selected="true"
-                              class="sc-krNlru kTDoAg react-tabs__tab--selected"
-                              data-rttab="true"
-                              data-testid="undefined-0"
-                              id="react-tabs-12"
-                              role="tab"
-                              tabindex="0"
-                            >
-                              Vous demandez une dispense de préavis
-                            </li>
-                            <li
-                              aria-controls="react-tabs-15"
-                              aria-disabled="false"
-                              aria-selected="false"
-                              class="sc-krNlru kTDoAg"
-                              data-rttab="true"
-                              data-testid="undefined-1"
-                              id="react-tabs-14"
-                              role="tab"
-                            >
-                              Votre employeur vous dispense de préavis
-                            </li>
-                          </ul>
-                        </div>
+                            Vous demandez une dispense de préavis
+                          </li>
+                          <li
+                            aria-controls="react-tabs-15"
+                            aria-disabled="false"
+                            aria-selected="false"
+                            class="sc-bBeLUv hoMOVm"
+                            data-rttab="true"
+                            data-testid="undefined-1"
+                            id="react-tabs-14"
+                            role="tab"
+                          >
+                            Votre employeur vous dispense de préavis
+                          </li>
+                        </ul>
                       </div>
                       <div
                         aria-labelledby="react-tabs-12"
-                        class="sc-hwdzOV bWfEVW react-tabs__tab-panel--selected"
+                        class="sc-ihgnxF bbehlM react-tabs__tab-panel--selected"
                         id="react-tabs-13"
                         role="tabpanel"
                       >
@@ -809,13 +797,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           </h4>
                         </div>
                         <div
-                          class="sc-jaXxmE SGmXF"
+                          class="sc-jMakVo gHeVja"
                         >
                           <p>
                             Vous pouvez demander à votre employeur de vous dispenser d'effectuer votre préavis (par écrit ou par oral) :
                           </p>
                           <div
-                            class="sc-iXzfSG GeWyC"
+                            class="sc-ePDLzJ eCkqUq"
                             data-accordion-component="Accordion"
                           >
                             <div>
@@ -961,7 +949,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       </div>
                       <div
                         aria-labelledby="react-tabs-14"
-                        class="sc-hwdzOV bWfEVW"
+                        class="sc-ihgnxF bbehlM"
                         id="react-tabs-15"
                         role="tabpanel"
                       />
@@ -977,14 +965,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <ul>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           Accord entre le salarié et l'employeur
                         </p>
                       </li>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           
@@ -997,7 +985,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           Arrêt de travail
@@ -1007,7 +995,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           Dispositions conventionnelles
@@ -1036,10 +1024,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       Toutefois, des dispositions conventionnelles ou, à défaut, un usage dans la localité ou la profession peuvent prévoir des temps d'absence pour rechercher un emploi pendant la durée du préavis.
                     </p>
                     <div
-                      class="sc-eulNck dyxMsr"
+                      class="sc-dPZUQH cPUyur"
                     >
                       <strong
-                        class="sc-dExYaf frjJRt"
+                        class="sc-eBHhsj eVSIbs"
                       >
                         Ou s'adresser ?
                       </strong>
@@ -1050,7 +1038,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         Agessa et Maison des artistes - Sécurité sociale
                       </h3>
                       <div
-                        class="sc-iXzfSG GeWyC"
+                        class="sc-ePDLzJ eCkqUq"
                         data-accordion-component="Accordion"
                       >
                         <div>
@@ -1450,28 +1438,28 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <ul>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           Certificat de travail
                         </p>
                       </li>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           Attestation Pôle emploi
                         </p>
                       </li>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           Solde de tout compte
                         </p>
                       </li>
                       <li
-                        class="sc-lnPyaJ kyZAcy"
+                        class="sc-bVVIoq hMTanr"
                       >
                         <p>
                           En cas de dispositifs de participation, d'intéressement et des plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
@@ -1487,34 +1475,34 @@ exports[`<FicheServicePublic /> should render 1`] = `
       </div>
       <div
         aria-labelledby="react-tabs-2"
-        class="sc-hwdzOV bWfEVW"
+        class="sc-ihgnxF bbehlM"
         id="react-tabs-3"
         role="tabpanel"
       />
       <div
         aria-labelledby="react-tabs-4"
-        class="sc-hwdzOV bWfEVW"
+        class="sc-ihgnxF bbehlM"
         id="react-tabs-5"
         role="tabpanel"
       />
     </div>
     <div
       aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
-      class="sc-fTFjTM hkOnFS sc-iapWAC huEEnQ no-after"
+      class="sc-ibQAlb fuLYQY sc-iXzfSG akpvg no-after"
     >
       <div
-        class="sc-gmgFlS dlfKdE"
+        class="sc-guJBdh jBpgpS"
       >
         <div
-          class="sc-kMkxaj dwuMYa"
+          class="sc-hZDyAQ tqlOz"
         >
           <p
-            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
+            class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
           >
             Modèle de document
           </p>
           <p
-            class="sc-jIGnZt issdxz"
+            class="sc-ktJbId fhphst"
           >
             <a
               href="https://www.service-public.fr/simulateur/calcul/Demission"
@@ -1527,7 +1515,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         </div>
       </div>
       <div
-        class="sc-fBdRDi mhKrF"
+        class="sc-gmgFlS ikhbYa"
       >
         Source: 
         Direction de l'information légale et administrative (Premier ministre)
