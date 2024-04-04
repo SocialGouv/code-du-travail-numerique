@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
-import { getAll, getBySourceAndSlugItems } from "./service";
+import { getBySourceAndSlugItems } from "./service";
 
 export class ItemsController {
   private req: NextApiRequest;
@@ -15,25 +15,6 @@ export class ItemsController {
     try {
       const { slug, source } = this.req.query;
       const response = await getBySourceAndSlugItems(source, slug as string);
-      this.res.status(200).json(response);
-    } catch (error) {
-      if (error instanceof NotFoundError) {
-        this.res.status(404).json({ message: error.message });
-      } else {
-        this.res.status(500).json({
-          message: DEFAULT_ERROR_500_MESSAGE,
-        });
-      }
-    }
-  }
-
-  public async getAll() {
-    try {
-      let { url } = this.req.query;
-      if (!url && typeof url !== "string") {
-        return this.res.status(400).json({ message: "No parameter provided" });
-      }
-      const response = await getAll(url as string);
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {

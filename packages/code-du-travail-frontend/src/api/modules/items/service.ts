@@ -3,7 +3,7 @@ import {
   elasticsearchClient,
   NotFoundError,
 } from "../../utils";
-import { getDocumentBody, getSearchBySourceSlugBody } from "./queries";
+import { getSearchBySourceSlugBody } from "./queries";
 import { getRelatedItems } from "./utils";
 
 export const getBySourceAndSlugItems = async (source: any, slug: string) => {
@@ -34,29 +34,10 @@ export const getBySourceAndSlugItems = async (source: any, slug: string) => {
     title,
   });
 
-  delete item._source.title_vector;
   delete item._source.covisits;
 
   return {
     ...item,
     relatedItems,
   };
-};
-
-export const getAll = async (url: string) => {
-  const body = getDocumentBody(url);
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
-  });
-
-  if (response.body.hits.total.value === 0) {
-    throw new NotFoundError({
-      name: "ITEMS_NOT_FOUND",
-      message: `There is no document that match the query`,
-      cause: null,
-    });
-  }
-
-  return response.body.hits.hits;
 };
