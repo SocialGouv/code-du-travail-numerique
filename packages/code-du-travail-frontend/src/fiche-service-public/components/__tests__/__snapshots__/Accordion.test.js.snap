@@ -3,10 +3,10 @@
 exports[`<Accordion /> should have two different levels of headings 1`] = `
 <div>
   <div
-    class="sc-ePDLzJ gyQfvT"
+    class="sc-gdyeKB jkyNvg"
   >
     <h2
-      class="sc-eBHhsj kDuOiA"
+      class="sc-bVHCgj cMuzvI"
     >
       <span
         class="sc-gsFSXq ljkohw"
@@ -18,7 +18,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
     paragraphe 0
   </p>
   <div
-    class="sc-kRRyDe zFEco"
+    class="sc-eBHhsj hlQhsJ"
     data-accordion-component="Accordion"
   >
     <div>
@@ -250,7 +250,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
     paragraphe 0
   </p>
   <div
-    class="sc-kRRyDe zFEco"
+    class="sc-eBHhsj hlQhsJ"
     data-accordion-component="Accordion"
   >
     <div>

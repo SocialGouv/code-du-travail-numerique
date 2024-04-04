@@ -76,12 +76,12 @@ describe("ReferencesJuridiques", () => {
             class="sc-fjvvzt gtrYRc"
           >
             <ul
-              class="sc-cfxfcM sc-lnPyaJ kMmTaI iUscuO"
+              class="sc-cfxfcM sc-fMMURN kMmTaI ZGPWh"
             >
               <li>
                 <a
                   aria-label="Titre 2 (Nouvelle fenêtre)"
-                  class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk no-after"
+                  class="sc-bmzYkS eyKmWS sc-dSIIpw lbJqnJ no-after"
                   href="http://lien2"
                   target="_blank"
                 >
@@ -107,7 +107,7 @@ describe("ReferencesJuridiques", () => {
               <li>
                 <a
                   aria-label="Titre 5 (Nouvelle fenêtre)"
-                  class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk no-after"
+                  class="sc-bmzYkS eyKmWS sc-dSIIpw lbJqnJ no-after"
                   href="http://lien4"
                   target="_blank"
                 >

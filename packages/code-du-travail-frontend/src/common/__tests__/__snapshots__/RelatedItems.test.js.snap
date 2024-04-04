@@ -18,7 +18,7 @@ exports[`<RelatedItems /> should render 1`] = `
       class="sc-cfxfcM kMmTaI"
     >
       <li
-        class="sc-iXzfSG jAUdMA"
+        class="sc-dSIIpw xMGjx"
       >
         <a
           class="sc-bmzYkS eyKmWS"
@@ -43,7 +43,7 @@ exports[`<RelatedItems /> should render 1`] = `
         </a>
       </li>
       <li
-        class="sc-iXzfSG jAUdMA"
+        class="sc-dSIIpw xMGjx"
       >
         <a
           class="sc-bmzYkS eyKmWS"
@@ -81,7 +81,7 @@ exports[`<RelatedItems /> should render 1`] = `
       class="sc-cfxfcM kMmTaI"
     >
       <li
-        class="sc-iXzfSG jAUdMA"
+        class="sc-dSIIpw xMGjx"
       >
         <a
           class="sc-bmzYkS eyKmWS"
@@ -106,7 +106,7 @@ exports[`<RelatedItems /> should render 1`] = `
         </a>
       </li>
       <li
-        class="sc-iXzfSG jAUdMA"
+        class="sc-dSIIpw xMGjx"
       >
         <a
           class="sc-bmzYkS eyKmWS"

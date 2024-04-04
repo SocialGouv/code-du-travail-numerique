@@ -22,22 +22,22 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
     >
       <div>
         <div
-          class="sc-fxwrCY djSyec"
+          class="sc-bypJrT nMTGe"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Contact"
             aria-modal="true"
-            class="sc-hIUJlX FpoNy"
+            class="sc-ddjGPC byKttK"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <header
-              class="sc-ePDLzJ gBicpa"
+              class="sc-gdyeKB VBBcF"
             >
               <h1
-                class="sc-dPZUQH jEsYKE"
+                class="sc-bDpDS hOaNxX"
               >
                 <span
                   class="sc-gsFSXq djREvw"
@@ -94,7 +94,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
               </a>
             </p>
             <button
-              class="sc-kOPcWz kyVwqT sc-jnOGJG fRzVjo"
+              class="sc-kOPcWz kyVwqT sc-dSCufp iCRrvW"
               title="fermer la modale"
             >
               <div

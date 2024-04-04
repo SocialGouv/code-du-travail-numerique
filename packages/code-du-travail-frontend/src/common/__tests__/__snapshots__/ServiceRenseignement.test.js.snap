@@ -3,10 +3,10 @@
 exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 <div>
   <header
-    class="sc-ePDLzJ gBicpa"
+    class="sc-gdyeKB VBBcF"
   >
     <h1
-      class="sc-dPZUQH jEsYKE"
+      class="sc-bDpDS hOaNxX"
     >
       <span
         class="sc-gsFSXq djREvw"
@@ -21,16 +21,16 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     Contact téléphonique
   </h2>
   <a
-    class="sc-iXzfSG gmhyFv"
+    class="sc-dSIIpw fjNIXu"
     href="tel:+0033806000126"
   >
     <strong
-      class="sc-lnPyaJ hWyEOj"
+      class="sc-fMMURN ikXVLY"
     >
       0 806 000 126
     </strong>
     <em
-      class="sc-eulNck kUSzmw"
+      class="sc-ktPPKK cQEOGZ"
     >
       Service gratuit 
       <span>
@@ -45,7 +45,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     Contact par email et prise de rendez-vous
   </h2>
   <form
-    class="sc-dExYaf jZHVsa"
+    class="sc-YysOf gansuv"
   >
     <label
       for="search-service"
@@ -53,11 +53,11 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       Saisissez votre numéro de département :
     </label>
     <div
-      class="sc-dkmUuB ayeCS sc-iapWAC ehtufm"
+      class="sc-kYxDKI dNAUSa sc-cVzyXs jAbhFe"
     >
       <input
         autocomplete="off"
-        class="sc-ejfMa-d dijxYa"
+        class="sc-bpUBKd ktFmXQ"
         id="search-service"
         maxlength="3"
         name="departement"
@@ -68,13 +68,13 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </div>
     <button
       aria-label="Recherchez le service"
-      class="sc-kOPcWz kyVwqT sc-kqGoIF boDxRG"
+      class="sc-kOPcWz kyVwqT sc-ePDLzJ cTeGcu"
       title="Lancer une recherche"
       type="submit"
     >
       <svg
         aria-hidden="true"
-        class="sc-dxcDKg iTWxHM"
+        class="sc-bVVIoq bMpFlC"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </button>
   </form>
   <div
-    class="sc-gvZAcH kHwoPP"
+    class="sc-dPZUQH eDdRkM"
   >
     <p>
       Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :

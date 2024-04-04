@@ -1,18 +1,17 @@
 import {
   Button,
-  OverflowWrapper,
+  icons,
   ScreenReaderOnly,
   Section,
   theme,
   Wrapper,
-  icons,
 } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 import { Breadcrumb } from "@socialgouv/cdtn-utils";
 
 import Html from "../../src/common/Html";
-import { toUrl } from "../../src/lib";
+import { toUrl } from "../lib";
 import { getDisclaimer } from "./helpers";
 
 export interface LetterModelProps {
@@ -56,9 +55,7 @@ export const LetterModel = ({
               </ScreenReaderOnly>
             </Button>
           </FloatWrapper>
-          <OverflowWrapper>
-            <Html>{html}</Html>
-          </OverflowWrapper>
+          <Html>{html}</Html>
         </LightWrapper>
       </Section>
       <Notice>

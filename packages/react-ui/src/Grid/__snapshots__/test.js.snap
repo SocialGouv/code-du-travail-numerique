@@ -3,38 +3,30 @@
 exports[`<Grid /> should render 1`] = `
 <div>
   <div
-    class="sc-aXZVg gTptkG sc-eqUAAy dTWgtO"
+    class="sc-aXZVg bZcKto"
   >
     <div
-      class="sc-gEvEer fFrSaF"
+      class="sc-gEvEer jNysJK"
     >
-      <div
-        class="sc-fqkvVR dwutvt"
-      >
-        <div
-          class="sc-dcJsrY fdVVVx"
-        >
-          <div>
-            <strong>
-              titre 1
-            </strong>
-            <p>
-              contenu 1
-            </p>
-          </div>
-        </div>
-        <div
-          class="sc-dcJsrY fdVVVx"
-        >
-          <div>
-            <strong>
-              titre 2
-            </strong>
-            <p>
-              contenu 2
-            </p>
-          </div>
-        </div>
+      <div>
+        <strong>
+          titre 1
+        </strong>
+        <p>
+          contenu 1
+        </p>
+      </div>
+    </div>
+    <div
+      class="sc-gEvEer jNysJK"
+    >
+      <div>
+        <strong>
+          titre 2
+        </strong>
+        <p>
+          contenu 2
+        </p>
       </div>
     </div>
   </div>
@@ -44,38 +36,30 @@ exports[`<Grid /> should render 1`] = `
 exports[`<Grid /> should render 5columns 1`] = `
 <div>
   <div
-    class="sc-aXZVg gTptkG sc-eqUAAy dTWgtO"
+    class="sc-aXZVg bZcKto"
   >
     <div
-      class="sc-gEvEer fFrSaF"
+      class="sc-gEvEer bfrwiN"
     >
-      <div
-        class="sc-fqkvVR dwutvt"
-      >
-        <div
-          class="sc-dcJsrY gxRSnW"
-        >
-          <div>
-            <strong>
-              titre 1
-            </strong>
-            <p>
-              contenu 1
-            </p>
-          </div>
-        </div>
-        <div
-          class="sc-dcJsrY gxRSnW"
-        >
-          <div>
-            <strong>
-              titre 2
-            </strong>
-            <p>
-              contenu 2
-            </p>
-          </div>
-        </div>
+      <div>
+        <strong>
+          titre 1
+        </strong>
+        <p>
+          contenu 1
+        </p>
+      </div>
+    </div>
+    <div
+      class="sc-gEvEer bfrwiN"
+    >
+      <div>
+        <strong>
+          titre 2
+        </strong>
+        <p>
+          contenu 2
+        </p>
       </div>
     </div>
   </div>

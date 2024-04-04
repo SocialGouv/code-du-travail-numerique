@@ -3,7 +3,7 @@
 exports[`<StepResult /> should render no results 1`] = `
 <div>
   <h2
-    class="sc-iapWAC fknnbp"
+    class="sc-cVzyXs gLaWYB"
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
@@ -45,7 +45,7 @@ exports[`<StepResult /> should render no results 1`] = `
       class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-iapWAC fknnbp"
+        class="sc-cVzyXs gLaWYB"
       >
         Éléments saisis
       </h2>
@@ -80,7 +80,7 @@ exports[`<StepResult /> should render no results 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-iapWAC fknnbp"
+        class="sc-cVzyXs gLaWYB"
       >
         Sources
       </h2>
@@ -99,13 +99,13 @@ exports[`<StepResult /> should render no results 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-iXzfSG ftwa-dj bdsVWO"
+    class="sc-jsJBEP sc-dSIIpw ftwa-dj iXAsYP"
   >
     <div
-      class="sc-bypJrT cRnKsM"
+      class="sc-hRJfrW fHhwIY"
     >
       <div
-        class="sc-ddjGPC bYORpp"
+        class="sc-iHbSHJ dqcYtl"
       >
         <svg
           aria-hidden="true"
@@ -125,10 +125,10 @@ exports[`<StepResult /> should render no results 1`] = `
         </svg>
       </div>
       <div
-        class="sc-dSCufp gAzXIi"
+        class="sc-klVQfs giEiHo"
       >
         <p
-          class="sc-jGKxIK iOBtQr sc-lnPyaJ dsXzGD"
+          class="sc-fvtFIe iuYzcd sc-fMMURN eBtowQ"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -144,7 +144,7 @@ exports[`<StepResult /> should render no results 1`] = `
 exports[`<StepResult /> should render with duration 1`] = `
 <div>
   <h2
-    class="sc-iapWAC fknnbp"
+    class="sc-cVzyXs gLaWYB"
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
@@ -153,19 +153,19 @@ exports[`<StepResult /> should render with duration 1`] = `
      :
     <br />
     <strong
-      class="sc-kqGoIF eBNOvs"
+      class="sc-ePDLzJ hrtgcE"
       role="alert"
     >
       2 heures par jour
     </strong>
      
     <sup
-      class="sc-gvZAcH cpmNvN"
+      class="sc-dPZUQH iSDSVS"
     />
     .
   </p>
   <h2
-    class="sc-iapWAC fknnbp"
+    class="sc-cVzyXs gLaWYB"
   >
     Rémunération pendant les heures d’absence autorisée
   </h2>
@@ -173,7 +173,7 @@ exports[`<StepResult /> should render with duration 1`] = `
     Le salaire est maintenu.
   </p>
   <h2
-    class="sc-iapWAC fknnbp"
+    class="sc-cVzyXs gLaWYB"
   >
     Conditions d’utilisation
   </h2>
@@ -215,7 +215,7 @@ exports[`<StepResult /> should render with duration 1`] = `
       class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-iapWAC fknnbp"
+        class="sc-cVzyXs gLaWYB"
       >
         Éléments saisis
       </h2>
@@ -243,7 +243,7 @@ exports[`<StepResult /> should render with duration 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-iapWAC fknnbp"
+        class="sc-cVzyXs gLaWYB"
       >
         Sources
       </h2>
@@ -262,13 +262,13 @@ exports[`<StepResult /> should render with duration 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-iXzfSG ftwa-dj bdsVWO"
+    class="sc-jsJBEP sc-dSIIpw ftwa-dj iXAsYP"
   >
     <div
-      class="sc-bypJrT cRnKsM"
+      class="sc-hRJfrW fHhwIY"
     >
       <div
-        class="sc-ddjGPC bYORpp"
+        class="sc-iHbSHJ dqcYtl"
       >
         <svg
           aria-hidden="true"
@@ -288,10 +288,10 @@ exports[`<StepResult /> should render with duration 1`] = `
         </svg>
       </div>
       <div
-        class="sc-dSCufp gAzXIi"
+        class="sc-klVQfs giEiHo"
       >
         <p
-          class="sc-jGKxIK iOBtQr sc-lnPyaJ dsXzGD"
+          class="sc-fvtFIe iuYzcd sc-fMMURN eBtowQ"
         >
           Attention il peut exister une durée plus favorable
         </p>

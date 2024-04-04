@@ -3,10 +3,10 @@
 exports[`DisplayContentContribution Accordions should not fail if no summary tag 1`] = `
 <div>
   <div
-    class="sc-ERObt zXiiV"
+    class="sc-lnPyaJ dySTir"
   >
     <div
-      class="sc-dNsVcS hThUYS"
+      class="sc-eulNck kDfnMP"
       data-accordion-component="Accordion"
       data-testid="contrib-accordion"
     >
@@ -78,7 +78,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
       
                 </p>
                 <div
-                  class="sc-dNsVcS hThUYS"
+                  class="sc-eulNck kDfnMP"
                   data-accordion-component="Accordion"
                   data-testid="contrib-accordion"
                 >
@@ -143,7 +143,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                         >
                           <div>
                             <div
-                              class="sc-dNsVcS hThUYS"
+                              class="sc-eulNck kDfnMP"
                               data-accordion-component="Accordion"
                               data-testid="contrib-accordion"
                             >
@@ -387,10 +387,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
 
 exports[`DisplayContentContribution Accordions should replace details element by one accordion 1`] = `
 <div
-  class="sc-ERObt zXiiV"
+  class="sc-lnPyaJ dySTir"
 >
   <div
-    class="sc-dNsVcS hThUYS"
+    class="sc-eulNck kDfnMP"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
@@ -469,10 +469,10 @@ exports[`DisplayContentContribution Accordions should replace details element by
 
 exports[`DisplayContentContribution Accordions should replace details element within details element 1`] = `
 <div
-  class="sc-ERObt zXiiV"
+  class="sc-lnPyaJ dySTir"
 >
   <div
-    class="sc-dNsVcS hThUYS"
+    class="sc-eulNck kDfnMP"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
@@ -537,7 +537,7 @@ exports[`DisplayContentContribution Accordions should replace details element wi
           >
             <div>
               <div
-                class="sc-dNsVcS hThUYS"
+                class="sc-eulNck kDfnMP"
                 data-accordion-component="Accordion"
                 data-testid="contrib-accordion"
               >
@@ -624,10 +624,10 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
 <body>
   <div>
     <div
-      class="sc-ERObt zXiiV"
+      class="sc-lnPyaJ dySTir"
     >
       <div
-        class="sc-dNsVcS hThUYS"
+        class="sc-eulNck kDfnMP"
         data-accordion-component="Accordion"
         data-testid="contrib-accordion"
       >
@@ -777,7 +777,7 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
 
 exports[`DisplayContentContribution Alerts should replace div with alert class in li component to Alert component 1`] = `
 <div
-  class="sc-ERObt zXiiV"
+  class="sc-lnPyaJ dySTir"
 >
   <div>
     <p>
@@ -843,7 +843,7 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
 
 exports[`DisplayContentContribution Alerts should replace div with alert class to Alert component 1`] = `
 <div
-  class="sc-ERObt zXiiV"
+  class="sc-lnPyaJ dySTir"
 >
   <div
     class="sc-jsJBEP ftwa-dj"
@@ -860,10 +860,10 @@ exports[`DisplayContentContribution Alerts should replace div with alert class t
 
 exports[`DisplayContentContribution Headings should not add headings higher than h6 for accordion 1`] = `
 <div
-  class="sc-ERObt zXiiV"
+  class="sc-lnPyaJ dySTir"
 >
   <div
-    class="sc-dNsVcS hThUYS"
+    class="sc-eulNck kDfnMP"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
@@ -942,94 +942,86 @@ exports[`DisplayContentContribution Headings should not add headings higher than
 exports[`DisplayContentContribution Tables should render correctly a table with multiple head lines 1`] = `
 <div>
   <div
-    class="sc-ERObt zXiiV"
+    class="sc-lnPyaJ dySTir"
   >
-    <div
-      class="sc-gFAWRd jDjoBq"
+    <table
+      class="sc-kAkpmW hONqJb"
     >
-      <div
-        class="sc-gmPhUn kUNTdL"
-      >
-        <table
-          class="sc-iMWBiJ Rlfrk"
-        >
-          <thead>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="2"
-              >
-                <p>
-                  <strong>
-                    Nature du contrat de mission
-                  </strong>
-                </p>
-              </td>
-              <td
-                colspan="2"
-                rowspan="1"
-              >
-                <p>
-                  <strong>
-                    Durée maximale
-                  </strong>
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p>
-                  <strong>
-                    Contrat de date à date
-                  </strong>
-                </p>
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p>
-                  <strong>
-                    Contrat sans terme certain
-                  </strong>
-                </p>
-              </td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p>
-                  Remplacement d’un salarié absent ou dont le contrat de travail est suspendu
-                </p>
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p>
-                  18 mois
-                </p>
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p>
-                  Fin de l’absence
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+      <thead>
+        <tr>
+          <td
+            colspan="1"
+            rowspan="2"
+          >
+            <p>
+              <strong>
+                Nature du contrat de mission
+              </strong>
+            </p>
+          </td>
+          <td
+            colspan="2"
+            rowspan="1"
+          >
+            <p>
+              <strong>
+                Durée maximale
+              </strong>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td
+            colspan="1"
+            rowspan="1"
+          >
+            <p>
+              <strong>
+                Contrat de date à date
+              </strong>
+            </p>
+          </td>
+          <td
+            colspan="1"
+            rowspan="1"
+          >
+            <p>
+              <strong>
+                Contrat sans terme certain
+              </strong>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            colspan="1"
+            rowspan="1"
+          >
+            <p>
+              Remplacement d’un salarié absent ou dont le contrat de travail est suspendu
+            </p>
+          </td>
+          <td
+            colspan="1"
+            rowspan="1"
+          >
+            <p>
+              18 mois
+            </p>
+          </td>
+          <td
+            colspan="1"
+            rowspan="1"
+          >
+            <p>
+              Fin de l’absence
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 `;

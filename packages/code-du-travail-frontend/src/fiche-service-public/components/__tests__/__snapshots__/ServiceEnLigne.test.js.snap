@@ -4,21 +4,21 @@ exports[`<ServiceEnLigne /> should render 1`] = `
 <div>
   <div
     aria-label="Se retrouve dans en entête Texte qui se retrouve dans le lien (nouvelle fenêtre)"
-    class="sc-fTFjTM hkOnFS sc-iXzfSG akpvg no-after"
+    class="sc-jMakVo iCcFnh sc-dSIIpw dnqLGJ no-after"
   >
     <div
-      class="sc-gmgFlS dlfKdE"
+      class="sc-krNlru bWkwSI"
     >
       <div
-        class="sc-kMkxaj dwuMYa"
+        class="sc-hwdzOV FmvQw"
       >
         <p
-          class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
+          class="sc-ihgnxF sc-jaXxmE dexino aVtaN"
         >
           Se retrouve dans en entête
         </p>
         <p
-          class="sc-jIGnZt issdxz"
+          class="sc-ibQAlb iteBxi"
         >
           <a
             href="url à retoruver dans le lien"
@@ -31,7 +31,7 @@ exports[`<ServiceEnLigne /> should render 1`] = `
       </div>
     </div>
     <div
-      class="sc-fBdRDi mhKrF"
+      class="sc-jGKxIK eKMbXS"
     >
       Source: 
       Source qui se retrouve sous le lien

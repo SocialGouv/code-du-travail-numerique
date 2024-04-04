@@ -4,7 +4,7 @@ exports[`Image should display image and caption 1`] = `
 <div>
   <figure
     aria-label="Comment calculer un délai quand il y a un jour férié ?"
-    class="sc-kqGoIF iUYKZa"
+    class="sc-ePDLzJ jdtyTi"
     role="group"
   >
     <img
@@ -12,7 +12,7 @@ exports[`Image should display image and caption 1`] = `
       src="https://www.service-public.fr/webapp/images/vdd/extralarge/I4596.jpg"
     />
     <figcaption
-      class="sc-dxcDKg ednPSH"
+      class="sc-bVVIoq hKrSUl"
     >
       <span>
         Crédits : 
@@ -21,7 +21,7 @@ exports[`Image should display image and caption 1`] = `
     </figcaption>
   </figure>
   <div
-    class="sc-dZoequ kjOzCY"
+    class="sc-fxwrCY gwaFzF"
     data-accordion-component="Accordion"
   >
     <div
@@ -36,7 +36,7 @@ exports[`Image should display image and caption 1`] = `
           aria-controls="accordion__panel-raa-0"
           aria-disabled="false"
           aria-expanded="false"
-          class="sc-eZkCL bNqpkC"
+          class="sc-hIUJlX fucbFP"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-raa-0"
           role="button"
@@ -44,7 +44,7 @@ exports[`Image should display image and caption 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="sc-ggpjZQ kJjCoa"
+            class="sc-jnOGJG edPXtC"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,20 +57,20 @@ exports[`Image should display image and caption 1`] = `
             />
           </svg>
           <div
-            class="sc-cmaqmh kmooEE"
+            class="sc-dZoequ bcPqgL"
           >
             Voir en détail
           </div>
         </div>
       </div>
       <div
-        class="sc-gFVvzn gApUFN"
+        class="sc-ggpjZQ bUcNVB"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-raa-0"
       >
         <div
-          class="sc-kAkpmW lkGQTx"
+          class="sc-eZkCL HkMzx"
         >
           <div
             class="sc-iGgWBj cWzIZL"

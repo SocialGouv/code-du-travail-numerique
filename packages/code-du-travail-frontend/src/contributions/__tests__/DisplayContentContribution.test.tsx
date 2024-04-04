@@ -15,7 +15,7 @@ describe("DisplayContentContribution", () => {
       expect(baseElement.firstChild).toMatchInlineSnapshot(`
         <div>
           <div
-            class="sc-ERObt zXiiV"
+            class="sc-lnPyaJ dySTir"
           >
             <h2
               class="sc-kAyceB dvmaTz"
@@ -44,7 +44,7 @@ describe("DisplayContentContribution", () => {
       expect(baseElement.firstChild).toMatchInlineSnapshot(`
         <div>
           <div
-            class="sc-ERObt zXiiV"
+            class="sc-lnPyaJ dySTir"
           >
             <h4
               class="sc-kAyceB dvmaTz"
@@ -73,7 +73,7 @@ describe("DisplayContentContribution", () => {
       expect(baseElement.firstChild).toMatchInlineSnapshot(`
         <div>
           <div
-            class="sc-ERObt zXiiV"
+            class="sc-lnPyaJ dySTir"
           >
             <h6
               class="sc-kAyceB dvmaTz"
@@ -330,64 +330,56 @@ describe("DisplayContentContribution", () => {
 
       expect(asFragment().firstChild).toMatchInlineSnapshot(`
         <div
-          class="sc-ERObt zXiiV"
+          class="sc-lnPyaJ dySTir"
         >
-          <div
-            class="sc-gFAWRd jDjoBq"
+          <table
+            class="sc-kAkpmW hONqJb"
           >
-            <div
-              class="sc-gmPhUn kUNTdL"
-            >
-              <table
-                class="sc-iMWBiJ Rlfrk"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      colspan="1"
-                      rowspan="1"
-                    />
-                    <th
-                      colspan="1"
-                      rowspan="1"
-                    >
+            <thead>
+              <tr>
+                <th
+                  colspan="1"
+                  rowspan="1"
+                />
+                <th
+                  colspan="1"
+                  rowspan="1"
+                >
+                  <p>
+                    Titre 1
+                  </p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  <p>
+                    Pour les 
+                    <strong>
+                      cadres
+                    </strong>
+                    , la prolongation ...
+                  </p>
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  <ul>
+                    <li>
                       <p>
-                        Titre 1
+                        L’employeur et le salarié donnent par écrit ou par mail.
                       </p>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      colspan="1"
-                      rowspan="1"
-                    >
-                      <p>
-                        Pour les 
-                        <strong>
-                          cadres
-                        </strong>
-                        , la prolongation ...
-                      </p>
-                    </td>
-                    <td
-                      colspan="1"
-                      rowspan="1"
-                    >
-                      <ul>
-                        <li>
-                          <p>
-                            L’employeur et le salarié donnent par écrit ou par mail.
-                          </p>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       `);
     });
@@ -415,7 +407,7 @@ describe("DisplayContentContribution", () => {
 
       expect(asFragment().firstChild).toMatchInlineSnapshot(`
         <div
-          class="sc-ERObt zXiiV"
+          class="sc-lnPyaJ dySTir"
         >
           <table>
             <tbody>
@@ -461,7 +453,7 @@ describe("DisplayContentContribution", () => {
 
       expect(asFragment().firstChild).toMatchInlineSnapshot(`
         <div
-          class="sc-ERObt zXiiV"
+          class="sc-lnPyaJ dySTir"
         >
           <p>
             Ceci est un
@@ -552,7 +544,7 @@ describe("DisplayContentContribution", () => {
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
       <div
-        class="sc-ERObt zXiiV"
+        class="sc-lnPyaJ dySTir"
       >
         <p>
           hello
@@ -570,7 +562,7 @@ describe("DisplayContentContribution", () => {
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
       <div
-        class="sc-ERObt zXiiV"
+        class="sc-lnPyaJ dySTir"
       >
         <p>
           Ceci est un
@@ -608,7 +600,7 @@ describe("DisplayContentContribution", () => {
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
       <div
-        class="sc-ERObt zXiiV"
+        class="sc-lnPyaJ dySTir"
       >
         <p>
           <strong>

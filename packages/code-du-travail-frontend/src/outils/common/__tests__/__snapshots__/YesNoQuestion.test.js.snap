@@ -3,28 +3,28 @@
 exports[`<YesNoQuestion /> should render 1`] = `
 <div>
   <legend
-    class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+    class="sc-dkmUuB eYtNBc sc-fMMURN dYztjI"
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iRaavs"
+      class="sc-iMWBiJ ZAnoP"
     >
       lorem ipsum ?
       <span
-        class="sc-ibQAlb TTAtT"
+        class="sc-iMWBiJ keOsfk"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-dExYaf cloBxp"
+    class="sc-YysOf cCzuCM"
   >
     <div
-      class="sc-bDpDS cvgaoL"
+      class="sc-iEXKAA eBzatN"
     >
       <input
-        class="sc-bVHCgj drRyYL"
+        class="sc-EgOXT iprHvk"
         data-testid="test-oui"
         id="test-oui"
         name="test"
@@ -32,17 +32,17 @@ exports[`<YesNoQuestion /> should render 1`] = `
         value="true"
       />
       <label
-        class="sc-kzqdkY dcQpmU"
+        class="sc-ejfMa-d diWIxO"
         for="test-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="sc-bDpDS cvgaoL"
+      class="sc-iEXKAA eBzatN"
     >
       <input
-        class="sc-bVHCgj drRyYL"
+        class="sc-EgOXT iprHvk"
         data-testid="test-non"
         id="test-non"
         name="test"
@@ -50,7 +50,7 @@ exports[`<YesNoQuestion /> should render 1`] = `
         value="false"
       />
       <label
-        class="sc-kzqdkY dcQpmU"
+        class="sc-ejfMa-d diWIxO"
         for="test-non"
       >
         Non

@@ -3,38 +3,38 @@
 exports[`<Theme /> should render 1`] = `
 <div>
   <div
-    class="sc-hgRRfv dxnkvI"
+    class="sc-jdkBTo hnalNj"
   >
     <div
-      class="sc-emIrwa Fwwiz"
+      class="sc-fmzyuX kaJmFn"
     />
     <header
-      class="sc-fyVfxW cbyVOJ"
+      class="sc-hoLEA bUSWqC"
     >
       <div
-        class="sc-eHsDsR fWXKMH"
+        class="sc-bOhtcR fALbUA"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-aXZVg sc-cspYLC gZgZQL cXcDNa"
+        class="sc-aXZVg sc-camqpD gZgZQL gvhtaq"
       >
         <a
-          class="sc-dwalKd kkQWcZ"
+          class="sc-gweoQa dBnSUO"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-BQMaI ilroMN"
+            class="sc-eIcdZJ cRxKRw"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-epqpcT kwOLXn"
+            class="sc-jdUcAg fjNykK"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<Theme /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-kUdmhA biKqvz"
+          class="sc-eHsDsR fNntQa"
         >
           <form
             action="/recherche"
-            class="sc-eXsaLi eUpQeX"
+            class="sc-eifrsQ fpULWb"
             role="search"
           >
             <div
@@ -86,7 +86,7 @@ exports[`<Theme /> should render 1`] = `
                 aria-controls="react-autowhatever-1"
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
-                class="sc-bOhtcR eqddIJ"
+                class="sc-bfhvDw bngMSI"
                 id="floating-search"
                 name="q"
                 placeholder="Rechercher"
@@ -95,20 +95,20 @@ exports[`<Theme /> should render 1`] = `
                 value=""
               />
               <div
-                class="sc-bOQTJJ egrAlY"
+                class="sc-lbJcrp ileDfV"
                 id="react-autowhatever-1"
                 role="listbox"
               />
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz kyVwqT sc-kbdlSk isINhx"
+              class="sc-kOPcWz kyVwqT sc-fUBkdm gLfJpD"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-gEkIjz ctRdhr"
+                class="sc-fKWMtX gvLvNQ"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,11 +122,11 @@ exports[`<Theme /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-jdkBTo gXognu"
+          class="sc-fFlnrN bSQpXw"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-cyRcrZ jbntTc"
+            class="sc-fyVfxW hQzGIn"
             href="/recherche"
             rel="nofollow"
           >
@@ -144,17 +144,17 @@ exports[`<Theme /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-bvgPty goEpuJ"
+          class="sc-bddgXz hVIKfM"
         >
           <button
-            class="sc-kOPcWz cOwJar sc-tagGq sc-fmzyuX bZXUzd ePvxQq"
+            class="sc-kOPcWz cOwJar sc-tagGq sc-kbdlSk bZXUzd eFdtnG"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-camqpD ElRaU"
+          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-hBtRBD gomQLA"
         >
           <svg
             aria-hidden="true"
@@ -174,72 +174,64 @@ exports[`<Theme /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-gRtvSG dQgkfG"
+      class="sc-cspYLC cSkGVL"
       id="content"
       tabindex="-1"
     >
       <nav
         aria-label="Fil d'ariane"
-        class="sc-iXzfSG jAVVyA"
+        class="sc-dSIIpw dmvBhh"
       >
-        <div
-          class="sc-gFAWRd jDjoBq"
+        <ol
+          class="sc-aXZVg sc-fMMURN gZgZQL fNateR"
         >
-          <div
-            class="sc-gmPhUn kUNTdL"
+          <li
+            class="sc-ktPPKK kPokJp"
           >
-            <ol
-              class="sc-aXZVg sc-lnPyaJ gZgZQL fAXdnW"
+            <a
+              class="sc-YysOf bMxqDa"
+              href="/"
+              title="Retour à l'accueil"
             >
-              <li
-                class="sc-eulNck jgEvHQ"
+              <svg
+                aria-hidden="true"
+                class="sc-cVzyXs cqKWhf"
+                fill="none"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <a
-                  class="sc-dExYaf cvAOmj"
-                  href="/"
-                  title="Retour à l'accueil"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="sc-iapWAC hmxuyb"
-                    fill="none"
-                    viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 6.056 8.114 2.197a.166.166 0 0 0-.228 0L4 6.042v6.802c0 .087.069.153.154.153l7.693.015c.08 0 .153-.069.153-.154V6.056zm1 .88.03 6.605c0 .254-.057.459-.317.459H3.5a.464.464 0 0 1-.47-.459L3 6.937l-1.208.993a.474.474 0 0 1-.662-.016.455.455 0 0 1 .014-.65l6.519-6.132a.498.498 0 0 1 .674 0l6.519 6.131a.455.455 0 0 1 .014.651.472.472 0 0 1-.662.016L13 6.937z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  Accueil
-                </a>
-              </li>
-              <li
-                class="sc-eulNck jgEvHQ"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-kqGoIF iYYkqQ"
-                  fill="none"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.37 7.37 5.296.26A.708.708 0 0 0 4.76 0a.708.708 0 0 0-.537.26A.973.973 0 0 0 4 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 0 0-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 0 0 .537-.26l6.072-7.11a.91.91 0 0 0 .165-.29 1.021 1.021 0 0 0 0-.68.91.91 0 0 0-.165-.29z"
-                    fill="currentColor"
-                  />
-                </svg>
-                 
-                <a
-                  class="sc-dExYaf cvAOmj"
-                  href="/themes/1-embauche-et-contrat-de-travail"
-                >
-                  Embauche et contrat de travail
-                </a>
-              </li>
-            </ol>
-          </div>
-        </div>
+                <path
+                  d="M12 6.056 8.114 2.197a.166.166 0 0 0-.228 0L4 6.042v6.802c0 .087.069.153.154.153l7.693.015c.08 0 .153-.069.153-.154V6.056zm1 .88.03 6.605c0 .254-.057.459-.317.459H3.5a.464.464 0 0 1-.47-.459L3 6.937l-1.208.993a.474.474 0 0 1-.662-.016.455.455 0 0 1 .014-.65l6.519-6.132a.498.498 0 0 1 .674 0l6.519 6.131a.455.455 0 0 1 .014.651.472.472 0 0 1-.662.016L13 6.937z"
+                  fill="currentColor"
+                />
+              </svg>
+              Accueil
+            </a>
+          </li>
+          <li
+            class="sc-ktPPKK kPokJp"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-ePDLzJ gDMkbM"
+              fill="none"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.37 7.37 5.296.26A.708.708 0 0 0 4.76 0a.708.708 0 0 0-.537.26A.973.973 0 0 0 4 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 0 0-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 0 0 .537-.26l6.072-7.11a.91.91 0 0 0 .165-.29 1.021 1.021 0 0 0 0-.68.91.91 0 0 0-.165-.29z"
+                fill="currentColor"
+              />
+            </svg>
+             
+            <a
+              class="sc-YysOf bMxqDa"
+              href="/themes/1-embauche-et-contrat-de-travail"
+            >
+              Embauche et contrat de travail
+            </a>
+          </li>
+        </ol>
       </nav>
       <div
         class="sc-gEvEer hpVpdb"
@@ -248,10 +240,10 @@ exports[`<Theme /> should render 1`] = `
           class="sc-aXZVg gZgZQL"
         >
           <header
-            class="sc-ePDLzJ gBicpa"
+            class="sc-gdyeKB VBBcF"
           >
             <h1
-              class="sc-dPZUQH jEsYKE"
+              class="sc-bDpDS hOaNxX"
             >
               <span
                 class="sc-gsFSXq djREvw"
@@ -259,40 +251,40 @@ exports[`<Theme /> should render 1`] = `
               Contrat de travail
             </h1>
             <p
-              class="sc-bVVIoq iwrFhc"
+              class="sc-kzqdkY HaHrz"
             >
               I am a description !
             </p>
           </header>
           <div
-            class="sc-aXZVg sc-dUYLmH gZgZQL fiPuJC"
+            class="sc-aXZVg sc-dwalKd gZgZQL bSjdje"
           >
             <a
-              class="sc-faUjhM tANmi sc-kOPcWz gWtlVM"
+              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
               href="/themes//themes/121-cdi"
             >
               CDI
             </a>
             <a
-              class="sc-faUjhM tANmi sc-kOPcWz gWtlVM"
+              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
               href="/themes//themes/122-cdd"
             >
               CDD
             </a>
             <a
-              class="sc-faUjhM tANmi sc-kOPcWz gWtlVM"
+              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
               href="/themes//themes/123-interim"
             >
               Intérim
             </a>
             <a
-              class="sc-faUjhM tANmi sc-kOPcWz gWtlVM"
+              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
               href="/themes//themes/124-contrat-dapprentissage"
             >
               Contrat d'apprentissage
             </a>
             <a
-              class="sc-faUjhM tANmi sc-kOPcWz gWtlVM"
+              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
               href="/themes//themes/125-contrat-de-professionnalisation"
             >
               Contrat de professionnalisation
@@ -302,24 +294,24 @@ exports[`<Theme /> should render 1`] = `
       </div>
     </main>
     <div
-      class="sc-dJiZtA hcpMAe"
+      class="sc-leSDtu dHYPgt"
     >
       <footer
-        class="sc-epALIP ikTzga"
+        class="sc-bJBgwP jPdTOZ"
       >
         <div
-          class="sc-gEvEer hpVpdb sc-iLsKjm joghnI"
+          class="sc-gEvEer hpVpdb sc-dGCmGc hXWxvr"
         >
           <div
             class="sc-aXZVg gZgZQL"
           >
             <div
               aria-level="2"
-              class="sc-ePDLzJ pfRwm"
+              class="sc-gdyeKB dYvliF"
               role="heading"
             >
               <p
-                class="sc-eBHhsj bPBugd"
+                class="sc-bVHCgj bhHbBR"
               >
                 <span
                   class="sc-gsFSXq djREvw"
@@ -328,7 +320,7 @@ exports[`<Theme /> should render 1`] = `
               </p>
             </div>
             <div
-              class="sc-aXZVg sc-lbJcrp dPpwpV ksPJpH"
+              class="sc-aXZVg sc-fAGzit dPpwpV cEtBVd"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
@@ -340,7 +332,7 @@ exports[`<Theme /> should render 1`] = `
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="sc-eifrsQ dhhRQQ"
+                class="sc-bkSUFG gtPgzc"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -354,29 +346,29 @@ exports[`<Theme /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-gEvEer hpVpdb sc-fKWMtX hZeEIc"
+          class="sc-gEvEer hpVpdb sc-deXhhX jaWEvm"
         >
           <div
-            class="sc-aXZVg sc-kgOKUu gZgZQL eTkiPD"
+            class="sc-aXZVg sc-dQEtJz gZgZQL cGXePz"
           >
             <div
-              class="sc-kCMKrZ jvPOHH"
+              class="sc-fbKhjd gUjAgI"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-cMa-dbN kZEcPx sc-kAyceB jIzQpS"
+                  class="sc-kCMKrZ gvmFPd sc-kAyceB jIzQpS"
                   data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-bfhvDw kMmTaI llnMbx"
+                  class="sc-cfxfcM sc-imwsjW kMmTaI bFpZZZ"
                 >
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
@@ -384,7 +376,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/glossaire"
                     >
                       Glossaire
@@ -392,7 +384,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/a-propos"
                     >
                       À propos
@@ -400,7 +392,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/stats"
                     >
                       Statistiques d’utilisation
@@ -408,7 +400,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/integration"
                     >
                       Intégrer les outils du Code du travail numérique
@@ -418,23 +410,23 @@ exports[`<Theme /> should render 1`] = `
               </div>
             </div>
             <div
-              class="sc-kCMKrZ jvPOHH"
+              class="sc-fbKhjd gUjAgI"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-cMa-dbN kZEcPx sc-kAyceB jIzQpS"
+                  class="sc-kCMKrZ gvmFPd sc-kAyceB jIzQpS"
                   data-testid="heading"
                   role="heading"
                 >
                   Outils populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-bfhvDw kMmTaI llnMbx"
+                  class="sc-cfxfcM sc-imwsjW kMmTaI bFpZZZ"
                 >
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/outils/simulateur-embauche"
                     >
                       Calcul du salaire brut/net
@@ -442,7 +434,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/outils/indemnite-licenciement"
                     >
                       Calcul de l'indemnité de licenciement
@@ -450,7 +442,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/outils/convention-collective"
                     >
                       Trouver sa convention collective
@@ -461,18 +453,18 @@ exports[`<Theme /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-cMa-dbN kZEcPx sc-kAyceB jIzQpS"
+                  class="sc-kCMKrZ gvmFPd sc-kAyceB jIzQpS"
                   data-testid="heading"
                   role="heading"
                 >
                   Modèles populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-bfhvDw kMmTaI llnMbx"
+                  class="sc-cfxfcM sc-imwsjW kMmTaI bFpZZZ"
                 >
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/modeles-de-courriers/lettre-de-demission"
                     >
                       Lettre de démission
@@ -480,7 +472,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
                     >
                       Rupture du contrat en période d'essai par le salarié
@@ -488,7 +480,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel"
                     >
                       Convocation à un entretien préalable au licenciement pour motif personnel
@@ -498,23 +490,23 @@ exports[`<Theme /> should render 1`] = `
               </div>
             </div>
             <div
-              class="sc-kCMKrZ jvPOHH"
+              class="sc-fbKhjd gUjAgI"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-cMa-dbN kZEcPx sc-kAyceB jIzQpS"
+                  class="sc-kCMKrZ gvmFPd sc-kAyceB jIzQpS"
                   data-testid="heading"
                   role="heading"
                 >
                   Fiches pratiques populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-bfhvDw kMmTaI llnMbx"
+                  class="sc-cfxfcM sc-imwsjW kMmTaI bFpZZZ"
                 >
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
                     >
                       Durée du préavis de démission
@@ -522,7 +514,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/contribution/les-conges-pour-evenements-familiaux"
                     >
                       Congés pour événements familiaux
@@ -530,7 +522,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                     >
                       Maintien du salaire en cas d'arrêt maladie
@@ -541,18 +533,18 @@ exports[`<Theme /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-cMa-dbN kZEcPx sc-kAyceB jIzQpS"
+                  class="sc-kCMKrZ gvmFPd sc-kAyceB jIzQpS"
                   data-testid="heading"
                   role="heading"
                 >
                   Conventions collectives populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-bfhvDw kMmTaI llnMbx"
+                  class="sc-cfxfcM sc-imwsjW kMmTaI bFpZZZ"
                 >
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/convention-collective/1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
                     >
                       Services de l'automobile
@@ -560,7 +552,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/convention-collective/3248-metallurgie"
                     >
                       Métallurgie
@@ -568,7 +560,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-fUBkdm cZwWBv"
+                      class="sc-dJiZtA lfWjSQ"
                       href="/convention-collective/573-commerces-de-gros"
                     >
                       Commerce de gros
@@ -580,10 +572,10 @@ exports[`<Theme /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-aXZVg sc-bJBgwP gZgZQL leNApE"
+          class="sc-aXZVg sc-satoz gZgZQL hfwpbV"
         >
           <div
-            class="sc-dGCmGc bgMCdc"
+            class="sc-eNSrOW fEmDDr"
           >
             <img
               alt="le site du ministere du travail, de l'emploi et de l'insertion"
@@ -597,7 +589,7 @@ exports[`<Theme /> should render 1`] = `
               width="170"
             />
             <ul
-              class="sc-fAGzit jYlasv"
+              class="sc-fsvrbR lgaVuB"
             >
               <li>
                 <a
@@ -637,13 +629,13 @@ exports[`<Theme /> should render 1`] = `
             </ul>
           </div>
           <div
-            class="sc-dQEtJz ccxWxJ"
+            class="sc-bkEOxz fSVAkY"
           />
           <div
-            class="sc-bkSUFG fkbRiT"
+            class="sc-jOnpCo hzNeZO"
           >
             <ul
-              class="sc-fAGzit sc-deXhhX jYlasv dvkNmW"
+              class="sc-fsvrbR sc-kFWlue lgaVuB jUHOWx"
             >
               <li>
                 <a
@@ -685,7 +677,7 @@ exports[`<Theme /> should render 1`] = `
               <li>
                 <a
                   aria-label="Nous contacter"
-                  class="sc-imwsjW dOmBRx"
+                  class="sc-dhFUGM cDnvzN"
                   role="link"
                 >
                   Nous contacter
