@@ -2,41 +2,33 @@
 
 exports[`<Table /> should render 1`] = `
 <div>
-  <div
-    class="sc-aXZVg iuhBAh"
+  <table
+    class="sc-aXZVg kaCZvW"
   >
-    <div
-      class="sc-gEvEer jOaSPk"
-    >
-      <table
-        class="sc-eqUAAy ewhyEm"
-      >
-        <tbody>
-          <tr>
-            <th>
-              Line 1
-            </th>
-            <td>
-              some data
-            </td>
-            <td>
-              some data
-            </td>
-          </tr>
-          <tr>
-            <th>
-              Line 2
-            </th>
-            <td>
-              some data
-            </td>
-            <td>
-              some data
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+    <tbody>
+      <tr>
+        <th>
+          Line 1
+        </th>
+        <td>
+          some data
+        </td>
+        <td>
+          some data
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Line 2
+        </th>
+        <td>
+          some data
+        </td>
+        <td>
+          some data
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;
