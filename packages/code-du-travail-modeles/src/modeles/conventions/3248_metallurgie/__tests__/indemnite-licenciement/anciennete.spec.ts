@@ -1,8 +1,4 @@
-import {
-  MotifKeys,
-  SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { MotifKeys, SeniorityFactory, SupportedCc } from "../../../../common";
 
 describe("CC 3248", () => {
   describe("Calcul de l'ancienneté pour les groupes F,G,H,I (cadre)", () => {
@@ -14,9 +10,7 @@ describe("CC 3248", () => {
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC3248
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC3248);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -43,9 +37,7 @@ describe("CC 3248", () => {
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC3248
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC3248);
 
         const result = seniority.computeRequiredSeniority({
           absencePeriods: absences,
@@ -73,9 +65,7 @@ describe("CC 3248", () => {
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC3248
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC3248);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -106,9 +96,7 @@ describe("CC 3248", () => {
     `(
       `Avec une absence longue $absences[1], on s'attend à la détection d'une longue période d'absence : $hasLongPeriod`,
       ({ absences, hasLongPeriod }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC3248
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC3248);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -140,9 +128,7 @@ describe("CC 3248", () => {
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC3248
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC3248);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -169,9 +155,7 @@ describe("CC 3248", () => {
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC3248
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC3248);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -199,9 +183,7 @@ describe("CC 3248", () => {
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC3248
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC3248);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -225,9 +207,7 @@ describe("CC 3248", () => {
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC3248
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC3248);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -246,9 +226,7 @@ describe("CC 3248", () => {
 
   describe("Calcul de l'ancienneté pour les groupes A,B,C,D,E (passage au forfait jour) - Cas spécifique issue #5634", () => {
     test("Calcul de l'ancienneté", () => {
-      const seniority = new SeniorityFactory().create(
-        SupportedCcIndemniteLicenciement.IDCC3248
-      );
+      const seniority = new SeniorityFactory().create(SupportedCc.IDCC3248);
 
       const result = seniority.computeSeniority({
         absencePeriods: [],
@@ -266,9 +244,7 @@ describe("CC 3248", () => {
 
   describe("Calcul de l'ancienneté pour les groupes A,B,C,D,E au forfait jour avant cadre - Cas spécifique issue #5635", () => {
     test("Calcul de l'ancienneté", () => {
-      const seniority = new SeniorityFactory().create(
-        SupportedCcIndemniteLicenciement.IDCC3248
-      );
+      const seniority = new SeniorityFactory().create(SupportedCc.IDCC3248);
 
       const result = seniority.computeSeniority({
         absencePeriods: [],

@@ -1,11 +1,8 @@
-import {
-  ReferenceSalaryFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { ReferenceSalaryFactory, SupportedCc } from "../../../../common";
 
 describe("Calcul du salaire pour la CC 86", () => {
   const factory = new ReferenceSalaryFactory();
-  const sref = factory.create(SupportedCcIndemniteLicenciement.IDCC0086);
+  const sref = factory.create(SupportedCc.IDCC0086);
 
   test.each`
     salaries                                                                                                                                                                                                                                                                                                                                                                                                                                  | expectedResult

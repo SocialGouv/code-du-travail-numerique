@@ -6,7 +6,7 @@ import type {
   Motif,
   SeniorityProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { parseDate } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
@@ -19,7 +19,7 @@ const MOTIFS_2120 = LEGAL_MOTIFS.map((item) => {
   };
 });
 
-export class Seniority2120 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC2120> {
+export class Seniority2120 extends SeniorityDefault<SupportedCc.IDCC2120> {
   getMotifs(): Motif[] {
     return MOTIFS_2120;
   }
@@ -28,7 +28,7 @@ export class Seniority2120 extends SeniorityDefault<SupportedCcIndemniteLicencie
     dateEntree,
     dateSortie,
     absencePeriods = [],
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC1486>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.IDCC1486>): SeniorityResult {
     return this.computeChild(dateEntree, dateSortie, absencePeriods);
   }
 

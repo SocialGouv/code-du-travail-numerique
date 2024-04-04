@@ -2,7 +2,7 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
@@ -20,11 +20,11 @@ export type CC44ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary44
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0044>
+  implements IReferenceSalary<SupportedCc.IDCC0044>
 {
   mapSituation(
     args: Record<string, string | undefined>
-  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0044> {
+  ): ReferenceSalaryProps<SupportedCc.IDCC0044> {
     const category =
       args[
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle"
@@ -59,7 +59,7 @@ export class ReferenceSalary44
     hasVariablePay,
     category,
     lastMonthSalary,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0044>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC0044>): number {
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
     const salaireMoyen = sum(salaryValues) / 12;

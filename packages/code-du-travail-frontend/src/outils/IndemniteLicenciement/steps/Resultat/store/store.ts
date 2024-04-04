@@ -35,7 +35,7 @@ import {
   MatomoSimulatorEvent,
 } from "../../../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
-import getSupportedCcIndemniteLicenciement from "../../../common/usecase/getSupportedCc";
+import getSupportedCc from "../../../common/usecase/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
@@ -210,7 +210,7 @@ const createResultStore: StoreSlice<
 
       if (
         agreement &&
-        getSupportedCcIndemniteLicenciement().some(
+        getSupportedCc().some(
           (item) => item.idcc === agreement.num && item.fullySupported
         )
       ) {

@@ -1,4 +1,5 @@
 import { primePrecariteData as data } from "@socialgouv/modeles-social";
+import { SupportedTypes } from "@socialgouv/modeles-social";
 
 import {
   filterSituations,
@@ -41,32 +42,36 @@ const ccList = [
   },
 ];
 
-jest.mock("@socialgouv/modeles-social", () => ({
-  primePrecariteData: [
-    { criteria: { bar: "baz", foo: "1| foo" }, idcc: 10 },
-    { criteria: { bar: "bar", foo: "1| foo" }, idcc: 10 },
-    { criteria: { bar: "baz", foo: "2| baz" }, idcc: 10 },
-    { criteria: { bar: "bar", foo: "2| baz" }, idcc: 10 },
-    {
-      allowBonus: false,
-      criteria: { foo: "3| bar" },
-      endMessage: "nope",
-      hasConventionalProvision: true,
-      idcc: 20,
-    },
-    {
-      allowBonus: true,
-      criteria: { foo: "4| baz" },
-      hasConventionalProvision: true,
-      idcc: 20,
-    },
-    {
-      criteria: {},
-      hasConventionalProvision: null,
-      idcc: 30,
-    },
-  ],
-}));
+jest.mock("@socialgouv/modeles-social", () => {
+  const original = jest.requireActual("@socialgouv/modeles-social");
+  return {
+    ...original,
+    primePrecariteData: [
+      { criteria: { bar: "baz", foo: "1| foo" }, idcc: 10 },
+      { criteria: { bar: "bar", foo: "1| foo" }, idcc: 10 },
+      { criteria: { bar: "baz", foo: "2| baz" }, idcc: 10 },
+      { criteria: { bar: "bar", foo: "2| baz" }, idcc: 10 },
+      {
+        allowBonus: false,
+        criteria: { foo: "3| bar" },
+        endMessage: "nope",
+        hasConventionalProvision: true,
+        idcc: 20,
+      },
+      {
+        allowBonus: true,
+        criteria: { foo: "4| baz" },
+        hasConventionalProvision: true,
+        idcc: 20,
+      },
+      {
+        criteria: {},
+        hasConventionalProvision: null,
+        idcc: 30,
+      },
+    ],
+  };
+});
 
 describe("situations", () => {
   describe("getInitialSituations", () => {
@@ -210,12 +215,12 @@ describe("situations", () => {
         undefined
       );
       expect(supportedCCResult.find((item) => item.idcc === 30)).toStrictEqual({
-        fullySupported: true,
+        fullySupported: SupportedTypes.FULLY_SUPPORTED,
         idcc: 30,
         withoutLegal: false,
       });
       expect(supportedCCResult.find((item) => item.idcc === 20)).toStrictEqual({
-        fullySupported: true,
+        fullySupported: SupportedTypes.FULLY_SUPPORTED,
         withoutLegal: false,
         idcc: 20,
       });

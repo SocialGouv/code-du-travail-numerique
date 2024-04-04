@@ -56,7 +56,7 @@ const dataWithSelectedAgreementNotFullySupported: Props = {
   selectedAgreement,
   supportedAgreements: [
     {
-      fullySupported: SupportedTypes.NEVER_SUPPORTED,
+      fullySupported: SupportedTypes.SOON_SUPPORTED,
       idcc: selectedAgreement.num,
     },
   ],

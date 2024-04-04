@@ -6,3 +6,4 @@ contrat salarié . convention collective . boulangerie patisserie:
   cdtn:
     idcc: 843
     préavis-retraite: true
+    indemnité-licenciement: true

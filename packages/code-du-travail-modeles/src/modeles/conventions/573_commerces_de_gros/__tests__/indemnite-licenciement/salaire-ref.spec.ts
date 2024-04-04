@@ -1,13 +1,11 @@
 import {
   QuestionOuiNonWithQuote,
   ReferenceSalaryFactory,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../../../common";
 
 describe("Calcul du salaire pour la CC 573", () => {
-  const refSalary = new ReferenceSalaryFactory().create(
-    SupportedCcIndemniteLicenciement.IDCC0573
-  );
+  const refSalary = new ReferenceSalaryFactory().create(SupportedCc.IDCC0573);
 
   describe("Cas standard", () => {
     test.each`

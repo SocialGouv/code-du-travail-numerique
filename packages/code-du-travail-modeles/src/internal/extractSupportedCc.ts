@@ -2,18 +2,27 @@ import type { Rule } from "publicodes";
 import type Engine from "publicodes";
 
 import type { AgreementInfo } from "../modeles/common";
-import {
-  getSupportedAgreement,
-  SupportedTypes,
-  ToolName,
-} from "../modeles/common";
+import { SupportedTypes } from "../modeles/common";
 
 export type RuleNodeIdcc = Rule & {
   cdtn?: {
     idcc?: number;
     "préavis-retraite"?: boolean;
+    "indemnité-licenciement"?: boolean;
   };
 };
+
+function getSupportedStatus(activated?: boolean) {
+  switch (activated) {
+    case undefined:
+      return SupportedTypes.SOON_SUPPORTED;
+    case true:
+      return SupportedTypes.FULLY_SUPPORTED;
+    case false:
+    default:
+      return SupportedTypes.NEVER_SUPPORTED;
+  }
+}
 
 export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
   return Object.values(engine.getParsedRules())
@@ -23,21 +32,12 @@ export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
       if (cdtnNode) {
         const idcc = cdtnNode.idcc;
         if (idcc) {
-          const supportedIndemniteLicencimentCc = getSupportedAgreement(
-            idcc,
-            ToolName.INDEMNITE_LICENCIEMENT
-          );
           return {
             idcc,
-            indemniteLicenciement:
-              supportedIndemniteLicencimentCc !== undefined
-                ? supportedIndemniteLicencimentCc
-                  ? SupportedTypes.FULLY_SUPPORTED
-                  : SupportedTypes.NEVER_SUPPORTED
-                : SupportedTypes.SOON_SUPPORTED,
-            preavisRetraite: cdtnNode["préavis-retraite"]
-              ? SupportedTypes.FULLY_SUPPORTED
-              : SupportedTypes.NEVER_SUPPORTED,
+            indemniteLicenciement: getSupportedStatus(
+              cdtnNode["indemnité-licenciement"]
+            ),
+            preavisRetraite: getSupportedStatus(cdtnNode["préavis-retraite"]),
           };
         }
       }

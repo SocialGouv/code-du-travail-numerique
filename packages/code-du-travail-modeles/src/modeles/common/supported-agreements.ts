@@ -1,5 +1,5 @@
 /* eslint @typescript-eslint/naming-convention: 0 */
-export enum SupportedCcIndemniteLicenciement {
+export enum SupportedCc {
   IDCC0292 = "292",
   IDCC1505 = "1505",
   IDCC1516 = "1516",
@@ -56,21 +56,11 @@ export enum ToolName {
   INDEMNITE_LICENCIEMENT = "Indemnité de licenciement",
 }
 
-export const indemniteLicenciementUnSupportedCcList = [1480];
-
-export const getSupportedAgreement = (
-  idcc: number,
-  toolName?: string
-): SupportedCcIndemniteLicenciement | null | undefined => {
-  for (const value of Object.values(SupportedCcIndemniteLicenciement)) {
+export const getSupportedAgreement = (idcc: number): SupportedCc | null => {
+  for (const value of Object.values(SupportedCc)) {
     if (value === idcc.toString()) {
-      if (
-        toolName === ToolName.INDEMNITE_LICENCIEMENT &&
-        indemniteLicenciementUnSupportedCcList.includes(idcc)
-      ) {
-        return null;
-      }
-      return value as SupportedCcIndemniteLicenciement;
+      return value as SupportedCc;
     }
   }
+  return null;
 };

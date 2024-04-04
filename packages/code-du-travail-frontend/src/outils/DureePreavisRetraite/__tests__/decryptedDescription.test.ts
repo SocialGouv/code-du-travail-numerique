@@ -112,8 +112,8 @@ describe("Validation de l'aggregation des données", () => {
     },
     {
       idcc: 321,
-      preavisRetraite: SupportedTypes.NEVER_SUPPORTED,
-      indemniteLicenciement: SupportedTypes.FULLY_SUPPORTED,
+      preavisRetraite: SupportedTypes.SOON_SUPPORTED,
+      indemniteLicenciement: SupportedTypes.SOON_SUPPORTED,
     },
   ];
 

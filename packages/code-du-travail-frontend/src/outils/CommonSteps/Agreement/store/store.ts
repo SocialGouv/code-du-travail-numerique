@@ -65,7 +65,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
                       idcc
                     );
                     state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-                      !!getSupportedAgreement(parseInt(idcc), toolName);
+                      !!getSupportedAgreement(parseInt(idcc));
                   }
                 )
               );
@@ -122,7 +122,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
               idcc
             );
             state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-              !!getSupportedAgreement(parseInt(idcc), toolName);
+              !!getSupportedAgreement(parseInt(idcc));
           })
         );
       }
@@ -147,7 +147,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
       const { route, agreement, enterprise } = input;
       if (isValid && route) {
         const isTreated =
-          !!agreement?.num && !!getSupportedAgreement(agreement?.num, toolName);
+          !!agreement?.num && !!getSupportedAgreement(agreement?.num);
         pushAgreementEvents(
           toolName,
           {
