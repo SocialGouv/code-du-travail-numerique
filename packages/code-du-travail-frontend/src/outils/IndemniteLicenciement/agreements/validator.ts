@@ -18,7 +18,7 @@ import { validateAgreement1702 } from "./1702-ouvriers-travaux-public";
 import { validateAgreement1740 } from "./1740-batiment-region-parisienne";
 
 const validatorAgreement = (
-  idcc: SupportedCcIndemniteLicenciement | null,
+  idcc: SupportedCcIndemniteLicenciement | null | undefined,
   step: IndemniteLicenciementStepName,
   get: StoreApi<any>["getState"],
   set: StoreApi<MainStore>["setState"]

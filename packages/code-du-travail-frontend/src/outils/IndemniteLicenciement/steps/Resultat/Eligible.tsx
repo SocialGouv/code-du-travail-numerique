@@ -1,4 +1,7 @@
-import { getSupportedAgreement } from "@socialgouv/modeles-social";
+import {
+  SupportedCcIndemniteLicenciement,
+  getSupportedAgreement,
+} from "@socialgouv/modeles-social";
 import React, { useContext } from "react";
 import { IndemniteLicenciementStepName } from "../..";
 import PubliReferences from "../../../common/PubliReferences";

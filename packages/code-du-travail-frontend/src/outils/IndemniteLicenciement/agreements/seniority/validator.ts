@@ -15,7 +15,7 @@ export const customSeniorityValidator = (
   information: CommonInformationsStoreInput,
   agreeement?: Agreement
 ): any => {
-  let idcc: SupportedCcIndemniteLicenciement | null = null;
+  let idcc: SupportedCcIndemniteLicenciement | null | undefined = null;
   if (agreeement) {
     idcc = getSupportedAgreement(agreeement.num);
   }

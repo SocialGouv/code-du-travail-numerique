@@ -4,7 +4,10 @@ import React from "react";
 import { AgreementSupportInfo } from "../types";
 import { Agreement } from "@socialgouv/cdtn-utils";
 import styled from "styled-components";
-import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import {
+  PublicodesSimulator,
+  SupportedTypes,
+} from "@socialgouv/modeles-social";
 
 type Props = {
   currentAgreement: Agreement;
@@ -22,7 +25,7 @@ const ShowAlert = ({
   const idccInfo = supportedAgreements.find(
     (item) => item.idcc == currentAgreement.num
   );
-  if (!idccInfo || idccInfo.fullySupported === null) {
+  if (!idccInfo || idccInfo.fullySupported === SupportedTypes.NEVER_SUPPORTED) {
     return (
       <>
         <StyledAlert variant="primary">
@@ -59,7 +62,7 @@ const ShowAlert = ({
       </>
     );
   }
-  if (idccInfo.fullySupported === false) {
+  if (idccInfo.fullySupported === SupportedTypes.SOON_SUPPORTED) {
     return (
       <>
         <StyledAlert variant="primary">

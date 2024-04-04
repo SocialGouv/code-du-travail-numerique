@@ -39,7 +39,7 @@ import {
 import { Agreement2120, Agreement2120Informations } from "./2120-banques";
 
 type Props = {
-  idcc: SupportedCcIndemniteLicenciement | null;
+  idcc: SupportedCcIndemniteLicenciement | null | undefined;
   step: IndemniteLicenciementStepName;
 };
 

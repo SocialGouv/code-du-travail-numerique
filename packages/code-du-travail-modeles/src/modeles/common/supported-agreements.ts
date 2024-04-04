@@ -56,22 +56,21 @@ export enum ToolName {
   INDEMNITE_LICENCIEMENT = "Indemnité de licenciement",
 }
 
-export const indemniteLicenciementSupportedCcList = [1480];
+export const indemniteLicenciementUnSupportedCcList = [1480];
 
 export const getSupportedAgreement = (
   idcc: number,
   toolName?: string
-): SupportedCcIndemniteLicenciement | null => {
+): SupportedCcIndemniteLicenciement | null | undefined => {
   for (const value of Object.values(SupportedCcIndemniteLicenciement)) {
     if (value === idcc.toString()) {
       if (
         toolName === ToolName.INDEMNITE_LICENCIEMENT &&
-        indemniteLicenciementSupportedCcList.includes(idcc)
+        indemniteLicenciementUnSupportedCcList.includes(idcc)
       ) {
         return null;
       }
       return value as SupportedCcIndemniteLicenciement;
     }
   }
-  return null;
 };
