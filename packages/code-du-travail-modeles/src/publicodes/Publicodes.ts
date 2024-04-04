@@ -8,6 +8,7 @@ export interface Publicodes<TResult> {
     args: Record<string, string>,
     target?: string
   ) => PublicodesData<TResult>;
+  calculateResult: (args: Record<string, string>) => PublicodesData<TResult>;
   setSituation: (args: Record<string, string>) => PublicodesData<TResult>;
   getNotifications: () => Notification[];
   getNotificationsBloquantes: () => Notification[];

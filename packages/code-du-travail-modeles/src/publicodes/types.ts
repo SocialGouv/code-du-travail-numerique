@@ -6,7 +6,7 @@ import type {
   Unit,
 } from "publicodes";
 
-import type { Notification, References } from "../modeles/common";
+import type { Formula } from "../modeles";
 import type {
   IndemniteLicenciementPublicodes,
   PreavisRetraitePublicodes,
@@ -75,21 +75,15 @@ export type PublicodesData<TResult> = {
   missingArgs: MissingArgs[];
   result: TResult;
   ineligibility?: string;
+  detail: {
+    chosenResult?: "AGREEMENT" | "HAS_NO_LEGAL" | "LEGAL" | "SAME";
+    legalResult: TResult;
+    agreementResult?: TResult;
+  };
 };
-
-export type PublicodesProviderRule = {
-  children: React.ReactNode;
-  rules: any;
-  simulator: PublicodesSimulator;
+export type PublicodesDataWithFormula<TResult> = PublicodesData<TResult> & {
+  formula: Formula;
 };
-
-export enum PublicodesUnit {
-  DAY = "jour",
-  MONTH = "mois",
-  YEAR = "an",
-  EUROS = "€",
-  K_EUROS = "k/€",
-}
 
 export enum PublicodesSimulator {
   INDEMNITE_LICENCIEMENT = "INDEMNITE_LICENCIEMENT",
@@ -125,17 +119,6 @@ export type PublicodesIndemniteLicenciementResult = {
   value: Evaluation;
   unit?: Unit;
   ineligibility?: string;
-};
-
-export type PublicodesContextType = {
-  execute: (rule: string) => PublicodesIndemniteLicenciementResult;
-  getNotifications: () => Notification[];
-  getReferences: () => References[];
-  result: PublicodesIndemniteLicenciementResult;
-  missingArgs: MissingArgs[];
-  situation: SituationElement[];
-  calculate: (values: Record<string, string>) => void;
-  setSituation: (values: Record<string, string>) => void;
 };
 
 export type PublicodesInstance<T extends PublicodesSimulator> =

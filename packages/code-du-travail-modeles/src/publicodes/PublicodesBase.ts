@@ -10,7 +10,13 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "../modeles/common";
 import type { Publicodes } from "./Publicodes";
-import type { MissingArgs, PublicodesData, SituationElement } from "./types";
+import type {
+  MissingArgs,
+  PublicodesData,
+  PublicodesDataWithFormula,
+  PublicodesIndemniteLicenciementResult,
+  SituationElement,
+} from "./types";
 
 export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   idcc: SupportedCcIndemniteLicenciement;
@@ -20,6 +26,9 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   targetRule: string;
 
   data: PublicodesData<TResult> = {
+    detail: {
+      legalResult: {} as TResult,
+    },
     missingArgs: [],
     result: {} as TResult,
     situation: [],
@@ -44,13 +53,6 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return this.convertedResult(result);
   }
 
-  calculate(
-    args: Record<string, string | undefined>,
-    target?: string
-  ): PublicodesData<TResult> {
-    return this.setSituation(args, target);
-  }
-
   setSituation(
     args: Record<string, string | undefined>,
     targetRule?: string
@@ -60,7 +62,11 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
       args,
       targetRule ?? this.targetRule
     );
+
     this.data = {
+      detail: {
+        legalResult: this.convertedResult(result), // juste pour que le ts compile
+      },
       missingArgs,
       result: this.convertedResult(result),
       situation,
@@ -82,6 +88,50 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
 
   getFormule(): Formula {
     return getFormule(this.engine);
+  }
+
+  protected compareAndSetResult(
+    legalResult: PublicodesData<PublicodesIndemniteLicenciementResult>,
+    agreementResult: PublicodesData<PublicodesIndemniteLicenciementResult>,
+    agreementFormula: Formula,
+    result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult>
+  ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
+    result.detail.agreementResult = agreementResult.result;
+
+    if (this.hasNoLegalIndemnity()) {
+      result.missingArgs = agreementResult.missingArgs;
+      result.result = agreementResult.result;
+      result.formula = agreementFormula;
+      result.detail.chosenResult = "HAS_NO_LEGAL";
+      return result;
+    }
+
+    result.missingArgs = result.missingArgs.concat(agreementResult.missingArgs);
+
+    if (
+      legalResult.result.value !== undefined &&
+      legalResult.result.value !== null &&
+      agreementResult.result.value !== undefined &&
+      agreementResult.result.value !== null
+    ) {
+      if (agreementResult.result.value > legalResult.result.value) {
+        result.result = agreementResult.result;
+        result.formula = agreementFormula;
+        result.detail.chosenResult = "AGREEMENT";
+      } else if (agreementResult.result.value === legalResult.result.value) {
+        result.detail.chosenResult = "SAME";
+      }
+    }
+
+    return result;
+  }
+
+  private hasNoLegalIndemnity(): boolean {
+    const hasNoLegalIndemnity = this.engine.evaluate(
+      "contrat salarié . indemnité de licenciement . résultat légal doit être ignoré"
+    );
+
+    return !!hasNoLegalIndemnity.nodeValue;
   }
 
   private buildSituation(
@@ -173,6 +223,15 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
       situation: newSituation,
     };
   }
+
+  abstract calculate(
+    args: Record<string, string | undefined>,
+    target?: string
+  ): PublicodesData<TResult>;
+
+  abstract calculateResult(
+    args: Record<string, string | undefined>
+  ): PublicodesData<TResult>;
 
   protected abstract convertedResult(evaluatedNode: EvaluatedNode): TResult;
 }

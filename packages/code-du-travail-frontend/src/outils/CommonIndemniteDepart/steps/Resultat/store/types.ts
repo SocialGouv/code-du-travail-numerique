@@ -10,11 +10,11 @@ import { AgreementInformation } from "../../../common";
 import { StepData } from "../../../store";
 
 export type ResultStoreInput = {
+  result: PublicodesIndemniteLicenciementResult;
   publicodesLegalResult: PublicodesIndemniteLicenciementResult;
   publicodesAgreementResult?: PublicodesIndemniteLicenciementResult;
   agreementSeniority?: SeniorityResult;
-  legalFormula: Formula;
-  agreementFormula?: Formula;
+  formula: Formula;
   legalReferences: References[];
   agreementReferences?: References[];
   isAgreementBetter: boolean;

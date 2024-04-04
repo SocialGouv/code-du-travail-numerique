@@ -8,19 +8,16 @@ import {
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
 } from "../modeles/common";
-import type { Publicodes } from "./Publicodes";
 import { PublicodesBase } from "./PublicodesBase";
 import type {
   PublicodesData,
+  PublicodesDataWithFormula,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
 import { mergeMissingArgs } from "./utils";
 
-class RuptureConventionnellePublicodes
-  extends PublicodesBase<PublicodesIndemniteLicenciementResult>
-  implements Publicodes<PublicodesIndemniteLicenciementResult>
-{
+class RuptureConventionnellePublicodes extends PublicodesBase<PublicodesIndemniteLicenciementResult> {
   constructor(models: any, idcc?: string) {
     const rules = {
       ...models.base,
@@ -93,6 +90,9 @@ class RuptureConventionnellePublicodes
       }, situations[0]);
 
       return {
+        detail: {
+          legalResult: lowerSituations.result,
+        },
         ineligibility: situations.find(
           ({ ineligibility }) => ineligibility !== undefined
         )?.ineligibility,
@@ -101,6 +101,41 @@ class RuptureConventionnellePublicodes
         situation: lowerSituations.situation,
       };
     }
+  }
+
+  calculateResult(
+    args: Record<string, string | undefined>
+  ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
+    const legalResult = this.calculateSituation(
+      args,
+      "contrat salarié . indemnité de licenciement . résultat légal"
+    );
+    const result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> =
+      {
+        detail: {
+          legalResult: legalResult.result,
+        },
+        formula: this.getFormule(),
+        missingArgs: legalResult.missingArgs,
+        result: legalResult.result,
+        situation: this.data.situation,
+      };
+
+    if (this.idcc === SupportedCcIndemniteLicenciement.default) {
+      return result;
+    }
+
+    const agreementResult = this.calculate(
+      args,
+      "contrat salarié . indemnité de licenciement . résultat conventionnel"
+    );
+
+    return super.compareAndSetResult(
+      legalResult,
+      agreementResult,
+      this.getFormule(),
+      result
+    );
   }
 
   protected convertedResult(
@@ -116,6 +151,9 @@ class RuptureConventionnellePublicodes
     text: string
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
     return {
+      detail: {
+        legalResult: { value: 0 },
+      },
       ineligibility: text,
       missingArgs: [],
       result: { value: 0 },
@@ -128,6 +166,7 @@ class RuptureConventionnellePublicodes
     targetRule?: string
   ) {
     let newArgs = args;
+
     const ineligibilityInstance =
       new IneligibilityRuptureConventionnelleFactory().create(this.idcc);
     const ineligibility = ineligibilityInstance.getIneligibility(newArgs);

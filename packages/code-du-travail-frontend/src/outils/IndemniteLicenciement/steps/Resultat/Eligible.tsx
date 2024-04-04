@@ -26,6 +26,7 @@ import { AgreementsInjector } from "../../../CommonIndemniteDepart/agreements";
 export default function Eligible() {
   const store = useContext(IndemniteDepartContext);
   const {
+    result,
     publicodesLegalResult,
     publicodesAgreementResult,
     typeContratTravail,
@@ -38,12 +39,11 @@ export default function Eligible() {
     dateNotification,
     absencePeriods,
     salaryPeriods,
-    legalFormula,
+    formula,
     legalReferences,
     agreementReferences,
     hasTempsPartiel,
     isAgreementBetter,
-    agreementFormula,
     agreementInformations,
     salary,
     hasSameSalary,
@@ -59,6 +59,7 @@ export default function Eligible() {
     isAgreementSupported,
     isParentalNoticeHidden,
   } = useIndemniteDepartStore(store, (state) => ({
+    result: state.resultData.input.result,
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
     typeContratTravail: state.contratTravailData.input.typeContratTravail,
@@ -73,12 +74,11 @@ export default function Eligible() {
     dateNotification: state.ancienneteData.input.dateNotification,
     absencePeriods: state.ancienneteData.input.absencePeriods,
     salaryPeriods: state.salairesData.input.salaryPeriods,
-    legalFormula: state.resultData.input.legalFormula,
+    formula: state.resultData.input.formula,
     legalReferences: state.resultData.input.legalReferences,
     agreementReferences: state.resultData.input.agreementReferences,
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     isAgreementBetter: state.resultData.input.isAgreementBetter,
-    agreementFormula: state.resultData.input.agreementFormula,
     agreementInformations: state.resultData.input.agreementInformations,
     salary: state.salairesData.input.salary,
     hasSameSalary: state.salairesData.input.hasSameSalary,
@@ -103,11 +103,7 @@ export default function Eligible() {
   return (
     <>
       <Result
-        maxResult={
-          isAgreementBetter
-            ? publicodesAgreementResult?.value?.toString() ?? ""
-            : publicodesLegalResult.value?.toString() ?? ""
-        }
+        maxResult={result?.value?.toString() ?? ""}
         notifications={notifications}
         resultMessage={getResultMessage(informationData)}
       />
@@ -170,13 +166,7 @@ export default function Eligible() {
           isStepSalaryHidden={isStepSalaryHidden}
           disableParentalNotice={isParentalNoticeHidden}
         />
-        <FormulaInterpreter
-          formula={
-            isAgreementBetter && agreementFormula
-              ? agreementFormula
-              : legalFormula
-          }
-        />
+        <FormulaInterpreter formula={formula} />
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
             hasSelectedAgreement={route !== "not-selected"}

@@ -3,7 +3,6 @@ import { PreavisRetraiteFormState } from "../../form";
 import { PreavisRetraiteState, PreavisRetraiteStore } from "../types";
 import { initialState } from "../preavisRetraiteStore";
 import {
-  Publicodes,
   PublicodesConvertedUnit,
   PublicodesData,
   PublicodesPreavisRetraiteResult,
@@ -36,6 +35,13 @@ export const publicodesData: PublicodesData<PublicodesPreavisRetraiteResult> = {
     unit: PublicodesConvertedUnit.MONTH,
     value: 1,
     valueInDays: 30,
+  },
+  detail: {
+    legalResult: {
+      unit: PublicodesConvertedUnit.MONTH,
+      value: 1,
+      valueInDays: 30,
+    },
   },
   situation: [],
 };
