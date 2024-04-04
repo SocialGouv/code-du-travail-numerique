@@ -96,7 +96,6 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     agreementFormula: Formula,
     result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult>
   ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
-    result.detail.chosenResult = "LEGAL";
     result.detail.agreementResult = agreementResult.result;
 
     if (this.hasNoLegalIndemnity()) {

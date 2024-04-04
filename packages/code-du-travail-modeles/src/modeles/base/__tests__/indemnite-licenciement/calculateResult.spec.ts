@@ -21,7 +21,7 @@ describe("calculateResult", () => {
       typeContratTravail: "cdi",
     });
     expect(result.missingArgs).toEqual([]);
-    expect(result.detail.chosenResult).toEqual(undefined);
+    expect(result.detail.chosenResult).toEqual("LEGAL");
     expect(result.detail.legalResult.value).toEqual(1000);
     expect(result.detail.legalResult.unit?.numerators).toEqual(["€"]);
     expect(result.result.value).toEqual(1000);

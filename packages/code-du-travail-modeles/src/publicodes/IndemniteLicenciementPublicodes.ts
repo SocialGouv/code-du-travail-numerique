@@ -129,6 +129,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
     const result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> =
       {
         detail: {
+          chosenResult: "LEGAL",
           legalResult: legalResult.result,
         },
         formula: this.getFormule(),
