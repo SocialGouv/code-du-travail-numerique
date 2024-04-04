@@ -6,7 +6,7 @@ const engine = new IndemniteLicenciementPublicodes(
   "3239"
 );
 
-describe("Test de la fonctionnalité 'calculateReulst'", () => {
+describe("Test de la fonctionnalité 'calculateResult'", () => {
   test.each`
     category                                  | expectedCompensation | formula
     ${CatPro3239.salarieParticulierEmployeur} | ${1166.32}           | ${"1/4 * Sref * A"}
