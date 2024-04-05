@@ -7,12 +7,9 @@ import { informationToSituation } from "../../../CommonSteps/Informations/utils"
 import {
   DecryptResult,
   FilledElements,
-  ForMoreInfo,
   FormulaInterpreter,
   Result,
 } from "../../../CommonIndemniteDepart/steps/Resultat/components";
-// Do not optimize the following import
-import { getForMoreInfoMessage } from "../../../CommonIndemniteDepart/agreements/ui-customizations";
 import ShowDetails from "../../../common/ShowDetails";
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
@@ -21,6 +18,7 @@ import Disclaimer from "../../../common/Disclaimer";
 import { getResultMessage } from "./utils";
 import { IndemniteDepartType } from "../../../types";
 import { AgreementsInjector } from "../../../CommonIndemniteDepart/agreements";
+import { Paragraph } from "@socialgouv/cdtn-ui/lib";
 
 const Eligible = () => {
   const store = useContext(IndemniteDepartContext);
@@ -67,9 +65,9 @@ const Eligible = () => {
               value:
                 contratTravail.licenciementInaptitude === "oui" ? "Oui" : "Non",
               detail:
-                result.isAgreementBetter &&
+                !result.isAgreementBetter &&
                 contratTravail.licenciementInaptitude === "oui"
-                  ? "Le salarié ayant été licencié pour inaptitude suite à un accident du travail ou une maladie professionnelle reconnue, le montant de l&apos;indemnité de licenciement légale est doublé"
+                  ? "Le salarié ayant été licencié pour inaptitude suite à un accident du travail ou une maladie professionnelle reconnue, le montant de l&apos;indemnité de rupture conventionnelle légale est doublé"
                   : undefined,
             },
             {
@@ -138,12 +136,14 @@ const Eligible = () => {
           <p>{result.infoWarning.message}</p>
         </Disclaimer>
       )}
-      <ForMoreInfo
-        message={getForMoreInfoMessage(
-          result.isAgreementBetter,
-          agreement.agreement?.num
-        )}
-      />
+      <Paragraph italic fontSize="small">
+        Le montant donné n’est qu’une estimation, il est donné à titre
+        indicatif. Pour simplifier l’utilisation de ce simulateur, certains
+        paramètres complexes n’ont pas été pris en compte dans le calcul de
+        l’indemnité et peuvent donner lieu à un montant différent. Par exemple,
+        les absences de moins d’un mois ou les contrats antérieurs au CDI ne
+        sont pas pris en compte dans le calcul de l’ancienneté du salarié.
+      </Paragraph>
     </>
   );
 };
