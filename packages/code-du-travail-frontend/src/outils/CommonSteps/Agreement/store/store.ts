@@ -63,7 +63,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
                       idcc
                     );
                     state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-                      !!isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
+                      isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
                   }
                 )
               );
