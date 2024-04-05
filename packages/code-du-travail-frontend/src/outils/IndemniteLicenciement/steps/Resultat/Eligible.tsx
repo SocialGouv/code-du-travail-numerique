@@ -6,7 +6,6 @@ import ShowDetails from "../../../common/ShowDetails";
 import {
   DecryptResult,
   FilledElements,
-  ForMoreInfo,
   FormulaInterpreter,
   Result,
 } from "../../../CommonIndemniteDepart/steps/Resultat/components";
@@ -15,13 +14,16 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "../../../CommonIndemniteDepart/store";
-import { getResultMessage } from "./utils";
 // Do not optimize the following import
-import { getForMoreInfoMessage } from "../../../CommonIndemniteDepart/agreements/ui-customizations";
 import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
 import { IndemniteDepartType } from "../../../types";
 import Link from "next/link";
 import { AgreementsInjector } from "../../../CommonIndemniteDepart/agreements";
+import { Paragraph } from "@socialgouv/cdtn-ui/lib";
+import {
+  getForMoreInfoMessage,
+  getResultMessage,
+} from "../../agreements/ui-customizations";
 
 export default function Eligible() {
   const store = useContext(IndemniteDepartContext);
@@ -123,7 +125,7 @@ export default function Eligible() {
               text: "Licenciement dû à une inaptitude d’origine professionnelle",
               value: licenciementInaptitude === "oui" ? "Oui" : "Non",
               detail:
-                isAgreementBetter && licenciementInaptitude === "oui"
+                !isAgreementBetter && licenciementInaptitude === "oui"
                   ? "Le salarié ayant été licencié pour inaptitude suite à un accident du travail ou une maladie professionnelle reconnue, le montant de l&apos;indemnité de licenciement légale est doublé"
                   : undefined,
             },
@@ -190,23 +192,21 @@ export default function Eligible() {
           <p>{infoWarning.message}</p>
         </Disclaimer>
       )}
-      <ForMoreInfo
-        article={
-          <p>
-            Pour en savoir plus sur l’indemnité de licenciement et son mode de
-            calcul, consultez{" "}
-            <Link
-              href={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}
-              passHref
-              target={"_blank"}
-            >
-              cet article
-            </Link>
-            .
-          </p>
-        }
-        message={getForMoreInfoMessage(isAgreementBetter, agreement?.num)}
-      />
+      <p>
+        Pour en savoir plus sur l’indemnité de licenciement et son mode de
+        calcul, consultez{" "}
+        <Link
+          href={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}
+          passHref
+          target={"_blank"}
+        >
+          cet article
+        </Link>
+        .
+      </p>
+      <Paragraph italic fontSize="small">
+        {getForMoreInfoMessage(isAgreementBetter, agreement?.num)}
+      </Paragraph>
     </>
   );
 }
