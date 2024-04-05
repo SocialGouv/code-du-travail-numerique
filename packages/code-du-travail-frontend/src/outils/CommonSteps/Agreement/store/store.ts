@@ -8,10 +8,7 @@ import { STORAGE_KEY_AGREEMENT, StoreSlicePublicode } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { loadPublicodes } from "../../../api";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
-import {
-  PublicodesSimulator,
-  getSupportedAgreement,
-} from "@socialgouv/modeles-social";
+import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
 import {
   MatomoBaseEvent,
   MatomoSearchAgreementCategory,
@@ -19,6 +16,7 @@ import {
 import { pushAgreementEvents } from "../../../common/Agreement";
 import { AgreementRoute } from "../../../common/type/WizardType";
 import { Agreement } from "@socialgouv/cdtn-utils";
+import { isCcFullySupportedIndemniteLicenciement } from "../../../IndemniteLicenciement/common";
 
 const initialState: Omit<
   CommonAgreementStoreData<PublicodesSimulator>,
@@ -65,7 +63,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
                       idcc
                     );
                     state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-                      !!getSupportedAgreement(parseInt(idcc));
+                      !!isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
                   }
                 )
               );
@@ -122,7 +120,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
               idcc
             );
             state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-              !!getSupportedAgreement(parseInt(idcc));
+              isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
           })
         );
       }
@@ -146,8 +144,10 @@ const createCommonAgreementStore: StoreSlicePublicode<
       const { isValid, errorState } = validateStep(input);
       const { route, agreement, enterprise } = input;
       if (isValid && route) {
-        const isTreated =
-          !!agreement?.num && !!getSupportedAgreement(agreement?.num);
+        const isTreated = !!supportedCcn.find(
+          ({ indemniteLicenciement, idcc }) =>
+            indemniteLicenciement && idcc === agreement?.num
+        );
         pushAgreementEvents(
           toolName,
           {
