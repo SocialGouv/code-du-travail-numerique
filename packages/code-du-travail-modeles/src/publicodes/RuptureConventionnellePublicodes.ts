@@ -72,9 +72,11 @@ class RuptureConventionnellePublicodes extends PublicodesBase<PublicodesIndemnit
     if (reasons.length === 0) {
       return this.calculateSituation(args, targetRule);
     } else {
-      const situations = reasons.map(({ rule, value }) => {
+      const situations = reasons.map(({ rules }) => {
         const newArgs = args;
-        newArgs[rule] = value;
+        rules.forEach(({ rule, value }) => {
+          newArgs[rule] = value;
+        });
         return this.calculateSituation(newArgs, targetRule);
       });
       const missingArgsFinal = mergeMissingArgs(
