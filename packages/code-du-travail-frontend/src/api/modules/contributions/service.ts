@@ -42,8 +42,6 @@ export const getAllContributionsGroupByQuestion = async (
     .filter(isGeneric)
     .sort((a, b) => a.title.localeCompare(b.title));
 
-  console.log("allGenerics", allGenerics);
-
   return allGenerics.map((generic) => {
     return {
       generic: generic,
