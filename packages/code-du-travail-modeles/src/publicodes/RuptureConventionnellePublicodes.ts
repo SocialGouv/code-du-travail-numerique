@@ -115,6 +115,7 @@ class RuptureConventionnellePublicodes extends PublicodesBase<PublicodesIndemnit
     const result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> =
       {
         detail: {
+          chosenResult: "LEGAL",
           legalResult: legalResult.result,
         },
         formula: this.getFormule(),
