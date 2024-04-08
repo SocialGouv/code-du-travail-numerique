@@ -28,7 +28,7 @@ describe("Stats", () => {
     expect(response.status).toBe(200);
     expect(response.body).toMatchInlineSnapshot(`
       {
-        "nbDocuments": 32,
+        "nbDocuments": 34,
         "nbPageViews": 10,
         "nbSearches": 4,
         "nbVisits": 20,

@@ -34,7 +34,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "L1237-2",
     },
     {
-      "_score": 3.6866884,
+      "_score": 3.9074206,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -239,7 +239,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Démission d'une assistante maternelle",
     },
     {
-      "_score": 39.44654,
+      "_score": 39.911243,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": [
@@ -261,7 +261,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Préavis de démission",
     },
     {
-      "_score": 36.816536,
+      "_score": 37.12557,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": [
@@ -278,7 +278,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Heures d'absence pour rechercher un emploi",
     },
     {
-      "_score": 32.03567,
+      "_score": 32.103558,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -302,7 +302,7 @@ exports[`Search searchWithQuery 1`] = `
   ],
   "themes": [
     {
-      "_score": 2.4549644,
+      "_score": 2.5448813,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "demission",

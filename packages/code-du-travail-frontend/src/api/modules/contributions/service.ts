@@ -1,11 +1,11 @@
 import { Agreement, ElasticSearchItem } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import {
-  getAllContributions,
   getAllGenericsContributions,
   getContributionsByIds,
   getContributionsBySlugs,
 } from "./queries";
+import { fetchAllContributions } from "./fetch";
 
 export const getGenericContributionsGroupByThemes = async () => {
   const body = getAllGenericsContributions();
@@ -36,16 +36,13 @@ function getTitle(agreements: Agreement[], contrib) {
 export const getAllContributionsGroupByQuestion = async (
   agreements: Agreement[]
 ) => {
-  const body = getAllContributions();
-
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
-  });
+  const response = await fetchAllContributions();
   const all = response.body.hits.hits.map(({ _source }) => _source);
   const allGenerics = all
     .filter(isGeneric)
     .sort((a, b) => a.title.localeCompare(b.title));
+
+  console.log("allGenerics", allGenerics);
 
   return allGenerics.map((generic) => {
     return {
