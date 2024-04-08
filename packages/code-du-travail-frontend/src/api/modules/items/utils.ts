@@ -76,16 +76,22 @@ export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {
 export const getSearchBasedItems = async ({
   title,
   settings,
+  slug
 }: {
   title: string;
   settings: any;
+  slug: string;
 }) => {
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
   const requestBodies = [{ index: elasticDocumentsIndex }, relatedItemBody];
 
   const query_vector = await vectorizeQuery(title.toLowerCase()).catch(
     (error: any) => {
-      console.error(error.message);
+      if (error.message === "Cannot vectorize empty query.") {
+        console.log(`[WARNING] Try to vectorize an empty title: ${title} (slug: ${slug}) `)
+      } else {
+        console.error(error.message);
+      }
     }
   );
 
@@ -132,7 +138,7 @@ export const getRelatedItems = async ({
 }): Promise<any> => {
   const covisitedItems = covisits ? await getCovisitedItems({ covisits }) : [];
 
-  const searchBasedItems = await getSearchBasedItems({ settings, title });
+  const searchBasedItems = await getSearchBasedItems({ settings, title, slug });
 
   const filteredItems = covisitedItems
     .concat(searchBasedItems)
