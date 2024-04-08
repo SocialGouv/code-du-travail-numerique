@@ -68,14 +68,14 @@ expect.extend({
     if (missingVars.length === 0) {
       return {
         message: () =>
-          `Expected next question to be ${rule} but received no next question`,
+          `Expected next question to be "${rule}" but received no next question`,
         pass: rule === null,
       };
     }
     const nextRule = replaceAll(missingVars[0].name, " - ", " . ");
     return {
       message: () =>
-        `Expected next question to be ${rule} but received ${nextRule}`,
+        `Expected next question to be "${rule}" but received "${nextRule}"`,
       pass: nextRule === rule,
     };
   },
