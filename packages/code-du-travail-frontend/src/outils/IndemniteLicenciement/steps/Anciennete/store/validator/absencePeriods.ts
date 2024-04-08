@@ -1,4 +1,4 @@
-import { isWithinInterval } from "date-fns";
+import { isAfter, isWithinInterval } from "date-fns";
 import { parse } from "../../../../../common/utils";
 import {
   AncienneteAbsenceStoreError,
@@ -48,8 +48,9 @@ export const getAbsencePeriodsErrors = (
           item.motif.startAt &&
           item.motif.startAt(informationData) &&
           item.startedAt &&
-          state.dateEntree &&
-          state.dateSortie &&
+          dEntree &&
+          dSortie &&
+          isAfter(dSortie, dEntree) &&
           !isWithinInterval(parse(item.startedAt), {
             start: dEntree,
             end: dSortie,
