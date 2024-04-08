@@ -73,16 +73,16 @@ export type PublicodesState = {
 export type PublicodesData<TResult> = {
   situation: SituationElement[];
   missingArgs: MissingArgs[];
-  result: TResult;
+  result?: TResult;
   ineligibility?: string;
-  detail: {
+  detail?: {
     chosenResult?: "AGREEMENT" | "HAS_NO_LEGAL" | "LEGAL" | "SAME";
-    legalResult: TResult;
+    legalResult?: TResult;
     agreementResult?: TResult;
   };
 };
 export type PublicodesDataWithFormula<TResult> = PublicodesData<TResult> & {
-  formula: Formula;
+  formula?: Formula;
 };
 
 export enum PublicodesSimulator {

@@ -30,7 +30,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     });
     expect(missingArgs).toEqual([]);
     expect(ineligibility).toBeUndefined();
-    expect(result.value).toEqual(1500);
+    expect(result?.value).toEqual(1500);
   });
   test("Vérifier que le fonctionne sans salaryPeriods", () => {
     const { missingArgs } = engine.calculate({
@@ -53,12 +53,13 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       salaryPeriods: undefined,
       typeContratTravail: "cdi",
     });
+    expect(missingArgs.length).toEqual(1);
     expect(missingArgs).toEqual([
       {
-        indice: 1,
-        name: "contrat salarié - indemnité de licenciement - salaire de référence",
+        indice: 3,
+        name: "contrat salarié - indemnité de licenciement - salaire de référence conventionnel",
         rawNode: {
-          nom: "contrat salarié . indemnité de licenciement . salaire de référence",
+          nom: "contrat salarié . indemnité de licenciement . salaire de référence conventionnel",
           unité: "€",
         },
       },

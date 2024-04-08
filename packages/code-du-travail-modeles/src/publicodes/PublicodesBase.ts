@@ -10,13 +10,7 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "../modeles/common";
 import type { Publicodes } from "./Publicodes";
-import type {
-  MissingArgs,
-  PublicodesData,
-  PublicodesDataWithFormula,
-  PublicodesIndemniteLicenciementResult,
-  SituationElement,
-} from "./types";
+import type { MissingArgs, PublicodesData, SituationElement } from "./types";
 
 export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   idcc: SupportedCcIndemniteLicenciement;
@@ -90,48 +84,18 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return getFormule(this.engine);
   }
 
-  protected compareAndSetResult(
-    legalResult: PublicodesData<PublicodesIndemniteLicenciementResult>,
-    agreementResult: PublicodesData<PublicodesIndemniteLicenciementResult>,
-    agreementFormula: Formula,
-    result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult>
-  ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
-    result.detail.agreementResult = agreementResult.result;
-
-    if (this.hasNoLegalIndemnity()) {
-      result.missingArgs = agreementResult.missingArgs;
-      result.result = agreementResult.result;
-      result.formula = agreementFormula;
-      result.detail.chosenResult = "HAS_NO_LEGAL";
-      return result;
-    }
-
-    result.missingArgs = result.missingArgs.concat(agreementResult.missingArgs);
-
-    if (
-      legalResult.result.value !== undefined &&
-      legalResult.result.value !== null &&
-      agreementResult.result.value !== undefined &&
-      agreementResult.result.value !== null
-    ) {
-      if (agreementResult.result.value > legalResult.result.value) {
-        result.result = agreementResult.result;
-        result.formula = agreementFormula;
-        result.detail.chosenResult = "AGREEMENT";
-      } else if (agreementResult.result.value === legalResult.result.value) {
-        result.detail.chosenResult = "SAME";
+  protected removeNonPublicodeFields(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    return Object.keys(args).reduce((filteredObj, key) => {
+      if (key.startsWith("contrat salarié . ") && args[key]) {
+        return {
+          ...filteredObj,
+          [key]: args[key],
+        };
       }
-    }
-
-    return result;
-  }
-
-  private hasNoLegalIndemnity(): boolean {
-    const hasNoLegalIndemnity = this.engine.evaluate(
-      "contrat salarié . indemnité de licenciement . résultat légal doit être ignoré"
-    );
-
-    return !!hasNoLegalIndemnity.nodeValue;
+      return filteredObj;
+    }, {});
   }
 
   private buildSituation(
@@ -229,9 +193,9 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     target?: string
   ): PublicodesData<TResult>;
 
-  abstract calculateResult(
-    args: Record<string, string | undefined>
-  ): PublicodesData<TResult>;
+  // abstract calculateResult(
+  //   args: Record<string, string | undefined>
+  // ): PublicodesData<TResult>;
 
   protected abstract convertedResult(evaluatedNode: EvaluatedNode): TResult;
 }

@@ -7,7 +7,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Test de la fonctionnalité 'calculateResult'", () => {
   test("Si cdi opération pas de missing var si on ne fourni pas le salaire de ref et l'ancienneté requise", () => {
-    const { result, missingArgs, detail, formula } = engine.calculateResult({
+    const { result, missingArgs, detail, formula } = engine.calculate({
       "contrat salarié . convention collective": "'IDCC1404'",
       "contrat salarié . convention collective . sedima . cdi opération . durée":
         "10",
@@ -33,14 +33,14 @@ describe("Test de la fonctionnalité 'calculateResult'", () => {
       typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(160);
-    expect(detail.chosenResult).toEqual("HAS_NO_LEGAL");
-    expect(formula.formula).toEqual(
+    expect(result?.value).toEqual(160);
+    expect(detail?.chosenResult).toEqual("HAS_NO_LEGAL");
+    expect(formula?.formula).toEqual(
       "(8% * Sref1) + (6% * Sref2) + (4% * Sref3)"
     );
   });
   test("Si pas de cdi opération alors on a des missing var pour le legal", () => {
-    const { missingArgs } = engine.calculateResult({
+    const { missingArgs } = engine.calculate({
       "contrat salarié . convention collective": "'IDCC1404'",
       "contrat salarié . convention collective . sedima . cdi opération . durée":
         "10",

@@ -75,5 +75,5 @@ export type SeniorityResult = {
 };
 
 export type RequiredSeniorityResult = {
-  value: number;
+  value?: number;
 };
