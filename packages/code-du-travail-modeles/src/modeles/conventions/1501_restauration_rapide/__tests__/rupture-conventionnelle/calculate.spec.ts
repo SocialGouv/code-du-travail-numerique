@@ -73,22 +73,58 @@ describe("Gestion des licenciements pour la CC 1501", () => {
       {
         age: 49,
         catPro: "Cadres",
-        result: 10800,
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2001",
+        result: 270,
+      },
+      {
+        age: 49,
+        catPro: "Cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2010",
+        result: 8100,
       },
       {
         age: 50,
         catPro: "Cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2015",
         result: 10800,
       },
       {
         age: 49,
         catPro: "Non-cadres",
-        result: 4950,
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2001",
+        result: 0,
       },
       {
-        age: 50,
+        age: 49,
         catPro: "Non-cadres",
-        result: 4950,
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2003",
+        result: 810,
+      },
+      {
+        age: 52,
+        catPro: "Non-cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2011",
+        result: 3150,
+      },
+      {
+        age: 49,
+        catPro: "Non-cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2020",
+        result: 9000,
+      },
+      {
+        age: 52,
+        catPro: "Non-cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2020",
+        result: 9000,
       },
     ])("Le moins favorable - cas licenciement économique", (value) => {
       const { missingArgs, detail } = engine.calculateResult({
@@ -96,11 +132,11 @@ describe("Gestion des licenciements pour la CC 1501", () => {
         "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${value.catPro}'`,
         "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": `${value.age}`,
         "contrat salarié . indemnité de licenciement . date d'entrée":
-          "01/01/2000",
+          value.dateEntree,
         "contrat salarié . indemnité de licenciement . date de notification":
-          "01/01/2015",
+          value.dateSortie,
         "contrat salarié . indemnité de licenciement . date de sortie":
-          "01/01/2015",
+          value.dateSortie,
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
         licenciementFauteGrave: "non",

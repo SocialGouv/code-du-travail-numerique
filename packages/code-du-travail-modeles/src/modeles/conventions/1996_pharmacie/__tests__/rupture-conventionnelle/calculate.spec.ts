@@ -46,22 +46,56 @@ describe("Gestion des licenciements pour la CC 1996", () => {
     test.each([
       {
         catPro: "Cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/06/2000",
+        result: 0,
+      },
+      {
+        catPro: "Cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/09/2000",
+        result: 450,
+      },
+      {
+        catPro: "Cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2006",
+        result: 4860,
+      },
+      {
+        catPro: "Cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2015",
         result: 12150,
       },
       {
         catPro: "Non-cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2015",
         result: 11259,
+      },
+      {
+        catPro: "Non-cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/06/2000",
+        result: 0,
+      },
+      {
+        catPro: "Non-cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2001",
+        result: 675,
       },
     ])("Le moins favorable - cas licenciement économique", (value) => {
       const { missingArgs, detail } = engine.calculateResult({
         "contrat salarié . convention collective": "'IDCC1996'",
         "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle": `'${value.catPro}'`,
         "contrat salarié . indemnité de licenciement . date d'entrée":
-          "01/01/2000",
+          value.dateEntree,
         "contrat salarié . indemnité de licenciement . date de notification":
-          "01/01/2015",
+          value.dateSortie,
         "contrat salarié . indemnité de licenciement . date de sortie":
-          "01/01/2015",
+          value.dateSortie,
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
         licenciementFauteGrave: "non",
