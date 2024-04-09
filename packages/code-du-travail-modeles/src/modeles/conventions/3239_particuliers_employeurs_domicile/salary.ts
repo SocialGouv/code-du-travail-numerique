@@ -3,7 +3,7 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 
 export enum CatPro3239 {
@@ -17,11 +17,11 @@ export type CC3239ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary3239
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC3239>
+  implements IReferenceSalary<SupportedCc.IDCC3239>
 {
   mapSituation(
     args: Record<string, string | undefined>
-  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC3239> {
+  ): ReferenceSalaryProps<SupportedCc.IDCC3239> {
     return {
       catPro: args[
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
@@ -44,7 +44,7 @@ export class ReferenceSalary3239
   computeReferenceSalary({
     salaires = [],
     catPro,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC3239>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC3239>): number {
     if (catPro === CatPro3239.salarieParticulierEmployeur) {
       return new ReferenceSalaryLegal().computeReferenceSalary({ salaires });
     }

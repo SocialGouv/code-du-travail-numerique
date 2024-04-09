@@ -6,3 +6,4 @@ contrat salarié . convention collective . métallurgie:
   cdtn:
     idcc: 3248
     préavis-retraite: true
+    indemnité-licenciement: true

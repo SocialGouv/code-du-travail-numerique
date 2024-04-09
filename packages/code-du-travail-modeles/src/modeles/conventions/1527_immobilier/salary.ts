@@ -3,7 +3,7 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 
 export type CC1527ReferenceSalaryProps = {
@@ -12,11 +12,11 @@ export type CC1527ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary1527
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1527>
+  implements IReferenceSalary<SupportedCc.IDCC1527>
 {
   mapSituation(
     args: Record<string, string | undefined>
-  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1527> {
+  ): ReferenceSalaryProps<SupportedCc.IDCC1527> {
     return {
       hasCommission: args.hasCommission === "oui",
       salaires: args.salaryPeriods
@@ -36,7 +36,7 @@ export class ReferenceSalary1527
   computeReferenceSalary({
     salaires = [],
     hasCommission = false,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1527>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC1527>): number {
     if (!hasCommission) {
       return new ReferenceSalaryLegal().computeReferenceSalary({ salaires });
     }

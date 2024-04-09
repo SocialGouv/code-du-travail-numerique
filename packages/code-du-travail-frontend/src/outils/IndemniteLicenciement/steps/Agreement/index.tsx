@@ -3,7 +3,7 @@ import {
   useIndemniteLicenciementStore,
 } from "../../store";
 import CommonAgreementStep from "../../../CommonSteps/Agreement";
-import { getSupportedCcIndemniteLicenciement } from "../../common";
+import { getSupportedCc } from "../../common";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { useContext } from "react";
 import { Agreement } from "@socialgouv/cdtn-utils";
@@ -46,7 +46,7 @@ const AgreementStep = (): JSX.Element => {
       onInitAgreementPage={onInitAgreementPage}
       selectedEnterprise={enterprise}
       selectedAgreement={agreement}
-      supportedAgreements={getSupportedCcIndemniteLicenciement()}
+      supportedAgreements={getSupportedCc()}
       simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
       onAgreementSearch={onAgreementSearch}
       onEnterpriseSearch={onEnterpriseSearch}

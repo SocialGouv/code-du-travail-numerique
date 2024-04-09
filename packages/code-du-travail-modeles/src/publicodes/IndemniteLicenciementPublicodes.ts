@@ -4,7 +4,7 @@ import {
   IneligibilityFactory,
   ReferenceSalaryFactory,
   SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../modeles/common";
 import type { Publicodes } from "./Publicodes";
 import { PublicodesBase } from "./PublicodesBase";
@@ -26,7 +26,7 @@ class IndemniteLicenciementPublicodes
     super(
       rules,
       PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_LICENCIEMENT],
-      idcc as SupportedCcIndemniteLicenciement
+      idcc as SupportedCc
     );
   }
 
@@ -89,9 +89,7 @@ class IndemniteLicenciementPublicodes
       const agreementSeniority = agreement.computeSeniority(
         agreement.mapSituation(args)
       );
-      const legal = new SeniorityFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
+      const legal = new SeniorityFactory().create(SupportedCc.default);
       const legalSeniority = legal.computeSeniority(legal.mapSituation(args));
       if (legalSeniority.value !== undefined) {
         newArgs = {
@@ -120,9 +118,7 @@ class IndemniteLicenciementPublicodes
       const agreementRequiredSeniority = agreement.computeRequiredSeniority(
         agreement.mapRequiredSituation(args)
       );
-      const legal = new SeniorityFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
+      const legal = new SeniorityFactory().create(SupportedCc.default);
       const legalRequiredSeniority = legal.computeRequiredSeniority(
         legal.mapRequiredSituation(args)
       );
@@ -148,9 +144,7 @@ class IndemniteLicenciementPublicodes
         "contrat salarié . indemnité de licenciement . salaire de référence"
       ]
     ) {
-      const s = new ReferenceSalaryFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
+      const s = new ReferenceSalaryFactory().create(SupportedCc.default);
       const value = s.computeReferenceSalary({
         salaires: args.salaryPeriods ? JSON.parse(args.salaryPeriods) : [],
       });

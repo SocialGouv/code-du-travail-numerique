@@ -1,8 +1,4 @@
-import {
-  MotifKeys,
-  SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { MotifKeys, SeniorityFactory, SupportedCc } from "../../../../common";
 
 describe("CC 2120", () => {
   describe("Calcul de l'ancienneté", () => {
@@ -22,9 +18,7 @@ describe("CC 2120", () => {
     `(
       "$#) Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC2120
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC2120);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -58,9 +52,7 @@ describe("CC 2120", () => {
         expectedSemesterBefore2002,
         expectedSemesterAfter2002,
       }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC2120
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC2120);
 
         const result = seniority.computeSeniority({
           absencePeriods: [],
@@ -102,9 +94,7 @@ describe("CC 2120", () => {
         expectedSemesterAfter2002,
         absences,
       }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC2120
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC2120);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -144,9 +134,7 @@ describe("CC 2120", () => {
     `(
       "$#) Récupération de la notif maladie non pro avec ces paramètres : date d'entrée $entryDate ; date de sortie $exitDate",
       ({ absences, entryDate, exitDate, expectedValue }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC2120
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC2120);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -180,9 +168,7 @@ describe("CC 2120", () => {
     `(
       "$#) Récupération de la notif maladie non pro avec ces paramètres : date d'entrée $entryDate ; date de sortie $exitDate",
       ({ absences, entryDate, exitDate, expectedValue }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC2120
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC2120);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,

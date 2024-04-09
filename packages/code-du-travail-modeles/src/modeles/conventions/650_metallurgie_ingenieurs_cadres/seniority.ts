@@ -10,7 +10,7 @@ import type {
   SeniorityProps,
   SeniorityRequiredProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { parseDate } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
@@ -42,16 +42,16 @@ const MOTIFS_650: Motif[] = LEGAL_MOTIFS.map((item) => ({
   value: 0,
 }));
 
-export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC650> {
+export class Seniority650 extends SeniorityDefault<SupportedCc.IDCC650> {
   mapSituation(
     args: Record<string, string | undefined>
-  ): SeniorityProps<SupportedCcIndemniteLicenciement.IDCC650> {
+  ): SeniorityProps<SupportedCc.IDCC650> {
     return this.map(args);
   }
 
   mapRequiredSituation(
     args: Record<string, string | undefined>
-  ): SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC650> {
+  ): SeniorityRequiredProps<SupportedCc.IDCC650> {
     return this.map(args);
   }
 
@@ -63,7 +63,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     hasBeenDayContract,
     dateBecomeDayContract,
     hasBeenExecutive,
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC650>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.IDCC650>): SeniorityResult {
     const seniority3248 = new Seniority3248();
     if (categoriePro) {
       return seniority3248.computeSeniority({
@@ -88,7 +88,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     hasBeenDayContract,
     dateBecomeDayContract,
     hasBeenExecutive,
-  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC650>): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCc.IDCC650>): RequiredSeniorityResult {
     const seniority3248 = new Seniority3248();
     if (categoriePro) {
       return seniority3248.computeRequiredSeniority({
@@ -134,7 +134,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
 
   private map(
     args: Record<string, string | undefined>
-  ): SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC650> {
+  ): SeniorityRequiredProps<SupportedCc.IDCC650> {
     const categoriePro = args[
       "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle"
     ] as "'A, B, C, D ou E'" | "'F, G, H ou I'";

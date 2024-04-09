@@ -1,18 +1,10 @@
-import {
-  supportedCcn,
-  INDEMNITE_LICENCIEMENT_PRODUCTION_READY_CC,
-} from "@socialgouv/modeles-social";
-import { IS_PREPROD, IS_PROD } from "../../../../config";
+import { supportedCcn } from "@socialgouv/modeles-social";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";
 
-const getSupportedCcIndemniteLicenciement = (): AgreementSupportInfo[] =>
+const getSupportedCc = (): AgreementSupportInfo[] =>
   supportedCcn.map((item) => ({
-    fullySupported:
-      (IS_PREPROD || IS_PROD) &&
-      !INDEMNITE_LICENCIEMENT_PRODUCTION_READY_CC.includes(item.idcc)
-        ? false
-        : item.indemniteLicenciement,
+    fullySupported: item.indemniteLicenciement,
     idcc: item.idcc,
   }));
 
-export default getSupportedCcIndemniteLicenciement;
+export default getSupportedCc;

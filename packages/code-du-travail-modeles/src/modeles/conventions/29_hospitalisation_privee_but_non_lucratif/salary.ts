@@ -3,7 +3,7 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
@@ -20,11 +20,11 @@ export enum CategoryPro29 {
 }
 
 export class ReferenceSalary0029
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0029>
+  implements IReferenceSalary<SupportedCc.IDCC0029>
 {
   mapSituation(
     args: Record<string, string | undefined>
-  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0029> {
+  ): ReferenceSalaryProps<SupportedCc.IDCC0029> {
     const category =
       args[
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle"
@@ -55,7 +55,7 @@ export class ReferenceSalary0029
     salaires = [],
     professionalCategory,
     bestSalariesTotal,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0029>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC0029>): number {
     if (professionalCategory === CategoryPro29.assistant) {
       const rankedSalaires = rankByMonthArrayDescFrench(salaires);
       const salaryValues = rankedSalaires
