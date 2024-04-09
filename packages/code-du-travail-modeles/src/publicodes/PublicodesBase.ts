@@ -7,7 +7,7 @@ import {
   getNotifications,
   getNotificationsBloquantes,
   getReferences,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../modeles/common";
 import type { Publicodes } from "./Publicodes";
 import type {
@@ -19,7 +19,7 @@ import type {
 } from "./types";
 
 export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
-  idcc: SupportedCcIndemniteLicenciement;
+  idcc: SupportedCc;
 
   engine: Engine;
 
@@ -34,14 +34,10 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     situation: [],
   };
 
-  protected constructor(
-    rules: any,
-    targetRule: string,
-    idcc?: SupportedCcIndemniteLicenciement
-  ) {
+  protected constructor(rules: any, targetRule: string, idcc?: SupportedCc) {
     this.engine = new Engine(rules);
     this.targetRule = targetRule;
-    this.idcc = idcc ?? SupportedCcIndemniteLicenciement.default;
+    this.idcc = idcc ?? SupportedCc.default;
   }
 
   execute(rule: string): TResult {

@@ -66,8 +66,6 @@ describe("ReferencesJuridiques", () => {
             </svg>
             <span
               class="sc-fBWQRz lqUBb"
-              font-size="hsmall"
-              font-weight="600"
             >
               Références
             </span>
@@ -76,12 +74,12 @@ describe("ReferencesJuridiques", () => {
             class="sc-fjvvzt gtrYRc"
           >
             <ul
-              class="sc-cfxfcM sc-lnPyaJ kMmTaI iUscuO"
+              class="sc-cfxfcM sc-bVVIoq kMmTaI gHXJXP"
             >
               <li>
                 <a
                   aria-label="Titre 2 (Nouvelle fenêtre)"
-                  class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk no-after"
+                  class="sc-bmzYkS eyKmWS sc-ePDLzJ kuuIgI no-after"
                   href="http://lien2"
                   target="_blank"
                 >
@@ -107,7 +105,7 @@ describe("ReferencesJuridiques", () => {
               <li>
                 <a
                   aria-label="Titre 5 (Nouvelle fenêtre)"
-                  class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk no-after"
+                  class="sc-bmzYkS eyKmWS sc-ePDLzJ kuuIgI no-after"
                   href="http://lien4"
                   target="_blank"
                 >

@@ -6,3 +6,4 @@ contrat salarié . convention collective . journalisme:
   cdtn:
     idcc: 1480
     préavis-retraite: true
+    indemnité-licenciement: false

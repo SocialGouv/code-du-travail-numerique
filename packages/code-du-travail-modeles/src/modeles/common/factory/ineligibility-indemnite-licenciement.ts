@@ -4,17 +4,17 @@ import {
   Ineligibility2596,
   Ineligibility3239,
 } from "../../conventions";
-import { SupportedCcIndemniteLicenciement } from "..";
+import { SupportedCc } from "..";
 import type { IInegibility } from "../types/ineligibility";
 
 export class IneligibilityIndemniteLicenciementFactory {
-  create<T extends SupportedCcIndemniteLicenciement>(idcc: T): IInegibility {
+  create<T extends SupportedCc>(idcc: T): IInegibility {
     switch (idcc) {
-      case SupportedCcIndemniteLicenciement.IDCC3239:
+      case SupportedCc.IDCC3239:
         return new Ineligibility3239();
-      case SupportedCcIndemniteLicenciement.IDCC2596:
+      case SupportedCc.IDCC2596:
         return new Ineligibility2596();
-      case SupportedCcIndemniteLicenciement.IDCC1404:
+      case SupportedCc.IDCC1404:
         return new Ineligibility1404();
       default:
         return new IneligibilityLegalIndemniteLicenciement();

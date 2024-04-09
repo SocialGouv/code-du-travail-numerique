@@ -1,13 +1,14 @@
-import getSupportedCcIndemniteLicenciement from "../getSupportedCc";
+import { SupportedTypes } from "@socialgouv/modeles-social";
+import getSupportedCc from "../getSupportedCc";
 
 describe("utils - indemnite de licenciement", () => {
-  describe("getSupportedCcIndemniteLicenciement", () => {
+  describe("getSupportedCc", () => {
     test("Get the default CC", () => {
-      const supportedCc = getSupportedCcIndemniteLicenciement();
+      const supportedCc = getSupportedCc();
       expect(supportedCc).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
-            fullySupported: true,
+            fullySupported: SupportedTypes.FULLY_SUPPORTED,
             idcc: 2264,
           }),
         ])

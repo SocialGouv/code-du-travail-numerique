@@ -36,82 +36,80 @@ import {
   Seniority3248,
 } from "../../conventions";
 import type { ISeniority } from "../index";
-import { SupportedCcIndemniteLicenciement } from "../index";
+import { SupportedCc } from "../index";
 
 export class SeniorityFactory {
-  create<T extends SupportedCcIndemniteLicenciement>(
-    idcc: T | null
-  ): ISeniority<SupportedCcIndemniteLicenciement> {
+  create<T extends SupportedCc>(idcc: T | null): ISeniority<SupportedCc> {
     switch (idcc) {
-      case SupportedCcIndemniteLicenciement.IDCC2511:
+      case SupportedCc.IDCC2511:
         return new Seniority2511();
-      case SupportedCcIndemniteLicenciement.IDCC3043:
+      case SupportedCc.IDCC3043:
         return new Seniority3043();
-      case SupportedCcIndemniteLicenciement.IDCC1090:
+      case SupportedCc.IDCC1090:
         return new Seniority1090();
-      case SupportedCcIndemniteLicenciement.IDCC1518:
+      case SupportedCc.IDCC1518:
         return new Seniority1518();
-      case SupportedCcIndemniteLicenciement.IDCC2941:
+      case SupportedCc.IDCC2941:
         return new Seniority2941();
-      case SupportedCcIndemniteLicenciement.IDCC1486:
+      case SupportedCc.IDCC1486:
         return new Seniority1486();
-      case SupportedCcIndemniteLicenciement.IDCC1527:
+      case SupportedCc.IDCC1527:
         return new Seniority1527();
-      case SupportedCcIndemniteLicenciement.IDCC0016:
-        return new Seniority16() as ISeniority<SupportedCcIndemniteLicenciement.IDCC0016>;
-      case SupportedCcIndemniteLicenciement.IDCC0292:
+      case SupportedCc.IDCC0016:
+        return new Seniority16() as ISeniority<SupportedCc.IDCC0016>;
+      case SupportedCc.IDCC0292:
         return new Seniority0292();
-      case SupportedCcIndemniteLicenciement.IDCC3239:
+      case SupportedCc.IDCC3239:
         return new Seniority3239();
-      case SupportedCcIndemniteLicenciement.IDCC650:
-        return new Seniority650() as ISeniority<SupportedCcIndemniteLicenciement.IDCC650>;
-      case SupportedCcIndemniteLicenciement.IDCC2216:
+      case SupportedCc.IDCC650:
+        return new Seniority650() as ISeniority<SupportedCc.IDCC650>;
+      case SupportedCc.IDCC2216:
         return new Seniority2216();
-      case SupportedCcIndemniteLicenciement.IDCC0044:
+      case SupportedCc.IDCC0044:
         return new Seniority44();
-      case SupportedCcIndemniteLicenciement.IDCC1996:
+      case SupportedCc.IDCC1996:
         return new Seniority1996();
-      case SupportedCcIndemniteLicenciement.IDCC2098:
+      case SupportedCc.IDCC2098:
         return new Seniority2098();
-      case SupportedCcIndemniteLicenciement.IDCC2609:
+      case SupportedCc.IDCC2609:
         return new Seniority2609();
-      case SupportedCcIndemniteLicenciement.IDCC413:
-        return new Seniority413() as ISeniority<SupportedCcIndemniteLicenciement.IDCC413>;
-      case SupportedCcIndemniteLicenciement.IDCC1516:
+      case SupportedCc.IDCC413:
+        return new Seniority413() as ISeniority<SupportedCc.IDCC413>;
+      case SupportedCc.IDCC1516:
         return new Seniority1516();
-      case SupportedCcIndemniteLicenciement.IDCC1517:
+      case SupportedCc.IDCC1517:
         return new Seniority1517();
-      case SupportedCcIndemniteLicenciement.IDCC2614:
+      case SupportedCc.IDCC2614:
         return new Seniority2614();
-      case SupportedCcIndemniteLicenciement.IDCC1505:
+      case SupportedCc.IDCC1505:
         return new Seniority1505();
-      case SupportedCcIndemniteLicenciement.IDCC1596:
+      case SupportedCc.IDCC1596:
         return new Seniority1596();
-      case SupportedCcIndemniteLicenciement.IDCC1597:
+      case SupportedCc.IDCC1597:
         return new Seniority1597();
-      case SupportedCcIndemniteLicenciement.IDCC275:
+      case SupportedCc.IDCC275:
         return new Seniority275();
-      case SupportedCcIndemniteLicenciement.IDCC1404:
+      case SupportedCc.IDCC1404:
         return new Seniority1404();
-      case SupportedCcIndemniteLicenciement.IDCC1606:
+      case SupportedCc.IDCC1606:
         return new Seniority1606();
-      case SupportedCcIndemniteLicenciement.IDCC1672:
-        return new Seniority1672() as ISeniority<SupportedCcIndemniteLicenciement.IDCC1672>;
-      case SupportedCcIndemniteLicenciement.IDCC1483:
+      case SupportedCc.IDCC1672:
+        return new Seniority1672() as ISeniority<SupportedCc.IDCC1672>;
+      case SupportedCc.IDCC1483:
         return new Seniority1483();
-      case SupportedCcIndemniteLicenciement.IDCC1702:
+      case SupportedCc.IDCC1702:
         return new Seniority1702();
-      case SupportedCcIndemniteLicenciement.IDCC1740:
+      case SupportedCc.IDCC1740:
         return new Seniority1740();
-      case SupportedCcIndemniteLicenciement.IDCC2148:
+      case SupportedCc.IDCC2148:
         return new Seniority2148();
-      case SupportedCcIndemniteLicenciement.IDCC0176:
+      case SupportedCc.IDCC0176:
         return new Seniority176();
-      case SupportedCcIndemniteLicenciement.IDCC2120:
+      case SupportedCc.IDCC2120:
         return new Seniority2120();
-      case SupportedCcIndemniteLicenciement.IDCC3248:
-        return new Seniority3248() as ISeniority<SupportedCcIndemniteLicenciement.IDCC3248>;
-      case SupportedCcIndemniteLicenciement.default:
+      case SupportedCc.IDCC3248:
+        return new Seniority3248() as ISeniority<SupportedCc.IDCC3248>;
+      case SupportedCc.default:
       default:
         return new SeniorityLegal();
     }

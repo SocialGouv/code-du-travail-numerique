@@ -2,13 +2,10 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { OverflowWrapper } from "../OverflowWrapper/index.js";
 import { box, spacings } from "../theme";
 
 export const Table = ({ children, ...props }) => (
-  <OverflowWrapper>
-    <StyledTable {...props}>{children}</StyledTable>
-  </OverflowWrapper>
+  <StyledTable {...props}>{children}</StyledTable>
 );
 
 Table.propTypes = {
@@ -38,7 +35,6 @@ const StyledTable = styled.table`
       `;
     }
   }}
-
   td,
   th {
     padding: ${spacings.small} ${spacings.base};

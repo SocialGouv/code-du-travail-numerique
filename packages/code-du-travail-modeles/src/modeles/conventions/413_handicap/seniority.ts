@@ -8,7 +8,7 @@ import type {
   SeniorityProps,
   SeniorityRequiredProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
   YearDetail,
 } from "../../common";
 import { accumulateAbsenceByYear } from "../../common";
@@ -19,10 +19,10 @@ export type CC0413SeniorityProps = DefaultSeniorityProps & {
   becameExecutiveAt?: string;
 };
 
-export class Seniority413 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC413> {
+export class Seniority413 extends SeniorityDefault<SupportedCc.IDCC413> {
   mapSituation(
     args: Record<string, string | undefined>
-  ): SeniorityProps<SupportedCcIndemniteLicenciement.IDCC413> {
+  ): SeniorityProps<SupportedCc.IDCC413> {
     const categoriePro =
       args[
         "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle"
@@ -47,7 +47,7 @@ export class Seniority413 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     absencePeriods = [],
     isExecutive,
     becameExecutiveAt,
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC413>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.IDCC413>): SeniorityResult {
     const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
     const dSortie = parse(dateSortie, "dd/MM/yyyy", new Date());
     const totalAbsence = absencePeriods
@@ -103,7 +103,7 @@ export class Seniority413 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     dateEntree,
     dateNotification,
     absencePeriods = [],
-  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.default>): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCc.default>): RequiredSeniorityResult {
     const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
     const dSortie = parse(dateNotification, "dd/MM/yyyy", new Date());
     const totalAbsence = absencePeriods

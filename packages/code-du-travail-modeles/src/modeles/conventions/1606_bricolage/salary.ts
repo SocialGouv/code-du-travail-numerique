@@ -2,12 +2,12 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, sum } from "../../common";
 
 export class ReferenceSalary1606
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1606>
+  implements IReferenceSalary<SupportedCc.IDCC1606>
 {
   /**
    * Règle :
@@ -16,7 +16,7 @@ export class ReferenceSalary1606
    **/
   computeReferenceSalary({
     salaires,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1606>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC1606>): number {
     return sum(salaires.map((a: SalaryPeriods) => a.value).filter(nonNullable));
   }
 }

@@ -1,5 +1,9 @@
 import { AgreementSupportInfo } from "./Agreement/types";
-import { Criteria, Situation } from "@socialgouv/modeles-social";
+import {
+  Criteria,
+  Situation,
+  SupportedTypes,
+} from "@socialgouv/modeles-social";
 import { ConventionCollective } from "./type/WizardType";
 
 const createValuesMatcher = (values: Criteria) => (item: Situation) => {
@@ -158,7 +162,7 @@ export const getSupportedCC = (data: Situation[]): AgreementSupportInfo[] => {
 
   return uniqueIDCC.map((item) => {
     return {
-      fullySupported: true,
+      fullySupported: SupportedTypes.FULLY_SUPPORTED,
       idcc: item.idcc,
       withoutLegal: false,
     };

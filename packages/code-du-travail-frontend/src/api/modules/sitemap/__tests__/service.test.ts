@@ -9,6 +9,7 @@ describe("Sitemap", () => {
       "modeles",
       "contributions",
       "agreements",
+      "informations",
     ]);
     expect(result.tools[0]).toEqual({
       _id: "14",
