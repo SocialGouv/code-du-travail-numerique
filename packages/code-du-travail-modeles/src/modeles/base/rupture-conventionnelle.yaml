@@ -59,3 +59,18 @@ contrat salarié . indemnité de licenciement . rupture conventionnelle . résul
   cdtn:
     formule:
       formula: ($formule) * 2
+
+contrat salarié . indemnité de licenciement . rupture conventionnelle . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: contrat salarié . indemnité de licenciement . résultat conventionnel
+  unité: €
+
+contrat salarié . indemnité de licenciement . rupture conventionnelle . hors ANI:
+  valeur: non
+
+contrat salarié . indemnité de licenciement . rupture conventionnelle . résultat conventionnel . hors ani:
+  applicable si: contrat salarié . indemnité de licenciement . rupture conventionnelle . hors ANI
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  rend non applicable: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
+  valeur: 0
+  unité: €

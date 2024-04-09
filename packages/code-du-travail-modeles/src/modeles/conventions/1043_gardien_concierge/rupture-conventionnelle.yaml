@@ -1,0 +1,6 @@
+contrat salarié . convention collective . gardien concierge . rupture conventionnelle:
+  valeur: oui
+
+contrat salarié . convention collective . gardien concierge . rupture conventionnelle . hors ANI:
+  remplace: contrat salarié . indemnité de licenciement . rupture conventionnelle . hors ANI
+  valeur: oui
