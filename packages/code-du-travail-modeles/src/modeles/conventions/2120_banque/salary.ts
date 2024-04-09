@@ -3,7 +3,7 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import {
   QuestionOuiNonWithQuote,
@@ -18,11 +18,11 @@ export type CC2120ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary2120
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2120>
+  implements IReferenceSalary<SupportedCc.IDCC2120>
 {
   mapSituation(
     args: Record<string, string | undefined>
-  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2120> {
+  ): ReferenceSalaryProps<SupportedCc.IDCC2120> {
     const isLicenciementInaptitude = args.licenciementInaptitude === "oui";
     const isLicenciementDisciplinaire = args[
       "contrat salarié . convention collective . banque . licenciement disciplinaire"
@@ -51,7 +51,7 @@ export class ReferenceSalary2120
     salariesVariablePart,
     isLicenciementEco,
     isLicenciementDisciplinaire,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2120>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC2120>): number {
     const rankedSalaires = rankByMonthArrayDescFrench(salaires).slice(0, 12);
     const totalSalaryValues = rankedSalaires.reduce(
       (sum, current) => sum + (current.value ?? 0),

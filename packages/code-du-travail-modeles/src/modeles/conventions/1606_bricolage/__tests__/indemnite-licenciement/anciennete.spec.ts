@@ -1,8 +1,4 @@
-import {
-  MotifKeys,
-  SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { MotifKeys, SeniorityFactory, SupportedCc } from "../../../../common";
 
 describe("CC 1606", () => {
   describe("Calcul de l'ancienneté requise", () => {
@@ -13,9 +9,7 @@ describe("CC 1606", () => {
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC1606
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC1606);
 
         const result = seniority.computeRequiredSeniority({
           absencePeriods: absences,

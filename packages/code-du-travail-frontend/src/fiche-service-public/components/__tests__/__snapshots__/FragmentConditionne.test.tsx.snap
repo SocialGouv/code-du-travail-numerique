@@ -3,10 +3,10 @@
 exports[`FragmentConditionne Should display element within 1`] = `
 <div>
   <div
-    class="sc-ePDLzJ gyQfvT"
+    class="sc-fMMURN wfgCt"
   >
     <h2
-      class="sc-eBHhsj kDuOiA"
+      class="sc-cVzyXs fljumP"
     >
       <span
         class="sc-gsFSXq ljkohw"
@@ -18,74 +18,70 @@ exports[`FragmentConditionne Should display element within 1`] = `
     Le médiateur de l'apprentissage à saisir dépend de l'activité de l'entreprise. Il est désigné par la chambre consulaire.
   </p>
   <div
-    class="sc-ihgnxF eGpXle"
+    class="sc-brPLxw jqqklj"
     data-rttabs="true"
   >
     <div
-      class="sc-gFAWRd jDjoBq sc-jMakVo lbbYbN"
+      class="sc-iMWBiJ iZEClt"
     >
-      <div
-        class="sc-gmPhUn kUNTdL"
+      <ul
+        class="sc-fvtFIe cHMgmW"
+        role="tablist"
       >
-        <ul
-          class="sc-iMTnTL VAkgW"
-          role="tablist"
+        <li
+          aria-controls="react-tabs-1"
+          aria-disabled="false"
+          aria-selected="true"
+          class="sc-bBeLUv hoMOVm react-tabs__tab--selected"
+          data-rttab="true"
+          data-testid="undefined-0"
+          id="react-tabs-0"
+          role="tab"
+          tabindex="0"
         >
-          <li
-            aria-controls="react-tabs-1"
-            aria-disabled="false"
-            aria-selected="true"
-            class="sc-krNlru kTDoAg react-tabs__tab--selected"
-            data-rttab="true"
-            data-testid="undefined-0"
-            id="react-tabs-0"
-            role="tab"
-            tabindex="0"
-          >
-            Commerce - industrie
-          </li>
-          <li
-            aria-controls="react-tabs-3"
-            aria-disabled="false"
-            aria-selected="false"
-            class="sc-krNlru kTDoAg"
-            data-rttab="true"
-            data-testid="undefined-1"
-            id="react-tabs-2"
-            role="tab"
-          >
-            Artisanat
-          </li>
-          <li
-            aria-controls="react-tabs-5"
-            aria-disabled="false"
-            aria-selected="false"
-            class="sc-krNlru kTDoAg"
-            data-rttab="true"
-            data-testid="undefined-2"
-            id="react-tabs-4"
-            role="tab"
-          >
-            Agriculture
-          </li>
-          <li
-            aria-controls="react-tabs-7"
-            aria-disabled="false"
-            aria-selected="false"
-            class="sc-krNlru kTDoAg"
-            data-rttab="true"
-            data-testid="undefined-3"
-            id="react-tabs-6"
-            role="tab"
-          >
-            Secteur public
-          </li>
-        </ul>
-      </div>
+          Commerce - industrie
+        </li>
+        <li
+          aria-controls="react-tabs-3"
+          aria-disabled="false"
+          aria-selected="false"
+          class="sc-bBeLUv hoMOVm"
+          data-rttab="true"
+          data-testid="undefined-1"
+          id="react-tabs-2"
+          role="tab"
+        >
+          Artisanat
+        </li>
+        <li
+          aria-controls="react-tabs-5"
+          aria-disabled="false"
+          aria-selected="false"
+          class="sc-bBeLUv hoMOVm"
+          data-rttab="true"
+          data-testid="undefined-2"
+          id="react-tabs-4"
+          role="tab"
+        >
+          Agriculture
+        </li>
+        <li
+          aria-controls="react-tabs-7"
+          aria-disabled="false"
+          aria-selected="false"
+          class="sc-bBeLUv hoMOVm"
+          data-rttab="true"
+          data-testid="undefined-3"
+          id="react-tabs-6"
+          role="tab"
+        >
+          Secteur public
+        </li>
+      </ul>
     </div>
     <div
       aria-labelledby="react-tabs-0"
-      class="sc-hwdzOV bWfEVW react-tabs__tab-panel--selected"
+      class="sc-ihgnxF bbehlM react-tabs__tab-panel--selected"
       id="react-tabs-1"
       role="tabpanel"
     >
@@ -100,16 +96,16 @@ exports[`FragmentConditionne Should display element within 1`] = `
         </h2>
       </div>
       <div
-        class="sc-jaXxmE SGmXF"
+        class="sc-jMakVo gHeVja"
       >
         <p>
           Il faut saisir la chambre de commerce et d'industrie.
         </p>
         <div
-          class="sc-eulNck dyxMsr"
+          class="sc-dPZUQH cPUyur"
         >
           <strong
-            class="sc-dExYaf frjJRt"
+            class="sc-eBHhsj eVSIbs"
           >
             Ou s'adresser ?
           </strong>
@@ -126,19 +122,19 @@ exports[`FragmentConditionne Should display element within 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-2"
-      class="sc-hwdzOV bWfEVW"
+      class="sc-ihgnxF bbehlM"
       id="react-tabs-3"
       role="tabpanel"
     />
     <div
       aria-labelledby="react-tabs-4"
-      class="sc-hwdzOV bWfEVW"
+      class="sc-ihgnxF bbehlM"
       id="react-tabs-5"
       role="tabpanel"
     />
     <div
       aria-labelledby="react-tabs-6"
-      class="sc-hwdzOV bWfEVW"
+      class="sc-ihgnxF bbehlM"
       id="react-tabs-7"
       role="tabpanel"
     />

@@ -1,11 +1,8 @@
-import {
-  ReferenceSalaryFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { ReferenceSalaryFactory, SupportedCc } from "../../../../common";
 
 describe("Calcul du salaire pour la CC 675", () => {
   const factory = new ReferenceSalaryFactory();
-  const sref = factory.create(SupportedCcIndemniteLicenciement.IDCC0675);
+  const sref = factory.create(SupportedCc.IDCC0675);
 
   test.each`
     salaries                                                                                                                                                                                                                                                                                                                                                                                                                                  | isAgentMaitriseOrCadre | expectedResult

@@ -6,7 +6,7 @@ import {
   NoticeUsed,
 } from "../steps/ResultStep/Components/DecryptedResult";
 import { PreavisRetraiteFormState } from "../form";
-import { AgreementInfo } from "@socialgouv/modeles-social";
+import { AgreementInfo, SupportedTypes } from "@socialgouv/modeles-social";
 
 const agreementSupported = { notice: 2, status: AgreementStatus.Supported };
 const getAgreementSupported = (notice) => ({
@@ -107,13 +107,13 @@ describe("Validation de l'aggregation des données", () => {
   const supportedCcn: AgreementInfo[] = [
     {
       idcc: 292,
-      preavisRetraite: true,
-      indemniteLicenciement: true,
+      preavisRetraite: SupportedTypes.FULLY_SUPPORTED,
+      indemniteLicenciement: SupportedTypes.FULLY_SUPPORTED,
     },
     {
       idcc: 321,
-      preavisRetraite: false,
-      indemniteLicenciement: true,
+      preavisRetraite: SupportedTypes.SOON_SUPPORTED,
+      indemniteLicenciement: SupportedTypes.SOON_SUPPORTED,
     },
   ];
 

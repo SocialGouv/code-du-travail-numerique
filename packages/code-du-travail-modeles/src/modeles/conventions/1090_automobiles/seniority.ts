@@ -7,18 +7,18 @@ import type {
   SeniorityProps,
   SeniorityRequiredProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { parseDate } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
 import { SeniorityDefault } from "../../common/seniority";
 
-export class Seniority1090 extends SeniorityDefault<SupportedCcIndemniteLicenciement.default> {
+export class Seniority1090 extends SeniorityDefault<SupportedCc.default> {
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.default>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.default>): SeniorityResult {
     return this.compute(dateEntree, dateSortie, absencePeriods);
   }
 
@@ -26,7 +26,7 @@ export class Seniority1090 extends SeniorityDefault<SupportedCcIndemniteLicencie
     dateEntree,
     dateNotification,
     absencePeriods = [],
-  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.default>): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCc.default>): RequiredSeniorityResult {
     return this.compute(dateEntree, dateNotification, absencePeriods);
   }
 

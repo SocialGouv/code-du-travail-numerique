@@ -2,14 +2,27 @@ import type { Rule } from "publicodes";
 import type Engine from "publicodes";
 
 import type { AgreementInfo } from "../modeles/common";
-import { getSupportedAgreement } from "../modeles/common";
+import { SupportedTypes } from "../modeles/common";
 
 export type RuleNodeIdcc = Rule & {
   cdtn?: {
     idcc?: number;
     "préavis-retraite"?: boolean;
+    "indemnité-licenciement"?: boolean;
   };
 };
+
+function getSupportedStatus(activated?: boolean) {
+  switch (activated) {
+    case undefined:
+      return SupportedTypes.SOON_SUPPORTED;
+    case true:
+      return SupportedTypes.FULLY_SUPPORTED;
+    case false:
+    default:
+      return SupportedTypes.NEVER_SUPPORTED;
+  }
+}
 
 export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
   return Object.values(engine.getParsedRules())
@@ -21,8 +34,10 @@ export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
         if (idcc) {
           return {
             idcc,
-            indemniteLicenciement: getSupportedAgreement(idcc) ? true : false,
-            preavisRetraite: cdtnNode["préavis-retraite"] ?? false,
+            indemniteLicenciement: getSupportedStatus(
+              cdtnNode["indemnité-licenciement"]
+            ),
+            preavisRetraite: getSupportedStatus(cdtnNode["préavis-retraite"]),
           };
         }
       }

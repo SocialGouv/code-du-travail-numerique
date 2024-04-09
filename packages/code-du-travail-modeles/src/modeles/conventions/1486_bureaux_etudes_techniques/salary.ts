@@ -3,7 +3,7 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
@@ -25,11 +25,11 @@ export type CC1486ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary1486
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1486>
+  implements IReferenceSalary<SupportedCc.IDCC1486>
 {
   mapSituation(
     args: Record<string, string | undefined>
-  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1486> {
+  ): ReferenceSalaryProps<SupportedCc.IDCC1486> {
     return {
       catPro: args[
         "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle"
@@ -62,7 +62,7 @@ export class ReferenceSalary1486
     salaires,
     typeLicenciement,
     catPro,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1486>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC1486>): number {
     if (typeLicenciement === TypeLicenciement1486.refus)
       return new ReferenceSalaryLegal().computeReferenceSalary({ salaires });
 

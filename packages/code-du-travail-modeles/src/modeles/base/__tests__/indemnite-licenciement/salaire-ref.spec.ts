@@ -1,11 +1,8 @@
-import {
-  ReferenceSalaryFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../common";
+import { ReferenceSalaryFactory, SupportedCc } from "../../../common";
 
 describe("computeReferenceSalary", () => {
   const referenceSalary = new ReferenceSalaryFactory().create(
-    SupportedCcIndemniteLicenciement.default
+    SupportedCc.default
   );
 
   it("should compute reference salary for no values", () => {

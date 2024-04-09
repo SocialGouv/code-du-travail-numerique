@@ -265,4 +265,38 @@ describe("Ancienneté store", () => {
       expect(result.isValid).toBe(true);
     });
   });
+
+  it("ne doit pas retourner une erreur sur l'absence si la date de l'embauche est après la date de sortie", () => {
+    const result = validateStep(
+      {
+        dateEntree: "01/01/2020",
+        dateSortie: "01/03/2019",
+        dateNotification: "01/01/2019",
+        motifs: [],
+        absencePeriods: [
+          {
+            motif: {
+              label: "",
+              startAt: () => true,
+              key: MotifKeys.maladieNonPro,
+              value: 1,
+            },
+            startedAt: "01/01/2021",
+            durationInMonth: 2,
+          },
+        ],
+        hasAbsenceProlonge: "oui",
+      },
+      {},
+      {
+        publicodesInformations: [],
+        isStepHidden: false,
+        isStepSalaryHidden: false,
+        hasNoMissingQuestions: true,
+        informationError: false,
+      }
+    );
+    expect(result.isValid).toBe(false);
+    expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual(undefined);
+  });
 });

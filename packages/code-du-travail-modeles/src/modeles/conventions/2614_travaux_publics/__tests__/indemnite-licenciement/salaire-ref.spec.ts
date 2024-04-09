@@ -1,11 +1,8 @@
-import {
-  ReferenceSalaryFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { ReferenceSalaryFactory, SupportedCc } from "../../../../common";
 
 describe("Calcul du salaire pour la CC 2614", () => {
   const factory = new ReferenceSalaryFactory();
-  const sref = factory.create(SupportedCcIndemniteLicenciement.IDCC2614);
+  const sref = factory.create(SupportedCc.IDCC2614);
   describe("Avec salaire variable", () => {
     test.each`
       salaries                                                                                                                                                                                                                                                                                                                                                                                                                                  | expectedResult
