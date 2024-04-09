@@ -11,7 +11,7 @@ module.exports = defineConfig({
     baseUrl: process.env.TEST_BASEURL ?? "http://localhost:3000",
     specPattern: process.env.ALL_TEST
       ? "cypress/integration/**/*.spec.{js,jsx,ts,tsx}"
-      : "cypress/integration/heavy/validate-html.spec.ts",
+      : "cypress/integration/heavy/validate-*.spec.ts",
       // : "cypress/integration/light/*.spec.{js,jsx,ts,tsx}",
     supportFile: "cypress/support/index.ts",
     viewportHeight: 1000,
