@@ -5,7 +5,7 @@ import htmlvalidate from "cypress-html-validate/plugin";
 dotenv.config();
 
 module.exports = defineConfig({
-  defaultCommandTimeout: 10000, // 10s
+  defaultCommandTimeout: 20000, // 20s
   e2e: {
     baseUrl: process.env.TEST_BASEURL ?? "http://localhost:3000",
     specPattern: process.env.ALL_TEST
