@@ -91,7 +91,6 @@ class IndemniteLicenciementPublicodes
       );
       const legal = new SeniorityFactory().create(SupportedCc.default);
       const legalSeniority = legal.computeSeniority(legal.mapSituation(args));
-      console.log("legalSeniority", legalSeniority);
       if (legalSeniority.value !== undefined) {
         newArgs = {
           ...newArgs,
@@ -100,7 +99,6 @@ class IndemniteLicenciementPublicodes
           ...legalSeniority.extraInfos,
         };
       }
-      console.log("agreementSeniority", agreementSeniority);
       if (agreementSeniority.value !== undefined) {
         newArgs = {
           ...newArgs,
@@ -120,12 +118,10 @@ class IndemniteLicenciementPublicodes
       const agreementRequiredSeniority = agreement.computeRequiredSeniority(
         agreement.mapRequiredSituation(args)
       );
-      console.log("agreementRequiredSeniority", agreementRequiredSeniority);
       const legal = new SeniorityFactory().create(SupportedCc.default);
       const legalRequiredSeniority = legal.computeRequiredSeniority(
         legal.mapRequiredSituation(args)
       );
-      console.log("legalRequiredSeniority", legalRequiredSeniority);
       if (legalRequiredSeniority.value !== undefined) {
         newArgs[
           "contrat salarié . indemnité de licenciement . ancienneté requise en année"
