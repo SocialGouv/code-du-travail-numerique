@@ -3,32 +3,32 @@
 exports[`<TypeRemuneration /> should render 1`] = `
 <div>
   <legend
-    class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+    class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iRaavs"
+      class="sc-iMTnTL kgzsrX"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
       <span
-        class="sc-ibQAlb TTAtT"
+        class="sc-iMTnTL gvHveA"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-bDpDS cvgaoL"
+    class="sc-kWtpeL gqNWDj"
   >
     <input
-      class="sc-bVHCgj drRyYL"
+      class="sc-ecPEgm ljcJlA"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="sc-kzqdkY dcQpmU"
+      class="sc-hHOBiw gRpul"
       for="typeRemuneration-amount"
     >
       <span>
@@ -41,17 +41,17 @@ exports[`<TypeRemuneration /> should render 1`] = `
     </label>
   </div>
   <div
-    class="sc-bDpDS cvgaoL"
+    class="sc-kWtpeL gqNWDj"
   >
     <input
-      class="sc-bVHCgj drRyYL"
+      class="sc-ecPEgm ljcJlA"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="sc-kzqdkY dcQpmU"
+      class="sc-hHOBiw gRpul"
       for="typeRemuneration-pay"
     >
       <span>
