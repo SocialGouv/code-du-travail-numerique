@@ -47,15 +47,27 @@ export const downloadAllUrlsToValidate = async () => {
     urls.push("/convention-collective/" + doc.slug);
   });
 
+  fs.writeFileSync(
+    "./cypress/support/urls-to-validate.json",
+    JSON.stringify(urls)
+  );
+  console.log(
+    "Urls à valider sauvegardées dans le fichier ./cypress/support/urls-to-validate.json"
+  );
+
+  const urlsContributions: string[] = [];
   data.contributions.forEach((contrib) => {
-    urls.push("/contribution/" + contrib.generic.slug);
+    urlsContributions.push("/contribution/" + contrib.generic.slug);
     contrib.agreements.forEach((doc) => {
-      urls.push("/contribution/" + doc.slug);
+      urlsContributions.push("/contribution/" + doc.slug);
     });
   });
 
-  fs.writeFile("./cypress/support/urls-to-validate.json", JSON.stringify(urls));
+  fs.writeFileSync(
+    "./cypress/support/urls-contributions-to-validate.json",
+    JSON.stringify(urlsContributions)
+  );
   console.log(
-    "Urls to validate saved to file ./cypress/support/urls-to-validate.json"
+    "Urls des contributions à valider sauvegardées dans le fichier ./cypress/support/urls-contributions-to-validate.json"
   );
 };
