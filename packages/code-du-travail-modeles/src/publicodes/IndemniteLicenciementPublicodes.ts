@@ -163,20 +163,21 @@ class IndemniteLicenciementPublicodes
       ]
     ) {
       const s = new ReferenceSalaryFactory().create(this.idcc);
-      const value = s.computeReferenceSalary(
-        s.mapSituation
-          ? s.mapSituation(args)
-          : {
-              salaires: args.salaryPeriods
-                ? JSON.parse(args.salaryPeriods)
-                : [],
-            }
-      );
+      const salarySituation = s.mapSituation
+        ? s.mapSituation(args)
+        : {
+            salaires: args.salaryPeriods ? JSON.parse(args.salaryPeriods) : [],
+          };
+      const salaryExtraInfo = s.computeExtraInfo
+        ? s.computeExtraInfo(salarySituation)
+        : {};
+      const value = s.computeReferenceSalary(salarySituation);
       if (value) {
         newArgs = {
           ...newArgs,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             value.toString(),
+          ...salaryExtraInfo,
         };
       }
     }
