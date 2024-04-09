@@ -140,6 +140,11 @@ export const ui = {
         "infos.contrat salarié - convention collective - établissement handicap - indemnité de licenciement - catégorie professionnelle"
       ),
     },
+    agreement675: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle"
+      ),
+    },
     agreement44: {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
@@ -229,7 +234,9 @@ export const ui = {
           "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle - agents - licenciement économique question - Non"
         ),
       },
-      age: byTestId("infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle - agents - licenciement économique - age")
+      age: byTestId(
+        "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle - agents - licenciement économique - age"
+      ),
     },
     agreement2120: {
       proCategory: byTestId(
@@ -387,11 +394,11 @@ export const ui = {
       hasContractSalary: {
         oui: byTestId("hasContractSalary - Oui"),
         non: byTestId("hasContractSalary - Non"),
-      }
+      },
     },
     agreement2120: {
-      salariesVariablePart: byTestId("salariesVariablePart")
-    }
+      salariesVariablePart: byTestId("salariesVariablePart"),
+    },
   },
   result: {
     resultat: byText(/À partir des éléments que vous avez saisis/),
@@ -451,7 +458,7 @@ export const ui = {
     resultTableRows: byTestId("table-result-row"),
     agreement3239: {
       result: byText(/À partir des éléments que vous avez saisis/),
-    }
+    },
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),
