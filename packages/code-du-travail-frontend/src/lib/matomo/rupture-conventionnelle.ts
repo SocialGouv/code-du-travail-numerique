@@ -25,6 +25,7 @@ export const useRuptureCoEventEmitter = () => {
     eventEmitter.subscribe(EventType.TRACK_QUESTION, (titre) => {
       trackQuestion(titre, MatomoActionEvent.RUPTURE_CONVENTIONNELLE);
     });
+
     return () => {
       eventEmitter.unsubscribe(EventType.SEND_RESULT_EVENT);
       eventEmitter.unsubscribe(EventType.TRACK_QUESTION);
