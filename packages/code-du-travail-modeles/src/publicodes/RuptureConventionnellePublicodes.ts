@@ -1,17 +1,52 @@
-import type { References } from "../modeles/common";
+import type {
+  IReferenceSalary,
+  ISeniority,
+  References,
+} from "../modeles/common";
 import {
   DismissalReasonFactory,
+  IneligibilityRuptureConventionnelleFactory,
+  ReferenceSalaryFactory,
+  SeniorityFactory,
   SupportedCcIndemniteLicenciement,
 } from "../modeles/common";
+import type { IInegibility } from "../modeles/common/types/ineligibility";
 import IndemniteLicenciementPublicodes from "./IndemniteLicenciementPublicodes";
 import type {
+  IndemniteDepartInstance,
   PublicodesData,
   PublicodesDataWithFormula,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
 import { mergeMissingArgs } from "./utils";
 
+class IndemniteRuptureConventionnelleInstance
+  implements IndemniteDepartInstance
+{
+  public ineligibility: IInegibility;
+
+  public seniority: ISeniority<SupportedCcIndemniteLicenciement>;
+
+  public salary: IReferenceSalary<SupportedCcIndemniteLicenciement>;
+
+  constructor(idcc: SupportedCcIndemniteLicenciement) {
+    this.ineligibility =
+      new IneligibilityRuptureConventionnelleFactory().create(idcc);
+    this.seniority = new SeniorityFactory().create(idcc);
+    this.salary = new ReferenceSalaryFactory().create(idcc);
+  }
+}
+
 class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
+  constructor(models: any, idcc?: string) {
+    super(models, idcc);
+    if (idcc) {
+      this.agreementInstance = new IndemniteRuptureConventionnelleInstance(
+        idcc as SupportedCcIndemniteLicenciement
+      );
+    }
+  }
+
   getReferences(): References[] {
     return super.getReferences("rupture conventionnelle");
   }
@@ -27,34 +62,41 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
       const reasons = dismissalReason.dismissalTypes();
       if (reasons.length === 0) {
         agreementResult = this.calculateAgreement(args);
-        return {
-          detail: {
-            agreementResult: agreementResult.result,
-            chosenResult: "AGREEMENT",
-          },
-          formula: this.getFormule(),
-          missingArgs: agreementResult.missingArgs,
-          result: agreementResult.result,
-          situation: this.data.situation,
-        };
+        if (agreementResult) {
+          return {
+            detail: {
+              agreementResult: agreementResult.result,
+              chosenResult: "AGREEMENT",
+            },
+            formula: this.getFormule(),
+            missingArgs: agreementResult.missingArgs,
+            result: agreementResult.result,
+            situation: this.data.situation,
+          };
+        }
       } else {
-        const situations = reasons.map(({ rules }) => {
+        const situations = reasons.reduce<
+          PublicodesData<PublicodesIndemniteLicenciementResult>[]
+        >((acc, { rules }) => {
           const newArgs = args;
           rules.forEach(({ rule, value }) => {
             newArgs[rule] = value;
           });
-          return this.calculateAgreement(newArgs);
-        });
+          const calculatedAgreement = this.calculateAgreement(newArgs);
+          if (calculatedAgreement) {
+            acc.push(calculatedAgreement);
+          }
+          return acc;
+        }, []);
         const missingArgsFinal = mergeMissingArgs(
-          situations.map((item) => item.missingArgs)
+          situations.map((item) => item.missingArgs ?? [])
         );
 
         const agreementIneligibility = situations.find(
-          ({ ineligibility }) => ineligibility
+          (situation) => situation.ineligibility
         );
 
         if (missingArgsFinal.length || agreementIneligibility) {
-          console.log("missingArgsFinal", missingArgsFinal);
           return {
             ineligibility: agreementIneligibility?.ineligibility,
             missingArgs: missingArgsFinal,
@@ -72,63 +114,64 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
           missingArgs: missingArgsFinal,
         };
       }
-      let legalResult:
-        | PublicodesData<PublicodesIndemniteLicenciementResult>
-        | undefined = undefined;
-      const noLegalIndemnity = this.hasNoLegalIndemnity();
-      if (!noLegalIndemnity) {
-        legalResult = this.calculateLegal(args);
-        if (
-          !legalResult.result ||
-          legalResult.missingArgs.length ||
-          legalResult.ineligibility
-        ) {
-          console.log("legalResult", legalResult);
-          return {
-            ineligibility: legalResult.ineligibility,
-            missingArgs: legalResult.missingArgs,
-            situation: this.data.situation,
-          };
-        }
-      }
-      if (this.idcc === SupportedCcIndemniteLicenciement.default) {
+    }
+    let legalResult:
+      | PublicodesData<PublicodesIndemniteLicenciementResult>
+      | undefined = undefined;
+    const noLegalIndemnity = this.hasNoLegalIndemnity();
+    if (!noLegalIndemnity) {
+      legalResult = this.calculateLegal(args, !!this.agreementInstance);
+      if (
+        !legalResult.result ||
+        legalResult.missingArgs.length ||
+        legalResult.ineligibility
+      ) {
+        console.log("legalResult", legalResult);
         return {
-          detail: {
-            chosenResult: "LEGAL",
-            legalResult: legalResult?.result,
-          },
-          formula: this.getFormule(),
-          missingArgs: legalResult?.missingArgs ?? [],
-          result: legalResult?.result,
+          ineligibility: legalResult.ineligibility,
+          missingArgs: legalResult.missingArgs,
           situation: this.data.situation,
         };
       }
-      const chosenResult =
-        !agreementResult.result?.value ||
-        !legalResult?.result?.value ||
-        this.hasNoLegalIndemnity()
-          ? "HAS_NO_LEGAL"
-          : this.compareLegalAndAgreement(
-              legalResult.result.value as number,
-              agreementResult.result.value as number
-            );
-      console.log("legalResult", legalResult);
-      console.log("agreementResult", agreementResult);
+    }
+    if (
+      !agreementResult?.result ||
+      this.idcc === SupportedCcIndemniteLicenciement.default
+    ) {
       return {
         detail: {
-          agreementResult: agreementResult.result,
-          chosenResult,
+          chosenResult: "LEGAL",
           legalResult: legalResult?.result,
         },
-        ineligibility: agreementResult.ineligibility,
-        missingArgs: agreementResult.missingArgs,
-        result:
-          chosenResult === "LEGAL"
-            ? legalResult?.result
-            : agreementResult.result,
-        situation: agreementResult.situation,
+        formula: this.getFormule(),
+        missingArgs: legalResult?.missingArgs ?? [],
+        result: legalResult?.result,
+        situation: this.data.situation,
       };
     }
+    const chosenResult =
+      !agreementResult.result.value ||
+      !legalResult?.result?.value ||
+      this.hasNoLegalIndemnity()
+        ? "HAS_NO_LEGAL"
+        : this.compareLegalAndAgreement(
+            legalResult.result.value as number,
+            agreementResult.result.value as number
+          );
+    console.log("legalResult", legalResult);
+    console.log("agreementResult", agreementResult);
+    return {
+      detail: {
+        agreementResult: agreementResult.result,
+        chosenResult,
+        legalResult: legalResult?.result,
+      },
+      ineligibility: agreementResult.ineligibility,
+      missingArgs: agreementResult.missingArgs,
+      result:
+        chosenResult === "LEGAL" ? legalResult?.result : agreementResult.result,
+      situation: agreementResult.situation,
+    };
   }
 }
 

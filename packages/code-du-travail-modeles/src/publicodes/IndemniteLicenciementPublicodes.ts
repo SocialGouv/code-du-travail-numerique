@@ -1,5 +1,6 @@
 import type { EvaluatedNode } from "publicodes";
 
+import type { IReferenceSalary, ISeniority } from "../modeles/common";
 import {
   IneligibilityIndemniteLicenciementFactory,
   ReferenceSalaryFactory,
@@ -9,11 +10,28 @@ import {
 import type { IInegibility } from "../modeles/common/types/ineligibility";
 import { PublicodesBase } from "./PublicodesBase";
 import type {
+  IndemniteDepartInstance,
   PublicodesData,
   PublicodesDataWithFormula,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
+
+class IndemniteLicenciementInstance implements IndemniteDepartInstance {
+  public ineligibility: IInegibility;
+
+  public seniority: ISeniority<SupportedCcIndemniteLicenciement>;
+
+  public salary: IReferenceSalary<SupportedCcIndemniteLicenciement>;
+
+  constructor(idcc: SupportedCcIndemniteLicenciement) {
+    this.ineligibility = new IneligibilityIndemniteLicenciementFactory().create(
+      idcc
+    );
+    this.seniority = new SeniorityFactory().create(idcc);
+    this.salary = new ReferenceSalaryFactory().create(idcc);
+  }
+}
 
 class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemniteLicenciementResult> {
   protected legalIneligibilityInstance: IInegibility =
@@ -21,24 +39,26 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
       SupportedCcIndemniteLicenciement.default
     );
 
-  protected agreementIneligibilityInstance: IInegibility;
+  protected legalInstance: IndemniteLicenciementInstance =
+    new IndemniteLicenciementInstance(SupportedCcIndemniteLicenciement.default);
+
+  protected agreementInstance?: IndemniteDepartInstance;
 
   constructor(models: any, idcc?: string) {
     const rules = {
       ...models.base,
       ...(idcc ? models[idcc] : {}),
     };
-
     super(
       rules,
       PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_LICENCIEMENT],
       idcc as SupportedCcIndemniteLicenciement
     );
-
-    this.agreementIneligibilityInstance =
-      new IneligibilityIndemniteLicenciementFactory().create(
+    if (idcc) {
+      this.agreementInstance = new IndemniteLicenciementInstance(
         idcc as SupportedCcIndemniteLicenciement
       );
+    }
   }
 
   public calculate(
@@ -49,11 +69,17 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
       | undefined = undefined;
     if (this.idcc !== SupportedCcIndemniteLicenciement.default) {
       agreementResult = this.calculateAgreement(args);
-
-      if (agreementResult.missingArgs.length || agreementResult.ineligibility) {
+      console.log("agreementResult", agreementResult);
+      if (
+        agreementResult &&
+        (agreementResult.missingArgs.length || agreementResult.ineligibility)
+      ) {
         return {
           ineligibility: agreementResult.ineligibility,
           missingArgs: agreementResult.missingArgs,
+          result: {
+            value: 0,
+          },
           situation: this.data.situation,
         };
       }
@@ -65,7 +91,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
       | PublicodesData<PublicodesIndemniteLicenciementResult>
       | undefined = undefined;
     if (!noLegalIndemnity) {
-      legalResult = this.calculateLegal(args);
+      legalResult = this.calculateLegal(args, !!this.agreementInstance);
       if (
         !legalResult.result ||
         legalResult.missingArgs.length ||
@@ -79,10 +105,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
       }
     }
 
-    if (
-      this.idcc === SupportedCcIndemniteLicenciement.default &&
-      legalResult?.result
-    ) {
+    if (!this.agreementInstance && legalResult?.result) {
       return {
         detail: {
           chosenResult: "LEGAL",
@@ -153,7 +176,8 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
   }
 
   protected calculateLegal(
-    args: Record<string, string | undefined>
+    args: Record<string, string | undefined>,
+    disableIneligibilityCheck = false
   ): PublicodesData<PublicodesIndemniteLicenciementResult> {
     const ineligibility =
       this.legalIneligibilityInstance.getIneligibility(args);
@@ -162,10 +186,12 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
     }
     args = this.mapSeniorityArgs(args);
     args = this.mapRequiredSeniorityArgs(args);
-    const ineligibilityWithSeniority =
-      this.legalIneligibilityInstance.getIneligibility(args);
-    if (ineligibilityWithSeniority) {
-      return this.mapIneligibility(ineligibilityWithSeniority);
+    if (!disableIneligibilityCheck) {
+      const ineligibilityWithSeniority =
+        this.legalIneligibilityInstance.getIneligibility(args);
+      if (ineligibilityWithSeniority) {
+        return this.mapIneligibility(ineligibilityWithSeniority);
+      }
     }
     args = this.mapSalaryArgs(args);
     const situation = this.removeNonPublicodeFields(args);
@@ -177,28 +203,26 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
 
   protected calculateAgreement(
     args: Record<string, string | undefined>
-  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
+  ): PublicodesData<PublicodesIndemniteLicenciementResult> | undefined {
+    if (!this.agreementInstance) return;
     const ineligibility =
-      this.agreementIneligibilityInstance.getIneligibility(args);
+      this.agreementInstance.ineligibility.getIneligibility(args);
     if (ineligibility) {
       return this.mapIneligibility(ineligibility);
     }
-    args = this.mapSeniorityArgs(args, this.idcc);
-    args = this.mapRequiredSeniorityArgs(args, this.idcc);
+    args = this.mapSeniorityArgs(args);
+    args = this.mapRequiredSeniorityArgs(args);
     const ineligibilityWithSeniority =
-      this.agreementIneligibilityInstance.getIneligibility(args);
+      this.agreementInstance.ineligibility.getIneligibility(args);
     if (ineligibilityWithSeniority) {
       return this.mapIneligibility(ineligibilityWithSeniority);
     }
-    args = this.mapSalaryArgs(args, this.idcc);
-    console.log("situation1", args);
+    args = this.mapSalaryArgs(args);
     const situation = this.removeNonPublicodeFields(args);
-    console.log("situation2", situation);
     const result = super.setSituation(
       situation,
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
-    console.log("result", result);
     return result;
   }
 
@@ -235,8 +259,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
   }
 
   private mapSeniorityArgs(
-    args: Record<string, string | undefined>,
-    idcc = SupportedCcIndemniteLicenciement.default
+    args: Record<string, string | undefined>
   ): Record<string, string | undefined> {
     let newArgs = args;
 
@@ -244,14 +267,23 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
       "contrat salarié . indemnité de licenciement . date d'entrée",
       "contrat salarié . indemnité de licenciement . date de sortie",
     ]);
+
     if (!missingArgSeniority) {
-      const agreement = new SeniorityFactory().create(idcc);
-      const agreementSeniority = agreement.computeSeniority(
-        agreement.mapSituation(args)
-      );
-      const legal = new SeniorityFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
+      if (this.agreementInstance) {
+        const agreement = this.agreementInstance.seniority;
+        const agreementSeniority = agreement.computeSeniority(
+          agreement.mapSituation(args)
+        );
+        if (agreementSeniority.value !== undefined) {
+          newArgs = {
+            ...newArgs,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              agreementSeniority.value.toString(),
+            ...agreementSeniority.extraInfos,
+          };
+        }
+      }
+      const legal = this.legalInstance.seniority;
       const legalSeniority = legal.computeSeniority(legal.mapSituation(args));
       if (legalSeniority.value !== undefined) {
         newArgs = {
@@ -261,25 +293,13 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
           ...legalSeniority.extraInfos,
         };
       }
-      if (
-        idcc !== SupportedCcIndemniteLicenciement.default &&
-        agreementSeniority.value !== undefined
-      ) {
-        newArgs = {
-          ...newArgs,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            agreementSeniority.value.toString(),
-          ...agreementSeniority.extraInfos,
-        };
-      }
     }
 
     return newArgs;
   }
 
   private mapRequiredSeniorityArgs(
-    args: Record<string, string | undefined>,
-    idcc = SupportedCcIndemniteLicenciement.default
+    args: Record<string, string | undefined>
   ): Record<string, string | undefined> {
     const newArgs = args;
 
@@ -289,10 +309,17 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
       "contrat salarié . indemnité de licenciement . date de notification",
     ]);
     if (!missingArgRequiredSeniority) {
-      const agreement = new SeniorityFactory().create(idcc);
-      const agreementRequiredSeniority = agreement.computeRequiredSeniority(
-        agreement.mapRequiredSituation(args)
-      );
+      if (this.agreementInstance) {
+        const agreement = this.agreementInstance.seniority;
+        const agreementRequiredSeniority = agreement.computeRequiredSeniority(
+          agreement.mapRequiredSituation(args)
+        );
+        if (agreementRequiredSeniority.value !== undefined) {
+          newArgs[
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
+          ] = agreementRequiredSeniority.value.toString();
+        }
+      }
       const legal = new SeniorityFactory().create(
         SupportedCcIndemniteLicenciement.default
       );
@@ -304,22 +331,13 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
           "contrat salarié . indemnité de licenciement . ancienneté requise en année"
         ] = legalRequiredSeniority.value.toString();
       }
-      if (
-        idcc !== SupportedCcIndemniteLicenciement.default &&
-        agreementRequiredSeniority.value !== undefined
-      ) {
-        newArgs[
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
-        ] = agreementRequiredSeniority.value.toString();
-      }
     }
 
     return newArgs;
   }
 
   private mapSalaryArgs(
-    args: Record<string, string | undefined>,
-    idcc = SupportedCcIndemniteLicenciement.default
+    args: Record<string, string | undefined>
   ): Record<string, string | undefined> {
     let newArgs = args;
 
@@ -343,13 +361,13 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
       }
     }
     if (
-      idcc !== SupportedCcIndemniteLicenciement.default &&
+      this.agreementInstance &&
       args.salaryPeriods &&
       !args[
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
       ]
     ) {
-      const s = new ReferenceSalaryFactory().create(idcc);
+      const s = this.agreementInstance.salary;
       const value = s.computeReferenceSalary(
         s.mapSituation
           ? s.mapSituation(args)

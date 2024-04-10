@@ -6,7 +6,13 @@ import type {
   Unit,
 } from "publicodes";
 
-import type { Formula } from "../modeles";
+import type {
+  Formula,
+  IReferenceSalary,
+  ISeniority,
+  SupportedCcIndemniteLicenciement,
+} from "../modeles";
+import type { IInegibility } from "../modeles/common/types/ineligibility";
 import type {
   IndemniteLicenciementPublicodes,
   PreavisRetraitePublicodes,
@@ -129,3 +135,11 @@ export type PublicodesInstance<T extends PublicodesSimulator> =
     : T extends PublicodesSimulator.RUPTURE_CONVENTIONNELLE
     ? RuptureConventionnellePublicodes
     : never;
+
+export interface IndemniteDepartInstance {
+  ineligibility: IInegibility;
+
+  seniority: ISeniority<SupportedCcIndemniteLicenciement>;
+
+  salary: IReferenceSalary<SupportedCcIndemniteLicenciement>;
+}

@@ -8,6 +8,7 @@ export class Ineligibility1404 extends IneligibilityLegalIndemniteLicenciement {
     if (contractIneligibility) {
       return contractIneligibility;
     }
+    console.log("args", args);
     if (
       args[
         "contrat salarié . convention collective . sedima . question cdi opération"
@@ -18,9 +19,6 @@ export class Ineligibility1404 extends IneligibilityLegalIndemniteLicenciement {
       args[
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
       ] &&
-      args[
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
-      ] &&
       Math.max(
         parseFloat(
           args[
@@ -30,7 +28,7 @@ export class Ineligibility1404 extends IneligibilityLegalIndemniteLicenciement {
         parseFloat(
           args[
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
-          ]
+          ] ?? "0"
         )
       ) < 8
     ) {
