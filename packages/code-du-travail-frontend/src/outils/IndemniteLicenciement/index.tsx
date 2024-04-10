@@ -16,6 +16,7 @@ import {
   StepIntro,
   StepResultat,
 } from "./steps";
+import { useIndemniteLicenciementEventEmitter } from "../CommonIndemniteDepart/events/indemnite-licenciement";
 
 type Props = {
   icon: string;
@@ -66,6 +67,7 @@ export const CalculateurIndemniteLicenciement = ({
   title,
   displayTitle,
 }: Props): JSX.Element => {
+  useIndemniteLicenciementEventEmitter();
   return (
     <CalculateurIndemnite
       icon={icon}
@@ -73,6 +75,7 @@ export const CalculateurIndemniteLicenciement = ({
       displayTitle={displayTitle}
       tool={IndemniteDepartType.LICENCIEMENT}
       steps={steps}
+      hasFeedbackPopup={true}
     />
   );
 };

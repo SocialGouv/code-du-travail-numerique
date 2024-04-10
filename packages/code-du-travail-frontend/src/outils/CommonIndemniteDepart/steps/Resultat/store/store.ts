@@ -30,6 +30,7 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import getSupportedCc from "../../../common/usecase/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
+import { EventType, eventEmitter } from "../../../events/emitter";
 
 const initialState: ResultStoreData = {
   input: {
@@ -89,14 +90,7 @@ const createResultStore: StoreSlice<
         ancienneteEligibility &&
         informationEligibility;
 
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoBaseEvent.OUTIL,
-        MatomoActionEvent.INDEMNITE_LICENCIEMENT,
-        isEligible
-          ? IndemniteDepartStepName.Resultat
-          : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
-      ]);
+      eventEmitter.dispatch(EventType.SEND_RESULT_EVENT, isEligible);
 
       set(
         produce((state: ResultStoreSlice) => {
