@@ -8,13 +8,11 @@ import {
   TextQuestion,
 } from "../../../Components";
 import { reverseValues } from "../../../publicodes";
-import { MatomoActionEvent, trackQuestion } from "../../../../lib";
-import { icons } from "@socialgouv/cdtn-ui";
+import { EventType, eventEmitter } from "../../../../lib";
 
 interface Props {
   name: string;
   rule: Rule;
-  trackQuestionEvent: MatomoActionEvent;
   value: string | undefined;
   onChange: (value: unknown) => void;
   error?: string;
@@ -25,7 +23,6 @@ interface Props {
 const PubliQuestion: React.FC<Props> = ({
   name,
   rule,
-  trackQuestionEvent,
   value,
   onChange,
   error,
@@ -40,8 +37,8 @@ const PubliQuestion: React.FC<Props> = ({
     ? {
         content: <Html>{rule.description}</Html>,
         trackableFn: (visibility: boolean) => {
-          if (visibility && titre && trackQuestionEvent) {
-            trackQuestion(titre, trackQuestionEvent);
+          if (visibility && titre) {
+            eventEmitter.dispatch(EventType.TRACK_QUESTION, titre);
           }
         },
       }

@@ -20,17 +20,10 @@ import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-custo
 import { AgreementInformation, hasNoBetterAllowance } from "../../../common";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
-import { IndemniteDepartStepName } from "../../..";
-import {
-  MatomoActionEvent,
-  MatomoBaseEvent,
-  MatomoSimulatorEvent,
-} from "../../../../../lib";
-import { push as matopush } from "@socialgouv/matomo-next";
 import getSupportedCc from "../../../common/usecase/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
-import { EventType, eventEmitter } from "../../../events/emitter";
+import { EventType, eventEmitter } from "../../../../../lib";
 
 const initialState: ResultStoreData = {
   input: {

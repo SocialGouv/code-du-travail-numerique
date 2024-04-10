@@ -16,7 +16,7 @@ import {
   StepIntro,
   StepResultat,
 } from "./steps";
-import { useIndemniteLicenciementEventEmitter } from "../CommonIndemniteDepart/events/indemnite-licenciement";
+import { useIndemniteLicenciementEventEmitter } from "../../lib/matomo";
 
 type Props = {
   icon: string;

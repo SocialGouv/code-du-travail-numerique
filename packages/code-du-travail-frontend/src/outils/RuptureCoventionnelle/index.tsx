@@ -16,6 +16,7 @@ import {
   StepContratTravail,
   StepAnciennete,
 } from "./steps";
+import { useRuptureCoEventEmitter } from "../../lib/matomo";
 
 type Props = {
   icon: string;
@@ -68,6 +69,7 @@ export const CalculateurRuptureConventionnelle = ({
   title,
   displayTitle,
 }: Props): JSX.Element => {
+  useRuptureCoEventEmitter();
   return (
     <CalculateurIndemnite
       icon={icon}

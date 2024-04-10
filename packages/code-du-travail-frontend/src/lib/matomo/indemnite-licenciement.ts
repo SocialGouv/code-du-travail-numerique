@@ -1,10 +1,11 @@
 import { useEffect } from "react";
-import { IndemniteDepartStepName } from "..";
+import { IndemniteDepartStepName } from "../../outils/CommonIndemniteDepart";
 import {
   MatomoActionEvent,
   MatomoBaseEvent,
   MatomoSimulatorEvent,
-} from "../../../lib";
+  trackQuestion,
+} from "..";
 import { eventEmitter, EventType } from "./emitter";
 import { push as matopush } from "@socialgouv/matomo-next";
 
@@ -20,8 +21,14 @@ export const useIndemniteLicenciementEventEmitter = () => {
           : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
       ]);
     });
+
+    eventEmitter.subscribe(EventType.TRACK_QUESTION, (titre) => {
+      trackQuestion(titre, MatomoActionEvent.INDEMNITE_LICENCIEMENT);
+    });
+
     return () => {
       eventEmitter.unsubscribe(EventType.SEND_RESULT_EVENT);
+      eventEmitter.unsubscribe(EventType.TRACK_QUESTION);
     };
   }, []);
 };
