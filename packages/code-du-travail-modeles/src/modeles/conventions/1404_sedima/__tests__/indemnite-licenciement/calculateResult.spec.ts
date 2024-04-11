@@ -5,7 +5,7 @@ const engine = new IndemniteLicenciementPublicodes(
   "1404"
 );
 
-describe("Test de la fonctionnalité 'calculateResult'", () => {
+describe("Test de la fonctionnalité 'calculate'", () => {
   test("Si cdi opération pas de missing var si on ne fourni pas le salaire de ref et l'ancienneté requise", () => {
     const { result, missingArgs, detail, formula } = engine.calculate({
       "contrat salarié . convention collective": "'IDCC1404'",

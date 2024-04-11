@@ -3,7 +3,7 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
@@ -22,11 +22,11 @@ export type CC2596ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary2596
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2596>
+  implements IReferenceSalary<SupportedCc.IDCC2596>
 {
   mapSituation(
     args: Record<string, string | undefined>
-  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2596> {
+  ): ReferenceSalaryProps<SupportedCc.IDCC2596> {
     return {
       catPro: args[
         "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle"
@@ -44,7 +44,7 @@ export class ReferenceSalary2596
     salaires = [],
     salairesPendantPreavis = [],
     catPro,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2596>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC2596>): number {
     if (
       catPro === CatPro2596.coiffeur ||
       catPro === CatPro2596.esthetique ||

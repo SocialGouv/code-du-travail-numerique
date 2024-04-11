@@ -8,6 +8,7 @@ import type { Props } from "../EnterpriseSearch/EnterpriseSearch";
 import EnterpriseSearch from "../EnterpriseSearch/EnterpriseSearch";
 import { EnterpriseAgreement } from "../../../../api/modules/enterprises/types";
 import { Simulator } from "../../NoticeExample";
+import { SupportedTypes } from "@socialgouv/modeles-social";
 
 const callback: (
   agreement: Agreement | null,
@@ -336,7 +337,7 @@ describe("EnterpriseSearch", () => {
         selectedEnterprise: selectedEnterpriseOneAgreement,
         supportedAgreements: [
           {
-            fullySupported: true,
+            fullySupported: SupportedTypes.FULLY_SUPPORTED,
             idcc: selectedEnterpriseOneAgreement.conventions[0].num,
           },
         ],
@@ -357,7 +358,7 @@ describe("EnterpriseSearch", () => {
         selectedEnterprise: selectedEnterpriseTwoAgreements,
         supportedAgreements: [
           {
-            fullySupported: true,
+            fullySupported: SupportedTypes.FULLY_SUPPORTED,
             idcc: selectedEnterpriseTwoAgreements.conventions[0].num,
           },
         ],

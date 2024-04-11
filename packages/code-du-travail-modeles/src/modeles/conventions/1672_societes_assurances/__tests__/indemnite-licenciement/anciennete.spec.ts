@@ -1,8 +1,4 @@
-import {
-  MotifKeys,
-  SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { MotifKeys, SeniorityFactory, SupportedCc } from "../../../../common";
 
 describe("Calcul de l'ancienneté : CC 1672", () => {
   describe("Non cadre", () => {
@@ -15,9 +11,7 @@ describe("Calcul de l'ancienneté : CC 1672", () => {
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC1672
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC1672);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -26,7 +20,7 @@ describe("Calcul de l'ancienneté : CC 1672", () => {
           isExecutive: false,
         });
 
-        expect(result.value).toEqual(expectedAnciennete);
+        expect(result?.value).toEqual(expectedAnciennete);
       }
     );
   });
@@ -54,9 +48,7 @@ describe("Calcul de l'ancienneté : CC 1672", () => {
         expectedAnciennete,
         expectedExtras,
       }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC1672
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC1672);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -66,8 +58,8 @@ describe("Calcul de l'ancienneté : CC 1672", () => {
           isExecutive: true,
         });
 
-        expect(result.value).toEqual(expectedAnciennete);
-        expect(result.extraInfos).toEqual(expectedExtras);
+        expect(result?.value).toEqual(expectedAnciennete);
+        expect(result?.extraInfos).toEqual(expectedExtras);
       }
     );
   });

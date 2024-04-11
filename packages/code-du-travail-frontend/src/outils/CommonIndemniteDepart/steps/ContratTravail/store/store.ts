@@ -76,7 +76,7 @@ const createContratTravailStore: StoreSlice<
             get().situationData.situation
           );
 
-          if (result.value === 0 && ineligibility) {
+          if (result && ineligibility) {
             errorEligibility = ineligibility;
           }
         } catch (e) {

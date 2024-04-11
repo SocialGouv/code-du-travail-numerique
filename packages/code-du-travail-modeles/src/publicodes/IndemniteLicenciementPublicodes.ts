@@ -1,11 +1,11 @@
 import type { EvaluatedNode } from "publicodes";
 
-import type { IReferenceSalary, ISeniority } from "../modeles/common";
+import type { Formula, IReferenceSalary, ISeniority } from "../modeles/common";
 import {
   IneligibilityIndemniteLicenciementFactory,
   ReferenceSalaryFactory,
   SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../modeles/common";
 import type { IInegibility } from "../modeles/common/types/ineligibility";
 import { PublicodesBase } from "./PublicodesBase";
@@ -20,11 +20,11 @@ import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
 class IndemniteLicenciementInstance implements IndemniteDepartInstance {
   public ineligibility: IInegibility;
 
-  public seniority: ISeniority<SupportedCcIndemniteLicenciement>;
+  public seniority: ISeniority<SupportedCc>;
 
-  public salary: IReferenceSalary<SupportedCcIndemniteLicenciement>;
+  public salary: IReferenceSalary<SupportedCc>;
 
-  constructor(idcc: SupportedCcIndemniteLicenciement) {
+  constructor(idcc: SupportedCc) {
     this.ineligibility = new IneligibilityIndemniteLicenciementFactory().create(
       idcc
     );
@@ -35,12 +35,10 @@ class IndemniteLicenciementInstance implements IndemniteDepartInstance {
 
 class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemniteLicenciementResult> {
   protected legalIneligibilityInstance: IInegibility =
-    new IneligibilityIndemniteLicenciementFactory().create(
-      SupportedCcIndemniteLicenciement.default
-    );
+    new IneligibilityIndemniteLicenciementFactory().create(SupportedCc.default);
 
   protected legalInstance: IndemniteLicenciementInstance =
-    new IndemniteLicenciementInstance(SupportedCcIndemniteLicenciement.default);
+    new IndemniteLicenciementInstance(SupportedCc.default);
 
   protected agreementInstance?: IndemniteDepartInstance;
 
@@ -52,11 +50,11 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
     super(
       rules,
       PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_LICENCIEMENT],
-      idcc as SupportedCcIndemniteLicenciement
+      idcc as SupportedCc
     );
     if (idcc) {
       this.agreementInstance = new IndemniteLicenciementInstance(
-        idcc as SupportedCcIndemniteLicenciement
+        idcc as SupportedCc
       );
     }
   }
@@ -67,21 +65,24 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
     let agreementResult:
       | PublicodesData<PublicodesIndemniteLicenciementResult>
       | undefined = undefined;
-    if (this.idcc !== SupportedCcIndemniteLicenciement.default) {
+    let agreementFormula: Formula | undefined = undefined;
+    if (this.idcc !== SupportedCc.default) {
       agreementResult = this.calculateAgreement(args);
-      console.log("agreementResult", agreementResult);
-      if (
-        agreementResult &&
-        (agreementResult.missingArgs.length || agreementResult.ineligibility)
-      ) {
-        return {
-          ineligibility: agreementResult.ineligibility,
-          missingArgs: agreementResult.missingArgs,
-          result: {
-            value: 0,
-          },
-          situation: this.data.situation,
-        };
+      if (agreementResult) {
+        agreementFormula = this.getFormule();
+        if (
+          agreementResult.missingArgs.length ||
+          agreementResult.ineligibility
+        ) {
+          return {
+            ineligibility: agreementResult.ineligibility,
+            missingArgs: agreementResult.missingArgs,
+            result: {
+              value: 0,
+            },
+            situation: this.data.situation,
+          };
+        }
       }
     }
 
@@ -90,8 +91,10 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
     let legalResult:
       | PublicodesData<PublicodesIndemniteLicenciementResult>
       | undefined = undefined;
+    let legalFormula: Formula | undefined = undefined;
     if (!noLegalIndemnity) {
       legalResult = this.calculateLegal(args, !!this.agreementInstance);
+      legalFormula = this.getFormule();
       if (
         !legalResult.result ||
         legalResult.missingArgs.length ||
@@ -111,16 +114,14 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
           chosenResult: "LEGAL",
           legalResult: legalResult.result,
         },
-        formula: this.getFormule(),
+        formula: legalFormula,
         missingArgs: legalResult.missingArgs,
         result: legalResult.result,
         situation: this.data.situation,
       };
     }
     const chosenResult =
-      !agreementResult?.result?.value ||
-      !legalResult?.result?.value ||
-      noLegalIndemnity
+      !agreementResult?.result || !legalResult?.result || noLegalIndemnity
         ? "HAS_NO_LEGAL"
         : this.compareLegalAndAgreement(
             legalResult.result.value as number,
@@ -132,7 +133,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
         chosenResult,
         legalResult: legalResult?.result,
       },
-      formula: this.getFormule(),
+      formula: chosenResult === "LEGAL" ? legalFormula : agreementFormula,
       missingArgs: legalResult?.missingArgs ?? [],
       result:
         chosenResult === "LEGAL"
@@ -228,7 +229,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
 
   protected compareLegalAndAgreement(
     legalValue: number,
-    agreementValue: number
+    agreementValue: number | undefined = 0
   ): "AGREEMENT" | "LEGAL" | "SAME" | undefined {
     if (legalValue === agreementValue) {
       return "SAME";
@@ -320,9 +321,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
           ] = agreementRequiredSeniority.value.toString();
         }
       }
-      const legal = new SeniorityFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
+      const legal = new SeniorityFactory().create(SupportedCc.default);
       const legalRequiredSeniority = legal.computeRequiredSeniority(
         legal.mapRequiredSituation(args)
       );
@@ -346,9 +345,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
         "contrat salarié . indemnité de licenciement . salaire de référence"
       ]
     ) {
-      const s = new ReferenceSalaryFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
+      const s = new ReferenceSalaryFactory().create(SupportedCc.default);
       const value = s.computeReferenceSalary({
         salaires: args.salaryPeriods ? JSON.parse(args.salaryPeriods) : [],
       });
@@ -368,20 +365,23 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
       ]
     ) {
       const s = this.agreementInstance.salary;
-      const value = s.computeReferenceSalary(
-        s.mapSituation
-          ? s.mapSituation(args)
-          : {
-              salaires: args.salaryPeriods
-                ? JSON.parse(args.salaryPeriods)
-                : [],
-            }
-      );
+      const salarySituation = s.mapSituation
+        ? s.mapSituation(args)
+        : {
+            salaires: args.salaryPeriods ? JSON.parse(args.salaryPeriods) : [],
+          };
+      const salaryExtraInfo = s.computeExtraInfo
+        ? s.computeExtraInfo(salarySituation)
+        : {};
+      console.log("salaryExtraInfo", salaryExtraInfo);
+      const value = s.computeReferenceSalary(salarySituation);
+      console.log("value", value);
       if (value) {
         newArgs = {
           ...newArgs,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             value.toString(),
+          ...salaryExtraInfo,
         };
       }
     }

@@ -68,7 +68,11 @@ export const searchWithQuery = async (
 
   const query_vector = await vectorizeQuery(query.toLowerCase()).catch(
     (error) => {
-      console.error(error.message);
+      if (error.message === "Cannot vectorize empty query.") {
+        console.log(`[WARNING] Try to vectorize an empty search: ${query}`)
+      } else {
+        console.error(error.message);
+      }
     }
   );
 

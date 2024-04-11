@@ -3,7 +3,7 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, sum } from "../../common";
 
@@ -16,10 +16,10 @@ export type CC2098ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary2098
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2098>
+  implements IReferenceSalary<SupportedCc.IDCC2098>
 {
   computeReferenceSalary(
-    props: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2098>
+    props: ReferenceSalaryProps<SupportedCc.IDCC2098>
   ): number {
     if (props.salaires.length === 0) {
       return 0;

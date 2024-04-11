@@ -22,22 +22,22 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
     >
       <div>
         <div
-          class="sc-fxwrCY djSyec"
+          class="sc-bypJrT nMTGe"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Accessibilité"
             aria-modal="true"
-            class="sc-hIUJlX FpoNy"
+            class="sc-ddjGPC byKttK"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <div
-              class="sc-ePDLzJ gZRBKr"
+              class="sc-fMMURN lkJUCJ"
             >
               <h1
-                class="sc-eBHhsj bPBugd"
+                class="sc-cVzyXs VIuCi"
               >
                 <span
                   class="sc-gsFSXq djREvw"
@@ -52,11 +52,11 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
               Couleurs
             </h2>
             <label
-              class="sc-dBmzty fcjLqu"
+              class="sc-eyvILC erxqfW"
               for="blackAndWhiteTheme"
             >
               <input
-                class="sc-fifgRP cEkCmq"
+                class="sc-gfoqjT UMmfj"
                 id="blackAndWhiteTheme"
                 name="blackAndWhiteTheme"
                 type="checkbox"
@@ -64,7 +64,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
               Passer le site en noir et blanc
             </label>
             <button
-              class="sc-kOPcWz kyVwqT sc-jnOGJG fRzVjo"
+              class="sc-kOPcWz kyVwqT sc-dSCufp iCRrvW"
               title="fermer la modale"
             >
               <div

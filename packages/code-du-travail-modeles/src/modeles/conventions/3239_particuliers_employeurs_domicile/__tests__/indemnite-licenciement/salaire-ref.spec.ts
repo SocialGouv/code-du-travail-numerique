@@ -1,13 +1,8 @@
-import {
-  ReferenceSalaryFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { ReferenceSalaryFactory, SupportedCc } from "../../../../common";
 import { CatPro3239 } from "../../salary";
 
 describe("Calcul du salaire pour la CC 3239", () => {
-  const refSalary = new ReferenceSalaryFactory().create(
-    SupportedCcIndemniteLicenciement.IDCC3239
-  );
+  const refSalary = new ReferenceSalaryFactory().create(SupportedCc.IDCC3239);
 
   describe("Cas standard", () => {
     test.each`

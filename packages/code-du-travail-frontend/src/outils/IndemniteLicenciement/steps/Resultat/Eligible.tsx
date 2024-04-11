@@ -1,4 +1,4 @@
-import { getSupportedAgreement } from "@socialgouv/modeles-social";
+import { SupportedCc, getSupportedAgreement } from "@socialgouv/modeles-social";
 import React, { useContext } from "react";
 import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";

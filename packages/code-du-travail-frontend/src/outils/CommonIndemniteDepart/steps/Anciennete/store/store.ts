@@ -15,7 +15,7 @@ import {
   getSupportedAgreement,
   PublicodesSimulator,
   SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { customSeniorityValidator } from "../../../agreements/seniority";
@@ -47,9 +47,9 @@ const createAncienneteStore: StoreSlice<
       const selectedAgreementIdcc = get().agreementData.input.agreement?.num;
       const idcc = selectedAgreementIdcc
         ? getSupportedAgreement(selectedAgreementIdcc)
-        : SupportedCcIndemniteLicenciement.default;
+        : SupportedCc.default;
       const motifs = new SeniorityFactory()
-        .create(idcc ?? SupportedCcIndemniteLicenciement.default)
+        .create(idcc ?? SupportedCc.default)
         .getMotifs();
       set(
         produce(
@@ -95,9 +95,9 @@ const createAncienneteStore: StoreSlice<
         const selectedAgreementIdcc = get().agreementData.input.agreement?.num;
         const idcc = selectedAgreementIdcc
           ? getSupportedAgreement(selectedAgreementIdcc)
-          : SupportedCcIndemniteLicenciement.default;
+          : SupportedCc.default;
         const motifs = new SeniorityFactory()
-          .create(idcc ?? SupportedCcIndemniteLicenciement.default)
+          .create(idcc ?? SupportedCc.default)
           .getMotifs();
 
         set(
@@ -148,7 +148,7 @@ const createAncienneteStore: StoreSlice<
                 : undefined,
           };
           const { result, ineligibility } = publicodes.calculate(situation);
-          if (result.value === 0 && ineligibility) {
+          if (!result?.value && ineligibility) {
             errorEligibility = ineligibility;
           }
         } catch (e) {
@@ -220,7 +220,7 @@ const applyGenericValidation = (
 const cleanAbsence = (
   absencePeriods: Absence[],
   data: CommonInformationsStoreSlice,
-  idcc: SupportedCcIndemniteLicenciement | undefined = undefined
+  idcc: SupportedCc | undefined = undefined
 ): Absence[] => {
   if (idcc) {
     // clean absence

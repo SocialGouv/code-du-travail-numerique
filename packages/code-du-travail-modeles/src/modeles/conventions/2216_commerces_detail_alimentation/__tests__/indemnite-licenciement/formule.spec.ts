@@ -75,9 +75,9 @@ describe("Formule indemnité licenciement - 2216", () => {
       });
       const result = engine.getFormule();
 
-      expect(result.formula).toEqual(expectedFormula);
-      expect(result.explanations).toEqual(expectedExplanations);
-      expect(result.annotations).toEqual(expectedAnnotations);
+      expect(result?.formula).toEqual(expectedFormula);
+      expect(result?.explanations).toEqual(expectedExplanations);
+      expect(result?.annotations).toEqual(expectedAnnotations);
     }
   );
 });

@@ -1,6 +1,6 @@
 import { IndemniteLicenciementPublicodes } from "../../../../publicodes";
 
-describe("calculateResult", () => {
+describe("calculate", () => {
   test("si pas d'idcc", () => {
     const engine = new IndemniteLicenciementPublicodes(
       modelsIndemniteLicenciement
@@ -22,8 +22,8 @@ describe("calculateResult", () => {
     });
     expect(result.missingArgs).toEqual([]);
     expect(result.detail?.chosenResult).toEqual("LEGAL");
-    expect(result.detail?.legalResult.value).toEqual(1000);
-    expect(result.detail?.legalResult.unit?.numerators).toEqual(["€"]);
+    expect(result.detail?.legalResult?.value).toEqual(1000);
+    expect(result.detail?.legalResult?.unit?.numerators).toEqual(["€"]);
     expect(result.result?.value).toEqual(1000);
     expect(result.result?.unit?.numerators).toEqual(["€"]);
     expect(result.formula?.formula).toEqual("1/4 * Sref * A");
@@ -60,8 +60,8 @@ describe("calculateResult", () => {
     });
     expect(result.missingArgs).toEqual([]);
     expect(result.detail?.chosenResult).toEqual("LEGAL");
-    expect(result.detail?.legalResult.value).toEqual(1000);
-    expect(result.detail?.legalResult.unit?.numerators).toEqual(["€"]);
+    expect(result.detail?.legalResult?.value).toEqual(1000);
+    expect(result.detail?.legalResult?.unit?.numerators).toEqual(["€"]);
     expect(result.result?.value).toEqual(1000);
     expect(result.result?.unit?.numerators).toEqual(["€"]);
     expect(result.detail?.agreementResult?.value).toEqual(80);
@@ -99,8 +99,8 @@ describe("calculateResult", () => {
     });
     expect(result.missingArgs).toEqual([]);
     expect(result.detail?.chosenResult).toEqual("SAME");
-    expect(result.detail?.legalResult.value).toEqual(6333.33);
-    expect(result.detail?.legalResult.unit?.numerators).toEqual(["€"]);
+    expect(result.detail?.legalResult?.value).toEqual(6333.33);
+    expect(result.detail?.legalResult?.unit?.numerators).toEqual(["€"]);
     expect(result.result?.value).toEqual(6333.33);
     expect(result.result?.unit?.numerators).toEqual(["€"]);
     expect(result.detail?.agreementResult?.value).toEqual(6333.33);
@@ -147,8 +147,8 @@ describe("calculateResult", () => {
     });
     expect(result.missingArgs).toEqual([]);
     expect(result.detail?.chosenResult).toEqual("AGREEMENT");
-    expect(result.detail?.legalResult.value).toEqual(6333.33);
-    expect(result.detail?.legalResult.unit?.numerators).toEqual(["€"]);
+    expect(result.detail?.legalResult?.value).toEqual(6333.33);
+    expect(result.detail?.legalResult?.unit?.numerators).toEqual(["€"]);
     expect(result.result?.value).toEqual(15120);
     expect(result.result?.unit?.numerators).toEqual(["€"]);
     expect(result.detail?.agreementResult?.value).toEqual(15120);

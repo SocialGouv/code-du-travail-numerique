@@ -32,8 +32,8 @@ describe("Indemnité légale de licenciement pour un employé", () => {
         "contrat salarié . indemnité de licenciement . salaire de référence":
           salary.toString(),
       });
-      expect(result.value).toEqual(expectedCompensation);
-      expect(result.unit?.numerators).toEqual(["€"]);
+      expect(result?.value).toEqual(expectedCompensation);
+      expect(result?.unit?.numerators).toEqual(["€"]);
       expect(missingArgs).toEqual([]);
     }
   );
@@ -66,8 +66,8 @@ describe("Indemnité légale de licenciement pour un employé", () => {
         "contrat salarié . indemnité de licenciement . salaire de référence":
           salary,
       });
-      expect(result.value).toEqual(expectedCompensation);
-      expect(result.unit?.numerators).toEqual(["€"]);
+      expect(result?.value).toEqual(expectedCompensation);
+      expect(result?.unit?.numerators).toEqual(["€"]);
       expect(missingArgs).toEqual([]);
     }
   );
@@ -84,8 +84,8 @@ describe("Indemnité légale de licenciement pour un employé", () => {
         "contrat salarié . indemnité de licenciement . salaire de référence":
           "2000",
       });
-      expect(result.value).toEqual(0);
-      expect(result.unit?.numerators).toEqual(["€"]);
+      expect(result?.value).toEqual(0);
+      expect(result?.unit?.numerators).toEqual(["€"]);
       expect(missingArgs).toEqual([]);
     });
 
@@ -101,8 +101,8 @@ describe("Indemnité légale de licenciement pour un employé", () => {
         "contrat salarié . indemnité de licenciement . salaire de référence":
           "2000",
       });
-      expect(result.value).toEqual(500);
-      expect(result.unit?.numerators).toEqual(["€"]);
+      expect(result?.value).toEqual(500);
+      expect(result?.unit?.numerators).toEqual(["€"]);
       expect(missingArgs).toEqual([]);
     });
   });

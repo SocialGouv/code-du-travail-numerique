@@ -34,10 +34,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         licenciementFauteGrave: "non",
         typeContratTravail: "cdi",
       });
-      expect(result.missingArgs).toEqual([]);
-      expect(result.result?.value).toEqual(expectedCompensation);
-      expect(result.formula?.formula).toEqual(formula);
-      expect(result.detail?.chosenResult).toEqual("HAS_NO_LEGAL");
+      expect(result?.missingArgs).toEqual([]);
+      expect(result?.result?.value).toEqual(expectedCompensation);
+      expect(result?.formula?.formula).toEqual(formula);
+      expect(result?.detail?.chosenResult).toEqual("HAS_NO_LEGAL");
     }
   );
 });

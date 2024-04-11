@@ -136,7 +136,6 @@ const createCommonAgreementStore: StoreSlicePublicode<
     },
     onNextStep: () => {
       const input = get().agreementData.input;
-      const error = get().agreementData.error;
       const { isValid, errorState } = validateStep(input);
       const { route, agreement, enterprise } = input;
       if (isValid && route) {

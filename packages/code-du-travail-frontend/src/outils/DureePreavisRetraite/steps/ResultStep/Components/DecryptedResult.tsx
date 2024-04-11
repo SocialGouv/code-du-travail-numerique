@@ -2,6 +2,7 @@ import { Paragraph } from "@socialgouv/cdtn-ui";
 import {
   AgreementInfo,
   PublicodesPreavisRetraiteResult,
+  SupportedTypes,
   supportedCcn,
 } from "@socialgouv/modeles-social";
 import React from "react";
@@ -106,7 +107,7 @@ export const createRootData = (
     agreement = {
       notice: agreementResult?.valueInDays ?? 0,
       status: agreementFound
-        ? agreementFound.preavisRetraite
+        ? agreementFound.preavisRetraite === SupportedTypes.FULLY_SUPPORTED
           ? AgreementStatus.Supported
           : AgreementStatus.Planned
         : AgreementStatus.NotSupported,

@@ -1,4 +1,5 @@
 import type {
+  Formula,
   IReferenceSalary,
   ISeniority,
   References,
@@ -8,7 +9,7 @@ import {
   IneligibilityRuptureConventionnelleFactory,
   ReferenceSalaryFactory,
   SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../modeles/common";
 import type { IInegibility } from "../modeles/common/types/ineligibility";
 import IndemniteLicenciementPublicodes from "./IndemniteLicenciementPublicodes";
@@ -25,11 +26,11 @@ class IndemniteRuptureConventionnelleInstance
 {
   public ineligibility: IInegibility;
 
-  public seniority: ISeniority<SupportedCcIndemniteLicenciement>;
+  public seniority: ISeniority<SupportedCc>;
 
-  public salary: IReferenceSalary<SupportedCcIndemniteLicenciement>;
+  public salary: IReferenceSalary<SupportedCc>;
 
-  constructor(idcc: SupportedCcIndemniteLicenciement) {
+  constructor(idcc: SupportedCc) {
     this.ineligibility =
       new IneligibilityRuptureConventionnelleFactory().create(idcc);
     this.seniority = new SeniorityFactory().create(idcc);
@@ -42,7 +43,7 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
     super(models, idcc);
     if (idcc) {
       this.agreementInstance = new IndemniteRuptureConventionnelleInstance(
-        idcc as SupportedCcIndemniteLicenciement
+        idcc as SupportedCc
       );
     }
   }
@@ -57,76 +58,74 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
     let agreementResult:
       | PublicodesData<PublicodesIndemniteLicenciementResult>
       | undefined = undefined;
-    if (this.idcc !== SupportedCcIndemniteLicenciement.default) {
+    let agreementFormula: Formula | undefined = undefined;
+    if (this.agreementInstance) {
       const dismissalReason = new DismissalReasonFactory().create(this.idcc);
       const reasons = dismissalReason.dismissalTypes();
       if (reasons.length === 0) {
         agreementResult = this.calculateAgreement(args);
-        if (agreementResult) {
-          return {
-            detail: {
-              agreementResult: agreementResult.result,
-              chosenResult: "AGREEMENT",
-            },
-            formula: this.getFormule(),
-            missingArgs: agreementResult.missingArgs,
-            result: agreementResult.result,
-            situation: this.data.situation,
-          };
-        }
+        agreementFormula = this.getFormule();
       } else {
         const situations = reasons.reduce<
-          PublicodesData<PublicodesIndemniteLicenciementResult>[]
+          {
+            calculate: PublicodesData<PublicodesIndemniteLicenciementResult>;
+            formula: Formula;
+          }[]
         >((acc, { rules }) => {
           const newArgs = args;
           rules.forEach(({ rule, value }) => {
             newArgs[rule] = value;
           });
           const calculatedAgreement = this.calculateAgreement(newArgs);
+          const formula = this.getFormule();
           if (calculatedAgreement) {
-            acc.push(calculatedAgreement);
+            acc.push({ calculate: calculatedAgreement, formula });
           }
           return acc;
         }, []);
         const missingArgsFinal = mergeMissingArgs(
-          situations.map((item) => item.missingArgs ?? [])
+          situations.map(({ calculate }) => calculate.missingArgs ?? [])
         );
 
         const agreementIneligibility = situations.find(
-          (situation) => situation.ineligibility
+          ({ calculate }) => calculate.ineligibility
         );
 
         if (missingArgsFinal.length || agreementIneligibility) {
           return {
-            ineligibility: agreementIneligibility?.ineligibility,
+            ineligibility: agreementIneligibility?.calculate.ineligibility,
             missingArgs: missingArgsFinal,
             situation: this.data.situation,
           };
         }
-        agreementResult = {
+        const foundSituation = {
           ...situations.reduce((previous, current) => {
-            return previous.result?.value
-              ? previous.result.value < (current.result?.value ?? 0)
+            return previous.calculate.result?.value
+              ? previous.calculate.result.value <
+                (current.calculate.result?.value ?? 0)
                 ? previous
                 : current
               : current;
           }, situations[0]),
           missingArgs: missingArgsFinal,
         };
+        agreementResult = foundSituation.calculate;
+        agreementFormula = foundSituation.formula;
       }
     }
     let legalResult:
       | PublicodesData<PublicodesIndemniteLicenciementResult>
       | undefined = undefined;
+    let legalFormula: Formula | undefined = undefined;
     const noLegalIndemnity = this.hasNoLegalIndemnity();
     if (!noLegalIndemnity) {
       legalResult = this.calculateLegal(args, !!this.agreementInstance);
+      legalFormula = this.getFormule();
       if (
         !legalResult.result ||
         legalResult.missingArgs.length ||
         legalResult.ineligibility
       ) {
-        console.log("legalResult", legalResult);
         return {
           ineligibility: legalResult.ineligibility,
           missingArgs: legalResult.missingArgs,
@@ -134,38 +133,32 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
         };
       }
     }
-    if (
-      !agreementResult?.result ||
-      this.idcc === SupportedCcIndemniteLicenciement.default
-    ) {
+    if (!agreementResult?.result || this.idcc === SupportedCc.default) {
       return {
         detail: {
           chosenResult: "LEGAL",
           legalResult: legalResult?.result,
         },
-        formula: this.getFormule(),
+        formula: legalFormula,
         missingArgs: legalResult?.missingArgs ?? [],
         result: legalResult?.result,
         situation: this.data.situation,
       };
     }
     const chosenResult =
-      !agreementResult.result.value ||
-      !legalResult?.result?.value ||
-      this.hasNoLegalIndemnity()
+      !legalResult?.result || this.hasNoLegalIndemnity()
         ? "HAS_NO_LEGAL"
         : this.compareLegalAndAgreement(
             legalResult.result.value as number,
-            agreementResult.result.value as number
+            agreementResult.result.value as number | undefined
           );
-    console.log("legalResult", legalResult);
-    console.log("agreementResult", agreementResult);
     return {
       detail: {
         agreementResult: agreementResult.result,
         chosenResult,
         legalResult: legalResult?.result,
       },
+      formula: chosenResult !== "LEGAL" ? agreementFormula : legalFormula,
       ineligibility: agreementResult.ineligibility,
       missingArgs: agreementResult.missingArgs,
       result:

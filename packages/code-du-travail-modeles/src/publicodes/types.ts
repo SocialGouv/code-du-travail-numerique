@@ -10,7 +10,7 @@ import type {
   Formula,
   IReferenceSalary,
   ISeniority,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../modeles";
 import type { IInegibility } from "../modeles/common/types/ineligibility";
 import type {
@@ -139,7 +139,7 @@ export type PublicodesInstance<T extends PublicodesSimulator> =
 export interface IndemniteDepartInstance {
   ineligibility: IInegibility;
 
-  seniority: ISeniority<SupportedCcIndemniteLicenciement>;
+  seniority: ISeniority<SupportedCc>;
 
-  salary: IReferenceSalary<SupportedCcIndemniteLicenciement>;
+  salary: IReferenceSalary<SupportedCc>;
 }

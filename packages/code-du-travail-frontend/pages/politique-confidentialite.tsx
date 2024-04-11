@@ -6,10 +6,9 @@ import {
   theme,
   Title,
   Wrapper,
-  Button,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import React, { useCallback } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
@@ -98,17 +97,17 @@ const CookiePolicy = (): JSX.Element => {
               </thead>
               <tbody>
                 <tr>
-                  <td>Microsoft Azure</td>
+                  <td>OVH</td>
                   <td>France</td>
                   <td>Hébergement</td>
                   <td>
                     <a
-                      title="Déclaration de confidentialité Microsoft"
+                      title="Data Processing Agreement - OVH"
                       target="_blank"
                       rel="nofollow, noopener, noreferrer"
-                      href="https://privacy.microsoft.com/fr-fr/privacystatement"
+                      href="https://us.ovhcloud.com/legal/data-processing-agreement/"
                     >
-                      Déclaration de confidentialité Microsoft
+                      https://us.ovhcloud.com/legal/data-processing-agreement/
                     </a>
                   </td>
                 </tr>
@@ -180,7 +179,6 @@ const CookiePolicy = (): JSX.Element => {
             <ul>
               <li>
                 <a
-                  title="Déclaration de confidentialité Microsoft"
                   target="_blank"
                   href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
                 >
@@ -189,7 +187,6 @@ const CookiePolicy = (): JSX.Element => {
               </li>
               <li>
                 <a
-                  title="Déclaration de confidentialité Microsoft"
                   target="_blank"
                   href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
                 >

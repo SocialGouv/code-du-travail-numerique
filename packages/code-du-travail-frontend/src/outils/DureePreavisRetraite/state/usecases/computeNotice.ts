@@ -21,7 +21,7 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
       values.origin?.isRetirementMandatory === "oui" ? "mise" : "départ";
 
     const warningType = computeWarningType({
-      resultValueInDays: result.result.valueInDays,
+      resultValueInDays: result.result?.valueInDays,
       ccNumber: values.ccn?.selected?.num,
       type,
     });
@@ -32,7 +32,7 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
         ...state.steps,
         result: {
           notice: {
-            result: result.result,
+            result: result.result!,
             agreement: {
               result: agreementResult,
               maximum:
@@ -52,7 +52,7 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
           },
           warning: {
             type: warningType,
-            hasNotice: result.result.valueInDays > 0,
+            hasNotice: (result.result?.valueInDays ?? 0) > 0,
           },
         },
       },
