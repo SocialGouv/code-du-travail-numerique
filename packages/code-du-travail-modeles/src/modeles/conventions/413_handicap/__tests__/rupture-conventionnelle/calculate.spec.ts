@@ -9,6 +9,8 @@ describe("Calcul de l'indemnité de rupture conventionnelle pour la CC 0413", ()
   test.each`
     startDate       | endDate         | referenceSalary | referenceAgreementSalary | expectedCompensationAgreement | expectedCompensationLegal
     ${"01/01/2000"} | ${"01/01/2025"} | ${2500}         | ${2500}                  | ${0}                          | ${18750}
+    ${"01/06/2024"} | ${"01/01/2025"} | ${2500}         | ${2500}                  | ${0}                          | ${364.58}
+    ${"01/01/2024"} | ${"01/01/2025"} | ${2500}         | ${2500}                  | ${0}                          | ${625}
   `(
     "avec une date de début $startDate et de fin $endDate",
     ({

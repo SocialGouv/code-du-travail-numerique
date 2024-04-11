@@ -373,9 +373,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
       const salaryExtraInfo = s.computeExtraInfo
         ? s.computeExtraInfo(salarySituation)
         : {};
-      console.log("salaryExtraInfo", salaryExtraInfo);
       const value = s.computeReferenceSalary(salarySituation);
-      console.log("value", value);
       if (value) {
         newArgs = {
           ...newArgs,
