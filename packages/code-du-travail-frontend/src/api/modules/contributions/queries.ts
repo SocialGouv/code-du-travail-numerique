@@ -37,15 +37,6 @@ export const getAllGenericsContributions = () => {
             should: [
               {
                 bool: {
-                  must_not: {
-                    exists: {
-                      field: "idcc",
-                    },
-                  },
-                },
-              },
-              {
-                bool: {
                   filter: [{ term: { idcc: "0000" } }],
                 },
               },
