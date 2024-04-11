@@ -1,10 +1,6 @@
 import { Agreement, ElasticSearchItem } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
-import {
-  getAllGenericsContributions,
-  getContributionsByIds,
-  getContributionsBySlugs,
-} from "./queries";
+import { getAllGenericsContributions, getContributionsByIds } from "./queries";
 import { fetchAllContributions } from "./fetch";
 
 export const getGenericContributionsGroupByThemes = async () => {
@@ -56,19 +52,6 @@ export const getAllContributionsGroupByQuestion = async (
         .sort((a, b) => a.title.localeCompare(b.title)),
     };
   });
-};
-
-export const getBySlugsContributions = async (
-  slugs: string[]
-): Promise<ElasticSearchItem[]> => {
-  const body = getContributionsBySlugs(slugs);
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
-  });
-  return response.body.hits.total.value > 0
-    ? response.body.hits.hits.map(({ _source }) => _source)
-    : [];
 };
 
 export const getByIdsContributions = async (

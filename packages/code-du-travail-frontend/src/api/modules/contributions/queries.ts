@@ -31,50 +31,13 @@ export const getAllGenericsContributions = () => {
         filter: [
           { term: { source: SOURCES.CONTRIBUTIONS } },
           { term: { isPublished: true } },
+          { term: { idcc: "0000" } },
         ],
-        must: {
-          bool: {
-            should: [
-              {
-                bool: {
-                  filter: [{ term: { idcc: "0000" } }],
-                },
-              },
-            ],
-          },
-        },
       },
     },
     size: 200,
   };
 };
-
-export function getContributionsBySlugs(slugs: string[]) {
-  return {
-    _source: [
-      "title",
-      "shortTitle",
-      "description",
-      "url",
-      "slug",
-      "breadcrumbs",
-      "source",
-      "cdtnId",
-      "idcc",
-      "ccSupported",
-    ],
-    query: {
-      bool: {
-        filter: [
-          { term: { source: SOURCES.CONTRIBUTIONS } },
-          { term: { isPublished: true } },
-          { terms: { slug: slugs } },
-        ],
-      },
-    },
-    size: 100,
-  };
-}
 
 export function getContributionsByIds(ids: string[]) {
   return {
