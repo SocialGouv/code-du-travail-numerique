@@ -27,7 +27,7 @@ describe("Validate html for contributions", () => {
     },
   };
   const files = [urls1, urls2, urls3, urls4, urls5, urls6, urls7];
-  for (let i = 0; i <= 7; i++) {
+  for (let i = 0; i < 7; i++) {
     describe("Part " + (i + 1), () => {
       files[i].forEach((url) => {
         it("page should be valid: " + url, () => {
