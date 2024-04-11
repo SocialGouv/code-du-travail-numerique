@@ -1,13 +1,13 @@
 import { Tool } from "@socialgouv/cdtn-utils";
 import {
-  elasticsearchClient,
   elasticDocumentsIndex,
+  elasticsearchClient,
   NotFoundError,
 } from "../../utils";
-import { getTools, getAllToolsQuery } from "./queries";
+import { getAllInternalToolsQuery, getTools } from "./queries";
 
-export const getAllTools = async (): Promise<Tool[]> => {
-  const body = getAllToolsQuery();
+export const getAllInternalTools = async (): Promise<Tool[]> => {
+  const body = getAllInternalToolsQuery();
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
@@ -24,11 +24,8 @@ export const getAllTools = async (): Promise<Tool[]> => {
     .filter((tool) => tool.displayTool);
 };
 
-export const getToolsByIdsAndSlugs = async (
-  ids?: string[],
-  slugs?: string[]
-): Promise<Tool[]> => {
-  const body = getTools(ids, slugs);
+export const getAllTools = async (): Promise<Tool[]> => {
+  const body = getTools();
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
@@ -59,24 +56,8 @@ export const getToolsByIds = async (cdtnIds: string[]): Promise<Tool[]> => {
   return response.body.hits.hits;
 };
 
-export const getToolsBySlugs = async (slugs: string[]): Promise<Tool[]> => {
-  const body = getTools(undefined, slugs);
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
-  });
-  if (response.body.hits.total.value === 0) {
-    throw new NotFoundError({
-      message: `There is no tools that match query`,
-      name: "TOOLS_NOT_FOUND",
-      cause: null,
-    });
-  }
-  return response.body.hits.hits;
-};
-
-export const getBySlugTools = async (slug: string): Promise<Tool> => {
-  const body = getTools(undefined, [slug]);
+export const getToolsBySlugs = async (slug: string): Promise<Tool> => {
+  const body = getTools(undefined, slug);
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,

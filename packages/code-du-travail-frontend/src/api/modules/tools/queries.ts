@@ -1,4 +1,4 @@
-export const getAllToolsQuery = () => {
+export const getAllInternalToolsQuery = () => {
   return {
     _source: ["slug", "title", "displayTool"],
     query: {
@@ -20,7 +20,7 @@ export const getAllToolsQuery = () => {
 
 export const getTools = (
   ids?: string[],
-  slugs?: string[],
+  slug?: string,
   cdtnIds?: string[]
 ) => {
   const filter: any[] = [
@@ -43,8 +43,8 @@ export const getTools = (
   if (ids) {
     filter.push({ ids: { values: ids } });
   }
-  if (slugs) {
-    filter.push({ terms: { slug: slugs } });
+  if (slug) {
+    filter.push({ term: { slug: slug } });
   }
   if (cdtnIds) {
     filter.push({ terms: { cdtnId: cdtnIds } });

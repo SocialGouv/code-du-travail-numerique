@@ -1,18 +1,13 @@
 import {
-  getAllTools,
-  getBySlugTools,
-  getToolsByIds,
-  getToolsByIdsAndSlugs,
+  getAllInternalTools,
   getToolsBySlugs,
+  getToolsByIds,
+  getAllTools,
 } from "../service";
 
 describe("Tools", () => {
   it("getAllTools", async () => {
-    const result = await getAllTools();
-    expect(result).toMatchSnapshot();
-  });
-  it("getToolsBySlugs", async () => {
-    const result = await getToolsBySlugs(["preavis-demission"]);
+    const result = await getAllInternalTools();
     expect(result).toMatchSnapshot();
   });
 
@@ -22,11 +17,11 @@ describe("Tools", () => {
   });
 
   it("getBySlugTools", async () => {
-    const result = await getBySlugTools("indemnite-licenciement");
+    const result = await getToolsBySlugs("indemnite-licenciement");
     expect(result).toMatchSnapshot();
   });
   it("getToolsByIdsAndSlugs", async () => {
-    const result = await getToolsByIdsAndSlugs();
+    const result = await getAllTools();
     expect(result).toMatchSnapshot();
   });
 });

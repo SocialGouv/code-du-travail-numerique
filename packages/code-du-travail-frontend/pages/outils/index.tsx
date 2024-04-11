@@ -12,7 +12,7 @@ import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
 import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
-import { getToolsByIdsAndSlugs } from "../../src/api";
+import { getAllTools } from "../../src/api";
 
 const Outils = ({ cdtnSimulators, externalTools }) => (
   <Layout currentPage="tools">
@@ -87,7 +87,7 @@ export async function getStaticProps() {
       const response = await fetch(`${SITE_URL}/api/tools`);
       result = await response.json();
     } else {
-      result = await getToolsByIdsAndSlugs();
+      result = await getAllTools();
     }
     const tools = result
       .map(({ _id, _source }) => ({ ..._source, _id }))
