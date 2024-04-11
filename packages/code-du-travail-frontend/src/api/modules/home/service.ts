@@ -8,7 +8,7 @@ import { getToolsByIds } from "../tools";
 
 export type GetHomePage = {
   themes: any;
-  highlights: any;
+  highlights: ElasticSearchItem[];
   tools: any;
   modeles: ElasticSearchItem[];
   contributions: ElasticSearchItem[];
@@ -42,7 +42,7 @@ export const getHomeData = async (): Promise<GetHomePage> => {
     "2f57b6af7c", // 3248-metallurgie
     "d825ef1df2", // 3239-particuliers-employeurs-et-emploi-a-domicile
   ]);
-  const response = {
+  return {
     themes,
     highlights,
     tools,
@@ -50,6 +50,4 @@ export const getHomeData = async (): Promise<GetHomePage> => {
     contributions,
     agreements,
   };
-
-  return response;
 };
