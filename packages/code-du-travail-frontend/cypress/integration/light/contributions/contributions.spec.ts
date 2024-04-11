@@ -46,7 +46,7 @@ describe("Contributions", () => {
     );
     cy.get("h2").should(
       "contain",
-      "Votre réponse pour la convention collective Maisons à succursales de vente au détail d'habillement"
+      "Votre convention collective est Maisons à succursales de vente au détail d'habillement (IDCC 675)"
     );
 
     cy.get("body").should(
