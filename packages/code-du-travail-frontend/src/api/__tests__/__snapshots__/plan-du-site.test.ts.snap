@@ -41,6 +41,14 @@ exports[`Plan du site should return a list for /plan-du-site 1`] = `
   ],
   "contributions": [
     {
+      "agreements": [],
+      "generic": {
+        "idcc": "0000",
+        "slug": "les-conges-pour-evenements-familiaux",
+        "title": "Les congés pour événements familiaux",
+      },
+    },
+    {
       "agreements": [
         {
           "idcc": "0044",
