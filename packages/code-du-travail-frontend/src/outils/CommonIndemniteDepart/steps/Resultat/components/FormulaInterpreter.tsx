@@ -4,10 +4,11 @@ import { SectionTitle } from "../../../../common/stepStyles";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 
 type Props = {
-  formula: Formula;
+  formula?: Formula;
 };
 
 export default function FormulaInterpreter(props: Props) {
+  if (!props.formula) return <></>;
   return (
     <>
       {props.formula.explanations.length > 0 && (

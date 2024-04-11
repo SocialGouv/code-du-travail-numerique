@@ -189,9 +189,5 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     target?: string
   ): PublicodesData<TResult>;
 
-  // abstract calculate(
-  //   args: Record<string, string | undefined>
-  // ): PublicodesData<TResult>;
-
   protected abstract convertedResult(evaluatedNode: EvaluatedNode): TResult;
 }

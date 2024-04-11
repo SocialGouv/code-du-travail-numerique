@@ -39,6 +39,11 @@ class IndemniteRuptureConventionnelleInstance
 }
 
 class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
+  protected legalIneligibilityInstance: IInegibility =
+    new IneligibilityRuptureConventionnelleFactory().create(
+      SupportedCc.default
+    );
+
   constructor(models: any, idcc?: string) {
     super(models, idcc);
     if (idcc) {
