@@ -4,7 +4,7 @@ import type { References, SeniorityResult } from "../modeles/common";
 import {
   ReferenceSalaryFactory,
   SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../modeles/common";
 import type { Publicodes } from "./Publicodes";
 import { PublicodesBase } from "./PublicodesBase";
@@ -26,7 +26,7 @@ class RuptureConventionnellePublicodes
     super(
       rules,
       PublicodesDefaultRules[PublicodesSimulator.RUPTURE_CONVENTIONNELLE],
-      idcc as SupportedCcIndemniteLicenciement
+      idcc as SupportedCc
     );
   }
 
@@ -105,9 +105,7 @@ class RuptureConventionnellePublicodes
       const agreementSeniority: SeniorityResult = agreement.computeSeniority(
         agreement.mapSituation(args)
       );
-      const legal = new SeniorityFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
+      const legal = new SeniorityFactory().create(SupportedCc.default);
       const legalSeniority: SeniorityResult = legal.computeSeniority(
         legal.mapSituation(args)
       );
@@ -142,9 +140,7 @@ class RuptureConventionnellePublicodes
         "contrat salarié . indemnité de licenciement . salaire de référence"
       ]
     ) {
-      const s = new ReferenceSalaryFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
+      const s = new ReferenceSalaryFactory().create(SupportedCc.default);
       const value = s.computeReferenceSalary({
         salaires: args.salaryPeriods ? JSON.parse(args.salaryPeriods) : [],
       });

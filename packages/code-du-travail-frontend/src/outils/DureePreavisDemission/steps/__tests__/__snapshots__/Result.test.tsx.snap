@@ -3,36 +3,36 @@
 exports[`<StepResult /> should render CC answer 1`] = `
 <div>
   <h2
-    class="sc-iapWAC fknnbp"
+    class="sc-iXzfSG chPUXZ"
   >
     Durée du préavis
   </h2>
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de démission est estimée à : 
     <strong
-      class="sc-kqGoIF eBNOvs"
+      class="sc-lnPyaJ hkoOxF"
       role="alert"
     >
       2 mois
     </strong>
     <sup
-      class="sc-gvZAcH cpmNvN"
+      class="sc-dExYaf hZxran"
     >
       *
     </sup>
     .
   </p>
   <p
-    class="sc-dxcDKg Knzco"
+    class="sc-eulNck jfbszx"
   >
     <sup
-      class="sc-gvZAcH cpmNvN"
+      class="sc-dExYaf hZxran"
     >
       * 
     </sup>
     Le préavis débute le jour où le salarié remet sa lettre de démission en main propre ou à la date de première présentation de la lettre recommandée, peu importe le jour de son retrait par l’employeur.
     <i
-      class="sc-dxcDKg Knzco"
+      class="sc-eulNck jfbszx"
     >
        
       Exemple : si l’employeur reçoit le courrier recommandé le
@@ -42,7 +42,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       4 juin
       .
       <span
-        class="sc-dxcDKg Knzco"
+        class="sc-eulNck jfbszx"
       >
          
         Si le 
@@ -51,7 +51,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       </span>
     </i>
     <span
-      class="sc-dxcDKg Knzco"
+      class="sc-eulNck jfbszx"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -82,8 +82,6 @@ exports[`<StepResult /> should render CC answer 1`] = `
       </svg>
       <span
         class="sc-fBWQRz lqUBb"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -92,7 +90,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-iapWAC fknnbp"
+        class="sc-iXzfSG chPUXZ"
       >
         Éléments saisis
       </h2>
@@ -120,7 +118,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-iapWAC fknnbp"
+        class="sc-iXzfSG chPUXZ"
       >
         Sources
       </h2>
@@ -149,13 +147,13 @@ exports[`<StepResult /> should render CC answer 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-iXzfSG ftwa-dj bdsVWO"
+    class="sc-jsJBEP sc-ePDLzJ ftwa-dj koafFW"
   >
     <div
-      class="sc-bypJrT cRnKsM"
+      class="sc-hRJfrW fHhwIY"
     >
       <div
-        class="sc-ddjGPC bYORpp"
+        class="sc-iHbSHJ dqcYtl"
       >
         <svg
           aria-hidden="true"
@@ -175,10 +173,10 @@ exports[`<StepResult /> should render CC answer 1`] = `
         </svg>
       </div>
       <div
-        class="sc-dSCufp gAzXIi"
+        class="sc-klVQfs giEiHo"
       >
         <p
-          class="sc-jGKxIK iOBtQr sc-lnPyaJ dsXzGD"
+          class="sc-krNlru kcuIcb sc-bVVIoq jsmGy"
         >
           Attention il peut exister une autre durée de préavis
         </p>

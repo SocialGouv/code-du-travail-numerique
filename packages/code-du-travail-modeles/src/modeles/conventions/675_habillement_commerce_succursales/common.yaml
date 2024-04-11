@@ -6,6 +6,7 @@ contrat salarié . convention collective . habillement commerce succursales:
   cdtn:
     idcc: 675
     préavis-retraite: true
+    indemnité-licenciement: true
 
 contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle:
   question: Quelle est la catégorie professionnelle du salarié ?

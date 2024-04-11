@@ -1,13 +1,7 @@
-import {
-  MotifKeys,
-  SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { MotifKeys, SeniorityFactory, SupportedCc } from "../../../../common";
 
 describe("CC 1486", () => {
-  const seniority = new SeniorityFactory().create(
-    SupportedCcIndemniteLicenciement.IDCC1486
-  );
+  const seniority = new SeniorityFactory().create(SupportedCc.IDCC1486);
 
   describe("Calcul de l'ancienneté", () => {
     test.each`

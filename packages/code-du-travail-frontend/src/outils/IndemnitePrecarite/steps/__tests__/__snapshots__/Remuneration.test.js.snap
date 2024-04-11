@@ -3,32 +3,32 @@
 exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 <div>
   <legend
-    class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+    class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iRaavs"
+      class="sc-iMTnTL kgzsrX"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
       <span
-        class="sc-ibQAlb TTAtT"
+        class="sc-iMTnTL gvHveA"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-bDpDS cvgaoL"
+    class="sc-kWtpeL gqNWDj"
   >
     <input
-      class="sc-bVHCgj drRyYL"
+      class="sc-ecPEgm ljcJlA"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="sc-kzqdkY dcQpmU"
+      class="sc-hHOBiw gRpul"
       for="typeRemuneration-amount"
     >
       <span>
@@ -41,18 +41,18 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <div
-    class="sc-bDpDS cvgaoL"
+    class="sc-kWtpeL gqNWDj"
   >
     <input
       checked=""
-      class="sc-bVHCgj drRyYL"
+      class="sc-ecPEgm ljcJlA"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="sc-kzqdkY dcQpmU"
+      class="sc-hHOBiw gRpul"
       for="typeRemuneration-pay"
     >
       <span>
@@ -65,44 +65,44 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <legend
-    class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+    class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iRaavs"
+      class="sc-iMTnTL kgzsrX"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-ibQAlb TTAtT"
+        class="sc-iMTnTL gvHveA"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-kMribo imXvrN"
+    class="sc-knuQbY istuur"
   >
     <label
-      class="sc-dNsVcS kgyepz"
+      class="sc-gvZAcH hseDjx"
       for="2"
     >
       Montant :
     </label>
     <div
-      class="sc-eulNck ctRWBf"
+      class="sc-dPZUQH laaNtT"
     >
       <div
-        class="sc-dkmUuB ayeCS"
+        class="sc-sLsrZ kGdGKi"
       >
         <input
-          class="sc-ejfMa-d kArqSZ"
+          class="sc-dBmzty eccLNx"
           id="2"
           name="salaires[0].salaire"
           type="number"
           value="2000"
         />
         <div
-          class="sc-iEXKAA ibBixi"
+          class="sc-fifgRP cbFsXt"
         >
           <span>
             €
@@ -111,13 +111,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </div>
     </div>
     <button
-      class="sc-kOPcWz kyVwqT sc-fulCBj bxwUNl"
+      class="sc-kOPcWz kyVwqT sc-kRRyDe csyDrm"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-knuQbY ffXSfi"
+        class="sc-kqGoIF fiwkkJ"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -132,29 +132,29 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <div
-    class="sc-kMribo imXvrN"
+    class="sc-knuQbY istuur"
   >
     <label
-      class="sc-dNsVcS kgyepz"
+      class="sc-gvZAcH hseDjx"
       for="4"
     >
       Montant :
     </label>
     <div
-      class="sc-eulNck ctRWBf"
+      class="sc-dPZUQH laaNtT"
     >
       <div
-        class="sc-dkmUuB ayeCS"
+        class="sc-sLsrZ kGdGKi"
       >
         <input
-          class="sc-ejfMa-d kArqSZ"
+          class="sc-dBmzty eccLNx"
           id="4"
           name="salaires[1].salaire"
           type="number"
           value="1500"
         />
         <div
-          class="sc-iEXKAA ibBixi"
+          class="sc-fifgRP cbFsXt"
         >
           <span>
             €
@@ -163,13 +163,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </div>
     </div>
     <button
-      class="sc-kOPcWz kyVwqT sc-fulCBj bxwUNl"
+      class="sc-kOPcWz kyVwqT sc-kRRyDe csyDrm"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-knuQbY ffXSfi"
+        class="sc-kqGoIF fiwkkJ"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -184,12 +184,12 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <button
-    class="sc-kOPcWz kyVwqT sc-kRRyDe dXHzAZ"
+    class="sc-kOPcWz kyVwqT sc-iapWAC hGbPDb"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="sc-ERObt hwkuet"
+      class="sc-dxcDKg elQZWk"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +204,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     Ajouter un salaire
   </button>
   <p
-    class="sc-gvZAcH iRgDqG"
+    class="sc-dExYaf yDnFA"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>
@@ -214,33 +214,33 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 exports[`<StepRemuneration /> should render one input 1`] = `
 <div>
   <legend
-    class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+    class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
     data-testid="question-label"
   >
     <span
-      class="sc-ibQAlb iRaavs"
+      class="sc-iMTnTL kgzsrX"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
       <span
-        class="sc-ibQAlb TTAtT"
+        class="sc-iMTnTL gvHveA"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-bDpDS cvgaoL"
+    class="sc-kWtpeL gqNWDj"
   >
     <input
       checked=""
-      class="sc-bVHCgj drRyYL"
+      class="sc-ecPEgm ljcJlA"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="sc-kzqdkY dcQpmU"
+      class="sc-hHOBiw gRpul"
       for="typeRemuneration-amount"
     >
       <span>
@@ -253,17 +253,17 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </label>
   </div>
   <div
-    class="sc-bDpDS cvgaoL"
+    class="sc-kWtpeL gqNWDj"
   >
     <input
-      class="sc-bVHCgj drRyYL"
+      class="sc-ecPEgm ljcJlA"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="sc-kzqdkY dcQpmU"
+      class="sc-hHOBiw gRpul"
       for="typeRemuneration-pay"
     >
       <span>
@@ -276,36 +276,36 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </label>
   </div>
   <legend
-    class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+    class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
     data-testid="question-label"
     for="currency-1"
   >
     <span
-      class="sc-ibQAlb iRaavs"
+      class="sc-iMTnTL kgzsrX"
     >
       Quelle est la rémunération totale brute perçue durant le contrat de travail ?
       <span
-        class="sc-ibQAlb TTAtT"
+        class="sc-iMTnTL gvHveA"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-eulNck ctRWBf"
+    class="sc-dPZUQH laaNtT"
   >
     <div
-      class="sc-dkmUuB ayeCS"
+      class="sc-sLsrZ kGdGKi"
     >
       <input
-        class="sc-ejfMa-d kArqSZ"
+        class="sc-dBmzty eccLNx"
         id="currency-1"
         name="salaire"
         type="number"
         value="3000"
       />
       <div
-        class="sc-iEXKAA ibBixi"
+        class="sc-fifgRP cbFsXt"
       >
         <span>
           €
@@ -314,7 +314,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </div>
   </div>
   <p
-    class="sc-gvZAcH iRgDqG"
+    class="sc-dExYaf yDnFA"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>

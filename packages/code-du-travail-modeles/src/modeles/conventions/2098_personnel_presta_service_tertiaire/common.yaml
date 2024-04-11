@@ -5,3 +5,4 @@ contrat salarié . convention collective . personnel presta service tertiaire:
   cdtn:
     idcc: 2098
     préavis-retraite: true
+    indemnité-licenciement: true
