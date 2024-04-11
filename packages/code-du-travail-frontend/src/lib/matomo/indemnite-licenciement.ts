@@ -6,29 +6,34 @@ import {
   MatomoSimulatorEvent,
   trackQuestion,
 } from "..";
-import { eventEmitter, EventType } from "./emitter";
+import { eventEmitter, EventType, GlobalEvent } from "./emitter";
 import { push as matopush } from "@socialgouv/matomo-next";
 
-export const useIndemniteLicenciementEventEmitter = () => {
+export const useRuptureCoEventEmitter = () => {
   useEffect(() => {
-    eventEmitter.subscribe(EventType.SEND_RESULT_EVENT, (isEligible) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoBaseEvent.OUTIL,
-        MatomoActionEvent.INDEMNITE_LICENCIEMENT,
-        isEligible
-          ? IndemniteDepartStepName.Resultat
-          : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
-      ]);
-    });
-
-    eventEmitter.subscribe(EventType.TRACK_QUESTION, (titre) => {
-      trackQuestion(titre, MatomoActionEvent.INDEMNITE_LICENCIEMENT);
+    eventEmitter.subscribe(GlobalEvent.INDEMNITE_LICENCIEMENT, (data) => {
+      switch (data.name) {
+        case EventType.SEND_RESULT_EVENT: {
+          const { isEligible } = data.properties;
+          matopush([
+            MatomoBaseEvent.TRACK_EVENT,
+            MatomoBaseEvent.OUTIL,
+            MatomoActionEvent.INDEMNITE_LICENCIEMENT,
+            isEligible
+              ? IndemniteDepartStepName.Resultat
+              : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
+          ]);
+          break;
+        }
+        case EventType.TRACK_QUESTION:
+          const { titre } = data.properties;
+          trackQuestion(titre, MatomoActionEvent.INDEMNITE_LICENCIEMENT);
+          break;
+      }
     });
 
     return () => {
-      eventEmitter.unsubscribe(EventType.SEND_RESULT_EVENT);
-      eventEmitter.unsubscribe(EventType.TRACK_QUESTION);
+      eventEmitter.unsubscribe(GlobalEvent.INDEMNITE_LICENCIEMENT);
     };
   }, []);
 };

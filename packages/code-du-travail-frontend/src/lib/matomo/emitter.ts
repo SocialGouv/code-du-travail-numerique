@@ -1,45 +1,59 @@
+export enum GlobalEvent {
+  RUPTURE_CONVENTIONNELLE = "ruptureConventionnelle",
+  INDEMNITE_LICENCIEMENT = "indemniteLicenciement",
+}
+
 export enum EventType {
   SEND_RESULT_EVENT = "sendResultEvent",
   TRACK_QUESTION = "trackQuestion",
 }
 
-export type CallbackEventType = {
+type CallbackEventType = {
   [EventType.SEND_RESULT_EVENT]: (isEligible: boolean) => void;
   [EventType.TRACK_QUESTION]: (title: string) => void;
 };
 
+type DispatchFunction = <T extends EventType>(
+  globalEvent: GlobalEvent,
+  eventType: EventType,
+  ...values: Parameters<CallbackEventType[T]>
+) => void;
+
+type SubscribeFunction = (
+  globalEvent: GlobalEvent,
+  callback: (data: { name: EventType; properties: any }) => void
+) => void;
+
 export const eventEmitter: {
   readonly events: Record<string, CallbackEventType[EventType][]>;
-  dispatch<T extends EventType>(
-    eventType: T,
-    ...values: Parameters<CallbackEventType[T]>
-  ): void;
-  subscribe<T extends EventType>(
-    eventType: T,
-    callback: CallbackEventType[T]
-  ): void;
-  unsubscribe<T extends EventType>(eventType: T): void;
+  dispatch: DispatchFunction;
+  unsubscribe(globalEvent: GlobalEvent): void;
+  subscribe: SubscribeFunction;
 } = {
   events: {},
 
-  dispatch<T extends EventType>(
-    event: T,
-    ...values: Parameters<CallbackEventType[T]>
-  ) {
-    if (!this.events[event]) return;
-    this.events[event].forEach((callback: any) =>
-      callback(...(values as Parameters<CallbackEventType[T]>))
+  dispatch(globalEvent, eventType, ...values) {
+    if (!this.events[globalEvent]) return;
+    const eventObjects = this.events[globalEvent].filter(
+      (evt) => evt.name === eventType
     );
+    eventObjects.forEach((eventObject) => {
+      eventObject.properties(...values);
+    });
   },
 
-  subscribe(event, callback) {
-    if (!this.events[event]) this.events[event] = [];
-    if (!this.events[event]?.includes(this.events[event][0]))
-      this.events[event]?.push(callback);
+  unsubscribe(globalEvent: GlobalEvent) {
+    if (!this.events[globalEvent]) return;
+    delete this.events[globalEvent];
   },
 
-  unsubscribe(event) {
-    if (!this.events[event]) return;
-    delete this.events[event];
+  subscribe(globalEvent, callback) {
+    if (!this.events[globalEvent]) {
+      this.events[globalEvent] = [];
+    }
+    this.events[globalEvent].push({
+      name: undefined,
+      properties: callback,
+    });
   },
 };

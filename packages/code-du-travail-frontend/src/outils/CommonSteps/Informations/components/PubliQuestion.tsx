@@ -8,7 +8,7 @@ import {
   TextQuestion,
 } from "../../../Components";
 import { reverseValues } from "../../../publicodes";
-import { EventType, eventEmitter } from "../../../../lib";
+import { EventType, GlobalEvent, eventEmitter } from "../../../../lib";
 
 interface Props {
   name: string;
@@ -38,7 +38,11 @@ const PubliQuestion: React.FC<Props> = ({
         content: <Html>{rule.description}</Html>,
         trackableFn: (visibility: boolean) => {
           if (visibility && titre) {
-            eventEmitter.dispatch(EventType.TRACK_QUESTION, titre);
+            eventEmitter.dispatch(
+              GlobalEvent.INDEMNITE_LICENCIEMENT, // ça bloque ici
+              EventType.TRACK_QUESTION,
+              titre
+            );
           }
         },
       }

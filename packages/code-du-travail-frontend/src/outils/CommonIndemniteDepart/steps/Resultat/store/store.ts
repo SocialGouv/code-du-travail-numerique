@@ -23,7 +23,7 @@ import { getInfoWarning } from "./service";
 import getSupportedCc from "../../../common/usecase/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
-import { EventType, eventEmitter } from "../../../../../lib";
+import { EventType, GlobalEvent, eventEmitter } from "../../../../../lib";
 
 const initialState: ResultStoreData = {
   input: {
@@ -83,7 +83,11 @@ const createResultStore: StoreSlice<
         ancienneteEligibility &&
         informationEligibility;
 
-      eventEmitter.dispatch(EventType.SEND_RESULT_EVENT, isEligible);
+      eventEmitter.dispatch(
+        GlobalEvent.INDEMNITE_LICENCIEMENT, // ça bloque là
+        EventType.SEND_RESULT_EVENT,
+        isEligible
+      );
 
       set(
         produce((state: ResultStoreSlice) => {
