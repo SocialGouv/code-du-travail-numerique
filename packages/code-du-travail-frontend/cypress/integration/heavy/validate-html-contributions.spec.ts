@@ -5,6 +5,8 @@ import urls2 from "../../support/urls-contributions-to-validate-2.json";
 import urls3 from "../../support/urls-contributions-to-validate-3.json";
 import urls4 from "../../support/urls-contributions-to-validate-4.json";
 import urls5 from "../../support/urls-contributions-to-validate-5.json";
+import urls6 from "../../support/urls-contributions-to-validate-6.json";
+import urls7 from "../../support/urls-contributions-to-validate-7.json";
 
 import { ConfigData } from "cypress-html-validate";
 
@@ -24,8 +26,8 @@ describe("Validate html for contributions", () => {
       "wcag/h32": "off",
     },
   };
-  const files = [urls1, urls2, urls3, urls4, urls5];
-  for (let i = 0; i < 5; i++) {
+  const files = [urls1, urls2, urls3, urls4, urls5, urls6, urls7];
+  for (let i = 0; i <= 7; i++) {
     describe("Part " + (i + 1), () => {
       files[i].forEach((url) => {
         it("page should be valid: " + url, () => {

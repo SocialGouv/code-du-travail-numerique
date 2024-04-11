@@ -65,8 +65,8 @@ export const downloadAllUrlsToValidate = async () => {
 
   let count = 1;
 
-  for (let i = 0; i < urlsContributions.length; i += 500) {
-    const part = urlsContributions.slice(i, i + 500);
+  for (let i = 0; i < urlsContributions.length; i += 300) {
+    const part = urlsContributions.slice(i, i + 300);
     fs.writeFileSync(
       `./cypress/support/urls-contributions-to-validate-${count}.json`,
       JSON.stringify(part)
