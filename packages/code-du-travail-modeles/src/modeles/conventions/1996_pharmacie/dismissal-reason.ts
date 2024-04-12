@@ -7,15 +7,6 @@ export class DismissalReason1996 implements IDismissalReason {
   dismissalTypes(): DismissalReason[] {
     return [
       {
-        name: "licenciement économique",
-        rules: [
-          {
-            rule: "contrat salarié . convention collective . pharmacie . indemnité de licenciement . cadres . licenciement économique question",
-            value: "'Oui'",
-          },
-        ],
-      },
-      {
         name: "autre licenciement",
         rules: [
           {
