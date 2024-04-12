@@ -1,11 +1,7 @@
 import { Agreement, ElasticSearchItem } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
-import {
-  getAllContributions,
-  getAllGenericsContributions,
-  getContributionsByIds,
-  getContributionsBySlugs,
-} from "./queries";
+import { getAllGenericsContributions, getContributionsByIds } from "./queries";
+import { fetchAllContributions } from "./fetch";
 
 export const getGenericContributionsGroupByThemes = async () => {
   const body = getAllGenericsContributions();
@@ -23,9 +19,7 @@ export const getGenericContributionsGroupByThemes = async () => {
     .reduce(groupByThemes, {});
 };
 
-const isGeneric = (contrib) =>
-  (contrib.idcc && contrib.idcc === "0000") ||
-  (!contrib.idcc && !contrib.split);
+const isGeneric = (contrib) => contrib.idcc === "0000";
 
 function getTitle(agreements: Agreement[], contrib) {
   const idcc = contrib.idcc ?? contrib.slug.split("-")[0];
@@ -38,12 +32,7 @@ function getTitle(agreements: Agreement[], contrib) {
 export const getAllContributionsGroupByQuestion = async (
   agreements: Agreement[]
 ) => {
-  const body = getAllContributions();
-
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
-  });
+  const response = await fetchAllContributions();
   const all = response.body.hits.hits.map(({ _source }) => _source);
   const allGenerics = all
     .filter(isGeneric)
@@ -63,19 +52,6 @@ export const getAllContributionsGroupByQuestion = async (
         .sort((a, b) => a.title.localeCompare(b.title)),
     };
   });
-};
-
-export const getBySlugsContributions = async (
-  slugs: string[]
-): Promise<ElasticSearchItem[]> => {
-  const body = getContributionsBySlugs(slugs);
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
-  });
-  return response.body.hits.total.value > 0
-    ? response.body.hits.hits.map(({ _source }) => _source)
-    : [];
 };
 
 export const getByIdsContributions = async (
