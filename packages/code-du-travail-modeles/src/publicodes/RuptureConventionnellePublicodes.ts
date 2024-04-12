@@ -69,7 +69,9 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
       const reasons = dismissalReason.dismissalTypes();
       if (reasons.length === 0) {
         agreementResult = this.calculateAgreement(args);
-        agreementFormula = this.getFormule();
+        if (agreementResult) {
+          agreementFormula = this.getFormule();
+        }
       } else {
         const situations = reasons.reduce<
           {
@@ -125,7 +127,7 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
     const noLegalIndemnity = this.hasNoLegalIndemnity();
     if (!noLegalIndemnity) {
       legalResult = this.calculateLegal(args, !!this.agreementInstance);
-      legalFormula = this.getFormule();
+      legalFormula = this.getFormule(true);
       if (
         !legalResult.result ||
         legalResult.missingArgs.length ||
@@ -157,6 +159,7 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
             legalResult.result.value as number,
             agreementResult.result.value as number | undefined
           );
+
     return {
       detail: {
         agreementResult: agreementResult.result,

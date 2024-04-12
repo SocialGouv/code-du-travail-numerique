@@ -57,7 +57,7 @@ function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
 
 const FORMULE_VAR_REGEX = /\$formule/g;
 
-export function getFormule(engine: Engine): Formula {
+export function getFormule(engine: Engine, isLegal = false): Formula {
   const rules = getRulesWithFormuleAndNodeValue(engine);
   const formula = rules.reduce(
     (
@@ -65,6 +65,9 @@ export function getFormule(engine: Engine): Formula {
       rule: RuleNodeFormula
     ): Required<NodeFormula> => {
       const nodeFormule = rule.rawNode.cdtn.formule.formula;
+      if (isLegal && rule.rawNode.valeur !== "résultat légal") {
+        return formule;
+      }
       if (nodeFormule.includes("$formule")) {
         if (formule.formula.length) {
           formule.formula = nodeFormule.replace(

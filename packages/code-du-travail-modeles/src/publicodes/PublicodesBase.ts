@@ -76,8 +76,8 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return getReferences(this.engine, specificRule);
   }
 
-  getFormule(): Formula {
-    return getFormule(this.engine);
+  getFormule(isLegal = false): Formula {
+    return getFormule(this.engine, isLegal);
   }
 
   protected removeNonPublicodeFields(

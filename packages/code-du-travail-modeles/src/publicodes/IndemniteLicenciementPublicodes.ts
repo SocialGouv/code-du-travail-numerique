@@ -101,7 +101,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
           situation: this.data.situation,
         };
       }
-      legalFormula = this.getFormule();
+      legalFormula = this.getFormule(true);
     }
 
     if (!this.agreementInstance && legalResult?.result) {
