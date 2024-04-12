@@ -12,17 +12,11 @@ describe("Gestion des licenciements pour la CC 1996", () => {
         "contrat salarié . convention collective": "'IDCC1996'",
       };
 
-      const result = engine.calculate(
+      const { missingArgs } = engine.calculate(
         input,
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      const missingArgs = result.missingArgs.filter(
-        (item) => item.rawNode.cdtn
-      );
-      expect(missingArgs).toHaveLength(1);
-      expect(missingArgs[0].name).toBe(
-        "contrat salarié - convention collective - pharmacie - indemnité de licenciement - catégorie professionnelle"
-      );
+      expect(missingArgs).toHaveNextMissingRule("contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle");
     });
 
     test.each(["Cadres", "Non-cadres"])("En étant %s", (catPro) => {
