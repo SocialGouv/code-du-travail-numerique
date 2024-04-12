@@ -1,21 +1,22 @@
 import { useEffect } from "react";
-import { IndemniteDepartStepName } from "../../outils/CommonIndemniteDepart";
+import { IndemniteDepartStepName } from "../../CommonIndemniteDepart";
 import {
   MatomoActionEvent,
   MatomoBaseEvent,
   MatomoSimulatorEvent,
   trackQuestion,
-} from "..";
-import { eventEmitter, EventType } from "./emitter";
+} from "../../../lib";
+import { eventEmitter } from "../../CommonIndemniteDepart/events/emitter";
 import { push as matopush } from "@socialgouv/matomo-next";
+import { EventType } from "../../CommonIndemniteDepart/events/events";
 
-export const useRuptureCoEventEmitter = () => {
+export const useIndemniteLicenciementEventEmitter = () => {
   useEffect(() => {
     eventEmitter.subscribe(EventType.SEND_RESULT_EVENT, (isEligible) => {
       matopush([
         MatomoBaseEvent.TRACK_EVENT,
         MatomoBaseEvent.OUTIL,
-        MatomoActionEvent.RUPTURE_CONVENTIONNELLE,
+        MatomoActionEvent.INDEMNITE_LICENCIEMENT,
         isEligible
           ? IndemniteDepartStepName.Resultat
           : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
@@ -23,7 +24,7 @@ export const useRuptureCoEventEmitter = () => {
     });
 
     eventEmitter.subscribe(EventType.TRACK_QUESTION, (titre) => {
-      trackQuestion(titre, MatomoActionEvent.RUPTURE_CONVENTIONNELLE);
+      trackQuestion(titre, MatomoActionEvent.INDEMNITE_LICENCIEMENT);
     });
 
     return () => {

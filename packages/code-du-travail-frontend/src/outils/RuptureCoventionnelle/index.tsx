@@ -16,7 +16,7 @@ import {
   StepContratTravail,
   StepAnciennete,
 } from "./steps";
-import { useRuptureCoEventEmitter } from "../../lib/matomo";
+import { useRuptureCoEventEmitter } from "./events/useRuptureCoEventEmitter";
 
 type Props = {
   icon: string;

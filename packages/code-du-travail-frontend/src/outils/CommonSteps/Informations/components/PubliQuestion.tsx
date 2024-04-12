@@ -8,7 +8,8 @@ import {
   TextQuestion,
 } from "../../../Components";
 import { reverseValues } from "../../../publicodes";
-import { EventType, eventEmitter } from "../../../../lib";
+import { eventEmitter } from "../../../CommonIndemniteDepart/events/emitter";
+import { EventType } from "../../../CommonIndemniteDepart/events/events";
 
 interface Props {
   name: string;
