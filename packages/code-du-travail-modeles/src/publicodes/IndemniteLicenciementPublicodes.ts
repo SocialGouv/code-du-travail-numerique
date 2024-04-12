@@ -146,7 +146,6 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
     let missingArg: string | undefined = undefined;
     names.some((name) => {
       if (!args[name]) {
-        s;
         missingArg = name;
         return true;
       }
