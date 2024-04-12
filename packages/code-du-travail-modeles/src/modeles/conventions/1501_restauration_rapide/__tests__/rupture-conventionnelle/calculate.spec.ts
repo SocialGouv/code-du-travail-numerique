@@ -34,17 +34,11 @@ describe("Gestion des licenciements pour la CC 1501", () => {
         "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${catPro}'`,
       };
 
-      const result = engine.calculate(
+      const { missingArgs } = engine.calculate(
         input,
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      const missingArgs = result.missingArgs.filter(
-        (item) => item.rawNode.cdtn
-      );
-      expect(missingArgs).toHaveLength(1);
-      expect(missingArgs[0].name).toBe(
-        "contrat salarié - convention collective - restauration rapide - indemnité de licenciement - licenciement économique - age"
-      );
+      expect(missingArgs).toHaveNextMissingRule("contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age");
     });
 
     test.each(["Cadres", "Non-cadres"])(
