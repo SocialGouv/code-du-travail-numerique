@@ -1,5 +1,79 @@
 import { getSitemapData } from "../service";
 
+jest.mock("../../contributions/fetch", () => ({
+  fetchAllContributions: async () => {
+    return Promise.resolve({
+      body: {
+        hits: {
+          total: 6,
+          hits: [
+            {
+              _source: {
+                idcc: "0044",
+                type: "content",
+                content: "content1",
+                title: "title1",
+                source: "contribution",
+                slug: "44-slug-content1",
+              },
+            },
+            {
+              _source: {
+                idcc: "0000",
+                type: "content",
+                content: "content1",
+                title: "title1",
+                source: "contribution",
+                slug: "slug-content1",
+              },
+            },
+            {
+              _source: {
+                idcc: "0016",
+                type: "content",
+                content: "content1",
+                title: "title1",
+                source: "contribution",
+                slug: "16-slug-content1",
+              },
+            },
+            {
+              _source: {
+                idcc: "0000",
+                type: "content",
+                content: "content2",
+                title: "title2",
+                source: "contribution",
+                slug: "slug-content2",
+              },
+            },
+            {
+              _source: {
+                idcc: "0016",
+                type: "content",
+                content: "content2",
+                title: "title2",
+                source: "contribution",
+                slug: "16-slug-content2",
+              },
+            },
+            {
+              _source: {
+                idcc: "0000",
+                type: "content",
+                content: "content3",
+                title: "title3",
+                source: "contribution",
+                slug: "slug-content3",
+              },
+            },
+          ],
+        },
+      },
+    });
+  },
+}));
+
 describe("Sitemap", () => {
   it("getSitemapData returns empty array if contrib does not exists", async () => {
     const result = await getSitemapData();
@@ -19,47 +93,62 @@ describe("Sitemap", () => {
     });
     expect(result.contributions).toEqual([
       {
+        agreements: [
+          {
+            content: "content1",
+            idcc: "0044",
+            slug: "44-slug-content1",
+            source: "contribution",
+            title: "title1",
+            type: "content",
+          },
+          {
+            content: "content1",
+            idcc: "0016",
+            slug: "16-slug-content1",
+            source: "contribution",
+            title: "title1",
+            type: "content",
+          },
+        ],
+        generic: {
+          content: "content1",
+          idcc: "0000",
+          slug: "slug-content1",
+          source: "contribution",
+          title: "title1",
+          type: "content",
+        },
+      },
+      {
+        agreements: [
+          {
+            content: "content2",
+            idcc: "0016",
+            slug: "16-slug-content2",
+            source: "contribution",
+            title: "title2",
+            type: "content",
+          },
+        ],
+        generic: {
+          content: "content2",
+          idcc: "0000",
+          slug: "slug-content2",
+          source: "contribution",
+          title: "title2",
+          type: "content",
+        },
+      },
+      {
         agreements: [],
         generic: {
-          slug: "les-conges-pour-evenements-familiaux",
-          title: "Les congés pour événements familiaux",
-        },
-      },
-      {
-        agreements: [
-          {
-            idcc: "0044",
-            slug: "44-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-            title:
-              "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
-          },
-        ],
-        generic: {
+          content: "content3",
           idcc: "0000",
-          slug: "quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-          title:
-            "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
-        },
-      },
-      {
-        agreements: [
-          {
-            slug: "44-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
-            split: true,
-            title:
-              "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
-          },
-          {
-            slug: "1090-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
-            split: true,
-            title:
-              "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ? - Services de l'automobile",
-          },
-        ],
-        generic: {
-          slug: "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
-          title:
-            "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
+          slug: "slug-content3",
+          source: "contribution",
+          title: "title3",
+          type: "content",
         },
       },
     ]);

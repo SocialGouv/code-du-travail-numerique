@@ -43,25 +43,6 @@ exports[`Contributions should return all contributions 1`] = `
         },
       ],
       "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
-      "slug": "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
-      "source": "contributions",
-      "theme": "Départ de l’entreprise",
-      "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
-    },
-    {
-      "breadcrumbs": [
-        {
-          "label": "Départ de l’entreprise",
-          "position": 7,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        {
-          "label": "Autres départs",
-          "position": 6,
-          "slug": "/themes/autres-departs",
-        },
-      ],
-      "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
       "slug": "quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
       "source": "contributions",
       "theme": "Départ de l’entreprise",

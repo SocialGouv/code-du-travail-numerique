@@ -2,13 +2,7 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export const getAllContributions = () => {
   return {
-    _source: [
-      "title",
-      "shortTitle",
-      "slug",
-      "idcc",
-      "split",
-    ],
+    _source: ["title", "shortTitle", "slug", "idcc"],
     query: {
       bool: {
         filter: [
@@ -37,64 +31,13 @@ export const getAllGenericsContributions = () => {
         filter: [
           { term: { source: SOURCES.CONTRIBUTIONS } },
           { term: { isPublished: true } },
+          { term: { idcc: "0000" } },
         ],
-        must_not: {
-          exists: {
-            field: "split",
-          },
-        },
-        must: {
-          bool: {
-            should: [
-              {
-                bool: {
-                  must_not: {
-                    exists: {
-                      field: "idcc",
-                    },
-                  },
-                },
-              },
-              {
-                bool: {
-                  filter: [{ term: { idcc: "0000" } }],
-                },
-              },
-            ],
-          },
-        },
       },
     },
     size: 200,
   };
 };
-
-export function getContributionsBySlugs(slugs: string[]) {
-  return {
-    _source: [
-      "title",
-      "shortTitle",
-      "description",
-      "url",
-      "slug",
-      "breadcrumbs",
-      "source",
-      "cdtnId",
-      "idcc",
-      "ccSupported",
-    ],
-    query: {
-      bool: {
-        filter: [
-          { term: { source: SOURCES.CONTRIBUTIONS } },
-          { term: { isPublished: true } },
-          { terms: { slug: slugs } },
-        ],
-      },
-    },
-    size: 100,
-  };
-}
 
 export function getContributionsByIds(ids: string[]) {
   return {
