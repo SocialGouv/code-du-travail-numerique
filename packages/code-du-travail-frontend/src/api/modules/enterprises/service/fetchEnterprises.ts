@@ -23,7 +23,6 @@ export const fetchEnterprises = async (
     { k: "ranked", v: "true" },
     { k: "query", v: encodeURIComponent(query) },
     { k: "convention", v: "false" },
-    { k: "employer", v: "true" },
     { k: "open", v: "true" },
     { k: "matchingLimit", v: "0" },
   ];

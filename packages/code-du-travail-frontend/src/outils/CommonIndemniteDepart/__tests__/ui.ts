@@ -140,6 +140,11 @@ export const ui = {
         "infos.contrat salarié - convention collective - établissement handicap - indemnité de licenciement - catégorie professionnelle"
       ),
     },
+    agreement675: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle"
+      ),
+    },
     agreement44: {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
