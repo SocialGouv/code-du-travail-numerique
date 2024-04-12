@@ -13,17 +13,11 @@ describe("Gestion des licenciements pour la CC 44", () => {
         "contrat salarié . convention collective": "'IDCC0044'",
       };
 
-      const result = engine.calculate(
+      const { missingArgs } = engine.calculate(
         input,
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      const missingArgs = result.missingArgs.filter(
-        (item) => item.rawNode.cdtn
-      );
-      expect(missingArgs).toHaveLength(2); //TODO: essayer de gérer les missingArgs qui utilisent un namespace présent dans après le dismissal-reason
-      expect(missingArgs[0].name).toBe(
-        "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
-      );
+      expect(missingArgs).toHaveNextMissingRule("contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle");
     });
     test.each([
       CategoryPro44.ouvrier,
