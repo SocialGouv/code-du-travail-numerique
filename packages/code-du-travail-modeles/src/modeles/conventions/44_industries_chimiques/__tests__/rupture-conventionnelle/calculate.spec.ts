@@ -35,14 +35,11 @@ describe("Gestion des licenciements pour la CC 44", () => {
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${catPro}'`,
       };
 
-      const result = engine.calculate(
+      const { missingArgs } = engine.calculate(
         input,
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      const missingArgs = result.missingArgs.filter(
-        (item) => item.rawNode.cdtn
-      );
-      expect(missingArgs).toHaveLength(0);
+      expect(missingArgs).toHaveNextMissingRule(null);
     });
   });
 
