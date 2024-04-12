@@ -16,7 +16,9 @@ describe("Gestion des licenciements pour la CC 1996", () => {
         input,
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      expect(missingArgs).toHaveNextMissingRule("contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle");
+      expect(missingArgs).toHaveNextMissingRule(
+        "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle"
+      );
     });
 
     test.each(["Cadres", "Non-cadres"])("En étant %s", (catPro) => {

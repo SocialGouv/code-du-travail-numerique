@@ -38,7 +38,9 @@ describe("Gestion des licenciements pour la CC 1501", () => {
         input,
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      expect(missingArgs).toHaveNextMissingRule("contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age");
+      expect(missingArgs).toHaveNextMissingRule(
+        "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age"
+      );
     });
 
     test.each(["Cadres", "Non-cadres"])(

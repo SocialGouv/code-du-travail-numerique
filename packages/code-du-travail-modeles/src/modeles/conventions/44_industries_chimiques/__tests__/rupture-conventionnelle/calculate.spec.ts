@@ -17,7 +17,9 @@ describe("Gestion des licenciements pour la CC 44", () => {
         input,
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      expect(missingArgs).toHaveNextMissingRule("contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle");
+      expect(missingArgs).toHaveNextMissingRule(
+        "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle"
+      );
     });
     test.each([
       CategoryPro44.ouvrier,
