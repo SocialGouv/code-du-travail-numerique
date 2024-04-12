@@ -79,22 +79,22 @@ describe("Gestion des licenciements pour la CC 2098", () => {
           age: 45,
           catPro: "Cadres",
           dateEntree: "01/01/2000",
-          dateSortie: "01/01/2003",
-          result: 2025,
+          dateSortie: "01/01/2023",
+          result: 29160,
         },
         {
           age: 51,
           catPro: "Cadres",
           dateEntree: "01/01/2000",
-          dateSortie: "01/01/2003",
-          result: 2025,
+          dateSortie: "01/01/2023",
+          result: 32076,
         },
         {
           age: 56,
           catPro: "Cadres",
           dateEntree: "01/01/2000",
-          dateSortie: "01/01/2003",
-          result: 2025,
+          dateSortie: "01/01/2023",
+          result: 36450,
         },
       ])("Le moins favorable - cas licenciement économique", (value) => {
         const { missingArgs, detail } = engine.calculateResult({
