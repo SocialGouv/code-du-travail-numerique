@@ -364,7 +364,6 @@ exports[`<FicheMT /> should render 1`] = `
                               >
                                 <h2
                                   class="sc-kAyceB dvmaTz"
-                                  data-testid="undefined-0"
                                   style="margin: 0px;"
                                 >
                                   1) Visite d’information et de prévention : pour qui ?
@@ -734,11 +733,9 @@ exports[`<FicheMT /> should render 1`] = `
                 >
                   <h2
                     class="sc-fKWMtX kVpGnF sc-kAyceB kDiAsV"
-                    data-testid="heading"
                   >
                     <span
                       class="sc-gsFSXq cdZUuw"
-                      data-testid="stripe"
                     />
                     Avez-vous trouvé la réponse à votre question ?
                   </h2>
@@ -828,7 +825,6 @@ exports[`<FicheMT /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-izQBue kVaoYP sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
@@ -886,7 +882,6 @@ exports[`<FicheMT /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-izQBue kVaoYP sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Outils populaires
@@ -924,7 +919,6 @@ exports[`<FicheMT /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-izQBue kVaoYP sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Modèles populaires
@@ -966,7 +960,6 @@ exports[`<FicheMT /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-izQBue kVaoYP sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Fiches pratiques populaires
@@ -1004,7 +997,6 @@ exports[`<FicheMT /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-izQBue kVaoYP sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Conventions collectives populaires
