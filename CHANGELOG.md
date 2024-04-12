@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.133.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.132.0...v4.133.0) (2024-04-09)
+
+### Bug Fixes
+
+- bug lorsque l'ancienneté arrive à 0 ([#5714](https://github.com/SocialGouv/code-du-travail-numerique/issues/5714)) ([2e70765](https://github.com/SocialGouv/code-du-travail-numerique/commit/2e70765dcc1633230021858f51787e20e089587c))
+- changement du logo jpeg -> png ([#5721](https://github.com/SocialGouv/code-du-travail-numerique/issues/5721)) ([8e10ef2](https://github.com/SocialGouv/code-du-travail-numerique/commit/8e10ef2354d3d8a16875cac3eb5eaf60304da687))
+- **e2e:** suppression du test sur les anciennes contributions ([#5735](https://github.com/SocialGouv/code-du-travail-numerique/issues/5735)) ([6d511da](https://github.com/SocialGouv/code-du-travail-numerique/commit/6d511da8fe3980fda2d91799ee63fd80c3d0fa62))
+- **indemnite-licenciement:** valider les absences seulement si les dates en amont sont valides ([#5754](https://github.com/SocialGouv/code-du-travail-numerique/issues/5754)) ([830c7ca](https://github.com/SocialGouv/code-du-travail-numerique/commit/830c7ca51bd59b27658e6402cd069018f77ca96a))
+- **kontinuous:** set right limits and requests ([#5729](https://github.com/SocialGouv/code-du-travail-numerique/issues/5729)) ([2ad8dda](https://github.com/SocialGouv/code-du-travail-numerique/commit/2ad8dda6b3500896207101e3e24e7c145408091b))
+- **recherche-entreprise:** suppression du paramètre `employer=true` qui bug ([#5770](https://github.com/SocialGouv/code-du-travail-numerique/issues/5770)) ([00fcf85](https://github.com/SocialGouv/code-du-travail-numerique/commit/00fcf8521b3f45d1e15accf523a90b0da9b8b67d))
+- **snyk:** Security upgrade katex from 0.13.24 to 0.16.10 ([#5728](https://github.com/SocialGouv/code-du-travail-numerique/issues/5728)) ([0204190](https://github.com/SocialGouv/code-du-travail-numerique/commit/0204190ef5fdd2867b1650cc022c0ef01ab189f1))
+- utilisation extraInfos pour les salaires ([#5765](https://github.com/SocialGouv/code-du-travail-numerique/issues/5765)) ([3a4f2eb](https://github.com/SocialGouv/code-du-travail-numerique/commit/3a4f2eb027f2c1fb0a4df32d60f6193222f24c53))
+
+### Features
+
+- 1480 non géré indemnite licenciement ([#5733](https://github.com/SocialGouv/code-du-travail-numerique/issues/5733)) ([ad4ab9f](https://github.com/SocialGouv/code-du-travail-numerique/commit/ad4ab9fe15fd62593687a8bd001e6099a88851cf))
+- ajout des pages informations au plan du site ([#5723](https://github.com/SocialGouv/code-du-travail-numerique/issues/5723)) ([fd5d3c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/fd5d3c8b0811a1162c98754dcbc31647f97882a6))
+- ajout du TU UI indemnit de licenciement bug 675 ([#5768](https://github.com/SocialGouv/code-du-travail-numerique/issues/5768)) ([9d7fbb7](https://github.com/SocialGouv/code-du-travail-numerique/commit/9d7fbb7e18920b310461a036ee59385c274d65c1))
+- **legal pages:** mise à jour de notre hébergeur sur les pages Mentions légales et Politique de confidentialité ([#5741](https://github.com/SocialGouv/code-du-travail-numerique/issues/5741)) ([adeb49c](https://github.com/SocialGouv/code-du-travail-numerique/commit/adeb49c97b51671c68e5c33979459d6f4839a13a))
+- **log:** amélioration des logs sur une vectorisation en échec ([#5760](https://github.com/SocialGouv/code-du-travail-numerique/issues/5760)) ([ba4471d](https://github.com/SocialGouv/code-du-travail-numerique/commit/ba4471da0042e226bcbff1babfdfd8ab0cc1905d))
+- **ui:** retrait du composant OverflowWrapper dont nous n'avons plus l'utilité (mais qui provoque des erreurs côté client) ([#5753](https://github.com/SocialGouv/code-du-travail-numerique/issues/5753)) ([8ce9b1c](https://github.com/SocialGouv/code-du-travail-numerique/commit/8ce9b1ccf36b3786aaa7d3a370f4868e6dfcb3b7))
+
 # [4.132.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.1...v4.132.0) (2024-03-26)
 
 ### Features
