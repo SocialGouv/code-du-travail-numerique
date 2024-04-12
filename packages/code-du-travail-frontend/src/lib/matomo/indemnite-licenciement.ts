@@ -27,8 +27,7 @@ export const useIndemniteLicenciementEventEmitter = () => {
     });
 
     return () => {
-      eventEmitter.unsubscribe(EventType.SEND_RESULT_EVENT);
-      eventEmitter.unsubscribe(EventType.TRACK_QUESTION);
+      eventEmitter.unsubscribeAll();
     };
   }, []);
 };

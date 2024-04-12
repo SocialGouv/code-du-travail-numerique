@@ -19,6 +19,7 @@ export const eventEmitter: {
     callback: CallbackEventType[T]
   ): void;
   unsubscribe<T extends EventType>(eventType: T): void;
+  unsubscribeAll(): void;
 } = {
   events: {},
 
@@ -41,5 +42,9 @@ export const eventEmitter: {
   unsubscribe(event) {
     if (!this.events[event]) return;
     delete this.events[event];
+  },
+
+  unsubscribeAll() {
+    this.events = {};
   },
 };
