@@ -34,13 +34,13 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
           notice: {
             result: result.result!,
             agreement: {
-              result: agreementResult,
+              result: agreementResult!,
               maximum:
-                agreementMaximumResult.valueInDays > 0
-                  ? agreementMaximumResult
+                (agreementMaximumResult?.valueInDays ?? 0) > 0
+                  ? agreementMaximumResult!
                   : null,
             },
-            legal: legalResult,
+            legal: legalResult!,
             type,
             notifications: publicodes.getNotifications(),
           },

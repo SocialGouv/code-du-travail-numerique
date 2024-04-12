@@ -34,7 +34,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     this.idcc = idcc ?? SupportedCc.default;
   }
 
-  execute(rule: string): TResult {
+  execute(rule: string): TResult | undefined {
     const result = this.handleExecute(this.data.situation, rule);
     if (!result)
       throw new Error(
