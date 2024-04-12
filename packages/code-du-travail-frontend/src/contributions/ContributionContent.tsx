@@ -22,10 +22,11 @@ type Props = {
 
 export const ContributionContent = ({ contribution, titleLevel }: Props) => {
   if (contribution.type === "generic-no-cdt") return <></>;
+  const isFicheSP = "raw" in contribution;
 
   return (
     <SectionNoPadding>
-      {"raw" in contribution ? (
+      {isFicheSP ? (
         <div>
           <Meta>
             {contribution.url && (
