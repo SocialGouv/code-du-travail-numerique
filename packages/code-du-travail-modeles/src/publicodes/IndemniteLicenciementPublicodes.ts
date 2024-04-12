@@ -94,18 +94,14 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
     let legalFormula: Formula | undefined = undefined;
     if (!noLegalIndemnity) {
       legalResult = this.calculateLegal(args, !!this.agreementInstance);
-      legalFormula = this.getFormule();
-      if (
-        !legalResult.result ||
-        legalResult.missingArgs.length ||
-        legalResult.ineligibility
-      ) {
+      if (legalResult.missingArgs.length || legalResult.ineligibility) {
         return {
           ineligibility: legalResult.ineligibility,
           missingArgs: legalResult.missingArgs,
           situation: this.data.situation,
         };
       }
+      legalFormula = this.getFormule();
     }
 
     if (!this.agreementInstance && legalResult?.result) {
@@ -133,7 +129,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
         chosenResult,
         legalResult: legalResult?.result,
       },
-      formula: chosenResult === "LEGAL" ? legalFormula : agreementFormula,
+      formula: chosenResult !== "LEGAL" ? agreementFormula : legalFormula,
       missingArgs: legalResult?.missingArgs ?? [],
       result:
         chosenResult === "LEGAL"
@@ -150,6 +146,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
     let missingArg: string | undefined = undefined;
     names.some((name) => {
       if (!args[name]) {
+        s;
         missingArg = name;
         return true;
       }
