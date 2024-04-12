@@ -50,14 +50,11 @@ describe("Gestion des licenciements pour la CC 1501", () => {
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": `50`,
         };
 
-        const result = engine.calculate(
+        const { missingArgs } = engine.calculate(
           input,
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        const missingArgs = result.missingArgs.filter(
-          (item) => item.rawNode.cdtn
-        );
-        expect(missingArgs).toHaveLength(0);
+        expect(missingArgs).toHaveNextMissingRule(null);
       }
     );
   });
