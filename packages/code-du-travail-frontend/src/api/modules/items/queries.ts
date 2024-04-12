@@ -31,7 +31,6 @@ export const getSearchBySourceSlugBody = ({
       "slug", // outils
       "tags", // code-du-travail
       "title",
-      "title_vector", // otherwise we can search for related items ?
       "url",
       "idcc",
       "date_publi", // convention-collective
@@ -131,16 +130,5 @@ export const getRelatedItemsBody = ({
       },
     },
     size,
-  };
-};
-
-export const getDocumentBody = (url: string) => {
-  return {
-    query: {
-      bool: {
-        filter: [{ term: { isPublished: true } }, { term: { url } }],
-      },
-    },
-    size: 200,
   };
 };
