@@ -15,6 +15,15 @@ export class DismissalReason1702 implements IDismissalReason {
           },
         ],
       },
+      {
+        name: "Licenciement économique",
+        rules: [
+          {
+            rule: "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . licenciement économique",
+            value: "'Oui'",
+          },
+        ],
+      },
     ];
   }
 }
