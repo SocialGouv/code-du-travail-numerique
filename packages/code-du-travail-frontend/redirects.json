@@ -1045,6 +1045,11 @@
     "permanent": true
   },
   {
+    "source": "/convention-collective/1237(.*)",
+    "destination": "/convention-collective/787-personnel-des-cabinets-dexperts-comptables-et-de-commissaires-aux-comptes",
+    "permanent": true
+  },
+  {
     "source": "/convention-collective/(0?)418(.*)",
     "destination": "/convention-collective/303-couture-parisienne",
     "permanent": true
