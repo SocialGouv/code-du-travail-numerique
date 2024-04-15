@@ -1,7 +1,6 @@
 import {
   getAllContributionsGroupByQuestion,
   getByIdsContributions,
-  getBySlugsContributions,
   getGenericContributionsGroupByThemes,
 } from "../service";
 import { getAllAgreements } from "../../agreements";
@@ -9,12 +8,6 @@ import { getAllAgreements } from "../../agreements";
 describe("Contributions", () => {
   it("getGenericContributions", async () => {
     const result = await getGenericContributionsGroupByThemes();
-    expect(result).toMatchSnapshot();
-  });
-  it("getBySlugsContributions", async () => {
-    const result = await getBySlugsContributions([
-      "les-conges-pour-evenements-familiaux",
-    ]);
     expect(result).toMatchSnapshot();
   });
 

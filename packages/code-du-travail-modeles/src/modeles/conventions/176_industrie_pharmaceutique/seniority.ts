@@ -8,7 +8,7 @@ import type {
   SeniorityProps,
   SeniorityRequiredProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import {
   accumulateAbsenceByYear,
@@ -38,12 +38,12 @@ const getTotalAbsenceNonPro = (
   }, 0);
 };
 
-export class Seniority176 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC0176> {
+export class Seniority176 extends SeniorityDefault<SupportedCc.IDCC0176> {
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC0176>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.IDCC0176>): SeniorityResult {
     return this.compute(dateEntree, dateSortie, absencePeriods);
   }
 
@@ -51,7 +51,7 @@ export class Seniority176 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     dateEntree,
     dateNotification,
     absencePeriods = [],
-  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.default>): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCc.default>): RequiredSeniorityResult {
     return this.compute(dateEntree, dateNotification, absencePeriods);
   }
 

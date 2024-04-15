@@ -8,12 +8,12 @@ import type {
   RequiredSeniorityResult,
   SeniorityProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { MotifKeys, parseDate } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
 
-export class Seniority1516 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC1516> {
+export class Seniority1516 extends SeniorityDefault<SupportedCc.IDCC1516> {
   getMotifs(): Motif[] {
     return LEGAL_MOTIFS;
   }
@@ -22,7 +22,7 @@ export class Seniority1516 extends SeniorityDefault<SupportedCcIndemniteLicencie
     dateEntree,
     dateSortie,
     absencePeriods = [],
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC1516>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.IDCC1516>): SeniorityResult {
     return this.compute(dateEntree, dateSortie, absencePeriods);
   }
 

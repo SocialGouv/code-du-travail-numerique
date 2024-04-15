@@ -1,4 +1,4 @@
-import { Container, icons, OverflowWrapper, theme } from "@socialgouv/cdtn-ui";
+import { Container, icons, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -16,28 +16,26 @@ export default function Breadcrumbs({ items }: Props): JSX.Element {
   }
   return (
     <Nav aria-label="Fil d'ariane">
-      <OverflowWrapper>
-        <StyledContainer as="ol">
-          {[
-            <NavItem key="home" as="li">
-              <Link href="/" passHref legacyBehavior>
-                <StyledLink title="Retour à l'accueil">
-                  <StyledHomeIcon />
-                  Accueil
-                </StyledLink>
+      <StyledContainer as="ol">
+        {[
+          <NavItem key="home" as="li">
+            <Link href="/" passHref legacyBehavior>
+              <StyledLink title="Retour à l'accueil">
+                <StyledHomeIcon />
+                Accueil
+              </StyledLink>
+            </Link>
+          </NavItem>,
+          ...items.map(({ label, slug }) => (
+            <NavItem key={`${slug}`} as="li">
+              <StyledArrowRight />{" "}
+              <Link key={slug} href={slug} passHref legacyBehavior>
+                <StyledLink>{label}</StyledLink>
               </Link>
-            </NavItem>,
-            ...items.map(({ label, slug }) => (
-              <NavItem key={`${slug}`} as="li">
-                <StyledArrowRight />{" "}
-                <Link key={slug} href={slug} passHref legacyBehavior>
-                  <StyledLink>{label}</StyledLink>
-                </Link>
-              </NavItem>
-            )),
-          ]}
-        </StyledContainer>
-      </OverflowWrapper>
+            </NavItem>
+          )),
+        ]}
+      </StyledContainer>
     </Nav>
   );
 }

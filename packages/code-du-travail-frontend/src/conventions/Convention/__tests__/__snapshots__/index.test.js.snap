@@ -3,10 +3,10 @@
 exports[`<Convention /> renders 1`] = `
 <div>
   <div
-    class="sc-ePDLzJ dUIkxy"
+    class="sc-fMMURN bncoEo"
   >
     <h2
-      class="sc-eBHhsj dsYjNf"
+      class="sc-cVzyXs jFvudg"
     >
       <span
         class="sc-gsFSXq ljkohw"
@@ -14,7 +14,7 @@ exports[`<Convention /> renders 1`] = `
       Questions-réponses fréquentes
     </h2>
     <p
-      class="sc-bVVIoq iSPxRx"
+      class="sc-ktPPKK fdjlXL"
     >
       Description de la CC
     </p>
@@ -147,36 +147,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.
-                        </p>
-                        
-
-                        <p>
-                          Toutefois, aucune rémunération n'est versée (pour les jours fériés non travaillés) aux ouvriers qui ne peuvent pas justifier avoir accompli, dans une ou plusieurs entreprises du bâtiment, 200 heures de travail au minimum au cours des 2 mois qui précèdent le jour férié visé.
-                        </p>
-                        
-
-                        <p>
-                          Le chômage des jours fériés ne peut pas donner lieu à récupération.
-                        </p>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 5-11 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -201,16 +196,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/jours-feries-et-ponts-dans-le-secteur-prive"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -276,75 +261,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          Les salariées ont droit à un maintien de salaire à 100 % du dernier salaire mensuel, après déduction des indemnités de la sécurité sociale ou de tout autre régime de prévoyance, pendant une durée maximale de 6 semaines avant la date présumée de l'accouchement et de 10 semaines après.
-                        </p>
-                        
-
-                        <p>
-                          Pour en bénéficier, les salariées doivent avoir une ancienneté appréciée dans les conditions suivantes :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            
-
-                            <p>
-                              Pour les salariées âgées de moins de 25 ans et pour les apprenties sous contrat : 1 mois d'ancienneté dans l'entreprise ;
-                            </p>
-                            
-
-                          </li>
-                          
-
-                          <li>
-                            
-
-                            <p>
-                              Pour les ouvrières âgées d'au moins 25 ans :
-                            </p>
-                            
-
-                            <ul>
-                              
-
-                              <li>
-                                soit 3 mois d'ancienneté dans l'entreprise ;
-                              </li>
-                              
-
-                              <li>
-                                soit 1 mois d'ancienneté dans l'entreprise, si elles ont au moins acquis 750 points de retraite CNRO (calculés selon les dispositions prévues au règlement de cette institution), dans les 10 dernières années précédant le jour où se produit l'arrêt de travail.
-                              </li>
-                              
-
-                            </ul>
-                            
-
-                          </li>
-                          
-
-                        </ul>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 6.121 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -370,7 +311,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 6.21 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -395,16 +336,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -470,72 +401,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            Mariage du salarié : 4 jours ;
-                          </li>
-                          
-
-                          <li>
-                            Mariage d'un de ses enfants : 1 jour ;
-                          </li>
-                          
-
-                          <li>
-                            Naissance survenue à son foyer ou arrivée d'un enfant placé en vue de son adoption : 3 jours. Ces jours d'absence ne peuvent pas se cumuler avec le congé de maternité ;
-                          </li>
-                          
-
-                          <li>
-                            Obsèques de son conjoint : 3 jours ;
-                          </li>
-                          
-
-                          <li>
-                            Obsèques d'un de ses enfants : 3 jours ;
-                          </li>
-                          
-
-                          <li>
-                            Obsèques de son père, de sa mère : 3 jours ;
-                          </li>
-                          
-
-                          <li>
-                            Obsèques d'un de ses grands-parents ou beaux-parents, d'un de ses frères ou beaux-frères, d'une de ses sœurs ou belles-sœurs, d'un de ses petits-enfants : 1 jour.
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                        <p>
-                          Ces absences s'ajoutent aux congés payés.
-                        </p>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article  5-12 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -560,16 +450,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/les-conges-pour-evenements-familiaux"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -703,57 +583,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          En cas de licenciement, la durée du préavis est égale à :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            De la fin de la période d'essai jusqu'à 3 mois d'ancienneté : 2 jours ;
-                          </li>
-                          
-
-                          <li>
-                            De 3 mois à 6 mois d'ancienneté : 2 semaines ;
-                          </li>
-                          
-
-                          <li>
-                            De 6 mois à 2 ans d'ancienneté : 1 mois ;
-                          </li>
-                          
-
-                          <li>
-                            Plus de 2 ans d'ancienneté : 2 mois.
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                        <p>
-                          Le salarié n'a pas droit au préavis en cas de licenciement pour faute grave.
-                        </p>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 10.11 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -779,7 +633,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 10.13 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -804,16 +658,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -879,42 +723,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          En cas de démission, la durée du préavis est égale à :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            De la fin de la période d'essai jusqu'à 3 mois d'ancienneté : 2 jours ;
-                          </li>
-                          
-
-                          <li>
-                            Après 3 mois d'ancienneté : 2 semaines.
-                          </li>
-                          
-
-                        </ul>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 10.11 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -939,16 +772,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -1014,26 +837,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          En cas de départ à la retraite du salarié, la durée du préavis est égale à 2 mois.
-                        </p>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1059,7 +887,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120"
                               target="_blank"
                             >
@@ -1084,16 +912,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -1159,26 +977,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          En cas de mise à la retraite du salarié, la durée du préavis est égale à 2 mois.
-                        </p>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120"
                               target="_blank"
                             >
@@ -1204,7 +1027,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1229,16 +1052,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -1304,26 +1117,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          Si l'employeur ou le salarié ne respecte pas le préavis de licenciement ou de démission, l'autre partie peut obtenir le paiement d'une indemnité égale au salaire correspondant à la durée du préavis restant à courir.
-                        </p>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 10.12 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1348,16 +1166,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -1423,67 +1231,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          Pendant le préavis, l'ouvrier licencié ou démissionnaire est autorisé, s'il en fait la demande, à s'absenter pour rechercher un nouvel emploi, pendant :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            En cas de préavis de 2 jours : 4 heures ;
-                          </li>
-                          
-
-                          <li>
-                            En cas de préavis de 2 semaines : 12 heures ;
-                          </li>
-                          
-
-                          <li>
-                            En cas de préavis égal ou supérieur à 1 mois : 25 heures.
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                        <p>
-                          Les ouvriers à temps partiel bénéficient de ces heures d'absence autorisée proportionnellement à leur temps de travail. 
-                        </p>
-                        
-
-                        <p>
-                          Les heures pour rechercher un nouvel emploi sont, en principe, prises groupées à la fin du délai de préavis. 
-                        </p>
-                        
-
-                        <p>
-                          En cas de licenciement, ces heures sont rémunérées.
-                        </p>
-                        
-
-                        <p>
-                          L'employeur ne doit pas payer d'indemnité au salarié, si ce dernier n'utilise pas ces heures pour recherche d'emploi.
-                        </p>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 10.2 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1508,16 +1280,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -1651,34 +1413,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          La durée de la période d'essai a été fixée par une convention collective conclue avant le 26 juin 2008.
-                        </p>
-                        
-
-                        <p>
-                          <strong>
-                            Pour les salariés en CDI
-                          </strong>
-                          , la durée maximale de la période d'essai est égale à 3 semaines (pas de renouvellement possible).
-                        </p>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 2-4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1703,16 +1462,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -1778,78 +1527,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          L'ancienneté du salarié tient compte de :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            La présence continue de l'ouvrier dans l'entreprise depuis la date du dernier embauchage ;
-                          </li>
-                          
-
-                          <li>
-                            Les périodes de suspension du contrat de travail ;
-                          </li>
-                          
-
-                          <li>
-                            La durée des contrats de travail antérieurs, à l'exclusion de ceux qui ont été rompus pour faute grave.
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                        <p>
-                          Pour le calcul de l'indemnité de licenciement, l'ancienneté tient compte des périodes suivantes :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            Le temps pendant lequel l'ouvrier a travaillé en une ou plusieurs fois pour l'entreprise, le cas échéant déduction faite de la durée des contrats de travail antérieurs dont la résiliation lui est imputable ;
-                          </li>
-                          
-
-                          <li>
-                            La durée des interruptions pour maladie, accident, maternité ;
-                          </li>
-                          
-
-                          <li>
-                            Les congés payés annuels ou autorisations d'absences exceptionnelles pour événements familiaux prévues par la convention collective ;
-                          </li>
-                          
-
-                          <li>
-                            La durée des interruptions pour mobilisation ou faits de guerre et périodes militaires obligatoires.
-                          </li>
-                          
-
-                        </ul>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 10.4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1875,7 +1577,7 @@ exports[`<Convention /> renders 1`] = `
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 11-2 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -1900,16 +1602,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/comment-determiner-lanciennete-du-salarie"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -1975,97 +1667,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            Le nom, la raison sociale et l'adresse de l'entreprise, 
-                          </li>
-                          
-
-                          <li>
-                            Le numéro de code APE de l'entreprise et le numéro d'inscription à l'URSSAF ou à la mutualité sociale agricole ;
-                          </li>
-                          
-
-                          <li>
-                            Le nom du salarié ;
-                          </li>
-                          
-
-                          <li>
-                            La date d'embauchage du salarié ;
-                          </li>
-                          
-
-                          <li>
-                            L'emploi du salarié, sa qualification et son coefficient hiérarchique ;
-                          </li>
-                          
-
-                          <li>
-                            La durée de la période d'essai ;
-                          </li>
-                          
-
-                          <li>
-                            Le montant de son salaire mensuel correspondant à un horaire hebdomadaire de travail de 39 heures (soit un salaire mensuel calculé sur une base de 169 heures) et son taux de salaire horaire ;
-                          </li>
-                          
-
-                          <li>
-                            L'horaire de travail hebdomadaire de référence choisi dans l'entreprise ou l'établissement et le montant de son salaire mensuel effectif correspondant ;
-                          </li>
-                          
-
-                          <li>
-                            Le montant de la déduction pour 1 heure de travail non effectuée ;
-                          </li>
-                          
-
-                          <li>
-                            L'engagement du salarié, pendant la durée du contrat, de ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail ;
-                          </li>
-                          
-
-                          <li>
-                            Le cas échéant, les avantages en nature et les conditions particulières, telles que le chantier sur lequel l'intéressé est embauché ;
-                          </li>
-                          
-
-                          <li>
-                            La convention collective applicable ;
-                          </li>
-                          
-
-                          <li>
-                            Le nom des caisses de prévoyance et de retraite complémentaire où sont versées les cotisations.
-                          </li>
-                          
-
-                        </ul>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 2-3 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -2090,16 +1716,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -2165,26 +1781,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant les conditions du poste. Ce document doit être accepté et signé par l'employeur et le salarié.
-                        </p>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 2-3 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -2209,16 +1830,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -2284,30 +1895,16 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          La convention collective ne prévoit pas le recours au contrat d'usage.
-                        </p>
-                        
-
-                        <p>
-                          La liste des secteurs d'activité prévue par la loi (article D1242-1 du code du travail) permettant le recours à un CDD d'usage vise le secteur du bâtiment et des travaux publics pour les chantiers 
-                          <strong>
-                            à l'étranger
-                          </strong>
-                          . En France, l'entreprise ne peut pas embaucher de salarié en CDD d'usage.
-                        </p>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
+                      <div
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
+                      >
+                        <div
+                          class="sc-dNsVcS kvkoM"
+                        />
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/embauche-en-contrat-dextra-cdd-dusage"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -2373,26 +1970,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          Le salarié doit s'engager dans le contrat de travail à ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail.
-                        </p>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 2-3 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -2417,16 +2019,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quelles-sont-les-conditions-de-cumul-demplois"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -2560,21 +2152,16 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          La convention collective ne prévoit pas de prime pour travaux dangereux ni de prime pour travaux insalubres.
-                        </p>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
+                      <div
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
+                      >
+                        <div
+                          class="sc-dNsVcS kvkoM"
+                        />
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -2640,50 +2227,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          La convention collective prévoit une 
-                          <strong>
-                            prime de vacances
-                          </strong>
-                          .
-                        </p>
-                        
-
-                        <p>
-                          Elle est versée, en plus de l'indemnité de congé, à l'ouvrier ayant au moins 1675 heures de travail au cours de l'année de référence dans une ou plusieurs entreprises du bâtiment ou des travaux publics. 
-                        </p>
-                        
-
-                        <p>
-                          Les ouvriers qui n'auront pas atteint, en raison d'arrêt maladie, ce total de 1675 heures au cours de l'année de référence, bénéficient également de la prime de vacances.
-                        </p>
-                        
-
-                        <p>
-                          Le taux de la prime de vacances est égal à 30 % de l'indemnité de congé payés correspondant aux 24 jours ouvrables.
-                        </p>
-                        
-
-                        <p>
-                          La prime de vacances est versée à l'ouvrier en même temps que son indemnité de congé. Elle ne se cumule pas avec les versements qui auraient le même objet.
-                        </p>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 5-25 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -2708,16 +2276,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quelles-sont-les-primes-prevues-par-la-convention-collective"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -2783,52 +2341,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          La convention collective ne prévoit pas de prime d'ancienneté.
-                        </p>
-                        
-
-                        <p>
-                          Elle prévoit des congés pour ancienneté d'une durée de :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            2 jours pour 20 d'années de services, continus ou non, dans la même entreprise ;
-                          </li>
-                          
-
-                          <li>
-                            4 jours pour 25 d'années de services, continus ou non, dans la même entreprise ;
-                          </li>
-                          
-
-                          <li>
-                            6 jours pour 30 d'années de services, continus ou non, dans la même entreprise.
-                          </li>
-                          
-
-                        </ul>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 5-24 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -2853,16 +2390,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -2996,266 +2523,18 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          Le salarié a droit à un maintien de salaire pendant l'arrêt maladie dans les conditions suivantes.
-                        </p>
-                        
-
-                        <h4>
-                          1. Conditions pour bénéficier du maintien de salaire
-                        </h4>
-                        
-
-                        <p>
-                          Pour bénéficier du maintien de salaire, l'ouvrier doit avoir une ancienneté d'au moins :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            Pour les jeunes ouvriers âgés de moins de 25 ans et pour les apprentis sous contrat : 1 mois d'ancienneté dans l'entreprise ;
-                          </li>
-                          
-
-                          <li>
-                            Pour les ouvriers âgés d'au moins 25 ans :
-                            <ul>
-                              
-
-                              <li>
-                                Soit 3 mois d'ancienneté dans l'entreprise ;
-                              </li>
-                              
-
-                              <li>
-                                Soit 1 mois d'ancienneté dans l'entreprise, s'ils ont au moins acquis 750 points de retraite CNRO (calculés selon les dispositions prévues au règlement de cette institution), dans les 10 dernières années précédant le jour où se produit l'arrêt de travail.
-                              </li>
-                              
-
-                            </ul>
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                        <p>
-                          Pour le calcul de l'ancienneté, il faut tenir compte du temps de présence du salarié dans l'entreprise depuis la date du dernier embauchage et des périodes de suspension du contrat de travail.
-                        </p>
-                        
-
-                        <p>
-                          Les conditions d'ancienneté ne sont pas exigées en cas d'absence pour maladie supérieure à 30 jours, due à un accident du travail ou une maladie professionnelle.
-                        </p>
-                        
-
-                        <p>
-                          Pour pouvoir bénéficier de l'indemnisation, l'ouvrier doit :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            Avoir justifié de son absence par la production du certificat médical ;
-                          </li>
-                          
-
-                          <li>
-                            Justifier qu'il est pris en charge par la sécurité sociale ou la mutualité sociale agricole.
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                        <p>
-                          L'indemnisation est subordonnée à la possibilité pour l'employeur de faire vérifier la réalité de l'arrêt maladie de l'ouvrier.
-                        </p>
-                        
-
-                        <h4>
-                          2. Montant et durée du maintien de salaire
-                        </h4>
-                        
-
-                        <p>
-                          L'indemnité est versée après un délai de 3 jours d'arrêt de travail, sauf :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            En cas d'arrêt suite à un accident du travail ou maladie professionnelle ;
-                          </li>
-                          
-
-                          <li>
-                            En cas d'arrêt de travail supérieur à 30 jours suite à un accident de trajet. 
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                        <p>
-                          En cas d'accident ou de maladie non professionnel, le salarié a droit au maintien de :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            100 % du salaire pendant 45 jours (du 4e au 48e jour inclus d'arrêt de travail), puis;
-                          </li>
-                          
-
-                          <li>
-                            75 % du salaire du 49e au 90e jour inclus d'arrêt de travail.
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                        <p>
-                          En cas d'accident du travail ou de maladie professionnelle, le salarié a droit au maintien de :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            
-
-                            <p>
-                              Arrêt maladie inférieur ou égal à 30 jours :
-                            </p>
-                            
-
-                            <ul>
-                              
-
-                              <li>
-                                90 % du salaire du 1er au 15e jour inclus d'arrêt de travail, puis ;
-                              </li>
-                              
-
-                              <li>
-                                100 % du salaire du 16e au 30e jour inclus d'arrêt de travail.
-                              </li>
-                              
-
-                            </ul>
-                            
-
-                          </li>
-                          
-
-                          <li>
-                            
-
-                            <p>
-                              Arrêt maladie supérieur à 30 jours :
-                            </p>
-                            
-
-                            <ul>
-                              
-
-                              <li>
-                                100 % du salaire du 1er au 90e jour inclus d'arrêt de travail.
-                              </li>
-                              
-
-                            </ul>
-                            
-
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                        <p>
-                          En cas d'accident de trajet couvert par la législation de la sécurité sociale relative aux accidents du travail, le salarié a droit au maintien de : 
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            
-
-                            <p>
-                              Arrêt maladie inférieur ou égal à 30 jours :
-                            </p>
-                            
-
-                            <ul>
-                              
-
-                              <li>
-                                100 % du salaire du 4e au 30e jour inclus d'arrêt de travail ; 
-                              </li>
-                              
-
-                            </ul>
-                            
-
-                          </li>
-                          
-
-                          <li>
-                            
-
-                            <p>
-                              Arrêt maladie supérieur à 30 jours :
-                            </p>
-                            
-
-                            <ul>
-                              
-
-                              <li>
-                                100 % du salaire du 1er au 90e jour inclus d'arrêt de travail.
-                              </li>
-                              
-
-                            </ul>
-                            
-
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                        <p>
-                          Si un ouvrier est en arrêt maladie, à plusieurs reprises au cours d'une même année civile, la durée totale d'indemnisation ne peut dépasser au total celle des périodes fixées ci-dessus. Ainsi,la durée de maintien de salarié ne peut pas dépasser 90 jours au cours d'une même année civile.
-                        </p>
-                        
-
-                        <p>
-                          Lorsqu'un ouvrier est licencié pendant un arrêt de travail pour maladie ou accident non professionnels, pour nécessité de remplacement, il doit percevoir les indemnités complémentaires dans les conditions prévues ci-dessus, jusqu'à son rétablissement ou, au plus tard, jusqu'à l'expiration de la durée d'indemnisation.
-                        </p>
-                        
-
-                        <p>
-                          Les entreprises du bâtiment restant en dehors du régime professionnel mis en place en matière d'indemnisation des arrêts de travail pour maladie ou accident, professionnels ou non, inférieurs à 90 jours doivent verser elles-mêmes à leurs ouvriers remplissant les conditions prévues ci-dessus le montant des indemnités complémentaires aux indemnités journalières de la sécurité sociale.
-                        </p>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
+                      <div
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
+                      >
+                        <div
+                          class="sc-dNsVcS kvkoM"
+                        />
                       </div>
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-iGgWBj cRLRjd"
                       >
                         <div>
                           <button
@@ -3282,22 +2561,20 @@ exports[`<Convention /> renders 1`] = `
                             </svg>
                             <span
                               class="sc-fBWQRz lqUBb"
-                              font-size="hsmall"
-                              font-weight="600"
                             >
-                              Références juridiques concernées :
+                              Références
                             </span>
                           </button>
                           <div
                             class="sc-fjvvzt gtrYRc"
                           >
                             <ul
-                              class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                              class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                             >
                               <li>
                                 <a
                                   aria-label="IDCC 1596 - Article 6-11 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                                  class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                   target="_blank"
                                 >
@@ -3323,7 +2600,7 @@ exports[`<Convention /> renders 1`] = `
                               <li>
                                 <a
                                   aria-label="IDCC 1596 - Article 6-12 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                                  class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                   target="_blank"
                                 >
@@ -3349,7 +2626,7 @@ exports[`<Convention /> renders 1`] = `
                               <li>
                                 <a
                                   aria-label="IDCC 1596 - Article 6-13 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                                  class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                   target="_blank"
                                 >
@@ -3375,7 +2652,7 @@ exports[`<Convention /> renders 1`] = `
                               <li>
                                 <a
                                   aria-label="IDCC 1596 - Article 6-14 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                                  class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                   target="_blank"
                                 >
@@ -3401,7 +2678,7 @@ exports[`<Convention /> renders 1`] = `
                               <li>
                                 <a
                                   aria-label="IDCC 1596 - Article 6-15 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                                  class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                                   href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                   target="_blank"
                                 >
@@ -3428,16 +2705,6 @@ exports[`<Convention /> renders 1`] = `
                           </div>
                         </div>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -3503,57 +2770,31 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="sc-bXCLTC fcbJdD"
                     >
-                      <div>
-                        <p>
-                          En cas d'accident du travail ou de maladie professionnelle, le code du travail s'applique. 
-                        </p>
-                        
-
-                        <p>
-                          Dans les autres cas, l'employeur peut licencier l'ouvrier en arrêt maladie si il est obligé de le remplacer avant la date présumée de son retour. Ce licenciement ne peut intervenir que si la durée totale de l'absence de l'ouvrier est supérieure à 90 jours au cours de la même année civile.
-                        </p>
-                        
-
-                        <p>
-                          Dans ce cas, l'ouvrier bénéficie d'une priorité de réembauchage pendant un délai qui ne peut pas dépasser :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            Soit 3 mois après la fin de l'incapacité résultant de la maladie ou de l'accident ;
-                          </li>
-                          
-
-                          <li>
-                            Soit la fin du chantier pour lequel il a été embauché, si celle-ci survient avant l'expiration de ces 3 mois.
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                        <p>
-                          L'ouvrier qui veut bénéficier de cette priorité doit en informer par écrit le chef d'entreprise ou son représentant en indiquant l'adresse à laquelle il sera possible de le joindre. Le chef d'entreprise ou son représentant doit avertir l'ouvrier dès qu'un emploi correspondant à ses aptitudes sera disponible.
-                        </p>
-                      </div>
+                      <p
+                        class="sc-krNlru hosBKp"
+                      />
                       <div
-                        class="sc-iGgWBj cRLRjd sc-fsvrbR jNjbFN"
+                        class="sc-gEvEer hpVpdb sc-fThUAz kLmKzO"
                       >
                         <div
-                          class="sc-iapWAC itOorw"
+                          class="sc-dNsVcS kvkoM"
+                        />
+                      </div>
+                      <div
+                        class="sc-iGgWBj cRLRjd"
+                      >
+                        <div
+                          class="sc-iXzfSG eNQTpI"
                         >
-                          Références juridiques concernées :
+                          Références
                         </div>
                         <ul
-                          class="sc-cfxfcM sc-dExYaf kMmTaI jSXwjl"
+                          class="sc-cfxfcM sc-eBHhsj kMmTaI cZztUE"
                         >
                           <li>
                             <a
                               aria-label="IDCC 1596 - Article 6-11 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-eulNck IbHGD no-after"
+                              class="sc-bmzYkS eyKmWS sc-dPZUQH gwlAYn no-after"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               target="_blank"
                             >
@@ -3578,16 +2819,6 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <strong>
-                        Pour savoir si la mesure prévue par la convention collective s’applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                        .
-                      </strong>
                     </div>
                   </div>
                 </div>
@@ -3599,10 +2830,10 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </div>
   <div
-    class="sc-ePDLzJ dUIkxy"
+    class="sc-fMMURN bncoEo"
   >
     <h2
-      class="sc-eBHhsj dsYjNf"
+      class="sc-cVzyXs jFvudg"
     >
       <span
         class="sc-gsFSXq ljkohw"
@@ -3610,13 +2841,13 @@ exports[`<Convention /> renders 1`] = `
       Articles de la convention collective
     </h2>
     <p
-      class="sc-bVVIoq iSPxRx"
+      class="sc-ktPPKK fdjlXL"
     >
       Consultez les articles de la convention collective qui s’appliquent à votre situation dans les thèmes sélectionnés ci-dessous.
     </p>
   </div>
   <div
-    class="sc-dZoequ kjOzCY"
+    class="sc-fxwrCY gwaFzF"
     data-accordion-component="Accordion"
   >
     <div
@@ -3631,7 +2862,7 @@ exports[`<Convention /> renders 1`] = `
           aria-controls="accordion__panel-raa-25"
           aria-disabled="false"
           aria-expanded="false"
-          class="sc-eZkCL bNqpkC"
+          class="sc-hIUJlX fucbFP"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-raa-25"
           role="button"
@@ -3639,7 +2870,7 @@ exports[`<Convention /> renders 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="sc-ggpjZQ kJjCoa"
+            class="sc-jnOGJG edPXtC"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
@@ -3652,20 +2883,20 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <div
-            class="sc-cmaqmh kmooEE"
+            class="sc-dZoequ bcPqgL"
           >
             En savoir plus
           </div>
         </div>
       </div>
       <div
-        class="sc-gFVvzn hIsaUT"
+        class="sc-ggpjZQ fponfT"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-raa-25"
       >
         <div
-          class="sc-kAkpmW lkGQTx"
+          class="sc-eZkCL HkMzx"
         >
           <p>
             Les thèmes sélectionnés par le ministère du Travail sont les thèmes pour lesquels la convention collective s’applique à votre situation. Cela signifique que même s’il existe un accord d’entreprise sur ces thèmes, celui-ci ne peut prévoir de règles différentes de celles prévues par la convention collective.
@@ -3765,137 +2996,129 @@ exports[`<Convention /> renders 1`] = `
             class="sc-bXCLTC fcbJdD"
           >
             <div
-              class="sc-gFAWRd RvAeB sc-hRJfrW jNzush"
+              class="sc-gFAWRd euznOP"
             >
               <div
-                class="sc-gmPhUn fMbHzm"
+                class="sc-gmPhUn cRQifg"
               >
                 <div
-                  class="sc-iHbSHJ bydwxp"
+                  class="sc-ibQAlb fuLYQY no-after"
                 >
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 1-4
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Salaires minimaux
-                      </div>
+                          Article 1-4
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Salaires minimaux
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 4-1
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Salaire mensuel
-                      </div>
+                          Article 4-1
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Salaire mensuel
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 4-2
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Déduction des heures non travaillées
-                      </div>
+                          Article 4-2
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Déduction des heures non travaillées
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 12-8
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Barèmes de salaires minimaux
-                      </div>
+                          Article 12-8
+                        </a>
+                      </p>
                     </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Barèmes de salaires minimaux
                   </div>
                 </div>
               </div>
@@ -3964,385 +3187,377 @@ exports[`<Convention /> renders 1`] = `
             class="sc-bXCLTC fcbJdD"
           >
             <div
-              class="sc-gFAWRd RvAeB sc-hRJfrW jNzush"
+              class="sc-gFAWRd euznOP"
             >
               <div
-                class="sc-gmPhUn fMbHzm"
+                class="sc-gmPhUn cRQifg"
               >
                 <div
-                  class="sc-iHbSHJ bydwxp"
+                  class="sc-ibQAlb fuLYQY no-after"
                 >
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 3-13
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Contingent d'heures supplémentaires non soumis à autorisation
-                      </div>
+                          Article 3-13
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Contingent d'heures supplémentaires non soumis à autorisation
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 3-14
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Heures supplémentaires exceptionnelles
-                      </div>
+                          Article 3-14
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Heures supplémentaires exceptionnelles
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 3-15
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Plafonds
-                      </div>
+                          Article 3-15
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Plafonds
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 3-16
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Définition de la durée du travail
-                      </div>
+                          Article 3-16
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Définition de la durée du travail
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 3-17
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Majoration pour heures supplémentaires.
-                      </div>
+                          Article 3-17
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Majoration pour heures supplémentaires.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 3-18
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Equivalences et dérogations permanentes
-                      </div>
+                          Article 3-18
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Equivalences et dérogations permanentes
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 3-21
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Semaine de travail en 5 jours
-                      </div>
+                          Article 3-21
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Semaine de travail en 5 jours
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 3-22
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Exceptions à la semaine de travail en 5 jours
-                      </div>
+                          Article 3-22
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Exceptions à la semaine de travail en 5 jours
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 3-24
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Horaires individualisés
-                      </div>
+                          Article 3-24
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Horaires individualisés
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 3-25
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Horaires à temps partiel
-                      </div>
+                          Article 3-25
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Horaires à temps partiel
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 3-28
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Récupération des heures perdues pour intempéries
-                      </div>
+                          Article 3-28
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Récupération des heures perdues pour intempéries
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 3-29
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Cas des chefs d'équipe
-                      </div>
+                          Article 3-29
+                        </a>
+                      </p>
                     </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Cas des chefs d'équipe
                   </div>
                 </div>
               </div>
@@ -4411,230 +3626,222 @@ exports[`<Convention /> renders 1`] = `
             class="sc-bXCLTC fcbJdD"
           >
             <div
-              class="sc-gFAWRd RvAeB sc-hRJfrW jNzush"
+              class="sc-gFAWRd euznOP"
             >
               <div
-                class="sc-gmPhUn fMbHzm"
+                class="sc-gmPhUn cRQifg"
               >
                 <div
-                  class="sc-iHbSHJ bydwxp"
+                  class="sc-ibQAlb fuLYQY no-after"
                 >
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 12-1
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Préambule
-                      </div>
+                          Article 12-1
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Préambule
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 12-2
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Définitions générales des critères et des niveaux
-                      </div>
+                          Article 12-2
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Définitions générales des critères et des niveaux
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 12-3
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Coefficients hiérarchiques
-                      </div>
+                          Article 12-3
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Coefficients hiérarchiques
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 12-4
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Prise en compte des diplômes professionnels bâtiment
-                      </div>
+                          Article 12-4
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Prise en compte des diplômes professionnels bâtiment
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 12-5
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Polyvalence
-                      </div>
+                          Article 12-5
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Polyvalence
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 12-6
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Evolution de carrière
-                      </div>
+                          Article 12-6
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div
-                    class="sc-klVQfs hQsiuM"
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Evolution de carrière
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
                   >
                     <div
-                      class="sc-fTFjTM hkOnFS no-after"
+                      class="sc-hZDyAQ tqlOz"
                     >
-                      <div
-                        class="sc-gmgFlS dlfKdE"
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
-                        <div
-                          class="sc-kMkxaj dwuMYa"
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
+                          target="_blank"
                         >
-                          <p
-                            class="sc-hZDyAQ sc-fiCwlc bUgSfx jTxoAy"
-                          >
-                            <a
-                              href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              Article 12-7
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-fBdRDi mhKrF"
-                      >
-                        Suivi de l'application dans l'entreprise
-                      </div>
+                          Article 12-7
+                        </a>
+                      </p>
                     </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Suivi de l'application dans l'entreprise
                   </div>
                 </div>
               </div>
@@ -4645,10 +3852,10 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </div>
   <div
-    class="sc-ePDLzJ dUIkxy"
+    class="sc-fMMURN bncoEo"
   >
     <h2
-      class="sc-eBHhsj dsYjNf"
+      class="sc-cVzyXs jFvudg"
     >
       <span
         class="sc-gsFSXq ljkohw"
@@ -4656,26 +3863,26 @@ exports[`<Convention /> renders 1`] = `
       Recherche dans la convention collective
     </h2>
     <p
-      class="sc-bVVIoq iSPxRx"
+      class="sc-ktPPKK fdjlXL"
     >
       Recherchez par mots clés dans le texte de la convention collective sur le site Légifrance.
     </p>
   </div>
   <form
     action="https://legifrance.gouv.fr/search/kali#kali"
-    class="sc-dhFUGM jtXUXd"
+    class="sc-eoVZPG dylCph"
     target="_blank"
   >
     <div
-      class="sc-jOnpCo hsNfzp"
+      class="sc-dycYrt efqVsT"
     >
       <div
-        class="sc-dkmUuB ayeCS sc-kFWlue bgJwmj"
+        class="sc-sLsrZ kGdGKi sc-hTUWRQ bcxtFg"
       >
         <input
           aria-label="Recherchez dans la collection collective"
           autocomplete="off"
-          class="sc-ejfMa-d dijxYa"
+          class="sc-dBmzty djgFPK"
           id="search-agreement"
           name="rawQuery"
           placeholder="Congés exceptionnels, prime"
@@ -4714,14 +3921,14 @@ exports[`<Convention /> renders 1`] = `
       />
       <button
         aria-label="Recherchez dans la collection collective"
-        class="sc-kOPcWz kyVwqT sc-bkEOxz eYWClV"
+        class="sc-kOPcWz kyVwqT sc-lizKOf beAiTt"
         title="Lancer une recherche"
         type="submit"
       >
         <svg
           aria-hidden="true"
           aria-label="rechercher (nouvelle fenêtre)"
-          class="sc-fbKhjd qVUJy"
+          class="sc-dWZqqJ idvvhI"
           fill="none"
           viewBox="0 0 32 32"
           xmlns="http://www.w3.org/2000/svg"
@@ -4735,10 +3942,10 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </form>
   <div
-    class="sc-bypJrT cRnKsM"
+    class="sc-hRJfrW fHhwIY"
   >
     <div
-      class="sc-ddjGPC bYORpp"
+      class="sc-iHbSHJ dqcYtl"
     >
       <svg
         aria-hidden="true"
@@ -4758,7 +3965,7 @@ exports[`<Convention /> renders 1`] = `
       </svg>
     </div>
     <div
-      class="sc-dSCufp gAzXIi"
+      class="sc-klVQfs giEiHo"
     >
       Selon le thème, un accord collectif d’entreprise peut prévoir des règles différentes par rapport à la convention collective.
        

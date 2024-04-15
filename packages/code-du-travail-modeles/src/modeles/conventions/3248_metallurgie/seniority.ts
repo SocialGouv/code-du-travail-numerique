@@ -16,7 +16,7 @@ import type {
   SeniorityProps,
   SeniorityRequiredProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
   YearDetail,
 } from "../../common";
 import { accumulateAbsenceByYear, MotifKeys, parseDate } from "../../common";
@@ -36,16 +36,16 @@ export type CC3248SeniorityRequiredProps = DefaultSeniorityRequiredProps & {
   dateBecomeDayContract?: string;
 };
 
-export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC3248> {
+export class Seniority3248 extends SeniorityDefault<SupportedCc.IDCC3248> {
   mapSituation(
     args: Record<string, string | undefined>
-  ): SeniorityProps<SupportedCcIndemniteLicenciement.IDCC3248> {
+  ): SeniorityProps<SupportedCc.IDCC3248> {
     return this.map(args);
   }
 
   mapRequiredSituation(
     args: Record<string, string | undefined>
-  ): SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC3248> {
+  ): SeniorityRequiredProps<SupportedCc.IDCC3248> {
     return this.map(args);
   }
 
@@ -61,7 +61,7 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
     hasBeenDayContract,
     dateBecomeDayContract,
     hasBeenExecutive,
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC3248>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.IDCC3248>): SeniorityResult {
     switch (categoriePro) {
       case "'A, B, C, D ou E'":
         return this.computeABCDE(
@@ -90,7 +90,7 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
     hasBeenExecutive,
     hasBeenDayContract,
     dateBecomeDayContract,
-  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC3248>): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCc.IDCC3248>): RequiredSeniorityResult {
     switch (categoriePro) {
       case "'A, B, C, D ou E'":
         return this.computeABCDE(
@@ -172,7 +172,7 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
 
   private map(
     args: Record<string, string | undefined>
-  ): SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC3248> {
+  ): SeniorityRequiredProps<SupportedCc.IDCC3248> {
     const categoriePro = args[
       "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle"
     ] as "'A, B, C, D ou E'" | "'F, G, H ou I'";
@@ -201,7 +201,7 @@ export class Seniority3248 extends SeniorityDefault<SupportedCcIndemniteLicencie
       dateBecomeDayContract: dateBeginDayContract,
       hasBeenDayContract: hasBeenDayContract === "'Oui'",
       hasBeenExecutive: hasBeenExecutive === "'Oui'",
-    } as SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC3248>;
+    } as SeniorityRequiredProps<SupportedCc.IDCC3248>;
   }
 
   private calculateDayContractIncrease(

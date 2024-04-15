@@ -1,4 +1,4 @@
-import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import { SupportedCc } from "@socialgouv/modeles-social";
 import { StoreApi } from "zustand";
 import { IndemniteLicenciementStepName } from "..";
 import { MainStore } from "../store";
@@ -18,52 +18,52 @@ import { validateAgreement1702 } from "./1702-ouvriers-travaux-public";
 import { validateAgreement1740 } from "./1740-batiment-region-parisienne";
 
 const validatorAgreement = (
-  idcc: SupportedCcIndemniteLicenciement | null,
+  idcc: SupportedCc | null | undefined,
   step: IndemniteLicenciementStepName,
   get: StoreApi<any>["getState"],
   set: StoreApi<MainStore>["setState"]
 ): boolean => {
   switch (true) {
-    case SupportedCcIndemniteLicenciement.IDCC1516 === idcc &&
+    case SupportedCc.IDCC1516 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement1516(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC1527 === idcc &&
+    case SupportedCc.IDCC1527 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement1527(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC0029 === idcc &&
+    case SupportedCc.IDCC0029 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement29(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC0016 === idcc &&
+    case SupportedCc.IDCC0016 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement16(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC0044 === idcc &&
+    case SupportedCc.IDCC0044 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement44(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC2596 === idcc &&
+    case SupportedCc.IDCC2596 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement2596(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC2609 === idcc &&
+    case SupportedCc.IDCC2609 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement2609(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC2120 === idcc &&
+    case SupportedCc.IDCC2120 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement2120(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC2148 === idcc &&
+    case SupportedCc.IDCC2148 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement2148(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC2614 === idcc &&
+    case SupportedCc.IDCC2614 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement2614(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC1672 === idcc &&
+    case SupportedCc.IDCC1672 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement1672(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC1483 === idcc &&
+    case SupportedCc.IDCC1483 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement1483(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC1702 === idcc &&
+    case SupportedCc.IDCC1702 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement1702(get, set);
-    case SupportedCcIndemniteLicenciement.IDCC1740 === idcc &&
+    case SupportedCc.IDCC1740 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement1740(get, set);
     default:

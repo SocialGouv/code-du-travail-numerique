@@ -1,9 +1,12 @@
-import getSupportedCcIndemniteLicenciement from "./getSupportedCc";
+import { SupportedTypes } from "@socialgouv/modeles-social";
+import getSupportedCc from "./getSupportedCc";
 
 const isCcFullySupportedIndemniteLicenciement = (idcc: number): boolean => {
-  const supportedCc = getSupportedCcIndemniteLicenciement();
+  const supportedCc = getSupportedCc();
   const cc = supportedCc.find(
-    (item) => item.idcc === idcc && item.fullySupported
+    (item) =>
+      item.idcc === idcc &&
+      item.fullySupported === SupportedTypes.FULLY_SUPPORTED
   );
   return !!cc;
 };

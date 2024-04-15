@@ -2,7 +2,7 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
@@ -12,11 +12,11 @@ export type CC2148ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary2148
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2148>
+  implements IReferenceSalary<SupportedCc.IDCC2148>
 {
   mapSituation(
     args: Record<string, string | undefined>
-  ): ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2148> {
+  ): ReferenceSalaryProps<SupportedCc.IDCC2148> {
     return {
       salaires: args.salaryPeriods
         ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
@@ -35,7 +35,7 @@ export class ReferenceSalary2148
   computeReferenceSalary({
     salaires,
     salairesPendantPreavis,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2148>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC2148>): number {
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const rankedSalairesPendantPreavis = rankByMonthArrayDescFrench(
       salairesPendantPreavis

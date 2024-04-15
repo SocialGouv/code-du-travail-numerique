@@ -5128,16 +5128,18 @@
         "position": 3,
         "slug": "/themes/conges-pour-evenement-familial"
       }
-    ]
+    ],
+    "idcc": "0000"
   },
   {
     "index": 41,
     "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
     "cdtnId": "404b14a887",
     "excludeFromSearch": false,
-    "id": "246b47fa-a409-4079-a6c3-4df4013528de",
+    "id": "1d00eba4-145b-451e-b1e9-fb5903329235",
     "isPublished": true,
     "metaDescription": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
+    "refs": [],
     "slug": "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
     "source": "contributions",
     "text": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\nPoursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\nVendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\nFermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
@@ -5147,7 +5149,32 @@
         "id": "875f5b33-5464-4eac-83d0-8ec51b92268f",
         "text": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\nPoursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\nVendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\nFermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
         "markdown": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\n\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\n- Poursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\n- Vendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\n- Fermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
-        "references": [],
+        "references": [
+          {
+            "url": "https://www.service-public.fr/particuliers/vosdroits/F31231",
+            "title": "Fiche Service-public.fr: \"Que devient le contrat du salarié au décès du particulier employeur ?\"",
+            "dila_id": null,
+            "category": null,
+            "dila_cid": null,
+            "dila_container_id": null
+          },
+          {
+            "url": null,
+            "title": "L1233-3",
+            "dila_id": "LEGIARTI000036762081",
+            "category": "labor_code",
+            "dila_cid": "LEGIARTI000006901015",
+            "dila_container_id": "LEGITEXT000006072050"
+          },
+          {
+            "url": null,
+            "title": "L1224-1",
+            "dila_id": "LEGIARTI000006900875",
+            "category": "labor_code",
+            "dila_cid": "LEGIARTI000006900875",
+            "dila_container_id": "LEGITEXT000006072050"
+          }
+        ],
         "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…"
       },
       "conventions": [
@@ -5155,1546 +5182,1459 @@
           "id": "1e85348e-3fd0-465b-8320-7a6b416e28c3",
           "idcc": "0016",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
+          }
         },
         {
           "id": "a3c20d65-651a-4e52-9a0c-c97d754a98bc",
           "idcc": "0029",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "29-hospitalisation-privee-etablissements-prives-dhospitalisation-de-soins-d"
+          }
         },
         {
           "id": "15540029-655c-4bfd-b954-3771afdf9e87",
           "idcc": "0044",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "44-industries-chimiques-et-connexes"
+          }
         },
         {
           "id": "1fc80218-e36e-4e4b-a1c2-c841cdbfeb98",
           "idcc": "0054",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "54-industries-metallurgiques-mecaniques-et-connexes-de-la-region-parisienne"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "02433fc2-bd6a-41d7-842c-1f269918c0a1",
           "idcc": "0086",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "86-entreprises-de-la-publicite-et-assimilees"
+          }
         },
         {
           "id": "ec9bae09-c318-421e-9bee-1b0beff6e156",
           "idcc": "0176",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "176-industrie-pharmaceutique"
+          }
         },
         {
           "id": "7ec07a0f-8863-4266-95da-3c73358dd75c",
           "idcc": "0275",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "275-transport-aerien-personnel-au-sol"
+          }
         },
         {
           "id": "992e5886-4877-4274-bdfa-91b3ffaf79f1",
           "idcc": "0292",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "292-plasturgie"
+          }
         },
         {
           "id": "8455e390-7522-4ba2-b6bb-4afcfeb5db9e",
           "idcc": "0413",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "413-handicapes-etablissements-et-services-pour-les-personnes-inadaptees-et-han"
+          }
         },
         {
           "id": "4fba8935-8c0c-4b98-8d77-072f7bbf5dc7",
           "idcc": "0573",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "573-commerces-de-gros"
+          }
         },
         {
           "id": "c490014a-7207-4277-97b0-7f6b62fc8e05",
           "idcc": "0650",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "650-metallurgie-ingenieurs-et-cadres"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "6cc9367f-acf3-4d52-9d1a-f912fd0d10ee",
           "idcc": "0675",
           "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "675-maisons-a-succursales-de-vente-au-detail-dhabillement"
+          }
         },
         {
           "id": "901b2666-77b7-4dc3-880c-b5a22bb953bc",
           "idcc": "0714",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "714-convention-collective-departementale-des-industries-du-travail-des-metaux-de"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "3ae26e2f-efaa-4cbb-89bf-d419fc645008",
           "idcc": "0787",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "787-personnel-des-cabinets-dexperts-comptables-et-de-commissaires-aux-comptes"
+          }
         },
         {
           "id": "bf0eacb7-1d9d-4e1c-aab1-87c5a5d4cdc3",
           "idcc": "0822",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "822-convention-collective-departementale-applicable-aux-mensuels-de-la-metallurg"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "df04f170-972e-4dfe-8f71-881ef4026e55",
           "idcc": "0827",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "827-convention-collective-departementale-des-industries-metallurgiques-mecaniqu"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "aa3cef20-281a-4e21-b550-1c7acf877acd",
           "idcc": "0828",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "828-convention-collective-departementale-des-industries-metallurgiques-mecaniqu"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "1507f74d-1a84-4d91-9393-f50441ece472",
           "idcc": "0829",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "829-convention-collective-departementale-des-industries-metallurgiques-et-des-in"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "8b6b2aee-50e6-48fe-ad84-0b884a16af06",
           "idcc": "0836",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "836-convention-collective-departementale-des-industries-metallurgiques-mecaniqu"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "405ed3c7-e992-4dc2-ba87-a2cf13b64ee5",
           "idcc": "0843",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "843-boulangerie-patisserie-entreprises-artisanales"
+          }
         },
         {
           "id": "3c036ece-a65f-4d38-b823-5d81addd2a41",
           "idcc": "0860",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "860-convention-collective-departementale-de-la-metallurgie-et-des-industries-con"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "e6fafc4b-8c6e-4f36-bb46-4668ff6dcff0",
           "idcc": "0863",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "863-convention-collective-regionale-des-industries-metallurgiques-et-connexes-d"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "8ede3f75-02fd-4580-92ad-0b8f774b5595",
           "idcc": "0878",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "878-convention-collective-departementale-des-mensuels-des-industries-metallurgiq"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "d3af6889-e263-441c-b2d9-9b62f707d180",
           "idcc": "0887",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "887-convention-collective-departementale-des-industries-metallurgiques-mecaniqu"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "f336c900-cd25-4951-a17a-3b67a9cfa546",
           "idcc": "0898",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "898-convention-collective-departementale-des-industries-metallurgiques-mecaniqu"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "3abafc5a-3ba1-41d1-807d-2faca4300fba",
           "idcc": "0899",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "899-convention-collective-departementale-des-industries-metallurgiques-mecaniqu"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "93996885-6435-482e-9064-22731a6f5074",
           "idcc": "0911",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "911-convention-collective-departementale-des-industries-metallurgiques-mecaniqu"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "4af6cd69-7c25-4b3c-97f3-1defa907447a",
           "idcc": "0914",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "914-convention-collective-departementale-des-mensuels-des-industries-metallurgiq"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "c84f55eb-0c0e-4244-9b9a-60cd77ed201b",
           "idcc": "0920",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "920-convention-collective-departementale-des-industries-metallurgiques-electriqu"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "7a69dd41-bb9c-4fe7-aa83-01c715273711",
           "idcc": "0923",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "923-convention-collective-departementale-de-la-metallurgie-de-la-charente-mariti"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "df9ad9af-6e4c-4954-9b4e-cc74e840c702",
           "idcc": "0930",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "930-convention-collective-departementale-de-la-metallurgie-et-des-industries-con"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "8d09014a-49b6-4f95-9265-abe073608201",
           "idcc": "0934",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "934-convention-collective-departementale-des-industries-metallurgiques-mecanique"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "d593f2a8-32f6-499e-a129-26da35a4d8b1",
           "idcc": "0937",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "937-convention-collective-regionale-des-industries-metallurgiques-mecaniques-et"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "7ded0cb3-1b44-4337-a5d0-2580090a5ea8",
           "idcc": "0943",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "943-convention-collective-departementale-des-industries-metallurgiques-mecanique"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "b2c6381c-cfee-4b2d-8b85-a2d8ce86b5a5",
           "idcc": "0948",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "948-convention-collective-departementale-des-industries-metallurgiques-mecaniqu"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "b93d87dc-c9dd-479b-83a2-cd7c17dcf813",
           "idcc": "0965",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "965-convention-collective-departementale-des-industries-metallurgiques-et-connex"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "d8513de9-5d46-44ad-a432-4d133bc4cde2",
           "idcc": "0979",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "979-convention-collective-locale-des-industries-metallurgiques-de-larrondisseme"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "0b6cc34c-7bf5-475d-8192-e90cba590227",
           "idcc": "0984",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "984-convention-collective-departementale-des-industries-metallurgiques-mecaniqu"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "8e0868dd-4ca7-40a6-a660-37c9c0ff8e7d",
           "idcc": "1007",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1007-convention-collective-locale-darrondissement-des-industries-metallurgiques"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "9bba0c4b-0a2a-4c5c-bf6a-e22a1f9a2c88",
           "idcc": "1043",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1043-gardiens-concierges-et-employes-dimmeubles"
+          }
         },
         {
           "id": "c54e3545-d044-47a2-9236-78bf6f7ec28d",
           "idcc": "1059",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1059-convention-collective-regionale-des-industries-metallurgiques-electriques"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "b215f648-94b2-4867-9f85-5ada59dd3277",
           "idcc": "1090",
           "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
+          }
         },
         {
           "id": "72ac4fc0-d360-4c2c-9756-c64f152bb2be",
           "idcc": "1147",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1147-personnel-des-cabinets-medicaux"
+          }
         },
         {
           "id": "352c13f1-4b3b-4852-993d-5a80bf9b4902",
           "idcc": "1159",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1159-convention-collective-departementale-de-la-metallurgie-de-la-nievre"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "9d770a24-7b36-4243-8a8b-52075963fdba",
           "idcc": "1164",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1164-convention-collective-locale-des-industries-metallurgiques-et-annexes-de-la"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "269f3e37-2d77-485b-8875-ea622e61f618",
           "idcc": "1266",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1266-restauration-de-collectivites"
+          }
         },
         {
           "id": "0331d59f-9382-490d-bd56-f5dce5a7aa57",
           "idcc": "1274",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1274-convention-collective-departementale-des-industries-metallurgiques-de-la-co"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "629e7806-34fd-460a-9859-3560d4981e6a",
           "idcc": "1315",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1315-convention-collective-regionale-des-industries-metallurgiques-mecaniques-e"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "ddc90d07-98b3-428a-825e-8b919f21542a",
           "idcc": "1351",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1351-entreprises-de-prevention-et-de-securite"
+          }
         },
         {
           "id": "9ccc3be5-5a5c-478e-94c7-bfdfb29f72f7",
           "idcc": "1353",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1353-convention-collective-departementale-des-industries-metallurgiques-et-conne"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "50e2853d-3b04-4921-9c5d-d92a6af2ca1d",
           "idcc": "1365",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1365-convention-collective-departementale-de-travail-des-industries-de-transform"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "eb61ded9-7824-4b6a-b781-8eeb76a5195a",
           "idcc": "1369",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1369-convention-collective-departementale-des-industries-metallurgiques-electri"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "c069a3f9-bec5-4ada-ade5-6e259ca23523",
           "idcc": "1387",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1387-convention-collective-locale-des-mensuels-des-industries-metallurgiques-des"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "1e6a8999-25d3-4f77-a1b1-2897e04a6e2b",
           "idcc": "1404",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1404-entreprises-de-la-maintenance-distribution-et-location-de-materiels-agrico"
+          }
         },
         {
           "id": "7b63543d-654f-4a9f-86a1-eda8413f0f1f",
           "idcc": "1472",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1472-convention-collective-departementale-des-industries-metallurgiques-du-pas-d"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "5e6e95ef-8346-4ab3-b1f4-3bfcc4ff0408",
           "idcc": "1480",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1480-journalistes"
+          }
         },
         {
           "id": "4cea082f-b9c7-43b3-8845-85868f775494",
           "idcc": "1483",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1483-commerce-de-detail-de-lhabillement-et-des-articles-textiles"
+          }
         },
         {
           "id": "89f082ee-c063-4494-a7b7-dae6e09adfee",
           "idcc": "1486",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1486-bureaux-detudes-techniques-cabinets-dingenieurs-conseils-et-societes-de"
+          }
         },
         {
           "id": "fb887379-d471-4fc2-b4fc-bdc4f6eb2538",
           "idcc": "1501",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1501-restauration-rapide"
+          }
         },
         {
           "id": "9308ca0b-c12b-49c7-9d91-7e7f065c7351",
           "idcc": "1505",
           "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1505-commerce-de-detail-alimentaire-non-specialise"
+          }
         },
         {
           "id": "5ca076d7-ae5d-47e6-8aa8-82171641792b",
           "idcc": "1516",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1516-organismes-de-formation"
+          }
         },
         {
           "id": "4a17f525-b401-4d66-b0fc-3e526407b554",
           "idcc": "1517",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1517-commerces-de-detail-non-alimentaires-antiquites-brocante-galeries-dart"
+          }
         },
         {
           "id": "f1ad6d4a-0fea-4bb1-aa8e-ca057f37521f",
           "idcc": "1518",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1518-education-culture-loisirs-et-animation-au-service-des-territoires-eclat"
+          }
         },
         {
           "id": "142bc7f4-1383-47fc-b72d-f5a8758972b4",
           "idcc": "1525",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1525-convention-collective-locale-de-la-metallurgie-de-la-region-dunkerquoise"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "3a24d44e-bbc8-499b-a7a6-4c09c997d27e",
           "idcc": "1527",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1527-immobilier-administrateurs-de-biens-societes-immobilieres-agents-immobi"
+          }
         },
         {
           "id": "2f25911a-2b2e-4083-b439-a1c1318255af",
           "idcc": "1560",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1560-convention-collective-departementale-des-industries-metallurgiques-electri"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "95b42f3e-cf88-4de9-824c-27cbc7697930",
           "idcc": "1564",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1564-convention-collective-departementale-des-industries-de-la-metallurgie-de-sa"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "a6f6948b-aee9-4173-abc4-f260616236ea",
           "idcc": "1572",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1572-convention-collective-departementale-de-la-metallurgie-de-la-charente"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "cb196483-22d5-4d68-a7f2-4ccf74a48808",
           "idcc": "1576",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1576-convention-collective-departementale-de-travail-des-industries-metallurgiqu"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "3408e9d1-591a-437b-977c-5265dddc4dd1",
           "idcc": "1577",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1577-convention-collective-regionale-des-industries-metallurgiques-electronique"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "02789bd1-266f-4667-8bad-c3d506f1ae94",
           "idcc": "1578",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1578-convention-collective-departementale-de-la-metallurgie-de-la-loire-et-de-l"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "77ed891a-3913-4ff5-8ec9-06ad560d0041",
           "idcc": "1592",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1592-convention-collective-locale-de-la-metallurgie-du-valenciennois-et-du-cambr"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "a3e613b3-6bab-45f5-bec0-3a141ef3cfa9",
           "idcc": "1596",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries"
+          }
         },
         {
           "id": "7b5e86f2-c4f9-4695-abe8-ef9ec65e9e45",
           "idcc": "1597",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1597-batiment-ouvriers-entreprises-occupant-plus-de-10-salaries"
+          }
         },
         {
           "id": "f41f50d2-e32b-47c9-a7ee-4a60e9506ee0",
           "idcc": "1604",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1604-convention-collective-metallurgie-rouen-dieppe-seine-maritime"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "d424b046-2521-4ffe-ab03-23223c82d5b5",
           "idcc": "1606",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1606-bricolage-vente-au-detail-en-libre-service"
+          }
         },
         {
           "id": "8a6aa913-7ee1-47ce-ba2c-74499c5d2c21",
           "idcc": "1626",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1626-convention-collective-departementale-des-industries-metallurgiques-mecaniq"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "00560192-6951-4cac-abdf-b8f35ce7ae26",
           "idcc": "1627",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1627-convention-collective-departementale-du-travail-des-industries-de-la-metall"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "10530e79-d663-4f4f-a2cc-efdecf729058",
           "idcc": "1628",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1628-convention-collective-departementale-de-la-metallurgie-des-deux-sevres"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "d7ebc6dd-ed2a-4217-bc6b-a703a831e89d",
           "idcc": "1634",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1634-convention-collective-departementale-de-la-metallurgie-des-cotes-darmor"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "5e6ad8ba-9b98-425e-9186-3e2205623600",
           "idcc": "1635",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1635-metallurgie-gironde-et-landes"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "97cfcd8a-4563-435b-8c7e-b180b4f86cb8",
           "idcc": "1672",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1672-societes-dassurances"
+          }
         },
         {
           "id": "2d4ae8b8-38c7-48b5-a552-aa0bb5cee5cc",
           "idcc": "1702",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1702-travaux-publics-tome-ii-ouvriers"
+          }
         },
         {
           "id": "faa12948-86f1-4556-bca0-b9cc1621209e",
           "idcc": "1732",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "cb327b0c-1e91-423b-bbdb-333c4c0393e9",
-          "idcc": "1740",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1732-convention-collective-departementale-des-industries-metallurgiques-mecaniq"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "e781ef39-9020-4e93-882e-227a4e824f78",
           "idcc": "1813",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1813-convention-collective-locale-de-travail-des-industries-de-la-transformation"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "de2a00dd-e7e5-4081-b473-8c6fbd1f7a03",
           "idcc": "1867",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1867-convention-collective-regionale-de-la-metallurgie-de-la-drome-ardeche"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "e09836b2-36e4-4a8c-9932-667e49093a0e",
           "idcc": "1885",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1885-convention-collective-departementale-des-industries-metallurgiques-mecaniq"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "8a530e6f-50d1-4eff-bdc4-27a1e01b3c83",
           "idcc": "1902",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1902-convention-collective-departementale-des-industries-metallurgiques-mecaniq"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "7975f6ae-8133-4665-907b-cd40cd101e95",
           "idcc": "1912",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1912-convention-collective-departementale-des-industries-de-la-metallurgie-du-ha"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "63ea8f6c-e4b0-4061-a002-f6a3d88c95cc",
           "idcc": "1960",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1960-convention-collective-departementale-des-industries-metallurgiques-mecaniq"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "0d16f1a4-9600-402c-8df9-9a3c0a3af0ad",
           "idcc": "1966",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1966-convention-collective-departementale-des-industries-metallurgiques-du-loire"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "4fc76f1e-fb0c-44f1-b9fc-d8be75de499b",
           "idcc": "1967",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1967-convention-collective-departementale-de-lindustrie-des-metaux-du-bas-rhin"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "e0560448-efc9-4af7-b433-612846e1b17c",
           "idcc": "1979",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1979-hotels-cafes-restaurants"
+          }
         },
         {
           "id": "282c2c04-b5c4-478c-b530-fa3a1fe12e6f",
           "idcc": "1996",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "1996-pharmacie-dofficine"
+          }
         },
         {
           "id": "f67ce559-2710-4869-b336-d234543f3563",
           "idcc": "2003",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2003-convention-collective-departementale-des-industries-metallurgiques-electri"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "02426fcd-4b09-4855-bdaa-a3c955ba0665",
           "idcc": "2098",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2098-prestataires-de-services-dans-le-domaine-du-secteur-tertiaire"
+          }
         },
         {
           "id": "08d0dd45-b814-41fc-9268-0c1e0997ea3c",
           "idcc": "2120",
           "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2120-banque"
+          }
         },
         {
           "id": "4af91f3b-3fde-47e5-b98c-877b2e9c896e",
           "idcc": "2126",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2126-convention-collective-regionale-de-la-metallurgie-du-gard-et-de-la-lozere"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "1b1be6c7-3a21-40d5-856b-df142237d779",
           "idcc": "2148",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2148-telecommunications"
+          }
         },
         {
           "id": "79bde5d3-8b58-4bfe-85bd-298c9e4e4ed1",
           "idcc": "2216",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2216-commerce-de-detail-et-de-gros-a-predominance-alimentaire"
+          }
         },
         {
           "id": "aa5bd534-5ffd-43ba-ba1b-907738199746",
           "idcc": "2221",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2221-convention-collective-regionale-des-mensuels-des-industries-des-metaux-de-l"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "25f3aac2-ebb8-40c0-8e4d-313367b5b800",
           "idcc": "2264",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2264-hospitalisation-privee"
+          }
         },
         {
           "id": "e8adfcc8-9054-4f23-83c5-52cd8bf4cbfa",
           "idcc": "2266",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2266-convention-collective-departementale-des-industries-metallurgiques-mecaniq"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "6235c4f8-ce2e-4ec6-9e25-61cad775f1ae",
           "idcc": "2294",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2294-convention-collective-departementale-des-industries-et-metiers-de-la-metall"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "339586b2-7513-4768-bbad-5ffe2778d9b4",
           "idcc": "2420",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2420-batiment-cadres"
+          }
         },
         {
           "id": "cd2cccde-503f-409c-9d47-c50893327dd5",
           "idcc": "2489",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2489-convention-collective-departementale-des-industries-metallurgiques-et-assim"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "ece3b00f-5925-4557-89fa-19176766968d",
           "idcc": "2511",
           "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2511-sport"
+          }
         },
         {
           "id": "83b7d4a4-63a5-4b9b-97a4-b78f8fb748d9",
           "idcc": "2542",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2542-metallurgie-aisne-industries-metallurgiques-mecaniques-et-connexes"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "5170bd52-83fe-409b-8376-be0e05d78a1c",
           "idcc": "2579",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2579-metallurgie-loir-et-cher"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "a9b63dcf-7122-4723-89ae-afff5b268874",
           "idcc": "2596",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2596-coiffure-et-professions-connexes"
+          }
         },
         {
           "id": "f2fbc883-0e4e-4e7a-a0f2-d5a21b2da00b",
           "idcc": "2609",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2609-batiment-etam"
+          }
         },
         {
           "id": "18988190-75bf-447f-838a-e42ddc6100a2",
           "idcc": "2614",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2614-travaux-publics-tome-iii-etam"
+          }
         },
         {
           "id": "1ac4b07d-ae17-4d63-a3d0-7b87af63fab2",
           "idcc": "2615",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2615-convention-collective-regionale-de-la-metallurgie-des-pyrenees-atlantiques"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "8a3d67fb-1819-48dc-87da-5c0a67de4af6",
           "idcc": "2630",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2630-convention-collective-regionale-des-industries-metallurgiques-des-bouches-d"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "c02f3c2f-f890-44f3-8480-6c3f82e1af27",
           "idcc": "2700",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2700-convention-collective-departementale-de-la-metallurgie-de-loise"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "b601de8f-1ada-4220-a896-8a46148f738b",
           "idcc": "2755",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2755-convention-collective-departementale-des-industries-de-la-metallurgie-de-be"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "8389c2e7-97b8-458b-b658-cb57a3717d92",
           "idcc": "2941",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2941-aide-accompagnement-soins-et-services-a-domicile-bad"
+          }
         },
         {
           "id": "20534ea0-dc7f-49df-a8f4-1e83b4b68048",
           "idcc": "2980",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2980-convention-collective-departementale-de-la-metallurgie-de-la-somme"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "9fa1d1dc-4d14-406c-9b4d-e8e0984afc31",
           "idcc": "2992",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "2992-convention-collective-departementale-des-industries-metallurgiques-mecaniq"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "9eec9184-dcc0-4d45-88ff-7739f1605361",
           "idcc": "3043",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "3043-entreprises-de-proprete-et-services-associes"
+          }
         },
         {
           "id": "701aac73-51c4-4739-9a5c-3d74cbd11918",
           "idcc": "3053",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "3053-convention-collective-departementale-des-industries-de-la-metallurgie-de-ha"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "a5b1d3ee-f3d1-4d52-939f-f9cc99146913",
           "idcc": "3127",
           "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "3127-entreprises-de-services-a-la-personne"
+          }
         },
         {
           "id": "a66bda49-fac1-48af-ad28-930de6aa76a2",
           "idcc": "3209",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "3209-convention-collective-metallurgie-doubs"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "20630f00-2f3b-4a81-8f74-4df4741fc37d",
           "idcc": "3231",
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
+          "references": [],
+          "conventionAnswer": {
+            "slug": "3231-convention-collective-territoriale-de-la-metallurgie-du-jura"
+          },
+          "highlight": {
+            "title": "A noter : à partir du 01/01/2024 les informations ci-dessous ne seront plus applicables",
+            "content": "En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquent. Toutes ces conventions vont être regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) à partir du 01/01/2024."
+          }
         },
         {
           "id": "29cd5ca1-306c-4cd1-8131-bb9d1bc14130",
           "idcc": "3239",
           "markdown": "### Pour les assistants maternels du particulier employeur\n\n#### Décès du particulier employeur\n\nLa convention collective ne prévoit pas spécifiquement ce cas de figure.\n\n#### Décès de l'enfant du particulier employeur\n\nLe décès de l'enfant du particulier employeur entraîne la rupture du contrat de travail au jour du décès.\n\nLe particulier employeur ou, à défaut, un tiers, informe dès que possible par écrit l’assistant maternel de la date du décès de l’enfant.\n\nLa rupture du contrat de travail entraîne le versement au salarié :\n\n- du dernier salaire dû au jour du décès ;\n- d’une indemnité égale à l’indemnité compensatrice de préavis (qui ne peut être exécuté) ;\n- d’une indemnité dont le montant est calculé de la même manière que l’indemnité de rupture en cas de retrait d’enfant ;\n- d’une indemnité compensatrice pour les congés payés acquis non rémunérés.\n\nLes documents de fin de contrat doivent être remis à l'assistant maternel, par l'employeur ou un tiers, dans un délai de 30 jours calendaires à compter du décès de l'enfant.\n\n### Pour les autres salariés du particulier employeur\n\n#### Décès du particulier employeur\n\nLe décès du particulier employeur entraîne la rupture du contrat de travail au jour du décès.\n\nUn ayant-droit ou, à défaut, un tiers, informe le salarié de la date du décès du particulier employeur dès que possible, par écrit.\n\nSi le salarié est embauché par un couple de particuliers employeurs, le contrat de travail peut subsister avec le membre survivant, qui le décide, dès lors qu'il est immatriculé comme particulier employeur. \n\nLa rupture du contrat de travail entraîne le versement au salarié :\n\n- du dernier salaire dû au jour du décès ;\n- d’une indemnité égale à l’indemnité compensatrice de préavis qui ne peut être exécuté ;\n- d’une indemnité dont le montant est calculé de la même manière que l’indemnité de licenciement ;\n- d’une indemnité compensatrice pour les congés payés acquis, non rémunérés.\n\nL’ayant-droit ou, à défaut, un tiers remet au salarié les documents de fin de contrat dans un délai de 30 jours calendaires à compter du décès.\n\nLe salarié dont le contrat de travail est rompu du fait du décès du particulier employeur présente, s'il le souhaite, une demande d’indemnisation auprès de l’organisme Pôle emploi pour l’ouverture des droits au chômage.\n\n#### Décès de l'enfant du particulier employeur (dans le cas d'un contrat de travail conclu exclusivement pour la garde de l'enfant)\n\nLorsque le contrat de travail est conclu exclusivement pour la garde d’un enfant, le décès de ce dernier entraîne la rupture du contrat de travail au jour du décès.\n\nLe particulier employeur ou, à défaut, un tiers informe le salarié de la date du décès de l’enfant dès\nque possible, par écrit.\n\nLa rupture du contrat de travail entraîne le versement au salarié :\n\n- du dernier salaire dû au jour du décès ;\n- d’une indemnité égale à l’indemnité compensatrice de préavis (qui ne peut être exécuté) ;\n- d’une indemnité dont le montant est calculé de la même manière que l’indemnité de licenciement ;\n- d’une indemnité compensatrice de congés payés acquis.\n\nL'employeur ou, à défaut, un tiers remet les documents de fin de contrat dans un délai de 30 jours calendaires à compter du décès de l'enfant.\n\nLe salarié dont le contrat de travail est rompu du fait du décès de l'enfant du particulier employeur présente une demande d’indemnisation auprès de l’organisme Pôle emploi pour l’ouverture des droits au chômage.",
-          "references": []
-        }
-      ]
-    },
-    "breadcrumbs": [
-      {
-        "label": "Départ de l’entreprise",
-        "position": 7,
-        "slug": "/themes/depart-de-lentreprise"
-      },
-      {
-        "label": "Autres départs",
-        "position": 6,
-        "slug": "/themes/autres-departs"
-      }
-    ]
-  },
-  {
-    "index": 41,
-    "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
-    "cdtnId": "404b14a887",
-    "isPublished": true,
-    "metaDescription": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
-    "slug": "44-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
-    "source": "contributions",
-    "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
-    "answers": {
-      "generic": {
-        "id": "875f5b33-5464-4eac-83d0-8ec51b92268f",
-        "text": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\nPoursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\nVendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\nFermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
-        "markdown": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\n\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\n- Poursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\n- Vendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\n- Fermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
-        "references": [],
-        "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…"
-      },
-      "conventions": [
-        {
-          "id": "1e85348e-3fd0-465b-8320-7a6b416e28c3",
-          "idcc": "0016",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "a3c20d65-651a-4e52-9a0c-c97d754a98bc",
-          "idcc": "0029",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "15540029-655c-4bfd-b954-3771afdf9e87",
-          "idcc": "0044",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "1fc80218-e36e-4e4b-a1c2-c841cdbfeb98",
-          "idcc": "0054",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "02433fc2-bd6a-41d7-842c-1f269918c0a1",
-          "idcc": "0086",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "ec9bae09-c318-421e-9bee-1b0beff6e156",
-          "idcc": "0176",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "7ec07a0f-8863-4266-95da-3c73358dd75c",
-          "idcc": "0275",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "992e5886-4877-4274-bdfa-91b3ffaf79f1",
-          "idcc": "0292",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8455e390-7522-4ba2-b6bb-4afcfeb5db9e",
-          "idcc": "0413",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "4fba8935-8c0c-4b98-8d77-072f7bbf5dc7",
-          "idcc": "0573",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "c490014a-7207-4277-97b0-7f6b62fc8e05",
-          "idcc": "0650",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "6cc9367f-acf3-4d52-9d1a-f912fd0d10ee",
-          "idcc": "0675",
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
-        },
-        {
-          "id": "901b2666-77b7-4dc3-880c-b5a22bb953bc",
-          "idcc": "0714",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "3ae26e2f-efaa-4cbb-89bf-d419fc645008",
-          "idcc": "0787",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "bf0eacb7-1d9d-4e1c-aab1-87c5a5d4cdc3",
-          "idcc": "0822",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "df04f170-972e-4dfe-8f71-881ef4026e55",
-          "idcc": "0827",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "aa3cef20-281a-4e21-b550-1c7acf877acd",
-          "idcc": "0828",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "1507f74d-1a84-4d91-9393-f50441ece472",
-          "idcc": "0829",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8b6b2aee-50e6-48fe-ad84-0b884a16af06",
-          "idcc": "0836",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "405ed3c7-e992-4dc2-ba87-a2cf13b64ee5",
-          "idcc": "0843",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "3c036ece-a65f-4d38-b823-5d81addd2a41",
-          "idcc": "0860",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "e6fafc4b-8c6e-4f36-bb46-4668ff6dcff0",
-          "idcc": "0863",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8ede3f75-02fd-4580-92ad-0b8f774b5595",
-          "idcc": "0878",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "d3af6889-e263-441c-b2d9-9b62f707d180",
-          "idcc": "0887",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "f336c900-cd25-4951-a17a-3b67a9cfa546",
-          "idcc": "0898",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "3abafc5a-3ba1-41d1-807d-2faca4300fba",
-          "idcc": "0899",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "93996885-6435-482e-9064-22731a6f5074",
-          "idcc": "0911",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "4af6cd69-7c25-4b3c-97f3-1defa907447a",
-          "idcc": "0914",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "c84f55eb-0c0e-4244-9b9a-60cd77ed201b",
-          "idcc": "0920",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "7a69dd41-bb9c-4fe7-aa83-01c715273711",
-          "idcc": "0923",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "df9ad9af-6e4c-4954-9b4e-cc74e840c702",
-          "idcc": "0930",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8d09014a-49b6-4f95-9265-abe073608201",
-          "idcc": "0934",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "d593f2a8-32f6-499e-a129-26da35a4d8b1",
-          "idcc": "0937",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "7ded0cb3-1b44-4337-a5d0-2580090a5ea8",
-          "idcc": "0943",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "b2c6381c-cfee-4b2d-8b85-a2d8ce86b5a5",
-          "idcc": "0948",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "b93d87dc-c9dd-479b-83a2-cd7c17dcf813",
-          "idcc": "0965",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "d8513de9-5d46-44ad-a432-4d133bc4cde2",
-          "idcc": "0979",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "0b6cc34c-7bf5-475d-8192-e90cba590227",
-          "idcc": "0984",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8e0868dd-4ca7-40a6-a660-37c9c0ff8e7d",
-          "idcc": "1007",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "9bba0c4b-0a2a-4c5c-bf6a-e22a1f9a2c88",
-          "idcc": "1043",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "c54e3545-d044-47a2-9236-78bf6f7ec28d",
-          "idcc": "1059",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "b215f648-94b2-4867-9f85-5ada59dd3277",
-          "idcc": "1090",
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
-        },
-        {
-          "id": "72ac4fc0-d360-4c2c-9756-c64f152bb2be",
-          "idcc": "1147",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "352c13f1-4b3b-4852-993d-5a80bf9b4902",
-          "idcc": "1159",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "9d770a24-7b36-4243-8a8b-52075963fdba",
-          "idcc": "1164",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "269f3e37-2d77-485b-8875-ea622e61f618",
-          "idcc": "1266",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "0331d59f-9382-490d-bd56-f5dce5a7aa57",
-          "idcc": "1274",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "629e7806-34fd-460a-9859-3560d4981e6a",
-          "idcc": "1315",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "ddc90d07-98b3-428a-825e-8b919f21542a",
-          "idcc": "1351",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "9ccc3be5-5a5c-478e-94c7-bfdfb29f72f7",
-          "idcc": "1353",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "50e2853d-3b04-4921-9c5d-d92a6af2ca1d",
-          "idcc": "1365",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "eb61ded9-7824-4b6a-b781-8eeb76a5195a",
-          "idcc": "1369",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "c069a3f9-bec5-4ada-ade5-6e259ca23523",
-          "idcc": "1387",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "1e6a8999-25d3-4f77-a1b1-2897e04a6e2b",
-          "idcc": "1404",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "7b63543d-654f-4a9f-86a1-eda8413f0f1f",
-          "idcc": "1472",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "5e6e95ef-8346-4ab3-b1f4-3bfcc4ff0408",
-          "idcc": "1480",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "4cea082f-b9c7-43b3-8845-85868f775494",
-          "idcc": "1483",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "89f082ee-c063-4494-a7b7-dae6e09adfee",
-          "idcc": "1486",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "fb887379-d471-4fc2-b4fc-bdc4f6eb2538",
-          "idcc": "1501",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "9308ca0b-c12b-49c7-9d91-7e7f065c7351",
-          "idcc": "1505",
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
-        },
-        {
-          "id": "5ca076d7-ae5d-47e6-8aa8-82171641792b",
-          "idcc": "1516",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "4a17f525-b401-4d66-b0fc-3e526407b554",
-          "idcc": "1517",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "f1ad6d4a-0fea-4bb1-aa8e-ca057f37521f",
-          "idcc": "1518",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "142bc7f4-1383-47fc-b72d-f5a8758972b4",
-          "idcc": "1525",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "3a24d44e-bbc8-499b-a7a6-4c09c997d27e",
-          "idcc": "1527",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "2f25911a-2b2e-4083-b439-a1c1318255af",
-          "idcc": "1560",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "95b42f3e-cf88-4de9-824c-27cbc7697930",
-          "idcc": "1564",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "a6f6948b-aee9-4173-abc4-f260616236ea",
-          "idcc": "1572",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "cb196483-22d5-4d68-a7f2-4ccf74a48808",
-          "idcc": "1576",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "3408e9d1-591a-437b-977c-5265dddc4dd1",
-          "idcc": "1577",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "02789bd1-266f-4667-8bad-c3d506f1ae94",
-          "idcc": "1578",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "77ed891a-3913-4ff5-8ec9-06ad560d0041",
-          "idcc": "1592",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "a3e613b3-6bab-45f5-bec0-3a141ef3cfa9",
-          "idcc": "1596",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "7b5e86f2-c4f9-4695-abe8-ef9ec65e9e45",
-          "idcc": "1597",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "f41f50d2-e32b-47c9-a7ee-4a60e9506ee0",
-          "idcc": "1604",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "d424b046-2521-4ffe-ab03-23223c82d5b5",
-          "idcc": "1606",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8a6aa913-7ee1-47ce-ba2c-74499c5d2c21",
-          "idcc": "1626",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "00560192-6951-4cac-abdf-b8f35ce7ae26",
-          "idcc": "1627",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "10530e79-d663-4f4f-a2cc-efdecf729058",
-          "idcc": "1628",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "d7ebc6dd-ed2a-4217-bc6b-a703a831e89d",
-          "idcc": "1634",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "5e6ad8ba-9b98-425e-9186-3e2205623600",
-          "idcc": "1635",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "97cfcd8a-4563-435b-8c7e-b180b4f86cb8",
-          "idcc": "1672",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "2d4ae8b8-38c7-48b5-a552-aa0bb5cee5cc",
-          "idcc": "1702",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "faa12948-86f1-4556-bca0-b9cc1621209e",
-          "idcc": "1732",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "cb327b0c-1e91-423b-bbdb-333c4c0393e9",
-          "idcc": "1740",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "e781ef39-9020-4e93-882e-227a4e824f78",
-          "idcc": "1813",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "de2a00dd-e7e5-4081-b473-8c6fbd1f7a03",
-          "idcc": "1867",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "e09836b2-36e4-4a8c-9932-667e49093a0e",
-          "idcc": "1885",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8a530e6f-50d1-4eff-bdc4-27a1e01b3c83",
-          "idcc": "1902",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "7975f6ae-8133-4665-907b-cd40cd101e95",
-          "idcc": "1912",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "63ea8f6c-e4b0-4061-a002-f6a3d88c95cc",
-          "idcc": "1960",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "0d16f1a4-9600-402c-8df9-9a3c0a3af0ad",
-          "idcc": "1966",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "4fc76f1e-fb0c-44f1-b9fc-d8be75de499b",
-          "idcc": "1967",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "e0560448-efc9-4af7-b433-612846e1b17c",
-          "idcc": "1979",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "282c2c04-b5c4-478c-b530-fa3a1fe12e6f",
-          "idcc": "1996",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "f67ce559-2710-4869-b336-d234543f3563",
-          "idcc": "2003",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "02426fcd-4b09-4855-bdaa-a3c955ba0665",
-          "idcc": "2098",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "08d0dd45-b814-41fc-9268-0c1e0997ea3c",
-          "idcc": "2120",
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
-        },
-        {
-          "id": "4af91f3b-3fde-47e5-b98c-877b2e9c896e",
-          "idcc": "2126",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "1b1be6c7-3a21-40d5-856b-df142237d779",
-          "idcc": "2148",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "79bde5d3-8b58-4bfe-85bd-298c9e4e4ed1",
-          "idcc": "2216",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "aa5bd534-5ffd-43ba-ba1b-907738199746",
-          "idcc": "2221",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "25f3aac2-ebb8-40c0-8e4d-313367b5b800",
-          "idcc": "2264",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "e8adfcc8-9054-4f23-83c5-52cd8bf4cbfa",
-          "idcc": "2266",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "6235c4f8-ce2e-4ec6-9e25-61cad775f1ae",
-          "idcc": "2294",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "339586b2-7513-4768-bbad-5ffe2778d9b4",
-          "idcc": "2420",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "cd2cccde-503f-409c-9d47-c50893327dd5",
-          "idcc": "2489",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "ece3b00f-5925-4557-89fa-19176766968d",
-          "idcc": "2511",
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
-        },
-        {
-          "id": "83b7d4a4-63a5-4b9b-97a4-b78f8fb748d9",
-          "idcc": "2542",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "5170bd52-83fe-409b-8376-be0e05d78a1c",
-          "idcc": "2579",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "a9b63dcf-7122-4723-89ae-afff5b268874",
-          "idcc": "2596",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "f2fbc883-0e4e-4e7a-a0f2-d5a21b2da00b",
-          "idcc": "2609",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "18988190-75bf-447f-838a-e42ddc6100a2",
-          "idcc": "2614",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "1ac4b07d-ae17-4d63-a3d0-7b87af63fab2",
-          "idcc": "2615",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8a3d67fb-1819-48dc-87da-5c0a67de4af6",
-          "idcc": "2630",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "c02f3c2f-f890-44f3-8480-6c3f82e1af27",
-          "idcc": "2700",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "b601de8f-1ada-4220-a896-8a46148f738b",
-          "idcc": "2755",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8389c2e7-97b8-458b-b658-cb57a3717d92",
-          "idcc": "2941",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "20534ea0-dc7f-49df-a8f4-1e83b4b68048",
-          "idcc": "2980",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "9fa1d1dc-4d14-406c-9b4d-e8e0984afc31",
-          "idcc": "2992",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "9eec9184-dcc0-4d45-88ff-7739f1605361",
-          "idcc": "3043",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "701aac73-51c4-4739-9a5c-3d74cbd11918",
-          "idcc": "3053",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "a5b1d3ee-f3d1-4d52-939f-f9cc99146913",
-          "idcc": "3127",
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
-        },
-        {
-          "id": "a66bda49-fac1-48af-ad28-930de6aa76a2",
-          "idcc": "3209",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "20630f00-2f3b-4a81-8f74-4df4741fc37d",
-          "idcc": "3231",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "29cd5ca1-306c-4cd1-8131-bb9d1bc14130",
-          "idcc": "3239",
-          "markdown": "### Pour les assistants maternels du particulier employeur\n\n#### Décès du particulier employeur\n\nLa convention collective ne prévoit pas spécifiquement ce cas de figure.\n\n#### Décès de l'enfant du particulier employeur\n\nLe décès de l'enfant du particulier employeur entraîne la rupture du contrat de travail au jour du décès.\n\nLe particulier employeur ou, à défaut, un tiers, informe dès que possible par écrit l’assistant maternel de la date du décès de l’enfant.\n\nLa rupture du contrat de travail entraîne le versement au salarié :\n\n- du dernier salaire dû au jour du décès ;\n- d’une indemnité égale à l’indemnité compensatrice de préavis (qui ne peut être exécuté) ;\n- d’une indemnité dont le montant est calculé de la même manière que l’indemnité de rupture en cas de retrait d’enfant ;\n- d’une indemnité compensatrice pour les congés payés acquis non rémunérés.\n\nLes documents de fin de contrat doivent être remis à l'assistant maternel, par l'employeur ou un tiers, dans un délai de 30 jours calendaires à compter du décès de l'enfant.\n\n### Pour les autres salariés du particulier employeur\n\n#### Décès du particulier employeur\n\nLe décès du particulier employeur entraîne la rupture du contrat de travail au jour du décès.\n\nUn ayant-droit ou, à défaut, un tiers, informe le salarié de la date du décès du particulier employeur dès que possible, par écrit.\n\nSi le salarié est embauché par un couple de particuliers employeurs, le contrat de travail peut subsister avec le membre survivant, qui le décide, dès lors qu'il est immatriculé comme particulier employeur. \n\nLa rupture du contrat de travail entraîne le versement au salarié :\n\n- du dernier salaire dû au jour du décès ;\n- d’une indemnité égale à l’indemnité compensatrice de préavis qui ne peut être exécuté ;\n- d’une indemnité dont le montant est calculé de la même manière que l’indemnité de licenciement ;\n- d’une indemnité compensatrice pour les congés payés acquis, non rémunérés.\n\nL’ayant-droit ou, à défaut, un tiers remet au salarié les documents de fin de contrat dans un délai de 30 jours calendaires à compter du décès.\n\nLe salarié dont le contrat de travail est rompu du fait du décès du particulier employeur présente, s'il le souhaite, une demande d’indemnisation auprès de l’organisme Pôle emploi pour l’ouverture des droits au chômage.\n\n#### Décès de l'enfant du particulier employeur (dans le cas d'un contrat de travail conclu exclusivement pour la garde de l'enfant)\n\nLorsque le contrat de travail est conclu exclusivement pour la garde d’un enfant, le décès de ce dernier entraîne la rupture du contrat de travail au jour du décès.\n\nLe particulier employeur ou, à défaut, un tiers informe le salarié de la date du décès de l’enfant dès\nque possible, par écrit.\n\nLa rupture du contrat de travail entraîne le versement au salarié :\n\n- du dernier salaire dû au jour du décès ;\n- d’une indemnité égale à l’indemnité compensatrice de préavis (qui ne peut être exécuté) ;\n- d’une indemnité dont le montant est calculé de la même manière que l’indemnité de licenciement ;\n- d’une indemnité compensatrice de congés payés acquis.\n\nL'employeur ou, à défaut, un tiers remet les documents de fin de contrat dans un délai de 30 jours calendaires à compter du décès de l'enfant.\n\nLe salarié dont le contrat de travail est rompu du fait du décès de l'enfant du particulier employeur présente une demande d’indemnisation auprès de l’organisme Pôle emploi pour l’ouverture des droits au chômage.",
-          "references": []
+          "references": [
+            {
+              "url": "https://legifrance.gouv.fr/conv_coll/id/KALIARTI000043942317/?idConteneur=KALICONT000044594539",
+              "title": "[Article 119.4.2] Texte de base » Socle assistant maternel » Partie IV Dispositions relatives au contrat de travail » Titre II Rupture du contrat de travail » Chapitre II Ruptures du contrat de travail à durée indéterminée » Article 119.4.2",
+              "dila_id": "KALIARTI000043942317",
+              "category": "agreement",
+              "dila_cid": "KALIARTI000043942317",
+              "dila_container_id": "KALICONT000044594539"
+            },
+            {
+              "url": "https://legifrance.gouv.fr/conv_coll/id/KALIARTI000043942441/?idConteneur=KALICONT000044594539",
+              "title": "[Article 161.4] Texte de base » Socle salarié du particulier employeur » Partie IV Dispositions relatives au contrat de travail » Titre II Rupture du contrat de travail » Chapitre II Ruptures du contrat de travail à durée indéterminée » Article 161.4",
+              "dila_id": "KALIARTI000043942441",
+              "category": "agreement",
+              "dila_cid": "KALIARTI000043942441",
+              "dila_container_id": "KALICONT000044594539"
+            },
+            {
+              "url": "https://legifrance.gouv.fr/conv_coll/id/KALIARTI000043942177/?idConteneur=KALICONT000044594539",
+              "title": "[Article 63.3] Texte de base » Socle commun » Partie IV Dispositions relatives au contrat de travail » Titre II Rupture du contrat de travail » Chapitre II Ruptures du contrat de travail à durée indéterminée » Article 63.3",
+              "dila_id": "KALIARTI000043942177",
+              "category": "agreement",
+              "dila_cid": "KALIARTI000043942177",
+              "dila_container_id": "KALICONT000044594539"
+            }
+          ],
+          "conventionAnswer": {
+            "slug": "3239-particuliers-employeurs-et-emploi-a-domicile"
+          }
         }
       ]
     },
@@ -6710,7 +6650,285 @@
         "slug": "/themes/autres-departs"
       }
     ],
-    "split": true
+    "title_vector": [
+      -0.0150873717, -0.00699394057, -0.0298760757, 0.0690299049, -0.0298183728,
+      -0.0448647738, -0.0454552658, -0.0281802248, 0.00449223397, -0.0535322689,
+      0.0205001216, -0.0143763591, 0.0238223281, -0.00728921406, -0.0389733687,
+      -0.0642911792, 0.0391460694, 0.0503198281, 0.00301550562, 0.0887540728,
+      0.00528535293, -0.0391319916, 0.00739628216, -0.0561502464, 0.0648048297,
+      0.0794556811, 0.0556258671, -0.0751156807, 0.0163863879, 0.0353014879,
+      -0.0333592184, -0.0216376837, 0.0617907159, 0.0453432463, -0.0619606189,
+      0.0634630173, -0.0012286054, -0.0862937793, -0.0279962905, 0.0494027138,
+      0.0696051344, -0.0727345273, 0.0499421693, -0.0469719321, 0.00503485277,
+      0.0256574713, 0.0605084188, 0.0312330425, -0.0419733971, -0.0606508441,
+      -0.0465319119, 0.010646156, 0.0655642152, 0.00165632577, 0.0370302,
+      0.027795298, -0.040798638, -0.0407382399, -0.0511702262, 0.024521362,
+      0.0746563375, -0.0433500707, 0.00398758473, 0.00325986696, -0.0350339338,
+      -0.0403979681, -0.0328811891, 0.0599279851, -0.00831459183, -0.0115784835,
+      0.0516811498, 0.0436637141, 0.0470955037, -0.0384389237, -0.0754898,
+      -0.0634880066, -0.0528014377, -0.0190803669, 0.0216650274, 0.0543233156,
+      0.0103312675, 0.053270679, -0.0420243107, 0.0389639623, 0.0526144654,
+      -0.028111659, -0.0645042881, 0.0575440414, 0.0536082648, 0.0290614441,
+      -0.0389232114, -0.0418836251, 0.0432537906, 0.0464039519, -0.0339311697,
+      0.0317617469, 0.0187071264, 0.059417218, -0.0514311194, 0.054299,
+      0.0818794817, -0.016153574, -0.0603563, 0.0586243272, -0.0714122429,
+      -0.0457509458, 0.0369579457, -0.0488869846, 0.0601503812, -0.0590270422,
+      -0.036992006, 0.0390262492, -0.0208819751, 0.00828592945, 0.0550927036,
+      0.0092258174, 0.030166259, -0.0165150054, -0.0611240417, -0.0465872027,
+      -0.0638827756, 0.0408163816, -0.060817875, -0.0537117235, -0.0369261503,
+      -0.0466766357, 0.0316825546, -0.0593845844, 0.0300850738, -0.0249719173,
+      -0.0160347875, -0.0606288724, 0.0319730788, 0.0492630117, -0.0894819722,
+      0.0602744073, 0.00830358, 0.020915335, -0.0887526795, -0.0190575644,
+      0.0175952297, 0.0539999567, 0.0767920241, 0.0689393729, -0.0755881146,
+      -0.0429791026, 0.0779175535, 0.0139751993, 0.000442194694, 0.0446152538,
+      -0.0161255077, -0.0698358, -0.0393210277, -0.0622429401, -0.070933111,
+      -0.00985727087, -0.0132118184, -0.0230406187, -0.0066000591, 0.020891387,
+      0.0604603365, -0.0483280569, 0.0627208352, 0.0475179367, -0.0351586193,
+      -0.0590302758, -0.0254670922, 0.00886883773, 0.0492703654, 0.0100954259,
+      -0.0462255664, 0.0471600816, 0.0294998176, 0.0104500009, 0.0106137255,
+      0.0744079128, -0.0443765223, 0.0475969464, -0.00503884256, 0.0130075905,
+      0.0622292273, -0.00799088646, 0.0671235546, -0.0409948491, 0.0200886223,
+      -0.0570139363, 0.00775964372, -0.0386206731, 0.0100366976, 0.0423130728,
+      -0.0256789755, 0.0374134444, 0.0480833463, -0.0564132705, -0.0768553,
+      -0.020598378, 0.0471915565, -0.0551674925, -0.0426670387, 0.000953651848,
+      -0.0764511898, 0.0888380408, 0.0731222779, -0.066795, 0.010533575,
+      -0.0760943666, 0.0205474198, -0.0181276277, 0.0104608024, -0.0388539322,
+      0.0134762218, -0.012186978, -0.0329569392, -0.0426677205, -0.0317019857,
+      -0.0309636239, 0.0131512098, 0.00325257564, -0.0348666944, 0.00611921493,
+      -0.0131452577, -0.051404722, -0.00271204347, 0.0721397251, 0.0570323616,
+      -0.0716914833, 0.0454068109, -0.0385248736, -0.0474454649, -0.00181965472,
+      -0.0491370484, 0.0546120219, -0.086235866, -0.0643881038, -0.0250306372,
+      0.0635182261, -0.0399818197, 0.0224602204, -0.00995405, -0.0813346058,
+      0.0543469451, 0.00605621422, 0.0206638612, 0.0211944357, -0.0534386896,
+      -0.0790608451, 0.022696225, -0.0261753015, 0.00583628, -0.0848290622,
+      0.00737362774, 0.0453208461, -0.010981313, -0.00749334553, 0.0272122081,
+      0.00982520264, -0.0161408186, 0.0394352525, 0.0306894369, -0.0383301117,
+      -0.0823975, 0.0437302776, 0.00371162058, 0.0196710248, 0.0147612123,
+      -0.0526510552, -0.084400557, -0.0324399062, 0.0250826534, -0.00563862873,
+      0.0549495, -0.0218314566, 0.003803659, 0.0273199454, 0.0651015,
+      -0.0500362, -0.0296603721, 0.0199052226, 0.0575214922, -0.0296192896,
+      -0.0251885168, -0.0111292014, 0.0418830365, 0.0142212985, 0.0288160816,
+      -0.0253503621, -0.0291758478, -0.0106646921, -0.0351569094, -0.0146770962,
+      0.0703459382, 0.0191393122, 0.0382819176, 0.0463758409, 0.00240196055,
+      0.0336469449, 0.0131791122, -0.0705221444, 0.0263267551, 0.0665492564,
+      0.0488049649, 0.00161978346, 0.0792730078, 0.00583442394, -0.039438054,
+      -0.0535316207, 0.0211308971, -0.0139587568, -0.0195415746, 0.039597854,
+      -0.00974633638, 0.0812970772, -0.011644301, 0.0303015653, 0.0385804102,
+      -0.0782891735, 0.00181894284, -0.0730892, -0.0892671, -0.00596011337,
+      0.00310728862, 0.0310180839, 0.0370022617, 0.0364613757, -0.0404851586,
+      -0.0152205285, -0.0182614848, -0.0110668363, -0.0385534056, 0.0526498705,
+      -0.0370430276, 0.0431327447, -0.0473788269, -0.0373894572, 0.0460113771,
+      -0.00621599425, -0.070849143, -0.0636559501, 0.0676545054, 0.0503698736,
+      -0.0490904376, 0.0420245, -0.0604343452, -0.0121124592, 0.0572272129,
+      -0.00138543779, 0.026407, -0.007736912, -0.00383601896, 0.0586630777,
+      -0.0311372187, -0.0511687063, 0.0652689114, 0.0828107297, 0.0300737582,
+      -0.00492397, -0.0339622498, 0.0229234323, 0.056572251, 0.00340985064,
+      -0.0445198454, -0.0371636227, 0.0104534039, -0.0158567224, 0.0711223111,
+      0.029878, 0.029371446, 0.0436390042, -0.0451222695, 0.0344701223,
+      -0.0723246, -0.0245353244, 0.0485801585, 0.0000673742688, -0.045722764,
+      -0.0347511247, 0.0423707329, 0.0479651242, 0.0228433516, 0.0191958565,
+      0.0413267463, 0.0320873596, 0.0134166908, -0.0337639637, -0.0493389331,
+      -0.0479402952, -0.00584551273, -0.0207012948, 0.0544358455, -0.00848897,
+      0.0291871838, 0.0495499037, -0.0246412363, 0.00599580212, -0.00465044333,
+      -0.0184286535, 0.0303805359, 0.0233892743, 0.0300209802, 0.0208726954,
+      -0.0448046252, -0.0368997864, -0.00741626415, 0.0636634231, 0.0250635054,
+      0.0736426115, 0.0672663674, -0.0475453213, -0.0352036394, -0.00292829634,
+      0.0378623903, -0.0483599268, -0.0684826374, -0.0695984215, 0.0432876498,
+      0.0665934235, 0.0686712116, 0.047524374, -0.0659701377, -0.0136152208,
+      0.00159048859, -0.0474480204, -0.0505034029, -0.0540678948, 0.0703947097,
+      -0.0360949226, 0.0269636977, -0.0253079459, -0.0487170294, -0.0659996942,
+      0.0736889541, -0.0333414413, -0.015744606, -0.0282451659, 0.0377759896,
+      0.00441206526, 0.00431608083, 0.0470911749, 0.0637650937, -0.053652823,
+      0.0618234947, -0.0317867473, -0.0609635599, 0.0487624891, 0.0411293805,
+      0.0712163746, -0.0610914044, 0.0144239245, 0.0447017774, 0.0042262054,
+      0.0633635819, 0.0874692872, -0.0409895219, -0.0779266357, -0.00947312452,
+      -0.054137297, -0.00987665541, -0.0496184342, -0.0182437934, 0.059052214,
+      0.070829, -0.020026939, -0.0228711385, 0.0477255881, -0.0053196,
+      0.051666636, -0.0278531983, 0.0174769722, 0.036801, 0.0760894,
+      0.0213493481, 0.0340027809, -0.00817813445, 0.0198092591, 0.0230984055,
+      0.00327348849, 0.0133911297, -0.0337104723, -0.0209062845, -0.0467444882,
+      -0.0463131517, -0.0377746485, 0.078812018, -0.00629385188, 0.0203479715,
+      -0.07224489, 0.0806384757, -0.0199647527, -0.00739213265, -0.0333318189,
+      0.0733114, -0.06751021, -0.0372558981, 0.019707812, -0.0138140796,
+      -0.00547749875, -0.0433359332, 0.0740883201, 0.0720272884, 0.0105836829,
+      0.0510027707, 0.0221435484, 0.0188101605, 0.0307991859, 0.0230228826,
+      0.0166500416, 0.00195327075, 0.0353687368, -0.016159514, 0.0288993921,
+      -0.0113773635, -0.0112129822
+    ]
+  },
+  {
+    "index": 41,
+    "split": true,
+    "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
+    "cdtnId": "84e3a5e5cf",
+    "excludeFromSearch": true,
+    "id": "5a743cf3-ff69-4454-8be6-17d9b3460bef",
+    "isPublished": true,
+    "metaDescription": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
+    "refs": [],
+    "slug": "44-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
+    "source": "contributions",
+    "text": "0044 Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
+    "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
+    "answers": {
+      "generic": {
+        "id": "875f5b33-5464-4eac-83d0-8ec51b92268f",
+        "text": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\nPoursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\nVendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\nFermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
+        "markdown": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\n\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\n- Poursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\n- Vendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\n- Fermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
+        "references": [
+          {
+            "url": "https://www.service-public.fr/particuliers/vosdroits/F31231",
+            "title": "Fiche Service-public.fr: \"Que devient le contrat du salarié au décès du particulier employeur ?\"",
+            "dila_id": null,
+            "category": null,
+            "dila_cid": null,
+            "dila_container_id": null
+          },
+          {
+            "url": null,
+            "title": "L1233-3",
+            "dila_id": "LEGIARTI000036762081",
+            "category": "labor_code",
+            "dila_cid": "LEGIARTI000006901015",
+            "dila_container_id": "LEGITEXT000006072050"
+          },
+          {
+            "url": null,
+            "title": "L1224-1",
+            "dila_id": "LEGIARTI000006900875",
+            "category": "labor_code",
+            "dila_cid": "LEGIARTI000006900875",
+            "dila_container_id": "LEGITEXT000006072050"
+          }
+        ],
+        "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…"
+      },
+      "conventionAnswer": {
+        "id": "15540029-655c-4bfd-b954-3771afdf9e87",
+        "idcc": "0044",
+        "markdown": "La convention collective ne prévoit rien sur ce point.",
+        "shortName": "Industries chimiques et connexes",
+        "references": [],
+        "slug": "44-industries-chimiques-et-connexes"
+      }
+    },
+    "breadcrumbs": [
+      {
+        "label": "Départ de l’entreprise",
+        "position": 7,
+        "slug": "/themes/depart-de-lentreprise"
+      },
+      {
+        "label": "Autres départs",
+        "position": 6,
+        "slug": "/themes/autres-departs"
+      }
+    ],
+    "title_vector": [
+      -0.0123804789, -0.0021364782, -0.0351085477, 0.0550864153, -0.0470878407,
+      -0.0431185216, -0.0461228713, -0.0376435816, -0.0339578725, -0.067471914,
+      0.0334578343, 0.00806175545, 0.0200703125, 0.00430892594, -0.0317965187,
+      -0.0784355104, 0.0496713705, 0.060981825, -0.0175502263, 0.0843346119,
+      0.00355288107, -0.0485532284, 0.00941572431, -0.0401497222, 0.0647016764,
+      0.0758903101, 0.0230551232, -0.0758952, 0.0113448491, 0.0249671042,
+      0.0167931095, -0.043210879, 0.058395166, 0.0077090147, -0.045978,
+      0.0665603206, -0.0149178607, -0.0803170875, -0.0424534157, 0.0632978231,
+      0.0420945324, -0.0748837367, 0.0497022085, -0.02968386, 0.0211776569,
+      -0.00201951573, 0.0424316, 0.0434196927, -0.0234386902, -0.0593576618,
+      -0.0356950425, 0.00335359899, 0.0713776574, 0.00964857079, 0.053189069,
+      0.0678916201, -0.0554249771, -0.0304586403, -0.0361278094, 0.0291975085,
+      0.0679863468, -0.0435183384, 0.00965060946, 0.0252112094, -0.0100143719,
+      -0.0609282069, -0.0411162265, 0.0662238151, -0.0101591367, -0.0277851727,
+      0.0650657, 0.0538518727, 0.0558284335, -0.0489719659, -0.0610882528,
+      -0.0523823947, -0.0457047336, 0.0015313765, 0.0210262556, 0.0398188867,
+      0.0297874045, -0.000830075063, -0.00761138927, 0.0242779497, 0.0589835308,
+      -0.0600569211, -0.0602124296, 0.0551296547, 0.0778385177, 0.031332586,
+      -0.0172519609, -0.0495865, 0.0716348439, 0.0243868325, -0.0485985652,
+      -0.0121128038, 0.0109579647, 0.0581077151, -0.0603013337, 0.0418927483,
+      0.0699449927, -0.0364268832, -0.0562580489, 0.0621103756, -0.0690221786,
+      -0.0392089151, 0.0424838401, -0.0528778881, 0.0483860224, -0.0534371212,
+      -0.00339977816, 0.0423897542, 0.00972181465, 0.0293414295, 0.0678464845,
+      0.010904436, 0.00600919127, -0.00790069159, -0.0630368516, -0.048356384,
+      -0.0555790737, 0.0281269941, -0.0600670949, -0.054934971, -0.0301962346,
+      -0.0385022163, 0.0280501954, -0.0620055385, 0.0563848, 0.00773596205,
+      0.00343413255, -0.0536716357, 0.021103844, 0.0501969643, -0.0854007453,
+      0.0562727079, 0.0325013436, 0.0201250426, -0.0838628411, -0.0126193408,
+      -0.0196032654, 0.0486995578, 0.0743783563, 0.0555330701, -0.0783958063,
+      -0.013692799, 0.0719462261, -0.00963189453, -0.0198409446, 0.0344174094,
+      -0.0231695659, -0.0476678908, -0.0419781171, -0.0645390823, -0.0677787066,
+      0.0108634122, 0.0186766293, 0.0238785446, -0.00132797891, 0.0121754184,
+      0.0663999468, -0.0402794927, 0.0667539388, 0.0399794765, -0.0107861627,
+      -0.0619414411, -0.0493676849, 0.0290533733, 0.0607149601, 0.0223326609,
+      -0.0517165288, 0.0549397655, 0.00849326048, 0.0361453593, 0.00873402413,
+      0.0757657215, -0.0155217489, 0.0172228031, -0.00483580027, 0.0275140088,
+      0.0698064044, -0.035865, 0.0317699239, -0.0419377275, -0.000364540843,
+      -0.0579968728, 0.0210270602, -0.04122518, 0.0153363626, 0.0616042428,
+      -0.0164373349, 0.0314331353, 0.0727970302, -0.0604985356, -0.0679704472,
+      -0.0350696035, 0.0334950387, -0.0560740493, 0.0067698718, 0.00832682289,
+      -0.0671255216, 0.0842333212, 0.0698984414, -0.055356618, 0.0167419575,
+      -0.0653399155, 0.0176909305, 0.0200380515, 0.0132308407, -0.0500722229,
+      0.0141983246, -0.0126840565, -0.00103815028, -0.0428822823,
+      -0.00402426114, -0.0556978285, 0.0152022857, -0.0119009139,
+      -0.00215555285, -0.0274131242, -0.0078564, -0.0576389506, -0.0209476892,
+      0.0576339699, 0.0658028647, -0.059151981, 0.0442928933, -0.0220848583,
+      -0.0470124893, 0.036622718, -0.0596954338, 0.0662711784, -0.0788878426,
+      -0.0527708232, -0.0300162882, 0.0430115946, -0.02626005, 0.0107990056,
+      -0.0273304321, -0.083791852, 0.0672710612, -0.0190239083, 0.00592750637,
+      -0.0194576811, -0.0521532595, -0.07685408, 0.0528477095, 0.0179941393,
+      -0.0343910456, -0.0730679557, 0.0286657605, 0.0519617386, 0.017540548,
+      0.0101464791, 0.0384347439, -0.0154866762, 0.0118913101, 0.0518446863,
+      0.0351721272, -0.047427047, -0.080301933, 0.0625040531, 0.0183019154,
+      0.0130705079, -0.0232570656, -0.0319498628, -0.0752482042, -0.0527056,
+      0.0205657613, -0.00286383298, 0.0396508165, -0.022864135, 0.0173565596,
+      -0.012351186, 0.0589527227, -0.0296450593, -0.0358430743, 0.0324675515,
+      0.0577006973, -0.00427750917, -0.0243250858, -0.0013434029, 0.0447447859,
+      0.007460739, 0.0282748975, -0.0402403213, -0.018453721, -0.0220531914,
+      -0.0333782211, 0.0195676386, 0.0772957429, 0.0326933227, 0.0516259931,
+      0.0513616875, -0.0154445199, 0.0440858155, 0.0314802714, -0.0586133376,
+      0.0422557965, 0.0545484647, 0.0434167646, -0.0305118132, 0.0771905705,
+      0.0391205624, -0.0467094406, -0.0541946702, 0.0112584382, -0.00637828093,
+      -0.0250523239, 0.058613196, -0.0410565138, 0.0734460205, -0.00451013353,
+      0.0711735561, 0.0483668, -0.0754625, -0.0225082915, -0.0712986439,
+      -0.085109666, -0.019707961, 0.00768647622, 0.01006475, 0.0429756977,
+      0.0342541412, -0.0670790374, -0.00890949555, -0.0310256332, 0.0188916791,
+      -0.0242118742, 0.076495342, -0.0462440774, 0.0615693778, -0.0635807067,
+      -0.0448870249, 0.0390423313, 0.00201199227, -0.0514372438, -0.0548383333,
+      0.0671927407, 0.0355817787, -0.0134089012, 0.0250769556, -0.0387764759,
+      0.0330625512, 0.0596417077, 0.0237224326, -0.00224582199, 0.00806665048,
+      0.0123293772, 0.0803692862, -0.0487343334, -0.049518887, 0.0586790144,
+      0.0745413378, 0.0271910988, -0.0136248702, -0.0456754155, 0.0098876413,
+      0.050691627, 0.0156270657, -0.0119721098, -0.0465564281, -0.00996010657,
+      -0.00193848065, 0.0740119442, 0.0479635075, 0.0356130302, 0.058814425,
+      -0.0419757068, 0.0213303212, -0.0678459257, -0.0379647613, 0.0388968922,
+      0.0104159592, -0.0519007482, -0.0416227281, 0.0587038919, 0.0316624232,
+      0.0456597209, -0.0120587097, 0.0344173759, 0.016163256, 0.0319005251,
+      -0.00386718544, -0.054844141, -0.044923313, 0.0141253555, -0.0603668876,
+      0.0509519167, 0.0146526732, 0.0204279739, 0.0523845181, -0.0064683333,
+      0.0343987308, 0.0251562502, -0.0332186297, 0.018376898, -0.00191983278,
+      0.0410289057, 0.00780153461, -0.0262588467, -0.0427298546, -0.0147477565,
+      0.0663075745, 0.00154680328, 0.072173737, 0.057984788, -0.0482842326,
+      -0.0347734205, -0.00425925618, 0.0342038684, -0.0473249666, -0.07141947,
+      -0.0724299625, 0.0247521438, 0.0557845645, 0.0746209919, 0.0355643518,
+      -0.0630740523, -0.0411736928, -0.0448790304, -0.00947722327, -0.0520118,
+      -0.0392492265, 0.0738911778, -0.0267413203, 0.0100621721, -0.0292224567,
+      -0.0492545441, -0.0630346462, 0.0634034052, -0.0201631114, 0.0101821832,
+      -0.0160410944, 0.0299152881, 0.0150262117, -0.0303825885, 0.0555518307,
+      0.0595657937, -0.0361711942, 0.0570156053, -0.0562783144, -0.0518201776,
+      0.0298729297, 0.0458494835, 0.0414443053, -0.0685389414, -0.0257106107,
+      0.0114620076, 0.00841430854, 0.0600916333, 0.0812641755, -0.0518676601,
+      -0.0676372498, 0.0155527908, -0.055296313, -0.000541180198, -0.0315882973,
+      -0.00188313494, 0.0464374907, 0.0708882809, -0.039650768, 0.0182693154,
+      0.053660918, 0.0306093916, 0.0687519461, -0.0420131385, 0.0250447243,
+      0.0176424608, 0.0609054901, 0.0319935456, 0.0311687104, -0.0248538349,
+      0.0106286267, 0.00376881938, 0.025634503, -0.0110093299, -0.0501524061,
+      0.00852482952, -0.054110419, -0.0409833118, -0.0313142389, 0.0838009641,
+      -0.0220517572, 0.0310998149, -0.061632894, 0.0587884858, -0.0104297968,
+      0.0127962, -0.0363749787, 0.075141333, -0.066451028, -0.0417915173,
+      -0.00296959048, 0.0351843387, -0.00341101852, -0.0501099899, 0.0685114786,
+      0.0796889663, 0.0226879809, 0.0588796698, 0.0402922928, 0.00721303141,
+      0.049331, 0.0335245207, 0.0238102023, -0.0111288419, -0.0296022668,
+      0.00831542443, 0.0396824963, 0.00365452957, -0.0182359777
+    ]
   },
   {
     "index": 41,
@@ -7499,8 +7717,7 @@
         "position": 6,
         "slug": "/themes/autres-departs"
       }
-    ],
-    "split": true
+    ]
   },
   {
     "index": 45,
@@ -8293,794 +8510,193 @@
     "idcc": "0000"
   },
   {
-    "index": 45,
-    "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
-    "cdtnId": "404b14a887",
-    "isPublished": true,
-    "metaDescription": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
-    "slug": "44-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-    "source": "contributions",
-    "title": "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
-    "answers": {
-      "generic": {
-        "id": "875f5b33-5464-4eac-83d0-8ec51b92268f",
-        "text": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\nPoursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\nVendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\nFermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
-        "markdown": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\n\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\n- Poursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\n- Vendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\n- Fermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
-        "references": [],
-        "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…"
-      },
-      "conventions": [
-        {
-          "id": "1e85348e-3fd0-465b-8320-7a6b416e28c3",
-          "idcc": "0016",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "a3c20d65-651a-4e52-9a0c-c97d754a98bc",
-          "idcc": "0029",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "15540029-655c-4bfd-b954-3771afdf9e87",
-          "idcc": "0044",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "1fc80218-e36e-4e4b-a1c2-c841cdbfeb98",
-          "idcc": "0054",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "02433fc2-bd6a-41d7-842c-1f269918c0a1",
-          "idcc": "0086",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "ec9bae09-c318-421e-9bee-1b0beff6e156",
-          "idcc": "0176",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "7ec07a0f-8863-4266-95da-3c73358dd75c",
-          "idcc": "0275",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "992e5886-4877-4274-bdfa-91b3ffaf79f1",
-          "idcc": "0292",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8455e390-7522-4ba2-b6bb-4afcfeb5db9e",
-          "idcc": "0413",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "4fba8935-8c0c-4b98-8d77-072f7bbf5dc7",
-          "idcc": "0573",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "c490014a-7207-4277-97b0-7f6b62fc8e05",
-          "idcc": "0650",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "6cc9367f-acf3-4d52-9d1a-f912fd0d10ee",
-          "idcc": "0675",
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
-        },
-        {
-          "id": "901b2666-77b7-4dc3-880c-b5a22bb953bc",
-          "idcc": "0714",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "3ae26e2f-efaa-4cbb-89bf-d419fc645008",
-          "idcc": "0787",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "bf0eacb7-1d9d-4e1c-aab1-87c5a5d4cdc3",
-          "idcc": "0822",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "df04f170-972e-4dfe-8f71-881ef4026e55",
-          "idcc": "0827",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "aa3cef20-281a-4e21-b550-1c7acf877acd",
-          "idcc": "0828",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "1507f74d-1a84-4d91-9393-f50441ece472",
-          "idcc": "0829",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8b6b2aee-50e6-48fe-ad84-0b884a16af06",
-          "idcc": "0836",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "405ed3c7-e992-4dc2-ba87-a2cf13b64ee5",
-          "idcc": "0843",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "3c036ece-a65f-4d38-b823-5d81addd2a41",
-          "idcc": "0860",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "e6fafc4b-8c6e-4f36-bb46-4668ff6dcff0",
-          "idcc": "0863",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8ede3f75-02fd-4580-92ad-0b8f774b5595",
-          "idcc": "0878",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "d3af6889-e263-441c-b2d9-9b62f707d180",
-          "idcc": "0887",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "f336c900-cd25-4951-a17a-3b67a9cfa546",
-          "idcc": "0898",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "3abafc5a-3ba1-41d1-807d-2faca4300fba",
-          "idcc": "0899",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "93996885-6435-482e-9064-22731a6f5074",
-          "idcc": "0911",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "4af6cd69-7c25-4b3c-97f3-1defa907447a",
-          "idcc": "0914",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "c84f55eb-0c0e-4244-9b9a-60cd77ed201b",
-          "idcc": "0920",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "7a69dd41-bb9c-4fe7-aa83-01c715273711",
-          "idcc": "0923",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "df9ad9af-6e4c-4954-9b4e-cc74e840c702",
-          "idcc": "0930",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8d09014a-49b6-4f95-9265-abe073608201",
-          "idcc": "0934",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "d593f2a8-32f6-499e-a129-26da35a4d8b1",
-          "idcc": "0937",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "7ded0cb3-1b44-4337-a5d0-2580090a5ea8",
-          "idcc": "0943",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "b2c6381c-cfee-4b2d-8b85-a2d8ce86b5a5",
-          "idcc": "0948",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "b93d87dc-c9dd-479b-83a2-cd7c17dcf813",
-          "idcc": "0965",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "d8513de9-5d46-44ad-a432-4d133bc4cde2",
-          "idcc": "0979",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "0b6cc34c-7bf5-475d-8192-e90cba590227",
-          "idcc": "0984",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8e0868dd-4ca7-40a6-a660-37c9c0ff8e7d",
-          "idcc": "1007",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "9bba0c4b-0a2a-4c5c-bf6a-e22a1f9a2c88",
-          "idcc": "1043",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "c54e3545-d044-47a2-9236-78bf6f7ec28d",
-          "idcc": "1059",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "b215f648-94b2-4867-9f85-5ada59dd3277",
-          "idcc": "1090",
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
-        },
-        {
-          "id": "72ac4fc0-d360-4c2c-9756-c64f152bb2be",
-          "idcc": "1147",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "352c13f1-4b3b-4852-993d-5a80bf9b4902",
-          "idcc": "1159",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "9d770a24-7b36-4243-8a8b-52075963fdba",
-          "idcc": "1164",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "269f3e37-2d77-485b-8875-ea622e61f618",
-          "idcc": "1266",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "0331d59f-9382-490d-bd56-f5dce5a7aa57",
-          "idcc": "1274",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "629e7806-34fd-460a-9859-3560d4981e6a",
-          "idcc": "1315",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "ddc90d07-98b3-428a-825e-8b919f21542a",
-          "idcc": "1351",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "9ccc3be5-5a5c-478e-94c7-bfdfb29f72f7",
-          "idcc": "1353",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "50e2853d-3b04-4921-9c5d-d92a6af2ca1d",
-          "idcc": "1365",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "eb61ded9-7824-4b6a-b781-8eeb76a5195a",
-          "idcc": "1369",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "c069a3f9-bec5-4ada-ade5-6e259ca23523",
-          "idcc": "1387",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "1e6a8999-25d3-4f77-a1b1-2897e04a6e2b",
-          "idcc": "1404",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "7b63543d-654f-4a9f-86a1-eda8413f0f1f",
-          "idcc": "1472",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "5e6e95ef-8346-4ab3-b1f4-3bfcc4ff0408",
-          "idcc": "1480",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "4cea082f-b9c7-43b3-8845-85868f775494",
-          "idcc": "1483",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "89f082ee-c063-4494-a7b7-dae6e09adfee",
-          "idcc": "1486",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "fb887379-d471-4fc2-b4fc-bdc4f6eb2538",
-          "idcc": "1501",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "9308ca0b-c12b-49c7-9d91-7e7f065c7351",
-          "idcc": "1505",
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
-        },
-        {
-          "id": "5ca076d7-ae5d-47e6-8aa8-82171641792b",
-          "idcc": "1516",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "4a17f525-b401-4d66-b0fc-3e526407b554",
-          "idcc": "1517",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "f1ad6d4a-0fea-4bb1-aa8e-ca057f37521f",
-          "idcc": "1518",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "142bc7f4-1383-47fc-b72d-f5a8758972b4",
-          "idcc": "1525",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "3a24d44e-bbc8-499b-a7a6-4c09c997d27e",
-          "idcc": "1527",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "2f25911a-2b2e-4083-b439-a1c1318255af",
-          "idcc": "1560",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "95b42f3e-cf88-4de9-824c-27cbc7697930",
-          "idcc": "1564",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "a6f6948b-aee9-4173-abc4-f260616236ea",
-          "idcc": "1572",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "cb196483-22d5-4d68-a7f2-4ccf74a48808",
-          "idcc": "1576",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "3408e9d1-591a-437b-977c-5265dddc4dd1",
-          "idcc": "1577",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "02789bd1-266f-4667-8bad-c3d506f1ae94",
-          "idcc": "1578",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "77ed891a-3913-4ff5-8ec9-06ad560d0041",
-          "idcc": "1592",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "a3e613b3-6bab-45f5-bec0-3a141ef3cfa9",
-          "idcc": "1596",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "7b5e86f2-c4f9-4695-abe8-ef9ec65e9e45",
-          "idcc": "1597",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "f41f50d2-e32b-47c9-a7ee-4a60e9506ee0",
-          "idcc": "1604",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "d424b046-2521-4ffe-ab03-23223c82d5b5",
-          "idcc": "1606",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8a6aa913-7ee1-47ce-ba2c-74499c5d2c21",
-          "idcc": "1626",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "00560192-6951-4cac-abdf-b8f35ce7ae26",
-          "idcc": "1627",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "10530e79-d663-4f4f-a2cc-efdecf729058",
-          "idcc": "1628",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "d7ebc6dd-ed2a-4217-bc6b-a703a831e89d",
-          "idcc": "1634",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "5e6ad8ba-9b98-425e-9186-3e2205623600",
-          "idcc": "1635",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "97cfcd8a-4563-435b-8c7e-b180b4f86cb8",
-          "idcc": "1672",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "2d4ae8b8-38c7-48b5-a552-aa0bb5cee5cc",
-          "idcc": "1702",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "faa12948-86f1-4556-bca0-b9cc1621209e",
-          "idcc": "1732",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "cb327b0c-1e91-423b-bbdb-333c4c0393e9",
-          "idcc": "1740",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "e781ef39-9020-4e93-882e-227a4e824f78",
-          "idcc": "1813",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "de2a00dd-e7e5-4081-b473-8c6fbd1f7a03",
-          "idcc": "1867",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "e09836b2-36e4-4a8c-9932-667e49093a0e",
-          "idcc": "1885",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8a530e6f-50d1-4eff-bdc4-27a1e01b3c83",
-          "idcc": "1902",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "7975f6ae-8133-4665-907b-cd40cd101e95",
-          "idcc": "1912",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "63ea8f6c-e4b0-4061-a002-f6a3d88c95cc",
-          "idcc": "1960",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "0d16f1a4-9600-402c-8df9-9a3c0a3af0ad",
-          "idcc": "1966",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "4fc76f1e-fb0c-44f1-b9fc-d8be75de499b",
-          "idcc": "1967",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "e0560448-efc9-4af7-b433-612846e1b17c",
-          "idcc": "1979",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "282c2c04-b5c4-478c-b530-fa3a1fe12e6f",
-          "idcc": "1996",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "f67ce559-2710-4869-b336-d234543f3563",
-          "idcc": "2003",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "02426fcd-4b09-4855-bdaa-a3c955ba0665",
-          "idcc": "2098",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "08d0dd45-b814-41fc-9268-0c1e0997ea3c",
-          "idcc": "2120",
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
-        },
-        {
-          "id": "4af91f3b-3fde-47e5-b98c-877b2e9c896e",
-          "idcc": "2126",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "1b1be6c7-3a21-40d5-856b-df142237d779",
-          "idcc": "2148",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "79bde5d3-8b58-4bfe-85bd-298c9e4e4ed1",
-          "idcc": "2216",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "aa5bd534-5ffd-43ba-ba1b-907738199746",
-          "idcc": "2221",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "25f3aac2-ebb8-40c0-8e4d-313367b5b800",
-          "idcc": "2264",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "e8adfcc8-9054-4f23-83c5-52cd8bf4cbfa",
-          "idcc": "2266",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "6235c4f8-ce2e-4ec6-9e25-61cad775f1ae",
-          "idcc": "2294",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "339586b2-7513-4768-bbad-5ffe2778d9b4",
-          "idcc": "2420",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "cd2cccde-503f-409c-9d47-c50893327dd5",
-          "idcc": "2489",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "ece3b00f-5925-4557-89fa-19176766968d",
-          "idcc": "2511",
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
-        },
-        {
-          "id": "83b7d4a4-63a5-4b9b-97a4-b78f8fb748d9",
-          "idcc": "2542",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "5170bd52-83fe-409b-8376-be0e05d78a1c",
-          "idcc": "2579",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "a9b63dcf-7122-4723-89ae-afff5b268874",
-          "idcc": "2596",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "f2fbc883-0e4e-4e7a-a0f2-d5a21b2da00b",
-          "idcc": "2609",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "18988190-75bf-447f-838a-e42ddc6100a2",
-          "idcc": "2614",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "1ac4b07d-ae17-4d63-a3d0-7b87af63fab2",
-          "idcc": "2615",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8a3d67fb-1819-48dc-87da-5c0a67de4af6",
-          "idcc": "2630",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "c02f3c2f-f890-44f3-8480-6c3f82e1af27",
-          "idcc": "2700",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "b601de8f-1ada-4220-a896-8a46148f738b",
-          "idcc": "2755",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "8389c2e7-97b8-458b-b658-cb57a3717d92",
-          "idcc": "2941",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "20534ea0-dc7f-49df-a8f4-1e83b4b68048",
-          "idcc": "2980",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "9fa1d1dc-4d14-406c-9b4d-e8e0984afc31",
-          "idcc": "2992",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "9eec9184-dcc0-4d45-88ff-7739f1605361",
-          "idcc": "3043",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "701aac73-51c4-4739-9a5c-3d74cbd11918",
-          "idcc": "3053",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "a5b1d3ee-f3d1-4d52-939f-f9cc99146913",
-          "idcc": "3127",
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "references": []
-        },
-        {
-          "id": "a66bda49-fac1-48af-ad28-930de6aa76a2",
-          "idcc": "3209",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "20630f00-2f3b-4a81-8f74-4df4741fc37d",
-          "idcc": "3231",
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "references": []
-        },
-        {
-          "id": "29cd5ca1-306c-4cd1-8131-bb9d1bc14130",
-          "idcc": "3239",
-          "markdown": "### Pour les assistants maternels du particulier employeur\n\n#### Décès du particulier employeur\n\nLa convention collective ne prévoit pas spécifiquement ce cas de figure.\n\n#### Décès de l'enfant du particulier employeur\n\nLe décès de l'enfant du particulier employeur entraîne la rupture du contrat de travail au jour du décès.\n\nLe particulier employeur ou, à défaut, un tiers, informe dès que possible par écrit l’assistant maternel de la date du décès de l’enfant.\n\nLa rupture du contrat de travail entraîne le versement au salarié :\n\n- du dernier salaire dû au jour du décès ;\n- d’une indemnité égale à l’indemnité compensatrice de préavis (qui ne peut être exécuté) ;\n- d’une indemnité dont le montant est calculé de la même manière que l’indemnité de rupture en cas de retrait d’enfant ;\n- d’une indemnité compensatrice pour les congés payés acquis non rémunérés.\n\nLes documents de fin de contrat doivent être remis à l'assistant maternel, par l'employeur ou un tiers, dans un délai de 30 jours calendaires à compter du décès de l'enfant.\n\n### Pour les autres salariés du particulier employeur\n\n#### Décès du particulier employeur\n\nLe décès du particulier employeur entraîne la rupture du contrat de travail au jour du décès.\n\nUn ayant-droit ou, à défaut, un tiers, informe le salarié de la date du décès du particulier employeur dès que possible, par écrit.\n\nSi le salarié est embauché par un couple de particuliers employeurs, le contrat de travail peut subsister avec le membre survivant, qui le décide, dès lors qu'il est immatriculé comme particulier employeur. \n\nLa rupture du contrat de travail entraîne le versement au salarié :\n\n- du dernier salaire dû au jour du décès ;\n- d’une indemnité égale à l’indemnité compensatrice de préavis qui ne peut être exécuté ;\n- d’une indemnité dont le montant est calculé de la même manière que l’indemnité de licenciement ;\n- d’une indemnité compensatrice pour les congés payés acquis, non rémunérés.\n\nL’ayant-droit ou, à défaut, un tiers remet au salarié les documents de fin de contrat dans un délai de 30 jours calendaires à compter du décès.\n\nLe salarié dont le contrat de travail est rompu du fait du décès du particulier employeur présente, s'il le souhaite, une demande d’indemnisation auprès de l’organisme Pôle emploi pour l’ouverture des droits au chômage.\n\n#### Décès de l'enfant du particulier employeur (dans le cas d'un contrat de travail conclu exclusivement pour la garde de l'enfant)\n\nLorsque le contrat de travail est conclu exclusivement pour la garde d’un enfant, le décès de ce dernier entraîne la rupture du contrat de travail au jour du décès.\n\nLe particulier employeur ou, à défaut, un tiers informe le salarié de la date du décès de l’enfant dès\nque possible, par écrit.\n\nLa rupture du contrat de travail entraîne le versement au salarié :\n\n- du dernier salaire dû au jour du décès ;\n- d’une indemnité égale à l’indemnité compensatrice de préavis (qui ne peut être exécuté) ;\n- d’une indemnité dont le montant est calculé de la même manière que l’indemnité de licenciement ;\n- d’une indemnité compensatrice de congés payés acquis.\n\nL'employeur ou, à défaut, un tiers remet les documents de fin de contrat dans un délai de 30 jours calendaires à compter du décès de l'enfant.\n\nLe salarié dont le contrat de travail est rompu du fait du décès de l'enfant du particulier employeur présente une demande d’indemnisation auprès de l’organisme Pôle emploi pour l’ouverture des droits au chômage.",
-          "references": []
-        }
-      ]
-    },
-    "breadcrumbs": [
+    "idcc": "0044",
+    "type": "content",
+    "content": "<span class=\"title\">Qui est concerné ?</span><p>La convention collective prévoit une prime d'ancienneté pour les salariés appartenant à la catégorie des :</p><ul><li><p>Ouvriers, employés et techniciens (groupes I à III) et ;</p></li><li><p>Agents de maîtrise et techniciens (groupe IV).</p></li></ul><p>Le salarié doit avoir au moins 3 ans d'ancienneté.</p><span class=\"title\">Montant de la prime</span><p>La prime d'ancienneté est calculée en appliquant un pourcentage sur le minimum conventionnel correspondant au coefficient hiérarchique du salarié, augmenté, le cas échéant, des majorations pour heures supplémentaires et proportionnellement à l'horaire de travail. Les taux de la prime sont les suivants :</p><ul><li><p>3% après 3 ans d'ancienneté dans l'entreprise ;</p></li><li><p>6% après 6 ans d'ancienneté dans l'entreprise ;</p></li><li><p>9% après 9 ans d'ancienneté dans l'entreprise ;</p></li><li><p>12% après 12 ans d'ancienneté dans l'entreprise ;</p></li><li><p>15% après 15 ans d'ancienneté dans l'entreprise.</p></li></ul>",
+    "questionId": "ad1c2bd2-8f37-450e-bf4a-bb8fb50ea2c7",
+    "references": [
       {
-        "label": "Départ de l’entreprise",
-        "position": 7,
-        "slug": "/themes/depart-de-lentreprise"
+        "url": "https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005846371/?idConteneur=KALICONT000005635613",
+        "title": "Avenant n° 1 Ouvriers et collaborateurs du 11 février 1971 Article 10"
       },
       {
-        "label": "Autres départs",
-        "position": 6,
-        "slug": "/themes/autres-departs"
+        "url": "https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005846453/?idConteneur=KALICONT000005635613",
+        "title": "Avenant n° 2 Agents de maîtrise et techniciens du 14 mars 1955 Article 16"
       }
     ],
-    "idcc": "0044"
+    "contentType": "ANSWER",
+    "description": "La convention collective prévoit une prime d'ancienneté pour les salariés appartenant à la catégorie des : Ouvriers, employés et techniciens (groupes I à ...",
+    "questionName": "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
+    "linkedContent": [
+      {
+        "breadcrumbs": [
+          {
+            "label": "Salaire et Rémunération",
+            "position": 1,
+            "slug": "/themes/salaire-et-remuneration"
+          },
+          {
+            "label": "Primes et avantages",
+            "position": 2,
+            "slug": "/themes/primes-et-avantages"
+          }
+        ],
+        "description": "Une convention collective peut prévoir des primes que l'employeur doit verser aux salariés. Elle précise alors leurs conditions d'attribution et montant.",
+        "source": "contributions",
+        "slug": "quelles-sont-les-primes-prevues-par-la-convention-collective",
+        "title": "Quelles sont les primes prévues par la convention collective ?"
+      },
+      {
+        "breadcrumbs": [
+          {
+            "label": "Salaire et Rémunération",
+            "position": 1,
+            "slug": "/themes/salaire-et-remuneration"
+          },
+          {
+            "label": "Primes et avantages",
+            "position": 2,
+            "slug": "/themes/primes-et-avantages"
+          }
+        ],
+        "description": "Non, la réglementation du code du travail n'impose pas à votre employeur de vous verser une prime d'ancienneté. Nous vous expliquons dans quelles conditions la prime doit être versée si elle existe.",
+        "source": "fiches_service_public",
+        "slug": "salaire-du-secteur-prive-la-prime-danciennete-est-elle-obligatoire",
+        "title": "Salaire du secteur privé : la prime d'ancienneté est-elle obligatoire ?"
+      }
+    ],
+    "questionIndex": 39,
+    "breadcrumbs": [
+      {
+        "label": "Salaire et Rémunération",
+        "position": 1,
+        "slug": "/themes/salaire-et-remuneration"
+      },
+      {
+        "label": "Primes et avantages",
+        "position": 2,
+        "slug": "/themes/primes-et-avantages"
+      }
+    ],
+    "cdtnId": "8eb9e378fc",
+    "excludeFromSearch": true,
+    "id": "a325779d-5ee6-483d-8271-e03aaa1fe653",
+    "isPublished": true,
+    "metaDescription": "Le code du travail ne prévoit pas de prime d’ancienneté. Elle est peut être prévue par une convention ou un accord collectif de branche, un accord collectif…",
+    "refs": [],
+    "slug": "44-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+    "source": "contributions",
+    "text": "La convention collective prévoit une prime d'ancienneté pour les salariés appartenant à la catégorie des : Ouvriers, employés et techniciens (groupes I à ...",
+    "title": "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
+    "ccnSlug": "44-industries-chimiques-et-connexes",
+    "ccnShortTitle": "Industries chimiques et connexes",
+    "messageBlock": "<p>Ces informations sont issues de l’analyse des règles prévues par votre convention collective de branche étendue et par le Code du travail. Elles s’appliqueront sauf si une convention ou un accord d’entreprise (ou de groupe, ou d’établissement) existant dans votre entreprise prévoit également des règles sur le même sujet. En effet, dans ce cas, cette convention ou accord s’appliquera, qu’il soit plus ou moins favorable que la convention de branche, sous réserve d’être au moins aussi favorable que le Code du travail. Dans tous les cas, reportez-vous à votre contrat de travail car s’il contient des règles plus favorables, ce sont ces dernières qui s’appliqueront. </p><p>Attention, d’autres règles non étendues peuvent potentiellement vous être applicables.</p>",
+    "title_vector": [
+      0.0395362116, 0.0131819099, -0.0217495412, 0.0172278304, -0.0264775753,
+      -0.0128877852, -0.0572300851, 0.0244753454, -0.00123788323, -0.0460217968,
+      -0.016696332, 0.0137929134, -0.0174586941, 0.0420045853, -0.0232547615,
+      -0.0846008286, 0.0453931764, 0.0575466, -0.00075547403, 0.0626895577,
+      -0.0790933371, -0.0590055734, 0.0488422401, 0.006548848, 0.0384482555,
+      0.0184304, 0.0104342736, -0.0283133648, 0.0162787754, 0.0326652788,
+      0.00382070825, -0.0346253365, 0.0270456597, -0.0220476072, -0.0435274877,
+      0.0536783189, -0.0472153872, -0.0270865709, -0.0570161454, 0.0642451,
+      0.047391627, -0.087255165, 0.0565431, 0.027758196, 0.0756397396,
+      -0.061899066, 0.0340185463, 0.0699169561, 0.011396884, -0.0732138306,
+      -0.077726163, 0.059637215, 0.0614198297, 0.0699771643, 0.0694526,
+      0.0464407392, -0.0650045499, -0.0379614159, -0.02705043, 0.0171469655,
+      0.0593509786, 0.0288165398, 0.0136988126, -0.000433106849, 0.0378209837,
+      0.041287303, -0.0497765616, 0.0701281, 0.0107439375, 0.0490623377,
+      0.0545255691, -0.0062505859, 0.0384202041, -0.0840697512, -0.0563127585,
+      -0.00141173438, -0.00691894069, -0.0739897, -0.0739377141, 0.0511438362,
+      0.0579208769, -0.000684980769, -0.0152464667, -0.0376714095,
+      -0.0344100147, -0.0800525397, 0.0124994926, 0.00218076934, 0.0766412914,
+      -0.0650173798, -0.0065609226, -0.00572217396, 0.0869124532,
+      -0.00443684962, 0.0111676, -0.0238325186, 0.0764070451, 0.0447689481,
+      -0.0116278119, -0.017706126, 0.0852925, -0.00876295567, -0.0827811733,
+      0.0697198287, -0.0779197738, -0.0287162531, 0.0279572289, -0.0374283418,
+      0.00743915234, -0.0329978615, 0.00342817185, 0.0446795411, 0.0610578284,
+      0.0271427371, 0.0414074771, 0.00257733301, -0.0147548076, 0.0012266346,
+      -0.0836523473, -0.00250951503, -0.070850879, 0.0246227551, -0.0726628751,
+      -0.0441354588, -0.000198627153, -0.0183447991, 0.039768178, -0.0531289466,
+      0.0350205414, 0.0499886349, -0.0303223152, 0.0107280808, 0.0213650223,
+      0.0124629634, -0.0931569114, -0.0292423517, -0.00619295659, 0.068758674,
+      -0.0903766, -0.0250455942, 0.0107647656, 0.0172497742, 0.0765920356,
+      0.0564080253, -0.00692585856, 0.0039659231, 0.0709710941, -0.0114601823,
+      0.0142093254, -0.0500371642, -0.0298624635, -0.0168706216, 0.0518938974,
+      -0.0743439198, -0.0599683933, 0.0604864955, -0.00713973679, 0.0770677328,
+      0.0213347767, -0.0786501169, 0.0648720041, -0.0653252, 0.0439757779,
+      0.0205698367, 0.00317618321, -0.0255955867, -0.0136307795, -0.00926164258,
+      -0.0178982466, -0.0170748737, -0.0811632499, 0.00552592287, -0.0169773307,
+      0.073117815, -0.0297215078, 0.0694147423, 0.0238573682, -0.0342620686,
+      -0.0209873132, 0.0325773172, 0.0540258177, -0.0659919232, 0.0348662622,
+      -0.0312754437, -0.024365183, -0.0688304305, 0.00516854925, -0.013083009,
+      0.0120148, -0.0281701628, -0.074430339, 0.0449570306, 0.0659330711,
+      -0.00668556802, -0.0637976155, -0.0373420678, -0.0217465051,
+      -0.0509132594, 0.0202044845, -0.00625526346, -0.0833800212, 0.0729113519,
+      0.0708936602, -0.0231236015, 0.00159130711, -0.0272178613, -0.0350537561,
+      -0.058379624, 0.0218878295, -0.065269731, 0.0457376912, -0.0243721344,
+      -0.0481076129, 0.0154787432, -0.0199858863, -0.0654339716, 0.0250097,
+      -0.0169092435, 0.0234039202, 0.0793726072, 0.0082265595, -0.0542864092,
+      -0.0315305814, 0.0784413218, 0.0873103514, -0.0437306, 0.0507156365,
+      0.0229837783, -0.00829925481, 0.0695971772, -0.0278270859, 0.0643025041,
+      -0.0777261406, -0.00344611914, -0.0532081798, 0.00566270947, 0.013680364,
+      -0.0189921483, -0.036019288, -0.0949066281, 0.0422256365, -0.0234143268,
+      -0.0172713902, -0.029259786, -0.0418806374, -0.0339653455, 0.0698879063,
+      -0.0119455568, 0.0422842838, -0.0832896605, 0.0133739579, -0.0139268795,
+      0.0128461868, 0.0691778362, 0.0305260941, -0.052167695, -0.00859758817,
+      0.0182287265, -0.00365267112, -0.0230630245, -0.0780853704, 0.0405410714,
+      -0.0207297523, 0.00386732048, -0.0394944511, -0.0185811892, -0.0836733505,
+      -0.0392207354, -0.064734675, 0.0296512656, -0.00329296198, -0.0189814288,
+      0.0326113962, -0.00452341372, -0.0348349921, -0.00715058, -0.00117644761,
+      0.0255430508, 0.0273033, -0.0339929126, -0.0137703149, 0.0526141077,
+      -0.0214227121, -0.067544423, 0.0371778309, -0.0328045897, -0.000117588483,
+      0.00390551938, -0.043527551, 0.0617779233, 0.0663208365, 0.0569472425,
+      0.052332785, -0.0234268196, 0.0611016527, -0.0356699154, 0.0621590354,
+      -0.0554060079, 0.00765649416, 0.0543956459, -0.0195899662, -0.0180402882,
+      -0.0195812974, 0.0498143, -0.0410851911, -0.0469654873, 0.0388685092,
+      -0.0326649286, 0.0506293587, 0.00759124523, -0.0520872883, 0.0217762236,
+      -0.0170777272, 0.0638884678, -0.0184863601, -0.070449695, -0.00682518678,
+      -0.0138701452, -0.0901319385, -0.0831231773, 0.000219177207,
+      -0.0138231991, 0.0339483544, 0.0752661675, 0.0132958721, -0.0435829125,
+      -0.0428268798, 0.0471532345, -0.0285218861, 0.0758127496, -0.0785968453,
+      0.0792340338, 0.0167882647, -0.056500297, 0.0514788143, 0.0284471847,
+      -0.0544120632, -0.0371861793, 0.00725201797, -0.0419340767, 0.0183063261,
+      0.037358433, -0.0193128102, 0.0213220641, 0.015047621, 0.0322694,
+      -0.0303205959, 0.0619030334, 0.0271624215, 0.0840646, 0.0168678332,
+      0.0192481689, -0.0447162353, 0.0564453192, -0.033166185, 0.0396582335,
+      -0.0334892534, -0.00436883839, -0.0577678271, -0.00893846061,
+      -0.0105441408, 0.0475299358, -0.0238326713, 0.00192914, 0.0444505848,
+      -0.0241544209, 0.0449846424, 0.0251134448, -0.0310213659, 0.00130449829,
+      -0.0315503925, -0.0728028044, -0.0207665227, 0.0086182449, -0.0463278554,
+      -0.0406542197, -0.0220917929, 0.04824242, 0.0485061631, -0.042959325,
+      0.0603010356, -0.000707603525, 0.023660263, 0.0171751548, -0.0727465376,
+      -0.049649816, 0.0222746022, -0.00877831783, 0.0661495924, -0.0218097568,
+      0.0267412513, 0.0391433835, 0.00226906198, 0.034749113, 0.0801212937,
+      0.00954095088, -0.05065988, 0.0201418437, 0.0482038036, 0.0650124848,
+      -0.0309809465, -0.0833648816, -0.00972042698, 0.0237051453, -0.0601162948,
+      0.056054689, 0.0482641868, 0.0000442978126, -0.0482813865, -0.00188146241,
+      -0.0218232013, -0.0415813662, -0.0536935739, -0.0849256739, -0.034729775,
+      -0.00336033851, 0.0722841248, 0.00796453748, -0.0557961091, -0.0276901852,
+      0.0042914548, 0.0349508561, 0.00149156374, -0.0526963212, -0.0329179876,
+      0.031961903, 0.0583049059, -0.0272073578, -0.060223233, -0.0463611,
+      0.00487490743, 0.0600294657, 0.00147306407, -0.0101975156, 0.00504105,
+      -0.0429453254, 0.0340408, 0.0760225952, 0.0456516482, 0.00528586097,
+      -0.00826820731, -0.0656452775, -0.017341312, 0.0421448313, 0.0592697933,
+      0.0759045631, -0.00126373617, -0.0133920116, 0.0289926268, 0.0191541165,
+      0.0376428366, 0.0823399648, -0.0768809, 0.0392854735, 0.0282583106,
+      -0.034823712, -0.00338955224, -0.00306393579, -0.000099819481,
+      -0.0356882885, 0.0852780268, -0.0503915511, 0.0102153169, 0.0159529187,
+      0.0495601334, 0.062091358, -0.0073861843, 0.048698321, 0.00822067074,
+      0.0329826698, 0.047136277, 0.0378747, -0.00864134729, 0.0399754383,
+      -0.00472234935, 0.0109200357, -0.0452878512, -0.0446934402, 0.0546084717,
+      -0.0399797112, -0.0136121651, 0.0321833603, 0.0919588655, -0.0132957241,
+      0.0332397483, -0.0429829024, 0.0774940178, -0.0584471598, -0.0105586136,
+      0.0184363, 0.0589520074, -0.0749725476, 0.00180346251, 0.0197253935,
+      -0.00673474791, -0.0197143033, -0.0455082804, 0.0328998156, 0.0604527891,
+      0.0251092874, 0.0285254642, 0.0393893, 0.0049243751, 0.0582753457,
+      -0.0247546639, 0.0165462699, 0.0143784126, -0.0383021943, -0.0353859253,
+      0.0499540977, 0.0535206497, 0.0052070776
+    ]
   },
   {
     "source": "versions",

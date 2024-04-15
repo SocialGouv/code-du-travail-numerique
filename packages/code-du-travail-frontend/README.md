@@ -20,9 +20,9 @@ Puis dans `types`, rajouter le type de votre convention collective
 
 ```ts
 export type ReferenceSalaryProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC1516
+  T extends SupportedCc.IDCC1516
     ? CC1516ReferenceSalaryProps
-  T extends SupportedCcIndemniteLicenciement.IDCCXXX
+  T extends SupportedCc.IDCCXXX
     ? IDCCXXXReferenceSalaryProps
     : LegalReferenceSalaryProps;
 ```
@@ -37,25 +37,20 @@ Ensuite, dans `index.ts`, on peut ajouter la classe qui va process l'ancienneté
 
 ```ts
 switch (idcc) {
-  case SupportedCcIndemniteLicenciement.IDCC2511:
-    return new SeniorityLegal(
-      getMotifs(SupportedCcIndemniteLicenciement.IDCC2511)
-    ) as ISeniority<T>;
-  case SupportedCcIndemniteLicenciement.default:
+  case SupportedCc.IDCC2511:
+    return new SeniorityLegal(getMotifs(SupportedCc.IDCC2511)) as ISeniority<T>;
+  case SupportedCc.default:
   default:
-    return new SeniorityLegal(
-      getMotifs(SupportedCcIndemniteLicenciement.default)
-    ) as ISeniority<T>;
+    return new SeniorityLegal(getMotifs(SupportedCc.default)) as ISeniority<T>;
 }
 ```
 
 Enfin si on souhaite pimper les types, on peut le faire dans `types`.
 
 ```ts
-export type SeniorityProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC2511
-    ? LegalSeniorityProps
-    : LegalSeniorityProps;
+export type SeniorityProps<T> = T extends SupportedCc.IDCC2511
+  ? LegalSeniorityProps
+  : LegalSeniorityProps;
 ```
 
 ### 3. Ajouter la formule de calcul (`code-du-travail-modeles`)
@@ -68,7 +63,7 @@ On peut créer une classe qui va implémenter l'interface `IFormula`
 
 ```ts
 export class Formula1516
-  implements IFormula<SupportedCcIndemniteLicenciement.IDCC1516>
+  implements IFormula<SupportedCc.IDCC1516>
 ```
 
 Ensuite, on peut modifier la fonction `computeFormula`, on ajoutant les bonnes `explanations`, comme on le voit ci-dessous :
@@ -90,9 +85,9 @@ Après dans l'`index.ts`, on peut ajouter la classe :
 
 ```ts
 switch (idcc) {
-  case SupportedCcIndemniteLicenciement.IDCC1516:
+  case SupportedCc.IDCC1516:
     return new Formula1516() as IFormula<T>;
-  case SupportedCcIndemniteLicenciement.default:
+  case SupportedCc.default:
   default:
     return new FormulaLegal() as IFormula<T>;
 }
@@ -101,7 +96,7 @@ switch (idcc) {
 Enfin si on souhaite pimper les types, on peut le faire dans `types`.
 
 ```ts
-export type FormulaProps<T> = T extends SupportedCcIndemniteLicenciement.default
+export type FormulaProps<T> = T extends SupportedCc.default
   ? LegalFormulaProps
   : DefaultFormulaProps;
 ```
@@ -218,16 +213,16 @@ Puis, il faut ajouter le validator dans `src/outils/IndemniteLicenciement/valida
 
 ```ts
 export const validateAgreement = (
-  idcc: SupportedCcIndemniteLicenciement,
+  idcc: SupportedCc,
   step: IndemniteLicenciementStepName,
   get: StoreApi<any>["getState"],
   set: StoreApi<MainStore>["setState"]
 ): boolean => {
   switch (true) {
-    case SupportedCcIndemniteLicenciement.IDCC1516 === idcc &&
+    case SupportedCc.IDCC1516 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement1516(get, set);
-    case SupportedCcIndemniteLicenciement.MA_CC === idcc &&
+    case SupportedCc.MA_CC === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateMaCc(get, set);
     default:
@@ -241,10 +236,10 @@ Enfin, il suffit de rajouter le composant d'injection dans `src/outils/Indemnite
 ```ts
 export default function AgreementsInjector(props: Props) {
   switch (true) {
-    case SupportedCcIndemniteLicenciement.IDCC1516 === props.idcc &&
+    case SupportedCc.IDCC1516 === props.idcc &&
       props.step === IndemniteLicenciementStepName.Salaires:
       return <Agreement1516 />;
-    case SupportedCcIndemniteLicenciement.MA_CC === props.idcc &&
+    case SupportedCc.MA_CC === props.idcc &&
       props.step === IndemniteLicenciementStepName.Salaires:
       return <MaCC />;
     default:

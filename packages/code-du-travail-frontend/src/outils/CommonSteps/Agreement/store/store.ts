@@ -15,8 +15,8 @@ import {
 } from "../../../../lib";
 import { pushAgreementEvents } from "../../../common/Agreement";
 import { AgreementRoute } from "../../../common/type/WizardType";
-import { isCcFullySupportedIndemniteLicenciement } from "../../../IndemniteLicenciement/common";
 import { Agreement } from "@socialgouv/cdtn-utils";
+import { isCcFullySupportedIndemniteLicenciement } from "../../../IndemniteLicenciement/common";
 
 const initialState: Omit<
   CommonAgreementStoreData<PublicodesSimulator>,
@@ -141,7 +141,6 @@ const createCommonAgreementStore: StoreSlicePublicode<
     },
     onNextStep: () => {
       const input = get().agreementData.input;
-      const error = get().agreementData.error;
       const { isValid, errorState } = validateStep(input);
       const { route, agreement, enterprise } = input;
       if (isValid && route) {
