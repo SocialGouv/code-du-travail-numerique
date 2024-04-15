@@ -137,7 +137,7 @@ describe("calculate", () => {
       "contrat salarié . indemnité de licenciement . date de sortie":
         "01/01/2024",
       "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-        "non",
+        "oui",
       "contrat salarié . indemnité de licenciement . salaire de référence":
         "2000",
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
@@ -147,7 +147,7 @@ describe("calculate", () => {
     });
     expect(result.missingArgs).toEqual([]);
     expect(result.detail?.chosenResult).toEqual("AGREEMENT");
-    expect(result.detail?.legalResult?.value).toEqual(6333.33);
+    expect(result.detail?.legalResult?.value).toEqual(12666.66);
     expect(result.detail?.legalResult?.unit?.numerators).toEqual(["€"]);
     expect(result.result?.value).toEqual(15120);
     expect(result.result?.unit?.numerators).toEqual(["€"]);

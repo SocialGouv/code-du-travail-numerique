@@ -65,27 +65,26 @@ export function getFormule(engine: Engine, isLegal = false): Formula {
       rule: RuleNodeFormula
     ): Required<NodeFormula> => {
       const nodeFormule = rule.rawNode.cdtn.formule.formula;
-      if (isLegal && rule.rawNode.valeur !== "résultat légal") {
-        return formule;
-      }
-      if (nodeFormule.includes("$formule")) {
-        if (formule.formula.length) {
-          formule.formula = nodeFormule.replace(
-            FORMULE_VAR_REGEX,
-            formule.formula
+      if (!isLegal || rule.rawNode.nom.includes("résultat légal")) {
+        if (nodeFormule.includes("$formule")) {
+          if (formule.formula.length) {
+            formule.formula = nodeFormule.replace(
+              FORMULE_VAR_REGEX,
+              formule.formula
+            );
+          }
+          formule.explanations = mergeTwoArray(
+            formule.explanations,
+            rule.rawNode.cdtn.formule.explanations ?? []
           );
+          formule.annotations = formule.annotations.concat(
+            rule.rawNode.cdtn.formule.annotations ?? []
+          );
+        } else {
+          formule.formula = nodeFormule;
+          formule.explanations = rule.rawNode.cdtn.formule.explanations ?? [];
+          formule.annotations = rule.rawNode.cdtn.formule.annotations ?? [];
         }
-        formule.explanations = mergeTwoArray(
-          formule.explanations,
-          rule.rawNode.cdtn.formule.explanations ?? []
-        );
-        formule.annotations = formule.annotations.concat(
-          rule.rawNode.cdtn.formule.annotations ?? []
-        );
-      } else {
-        formule.formula = nodeFormule;
-        formule.explanations = rule.rawNode.cdtn.formule.explanations ?? [];
-        formule.annotations = rule.rawNode.cdtn.formule.annotations ?? [];
       }
       return formule;
     },

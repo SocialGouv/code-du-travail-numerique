@@ -162,7 +162,7 @@ describe("calculate", () => {
     ]);
   });
 
-  test("avec une idcc 1043 quand le legal est meilleur", () => {
+  test("avec une idcc 1043 quand le legal est meilleur et inaptitude", () => {
     const engine = new RuptureConventionnellePublicodes(
       modelsRuptureConventionnel,
       "1043"
@@ -178,7 +178,7 @@ describe("calculate", () => {
       "contrat salarié . indemnité de licenciement . date de sortie":
         "01/01/2024",
       "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-        "non",
+        "oui",
       licenciementFauteGrave: "non",
       salaryPeriods:
         '[{"month":"décembre 2023","value":3000},{"month":"novembre 2023","value":3000},{"month":"octobre 2023","value":3000},{"month":"septembre 2023","value":3000},{"month":"août 2023","value":3000},{"month":"juillet 2023","value":3000},{"month":"juin 2023","value":3000},{"month":"mai 2023","value":3000},{"month":"avril 2023","value":3000},{"month":"mars 2023","value":3000},{"month":"février 2023","value":3000},{"month":"janvier 2023","value":3000}]',
@@ -186,13 +186,13 @@ describe("calculate", () => {
     });
     expect(result.missingArgs).toEqual([]);
     expect(result.detail?.chosenResult).toEqual("LEGAL");
-    expect(result.detail?.legalResult?.value).toEqual(3000);
+    expect(result.detail?.legalResult?.value).toEqual(6000);
     expect(result.detail?.legalResult?.unit?.numerators).toEqual(["€"]);
-    expect(result.result?.value).toEqual(3000);
+    expect(result.result?.value).toEqual(6000);
     expect(result.result?.unit?.numerators).toEqual(["€"]);
     expect(result.detail?.agreementResult?.value).toEqual(0);
     expect(result.detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
-    expect(result.formula?.formula).toEqual("1/4 * Sref * A");
+    expect(result.formula?.formula).toEqual("(1/4 * Sref * A) * 2");
     expect(result.formula?.explanations).toEqual([
       "A : Ancienneté totale (4 ans)",
       "Sref : Salaire de référence (3000 €)",
