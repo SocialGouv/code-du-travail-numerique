@@ -945,118 +945,113 @@
     "permanent": true
   },
   {
-    "source": "/convention-collective/1237(.*)",
-    "destination": "/convention-collective/2316(.*)",
-    "permanent": true
-  },
-  {
     "source": "/convention-collective/1710(.*)",
-    "destination": "/convention-collective/3245(.*)",
+    "destination": "/convention-collective/3245-operateurs-de-voyages-et-guides",
     "permanent": true
   },
   {
     "source": "/convention-collective/1492(.*)",
-    "destination": "/convention-collective/3238(.*)",
+    "destination": "/convention-collective/3238-production-et-transformation-des-papiers-et-cartons",
     "permanent": true
   },
   {
     "source": "/convention-collective/2411(.*)",
-    "destination": "/convention-collective/3241(.*)",
+    "destination": "/convention-collective/3241-telediffusion",
     "permanent": true
   },
   {
     "source": "/convention-collective/1761(.*)",
-    "destination": "/convention-collective/573(.*)",
+    "destination": "/convention-collective/573-commerces-de-gros",
     "permanent": true
   },
   {
     "source": "/convention-collective/1974(.*)",
-    "destination": "/convention-collective/3229(.*)",
+    "destination": "/convention-collective/3229-navigation-interieure",
     "permanent": true
   },
   {
     "source": "/convention-collective/(0?)412(.*)",
-    "destination": "/convention-collective/3245(.*)",
+    "destination": "/convention-collective/3245-operateurs-de-voyages-et-guides",
     "permanent": true
   },
   {
     "source": "/convention-collective/1495(.*)",
-    "destination": "/convention-collective/3238(.*)",
+    "destination": "/convention-collective/3238-production-et-transformation-des-papiers-et-cartons)",
     "permanent": true
   },
   {
     "source": "/convention-collective/(0?)700(.*)",
-    "destination": "/convention-collective/3238(.*)",
+    "destination": "/convention-collective/3238-production-et-transformation-des-papiers-et-cartons",
     "permanent": true
   },
   {
     "source": "/convention-collective/1423(.*)",
-    "destination": "/convention-collective/3236(.*)",
+    "destination": "/convention-collective/3236-industrie-et-services-nautiques",
     "permanent": true
   },
   {
     "source": "/convention-collective/2174(.*)",
-    "destination": "/convention-collective/3229(.*)",
+    "destination": "/convention-collective/3229-navigation-interieure",
     "permanent": true
   },
   {
     "source": "/convention-collective/(0?)707(.*)",
-    "destination": "/convention-collective/3238(.*)",
+    "destination": "/convention-collective/3238-production-et-transformation-des-papiers-et-cartons",
     "permanent": true
   },
   {
     "source": "/convention-collective/1624(.*)",
-    "destination": "/convention-collective/573(.*)",
+    "destination": "/convention-collective/573-commerces-de-gros",
     "permanent": true
   },
   {
     "source": "/convention-collective/(0?)172(.*)",
-    "destination": "/convention-collective/158(.*)",
+    "destination": "/convention-collective/158-travail-mecanique-du-bois-des-scieries-du-negoce-et-de-limportation-des-b",
     "permanent": true
   },
   {
     "source": "/convention-collective/(0?)207(.*)",
-    "destination": "/convention-collective/2528(.*)",
+    "destination": "/convention-collective/2528-maroquinerie-articles-de-voyage-chasse-sellerie-gainerie-bracelets-en-c",
     "permanent": true
   },
   {
     "source": "/convention-collective/(0?)673(.*)",
-    "destination": "/convention-collective/303(.*)",
+    "destination": "/convention-collective/303-couture-parisienne",
     "permanent": true
   },
   {
     "source": "/convention-collective/(0?)715(.*)",
-    "destination": "/convention-collective/489(.*)",
+    "destination": "/convention-collective/489-industries-du-cartonnage",
     "permanent": true
   },
   {
     "source": "/convention-collective/1001(.*)",
-    "destination": "/convention-collective/413(.*)",
+    "destination": "/convention-collective/413-handicapes-etablissements-et-services-pour-les-personnes-inadaptees-et-han",
     "permanent": true
   },
   {
     "source": "/convention-collective/1618(.*)",
-    "destination": "/convention-collective/1557(.*)",
+    "destination": "/convention-collective/1557-commerce-des-articles-de-sport-et-equipements-de-loisirs",
     "permanent": true
   },
   {
     "source": "/convention-collective/1942(.*)",
-    "destination": "/convention-collective/18(.*)",
+    "destination": "/convention-collective/18-industrie-textile",
     "permanent": true
   },
   {
     "source": "/convention-collective/3160(.*)",
-    "destination": "/convention-collective/787(.*)",
+    "destination": "/convention-collective/787-personnel-des-cabinets-dexperts-comptables-et-de-commissaires-aux-comptes",
     "permanent": true
   },
   {
     "source": "/convention-collective/(0?)418(.*)",
-    "destination": "/convention-collective/303(.*)",
+    "destination": "/convention-collective/303-couture-parisienne",
     "permanent": true
   },
   {
     "source": "/convention-collective/(0?)780(.*)",
-    "destination": "/convention-collective/303(.*)",
+    "destination": "/convention-collective/303-couture-parisienne",
     "permanent": true
   }
 ]
