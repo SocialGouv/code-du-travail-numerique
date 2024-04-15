@@ -34,7 +34,6 @@ exports[`FragmentConditionne Should display element within 1`] = `
           aria-selected="true"
           class="sc-bBeLUv hoMOVm react-tabs__tab--selected"
           data-rttab="true"
-          data-testid="undefined-0"
           id="react-tabs-0"
           role="tab"
           tabindex="0"
@@ -47,7 +46,6 @@ exports[`FragmentConditionne Should display element within 1`] = `
           aria-selected="false"
           class="sc-bBeLUv hoMOVm"
           data-rttab="true"
-          data-testid="undefined-1"
           id="react-tabs-2"
           role="tab"
         >
@@ -59,7 +57,6 @@ exports[`FragmentConditionne Should display element within 1`] = `
           aria-selected="false"
           class="sc-bBeLUv hoMOVm"
           data-rttab="true"
-          data-testid="undefined-2"
           id="react-tabs-4"
           role="tab"
         >
@@ -71,7 +68,6 @@ exports[`FragmentConditionne Should display element within 1`] = `
           aria-selected="false"
           class="sc-bBeLUv hoMOVm"
           data-rttab="true"
-          data-testid="undefined-3"
           id="react-tabs-6"
           role="tab"
         >
@@ -90,7 +86,6 @@ exports[`FragmentConditionne Should display element within 1`] = `
       >
         <h2
           class="sc-kAyceB dvmaTz"
-          data-testid="heading"
         >
           Commerce - industrie
         </h2>

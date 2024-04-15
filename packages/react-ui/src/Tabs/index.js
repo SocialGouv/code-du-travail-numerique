@@ -26,7 +26,11 @@ export const Tabs = (props) => {
             {data.map(({ tab }, index) => (
               <StyledTab
                 key={index}
-                data-testid={`${props["data-testid"]}-${index}`}
+                data-testid={
+                  props["data-testid"]
+                    ? `${props["data-testid"]}-${index}`
+                    : undefined
+                }
               >
                 {getTextFromComponent(tab)}
               </StyledTab>

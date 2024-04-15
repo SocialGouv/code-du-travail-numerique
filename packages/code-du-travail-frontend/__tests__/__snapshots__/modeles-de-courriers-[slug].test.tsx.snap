@@ -707,11 +707,9 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 >
                   <h2
                     class="sc-ggqIjW etShBr sc-kAyceB kDiAsV"
-                    data-testid="heading"
                   >
                     <span
                       class="sc-gsFSXq cdZUuw"
-                      data-testid="stripe"
                     />
                     Avez-vous trouvé la réponse à votre question ?
                   </h2>
@@ -801,7 +799,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
@@ -859,7 +856,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Outils populaires
@@ -897,7 +893,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Modèles populaires
@@ -939,7 +934,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Fiches pratiques populaires
@@ -977,7 +971,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Conventions collectives populaires
