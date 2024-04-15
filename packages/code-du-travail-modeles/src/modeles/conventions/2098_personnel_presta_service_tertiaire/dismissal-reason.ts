@@ -15,6 +15,15 @@ export class DismissalReason2098 implements IDismissalReason {
           },
         ],
       },
+      {
+        name: "Licenciement économique",
+        rules: [
+          {
+            rule: "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle",
+            value: "'Oui'",
+          },
+        ],
+      },
     ];
   }
 }

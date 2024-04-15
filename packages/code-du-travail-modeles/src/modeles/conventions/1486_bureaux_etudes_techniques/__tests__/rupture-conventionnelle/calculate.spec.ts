@@ -51,7 +51,7 @@ describe("Gestion des licenciements pour la CC 1486", () => {
         catPro: "ETAM",
         dateEntree: "01/01/2000",
         dateSortie: "01/09/2000",
-        result: 0,
+        result: 450,
       },
       {
         catPro: "ETAM",
@@ -81,19 +81,19 @@ describe("Gestion des licenciements pour la CC 1486", () => {
         catPro: "Ingénieurs et cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/09/2000",
-        result: 0,
+        result: 450,
       },
       {
         catPro: "Ingénieurs et cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/01/2001",
-        result: 0,
+        result: 675,
       },
       {
         catPro: "Ingénieurs et cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/01/2006",
-        result: 5400,
+        result: 4050,
       },
       {
         catPro: "Chargés d'enquête intermittents",
@@ -105,19 +105,19 @@ describe("Gestion des licenciements pour la CC 1486", () => {
         catPro: "Chargés d'enquête intermittents",
         dateEntree: "01/01/2000",
         dateSortie: "01/09/2000",
-        result: 0,
+        result: 450,
       },
       {
         catPro: "Chargés d'enquête intermittents",
         dateEntree: "01/01/2000",
         dateSortie: "01/01/2002",
-        result: 2160,
+        result: 1350,
       },
       {
         catPro: "Chargés d'enquête intermittents",
         dateEntree: "01/01/2000",
         dateSortie: "01/01/2005",
-        result: 5400,
+        result: 3375,
       },
     ])("Le moins favorable - cas licenciement économique", (value) => {
       const { missingArgs, detail } = engine.calculateResult({
