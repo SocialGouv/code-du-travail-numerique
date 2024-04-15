@@ -31,49 +31,82 @@ describe("Gestion des licenciements pour la CC 1501", () => {
         input,
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      expect(missingArgs).toHaveNextMissingRule(null);
+      expect(missingArgs).toHaveNextMissingRule(
+        "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age"
+      );
     });
+
+    test.each(["Cadres", "Non-cadres"])(
+      "En ayant tout complété + %s",
+      (catPro) => {
+        const input = {
+          "contrat salarié . convention collective": "'IDCC1501'",
+          "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${catPro}'`,
+          "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": `50`,
+        };
+
+        const { missingArgs } = engine.calculate(
+          input,
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        expect(missingArgs).toHaveNextMissingRule(null);
+      }
+    );
   });
 
   describe("Calcul de l'indemnité de licenciement", () => {
     test.each([
       {
+        age: 49,
         catPro: "Cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/01/2001",
         result: 270,
       },
       {
+        age: 49,
         catPro: "Cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/01/2010",
         result: 8100,
       },
       {
+        age: 50,
         catPro: "Cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/01/2015",
         result: 10800,
       },
       {
+        age: 49,
         catPro: "Non-cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/01/2001",
         result: 0,
       },
       {
+        age: 49,
         catPro: "Non-cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/01/2003",
         result: 810,
       },
       {
+        age: 52,
         catPro: "Non-cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/01/2011",
         result: 3150,
       },
       {
+        age: 49,
+        catPro: "Non-cadres",
+        dateEntree: "01/01/2000",
+        dateSortie: "01/01/2020",
+        result: 9000,
+      },
+      {
+        age: 52,
         catPro: "Non-cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/01/2020",
@@ -83,6 +116,7 @@ describe("Gestion des licenciements pour la CC 1501", () => {
       const { missingArgs, detail } = engine.calculateResult({
         "contrat salarié . convention collective": "'IDCC1501'",
         "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${value.catPro}'`,
+        "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": `${value.age}`,
         "contrat salarié . indemnité de licenciement . date d'entrée":
           value.dateEntree,
         "contrat salarié . indemnité de licenciement . date de notification":

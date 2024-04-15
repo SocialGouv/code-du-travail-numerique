@@ -15,6 +15,15 @@ export class DismissalReason1501 implements IDismissalReason {
           },
         ],
       },
+      {
+        name: "licenciement éco",
+        rules: [
+          {
+            rule: "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique",
+            value: "'Oui'",
+          },
+        ],
+      },
     ];
   }
 }
