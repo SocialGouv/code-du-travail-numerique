@@ -66,7 +66,7 @@ describe("calculate", () => {
     expect(result.result?.unit?.numerators).toEqual(["€"]);
     expect(result.detail?.agreementResult?.value).toEqual(80);
     expect(result.detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
-    expect(result.formula?.formula).toEqual("2% * Sref * A");
+    expect(result.formula?.formula).toEqual("1/4 * Sref * A");
     expect(result.formula?.explanations).toEqual([
       "A : Ancienneté totale (2 ans)",
       "Sref : Salaire de référence (2000 €)",
