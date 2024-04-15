@@ -162,7 +162,7 @@ describe("calculate", () => {
     ]);
   });
 
-  test("avec une idcc 1043 quand le conventionnelle est meilleur", () => {
+  test("avec une idcc 1043 quand le legal est meilleur", () => {
     const engine = new RuptureConventionnellePublicodes(
       modelsRuptureConventionnel,
       "1043"
