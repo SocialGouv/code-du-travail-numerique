@@ -4,6 +4,8 @@ import Engine from "publicodes";
 import type { Formula, Notification, References } from "../modeles/common";
 import {
   getFormule,
+  getFormuleAgreement,
+  getFormuleLegal,
   getNotifications,
   getNotificationsBloquantes,
   getReferences,
@@ -76,8 +78,16 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return getReferences(this.engine, specificRule);
   }
 
-  getFormule(isLegal = false): Formula {
-    return getFormule(this.engine, isLegal);
+  getFormuleLegal(): Formula {
+    return getFormuleLegal(this.engine);
+  }
+
+  getFormuleAgreement(): Formula {
+    return getFormuleAgreement(this.engine);
+  }
+
+  getFormule(): Formula {
+    return getFormule(this.engine);
   }
 
   protected removeNonPublicodeFields(

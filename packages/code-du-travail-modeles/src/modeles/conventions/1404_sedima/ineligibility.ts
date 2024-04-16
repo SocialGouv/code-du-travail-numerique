@@ -8,7 +8,6 @@ export class Ineligibility1404 extends IneligibilityLegalIndemniteLicenciement {
     if (contractIneligibility) {
       return contractIneligibility;
     }
-    console.log("args", args);
     if (
       args[
         "contrat salarié . convention collective . sedima . question cdi opération"

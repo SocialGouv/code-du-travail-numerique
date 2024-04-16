@@ -61,34 +61,46 @@ function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
 
 const FORMULE_VAR_REGEX = /\$formule/g;
 
-export function getFormule(engine: Engine, isLegal = false): Formula {
-  const rules = getRulesWithFormuleAndNodeValue(engine);
+export function getFormuleLegal(engine: Engine): Formula {
+  const rules = getRulesWithFormuleAndNodeValue(engine).filter((rule) =>
+    rule.rawNode.nom.includes("résultat légal")
+  );
+  return getFormule(engine, rules);
+}
+
+export function getFormuleAgreement(engine: Engine): Formula {
+  const rules = getRulesWithFormuleAndNodeValue(engine).filter(
+    (rule) => !rule.rawNode.nom.includes("résultat légal")
+  );
+  return getFormule(engine, rules);
+}
+
+export function getFormule(engine: Engine, rules?: RuleNodeFormula[]): Formula {
+  rules = rules ?? getRulesWithFormuleAndNodeValue(engine) ?? [];
   const formula = rules.reduce(
     (
       formule: Required<NodeFormula>,
       rule: RuleNodeFormula
     ): Required<NodeFormula> => {
       const nodeFormule = rule.rawNode.cdtn.formule.formula;
-      if (!isLegal || rule.rawNode.nom.includes("résultat légal")) {
-        if (nodeFormule.includes("$formule")) {
-          if (formule.formula.length) {
-            formule.formula = nodeFormule.replace(
-              FORMULE_VAR_REGEX,
-              formule.formula
-            );
-          }
-          formule.explanations = mergeTwoArray(
-            formule.explanations,
-            rule.rawNode.cdtn.formule.explanations ?? []
+      if (nodeFormule.includes("$formule")) {
+        if (formule.formula.length) {
+          formule.formula = nodeFormule.replace(
+            FORMULE_VAR_REGEX,
+            formule.formula
           );
-          formule.annotations = formule.annotations.concat(
-            rule.rawNode.cdtn.formule.annotations ?? []
-          );
-        } else {
-          formule.formula = nodeFormule;
-          formule.explanations = rule.rawNode.cdtn.formule.explanations ?? [];
-          formule.annotations = rule.rawNode.cdtn.formule.annotations ?? [];
         }
+        formule.explanations = mergeTwoArray(
+          formule.explanations,
+          rule.rawNode.cdtn.formule.explanations ?? []
+        );
+        formule.annotations = formule.annotations.concat(
+          rule.rawNode.cdtn.formule.annotations ?? []
+        );
+      } else {
+        formule.formula = nodeFormule;
+        formule.explanations = rule.rawNode.cdtn.formule.explanations ?? [];
+        formule.annotations = rule.rawNode.cdtn.formule.annotations ?? [];
       }
       return formule;
     },
