@@ -6,7 +6,7 @@ import {
   PublicodesSimulator,
   References,
 } from "@socialgouv/modeles-social";
-import { StoreSlice } from "../../../../types";
+import { IndemniteDepartType, StoreSlice } from "../../../../types";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
@@ -56,7 +56,7 @@ const createResultStore: StoreSlice<
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
     CommonInformationsStoreSlice &
     CommonSituationStoreSlice
-> = (set, get) => ({
+> = (set, get, { type }) => ({
   resultData: {
     ...initialState,
   },
@@ -190,18 +190,22 @@ const createResultStore: StoreSlice<
         agreementNotifications = publicodes.getNotifications();
 
         agreementInformations = get()
-          .informationsData.input.publicodesInformations.map(
-            (v) =>
-              v.question.rule.titre &&
-              v.info && {
+          .informationsData.input.publicodesInformations.map((v) => {
+            if (v.question.rule.titre && v.info) {
+              return {
                 label: v.question.rule.titre,
                 value: v.info,
                 unit: v.question.rule.unité,
-              }
-          )
-          .filter((v) => v !== "") as AgreementInformation[];
-
-        agreementHasNoBetterAllowance = hasNoBetterAllowance(agreement.num);
+              };
+            }
+          })
+          .filter((v) => v !== undefined)
+          .filter((v) =>
+            type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE &&
+            v?.label.includes("Licenciement")
+              ? false
+              : true
+          ) as AgreementInformation[];
 
         isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
           isAgreementBetter,
