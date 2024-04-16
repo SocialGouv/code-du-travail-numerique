@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.134.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.0...v4.134.1) (2024-04-16)
+
+### Bug Fixes
+
+- **e2e:** set number of idcc for h2 in contributions ([adba475](https://github.com/SocialGouv/code-du-travail-numerique/commit/adba475bfeb3dd90373603cb911a1fc21d064d54))
+
+# [4.134.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.133.0...v4.134.0) (2024-04-16)
+
+### Bug Fixes
+
+- retirer les data-testid de la production ([#5781](https://github.com/SocialGouv/code-du-travail-numerique/issues/5781)) ([e154dd1](https://github.com/SocialGouv/code-du-travail-numerique/commit/e154dd19af7775e2df777c0cb4db58e0144415b7))
+
 # [4.133.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.132.0...v4.133.0) (2024-04-09)
 
 ### Features

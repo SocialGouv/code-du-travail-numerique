@@ -19,7 +19,6 @@ exports[`<Tabs /> renders 1`] = `
           aria-selected="true"
           class="sc-dcJsrY gsYDpR react-tabs__tab--selected"
           data-rttab="true"
-          data-testid="undefined-0"
           id="react-tabs-0"
           role="tab"
           tabindex="0"
@@ -32,7 +31,6 @@ exports[`<Tabs /> renders 1`] = `
           aria-selected="false"
           class="sc-dcJsrY gsYDpR"
           data-rttab="true"
-          data-testid="undefined-1"
           id="react-tabs-2"
           role="tab"
         >

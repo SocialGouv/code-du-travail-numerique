@@ -214,7 +214,6 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
     >
       <h3
         class="sc-kAyceB dvmaTz"
-        data-testid="heading"
       >
         CONVENTIONS COLLECTIVES (2
          
@@ -311,7 +310,6 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
     >
       <h3
         class="sc-kAyceB dvmaTz"
-        data-testid="heading"
       >
         CONVENTIONS COLLECTIVES (1
          

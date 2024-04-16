@@ -36,7 +36,7 @@ const ContributionCC = ({ contribution }: Props) => {
           </Title>
 
           <SummaryItem
-            data={`Votre convention collective est ${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`}
+            data={<StyledTitle variant="secondary" stripe="none" size="small">Votre convention collective est {contribution.ccnShortTitle} (IDCC {contribution.idcc})</StyledTitle>}
             onClick={() => {
               router.push(
                 `/contribution/${removeCCNumberFromSlug(contribution.slug)}`
@@ -46,10 +46,6 @@ const ContributionCC = ({ contribution }: Props) => {
         </Wrapper>
       </section>
       <section>
-        <Title variant="secondary" stripe="none" size="small">
-          Votre réponse pour la convention collective{" "}
-          {contribution.ccnShortTitle}
-        </Title>
 
         {contribution.highlight && contribution.highlight.content && (
           <StyledAlert variant="primary">
@@ -85,10 +81,19 @@ const ContributionCC = ({ contribution }: Props) => {
   );
 };
 
-const { spacings } = theme;
+const { spacings, fonts } = theme;
 
 const StyledParagraph = styled(Paragraph)`
   margin-bottom: ${spacings.tiny};
+`;
+const StyledTitle = styled(Title)`
+  margin: 0;
+
+  h2 {
+    font-size: ${fonts.sizes.default};
+    font-weight: ${fonts.sizes.regular};
+    font-family: "Open Sans", sans-serif;
+  }
 `;
 
 const StyledAlert = styled(Alert)`

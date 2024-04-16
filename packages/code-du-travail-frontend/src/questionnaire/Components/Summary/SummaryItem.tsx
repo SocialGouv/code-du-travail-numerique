@@ -8,7 +8,7 @@ const { Check: CheckIcon, ArrowTurn: UpdateIcon } = icons;
 const { breakpoints } = theme;
 
 type SymmaryItemProps = {
-  data: string;
+  data: string | JSX.Element;
   info?: string;
   onClick: () => void;
   noButton?: boolean;
@@ -46,17 +46,15 @@ export const SummaryItem = ({
           )}
         </StyledText>
         {!noButton && (
-          <StyledButtonWrapper>
-            <StyledButton
-              variant="link"
-              xsmall
-              onClick={onClick}
-              icon={UpdateIcon}
-              data-testid={`modify-${data}`}
-            >
-              <DesktopOnly>Modifier</DesktopOnly>
-            </StyledButton>
-          </StyledButtonWrapper>
+          <StyledButton
+            variant="link"
+            xsmall
+            onClick={onClick}
+            icon={UpdateIcon}
+            data-testid={`modify-${data}`}
+          >
+            <DesktopOnly>Modifier</DesktopOnly>
+          </StyledButton>
         )}
       </SummaryItemWrapper>
       {openedTooltip && <InformationWrapper>{info}</InformationWrapper>}
@@ -86,7 +84,6 @@ const StyledIcon = styled.div`
 `;
 
 const StyledText = styled.div`
-  font-size: 16px;
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -102,10 +99,6 @@ const StyledButton = styled(Button)`
       height: 20px;
     }
   }
-`;
-
-const StyledButtonWrapper = styled.div`
-  margin-left: 5%;
 `;
 
 const TooltipWrapper = styled.div`

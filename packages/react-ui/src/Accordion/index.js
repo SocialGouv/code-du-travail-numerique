@@ -41,7 +41,11 @@ export const Accordion = ({
                     as={"h" + titleLevel}
                     stripe="none"
                     style={{ margin: 0 }}
-                    dataTestid={`${props["data-testid"]}-${index}`}
+                    dataTestid={
+                      props["data-testid"]
+                        ? `${props["data-testid"]}-${index}`
+                        : undefined
+                    }
                   >
                     {title}
                   </Heading>

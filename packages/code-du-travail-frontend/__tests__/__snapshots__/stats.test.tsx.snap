@@ -210,7 +210,6 @@ exports[`<Stats /> should render 1`] = `
                 >
                   <h2
                     class="sc-kAyceB dvmaTz"
-                    data-testid="heading"
                   >
                     Contenus référencés
                   </h2>
@@ -229,7 +228,6 @@ exports[`<Stats /> should render 1`] = `
                 >
                   <h2
                     class="sc-kAyceB dvmaTz"
-                    data-testid="heading"
                   >
                     Visites
                   </h2>
@@ -248,7 +246,6 @@ exports[`<Stats /> should render 1`] = `
                 >
                   <h2
                     class="sc-kAyceB dvmaTz"
-                    data-testid="heading"
                   >
                     Recherches
                   </h2>
@@ -267,7 +264,6 @@ exports[`<Stats /> should render 1`] = `
                 >
                   <h2
                     class="sc-kAyceB dvmaTz"
-                    data-testid="heading"
                   >
                     Consultations
                   </h2>
@@ -351,7 +347,6 @@ exports[`<Stats /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
@@ -409,7 +404,6 @@ exports[`<Stats /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Outils populaires
@@ -447,7 +441,6 @@ exports[`<Stats /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Modèles populaires
@@ -489,7 +482,6 @@ exports[`<Stats /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Fiches pratiques populaires
@@ -527,7 +519,6 @@ exports[`<Stats /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Conventions collectives populaires
