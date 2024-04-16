@@ -82,14 +82,21 @@ export const InputDate = ({ value, onChange, invalid, ref, ...props }) => {
       const isValidDate = /^\d{2}\/\d{2}\/\d{4}$/.test(date);
       return isYearValid && isMonthValid && isDayValid && isValidDate;
     }
-    return true;
+    return false;
   };
 
   const onBlur = () => {
     setIsFocus(false);
-    if (date.length !== 10) {
-      setIsValid(false);
+    let baseDate = date;
+    const splitParts = baseDate.split("/");
+    const day = splitParts[0] ?? "";
+    const month = splitParts[1] ?? "";
+    const year = splitParts[2] ?? "";
+    if (year.length === 2) {
+      baseDate = `${day}/${month}/${year < 50 ? `20${year}` : `19${year}`}`;
     }
+    setDate(baseDate);
+    setIsValid(isValidDate(baseDate));
   };
 
   return (
