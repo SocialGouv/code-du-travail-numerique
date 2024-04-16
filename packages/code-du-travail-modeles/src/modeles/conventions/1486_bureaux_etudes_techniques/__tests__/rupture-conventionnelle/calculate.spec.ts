@@ -119,26 +119,29 @@ describe("Gestion des licenciements pour la CC 1486", () => {
         dateSortie: "01/01/2005",
         result: 3375,
       },
-    ])("Le moins favorable - cas licenciement économique", (value) => {
-      const { missingArgs, detail } = engine.calculateResult({
-        "contrat salarié . convention collective": "'IDCC1486'",
-        "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `'${value.catPro}'`,
-        "contrat salarié . indemnité de licenciement . date d'entrée":
-          value.dateEntree,
-        "contrat salarié . indemnité de licenciement . date de notification":
-          value.dateSortie,
-        "contrat salarié . indemnité de licenciement . date de sortie":
-          value.dateSortie,
-        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-          "non",
-        licenciementFauteGrave: "non",
-        salaryPeriods:
-          '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
-        typeContratTravail: "cdi",
-      });
-      expect(missingArgs).toEqual([]);
-      expect(detail.agreementResult?.value).toEqual(value.result);
-      expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
-    });
+    ])(
+      "Le licenciement fait suite au refus d'une clause de mobilité",
+      (value) => {
+        const { missingArgs, detail } = engine.calculateResult({
+          "contrat salarié . convention collective": "'IDCC1486'",
+          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `'${value.catPro}'`,
+          "contrat salarié . indemnité de licenciement . date d'entrée":
+            value.dateEntree,
+          "contrat salarié . indemnité de licenciement . date de notification":
+            value.dateSortie,
+          "contrat salarié . indemnité de licenciement . date de sortie":
+            value.dateSortie,
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+            "non",
+          licenciementFauteGrave: "non",
+          salaryPeriods:
+            '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
+          typeContratTravail: "cdi",
+        });
+        expect(missingArgs).toEqual([]);
+        expect(detail.agreementResult?.value).toEqual(value.result);
+        expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+      }
+    );
   });
 });

@@ -96,28 +96,31 @@ describe("Gestion des licenciements pour la CC 2098", () => {
           dateSortie: "01/01/2023",
           result: 18450,
         },
-      ])("Le moins favorable - cas licenciement économique", (value) => {
-        const { missingArgs, detail } = engine.calculateResult({
-          "contrat salarié . convention collective": "'IDCC2098'",
-          "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age": `${value.age}`,
-          "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle": `'${value.catPro}'`,
-          "contrat salarié . indemnité de licenciement . date d'entrée":
-            value.dateEntree,
-          "contrat salarié . indemnité de licenciement . date de notification":
-            value.dateSortie,
-          "contrat salarié . indemnité de licenciement . date de sortie":
-            value.dateSortie,
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-            "non",
-          licenciementFauteGrave: "non",
-          salaryPeriods:
-            '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
-          typeContratTravail: "cdi",
-        });
-        expect(missingArgs).toEqual([]);
-        expect(detail.agreementResult?.value).toEqual(value.result);
-        expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
-      });
+      ])(
+        "Licenciement pour inaptitude totale et définitive non consécutive à un accident du travail",
+        (value) => {
+          const { missingArgs, detail } = engine.calculateResult({
+            "contrat salarié . convention collective": "'IDCC2098'",
+            "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age": `${value.age}`,
+            "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle": `'${value.catPro}'`,
+            "contrat salarié . indemnité de licenciement . date d'entrée":
+              value.dateEntree,
+            "contrat salarié . indemnité de licenciement . date de notification":
+              value.dateSortie,
+            "contrat salarié . indemnité de licenciement . date de sortie":
+              value.dateSortie,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
+            licenciementFauteGrave: "non",
+            salaryPeriods:
+              '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
+            typeContratTravail: "cdi",
+          });
+          expect(missingArgs).toEqual([]);
+          expect(detail.agreementResult?.value).toEqual(value.result);
+          expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+        }
+      );
     });
 
     describe("Non-cadres", () => {
@@ -146,27 +149,30 @@ describe("Gestion des licenciements pour la CC 2098", () => {
           dateSortie: "01/10/2005",
           result: 1639.29,
         },
-      ])("Le moins favorable - cas licenciement économique", (value) => {
-        const { missingArgs, detail } = engine.calculateResult({
-          "contrat salarié . convention collective": "'IDCC2098'",
-          "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle": `'${value.catPro}'`,
-          "contrat salarié . indemnité de licenciement . date d'entrée":
-            value.dateEntree,
-          "contrat salarié . indemnité de licenciement . date de notification":
-            value.dateSortie,
-          "contrat salarié . indemnité de licenciement . date de sortie":
-            value.dateSortie,
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-            "non",
-          licenciementFauteGrave: "non",
-          salaryPeriods:
-            '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
-          typeContratTravail: "cdi",
-        });
-        expect(missingArgs).toEqual([]);
-        expect(detail.agreementResult?.value).toEqual(value.result);
-        expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
-      });
+      ])(
+        "Licenciement pour inaptitude totale et définitive non consécutive à un accident du travail",
+        (value) => {
+          const { missingArgs, detail } = engine.calculateResult({
+            "contrat salarié . convention collective": "'IDCC2098'",
+            "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle": `'${value.catPro}'`,
+            "contrat salarié . indemnité de licenciement . date d'entrée":
+              value.dateEntree,
+            "contrat salarié . indemnité de licenciement . date de notification":
+              value.dateSortie,
+            "contrat salarié . indemnité de licenciement . date de sortie":
+              value.dateSortie,
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+              "non",
+            licenciementFauteGrave: "non",
+            salaryPeriods:
+              '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
+            typeContratTravail: "cdi",
+          });
+          expect(missingArgs).toEqual([]);
+          expect(detail.agreementResult?.value).toEqual(value.result);
+          expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+        }
+      );
     });
   });
 });
