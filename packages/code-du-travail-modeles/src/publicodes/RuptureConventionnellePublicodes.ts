@@ -128,17 +128,6 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
     if (!noLegalIndemnity) {
       legalResult = this.calculateLegal(args, !!this.agreementInstance);
       legalFormula = this.getFormuleLegal();
-      if (
-        !legalResult.result ||
-        legalResult.missingArgs.length ||
-        legalResult.ineligibility
-      ) {
-        return {
-          ineligibility: legalResult.ineligibility,
-          missingArgs: legalResult.missingArgs,
-          situation: this.data.situation,
-        };
-      }
     }
     if (!agreementResult?.result || this.idcc === SupportedCc.default) {
       return {
@@ -147,6 +136,7 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
           legalResult: legalResult?.result,
         },
         formula: legalFormula,
+        ineligibility: legalResult?.ineligibility,
         missingArgs: legalResult?.missingArgs ?? [],
         result: legalResult?.result,
         situation: this.data.situation,
