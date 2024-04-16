@@ -3,10 +3,6 @@ import type { RuleNode } from "publicodes";
 
 import { mergeTwoArray, nonNullable } from "./array";
 
-console.warn = () => {
-  return;
-};
-
 export type Formula = {
   formula: string;
   explanations: string[];
