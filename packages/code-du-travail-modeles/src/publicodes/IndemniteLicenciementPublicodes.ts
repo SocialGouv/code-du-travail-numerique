@@ -69,7 +69,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
     if (this.idcc !== SupportedCc.default) {
       agreementResult = this.calculateAgreement(args);
       if (agreementResult) {
-        agreementFormula = this.getFormule();
+        agreementFormula = this.getFormuleAgreement();
         if (
           agreementResult.missingArgs.length ||
           agreementResult.ineligibility
@@ -101,7 +101,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
           situation: this.data.situation,
         };
       }
-      legalFormula = this.getFormule(true);
+      legalFormula = this.getFormuleLegal();
     }
 
     if (!this.agreementInstance && legalResult?.result) {
