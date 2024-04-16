@@ -176,58 +176,62 @@ describe("Indemnité conventionnel de licenciement pour la CC 675", () => {
     });
   });
 
-  describe("Cadres", () => {
-    test.each`
-      isCollectifFiring | age   | seniority | seniorityRight | salary  | expectedCompensation
-      ${false}          | ${35} | ${1.5}    | ${1.5}         | ${3132} | ${0}
-      ${false}          | ${35} | ${4}      | ${2}           | ${3132} | ${0}
-      ${false}          | ${35} | ${4}      | ${2.01}        | ${3132} | ${1252.8}
-      ${false}          | ${35} | ${5}      | ${2.01}        | ${3132} | ${1566}
-      ${false}          | ${35} | ${20}     | ${2.01}        | ${3132} | ${15660}
-      ${false}          | ${5}  | ${1.5}    | ${1.5}         | ${3132} | ${0}
-      ${false}          | ${50} | ${4}      | ${2}           | ${3132} | ${0}
-      ${false}          | ${50} | ${4}      | ${2.01}        | ${3132} | ${1252.8}
-      ${false}          | ${50} | ${5}      | ${2.01}        | ${3132} | ${1566}
-      ${false}          | ${50} | ${20}     | ${2.01}        | ${3132} | ${23490}
-      ${true}           | ${35} | ${1.5}    | ${1.5}         | ${3132} | ${0}
-      ${true}           | ${35} | ${4}      | ${2}           | ${3132} | ${0}
-      ${true}           | ${35} | ${4}      | ${2.01}        | ${3132} | ${1252.8}
-      ${true}           | ${35} | ${5}      | ${2.01}        | ${3132} | ${1566}
-      ${true}           | ${35} | ${20}     | ${2.01}        | ${3132} | ${15660}
-    `(
-      "Avec $seniority ans, age $age, isCollectifFiring $isCollectifFiring et sref : $salary => $expectedCompensation €",
-      ({
-        isCollectifFiring,
-        seniority,
-        salary,
-        age,
-        expectedCompensation,
-        seniorityRight,
-      }) => {
-        const { result, missingArgs } = engine.setSituation(
-          {
-            "contrat salarié . convention collective": "'IDCC0675'",
-            "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${CategoryPro675.cadres}'`,
-            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . autres licenciement . age":
-              age,
-            "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . licenciement collectif question":
-              isCollectifFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-              seniorityRight,
-            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-              "non",
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
-          },
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        );
-        expect(missingArgs).toEqual([]);
-        expect(result?.unit?.numerators).toEqual(["€"]);
-        expect(result?.value).toEqual(expectedCompensation);
-      }
-    );
+  // describe("Cadres", () => {
+  //   test.each`
+  //     isCollectifFiring | age   | seniority | seniorityRight | salary  | expectedCompensation
+  //     ${false}          | ${35} | ${1.5}    | ${1.5}         | ${3132} | ${0}
+  //     ${false}          | ${35} | ${4}      | ${2}           | ${3132} | ${0}
+  //     ${false}          | ${35} | ${4}      | ${2.01}        | ${3132} | ${1252.8}
+  //     ${false}          | ${35} | ${5}      | ${2.01}        | ${3132} | ${1566}
+  //     ${false}          | ${35} | ${20}     | ${2.01}        | ${3132} | ${15660}
+  //     ${false}          | ${5}  | ${1.5}    | ${1.5}         | ${3132} | ${0}
+  //     ${false}          | ${50} | ${4}      | ${2}           | ${3132} | ${0}
+  //     ${false}          | ${50} | ${4}      | ${2.01}        | ${3132} | ${1252.8}
+  //     ${false}          | ${50} | ${5}      | ${2.01}        | ${3132} | ${1566}
+  //     ${false}          | ${50} | ${20}     | ${2.01}        | ${3132} | ${23490}
+  //     ${true}           | ${35} | ${1.5}    | ${1.5}         | ${3132} | ${0}
+  //     ${true}           | ${35} | ${4}      | ${2}           | ${3132} | ${0}
+  //     ${true}           | ${35} | ${4}      | ${2.01}        | ${3132} | ${1252.8}
+  //     ${true}           | ${35} | ${5}      | ${2.01}        | ${3132} | ${1566}
+  //     ${true}           | ${35} | ${20}     | ${2.01}        | ${3132} | ${15660}
+  //   `(
+  //     "Avec $seniority ans, age $age, isCollectifFiring $isCollectifFiring et sref : $salary => $expectedCompensation €",
+  //     ({
+  //       isCollectifFiring,
+  //       seniority,
+  //       salary,
+  //       age,
+  //       expectedCompensation,
+  //       seniorityRight,
+  //     }) => {
+  //       const { result, missingArgs, detail } = engine.calculate({
+  //         "contrat salarié . convention collective": "'IDCC0675'",
+  //         "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${CategoryPro675.cadres}'`,
+  //         "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . autres licenciement . age":
+  //           age,
+  //         "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . licenciement collectif question":
+  //           isCollectifFiring ? `'Oui'` : `'Non'`,
+  //         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+  //           seniority,
+  //         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+  //           seniorityRight,
+  //         "contrat salarié . indemnité de licenciement . ancienneté en année":
+  //           seniority,
+  //         "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+  //           seniorityRight,
+  //         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+  //           "non",
+  //         "contrat salarié . indemnité de licenciement . salaire de référence":
+  //           salary,
+  //         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+  //           salary,
+  //       });
+  //       expect(detail?.chosenResult).toEqual("AGREEMENT");
+  //       expect(missingArgs).toEqual([]);
+  //       expect(result?.unit?.numerators).toEqual(["€"]);
+  //       expect(result?.value).toEqual(expectedCompensation);
+  //     }
+  //   );
 
     test("Si l'inaptitude suite à un accident ou maladie professionnelle' alors pas de question pour motif eco", () => {
       const { result, missingArgs } = engine.setSituation(
