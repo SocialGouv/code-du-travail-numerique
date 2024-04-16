@@ -149,16 +149,8 @@ export const ui = {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
       ),
-      economicFire: {
-        oui: byTestId(
-          "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - licenciement économique - Oui"
-        ),
-        non: byTestId(
-          "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - licenciement économique - Non"
-        ),
-      },
       age: byTestId(
-        "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - licenciement économique - age"
+        "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - age"
       ),
     },
     agreement2609: {
@@ -410,8 +402,12 @@ export const ui = {
       title: byText(
         "Il n'y a pas d'indemnité de licenciement dans cette situation"
       ),
-      cddLicenciement: byText(/L’indemnité de licenciement n’est pas due pour les CDD/),
-      cddRupture: byText(/L’indemnité de rupture conventionnelle n’est pas due pour les CDD/),
+      cddLicenciement: byText(
+        /L’indemnité de licenciement n’est pas due pour les CDD/
+      ),
+      cddRupture: byText(
+        /L’indemnité de rupture conventionnelle n’est pas due pour les CDD/
+      ),
       fauteGrave: byText(
         /L’indemnité de licenciement n’est pas due en cas de faute grave/
       ),
