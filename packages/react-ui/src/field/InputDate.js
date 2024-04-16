@@ -67,6 +67,9 @@ export const InputDate = ({ value, onChange, invalid, ref, ...props }) => {
     const day = splitParts[0] ?? "";
     const month = splitParts[1] ?? "";
     const year = splitParts[2] ?? "";
+    if (year.length === 2) {
+      return `20${year}-${month}-${day}`;
+    }
     return `${year}-${month}-${day}`;
   };
 
