@@ -259,7 +259,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           >
             <h2
               class="sc-epqpcT fOFlqs sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Embauche et contrat de travail
             </h2>
@@ -322,7 +321,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             </li>
             <h2
               class="sc-epqpcT fOFlqs sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Départ de l'entreprise
             </h2>
@@ -452,7 +450,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
@@ -510,7 +507,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Outils populaires
@@ -548,7 +544,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Modèles populaires
@@ -590,7 +585,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Fiches pratiques populaires
@@ -628,7 +622,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Conventions collectives populaires

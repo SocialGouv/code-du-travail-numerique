@@ -34,7 +34,6 @@ exports[`<OuSAdresser /> should render a simple case 1`] = `
     </strong>
     <h2
       class="sc-kAyceB dvmaTz"
-      data-testid="heading"
     >
       Nom du centre
     </h2>
