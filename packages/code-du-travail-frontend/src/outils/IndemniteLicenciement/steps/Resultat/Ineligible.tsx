@@ -25,7 +25,7 @@ export default function Ineligible() {
           situation
         </HighlightResult>
       </p>
-      <Html>{getEligibilityError()}</Html>
+      <Html>{getEligibilityError() ?? ""}</Html>
       {!agreementHasNoLegalIndemnity && infoWarning && (
         <Disclaimer
           title={infoWarning.title}
