@@ -73,7 +73,7 @@ describe("Gestion des licenciements pour la CC 1501", () => {
         catPro: "Non-cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/01/2001",
-        result: 0,
+        result: undefined,
       },
       {
         age: 49,
@@ -123,7 +123,9 @@ describe("Gestion des licenciements pour la CC 1501", () => {
       });
       expect(missingArgs).toEqual([]);
       expect(detail?.agreementResult?.value).toEqual(value.result);
-      expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
+      expect(detail?.agreementResult?.unit?.numerators).toEqual(
+        value.result ? ["€"] : undefined
+      );
     });
   });
 });
