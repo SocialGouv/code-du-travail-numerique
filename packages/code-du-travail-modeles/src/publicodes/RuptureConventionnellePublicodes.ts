@@ -15,8 +15,8 @@ import type { IInegibility } from "../modeles/common/types/ineligibility";
 import IndemniteLicenciementPublicodes from "./IndemniteLicenciementPublicodes";
 import type {
   IndemniteDepartInstance,
+  PublicodesAugmentedData,
   PublicodesData,
-  PublicodesDataWithFormula,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
 import { mergeMissingArgs } from "./utils";
@@ -59,7 +59,8 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
 
   calculate(
     args: Record<string, string | undefined>
-  ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
+  ): PublicodesAugmentedData<PublicodesIndemniteLicenciementResult> {
+    let dismissalRules: string[] = [];
     let agreementResult:
       | PublicodesData<PublicodesIndemniteLicenciementResult>
       | undefined = undefined;
@@ -67,6 +68,7 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
     if (this.agreementInstance) {
       const dismissalReason = new DismissalReasonFactory().create(this.idcc);
       const reasons = dismissalReason.dismissalTypes();
+      dismissalRules = dismissalReason.getDismissalRules();
       if (reasons.length === 0) {
         agreementResult = this.calculateAgreement(args);
         if (agreementResult) {
@@ -86,7 +88,10 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
           const calculatedAgreement = this.calculateAgreement(newArgs);
           const formula = this.getFormuleAgreement();
           if (calculatedAgreement) {
-            acc.push({ calculate: calculatedAgreement, formula });
+            acc.push({
+              calculate: calculatedAgreement,
+              formula,
+            });
           }
           return acc;
         }, []);
@@ -162,6 +167,7 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
         chosenResult,
         legalResult: legalResult?.result,
       },
+      dismissalRules,
       formula: chosenResult !== "LEGAL" ? agreementFormula : legalFormula,
       ineligibility: agreementResult.ineligibility,
       missingArgs: agreementResult.missingArgs,

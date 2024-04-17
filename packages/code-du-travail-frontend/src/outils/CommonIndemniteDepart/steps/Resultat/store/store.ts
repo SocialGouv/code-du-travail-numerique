@@ -1,7 +1,7 @@
 import {
   Formula,
   Notification,
-  PublicodesDataWithFormula,
+  PublicodesAugmentedData,
   PublicodesIndemniteLicenciementResult,
   PublicodesSimulator,
   References,
@@ -128,7 +128,7 @@ const createResultStore: StoreSlice<
       const absencePeriods = get().ancienneteData.input.absencePeriods;
 
       const legalReferences = publicodes.getReferences();
-      let publicodesSituation: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult>;
+      let publicodesSituation: PublicodesAugmentedData<PublicodesIndemniteLicenciementResult>;
 
       let agreementReferences: References[];
       let formula: Formula;
@@ -198,13 +198,16 @@ const createResultStore: StoreSlice<
                 label: v.question.rule.titre,
                 value: v.info,
                 unit: v.question.rule.unité,
+                name: v.question.name,
               };
             }
           })
           .filter((v) => v !== undefined)
           .filter((v) =>
             type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE &&
-            v?.label.includes("Licenciement")
+            v &&
+            publicodesSituation.dismissalRules &&
+            publicodesSituation.dismissalRules.includes(v.name)
               ? false
               : true
           ) as AgreementInformation[];

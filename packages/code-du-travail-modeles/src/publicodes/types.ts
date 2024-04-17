@@ -87,8 +87,9 @@ export type PublicodesData<TResult> = {
     agreementResult?: TResult;
   };
 };
-export type PublicodesDataWithFormula<TResult> = PublicodesData<TResult> & {
+export type PublicodesAugmentedData<TResult> = PublicodesData<TResult> & {
   formula?: Formula;
+  dismissalRules?: string[];
 };
 
 export enum PublicodesSimulator {

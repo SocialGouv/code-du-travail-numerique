@@ -1,9 +1,7 @@
-import type {
-  DismissalReason,
-  IDismissalReason,
-} from "../../common/types/dismissalReason";
+import { DismissalReasonDefault } from "../../common/dismissal-reason";
+import type { DismissalReason } from "../../common/types/dismissalReason";
 
-export class DismissalReason573 implements IDismissalReason {
+export class DismissalReason573 extends DismissalReasonDefault {
   dismissalTypes(): DismissalReason[] {
     return [
       {

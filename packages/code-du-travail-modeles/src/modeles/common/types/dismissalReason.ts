@@ -10,4 +10,5 @@ export type DismissalReason = {
 
 export interface IDismissalReason {
   dismissalTypes: () => DismissalReason[];
+  getDismissalRules: () => string[];
 }
