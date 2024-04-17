@@ -12,10 +12,7 @@ describe("Gestion des licenciements pour la CC 1996", () => {
         "contrat salarié . convention collective": "'IDCC1996'",
       };
 
-      const { missingArgs } = engine.calculate(
-        input,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      const { missingArgs } = engine.calculate(input);
       expect(missingArgs).toHaveNextMissingRule(
         "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle"
       );
@@ -27,10 +24,7 @@ describe("Gestion des licenciements pour la CC 1996", () => {
         "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle": `'${catPro}'`,
       };
 
-      const { missingArgs } = engine.calculate(
-        input,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      const { missingArgs } = engine.calculate(input);
       expect(missingArgs).toHaveNextMissingRule(null);
     });
   });
@@ -41,7 +35,7 @@ describe("Gestion des licenciements pour la CC 1996", () => {
         catPro: "Cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/06/2000",
-        result: 0,
+        result: undefined,
       },
       {
         catPro: "Cadres",
@@ -71,7 +65,7 @@ describe("Gestion des licenciements pour la CC 1996", () => {
         catPro: "Non-cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/06/2000",
-        result: 0,
+        result: undefined,
       },
       {
         catPro: "Non-cadres",
@@ -80,7 +74,7 @@ describe("Gestion des licenciements pour la CC 1996", () => {
         result: 675,
       },
     ])("Le moins favorable - cas licenciement économique", (value) => {
-      const { missingArgs, detail } = engine.calculateResult({
+      const { missingArgs, detail } = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1996'",
         "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle": `'${value.catPro}'`,
         "contrat salarié . indemnité de licenciement . date d'entrée":
@@ -97,8 +91,10 @@ describe("Gestion des licenciements pour la CC 1996", () => {
         typeContratTravail: "cdi",
       });
       expect(missingArgs).toEqual([]);
-      expect(detail.agreementResult?.value).toEqual(value.result);
-      expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+      expect(detail?.agreementResult?.value).toEqual(value.result);
+      expect(detail?.agreementResult?.unit?.numerators).toEqual(
+        value.result ? ["€"] : undefined
+      );
     });
   });
 });

@@ -35,8 +35,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
         expect(missingArgs).toEqual([]);
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.value).toEqual(expectedCompensation);
+        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result?.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -71,8 +71,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
         expect(missingArgs).toEqual([]);
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.value).toEqual(expectedCompensation);
+        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result?.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -108,8 +108,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
         expect(missingArgs).toEqual([]);
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.value).toEqual(expectedCompensation);
+        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result?.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -145,8 +145,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
         expect(missingArgs).toEqual([]);
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.value).toEqual(expectedCompensation);
+        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result?.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -184,8 +184,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
         expect(missingArgs).toEqual([]);
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.value).toEqual(expectedCompensation);
+        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result?.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -223,8 +223,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
         expect(missingArgs).toEqual([]);
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.value).toEqual(expectedCompensation);
+        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result?.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -262,8 +262,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
         expect(missingArgs).toEqual([]);
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.value).toEqual(expectedCompensation);
+        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result?.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -301,8 +301,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
         expect(missingArgs).toEqual([]);
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.value).toEqual(expectedCompensation);
+        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result?.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -438,8 +438,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           );
 
           expect(missingArgs).toEqual([]);
-          expect(result.value).toEqual(expectedCompensation);
-          expect(result.unit?.numerators).toEqual(["€"]);
+          expect(result?.value).toEqual(expectedCompensation);
+          expect(result?.unit?.numerators).toEqual(["€"]);
 
           const formule = engine.getFormule();
           expect(formule.formula).toEqual(expectedFormula);
@@ -577,8 +577,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           );
 
           expect(missingArgs).toEqual([]);
-          expect(result.value).toEqual(expectedCompensation);
-          expect(result.unit?.numerators).toEqual(["€"]);
+          expect(result?.value).toEqual(expectedCompensation);
+          expect(result?.unit?.numerators).toEqual(["€"]);
 
           const formule = engine.getFormule();
           expect(formule.formula).toEqual(expectedFormula);
@@ -667,8 +667,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           );
 
           expect(missingArgs).toEqual([]);
-          expect(result.value).toEqual(expectedCompensation);
-          expect(result.unit?.numerators).toEqual(["€"]);
+          expect(result?.value).toEqual(expectedCompensation);
+          expect(result?.unit?.numerators).toEqual(["€"]);
 
           const formule = engine.getFormule();
           expect(formule.formula).toEqual(expectedFormula);
@@ -1013,8 +1013,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           expect(formule.explanations).toEqual(expectedFormulaExplanations);
 
           expect(missingArgs).toEqual([]);
-          expect(result.value).toEqual(expectedCompensation);
-          expect(result.unit?.numerators).toEqual(["€"]);
+          expect(result?.value).toEqual(expectedCompensation);
+          expect(result?.unit?.numerators).toEqual(["€"]);
 
           const references = engine.getReferences("résultat conventionnel");
           expect(references).toHaveLength(expectedRefs.length);

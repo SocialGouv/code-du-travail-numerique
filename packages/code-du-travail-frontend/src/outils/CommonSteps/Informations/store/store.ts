@@ -61,8 +61,7 @@ const createCommonInformationsStore: StoreSlice<
               agreement.num,
               isLicenciementInaptitude,
               false
-            ),
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
+            )
           );
           const missingArgs = result.missingArgs.filter(
             (item) => item.rawNode.cdtn
@@ -145,8 +144,7 @@ const createCommonInformationsStore: StoreSlice<
               isLicenciementInaptitude,
               false,
               rules
-            ),
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
+            )
           );
           missingArgs = result.missingArgs.filter((item) => item.rawNode.cdtn);
           const notifBloquante = publicodes.getNotificationsBloquantes();

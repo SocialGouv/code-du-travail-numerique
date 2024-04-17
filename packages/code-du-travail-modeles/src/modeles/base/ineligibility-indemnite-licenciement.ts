@@ -24,9 +24,6 @@ export class IneligibilityLegalIndemniteLicenciement implements IInegibility {
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
       ] &&
       args[
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
-      ] &&
-      args[
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle"
       ] === "non" &&
       Math.max(
@@ -38,7 +35,7 @@ export class IneligibilityLegalIndemniteLicenciement implements IInegibility {
         parseFloat(
           args[
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
-          ]
+          ] ?? "0"
         )
       ) <
         8 / 12
@@ -50,13 +47,9 @@ export class IneligibilityLegalIndemniteLicenciement implements IInegibility {
   getIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
-    const contractIneligility = this.getContractIneligibility(args);
-    if (contractIneligility) {
-      return contractIneligility;
-    }
-    const seniorityIneligibility = this.getSeniorityIneligibility(args);
-    if (seniorityIneligibility) {
-      return seniorityIneligibility;
-    }
+    return (
+      this.getContractIneligibility(args) ??
+      this.getSeniorityIneligibility(args)
+    );
   }
 }

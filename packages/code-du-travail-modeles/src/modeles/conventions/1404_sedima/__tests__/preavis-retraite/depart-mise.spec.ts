@@ -56,8 +56,8 @@ describe("Préavis de départ à la retraite", () => {
       const references = engine.getReferences();
 
       expect(missingArgs).toEqual([]);
-      expect(result.value).toEqual(expectedNotice);
-      expect(result.unit).toEqual("mois");
+      expect(result?.value).toEqual(expectedNotice);
+      expect(result?.unit).toEqual("mois");
       expect(references).toHaveLength(expectedReferences.length);
       expect(references).toEqual(expect.arrayContaining(expectedReferences));
     }
@@ -93,8 +93,8 @@ describe("Préavis de départ à la retraite", () => {
       const references = engine.getReferences();
 
       expect(missingArgs).toEqual([]);
-      expect(result.value).toEqual(expectedNotice);
-      expect(result.unit).toEqual(expectedUnit);
+      expect(result?.value).toEqual(expectedNotice);
+      expect(result?.unit).toEqual(expectedUnit);
       expect(references).toHaveLength(expectedReferences.length);
       expect(references).toEqual(expect.arrayContaining(expectedReferences));
     }
@@ -129,8 +129,8 @@ describe("Préavis de mise à la retraite", () => {
       const references = engine.getReferences();
 
       expect(missingArgs).toEqual([]);
-      expect(result.value).toEqual(expectedNotice);
-      expect(result.unit).toEqual("mois");
+      expect(result?.value).toEqual(expectedNotice);
+      expect(result?.unit).toEqual("mois");
       expect(references).toHaveLength(expectedReferences.length);
       expect(references).toEqual(expect.arrayContaining(expectedReferences));
     }
@@ -162,8 +162,8 @@ describe("Préavis de mise à la retraite", () => {
       const references = engine.getReferences();
 
       expect(missingArgs).toEqual([]);
-      expect(result.value).toEqual(expectedNotice);
-      expect(result.unit).toEqual("mois");
+      expect(result?.value).toEqual(expectedNotice);
+      expect(result?.unit).toEqual("mois");
       expect(references).toHaveLength(expectedReferences.length);
       expect(references).toEqual(expect.arrayContaining(expectedReferences));
     }
@@ -190,8 +190,8 @@ describe("Préavis de mise à la retraite", () => {
       const references = engine.getReferences();
 
       expect(missingArgs).toEqual([]);
-      expect(result.value).toEqual(expectedNotice);
-      expect(result.unit).toEqual("mois");
+      expect(result?.value).toEqual(expectedNotice);
+      expect(result?.unit).toEqual("mois");
       expect(references).toHaveLength(expectedReferences.length);
       expect(references).toEqual(expect.arrayContaining(expectedReferences));
     }

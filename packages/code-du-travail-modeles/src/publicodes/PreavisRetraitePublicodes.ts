@@ -11,13 +11,6 @@ class PreavisRetraitePublicodes extends PublicodesBase<PublicodesPreavisRetraite
   }
 
   calculate(
-    args: Record<string, string | undefined>,
-    target?: string
-  ): PublicodesData<PublicodesPreavisRetraiteResult> {
-    return this.setSituation(args, target);
-  }
-
-  calculateResult(
     args: Record<string, string | undefined>
   ): PublicodesData<PublicodesPreavisRetraiteResult> {
     return this.setSituation(args);

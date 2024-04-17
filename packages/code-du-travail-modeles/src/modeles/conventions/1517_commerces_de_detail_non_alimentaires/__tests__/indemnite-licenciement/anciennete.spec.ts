@@ -17,7 +17,7 @@ describe("CC 1517", () => {
           dateSortie: exitDate,
         });
 
-        expect(result.value).toEqual(expectedAnciennete);
+        expect(result?.value).toEqual(expectedAnciennete);
       }
     );
   });
@@ -39,7 +39,7 @@ describe("CC 1517", () => {
           dateSortie: exitDate,
         });
 
-        expect(result.value).toEqual(expectedAnciennete);
+        expect(result?.value).toEqual(expectedAnciennete);
       }
     );
   });

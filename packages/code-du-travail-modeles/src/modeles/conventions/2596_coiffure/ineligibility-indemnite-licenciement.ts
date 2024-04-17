@@ -20,9 +20,6 @@ export class IneligibilityLegalIndemniteLicenciement2596 extends IneligibilityLe
       args[
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
       ] &&
-      args[
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
-      ] &&
       Math.max(
         parseFloat(
           args[
@@ -32,7 +29,7 @@ export class IneligibilityLegalIndemniteLicenciement2596 extends IneligibilityLe
         parseFloat(
           args[
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
-          ]
+          ] ?? "0"
         )
       ) < 8
     ) {
