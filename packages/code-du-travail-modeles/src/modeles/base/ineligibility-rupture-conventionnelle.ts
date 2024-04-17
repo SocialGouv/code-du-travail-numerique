@@ -5,7 +5,13 @@ export class IneligibilityRuptureConventionnelle implements IInegibility {
     args: Record<string, string | undefined>
   ): string | undefined {
     if (args.typeContratTravail && args.typeContratTravail === "cdd") {
-      return "L’indemnité de rupture conventionnelle n’est pas due pour les CDD et contrats de travail temporaires. Sous certaines conditions, le salarié peut avoir le droit à une indemnité de précarité.";
+      return `
+        <p>
+          La rupture conventionnelle ne concerne pas les salariés en CDD ou en contrats de travail temporaires.
+          Sous certaines conditions, le salarié peut avoir le droit à une 
+          <a href="/outils/indemnite-precarite">indemnité de précarité</a>.
+        </p>
+      `;
     }
   }
 

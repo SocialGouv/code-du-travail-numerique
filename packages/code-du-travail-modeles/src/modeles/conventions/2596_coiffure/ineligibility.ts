@@ -36,7 +36,7 @@ export class Ineligibility2596 extends IneligibilityLegalIndemniteLicenciement {
         )
       ) < 8
     ) {
-      return "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.";
+      return "<p>L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.</p>";
     }
   }
 }
