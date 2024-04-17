@@ -13,10 +13,7 @@ describe("Un seul type de licenciement pour la CC 2120", () => {
         "non",
     };
 
-    const { missingArgs } = engine.calculate(
-      input,
-      "contrat salarié . indemnité de licenciement . résultat conventionnel"
-    );
+    const { missingArgs } = engine.calculate(input);
     expect(missingArgs).toHaveNextMissingRule(
       "contrat salarié . convention collective . banque . catégorie professionnelle"
     );
@@ -31,40 +28,13 @@ describe("Un seul type de licenciement pour la CC 2120", () => {
         "'Non-cadres'",
     };
 
-    const { missingArgs } = engine.calculate(
-      input,
-      "contrat salarié . indemnité de licenciement . résultat conventionnel"
-    );
+    const { missingArgs } = engine.calculate(input);
 
     expect(missingArgs).toHaveNextMissingRule(null);
   });
 
-  test("le résultat pour le Licenciement pour motif disciplinaire doit remonter", () => {
-    const { missingArgs, detail } = engine.calculateResult({
-      "contrat salarié . convention collective": "'IDCC2120'",
-      "contrat salarié . convention collective . banque . catégorie professionnelle": `'Non-Cadres'`,
-
-      "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
-      "contrat salarié . indemnité de licenciement . date d'entrée":
-        "01/01/2025",
-      "contrat salarié . indemnité de licenciement . date de notification":
-        "01/11/2025",
-      "contrat salarié . indemnité de licenciement . date de sortie":
-        "01/11/2025",
-      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-        "non",
-      licenciementFauteGrave: "non",
-      salaryPeriods: `[{"month":"janvier 2024","value":"2000"}]`,
-      typeContratTravail: "cdi",
-    });
-
-    expect(missingArgs).toEqual([]);
-    expect(detail.agreementResult?.value).toEqual(300);
-    expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
-  });
-
   test("le résultat pour le Licenciement pour motif disciplinaire doit remonter car ancienneté entre 8 mois et 1 an", () => {
-    const { missingArgs, detail } = engine.calculateResult({
+    const { missingArgs, detail } = engine.calculate({
       "contrat salarié . convention collective": "'IDCC2120'",
       "contrat salarié . convention collective . banque . catégorie professionnelle": `'Non-Cadres'`,
 
@@ -83,8 +53,8 @@ describe("Un seul type de licenciement pour la CC 2120", () => {
     });
 
     expect(missingArgs).toEqual([]);
-    expect(detail.agreementResult?.value).toEqual(300);
-    expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+    expect(detail?.agreementResult?.value).toEqual(416.67);
+    expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
   });
 
   test.each`
@@ -106,7 +76,7 @@ describe("Un seul type de licenciement pour la CC 2120", () => {
     }) => {
       console.log(`[{"month":"janvier 2024","value":${salary}]`);
 
-      const { missingArgs, detail } = engine.calculateResult({
+      const { missingArgs, detail } = engine.calculate({
         "contrat salarié . convention collective": "'IDCC2120'",
         "contrat salarié . convention collective . banque . catégorie professionnelle": `'${categoriePro}'`,
 
@@ -125,8 +95,8 @@ describe("Un seul type de licenciement pour la CC 2120", () => {
       });
 
       expect(missingArgs).toEqual([]);
-      expect(detail.agreementResult?.value).toEqual(expectedAgreement);
-      expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+      expect(detail?.agreementResult?.value).toEqual(expectedAgreement);
+      expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
     }
   );
 });

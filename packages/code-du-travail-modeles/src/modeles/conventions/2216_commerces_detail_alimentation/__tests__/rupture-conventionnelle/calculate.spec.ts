@@ -11,21 +11,33 @@ describe("Un seul type de licenciement pour la CC 2216", () => {
       "contrat salarié . convention collective": "'IDCC2216'",
       "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
         "non",
+      "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle":
+        "'Employés et ouvriers, personnel de livraison'",
     };
 
-    const result = engine.calculate(
-      input,
-      "contrat salarié . indemnité de licenciement . résultat conventionnel"
-    );
-    const missingArgs = result.missingArgs.filter((item) => item.rawNode.cdtn);
-    expect(missingArgs.length).toEqual(1);
-    expect(result.missingArgs).toHaveNextMissingRule(
-      "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle"
+    const { missingArgs } = engine.calculate(input);
+    expect(missingArgs).toHaveNextMissingRule(
+      "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age"
     );
   });
 
-  test("Employés et ouvriers, personnel de livraison est identique au légal", () => {
-    const { missingArgs, detail } = engine.calculateResult({
+  test("No missing variables", () => {
+    const input = {
+      "contrat salarié . convention collective": "'IDCC2216'",
+      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+        "non",
+      "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle":
+        "'Employés et ouvriers, personnel de livraison'",
+      "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+        "40",
+    };
+
+    const { missingArgs } = engine.calculate(input);
+    expect(missingArgs).toHaveNextMissingRule(null);
+  });
+
+  test("Employés et ouvriers, personnel de livraison - Autres licenciements plus favorable", () => {
+    const { missingArgs, detail } = engine.calculate({
       "contrat salarié . convention collective": "'IDCC2216'",
       "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle":
         '"Employés et ouvriers, personnel de livraison"',
@@ -42,18 +54,18 @@ describe("Un seul type de licenciement pour la CC 2216", () => {
         "2000",
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
         "2000",
+      "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+        "55",
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
-    expect(detail.chosenResult).toEqual("SAME");
-    expect(detail.legalResult.value).toEqual(15000);
-    expect(detail.agreementResult?.value).toEqual(15000);
-    expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+    expect(detail?.agreementResult?.value).toEqual(15000);
+    expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
   });
 
-  test("Cadres est plus favorable que le légal", () => {
-    const { missingArgs, detail } = engine.calculateResult({
+  test("Cadres - Autres licenciements plus favorable", () => {
+    const { missingArgs, detail } = engine.calculate({
       "contrat salarié . convention collective": "'IDCC2216'",
       "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle":
         '"Cadres"',
@@ -70,13 +82,13 @@ describe("Un seul type de licenciement pour la CC 2216", () => {
         "2000",
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
         "2000",
+      "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+        "45",
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
-    expect(detail.chosenResult).toEqual("AGREEMENT");
-    expect(detail.legalResult.value).toEqual(15000);
-    expect(detail.agreementResult?.value).toEqual(19000);
-    expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+    expect(detail?.agreementResult?.value).toEqual(19000);
+    expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
   });
 });

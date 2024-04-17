@@ -105,22 +105,21 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
             situation: this.data.situation,
           };
         }
+        const elligibleSituations = situations.filter(
+          (situation) => (situation.calculate.result?.value ?? 0) !== 0
+        );
         const foundSituation = {
-          ...situations
-            .filter(
-              (situation) => (situation.calculate.result?.value ?? 0) !== 0
-            )
-            .reduce<{
-              calculate: PublicodesData<PublicodesIndemniteLicenciementResult>;
-              formula: Formula;
-            }>((previous, current) => {
-              return previous.calculate.result && current.calculate.result
-                ? (previous.calculate.result.value ?? 0) <
+          ...elligibleSituations.reduce<{
+            calculate: PublicodesData<PublicodesIndemniteLicenciementResult>;
+            formula: Formula;
+          }>((previous, current) => {
+            return previous.calculate.result && current.calculate.result
+              ? (previous.calculate.result.value ?? 0) <
                 (current.calculate.result.value ?? 0)
-                  ? previous
-                  : current
-                : current;
-            }, situations[0]),
+                ? previous
+                : current
+              : current;
+          }, elligibleSituations[0]),
           missingArgs: missingArgsFinal,
         };
         agreementResult = foundSituation.calculate;
@@ -153,9 +152,9 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
       !legalResult?.result || this.hasNoLegalIndemnity()
         ? "HAS_NO_LEGAL"
         : this.compareLegalAndAgreement(
-          legalResult.result.value as number,
-          agreementResult.result.value as number | undefined
-        );
+            legalResult.result.value as number,
+            agreementResult.result.value as number | undefined
+          );
 
     return {
       detail: {

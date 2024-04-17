@@ -15,6 +15,15 @@ export class DismissalReason2216 implements IDismissalReason {
           },
         ],
       },
+      {
+        name: "Licenciement économique",
+        rules: [
+          {
+            rule: "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique",
+            value: "'Oui'",
+          },
+        ],
+      },
     ];
   }
 }

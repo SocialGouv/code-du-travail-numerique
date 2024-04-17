@@ -13,10 +13,7 @@ describe("Un seul type de licenciement pour la CC 1702", () => {
         "non",
     };
 
-    const { missingArgs } = engine.calculate(
-      input,
-      "contrat salarié . indemnité de licenciement . résultat conventionnel"
-    );
+    const { missingArgs } = engine.calculate(input);
     expect(missingArgs).toHaveNextMissingRule(
       "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age"
     );
@@ -31,15 +28,12 @@ describe("Un seul type de licenciement pour la CC 1702", () => {
         "40",
     };
 
-    const { missingArgs } = engine.calculate(
-      input,
-      "contrat salarié . indemnité de licenciement . résultat conventionnel"
-    );
+    const { missingArgs } = engine.calculate(input);
     expect(missingArgs).toHaveNextMissingRule(null);
   });
 
   test("Autres licenciements est moins favorable que l'économique", () => {
-    const { missingArgs, detail } = engine.calculateResult({
+    const { missingArgs, detail } = engine.calculate({
       "contrat salarié . convention collective": "'IDCC1702'",
       "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age":
         "65",
@@ -60,7 +54,7 @@ describe("Un seul type de licenciement pour la CC 1702", () => {
       typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
-    expect(detail.agreementResult?.value).toEqual(14025);
-    expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+    expect(detail?.agreementResult?.value).toEqual(14025);
+    expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
   });
 });
