@@ -1,6 +1,6 @@
 import { IneligibilityLegalIndemniteLicenciement } from "../../base";
 
-export class Ineligibility1404 extends IneligibilityLegalIndemniteLicenciement {
+export class IneligibilityLegalIndemniteLicenciement2596 extends IneligibilityLegalIndemniteLicenciement {
   getIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
@@ -10,11 +10,13 @@ export class Ineligibility1404 extends IneligibilityLegalIndemniteLicenciement {
     }
     if (
       args[
-        "contrat salarié . convention collective . sedima . question cdi opération"
+        "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle"
       ] &&
-      args[
-        "contrat salarié . convention collective . sedima . question cdi opération"
-      ] === "non" &&
+      !["'Cadres'", "'Agents de maîtrise'"].includes(
+        args[
+          "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle"
+        ]
+      ) &&
       args[
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
       ] &&

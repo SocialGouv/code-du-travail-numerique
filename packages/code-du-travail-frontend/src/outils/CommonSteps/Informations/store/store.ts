@@ -20,6 +20,7 @@ import { informationToSituation } from "../utils";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
 import { ContratTravailStoreSlice } from "../../../CommonIndemniteDepart/steps/ContratTravail/store";
 import * as Sentry from "@sentry/nextjs";
+import { CommonSituationStoreSlice } from "../../../common/situationStore";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -38,7 +39,9 @@ const initialState: CommonInformationsStoreData = {
 
 const createCommonInformationsStore: StoreSlice<
   CommonInformationsStoreSlice,
-  CommonAgreementStoreSlice<PublicodesSimulator> & ContratTravailStoreSlice
+  CommonAgreementStoreSlice<PublicodesSimulator> &
+    ContratTravailStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   informationsData: {
     ...initialState,
@@ -111,9 +114,6 @@ const createCommonInformationsStore: StoreSlice<
         get().informationsData.input.publicodesInformations;
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
-      const contractType = get().contratTravailData.input.typeContratTravail;
-      const isDismissalSeriousMisconduct =
-        get().contratTravailData.input.licenciementFauteGrave;
       const questionAnswered = publicodesInformations.find(
         (question) => question.question.rule.nom === key
       );
@@ -240,12 +240,19 @@ const createCommonInformationsStore: StoreSlice<
     },
     onNextStep: () => {
       const state = get().informationsData.input;
-      const currentError = get().informationsData.error;
       const { isValid, errorState } = validateStep(state);
       let errorEligibility;
 
       if (isValid) {
-        errorEligibility = state.blockingNotification;
+        const publicodes = get().agreementData.publicodes;
+        const situation = {
+          ...get().situationData.situation,
+          ...informationToSituation(
+            get().informationsData.input.publicodesInformations
+          ),
+        };
+        const { ineligibility } = publicodes.calculate(situation);
+        errorEligibility = ineligibility ?? state.blockingNotification;
       }
 
       set(
