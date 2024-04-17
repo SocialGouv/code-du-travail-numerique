@@ -1,0 +1,9 @@
+contrat salarié . convention collective . industries chimiques . rupture conventionnelle:
+  valeur: oui
+
+contrat salarié . convention collective . industries chimiques . rupture conventionnelle . age:
+  remplace: contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . age
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?
+  cdtn:
+    type: entier
