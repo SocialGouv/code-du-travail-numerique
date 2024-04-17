@@ -106,14 +106,21 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
           };
         }
         const foundSituation = {
-          ...situations.reduce((previous, current) => {
-            return previous.calculate.result?.value
-              ? previous.calculate.result.value <
-                (current.calculate.result?.value ?? 0)
-                ? previous
-                : current
-              : current;
-          }, situations[0]),
+          ...situations
+            .filter(
+              (situation) => (situation.calculate.result?.value ?? 0) !== 0
+            )
+            .reduce<{
+              calculate: PublicodesData<PublicodesIndemniteLicenciementResult>;
+              formula: Formula;
+            }>((previous, current) => {
+              return previous.calculate.result && current.calculate.result
+                ? (previous.calculate.result.value ?? 0) <
+                  (current.calculate.result.value ?? 0)
+                  ? previous
+                  : current
+                : current;
+            }, situations[0]),
           missingArgs: missingArgsFinal,
         };
         agreementResult = foundSituation.calculate;
