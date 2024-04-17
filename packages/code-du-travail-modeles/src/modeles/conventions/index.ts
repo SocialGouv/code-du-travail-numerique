@@ -12,6 +12,7 @@ export * from "./1090_automobiles";
 export * from "./1404_sedima";
 export * from "./1483_habillement_textiles_commerce_de_detail";
 export * from "./1486_bureaux_etudes_techniques";
+export * from "./1501_restauration_rapide";
 export * from "./1505_commerces_detail_fruits_legumes";
 export * from "./1516_organismes_formation";
 export * from "./1517_commerces_de_detail_non_alimentaires";

@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.134.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.1...v4.134.2) (2024-04-16)
+
+### Reverts
+
+- **react-ui:** modification sur la date ([49aebdc](https://github.com/SocialGouv/code-du-travail-numerique/commit/49aebdc437376e1fb8e72a4224f9463f6ca96c70))
+
+## [4.134.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.0...v4.134.1) (2024-04-16)
+
+### Bug Fixes
+
+- **e2e:** set number of idcc for h2 in contributions ([adba475](https://github.com/SocialGouv/code-du-travail-numerique/commit/adba475bfeb3dd90373603cb911a1fc21d064d54))
+
+# [4.134.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.133.0...v4.134.0) (2024-04-16)
+
+### Bug Fixes
+
+- **contributions:** modification d'un H2 sur la page contribution pour la rendre plus lisible en cas de réponse très courte ([#5775](https://github.com/SocialGouv/code-du-travail-numerique/issues/5775)) ([12edbb9](https://github.com/SocialGouv/code-du-travail-numerique/commit/12edbb9f451460a8e8e114a7fb2c586038f93c29))
+- retirer les data-testid de la production ([#5781](https://github.com/SocialGouv/code-du-travail-numerique/issues/5781)) ([e154dd1](https://github.com/SocialGouv/code-du-travail-numerique/commit/e154dd19af7775e2df777c0cb4db58e0144415b7))
+
+### Features
+
+- desinstaller ancienne contrib ([#5712](https://github.com/SocialGouv/code-du-travail-numerique/issues/5712)) ([a9504ba](https://github.com/SocialGouv/code-du-travail-numerique/commit/a9504ba0ceda5ac44d373704ae302b7f3306014d)), closes [#5752](https://github.com/SocialGouv/code-du-travail-numerique/issues/5752)
+- **redirections:** modification suite à la MAJ des CCs de la dares ([#5787](https://github.com/SocialGouv/code-du-travail-numerique/issues/5787)) ([f8ae3e6](https://github.com/SocialGouv/code-du-travail-numerique/commit/f8ae3e606910c4e5f4e6ac8bff64e3976eb6eaf9))
+
 # [4.133.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.132.0...v4.133.0) (2024-04-09)
 
 ### Bug Fixes

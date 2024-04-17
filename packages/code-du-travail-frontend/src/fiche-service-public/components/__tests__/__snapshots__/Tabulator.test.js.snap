@@ -19,7 +19,6 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
           aria-selected="true"
           class="sc-bBeLUv hoMOVm react-tabs__tab--selected"
           data-rttab="true"
-          data-testid="undefined-0"
           id="react-tabs-0"
           role="tab"
           tabindex="0"
@@ -32,7 +31,6 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
           aria-selected="false"
           class="sc-bBeLUv hoMOVm"
           data-rttab="true"
-          data-testid="undefined-1"
           id="react-tabs-2"
           role="tab"
         >
@@ -51,7 +49,6 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
       >
         <h2
           class="sc-kAyceB dvmaTz"
-          data-testid="heading"
         >
           CDI
         </h2>
@@ -61,7 +58,6 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
       >
         <h3
           class="sc-kAyceB dvmaTz"
-          data-testid="heading"
         >
           titre 1
         </h3>
@@ -99,7 +95,6 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
           aria-selected="true"
           class="sc-bBeLUv hoMOVm react-tabs__tab--selected"
           data-rttab="true"
-          data-testid="undefined-0"
           id="react-tabs-4"
           role="tab"
           tabindex="0"
@@ -112,7 +107,6 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
           aria-selected="false"
           class="sc-bBeLUv hoMOVm"
           data-rttab="true"
-          data-testid="undefined-1"
           id="react-tabs-6"
           role="tab"
         >
@@ -131,7 +125,6 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
       >
         <h3
           class="sc-kAyceB dvmaTz"
-          data-testid="heading"
         >
           CDI
         </h3>
@@ -141,7 +134,6 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
       >
         <h4
           class="sc-kAyceB dvmaTz"
-          data-testid="heading"
         >
           titre 1
         </h4>
@@ -179,7 +171,6 @@ exports[`<Tabulator /> should render 1`] = `
           aria-selected="true"
           class="sc-bBeLUv hoMOVm react-tabs__tab--selected"
           data-rttab="true"
-          data-testid="undefined-0"
           id="react-tabs-8"
           role="tab"
           tabindex="0"
@@ -192,7 +183,6 @@ exports[`<Tabulator /> should render 1`] = `
           aria-selected="false"
           class="sc-bBeLUv hoMOVm"
           data-rttab="true"
-          data-testid="undefined-1"
           id="react-tabs-10"
           role="tab"
         >
@@ -211,7 +201,6 @@ exports[`<Tabulator /> should render 1`] = `
       >
         <h4
           class="sc-kAyceB dvmaTz"
-          data-testid="heading"
         >
           CDI
         </h4>
@@ -221,7 +210,6 @@ exports[`<Tabulator /> should render 1`] = `
       >
         <h5
           class="sc-kAyceB dvmaTz"
-          data-testid="heading"
         >
           titre 1
         </h5>

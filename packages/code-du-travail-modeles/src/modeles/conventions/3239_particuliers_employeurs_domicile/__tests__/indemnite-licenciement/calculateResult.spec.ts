@@ -6,7 +6,7 @@ const engine = new IndemniteLicenciementPublicodes(
   "3239"
 );
 
-describe("Test de la fonctionnalité 'calculateResult'", () => {
+describe("Test de la fonctionnalité 'calculate'", () => {
   test.each`
     category                                  | expectedCompensation | formula
     ${CatPro3239.salarieParticulierEmployeur} | ${1166.32}           | ${"1/4 * Sref * A"}
@@ -14,7 +14,7 @@ describe("Test de la fonctionnalité 'calculateResult'", () => {
   `(
     `pas de missing var pour le conventionnel même si on ne fourni pas le salaire de ref et l'ancienneté requise pour $category`,
     ({ category, expectedCompensation, formula }) => {
-      const result = engine.calculateResult({
+      const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC3239'",
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
           category,
@@ -34,10 +34,10 @@ describe("Test de la fonctionnalité 'calculateResult'", () => {
         licenciementFauteGrave: "non",
         typeContratTravail: "cdi",
       });
-      expect(result.missingArgs).toEqual([]);
-      expect(result.result.value).toEqual(expectedCompensation);
-      expect(result.formula.formula).toEqual(formula);
-      expect(result.detail.chosenResult).toEqual("HAS_NO_LEGAL");
+      expect(result?.missingArgs).toEqual([]);
+      expect(result?.result?.value).toEqual(expectedCompensation);
+      expect(result?.formula?.formula).toEqual(formula);
+      expect(result?.detail?.chosenResult).toEqual("HAS_NO_LEGAL");
     }
   );
 });

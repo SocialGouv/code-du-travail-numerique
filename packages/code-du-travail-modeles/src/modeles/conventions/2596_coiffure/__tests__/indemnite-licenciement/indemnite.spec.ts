@@ -37,8 +37,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 2596", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
         expect(missingArgs).toEqual([]);
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.value).toEqual(expectedCompensation);
+        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result?.value).toEqual(expectedCompensation);
       });
     }
   );
@@ -68,8 +68,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 2596", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
         expect(missingArgs).toEqual([]);
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.value).toEqual(expectedCompensation);
+        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result?.value).toEqual(expectedCompensation);
       });
     }
   );

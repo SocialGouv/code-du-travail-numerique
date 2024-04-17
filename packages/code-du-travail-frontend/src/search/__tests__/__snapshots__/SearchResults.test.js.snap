@@ -11,7 +11,6 @@ exports[`<SearchResults/> should render results 1`] = `
   >
     <h2
       class="sc-kAyceB dvmaTz"
-      data-testid="heading"
       id="SearchResults"
     >
       Résultats de recherche pour “search test”

@@ -384,11 +384,9 @@ exports[`<Answer /> should renders 1`] = `
             >
               <h2
                 class="sc-fKWMtX kVpGnF sc-kAyceB kDiAsV"
-                data-testid="heading"
               >
                 <span
                   class="sc-gsFSXq cdZUuw"
-                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -882,11 +880,9 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             >
               <h2
                 class="sc-fKWMtX kVpGnF sc-kAyceB kDiAsV"
-                data-testid="heading"
               >
                 <span
                   class="sc-gsFSXq cdZUuw"
-                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -1297,11 +1293,9 @@ exports[`<Answer /> should renders back to results link 1`] = `
             >
               <h2
                 class="sc-fKWMtX kVpGnF sc-kAyceB kDiAsV"
-                data-testid="heading"
               >
                 <span
                   class="sc-gsFSXq cdZUuw"
-                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -1709,11 +1703,9 @@ exports[`<Answer /> should renders related content 1`] = `
             >
               <h2
                 class="sc-fKWMtX kVpGnF sc-kAyceB kDiAsV"
-                data-testid="heading"
               >
                 <span
                   class="sc-gsFSXq cdZUuw"
-                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -1745,7 +1737,6 @@ exports[`<Answer /> should renders related content 1`] = `
         <div
           aria-level="2"
           class="sc-kAyceB dvmaTz"
-          data-testid="heading"
           role="heading"
         >
           Modèles et outils liés
@@ -1810,7 +1801,6 @@ exports[`<Answer /> should renders related content 1`] = `
         <div
           aria-level="2"
           class="sc-kAyceB dvmaTz"
-          data-testid="heading"
           role="heading"
         >
           Articles liés
@@ -2289,11 +2279,9 @@ exports[`<Answer /> should renders tooltip 1`] = `
             >
               <h2
                 class="sc-fKWMtX kVpGnF sc-kAyceB kDiAsV"
-                data-testid="heading"
               >
                 <span
                   class="sc-gsFSXq cdZUuw"
-                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -2705,11 +2693,9 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             >
               <h2
                 class="sc-fKWMtX kVpGnF sc-kAyceB kDiAsV"
-                data-testid="heading"
               >
                 <span
                   class="sc-gsFSXq cdZUuw"
-                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -3122,11 +3108,9 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             >
               <h2
                 class="sc-fKWMtX kVpGnF sc-kAyceB kDiAsV"
-                data-testid="heading"
               >
                 <span
                   class="sc-gsFSXq cdZUuw"
-                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -3534,11 +3518,9 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             >
               <h2
                 class="sc-fKWMtX kVpGnF sc-kAyceB kDiAsV"
-                data-testid="heading"
               >
                 <span
                   class="sc-gsFSXq cdZUuw"
-                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>

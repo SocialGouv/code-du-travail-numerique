@@ -46,8 +46,8 @@ describe("Vérification juridique pour la CC 1505", () => {
         );
         const references = engine.getReferences();
         expect(missingArgs).toEqual([]);
-        expect(result.value).toEqual(expectedResult);
-        expect(result.unit).toEqual("mois");
+        expect(result?.value).toEqual(expectedResult);
+        expect(result?.unit).toEqual("mois");
         expect(references).toHaveLength(expectedReferences.length);
         expect(references).toEqual(expect.arrayContaining(expectedReferences));
       }
@@ -84,8 +84,8 @@ describe("Vérification juridique pour la CC 1505", () => {
         );
         const references = engine.getReferences();
         expect(missingArgs).toEqual([]);
-        expect(result.value).toEqual(expectedResult);
-        expect(result.unit).toEqual("mois");
+        expect(result?.value).toEqual(expectedResult);
+        expect(result?.unit).toEqual("mois");
         expect(references).toHaveLength(expectedReferences.length);
         expect(references).toEqual(expect.arrayContaining(expectedReferences));
       }
