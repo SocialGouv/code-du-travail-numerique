@@ -13,10 +13,7 @@ describe("Gestion des licenciements pour la CC 44", () => {
         "contrat salarié . convention collective": "'IDCC0044'",
       };
 
-      const { missingArgs } = engine.calculate(
-        input,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      const { missingArgs } = engine.calculate(input);
       expect(missingArgs).toHaveNextMissingRule(
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle"
       );
@@ -31,17 +28,14 @@ describe("Gestion des licenciements pour la CC 44", () => {
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${catPro}'`,
       };
 
-      const { missingArgs } = engine.calculate(
-        input,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      const { missingArgs } = engine.calculate(input);
       expect(missingArgs).toHaveNextMissingRule(null);
     });
   });
 
   describe("Calcul de l'indemnité de licenciement", () => {
     test("Le moins favorable - cas licenciement économique", () => {
-      const { missingArgs, detail } = engine.calculateResult({
+      const { missingArgs, detail } = engine.calculate({
         "contrat salarié . convention collective": "'IDCC0044'",
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${CategoryPro44.inge}'`,
         "contrat salarié . indemnité de licenciement . date d'entrée":
@@ -58,8 +52,8 @@ describe("Gestion des licenciements pour la CC 44", () => {
         typeContratTravail: "cdi",
       });
       expect(missingArgs).toEqual([]);
-      expect(detail.agreementResult?.value).toEqual(0);
-      expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+      expect(detail?.agreementResult?.value).toEqual(0);
+      expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
     });
   });
 });

@@ -21,8 +21,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(1000);
-    expect(result.unit?.numerators).toEqual(["€"]);
+    expect(result?.value).toEqual(1000);
+    expect(result?.unit?.numerators).toEqual(["€"]);
   });
 
   test("Vérifier qu'un missing args s'affiche lorsque la date d'entrée est manquante", () => {
@@ -62,8 +62,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(875);
-    expect(result.unit?.numerators).toEqual(["€"]);
+    expect(result?.value).toEqual(875);
+    expect(result?.unit?.numerators).toEqual(["€"]);
   });
 
   test("Vérifier que la grille de salaire est bien prise en compte", () => {
@@ -89,8 +89,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(875);
-    expect(result.unit?.numerators).toEqual(["€"]);
+    expect(result?.value).toEqual(875);
+    expect(result?.unit?.numerators).toEqual(["€"]);
   });
   describe("Vérification que les ineligibilités fonctionnent", () => {
     test("Vérifier l'ineligibilite CDD", () => {
@@ -98,7 +98,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         typeContratTravail: "cdd",
       });
       expect(missingArgs).toEqual([]);
-      expect(result.value).toEqual(0);
+      expect(result?.value).toEqual(undefined);
       expect(ineligibility).toEqual(
         "L’indemnité de licenciement n’est pas due pour les CDD et contrats de travail temporaires. Sous certaines conditions, le salarié peut avoir le droit à une indemnité de précarité."
       );
@@ -110,7 +110,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         typeContratTravail: "cdi",
       });
       expect(missingArgs).toEqual([]);
-      expect(result.value).toEqual(0);
+      expect(result?.value).toEqual(undefined);
       expect(ineligibility).toEqual(
         "L’indemnité de licenciement n’est pas due en cas de faute grave (ou lourde). Lorsqu’il est invoqué, le motif de faute grave doit apparaître précisément dans le courrier. Reportez-vous à la lettre de notification de licenciement."
       );
@@ -131,7 +131,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         typeContratTravail: "cdi",
       });
       expect(missingArgs).toEqual([]);
-      expect(result.value).toEqual(0);
+      expect(result?.value).toEqual(undefined);
       expect(ineligibility).toEqual(
         "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois."
       );
@@ -154,7 +154,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         typeContratTravail: "cdi",
       });
       expect(missingArgs).toEqual([]);
-      expect(result.value).toEqual(0);
+      expect(result?.value).toEqual(undefined);
       expect(ineligibility).toEqual(
         "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois."
       );

@@ -485,8 +485,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 176", () => {
         expect(formule.formula).toEqual(expectedFormula);
 
         expect(missingArgs).toEqual([]);
-        expect(result.value).toEqual(expectedCompensation);
-        expect(result.unit?.numerators).toEqual(["€"]);
+        expect(result?.value).toEqual(expectedCompensation);
+        expect(result?.unit?.numerators).toEqual(["€"]);
 
         const references = engine.getReferences("résultat conventionnel");
         expect(references).toHaveLength(expectedReferences.length);

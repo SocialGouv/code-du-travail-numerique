@@ -27,8 +27,8 @@ describe("Formule indemnité licenciement - 1606", () => {
 
       const result = engine.getFormule();
 
-      expect(result.formula).toEqual(expectedFormula);
-      expect(result.explanations).toEqual(expectedExplanations);
+      expect(result?.formula).toEqual(expectedFormula);
+      expect(result?.explanations).toEqual(expectedExplanations);
     }
   );
 
@@ -57,8 +57,8 @@ describe("Formule indemnité licenciement - 1606", () => {
 
       const result = engine.getFormule();
 
-      expect(result.formula).toEqual(expectedFormula);
-      expect(result.explanations).toEqual(expectedExplanations);
+      expect(result?.formula).toEqual(expectedFormula);
+      expect(result?.explanations).toEqual(expectedExplanations);
     }
   );
 });
