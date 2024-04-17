@@ -29,9 +29,9 @@ describe("CC 1147", () => {
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        expect(result.unit?.numerators).toEqual(["€"]);
+        expect(result?.unit?.numerators).toEqual(["€"]);
         expect(missingArgs).toEqual([]);
-        expect(result.value).toEqual(expectedCompensation);
+        expect(result?.value).toEqual(expectedCompensation);
       }
     );
   });

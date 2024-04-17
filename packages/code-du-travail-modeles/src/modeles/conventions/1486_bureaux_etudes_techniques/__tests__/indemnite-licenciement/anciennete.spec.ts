@@ -37,7 +37,7 @@ describe("CC 1486", () => {
           dateSortie: exitDate,
         });
 
-        expect(result.value).toEqual(expectedAnciennete);
+        expect(result?.value).toEqual(expectedAnciennete);
       }
     );
   });
@@ -50,7 +50,7 @@ describe("CC 1486", () => {
         dateSortie: "30/04/2023",
       });
 
-      expect(result.extraInfos).toEqual({
+      expect(result?.extraInfos).toEqual({
         "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
           "oui",
       });
@@ -63,7 +63,7 @@ describe("CC 1486", () => {
         dateSortie: "01/05/2023",
       });
 
-      expect(result.extraInfos).toEqual({
+      expect(result?.extraInfos).toEqual({
         "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul":
           "non",
       });

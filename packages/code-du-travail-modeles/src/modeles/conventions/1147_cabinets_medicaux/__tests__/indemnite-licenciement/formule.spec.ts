@@ -26,8 +26,8 @@ describe("Formule indemnité licenciement - CC 1147", () => {
           "1000",
       });
       const result = engine.getFormule();
-      expect(result.formula).toEqual(expectedFormula);
-      expect(result.explanations).toEqual(expectedExplanations);
+      expect(result?.formula).toEqual(expectedFormula);
+      expect(result?.explanations).toEqual(expectedExplanations);
     }
   );
 });

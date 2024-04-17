@@ -16,10 +16,7 @@ describe("Gestion des multiples types de licenciement pour la CC 573", () => {
           "non",
       };
 
-      const result = engine.calculate(
-        input,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      const result = engine.calculate(input);
       const missingArgs = result.missingArgs.filter(
         (item) => item.rawNode.cdtn
       );
@@ -39,10 +36,7 @@ describe("Gestion des multiples types de licenciement pour la CC 573", () => {
           "non",
       };
 
-      const result = engine.calculate(
-        input,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      const result = engine.calculate(input);
       const missingArgs = result.missingArgs.filter(
         (item) => item.rawNode.cdtn
       );
@@ -50,7 +44,7 @@ describe("Gestion des multiples types de licenciement pour la CC 573", () => {
     });
 
     test("Le moins favorable - cas licenciement économique", () => {
-      const { missingArgs, detail } = engine.calculateResult({
+      const { missingArgs, detail } = engine.calculate({
         "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . convention collective . commerces de gros . catégorie professionnelle":
           "'Agents de maîtrise, techniciens et assimilés'",
@@ -70,13 +64,13 @@ describe("Gestion des multiples types de licenciement pour la CC 573", () => {
           '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
         typeContratTravail: "cdi",
       });
-      expect(detail.agreementResult?.value).toEqual(16200);
+      expect(detail?.agreementResult?.value).toEqual(16200);
       expect(missingArgs).toEqual([]);
-      expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+      expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
     });
 
     test("Le moins favorable - cas autres licenciements", () => {
-      const { missingArgs, detail } = engine.calculateResult({
+      const { missingArgs, detail } = engine.calculate({
         "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${CatPro573.agents}'`,
         "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age":
@@ -94,9 +88,9 @@ describe("Gestion des multiples types de licenciement pour la CC 573", () => {
           '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
         typeContratTravail: "cdi",
       });
-      expect(detail.agreementResult?.value).toEqual(9900);
+      expect(detail?.agreementResult?.value).toEqual(9900);
       expect(missingArgs).toEqual([]);
-      expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+      expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
     });
   });
 });

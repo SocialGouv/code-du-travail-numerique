@@ -148,7 +148,7 @@ const createAncienneteStore: StoreSlice<
                 : undefined,
           };
           const { result, ineligibility } = publicodes.calculate(situation);
-          if (result.value === 0 && ineligibility) {
+          if (!result?.value && ineligibility) {
             errorEligibility = ineligibility;
           }
         } catch (e) {
