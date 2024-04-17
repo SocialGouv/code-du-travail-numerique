@@ -117,7 +117,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
           catPro: "Non-cadres",
           dateEntree: "01/01/2000",
           dateSortie: "01/07/2000",
-          result: 0,
+          result: undefined,
         },
         {
           catPro: "Non-cadres",
@@ -158,7 +158,9 @@ describe("Gestion des licenciements pour la CC 2098", () => {
           });
           expect(missingArgs).toEqual([]);
           expect(detail?.agreementResult?.value).toEqual(value.result);
-          expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
+          expect(detail?.agreementResult?.unit?.numerators).toEqual(
+            value.result ? ["€"] : undefined
+          );
         }
       );
     });

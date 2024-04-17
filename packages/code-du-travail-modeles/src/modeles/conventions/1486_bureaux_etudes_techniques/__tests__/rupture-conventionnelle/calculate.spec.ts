@@ -39,7 +39,7 @@ describe("Gestion des licenciements pour la CC 1486", () => {
         catPro: "ETAM",
         dateEntree: "01/01/2000",
         dateSortie: "01/06/2000",
-        result: 0,
+        result: undefined,
       },
       {
         catPro: "ETAM",
@@ -69,7 +69,7 @@ describe("Gestion des licenciements pour la CC 1486", () => {
         catPro: "Ingénieurs et cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/07/2000",
-        result: 0,
+        result: undefined,
       },
       {
         catPro: "Ingénieurs et cadres",
@@ -93,7 +93,7 @@ describe("Gestion des licenciements pour la CC 1486", () => {
         catPro: "Chargés d'enquête intermittents",
         dateEntree: "01/01/2000",
         dateSortie: "01/07/2000",
-        result: 0,
+        result: undefined,
       },
       {
         catPro: "Chargés d'enquête intermittents",
@@ -134,7 +134,9 @@ describe("Gestion des licenciements pour la CC 1486", () => {
         });
         expect(missingArgs).toEqual([]);
         expect(detail?.agreementResult?.value).toEqual(value.result);
-        expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
+        expect(detail?.agreementResult?.unit?.numerators).toEqual(
+          value.result ? ["€"] : undefined
+        );
       }
     );
   });
