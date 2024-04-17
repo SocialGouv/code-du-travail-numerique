@@ -12,10 +12,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
         "contrat salarié . convention collective": "'IDCC2098'",
       };
 
-      const { missingArgs } = engine.calculate(
-        input,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      const { missingArgs } = engine.calculate(input);
       expect(missingArgs).toHaveNextMissingRule(
         "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle"
       );
@@ -27,10 +24,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
         "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle": `'Non-cadres'`,
       };
 
-      const { missingArgs } = engine.calculate(
-        input,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      const { missingArgs } = engine.calculate(input);
       expect(missingArgs).toHaveNextMissingRule(null);
     });
 
@@ -40,10 +34,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
         "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle": `'Cadres'`,
       };
 
-      const { missingArgs } = engine.calculate(
-        input,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      const { missingArgs } = engine.calculate(input);
       expect(missingArgs).toHaveNextMissingRule(
         "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age"
       );
@@ -57,10 +48,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
         "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle": `'Cadres'`,
       };
 
-      const { missingArgs } = engine.calculate(
-        input,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      const { missingArgs } = engine.calculate(input);
       expect(missingArgs).toHaveNextMissingRule(null);
     });
   });
@@ -99,7 +87,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
       ])(
         "Licenciement pour inaptitude totale et définitive non consécutive à un accident du travail",
         (value) => {
-          const { missingArgs, detail } = engine.calculateResult({
+          const { missingArgs, detail } = engine.calculate({
             "contrat salarié . convention collective": "'IDCC2098'",
             "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age": `${value.age}`,
             "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle": `'${value.catPro}'`,
@@ -117,8 +105,8 @@ describe("Gestion des licenciements pour la CC 2098", () => {
             typeContratTravail: "cdi",
           });
           expect(missingArgs).toEqual([]);
-          expect(detail.agreementResult?.value).toEqual(value.result);
-          expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+          expect(detail?.agreementResult?.value).toEqual(value.result);
+          expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
         }
       );
     });
@@ -152,7 +140,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
       ])(
         "Licenciement pour inaptitude totale et définitive non consécutive à un accident du travail",
         (value) => {
-          const { missingArgs, detail } = engine.calculateResult({
+          const { missingArgs, detail } = engine.calculate({
             "contrat salarié . convention collective": "'IDCC2098'",
             "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle": `'${value.catPro}'`,
             "contrat salarié . indemnité de licenciement . date d'entrée":
@@ -169,8 +157,8 @@ describe("Gestion des licenciements pour la CC 2098", () => {
             typeContratTravail: "cdi",
           });
           expect(missingArgs).toEqual([]);
-          expect(detail.agreementResult?.value).toEqual(value.result);
-          expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+          expect(detail?.agreementResult?.value).toEqual(value.result);
+          expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
         }
       );
     });

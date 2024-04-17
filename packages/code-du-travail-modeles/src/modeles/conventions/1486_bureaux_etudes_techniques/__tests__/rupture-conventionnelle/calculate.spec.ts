@@ -12,10 +12,7 @@ describe("Gestion des licenciements pour la CC 1486", () => {
         "contrat salarié . convention collective": "'IDCC1486'",
       };
 
-      const { missingArgs } = engine.calculate(
-        input,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      const { missingArgs } = engine.calculate(input);
       expect(missingArgs).toHaveNextMissingRule(
         "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle"
       );
@@ -31,10 +28,7 @@ describe("Gestion des licenciements pour la CC 1486", () => {
         "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `'${catPro}'`,
       };
 
-      const { missingArgs } = engine.calculate(
-        input,
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      const { missingArgs } = engine.calculate(input);
       expect(missingArgs).toHaveNextMissingRule(null);
     });
   });
@@ -122,7 +116,7 @@ describe("Gestion des licenciements pour la CC 1486", () => {
     ])(
       "Le licenciement fait suite au refus d'une clause de mobilité",
       (value) => {
-        const { missingArgs, detail } = engine.calculateResult({
+        const { missingArgs, detail } = engine.calculate({
           "contrat salarié . convention collective": "'IDCC1486'",
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle": `'${value.catPro}'`,
           "contrat salarié . indemnité de licenciement . date d'entrée":
@@ -139,8 +133,8 @@ describe("Gestion des licenciements pour la CC 1486", () => {
           typeContratTravail: "cdi",
         });
         expect(missingArgs).toEqual([]);
-        expect(detail.agreementResult?.value).toEqual(value.result);
-        expect(detail.agreementResult?.unit?.numerators).toEqual(["€"]);
+        expect(detail?.agreementResult?.value).toEqual(value.result);
+        expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
       }
     );
   });
