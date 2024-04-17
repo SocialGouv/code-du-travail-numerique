@@ -1,6 +1,9 @@
-import type { EvaluatedNode } from "publicodes";
-
-import type { References, SeniorityResult } from "../modeles/common";
+import type {
+  Formula,
+  IReferenceSalary,
+  ISeniority,
+  References,
+} from "../modeles/common";
 import {
   DismissalReasonFactory,
   IneligibilityRuptureConventionnelleFactory,
@@ -8,264 +11,165 @@ import {
   SeniorityFactory,
   SupportedCc,
 } from "../modeles/common";
-import { PublicodesBase } from "./PublicodesBase";
+import type { IInegibility } from "../modeles/common/types/ineligibility";
+import IndemniteLicenciementPublicodes from "./IndemniteLicenciementPublicodes";
 import type {
+  IndemniteDepartInstance,
   PublicodesData,
   PublicodesDataWithFormula,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
-import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
 import { mergeMissingArgs } from "./utils";
 
-class RuptureConventionnellePublicodes extends PublicodesBase<PublicodesIndemniteLicenciementResult> {
-  constructor(models: any, idcc?: string) {
-    const rules = {
-      ...models.base,
-      ...(idcc ? models[idcc] : {}),
-    };
-    super(
-      rules,
-      PublicodesDefaultRules[PublicodesSimulator.RUPTURE_CONVENTIONNELLE],
-      idcc as SupportedCc
-    );
-  }
+class IndemniteRuptureConventionnelleInstance
+  implements IndemniteDepartInstance
+{
+  public ineligibility: IInegibility;
 
-  getMissingArg(
-    args: Record<string, string | undefined>,
-    names: string[]
-  ): string | undefined {
-    let missingArg: string | undefined = undefined;
-    names.some((name) => {
-      if (!args[name]) {
-        missingArg = name;
-        return true;
-      }
-      return false;
-    });
-    return missingArg;
+  public seniority: ISeniority<SupportedCc>;
+
+  public salary: IReferenceSalary<SupportedCc>;
+
+  constructor(idcc: SupportedCc) {
+    this.ineligibility =
+      new IneligibilityRuptureConventionnelleFactory().create(idcc);
+    this.seniority = new SeniorityFactory().create(idcc);
+    this.salary = new ReferenceSalaryFactory().create(idcc);
+  }
+}
+
+class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
+  protected legalIneligibilityInstance: IInegibility =
+    new IneligibilityRuptureConventionnelleFactory().create(
+      SupportedCc.default
+    );
+
+  constructor(models: any, idcc?: string) {
+    super(models, idcc);
+    if (idcc) {
+      this.agreementInstance = new IndemniteRuptureConventionnelleInstance(
+        idcc as SupportedCc
+      );
+    }
   }
 
   getReferences(): References[] {
     return super.getReferences("rupture conventionnelle");
   }
 
-  removeNonPublicodeFields(
-    args: Record<string, string | undefined>
-  ): Record<string, string | undefined> {
-    return Object.keys(args).reduce((filteredObj, key) => {
-      if (key.startsWith("contrat salarié . ") && args[key]) {
-        return {
-          ...filteredObj,
-          [key]: args[key],
-        };
-      }
-      return filteredObj;
-    }, {});
-  }
-
   calculate(
-    args: Record<string, string | undefined>,
-    targetRule?: string
-  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
-    const dismissalReason = new DismissalReasonFactory().create(this.idcc);
-    const reasons = dismissalReason.dismissalTypes();
-    if (reasons.length === 0) {
-      return this.calculateSituation(args, targetRule);
-    } else {
-      const situations = reasons.map(({ name, rules }) => {
-        const newArgs = args;
-        rules.forEach(({ rule, value }) => {
-          newArgs[rule] = value;
-        });
-        return this.calculateSituation(newArgs, targetRule);
-      });
-      const missingArgsFinal = mergeMissingArgs(
-        situations.map((item) => item.missingArgs)
-      );
-
-      const lowerSituations = situations.reduce((previous, current) => {
-        return previous.result.value
-          ? previous.result.value < (current.result.value ?? 0)
-            ? previous
-            : current
-          : current;
-      }, situations[0]);
-
-      return {
-        detail: {
-          legalResult: lowerSituations.result,
-        },
-        ineligibility: situations.find(
-          ({ ineligibility }) => ineligibility !== undefined
-        )?.ineligibility,
-        missingArgs: missingArgsFinal,
-        result: lowerSituations.result,
-        situation: lowerSituations.situation,
-      };
-    }
-  }
-
-  calculateResult(
     args: Record<string, string | undefined>
   ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
-    const legalResult = this.calculateSituation(
-      args,
-      "contrat salarié . indemnité de licenciement . résultat légal"
-    );
-    const result: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> =
-      {
+    let agreementResult:
+      | PublicodesData<PublicodesIndemniteLicenciementResult>
+      | undefined = undefined;
+    let agreementFormula: Formula | undefined = undefined;
+    if (this.agreementInstance) {
+      const dismissalReason = new DismissalReasonFactory().create(this.idcc);
+      const reasons = dismissalReason.dismissalTypes();
+      if (reasons.length === 0) {
+        agreementResult = this.calculateAgreement(args);
+        if (agreementResult) {
+          agreementFormula = this.getFormuleAgreement();
+        }
+      } else {
+        const situations = reasons.reduce<
+          {
+            calculate: PublicodesData<PublicodesIndemniteLicenciementResult>;
+            formula: Formula;
+          }[]
+        >((acc, { rules }) => {
+          const newArgs = args;
+          rules.forEach(({ rule, value }) => {
+            newArgs[rule] = value;
+          });
+          const calculatedAgreement = this.calculateAgreement(newArgs);
+          const formula = this.getFormuleAgreement();
+          if (calculatedAgreement) {
+            acc.push({ calculate: calculatedAgreement, formula });
+          }
+          return acc;
+        }, []);
+        const missingArgsFinal = mergeMissingArgs(
+          situations.map(({ calculate }) => calculate.missingArgs ?? [])
+        );
+
+        const agreementIneligibility = situations.find(
+          ({ calculate }) => calculate.ineligibility
+        );
+
+        if (missingArgsFinal.length || agreementIneligibility) {
+          return {
+            ineligibility: agreementIneligibility?.calculate.ineligibility,
+            missingArgs: missingArgsFinal,
+            situation: this.data.situation,
+          };
+        }
+        const foundSituation = {
+          ...situations
+            .filter(
+              (situation) => (situation.calculate.result?.value ?? 0) !== 0
+            )
+            .reduce<{
+              calculate: PublicodesData<PublicodesIndemniteLicenciementResult>;
+              formula: Formula;
+            }>((previous, current) => {
+              return previous.calculate.result && current.calculate.result
+                ? (previous.calculate.result.value ?? 0) <
+                (current.calculate.result.value ?? 0)
+                  ? previous
+                  : current
+                : current;
+            }, situations[0]),
+          missingArgs: missingArgsFinal,
+        };
+        agreementResult = foundSituation.calculate;
+        agreementFormula = foundSituation.formula;
+      }
+    }
+    let legalResult:
+      | PublicodesData<PublicodesIndemniteLicenciementResult>
+      | undefined = undefined;
+    let legalFormula: Formula | undefined = undefined;
+    const noLegalIndemnity = this.hasNoLegalIndemnity();
+    if (!noLegalIndemnity) {
+      legalResult = this.calculateLegal(args, !!this.agreementInstance);
+      legalFormula = this.getFormuleLegal();
+    }
+    if (!agreementResult?.result || this.idcc === SupportedCc.default) {
+      return {
         detail: {
           chosenResult: "LEGAL",
-          legalResult: legalResult.result,
+          legalResult: legalResult?.result,
         },
-        formula: this.getFormule(),
-        missingArgs: legalResult.missingArgs,
-        result: legalResult.result,
+        formula: legalFormula,
+        ineligibility: legalResult?.ineligibility,
+        missingArgs: legalResult?.missingArgs ?? [],
+        result: legalResult?.result,
         situation: this.data.situation,
       };
-
-    if (this.idcc === SupportedCc.default) {
-      return result;
     }
+    const chosenResult =
+      !legalResult?.result || this.hasNoLegalIndemnity()
+        ? "HAS_NO_LEGAL"
+        : this.compareLegalAndAgreement(
+          legalResult.result.value as number,
+          agreementResult.result.value as number | undefined
+        );
 
-    const agreementResult = this.calculate(
-      args,
-      "contrat salarié . indemnité de licenciement . résultat conventionnel"
-    );
-
-    return super.compareAndSetResult(
-      legalResult,
-      agreementResult,
-      this.getFormule(),
-      result
-    );
-  }
-
-  protected convertedResult(
-    evaluatedNode: EvaluatedNode
-  ): PublicodesIndemniteLicenciementResult {
-    return {
-      unit: evaluatedNode.unit,
-      value: evaluatedNode.nodeValue,
-    };
-  }
-
-  private mapIneligibility(
-    text: string
-  ): PublicodesData<PublicodesIndemniteLicenciementResult> {
     return {
       detail: {
-        legalResult: { value: 0 },
+        agreementResult: agreementResult.result,
+        chosenResult,
+        legalResult: legalResult?.result,
       },
-      ineligibility: text,
-      missingArgs: [],
-      result: { value: 0 },
-      situation: [],
+      formula: chosenResult !== "LEGAL" ? agreementFormula : legalFormula,
+      ineligibility: agreementResult.ineligibility,
+      missingArgs: agreementResult.missingArgs,
+      result:
+        chosenResult === "LEGAL" ? legalResult?.result : agreementResult.result,
+      situation: agreementResult.situation,
     };
-  }
-
-  private calculateSituation(
-    args: Record<string, string | undefined>,
-    targetRule?: string
-  ) {
-    let newArgs = args;
-
-    const ineligibilityInstance =
-      new IneligibilityRuptureConventionnelleFactory().create(this.idcc);
-    const ineligibility = ineligibilityInstance.getIneligibility(newArgs);
-    if (ineligibility) {
-      return this.mapIneligibility(ineligibility);
-    }
-    const missingArgSeniority = this.getMissingArg(args, [
-      "contrat salarié . indemnité de licenciement . date d'entrée",
-      "contrat salarié . indemnité de licenciement . date de sortie",
-    ]);
-    if (!missingArgSeniority) {
-      const agreement = new SeniorityFactory().create(this.idcc);
-      const agreementSeniority: SeniorityResult = agreement.computeSeniority(
-        agreement.mapSituation(args)
-      );
-      const legal = new SeniorityFactory().create(SupportedCc.default);
-      const legalSeniority: SeniorityResult = legal.computeSeniority(
-        legal.mapSituation(args)
-      );
-      if (legalSeniority.value) {
-        newArgs = {
-          ...newArgs,
-          "contrat salarié . indemnité de licenciement . ancienneté en année":
-            legalSeniority.value.toString(),
-          ...legalSeniority.extraInfos,
-        };
-      }
-      if (agreementSeniority.value) {
-        newArgs = {
-          ...newArgs,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            agreementSeniority.value.toString(),
-          ...agreementSeniority.extraInfos,
-        };
-      }
-    }
-
-    const missingArgRequiredSeniority = this.getMissingArg(args, [
-      "contrat salarié . indemnité de licenciement . date d'entrée",
-      "contrat salarié . indemnité de licenciement . date de sortie",
-      "contrat salarié . indemnité de licenciement . date de notification",
-    ]);
-    if (!missingArgRequiredSeniority) {
-      const agreement = new SeniorityFactory().create(this.idcc);
-      const agreementRequiredSeniority = agreement.computeRequiredSeniority(
-        agreement.mapRequiredSituation(args)
-      );
-      if (agreementRequiredSeniority.value) {
-        newArgs[
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
-        ] = agreementRequiredSeniority.value.toString();
-      }
-    }
-
-    if (
-      !args[
-        "contrat salarié . indemnité de licenciement . salaire de référence"
-      ]
-    ) {
-      const s = new ReferenceSalaryFactory().create(SupportedCc.default);
-      const value = s.computeReferenceSalary({
-        salaires: args.salaryPeriods ? JSON.parse(args.salaryPeriods) : [],
-      });
-      if (value) {
-        newArgs = {
-          ...newArgs,
-          "contrat salarié . indemnité de licenciement . salaire de référence":
-            value.toString(),
-        };
-      }
-    }
-    if (
-      !args[
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
-      ]
-    ) {
-      const s = new ReferenceSalaryFactory().create(this.idcc);
-      const value = s.computeReferenceSalary(
-        s.mapSituation
-          ? s.mapSituation(args)
-          : {
-              salaires: args.salaryPeriods
-                ? JSON.parse(args.salaryPeriods)
-                : [],
-            }
-      );
-      if (value) {
-        newArgs = {
-          ...newArgs,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            value.toString(),
-        };
-      }
-    }
-    const situation = this.removeNonPublicodeFields(newArgs);
-    return super.setSituation(situation, targetRule);
   }
 }
 

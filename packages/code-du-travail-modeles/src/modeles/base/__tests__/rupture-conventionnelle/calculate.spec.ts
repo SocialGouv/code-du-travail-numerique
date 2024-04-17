@@ -21,8 +21,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(1000);
-    expect(result.unit?.numerators).toEqual(["€"]);
+    expect(result?.value).toEqual(1000);
+    expect(result?.unit?.numerators).toEqual(["€"]);
   });
 
   test("Vérifier qu'un missing args s'affiche lorsque la date d'entrée est manquante", () => {
@@ -62,8 +62,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(875);
-    expect(result.unit?.numerators).toEqual(["€"]);
+    expect(result?.value).toEqual(875);
+    expect(result?.unit?.numerators).toEqual(["€"]);
   });
 
   test("Vérifier que la grille de salaire est bien prise en compte", () => {
@@ -89,7 +89,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       typeContratTravail: "cdi",
     });
     expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(875);
-    expect(result.unit?.numerators).toEqual(["€"]);
+    expect(result?.value).toEqual(875);
+    expect(result?.unit?.numerators).toEqual(["€"]);
   });
 });

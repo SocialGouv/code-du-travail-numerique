@@ -28,7 +28,7 @@ describe("Ordre des questions pour la CC 650", () => {
     });
 
     it("doit demander en premier si la date de notification est avant le 1er janvier 2024", () => {
-      expect(result.missingArgs).toHaveNextMissingRule(
+      expect(result?.missingArgs).toHaveNextMissingRule(
         "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notifier avant le 1er janvier 2024"
       );
     });
@@ -46,7 +46,7 @@ describe("Ordre des questions pour la CC 650", () => {
       });
 
       it("doit demander son age", () => {
-        expect(result.missingArgs).toHaveNextMissingRule(
+        expect(result?.missingArgs).toHaveNextMissingRule(
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age"
         );
       });
@@ -65,7 +65,7 @@ describe("Ordre des questions pour la CC 650", () => {
       });
 
       it("doit demander sa catégorie pro", () => {
-        expect(result.missingArgs).toHaveNextMissingRule(
+        expect(result?.missingArgs).toHaveNextMissingRule(
           "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle"
         );
       });
@@ -85,7 +85,7 @@ describe("Ordre des questions pour la CC 650", () => {
         });
 
         it("doit demander son age", () => {
-          expect(result.missingArgs).toHaveNextMissingRule(
+          expect(result?.missingArgs).toHaveNextMissingRule(
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age"
           );
         });
@@ -106,7 +106,7 @@ describe("Ordre des questions pour la CC 650", () => {
         });
 
         it("doit demander si forfait jour", () => {
-          expect(result.missingArgs).toHaveNextMissingRule(
+          expect(result?.missingArgs).toHaveNextMissingRule(
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour"
           );
         });

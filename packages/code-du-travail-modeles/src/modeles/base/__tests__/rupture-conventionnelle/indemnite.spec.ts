@@ -30,8 +30,8 @@ describe("Rupture conventionnelle légale de licenciement pour un employé", () 
         "contrat salarié . indemnité de licenciement . salaire de référence":
           salary,
       });
-      expect(result.value).toEqual(expectedCompensation);
-      expect(result.unit?.numerators).toEqual(["€"]);
+      expect(result?.value).toEqual(expectedCompensation);
+      expect(result?.unit?.numerators).toEqual(["€"]);
       expect(missingArgs).toEqual([]);
     }
   );
@@ -62,8 +62,8 @@ describe("Rupture conventionnelle légale de licenciement pour un employé", () 
         "contrat salarié . indemnité de licenciement . salaire de référence":
           salary,
       });
-      expect(result.value).toEqual(expectedCompensation);
-      expect(result.unit?.numerators).toEqual(["€"]);
+      expect(result?.value).toEqual(expectedCompensation);
+      expect(result?.unit?.numerators).toEqual(["€"]);
       expect(missingArgs).toEqual([]);
     }
   );

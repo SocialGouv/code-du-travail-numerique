@@ -1,8 +1,10 @@
 import {
   DismissalReason573,
+  DismissalReason1501,
   DismissalReason1702,
-  DismissalReason2216,
+  DismissalReason1996,
   DismissalReason2120,
+  DismissalReason2216,
 } from "../../conventions";
 import { SupportedCc } from "..";
 import { DismissalReasonDefault } from "../dismissal-reason";
@@ -13,6 +15,10 @@ export class DismissalReasonFactory {
     switch (idcc) {
       case SupportedCc.IDCC0573:
         return new DismissalReason573();
+      case SupportedCc.IDCC1501:
+        return new DismissalReason1501();
+      case SupportedCc.IDCC1996:
+        return new DismissalReason1996();
       case SupportedCc.IDCC1702:
         return new DismissalReason1702();
       case SupportedCc.IDCC2120:

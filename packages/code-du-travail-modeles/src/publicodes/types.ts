@@ -6,7 +6,13 @@ import type {
   Unit,
 } from "publicodes";
 
-import type { Formula } from "../modeles";
+import type {
+  Formula,
+  IReferenceSalary,
+  ISeniority,
+  SupportedCc,
+} from "../modeles";
+import type { IInegibility } from "../modeles/common/types/ineligibility";
 import type {
   IndemniteLicenciementPublicodes,
   PreavisRetraitePublicodes,
@@ -73,16 +79,16 @@ export type PublicodesState = {
 export type PublicodesData<TResult> = {
   situation: SituationElement[];
   missingArgs: MissingArgs[];
-  result: TResult;
+  result?: TResult;
   ineligibility?: string;
-  detail: {
+  detail?: {
     chosenResult?: "AGREEMENT" | "HAS_NO_LEGAL" | "LEGAL" | "SAME";
-    legalResult: TResult;
+    legalResult?: TResult;
     agreementResult?: TResult;
   };
 };
 export type PublicodesDataWithFormula<TResult> = PublicodesData<TResult> & {
-  formula: Formula;
+  formula?: Formula;
 };
 
 export enum PublicodesSimulator {
@@ -129,3 +135,11 @@ export type PublicodesInstance<T extends PublicodesSimulator> =
     : T extends PublicodesSimulator.RUPTURE_CONVENTIONNELLE
     ? RuptureConventionnellePublicodes
     : never;
+
+export interface IndemniteDepartInstance {
+  ineligibility: IInegibility;
+
+  seniority: ISeniority<SupportedCc>;
+
+  salary: IReferenceSalary<SupportedCc>;
+}

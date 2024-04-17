@@ -24,8 +24,8 @@ describe("Mise à la retraite", () => {
         "contrat salarié . préavis de retraite en jours"
       );
 
-      expect(result.value).toEqual(expectedNotice);
-      expect(result.unit).toEqual(expectedUnit);
+      expect(result?.value).toEqual(expectedNotice);
+      expect(result?.unit).toEqual(expectedUnit);
       expect(missingArgs).toEqual([]);
     }
   );
@@ -50,8 +50,8 @@ describe("Départ à la retraite", () => {
         "contrat salarié . préavis de retraite en jours"
       );
 
-      expect(result.value).toEqual(expectedNotice);
-      expect(result.unit).toEqual(expectedUnit);
+      expect(result?.value).toEqual(expectedNotice);
+      expect(result?.unit).toEqual(expectedUnit);
       expect(missingArgs).toEqual([]);
     }
   );

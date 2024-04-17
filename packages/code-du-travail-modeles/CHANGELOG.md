@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.134.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.0...v4.134.1) (2024-04-16)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.134.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.133.0...v4.134.0) (2024-04-16)
+
+### Features
+
+- desinstaller ancienne contrib ([#5712](https://github.com/SocialGouv/code-du-travail-numerique/issues/5712)) ([a9504ba](https://github.com/SocialGouv/code-du-travail-numerique/commit/a9504ba0ceda5ac44d373704ae302b7f3306014d)), closes [#5752](https://github.com/SocialGouv/code-du-travail-numerique/issues/5752)
+
 # [4.133.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.132.0...v4.133.0) (2024-04-09)
 
 ### Bug Fixes

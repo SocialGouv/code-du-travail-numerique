@@ -72,11 +72,11 @@ const createContratTravailStore: StoreSlice<
               ? PublicodesSimulator.INDEMNITE_LICENCIEMENT
               : PublicodesSimulator.RUPTURE_CONVENTIONNELLE;
           const publicodes = loadPublicodes<typeof simulator>(simulator);
-          const { result, ineligibility } = publicodes.calculate(
+          const { ineligibility } = publicodes.calculate(
             get().situationData.situation
           );
 
-          if (result.value === 0 && ineligibility) {
+          if (ineligibility) {
             errorEligibility = ineligibility;
           }
         } catch (e) {

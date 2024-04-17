@@ -417,7 +417,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               <h3
                                 class="sc-kAyceB dvmaTz"
-                                data-testid="undefined-0"
                                 style="margin: 0px;"
                               >
                                 Les textes internationaux
@@ -564,7 +563,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               <h3
                                 class="sc-kAyceB dvmaTz"
-                                data-testid="undefined-1"
                                 style="margin: 0px;"
                               >
                                 Les textes européens
@@ -753,7 +751,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               <h3
                                 class="sc-kAyceB dvmaTz"
-                                data-testid="undefined-2"
                                 style="margin: 0px;"
                               >
                                 La Constitution française
@@ -907,7 +904,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               <h3
                                 class="sc-kAyceB dvmaTz"
-                                data-testid="undefined-3"
                                 style="margin: 0px;"
                               >
                                 Lois, ordonnances, décrets et arrêtés
@@ -1029,7 +1025,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               <h3
                                 class="sc-kAyceB dvmaTz"
-                                data-testid="undefined-4"
                                 style="margin: 0px;"
                               >
                                 Les conventions et accords collectifs
@@ -1148,7 +1143,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               <h3
                                 class="sc-kAyceB dvmaTz"
-                                data-testid="undefined-5"
                                 style="margin: 0px;"
                               >
                                 Les usages et les engagements unilatéraux
@@ -1248,7 +1242,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               <h3
                                 class="sc-kAyceB dvmaTz"
-                                data-testid="undefined-6"
                                 style="margin: 0px;"
                               >
                                 Le règlement intérieur de l’entreprise
@@ -1345,7 +1338,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               <h3
                                 class="sc-kAyceB dvmaTz"
-                                data-testid="undefined-7"
                                 style="margin: 0px;"
                               >
                                 Le contrat de travail
@@ -1548,7 +1540,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       >
                         <h3
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-0"
                           style="margin: 0px;"
                         >
                           Les textes internationaux et européens
@@ -1657,7 +1648,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       >
                         <h3
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-1"
                           style="margin: 0px;"
                         >
                           La Constitution
@@ -1776,7 +1766,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       >
                         <h3
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-2"
                           style="margin: 0px;"
                         >
                           Lois, ordonnances et décrets (Code du travail)
@@ -1814,7 +1803,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   >
                     <h4
                       class="sc-kAyceB dvmaTz"
-                      data-testid="heading"
                     >
                       Hiérarchie entre le Code du travail et les conventions et accords collectifs
                     </h4>
@@ -1866,7 +1854,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               >
                                 <h5
                                   class="sc-kAyceB dvmaTz"
-                                  data-testid="undefined-0"
                                   style="margin: 0px;"
                                 >
                                   Les conventions et accords collectifs doivent respecter le Code du travail
@@ -1932,7 +1919,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               >
                                 <h5
                                   class="sc-kAyceB dvmaTz"
-                                  data-testid="undefined-1"
                                   style="margin: 0px;"
                                 >
                                   Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail
@@ -2001,7 +1987,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               >
                                 <h5
                                   class="sc-kAyceB dvmaTz"
-                                  data-testid="undefined-2"
                                   style="margin: 0px;"
                                 >
                                   En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
@@ -2159,7 +2144,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       >
                         <h3
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-3"
                           style="margin: 0px;"
                         >
                           Les conventions et accords collectifs
@@ -2200,7 +2184,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     </p>
                     <h4
                       class="sc-kAyceB dvmaTz"
-                      data-testid="heading"
                     >
                       Hiérarchie entre convention collective de branche et accord d’entreprise
                     </h4>
@@ -2287,7 +2270,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     </p>
                     <h4
                       class="sc-kAyceB dvmaTz"
-                      data-testid="heading"
                     >
                       Hiérarchie entre accord de groupe et accord d’entreprise
                     </h4>
@@ -2296,7 +2278,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     </p>
                     <h4
                       class="sc-kAyceB dvmaTz"
-                      data-testid="heading"
                     >
                       Hiérarchie entre accord d’entreprise et accord d’établissement
                     </h4>
@@ -2389,7 +2370,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       >
                         <h3
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-4"
                           style="margin: 0px;"
                         >
                           Les usages et les engagements unilatéraux
@@ -2490,7 +2470,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       >
                         <h3
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-5"
                           style="margin: 0px;"
                         >
                           Le règlement intérieur de l’entreprise
@@ -2601,7 +2580,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       >
                         <h3
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-6"
                           style="margin: 0px;"
                         >
                           Le contrat de travail
@@ -2713,7 +2691,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-kgOKUu lpmVkr sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
@@ -2771,7 +2748,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-kgOKUu lpmVkr sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Outils populaires
@@ -2809,7 +2785,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-kgOKUu lpmVkr sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Modèles populaires
@@ -2851,7 +2826,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-kgOKUu lpmVkr sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Fiches pratiques populaires
@@ -2889,7 +2863,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-kgOKUu lpmVkr sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Conventions collectives populaires

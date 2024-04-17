@@ -1,8 +1,8 @@
 import { fireEvent, render } from "@testing-library/react";
 import React from "react";
-import userEvent from "@testing-library/user-event";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
-import { CalculateurIndemniteLicenciement } from "..";
+import userEvent from "@testing-library/user-event";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(

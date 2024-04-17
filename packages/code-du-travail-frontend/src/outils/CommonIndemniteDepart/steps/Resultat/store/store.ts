@@ -163,14 +163,16 @@ const createResultStore: StoreSlice<
               : undefined,
           ...get().situationData.situation,
         };
-        publicodesSituation = publicodes.calculateResult(situation);
+        publicodesSituation = publicodes.calculate(situation);
         isAgreementBetter =
-          publicodesSituation.detail.chosenResult === "AGREEMENT";
+          publicodesSituation.detail?.chosenResult === "AGREEMENT";
         isAgreementEqualToLegal =
-          publicodesSituation.detail.chosenResult === "SAME";
+          publicodesSituation.detail?.chosenResult === "SAME";
         agreementHasNoLegalIndemnity =
-          publicodesSituation.detail.chosenResult === "HAS_NO_LEGAL";
-        formula = publicodesSituation.formula;
+          publicodesSituation.detail?.chosenResult === "HAS_NO_LEGAL";
+        if (publicodesSituation.formula) {
+          formula = publicodesSituation.formula;
+        }
       } catch (e) {
         errorPublicodes = true;
         Sentry.captureException(e);
@@ -231,13 +233,13 @@ const createResultStore: StoreSlice<
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.error.errorPublicodes = errorPublicodes;
-          state.resultData.input.result = publicodesSituation.result;
+          state.resultData.input.result = publicodesSituation.result!;
           state.resultData.input.formula = formula;
           state.resultData.input.legalReferences = legalReferences;
-          state.resultData.input.publicodesLegalResult =
-            publicodesSituation.detail.legalResult;
+          state.resultData.input.publicodesLegalResult = publicodesSituation
+            .detail?.legalResult ?? { value: 0 };
           state.resultData.input.publicodesAgreementResult =
-            publicodesSituation.detail.agreementResult;
+            publicodesSituation.detail?.agreementResult;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
           state.resultData.input.agreementInformations = agreementInformations;

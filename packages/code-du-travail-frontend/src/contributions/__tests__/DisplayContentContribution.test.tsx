@@ -19,13 +19,11 @@ describe("DisplayContentContribution", () => {
           >
             <h2
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Mon titre
             </h2>
             <h3
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Mon sous titre
             </h3>
@@ -48,13 +46,11 @@ describe("DisplayContentContribution", () => {
           >
             <h4
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Mon title
             </h4>
             <h5
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Mon title
             </h5>
@@ -77,7 +73,6 @@ describe("DisplayContentContribution", () => {
           >
             <h6
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Mon title
             </h6>

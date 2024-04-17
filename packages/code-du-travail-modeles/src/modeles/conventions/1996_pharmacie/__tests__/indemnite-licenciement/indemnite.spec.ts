@@ -34,8 +34,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1996", () => {
         );
 
         expect(missingArgs).toEqual([]);
-        expect(result.value).toEqual(expectedCompensation);
-        expect(result.unit?.numerators).toEqual(["€"]);
+        expect(result?.value).toEqual(expectedCompensation);
+        expect(result?.unit?.numerators).toEqual(["€"]);
       }
     );
   });
@@ -79,9 +79,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 1996", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
 
-        expect(result.value).toEqual(expectedCompensation);
+        expect(result?.value).toEqual(expectedCompensation);
         expect(missingArgs).toEqual([]);
-        expect(result.unit?.numerators).toEqual(["€"]);
+        expect(result?.unit?.numerators).toEqual(["€"]);
       }
     );
     test("Si l'inaptitude suite à un accident ou maladie professionnelle' alors pas de question pour motif eco", () => {
@@ -102,9 +102,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 1996", () => {
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
 
-      expect(result.value).toEqual(8820);
+      expect(result?.value).toEqual(8820);
       expect(missingArgs).toEqual([]);
-      expect(result.unit?.numerators).toEqual(["€"]);
+      expect(result?.unit?.numerators).toEqual(["€"]);
     });
   });
 });

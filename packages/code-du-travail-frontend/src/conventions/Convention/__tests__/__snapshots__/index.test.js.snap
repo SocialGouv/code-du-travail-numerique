@@ -64,7 +64,6 @@ exports[`<Convention /> renders 1`] = `
             >
               <h3
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-0"
                 style="margin: 0px;"
               >
                 Congés et repos
@@ -129,7 +128,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-0"
                           style="margin: 0px;"
                         >
                           Jours fériés et ponts dans le secteur privé
@@ -243,7 +241,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-1"
                           style="margin: 0px;"
                         >
                           Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
@@ -383,7 +380,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-2"
                           style="margin: 0px;"
                         >
                           Les congés pour événements familiaux
@@ -500,7 +496,6 @@ exports[`<Convention /> renders 1`] = `
             >
               <h3
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-1"
                 style="margin: 0px;"
               >
                 Départ de l'entreprise
@@ -565,7 +560,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-0"
                           style="margin: 0px;"
                         >
                            Quelle est la durée de préavis en cas de licenciement ?
@@ -705,7 +699,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-1"
                           style="margin: 0px;"
                         >
                            Quelle est la durée du préavis en cas de démission ?
@@ -819,7 +812,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-2"
                           style="margin: 0px;"
                         >
                            Quelle est la durée de préavis en cas de départ à la retraite ?
@@ -959,7 +951,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-3"
                           style="margin: 0px;"
                         >
                            Quelle est la durée de préavis en cas de mise à la retraite ?
@@ -1099,7 +1090,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-4"
                           style="margin: 0px;"
                         >
                           Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
@@ -1213,7 +1203,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-5"
                           style="margin: 0px;"
                         >
                           Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
@@ -1330,7 +1319,6 @@ exports[`<Convention /> renders 1`] = `
             >
               <h3
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-2"
                 style="margin: 0px;"
               >
                 Embauche et contrat de travail
@@ -1395,7 +1383,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-0"
                           style="margin: 0px;"
                         >
                           Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
@@ -1509,7 +1496,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-1"
                           style="margin: 0px;"
                         >
                           Comment déterminer l'ancienneté du salarié ?
@@ -1649,7 +1635,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-2"
                           style="margin: 0px;"
                         >
                            Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
@@ -1763,7 +1748,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-3"
                           style="margin: 0px;"
                         >
                           Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
@@ -1877,7 +1861,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-4"
                           style="margin: 0px;"
                         >
                            Embauche en contrat d'extra (CDD d'usage)
@@ -1952,7 +1935,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-5"
                           style="margin: 0px;"
                         >
                           Quelles sont les conditions de cumul d'emplois ?
@@ -2069,7 +2051,6 @@ exports[`<Convention /> renders 1`] = `
             >
               <h3
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-3"
                 style="margin: 0px;"
               >
                 Salaire et Rémunération
@@ -2134,7 +2115,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-0"
                           style="margin: 0px;"
                         >
                           Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
@@ -2209,7 +2189,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-1"
                           style="margin: 0px;"
                         >
                           Quelles sont les primes prévues par la convention collective ?
@@ -2323,7 +2302,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-2"
                           style="margin: 0px;"
                         >
                           Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
@@ -2440,7 +2418,6 @@ exports[`<Convention /> renders 1`] = `
             >
               <h3
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-4"
                 style="margin: 0px;"
               >
                 Santé, sécurité et conditions de travail
@@ -2505,7 +2482,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-0"
                           style="margin: 0px;"
                         >
                           En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
@@ -2752,7 +2728,6 @@ exports[`<Convention /> renders 1`] = `
                       >
                         <h4
                           class="sc-kAyceB dvmaTz"
-                          data-testid="undefined-1"
                           style="margin: 0px;"
                         >
                           En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
@@ -2977,7 +2952,6 @@ exports[`<Convention /> renders 1`] = `
             >
               <h3
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-0"
                 style="margin: 0px;"
               >
                 Salaires minima hiérarchiques
@@ -3168,7 +3142,6 @@ exports[`<Convention /> renders 1`] = `
             >
               <h3
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-1"
                 style="margin: 0px;"
               >
                 Durée du travail, répartition et aménagement des horaires
@@ -3607,7 +3580,6 @@ exports[`<Convention /> renders 1`] = `
             >
               <h3
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-2"
                 style="margin: 0px;"
               >
                 Classifications

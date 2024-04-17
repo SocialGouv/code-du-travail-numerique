@@ -39,8 +39,8 @@ test.each`
     );
 
     expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(expectedResult);
-    expect(result.unit).toEqual(expectedPeriod);
+    expect(result?.value).toEqual(expectedResult);
+    expect(result?.unit).toEqual(expectedPeriod);
   }
 );
 
@@ -65,7 +65,7 @@ test.each`
     );
 
     expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(expectedResult);
-    expect(result.unit).toEqual("mois");
+    expect(result?.value).toEqual(expectedResult);
+    expect(result?.unit).toEqual("mois");
   }
 );

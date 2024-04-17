@@ -292,7 +292,6 @@ exports[`<MentionLegales /> should render 1`] = `
             </p>
             <h3
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Signaler un dysfonctionnement
             </h3>
@@ -311,7 +310,6 @@ exports[`<MentionLegales /> should render 1`] = `
             </p>
             <h3
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               En savoir plus
             </h3>
@@ -408,7 +406,6 @@ exports[`<MentionLegales /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
@@ -466,7 +463,6 @@ exports[`<MentionLegales /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Outils populaires
@@ -504,7 +500,6 @@ exports[`<MentionLegales /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Modèles populaires
@@ -546,7 +541,6 @@ exports[`<MentionLegales /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Fiches pratiques populaires
@@ -584,7 +578,6 @@ exports[`<MentionLegales /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Conventions collectives populaires

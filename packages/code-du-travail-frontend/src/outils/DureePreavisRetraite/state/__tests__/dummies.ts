@@ -54,7 +54,7 @@ class PublicodesStub extends PreavisRetraitePublicodes {
     this.data = data;
   }
 
-  execute: (rule: string) => PublicodesPreavisRetraiteResult = () =>
+  execute: (rule: string) => PublicodesPreavisRetraiteResult | undefined = () =>
     publicodesData.result;
   setSituation: (
     args: Record<string, any>
