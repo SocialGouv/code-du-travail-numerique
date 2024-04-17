@@ -6,7 +6,11 @@ export class IneligibilityLegalIndemniteLicenciement implements IInegibility {
   ): string | undefined {
     if (args.typeContratTravail && args.typeContratTravail === "cdd") {
       return `
-      <p>L’indemnité de licenciement n’est pas due pour les CDD et contrats de travail temporaires. Sous certaines conditions, le salarié peut avoir le droit à une <a href="/outils/indemnite-precarite">indemnité de précarité</a>.</p>
+        <p>
+          L’indemnité de licenciement ne concerne pas les salariés en CDD et en contrat de travail temporaire.
+          Sous certaines conditions, le salarié peut avoir le droit à une 
+          <a href="/outils/indemnite-precarite">indemnité de précarité</a>.
+        </p>
       `;
     } else if (
       args.licenciementFauteGrave &&
