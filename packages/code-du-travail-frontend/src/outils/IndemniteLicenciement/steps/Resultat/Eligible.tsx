@@ -148,7 +148,7 @@ export default function Eligible() {
               value: licenciementInaptitude === "oui" ? "Oui" : "Non",
               detail:
                 !isAgreementBetter && licenciementInaptitude === "oui"
-                  ? "Le salarié ayant été licencié pour inaptitude suite à un accident du travail ou une maladie professionnelle reconnue, le montant de l&apos;indemnité de licenciement légale est doublé"
+                  ? "Le salarié ayant été licencié pour inaptitude suite à un accident du travail ou une maladie professionnelle reconnue, le montant de l'indemnité de licenciement légale est doublé"
                   : undefined,
             },
             {
