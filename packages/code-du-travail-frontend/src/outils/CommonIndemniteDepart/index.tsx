@@ -18,6 +18,7 @@ type Props = {
   displayTitle: string;
   tool: IndemniteDepartType;
   steps: Step<IndemniteDepartStepName>[];
+  hasFeedbackPopup: boolean;
 };
 
 type SimulateurProps = Props & {
@@ -41,7 +42,7 @@ const IndemniteDepartSimulator = ({
   title,
   icon,
   displayTitle,
-  tool,
+  hasFeedbackPopup,
   steps,
 }: SimulateurProps): JSX.Element => {
   const store = useContext(IndemniteDepartContext);
@@ -122,7 +123,7 @@ const IndemniteDepartSimulator = ({
         ]}
         hiddenStep={getHiddenSteps()}
       />
-      <Feedback />
+      {hasFeedbackPopup && <Feedback />}
     </Flex>
   );
 };
@@ -133,6 +134,7 @@ export const CalculateurIndemnite = ({
   displayTitle,
   tool,
   steps,
+  hasFeedbackPopup,
 }: Props): JSX.Element => {
   const store = React.useRef(createIndemniteDepartStore(tool)).current;
 
@@ -144,6 +146,7 @@ export const CalculateurIndemnite = ({
         displayTitle={displayTitle}
         tool={tool}
         steps={steps}
+        hasFeedbackPopup={hasFeedbackPopup}
       />
     </IndemniteDepartProvider>
   );

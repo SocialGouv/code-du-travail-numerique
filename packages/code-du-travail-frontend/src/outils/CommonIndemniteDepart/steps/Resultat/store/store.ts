@@ -20,16 +20,11 @@ import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-custo
 import { AgreementInformation, hasNoBetterAllowance } from "../../../common";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
-import { IndemniteDepartStepName } from "../../..";
-import {
-  MatomoActionEvent,
-  MatomoBaseEvent,
-  MatomoSimulatorEvent,
-} from "../../../../../lib";
-import { push as matopush } from "@socialgouv/matomo-next";
 import getSupportedCc from "../../../common/usecase/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
+import { eventEmitter } from "../../../events/emitter";
+import { EventType } from "../../../events/events";
 
 const initialState: ResultStoreData = {
   input: {
@@ -89,14 +84,7 @@ const createResultStore: StoreSlice<
         ancienneteEligibility &&
         informationEligibility;
 
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoBaseEvent.OUTIL,
-        MatomoActionEvent.INDEMNITE_LICENCIEMENT,
-        isEligible
-          ? IndemniteDepartStepName.Resultat
-          : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
-      ]);
+      eventEmitter.dispatch(EventType.SEND_RESULT_EVENT, isEligible);
 
       set(
         produce((state: ResultStoreSlice) => {

@@ -7,7 +7,8 @@ import { IndemniteDepartType } from "../types";
 import { Step } from "../Simulator";
 import {
   StepAgreement,
-  StepInformations, StepSalaires,
+  StepInformations,
+  StepSalaires,
 } from "../CommonIndemniteDepart/steps";
 import {
   StepResultat,
@@ -15,6 +16,7 @@ import {
   StepContratTravail,
   StepAnciennete,
 } from "./steps";
+import { useRuptureCoEventEmitter } from "./events/useRuptureCoEventEmitter";
 
 type Props = {
   icon: string;
@@ -51,7 +53,9 @@ const steps: Step<IndemniteDepartStepName>[] = [
   {
     label: "Salaires",
     name: IndemniteDepartStepName.Salaires,
-    Component: () => <StepSalaires type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE} />,
+    Component: () => (
+      <StepSalaires type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE} />
+    ),
   },
   {
     label: "Indemnité",
@@ -65,6 +69,7 @@ export const CalculateurRuptureConventionnelle = ({
   title,
   displayTitle,
 }: Props): JSX.Element => {
+  useRuptureCoEventEmitter();
   return (
     <CalculateurIndemnite
       icon={icon}
@@ -72,6 +77,7 @@ export const CalculateurRuptureConventionnelle = ({
       displayTitle={displayTitle}
       tool={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
       steps={steps}
+      hasFeedbackPopup={false}
     />
   );
 };

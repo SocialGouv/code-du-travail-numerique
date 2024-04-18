@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "build:dev": "swc src -d lib",
+    "build:dev": "swc ./src -d lib --strip-leading-paths",
     "type-check": "tsc --noEmit",
     "dev": "npm run build:dev -- --watch",
     "lint:js": "eslint src/**/*.js",
