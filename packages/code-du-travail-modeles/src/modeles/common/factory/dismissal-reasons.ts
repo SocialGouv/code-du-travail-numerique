@@ -1,6 +1,5 @@
 import {
   DismissalReason573,
-  DismissalReason1404,
   DismissalReason1486,
   DismissalReason1501,
   DismissalReason1702,
@@ -32,8 +31,6 @@ export class DismissalReasonFactory {
         return new DismissalReason2120();
       case SupportedCc.IDCC2216:
         return new DismissalReason2216();
-      case SupportedCc.IDCC1404:
-        return new DismissalReason1404();
       case SupportedCc.default:
       default:
         return new DismissalReasonDefault();
