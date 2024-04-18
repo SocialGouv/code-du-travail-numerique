@@ -12,8 +12,8 @@ import {
 } from "../../../CommonIndemniteDepart/steps/Resultat/components";
 import ShowDetails from "../../../common/ShowDetails";
 import {
-  Notification,
   getSupportedAgreement,
+  Notification,
 } from "@socialgouv/modeles-social";
 import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
 import PubliReferences from "../../../common/PubliReferences";
