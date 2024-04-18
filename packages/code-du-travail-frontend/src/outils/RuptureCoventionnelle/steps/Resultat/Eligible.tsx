@@ -21,8 +21,8 @@ import Disclaimer from "../../../common/Disclaimer";
 import { getResultMessage } from "./utils";
 import { IndemniteDepartType } from "../../../types";
 import { AgreementsInjector } from "../../../CommonIndemniteDepart/agreements";
-import { Paragraph } from "@socialgouv/cdtn-ui/lib";
 import { StyledLink } from "../../../CommonIndemniteDepart/steps/Resultat/components/Result";
+import { Paragraph } from "@socialgouv/cdtn-ui";
 
 const Eligible = () => {
   const store = useContext(IndemniteDepartContext);

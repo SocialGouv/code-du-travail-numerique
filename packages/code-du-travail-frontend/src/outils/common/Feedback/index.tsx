@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Questionnaire } from "./Questionnaire";
 import { QuestionnaireAdvanced } from "./QuestionnaireAdvanced";
 import { QuestionnaireEnd } from "./QuestionnaireEnd";
-import { Button } from "@socialgouv/cdtn-ui/lib";
+import { Button } from "@socialgouv/cdtn-ui";
 
 export const Feedback = (): JSX.Element => {
   const [status, setStatus] = useState<
