@@ -17,23 +17,6 @@ export default function Result({
   resultMessage,
   maxResult,
 }: Props) {
-  const notifs = [
-    {
-      dottedName: "congé paternité",
-      description: (
-        <span>
-          Ce montant est exonéré d’impôt sur le revenu et de cotisations
-          sociales sous certaines conditions,{" "}
-          <StyledLink
-            href="/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi"
-            target="_blank"
-          >
-            en savoir plus
-          </StyledLink>
-        </span>
-      ),
-    } as Notification,
-  ].concat(notifications);
   return (
     <DIV>
       <SectionTitle hasSmallMarginTop>Indemnité</SectionTitle>
@@ -41,15 +24,15 @@ export default function Result({
         {resultMessage}{" "}
         <HighlightResult>{maxResult.replace(".", ",")}&nbsp;€.</HighlightResult>
         <NoticeNote
-          numberOfElements={notifs.length}
+          numberOfElements={notifications.length}
           currentElement={0}
           isList
         />
       </Paragraph>
-      {notifs.map((notification, index) => (
+      {notifications.map((notification, index) => (
         <Paragraph fontSize="small" noMargin key={index}>
           <NoticeNote
-            numberOfElements={notifs.length}
+            numberOfElements={notifications.length}
             currentElement={1 + index}
           />
           {notification.description}
