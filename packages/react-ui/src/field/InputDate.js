@@ -90,16 +90,7 @@ export const InputDate = ({ value, onChange, invalid, ref, ...props }) => {
 
   const onBlur = () => {
     setIsFocus(false);
-    let baseDate = date;
-    const splitParts = baseDate.split("/");
-    const day = splitParts[0] ?? "";
-    const month = splitParts[1] ?? "";
-    const year = splitParts[2] ?? "";
-    if (year.length === 2) {
-      baseDate = `${day}/${month}/${year < 50 ? `20${year}` : `19${year}`}`;
-    }
-    setDate(baseDate);
-    setIsValid(isValidDate(baseDate));
+    setIsValid(isValidDate(date));
   };
 
   return (
@@ -122,7 +113,7 @@ export const InputDate = ({ value, onChange, invalid, ref, ...props }) => {
         </StyledDateWrapper>
         <StyledDatePicker
           type="date"
-          aria-disabled={!isValid}
+          aria-disabled={true}
           tabIndex={-1}
           min="1900-01-01"
           max="2100-01-01"

@@ -167,7 +167,11 @@ const createResultStore: StoreSlice<
       };
       let errorPublicodes = false;
       const absencePeriods = get().ancienneteData.input.absencePeriods;
-
+      console.log(
+        `Les informations de l'ancienneté sont ${JSON.stringify(
+          get().ancienneteData.input
+        )}`
+      );
       try {
         const situationLegal = {
           ...mapToPublicodesSituationForCalculation(

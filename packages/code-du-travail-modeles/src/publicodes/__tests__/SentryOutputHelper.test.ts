@@ -82,9 +82,9 @@ const situationAvecDate = [
     },
     value: "2011.3333333333333",
   },
-];
+]; // Ça doit failed car la date n'a que deux digits
 
-describe("IndemniteLicenciement::class", () => {
+describe("Classe qui permet de débugguer les console.error issues de Sentry", () => {
   const publicodes = new IndemniteLicenciementPublicodes(
     mergeIndemniteLicenciementModels()
   );

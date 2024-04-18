@@ -6,6 +6,8 @@ export const getDateEntreeErrors = (
 ): Partial<AncienneteStoreError> => {
   let errors: AncienneteStoreError = {};
 
+  console.log(`La date d'entrée est ${state.dateEntree}`);
+
   // Date d'entrée
   if (!state.dateEntree) {
     errors.errorDateEntree = "Veuillez saisir cette date";
