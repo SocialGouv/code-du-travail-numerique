@@ -19,7 +19,7 @@ import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
 import { IndemniteDepartType } from "../../../types";
 import Link from "next/link";
 import { AgreementsInjector } from "../../../CommonIndemniteDepart/agreements";
-import { Paragraph } from "@socialgouv/cdtn-ui/lib";
+import { Paragraph } from "@socialgouv/cdtn-ui";
 import {
   getForMoreInfoMessage,
   getResultMessage,
