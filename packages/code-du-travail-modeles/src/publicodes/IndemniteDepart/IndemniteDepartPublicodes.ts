@@ -10,7 +10,6 @@ import type { AgreementIndemniteCompute } from "./AgreementIndemniteCompute";
 import type { Legal } from "./Legal";
 import { ResultBuilder } from "./ResultBuilder";
 import type { IndemniteDepartOutput } from "./types";
-import { mapLegalRequiredSeniorityArgs, mapLegalSeniorityArgs } from "./utils";
 
 export class IndemniteDepartPublicodes extends PublicodesBase<PublicodesIndemniteLicenciementResult> {
   protected legalInstance: Legal;
@@ -36,10 +35,7 @@ export class IndemniteDepartPublicodes extends PublicodesBase<PublicodesIndemnit
   public calculate(
     args: Record<string, string | undefined>
   ): PublicodesOutput<PublicodesIndemniteLicenciementResult> {
-    const agreementResult = this.agreementInstance?.calculate(
-      args,
-      this
-    );
+    const agreementResult = this.agreementInstance?.calculate(args, this);
 
     if (
       agreementResult?.type === "ineligibility" ||

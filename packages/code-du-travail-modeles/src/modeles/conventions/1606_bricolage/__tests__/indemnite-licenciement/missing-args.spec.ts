@@ -12,8 +12,8 @@ describe("CC 1606 - missing args", () => {
       "contrat salarié . convention collective . bricolage . catégorie professionnelle": `'Cadres'`,
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingQuestion(
+    const result = engine.calculate(input);
+    expect(result).toNextMissingQuestionBeEqual(
       "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
     );
   });

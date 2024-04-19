@@ -10,6 +10,8 @@ import type {
   Formula,
   IReferenceSalary,
   ISeniority,
+  Notification,
+  References,
   SupportedCc,
 } from "../modeles";
 import type { IInegibility } from "../modeles/common/types/ineligibility";
@@ -97,6 +99,8 @@ export type PublicodesResult<TResult> = {
     agreementResult?: TResult;
   };
   formula: Formula;
+  notifications: Notification[];
+  references: References[];
   situation: SituationElement[];
 };
 

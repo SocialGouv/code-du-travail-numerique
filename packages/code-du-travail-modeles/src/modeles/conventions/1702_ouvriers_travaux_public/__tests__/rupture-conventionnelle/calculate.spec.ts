@@ -22,10 +22,10 @@ describe("Un seul type de licenciement pour la CC 1702", () => {
   test("No missing variables", () => {
     const input = {
       "contrat salarié . convention collective": "'IDCC1702'",
-      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-        "non",
       "contrat salarié . convention collective . ouvriers travaux public . rupture conventionnelle . age":
         "40",
+      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+        "non",
     };
 
     const missingVars = engine.calculate(input);

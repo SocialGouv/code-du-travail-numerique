@@ -107,13 +107,13 @@ describe("calculate", () => {
     const result = engine.calculate({
       absencePeriods: "[]",
       "contrat salarié . convention collective": "'IDCC1672'",
-      "contrat salarié . convention collective . sociétés d'assurances . rupture conventionnelle . age":
-        "65",
       "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
         "'Cadres (Classes 5 à 7)'",
-
       "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . avant non cadres":
         "'Non'",
+
+      "contrat salarié . convention collective . sociétés d'assurances . rupture conventionnelle . age":
+        "65",
       "contrat salarié . indemnité de licenciement . date d'entrée":
         "01/01/2012",
       "contrat salarié . indemnité de licenciement . date de notification":

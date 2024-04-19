@@ -157,10 +157,10 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
             "40",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             "40",
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            "10000",
           "contrat salarié . indemnité de licenciement . date de notification":
             "30/01/2024",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "10000",
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
@@ -182,10 +182,10 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
             "40",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
             "40",
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            "10000",
           "contrat salarié . indemnité de licenciement . date de notification":
             "02/02/2024",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "10000",
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );

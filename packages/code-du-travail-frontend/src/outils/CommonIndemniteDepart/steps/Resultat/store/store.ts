@@ -183,11 +183,9 @@ const createResultStore: StoreSlice<
           (item) => item.idcc === agreement.num && item.fullySupported
         )
       ) {
-        agreementReferences = publicodes.getReferences(
-          "résultat conventionnel"
-        );
+        agreementReferences = publicodesSituation?.references ?? [];
 
-        agreementNotifications = publicodes.getNotifications();
+        agreementNotifications = publicodesSituation?.notifications ?? [];
 
         agreementInformations = get()
           .informationsData.input.publicodesInformations.map(

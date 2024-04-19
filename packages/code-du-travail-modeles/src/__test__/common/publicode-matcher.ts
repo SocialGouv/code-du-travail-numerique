@@ -13,7 +13,9 @@ declare global {
       toContainQuestion: () => R;
       toContainValidCdtnType: () => R;
       toHaveNextMissingRule: (rule: string | null) => R;
+      toHaveNextMissingQuestion: (question: string | null) => R;
       toNextMissingRuleBeEqual: (rule: string | null) => R;
+      toNextMissingQuestionBeEqual: (question: string | null) => R;
       toChosenResultBeEqual: (chosenResult: ChosenResult | null) => R;
       toFormulaBeEqual: (
         formula: string | null,
@@ -33,6 +35,7 @@ declare global {
         unit: string | null | undefined
       ) => R;
       toIneligibilityBeEqual: (ineligibility: string | null) => R;
+      toIneligibilityContain: (ineligibility: string | null) => R;
     }
   }
 }
@@ -66,7 +69,8 @@ expect.extend({
         `Expected agreement amount to be "${amount} ${unit}" but received "${result.detail.agreementResult?.result?.value} ${result.detail.agreementResult?.result?.unit?.numerators[0]}"`,
       pass:
         amount === result.detail.agreementResult?.value &&
-        unit === result.detail.agreementResult?.unit?.numerators[0],
+        (unit === undefined ||
+          unit === result.detail.agreementResult?.unit?.numerators[0]),
     };
   },
   toChosenResultBeEqual: (
@@ -153,24 +157,6 @@ expect.extend({
             JSON.stringify(result.formula.explanations)),
     };
   },
-  toHaveNextMissingRule(missingVariables: MissingArgs[], rule: string | null) {
-    const missingVars = missingVariables
-      .filter((arg) => arg.rawNode.cdtn !== undefined)
-      .sort((a, b) => b.indice - a.indice);
-    if (missingVars.length === 0) {
-      return {
-        message: () =>
-          `Expected next question to be "${rule}" but received no next question`,
-        pass: rule === null,
-      };
-    }
-    const nextRule = replaceAll(missingVars[0].name, " - ", " . ");
-    return {
-      message: () =>
-        `Expected next question to be "${rule}" but received "${nextRule}"`,
-      pass: nextRule === rule,
-    };
-  },
   toHaveNextMissingQuestion(
     missingVariables: MissingArgs[],
     question: string | null
@@ -190,6 +176,24 @@ expect.extend({
       message: () =>
         `Expected next question to be "${question}" but received "${nextQuestion}"`,
       pass: nextQuestion === question,
+    };
+  },
+  toHaveNextMissingRule(missingVariables: MissingArgs[], rule: string | null) {
+    const missingVars = missingVariables
+      .filter((arg) => arg.rawNode.cdtn !== undefined)
+      .sort((a, b) => b.indice - a.indice);
+    if (missingVars.length === 0) {
+      return {
+        message: () =>
+          `Expected next question to be "${rule}" but received no next question`,
+        pass: rule === null,
+      };
+    }
+    const nextRule = replaceAll(missingVars[0].name, " - ", " . ");
+    return {
+      message: () =>
+        `Expected next question to be "${rule}" but received "${nextRule}"`,
+      pass: nextRule === rule,
     };
   },
   toIneligibilityBeEqual(
@@ -217,6 +221,31 @@ expect.extend({
       pass: ineligibility === result.ineligibility,
     };
   },
+  toIneligibilityContain(
+    result: PublicodesOutput<any>,
+    ineligibility: string | null
+  ) {
+    if (ineligibility === null) {
+      return {
+        message: () =>
+          `Not expected an ineligibility but received an ineligibility`,
+        pass: result.type !== "ineligibility",
+      };
+    }
+
+    if (result.type !== "ineligibility") {
+      return {
+        message: () => `Expected a ineligibility but received "${result.type}"`,
+        pass: false,
+      };
+    }
+
+    return {
+      message: () =>
+        `Expected ineligibility to be "${ineligibility}" but received "${result.ineligibility}"`,
+      pass: result.ineligibility.includes(ineligibility),
+    };
+  },
   toLegalResultBeEqual(
     result: PublicodesOutput<any>,
     amount: string | null,
@@ -242,6 +271,45 @@ expect.extend({
       pass:
         amount === result.detail.legalResult?.value &&
         unit === result.detail.legalResult?.unit?.numerators[0],
+    };
+  },
+  toNextMissingQuestionBeEqual(
+    result: PublicodesOutput<any>,
+    question: string | null
+  ) {
+    if (question === null && result.type === "missing-args") {
+      const missingVars = result.missingArgs
+        .filter((arg) => arg.rawNode.cdtn !== undefined)
+        .sort((a, b) => b.indice - a.indice);
+      return {
+        message: () =>
+          `Expected no missing args but received missing args.\n\n### Detail:\n${JSON.stringify(
+            missingVars
+          )}\n\n`,
+        pass: missingVars.length === 0,
+      };
+    }
+    if (result.type !== "missing-args") {
+      return {
+        message: () => `Expected missing args but received "${result.type}"`,
+        pass: question === null,
+      };
+    }
+    const missingVariables = result.missingArgs;
+    const missingVars = missingVariables
+      .filter((arg) => arg.rawNode.cdtn !== undefined)
+      .sort((a, b) => b.indice - a.indice);
+    if (missingVars.length === 0) {
+      return {
+        message: () =>
+          `Expected next question to be "${question}" but received no next question`,
+        pass: question === null,
+      };
+    }
+    return {
+      message: () =>
+        `Expected next question to be "${question}" but received "${missingVars[0].rawNode.question}"`,
+      pass: missingVars[0].rawNode.question === question,
     };
   },
   toNextMissingRuleBeEqual(result: PublicodesOutput<any>, rule: string | null) {

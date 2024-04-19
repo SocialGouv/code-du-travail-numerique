@@ -1,4 +1,4 @@
-import type { Formula } from "../../modeles";
+import type { Formula, References } from "../../modeles";
 import type {
   ChosenResult,
   PublicodesIndemniteLicenciementResult,
@@ -13,7 +13,7 @@ export class ResultBuilder {
     legalResult?: IndemniteDepartResult<PublicodesIndemniteLicenciementResult>,
     agreementResult?: IndemniteDepartResult<PublicodesIndemniteLicenciementResult>
   ): PublicodesOutput<PublicodesIndemniteLicenciementResult> {
-    const { chosenResult, result, formula } = this.chosenResult(
+    const { chosenResult, result, formula, references } = this.chosenResult(
       legalResult,
       agreementResult
     );
@@ -25,8 +25,10 @@ export class ResultBuilder {
         legalResult: legalResult?.result,
       },
       formula,
+      notifications: agreementResult?.notifications ?? [],
       result,
       situation,
+      references,
       type: "result",
     };
   }
@@ -38,6 +40,7 @@ export class ResultBuilder {
     chosenResult: ChosenResult;
     result: PublicodesIndemniteLicenciementResult;
     formula: Formula;
+    references: References[];
   } {
     if (!legalResult) {
       if (agreementResult === undefined) {
@@ -48,6 +51,7 @@ export class ResultBuilder {
       return {
         chosenResult: "HAS_NO_LEGAL",
         formula: agreementResult.formula,
+        references: agreementResult.references,
         result: agreementResult.result,
       };
     }
@@ -55,6 +59,7 @@ export class ResultBuilder {
       return {
         chosenResult: "LEGAL",
         formula: legalResult.formula,
+        references: legalResult.references,
         result: legalResult.result,
       };
     }
@@ -62,6 +67,7 @@ export class ResultBuilder {
       return {
         chosenResult: "AGREEMENT",
         formula: agreementResult.formula,
+        references: agreementResult.references,
         result: agreementResult.result,
       };
     }
@@ -73,6 +79,7 @@ export class ResultBuilder {
         return {
           chosenResult: "SAME",
           formula: agreementResult.formula,
+          references: agreementResult.references,
           result: agreementResult.result,
         };
       }
@@ -80,6 +87,7 @@ export class ResultBuilder {
         return {
           chosenResult: "AGREEMENT",
           formula: agreementResult.formula,
+          references: agreementResult.references,
           result: agreementResult.result,
         };
       }
@@ -87,6 +95,7 @@ export class ResultBuilder {
         return {
           chosenResult: "LEGAL",
           formula: legalResult.formula,
+          references: legalResult.references,
           result: legalResult.result,
         };
       }

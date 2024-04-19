@@ -12,8 +12,8 @@ describe("Gestion des licenciements pour la CC675", () => {
       "contrat salarié . convention collective": "'IDCC0675'",
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingRule(
+    const result = engine.calculate(input);
+    expect(result).toNextMissingRuleBeEqual(
       "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle"
     );
   });
@@ -24,8 +24,8 @@ describe("Gestion des licenciements pour la CC675", () => {
       "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'Employés'`,
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingRule(null);
+    const result = engine.calculate(input);
+    expect(result).toNextMissingRuleBeEqual(null);
   });
 
   test("En étant Cadre, il doit demandé l'age", () => {
@@ -34,8 +34,8 @@ describe("Gestion des licenciements pour la CC675", () => {
       "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'Cadres'`,
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingRule(
+    const result = engine.calculate(input);
+    expect(result).toNextMissingRuleBeEqual(
       "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . autres licenciement . age"
     );
   });
@@ -48,8 +48,8 @@ describe("Gestion des licenciements pour la CC675", () => {
         "50",
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingRule(null);
+    const result = engine.calculate(input);
+    expect(result).toNextMissingRuleBeEqual(null);
   });
 
   test("En étant Agents de maîtrise, il doit demandé l'age", () => {
@@ -58,8 +58,8 @@ describe("Gestion des licenciements pour la CC675", () => {
       "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'Agents de maîtrise'`,
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingRule(
+    const result = engine.calculate(input);
+    expect(result).toNextMissingRuleBeEqual(
       "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . agents . autres licenciement . age"
     );
   });
@@ -72,8 +72,8 @@ describe("Gestion des licenciements pour la CC675", () => {
         "50",
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingRule(null);
+    const result = engine.calculate(input);
+    expect(result).toNextMissingRuleBeEqual(null);
   });
 
   describe("Cadres", () => {
@@ -97,7 +97,7 @@ describe("Gestion des licenciements pour la CC675", () => {
     `(
       "Rupture co avec $seniority ans, age $age et sref : $salary => $expectedCompensation €",
       ({ seniority, salary, age, expectedCompensation, seniorityRight }) => {
-        const { missingArgs, detail } = engine.calculate({
+        const result = engine.calculate({
           "contrat salarié . convention collective": "'IDCC0675'",
           "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${CategoryPro675.cadres}'`,
           "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . autres licenciement . age":
@@ -117,8 +117,7 @@ describe("Gestion des licenciements pour la CC675", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
         });
-        expect(missingArgs).toEqual([]);
-        expect(detail?.agreementResult?.value).toEqual(expectedCompensation);
+        expect(result).toAgreementResultBeEqual(expectedCompensation);
       }
     );
   });
@@ -144,7 +143,7 @@ describe("Gestion des licenciements pour la CC675", () => {
     `(
       "avec $seniority ans d'ancienneté, age $age et sref : $salary => $expectedCompensation €",
       ({ seniority, salary, age, expectedCompensation, seniorityRight }) => {
-        const { missingArgs, detail } = engine.calculate({
+        const result = engine.calculate({
           "contrat salarié . convention collective": "'IDCC0675'",
           "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${CategoryPro675.agents}'`,
           "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . agents . autres licenciement . age":
@@ -164,8 +163,7 @@ describe("Gestion des licenciements pour la CC675", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
         });
-        expect(missingArgs).toEqual([]);
-        expect(detail?.agreementResult?.value).toEqual(expectedCompensation);
+        expect(result).toAgreementResultBeEqual(expectedCompensation);
       }
     );
   });

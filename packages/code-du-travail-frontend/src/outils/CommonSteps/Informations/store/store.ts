@@ -257,8 +257,11 @@ const createCommonInformationsStore: StoreSlice<
             get().informationsData.input.publicodesInformations
           ),
         };
-        const { ineligibility } = publicodes.calculate(situation);
-        errorEligibility = ineligibility ?? state.blockingNotification;
+        const result = publicodes.calculate(situation);
+        errorEligibility =
+          result.type === "ineligibility"
+            ? result.ineligibility
+            : state.blockingNotification;
       }
 
       set(

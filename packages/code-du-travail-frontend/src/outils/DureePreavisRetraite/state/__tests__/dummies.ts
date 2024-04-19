@@ -36,13 +36,6 @@ export const publicodesData: PublicodesData<PublicodesPreavisRetraiteResult> = {
     value: 1,
     valueInDays: 30,
   },
-  detail: {
-    legalResult: {
-      unit: PublicodesConvertedUnit.MONTH,
-      value: 1,
-      valueInDays: 30,
-    },
-  },
   situation: [],
 };
 

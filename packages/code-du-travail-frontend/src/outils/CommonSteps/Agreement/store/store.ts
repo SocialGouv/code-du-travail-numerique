@@ -84,8 +84,15 @@ const createCommonAgreementStore: StoreSlicePublicode<
       }
     },
     onRouteChange: (value) => {
-      if (value === "not-selected" && window.localStorage) {
-        window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+      if (value === "not-selected") {
+        if (window.localStorage) {
+          window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+        }
+        set(
+          produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+            state.agreementData.publicodes = loadPublicodes(simulator);
+          })
+        );
       }
       set(
         produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {

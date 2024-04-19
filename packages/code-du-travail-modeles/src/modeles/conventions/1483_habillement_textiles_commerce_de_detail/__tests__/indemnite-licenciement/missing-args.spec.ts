@@ -12,8 +12,8 @@ describe("CC 1483 - missing args", () => {
       "contrat salarié . convention collective . habillement textiles commerce de detail . catégorie professionnelle": `'Cadres'`,
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingQuestion(
+    const result = engine.calculate(input);
+    expect(result).toNextMissingQuestionBeEqual(
       "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?"
     );
   });

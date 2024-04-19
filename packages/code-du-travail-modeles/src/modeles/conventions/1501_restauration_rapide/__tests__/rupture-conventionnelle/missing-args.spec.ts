@@ -13,11 +13,11 @@ describe("CC 1501 - Wording question sur la rupture conventionnelle", () => {
       "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique": `'Oui'`,
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingRule(
+    const result = engine.calculate(input);
+    expect(result).toNextMissingRuleBeEqual(
       "contrat salarié . convention collective . restauration rapide . rupture conventionnelle . age"
     );
-    expect(missingArgs).toHaveNextMissingQuestion(
+    expect(result).toNextMissingQuestionBeEqual(
       "Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?"
     );
   });
@@ -31,7 +31,7 @@ describe("CC 1501 - Wording question sur la rupture conventionnelle", () => {
         "45",
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingRule(null);
+    const result = engine.calculate(input);
+    expect(result).toNextMissingRuleBeEqual(null);
   });
 });

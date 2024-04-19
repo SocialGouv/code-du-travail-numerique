@@ -13,8 +13,8 @@ describe("CC 1501 - Wording question sur la rupture conventionnelle", () => {
       "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique": `'Oui'`,
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingQuestion(
+    const result = engine.calculate(input);
+    expect(result).toNextMissingQuestionBeEqual(
       "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
     );
   });

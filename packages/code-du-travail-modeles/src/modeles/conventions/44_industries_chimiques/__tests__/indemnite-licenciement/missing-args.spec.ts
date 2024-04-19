@@ -16,7 +16,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
     `(
       "Avec $seniority ans, catégorie $category, age $age et sref : $salary",
       ({ category, seniority, salary, age }) => {
-        const { missingArgs } = engine.calculate({
+        const result = engine.calculate({
           "contrat salarié . convention collective": "'IDCC0044'",
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
             category,
@@ -29,7 +29,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
         });
-        expect(missingArgs).toHaveNextMissingRule(null);
+        expect(result).toNextMissingRuleBeEqual(null);
       }
     );
   });
@@ -43,7 +43,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
     `(
       "Avec $seniority ans, catégorie $category et sref : $salary",
       ({ category, seniority, salary }) => {
-        const { missingArgs } = engine.calculate({
+        const result = engine.calculate({
           "contrat salarié . convention collective": "'IDCC0044'",
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle":
             category,
@@ -54,10 +54,10 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
         });
-        expect(missingArgs).toHaveNextMissingRule(
+        expect(result).toNextMissingRuleBeEqual(
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . age"
         );
-        expect(missingArgs).toHaveNextMissingQuestion(
+        expect(result).toNextMissingQuestionBeEqual(
           "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
         );
       }
@@ -71,7 +71,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
       ${7}      | ${2500}
       ${7}      | ${2500}
     `("Avec $seniority ans et sref : $salary", ({ seniority, salary }) => {
-      const { missingArgs } = engine.calculate({
+      const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC0044'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           seniority,
@@ -81,7 +81,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
           salary,
       });
 
-      expect(missingArgs).toHaveNextMissingRule(
+      expect(result).toNextMissingRuleBeEqual(
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle"
       );
     });

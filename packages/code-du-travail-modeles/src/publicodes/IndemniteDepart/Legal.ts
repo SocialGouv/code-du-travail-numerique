@@ -61,6 +61,8 @@ export class Legal {
     }
     return {
       formula: publicodes.getFormuleLegal(),
+      notifications: [],
+      references: publicodes.getReferences(),
       result: result.result,
       type: "result",
     };

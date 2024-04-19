@@ -1,6 +1,5 @@
+import type { IReferenceSalary, ISeniority } from "../../modeles";
 import {
-  IReferenceSalary,
-  ISeniority,
   ReferenceSalaryFactory,
   SeniorityFactory,
   SupportedCc,
@@ -24,6 +23,7 @@ export class Agreement implements AgreementIndemniteCompute {
   public readonly ineligibility: IInegibility;
 
   public readonly seniority: ISeniority<SupportedCc>;
+
   public readonly legalSeniority: ISeniority<SupportedCc>;
 
   public readonly salary: IReferenceSalary<SupportedCc>;
@@ -70,6 +70,8 @@ export class Agreement implements AgreementIndemniteCompute {
     }
     return {
       formula: publicodes.getFormuleAgreement(),
+      notifications: publicodes.getNotifications(),
+      references: publicodes.getReferences("résultat conventionnel"),
       result: result.result,
       type: "result",
     };
