@@ -13,7 +13,7 @@ type Props = {
   label: string;
   agreementResult?: string;
   agreementExplanation?: ExplanationAgreementResult;
-  legalResult: string;
+  legalResult?: string;
   resultExplanation?: ExplanationMainResult;
 };
 

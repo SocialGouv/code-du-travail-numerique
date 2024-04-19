@@ -139,8 +139,17 @@ const Eligible = () => {
           <DecryptResult
             resultExplanation={resultExplanation}
             agreementExplanation={agreementExplanation}
-            legalResult={result.publicodesLegalResult.value?.toString() ?? ""}
-            agreementResult={result.publicodesAgreementResult?.value?.toString()}
+            legalResult={
+              result.publicodesLegalResult.value
+                ? result.publicodesLegalResult.value.toString()
+                : ""
+            }
+            agreementResult={
+              result.publicodesAgreementResult &&
+              result.publicodesAgreementResult.value
+                ? result.publicodesAgreementResult.value.toString()
+                : undefined
+            }
             label="rupture conventionnelle"
           />
         )}

@@ -197,8 +197,16 @@ export default function Eligible() {
         <FormulaInterpreter formula={formula} />
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
-            legalResult={publicodesLegalResult.value?.toString() ?? ""}
-            agreementResult={publicodesAgreementResult?.value?.toString()}
+            legalResult={
+              publicodesLegalResult.value
+                ? publicodesLegalResult.value.toString()
+                : ""
+            }
+            agreementResult={
+              publicodesAgreementResult && publicodesAgreementResult.value
+                ? publicodesAgreementResult.value.toString()
+                : undefined
+            }
             label="licenciement"
             resultExplanation={resultExplanation}
             agreementExplanation={agreementExplanation}
