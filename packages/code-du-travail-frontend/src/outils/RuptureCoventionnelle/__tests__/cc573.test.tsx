@@ -40,7 +40,7 @@ describe("Indemnité licenciement - CC 573", () => {
         ui.information.agreement573.proCategory.get(),
         "Agents de maîtrise, techniciens et assimilés"
       )
-      .setInput(ui.information.agreement573.age.get(), "56")
+      .setInput(ui.information.agreement573.ageRupture.get(), "56")
       .click(ui.next.get())
 
       .setInput(ui.seniority.startDate.get(), "01/01/2000")
