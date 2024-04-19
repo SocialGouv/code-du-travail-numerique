@@ -1,6 +1,6 @@
-import { fireEvent, render, RenderResult } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemniteLicenciement, CalculateurRuptureConventionnelle } from "../..";
+import { CalculateurRuptureConventionnelle } from "../..";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import { UserAction } from "../../../common";
 
@@ -8,21 +8,28 @@ jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
   () => `
 {
-  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635373",
-  "id": "0573",
-  "num": 573,
-  "shortTitle": "Commerces de gros",
-  "slug": "573-commerces-de-gros",
-  "title": "Convention collective nationale de commerces de gros du 23 juin 1970. Etendue par arrêté du 15 juin 1972 JONC 29 août 1972. Mise à jour par accord du 27 septembre 1984 étendu par arrêté du 4 février 1985 JORF 16 février 1985."
-}
+  "effectif": 1,
+  "cdtnId": "394e29a64d",
+  "contributions": true,
+  "num": 29,
+  "shortTitle": "Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
+  "id": "0029",
+  "title": "Convention collective nationale des etablissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif du 31 octobre 1951.",
+  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635234",
+  "slug": "29-hospitalisation-privee-etablissements-prives-dhospitalisation-de-soins-d"
+  }
 `
 );
 
-describe("Indemnité licenciement - CC 573", () => {
+describe("Indemnité licenciement - CC 29", () => {
   let userAction: UserAction;
   beforeEach(() => {
     render(
-      <CalculateurRuptureConventionnelle icon={""} title={""} displayTitle={""} />
+      <CalculateurRuptureConventionnelle
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
     );
     userAction = new UserAction();
 
@@ -34,15 +41,8 @@ describe("Indemnité licenciement - CC 573", () => {
       .click(ui.next.get());
   });
 
-  test(`Cas multi type de rupture`, () => {
+  test(`Rupture conventionnelle Hors ANI`, () => {
     userAction
-      .changeInputList(
-        ui.information.agreement573.proCategory.get(),
-        "Agents de maîtrise, techniciens et assimilés"
-      )
-      .setInput(ui.information.agreement573.age.get(), "56")
-      .click(ui.next.get())
-
       .setInput(ui.seniority.startDate.get(), "01/01/2000")
       .setInput(ui.seniority.endDate.get(), "01/01/2025")
       .click(ui.seniority.hasAbsence.non.get())
@@ -54,6 +54,8 @@ describe("Indemnité licenciement - CC 573", () => {
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("20250 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("16200 €");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent(
+      "Non applicable dans votre situation"
+    );
   });
 });
