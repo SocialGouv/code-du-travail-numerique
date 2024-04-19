@@ -328,6 +328,30 @@ export const ui = {
         "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle"
       ),
     },
+    agreement1501: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - restauration rapide - indemnité de licenciement - catégorie professionnelle"
+      ),
+      age: byTestId(
+        "infos.contrat salarié - convention collective - restauration rapide - indemnité de licenciement - licenciement économique - age"
+      ),
+    },
+    agreement2098: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - personnel presta service tertiaire - autre licenciement - catégorie professionnelle"
+      ),
+      age: byTestId(
+        "infos.contrat salarié - convention collective - personnel presta service tertiaire - autre licenciement - cadres - age"
+      ),
+    },
+    agreement2216: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - commerce gros et detail alimentation - indemnité de licenciement - catégorie professionnelle"
+      ),
+      age: byTestId(
+        "infos.contrat salarié - convention collective - commerce gros et detail alimentation - indemnité de licenciement - catégorie professionnelle - licenciement économique - age"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),
@@ -456,6 +480,14 @@ export const ui = {
     resultTableRows: byTestId("table-result-row"),
     agreement3239: {
       result: byText(/À partir des éléments que vous avez saisis/),
+    },
+    agreement1486: {
+      dismissalType: byText(
+        /Le licenciement fait suite au refus d'une clause de mobilité/
+      ),
+    },
+    agreement1501: {
+      dismissalType: byText(/Licenciement pour motif économique/),
     },
   },
   next: byText("Suivant"),
