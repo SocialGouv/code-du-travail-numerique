@@ -14,7 +14,7 @@ type Props = {
   agreementResult?: string;
   agreementExplanation?: ExplanationAgreementResult;
   legalResult: string;
-  resultExplanation: ExplanationMainResult;
+  resultExplanation?: ExplanationMainResult;
 };
 
 export default function DecryptResult(props: Props) {
@@ -28,8 +28,10 @@ export default function DecryptResult(props: Props) {
       <Paragraph>
         Montant prévu par la convention collective&nbsp;:&nbsp;
         <strong>
-          {getDecryptedValueAgreement(props.agreementExplanation) ??
-            `${props.agreementResult} €`}
+          {getDecryptedValueAgreement(
+            props.agreementExplanation,
+            props.agreementResult
+          )}
         </strong>
       </Paragraph>
       <Paragraph>
