@@ -1,9 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { RadioQuestion, TextQuestion } from "../../../Components";
-import {
-  IndemniteDepartContext,
-  useIndemniteDepartStore,
-} from "../../store";
+import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 
 export default function Agreement29() {
   const store = useContext(IndemniteDepartContext);
@@ -74,10 +71,9 @@ export default function Agreement29() {
       )}
       {hasSixBestSalaries === "non" && (
         <p>
-          Le calcul de l’indemnité de licenciement nécessite le total des 6
-          meilleurs salaires perçus consécutivement durant le contrat de
-          travail. Pour réaliser cette simulation, nous calculerons ce total sur
-          la base
+          Le calcul de l’indemnité nécessite le total des 6 meilleurs salaires
+          perçus consécutivement durant le contrat de travail. Pour réaliser
+          cette simulation, nous calculerons ce total sur la base
           {hasSameSalary == "oui"
             ? " du salaire renseigné "
             : " des salaires renseignés "}
