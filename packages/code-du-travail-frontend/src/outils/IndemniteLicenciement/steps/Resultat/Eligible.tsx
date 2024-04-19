@@ -1,4 +1,7 @@
-import { SupportedCc, getSupportedAgreement } from "@socialgouv/modeles-social";
+import {
+  Notification,
+  getSupportedAgreement,
+} from "@socialgouv/modeles-social";
 import React, { useContext } from "react";
 import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";
@@ -24,6 +27,7 @@ import {
   getForMoreInfoMessage,
   getResultMessage,
 } from "../../agreements/ui-customizations";
+import { StyledLink } from "../../../CommonIndemniteDepart/steps/Resultat/components/Result";
 
 export default function Eligible() {
   const store = useContext(IndemniteDepartContext);
@@ -102,11 +106,29 @@ export default function Eligible() {
     isParentalNoticeHidden: state.resultData.input.isParentalNoticeHidden,
   }));
 
+  const defaultNotification = [
+    {
+      dottedName: "default notification 1",
+      description: (
+        <span>
+          Ce montant est exonéré d’impôt sur le revenu et de cotisations
+          sociales sous certaines conditions,{" "}
+          <StyledLink
+            href="/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi"
+            target="_blank"
+          >
+            en savoir plus
+          </StyledLink>
+        </span>
+      ),
+    } as Notification,
+  ];
+
   return (
     <>
       <Result
         maxResult={result?.value?.toString() ?? ""}
-        notifications={notifications}
+        notifications={defaultNotification.concat(notifications ?? [])}
         resultMessage={getResultMessage(informationData)}
       />
       <ShowDetails autoFocus>

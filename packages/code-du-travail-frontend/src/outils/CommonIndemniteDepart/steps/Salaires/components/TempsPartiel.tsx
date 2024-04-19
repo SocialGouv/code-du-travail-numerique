@@ -25,6 +25,9 @@ const TempsPartiel = ({ type }: Props): JSX.Element => {
         Les périodes à temps partiel ne sont actuellement pas prises en compte
         dans le calcul.
       </Paragraph>
+      <Paragraph noMargin>
+        Cela pourrait conduire à un résultat différent de l’indemnité.
+      </Paragraph>
     </Alert>
   );
 };
