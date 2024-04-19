@@ -11,14 +11,18 @@ import {
   Result,
 } from "../../../CommonIndemniteDepart/steps/Resultat/components";
 import ShowDetails from "../../../common/ShowDetails";
-import { getSupportedAgreement } from "@socialgouv/modeles-social";
+import {
+  getSupportedAgreement,
+  Notification,
+} from "@socialgouv/modeles-social";
 import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
 import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";
 import { getResultMessage } from "./utils";
 import { IndemniteDepartType } from "../../../types";
 import { AgreementsInjector } from "../../../CommonIndemniteDepart/agreements";
-import { Paragraph } from "@socialgouv/cdtn-ui/lib";
+import { Paragraph } from "@socialgouv/cdtn-ui";
+import { StyledLink } from "../../../CommonIndemniteDepart/steps/Resultat/components/Result";
 
 const Eligible = () => {
   const store = useContext(IndemniteDepartContext);
@@ -43,11 +47,29 @@ const Eligible = () => {
     ),
   }));
 
+  const defaultNotification = [
+    {
+      dottedName: "default notification 1",
+      description: (
+        <span>
+          Ce montant est exonéré d’impôt sur le revenu et de cotisations
+          sociales sous certaines conditions,{" "}
+          <StyledLink
+            href="/fiche-service-public/comment-calculer-lindemnite-specifique-de-rupture-conventionnelle"
+            target="_blank"
+          >
+            en savoir plus
+          </StyledLink>
+        </span>
+      ),
+    } as Notification,
+  ];
+
   return (
     <>
       <Result
         maxResult={result.result.value?.toString() ?? ""}
-        notifications={result.notifications}
+        notifications={defaultNotification.concat(result.notifications ?? [])}
         resultMessage={getResultMessage(informationData)}
       />
       <ShowDetails autoFocus>

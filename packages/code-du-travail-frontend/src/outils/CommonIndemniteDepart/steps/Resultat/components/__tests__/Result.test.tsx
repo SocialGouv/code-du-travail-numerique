@@ -5,7 +5,22 @@ import Result from "../Result";
 describe("<Result />", () => {
   it("should render", () => {
     const { queryByText } = render(
-      <Result maxResult="2000" resultMessage="Le résultat est :" />
+      <Result
+        maxResult="2000"
+        resultMessage="Le résultat est :"
+        notifications={[
+          {
+            dottedName: "default notification 1",
+            description: (
+              <span>
+                Ce montant est exonéré d’impôt sur le revenu et de cotisations
+                sociales sous certaines conditions.
+              </span>
+            ),
+            show: "légal et conventionnel",
+          },
+        ]}
+      />
     );
     expect(queryByText(/2000/i)).toBeInTheDocument();
     expect(

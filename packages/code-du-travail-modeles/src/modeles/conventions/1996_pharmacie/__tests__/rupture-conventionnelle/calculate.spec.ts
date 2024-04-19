@@ -35,7 +35,7 @@ describe("Gestion des licenciements pour la CC 1996", () => {
         catPro: "Cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/06/2000",
-        result: 0,
+        result: undefined,
       },
       {
         catPro: "Cadres",
@@ -65,7 +65,7 @@ describe("Gestion des licenciements pour la CC 1996", () => {
         catPro: "Non-cadres",
         dateEntree: "01/01/2000",
         dateSortie: "01/06/2000",
-        result: 0,
+        result: undefined,
       },
       {
         catPro: "Non-cadres",
@@ -92,7 +92,9 @@ describe("Gestion des licenciements pour la CC 1996", () => {
       });
       expect(missingArgs).toEqual([]);
       expect(detail?.agreementResult?.value).toEqual(value.result);
-      expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
+      expect(detail?.agreementResult?.unit?.numerators).toEqual(
+        value.result ? ["€"] : undefined
+      );
     });
   });
 });
