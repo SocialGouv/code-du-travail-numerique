@@ -5,6 +5,7 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "../../../CommonIndemniteDepart/store";
+import Html from "../../../../common/Html";
 
 export default function Ineligible() {
   const store = useContext(IndemniteDepartContext);
@@ -24,7 +25,7 @@ export default function Ineligible() {
           situation
         </HighlightResult>
       </p>
-      <p>{getEligibilityError()}</p>
+      <Html>{getEligibilityError() ?? ""}</Html>
       {!agreementHasNoLegalIndemnity && infoWarning && (
         <Disclaimer
           title={infoWarning.title}

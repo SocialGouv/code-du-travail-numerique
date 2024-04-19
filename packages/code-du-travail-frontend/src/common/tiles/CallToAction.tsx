@@ -2,7 +2,9 @@ import { Paragraph, theme } from "@socialgouv/cdtn-ui";
 import React, { ForwardedRef } from "react";
 import styled from "styled-components";
 import { LinkedTile, Props } from "./LinkedTile";
-import { DirectionRight } from "@socialgouv/cdtn-ui/lib/icons";
+import { icons } from "@socialgouv/cdtn-ui";
+
+const { DirectionRight } = icons;
 
 type CallToActionTileProps = Props & { action?: string };
 
@@ -20,7 +22,7 @@ export const CallToActionTile = React.forwardRef<
         {action && (
           <StyledDiv>
             <Paragraph variant="primary" fontWeight="600">
-              {action} <DirectionRight></DirectionRight>
+              {action} <DirectionRight />
             </Paragraph>
           </StyledDiv>
         )}

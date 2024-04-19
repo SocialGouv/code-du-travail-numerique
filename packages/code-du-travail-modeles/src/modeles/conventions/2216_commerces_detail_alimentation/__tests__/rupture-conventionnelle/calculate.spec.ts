@@ -17,7 +17,7 @@ describe("Un seul type de licenciement pour la CC 2216", () => {
 
     const result = engine.calculate(input);
     expect(result).toNextMissingRuleBeEqual(
-      "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age"
+      "contrat salarié . convention collective . commerce gros et detail alimentation . rupture conventionnelle . licenciement économique age"
     );
   });
 
@@ -26,7 +26,7 @@ describe("Un seul type de licenciement pour la CC 2216", () => {
       "contrat salarié . convention collective": "'IDCC2216'",
       "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle":
         "'Employés et ouvriers, personnel de livraison'",
-      "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+      "contrat salarié . convention collective . commerce gros et detail alimentation . rupture conventionnelle . licenciement économique age":
         "40",
       "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
         "non",
@@ -41,8 +41,6 @@ describe("Un seul type de licenciement pour la CC 2216", () => {
       "contrat salarié . convention collective": "'IDCC2216'",
       "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle":
         '"Employés et ouvriers, personnel de livraison"',
-      "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-        "55",
       "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
       "contrat salarié . indemnité de licenciement . date d'entrée":
         "01/01/2000",
@@ -56,6 +54,8 @@ describe("Un seul type de licenciement pour la CC 2216", () => {
         "2000",
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
         "2000",
+      "contrat salarié . convention collective . commerce gros et detail alimentation . rupture conventionnelle . licenciement économique age":
+        "55",
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
@@ -67,8 +67,6 @@ describe("Un seul type de licenciement pour la CC 2216", () => {
       "contrat salarié . convention collective": "'IDCC2216'",
       "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle":
         '"Cadres"',
-      "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-        "45",
       "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
       "contrat salarié . indemnité de licenciement . date d'entrée":
         "01/01/2000",
@@ -82,6 +80,8 @@ describe("Un seul type de licenciement pour la CC 2216", () => {
         "2000",
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
         "2000",
+      "contrat salarié . convention collective . commerce gros et detail alimentation . rupture conventionnelle . licenciement économique age":
+        "45",
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });

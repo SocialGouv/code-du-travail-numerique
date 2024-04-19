@@ -1,6 +1,7 @@
 import {
   DismissalReason16,
   DismissalReason573,
+  DismissalReason675,
   DismissalReason1486,
   DismissalReason1501,
   DismissalReason1702,
@@ -18,6 +19,8 @@ export class DismissalReasonFactory {
     switch (idcc) {
       case SupportedCc.IDCC0573:
         return new DismissalReason573();
+      case SupportedCc.IDCC0675:
+        return new DismissalReason675();
       case SupportedCc.IDCC0016:
         return new DismissalReason16();
       case SupportedCc.IDCC1501:

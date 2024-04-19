@@ -1,0 +1,23 @@
+contrat salarié . convention collective . transports routiers . rupture conventionnelle:
+  valeur: oui
+
+contrat salarié . convention collective . transports routiers . rupture conventionnelle . ouvrier age:
+  remplace: contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . age
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . transports routiers . rupture conventionnelle . cadre age:
+  remplace: contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . transports routiers . rupture conventionnelle . employé ou TAM age:
+  remplace: contrat salarié . convention collective . transports routiers . indemnité de licenciement . age
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?
+  cdtn:
+    type: entier

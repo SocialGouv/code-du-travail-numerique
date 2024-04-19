@@ -83,7 +83,7 @@ const StepAnciennete = () => {
         autoFocus
       />
       <TextQuestion
-        label="Quelle est la date de fin du contrat&nbsp;?"
+        label="Quelle est la date de fin du contrat de travail&nbsp;?"
         inputType="date"
         placeholder="jj/mm/aaaa"
         value={dateSortie}
@@ -95,6 +95,16 @@ const StepAnciennete = () => {
         id="dateSortie"
         showRequired
         dataTestId={"date-sortie"}
+        tooltip={{
+          content: (
+            <p>
+              La date de rupture du contrat est indiquée dans la convention de
+              rupture. Dans tous les cas, elle ne peut intervenir avant la fin
+              du délai laissé à l’administration pour valider la rupture
+              conventionnelle.
+            </p>
+          ),
+        }}
       />
       <SectionTitleWithTooltip
         name="Période d’absence prolongée"

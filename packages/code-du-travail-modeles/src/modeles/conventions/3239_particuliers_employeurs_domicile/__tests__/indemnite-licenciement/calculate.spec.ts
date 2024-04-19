@@ -28,7 +28,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       "contrat salarié . indemnité de licenciement . type du contrat de travail":
         "'cdi'",
     });
-    expect(result).toIneligibilityBeEqual(
+    expect(result).toIneligibilityContain(
       "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois."
     );
   });
@@ -54,7 +54,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       "contrat salarié . indemnité de licenciement . type du contrat de travail":
         "'cdi'",
     });
-    expect(result).toIneligibilityBeEqual(
+    expect(result).toIneligibilityContain(
       "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois."
     );
   });

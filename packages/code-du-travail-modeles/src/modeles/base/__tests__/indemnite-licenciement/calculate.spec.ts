@@ -94,8 +94,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       const result = engine.calculate({
         typeContratTravail: "cdd",
       });
-      expect(result).toIneligibilityBeEqual(
-        "L’indemnité de licenciement n’est pas due pour les CDD et contrats de travail temporaires. Sous certaines conditions, le salarié peut avoir le droit à une indemnité de précarité."
+      expect(result).toIneligibilityContain(
+        "L’indemnité de licenciement ne concerne pas les salariés en CDD et en contrat de travail temporaire."
       );
     });
 
@@ -104,7 +104,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         licenciementFauteGrave: "oui",
         typeContratTravail: "cdi",
       });
-      expect(result).toIneligibilityBeEqual(
+      expect(result).toIneligibilityContain(
         "L’indemnité de licenciement n’est pas due en cas de faute grave (ou lourde). Lorsqu’il est invoqué, le motif de faute grave doit apparaître précisément dans le courrier. Reportez-vous à la lettre de notification de licenciement."
       );
     });
@@ -123,7 +123,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         licenciementFauteGrave: "non",
         typeContratTravail: "cdi",
       });
-      expect(result).toIneligibilityBeEqual(
+      expect(result).toIneligibilityContain(
         "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois."
       );
     });
@@ -144,7 +144,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         licenciementFauteGrave: "non",
         typeContratTravail: "cdi",
       });
-      expect(result).toIneligibilityBeEqual(
+      expect(result).toIneligibilityContain(
         "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois."
       );
     });

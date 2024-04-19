@@ -171,6 +171,27 @@ expect.extend({
       pass: nextRule === rule,
     };
   },
+  toHaveNextMissingQuestion(
+    missingVariables: MissingArgs[],
+    question: string | null
+  ) {
+    const missingVars = missingVariables
+      .filter((arg) => arg.rawNode.cdtn !== undefined)
+      .sort((a, b) => b.indice - a.indice);
+    if (missingVars.length === 0) {
+      return {
+        message: () =>
+          `Expected next question to be "${question}" but received no next question`,
+        pass: question === null,
+      };
+    }
+    const nextQuestion = missingVars[0].rawNode.question;
+    return {
+      message: () =>
+        `Expected next question to be "${question}" but received "${nextQuestion}"`,
+      pass: nextQuestion === question,
+    };
+  },
   toIneligibilityBeEqual(
     result: PublicodesOutput<any>,
     ineligibility: string | null

@@ -18,7 +18,7 @@ describe("Gestion des multiples types de licenciement pour la CC 573", () => {
 
       const result = engine.calculate(input);
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age"
+        "contrat salarié . convention collective . commerces de gros . rupture conventionnelle . licenciement économique agents age"
       );
     });
 
@@ -26,7 +26,7 @@ describe("Gestion des multiples types de licenciement pour la CC 573", () => {
       const input = {
         "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${CatPro573.agents}'`,
-        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age":
+        "contrat salarié . convention collective . commerces de gros . rupture conventionnelle . licenciement économique agents age":
           "45",
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
@@ -41,7 +41,7 @@ describe("Gestion des multiples types de licenciement pour la CC 573", () => {
         "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . convention collective . commerces de gros . catégorie professionnelle":
           "'Agents de maîtrise, techniciens et assimilés'",
-        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age":
+        "contrat salarié . convention collective . commerces de gros . rupture conventionnelle . licenciement économique agents age":
           "56",
         "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
         "contrat salarié . indemnité de licenciement . date d'entrée":
@@ -64,7 +64,7 @@ describe("Gestion des multiples types de licenciement pour la CC 573", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${CatPro573.agents}'`,
-        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age":
+        "contrat salarié . convention collective . commerces de gros . rupture conventionnelle . licenciement économique agents age":
           "55",
         "contrat salarié . indemnité de licenciement . date d'entrée":
           "01/01/2000",

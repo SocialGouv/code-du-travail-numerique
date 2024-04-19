@@ -11,7 +11,7 @@ import { A11yLink } from "../common/A11yLink";
 import DisplayContentContribution, {
   ContentSP,
 } from "./DisplayContentContribution";
-import { Section } from "@socialgouv/cdtn-ui/lib";
+import { Section } from "@socialgouv/cdtn-ui";
 
 type Props = {
   contribution:

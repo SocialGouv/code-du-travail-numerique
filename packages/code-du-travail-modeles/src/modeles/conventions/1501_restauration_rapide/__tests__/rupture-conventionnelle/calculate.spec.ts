@@ -26,7 +26,7 @@ describe("Gestion des licenciements pour la CC 1501", () => {
 
       const result = engine.calculate(input);
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age"
+        "contrat salarié . convention collective . restauration rapide . rupture conventionnelle . age"
       );
     });
 
@@ -36,7 +36,7 @@ describe("Gestion des licenciements pour la CC 1501", () => {
         const input = {
           "contrat salarié . convention collective": "'IDCC1501'",
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${catPro}'`,
-          "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": `50`,
+          "contrat salarié . convention collective . restauration rapide . rupture conventionnelle . age": `50`,
         };
 
         const result = engine.calculate(input);
@@ -100,7 +100,7 @@ describe("Gestion des licenciements pour la CC 1501", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1501'",
         "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${value.catPro}'`,
-        "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": `${value.age}`,
+        "contrat salarié . convention collective . restauration rapide . rupture conventionnelle . age": `${value.age}`,
         "contrat salarié . indemnité de licenciement . date d'entrée":
           value.dateEntree,
         "contrat salarié . indemnité de licenciement . date de notification":

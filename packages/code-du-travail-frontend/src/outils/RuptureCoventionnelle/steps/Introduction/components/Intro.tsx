@@ -4,8 +4,8 @@ const Intro = (): JSX.Element => {
   return (
     <>
       <p>
-        Ce simulateur permet d’estimer le montant de la rupture conventionnelle
-        d’un salarié.
+        Ce simulateur permet d’estimer le montant de l’indemnité spécifique de
+        rupture conventionnelle.
       </p>
       <p>
         Vous aurez besoin d’informations telles que les dates d’entrée et de

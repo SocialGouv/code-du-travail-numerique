@@ -107,7 +107,7 @@ describe("calculate", () => {
     const result = engine.calculate({
       absencePeriods: "[]",
       "contrat salarié . convention collective": "'IDCC1672'",
-      "contrat salarié . convention collective . sociétés d'assurances . age":
+      "contrat salarié . convention collective . sociétés d'assurances . rupture conventionnelle . age":
         "65",
       "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
         "'Cadres (Classes 5 à 7)'",

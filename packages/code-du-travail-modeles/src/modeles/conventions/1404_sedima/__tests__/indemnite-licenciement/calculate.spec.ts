@@ -41,7 +41,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
         "2600",
     });
-    expect(result).toIneligibilityBeEqual(
+    expect(result).toIneligibilityContain(
       "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois."
     );
   });

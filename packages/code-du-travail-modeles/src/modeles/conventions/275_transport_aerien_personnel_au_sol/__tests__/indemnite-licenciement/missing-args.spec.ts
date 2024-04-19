@@ -26,7 +26,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      expect(missingArgs).toEqual([]);
+      expect(missingArgs).toHaveNextMissingRule(null);
     });
 
     test("Pour un départ après le 31/01/2024", () => {
@@ -48,7 +48,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      expect(missingArgs).toEqual([]);
+      expect(missingArgs).toHaveNextMissingRule(null);
     });
   });
 
@@ -70,10 +70,12 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-      expect(keys).toEqual([
-        "contrat salarié . convention collective . transport aérien personnel au sol . age",
-      ]);
+      expect(missingArgs).toHaveNextMissingRule(
+        "contrat salarié . convention collective . transport aérien personnel au sol . age"
+      );
+      expect(missingArgs).toHaveNextMissingQuestion(
+        "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?"
+      );
     });
 
     test("Pour un départ après le 31/01/2024", () => {
@@ -93,10 +95,12 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-      expect(keys).toEqual([
-        "contrat salarié . convention collective . transport aérien personnel au sol . age",
-      ]);
+      expect(missingArgs).toHaveNextMissingRule(
+        "contrat salarié . convention collective . transport aérien personnel au sol . age"
+      );
+      expect(missingArgs).toHaveNextMissingQuestion(
+        "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?"
+      );
     });
   });
 
@@ -116,10 +120,9 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-      expect(keys).toEqual([
-        "contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle",
-      ]);
+      expect(missingArgs).toHaveNextMissingRule(
+        "contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle"
+      );
     });
 
     test("Pour un départ après le 31/01/2024", () => {
@@ -137,10 +140,9 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-      expect(keys).toEqual([
-        "contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle",
-      ]);
+      expect(missingArgs).toHaveNextMissingRule(
+        "contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle"
+      );
     });
   });
 
@@ -157,13 +159,17 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
             "40",
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "10000",
+          "contrat salarié . indemnité de licenciement . date de notification":
+            "30/01/2024",
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-      expect(keys).toEqual([
-        "contrat salarié . convention collective . transport aérien personnel au sol . age",
-      ]);
+      expect(missingArgs).toHaveNextMissingRule(
+        "contrat salarié . convention collective . transport aérien personnel au sol . age"
+      );
+      expect(missingArgs).toHaveNextMissingQuestion(
+        "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?"
+      );
     });
 
     test("Pour un départ après le 31/01/2024", () => {
@@ -178,13 +184,17 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
             "40",
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "10000",
+          "contrat salarié . indemnité de licenciement . date de notification":
+            "02/02/2024",
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-      expect(keys).toEqual([
-        "contrat salarié . convention collective . transport aérien personnel au sol . age",
-      ]);
+      expect(missingArgs).toHaveNextMissingRule(
+        "contrat salarié . convention collective . transport aérien personnel au sol . age"
+      );
+      expect(missingArgs).toHaveNextMissingQuestion(
+        "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?"
+      );
     });
   });
 });
