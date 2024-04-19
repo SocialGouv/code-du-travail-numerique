@@ -5,6 +5,7 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "../../../CommonIndemniteDepart/store";
+import Html from "../../../../common/Html";
 
 export default function Ineligible() {
   const store = useContext(IndemniteDepartContext);
@@ -17,14 +18,16 @@ export default function Ineligible() {
     }));
   return (
     <>
-      <SectionTitle hasSmallMarginTop>Indemnité de rupture conventionnelle</SectionTitle>
+      <SectionTitle hasSmallMarginTop>
+        Indemnité de rupture conventionnelle
+      </SectionTitle>
       <p>
         <HighlightResult>
-          Il n&apos;y a pas d&apos;indemnité de rupture conventionnelle dans cette
-          situation
+          Il n&apos;y a pas d&apos;indemnité de rupture conventionnelle dans
+          cette situation
         </HighlightResult>
       </p>
-      <p>{getEligibilityError()}</p>
+      <Html>{getEligibilityError() ?? ""}</Html>
       {!agreementHasNoLegalIndemnity && infoWarning && (
         <Disclaimer
           title={infoWarning.title}

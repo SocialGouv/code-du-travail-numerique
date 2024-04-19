@@ -30,7 +30,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     });
     expect(missingArgs).toEqual([]);
     expect(result?.value).toEqual(0);
-    expect(ineligibility).toEqual(
+    expect(ineligibility).toContain(
       "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois."
     );
   });
@@ -58,7 +58,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     });
     expect(missingArgs).toEqual([]);
     expect(result?.value).toEqual(0);
-    expect(ineligibility).toEqual(
+    expect(ineligibility).toContain(
       "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois."
     );
   });
