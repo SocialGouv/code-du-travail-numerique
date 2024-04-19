@@ -8,18 +8,18 @@ jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
   () => `
   {
-    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635467",
-    "id": "1702",
-    "num": 1702,
-    "shortTitle": "Travaux publics (Tome II : Ouvriers)",
-    "slug": "1702-travaux-publics-tome-ii-ouvriers",
-    "title": "Convention collective nationale des ouvriers des travaux publics du 15 décembre 1992",
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
+    "id": "0044",
+    "num": 44,
+    "shortTitle": "Industries chimiques et connexes",
+    "slug": "44-industries-chimiques-et-connexes",
+    "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
     "contributions": true
   }  
 `
 );
 
-describe("Indemnité licenciement - CC 1702", () => {
+describe("Indemnité licenciement - CC 44", () => {
   beforeEach(() => {
     render(
       <CalculateurRuptureConventionnelle
@@ -36,8 +36,11 @@ describe("Indemnité licenciement - CC 1702", () => {
   });
 
   test(`Vérifier l'enchainement de question à l'étape information`, () => {
-    fireEvent.change(ui.information.agreement1702.age.get(), {
-      target: { value: "55" },
+    fireEvent.change(ui.information.agreement44.proCategory.get(), {
+      target: { value: "'Ouvriers et collaborateurs (Groupes I à III)'" },
+    });
+    fireEvent.change(ui.information.agreement44.age.get(), {
+      target: { value: "60" },
     });
     userEvent.click(ui.next.get());
 
@@ -57,9 +60,9 @@ describe("Indemnité licenciement - CC 1702", () => {
     userEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("10746,67 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("13764 €");
     expect(ui.result.resultatLegal.get()).toHaveTextContent("10746.67 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("6683.6 €");
-    expect(ui.result.dismissalType.economic.query()).not.toBeInTheDocument();
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("13764 €");
+    expect(ui.result.dismissalType.mobility.query()).not.toBeInTheDocument();
   });
 });

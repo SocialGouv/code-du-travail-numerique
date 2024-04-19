@@ -481,13 +481,15 @@ export const ui = {
     agreement3239: {
       result: byText(/À partir des éléments que vous avez saisis/),
     },
-    agreement1486: {
-      dismissalType: byText(
+    dismissalType: {
+      economic: byText(/Licenciement pour motif économique/),
+      mobility: byText(
         /Le licenciement fait suite au refus d'une clause de mobilité/
       ),
-    },
-    agreement1501: {
-      dismissalType: byText(/Licenciement pour motif économique/),
+      inaptitude: byText(
+        /Licenciement pour inaptitude totale et définitive non consécutive à un accident du travail/
+      ),
+      discipline: byText(/Licenciement pour motif disciplinaire/),
     },
   },
   next: byText("Suivant"),

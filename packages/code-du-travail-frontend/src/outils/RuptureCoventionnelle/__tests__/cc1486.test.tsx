@@ -60,8 +60,6 @@ describe("Indemnité licenciement - CC 1486", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("2066,67 €");
     expect(ui.result.resultatLegal.get()).toHaveTextContent("1550 €");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent("2066.67 €");
-    expect(
-      ui.result.agreement1486.dismissalType.query()
-    ).not.toBeInTheDocument();
+    expect(ui.result.dismissalType.mobility.query()).not.toBeInTheDocument();
   });
 });

@@ -63,8 +63,6 @@ describe("Indemnité licenciement - CC 1501", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("11408 €");
     expect(ui.result.resultatLegal.get()).toHaveTextContent("10746.67 €");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent("11408 €");
-    expect(
-      ui.result.agreement1501.dismissalType.query()
-    ).not.toBeInTheDocument();
+    expect(ui.result.dismissalType.economic.query()).not.toBeInTheDocument();
   });
 });

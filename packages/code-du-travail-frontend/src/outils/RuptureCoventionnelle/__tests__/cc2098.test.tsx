@@ -63,5 +63,6 @@ describe("Indemnité licenciement - CC 2098", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("25626,67 €");
     expect(ui.result.resultatLegal.get()).toHaveTextContent("25626.67 €");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent("25626.67 €");
+    expect(ui.result.dismissalType.inaptitude.query()).not.toBeInTheDocument();
   });
 });

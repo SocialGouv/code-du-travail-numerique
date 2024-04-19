@@ -8,14 +8,14 @@ jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
   () => `
   {
-    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635550",
-    "id": "2098",
-    "num": 2098,
-    "shortTitle": "Prestataires de services dans le domaine du secteur tertiaire",
-    "slug": "2098-prestataires-de-services-dans-le-domaine-du-secteur-tertiaire",
-    "title": "Convention collective nationale du personnel des prestataires de services dans le domaine du secteur tertiaire du 13 août 1999",
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780",
+    "id": "2120",
+    "num": 2120,
+    "shortTitle": "Banque",
+    "slug": "2120-banque",
+    "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.",
     "contributions": true
-  }
+  }  
 `
 );
 
@@ -54,11 +54,16 @@ describe("Indemnité licenciement - CC 2120", () => {
     fireEvent.change(ui.salary.sameSalaryValue.get(), {
       target: { value: "1488" },
     });
+    fireEvent.change(ui.salary.agreement2120.salariesVariablePart.get(), {
+      target: { value: "2000" },
+    });
     userEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("25626,67 €");
     expect(ui.result.resultatLegal.get()).toHaveTextContent("25626.67 €");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent("25626.67 €");
+    expect(ui.result.dismissalType.economic.query()).not.toBeInTheDocument();
+    expect(ui.result.dismissalType.discipline.query()).not.toBeInTheDocument();
   });
 });

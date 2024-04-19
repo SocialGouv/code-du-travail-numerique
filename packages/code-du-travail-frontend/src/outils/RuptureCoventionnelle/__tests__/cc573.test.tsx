@@ -1,6 +1,6 @@
-import { fireEvent, render, RenderResult } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemniteLicenciement, CalculateurRuptureConventionnelle } from "../..";
+import { CalculateurRuptureConventionnelle } from "../..";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import { UserAction } from "../../../common";
 
@@ -22,7 +22,11 @@ describe("Indemnité licenciement - CC 573", () => {
   let userAction: UserAction;
   beforeEach(() => {
     render(
-      <CalculateurRuptureConventionnelle icon={""} title={""} displayTitle={""} />
+      <CalculateurRuptureConventionnelle
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
     );
     userAction = new UserAction();
 
@@ -55,5 +59,6 @@ describe("Indemnité licenciement - CC 573", () => {
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("20250 €");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent("16200 €");
+    expect(ui.result.dismissalType.economic.query()).not.toBeInTheDocument();
   });
 });

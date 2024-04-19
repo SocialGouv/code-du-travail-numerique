@@ -63,5 +63,6 @@ describe("Indemnité licenciement - CC 2216", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("25626,67 €");
     expect(ui.result.resultatLegal.get()).toHaveTextContent("25626.67 €");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent("24882.67 €");
+    expect(ui.result.dismissalType.economic.query()).not.toBeInTheDocument();
   });
 });
