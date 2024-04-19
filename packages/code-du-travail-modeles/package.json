@@ -30,7 +30,7 @@
     "precommit": "lint-staged",
     "prebuild": "tsc",
     "test": "jest --silent=true",
-    "lint": "eslint \"./src/**/*.{js,ts}\"",
+    "lint": "eslint \"./src/**/*.{js,ts}\" --fix",
     "dev": "nodemon --exec 'npm run build:dev' --watch 'src/**' --ext 'ts,yaml'",
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",
     "build": "yarn prebuild && node bin/internal/build.js",

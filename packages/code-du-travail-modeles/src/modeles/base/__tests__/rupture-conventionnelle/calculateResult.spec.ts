@@ -20,14 +20,10 @@ describe("calculate", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(result.missingArgs).toEqual([]);
-    expect(result.detail?.chosenResult).toEqual("LEGAL");
-    expect(result.detail?.legalResult?.value).toEqual(1000);
-    expect(result.detail?.legalResult?.unit?.numerators).toEqual(["€"]);
-    expect(result.result?.value).toEqual(1000);
-    expect(result.result?.unit?.numerators).toEqual(["€"]);
-    expect(result.formula?.formula).toEqual("1/4 * Sref * A");
-    expect(result.formula?.explanations).toEqual([
+    expect(result).toChosenResultBeEqual("LEGAL");
+    expect(result).toLegalResultBeEqual(1000, "€");
+    expect(result).toResultBeEqual(1000, "€");
+    expect(result).toFormulaBeEqual("1/4 * Sref * A", [
       "A : Ancienneté totale (2 ans)",
       "Sref : Salaire de référence (2000 €)",
     ]);
@@ -58,16 +54,11 @@ describe("calculate", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(result.missingArgs).toEqual([]);
-    expect(result.detail?.chosenResult).toEqual("LEGAL");
-    expect(result.detail?.legalResult?.value).toEqual(1000);
-    expect(result.detail?.legalResult?.unit?.numerators).toEqual(["€"]);
-    expect(result.result?.value).toEqual(1000);
-    expect(result.result?.unit?.numerators).toEqual(["€"]);
-    expect(result.detail?.agreementResult?.value).toEqual(80);
-    expect(result.detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
-    expect(result.formula?.formula).toEqual("1/4 * Sref * A");
-    expect(result.formula?.explanations).toEqual([
+    expect(result).toChosenResultBeEqual("LEGAL");
+    expect(result).toLegalResultBeEqual(1000, "€");
+    expect(result).toResultBeEqual(1000, "€");
+    expect(result).toAgreementResultBeEqual(80, "€");
+    expect(result).toFormulaBeEqual("1/4 * Sref * A", [
       "A : Ancienneté totale (2 ans)",
       "Sref : Salaire de référence (2000 €)",
     ]);
@@ -97,18 +88,11 @@ describe("calculate", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(result.missingArgs).toEqual([]);
-    expect(result.detail?.chosenResult).toEqual("SAME");
-    expect(result.detail?.legalResult?.value).toEqual(6333.33);
-    expect(result.detail?.legalResult?.unit?.numerators).toEqual(["€"]);
-    expect(result.result?.value).toEqual(6333.33);
-    expect(result.result?.unit?.numerators).toEqual(["€"]);
-    expect(result.detail?.agreementResult?.value).toEqual(6333.33);
-    expect(result.detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
-    expect(result.formula?.formula).toEqual(
-      "(1/4 * Sref * A1) + (1/3 * Sref * A2)"
-    );
-    expect(result.formula?.explanations).toEqual([
+    expect(result).toChosenResultBeEqual("SAME");
+    expect(result).toLegalResultBeEqual(6333.33, "€");
+    expect(result).toResultBeEqual(6333.33, "€");
+    expect(result).toAgreementResultBeEqual(6333.33, "€");
+    expect(result).toFormulaBeEqual("(1/4 * Sref * A1) + (1/3 * Sref * A2)", [
       "A1 : Ancienneté de 10 ans ou moins (10 ans)",
       "A2 : Ancienneté au-delà de 10 ans (2 ans)",
       "Sref : Salaire de référence (2000 €)",
@@ -145,21 +129,17 @@ describe("calculate", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(result.missingArgs).toEqual([]);
-    expect(result.detail?.chosenResult).toEqual("AGREEMENT");
-    expect(result.detail?.legalResult?.value).toEqual(6333.33);
-    expect(result.detail?.legalResult?.unit?.numerators).toEqual(["€"]);
-    expect(result.result?.value).toEqual(15120);
-    expect(result.result?.unit?.numerators).toEqual(["€"]);
-    expect(result.detail?.agreementResult?.value).toEqual(15120);
-    expect(result.detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
-    expect(result.formula?.formula).toEqual(
-      "(4.5% * Sref * A2) + (0.75% * Sref * A2)"
+    expect(result).toChosenResultBeEqual("AGREEMENT");
+    expect(result).toLegalResultBeEqual(6333.33, "€");
+    expect(result).toResultBeEqual(15120, "€");
+    expect(result).toAgreementResultBeEqual(15120, "€");
+    expect(result).toFormulaBeEqual(
+      "(4.5% * Sref * A2) + (0.75% * Sref * A2)",
+      [
+        "A2 : Années de présence dans l'entreprise en tant que cadre (12 ans)",
+        "Sref : Salaire de référence (24000 €)",
+      ]
     );
-    expect(result.formula?.explanations).toEqual([
-      "A2 : Années de présence dans l'entreprise en tant que cadre (12 ans)",
-      "Sref : Salaire de référence (24000 €)",
-    ]);
   });
 
   test("avec une idcc 1043 quand le legal est meilleur et inaptitude", () => {
@@ -184,16 +164,11 @@ describe("calculate", () => {
         '[{"month":"décembre 2023","value":3000},{"month":"novembre 2023","value":3000},{"month":"octobre 2023","value":3000},{"month":"septembre 2023","value":3000},{"month":"août 2023","value":3000},{"month":"juillet 2023","value":3000},{"month":"juin 2023","value":3000},{"month":"mai 2023","value":3000},{"month":"avril 2023","value":3000},{"month":"mars 2023","value":3000},{"month":"février 2023","value":3000},{"month":"janvier 2023","value":3000}]',
       typeContratTravail: "cdi",
     });
-    expect(result.missingArgs).toEqual([]);
-    expect(result.detail?.chosenResult).toEqual("LEGAL");
-    expect(result.detail?.legalResult?.value).toEqual(6000);
-    expect(result.detail?.legalResult?.unit?.numerators).toEqual(["€"]);
-    expect(result.result?.value).toEqual(6000);
-    expect(result.result?.unit?.numerators).toEqual(["€"]);
-    expect(result.detail?.agreementResult?.value).toEqual(0);
-    expect(result.detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
-    expect(result.formula?.formula).toEqual("(1/4 * Sref * A) * 2");
-    expect(result.formula?.explanations).toEqual([
+    expect(result).toChosenResultBeEqual("LEGAL");
+    expect(result).toLegalResultBeEqual(6000, "€");
+    expect(result).toResultBeEqual(6000, "€");
+    expect(result).toAgreementResultBeEqual(0, "€");
+    expect(result).toFormulaBeEqual("(1/4 * Sref * A) * 2", [
       "A : Ancienneté totale (4 ans)",
       "Sref : Salaire de référence (3000 €)",
     ]);

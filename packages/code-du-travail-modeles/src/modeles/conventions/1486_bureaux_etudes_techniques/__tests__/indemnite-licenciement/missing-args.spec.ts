@@ -24,7 +24,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
     });
 
     it("doit demander en premier le type de licenciement catégorie", () => {
-      expect(result?.missingArgs).toHaveNextMissingRule(
+      expect(result.missingArgs).toHaveNextMissingRule(
         "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle"
       );
     });
@@ -42,7 +42,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
       });
 
       it("doit demander la catégorie professionnelle", () => {
-        expect(result?.missingArgs).toHaveNextMissingRule(
+        expect(result.missingArgs).toHaveNextMissingRule(
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement"
         );
       });
@@ -62,7 +62,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
         });
 
         it("ne doit pas demander d'autres questions", () => {
-          expect(result?.missingArgs).toHaveNextMissingRule(null);
+          expect(result.missingArgs).toHaveNextMissingRule(null);
         });
       });
 
@@ -81,7 +81,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
         });
 
         it("ne doit pas demander d'autres questions", () => {
-          expect(result?.missingArgs).toHaveNextMissingRule(null);
+          expect(result.missingArgs).toHaveNextMissingRule(null);
         });
       });
     });

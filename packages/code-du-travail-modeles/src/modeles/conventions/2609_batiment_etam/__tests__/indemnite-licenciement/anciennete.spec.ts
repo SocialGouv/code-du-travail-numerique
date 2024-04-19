@@ -17,7 +17,7 @@ describe("CC 2609", () => {
           dateSortie: exitDate,
         });
 
-        expect(result?.value).toEqual(expectedSeniority);
+        expect(result.value).toEqual(expectedSeniority);
       }
     );
   });

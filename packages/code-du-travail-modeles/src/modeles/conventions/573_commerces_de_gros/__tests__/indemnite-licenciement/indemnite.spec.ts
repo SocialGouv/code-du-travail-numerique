@@ -38,9 +38,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
 
-        expect(result?.value).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
         expect(missingArgs).toEqual([]);
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
   });
@@ -87,9 +87,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
 
-        expect(result?.value).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
         expect(missingArgs).toEqual([]);
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
     test("Si l'inaptitude suite à un accident ou maladie professionnelle' alors pas de question pour motif eco", () => {
@@ -109,9 +109,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
 
-      expect(result?.value).toEqual(9000);
+      expect(result.value).toEqual(9000);
       expect(missingArgs).toEqual([]);
-      expect(result?.unit?.numerators).toEqual(["€"]);
+      expect(result.unit?.numerators).toEqual(["€"]);
     });
   });
 
@@ -157,9 +157,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
 
-          expect(result?.value).toEqual(expectedCompensation);
+          expect(result.value).toEqual(expectedCompensation);
           expect(missingArgs).toEqual([]);
-          expect(result?.unit?.numerators).toEqual(["€"]);
+          expect(result.unit?.numerators).toEqual(["€"]);
         }
       );
     });
@@ -207,9 +207,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
 
-          expect(result?.value).toEqual(expectedCompensation);
+          expect(result.value).toEqual(expectedCompensation);
           expect(missingArgs).toEqual([]);
-          expect(result?.unit?.numerators).toEqual(["€"]);
+          expect(result.unit?.numerators).toEqual(["€"]);
         }
       );
     });

@@ -18,9 +18,9 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
         "contrat salarié . travailleur handicapé": "oui",
       });
 
-      expect(result?.value).toEqual(expectedNotice);
+      expect(result.value).toEqual(expectedNotice);
       expect(missingArgs).toEqual([]);
-      expect(result?.unit).toEqual(expectedUnit);
+      expect(result.unit).toEqual(expectedUnit);
     }
   );
 
@@ -39,8 +39,8 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
         "contrat salarié . travailleur handicapé": "oui",
       });
 
-      expect(result?.value).toEqual(expectedNotice);
-      expect(result?.unit).toEqual(expectedUnit);
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual(expectedUnit);
       expect(missingArgs).toEqual([]);
     }
   );
@@ -60,8 +60,8 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
         "contrat salarié . travailleur handicapé": "oui",
       });
 
-      expect(result?.value).toEqual(expectedNotice);
-      expect(result?.unit).toEqual("mois");
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual("mois");
       expect(missingArgs).toEqual([]);
     }
   );
@@ -83,8 +83,8 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
         "contrat salarié . travailleur handicapé": "oui",
       });
 
-      expect(result?.value).toEqual(expectedNotice);
-      expect(result?.unit).toEqual("mois");
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual("mois");
       expect(missingArgs).toEqual([]);
     }
   );

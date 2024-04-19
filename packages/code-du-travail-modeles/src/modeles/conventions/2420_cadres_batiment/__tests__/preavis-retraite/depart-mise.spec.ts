@@ -50,8 +50,8 @@ describe("Convention collective 2420", () => {
         const references = engine.getReferences();
         const notifications = engine.getNotifications();
 
-        expect(result?.value).toEqual(expectedResult);
-        expect(result?.unit).toEqual("mois");
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual("mois");
         expect(missingArgs).toEqual([]);
         expect(references).toHaveLength(DepartRetraiteCcReferences.length);
         expect(references).toEqual(
@@ -87,8 +87,8 @@ describe("Convention collective 2420", () => {
         const references = engine.getReferences();
         const notifications = engine.getNotifications();
 
-        expect(result?.value).toEqual(expectedResult);
-        expect(result?.unit).toEqual("mois");
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual("mois");
         expect(missingArgs).toEqual([]);
         expect(references).toHaveLength(MiseRetraiteCcReferences.length);
         expect(references).toEqual(

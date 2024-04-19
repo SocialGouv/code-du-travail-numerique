@@ -13,8 +13,8 @@ describe("Gestion des licenciements pour la CC 44", () => {
         "contrat salarié . convention collective": "'IDCC0044'",
       };
 
-      const { missingArgs } = engine.calculate(input);
-      expect(missingArgs).toHaveNextMissingRule(
+      const result = engine.calculate(input);
+      expect(result).toNextMissingRuleBeEqual(
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle"
       );
     });
@@ -28,14 +28,14 @@ describe("Gestion des licenciements pour la CC 44", () => {
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${catPro}'`,
       };
 
-      const { missingArgs } = engine.calculate(input);
-      expect(missingArgs).toHaveNextMissingRule(null);
+      const result = engine.calculate(input);
+      expect(result).toNextMissingRuleBeEqual(null);
     });
   });
 
   describe("Calcul de l'indemnité de licenciement", () => {
     test("Le moins favorable - cas licenciement économique", () => {
-      const { missingArgs, detail } = engine.calculate({
+      const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC0044'",
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${CategoryPro44.inge}'`,
         "contrat salarié . indemnité de licenciement . date d'entrée":
@@ -51,9 +51,7 @@ describe("Gestion des licenciements pour la CC 44", () => {
           '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
         typeContratTravail: "cdi",
       });
-      expect(missingArgs).toEqual([]);
-      expect(detail?.agreementResult?.value).toEqual(0);
-      expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
+      expect(result).toAgreementResultBeEqual(0, "€");
     });
   });
 });

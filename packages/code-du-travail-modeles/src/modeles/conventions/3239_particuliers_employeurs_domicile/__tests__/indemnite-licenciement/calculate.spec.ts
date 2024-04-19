@@ -8,7 +8,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Test de la fonctionnalité 'calculate'", () => {
   test("Vérifier l'ineligibilite Anciennete legal inférieur 9 mois", () => {
-    const { result, missingArgs, ineligibility } = engine.calculate({
+    const result = engine.calculate({
       "contrat salarié . convention collective": "'IDCC3239'",
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
         CatPro3239.assistantMaternel,
@@ -28,14 +28,12 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       "contrat salarié . indemnité de licenciement . type du contrat de travail":
         "'cdi'",
     });
-    expect(missingArgs).toEqual([]);
-    expect(result?.value).toEqual(0);
-    expect(ineligibility).toEqual(
+    expect(result).toIneligibilityBeEqual(
       "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois."
     );
   });
   test("Vérifier l'ineligibilite Anciennete legal inférieur 9 mois bis", () => {
-    const { result, missingArgs, ineligibility } = engine.calculate({
+    const result = engine.calculate({
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
         CatPro3239.assistantMaternel,
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement":
@@ -56,9 +54,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       "contrat salarié . indemnité de licenciement . type du contrat de travail":
         "'cdi'",
     });
-    expect(missingArgs).toEqual([]);
-    expect(result?.value).toEqual(0);
-    expect(ineligibility).toEqual(
+    expect(result).toIneligibilityBeEqual(
       "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois."
     );
   });

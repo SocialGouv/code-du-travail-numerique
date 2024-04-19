@@ -1,7 +1,7 @@
 import type { EvaluatedNode } from "publicodes";
 import Engine from "publicodes";
 
-import type { Formula, Notification, References } from "../modeles/common";
+import type { Formula, Notification, References } from "../modeles";
 import {
   getFormule,
   getFormuleAgreement,
@@ -9,31 +9,29 @@ import {
   getNotifications,
   getNotificationsBloquantes,
   getReferences,
-  SupportedCc,
-} from "../modeles/common";
+} from "../modeles";
 import type { Publicodes } from "./Publicodes";
-import type { MissingArgs, PublicodesData, SituationElement } from "./types";
+import type {
+  MissingArgs,
+  PublicodesData,
+  PublicodesOutput,
+  SituationElement,
+} from "./types";
 
 export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
-  idcc: SupportedCc;
-
   engine: Engine;
 
   targetRule: string;
 
   data: PublicodesData<TResult> = {
-    detail: {
-      legalResult: {} as TResult,
-    },
     missingArgs: [],
     result: {} as TResult,
     situation: [],
   };
 
-  protected constructor(rules: any, targetRule: string, idcc?: SupportedCc) {
+  protected constructor(rules: any, targetRule: string) {
     this.engine = new Engine(rules);
     this.targetRule = targetRule;
-    this.idcc = idcc ?? SupportedCc.default;
   }
 
   execute(rule: string): TResult | undefined {
@@ -56,9 +54,6 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     );
 
     this.data = {
-      detail: {
-        legalResult: this.convertedResult(result), // juste pour que le ts compile
-      },
       missingArgs,
       result: this.convertedResult(result),
       situation,
@@ -197,7 +192,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   abstract calculate(
     args: Record<string, string | undefined>,
     target?: string
-  ): PublicodesData<TResult>;
+  ): PublicodesOutput<TResult>;
 
   protected abstract convertedResult(evaluatedNode: EvaluatedNode): TResult;
 }

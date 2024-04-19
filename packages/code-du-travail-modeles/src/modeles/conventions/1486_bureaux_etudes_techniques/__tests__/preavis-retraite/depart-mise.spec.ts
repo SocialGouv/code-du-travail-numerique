@@ -29,8 +29,8 @@ describe("Préavis retraite pour la CC 1486", () => {
         );
 
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedResult);
-        expect(result?.unit).toEqual(expectedUnit);
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual(expectedUnit);
       }
     );
 
@@ -61,8 +61,8 @@ describe("Préavis retraite pour la CC 1486", () => {
           );
 
           expect(missingArgs).toEqual([]);
-          expect(result?.value).toEqual(expectedResult);
-          expect(result?.unit).toEqual("mois");
+          expect(result.value).toEqual(expectedResult);
+          expect(result.unit).toEqual("mois");
         }
       );
     });

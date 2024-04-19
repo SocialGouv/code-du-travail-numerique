@@ -7,7 +7,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Employés", () => {
   test("Vérifier que les extras infos du salaire sont bien pris en compte", () => {
-    const { result, missingArgs, detail } = engine.calculate({
+    const result = engine.calculate({
       "contrat salarié . convention collective": "'IDCC0675'",
       "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle":
         "'Employés'",
@@ -25,10 +25,9 @@ describe("Employés", () => {
         '[{"month":"décembre 2023","value":1488},{"month":"novembre 2023","value":1488},{"month":"octobre 2023","value":1488},{"month":"septembre 2023","value":1488},{"month":"août 2023","value":1488},{"month":"juillet 2023","value":1488},{"month":"juin 2023","value":1488},{"month":"mai 2023","value":1488},{"month":"avril 2023","value":1488},{"month":"mars 2023","value":1488},{"month":"février 2023","value":1488},{"month":"janvier 2023","value":1488}]',
       typeContratTravail: "cdi",
     });
-    expect(missingArgs).toEqual([]);
-    expect(result?.unit?.numerators).toEqual(["€"]);
-    expect(result?.value).toEqual(1116);
-    expect(detail?.agreementResult?.value).toEqual(446.4);
-    expect(detail?.legalResult?.value).toEqual(1116);
+
+    expect(result).toResultBeEqual(1116, "€");
+    expect(result).toAgreementResultBeEqual(446.4, "€");
+    expect(result).toResultBeEqual(1116, "€");
   });
 });
