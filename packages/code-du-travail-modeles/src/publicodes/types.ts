@@ -14,6 +14,8 @@ import type {
 } from "../modeles";
 import type { IInegibility } from "../modeles/common/types/ineligibility";
 import type {
+  ExplanationAgreementResult,
+  ExplanationMainResult,
   IndemniteLicenciementPublicodes,
   PreavisRetraitePublicodes,
   RuptureConventionnellePublicodes,
@@ -85,11 +87,12 @@ export type PublicodesData<TResult> = {
     chosenResult?: "AGREEMENT" | "HAS_NO_LEGAL" | "LEGAL" | "SAME";
     legalResult?: TResult;
     agreementResult?: TResult;
+    agreementExplanation?: ExplanationAgreementResult;
   };
+  explanation?: ExplanationMainResult;
 };
 export type PublicodesAugmentedData<TResult> = PublicodesData<TResult> & {
   formula?: Formula;
-  dismissalRules?: string[];
 };
 
 export enum PublicodesSimulator {

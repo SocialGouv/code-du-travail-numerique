@@ -16,6 +16,7 @@ import type {
   PublicodesIndemniteLicenciementResult,
 } from "./types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
+import { getExplanationAgreement, getMainExplanation } from "./utils";
 
 class IndemniteLicenciementInstance implements IndemniteDepartInstance {
   public ineligibility: IInegibility;
@@ -110,6 +111,11 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
           chosenResult: "LEGAL",
           legalResult: legalResult.result,
         },
+        explanation: getMainExplanation(
+          undefined,
+          legalResult.result.value?.toString(),
+          undefined
+        ),
         formula: legalFormula,
         missingArgs: legalResult.missingArgs,
         result: legalResult.result,
@@ -125,10 +131,20 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
           );
     return {
       detail: {
+        agreementExplanation: getExplanationAgreement(
+          true,
+          this.idcc.toString(),
+          agreementResult?.result?.value?.toString()
+        ),
         agreementResult: agreementResult?.result,
         chosenResult,
         legalResult: legalResult?.result,
       },
+      explanation: getMainExplanation(
+        this.idcc.toString(),
+        legalResult?.result?.value?.toString(),
+        agreementResult?.result?.value?.toString()
+      ),
       formula: chosenResult !== "LEGAL" ? agreementFormula : legalFormula,
       missingArgs: legalResult?.missingArgs ?? [],
       result:

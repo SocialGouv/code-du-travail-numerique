@@ -35,6 +35,8 @@ export default function Eligible() {
     result,
     publicodesLegalResult,
     publicodesAgreementResult,
+    agreementExplanation,
+    resultExplanation,
     typeContratTravail,
     licenciementInaptitude,
     licenciementFauteGrave,
@@ -104,6 +106,8 @@ export default function Eligible() {
     isAgreementSupported:
       state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
     isParentalNoticeHidden: state.resultData.input.isParentalNoticeHidden,
+    agreementExplanation: state.resultData.input.agreementExplanation,
+    resultExplanation: state.resultData.input.resultExplanation,
   }));
 
   const defaultNotification = [
@@ -193,11 +197,11 @@ export default function Eligible() {
         <FormulaInterpreter formula={formula} />
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
-            hasSelectedAgreement={route !== "not-selected"}
-            isAgreementSupported={isAgreementSupported}
             legalResult={publicodesLegalResult.value?.toString() ?? ""}
             agreementResult={publicodesAgreementResult?.value?.toString()}
             label="licenciement"
+            resultExplanation={resultExplanation}
+            agreementExplanation={agreementExplanation}
           />
         )}
         <PubliReferences

@@ -19,7 +19,8 @@ import type {
   PublicodesData,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
-import { mergeMissingArgs } from "./utils";
+import { getExplanationAgreement, getMainExplanation } from "./utils";
+import { mergeMissingArgs } from "./utils/merge-missing-args";
 
 class IndemniteRuptureConventionnelleInstance
   implements IndemniteDepartInstance
@@ -60,7 +61,6 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
   calculate(
     args: Record<string, string | undefined>
   ): PublicodesAugmentedData<PublicodesIndemniteLicenciementResult> {
-    let dismissalRules: string[] = [];
     let agreementResult:
       | PublicodesData<PublicodesIndemniteLicenciementResult>
       | undefined = undefined;
@@ -68,7 +68,6 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
     if (this.agreementInstance) {
       const dismissalReason = new DismissalReasonFactory().create(this.idcc);
       const reasons = dismissalReason.dismissalTypes();
-      dismissalRules = dismissalReason.getDismissalRules();
       if (reasons.length === 0) {
         agreementResult = this.calculateAgreement(args);
         if (agreementResult) {
@@ -146,6 +145,11 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
           chosenResult: "LEGAL",
           legalResult: legalResult?.result,
         },
+        explanation: getMainExplanation(
+          undefined,
+          legalResult?.result?.value?.toString(),
+          undefined
+        ),
         formula: legalFormula,
         ineligibility: legalResult?.ineligibility,
         missingArgs: legalResult?.missingArgs ?? [],
@@ -163,11 +167,19 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
 
     return {
       detail: {
+        agreementExplanation: getExplanationAgreement(
+          true,
+          this.idcc.toString(),
+          agreementResult.result.value?.toString()
+        ),
         agreementResult: agreementResult.result,
         chosenResult,
         legalResult: legalResult?.result,
       },
-      dismissalRules,
+      explanation: getMainExplanation(
+        legalResult?.result?.value?.toString(),
+        agreementResult.result.value?.toString()
+      ),
       formula: chosenResult !== "LEGAL" ? agreementFormula : legalFormula,
       ineligibility: agreementResult.ineligibility,
       missingArgs: agreementResult.missingArgs,

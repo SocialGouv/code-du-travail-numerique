@@ -35,6 +35,8 @@ const Eligible = () => {
     salary,
     isStepSalaryHidden,
     informationData,
+    resultExplanation,
+    agreementExplanation,
   } = useIndemniteDepartStore(store, (state) => ({
     contratTravail: state.contratTravailData.input,
     agreement: state.agreementData.input,
@@ -45,6 +47,8 @@ const Eligible = () => {
     informationData: informationToSituation(
       state.informationsData.input.publicodesInformations
     ),
+    resultExplanation: state.resultData.input.resultExplanation,
+    agreementExplanation: state.resultData.input.agreementExplanation,
   }));
 
   const defaultNotification = [
@@ -133,10 +137,8 @@ const Eligible = () => {
         <FormulaInterpreter formula={result.formula} />
         {!result.agreementHasNoLegalIndemnity && (
           <DecryptResult
-            hasSelectedAgreement={agreement.route !== "not-selected"}
-            isAgreementSupported={
-              agreement.isAgreementSupportedIndemniteLicenciement
-            }
+            resultExplanation={resultExplanation}
+            agreementExplanation={agreementExplanation}
             legalResult={result.publicodesLegalResult.value?.toString() ?? ""}
             agreementResult={result.publicodesAgreementResult?.value?.toString()}
             label="rupture conventionnelle"

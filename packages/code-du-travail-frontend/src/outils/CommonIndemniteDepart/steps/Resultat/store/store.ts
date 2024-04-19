@@ -190,15 +190,7 @@ const createResultStore: StoreSlice<
               };
             }
           })
-          .filter((v) => v !== undefined)
-          .filter((v) =>
-            type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE &&
-            v &&
-            publicodesSituation.dismissalRules &&
-            publicodesSituation.dismissalRules.includes(v.name)
-              ? false
-              : true
-          ) as AgreementInformation[];
+          .filter((v) => v !== undefined) as AgreementInformation[];
 
         isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
           isAgreementBetter,
@@ -235,6 +227,10 @@ const createResultStore: StoreSlice<
             .detail?.legalResult ?? { value: 0 };
           state.resultData.input.publicodesAgreementResult =
             publicodesSituation.detail?.agreementResult;
+          state.resultData.input.agreementExplanation =
+            publicodesSituation.detail?.agreementExplanation;
+          state.resultData.input.resultExplanation =
+            publicodesSituation.explanation;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
           state.resultData.input.agreementInformations = agreementInformations;
