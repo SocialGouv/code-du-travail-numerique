@@ -1,6 +1,7 @@
 import { IneligibilityLegalIndemniteLicenciement } from "../../base";
+import { CatPro3239 } from "./salary";
 
-export class Ineligibility2596 extends IneligibilityLegalIndemniteLicenciement {
+export class IneligibilityLegalIndemniteLicenciement3239 extends IneligibilityLegalIndemniteLicenciement {
   getIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
@@ -9,14 +10,6 @@ export class Ineligibility2596 extends IneligibilityLegalIndemniteLicenciement {
       return contractIneligibility;
     }
     if (
-      args[
-        "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle"
-      ] &&
-      !["'Cadres'", "'Agents de maîtrise'"].includes(
-        args[
-          "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle"
-        ]
-      ) &&
       args[
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
       ] &&
@@ -31,9 +24,17 @@ export class Ineligibility2596 extends IneligibilityLegalIndemniteLicenciement {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
           ] ?? "0"
         )
-      ) < 8
+      ) <
+        9 / 12 &&
+      args[
+        "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
+      ] === CatPro3239.assistantMaternel
     ) {
-      return "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.";
+      return "<p>L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois.</p>";
+    }
+    const seniorityIneligibility = this.getSeniorityIneligibility(args);
+    if (seniorityIneligibility) {
+      return seniorityIneligibility;
     }
   }
 }

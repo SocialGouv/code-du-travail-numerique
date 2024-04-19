@@ -5,12 +5,18 @@ export class IneligibilityLegalIndemniteLicenciement implements IInegibility {
     args: Record<string, string | undefined>
   ): string | undefined {
     if (args.typeContratTravail && args.typeContratTravail === "cdd") {
-      return "L’indemnité de licenciement n’est pas due pour les CDD et contrats de travail temporaires. Sous certaines conditions, le salarié peut avoir le droit à une indemnité de précarité.";
+      return `
+        <p>
+          L’indemnité de licenciement ne concerne pas les salariés en CDD et en contrat de travail temporaire.
+          Sous certaines conditions, le salarié peut avoir le droit à une 
+          <a href="/outils/indemnite-precarite">indemnité de précarité</a>.
+        </p>
+      `;
     } else if (
       args.licenciementFauteGrave &&
       args.licenciementFauteGrave === "oui"
     ) {
-      return "L’indemnité de licenciement n’est pas due en cas de faute grave (ou lourde). Lorsqu’il est invoqué, le motif de faute grave doit apparaître précisément dans le courrier. Reportez-vous à la lettre de notification de licenciement.";
+      return "<p>L’indemnité de licenciement n’est pas due en cas de faute grave (ou lourde). Lorsqu’il est invoqué, le motif de faute grave doit apparaître précisément dans le courrier. Reportez-vous à la lettre de notification de licenciement.</p>";
     }
   }
 
@@ -38,7 +44,7 @@ export class IneligibilityLegalIndemniteLicenciement implements IInegibility {
       ) <
         8 / 12
     ) {
-      return "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.";
+      return "<p>L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.</p>";
     }
   }
 

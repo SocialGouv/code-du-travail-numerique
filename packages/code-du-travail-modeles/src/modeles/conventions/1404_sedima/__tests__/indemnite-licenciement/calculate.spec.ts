@@ -42,7 +42,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "2600",
     });
     expect(missingArgs).toEqual([]);
-    expect(ineligibility).toEqual(
+    expect(ineligibility).toContain(
       "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois."
     );
   });
