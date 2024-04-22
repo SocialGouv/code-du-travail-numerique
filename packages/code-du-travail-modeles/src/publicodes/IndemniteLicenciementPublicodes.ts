@@ -11,8 +11,8 @@ import type { IInegibility } from "../modeles/common/types/ineligibility";
 import { PublicodesBase } from "./PublicodesBase";
 import type {
   IndemniteDepartInstance,
-  PublicodesDataWithFormula,
   PublicodesData,
+  PublicodesDataWithFormula,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "./types";

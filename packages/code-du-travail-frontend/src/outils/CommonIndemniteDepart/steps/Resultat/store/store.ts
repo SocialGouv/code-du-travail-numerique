@@ -186,11 +186,12 @@ const createResultStore: StoreSlice<
                 label: v.question.rule.titre,
                 value: v.info,
                 unit: v.question.rule.unité,
-                name: v.question.name,
               };
             }
           })
           .filter((v) => v !== undefined) as AgreementInformation[];
+
+        agreementHasNoBetterAllowance = hasNoBetterAllowance(agreement.num);
 
         isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
           isAgreementBetter,

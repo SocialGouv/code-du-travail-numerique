@@ -15,8 +15,8 @@ import type { IInegibility } from "../modeles/common/types/ineligibility";
 import IndemniteLicenciementPublicodes from "./IndemniteLicenciementPublicodes";
 import type {
   IndemniteDepartInstance,
-  PublicodesDataWithFormula,
   PublicodesData,
+  PublicodesDataWithFormula,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
 import { getExplanationAgreement, getMainExplanation } from "./utils";
