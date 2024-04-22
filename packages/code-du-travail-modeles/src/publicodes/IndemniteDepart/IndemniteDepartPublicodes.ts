@@ -71,6 +71,8 @@ export class IndemniteDepartPublicodes extends PublicodesBase<PublicodesIndemnit
       return {
         ...legalResult,
         detail: {
+          agreementExplanation:
+            this.explanationInstance.getAgreementExplanation(),
           chosenResult: "LEGAL",
           legalResult: legalResult.result,
         },

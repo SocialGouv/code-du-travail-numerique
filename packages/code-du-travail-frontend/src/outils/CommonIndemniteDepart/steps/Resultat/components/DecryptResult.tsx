@@ -14,7 +14,7 @@ type Props = {
   agreementResult?: string;
   agreementExplanation?: ExplanationAgreementResult;
   legalResult?: string;
-  resultExplanation: ExplanationMainResult;
+  resultExplanation?: ExplanationMainResult;
 };
 
 export default function DecryptResult(props: Props) {
@@ -34,9 +34,11 @@ export default function DecryptResult(props: Props) {
           )}
         </strong>
       </Paragraph>
-      <Paragraph>
-        {getDecryptedValue(props.label, props.resultExplanation)}
-      </Paragraph>
+      {props.resultExplanation && (
+        <Paragraph>
+          {getDecryptedValue(props.label, props.resultExplanation)}
+        </Paragraph>
+      )}
     </>
   );
 }
