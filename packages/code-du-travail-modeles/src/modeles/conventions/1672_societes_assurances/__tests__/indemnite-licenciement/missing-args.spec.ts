@@ -24,7 +24,7 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
     });
 
     it("doit demander en premier la catégorie", () => {
-      expect(result?.missingArgs).toHaveNextMissingRule(
+      expect(result.missingArgs).toHaveNextMissingRule(
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle"
       );
     });
@@ -42,7 +42,7 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
       });
 
       it("doit demander si il a été non cadres avant", () => {
-        expect(result?.missingArgs).toHaveNextMissingRule(
+        expect(result.missingArgs).toHaveNextMissingRule(
           "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . avant non cadres"
         );
       });
@@ -62,7 +62,7 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
         });
 
         it("doit demander la date du changement de status", () => {
-          expect(result?.missingArgs).toHaveNextMissingRule(
+          expect(result.missingArgs).toHaveNextMissingRule(
             "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . date du statut cadre"
           );
         });
@@ -84,8 +84,11 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
           });
 
           it("doit demander son age", () => {
-            expect(result?.missingArgs).toHaveNextMissingRule(
+            expect(result.missingArgs).toHaveNextMissingRule(
               "contrat salarié . convention collective . sociétés d'assurances . age"
+            );
+            expect(result.missingArgs).toHaveNextMissingQuestion(
+              "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
             );
           });
         });
@@ -109,7 +112,7 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
           });
 
           it("ne doit pas demander d'autres questions", () => {
-            expect(result?.missingArgs).toHaveNextMissingRule(null);
+            expect(result.missingArgs).toHaveNextMissingRule(null);
           });
         });
       });
@@ -129,8 +132,11 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
         });
 
         it("doit demander son age", () => {
-          expect(result?.missingArgs).toHaveNextMissingRule(
+          expect(result.missingArgs).toHaveNextMissingRule(
             "contrat salarié . convention collective . sociétés d'assurances . age"
+          );
+          expect(result.missingArgs).toHaveNextMissingQuestion(
+            "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
           );
         });
 
@@ -151,7 +157,7 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
           });
 
           it("ne doit pas demander d'autres questions", () => {
-            expect(result?.missingArgs).toHaveNextMissingRule(null);
+            expect(result.missingArgs).toHaveNextMissingRule(null);
           });
         });
       });

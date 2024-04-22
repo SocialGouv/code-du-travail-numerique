@@ -1,3 +1,4 @@
+import type { PublicodesMissingArgs } from "../../../../publicodes";
 import { IndemniteLicenciementPublicodes } from "../../../../publicodes";
 import type { SalaryPeriods } from "../../../common";
 
@@ -5,7 +6,7 @@ const engine = new IndemniteLicenciementPublicodes(modelsIndemniteLicenciement);
 
 describe("Test de la fonctionnalité 'calculate'", () => {
   test("Vérifier que l'ancienneté peut être remplacée par les dates en input", () => {
-    const { result, missingArgs } = engine.calculate({
+    const result = engine.calculate({
       absencePeriods: "[]",
       "contrat salarié . indemnité de licenciement . date d'entrée":
         "01/01/2022",
@@ -20,13 +21,11 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(missingArgs).toEqual([]);
-    expect(result?.value).toEqual(1000);
-    expect(result?.unit?.numerators).toEqual(["€"]);
+    expect(result).toResultBeEqual(1000, "€");
   });
 
   test("Vérifier qu'un missing args s'affiche lorsque la date d'entrée est manquante", () => {
-    const { missingArgs } = engine.calculate({
+    const result = engine.calculate({
       "contrat salarié . indemnité de licenciement . date de notification":
         "01/01/2024",
       "contrat salarié . indemnité de licenciement . date de sortie":
@@ -38,13 +37,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(missingArgs[0].name).toEqual(
-      "contrat salarié - indemnité de licenciement - ancienneté en année"
+    expect(result.type).toBe("missing-args");
+    expect((result as PublicodesMissingArgs).missingArgs[0].rawNode.nom).toBe(
+      "contrat salarié . indemnité de licenciement . ancienneté en année"
     );
   });
 
   test("Vérifier que l'ancienneté est bien calculé avec les congés", () => {
-    const { result, missingArgs } = engine.calculate({
+    const result = engine.calculate({
       absencePeriods: JSON.stringify([
         { motif: { key: "absenceMaladieNonPro" }, value: 6 },
       ]),
@@ -61,9 +61,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(missingArgs).toEqual([]);
-    expect(result?.value).toEqual(875);
-    expect(result?.unit?.numerators).toEqual(["€"]);
+    expect(result).toResultBeEqual(875, "€");
   });
 
   test("Vérifier que la grille de salaire est bien prise en compte", () => {
@@ -72,7 +70,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       { month: "2", prime: 500, value: 1000 },
       { month: "3", prime: 500, value: 3000 },
     ];
-    const { result, missingArgs } = engine.calculate({
+    const result = engine.calculate({
       absencePeriods: JSON.stringify([
         { motif: { key: "absenceMaladieNonPro" }, value: 6 },
       ]),
@@ -88,36 +86,31 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       salaryPeriods: JSON.stringify(salaryPeriods),
       typeContratTravail: "cdi",
     });
-    expect(missingArgs).toEqual([]);
-    expect(result?.value).toEqual(875);
-    expect(result?.unit?.numerators).toEqual(["€"]);
+    expect(result).toResultBeEqual(875, "€");
   });
+
   describe("Vérification que les ineligibilités fonctionnent", () => {
     test("Vérifier l'ineligibilite CDD", () => {
-      const { result, missingArgs, ineligibility } = engine.calculate({
+      const result = engine.calculate({
         typeContratTravail: "cdd",
       });
-      expect(missingArgs).toEqual([]);
-      expect(result?.value).toEqual(undefined);
-      expect(ineligibility).toContain(
+      expect(result).toIneligibilityContain(
         "L’indemnité de licenciement ne concerne pas les salariés en CDD et en contrat de travail temporaire."
       );
     });
 
     test("Vérifier l'ineligibilite Faute grave", () => {
-      const { result, missingArgs, ineligibility } = engine.calculate({
+      const result = engine.calculate({
         licenciementFauteGrave: "oui",
         typeContratTravail: "cdi",
       });
-      expect(missingArgs).toEqual([]);
-      expect(result?.value).toEqual(undefined);
-      expect(ineligibility).toContain(
+      expect(result).toIneligibilityContain(
         "L’indemnité de licenciement n’est pas due en cas de faute grave (ou lourde). Lorsqu’il est invoqué, le motif de faute grave doit apparaître précisément dans le courrier. Reportez-vous à la lettre de notification de licenciement."
       );
     });
 
     test("Vérifier l'ineligibilite Anciennete legal inférieur 8 mois", () => {
-      const { result, missingArgs, ineligibility } = engine.calculate({
+      const result = engine.calculate({
         "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
         "contrat salarié . indemnité de licenciement . date d'entrée":
           "01/01/2024",
@@ -130,15 +123,13 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         licenciementFauteGrave: "non",
         typeContratTravail: "cdi",
       });
-      expect(missingArgs).toEqual([]);
-      expect(result?.value).toEqual(undefined);
-      expect(ineligibility).toContain(
+      expect(result).toIneligibilityContain(
         "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois."
       );
     });
 
     test("Vérifier l'inéligibilité sur le bug des 2 mois", () => {
-      const { result, missingArgs, ineligibility } = engine.calculate({
+      const result = engine.calculate({
         absencePeriods:
           '[{"motif":{"key":"absenceMaladieNonPro","label":"Absence pour maladie non professionnelle","value":1},"durationInMonth":2}]',
         "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
@@ -153,9 +144,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         licenciementFauteGrave: "non",
         typeContratTravail: "cdi",
       });
-      expect(missingArgs).toEqual([]);
-      expect(result?.value).toEqual(undefined);
-      expect(ineligibility).toContain(
+      expect(result).toIneligibilityContain(
         "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois."
       );
     });

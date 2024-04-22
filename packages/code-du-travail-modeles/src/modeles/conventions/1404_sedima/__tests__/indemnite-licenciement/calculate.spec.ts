@@ -7,7 +7,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Test de la fonctionnalité 'calculate'", () => {
   test("Vérifier qu'il n'y a pas l'eligibilite Anciennete inférieur 8 mois quand cdi opération", () => {
-    const { missingArgs, ineligibility } = engine.calculate({
+    const result = engine.calculate({
       "contrat salarié . convention collective": "'IDCC1404'",
       "contrat salarié . convention collective . sedima . question cdi opération":
         "oui",
@@ -22,11 +22,11 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
         "2600",
     });
-    expect(missingArgs).toEqual([]);
-    expect(ineligibility).toBeUndefined();
+    expect(result).toNextMissingRuleBeEqual(null);
+    expect(result).toIneligibilityBeEqual(null);
   });
   test("Vérifier qu'il n'y a pas l'eligibilite Anciennete inférieur 8 mois quand pas cdi opération", () => {
-    const { missingArgs, ineligibility } = engine.calculate({
+    const result = engine.calculate({
       "contrat salarié . convention collective": "'IDCC1404'",
       "contrat salarié . convention collective . sedima . question cdi opération":
         "non",
@@ -41,8 +41,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
         "2600",
     });
-    expect(missingArgs).toEqual([]);
-    expect(ineligibility).toContain(
+    expect(result).toIneligibilityContain(
       "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois."
     );
   });

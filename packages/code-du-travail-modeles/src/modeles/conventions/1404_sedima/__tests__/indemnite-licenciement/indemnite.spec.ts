@@ -30,8 +30,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
         );
 
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
   });
@@ -70,8 +70,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
           );
 
           expect(missingArgs).toEqual([]);
-          expect(result?.value).toEqual(expectedCompensation);
-          expect(result?.unit?.numerators).toEqual(["€"]);
+          expect(result.value).toEqual(expectedCompensation);
+          expect(result.unit?.numerators).toEqual(["€"]);
         }
       );
     });
@@ -122,8 +122,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 1404", () => {
           );
 
           expect(missingArgs).toEqual([]);
-          expect(result?.value).toEqual(expectedCompensation);
-          expect(result?.unit?.numerators).toEqual(["€"]);
+          expect(result.value).toEqual(expectedCompensation);
+          expect(result.unit?.numerators).toEqual(["€"]);
         }
       );
     });

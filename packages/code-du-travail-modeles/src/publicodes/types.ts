@@ -10,6 +10,8 @@ import type {
   Formula,
   IReferenceSalary,
   ISeniority,
+  Notification,
+  References,
   SupportedCc,
 } from "../modeles";
 import type { IInegibility } from "../modeles/common/types/ineligibility";
@@ -78,21 +80,43 @@ export type PublicodesState = {
   targetRule: string;
 };
 
-export type PublicodesData<TResult> = {
-  situation: SituationElement[];
+export type PublicodesIneligibility = {
+  type: "ineligibility";
+  ineligibility: string;
+};
+
+export type PublicodesMissingArgs = {
+  type: "missing-args";
   missingArgs: MissingArgs[];
-  result?: TResult;
-  ineligibility?: string;
-  detail?: {
-    chosenResult?: "AGREEMENT" | "HAS_NO_LEGAL" | "LEGAL" | "SAME";
+};
+
+export type ChosenResult = "AGREEMENT" | "HAS_NO_LEGAL" | "LEGAL" | "SAME";
+
+export type PublicodesResult<TResult> = {
+  type: "result";
+  result: TResult;
+  detail: {
+    chosenResult: ChosenResult;
     legalResult?: TResult;
     agreementResult?: TResult;
     agreementExplanation?: ExplanationAgreementResult;
   };
-  explanation?: ExplanationMainResult;
+  explanation: ExplanationMainResult;
+  formula: Formula;
+  notifications: Notification[];
+  references: References[];
+  situation: SituationElement[];
 };
-export type PublicodesDataWithFormula<TResult> = PublicodesData<TResult> & {
-  formula?: Formula;
+
+export type PublicodesOutput<TResult> =
+  | PublicodesIneligibility
+  | PublicodesMissingArgs
+  | PublicodesResult<TResult>;
+
+export type PublicodesData<TResult> = {
+  situation: SituationElement[];
+  missingArgs: MissingArgs[];
+  result: TResult;
 };
 
 export enum PublicodesSimulator {
@@ -126,7 +150,7 @@ export type PublicodesPreavisRetraiteResult = {
 };
 
 export type PublicodesIndemniteLicenciementResult = {
-  value: Evaluation;
+  value: Evaluation<number>;
   unit?: Unit;
   ineligibility?: string;
 };

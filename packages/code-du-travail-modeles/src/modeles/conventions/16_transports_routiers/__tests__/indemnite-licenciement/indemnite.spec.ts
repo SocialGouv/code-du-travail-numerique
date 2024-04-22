@@ -84,8 +84,8 @@ describe("CC 16", () => {
         );
 
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
   });
@@ -138,9 +138,9 @@ describe("CC 16", () => {
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.unit?.numerators).toEqual(["€"]);
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -190,9 +190,9 @@ describe("CC 16", () => {
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.unit?.numerators).toEqual(["€"]);
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -231,9 +231,9 @@ describe("CC 16", () => {
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.unit?.numerators).toEqual(["€"]);
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -267,9 +267,9 @@ describe("CC 16", () => {
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.unit?.numerators).toEqual(["€"]);
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -320,9 +320,9 @@ describe("CC 16", () => {
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.unit?.numerators).toEqual(["€"]);
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });

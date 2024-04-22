@@ -1,7 +1,6 @@
 import {
   Formula,
   Notification,
-  PublicodesDataWithFormula,
   PublicodesIndemniteLicenciementResult,
   PublicodesSimulator,
   References,
@@ -25,13 +24,14 @@ import * as Sentry from "@sentry/nextjs";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 import { eventEmitter } from "../../../events/emitter";
 import { EventType } from "../../../events/events";
+import { PublicodesResult } from "@socialgouv/modeles-social/bin";
 
 const initialState: ResultStoreData = {
   input: {
     formula: { formula: "", explanations: [] },
     legalReferences: [],
-    result: { value: "" },
-    publicodesLegalResult: { value: "" },
+    result: { value: undefined },
+    publicodesLegalResult: { value: undefined },
     isAgreementBetter: false,
     isEligible: false,
     isParentalNoticeHidden: false,
@@ -116,7 +116,9 @@ const createResultStore: StoreSlice<
       const absencePeriods = get().ancienneteData.input.absencePeriods;
 
       const legalReferences = publicodes.getReferences();
-      let publicodesSituation: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult>;
+      let publicodesSituation:
+        | PublicodesResult<PublicodesIndemniteLicenciementResult>
+        | undefined = undefined;
 
       let agreementReferences: References[];
       let formula: Formula;
@@ -151,13 +153,21 @@ const createResultStore: StoreSlice<
               : undefined,
           ...get().situationData.situation,
         };
-        publicodesSituation = publicodes.calculate(situation);
+        const result = publicodes.calculate(situation);
+        if (result.type !== "result") {
+          throw new Error(
+            `Le calcul sur l'écran de résultat retourne un ${
+              result.type
+            } (detail: ${JSON.stringify(result)})`
+          );
+        }
+        publicodesSituation = result;
         isAgreementBetter =
-          publicodesSituation.detail?.chosenResult === "AGREEMENT";
+          publicodesSituation.detail.chosenResult === "AGREEMENT";
         isAgreementEqualToLegal =
-          publicodesSituation.detail?.chosenResult === "SAME";
+          publicodesSituation.detail.chosenResult === "SAME";
         agreementHasNoLegalIndemnity =
-          publicodesSituation.detail?.chosenResult === "HAS_NO_LEGAL";
+          publicodesSituation.detail.chosenResult === "HAS_NO_LEGAL";
         if (publicodesSituation.formula) {
           formula = publicodesSituation.formula;
         }
@@ -173,11 +183,9 @@ const createResultStore: StoreSlice<
           (item) => item.idcc === agreement.num && item.fullySupported
         )
       ) {
-        agreementReferences = publicodes.getReferences(
-          "résultat conventionnel"
-        );
+        agreementReferences = publicodesSituation?.references ?? [];
 
-        agreementNotifications = publicodes.getNotifications();
+        agreementNotifications = publicodesSituation?.notifications ?? [];
 
         agreementInformations = get()
           .informationsData.input.publicodesInformations.map((v) => {
@@ -221,17 +229,20 @@ const createResultStore: StoreSlice<
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.error.errorPublicodes = errorPublicodes;
-          state.resultData.input.result = publicodesSituation.result!;
+          state.resultData.input.result = publicodesSituation?.result ?? {
+            value: undefined,
+          };
           state.resultData.input.formula = formula;
           state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult = publicodesSituation
-            .detail?.legalResult ?? { value: 0 };
+            ?.detail?.legalResult ?? { value: 0 };
           state.resultData.input.publicodesAgreementResult =
             publicodesSituation.detail?.agreementResult;
           state.resultData.input.agreementExplanation =
             publicodesSituation.detail?.agreementExplanation;
           state.resultData.input.resultExplanation =
             publicodesSituation.explanation;
+          publicodesSituation?.detail?.agreementResult;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
           state.resultData.input.agreementInformations = agreementInformations;

@@ -63,7 +63,11 @@ const createCommonInformationsStore: StoreSlice<
               false
             )
           );
-          const missingArgs = result.missingArgs.filter(
+          let resultMissingArgs: MissingArgs[] = [];
+          if (result.type === "missing-args") {
+            resultMissingArgs = result.missingArgs;
+          }
+          const missingArgs = resultMissingArgs.filter(
             (item) => item.rawNode.cdtn
           );
           if (missingArgs.length > 0) {
@@ -146,7 +150,11 @@ const createCommonInformationsStore: StoreSlice<
               rules
             )
           );
-          missingArgs = result.missingArgs.filter((item) => item.rawNode.cdtn);
+          let resultMissingArgs: MissingArgs[] = [];
+          if (result.type === "missing-args") {
+            resultMissingArgs = result.missingArgs;
+          }
+          missingArgs = resultMissingArgs.filter((item) => item.rawNode.cdtn);
           const notifBloquante = publicodes.getNotificationsBloquantes();
           if (notifBloquante.length > 0) {
             blockingNotification = notifBloquante[0].description;
@@ -249,8 +257,11 @@ const createCommonInformationsStore: StoreSlice<
             get().informationsData.input.publicodesInformations
           ),
         };
-        const { ineligibility } = publicodes.calculate(situation);
-        errorEligibility = ineligibility ?? state.blockingNotification;
+        const result = publicodes.calculate(situation);
+        errorEligibility =
+          result.type === "ineligibility"
+            ? result.ineligibility
+            : state.blockingNotification;
       }
 
       set(

@@ -24,8 +24,8 @@ test.each`
       "contrat salarié . préavis de retraite en jours"
     );
 
-    expect(result?.value).toEqual(expectedResult);
-    expect(result?.unit).toEqual("mois");
+    expect(result.value).toEqual(expectedResult);
+    expect(result.unit).toEqual("mois");
     expect(missingArgs).toEqual([]);
   }
 );

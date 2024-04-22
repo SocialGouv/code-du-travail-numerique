@@ -21,8 +21,8 @@ test.each`
       "contrat salarié . travailleur handicapé": "non",
     });
 
-    expect(result?.value).toEqual(expectedNotice);
-    expect(result?.unit).toEqual(expectedUnit);
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual(expectedUnit);
     expect(missingArgs).toEqual([]);
   }
 );
@@ -47,7 +47,7 @@ test.each`
     });
 
     expect(missingArgs).toEqual([]);
-    expect(result?.value).toEqual(expectedNotice);
-    expect(result?.unit).toEqual(expectedUnit);
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual(expectedUnit);
   }
 );

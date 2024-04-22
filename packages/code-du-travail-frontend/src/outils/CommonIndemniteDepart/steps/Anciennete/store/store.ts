@@ -147,9 +147,9 @@ const createAncienneteStore: StoreSlice<
                 ? JSON.stringify(absencePeriods)
                 : undefined,
           };
-          const { result, ineligibility } = publicodes.calculate(situation);
-          if (!result?.value && ineligibility) {
-            errorEligibility = ineligibility;
+          const result = publicodes.calculate(situation);
+          if (result.type === "ineligibility") {
+            errorEligibility = result.ineligibility;
           }
         } catch (e) {
           console.error(e);

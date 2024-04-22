@@ -32,9 +32,9 @@ describe("CC 29", () => {
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.unit?.numerators).toEqual(["€"]);
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -65,9 +65,9 @@ describe("CC 29", () => {
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.unit?.numerators).toEqual(["€"]);
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -98,9 +98,9 @@ describe("CC 29", () => {
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.unit?.numerators).toEqual(["€"]);
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });

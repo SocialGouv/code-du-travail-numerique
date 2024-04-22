@@ -52,8 +52,8 @@ describe("Préavis de retraite de la CC 2596", () => {
         );
         const references = engine.getReferences();
 
-        expect(result?.value).toEqual(expectedResult);
-        expect(result?.unit).toEqual(expectedUnit);
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual(expectedUnit);
         expect(missingArgs).toEqual([]);
         expect(references).toHaveLength(DepartRetraiteReferences.length);
         expect(references).toEqual(
@@ -101,8 +101,8 @@ describe("Préavis de retraite de la CC 2596", () => {
         );
         const references = engine.getReferences();
 
-        expect(result?.value).toEqual(expectedResult);
-        expect(result?.unit).toEqual(expectedPeriod);
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual(expectedPeriod);
         expect(missingArgs).toEqual([]);
         expect(references).toHaveLength(MiseRetraiteCcReferences.length);
         expect(references).toEqual(

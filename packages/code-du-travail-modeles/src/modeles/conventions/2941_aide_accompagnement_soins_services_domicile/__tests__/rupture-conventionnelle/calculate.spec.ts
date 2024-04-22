@@ -21,7 +21,7 @@ describe("Calcul de l'indemnité de rupture conventionnelle pour la CC 2941", ()
       expectedCompensationLegal,
       expectedCompensationAgreement,
     }) => {
-      const { result, missingArgs, detail } = engine.calculate({
+      const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC2941'",
         "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
         "contrat salarié . indemnité de licenciement . date d'entrée":
@@ -38,13 +38,12 @@ describe("Calcul de l'indemnité de rupture conventionnelle pour la CC 2941", ()
         licenciementFauteGrave: "non",
         typeContratTravail: "cdi",
       });
-      expect(missingArgs).toEqual([]);
-      expect(detail?.agreementResult?.value).toEqual(
-        expectedCompensationAgreement
+      expect(result).toAgreementResultBeEqual(
+        expectedCompensationAgreement,
+        "€"
       );
-      expect(detail?.legalResult?.value).toEqual(expectedCompensationLegal);
-      expect(result?.value).toEqual(expectedCompensationLegal);
-      expect(result?.unit?.numerators).toEqual(["€"]);
+      expect(result).toLegalResultBeEqual(expectedCompensationLegal, "€");
+      expect(result).toResultBeEqual(expectedCompensationLegal, "€");
     }
   );
 });

@@ -20,7 +20,7 @@ describe("Calcul de l'ancienneté : CC 1672", () => {
           isExecutive: false,
         });
 
-        expect(result?.value).toEqual(expectedAnciennete);
+        expect(result.value).toEqual(expectedAnciennete);
       }
     );
   });
@@ -58,8 +58,8 @@ describe("Calcul de l'ancienneté : CC 1672", () => {
           isExecutive: true,
         });
 
-        expect(result?.value).toEqual(expectedAnciennete);
-        expect(result?.extraInfos).toEqual(expectedExtras);
+        expect(result.value).toEqual(expectedAnciennete);
+        expect(result.extraInfos).toEqual(expectedExtras);
       }
     );
   });

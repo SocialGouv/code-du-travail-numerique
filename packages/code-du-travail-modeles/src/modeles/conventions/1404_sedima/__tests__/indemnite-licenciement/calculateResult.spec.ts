@@ -1,3 +1,4 @@
+import type { PublicodesMissingArgs } from "../../../../../publicodes";
 import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 
 const engine = new IndemniteLicenciementPublicodes(
@@ -7,7 +8,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Test de la fonctionnalité 'calculate'", () => {
   test("Si cdi opération pas de missing var si on ne fourni pas le salaire de ref et l'ancienneté requise", () => {
-    const { result, missingArgs, detail, formula } = engine.calculate({
+    const result = engine.calculate({
       "contrat salarié . convention collective": "'IDCC1404'",
       "contrat salarié . convention collective . sedima . cdi opération . durée":
         "10",
@@ -32,15 +33,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(missingArgs).toEqual([]);
-    expect(result?.value).toEqual(160);
-    expect(detail?.chosenResult).toEqual("HAS_NO_LEGAL");
-    expect(formula?.formula).toEqual(
+    expect(result).toResultBeEqual(160, "€");
+    expect(result).toChosenResultBeEqual("HAS_NO_LEGAL");
+    expect(result).toFormulaBeEqual(
       "(8% * Sref1) + (6% * Sref2) + (4% * Sref3)"
     );
   });
   test("Si pas de cdi opération alors on a des missing var pour le legal", () => {
-    const { missingArgs } = engine.calculate({
+    const result = engine.calculate({
       "contrat salarié . convention collective": "'IDCC1404'",
       "contrat salarié . convention collective . sedima . cdi opération . durée":
         "10",
@@ -65,15 +65,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(missingArgs).toEqual([
-      {
-        indice: 1,
-        name: "contrat salarié - indemnité de licenciement - salaire de référence",
-        rawNode: {
-          nom: "contrat salarié . indemnité de licenciement . salaire de référence",
-          unité: "€",
-        },
-      },
-    ]);
+    expect(result.type).toBe("missing-args");
+
+    expect((result as PublicodesMissingArgs).missingArgs[0].rawNode.nom).toBe(
+      "contrat salarié . indemnité de licenciement . salaire de référence"
+    );
   });
 });
