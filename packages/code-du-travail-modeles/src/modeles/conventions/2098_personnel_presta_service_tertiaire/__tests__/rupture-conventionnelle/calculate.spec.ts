@@ -36,14 +36,14 @@ describe("Gestion des licenciements pour la CC 2098", () => {
 
       const { missingArgs } = engine.calculate(input);
       expect(missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age"
+        "contrat salarié . convention collective . personnel presta service tertiaire . rupture conventionnelle . cadre age"
       );
     });
 
     test("En ayant tout complété en étant Cadres", () => {
       const input = {
         "contrat salarié . convention collective": "'IDCC2098'",
-        "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age":
+        "contrat salarié . convention collective . personnel presta service tertiaire . rupture conventionnelle . cadre age":
           "60",
         "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle": `'Cadres'`,
       };
@@ -89,7 +89,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
         (value) => {
           const { missingArgs, detail } = engine.calculate({
             "contrat salarié . convention collective": "'IDCC2098'",
-            "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age": `${value.age}`,
+            "contrat salarié . convention collective . personnel presta service tertiaire . rupture conventionnelle . cadre age": `${value.age}`,
             "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle": `'${value.catPro}'`,
             "contrat salarié . indemnité de licenciement . date d'entrée":
               value.dateEntree,

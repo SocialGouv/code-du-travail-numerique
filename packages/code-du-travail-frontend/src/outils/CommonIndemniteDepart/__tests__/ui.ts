@@ -229,6 +229,9 @@ export const ui = {
       age: byTestId(
         "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle - agents - licenciement économique - age"
       ),
+      ageRupture: byTestId(
+        "infos.contrat salarié - convention collective - commerces de gros - rupture conventionnelle - licenciement économique agents age"
+      ),
     },
     agreement2120: {
       proCategory: byTestId(
