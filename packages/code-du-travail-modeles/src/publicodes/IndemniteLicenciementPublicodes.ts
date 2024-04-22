@@ -3,6 +3,7 @@ import {
   SupportedCc,
 } from "../modeles";
 import { Agreement, Legal } from "./IndemniteDepart";
+import { ExplanationBuilderIndemniteLicenciement } from "./IndemniteDepart/ExplanationBuilderIndemniteLicenciement";
 import { IndemniteDepartPublicodes } from "./IndemniteDepart/IndemniteDepartPublicodes";
 
 class IndemniteLicenciementPublicodes extends IndemniteDepartPublicodes {
@@ -27,6 +28,7 @@ class IndemniteLicenciementPublicodes extends IndemniteDepartPublicodes {
           SupportedCc.default
         )
       ),
+      new ExplanationBuilderIndemniteLicenciement(idcc),
       agreementInstance
     );
   }

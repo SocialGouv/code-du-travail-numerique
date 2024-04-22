@@ -237,11 +237,11 @@ const createResultStore: StoreSlice<
           state.resultData.input.publicodesLegalResult = publicodesSituation
             ?.detail?.legalResult ?? { value: 0 };
           state.resultData.input.publicodesAgreementResult =
-            publicodesSituation.detail?.agreementResult;
+            publicodesSituation?.detail?.agreementResult;
           state.resultData.input.agreementExplanation =
-            publicodesSituation.detail?.agreementExplanation;
+            publicodesSituation?.detail?.agreementExplanation;
           state.resultData.input.resultExplanation =
-            publicodesSituation.explanation;
+            publicodesSituation?.explanation;
           publicodesSituation?.detail?.agreementResult;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.isAgreementBetter = isAgreementBetter;

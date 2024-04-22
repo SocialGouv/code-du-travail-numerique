@@ -26,9 +26,8 @@ export const getDecryptedValueAgreement = (
 
 export const getDecryptedValue = (
   label: string,
-  value?: ExplanationMainResult
+  value: ExplanationMainResult
 ): string => {
-  if (!value) return "";
   switch (value) {
     case "HAS_NOT_SELECTED_AGREEMENT":
       return `La convention collective n’ayant pas été renseignée, le montant de l’indemnité de ${label} affiché correspond au montant prévu par le code du travail.`;
@@ -46,6 +45,6 @@ export const getDecryptedValue = (
       return "Le montant à retenir pour le salarié est celui prévu par le code du travail, celui-ci étant plus favorable que le montant prévu par la convention collective.";
     case "NO_EXPLANATION":
     default:
-      return "";
+      throw new Error("No explanation provided");
   }
 };

@@ -28,11 +28,14 @@ export class Agreement implements AgreementIndemniteCompute {
 
   public readonly salary: IReferenceSalary<SupportedCc>;
 
+  public readonly idcc: SupportedCc;
+
   constructor(idcc: SupportedCc, ineligibility: IInegibility) {
     this.ineligibility = ineligibility;
     this.seniority = new SeniorityFactory().create(idcc);
     this.legalSeniority = new SeniorityFactory().create(SupportedCc.default);
     this.salary = new ReferenceSalaryFactory().create(idcc);
+    this.idcc = idcc;
   }
 
   calculate(
