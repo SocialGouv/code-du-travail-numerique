@@ -200,7 +200,7 @@ export default function Eligible() {
             legalResult={
               publicodesLegalResult.value
                 ? publicodesLegalResult.value.toString()
-                : ""
+                : "0"
             }
             agreementResult={
               publicodesAgreementResult && publicodesAgreementResult.value

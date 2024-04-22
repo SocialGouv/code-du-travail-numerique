@@ -142,7 +142,7 @@ const Eligible = () => {
             legalResult={
               result.publicodesLegalResult.value
                 ? result.publicodesLegalResult.value.toString()
-                : ""
+                : "0"
             }
             agreementResult={
               result.publicodesAgreementResult &&
