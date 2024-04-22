@@ -39,7 +39,7 @@ describe("Indemnité licenciement - CC 1501", () => {
     fireEvent.change(ui.information.agreement1501.proCategory.get(), {
       target: { value: "'Cadres'" },
     });
-    fireEvent.change(ui.information.agreement1501.age.get(), {
+    fireEvent.change(ui.information.agreement1501.ruptureAge.get(), {
       target: { value: "55" },
     });
     userEvent.click(ui.next.get());

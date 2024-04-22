@@ -36,7 +36,7 @@ describe("Indemnité licenciement - CC 1702", () => {
   });
 
   test(`Vérifier l'enchainement de question à l'étape information`, () => {
-    fireEvent.change(ui.information.agreement1702.age.get(), {
+    fireEvent.change(ui.information.agreement1702.ruptureAge.get(), {
       target: { value: "55" },
     });
     userEvent.click(ui.next.get());

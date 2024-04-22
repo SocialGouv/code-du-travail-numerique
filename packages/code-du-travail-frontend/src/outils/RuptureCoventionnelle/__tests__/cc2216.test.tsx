@@ -39,7 +39,7 @@ describe("Indemnité licenciement - CC 2216", () => {
     fireEvent.change(ui.information.agreement2216.proCategory.get(), {
       target: { value: "'Cadres'" },
     });
-    fireEvent.change(ui.information.agreement2216.age.get(), {
+    fireEvent.change(ui.information.agreement2216.ruptureAge.get(), {
       target: { value: "65" },
     });
     userEvent.click(ui.next.get());

@@ -1,4 +1,9 @@
-import { byTestId, byText, byTitle } from "testing-library-selector";
+import {
+  byLabelText,
+  byTestId,
+  byText,
+  byTitle,
+} from "testing-library-selector";
 
 export const ui = {
   introduction: {
@@ -98,6 +103,9 @@ export const ui = {
       engineerAge: byTestId(
         "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - age"
       ),
+      ruptureEngineerAge: byTestId(
+        "infos.contrat salarié - convention collective - transports routiers - rupture conventionnelle - cadre age"
+      ),
       employeeAge: byTestId(
         "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - age"
       ),
@@ -151,6 +159,9 @@ export const ui = {
       ),
       age: byTestId(
         "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - age"
+      ),
+      ruptureAge: byTestId(
+        "infos.contrat salarié - convention collective - industries chimiques - rupture conventionnelle - age"
       ),
     },
     agreement2609: {
@@ -274,6 +285,9 @@ export const ui = {
       age: byTestId(
         "infos.contrat salarié - convention collective - ouvriers travaux public - indemnité de licenciement - age"
       ),
+      ruptureAge: byTestId(
+        "infos.contrat salarié - convention collective - ouvriers travaux public - rupture conventionnelle - age"
+      ),
     },
     agreement3248: {
       proCategory: byTestId(
@@ -338,13 +352,16 @@ export const ui = {
       age: byTestId(
         "infos.contrat salarié - convention collective - restauration rapide - indemnité de licenciement - licenciement économique - age"
       ),
+      ruptureAge: byTestId(
+        "infos.contrat salarié - convention collective - restauration rapide - rupture conventionnelle - age"
+      ),
     },
     agreement2098: {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - personnel presta service tertiaire - autre licenciement - catégorie professionnelle"
       ),
       age: byTestId(
-        "infos.contrat salarié - convention collective - personnel presta service tertiaire - autre licenciement - cadres - age"
+        "infos.contrat salarié - convention collective - personnel presta service tertiaire - rupture conventionnelle - cadre age"
       ),
     },
     agreement2216: {
@@ -353,6 +370,9 @@ export const ui = {
       ),
       age: byTestId(
         "infos.contrat salarié - convention collective - commerce gros et detail alimentation - indemnité de licenciement - catégorie professionnelle - licenciement économique - age"
+      ),
+      ruptureAge: byTestId(
+        "infos.contrat salarié - convention collective - commerce gros et detail alimentation - rupture conventionnelle - licenciement économique age"
       ),
     },
   },

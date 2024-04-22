@@ -43,7 +43,7 @@ describe("Indemnité licenciement - CC 16", () => {
     fireEvent.change(ui.information.agreement16.dateProCategoryChanged.get(), {
       target: { value: "01/01/2010" },
     });
-    fireEvent.change(ui.information.agreement16.engineerAge.get(), {
+    fireEvent.change(ui.information.agreement16.ruptureEngineerAge.get(), {
       target: { value: "48" },
     });
     userEvent.click(ui.next.get());
