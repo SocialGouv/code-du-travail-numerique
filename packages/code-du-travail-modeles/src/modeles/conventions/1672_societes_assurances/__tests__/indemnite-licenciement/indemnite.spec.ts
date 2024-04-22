@@ -46,8 +46,8 @@ describe("CC 1672", () => {
         );
 
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
   });
@@ -117,8 +117,8 @@ describe("CC 1672", () => {
         );
 
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
   });

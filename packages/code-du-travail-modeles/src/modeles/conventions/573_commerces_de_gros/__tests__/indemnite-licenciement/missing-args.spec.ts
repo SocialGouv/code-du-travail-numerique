@@ -14,8 +14,8 @@ describe("CC 573 - missing args", () => {
       "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique question": `'Oui'`,
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingQuestion(
+    const result = engine.calculate(input);
+    expect(result).toNextMissingQuestionBeEqual(
       "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
     );
   });
@@ -27,8 +27,8 @@ describe("CC 573 - missing args", () => {
       "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans question": `'Oui'`,
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingQuestion(
+    const result = engine.calculate(input);
+    expect(result).toNextMissingQuestionBeEqual(
       "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
     );
   });

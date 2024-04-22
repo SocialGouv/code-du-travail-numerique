@@ -11,8 +11,8 @@ describe("CC 1597 - Wording question sur la rupture conventionnelle", () => {
       "contrat salarié . convention collective": "'IDCC1597'",
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingQuestion(
+    const result = engine.calculate(input);
+    expect(result).toNextMissingQuestionBeEqual(
       "Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?"
     );
   });

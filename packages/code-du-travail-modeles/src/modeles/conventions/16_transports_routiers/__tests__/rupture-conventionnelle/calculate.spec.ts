@@ -15,8 +15,8 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
           "non",
       };
 
-      const { missingArgs } = engine.calculate(input);
-      expect(missingArgs).toHaveNextMissingRule(
+      const result = engine.calculate(input);
+      expect(result).toNextMissingRuleBeEqual(
         "contrat salarié . convention collective . transports routiers . rupture conventionnelle . ouvrier age"
       );
     });
@@ -31,8 +31,8 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
           "non",
       };
 
-      const { missingArgs } = engine.calculate(input);
-      expect(missingArgs).toHaveNextMissingRule(null);
+      const result = engine.calculate(input);
+      expect(result).toNextMissingRuleBeEqual(null);
     });
 
     test("Demande s'il a le droit à la retraitre si l'age est supérieur ou égal à 60", () => {
@@ -45,8 +45,8 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
           "non",
       };
 
-      const { missingArgs } = engine.calculate(input);
-      expect(missingArgs).toHaveNextMissingRule(
+      const result = engine.calculate(input);
+      expect(result).toNextMissingRuleBeEqual(
         "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise"
       );
     });
@@ -54,7 +54,7 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
 
   describe("[Ouvriers] Autres licenciements", () => {
     test("En comparant avec les autres types qui sont calculés également", () => {
-      const { missingArgs, detail } = engine.calculate({
+      const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC0016'",
         "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle": `'Ouvriers'`,
         "contrat salarié . convention collective . transports routiers . rupture conventionnelle . ouvrier age":
@@ -73,13 +73,11 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
           '[{"month":"décembre 2024","value":2600},{"month":"novembre 2024","value":2600},{"month":"octobre 2024","value":2600},{"month":"septembre 2024","value":2600},{"month":"août 2024","value":2600},{"month":"juillet 2024","value":2600},{"month":"juin 2024","value":2600},{"month":"mai 2024","value":2600},{"month":"avril 2024","value":2600},{"month":"mars 2024","value":2600},{"month":"février 2024","value":2600},{"month":"janvier 2024","value":2600}]',
         typeContratTravail: "cdi",
       });
-      expect(detail?.agreementResult?.value).toEqual(1560);
-      expect(missingArgs).toEqual([]);
-      expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
+      expect(result).toAgreementResultBeEqual(1560, "€");
     });
 
     test("Les autres types ne sont pas calculés car n'a pas le minimum d'ancienneté requis", () => {
-      const { missingArgs, detail } = engine.calculate({
+      const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC0016'",
         "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle": `'Ouvriers'`,
         "contrat salarié . convention collective . transports routiers . rupture conventionnelle . ouvrier age":
@@ -98,15 +96,13 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
           '[{"month":"décembre 2024","value":2600},{"month":"novembre 2024","value":2600},{"month":"octobre 2024","value":2600},{"month":"septembre 2024","value":2600},{"month":"août 2024","value":2600},{"month":"juillet 2024","value":2600},{"month":"juin 2024","value":2600},{"month":"mai 2024","value":2600},{"month":"avril 2024","value":2600},{"month":"mars 2024","value":2600},{"month":"février 2024","value":2600},{"month":"janvier 2024","value":2600}]',
         typeContratTravail: "cdi",
       });
-      expect(detail?.agreementResult?.value).toEqual(520);
-      expect(missingArgs).toEqual([]);
-      expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
+      expect(result).toAgreementResultBeEqual(520, "€");
     });
   });
 
   describe("[Ouvriers] Incapacité temporaire à la conduite", () => {
     test("moins favorable", () => {
-      const { missingArgs, detail } = engine.calculate({
+      const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC0016'",
         "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle": `'Ouvriers'`,
         "contrat salarié . convention collective . transports routiers . rupture conventionnelle . ouvrier age":
@@ -125,9 +121,7 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
           '[{"month":"décembre 2024","value":2600},{"month":"novembre 2024","value":2600},{"month":"octobre 2024","value":2600},{"month":"septembre 2024","value":2600},{"month":"août 2024","value":2600},{"month":"juillet 2024","value":2600},{"month":"juin 2024","value":2600},{"month":"mai 2024","value":2600},{"month":"avril 2024","value":2600},{"month":"mars 2024","value":2600},{"month":"février 2024","value":2600},{"month":"janvier 2024","value":2600}]',
         typeContratTravail: "cdi",
       });
-      expect(detail?.agreementResult?.value).toEqual(2600);
-      expect(missingArgs).toEqual([]);
-      expect(detail?.agreementResult?.unit?.numerators).toEqual(["€"]);
+      expect(result).toAgreementResultBeEqual(2600, "€");
     });
   });
 });

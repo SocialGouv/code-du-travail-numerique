@@ -30,8 +30,8 @@ describe("Formules pour la CC 573", () => {
 
         const result = engine.getFormule();
 
-        expect(result?.formula).toEqual(expectedFormula);
-        expect(result?.explanations).toEqual(expectedExplanations);
+        expect(result.formula).toEqual(expectedFormula);
+        expect(result.explanations).toEqual(expectedExplanations);
       }
     );
   });
@@ -74,8 +74,8 @@ describe("Formules pour la CC 573", () => {
 
         const result = engine.getFormule();
 
-        expect(result?.formula).toEqual(expectedFormula);
-        expect(result?.explanations).toEqual(expectedExplanations);
+        expect(result.formula).toEqual(expectedFormula);
+        expect(result.explanations).toEqual(expectedExplanations);
       }
     );
   });
@@ -127,8 +127,8 @@ describe("Formules pour la CC 573", () => {
 
         const result = engine.getFormule();
 
-        expect(result?.formula).toEqual(expectedFormula);
-        expect(result?.explanations).toEqual(expectedExplanations);
+        expect(result.formula).toEqual(expectedFormula);
+        expect(result.explanations).toEqual(expectedExplanations);
       }
     );
   });

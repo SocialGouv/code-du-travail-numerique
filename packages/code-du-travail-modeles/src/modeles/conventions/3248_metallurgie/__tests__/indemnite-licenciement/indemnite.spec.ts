@@ -141,8 +141,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         );
 
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
 
         const formule = engine.getFormule();
         expect(formule.formula).toEqual(expectedFormula);
@@ -276,8 +276,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         );
 
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
 
         const formule = engine.getFormule();
         expect(formule.formula).toEqual(expectedFormula);
@@ -359,8 +359,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         );
 
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
 
         const formule = engine.getFormule();
         expect(formule.formula).toEqual(expectedFormula);
@@ -454,8 +454,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         );
 
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
 
         const formule = engine.getFormule();
         expect(formule.formula).toEqual(expectedFormula);
@@ -558,8 +558,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         );
 
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
 
         const formule = engine.getFormule();
         expect(formule.formula).toEqual(expectedFormula);
@@ -920,8 +920,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         expect(formule.explanations).toEqual(expectedFormulaExplanations);
 
         expect(missingArgs).toEqual([]);
-        expect(result?.value).toEqual(expectedCompensation);
-        expect(result?.unit?.numerators).toEqual(["€"]);
+        expect(result.value).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
 
         const references = engine.getReferences("résultat conventionnel");
         expect(references).toHaveLength(expectedRefs.length);

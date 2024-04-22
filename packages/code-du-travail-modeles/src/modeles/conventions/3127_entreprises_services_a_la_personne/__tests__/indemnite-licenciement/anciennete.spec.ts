@@ -18,7 +18,7 @@ describe("Calcul de l'ancienneté - CC 3127", () => {
         dateSortie: exitDate,
       });
 
-      expect(result?.value).toEqual(expectedAnciennete);
+      expect(result.value).toEqual(expectedAnciennete);
     }
   );
 });

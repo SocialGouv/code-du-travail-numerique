@@ -16,7 +16,7 @@ describe("Calcul de l'ancienneté CC 2098", () => {
         dateSortie: exitDate,
       });
 
-      expect(result?.value).toEqual(expectedSeniority);
+      expect(result.value).toEqual(expectedSeniority);
     }
   );
 });

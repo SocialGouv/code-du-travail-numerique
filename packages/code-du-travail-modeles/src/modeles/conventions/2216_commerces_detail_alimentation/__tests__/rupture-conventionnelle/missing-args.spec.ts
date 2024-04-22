@@ -13,8 +13,8 @@ describe("CC 2216 - Wording question sur la rupture conventionnelle", () => {
       "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique": `'Oui'`,
     };
 
-    const { missingArgs } = engine.calculate(input);
-    expect(missingArgs).toHaveNextMissingQuestion(
+    const result = engine.calculate(input);
+    expect(result).toNextMissingQuestionBeEqual(
       "Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?"
     );
   });

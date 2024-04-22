@@ -26,8 +26,8 @@ describe("Préavis de retraite pour la CC 2216", () => {
           "contrat salarié . préavis de retraite en jours"
         );
 
-        expect(result?.value).toEqual(expectedNotice);
-        expect(result?.unit).toEqual(expectedUnit);
+        expect(result.value).toEqual(expectedNotice);
+        expect(result.unit).toEqual(expectedUnit);
         expect(missingArgs).toEqual([]);
       }
     );
@@ -59,8 +59,8 @@ describe("Préavis de retraite pour la CC 2216", () => {
           "contrat salarié . préavis de retraite en jours"
         );
 
-        expect(result?.value).toEqual(expectedNotice);
-        expect(result?.unit).toEqual("mois");
+        expect(result.value).toEqual(expectedNotice);
+        expect(result.unit).toEqual("mois");
         expect(missingArgs).toEqual([]);
       }
     );

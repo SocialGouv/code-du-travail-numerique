@@ -33,7 +33,7 @@ describe("CC 650", () => {
           hasBeenExecutive: false,
         });
 
-        expect(result?.value).toEqual(expectedAnciennete);
+        expect(result.value).toEqual(expectedAnciennete);
       }
     );
   });

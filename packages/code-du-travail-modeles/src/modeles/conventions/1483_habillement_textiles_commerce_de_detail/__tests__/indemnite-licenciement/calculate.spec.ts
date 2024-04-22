@@ -1,3 +1,4 @@
+import type { PublicodesMissingArgs } from "../../../../../publicodes";
 import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 
 const engine = new IndemniteLicenciementPublicodes(
@@ -7,7 +8,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Test de la fonctionnalité 'calculate'", () => {
   test("Vérifier que le fonctionne sans noticeSalaryPeriods", () => {
-    const { result, missingArgs, ineligibility } = engine.calculate({
+    const result = engine.calculate({
       "contrat salarié . convention collective": "'IDCC1483'",
       "contrat salarié . convention collective . habillement textiles commerce de detail . age":
         "50",
@@ -28,12 +29,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         '[{"month":"décembre 2023","value":3000},{"month":"novembre 2023","value":3000},{"month":"octobre 2023","value":3000},{"month":"septembre 2023","value":3000},{"month":"août 2023","value":3000},{"month":"juillet 2023","value":3000},{"month":"juin 2023","value":3000},{"month":"mai 2023","value":3000},{"month":"avril 2023","value":3000},{"month":"mars 2023","value":3000},{"month":"février 2023","value":3000},{"month":"janvier 2023","value":3000}]',
       typeContratTravail: "cdi",
     });
-    expect(missingArgs).toEqual([]);
-    expect(ineligibility).toBeUndefined();
-    expect(result?.value).toEqual(1500);
+    expect(result).toResultBeEqual(1500, "€");
   });
   test("Vérifier que le fonctionne sans salaryPeriods", () => {
-    const { missingArgs } = engine.calculate({
+    const result = engine.calculate({
       "contrat salarié . convention collective": "'IDCC1483'",
       "contrat salarié . convention collective . habillement textiles commerce de detail . age":
         "50",
@@ -53,16 +52,9 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       salaryPeriods: undefined,
       typeContratTravail: "cdi",
     });
-    expect(missingArgs.length).toEqual(1);
-    expect(missingArgs).toEqual([
-      {
-        indice: 3,
-        name: "contrat salarié - indemnité de licenciement - salaire de référence conventionnel",
-        rawNode: {
-          nom: "contrat salarié . indemnité de licenciement . salaire de référence conventionnel",
-          unité: "€",
-        },
-      },
-    ]);
+    expect(result.type).toBe("missing-args");
+    expect((result as PublicodesMissingArgs).missingArgs[0].rawNode.nom).toBe(
+      "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+    );
   });
 });

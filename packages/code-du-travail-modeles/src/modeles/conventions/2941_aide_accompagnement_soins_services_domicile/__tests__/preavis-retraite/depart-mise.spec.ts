@@ -20,8 +20,8 @@ test.each`
       "contrat salarié . préavis de retraite en jours"
     );
 
-    expect(result?.value).toEqual(expectedNotice);
-    expect(result?.unit).toEqual(expectedUnit);
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual(expectedUnit);
     expect(missingArgs).toEqual([]);
 
     expect(engine.getNotifications()).toHaveLength(0);
@@ -56,8 +56,8 @@ test.each`
     );
     const notifications = engine.getNotifications();
 
-    expect(result?.value).toEqual(expectedNotice);
-    expect(result?.unit).toEqual(expectedUnit);
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual(expectedUnit);
     expect(missingArgs).toEqual([]);
 
     expect(notifications).toHaveLength(1);
@@ -79,8 +79,8 @@ test("Pour un employé de category Employé possédant 24 mois d'ancienneté, so
   );
   const notifications = engine.getNotifications();
 
-  expect(result?.value).toEqual(2);
-  expect(result?.unit).toEqual("mois");
+  expect(result.value).toEqual(2);
+  expect(result.unit).toEqual("mois");
   expect(missingArgs).toEqual([]);
 
   expect(notifications).toHaveLength(0);
