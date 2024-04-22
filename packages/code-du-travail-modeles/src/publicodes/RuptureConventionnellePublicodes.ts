@@ -15,7 +15,7 @@ import type { IInegibility } from "../modeles/common/types/ineligibility";
 import IndemniteLicenciementPublicodes from "./IndemniteLicenciementPublicodes";
 import type {
   IndemniteDepartInstance,
-  PublicodesAugmentedData,
+  PublicodesDataWithFormula,
   PublicodesData,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
@@ -60,7 +60,7 @@ class RuptureConventionnellePublicodes extends IndemniteLicenciementPublicodes {
 
   calculate(
     args: Record<string, string | undefined>
-  ): PublicodesAugmentedData<PublicodesIndemniteLicenciementResult> {
+  ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
     let agreementResult:
       | PublicodesData<PublicodesIndemniteLicenciementResult>
       | undefined = undefined;

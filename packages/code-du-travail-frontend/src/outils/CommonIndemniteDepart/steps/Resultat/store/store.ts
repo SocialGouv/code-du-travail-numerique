@@ -1,7 +1,7 @@
 import {
   Formula,
   Notification,
-  PublicodesAugmentedData,
+  PublicodesDataWithFormula,
   PublicodesIndemniteLicenciementResult,
   PublicodesSimulator,
   References,
@@ -116,7 +116,7 @@ const createResultStore: StoreSlice<
       const absencePeriods = get().ancienneteData.input.absencePeriods;
 
       const legalReferences = publicodes.getReferences();
-      let publicodesSituation: PublicodesAugmentedData<PublicodesIndemniteLicenciementResult>;
+      let publicodesSituation: PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult>;
 
       let agreementReferences: References[];
       let formula: Formula;

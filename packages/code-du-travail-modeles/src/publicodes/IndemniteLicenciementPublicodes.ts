@@ -11,7 +11,7 @@ import type { IInegibility } from "../modeles/common/types/ineligibility";
 import { PublicodesBase } from "./PublicodesBase";
 import type {
   IndemniteDepartInstance,
-  PublicodesAugmentedData,
+  PublicodesDataWithFormula,
   PublicodesData,
   PublicodesIndemniteLicenciementResult,
 } from "./types";
@@ -62,7 +62,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
 
   public calculate(
     args: Record<string, string | undefined>
-  ): PublicodesAugmentedData<PublicodesIndemniteLicenciementResult> {
+  ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
     let agreementResult:
       | PublicodesData<PublicodesIndemniteLicenciementResult>
       | undefined = undefined;
@@ -172,7 +172,7 @@ class IndemniteLicenciementPublicodes extends PublicodesBase<PublicodesIndemnite
 
   protected mapIneligibility(
     text: string
-  ): PublicodesAugmentedData<PublicodesIndemniteLicenciementResult> {
+  ): PublicodesDataWithFormula<PublicodesIndemniteLicenciementResult> {
     return {
       detail: {
         legalResult: { value: 0 },

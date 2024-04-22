@@ -91,7 +91,7 @@ export type PublicodesData<TResult> = {
   };
   explanation?: ExplanationMainResult;
 };
-export type PublicodesAugmentedData<TResult> = PublicodesData<TResult> & {
+export type PublicodesDataWithFormula<TResult> = PublicodesData<TResult> & {
   formula?: Formula;
 };
 
