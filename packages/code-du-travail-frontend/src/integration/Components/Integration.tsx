@@ -166,7 +166,7 @@ const IntegrationContainer = ({
           let extraString = "";
           if (extra) {
             extraString = Object.entries(extra)
-              .map(([key, value]) => "\n\tdata.extra." + key + " // " + value)
+              .map(([key, value]) => `\n\tdata.extra.${key} // ${value}`)
               .join();
           }
           return `\tdata.name === '${name}' // ${description}${extraString}`;
