@@ -28,15 +28,15 @@ export class ResultBuilder {
     return {
       detail: {
         agreementExplanation: this.explanationBuilder.getAgreementExplanation(
-          agreementResult?.result?.value
+          agreementResult?.result.value
         ),
         agreementResult: agreementResult?.result,
         chosenResult,
         legalResult: legalResult?.result,
       },
       explanation: this.explanationBuilder.getMainExplanation(
-        legalResult?.result?.value,
-        agreementResult?.result?.value
+        legalResult?.result.value,
+        agreementResult?.result.value
       ),
       formula,
       notifications: agreementResult?.notifications ?? [],
@@ -57,7 +57,7 @@ export class ResultBuilder {
     references: References[];
   } {
     if (!legalResult) {
-      if (agreementResult === undefined || !agreementResult.result) {
+      if (agreementResult === undefined) {
         throw new Error(
           "[HAS_NO_LEGAL] il manque le résultat de la convention collective"
         );
@@ -69,7 +69,7 @@ export class ResultBuilder {
         result: agreementResult.result,
       };
     }
-    if (legalResult.result && (!agreementResult || !agreementResult.result)) {
+    if (legalResult && (!agreementResult || !agreementResult.result)) {
       return {
         chosenResult: "LEGAL",
         formula: legalResult.formula,
@@ -77,7 +77,7 @@ export class ResultBuilder {
         result: legalResult.result,
       };
     }
-    if (agreementResult?.result && !legalResult) {
+    if (agreementResult && !legalResult) {
       return {
         chosenResult: "AGREEMENT",
         formula: agreementResult.formula,
@@ -85,7 +85,7 @@ export class ResultBuilder {
         result: agreementResult.result,
       };
     }
-    if (legalResult.result && agreementResult?.result) {
+    if (legalResult && agreementResult) {
       const legalValue = legalResult.result.value ?? 0;
       const agreementValue = agreementResult.result.value ?? 0;
 

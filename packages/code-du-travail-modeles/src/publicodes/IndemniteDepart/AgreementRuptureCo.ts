@@ -74,13 +74,13 @@ export class AgreementRuptureCo implements AgreementIndemniteCompute {
         situations as IndemniteDepartResult<PublicodesIndemniteLicenciementResult>[];
 
       const elligibleSituations = allSituations.filter(
-        (situation) => situation.result?.value && situation.result.value !== 0
+        (situation) => situation.result.value && situation.result.value !== 0
       );
       const foundSituation = {
         ...elligibleSituations.reduce<
           IndemniteDepartResult<PublicodesIndemniteLicenciementResult>
         >((previous, current) => {
-          return (previous.result?.value ?? 0) < (current.result?.value ?? 0)
+          return (previous.result.value ?? 0) < (current.result.value ?? 0)
             ? previous
             : current;
         }, elligibleSituations[0]),
