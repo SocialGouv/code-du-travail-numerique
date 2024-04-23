@@ -77,7 +77,7 @@ export class ResultBuilder {
         result: legalResult.result,
       };
     }
-    if (agreementResult?.result && !legalResult) {
+    if (agreementResult?.result) {
       return {
         chosenResult: "AGREEMENT",
         formula: agreementResult.formula,
