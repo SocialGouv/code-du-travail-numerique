@@ -1,9 +1,8 @@
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
 import { CalculateurRuptureConventionnelle } from "../..";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import { UserAction } from "../../../common";
-import userEvent from "@testing-library/user-event";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -43,33 +42,23 @@ describe("Rupture Co - CC 2120", () => {
   });
 
   test(`Verification du processus`, () => {
-    fireEvent.change(ui.information.agreement2120.proCategory.get(), {
-      target: { value: "'Cadres'" },
-    });
-    userEvent.click(ui.next.get());
-
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/1970" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "01/03/2024" },
-    });
-    userEvent.click(ui.seniority.hasAbsence.non.get());
-    userEvent.click(ui.next.get());
-    userEvent.click(ui.salary.hasPartialTime.non.get());
-    userEvent.click(ui.salary.hasSameSalary.oui.get());
-    fireEvent.change(ui.salary.sameSalaryValue.get(), {
-      target: { value: "1488" },
-    });
-    fireEvent.change(ui.salary.agreement2120.salariesVariablePart.get(), {
-      target: { value: "2000" },
-    });
-    userEvent.click(ui.next.get());
+    userAction
+      .changeInputList(ui.information.agreement2120.proCategory.get(), "Cadres")
+      .click(ui.next.get())
+      .setInput(ui.seniority.startDate.get(), "01/01/1980")
+      .setInput(ui.seniority.endDate.get(), "01/03/2024")
+      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.salary.hasPartialTime.non.get())
+      .click(ui.salary.hasSameSalary.oui.get())
+      .setInput(ui.salary.sameSalaryValue.get(), "1488")
+      .setInput(ui.salary.agreement2120.salariesVariablePart.get(), "2000")
+      .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("25626,67 €");
-    expect(ui.result.resultatLegal.get()).toHaveTextContent("25626.67 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("25626.67 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("20666,67 €");
+    expect(ui.result.resultatLegal.get()).toHaveTextContent("20666.67 €");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("20666.67 €");
     expect(ui.result.dismissalType.economic.query()).not.toBeInTheDocument();
     expect(ui.result.dismissalType.discipline.query()).not.toBeInTheDocument();
   });
