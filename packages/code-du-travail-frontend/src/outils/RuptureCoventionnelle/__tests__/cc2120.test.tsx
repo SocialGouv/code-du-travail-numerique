@@ -2,24 +2,28 @@ import { fireEvent, render } from "@testing-library/react";
 import React from "react";
 import { CalculateurRuptureConventionnelle } from "../..";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
+import { UserAction } from "../../../common";
 import userEvent from "@testing-library/user-event";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
   () => `
   {
-    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780",
-    "id": "2120",
+    "effectif": 216431,
+    "cdtnId": "a25dfc974f",
+    "contributions": true,
     "num": 2120,
     "shortTitle": "Banque",
-    "slug": "2120-banque",
+    "id": "2120",
     "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.",
-    "contributions": true
-  }  
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780",
+    "slug": "2120-banque"
+}
 `
 );
 
-describe("Indemnité licenciement - CC 2120", () => {
+describe("Rupture Co - CC 2120", () => {
+  let userAction: UserAction;
   beforeEach(() => {
     render(
       <CalculateurRuptureConventionnelle
@@ -28,14 +32,17 @@ describe("Indemnité licenciement - CC 2120", () => {
         displayTitle={""}
       />
     );
-    userEvent.click(ui.introduction.startButton.get());
-    userEvent.click(ui.contract.type.cdi.get());
-    userEvent.click(ui.contract.arretTravail.non.get());
-    userEvent.click(ui.next.get());
-    userEvent.click(ui.next.get());
+    userAction = new UserAction();
+
+    userAction
+      .click(ui.introduction.startButton.get())
+      .click(ui.contract.type.cdi.get())
+      .click(ui.contract.arretTravail.non.get())
+      .click(ui.next.get())
+      .click(ui.next.get());
   });
 
-  test(`Vérifier l'enchainement de question à l'étape information`, () => {
+  test(`Verification du processus`, () => {
     fireEvent.change(ui.information.agreement2120.proCategory.get(), {
       target: { value: "'Cadres'" },
     });
