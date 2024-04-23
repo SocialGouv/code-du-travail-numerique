@@ -1,4 +1,5 @@
 module.exports = {
+  maxWorkers: "80%",
   roots: ["<rootDir>/src"],
   setupFilesAfterEnv: [
     "./src/__test__/common/publicode-matcher.ts",
