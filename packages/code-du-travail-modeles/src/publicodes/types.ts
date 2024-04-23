@@ -92,7 +92,7 @@ export type ChosenResult = "AGREEMENT" | "HAS_NO_LEGAL" | "LEGAL" | "SAME";
 
 export type PublicodesResult<TResult> = {
   type: "result";
-  result: TResult;
+  result?: TResult;
   detail: {
     chosenResult: ChosenResult;
     legalResult?: TResult;

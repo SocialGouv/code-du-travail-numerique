@@ -77,7 +77,7 @@ export class IndemniteDepartPublicodes extends PublicodesBase<PublicodesIndemnit
           legalResult: legalResult.result,
         },
         explanation: this.explanationInstance.getMainExplanation(
-          legalResult.result.value
+          legalResult.result?.value
         ),
         situation: this.data.situation,
       };
