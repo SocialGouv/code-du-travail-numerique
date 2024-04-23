@@ -5,6 +5,7 @@ import {
 } from "../modeles";
 import { Legal } from "./IndemniteDepart";
 import { AgreementRuptureCo } from "./IndemniteDepart/AgreementRuptureCo";
+import { ExplanationBuilderRuptureCo } from "./IndemniteDepart/ExplanationBuilderRuptureCo";
 import { IndemniteDepartPublicodes } from "./IndemniteDepart/IndemniteDepartPublicodes";
 
 class RuptureConventionnellePublicodes extends IndemniteDepartPublicodes {
@@ -24,6 +25,7 @@ class RuptureConventionnellePublicodes extends IndemniteDepartPublicodes {
           SupportedCc.default
         )
       ),
+      new ExplanationBuilderRuptureCo(idcc),
       agreementInstance
     );
   }

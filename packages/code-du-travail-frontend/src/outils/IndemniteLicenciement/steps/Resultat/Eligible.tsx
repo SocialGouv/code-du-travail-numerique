@@ -35,6 +35,8 @@ export default function Eligible() {
     result,
     publicodesLegalResult,
     publicodesAgreementResult,
+    agreementExplanation,
+    resultExplanation,
     typeContratTravail,
     licenciementInaptitude,
     licenciementFauteGrave,
@@ -104,6 +106,8 @@ export default function Eligible() {
     isAgreementSupported:
       state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
     isParentalNoticeHidden: state.resultData.input.isParentalNoticeHidden,
+    agreementExplanation: state.resultData.input.agreementExplanation,
+    resultExplanation: state.resultData.input.resultExplanation,
   }));
 
   const defaultNotification = [
@@ -148,7 +152,7 @@ export default function Eligible() {
               value: licenciementInaptitude === "oui" ? "Oui" : "Non",
               detail:
                 !isAgreementBetter && licenciementInaptitude === "oui"
-                  ? "Le salarié ayant été licencié pour inaptitude suite à un accident du travail ou une maladie professionnelle reconnue, le montant de l&apos;indemnité de licenciement légale est doublé"
+                  ? "Le salarié ayant été licencié pour inaptitude suite à un accident du travail ou une maladie professionnelle reconnue, le montant de l'indemnité de licenciement légale est doublé"
                   : undefined,
             },
             {
@@ -193,11 +197,19 @@ export default function Eligible() {
         <FormulaInterpreter formula={formula} />
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
-            hasSelectedAgreement={route !== "not-selected"}
-            isAgreementSupported={isAgreementSupported}
-            legalResult={publicodesLegalResult.value?.toString() ?? ""}
-            agreementResult={publicodesAgreementResult?.value?.toString()}
+            legalResult={
+              publicodesLegalResult.value
+                ? publicodesLegalResult.value.toString()
+                : "0"
+            }
+            agreementResult={
+              publicodesAgreementResult && publicodesAgreementResult.value
+                ? publicodesAgreementResult.value.toString()
+                : undefined
+            }
             label="licenciement"
+            resultExplanation={resultExplanation}
+            agreementExplanation={agreementExplanation}
           />
         )}
         <PubliReferences

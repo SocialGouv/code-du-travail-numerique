@@ -23,9 +23,7 @@ describe("Rupture conventionnelle - légale", () => {
 
     expect(ui.contract.fauteGrave.question.query()).not.toBeInTheDocument();
 
-    userAction
-      .click(ui.contract.arretTravail.non.get())
-      .click(ui.next.get());
+    userAction.click(ui.contract.arretTravail.non.get()).click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Convention collective");
 

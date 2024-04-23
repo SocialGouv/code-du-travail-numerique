@@ -21,8 +21,8 @@ import Disclaimer from "../../../common/Disclaimer";
 import { getResultMessage } from "./utils";
 import { IndemniteDepartType } from "../../../types";
 import { AgreementsInjector } from "../../../CommonIndemniteDepart/agreements";
-import { Paragraph } from "@socialgouv/cdtn-ui";
 import { StyledLink } from "../../../CommonIndemniteDepart/steps/Resultat/components/Result";
+import { Paragraph } from "@socialgouv/cdtn-ui";
 
 const Eligible = () => {
   const store = useContext(IndemniteDepartContext);
@@ -35,6 +35,8 @@ const Eligible = () => {
     salary,
     isStepSalaryHidden,
     informationData,
+    resultExplanation,
+    agreementExplanation,
   } = useIndemniteDepartStore(store, (state) => ({
     contratTravail: state.contratTravailData.input,
     agreement: state.agreementData.input,
@@ -45,6 +47,8 @@ const Eligible = () => {
     informationData: informationToSituation(
       state.informationsData.input.publicodesInformations
     ),
+    resultExplanation: state.resultData.input.resultExplanation,
+    agreementExplanation: state.resultData.input.agreementExplanation,
   }));
 
   const defaultNotification = [
@@ -89,7 +93,7 @@ const Eligible = () => {
               detail:
                 !result.isAgreementBetter &&
                 contratTravail.licenciementInaptitude === "oui"
-                  ? "Le salarié ayant été licencié pour inaptitude suite à un accident du travail ou une maladie professionnelle reconnue, le montant de l&apos;indemnité de rupture conventionnelle légale est doublé"
+                  ? "Le salarié ayant été licencié pour inaptitude suite à un accident du travail ou une maladie professionnelle reconnue, le montant de l'indemnité de rupture conventionnelle légale est doublé"
                   : undefined,
             },
             {
@@ -133,12 +137,19 @@ const Eligible = () => {
         <FormulaInterpreter formula={result.formula} />
         {!result.agreementHasNoLegalIndemnity && (
           <DecryptResult
-            hasSelectedAgreement={agreement.route !== "not-selected"}
-            isAgreementSupported={
-              agreement.isAgreementSupportedIndemniteLicenciement
+            resultExplanation={resultExplanation}
+            agreementExplanation={agreementExplanation}
+            legalResult={
+              result.publicodesLegalResult.value
+                ? result.publicodesLegalResult.value.toString()
+                : "0"
             }
-            legalResult={result.publicodesLegalResult.value?.toString() ?? ""}
-            agreementResult={result.publicodesAgreementResult?.value?.toString()}
+            agreementResult={
+              result.publicodesAgreementResult &&
+              result.publicodesAgreementResult.value
+                ? result.publicodesAgreementResult.value.toString()
+                : undefined
+            }
             label="rupture conventionnelle"
           />
         )}

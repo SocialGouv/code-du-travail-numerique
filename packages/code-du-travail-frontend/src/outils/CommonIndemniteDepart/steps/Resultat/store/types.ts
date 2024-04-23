@@ -4,6 +4,8 @@ import {
   Notification,
   PublicodesIndemniteLicenciementResult,
   References,
+  ExplanationMainResult,
+  ExplanationAgreementResult,
   SeniorityResult,
 } from "@socialgouv/modeles-social";
 import { AgreementInformation } from "../../../common";
@@ -13,6 +15,8 @@ export type ResultStoreInput = {
   result: PublicodesIndemniteLicenciementResult;
   publicodesLegalResult: PublicodesIndemniteLicenciementResult;
   publicodesAgreementResult?: PublicodesIndemniteLicenciementResult;
+  resultExplanation?: ExplanationMainResult;
+  agreementExplanation?: ExplanationAgreementResult;
   agreementSeniority?: SeniorityResult;
   formula: Formula;
   legalReferences: References[];

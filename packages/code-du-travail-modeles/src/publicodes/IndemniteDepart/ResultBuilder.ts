@@ -5,9 +5,16 @@ import type {
   PublicodesOutput,
   SituationElement,
 } from "../types";
+import type { ExplanationBuilder } from "./ExplanationBuilder";
 import type { IndemniteDepartResult } from "./types";
 
 export class ResultBuilder {
+  private readonly explanationBuilder: ExplanationBuilder;
+
+  constructor(explanationBuilder: ExplanationBuilder) {
+    this.explanationBuilder = explanationBuilder;
+  }
+
   buildResult(
     situation: SituationElement[],
     legalResult?: IndemniteDepartResult<PublicodesIndemniteLicenciementResult>,
@@ -20,15 +27,22 @@ export class ResultBuilder {
 
     return {
       detail: {
+        agreementExplanation: this.explanationBuilder.getAgreementExplanation(
+          agreementResult?.result.value
+        ),
         agreementResult: agreementResult?.result,
         chosenResult,
         legalResult: legalResult?.result,
       },
+      explanation: this.explanationBuilder.getMainExplanation(
+        legalResult?.result.value,
+        agreementResult?.result.value
+      ),
       formula,
       notifications: agreementResult?.notifications ?? [],
+      references,
       result,
       situation,
-      references,
       type: "result",
     };
   }

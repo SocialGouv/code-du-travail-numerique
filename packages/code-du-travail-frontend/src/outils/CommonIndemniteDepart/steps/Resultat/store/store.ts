@@ -5,7 +5,7 @@ import {
   PublicodesSimulator,
   References,
 } from "@socialgouv/modeles-social";
-import { StoreSlice } from "../../../../types";
+import { IndemniteDepartType, StoreSlice } from "../../../../types";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
@@ -51,7 +51,7 @@ const createResultStore: StoreSlice<
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
     CommonInformationsStoreSlice &
     CommonSituationStoreSlice
-> = (set, get) => ({
+> = (set, get, { type }) => ({
   resultData: {
     ...initialState,
   },
@@ -188,16 +188,16 @@ const createResultStore: StoreSlice<
         agreementNotifications = publicodesSituation?.notifications ?? [];
 
         agreementInformations = get()
-          .informationsData.input.publicodesInformations.map(
-            (v) =>
-              v.question.rule.titre &&
-              v.info && {
+          .informationsData.input.publicodesInformations.map((v) => {
+            if (v.question.rule.titre && v.info) {
+              return {
                 label: v.question.rule.titre,
                 value: v.info,
                 unit: v.question.rule.unité,
-              }
-          )
-          .filter((v) => v !== "") as AgreementInformation[];
+              };
+            }
+          })
+          .filter((v) => v !== undefined) as AgreementInformation[];
 
         agreementHasNoBetterAllowance = hasNoBetterAllowance(agreement.num);
 
@@ -238,6 +238,11 @@ const createResultStore: StoreSlice<
             ?.detail?.legalResult ?? { value: 0 };
           state.resultData.input.publicodesAgreementResult =
             publicodesSituation?.detail?.agreementResult;
+          state.resultData.input.agreementExplanation =
+            publicodesSituation?.detail?.agreementExplanation;
+          state.resultData.input.resultExplanation =
+            publicodesSituation?.explanation;
+          publicodesSituation?.detail?.agreementResult;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
           state.resultData.input.agreementInformations = agreementInformations;

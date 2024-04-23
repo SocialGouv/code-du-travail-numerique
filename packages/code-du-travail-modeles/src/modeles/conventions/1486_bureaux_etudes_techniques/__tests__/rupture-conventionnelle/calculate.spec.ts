@@ -155,7 +155,7 @@ describe("Gestion des licenciements pour la CC 1486", () => {
             '[{"month":"décembre 2024","value":2700},{"month":"novembre 2024","value":2700},{"month":"octobre 2024","value":2700},{"month":"septembre 2024","value":2700},{"month":"août 2024","value":2700},{"month":"juillet 2024","value":2700},{"month":"juin 2024","value":2700},{"month":"mai 2024","value":2700},{"month":"avril 2024","value":2700},{"month":"mars 2024","value":2700},{"month":"février 2024","value":2700},{"month":"janvier 2024","value":2700}]',
           typeContratTravail: "cdi",
         });
-        expect(result).toAgreementResultBeEqual(null);
+        expect(result).toAgreementResultBeEqual(0);
       }
     );
   });

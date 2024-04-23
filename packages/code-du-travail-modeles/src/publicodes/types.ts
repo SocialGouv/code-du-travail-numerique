@@ -97,12 +97,31 @@ export type PublicodesResult<TResult> = {
     chosenResult: ChosenResult;
     legalResult?: TResult;
     agreementResult?: TResult;
+    agreementExplanation?: ExplanationAgreementResult;
   };
+  explanation: ExplanationMainResult;
   formula: Formula;
   notifications: Notification[];
   references: References[];
   situation: SituationElement[];
 };
+
+export type ExplanationAgreementResult =
+  | "AGREEMENT_NOT_SUPPORTED"
+  | "AGREEMENT_RESULT_ZERO"
+  | "IS_HORS_ANI"
+  | "NO_AGREEMENT_SELECTED"
+  | "NO_EXPLANATION";
+
+export type ExplanationMainResult =
+  | "AGREEMENT_AMOUNT_MORE"
+  | "AGREEMENT_NOT_SUPPORTED"
+  | "AGREEMENT_RESULT_ZERO"
+  | "HAS_NOT_SELECTED_AGREEMENT"
+  | "LEGAL_AMOUNT_MORE"
+  | "LEGAL_RESULT_ZERO_BUT_AGREEMENT"
+  | "NO_EXPLANATION"
+  | "SAME_AMOUNT";
 
 export type PublicodesOutput<TResult> =
   | PublicodesIneligibility

@@ -6,7 +6,7 @@ import type {
 
 export type IndemniteDepartResult<TResult> = Omit<
   PublicodesResult<TResult>,
-  "detail" | "situation"
+  "detail" | "explanation" | "situation"
 >;
 
 export type IndemniteDepartOutput<TResult> =

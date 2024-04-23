@@ -76,6 +76,10 @@ export class AgreementRuptureCo implements AgreementIndemniteCompute {
       const elligibleSituations = allSituations.filter(
         (situation) => situation.result.value && situation.result.value !== 0
       );
+      if (elligibleSituations.length === 0) {
+        const foundValue = allSituations.find((v) => v.result.value === 0);
+        if (foundValue) return foundValue;
+      }
       const foundSituation = {
         ...elligibleSituations.reduce<
           IndemniteDepartResult<PublicodesIndemniteLicenciementResult>

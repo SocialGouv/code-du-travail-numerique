@@ -7,6 +7,7 @@ import type {
 } from "../types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "../types";
 import type { AgreementIndemniteCompute } from "./AgreementIndemniteCompute";
+import type { ExplanationBuilder } from "./ExplanationBuilder";
 import type { Legal } from "./Legal";
 import { ResultBuilder } from "./ResultBuilder";
 import type { IndemniteDepartOutput } from "./types";
@@ -16,20 +17,24 @@ export class IndemniteDepartPublicodes extends PublicodesBase<PublicodesIndemnit
 
   protected agreementInstance?: AgreementIndemniteCompute;
 
+  protected explanationInstance: ExplanationBuilder;
+
   private readonly builder: ResultBuilder;
 
   constructor(
     rules: any,
     legalInstance: Legal,
+    explanationInstance: ExplanationBuilder,
     agreementInstance?: AgreementIndemniteCompute
   ) {
     super(
       rules,
       PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_LICENCIEMENT]
     );
-    this.builder = new ResultBuilder();
+    this.builder = new ResultBuilder(explanationInstance);
     this.legalInstance = legalInstance;
     this.agreementInstance = agreementInstance;
+    this.explanationInstance = explanationInstance;
   }
 
   public calculate(
@@ -62,17 +67,18 @@ export class IndemniteDepartPublicodes extends PublicodesBase<PublicodesIndemnit
       return legalResult;
     }
 
-    if (
-      legalResult &&
-      !this.agreementInstance &&
-      legalResult.type === "result"
-    ) {
+    if (legalResult && !this.agreementInstance) {
       return {
         ...legalResult,
         detail: {
+          agreementExplanation:
+            this.explanationInstance.getAgreementExplanation(),
           chosenResult: "LEGAL",
           legalResult: legalResult.result,
         },
+        explanation: this.explanationInstance.getMainExplanation(
+          legalResult.result.value
+        ),
         situation: this.data.situation,
       };
     }
