@@ -1,2 +1,3 @@
-contrat salarié . convention collective . sedima . question cdi opération:
-  valeur: non
+contrat salarié . convention collective . sedima . question cdi opération rupture:
+  remplace: contrat salarié . convention collective . sedima . question cdi opération
+  valeur: "'Non'"

@@ -1,4 +1,9 @@
-import { byTestId, byText, byTitle } from "testing-library-selector";
+import {
+  byLabelText,
+  byTestId,
+  byText,
+  byTitle,
+} from "testing-library-selector";
 
 export const ui = {
   introduction: {
@@ -98,6 +103,9 @@ export const ui = {
       engineerAge: byTestId(
         "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - age"
       ),
+      ruptureEngineerAge: byTestId(
+        "infos.contrat salarié - convention collective - transports routiers - rupture conventionnelle - cadre age"
+      ),
       employeeAge: byTestId(
         "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - age"
       ),
@@ -151,6 +159,9 @@ export const ui = {
       ),
       age: byTestId(
         "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - age"
+      ),
+      ruptureAge: byTestId(
+        "infos.contrat salarié - convention collective - industries chimiques - rupture conventionnelle - age"
       ),
     },
     agreement2609: {
@@ -274,6 +285,9 @@ export const ui = {
       age: byTestId(
         "infos.contrat salarié - convention collective - ouvriers travaux public - indemnité de licenciement - age"
       ),
+      ruptureAge: byTestId(
+        "infos.contrat salarié - convention collective - ouvriers travaux public - rupture conventionnelle - age"
+      ),
     },
     agreement3248: {
       proCategory: byTestId(
@@ -329,6 +343,36 @@ export const ui = {
     agreement29: {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle"
+      ),
+    },
+    agreement1501: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - restauration rapide - indemnité de licenciement - catégorie professionnelle"
+      ),
+      age: byTestId(
+        "infos.contrat salarié - convention collective - restauration rapide - indemnité de licenciement - licenciement économique - age"
+      ),
+      ruptureAge: byTestId(
+        "infos.contrat salarié - convention collective - restauration rapide - rupture conventionnelle - age"
+      ),
+    },
+    agreement2098: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - personnel presta service tertiaire - autre licenciement - catégorie professionnelle"
+      ),
+      age: byTestId(
+        "infos.contrat salarié - convention collective - personnel presta service tertiaire - rupture conventionnelle - cadre age"
+      ),
+    },
+    agreement2216: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - commerce gros et detail alimentation - indemnité de licenciement - catégorie professionnelle"
+      ),
+      age: byTestId(
+        "infos.contrat salarié - convention collective - commerce gros et detail alimentation - indemnité de licenciement - catégorie professionnelle - licenciement économique - age"
+      ),
+      ruptureAge: byTestId(
+        "infos.contrat salarié - convention collective - commerce gros et detail alimentation - rupture conventionnelle - licenciement économique age"
       ),
     },
   },
@@ -462,6 +506,16 @@ export const ui = {
     resultTableRows: byTestId("table-result-row"),
     agreement3239: {
       result: byText(/À partir des éléments que vous avez saisis/),
+    },
+    dismissalType: {
+      economic: byText(/Licenciement pour motif économique/),
+      mobility: byText(
+        /Le licenciement fait suite au refus d'une clause de mobilité/
+      ),
+      inaptitude: byText(
+        /Licenciement pour inaptitude totale et définitive non consécutive à un accident du travail/
+      ),
+      discipline: byText(/Licenciement pour motif disciplinaire/),
     },
   },
   next: byText("Suivant"),
