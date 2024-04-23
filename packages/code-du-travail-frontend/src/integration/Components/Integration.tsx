@@ -162,12 +162,15 @@ const IntegrationContainer = ({
       ${Object.keys(messages).map((key) => `&& data.kind === "${key}"`)}
     ) {
       ${Object.keys(messages).map((key) =>
-        messages[key].map(
-          ({ name, description, extra }) =>
-            `\tdata.name === '${name}' // ${description}${Object.entries(
-              extra
-            ).map(([key, value]) => "\n\tdata.extra." + key + " // " + value)}`
-        )
+        messages[key].map(({ name, description, extra }) => {
+          let extraString = "";
+          if (extra) {
+            extraString = Object.entries(extra)
+              .map(([key, value]) => "\n\tdata.extra." + key + " // " + value)
+              .join();
+          }
+          return `\tdata.name === '${name}' // ${description}${extraString}`;
+        })
       )}
     }
   }
