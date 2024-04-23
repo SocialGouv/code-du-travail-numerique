@@ -24,7 +24,7 @@ jobs:
           echo "{\"text\":\"Le site n'est pas accessible : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} (cc: @max @victorz @carolinebda @martial)\"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
-        env:
+        with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
 
   robots:
@@ -49,5 +49,5 @@ jobs:
           echo "{\"text\":\"Erreur sur le robots.txt ou sitemap.xml 😱😱😱😱😱😱😱😱 ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} (cc: @max @victorz @carolinebda @martial)\"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
-        env:
+        with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
