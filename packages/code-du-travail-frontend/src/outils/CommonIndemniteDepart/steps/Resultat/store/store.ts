@@ -114,7 +114,6 @@ const createResultStore: StoreSlice<
 
       let errorPublicodes: boolean;
       const absencePeriods = get().ancienneteData.input.absencePeriods;
-
       const legalReferences = publicodes.getReferences();
       let publicodesSituation:
         | PublicodesResult<PublicodesIndemniteLicenciementResult>
@@ -136,6 +135,11 @@ const createResultStore: StoreSlice<
       );
 
       try {
+        console.log(
+          `Les informations de l'ancienneté sont ${JSON.stringify(
+            get().ancienneteData.input
+          )}`
+        );
         const situation = {
           ...mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
             agreement?.num,

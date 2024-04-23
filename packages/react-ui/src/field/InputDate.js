@@ -82,14 +82,12 @@ export const InputDate = ({ value, onChange, invalid, ref, ...props }) => {
       const isValidDate = /^\d{2}\/\d{2}\/\d{4}$/.test(date);
       return isYearValid && isMonthValid && isDayValid && isValidDate;
     }
-    return true;
+    return false;
   };
 
   const onBlur = () => {
     setIsFocus(false);
-    if (date.length !== 10) {
-      setIsValid(false);
-    }
+    setIsValid(isValidDate(date));
   };
 
   return (
@@ -112,7 +110,7 @@ export const InputDate = ({ value, onChange, invalid, ref, ...props }) => {
         </StyledDateWrapper>
         <StyledDatePicker
           type="date"
-          aria-disabled={!isValid}
+          aria-disabled={true}
           tabIndex={-1}
           min="1900-01-01"
           max="2100-01-01"
