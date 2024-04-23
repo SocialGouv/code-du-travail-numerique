@@ -45,7 +45,7 @@ describe("Indemnité licenciement - CC 2216", () => {
     userEvent.click(ui.next.get());
 
     fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/1970" },
+      target: { value: "01/01/1980" },
     });
     fireEvent.change(ui.seniority.endDate.get(), {
       target: { value: "01/03/2024" },
@@ -60,9 +60,9 @@ describe("Indemnité licenciement - CC 2216", () => {
     userEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("25626,67 €");
-    expect(ui.result.resultatLegal.get()).toHaveTextContent("25626.67 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("24882.67 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("20666,67 €");
+    expect(ui.result.resultatLegal.get()).toHaveTextContent("20666.67 €");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("19922.67 €");
     expect(ui.result.dismissalType.economic.query()).not.toBeInTheDocument();
   });
 });
