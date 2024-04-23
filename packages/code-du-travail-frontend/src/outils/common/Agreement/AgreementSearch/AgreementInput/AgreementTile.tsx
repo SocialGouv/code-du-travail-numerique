@@ -17,15 +17,25 @@ import { EnterpriseAgreement } from "../../../../../conventions/Search/api/enter
 type Props = {
   agreement: EnterpriseAgreement;
   isWidgetMode?: boolean;
+  noRedirect?: boolean;
 } & TrackingProps;
 
 export function AgreementTile({
   agreement,
   onUserAction,
   isWidgetMode,
+  noRedirect,
 }: Props): JSX.Element {
   const clickHandler = () => {
     onUserAction(UserAction.SelectAgreement, `idcc${agreement.num.toString()}`);
+    window.parent?.postMessage(
+      {
+        name: "agreement",
+        kind: "select",
+        extra: { idcc: agreement.num, title: agreement.title },
+      },
+      "*"
+    );
   };
   return (
     <LinkedTile
@@ -37,6 +47,7 @@ export function AgreementTile({
         agreement.slug
       }`}
       target={isWidgetMode ? "_blank" : "_self"}
+      noRedirect={noRedirect}
     >
       <Paragraph noMargin>
         {agreement.contributions

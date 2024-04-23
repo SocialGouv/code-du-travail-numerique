@@ -3,6 +3,8 @@ import { GetServerSideProps } from "next";
 import React from "react";
 import styled from "styled-components";
 import { useIframeResizer } from "../../src/common/hooks";
+import { useRouter } from "next/router";
+
 import { Footer } from "../../src/widgets";
 
 import {
@@ -48,6 +50,7 @@ function Widgets({
 }: Props): JSX.Element {
   useIframeResizer();
   const Tool = toolsBySlug[slug];
+  const router = useRouter();
 
   return (
     <>
@@ -63,6 +66,7 @@ function Widgets({
           displayTitle={displayTitle}
           slug={slug}
           widgetMode
+          {...router.query}
         />
         <Footer />
       </StyledContainer>

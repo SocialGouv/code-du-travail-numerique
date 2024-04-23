@@ -99,7 +99,19 @@
     "shortTitle": "Trouver sa convention collective",
     "shortDescription": "Trouver une convention collective à partir du nom de l'entreprise ou son SIRET",
     "url": "/widgets/convention-collective",
-    "id": "convention-collective"
+    "id": "convention-collective",
+    "messages": {
+      "select": [
+        {
+          "name": "agreement",
+          "description": "le message envoyé lors de la selection d'une convention collective",
+          "extra": {
+            "idcc": "id de la convention collective",
+            "title": "nom de la convention collective"
+          }
+        }
+      ]
+    }
   },
   "preavis-retraite": {
     "metaTitle": "Intégrer l’outil de calcul du préavis de retraite du Code du travail numérique",
