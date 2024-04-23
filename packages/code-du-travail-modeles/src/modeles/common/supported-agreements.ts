@@ -68,7 +68,6 @@ export enum SupportedAgreementHorsAni {
   IDCC2511 = "2511",
   IDCC1518 = "1518",
   IDCC1043 = "1043",
-  default = "default",
 }
 
 export const getSupportedAgreementHorsAni = (
