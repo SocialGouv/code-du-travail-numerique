@@ -86,6 +86,9 @@ export class AgreementRuptureCo implements AgreementIndemniteCompute {
         }, elligibleSituations[0]),
         missingArgs: missingArgsFinal,
       };
+      if (foundSituation.result === undefined) {
+        return allSituations[0];
+      }
       return foundSituation;
     }
   }

@@ -68,7 +68,8 @@ expect.extend({
       message: () =>
         `Expected agreement amount to be "${amount} ${unit}" but received "${result.detail.agreementResult?.result?.value} ${result.detail.agreementResult?.result?.unit?.numerators[0]}"`,
       pass:
-        amount === result.detail.agreementResult?.value &&
+        (amount === undefined ||
+          amount === result.detail.agreementResult?.value) &&
         (unit === undefined ||
           unit === result.detail.agreementResult?.unit?.numerators[0]),
     };
