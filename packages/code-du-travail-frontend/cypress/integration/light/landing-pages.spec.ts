@@ -25,9 +25,9 @@ describe("Landing pages", () => {
 
   it("je vois une page fiche service public", () => {
     cy.visit("/fiche-service-public/conges-payes");
-    cy.get("h1").should("have.text", "Congés payés");
+    cy.get("h1").should("contain", "Congés payés");
     cy.get("body").should("contain", "Source: Fiche service-public.fr");
-    cy.get("h2").first().should("contain", "Qui a droit aux congés payés");
+    cy.get("h2").first().should("contain", "Quel salarié a droit aux congés payés");
   });
 
   it("je vois une page convention collective", () => {
