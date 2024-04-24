@@ -23,7 +23,7 @@ interface Props {
   title: string;
   displayTitle: string;
   widgetMode?: boolean;
-  noRedirect: string;
+  noRedirect?: string;
 }
 
 function AgreementSearchTool({
