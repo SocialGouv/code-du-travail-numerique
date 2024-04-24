@@ -39,10 +39,14 @@ describe("Pages integration convention collective", () => {
     cy.getIframe().as("iframe");
 
     cy.get("@iframe").contains("Trouver sa convention collective");
-    cy.get("@iframe").find("#enterprise-search").type("carrefour");
-    cy.get("@iframe").find("button[type=submit]").click();
-    cy.get("@iframe").contains("CARREFOUR HYPERMARCHES").click();
-    cy.get("@iframe").contains("Conventions collectives").click();
+    cy.get("@iframe").find("#enterprise-search").as("entreprise-search");
+    cy.get("@entreprise-search").type("carrefour");
+    cy.get("@iframe").find("button[type=submit]").as("button-submit");
+    cy.get("@button-submit").click();
+    cy.get("@iframe").contains("CARREFOUR HYPERMARCHES").as("entreprise");
+    cy.get("@entreprise").click();
+    cy.get("@iframe").contains("Conventions collectives").as("cc");
+    cy.get("@cc").click();
     cy.get("@postMessage").should("be.calledOnce");
   });
 
