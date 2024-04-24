@@ -19,6 +19,7 @@ export { default as Handicap } from "./components/bicolor/Handicap.js";
 export { default as Health } from "./components/bicolor/Health.js";
 export { default as Holidays } from "./components/bicolor/Holidays.js";
 export { default as Indemnity } from "./components/bicolor/Indemnity.js";
+export { default as Rupture } from "./components/bicolor/Rupture.js";
 export { default as International } from "./components/bicolor/International.js";
 export { default as Laws } from "./components/bicolor/Laws.js";
 export { default as Lens } from "./components/bicolor/Lens.js";
