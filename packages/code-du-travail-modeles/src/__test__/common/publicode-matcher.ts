@@ -1,5 +1,10 @@
 import type { Rule } from "publicodes";
 
+import {
+  mergeIndemniteLicenciementModels,
+  mergePreavisRetraiteModels,
+  mergeRuptureConventionnelle,
+} from "../../internal/merger";
 import type {
   ChosenResult,
   MissingArgs,
@@ -7,6 +12,9 @@ import type {
 } from "../../publicodes";
 
 declare global {
+  const modelsIndemniteLicenciement: Record<string, any>;
+  const modelsPreavisRetraite: Record<string, any>;
+  const modelsRuptureConventionnel: Record<string, any>;
   namespace jest {
     interface Matchers<R> {
       toContainTitre: () => R;
@@ -375,5 +383,10 @@ expect.extend({
 const replaceAll = (string: string, search: string, replace: string) => {
   return string.split(search).join(replace);
 };
+
+(global as any).modelsIndemniteLicenciement =
+  mergeIndemniteLicenciementModels();
+(global as any).modelsPreavisRetraite = mergePreavisRetraiteModels();
+(global as any).modelsRuptureConventionnel = mergeRuptureConventionnelle();
 
 export default undefined;
