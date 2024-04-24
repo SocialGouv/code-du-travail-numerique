@@ -40,5 +40,5 @@ jobs:
       - name: Send message to mattermost if failure
         uses: mattermost/action-mattermost-notify@master
         if: failure()
-        env:
+        with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
