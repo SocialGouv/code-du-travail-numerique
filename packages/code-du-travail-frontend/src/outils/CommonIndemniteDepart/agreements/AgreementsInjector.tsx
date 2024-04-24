@@ -1,4 +1,4 @@
-import { SupportedCc } from "@socialgouv/modeles-social";
+import { PublicodesSimulator, SupportedCc } from "@socialgouv/modeles-social";
 import React from "react";
 import { IndemniteDepartStepName } from "..";
 import {
@@ -37,10 +37,12 @@ import {
   Agreement1740Informations,
 } from "./1740-batiment-region-parisienne";
 import { Agreement2120, Agreement2120Informations } from "./2120-banques";
+import { IndemniteDepartType } from "../../types";
 
 type Props = {
   idcc: SupportedCc | null | undefined;
   step: IndemniteDepartStepName;
+  type: IndemniteDepartType;
 };
 
 export default function AgreementsInjector(props: Props) {
@@ -92,7 +94,7 @@ export default function AgreementsInjector(props: Props) {
       return <Agreement2609Informations />;
     case SupportedCc.IDCC2120 === props.idcc &&
       props.step === IndemniteDepartStepName.Salaires:
-      return <Agreement2120 />;
+      return <Agreement2120 type={props.type} />;
     case SupportedCc.IDCC2120 === props.idcc &&
       props.step === IndemniteDepartStepName.Resultat:
       return <Agreement2120Informations />;
