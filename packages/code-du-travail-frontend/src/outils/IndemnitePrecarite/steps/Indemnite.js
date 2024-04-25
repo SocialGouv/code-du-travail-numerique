@@ -15,6 +15,7 @@ import { formatRefs } from "../../publicodes";
 import DisclaimerBox from "../components/DisclaimerBox";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 import { getIndemnitePrecarite } from "../indemnite";
+import { supportedCcn } from "@socialgouv/modeles-social";
 
 function extractRefs(refs = []) {
   //some ref are duplicated so we need to dedup them
@@ -37,9 +38,11 @@ function extractRefs(refs = []) {
   }));
 }
 
+const isSupportedCc = (idcc) => supportedCcn.some((item) => item.idcc === idcc);
+
 function getConventionCollectiveText(ccn, situations) {
   return ccn
-    ? situations.length > 0
+    ? situations.length > 0 || isSupportedCc(ccn.num)
       ? ccn.title
       : "La convention collective n'a pas été traitée par nos services."
     : "La convention collective n'a pas été renseignée.";
