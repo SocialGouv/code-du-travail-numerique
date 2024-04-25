@@ -11,6 +11,7 @@ import DisplayContentContribution, {
   ContentSP,
 } from "./DisplayContentContribution";
 import { Section } from "@socialgouv/cdtn-ui";
+import { getLabelBySource } from "@socialgouv/cdtn-utils";
 
 type Props = {
   contribution:
