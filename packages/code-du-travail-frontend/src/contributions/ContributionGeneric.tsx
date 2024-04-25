@@ -1,7 +1,7 @@
 import {
   Agreement,
   ElasticSearchContributionGeneric,
-} from "@socialgouv/cdtn-utils";
+} from "@socialgouv/cdtn-types";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { push as matopush } from "@socialgouv/matomo-next";

@@ -1,4 +1,4 @@
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "@socialgouv/cdtn-types";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
 import { AgreementRoute } from "../../../common/type/WizardType";

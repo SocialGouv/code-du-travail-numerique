@@ -3,7 +3,7 @@ import { parseIdcc } from "@socialgouv/modeles-social";
 import { searchAgreement } from "./agreement.service";
 import getQueryType, { QueryType } from "./getQueryType";
 import { Enterprise, searchEnterprises } from "./enterprises.service";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "@socialgouv/cdtn-types";
 
 export type ResultType = {
   conventions: Agreement[];

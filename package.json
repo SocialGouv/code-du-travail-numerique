@@ -5,8 +5,8 @@
   "description": "Code du travail",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
-    "build": "lerna run build --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --scope=@socialgouv/cdtn-utils --scope=@cdt/frontend --stream",
-    "build:npm": "lerna run build --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --scope=@socialgouv/cdtn-utils --stream",
+    "build": "lerna run build --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --scope=@socialgouv/cdtn-utils --scope=@cdt/frontend --scope=@socialgouv/cdtn-types --stream",
+    "build:npm": "lerna run build --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --scope=@socialgouv/cdtn-utils --scope=@socialgouv/cdtn-types --stream",
     "clean": "lerna clean",
     "dev:docker": "docker-compose up elasticsearch",
     "dev": "lerna run dev --parallel",

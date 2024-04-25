@@ -76,7 +76,7 @@ export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {
 export const getSearchBasedItems = async ({
   title,
   settings,
-  slug
+  slug,
 }: {
   title: string;
   settings: any;
@@ -88,7 +88,9 @@ export const getSearchBasedItems = async ({
   const query_vector = await vectorizeQuery(title.toLowerCase()).catch(
     (error: any) => {
       if (error.message === "Cannot vectorize empty query.") {
-        console.log(`[WARNING] Try to vectorize an empty title: ${title} (slug: ${slug}) `)
+        console.log(
+          `[WARNING] Try to vectorize an empty title: ${title} (slug: ${slug}) `
+        );
       } else {
         console.error(error.message);
       }
@@ -147,7 +149,7 @@ export const getRelatedItems = async ({
       (item: { slug: string }) => !slug.startsWith(item.slug.split("#")[0])
     )
     // only return sources of interest
-    .filter(({ source }: { source: string }) => sources.includes(source))
+    .filter(({ source }: { source: any }) => sources.includes(source))
     // drop duplicates (between covisits and search) using source/slug
     .reduce((acc: any, related: { source: string; slug: string }) => {
       const key = related.source + related.slug;

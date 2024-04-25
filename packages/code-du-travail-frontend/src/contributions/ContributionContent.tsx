@@ -1,8 +1,7 @@
 import {
   ElasticSearchContributionConventionnelle,
   ElasticSearchContributionGeneric,
-  getLabelBySource,
-} from "@socialgouv/cdtn-utils";
+} from "@socialgouv/cdtn-types";
 import styled from "styled-components";
 import { theme } from "@socialgouv/cdtn-ui";
 import React from "react";
@@ -11,7 +10,7 @@ import { A11yLink } from "../common/A11yLink";
 import DisplayContentContribution, {
   ContentSP,
 } from "./DisplayContentContribution";
-import { Section } from "@socialgouv/cdtn-ui/lib";
+import { Section } from "@socialgouv/cdtn-ui";
 
 type Props = {
   contribution:

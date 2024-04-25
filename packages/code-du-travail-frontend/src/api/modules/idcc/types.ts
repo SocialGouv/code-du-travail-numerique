@@ -1,4 +1,4 @@
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "@socialgouv/cdtn-types";
 
 export type ApiEnterpriseData = {
   entreprises: Enterprise[] | undefined;

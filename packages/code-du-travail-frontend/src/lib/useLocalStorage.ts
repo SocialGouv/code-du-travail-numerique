@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "@socialgouv/cdtn-types";
 
 const initialValue = (key, defaultValue) => {
   try {

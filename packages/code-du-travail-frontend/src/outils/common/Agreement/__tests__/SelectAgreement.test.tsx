@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import { EmbeddedInjectedForm } from "../../../../../test/TestForm";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "@socialgouv/cdtn-types";
 import { FormContent } from "../../type/WizardType";
 import { SelectAgreement } from "../index";
 import type { Props } from "../SelectAgreement";

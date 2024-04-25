@@ -3,7 +3,7 @@ import {
   ElasticSearchItem,
   Tool,
   EditorialContent,
-} from "@socialgouv/cdtn-utils";
+} from "@socialgouv/cdtn-types";
 import { getAllAgreements } from "../agreements";
 import { getAllContributionsGroupByQuestion } from "../contributions";
 import { getAllModeles } from "../modeles";

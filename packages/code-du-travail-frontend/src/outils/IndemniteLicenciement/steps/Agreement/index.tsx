@@ -6,7 +6,7 @@ import CommonAgreementStep from "../../../CommonSteps/Agreement";
 import { getSupportedCc } from "../../common";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { useContext } from "react";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "@socialgouv/cdtn-types";
 
 const AgreementStep = (): JSX.Element => {
   const store = useContext(IndemniteLicenciementContext);

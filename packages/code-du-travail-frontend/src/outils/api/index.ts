@@ -4,7 +4,7 @@ import {
 } from "@socialgouv/modeles-social";
 import { searchAgreement } from "../../conventions/Search/api/agreement.service";
 import * as Sentry from "@sentry/nextjs";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "@socialgouv/cdtn-types";
 
 export const loadPublicodes = <T extends PublicodesSimulator>(
   simulator: PublicodesSimulator,

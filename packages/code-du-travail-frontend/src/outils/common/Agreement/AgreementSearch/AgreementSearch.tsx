@@ -8,7 +8,7 @@ import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "@socialgouv/cdtn-types";
 import { TrackingProps } from "../../../ConventionCollective/types";
 import { ErrorField } from "../../ErrorField";
 import { Question } from "../../Question";

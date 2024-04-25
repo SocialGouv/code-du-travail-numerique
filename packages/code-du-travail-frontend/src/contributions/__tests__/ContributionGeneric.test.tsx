@@ -5,7 +5,7 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import { ui } from "../../outils/DureePreavisDemission/__tests__/ui";
 import { byTestId, byText } from "testing-library-selector";
 import router from "next/router";
-import { ElasticSearchContributionGeneric } from "@socialgouv/cdtn-utils";
+import { ElasticSearchContributionGeneric } from "@socialgouv/cdtn-types";
 
 beforeEach(() => {
   localStorage.clear();

@@ -1,4 +1,4 @@
-import { ElasticSearchItem } from "@socialgouv/cdtn-utils";
+import { ElasticSearchItem } from "@socialgouv/cdtn-types";
 import { getByIdsAgreements } from "../agreements";
 import { getByIdsContributions } from "../contributions";
 import { getBySlugHighlights } from "../highlights";

@@ -1,6 +1,6 @@
 import { Grid, theme, Section, Title } from "@socialgouv/cdtn-ui";
 import { ListLink } from "../search/SearchResults/Results";
-import { ElasticSearchContribution } from "@socialgouv/cdtn-utils";
+import { ElasticSearchContribution } from "@socialgouv/cdtn-types";
 
 type Props = {
   linkedContent: ElasticSearchContribution["linkedContent"];

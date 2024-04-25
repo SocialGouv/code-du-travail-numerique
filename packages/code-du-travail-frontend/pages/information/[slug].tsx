@@ -6,11 +6,12 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
-import { EditorialContentDataWrapper, SOURCES } from "@socialgouv/cdtn-utils";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Contents } from "../../src/information";
 import { QuestionnaireWrapper } from "../../src/questionnaire";
 import { useRouter } from "next/router";
 import { SITE_URL } from "../../src/config";
+import { EditorialContentDataWrapper } from "@socialgouv/cdtn-types";
 
 const Information = ({
   information: {

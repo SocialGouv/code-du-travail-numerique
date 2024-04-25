@@ -2,7 +2,7 @@ import {
   Agreement,
   ElasticSearchItem,
   SearchResponse,
-} from "@socialgouv/cdtn-utils";
+} from "@socialgouv/cdtn-types";
 import {
   elasticDocumentsIndex,
   elasticsearchClient,

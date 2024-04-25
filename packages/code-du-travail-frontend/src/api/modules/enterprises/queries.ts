@@ -1,4 +1,5 @@
-import { Agreement, SearchResponse, SOURCES } from "@socialgouv/cdtn-utils";
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import { Agreement, SearchResponse } from "@socialgouv/cdtn-types";
 
 type SearchAgreementsBody = {
   _source: string[];

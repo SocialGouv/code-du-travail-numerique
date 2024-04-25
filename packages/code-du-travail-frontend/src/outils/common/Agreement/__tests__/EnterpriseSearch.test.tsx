@@ -3,7 +3,7 @@ import React from "react";
 
 import { EmbeddedForm } from "../../../../../test/TestForm";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "@socialgouv/cdtn-types";
 import type { Props } from "../EnterpriseSearch/EnterpriseSearch";
 import EnterpriseSearch from "../EnterpriseSearch/EnterpriseSearch";
 import { EnterpriseAgreement } from "../../../../api/modules/enterprises/types";

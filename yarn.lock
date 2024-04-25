@@ -1890,6 +1890,7 @@ __metadata:
     "@sentry/nextjs": ^7.53.1
     "@socialgouv/cdtn-elasticsearch": ^2.5.2
     "@socialgouv/cdtn-logger": ^2.0.0
+    "@socialgouv/cdtn-types": "workspace:^"
     "@socialgouv/cdtn-ui": "workspace:^"
     "@socialgouv/cdtn-utils": "workspace:^"
     "@socialgouv/fiches-travail-data": ^4.241.0
@@ -4781,6 +4782,14 @@ __metadata:
   checksum: aa4bd06341fddff772082ffe2f8c533691db18a931cc521786a8a8bd004861952de611ab9fbfeedec1556ae6def4e0a7329b55fe5e65f7ce73ec2a9ae7adc9f9
   languageName: node
   linkType: hard
+
+"@socialgouv/cdtn-types@workspace:^, @socialgouv/cdtn-types@workspace:packages/code-du-travail-types":
+  version: 0.0.0-use.local
+  resolution: "@socialgouv/cdtn-types@workspace:packages/code-du-travail-types"
+  dependencies:
+    typescript: ^5.0.4
+  languageName: unknown
+  linkType: soft
 
 "@socialgouv/cdtn-ui@workspace:^, @socialgouv/cdtn-ui@workspace:packages/react-ui":
   version: 0.0.0-use.local

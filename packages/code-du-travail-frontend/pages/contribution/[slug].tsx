@@ -8,7 +8,7 @@ import {
   ElasticSearchContribution,
   ElasticSearchContributionConventionnelle,
   ElasticSearchContributionGeneric,
-} from "@socialgouv/cdtn-utils";
+} from "@socialgouv/cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";

@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { ConventionLink } from "./ConventionLink";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "@socialgouv/cdtn-types";
 
 type Props = {
   conventions: Agreement[];
