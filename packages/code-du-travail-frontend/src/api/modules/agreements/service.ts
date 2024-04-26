@@ -1,8 +1,4 @@
-import {
-  Agreement,
-  ElasticSearchItem,
-  SearchResponse,
-} from "@socialgouv/cdtn-types";
+import { Agreement } from "@socialgouv/cdtn-types";
 import {
   elasticDocumentsIndex,
   elasticsearchClient,
@@ -14,6 +10,7 @@ import {
   getAgreementsBySlugs,
   getAllAgreementsWithContributions,
 } from "./queries";
+import { ElasticSearchItem, SearchResponse } from "../../types";
 
 export const getAllAgreements = async (): Promise<Agreement[]> => {
   const body = getAllAgreementsWithContributions();
