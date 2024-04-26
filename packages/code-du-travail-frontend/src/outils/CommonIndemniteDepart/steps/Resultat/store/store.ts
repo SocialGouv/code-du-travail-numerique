@@ -5,10 +5,10 @@ import {
   PublicodesSimulator,
   References,
 } from "@socialgouv/modeles-social";
-import { IndemniteDepartType, StoreSlice } from "../../../../types";
+import { StoreSlice } from "../../../../types";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues } from "../../../../publicodes";
-import { AncienneteStoreSlice } from "../../Anciennete/store";
-import { ContratTravailStoreSlice } from "../../ContratTravail/store";
+import { AncienneteStoreSlice } from "../../Anciennete";
+import { ContratTravailStoreSlice } from "../../ContratTravail";
 import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
 
@@ -51,7 +51,7 @@ const createResultStore: StoreSlice<
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
     CommonInformationsStoreSlice &
     CommonSituationStoreSlice
-> = (set, get, { type }) => ({
+> = (set, get) => ({
   resultData: {
     ...initialState,
   },
@@ -92,6 +92,7 @@ const createResultStore: StoreSlice<
           state.resultData.input.infoWarning = infoWarning;
         })
       );
+      return { isEligible };
     },
     getEligibilityError: () => {
       const contratTravailEligibility =
@@ -167,7 +168,8 @@ const createResultStore: StoreSlice<
         }
         publicodesSituation = result;
         isAgreementBetter =
-          publicodesSituation.detail.chosenResult === "AGREEMENT";
+          publicodesSituation.detail.chosenResult === "AGREEMENT" ||
+          publicodesSituation.detail.chosenResult === "HAS_NO_LEGAL";
         isAgreementEqualToLegal =
           publicodesSituation.detail.chosenResult === "SAME";
         agreementHasNoLegalIndemnity =

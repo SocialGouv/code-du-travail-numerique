@@ -19,14 +19,11 @@ const StepResult = ({ eligibleComponent, ineligibleComponent }: Props) => {
     }));
 
   useEffect(() => {
-    init();
-  }, []);
-
-  useEffect(() => {
+    const { isEligible } = init();
     if (isEligible) {
       getPublicodesResult();
     }
-  }, [isEligible]);
+  }, []);
 
   if (errorPublicodes) {
     return <ErrorPublicodes />;

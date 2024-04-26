@@ -19,7 +19,13 @@ Storage.prototype.getItem = jest.fn(
 
 describe("Indemnité licenciement - CC 3239", () => {
   beforeEach(async () => {
-    render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
+    );
     fireEvent.click(ui.introduction.startButton.get());
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.fauteGrave.non.get());
@@ -215,6 +221,18 @@ describe("Indemnité licenciement - CC 3239", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.result.resultat.get()).toHaveTextContent("6651,92 €");
+
+    expect(ui.result.sources.queryAll()).toHaveLength(8);
+    expect(ui.result.source(0).get()).toHaveTextContent("Article 47-1");
+    expect(ui.result.source(1).get()).toHaveTextContent("Article 47-2");
+    expect(ui.result.source(2).get()).toHaveTextContent("Article 48-1-3-1-1");
+    expect(ui.result.source(3).get()).toHaveTextContent("Article 48-1-3-4");
+    expect(ui.result.source(4).get()).toHaveTextContent("Article 49");
+    expect(ui.result.source(5).get()).toHaveTextContent("Article 60");
+    expect(ui.result.source(6).get()).toHaveTextContent("Article 142");
+    expect(ui.result.source(7).get()).toHaveTextContent("Article 163-1");
+
+    expect(ui.result.notifications.queryAll()).toHaveLength(1);
   });
 
   test("vérifier le calcul pour un assistant maternelle", async () => {
@@ -239,5 +257,20 @@ describe("Indemnité licenciement - CC 3239", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.result.resultat.get()).toHaveTextContent("62,5 €");
+
+    expect(ui.result.sources.queryAll()).toHaveLength(8);
+    expect(ui.result.source(0).get()).toHaveTextContent("Article 47-1");
+    expect(ui.result.source(1).get()).toHaveTextContent("Article 47-2");
+    expect(ui.result.source(2).get()).toHaveTextContent("Article 48-1-3-1-1");
+    expect(ui.result.source(3).get()).toHaveTextContent("Article 48-1-3-4");
+    expect(ui.result.source(4).get()).toHaveTextContent("Article 49");
+    expect(ui.result.source(5).get()).toHaveTextContent("Article 60");
+    expect(ui.result.source(6).get()).toHaveTextContent("Article 90-1");
+    expect(ui.result.source(7).get()).toHaveTextContent("Article 121-1");
+
+    expect(ui.result.notifications.queryAll()).toHaveLength(2);
+    expect(ui.result.notification(1).get()).toHaveTextContent(
+      "Le retrait de l'enfant met fin au contrat de travail de l’assistant maternel"
+    );
   });
 });

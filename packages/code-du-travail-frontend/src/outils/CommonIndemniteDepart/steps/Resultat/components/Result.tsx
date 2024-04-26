@@ -30,7 +30,12 @@ export default function Result({
         />
       </Paragraph>
       {notifications.map((notification, index) => (
-        <Paragraph fontSize="small" noMargin key={index}>
+        <Paragraph
+          fontSize="small"
+          noMargin
+          key={index}
+          data-testid={`notification-${index}`}
+        >
           <NoticeNote
             numberOfElements={notifications.length}
             currentElement={1 + index}
