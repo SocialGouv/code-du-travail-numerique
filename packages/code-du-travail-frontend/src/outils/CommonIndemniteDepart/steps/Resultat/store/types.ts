@@ -39,7 +39,7 @@ export type ResultStoreData = StepData<ResultStoreInput, ResultStoreError>;
 
 export type ResultStoreFn = {
   getPublicodesResult: () => void;
-  init: () => void;
+  init: () => { isEligible: boolean };
   getEligibilityError: () => string | undefined;
 };
 
