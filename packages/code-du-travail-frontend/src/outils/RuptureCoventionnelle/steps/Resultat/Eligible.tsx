@@ -128,6 +128,7 @@ const Eligible = () => {
               <AgreementsInjector
                 idcc={getSupportedAgreement(agreement.agreement.num)}
                 step={IndemniteDepartStepName.Resultat}
+                type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
               />
             )
           }

@@ -159,6 +159,7 @@ const StepSalaires = ({ type }: Props) => {
               <AgreementsInjector
                 idcc={getSupportedAgreement(agreement.num)}
                 step={IndemniteDepartStepName.Salaires}
+                type={type}
               />
             )}
         </>

@@ -188,6 +188,7 @@ export default function Eligible() {
               <AgreementsInjector
                 idcc={getSupportedAgreement(agreement.num)}
                 step={IndemniteDepartStepName.Resultat}
+                type={IndemniteDepartType.LICENCIEMENT}
               />
             )
           }
