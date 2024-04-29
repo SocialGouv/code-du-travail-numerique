@@ -76,5 +76,4 @@ export type SourceValues = (typeof labelBySource)[SourceKeys];
 export type Routes = typeof routeBySource;
 export type RouteKeys = keyof Routes;
 export type RouteValues = Routes[SourceKeys];
-export type SourceLabel = Exclude<SourceValues, "glossary" | "versions">;
 export type SourceRoute = Exclude<SourceValues, "versions">;
