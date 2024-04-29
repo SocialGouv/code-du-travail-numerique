@@ -15,8 +15,8 @@ import {
 } from "../../../../lib";
 import { pushAgreementEvents } from "../../../common/Agreement";
 import { AgreementRoute } from "../../../common/type/WizardType";
+import { isCcFullySupportedIndemniteLicenciement } from "../../../CommonIndemniteDepart/common";
 import { Agreement } from "@socialgouv/cdtn-utils";
-import { isCcFullySupportedIndemniteLicenciement } from "../../../IndemniteLicenciement/common";
 
 const initialState: Omit<
   CommonAgreementStoreData<PublicodesSimulator>,
@@ -35,8 +35,8 @@ const initialState: Omit<
 const createCommonAgreementStore: StoreSlicePublicode<
   CommonAgreementStoreSlice<PublicodesSimulator>,
   CommonInformationsStoreSlice
-> = (set, get, { simulatorName, toolName }) => ({
-  agreementData: { ...initialState, publicodes: loadPublicodes(simulatorName) },
+> = (set, get, { simulator, type }) => ({
+  agreementData: { ...initialState, publicodes: loadPublicodes(simulator) },
   agreementFunction: {
     onInitAgreementPage: () => {
       try {
@@ -55,13 +55,11 @@ const createCommonAgreementStore: StoreSlicePublicode<
             );
             const idcc = parsedData?.num?.toString();
             if (idcc) {
+              const publicodes = loadPublicodes(simulator, idcc);
               set(
                 produce(
                   (state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-                    state.agreementData.publicodes = loadPublicodes(
-                      simulatorName,
-                      idcc
-                    );
+                    state.agreementData.publicodes = publicodes;
                     state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
                       isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
                   }
@@ -86,8 +84,15 @@ const createCommonAgreementStore: StoreSlicePublicode<
       }
     },
     onRouteChange: (value) => {
-      if (value === "not-selected" && window.localStorage) {
-        window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+      if (value === "not-selected") {
+        if (window.localStorage) {
+          window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+        }
+        set(
+          produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+            state.agreementData.publicodes = loadPublicodes(simulator);
+          })
+        );
       }
       set(
         produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
@@ -115,10 +120,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
       if (idcc) {
         set(
           produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-            state.agreementData.publicodes = loadPublicodes(
-              simulatorName,
-              idcc
-            );
+            state.agreementData.publicodes = loadPublicodes(simulator, idcc);
             state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
               isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
           })
@@ -149,7 +151,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
             indemniteLicenciement && idcc === agreement?.num
         );
         pushAgreementEvents(
-          toolName,
+          type,
           {
             route,
             selected: agreement,
@@ -172,7 +174,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
       matopush([
         MatomoBaseEvent.TRACK_EVENT,
         MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
-        toolName,
+        type,
         JSON.stringify(data),
       ]);
     },
@@ -180,7 +182,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
       matopush([
         MatomoBaseEvent.TRACK_EVENT,
         MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
-        toolName,
+        type,
         JSON.stringify(data),
       ]);
     },

@@ -1,24 +1,24 @@
 import type { EvaluatedNode } from "publicodes";
 
-import type { Publicodes } from "./Publicodes";
 import { PublicodesBase } from "./PublicodesBase";
-import type { PublicodesData, PublicodesPreavisRetraiteResult } from "./types";
+import type {
+  PublicodesOutput,
+  PublicodesPreavisRetraiteResult,
+} from "./types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
 import { convertDaysIntoBetterUnit } from "./utils/preavis-retraite";
 
-class PreavisRetraitePublicodes
-  extends PublicodesBase<PublicodesPreavisRetraiteResult>
-  implements Publicodes<PublicodesPreavisRetraiteResult>
-{
+class PreavisRetraitePublicodes extends PublicodesBase<PublicodesPreavisRetraiteResult> {
   constructor(rules: any) {
     super(rules, PublicodesDefaultRules[PublicodesSimulator.PREAVIS_RETRAITE]);
   }
 
   calculate(
-    args: Record<string, string | undefined>,
-    target?: string
-  ): PublicodesData<PublicodesPreavisRetraiteResult> {
-    return this.setSituation(args, target);
+    args: Record<string, string | undefined>
+  ): PublicodesOutput<PublicodesPreavisRetraiteResult> {
+    throw new Error(
+      `Not implemented yet. Input given: ${JSON.stringify(args)}`
+    );
   }
 
   protected convertedResult(

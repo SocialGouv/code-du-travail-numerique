@@ -1,20 +1,24 @@
 import type { EvaluatedNode } from "publicodes";
 import Engine from "publicodes";
 
-import type { Formula, Notification, References } from "../modeles/common";
+import type { Formula, Notification, References } from "../modeles";
 import {
   getFormule,
+  getFormuleAgreement,
+  getFormuleLegal,
   getNotifications,
   getNotificationsBloquantes,
   getReferences,
-  SupportedCc,
-} from "../modeles/common";
+} from "../modeles";
 import type { Publicodes } from "./Publicodes";
-import type { MissingArgs, PublicodesData, SituationElement } from "./types";
+import type {
+  MissingArgs,
+  PublicodesData,
+  PublicodesOutput,
+  SituationElement,
+} from "./types";
 
 export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
-  idcc: SupportedCc;
-
   engine: Engine;
 
   targetRule: string;
@@ -25,26 +29,18 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     situation: [],
   };
 
-  protected constructor(rules: any, targetRule: string, idcc?: SupportedCc) {
+  protected constructor(rules: any, targetRule: string) {
     this.engine = new Engine(rules);
     this.targetRule = targetRule;
-    this.idcc = idcc ?? SupportedCc.default;
   }
 
-  execute(rule: string): TResult {
+  execute(rule: string): TResult | undefined {
     const result = this.handleExecute(this.data.situation, rule);
     if (!result)
       throw new Error(
         `Unable to evaluate ${rule} with ${JSON.stringify(this.data.situation)}`
       );
     return this.convertedResult(result);
-  }
-
-  calculate(
-    args: Record<string, string | undefined>,
-    target?: string
-  ): PublicodesData<TResult> {
-    return this.setSituation(args, target);
   }
 
   setSituation(
@@ -56,6 +52,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
       args,
       targetRule ?? this.targetRule
     );
+
     this.data = {
       missingArgs,
       result: this.convertedResult(result),
@@ -76,8 +73,30 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return getReferences(this.engine, specificRule);
   }
 
+  getFormuleLegal(): Formula {
+    return getFormuleLegal(this.engine);
+  }
+
+  getFormuleAgreement(): Formula {
+    return getFormuleAgreement(this.engine);
+  }
+
   getFormule(): Formula {
     return getFormule(this.engine);
+  }
+
+  protected removeNonPublicodeFields(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    return Object.keys(args).reduce((filteredObj, key) => {
+      if (key.startsWith("contrat salarié . ") && args[key]) {
+        return {
+          ...filteredObj,
+          [key]: args[key],
+        };
+      }
+      return filteredObj;
+    }, {});
   }
 
   private buildSituation(
@@ -169,6 +188,11 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
       situation: newSituation,
     };
   }
+
+  abstract calculate(
+    args: Record<string, string | undefined>,
+    target?: string
+  ): PublicodesOutput<TResult>;
 
   protected abstract convertedResult(evaluatedNode: EvaluatedNode): TResult;
 }

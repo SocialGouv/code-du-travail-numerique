@@ -13,11 +13,11 @@ const PubliReferences: React.FC<Props> = ({ references }) => (
     {references && references.length > 0 && (
       <>
         <SectionTitle>Sources</SectionTitle>
-        <ul>
+        <ul data-testid="sources">
           {references
             .filter(({ article }) => article !== null)
             .map(({ article, url }, id) => (
-              <li key={`${url}-${id}`}>
+              <li key={`${url}-${id}`} data-testid={`source-${id}`}>
                 <A11yLink href={url} target="_blank" rel="noopener noreferrer">
                   {article}
                 </A11yLink>

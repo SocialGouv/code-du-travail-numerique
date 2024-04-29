@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../..";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../..";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import { UserAction } from "../../../common";
 
 jest.spyOn(Storage.prototype, "setItem");
@@ -21,7 +21,7 @@ Storage.prototype.getItem = jest.fn(
 describe("Indemnité licenciement - CC 1527", () => {
   let userAction: UserAction;
   beforeEach(() => {
-    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+    render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
     userAction = new UserAction();
 
     userAction

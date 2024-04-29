@@ -3,7 +3,6 @@ import { PreavisRetraiteFormState } from "../../form";
 import { PreavisRetraiteState, PreavisRetraiteStore } from "../types";
 import { initialState } from "../preavisRetraiteStore";
 import {
-  Publicodes,
   PublicodesConvertedUnit,
   PublicodesData,
   PublicodesPreavisRetraiteResult,
@@ -48,7 +47,7 @@ class PublicodesStub extends PreavisRetraitePublicodes {
     this.data = data;
   }
 
-  execute: (rule: string) => PublicodesPreavisRetraiteResult = () =>
+  execute: (rule: string) => PublicodesPreavisRetraiteResult | undefined = () =>
     publicodesData.result;
   setSituation: (
     args: Record<string, any>
