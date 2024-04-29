@@ -1,3 +1,4 @@
+import type { PublicodesMissingArgs } from "../../../../../publicodes";
 import IndemniteLicenciementPublicodes from "../../../../../publicodes/IndemniteLicenciementPublicodes";
 
 const engine = new IndemniteLicenciementPublicodes(
@@ -7,7 +8,8 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Test de la fonctionnalité 'calculate'", () => {
   test("Vérifier que le calculate n'essaye pas de calculer le salaire au niveau de la step ancienneté", () => {
-    const { missingArgs } = engine.calculate({
+    const result = engine.calculate({
+      "contrat salarié . convention collective": "'IDCC0292'",
       "contrat salarié . convention collective . plasturgie . indemnité de licenciement . catégorie professionnelle":
         "'Cadres (Coefficient 900 et plus)'",
       "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
@@ -22,13 +24,9 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(missingArgs[0]).toEqual({
-      indice: 1,
-      name: "contrat salarié - indemnité de licenciement - salaire de référence",
-      rawNode: {
-        nom: "contrat salarié . indemnité de licenciement . salaire de référence",
-        unité: "€",
-      },
-    });
+    expect(result.type).toEqual("missing-args");
+    expect((result as PublicodesMissingArgs).missingArgs[0].rawNode.nom).toBe(
+      "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+    );
   });
 });

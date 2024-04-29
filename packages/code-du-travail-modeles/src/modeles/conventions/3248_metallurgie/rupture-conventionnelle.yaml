@@ -1,0 +1,18 @@
+contrat salarié . convention collective . métallurgie . rupture conventionnelle:
+  valeur: oui
+
+contrat salarié . convention collective . métallurgie . rupture conventionnelle . age:
+  remplace: contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . métallurgie . rupture conventionnelle . avant cadre:
+  remplace: contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre
+  valeur: "'Non'"
+
+# Pour la RC on a fait le choix de ne pas la calculer car elle sera toujours la plus élevée et donc jamais retenue (et surtout trop compliqué à calculer)
+contrat salarié . convention collective . métallurgie . rupture conventionnelle . licenciement pour motif absence prolongée ou répétées:
+  remplace: contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées
+  valeur: "'Non'"

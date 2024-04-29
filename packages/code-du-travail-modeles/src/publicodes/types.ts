@@ -6,7 +6,15 @@ import type {
   Unit,
 } from "publicodes";
 
-import type { Notification, References } from "../modeles/common";
+import type {
+  Formula,
+  IReferenceSalary,
+  ISeniority,
+  Notification,
+  References,
+  SupportedCc,
+} from "../modeles";
+import type { IInegibility } from "../modeles/common/types/ineligibility";
 import type {
   IndemniteLicenciementPublicodes,
   PreavisRetraitePublicodes,
@@ -70,26 +78,61 @@ export type PublicodesState = {
   targetRule: string;
 };
 
+export type PublicodesIneligibility = {
+  type: "ineligibility";
+  ineligibility: string;
+};
+
+export type PublicodesMissingArgs = {
+  type: "missing-args";
+  missingArgs: MissingArgs[];
+};
+
+export type ChosenResult = "AGREEMENT" | "HAS_NO_LEGAL" | "LEGAL" | "SAME";
+
+export type PublicodesResult<TResult> = {
+  type: "result";
+  result: TResult;
+  detail: {
+    chosenResult: ChosenResult;
+    legalResult?: TResult;
+    agreementResult?: TResult;
+    agreementExplanation?: ExplanationAgreementResult;
+  };
+  explanation: ExplanationMainResult;
+  formula: Formula;
+  notifications: Notification[];
+  references: References[];
+  situation: SituationElement[];
+};
+
+export type ExplanationAgreementResult =
+  | "AGREEMENT_NOT_SUPPORTED"
+  | "AGREEMENT_RESULT_ZERO"
+  | "IS_HORS_ANI"
+  | "NO_AGREEMENT_SELECTED"
+  | "NO_EXPLANATION";
+
+export type ExplanationMainResult =
+  | "AGREEMENT_AMOUNT_MORE"
+  | "AGREEMENT_NOT_SUPPORTED"
+  | "AGREEMENT_RESULT_ZERO"
+  | "HAS_NOT_SELECTED_AGREEMENT"
+  | "LEGAL_AMOUNT_MORE"
+  | "LEGAL_RESULT_ZERO_BUT_AGREEMENT"
+  | "NO_EXPLANATION"
+  | "SAME_AMOUNT";
+
+export type PublicodesOutput<TResult> =
+  | PublicodesIneligibility
+  | PublicodesMissingArgs
+  | PublicodesResult<TResult>;
+
 export type PublicodesData<TResult> = {
   situation: SituationElement[];
   missingArgs: MissingArgs[];
   result: TResult;
-  ineligibility?: string;
 };
-
-export type PublicodesProviderRule = {
-  children: React.ReactNode;
-  rules: any;
-  simulator: PublicodesSimulator;
-};
-
-export enum PublicodesUnit {
-  DAY = "jour",
-  MONTH = "mois",
-  YEAR = "an",
-  EUROS = "€",
-  K_EUROS = "k/€",
-}
 
 export enum PublicodesSimulator {
   INDEMNITE_LICENCIEMENT = "INDEMNITE_LICENCIEMENT",
@@ -122,20 +165,9 @@ export type PublicodesPreavisRetraiteResult = {
 };
 
 export type PublicodesIndemniteLicenciementResult = {
-  value: Evaluation;
+  value: Evaluation<number>;
   unit?: Unit;
   ineligibility?: string;
-};
-
-export type PublicodesContextType = {
-  execute: (rule: string) => PublicodesIndemniteLicenciementResult;
-  getNotifications: () => Notification[];
-  getReferences: () => References[];
-  result: PublicodesIndemniteLicenciementResult;
-  missingArgs: MissingArgs[];
-  situation: SituationElement[];
-  calculate: (values: Record<string, string>) => void;
-  setSituation: (values: Record<string, string>) => void;
 };
 
 export type PublicodesInstance<T extends PublicodesSimulator> =
@@ -146,3 +178,11 @@ export type PublicodesInstance<T extends PublicodesSimulator> =
     : T extends PublicodesSimulator.RUPTURE_CONVENTIONNELLE
     ? RuptureConventionnellePublicodes
     : never;
+
+export interface IndemniteDepartInstance {
+  ineligibility: IInegibility;
+
+  seniority: ISeniority<SupportedCc>;
+
+  salary: IReferenceSalary<SupportedCc>;
+}

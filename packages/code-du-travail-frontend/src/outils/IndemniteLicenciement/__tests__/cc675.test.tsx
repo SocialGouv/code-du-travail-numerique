@@ -1,7 +1,7 @@
 import { fireEvent, render } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../..";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import userEvent from "@testing-library/user-event";
 
 jest.spyOn(Storage.prototype, "setItem");
@@ -21,7 +21,13 @@ Storage.prototype.getItem = jest.fn(
 
 describe("Indemnité licenciement - CC 675", () => {
   test("cas spécifique", () => {
-    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
+    );
     userEvent.click(ui.introduction.startButton.get());
     userEvent.click(ui.contract.type.cdi.get());
     userEvent.click(ui.contract.fauteGrave.non.get());

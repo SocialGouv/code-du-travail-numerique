@@ -1,3 +1,4 @@
+import type { PublicodesMissingArgs } from "../../../../publicodes";
 import { RuptureConventionnellePublicodes } from "../../../../publicodes";
 import type { SalaryPeriods } from "../../../common";
 
@@ -5,7 +6,7 @@ const engine = new RuptureConventionnellePublicodes(modelsRuptureConventionnel);
 
 describe("Test de la fonctionnalité 'calculate'", () => {
   test("Vérifier que l'ancienneté peut être remplacer par les dates en input", () => {
-    const { result, missingArgs } = engine.calculate({
+    const result = engine.calculate({
       absencePeriods: "[]",
       "contrat salarié . indemnité de licenciement . date d'entrée":
         "01/01/2022",
@@ -20,13 +21,11 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(1000);
-    expect(result.unit?.numerators).toEqual(["€"]);
+    expect(result).toResultBeEqual(1000, "€");
   });
 
   test("Vérifier qu'un missing args s'affiche lorsque la date d'entrée est manquante", () => {
-    const { missingArgs } = engine.calculate({
+    const result = engine.calculate({
       "contrat salarié . indemnité de licenciement . date de notification":
         "01/01/2024",
       "contrat salarié . indemnité de licenciement . date de sortie":
@@ -38,13 +37,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(missingArgs[0].name).toEqual(
-      "contrat salarié . indemnité de licenciement . date d'entrée"
+    expect(result.type).toBe("missing-args");
+    expect((result as PublicodesMissingArgs).missingArgs[0].rawNode.nom).toBe(
+      "contrat salarié . indemnité de licenciement . ancienneté en année"
     );
   });
 
   test("Vérifier que l'ancienneté est bien calculé avec les congés", () => {
-    const { result, missingArgs } = engine.calculate({
+    const result = engine.calculate({
       absencePeriods: JSON.stringify([
         { motif: { key: "absenceMaladieNonPro" }, value: 6 },
       ]),
@@ -61,9 +61,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       licenciementFauteGrave: "non",
       typeContratTravail: "cdi",
     });
-    expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(875);
-    expect(result.unit?.numerators).toEqual(["€"]);
+    expect(result).toResultBeEqual(875, "€");
   });
 
   test("Vérifier que la grille de salaire est bien prise en compte", () => {
@@ -72,7 +70,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       { month: "2", prime: 500, value: 1000 },
       { month: "3", prime: 500, value: 3000 },
     ];
-    const { result, missingArgs } = engine.calculate({
+    const result = engine.calculate({
       absencePeriods: JSON.stringify([
         { motif: { key: "absenceMaladieNonPro" }, value: 6 },
       ]),
@@ -88,8 +86,6 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       salaryPeriods: JSON.stringify(salaryPeriods),
       typeContratTravail: "cdi",
     });
-    expect(missingArgs).toEqual([]);
-    expect(result.value).toEqual(875);
-    expect(result.unit?.numerators).toEqual(["€"]);
+    expect(result).toResultBeEqual(875, "€");
   });
 });

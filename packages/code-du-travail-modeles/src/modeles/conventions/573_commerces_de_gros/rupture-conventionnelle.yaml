@@ -1,0 +1,17 @@
+contrat salarié . convention collective . commerces de gros . rupture conventionnelle:
+  valeur: oui
+
+contrat salarié . convention collective . commerces de gros . rupture conventionnelle . cadre age:
+  remplace: contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . commerces de gros . rupture conventionnelle . licenciement économique agents age:
+  remplace: contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?
+  cdtn:
+    type: entier
+

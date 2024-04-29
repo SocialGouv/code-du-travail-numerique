@@ -52,14 +52,30 @@ export enum SupportedCc {
   default = "default",
 }
 
-export enum ToolName {
-  INDEMNITE_LICENCIEMENT = "Indemnité de licenciement",
-}
-
 export const getSupportedAgreement = (idcc: number): SupportedCc | null => {
   for (const value of Object.values(SupportedCc)) {
     if (value === idcc.toString()) {
-      return value as SupportedCc;
+      return value;
+    }
+  }
+  return null;
+};
+
+export enum SupportedAgreementHorsAni {
+  IDCC0413 = "413",
+  IDCC0029 = "29",
+  IDCC2941 = "2941",
+  IDCC2511 = "2511",
+  IDCC1518 = "1518",
+  IDCC1043 = "1043",
+}
+
+export const getSupportedAgreementHorsAni = (
+  idcc: number
+): SupportedAgreementHorsAni | null => {
+  for (const value of Object.values(SupportedAgreementHorsAni)) {
+    if (value === idcc.toString()) {
+      return value;
     }
   }
   return null;

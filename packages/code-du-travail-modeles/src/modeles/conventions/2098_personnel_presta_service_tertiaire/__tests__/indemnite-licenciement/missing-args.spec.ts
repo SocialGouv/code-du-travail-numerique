@@ -21,10 +21,9 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
 
-    const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-    expect(keys).toEqual([
-      "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle",
-    ]);
+    expect(missingArgs).toHaveNextMissingRule(
+      "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle"
+    );
   });
 
   test("Catégorie professionnelle", () => {
@@ -44,10 +43,9 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
 
-    const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-    expect(keys).toEqual([
-      "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle",
-    ]);
+    expect(missingArgs).toHaveNextMissingRule(
+      "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle"
+    );
   });
 
   test("Age", () => {
@@ -69,9 +67,11 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
 
-    const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-    expect(keys).toEqual([
-      "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age",
-    ]);
+    expect(missingArgs).toHaveNextMissingRule(
+      "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age"
+    );
+    expect(missingArgs).toHaveNextMissingQuestion(
+      "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
+    );
   });
 });
