@@ -20,5 +20,5 @@
     "resolveJsonModule": true,
     "strictPropertyInitialization": false
   },
-  "exclude": ["node_modules", "bin", "lib", "jest.setup.ts"]
+  "exclude": ["node_modules", "bin", "lib"]
 }

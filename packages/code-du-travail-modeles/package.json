@@ -8,6 +8,9 @@
   "description": "Les règles publicodes des simulateurs de code du travail numérique",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/SocialGouv/code-du-travail-numerique.git",
@@ -28,13 +31,15 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "prebuild": "tsc",
+    "prebuild": "tsc -p tsconfig.build.json",
     "test": "jest --silent=true",
     "lint": "eslint \"./src/**/*.{js,ts}\"",
     "dev": "nodemon --exec 'npm run build:dev' --watch 'src/**' --ext 'ts,yaml'",
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",
-    "build": "yarn prebuild && node bin/internal/build.js",
-    "build:dev": "swc ./src --out-dir bin --copy-files && node bin/internal/build.js",
+    "build": "yarn prebuild && yarn postbuild",
+    "build:dev": "yarn build:swc && yarn postbuild",
+    "build:swc": "swc ./src --out-dir bin --copy-files",
+    "postbuild": "node bin/internal/build.js",
     "clean": "rimraf bin lib",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch"
