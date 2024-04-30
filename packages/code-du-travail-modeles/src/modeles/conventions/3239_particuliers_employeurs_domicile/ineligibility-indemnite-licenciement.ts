@@ -5,6 +5,7 @@ export class IneligibilityLegalIndemniteLicenciement3239 extends IneligibilityLe
   getIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
+    const ANCIENNETE_MINIALE_EN_ANNEE = 9 / 12;
     const contractIneligibility = this.getContractIneligibility(args);
     if (contractIneligibility) {
       return contractIneligibility;
@@ -24,8 +25,7 @@ export class IneligibilityLegalIndemniteLicenciement3239 extends IneligibilityLe
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
           ] ?? "0"
         )
-      ) <
-        9 / 12 &&
+      ) < ANCIENNETE_MINIALE_EN_ANNEE &&
       args[
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
       ] === CatPro3239.assistantMaternel
