@@ -62,7 +62,12 @@ function Fiche(props: Props): JSX.Element {
   }, [sections]);
 
   const { asPath } = useRouter();
-  const anchor = asPath.split("#")[1];
+  const [anchor, setAnchor] = React.useState<string[]>([]);
+
+  React.useEffect(() => {
+    const hash = asPath.split("#")[1];
+    if (hash) setAnchor([hash]);
+  }, [asPath]);
 
   // titleless section have the page title but no anchor.
   const untitledSection = sections.find((section) => !section.anchor);
@@ -79,8 +84,9 @@ function Fiche(props: Props): JSX.Element {
       >
         {untitledSection && <Html>{untitledSection.html}</Html>}
         <Accordion
+          key={anchor.join(",")} // Add key prop to force rerender when anchor array changes
           titleLevel={2}
-          preExpanded={[anchor]}
+          preExpanded={anchor}
           items={titledSections}
         />
       </StyledAnswer>
