@@ -25,7 +25,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
       data-rttabs="true"
     >
       <div
-        class="sc-iMWBiJ iZEClt"
+        class="sc-iMWBiJ kmA-Drm"
       >
         <ul
           class="sc-fvtFIe cHMgmW"
@@ -568,7 +568,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       data-rttabs="true"
                     >
                       <div
-                        class="sc-iMWBiJ iZEClt"
+                        class="sc-iMWBiJ kmA-Drm"
                       >
                         <ul
                           class="sc-fvtFIe cHMgmW"
@@ -731,7 +731,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       data-rttabs="true"
                     >
                       <div
-                        class="sc-iMWBiJ iZEClt"
+                        class="sc-iMWBiJ kmA-Drm"
                       >
                         <ul
                           class="sc-fvtFIe cHMgmW"
