@@ -7,7 +7,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
     data-rttabs="true"
   >
     <div
-      class="sc-iMWBiJ iZEClt"
+      class="sc-iMWBiJ kmA-Drm"
     >
       <ul
         class="sc-fvtFIe cHMgmW"
@@ -83,7 +83,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
     data-rttabs="true"
   >
     <div
-      class="sc-iMWBiJ iZEClt"
+      class="sc-iMWBiJ kmA-Drm"
     >
       <ul
         class="sc-fvtFIe cHMgmW"
@@ -159,7 +159,7 @@ exports[`<Tabulator /> should render 1`] = `
     data-rttabs="true"
   >
     <div
-      class="sc-iMWBiJ iZEClt"
+      class="sc-iMWBiJ kmA-Drm"
     >
       <ul
         class="sc-fvtFIe cHMgmW"
