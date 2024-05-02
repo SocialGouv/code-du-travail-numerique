@@ -7,3 +7,7 @@ contrat salarié . convention collective . industrie pharmaceutique . rupture co
   question: Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?
   cdtn:
     type: entier
+
+contrat salarié . convention collective . industrie pharmaceutique . rupture conventionnelle . avec date de sortie équivalent à la date de notification:
+  remplace: contrat salarié . indemnité de licenciement . date de notification
+  valeur: contrat salarié . indemnité de licenciement . date de sortie
