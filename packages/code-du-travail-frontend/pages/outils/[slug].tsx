@@ -27,18 +27,24 @@ import {
   SimulateurIndemnitePrecarite,
 } from "../../src/outils";
 
-const toolsBySlug = {
-  "convention-collective": AgreementSearch,
-  "heures-recherche-emploi": HeuresRechercheEmploi,
-  "indemnite-licenciement": CalculateurIndemniteLicenciement,
-  "indemnite-precarite": SimulateurIndemnitePrecarite,
-  "preavis-demission": DureePreavisDemission,
-  "preavis-licenciement": DureePreavisLicenciement,
-  "preavis-retraite": DureePreavisRetraite,
-  "simulateur-embauche": SimulateurEmbauche,
-  "procedure-licenciement": DismissalProcess,
-  "indemnite-rupture-conventionnelle": CalculateurRuptureConventionnelle,
-};
+const toolsBySlug = Object.assign(
+  {
+    "convention-collective": AgreementSearch,
+    "heures-recherche-emploi": HeuresRechercheEmploi,
+    "indemnite-licenciement": CalculateurIndemniteLicenciement,
+    "indemnite-precarite": SimulateurIndemnitePrecarite,
+    "preavis-demission": DureePreavisDemission,
+    "preavis-licenciement": DureePreavisLicenciement,
+    "preavis-retraite": DureePreavisRetraite,
+    "simulateur-embauche": SimulateurEmbauche,
+    "procedure-licenciement": DismissalProcess,
+  },
+  process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+    ? {}
+    : {
+        "indemnite-rupture-conventionnelle": CalculateurRuptureConventionnelle,
+      }
+);
 
 export interface Props {
   description: string;
