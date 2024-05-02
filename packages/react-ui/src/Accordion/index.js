@@ -21,7 +21,12 @@ export const Accordion = ({
   const AccordionItemPanel = variants[variant].ItemPanel;
   /* eslint-enable */
   return (
-    <AccordionVariant allowZeroExpanded allowMultipleExpanded {...props}>
+    <AccordionVariant
+      {...props}
+      allowZeroExpanded
+      allowMultipleExpanded
+      preExpanded={props.preExpanded ?? []}
+    >
       {items.map(({ body, icon, id, title }, index) => (
         <div id={id} key={`${id}-${index}`}>
           <AccordionItem
