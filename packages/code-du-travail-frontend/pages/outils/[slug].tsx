@@ -98,7 +98,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
   const tool = await fetchTool(query.slug as string);
-  if (!tool) {
+  if (
+    !tool ||
+    (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT && !tool.displayTool) // En production, ne pas afficher les outils en displayTool à false
+  ) {
     return {
       notFound: true,
     };
