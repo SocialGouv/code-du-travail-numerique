@@ -11,3 +11,8 @@ contrat salarié . convention collective . industrie pharmaceutique . rupture co
 contrat salarié . convention collective . industrie pharmaceutique . rupture conventionnelle . avec date de sortie équivalent à la date de notification:
   remplace: contrat salarié . indemnité de licenciement . date de notification
   valeur: contrat salarié . indemnité de licenciement . date de sortie
+
+contrat salarié . convention collective . industrie pharmaceutique . rupture conventionnelle . résultat conventionnel après avenant:
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = 0
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . indemnité finale

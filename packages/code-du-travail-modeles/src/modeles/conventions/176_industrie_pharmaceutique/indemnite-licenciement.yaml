@@ -1028,6 +1028,6 @@ contrat salarié . convention collective . industrie pharmaceutique . formule pl
       formula: 22 * Sref
 
 contrat salarié . convention collective . industrie pharmaceutique . résultat conventionnel après avenant:
-  # applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = 0
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = 0
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: après avenant 1er juillet 2019 . indemnité finale

@@ -39,6 +39,8 @@ describe("Gestion de la rupture co pour la CC 176", () => {
         "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
         "contrat salarié . indemnité de licenciement . date d'entrée":
           "01/01/2021",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/01/2024",
         "contrat salarié . indemnité de licenciement . date de sortie":
           "01/01/2024",
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
