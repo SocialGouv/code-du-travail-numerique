@@ -112,20 +112,6 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 54,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 86,
     "hasConventionalProvision": false,
     "allowBonus": null,
@@ -224,35 +210,7 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 714,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 787,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 822,
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -265,32 +223,6 @@
     "criteria": {},
     "contractType": "CDD",
     "idcc": 827,
-    "hasConventionalProvision": null,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 828,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {},
-    "contractType": "CDD",
-    "idcc": 829,
     "hasConventionalProvision": null,
     "allowBonus": null,
     "endMessage": null,
@@ -319,48 +251,6 @@
     },
     "contractType": "CDD",
     "idcc": 843,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 860,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 863,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 878,
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -401,20 +291,6 @@
     },
     "contractType": "CDD",
     "idcc": 899,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 911,
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -496,60 +372,8 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 937,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 943,
     "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {},
-    "contractType": "CDD",
-    "idcc": 948,
-    "hasConventionalProvision": null,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 965,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {},
-    "contractType": "CDD",
-    "idcc": 979,
-    "hasConventionalProvision": null,
     "allowBonus": null,
     "endMessage": null,
     "rate": null,
@@ -600,18 +424,6 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": 1059,
-    "hasConventionalProvision": null,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {},
-    "contractType": "CDD",
     "idcc": 1060,
     "hasConventionalProvision": null,
     "allowBonus": null,
@@ -641,20 +453,6 @@
     },
     "contractType": "CDD",
     "idcc": 1147,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1159,
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -694,34 +492,6 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 1274,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1315,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 1351,
     "hasConventionalProvision": false,
     "allowBonus": null,
@@ -748,76 +518,8 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 1365,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1369,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 3209,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1387,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 1404,
     "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {},
-    "contractType": "CDD",
-    "idcc": 1472,
-    "hasConventionalProvision": null,
     "allowBonus": null,
     "endMessage": null,
     "rate": null,
@@ -1030,34 +732,6 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 1560,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1564,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 1572,
     "hasConventionalProvision": false,
     "allowBonus": null,
@@ -1084,48 +758,8 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 1577,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 1578,
     "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1592,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {},
-    "contractType": "CDD",
-    "idcc": 1604,
-    "hasConventionalProvision": null,
     "allowBonus": null,
     "endMessage": null,
     "rate": null,
@@ -1152,63 +786,7 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 1626,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 1627,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1628,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1634,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1635,
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -1250,20 +828,6 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 1732,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 1740,
     "hasConventionalProvision": false,
     "allowBonus": null,
@@ -1278,63 +842,7 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 3231,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1813,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 1867,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1885,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1902,
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -1363,20 +871,6 @@
     },
     "contractType": "CDD",
     "idcc": 1960,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 1966,
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -1419,20 +913,6 @@
     },
     "contractType": "CDD",
     "idcc": 1996,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 2003,
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -1516,20 +996,6 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 2126,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 2148,
     "hasConventionalProvision": false,
     "allowBonus": null,
@@ -1554,37 +1020,11 @@
     "refUrl": null
   },
   {
-    "criteria": {},
-    "contractType": "CDD",
-    "idcc": 2221,
-    "hasConventionalProvision": null,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
     "criteria": {
       "cddType": "Autres"
     },
     "contractType": "CDD",
     "idcc": 2264,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 2266,
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -1698,34 +1138,6 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 2542,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 2579,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 2596,
     "hasConventionalProvision": false,
     "allowBonus": null,
@@ -1768,60 +1180,6 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 2615,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {},
-    "contractType": "CDD",
-    "idcc": 2630,
-    "hasConventionalProvision": null,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 2700,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 2755,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 2941,
     "hasConventionalProvision": false,
     "allowBonus": null,
@@ -1850,35 +1208,7 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 2992,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 3043,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
-    "idcc": 3053,
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
