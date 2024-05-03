@@ -218,4 +218,71 @@ describe("Indemnité licenciement - CC 2596", () => {
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("16388,89 €");
   });
+
+  test(`Emplois de l'esthétique-cosmétique avec moins de 8 moins d'ancienneté`, () => {
+    userAction
+      .changeInputList(
+        ui.information.agreement2596.proCategory.get(),
+        "Emplois de l'esthétique-cosmétique"
+      )
+      .click(ui.next.get());
+
+    fireEvent.change(ui.seniority.startDate.get(), {
+      target: { value: "01/01/2020" },
+    });
+    fireEvent.change(ui.seniority.notificationDate.get(), {
+      target: { value: "01/03/2024" },
+    });
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "01/03/2024" },
+    });
+    fireEvent.click(ui.seniority.hasAbsence.non.get());
+    fireEvent.click(ui.next.get());
+    expect(ui.activeStep.query()).toHaveTextContent("Salaires");
+
+    fireEvent.click(ui.salary.hasPartialTime.non.get());
+    fireEvent.click(ui.salary.hasSameSalary.oui.get());
+    fireEvent.change(ui.salary.sameSalaryValue.get(), {
+      target: { value: "2500" },
+    });
+
+    expect(
+      rendering.queryByText(
+        "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
+      )
+    ).not.toBeInTheDocument();
+    expect(
+      rendering.queryByText("Salaires perçus pendant le préavis")
+    ).not.toBeInTheDocument();
+
+    fireEvent.click(ui.next.get());
+
+    expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    expect(ui.result.resultat.get()).toHaveTextContent("2604,17 €");
+  });
+
+  test(`Emplois de l'esthétique-cosmétique`, () => {
+    userAction
+      .changeInputList(
+        ui.information.agreement2596.proCategory.get(),
+        "Emplois de l'esthétique-cosmétique"
+      )
+      .click(ui.next.get());
+
+    fireEvent.change(ui.seniority.startDate.get(), {
+      target: { value: "01/09/2023" },
+    });
+    fireEvent.change(ui.seniority.notificationDate.get(), {
+      target: { value: "01/03/2024" },
+    });
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "01/03/2024" },
+    });
+    fireEvent.click(ui.seniority.hasAbsence.non.get());
+    fireEvent.click(ui.next.get());
+
+    expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    expect(ui.result.legalError.title.query()).toBeInTheDocument();
+    expect(ui.result.legalError.seniorityToLow.query()).toBeInTheDocument();
+  });
 });

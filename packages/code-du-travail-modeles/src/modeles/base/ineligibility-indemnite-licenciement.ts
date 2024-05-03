@@ -23,6 +23,7 @@ export class IneligibilityLegalIndemniteLicenciement implements IInegibility {
   getSeniorityIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
+    const ANCIENNETE_MINIALE_EN_ANNEE = 8 / 12;
     if (
       args[
         "contrat salarié . indemnité de licenciement . ancienneté requise en année"
@@ -41,8 +42,7 @@ export class IneligibilityLegalIndemniteLicenciement implements IInegibility {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année"
           ] ?? "0"
         )
-      ) <
-        8 / 12
+      ) < ANCIENNETE_MINIALE_EN_ANNEE
     ) {
       return "<p>L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.</p>";
     }

@@ -74,9 +74,7 @@ const StyledTabs = styled(RootTabs)`
 `;
 
 const StyledOverflowWrapper = styled.div`
-  @media (max-width: ${breakpoints.mobile}) {
-    overflow-x: auto;
-  }
+  overflow-x: auto;
   margin-right: ${spacings.tiny};
 `;
 
