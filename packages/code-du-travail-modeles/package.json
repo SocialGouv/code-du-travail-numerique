@@ -38,7 +38,7 @@
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",
     "build": "yarn prebuild && yarn postbuild",
     "build:dev": "yarn build:swc && yarn postbuild",
-    "build:swc": "swc ./src --out-dir bin --copy-files",
+    "build:swc": "swc ./src --out-dir bin --copy-files --strip-leading-paths",
     "postbuild": "node bin/internal/build.js",
     "clean": "rimraf bin lib",
     "type-check": "tsc --noEmit",

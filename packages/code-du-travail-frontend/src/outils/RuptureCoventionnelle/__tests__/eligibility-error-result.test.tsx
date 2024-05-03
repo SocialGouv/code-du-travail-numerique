@@ -2,7 +2,6 @@ import { CalculateurRuptureConventionnelle } from "../..";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 import { fireEvent, render, screen } from "@testing-library/react";
-import { byText } from "testing-library-selector";
 
 describe(`Tests d'éligibilité`, () => {
   beforeEach(() => {
