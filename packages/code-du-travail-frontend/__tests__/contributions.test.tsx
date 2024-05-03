@@ -2,8 +2,9 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import PageContribution from "../pages/contribution/[slug]";
+import { ElasticSearchContribution } from "@socialgouv/cdtn-types";
 
-const contribution = {
+const contribution: ElasticSearchContribution = {
   source: "contributions",
   linkedContent: [],
   references: [],

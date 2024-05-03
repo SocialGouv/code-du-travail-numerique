@@ -11,7 +11,14 @@ import { Contents } from "../../src/information";
 import { QuestionnaireWrapper } from "../../src/questionnaire";
 import { useRouter } from "next/router";
 import { SITE_URL } from "../../src/config";
-import { EditorialContentDataWrapper } from "@socialgouv/cdtn-types";
+import { EditorialContentElasticDocument } from "@socialgouv/cdtn-types";
+
+export type EditorialContentDataWrapper = {
+  information: {
+    _source: Partial<EditorialContentElasticDocument>;
+    relatedItems?: string[];
+  };
+};
 
 const Information = ({
   information: {

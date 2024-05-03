@@ -1,11 +1,10 @@
 import { render, RenderResult } from "@testing-library/react";
 import React from "react";
 
-import InformationPage from "../pages/information/[slug]";
-import {
+import InformationPage, {
   EditorialContentDataWrapper,
-  EditorialSectionDisplayMode,
-} from "@socialgouv/cdtn-types";
+} from "../pages/information/[slug]";
+import { EditorialSectionDisplayMode } from "@socialgouv/cdtn-types";
 
 const mockedProps: EditorialContentDataWrapper = {
   information: {
