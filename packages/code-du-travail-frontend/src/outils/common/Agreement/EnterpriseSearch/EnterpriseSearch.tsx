@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Field } from "react-final-form";
 import { Paragraph, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "@socialgouv/cdtn-types";
 import { SearchParams } from "../../../ConventionCollective/common/NavContext";
 import { TrackingProps } from "../../../ConventionCollective/types";
 import { ErrorField } from "../../ErrorField";
@@ -16,6 +15,7 @@ import { SearchEnterpriseInput } from "./EntrepriseSearchInput/SearchEnterpriseI
 import styled from "styled-components";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Simulator } from "../../NoticeExample";
+import { Agreement } from "../../../types";
 
 export type Props = {
   supportedAgreements: AgreementSupportInfo[];

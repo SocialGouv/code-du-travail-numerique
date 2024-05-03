@@ -19,3 +19,18 @@ export type StoreSlicePublicode<T extends object, E extends object = T> = (
 ) => T;
 
 export const STORAGE_KEY_AGREEMENT = "convention";
+
+export type Agreement = {
+  id: string;
+  num: number;
+  shortTitle: string;
+  slug?: string;
+  title: string;
+  url?: string;
+  highlight?: {
+    title: string;
+    content: string;
+    searchInfo?: string;
+  };
+  contributions: boolean;
+};

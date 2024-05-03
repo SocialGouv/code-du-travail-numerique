@@ -1,12 +1,9 @@
-import {
-  IndemniteDepartContext,
-  useIndemniteDepartStore,
-} from "../../store";
+import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 import CommonAgreementStep from "../../../CommonSteps/Agreement";
 import { getSupportedCc } from "../../common";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { useContext } from "react";
-import { Agreement } from "@socialgouv/cdtn-types";
+import { Agreement } from "../../../types";
 
 const AgreementStep = (): JSX.Element => {
   const store = useContext(IndemniteDepartContext);

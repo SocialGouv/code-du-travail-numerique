@@ -1,5 +1,5 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { Agreement } from "@socialgouv/cdtn-types";
+import { Agreement } from "../../../../outils/types";
 import {
   AlertWithIcon,
   Button,

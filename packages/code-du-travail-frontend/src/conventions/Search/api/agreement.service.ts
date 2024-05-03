@@ -1,7 +1,7 @@
 import debounce from "debounce-promise";
 import { SITE_URL } from "../../../config";
 
-import { Agreement } from "@socialgouv/cdtn-types";
+import { Agreement } from "../../../outils/types";
 
 const formatCCn = ({ num, id, slug, title, shortTitle, highlight, url }) => ({
   ...(highlight ? { highlight } : {}),

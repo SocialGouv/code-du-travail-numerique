@@ -16,7 +16,7 @@ import { ErrorField } from "../ErrorField";
 import { STORAGE_KEY_AGREEMENT } from "../../types";
 import { NoEnterprise } from "../../CommonSteps/Agreement/components";
 import { getCc3239Informations } from "../../api";
-import { Agreement } from "@socialgouv/cdtn-types";
+import { Agreement } from "../../../outils/types";
 import { Simulator } from "../NoticeExample";
 
 export type Props = {

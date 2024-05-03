@@ -10,7 +10,7 @@ import {
   ROUTE_NAME,
 } from "../../../common/Agreement/form-constants";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";
-import { Agreement } from "@socialgouv/cdtn-types";
+import { Agreement } from "../../../types";
 import { Simulator } from "../../../common/NoticeExample";
 
 export const getSupportedCC = (): AgreementSupportInfo[] =>

@@ -1,4 +1,4 @@
-import { Agreement } from "@socialgouv/cdtn-types";
+import { Agreement } from "../../../../types";
 
 type InfoWarningProps = {
   hasSelectedAgreement: boolean;

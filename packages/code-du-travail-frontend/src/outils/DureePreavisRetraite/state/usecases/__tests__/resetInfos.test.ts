@@ -3,7 +3,7 @@ import { resetInfos } from "../index";
 import { UpdateFormValues } from "../../utils";
 import { initialState } from "../../preavisRetraiteStore";
 import { PreavisRetraiteState } from "../../types";
-import { Agreement } from "@socialgouv/cdtn-types";
+import { Agreement } from "../../../../types";
 
 describe("resetInfos", () => {
   const state: PreavisRetraiteState = {

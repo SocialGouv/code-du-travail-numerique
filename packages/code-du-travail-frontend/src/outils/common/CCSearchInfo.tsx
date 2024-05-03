@@ -2,7 +2,7 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import Link from "next/link";
 import React from "react";
 
-import { Agreement } from "@socialgouv/cdtn-types";
+import { Agreement } from "../../outils/types";
 
 type Props = {
   ccn: Agreement;

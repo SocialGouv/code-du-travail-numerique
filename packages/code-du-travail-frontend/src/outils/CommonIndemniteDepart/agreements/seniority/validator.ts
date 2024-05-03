@@ -1,5 +1,5 @@
 import { getSupportedAgreement, SupportedCc } from "@socialgouv/modeles-social";
-import { Agreement } from "@socialgouv/cdtn-types";
+import { Agreement } from "../../../types";
 import { CommonInformationsStoreInput } from "../../../CommonSteps/Informations/store";
 import { AncienneteStoreInput } from "../../steps/Anciennete/store";
 import { validateStep } from "../../steps/Anciennete/store/validator";

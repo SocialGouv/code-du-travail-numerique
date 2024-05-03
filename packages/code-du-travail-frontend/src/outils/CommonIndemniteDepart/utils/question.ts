@@ -1,7 +1,6 @@
 import { SalaryPeriods } from "@socialgouv/modeles-social";
-import { Agreement } from "@socialgouv/cdtn-types";
 import { OuiNon } from "../common";
-import { IndemniteDepartType } from "../../types";
+import { IndemniteDepartType, Agreement } from "../../types";
 
 export const generateSameSalaryQuestion = (
   type: IndemniteDepartType,

@@ -12,7 +12,7 @@ import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
 import { AgreementSearchValue, CommonAgreementStoreError } from "./store";
 import { AgreementRoute } from "../../common/type/WizardType";
 import { getCc3239Informations } from "../../api";
-import { Agreement } from "@socialgouv/cdtn-types";
+import { Agreement } from "../../types";
 
 type Props = {
   selectedRoute?: AgreementRoute;

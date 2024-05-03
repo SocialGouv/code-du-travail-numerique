@@ -2,11 +2,11 @@ import { formatIdcc, PublicodesSimulator } from "@socialgouv/modeles-social";
 import React from "react";
 
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "@socialgouv/cdtn-types";
 import { RadioQuestion } from "../../../Components";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";
 import ShowAlert from "../../../common/Agreement/components/ShowAlert";
 import { Alert } from "../../../../common/Alert";
+import { Agreement } from "../../../types";
 
 type Props = {
   enterprise: Enterprise;

@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import { EmbeddedForm } from "../../../../../test/TestForm";
-import { Agreement } from "@socialgouv/cdtn-types";
+import { Agreement } from "../../../../outils/types";
 import { AgreementSearch } from "../AgreementSearch";
 import type { Props } from "../AgreementSearch/AgreementSearch";
 import { SupportedTypes } from "@socialgouv/modeles-social";
