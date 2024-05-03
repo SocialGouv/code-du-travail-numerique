@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.135.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.2...v4.135.0) (2024-05-03)
+
+### Bug Fixes
+
+- **e2e:** correction des tests e2e ([#5813](https://github.com/SocialGouv/code-du-travail-numerique/issues/5813)) ([2060384](https://github.com/SocialGouv/code-du-travail-numerique/commit/20603843a436efc51bf21bec4c8305e88b46822f))
+- **indemnite-licenciement:** ajout de log + tests sur les années ([#5798](https://github.com/SocialGouv/code-du-travail-numerique/issues/5798)) ([56c357e](https://github.com/SocialGouv/code-du-travail-numerique/commit/56c357e305dab454d9791b44709f5694f29cd277))
+- **indemnite-licenciement:** correction de la cc 2596 + 1404 ([#5832](https://github.com/SocialGouv/code-du-travail-numerique/issues/5832)) ([9b3e0c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/9b3e0c8c75315d2dca6aed1882ed3f8966746868))
+- **react-ui:** tableau qui ne s'overflow pas ([#5830](https://github.com/SocialGouv/code-du-travail-numerique/issues/5830)) ([7e196db](https://github.com/SocialGouv/code-du-travail-numerique/commit/7e196dbc5e3cdac3747736f884dbc5e4a5d26bff))
+- **rupture-co:** cacher le simulateur rupture-co en production ([#5838](https://github.com/SocialGouv/code-du-travail-numerique/issues/5838)) ([d2ed6dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/d2ed6dd3ae760de30f858d13edb8e50ab34d79ff))
+
+### Features
+
+- **indemnite-licenciement:** ajout de l'outil de rupture conventionnelle ([#5703](https://github.com/SocialGouv/code-du-travail-numerique/issues/5703)) ([27962be](https://github.com/SocialGouv/code-du-travail-numerique/commit/27962be5c0267ce7c0eda5959bab2ef755f4f80b)), closes [#5717](https://github.com/SocialGouv/code-du-travail-numerique/issues/5717)
+
 ## [4.134.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.1...v4.134.2) (2024-04-16)
 
 **Note:** Version bump only for package @cdt/frontend
