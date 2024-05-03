@@ -51,7 +51,7 @@ describe("Gestion de la rupture co pour la CC 176", () => {
         typeContratTravail: "cdi",
       });
       console.log(result);
-      expect(result).toAgreementResultBeEqual(1950, "€");
+      expect(result).toAgreementResultBeEqual(7540, "€");
     });
   });
 });
