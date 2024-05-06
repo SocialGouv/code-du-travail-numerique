@@ -8,10 +8,13 @@ Cypress.Commands.add("getIframe" as any, () => {
 
 describe("Pages integration convention collective", () => {
   it("should display iframe moteur de recherche", () => {
+    const postMessageStub = cy.stub().as("postMessage");
+
     cy.visit("/integration/moteur-recherche", {
       onBeforeLoad(win) {
-        // start spying
-        cy.spy(win, "postMessage").as("postMessage");
+        win.addEventListener("message", (e) => {
+          postMessageStub(e.data);
+        });
       },
     });
 
@@ -25,13 +28,22 @@ describe("Pages integration convention collective", () => {
         "Trouvez les réponses à vos questions en droit du travail"
       );
     cy.get("@iframe").find("#button-search").click();
-    cy.get("@postMessage").should("be.calledOnce");
+    cy.get("@postMessage")
+      .should("have.been.calledOnce")
+      .and("have.been.calledWithExactly", {
+        name: "button-search",
+        kind: "click",
+      });
   });
+
   it("should display iframe convention collective", () => {
+    const postMessageStub = cy.stub().as("postMessage");
     cy.visit("/integration/convention-collective", {
       onBeforeLoad(win) {
-        // start spying
-        cy.spy(win, "postMessage").as("postMessage");
+        win.addEventListener("message", (e) => {
+          console.log(e.data);
+          postMessageStub(e.data);
+        });
       },
     });
 
@@ -47,7 +59,17 @@ describe("Pages integration convention collective", () => {
     cy.get("@entreprise").click();
     cy.get("@iframe").contains("Conventions collectives").as("cc");
     cy.get("@cc").click();
-    cy.get("@postMessage").should("be.calledOnce");
+    cy.get("@postMessage")
+      .should("have.been.calledOnce")
+      .and("have.been.calledWithExactly", {
+        name: "agreement",
+        kind: "select",
+        extra: {
+          idcc: 2216,
+          title:
+            "Convention collective nationale du commerce de détail et de gros à prédominance alimentaire du 12 juillet 2001.  Etendue par arrêté du 26 juillet 2002 JORF 6 août 2002.",
+        },
+      });
   });
 
   it("should display iframe modèle de courrier", () => {
