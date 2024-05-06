@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.136.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.135.0...v4.136.0) (2024-05-06)
+
+### Features
+
+- clean old meta from preavis licenciement + precarite ([#5824](https://github.com/SocialGouv/code-du-travail-numerique/issues/5824)) ([488c961](https://github.com/SocialGouv/code-du-travail-numerique/commit/488c96179ae2fed21db9e5fef97da1b35a7b2ee1))
+
 # [4.135.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.2...v4.135.0) (2024-05-03)
 
 ### Bug Fixes
