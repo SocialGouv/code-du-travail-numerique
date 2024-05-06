@@ -20,6 +20,13 @@ export const Accordion = ({
   const AccordionItemButton = variants[variant].ItemButton;
   const AccordionItemPanel = variants[variant].ItemPanel;
   /* eslint-enable */
+
+  React.useEffect(() => {
+    if (props.preExpanded?.length > 0) {
+      const anchor = document.querySelector(`#${props.preExpanded[0]}`);
+      anchor.scrollIntoView();
+    }
+  }, [props.preExpanded]);
   return (
     <AccordionVariant
       {...props}
