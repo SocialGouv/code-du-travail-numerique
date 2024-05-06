@@ -22,7 +22,7 @@ export const Accordion = ({
   /* eslint-enable */
 
   React.useEffect(() => {
-    if (props.preExpanded?.length > 0) {
+    if (props.preExpanded?.length && props.preExpanded[0].length) {
       const anchor = document?.querySelector(`#${props.preExpanded[0]}`);
       if (anchor) {
         anchor.scrollIntoView();
