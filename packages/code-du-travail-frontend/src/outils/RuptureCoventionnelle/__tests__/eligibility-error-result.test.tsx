@@ -26,7 +26,7 @@ describe(`Tests d'éligibilité`, () => {
       ui.result.infoWarning.ineligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
   });
-  test("Vérifier l'affichage de l'erreur sur le type de contrat CDD même si CDI click avant", () => {
+  test("Vérifier l'affichage de l'erreur sur le type de contrat CDD même si on clique sur CDI avant", () => {
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.type.cdd.get());
     fireEvent.click(ui.next.get());
