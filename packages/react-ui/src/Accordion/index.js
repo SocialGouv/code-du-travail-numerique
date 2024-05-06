@@ -23,8 +23,10 @@ export const Accordion = ({
 
   React.useEffect(() => {
     if (props.preExpanded?.length > 0) {
-      const anchor = document.querySelector(`#${props.preExpanded[0]}`);
-      anchor.scrollIntoView();
+      const anchor = document?.querySelector(`#${props.preExpanded[0]}`);
+      if (anchor) {
+        anchor.scrollIntoView();
+      }
     }
   }, [props.preExpanded]);
   return (
