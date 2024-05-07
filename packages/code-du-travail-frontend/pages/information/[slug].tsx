@@ -11,7 +11,10 @@ import { Contents } from "../../src/information";
 import { QuestionnaireWrapper } from "../../src/questionnaire";
 import { useRouter } from "next/router";
 import { SITE_URL } from "../../src/config";
-import { EditorialContentElasticDocument } from "@socialgouv/cdtn-types";
+import {
+  EditorialContentBaseContentPart,
+  EditorialContentElasticDocument,
+} from "@socialgouv/cdtn-types";
 
 export type EditorialContentDataWrapper = {
   information: {
@@ -64,8 +67,8 @@ const Information = ({
           anchor={anchor}
           sectionDisplayMode={sectionDisplayMode}
           dismissalProcess={dismissalProcess}
-          contents={contents}
-        ></Contents>
+          contents={contents as EditorialContentBaseContentPart[] | undefined}
+        />
         {references.map(
           ({ label, links }, index) =>
             links.length > 0 && (
