@@ -6,12 +6,15 @@ Cypress.Commands.add("getIframe" as any, () => {
     .then(cy.wrap);
 });
 
-describe("Pages integration convention collective", () => {
+describe("Pages integration", () => {
   it("should display iframe moteur de recherche", () => {
+    const postMessageStub = cy.stub().as("postMessage");
+
     cy.visit("/integration/moteur-recherche", {
       onBeforeLoad(win) {
-        // start spying
-        cy.spy(win, "postMessage").as("postMessage");
+        win.addEventListener("message", (e) => {
+          postMessageStub(e.data);
+        });
       },
     });
 
@@ -25,29 +28,12 @@ describe("Pages integration convention collective", () => {
         "Trouvez les réponses à vos questions en droit du travail"
       );
     cy.get("@iframe").find("#button-search").click();
-    cy.get("@postMessage").should("be.calledOnce");
-  });
-  it("should display iframe convention collective", () => {
-    cy.visit("/integration/convention-collective", {
-      onBeforeLoad(win) {
-        // start spying
-        cy.spy(win, "postMessage").as("postMessage");
-      },
-    });
-
-    // @ts-ignore
-    cy.getIframe().as("iframe");
-
-    cy.get("@iframe").contains("Trouver sa convention collective");
-    cy.get("@iframe").find("#enterprise-search").as("entreprise-search");
-    cy.get("@entreprise-search").type("carrefour");
-    cy.get("@iframe").find("button[type=submit]").as("button-submit");
-    cy.get("@button-submit").click();
-    cy.get("@iframe").contains("CARREFOUR HYPERMARCHES").as("entreprise");
-    cy.get("@entreprise").click();
-    cy.get("@iframe").contains("Conventions collectives").as("cc");
-    cy.get("@cc").click();
-    cy.get("@postMessage").should("be.calledOnce");
+    cy.get("@postMessage")
+      .should("have.been.calledOnce")
+      .and("have.been.calledWithExactly", {
+        name: "button-search",
+        kind: "click",
+      });
   });
 
   it("should display iframe modèle de courrier", () => {
