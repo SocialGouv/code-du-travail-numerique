@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.136.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.135.0...v4.136.0) (2024-05-06)
+
+### Bug Fixes
+
+- **rupture-co:** ne pas afficher l'outil dans la liste ([#5846](https://github.com/SocialGouv/code-du-travail-numerique/issues/5846)) ([8eb4147](https://github.com/SocialGouv/code-du-travail-numerique/commit/8eb414778b403d4472f46f361991a264a9023a43))
+
+### Features
+
+- implementation widget CC pour telerc ([#5817](https://github.com/SocialGouv/code-du-travail-numerique/issues/5817)) ([b389361](https://github.com/SocialGouv/code-du-travail-numerique/commit/b3893616a2a7ef46cad2e54284323620a6721198))
+
 # [4.135.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.2...v4.135.0) (2024-05-03)
 
 ### Bug Fixes

@@ -2,6 +2,9 @@ export type WidgetMessage = {
   [action: string]: {
     name: string;
     description: string;
+    extra?: {
+      [key: string]: string;
+    };
   }[];
 };
 
