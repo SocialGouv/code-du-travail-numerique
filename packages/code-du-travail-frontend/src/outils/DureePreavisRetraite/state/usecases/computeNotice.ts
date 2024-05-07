@@ -59,8 +59,8 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
       errorPublicodes: false,
     };
   } catch (e) {
-    Sentry.captureException(e);
     console.error(e);
+    Sentry.captureException(e);
     return {
       ...state,
       errorPublicodes: true,
