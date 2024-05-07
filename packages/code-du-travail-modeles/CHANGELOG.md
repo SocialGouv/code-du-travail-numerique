@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.136.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.0...v4.136.1) (2024-05-07)
+
+### Bug Fixes
+
+- **rupture-co:** changement de wording au niveau du résultat ([#5841](https://github.com/SocialGouv/code-du-travail-numerique/issues/5841)) ([059572e](https://github.com/SocialGouv/code-du-travail-numerique/commit/059572e62c1b90c0f5da15545bbc8ee3f69564e7))
+- **rupture-co:** résultat au niveau de la 176 avec une règle qui avait un problème ([#5840](https://github.com/SocialGouv/code-du-travail-numerique/issues/5840)) ([0dd227d](https://github.com/SocialGouv/code-du-travail-numerique/commit/0dd227db2010982594c7f414a34d8145431abcac))
+
 # [4.136.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.135.0...v4.136.0) (2024-05-06)
 
 ### Features
