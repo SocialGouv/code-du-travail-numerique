@@ -159,13 +159,19 @@ const IntegrationContainer = ({
     const iframe = document.getElementById('cdtn-iframe-${id}');
     if (
       source === iframe.contentWindow
-      && data.kind === "click"
+      ${Object.keys(messages).map((key) => `&& data.kind === "${key}"`)}
     ) {
-      ${messages.click.map(
-        ({ name, description }) => `
-      data.name === '${name}' // ${description}`
+      ${Object.keys(messages).map((key) =>
+        messages[key].map(({ name, description, extra }) => {
+          let extraString = "";
+          if (extra) {
+            extraString = Object.entries(extra)
+              .map(([key, value]) => `\n\tdata.extra.${key} // ${value}`)
+              .join();
+          }
+          return `\tdata.name === '${name}' // ${description}${extraString}`;
+        })
       )}
-
     }
   }
 );`}

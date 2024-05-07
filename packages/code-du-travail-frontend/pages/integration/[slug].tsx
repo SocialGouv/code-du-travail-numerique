@@ -23,7 +23,13 @@ const IntegrationPage = (props): JSX.Element => {
       <Metas title={metaTitle} description={metaDescription} />
       <Section>
         <Breadcrumbs
-          items={[{ label: "Integration", slug: "/integration", position: 0 }]}
+          items={[
+            {
+              label: "Intégrer les outils du Code du travail numérique",
+              slug: "/integration",
+              position: 0,
+            },
+          ]}
         />
         <IntegrationContainer
           id={id}
