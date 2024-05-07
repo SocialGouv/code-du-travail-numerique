@@ -18,8 +18,9 @@ import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
 import { informationToSituation } from "../utils";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
-import { ContratTravailStoreSlice } from "../../../IndemniteLicenciement/steps/ContratTravail/store";
+import { ContratTravailStoreSlice } from "../../../CommonIndemniteDepart/steps/ContratTravail/store";
 import * as Sentry from "@sentry/nextjs";
+import { CommonSituationStoreSlice } from "../../../common/situationStore";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -38,7 +39,9 @@ const initialState: CommonInformationsStoreData = {
 
 const createCommonInformationsStore: StoreSlice<
   CommonInformationsStoreSlice,
-  CommonAgreementStoreSlice<PublicodesSimulator> & ContratTravailStoreSlice
+  CommonAgreementStoreSlice<PublicodesSimulator> &
+    ContratTravailStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   informationsData: {
     ...initialState,
@@ -58,10 +61,13 @@ const createCommonInformationsStore: StoreSlice<
               agreement.num,
               isLicenciementInaptitude,
               false
-            ),
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
+            )
           );
-          const missingArgs = result.missingArgs.filter(
+          let resultMissingArgs: MissingArgs[] = [];
+          if (result.type === "missing-args") {
+            resultMissingArgs = result.missingArgs;
+          }
+          const missingArgs = resultMissingArgs.filter(
             (item) => item.rawNode.cdtn
           );
           if (missingArgs.length > 0) {
@@ -111,9 +117,6 @@ const createCommonInformationsStore: StoreSlice<
         get().informationsData.input.publicodesInformations;
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
-      const contractType = get().contratTravailData.input.typeContratTravail;
-      const isDismissalSeriousMisconduct =
-        get().contratTravailData.input.licenciementFauteGrave;
       const questionAnswered = publicodesInformations.find(
         (question) => question.question.rule.nom === key
       );
@@ -145,10 +148,13 @@ const createCommonInformationsStore: StoreSlice<
               isLicenciementInaptitude,
               false,
               rules
-            ),
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
+            )
           );
-          missingArgs = result.missingArgs.filter((item) => item.rawNode.cdtn);
+          let resultMissingArgs: MissingArgs[] = [];
+          if (result.type === "missing-args") {
+            resultMissingArgs = result.missingArgs;
+          }
+          missingArgs = resultMissingArgs.filter((item) => item.rawNode.cdtn);
           const notifBloquante = publicodes.getNotificationsBloquantes();
           if (notifBloquante.length > 0) {
             blockingNotification = notifBloquante[0].description;
@@ -240,12 +246,22 @@ const createCommonInformationsStore: StoreSlice<
     },
     onNextStep: () => {
       const state = get().informationsData.input;
-      const currentError = get().informationsData.error;
       const { isValid, errorState } = validateStep(state);
       let errorEligibility;
 
       if (isValid) {
-        errorEligibility = state.blockingNotification;
+        const publicodes = get().agreementData.publicodes;
+        const situation = {
+          ...get().situationData.situation,
+          ...informationToSituation(
+            get().informationsData.input.publicodesInformations
+          ),
+        };
+        const result = publicodes.calculate(situation);
+        errorEligibility =
+          result.type === "ineligibility"
+            ? result.ineligibility
+            : state.blockingNotification;
       }
 
       set(

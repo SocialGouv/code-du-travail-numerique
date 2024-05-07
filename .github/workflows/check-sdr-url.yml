@@ -20,5 +20,5 @@ jobs:
           echo "{\"text\":\"Une ou plusieurs URLs des services de renseignement ne sont plus valides : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
-        env:
+        with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}

@@ -1,6 +1,6 @@
 import * as Sentry from "@sentry/nextjs";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { Container, Section, theme } from "@socialgouv/cdtn-ui";
+import { Container, theme } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
@@ -15,7 +15,8 @@ import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import {
   AgreementSearch,
-  CalculateurIndemnite,
+  CalculateurIndemniteLicenciement,
+  CalculateurRuptureConventionnelle,
   DismissalProcess,
   DureePreavisDemission,
   DureePreavisLicenciement,
@@ -29,13 +30,14 @@ import {
 const toolsBySlug = {
   "convention-collective": AgreementSearch,
   "heures-recherche-emploi": HeuresRechercheEmploi,
-  "indemnite-licenciement": CalculateurIndemnite,
+  "indemnite-licenciement": CalculateurIndemniteLicenciement,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "preavis-demission": DureePreavisDemission,
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": DureePreavisRetraite,
   "simulateur-embauche": SimulateurEmbauche,
   "procedure-licenciement": DismissalProcess,
+  "indemnite-rupture-conventionnelle": CalculateurRuptureConventionnelle,
 };
 
 export interface Props {
@@ -96,7 +98,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
   const tool = await fetchTool(query.slug as string);
-  if (!tool) {
+  if (
+    !tool ||
+    (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT && !tool.displayTool) // En production, ne pas afficher les outils en displayTool à false
+  ) {
     return {
       notFound: true,
     };

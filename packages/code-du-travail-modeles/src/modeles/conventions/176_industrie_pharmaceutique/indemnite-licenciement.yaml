@@ -565,24 +565,24 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
   valeur:
     le minimum de:
       - somme:
-        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - (-5 an)
+          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+          - (-5 an)
       - 5 an
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 10 et 15 ans:
   valeur:
     le minimum de:
       - somme:
-        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - (-10 an)
+          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+          - (-10 an)
       - 5 an
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier entre 15 et 20 ans:
   valeur:
     le minimum de:
       - somme:
-        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - (-15 an)
+          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+          - (-15 an)
       - 5 an
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . palier plus de 20 ans:
@@ -590,8 +590,8 @@ contrat salarié . convention collective . industrie pharmaceutique . avant aven
     le maximum de:
       - 0 an
       - somme:
-        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - (-20 an)
+          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+          - (-20 an)
 
 contrat salarié . convention collective . industrie pharmaceutique . avant avenant 1er juillet 2019 . moins de 15 ans d'ancienneté:
   applicable si:
@@ -1027,8 +1027,7 @@ contrat salarié . convention collective . industrie pharmaceutique . formule pl
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 22 * Sref
 
-
 contrat salarié . convention collective . industrie pharmaceutique . résultat conventionnel après avenant:
-  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = 0
+  applicable si: après avenant 1er juillet 2019 . indemnité finale > 0
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: après avenant 1er juillet 2019 . indemnité finale

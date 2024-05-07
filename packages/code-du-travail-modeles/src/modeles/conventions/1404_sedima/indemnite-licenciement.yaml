@@ -82,6 +82,10 @@ contrat salarié . convention collective . sedima . cdi opération:
   applicable si: question cdi opération = 'Oui'
   valeur: oui
 
+contrat salarié . convention collective . sedima . cdi opération . résultat légal doit être calculé:
+  remplace: contrat salarié . indemnité de licenciement . résultat légal doit être ignoré
+  valeur: oui
+
 contrat salarié . convention collective . sedima . cdi opération . question mission impossible:
   titre: Licenciement car la mission ne peut pas se réaliser ou un obstacle empêche sa poursuite
   question: Le salarié est-il licencié car la mission prévue ne peut pas se réaliser ou car un obstacle empêche la poursuite de la mission&nbsp;?
@@ -165,7 +169,7 @@ contrat salarié . convention collective . sedima . cdi opération . plus de 6 m
     type: montant
 
 contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . résultat conventionnelle ancienneté au-delà de 2 ans:
-  applicable si: 
+  applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 6 mois

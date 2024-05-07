@@ -47,7 +47,6 @@ exports[`<Accordion /> renders 1`] = `
             >
               <h3
                 class="sc-gEvEer gGoEse"
-                data-testid="undefined-0"
                 style="margin: 0px;"
               >
                 This is the title
@@ -121,7 +120,6 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
             >
               <h3
                 class="sc-gEvEer gGoEse"
-                data-testid="undefined-0"
                 style="margin: 0px;"
               >
                 This is the title
@@ -195,7 +193,6 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
             >
               <h1
                 class="sc-gEvEer gGoEse"
-                data-testid="undefined-0"
                 style="margin: 0px;"
               >
                 This is the title
@@ -269,7 +266,6 @@ exports[`<Accordion /> renders as h2 1`] = `
             >
               <h2
                 class="sc-gEvEer gGoEse"
-                data-testid="undefined-0"
                 style="margin: 0px;"
               >
                 This is the title

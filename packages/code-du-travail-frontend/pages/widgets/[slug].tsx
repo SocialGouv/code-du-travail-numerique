@@ -3,11 +3,13 @@ import { GetServerSideProps } from "next";
 import React from "react";
 import styled from "styled-components";
 import { useIframeResizer } from "../../src/common/hooks";
+import { useRouter } from "next/router";
+
 import { Footer } from "../../src/widgets";
 
 import {
   AgreementSearch,
-  CalculateurIndemnite,
+  CalculateurIndemniteLicenciement,
   DismissalProcess,
   DureePreavisDemission,
   DureePreavisLicenciement,
@@ -22,7 +24,7 @@ const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": DureePreavisRetraite,
   "procedure-licenciement": DismissalProcess,
-  "indemnite-licenciement": CalculateurIndemnite,
+  "indemnite-licenciement": CalculateurIndemniteLicenciement,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "convention-collective": AgreementSearch,
   "preavis-demission": DureePreavisDemission,
@@ -48,6 +50,7 @@ function Widgets({
 }: Props): JSX.Element {
   useIframeResizer();
   const Tool = toolsBySlug[slug];
+  const router = useRouter();
 
   return (
     <>
@@ -63,6 +66,7 @@ function Widgets({
           displayTitle={displayTitle}
           slug={slug}
           widgetMode
+          {...router.query}
         />
         <Footer />
       </StyledContainer>

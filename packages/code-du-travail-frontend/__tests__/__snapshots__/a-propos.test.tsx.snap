@@ -228,7 +228,6 @@ exports[`<About /> should render 1`] = `
             </p>
             <h3
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Pourquoi le Code du travail numérique ?
             </h3>
@@ -247,7 +246,6 @@ exports[`<About /> should render 1`] = `
             </p>
             <h3
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               À qui ce service s’adresse-t-il ?
             </h3>
@@ -263,7 +261,6 @@ exports[`<About /> should render 1`] = `
             </p>
             <h3
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Que peut-on trouver sur le site ?
             </h3>
@@ -301,7 +298,6 @@ exports[`<About /> should render 1`] = `
             </div>
             <h3
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Notre équipe
             </h3>
@@ -338,7 +334,6 @@ exports[`<About /> should render 1`] = `
             </p>
             <h3
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Nos méthodes
             </h3>
@@ -426,7 +421,6 @@ exports[`<About /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
@@ -484,7 +478,6 @@ exports[`<About /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Outils populaires
@@ -522,7 +515,6 @@ exports[`<About /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Modèles populaires
@@ -564,7 +556,6 @@ exports[`<About /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Fiches pratiques populaires
@@ -602,7 +593,6 @@ exports[`<About /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-imwsjW jRsGQu sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Conventions collectives populaires

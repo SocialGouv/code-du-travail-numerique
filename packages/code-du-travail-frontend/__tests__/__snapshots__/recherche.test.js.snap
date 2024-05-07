@@ -187,12 +187,10 @@ exports[`<Recherche /> should render 1`] = `
             <strong
               aria-level="2"
               class="sc-kAyceB kDiAsV"
-              data-testid="heading"
               role="heading"
             >
               <span
                 class="sc-gsFSXq cdZUuw"
-                data-testid="stripe"
               />
               Vous n’avez pas trouvé ce que vous cherchiez ? Essayez …
             </strong>
@@ -279,7 +277,6 @@ exports[`<Recherche /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-hBtRBD bwfYKB sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
@@ -337,7 +334,6 @@ exports[`<Recherche /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-hBtRBD bwfYKB sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Outils populaires
@@ -375,7 +371,6 @@ exports[`<Recherche /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-hBtRBD bwfYKB sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Modèles populaires
@@ -417,7 +412,6 @@ exports[`<Recherche /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-hBtRBD bwfYKB sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Fiches pratiques populaires
@@ -455,7 +449,6 @@ exports[`<Recherche /> should render 1`] = `
                 <strong
                   aria-level="2"
                   class="sc-hBtRBD bwfYKB sc-kAyceB jIzQpS"
-                  data-testid="heading"
                   role="heading"
                 >
                   Conventions collectives populaires

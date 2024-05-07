@@ -29,6 +29,7 @@ export { default as PriorNotice } from "./PriorNotice";
 export { default as Resignation } from "./Resignation";
 export { default as Resources } from "./Resources";
 export { default as Rules } from "./Rules";
+export { default as Rupture } from "./Rupture";
 export { default as Salary } from "./Salary";
 export { default as SearchCc } from "./SearchCc";
 export { default as Security } from "./Security";

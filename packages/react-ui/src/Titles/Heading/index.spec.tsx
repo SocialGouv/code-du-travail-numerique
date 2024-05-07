@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { getByRole, render } from "@testing-library/react";
 import React from "react";
 
 import { Heading } from ".";
@@ -9,28 +9,28 @@ describe("<Heading />", () => {
     expect(container).toBeTruthy();
   });
   it("renders the component with an aria level of 2", () => {
-    const { getByTestId } = render(
+    const { getByRole } = render(
       <Heading id="main" ariaLevel="2">
         Lorem Ipsum
       </Heading>
     );
-    const element = getByTestId("heading");
+    const element = getByRole("heading");
     const ariaLevel = element.getAttribute("aria-level");
     expect(ariaLevel).toBe("2");
   });
 
   it("renders the component if it is first", () => {
-    const { getByTestId } = render(
+    const { getByRole } = render(
       <Heading ariaLevel="2" isFirst>
         Lorem Ipsum
       </Heading>
     );
-    const element = getByTestId("heading");
+    const element = getByRole("heading");
     expect(element).toHaveStyle({ margin: "0px 0px 2rem 0px" });
   });
 
   it("renders the component with a stripe with a shift", () => {
-    const { getByTestId } = render(
+    const { getByRole } = render(
       <Heading
         ariaLevel="2"
         isFirst
@@ -41,23 +41,24 @@ describe("<Heading />", () => {
         Lorem Ipsum
       </Heading>
     );
-    const element = getByTestId("heading");
-    const stripe = getByTestId("stripe");
-    expect(stripe).toBeTruthy();
+    const element = getByRole("heading");
+    const stripe = element.children;
+    expect(stripe).toHaveLength(1);
     expect(element).toHaveStyle({
       "padding-left": "10rem",
     });
   });
 
   it("renders the component with a stripe with default shift", () => {
-    const { getByTestId } = render(
+    const { getByRole } = render(
       <Heading ariaLevel="2" isFirst variant="primary" stripe="left">
         Lorem Ipsum
       </Heading>
     );
-    const element = getByTestId("heading");
-    const stripe = getByTestId("stripe");
-    expect(stripe).toBeTruthy();
+
+    const element = getByRole("heading");
+    const stripe = element.children;
+    expect(stripe).toHaveLength(1);
     expect(element).toHaveStyle({
       "padding-left": "1.6rem",
     });

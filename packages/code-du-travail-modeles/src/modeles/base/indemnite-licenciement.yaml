@@ -65,6 +65,9 @@ contrat salarié . indemnité de licenciement . facteur plus de dix ans:
       facteur: 1 / 3
   unité: €
 
+contrat salarié . indemnité de licenciement . résultat légal doit être ignoré:
+  valeur: non
+
 contrat salarié . indemnité de licenciement . résultat légal:
   variations:
     - si: ancienneté requise en année >= 8 mois

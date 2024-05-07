@@ -1,8 +1,9 @@
-import { CalculateurIndemnite } from "../..";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../..";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 import { render, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { UserAction } from "../../../common";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -19,17 +20,25 @@ Storage.prototype.getItem = jest.fn(
 );
 
 describe(`Tests des erreurs d'éligibilité`, () => {
+  let userAction = new UserAction();
   beforeEach(() => {
-    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
-    fireEvent.click(ui.introduction.startButton.get());
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
+    );
+    userAction.click(ui.introduction.startButton.get());
   });
 
   test("Vérifier l'affichage de l'erreur légal cdd", () => {
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.contract.type.cdd.get());
-    fireEvent.click(ui.next.get());
-    expect(ui.result.legalError.cdd.query()).toBeInTheDocument();
+    userAction
+      .click(ui.contract.type.cdi.get())
+      .click(ui.next.get())
+      .click(ui.contract.type.cdd.get())
+      .click(ui.next.get());
+    expect(ui.result.legalError.cddLicenciement.query()).toBeInTheDocument();
     expect(
       ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
@@ -39,11 +48,12 @@ describe(`Tests des erreurs d'éligibilité`, () => {
   });
 
   test("Vérifier l'affichage de l'erreur légal faute grave", () => {
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.contract.fauteGrave.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.contract.fauteGrave.oui.get());
-    fireEvent.click(ui.next.get());
+    userAction
+      .click(ui.contract.type.cdi.get())
+      .click(ui.contract.fauteGrave.non.get())
+      .click(ui.next.get())
+      .click(ui.contract.fauteGrave.oui.get())
+      .click(ui.next.get());
     expect(
       ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
@@ -53,35 +63,69 @@ describe(`Tests des erreurs d'éligibilité`, () => {
   });
 
   test("Vérifier l'affichage de l'erreur ancienneté < 8 mois", () => {
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.contract.fauteGrave.non.get());
-    fireEvent.click(ui.contract.inaptitude.non.get());
-    fireEvent.click(ui.contract.arretTravail.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.next.get());
-    userEvent.selectOptions(
-      ui.information.agreement16.proCategory.get(),
-      "Ingénieurs et cadres"
-    );
-    fireEvent.click(ui.information.agreement16.proCategoryHasChanged.oui.get());
-    fireEvent.change(ui.information.agreement16.dateProCategoryChanged.get(), {
-      target: { value: "01/01/2010" },
-    });
-    fireEvent.change(ui.information.agreement16.engineerAge.get(), {
-      target: { value: "38" },
-    });
-    fireEvent.click(ui.next.get());
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/09/2021" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
+    userAction
+      .click(ui.contract.type.cdi.get())
+      .click(ui.contract.fauteGrave.non.get())
+      .click(ui.contract.inaptitude.non.get())
+      .click(ui.contract.arretTravail.non.get())
+      .click(ui.next.get())
+      .click(ui.next.get())
+      .changeInputList(
+        ui.information.agreement16.proCategory.get(),
+        "Ingénieurs et cadres"
+      )
+      .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
+      .setInput(
+        ui.information.agreement16.dateProCategoryChanged.get(),
+        "01/01/2010"
+      )
+      .setInput(ui.information.agreement16.engineerAge.get(), "38")
+      .click(ui.next.get())
+      .setInput(ui.seniority.startDate.get(), "01/09/2021")
+      .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
+      .click(ui.seniority.hasAbsence.non.get())
+      .setInput(ui.seniority.endDate.get(), "01/01/2022")
+      .click(ui.next.get());
+    expect(
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
+    ).not.toBeInTheDocument();
+    expect(ui.result.infoWarning.title.ineligible.query()).toBeInTheDocument();
+    expect(ui.result.legalError.seniorityToLow.query()).toBeInTheDocument();
+    expect(
+      ui.result.infoWarning.message.maybeFirmAgreement.query()
+    ).toBeInTheDocument();
+  });
+
+  test("Vérifier l'affichage de l'erreur ancienneté < 8 mois quand on revient changer la date de notification", () => {
+    userAction
+      .click(ui.contract.type.cdi.get())
+      .click(ui.contract.fauteGrave.non.get())
+      .click(ui.contract.inaptitude.non.get())
+      .click(ui.contract.arretTravail.non.get())
+      .click(ui.next.get())
+      .click(ui.next.get())
+      .changeInputList(
+        ui.information.agreement16.proCategory.get(),
+        "Ingénieurs et cadres"
+      )
+      .click(ui.information.agreement16.proCategoryHasChanged.non.get())
+      .setInput(ui.information.agreement16.engineerAge.get(), "38")
+      .click(ui.next.get())
+      .setInput(ui.seniority.startDate.get(), "01/01/2024")
+      .setInput(ui.seniority.notificationDate.get(), "01/10/2024")
+      .setInput(ui.seniority.endDate.get(), "01/12/2024")
+      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.salary.hasPartialTime.non.get())
+      .click(ui.salary.hasSameSalary.oui.get())
+      .setInput(ui.salary.sameSalaryValue.get(), "2000")
+      .click(ui.next.get());
+    expect(ui.activeStep.get()).toHaveTextContent("Indemnité");
+    userAction
+      .click(ui.previous.get())
+      .click(ui.previous.get())
+      .setInput(ui.seniority.notificationDate.get(), "01/08/2024")
+      .click(ui.next.get());
     expect(
       ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();

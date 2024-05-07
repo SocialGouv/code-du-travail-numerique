@@ -16,7 +16,6 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   </header>
   <h2
     class="sc-kAyceB dvmaTz"
-    data-testid="heading"
   >
     Contact téléphonique
   </h2>
@@ -40,7 +39,6 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   </a>
   <h2
     class="sc-kAyceB dvmaTz"
-    data-testid="heading"
   >
     Contact par email et prise de rendez-vous
   </h2>

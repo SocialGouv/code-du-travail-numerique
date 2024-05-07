@@ -63,7 +63,7 @@ exports[`<InputDate /> should render input date field 1`] = `
         </svg>
       </div>
       <input
-        aria-disabled="false"
+        aria-disabled="true"
         class="sc-imWYAI NArQa"
         max="2100-01-01"
         min="1900-01-01"

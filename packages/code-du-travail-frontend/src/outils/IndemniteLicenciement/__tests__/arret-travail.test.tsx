@@ -1,14 +1,14 @@
 import { fireEvent, render } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import userEvent from "@testing-library/user-event";
 import { byText } from "testing-library-selector";
 
 describe("Arrêt de travail", () => {
   describe("Page contrat de travail: vérification des questions affichées", () => {
     beforeEach(async () => {
-      render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+      render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
@@ -81,7 +81,7 @@ describe("Arrêt de travail", () => {
 
   describe("Page salaires: vérification de la liste affichée", () => {
     beforeEach(async () => {
-      render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+      render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
     });
 
     test("should display with the good number of months at the 'Salaires' step if no inaptitude", async () => {
