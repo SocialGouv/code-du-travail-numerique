@@ -11,8 +11,6 @@ export const getDateNotificationErrors = (
   const dNotification = parse(state.dateNotification);
   let errors: AncienneteStoreError = {};
 
-  console.log(`La date de notification est ${state.dateNotification}`);
-
   // Date de notification
   if (!state.dateNotification) {
     errors.errorDateNotification = "Veuillez saisir cette date";

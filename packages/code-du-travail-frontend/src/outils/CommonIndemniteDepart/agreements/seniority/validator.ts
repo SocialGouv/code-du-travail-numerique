@@ -16,7 +16,6 @@ export const customSeniorityValidator = (
   if (agreeement) {
     idcc = getSupportedAgreement(agreeement.num);
   }
-  console.log("Validateur de la séniorité");
   switch (idcc) {
     case SupportedCc.IDCC1517:
       return validateStep1517(state, stateContratTravail, information);

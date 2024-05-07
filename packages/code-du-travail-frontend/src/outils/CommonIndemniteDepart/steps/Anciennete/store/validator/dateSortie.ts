@@ -11,8 +11,6 @@ export const getDateSortieErrors = (
   const dSortie = parse(state.dateSortie);
   let errors: AncienneteStoreError = {};
 
-  console.log(`La date de sortie est ${state.dateNotification}`);
-
   if (!state.dateSortie) {
     errors.errorDateSortie = "Veuillez saisir cette date";
   } else if (
