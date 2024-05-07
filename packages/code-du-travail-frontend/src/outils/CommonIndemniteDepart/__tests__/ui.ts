@@ -456,7 +456,7 @@ export const ui = {
         /L’indemnité de licenciement ne concerne pas les salariés en CDD et en contrat de travail temporaire/
       ),
       cddRupture: byText(
-        /La rupture conventionnelle ne concerne pas les salariés en CDD ou en contrat de travail temporaire/
+        /La rupture conventionnelle ne concerne pas les salariés en CDD ou en contrat d'intérim/
       ),
       fauteGrave: byText(
         /L’indemnité de licenciement n’est pas due en cas de faute grave/
