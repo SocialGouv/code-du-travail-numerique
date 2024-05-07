@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { InvalidQueryError } from "../../utils";
 import { fetchEnterprises, populateAgreements } from "./service";
 import { ApiEnterpriseData } from "./types";
+import { ErrorResponse } from "../../types";
 
 export class EnterprisesController {
   private req: NextApiRequest;

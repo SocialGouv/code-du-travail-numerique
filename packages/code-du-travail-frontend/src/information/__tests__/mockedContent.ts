@@ -1,10 +1,10 @@
 import {
   EditorialContentType,
   EditorialContentBlockDisplayMode,
-  EditorialContentContent,
+  EditorialContentBaseContentPart,
 } from "@socialgouv/cdtn-types";
 
-export const mockedContents: EditorialContentContent[] = [
+export const mockedContents: EditorialContentBaseContentPart[] = [
   {
     name: "tab1",
     title: "Tab1",

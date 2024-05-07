@@ -29,6 +29,7 @@ function ConventionCollective(props: Props): JSX.Element {
           {
             label: "Conventions collectives",
             slug: `/outils/${getRouteBySource(SOURCES.CCN)}`,
+            position: 0,
           },
         ]}
         date={

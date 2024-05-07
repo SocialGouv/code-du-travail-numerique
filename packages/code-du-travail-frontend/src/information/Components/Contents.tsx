@@ -1,7 +1,7 @@
 import { theme, Tabs, Accordion, Heading, Section } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import {
-  EditorialContentContent,
+  EditorialContentBaseContentPart,
   EditorialSectionDisplayMode,
 } from "@socialgouv/cdtn-types";
 
@@ -13,7 +13,7 @@ import References from "../../common/References";
 const { breakpoints, spacings } = theme;
 
 type ContentsParameters = {
-  contents?: EditorialContentContent[];
+  contents?: EditorialContentBaseContentPart[];
   dismissalProcess: boolean;
   sectionDisplayMode?: EditorialSectionDisplayMode;
   anchor: string;

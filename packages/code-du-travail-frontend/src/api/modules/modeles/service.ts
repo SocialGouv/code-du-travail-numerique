@@ -1,4 +1,4 @@
-import { ElasticSearchItem } from "@socialgouv/cdtn-types";
+import { ElasticSearchItem } from "../../types";
 import {
   elasticsearchClient,
   elasticDocumentsIndex,

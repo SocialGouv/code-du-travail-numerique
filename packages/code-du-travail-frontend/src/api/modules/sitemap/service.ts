@@ -1,8 +1,7 @@
 import {
-  Agreement,
-  ElasticSearchItem,
   Tool,
   EditorialContent,
+  ElasticAgreement,
 } from "@socialgouv/cdtn-types";
 import { getAllAgreements } from "../agreements";
 import { getAllContributionsGroupByQuestion } from "../contributions";
@@ -10,6 +9,7 @@ import { getAllModeles } from "../modeles";
 import { getAllThemesAndSubThemes } from "../themes";
 import { getAllTools } from "../tools";
 import { getAllInformations } from "../informations";
+import { ElasticSearchItem } from "../../types";
 
 type Information = Pick<EditorialContent, "slug" | "title">;
 
@@ -21,7 +21,7 @@ export type GetSitemapPage = {
     generic: ElasticSearchItem;
     agreements: ElasticSearchItem[];
   }[];
-  agreements: Agreement[];
+  agreements: ElasticAgreement[];
   informations: Information[];
 };
 

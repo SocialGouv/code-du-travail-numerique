@@ -22,7 +22,9 @@ const IntegrationPage = (props): JSX.Element => {
     <Layout>
       <Metas title={metaTitle} description={metaDescription} />
       <Section>
-        <Breadcrumbs items={[{ label: "Integration", slug: "/integration" }]} />
+        <Breadcrumbs
+          items={[{ label: "Integration", slug: "/integration", position: 0 }]}
+        />
         <IntegrationContainer
           id={id}
           description={description}

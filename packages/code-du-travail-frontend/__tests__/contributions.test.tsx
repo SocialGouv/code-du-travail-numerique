@@ -2,16 +2,16 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import PageContribution from "../pages/contribution/[slug]";
-import { ElasticSearchContribution } from "@socialgouv/cdtn-types";
 
-const contribution: ElasticSearchContribution = {
+const contribution = {
   source: "contributions",
   linkedContent: [],
   references: [],
   idcc: "",
   ccnShortTitle: "Métallurgie",
   title: "La période d’essai peut-elle être renouvelée ?",
-};
+  breadcrumbs: [],
+} as any;
 describe("<PageContribution />", () => {
   it("should render title with cc name in it", () => {
     const { getByRole } = render(
@@ -40,7 +40,7 @@ describe("<PageContribution />", () => {
       idcc: "",
       ccnShortTitle: "Métallurgie",
       title: "La période d’essai peut-elle être renouvelée ?",
-    };
+    } as any;
     const { getByRole } = render(
       <PageContribution contribution={contribution} />
     );

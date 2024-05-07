@@ -6,7 +6,7 @@ import ModelesDeCourriers from "../pages/modeles-de-courriers/[slug]";
 describe("<ModelesDeCourrier />", () => {
   it("should render", () => {
     const data = {
-      breadcrumbs: [{ label: "theme", slug: "/themes/theme" }],
+      breadcrumbs: [{ label: "theme", slug: "/themes/theme", position: 1 }],
       date: "01/01/2020",
       description: "un description",
       metaDescription: "un description",

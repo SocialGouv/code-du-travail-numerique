@@ -10,7 +10,6 @@ const mockedProps: EditorialContentDataWrapper = {
   information: {
     _source: {
       breadcrumbs: [],
-      contents: [],
       slug: "",
     },
   },

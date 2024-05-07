@@ -1,5 +1,5 @@
 import {
-  EditorialContentContent,
+  EditorialContentBaseContentPart,
   EditorialContentType,
 } from "@socialgouv/cdtn-types";
 import React from "react";
@@ -10,7 +10,7 @@ import { ContentList } from "../../content";
 
 export const BlockList = ({
   blocks,
-}: Omit<EditorialContentContent, "title" | "references">) => {
+}: Omit<EditorialContentBaseContentPart, "title" | "references">) => {
   return (
     <>
       {blocks.map((block, index: number) => {

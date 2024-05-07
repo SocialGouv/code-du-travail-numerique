@@ -18,3 +18,7 @@ export type ElasticSearchItem<T = void> = {
   slug: string;
   breadcrumbs: Breadcrumb[];
 } & T;
+
+export type ErrorResponse = {
+  message: string;
+};

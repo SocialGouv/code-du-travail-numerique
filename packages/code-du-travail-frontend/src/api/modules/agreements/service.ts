@@ -10,12 +10,14 @@ import {
   getAllAgreementsWithContributions,
 } from "./queries";
 import { ElasticSearchItem, SearchResponse } from "../../types";
-import { Agreement } from "../../../outils/types";
+import { ElasticAgreement } from "@socialgouv/cdtn-types";
 
-export const getAllAgreements = async (): Promise<Agreement[]> => {
+export const getAllAgreements = async (): Promise<ElasticAgreement[]> => {
   const body = getAllAgreementsWithContributions();
 
-  const response = await elasticsearchClient.search<SearchResponse<Agreement>>({
+  const response = await elasticsearchClient.search<
+    SearchResponse<ElasticAgreement>
+  >({
     body,
     index: elasticDocumentsIndex,
   });
