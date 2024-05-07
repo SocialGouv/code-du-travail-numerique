@@ -136,11 +136,6 @@ const createResultStore: StoreSlice<
       );
 
       try {
-        console.log(
-          `Les informations de l'ancienneté sont ${JSON.stringify(
-            get().ancienneteData.input
-          )}`
-        );
         const situation = {
           ...mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
             agreement?.num,
@@ -179,8 +174,26 @@ const createResultStore: StoreSlice<
         }
       } catch (e) {
         errorPublicodes = true;
-        Sentry.captureException(e);
+        console.error(
+          `Les informations de l'ancienneté sont ${JSON.stringify(
+            get().ancienneteData.input
+          )}`
+        );
+        console.error(
+          `Les informations liées aux salaires sont ${JSON.stringify(
+            get().salairesData.input
+          )}`
+        );
+        console.error(
+          `Les informations liées au contrat de travail sont ${JSON.stringify(
+            get().contratTravailData.input
+          )}`
+        );
+        console.error(
+          `Les informations issues de publicodes sont ${JSON.stringify(infos)}`
+        );
         console.error(e);
+        Sentry.captureException(e);
       }
 
       if (
