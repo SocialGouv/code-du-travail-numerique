@@ -1,7 +1,3 @@
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
-
 const ContentSecurityPolicy = `
 default-src 'self' *.travail.gouv.fr *.data.gouv.fr *.fabrique.social.gouv.fr;
 img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr https://www.service-public.fr https://cdtn-prod-public.s3.gra.io.cloud.ovh.net;
@@ -92,6 +88,4 @@ const moduleExports = {
   },
 };
 
-module.exports = withBundleAnalyzer(
-  withSentryConfig(moduleExports, sentryConfig)
-);
+module.exports = withSentryConfig(moduleExports, sentryConfig);
