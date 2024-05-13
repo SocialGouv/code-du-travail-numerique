@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.136.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.0...v4.136.1) (2024-05-07)
+
+### Bug Fixes
+
+- **anchor:** affichage de l'ancre au niveau de l'accordéon sur les `fiches-ministère-travail` ([#5831](https://github.com/SocialGouv/code-du-travail-numerique/issues/5831)) ([0bf84f4](https://github.com/SocialGouv/code-du-travail-numerique/commit/0bf84f40fbe4f7e5645d4312e5a95c76a6e91fd1))
+
 # [4.136.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.135.0...v4.136.0) (2024-05-06)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui

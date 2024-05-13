@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.136.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.0...v4.136.1) (2024-05-07)
+
+### Bug Fixes
+
+- **anchor:** affichage de l'ancre au niveau de l'accordéon sur les `fiches-ministère-travail` ([#5831](https://github.com/SocialGouv/code-du-travail-numerique/issues/5831)) ([0bf84f4](https://github.com/SocialGouv/code-du-travail-numerique/commit/0bf84f40fbe4f7e5645d4312e5a95c76a6e91fd1))
+- **e2e:** modification du test e2e integration afin d'enlever les failure aléatoires ([#5847](https://github.com/SocialGouv/code-du-travail-numerique/issues/5847)) ([7e5ad15](https://github.com/SocialGouv/code-du-travail-numerique/commit/7e5ad150606335b7ef5d9bf39367f9f23cd55913))
+- **indemnite-licenciement:** ajout de log à l'étape résultat ([#5857](https://github.com/SocialGouv/code-du-travail-numerique/issues/5857)) ([22b49c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/22b49c873490f9e8fb3ac8e41f5b06d13fc6437d))
+- **rupture-co:** changement de wording au niveau du résultat ([#5841](https://github.com/SocialGouv/code-du-travail-numerique/issues/5841)) ([059572e](https://github.com/SocialGouv/code-du-travail-numerique/commit/059572e62c1b90c0f5da15545bbc8ee3f69564e7))
+- **rupture-co:** inéligibilité activée même si l'utilisateur clique CDI en premier ([#5845](https://github.com/SocialGouv/code-du-travail-numerique/issues/5845)) ([3ac0802](https://github.com/SocialGouv/code-du-travail-numerique/commit/3ac08020a6980c494f39e9180b52952e3a70dd91))
+
 # [4.136.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.135.0...v4.136.0) (2024-05-06)
 
 ### Bug Fixes
