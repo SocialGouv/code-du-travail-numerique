@@ -135,24 +135,25 @@ const createResultStore: StoreSlice<
         get().informationsData.input.publicodesInformations
       );
 
+      const situation = {
+        ...mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
+          agreement?.num,
+          get().salairesData.input.salaryPeriods,
+          get().ancienneteData.input.dateNotification!,
+          get().ancienneteData.input.dateEntree!,
+          get().ancienneteData.input.dateSortie!,
+          get().contratTravailData.input.licenciementInaptitude === "oui",
+          get().contratTravailData.input.arretTravail === "oui",
+          { ...infos }
+        ),
+        absencePeriods:
+          absencePeriods && absencePeriods.length
+            ? JSON.stringify(absencePeriods)
+            : undefined,
+        ...get().situationData.situation,
+      };
+
       try {
-        const situation = {
-          ...mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
-            agreement?.num,
-            get().salairesData.input.salaryPeriods,
-            get().ancienneteData.input.dateNotification!,
-            get().ancienneteData.input.dateEntree!,
-            get().ancienneteData.input.dateSortie!,
-            get().contratTravailData.input.licenciementInaptitude === "oui",
-            get().contratTravailData.input.arretTravail === "oui",
-            { ...infos }
-          ),
-          absencePeriods:
-            absencePeriods && absencePeriods.length
-              ? JSON.stringify(absencePeriods)
-              : undefined,
-          ...get().situationData.situation,
-        };
         const result = publicodes.calculate(situation);
         if (result.type !== "result") {
           throw new Error(
@@ -174,6 +175,7 @@ const createResultStore: StoreSlice<
         }
       } catch (e) {
         errorPublicodes = true;
+        console.error(`La situation est ${JSON.stringify(situation)}`);
         console.error(
           `Les informations de l'ancienneté sont ${JSON.stringify(
             get().ancienneteData.input
@@ -192,7 +194,7 @@ const createResultStore: StoreSlice<
         console.error(
           `Les informations issues de publicodes sont ${JSON.stringify(infos)}`
         );
-        console.error(e);
+        console.error(`L'erreur remontée est : ${JSON.stringify(e)}`);
         Sentry.captureException(e);
       }
 
