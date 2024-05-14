@@ -16,7 +16,7 @@ import {
 import { pushAgreementEvents } from "../../../common/Agreement";
 import { AgreementRoute } from "../../../common/type/WizardType";
 import { isCcFullySupportedIndemniteLicenciement } from "../../../CommonIndemniteDepart/common";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../../types";
 
 const initialState: Omit<
   CommonAgreementStoreData<PublicodesSimulator>,

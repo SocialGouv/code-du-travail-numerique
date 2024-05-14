@@ -1,9 +1,4 @@
 import {
-  Agreement,
-  ElasticSearchItem,
-  SearchResponse,
-} from "@socialgouv/cdtn-utils";
-import {
   elasticDocumentsIndex,
   elasticsearchClient,
   NotFoundError,
@@ -14,11 +9,15 @@ import {
   getAgreementsBySlugs,
   getAllAgreementsWithContributions,
 } from "./queries";
+import { ElasticSearchItem, SearchResponse } from "../../types";
+import { ElasticAgreement } from "@socialgouv/cdtn-types";
 
-export const getAllAgreements = async (): Promise<Agreement[]> => {
+export const getAllAgreements = async (): Promise<ElasticAgreement[]> => {
   const body = getAllAgreementsWithContributions();
 
-  const response = await elasticsearchClient.search<SearchResponse<Agreement>>({
+  const response = await elasticsearchClient.search<
+    SearchResponse<ElasticAgreement>
+  >({
     body,
     index: elasticDocumentsIndex,
   });

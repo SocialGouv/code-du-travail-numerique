@@ -2,7 +2,7 @@ import { Container, icons, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-import { Breadcrumb } from "@socialgouv/cdtn-utils";
+import { Breadcrumb } from "@socialgouv/cdtn-types";
 
 const { ArrowRight, Home: HomeIcon } = icons;
 

@@ -10,7 +10,8 @@ const contribution = {
   idcc: "",
   ccnShortTitle: "Métallurgie",
   title: "La période d’essai peut-elle être renouvelée ?",
-};
+  breadcrumbs: [],
+} as any;
 describe("<PageContribution />", () => {
   it("should render title with cc name in it", () => {
     const { getByRole } = render(
@@ -39,7 +40,7 @@ describe("<PageContribution />", () => {
       idcc: "",
       ccnShortTitle: "Métallurgie",
       title: "La période d’essai peut-elle être renouvelée ?",
-    };
+    } as any;
     const { getByRole } = render(
       <PageContribution contribution={contribution} />
     );

@@ -2108,6 +2108,7 @@ __metadata:
     "@sentry/nextjs": ^7.114.0
     "@socialgouv/cdtn-elasticsearch": ^2.5.2
     "@socialgouv/cdtn-logger": ^2.0.0
+    "@socialgouv/cdtn-types": ^2.42.3
     "@socialgouv/cdtn-ui": "workspace:^"
     "@socialgouv/cdtn-utils": "workspace:^"
     "@socialgouv/fiches-travail-data": ^4.241.0
@@ -5123,6 +5124,13 @@ __metadata:
   dependencies:
     "@types/jest": ^27.0.1
   checksum: aa4bd06341fddff772082ffe2f8c533691db18a931cc521786a8a8bd004861952de611ab9fbfeedec1556ae6def4e0a7329b55fe5e65f7ce73ec2a9ae7adc9f9
+  languageName: node
+  linkType: hard
+
+"@socialgouv/cdtn-types@npm:^2.42.3":
+  version: 2.42.3
+  resolution: "@socialgouv/cdtn-types@npm:2.42.3"
+  checksum: cf7f45610ad51e8286114d53c9c6455aed40b69bd326e67f9056e65e30225785ea5aa764a28c421180209d0444975618074469c2fdf4e98e52fbd0ab14705f91
   languageName: node
   linkType: hard
 

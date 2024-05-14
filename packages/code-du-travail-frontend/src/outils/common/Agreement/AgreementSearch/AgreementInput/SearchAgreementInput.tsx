@@ -12,7 +12,7 @@ import {
   UserAction,
 } from "../../../../ConventionCollective/types";
 import { AgreementNoResult } from "../AgreementNoResult";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../../../../outils/types";
 
 type Props = {
   onSelectAgreement: (agreement: Agreement) => void;

@@ -1,7 +1,4 @@
-import {
-  Agreement,
-  ElasticSearchContributionGeneric,
-} from "@socialgouv/cdtn-utils";
+import { ElasticSearchContributionGeneric } from "@socialgouv/cdtn-types";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { push as matopush } from "@socialgouv/matomo-next";
@@ -42,6 +39,8 @@ import {
   AlertAgreementUnextended,
 } from "./AlertAgreementNotSupportedNoContent";
 import { Alert } from "../common/Alert";
+import { Agreement } from "../outils/types";
+import { SupportedTypes } from "@socialgouv/modeles-social";
 
 const { DirectionRight } = icons;
 
@@ -77,7 +76,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
     .map((c) => {
       return {
         idcc: parseInt(c, 10),
-        fullySupported: true,
+        fullySupported: SupportedTypes.FULLY_SUPPORTED,
       };
     })
     .filter(({ idcc }) => !ccUnextended || !ccUnextended.includes(idcc));
@@ -129,6 +128,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
     if (isUnextended(convention)) {
       return <AlertAgreementUnextended url={url} />;
     } else if (contribution.type === "generic-no-cdt") {
+      contribution.messageBlock;
       return (
         <AlertAgreementNotSupportedNoContent
           url={url}

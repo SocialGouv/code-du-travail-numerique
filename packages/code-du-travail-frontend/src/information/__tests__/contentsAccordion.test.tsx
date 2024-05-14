@@ -1,7 +1,10 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { Contents } from "../Components";
 import { ui } from "./ui";
-import { ContentType, SectionDisplayMode } from "@socialgouv/cdtn-utils";
+import {
+  EditorialContentType,
+  EditorialSectionDisplayMode,
+} from "@socialgouv/cdtn-types";
 
 jest.mock("../htmlProcess.service");
 
@@ -11,14 +14,14 @@ describe("Information Contents", () => {
       <Contents
         anchor={""}
         dismissalProcess={false}
-        sectionDisplayMode={SectionDisplayMode.accordion}
+        sectionDisplayMode={EditorialSectionDisplayMode.accordion}
         contents={[
           {
             name: "accordion1",
             title: "Accordion1",
             blocks: [
               {
-                type: ContentType.markdown,
+                type: EditorialContentType.markdown,
                 markdown: "myText1",
                 html: "myText1",
               },
@@ -50,7 +53,7 @@ describe("Information Contents", () => {
             title: "Accordion2",
             blocks: [
               {
-                type: ContentType.markdown,
+                type: EditorialContentType.markdown,
                 markdown: "myText2",
                 html: "myText2",
               },

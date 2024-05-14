@@ -1,7 +1,8 @@
-import { Agreement, ElasticSearchItem } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getAllGenericsContributions, getContributionsByIds } from "./queries";
 import { fetchAllContributions } from "./fetch";
+import { ElasticSearchItem } from "../../types";
+import { ElasticAgreement } from "@socialgouv/cdtn-types";
 
 export const getGenericContributionsGroupByThemes = async () => {
   const body = getAllGenericsContributions();
@@ -21,7 +22,7 @@ export const getGenericContributionsGroupByThemes = async () => {
 
 const isGeneric = (contrib) => contrib.idcc === "0000";
 
-function getTitle(agreements: Agreement[], contrib) {
+function getTitle(agreements: ElasticAgreement[], contrib) {
   const idcc = contrib.idcc ?? contrib.slug.split("-")[0];
   const agreement = agreements.find((a) => a.num === parseInt(idcc));
   return agreement
@@ -30,7 +31,7 @@ function getTitle(agreements: Agreement[], contrib) {
 }
 
 export const getAllContributionsGroupByQuestion = async (
-  agreements: Agreement[]
+  agreements: ElasticAgreement[]
 ) => {
   const response = await fetchAllContributions();
   const all = response.body.hits.hits.map(({ _source }) => _source);

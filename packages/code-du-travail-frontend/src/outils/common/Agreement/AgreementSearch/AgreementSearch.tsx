@@ -8,7 +8,6 @@ import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 
-import { Agreement } from "@socialgouv/cdtn-utils";
 import { TrackingProps } from "../../../ConventionCollective/types";
 import { ErrorField } from "../../ErrorField";
 import { Question } from "../../Question";
@@ -17,6 +16,7 @@ import { AGREEMENT_NAME } from "../form-constants";
 import ShowAlert from "../components/ShowAlert";
 import { AgreementSupportInfo } from "../types";
 import { SearchAgreementInput } from "./AgreementInput/SearchAgreementInput";
+import { Agreement } from "../../../types";
 
 export type Props = {
   supportedAgreements: AgreementSupportInfo[];

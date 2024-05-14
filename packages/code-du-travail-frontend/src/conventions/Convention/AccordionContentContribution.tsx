@@ -1,11 +1,11 @@
-import { ElasticSearchConventionCollective } from "@socialgouv/cdtn-utils";
+import { ElasticSearchContributionWithInfoMessage } from "@socialgouv/cdtn-types";
 import { ContributionContent } from "../../contributions/ContributionContent";
 import { ReferencesJuridiques } from "../../contributions/References";
 import { ContributionMessageBlock } from "../../contributions/ContributionMessageBlock";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 
 export function AccordionContentContribution(
-  contribution: ElasticSearchConventionCollective
+  contribution: ElasticSearchContributionWithInfoMessage
 ) {
   const unextendedCC = ["0029", "0413", "2420"];
   const isUnextendedCC = unextendedCC.includes(contribution.idcc);
