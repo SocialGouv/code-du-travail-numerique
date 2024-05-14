@@ -2,6 +2,8 @@ import { Container, Section, theme, Title } from "@socialgouv/cdtn-ui";
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
+import servicePublic from "../../public/static/assets/img/logo_sp_hd_rvb.png";
+import ministere from "../../public/static/assets/img/ministere_logo.png";
 
 export function Partners() {
   return (
@@ -17,10 +19,8 @@ export function Partners() {
             className="no-after"
           >
             <Image
-              src="/static/assets/img/logo_sp_hd_rvb@2x.png"
+              src={servicePublic}
               alt="service-public.fr, le site officiel de l'administration française"
-              width="297"
-              height="63"
             />
           </Link>
           <Link
@@ -30,9 +30,7 @@ export function Partners() {
           >
             <Image
               alt="le site du ministere du travail, de l'emploi et de l'insertion"
-              src="/static/assets/img/ministere_logo.png"
-              width="170"
-              height="141"
+              src={ministere}
             />
           </Link>
           <Link
