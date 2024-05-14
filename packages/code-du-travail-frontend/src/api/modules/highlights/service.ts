@@ -13,7 +13,7 @@ export const getBySlugHighlights = async (slug: string) => {
     index: elasticDocumentsIndex,
   });
 
-  if (response.body.hits.hits.length === 0) {
+  if (response.hits.hits.length === 0) {
     throw new NotFoundError({
       message: `There is no highlight that match ${slug}`,
       name: "HIGHLIGHT_NOT_FOUND",
@@ -21,5 +21,5 @@ export const getBySlugHighlights = async (slug: string) => {
     });
   }
 
-  return response.body.hits.hits[0]._source.refs;
+  return response.hits.hits[0]._source.refs;
 };

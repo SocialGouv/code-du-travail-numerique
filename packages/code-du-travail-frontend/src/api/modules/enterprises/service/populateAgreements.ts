@@ -20,7 +20,7 @@ export const populateAgreements = async (
         }
         return [idcc];
       });
-      const { body } = await fetchAgreements(idccList);
+      const body = await fetchAgreements(idccList);
 
       const conventionsWithDuplicates = idccList.map((num: number) => {
         const foundHandledIdcc = body.hits.hits.find(

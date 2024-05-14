@@ -13,6 +13,6 @@ export const getIdccByQuery = async (query: string) => {
     body,
     index: elasticDocumentsIndex,
   });
-  const { took, ...rest } = response.body;
+  const { took, ...rest } = response;
   return { ...rest };
 };

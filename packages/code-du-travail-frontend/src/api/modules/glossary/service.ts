@@ -14,14 +14,14 @@ async function getGlossaryData() {
     index: elasticDocumentsIndex,
   });
 
-  if (response.body.hits.total.value === 0) {
+  if (response.hits.total.value === 0) {
     throw new NotFoundError({
       message: `There is no glossary data`,
       cause: null,
       name: "GLOSSARY_NOT_FOUND",
     });
   }
-  const glossaryData = response.body.hits.hits[0]._source.data;
+  const glossaryData = response.hits.hits[0]._source.data;
 
   return glossaryData;
 }

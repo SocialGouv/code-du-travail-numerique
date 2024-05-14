@@ -10,7 +10,7 @@ export const getSuggestions = async (q: string, size = 5) => {
       body,
       index: elasticSuggestionsIndex,
     });
-    return response.body.hits.hits.map((t) => t._source.title);
+    return response.hits.hits.map((t) => t._source.title);
   } else {
     return [];
   }

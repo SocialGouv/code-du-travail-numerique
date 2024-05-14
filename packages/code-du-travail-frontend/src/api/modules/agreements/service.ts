@@ -22,9 +22,7 @@ export const getAllAgreements = async (): Promise<ElasticAgreement[]> => {
     index: elasticDocumentsIndex,
   });
 
-  return response.body.hits.hits
-    .map(({ _source }) => _source)
-    .sort(orderByAlpha);
+  return response.hits.hits.map(({ _source }) => _source).sort(orderByAlpha);
 };
 
 export const getBySlugsAgreements = async (
@@ -35,8 +33,8 @@ export const getBySlugsAgreements = async (
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.total.value > 0
-    ? response.body.hits.hits.map(({ _source }) => _source)
+  return response.hits.total.value > 0
+    ? response.hits.hits.map(({ _source }) => _source)
     : [];
 };
 
@@ -48,8 +46,8 @@ export const getByIdsAgreements = async (
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.total.value > 0
-    ? response.body.hits.hits.map(({ _source }) => _source)
+  return response.hits.total.value > 0
+    ? response.hits.hits.map(({ _source }) => _source)
     : [];
 };
 
@@ -60,7 +58,7 @@ export const getBySlugAgreements = async (slug: string) => {
     body,
     index: elasticDocumentsIndex,
   });
-  if (response.body.hits.total.value === 0) {
+  if (response.hits.total.value === 0) {
     throw new NotFoundError({
       message: `Agreement not found, no agreement match ${slug}y`,
       name: "AGREEMENT_NOT_FOUND",
@@ -68,7 +66,7 @@ export const getBySlugAgreements = async (slug: string) => {
     });
   }
 
-  return { ...response.body.hits.hits[0]._source };
+  return { ...response.hits.hits[0]._source };
 };
 
 const orderByAlpha = (a, b) => {

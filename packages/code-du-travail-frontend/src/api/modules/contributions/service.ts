@@ -11,7 +11,7 @@ export const getGenericContributionsGroupByThemes = async () => {
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.hits
+  return response.hits.hits
     .map(({ _source }) => _source)
     .map((contrib) => {
       contrib.theme = contrib.breadcrumbs[0].label;
@@ -34,7 +34,7 @@ export const getAllContributionsGroupByQuestion = async (
   agreements: ElasticAgreement[]
 ) => {
   const response = await fetchAllContributions();
-  const all = response.body.hits.hits.map(({ _source }) => _source);
+  const all = response.hits.hits.map(({ _source }) => _source);
   const allGenerics = all
     .filter(isGeneric)
     .sort((a, b) => a.title.localeCompare(b.title));
@@ -63,8 +63,8 @@ export const getByIdsContributions = async (
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.total.value > 0
-    ? response.body.hits.hits.map(({ _source }) => _source)
+  return response.hits.total.value > 0
+    ? response.hits.hits.map(({ _source }) => _source)
     : [];
 };
 

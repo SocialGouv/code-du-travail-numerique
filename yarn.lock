@@ -2102,7 +2102,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cdt/frontend@workspace:packages/code-du-travail-frontend"
   dependencies:
-    "@elastic/elasticsearch": 7
+    "@elastic/elasticsearch": ^8.13.1
     "@matejmazur/react-katex": ^3.1.3
     "@next/bundle-analyzer": ^13.0.0
     "@sentry/nextjs": ^7.114.0
@@ -2255,15 +2255,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@elastic/elasticsearch@npm:7":
-  version: 7.17.0
-  resolution: "@elastic/elasticsearch@npm:7.17.0"
+"@elastic/elasticsearch@npm:^8.13.1":
+  version: 8.13.1
+  resolution: "@elastic/elasticsearch@npm:8.13.1"
   dependencies:
-    debug: ^4.3.1
-    hpagent: ^0.1.1
+    "@elastic/transport": ~8.4.1
+    tslib: ^2.4.0
+  checksum: d7d594ed6afc0f98e138c2cbd382a9cdd92f9309d91d49dbd215d4c251f396d40ff0a449078e7e224231a18fc98301ff907955645aeb9d2e9a526d6d3bdef77c
+  languageName: node
+  linkType: hard
+
+"@elastic/transport@npm:~8.4.1":
+  version: 8.4.1
+  resolution: "@elastic/transport@npm:8.4.1"
+  dependencies:
+    debug: ^4.3.4
+    hpagent: ^1.0.0
     ms: ^2.1.3
     secure-json-parse: ^2.4.0
-  checksum: 08113bcb14203c5700e6575cb720aa32f5573a1776e13b78bf101ffeae46308c3664b94f16f7e2c5ec26e14c459d8d1491e234940e635cddfe3ee61a52fb51f9
+    tslib: ^2.4.0
+    undici: ^5.22.1
+  checksum: b75c5ef7e92d5fced4eb0a7d517b3f831a4b4a0f2d79792881152ed714b5b4be7146d1293c82e8d796f56e19b6cd0180d5ae1322336618d0d823daecbff4eb53
   languageName: node
   linkType: hard
 
@@ -2677,6 +2689,13 @@ __metadata:
   version: 2.1.2
   resolution: "@fal-works/esbuild-plugin-global-externals@npm:2.1.2"
   checksum: c59715902b9062aa7ff38973f298b509499fd146dbf564dc338b3f9e896da5bffb4ca676c27587fde79b3586003e24d65960acb62f009bca43dca34c76f8cbf7
+  languageName: node
+  linkType: hard
+
+"@fastify/busboy@npm:^2.0.0":
+  version: 2.1.1
+  resolution: "@fastify/busboy@npm:2.1.1"
+  checksum: 42c32ef75e906c9a4809c1e1930a5ca6d4ddc8d138e1a8c8ba5ea07f997db32210617d23b2e4a85fe376316a41a1a0439fc6ff2dedf5126d96f45a9d80754fb2
   languageName: node
   linkType: hard
 
@@ -14168,10 +14187,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hpagent@npm:^0.1.1":
-  version: 0.1.2
-  resolution: "hpagent@npm:0.1.2"
-  checksum: 1918518ab937d9fa615a47b94489e23662547bc1edf27069ee9bf40bfefb94da65eb142b6f42336b4b0752fce87f66c284d92b97340fd2a90b24aa3616b5450d
+"hpagent@npm:^1.0.0":
+  version: 1.2.0
+  resolution: "hpagent@npm:1.2.0"
+  checksum: b029da695edae438cee4da2a437386f9db4ac27b3ceb7306d02e1b586c9c194741ed2e943c8a222e0cfefaf27ee3f863aca7ba1721b0950a2a19bf25bc0d85e2
   languageName: node
   linkType: hard
 
@@ -23441,6 +23460,15 @@ __metadata:
   version: 2.0.5
   resolution: "undefsafe@npm:2.0.5"
   checksum: f42ab3b5770fedd4ada175fc1b2eb775b78f609156f7c389106aafd231bfc210813ee49f54483d7191d7b76e483bc7f537b5d92d19ded27156baf57592eb02cc
+  languageName: node
+  linkType: hard
+
+"undici@npm:^5.22.1":
+  version: 5.28.4
+  resolution: "undici@npm:5.28.4"
+  dependencies:
+    "@fastify/busboy": ^2.0.0
+  checksum: a8193132d84540e4dc1895ecc8dbaa176e8a49d26084d6fbe48a292e28397cd19ec5d13bc13e604484e76f94f6e334b2bdc740d5f06a6e50c44072818d0c19f9
   languageName: node
   linkType: hard
 

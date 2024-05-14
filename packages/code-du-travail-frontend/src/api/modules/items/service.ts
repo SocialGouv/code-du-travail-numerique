@@ -12,7 +12,7 @@ export const getBySourceAndSlugItems = async (source: any, slug: string) => {
     body,
     index: elasticDocumentsIndex,
   });
-  if (response.body.hits.total.value === 0) {
+  if (response.hits.total.value === 0) {
     throw new NotFoundError({
       name: "ITEMS_NOT_FOUND",
       message: `There is no documents that match ${slug} in ${source}`,
@@ -20,7 +20,7 @@ export const getBySourceAndSlugItems = async (source: any, slug: string) => {
     });
   }
 
-  const item = response.body.hits.hits[0];
+  const item = response.hits.hits[0];
 
   const {
     _id,

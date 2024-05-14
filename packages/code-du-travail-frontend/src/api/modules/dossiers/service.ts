@@ -16,7 +16,7 @@ export const getDossiers = async (slug: string) => {
     index: elasticDocumentsIndex,
   });
 
-  if (response.body.hits.total.value === 0) {
+  if (response.hits.total.value === 0) {
     throw new NotFoundError({
       message: `There is no thematic files that match ${slug}`,
       name: "THEMATIC_FILES_NOT_FOUND",
@@ -24,7 +24,7 @@ export const getDossiers = async (slug: string) => {
     });
   }
 
-  const thematicFile = response.body.hits.hits[0]._source;
+  const thematicFile = response.hits.hits[0]._source;
 
   return {
     ...thematicFile,

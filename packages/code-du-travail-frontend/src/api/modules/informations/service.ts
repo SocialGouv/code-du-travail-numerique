@@ -8,7 +8,7 @@ export const getAllInformations = async () => {
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.hits
+  return response.hits.hits
     .map(({ _source }) => _source)
     .sort((infoA, infoB) => {
       return infoA.title.localeCompare(infoB.title, "fr", {
