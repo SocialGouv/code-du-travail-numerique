@@ -5,6 +5,7 @@ import {
   mergePreavisRetraiteModels,
   mergeRuptureConventionnelle,
 } from "../../internal/merger";
+import type { References } from "../../modeles";
 import type {
   ChosenResult,
   MissingArgs,
@@ -22,6 +23,7 @@ declare global {
       toContainValidCdtnType: () => R;
       toHaveNextMissingRule: (rule: string | null) => R;
       toHaveNextMissingQuestion: (question: string | null) => R;
+      toHaveReferencesBeEqual: (references: References[]) => R;
       toNextMissingRuleBeEqual: (rule: string | null) => R;
       toNextMissingQuestionBeEqual: (question: string | null) => R;
       toChosenResultBeEqual: (chosenResult: ChosenResult | null) => R;
@@ -74,7 +76,7 @@ expect.extend({
 
     return {
       message: () =>
-        `Expected agreement amount to be "${amount} ${unit}" but received "${result.detail.agreementResult?.result?.value} ${result.detail.agreementResult?.result?.unit?.numerators[0]}"`,
+        `Expected agreement amount to be "${amount} ${unit}" but received "${result.detail.agreementResult?.value} ${result.detail.agreementResult?.unit?.numerators[0]}"`,
       pass:
         (amount === undefined ||
           amount === result.detail.agreementResult?.value) &&
@@ -203,6 +205,28 @@ expect.extend({
       message: () =>
         `Expected next question to be "${rule}" but received "${nextRule}"`,
       pass: nextRule === rule,
+    };
+  },
+  toHaveReferencesBeEqual(
+    result: PublicodesOutput<any>,
+    references: References[]
+  ) {
+    if (result.type !== "result") {
+      return {
+        message: () => `Expected a legal result but received "${result.type}"`,
+        pass: false,
+      };
+    }
+    return {
+      message: () =>
+        `Expected to receive ${references.length} references but received ${
+          result.references.length
+        } references.
+Expected:
+${JSON.stringify(references)}
+Received:
+${JSON.stringify(result.references)}`,
+      pass: JSON.stringify(references) === JSON.stringify(result.references),
     };
   },
   toIneligibilityBeEqual(
