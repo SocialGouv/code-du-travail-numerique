@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.137.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.1...v4.137.0) (2024-05-14)
+
+### Features
+
+- **types:** synchronisation des types au niveau de l'admin ([#5826](https://github.com/SocialGouv/code-du-travail-numerique/issues/5826)) ([f878be3](https://github.com/SocialGouv/code-du-travail-numerique/commit/f878be338415f4cd86489dd7a57a0ecaf1140de6))
+
 ## [4.136.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.0...v4.136.1) (2024-05-07)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils

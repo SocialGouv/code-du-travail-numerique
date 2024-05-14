@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.137.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.1...v4.137.0) (2024-05-14)
+
+### Bug Fixes
+
+- **images:** optimisation des images pendant build ([#5870](https://github.com/SocialGouv/code-du-travail-numerique/issues/5870)) ([ef68e5b](https://github.com/SocialGouv/code-du-travail-numerique/commit/ef68e5b5201145f68a99deb29ffec3f379d85a79))
+- **search-cc:** erreur 404 à la sélection d'une entreprise ([#5878](https://github.com/SocialGouv/code-du-travail-numerique/issues/5878)) ([2ce43dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/2ce43dd0edf53e253e6ef5b3d40faa0539115fb9))
+
+### Features
+
+- **package.json:** upgrade `next` + `cypress` ([#5862](https://github.com/SocialGouv/code-du-travail-numerique/issues/5862)) ([aa2f454](https://github.com/SocialGouv/code-du-travail-numerique/commit/aa2f454e2fa0cf641a55c80d44681eb45d368f9d))
+- **sentry:** upgrade sentry + ajout de logs sur l'IL ([#5869](https://github.com/SocialGouv/code-du-travail-numerique/issues/5869)) ([549b361](https://github.com/SocialGouv/code-du-travail-numerique/commit/549b36182eff26774d79bc0b001183e10b24c14b))
+- **types:** synchronisation des types au niveau de l'admin ([#5826](https://github.com/SocialGouv/code-du-travail-numerique/issues/5826)) ([f878be3](https://github.com/SocialGouv/code-du-travail-numerique/commit/f878be338415f4cd86489dd7a57a0ecaf1140de6))
+
 ## [4.136.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.0...v4.136.1) (2024-05-07)
 
 ### Bug Fixes
