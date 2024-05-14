@@ -21,7 +21,13 @@ Storage.prototype.getItem = jest.fn(
 describe("Indemnité licenciement - CC 1527", () => {
   let userAction: UserAction;
   beforeEach(() => {
-    render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
+    );
     userAction = new UserAction();
 
     userAction
@@ -41,19 +47,22 @@ describe("Indemnité licenciement - CC 1527", () => {
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasPartialTime.non.get())
-      .click(ui.salary.hasSameSalary.non.get())
-      .setInput(ui.salary.salaries.getAll()[0], "2100")
-      .setInput(ui.salary.salaries.getAll()[1], "2100")
-      .setInput(ui.salary.salaries.getAll()[2], "2100")
-      .setInput(ui.salary.salaries.getAll()[3], "1900")
-      .setInput(ui.salary.salaries.getAll()[4], "2090")
-      .setInput(ui.salary.salaries.getAll()[5], "2500")
-      .setInput(ui.salary.salaries.getAll()[6], "2080")
-      .setInput(ui.salary.salaries.getAll()[7], "2000")
-      .setInput(ui.salary.salaries.getAll()[8], "1999")
-      .setInput(ui.salary.salaries.getAll()[9], "1995")
-      .setInput(ui.salary.salaries.getAll()[10], "1990")
-      .setInput(ui.salary.salaries.getAll()[11], "1990")
+      .click(ui.salary.hasSameSalary.non.get());
+    ui.salary.fillSalaries(userAction, [
+      "2100",
+      "2100",
+      "2100",
+      "1900",
+      "2090",
+      "2500",
+      "2080",
+      "2000",
+      "1999",
+      "1995",
+      "1990",
+      "1990",
+    ]);
+    userAction
       .click(ui.salary.agreement1517.hasContractSalary.oui.get())
       .click(ui.next.get());
 
@@ -70,19 +79,22 @@ describe("Indemnité licenciement - CC 1527", () => {
       .click(ui.seniority.hasAbsence.non.get())
       .click(ui.next.get())
       .click(ui.salary.hasPartialTime.non.get())
-      .click(ui.salary.hasSameSalary.non.get())
-      .setInput(ui.salary.salaries.getAll()[0], "2100")
-      .setInput(ui.salary.salaries.getAll()[1], "2100")
-      .setInput(ui.salary.salaries.getAll()[2], "2100")
-      .setInput(ui.salary.salaries.getAll()[3], "1900")
-      .setInput(ui.salary.salaries.getAll()[4], "2090")
-      .setInput(ui.salary.salaries.getAll()[5], "2500")
-      .setInput(ui.salary.salaries.getAll()[6], "2080")
-      .setInput(ui.salary.salaries.getAll()[7], "2000")
-      .setInput(ui.salary.salaries.getAll()[8], "1999")
-      .setInput(ui.salary.salaries.getAll()[9], "1995")
-      .setInput(ui.salary.salaries.getAll()[10], "1990")
-      .setInput(ui.salary.salaries.getAll()[11], "1990")
+      .click(ui.salary.hasSameSalary.non.get());
+    ui.salary.fillSalaries(userAction, [
+      "2100",
+      "2100",
+      "2100",
+      "1900",
+      "2090",
+      "2500",
+      "2080",
+      "2000",
+      "1999",
+      "1995",
+      "1990",
+      "1990",
+    ]);
+    userAction
       .click(ui.salary.agreement1517.hasContractSalary.non.get())
       .click(ui.next.get());
 
