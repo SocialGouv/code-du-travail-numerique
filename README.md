@@ -7,7 +7,7 @@
 - L'[histoire du projet](https://incubateur.social.gouv.fr/startups/code-du-travail-numerique)
 
 ## Contributions
-
+  
 - Pour remonter un problème à l'équipe, envoyez un email à [codedutravailnumerique@travail.gouv.fr](mailto:codedutravailnumerique@travail.gouv.fr).
 - Pour remonter un bug technique, [ouvrez un ticket](https://github.com/SocialGouv/code-du-travail-numerique/issues/new/choose).
 
