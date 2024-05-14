@@ -5,7 +5,6 @@ import { Paragraph, theme } from "@socialgouv/cdtn-ui";
 
 import { HighlightResult, SectionTitle } from "../../../../common/stepStyles";
 import styled from "styled-components";
-import { Html } from "next/document";
 
 type Props = {
   maxResult: string;
@@ -13,15 +12,13 @@ type Props = {
   resultMessage: string;
 };
 
+function numberWithSpaces(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "&nbsp;");
+}
+
 function formatNumber(result: string) {
   const [integer, decimals] = result.split(".");
-  const integer1 = integer.slice(0, integer.length - 3);
-  const integer2 = integer.slice(integer.length - 3, integer.length);
-  return (
-    (integer1 ? `${integer1}&nbsp;` : "") +
-    integer2 +
-    (decimals ? `,${decimals}` : "")
-  );
+  return numberWithSpaces(integer) + (decimals ? `,${decimals}` : "");
 }
 
 export default function Result({
