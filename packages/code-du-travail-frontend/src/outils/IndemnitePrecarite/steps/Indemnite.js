@@ -16,6 +16,15 @@ import DisclaimerBox from "../components/DisclaimerBox";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 import { getIndemnitePrecarite } from "../indemnite";
 
+function numberWithSpaces(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "&nbsp;");
+}
+
+function formatNumber(result) {
+  const [integer, decimals] = result.split(".");
+  return numberWithSpaces(integer) + (decimals ? `,${decimals}` : "");
+}
+
 function extractRefs(refs = []) {
   //some ref are duplicated so we need to dedup them
 
@@ -120,7 +129,14 @@ function StepIndemnite({ form }) {
       <SectionTitle>Montant</SectionTitle>
       <p>
         {bonusAltName} est estimée à&nbsp;:&nbsp;
-        <HighlightResult>{indemnite}&nbsp;€</HighlightResult>.
+        <HighlightResult>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: `${formatNumber(indemnite.toString())}&nbsp;€`,
+            }}
+          />
+        </HighlightResult>
+        .
       </p>
 
       <ShowDetails>
