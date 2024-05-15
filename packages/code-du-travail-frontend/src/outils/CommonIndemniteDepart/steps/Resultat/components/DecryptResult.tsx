@@ -23,6 +23,10 @@ const formatNumber = new Intl.NumberFormat("fr-FR", {
 }).format;
 
 export default function DecryptResult(props: Props) {
+  const agreementResult = getDecryptedValueAgreement(
+    props.agreementExplanation,
+    props.agreementResult
+  );
   return (
     <>
       <SectionTitle>Résultat décrypté</SectionTitle>
@@ -30,7 +34,7 @@ export default function DecryptResult(props: Props) {
         Montant prévu par le code du travail&nbsp;:&nbsp;
         <strong
           dangerouslySetInnerHTML={{
-            __html: formatNumber(parseInt(props.legalResult)),
+            __html: formatNumber(parseFloat(props.legalResult)),
           }}
         />
       </Paragraph>
@@ -38,14 +42,9 @@ export default function DecryptResult(props: Props) {
         Montant prévu par la convention collective&nbsp;:&nbsp;
         <strong
           dangerouslySetInnerHTML={{
-            __html: formatNumber(
-              parseInt(
-                getDecryptedValueAgreement(
-                  props.agreementExplanation,
-                  props.agreementResult
-                )
-              )
-            ),
+            __html: isNaN(parseFloat(agreementResult))
+              ? agreementResult
+              : formatNumber(parseFloat(agreementResult)),
           }}
         />
       </Paragraph>

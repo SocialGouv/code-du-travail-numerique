@@ -149,7 +149,7 @@ export default function FilledElements(props: Props) {
                   inclus)&nbsp;:&nbsp;
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: formatNumber(parseInt(props.salary)),
+                      __html: formatNumber(parseFloat(props.salary)),
                     }}
                   />
                 </li>

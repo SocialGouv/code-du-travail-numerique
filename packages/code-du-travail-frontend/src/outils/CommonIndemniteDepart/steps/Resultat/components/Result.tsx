@@ -30,7 +30,7 @@ export default function Result({
         <HighlightResult>
           <span
             dangerouslySetInnerHTML={{
-              __html: formatNumber(parseInt(maxResult)),
+              __html: formatNumber(parseFloat(maxResult)),
             }}
           />
         </HighlightResult>

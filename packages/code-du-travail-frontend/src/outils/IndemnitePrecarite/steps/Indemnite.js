@@ -16,14 +16,10 @@ import DisclaimerBox from "../components/DisclaimerBox";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 import { getIndemnitePrecarite } from "../indemnite";
 
-function numberWithSpaces(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "&nbsp;");
-}
-
-function formatNumber(result) {
-  const [integer, decimals] = result.split(".");
-  return numberWithSpaces(integer) + (decimals ? `,${decimals}` : "");
-}
+const formatNumber = new Intl.NumberFormat("fr-FR", {
+  style: "currency",
+  currency: "EUR",
+}).format;
 
 function extractRefs(refs = []) {
   //some ref are duplicated so we need to dedup them
@@ -132,7 +128,7 @@ function StepIndemnite({ form }) {
         <HighlightResult>
           <span
             dangerouslySetInnerHTML={{
-              __html: `${formatNumber(indemnite.toString())}&nbsp;€`,
+              __html: formatNumber(indemnite.toString()),
             }}
           />
         </HighlightResult>
