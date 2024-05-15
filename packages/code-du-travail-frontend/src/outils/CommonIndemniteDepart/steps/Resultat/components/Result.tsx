@@ -12,14 +12,10 @@ type Props = {
   resultMessage: string;
 };
 
-function numberWithSpaces(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "&nbsp;");
-}
-
-function formatNumber(result: string) {
-  const [integer, decimals] = result.split(".");
-  return numberWithSpaces(integer) + (decimals ? `,${decimals}` : "");
-}
+const formatNumber = new Intl.NumberFormat("fr-FR", {
+  style: "currency",
+  currency: "EUR",
+}).format;
 
 export default function Result({
   notifications = [],
@@ -34,7 +30,7 @@ export default function Result({
         <HighlightResult>
           <span
             dangerouslySetInnerHTML={{
-              __html: `${formatNumber(maxResult)}&nbsp;€`,
+              __html: formatNumber(parseInt(maxResult)),
             }}
           />
         </HighlightResult>

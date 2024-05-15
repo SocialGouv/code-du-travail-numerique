@@ -38,6 +38,11 @@ type Props = {
   type: IndemniteDepartType;
 };
 
+const formatNumber = new Intl.NumberFormat("fr-FR", {
+  style: "currency",
+  currency: "EUR",
+}).format;
+
 export default function FilledElements(props: Props) {
   return (
     <>
@@ -142,7 +147,11 @@ export default function FilledElements(props: Props) {
                 <li>
                   Salaire mensuel brut (primes et avantages en nature
                   inclus)&nbsp;:&nbsp;
-                  {props.salary} €
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: formatNumber(parseInt(props.salary)),
+                    }}
+                  />
                 </li>
               )}
               {props.salaryPeriods.length > 0 && !props.hasSameSalary && (
@@ -178,7 +187,7 @@ export default function FilledElements(props: Props) {
                       {props.salaryPeriods.map((salary, index) => (
                         <tr key={"salary-" + index}>
                           <th scope="row">{salary.month}</th>
-                          <td>{salary.value} €</td>
+                          <td>formatNumber(salary.value ?? 0)</td>
                           <td>
                             {salary.prime} {salary.prime !== undefined && "€"}
                           </td>

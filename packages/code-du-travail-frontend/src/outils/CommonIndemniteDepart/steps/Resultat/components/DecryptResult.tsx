@@ -17,22 +17,37 @@ type Props = {
   resultExplanation?: ExplanationMainResult;
 };
 
+const formatNumber = new Intl.NumberFormat("fr-FR", {
+  style: "currency",
+  currency: "EUR",
+}).format;
+
 export default function DecryptResult(props: Props) {
   return (
     <>
       <SectionTitle>Résultat décrypté</SectionTitle>
       <Paragraph>
         Montant prévu par le code du travail&nbsp;:&nbsp;
-        <strong>{props.legalResult} €</strong>
+        <strong
+          dangerouslySetInnerHTML={{
+            __html: formatNumber(parseInt(props.legalResult)),
+          }}
+        />
       </Paragraph>
       <Paragraph>
         Montant prévu par la convention collective&nbsp;:&nbsp;
-        <strong>
-          {getDecryptedValueAgreement(
-            props.agreementExplanation,
-            props.agreementResult
-          )}
-        </strong>
+        <strong
+          dangerouslySetInnerHTML={{
+            __html: formatNumber(
+              parseInt(
+                getDecryptedValueAgreement(
+                  props.agreementExplanation,
+                  props.agreementResult
+                )
+              )
+            ),
+          }}
+        />
       </Paragraph>
       {props.resultExplanation && (
         <Paragraph>
