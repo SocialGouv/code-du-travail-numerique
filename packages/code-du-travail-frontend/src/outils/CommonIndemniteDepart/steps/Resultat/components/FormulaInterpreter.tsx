@@ -1,7 +1,6 @@
 import { Formula } from "@socialgouv/modeles-social";
 import { MathFormula } from "../../../../common/MathFormula";
 import { SectionTitle } from "../../../../common/stepStyles";
-import { formatNumber } from "../../../../common";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 
 type Props = {
