@@ -1,9 +1,4 @@
-import {
-  byLabelText,
-  byTestId,
-  byText,
-  byTitle,
-} from "testing-library-selector";
+import { byTestId, byText, byTitle } from "testing-library-selector";
 
 export const ui = {
   introduction: {
@@ -363,6 +358,7 @@ export const ui = {
       age: byTestId(
         "infos.contrat salarié - convention collective - personnel presta service tertiaire - rupture conventionnelle - cadre age"
       ),
+      inaptitudeNonPro: byText("Oui"),
     },
     agreement2216: {
       proCategory: byTestId(
