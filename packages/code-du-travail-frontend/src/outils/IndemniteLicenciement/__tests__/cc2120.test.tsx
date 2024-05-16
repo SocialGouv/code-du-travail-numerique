@@ -23,7 +23,11 @@ describe("Indemnité licenciement - CC 2120", () => {
   let userAction: UserAction;
   beforeEach(() => {
     rendering = render(
-      <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
     );
     userAction = new UserAction();
 
@@ -57,6 +61,6 @@ describe("Indemnité licenciement - CC 2120", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("25540,67 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("25 540,67 €");
   });
 });

@@ -220,7 +220,7 @@ describe("Indemnité licenciement - CC 3239", () => {
     });
     fireEvent.click(ui.next.get());
 
-    expect(ui.result.resultat.get()).toHaveTextContent("6651,92 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("6 651,92 €");
 
     expect(ui.result.sources.queryAll()).toHaveLength(8);
     expect(ui.result.source(0).get()).toHaveTextContent("Article 47-1");
@@ -256,7 +256,7 @@ describe("Indemnité licenciement - CC 3239", () => {
     fireEvent.click(ui.seniority.hasAbsence.non.get());
     fireEvent.click(ui.next.get());
 
-    expect(ui.result.resultat.get()).toHaveTextContent("62,5 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("62,50 €");
 
     expect(ui.result.sources.queryAll()).toHaveLength(8);
     expect(ui.result.source(0).get()).toHaveTextContent("Article 47-1");

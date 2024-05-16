@@ -56,9 +56,9 @@ describe("Rupture Co - CC 2120", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("20666,67 €");
-    expect(ui.result.resultatLegal.get()).toHaveTextContent("20666.67 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("20666.67 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("20 666,67 €");
+    expect(ui.result.resultatLegal.get()).toHaveTextContent("20 666,67 €");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("20 666,67 €");
     expect(ui.result.dismissalType.economic.query()).not.toBeInTheDocument();
     expect(ui.result.dismissalType.discipline.query()).not.toBeInTheDocument();
   });

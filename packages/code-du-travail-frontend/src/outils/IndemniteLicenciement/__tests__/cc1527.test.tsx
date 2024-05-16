@@ -21,7 +21,13 @@ Storage.prototype.getItem = jest.fn(
 describe("Indemnité licenciement - CC 1527", () => {
   let userAction: UserAction;
   beforeEach(() => {
-    render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
+    );
     userAction = new UserAction();
 
     userAction
@@ -58,8 +64,8 @@ describe("Indemnité licenciement - CC 1527", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("5250 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("4777.69 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("5 250,00 €");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("4 777,69 €");
   });
 
   test("cas sans versement de comission", () => {
@@ -87,7 +93,7 @@ describe("Indemnité licenciement - CC 1527", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("5250 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("5250 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("5 250,00 €");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("5 250,00 €");
   });
 });

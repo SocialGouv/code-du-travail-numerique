@@ -92,7 +92,7 @@ describe("Indemnité licenciement - CC 2596", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2990,45 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("2 990,45 €");
     expect(ui.result.resultTableRows.getAll().length).toBe(5);
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
       "mai 20223000 €"
@@ -105,7 +105,7 @@ describe("Indemnité licenciement - CC 2596", () => {
       .click(ui.salary.agreementWithNoticeSalary.knowingLastSalary.non.get())
       .click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("2 760,42 €");
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
   });
   test(`Cadres moins de 8 mois d'ancienneté`, () => {
@@ -216,7 +216,7 @@ describe("Indemnité licenciement - CC 2596", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("16388,89 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("16 388,89 €");
   });
 
   test(`Emplois de l'esthétique-cosmétique avec moins de 8 moins d'ancienneté`, () => {
@@ -258,7 +258,7 @@ describe("Indemnité licenciement - CC 2596", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2604,17 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("2 604,17 €");
   });
 
   test(`Emplois de l'esthétique-cosmétique`, () => {

@@ -22,7 +22,13 @@ Storage.prototype.getItem = jest.fn(
 describe("Indemnité licenciement - CC 29", () => {
   test("cas spécifique", () => {
     let userAction: UserAction;
-    render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
+    );
     userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())
@@ -60,7 +66,7 @@ describe("Indemnité licenciement - CC 29", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("5835");
-    expect(ui.result.resultat.get()).toHaveTextContent("5835");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("5 835");
+    expect(ui.result.resultat.get()).toHaveTextContent("5 835");
   });
 });
