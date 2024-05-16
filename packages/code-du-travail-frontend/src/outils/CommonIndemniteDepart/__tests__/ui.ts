@@ -402,13 +402,6 @@ export const ui = {
       non: byTestId("hasVariablePay - Non"),
     },
     salaries: byTestId("salary-input"),
-    fillSalaries: (userAction, salaries) => {
-      if (salaries.length > 12)
-        throw new Error("Nombre de salaire trop grands");
-      salaries.forEach((salary, i) => {
-        userAction.setInput(ui.salary.salaries.getAll()[i], salary);
-      });
-    },
     primes: byTestId("prime-input"),
     agreement44: {
       knowingLastSalary: {

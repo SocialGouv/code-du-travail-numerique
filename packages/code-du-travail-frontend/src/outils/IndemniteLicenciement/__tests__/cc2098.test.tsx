@@ -47,22 +47,22 @@ describe("Indemnité licenciement- CC 2098", () => {
       .setInput(ui.seniority.absences.duration(0).get(), "8")
       .click(ui.next.get())
       .click(ui.salary.hasPartialTime.non.get())
-      .click(ui.salary.hasSameSalary.non.get());
-    ui.salary.fillSalaries(userAction, [
-      "2266",
-      "2250",
-      "2203",
-      "2199",
-      "2100",
-      "2020",
-      "2010",
-      "2010",
-      "1930",
-      "1890",
-      "1900",
-      "1800",
-    ]);
-    userAction.click(ui.next.get());
+      .click(ui.salary.hasSameSalary.non.get())
+      .setInputs(ui.salary.salaries.getAll(), [
+        "2266",
+        "2250",
+        "2203",
+        "2199",
+        "2100",
+        "2020",
+        "2010",
+        "2010",
+        "1930",
+        "1890",
+        "1900",
+        "1800",
+      ])
+      .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("17668,48 €");

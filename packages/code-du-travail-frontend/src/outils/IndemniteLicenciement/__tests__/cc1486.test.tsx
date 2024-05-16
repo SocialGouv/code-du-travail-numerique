@@ -59,22 +59,22 @@ describe("Indemnité licenciement - CC 1486", () => {
       .setInput(ui.seniority.absences.duration(0).get(), "3")
       .click(ui.next.get())
       .click(ui.salary.hasPartialTime.non.get())
-      .click(ui.salary.hasSameSalary.non.get());
-    ui.salary.fillSalaries(userAction, [
-      "3500",
-      "3350",
-      "3200",
-      "3150",
-      "3300",
-      "3600",
-      "3100",
-      "3200",
-      "3300",
-      "3250",
-      "3100",
-      "3100",
-    ]);
-    userAction.click(ui.next.get());
+      .click(ui.salary.hasSameSalary.non.get())
+      .setInputs(ui.salary.salaries.getAll(), [
+        "3500",
+        "3350",
+        "3200",
+        "3150",
+        "3300",
+        "3600",
+        "3100",
+        "3200",
+        "3300",
+        "3250",
+        "3100",
+        "3100",
+      ])
+      .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("26100 €");
