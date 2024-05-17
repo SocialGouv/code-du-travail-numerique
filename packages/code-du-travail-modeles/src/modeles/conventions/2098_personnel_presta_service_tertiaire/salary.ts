@@ -18,6 +18,23 @@ export type CC2098ReferenceSalaryProps = {
 export class ReferenceSalary2098
   implements IReferenceSalary<SupportedCc.IDCC2098>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCc.IDCC2098> {
+    return {
+      category: args[
+        "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle"
+      ] as CategoryPro2098,
+      inabilityNonProfessional:
+        args[
+          "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle"
+        ] === "'Oui'",
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
   computeReferenceSalary(
     props: ReferenceSalaryProps<SupportedCc.IDCC2098>
   ): number {

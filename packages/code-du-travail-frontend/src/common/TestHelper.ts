@@ -17,4 +17,11 @@ export class UserAction {
     fireEvent.change(element, { target: { value } });
     return this;
   }
+
+  setInputs(elements: readonly HTMLElement[], values: string[]): UserAction {
+    values.forEach((value, i) => {
+      this.setInput(elements[i], value);
+    });
+    return this;
+  }
 }
