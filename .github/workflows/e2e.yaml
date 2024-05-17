@@ -34,7 +34,7 @@ jobs:
           path: |
             packages/code-du-travail-frontend/cypress/screenshots
       - name: Send message to mattermost when done
-        uses: mattermost/action-mattermost-notify@v2.0.0
+        uses: mattermost/action-mattermost-notify@master
         if: always()
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
@@ -43,7 +43,7 @@ jobs:
               "text": "Les tests automatiques e2e sont terminés: **${{ job.status }}**. Détails : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}",
             }
       - name: Ping the team when failed
-        uses: mattermost/action-mattermost-notify@v2.0.0
+        uses: mattermost/action-mattermost-notify@master
         if: failure()
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
