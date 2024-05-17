@@ -13,11 +13,11 @@ import {
 
 export const getAllModeles = async () => {
   const body = getModeles();
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
-  return response.hits.total.value > 0
+  return response.hits.hits.length > 0
     ? response.hits.hits.map(({ _source }) => _source)
     : [];
 };
@@ -26,11 +26,11 @@ export const getBySlugsModeles = async (
   slugs: string[]
 ): Promise<ElasticSearchItem[]> => {
   const body = getModelesBySlugs(slugs);
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
-  return response.hits.total.value > 0
+  return response.hits.hits.length > 0
     ? response.hits.hits.map(({ _source }) => _source)
     : [];
 };
@@ -39,11 +39,11 @@ export const getByIdsModeles = async (
   ids: string[]
 ): Promise<ElasticSearchItem[]> => {
   const body = getModelesByIds(ids);
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
-  if (response.hits.total.value === 0) {
+  if (response.hits.hits.length === 0) {
     throw new NotFoundError({
       message: `There is no modeles that match ${ids.join(", ")}`,
       name: "MODELE_NOT_FOUND",
@@ -56,7 +56,7 @@ export const getByIdsModeles = async (
 export const getBySlugModeles = async (slug: string) => {
   const body = getModeleBySlug(slug);
 
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });

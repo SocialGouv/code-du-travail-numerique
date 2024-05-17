@@ -7,9 +7,9 @@ export const parseIdcc = (query) =>
 export const getIdccByQuery = async (query: string) => {
   const idccQuery = parseIdcc(query);
 
-  const body = getIdccBody({ idccQuery, query });
+  const body: any = getIdccBody({ idccQuery, query });
 
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });

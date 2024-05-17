@@ -8,7 +8,7 @@ import { getHighlightsBySlug } from "./queries";
 export const getBySlugHighlights = async (slug: string) => {
   const body = getHighlightsBySlug(slug);
 
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });

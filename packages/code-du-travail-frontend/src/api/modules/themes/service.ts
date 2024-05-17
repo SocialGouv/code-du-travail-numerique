@@ -6,8 +6,8 @@ import {
 import { getAllThemesQuery, getThemeBySlugQuery } from "./queries";
 
 export const getAllThemes = async () => {
-  const body = getAllThemesQuery();
-  const response = await elasticsearchClient.search({
+  const body: any = getAllThemesQuery();
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
@@ -17,8 +17,8 @@ export const getAllThemes = async () => {
 };
 
 export const getAllThemesAndSubThemes = async () => {
-  const body = getAllThemesQuery();
-  const response = await elasticsearchClient.search({
+  const body: any = getAllThemesQuery();
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
@@ -49,9 +49,9 @@ export const getAllThemesAndSubThemes = async () => {
 };
 
 export const getBySlugThemes = async (slug: string) => {
-  const body = getThemeBySlugQuery(slug);
+  const body: any = getThemeBySlugQuery(slug);
 
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });

@@ -201,10 +201,10 @@ async function msearch(searches) {
   const results = keys.reduce((state, key, index) => {
     const resp = body.responses[index];
 
-    if (resp.error) {
+    if (resp.status !== 200) {
       console.error(
         `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(
-          resp.error,
+          resp,
           null,
           2
         )}`

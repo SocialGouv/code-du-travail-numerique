@@ -13,7 +13,7 @@ export const getGenericContributionsGroupByThemes = async () => {
   });
   return response.hits.hits
     .map(({ _source }) => _source)
-    .map((contrib) => {
+    .map((contrib: any) => {
       contrib.theme = contrib.breadcrumbs[0].label;
       return contrib;
     })
@@ -59,11 +59,11 @@ export const getByIdsContributions = async (
   ids: string[]
 ): Promise<ElasticSearchItem[]> => {
   const body = getContributionsByIds(ids);
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
-  return response.hits.total.value > 0
+  return response.hits.hits.length > 0
     ? response.hits.hits.map(({ _source }) => _source)
     : [];
 };

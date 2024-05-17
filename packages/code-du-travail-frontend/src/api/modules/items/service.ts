@@ -8,11 +8,11 @@ import { getRelatedItems } from "./utils";
 
 export const getBySourceAndSlugItems = async (source: any, slug: string) => {
   const body = getSearchBySourceSlugBody({ slug, source });
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
-  if (response.hits.total.value === 0) {
+  if (response.hits.hits.length === 0) {
     throw new NotFoundError({
       name: "ITEMS_NOT_FOUND",
       message: `There is no documents that match ${slug} in ${source}`,

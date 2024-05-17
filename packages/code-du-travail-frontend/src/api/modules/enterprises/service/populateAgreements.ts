@@ -24,9 +24,9 @@ export const populateAgreements = async (
 
       const conventionsWithDuplicates = idccList.map((num: number) => {
         const foundHandledIdcc = body.hits.hits.find(
-          ({ _source }) => _source.num === num
+          ({ _source }) => _source?.num === num
         );
-        if (foundHandledIdcc) {
+        if (foundHandledIdcc && foundHandledIdcc._source) {
           const agreement = foundHandledIdcc._source;
           return {
             id: agreement.id,

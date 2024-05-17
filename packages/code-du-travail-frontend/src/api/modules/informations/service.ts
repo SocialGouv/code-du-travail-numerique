@@ -4,7 +4,7 @@ import { fetchInformations } from "./queries";
 export const getAllInformations = async () => {
   const body = fetchInformations();
 
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });

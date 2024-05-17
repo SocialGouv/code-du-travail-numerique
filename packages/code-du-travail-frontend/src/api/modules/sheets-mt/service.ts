@@ -8,7 +8,7 @@ import { getSheetMTQuery } from "./queries";
 
 export const getSheetsMtService = async (slug: string) => {
   const body = getSheetMTQuery({ slug });
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });

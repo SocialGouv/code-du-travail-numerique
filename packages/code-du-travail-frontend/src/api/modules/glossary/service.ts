@@ -9,12 +9,12 @@ import { getGlossaryBody } from "./queries";
 async function getGlossaryData() {
   const body = getGlossaryBody();
 
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
 
-  if (response.hits.total.value === 0) {
+  if (response.hits.hits.length === 0) {
     throw new NotFoundError({
       message: `There is no glossary data`,
       cause: null,

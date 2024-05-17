@@ -54,8 +54,8 @@ export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {
     .msearch({
       body,
     })
-    .then((resp) =>
-      resp.body.responses.map((r) => r.hits.hits[0]).filter((r) => r)
+    .then((resp: any) =>
+      resp.responses.map((r) => r.hits.hits[0]).filter((r) => r)
     )
     .catch((err) => {
       console.error(
@@ -110,14 +110,10 @@ export const getSearchBasedItems = async ({
     requestBodies.push({ index: elasticDocumentsIndex }, semBody);
   }
 
-  const {
-    body: {
-      responses: [esResponse = {}, semResponse = {}],
-    },
-  } = await elasticsearchClient.msearch({ body: requestBodies });
+  const bdy = await elasticsearchClient.msearch<any>({ body: requestBodies });
 
-  const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
-  const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
+  const semanticHits = bdy.took[1].hits.hits;
+  const fullTextHits = bdy.took[0].hits.hits;
 
   return (
     mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
