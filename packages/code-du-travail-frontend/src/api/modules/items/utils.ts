@@ -110,10 +110,12 @@ export const getSearchBasedItems = async ({
     requestBodies.push({ index: elasticDocumentsIndex }, semBody);
   }
 
-  const bdy = await elasticsearchClient.msearch<any>({ body: requestBodies });
+  const {
+    responses: [esResponse = {}, semResponse = {}],
+  }: any = await elasticsearchClient.msearch({ body: requestBodies });
 
-  const semanticHits = bdy.took[1].hits.hits;
-  const fullTextHits = bdy.took[0].hits.hits;
+  const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
+  const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
 
   return (
     mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
