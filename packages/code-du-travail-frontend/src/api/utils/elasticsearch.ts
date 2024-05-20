@@ -6,7 +6,7 @@ const ELASTICSEARCH_URL =
 const ELASTICSEARCH_TOKEN_API = process.env.ELASTICSEARCH_TOKEN_API;
 const ES_INDEX_PREFIX = process.env.NEXT_PUBLIC_ES_INDEX_PREFIX ?? "cdtn";
 const CDTN_ADMIN_VERSION = process.env.CDTN_ADMIN_VERSION ?? "v2";
-const BRANCH_NAME_SLUG = process.env.BRANCH_NAME_SLUG;
+const BRANCH_NAME_SLUG = process.env.NEXT_PUBLIC_BRANCH_NAME_SLUG;
 
 const esClientConfig: ClientOptions = {
   node: ELASTICSEARCH_URL,
