@@ -3,6 +3,9 @@
 exports[`Sheets MT getSheetsMtService 1`] = `
 {
   "_id": "24",
+  "_ignored": [
+    "sections.html.keyword",
+  ],
   "_index": "cdtn_test-v2_documents",
   "_score": 0,
   "_source": {
@@ -63,7 +66,6 @@ exports[`Sheets MT getSheetsMtService 1`] = `
     "title": "5 questions/réponses sur la santé au travail",
     "url": "https://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/article/5-questions-reponses-sur-la-sante-au-travail",
   },
-  "_type": "_doc",
   "relatedItems": [
     {
       "action": undefined,

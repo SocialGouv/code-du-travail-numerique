@@ -40,7 +40,6 @@ indemnité de licenciement en cas d’alternance temps plein temps partiel
 calculez le montant d’une indemnité de licenciement en fonction de votre situation",
       "title": "Indemnité de licenciement",
     },
-    "_type": "_doc",
     "sort": [
       1,
     ],
@@ -82,7 +81,6 @@ calculer la durée de son préavis
 calcul durée préavis démission",
       "title": "Préavis de démission",
     },
-    "_type": "_doc",
     "sort": [
       3,
     ],
@@ -124,7 +122,6 @@ chercher un emploi pendant son préavis
 absence 2h pour recherche d’emploi pendant préavis",
       "title": "Heures d'absence pour rechercher un emploi",
     },
-    "_type": "_doc",
     "sort": [
       3,
     ],
@@ -159,7 +156,6 @@ absence 2h pour recherche d’emploi pendant préavis",
       "title": "Mon compte formation",
       "url": "https://www.moncompteformation.gouv.fr",
     },
-    "_type": "_doc",
     "sort": [
       9223372036854776000,
     ],
@@ -199,7 +195,6 @@ absence 2h pour recherche d’emploi pendant préavis",
       "title": "Index Egapro",
       "url": "https://index-egapro.travail.gouv.fr",
     },
-    "_type": "_doc",
     "sort": [
       9223372036854776000,
     ],
@@ -246,7 +241,6 @@ indemnité de licenciement en cas d’alternance temps plein temps partiel
 calculez le montant d’une indemnité de licenciement en fonction de votre situation",
     "title": "Indemnité de licenciement",
   },
-  "_type": "_doc",
   "sort": [
     1,
   ],

@@ -2,11 +2,9 @@
 
 exports[`Suggestion accentuation is ignored 1`] = `
 [
-  "renseignements",
-  "retraite",
-  "repos",
-  "réintégration",
   "déplacement régulier",
+  "réintégration",
+  "retraite",
 ]
 `;
 
@@ -30,8 +28,6 @@ exports[`Suggestion should return a list of suggestion 1`] = `
   "renseignements",
   "retraite",
   "repos",
-  "réintégration",
-  "déplacement régulier",
 ]
 `;
 

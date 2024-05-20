@@ -4,7 +4,7 @@ exports[`Search should return a list of suggestion 1`] = `
 {
   "articles": [
     {
-      "_score": 1.1338997,
+      "_score": 1.1321496,
       "cdtnId": "ea03713a82",
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
@@ -15,7 +15,7 @@ exports[`Search should return a list of suggestion 1`] = `
   ],
   "documents": [
     {
-      "_score": 45.1396,
+      "_score": 45.236862,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -36,7 +36,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
     },
     {
-      "_score": 39.61391,
+      "_score": 39.56417,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -62,7 +62,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Les congés pour événements familiaux",
     },
     {
-      "_score": 35.932587,
+      "_score": 35.93198,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -83,7 +83,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Certificat de travail",
     },
     {
-      "_score": 33.7139,
+      "_score": 33.71268,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -109,7 +109,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Rupture de période d’essai à l’initiative de l’employeur",
     },
     {
-      "_score": 33.581463,
+      "_score": 33.590183,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": [
@@ -131,7 +131,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Préavis de démission",
     },
     {
-      "_score": 33.543884,
+      "_score": 33.54222,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -157,7 +157,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
     },
     {
-      "_score": 33.34314,
+      "_score": 33.341652,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -179,7 +179,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
     },
     {
-      "_score": 31.218784,
+      "_score": 31.216042,
       "algo": "fulltext",
       "breadcrumbs": [
         {
@@ -201,7 +201,7 @@ exports[`Search should return a list of suggestion 1`] = `
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     {
-      "_score": 30.921638,
+      "_score": 30.934362,
       "algo": "fulltext",
       "breadcrumbs": [
         {
