@@ -22,5 +22,5 @@ const prefixIndex = BRANCH_NAME_SLUG?.startsWith("linked")
   ? `cdtn-${BRANCH_NAME_SLUG}`
   : `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}`;
 console.log(`Prefix index : ${prefixIndex}`);
-export const elasticDocumentsIndex = `${prefixIndex}_documents`;
-export const elasticSuggestionsIndex = `${prefixIndex}_suggestions`;
+export const elasticDocumentsIndex = `cdtn-linked-es8_documents`;
+export const elasticSuggestionsIndex = `cdtn-linked-es8_suggestions`;
