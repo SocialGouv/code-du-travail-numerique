@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import { getSitemapData } from "../service";
 
 jest.mock("../../contributions/fetch", () => ({

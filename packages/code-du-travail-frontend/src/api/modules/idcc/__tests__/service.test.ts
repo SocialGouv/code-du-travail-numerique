@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import { getIdccByQuery } from "../service";
 
 describe("IDCC", () => {
