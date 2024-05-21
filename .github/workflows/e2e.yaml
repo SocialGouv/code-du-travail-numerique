@@ -39,7 +39,7 @@ jobs:
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
           TEXT: |-
-            Les tests automatiques e2e sont terminés: **${{ job.status }}**. Détails : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}
+            Les tests automatiques e2e sont terminés: **${{ job.status }}** ([logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})).
       - name: Ping the team when failed
         uses: mattermost/action-mattermost-notify@master
         if: failure()
