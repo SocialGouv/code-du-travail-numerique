@@ -1,6 +1,5 @@
 # Code du travail numérique
 
-
 ![Quality Status](https://github.com/SocialGouv/code-du-travail-numerique/actions/workflows/quality.yml/badge.svg)
 
 - Consulter le [site internet code.travail.gouv.fr](https://code.travail.gouv.fr)
