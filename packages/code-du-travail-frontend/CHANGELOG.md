@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.137.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.137.0...v4.137.1) (2024-05-23)
+
+### Bug Fixes
+
+- **e2e:** ajout des tests dans les sous dossiers ([#5879](https://github.com/SocialGouv/code-du-travail-numerique/issues/5879)) ([682fce9](https://github.com/SocialGouv/code-du-travail-numerique/commit/682fce9d3acaf16a6e9aaf3c300aec67453ff594))
+- **footer:** update logo ([#5917](https://github.com/SocialGouv/code-du-travail-numerique/issues/5917)) ([83d6d34](https://github.com/SocialGouv/code-du-travail-numerique/commit/83d6d34a8c9f0581ef8fa78aded428b8bdbaa0f8))
+- html tag description tuile modele ([#5906](https://github.com/SocialGouv/code-du-travail-numerique/issues/5906)) ([274ebf6](https://github.com/SocialGouv/code-du-travail-numerique/commit/274ebf6b4122f66efd1436e44a5eb7bec6047881))
+- **indemnité de licenciement:** calcul du salaire de référence conventionnel correct ([#5885](https://github.com/SocialGouv/code-du-travail-numerique/issues/5885)) ([a5f0655](https://github.com/SocialGouv/code-du-travail-numerique/commit/a5f0655c18177f5179e47c5c7775a1d45c923949))
+- **modeles-de-courrier:** modification du titre de deux modèles ([#5899](https://github.com/SocialGouv/code-du-travail-numerique/issues/5899)) ([91114d1](https://github.com/SocialGouv/code-du-travail-numerique/commit/91114d1208bd289e586bfad86790b2c305f3949c))
+
 # [4.137.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.1...v4.137.0) (2024-05-14)
 
 ### Bug Fixes
