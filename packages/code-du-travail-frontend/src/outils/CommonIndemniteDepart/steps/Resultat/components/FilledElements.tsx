@@ -10,6 +10,7 @@ import {
   generateResultSameSalary,
 } from "../../../utils/question";
 import { IndemniteDepartType } from "../../../../types";
+import { formatToEuro } from "../../../../../common/formatToEuro";
 
 type SituationItem = {
   text: string;
@@ -37,11 +38,6 @@ type Props = {
   disableParentalNotice?: boolean;
   type: IndemniteDepartType;
 };
-
-const formatNumber = new Intl.NumberFormat("fr-FR", {
-  style: "currency",
-  currency: "EUR",
-}).format;
 
 export default function FilledElements(props: Props) {
   return (
@@ -149,7 +145,7 @@ export default function FilledElements(props: Props) {
                   inclus)&nbsp;:&nbsp;
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: formatNumber(parseFloat(props.salary)),
+                      __html: formatToEuro(parseFloat(props.salary)),
                     }}
                   />
                 </li>

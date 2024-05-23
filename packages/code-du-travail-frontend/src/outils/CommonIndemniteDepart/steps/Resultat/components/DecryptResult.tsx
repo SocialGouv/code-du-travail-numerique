@@ -8,6 +8,7 @@ import {
   ExplanationAgreementResult,
   ExplanationMainResult,
 } from "@socialgouv/modeles-social";
+import { formatToEuro } from "../../../../../common/formatToEuro";
 
 type Props = {
   label: string;
@@ -16,11 +17,6 @@ type Props = {
   legalResult: string;
   resultExplanation?: ExplanationMainResult;
 };
-
-const formatNumber = new Intl.NumberFormat("fr-FR", {
-  style: "currency",
-  currency: "EUR",
-}).format;
 
 export default function DecryptResult(props: Props) {
   const agreementResult = getDecryptedValueAgreement(
@@ -34,7 +30,7 @@ export default function DecryptResult(props: Props) {
         Montant prévu par le code du travail&nbsp;:&nbsp;
         <strong
           dangerouslySetInnerHTML={{
-            __html: formatNumber(parseFloat(props.legalResult)),
+            __html: formatToEuro(parseFloat(props.legalResult)),
           }}
         />
       </Paragraph>
@@ -44,7 +40,7 @@ export default function DecryptResult(props: Props) {
           dangerouslySetInnerHTML={{
             __html: isNaN(parseFloat(agreementResult))
               ? agreementResult
-              : formatNumber(parseFloat(agreementResult)),
+              : formatToEuro(parseFloat(agreementResult)),
           }}
         />
       </Paragraph>

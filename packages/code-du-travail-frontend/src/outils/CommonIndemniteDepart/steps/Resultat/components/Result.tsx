@@ -5,17 +5,13 @@ import { Paragraph, theme } from "@socialgouv/cdtn-ui";
 
 import { HighlightResult, SectionTitle } from "../../../../common/stepStyles";
 import styled from "styled-components";
+import { formatToEuro } from "../../../../../common/formatToEuro";
 
 type Props = {
   maxResult: string;
   notifications?: Notification[];
   resultMessage: string;
 };
-
-const formatNumber = new Intl.NumberFormat("fr-FR", {
-  style: "currency",
-  currency: "EUR",
-}).format;
 
 export default function Result({
   notifications = [],
@@ -30,7 +26,7 @@ export default function Result({
         <HighlightResult>
           <span
             dangerouslySetInnerHTML={{
-              __html: formatNumber(parseFloat(maxResult)),
+              __html: formatToEuro(parseFloat(maxResult)),
             }}
           />
         </HighlightResult>

@@ -15,11 +15,7 @@ import { formatRefs } from "../../publicodes";
 import DisclaimerBox from "../components/DisclaimerBox";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 import { getIndemnitePrecarite } from "../indemnite";
-
-const formatNumber = new Intl.NumberFormat("fr-FR", {
-  style: "currency",
-  currency: "EUR",
-}).format;
+import { formatToEuro } from "../../../common/formatToEuro";
 
 function extractRefs(refs = []) {
   //some ref are duplicated so we need to dedup them
@@ -128,7 +124,7 @@ function StepIndemnite({ form }) {
         <HighlightResult>
           <span
             dangerouslySetInnerHTML={{
-              __html: formatNumber(indemnite.toString()),
+              __html: formatToEuro(indemnite.toString()),
             }}
           />
         </HighlightResult>
