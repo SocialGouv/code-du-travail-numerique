@@ -21,7 +21,7 @@ export const validateStep = (state: SalairesStoreInput) => {
         : state.salary && isNaN(parseFloat(state.salary))
         ? "Vous devez saisir un nombre"
         : parseFloat(state.salary!) <= 0
-        ? "Vous devez saisir un nombre positif"
+        ? "Vous devez saisir un salaire annuel supérieur à 0"
         : undefined,
     errorSalaryPeriods:
       state.hasTempsPartiel === "non" &&
@@ -30,7 +30,7 @@ export const validateStep = (state: SalairesStoreInput) => {
         detectNullOrUndefinedOrNaNInArray(state.salaryPeriods))
         ? "Vous devez compléter l'ensemble des champs"
         : sumSalaryPeriods(state.salaryPeriods) <= 0
-        ? "Vous devez saisir un nombre positif"
+        ? "Vous devez saisir un salaire annuel supérieur à 0"
         : undefined,
   };
 
