@@ -24,7 +24,11 @@ describe("Indemnité licenciement - CC 16", () => {
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
       );
       userAction = new UserAction();
       userAction
@@ -60,12 +64,12 @@ describe("Indemnité licenciement - CC 16", () => {
         .click(ui.salary.hasPartialTime.non.get())
         .click(ui.salary.hasSameSalary.oui.get())
         .setInput(ui.salary.sameSalaryValue.get(), "2500")
-        .click(ui.next.get())
+        .click(ui.next.get());
 
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
       expect(ui.result.resultat.get()).toHaveTextContent("21666,67");
       expect(ui.result.resultatAgreement.get()).toHaveTextContent("21666.67");
-    })
+    });
 
     test(`
      - vérification que l'on demande si le salaire a eu des primes pour un cadre

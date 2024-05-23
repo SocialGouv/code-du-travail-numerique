@@ -98,7 +98,7 @@ describe("<AbsencePeriod />", () => {
   });
 
   it("should show the absence date field when user selected Motif 2", () => {
-    const { getByRole } = render(
+    const { getByRole, getByTestId } = render(
       <AbsencePeriod
         index={0}
         onSelectMotif={() => {}}
@@ -119,11 +119,11 @@ describe("<AbsencePeriod />", () => {
       getByRole("combobox"),
       getByRole("option", { name: "Motif 2" })
     );
-    expect(getByRole("textbox", { name: `0.dateAbsence` })).toBeInTheDocument();
+    expect(getByTestId("absence-date-0")).toBeInTheDocument();
   });
 
   it("should show the absence date field if selected motif required date", () => {
-    const { getByRole } = render(
+    const { getByRole, getByTestId } = render(
       <AbsencePeriod
         index={0}
         onSelectMotif={() => {}}
@@ -148,7 +148,7 @@ describe("<AbsencePeriod />", () => {
         }) as HTMLOptionElement
       ).selected
     ).toBe(true);
-    expect(getByRole("textbox", { name: `0.dateAbsence` })).toBeInTheDocument();
+    expect(getByTestId("absence-date-0")).toBeInTheDocument();
   });
 
   it("should call callbacks on user actions", () => {
