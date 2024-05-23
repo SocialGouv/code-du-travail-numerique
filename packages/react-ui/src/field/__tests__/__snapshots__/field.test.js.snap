@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputCheckbox /> should render checkbox field 1`] = `
+<div>
+  <label
+    class="sc-aXZVg utbZE"
+    for="checkbox"
+  >
+    <input
+      class="sc-gEvEer jFblLw"
+      id="checkbox"
+      name="checkbox"
+      type="checkbox"
+    />
+    option
+  </label>
+</div>
+`;
+
+exports[`<InputDate /> should render input date field 1`] = `
+<div>
+  <div
+    class="sc-iGgWBj kZPIXv"
+  >
+    <input
+      class="sc-gsFSXq igmAJA"
+      data-input="true"
+      name="input_date"
+      type="date"
+      value=""
+    />
+  </div>
+</div>
+`;

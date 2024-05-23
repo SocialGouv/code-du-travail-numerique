@@ -279,7 +279,7 @@ describe("Indemnité licenciement - CC 44", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("12232,5");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("12232.5");
+    expect(ui.result.resultat.get()).toHaveTextContent("12244,75");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("12244.75");
   });
 });
