@@ -33,12 +33,17 @@ jobs:
           name: e2e-screenshots
           path: |
             packages/code-du-travail-frontend/cypress/screenshots
-      - name: Create the Mattermost Message
-        if: failure()
-        run: |
-          echo "{\"text\":\"Les tests automatiques e2e ont échoué sur la pré-prod. Reportez-vous à ce run : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} (cc: @max @victorz @carolinebda @martial)\"}" > mattermost.json
-      - name: Send message to mattermost if failure
+      - name: Send message to mattermost when done
+        uses: mattermost/action-mattermost-notify@master
+        if: always()
+        with:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          TEXT: |-
+            Les tests automatiques e2e sont terminés: **${{ job.status }}** ([logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})).
+      - name: Ping the team when failed
         uses: mattermost/action-mattermost-notify@master
         if: failure()
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          TEXT: |-
+            Tests e2e en échec @max @victorz @carolinebda @martial :scream:
