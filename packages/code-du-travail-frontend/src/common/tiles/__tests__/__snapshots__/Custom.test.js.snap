@@ -3,7 +3,7 @@
 exports[`<CallToActionTile /> should render 1`] = `
 <div>
   <div
-    class="sc-ibQAlb jRDQvX sc-bVVIoq hVaWCs"
+    class="sc-ibQAlb jRDQvX sc-YysOf hYhJoL"
   >
     <div
       class="sc-guJBdh jBpgpS"
@@ -53,13 +53,13 @@ exports[`<CallToActionTile /> should render 1`] = `
       class="sc-gmgFlS ikhbYa"
     >
       <div
-        class="sc-ePDLzJ hxUKCS"
+        class="sc-ktPPKK fyffqE"
       >
         <p>
           Cette tuile vous fera dire bonjour !
         </p>
         <div
-          class="sc-dPZUQH gsuvnq"
+          class="sc-cVzyXs hMbGmR"
         >
           <p
             class="sc-krNlru cdYvzt"

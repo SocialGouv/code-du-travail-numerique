@@ -3,7 +3,7 @@
 exports[`<TypeRemuneration /> should render 1`] = `
 <div>
   <legend
-    class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
+    class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
     data-testid="question-label"
   >
     <span
@@ -18,17 +18,17 @@ exports[`<TypeRemuneration /> should render 1`] = `
     </span>
   </legend>
   <div
-    class="sc-kWtpeL gqNWDj"
+    class="sc-eZYNyq hfThTO"
   >
     <input
-      class="sc-ecPEgm ljcJlA"
+      class="sc-dlWCHZ kILyb"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="sc-hHOBiw gRpul"
+      class="sc-EgOXT cVMIuj"
       for="typeRemuneration-amount"
     >
       <span>
@@ -41,17 +41,17 @@ exports[`<TypeRemuneration /> should render 1`] = `
     </label>
   </div>
   <div
-    class="sc-kWtpeL gqNWDj"
+    class="sc-eZYNyq hfThTO"
   >
     <input
-      class="sc-ecPEgm ljcJlA"
+      class="sc-dlWCHZ kILyb"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="sc-hHOBiw gRpul"
+      class="sc-EgOXT cVMIuj"
       for="typeRemuneration-pay"
     >
       <span>

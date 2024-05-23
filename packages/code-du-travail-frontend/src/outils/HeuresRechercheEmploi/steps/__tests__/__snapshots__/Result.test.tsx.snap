@@ -3,7 +3,7 @@
 exports[`<StepResult /> should render no results 1`] = `
 <div>
   <h2
-    class="sc-iXzfSG chPUXZ"
+    class="sc-bVVIoq dqmLUd"
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
@@ -43,7 +43,7 @@ exports[`<StepResult /> should render no results 1`] = `
       class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-iXzfSG chPUXZ"
+        class="sc-bVVIoq dqmLUd"
       >
         Éléments saisis
       </h2>
@@ -78,7 +78,7 @@ exports[`<StepResult /> should render no results 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-iXzfSG chPUXZ"
+        class="sc-bVVIoq dqmLUd"
       >
         Sources
       </h2>
@@ -101,7 +101,7 @@ exports[`<StepResult /> should render no results 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-ePDLzJ ftwa-dj koafFW"
+    class="sc-jsJBEP sc-ktPPKK ftwa-dj ijGWZI"
   >
     <div
       class="sc-hRJfrW fHhwIY"
@@ -130,7 +130,7 @@ exports[`<StepResult /> should render no results 1`] = `
         class="sc-klVQfs giEiHo"
       >
         <p
-          class="sc-krNlru kcuIcb sc-bVVIoq jsmGy"
+          class="sc-krNlru kcuIcb sc-YysOf hOIywF"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -146,7 +146,7 @@ exports[`<StepResult /> should render no results 1`] = `
 exports[`<StepResult /> should render with duration 1`] = `
 <div>
   <h2
-    class="sc-iXzfSG chPUXZ"
+    class="sc-bVVIoq dqmLUd"
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
@@ -155,19 +155,19 @@ exports[`<StepResult /> should render with duration 1`] = `
      :
     <br />
     <strong
-      class="sc-lnPyaJ hkoOxF"
+      class="sc-dPZUQH fggKzv"
       role="alert"
     >
       2 heures par jour
     </strong>
      
     <sup
-      class="sc-dExYaf hZxran"
+      class="sc-iXzfSG iMwOiJ"
     />
     .
   </p>
   <h2
-    class="sc-iXzfSG chPUXZ"
+    class="sc-bVVIoq dqmLUd"
   >
     Rémunération pendant les heures d’absence autorisée
   </h2>
@@ -175,7 +175,7 @@ exports[`<StepResult /> should render with duration 1`] = `
     Le salaire est maintenu.
   </p>
   <h2
-    class="sc-iXzfSG chPUXZ"
+    class="sc-bVVIoq dqmLUd"
   >
     Conditions d’utilisation
   </h2>
@@ -215,7 +215,7 @@ exports[`<StepResult /> should render with duration 1`] = `
       class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-iXzfSG chPUXZ"
+        class="sc-bVVIoq dqmLUd"
       >
         Éléments saisis
       </h2>
@@ -243,7 +243,7 @@ exports[`<StepResult /> should render with duration 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-iXzfSG chPUXZ"
+        class="sc-bVVIoq dqmLUd"
       >
         Sources
       </h2>
@@ -266,7 +266,7 @@ exports[`<StepResult /> should render with duration 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-ePDLzJ ftwa-dj koafFW"
+    class="sc-jsJBEP sc-ktPPKK ftwa-dj ijGWZI"
   >
     <div
       class="sc-hRJfrW fHhwIY"
@@ -295,7 +295,7 @@ exports[`<StepResult /> should render with duration 1`] = `
         class="sc-klVQfs giEiHo"
       >
         <p
-          class="sc-krNlru kcuIcb sc-bVVIoq jsmGy"
+          class="sc-krNlru kcuIcb sc-YysOf hOIywF"
         >
           Attention il peut exister une durée plus favorable
         </p>

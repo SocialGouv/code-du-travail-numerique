@@ -3,10 +3,10 @@
 exports[`FragmentConditionne Should display element within 1`] = `
 <div>
   <div
-    class="sc-fMMURN wfgCt"
+    class="sc-bDpDS aFpMf"
   >
     <h2
-      class="sc-cVzyXs fljumP"
+      class="sc-fMMURN izhzLx"
     >
       <span
         class="sc-gsFSXq ljkohw"
@@ -97,10 +97,10 @@ exports[`FragmentConditionne Should display element within 1`] = `
           Il faut saisir la chambre de commerce et d'industrie.
         </p>
         <div
-          class="sc-dPZUQH cPUyur"
+          class="sc-cVzyXs irJCZI"
         >
           <strong
-            class="sc-eBHhsj eVSIbs"
+            class="sc-ePDLzJ bKHEgD"
           >
             Ou s'adresser ?
           </strong>

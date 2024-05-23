@@ -4,7 +4,7 @@ exports[`<StepCTT /> should render 1`] = `
 <div>
   <form>
     <legend
-      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
+      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
       data-testid="question-label"
     >
       <span
@@ -19,14 +19,14 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eBHhsj czXmMA"
+      class="sc-ePDLzJ hqEkqb"
       data-testid="cttFormation"
     >
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="cttFormation-oui"
           id="cttFormation-oui"
           name="cttFormation"
@@ -34,17 +34,17 @@ exports[`<StepCTT /> should render 1`] = `
           value="true"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="cttFormation-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="cttFormation-non"
           id="cttFormation-non"
           name="cttFormation"
@@ -52,7 +52,7 @@ exports[`<StepCTT /> should render 1`] = `
           value="false"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="cttFormation-non"
         >
           Non
@@ -60,7 +60,7 @@ exports[`<StepCTT /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
+      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
       data-testid="question-label"
     >
       <span
@@ -75,14 +75,14 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eBHhsj czXmMA"
+      class="sc-ePDLzJ hqEkqb"
       data-testid="ruptureContratFauteGrave"
     >
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="ruptureContratFauteGrave-oui"
           id="ruptureContratFauteGrave-oui"
           name="ruptureContratFauteGrave"
@@ -90,17 +90,17 @@ exports[`<StepCTT /> should render 1`] = `
           value="true"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="ruptureContratFauteGrave-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="ruptureContratFauteGrave-non"
           id="ruptureContratFauteGrave-non"
           name="ruptureContratFauteGrave"
@@ -108,7 +108,7 @@ exports[`<StepCTT /> should render 1`] = `
           value="false"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="ruptureContratFauteGrave-non"
         >
           Non
@@ -116,7 +116,7 @@ exports[`<StepCTT /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
+      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
       data-testid="question-label"
     >
       <span
@@ -131,14 +131,14 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eBHhsj czXmMA"
+      class="sc-ePDLzJ hqEkqb"
       data-testid="propositionCDIFinContrat"
     >
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="propositionCDIFinContrat-oui"
           id="propositionCDIFinContrat-oui"
           name="propositionCDIFinContrat"
@@ -146,17 +146,17 @@ exports[`<StepCTT /> should render 1`] = `
           value="true"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="propositionCDIFinContrat-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="propositionCDIFinContrat-non"
           id="propositionCDIFinContrat-non"
           name="propositionCDIFinContrat"
@@ -164,7 +164,7 @@ exports[`<StepCTT /> should render 1`] = `
           value="false"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="propositionCDIFinContrat-non"
         >
           Non
@@ -172,7 +172,7 @@ exports[`<StepCTT /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
+      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
       data-testid="question-label"
     >
       <span
@@ -187,14 +187,14 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eBHhsj czXmMA"
+      class="sc-ePDLzJ hqEkqb"
       data-testid="refusSouplesse"
     >
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="refusSouplesse-oui"
           id="refusSouplesse-oui"
           name="refusSouplesse"
@@ -202,17 +202,17 @@ exports[`<StepCTT /> should render 1`] = `
           value="true"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="refusSouplesse-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="refusSouplesse-non"
           id="refusSouplesse-non"
           name="refusSouplesse"
@@ -220,7 +220,7 @@ exports[`<StepCTT /> should render 1`] = `
           value="false"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="refusSouplesse-non"
         >
           Non

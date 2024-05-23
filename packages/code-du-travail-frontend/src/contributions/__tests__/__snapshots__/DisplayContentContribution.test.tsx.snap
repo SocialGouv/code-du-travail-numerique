@@ -3,10 +3,10 @@
 exports[`DisplayContentContribution Accordions should not fail if no summary tag 1`] = `
 <div>
   <div
-    class="sc-dxcDKg jpwKns"
+    class="sc-dExYaf eZgiiM"
   >
     <div
-      class="sc-gvZAcH cGuxKQ"
+      class="sc-iapWAC haLSUo"
       data-accordion-component="Accordion"
       data-testid="contrib-accordion"
     >
@@ -78,7 +78,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
       
                 </p>
                 <div
-                  class="sc-gvZAcH cGuxKQ"
+                  class="sc-iapWAC haLSUo"
                   data-accordion-component="Accordion"
                   data-testid="contrib-accordion"
                 >
@@ -143,7 +143,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                         >
                           <div>
                             <div
-                              class="sc-gvZAcH cGuxKQ"
+                              class="sc-iapWAC haLSUo"
                               data-accordion-component="Accordion"
                               data-testid="contrib-accordion"
                             >
@@ -387,10 +387,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
 
 exports[`DisplayContentContribution Accordions should replace details element by one accordion 1`] = `
 <div
-  class="sc-dxcDKg jpwKns"
+  class="sc-dExYaf eZgiiM"
 >
   <div
-    class="sc-gvZAcH cGuxKQ"
+    class="sc-iapWAC haLSUo"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
@@ -469,10 +469,10 @@ exports[`DisplayContentContribution Accordions should replace details element by
 
 exports[`DisplayContentContribution Accordions should replace details element within details element 1`] = `
 <div
-  class="sc-dxcDKg jpwKns"
+  class="sc-dExYaf eZgiiM"
 >
   <div
-    class="sc-gvZAcH cGuxKQ"
+    class="sc-iapWAC haLSUo"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
@@ -537,7 +537,7 @@ exports[`DisplayContentContribution Accordions should replace details element wi
           >
             <div>
               <div
-                class="sc-gvZAcH cGuxKQ"
+                class="sc-iapWAC haLSUo"
                 data-accordion-component="Accordion"
                 data-testid="contrib-accordion"
               >
@@ -624,10 +624,10 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
 <body>
   <div>
     <div
-      class="sc-dxcDKg jpwKns"
+      class="sc-dExYaf eZgiiM"
     >
       <div
-        class="sc-gvZAcH cGuxKQ"
+        class="sc-iapWAC haLSUo"
         data-accordion-component="Accordion"
         data-testid="contrib-accordion"
       >
@@ -777,7 +777,7 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
 
 exports[`DisplayContentContribution Alerts should replace div with alert class in li component to Alert component 1`] = `
 <div
-  class="sc-dxcDKg jpwKns"
+  class="sc-dExYaf eZgiiM"
 >
   <div>
     <p>
@@ -843,7 +843,7 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
 
 exports[`DisplayContentContribution Alerts should replace div with alert class to Alert component 1`] = `
 <div
-  class="sc-dxcDKg jpwKns"
+  class="sc-dExYaf eZgiiM"
 >
   <div
     class="sc-jsJBEP ftwa-dj"
@@ -860,10 +860,10 @@ exports[`DisplayContentContribution Alerts should replace div with alert class t
 
 exports[`DisplayContentContribution Headings should not add headings higher than h6 for accordion 1`] = `
 <div
-  class="sc-dxcDKg jpwKns"
+  class="sc-dExYaf eZgiiM"
 >
   <div
-    class="sc-gvZAcH cGuxKQ"
+    class="sc-iapWAC haLSUo"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
@@ -942,7 +942,7 @@ exports[`DisplayContentContribution Headings should not add headings higher than
 exports[`DisplayContentContribution Tables should render correctly a table with multiple head lines 1`] = `
 <div>
   <div
-    class="sc-dxcDKg jpwKns"
+    class="sc-dExYaf eZgiiM"
   >
     <table
       class="sc-cmaqmh juENof"

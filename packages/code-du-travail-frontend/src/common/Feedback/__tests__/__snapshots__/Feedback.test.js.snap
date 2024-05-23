@@ -3,7 +3,7 @@
 exports[`<Feedback/> should render 1`] = `
 <div>
   <div
-    class="sc-gEvEer hpVpdb sc-iapWAC hbDQWH"
+    class="sc-gEvEer hpVpdb sc-lnPyaJ fUzeBq"
   >
     <div
       class="sc-aXZVg gZgZQL"
@@ -12,10 +12,10 @@ exports[`<Feedback/> should render 1`] = `
         class="sc-iGgWBj cRLRjd"
       >
         <div
-          class="sc-kRRyDe heHQjc"
+          class="sc-kqGoIF gSKWVS"
         >
           <h2
-            class="sc-knuQbY jnfjLo sc-kAyceB kDiAsV"
+            class="sc-dxcDKg gzfSFJ sc-kAyceB kDiAsV"
           >
             <span
               class="sc-gsFSXq cdZUuw"
@@ -23,15 +23,15 @@ exports[`<Feedback/> should render 1`] = `
             Avez-vous trouvé la réponse à votre question ?
           </h2>
           <p
-            class="sc-ERObt hYfztt"
+            class="sc-gvZAcH cGMfGa"
           >
             <button
-              class="sc-kOPcWz cpQXMn sc-dNsVcS eQksMs"
+              class="sc-kOPcWz cpQXMn sc-kRRyDe eWYjtA"
             >
               Non
             </button>
             <button
-              class="sc-kOPcWz cpQXMn sc-dNsVcS eQksMs"
+              class="sc-kOPcWz cpQXMn sc-kRRyDe eWYjtA"
             >
               Oui
             </button>
@@ -46,7 +46,7 @@ exports[`<Feedback/> should render 1`] = `
 exports[`<Feedback/> should render form once user answer no 1`] = `
 <div>
   <div
-    class="sc-gEvEer hpVpdb sc-iapWAC hbDQWH"
+    class="sc-gEvEer hpVpdb sc-lnPyaJ fUzeBq"
   >
     <div
       class="sc-aXZVg gZgZQL"
@@ -55,10 +55,10 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
         class="sc-iGgWBj cRLRjd"
       >
         <div
-          class="sc-kRRyDe heHQjc"
+          class="sc-kqGoIF gSKWVS"
         >
           <h2
-            class="sc-knuQbY jnfjLo sc-kAyceB kDiAsV"
+            class="sc-dxcDKg gzfSFJ sc-kAyceB kDiAsV"
           >
             <span
               class="sc-gsFSXq cdZUuw"
@@ -68,10 +68,10 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
         </div>
         <form>
           <fieldset
-            class="sc-dxcDKg gJGHgm"
+            class="sc-dExYaf lewfNO"
           >
             <legend
-              class="sc-gvZAcH jWLEgm"
+              class="sc-iapWAC lhWvfu"
             >
               Pouvez-vous nous en dire plus ?
             </legend>
@@ -129,13 +129,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             </label>
           </fieldset>
           <label
-            class="sc-bdOgaJ dITYxC"
+            class="sc-dNsVcS JpRGI"
             for="suggestion"
           >
             Faire une suggestion pour améliorer cette page
           </label>
           <textarea
-            class="sc-bVHCgj krYrqJ sc-kMribo fOxSIS"
+            class="sc-gdyeKB kWUKFl sc-ERObt hsIPks"
             cols="50"
             id="suggestion"
             maxlength="150"
@@ -159,10 +159,10 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             </div>
           </div>
           <div
-            class="sc-empnci fIyJgd"
+            class="sc-fulCBj dCCqfF"
           >
             <button
-              class="sc-kOPcWz dSQWfG sc-dNsVcS eQksMs"
+              class="sc-kOPcWz dSQWfG sc-kRRyDe eWYjtA"
             >
               Envoyer
             </button>
@@ -198,7 +198,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 exports[`<Feedback/> should render form once user answer yes 1`] = `
 <div>
   <div
-    class="sc-gEvEer hpVpdb sc-iapWAC hbDQWH"
+    class="sc-gEvEer hpVpdb sc-lnPyaJ fUzeBq"
   >
     <div
       class="sc-aXZVg gZgZQL"
@@ -207,10 +207,10 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
         class="sc-iGgWBj cRLRjd"
       >
         <div
-          class="sc-kRRyDe heHQjc"
+          class="sc-kqGoIF gSKWVS"
         >
           <h2
-            class="sc-knuQbY jnfjLo sc-kAyceB kDiAsV"
+            class="sc-dxcDKg gzfSFJ sc-kAyceB kDiAsV"
           >
             <span
               class="sc-gsFSXq cdZUuw"
@@ -220,13 +220,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
         </div>
         <form>
           <label
-            class="sc-bdOgaJ dITYxC"
+            class="sc-dNsVcS JpRGI"
             for="suggestion"
           >
             Faire une suggestion pour améliorer cette page
           </label>
           <textarea
-            class="sc-bVHCgj krYrqJ sc-kMribo fOxSIS"
+            class="sc-gdyeKB kWUKFl sc-ERObt hsIPks"
             cols="50"
             id="suggestion"
             maxlength="150"
@@ -250,10 +250,10 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
             </div>
           </div>
           <div
-            class="sc-empnci fIyJgd"
+            class="sc-fulCBj dCCqfF"
           >
             <button
-              class="sc-kOPcWz dSQWfG sc-dNsVcS eQksMs"
+              class="sc-kOPcWz dSQWfG sc-kRRyDe eWYjtA"
             >
               Envoyer
             </button>

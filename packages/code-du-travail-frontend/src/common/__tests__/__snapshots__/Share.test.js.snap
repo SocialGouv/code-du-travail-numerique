@@ -3,19 +3,19 @@
 exports[`<Share /> renders 1`] = `
 <div>
   <div
-    class="sc-ePDLzJ jPWWwj"
+    class="sc-ktPPKK ghtAph"
   >
     <button
-      class="sc-bVVIoq eeEtLU no-after spacing-left"
+      class="sc-YysOf gtnAnj no-after spacing-left"
       title="Partager sur Facebook"
       type="button"
     >
       <span
-        class="sc-eBHhsj gIMjDw"
+        class="sc-ePDLzJ fwrduz"
       >
         <svg
           aria-hidden="true"
-          class="sc-iXzfSG jtgLlq"
+          class="sc-bVVIoq eOeUki"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -33,16 +33,16 @@ exports[`<Share /> renders 1`] = `
       </span>
     </button>
     <a
-      class="sc-dPZUQH cJPaNA spacing-left"
+      class="sc-cVzyXs bpjZOP spacing-left"
       href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=undefined%0A%0Ahttp%3A%2F%2Flocalhost%2F"
       title="Envoyer par email"
     >
       <span
-        class="sc-eBHhsj gIMjDw"
+        class="sc-ePDLzJ fwrduz"
       >
         <svg
           aria-hidden="true"
-          class="sc-iXzfSG jtgLlq"
+          class="sc-bVVIoq eOeUki"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -64,16 +64,16 @@ exports[`<Share /> renders 1`] = `
       </span>
     </a>
     <button
-      class="sc-bVVIoq eeEtLU spacing-left"
+      class="sc-YysOf gtnAnj spacing-left"
       title="Partager sur LinkedIn"
       type="button"
     >
       <span
-        class="sc-eBHhsj gIMjDw"
+        class="sc-ePDLzJ fwrduz"
       >
         <svg
           aria-hidden="true"
-          class="sc-iXzfSG jtgLlq"
+          class="sc-bVVIoq eOeUki"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -94,16 +94,16 @@ exports[`<Share /> renders 1`] = `
       class="sc-hCPjZK dlWASs"
     >
       <button
-        class="sc-bVVIoq eeEtLU spacing-left"
+        class="sc-YysOf gtnAnj spacing-left"
         title="Plus d’options"
         type="button"
       >
         <span
-          class="sc-eBHhsj gIMjDw"
+          class="sc-ePDLzJ fwrduz"
         >
           <svg
             aria-hidden="true"
-            class="sc-iXzfSG jtgLlq"
+            class="sc-bVVIoq eOeUki"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"

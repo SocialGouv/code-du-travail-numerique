@@ -3,10 +3,10 @@
 exports[`<FicheServicePublic /> should render 1`] = `
 <div>
   <div
-    class="sc-kqGoIF djvxHj"
+    class="sc-eulNck eVSCMs"
   >
     <p
-      class="sc-iapWAC hOKVmi"
+      class="sc-lnPyaJ koXrfX"
     >
       
             La démission vous permet de rompre votre contrat de travail de votre propre initiative. Cependant, pour être valable, elle doit respecter certaines conditions. Vous devez prévenir votre employeur de votre volonté de démissionner. Sauf en cas de dispense, vous poursuivez votre activité jusqu'au terme du préavis de démission. Des dispositions spécifiques de rupture anticipée du contrat de travail sont prévues selon votre situation au moment de votre démission (
@@ -86,7 +86,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           class="sc-jMakVo gHeVja"
         >
           <div
-            class="sc-ePDLzJ eCkqUq"
+            class="sc-ktPPKK jDDmpo"
             data-accordion-component="Accordion"
           >
             <div>
@@ -226,14 +226,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <ul>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           Dans le cadre d'une rupture volontaire du contrat de travail par le salarié
                         </p>
                       </li>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           
@@ -246,7 +246,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           
@@ -256,7 +256,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           
@@ -266,7 +266,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           
@@ -447,7 +447,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <div
                       aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
-                      class="sc-ibQAlb fuLYQY sc-iXzfSG akpvg no-after"
+                      class="sc-ibQAlb fuLYQY sc-bVVIoq hWWKRA no-after"
                     >
                       <div
                         class="sc-guJBdh jBpgpS"
@@ -633,14 +633,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           </p>
                           <ul>
                             <li
-                              class="sc-bVVIoq hMTanr"
+                              class="sc-YysOf iItjvg"
                             >
                               <p>
                                 Soit par convention collective ou accord collectif
                               </p>
                             </li>
                             <li
-                              class="sc-bVVIoq hMTanr"
+                              class="sc-YysOf iItjvg"
                             >
                               <p>
                                 
@@ -653,7 +653,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               </p>
                             </li>
                             <li
-                              class="sc-bVVIoq hMTanr"
+                              class="sc-YysOf iItjvg"
                             >
                               <p>
                                 Soit par le droit local (en Alsace-Moselle)
@@ -667,7 +667,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             Si vous travaillez à temps partiel, la durée calendaire du préavis de démission est la même que celle d'un salarié à temps plein.
                           </p>
                           <div
-                            class="sc-iGgWBj sc-dExYaf cWzIZL eSDbDW"
+                            class="sc-iGgWBj sc-iXzfSG cWzIZL akpvg"
                           >
                             <h5
                               class="sc-kAyceB dvmaTz"
@@ -703,7 +703,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <ul>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           
@@ -713,7 +713,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           
@@ -784,7 +784,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             Vous pouvez demander à votre employeur de vous dispenser d'effectuer votre préavis (par écrit ou par oral) :
                           </p>
                           <div
-                            class="sc-ePDLzJ eCkqUq"
+                            class="sc-ktPPKK jDDmpo"
                             data-accordion-component="Accordion"
                           >
                             <div>
@@ -943,14 +943,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <ul>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           Accord entre le salarié et l'employeur
                         </p>
                       </li>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           
@@ -963,7 +963,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           Arrêt de travail
@@ -973,7 +973,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           Dispositions conventionnelles
@@ -1001,10 +1001,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       Toutefois, des dispositions conventionnelles ou, à défaut, un usage dans la localité ou la profession peuvent prévoir des temps d'absence pour rechercher un emploi pendant la durée du préavis.
                     </p>
                     <div
-                      class="sc-dPZUQH cPUyur"
+                      class="sc-cVzyXs irJCZI"
                     >
                       <strong
-                        class="sc-eBHhsj eVSIbs"
+                        class="sc-ePDLzJ bKHEgD"
                       >
                         Ou s'adresser ?
                       </strong>
@@ -1014,7 +1014,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         Agessa et Maison des artistes - Sécurité sociale
                       </h3>
                       <div
-                        class="sc-ePDLzJ eCkqUq"
+                        class="sc-ktPPKK jDDmpo"
                         data-accordion-component="Accordion"
                       >
                         <div>
@@ -1409,28 +1409,28 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <ul>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           Certificat de travail
                         </p>
                       </li>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           Attestation Pôle emploi
                         </p>
                       </li>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           Solde de tout compte
                         </p>
                       </li>
                       <li
-                        class="sc-bVVIoq hMTanr"
+                        class="sc-YysOf iItjvg"
                       >
                         <p>
                           En cas de dispositifs de participation, d'intéressement et des plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
@@ -1459,7 +1459,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
     </div>
     <div
       aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
-      class="sc-ibQAlb fuLYQY sc-iXzfSG akpvg no-after"
+      class="sc-ibQAlb fuLYQY sc-bVVIoq hWWKRA no-after"
     >
       <div
         class="sc-guJBdh jBpgpS"

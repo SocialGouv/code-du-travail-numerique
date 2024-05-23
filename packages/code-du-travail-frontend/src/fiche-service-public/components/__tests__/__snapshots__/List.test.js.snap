@@ -4,7 +4,7 @@ exports[`<List /> should render and increment heading level of children by one 1
 <div>
   <ul>
     <li
-      class="sc-iapWAC hkBTjP"
+      class="sc-lnPyaJ kyZAcy"
     >
       <h3
         class="sc-kAyceB dvmaTz"
@@ -13,7 +13,7 @@ exports[`<List /> should render and increment heading level of children by one 1
       </h3>
     </li>
     <li
-      class="sc-iapWAC hkBTjP"
+      class="sc-lnPyaJ kyZAcy"
     >
       <p>
         ok

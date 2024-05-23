@@ -1,4 +1,4 @@
-import { fireEvent, render, RenderResult } from "@testing-library/react";
+import { render, RenderResult } from "@testing-library/react";
 import React from "react";
 import { CalculateurIndemniteLicenciement } from "../..";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
@@ -23,7 +23,11 @@ describe("Indemnité licenciement - CC 2148", () => {
   let userAction: UserAction;
   beforeEach(() => {
     rendering = render(
-      <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
     );
     userAction = new UserAction();
 
@@ -37,29 +41,19 @@ describe("Indemnité licenciement - CC 2148", () => {
       .click(ui.next.get());
   });
   test(`Cas nominal`, () => {
-    fireEvent.change(ui.information.agreement2148.age.get(), {
-      target: { value: "42" },
-    });
-    fireEvent.click(ui.next.get());
+    userAction.setInput(ui.information.agreement2148.age.get(), "42");
+    userAction.click(ui.next.get());
 
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2018" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2018");
+    userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
+    userAction.setInput(ui.seniority.endDate.get(), "01/01/2022");
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
 
-    fireEvent.click(ui.salary.hasPartialTime.non.get());
-    fireEvent.click(ui.salary.hasSameSalary.oui.get());
-    fireEvent.change(ui.salary.sameSalaryValue.get(), {
-      target: { value: "2500" },
-    });
+    userAction.click(ui.salary.hasPartialTime.non.get());
+    userAction.click(ui.salary.hasSameSalary.oui.get());
+    userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
 
     expect(
       rendering.queryByText(
@@ -67,26 +61,25 @@ describe("Indemnité licenciement - CC 2148", () => {
       )
     ).not.toBeInTheDocument();
     userAction.click(ui.previous.get());
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "01/06/2022" },
-    });
-    fireEvent.click(ui.next.get());
+    userAction.setInput(ui.seniority.endDate.get(), "01/06/2022");
+    userAction.click(ui.next.get());
     expect(
       rendering.queryByText(
         "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
       )
     ).toBeInTheDocument();
-    fireEvent.click(
+    userAction.click(
       ui.salary.agreementWithNoticeSalary.knowingLastSalary.oui.get()
     );
     expect(
       rendering.queryByText("Salaires perçus pendant le préavis")
     ).toBeInTheDocument();
-    fireEvent.change(ui.salary.agreementWithNoticeSalary.salaries.getAll()[0], {
-      target: { value: "3000" },
-    });
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[0],
+      "3000"
+    );
 
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("3900 €");
@@ -111,34 +104,22 @@ describe("Indemnité licenciement - CC 2148", () => {
       .click(ui.previous.get())
       .click(ui.contract.arretTravail.oui.get());
 
-    fireEvent.change(ui.contract.dateArretTravail.get(), {
-      target: { value: "01/01/2022" },
-    });
+    userAction.setInput(ui.contract.dateArretTravail.get(), "01/01/2022");
     userAction.click(ui.next.get()).click(ui.next.get());
 
-    fireEvent.change(ui.information.agreement2148.age.get(), {
-      target: { value: "42" },
-    });
-    fireEvent.click(ui.next.get());
+    userAction.setInput(ui.information.agreement2148.age.get(), "42");
+    userAction.click(ui.next.get());
 
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2018" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "01/06/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2018");
+    userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
+    userAction.setInput(ui.seniority.endDate.get(), "01/06/2022");
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
 
-    fireEvent.click(ui.salary.hasPartialTime.non.get());
-    fireEvent.click(ui.salary.hasSameSalary.oui.get());
-    fireEvent.change(ui.salary.sameSalaryValue.get(), {
-      target: { value: "2500" },
-    });
+    userAction.click(ui.salary.hasPartialTime.non.get());
+    userAction.click(ui.salary.hasSameSalary.oui.get());
+    userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
     expect(
       rendering.queryByText(
         "Connaissez-vous le montant des salaires perçus pendant le préavis ?"

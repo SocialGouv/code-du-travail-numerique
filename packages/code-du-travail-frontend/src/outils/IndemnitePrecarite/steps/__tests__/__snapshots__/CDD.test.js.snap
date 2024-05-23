@@ -4,7 +4,7 @@ exports[`<StepCDD /> should render 1`] = `
 <div>
   <form>
     <legend
-      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
+      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
       data-testid="question-label"
     >
       <span
@@ -19,14 +19,14 @@ exports[`<StepCDD /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eBHhsj czXmMA"
+      class="sc-ePDLzJ hqEkqb"
       data-testid="finContratPeriodeDessai"
     >
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="finContratPeriodeDessai-oui"
           id="finContratPeriodeDessai-oui"
           name="finContratPeriodeDessai"
@@ -34,17 +34,17 @@ exports[`<StepCDD /> should render 1`] = `
           value="true"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="finContratPeriodeDessai-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="finContratPeriodeDessai-non"
           id="finContratPeriodeDessai-non"
           name="finContratPeriodeDessai"
@@ -52,7 +52,7 @@ exports[`<StepCDD /> should render 1`] = `
           value="false"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="finContratPeriodeDessai-non"
         >
           Non
@@ -60,7 +60,7 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
+      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
       data-testid="question-label"
     >
       <span
@@ -75,14 +75,14 @@ exports[`<StepCDD /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eBHhsj czXmMA"
+      class="sc-ePDLzJ hqEkqb"
       data-testid="propositionCDIFindeContrat"
     >
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="propositionCDIFindeContrat-oui"
           id="propositionCDIFindeContrat-oui"
           name="propositionCDIFindeContrat"
@@ -90,17 +90,17 @@ exports[`<StepCDD /> should render 1`] = `
           value="true"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="propositionCDIFindeContrat-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="propositionCDIFindeContrat-non"
           id="propositionCDIFindeContrat-non"
           name="propositionCDIFindeContrat"
@@ -108,7 +108,7 @@ exports[`<StepCDD /> should render 1`] = `
           value="false"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="propositionCDIFindeContrat-non"
         >
           Non
@@ -116,7 +116,7 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
+      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
       data-testid="question-label"
     >
       <span
@@ -131,14 +131,14 @@ exports[`<StepCDD /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eBHhsj czXmMA"
+      class="sc-ePDLzJ hqEkqb"
       data-testid="interruptionFauteGrave"
     >
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="interruptionFauteGrave-oui"
           id="interruptionFauteGrave-oui"
           name="interruptionFauteGrave"
@@ -146,17 +146,17 @@ exports[`<StepCDD /> should render 1`] = `
           value="true"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="interruptionFauteGrave-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="interruptionFauteGrave-non"
           id="interruptionFauteGrave-non"
           name="interruptionFauteGrave"
@@ -164,7 +164,7 @@ exports[`<StepCDD /> should render 1`] = `
           value="false"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="interruptionFauteGrave-non"
         >
           Non
@@ -172,7 +172,7 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
+      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
       data-testid="question-label"
     >
       <span
@@ -187,14 +187,14 @@ exports[`<StepCDD /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eBHhsj czXmMA"
+      class="sc-ePDLzJ hqEkqb"
       data-testid="refusRenouvellementAuto"
     >
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="refusRenouvellementAuto-oui"
           id="refusRenouvellementAuto-oui"
           name="refusRenouvellementAuto"
@@ -202,17 +202,17 @@ exports[`<StepCDD /> should render 1`] = `
           value="true"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="refusRenouvellementAuto-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-kWtpeL gqNWDj"
+        class="sc-eZYNyq hfThTO"
       >
         <input
-          class="sc-ecPEgm ljcJlA"
+          class="sc-dlWCHZ kILyb"
           data-testid="refusRenouvellementAuto-non"
           id="refusRenouvellementAuto-non"
           name="refusRenouvellementAuto"
@@ -220,7 +220,7 @@ exports[`<StepCDD /> should render 1`] = `
           value="false"
         />
         <label
-          class="sc-hHOBiw gRpul"
+          class="sc-EgOXT cVMIuj"
           for="refusRenouvellementAuto-non"
         >
           Non

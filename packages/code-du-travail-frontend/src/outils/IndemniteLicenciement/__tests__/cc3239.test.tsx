@@ -1,7 +1,8 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import { CalculateurIndemniteLicenciement } from "../index";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
+import { UserAction } from "../../../common";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -18,6 +19,7 @@ Storage.prototype.getItem = jest.fn(
 );
 
 describe("Indemnité licenciement - CC 3239", () => {
+  let userAction: UserAction;
   beforeEach(async () => {
     render(
       <CalculateurIndemniteLicenciement
@@ -26,20 +28,22 @@ describe("Indemnité licenciement - CC 3239", () => {
         displayTitle={""}
       />
     );
-    fireEvent.click(ui.introduction.startButton.get());
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.contract.fauteGrave.non.get());
-    fireEvent.click(ui.contract.inaptitude.non.get());
-    fireEvent.click(ui.contract.arretTravail.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.next.get());
+    userAction = new UserAction();
+    userAction.click(ui.introduction.startButton.get());
+    userAction.click(ui.contract.type.cdi.get());
+    userAction.click(ui.contract.fauteGrave.non.get());
+    userAction.click(ui.contract.inaptitude.non.get());
+    userAction.click(ui.contract.arretTravail.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.next.get());
   });
   test("vérifier l'ineligibilite des ass mat en cas de suspension", async () => {
-    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
-      target: { value: "'Assistant maternel'" },
-    });
-    fireEvent.click(ui.information.agreement3239.congeMatSuspension.oui.get());
-    fireEvent.click(ui.next.get());
+    userAction.changeInputList(
+      ui.information.agreement3239.proCategory.get(),
+      "'Assistant maternel'"
+    );
+    userAction.click(ui.information.agreement3239.congeMatSuspension.oui.get());
+    userAction.click(ui.next.get());
     expect(
       ui.result.legalError.specific.agreement3239.suspendedNotEligible.get()
     ).toBeInTheDocument();
@@ -51,25 +55,18 @@ describe("Indemnité licenciement - CC 3239", () => {
     ).not.toBeInTheDocument();
   });
   test("vérifier l'ineligibilite des ass mat pour ancienneté < 9mois", async () => {
-    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
-      target: { value: "'Assistant maternel'" },
-    });
-    fireEvent.click(ui.information.agreement3239.congeMatSuspension.non.get());
-    fireEvent.change(ui.information.agreement3239.salaryInput.get(), {
-      target: { value: "3000" },
-    });
-    fireEvent.click(ui.next.get());
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "15/09/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "15/09/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
+    userAction.changeInputList(
+      ui.information.agreement3239.proCategory.get(),
+      "'Assistant maternel'"
+    );
+    userAction.click(ui.information.agreement3239.congeMatSuspension.non.get());
+    userAction.setInput(ui.information.agreement3239.salaryInput.get(), "3000");
+    userAction.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
+    userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
+    userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
     expect(
       ui.result.legalError.specific.agreement3239.lessThan9month.get()
     ).toBeInTheDocument();
@@ -81,64 +78,52 @@ describe("Indemnité licenciement - CC 3239", () => {
     ).toBeInTheDocument();
   });
   test("vérifier l'eligibilite des autres salariés pour ancienneté compris entre 8 et 9 mois", async () => {
-    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
-      target: { value: "'Salarié du particulier employeur'" },
-    });
-    fireEvent.click(ui.next.get());
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "15/09/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "15/09/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.salary.hasSameSalary.oui.get());
-    fireEvent.change(ui.salary.sameSalaryValue.get(), {
-      target: { value: "3000" },
-    });
-    fireEvent.click(ui.next.get());
+    userAction.changeInputList(
+      ui.information.agreement3239.proCategory.get(),
+      "'Salarié du particulier employeur'"
+    );
+    userAction.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
+    userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
+    userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.salary.hasSameSalary.oui.get());
+    userAction.setInput(ui.salary.sameSalaryValue.get(), "3000");
+    userAction.click(ui.next.get());
     expect(ui.result.formula.get()).toHaveTextContent("Formule");
   });
   test("vérifier l'ineligibilite des autres salariés pour ancienneté < 8mois", async () => {
-    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
-      target: { value: "'Salarié du particulier employeur'" },
-    });
-    fireEvent.click(ui.next.get());
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "01/08/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "01/08/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
+    userAction.changeInputList(
+      ui.information.agreement3239.proCategory.get(),
+      "'Salarié du particulier employeur'"
+    );
+    userAction.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
+    userAction.setInput(ui.seniority.notificationDate.get(), "01/08/2022");
+    userAction.setInput(ui.seniority.endDate.get(), "01/08/2022");
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
     expect(ui.result.legalError.seniorityToLow.get()).toBeInTheDocument();
     expect(
       ui.result.infoWarning.ineligibleInfoWarningblock.query()
     ).toBeInTheDocument();
   });
   test("vérifier que la CC 3239 n'affecte pas les autres inéligibilités", async () => {
-    fireEvent.click(ui.previous.get());
-    fireEvent.click(ui.previous.get());
-    fireEvent.click(ui.contract.type.cdd.get());
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.previous.get());
+    userAction.click(ui.previous.get());
+    userAction.click(ui.contract.type.cdd.get());
+    userAction.click(ui.next.get());
     expect(
       ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
     expect(
       ui.result.infoWarning.ineligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
-    fireEvent.click(ui.previous.get());
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.contract.fauteGrave.oui.get());
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.previous.get());
+    userAction.click(ui.contract.type.cdi.get());
+    userAction.click(ui.contract.fauteGrave.oui.get());
+    userAction.click(ui.next.get());
     expect(
       ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
@@ -148,21 +133,16 @@ describe("Indemnité licenciement - CC 3239", () => {
   });
 
   test("vérifier qu'on a pas la question sur le temps partiel en tant que salarié du particulier employeur", async () => {
-    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
-      target: { value: "'Salarié du particulier employeur'" },
-    });
-    fireEvent.click(ui.next.get());
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "15/09/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "15/09/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
+    userAction.changeInputList(
+      ui.information.agreement3239.proCategory.get(),
+      "'Salarié du particulier employeur'"
+    );
+    userAction.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
+    userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
+    userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
     expect(
       screen.queryByText(
         "Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?"
@@ -171,25 +151,18 @@ describe("Indemnité licenciement - CC 3239", () => {
   });
 
   test("vérifier qu'on affiche pas la notif sur le congé parental", async () => {
-    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
-      target: { value: "'Assistant maternel'" },
-    });
-    fireEvent.click(ui.information.agreement3239.congeMatSuspension.non.get());
-    fireEvent.change(ui.information.agreement3239.salaryInput.get(), {
-      target: { value: "3000" },
-    });
-    fireEvent.click(ui.next.get());
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2000" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "15/09/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "15/09/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
+    userAction.changeInputList(
+      ui.information.agreement3239.proCategory.get(),
+      "'Assistant maternel'"
+    );
+    userAction.click(ui.information.agreement3239.congeMatSuspension.non.get());
+    userAction.setInput(ui.information.agreement3239.salaryInput.get(), "3000");
+    userAction.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
+    userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
+    userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(
       screen.queryByText(
@@ -199,26 +172,19 @@ describe("Indemnité licenciement - CC 3239", () => {
   });
 
   test("vérifier le calcul pour un salarié du particulier employeur", async () => {
-    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
-      target: { value: "'Salarié du particulier employeur'" },
-    });
-    fireEvent.click(ui.next.get());
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2012" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "01/01/2024" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "01/01/2024" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.salary.hasSameSalary.oui.get());
-    fireEvent.change(ui.salary.sameSalaryValue.get(), {
-      target: { value: "2100" },
-    });
-    fireEvent.click(ui.next.get());
+    userAction.changeInputList(
+      ui.information.agreement3239.proCategory.get(),
+      "'Salarié du particulier employeur'"
+    );
+    userAction.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2012");
+    userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2024");
+    userAction.setInput(ui.seniority.endDate.get(), "01/01/2024");
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.salary.hasSameSalary.oui.get());
+    userAction.setInput(ui.salary.sameSalaryValue.get(), "2100");
+    userAction.click(ui.next.get());
 
     expect(ui.result.resultat.get()).toHaveTextContent("6651,92 €");
 
@@ -236,25 +202,18 @@ describe("Indemnité licenciement - CC 3239", () => {
   });
 
   test("vérifier le calcul pour un assistant maternelle", async () => {
-    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
-      target: { value: "'Assistant maternel'" },
-    });
-    fireEvent.click(ui.information.agreement3239.congeMatSuspension.non.get());
-    fireEvent.change(ui.information.agreement3239.salaryInput.get(), {
-      target: { value: "5000" },
-    });
-    fireEvent.click(ui.next.get());
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2020" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "15/09/2024" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "15/09/2024" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
+    userAction.changeInputList(
+      ui.information.agreement3239.proCategory.get(),
+      "'Assistant maternel'"
+    );
+    userAction.click(ui.information.agreement3239.congeMatSuspension.non.get());
+    userAction.setInput(ui.information.agreement3239.salaryInput.get(), "5000");
+    userAction.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
+    userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2024");
+    userAction.setInput(ui.seniority.endDate.get(), "15/09/2024");
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
 
     expect(ui.result.resultat.get()).toHaveTextContent("62,5 €");
 
