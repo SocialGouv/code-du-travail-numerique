@@ -10,7 +10,13 @@ jest.spyOn(Storage.prototype, "getItem");
 describe("Indemnité licenciement - Step salaire", () => {
   describe("validation de la step salaire", () => {
     beforeEach(() => {
-      render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
+      render(
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
+      );
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
@@ -119,6 +125,42 @@ describe("Indemnité licenciement - Step salaire", () => {
       });
       fireEvent.change(ui.salary.primes.getAll()[1], {
         target: { value: "" },
+      });
+      userEvent.click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    });
+
+    test("Vérification qu'un salaire ne peut pas être inférieur à 0 dans le champ où on saisit plusieurs salaires pour chaque mois", () => {
+      fireEvent.click(ui.salary.hasPartialTime.non.get());
+      fireEvent.click(ui.salary.hasSameSalary.non.get());
+      ui.salary.salaries.getAll().forEach((input) => {
+        fireEvent.change(input, { target: { value: "0" } });
+      });
+      userEvent.click(ui.next.get());
+      expect(
+        screen.queryByText("Vous devez saisir un salaire annuel supérieur à 0")
+      ).toBeInTheDocument();
+      // Avec les bonnes valeurs
+      ui.salary.salaries.getAll().forEach((input) => {
+        fireEvent.change(input, { target: { value: "1000" } });
+      });
+      userEvent.click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    });
+
+    test("Vérification qu'un salaire ne peut pas être inférieur à 0 dans le champ où on saisit un seul salaire annuel", () => {
+      fireEvent.click(ui.salary.hasPartialTime.non.get());
+      fireEvent.click(ui.salary.hasSameSalary.oui.get());
+      fireEvent.change(ui.salary.sameSalaryValue.get(), {
+        target: { value: "0" },
+      });
+      userEvent.click(ui.next.get());
+      expect(
+        screen.queryByText("Vous devez saisir un salaire annuel supérieur à 0")
+      ).toBeInTheDocument();
+      // Avec les bonnes valeurs
+      fireEvent.change(ui.salary.sameSalaryValue.get(), {
+        target: { value: "1000" },
       });
       userEvent.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
