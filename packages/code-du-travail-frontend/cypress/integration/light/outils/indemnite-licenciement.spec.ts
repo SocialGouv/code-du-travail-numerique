@@ -1,3 +1,8 @@
+export const formatToEuro = new Intl.NumberFormat("fr-FR", {
+  style: "currency",
+  currency: "EUR",
+}).format;
+
 describe("Outil - Indemnité de licenciement", () => {
   it("Calcul de l'indemnité de licenciement", () => {
     cy.visit("/outils/indemnite-licenciement");
@@ -32,7 +37,7 @@ describe("Outil - Indemnité de licenciement", () => {
       "contain",
       "À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à :"
     );
-    cy.get("form p strong").should("contain", "6916,67\u00a0€.");
+    cy.get("form p strong").should("contain", formatToEuro(6916.67));
     cy.get("form p").should(
       "contain",
       "Attention il peut exister un montant plus favorable"
