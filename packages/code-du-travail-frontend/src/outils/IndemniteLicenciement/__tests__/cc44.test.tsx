@@ -20,7 +20,13 @@ Storage.prototype.getItem = jest.fn(
 describe("Indemnité licenciement - CC 44", () => {
   describe("parcours avec la convention collective pour valider ses spécificités AVEC PREAVIS", () => {
     beforeEach(() => {
-      render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
+      render(
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
+      );
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
@@ -149,7 +155,13 @@ describe("Indemnité licenciement - CC 44", () => {
 
   describe("parcours avec la convention collective pour valider ses spécificités SANS PREAVIS", () => {
     beforeEach(() => {
-      render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
+      render(
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
+      );
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
@@ -222,13 +234,19 @@ describe("Indemnité licenciement - CC 44", () => {
       userEvent.click(ui.salary.variablePart.non.get());
       userEvent.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-      expect(ui.result.resultat.get()).toHaveTextContent("69000 €");
+      expect(ui.result.resultat.get()).toHaveTextContent("69 000,00 €");
     });
   });
 
   describe("parcours avec une date d'arrêt", () => {
     beforeEach(() => {
-      render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
+      render(
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
+      );
     });
 
     test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, () => {
@@ -273,7 +291,13 @@ describe("Indemnité licenciement - CC 44", () => {
   });
 
   test("parcours avec la convention collective pour valider le résultat", () => {
-    render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
+    );
     const userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())
@@ -312,7 +336,7 @@ describe("Indemnité licenciement - CC 44", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("12232,5");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("12232.5");
+    expect(ui.result.resultat.get()).toHaveTextContent("12 232,50");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("12 232,50");
   });
 });

@@ -23,7 +23,11 @@ describe("Indemnité licenciement - CC 573", () => {
   let userAction: UserAction;
   beforeEach(() => {
     rendering = render(
-      <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
     );
     userAction = new UserAction();
 
@@ -57,7 +61,7 @@ describe("Indemnité licenciement - CC 573", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("10350 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("9000 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("10 350,00 €");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("9 000,00 €");
   });
 });

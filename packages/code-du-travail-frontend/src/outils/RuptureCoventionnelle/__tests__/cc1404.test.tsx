@@ -53,9 +53,9 @@ describe("Indemnité licenciement - CC 1404", () => {
     userEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("10746,67 €");
-    expect(ui.result.resultatLegal.get()).toHaveTextContent("10746.67 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("10746.67 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("10 746,67 €");
+    expect(ui.result.resultatLegal.get()).toHaveTextContent("10 746,67 €");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("10 746,67 €");
     expect(ui.result.dismissalType.mobility.query()).not.toBeInTheDocument();
   });
 });
