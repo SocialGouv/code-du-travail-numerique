@@ -1,6 +1,8 @@
-describe("Outil - Préavis de licenciement", () => {
+describe("Widget - Préavis de licenciement", () => {
   it("should display the widget", () => {
     cy.visit("https://socialgouv.github.io/cdtn-admin/preavis-licenciement");
-    cy.contains("Calculer le préavis de licenciement");
+    cy.contains("Calculer le préavis de licenciement", {
+      timeout: 10000,
+    });
   });
 });

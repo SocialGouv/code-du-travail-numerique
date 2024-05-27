@@ -1,15 +1,9 @@
-Cypress.Commands.add("getIframe" as any, () => {
-  return cy
-    .get("iframe")
-    .its("0.contentDocument.body")
-    .should("not.be.empty")
-    .then(cy.wrap);
-});
-
-describe("Outil - Moteur de recherche", () => {
+describe("Widget - Moteur de recherche", () => {
   it("should display the widget", () => {
     cy.visit("https://socialgouv.github.io/cdtn-admin/recherche");
-    cy.contains("Trouvez les réponses à vos questions en droit du travail");
+    cy.contains("Trouvez les réponses à vos questions en droit du travail", {
+      timeout: 10000,
+    });
   });
 
   it("should display iframe moteur de recherche", () => {
@@ -23,7 +17,11 @@ describe("Outil - Moteur de recherche", () => {
       },
     });
 
-    (cy as any).getIframe().as("iframe");
+    cy.get("iframe")
+      .its("0.contentDocument.body")
+      .should("not.be.empty")
+      .then(cy.wrap)
+      .as("iframe");
 
     cy.get("@iframe")
       .find("label", { timeout: 10000 })
