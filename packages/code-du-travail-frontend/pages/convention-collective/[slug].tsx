@@ -1,4 +1,4 @@
-import { formatIdcc } from "@socialgouv/modeles-social";
+import { formatIdcc, getSupportedAgreement } from "@socialgouv/modeles-social";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { Text } from "@socialgouv/cdtn-ui";
 import { format, parseISO } from "date-fns";
@@ -9,18 +9,27 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Convention from "../../src/conventions/Convention";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import { apiIdcc } from "../../src/conventions/Search/api/agreement.service";
 import { addPrefixAgreementTitle } from "../../src/conventions/utils";
+import { ConventionNotFound } from "../../src/conventions/ConventionNotFound";
+import { ConventionNotSupported } from "../../src/conventions/ConventionNotSupported";
 
 interface Props {
   convention;
+  isSupported: boolean;
 }
 
 function ConventionCollective(props: Props): JSX.Element {
-  const { convention } = props;
+  const { convention, isSupported } = props;
   const { shortTitle, title } = convention;
+  if (!isSupported) {
+    if (!shortTitle) {
+      return <ConventionNotFound idcc={formatIdcc(convention.num)} />;
+    }
+    return <ConventionNotSupported convention={props.convention} />;
+  }
+
   return (
     <Layout>
       <Metas title={addPrefixAgreementTitle(shortTitle)} description={title} />
@@ -85,16 +94,23 @@ export const getServerSideProps = async ({ query }) => {
   if (IDCC_ONLY.test(query.slug)) {
     const conventions = await apiIdcc(query.slug.padStart(4, "0"));
     if (!conventions.length) {
-      return { notFound: true };
+      return {
+        props: {
+          convention: { num: parseInt(query.slug), isSupported: false },
+        },
+      };
     }
     return { redirect: { destination: conventions[0].slug, permanent: true } };
   }
   const res = await fetch(`${SITE_URL}/api/agreements/${query.slug}`);
   if (!res.ok) {
-    return handleError(res);
+    return {
+      props: { convention: { num: parseInt(query.slug) }, isSupported: false },
+    };
   }
   const convention = await res.json();
-  return { props: { convention } };
+  const isSupported: boolean = !!getSupportedAgreement(convention.num);
+  return { props: { convention, isSupported } };
 };
 
 export default ConventionCollective;
