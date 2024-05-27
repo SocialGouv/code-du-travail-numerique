@@ -15,7 +15,7 @@ describe("Outil - Moteur de recherche", () => {
   it("should display iframe moteur de recherche", () => {
     const postMessageStub = cy.stub().as("postMessage");
 
-    cy.visit("/integration/moteur-recherche", {
+    cy.visit("https://socialgouv.github.io/cdtn-admin/recherche", {
       onBeforeLoad(win) {
         win.addEventListener("message", (e) => {
           postMessageStub(e.data);

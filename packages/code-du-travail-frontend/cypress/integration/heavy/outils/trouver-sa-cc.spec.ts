@@ -7,11 +7,14 @@ describe("Outil - Trouver sa convention collective", () => {
   });
 
   it("should display iframe convention collective", () => {
-    cy.visit("/integration/convention-collective", {
-      onBeforeLoad(win) {
-        cy.spy(win, "postMessage").as("postMessage");
-      },
-    });
+    cy.visit(
+      "https://socialgouv.github.io/cdtn-admin/trouver-sa-convention-collective",
+      {
+        onBeforeLoad(win) {
+          cy.spy(win, "postMessage").as("postMessage");
+        },
+      }
+    );
 
     cy.get("@iframe").contains("Trouver sa convention collective");
     cy.get("@iframe").find("#enterprise-search").as("entreprise-search");
