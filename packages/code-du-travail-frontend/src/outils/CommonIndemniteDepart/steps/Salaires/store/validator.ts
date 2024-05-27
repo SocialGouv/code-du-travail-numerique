@@ -26,7 +26,7 @@ export const validateStep = (state: SalairesStoreInput) => {
         : state.hasTempsPartiel === "non" &&
           state.hasSameSalary === "oui" &&
           parseFloat(state.salary!) <= 0
-        ? "Vous devez saisir un salaire positif"
+        ? "Vous devez saisir un montant positif"
         : undefined,
     errorSalaryPeriods:
       state.hasTempsPartiel === "non" &&
@@ -37,7 +37,7 @@ export const validateStep = (state: SalairesStoreInput) => {
         : state.hasTempsPartiel === "non" &&
           state.hasSameSalary === "non" &&
           sumSalaryPeriods(state.salaryPeriods) <= 0
-        ? "Vous devez saisir un salaire positif"
+        ? "Vous devez saisir un montant positif"
         : undefined,
   };
 
