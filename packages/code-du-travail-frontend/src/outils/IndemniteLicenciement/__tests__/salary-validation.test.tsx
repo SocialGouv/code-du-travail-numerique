@@ -138,7 +138,7 @@ describe("Indemnité licenciement - Step salaire", () => {
       });
       userEvent.click(ui.next.get());
       expect(
-        screen.queryByText("Vous devez saisir un salaire annuel supérieur à 0")
+        screen.queryByText("Vous devez saisir un salaire supérieur à 0")
       ).toBeInTheDocument();
       // Avec les bonnes valeurs
       ui.salary.salaries.getAll().forEach((input) => {
@@ -148,7 +148,7 @@ describe("Indemnité licenciement - Step salaire", () => {
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     });
 
-    test("Vérification qu'un salaire ne peut pas être inférieur à 0 dans le champ où on saisit un seul salaire annuel", () => {
+    test("Vérification qu'un salaire ne peut pas être inférieur à 0 dans le champ où on saisit un seul salaire", () => {
       fireEvent.click(ui.salary.hasPartialTime.non.get());
       fireEvent.click(ui.salary.hasSameSalary.oui.get());
       fireEvent.change(ui.salary.sameSalaryValue.get(), {
@@ -156,7 +156,7 @@ describe("Indemnité licenciement - Step salaire", () => {
       });
       userEvent.click(ui.next.get());
       expect(
-        screen.queryByText("Vous devez saisir un salaire annuel supérieur à 0")
+        screen.queryByText("Vous devez saisir un salaire supérieur à 0")
       ).toBeInTheDocument();
       // Avec les bonnes valeurs
       fireEvent.change(ui.salary.sameSalaryValue.get(), {
