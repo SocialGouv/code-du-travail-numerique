@@ -138,7 +138,7 @@ describe("Indemnité licenciement - Step salaire", () => {
       });
       userEvent.click(ui.next.get());
       expect(
-        screen.queryByText("Vous devez saisir un montant positif")
+        screen.queryByText("Vous devez saisir un montant supérieur à zéro")
       ).toBeInTheDocument();
       // Avec les bonnes valeurs
       ui.salary.salaries.getAll().forEach((input) => {
@@ -156,7 +156,7 @@ describe("Indemnité licenciement - Step salaire", () => {
       });
       userEvent.click(ui.next.get());
       expect(
-        screen.queryByText("Vous devez saisir un montant positif")
+        screen.queryByText("Vous devez saisir un montant supérieur à zéro")
       ).toBeInTheDocument();
       // Avec les bonnes valeurs
       fireEvent.change(ui.salary.sameSalaryValue.get(), {
