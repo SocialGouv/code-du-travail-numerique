@@ -36,17 +36,11 @@ const Convention = ({ convention }) => {
         </Alert>
       )}
       {convention.answers.length > 0 &&
-        (PAGES_NEW_FORMAT.includes(convention.num) ? (
           <ContributionsPOC
             contributions={convention.answers}
             convention={convention}
           />
-        ) : (
-          <Contributions
-            contributions={convention.answers}
-            convention={convention}
-          />
-        ))}
+    }
       {convention.articlesByTheme.length > 0 && (
         <Articles
           blocs={convention.articlesByTheme}
