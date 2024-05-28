@@ -42,4 +42,5 @@ export { Contributions };
 
 const StyledLink = styled(Link)`
   text-decoration-color: ${theme.colors.paragraph};
+  font-weight: normal;
 `;
