@@ -15,7 +15,7 @@ const Convention = ({ convention }) => {
     const { slug, id, num, shortTitle } = convention;
     setCcInfo({ id, num, shortTitle, slug, title: shortTitle });
   }, [convention, setCcInfo]);
-
+console.log(JSON.stringify(convention, null, 2));
   return (
     <>
       {convention.highlight && convention.highlight.content && (
