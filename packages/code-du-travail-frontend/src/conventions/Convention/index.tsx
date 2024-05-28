@@ -18,6 +18,14 @@ const Convention = ({ convention }) => {
     setCcInfo({ id, num, shortTitle, slug, title: shortTitle });
   }, [convention, setCcInfo]);
 
+  if (!convention.url) {
+    return (
+      <Suptitle>
+        Cette convention collective n&apos;est pas traitée par nos services.
+      </Suptitle>
+    );
+  }
+
   return (
     <>
       {convention.highlight && convention.highlight.content && (
@@ -61,9 +69,15 @@ const Convention = ({ convention }) => {
   );
 };
 
-const { spacings } = theme;
+const { spacings, fonts } = theme;
 const TitleAlert = styled(Paragraph)`
   margin-bottom: ${spacings.tiny};
+`;
+
+const Suptitle = styled.div`
+  margin-bottom: ${spacings.base};
+  color: ${({ theme }) => theme.altText};
+  font-size: ${fonts.sizes.headings.small};
 `;
 
 export default Convention;

@@ -1,6 +1,6 @@
 import { formatIdcc } from "@socialgouv/modeles-social";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { Text, theme } from "@socialgouv/cdtn-ui";
+import { Text } from "@socialgouv/cdtn-ui";
 import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import React from "react";
@@ -12,8 +12,8 @@ import { Layout } from "../../src/layout/Layout";
 import { SITE_URL } from "../../src/config";
 import { apiIdcc } from "../../src/conventions/Search/api/agreement.service";
 import { addPrefixAgreementTitle } from "../../src/conventions/utils";
-import styled from "styled-components";
 import Head from "next/head";
+import { handleError } from "../../src/lib/fetch-error";
 
 interface Props {
   convention;
@@ -81,13 +81,7 @@ function ConventionCollective(props: Props): JSX.Element {
         suptitle="CONVENTION COLLECTIVE"
         title={shortTitle}
       >
-        {url ? (
-          <Convention convention={convention} />
-        ) : (
-          <Suptitle>
-            Cette convention collective n&apos;est pas traitée par nos services.
-          </Suptitle>
-        )}
+        <Convention convention={convention} />
       </Answer>
     </Layout>
   );
@@ -105,21 +99,11 @@ export const getServerSideProps = async ({ query }) => {
     return { redirect: { destination: conventions[0].slug, permanent: true } };
   }
   const res = await fetch(`${SITE_URL}/api/agreements/${query.slug}`);
-  console.log("res", res.ok);
   if (!res.ok) {
-    return {
-      notFound: true,
-    };
+    return handleError(res);
   }
   const convention = await res.json();
   return { props: { convention } };
 };
 
 export default ConventionCollective;
-
-const { fonts, spacings } = theme;
-const Suptitle = styled.div`
-  margin-bottom: ${spacings.base};
-  color: ${({ theme }) => theme.altText};
-  font-size: ${fonts.sizes.headings.small};
-`;
