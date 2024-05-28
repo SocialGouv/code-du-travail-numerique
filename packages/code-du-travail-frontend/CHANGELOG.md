@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.138.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.137.1...v4.138.0) (2024-05-28)
+
+### Bug Fixes
+
+- **urls des convention-collectives:** modifications des règles de redirections pour ne matcher que les urls voulues ([#5922](https://github.com/SocialGouv/code-du-travail-numerique/issues/5922)) ([267d746](https://github.com/SocialGouv/code-du-travail-numerique/commit/267d746b6cb79339fa2c443193becfde5f4345df))
+
+### Features
+
+- 5874 formatter le rsultat sur les 2 simulateurs ([#5882](https://github.com/SocialGouv/code-du-travail-numerique/issues/5882)) ([35e6006](https://github.com/SocialGouv/code-du-travail-numerique/commit/35e600622cf153bf0d48e005042602b57083dac8))
+
 ## [4.137.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.137.0...v4.137.1) (2024-05-23)
 
 ### Bug Fixes
