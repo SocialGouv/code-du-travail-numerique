@@ -41,5 +41,5 @@ function Contributions({ contributions, convention }) {
 export { Contributions };
 
 const StyledLink = styled(Link)`
-  text-decoration: none;
+  text-decoration-color: ${theme.colors.paragraph};
 `;
