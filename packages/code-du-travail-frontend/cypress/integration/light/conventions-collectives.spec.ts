@@ -1,5 +1,5 @@
 describe("Conventions collectives", () => {
-  it.only("je vois la liste de toutes les cc", () => {
+  it("je vois la liste de toutes les cc", () => {
     cy.visit("/");
     cy.get("#navigation").contains("Votre convention collective").click();
     cy.url().should("include", "/convention-collective");
