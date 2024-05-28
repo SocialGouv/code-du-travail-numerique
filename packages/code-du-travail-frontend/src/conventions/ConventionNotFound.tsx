@@ -38,6 +38,12 @@ export const ConventionNotFound = ({ idcc }: Props): JSX.Element => {
     </>
   );
 };
+
+export const getInitialProps = ({ res, err }) => {
+  const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
+  return { statusCode };
+};
+
 const { fonts, spacings } = theme;
 
 const Suptitle = styled.div`

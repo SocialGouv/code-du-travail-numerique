@@ -1,6 +1,6 @@
-import { formatIdcc, getSupportedAgreement } from "@socialgouv/modeles-social";
+import { formatIdcc } from "@socialgouv/modeles-social";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { Text } from "@socialgouv/cdtn-ui";
+import { Text, theme } from "@socialgouv/cdtn-ui";
 import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import React from "react";
@@ -12,26 +12,24 @@ import { Layout } from "../../src/layout/Layout";
 import { SITE_URL } from "../../src/config";
 import { apiIdcc } from "../../src/conventions/Search/api/agreement.service";
 import { addPrefixAgreementTitle } from "../../src/conventions/utils";
-import { ConventionNotFound } from "../../src/conventions/ConventionNotFound";
-import { ConventionNotSupported } from "../../src/conventions/ConventionNotSupported";
+import styled from "styled-components";
+import Head from "next/head";
 
 interface Props {
   convention;
-  isSupported: boolean;
 }
 
 function ConventionCollective(props: Props): JSX.Element {
-  const { convention, isSupported } = props;
-  const { shortTitle, title } = convention;
-  if (!isSupported) {
-    if (!shortTitle) {
-      return <ConventionNotFound idcc={formatIdcc(convention.num)} />;
-    }
-    return <ConventionNotSupported convention={props.convention} />;
-  }
+  const { convention } = props;
+  const { shortTitle, title, url } = convention;
 
   return (
     <Layout>
+      {!url && (
+        <Head>
+          <meta key="robots" name="robots" content="noindex, nofollow" />
+        </Head>
+      )}
       <Metas title={addPrefixAgreementTitle(shortTitle)} description={title} />
       <Answer
         breadcrumbs={[
@@ -70,9 +68,9 @@ function ConventionCollective(props: Props): JSX.Element {
           },
         ]}
         source={
-          convention.url && {
+          url && {
             name: "Légifrance",
-            url: convention.url,
+            url,
           }
         }
         subtitle={
@@ -83,7 +81,13 @@ function ConventionCollective(props: Props): JSX.Element {
         suptitle="CONVENTION COLLECTIVE"
         title={shortTitle}
       >
-        <Convention convention={convention} />
+        {url ? (
+          <Convention convention={convention} />
+        ) : (
+          <Suptitle>
+            Cette convention collective n&apos;est pas traitée par nos services.
+          </Suptitle>
+        )}
       </Answer>
     </Layout>
   );
@@ -95,22 +99,27 @@ export const getServerSideProps = async ({ query }) => {
     const conventions = await apiIdcc(query.slug.padStart(4, "0"));
     if (!conventions.length) {
       return {
-        props: {
-          convention: { num: parseInt(query.slug), isSupported: false },
-        },
+        notFound: true,
       };
     }
     return { redirect: { destination: conventions[0].slug, permanent: true } };
   }
   const res = await fetch(`${SITE_URL}/api/agreements/${query.slug}`);
+  console.log("res", res.ok);
   if (!res.ok) {
     return {
-      props: { convention: { num: parseInt(query.slug) }, isSupported: false },
+      notFound: true,
     };
   }
   const convention = await res.json();
-  const isSupported: boolean = !!getSupportedAgreement(convention.num);
-  return { props: { convention, isSupported } };
+  return { props: { convention } };
 };
 
 export default ConventionCollective;
+
+const { fonts, spacings } = theme;
+const Suptitle = styled.div`
+  margin-bottom: ${spacings.base};
+  color: ${({ theme }) => theme.altText};
+  font-size: ${fonts.sizes.headings.small};
+`;
