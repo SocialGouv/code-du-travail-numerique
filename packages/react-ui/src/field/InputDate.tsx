@@ -108,16 +108,4 @@ const StyledInput = styled.input`
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
   }
-
-  ::-webkit-calendar-picker-indicator {
-    color: rgba(0, 0, 0, 0);
-    opacity: 1;
-    display: block;
-    background-color: ${({ theme }) => theme.paragraph};
-    -webkit-mask-image: url(/static/assets/img/calendar.svg);
-    mask-image: url(/static/assets/img/calendar.svg);
-    width: 32px;
-    height: 32px;
-    border-width: thin;
-  }
 `;
