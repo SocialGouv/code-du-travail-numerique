@@ -16,46 +16,20 @@ function formatValueToEn(value: string): string {
 }
 
 export const InputDate = ({ value, onChange, invalid, ref, ...props }: any) => {
-  const [date, setDate] = React.useState(formatValueToEn(value ?? ""));
-  const [isValid, setIsValid] = React.useState(true);
-
   const onChangeDate = (event: any) => {
-    if (!event.target.value) return;
     const value: string = formatValueToFr(event.target.value);
-    const onlyNumbers = value.replace(/\D/g, "");
-    if (onlyNumbers.length <= 8) {
-      setDate(formatValueToEn(value));
-      setIsValid(isValidDate(value));
-      if (onChange) onChange(value);
-    }
-  };
-
-  const isValidDate = (date: string): boolean => {
-    if (date && date.length === 10) {
-      const splitParts = date.split("/");
-      const day = isNaN(Number(splitParts[0])) ? null : Number(splitParts[0]);
-      const month = isNaN(Number(splitParts[1])) ? null : Number(splitParts[1]);
-      const year = isNaN(Number(splitParts[2])) ? null : Number(splitParts[2]);
-      const isYearValid = !!year && year >= 1900 && year <= 2100;
-      const isMonthValid = !!month && month >= 1 && month <= 12;
-      const isDayValid = !!day && day >= 1 && day <= 31;
-      const isValidDate = /^\d{2}\/\d{2}\/\d{4}$/.test(date);
-      return isYearValid && isMonthValid && isDayValid && isValidDate;
-    }
-    return false;
+    if (onChange) onChange(value);
   };
 
   return (
-    <StyledWrapper
-      isValid={invalid === true ? false : invalid === false ? true : isValid}
-    >
+    <StyledWrapper isValid={!invalid}>
       <StyledInput
         {...props}
         onChange={onChangeDate}
         type="date"
         ref={ref}
         data-input="true"
-        value={date}
+        value={formatValueToEn(value)}
       />
     </StyledWrapper>
   );
