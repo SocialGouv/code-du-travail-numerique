@@ -109,6 +109,10 @@ describe("Indemnité licenciement - Step salaire", () => {
         screen.queryByText("Vous devez compléter l'ensemble des champs")
       ).not.toBeInTheDocument();
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+      expect(ui.result.salaryTableRows.getAll().length).toBe(12);
+      expect(ui.result.salaryTableRows.getAll()[0]).toHaveTextContent(
+        "décembre 20211 000,00 €"
+      );
 
       // vérification que si on indique une prime, les autres ne sont pas obligatoires
       userEvent.click(ui.previous.get());
