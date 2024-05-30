@@ -59,7 +59,7 @@ const Eligible = () => {
           Ce montant est exonéré d’impôt sur le revenu et de cotisations
           sociales sous certaines conditions,{" "}
           <StyledLink
-            href="/fiche-service-public/comment-calculer-lindemnite-specifique-de-rupture-conventionnelle"
+            href="/fiche-service-public/comment-calculer-lindemnite-specifique-de-rupture-conventionnelle#lindemnite-de-rupture-conventionnelle-est-elle-imposable"
             target="_blank"
           >
             en savoir plus
