@@ -22,7 +22,7 @@ Par soucis de simplification, ce simulateur déduit toutes les absences pour acc
   },
 ];
 
-describe("Notifications pour la CC 650", () => {
+describe("Notifications pour la CC 2120", () => {
   describe("Maladie non pro", () => {
     describe("Affiche une notification", () => {
       test.each`

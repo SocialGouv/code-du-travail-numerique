@@ -1,0 +1,23 @@
+contrat salarié . convention collective . banque . rupture conventionnelle:
+  valeur: oui
+
+# Notifications
+contrat salarié . convention collective . banque . maladie non pro:
+  valeur: non
+
+contrat salarié . convention collective . banque . maladie non pro . notification:
+  type: notification
+  description: |
+    Si lors de l’absence pour maladie non professionnelle le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (maintien de salaire), en plus des indemnités journalières de la sécurité sociale, le montant de l’indemnité de licenciement prévu par la convention collective pourrait être plus élevé. En effet, dans ce cas, la période d’absence est intégrée dans l’ancienneté du salarié.
+    Par soucis de simplification, ce simulateur déduit toutes les absences pour maladie non professionnelle sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas.
+  valeur: oui
+
+contrat salarié . convention collective . banque . accident trajet:
+  valeur: non
+
+contrat salarié . convention collective . banque . accident trajet . notification:
+  type: notification
+  description: |
+    Si lors de l’absence pour accident de trajet le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (maintien de salaire), en plus des indemnités journalières de la sécurité sociale, le montant de l’indemnité de licenciement prévu par la convention collective pourrait être plus élevé. En effet, dans ce cas, la période d’absence est intégrée dans l’ancienneté du salarié.
+    Par soucis de simplification, ce simulateur déduit toutes les absences pour accident de trajet sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas.
+  valeur: oui
