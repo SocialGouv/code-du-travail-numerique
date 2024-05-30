@@ -126,7 +126,7 @@ describe("Indemnité licenciement - Step salaire", () => {
         "décembre 20211 000,00 €"
       );
       expect(ui.result.salaryTableRows.getAll()[1]).toHaveTextContent(
-        "décembre 20211 000,00 €100,00 €"
+        "novembre 20211 000,00 €100,00 €"
       );
       // vérification que si l'on change un montant et supprime la prime, on ne bloque pas l'utilisateur
       userEvent.click(ui.previous.get());
