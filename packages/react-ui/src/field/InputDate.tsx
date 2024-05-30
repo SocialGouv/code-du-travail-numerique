@@ -6,6 +6,7 @@ import { DefaultInputProps, INPUT_HEIGHT } from "./Input";
 
 function formatValueToFr(value: string): string {
   const [year, month, days] = value.split("-");
+  if (!year || !month || !days) return value;
   return `${days}/${month}/${year}`;
 }
 
@@ -17,8 +18,9 @@ function formatValueToEn(value: string): string {
 
 export const InputDate = ({ value, onChange, invalid, ref, ...props }: any) => {
   const onChangeDate = (event: any) => {
-    const value: string = formatValueToFr(event.target.value);
-    if (onChange) onChange(value);
+    if (onChange) {
+      onChange(formatValueToFr(event.target.value));
+    }
   };
 
   return (
