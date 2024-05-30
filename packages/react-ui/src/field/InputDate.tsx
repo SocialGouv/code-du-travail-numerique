@@ -5,8 +5,17 @@ import { box, breakpoints, fonts, spacings } from "../theme";
 import { DefaultInputProps, INPUT_HEIGHT } from "./Input";
 
 function formatValueToFr(value: string): string {
+  console.log("formatValueToFr", value);
   const [year, month, days] = value.split("-");
-  if (!year || !month || !days) return value;
+  if (
+    !year ||
+    year.length !== 4 ||
+    !month ||
+    month.length !== 2 ||
+    !days ||
+    days.length !== 2
+  )
+    return value;
   return `${days}/${month}/${year}`;
 }
 
