@@ -121,7 +121,13 @@ describe("Indemnité licenciement - Step salaire", () => {
       });
       userEvent.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-
+      expect(ui.result.salaryTableRows.getAll().length).toBe(12);
+      expect(ui.result.salaryTableRows.getAll()[0]).toHaveTextContent(
+        "décembre 20211 000,00 €"
+      );
+      expect(ui.result.salaryTableRows.getAll()[1]).toHaveTextContent(
+        "décembre 20211 000,00 €100,00 €"
+      );
       // vérification que si l'on change un montant et supprime la prime, on ne bloque pas l'utilisateur
       userEvent.click(ui.previous.get());
       fireEvent.change(ui.salary.salaries.getAll()[2], {
@@ -132,6 +138,7 @@ describe("Indemnité licenciement - Step salaire", () => {
       });
       userEvent.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+
     });
 
     test("Vérification qu'un salaire ne peut pas être inférieur à 0 dans le champ où on saisit plusieurs salaires pour chaque mois", () => {
