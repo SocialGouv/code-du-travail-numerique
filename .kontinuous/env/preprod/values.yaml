@@ -28,12 +28,3 @@ jobs:
           elasticsearch_url:
             secretName: www-secret
             secretKey: ELASTICSEARCH_URL
-
-app:
-  resources:
-    limits:
-      cpu: 500m
-      memory: 2048Mi
-    requests:
-      cpu: 300m
-      memory: 1536Mi

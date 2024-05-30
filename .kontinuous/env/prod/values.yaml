@@ -38,10 +38,3 @@ app:
     minReplicas: 2
     maxReplicas: 10
     enabled: true
-  resources:
-    limits:
-      cpu: 700m
-      memory: 1536Mi
-    requests:
-      cpu: 600m
-      memory: 1280Mi
