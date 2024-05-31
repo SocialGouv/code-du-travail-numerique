@@ -65,9 +65,9 @@ describe("Indemnité licenciement - CC 16", () => {
     userAction.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("12896 €");
-    expect(ui.result.resultatLegal.get()).toHaveTextContent("10746.67 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("12896 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("12 896,00 €");
+    expect(ui.result.resultatLegal.get()).toHaveTextContent("10 746,67 €");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("12 896,00 €");
     expect(ui.result.dismissalType.mobility.query()).not.toBeInTheDocument();
   });
 });

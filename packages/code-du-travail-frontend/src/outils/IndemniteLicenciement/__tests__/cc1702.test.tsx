@@ -90,7 +90,7 @@ describe("Indemnité licenciement - CC 1702", () => {
     userAction.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("2 760,42 €");
     expect(ui.result.resultTableRows.getAll().length).toBe(5);
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
       "mai 20223000 €"
@@ -103,7 +103,7 @@ describe("Indemnité licenciement - CC 1702", () => {
       .click(ui.salary.agreementWithNoticeSalary.knowingLastSalary.non.get())
       .click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("2 760,42 €");
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
     expect(
       rendering.queryByText(
@@ -148,7 +148,7 @@ describe("Indemnité licenciement - CC 1702", () => {
     ).not.toBeInTheDocument();
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("2 760,42 €");
   });
 
   test(`Licenciement économique`, () => {
@@ -201,7 +201,7 @@ describe("Indemnité licenciement - CC 1702", () => {
     userAction.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("2 760,42 €");
     expect(
       rendering.queryByText(
         /Ce résultat ne prend pas en compte le complément forfaitaire dont bénéficie le salarié en plus du montant de l'indemnité de licenciement/

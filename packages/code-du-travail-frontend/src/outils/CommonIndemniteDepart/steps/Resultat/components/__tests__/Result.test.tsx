@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
 import Result from "../Result";
 
@@ -22,7 +22,7 @@ describe("<Result />", () => {
         ]}
       />
     );
-    expect(queryByText(/2000/i)).toBeInTheDocument();
+    expect(queryByText(/2 000/i)).toBeInTheDocument();
     expect(
       queryByText(/Ce montant est exonéré d’impôt sur le revenu/)
     ).toBeInTheDocument();

@@ -578,8 +578,7 @@ exports[`<Theme /> should render 1`] = `
               decoding="async"
               height="141"
               loading="lazy"
-              src="/_next/image?url=%2Fstatic%2Fassets%2Fimg%2Fministere_logo.png&w=384&q=75"
-              srcset="/_next/image?url=%2Fstatic%2Fassets%2Fimg%2Fministere_logo.png&w=256&q=75 1x, /_next/image?url=%2Fstatic%2Fassets%2Fimg%2Fministere_logo.png&w=384&q=75 2x"
+              src="/static/assets/img/ministere_logo.svg"
               style="color: transparent;"
               width="170"
             />
@@ -591,6 +590,13 @@ exports[`<Theme /> should render 1`] = `
                   href="https://travail-emploi.gouv.fr"
                 >
                   travail-emploi.gouv.fr
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.info.gouv.fr"
+                >
+                  info.gouv.fr
                 </a>
               </li>
               <li>
@@ -612,13 +618,6 @@ exports[`<Theme /> should render 1`] = `
                   href="https://www.data.gouv.fr"
                 >
                   data.gouv.fr
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.gouvernement.fr"
-                >
-                  gouvernement.fr
                 </a>
               </li>
             </ul>

@@ -119,5 +119,37 @@ describe("Indemnité licenciement - Step salaire", () => {
       userAction.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     });
+
+    test("Vérification qu'un salaire ne peut pas être inférieur à 0 dans le champ où on saisit plusieurs salaires pour chaque mois", () => {
+      userAction.click(ui.salary.hasPartialTime.non.get());
+      userAction.click(ui.salary.hasSameSalary.non.get());
+      ui.salary.salaries.getAll().forEach((input) => {
+        userAction.setInput(input, "0");
+      });
+      userAction.click(ui.next.get());
+      expect(
+        screen.queryByText("Vous devez saisir un montant supérieur à zéro")
+      ).toBeInTheDocument();
+      // Avec les bonnes valeurs
+      ui.salary.salaries.getAll().forEach((input) => {
+        userAction.setInput(input, "1000");
+      });
+      userAction.click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    });
+
+    test("Vérification qu'un salaire ne peut pas être inférieur à 0 dans le champ où on saisit un seul salaire", () => {
+      userAction.click(ui.salary.hasPartialTime.non.get());
+      userAction.click(ui.salary.hasSameSalary.oui.get());
+      userAction.setInput(ui.salary.sameSalaryValue.get(), "0");
+      userAction.click(ui.next.get());
+      expect(
+        screen.queryByText("Vous devez saisir un montant supérieur à zéro")
+      ).toBeInTheDocument();
+      // Avec les bonnes valeurs
+      userAction.setInput(ui.salary.sameSalaryValue.get(), "1000");
+      userAction.click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    });
   });
 });

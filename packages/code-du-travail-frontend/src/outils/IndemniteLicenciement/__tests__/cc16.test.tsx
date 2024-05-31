@@ -67,8 +67,8 @@ describe("Indemnité licenciement - CC 16", () => {
         .click(ui.next.get());
 
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-      expect(ui.result.resultat.get()).toHaveTextContent("21666,67");
-      expect(ui.result.resultatAgreement.get()).toHaveTextContent("21666.67");
+      expect(ui.result.resultat.get()).toHaveTextContent("21 666,67");
+      expect(ui.result.resultatAgreement.get()).toHaveTextContent("21 666,67");
     });
 
     test(`

@@ -14,8 +14,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
       class="sc-eBHhsj kWkvqL"
       role="alert"
     >
-      180
-       €
+      <span>
+        180,00 €
+      </span>
     </strong>
     .
   </p>
@@ -463,8 +464,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
       class="sc-eBHhsj kWkvqL"
       role="alert"
     >
-      300
-       €
+      <span>
+        300,00 €
+      </span>
     </strong>
     .
   </p>
@@ -903,8 +905,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
       class="sc-eBHhsj kWkvqL"
       role="alert"
     >
-      300
-       €
+      <span>
+        300,00 €
+      </span>
     </strong>
     .
   </p>
@@ -1355,8 +1358,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
       class="sc-eBHhsj kWkvqL"
       role="alert"
     >
-      300
-       €
+      <span>
+        300,00 €
+      </span>
     </strong>
     .
   </p>
@@ -1795,8 +1799,9 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
       class="sc-eBHhsj kWkvqL"
       role="alert"
     >
-      300
-       €
+      <span>
+        300,00 €
+      </span>
     </strong>
     .
   </p>

@@ -14,11 +14,9 @@ jobs:
       - name: Test SDR urls
         run: |
           jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | uniq | xargs -n 1 wget  --spider
-      - name: Create the Mattermost Message
-        if: failure()
-        run: |
-          echo "{\"text\":\"Une ou plusieurs URLs des services de renseignement ne sont plus valides : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          TEXT: |-
+            Une ou plusieurs URLs des services de renseignement ne sont plus valides ([logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})).

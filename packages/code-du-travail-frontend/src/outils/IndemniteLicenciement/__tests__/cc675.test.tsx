@@ -55,7 +55,7 @@ describe("Indemnité licenciement - CC 675", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("446.4");
-    expect(ui.result.resultat.get()).toHaveTextContent("1116");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("446,40");
+    expect(ui.result.resultat.get()).toHaveTextContent("1 116,00");
   });
 });

@@ -5,6 +5,7 @@ import { Paragraph, theme } from "@socialgouv/cdtn-ui";
 
 import { HighlightResult, SectionTitle } from "../../../../common/stepStyles";
 import styled from "styled-components";
+import { formatToEuro } from "../../../../../common/formatToEuro";
 
 type Props = {
   maxResult: string;
@@ -22,7 +23,13 @@ export default function Result({
       <SectionTitle hasSmallMarginTop>Indemnité</SectionTitle>
       <Paragraph noMargin>
         {resultMessage}{" "}
-        <HighlightResult>{maxResult.replace(".", ",")}&nbsp;€.</HighlightResult>
+        <HighlightResult>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: formatToEuro(parseFloat(maxResult)),
+            }}
+          />
+        </HighlightResult>
         <NoticeNote
           numberOfElements={notifications.length}
           currentElement={0}

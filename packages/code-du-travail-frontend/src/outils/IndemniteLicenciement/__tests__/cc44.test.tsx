@@ -188,7 +188,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.click(ui.salary.variablePart.non.get());
       userAction.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-      expect(ui.result.resultat.get()).toHaveTextContent("69000 €");
+      expect(ui.result.resultat.get()).toHaveTextContent("69 000,00 €");
     });
   });
 
@@ -279,7 +279,7 @@ describe("Indemnité licenciement - CC 44", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("12244,75");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("12244.75");
+    expect(ui.result.resultat.get()).toHaveTextContent("12 232,50");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("12 232,50");
   });
 });

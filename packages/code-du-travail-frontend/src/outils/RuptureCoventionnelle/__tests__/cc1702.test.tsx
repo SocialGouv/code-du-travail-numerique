@@ -51,9 +51,9 @@ describe("Indemnité licenciement - CC 1702", () => {
     userAction.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("10746,67 €");
-    expect(ui.result.resultatLegal.get()).toHaveTextContent("10746.67 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("6683.6 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("10 746,67 €");
+    expect(ui.result.resultatLegal.get()).toHaveTextContent("10 746,67 €");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("6 683,60 €");
     expect(ui.result.dismissalType.economic.query()).not.toBeInTheDocument();
   });
 });

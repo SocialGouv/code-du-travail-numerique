@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import servicePublic from "../../public/static/assets/img/logo_sp_hd_rvb.png";
-import ministere from "../../public/static/assets/img/ministere_logo.png";
+import ministere from "../../public/static/assets/img/ministere_logo.svg";
 
 export function Partners() {
   return (
@@ -31,6 +31,7 @@ export function Partners() {
             <Image
               alt="le site du ministere du travail, de l'emploi et de l'insertion"
               src={ministere}
+              width="200"
             />
           </Link>
           <Link

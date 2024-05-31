@@ -77,7 +77,7 @@ describe("Indemnité licenciement - CC 1516", () => {
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("3548,06 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("3 548,06 €");
     expect(ui.result.resultTableRows.getAll().length).toBe(3);
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
       "mai 20224000 €"
@@ -95,7 +95,7 @@ describe("Indemnité licenciement - CC 1516", () => {
       .click(ui.salary.agreementWithNoticeSalary.knowingLastSalary.non.get())
       .click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("2760,42 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("2 760,42 €");
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
   });
 
