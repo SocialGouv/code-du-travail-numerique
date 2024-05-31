@@ -5,7 +5,6 @@ import { box, breakpoints, fonts, spacings } from "../theme";
 import { DefaultInputProps, INPUT_HEIGHT } from "./Input";
 
 function formatValueToFr(value: string): string {
-  console.log("formatValueToFr", value);
   const [year, month, days] = value.split("-");
   if (
     !year ||

@@ -49,7 +49,7 @@ export default function TextQuestion({
   const InputComponent = inputType === "date" ? InputDate : Input;
   const [inputRef, setInputRef] = useState<HTMLInputElement>();
   useEffect(() => {
-    if (inputRef && error) {
+    if (inputType !== "date" && inputRef && error) {
       inputRef?.focus();
     }
   }, [inputRef, error]);
