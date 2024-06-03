@@ -141,4 +141,40 @@ describe("calculate", () => {
       ]
     );
   });
+  test("accepte des salaires à 0 sur les 3 derniers mois", () => {
+    const engine = new IndemniteLicenciementPublicodes(
+      modelsIndemniteLicenciement,
+      "16"
+    );
+
+    const result = engine.calculate({
+      "contrat salarié . convention collective": "'IDCC0016'",
+      "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age":
+        "39",
+      "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+        "'TAM'",
+      "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+      "contrat salarié . indemnité de licenciement . date d'entrée":
+        "04/06/2020",
+      "contrat salarié . indemnité de licenciement . date de notification":
+        "04/06/2024",
+      "contrat salarié . indemnité de licenciement . date de sortie":
+        "04/06/2024",
+      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+        "non",
+      hasVariablePay: "non",
+      licenciementFauteGrave: "non",
+      salaryPeriods:
+        '[{"month":"mai 2024","value":0},{"month":"avril 2024","value":0},{"month":"mars 2024","value":0},{"month":"février 2024","value":0},{"month":"janvier 2024","value":0},{"month":"décembre 2023","value":1000},{"month":"novembre 2023","value":0},{"month":"octobre 2023","value":0},{"month":"septembre 2023","value":0},{"month":"août 2023","value":0},{"month":"juillet 2023","value":0},{"month":"juin 2023","value":0}]',
+      typeContratTravail: "cdi",
+    });
+    expect(result).toChosenResultBeEqual("LEGAL");
+    expect(result).toResultBeEqual(83.33, "€");
+    // @ts-expect-error
+    expect(result.detail.agreementExplanation).toEqual("AGREEMENT_RESULT_ZERO");
+    expect(result).toFormulaBeEqual("1/4 * Sref * A", [
+      "A : Ancienneté totale (4 ans)",
+      "Sref : Salaire de référence (≈ 83.33 € : valeur arrondie)",
+    ]);
+  });
 });
