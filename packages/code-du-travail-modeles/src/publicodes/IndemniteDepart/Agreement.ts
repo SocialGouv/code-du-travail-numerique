@@ -71,8 +71,6 @@ export class Agreement implements AgreementIndemniteCompute {
         type: "missing-args",
       };
     }
-    console.log("SITUATION", result);
-    console.log("getNotifications", publicodes.getNotifications());
     return {
       formula: publicodes.getFormuleAgreement(),
       notifications: publicodes.getNotifications(),

@@ -80,7 +80,6 @@ export class AgreementRuptureCo implements AgreementIndemniteCompute {
         const foundValue = allSituations.find((v) => v.result.value === 0);
         if (foundValue) return foundValue;
       }
-      console.log("elligibleSituations", elligibleSituations);
       const foundSituation = {
         ...elligibleSituations.reduce<
           IndemniteDepartResult<PublicodesIndemniteLicenciementResult>
@@ -91,7 +90,6 @@ export class AgreementRuptureCo implements AgreementIndemniteCompute {
         }, elligibleSituations[0]),
         missingArgs: missingArgsFinal,
       };
-      console.log("foundSituation", foundSituation);
       return foundSituation;
     }
   }
