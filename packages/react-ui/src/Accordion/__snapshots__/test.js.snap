@@ -16,12 +16,12 @@ exports[`<Accordion /> do not throw error if preExpended attribut is an invalid 
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-0"
+            aria-controls="accordion__panel-raa-5"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-iGgWBj ctXAVT"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-0"
+            id="accordion__heading-raa-5"
             role="button"
             tabindex="0"
           >
@@ -59,7 +59,7 @@ exports[`<Accordion /> do not throw error if preExpended attribut is an invalid 
           class="sc-dcJsrY dwmfbs"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-0"
+          id="accordion__panel-raa-5"
         >
           <div
             class="sc-dAbbOL dhcuWT"
