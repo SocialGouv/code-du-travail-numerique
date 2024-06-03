@@ -87,16 +87,6 @@ const Eligible = () => {
                 .toUpperCase(),
             },
             {
-              text: "Rupture conventionnelle dûe à une inaptitude d’origine professionnelle",
-              value:
-                contratTravail.licenciementInaptitude === "oui" ? "Oui" : "Non",
-              detail:
-                !result.isAgreementBetter &&
-                contratTravail.licenciementInaptitude === "oui"
-                  ? "Le salarié ayant été licencié pour inaptitude suite à un accident du travail ou une maladie professionnelle reconnue, le montant de l'indemnité de rupture conventionnelle légale est doublé"
-                  : undefined,
-            },
-            {
               text: "Arrêt de travail au moment de la rupture conventionnelle",
               value: contratTravail.arretTravail === "oui" ? "Oui" : "Non",
             },
