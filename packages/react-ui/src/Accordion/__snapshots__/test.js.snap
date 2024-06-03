@@ -1,5 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Accordion /> do not throw error if preExpended attribut is an invalid query selector 1`] = `
+<div>
+  <div
+    class="accordion"
+    data-accordion-component="Accordion"
+  >
+    <div>
+      <div
+        class="sc-fqkvVR eJjnVN"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-0"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-iGgWBj ctXAVT"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-0"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-eqUAAy eQjYoU"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-gsFSXq UOsQV"
+            >
+              <h3
+                class="sc-gEvEer gGoEse"
+                style="margin: 0px;"
+              >
+                This is the title
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-dcJsrY dwmfbs"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-0"
+        >
+          <div
+            class="sc-dAbbOL dhcuWT"
+          >
+            this is the body
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Accordion /> renders 1`] = `
 <div>
   <div
