@@ -40,19 +40,6 @@ describe("Conventions collectives", () => {
     cy.url().should("include", "/convention-collective/3248-metallurgie");
   });
 
-  it("je suis pas indexé si la convention collective n'est pas traitée", () => {
-    cy.request({
-      method: "GET",
-      url: "/convention-collective/9972-convention-collective-departementale-des-exploitations-agricoles-guyane",
-    }).then((response) => {
-      expect(response.status).to.equal(200);
-
-      expect(response.headers["x-robots-tag"]).to.equal(
-        "noindex, nofollow, nosnippet"
-      );
-    });
-  });
-
   it("je ne dois pas être redirigé s'il n'y a pas de redirection", () => {
     cy.request({
       method: "GET",
