@@ -89,7 +89,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="sc-ePDLzJ eCkqUq"
             data-accordion-component="Accordion"
           >
-            <div>
+            <div
+              id="de-quoi-sagit-il"
+            >
               <div
                 class="sc-jXbUNg heDTFL"
                 data-accordion-component="AccordionItem"
@@ -99,12 +101,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   data-accordion-component="AccordionItemHeading"
                 >
                   <div
-                    aria-controls="accordion__panel-raa-0"
+                    aria-controls="accordion__panel-de-quoi-sagit-il"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="sc-kpDqfm heoudo"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-raa-0"
+                    id="accordion__heading-de-quoi-sagit-il"
                     role="button"
                     tabindex="0"
                   >
@@ -142,7 +144,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
-                  id="accordion__panel-raa-0"
+                  id="accordion__panel-de-quoi-sagit-il"
                 >
                   <div
                     class="sc-bXCLTC fcbJdD"
@@ -163,7 +165,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
               </div>
             </div>
-            <div>
+            <div
+              id="conditions"
+            >
               <div
                 class="sc-jXbUNg crDDWD"
                 data-accordion-component="AccordionItem"
@@ -173,12 +177,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   data-accordion-component="AccordionItemHeading"
                 >
                   <div
-                    aria-controls="accordion__panel-raa-1"
+                    aria-controls="accordion__panel-conditions"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="sc-kpDqfm heoudo"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-raa-1"
+                    id="accordion__heading-conditions"
                     role="button"
                     tabindex="0"
                   >
@@ -216,7 +220,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
-                  id="accordion__panel-raa-1"
+                  id="accordion__panel-conditions"
                 >
                   <div
                     class="sc-bXCLTC fcbJdD"
@@ -280,7 +284,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
               </div>
             </div>
-            <div>
+            <div
+              id="volonte-de-demissionner"
+            >
               <div
                 class="sc-jXbUNg crDDWD"
                 data-accordion-component="AccordionItem"
@@ -290,12 +296,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   data-accordion-component="AccordionItemHeading"
                 >
                   <div
-                    aria-controls="accordion__panel-raa-2"
+                    aria-controls="accordion__panel-volonte-de-demissionner"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="sc-kpDqfm heoudo"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-raa-2"
+                    id="accordion__heading-volonte-de-demissionner"
                     role="button"
                     tabindex="0"
                   >
@@ -333,7 +339,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
-                  id="accordion__panel-raa-2"
+                  id="accordion__panel-volonte-de-demissionner"
                 >
                   <div
                     class="sc-bXCLTC fcbJdD"
@@ -381,7 +387,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
               </div>
             </div>
-            <div>
+            <div
+              id="procedure"
+            >
               <div
                 class="sc-jXbUNg crDDWD"
                 data-accordion-component="AccordionItem"
@@ -391,12 +399,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   data-accordion-component="AccordionItemHeading"
                 >
                   <div
-                    aria-controls="accordion__panel-raa-3"
+                    aria-controls="accordion__panel-procedure"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="sc-kpDqfm heoudo"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-raa-3"
+                    id="accordion__heading-procedure"
                     role="button"
                     tabindex="0"
                   >
@@ -434,7 +442,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
-                  id="accordion__panel-raa-3"
+                  id="accordion__panel-procedure"
                 >
                   <div
                     class="sc-bXCLTC fcbJdD"
@@ -497,7 +505,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
               </div>
             </div>
-            <div>
+            <div
+              id="preavis"
+            >
               <div
                 class="sc-jXbUNg crDDWD"
                 data-accordion-component="AccordionItem"
@@ -507,12 +517,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   data-accordion-component="AccordionItemHeading"
                 >
                   <div
-                    aria-controls="accordion__panel-raa-4"
+                    aria-controls="accordion__panel-preavis"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="sc-kpDqfm heoudo"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-raa-4"
+                    id="accordion__heading-preavis"
                     role="button"
                     tabindex="0"
                   >
@@ -550,7 +560,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
-                  id="accordion__panel-raa-4"
+                  id="accordion__panel-preavis"
                 >
                   <div
                     class="sc-bXCLTC fcbJdD"
@@ -787,7 +797,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             class="sc-ePDLzJ eCkqUq"
                             data-accordion-component="Accordion"
                           >
-                            <div>
+                            <div
+                              id="accord-de-lemployeur"
+                            >
                               <div
                                 class="sc-jXbUNg heDTFL"
                                 data-accordion-component="AccordionItem"
@@ -797,12 +809,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   data-accordion-component="AccordionItemHeading"
                                 >
                                   <div
-                                    aria-controls="accordion__panel-raa-5"
+                                    aria-controls="accordion__panel-accord-de-lemployeur"
                                     aria-disabled="false"
                                     aria-expanded="false"
                                     class="sc-kpDqfm heoudo"
                                     data-accordion-component="AccordionItemButton"
-                                    id="accordion__heading-raa-5"
+                                    id="accordion__heading-accord-de-lemployeur"
                                     role="button"
                                     tabindex="0"
                                   >
@@ -840,7 +852,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   class="sc-dhKdcB hlTUsz"
                                   data-accordion-component="AccordionItemPanel"
                                   hidden=""
-                                  id="accordion__panel-raa-5"
+                                  id="accordion__panel-accord-de-lemployeur"
                                 >
                                   <div
                                     class="sc-bXCLTC fcbJdD"
@@ -858,7 +870,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 </div>
                               </div>
                             </div>
-                            <div>
+                            <div
+                              id="refus-de-lemployeur"
+                            >
                               <div
                                 class="sc-jXbUNg crDDWD"
                                 data-accordion-component="AccordionItem"
@@ -868,12 +882,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   data-accordion-component="AccordionItemHeading"
                                 >
                                   <div
-                                    aria-controls="accordion__panel-raa-6"
+                                    aria-controls="accordion__panel-refus-de-lemployeur"
                                     aria-disabled="false"
                                     aria-expanded="false"
                                     class="sc-kpDqfm heoudo"
                                     data-accordion-component="AccordionItemButton"
-                                    id="accordion__heading-raa-6"
+                                    id="accordion__heading-refus-de-lemployeur"
                                     role="button"
                                     tabindex="0"
                                   >
@@ -911,7 +925,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   class="sc-dhKdcB hlTUsz"
                                   data-accordion-component="AccordionItemPanel"
                                   hidden=""
-                                  id="accordion__panel-raa-6"
+                                  id="accordion__panel-refus-de-lemployeur"
                                 >
                                   <div
                                     class="sc-bXCLTC fcbJdD"
@@ -1017,7 +1031,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         class="sc-ePDLzJ eCkqUq"
                         data-accordion-component="Accordion"
                       >
-                        <div>
+                        <div
+                          id="par-telephone"
+                        >
                           <div
                             class="sc-jXbUNg heDTFL"
                             data-accordion-component="AccordionItem"
@@ -1027,12 +1043,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               data-accordion-component="AccordionItemHeading"
                             >
                               <div
-                                aria-controls="accordion__panel-raa-7"
+                                aria-controls="accordion__panel-par-telephone"
                                 aria-disabled="false"
                                 aria-expanded="false"
                                 class="sc-kpDqfm heoudo"
                                 data-accordion-component="AccordionItemButton"
-                                id="accordion__heading-raa-7"
+                                id="accordion__heading-par-telephone"
                                 role="button"
                                 tabindex="0"
                               >
@@ -1070,7 +1086,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               class="sc-dhKdcB hlTUsz"
                               data-accordion-component="AccordionItemPanel"
                               hidden=""
-                              id="accordion__panel-raa-7"
+                              id="accordion__panel-par-telephone"
                             >
                               <div
                                 class="sc-bXCLTC fcbJdD"
@@ -1085,7 +1101,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             </div>
                           </div>
                         </div>
-                        <div>
+                        <div
+                          id="par-messagerie"
+                        >
                           <div
                             class="sc-jXbUNg crDDWD"
                             data-accordion-component="AccordionItem"
@@ -1095,12 +1113,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               data-accordion-component="AccordionItemHeading"
                             >
                               <div
-                                aria-controls="accordion__panel-raa-8"
+                                aria-controls="accordion__panel-par-messagerie"
                                 aria-disabled="false"
                                 aria-expanded="false"
                                 class="sc-kpDqfm heoudo"
                                 data-accordion-component="AccordionItemButton"
-                                id="accordion__heading-raa-8"
+                                id="accordion__heading-par-messagerie"
                                 role="button"
                                 tabindex="0"
                               >
@@ -1138,7 +1156,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               class="sc-dhKdcB hlTUsz"
                               data-accordion-component="AccordionItemPanel"
                               hidden=""
-                              id="accordion__panel-raa-8"
+                              id="accordion__panel-par-messagerie"
                             >
                               <div
                                 class="sc-bXCLTC fcbJdD"
@@ -1150,7 +1168,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             </div>
                           </div>
                         </div>
-                        <div>
+                        <div
+                          id="par-courrier"
+                        >
                           <div
                             class="sc-jXbUNg crDDWD"
                             data-accordion-component="AccordionItem"
@@ -1160,12 +1180,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               data-accordion-component="AccordionItemHeading"
                             >
                               <div
-                                aria-controls="accordion__panel-raa-9"
+                                aria-controls="accordion__panel-par-courrier"
                                 aria-disabled="false"
                                 aria-expanded="false"
                                 class="sc-kpDqfm heoudo"
                                 data-accordion-component="AccordionItemButton"
-                                id="accordion__heading-raa-9"
+                                id="accordion__heading-par-courrier"
                                 role="button"
                                 tabindex="0"
                               >
@@ -1203,7 +1223,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               class="sc-dhKdcB hlTUsz"
                               data-accordion-component="AccordionItemPanel"
                               hidden=""
-                              id="accordion__panel-raa-9"
+                              id="accordion__panel-par-courrier"
                             >
                               <div
                                 class="sc-bXCLTC fcbJdD"
@@ -1224,7 +1244,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
               </div>
             </div>
-            <div>
+            <div
+              id="indemnisation"
+            >
               <div
                 class="sc-jXbUNg crDDWD"
                 data-accordion-component="AccordionItem"
@@ -1234,12 +1256,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   data-accordion-component="AccordionItemHeading"
                 >
                   <div
-                    aria-controls="accordion__panel-raa-10"
+                    aria-controls="accordion__panel-indemnisation"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="sc-kpDqfm heoudo"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-raa-10"
+                    id="accordion__heading-indemnisation"
                     role="button"
                     tabindex="0"
                   >
@@ -1277,7 +1299,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
-                  id="accordion__panel-raa-10"
+                  id="accordion__panel-indemnisation"
                 >
                   <div
                     class="sc-bXCLTC fcbJdD"
@@ -1346,7 +1368,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
               </div>
             </div>
-            <div>
+            <div
+              id="documents-remis-au-salarie"
+            >
               <div
                 class="sc-jXbUNg crDDWD"
                 data-accordion-component="AccordionItem"
@@ -1356,12 +1380,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   data-accordion-component="AccordionItemHeading"
                 >
                   <div
-                    aria-controls="accordion__panel-raa-11"
+                    aria-controls="accordion__panel-documents-remis-au-salarie"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="sc-kpDqfm heoudo"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-raa-11"
+                    id="accordion__heading-documents-remis-au-salarie"
                     role="button"
                     tabindex="0"
                   >
@@ -1399,7 +1423,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   class="sc-dhKdcB hlTUsz"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
-                  id="accordion__panel-raa-11"
+                  id="accordion__panel-documents-remis-au-salarie"
                 >
                   <div
                     class="sc-bXCLTC fcbJdD"

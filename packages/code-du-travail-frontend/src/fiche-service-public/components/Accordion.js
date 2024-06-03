@@ -1,7 +1,8 @@
-import { Accordion, theme } from "@socialgouv/cdtn-ui";
+import { theme } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
+import { AccordionWithAnchor as Accordion } from "../../../src/common/AccordionWithAnchor";
 
 import { getText } from "../utils.js";
 import { ElementBuilder } from "./ElementBuilder.js";
