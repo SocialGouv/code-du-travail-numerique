@@ -39,7 +39,7 @@ export const InputDate = ({ value, onChange, invalid, ref, ...props }: any) => {
         type="date"
         ref={ref}
         data-input="true"
-        value={formatValueToEn(value)}
+        defaultValue={formatValueToEn(value)}
       />
     </StyledWrapper>
   );
@@ -88,7 +88,7 @@ const StyledInput = styled.input`
   border-radius: ${box.borderRadius};
   width: 192px;
   padding-right: 2px;
-  color: ${({ theme, value }) => (value ? theme.paragraph : theme.placeholder)};
+  color: ${({ theme, value, defaultValue }) => (value || defaultValue ? theme.paragraph : theme.placeholder)};
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
   }
