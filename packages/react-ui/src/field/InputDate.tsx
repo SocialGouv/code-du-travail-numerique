@@ -35,7 +35,7 @@ export const InputDate = ({ value, onChange, invalid, ref, ...props }: any) => {
     <StyledWrapper isValid={!invalid}>
       <StyledInput
         {...props}
-        onChange={onChangeDate}
+        onBlur={onChangeDate}
         type="date"
         ref={ref}
         data-input="true"
