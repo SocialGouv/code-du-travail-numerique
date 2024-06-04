@@ -26,15 +26,16 @@ const prequalifiedQuery = {
 };
 
 async function _getPrequalified() {
-  const { body: { count = 10000 } = {} } = await elasticsearchClient.count({
+  const body = await elasticsearchClient.count({
     body: {
       query: prequalifiedQuery,
     },
     index: elasticDocumentsIndex,
   });
+  const count = body.count ?? 10000;
   console.info(`Loading ${count} prequalifiedQueries`);
 
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body: {
       query: prequalifiedQuery,
       size: count,
@@ -42,11 +43,11 @@ async function _getPrequalified() {
     index: elasticDocumentsIndex,
   });
 
-  if (response.body.hits.total.value === 0) {
+  if (response.hits.hits.length === 0) {
     return null;
   }
 
-  const knownQueriesSet = response.body.hits.hits.reduce(
+  const knownQueriesSet = response.hits.hits.reduce(
     (queries, { _source: query }) => {
       for (const variant of query.variants) {
         const prepro = preprocess(variant);

@@ -13,7 +13,6 @@ const customJestConfig = {
     "<rootDir>/cypress/",
   ],
   testTimeout: 20000,
-  maxWorkers: "80%",
 };
 
 module.exports = createJestConfig(customJestConfig);

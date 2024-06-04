@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import { getDossiers } from "../service";
 
 describe("Dossiers", () => {

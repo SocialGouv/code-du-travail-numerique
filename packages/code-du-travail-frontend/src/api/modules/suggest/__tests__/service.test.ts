@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import { getSuggestions } from "../service";
 
 describe("Suggestions", () => {

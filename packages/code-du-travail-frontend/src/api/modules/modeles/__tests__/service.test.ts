@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import {
   getAllModeles,
   getByIdsModeles,

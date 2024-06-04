@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import { getGlossary } from "../service";
 
 describe("Glossary", () => {
