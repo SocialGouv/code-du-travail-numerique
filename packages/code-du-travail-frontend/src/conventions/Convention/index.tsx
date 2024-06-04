@@ -16,14 +16,6 @@ const Convention = ({ convention }) => {
     setCcInfo({ id, num, shortTitle, slug, title: shortTitle });
   }, [convention, setCcInfo]);
 
-  if (!convention.url) {
-    return (
-      <Paragraph variant="altText" fontSize="default">
-        Cette convention collective n&apos;est pas traitée par nos services.
-      </Paragraph>
-    );
-  }
-
   return (
     <>
       {convention.highlight && convention.highlight.content && (
@@ -54,14 +46,19 @@ const Convention = ({ convention }) => {
           convention={convention}
         />
       )}
-      {convention.url && (
+
+      {convention.url ? (
         <TextSearch containerId={convention.id} convention={convention} />
+      ) : (
+        <Paragraph variant="altText" fontSize="default">
+          Cette convention collective n&apos;est pas traitée par nos services.
+        </Paragraph>
       )}
     </>
   );
 };
 
-const { spacings, fonts } = theme;
+const { spacings } = theme;
 const TitleAlert = styled(Paragraph)`
   margin-bottom: ${spacings.tiny};
 `;
