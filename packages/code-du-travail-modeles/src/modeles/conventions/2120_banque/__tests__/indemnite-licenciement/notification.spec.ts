@@ -8,7 +8,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 const notification = [
   {
-    description: `Si lors de l’absence pour maladie non professionnelle le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (maintien de salaire), en plus des indemnités journalières de la sécurité sociale, le montant de l’indemnité de licenciement pourrait être plus élevé. En effet, dans ce cas, la période d’absence est intégrée dans l’ancienneté du salarié.
+    description: `Si lors de l’absence pour maladie non professionnelle le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (maintien de salaire), en plus des indemnités journalières de la sécurité sociale, le montant de l’indemnité de licenciement prévu par la convention collective pourrait être plus élevé. En effet, dans ce cas, la période d’absence est intégrée dans l’ancienneté du salarié.
 Par soucis de simplification, ce simulateur déduit toutes les absences pour maladie non professionnelle sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas.
 `,
   },
@@ -16,13 +16,13 @@ Par soucis de simplification, ce simulateur déduit toutes les absences pour mal
 
 const notification2 = [
   {
-    description: `Si lors de l’absence pour accident de trajet le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (maintien de salaire), en plus des indemnités journalières de la sécurité sociale, le montant de l’indemnité de licenciement pourrait être plus élevé. En effet, dans ce cas, la période d’absence est intégrée dans l’ancienneté du salarié.
+    description: `Si lors de l’absence pour accident de trajet le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (maintien de salaire), en plus des indemnités journalières de la sécurité sociale, le montant de l’indemnité de licenciement prévu par la convention collective pourrait être plus élevé. En effet, dans ce cas, la période d’absence est intégrée dans l’ancienneté du salarié.
 Par soucis de simplification, ce simulateur déduit toutes les absences pour accident de trajet sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas.
 `,
   },
 ];
 
-describe("Notifications pour la CC 650", () => {
+describe("Notifications pour la CC 2120", () => {
   describe("Maladie non pro", () => {
     describe("Affiche une notification", () => {
       test.each`
