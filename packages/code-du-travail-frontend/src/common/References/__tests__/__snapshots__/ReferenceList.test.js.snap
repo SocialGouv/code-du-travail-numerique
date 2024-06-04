@@ -3,11 +3,11 @@
 exports[`<ReferenceList /> should render 1`] = `
 <div>
   <ul
-    class="sc-cfxfcM sc-YysOf kMmTaI eeuACs"
+    class="sc-cfxfcM sc-bVVIoq kMmTaI gHXJXP"
   >
     <li>
       <a
-        class="sc-bmzYkS eyKmWS sc-ktPPKK jTAeai"
+        class="sc-bmzYkS eyKmWS sc-ePDLzJ kuuIgI"
         href="/code-du-travail/l2323-4"
       >
         <svg
@@ -32,7 +32,7 @@ exports[`<ReferenceList /> should render 1`] = `
     <li>
       <a
         aria-label="Article yyy du JO (Nouvelle fenêtre)"
-        class="sc-bmzYkS eyKmWS sc-ktPPKK jTAeai no-after"
+        class="sc-bmzYkS eyKmWS sc-ePDLzJ kuuIgI no-after"
         href="https://article.jo/yyy"
         target="_blank"
       >
@@ -58,7 +58,7 @@ exports[`<ReferenceList /> should render 1`] = `
     <li>
       <a
         aria-label="CCN metallurgie (Nouvelle fenêtre)"
-        class="sc-bmzYkS eyKmWS sc-ktPPKK jTAeai no-after"
+        class="sc-bmzYkS eyKmWS sc-ePDLzJ kuuIgI no-after"
         href="https://legifrance/ccn-metallurgie"
         target="_blank"
       >
@@ -83,7 +83,7 @@ exports[`<ReferenceList /> should render 1`] = `
     </li>
     <li>
       <a
-        class="sc-bmzYkS eyKmWS sc-ktPPKK jTAeai"
+        class="sc-bmzYkS eyKmWS sc-ePDLzJ kuuIgI"
         href="/convention-collective/123-automobile"
       >
         <svg
@@ -107,7 +107,7 @@ exports[`<ReferenceList /> should render 1`] = `
     </li>
     <li>
       <a
-        class="sc-bmzYkS eyKmWS sc-ktPPKK jTAeai"
+        class="sc-bmzYkS eyKmWS sc-ePDLzJ kuuIgI"
         href="/code-du-travail/l1234-3"
       >
         <svg

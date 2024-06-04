@@ -3,7 +3,7 @@
 exports[`<Salaires /> should add a salaire 1`] = `
 <div>
   <legend
-    class="sc-iEXKAA oIBzn sc-bVVIoq hjkuny"
+    class="sc-dlWCHZ frVQlK sc-iXzfSG jLUdia"
     data-testid="question-label"
   >
     <span
@@ -18,16 +18,16 @@ exports[`<Salaires /> should add a salaire 1`] = `
     </span>
   </legend>
   <div
-    class="sc-lnPyaJ bYAexV"
+    class="sc-iapWAC bgeaME"
   >
     <label
-      class="sc-eBHhsj kCcrYS"
+      class="sc-eulNck bfZsJe"
       for="5"
     >
       Montant :
     </label>
     <div
-      class="sc-dPZUQH laaNtT"
+      class="sc-lnPyaJ laJdlV"
     >
       <div
         class="sc-sLsrZ kGdGKi"
@@ -49,13 +49,13 @@ exports[`<Salaires /> should add a salaire 1`] = `
       </div>
     </div>
     <button
-      class="sc-kOPcWz kyVwqT sc-iXzfSG ilFGbg"
+      class="sc-kOPcWz kyVwqT sc-dExYaf kyjbQm"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-YysOf ZwrCm"
+        class="sc-bVVIoq kJqqrp"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -70,12 +70,12 @@ exports[`<Salaires /> should add a salaire 1`] = `
     </button>
   </div>
   <button
-    class="sc-kOPcWz kyVwqT sc-ktPPKK jlurEF"
+    class="sc-kOPcWz kyVwqT sc-ePDLzJ eJnqIn"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="sc-cVzyXs hvsrxu"
+      class="sc-dPZUQH QzQqV"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
 exports[`<Salaires /> should delete a salaires 1`] = `
 <div>
   <legend
-    class="sc-iEXKAA oIBzn sc-bVVIoq hjkuny"
+    class="sc-dlWCHZ frVQlK sc-iXzfSG jLUdia"
     data-testid="question-label"
   >
     <span
@@ -110,12 +110,12 @@ exports[`<Salaires /> should delete a salaires 1`] = `
     </span>
   </legend>
   <button
-    class="sc-kOPcWz kyVwqT sc-ktPPKK jlurEF"
+    class="sc-kOPcWz kyVwqT sc-ePDLzJ eJnqIn"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="sc-cVzyXs hvsrxu"
+      class="sc-dPZUQH QzQqV"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 exports[`<Salaires /> should render 1`] = `
 <div>
   <legend
-    class="sc-iEXKAA oIBzn sc-bVVIoq hjkuny"
+    class="sc-dlWCHZ frVQlK sc-iXzfSG jLUdia"
     data-testid="question-label"
   >
     <span
@@ -150,16 +150,16 @@ exports[`<Salaires /> should render 1`] = `
     </span>
   </legend>
   <div
-    class="sc-lnPyaJ bYAexV"
+    class="sc-iapWAC bgeaME"
   >
     <label
-      class="sc-eBHhsj kCcrYS"
+      class="sc-eulNck bfZsJe"
       for="1"
     >
       Montant :
     </label>
     <div
-      class="sc-dPZUQH laaNtT"
+      class="sc-lnPyaJ laJdlV"
     >
       <div
         class="sc-sLsrZ kGdGKi"
@@ -181,13 +181,13 @@ exports[`<Salaires /> should render 1`] = `
       </div>
     </div>
     <button
-      class="sc-kOPcWz kyVwqT sc-iXzfSG ilFGbg"
+      class="sc-kOPcWz kyVwqT sc-dExYaf kyjbQm"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-YysOf ZwrCm"
+        class="sc-bVVIoq kJqqrp"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -202,12 +202,12 @@ exports[`<Salaires /> should render 1`] = `
     </button>
   </div>
   <button
-    class="sc-kOPcWz kyVwqT sc-ktPPKK jlurEF"
+    class="sc-kOPcWz kyVwqT sc-ePDLzJ eJnqIn"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="sc-cVzyXs hvsrxu"
+      class="sc-dPZUQH QzQqV"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"

@@ -3,38 +3,38 @@
 exports[`<FicheMT /> should render 1`] = `
 <div>
   <div
-    class="sc-ggqIjW hgrLlq"
+    class="sc-btwKTd iEJIrp"
   >
     <div
-      class="sc-djVXDX hhJESW"
+      class="sc-gFnajm eQICHH"
     />
     <header
-      class="sc-ijDOKB ijrBg"
+      class="sc-cKXybt eJBlJG"
     >
       <div
-        class="sc-eBwKMn QxGrg"
+        class="sc-lgjHQU gTGWXB"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-aXZVg sc-lgjHQU gZgZQL dgQNVl"
+        class="sc-aXZVg sc-djTQaJ gZgZQL esUKPw"
       >
         <a
-          class="sc-fatcLD gnCRyc"
+          class="sc-pKqro sGQbj"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-cgjDci bzhOvf"
+            class="sc-gvPdwL uTkax"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-djTQaJ imSyQQ"
+            class="sc-dBFDNq dEbpMH"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<FicheMT /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-dBFDNq bGEZfe"
+          class="sc-epRvzc cblonN"
         >
           <form
             action="/recherche"
-            class="sc-jBeBSR fOyZHb"
+            class="sc-gplwa-d ctIqQN"
             role="search"
           >
             <div
@@ -86,7 +86,7 @@ exports[`<FicheMT /> should render 1`] = `
                 aria-controls="react-autowhatever-1"
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
-                class="sc-gplwa-d ljBgCp"
+                class="sc-iowXnY cZGjyv"
                 id="floating-search"
                 name="q"
                 placeholder="Rechercher"
@@ -95,20 +95,20 @@ exports[`<FicheMT /> should render 1`] = `
                 value=""
               />
               <div
-                class="sc-izQBue fdpZcE"
+                class="sc-jlGgGc goanOu"
                 id="react-autowhatever-1"
                 role="listbox"
               />
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz kyVwqT sc-lmUcrn euIRcP"
+              class="sc-kOPcWz kyVwqT sc-bWJUgm fuKjKk"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-gtJxfw ehUbmT"
+                class="sc-cTTdyq rKYys"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,11 +122,11 @@ exports[`<FicheMT /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-bHnlcS gsjYMe"
+          class="sc-fatcLD eZqwVq"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-gvPdwL cOmWot"
+            class="sc-djVXDX IsdOz"
             href="/recherche"
             rel="nofollow"
           >
@@ -144,17 +144,17 @@ exports[`<FicheMT /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-pKqro iLdrBU"
+          class="sc-ggqIjW dfiBcW"
         >
           <button
-            class="sc-kOPcWz cOwJar sc-tagGq sc-cKXybt bZXUzd gQFGtw"
+            class="sc-kOPcWz cOwJar sc-tagGq sc-cgjDci bZXUzd eXPDEL"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-iowXnY bFAeik"
+          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-kpKSZj gXuKXt"
         >
           <svg
             aria-hidden="true"
@@ -174,28 +174,28 @@ exports[`<FicheMT /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-epRvzc htuHAx"
+      class="sc-dISpDn bnSxCd"
       id="content"
       tabindex="-1"
     >
       <nav
         aria-label="Fil d'ariane"
-        class="sc-leSDtu fClXku"
+        class="sc-fAGzit jfnFQC"
       >
         <ol
-          class="sc-aXZVg sc-bJBgwP gZgZQL bXQHKo"
+          class="sc-aXZVg sc-bkSUFG gZgZQL cRvOkc"
         >
           <li
-            class="sc-dGCmGc jmNbcf"
+            class="sc-deXhhX cHeUhj"
           >
             <a
-              class="sc-fAGzit fLpelD"
+              class="sc-dQEtJz gBlwkc"
               href="/"
               title="Retour à l'accueil"
             >
               <svg
                 aria-hidden="true"
-                class="sc-bkSUFG iTZNkk"
+                class="sc-imwsjW ilwnkz"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -209,11 +209,11 @@ exports[`<FicheMT /> should render 1`] = `
             </a>
           </li>
           <li
-            class="sc-dGCmGc jmNbcf"
+            class="sc-deXhhX cHeUhj"
           >
             <svg
               aria-hidden="true"
-              class="sc-deXhhX hjWORA"
+              class="sc-kCMKrZ iCasmb"
               fill="none"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +225,7 @@ exports[`<FicheMT /> should render 1`] = `
             </svg>
              
             <a
-              class="sc-fAGzit fLpelD"
+              class="sc-dQEtJz gBlwkc"
               href="/themes/6-sante-securite-et-conditions-de-travail"
             >
               Santé, sécurité et conditions de travail
@@ -234,10 +234,10 @@ exports[`<FicheMT /> should render 1`] = `
         </ol>
       </nav>
       <div
-        class="sc-aXZVg sc-kMribo gZgZQL dGnnvq"
+        class="sc-aXZVg sc-fThUAz gZgZQL kCnUnC"
       >
         <div
-          class="sc-bdOgaJ bGhWgl sc-gFnajm iAAqYl"
+          class="sc-SrznA hgCkWs sc-bStcSt kDOOmR"
         >
           <div
             class="sc-aXZVg gZgZQL"
@@ -246,22 +246,22 @@ exports[`<FicheMT /> should render 1`] = `
               class="sc-iGgWBj biWgIW"
             >
               <div
-                class="sc-satoz gyYbWU"
+                class="sc-jOnpCo bnoPyk"
               >
                 <div>
                   <div
-                    class="sc-isRoRg cFtUQk"
+                    class="sc-fsvrbR inpXNf"
                   >
                     <p
-                      class="sc-jaXxmE sc-fsvrbR kgvDSh gDqRWc"
+                      class="sc-jaXxmE sc-bkEOxz kgvDSh fUXUMA"
                     >
                       Santé, sécurité et conditions de travail
                     </p>
                     <header
-                      class="sc-bDpDS gMfzUT sc-jOnpCo jovJNF"
+                      class="sc-fMMURN dtxGRF sc-dhFUGM bYVpCz"
                     >
                       <h1
-                        class="sc-dSIIpw eyWeso"
+                        class="sc-YysOf ivGKdG"
                       >
                         <span
                           class="sc-gsFSXq ljkohw"
@@ -270,13 +270,13 @@ exports[`<FicheMT /> should render 1`] = `
                       </h1>
                     </header>
                     <div
-                      class="sc-kFWlue jeLusI"
+                      class="sc-fbKhjd cOrywT"
                     >
                       <p
                         class="sc-krNlru bWTKgF"
                       >
                         <span
-                          class="sc-fbKhjd dzDHk"
+                          class="sc-dGCmGc gvEmsg"
                         >
                           Source:
                            
@@ -291,12 +291,12 @@ exports[`<FicheMT /> should render 1`] = `
                         </span>
                         <span
                           aria-hidden="true"
-                          class="sc-dhFUGM bQvIsP"
+                          class="sc-bJBgwP drMPgM"
                         >
                            - 
                         </span>
                         <span
-                          class="sc-fbKhjd dzDHk"
+                          class="sc-dGCmGc gvEmsg"
                         >
                           Mis à jour le
                            : 
@@ -306,10 +306,10 @@ exports[`<FicheMT /> should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-bkEOxz hhOQkI"
+                    class="sc-leSDtu iKfLnG"
                   >
                     <div
-                      class="sc-iGgWBj sc-eXsaLi cWzIZL eOujdK"
+                      class="sc-iGgWBj sc-bOhtcR cWzIZL jBKFsI"
                     >
                       <p
                         class="sc-krNlru bpribs"
@@ -382,7 +382,7 @@ exports[`<FicheMT /> should render 1`] = `
                               class="sc-bXCLTC fcbJdD"
                             >
                               <div
-                                class="sc-hBtRBD sc-btwKTd qxetK"
+                                class="sc-eXsaLi sc-eONNys jEaVaQ"
                               >
                                 <p>
                                   Depuis le 1er janvier 2017, la 
@@ -440,22 +440,22 @@ exports[`<FicheMT /> should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="sc-eNSrOW dNgLXL"
+                  class="sc-kFWlue jezDUv"
                 >
                   <div
-                    class="sc-fThUAz dxufyi"
+                    class="sc-dycYrt uNApb"
                   >
                     <button
-                      class="sc-SrznA iTwCcB no-after spacing-left"
+                      class="sc-hTUWRQ DDDPg no-after spacing-left"
                       title="Partager sur Facebook"
                       type="button"
                     >
                       <span
-                        class="sc-dycYrt hUuhaf"
+                        class="sc-eoVZPG giqYrX"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-hTUWRQ hguuxm"
+                          class="sc-dWZqqJ jgixeM"
                           fill="none"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
@@ -473,16 +473,16 @@ exports[`<FicheMT /> should render 1`] = `
                       </span>
                     </button>
                     <a
-                      class="sc-czkgLR cxFkEx spacing-left"
+                      class="sc-lizKOf mPhDL spacing-left"
                       href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Fiche%20MT%20test&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                       title="Envoyer par email"
                     >
                       <span
-                        class="sc-dycYrt hUuhaf"
+                        class="sc-eoVZPG giqYrX"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-hTUWRQ hguuxm"
+                          class="sc-dWZqqJ jgixeM"
                           fill="none"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
@@ -504,16 +504,16 @@ exports[`<FicheMT /> should render 1`] = `
                       </span>
                     </a>
                     <button
-                      class="sc-SrznA iTwCcB spacing-left"
+                      class="sc-hTUWRQ DDDPg spacing-left"
                       title="Partager sur LinkedIn"
                       type="button"
                     >
                       <span
-                        class="sc-dycYrt hUuhaf"
+                        class="sc-eoVZPG giqYrX"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-hTUWRQ hguuxm"
+                          class="sc-dWZqqJ jgixeM"
                           fill="none"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
@@ -534,16 +534,16 @@ exports[`<FicheMT /> should render 1`] = `
                       class="sc-hCPjZK dlWASs"
                     >
                       <button
-                        class="sc-SrznA iTwCcB spacing-left"
+                        class="sc-hTUWRQ DDDPg spacing-left"
                         title="Plus d’options"
                         type="button"
                       >
                         <span
-                          class="sc-dycYrt hUuhaf"
+                          class="sc-eoVZPG giqYrX"
                         >
                           <svg
                             aria-hidden="true"
-                            class="sc-hTUWRQ hguuxm"
+                            class="sc-dWZqqJ jgixeM"
                             fill="none"
                             viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg"
@@ -577,7 +577,7 @@ exports[`<FicheMT /> should render 1`] = `
             </div>
           </div>
           <div
-            class="sc-aXZVg sc-gEkIjz gZgZQL cxFePS"
+            class="sc-aXZVg sc-fFlnrN gZgZQL jUYSLk"
           >
             <p
               class="sc-krNlru bpribs"
@@ -585,20 +585,20 @@ exports[`<FicheMT /> should render 1`] = `
               Partager ce contenu : 
             </p>
             <div
-              class="sc-fThUAz dxufyi"
+              class="sc-dycYrt uNApb"
             >
               <button
-                class="sc-SrznA iTwCcB no-after spacing-left"
+                class="sc-hTUWRQ DDDPg no-after spacing-left"
                 tabindex="-1"
                 title="Partager sur Facebook"
                 type="button"
               >
                 <span
-                  class="sc-dycYrt hUuhaf"
+                  class="sc-eoVZPG giqYrX"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-hTUWRQ hguuxm"
+                    class="sc-dWZqqJ jgixeM"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -616,17 +616,17 @@ exports[`<FicheMT /> should render 1`] = `
                 </span>
               </button>
               <a
-                class="sc-czkgLR cxFkEx spacing-left"
+                class="sc-lizKOf mPhDL spacing-left"
                 href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Fiche%20MT%20test&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                 tabindex="-1"
                 title="Envoyer par email"
               >
                 <span
-                  class="sc-dycYrt hUuhaf"
+                  class="sc-eoVZPG giqYrX"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-hTUWRQ hguuxm"
+                    class="sc-dWZqqJ jgixeM"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -648,17 +648,17 @@ exports[`<FicheMT /> should render 1`] = `
                 </span>
               </a>
               <button
-                class="sc-SrznA iTwCcB spacing-left"
+                class="sc-hTUWRQ DDDPg spacing-left"
                 tabindex="-1"
                 title="Partager sur LinkedIn"
                 type="button"
               >
                 <span
-                  class="sc-dycYrt hUuhaf"
+                  class="sc-eoVZPG giqYrX"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-hTUWRQ hguuxm"
+                    class="sc-dWZqqJ jgixeM"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -679,17 +679,17 @@ exports[`<FicheMT /> should render 1`] = `
                 class="sc-hCPjZK dlWASs"
               >
                 <button
-                  class="sc-SrznA iTwCcB spacing-left"
+                  class="sc-hTUWRQ DDDPg spacing-left"
                   tabindex="-1"
                   title="Plus d’options"
                   type="button"
                 >
                   <span
-                    class="sc-dycYrt hUuhaf"
+                    class="sc-eoVZPG giqYrX"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-hTUWRQ hguuxm"
+                      class="sc-dWZqqJ jgixeM"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -720,7 +720,7 @@ exports[`<FicheMT /> should render 1`] = `
             </div>
           </div>
           <div
-            class="sc-gEvEer hpVpdb sc-dQEtJz lguHsa"
+            class="sc-gEvEer hpVpdb sc-dJiZtA dbeUOK"
           >
             <div
               class="sc-aXZVg gZgZQL"
@@ -729,10 +729,10 @@ exports[`<FicheMT /> should render 1`] = `
                 class="sc-iGgWBj cRLRjd"
               >
                 <div
-                  class="sc-epALIP jODIti"
+                  class="sc-eifrsQ hmMVlt"
                 >
                   <h2
-                    class="sc-iLsKjm dUrxFM sc-kAyceB kDiAsV"
+                    class="sc-fKWMtX kVpGnF sc-kAyceB kDiAsV"
                   >
                     <span
                       class="sc-gsFSXq cdZUuw"
@@ -740,15 +740,15 @@ exports[`<FicheMT /> should render 1`] = `
                     Avez-vous trouvé la réponse à votre question ?
                   </h2>
                   <p
-                    class="sc-lbJcrp jMjzYC"
+                    class="sc-kgOKUu jIJIDv"
                   >
                     <button
-                      class="sc-kOPcWz cpQXMn sc-eifrsQ jOYaPB"
+                      class="sc-kOPcWz cpQXMn sc-bfhvDw ecTTjy"
                     >
                       Non
                     </button>
                     <button
-                      class="sc-kOPcWz cpQXMn sc-eifrsQ jOYaPB"
+                      class="sc-kOPcWz cpQXMn sc-bfhvDw ecTTjy"
                     >
                       Oui
                     </button>
@@ -761,24 +761,24 @@ exports[`<FicheMT /> should render 1`] = `
       </div>
     </main>
     <div
-      class="sc-edKZPI gmgJzP"
+      class="sc-fPrdXf iIzRlo"
     >
       <footer
-        class="sc-bhqpjJ hOmCyc"
+        class="sc-hGMjit bpRSUK"
       >
         <div
-          class="sc-gEvEer hpVpdb sc-iLLODe fTcTNp"
+          class="sc-gEvEer hpVpdb sc-ezreuY dQyQa"
         >
           <div
             class="sc-aXZVg gZgZQL"
           >
             <div
               aria-level="2"
-              class="sc-bDpDS lxJFC"
+              class="sc-fMMURN ctumvs"
               role="heading"
             >
               <p
-                class="sc-fMMURN hKKnXg"
+                class="sc-cVzyXs VIuCi"
               >
                 <span
                   class="sc-gsFSXq djREvw"
@@ -787,7 +787,7 @@ exports[`<FicheMT /> should render 1`] = `
               </p>
             </div>
             <div
-              class="sc-aXZVg sc-fPrdXf dPpwpV kaaufc"
+              class="sc-aXZVg sc-boZgaH dPpwpV epFbNf"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
@@ -799,7 +799,7 @@ exports[`<FicheMT /> should render 1`] = `
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="sc-hGMjit eiwGGT"
+                class="sc-jwZKMi btbxeq"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -813,28 +813,28 @@ exports[`<FicheMT /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-gEvEer hpVpdb sc-ezreuY gmDtfH"
+          class="sc-gEvEer hpVpdb sc-gJCZQp efmhXG"
         >
           <div
-            class="sc-aXZVg sc-boZgaH gZgZQL cexUHm"
+            class="sc-aXZVg sc-dChVcU gZgZQL jKRgIo"
           >
             <div
-              class="sc-cXPBUD iKxHFp"
+              class="sc-iLLODe cgYusS"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-gJCZQp fFIIHa sc-kAyceB jIzQpS"
+                  class="sc-izQBue kVaoYP sc-kAyceB jIzQpS"
                   role="heading"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-jwZKMi kMmTaI hueQLM"
+                  class="sc-cfxfcM sc-rPWID kMmTaI dGnbwY"
                 >
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
@@ -842,7 +842,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/glossaire"
                     >
                       Glossaire
@@ -850,7 +850,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/a-propos"
                     >
                       À propos
@@ -858,7 +858,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/stats"
                     >
                       Statistiques d’utilisation
@@ -866,7 +866,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/integration"
                     >
                       Intégrer les outils du Code du travail numérique
@@ -876,22 +876,22 @@ exports[`<FicheMT /> should render 1`] = `
               </div>
             </div>
             <div
-              class="sc-cXPBUD iKxHFp"
+              class="sc-iLLODe cgYusS"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-gJCZQp fFIIHa sc-kAyceB jIzQpS"
+                  class="sc-izQBue kVaoYP sc-kAyceB jIzQpS"
                   role="heading"
                 >
                   Outils populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-jwZKMi kMmTaI hueQLM"
+                  class="sc-cfxfcM sc-rPWID kMmTaI dGnbwY"
                 >
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/outils/simulateur-embauche"
                     >
                       Calcul du salaire brut/net
@@ -899,7 +899,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/outils/indemnite-licenciement"
                     >
                       Calcul de l'indemnité de licenciement
@@ -907,7 +907,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/outils/convention-collective"
                     >
                       Trouver sa convention collective
@@ -918,17 +918,17 @@ exports[`<FicheMT /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-gJCZQp fFIIHa sc-kAyceB jIzQpS"
+                  class="sc-izQBue kVaoYP sc-kAyceB jIzQpS"
                   role="heading"
                 >
                   Modèles populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-jwZKMi kMmTaI hueQLM"
+                  class="sc-cfxfcM sc-rPWID kMmTaI dGnbwY"
                 >
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/modeles-de-courriers/lettre-de-demission"
                     >
                       Lettre de démission
@@ -936,7 +936,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
                     >
                       Rupture du contrat en période d'essai par le salarié
@@ -944,7 +944,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel"
                     >
                       Convocation à un entretien préalable au licenciement pour motif personnel
@@ -954,22 +954,22 @@ exports[`<FicheMT /> should render 1`] = `
               </div>
             </div>
             <div
-              class="sc-cXPBUD iKxHFp"
+              class="sc-iLLODe cgYusS"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-gJCZQp fFIIHa sc-kAyceB jIzQpS"
+                  class="sc-izQBue kVaoYP sc-kAyceB jIzQpS"
                   role="heading"
                 >
                   Fiches pratiques populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-jwZKMi kMmTaI hueQLM"
+                  class="sc-cfxfcM sc-rPWID kMmTaI dGnbwY"
                 >
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
                     >
                       Durée du préavis de démission
@@ -977,7 +977,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/contribution/les-conges-pour-evenements-familiaux"
                     >
                       Congés pour événements familiaux
@@ -985,7 +985,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                     >
                       Maintien du salaire en cas d'arrêt maladie
@@ -996,17 +996,17 @@ exports[`<FicheMT /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-gJCZQp fFIIHa sc-kAyceB jIzQpS"
+                  class="sc-izQBue kVaoYP sc-kAyceB jIzQpS"
                   role="heading"
                 >
                   Conventions collectives populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-jwZKMi kMmTaI hueQLM"
+                  class="sc-cfxfcM sc-rPWID kMmTaI dGnbwY"
                 >
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/convention-collective/1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
                     >
                       Services de l'automobile
@@ -1014,7 +1014,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/convention-collective/3248-metallurgie"
                     >
                       Métallurgie
@@ -1022,7 +1022,7 @@ exports[`<FicheMT /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-dChVcU hitceD"
+                      class="sc-jBeBSR dQkNhq"
                       href="/convention-collective/573-commerces-de-gros"
                     >
                       Commerce de gros
@@ -1034,10 +1034,10 @@ exports[`<FicheMT /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-aXZVg sc-hgRRfv gZgZQL eEFyNt"
+          class="sc-aXZVg sc-dUYLmH gZgZQL fNbmpv"
         >
           <div
-            class="sc-emIrwa dERitw"
+            class="sc-faUjhM NLmtU"
           >
             <img
               alt="le site du ministere du travail, de l'emploi et de l'insertion"
@@ -1050,7 +1050,7 @@ exports[`<FicheMT /> should render 1`] = `
               width="170"
             />
             <ul
-              class="sc-gRtvSG itllsb"
+              class="sc-cezyBN jDklAB"
             >
               <li>
                 <a
@@ -1090,13 +1090,13 @@ exports[`<FicheMT /> should render 1`] = `
             </ul>
           </div>
           <div
-            class="sc-cezyBN dBxaAk"
+            class="sc-edKZPI kpTGis"
           />
           <div
-            class="sc-dUYLmH cqoECI"
+            class="sc-fUkmAC kaLuTG"
           >
             <ul
-              class="sc-gRtvSG sc-faUjhM itllsb dPNtla"
+              class="sc-cezyBN sc-cXPBUD jDklAB hYTIJn"
             >
               <li>
                 <a
@@ -1138,7 +1138,7 @@ exports[`<FicheMT /> should render 1`] = `
               <li>
                 <a
                   aria-label="Nous contacter"
-                  class="sc-fUkmAC cYpNwH"
+                  class="sc-bhqpjJ cKEhtP"
                   role="link"
                 >
                   Nous contacter

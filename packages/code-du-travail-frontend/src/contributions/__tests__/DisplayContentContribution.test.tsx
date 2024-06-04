@@ -15,7 +15,7 @@ describe("DisplayContentContribution", () => {
       expect(baseElement.firstChild).toMatchInlineSnapshot(`
         <div>
           <div
-            class="sc-dExYaf eZgiiM"
+            class="sc-dxcDKg jpwKns"
           >
             <h2
               class="sc-kAyceB dvmaTz"
@@ -42,7 +42,7 @@ describe("DisplayContentContribution", () => {
       expect(baseElement.firstChild).toMatchInlineSnapshot(`
         <div>
           <div
-            class="sc-dExYaf eZgiiM"
+            class="sc-dxcDKg jpwKns"
           >
             <h4
               class="sc-kAyceB dvmaTz"
@@ -69,7 +69,7 @@ describe("DisplayContentContribution", () => {
       expect(baseElement.firstChild).toMatchInlineSnapshot(`
         <div>
           <div
-            class="sc-dExYaf eZgiiM"
+            class="sc-dxcDKg jpwKns"
           >
             <h6
               class="sc-kAyceB dvmaTz"
@@ -325,7 +325,7 @@ describe("DisplayContentContribution", () => {
 
       expect(asFragment().firstChild).toMatchInlineSnapshot(`
         <div
-          class="sc-dExYaf eZgiiM"
+          class="sc-dxcDKg jpwKns"
         >
           <table
             class="sc-cmaqmh juENof"
@@ -402,7 +402,7 @@ describe("DisplayContentContribution", () => {
 
       expect(asFragment().firstChild).toMatchInlineSnapshot(`
         <div
-          class="sc-dExYaf eZgiiM"
+          class="sc-dxcDKg jpwKns"
         >
           <table>
             <tbody>
@@ -448,7 +448,7 @@ describe("DisplayContentContribution", () => {
 
       expect(asFragment().firstChild).toMatchInlineSnapshot(`
         <div
-          class="sc-dExYaf eZgiiM"
+          class="sc-dxcDKg jpwKns"
         >
           <p>
             Ceci est un
@@ -539,7 +539,7 @@ describe("DisplayContentContribution", () => {
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
       <div
-        class="sc-dExYaf eZgiiM"
+        class="sc-dxcDKg jpwKns"
       >
         <p>
           hello
@@ -557,7 +557,7 @@ describe("DisplayContentContribution", () => {
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
       <div
-        class="sc-dExYaf eZgiiM"
+        class="sc-dxcDKg jpwKns"
       >
         <p>
           Ceci est un
@@ -595,7 +595,7 @@ describe("DisplayContentContribution", () => {
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
       <div
-        class="sc-dExYaf eZgiiM"
+        class="sc-dxcDKg jpwKns"
       >
         <p>
           <strong>

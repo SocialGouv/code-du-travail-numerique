@@ -3,7 +3,7 @@
 exports[`<StepStatus /> should render 1`] = `
 <div>
   <legend
-    class="sc-iEXKAA oIBzn sc-cVzyXs cBZqIS"
+    class="sc-dlWCHZ frVQlK sc-dPZUQH fkjfHN"
     data-testid="question-label"
   >
     <span
@@ -18,13 +18,13 @@ exports[`<StepStatus /> should render 1`] = `
     </span>
   </legend>
   <div
-    class="sc-iXzfSG hPSqtz"
+    class="sc-dExYaf cloBxp"
   >
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         data-testid="seriousMisconduct-oui"
         id="seriousMisconduct-oui"
         name="seriousMisconduct"
@@ -32,17 +32,17 @@ exports[`<StepStatus /> should render 1`] = `
         value="true"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="seriousMisconduct-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         data-testid="seriousMisconduct-non"
         id="seriousMisconduct-non"
         name="seriousMisconduct"
@@ -50,7 +50,7 @@ exports[`<StepStatus /> should render 1`] = `
         value="false"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="seriousMisconduct-non"
       >
         Non
@@ -63,7 +63,7 @@ exports[`<StepStatus /> should render 1`] = `
 exports[`<StepStatus /> should render coefficient 1`] = `
 <div>
   <legend
-    class="sc-iEXKAA oIBzn sc-cVzyXs cBZqIS"
+    class="sc-dlWCHZ frVQlK sc-dPZUQH fkjfHN"
     data-testid="question-label"
   >
     <span
@@ -78,13 +78,13 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     </span>
   </legend>
   <div
-    class="sc-iXzfSG hPSqtz"
+    class="sc-dExYaf cloBxp"
   >
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         data-testid="seriousMisconduct-oui"
         id="seriousMisconduct-oui"
         name="seriousMisconduct"
@@ -92,18 +92,18 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         value="true"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="seriousMisconduct-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
         checked=""
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         data-testid="seriousMisconduct-non"
         id="seriousMisconduct-non"
         name="seriousMisconduct"
@@ -111,7 +111,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         value="false"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="seriousMisconduct-non"
       >
         Non
@@ -119,7 +119,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     </div>
   </div>
   <legend
-    class="sc-iEXKAA oIBzn sc-cVzyXs cBZqIS"
+    class="sc-dlWCHZ frVQlK sc-dPZUQH fkjfHN"
     data-testid="question-label"
   >
     <span
@@ -134,14 +134,14 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     </span>
   </legend>
   <div
-    class="sc-iXzfSG hPSqtz"
+    class="sc-dExYaf cloBxp"
   >
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
         checked=""
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         data-testid="disabledWorker-oui"
         id="disabledWorker-oui"
         name="disabledWorker"
@@ -149,17 +149,17 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         value="true"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="disabledWorker-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         data-testid="disabledWorker-non"
         id="disabledWorker-non"
         name="disabledWorker"
@@ -167,7 +167,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         value="false"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="disabledWorker-non"
       >
         Non
@@ -175,10 +175,10 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     </div>
   </div>
   <div
-    class="sc-dPZUQH kHsgOH"
+    class="sc-lnPyaJ kJcKcB"
   >
     <legend
-      class="sc-iEXKAA oIBzn sc-cVzyXs cBZqIS"
+      class="sc-dlWCHZ frVQlK sc-dPZUQH fkjfHN"
       data-testid="question-label"
       for="input-cdt.ancienneté"
     >
@@ -228,15 +228,15 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       </span>
     </legend>
     <label
-      class="sc-ePDLzJ iERHNQ"
+      class="sc-eBHhsj gtoAvr"
     >
       Choisissez parmi les catégories d'ancienneté telles que définies par le Code du travail
     </label>
     <div
-      class="sc-hHOBiw cMRGqc sc-bVVIoq fndUBK"
+      class="sc-gdyeKB kjvnnZ sc-iXzfSG dFDMiS"
     >
       <select
-        class="sc-ecPEgm jckbH"
+        class="sc-bDpDS gEgUvj"
         data-testid="cdt.ancienneté"
         id="input-cdt.ancienneté"
         name="cdt.ancienneté"
@@ -268,7 +268,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="sc-kWtpeL jZgsGn"
+        class="sc-kzqdkY hYZnyA"
       >
         <svg
           aria-hidden="true"
@@ -304,7 +304,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 exports[`<StepStatus /> should render seriousMisconduct 1`] = `
 <div>
   <legend
-    class="sc-iEXKAA oIBzn sc-cVzyXs cBZqIS"
+    class="sc-dlWCHZ frVQlK sc-dPZUQH fkjfHN"
     data-testid="question-label"
   >
     <span
@@ -319,13 +319,13 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
     </span>
   </legend>
   <div
-    class="sc-iXzfSG hPSqtz"
+    class="sc-dExYaf cloBxp"
   >
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         data-testid="seriousMisconduct-oui"
         id="seriousMisconduct-oui"
         name="seriousMisconduct"
@@ -333,18 +333,18 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
         value="true"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="seriousMisconduct-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
         checked=""
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         data-testid="seriousMisconduct-non"
         id="seriousMisconduct-non"
         name="seriousMisconduct"
@@ -352,7 +352,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
         value="false"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="seriousMisconduct-non"
       >
         Non
@@ -360,7 +360,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
     </div>
   </div>
   <legend
-    class="sc-iEXKAA oIBzn sc-cVzyXs cBZqIS"
+    class="sc-dlWCHZ frVQlK sc-dPZUQH fkjfHN"
     data-testid="question-label"
   >
     <span
@@ -375,13 +375,13 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
     </span>
   </legend>
   <div
-    class="sc-iXzfSG hPSqtz"
+    class="sc-dExYaf cloBxp"
   >
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         data-testid="disabledWorker-oui"
         id="disabledWorker-oui"
         name="disabledWorker"
@@ -389,17 +389,17 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
         value="true"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="disabledWorker-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         data-testid="disabledWorker-non"
         id="disabledWorker-non"
         name="disabledWorker"
@@ -407,7 +407,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
         value="false"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="disabledWorker-non"
       >
         Non

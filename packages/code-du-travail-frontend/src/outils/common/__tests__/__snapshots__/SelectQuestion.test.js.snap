@@ -3,10 +3,10 @@
 exports[`<SelectQuestion /> should render with default value 1`] = `
 <div>
   <div
-    class="sc-bVVIoq hWWKRA"
+    class="sc-iXzfSG akpvg"
   >
     <legend
-      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
       data-testid="question-label"
       for="input-foo"
     >
@@ -22,10 +22,10 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       </span>
     </legend>
     <div
-      class="sc-hHOBiw cMRGqc sc-ePDLzJ kbJXkG"
+      class="sc-gdyeKB kjvnnZ sc-eBHhsj eEeJgd"
     >
       <select
-        class="sc-ecPEgm jckbH"
+        class="sc-bDpDS gEgUvj"
         data-testid="foo"
         id="input-foo"
         name="foo"
@@ -51,7 +51,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="sc-kWtpeL jZgsGn"
+        class="sc-kzqdkY hYZnyA"
       >
         <svg
           aria-hidden="true"
@@ -87,10 +87,10 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 <div>
   <div
-    class="sc-bVVIoq hWWKRA"
+    class="sc-iXzfSG akpvg"
   >
     <legend
-      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
       data-testid="question-label"
       for="input-foo"
     >
@@ -106,10 +106,10 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       </span>
     </legend>
     <div
-      class="sc-hHOBiw cMRGqc sc-ePDLzJ kbJXkG"
+      class="sc-gdyeKB kjvnnZ sc-eBHhsj eEeJgd"
     >
       <select
-        class="sc-ecPEgm jckbH"
+        class="sc-bDpDS gEgUvj"
         data-testid="foo"
         id="input-foo"
         name="foo"
@@ -135,7 +135,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="sc-kWtpeL jZgsGn"
+        class="sc-kzqdkY hYZnyA"
       >
         <svg
           aria-hidden="true"

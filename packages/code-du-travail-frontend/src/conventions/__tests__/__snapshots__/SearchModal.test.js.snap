@@ -44,13 +44,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
             tabindex="-1"
           >
             <label
-              class="sc-ejfMa-d fzTHSO"
+              class="sc-eZYNyq libTHa"
               for="convention-search"
             >
               Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
             </label>
             <div
-              class="sc-sLsrZ kGdGKi sc-kRRyDe kuvsZs"
+              class="sc-sLsrZ kGdGKi sc-dNsVcS eNRiEk"
             >
               <input
                 class="sc-dBmzty djgFPK"
@@ -62,16 +62,16 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               />
             </div>
             <p
-              class="sc-knuQbY dYalWS"
+              class="sc-fulCBj glBFaI"
             >
               Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
               <span
-                class="sc-ERObt keWFwj"
+                class="sc-kMribo gyVmkh"
               >
                 Consultez
                  
                 <button
-                  class="sc-kOPcWz cOwJar sc-dNsVcS HzAHT"
+                  class="sc-kOPcWz cOwJar sc-bdOgaJ kOFedF"
                   type="button"
                 >
                   notre aide

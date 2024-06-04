@@ -3,7 +3,7 @@
 exports[`<StepIndemnite /> should render cdd indemnite with conventional provision message 1`] = `
 <div>
   <h2
-    class="sc-dPZUQH knFQqC"
+    class="sc-lnPyaJ eYKOrQ"
   >
     Montant
   </h2>
@@ -11,7 +11,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     La prime d'intervention
      est estimée à : 
     <strong
-      class="sc-eBHhsj kWkvqL"
+      class="sc-eulNck cufBrT"
       role="alert"
     >
       <span>
@@ -53,7 +53,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
       class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Éléments saisis
       </h2>
@@ -74,7 +74,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </li>
       </ul>
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Formule
       </h2>
@@ -349,7 +349,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </span>
       </div>
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Sources
       </h2>
@@ -396,7 +396,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-lnPyaJ ftwa-dj gbtLDn"
+    class="sc-jsJBEP sc-iapWAC ftwa-dj bNcOFa"
   >
     <div
       class="sc-hRJfrW fHhwIY"
@@ -425,7 +425,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         class="sc-klVQfs giEiHo"
       >
         <p
-          class="sc-krNlru kcuIcb sc-eulNck ykxah"
+          class="sc-krNlru kcuIcb sc-kqGoIF eoyiDS"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -453,7 +453,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] = `
 <div>
   <h2
-    class="sc-dPZUQH knFQqC"
+    class="sc-lnPyaJ eYKOrQ"
   >
     Montant
   </h2>
@@ -461,7 +461,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     La prime de précarité
      est estimée à : 
     <strong
-      class="sc-eBHhsj kWkvqL"
+      class="sc-eulNck cufBrT"
       role="alert"
     >
       <span>
@@ -503,7 +503,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
       class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Éléments saisis
       </h2>
@@ -524,7 +524,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </li>
       </ul>
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Formule
       </h2>
@@ -799,7 +799,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </span>
       </div>
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Sources
       </h2>
@@ -834,7 +834,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-lnPyaJ ftwa-dj gbtLDn"
+    class="sc-jsJBEP sc-iapWAC ftwa-dj bNcOFa"
   >
     <div
       class="sc-hRJfrW fHhwIY"
@@ -863,7 +863,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         class="sc-klVQfs giEiHo"
       >
         <p
-          class="sc-krNlru kcuIcb sc-eulNck ykxah"
+          class="sc-krNlru kcuIcb sc-kqGoIF eoyiDS"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -894,7 +894,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 exports[`<StepIndemnite /> should render cdd indemnite with no conventional provision message 1`] = `
 <div>
   <h2
-    class="sc-dPZUQH knFQqC"
+    class="sc-lnPyaJ eYKOrQ"
   >
     Montant
   </h2>
@@ -902,7 +902,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     La prime de précarité
      est estimée à : 
     <strong
-      class="sc-eBHhsj kWkvqL"
+      class="sc-eulNck cufBrT"
       role="alert"
     >
       <span>
@@ -944,7 +944,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
       class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Éléments saisis
       </h2>
@@ -965,7 +965,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </li>
       </ul>
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Formule
       </h2>
@@ -1240,7 +1240,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </span>
       </div>
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Sources
       </h2>
@@ -1287,7 +1287,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-lnPyaJ ftwa-dj gbtLDn"
+    class="sc-jsJBEP sc-iapWAC ftwa-dj bNcOFa"
   >
     <div
       class="sc-hRJfrW fHhwIY"
@@ -1316,7 +1316,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         class="sc-klVQfs giEiHo"
       >
         <p
-          class="sc-krNlru kcuIcb sc-eulNck ykxah"
+          class="sc-krNlru kcuIcb sc-kqGoIF eoyiDS"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1347,7 +1347,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message 1`] = `
 <div>
   <h2
-    class="sc-dPZUQH knFQqC"
+    class="sc-lnPyaJ eYKOrQ"
   >
     Montant
   </h2>
@@ -1355,7 +1355,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     La prime de précarité
      est estimée à : 
     <strong
-      class="sc-eBHhsj kWkvqL"
+      class="sc-eulNck cufBrT"
       role="alert"
     >
       <span>
@@ -1397,7 +1397,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
       class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Éléments saisis
       </h2>
@@ -1418,7 +1418,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </li>
       </ul>
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Formule
       </h2>
@@ -1693,7 +1693,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </span>
       </div>
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Sources
       </h2>
@@ -1728,7 +1728,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-lnPyaJ ftwa-dj gbtLDn"
+    class="sc-jsJBEP sc-iapWAC ftwa-dj bNcOFa"
   >
     <div
       class="sc-hRJfrW fHhwIY"
@@ -1757,7 +1757,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         class="sc-klVQfs giEiHo"
       >
         <p
-          class="sc-krNlru kcuIcb sc-eulNck ykxah"
+          class="sc-krNlru kcuIcb sc-kqGoIF eoyiDS"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1788,7 +1788,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 <div>
   <h2
-    class="sc-dPZUQH knFQqC"
+    class="sc-lnPyaJ eYKOrQ"
   >
     Montant
   </h2>
@@ -1796,7 +1796,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     La prime de précarité
      est estimée à : 
     <strong
-      class="sc-eBHhsj kWkvqL"
+      class="sc-eulNck cufBrT"
       role="alert"
     >
       <span>
@@ -1838,7 +1838,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
       class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Éléments saisis
       </h2>
@@ -1859,7 +1859,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Formule
       </h2>
@@ -2134,7 +2134,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </span>
       </div>
       <h2
-        class="sc-dPZUQH knFQqC"
+        class="sc-lnPyaJ eYKOrQ"
       >
         Sources
       </h2>
@@ -2169,7 +2169,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-lnPyaJ ftwa-dj gbtLDn"
+    class="sc-jsJBEP sc-iapWAC ftwa-dj bNcOFa"
   >
     <div
       class="sc-hRJfrW fHhwIY"
@@ -2198,7 +2198,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         class="sc-klVQfs giEiHo"
       >
         <p
-          class="sc-krNlru kcuIcb sc-eulNck ykxah"
+          class="sc-krNlru kcuIcb sc-kqGoIF eoyiDS"
         >
           Attention il peut exister un montant plus favorable
         </p>

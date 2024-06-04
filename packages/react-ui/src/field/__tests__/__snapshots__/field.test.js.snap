@@ -36,7 +36,7 @@ exports[`<InputDate /> should render input date field 1`] = `
     class="sc-iGgWBj kZPIXv"
   >
     <input
-      class="sc-gsFSXq igmAJA"
+      class="sc-gsFSXq bKwwDN"
       data-input="true"
       name="input_date"
       type="date"

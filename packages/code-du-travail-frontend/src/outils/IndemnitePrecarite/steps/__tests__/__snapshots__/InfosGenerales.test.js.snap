@@ -4,7 +4,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
 <div>
   <form>
     <legend
-      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
       data-testid="question-label"
     >
       <span
@@ -19,34 +19,34 @@ exports[`<StepInfosGenerales /> should render 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
@@ -65,7 +65,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 <div>
   <form>
     <legend
-      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
       data-testid="question-label"
     >
       <span
@@ -80,45 +80,45 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
         checked=""
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
     <div
-      class="sc-bVVIoq hWWKRA"
+      class="sc-iXzfSG akpvg"
     >
       <legend
-        class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+        class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
         data-testid="question-label"
         for="input-criteria.cddType"
       >
@@ -134,10 +134,10 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         </span>
       </legend>
       <div
-        class="sc-hHOBiw cMRGqc sc-ePDLzJ kbJXkG"
+        class="sc-gdyeKB kjvnnZ sc-eBHhsj eEeJgd"
       >
         <select
-          class="sc-ecPEgm jckbH"
+          class="sc-bDpDS gEgUvj"
           data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
@@ -199,7 +199,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         </select>
         <div
           aria-hidden="true"
-          class="sc-kWtpeL jZgsGn"
+          class="sc-kzqdkY hYZnyA"
         >
           <svg
             aria-hidden="true"
@@ -242,7 +242,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 <div>
   <form>
     <legend
-      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
       data-testid="question-label"
     >
       <span
@@ -257,45 +257,45 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
       </span>
     </legend>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
         checked=""
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
     <div
-      class="sc-bVVIoq hWWKRA"
+      class="sc-iXzfSG akpvg"
     >
       <legend
-        class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+        class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
         data-testid="question-label"
         for="input-criteria.cddType"
       >
@@ -311,10 +311,10 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         </span>
       </legend>
       <div
-        class="sc-hHOBiw cMRGqc sc-ePDLzJ kbJXkG"
+        class="sc-gdyeKB kjvnnZ sc-eBHhsj eEeJgd"
       >
         <select
-          class="sc-ecPEgm jckbH"
+          class="sc-bDpDS gEgUvj"
           data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
@@ -376,7 +376,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         </select>
         <div
           aria-hidden="true"
-          class="sc-kWtpeL jZgsGn"
+          class="sc-kzqdkY hYZnyA"
         >
           <svg
             aria-hidden="true"
@@ -419,7 +419,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
 <div>
   <form>
     <legend
-      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
       data-testid="question-label"
     >
       <span
@@ -434,42 +434,42 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="sc-eZYNyq hfThTO"
+      class="sc-kWtpeL gqNWDj"
     >
       <input
         checked=""
-        class="sc-dlWCHZ kILyb"
+        class="sc-ecPEgm ljcJlA"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="sc-EgOXT cVMIuj"
+        class="sc-hHOBiw gRpul"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
     <legend
-      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
       data-testid="question-label"
     >
       <span
@@ -484,14 +484,14 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eBHhsj czXmMA"
+      class="sc-eulNck MBSzI"
       data-testid="cttFormation"
     >
       <div
-        class="sc-eZYNyq hfThTO"
+        class="sc-kWtpeL gqNWDj"
       >
         <input
-          class="sc-dlWCHZ kILyb"
+          class="sc-ecPEgm ljcJlA"
           data-testid="cttFormation-oui"
           id="cttFormation-oui"
           name="cttFormation"
@@ -499,17 +499,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="true"
         />
         <label
-          class="sc-EgOXT cVMIuj"
+          class="sc-hHOBiw gRpul"
           for="cttFormation-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-eZYNyq hfThTO"
+        class="sc-kWtpeL gqNWDj"
       >
         <input
-          class="sc-dlWCHZ kILyb"
+          class="sc-ecPEgm ljcJlA"
           data-testid="cttFormation-non"
           id="cttFormation-non"
           name="cttFormation"
@@ -517,7 +517,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="false"
         />
         <label
-          class="sc-EgOXT cVMIuj"
+          class="sc-hHOBiw gRpul"
           for="cttFormation-non"
         >
           Non
@@ -525,7 +525,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
       data-testid="question-label"
     >
       <span
@@ -540,14 +540,14 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eBHhsj czXmMA"
+      class="sc-eulNck MBSzI"
       data-testid="ruptureContratFauteGrave"
     >
       <div
-        class="sc-eZYNyq hfThTO"
+        class="sc-kWtpeL gqNWDj"
       >
         <input
-          class="sc-dlWCHZ kILyb"
+          class="sc-ecPEgm ljcJlA"
           data-testid="ruptureContratFauteGrave-oui"
           id="ruptureContratFauteGrave-oui"
           name="ruptureContratFauteGrave"
@@ -555,17 +555,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="true"
         />
         <label
-          class="sc-EgOXT cVMIuj"
+          class="sc-hHOBiw gRpul"
           for="ruptureContratFauteGrave-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-eZYNyq hfThTO"
+        class="sc-kWtpeL gqNWDj"
       >
         <input
-          class="sc-dlWCHZ kILyb"
+          class="sc-ecPEgm ljcJlA"
           data-testid="ruptureContratFauteGrave-non"
           id="ruptureContratFauteGrave-non"
           name="ruptureContratFauteGrave"
@@ -573,7 +573,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="false"
         />
         <label
-          class="sc-EgOXT cVMIuj"
+          class="sc-hHOBiw gRpul"
           for="ruptureContratFauteGrave-non"
         >
           Non
@@ -581,7 +581,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
       data-testid="question-label"
     >
       <span
@@ -596,14 +596,14 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eBHhsj czXmMA"
+      class="sc-eulNck MBSzI"
       data-testid="propositionCDIFinContrat"
     >
       <div
-        class="sc-eZYNyq hfThTO"
+        class="sc-kWtpeL gqNWDj"
       >
         <input
-          class="sc-dlWCHZ kILyb"
+          class="sc-ecPEgm ljcJlA"
           data-testid="propositionCDIFinContrat-oui"
           id="propositionCDIFinContrat-oui"
           name="propositionCDIFinContrat"
@@ -611,17 +611,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="true"
         />
         <label
-          class="sc-EgOXT cVMIuj"
+          class="sc-hHOBiw gRpul"
           for="propositionCDIFinContrat-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-eZYNyq hfThTO"
+        class="sc-kWtpeL gqNWDj"
       >
         <input
-          class="sc-dlWCHZ kILyb"
+          class="sc-ecPEgm ljcJlA"
           data-testid="propositionCDIFinContrat-non"
           id="propositionCDIFinContrat-non"
           name="propositionCDIFinContrat"
@@ -629,7 +629,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="false"
         />
         <label
-          class="sc-EgOXT cVMIuj"
+          class="sc-hHOBiw gRpul"
           for="propositionCDIFinContrat-non"
         >
           Non
@@ -637,7 +637,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
       data-testid="question-label"
     >
       <span
@@ -652,14 +652,14 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
     </legend>
     <div
-      class="sc-eBHhsj czXmMA"
+      class="sc-eulNck MBSzI"
       data-testid="refusSouplesse"
     >
       <div
-        class="sc-eZYNyq hfThTO"
+        class="sc-kWtpeL gqNWDj"
       >
         <input
-          class="sc-dlWCHZ kILyb"
+          class="sc-ecPEgm ljcJlA"
           data-testid="refusSouplesse-oui"
           id="refusSouplesse-oui"
           name="refusSouplesse"
@@ -667,17 +667,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="true"
         />
         <label
-          class="sc-EgOXT cVMIuj"
+          class="sc-hHOBiw gRpul"
           for="refusSouplesse-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-eZYNyq hfThTO"
+        class="sc-kWtpeL gqNWDj"
       >
         <input
-          class="sc-dlWCHZ kILyb"
+          class="sc-ecPEgm ljcJlA"
           data-testid="refusSouplesse-non"
           id="refusSouplesse-non"
           name="refusSouplesse"
@@ -685,7 +685,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="false"
         />
         <label
-          class="sc-EgOXT cVMIuj"
+          class="sc-hHOBiw gRpul"
           for="refusSouplesse-non"
         >
           Non

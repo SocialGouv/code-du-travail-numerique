@@ -3,7 +3,7 @@
 exports[`<TypeContrat /> should render 1`] = `
 <div>
   <legend
-    class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+    class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
     data-testid="question-label"
   >
     <span
@@ -18,34 +18,34 @@ exports[`<TypeContrat /> should render 1`] = `
     </span>
   </legend>
   <div
-    class="sc-eZYNyq hfThTO"
+    class="sc-kWtpeL gqNWDj"
   >
     <input
-      class="sc-dlWCHZ kILyb"
+      class="sc-ecPEgm ljcJlA"
       id="contrat-cdd"
       name="contrat"
       type="radio"
       value="CDD"
     />
     <label
-      class="sc-EgOXT cVMIuj"
+      class="sc-hHOBiw gRpul"
       for="contrat-cdd"
     >
       Contrat à durée déterminée (CDD)
     </label>
   </div>
   <div
-    class="sc-eZYNyq hfThTO"
+    class="sc-kWtpeL gqNWDj"
   >
     <input
-      class="sc-dlWCHZ kILyb"
+      class="sc-ecPEgm ljcJlA"
       id="contrat-ci"
       name="contrat"
       type="radio"
       value="CTT"
     />
     <label
-      class="sc-EgOXT cVMIuj"
+      class="sc-hHOBiw gRpul"
       for="contrat-ci"
     >
       Contrat de travail temporaire (Contrat d’intérim)

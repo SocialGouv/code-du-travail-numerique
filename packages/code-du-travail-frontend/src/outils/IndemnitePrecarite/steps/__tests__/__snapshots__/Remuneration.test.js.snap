@@ -3,7 +3,7 @@
 exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 <div>
   <legend
-    class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+    class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
     data-testid="question-label"
   >
     <span
@@ -18,17 +18,17 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </span>
   </legend>
   <div
-    class="sc-eZYNyq hfThTO"
+    class="sc-kWtpeL gqNWDj"
   >
     <input
-      class="sc-dlWCHZ kILyb"
+      class="sc-ecPEgm ljcJlA"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="sc-EgOXT cVMIuj"
+      class="sc-hHOBiw gRpul"
       for="typeRemuneration-amount"
     >
       <span>
@@ -41,18 +41,18 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <div
-    class="sc-eZYNyq hfThTO"
+    class="sc-kWtpeL gqNWDj"
   >
     <input
       checked=""
-      class="sc-dlWCHZ kILyb"
+      class="sc-ecPEgm ljcJlA"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="sc-EgOXT cVMIuj"
+      class="sc-hHOBiw gRpul"
       for="typeRemuneration-pay"
     >
       <span>
@@ -65,7 +65,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <legend
-    class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+    class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
     data-testid="question-label"
   >
     <span
@@ -80,16 +80,16 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </span>
   </legend>
   <div
-    class="sc-dxcDKg dBCSPy"
+    class="sc-knuQbY istuur"
   >
     <label
-      class="sc-iapWAC jXExYF"
+      class="sc-gvZAcH hseDjx"
       for="2"
     >
       Montant :
     </label>
     <div
-      class="sc-cVzyXs ebIxnY"
+      class="sc-dPZUQH laaNtT"
     >
       <div
         class="sc-sLsrZ kGdGKi"
@@ -111,13 +111,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </div>
     </div>
     <button
-      class="sc-kOPcWz kyVwqT sc-kqGoIF dNgUxs"
+      class="sc-kOPcWz kyVwqT sc-kRRyDe csyDrm"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-eulNck qWsZW"
+        class="sc-kqGoIF fiwkkJ"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -132,16 +132,16 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <div
-    class="sc-dxcDKg dBCSPy"
+    class="sc-knuQbY istuur"
   >
     <label
-      class="sc-iapWAC jXExYF"
+      class="sc-gvZAcH hseDjx"
       for="4"
     >
       Montant :
     </label>
     <div
-      class="sc-cVzyXs ebIxnY"
+      class="sc-dPZUQH laaNtT"
     >
       <div
         class="sc-sLsrZ kGdGKi"
@@ -163,13 +163,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </div>
     </div>
     <button
-      class="sc-kOPcWz kyVwqT sc-kqGoIF dNgUxs"
+      class="sc-kOPcWz kyVwqT sc-kRRyDe csyDrm"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-eulNck qWsZW"
+        class="sc-kqGoIF fiwkkJ"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -184,12 +184,12 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <button
-    class="sc-kOPcWz kyVwqT sc-lnPyaJ fQpwga"
+    class="sc-kOPcWz kyVwqT sc-iapWAC hGbPDb"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="sc-dExYaf bxwfTw"
+      class="sc-dxcDKg elQZWk"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +204,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     Ajouter un salaire
   </button>
   <p
-    class="sc-iXzfSG itbNFS"
+    class="sc-dExYaf yDnFA"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>
@@ -214,7 +214,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 exports[`<StepRemuneration /> should render one input 1`] = `
 <div>
   <legend
-    class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+    class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
     data-testid="question-label"
   >
     <span
@@ -229,18 +229,18 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </span>
   </legend>
   <div
-    class="sc-eZYNyq hfThTO"
+    class="sc-kWtpeL gqNWDj"
   >
     <input
       checked=""
-      class="sc-dlWCHZ kILyb"
+      class="sc-ecPEgm ljcJlA"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="sc-EgOXT cVMIuj"
+      class="sc-hHOBiw gRpul"
       for="typeRemuneration-amount"
     >
       <span>
@@ -253,17 +253,17 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </label>
   </div>
   <div
-    class="sc-eZYNyq hfThTO"
+    class="sc-kWtpeL gqNWDj"
   >
     <input
-      class="sc-dlWCHZ kILyb"
+      class="sc-ecPEgm ljcJlA"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="sc-EgOXT cVMIuj"
+      class="sc-hHOBiw gRpul"
       for="typeRemuneration-pay"
     >
       <span>
@@ -276,7 +276,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </label>
   </div>
   <legend
-    class="sc-iEXKAA oIBzn sc-YysOf gLYcDV"
+    class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
     data-testid="question-label"
     for="currency-1"
   >
@@ -292,7 +292,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </span>
   </legend>
   <div
-    class="sc-cVzyXs ebIxnY"
+    class="sc-dPZUQH laaNtT"
   >
     <div
       class="sc-sLsrZ kGdGKi"
@@ -314,7 +314,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </div>
   </div>
   <p
-    class="sc-iXzfSG itbNFS"
+    class="sc-dExYaf yDnFA"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>

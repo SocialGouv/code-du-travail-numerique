@@ -6,26 +6,26 @@ exports[`<DureePreavisDemission /> should render 1`] = `
     class="sc-iGgWBj biWgIW"
   >
     <form
-      class="sc-dNsVcS iHoRAv"
+      class="sc-bdOgaJ kcsxR"
     >
       <div
-        class="sc-dExYaf hQfgJZ"
+        class="sc-dxcDKg gXryFt"
       >
         <div
-          class="sc-kqGoIF dvvsXL"
+          class="sc-kRRyDe eZjqPJ"
         >
           <h1
-            class="sc-iapWAC ejYQwu"
+            class="sc-gvZAcH kFesDC"
           >
             Simulateur de durée de préavis de démission
           </h1>
         </div>
         <div
-          class="sc-gvZAcH WPNGn"
+          class="sc-ERObt iFfrYA"
         >
           <svg
             aria-hidden="true"
-            class="sc-knuQbY laTNCL"
+            class="sc-fulCBj kTPhSR"
             fill="none"
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg"
@@ -64,26 +64,26 @@ exports[`<DureePreavisDemission /> should render 1`] = `
             </defs>
           </svg>
           <span
-            class="sc-kRRyDe drtWeq"
+            class="sc-dNsVcS MhAEu"
           >
             1 à 2 min
           </span>
         </div>
       </div>
       <div
-        class="sc-iGgWBj sc-bVVIoq cWzIZL hTdroM"
+        class="sc-iGgWBj sc-iXzfSG cWzIZL jHESmY"
       >
         <span
-          class="sc-dPZUQH ezCbTI"
+          class="sc-lnPyaJ cArwBy"
         >
           Étape
           <span
-            class="sc-eBHhsj gScyrj"
+            class="sc-eulNck bBOBTf"
           >
             s
           </span>
           <span
-            class="sc-iXzfSG ioKSUU"
+            class="sc-dExYaf AZPLe"
           >
              
             1/4
@@ -94,41 +94,41 @@ exports[`<DureePreavisDemission /> should render 1`] = `
         >
           <li
             aria-live="polite"
-            class="sc-lnPyaJ ktroig"
+            class="sc-iapWAC iXvHjh"
             title="onglet actif"
           >
             <span
-              class="sc-eulNck jAuCYm"
+              class="sc-kqGoIF geMAvV"
             >
               1
             </span>
             Introduction
           </li>
           <li
-            class="sc-lnPyaJ jyVDOO"
+            class="sc-iapWAC hZijXX"
           >
             <span
-              class="sc-eulNck cYwigl"
+              class="sc-kqGoIF lnGqhy"
             >
               2
             </span>
             Convention collective
           </li>
           <li
-            class="sc-lnPyaJ jyVDOO"
+            class="sc-iapWAC hZijXX"
           >
             <span
-              class="sc-eulNck cYwigl"
+              class="sc-kqGoIF lnGqhy"
             >
               3
             </span>
             Informations
           </li>
           <li
-            class="sc-lnPyaJ jyVDOO"
+            class="sc-iapWAC hZijXX"
           >
             <span
-              class="sc-eulNck cYwigl"
+              class="sc-kqGoIF lnGqhy"
             >
               4
             </span>
@@ -143,15 +143,15 @@ exports[`<DureePreavisDemission /> should render 1`] = `
         Des informations disponibles sur le bulletin de salaire pourraient être utiles pour réaliser cette simulation.
       </p>
       <div
-        class="sc-YysOf eUmeFl"
+        class="sc-bVVIoq zRucW"
       >
         <button
-          class="sc-kOPcWz cefBoA sc-ktPPKK sc-cVzyXs grKUdr bJYRhz"
+          class="sc-kOPcWz cefBoA sc-ePDLzJ sc-dPZUQH giwswN dSORUI"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="sc-ePDLzJ dFzqdk"
+            class="sc-eBHhsj gmenXr"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"

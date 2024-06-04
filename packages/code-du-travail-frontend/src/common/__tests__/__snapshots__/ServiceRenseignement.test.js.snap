@@ -3,10 +3,10 @@
 exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 <div>
   <header
-    class="sc-bDpDS LYowO"
+    class="sc-fMMURN bdACkg"
   >
     <h1
-      class="sc-dSIIpw hsyCbO"
+      class="sc-YysOf QfOmM"
     >
       <span
         class="sc-gsFSXq djREvw"
@@ -20,16 +20,16 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     Contact téléphonique
   </h2>
   <a
-    class="sc-ktPPKK kbepNR"
+    class="sc-ePDLzJ lbyfWL"
     href="tel:+0033806000126"
   >
     <strong
-      class="sc-YysOf cQCBRh"
+      class="sc-bVVIoq dsOkHO"
     >
       0 806 000 126
     </strong>
     <em
-      class="sc-cVzyXs bpErNv"
+      class="sc-dPZUQH eVmQMw"
     >
       Service gratuit 
       <span>
@@ -43,7 +43,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     Contact par email et prise de rendez-vous
   </h2>
   <form
-    class="sc-ePDLzJ eyeTbo"
+    class="sc-eBHhsj dsjLcj"
   >
     <label
       for="search-service"
@@ -51,7 +51,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       Saisissez votre numéro de département :
     </label>
     <div
-      class="sc-sLsrZ kGdGKi sc-bVVIoq jVvQbu"
+      class="sc-sLsrZ kGdGKi sc-iXzfSG bLBnXa"
     >
       <input
         autocomplete="off"
@@ -66,13 +66,13 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </div>
     <button
       aria-label="Recherchez le service"
-      class="sc-kOPcWz kyVwqT sc-dPZUQH bdHYcl"
+      class="sc-kOPcWz kyVwqT sc-lnPyaJ ezKCb"
       title="Lancer une recherche"
       type="submit"
     >
       <svg
         aria-hidden="true"
-        class="sc-eBHhsj blcEOJ"
+        class="sc-eulNck dshhnZ"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </button>
   </form>
   <div
-    class="sc-iXzfSG eodgEn"
+    class="sc-dExYaf fLnCXN"
   >
     <p>
       Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
