@@ -20,9 +20,9 @@ const Convention = ({ convention }) => {
 
   if (!convention.url) {
     return (
-      <Suptitle>
+      <Paragraph variant="altText" fontSize="default">
         Cette convention collective n&apos;est pas traitée par nos services.
-      </Suptitle>
+      </Paragraph>
     );
   }
 
@@ -72,12 +72,6 @@ const Convention = ({ convention }) => {
 const { spacings, fonts } = theme;
 const TitleAlert = styled(Paragraph)`
   margin-bottom: ${spacings.tiny};
-`;
-
-const Suptitle = styled.div`
-  margin-bottom: ${spacings.base};
-  color: ${({ theme }) => theme.altText};
-  font-size: ${fonts.sizes.headings.small};
 `;
 
 export default Convention;
