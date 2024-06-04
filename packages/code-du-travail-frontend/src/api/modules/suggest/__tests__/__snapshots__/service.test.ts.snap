@@ -4,6 +4,9 @@ exports[`Suggestions getSuggestions should return an empty array if query is too
 
 exports[`Suggestions getSuggestions should return the same with ré 1`] = `
 [
+  "renseignements",
+  "retraite",
+  "repos",
   "réintégration",
   "déplacement régulier",
 ]
@@ -14,5 +17,7 @@ exports[`Suggestions getSuggestions should work with re 1`] = `
   "renseignements",
   "retraite",
   "repos",
+  "réintégration",
+  "déplacement régulier",
 ]
 `;
