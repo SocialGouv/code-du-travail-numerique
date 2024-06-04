@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.140.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.139.0...v4.140.0) (2024-06-04)
+
+### Bug Fixes
+
+- **accordion:** ne pas crasher s'il y a un selector invalid dans l'url ([#5935](https://github.com/SocialGouv/code-du-travail-numerique/issues/5935)) ([c09d821](https://github.com/SocialGouv/code-du-travail-numerique/commit/c09d8214e1dc723d61fe069eb37bb41e3797ebd4))
+- **indemnité de licenciement:** ne pas crasher si le salaire conventionnel est à 0 ([#5937](https://github.com/SocialGouv/code-du-travail-numerique/issues/5937)) ([e020a07](https://github.com/SocialGouv/code-du-travail-numerique/commit/e020a0782a025c54eadd0b13e19c06ede7da7e85))
+- **indemnité de rupture co:** nettoyage de la question sur l'inaptitude dans la rupture co ([#5938](https://github.com/SocialGouv/code-du-travail-numerique/issues/5938)) ([4f3b434](https://github.com/SocialGouv/code-du-travail-numerique/commit/4f3b434e81efd5e23d765a5699419c824c6db862))
+
+### Features
+
+- **accordéons:** ajout d'ancre sur tous les accordéons pour pouvoir les ouvrir en mettant une ancre dans l'url ([#5925](https://github.com/SocialGouv/code-du-travail-numerique/issues/5925)) ([50502e6](https://github.com/SocialGouv/code-du-travail-numerique/commit/50502e61d7a1b0dca9dba66ac6a73192fbc6d43a))
+- **pages convention collective:** changement du format de la page pour n'afficher que les liens vers les contribs au lieu des réponses ([#5924](https://github.com/SocialGouv/code-du-travail-numerique/issues/5924)) ([760bb1b](https://github.com/SocialGouv/code-du-travail-numerique/commit/760bb1bd2afe520ef8ebcf39a119908e949c9171))
+- **rupture co:** affichage des notifications pour la 2120 ([#5927](https://github.com/SocialGouv/code-du-travail-numerique/issues/5927)) ([6a89823](https://github.com/SocialGouv/code-du-travail-numerique/commit/6a89823f9e0f5d824a97403211b46d81b1c196a1))
+
 # [4.139.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.138.0...v4.139.0) (2024-05-31)
 
 ### Bug Fixes
