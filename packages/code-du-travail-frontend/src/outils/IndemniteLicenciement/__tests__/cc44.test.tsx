@@ -273,6 +273,8 @@ describe("Indemnité licenciement - CC 44", () => {
       .setInput(ui.salary.salaries.getAll()[5], "3554")
       .setInput(ui.salary.salaries.getAll()[6], "3560")
       .setInput(ui.salary.salaries.getAll()[7], "3330")
+      .setInput(ui.salary.salaries.getAll()[8], "3530")
+      .setInput(ui.salary.salaries.getAll()[9], "3510")
       .setInput(ui.salary.salaries.getAll()[10], "3580")
       .setInput(ui.salary.salaries.getAll()[11], "3362")
       .click(ui.salary.variablePart.oui.get())

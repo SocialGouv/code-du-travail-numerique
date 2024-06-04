@@ -1,5 +1,4 @@
 import { differenceInMonths, isAfter } from "date-fns";
-import { isValidDate } from "../../../../../../lib";
 import { parse } from "../../../../../common/utils";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 
@@ -34,8 +33,6 @@ export const getDateNotificationErrors = (
   ) {
     errors.errorDateNotification =
       "La date de notification doit se situer après la date de début de contrat";
-  } else if (!isValidDate(state.dateNotification)) {
-    errors.errorDateNotification = "La date de notification est invalide";
   } else {
     errors.errorDateNotification = undefined;
   }
