@@ -4,6 +4,16 @@ FROM node:$NODE_VERSION AS dist
 
 WORKDIR /dep
 
+# Copy lockfile
+COPY ./yarn.lock ./.yarnrc.yml ./
+COPY .yarn .yarn
+
+# Install packages
+RUN yarn fetch --immutable
+
+COPY . ./
+
+ENV NEXT_PUBLIC_APP_ENV=production
 # Add build-arg from github actions
 ARG NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
 ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
@@ -39,17 +49,6 @@ ARG NEXT_PUBLIC_ES_INDEX_PREFIX
 ENV NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX
 ARG NEXT_PUBLIC_BRANCH_NAME_SLUG
 ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
-
-# Copy lockfile
-COPY ./yarn.lock ./.yarnrc.yml ./
-COPY .yarn .yarn
-
-# Install packages
-RUN yarn fetch --immutable
-
-COPY . ./
-
-ENV NEXT_PUBLIC_APP_ENV=production
 
 # hadolint ignore=SC2046
 RUN --mount=type=secret,id=sentry_auth_token \

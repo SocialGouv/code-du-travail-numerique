@@ -10,7 +10,13 @@ jest.spyOn(Storage.prototype, "getItem");
 describe("Indemnité licenciement - Step salaire", () => {
   describe("validation de la step salaire", () => {
     beforeEach(() => {
-      render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
+      render(
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
+      );
       userEvent.click(ui.introduction.startButton.get());
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
@@ -103,6 +109,10 @@ describe("Indemnité licenciement - Step salaire", () => {
         screen.queryByText("Vous devez compléter l'ensemble des champs")
       ).not.toBeInTheDocument();
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+      expect(ui.result.salaryTableRows.getAll().length).toBe(12);
+      expect(ui.result.salaryTableRows.getAll()[0]).toHaveTextContent(
+        "décembre 20211 000,00 €"
+      );
 
       // vérification que si on indique une prime, les autres ne sont pas obligatoires
       userEvent.click(ui.previous.get());
@@ -111,7 +121,13 @@ describe("Indemnité licenciement - Step salaire", () => {
       });
       userEvent.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-
+      expect(ui.result.salaryTableRows.getAll().length).toBe(12);
+      expect(ui.result.salaryTableRows.getAll()[0]).toHaveTextContent(
+        "décembre 20211 000,00 €"
+      );
+      expect(ui.result.salaryTableRows.getAll()[1]).toHaveTextContent(
+        "novembre 20211 000,00 €100,00 €"
+      );
       // vérification que si l'on change un montant et supprime la prime, on ne bloque pas l'utilisateur
       userEvent.click(ui.previous.get());
       fireEvent.change(ui.salary.salaries.getAll()[2], {
@@ -119,6 +135,43 @@ describe("Indemnité licenciement - Step salaire", () => {
       });
       fireEvent.change(ui.salary.primes.getAll()[1], {
         target: { value: "" },
+      });
+      userEvent.click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+
+    });
+
+    test("Vérification qu'un salaire ne peut pas être inférieur à 0 dans le champ où on saisit plusieurs salaires pour chaque mois", () => {
+      fireEvent.click(ui.salary.hasPartialTime.non.get());
+      fireEvent.click(ui.salary.hasSameSalary.non.get());
+      ui.salary.salaries.getAll().forEach((input) => {
+        fireEvent.change(input, { target: { value: "0" } });
+      });
+      userEvent.click(ui.next.get());
+      expect(
+        screen.queryByText("Vous devez saisir un montant supérieur à zéro")
+      ).toBeInTheDocument();
+      // Avec les bonnes valeurs
+      ui.salary.salaries.getAll().forEach((input) => {
+        fireEvent.change(input, { target: { value: "1000" } });
+      });
+      userEvent.click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    });
+
+    test("Vérification qu'un salaire ne peut pas être inférieur à 0 dans le champ où on saisit un seul salaire", () => {
+      fireEvent.click(ui.salary.hasPartialTime.non.get());
+      fireEvent.click(ui.salary.hasSameSalary.oui.get());
+      fireEvent.change(ui.salary.sameSalaryValue.get(), {
+        target: { value: "0" },
+      });
+      userEvent.click(ui.next.get());
+      expect(
+        screen.queryByText("Vous devez saisir un montant supérieur à zéro")
+      ).toBeInTheDocument();
+      // Avec les bonnes valeurs
+      fireEvent.change(ui.salary.sameSalaryValue.get(), {
+        target: { value: "1000" },
       });
       userEvent.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");

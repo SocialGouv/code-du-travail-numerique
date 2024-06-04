@@ -23,11 +23,23 @@ describe("Landing pages", () => {
       .should("contain", "Qu’est-ce qu’une entreprise d’insertion");
   });
 
+  it("je vois une page fiche ministère du travail avec un accordéon ouvert", () => {
+    cy.visit("/fiche-ministere-travail/la-demission#Quelle-est-la-situation-du-salarie-a-la-fin-du-contrat");
+    cy.get("h1").should("have.text", "La démission");
+    cy.get('[aria-expanded="true"]', { timeout: 10000 }).find("h2").should("contain", "Quelle est la situation du salarié à la fin du contrat");
+  });
+
   it("je vois une page fiche service public", () => {
     cy.visit("/fiche-service-public/conges-payes");
     cy.get("h1").should("contain", "Congés payés");
     cy.get("body").should("contain", "Source: Fiche service-public.fr");
     cy.get("h2").first().should("contain", "Quel salarié a droit aux congés payés");
+  });
+
+  it("je vois une fiche service public avec un accordéon ouvert", () => {
+    cy.visit("/fiche-service-public/conges-payes#a-combien-de-jours-de-conges-payes-le-salarie-a-t-il-droit");
+    cy.get("h1").should("have.text", "Congés payés du salarié dans le secteur privé");
+    cy.get('[aria-expanded="true"]').find("h2").should("contain", "À combien de jours de congés payés le salarié a-t-il droit");
   });
 
   it("je vois une page convention collective", () => {

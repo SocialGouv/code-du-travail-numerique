@@ -46,4 +46,15 @@ describe("<Accordion />", () => {
     const { getByText } = render(<Accordion titleLevel={7} items={items} />);
     expect(getByText("Ceci est un titre").tagName).toEqual("P");
   });
+  it("do not throw error if preExpended attribut is an invalid query selector", () => {
+    const items = [{ body: "this is the body", title: "This is the title" }];
+    const { container } = render(
+      <Accordion
+        titleLevel={3}
+        preExpanded={["#:~:text=Le droit du travail est"]}
+        items={items}
+      />
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

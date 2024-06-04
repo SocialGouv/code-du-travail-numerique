@@ -13,7 +13,7 @@ const fetchCourrier = ({ slug }) =>
 
 function ModeleCourrier(props: LetterModelProps): JSX.Element {
   const {
-    description = "",
+    intro = "",
     metaDescription,
     title,
     meta_title,
@@ -30,16 +30,13 @@ function ModeleCourrier(props: LetterModelProps): JSX.Element {
     <Layout>
       <Metas
         title={`${category} :  ${meta_title ?? title}`}
-        description={
-          metaDescription ||
-          description.slice(0, description.indexOf(" ", 150)) + "…"
-        }
+        description={metaDescription}
       />
       <Answer
         title={getTitle(slug, title)}
         relatedItems={relatedItems}
         emptyMessage="Modèle de document introuvable"
-        intro={description}
+        intro={intro}
         metaDescription={metaDescription}
         date={date}
         breadcrumbs={breadcrumbs}

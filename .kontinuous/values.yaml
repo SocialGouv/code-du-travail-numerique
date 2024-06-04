@@ -12,6 +12,8 @@ app:
   imagePackage: app
   imageProject: cdtn
   probesPath: /api/health
+  containerSecurityContext:
+    readOnlyRootFilesystem: true
   envFrom:
     - configMapRef:
         name: www-configmap
@@ -24,3 +26,24 @@ app:
     requests:
       cpu: 400m
       memory: 512Mi
+  volumes:
+    - name: tmp
+      emptyDir: {}
+    - name: next
+      emptyDir: {}
+  volumeMounts:
+    - mountPath: /tmp
+      name: tmp
+    - mountPath: /app/packages/code-du-travail-frontend/.next
+      name: next
+  initContainers:
+    - name: copy-next
+      image:
+        "{{ .Values.global.registry }}/{{ .Values.global.projectName }}/{{
+        .Values.global.imageRepository }}/app:{{ .Values.global.imageTag }}"
+      command: ["/bin/sh", "-c"]
+      args:
+        - cp -r /app/packages/code-du-travail-frontend/.next/* /mnt/next;
+      volumeMounts:
+        - name: next
+          mountPath: /mnt/next

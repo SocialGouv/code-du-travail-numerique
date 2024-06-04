@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.140.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.139.0...v4.140.0) (2024-06-04)
+
+### Bug Fixes
+
+- **accordion:** ne pas crasher s'il y a un selector invalid dans l'url ([#5935](https://github.com/SocialGouv/code-du-travail-numerique/issues/5935)) ([c09d821](https://github.com/SocialGouv/code-du-travail-numerique/commit/c09d8214e1dc723d61fe069eb37bb41e3797ebd4))
+- **indemnité de licenciement:** ne pas crasher si le salaire conventionnel est à 0 ([#5937](https://github.com/SocialGouv/code-du-travail-numerique/issues/5937)) ([e020a07](https://github.com/SocialGouv/code-du-travail-numerique/commit/e020a0782a025c54eadd0b13e19c06ede7da7e85))
+- **indemnité de rupture co:** nettoyage de la question sur l'inaptitude dans la rupture co ([#5938](https://github.com/SocialGouv/code-du-travail-numerique/issues/5938)) ([4f3b434](https://github.com/SocialGouv/code-du-travail-numerique/commit/4f3b434e81efd5e23d765a5699419c824c6db862))
+
+### Features
+
+- **accordéons:** ajout d'ancre sur tous les accordéons pour pouvoir les ouvrir en mettant une ancre dans l'url ([#5925](https://github.com/SocialGouv/code-du-travail-numerique/issues/5925)) ([50502e6](https://github.com/SocialGouv/code-du-travail-numerique/commit/50502e61d7a1b0dca9dba66ac6a73192fbc6d43a))
+- **pages convention collective:** changement du format de la page pour n'afficher que les liens vers les contribs au lieu des réponses ([#5924](https://github.com/SocialGouv/code-du-travail-numerique/issues/5924)) ([760bb1b](https://github.com/SocialGouv/code-du-travail-numerique/commit/760bb1bd2afe520ef8ebcf39a119908e949c9171))
+- **rupture co:** affichage des notifications pour la 2120 ([#5927](https://github.com/SocialGouv/code-du-travail-numerique/issues/5927)) ([6a89823](https://github.com/SocialGouv/code-du-travail-numerique/commit/6a89823f9e0f5d824a97403211b46d81b1c196a1))
+
+# [4.139.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.138.0...v4.139.0) (2024-05-31)
+
+### Bug Fixes
+
+- **idemnite-licenciement:** impossible de saisir un salaire annuel inférieur ou égal à 0 ([#5918](https://github.com/SocialGouv/code-du-travail-numerique/issues/5918)) ([be28eac](https://github.com/SocialGouv/code-du-travail-numerique/commit/be28eac660abb007c43dbc43d9666dd3325473ff))
+- **indemnité licenciement:** affichage des salaires sur la page résultat ([#5928](https://github.com/SocialGouv/code-du-travail-numerique/issues/5928)) ([1772924](https://github.com/SocialGouv/code-du-travail-numerique/commit/17729249d8e9a1f8773eea383f68e756c22e4305))
+- **url:** modification des URLs des sdr ([#5923](https://github.com/SocialGouv/code-du-travail-numerique/issues/5923)) ([add03d4](https://github.com/SocialGouv/code-du-travail-numerique/commit/add03d441c6a4d3326907ab1c7dfb42b09820bf4))
+
+### Features
+
+- **e2e:** ajout de tests pour les widgets en remote ([#5919](https://github.com/SocialGouv/code-du-travail-numerique/issues/5919)) ([55bd2fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/55bd2fd5da9b96549d3f29068f606c6c7fc72884))
+
+# [4.138.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.137.1...v4.138.0) (2024-05-28)
+
+### Bug Fixes
+
+- **urls des convention-collectives:** modifications des règles de redirections pour ne matcher que les urls voulues ([#5922](https://github.com/SocialGouv/code-du-travail-numerique/issues/5922)) ([267d746](https://github.com/SocialGouv/code-du-travail-numerique/commit/267d746b6cb79339fa2c443193becfde5f4345df))
+
+### Features
+
+- 5874 formatter le rsultat sur les 2 simulateurs ([#5882](https://github.com/SocialGouv/code-du-travail-numerique/issues/5882)) ([35e6006](https://github.com/SocialGouv/code-du-travail-numerique/commit/35e600622cf153bf0d48e005042602b57083dac8))
+
+## [4.137.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.137.0...v4.137.1) (2024-05-23)
+
+### Bug Fixes
+
+- **actions:** display mattermost message ([7f5b3fb](https://github.com/SocialGouv/code-du-travail-numerique/commit/7f5b3fb32f88ca337f407727ae45f8738eb05f44))
+- **actions:** modification de l'action mattermost suite à son update ([#5902](https://github.com/SocialGouv/code-du-travail-numerique/issues/5902)) ([18470e3](https://github.com/SocialGouv/code-du-travail-numerique/commit/18470e36d3e13c0fd9e21aa7932d416e6550ac10))
+- **e2e:** ajout des tests dans les sous dossiers ([#5879](https://github.com/SocialGouv/code-du-travail-numerique/issues/5879)) ([682fce9](https://github.com/SocialGouv/code-du-travail-numerique/commit/682fce9d3acaf16a6e9aaf3c300aec67453ff594))
+- **e2e:** correction de la version du plugin pour notifier sur mattermost ([#5897](https://github.com/SocialGouv/code-du-travail-numerique/issues/5897)) ([33322cf](https://github.com/SocialGouv/code-du-travail-numerique/commit/33322cf227d9b6a74d71ba43bdd4cfe322b0df79))
+- **footer:** update logo ([#5917](https://github.com/SocialGouv/code-du-travail-numerique/issues/5917)) ([83d6d34](https://github.com/SocialGouv/code-du-travail-numerique/commit/83d6d34a8c9f0581ef8fa78aded428b8bdbaa0f8))
+- html tag description tuile modele ([#5906](https://github.com/SocialGouv/code-du-travail-numerique/issues/5906)) ([274ebf6](https://github.com/SocialGouv/code-du-travail-numerique/commit/274ebf6b4122f66efd1436e44a5eb7bec6047881))
+- **indemnité de licenciement:** calcul du salaire de référence conventionnel correct ([#5885](https://github.com/SocialGouv/code-du-travail-numerique/issues/5885)) ([a5f0655](https://github.com/SocialGouv/code-du-travail-numerique/commit/a5f0655c18177f5179e47c5c7775a1d45c923949))
+- **modeles-de-courrier:** modification du titre de deux modèles ([#5899](https://github.com/SocialGouv/code-du-travail-numerique/issues/5899)) ([91114d1](https://github.com/SocialGouv/code-du-travail-numerique/commit/91114d1208bd289e586bfad86790b2c305f3949c))
+
 # [4.137.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.1...v4.137.0) (2024-05-14)
 
 ### Bug Fixes

@@ -18,14 +18,12 @@ jobs:
     steps:
       - run: |
           curl -sSfL https://code.travail.gouv.fr/ | grep -q "Code du travail numérique"
-      - name: Create the Mattermost Message
-        if: failure()
-        run: |
-          echo "{\"text\":\"Le site n'est pas accessible : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} (cc: @max @victorz @carolinebda @martial)\"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          TEXT: |-
+            Le site n'est pas accessible 😱😱😱😱😱😱😱😱 ([logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})) (cc: @max @victorz @carolinebda @martial).
 
   robots:
     name: Check robots.txt
@@ -47,7 +45,5 @@ jobs:
         if: failure()
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
-          PAYLOAD: |-
-            {
-              "text": "Erreur sur le robots.txt ou sitemap.xml 😱😱😱😱😱😱😱😱 ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} (cc: @max @victorz @carolinebda @martial)",
-            }
+          TEXT: |-
+            Erreur sur le robots.txt ou sitemap.xml 😱😱😱😱😱😱😱😱 ([logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})) (cc: @max @victorz @carolinebda @martial).

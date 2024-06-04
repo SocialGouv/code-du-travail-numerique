@@ -57,8 +57,8 @@ describe("Indemnité licenciement - CC 573", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("20250 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("16200 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("20 250,00 €");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("16 200,00 €");
     expect(ui.result.dismissalType.economic.query()).not.toBeInTheDocument();
   });
 });

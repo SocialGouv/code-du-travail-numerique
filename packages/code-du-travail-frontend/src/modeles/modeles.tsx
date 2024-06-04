@@ -17,7 +17,7 @@ import { getDisclaimer } from "./helpers";
 export interface LetterModelProps {
   breadcrumbs: Breadcrumb[];
   date: string;
-  description: string;
+  intro: string;
   title: string;
   relatedItems: Array<any>;
   metaDescription: string;

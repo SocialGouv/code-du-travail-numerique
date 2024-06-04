@@ -18,6 +18,15 @@ export const validateStep = (state: SalairesStoreInput) => {
       state.hasSameSalary === "oui" &&
       !state.salary
         ? "Vous devez répondre à cette question"
+        : state.hasTempsPartiel === "non" &&
+          state.hasSameSalary === "oui" &&
+          state.salary &&
+          isNaN(parseFloat(state.salary))
+        ? "Vous devez saisir un nombre"
+        : state.hasTempsPartiel === "non" &&
+          state.hasSameSalary === "oui" &&
+          parseFloat(state.salary!) <= 0
+        ? "Vous devez saisir un montant supérieur à zéro"
         : undefined,
     errorSalaryPeriods:
       state.hasTempsPartiel === "non" &&
@@ -25,6 +34,10 @@ export const validateStep = (state: SalairesStoreInput) => {
       (state.salaryPeriods.length === 0 ||
         detectNullOrUndefinedOrNaNInArray(state.salaryPeriods))
         ? "Vous devez compléter l'ensemble des champs"
+        : state.hasTempsPartiel === "non" &&
+          state.hasSameSalary === "non" &&
+          sumSalaryPeriods(state.salaryPeriods) <= 0
+        ? "Vous devez saisir un montant supérieur à zéro"
         : undefined,
   };
 
@@ -38,4 +51,16 @@ export const validateStep = (state: SalairesStoreInput) => {
     }),
     errorState,
   };
+};
+
+const sumSalaryPeriods = (
+  salaryPeriods: SalairesStoreInput["salaryPeriods"]
+) => {
+  const sum = salaryPeriods.reduce((acc, curr) => {
+    if (curr.value !== undefined) {
+      return acc + curr.value;
+    }
+    return acc;
+  }, 0);
+  return sum;
 };

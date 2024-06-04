@@ -69,4 +69,10 @@ describe("Contributions", () => {
       "Demande d’accord du salarié pour le renouvellement d’une période d’essai"
     );
   });
+
+  it("je vois une contribution avec un accordéon ouvert", () => {
+    cy.visit("/contribution/3248-combien-de-fois-le-contrat-de-travail-peut-il-etre-renouvele#cdd");
+    cy.get("h1").should("have.text", "Combien de fois le contrat de travail peut-il être renouvelé ?");
+    cy.get('[aria-expanded="true"]').find("h3").should("contain", "CDD");
+  });
 });

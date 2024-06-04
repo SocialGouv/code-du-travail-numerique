@@ -24,7 +24,11 @@ describe("Indemnité licenciement - CC 3248", () => {
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
       );
       userAction = new UserAction();
       userAction
@@ -85,11 +89,11 @@ describe("Indemnité licenciement - CC 3248", () => {
         .click(ui.salary.hasSameSalary.oui.get())
         .setInput(ui.salary.sameSalaryValue.get(), "2668")
         .click(ui.next.get())
-        .click(ui.result.resultatLegal.get())
+        .click(ui.result.resultatLegal.get());
 
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-      expect(ui.result.resultat.get()).toHaveTextContent("3501,75");
-      expect(ui.result.resultatLegal.get()).toHaveTextContent("2334.5");
+      expect(ui.result.resultat.get()).toHaveTextContent("3 501,75");
+      expect(ui.result.resultatLegal.get()).toHaveTextContent("2 334,50");
     });
   });
 });

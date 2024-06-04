@@ -8,7 +8,7 @@ describe("<ModelesDeCourrier />", () => {
     const data = {
       breadcrumbs: [{ label: "theme", slug: "/themes/theme", position: 0 }],
       date: "01/01/2020",
-      description: "un description",
+      intro: "un description",
       metaDescription: "un description",
       filename: "filename.pdf",
       filesize: "12345",
