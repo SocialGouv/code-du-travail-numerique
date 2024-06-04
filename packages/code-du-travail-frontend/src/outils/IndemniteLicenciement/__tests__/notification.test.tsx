@@ -62,8 +62,9 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
     expect(rendering.queryByText("Éléments saisis")).toBeInTheDocument();
     // On détecte le fait qu'il ait deux notifications.
     // La première notification étant celle par défaut, la seconde est celle qu'on souhaite tracker.
-    expect(rendering.queryByText("(1)")).toBeInTheDocument();
-    expect(rendering.queryByText("(2)")).toBeInTheDocument();
-    expect(rendering.queryByText("(3)")).not.toBeInTheDocument();
+    expect(ui.result.notifications.queryAll()).toHaveLength(2);
+    expect(ui.result.notification(0).get()).toHaveTextContent(
+      "Ce montant est exonéré d’impôt sur le revenu et de cotisations sociales sous certaines conditions"
+    );
   });
 });
