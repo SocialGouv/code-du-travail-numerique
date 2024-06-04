@@ -139,7 +139,7 @@ export const mapAgreementSalaryArgs = (
       ? salary.computeExtraInfo(salarySituation)
       : {};
     const value = salary.computeReferenceSalary(salarySituation);
-    if (value) {
+    if (!isNaN(value)) {
       newArgs = {
         ...newArgs,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
