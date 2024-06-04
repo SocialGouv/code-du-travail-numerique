@@ -10,6 +10,7 @@ import {
   generateResultSameSalary,
 } from "../../../utils/question";
 import { IndemniteDepartType } from "../../../../types";
+import { formatToEuro } from "../../../../../common/formatToEuro";
 
 type SituationItem = {
   text: string;
@@ -142,7 +143,11 @@ export default function FilledElements(props: Props) {
                 <li>
                   Salaire mensuel brut (primes et avantages en nature
                   inclus)&nbsp;:&nbsp;
-                  {props.salary} €
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: formatToEuro(parseFloat(props.salary)),
+                    }}
+                  />
                 </li>
               )}
               {props.salaryPeriods.length > 0 && !props.hasSameSalary && (
@@ -176,11 +181,15 @@ export default function FilledElements(props: Props) {
                     </thead>
                     <tbody>
                       {props.salaryPeriods.map((salary, index) => (
-                        <tr key={"salary-" + index}>
+                        <tr
+                          key={"salary-" + index}
+                          data-testid={"table-salary-row"}
+                        >
                           <th scope="row">{salary.month}</th>
-                          <td>{salary.value} €</td>
+                          <td>{formatToEuro(salary.value ?? 0)}</td>
                           <td>
-                            {salary.prime} {salary.prime !== undefined && "€"}
+                            {salary.prime !== undefined &&
+                              formatToEuro(salary.prime)}
                           </td>
                         </tr>
                       ))}

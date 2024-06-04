@@ -1,4 +1,6 @@
-import { theme, Tabs, Accordion, Heading, Section } from "@socialgouv/cdtn-ui";
+import { Heading, Section, Tabs, theme } from "@socialgouv/cdtn-ui";
+import { AccordionWithAnchor as Accordion } from "../../../src/common/AccordionWithAnchor";
+
 import styled from "styled-components";
 import {
   EditorialContentBaseContentPart,
@@ -78,15 +80,13 @@ export const Contents = ({
         />
       );
   }
-  let sectionTitleStyleWrapper =
-    sectionDisplayMode === "tab" ? (
-      <TabStylesWrapper data-testid="tabs">{contentWrapper}</TabStylesWrapper>
-    ) : (
-      <GlobalStylesWrapper data-testid="accordion">
-        {contentWrapper}
-      </GlobalStylesWrapper>
-    );
-  return sectionTitleStyleWrapper;
+  return sectionDisplayMode === "tab" ? (
+    <TabStylesWrapper data-testid="tabs">{contentWrapper}</TabStylesWrapper>
+  ) : (
+    <GlobalStylesWrapper data-testid="accordion">
+      {contentWrapper}
+    </GlobalStylesWrapper>
+  );
 };
 
 const TabStylesWrapper = styled.div`

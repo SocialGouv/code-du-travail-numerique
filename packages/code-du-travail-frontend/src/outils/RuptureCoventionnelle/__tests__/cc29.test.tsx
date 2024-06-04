@@ -53,7 +53,7 @@ describe("Indemnité licenciement - CC 29", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("20250 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("20 250,00 €");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent(
       "Non applicable dans votre situation"
     );

@@ -500,6 +500,7 @@ export const ui = {
       duration: byTestId("absence-duration"),
     },
     resultTableRows: byTestId("table-result-row"),
+    salaryTableRows: byTestId("table-salary-row"),
     agreement3239: {
       result: byText(/À partir des éléments que vous avez saisis/),
     },

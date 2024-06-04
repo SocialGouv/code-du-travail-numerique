@@ -65,7 +65,7 @@ describe("Indemnité licenciement- CC 2098", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("17668,48 €");
-    expect(ui.result.resultatAgreement.get()).toHaveTextContent("9331.94 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("17 668,48 €");
+    expect(ui.result.resultatAgreement.get()).toHaveTextContent("9 331,94 €");
   });
 });
