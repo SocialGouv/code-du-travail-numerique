@@ -18,7 +18,7 @@ const Convention = ({ convention }) => {
 
   return (
     <>
-      {convention.highlight && convention.highlight.content && (
+      {convention.highlight?.content && (
         <Alert variant="primary">
           <TitleAlert
             variant="primary"
@@ -33,13 +33,13 @@ const Convention = ({ convention }) => {
           </Paragraph>
         </Alert>
       )}
-      {convention.answers.length > 0 && (
+      {convention.answers?.length > 0 && (
         <Contributions
           contributions={convention.answers}
           convention={convention}
         />
       )}
-      {convention.articlesByTheme.length > 0 && (
+      {convention.articlesByTheme?.length > 0 && (
         <Articles
           blocs={convention.articlesByTheme}
           containerId={convention.id}
