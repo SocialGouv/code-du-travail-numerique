@@ -7,9 +7,7 @@ import { useLocalStorage } from "../../lib/useLocalStorage";
 import { Articles } from "./Articles";
 import { Contributions } from "./Contributions";
 import { TextSearch } from "./TextSearch";
-import { ContributionsPOC } from "./ContributionsPOC";
 
-const PAGES_NEW_FORMAT = [1518, 843, 1486, 2609, 2216, 1501, 2596, 2148, 29];
 const Convention = ({ convention }) => {
   const [, setCcInfo] = useLocalStorage("convention");
 
@@ -43,18 +41,12 @@ const Convention = ({ convention }) => {
           </Paragraph>
         </Alert>
       )}
-      {convention.answers.length > 0 &&
-        (PAGES_NEW_FORMAT.includes(convention.num) ? (
-          <ContributionsPOC
-            contributions={convention.answers}
-            convention={convention}
-          />
-        ) : (
-          <Contributions
-            contributions={convention.answers}
-            convention={convention}
-          />
-        ))}
+      {convention.answers.length > 0 && (
+        <Contributions
+          contributions={convention.answers}
+          convention={convention}
+        />
+      )}
       {convention.articlesByTheme.length > 0 && (
         <Articles
           blocs={convention.articlesByTheme}

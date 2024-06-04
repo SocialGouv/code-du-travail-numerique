@@ -11,7 +11,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { blocs as blocsLabels } from "./blocs.data";
-import { trackAccordionPanelState } from "./utils";
 import { LinkedTile } from "../../common/tiles/LinkedTile";
 
 const { spacings } = theme;
@@ -90,14 +89,7 @@ function Articles({ blocs, containerId, convention }) {
           </p>
         </>
       </MoreContent>
-      <Accordion
-        titleLevel={3}
-        items={articlesByTheme}
-        onChange={trackAccordionPanelState(
-          convention.shortTitle,
-          "pagecc_clicktheme"
-        )}
-      />
+      <Accordion titleLevel={3} items={articlesByTheme} />
     </React.Fragment>
   );
 }
