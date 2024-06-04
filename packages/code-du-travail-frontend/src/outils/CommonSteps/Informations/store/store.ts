@@ -93,7 +93,6 @@ const createCommonInformationsStore: StoreSlice<
         }
         set(
           produce((state: CommonInformationsStoreSlice) => {
-            console.log("produce info!!", initialState.input)
             state.informationsData.input = initialState.input;
             state.informationsData.error = initialState.error;
           })
@@ -143,7 +142,6 @@ const createCommonInformationsStore: StoreSlice<
         let missingArgs: MissingArgs[] = [];
         let blockingNotification: any = undefined;
         try {
-          console.log("Calculate")
           const result = publicodes.calculate(
             mapToPublicodesSituationForIndemniteLicenciementConventionnel(
               agreement.num,
@@ -259,7 +257,6 @@ const createCommonInformationsStore: StoreSlice<
             get().informationsData.input.publicodesInformations
           ),
         };
-        console.log("onNextStep")
         const result = publicodes.calculate(situation);
         errorEligibility =
           result.type === "ineligibility"
@@ -292,7 +289,6 @@ const applyGenericValidation = (
   paramName: string,
   value: any
 ) => {
-  console.log("applyGenericValidation", paramName, value);
   if (get().informationsData.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
       draft.informationsData.input[paramName] = value;

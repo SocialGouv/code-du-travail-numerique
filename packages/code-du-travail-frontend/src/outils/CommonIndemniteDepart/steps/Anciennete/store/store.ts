@@ -211,7 +211,6 @@ const applyGenericValidation = (
   } else {
     set(
       produce((state: AncienneteStoreSlice) => {
-        console.log("produce", paramName, value);
         state.ancienneteData.input[paramName as string] = value;
       })
     );
