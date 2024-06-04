@@ -16,12 +16,10 @@ jobs:
     name: Register elasticsearch
     runs-on: ubuntu-latest
     steps:
-      - uses: socialgouv/workflows/actions/build-image@v1
+      - uses: elastic/elastic-github-actions/elasticsearch@master
         with:
-          imageName: cdtn/elasticsearch
-          token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "./docker/elasticsearch/Dockerfile"
-          dockercontext: "./docker/elasticsearch"
+          stack-version: 8.13.4
+          security-enabled: false
 
   build:
     name: Build

@@ -2106,7 +2106,7 @@ __metadata:
     "@matejmazur/react-katex": ^3.1.3
     "@next/bundle-analyzer": ^13.0.0
     "@sentry/nextjs": ^7.114.0
-    "@socialgouv/cdtn-elasticsearch": ^2.44.1
+    "@socialgouv/cdtn-elasticsearch": ^2.44.2
     "@socialgouv/cdtn-logger": ^2.0.0
     "@socialgouv/cdtn-types": ^2.42.3
     "@socialgouv/cdtn-ui": "workspace:^"
@@ -5116,12 +5116,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@socialgouv/cdtn-elasticsearch@npm:^2.44.1":
-  version: 2.44.1
-  resolution: "@socialgouv/cdtn-elasticsearch@npm:2.44.1"
+"@socialgouv/cdtn-elasticsearch@npm:^2.44.2":
+  version: 2.44.2
+  resolution: "@socialgouv/cdtn-elasticsearch@npm:2.44.2"
   dependencies:
     got: ^11.8.2
-  checksum: 1b7a34c58a9e4604d728955e79c2a52037de3885a0b995a0c9a615dab124f81bf2c5aaff100d023c031f0f2346c68b9ae9562a455003d0230e0d9944885d9b92
+  checksum: 04e74137868d80f3704a20885a64166d1e569996f7b91c6a8d1457750a956dd44aeec90e3adc896dc9fca8abd44e18e05073ade30bdb36c6369f73b3f500b1e6
   languageName: node
   linkType: hard
 
