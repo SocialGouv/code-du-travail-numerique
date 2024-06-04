@@ -11,6 +11,8 @@ if (typeof window !== "undefined") {
    */
   require("@reach/utils").checkStyles = jest.fn();
   global.setImmediate = jest.useRealTimers;
+  global.TextEncoder = require("util").TextEncoder;
+  global.TextDecoder = require("util").TextDecoder;
 }
 
 jest.mock("../src/config", () => ({
