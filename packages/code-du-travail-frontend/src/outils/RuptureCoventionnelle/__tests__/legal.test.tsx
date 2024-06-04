@@ -22,6 +22,7 @@ describe("Rupture conventionnelle - légale", () => {
       .click(ui.contract.type.cdi.get());
 
     expect(ui.contract.fauteGrave.question.query()).not.toBeInTheDocument();
+    expect(ui.result.dismissalType.inaptitude.query()).not.toBeInTheDocument();
 
     userAction.click(ui.contract.arretTravail.non.get()).click(ui.next.get());
 
@@ -59,6 +60,9 @@ describe("Rupture conventionnelle - légale", () => {
     expect(byText(/Type de contrat/).query()).toBeInTheDocument();
     expect(
       byText(/Date de notification du licenciement/).query()
+    ).not.toBeInTheDocument();
+    expect(
+      byText(/Rupture conventionnelle dûe à une inaptitude d’origine professionnelle/).query()
     ).not.toBeInTheDocument();
   });
 });

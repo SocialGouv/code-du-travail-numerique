@@ -3,10 +3,10 @@
 exports[`<Convention /> renders 1`] = `
 <div>
   <div
-    class="sc-bDpDS cTIpNS"
+    class="sc-fMMURN bncoEo"
   >
     <h2
-      class="sc-fMMURN ebnRwO"
+      class="sc-cVzyXs jFvudg"
     >
       <span
         class="sc-gsFSXq ljkohw"
@@ -14,7 +14,7 @@ exports[`<Convention /> renders 1`] = `
       Questions-réponses fréquentes
     </h2>
     <p
-      class="sc-bVHCgj ddZStO"
+      class="sc-ktPPKK fdjlXL"
     >
       Description de la CC
     </p>
@@ -81,376 +81,496 @@ exports[`<Convention /> renders 1`] = `
           <div
             class="sc-bXCLTC fcbJdD"
           >
-            <div
-              class="accordion"
-              data-accordion-component="Accordion"
+            <ul>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
+                >
+                  Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelle-est-la-duree-du-conge-de-maternite"
+                >
+                  Quelle est la durée du congé de maternité ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-si-le-salarie-est-malade-pendant-ses-conges-quelles-en-sont-les-consequences"
+                >
+                  Si le salarié est malade pendant ses congés, quelles en sont les conséquences ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-les-conges-pour-evenements-familiaux"
+                >
+                  Les congés pour événements familiaux
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-jours-feries-et-ponts-dans-le-secteur-prive"
+                >
+                  Jours fériés et ponts dans le secteur privé
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-travail-du-dimanche-quelle-contrepartie"
+                >
+                  Travail du dimanche : quelle contrepartie ?
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="sc-jXbUNg crDDWD"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-1"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-kpDqfm heoudo"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-1"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-imWYAI gTeNha"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div
-                id="jours-feries-et-ponts-dans-le-secteur-prive"
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-dAlyuH cXMNBg"
+            >
+              <h3
+                class="sc-kAyceB dvmaTz"
+                style="margin: 0px;"
               >
-                <div
-                  class="sc-jXbUNg heDTFL"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          Jours fériés et ponts dans le secteur privé
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 5-11 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 5-11
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 6.121 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 6.121
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 6.21 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 6.21
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="les-conges-pour-evenements-familiaux"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-les-conges-pour-evenements-familiaux"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-les-conges-pour-evenements-familiaux"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          Les congés pour événements familiaux
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-les-conges-pour-evenements-familiaux"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article  5-12 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article  5-12
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                Départ de l’entreprise
+              </h3>
             </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-dhKdcB hlTUsz"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-1"
+        >
+          <div
+            class="sc-bXCLTC fcbJdD"
+          >
+            <ul>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-faut-il-respecter-un-delai-de-carence-entre-deux-cdd-si-oui-quelle-est-sa-duree"
+                >
+                  Faut-il respecter un délai de carence entre deux CDD ? Si oui, quelle est sa durée ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-dans-le-cadre-dun-cdd-quel-est-le-montant-de-lindemnite-de-fin-de-contrat"
+                >
+                  Dans le cadre d’un CDD, quel est le montant de l’indemnité de fin de contrat ? 
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-faut-il-respecter-un-delai-de-carence-entre-deux-contrats-de-mission-interim"
+                >
+                  Faut-il respecter un délai de carence entre deux contrats de mission (intérim) ? 
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-dans-le-cadre-dun-contrat-de-mission-interim-quel-est-le-montant-de-lindemnite-de-fin-de-contrat"
+                >
+                  Dans le cadre d’un contrat de mission (intérim), quel est le montant de l’indemnité de fin de contrat ? 
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelle-est-la-duree-du-preavis-en-cas-de-demission"
+                >
+                  Quelle est la durée du préavis en cas de démission ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
+                >
+                  Quelle est la durée de préavis en cas de licenciement ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
+                >
+                  Quelle est la durée de préavis en cas de départ à la retraite ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
+                >
+                  Quelle est la durée de préavis en cas de mise à la retraite ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-le-preavis-de-licenciement-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi"
+                >
+                  Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi"
+                >
+                  Le préavis de démission doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
+                >
+                  Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-arret-maladie-pendant-le-preavis-quelles-consequences"
+                >
+                  Arrêt maladie pendant le préavis : quelles conséquences ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail"
+                >
+                  Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite"
+                >
+                  À quelles indemnités peut prétendre un salarié qui part à la retraite ?
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="sc-jXbUNg crDDWD"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-2"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-kpDqfm heoudo"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-2"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-imWYAI gTeNha"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-dAlyuH cXMNBg"
+            >
+              <h3
+                class="sc-kAyceB dvmaTz"
+                style="margin: 0px;"
+              >
+                Embauche et contrat de travail
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-dhKdcB hlTUsz"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-2"
+        >
+          <div
+            class="sc-bXCLTC fcbJdD"
+          >
+            <ul>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-si-un-poste-se-libere-ou-est-cree-dans-lentreprise-lemployeur-doit-il-en-informer-les-salaries-ou-le-leur-proposer-en-priorite"
+                >
+                  Si un poste se libère ou est créé dans l’entreprise, l’employeur doit-il en informer les salariés ? Ou le leur proposer en priorité ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
+                >
+                  Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-la-periode-dessai-peut-elle-etre-renouvelee"
+                >
+                  La période d’essai peut-elle être renouvelée ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-arret-maladie-pendant-la-periode-dessai-quelles-sont-les-regles"
+                >
+                  Arrêt maladie pendant la période d'essai : quelles sont les règles ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
+                >
+                  Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
+                >
+                  Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-lentreprise-peut-elle-embaucher-dans-le-cadre-dun-cdi-de-chantier-ou-doperation"
+                >
+                  L'entreprise peut-elle embaucher dans le cadre d'un CDI de chantier ou d’opération ? 
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelles-sont-les-conditions-de-la-clause-de-non-concurrence"
+                >
+                  Quelles sont les conditions de la clause de non-concurrence ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-combien-de-fois-le-contrat-de-travail-peut-il-etre-renouvele"
+                >
+                  Combien de fois le contrat de travail peut-il être renouvelé ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelle-peut-etre-la-duree-maximale-dun-cdd"
+                >
+                  Quelle peut être la durée maximale d'un CDD ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-embauche-en-contrat-dextra-cdd-dusage"
+                >
+                  Embauche en contrat d'extra (CDD d'usage)
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelle-est-la-duree-maximale-du-contrat-de-mission-interim"
+                >
+                  Quelle est la durée maximale du contrat de mission (intérim) ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-en-cas-de-perte-de-marche-par-lemployeur-quelles-sont-les-conditions-dun-transfert-des-contrats-de-travail"
+                >
+                  En cas de perte de marché par l’employeur, quelles sont les conditions d'un transfert des contrats de travail ? 
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="sc-jXbUNg crDDWD"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-3"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-kpDqfm heoudo"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-3"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-imWYAI gTeNha"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-dAlyuH cXMNBg"
+            >
+              <h3
+                class="sc-kAyceB dvmaTz"
+                style="margin: 0px;"
+              >
+                Salaire et Rémunération
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-dhKdcB hlTUsz"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-3"
+        >
+          <div
+            class="sc-bXCLTC fcbJdD"
+          >
+            <ul>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-comment-determiner-lanciennete-du-salarie"
+                >
+                  Comment déterminer l'ancienneté du salarié ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
+                >
+                  Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
+                >
+                  Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelles-sont-les-primes-prevues-par-la-convention-collective"
+                >
+                  Quelles sont les primes prévues par la convention collective ?
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -498,7 +618,7 @@ exports[`<Convention /> renders 1`] = `
                 class="sc-kAyceB dvmaTz"
                 style="margin: 0px;"
               >
-                Départ de l'entreprise
+                Santé, sécurité et conditions de travail
               </h3>
             </div>
           </div>
@@ -513,767 +633,24 @@ exports[`<Convention /> renders 1`] = `
           <div
             class="sc-bXCLTC fcbJdD"
           >
-            <div
-              class="accordion"
-              data-accordion-component="Accordion"
-            >
-              <div
-                id="quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
-              >
-                <div
-                  class="sc-jXbUNg heDTFL"
-                  data-accordion-component="AccordionItem"
+            <ul>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                 >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                           Quelle est la durée de préavis en cas de licenciement ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 10.11 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 10.11
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 10.13 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 10.13
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="quelle-est-la-duree-du-preavis-en-cas-de-demission"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
+                  En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                 >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quelle-est-la-duree-du-preavis-en-cas-de-demission"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                           Quelle est la durée du préavis en cas de démission ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 10.11 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 10.11
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                           Quelle est la durée de préavis en cas de départ à la retraite ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              aria-label="Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                           Quelle est la durée de préavis en cas de mise à la retraite ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 10.12 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 10.12
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 10.2 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 10.2
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -1288,12 +665,12 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-11"
+            aria-controls="accordion__panel-raa-5"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-11"
+            id="accordion__heading-raa-5"
             role="button"
             tabindex="0"
           >
@@ -1321,7 +698,7 @@ exports[`<Convention /> renders 1`] = `
                 class="sc-kAyceB dvmaTz"
                 style="margin: 0px;"
               >
-                Embauche et contrat de travail
+                Temps de travail
               </h3>
             </div>
           </div>
@@ -1331,1484 +708,31 @@ exports[`<Convention /> renders 1`] = `
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-11"
+          id="accordion__panel-raa-5"
         >
           <div
             class="sc-bXCLTC fcbJdD"
           >
-            <div
-              class="accordion"
-              data-accordion-component="Accordion"
-            >
-              <div
-                id="quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
-              >
-                <div
-                  class="sc-jXbUNg heDTFL"
-                  data-accordion-component="AccordionItem"
+            <ul>
+              <li>
+                <a
+                  class="sc-dPZUQH jrtOoi"
+                  href="/contribution/2941-quelles-sont-les-conditions-de-cumul-demplois"
                 >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 2-4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 2-4
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="comment-determiner-lanciennete-du-salarie"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-comment-determiner-lanciennete-du-salarie"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-comment-determiner-lanciennete-du-salarie"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          Comment déterminer l'ancienneté du salarié ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-comment-determiner-lanciennete-du-salarie"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 10.4 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 10.4
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 11-2 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 11-2
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                           Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 2-3 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 2-3
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 2-3 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 2-3
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="embauche-en-contrat-dextra-cdd-dusage"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-embauche-en-contrat-dextra-cdd-dusage"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                           Embauche en contrat d'extra (CDD d'usage)
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="quelles-sont-les-conditions-de-cumul-demplois"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quelles-sont-les-conditions-de-cumul-demplois"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          Quelles sont les conditions de cumul d'emplois ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 2-3 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 2-3
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div
-        class="sc-jXbUNg crDDWD"
-        data-accordion-component="AccordionItem"
-      >
-        <div
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-18"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="sc-kpDqfm heoudo"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-18"
-            role="button"
-            tabindex="0"
-          >
-            <svg
-              aria-hidden="true"
-              class="sc-imWYAI gTeNha"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="sc-dAlyuH cXMNBg"
-            >
-              <h3
-                class="sc-kAyceB dvmaTz"
-                style="margin: 0px;"
-              >
-                Salaire et Rémunération
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-18"
-        >
-          <div
-            class="sc-bXCLTC fcbJdD"
-          >
-            <div
-              class="accordion"
-              data-accordion-component="Accordion"
-            >
-              <div
-                id="quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
-              >
-                <div
-                  class="sc-jXbUNg heDTFL"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="quelles-sont-les-primes-prevues-par-la-convention-collective"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quelles-sont-les-primes-prevues-par-la-convention-collective"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          Quelles sont les primes prévues par la convention collective ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 5-25 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 5-25
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 5-24 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 5-24
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div
-        class="sc-jXbUNg crDDWD"
-        data-accordion-component="AccordionItem"
-      >
-        <div
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-22"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="sc-kpDqfm heoudo"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-22"
-            role="button"
-            tabindex="0"
-          >
-            <svg
-              aria-hidden="true"
-              class="sc-imWYAI gTeNha"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="sc-dAlyuH cXMNBg"
-            >
-              <h3
-                class="sc-kAyceB dvmaTz"
-                style="margin: 0px;"
-              >
-                Santé, sécurité et conditions de travail
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-22"
-        >
-          <div
-            class="sc-bXCLTC fcbJdD"
-          >
-            <div
-              class="accordion"
-              data-accordion-component="Accordion"
-            >
-              <div
-                id="en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
-              >
-                <div
-                  class="sc-jXbUNg heDTFL"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div>
-                          <button
-                            aria-expanded="false"
-                            class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="sc-imWYAI gTeNha"
-                              fill="none"
-                              height="24"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              viewBox="0 0 24 24"
-                              width="24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <polyline
-                                points="9 18 15 12 9 6"
-                              />
-                            </svg>
-                            <span
-                              class="sc-fBWQRz lqUBb"
-                            >
-                              Références
-                            </span>
-                          </button>
-                          <div
-                            class="sc-fjvvzt gtrYRc"
-                          >
-                            <ul
-                              class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                            >
-                              <li>
-                                <a
-                                  aria-label="IDCC 1596 - Article 6-11 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                                  href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                  target="_blank"
-                                >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="sc-dtBdUo hpIOmX"
-                                    fill="none"
-                                    viewBox="0 0 28 15"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                      fill="currentColor"
-                                    />
-                                  </svg>
-                                  <span
-                                    class="sc-iHGNWf hQSWKy"
-                                  >
-                                    IDCC 1596 - Article 6-11
-                                  </span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  aria-label="IDCC 1596 - Article 6-12 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                                  href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                  target="_blank"
-                                >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="sc-dtBdUo hpIOmX"
-                                    fill="none"
-                                    viewBox="0 0 28 15"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                      fill="currentColor"
-                                    />
-                                  </svg>
-                                  <span
-                                    class="sc-iHGNWf hQSWKy"
-                                  >
-                                    IDCC 1596 - Article 6-12
-                                  </span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  aria-label="IDCC 1596 - Article 6-13 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                                  href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                  target="_blank"
-                                >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="sc-dtBdUo hpIOmX"
-                                    fill="none"
-                                    viewBox="0 0 28 15"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                      fill="currentColor"
-                                    />
-                                  </svg>
-                                  <span
-                                    class="sc-iHGNWf hQSWKy"
-                                  >
-                                    IDCC 1596 - Article 6-13
-                                  </span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  aria-label="IDCC 1596 - Article 6-14 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                                  href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                  target="_blank"
-                                >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="sc-dtBdUo hpIOmX"
-                                    fill="none"
-                                    viewBox="0 0 28 15"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                      fill="currentColor"
-                                    />
-                                  </svg>
-                                  <span
-                                    class="sc-iHGNWf hQSWKy"
-                                  >
-                                    IDCC 1596 - Article 6-14
-                                  </span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  aria-label="IDCC 1596 - Article 6-15 (Nouvelle fenêtre)"
-                                  class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                                  href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                  target="_blank"
-                                >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="sc-dtBdUo hpIOmX"
-                                    fill="none"
-                                    viewBox="0 0 28 15"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                      fill="currentColor"
-                                    />
-                                  </svg>
-                                  <span
-                                    class="sc-iHGNWf hQSWKy"
-                                  >
-                                    IDCC 1596 - Article 6-15
-                                  </span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-              >
-                <div
-                  class="sc-jXbUNg crDDWD"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="sc-kpDqfm heoudo"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="sc-imWYAI gTeNha"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="sc-dAlyuH cXMNBg"
-                      >
-                        <h4
-                          class="sc-kAyceB dvmaTz"
-                          style="margin: 0px;"
-                        >
-                          En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    class="sc-dhKdcB hlTUsz"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-                  >
-                    <div
-                      class="sc-bXCLTC fcbJdD"
-                    >
-                      <p
-                        class="sc-krNlru hosBKp"
-                      />
-                      <div
-                        class="sc-gEvEer hpVpdb sc-kMribo gVHKjK"
-                      >
-                        <div
-                          class="sc-kRRyDe kPsNZM"
-                        />
-                      </div>
-                      <div
-                        class="sc-iGgWBj cRLRjd"
-                      >
-                        <div
-                          class="sc-bVVIoq jCncuI"
-                        >
-                          Références
-                        </div>
-                        <ul
-                          class="sc-cfxfcM sc-ePDLzJ kMmTaI bSRkef"
-                        >
-                          <li>
-                            <a
-                              aria-label="IDCC 1596 - Article 6-11 (Nouvelle fenêtre)"
-                              class="sc-bmzYkS eyKmWS sc-cVzyXs hRMBgc no-after"
-                              href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                              target="_blank"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="sc-dtBdUo hpIOmX"
-                                fill="none"
-                                viewBox="0 0 28 15"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                              <span
-                                class="sc-iHGNWf hQSWKy"
-                              >
-                                IDCC 1596 - Article 6-11
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  Quelles sont les conditions de cumul d'emplois ?
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    class="sc-bDpDS cTIpNS"
+    class="sc-fMMURN bncoEo"
   >
     <h2
-      class="sc-fMMURN ebnRwO"
+      class="sc-cVzyXs jFvudg"
     >
       <span
         class="sc-gsFSXq ljkohw"
@@ -2816,7 +740,7 @@ exports[`<Convention /> renders 1`] = `
       Articles de la convention collective
     </h2>
     <p
-      class="sc-bVHCgj ddZStO"
+      class="sc-ktPPKK fdjlXL"
     >
       Consultez les articles de la convention collective qui s’appliquent à votre situation dans les thèmes sélectionnés ci-dessous.
     </p>
@@ -2834,12 +758,12 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItemHeading"
       >
         <div
-          aria-controls="accordion__panel-raa-25"
+          aria-controls="accordion__panel-raa-6"
           aria-disabled="false"
           aria-expanded="false"
           class="sc-hIUJlX fucbFP"
           data-accordion-component="AccordionItemButton"
-          id="accordion__heading-raa-25"
+          id="accordion__heading-raa-6"
           role="button"
           tabindex="0"
         >
@@ -2868,7 +792,7 @@ exports[`<Convention /> renders 1`] = `
         class="sc-ggpjZQ fponfT"
         data-accordion-component="AccordionItemPanel"
         hidden=""
-        id="accordion__panel-raa-25"
+        id="accordion__panel-raa-6"
       >
         <div
           class="sc-eZkCL HkMzx"
@@ -2921,12 +845,12 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-26"
+            aria-controls="accordion__panel-raa-7"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-26"
+            id="accordion__heading-raa-7"
             role="button"
             tabindex="0"
           >
@@ -2964,7 +888,7 @@ exports[`<Convention /> renders 1`] = `
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-26"
+          id="accordion__panel-raa-7"
         >
           <div
             class="sc-bXCLTC fcbJdD"
@@ -2988,10 +912,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000047011451/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 1-4
+                          Article 1er
                         </a>
                       </p>
                     </div>
@@ -2999,7 +923,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Salaires minimaux
+                    Avenant n° 51-2022 du 23 mars 2022 relatif aux salaires
                   </div>
                 </div>
               </div>
@@ -3019,10 +943,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000047011462/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 4-1
+                          Article 1er
                         </a>
                       </p>
                     </div>
@@ -3030,69 +954,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Salaire mensuel
-                  </div>
-                </div>
-              </div>
-              <div
-                class="sc-gmPhUn cRQifg"
-              >
-                <div
-                  class="sc-ibQAlb fuLYQY no-after"
-                >
-                  <div
-                    class="sc-guJBdh jBpgpS"
-                  >
-                    <div
-                      class="sc-hZDyAQ tqlOz"
-                    >
-                      <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
-                      >
-                        <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
-                          target="_blank"
-                        >
-                          Article 4-2
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="sc-gmgFlS ikhbYa"
-                  >
-                    Déduction des heures non travaillées
-                  </div>
-                </div>
-              </div>
-              <div
-                class="sc-gmPhUn cRQifg"
-              >
-                <div
-                  class="sc-ibQAlb fuLYQY no-after"
-                >
-                  <div
-                    class="sc-guJBdh jBpgpS"
-                  >
-                    <div
-                      class="sc-hZDyAQ tqlOz"
-                    >
-                      <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
-                      >
-                        <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
-                          target="_blank"
-                        >
-                          Article 12-8
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="sc-gmgFlS ikhbYa"
-                  >
-                    Barèmes de salaires minimaux
+                    Avenant n° 52-2022 du 23 mars 2022 relatif aux salaires
                   </div>
                 </div>
               </div>
@@ -3111,12 +973,12 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-27"
+            aria-controls="accordion__panel-raa-8"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-27"
+            id="accordion__heading-raa-8"
             role="button"
             tabindex="0"
           >
@@ -3154,7 +1016,7 @@ exports[`<Convention /> renders 1`] = `
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-27"
+          id="accordion__panel-raa-8"
         >
           <div
             class="sc-bXCLTC fcbJdD"
@@ -3178,10 +1040,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805638/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 3-13
+                          Article 1er
                         </a>
                       </p>
                     </div>
@@ -3189,7 +1051,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Contingent d'heures supplémentaires non soumis à autorisation
+                    A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
@@ -3209,10 +1071,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805639/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 3-14
+                          Article 2
                         </a>
                       </p>
                     </div>
@@ -3220,7 +1082,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Heures supplémentaires exceptionnelles
+                    A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
@@ -3240,10 +1102,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000033116260/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 3-15
+                          Article 3
                         </a>
                       </p>
                     </div>
@@ -3251,7 +1113,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Plafonds
+                    A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
@@ -3271,10 +1133,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805641/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 3-16
+                          Article 4
                         </a>
                       </p>
                     </div>
@@ -3282,7 +1144,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Définition de la durée du travail
+                    A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
@@ -3302,10 +1164,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805642/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 3-17
+                          Article 5
                         </a>
                       </p>
                     </div>
@@ -3313,7 +1175,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Majoration pour heures supplémentaires.
+                    A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
@@ -3333,10 +1195,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805643/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 3-18
+                          Article 6
                         </a>
                       </p>
                     </div>
@@ -3344,7 +1206,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Equivalences et dérogations permanentes
+                    A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
@@ -3364,10 +1226,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805644/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 3-21
+                          Article 7
                         </a>
                       </p>
                     </div>
@@ -3375,7 +1237,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Semaine de travail en 5 jours
+                    A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
@@ -3395,10 +1257,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805645/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 3-22
+                          Article 8
                         </a>
                       </p>
                     </div>
@@ -3406,7 +1268,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Exceptions à la semaine de travail en 5 jours
+                    A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
@@ -3426,10 +1288,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805646/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 3-24
+                          Article 9
                         </a>
                       </p>
                     </div>
@@ -3437,7 +1299,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Horaires individualisés
+                    A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
@@ -3457,10 +1319,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805647/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 3-25
+                          Article 10
                         </a>
                       </p>
                     </div>
@@ -3468,7 +1330,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Horaires à temps partiel
+                    A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
@@ -3488,10 +1350,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805648/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 3-28
+                          Article 11
                         </a>
                       </p>
                     </div>
@@ -3499,7 +1361,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Récupération des heures perdues pour intempéries
+                    A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
@@ -3519,10 +1381,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000033116262/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 3-29
+                          Article 12
                         </a>
                       </p>
                     </div>
@@ -3530,7 +1392,782 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Cas des chefs d'équipe
+                    A. – Principes généraux sur la durée du travail
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805650/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 13
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    A. – Principes généraux sur la durée du travail
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805652/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 15
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    A. – Principes généraux sur la durée du travail
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805653/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 16
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    B. – Travail du dimanche et des jours fériés
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805654/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 17
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    B. – Travail du dimanche et des jours fériés
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805656/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 19
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    B. – Travail du dimanche et des jours fériés
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805657/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 20
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    B. – Travail du dimanche et des jours fériés
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805660/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 23
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    C. – Temps d'astreinte
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805659/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 22
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    C. – Temps d'astreinte
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805658/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 21
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    C. – Temps d'astreinte
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805669/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 31
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    A. – Travailleurs de nuit
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805667/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 30
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    A. – Travailleurs de nuit
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805666/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 29
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    A. – Travailleurs de nuit
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805665/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 28
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    A. – Travailleurs de nuit
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805664/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 27
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    A. – Travailleurs de nuit
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805671/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 33
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    B. – Salariés travaillant occasionnellement la nuit
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805672/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 34
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    B. – Salariés travaillant occasionnellement la nuit
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805673/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 35
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    B. – Salariés travaillant occasionnellement la nuit
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805662/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 25
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    Chapitre II Travail de nuit
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805675/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 37
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    A. – Dispositions communes aux différents modes d'aménagement du temps de travail
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805676/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 38
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    A. – Dispositions communes aux différents modes d'aménagement du temps de travail
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000033116268/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 43
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    B. – Modes d'aménagement du temps de travail
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000033116266/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 42
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    B. – Modes d'aménagement du temps de travail
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805679/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 41
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    B. – Modes d'aménagement du temps de travail
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805678/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 40
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    B. – Modes d'aménagement du temps de travail
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sc-gmPhUn cRQifg"
+              >
+                <div
+                  class="sc-ibQAlb fuLYQY no-after"
+                >
+                  <div
+                    class="sc-guJBdh jBpgpS"
+                  >
+                    <div
+                      class="sc-hZDyAQ tqlOz"
+                    >
+                      <p
+                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                      >
+                        <a
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805677/?idConteneur=2941"
+                          target="_blank"
+                        >
+                          Article 39
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-gmgFlS ikhbYa"
+                  >
+                    B. – Modes d'aménagement du temps de travail
                   </div>
                 </div>
               </div>
@@ -3549,12 +2186,12 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-28"
+            aria-controls="accordion__panel-raa-9"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-28"
+            id="accordion__heading-raa-9"
             role="button"
             tabindex="0"
           >
@@ -3582,7 +2219,7 @@ exports[`<Convention /> renders 1`] = `
                 class="sc-kAyceB dvmaTz"
                 style="margin: 0px;"
               >
-                Classifications
+                Emploi des travailleurs handicapés
               </h3>
             </div>
           </div>
@@ -3592,11 +2229,21 @@ exports[`<Convention /> renders 1`] = `
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-28"
+          id="accordion__panel-raa-9"
         >
           <div
             class="sc-bXCLTC fcbJdD"
           >
+            <p
+              class="sc-dSIIpw hHqjOi"
+            >
+              Important
+            </p>
+            <p
+              class="sc-bVVIoq ezyVLE"
+            >
+              Pour que ce thème s’applique à votre situation, il doit être indiqué dans l’article en question qu’un accord d’entreprise ne peut pas déroger à la convention collective; à moins que l’accord d’entreprise ne prévoie des garanties au moins équivalentes.
+            </p>
             <div
               class="sc-gFAWRd euznOP"
             >
@@ -3616,10 +2263,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805517/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 12-1
+                          Article 7
                         </a>
                       </p>
                     </div>
@@ -3627,7 +2274,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Préambule
+                    Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
@@ -3647,10 +2294,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805515/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 12-2
+                          Article 6
                         </a>
                       </p>
                     </div>
@@ -3658,7 +2305,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Définitions générales des critères et des niveaux
+                    Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
@@ -3678,10 +2325,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805514/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 12-3
+                          Article 5
                         </a>
                       </p>
                     </div>
@@ -3689,7 +2336,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Coefficients hiérarchiques
+                    Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
@@ -3709,10 +2356,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805513/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 12-4
+                          Article 4
                         </a>
                       </p>
                     </div>
@@ -3720,7 +2367,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Prise en compte des diplômes professionnels bâtiment
+                    Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
@@ -3740,10 +2387,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805512/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 12-5
+                          Article 3
                         </a>
                       </p>
                     </div>
@@ -3751,7 +2398,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Polyvalence
+                    Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
@@ -3771,10 +2418,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805511/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 12-6
+                          Article 2
                         </a>
                       </p>
                     </div>
@@ -3782,7 +2429,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Evolution de carrière
+                    Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
@@ -3802,10 +2449,10 @@ exports[`<Convention /> renders 1`] = `
                         class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
                       >
                         <a
-                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
+                          href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805509/?idConteneur=2941"
                           target="_blank"
                         >
-                          Article 12-7
+                          Article 1er
                         </a>
                       </p>
                     </div>
@@ -3813,7 +2460,7 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="sc-gmgFlS ikhbYa"
                   >
-                    Suivi de l'application dans l'entreprise
+                    Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
@@ -3824,10 +2471,10 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </div>
   <div
-    class="sc-bDpDS cTIpNS"
+    class="sc-fMMURN bncoEo"
   >
     <h2
-      class="sc-fMMURN ebnRwO"
+      class="sc-cVzyXs jFvudg"
     >
       <span
         class="sc-gsFSXq ljkohw"
@@ -3835,21 +2482,21 @@ exports[`<Convention /> renders 1`] = `
       Recherche dans la convention collective
     </h2>
     <p
-      class="sc-bVHCgj ddZStO"
+      class="sc-ktPPKK fdjlXL"
     >
       Recherchez par mots clés dans le texte de la convention collective sur le site Légifrance.
     </p>
   </div>
   <form
     action="https://legifrance.gouv.fr/search/kali#kali"
-    class="sc-dycYrt gybLmJ"
+    class="sc-eulNck kWWeQW"
     target="_blank"
   >
     <div
-      class="sc-fThUAz bpDARu"
+      class="sc-eBHhsj hspWcs"
     >
       <div
-        class="sc-sLsrZ kGdGKi sc-SrznA mJAtV"
+        class="sc-sLsrZ kGdGKi sc-iXzfSG fkggSw"
       >
         <input
           aria-label="Recherchez dans la collection collective"
@@ -3869,7 +2516,7 @@ exports[`<Convention /> renders 1`] = `
       <input
         name="cidKaliCont"
         type="hidden"
-        value="KALICONT000005635221"
+        value="2941"
       />
       <input
         name="searchField"
@@ -3893,14 +2540,14 @@ exports[`<Convention /> renders 1`] = `
       />
       <button
         aria-label="Recherchez dans la collection collective"
-        class="sc-kOPcWz kyVwqT sc-czkgLR clkvfT"
+        class="sc-kOPcWz kyVwqT sc-lnPyaJ kvsYzw"
         title="Lancer une recherche"
         type="submit"
       >
         <svg
           aria-hidden="true"
           aria-label="rechercher (nouvelle fenêtre)"
-          class="sc-hTUWRQ gFEbKG"
+          class="sc-dExYaf gJMBXw"
           fill="none"
           viewBox="0 0 32 32"
           xmlns="http://www.w3.org/2000/svg"

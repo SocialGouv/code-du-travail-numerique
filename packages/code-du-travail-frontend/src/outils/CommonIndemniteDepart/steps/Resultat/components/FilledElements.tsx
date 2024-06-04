@@ -181,11 +181,15 @@ export default function FilledElements(props: Props) {
                     </thead>
                     <tbody>
                       {props.salaryPeriods.map((salary, index) => (
-                        <tr key={"salary-" + index}>
+                        <tr
+                          key={"salary-" + index}
+                          data-testid={"table-salary-row"}
+                        >
                           <th scope="row">{salary.month}</th>
-                          <td>formatNumber(salary.value ?? 0)</td>
+                          <td>{formatToEuro(salary.value ?? 0)}</td>
                           <td>
-                            {salary.prime} {salary.prime !== undefined && "€"}
+                            {salary.prime !== undefined &&
+                              formatToEuro(salary.prime)}
                           </td>
                         </tr>
                       ))}

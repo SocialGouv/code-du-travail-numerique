@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.139.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.138.0...v4.139.0) (2024-05-31)
+
+### Bug Fixes
+
+- **idemnite-licenciement:** impossible de saisir un salaire annuel inférieur ou égal à 0 ([#5918](https://github.com/SocialGouv/code-du-travail-numerique/issues/5918)) ([be28eac](https://github.com/SocialGouv/code-du-travail-numerique/commit/be28eac660abb007c43dbc43d9666dd3325473ff))
+- **indemnité licenciement:** affichage des salaires sur la page résultat ([#5928](https://github.com/SocialGouv/code-du-travail-numerique/issues/5928)) ([1772924](https://github.com/SocialGouv/code-du-travail-numerique/commit/17729249d8e9a1f8773eea383f68e756c22e4305))
+- **url:** modification des URLs des sdr ([#5923](https://github.com/SocialGouv/code-du-travail-numerique/issues/5923)) ([add03d4](https://github.com/SocialGouv/code-du-travail-numerique/commit/add03d441c6a4d3326907ab1c7dfb42b09820bf4))
+
+### Features
+
+- **e2e:** ajout de tests pour les widgets en remote ([#5919](https://github.com/SocialGouv/code-du-travail-numerique/issues/5919)) ([55bd2fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/55bd2fd5da9b96549d3f29068f606c6c7fc72884))
+
 # [4.138.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.137.1...v4.138.0) (2024-05-28)
 
 ### Bug Fixes

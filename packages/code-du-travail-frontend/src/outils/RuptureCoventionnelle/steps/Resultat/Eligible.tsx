@@ -59,7 +59,7 @@ const Eligible = () => {
           Ce montant est exonéré d’impôt sur le revenu et de cotisations
           sociales sous certaines conditions,{" "}
           <StyledLink
-            href="/fiche-service-public/comment-calculer-lindemnite-specifique-de-rupture-conventionnelle"
+            href="/fiche-service-public/comment-calculer-lindemnite-specifique-de-rupture-conventionnelle#lindemnite-de-rupture-conventionnelle-est-elle-imposable"
             target="_blank"
           >
             en savoir plus
@@ -85,16 +85,6 @@ const Eligible = () => {
               value: contratTravail
                 .typeContratTravail!.toString()
                 .toUpperCase(),
-            },
-            {
-              text: "Rupture conventionnelle dûe à une inaptitude d’origine professionnelle",
-              value:
-                contratTravail.licenciementInaptitude === "oui" ? "Oui" : "Non",
-              detail:
-                !result.isAgreementBetter &&
-                contratTravail.licenciementInaptitude === "oui"
-                  ? "Le salarié ayant été licencié pour inaptitude suite à un accident du travail ou une maladie professionnelle reconnue, le montant de l'indemnité de rupture conventionnelle légale est doublé"
-                  : undefined,
             },
             {
               text: "Arrêt de travail au moment de la rupture conventionnelle",
