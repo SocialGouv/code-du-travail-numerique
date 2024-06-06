@@ -33,7 +33,6 @@ async function _getPrequalified() {
     index: elasticDocumentsIndex,
   });
   const count = body.count ?? 10000;
-  console.info(`Loading ${count} prequalifiedQueries`);
 
   const response = await elasticsearchClient.search<any>({
     body: {
@@ -126,7 +125,6 @@ export const getPrequalifiedResults = async (query) => {
 
   if (knownQuery && knownQuery.refs && knownQuery.refs.length > 0) {
     // get ES results for a known query
-    console.info(`getSavedResult: ${knownQuery.title}`);
     return knownQuery.refs.map((ref) => ({
       _source: ref,
     }));
