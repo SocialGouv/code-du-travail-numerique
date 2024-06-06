@@ -4,6 +4,7 @@ import { trackClickViewPageInfo } from "../../tracking";
 import { useRouter } from "next/router";
 import { DossierLicenciementContext, useStore } from "../../store";
 import { useContext } from "react";
+import {SITE_URL} from "../../../config";
 const { DirectionRight } = icons;
 
 export const ShowInfo = ({
@@ -28,7 +29,7 @@ export const ShowInfo = ({
           trackClickViewPageInfo();
           const destination = `/information/${slug}`;
           if (widgetMode) {
-            window.open(`${window.location.origin}${destination}`);
+            window.open(`${SITE_URL}${destination}`);
             return;
           }
           router.push(destination);
