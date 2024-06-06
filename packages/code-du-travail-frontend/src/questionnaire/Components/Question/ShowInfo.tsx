@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import { Button, Section, icons } from "@socialgouv/cdtn-ui";
+import { Button, icons, Section } from "@socialgouv/cdtn-ui";
 import { trackClickViewPageInfo } from "../../tracking";
 import { useRouter } from "next/router";
 import { DossierLicenciementContext, useStore } from "../../store";
 import { useContext } from "react";
-import {SITE_URL} from "../../../config";
+import { SITE_URL } from "../../../config";
+
 const { DirectionRight } = icons;
 
 export const ShowInfo = ({
