@@ -3,7 +3,7 @@ jobs:
     build-app:
       with:
         buildArgs:
-          NEXT_PUBLIC_SENTRY_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+          NEXT_PUBLIC_SENTRY_DSN: https://81b6e3d265cf736588f894040d265705@sentry.fabrique.social.gouv.fr/107
           NEXT_PUBLIC_SENTRY_ENV: preproduction
           NEXT_PUBLIC_SENTRY_RELEASE: "{{.Values.global.sha}}"
           NEXT_PUBLIC_BUCKET_DEFAULT_FOLDER: "default"
