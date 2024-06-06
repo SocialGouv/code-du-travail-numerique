@@ -54,16 +54,5 @@
     "node": ">= v20"
   },
   "version": "0.0.0",
-  "packageManager": "yarn@3.6.0",
-  "dependencies": {
-    "@opentelemetry/auto-instrumentations-node": "^0.47.0",
-    "@opentelemetry/exporter-trace-otlp-http": "^0.52.0",
-    "@opentelemetry/instrumentation-http": "^0.52.0",
-    "@opentelemetry/instrumentation-net": "^0.37.0",
-    "@opentelemetry/resources": "^1.25.0",
-    "@opentelemetry/sdk-node": "^0.52.0",
-    "@opentelemetry/sdk-trace-node": "^1.25.0",
-    "@opentelemetry/semantic-conventions": "^1.25.0",
-    "@sentry/opentelemetry-node": "^7.114.0"
-  }
+  "packageManager": "yarn@3.6.0"
 }

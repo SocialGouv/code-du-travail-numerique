@@ -1,9 +1,6 @@
 import { NodeSDK } from "@opentelemetry/sdk-node";
 import { Resource } from "@opentelemetry/resources";
 import { SEMRESATTRS_SERVICE_NAME } from "@opentelemetry/semantic-conventions";
-
-import { HttpInstrumentation } from "@opentelemetry/instrumentation-http";
-import { NetInstrumentation } from "@opentelemetry/instrumentation-net";
 import { getNodeAutoInstrumentations } from '@opentelemetry/auto-instrumentations-node';
 
 
