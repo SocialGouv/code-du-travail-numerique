@@ -6,8 +6,6 @@ import {
   EditorialSectionDisplayMode,
 } from "@socialgouv/cdtn-types";
 
-jest.mock("../htmlProcess.service");
-
 describe("Information Contents", () => {
   beforeEach(() => {
     render(
