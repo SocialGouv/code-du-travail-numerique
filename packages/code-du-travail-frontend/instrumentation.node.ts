@@ -4,6 +4,8 @@ import { SEMRESATTRS_SERVICE_NAME } from "@opentelemetry/semantic-conventions";
 
 import { HttpInstrumentation } from "@opentelemetry/instrumentation-http";
 import { NetInstrumentation } from "@opentelemetry/instrumentation-net";
+import { getNodeAutoInstrumentations } from '@opentelemetry/auto-instrumentations-node';
+
 
 import {
   SentrySpanProcessor,
@@ -17,7 +19,7 @@ const sdk = new NodeSDK({
   spanProcessor: new SentrySpanProcessor(),
   textMapPropagator: new SentryPropagator(),
 
-  instrumentations: [new HttpInstrumentation(), new NetInstrumentation()],
+  instrumentations: [getNodeAutoInstrumentations()],
 });
 
 sdk.start();

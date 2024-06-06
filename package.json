@@ -56,6 +56,7 @@
   "version": "0.0.0",
   "packageManager": "yarn@3.6.0",
   "dependencies": {
+    "@opentelemetry/auto-instrumentations-node": "^0.47.0",
     "@opentelemetry/exporter-trace-otlp-http": "^0.52.0",
     "@opentelemetry/instrumentation-http": "^0.52.0",
     "@opentelemetry/instrumentation-net": "^0.37.0",
