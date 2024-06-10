@@ -30,8 +30,6 @@ stack:
     - NextJS
   api:
     - ElasticSearch
-  nlp:
-    - tensorflow
   cdtn-admin:
     - NextJS
     - hasura
