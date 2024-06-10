@@ -27,10 +27,10 @@ app:
       cpu: 400m
       memory: 512Mi
   annotations:
-    oblik.socialgouv.io/min-request-cpu.app: 400m
-    oblik.socialgouv.io/min-request-memory.app: 512Mi
-    oblik.socialgouv.io/min-limit-cpu.app: 400m
-    oblik.socialgouv.io/min-limit-memory.app: 1024Mi
+    oblik.socialgouv.io/min-request-cpu: 400m
+    oblik.socialgouv.io/min-request-memory: 512Mi
+    oblik.socialgouv.io/min-limit-cpu: 400m
+    oblik.socialgouv.io/min-limit-memory: 1024Mi
   volumes:
     - name: tmp
       emptyDir: {}
