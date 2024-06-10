@@ -1,9 +1,7 @@
 import { getSourceByRoute, SOURCES } from "@socialgouv/cdtn-utils";
-import { vectorizeQuery } from "@socialgouv/cdtn-elasticsearch";
 
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getSearchBySourceSlugBody, getRelatedItemsBody } from "./queries";
-import { getSemQuery } from "../search/queries";
 import { mergePipe } from "../search/utils";
 
 const MAX_RESULTS = 4;
@@ -84,31 +82,6 @@ export const getSearchBasedItems = async ({
 }) => {
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
   const requestBodies = [{ index: elasticDocumentsIndex }, relatedItemBody];
-
-  const query_vector = await vectorizeQuery(title.toLowerCase()).catch(
-    (error: any) => {
-      if (error.message === "Cannot vectorize empty query.") {
-        console.log(
-          `[WARNING] Try to vectorize an empty title: ${title} (slug: ${slug}) `
-        );
-      } else {
-        console.error(error.message);
-      }
-    }
-  );
-
-  if (query_vector) {
-    const semBody = getSemQuery(
-      query_vector,
-      sources,
-      MAX_RESULTS + 1
-      // we +1 the size to remove the document source that should match perfectly for the given vector
-    );
-    // we use relatedItem query _source to have the same prop returned
-    // for both request
-    // semBody._source = relatedItemBody._source;
-    requestBodies.push({ index: elasticDocumentsIndex }, semBody);
-  }
 
   const {
     responses: [esResponse = {}, semResponse = {}],

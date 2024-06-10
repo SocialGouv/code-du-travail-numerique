@@ -1,11 +1,9 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { vectorizeQuery } from "@socialgouv/cdtn-elasticsearch";
 import { elasticsearchClient, elasticDocumentsIndex } from "../../../utils";
 import {
   getRelatedArticlesBody,
   getRelatedThemesBody,
   getSearchBody,
-  getSemQuery,
 } from "../queries";
 import { merge, mergePipe, removeDuplicate } from "../utils";
 import { getPrequalifiedResults } from "./prequalified";
@@ -66,16 +64,6 @@ export const searchWithQuery = async (
   const shouldRequestThemes = themes.length < 5;
   const size = Math.min(sizeParams ?? DEFAULT_RESULTS_NUMBER, MAX_RESULTS);
 
-  const query_vector = await vectorizeQuery(query.toLowerCase()).catch(
-    (error) => {
-      if (error.message === "Cannot vectorize empty query.") {
-        console.log(`[WARNING] Try to vectorize an empty search: ${query}`);
-      } else {
-        console.error(error.message);
-      }
-    }
-  );
-
   // if not enough prequalified results, we also trigger ES search
   if (
     !prequalifiedResults ||
@@ -85,12 +73,6 @@ export const searchWithQuery = async (
       { index: elasticDocumentsIndex },
       getSearchBody(query, size, sources),
     ];
-    if (query_vector) {
-      searches[DOCUMENTS_SEM] = [
-        { index: elasticDocumentsIndex },
-        getSemQuery(query_vector, sources, size),
-      ];
-    }
   }
 
   if (shouldRequestThemes) {
@@ -99,12 +81,6 @@ export const searchWithQuery = async (
       { index: elasticDocumentsIndex }, // we search in themeIndex here to try to match title in breadcrumb
       getRelatedThemesBody(query, themeNumber),
     ];
-    if (query_vector) {
-      searches[THEMES_SEM] = [
-        { index: elasticDocumentsIndex },
-        getSemQuery(query_vector, [SOURCES.THEMES], themeNumber),
-      ];
-    }
   }
 
   if (shouldRequestCdt) {

@@ -1,43 +1,5 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
-export function getSemQuery(queryVector: any, sources: any, size: number) {
-  return {
-    _source: [
-      "title",
-      "source",
-      "slug",
-      "description",
-      "url",
-      "action",
-      "breadcrumbs",
-      "cdtnId",
-      "highlight",
-      "sectionDisplayMode",
-      "shortTitle",
-    ],
-    query: {
-      script_score: {
-        query: {
-          bool: {
-            filter: [
-              { term: { excludeFromSearch: false } },
-              { term: { isPublished: true } },
-              sourcesFilter(sources),
-            ],
-          },
-        },
-        script: {
-          params: { query_vector: queryVector },
-          source: "cosineSimilarity(params.query_vector, 'title_vector') + 1.0",
-        },
-      },
-    },
-    size,
-  };
-}
-
-// if convention collectives are required
-// we only return the one with contributions
 export const sourcesFilter = (sources: any) =>
   sources.includes(SOURCES.CCN)
     ? {
