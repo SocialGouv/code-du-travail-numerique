@@ -69,7 +69,7 @@ export const searchWithQuery = async (
   const query_vector = await vectorizeQuery(query.toLowerCase()).catch(
     (error) => {
       if (error.message === "Cannot vectorize empty query.") {
-        console.log(`[WARNING] Try to vectorize an empty search: ${query}`)
+        console.log(`[WARNING] Try to vectorize an empty search: ${query}`);
       } else {
         console.error(error.message);
       }
@@ -196,15 +196,15 @@ async function msearch(searches) {
     keys.push(key);
   }
 
-  const { body } = await elasticsearchClient.msearch({ body: requests });
+  const body = await elasticsearchClient.msearch({ body: requests });
 
   const results = keys.reduce((state, key, index) => {
     const resp = body.responses[index];
 
-    if (resp.error) {
+    if (resp.status !== 200) {
       console.error(
         `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(
-          resp.error,
+          resp,
           null,
           2
         )}`

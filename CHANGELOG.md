@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.141.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.140.0...v4.141.0) (2024-06-05)
+
+### Bug Fixes
+
+- **e2e:** ajout d'un wait pour attendre que l'accordéon soit ouvert ([#5939](https://github.com/SocialGouv/code-du-travail-numerique/issues/5939)) ([47c7ee8](https://github.com/SocialGouv/code-du-travail-numerique/commit/47c7ee85dbf5075b004a214a5fdde56d87321c77))
+
+### Features
+
+- **elasticsearch:** upgrade to v8 ([#5886](https://github.com/SocialGouv/code-du-travail-numerique/issues/5886)) ([9d508c1](https://github.com/SocialGouv/code-du-travail-numerique/commit/9d508c16f700dbd5fd7af0194dd89cb05f5952ab))
+
 # [4.140.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.139.0...v4.140.0) (2024-06-04)
 
 ### Bug Fixes

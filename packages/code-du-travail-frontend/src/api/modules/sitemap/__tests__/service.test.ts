@@ -1,74 +1,74 @@
+/** @jest-environment node */
+
 import { getSitemapData } from "../service";
 
 jest.mock("../../contributions/fetch", () => ({
   fetchAllContributions: async () => {
     return Promise.resolve({
-      body: {
-        hits: {
-          total: 6,
-          hits: [
-            {
-              _source: {
-                idcc: "0044",
-                type: "content",
-                content: "content1",
-                title: "title1",
-                source: "contribution",
-                slug: "44-slug-content1",
-              },
+      hits: {
+        total: 6,
+        hits: [
+          {
+            _source: {
+              idcc: "0044",
+              type: "content",
+              content: "content1",
+              title: "title1",
+              source: "contribution",
+              slug: "44-slug-content1",
             },
-            {
-              _source: {
-                idcc: "0000",
-                type: "content",
-                content: "content1",
-                title: "title1",
-                source: "contribution",
-                slug: "slug-content1",
-              },
+          },
+          {
+            _source: {
+              idcc: "0000",
+              type: "content",
+              content: "content1",
+              title: "title1",
+              source: "contribution",
+              slug: "slug-content1",
             },
-            {
-              _source: {
-                idcc: "0016",
-                type: "content",
-                content: "content1",
-                title: "title1",
-                source: "contribution",
-                slug: "16-slug-content1",
-              },
+          },
+          {
+            _source: {
+              idcc: "0016",
+              type: "content",
+              content: "content1",
+              title: "title1",
+              source: "contribution",
+              slug: "16-slug-content1",
             },
-            {
-              _source: {
-                idcc: "0000",
-                type: "content",
-                content: "content2",
-                title: "title2",
-                source: "contribution",
-                slug: "slug-content2",
-              },
+          },
+          {
+            _source: {
+              idcc: "0000",
+              type: "content",
+              content: "content2",
+              title: "title2",
+              source: "contribution",
+              slug: "slug-content2",
             },
-            {
-              _source: {
-                idcc: "0016",
-                type: "content",
-                content: "content2",
-                title: "title2",
-                source: "contribution",
-                slug: "16-slug-content2",
-              },
+          },
+          {
+            _source: {
+              idcc: "0016",
+              type: "content",
+              content: "content2",
+              title: "title2",
+              source: "contribution",
+              slug: "16-slug-content2",
             },
-            {
-              _source: {
-                idcc: "0000",
-                type: "content",
-                content: "content3",
-                title: "title3",
-                source: "contribution",
-                slug: "slug-content3",
-              },
+          },
+          {
+            _source: {
+              idcc: "0000",
+              type: "content",
+              content: "content3",
+              title: "title3",
+              source: "contribution",
+              slug: "slug-content3",
             },
-          ],
-        },
+          },
+        ],
       },
     });
   },

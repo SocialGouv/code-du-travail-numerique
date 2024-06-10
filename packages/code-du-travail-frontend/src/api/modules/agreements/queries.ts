@@ -2,7 +2,15 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export const getAllAgreementsWithContributions = () => {
   return {
-    _source: ["title", "shortTitle", "description", "url", "slug", "source", "num"],
+    _source: [
+      "title",
+      "shortTitle",
+      "description",
+      "url",
+      "slug",
+      "source",
+      "num",
+    ],
     query: {
       bool: {
         filter: [
@@ -70,11 +78,7 @@ export const getAgreementBySlugBody = (slug: string) => {
   return {
     query: {
       bool: {
-        filter: [
-          { term: { slug } },
-          { term: { source: SOURCES.CCN } },
-          { term: { isPublished: true } },
-        ],
+        filter: [{ term: { slug } }, { term: { source: SOURCES.CCN } }],
       },
     },
     size: 1,

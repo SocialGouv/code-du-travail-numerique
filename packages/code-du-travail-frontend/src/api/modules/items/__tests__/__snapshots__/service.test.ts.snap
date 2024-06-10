@@ -56,7 +56,6 @@ exports[`Items getBySourceAndSlugItems 1`] = `
     "title": "Démission d'un salarié",
     "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
   },
-  "_type": "_doc",
   "relatedItems": [
     {
       "action": undefined,

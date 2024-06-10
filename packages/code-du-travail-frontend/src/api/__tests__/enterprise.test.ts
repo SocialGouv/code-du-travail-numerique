@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import request from "supertest";
 import server from "nextjs-http-supertest";
 import Data from "../../../scripts/data/documents_data.json";

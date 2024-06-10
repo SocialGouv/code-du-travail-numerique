@@ -11,9 +11,9 @@ export const getGenericContributionsGroupByThemes = async () => {
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.hits
+  return response.hits.hits
     .map(({ _source }) => _source)
-    .map((contrib) => {
+    .map((contrib: any) => {
       contrib.theme = contrib.breadcrumbs[0].label;
       return contrib;
     })
@@ -34,7 +34,7 @@ export const getAllContributionsGroupByQuestion = async (
   agreements: ElasticAgreement[]
 ) => {
   const response = await fetchAllContributions();
-  const all = response.body.hits.hits.map(({ _source }) => _source);
+  const all = response.hits.hits.map(({ _source }) => _source);
   const allGenerics = all
     .filter(isGeneric)
     .sort((a, b) => a.title.localeCompare(b.title));
@@ -59,12 +59,12 @@ export const getByIdsContributions = async (
   ids: string[]
 ): Promise<ElasticSearchItem[]> => {
   const body = getContributionsByIds(ids);
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.total.value > 0
-    ? response.body.hits.hits.map(({ _source }) => _source)
+  return response.hits.hits.length > 0
+    ? response.hits.hits.map(({ _source }) => _source)
     : [];
 };
 

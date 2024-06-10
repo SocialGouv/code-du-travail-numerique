@@ -12,6 +12,9 @@ exports[`IDCC getIdccByQuery 1`] = `
     "hits": [
       {
         "_id": "21",
+        "_ignored": [
+          "answers.answer.keyword",
+        ],
         "_index": "cdtn_test-v2_documents",
         "_score": 15.278859,
         "_source": {
@@ -25,7 +28,6 @@ exports[`IDCC getIdccByQuery 1`] = `
           "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.",
           "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780",
         },
-        "_type": "_doc",
       },
       {
         "_id": "20",
@@ -42,7 +44,6 @@ exports[`IDCC getIdccByQuery 1`] = `
           "title": "Convention collective du travail du personnel des banques de la Guyane du 18 décembre 2007",
           "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023973390",
         },
-        "_type": "_doc",
       },
     ],
     "max_score": 15.278859,

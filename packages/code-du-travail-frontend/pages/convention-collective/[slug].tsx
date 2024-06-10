@@ -9,10 +9,11 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Convention from "../../src/conventions/Convention";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import { apiIdcc } from "../../src/conventions/Search/api/agreement.service";
 import { addPrefixAgreementTitle } from "../../src/conventions/utils";
+import Head from "next/head";
+import { handleError } from "../../src/lib/fetch-error";
 
 interface Props {
   convention;
@@ -20,9 +21,15 @@ interface Props {
 
 function ConventionCollective(props: Props): JSX.Element {
   const { convention } = props;
-  const { shortTitle, title } = convention;
+  const { shortTitle, title, url } = convention;
+
   return (
     <Layout>
+      {!url && (
+        <Head>
+          <meta key="robots" name="robots" content="noindex, nofollow" />
+        </Head>
+      )}
       <Metas title={addPrefixAgreementTitle(shortTitle)} description={title} />
       <Answer
         breadcrumbs={[
@@ -61,9 +68,9 @@ function ConventionCollective(props: Props): JSX.Element {
           },
         ]}
         source={
-          convention.url && {
+          url && {
             name: "Légifrance",
-            url: convention.url,
+            url,
           }
         }
         subtitle={
@@ -85,7 +92,9 @@ export const getServerSideProps = async ({ query }) => {
   if (IDCC_ONLY.test(query.slug)) {
     const conventions = await apiIdcc(query.slug.padStart(4, "0"));
     if (!conventions.length) {
-      return { notFound: true };
+      return {
+        notFound: true,
+      };
     }
     return { redirect: { destination: conventions[0].slug, permanent: true } };
   }

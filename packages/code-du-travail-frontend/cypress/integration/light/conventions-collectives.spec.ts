@@ -68,4 +68,25 @@ describe("Conventions collectives", () => {
       expect(response.status).to.equal(404);
     });
   });
+
+  describe("validation des balises noindex", () => {
+    const NO_INDEX_TAG = '<meta name="robots" content="noindex, nofollow"/>';
+
+    it("les cc non traités ont une balise noindex", () => {
+      cy.request({
+        method: "GET",
+        url: "/convention-collective/5021-statut-de-la-fonction-publique-territoriale",
+      }).then((response) => {
+        expect(response.body).to.contains(NO_INDEX_TAG);
+      });
+    });
+    it("les cc traités n'ont pas de balise noindex", () => {
+      cy.request({
+        method: "GET",
+        url: "/convention-collective/3236-industrie-et-services-nautiques",
+      }).then((response) => {
+        expect(response.body).to.not.contains(NO_INDEX_TAG);
+      });
+    });
+  });
 });
