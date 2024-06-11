@@ -4,8 +4,6 @@ import { ui } from "./ui";
 import { EditorialSectionDisplayMode } from "@socialgouv/cdtn-types";
 import { mockedContents } from "./mockedContent";
 
-jest.mock("../htmlProcess.service");
-
 describe("Information Contents", () => {
   beforeEach(() => {
     render(
