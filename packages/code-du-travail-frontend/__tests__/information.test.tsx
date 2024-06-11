@@ -15,8 +15,6 @@ const mockedProps: EditorialContentDataWrapper = {
   },
 };
 
-jest.mock("../src/information/htmlProcess.service");
-
 describe("Information Page", () => {
   let renderResult: RenderResult;
   let props;
