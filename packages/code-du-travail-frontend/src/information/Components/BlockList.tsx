@@ -4,9 +4,9 @@ import {
 } from "@socialgouv/cdtn-types";
 import React from "react";
 import styled from "styled-components";
-import { BlockMarkdown } from "./BlockMarkdown";
 import { BlockGraphic } from "./BlockGraphic";
 import { ContentList } from "../../content";
+import Html from "../../common/Html";
 
 export const BlockList = ({
   blocks,
@@ -30,7 +30,7 @@ export const BlockList = ({
             );
             break;
           case EditorialContentType.markdown:
-            comp = <BlockMarkdown block={block}></BlockMarkdown>;
+            comp = <Html>{block.html}</Html>;
             break;
         }
         return (
