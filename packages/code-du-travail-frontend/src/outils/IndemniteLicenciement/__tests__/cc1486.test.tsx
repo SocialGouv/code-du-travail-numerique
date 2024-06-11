@@ -1,4 +1,4 @@
-import { fireEvent, render, RenderResult } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
 import { CalculateurIndemniteLicenciement } from "../..";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
@@ -19,11 +19,14 @@ Storage.prototype.getItem = jest.fn(
 );
 
 describe("Indemnité licenciement - CC 1486", () => {
-  let rendering: RenderResult;
   let userAction: UserAction;
   beforeEach(() => {
-    rendering = render(
-      <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
     );
     userAction = new UserAction();
 
@@ -57,21 +60,23 @@ describe("Indemnité licenciement - CC 1486", () => {
       .click(ui.next.get())
       .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.non.get())
-      .setInput(ui.salary.salaries.getAll()[0], "3500")
-      .setInput(ui.salary.salaries.getAll()[1], "3350")
-      .setInput(ui.salary.salaries.getAll()[2], "3200")
-      .setInput(ui.salary.salaries.getAll()[3], "3150")
-      .setInput(ui.salary.salaries.getAll()[4], "3300")
-      .setInput(ui.salary.salaries.getAll()[5], "3600")
-      .setInput(ui.salary.salaries.getAll()[6], "3100")
-      .setInput(ui.salary.salaries.getAll()[7], "3200")
-      .setInput(ui.salary.salaries.getAll()[8], "3300")
-      .setInput(ui.salary.salaries.getAll()[9], "3250")
-      .setInput(ui.salary.salaries.getAll()[10], "3100")
-      .setInput(ui.salary.salaries.getAll()[11], "3100")
+      .setInputs(ui.salary.salaries.getAll(), [
+        "3500",
+        "3350",
+        "3200",
+        "3150",
+        "3300",
+        "3600",
+        "3100",
+        "3200",
+        "3300",
+        "3250",
+        "3100",
+        "3100",
+      ])
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("26100 €");
+    expect(ui.result.resultat.get()).toHaveTextContent("26 100,00 €");
   });
 });

@@ -27,6 +27,7 @@ const IntegrationPage = (props): JSX.Element => {
             {
               label: "Intégrer les outils du Code du travail numérique",
               slug: "/integration",
+              position: 0,
             },
           ]}
         />

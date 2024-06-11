@@ -7,11 +7,14 @@ import {
 import { getDocsCountQuery } from "./queries";
 
 export const getStatsService = async () => {
-  const body = getDocsCountQuery();
+  const body: any = getDocsCountQuery();
 
-  const {
-    body: { aggregations },
-  } = await elasticsearchClient.search({ body, index: elasticDocumentsIndex });
+  const response = await elasticsearchClient.search<any>({
+    body,
+    index: elasticDocumentsIndex,
+  });
+
+  const aggregations: any = response.aggregations;
 
   let nbDocuments = 0;
 

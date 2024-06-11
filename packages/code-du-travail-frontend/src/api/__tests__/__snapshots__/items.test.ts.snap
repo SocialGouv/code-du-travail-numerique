@@ -56,7 +56,6 @@ exports[`Items return item from source and slug 1`] = `
     "title": "Démission d'un salarié",
     "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
   },
-  "_type": "_doc",
   "relatedItems": [
     {
       "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",

@@ -8,7 +8,7 @@ import {
 } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
-import { Breadcrumb } from "@socialgouv/cdtn-utils";
+import { Breadcrumb } from "@socialgouv/cdtn-types";
 
 import Html from "../../src/common/Html";
 import { toUrl } from "../lib";
@@ -17,7 +17,7 @@ import { getDisclaimer } from "./helpers";
 export interface LetterModelProps {
   breadcrumbs: Breadcrumb[];
   date: string;
-  description: string;
+  intro: string;
   title: string;
   relatedItems: Array<any>;
   metaDescription: string;

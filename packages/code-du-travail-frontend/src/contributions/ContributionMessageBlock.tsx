@@ -6,7 +6,7 @@ import {
   Section,
   theme,
 } from "@socialgouv/cdtn-ui";
-import { ElasticSearchContribution } from "@socialgouv/cdtn-utils";
+import { ElasticSearchContribution } from "@socialgouv/cdtn-types";
 import styled from "styled-components";
 import Html from "../common/Html";
 

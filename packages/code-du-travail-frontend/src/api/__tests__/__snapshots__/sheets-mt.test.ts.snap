@@ -3,6 +3,9 @@
 exports[`Sheets-mt should return an item for /sheets-mt/[slug] 1`] = `
 {
   "_id": "24",
+  "_ignored": [
+    "sections.html.keyword",
+  ],
   "_index": "cdtn_test-v2_documents",
   "_score": 0,
   "_source": {
@@ -63,7 +66,6 @@ exports[`Sheets-mt should return an item for /sheets-mt/[slug] 1`] = `
     "title": "5 questions/réponses sur la santé au travail",
     "url": "https://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/article/5-questions-reponses-sur-la-sante-au-travail",
   },
-  "_type": "_doc",
   "relatedItems": [
     {
       "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",

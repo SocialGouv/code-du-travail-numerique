@@ -1,6 +1,6 @@
 import { SupportedTypes } from "@socialgouv/modeles-social";
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../../outils/types";
 
 export type AgreementSupportInfo = {
   fullySupported: SupportedTypes;

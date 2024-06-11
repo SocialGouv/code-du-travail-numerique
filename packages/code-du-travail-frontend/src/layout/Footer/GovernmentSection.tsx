@@ -15,7 +15,7 @@ export const GouvernementSection = () => {
       <StyledTopSection>
         <Image
           alt="le site du ministere du travail, de l'emploi et de l'insertion"
-          src="/static/assets/img/ministere_logo.png"
+          src="/static/assets/img/ministere_logo.svg"
           width="170"
           height="141"
         />
@@ -24,6 +24,9 @@ export const GouvernementSection = () => {
             <Link href={"https://travail-emploi.gouv.fr"}>
               travail-emploi.gouv.fr
             </Link>
+          </li>
+          <li>
+            <Link href={"https://www.info.gouv.fr"}>info.gouv.fr</Link>
           </li>
           <li>
             <Link href={"https://www.service-public.fr"}>
@@ -37,9 +40,6 @@ export const GouvernementSection = () => {
           </li>
           <li>
             <Link href={"https://www.data.gouv.fr"}>data.gouv.fr</Link>
-          </li>
-          <li>
-            <Link href={"https://www.gouvernement.fr"}>gouvernement.fr</Link>
           </li>
         </StyledTopUl>
       </StyledTopSection>

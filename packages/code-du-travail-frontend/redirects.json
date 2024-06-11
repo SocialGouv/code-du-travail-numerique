@@ -120,7 +120,7 @@
     "destination": "/contribution/:slug"
   },
   {
-    "source": "/convention-collective/1740(.*)",
+    "source": "/convention-collective/1740(-[a-z0-9-]+)?",
     "permanent": true,
     "destination": "/outils/convention-collective"
   },
@@ -531,407 +531,407 @@
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)(0?)54(.*)",
+    "source": "/convention-collective/(0054|54(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)650(.*)",
+    "source": "/convention-collective/(0650|650(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)714(.*)",
+    "source": "/convention-collective/(0714|714(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)822(.*)",
+    "source": "/convention-collective/(0822|822(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)827(.*)",
+    "source": "/convention-collective/(0827|827(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)828(.*)",
+    "source": "/convention-collective/(0828|828(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)829(.*)",
+    "source": "/convention-collective/(0829|829(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)836(.*)",
+    "source": "/convention-collective/(0836|836(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)860(.*)",
+    "source": "/convention-collective/(0860|860(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)863(.*)",
+    "source": "/convention-collective/(0863|863(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)878(.*)",
+    "source": "/convention-collective/(0878|878(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)887(.*)",
+    "source": "/convention-collective/(0887|887(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)898(.*)",
+    "source": "/convention-collective/(0898|898(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)899(.*)",
+    "source": "/convention-collective/(0899|899(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)911(.*)",
+    "source": "/convention-collective/(0911|911(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)914(.*)",
+    "source": "/convention-collective/(0914|914(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)920(.*)",
+    "source": "/convention-collective/(0920|920(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)923(.*)",
+    "source": "/convention-collective/(0923|923(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)930(.*)",
+    "source": "/convention-collective/(0930|930(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)934(.*)",
+    "source": "/convention-collective/(0934|934(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)937(.*)",
+    "source": "/convention-collective/(0937|937(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)943(.*)",
+    "source": "/convention-collective/(0943|943(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)948(.*)",
+    "source": "/convention-collective/(0948|948(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)965(.*)",
+    "source": "/convention-collective/(0965|965(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)979(.*)",
+    "source": "/convention-collective/(0979|979(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0?)984(.*)",
+    "source": "/convention-collective/(0984|984(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1007(.*)",
+    "source": "/convention-collective/1007(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1059(.*)",
+    "source": "/convention-collective/1059(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1159(.*)",
+    "source": "/convention-collective/1159(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1164(.*)",
+    "source": "/convention-collective/1164(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1274(.*)",
+    "source": "/convention-collective/1274(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1315(.*)",
+    "source": "/convention-collective/1315(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1353(.*)",
+    "source": "/convention-collective/1353(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1365(.*)",
+    "source": "/convention-collective/1365(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1369(.*)",
+    "source": "/convention-collective/1369(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1387(.*)",
+    "source": "/convention-collective/1387(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/3209(.*)",
+    "source": "/convention-collective/3209(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1472(.*)",
+    "source": "/convention-collective/1472(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1525(.*)",
+    "source": "/convention-collective/1525(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1560(.*)",
+    "source": "/convention-collective/1560(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1564(.*)",
+    "source": "/convention-collective/1564(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1572(.*)",
+    "source": "/convention-collective/1572(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1576(.*)",
+    "source": "/convention-collective/1576(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1577(.*)",
+    "source": "/convention-collective/1577(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1578(.*)",
+    "source": "/convention-collective/1578(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1592(.*)",
+    "source": "/convention-collective/1592(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1604(.*)",
+    "source": "/convention-collective/1604(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1626(.*)",
+    "source": "/convention-collective/1626(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1627(.*)",
+    "source": "/convention-collective/1627(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1628(.*)",
+    "source": "/convention-collective/1628(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1634(.*)",
+    "source": "/convention-collective/1634(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1635(.*)",
+    "source": "/convention-collective/1635(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1732(.*)",
+    "source": "/convention-collective/1732(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/3231(.*)",
+    "source": "/convention-collective/3231(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1813(.*)",
+    "source": "/convention-collective/1813(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1867(.*)",
+    "source": "/convention-collective/1867(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1885(.*)",
+    "source": "/convention-collective/1885(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1902(.*)",
+    "source": "/convention-collective/1902(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1912(.*)",
+    "source": "/convention-collective/1912(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1960(.*)",
+    "source": "/convention-collective/1960(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1966(.*)",
+    "source": "/convention-collective/1966(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1967(.*)",
+    "source": "/convention-collective/1967(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2003(.*)",
+    "source": "/convention-collective/2003(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2126(.*)",
+    "source": "/convention-collective/2126(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2221(.*)",
+    "source": "/convention-collective/2221(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2266(.*)",
+    "source": "/convention-collective/2266(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2294(.*)",
+    "source": "/convention-collective/2294(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2489(.*)",
+    "source": "/convention-collective/2489(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2542(.*)",
+    "source": "/convention-collective/2542(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2579(.*)",
+    "source": "/convention-collective/2579(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2615(.*)",
+    "source": "/convention-collective/2615(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2630(.*)",
+    "source": "/convention-collective/2630(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2700(.*)",
+    "source": "/convention-collective/2700(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2755(.*)",
+    "source": "/convention-collective/2755(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2980(.*)",
+    "source": "/convention-collective/2980(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2992(.*)",
+    "source": "/convention-collective/2992(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/3053(.*)",
+    "source": "/convention-collective/3053(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1375(.*)",
+    "source": "/convention-collective/1375(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1809(.*)",
+    "source": "/convention-collective/1809(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2344(.*)",
+    "source": "/convention-collective/2344(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
     "destination": "/convention-collective/1586-industries-charcutieres-salaisons-charcuteries-conserves-de-viandes",
-    "source": "/convention-collective/1543(.*)",
+    "source": "/convention-collective/1543(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
@@ -941,121 +941,121 @@
   },
   {
     "destination": "/convention-collective/275-transport-aerien-personnel-au-sol",
-    "source": "/convention-collective/1391(.*)",
+    "source": "/convention-collective/1391(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
-    "source": "/convention-collective/1710(.*)",
+    "source": "/convention-collective/1710(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3245-operateurs-de-voyages-et-guides",
     "permanent": true
   },
   {
-    "source": "/convention-collective/1492(.*)",
+    "source": "/convention-collective/1492(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3238-production-et-transformation-des-papiers-et-cartons",
     "permanent": true
   },
   {
-    "source": "/convention-collective/2411(.*)",
+    "source": "/convention-collective/2411(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3241-telediffusion",
     "permanent": true
   },
   {
-    "source": "/convention-collective/1761(.*)",
+    "source": "/convention-collective/1761(-[a-z0-9-]+)?",
     "destination": "/convention-collective/573-commerces-de-gros",
     "permanent": true
   },
   {
-    "source": "/convention-collective/1974(.*)",
+    "source": "/convention-collective/1974(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3229-navigation-interieure",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(0?)412(.*)",
+    "source": "/convention-collective/(0412|412(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/3245-operateurs-de-voyages-et-guides",
     "permanent": true
   },
   {
-    "source": "/convention-collective/1495(.*)",
+    "source": "/convention-collective/1495(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3238-production-et-transformation-des-papiers-et-cartons",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(0?)700(.*)",
+    "source": "/convention-collective/(0700|700(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/3238-production-et-transformation-des-papiers-et-cartons",
     "permanent": true
   },
   {
-    "source": "/convention-collective/1423(.*)",
+    "source": "/convention-collective/1423(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3236-industrie-et-services-nautiques",
     "permanent": true
   },
   {
-    "source": "/convention-collective/2174(.*)",
+    "source": "/convention-collective/2174(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3229-navigation-interieure",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(0?)707(.*)",
+    "source": "/convention-collective/(0707|707(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/3238-production-et-transformation-des-papiers-et-cartons",
     "permanent": true
   },
   {
-    "source": "/convention-collective/1624(.*)",
+    "source": "/convention-collective/1624(-[a-z0-9-]+)?",
     "destination": "/convention-collective/573-commerces-de-gros",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(0?)172(.*)",
+    "source": "/convention-collective/(0172|172(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/158-travail-mecanique-du-bois-des-scieries-du-negoce-et-de-limportation-des-b",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(0?)207(.*)",
+    "source": "/convention-collective/(0207|207(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/2528-maroquinerie-articles-de-voyage-chasse-sellerie-gainerie-bracelets-en-c",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(0?)673(.*)",
+    "source": "/convention-collective/(0673|673(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/303-couture-parisienne",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(0?)715(.*)",
+    "source": "/convention-collective/(0715|715(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/489-industries-du-cartonnage",
     "permanent": true
   },
   {
-    "source": "/convention-collective/1001(.*)",
+    "source": "/convention-collective/1001(-[a-z0-9-]+)?",
     "destination": "/convention-collective/413-handicapes-etablissements-et-services-pour-les-personnes-inadaptees-et-han",
     "permanent": true
   },
   {
-    "source": "/convention-collective/1618(.*)",
+    "source": "/convention-collective/1618(-[a-z0-9-]+)?",
     "destination": "/convention-collective/1557-commerce-des-articles-de-sport-et-equipements-de-loisirs",
     "permanent": true
   },
   {
-    "source": "/convention-collective/1942(.*)",
+    "source": "/convention-collective/1942(-[a-z0-9-]+)?",
     "destination": "/convention-collective/18-industrie-textile",
     "permanent": true
   },
   {
-    "source": "/convention-collective/3160(.*)",
+    "source": "/convention-collective/3160(-[a-z0-9-]+)?",
     "destination": "/convention-collective/787-personnel-des-cabinets-dexperts-comptables-et-de-commissaires-aux-comptes",
     "permanent": true
   },
   {
-    "source": "/convention-collective/1237(.*)",
+    "source": "/convention-collective/1237(-[a-z0-9-]+)?",
     "destination": "/convention-collective/787-personnel-des-cabinets-dexperts-comptables-et-de-commissaires-aux-comptes",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(0?)418(.*)",
+    "source": "/convention-collective/(0418|418(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/303-couture-parisienne",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(0?)780(.*)",
+    "source": "/convention-collective/(0780|780(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/303-couture-parisienne",
     "permanent": true
   }

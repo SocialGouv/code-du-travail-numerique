@@ -1,10 +1,8 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { Contents } from "../Components";
 import { ui } from "./ui";
-import { SectionDisplayMode } from "@socialgouv/cdtn-utils";
+import { EditorialSectionDisplayMode } from "@socialgouv/cdtn-types";
 import { mockedContents } from "./mockedContent";
-
-jest.mock("../htmlProcess.service");
 
 describe("Information Contents", () => {
   beforeEach(() => {
@@ -12,7 +10,7 @@ describe("Information Contents", () => {
       <Contents
         anchor={""}
         dismissalProcess={false}
-        sectionDisplayMode={SectionDisplayMode.tab}
+        sectionDisplayMode={EditorialSectionDisplayMode.tab}
         contents={mockedContents}
       />
     );

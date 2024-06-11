@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import { getBySlugHighlights } from "../service";
 
 describe("Highlights", () => {

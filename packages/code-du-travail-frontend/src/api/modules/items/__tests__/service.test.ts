@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import { getBySourceAndSlugItems } from "../service";
 
 describe("Items", () => {

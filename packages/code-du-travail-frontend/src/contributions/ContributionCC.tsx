@@ -13,7 +13,7 @@ import Html from "../common/Html";
 import { ReferencesJuridiques } from "./References";
 import { SummaryItem } from "../questionnaire/Components/Summary/SummaryItem";
 import { useRouter } from "next/router";
-import { ElasticSearchContributionConventionnelle } from "@socialgouv/cdtn-utils";
+import { ElasticSearchContributionConventionnelle } from "@socialgouv/cdtn-types";
 import { removeCCNumberFromSlug } from "./utils";
 import { ContributionContent } from "./ContributionContent";
 import { LinkedContent } from "./LinkedContent";
@@ -36,7 +36,12 @@ const ContributionCC = ({ contribution }: Props) => {
           </Title>
 
           <SummaryItem
-            data={<StyledTitle variant="secondary" stripe="none" size="small">Votre convention collective est {contribution.ccnShortTitle} (IDCC {contribution.idcc})</StyledTitle>}
+            data={
+              <StyledTitle variant="secondary" stripe="none" size="small">
+                Votre convention collective est {contribution.ccnShortTitle}{" "}
+                (IDCC {contribution.idcc})
+              </StyledTitle>
+            }
             onClick={() => {
               router.push(
                 `/contribution/${removeCCNumberFromSlug(contribution.slug)}`
@@ -46,7 +51,6 @@ const ContributionCC = ({ contribution }: Props) => {
         </Wrapper>
       </section>
       <section>
-
         {contribution.highlight && contribution.highlight.content && (
           <StyledAlert variant="primary">
             <StyledParagraph
@@ -63,7 +67,7 @@ const ContributionCC = ({ contribution }: Props) => {
           </StyledAlert>
         )}
 
-        <ContributionContent contribution={contribution}  titleLevel={3} />
+        <ContributionContent contribution={contribution} titleLevel={3} />
         <ReferencesJuridiques references={contribution.references} />
 
         <p>

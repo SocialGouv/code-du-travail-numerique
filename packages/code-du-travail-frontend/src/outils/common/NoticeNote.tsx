@@ -21,19 +21,15 @@ export const NoticeNote = (props: NoticeNoteProps) => {
           ) : (
             <>
               {Array.from(Array(props.numberOfElements).keys()).map((i) => (
-                <>({i + 1}) </>
+                <span key={i}>({i + 1}) </span>
               ))}
             </>
           )}
         </StyledSup>
       ) : (
-        <>
-          {isUniq ? (
-            <StyledSup>* </StyledSup>
-          ) : (
-            <StyledSup>({props.currentElement}) </StyledSup>
-          )}
-        </>
+        <StyledSup>
+          {isUniq ? <>*</> : <>({props.currentElement}) </>}
+        </StyledSup>
       )}
     </>
   );

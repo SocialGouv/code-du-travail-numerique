@@ -101,8 +101,8 @@ function AgreementSearchTool({
       setScreen(ScreenType.agreementSelection);
     } else {
       router.push(
-        `/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreementSelection}`,
         {
+          pathname: `/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreementSelection}`,
           query: {
             noRedirect,
           },

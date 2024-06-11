@@ -8,7 +8,7 @@ import {
   ElasticSearchContribution,
   ElasticSearchContributionConventionnelle,
   ElasticSearchContributionGeneric,
-} from "@socialgouv/cdtn-utils";
+} from "@socialgouv/cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
@@ -57,7 +57,9 @@ function PageContribution(props: Props): React.ReactElement {
 
   metas = buildTitleAndDescription(
     props.contribution.breadcrumbs,
-    props.contribution.ccnShortTitle,
+    "ccnShortTitle" in props.contribution
+      ? props.contribution.ccnShortTitle
+      : undefined,
     props.contribution.title,
     props.contribution.description
   );

@@ -118,7 +118,7 @@ export default function Eligible() {
           Ce montant est exonéré d’impôt sur le revenu et de cotisations
           sociales sous certaines conditions,{" "}
           <StyledLink
-            href="/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi"
+            href="/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi#lindemnite-de-licenciement-est-elle-imposable"
             target="_blank"
           >
             en savoir plus
