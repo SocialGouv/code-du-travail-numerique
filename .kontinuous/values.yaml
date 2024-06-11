@@ -19,13 +19,6 @@ app:
         name: www-configmap
     - secretRef:
         name: www-secret
-  resources:
-    limits:
-      cpu: 400m
-      memory: 1024Mi
-    requests:
-      cpu: 400m
-      memory: 512Mi
   volumes:
     - name: tmp
       emptyDir: {}
