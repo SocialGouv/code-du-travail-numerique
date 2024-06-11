@@ -42,7 +42,6 @@ export const fetchTools = async (_params: any): Promise<Tool[]> => {
       source: "outils",
       text: "Quelle est mon indemnité de licenciement\nComment calculer mon indemnité de licenciement\nindemnité de licenciement pour inaptitude d’origine professionnelle\nindemnité de licenciement pour inaptitude d’origine professionnelle\nindemnité spéciale de licenciement pour inaptitude ’origine professionnelle\nindemnité de licenciement en cas d’alternance temps plein temps partiel\ncalculez le montant d’une indemnité de licenciement en fonction de votre situation",
       title: "Indemnité de licenciement",
-      title_vector: [],
       _id: "d8a3605790",
       displayTool: true,
     },
