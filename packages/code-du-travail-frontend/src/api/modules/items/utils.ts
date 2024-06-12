@@ -2,7 +2,6 @@ import { getSourceByRoute, SOURCES } from "@socialgouv/cdtn-utils";
 
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getSearchBySourceSlugBody, getRelatedItemsBody } from "./queries";
-import { mergePipe } from "../search/utils";
 
 const MAX_RESULTS = 4;
 
@@ -71,47 +70,32 @@ export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {
 };
 
 // use search based on item title : More Like This & Semantic
-export const getSearchBasedItems = async ({
-  title,
-  settings,
-  slug,
-}: {
-  title: string;
-  settings: any;
-  slug: string;
-}) => {
+export const getSearchBasedItems = async ({ settings }: { settings: any }) => {
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
   const requestBodies = [{ index: elasticDocumentsIndex }, relatedItemBody];
 
   const {
-    responses: [esResponse = {}, semResponse = {}],
+    responses: [esResponse = {}],
   }: any = await elasticsearchClient.msearch({ body: requestBodies });
 
-  const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
   const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
 
-  return (
-    mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
-      // we filter fields and add some info about recommandation type for evaluation purpose
-      .map(({ _source }: any) => mapSource("search")(_source))
-  );
+  return fullTextHits.map(({ _source }: any) => mapSource("search")(_source));
 };
 
 // get related items, depending on : covisits present & non empty
 export const getRelatedItems = async ({
-  title,
   settings,
   slug,
   covisits,
 }: {
-  title: string;
   settings: any;
   slug: string;
   covisits: string;
 }): Promise<any> => {
   const covisitedItems = covisits ? await getCovisitedItems({ covisits }) : [];
 
-  const searchBasedItems = await getSearchBasedItems({ settings, title, slug });
+  const searchBasedItems = await getSearchBasedItems({ settings });
 
   const filteredItems = covisitedItems
     .concat(searchBasedItems)
