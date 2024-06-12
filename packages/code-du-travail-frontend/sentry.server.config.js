@@ -1,6 +1,6 @@
 import * as Sentry from "@sentry/nextjs";
 import { registerInstrumentations } from "@opentelemetry/instrumentation";
-import { RuntimeNodeInstrumentation } from "@opentelemetry/instrumentation-runtime-node";
+import { getNodeAutoInstrumentations } from "@opentelemetry/auto-instrumentations-node";
 
 Sentry.init({
   dsn:
@@ -12,5 +12,5 @@ Sentry.init({
 });
 
 registerInstrumentations({
-  instrumentations: [new RuntimeNodeInstrumentation()],
+  instrumentations: [getNodeAutoInstrumentations()],
 });
