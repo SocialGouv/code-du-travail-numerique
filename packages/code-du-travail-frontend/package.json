@@ -35,6 +35,7 @@
     "@next/bundle-analyzer": "^13.0.0",
     "@opentelemetry/auto-instrumentations-node": "^0.47.1",
     "@opentelemetry/instrumentation": "^0.52.0",
+    "@opentelemetry/winston-transport": "^0.4.0",
     "@sentry/nextjs": "^8.9.2",
     "@socialgouv/cdtn-elasticsearch": "^2.44.2",
     "@socialgouv/cdtn-logger": "^2.0.0",
