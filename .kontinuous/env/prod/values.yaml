@@ -45,3 +45,8 @@ app:
     requests:
       cpu: 600m
       memory: 1280Mi
+    annotations:
+      oblik.socialgouv.io/min-request-cpu: 600m
+      oblik.socialgouv.io/min-request-memory: 1280Mi
+      oblik.socialgouv.io/min-limit-cpu: 700m
+      oblik.socialgouv.io/min-limit-memory: 1536Mi

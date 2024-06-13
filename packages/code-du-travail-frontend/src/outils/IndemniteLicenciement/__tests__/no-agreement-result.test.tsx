@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import React from "react";
 import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
@@ -17,6 +17,7 @@ Storage.prototype.getItem = jest.fn(
 }
 `
 );
+jest.mock("../../../conventions/Search/api/enterprises.service");
 
 describe("Indemnité licenciement", () => {
   let userAction: UserAction;
@@ -79,5 +80,41 @@ describe("Indemnité licenciement", () => {
         )
       ).not.toBeInTheDocument();
     });
+  });
+  test(`Le résultat doit être légal si la convention collective a été retirée de la sélection`, async () => {
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
+    );
+    userAction = new UserAction();
+    userAction
+      .click(ui.introduction.startButton.get())
+      .click(ui.contract.type.cdi.get())
+      .click(ui.contract.fauteGrave.non.get())
+      .click(ui.contract.inaptitude.non.get())
+      .click(ui.contract.arretTravail.non.get())
+      .click(ui.next.get())
+      .click(ui.agreement.unknownAgreement.get())
+      .setInput(ui.agreement.agreementCompanyInput.get(), "bricoman")
+      .click(ui.agreement.agreementCompanySearchButton.get())
+      .click(ui.agreement.agreementCompanySearchButton.get());
+    await waitFor(() => {
+      userAction.click(ui.agreement.searchItem.bricomanie.get());
+    });
+    userAction
+      .click(ui.next.get())
+      .setInput(ui.seniority.startDate.get(), "01/01/2018")
+      .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
+      .setInput(ui.seniority.endDate.get(), "01/01/2024")
+      .click(ui.seniority.hasAbsence.non.get())
+      .click(ui.next.get())
+      .click(ui.salary.hasPartialTime.non.get())
+      .click(ui.salary.hasSameSalary.oui.get())
+      .setInput(ui.salary.sameSalaryValue.get(), "2500")
+      .click(ui.next.get());
+    expect(ui.result.resultatLegal.get()).toHaveTextContent("3 750,00");
   });
 });

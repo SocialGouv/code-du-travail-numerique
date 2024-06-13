@@ -45,6 +45,8 @@ contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
       - ancienneté en année
       - 10 an
 
+contrat salarié . paramètre . minimum ancienneté requise en année: 8 mois
+
 contrat salarié . indemnité de licenciement . au dela de dix ans:
   somme:
     - ancienneté en année
@@ -70,7 +72,7 @@ contrat salarié . indemnité de licenciement . résultat légal doit être igno
 
 contrat salarié . indemnité de licenciement . résultat légal:
   variations:
-    - si: ancienneté requise en année >= 8 mois
+    - si: ancienneté requise en année >= contrat salarié . paramètre . minimum ancienneté requise en année
       alors:
         somme:
           - facteur dix ans ou moins
@@ -103,7 +105,7 @@ contrat salarié . indemnité de licenciement . résultat légal inaptitude:
 contrat salarié . indemnité de licenciement . résultat légal moins de 10ans:
   applicable si:
     toutes ces conditions:
-      - ancienneté requise en année >= 8 mois
+      - ancienneté requise en année >= contrat salarié . paramètre . minimum ancienneté requise en année
       - ancienneté en année <= 10 an
   valeur: résultat légal
   cdtn:

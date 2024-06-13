@@ -26,6 +26,11 @@ app:
     requests:
       cpu: 400m
       memory: 512Mi
+  annotations:
+    oblik.socialgouv.io/min-request-cpu: 400m
+    oblik.socialgouv.io/min-request-memory: 512Mi
+    oblik.socialgouv.io/min-limit-cpu: 400m
+    oblik.socialgouv.io/min-limit-memory: 1024Mi
   volumes:
     - name: tmp
       emptyDir: {}
@@ -38,8 +43,7 @@ app:
       name: next
   initContainers:
     - name: copy-next
-      image:
-        "{{ .Values.global.registry }}/{{ .Values.global.projectName }}/{{
+      image: "{{ .Values.global.registry }}/{{ .Values.global.projectName }}/{{
         .Values.global.imageRepository }}/app:{{ .Values.global.imageTag }}"
       command: ["/bin/sh", "-c"]
       args:
