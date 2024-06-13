@@ -46,7 +46,8 @@ export function NoEnterprise(props: Props): JSX.Element {
           stripe="left"
           shift={theme.spacings.xmedium}
         >
-          Votre recherche concerne <strong>les assistants maternels, employés de maison</strong> ?
+          Votre recherche concerne{" "}
+          <strong>les assistants maternels, employés de maison</strong>&nbsp;?
         </Heading>
         <StyledButton variant="link" onClick={onClick}>
           Consultez votre convention collective

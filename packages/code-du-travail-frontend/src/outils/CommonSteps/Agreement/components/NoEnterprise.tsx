@@ -31,9 +31,8 @@ export function NoEnterprise({
         <InputCheckbox
           label={
             <span>
-              <StrongItem>Je n&apos;ai pas d&apos;entreprise</StrongItem> (ma
-              recherche concerne les assistants maternels, employés
-              de&nbsp;maison)
+              Votre recherche concerne{" "}
+              <strong>les assistants maternels, employés de maison</strong>
             </span>
           }
           name="salarieParticulierEmployeur"
@@ -82,12 +81,6 @@ export function NoEnterprise({
 }
 
 const { spacings } = theme;
-
-const StrongItem = styled.strong`
-  font-weight: 600;
-  font-size: ${theme.fonts.sizes.default};
-  color: ${theme.colors.paragraph};
-`;
 
 const RowWrapper = styled.div`
   display: flex;
