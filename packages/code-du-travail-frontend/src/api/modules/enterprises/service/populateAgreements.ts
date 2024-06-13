@@ -33,47 +33,47 @@ export const populateAgreements = async (
     return { ...enterpriseApiResponse.entreprises, entreprises: [] };
   }
   const body = await fetchAgreements(idccs);
-  const entreprisePromises = (
-    enterpriseApiResponse.entreprises?.filter((item, index) => index < 10) ?? []
-  )?.map(async (entreprise) => {
-    const idccList = conventionsToIdcc(entreprise.conventions);
+  const entreprisePromises = (enterpriseApiResponse.entreprises ?? [])?.map(
+    async (entreprise) => {
+      const idccList = conventionsToIdcc(entreprise.conventions);
 
-    const conventionsWithDuplicates = idccList.map((num: number) => {
-      const foundHandledIdcc = body.hits.hits.find(
-        ({ _source }) => _source?.num === num
-      );
-      if (foundHandledIdcc && foundHandledIdcc._source) {
-        const agreement = foundHandledIdcc._source;
+      const conventionsWithDuplicates = idccList.map((num: number) => {
+        const foundHandledIdcc = body.hits.hits.find(
+          ({ _source }) => _source?.num === num
+        );
+        if (foundHandledIdcc && foundHandledIdcc._source) {
+          const agreement = foundHandledIdcc._source;
+          return {
+            id: agreement.id,
+            contributions: agreement.contributions,
+            num: agreement.num,
+            shortTitle: agreement.shortTitle,
+            title: agreement.title,
+            url: agreement.url,
+            slug: agreement.slug,
+          };
+        }
+        const convention = entreprise.conventions.find(
+          (convention: Convention) => convention.idcc === num
+        );
         return {
-          id: agreement.id,
-          contributions: agreement.contributions,
-          num: agreement.num,
-          shortTitle: agreement.shortTitle,
-          title: agreement.title,
-          url: agreement.url,
-          slug: agreement.slug,
+          id: convention?.id ?? convention?.idcc.toString() ?? num.toString(),
+          num,
+          shortTitle:
+            convention?.shortTitle ?? "Convention collective non reconnue",
+          title: convention?.title ?? "",
+          contributions: false,
+          ...(convention?.url ? { url: convention?.url } : {}),
         };
-      }
-      const convention = entreprise.conventions.find(
-        (convention: Convention) => convention.idcc === num
+      });
+      const conventions = conventionsWithDuplicates.filter(
+        ({ num }, index) =>
+          conventionsWithDuplicates.findIndex((item) => item.num === num) ===
+          index
       );
-      return {
-        id: convention?.id ?? convention?.idcc.toString() ?? num.toString(),
-        num,
-        shortTitle:
-          convention?.shortTitle ?? "Convention collective non reconnue",
-        title: convention?.title ?? "",
-        contributions: false,
-        ...(convention?.url ? { url: convention?.url } : {}),
-      };
-    });
-    const conventions = conventionsWithDuplicates.filter(
-      ({ num }, index) =>
-        conventionsWithDuplicates.findIndex((item) => item.num === num) ===
-        index
-    );
-    return { ...entreprise, conventions };
-  });
+      return { ...entreprise, conventions };
+    }
+  );
   const entreprises = entreprisePromises
     ? await Promise.all(entreprisePromises)
     : [];
