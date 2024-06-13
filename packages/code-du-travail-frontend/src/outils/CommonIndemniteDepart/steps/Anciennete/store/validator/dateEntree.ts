@@ -1,8 +1,10 @@
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
-import { isBefore } from "date-fns";
+import { isAfter, isBefore } from "date-fns";
 import { parse } from "../../../../../common/utils";
 
 const BEGINNING = new Date("01-01-1900");
+const today = new Date();
+const END_IN_50_YEARS = today.setFullYear(today.getFullYear() + 50);
 
 export const getDateEntreeErrors = (
   state: AncienneteStoreInput
@@ -15,7 +17,7 @@ export const getDateEntreeErrors = (
     return errors;
   }
   const dEntree = parse(state.dateEntree);
-  if (isBefore(dEntree, BEGINNING)) {
+  if (isBefore(dEntree, BEGINNING) || isAfter(dEntree, END_IN_50_YEARS)) {
     errors.errorDateEntree = "La date de début de contrat est invalide";
   } else {
     errors.errorDateEntree = undefined;

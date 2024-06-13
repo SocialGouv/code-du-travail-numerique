@@ -81,6 +81,15 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         )
       ).toBeInTheDocument();
 
+      userAction
+        .setInput(ui.seniority.startDate.get(), "01/01/272024");
+
+      expect(
+        rendering.queryByText(
+          "La date de début de contrat est invalide"
+        )
+      ).toBeInTheDocument();
+
       // validation de l'erreur quand cela fait plus de 18 mois que l'on a quitté l'entreprise
       userAction
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
