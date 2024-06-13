@@ -82,7 +82,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       ).toBeInTheDocument();
 
       userAction
-        .setInput(ui.seniority.startDate.get(), "01/01/272024");
+        .setInput(ui.seniority.startDate.get(), "272024-01-01");
 
       expect(
         rendering.queryByText(
