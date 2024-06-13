@@ -34,10 +34,10 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             tabindex="-1"
           >
             <header
-              class="sc-fMMURN bdACkg"
+              class="sc-kzqdkY hWUlpB"
             >
               <h1
-                class="sc-YysOf QfOmM"
+                class="sc-bVHCgj igcPZY"
               >
                 <span
                   class="sc-gsFSXq djREvw"
@@ -51,16 +51,16 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               Contact téléphonique
             </h2>
             <a
-              class="sc-ePDLzJ lbyfWL"
+              class="sc-fMMURN bfUEsp"
               href="tel:+0033806000126"
             >
               <strong
-                class="sc-bVVIoq dsOkHO"
+                class="sc-ktPPKK kfEjUo"
               >
                 0 806 000 126
               </strong>
               <em
-                class="sc-dPZUQH eVmQMw"
+                class="sc-YysOf jBOJPY"
               >
                 Service gratuit 
                 <span>
@@ -74,7 +74,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               Contact par email et prise de rendez-vous
             </h2>
             <form
-              class="sc-eBHhsj dsjLcj"
+              class="sc-cVzyXs hgfzis"
             >
               <label
                 for="search-service"
@@ -82,7 +82,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 Saisissez votre numéro de département :
               </label>
               <div
-                class="sc-sLsrZ kGdGKi sc-iXzfSG bLBnXa"
+                class="sc-sLsrZ kGdGKi sc-ePDLzJ cGNVRK"
               >
                 <input
                   autocomplete="off"
@@ -97,13 +97,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </div>
               <button
                 aria-label="Recherchez le service"
-                class="sc-kOPcWz kyVwqT sc-lnPyaJ ezKCb"
+                class="sc-kOPcWz kyVwqT sc-bVVIoq iNXDba"
                 title="Lancer une recherche"
                 type="submit"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-eulNck dshhnZ"
+                  class="sc-dPZUQH rwHjB"
                   fill="none"
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </button>
             </form>
             <div
-              class="sc-dExYaf fLnCXN"
+              class="sc-eBHhsj ieQJGs"
             >
               <p>
                 Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :

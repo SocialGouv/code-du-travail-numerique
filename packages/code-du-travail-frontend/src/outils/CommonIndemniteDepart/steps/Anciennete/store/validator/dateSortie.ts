@@ -1,5 +1,4 @@
 import { format, isAfter } from "date-fns";
-import { isValidDate } from "../../../../../../lib";
 import { parse } from "../../../../../common/utils";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 import frLocale from "date-fns/locale/fr";
@@ -25,8 +24,6 @@ export const getDateSortieErrors = (
         locale: frLocale,
       }
     )}</strong>`;
-  } else if (!isValidDate(state.dateSortie)) {
-    errors.errorDateSortie = "La date de fin de contrat est invalide";
   } else {
     errors.errorDateSortie = undefined;
   }

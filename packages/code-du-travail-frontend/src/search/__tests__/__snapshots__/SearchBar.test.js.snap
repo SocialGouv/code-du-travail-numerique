@@ -4,7 +4,7 @@ exports[`<SearchBar /> should render 1`] = `
 <div>
   <form
     action="/recherche"
-    class="sc-eBHhsj iMwIuf"
+    class="sc-cVzyXs iRvGjI"
     role="search"
   >
     <div
@@ -26,7 +26,7 @@ exports[`<SearchBar /> should render 1`] = `
         aria-controls="react-autowhatever-1"
         aria-label="recherchez par mots-clés"
         autocomplete="off"
-        class="sc-eulNck kdLhPD"
+        class="sc-dPZUQH EWuGz"
         id="main-search-input"
         name="q"
         placeholder="Rechercher"
@@ -35,20 +35,20 @@ exports[`<SearchBar /> should render 1`] = `
         value=""
       />
       <div
-        class="sc-dPZUQH eZA-Dme"
+        class="sc-YysOf bZIRlW"
         id="react-autowhatever-1"
         role="listbox"
       />
     </div>
     <button
       aria-label="Lancer ma recherche"
-      class="sc-kOPcWz kyVwqT sc-iapWAC jdJrgF"
+      class="sc-kOPcWz kyVwqT sc-iXzfSG jOetDF"
       title="Lancer ma recherche"
       type="submit"
     >
       <svg
         aria-hidden="true"
-        class="sc-iXzfSG fajOGK"
+        class="sc-ePDLzJ cjpeUy"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 <div>
   <form
     action="/recherche"
-    class="sc-eBHhsj iMwIuf"
+    class="sc-cVzyXs iRvGjI"
     role="search"
   >
     <div
@@ -89,7 +89,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
         aria-controls="react-autowhatever-1"
         aria-label="recherchez par mots-clés"
         autocomplete="off"
-        class="sc-eulNck kdLhPD"
+        class="sc-dPZUQH EWuGz"
         id="main-search-input"
         name="q"
         placeholder="Rechercher"
@@ -98,7 +98,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
         value="yolo"
       />
       <div
-        class="sc-dPZUQH eZA-Dme"
+        class="sc-YysOf bZIRlW"
         id="react-autowhatever-1"
         role="listbox"
       >
@@ -114,10 +114,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
           >
             <div
-              class="sc-bVVIoq hSnMeY"
+              class="sc-ktPPKK gznNzK"
             >
               <span
-                class="sc-ePDLzJ"
+                class="sc-fMMURN"
               >
                 foo
               </span>
@@ -131,10 +131,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
           >
             <div
-              class="sc-bVVIoq hSnMeY"
+              class="sc-ktPPKK gznNzK"
             >
               <span
-                class="sc-ePDLzJ"
+                class="sc-fMMURN"
               >
                 foobar
               </span>
@@ -148,10 +148,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
           >
             <div
-              class="sc-bVVIoq hSnMeY"
+              class="sc-ktPPKK gznNzK"
             >
               <span
-                class="sc-ePDLzJ"
+                class="sc-fMMURN"
               >
                 foo bar ?
               </span>
@@ -165,10 +165,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 1.6rem;"
           >
             <div
-              class="sc-bVVIoq hSnMeY"
+              class="sc-ktPPKK gznNzK"
             >
               <span
-                class="sc-ePDLzJ"
+                class="sc-fMMURN"
               >
                 foo bazzz
               </span>
@@ -179,13 +179,13 @@ exports[`<SearchBar /> should render suggestions 1`] = `
     </div>
     <button
       aria-label="Lancer ma recherche"
-      class="sc-kOPcWz kyVwqT sc-iapWAC jdJrgF"
+      class="sc-kOPcWz kyVwqT sc-iXzfSG jOetDF"
       title="Lancer ma recherche"
       type="submit"
     >
       <svg
         aria-hidden="true"
-        class="sc-iXzfSG fajOGK"
+        class="sc-ePDLzJ cjpeUy"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"

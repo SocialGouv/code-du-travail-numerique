@@ -13,6 +13,11 @@ export class UserAction {
   }
 
   setInput(element: HTMLElement, value: string): UserAction {
+    const isDate = value.match(/\d{0,2}\/\d{0,2}\/\d{0,4}/g);
+    if (isDate) {
+      const [days, month, year] = value.split("/");
+      value = `${year}-${month}-${days}`;
+    }
     element.focus();
     fireEvent.change(element, { target: { value } });
     return this;

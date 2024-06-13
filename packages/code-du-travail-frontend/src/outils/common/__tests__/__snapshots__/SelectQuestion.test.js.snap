@@ -3,10 +3,10 @@
 exports[`<SelectQuestion /> should render with default value 1`] = `
 <div>
   <div
-    class="sc-iXzfSG akpvg"
+    class="sc-ePDLzJ eidZVY"
   >
     <legend
-      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
+      class="sc-ejfMa-d ibZxvo sc-ktPPKK ejXCAU"
       data-testid="question-label"
       for="input-foo"
     >
@@ -22,10 +22,10 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       </span>
     </legend>
     <div
-      class="sc-gdyeKB kjvnnZ sc-eBHhsj eEeJgd"
+      class="sc-dlWCHZ ejmZlt sc-cVzyXs fHTQfe"
     >
       <select
-        class="sc-bDpDS gEgUvj"
+        class="sc-kWtpeL ejsegf"
         data-testid="foo"
         id="input-foo"
         name="foo"
@@ -51,7 +51,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="sc-kzqdkY hYZnyA"
+        class="sc-hHOBiw cYUewx"
       >
         <svg
           aria-hidden="true"
@@ -87,10 +87,10 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 <div>
   <div
-    class="sc-iXzfSG akpvg"
+    class="sc-ePDLzJ eidZVY"
   >
     <legend
-      class="sc-dlWCHZ frVQlK sc-bVVIoq hjkuny"
+      class="sc-ejfMa-d ibZxvo sc-ktPPKK ejXCAU"
       data-testid="question-label"
       for="input-foo"
     >
@@ -106,10 +106,10 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       </span>
     </legend>
     <div
-      class="sc-gdyeKB kjvnnZ sc-eBHhsj eEeJgd"
+      class="sc-dlWCHZ ejmZlt sc-cVzyXs fHTQfe"
     >
       <select
-        class="sc-bDpDS gEgUvj"
+        class="sc-kWtpeL ejsegf"
         data-testid="foo"
         id="input-foo"
         name="foo"
@@ -135,7 +135,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="sc-kzqdkY hYZnyA"
+        class="sc-hHOBiw cYUewx"
       >
         <svg
           aria-hidden="true"

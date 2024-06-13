@@ -6,7 +6,7 @@ import { Section } from "../layout/Section/index";
 import { InputCheckbox } from "./Checkbox.js";
 import { Fieldset } from "./Fieldset.js";
 import { Input } from "./Input.js";
-import { InputDate } from "./InputDate.js";
+import { InputDate } from "./InputDate";
 import { Label } from "./Label.js";
 import { Legend } from "./Legend.js";
 import { InputRadio } from "./Radio.js";

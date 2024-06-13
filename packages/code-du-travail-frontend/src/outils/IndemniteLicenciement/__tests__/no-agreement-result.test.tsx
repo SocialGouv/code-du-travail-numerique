@@ -1,14 +1,7 @@
-import {
-  RenderResult,
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-} from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import React from "react";
 import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
-import userEvent from "@testing-library/user-event";
 import { UserAction } from "../../../common";
 
 jest.spyOn(Storage.prototype, "setItem");
@@ -27,7 +20,6 @@ Storage.prototype.getItem = jest.fn(
 jest.mock("../../../conventions/Search/api/enterprises.service");
 
 describe("Indemnité licenciement", () => {
-  let rendering: RenderResult;
   let userAction: UserAction;
   describe("parcours avec la convention collective 413 pour tester le cas où il n'y a pas d'indemnité conventionnel", () => {
     beforeEach(() => {
@@ -38,35 +30,28 @@ describe("Indemnité licenciement", () => {
           displayTitle={""}
         />
       );
-      userEvent.click(ui.introduction.startButton.get());
-      userEvent.click(ui.contract.type.cdi.get());
-      userEvent.click(ui.contract.fauteGrave.non.get());
-      userEvent.click(ui.contract.inaptitude.non.get());
-      userEvent.click(ui.contract.arretTravail.non.get());
-      userEvent.click(ui.next.get());
-      userEvent.click(ui.next.get());
-      userEvent.selectOptions(
+      userAction = new UserAction();
+      userAction.click(ui.introduction.startButton.get());
+      userAction.click(ui.contract.type.cdi.get());
+      userAction.click(ui.contract.fauteGrave.non.get());
+      userAction.click(ui.contract.inaptitude.non.get());
+      userAction.click(ui.contract.arretTravail.non.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.next.get());
+      userAction.changeInputList(
         ui.information.agreement413.proCategory.get(),
         "Non-cadres"
       );
-      userEvent.click(ui.next.get());
-      fireEvent.change(ui.seniority.startDate.get(), {
-        target: { value: "01/01/2021" },
-      });
-      fireEvent.change(ui.seniority.notificationDate.get(), {
-        target: { value: "01/03/2022" },
-      });
-      fireEvent.change(ui.seniority.endDate.get(), {
-        target: { value: "01/03/2022" },
-      });
-      userEvent.click(ui.seniority.hasAbsence.non.get());
-      userEvent.click(ui.next.get());
-      userEvent.click(ui.salary.hasPartialTime.non.get());
-      userEvent.click(ui.salary.hasSameSalary.oui.get());
-      fireEvent.change(ui.salary.sameSalaryValue.get(), {
-        target: { value: "2000" },
-      });
-      userEvent.click(ui.next.get());
+      userAction.click(ui.next.get());
+      userAction.setInput(ui.seniority.startDate.get(), "01/01/2021");
+      userAction.setInput(ui.seniority.notificationDate.get(), "01/03/2022");
+      userAction.setInput(ui.seniority.endDate.get(), "01/03/2022");
+      userAction.click(ui.seniority.hasAbsence.non.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.salary.hasPartialTime.non.get());
+      userAction.click(ui.salary.hasSameSalary.oui.get());
+      userAction.setInput(ui.salary.sameSalaryValue.get(), "2000");
+      userAction.click(ui.next.get());
       // Validation que l'on est bien sur l'étape Indemnité
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     });
@@ -83,13 +68,11 @@ describe("Indemnité licenciement", () => {
       ).toBeInTheDocument();
 
       // vérification que le montant pour la convention collective est bien affiché quand il y en a un
-      userEvent.click(ui.previous.get());
-      userEvent.click(ui.previous.get());
-      fireEvent.change(ui.seniority.startDate.get(), {
-        target: { value: "01/01/2020" },
-      });
-      userEvent.click(ui.next.get());
-      userEvent.click(ui.next.get());
+      userAction.click(ui.previous.get());
+      userAction.click(ui.previous.get());
+      userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
+      userAction.click(ui.next.get());
+      userAction.click(ui.next.get());
 
       expect(
         screen.queryByText(
@@ -99,7 +82,7 @@ describe("Indemnité licenciement", () => {
     });
   });
   test(`Le résultat doit être légal si la convention collective a été retirée de la sélection`, async () => {
-    rendering = render(
+    render(
       <CalculateurIndemniteLicenciement
         icon={""}
         title={""}

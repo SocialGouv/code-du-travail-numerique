@@ -1,4 +1,4 @@
-import { deepEqualObject, isValidDate } from "../../../../../lib";
+import { deepEqualObject } from "../../../../../lib";
 import { ContratTravailStoreError, ContratTravailStoreInput } from "./types";
 
 const isCDI = (state) => state.typeContratTravail === "cdi";
@@ -26,10 +26,6 @@ export const validateStep = (state: ContratTravailStoreInput) => {
     errorDateArretTravail:
       state.arretTravail === "oui" && isCDI(state) && !state.dateArretTravail
         ? "Vous devez répondre à cette question"
-        : state.arretTravail === "oui" &&
-          state.dateArretTravail &&
-          !isValidDate(state.dateArretTravail)
-        ? "La date doit être valide"
         : undefined,
   };
   return {

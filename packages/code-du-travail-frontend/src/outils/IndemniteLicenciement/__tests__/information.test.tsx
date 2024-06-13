@@ -57,7 +57,11 @@ describe("Indemnité licenciement - Validation de la page information", () => {
     let userAction: UserAction;
     beforeEach(async () => {
       rendering = await render(
-        <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
       );
       userAction = new UserAction();
       userAction
@@ -183,7 +187,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       ).toBeChecked();
       expect(
         ui.information.agreement16.dateProCategoryChanged.get()
-      ).toHaveValue("01/01/2010");
+      ).toHaveValue("2010-01-01");
       expect(ui.information.agreement16.engineerAge.get()).toHaveValue(38);
 
       // validation que les infos sont effacées quand on change de convention collective

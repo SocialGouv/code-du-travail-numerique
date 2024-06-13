@@ -2,7 +2,7 @@ import { fireEvent, render } from "@testing-library/react";
 import React from "react";
 import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
-import userEvent from "@testing-library/user-event";
+import { UserAction } from "../../../common";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -20,6 +20,7 @@ Storage.prototype.getItem = jest.fn(
 );
 
 describe("Indemnité licenciement - CC 675", () => {
+  let userAction: UserAction;
   test("cas spécifique", () => {
     render(
       <CalculateurIndemniteLicenciement
@@ -28,35 +29,29 @@ describe("Indemnité licenciement - CC 675", () => {
         displayTitle={""}
       />
     );
-    userEvent.click(ui.introduction.startButton.get());
-    userEvent.click(ui.contract.type.cdi.get());
-    userEvent.click(ui.contract.fauteGrave.non.get());
-    userEvent.click(ui.contract.inaptitude.non.get());
-    userEvent.click(ui.contract.arretTravail.non.get());
-    userEvent.click(ui.next.get());
-    userEvent.click(ui.next.get());
-    userEvent.click(ui.next.get());
-    userEvent.click(ui.next.get());
-    fireEvent.change(ui.information.agreement675.proCategory.get(), {
-      target: { value: "'Employés'" },
-    });
+    userAction = new UserAction();
+    userAction.click(ui.introduction.startButton.get());
+    userAction.click(ui.contract.type.cdi.get());
+    userAction.click(ui.contract.fauteGrave.non.get());
+    userAction.click(ui.contract.inaptitude.non.get());
+    userAction.click(ui.contract.arretTravail.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.next.get());
+    userAction.changeInputList(
+      ui.information.agreement675.proCategory.get(),
+      "'Employés'"
+    );
     fireEvent.click(ui.next.get());
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2021" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "01/01/2024" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "01/01/2024" },
-    });
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2021");
+    userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2024");
+    userAction.setInput(ui.seniority.endDate.get(), "01/01/2024");
     fireEvent.click(ui.seniority.hasAbsence.non.get());
     fireEvent.click(ui.next.get());
     fireEvent.click(ui.salary.hasPartialTime.non.get());
     fireEvent.click(ui.salary.hasSameSalary.oui.get());
-    fireEvent.change(ui.salary.sameSalaryValue.get(), {
-      target: { value: "1488" },
-    });
+    userAction.setInput(ui.salary.sameSalaryValue.get(), "1488");
     fireEvent.click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
