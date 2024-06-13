@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.142.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.141.0...v4.142.0) (2024-06-13)
+
+### Features
+
+- 5873 revenir au composant html 5 pour les champs dates ([#5911](https://github.com/SocialGouv/code-du-travail-numerique/issues/5911)) ([a68132b](https://github.com/SocialGouv/code-du-travail-numerique/commit/a68132ba714d49d497d0e450ec75a301fec7ffa8))
+
 # [4.141.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.140.0...v4.141.0) (2024-06-05)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui
