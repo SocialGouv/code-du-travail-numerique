@@ -12,7 +12,7 @@ Sentry.init({
   tracesSampleRate: 0.05,
   release: process.env.NEXT_PUBLIC_SENTRY_RELEASE || process.env.SENTRY_RELEASE,
   integrations: [
-    Sentry.replayIntegration({ maskAllText: false, blockAllMedia: false }),
+    Sentry.replayIntegration({ maskAllText: true, blockAllMedia: true }),
   ],
   replaysSessionSampleRate: 0,
   replaysOnErrorSampleRate: 1.0,

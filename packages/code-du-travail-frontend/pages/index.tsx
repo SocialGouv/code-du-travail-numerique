@@ -33,6 +33,13 @@ const Home = ({
         noTitleAdd
         description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
       />
+      <button
+        onClick={() => {
+          throw new Error("Erreur côté frontend");
+        }}
+      >
+        Throw erreur
+      </button>
       <SearchHero />
       {highlights.length > 0 && (
         <Highlights
