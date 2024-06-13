@@ -1,6 +1,8 @@
 import * as Sentry from "@sentry/nextjs";
 import { registerInstrumentations } from "@opentelemetry/instrumentation";
-import { getNodeAutoInstrumentations } from "@opentelemetry/auto-instrumentations-node";
+import { HttpInstrumentation } from "@opentelemetry/instrumentation-http";
+import { NetInstrumentation } from "@opentelemetry/instrumentation-net";
+import { GenericPoolInstrumentation } from "@opentelemetry/instrumentation-generic-pool";
 
 Sentry.init({
   dsn:
@@ -12,5 +14,9 @@ Sentry.init({
 });
 
 registerInstrumentations({
-  instrumentations: [getNodeAutoInstrumentations()],
+  instrumentations: [
+    new GenericPoolInstrumentation(),
+    new HttpInstrumentation(),
+    new NetInstrumentation(),
+  ],
 });
