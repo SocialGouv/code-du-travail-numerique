@@ -66,6 +66,7 @@ export const ui = {
       ),
       agreement3239: byText("Particuliers employeurs et emploi à domicile"),
       carrefour: byText("CARREFOUR HYPERMARCHES"),
+      bricomanie: byText("BRICOMANIE"),
     },
     ccChoice: {
       commerce: byText(
