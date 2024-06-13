@@ -1,7 +1,6 @@
 import "cypress-html-validate/commands";
+import urls3 from "../../support/urls-contributions-to-validate-3.json";
 import urls4 from "../../support/urls-contributions-to-validate-4.json";
-import urls5 from "../../support/urls-contributions-to-validate-5.json";
-import urls6 from "../../support/urls-contributions-to-validate-6.json";
 
 import { ConfigData } from "cypress-html-validate";
 
@@ -20,24 +19,17 @@ const localConfig: ConfigData = {
     "wcag/h32": "off",
   },
 };
+describe("Validate html for contributions - part 3", () => {
+  urls3.forEach((url) => {
+    it("page should be valid: " + url, () => {
+      cy.visit(url);
+      cy.htmlvalidate(localConfig);
+    });
+  });
+});
+
 describe("Validate html for contributions - part 4", () => {
   urls4.forEach((url) => {
-    it("page should be valid: " + url, () => {
-      cy.visit(url);
-      cy.htmlvalidate(localConfig);
-    });
-  });
-});
-describe("Validate html for contributions - part 5", () => {
-  urls5.forEach((url) => {
-    it("page should be valid: " + url, () => {
-      cy.visit(url);
-      cy.htmlvalidate(localConfig);
-    });
-  });
-});
-describe("Validate html for contributions - part 6", () => {
-  urls6.forEach((url) => {
     it("page should be valid: " + url, () => {
       cy.visit(url);
       cy.htmlvalidate(localConfig);
