@@ -1058,5 +1058,55 @@
     "source": "/convention-collective/(0780|780(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/303-couture-parisienne",
     "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0706|706(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/1539-papeterie-commerce-de-detail-de-papeterie-fournitures-de-bureau-bureaut",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(2075|2075(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/1747-activites-industrielles-de-boulangerie-et-patisserie",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(7012|7012(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/personnels-des-activites-hippiques",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(7013|7013(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/personnels-des-activites-hippiques",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(7014|7014(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/personnels-des-activites-hippiques",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(1194|1194(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/2121-edition",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(1016|1016(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/2121-edition",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(2770|2770(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/2121-edition",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(635|635(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/573-commerces-de-gros",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(1734|1734(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/2642-production-audiovisuelle",
+    "permanent": true
   }
 ]
