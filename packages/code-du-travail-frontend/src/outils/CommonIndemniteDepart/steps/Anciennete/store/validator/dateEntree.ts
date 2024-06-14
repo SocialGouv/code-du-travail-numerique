@@ -17,7 +17,7 @@ export const getDateEntreeErrors = (
     return errors;
   }
   const dEntree = parse(state.dateEntree);
-  if (isBefore(dEntree, BEGINNING) || isAfter(dEntree, END_IN_50_YEARS)) {
+  if (dEntree.getFullYear().toString().length !== 4) {
     errors.errorDateEntree = "La date de début de contrat est invalide";
   } else {
     errors.errorDateEntree = undefined;

@@ -13,6 +13,8 @@ export const getDateNotificationErrors = (
   // Date de notification
   if (!state.dateNotification) {
     errors.errorDateNotification = "Veuillez saisir cette date";
+  } else if (dNotification.getFullYear().toString().length !== 4) {
+    errors.errorDateNotification = "La date de notification est invalide";
   } else if (
     state.dateNotification &&
     differenceInMonths(new Date(), dNotification) > 18

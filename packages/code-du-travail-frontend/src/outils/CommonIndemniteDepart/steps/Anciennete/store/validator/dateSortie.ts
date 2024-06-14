@@ -12,6 +12,8 @@ export const getDateSortieErrors = (
 
   if (!state.dateSortie) {
     errors.errorDateSortie = "Veuillez saisir cette date";
+  } else if (dSortie.getFullYear().toString().length !== 4) {
+    errors.errorDateSortie = "La date de sortie est invalide";
   } else if (
     state.dateEntree &&
     state.dateSortie &&
