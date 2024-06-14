@@ -29,12 +29,6 @@ export const fetchEnterprises = async (
 
   const jsonResponse: ApiRechercheEntrepriseResponse = await fetchReq.json();
 
-  // if(jsonResponse.erreur) {
-  // throw erreur
-  // }
-
-  console.error(jsonResponse);
-
   const entreprises = jsonResponse.results.map((result) => {
     const conventions =
       result.siege.liste_idcc?.map((idccNumber) => {
