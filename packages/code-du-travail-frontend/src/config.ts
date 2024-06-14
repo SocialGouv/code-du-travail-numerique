@@ -18,4 +18,5 @@ export const IS_PREPROD =
 export const IS_PROD =
   process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ?? false;
 export const ENTERPRISE_API_URL = "https://recherche-entreprises.api.gouv.fr";
+export const API_GEO_URL = "https://api-geo";
 export const REVALIDATE_TIME = 1800; // 30 minutes

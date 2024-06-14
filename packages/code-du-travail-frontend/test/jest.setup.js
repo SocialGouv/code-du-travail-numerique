@@ -23,4 +23,5 @@ jest.mock("../src/config", () => ({
   PACKAGE_VERSION: "vX.Y.Z",
   ENTERPRISE_API_URL:
     "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1",
+  API_GEO_URL: "https://api-geo",
 }));

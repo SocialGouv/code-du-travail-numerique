@@ -1,5 +1,7 @@
 import { ENTERPRISE_API_URL } from "../../../../config";
 import { Enterprise } from "../types";
+import { getCodeCommune } from "./fetchCp";
+import { nafMapper } from "./naf";
 import { ApiRechercheEntrepriseResponse } from "./types";
 
 export type Convention = {
@@ -20,10 +22,12 @@ export const fetchEnterprises = async (
   query: string,
   address: string | undefined
 ): Promise<EnterpriseApiResponse> => {
-  const q = address
-    ? `${encodeURIComponent(address)} ${encodeURIComponent(query)}`
-    : encodeURIComponent(query);
-  const url = `${ENTERPRISE_API_URL}/search?q=${q}&page=1&per_page=25&etat_administratif=A&sort_by_size=true`;
+  const q = encodeURIComponent(query);
+  const codeCommune = address ? await getCodeCommune(address) : undefined;
+
+  const url = `${ENTERPRISE_API_URL}/search?q=${q}&page=1&per_page=25&etat_administratif=A&sort_by_size=true${
+    codeCommune ? `&code_commune=${codeCommune}` : ""
+  }`;
 
   const fetchReq = await fetch(url);
 
@@ -40,7 +44,9 @@ export const fetchEnterprises = async (
         };
       }) ?? [];
     return {
-      activitePrincipale: result.activite_principale,
+      activitePrincipale: `${result.activite_principale} - ${
+        nafMapper[result.activite_principale]
+      }`,
       etablissements: result.nombre_etablissements_ouverts,
       highlightLabel: result.nom_raison_sociale,
       label: result.nom_complet,
