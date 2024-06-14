@@ -14,7 +14,7 @@ describe("getCodeCommune", () => {
 
     expect(result).toBe(expectedCode);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api-geo/communes?codePostal=${postalCode}&fields=code`
+      `https://api-geo/communes?codePostal=${postalCode}`
     );
   });
 
@@ -31,7 +31,7 @@ describe("getCodeCommune", () => {
 
     expect(result).toBe(expectedCode);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api-geo/communes?nom=${communeName}&fields=code`
+      `https://api-geo/communes?nom=${communeName}`
     );
   });
 
