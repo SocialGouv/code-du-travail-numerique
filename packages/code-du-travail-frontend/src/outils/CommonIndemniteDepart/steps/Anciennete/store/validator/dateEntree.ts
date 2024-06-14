@@ -1,10 +1,5 @@
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
-import { isAfter, isBefore } from "date-fns";
 import { parse } from "../../../../../common/utils";
-
-const BEGINNING = new Date("01-01-1900");
-const today = new Date();
-const END_IN_50_YEARS = today.setFullYear(today.getFullYear() + 50);
 
 export const getDateEntreeErrors = (
   state: AncienneteStoreInput
