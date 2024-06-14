@@ -15,6 +15,7 @@ import { formatRefs } from "../../publicodes";
 import DisclaimerBox from "../components/DisclaimerBox";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 import { getIndemnitePrecarite } from "../indemnite";
+import { formatToEuro } from "../../../common/formatToEuro";
 
 function extractRefs(refs = []) {
   //some ref are duplicated so we need to dedup them
@@ -120,7 +121,14 @@ function StepIndemnite({ form }) {
       <SectionTitle>Montant</SectionTitle>
       <p>
         {bonusAltName} est estimée à&nbsp;:&nbsp;
-        <HighlightResult>{indemnite}&nbsp;€</HighlightResult>.
+        <HighlightResult>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: formatToEuro(indemnite.toString()),
+            }}
+          />
+        </HighlightResult>
+        .
       </p>
 
       <ShowDetails>

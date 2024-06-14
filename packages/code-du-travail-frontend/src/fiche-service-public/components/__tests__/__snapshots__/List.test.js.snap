@@ -4,17 +4,16 @@ exports[`<List /> should render and increment heading level of children by one 1
 <div>
   <ul>
     <li
-      class="sc-kRRyDe bdOfAB"
+      class="sc-iXzfSG QhErf"
     >
       <h3
         class="sc-kAyceB dvmaTz"
-        data-testid="heading"
       >
         title
       </h3>
     </li>
     <li
-      class="sc-kRRyDe bdOfAB"
+      class="sc-iXzfSG QhErf"
     >
       <p>
         ok

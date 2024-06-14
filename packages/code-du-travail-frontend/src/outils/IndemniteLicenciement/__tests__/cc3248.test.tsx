@@ -1,8 +1,8 @@
 import { render, RenderResult } from "@testing-library/react";
 import { UserAction } from "../../../common";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -24,7 +24,11 @@ describe("Indemnité licenciement - CC 3248", () => {
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
       );
       userAction = new UserAction();
       userAction
@@ -62,6 +66,34 @@ describe("Indemnité licenciement - CC 3248", () => {
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
+    });
+
+    test(`scénario complet`, () => {
+      // vérification que l'on demande si le salaire a eu des primes pour un cadre
+      userAction
+        .changeInputList(
+          ui.information.agreement3248.proCategory.get(),
+          "'A, B, C, D ou E'"
+        )
+        .click(ui.information.agreement3248.dayContract.oui.get())
+        .click(ui.information.agreement3248.alwaysDayContract.oui.get())
+        .click(ui.information.agreement3248.hasBeenCadre.non.get())
+        .click(ui.information.agreement3248.absencesProlongesRepetes.non.get())
+        .click(ui.next.get())
+        .setInput(ui.seniority.startDate.get(), "01/01/2021")
+        .setInput(ui.seniority.notificationDate.get(), "30/06/2024")
+        .setInput(ui.seniority.endDate.get(), "30/06/2024")
+        .click(ui.seniority.hasAbsence.non.get())
+        .click(ui.next.get())
+        .click(ui.salary.hasPartialTime.non.get())
+        .click(ui.salary.hasSameSalary.oui.get())
+        .setInput(ui.salary.sameSalaryValue.get(), "2668")
+        .click(ui.next.get())
+        .click(ui.result.resultatLegal.get());
+
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+      expect(ui.result.resultat.get()).toHaveTextContent("3 501,75");
+      expect(ui.result.resultatLegal.get()).toHaveTextContent("2 334,50");
     });
   });
 });

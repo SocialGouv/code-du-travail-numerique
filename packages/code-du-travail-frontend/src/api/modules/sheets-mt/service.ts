@@ -8,12 +8,12 @@ import { getSheetMTQuery } from "./queries";
 
 export const getSheetsMtService = async (slug: string) => {
   const body = getSheetMTQuery({ slug });
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
 
-  if (response.body.hits.hits.length === 0) {
+  if (response.hits.hits.length === 0) {
     throw new NotFoundError({
       name: "AGREEMENT_NOT_FOUND",
       message: `there is no sheet mt that match ${slug}`,
@@ -21,7 +21,7 @@ export const getSheetsMtService = async (slug: string) => {
     });
   }
 
-  const sheetMT = response.body.hits.hits[0];
+  const sheetMT = response.hits.hits[0];
 
   const relatedItems = await getRelatedItems({
     covisits: sheetMT._source.covisits,

@@ -3,16 +3,16 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
 export enum CatPro2596 {
-  agentsMaitrise = "Agents de maîtrise",
-  cadres = "Cadres",
-  coiffeur = "Emplois techniques et de coiffeurs",
-  esthetique = "Emplois de l'esthétique-cosmétique",
-  nonTechnique = "Emplois non techniques",
+  agentsMaitrise = "'Agents de maîtrise'",
+  cadres = "'Cadres'",
+  coiffeur = "'Emplois techniques et de coiffeurs'",
+  esthetique = "'Emplois de l'esthétique-cosmétique'",
+  nonTechnique = "'Emplois non techniques'",
 }
 
 export type CC2596ReferenceSalaryProps = {
@@ -22,13 +22,29 @@ export type CC2596ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary2596
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2596>
+  implements IReferenceSalary<SupportedCc.IDCC2596>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCc.IDCC2596> {
+    return {
+      catPro: args[
+        "contrat salarié . convention collective . coiffure . indemnité de licenciement . catégorie professionnelle"
+      ] as CatPro2596,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+      salairesPendantPreavis: args.noticeSalaryPeriods
+        ? JSON.parse(args.noticeSalaryPeriods)
+        : [],
+    };
+  }
+
   computeReferenceSalary({
     salaires = [],
     salairesPendantPreavis = [],
     catPro,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2596>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC2596>): number {
     if (
       catPro === CatPro2596.coiffeur ||
       catPro === CatPro2596.esthetique ||

@@ -2,7 +2,7 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
@@ -12,8 +12,21 @@ export type CC1740ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary1740
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1740>
+  implements IReferenceSalary<SupportedCc.IDCC1740>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCc.IDCC1740> {
+    return {
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+      salairesPendantPreavis: args.noticeSalaryPeriods
+        ? JSON.parse(args.noticeSalaryPeriods)
+        : [],
+    };
+  }
+
   /**
    * - soit (S + ((P/12)*3))/3
    * S : total des salaires perçus lors des 3 derniers mois précédant le jour de l'envoi de la lettre de licenciement (brut) (brut)
@@ -25,7 +38,7 @@ export class ReferenceSalary1740
   computeReferenceSalary({
     salaires,
     salairesPendantPreavis,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1740>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC1740>): number {
     const rankedSalairesSansPréavis = rankByMonthArrayDescFrench(
       salaires
     ).filter((v) => nonNullable(v.value));

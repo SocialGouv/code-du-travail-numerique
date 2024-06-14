@@ -1,8 +1,8 @@
 import { render, RenderResult } from "@testing-library/react";
 import { UserAction } from "../../../common";
-import { CalculateurIndemnite } from "../../../../src/outils";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
 import React from "react";
-import { ui } from "./ui";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 jest.spyOn(Storage.prototype, "getItem");
@@ -13,7 +13,7 @@ describe("Indemnité licenciement - Validation du comportement avec l'absence de
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
       );
       userAction = new UserAction();
       userAction

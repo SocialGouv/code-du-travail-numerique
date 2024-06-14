@@ -2,6 +2,10 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   applicable si: indemnité de licenciement
   valeur: oui
 
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . résultat légal doit être calculé:
+  remplace: contrat salarié . indemnité de licenciement . résultat légal doit être ignoré
+  valeur: oui
+
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle:
   titre: Catégorie professionnelle
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.

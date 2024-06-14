@@ -23,7 +23,7 @@ export const fetchEnterprises = async (
   const q = address
     ? `${encodeURIComponent(address)} ${encodeURIComponent(query)}`
     : encodeURIComponent(query);
-  const url = `${ENTERPRISE_API_URL}/search?q=${q}&page=1&per_page=25&etat_administratif=A`;
+  const url = `${ENTERPRISE_API_URL}/search?q=${q}&page=1&per_page=25&etat_administratif=A&sort_by_size=true`;
 
   const fetchReq = await fetch(url);
 

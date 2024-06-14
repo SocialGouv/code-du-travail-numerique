@@ -3,10 +3,10 @@
 exports[`<Accordion /> should have two different levels of headings 1`] = `
 <div>
   <div
-    class="sc-ePDLzJ gyQfvT"
+    class="sc-kzqdkY kUMpKA"
   >
     <h2
-      class="sc-eBHhsj kDuOiA"
+      class="sc-dSIIpw crsCQS"
     >
       <span
         class="sc-gsFSXq ljkohw"
@@ -18,10 +18,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
     paragraphe 0
   </p>
   <div
-    class="sc-kRRyDe zFEco"
+    class="sc-iXzfSG GeWyC"
     data-accordion-component="Accordion"
   >
-    <div>
+    <div
+      id="titre-1"
+    >
       <div
         class="sc-jXbUNg heDTFL"
         data-accordion-component="AccordionItem"
@@ -31,12 +33,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-0"
+            aria-controls="accordion__panel-titre-1"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-0"
+            id="accordion__heading-titre-1"
             role="button"
             tabindex="0"
           >
@@ -62,7 +64,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             >
               <h2
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-0"
                 style="margin: 0px;"
               >
                 titre 1
@@ -75,7 +76,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-0"
+          id="accordion__panel-titre-1"
         >
           <div
             class="sc-bXCLTC fcbJdD"
@@ -90,7 +91,9 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
       </div>
     </div>
-    <div>
+    <div
+      id="titre-2"
+    >
       <div
         class="sc-jXbUNg crDDWD"
         data-accordion-component="AccordionItem"
@@ -100,12 +103,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-1"
+            aria-controls="accordion__panel-titre-2"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-1"
+            id="accordion__heading-titre-2"
             role="button"
             tabindex="0"
           >
@@ -131,7 +134,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             >
               <h2
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-1"
                 style="margin: 0px;"
               >
                 titre 2
@@ -144,7 +146,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-1"
+          id="accordion__panel-titre-2"
         >
           <div
             class="sc-bXCLTC fcbJdD"
@@ -157,7 +159,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             </p>
             <h3
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               titre 2-1
             </h3>
@@ -165,7 +166,9 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
       </div>
     </div>
-    <div>
+    <div
+      id="titre-3"
+    >
       <div
         class="sc-jXbUNg crDDWD"
         data-accordion-component="AccordionItem"
@@ -175,12 +178,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-2"
+            aria-controls="accordion__panel-titre-3"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-2"
+            id="accordion__heading-titre-3"
             role="button"
             tabindex="0"
           >
@@ -206,7 +209,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             >
               <h2
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-2"
                 style="margin: 0px;"
               >
                 titre 3
@@ -219,7 +221,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-2"
+          id="accordion__panel-titre-3"
         >
           <div
             class="sc-bXCLTC fcbJdD"
@@ -242,7 +244,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
 <div>
   <h5
     class="sc-kAyceB dvmaTz"
-    data-testid="heading"
   >
     titre 0
   </h5>
@@ -250,10 +251,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
     paragraphe 0
   </p>
   <div
-    class="sc-kRRyDe zFEco"
+    class="sc-iXzfSG GeWyC"
     data-accordion-component="Accordion"
   >
-    <div>
+    <div
+      id="titre-1"
+    >
       <div
         class="sc-jXbUNg heDTFL"
         data-accordion-component="AccordionItem"
@@ -263,12 +266,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-3"
+            aria-controls="accordion__panel-titre-1"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-3"
+            id="accordion__heading-titre-1"
             role="button"
             tabindex="0"
           >
@@ -294,7 +297,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             >
               <h5
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-0"
                 style="margin: 0px;"
               >
                 titre 1
@@ -307,7 +309,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-3"
+          id="accordion__panel-titre-1"
         >
           <div
             class="sc-bXCLTC fcbJdD"
@@ -322,7 +324,9 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
       </div>
     </div>
-    <div>
+    <div
+      id="titre-2"
+    >
       <div
         class="sc-jXbUNg crDDWD"
         data-accordion-component="AccordionItem"
@@ -332,12 +336,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-4"
+            aria-controls="accordion__panel-titre-2"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-4"
+            id="accordion__heading-titre-2"
             role="button"
             tabindex="0"
           >
@@ -363,7 +367,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             >
               <h5
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-1"
                 style="margin: 0px;"
               >
                 titre 2
@@ -376,7 +379,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-4"
+          id="accordion__panel-titre-2"
         >
           <div
             class="sc-bXCLTC fcbJdD"
@@ -389,7 +392,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             </p>
             <h6
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               titre 2-1
             </h6>
@@ -397,7 +399,9 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
       </div>
     </div>
-    <div>
+    <div
+      id="titre-3"
+    >
       <div
         class="sc-jXbUNg crDDWD"
         data-accordion-component="AccordionItem"
@@ -407,12 +411,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-5"
+            aria-controls="accordion__panel-titre-3"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-5"
+            id="accordion__heading-titre-3"
             role="button"
             tabindex="0"
           >
@@ -438,7 +442,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             >
               <h5
                 class="sc-kAyceB dvmaTz"
-                data-testid="undefined-2"
                 style="margin: 0px;"
               >
                 titre 3
@@ -451,7 +454,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-5"
+          id="accordion__panel-titre-3"
         >
           <div
             class="sc-bXCLTC fcbJdD"

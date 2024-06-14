@@ -1,8 +1,4 @@
-import {
-  MotifKeys,
-  SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { MotifKeys, SeniorityFactory, SupportedCc } from "../../../../common";
 
 describe("CC 413", () => {
   describe("Calcul de l'ancienneté pour un non cadre", () => {
@@ -15,9 +11,7 @@ describe("CC 413", () => {
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC413
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC413);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,
@@ -52,9 +46,7 @@ describe("CC 413", () => {
         expectedAnciennete,
         expectedExtras,
       }) => {
-        const seniority = new SeniorityFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC413
-        );
+        const seniority = new SeniorityFactory().create(SupportedCc.IDCC413);
 
         const result = seniority.computeSeniority({
           absencePeriods: absences,

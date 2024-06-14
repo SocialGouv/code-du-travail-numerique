@@ -24,7 +24,6 @@ const CommonInformationStep = ({
           key={info.id}
           name={"infos." + info.question.name}
           rule={info.question.rule}
-          trackQuestionEvent={MatomoActionEvent.INDEMNITE_LICENCIEMENT}
           value={info.info}
           onChange={(v) =>
             onChange(info.question.rule.nom, v, info.question.rule.cdtn?.type)

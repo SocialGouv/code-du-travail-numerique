@@ -3,32 +3,48 @@ import { differenceInMonths, isBefore, parse } from "date-fns";
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   DefaultSeniorityProps,
-  ISeniority,
   Motif,
   RequiredSeniorityResult,
   SeniorityProps,
   SeniorityRequiredProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
   YearDetail,
 } from "../../common";
 import { accumulateAbsenceByYear } from "../../common";
+import { SeniorityDefault } from "../../common/seniority";
 
 export type CC0016SeniorityProps = DefaultSeniorityProps & {
-  isExecutive: boolean;
+  isExecutive?: boolean;
   becameExecutiveAt?: string;
 };
 
-export class Seniority16
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC0016>
-{
+export class Seniority16 extends SeniorityDefault<SupportedCc.IDCC0016> {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): SeniorityProps<SupportedCc.IDCC0016> {
+    const categoriePro =
+      args[
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle"
+      ];
+    const becameExecutiveAt =
+      args[
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . date du statut cadre"
+      ];
+    return {
+      ...super.mapSituation(args),
+      becameExecutiveAt,
+      isExecutive: categoriePro === "'Ingénieurs et cadres'",
+    };
+  }
+
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
     isExecutive,
     becameExecutiveAt,
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC0016>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.IDCC0016>): SeniorityResult {
     const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
     const dSortie = parse(dateSortie, "dd/MM/yyyy", new Date());
     const totalAbsence = absencePeriods
@@ -89,7 +105,7 @@ export class Seniority16
     dateEntree,
     dateNotification,
     absencePeriods = [],
-  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.default>): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCc.default>): RequiredSeniorityResult {
     const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
     const dSortie = parse(dateNotification, "dd/MM/yyyy", new Date());
     const totalAbsence = absencePeriods

@@ -1,28 +1,27 @@
-import { Accordion } from "@socialgouv/cdtn-ui";
-// @ts-ignore
 import { decode } from "@socialgouv/fiches-travail-data";
-import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import Answer from "../../src/common/Answer";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import { Breadcrumb } from "@socialgouv/cdtn-utils";
+import { Breadcrumb } from "@socialgouv/cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
+import { AccordionWithAnchor as Accordion } from "../../src/common/AccordionWithAnchor";
 
 const fetchSheetMT = ({ slug }) => fetch(`${SITE_URL}/api/sheets-mt/${slug}`);
 
 const buildAccordionSections = (sections) =>
   sections
     .filter((section) => section.anchor)
-    .map(({ anchor, html, title }) => ({
-      body: <TabContent>{html}</TabContent>,
-      id: anchor,
-      title,
-    }));
+    .map(({ anchor, html, title }) => {
+      return {
+        body: <TabContent>{decode(html)}</TabContent>,
+        id: anchor,
+        title,
+      };
+    });
 
 interface Props {
   breadcrumbs: Breadcrumb[];
@@ -46,23 +45,8 @@ function Fiche(props: Props): JSX.Element {
     url,
     relatedItems,
   } = props;
-  const [titledSections, setTitledSections] = useState(
-    buildAccordionSections(sections)
-  );
 
-  useEffect(() => {
-    setTitledSections(
-      buildAccordionSections(
-        sections.map((section) => ({
-          ...section,
-          html: decode(section.html),
-        }))
-      )
-    );
-  }, [sections]);
-
-  const { asPath } = useRouter();
-  const anchor = asPath.split("#")[1];
+  const titledSections = buildAccordionSections(sections);
 
   // titleless section have the page title but no anchor.
   const untitledSection = sections.find((section) => !section.anchor);
@@ -78,11 +62,7 @@ function Fiche(props: Props): JSX.Element {
         breadcrumbs={breadcrumbs}
       >
         {untitledSection && <Html>{untitledSection.html}</Html>}
-        <Accordion
-          titleLevel={2}
-          preExpanded={[anchor]}
-          items={titledSections}
-        />
+        <Accordion titleLevel={2} items={titledSections} />
       </StyledAnswer>
     </Layout>
   );

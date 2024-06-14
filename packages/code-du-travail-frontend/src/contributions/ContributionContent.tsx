@@ -1,8 +1,7 @@
 import {
   ElasticSearchContributionConventionnelle,
   ElasticSearchContributionGeneric,
-  getLabelBySource,
-} from "@socialgouv/cdtn-utils";
+} from "@socialgouv/cdtn-types";
 import styled from "styled-components";
 import { theme } from "@socialgouv/cdtn-ui";
 import React from "react";
@@ -11,7 +10,8 @@ import { A11yLink } from "../common/A11yLink";
 import DisplayContentContribution, {
   ContentSP,
 } from "./DisplayContentContribution";
-import { Section } from "@socialgouv/cdtn-ui/lib";
+import { Section } from "@socialgouv/cdtn-ui";
+import { getLabelBySource } from "@socialgouv/cdtn-utils";
 
 type Props = {
   contribution:
@@ -22,10 +22,11 @@ type Props = {
 
 export const ContributionContent = ({ contribution, titleLevel }: Props) => {
   if (contribution.type === "generic-no-cdt") return <></>;
+  const isFicheSP = "raw" in contribution;
 
   return (
     <SectionNoPadding>
-      {"raw" in contribution ? (
+      {isFicheSP ? (
         <div>
           <Meta>
             {contribution.url && (

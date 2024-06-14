@@ -112,7 +112,7 @@
     {
       "name": "anciennement cadre",
       "question": "Le salarié était-il cadre dans l'ancienne convention collective de la métallurgie (avant le 01/01/2024) ?",
-      "note": "Si le salarié dépendait précédemment de la convention collective des ingénieurs et cadres de la métallurgie (IDCC 650) et qu’il est désormais classé non-cadre en raison de la nouvelle classification des emplois (depuis le 01/01/2024), il bénéficie quand même de la durée de préavis qui s’applique aux cadres."
+      "note": "Si l'emploi du salarié était précédemment cadre (en application de l’ancienne Convention collective - Ingénieurs et cadres (IDCC 650)) et qu’il est classé non-cadre à partir du 1er janvier 2024, en raison de la nouvelle classification des emplois, le salarié bénéficie de la durée de préavis qui s’applique aux cadres."
     }
   ],
   "situations": [
@@ -996,130 +996,6 @@
     },
     {
       "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 54,
-      "typeRupture": null,
-      "answer": "2 semaines",
-      "answer2": null,
-      "answer3": "14",
-      "ref": "Article 32 - avenant \"Mensuels\"",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0298A6C35AA3EF85E9D5DCA0DA83BFAC.tplgfr30s_3?idArticle=KALIARTI000005834034&cidTexte=KALITEXT000005672605&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 54,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 32 - avenant \"Mensuels\"",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0298A6C35AA3EF85E9D5DCA0DA83BFAC.tplgfr30s_3?idArticle=KALIARTI000005834034&cidTexte=KALITEXT000005672605&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 54,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 32 - avenant \"Mensuels\"",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0298A6C35AA3EF85E9D5DCA0DA83BFAC.tplgfr30s_3?idArticle=KALIARTI000005834034&cidTexte=KALITEXT000005672605&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 54,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 32 - avenant \"Mensuels\"",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0298A6C35AA3EF85E9D5DCA0DA83BFAC.tplgfr30s_3?idArticle=KALIARTI000005834034&cidTexte=KALITEXT000005672605&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 54,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 32 - avenant \"Mensuels\"",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0298A6C35AA3EF85E9D5DCA0DA83BFAC.tplgfr30s_3?idArticle=KALIARTI000005834034&cidTexte=KALITEXT000005672605&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 54,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 32 - avenant \"Mensuels\"",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0298A6C35AA3EF85E9D5DCA0DA83BFAC.tplgfr30s_3?idArticle=KALIARTI000005834034&cidTexte=KALITEXT000005672605&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 54,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 32 - avenant \"Mensuels\"",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0298A6C35AA3EF85E9D5DCA0DA83BFAC.tplgfr30s_3?idArticle=KALIARTI000005834034&cidTexte=KALITEXT000005672605&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 54,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 32 - avenant \"Mensuels\"",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0298A6C35AA3EF85E9D5DCA0DA83BFAC.tplgfr30s_3?idArticle=KALIARTI000005834034&cidTexte=KALITEXT000005672605&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 54,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 32 - avenant \"Mensuels\"",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0298A6C35AA3EF85E9D5DCA0DA83BFAC.tplgfr30s_3?idArticle=KALIARTI000005834034&cidTexte=KALITEXT000005672605&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
         "catégorie professionnelle": "21| Agents de maîtrise et Techniciens"
       },
       "type": "préavis de Licenciement",
@@ -1175,23 +1051,7 @@
     {
       "criteria": {
         "conclusion contrat travail": "1| Contrat de travail conclu avant le 1er juillet 2009",
-        "groupe": "24| 1 à 3",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 176,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": "Attention, cette durée est portée  à 2 mois par l'avenant du 11 avril 2019, en attente d'extension ",
-      "answer3": "30",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "conclusion contrat travail": "1| Contrat de travail conclu avant le 1er juillet 2009",
-        "groupe": "24| 1 à 3",
-        "ancienneté": "43| Plus de 2 ans"
+        "groupe": "24| 1 à 3"
       },
       "type": "préavis de Licenciement",
       "idcc": 176,
@@ -1199,8 +1059,8 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 35, 2°",
+      "refUrl": " https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109"
     },
     {
       "criteria": {
@@ -1213,8 +1073,8 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 35, 2°",
+      "refUrl": " https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109"
     },
     {
       "criteria": {
@@ -1227,8 +1087,8 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 35, 2°",
+      "refUrl": " https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109"
     },
     {
       "criteria": {
@@ -1241,8 +1101,8 @@
       "answer": "3 mois",
       "answer2": null,
       "answer3": "90",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 35, 2°",
+      "refUrl": " https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109"
     },
     {
       "criteria": {
@@ -1252,11 +1112,11 @@
       "type": "préavis de Licenciement",
       "idcc": 176,
       "typeRupture": null,
-      "answer": "3 mois (si les salariés ne bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947)",
+      "answer": "3 mois",
       "answer2": null,
       "answer3": "90",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 35, 2°",
+      "refUrl": " https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109"
     },
     {
       "criteria": {
@@ -1266,11 +1126,11 @@
       "type": "préavis de Licenciement",
       "idcc": 176,
       "typeRupture": null,
-      "answer": "4 mois (si les salariés bénéficient  des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947)",
+      "answer": "4 mois",
       "answer2": null,
       "answer3": "120",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 35, 2°",
+      "refUrl": " https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109"
     },
     {
       "criteria": {
@@ -1800,130 +1660,6 @@
     },
     {
       "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 822,
-      "typeRupture": null,
-      "answer": "2 semaines",
-      "answer2": null,
-      "answer3": "14",
-      "ref": "article 14",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 822,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article 14",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 822,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article 14",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 822,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article 14",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 822,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article 14",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 822,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article 14",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 822,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article 14",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 822,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article 14",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 822,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "article 14",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
         "catégorie professionnelle": "48| Cadres",
         "ancienneté": "38| Moins de 2 ans"
       },
@@ -1998,254 +1734,6 @@
         "ancienneté": "15| Moins de 6 mois"
       },
       "type": "préavis de Licenciement",
-      "idcc": 860,
-      "typeRupture": null,
-      "answer": "2 semaines",
-      "answer2": null,
-      "answer3": "14",
-      "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 860,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 860,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 860,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 860,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 860,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 860,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 860,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 860,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 878,
-      "typeRupture": null,
-      "answer": "2 semaines",
-      "answer2": null,
-      "answer3": "14",
-      "ref": "Article 46",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 878,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 46",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 878,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 46",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 878,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 46",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 878,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 46",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 878,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 46",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 878,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 46",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 878,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 46",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 878,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 46",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Licenciement",
       "idcc": 898,
       "typeRupture": null,
       "answer": "2 semaines",
@@ -2486,254 +1974,6 @@
       "answer2": null,
       "answer3": "90",
       "ref": "Article 52",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 937,
-      "typeRupture": null,
-      "answer": "2 semaines",
-      "answer2": null,
-      "answer3": "14",
-      "ref": "article 36 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 937,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article 36 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 937,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article 36 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 937,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article 36 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "42| 2 ans ou plus"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 937,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article 36 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 937,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article 36 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "42| 2 ans ou plus"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 937,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article 36 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 937,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article 36 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 937,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "article 36 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 965,
-      "typeRupture": null,
-      "answer": "15 jours",
-      "answer2": null,
-      "answer3": "15",
-      "ref": "Article 27 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "33| 6 mois à moins de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 965,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 27 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "42| 2 ans ou plus"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 965,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 27 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 965,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 27 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "42| 2 ans ou plus"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 965,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 27 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 965,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 27 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "42| 2 ans ou plus"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 965,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 27 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 965,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 27 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 965,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 27 de l'avenant mensuels",
       "refUrl": "pas dispo"
     },
     {
@@ -5039,254 +4279,6 @@
     },
     {
       "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1560,
-      "typeRupture": null,
-      "answer": "15 jours",
-      "answer2": null,
-      "answer3": "15",
-      "ref": "Chapitre V, article 39",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1560,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Chapitre V, article 39",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1560,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Chapitre V, article 39",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1560,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Chapitre V, article 39",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1560,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Chapitre V, article 39",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1560,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Chapitre V, article 39",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1560,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Chapitre V, article 39",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1560,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Chapitre V, article 39",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1560,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Chapitre V, article 39",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1564,
-      "typeRupture": null,
-      "answer": "2 semaines",
-      "answer2": null,
-      "answer3": "14",
-      "ref": "Article 34 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1564,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 34 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1564,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 34 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1564,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 34 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1564,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 34 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1564,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 34 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1564,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 34 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1564,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 34 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1564,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 34 de l'avenant mensuels",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
         "ancienneté": "10| Au delà de la période d'essai et jusqu'à 3 mois"
       },
       "type": "préavis de Licenciement",
@@ -5500,116 +4492,6 @@
       "answer3": "60",
       "ref": "article 9.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1626,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Avenant Mensuels B II – article 31",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1626,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Avenant Mensuels B II – article 31",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1626,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Avenant Mensuels B II – article 31",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1626,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Avenant Mensuels B II – article 31",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1626,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Avenant Mensuels B II – article 31",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1626,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Avenant Mensuels B II – article 31",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1626,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Avenant Mensuels B II – article 31",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1626,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Avenant Mensuels B II – article 31",
-      "refUrl": "pas dispo"
     },
     {
       "criteria": {
@@ -5876,130 +4758,6 @@
       "answer3": "60",
       "ref": "article 1.1.9",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1885,
-      "typeRupture": null,
-      "answer": "2 semaines",
-      "answer2": null,
-      "answer3": "14",
-      "ref": "article 42.1",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1885,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article 42.1",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1885,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article 42.1",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1885,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article 42.1",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1885,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article 42.1",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1885,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article 42.1",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1885,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article 42.1",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1885,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article 42.1",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 1885,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "article 42.1",
-      "refUrl": "pas dispo"
     },
     {
       "criteria": {
@@ -6389,130 +5147,6 @@
     },
     {
       "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2126,
-      "typeRupture": null,
-      "answer": "2 semaines",
-      "answer2": null,
-      "answer3": "14",
-      "ref": "Article VII-2 de l'avenant Mensuels\r\n",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2126,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article VII-2 de l'avenant Mensuels\r\n",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2126,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article VII-2 de l'avenant Mensuels\r\n",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2126,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article VII-2 de l'avenant Mensuels\r\n",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "42| 2 ans ou plus"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2126,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article VII-2 de l'avenant Mensuels\r\n",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2126,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article VII-2 de l'avenant Mensuels\r\n",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "42| 2 ans ou plus"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2126,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article VII-2 de l'avenant Mensuels\r\n",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2126,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article VII-2 de l'avenant Mensuels\r\n",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2126,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article VII-2 de l'avenant Mensuels\r\n",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
         "groupe": "20| A et B",
         "ancienneté": "40| 2 ans ou moins"
       },
@@ -6756,130 +5390,6 @@
     },
     {
       "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2266,
-      "typeRupture": null,
-      "answer": "2 semaines",
-      "answer2": null,
-      "answer3": "14",
-      "ref": "article A 32 de la convention collective de la métallurgie de la Mayenne",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "35| 6 mois à 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2266,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article A 32 de la convention collective de la métallurgie de la Mayenne",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2266,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article A 32 de la convention collective de la métallurgie de la Mayenne",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2266,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article A 32 de la convention collective de la métallurgie de la Mayenne",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2266,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article A 32 de la convention collective de la métallurgie de la Mayenne",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "40| 2 ans ou moins"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2266,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article A 32 de la convention collective de la métallurgie de la Mayenne",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2266,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article A 32 de la convention collective de la métallurgie de la Mayenne",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2266,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "article A 32 de la convention collective de la métallurgie de la Mayenne",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2266,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "article A 32 de la convention collective de la métallurgie de la Mayenne",
-      "refUrl": "pas dispo"
-    },
-    {
-      "criteria": {
         "ancienneté": "15| Moins de 6 mois",
         "catégorie professionnelle": "100| Salariés du particulier employeur"
       },
@@ -6931,10 +5441,16 @@
       "answer": "8 jours calendaires",
       "answer2": null,
       "answer3": "8",
-      "ref": "Art. L. 423-25 du Code de l'action sociale et des familles",
-      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798053",
-      "ref2": "Art. 120 de la convention collective",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "refs": [
+        {
+          "ref": "Art. L. 423-25 du Code de l'action sociale et des familles",
+          "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798053"
+        },
+        {
+          "ref": "Art. 120 de la convention collective",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318"
+        }
+      ],
       "note": "Si la lettre de licenciement a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective \"Salariés du particulier employeur (IDCC 2111)\" pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable depuis le 01/01/2022.",
       "disableLegal": true
     },
@@ -6949,10 +5465,16 @@
       "answer": "15 jours calendaires",
       "answer2": null,
       "answer3": "15",
-      "ref": "Art. L. 423-25 du Code de l'action sociale et des familles",
-      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798053",
-      "ref2": "Art. 120 de la convention collective",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "refs": [
+        {
+          "ref": "Art. L. 423-25 du Code de l'action sociale et des familles",
+          "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798053"
+        },
+        {
+          "ref": "Art. 120 de la convention collective",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318"
+        }
+      ],
       "note": "Si la lettre de licenciement a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective \"Salariés du particulier employeur (IDCC 2111)\" pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable depuis le 01/01/2022.",
       "disableLegal": true
     },
@@ -6967,10 +5489,16 @@
       "answer": "1 mois",
       "answer2": null,
       "answer3": "30",
-      "ref": "Art. L. 423-25 du Code de l'action sociale et des familles",
-      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798053",
-      "ref2": "Art. 120 de la convention collective",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "refs": [
+        {
+          "ref": "Art. L. 423-25 du Code de l'action sociale et des familles",
+          "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798053"
+        },
+        {
+          "ref": "Art. 120 de la convention collective",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318"
+        }
+      ],
       "note": "Si la lettre de licenciement a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective \"Salariés du particulier employeur (IDCC 2111)\" pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable depuis le 01/01/2022.",
       "disableLegal": true
     },
@@ -7582,7 +6110,7 @@
       "answer3": "30",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7597,7 +6125,7 @@
       "answer3": "30",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7612,7 +6140,7 @@
       "answer3": "30",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7628,7 +6156,7 @@
       "answer3": "60",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7642,11 +6170,17 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7661,7 +6195,7 @@
       "answer3": "60",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7676,7 +6210,7 @@
       "answer3": "60",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7692,7 +6226,7 @@
       "answer3": "90",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7707,11 +6241,17 @@
       "answer": "3 mois",
       "answer2": null,
       "answer3": "90",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7726,11 +6266,17 @@
       "answer": "4 mois",
       "answer2": null,
       "answer3": "120",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7745,11 +6291,17 @@
       "answer": "6 mois",
       "answer2": null,
       "answer3": "180",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7764,11 +6316,17 @@
       "answer": "3 mois",
       "answer2": null,
       "answer3": "90",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7783,11 +6341,17 @@
       "answer": "6 mois",
       "answer2": null,
       "answer3": "180",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7802,11 +6366,17 @@
       "answer": "6 mois",
       "answer2": null,
       "answer3": "180",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7821,11 +6391,17 @@
       "answer": "3 mois",
       "answer2": null,
       "answer3": "90",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7840,11 +6416,17 @@
       "answer": "4 mois",
       "answer2": null,
       "answer3": "120",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7859,11 +6441,17 @@
       "answer": "6 mois",
       "answer2": null,
       "answer3": "180",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7878,11 +6466,17 @@
       "answer": "3 mois",
       "answer2": null,
       "answer3": "90",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7897,11 +6491,17 @@
       "answer": "6 mois",
       "answer2": null,
       "answer3": "180",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7916,11 +6516,17 @@
       "answer": "6 mois",
       "answer2": null,
       "answer3": "180",
-      "ref": "Article 75.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "ref2": "Article 68",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "refs": [
+        {
+          "ref": "Article 75.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        }
+      ],
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7936,7 +6542,7 @@
       "answer3": "90",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7952,7 +6558,7 @@
       "answer3": "120",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7968,7 +6574,7 @@
       "answer3": "180",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -7984,7 +6590,7 @@
       "answer3": "90",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -8000,7 +6606,7 @@
       "answer3": "180",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     },
     {
       "criteria": {
@@ -8016,8 +6622,7 @@
       "answer3": "180",
       "ref": "Article 75.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530",
-      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont été regroupées pour former la convention collective nationale de la métallurgie (IDCC 3248) applicable depuis le 01/01/2024."
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     }
   ]
 }
-

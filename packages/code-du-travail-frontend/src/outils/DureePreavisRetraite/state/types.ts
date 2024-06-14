@@ -4,7 +4,7 @@ import { PreavisRetraiteFormState } from "../form";
 import { FormApi } from "final-form";
 import { Step } from "../../Simulator";
 import { StepName } from "../steps";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../types";
 
 export type PreavisRetraiteState = {
   title: string;

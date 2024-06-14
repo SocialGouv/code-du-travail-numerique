@@ -3,12 +3,13 @@ jobs:
     build-app:
       with:
         buildArgs:
-          NEXT_PUBLIC_SENTRY_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+          NEXT_PUBLIC_SENTRY_DSN: https://81b6e3d265cf736588f894040d265705@sentry.fabrique.social.gouv.fr/107
           NEXT_PUBLIC_SENTRY_ENV: production
           NEXT_PUBLIC_SENTRY_RELEASE: "{{.Values.global.imageTag}}"
           NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: "true"
-          NEXT_PUBLIC_AZURE_BASE_URL: https://cdtnadminprod.blob.core.windows.net
-          NEXT_PUBLIC_AZURE_CONTAINER: cdtn
+          NEXT_PUBLIC_BUCKET_DEFAULT_FOLDER: "default"
+          NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER: "sitemap"
+          NEXT_PUBLIC_BUCKET_URL: https://cdtn-prod-public.s3.gra.io.cloud.ovh.net/published
           NEXT_PUBLIC_PIWIK_SITE_ID: "4"
           NEXT_PUBLIC_PIWIK_URL: https://matomo.fabrique.social.gouv.fr
           NEXT_PUBLIC_COMMIT: "{{.Values.global.sha}}"
@@ -39,8 +40,13 @@ app:
     enabled: true
   resources:
     limits:
-      cpu: 500m
-      memory: 2048Mi
-    requests:
-      cpu: 300m
+      cpu: 700m
       memory: 1536Mi
+    requests:
+      cpu: 600m
+      memory: 1280Mi
+    annotations:
+      oblik.socialgouv.io/min-request-cpu: 600m
+      oblik.socialgouv.io/min-request-memory: 1280Mi
+      oblik.socialgouv.io/min-limit-cpu: 700m
+      oblik.socialgouv.io/min-limit-memory: 1536Mi

@@ -18,7 +18,6 @@ exports[`IDCC return idcc for number 27 1`] = `
         "title": "Convention collective du travail du personnel des banques de la Guyane du 18 décembre 2007",
         "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023973390",
       },
-      "_type": "_doc",
     },
   ],
   "max_score": 7.067604,
@@ -34,6 +33,9 @@ exports[`IDCC return idcc results for boulangerie 1`] = `
   "hits": [
     {
       "_id": "19",
+      "_ignored": [
+        "answers.answer.keyword",
+      ],
       "_index": "cdtn_test-v2_documents",
       "_score": 14.4136915,
       "_source": {
@@ -47,7 +49,6 @@ exports[`IDCC return idcc results for boulangerie 1`] = `
         "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
         "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
       },
-      "_type": "_doc",
     },
     {
       "_id": "18",
@@ -64,7 +65,6 @@ exports[`IDCC return idcc results for boulangerie 1`] = `
         "title": "Convention collective nationale des activités industrielles de boulangerie et pâtisserie du 13 juillet 1993. Mise à jour par avenant n°10 du 11 octobre 2011.",
         "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635691",
       },
-      "_type": "_doc",
     },
   ],
   "max_score": 14.4136915,
@@ -80,6 +80,9 @@ exports[`IDCC return idcc results for pati 1`] = `
   "hits": [
     {
       "_id": "19",
+      "_ignored": [
+        "answers.answer.keyword",
+      ],
       "_index": "cdtn_test-v2_documents",
       "_score": 14.146065,
       "_source": {
@@ -93,7 +96,6 @@ exports[`IDCC return idcc results for pati 1`] = `
         "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
         "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
       },
-      "_type": "_doc",
     },
     {
       "_id": "18",
@@ -110,7 +112,6 @@ exports[`IDCC return idcc results for pati 1`] = `
         "title": "Convention collective nationale des activités industrielles de boulangerie et pâtisserie du 13 juillet 1993. Mise à jour par avenant n°10 du 11 octobre 2011.",
         "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635691",
       },
-      "_type": "_doc",
     },
   ],
   "max_score": 14.146065,
@@ -126,6 +127,9 @@ exports[`IDCC return idcc results in correct order for banque 1`] = `
   "hits": [
     {
       "_id": "21",
+      "_ignored": [
+        "answers.answer.keyword",
+      ],
       "_index": "cdtn_test-v2_documents",
       "_score": 15.278859,
       "_source": {
@@ -139,7 +143,6 @@ exports[`IDCC return idcc results in correct order for banque 1`] = `
         "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.",
         "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780",
       },
-      "_type": "_doc",
     },
     {
       "_id": "20",
@@ -156,7 +159,6 @@ exports[`IDCC return idcc results in correct order for banque 1`] = `
         "title": "Convention collective du travail du personnel des banques de la Guyane du 18 décembre 2007",
         "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023973390",
       },
-      "_type": "_doc",
     },
   ],
   "max_score": 15.278859,

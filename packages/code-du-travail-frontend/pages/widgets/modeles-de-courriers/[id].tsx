@@ -16,7 +16,7 @@ function Widgets(props: LetterModelProps): JSX.Element {
     <>
       <Metas
         title={`Modèles de courrier - ${props.title}`}
-        description={props.description}
+        description={props.intro}
         overrideCanonical={SITE_URL + "/modeles-de-courriers"}
       />
       <StyledHeader>
@@ -26,10 +26,10 @@ function Widgets(props: LetterModelProps): JSX.Element {
         <LogoLink></LogoLink>
       </StyledHeader>
       <IntroWrapper variant="dark">
-        {isHTML(props.description) ? (
-          <Html>{props.description}</Html>
+        {isHTML(props.intro) ? (
+          <Html>{props.intro}</Html>
         ) : (
-          <Paragraph noMargin>{props.description}</Paragraph>
+          <Paragraph noMargin>{props.intro}</Paragraph>
         )}
       </IntroWrapper>
       <LetterModel {...props} />
@@ -37,8 +37,7 @@ function Widgets(props: LetterModelProps): JSX.Element {
   );
 }
 
-const fetchCourrier = ({ id }) =>
-  fetch(`${SITE_URL}/api/items?source=modeles_de_courriers&id=${id}`);
+const fetchCourrier = ({ id }) => fetch(`${SITE_URL}/api/modeles/${id}`);
 
 export const getServerSideProps = async ({ query }) => {
   const response = await fetchCourrier(query);
@@ -47,10 +46,7 @@ export const getServerSideProps = async ({ query }) => {
   }
 
   const data = await response.json();
-  if (!data.length) {
-    return handleError({ status: 404 });
-  }
-  return { props: { relatedItems: [], ...data[0]._source } };
+  return { props: { relatedItems: [], ...data[0] } };
 };
 
 export default Widgets;

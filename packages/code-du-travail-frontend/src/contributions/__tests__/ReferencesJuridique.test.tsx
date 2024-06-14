@@ -13,27 +13,29 @@ describe("ReferencesJuridiques", () => {
   it(`doit mettre les références sans lien à la fin`, () => {
     const { asFragment } = render(
       <ReferencesJuridiques
-        references={[
-          {
-            url: null,
-            title: "Titre 1",
-          },
-          {
-            title: "Titre 2",
-            url: "http://lien2",
-          },
-          {
-            url: undefined,
-            title: "Titre 3",
-          },
-          {
-            title: "Titre 4",
-          },
-          {
-            title: "Titre 5",
-            url: "http://lien4",
-          },
-        ]}
+        references={
+          [
+            {
+              url: null,
+              title: "Titre 1",
+            },
+            {
+              title: "Titre 2",
+              url: "http://lien2",
+            },
+            {
+              url: undefined,
+              title: "Titre 3",
+            },
+            {
+              title: "Titre 4",
+            },
+            {
+              title: "Titre 5",
+              url: "http://lien4",
+            },
+          ] as any
+        }
       ></ReferencesJuridiques>
     );
 
@@ -66,8 +68,6 @@ describe("ReferencesJuridiques", () => {
             </svg>
             <span
               class="sc-fBWQRz lqUBb"
-              font-size="hsmall"
-              font-weight="600"
             >
               Références
             </span>
@@ -76,12 +76,12 @@ describe("ReferencesJuridiques", () => {
             class="sc-fjvvzt gtrYRc"
           >
             <ul
-              class="sc-cfxfcM sc-lnPyaJ kMmTaI iUscuO"
+              class="sc-cfxfcM sc-ktPPKK kMmTaI oLIMV"
             >
               <li>
                 <a
                   aria-label="Titre 2 (Nouvelle fenêtre)"
-                  class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk no-after"
+                  class="sc-bmzYkS eyKmWS sc-fMMURN hDRMbe no-after"
                   href="http://lien2"
                   target="_blank"
                 >
@@ -107,7 +107,7 @@ describe("ReferencesJuridiques", () => {
               <li>
                 <a
                   aria-label="Titre 5 (Nouvelle fenêtre)"
-                  class="sc-bmzYkS eyKmWS sc-iXzfSG dyqFrk no-after"
+                  class="sc-bmzYkS eyKmWS sc-fMMURN hDRMbe no-after"
                   href="http://lien4"
                   target="_blank"
                 >

@@ -1,4 +1,4 @@
-import { Tool } from "@socialgouv/cdtn-utils";
+import { Tool } from "@socialgouv/cdtn-types";
 import { SITE_URL } from "../config";
 
 export const fetchTool = async (slug: string): Promise<Tool | undefined> => {

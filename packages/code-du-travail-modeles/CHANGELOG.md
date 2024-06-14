@@ -3,6 +3,177 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.142.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.141.0...v4.142.0) (2024-06-13)
+
+### Bug Fixes
+
+- **rupture-co:** correction CC 3248 ([#5883](https://github.com/SocialGouv/code-du-travail-numerique/issues/5883)) ([9ac1df6](https://github.com/SocialGouv/code-du-travail-numerique/commit/9ac1df672c8f65e9a757da74cd203a58fafaa3fa))
+
+# [4.141.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.140.0...v4.141.0) (2024-06-05)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.140.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.139.0...v4.140.0) (2024-06-04)
+
+### Bug Fixes
+
+- **indemnité de licenciement:** ne pas crasher si le salaire conventionnel est à 0 ([#5937](https://github.com/SocialGouv/code-du-travail-numerique/issues/5937)) ([e020a07](https://github.com/SocialGouv/code-du-travail-numerique/commit/e020a0782a025c54eadd0b13e19c06ede7da7e85))
+- **indemnité de rupture co:** nettoyage de la question sur l'inaptitude dans la rupture co ([#5938](https://github.com/SocialGouv/code-du-travail-numerique/issues/5938)) ([4f3b434](https://github.com/SocialGouv/code-du-travail-numerique/commit/4f3b434e81efd5e23d765a5699419c824c6db862))
+
+### Features
+
+- **rupture co:** affichage des notifications pour la 2120 ([#5927](https://github.com/SocialGouv/code-du-travail-numerique/issues/5927)) ([6a89823](https://github.com/SocialGouv/code-du-travail-numerique/commit/6a89823f9e0f5d824a97403211b46d81b1c196a1))
+
+# [4.139.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.138.0...v4.139.0) (2024-05-31)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.138.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.137.1...v4.138.0) (2024-05-28)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.137.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.137.0...v4.137.1) (2024-05-23)
+
+### Bug Fixes
+
+- **indemnité de licenciement:** calcul du salaire de référence conventionnel correct ([#5885](https://github.com/SocialGouv/code-du-travail-numerique/issues/5885)) ([a5f0655](https://github.com/SocialGouv/code-du-travail-numerique/commit/a5f0655c18177f5179e47c5c7775a1d45c923949))
+
+# [4.137.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.1...v4.137.0) (2024-05-14)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.136.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.0...v4.136.1) (2024-05-07)
+
+### Bug Fixes
+
+- **rupture-co:** changement de wording au niveau du résultat ([#5841](https://github.com/SocialGouv/code-du-travail-numerique/issues/5841)) ([059572e](https://github.com/SocialGouv/code-du-travail-numerique/commit/059572e62c1b90c0f5da15545bbc8ee3f69564e7))
+- **rupture-co:** résultat au niveau de la 176 avec une règle qui avait un problème ([#5840](https://github.com/SocialGouv/code-du-travail-numerique/issues/5840)) ([0dd227d](https://github.com/SocialGouv/code-du-travail-numerique/commit/0dd227db2010982594c7f414a34d8145431abcac))
+
+# [4.136.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.135.0...v4.136.0) (2024-05-06)
+
+### Features
+
+- clean old meta from preavis licenciement + precarite ([#5824](https://github.com/SocialGouv/code-du-travail-numerique/issues/5824)) ([488c961](https://github.com/SocialGouv/code-du-travail-numerique/commit/488c96179ae2fed21db9e5fef97da1b35a7b2ee1))
+
+# [4.135.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.2...v4.135.0) (2024-05-03)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** ajout de log + tests sur les années ([#5798](https://github.com/SocialGouv/code-du-travail-numerique/issues/5798)) ([56c357e](https://github.com/SocialGouv/code-du-travail-numerique/commit/56c357e305dab454d9791b44709f5694f29cd277))
+- **indemnite-licenciement:** correction de la cc 2596 + 1404 ([#5832](https://github.com/SocialGouv/code-du-travail-numerique/issues/5832)) ([9b3e0c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/9b3e0c8c75315d2dca6aed1882ed3f8966746868))
+- **rupture-co:** modification de wording pour la formule de la CC 292 ([#5839](https://github.com/SocialGouv/code-du-travail-numerique/issues/5839)) ([88ca997](https://github.com/SocialGouv/code-du-travail-numerique/commit/88ca997644f64e886bc66ae34a54e729ee7594a3))
+
+### Features
+
+- **indemnite-licenciement:** ajout de l'outil de rupture conventionnelle ([#5703](https://github.com/SocialGouv/code-du-travail-numerique/issues/5703)) ([27962be](https://github.com/SocialGouv/code-du-travail-numerique/commit/27962be5c0267ce7c0eda5959bab2ef755f4f80b)), closes [#5717](https://github.com/SocialGouv/code-du-travail-numerique/issues/5717)
+
+## [4.134.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.1...v4.134.2) (2024-04-16)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.134.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.0...v4.134.1) (2024-04-16)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.134.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.133.0...v4.134.0) (2024-04-16)
+
+### Features
+
+- desinstaller ancienne contrib ([#5712](https://github.com/SocialGouv/code-du-travail-numerique/issues/5712)) ([a9504ba](https://github.com/SocialGouv/code-du-travail-numerique/commit/a9504ba0ceda5ac44d373704ae302b7f3306014d)), closes [#5752](https://github.com/SocialGouv/code-du-travail-numerique/issues/5752)
+
+# [4.133.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.132.0...v4.133.0) (2024-04-09)
+
+### Bug Fixes
+
+- bug lorsque l'ancienneté arrive à 0 ([#5714](https://github.com/SocialGouv/code-du-travail-numerique/issues/5714)) ([2e70765](https://github.com/SocialGouv/code-du-travail-numerique/commit/2e70765dcc1633230021858f51787e20e089587c))
+- utilisation extraInfos pour les salaires ([#5765](https://github.com/SocialGouv/code-du-travail-numerique/issues/5765)) ([3a4f2eb](https://github.com/SocialGouv/code-du-travail-numerique/commit/3a4f2eb027f2c1fb0a4df32d60f6193222f24c53))
+
+### Features
+
+- 1480 non géré indemnite licenciement ([#5733](https://github.com/SocialGouv/code-du-travail-numerique/issues/5733)) ([ad4ab9f](https://github.com/SocialGouv/code-du-travail-numerique/commit/ad4ab9fe15fd62593687a8bd001e6099a88851cf))
+
+# [4.132.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.1...v4.132.0) (2024-03-26)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.131.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.0...v4.131.1) (2024-03-25)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.131.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.130.0...v4.131.0) (2024-03-25)
+
+### Bug Fixes
+
+- bug sur le calculate salary 1483 ([#5711](https://github.com/SocialGouv/code-du-travail-numerique/issues/5711)) ([0b661dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/0b661dda4269bb5f4b4b18f954e4053a3fd3a8d1))
+
+# [4.130.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.3...v4.130.0) (2024-03-19)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.129.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.2...v4.129.3) (2024-03-14)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.129.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.1...v4.129.2) (2024-03-14)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.129.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.0...v4.129.1) (2024-03-13)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.129.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.128.0...v4.129.0) (2024-03-13)
+
+### Features
+
+- **indemnite-licenciement:** use calculate from information step ([#5675](https://github.com/SocialGouv/code-du-travail-numerique/issues/5675)) ([8534bfd](https://github.com/SocialGouv/code-du-travail-numerique/commit/8534bfd6d1f4afaa7f0166cc5c931c2489561136))
+
+# [4.128.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.127.0...v4.128.0) (2024-03-11)
+
+### Bug Fixes
+
+- bug calculate si pas de salaires ([#5683](https://github.com/SocialGouv/code-du-travail-numerique/issues/5683)) ([6f2acbc](https://github.com/SocialGouv/code-du-travail-numerique/commit/6f2acbca31c0dfd191ec529c6202d430940cbaf3))
+- **simulateurs:** modification pour la CC 176 ([#5677](https://github.com/SocialGouv/code-du-travail-numerique/issues/5677)) ([b432392](https://github.com/SocialGouv/code-du-travail-numerique/commit/b4323924ca595c5676fd2776757e2219302da2ab))
+- **simulateurs:** retours sur la 176 ([160aca4](https://github.com/SocialGouv/code-du-travail-numerique/commit/160aca4878867908df57d52015141a8519533ca9))
+
+### Features
+
+- **rupture-co:** ajout de la partie légale dans le modèle ([#5650](https://github.com/SocialGouv/code-du-travail-numerique/issues/5650)) ([e650a56](https://github.com/SocialGouv/code-du-travail-numerique/commit/e650a5683d75cd78749bc1c4ad7b396cabde7799))
+
+# [4.127.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.126.0...v4.127.0) (2024-03-04)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.126.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.125.1...v4.126.0) (2024-03-04)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** correction de l'ancienneté calculée sur la 3248 ([#5654](https://github.com/SocialGouv/code-du-travail-numerique/issues/5654)) ([c9c27bc](https://github.com/SocialGouv/code-du-travail-numerique/commit/c9c27bc59b6b105f867f9e026870a8169fa08c33))
+- **indemnite-licenciement:** erreur calcul sur certaines CC ([#5664](https://github.com/SocialGouv/code-du-travail-numerique/issues/5664)) ([e4b1684](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4b168480a1bcb678a87e0542db8d0891ba5cfaf))
+- **indemnite-licenciement:** erreur lors du calcul du légal suite refacto ([#5660](https://github.com/SocialGouv/code-du-travail-numerique/issues/5660)) ([a0105e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/a0105e25a094824c38447aa9c5a03a36a7ced190))
+
+## [4.125.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.125.0...v4.125.1) (2024-02-27)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.125.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.124.0...v4.125.0) (2024-02-27)
+
+### Bug Fixes
+
+- **3248:** application des retours métiers ([#5617](https://github.com/SocialGouv/code-du-travail-numerique/issues/5617)) ([5e75576](https://github.com/SocialGouv/code-du-travail-numerique/commit/5e75576227836cf9da324957190b5e61aed5dab9))
+
+# [4.124.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.2...v4.124.0) (2024-02-23)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.123.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.1...v4.123.2) (2024-02-22)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.123.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.0...v4.123.1) (2024-02-22)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
 # [4.123.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.122.0...v4.123.0) (2024-02-19)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

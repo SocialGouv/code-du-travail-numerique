@@ -26,7 +26,6 @@ describe("<PubliQuestion />", () => {
             titre: "Catégorie professionnelle",
           }}
           value="v"
-          trackQuestionEvent={MatomoActionEvent.INDEMNITE_LICENCIEMENT}
         />
       )
     ).toBeTruthy();
@@ -52,7 +51,6 @@ describe("<PubliQuestion />", () => {
           titre: "Catégorie professionnelle",
         }}
         value="v"
-        trackQuestionEvent={MatomoActionEvent.INDEMNITE_LICENCIEMENT}
       />
     );
     expect(getByRole("combobox")).toBeTruthy();
@@ -78,7 +76,6 @@ describe("<PubliQuestion />", () => {
           titre: "Catégorie professionnelle",
         }}
         value="v"
-        trackQuestionEvent={MatomoActionEvent.INDEMNITE_LICENCIEMENT}
       />
     );
     expect(getAllByRole("radio")).toBeTruthy();

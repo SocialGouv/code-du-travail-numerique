@@ -29,7 +29,8 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
       ({ seniority, salary, category }) => {
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC3239'",
-          "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
+            category,
           "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
@@ -61,7 +62,8 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
         ({ seniority, salary, category }) => {
           engine.setSituation({
             "contrat salarié . convention collective": "'IDCC3239'",
-            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
@@ -97,7 +99,8 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
           ({ seniority, salary }) => {
             engine.setSituation({
               "contrat salarié . convention collective": "'IDCC3239'",
-              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${CatPro3239.assistantMaternel}'`,
+              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
+                CatPro3239.assistantMaternel,
               "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Oui'`,
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
                 seniority,
@@ -137,7 +140,8 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
           ({ seniority, salary }) => {
             engine.setSituation({
               "contrat salarié . convention collective": "'IDCC3239'",
-              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${CatPro3239.assistantMaternel}'`,
+              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
+                CatPro3239.assistantMaternel,
               "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Oui'`,
 
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":

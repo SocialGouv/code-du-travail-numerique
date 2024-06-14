@@ -21,7 +21,7 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
       values.origin?.isRetirementMandatory === "oui" ? "mise" : "départ";
 
     const warningType = computeWarningType({
-      resultValueInDays: result.result.valueInDays,
+      resultValueInDays: result.result?.valueInDays,
       ccNumber: values.ccn?.selected?.num,
       type,
     });
@@ -32,15 +32,15 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
         ...state.steps,
         result: {
           notice: {
-            result: result.result,
+            result: result.result!,
             agreement: {
-              result: agreementResult,
+              result: agreementResult!,
               maximum:
-                agreementMaximumResult.valueInDays > 0
-                  ? agreementMaximumResult
+                (agreementMaximumResult?.valueInDays ?? 0) > 0
+                  ? agreementMaximumResult!
                   : null,
             },
-            legal: legalResult,
+            legal: legalResult!,
             type,
             notifications: publicodes.getNotifications(),
           },
@@ -52,15 +52,15 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
           },
           warning: {
             type: warningType,
-            hasNotice: result.result.valueInDays > 0,
+            hasNotice: (result.result?.valueInDays ?? 0) > 0,
           },
         },
       },
       errorPublicodes: false,
     };
   } catch (e) {
-    Sentry.captureException(e);
     console.error(e);
+    Sentry.captureException(e);
     return {
       ...state,
       errorPublicodes: true,

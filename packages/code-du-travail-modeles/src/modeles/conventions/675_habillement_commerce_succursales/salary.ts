@@ -2,7 +2,7 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
@@ -12,8 +12,25 @@ export type CC675ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary675
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0675>
+  implements IReferenceSalary<SupportedCc.IDCC0675>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCc.IDCC0675> {
+    const catPro =
+      args[
+        "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . catégorie professionnelle"
+      ];
+    const isAgentMaitriseOrCadre =
+      catPro === "Agents de maîtrise" || catPro === "Cadres";
+    return {
+      isAgentMaitriseOrCadre,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
   /**
    * si Agents de maîtrise et techniciens ou Cadres
    * - S/12
@@ -29,7 +46,7 @@ export class ReferenceSalary675
   computeReferenceSalary({
     salaires = [],
     isAgentMaitriseOrCadre = false,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0675>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC0675>): number {
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
     const salaireMoyen12DerniersMois = sum(salaryValues) / 12;
@@ -49,7 +66,7 @@ export class ReferenceSalary675
   computeExtraInfo({
     salaires = [],
     isAgentMaitriseOrCadre = false,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0675>): Record<
+  }: ReferenceSalaryProps<SupportedCc.IDCC0675>): Record<
     string,
     number | string
   > {

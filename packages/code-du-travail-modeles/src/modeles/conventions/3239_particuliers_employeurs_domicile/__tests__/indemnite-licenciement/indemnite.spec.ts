@@ -15,6 +15,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
       ${CatPro3239.salarieParticulierEmployeur} | ${8 / 12}      | ${2}      | ${2000} | ${1000}
       ${CatPro3239.salarieParticulierEmployeur} | ${8 / 12}      | ${10}     | ${2000} | ${5000}
       ${CatPro3239.salarieParticulierEmployeur} | ${8 / 12}      | ${12}     | ${2000} | ${6333.33}
+      ${CatPro3239.salarieParticulierEmployeur} | ${8 / 12}      | ${12}     | ${2100} | ${6650}
       ${CatPro3239.assistantMaternel}           | ${7 / 12}      | ${1}      | ${2000} | ${0}
       ${CatPro3239.assistantMaternel}           | ${8 / 12}      | ${8 / 12} | ${2000} | ${0}
       ${CatPro3239.assistantMaternel}           | ${9 / 12}      | ${9 / 12} | ${2000} | ${25}
@@ -33,7 +34,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC3239'",
-            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
+              category,
             "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
             "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires":
               salary,

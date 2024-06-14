@@ -91,7 +91,11 @@ export async function getStaticProps() {
     }
     const tools = result
       .map(({ _id, _source }) => ({ ..._source, _id }))
-      .filter((tool) => tool.displayTool);
+      .filter((tool) =>
+        process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+          ? tool.displayTool
+          : true
+      );
 
     return {
       props: {

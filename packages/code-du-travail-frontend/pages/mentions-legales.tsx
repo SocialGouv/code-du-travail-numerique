@@ -43,16 +43,14 @@ const LegalPage = () => {
             <Title shift={spacings.larger}>Directeur de la publication</Title>
             <p>Pierre RAMAIN, Directeur Général du Travail</p>
             <Title shift={spacings.larger}>Hébergement</Title>
-            <p>
-              Ce site est hébergé par Microsoft Azure France (région France
-              centre)&nbsp;:
-            </p>
+            <p>Ce site est hébergé par OVH SAS&nbsp;:</p>
+
             <Address>
-              Microsoft France
+              2 rue Kellermann
               <br />
-              37 Quai du Président Roosevelt
+              56100 Roubaix
               <br />
-              92130 ISSY-LES-MOULINEAUX
+              France
             </Address>
             <StyledWrapper variant="dark">
               <p>

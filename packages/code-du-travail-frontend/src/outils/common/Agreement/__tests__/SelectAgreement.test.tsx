@@ -2,10 +2,11 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import { EmbeddedInjectedForm } from "../../../../../test/TestForm";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../../../outils/types";
 import { FormContent } from "../../type/WizardType";
 import { SelectAgreement } from "../index";
 import type { Props } from "../SelectAgreement";
+import { Simulator } from "../../NoticeExample";
 
 const selectedAgreement: Agreement = {
   id: "KALICONT000044594539",
@@ -25,6 +26,7 @@ describe("SelectAgreement", () => {
           props={{
             supportedAgreements: [],
             title: "Outil",
+            simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
           }}
         />
       );
@@ -56,6 +58,7 @@ describe("SelectAgreement", () => {
             title: "Outil",
             required: true,
             note: "This is my note",
+            simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
           }}
         />
       );
@@ -87,6 +90,7 @@ describe("SelectAgreement", () => {
             defaultSelectedAgreement: selectedAgreement,
             supportedAgreements: [],
             title: "Outil",
+            simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
           }}
         />
       );

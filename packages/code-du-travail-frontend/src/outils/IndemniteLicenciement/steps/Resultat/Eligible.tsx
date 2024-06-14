@@ -1,30 +1,42 @@
-import { getSupportedAgreement } from "@socialgouv/modeles-social";
+import {
+  Notification,
+  getSupportedAgreement,
+} from "@socialgouv/modeles-social";
 import React, { useContext } from "react";
-import { IndemniteLicenciementStepName } from "../..";
 import PubliReferences from "../../../common/PubliReferences";
 import Disclaimer from "../../../common/Disclaimer";
 import ShowDetails from "../../../common/ShowDetails";
-import { AgreementsInjector } from "../../agreements";
-import {
-  IndemniteLicenciementContext,
-  useIndemniteLicenciementStore,
-} from "../../store";
-import { getResultMessage } from "../../agreements/ui-customizations";
-import { getForMoreInfoMessage } from "../../agreements/ui-customizations/messages";
 import {
   DecryptResult,
   FilledElements,
-  ForMoreInfo,
   FormulaInterpreter,
   Result,
-} from "./components";
+} from "../../../CommonIndemniteDepart/steps/Resultat/components";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
+import {
+  IndemniteDepartContext,
+  useIndemniteDepartStore,
+} from "../../../CommonIndemniteDepart/store";
+// Do not optimize the following import
+import { IndemniteDepartStepName } from "../../../CommonIndemniteDepart";
+import { IndemniteDepartType } from "../../../types";
+import Link from "next/link";
+import { AgreementsInjector } from "../../../CommonIndemniteDepart/agreements";
+import { Paragraph } from "@socialgouv/cdtn-ui";
+import {
+  getForMoreInfoMessage,
+  getResultMessage,
+} from "../../agreements/ui-customizations";
+import { StyledLink } from "../../../CommonIndemniteDepart/steps/Resultat/components/Result";
 
 export default function Eligible() {
-  const store = useContext(IndemniteLicenciementContext);
+  const store = useContext(IndemniteDepartContext);
   const {
+    result,
     publicodesLegalResult,
     publicodesAgreementResult,
+    agreementExplanation,
+    resultExplanation,
     typeContratTravail,
     licenciementInaptitude,
     licenciementFauteGrave,
@@ -35,12 +47,11 @@ export default function Eligible() {
     dateNotification,
     absencePeriods,
     salaryPeriods,
-    legalFormula,
+    formula,
     legalReferences,
     agreementReferences,
     hasTempsPartiel,
     isAgreementBetter,
-    agreementFormula,
     agreementInformations,
     salary,
     hasSameSalary,
@@ -55,7 +66,8 @@ export default function Eligible() {
     informationData,
     isAgreementSupported,
     isParentalNoticeHidden,
-  } = useIndemniteLicenciementStore(store, (state) => ({
+  } = useIndemniteDepartStore(store, (state) => ({
+    result: state.resultData.input.result,
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
     typeContratTravail: state.contratTravailData.input.typeContratTravail,
@@ -70,12 +82,11 @@ export default function Eligible() {
     dateNotification: state.ancienneteData.input.dateNotification,
     absencePeriods: state.ancienneteData.input.absencePeriods,
     salaryPeriods: state.salairesData.input.salaryPeriods,
-    legalFormula: state.resultData.input.legalFormula,
+    formula: state.resultData.input.formula,
     legalReferences: state.resultData.input.legalReferences,
     agreementReferences: state.resultData.input.agreementReferences,
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     isAgreementBetter: state.resultData.input.isAgreementBetter,
-    agreementFormula: state.resultData.input.agreementFormula,
     agreementInformations: state.resultData.input.agreementInformations,
     salary: state.salairesData.input.salary,
     hasSameSalary: state.salairesData.input.hasSameSalary,
@@ -95,32 +106,76 @@ export default function Eligible() {
     isAgreementSupported:
       state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
     isParentalNoticeHidden: state.resultData.input.isParentalNoticeHidden,
+    agreementExplanation: state.resultData.input.agreementExplanation,
+    resultExplanation: state.resultData.input.resultExplanation,
   }));
+
+  const defaultNotification = [
+    {
+      dottedName: "default notification 1",
+      description: (
+        <span>
+          Ce montant est exonéré d’impôt sur le revenu et de cotisations
+          sociales sous certaines conditions,{" "}
+          <StyledLink
+            href="/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi#lindemnite-de-licenciement-est-elle-imposable"
+            target="_blank"
+          >
+            en savoir plus
+          </StyledLink>
+        </span>
+      ),
+    } as Notification,
+  ];
 
   return (
     <>
       <Result
-        maxResult={
-          isAgreementBetter
-            ? publicodesAgreementResult?.value?.toString() ?? ""
-            : publicodesLegalResult.value?.toString() ?? ""
-        }
-        notifications={notifications}
+        maxResult={result?.value?.toString() ?? ""}
+        notifications={defaultNotification.concat(notifications ?? [])}
         resultMessage={getResultMessage(informationData)}
       />
       <ShowDetails autoFocus>
         <FilledElements
+          type={IndemniteDepartType.LICENCIEMENT}
+          contractTravail={[
+            {
+              text: "Type de contrat",
+              value: typeContratTravail!.toString().toUpperCase(),
+            },
+            {
+              text: "Licenciement dû à une faute grave (ou lourde)",
+              value: licenciementFauteGrave === "oui" ? "Oui" : "Non",
+            },
+            {
+              text: "Licenciement dû à une inaptitude d’origine professionnelle",
+              value: licenciementInaptitude === "oui" ? "Oui" : "Non",
+              detail:
+                !isAgreementBetter && licenciementInaptitude === "oui"
+                  ? "Le salarié ayant été licencié pour inaptitude suite à un accident du travail ou une maladie professionnelle reconnue, le montant de l'indemnité de licenciement légale est doublé"
+                  : undefined,
+            },
+            {
+              text: "Arrêt de travail au moment du licenciement",
+              value: arretTravail === "oui" ? "Oui" : "Non",
+            },
+          ].concat(
+            dateArretTravail
+              ? [
+                  {
+                    text: "Date de début de l'arrêt de travail",
+                    value: dateArretTravail,
+                  },
+                ]
+              : []
+          )}
+          isArretTravail={arretTravail === "oui"}
           showHasTempsPartiel={showHasTempsPartiel}
           absencesPeriods={absencePeriods}
           agreementName={agreement?.shortTitle}
-          typeContrat={typeContratTravail!.toString()}
-          isLicenciementFauteGrave={licenciementFauteGrave === "oui"}
-          isLicenciementInaptitude={licenciementInaptitude === "oui"}
-          isArretTravail={arretTravail === "oui"}
-          dateArretTravail={dateArretTravail}
           dateEntree={dateEntree!}
           dateSortie={dateSortie!}
-          dateNotification={dateNotification!}
+          dateNotification={dateNotification}
           salaryPeriods={salaryPeriods}
           hasTempsPartiel={hasTempsPartiel === "oui"}
           hasSameSalary={hasSameSalary === "oui"}
@@ -132,26 +187,30 @@ export default function Eligible() {
             isAgreementSupported && (
               <AgreementsInjector
                 idcc={getSupportedAgreement(agreement.num)}
-                step={IndemniteLicenciementStepName.Resultat}
+                step={IndemniteDepartStepName.Resultat}
+                type={IndemniteDepartType.LICENCIEMENT}
               />
             )
           }
           isStepSalaryHidden={isStepSalaryHidden}
           disableParentalNotice={isParentalNoticeHidden}
         />
-        <FormulaInterpreter
-          formula={
-            isAgreementBetter && agreementFormula
-              ? agreementFormula
-              : legalFormula
-          }
-        />
+        <FormulaInterpreter formula={formula} />
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
-            hasSelectedAgreement={route !== "not-selected"}
-            isAgreementSupported={isAgreementSupported}
-            legalResult={publicodesLegalResult.value?.toString() ?? ""}
-            agreementResult={publicodesAgreementResult?.value?.toString()}
+            legalResult={
+              publicodesLegalResult.value
+                ? publicodesLegalResult.value.toString()
+                : "0"
+            }
+            agreementResult={
+              publicodesAgreementResult && publicodesAgreementResult.value
+                ? publicodesAgreementResult.value.toString()
+                : undefined
+            }
+            label="licenciement"
+            resultExplanation={resultExplanation}
+            agreementExplanation={agreementExplanation}
           />
         )}
         <PubliReferences
@@ -168,9 +227,21 @@ export default function Eligible() {
           <p>{infoWarning.message}</p>
         </Disclaimer>
       )}
-      <ForMoreInfo
-        message={getForMoreInfoMessage(isAgreementBetter, agreement?.num)}
-      />
+      <p>
+        Pour en savoir plus sur l’indemnité de licenciement et son mode de
+        calcul, consultez{" "}
+        <Link
+          href={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}
+          passHref
+          target={"_blank"}
+        >
+          cet article
+        </Link>
+        .
+      </p>
+      <Paragraph italic fontSize="small">
+        {getForMoreInfoMessage(isAgreementBetter, agreement?.num)}
+      </Paragraph>
     </>
   );
 }

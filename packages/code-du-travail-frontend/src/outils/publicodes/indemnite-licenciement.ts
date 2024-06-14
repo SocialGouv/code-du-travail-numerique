@@ -1,20 +1,19 @@
-import { formatNumberAsString } from "./common";
-import { formatIdcc, SeniorityResult } from "@socialgouv/modeles-social";
+import { formatIdcc, SalaryPeriods } from "@socialgouv/modeles-social";
 
-export const mapToPublicodesSituationForIndemniteLicenciementLegal = (
-  seniority: number,
-  requiredSeniority: number,
-  salaireRef: number,
+export const mapToPublicodesSituationForCalculation = (
+  startDate: string,
+  notificationDate: string,
+  endDate: string,
+  salaryPeriods: SalaryPeriods[],
   inaptitude: boolean,
   longTermDisability: boolean
 ): Record<string, string> => {
   return {
-    "contrat salarié . indemnité de licenciement . salaire de référence":
-      formatNumberAsString(salaireRef),
-    "contrat salarié . indemnité de licenciement . ancienneté en année":
-      formatNumberAsString(seniority),
-    "contrat salarié . indemnité de licenciement . ancienneté requise en année":
-      formatNumberAsString(requiredSeniority),
+    salaryPeriods: JSON.stringify(salaryPeriods),
+    "contrat salarié . indemnité de licenciement . date d'entrée": startDate,
+    "contrat salarié . indemnité de licenciement . date de notification":
+      notificationDate,
+    "contrat salarié . indemnité de licenciement . date de sortie": endDate,
     "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
       inaptitude ? "oui" : "non",
     "contrat salarié . indemnité de licenciement . arrêt de travail":
@@ -42,37 +41,32 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
 
 export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues =
   (
-    ccn: number,
-    agreementSeniority: SeniorityResult,
-    agreementSalaireRef: number,
-    requiredSeniority: number,
+    ccn: number | undefined,
+    salaryPeriods: SalaryPeriods[],
     notificationDate: string,
-    entryDate: string,
+    startDate: string,
+    endDate: string,
     inaptitude: boolean,
     longTermDisability: boolean,
     agreementParameters?: Record<string, any>
   ): Record<string, string> => {
-    return mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+    return ccn ? mapToPublicodesSituationForIndemniteLicenciementConventionnel(
       ccn,
       inaptitude,
       longTermDisability,
       {
         ...agreementParameters,
-        ...(agreementSeniority?.extraInfos ?? {}),
         ...{
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            formatNumberAsString(agreementSeniority.value),
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            formatNumberAsString(agreementSalaireRef),
+          salaryPeriods: JSON.stringify(salaryPeriods),
           "contrat salarié . indemnité de licenciement . date de notification":
             notificationDate,
           "contrat salarié . indemnité de licenciement . date d'entrée":
-            entryDate,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
-            requiredSeniority,
+          startDate,
+          "contrat salarié . indemnité de licenciement . date de sortie":
+            endDate,
         },
       }
-    );
+    ) : mapToPublicodesSituationForCalculation(startDate, notificationDate, endDate, salaryPeriods, inaptitude, longTermDisability);
   };
 
 export const publicodesUnitTranslator = (value: string, unit?: string) => {

@@ -1,7 +1,4 @@
-import {
-  Agreement,
-  ElasticSearchContributionGeneric,
-} from "@socialgouv/cdtn-utils";
+import { ElasticSearchContributionGeneric } from "@socialgouv/cdtn-types";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { push as matopush } from "@socialgouv/matomo-next";
@@ -22,7 +19,6 @@ import { MatomoBaseEvent } from "../lib";
 import { getCc3239Informations } from "../outils";
 import { Enterprise } from "../conventions/Search/api/enterprises.service";
 import {
-  Alert,
   Badge,
   Button,
   icons,
@@ -31,6 +27,7 @@ import {
   theme,
   Title,
   Wrapper,
+  Alert as UiAlert,
 } from "@socialgouv/cdtn-ui";
 import { ReferencesJuridiques } from "./References";
 import { LinkedContent } from "./LinkedContent";
@@ -39,7 +36,11 @@ import { ContributionMessageBlock } from "./ContributionMessageBlock";
 import {
   AlertAgreementNotSupportedNoContent,
   AlertAgreementSupported,
+  AlertAgreementUnextended,
 } from "./AlertAgreementNotSupportedNoContent";
+import { Alert } from "../common/Alert";
+import { Agreement } from "../outils/types";
+import { SupportedTypes } from "@socialgouv/modeles-social";
 
 const { DirectionRight } = icons;
 
@@ -69,21 +70,29 @@ const ContributionGeneric = ({ contribution }: Props) => {
     setSelectedRoute("agreement");
   }
 
-  const supportedAgreements: AgreementSupportInfo[] =
-    contribution.ccSupported.map((c) => {
+  const ccUnextended =
+    (contribution.ccUnextended ?? []).map((cc) => parseInt(cc, 10)) ?? [];
+  const supportedAgreements: AgreementSupportInfo[] = contribution.ccSupported
+    .map((c) => {
       return {
         idcc: parseInt(c, 10),
-        fullySupported: true,
+        fullySupported: SupportedTypes.FULLY_SUPPORTED,
       };
-    });
+    })
+    .filter(({ idcc }) => !ccUnextended || !ccUnextended.includes(idcc));
+
   const isSupportedInList = (agreements, agreement) =>
     agreement && !!agreements.find((item) => item.idcc === agreement.num);
   const isSupported = (agreement) =>
     isSupportedInList(supportedAgreements, agreement);
+  const isUnextended = (agreement) =>
+    contribution.ccUnextended &&
+    contribution.ccUnextended.includes(agreement?.id);
 
   const isNoCDT = () => contribution && contribution.type === "generic-no-cdt";
   const showButtonToDisplayCDTContent = () =>
-    !isNoCDT() && (!showAnswer || convention);
+    !isNoCDT() &&
+    (!showAnswer || convention || entreprise?.conventions.length === 0);
   const showGeneralInformationButton = () =>
     !isNoCDT() && !showAnswer && !convention;
 
@@ -116,14 +125,19 @@ const ContributionGeneric = ({ contribution }: Props) => {
   };
 
   const alertAgreementNotSupported = (url: string) => {
-    return contribution.type !== "generic-no-cdt" ? (
-      <AlertAgreementSupported showAnswer={showAnswer} />
-    ) : (
-      <AlertAgreementNotSupportedNoContent
-        url={url}
-        message={contribution.messageBlockGenericNoCDT}
-      />
-    );
+    if (isUnextended(convention)) {
+      return <AlertAgreementUnextended url={url} />;
+    } else if (contribution.type === "generic-no-cdt") {
+      contribution.messageBlock;
+      return (
+        <AlertAgreementNotSupportedNoContent
+          url={url}
+          message={contribution.messageBlockGenericNoCDT}
+        />
+      );
+    } else {
+      return <AlertAgreementSupported showAnswer={showAnswer} />;
+    }
   };
 
   const scrollToTitle = () => {
@@ -209,6 +223,14 @@ const ContributionGeneric = ({ contribution }: Props) => {
                     onUserAction={onUserAction}
                     alertAgreementNotSupported={alertAgreementNotSupported}
                     simulator="QUESTIONNAIRE"
+                    noAgreementFoundComponent={
+                      isNoCDT() ? (
+                        <Alert
+                          title={`Aucune convention collective n'a été déclarée pour l'entreprise ${entreprise?.simpleLabel}.`}
+                          message="Or, la convention collective est nécessaire pour obtenir une réponse car le code du travail ne prévoit rien sur ce sujet."
+                        />
+                      ) : undefined
+                    }
                   />
                 </form>
               )}
@@ -227,9 +249,9 @@ const ContributionGeneric = ({ contribution }: Props) => {
                   />
                   {convention && !isSupported(convention) && (
                     <Div>
-                      <Alert variant="primary">
+                      <UiAlert variant="primary">
                         {alertAgreementNotSupported(convention.url)}
-                      </Alert>
+                      </UiAlert>
                     </Div>
                   )}
                 </>

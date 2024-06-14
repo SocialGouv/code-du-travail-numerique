@@ -2,14 +2,14 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
 export enum CategoryPro44 {
-  ouvrier = "Ouvriers et collaborateurs (Groupes I à III)",
-  techniciens = "Agents de maîtrise et techniciens (Groupe IV)",
-  inge = "Ingénieurs et cadres (Groupe V)",
+  ouvrier = "'Ouvriers et collaborateurs (Groupes I à III)'",
+  techniciens = "'Agents de maîtrise et techniciens (Groupe IV)'",
+  inge = "'Ingénieurs et cadres (Groupe V)'",
 }
 
 export type CC44ReferenceSalaryProps = {
@@ -20,8 +20,27 @@ export type CC44ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary44
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0044>
+  implements IReferenceSalary<SupportedCc.IDCC0044>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCc.IDCC0044> {
+    const category =
+      args[
+        "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle"
+      ] ?? "";
+    return {
+      category: category as CategoryPro44,
+      hasVariablePay: args.hasVariablePay === "oui",
+      lastMonthSalary: args.lastMonthSalary
+        ? JSON.parse(args.lastMonthSalary)
+        : undefined,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
   /**
    * (si le salaire ne comporte pas une partie fixe et une partie variable et Ouvriers et collaborateurs & Agents de maîtrise et techniciens) ou (Ingénieurs et Cadres)
    * - S1 + P / 12 (si >= S2/12)
@@ -40,7 +59,7 @@ export class ReferenceSalary44
     hasVariablePay,
     category,
     lastMonthSalary,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0044>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC0044>): number {
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
     const salaireMoyen = sum(salaryValues) / 12;

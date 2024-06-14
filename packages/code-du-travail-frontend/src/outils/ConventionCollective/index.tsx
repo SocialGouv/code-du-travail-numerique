@@ -23,6 +23,7 @@ interface Props {
   title: string;
   displayTitle: string;
   widgetMode?: boolean;
+  noRedirect?: string;
 }
 
 function AgreementSearchTool({
@@ -30,6 +31,7 @@ function AgreementSearchTool({
   title,
   displayTitle,
   widgetMode,
+  noRedirect,
 }: Props): JSX.Element {
   const router = useRouter();
 
@@ -99,7 +101,12 @@ function AgreementSearchTool({
       setScreen(ScreenType.agreementSelection);
     } else {
       router.push(
-        `/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreementSelection}`
+        {
+          pathname: `/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreementSelection}`,
+          query: {
+            noRedirect,
+          },
+        }
       );
     }
   }
@@ -169,6 +176,7 @@ function AgreementSearchTool({
           onBackClick={clearSelection}
           onUserAction={onUserAction}
           isWidgetMode={widgetMode}
+          noRedirect={noRedirect === "true"}
         />
       );
       break;

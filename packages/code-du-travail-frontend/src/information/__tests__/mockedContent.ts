@@ -1,17 +1,21 @@
-import { ContentType, BlockDisplayMode, Content } from "@socialgouv/cdtn-utils";
+import {
+  EditorialContentType,
+  EditorialContentBlockDisplayMode,
+  EditorialContentBaseContentPart,
+} from "@socialgouv/cdtn-types";
 
-export const mockedContents: Content[] = [
+export const mockedContents: EditorialContentBaseContentPart[] = [
   {
     name: "tab1",
     title: "Tab1",
     blocks: [
       {
-        type: ContentType.markdown,
+        type: EditorialContentType.markdown,
         markdown: "myText1",
         html: "myText1",
       },
       {
-        type: ContentType.graphic,
+        type: EditorialContentType.graphic,
         size: "50",
         fileUrl: "myImage.svg",
         imgUrl: "myImage.svg",
@@ -20,9 +24,9 @@ export const mockedContents: Content[] = [
         html: "myGraphical",
       },
       {
-        type: ContentType.content,
+        type: EditorialContentType.content,
         title: "myContentTitle",
-        blockDisplayMode: BlockDisplayMode.line,
+        blockDisplayMode: EditorialContentBlockDisplayMode.line,
         contents: [
           {
             cdtnId: "id1",
@@ -68,7 +72,7 @@ export const mockedContents: Content[] = [
     title: "Tab2",
     blocks: [
       {
-        type: ContentType.markdown,
+        type: EditorialContentType.markdown,
         markdown: "myText2",
         html: "myText2",
       },

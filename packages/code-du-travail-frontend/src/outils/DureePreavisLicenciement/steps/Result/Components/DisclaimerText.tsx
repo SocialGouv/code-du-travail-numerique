@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Agreement } from "@socialgouv/cdtn-utils";
 import CCSearchInfo from "../../../../common/CCSearchInfo";
 import { isNotNearZero } from "../../../../common/utils";
 import { LicenciementSituation } from "../utils";
+import { Agreement } from "../../../../types";
 
 type Props = {
   legalSituation?: LicenciementSituation;

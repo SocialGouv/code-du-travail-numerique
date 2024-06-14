@@ -1,4 +1,4 @@
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../src/outils/types";
 
 export const generateAgreement = (idcc: number): Agreement => ({
   id: "TEST",

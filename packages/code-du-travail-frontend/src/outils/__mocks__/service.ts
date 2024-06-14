@@ -1,4 +1,4 @@
-import { Tool } from "@socialgouv/cdtn-utils";
+import { Tool } from "@socialgouv/cdtn-types";
 
 export const fetchTools = async (_params: any): Promise<Tool[]> => {
   return Promise.resolve([

@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import request from "supertest";
 import server from "nextjs-http-supertest";
 
@@ -18,7 +20,7 @@ describe("Suggestion", () => {
     expect(res.body).toMatchSnapshot();
   });
   test("accentuation is ignored", async () => {
-    const res = await request(server).get("/api/suggest?q=ré");
+    const res = await request(server).get("/api/suggest?q=rét");
     expect(res.body.includes("retraite")).toBeTruthy();
     expect(res.body).toMatchSnapshot();
   });

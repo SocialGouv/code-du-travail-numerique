@@ -3,16 +3,16 @@ import {
   elasticsearchClient,
   NotFoundError,
 } from "../../utils";
-import { getDocumentBody, getSearchBySourceSlugBody } from "./queries";
+import { getSearchBySourceSlugBody } from "./queries";
 import { getRelatedItems } from "./utils";
 
 export const getBySourceAndSlugItems = async (source: any, slug: string) => {
   const body = getSearchBySourceSlugBody({ slug, source });
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
-  if (response.body.hits.total.value === 0) {
+  if (response.hits.hits.length === 0) {
     throw new NotFoundError({
       name: "ITEMS_NOT_FOUND",
       message: `There is no documents that match ${slug} in ${source}`,
@@ -20,7 +20,7 @@ export const getBySourceAndSlugItems = async (source: any, slug: string) => {
     });
   }
 
-  const item = response.body.hits.hits[0];
+  const item = response.hits.hits[0];
 
   const {
     _id,
@@ -34,34 +34,10 @@ export const getBySourceAndSlugItems = async (source: any, slug: string) => {
     title,
   });
 
-  delete item._source.title_vector;
   delete item._source.covisits;
 
   return {
     ...item,
     relatedItems,
   };
-};
-
-export const getAll = async (
-  url?: string,
-  source?: string,
-  idsString?: string
-) => {
-  const ids = idsString?.split(",");
-  const body = getDocumentBody({ ids, source, url });
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
-  });
-
-  if (response.body.hits.total.value === 0) {
-    throw new NotFoundError({
-      name: "ITEMS_NOT_FOUND",
-      message: `There is no document that match the query`,
-      cause: null,
-    });
-  }
-
-  return response.body.hits.hits;
 };

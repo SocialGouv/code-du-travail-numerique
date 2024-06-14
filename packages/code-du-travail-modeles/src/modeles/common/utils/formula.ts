@@ -57,8 +57,22 @@ function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
 
 const FORMULE_VAR_REGEX = /\$formule/g;
 
-export function getFormule(engine: Engine): Formula {
-  const rules = getRulesWithFormuleAndNodeValue(engine);
+export function getFormuleLegal(engine: Engine): Formula {
+  const rules = getRulesWithFormuleAndNodeValue(engine).filter((rule) =>
+    rule.rawNode.nom.includes("résultat légal")
+  );
+  return getFormule(engine, rules);
+}
+
+export function getFormuleAgreement(engine: Engine): Formula {
+  const rules = getRulesWithFormuleAndNodeValue(engine).filter(
+    (rule) => !rule.rawNode.nom.includes("résultat légal")
+  );
+  return getFormule(engine, rules);
+}
+
+export function getFormule(engine: Engine, rules?: RuleNodeFormula[]): Formula {
+  rules = rules ?? getRulesWithFormuleAndNodeValue(engine) ?? [];
   const formula = rules.reduce(
     (
       formule: Required<NodeFormula>,

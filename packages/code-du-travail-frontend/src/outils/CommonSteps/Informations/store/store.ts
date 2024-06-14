@@ -18,8 +18,9 @@ import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
 import { informationToSituation } from "../utils";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
-import { ContratTravailStoreSlice } from "../../../IndemniteLicenciement/steps/ContratTravail/store";
+import { ContratTravailStoreSlice } from "../../../CommonIndemniteDepart/steps/ContratTravail/store";
 import * as Sentry from "@sentry/nextjs";
+import { CommonSituationStoreSlice } from "../../../common/situationStore";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -38,7 +39,9 @@ const initialState: CommonInformationsStoreData = {
 
 const createCommonInformationsStore: StoreSlice<
   CommonInformationsStoreSlice,
-  CommonAgreementStoreSlice<PublicodesSimulator> & ContratTravailStoreSlice
+  CommonAgreementStoreSlice<PublicodesSimulator> &
+    ContratTravailStoreSlice &
+    CommonSituationStoreSlice
 > = (set, get) => ({
   informationsData: {
     ...initialState,
@@ -53,16 +56,20 @@ const createCommonInformationsStore: StoreSlice<
         get().contratTravailData.input.licenciementInaptitude === "oui";
       try {
         if (agreement && isAgreementSupportedIndemniteLicenciement) {
-          const missingArgs = publicodes
-            .setSituation(
-              mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-                agreement.num,
-                isLicenciementInaptitude,
-                false
-              ),
-              "contrat salarié . indemnité de licenciement . résultat conventionnel"
+          const result = publicodes.calculate(
+            mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+              agreement.num,
+              isLicenciementInaptitude,
+              false
             )
-            .missingArgs.filter((item) => item.rawNode.cdtn);
+          );
+          let resultMissingArgs: MissingArgs[] = [];
+          if (result.type === "missing-args") {
+            resultMissingArgs = result.missingArgs;
+          }
+          const missingArgs = resultMissingArgs.filter(
+            (item) => item.rawNode.cdtn
+          );
           if (missingArgs.length > 0) {
             const question = missingArgs.map((arg) => ({
               name: arg.name,
@@ -135,17 +142,19 @@ const createCommonInformationsStore: StoreSlice<
         let missingArgs: MissingArgs[] = [];
         let blockingNotification: any = undefined;
         try {
-          missingArgs = publicodes
-            .setSituation(
-              mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-                agreement.num,
-                isLicenciementInaptitude,
-                false,
-                rules
-              ),
-              "contrat salarié . indemnité de licenciement . résultat conventionnel"
+          const result = publicodes.calculate(
+            mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+              agreement.num,
+              isLicenciementInaptitude,
+              false,
+              rules
             )
-            .missingArgs.filter((item) => item.rawNode.cdtn);
+          );
+          let resultMissingArgs: MissingArgs[] = [];
+          if (result.type === "missing-args") {
+            resultMissingArgs = result.missingArgs;
+          }
+          missingArgs = resultMissingArgs.filter((item) => item.rawNode.cdtn);
           const notifBloquante = publicodes.getNotificationsBloquantes();
           if (notifBloquante.length > 0) {
             blockingNotification = notifBloquante[0].description;
@@ -214,7 +223,7 @@ const createCommonInformationsStore: StoreSlice<
             (v) =>
               v.question.rule.nom ===
               "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
-          )?.info === `'${CatPro3239.assistantMaternel}'` &&
+          )?.info === CatPro3239.assistantMaternel &&
           publicodesInformations.find(
             (v) =>
               v.question.rule.nom ===
@@ -237,12 +246,22 @@ const createCommonInformationsStore: StoreSlice<
     },
     onNextStep: () => {
       const state = get().informationsData.input;
-      const currentError = get().informationsData.error;
       const { isValid, errorState } = validateStep(state);
       let errorEligibility;
 
       if (isValid) {
-        errorEligibility = state.blockingNotification;
+        const publicodes = get().agreementData.publicodes;
+        const situation = {
+          ...get().situationData.situation,
+          ...informationToSituation(
+            get().informationsData.input.publicodesInformations
+          ),
+        };
+        const result = publicodes.calculate(situation);
+        errorEligibility =
+          result.type === "ineligibility"
+            ? result.ineligibility
+            : state.blockingNotification;
       }
 
       set(

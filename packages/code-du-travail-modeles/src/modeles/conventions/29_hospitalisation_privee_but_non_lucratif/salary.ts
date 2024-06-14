@@ -3,7 +3,7 @@ import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
@@ -14,14 +14,33 @@ export type CC29ReferenceSalaryProps = {
 };
 
 export enum CategoryPro29 {
-  other = "Autres salariés",
-  assistant = "Assistants familiaux des services de placements familiaux spécialisés",
-  medic = "Médecins, pharmaciens et biologistes exerçant à titre permanent",
+  other = "'Autres salariés'",
+  assistant = "'Assistants familiaux des services de placements familiaux spécialisés'",
+  medic = "'Médecins, pharmaciens et biologistes exerçant à titre permanent'",
 }
 
 export class ReferenceSalary0029
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0029>
+  implements IReferenceSalary<SupportedCc.IDCC0029>
 {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): ReferenceSalaryProps<SupportedCc.IDCC0029> {
+    const category =
+      args[
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle"
+      ] ?? "";
+    return {
+      bestSalariesTotal:
+        args.hasSixBestSalaries === "oui"
+          ? Number(args.sixBestSalariesTotal)
+          : undefined,
+      professionalCategory: category,
+      salaires: args.salaryPeriods
+        ? (JSON.parse(args.salaryPeriods) as SalaryPeriods[])
+        : [],
+    };
+  }
+
   /**
    * Règle :
    * Pour la catégorie pro :
@@ -36,7 +55,7 @@ export class ReferenceSalary0029
     salaires = [],
     professionalCategory,
     bestSalariesTotal,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0029>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC0029>): number {
     if (professionalCategory === CategoryPro29.assistant) {
       const rankedSalaires = rankByMonthArrayDescFrench(salaires);
       const salaryValues = rankedSalaires

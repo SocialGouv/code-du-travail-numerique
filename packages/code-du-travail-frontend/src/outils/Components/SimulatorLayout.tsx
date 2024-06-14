@@ -12,7 +12,7 @@ import {
 import SimulatorNavigation from "./SimulatorNavigation";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoActionEvent, MatomoBaseEvent } from "../../lib";
-import { IndemniteLicenciementStepName } from "../IndemniteLicenciement";
+import { IndemniteDepartStepName } from "../CommonIndemniteDepart";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import scrollToTop from "../common/utils/scrollToTop";
 
@@ -22,7 +22,7 @@ export enum ValidationResponse {
   Valid = "valid",
 }
 
-type StepChange<StepName extends string> = {
+export type StepChange<StepName extends string> = {
   onNextStep?: () => ValidationResponse;
   onPrevStep?: () => void;
   stepName: StepName;
@@ -104,7 +104,7 @@ const SimulatorContent = <StepName extends string>({
 
   const doNotTriggerMatomo = (stepName: string) =>
     navigationAction === "none" ||
-    (stepName === IndemniteLicenciementStepName.Resultat &&
+    (stepName === IndemniteDepartStepName.Resultat &&
       simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT);
 
   const onNextStep = () => {

@@ -10,7 +10,7 @@ import type {
   SeniorityProps,
   SeniorityRequiredProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { parseDate } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
@@ -18,15 +18,15 @@ import { Seniority3248 } from "../3248_metallurgie";
 
 export type CC650SeniorityProps = DefaultSeniorityProps & {
   categoriePro?: "'A, B, C, D ou E'" | "'F, G, H ou I'";
-  hasBeenDayContract: boolean;
-  hasBeenExecutive: boolean;
+  hasBeenDayContract?: boolean;
+  hasBeenExecutive?: boolean;
   dateBecomeDayContract?: string;
 };
 
 export type CC650SeniorityRequiredProps = DefaultSeniorityRequiredProps & {
   categoriePro?: "'A, B, C, D ou E'" | "'F, G, H ou I'";
-  hasBeenDayContract: boolean;
-  hasBeenExecutive: boolean;
+  hasBeenDayContract?: boolean;
+  hasBeenExecutive?: boolean;
   dateBecomeDayContract?: string;
 };
 
@@ -42,7 +42,19 @@ const MOTIFS_650: Motif[] = LEGAL_MOTIFS.map((item) => ({
   value: 0,
 }));
 
-export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC650> {
+export class Seniority650 extends SeniorityDefault<SupportedCc.IDCC650> {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): SeniorityProps<SupportedCc.IDCC650> {
+    return this.map(args);
+  }
+
+  mapRequiredSituation(
+    args: Record<string, string | undefined>
+  ): SeniorityRequiredProps<SupportedCc.IDCC650> {
+    return this.map(args);
+  }
+
   computeSeniority({
     dateEntree,
     dateSortie,
@@ -51,7 +63,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     hasBeenDayContract,
     dateBecomeDayContract,
     hasBeenExecutive,
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC650>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.IDCC650>): SeniorityResult {
     const seniority3248 = new Seniority3248();
     if (categoriePro) {
       return seniority3248.computeSeniority({
@@ -76,7 +88,7 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
     hasBeenDayContract,
     dateBecomeDayContract,
     hasBeenExecutive,
-  }: SeniorityRequiredProps<SupportedCcIndemniteLicenciement.IDCC650>): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCc.IDCC650>): RequiredSeniorityResult {
     const seniority3248 = new Seniority3248();
     if (categoriePro) {
       return seniority3248.computeRequiredSeniority({
@@ -117,6 +129,40 @@ export class Seniority650 extends SeniorityDefault<SupportedCcIndemniteLicenciem
       }, 0);
     return {
       value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
+    };
+  }
+
+  private map(
+    args: Record<string, string | undefined>
+  ): SeniorityRequiredProps<SupportedCc.IDCC650> {
+    const categoriePro = args[
+      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle"
+    ] as "'A, B, C, D ou E'" | "'F, G, H ou I'";
+    const hasBeenExecutive =
+      args[
+        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre"
+      ];
+    const hasBeenDayContract =
+      args[
+        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour"
+      ];
+    const hasAllwaysBeenDayContract =
+      args[
+        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour"
+      ];
+
+    const dateBeginDayContract =
+      hasAllwaysBeenDayContract === "'Non'"
+        ? args[
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour . date"
+          ]
+        : undefined;
+    return {
+      ...super.mapRequiredSituation(args),
+      categoriePro,
+      dateBecomeDayContract: dateBeginDayContract,
+      hasBeenDayContract: hasBeenDayContract === "'Oui'",
+      hasBeenExecutive: hasBeenExecutive === "'Oui'",
     };
   }
 }

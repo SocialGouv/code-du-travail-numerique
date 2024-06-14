@@ -1,7 +1,8 @@
-import { fireEvent, render, RenderResult } from "@testing-library/react";
+import { render, RenderResult } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../..";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../..";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
+import { UserAction } from "../../../common";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -20,17 +21,23 @@ Storage.prototype.getItem = jest.fn(
 describe("Indemnité licenciement - CC 2609", () => {
   describe("parcours avec la convention collective pour valider ses spécificités", () => {
     let rendering: RenderResult;
+    let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
       );
-      fireEvent.click(ui.introduction.startButton.get());
-      fireEvent.click(ui.contract.type.cdi.get());
-      fireEvent.click(ui.contract.fauteGrave.non.get());
-      fireEvent.click(ui.contract.inaptitude.non.get());
-      fireEvent.click(ui.contract.arretTravail.non.get());
-      fireEvent.click(ui.next.get());
-      fireEvent.click(ui.next.get());
+      userAction = new UserAction();
+      userAction.click(ui.introduction.startButton.get());
+      userAction.click(ui.contract.type.cdi.get());
+      userAction.click(ui.contract.fauteGrave.non.get());
+      userAction.click(ui.contract.inaptitude.non.get());
+      userAction.click(ui.contract.arretTravail.non.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Informations");
     });
 
@@ -44,27 +51,19 @@ describe("Indemnité licenciement - CC 2609", () => {
       // vérification que l'on demande l'age
       expect(ui.information.agreement2609.age.query()).toBeInTheDocument();
 
-      fireEvent.change(ui.information.agreement2609.age.get(), {
-        target: { value: "45" },
-      });
-      fireEvent.click(ui.next.get());
-      fireEvent.change(ui.seniority.startDate.get(), {
-        target: { value: "01/01/2000" },
-      });
-      fireEvent.change(ui.seniority.notificationDate.get(), {
-        target: { value: "01/01/2022" },
-      });
-      fireEvent.change(ui.seniority.endDate.get(), {
-        target: { value: "01/03/2022" },
-      });
-      fireEvent.click(ui.seniority.hasAbsence.non.get());
-      fireEvent.click(ui.next.get());
+      userAction.setInput(ui.information.agreement2609.age.get(), "45");
+      userAction.click(ui.next.get());
+      userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
+      userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
+      userAction.setInput(ui.seniority.endDate.get(), "01/03/2022");
+      userAction.click(ui.seniority.hasAbsence.non.get());
+      userAction.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
 
-      fireEvent.click(ui.salary.hasPartialTime.non.get());
+      userAction.click(ui.salary.hasPartialTime.non.get());
 
       // vérification que l'on ne demande pas si le salaire comporte une partie de variable si salaire fixe
-      fireEvent.click(ui.salary.hasSameSalary.oui.get());
+      userAction.click(ui.salary.hasSameSalary.oui.get());
 
       expect(
         rendering.queryByText(
@@ -73,10 +72,8 @@ describe("Indemnité licenciement - CC 2609", () => {
       ).not.toBeInTheDocument();
 
       // vérification que l'on n'affiche pas la partie variable sur le résultat
-      fireEvent.change(ui.salary.sameSalaryValue.get(), {
-        target: { value: "2500" },
-      });
-      fireEvent.click(ui.next.get());
+      userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
+      userAction.click(ui.next.get());
 
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
       expect(
@@ -86,8 +83,8 @@ describe("Indemnité licenciement - CC 2609", () => {
       ).not.toBeInTheDocument();
 
       // vérification que l'on demande si le salaire comporte une partie de variable si salaires différents
-      fireEvent.click(ui.previous.get());
-      fireEvent.click(ui.salary.hasSameSalary.non.get());
+      userAction.click(ui.previous.get());
+      userAction.click(ui.salary.hasSameSalary.non.get());
 
       expect(
         rendering.queryByText(
@@ -96,11 +93,9 @@ describe("Indemnité licenciement - CC 2609", () => {
       ).toBeInTheDocument();
 
       // vérification que l'on affiche la réponse du salaire variable sur l'étape de résultat
-      fireEvent.change(ui.salary.salaries.getAll()[0], {
-        target: { value: "2500" },
-      });
-      fireEvent.click(ui.salary.variablePart.oui.get());
-      fireEvent.click(ui.next.get());
+      userAction.setInput(ui.salary.salaries.getAll()[0], "2500");
+      userAction.click(ui.salary.variablePart.oui.get());
+      userAction.click(ui.next.get());
 
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
       expect(

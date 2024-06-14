@@ -22,22 +22,22 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
     >
       <div>
         <div
-          class="sc-fxwrCY djSyec"
+          class="sc-bypJrT nMTGe"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Service de renseignement"
             aria-modal="true"
-            class="sc-hIUJlX FpoNy"
+            class="sc-ddjGPC byKttK"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <header
-              class="sc-ePDLzJ gBicpa"
+              class="sc-kzqdkY hWUlpB"
             >
               <h1
-                class="sc-dPZUQH jEsYKE"
+                class="sc-bVHCgj igcPZY"
               >
                 <span
                   class="sc-gsFSXq djREvw"
@@ -47,21 +47,20 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             </header>
             <h2
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Contact téléphonique
             </h2>
             <a
-              class="sc-iXzfSG gmhyFv"
+              class="sc-fMMURN bfUEsp"
               href="tel:+0033806000126"
             >
               <strong
-                class="sc-lnPyaJ hWyEOj"
+                class="sc-ktPPKK kfEjUo"
               >
                 0 806 000 126
               </strong>
               <em
-                class="sc-eulNck kUSzmw"
+                class="sc-YysOf jBOJPY"
               >
                 Service gratuit 
                 <span>
@@ -71,12 +70,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             </a>
             <h2
               class="sc-kAyceB dvmaTz"
-              data-testid="heading"
             >
               Contact par email et prise de rendez-vous
             </h2>
             <form
-              class="sc-dExYaf jZHVsa"
+              class="sc-cVzyXs hgfzis"
             >
               <label
                 for="search-service"
@@ -84,11 +82,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 Saisissez votre numéro de département :
               </label>
               <div
-                class="sc-dkmUuB ayeCS sc-iapWAC ehtufm"
+                class="sc-sLsrZ kGdGKi sc-ePDLzJ cGNVRK"
               >
                 <input
                   autocomplete="off"
-                  class="sc-ejfMa-d dijxYa"
+                  class="sc-dBmzty djgFPK"
                   id="search-service"
                   maxlength="3"
                   name="departement"
@@ -99,13 +97,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </div>
               <button
                 aria-label="Recherchez le service"
-                class="sc-kOPcWz kyVwqT sc-kqGoIF boDxRG"
+                class="sc-kOPcWz kyVwqT sc-bVVIoq iNXDba"
                 title="Lancer une recherche"
                 type="submit"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-dxcDKg iTWxHM"
+                  class="sc-dPZUQH rwHjB"
                   fill="none"
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +116,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </button>
             </form>
             <div
-              class="sc-gvZAcH kHwoPP"
+              class="sc-eBHhsj ieQJGs"
             >
               <p>
                 Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
@@ -139,7 +137,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </ul>
             </div>
             <button
-              class="sc-kOPcWz kyVwqT sc-jnOGJG fRzVjo"
+              class="sc-kOPcWz kyVwqT sc-dSCufp iCRrvW"
               title="fermer la modale"
             >
               <div

@@ -1,32 +1,36 @@
-import type { EvaluatedNode } from "publicodes";
+import {
+  IneligibilityIndemniteLicenciementFactory,
+  SupportedCc,
+} from "../modeles";
+import { Agreement, Legal } from "./IndemniteDepart";
+import { ExplanationBuilderIndemniteLicenciement } from "./IndemniteDepart/ExplanationBuilderIndemniteLicenciement";
+import { IndemniteDepartPublicodes } from "./IndemniteDepart/IndemniteDepartPublicodes";
 
-import type { Publicodes } from "./Publicodes";
-import { PublicodesBase } from "./PublicodesBase";
-import type { PublicodesIndemniteLicenciementResult } from "./types";
-import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
-
-class IndemniteLicenciementPublicodes
-  extends PublicodesBase<PublicodesIndemniteLicenciementResult>
-  implements Publicodes<PublicodesIndemniteLicenciementResult>
-{
+class IndemniteLicenciementPublicodes extends IndemniteDepartPublicodes {
   constructor(models: any, idcc?: string) {
     const rules = {
       ...models.base,
       ...(idcc ? models[idcc] : {}),
     };
+    let agreementInstance = undefined;
+    if (idcc && idcc !== SupportedCc.default) {
+      agreementInstance = new Agreement(
+        idcc as SupportedCc,
+        new IneligibilityIndemniteLicenciementFactory().create(
+          idcc as SupportedCc
+        )
+      );
+    }
     super(
       rules,
-      PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_LICENCIEMENT]
+      new Legal(
+        new IneligibilityIndemniteLicenciementFactory().create(
+          SupportedCc.default
+        )
+      ),
+      new ExplanationBuilderIndemniteLicenciement(idcc),
+      agreementInstance
     );
-  }
-
-  protected convertedResult(
-    evaluatedNode: EvaluatedNode
-  ): PublicodesIndemniteLicenciementResult {
-    return {
-      unit: evaluatedNode.unit,
-      value: evaluatedNode.nodeValue,
-    };
   }
 }
 

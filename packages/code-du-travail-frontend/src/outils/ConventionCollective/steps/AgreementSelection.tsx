@@ -13,12 +13,14 @@ import { useRouter } from "next/router";
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;
   isWidgetMode?: boolean;
+  noRedirect?: boolean;
 } & TrackingProps;
 
 const AgreementSelectionStep = ({
   onBackClick,
   onUserAction,
   isWidgetMode,
+  noRedirect,
 }: EnterpriseSearchStepProps): JSX.Element => {
   const { enterprise } = useNavContext();
   const router = useRouter();
@@ -54,6 +56,7 @@ const AgreementSelectionStep = ({
                   onUserAction={onUserAction}
                   agreement={agreement}
                   isWidgetMode={isWidgetMode}
+                  noRedirect={noRedirect}
                 />
               ) : (
                 <Tile

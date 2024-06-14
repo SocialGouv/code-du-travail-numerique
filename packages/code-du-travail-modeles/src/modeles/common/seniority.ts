@@ -6,8 +6,9 @@ import type {
   Motif,
   RequiredSeniorityResult,
   SeniorityProps,
+  SeniorityRequiredProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "./index";
 import { parseDate } from "./index";
 
@@ -21,10 +22,45 @@ export type DefaultSeniorityRequiredProps = DefaultSeniorityProps & {
   dateNotification: string;
 };
 
-export abstract class SeniorityDefault<
-  T extends SupportedCcIndemniteLicenciement
-> implements ISeniority<T>
+export abstract class SeniorityDefault<T extends SupportedCc>
+  implements ISeniority<T>
 {
+  mapSituation(args: Record<string, string | undefined>): SeniorityProps<T> {
+    const absencePeriods: Absence[] = args.absencePeriods
+      ? JSON.parse(args.absencePeriods)
+      : [];
+    return {
+      absencePeriods,
+      dateEntree:
+        args["contrat salarié . indemnité de licenciement . date d'entrée"] ??
+        "",
+      dateSortie:
+        args["contrat salarié . indemnité de licenciement . date de sortie"] ??
+        "",
+    } as SeniorityProps<T>;
+  }
+
+  mapRequiredSituation(
+    args: Record<string, string | undefined>
+  ): SeniorityRequiredProps<T> {
+    const absencePeriods: Absence[] = args.absencePeriods
+      ? JSON.parse(args.absencePeriods)
+      : [];
+    return {
+      absencePeriods,
+      dateEntree:
+        args["contrat salarié . indemnité de licenciement . date d'entrée"] ??
+        "",
+      dateNotification:
+        args[
+          "contrat salarié . indemnité de licenciement . date de notification"
+        ] ?? "",
+      dateSortie:
+        args["contrat salarié . indemnité de licenciement . date de sortie"] ??
+        "",
+    } as SeniorityRequiredProps<T>;
+  }
+
   computeSeniority({
     dateEntree,
     dateSortie,

@@ -3,7 +3,7 @@
 exports[`<Feedback/> should render 1`] = `
 <div>
   <div
-    class="sc-gEvEer hpVpdb sc-kRRyDe jaWLNd"
+    class="sc-gEvEer hpVpdb sc-iXzfSG iKsDZP"
   >
     <div
       class="sc-aXZVg gZgZQL"
@@ -12,28 +12,26 @@ exports[`<Feedback/> should render 1`] = `
         class="sc-iGgWBj cRLRjd"
       >
         <div
-          class="sc-fulCBj gAIuub"
+          class="sc-iapWAC htQmqi"
         >
           <h2
-            class="sc-kMribo TXsai sc-kAyceB kDiAsV"
-            data-testid="heading"
+            class="sc-kqGoIF hBlUrr sc-kAyceB kDiAsV"
           >
             <span
               class="sc-gsFSXq cdZUuw"
-              data-testid="stripe"
             />
             Avez-vous trouvé la réponse à votre question ?
           </h2>
           <p
-            class="sc-bdOgaJ hGLzLG"
+            class="sc-dxcDKg dKsgnI"
           >
             <button
-              class="sc-kOPcWz cpQXMn sc-empnci cprGLf"
+              class="sc-kOPcWz cpQXMn sc-gvZAcH bxRqxi"
             >
               Non
             </button>
             <button
-              class="sc-kOPcWz cpQXMn sc-empnci cprGLf"
+              class="sc-kOPcWz cpQXMn sc-gvZAcH bxRqxi"
             >
               Oui
             </button>
@@ -48,7 +46,7 @@ exports[`<Feedback/> should render 1`] = `
 exports[`<Feedback/> should render form once user answer no 1`] = `
 <div>
   <div
-    class="sc-gEvEer hpVpdb sc-kRRyDe jaWLNd"
+    class="sc-gEvEer hpVpdb sc-iXzfSG iKsDZP"
   >
     <div
       class="sc-aXZVg gZgZQL"
@@ -57,34 +55,32 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
         class="sc-iGgWBj cRLRjd"
       >
         <div
-          class="sc-fulCBj gAIuub"
+          class="sc-iapWAC htQmqi"
         >
           <h2
-            class="sc-kMribo TXsai sc-kAyceB kDiAsV"
-            data-testid="heading"
+            class="sc-kqGoIF hBlUrr sc-kAyceB kDiAsV"
           >
             <span
               class="sc-gsFSXq cdZUuw"
-              data-testid="stripe"
             />
             Merci pour votre réponse.
           </h2>
         </div>
         <form>
           <fieldset
-            class="sc-ERObt kduyRX"
+            class="sc-eulNck dcbEAr"
           >
             <legend
-              class="sc-dNsVcS iioGVU"
+              class="sc-dExYaf gYIifE"
             >
               Pouvez-vous nous en dire plus ?
             </legend>
             <label
-              class="sc-dBmzty fcjLqu"
+              class="sc-eyvILC erxqfW"
               for="unclear"
             >
               <input
-                class="sc-fifgRP cEkCmq"
+                class="sc-gfoqjT UMmfj"
                 id="unclear"
                 name="category"
                 type="checkbox"
@@ -93,11 +89,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Les informations ne sont pas claires.
             </label>
             <label
-              class="sc-dBmzty fcjLqu"
+              class="sc-eyvILC erxqfW"
               for="unrelated"
             >
               <input
-                class="sc-fifgRP cEkCmq"
+                class="sc-gfoqjT UMmfj"
                 id="unrelated"
                 name="category"
                 type="checkbox"
@@ -106,11 +102,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Cette page ne correspond pas à ma recherche ou à ma situation.
             </label>
             <label
-              class="sc-dBmzty fcjLqu"
+              class="sc-eyvILC erxqfW"
               for="unsatisfied"
             >
               <input
-                class="sc-fifgRP cEkCmq"
+                class="sc-gfoqjT UMmfj"
                 id="unsatisfied"
                 name="category"
                 type="checkbox"
@@ -119,11 +115,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Je ne suis pas satisfait de cette réglementation.
             </label>
             <label
-              class="sc-dBmzty fcjLqu"
+              class="sc-eyvILC erxqfW"
               for="wrong"
             >
               <input
-                class="sc-fifgRP cEkCmq"
+                class="sc-gfoqjT UMmfj"
                 id="wrong"
                 name="category"
                 type="checkbox"
@@ -133,13 +129,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             </label>
           </fieldset>
           <label
-            class="sc-czkgLR jeiCpA"
+            class="sc-ERObt blrUmt"
             for="suggestion"
           >
             Faire une suggestion pour améliorer cette page
           </label>
           <textarea
-            class="sc-YysOf dBgYfx sc-SrznA hwduxK"
+            class="sc-ecPEgm foALIG sc-knuQbY iEIWKo"
             cols="50"
             id="suggestion"
             maxlength="150"
@@ -149,7 +145,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           />
           <div>
             <span
-              class="sc-ibQAlb eBJOHM"
+              class="sc-iMTnTL bCcoWP"
             >
               150
                caractères restants
@@ -163,10 +159,10 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             </div>
           </div>
           <div
-            class="sc-dycYrt driqFQ"
+            class="sc-dNsVcS lnwERS"
           >
             <button
-              class="sc-kOPcWz dSQWfG sc-empnci cprGLf"
+              class="sc-kOPcWz dSQWfG sc-gvZAcH bxRqxi"
             >
               Envoyer
             </button>
@@ -202,7 +198,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 exports[`<Feedback/> should render form once user answer yes 1`] = `
 <div>
   <div
-    class="sc-gEvEer hpVpdb sc-kRRyDe jaWLNd"
+    class="sc-gEvEer hpVpdb sc-iXzfSG iKsDZP"
   >
     <div
       class="sc-aXZVg gZgZQL"
@@ -211,28 +207,26 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
         class="sc-iGgWBj cRLRjd"
       >
         <div
-          class="sc-fulCBj gAIuub"
+          class="sc-iapWAC htQmqi"
         >
           <h2
-            class="sc-kMribo TXsai sc-kAyceB kDiAsV"
-            data-testid="heading"
+            class="sc-kqGoIF hBlUrr sc-kAyceB kDiAsV"
           >
             <span
               class="sc-gsFSXq cdZUuw"
-              data-testid="stripe"
             />
             Merci pour votre réponse.
           </h2>
         </div>
         <form>
           <label
-            class="sc-czkgLR jeiCpA"
+            class="sc-ERObt blrUmt"
             for="suggestion"
           >
             Faire une suggestion pour améliorer cette page
           </label>
           <textarea
-            class="sc-YysOf dBgYfx sc-SrznA hwduxK"
+            class="sc-ecPEgm foALIG sc-knuQbY iEIWKo"
             cols="50"
             id="suggestion"
             maxlength="150"
@@ -242,7 +236,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
           />
           <div>
             <span
-              class="sc-ibQAlb eBJOHM"
+              class="sc-iMTnTL bCcoWP"
             >
               150
                caractères restants
@@ -256,10 +250,10 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
             </div>
           </div>
           <div
-            class="sc-dycYrt driqFQ"
+            class="sc-dNsVcS lnwERS"
           >
             <button
-              class="sc-kOPcWz dSQWfG sc-empnci cprGLf"
+              class="sc-kOPcWz dSQWfG sc-gvZAcH bxRqxi"
             >
               Envoyer
             </button>

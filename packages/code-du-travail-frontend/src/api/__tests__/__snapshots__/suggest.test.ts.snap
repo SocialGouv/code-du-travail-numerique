@@ -3,10 +3,10 @@
 exports[`Suggestion accentuation is ignored 1`] = `
 [
   "renseignements",
+  "déplacement régulier",
   "retraite",
   "repos",
   "réintégration",
-  "déplacement régulier",
 ]
 `;
 

@@ -1,7 +1,8 @@
-import { fireEvent, render, waitFor, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
+import { UserAction } from "../../../common";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -18,34 +19,35 @@ Storage.prototype.getItem = jest.fn(
 );
 
 describe("Indemnité licenciement - CC 1517", () => {
+  let userAction: UserAction;
   beforeEach(async () => {
-    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
-    fireEvent.click(ui.introduction.startButton.get());
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.contract.fauteGrave.non.get());
-    fireEvent.click(ui.contract.inaptitude.non.get());
-    fireEvent.click(ui.contract.arretTravail.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.next.get());
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
+    );
+
+    userAction = new UserAction();
+    userAction.click(ui.introduction.startButton.get());
+    userAction.click(ui.contract.type.cdi.get());
+    userAction.click(ui.contract.fauteGrave.non.get());
+    userAction.click(ui.contract.inaptitude.non.get());
+    userAction.click(ui.contract.arretTravail.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.next.get());
   });
   test("vérifier l'eligibilite pour ancienneté (entree -> sortie) supérieur à 8 mois", async () => {
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "15/08/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "15/12/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.salary.hasPartialTime.non.get());
-    fireEvent.click(ui.salary.hasSameSalary.oui.get());
-    fireEvent.change(ui.salary.sameSalaryValue.get(), {
-      target: { value: "3000" },
-    });
-    fireEvent.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
+    userAction.setInput(ui.seniority.notificationDate.get(), "15/08/2022");
+    userAction.setInput(ui.seniority.endDate.get(), "15/12/2022");
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.salary.hasPartialTime.non.get());
+    userAction.click(ui.salary.hasSameSalary.oui.get());
+    userAction.setInput(ui.salary.sameSalaryValue.get(), "3000");
+    userAction.click(ui.next.get());
     expect(ui.result.formula.get()).toHaveTextContent("Formule");
   });
 });

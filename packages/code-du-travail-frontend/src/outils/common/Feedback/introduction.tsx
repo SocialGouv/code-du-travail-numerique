@@ -8,7 +8,7 @@ type IntroductionProps = {
 export const Introduction = ({ onClick }: IntroductionProps): JSX.Element => {
   return (
     <Div>
-      <Paragraph fontSize="hsmall" fontWeight="600" variant="title">
+      <Paragraph fontSize="hsmall" fontWeight="600">
         Votre avis sur ce simulateur nous intéresse
       </Paragraph>
       <Button onClick={onClick}>Donner mon avis</Button>

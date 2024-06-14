@@ -29,8 +29,6 @@ export * as icons from "./icons";
 export { IconStripe } from "./IconStripe";
 export { Modal, ModalContentWrapper } from "./Modal";
 export { MoreContent } from "./MoreContent";
-export { OverflowWrapper } from "./OverflowWrapper";
-export { Progress } from "./Progress";
 export { ScreenReaderOnly } from "./ScreenReaderOnly";
 export { Stripe } from "./Stripe";
 export { Table } from "./Table";

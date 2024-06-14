@@ -1,14 +1,15 @@
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
-import userEvent from "@testing-library/user-event";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import { byTestId } from "testing-library-selector";
+import { UserAction } from "../../../common";
 
 jest.mock("../../../conventions/Search/api/agreements.service");
 jest.mock("../../../conventions/Search/api/enterprises.service");
 
 describe("Page résultat: vérification de la formule affichée", () => {
+  let userAction: UserAction;
   describe.each([
     {
       inaptitude: false,
@@ -94,37 +95,36 @@ describe("Page résultat: vérification de la formule affichée", () => {
           () => `{"num":${ccNum},"shortTitle":"${ccTitle}"}`
         );
 
-        render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
-        userEvent.click(ui.introduction.startButton.get());
-        userEvent.click(ui.contract.type.cdi.get());
-        userEvent.click(ui.contract.fauteGrave.non.get());
-        userEvent.click(
+        render(
+          <CalculateurIndemniteLicenciement
+            icon={""}
+            title={""}
+            displayTitle={""}
+          />
+        );
+        userAction = new UserAction();
+        userAction.click(ui.introduction.startButton.get());
+        userAction.click(ui.contract.type.cdi.get());
+        userAction.click(ui.contract.fauteGrave.non.get());
+        userAction.click(
           ui.contract.inaptitude[inaptitude ? "oui" : "non"].get()
         );
-        !inaptitude && userEvent.click(ui.contract.arretTravail.non.get());
-        userEvent.click(ui.next.get());
-        userEvent.click(ui.next.get());
+        !inaptitude && userAction.click(ui.contract.arretTravail.non.get());
+        userAction.click(ui.next.get());
+        userAction.click(ui.next.get());
 
-        userEvent.selectOptions(byTestId(select).get(), selectOption);
-        userEvent.click(ui.next.get());
-        fireEvent.change(ui.seniority.startDate.get(), {
-          target: { value: startDate },
-        });
-        fireEvent.change(ui.seniority.notificationDate.get(), {
-          target: { value: notifDate },
-        });
-        fireEvent.change(ui.seniority.endDate.get(), {
-          target: { value: endDate },
-        });
+        userAction.changeInputList(byTestId(select).get(), selectOption);
+        userAction.click(ui.next.get());
+        userAction.setInput(ui.seniority.startDate.get(), startDate);
+        userAction.setInput(ui.seniority.notificationDate.get(), notifDate);
+        userAction.setInput(ui.seniority.endDate.get(), endDate);
 
-        userEvent.click(ui.seniority.hasAbsence.non.get());
-        userEvent.click(ui.next.get());
-        userEvent.click(ui.salary.hasPartialTime.non.get());
-        userEvent.click(ui.salary.hasSameSalary.oui.get());
-        fireEvent.change(ui.salary.sameSalaryValue.get(), {
-          target: { value: "2500" },
-        });
-        userEvent.click(ui.next.get());
+        userAction.click(ui.seniority.hasAbsence.non.get());
+        userAction.click(ui.next.get());
+        userAction.click(ui.salary.hasPartialTime.non.get());
+        userAction.click(ui.salary.hasSameSalary.oui.get());
+        userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
+        userAction.click(ui.next.get());
 
         // Validation que l'on est bien sur l'étape résultat
         expect(ui.activeStep.query()).toHaveTextContent("Indemnité");

@@ -3,14 +3,16 @@
 exports[`DisplayContentContribution Accordions should not fail if no summary tag 1`] = `
 <div>
   <div
-    class="sc-ERObt zXiiV"
+    class="sc-eulNck hOEymR"
   >
     <div
-      class="sc-dNsVcS hThUYS"
+      class="sc-dExYaf hOgKYe"
       data-accordion-component="Accordion"
       data-testid="contrib-accordion"
     >
-      <div>
+      <div
+        id="report-ou-suspension-du-preavis"
+      >
         <div
           class="sc-jXbUNg heDTFL"
           data-accordion-component="AccordionItem"
@@ -20,12 +22,12 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
             data-accordion-component="AccordionItemHeading"
           >
             <div
-              aria-controls="accordion__panel-raa-2"
+              aria-controls="accordion__panel-report-ou-suspension-du-preavis"
               aria-disabled="false"
               aria-expanded="false"
               class="sc-kpDqfm heoudo"
               data-accordion-component="AccordionItemButton"
-              id="accordion__heading-raa-2"
+              id="accordion__heading-report-ou-suspension-du-preavis"
               role="button"
               tabindex="0"
             >
@@ -64,7 +66,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
             class="sc-dhKdcB hlTUsz"
             data-accordion-component="AccordionItemPanel"
             hidden=""
-            id="accordion__panel-raa-2"
+            id="accordion__panel-report-ou-suspension-du-preavis"
           >
             <div
               class="sc-bXCLTC fcbJdD"
@@ -78,11 +80,13 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
       
                 </p>
                 <div
-                  class="sc-dNsVcS hThUYS"
+                  class="sc-dExYaf hOgKYe"
                   data-accordion-component="Accordion"
                   data-testid="contrib-accordion"
                 >
-                  <div>
+                  <div
+                    id="conges-payes"
+                  >
                     <div
                       class="sc-jXbUNg heDTFL"
                       data-accordion-component="AccordionItem"
@@ -92,12 +96,12 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                         data-accordion-component="AccordionItemHeading"
                       >
                         <div
-                          aria-controls="accordion__panel-raa-3"
+                          aria-controls="accordion__panel-conges-payes"
                           aria-disabled="false"
                           aria-expanded="false"
                           class="sc-kpDqfm heoudo"
                           data-accordion-component="AccordionItemButton"
-                          id="accordion__heading-raa-3"
+                          id="accordion__heading-conges-payes"
                           role="button"
                           tabindex="0"
                         >
@@ -136,18 +140,20 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                         class="sc-dhKdcB hlTUsz"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""
-                        id="accordion__panel-raa-3"
+                        id="accordion__panel-conges-payes"
                       >
                         <div
                           class="sc-bXCLTC fcbJdD"
                         >
                           <div>
                             <div
-                              class="sc-dNsVcS hThUYS"
+                              class="sc-dExYaf hOgKYe"
                               data-accordion-component="Accordion"
                               data-testid="contrib-accordion"
                             >
-                              <div>
+                              <div
+                                id="dates-des-conges-fixees-avant-la-notification-du-licenciement"
+                              >
                                 <div
                                   class="sc-jXbUNg heDTFL"
                                   data-accordion-component="AccordionItem"
@@ -157,12 +163,12 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                     data-accordion-component="AccordionItemHeading"
                                   >
                                     <div
-                                      aria-controls="accordion__panel-raa-4"
+                                      aria-controls="accordion__panel-dates-des-conges-fixees-avant-la-notification-du-licenciement"
                                       aria-disabled="false"
                                       aria-expanded="false"
                                       class="sc-kpDqfm heoudo"
                                       data-accordion-component="AccordionItemButton"
-                                      id="accordion__heading-raa-4"
+                                      id="accordion__heading-dates-des-conges-fixees-avant-la-notification-du-licenciement"
                                       role="button"
                                       tabindex="0"
                                     >
@@ -203,7 +209,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                     class="sc-dhKdcB hlTUsz"
                                     data-accordion-component="AccordionItemPanel"
                                     hidden=""
-                                    id="accordion__panel-raa-4"
+                                    id="accordion__panel-dates-des-conges-fixees-avant-la-notification-du-licenciement"
                                   >
                                     <div
                                       class="sc-bXCLTC fcbJdD"
@@ -222,7 +228,9 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                   </div>
                                 </div>
                               </div>
-                              <div>
+                              <div
+                                id="dates-des-conges-fixees-apres-la-notification-du-licenciement"
+                              >
                                 <div
                                   class="sc-jXbUNg crDDWD"
                                   data-accordion-component="AccordionItem"
@@ -232,12 +240,12 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                     data-accordion-component="AccordionItemHeading"
                                   >
                                     <div
-                                      aria-controls="accordion__panel-raa-5"
+                                      aria-controls="accordion__panel-dates-des-conges-fixees-apres-la-notification-du-licenciement"
                                       aria-disabled="false"
                                       aria-expanded="false"
                                       class="sc-kpDqfm heoudo"
                                       data-accordion-component="AccordionItemButton"
-                                      id="accordion__heading-raa-5"
+                                      id="accordion__heading-dates-des-conges-fixees-apres-la-notification-du-licenciement"
                                       role="button"
                                       tabindex="0"
                                     >
@@ -278,7 +286,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                     class="sc-dhKdcB hlTUsz"
                                     data-accordion-component="AccordionItemPanel"
                                     hidden=""
-                                    id="accordion__panel-raa-5"
+                                    id="accordion__panel-dates-des-conges-fixees-apres-la-notification-du-licenciement"
                                   >
                                     <div
                                       class="sc-bXCLTC fcbJdD"
@@ -298,7 +306,9 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                   </div>
                                 </div>
                               </div>
-                              <div>
+                              <div
+                                id="licenciement-notifie-pendant-les-conges-payes"
+                              >
                                 <div
                                   class="sc-jXbUNg crDDWD"
                                   data-accordion-component="AccordionItem"
@@ -308,12 +318,12 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                     data-accordion-component="AccordionItemHeading"
                                   >
                                     <div
-                                      aria-controls="accordion__panel-raa-6"
+                                      aria-controls="accordion__panel-licenciement-notifie-pendant-les-conges-payes"
                                       aria-disabled="false"
                                       aria-expanded="false"
                                       class="sc-kpDqfm heoudo"
                                       data-accordion-component="AccordionItemButton"
-                                      id="accordion__heading-raa-6"
+                                      id="accordion__heading-licenciement-notifie-pendant-les-conges-payes"
                                       role="button"
                                       tabindex="0"
                                     >
@@ -352,7 +362,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                     class="sc-dhKdcB hlTUsz"
                                     data-accordion-component="AccordionItemPanel"
                                     hidden=""
-                                    id="accordion__panel-raa-6"
+                                    id="accordion__panel-licenciement-notifie-pendant-les-conges-payes"
                                   >
                                     <div
                                       class="sc-bXCLTC fcbJdD"
@@ -387,14 +397,16 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
 
 exports[`DisplayContentContribution Accordions should replace details element by one accordion 1`] = `
 <div
-  class="sc-ERObt zXiiV"
+  class="sc-eulNck hOEymR"
 >
   <div
-    class="sc-dNsVcS hThUYS"
+    class="sc-dExYaf hOgKYe"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
-    <div>
+    <div
+      id="ceci-est-un-titre"
+    >
       <div
         class="sc-jXbUNg heDTFL"
         data-accordion-component="AccordionItem"
@@ -404,12 +416,12 @@ exports[`DisplayContentContribution Accordions should replace details element by
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-1"
+            aria-controls="accordion__panel-ceci-est-un-titre"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-1"
+            id="accordion__heading-ceci-est-un-titre"
             role="button"
             tabindex="0"
           >
@@ -448,7 +460,7 @@ exports[`DisplayContentContribution Accordions should replace details element by
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-1"
+          id="accordion__panel-ceci-est-un-titre"
         >
           <div
             class="sc-bXCLTC fcbJdD"
@@ -469,14 +481,16 @@ exports[`DisplayContentContribution Accordions should replace details element by
 
 exports[`DisplayContentContribution Accordions should replace details element within details element 1`] = `
 <div
-  class="sc-ERObt zXiiV"
+  class="sc-eulNck hOEymR"
 >
   <div
-    class="sc-dNsVcS hThUYS"
+    class="sc-dExYaf hOgKYe"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
-    <div>
+    <div
+      id="ceci-est-un-titre"
+    >
       <div
         class="sc-jXbUNg heDTFL"
         data-accordion-component="AccordionItem"
@@ -486,12 +500,12 @@ exports[`DisplayContentContribution Accordions should replace details element wi
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-9"
+            aria-controls="accordion__panel-ceci-est-un-titre"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-9"
+            id="accordion__heading-ceci-est-un-titre"
             role="button"
             tabindex="0"
           >
@@ -530,18 +544,20 @@ exports[`DisplayContentContribution Accordions should replace details element wi
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-9"
+          id="accordion__panel-ceci-est-un-titre"
         >
           <div
             class="sc-bXCLTC fcbJdD"
           >
             <div>
               <div
-                class="sc-dNsVcS hThUYS"
+                class="sc-dExYaf hOgKYe"
                 data-accordion-component="Accordion"
                 data-testid="contrib-accordion"
               >
-                <div>
+                <div
+                  id="ceci-est-un-sous-titre"
+                >
                   <div
                     class="sc-jXbUNg heDTFL"
                     data-accordion-component="AccordionItem"
@@ -551,12 +567,12 @@ exports[`DisplayContentContribution Accordions should replace details element wi
                       data-accordion-component="AccordionItemHeading"
                     >
                       <div
-                        aria-controls="accordion__panel-raa-10"
+                        aria-controls="accordion__panel-ceci-est-un-sous-titre"
                         aria-disabled="false"
                         aria-expanded="false"
                         class="sc-kpDqfm heoudo"
                         data-accordion-component="AccordionItemButton"
-                        id="accordion__heading-raa-10"
+                        id="accordion__heading-ceci-est-un-sous-titre"
                         role="button"
                         tabindex="0"
                       >
@@ -595,7 +611,7 @@ exports[`DisplayContentContribution Accordions should replace details element wi
                       class="sc-dhKdcB hlTUsz"
                       data-accordion-component="AccordionItemPanel"
                       hidden=""
-                      id="accordion__panel-raa-10"
+                      id="accordion__panel-ceci-est-un-sous-titre"
                     >
                       <div
                         class="sc-bXCLTC fcbJdD"
@@ -624,14 +640,16 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
 <body>
   <div>
     <div
-      class="sc-ERObt zXiiV"
+      class="sc-eulNck hOEymR"
     >
       <div
-        class="sc-dNsVcS hThUYS"
+        class="sc-dExYaf hOgKYe"
         data-accordion-component="Accordion"
         data-testid="contrib-accordion"
       >
-        <div>
+        <div
+          id="ceci-est-le-titre-1"
+        >
           <div
             class="sc-jXbUNg heDTFL"
             data-accordion-component="AccordionItem"
@@ -641,12 +659,12 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
               data-accordion-component="AccordionItemHeading"
             >
               <div
-                aria-controls="accordion__panel-raa-7"
+                aria-controls="accordion__panel-ceci-est-le-titre-1"
                 aria-disabled="false"
                 aria-expanded="false"
                 class="sc-kpDqfm heoudo"
                 data-accordion-component="AccordionItemButton"
-                id="accordion__heading-raa-7"
+                id="accordion__heading-ceci-est-le-titre-1"
                 role="button"
                 tabindex="0"
               >
@@ -685,7 +703,7 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
               class="sc-dhKdcB hlTUsz"
               data-accordion-component="AccordionItemPanel"
               hidden=""
-              id="accordion__panel-raa-7"
+              id="accordion__panel-ceci-est-le-titre-1"
             >
               <div
                 class="sc-bXCLTC fcbJdD"
@@ -700,7 +718,9 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
             </div>
           </div>
         </div>
-        <div>
+        <div
+          id="ceci-est-le-titre-2"
+        >
           <div
             class="sc-jXbUNg crDDWD"
             data-accordion-component="AccordionItem"
@@ -710,12 +730,12 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
               data-accordion-component="AccordionItemHeading"
             >
               <div
-                aria-controls="accordion__panel-raa-8"
+                aria-controls="accordion__panel-ceci-est-le-titre-2"
                 aria-disabled="false"
                 aria-expanded="false"
                 class="sc-kpDqfm heoudo"
                 data-accordion-component="AccordionItemButton"
-                id="accordion__heading-raa-8"
+                id="accordion__heading-ceci-est-le-titre-2"
                 role="button"
                 tabindex="0"
               >
@@ -754,7 +774,7 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
               class="sc-dhKdcB hlTUsz"
               data-accordion-component="AccordionItemPanel"
               hidden=""
-              id="accordion__panel-raa-8"
+              id="accordion__panel-ceci-est-le-titre-2"
             >
               <div
                 class="sc-bXCLTC fcbJdD"
@@ -777,7 +797,7 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
 
 exports[`DisplayContentContribution Alerts should replace div with alert class in li component to Alert component 1`] = `
 <div
-  class="sc-ERObt zXiiV"
+  class="sc-eulNck hOEymR"
 >
   <div>
     <p>
@@ -843,7 +863,7 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
 
 exports[`DisplayContentContribution Alerts should replace div with alert class to Alert component 1`] = `
 <div
-  class="sc-ERObt zXiiV"
+  class="sc-eulNck hOEymR"
 >
   <div
     class="sc-jsJBEP ftwa-dj"
@@ -860,14 +880,16 @@ exports[`DisplayContentContribution Alerts should replace div with alert class t
 
 exports[`DisplayContentContribution Headings should not add headings higher than h6 for accordion 1`] = `
 <div
-  class="sc-ERObt zXiiV"
+  class="sc-eulNck hOEymR"
 >
   <div
-    class="sc-dNsVcS hThUYS"
+    class="sc-dExYaf hOgKYe"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
-    <div>
+    <div
+      id="ceci-est-un-titre"
+    >
       <div
         class="sc-jXbUNg heDTFL"
         data-accordion-component="AccordionItem"
@@ -877,12 +899,12 @@ exports[`DisplayContentContribution Headings should not add headings higher than
           data-accordion-component="AccordionItemHeading"
         >
           <div
-            aria-controls="accordion__panel-raa-0"
+            aria-controls="accordion__panel-ceci-est-un-titre"
             aria-disabled="false"
             aria-expanded="false"
             class="sc-kpDqfm heoudo"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-0"
+            id="accordion__heading-ceci-est-un-titre"
             role="button"
             tabindex="0"
           >
@@ -921,7 +943,7 @@ exports[`DisplayContentContribution Headings should not add headings higher than
           class="sc-dhKdcB hlTUsz"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-0"
+          id="accordion__panel-ceci-est-un-titre"
         >
           <div
             class="sc-bXCLTC fcbJdD"
@@ -942,94 +964,86 @@ exports[`DisplayContentContribution Headings should not add headings higher than
 exports[`DisplayContentContribution Tables should render correctly a table with multiple head lines 1`] = `
 <div>
   <div
-    class="sc-ERObt zXiiV"
+    class="sc-eulNck hOEymR"
   >
-    <div
-      class="sc-gFAWRd jDjoBq"
+    <table
+      class="sc-cmaqmh juENof"
     >
-      <div
-        class="sc-gmPhUn kUNTdL"
-      >
-        <table
-          class="sc-iMWBiJ Rlfrk"
-        >
-          <thead>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="2"
-              >
-                <p>
-                  <strong>
-                    Nature du contrat de mission
-                  </strong>
-                </p>
-              </td>
-              <td
-                colspan="2"
-                rowspan="1"
-              >
-                <p>
-                  <strong>
-                    Durée maximale
-                  </strong>
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p>
-                  <strong>
-                    Contrat de date à date
-                  </strong>
-                </p>
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p>
-                  <strong>
-                    Contrat sans terme certain
-                  </strong>
-                </p>
-              </td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p>
-                  Remplacement d’un salarié absent ou dont le contrat de travail est suspendu
-                </p>
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p>
-                  18 mois
-                </p>
-              </td>
-              <td
-                colspan="1"
-                rowspan="1"
-              >
-                <p>
-                  Fin de l’absence
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+      <thead>
+        <tr>
+          <td
+            colspan="1"
+            rowspan="2"
+          >
+            <p>
+              <strong>
+                Nature du contrat de mission
+              </strong>
+            </p>
+          </td>
+          <td
+            colspan="2"
+            rowspan="1"
+          >
+            <p>
+              <strong>
+                Durée maximale
+              </strong>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td
+            colspan="1"
+            rowspan="1"
+          >
+            <p>
+              <strong>
+                Contrat de date à date
+              </strong>
+            </p>
+          </td>
+          <td
+            colspan="1"
+            rowspan="1"
+          >
+            <p>
+              <strong>
+                Contrat sans terme certain
+              </strong>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            colspan="1"
+            rowspan="1"
+          >
+            <p>
+              Remplacement d’un salarié absent ou dont le contrat de travail est suspendu
+            </p>
+          </td>
+          <td
+            colspan="1"
+            rowspan="1"
+          >
+            <p>
+              18 mois
+            </p>
+          </td>
+          <td
+            colspan="1"
+            rowspan="1"
+          >
+            <p>
+              Fin de l’absence
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 `;

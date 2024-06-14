@@ -140,6 +140,85 @@ describe("Ordre des questions pour la CC 3248", () => {
                   "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées"
                 );
               });
+
+              describe("si il a répondu oui", () => {
+                beforeEach(() => {
+                  result = engine.setSituation(
+                    {
+                      ...defaultSituation,
+                      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
+                        "'A, B, C, D ou E'",
+                      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
+                        "'Non'",
+                      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
+                        "'Oui'",
+                      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour":
+                        "'Oui'",
+                      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+                        "'Oui'",
+                    },
+                    "contrat salarié . indemnité de licenciement . résultat conventionnel"
+                  );
+                });
+
+                it("doit demander la durée", () => {
+                  expect(result.missingArgs).toHaveNextMissingRule(
+                    "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée"
+                  );
+                });
+
+                describe("si il renseigne la durée", () => {
+                  beforeEach(() => {
+                    result = engine.setSituation(
+                      {
+                        ...defaultSituation,
+                        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
+                          "'A, B, C, D ou E'",
+                        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
+                          "'Non'",
+                        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
+                          "'Oui'",
+                        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour":
+                          "'Oui'",
+                        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+                          "'Oui'",
+                        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée":
+                          "5",
+                      },
+                      "contrat salarié . indemnité de licenciement . résultat conventionnel"
+                    );
+                  });
+
+                  it("ne doit pas demander de prochaine question", () => {
+                    expect(result.missingArgs).toHaveNextMissingRule(null);
+                  });
+                });
+              });
+
+              describe("si il a répondu non", () => {
+                beforeEach(() => {
+                  result = engine.setSituation(
+                    {
+                      ...defaultSituation,
+                      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
+                        "'A, B, C, D ou E'",
+                      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre":
+                        "'Non'",
+                      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
+                        "'Oui'",
+                      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour":
+                        "'Oui'",
+                      "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+                        "'Non'",
+                    },
+                    "contrat salarié . indemnité de licenciement . résultat conventionnel"
+                  );
+                });
+
+                it("ne doit pas demander de prochaine question", () => {
+                  expect(result.missingArgs).toHaveNextMissingRule(null);
+                });
+              });
             });
           });
         });
@@ -205,6 +284,10 @@ describe("Ordre des questions pour la CC 3248", () => {
       it("doit demander son age", () => {
         expect(result.missingArgs).toHaveNextMissingRule(
           "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age"
+        );
+
+        expect(result.missingArgs).toHaveNextMissingQuestion(
+          "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?"
         );
       });
 

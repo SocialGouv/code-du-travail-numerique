@@ -1,0 +1,9 @@
+contrat salarié . convention collective . commerce gros et detail alimentation . rupture conventionnelle:
+  valeur: oui
+
+contrat salarié . convention collective . commerce gros et detail alimentation . rupture conventionnelle . licenciement économique age:
+  remplace: contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?
+  cdtn:
+    type: entier

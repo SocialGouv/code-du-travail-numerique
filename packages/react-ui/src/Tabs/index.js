@@ -3,7 +3,6 @@ import React from "react";
 import { Tab, TabList, TabPanel, Tabs as RootTabs } from "react-tabs";
 import styled from "styled-components";
 
-import { OverflowWrapper } from "../OverflowWrapper";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
 import { animations, box, breakpoints, fonts, spacings } from "../theme";
 import { getTextFromComponent } from "../utils/getTextFromComponent.js";
@@ -27,7 +26,11 @@ export const Tabs = (props) => {
             {data.map(({ tab }, index) => (
               <StyledTab
                 key={index}
-                data-testid={`${props["data-testid"]}-${index}`}
+                data-testid={
+                  props["data-testid"]
+                    ? `${props["data-testid"]}-${index}`
+                    : undefined
+                }
               >
                 {getTextFromComponent(tab)}
               </StyledTab>
@@ -70,7 +73,8 @@ const StyledTabs = styled(RootTabs)`
   }
 `;
 
-const StyledOverflowWrapper = styled(OverflowWrapper)`
+const StyledOverflowWrapper = styled.div`
+  overflow-x: auto;
   margin-right: ${spacings.tiny};
 `;
 

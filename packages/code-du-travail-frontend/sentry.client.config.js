@@ -9,6 +9,9 @@ Sentry.init({
     process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.SENTRY_PUBLIC_DSN || "",
   environment:
     process.env.NEXT_PUBLIC_SENTRY_ENV || process.env.SENTRY_ENV || "dev",
-  tracesSampleRate: 0.2,
+  tracesSampleRate: 0.1,
   release: process.env.NEXT_PUBLIC_SENTRY_RELEASE || process.env.SENTRY_RELEASE,
+  integrations: [new Sentry.Replay({ maskAllText: true, blockAllMedia: true })],
+  replaysSessionSampleRate: 0,
+  replaysOnErrorSampleRate: 1.0,
 });

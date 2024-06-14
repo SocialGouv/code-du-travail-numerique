@@ -1,8 +1,8 @@
 import { render, RenderResult, waitFor } from "@testing-library/react";
 import { UserAction } from "../../../common";
 import React from "react";
-import { CalculateurIndemnite } from "../index";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../index";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -57,7 +57,11 @@ describe("Indemnité licenciement - Validation de la page information", () => {
     let userAction: UserAction;
     beforeEach(async () => {
       rendering = await render(
-        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
       );
       userAction = new UserAction();
       userAction
@@ -183,7 +187,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       ).toBeChecked();
       expect(
         ui.information.agreement16.dateProCategoryChanged.get()
-      ).toHaveValue("01/01/2010");
+      ).toHaveValue("2010-01-01");
       expect(ui.information.agreement16.engineerAge.get()).toHaveValue(38);
 
       // validation que les infos sont effacées quand on change de convention collective

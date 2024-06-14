@@ -25,7 +25,8 @@ describe("Formule indemnité licenciement - CC 3239", () => {
     ({ category, seniority, expectedFormula, expectedExplanations }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC3239'",
-        "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
+          category,
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires":
           "10000",

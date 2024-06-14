@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import request from "supertest";
 import server from "nextjs-http-supertest";
 import Data from "../../../scripts/data/documents_data.json";
@@ -16,7 +18,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(404);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=NOT-FOUND&convention=false&employer=true&open=true&matchingLimit=0`,
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=NOT-FOUND&convention=false&open=true&matchingLimit=0`,
       { headers: { referer: "cdtn-api" } }
     );
 
@@ -38,7 +40,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=La%20p%C3%AAche%20%C3%A0%20la%20ligne&convention=false&employer=true&open=true&matchingLimit=0",
+      "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=La%20p%C3%AAche%20%C3%A0%20la%20ligne&convention=false&open=true&matchingLimit=0",
       { headers: { referer: "cdtn-api" } }
     );
   });
@@ -99,7 +101,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&employer=true&open=true&matchingLimit=0`,
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&open=true&matchingLimit=0`,
       { headers: { referer: "cdtn-api" } }
     );
 
@@ -121,7 +123,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=hello&convention=false&employer=true&open=true&matchingLimit=0&address=my%20address",
+      "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=hello&convention=false&open=true&matchingLimit=0&address=my%20address",
       { headers: { referer: "cdtn-api" } }
     );
   });
@@ -151,7 +153,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&employer=true&open=true&matchingLimit=0`,
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&open=true&matchingLimit=0`,
       { headers: { referer: "cdtn-api" } }
     );
 
@@ -190,7 +192,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&employer=true&open=true&matchingLimit=0`,
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&open=true&matchingLimit=0`,
       { headers: { referer: "cdtn-api" } }
     );
 
@@ -254,7 +256,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&employer=true&open=true&matchingLimit=0`,
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&open=true&matchingLimit=0`,
       { headers: { referer: "cdtn-api" } }
     );
 
@@ -284,7 +286,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&employer=true&open=true&matchingLimit=0`,
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&open=true&matchingLimit=0`,
       { headers: { referer: "cdtn-api" } }
     );
 
@@ -323,7 +325,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&employer=true&open=true&matchingLimit=0`,
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&open=true&matchingLimit=0`,
       { headers: { referer: "cdtn-api" } }
     );
 
@@ -373,7 +375,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&employer=true&open=true&matchingLimit=0`,
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&open=true&matchingLimit=0`,
       { headers: { referer: "cdtn-api" } }
     );
 
@@ -421,7 +423,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&employer=true&open=true&matchingLimit=0`,
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&open=true&matchingLimit=0`,
       { headers: { referer: "cdtn-api" } }
     );
 
@@ -469,7 +471,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&employer=true&open=true&matchingLimit=0`,
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&open=true&matchingLimit=0`,
       { headers: { referer: "cdtn-api" } }
     );
 
@@ -524,7 +526,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&employer=true&open=true&matchingLimit=0`,
+      `https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=false&open=true&matchingLimit=0`,
       { headers: { referer: "cdtn-api" } }
     );
 

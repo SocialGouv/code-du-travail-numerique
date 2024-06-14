@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: master
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
@@ -25,7 +27,7 @@ jobs:
           yarn install --immutable
       - name: Run test e2e
         run: |
-          TEST_BASEURL=https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr ALL_TEST=true yarn test:e2e
+          TEST_BASEURL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr ALL_TEST=true yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v3
@@ -33,3 +35,17 @@ jobs:
           name: e2e-screenshots
           path: |
             packages/code-du-travail-frontend/cypress/screenshots
+      - name: Send message to mattermost when done
+        uses: mattermost/action-mattermost-notify@master
+        if: always()
+        with:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          TEXT: |-
+            Les tests automatiques e2e sont terminés: **${{ job.status }}** ([logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})).
+      - name: Ping the team when failed
+        uses: mattermost/action-mattermost-notify@master
+        if: failure()
+        with:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          TEXT: |-
+            Tests e2e en échec @max @victorz @carolinebda @martial :scream:

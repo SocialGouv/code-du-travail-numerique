@@ -1,4 +1,5 @@
-import { ElasticSearchContribution, SOURCES } from "@socialgouv/cdtn-utils";
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import { ElasticSearchContribution } from "@socialgouv/cdtn-types";
 import React from "react";
 import References from "../common/References";
 

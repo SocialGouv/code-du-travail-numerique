@@ -3,13 +3,13 @@
 exports[`<CallToActionTile /> should render 1`] = `
 <div>
   <div
-    class="sc-fTFjTM gXLDjJ sc-lnPyaJ loWhWN"
+    class="sc-ibQAlb jRDQvX sc-ktPPKK bboxQq"
   >
     <div
-      class="sc-gmgFlS dlfKdE"
+      class="sc-guJBdh jBpgpS"
     >
       <div
-        class="sc-ktJbId hAA-dr"
+        class="sc-jGKxIK hbhiZV"
       >
         <svg
           aria-hidden="true"
@@ -36,10 +36,10 @@ exports[`<CallToActionTile /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="sc-kMkxaj dwuMYa"
+        class="sc-hZDyAQ tqlOz"
       >
         <p
-          class="sc-jIGnZt issdxz"
+          class="sc-ktJbId fhphst"
         >
           <a
             href="/test"
@@ -50,19 +50,19 @@ exports[`<CallToActionTile /> should render 1`] = `
       </div>
     </div>
     <div
-      class="sc-fBdRDi mhKrF"
+      class="sc-gmgFlS ikhbYa"
     >
       <div
-        class="sc-iXzfSG jXIbFS"
+        class="sc-fMMURN kUcQRI"
       >
         <p>
           Cette tuile vous fera dire bonjour !
         </p>
         <div
-          class="sc-eulNck bCoRam"
+          class="sc-YysOf aTCxW"
         >
           <p
-            class="sc-jGKxIK QfhnJ"
+            class="sc-krNlru cdYvzt"
           >
             Bonjour
              

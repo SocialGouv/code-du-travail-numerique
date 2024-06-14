@@ -1,4 +1,3 @@
-import type { MissingArgs } from "../../../../../publicodes";
 import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 
 const engine = new IndemniteLicenciementPublicodes(
@@ -16,22 +15,11 @@ describe("CC 176 - Affiche les questions", () => {
       },
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
-    expect(getFirstMissing(result.missingArgs)).toEqual(
+    expect(result.missingArgs).toHaveNextMissingRule(
       "contrat salarié . convention collective . industrie pharmaceutique . age"
+    );
+    expect(result.missingArgs).toHaveNextMissingQuestion(
+      "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
     );
   });
 });
-
-const getFirstMissing = (missingVariables: MissingArgs[]): string | null => {
-  const missingVars = missingVariables
-    .filter((arg) => arg.rawNode.cdtn !== undefined)
-    .sort((a, b) => b.indice - a.indice);
-  if (missingVars.length === 0) {
-    return null;
-  }
-  return replaceAll(missingVars[0].name, " - ", " . ");
-};
-
-const replaceAll = (string: string, search: string, replace: string) => {
-  return string.split(search).join(replace);
-};

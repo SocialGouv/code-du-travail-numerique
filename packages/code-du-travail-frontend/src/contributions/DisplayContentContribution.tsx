@@ -1,10 +1,5 @@
-import {
-  Accordion,
-  Alert,
-  Heading,
-  Table as UITable,
-  theme,
-} from "@socialgouv/cdtn-ui";
+import { Alert, Heading, Table as UITable, theme } from "@socialgouv/cdtn-ui";
+import { AccordionWithAnchor as Accordion } from "../../src/common/AccordionWithAnchor";
 
 import styled from "styled-components";
 import { FicheServicePublic } from "../fiche-service-public";
@@ -79,7 +74,7 @@ const theadMaxRowspan = (tr: Element) => {
     }
   });
   const maxRowspan = rowspans.reduce(
-    (previousValue, currentValue, currentIndex, array) =>
+    (previousValue, currentValue) =>
       currentValue > previousValue ? currentValue : previousValue,
     0
   );

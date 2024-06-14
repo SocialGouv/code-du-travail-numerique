@@ -1,3 +1,8 @@
+export const formatToEuro = new Intl.NumberFormat("fr-FR", {
+  style: "currency",
+  currency: "EUR",
+}).format;
+
 describe("Outil - Indemnité de licenciement", () => {
   it("Calcul de l'indemnité de licenciement", () => {
     cy.visit("/outils/indemnite-licenciement");
@@ -13,9 +18,9 @@ describe("Outil - Indemnité de licenciement", () => {
     cy.get("#route-none").check();
     cy.contains("Suivant").click();
 
-    cy.get("#dateEntree").type("01/01/2000");
-    cy.get("#dateNotification").type("01/06/2023");
-    cy.get("#dateSortie").type("01/06/2023");
+    cy.get("#dateEntree").type("2000-01-01");
+    cy.get("#dateNotification").type("2023-06-01");
+    cy.get("#dateSortie").type("2023-06-01");
 
     cy.contains("Oui").click();
     cy.get("[name='0.duration']").type("1");
@@ -32,7 +37,7 @@ describe("Outil - Indemnité de licenciement", () => {
       "contain",
       "À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à :"
     );
-    cy.get("form p strong").should("contain", "6916,67\u00a0€.");
+    cy.get("form p strong").should("contain", formatToEuro(6916.67));
     cy.get("form p").should(
       "contain",
       "Attention il peut exister un montant plus favorable"

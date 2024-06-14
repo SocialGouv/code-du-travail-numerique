@@ -2,7 +2,7 @@ import { formatIdcc, PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Text } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../../types";
 import { Question } from "../../Question";
 import ShowAlert from "../components/ShowAlert";
 import { AgreementSupportInfo } from "../types";

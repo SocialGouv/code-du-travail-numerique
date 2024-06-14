@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Paragraph, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../../types";
 import { SearchParams } from "../../../ConventionCollective/common/NavContext";
 import { TrackingProps } from "../../../ConventionCollective/types";
 import styled from "styled-components";
@@ -23,6 +23,7 @@ export type Props = {
   alertAgreementNotSupported?: (string) => JSX.Element;
   simulator: PublicodesSimulator | "QUESTIONNAIRE";
   isDisabled?: boolean;
+  noAgreementFoundComponent?: JSX.Element;
 } & TrackingProps;
 
 const EnterpriseSearch = ({
@@ -34,6 +35,7 @@ const EnterpriseSearch = ({
   alertAgreementNotSupported,
   simulator,
   isDisabled,
+  noAgreementFoundComponent,
 }: Props): JSX.Element => {
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
     selectedEnterprise
@@ -70,6 +72,7 @@ const EnterpriseSearch = ({
             supportedAgreements={supportedAgreements}
             alertAgreementNotSupported={alertAgreementNotSupported}
             simulator={simulator}
+            noAgreementFoundComponent={noAgreementFoundComponent}
           />
         )}
       </>
