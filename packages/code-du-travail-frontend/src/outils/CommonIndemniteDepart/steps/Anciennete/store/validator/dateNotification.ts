@@ -1,4 +1,4 @@
-import { differenceInMonths, isAfter } from "date-fns";
+import { differenceInMonths, isAfter, isValid } from "date-fns";
 import { parse } from "../../../../../common/utils";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 
@@ -13,7 +13,7 @@ export const getDateNotificationErrors = (
   // Date de notification
   if (!state.dateNotification) {
     errors.errorDateNotification = "Veuillez saisir cette date";
-  } else if (dNotification.getFullYear().toString().length !== 4) {
+  } else if (!isValid(dNotification)) {
     errors.errorDateNotification = "La date de notification est invalide";
   } else if (
     state.dateNotification &&
