@@ -1,4 +1,4 @@
-import { format, isAfter } from "date-fns";
+import { format, isAfter, isValid } from "date-fns";
 import { parse } from "../../../../../common/utils";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 import frLocale from "date-fns/locale/fr";
@@ -12,6 +12,8 @@ export const getDateSortieErrors = (
 
   if (!state.dateSortie) {
     errors.errorDateSortie = "Veuillez saisir cette date";
+  } else if (!isValid(dSortie)) {
+    errors.errorDateSortie = "La date de sortie est invalide";
   } else if (
     state.dateEntree &&
     state.dateSortie &&
