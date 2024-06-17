@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.143.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.142.0...v4.143.0) (2024-06-17)
+
+### Bug Fixes
+
+- **simulateur indemnité de licenciement:** ajout d'une validation pour bloquer les utilisateurs qui entrent des dates de type "23/05/272024" ([#5965](https://github.com/SocialGouv/code-du-travail-numerique/issues/5965)) ([9a39511](https://github.com/SocialGouv/code-du-travail-numerique/commit/9a39511477edaf9ab2342bf6a8fd5fbf5493bad4))
+
+### Features
+
+- CC fusions ([#5967](https://github.com/SocialGouv/code-du-travail-numerique/issues/5967)) ([1af11e9](https://github.com/SocialGouv/code-du-travail-numerique/commit/1af11e96c493909487fddb85b12a2a6409d162a3))
+- **sentry:** upgrade to V8 + use default setup configuration to use `opentelemetry` ([#5960](https://github.com/SocialGouv/code-du-travail-numerique/issues/5960)) ([146f8f2](https://github.com/SocialGouv/code-du-travail-numerique/commit/146f8f2ec4f096d27890561e446f552b8144754f))
+
 # [4.142.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.141.0...v4.142.0) (2024-06-13)
 
 ### Bug Fixes
