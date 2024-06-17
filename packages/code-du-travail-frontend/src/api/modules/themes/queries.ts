@@ -61,5 +61,6 @@ export function getThemeBySlugsQuery(slugs: string[]) {
       },
     },
     sort: [{ position: { order: "asc" } }],
+    size: 500,
   };
 }
