@@ -33,28 +33,6 @@ const Home = ({
         noTitleAdd
         description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
       />
-      <button
-        onClick={() => {
-          throw "Erreur côté frontend";
-        }}
-      >
-        Throw erreur
-      </button>
-
-      <button
-        onClick={() => {
-          throw new Error("Erreur côté frontend avec stacktrace");
-        }}
-      >
-        Throw erreur avec stacktrace
-      </button>
-      <button
-        onClick={() => {
-          Sentry.captureException(new Error("Good bye"));
-        }}
-      >
-        Capture une exception
-      </button>
       <SearchHero />
       {highlights.length > 0 && (
         <Highlights
