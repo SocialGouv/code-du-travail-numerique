@@ -1,13 +1,13 @@
-import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+import { RuptureConventionnellePublicodes } from "../../../../../publicodes";
 
-const engine = new IndemniteLicenciementPublicodes(
-  modelsIndemniteLicenciement,
+const engine = new RuptureConventionnellePublicodes(
+  modelsRuptureConventionnel,
   "3248"
 );
 
 describe("Notifications pour la CC 3248", () => {
-  test("Notification bloquante quand la date de notification est avant le 01/01/2024", () => {
-    engine.setSituation({
+  test("On ne doit pas afficher de notification quand la date de notification est avant le 01/01/2024", () => {
+    engine.calculate({
       "contrat salarié . convention collective": "'IDCC3248'",
       "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
         "'A, B, C, D ou E'",
@@ -32,11 +32,7 @@ describe("Notifications pour la CC 3248", () => {
     });
 
     const notifications = engine.getNotifications();
-    expect(notifications).toHaveLength(1);
-    expect(notifications[0].description).toBe(
-      "Attention, comme le licenciement a été notifié avant le 01/01/2024, le montant de l'indemnité peut ne pas correspondre au résultat donné. En effet, jusqu'au 31/12/2023 ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie (IDCC 650) qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024. Si le licenciement a été notifié avant le 01/01/2024 et que le salarié dépendait de la convention spécifique aux ingénieurs et cadres de la métallurgie (IDCC 650) il faut sélectionner cette convention collective à l'étape n°3 du simulateur pour obtenir le résultat correspondant."
-    );
-    expect(notifications[0].show).toBe("légal et conventionnel");
+    expect(notifications).toHaveLength(0);
   });
 
   test("le salarié est non cadre (catégorie A à E) + qu'il a renseigné une absence de plus de 12 mois continue parmi les congés suivant : congé pour création d'entreprise, congé sabbatique, congé sans solde", () => {

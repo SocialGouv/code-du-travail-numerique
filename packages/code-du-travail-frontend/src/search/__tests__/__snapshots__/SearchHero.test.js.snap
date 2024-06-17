@@ -3,44 +3,44 @@
 exports[`<SearchHero /> should render 1`] = `
 <div>
   <div
-    class="sc-gEvEer hpVpdb sc-kqGoIF cszLK"
+    class="sc-gEvEer hpVpdb sc-lnPyaJ cWUfkT"
   >
     <div
-      class="sc-aXZVg sc-dxcDKg gZgZQL jXQEqM"
+      class="sc-aXZVg sc-eulNck gZgZQL dczUkd"
     >
       <header
-        class="sc-gvZAcH fhFjzA"
+        class="sc-dExYaf cwSspm"
       >
         <h1
-          class="sc-kRRyDe coXcFM"
+          class="sc-iapWAC hgrGfO"
         >
           Bienvenue sur 
           <br />
           <span
-            class="sc-ERObt gkMWjU"
+            class="sc-dxcDKg fOHrcd"
           >
             le Code du travail numérique
           </span>
         </h1>
         <h2
-          class="sc-knuQbY kmxKFr"
+          class="sc-kqGoIF kOMleA"
         >
           Obtenez les réponses à vos questions sur le droit du travail.
         </h2>
       </header>
       <label
-        class="sc-kMribo dImuEu"
+        class="sc-knuQbY lbnMWg"
         for="searchbar"
         id="search"
       >
         Recherchez par mots-clés
       </label>
       <div
-        class="sc-bdOgaJ jrVcYa"
+        class="sc-ERObt dKVziZ"
       >
         <form
           action="/recherche"
-          class="sc-eBHhsj iMwIuf"
+          class="sc-cVzyXs iRvGjI"
           role="search"
         >
           <div
@@ -54,7 +54,7 @@ exports[`<SearchHero /> should render 1`] = `
           </div>
           <svg
             aria-hidden="true"
-            class="sc-iXzfSG sc-lnPyaJ fajOGK kuXojd"
+            class="sc-ePDLzJ sc-bVVIoq cjpeUy bYcuok"
             fill="none"
             viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@ exports[`<SearchHero /> should render 1`] = `
               aria-controls="react-autowhatever-1"
               aria-label="recherchez par mots-clés"
               autocomplete="off"
-              class="sc-eulNck kXPgKv"
+              class="sc-dPZUQH bfTFiT"
               id="searchbar"
               name="q"
               placeholder="congés payés, durée de préavis"
@@ -85,14 +85,14 @@ exports[`<SearchHero /> should render 1`] = `
               value=""
             />
             <div
-              class="sc-dPZUQH eZA-Dme"
+              class="sc-YysOf bZIRlW"
               id="react-autowhatever-1"
               role="listbox"
             />
           </div>
           <button
             aria-label="Lancer ma recherche"
-            class="sc-kOPcWz cefBoA sc-dExYaf fNedon"
+            class="sc-kOPcWz cefBoA sc-eBHhsj kKQfO"
             title="Lancer ma recherche"
             type="submit"
           >
@@ -101,11 +101,11 @@ exports[`<SearchHero /> should render 1`] = `
         </form>
       </div>
       <div
-        class="sc-dNsVcS iTIPc"
+        class="sc-gvZAcH gzBrmO"
       >
         <svg
           aria-hidden="true"
-          class="sc-fulCBj gUerwk"
+          class="sc-kRRyDe leodMn"
           fill="none"
           viewBox="0 0 616 514"
           xmlns="http://www.w3.org/2000/svg"

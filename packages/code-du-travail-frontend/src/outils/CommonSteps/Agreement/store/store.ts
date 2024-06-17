@@ -111,21 +111,25 @@ const createCommonAgreementStore: StoreSlicePublicode<
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
-      window.localStorage.setItem(
-        STORAGE_KEY_AGREEMENT,
-        JSON.stringify(agreement)
-      );
+      if (agreement) {
+        window.localStorage.setItem(
+          STORAGE_KEY_AGREEMENT,
+          JSON.stringify(agreement)
+        );
+      } else {
+        window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+      }
       applyGenericValidation(get, set, "enterprise", enterprise);
       const idcc = agreement?.num?.toString();
-      if (idcc) {
-        set(
-          produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-            state.agreementData.publicodes = loadPublicodes(simulator, idcc);
-            state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-              isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
-          })
-        );
-      }
+      set(
+        produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+          state.agreementData.publicodes = loadPublicodes(simulator, idcc);
+          state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
+            idcc
+              ? isCcFullySupportedIndemniteLicenciement(parseInt(idcc))
+              : false;
+        })
+      );
       const isOk = get().informationsFunction.generatePublicodesQuestions();
       set(
         produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {

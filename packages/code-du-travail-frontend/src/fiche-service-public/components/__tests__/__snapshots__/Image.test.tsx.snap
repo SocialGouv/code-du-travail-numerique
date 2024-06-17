@@ -4,7 +4,7 @@ exports[`Image should display image and caption 1`] = `
 <div>
   <figure
     aria-label="Comment calculer un délai quand il y a un jour férié ?"
-    class="sc-lnPyaJ cTqSBf"
+    class="sc-bVVIoq kewZOe"
     role="group"
   >
     <img
@@ -12,7 +12,7 @@ exports[`Image should display image and caption 1`] = `
       src="https://www.service-public.fr/webapp/images/vdd/extralarge/I4596.jpg"
     />
     <figcaption
-      class="sc-eulNck dePiHy"
+      class="sc-dPZUQH cnPGFO"
     >
       <span>
         Crédits : 

@@ -34,21 +34,22 @@ export class Legal {
     publicodes: PublicodesBase<PublicodesIndemniteLicenciementResult>,
     disableIneligibilityWithSeniority: boolean
   ): IndemniteDepartOutput<PublicodesIndemniteLicenciementResult> {
-    const ineligibility = this.ineligibility.getIneligibility(args);
+    let legalArgs = this.removeAgreementFields(args);
+    const ineligibility = this.ineligibility.getIneligibility(legalArgs);
     if (ineligibility) {
       return mapIneligibility(ineligibility);
     }
-    args = mapLegalSeniorityArgs(args, this.seniority);
-    args = mapLegalRequiredSeniorityArgs(args, this.seniority);
+    legalArgs = mapLegalSeniorityArgs(legalArgs, this.seniority);
+    legalArgs = mapLegalRequiredSeniorityArgs(legalArgs, this.seniority);
     if (!disableIneligibilityWithSeniority) {
       const ineligibilityWithSeniority =
-        this.ineligibility.getIneligibility(args);
+        this.ineligibility.getIneligibility(legalArgs);
       if (ineligibilityWithSeniority) {
         return mapIneligibility(ineligibilityWithSeniority);
       }
     }
-    args = mapLegalSalaryArgs(args, this.salary);
-    const situation = removeNonPublicodeFields(args);
+    legalArgs = mapLegalSalaryArgs(legalArgs, this.salary);
+    const situation = removeNonPublicodeFields(legalArgs);
     const result = publicodes.setSituation(
       situation,
       "contrat salarié . indemnité de licenciement . résultat légal"
@@ -66,5 +67,18 @@ export class Legal {
       result: result.result,
       type: "result",
     };
+  }
+
+  private removeAgreementFields(
+    args: Record<string, string | undefined>
+  ): Record<string, string | undefined> {
+    return Object.keys(args)
+      .filter(
+        (key) => !key.startsWith("contrat salarié . convention collective")
+      )
+      .reduce((obj: Record<string, string | undefined>, key) => {
+        obj[key] = args[key];
+        return obj;
+      }, {});
   }
 }

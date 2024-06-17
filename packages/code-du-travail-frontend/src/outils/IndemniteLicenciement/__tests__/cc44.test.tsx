@@ -1,8 +1,7 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
-import userEvent from "@testing-library/user-event";
 import { UserAction } from "../../../common";
 
 jest.spyOn(Storage.prototype, "setItem");
@@ -18,6 +17,7 @@ Storage.prototype.getItem = jest.fn(
 );
 
 describe("Indemnité licenciement - CC 44", () => {
+  let userAction: UserAction;
   describe("parcours avec la convention collective pour valider ses spécificités AVEC PREAVIS", () => {
     beforeEach(() => {
       render(
@@ -27,32 +27,25 @@ describe("Indemnité licenciement - CC 44", () => {
           displayTitle={""}
         />
       );
-      userEvent.click(ui.introduction.startButton.get());
-      userEvent.click(ui.contract.type.cdi.get());
-      userEvent.click(ui.contract.fauteGrave.non.get());
-      userEvent.click(ui.contract.inaptitude.non.get());
-      userEvent.click(ui.contract.arretTravail.non.get());
-      userEvent.click(ui.next.get());
-      userEvent.click(ui.next.get());
-      userEvent.selectOptions(
+      userAction = new UserAction();
+      userAction.click(ui.introduction.startButton.get());
+      userAction.click(ui.contract.type.cdi.get());
+      userAction.click(ui.contract.fauteGrave.non.get());
+      userAction.click(ui.contract.inaptitude.non.get());
+      userAction.click(ui.contract.arretTravail.non.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.next.get());
+      userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
       );
-      fireEvent.change(ui.information.agreement44.age.get(), {
-        target: { value: "38" },
-      });
-      userEvent.click(ui.next.get());
-      fireEvent.change(ui.seniority.startDate.get(), {
-        target: { value: "01/01/2000" },
-      });
-      fireEvent.change(ui.seniority.notificationDate.get(), {
-        target: { value: "01/01/2022" },
-      });
-      fireEvent.change(ui.seniority.endDate.get(), {
-        target: { value: "01/03/2022" },
-      });
-      userEvent.click(ui.seniority.hasAbsence.non.get());
-      userEvent.click(ui.next.get());
+      userAction.setInput(ui.information.agreement44.age.get(), "38");
+      userAction.click(ui.next.get());
+      userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
+      userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
+      userAction.setInput(ui.seniority.endDate.get(), "01/03/2022");
+      userAction.click(ui.seniority.hasAbsence.non.get());
+      userAction.click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
     });
@@ -63,14 +56,14 @@ describe("Indemnité licenciement - CC 44", () => {
       - vérification que l'on ne demande pas si le salaire a eu des primes pour un Ingénieurs et cadres (Groupe V)
     `, () => {
       // vérification que l'on demande si le salaire a eu des primes pour un Ouvriers et collaborateurs (Groupes I à III)
-      userEvent.click(ui.salary.hasPartialTime.non.get());
-      userEvent.click(ui.salary.hasSameSalary.oui.get());
+      userAction.click(ui.salary.hasPartialTime.non.get());
+      userAction.click(ui.salary.hasSameSalary.oui.get());
       expect(
         screen.queryByText(
           "Les salaires indiqués comportent-ils une partie variable ?"
         )
       ).not.toBeInTheDocument();
-      userEvent.click(ui.salary.hasSameSalary.non.get());
+      userAction.click(ui.salary.hasSameSalary.non.get());
       expect(
         screen.queryByText(
           "Les salaires indiqués comportent-ils une partie variable ?"
@@ -78,24 +71,22 @@ describe("Indemnité licenciement - CC 44", () => {
       ).toBeInTheDocument();
 
       // vérification que l'on demande si le salaire a eu des primes pour un Agents de maîtrise et techniciens (Groupe IV)
-      userEvent.click(ui.previous.get());
-      userEvent.click(ui.previous.get());
-      userEvent.selectOptions(
+      userAction.click(ui.previous.get());
+      userAction.click(ui.previous.get());
+      userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Agents de maîtrise et techniciens (Groupe IV)"
       );
-      fireEvent.change(ui.information.agreement44.age.get(), {
-        target: { value: "36" },
-      });
-      userEvent.click(ui.next.get());
-      userEvent.click(ui.next.get());
-      userEvent.click(ui.salary.hasSameSalary.oui.get());
+      userAction.setInput(ui.information.agreement44.age.get(), "36");
+      userAction.click(ui.next.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.salary.hasSameSalary.oui.get());
       expect(
         screen.queryByText(
           "Les salaires indiqués comportent-ils une partie variable ?"
         )
       ).not.toBeInTheDocument();
-      userEvent.click(ui.salary.hasSameSalary.non.get());
+      userAction.click(ui.salary.hasSameSalary.non.get());
       expect(
         screen.queryByText(
           "Les salaires indiqués comportent-ils une partie variable ?"
@@ -103,25 +94,23 @@ describe("Indemnité licenciement - CC 44", () => {
       ).toBeInTheDocument();
 
       // vérification que l'on demande si le salaire a eu des primes pour un Ingénieurs et cadres (Groupe V)
-      userEvent.click(ui.previous.get());
-      userEvent.click(ui.previous.get());
-      userEvent.selectOptions(
+      userAction.click(ui.previous.get());
+      userAction.click(ui.previous.get());
+      userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Ingénieurs et cadres (Groupe V)"
       );
-      fireEvent.change(ui.information.agreement44.age.get(), {
-        target: { value: "36" },
-      });
-      userEvent.click(ui.next.get());
-      userEvent.click(ui.next.get());
-      userEvent.click(ui.salary.hasSameSalary.oui.get());
+      userAction.setInput(ui.information.agreement44.age.get(), "36");
+      userAction.click(ui.next.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.salary.hasSameSalary.oui.get());
 
       expect(
         screen.queryByText(
           "Les salaires indiqués comportent-ils une partie variable ?"
         )
       ).not.toBeInTheDocument();
-      userEvent.click(ui.salary.hasSameSalary.non.get());
+      userAction.click(ui.salary.hasSameSalary.non.get());
       expect(
         screen.queryByText(
           "Les salaires indiqués comportent-ils une partie variable ?"
@@ -131,25 +120,21 @@ describe("Indemnité licenciement - CC 44", () => {
 
     test(`Ajout des questions supplémentaires pour le dernier salaire`, () => {
       // vérification que l'on demande si le salaire a eu des primes pour un Ouvriers et collaborateurs (Groupes I à III)
-      userEvent.click(ui.salary.hasPartialTime.non.get());
-      userEvent.click(ui.salary.hasSameSalary.non.get());
-      userEvent.click(ui.salary.variablePart.non.get());
+      userAction.click(ui.salary.hasPartialTime.non.get());
+      userAction.click(ui.salary.hasSameSalary.non.get());
+      userAction.click(ui.salary.variablePart.non.get());
       expect(
         screen.queryByText(
           "Connaissez-vous le montant du dernier salaire perçu (préavis inclus) ?"
         )
       ).toBeInTheDocument();
-      userEvent.click(ui.salary.agreement44.knowingLastSalary.oui.get());
+      userAction.click(ui.salary.agreement44.knowingLastSalary.oui.get());
       expect(
         screen.queryByText("Salaire et primes perçus au cours du dernier mois")
       ).toBeInTheDocument();
-      fireEvent.change(ui.salary.agreement44.salaries.get(), {
-        target: { value: "2500" },
-      });
-      fireEvent.change(ui.salary.agreement44.primes.get(), {
-        target: { value: "500" },
-      });
-      userEvent.click(ui.next.get());
+      userAction.setInput(ui.salary.agreement44.salaries.get(), "2500");
+      userAction.setInput(ui.salary.agreement44.primes.get(), "500");
+      userAction.click(ui.next.get());
     });
   });
 
@@ -162,77 +147,46 @@ describe("Indemnité licenciement - CC 44", () => {
           displayTitle={""}
         />
       );
-      userEvent.click(ui.introduction.startButton.get());
-      userEvent.click(ui.contract.type.cdi.get());
-      userEvent.click(ui.contract.fauteGrave.non.get());
-      userEvent.click(ui.contract.inaptitude.non.get());
-      userEvent.click(ui.contract.arretTravail.non.get());
-      userEvent.click(ui.next.get());
-      userEvent.click(ui.next.get());
-      userEvent.selectOptions(
+      userAction = new UserAction();
+      userAction.click(ui.introduction.startButton.get());
+      userAction.click(ui.contract.type.cdi.get());
+      userAction.click(ui.contract.fauteGrave.non.get());
+      userAction.click(ui.contract.inaptitude.non.get());
+      userAction.click(ui.contract.arretTravail.non.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.next.get());
+      userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
       );
-      fireEvent.change(ui.information.agreement44.age.get(), {
-        target: { value: "40" },
-      });
-      userEvent.click(ui.next.get());
-      fireEvent.change(ui.seniority.startDate.get(), {
-        target: { value: "01/01/2000" },
-      });
-      fireEvent.change(ui.seniority.notificationDate.get(), {
-        target: { value: "01/01/2023" },
-      });
-      fireEvent.change(ui.seniority.endDate.get(), {
-        target: { value: "01/01/2023" },
-      });
-      userEvent.click(ui.seniority.hasAbsence.non.get());
-      userEvent.click(ui.next.get());
+      userAction.setInput(ui.information.agreement44.age.get(), "40");
+      userAction.click(ui.next.get());
+      userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
+      userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2023");
+      userAction.setInput(ui.seniority.endDate.get(), "01/01/2023");
+      userAction.click(ui.seniority.hasAbsence.non.get());
+      userAction.click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
     });
 
     test("Vérification que la cc est privilégié grâce à un salaire de référence conventionnel import", () => {
-      userEvent.click(ui.salary.hasPartialTime.non.get());
-      userEvent.click(ui.salary.hasSameSalary.non.get());
-      fireEvent.change(ui.salary.salaries.getAll()[0], {
-        target: { value: "10000" },
-      });
-      fireEvent.change(ui.salary.salaries.getAll()[1], {
-        target: { value: "1000" },
-      });
-      fireEvent.change(ui.salary.salaries.getAll()[2], {
-        target: { value: "1000" },
-      });
-      fireEvent.change(ui.salary.salaries.getAll()[3], {
-        target: { value: "1000" },
-      });
-      fireEvent.change(ui.salary.salaries.getAll()[4], {
-        target: { value: "1000" },
-      });
-      fireEvent.change(ui.salary.salaries.getAll()[5], {
-        target: { value: "1000" },
-      });
-      fireEvent.change(ui.salary.salaries.getAll()[6], {
-        target: { value: "1000" },
-      });
-      fireEvent.change(ui.salary.salaries.getAll()[7], {
-        target: { value: "1000" },
-      });
-      fireEvent.change(ui.salary.salaries.getAll()[8], {
-        target: { value: "1000" },
-      });
-      fireEvent.change(ui.salary.salaries.getAll()[9], {
-        target: { value: "1000" },
-      });
-      fireEvent.change(ui.salary.salaries.getAll()[10], {
-        target: { value: "1000" },
-      });
-      fireEvent.change(ui.salary.salaries.getAll()[11], {
-        target: { value: "1000" },
-      });
-      userEvent.click(ui.salary.variablePart.non.get());
-      userEvent.click(ui.next.get());
+      userAction.click(ui.salary.hasPartialTime.non.get());
+      userAction.click(ui.salary.hasSameSalary.non.get());
+      userAction.setInput(ui.salary.salaries.getAll()[0], "10000");
+      userAction.setInput(ui.salary.salaries.getAll()[1], "1000");
+      userAction.setInput(ui.salary.salaries.getAll()[2], "1000");
+      userAction.setInput(ui.salary.salaries.getAll()[3], "1000");
+      userAction.setInput(ui.salary.salaries.getAll()[4], "1000");
+      userAction.setInput(ui.salary.salaries.getAll()[5], "1000");
+      userAction.setInput(ui.salary.salaries.getAll()[6], "1000");
+      userAction.setInput(ui.salary.salaries.getAll()[7], "1000");
+      userAction.setInput(ui.salary.salaries.getAll()[8], "1000");
+      userAction.setInput(ui.salary.salaries.getAll()[9], "1000");
+      userAction.setInput(ui.salary.salaries.getAll()[10], "1000");
+      userAction.setInput(ui.salary.salaries.getAll()[11], "1000");
+      userAction.click(ui.salary.variablePart.non.get());
+      userAction.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
       expect(ui.result.resultat.get()).toHaveTextContent("69 000,00 €");
     });
@@ -247,41 +201,32 @@ describe("Indemnité licenciement - CC 44", () => {
           displayTitle={""}
         />
       );
+      userAction = new UserAction();
     });
 
     test(`ne doit pas afficher la question sur le salaire pour le dernier mois`, () => {
-      userEvent.click(ui.introduction.startButton.get());
-      userEvent.click(ui.contract.type.cdi.get());
-      userEvent.click(ui.contract.fauteGrave.non.get());
-      userEvent.click(ui.contract.inaptitude.non.get());
-      userEvent.click(ui.contract.arretTravail.oui.get());
-      fireEvent.change(ui.contract.dateArretTravail.get(), {
-        target: { value: "01/09/2022" },
-      });
-      userEvent.click(ui.next.get());
-      userEvent.click(ui.next.get());
-      userEvent.selectOptions(
+      userAction.click(ui.introduction.startButton.get());
+      userAction.click(ui.contract.type.cdi.get());
+      userAction.click(ui.contract.fauteGrave.non.get());
+      userAction.click(ui.contract.inaptitude.non.get());
+      userAction.click(ui.contract.arretTravail.oui.get());
+      userAction.setInput(ui.contract.dateArretTravail.get(), "01/09/2022");
+      userAction.click(ui.next.get());
+      userAction.click(ui.next.get());
+      userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
         "Ouvriers et collaborateurs (Groupes I à III)"
       );
-      fireEvent.change(ui.information.agreement44.age.get(), {
-        target: { value: "38" },
-      });
-      userEvent.click(ui.next.get());
-      fireEvent.change(ui.seniority.startDate.get(), {
-        target: { value: "01/01/2000" },
-      });
-      fireEvent.change(ui.seniority.notificationDate.get(), {
-        target: { value: "01/01/2023" },
-      });
-      fireEvent.change(ui.seniority.endDate.get(), {
-        target: { value: "01/03/2023" },
-      });
-      userEvent.click(ui.seniority.hasAbsence.non.get());
-      userEvent.click(ui.next.get());
-      userEvent.click(ui.salary.hasPartialTime.non.get());
-      userEvent.click(ui.salary.hasSameSalary.non.get());
-      userEvent.click(ui.salary.variablePart.non.get());
+      userAction.setInput(ui.information.agreement44.age.get(), "38");
+      userAction.click(ui.next.get());
+      userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
+      userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2023");
+      userAction.setInput(ui.seniority.endDate.get(), "01/03/2023");
+      userAction.click(ui.seniority.hasAbsence.non.get());
+      userAction.click(ui.next.get());
+      userAction.click(ui.salary.hasPartialTime.non.get());
+      userAction.click(ui.salary.hasSameSalary.non.get());
+      userAction.click(ui.salary.variablePart.non.get());
       expect(
         screen.queryByText(
           "Connaissez-vous le montant du dernier salaire perçu (préavis inclus) ?"
