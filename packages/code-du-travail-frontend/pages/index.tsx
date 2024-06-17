@@ -35,10 +35,25 @@ const Home = ({
       />
       <button
         onClick={() => {
-          throw new Error("Erreur côté frontend");
+          throw "Erreur côté frontend";
         }}
       >
         Throw erreur
+      </button>
+
+      <button
+        onClick={() => {
+          throw new Error("Erreur côté frontend avec stacktrace");
+        }}
+      >
+        Throw erreur avec stacktrace
+      </button>
+      <button
+        onClick={() => {
+          Sentry.captureException(new Error("Good bye"));
+        }}
+      >
+        Capture une exception
       </button>
       <SearchHero />
       {highlights.length > 0 && (

@@ -1,5 +1,4 @@
 import * as Sentry from "@sentry/nextjs";
-import { registerInstrumentations } from "@opentelemetry/instrumentation";
 import { HttpInstrumentation } from "@opentelemetry/instrumentation-http";
 import { NetInstrumentation } from "@opentelemetry/instrumentation-net";
 import { GenericPoolInstrumentation } from "@opentelemetry/instrumentation-generic-pool";
@@ -13,10 +12,8 @@ Sentry.init({
   release: process.env.NEXT_PUBLIC_SENTRY_RELEASE || process.env.SENTRY_RELEASE,
 });
 
-registerInstrumentations({
-  instrumentations: [
-    new GenericPoolInstrumentation(),
-    new HttpInstrumentation(),
-    new NetInstrumentation(),
-  ],
-});
+Sentry.addOpenTelemetryInstrumentation(
+  new GenericPoolInstrumentation(),
+  new HttpInstrumentation(),
+  new NetInstrumentation()
+);
