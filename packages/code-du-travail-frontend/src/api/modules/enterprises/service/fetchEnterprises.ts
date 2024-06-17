@@ -55,9 +55,7 @@ export const fetchEnterprises = async (
           : { siret: result.siege.siret, address: result.siege.adresse };
 
       return {
-        activitePrincipale: `${result.activite_principale} - ${
-          nafMapper[result.activite_principale]
-        }`,
+        activitePrincipale: `${nafMapper[result.activite_principale]}`,
         etablissements: result.nombre_etablissements_ouverts,
         highlightLabel: result.nom_raison_sociale,
         label: result.nom_complet,
