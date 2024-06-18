@@ -98,7 +98,7 @@ describe("<AbsencePeriod />", () => {
   });
 
   it("should show the absence date field when user selected Motif 2", () => {
-    const { getByRole } = render(
+    const { getByRole, getByTestId } = render(
       <AbsencePeriod
         index={0}
         onSelectMotif={() => {}}
@@ -119,11 +119,11 @@ describe("<AbsencePeriod />", () => {
       getByRole("combobox"),
       getByRole("option", { name: "Motif 2" })
     );
-    expect(getByRole("textbox", { name: `0.dateAbsence` })).toBeInTheDocument();
+    expect(getByTestId("absence-date-0")).toBeInTheDocument();
   });
 
   it("should show the absence date field if selected motif required date", () => {
-    const { getByRole } = render(
+    const { getByRole, getByTestId } = render(
       <AbsencePeriod
         index={0}
         onSelectMotif={() => {}}
@@ -148,7 +148,7 @@ describe("<AbsencePeriod />", () => {
         }) as HTMLOptionElement
       ).selected
     ).toBe(true);
-    expect(getByRole("textbox", { name: `0.dateAbsence` })).toBeInTheDocument();
+    expect(getByTestId("absence-date-0")).toBeInTheDocument();
   });
 
   it("should call callbacks on user actions", () => {
@@ -156,7 +156,7 @@ describe("<AbsencePeriod />", () => {
     const onSetDurationDate = jest.fn();
     const onSetAbsenceDate = jest.fn();
     const onDeleteAbsence = jest.fn();
-    const { getByRole } = render(
+    const { getByRole, getByTestId } = render(
       <AbsencePeriod
         index={0}
         onSelectMotif={onSelectModifMock}
@@ -176,11 +176,8 @@ describe("<AbsencePeriod />", () => {
     expect(onSelectModifMock.mock.calls.length).toBe(1);
     userEvent.type(getByRole("spinbutton", { name: `0.duration` }), "5");
     expect(onSetDurationDate.mock.calls.length).toBe(1);
-    userEvent.type(
-      getByRole("textbox", { name: `0.dateAbsence` }),
-      "01/01/2020"
-    );
-    expect(onSetAbsenceDate.mock.calls.length).toBe(10);
+    userEvent.type(getByTestId("absence-date-0"), "2020-01-01");
+    expect(onSetAbsenceDate.mock.calls.length).toBe(1);
     userEvent.click(getByRole("button", { name: /supprimer/i }));
     expect(onDeleteAbsence.mock.calls.length).toBe(1);
   });

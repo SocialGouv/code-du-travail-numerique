@@ -3,38 +3,38 @@
 exports[`<DroitDuTravail /> should render 1`] = `
 <div>
   <div
-    class="sc-cyRcrZ gjBWZE"
+    class="sc-dwalKd bPFBHe"
   >
     <div
-      class="sc-kUdmhA bpiyAA"
+      class="sc-BQMaI derbXg"
     />
     <header
-      class="sc-jdUcAg doqBPP"
+      class="sc-kbdlSk iEPNKQ"
     >
       <div
-        class="sc-bddgXz kkJWdj"
+        class="sc-camqpD kifJwG"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-aXZVg sc-jdkBTo gZgZQL jNrRbY"
+        class="sc-aXZVg sc-jdUcAg gZgZQL chhWLW"
       >
         <a
-          class="sc-fmzyuX hPTjLB"
+          class="sc-bddgXz gODHXj"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-cspYLC hrpNrB"
+            class="sc-fyVfxW bQIkrv"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-dwalKd jxsfat"
+            class="sc-eHsDsR iGa-dGz"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-bvgPty GSiPz"
+          class="sc-cspYLC chwTjr"
         >
           <form
             action="/recherche"
-            class="sc-hYmls cZgcka"
+            class="sc-bfhvDw ciumlM"
             role="search"
           >
             <div
@@ -86,7 +86,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 aria-controls="react-autowhatever-1"
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
-                class="sc-gEkIjz fyypSR"
+                class="sc-hBtRBD jBDoTn"
                 id="floating-search"
                 name="q"
                 placeholder="Rechercher"
@@ -95,20 +95,20 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 value=""
               />
               <div
-                class="sc-hBtRBD cJLOam"
+                class="sc-kgOKUu dhyfuU"
                 id="react-autowhatever-1"
                 role="listbox"
               />
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz kyVwqT sc-bOhtcR krhQfM"
+              class="sc-kOPcWz kyVwqT sc-bOQTJJ eMnhEA"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-bOQTJJ gofZPX"
+                class="sc-cMa-dbN xePnd"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,11 +122,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-fyVfxW hipVsm"
+          class="sc-gweoQa dABIRs"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-epqpcT ckjRDI"
+            class="sc-fmzyuX zWSUy"
             href="/recherche"
             rel="nofollow"
           >
@@ -144,17 +144,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-BQMaI cCGDyl"
+          class="sc-jdkBTo jbNKiX"
         >
           <button
-            class="sc-kOPcWz cOwJar sc-tagGq sc-eHsDsR bZXUzd jeXpOg"
+            class="sc-kOPcWz cOwJar sc-tagGq sc-eIcdZJ bZXUzd czWmmg"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-fFlnrN cMqjBE"
+          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-eXsaLi bXscSU"
         >
           <svg
             aria-hidden="true"
@@ -174,7 +174,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-hgRRfv jRurkG"
+      class="sc-epqpcT klnDDW"
       id="content"
       tabindex="-1"
     >
@@ -185,10 +185,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
           class="sc-aXZVg gZgZQL"
         >
           <header
-            class="sc-fMMURN bdACkg"
+            class="sc-kzqdkY hWUlpB"
           >
             <h1
-              class="sc-YysOf QfOmM"
+              class="sc-bVHCgj igcPZY"
             >
               <span
                 class="sc-gsFSXq djREvw"
@@ -196,11 +196,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
               Le droit du travail
             </h1>
             <p
-              class="sc-ktPPKK kacOQm"
+              class="sc-bDpDS HtTuQ"
             >
               Retrouvez la définition du droit du travail, les textes qui en sont à l’origine 
               <br
-                class="sc-emIrwa gYGcSV"
+                class="sc-bvgPty fSsONi"
               />
               ainsi que leur articulation.
             </p>
@@ -212,10 +212,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="sc-iGgWBj biWgIW"
             >
               <div
-                class="sc-fMMURN bncoEo"
+                class="sc-kzqdkY dZUDIh"
               >
                 <h2
-                  class="sc-cVzyXs jFvudg"
+                  class="sc-dSIIpw otPXl"
                 >
                   <span
                     class="sc-gsFSXq ljkohw"
@@ -265,7 +265,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   >
                     <p
                       aria-level="3"
-                      class="sc-dSIIpw hHqjOi"
+                      class="sc-gdyeKB jXhxaU"
                       role="heading"
                     >
                       Le droit du travail, ce n’est pas…
@@ -291,10 +291,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
             class="sc-aXZVg sc-fqkvVR gZgZQL hPueQb"
           >
             <div
-              class="sc-fMMURN kbJknc"
+              class="sc-kzqdkY fJPfZZ"
             >
               <h2
-                class="sc-cVzyXs fljumP"
+                class="sc-dSIIpw crsCQS"
               >
                 <span
                   class="sc-gsFSXq ljkohw"
@@ -303,7 +303,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </h2>
             </div>
             <p
-              class="sc-lnPyaJ brNXAt"
+              class="sc-bVVIoq hypZfQ"
             >
               Le droit du travail est construit par de nombreux textes juridiques dont les sources sont diverses : sources internationales, sources européennes et sources nationales. Vous trouverez les textes participant à la construction du droit du travail en France ci-dessous.
             </p>
@@ -315,7 +315,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="sc-aXZVg gZgZQL"
             >
               <div
-                class="sc-eulNck sIPKc"
+                class="sc-dPZUQH fAqYwc"
               >
                 <div
                   class="sc-ikkxIA hJtQtp"
@@ -1395,7 +1395,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 class="sc-aXZVg dPpwpV"
               >
                 <div
-                  class="sc-iGgWBj sc-dExYaf cRLRjd volJH"
+                  class="sc-iGgWBj sc-eBHhsj cRLRjd NGVDa"
                 >
                   La jurisprudence de la Cour Européenne des droits de l’Homme, de la Cour de justice de l’Union européenne, du Conseil Constitutionnel, du Conseil d’Etat et de la Cour de cassation influence également le droit du travail en France.
                 </div>
@@ -1407,10 +1407,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
           class="sc-aXZVg elbebC"
         >
           <div
-            class="sc-fMMURN wfgCt"
+            class="sc-kzqdkY kUMpKA"
           >
             <h2
-              class="sc-cVzyXs fljumP"
+              class="sc-dSIIpw crsCQS"
             >
               <span
                 class="sc-gsFSXq ljkohw"
@@ -1810,7 +1810,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       Il n’y a pas de règle de hiérarchie unique pour tous les articles du Code du travail. Il existe 3 hiérarchies possibles :
                     </p>
                     <div
-                      class="sc-bVVIoq hMSBmx"
+                      class="sc-ktPPKK jtACTz"
                       data-accordion-component="Accordion"
                     >
                       <div>
@@ -2045,17 +2045,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           class="sc-klVQfs giEiHo"
                         >
                           <h4
-                            class="sc-dSIIpw hHqjOi"
+                            class="sc-gdyeKB jXhxaU"
                           >
                             Attention à certaines règles du Code du travail
                           </h4>
                           <p
-                            class="sc-ePDLzJ hueWTG"
+                            class="sc-fMMURN vrxVQ"
                           >
                             Il existe des règles du Code du travail auxquelles tous les textes situés en bas ne peuvent pas déroger même si les textes sont plus avantageux pour le salarié. La loi interdit toute dérogation possible. Les textes situés en bas doivent purement et simplement respecter ces règles.
                           </p>
                           <p
-                            class="sc-ePDLzJ hueWTG"
+                            class="sc-fMMURN vrxVQ"
                           >
                             <i>
                               Exemple : la règle selon laquelle le Conseil des prud’hommes est le seul compétent pour les contentieux liés au travail.
@@ -2220,7 +2220,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           class="sc-klVQfs giEiHo"
                         >
                           <p
-                            class="sc-iXzfSG cyzyDu"
+                            class="sc-ePDLzJ epLRJG"
                           >
                             Ce principe ne s’applique pas dans
                              
@@ -2627,24 +2627,24 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </main>
     <div
-      class="sc-imwsjW jlIajf"
+      class="sc-fAGzit kTBFVN"
     >
       <footer
-        class="sc-kCMKrZ rSSfR"
+        class="sc-bkSUFG cXqWSx"
       >
         <div
-          class="sc-gEvEer hpVpdb sc-dJiZtA iaLpnq"
+          class="sc-gEvEer hpVpdb sc-deXhhX hHbWTj"
         >
           <div
             class="sc-aXZVg gZgZQL"
           >
             <div
               aria-level="2"
-              class="sc-fMMURN ctumvs"
+              class="sc-kzqdkY iBScIh"
               role="heading"
             >
               <p
-                class="sc-cVzyXs VIuCi"
+                class="sc-dSIIpw cxAOED"
               >
                 <span
                   class="sc-gsFSXq djREvw"
@@ -2653,7 +2653,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </p>
             </div>
             <div
-              class="sc-aXZVg sc-epALIP dPpwpV gnDFKz"
+              class="sc-aXZVg sc-dQEtJz dPpwpV jTyZXO"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
@@ -2665,7 +2665,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="sc-iLsKjm kkgbaY"
+                class="sc-imwsjW jDOHmf"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2679,28 +2679,28 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-gEvEer hpVpdb sc-lbJcrp kRXJBO"
+          class="sc-gEvEer hpVpdb sc-kCMKrZ jBhcwF"
         >
           <div
-            class="sc-aXZVg sc-eifrsQ gZgZQL ivwRXF"
+            class="sc-aXZVg sc-dJiZtA gZgZQL UAXPn"
           >
             <div
-              class="sc-dQEtJz gCALoF"
+              class="sc-dGCmGc hgWVvM"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-kgOKUu lpmVkr sc-kAyceB jIzQpS"
+                  class="sc-iLsKjm bHyFYd sc-kAyceB jIzQpS"
                   role="heading"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-fKWMtX kMmTaI sajjv"
+                  class="sc-cfxfcM sc-epALIP kMmTaI PLedh"
                 >
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
@@ -2708,7 +2708,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/glossaire"
                     >
                       Glossaire
@@ -2716,7 +2716,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/a-propos"
                     >
                       À propos
@@ -2724,7 +2724,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/stats"
                     >
                       Statistiques d’utilisation
@@ -2732,7 +2732,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/integration"
                     >
                       Intégrer les outils du Code du travail numérique
@@ -2742,22 +2742,22 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </div>
             </div>
             <div
-              class="sc-dQEtJz gCALoF"
+              class="sc-dGCmGc hgWVvM"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-kgOKUu lpmVkr sc-kAyceB jIzQpS"
+                  class="sc-iLsKjm bHyFYd sc-kAyceB jIzQpS"
                   role="heading"
                 >
                   Outils populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-fKWMtX kMmTaI sajjv"
+                  class="sc-cfxfcM sc-epALIP kMmTaI PLedh"
                 >
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/outils/simulateur-embauche"
                     >
                       Calcul du salaire brut/net
@@ -2765,7 +2765,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/outils/indemnite-licenciement"
                     >
                       Calcul de l'indemnité de licenciement
@@ -2773,7 +2773,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/outils/convention-collective"
                     >
                       Trouver sa convention collective
@@ -2784,17 +2784,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-kgOKUu lpmVkr sc-kAyceB jIzQpS"
+                  class="sc-iLsKjm bHyFYd sc-kAyceB jIzQpS"
                   role="heading"
                 >
                   Modèles populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-fKWMtX kMmTaI sajjv"
+                  class="sc-cfxfcM sc-epALIP kMmTaI PLedh"
                 >
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/modeles-de-courriers/lettre-de-demission"
                     >
                       Lettre de démission
@@ -2802,7 +2802,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
                     >
                       Rupture du contrat en période d'essai par le salarié
@@ -2810,7 +2810,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel"
                     >
                       Convocation à un entretien préalable au licenciement pour motif personnel
@@ -2820,22 +2820,22 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </div>
             </div>
             <div
-              class="sc-dQEtJz gCALoF"
+              class="sc-dGCmGc hgWVvM"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-kgOKUu lpmVkr sc-kAyceB jIzQpS"
+                  class="sc-iLsKjm bHyFYd sc-kAyceB jIzQpS"
                   role="heading"
                 >
                   Fiches pratiques populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-fKWMtX kMmTaI sajjv"
+                  class="sc-cfxfcM sc-epALIP kMmTaI PLedh"
                 >
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
                     >
                       Durée du préavis de démission
@@ -2843,7 +2843,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/contribution/les-conges-pour-evenements-familiaux"
                     >
                       Congés pour événements familiaux
@@ -2851,7 +2851,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                     >
                       Maintien du salaire en cas d'arrêt maladie
@@ -2862,17 +2862,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-kgOKUu lpmVkr sc-kAyceB jIzQpS"
+                  class="sc-iLsKjm bHyFYd sc-kAyceB jIzQpS"
                   role="heading"
                 >
                   Conventions collectives populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-fKWMtX kMmTaI sajjv"
+                  class="sc-cfxfcM sc-epALIP kMmTaI PLedh"
                 >
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/convention-collective/1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
                     >
                       Services de l'automobile
@@ -2880,7 +2880,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/convention-collective/3248-metallurgie"
                     >
                       Métallurgie
@@ -2888,7 +2888,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bfhvDw iBKSzx"
+                      class="sc-lbJcrp fVfqop"
                       href="/convention-collective/573-commerces-de-gros"
                     >
                       Commerce de gros
@@ -2900,10 +2900,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-aXZVg sc-fbKhjd gZgZQL jjkLFn"
+          class="sc-aXZVg sc-jOnpCo gZgZQL dNBAUF"
         >
           <div
-            class="sc-leSDtu fYUEGO"
+            class="sc-kFWlue gGpaBv"
           >
             <img
               alt="le site du ministere du travail, de l'emploi et de l'insertion"
@@ -2916,7 +2916,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               width="170"
             />
             <ul
-              class="sc-bJBgwP fCKSjC"
+              class="sc-bkEOxz brUpVF"
             >
               <li>
                 <a
@@ -2956,13 +2956,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </ul>
           </div>
           <div
-            class="sc-bkSUFG cozebb"
+            class="sc-leSDtu vcyTG"
           />
           <div
-            class="sc-dGCmGc jYRkZE"
+            class="sc-dhFUGM dxwgZk"
           >
             <ul
-              class="sc-bJBgwP sc-fAGzit fCKSjC uMigE"
+              class="sc-bkEOxz sc-fbKhjd brUpVF jMnJWO"
             >
               <li>
                 <a
@@ -3004,7 +3004,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <li>
                 <a
                   aria-label="Nous contacter"
-                  class="sc-deXhhX jlzYzl"
+                  class="sc-bJBgwP cKCQfW"
                   role="link"
                 >
                   Nous contacter

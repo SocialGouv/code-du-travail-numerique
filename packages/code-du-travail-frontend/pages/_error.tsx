@@ -1,20 +1,12 @@
 import * as Sentry from "@sentry/nextjs";
 import { Button, Container, Section, theme } from "@socialgouv/cdtn-ui";
-import NextErrorComponent from "next/error";
 import React from "react";
 import styled from "styled-components";
+import Error from "next/error";
 
 import { Layout } from "../src/layout/Layout";
 
-const MyError = ({ statusCode, hasGetInitialPropsRun, err }) => {
-  if (!hasGetInitialPropsRun && err) {
-    // getInitialProps is not called in case of
-    // https://github.com/vercel/next.js/issues/8592. As a workaround, we pass
-    // err via _app.js so it can be captured
-    Sentry.captureException(err);
-    // Flushing is not required in this case as it only happens on the client
-  }
-
+const MyError = ({ statusCode }) => {
   return (
     <Layout>
       <CenteredContainer>
@@ -31,38 +23,13 @@ const MyError = ({ statusCode, hasGetInitialPropsRun, err }) => {
   );
 };
 
-MyError.getInitialProps = async ({ res, err, asPath }) => {
-  const errorInitialProps: any = {
-    message: err && err.message,
-    ...(await NextErrorComponent.getInitialProps({
-      err,
-      res,
-    } as any)),
-  };
+MyError.getInitialProps = async (contextData) => {
+  // In case this is running in a serverless function, await this in order to give Sentry
+  // time to send the error before the lambda exits
+  await Sentry.captureUnderscoreErrorException(contextData);
 
-  // Workaround for https://github.com/vercel/next.js/issues/8592, mark when
-  // getInitialProps has run
-  errorInitialProps.hasGetInitialPropsRun = true;
-
-  if (err) {
-    Sentry.captureException(err);
-
-    // Flushing before returning is necessary if deploying to Vercel, see
-    // https://vercel.com/docs/platform/limits#streaming-responses
-    await Sentry.flush(2000);
-
-    return errorInitialProps;
-  }
-
-  // If this point is reached, getInitialProps was called without any
-  // information about what the error might be. This is unexpected and may
-  // indicate a bug introduced in Next.js, so record it in Sentry
-  Sentry.captureException(
-    new Error(`_error.js getInitialProps missing data at path: ${asPath}`)
-  );
-  await Sentry.flush(2000);
-
-  return errorInitialProps;
+  // This will contain the status code of the response
+  return Error.getInitialProps(contextData);
 };
 
 export default MyError;

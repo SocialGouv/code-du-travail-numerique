@@ -12,13 +12,11 @@ const initialValue = (key, defaultValue) => {
 
 const updateValueCallback = (key, setValue) => (value) => {
   setValue(value);
-  if (!window.localStorage) {
-    return;
-  }
+
   try {
-    window.localStorage.setItem(key, JSON.stringify(value));
+    window.localStorage?.setItem(key, JSON.stringify(value));
   } catch (error) {
-    console.error(error);
+    return;
   }
 };
 

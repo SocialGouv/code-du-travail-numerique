@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.143.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.1...v4.143.2) (2024-06-18)
+
+### Bug Fixes
+
+- **sentry:** set right project name following the change of the project name ([ee1bd5a](https://github.com/SocialGouv/code-du-travail-numerique/commit/ee1bd5ad255a4442c2c5c4321f4e3486545cccc8))
+
+## [4.143.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.0...v4.143.1) (2024-06-17)
+
+### Bug Fixes
+
+- **sentry:** modification configuration ([#5969](https://github.com/SocialGouv/code-du-travail-numerique/issues/5969)) ([3f40c0e](https://github.com/SocialGouv/code-du-travail-numerique/commit/3f40c0e12e9895d55445c21c4e49eeb9ee334c94))
+
+# [4.143.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.142.0...v4.143.0) (2024-06-17)
+
+### Bug Fixes
+
+- **simulateur indemnité de licenciement:** ajout d'une validation pour bloquer les utilisateurs qui entrent des dates de type "23/05/272024" ([#5965](https://github.com/SocialGouv/code-du-travail-numerique/issues/5965)) ([9a39511](https://github.com/SocialGouv/code-du-travail-numerique/commit/9a39511477edaf9ab2342bf6a8fd5fbf5493bad4))
+
+### Features
+
+- CC fusions ([#5967](https://github.com/SocialGouv/code-du-travail-numerique/issues/5967)) ([1af11e9](https://github.com/SocialGouv/code-du-travail-numerique/commit/1af11e96c493909487fddb85b12a2a6409d162a3))
+- **sentry:** upgrade to V8 + use default setup configuration to use `opentelemetry` ([#5960](https://github.com/SocialGouv/code-du-travail-numerique/issues/5960)) ([146f8f2](https://github.com/SocialGouv/code-du-travail-numerique/commit/146f8f2ec4f096d27890561e446f552b8144754f))
+
+# [4.142.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.141.0...v4.142.0) (2024-06-13)
+
+### Bug Fixes
+
+- **api:** remove unused log ([#5941](https://github.com/SocialGouv/code-du-travail-numerique/issues/5941)) ([e78d14e](https://github.com/SocialGouv/code-du-travail-numerique/commit/e78d14edd4505f11db89305181800f17b8ee7a1b))
+- bug sur la selection CC qui maj pas moteur publicaode ([#5956](https://github.com/SocialGouv/code-du-travail-numerique/issues/5956)) ([c54b807](https://github.com/SocialGouv/code-du-travail-numerique/commit/c54b8074052cb9e0c0c4eac4ef99e72686bcbf11))
+- MaxListenersExceededWarning ([#5961](https://github.com/SocialGouv/code-du-travail-numerique/issues/5961)) ([0a0965c](https://github.com/SocialGouv/code-du-travail-numerique/commit/0a0965c1917c944a484604033f4b96e3d21c98ac))
+- **page informations:** uniformisation de la manière dont on render le html sur nos pages ([#5943](https://github.com/SocialGouv/code-du-travail-numerique/issues/5943)) ([b0efaf2](https://github.com/SocialGouv/code-du-travail-numerique/commit/b0efaf29d119305a5fe411a37118109c1e2d2f05))
+- **performance:** changement des valeurs pour le pod `app` ([#5949](https://github.com/SocialGouv/code-du-travail-numerique/issues/5949)) ([a1a971e](https://github.com/SocialGouv/code-du-travail-numerique/commit/a1a971ef9d6184d145672bb28d86b5e611002908))
+- **rupture-co:** correction CC 3248 ([#5883](https://github.com/SocialGouv/code-du-travail-numerique/issues/5883)) ([9ac1df6](https://github.com/SocialGouv/code-du-travail-numerique/commit/9ac1df672c8f65e9a757da74cd203a58fafaa3fa))
+- **SecurityError:** correction des erreurs dans les widgets du au fait que le site est loadé dans une iframe ([#5945](https://github.com/SocialGouv/code-du-travail-numerique/issues/5945)) ([baa103a](https://github.com/SocialGouv/code-du-travail-numerique/commit/baa103a55cc54505e26ad0f7e87b3a67fe0e932a))
+- **texte cc 3239:** modification du texte lors la séléction de CC pour corriger le fait que la 3239 est sur-représenté aujourd'hui ([#5962](https://github.com/SocialGouv/code-du-travail-numerique/issues/5962)) ([cc62d29](https://github.com/SocialGouv/code-du-travail-numerique/commit/cc62d293bba9c3441dc4e58cebee0c4d85994598))
+- use new sentry project to resolve sentry bug ([#5944](https://github.com/SocialGouv/code-du-travail-numerique/issues/5944)) ([236eb87](https://github.com/SocialGouv/code-du-travail-numerique/commit/236eb87aefc7dfa71d59ccffc23d6f2def671780))
+
+### Features
+
+- 5873 revenir au composant html 5 pour les champs dates ([#5911](https://github.com/SocialGouv/code-du-travail-numerique/issues/5911)) ([a68132b](https://github.com/SocialGouv/code-du-travail-numerique/commit/a68132ba714d49d497d0e450ec75a301fec7ffa8))
+- **dep:** ajout de `sharp` pour l'optimisation d'image ([#5940](https://github.com/SocialGouv/code-du-travail-numerique/issues/5940)) ([fa1ccab](https://github.com/SocialGouv/code-du-travail-numerique/commit/fa1ccabb4a3ff12efef2c2524e018f14a70f59f4))
+- page CC non supported et 404 ([#5921](https://github.com/SocialGouv/code-du-travail-numerique/issues/5921)) ([4a7a601](https://github.com/SocialGouv/code-du-travail-numerique/commit/4a7a6016624d7d97ebace97fc3a91d9645b2e687))
+
 # [4.141.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.140.0...v4.141.0) (2024-06-05)
 
 ### Bug Fixes

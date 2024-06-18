@@ -50,7 +50,6 @@ describe("Gestion de la rupture co pour la CC 176", () => {
           '[{"month":"décembre 2024","value":2600},{"month":"novembre 2024","value":2600},{"month":"octobre 2024","value":2600},{"month":"septembre 2024","value":2600},{"month":"août 2024","value":2600},{"month":"juillet 2024","value":2600},{"month":"juin 2024","value":2600},{"month":"mai 2024","value":2600},{"month":"avril 2024","value":2600},{"month":"mars 2024","value":2600},{"month":"février 2024","value":2600},{"month":"janvier 2024","value":2600}]',
         typeContratTravail: "cdi",
       });
-      console.log(result);
       expect(result).toAgreementResultBeEqual(7540, "€");
     });
   });

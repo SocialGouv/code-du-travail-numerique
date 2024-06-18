@@ -72,8 +72,6 @@ describe("Un seul type de licenciement pour la CC 2120", () => {
       expectedAgreement,
       entryDate,
     }) => {
-      console.log(`[{"month":"janvier 2024","value":${salary}]`);
-
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC2120'",
         "contrat salarié . convention collective . banque . catégorie professionnelle": `'${categoriePro}'`,

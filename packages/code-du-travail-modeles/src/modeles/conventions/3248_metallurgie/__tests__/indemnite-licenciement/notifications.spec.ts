@@ -91,7 +91,7 @@ describe("Notifications pour la CC 3248", () => {
     const notifications = engine.getNotifications();
     expect(notifications).toHaveLength(1);
     expect(notifications[0].description).toBe(
-      "Le montant de l’indemnité de licenciement calculé pour la convention collective de la métallurgie pourrait être différent. En effet, les salaires pris en compte dans cette simulation sont ceux que le salarié a perçu avant l'arrêt de travail. Or, la convention collective indique que la rémunération à retenir est celle que le salarié aurait perçue s'il avait travaillé pendant la période d’absence pour maladie."
+      "Le montant de l’indemnité calculé pour la convention collective de la métallurgie pourrait être différent. En effet, les salaires pris en compte dans cette simulation sont ceux que le salarié a perçu avant l'arrêt de travail. Or, la convention collective indique que la rémunération à retenir est celle que le salarié aurait perçue s'il avait travaillé pendant la période d’absence pour maladie."
     );
     expect(notifications[0].show).toBe("légal et conventionnel");
   });

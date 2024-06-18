@@ -1,5 +1,4 @@
-import { format, isAfter } from "date-fns";
-import { isValidDate } from "../../../../../../lib";
+import { format, isAfter, isValid } from "date-fns";
 import { parse } from "../../../../../common/utils";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 import frLocale from "date-fns/locale/fr";
@@ -13,6 +12,8 @@ export const getDateSortieErrors = (
 
   if (!state.dateSortie) {
     errors.errorDateSortie = "Veuillez saisir cette date";
+  } else if (!isValid(dSortie)) {
+    errors.errorDateSortie = "La date de sortie est invalide";
   } else if (
     state.dateEntree &&
     state.dateSortie &&
@@ -25,8 +26,6 @@ export const getDateSortieErrors = (
         locale: frLocale,
       }
     )}</strong>`;
-  } else if (!isValidDate(state.dateSortie)) {
-    errors.errorDateSortie = "La date de fin de contrat est invalide";
   } else {
     errors.errorDateSortie = undefined;
   }
