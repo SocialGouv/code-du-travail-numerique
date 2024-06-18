@@ -45,5 +45,5 @@ export const fetchTools = async (_params: any): Promise<Tool[]> => {
       _id: "d8a3605790",
       displayTool: true,
     },
-  ]);
+  ] as any as Tool[]);
 };
