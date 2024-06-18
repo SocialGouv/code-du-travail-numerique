@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.143.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.1...v4.143.2) (2024-06-18)
+
+### Bug Fixes
+
+- **sentry:** set right project name following the change of the project name ([ee1bd5a](https://github.com/SocialGouv/code-du-travail-numerique/commit/ee1bd5ad255a4442c2c5c4321f4e3486545cccc8))
+
 ## [4.143.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.0...v4.143.1) (2024-06-17)
 
 ### Bug Fixes
