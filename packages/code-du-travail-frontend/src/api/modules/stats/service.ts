@@ -44,6 +44,7 @@ export const getStatsService = async () => {
 
   const visitsPromises = Array.from(Array(numberLoop).keys()).map((index) => {
     const url = generateUrlVisit(index);
+    console.log(url);
     return fetch(url)
       .then(async (data: Response) => data.json())
       .catch((e: Error) => {
@@ -64,6 +65,7 @@ export const getStatsService = async () => {
 
   const actionsPromises = Array.from(Array(numberLoop).keys()).map((index) => {
     const url = generateUrlAction(index);
+    console.log(url);
     return fetch(url)
       .then(async (data: Response) => data.json())
       .catch((e: Error) => {
