@@ -7,13 +7,11 @@ export const localConfig: ConfigData = {
   rules: {
     "heading-level": "error",
     "require-sri": "off",
-    "valid-id": "off",
     "prefer-native-element": "off",
     "no-implicit-button-type": "off",
     "aria-label-misuse": "off",
     "long-title": "off",
     "script-type": "off",
-    "no-dup-id": "off",
     "wcag/h63": "off",
     "wcag/h32": "off",
   },
