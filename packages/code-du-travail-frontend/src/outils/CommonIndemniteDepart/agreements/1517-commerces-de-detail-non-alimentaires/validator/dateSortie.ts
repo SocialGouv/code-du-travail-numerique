@@ -1,8 +1,7 @@
 import { differenceInMonths, isAfter } from "date-fns";
-import { isValidDate } from "../../../../../lib";
 import {
-  AncienneteStoreInput,
   AncienneteStoreError,
+  AncienneteStoreInput,
 } from "../../../steps/Anciennete/store";
 import { parse } from "../../../../common/utils";
 
@@ -27,8 +26,6 @@ export const getDateSortieErrors = (
   ) {
     errors.errorDateSortie =
       "La date de fin de contrat doit se situer après la date de début de contrat";
-  } else if (!isValidDate(state.dateSortie)) {
-    errors.errorDateSortie = "La date de fin de contrat est invalide";
   } else {
     errors.errorDateSortie = undefined;
   }

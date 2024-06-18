@@ -6,26 +6,26 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
     class="sc-iGgWBj biWgIW"
   >
     <form
-      class="sc-bdOgaJ kcsxR"
+      class="sc-ERObt kpWsGC"
     >
       <div
-        class="sc-dxcDKg gXryFt"
+        class="sc-eulNck kHxAfU"
       >
         <div
-          class="sc-kRRyDe eZjqPJ"
+          class="sc-iapWAC hrVAPv"
         >
           <h1
-            class="sc-gvZAcH kFesDC"
+            class="sc-dExYaf eXWENA"
           >
             Calculer le préavis de licenciement
           </h1>
         </div>
         <div
-          class="sc-ERObt iFfrYA"
+          class="sc-dxcDKg bBiLxp"
         >
           <svg
             aria-hidden="true"
-            class="sc-fulCBj kTPhSR"
+            class="sc-kRRyDe iCRqCC"
             fill="none"
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg"
@@ -64,26 +64,26 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
             </defs>
           </svg>
           <span
-            class="sc-dNsVcS MhAEu"
+            class="sc-gvZAcH czFZQA"
           >
             2 à 5 min
           </span>
         </div>
       </div>
       <div
-        class="sc-iGgWBj sc-iXzfSG cWzIZL jHESmY"
+        class="sc-iGgWBj sc-ePDLzJ cWzIZL fVUnkE"
       >
         <span
-          class="sc-lnPyaJ cArwBy"
+          class="sc-bVVIoq lTBGX"
         >
           Étape
           <span
-            class="sc-eulNck bBOBTf"
+            class="sc-dPZUQH ldNvXD"
           >
             s
           </span>
           <span
-            class="sc-dExYaf AZPLe"
+            class="sc-eBHhsj fQWqbT"
           >
              
             1/5
@@ -94,51 +94,51 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
         >
           <li
             aria-live="polite"
-            class="sc-iapWAC iXvHjh"
+            class="sc-iXzfSG gKinch"
             title="onglet actif"
           >
             <span
-              class="sc-kqGoIF geMAvV"
+              class="sc-lnPyaJ iEBnCU"
             >
               1
             </span>
             Introduction
           </li>
           <li
-            class="sc-iapWAC hZijXX"
+            class="sc-iXzfSG dLCZmb"
           >
             <span
-              class="sc-kqGoIF lnGqhy"
+              class="sc-lnPyaJ hRwIIr"
             >
               2
             </span>
             Situation du salarié
           </li>
           <li
-            class="sc-iapWAC hZijXX"
+            class="sc-iXzfSG dLCZmb"
           >
             <span
-              class="sc-kqGoIF lnGqhy"
+              class="sc-lnPyaJ hRwIIr"
             >
               3
             </span>
             Convention collective
           </li>
           <li
-            class="sc-iapWAC hZijXX"
+            class="sc-iXzfSG dLCZmb"
           >
             <span
-              class="sc-kqGoIF lnGqhy"
+              class="sc-lnPyaJ hRwIIr"
             >
               4
             </span>
             Informations complémentaires
           </li>
           <li
-            class="sc-iapWAC hZijXX"
+            class="sc-iXzfSG dLCZmb"
           >
             <span
-              class="sc-kqGoIF lnGqhy"
+              class="sc-lnPyaJ hRwIIr"
             >
               5
             </span>
@@ -163,15 +163,15 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
         .
       </p>
       <div
-        class="sc-bVVIoq zRucW"
+        class="sc-ktPPKK fovbo"
       >
         <button
-          class="sc-kOPcWz cefBoA sc-ePDLzJ sc-dPZUQH giwswN dSORUI"
+          class="sc-kOPcWz cefBoA sc-fMMURN sc-YysOf cMdyCT dIpKoA"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="sc-eBHhsj gmenXr"
+            class="sc-cVzyXs kxnwsU"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"

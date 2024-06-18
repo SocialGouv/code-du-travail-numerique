@@ -85,7 +85,7 @@ export default function TextQuestion({
       </QuestionWrapper>
       {error && (
         <Error>
-          <div
+          <span
             dangerouslySetInnerHTML={{
               __html: xssWrapper(error),
             }}

@@ -1,4 +1,3 @@
-import type { References } from "../modeles";
 import {
   IneligibilityRuptureConventionnelleFactory,
   SupportedCc,
@@ -28,10 +27,6 @@ class RuptureConventionnellePublicodes extends IndemniteDepartPublicodes {
       new ExplanationBuilderRuptureCo(idcc),
       agreementInstance
     );
-  }
-
-  getReferences(): References[] {
-    return super.getReferences("rupture conventionnelle");
   }
 }
 

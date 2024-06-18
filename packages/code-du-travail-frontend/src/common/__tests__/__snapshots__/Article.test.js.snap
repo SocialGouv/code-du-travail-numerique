@@ -9,17 +9,17 @@ exports[`<Article /> should render 1`] = `
       class="sc-iGgWBj biWgIW"
     >
       <div
-        class="sc-kqGoIF yFZte"
+        class="sc-lnPyaJ iAANUf"
       >
         <div>
           <div
-            class="sc-iapWAC kUiRr"
+            class="sc-iXzfSG imBlIb"
           >
             <header
-              class="sc-fMMURN dtxGRF sc-kRRyDe kJvZZt"
+              class="sc-kzqdkY bFdwok sc-iapWAC bhyrIP"
             >
               <h1
-                class="sc-YysOf ivGKdG"
+                class="sc-bVHCgj jaeZrq"
               >
                 <span
                   class="sc-gsFSXq ljkohw"
@@ -28,25 +28,25 @@ exports[`<Article /> should render 1`] = `
               </h1>
             </header>
             <div
-              class="sc-knuQbY jcJjvI"
+              class="sc-kqGoIF cwRzwP"
             >
               <p
                 class="sc-krNlru bWTKgF"
               >
                 <span
-                  class="sc-fulCBj ggOqIR"
+                  class="sc-kRRyDe bHlAJy"
                 >
                   Source: 
                   Fiche service public
                 </span>
                 <span
                   aria-hidden="true"
-                  class="sc-dNsVcS eVUZyR"
+                  class="sc-gvZAcH xOnzb"
                 >
                    - 
                 </span>
                 <span
-                  class="sc-fulCBj ggOqIR"
+                  class="sc-kRRyDe bHlAJy"
                 >
                   Mis à jour le
                    : 
@@ -56,28 +56,28 @@ exports[`<Article /> should render 1`] = `
             </div>
           </div>
           <div
-            class="sc-ERObt dLJOcD"
+            class="sc-dxcDKg bRpVRq"
           >
             this is an Article
           </div>
         </div>
         <div
-          class="sc-dxcDKg ifTItW"
+          class="sc-eulNck bjWozT"
         >
           <div
-            class="sc-ePDLzJ jPWWwj"
+            class="sc-fMMURN kWgFDp"
           >
             <button
-              class="sc-bVVIoq eeEtLU no-after spacing-left"
+              class="sc-ktPPKK bEdhoG no-after spacing-left"
               title="Partager sur Facebook"
               type="button"
             >
               <span
-                class="sc-eBHhsj gIMjDw"
+                class="sc-cVzyXs gEWrIr"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-iXzfSG jtgLlq"
+                  class="sc-ePDLzJ bgRJSO"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -95,16 +95,16 @@ exports[`<Article /> should render 1`] = `
               </span>
             </button>
             <a
-              class="sc-dPZUQH cJPaNA spacing-left"
+              class="sc-YysOf kwqtRY spacing-left"
               href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Contrat%20de%20travail%20et%20formalit%C3%A9s%20d'embauche%20de%20l'assistante%20maternelle&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
               title="Envoyer par email"
             >
               <span
-                class="sc-eBHhsj gIMjDw"
+                class="sc-cVzyXs gEWrIr"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-iXzfSG jtgLlq"
+                  class="sc-ePDLzJ bgRJSO"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -126,16 +126,16 @@ exports[`<Article /> should render 1`] = `
               </span>
             </a>
             <button
-              class="sc-bVVIoq eeEtLU spacing-left"
+              class="sc-ktPPKK bEdhoG spacing-left"
               title="Partager sur LinkedIn"
               type="button"
             >
               <span
-                class="sc-eBHhsj gIMjDw"
+                class="sc-cVzyXs gEWrIr"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-iXzfSG jtgLlq"
+                  class="sc-ePDLzJ bgRJSO"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -156,16 +156,16 @@ exports[`<Article /> should render 1`] = `
               class="sc-hCPjZK dlWASs"
             >
               <button
-                class="sc-bVVIoq eeEtLU spacing-left"
+                class="sc-ktPPKK bEdhoG spacing-left"
                 title="Plus d’options"
                 type="button"
               >
                 <span
-                  class="sc-eBHhsj gIMjDw"
+                  class="sc-cVzyXs gEWrIr"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-iXzfSG jtgLlq"
+                    class="sc-ePDLzJ bgRJSO"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"

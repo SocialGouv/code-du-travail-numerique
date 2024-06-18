@@ -14,8 +14,7 @@ export const searchEnterprises = () =>
             "Commerce de détail et de gros à prédominance alimentaire",
           id: "KALICONT000005635085",
           title: "Commerce de détail et de gros à prédominance alimentaire",
-          url:
-            "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635085",
+          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635085",
           slug: "2216-commerce-de-detail-et-de-gros-a-predominance-alimentaire",
         },
         {
@@ -25,10 +24,8 @@ export const searchEnterprises = () =>
           id: "KALICONT000005635173",
           title:
             "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
-          url:
-            "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173",
-          slug:
-            "1486-bureaux-detudes-techniques-cabinets-dingenieurs-conseils-et-societes-de",
+          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173",
+          slug: "1486-bureaux-detudes-techniques-cabinets-dingenieurs-conseils-et-societes-de",
         },
       ],
       dateCreationUniteLegale: "2006-01-10",
@@ -53,5 +50,32 @@ export const searchEnterprises = () =>
       matching: 155,
       simpleLabel: "CARREFOUR HYPERMARCHES",
       siren: "451321335",
+    },
+    {
+      activitePrincipale: "Activités des organisations associatives n.c.a.",
+      activitePrincipaleUniteLegale: "94.99Z",
+      allMatchingEtablissements: [],
+      categorieJuridiqueUniteLegale: "9220",
+      conventions: [],
+      dateCreationUniteLegale: "2003-10-03",
+      dateDebut: "2016-01-01",
+      etablissements: 1,
+      etatAdministratifUniteLegale: "A",
+      firstMatchingEtablissement: {
+        activitePrincipaleEtablissement: "94.99Z",
+        address: "LA VILLE JUHEL 56800 TAUPONT",
+        codeCommuneEtablissement: "56249",
+        codePostalEtablissement: "56800",
+        etablissementSiege: true,
+        etatAdministratifEtablissement: "A",
+        idccs: [],
+        libelleCommuneEtablissement: "TAUPONT",
+        siret: "80942210800013",
+      },
+      highlightLabel: "<b><u>BRICOMANIE</u></b>",
+      label: "BRICOMANIE",
+      matching: 1,
+      simpleLabel: "BRICOMANIE",
+      siren: "809422108",
     },
   ]);

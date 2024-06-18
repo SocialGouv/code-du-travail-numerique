@@ -1,8 +1,9 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import { CalculateurIndemniteLicenciement } from "../index";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import userEvent from "@testing-library/user-event";
+import { UserAction } from "../../../common";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -19,51 +20,50 @@ Storage.prototype.getItem = jest.fn(
 );
 
 describe("Indemnité licenciement - CC 3239 - changement de convention collective", () => {
+  let userAction: UserAction;
   beforeEach(async () => {
-    render(<CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />);
-    fireEvent.click(ui.introduction.startButton.get());
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.contract.fauteGrave.non.get());
-    fireEvent.click(ui.contract.inaptitude.non.get());
-    fireEvent.click(ui.contract.arretTravail.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
-      target: { value: "'Salarié du particulier employeur'" },
-    });
-    fireEvent.click(ui.next.get());
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2020" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "15/09/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "15/09/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.oui.get());
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
+    );
+    userAction = new UserAction();
+    userAction.click(ui.introduction.startButton.get());
+    userAction.click(ui.contract.type.cdi.get());
+    userAction.click(ui.contract.fauteGrave.non.get());
+    userAction.click(ui.contract.inaptitude.non.get());
+    userAction.click(ui.contract.arretTravail.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.next.get());
+    userAction.setInput(
+      ui.information.agreement3239.proCategory.get(),
+      "'Salarié du particulier employeur'"
+    );
+    userAction.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
+    userAction.setInput(ui.seniority.notificationDate.get(), "15/09/2022");
+    userAction.setInput(ui.seniority.endDate.get(), "15/09/2022");
+    userAction.click(ui.seniority.hasAbsence.oui.get());
     userEvent.selectOptions(
       ui.seniority.absences.motif(0).get(),
       "Congé pour convenance personnelle"
     );
-    fireEvent.change(ui.seniority.absences.duration(0).get(), {
-      target: { value: "6" },
-    });
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.salary.hasSameSalary.oui.get());
-    fireEvent.change(ui.salary.sameSalaryValue.get(), {
-      target: { value: "3000" },
-    });
-    fireEvent.click(ui.next.get());
+    userAction.setInput(ui.seniority.absences.duration(0).get(), "6");
+    userAction.click(ui.next.get());
+    userAction.click(ui.salary.hasSameSalary.oui.get());
+    userAction.setInput(ui.salary.sameSalaryValue.get(), "3000");
+    userAction.click(ui.next.get());
     expect(
       screen.queryByText("Congé pour convenance personnelle")
     ).toBeInTheDocument();
-    fireEvent.click(ui.previous.get());
-    fireEvent.click(ui.previous.get());
-    fireEvent.click(ui.previous.get());
-    fireEvent.click(ui.previous.get());
-    fireEvent.click(ui.agreement.noAgreement.get());
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.previous.get());
+    userAction.click(ui.previous.get());
+    userAction.click(ui.previous.get());
+    userAction.click(ui.previous.get());
+    userAction.click(ui.agreement.noAgreement.get());
+    userAction.click(ui.next.get());
   });
   test("vérifier que la question sur la question sur le temps partiel soit affichée et que l'absence spécifique à la 3239 a été supprimée", async () => {
     expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
@@ -73,19 +73,17 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     );
     expect(ui.seniority.absences.duration(0).get()).toHaveValue(null);
 
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.next.get());
     expect(
       screen.queryByText("Vous devez renseigner tous les champs")
     ).toBeInTheDocument();
 
-    fireEvent.change(ui.seniority.absences.duration(0).get(), {
-      target: { value: "6" },
-    });
-    fireEvent.click(ui.next.get());
+    userAction.setInput(ui.seniority.absences.duration(0).get(), "6");
+    userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
     expect(ui.salary.hasPartialTime.non.query()).toBeInTheDocument();
-    fireEvent.click(ui.salary.hasPartialTime.non.get());
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.salary.hasPartialTime.non.get());
+    userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.absences.motif.queryAll()).toHaveLength(1);
     expect(ui.result.absences.motif.queryAll()[0]).not.toHaveTextContent(
