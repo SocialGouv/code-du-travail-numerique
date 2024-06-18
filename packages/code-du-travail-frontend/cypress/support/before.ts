@@ -34,7 +34,7 @@ export const downloadAllUrlsToValidate = async () => {
   });
 
   let count = 1;
-  const FILE_SIZE = 600;
+  const FILE_SIZE = Math.floor(urlsContributions.length / 2) + 1;
 
   for (let i = 0; i < urlsContributions.length; i += FILE_SIZE) {
     const part = urlsContributions.slice(i, i + FILE_SIZE);
