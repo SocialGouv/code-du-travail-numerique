@@ -33,21 +33,18 @@ export const downloadAllUrlsToValidate = async () => {
     });
   });
 
-  let count = 1;
   const FILE_SIZE = Math.floor(urlsContributions.length / 2) + 1;
 
-  for (let i = 0; i < urlsContributions.length; i += FILE_SIZE) {
-    const part = urlsContributions.slice(i, i + FILE_SIZE);
-    fs.writeFileSync(
-      `./cypress/support/urls-contributions-to-validate-${count}.json`,
-      JSON.stringify(part)
-    );
-    count++;
-  }
+  fs.writeFileSync(
+    "./cypress/support/urls-contributions-to-validate-1.json",
+    JSON.stringify(urlsContributions.slice(0, FILE_SIZE))
+  );
+  fs.writeFileSync(
+    "./cypress/support/urls-contributions-to-validate-2.json",
+    JSON.stringify(urlsContributions.slice(FILE_SIZE, urlsContributions.length))
+  );
 
   console.log(
-    `Urls des contributions à valider sauvegardées dans les fichier "./cypress/support/urls-contributions-to-validate-[1...${
-      count - 1
-    }].json"`
+    `Urls des contributions à valider sauvegardées dans les fichier "./cypress/support/urls-contributions-to-validate-1.json" et "./cypress/support/urls-contributions-to-validate-2.json"`
   );
 };
