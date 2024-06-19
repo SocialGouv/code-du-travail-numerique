@@ -87,7 +87,7 @@ export const SearchAgreementInput = ({
         </p>
       </InfoBulle>
 
-      <StyledInput {...getInputProps()} />
+      <StyledInput {...getInputProps()} data-testid="agreement-search-input" />
 
       <StyledList {...getMenuProps()}>
         {isOpen &&
