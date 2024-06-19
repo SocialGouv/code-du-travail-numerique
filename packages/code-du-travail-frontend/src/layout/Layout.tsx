@@ -27,7 +27,6 @@ const { breakpoints, spacings } = theme;
 
 const BackgroundContainer = styled.div`
   position: relative;
-  padding-top: calc(${HEADER_HEIGHT});
   @media (max-width: ${breakpoints.mobile}) {
     padding-top: calc(${MOBILE_HEADER_HEIGHT});
   }

@@ -37,6 +37,120 @@ export const Header = ({ currentPage = "" }) => {
   const showFloatingMenu = floating && overThreshold;
   const isContentPage = currentPage !== "home" && currentPage !== "search";
   return (
+    <>
+      <header role="banner" className="fr-header">
+        <div className="fr-header__body">
+          <StyledContainer2 className="fr-container">
+            <div className="fr-header__body-row">
+              <div className="fr-header__brand fr-enlarge-link">
+                <div className="fr-header__brand-top">
+                  <div className="fr-header__logo">
+                    <p className="fr-logo">
+                      République
+                      <br />
+                      Francaise
+                    </p>
+                  </div>
+                </div>
+                <div className="fr-header__service">
+                  <a
+                    href="/"
+                    title="Accueil - [À MODIFIER - Nom du site / service] - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)"
+                  >
+                    {/* <p className="fr-header__service-title">
+                      Code du travail numérique
+                    </p> */}
+                  </a>
+                  <p className="fr-header__service-tagline">
+                    Code du travail numérique
+                  </p>
+                </div>
+                <div className="fr-header__tools">
+                  <div className="fr-header__search fr-modal" id="modal-541">
+                    <div className="fr-container fr-container-lg--fluid">
+                      <button
+                        className="fr-btn--close fr-btn"
+                        aria-controls="modal-541"
+                        title="Fermer"
+                      >
+                        Fermer
+                      </button>
+                      <div
+                        className="fr-search-bar"
+                        id="search-540"
+                        role="search"
+                      >
+                        <label className="fr-label" for="search-540-input">
+                          Rechercher
+                        </label>
+                        <input
+                          className="fr-input"
+                          placeholder="Rechercher"
+                          type="search"
+                          id="search-540-input"
+                          name="search-540-input"
+                        />
+                        <button className="fr-btn" title="Rechercher">
+                          Rechercher
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </StyledContainer2>
+        </div>
+        <div
+          className="fr-header__menu fr-modal"
+          id="modal-543"
+          aria-labelledby="button-544"
+        >
+          <StyledContainer2 className="fr-container">
+            <button
+              className="fr-btn--close fr-btn"
+              aria-controls="modal-543"
+              title="Fermer"
+            >
+              Fermer
+            </button>
+            <div className="fr-header__menu-links"></div>
+            <nav
+              className="fr-nav"
+              id="navigation-547"
+              role="navigation"
+              aria-label="Menu principal"
+            >
+              <ul className="fr-nav__list">
+                <li className="fr-nav__item">
+                  <a className="fr-nav__link" href="#" target="_self">
+                    accès direct
+                  </a>
+                </li>
+                <li className="fr-nav__item">
+                  <a className="fr-nav__link" href="#" target="_self">
+                    accès direct
+                  </a>
+                </li>
+                <li className="fr-nav__item">
+                  <a className="fr-nav__link" href="#" target="_self">
+                    accès direct
+                  </a>
+                </li>
+                <li className="fr-nav__item">
+                  <a className="fr-nav__link" href="#" target="_self">
+                    accès direct
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </StyledContainer2>
+        </div>
+      </header>
+    </>
+  );
+  {
+    /* return (
     <StyledHeader
       overThreshold={overThreshold}
       floating={floating}
@@ -90,10 +204,13 @@ export const Header = ({ currentPage = "" }) => {
         <HeaderBurgerNav currentPage={currentPage} />
       </StyledContainer>
     </StyledHeader>
-  );
+  ); */
+  }
 };
 
 const { box, breakpoints, spacings } = theme;
+
+const StyledContainer2 = styled.div``;
 
 const StyledHeader = styled.header`
   position: absolute;
