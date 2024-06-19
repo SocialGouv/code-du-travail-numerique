@@ -31,15 +31,15 @@ export const getStatsService = async () => {
   }
 
   const generateUrlVisit = (index: number) => {
-    return `${PIWIK_URL}/?module=API&method=VisitsSummary.getVisits&idSite=${PIWIK_SITE_ID}&format=JSON&period=range&date=${
+    return `${PIWIK_URL}/?module=API&method=VisitsSummary.getVisits&idSite=${PIWIK_SITE_ID}&format=JSON&period=year&date=${
       refYear + index
-    }-01-01,${refYear + index + 1}-01-01`;
+    }-01-01`;
   };
 
   const generateUrlAction = (index: number) => {
-    return `${PIWIK_URL}/?module=API&method=Actions.get&idSite=${PIWIK_SITE_ID}&format=JSON&period=range&date=${
+    return `${PIWIK_URL}/?module=API&method=Actions.get&idSite=${PIWIK_SITE_ID}&format=JSON&period=year&date=${
       refYear + index
-    }-01-01,${refYear + index + 1}-01-01`;
+    }-01-01`;
   };
 
   const visitsPromises = Array.from(Array(numberLoop).keys()).map((index) => {
