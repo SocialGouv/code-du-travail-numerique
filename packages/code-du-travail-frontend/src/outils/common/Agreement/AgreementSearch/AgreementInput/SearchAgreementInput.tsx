@@ -1,11 +1,8 @@
-import { Input, Label, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
+import { Label, Text, theme } from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import styled from "styled-components";
-import Autosuggest from "react-autosuggest";
 import { formatIdcc } from "@socialgouv/modeles-social";
-import { suggesterTheme } from "../../../../../search/SearchBar/DocumentSuggesterTheme";
 import { InfoBulle } from "../../../InfoBulle";
-import { createSuggesterHook } from "../../components/Suggester";
 import { searchAgreements } from "../../../../../conventions/Search/api/agreements.service";
 import {
   TrackingProps,
@@ -13,6 +10,7 @@ import {
 } from "../../../../ConventionCollective/types";
 import { AgreementNoResult } from "../AgreementNoResult";
 import { Agreement } from "../../../../../outils/types";
+import { useCombobox } from "downshift";
 
 type Props = {
   onSelectAgreement: (agreement: Agreement) => void;
@@ -24,43 +22,47 @@ export const SearchAgreementInput = ({
   onSelectAgreement,
   searchResultOverride,
 }: Props): JSX.Element => {
-  const [query, setQuery] = useState("");
+  const [suggestions, setSuggestions] = useState<Agreement[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [hasAlreadyFetched, setHasAlreadyFetched] = useState(false);
 
-  const useAgreementSuggester = createSuggesterHook(
-    searchAgreements,
-    (query) => {
-      onUserAction(UserAction.SearchAgreement, { query });
-    }
-  );
+  const {
+    isOpen,
+    getMenuProps,
+    getInputProps,
+    highlightedIndex,
+    getItemProps,
+  } = useCombobox({
+    items: suggestions,
+    onInputValueChange: async ({ inputValue }) => {
+      setHasAlreadyFetched(true);
+      setIsLoading(true);
+      onUserAction(UserAction.SearchAgreement, { query: inputValue });
+      try {
+        const results = await searchAgreements(inputValue);
+        if (searchResultOverride) {
+          setSuggestions(searchResultOverride(inputValue, results));
+        } else {
+          setSuggestions(results);
+        }
+      } catch (error) {
+        setError(error);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    onSelectedItemChange(changes) {
+      const suggestion: Agreement = changes.selectedItem;
+      if (suggestion) {
+        onSelectAgreement(suggestion);
+      }
+    },
+    itemToString(item) {
+      return item ? item.shortTitle : "";
+    },
+  });
 
-  const state = useAgreementSuggester(query);
-
-  const onChange = () => {};
-
-  const onClear = () => {
-    setQuery("");
-  };
-
-  const onSearch = async ({ value }) => {
-    setQuery(value);
-  };
-
-  const onSelect = async (event, data) => {
-    event.preventDefault();
-    onSelectAgreement(data.suggestion);
-  };
-  const inputProps: any = {
-    "aria-label": "agreement-search-label",
-    id: "agreement-search",
-    name: "agreement-search",
-    onChange: onChange,
-    placeholder: "Ex : Transports routiers ou 1486",
-    title: "Nom de la convention collective",
-    type: "search",
-    value: query,
-    "data-testid": "agreement-search-input",
-    autoFocus: true,
-  };
   return (
     <>
       <InlineLabel htmlFor="agreement-search" id="agreement-search-label">
@@ -84,69 +86,86 @@ export const SearchAgreementInput = ({
           l’entreprise (Ex : 4752A).
         </p>
       </InfoBulle>
-      <Autosuggest
-        theme={suggesterTheme}
-        suggestions={
-          !state.isLoading && searchResultOverride
-            ? searchResultOverride(query, state.data ?? [])
-            : state.data ?? []
-        }
-        alwaysRenderSuggestions={false}
-        onSuggestionSelected={onSelect}
-        onSuggestionsFetchRequested={onSearch}
-        shouldRenderSuggestions={(value, reason) => {
-          if (reason === "escape-pressed") {
-            onClear();
-          }
-          return true;
-        }}
-        getSuggestionValue={(suggestion) => suggestion as any}
-        renderSuggestion={renderSuggestion}
-        renderSuggestionsContainer={renderSuggestionsContainer}
-        renderInputComponent={renderInputComponent}
-        inputProps={inputProps}
-        focusInputOnSuggestionClick={false}
-      />
-      <AgreementNoResult onUserAction={onUserAction} state={state} />
+
+      <StyledInput {...getInputProps()} />
+
+      <StyledList {...getMenuProps()}>
+        {isOpen &&
+          suggestions.map((item: Agreement, index) => (
+            <StyledSuggestion
+              isHighlighted={highlightedIndex === index}
+              key={`${item}${index}`}
+              {...getItemProps({
+                item,
+                index,
+              })}
+            >
+              {item.shortTitle} (IDCC {formatIdcc(item.num)})
+            </StyledSuggestion>
+          ))}
+      </StyledList>
+      {hasAlreadyFetched && (
+        <AgreementNoResult
+          data={suggestions}
+          isLoading={isLoading}
+          error={error}
+          onUserAction={onUserAction}
+        />
+      )}
     </>
   );
 };
 
-const renderInputComponent = (inputProps) => <BlockInput {...inputProps} />;
+const { breakpoints, spacings, fonts, box, colors } = theme;
 
-const SuggestionsContainer = styled.div`
-  li[role="option"]:nth-child(2n + 1) {
-    background: ${theme.colors.bgSecondary};
-  }
-`;
-
-const renderSuggestion = (suggestion: Agreement) => {
-  return (
-    <SuggestionContainer>
-      <Paragraph noMargin>
-        {suggestion.shortTitle} (IDCC {formatIdcc(suggestion.num)})
-      </Paragraph>
-      {suggestion.highlight?.searchInfo && (
-        <Paragraph noMargin variant="secondary">
-          ({suggestion.highlight?.searchInfo})
-        </Paragraph>
-      )}
-    </SuggestionContainer>
-  );
-};
-
-const SuggestionContainer = styled.div`
+const StyledInput = styled.input`
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 5.4rem;
+  margin: 0;
+  color: ${({ theme }) => theme.paragraph};
+  font-weight: normal;
+  font-size: ${fonts.sizes.default};
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  background: ${({ theme }) => theme.white};
+  border: 1px solid transparent;
+  border-radius: ${box.borderRadius};
+  box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
+  appearance: none;
+
+  &::placeholder {
+    color: ${({ theme }) => theme.placeholder};
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    height: 5.4rem;
+    padding: 1rem 5.5rem 1rem ${spacings.base};
+  }
+
+  margin-top: ${spacings.small};
 `;
 
-const renderSuggestionsContainer = ({ containerProps, children }) => (
-  <SuggestionsContainer {...containerProps}>{children}</SuggestionsContainer>
-);
-
-const BlockInput = styled(Input)`
-  padding-top: ${theme.spacings.small};
+const StyledList = styled.ul`
   width: 100%;
+  z-index: 1;
+  background: ${colors.white};
+  box-shadow: 0 10px 10px -10px #b7bcdf;
+  margin: 0;
+  margin-top: ${spacings.tiny};
+  padding: 0;
+  border-radius: 3px;
+`;
+
+const StyledSuggestion = styled.li`
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 2rem;
+  list-style-type: none;
+  padding: ${spacings.base};
+  background: ${({ isHighlighted, theme }) =>
+    isHighlighted ? theme.bgTertiary : "initial"};
 `;
 
 const InlineLabel = styled(Label)`

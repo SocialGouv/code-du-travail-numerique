@@ -3,27 +3,67 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-
 import { fetchSuggestResults } from "../search.service";
-import { DocumentSuggester } from "./DocumentSuggester";
-
+import { useCombobox } from "downshift";
 const { Search: SearchIcon } = icons;
 
 const suggestMaxResults = 5;
 
+type Props = {
+  inputId: string;
+  hasButton?: boolean;
+  hasSearchIcon?: boolean;
+};
+
 const SearchBar = ({
-  hasFocus = false,
   inputId,
   hasButton = false,
   hasSearchIcon = false,
-}) => {
+}: Props) => {
   const router = useRouter();
-  // query in the input box
-  const [query, setQuery] = useState(router.query.q || "");
+  const [query, setQuery] = useState(router.query.q ?? "");
   const [suggestions, setSuggestions] = useState([]);
 
+  const {
+    isOpen,
+    getMenuProps,
+    getInputProps,
+    highlightedIndex,
+    getItemProps,
+  } = useCombobox({
+    items: suggestions,
+    onInputValueChange: async ({ inputValue }) => {
+      setQuery(inputValue);
+      try {
+        const results = await fetchSuggestResults(inputValue).then((items) =>
+          items.slice(0, suggestMaxResults)
+        );
+        setSuggestions(results);
+      } catch (error) {
+        console.error("fetch error", error);
+      }
+    },
+    onSelectedItemChange(changes) {
+      const suggestion = changes.selectedItem;
+      if (suggestion) {
+        matopush(["trackEvent", "selectedSuggestion", query, suggestion]);
+        matopush([
+          "trackEvent",
+          "candidateSuggestions",
+          suggestions.join("###"),
+        ]);
+        window.scrollTo(0, 0);
+        document.body.focus();
+        router.push({
+          pathname: "/recherche",
+          query: { q: suggestion },
+        });
+      }
+    },
+  });
+
   useEffect(() => {
-    setQuery(router.query.q);
+    setQuery(router.query.q as string);
   }, [router.query.q]);
 
   const onFormSubmit = (e) => {
@@ -34,65 +74,44 @@ const SearchBar = ({
       router.push({
         pathname: "/recherche",
         query: {
-          q: query.trim(),
+          q: (query as string).trim(),
         },
       });
     }
   };
 
-  const onChange = (event, { newValue } = {}) => {
-    setQuery(newValue);
-  };
-
-  const onSelect = (suggestion, event) => {
-    // prevent onSubmit to be call
-    event.preventDefault();
-    matopush(["trackEvent", "selectedSuggestion", query, suggestion]);
-    matopush(["trackEvent", "candidateSuggestions", suggestions.join("###")]);
-    window.scrollTo(0, 0);
-    document.body.focus();
-    router.push({
-      pathname: "/recherche",
-      query: { q: suggestion },
-    });
-  };
-
-  const onClear = () => {
-    setSuggestions([]);
-  };
-
-  const onSearch = async ({ value }) => {
-    try {
-      const results = await fetchSuggestResults(value).then((items) =>
-        items.slice(0, suggestMaxResults)
-      );
-      setSuggestions(results);
-    } catch (error) {
-      console.error("fetch error", error);
-    }
-  };
   return (
     <SearchForm role="search" action="/recherche" onSubmit={onFormSubmit}>
       <ScreenReaderOnly>
         <label htmlFor={inputId}>Rechercher</label>
       </ScreenReaderOnly>
       {hasButton && !hasSearchIcon && <SearchIconLeft aria-hidden="true" />}
-      <SearchInput
-        inputId={inputId}
-        hasFocus={hasFocus}
-        hasButton={hasButton}
-        hasSearchIcon={hasSearchIcon}
-        onChange={onChange}
-        query={query}
+
+      <StyledInput
         placeholder={
           hasButton ? "congés payés, durée de préavis" : "Rechercher"
         }
-        onSearch={onSearch}
-        onSelect={onSelect}
-        onClear={onClear}
-        suggestions={suggestions}
-        ariaLabel="recherchez par mots-clés"
+        hasButton={hasButton}
+        hasSearchIcon={hasSearchIcon}
+        {...getInputProps()}
       />
+
+      <StyledList hasButton={hasButton} {...getMenuProps()}>
+        {isOpen &&
+          suggestions.map((item, index) => (
+            <StyledSuggestion
+              isHighlighted={highlightedIndex === index}
+              key={`${item}${index}`}
+              {...getItemProps({
+                item,
+                index,
+              })}
+            >
+              {item}
+            </StyledSuggestion>
+          ))}
+      </StyledList>
+
       {hasButton ? (
         <SubmitButton
           hasSearchIcon={hasSearchIcon}
@@ -119,9 +138,7 @@ const SearchBar = ({
   );
 };
 
-export default SearchBar;
-
-const { box, breakpoints, fonts, spacings } = theme;
+const { breakpoints, spacings, fonts, box, colors } = theme;
 
 const SearchForm = styled.form`
   position: relative;
@@ -149,7 +166,27 @@ const SearchIconLeft = styled(StyledSearchIcon)`
   }
 `;
 
-const SearchInput = styled(DocumentSuggester)`
+const SubmitButton = styled(Button)`
+  position: absolute;
+  top: ${spacings.xsmall};
+  right: ${spacings.xsmall};
+  ${({ hasSearchIcon }) => hasSearchIcon && `padding: 0 ${spacings.base};`};
+  @media (max-width: ${breakpoints.mobile}) {
+    position: static;
+    margin-top: ${spacings.small};
+    margin-left: 0;
+  }
+`;
+const SubmitIcon = styled(Button)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 5.4rem;
+  color: ${({ theme }) => theme.secondary};
+`;
+
+const StyledInput = styled.input`
   display: flex;
   width: 100%;
   height: ${({ hasButton }) => (hasButton ? "7rem" : "5.4rem")};
@@ -185,22 +222,27 @@ const SearchInput = styled(DocumentSuggester)`
   }
 `;
 
-const SubmitButton = styled(Button)`
+const StyledList = styled.ul`
   position: absolute;
-  top: ${spacings.xsmall};
-  right: ${spacings.xsmall};
-  ${({ hasSearchIcon }) => hasSearchIcon && `padding: 0 ${spacings.base};`};
-  @media (max-width: ${breakpoints.mobile}) {
-    position: static;
-    margin-top: ${spacings.small};
-    margin-left: 0;
-  }
+  width: 100%;
+  z-index: 1;
+  background: ${colors.white};
+  box-shadow: 0 10px 10px -10px #b7bcdf;
+  margin: 0;
+  margin-top: ${spacings.tiny};
+  padding: 0;
+  border-radius: 3px;
+  top: ${({ hasButton }) => (hasButton ? "7rem" : "5.4rem")};
 `;
-const SubmitIcon = styled(Button)`
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 3rem;
-  height: 5.4rem;
-  color: ${({ theme }) => theme.secondary};
+
+const StyledSuggestion = styled.li`
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 2rem;
+  list-style-type: none;
+  padding: ${spacings.base};
+  background: ${({ isHighlighted, theme }) =>
+    isHighlighted ? theme.bgTertiary : "initial"};
 `;
+
+export default SearchBar;
