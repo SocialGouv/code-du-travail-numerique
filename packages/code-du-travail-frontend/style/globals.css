@@ -1,0 +1,186 @@
+button,
+a {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  --text-spacing: 1.2rem 0;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-marianne), arial, sans-serif;
+}
+
+a.no-style-link {
+  box-shadow: none;
+  background-image: none !important;
+}
+
+p,
+.section-container,
+h1,
+h2,
+h3,
+.results-list {
+  /* break very long word */
+  word-break: break-word;
+  /* preserve whitespace */
+  white-space: pre-wrap;
+}
+
+.layout-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.layout-center.vertical-margin {
+  margin: 10px auto;
+}
+
+.layout-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.layout-right.vertical-margin {
+  margin: 10px auto;
+}
+
+.layout-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.layout-left .vertical-margin {
+  margin: 10px auto;
+}
+
+.layout-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.font-small {
+  font-size: 0.9rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.content-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+
+main {
+  min-height: 400px;
+  margin-bottom: 50px;
+}
+
+h1:not(.fr-alert__title) {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  margin: 50px 0 10px;
+}
+
+h2:not(.fr-alert__title) {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin: 40px 0 10px;
+}
+
+h3:not(.fr-alert__title) {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  margin: 32px 0 10px;
+}
+
+h4:not(.fr-alert__title) {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  margin: 22px 0 10px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 576px) {
+  h1 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin: 40px 0 15px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin: 30px 0 16px;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+    margin: 12px 0 16px;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+    margin: 12px 0 16px;
+  }
+}
+
+/* # that appears before headings in content extracted from markdown */
+.anchor-link {
+  font-size: 1em;
+  float: left;
+  margin-left: -1em;
+  padding-right: 0.25em;
+  color: #000091;
+  opacity: 0;
+  background-image: none !important;
+}
+
+*:hover > .anchor-link {
+  opacity: 1;
+}
+
+.print-never {
+  display: block;
+
+  @media print {
+    display: none;
+  }
+}
+
+.print-only {
+  display: none;
+
+  @media print {
+    display: block;
+  }
+}
+
+/* There is no alternative than copying color constant, in order to have them in hover state */
+:root {
+  --annuaire-colors-yellow: #fef6e3;
+  --annuaire-colors-frBlue: #000091;
+  --annuaire-colors-pastelBlue: #dfdff1;
+  --annuaire-colors-espaceAgent: #cc007a;
+  --annuaire-colors-espaceAgentPastel: #ffe8f4;
+}
+
+#browser-is-outdated {
+  display: none;
+}
