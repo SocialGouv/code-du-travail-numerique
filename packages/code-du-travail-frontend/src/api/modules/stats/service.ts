@@ -1,4 +1,4 @@
-// import { PIWIK_SITE_ID, PIWIK_URL } from "../../../config";
+import { PIWIK_SITE_ID, PIWIK_URL } from "../../../config";
 import {
   elasticsearchClient,
   elasticDocumentsIndex,
@@ -12,8 +12,6 @@ export const getStatsService = async () => {
   const now = new Date();
   const currentYear = now.getFullYear();
   const numberLoop = currentYear - refYear + 1;
-  const PIWIK_URL = "https://matomo.fabrique.social.gouv.fr";
-  const PIWIK_SITE_ID = "4";
 
   const response = await elasticsearchClient.search<any>({
     body,
