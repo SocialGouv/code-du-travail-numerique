@@ -22,7 +22,9 @@ const SearchBar = ({
   hasSearchIcon = false,
 }: Props) => {
   const router = useRouter();
-  const [query, setQuery] = useState(router.query.q ?? "");
+  const [query, setQuery] = useState(
+    typeof router.query.q === "string" ? router.query.q : ""
+  );
   const [suggestions, setSuggestions] = useState([]);
 
   const {
@@ -61,10 +63,11 @@ const SearchBar = ({
         });
       }
     },
+    initialInputValue: query,
   });
 
   useEffect(() => {
-    setQuery(router.query.q as string);
+    if (typeof router.query.q === "string") setQuery(router.query.q);
   }, [router.query.q]);
 
   const onFormSubmit = (e) => {
@@ -75,7 +78,7 @@ const SearchBar = ({
       router.push({
         pathname: "/recherche",
         query: {
-          q: (query as string).trim(),
+          q: query.trim(),
         },
       });
     }
