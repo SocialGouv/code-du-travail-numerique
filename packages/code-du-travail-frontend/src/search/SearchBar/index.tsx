@@ -104,24 +104,25 @@ const SearchBar = ({
       {hasButton && !hasSearchIcon && <SearchIconLeft aria-hidden="true" />}
 
       <StyledInput
+        {...getInputProps()}
+        id={"inputId"}
         placeholder={
           hasButton ? "congés payés, durée de préavis" : "Rechercher"
         }
         hasButton={hasButton}
         hasSearchIcon={hasSearchIcon}
-        {...getInputProps()}
       />
 
-      <StyledList hasButton={hasButton} {...getMenuProps()}>
+      <StyledList {...getMenuProps()} hasButton={hasButton}>
         {isOpen &&
           suggestions.map((item, index) => (
             <StyledSuggestion
-              isHighlighted={highlightedIndex === index}
-              key={`${item}${index}`}
               {...getItemProps({
                 item,
                 index,
               })}
+              isHighlighted={highlightedIndex === index}
+              key={`${item}${index}`}
             >
               <Html>{renderBoldFromQuery(item, query)}</Html>
             </StyledSuggestion>

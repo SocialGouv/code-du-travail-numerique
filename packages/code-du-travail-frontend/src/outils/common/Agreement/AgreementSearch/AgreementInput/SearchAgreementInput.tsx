@@ -108,12 +108,12 @@ export const SearchAgreementInput = ({
         {isOpen &&
           suggestions.map((item: Agreement, index) => (
             <StyledSuggestion
-              isHighlighted={highlightedIndex === index}
-              key={`${item}${index}`}
               {...getItemProps({
                 item,
                 index,
               })}
+              key={`${item}${index}`}
+              isHighlighted={highlightedIndex === index}
             >
               {item.shortTitle} (IDCC {formatIdcc(item.num)})
             </StyledSuggestion>
