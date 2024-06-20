@@ -3,38 +3,38 @@
 exports[`<Theme /> should render 1`] = `
 <div>
   <div
-    class="sc-jdkBTo hnalNj"
+    class="sc-fmzyuX ifhsuS"
   >
     <div
-      class="sc-fmzyuX kaJmFn"
+      class="sc-cspYLC cUJswY"
     />
     <header
-      class="sc-hoLEA bUSWqC"
+      class="sc-bOhtcR hzqlAB"
     >
       <div
-        class="sc-bOhtcR fALbUA"
+        class="sc-fFlnrN fSGXaS"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-aXZVg sc-camqpD gZgZQL gvhtaq"
+        class="sc-aXZVg sc-gweoQa gZgZQL hSRCya"
       >
         <a
-          class="sc-gweoQa dBnSUO"
+          class="sc-eIcdZJ dLnBur"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-eIcdZJ cRxKRw"
+            class="sc-jdUcAg kASzHZ"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-jdUcAg fjNykK"
+            class="sc-bddgXz eTyBaf"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<Theme /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-eHsDsR fNntQa"
+          class="sc-jdkBTo bLQdUx"
         >
           <form
             action="/recherche"
-            class="sc-iLsKjm vqKyr"
+            class="sc-lbJcrp krUqKE"
             role="search"
           >
             <div
@@ -81,7 +81,7 @@ exports[`<Theme /> should render 1`] = `
               aria-expanded="false"
               aria-labelledby="downshift-:r0:-label"
               autocomplete="off"
-              class="sc-bfhvDw bngMSI"
+              class="sc-cMa-dbN koAZjn"
               id="downshift-:r0:-input"
               placeholder="Rechercher"
               role="combobox"
@@ -89,19 +89,19 @@ exports[`<Theme /> should render 1`] = `
             />
             <ul
               aria-labelledby="downshift-:r0:-label"
-              class="sc-cMa-dbN TPUtg"
+              class="sc-fUBkdm eFBISl"
               id="downshift-:r0:-menu"
               role="listbox"
             />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz kyVwqT sc-kgOKUu gAzQbo"
+              class="sc-kOPcWz kyVwqT sc-bfhvDw BoDvp"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-lbJcrp fTRJCy"
+                class="sc-eifrsQ IOvkV"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -115,11 +115,11 @@ exports[`<Theme /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-fFlnrN bSQpXw"
+          class="sc-kbdlSk keNudb"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-fyVfxW hQzGIn"
+            class="sc-eHsDsR cHnHEg"
             href="/recherche"
             rel="nofollow"
           >
@@ -137,17 +137,17 @@ exports[`<Theme /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-bddgXz hVIKfM"
+          class="sc-fyVfxW kOLqIf"
         >
           <button
-            class="sc-kOPcWz cOwJar sc-tagGq sc-kbdlSk bZXUzd eFdtnG"
+            class="sc-kOPcWz cOwJar sc-tagGq sc-camqpD bZXUzd eYHsZl"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-hBtRBD gomQLA"
+          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-hYmls gtNtDd"
         >
           <svg
             aria-hidden="true"
@@ -167,7 +167,7 @@ exports[`<Theme /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-cspYLC cSkGVL"
+      class="sc-dwalKd bTRwAU"
       id="content"
       tabindex="-1"
     >
@@ -250,34 +250,34 @@ exports[`<Theme /> should render 1`] = `
             </p>
           </header>
           <div
-            class="sc-aXZVg sc-dwalKd gZgZQL bSjdje"
+            class="sc-aXZVg sc-BQMaI gZgZQL gsAGlt"
           >
             <a
-              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
+              class="sc-epqpcT lkDKcU sc-kOPcWz gWtlVM"
               href="/themes//themes/121-cdi"
             >
               CDI
             </a>
             <a
-              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
+              class="sc-epqpcT lkDKcU sc-kOPcWz gWtlVM"
               href="/themes//themes/122-cdd"
             >
               CDD
             </a>
             <a
-              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
+              class="sc-epqpcT lkDKcU sc-kOPcWz gWtlVM"
               href="/themes//themes/123-interim"
             >
               Intérim
             </a>
             <a
-              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
+              class="sc-epqpcT lkDKcU sc-kOPcWz gWtlVM"
               href="/themes//themes/124-contrat-dapprentissage"
             >
               Contrat d'apprentissage
             </a>
             <a
-              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
+              class="sc-epqpcT lkDKcU sc-kOPcWz gWtlVM"
               href="/themes//themes/125-contrat-de-professionnalisation"
             >
               Contrat de professionnalisation

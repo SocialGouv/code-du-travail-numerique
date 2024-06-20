@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { fetchSuggestResults } from "../search.service";
 import { useCombobox } from "downshift";
+import Html from "../../common/Html";
 const { Search: SearchIcon } = icons;
 
 const suggestMaxResults = 5;
@@ -80,6 +81,21 @@ const SearchBar = ({
     }
   };
 
+  function renderBoldFromQuery(item: string, query: string | string[]) {
+    if (typeof query === "string") {
+      const regex = new RegExp(`(${query})`, "gi");
+      return item.replace(regex, "<b>$1</b>");
+    } else if (Array.isArray(query)) {
+      let result = item;
+      query.forEach((q) => {
+        const regex = new RegExp(`(${q})`, "gi");
+        result = result.replace(regex, "<b>$1</b>");
+      });
+      return result;
+    }
+    return item;
+  }
+
   return (
     <SearchForm role="search" action="/recherche" onSubmit={onFormSubmit}>
       <ScreenReaderOnly>
@@ -107,7 +123,7 @@ const SearchBar = ({
                 index,
               })}
             >
-              {item}
+              <Html>{renderBoldFromQuery(item, query)}</Html>
             </StyledSuggestion>
           ))}
       </StyledList>
@@ -186,7 +202,7 @@ const SubmitIcon = styled(Button)`
   color: ${({ theme }) => theme.secondary};
 `;
 
-const StyledInput = styled.input`
+export const StyledInput = styled.input`
   display: flex;
   width: 100%;
   height: ${({ hasButton }) => (hasButton ? "7rem" : "5.4rem")};
@@ -222,10 +238,10 @@ const StyledInput = styled.input`
   }
 `;
 
-const StyledList = styled.ul`
+export const StyledList = styled.ul`
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
   background: ${colors.white};
   box-shadow: 0 10px 10px -10px #b7bcdf;
   margin: 0;
@@ -235,14 +251,18 @@ const StyledList = styled.ul`
   top: ${({ hasButton }) => (hasButton ? "7rem" : "5.4rem")};
 `;
 
-const StyledSuggestion = styled.li`
+export const StyledSuggestion = styled.li`
   border-radius: 3px;
   cursor: pointer;
   line-height: 2rem;
   list-style-type: none;
   padding: ${spacings.base};
-  background: ${({ isHighlighted, theme }) =>
-    isHighlighted ? theme.bgTertiary : "initial"};
+  background: ${({ isHighlighted }) =>
+    isHighlighted ? colors.bgTertiary : colors.white};
+  &:nth-child(2n + 1) {
+    background: ${({ isHighlighted }) =>
+      isHighlighted ? colors.bgTertiary : colors.bgSecondary};
+  }
 `;
 
 export default SearchBar;

@@ -11,6 +11,11 @@ import {
 import { AgreementNoResult } from "../AgreementNoResult";
 import { Agreement } from "../../../../../outils/types";
 import { useCombobox } from "downshift";
+import {
+  StyledSuggestion,
+  StyledList,
+  StyledInput,
+} from "../../../../../search/SearchBar";
 
 type Props = {
   onSelectAgreement: (agreement: Agreement) => void;
@@ -22,10 +27,10 @@ export const SearchAgreementInput = ({
   onSelectAgreement,
   searchResultOverride,
 }: Props): JSX.Element => {
+  const [query, setQuery] = useState<null | string>(null);
   const [suggestions, setSuggestions] = useState<Agreement[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [hasAlreadyFetched, setHasAlreadyFetched] = useState(false);
 
   const {
     isOpen,
@@ -36,11 +41,13 @@ export const SearchAgreementInput = ({
   } = useCombobox({
     items: suggestions,
     onInputValueChange: async ({ inputValue }) => {
-      setHasAlreadyFetched(true);
       setIsLoading(true);
-      onUserAction(UserAction.SearchAgreement, { query: inputValue });
+      setQuery(inputValue);
       try {
         const results = await searchAgreements(inputValue);
+        if (inputValue) {
+          onUserAction(UserAction.SearchAgreement, { query: inputValue });
+        }
         if (searchResultOverride) {
           setSuggestions(searchResultOverride(inputValue, results));
         } else {
@@ -87,9 +94,16 @@ export const SearchAgreementInput = ({
         </p>
       </InfoBulle>
 
-      <StyledInput {...getInputProps()} data-testid="agreement-search-input" />
+      <StyledSearch
+        {...getInputProps()}
+        data-testid="agreement-search-input"
+        placeholder={"Ex : Transports routiers ou 1486"}
+      />
 
-      <StyledList {...getMenuProps()}>
+      <StyledUl
+        {...getMenuProps()}
+        hideBorder={suggestions.length === 0 || !isOpen}
+      >
         {isOpen &&
           suggestions.map((item: Agreement, index) => (
             <StyledSuggestion
@@ -103,8 +117,8 @@ export const SearchAgreementInput = ({
               {item.shortTitle} (IDCC {formatIdcc(item.num)})
             </StyledSuggestion>
           ))}
-      </StyledList>
-      {hasAlreadyFetched && (
+      </StyledUl>
+      {query !== null && query !== "" && (
         <AgreementNoResult
           data={suggestions}
           isLoading={isLoading}
@@ -116,56 +130,15 @@ export const SearchAgreementInput = ({
   );
 };
 
-const { breakpoints, spacings, fonts, box, colors } = theme;
-
-const StyledInput = styled.input`
-  display: flex;
-  width: 100%;
-  height: 5.4rem;
-  margin: 0;
-  color: ${({ theme }) => theme.paragraph};
-  font-weight: normal;
-  font-size: ${fonts.sizes.default};
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  background: ${({ theme }) => theme.white};
-  border: 1px solid transparent;
-  border-radius: ${box.borderRadius};
-  box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
-  appearance: none;
-
-  &::placeholder {
-    color: ${({ theme }) => theme.placeholder};
-  }
-
-  @media (max-width: ${breakpoints.mobile}) {
-    height: 5.4rem;
-    padding: 1rem 5.5rem 1rem ${spacings.base};
-  }
-
-  margin-top: ${spacings.small};
+const StyledSearch = styled(StyledInput)`
+  margin-top: ${theme.spacings.small};
 `;
 
-const StyledList = styled.ul`
-  width: 100%;
-  z-index: 1;
-  background: ${colors.white};
-  box-shadow: 0 10px 10px -10px #b7bcdf;
-  margin: 0;
-  margin-top: ${spacings.tiny};
-  padding: 0;
-  border-radius: 3px;
-`;
-
-const StyledSuggestion = styled.li`
-  border-radius: 3px;
-  cursor: pointer;
-  line-height: 2rem;
-  list-style-type: none;
-  padding: ${spacings.base};
-  background: ${({ isHighlighted, theme }) =>
-    isHighlighted ? theme.bgTertiary : "initial"};
+const StyledUl = styled(StyledList)`
+  position: initial;
+  border: ${({ hideBorder }) =>
+    hideBorder ? "0px" : `1px solid ${theme.colors.border}`};
+  box-shadow: initial;
 `;
 
 const InlineLabel = styled(Label)`

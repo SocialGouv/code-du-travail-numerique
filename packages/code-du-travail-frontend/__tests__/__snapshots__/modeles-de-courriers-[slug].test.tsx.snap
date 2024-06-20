@@ -3,38 +3,38 @@
 exports[`<ModelesDeCourrier /> should render 1`] = `
 <div>
   <div
-    class="sc-gweoQa bnxmsR"
+    class="sc-eIcdZJ cLCduI"
   >
     <div
-      class="sc-eIcdZJ jZjaFB"
+      class="sc-jdUcAg kriaHo"
     />
     <header
-      class="sc-fUBkdm cdIumq"
+      class="sc-hBtRBD eNRbnf"
     >
       <div
-        class="sc-hBtRBD hhFrKi"
+        class="sc-hYmls gfLDKb"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-aXZVg sc-eXsaLi gZgZQL hTNWeq"
+        class="sc-aXZVg sc-gEkIjz gZgZQL gjeOiA"
       >
         <a
-          class="sc-gEkIjz eZnYXg"
+          class="sc-hoLEA jMWIzX"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-hoLEA cAIauw"
+            class="sc-bOhtcR OoGsH"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-bOhtcR fxvZkA"
+            class="sc-fFlnrN foaHVq"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-camqpD jBVvSj"
+          class="sc-gweoQa fZVcwr"
         >
           <form
             action="/recherche"
-            class="sc-deXhhX dCERfw"
+            class="sc-dQEtJz dDGKmp"
             role="search"
           >
             <div
@@ -81,7 +81,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               aria-expanded="false"
               aria-labelledby="downshift-:r0:-label"
               autocomplete="off"
-              class="sc-epALIP byJirg"
+              class="sc-iLsKjm cykCX"
               id="downshift-:r0:-input"
               placeholder="Rechercher"
               role="combobox"
@@ -89,19 +89,19 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             />
             <ul
               aria-labelledby="downshift-:r0:-label"
-              class="sc-iLsKjm jRyeKc"
+              class="sc-lbJcrp kokiBX"
               id="downshift-:r0:-menu"
               role="listbox"
             />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz kyVwqT sc-dJiZtA hVSvKc"
+              class="sc-kOPcWz kyVwqT sc-epALIP hCiGPx"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-dQEtJz gghWjv"
+                class="sc-imwsjW kdnIoO"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -115,11 +115,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-hYmls jvwQAF"
+          class="sc-bOQTJJ enQbXO"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-kbdlSk dVYOry"
+            class="sc-camqpD fZZIzR"
             href="/recherche"
             rel="nofollow"
           >
@@ -137,17 +137,17 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-fFlnrN dIbHpx"
+          class="sc-kbdlSk iUBUcS"
         >
           <button
-            class="sc-kOPcWz cOwJar sc-tagGq sc-bOQTJJ bZXUzd diAojX"
+            class="sc-kOPcWz cOwJar sc-tagGq sc-eXsaLi bZXUzd bPnIjZ"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-eifrsQ hKKQkM"
+          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-fKWMtX kNVIOp"
         >
           <svg
             aria-hidden="true"
@@ -167,7 +167,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-jdUcAg kmqmj"
+      class="sc-bddgXz dtqZxK"
       id="content"
       tabindex="-1"
     >
@@ -354,7 +354,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                           </a>
                         </div>
                         <div
-                          class="sc-bddgXz"
+                          class="sc-deXhhX"
                         >
                           <p>
                             youhou

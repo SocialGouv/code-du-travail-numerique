@@ -3,38 +3,38 @@
 exports[`<DroitDuTravail /> should render 1`] = `
 <div>
   <div
-    class="sc-cspYLC bfRidZ"
+    class="sc-dwalKd bPFBHe"
   >
     <div
-      class="sc-dwalKd dVYudr"
+      class="sc-BQMaI derbXg"
     />
     <header
-      class="sc-fFlnrN leQqcf"
+      class="sc-kbdlSk iEPNKQ"
     >
       <div
-        class="sc-kbdlSk iOxdlp"
+        class="sc-camqpD kifJwG"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-aXZVg sc-eIcdZJ gZgZQL hekiaX"
+        class="sc-aXZVg sc-jdUcAg gZgZQL chhWLW"
       >
         <a
-          class="sc-jdUcAg MdSue"
+          class="sc-bddgXz gODHXj"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-bddgXz hJmGNI"
+            class="sc-fyVfxW bQIkrv"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-fyVfxW knhftg"
+            class="sc-eHsDsR iGa-dGz"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-fmzyuX fvBfzc"
+          class="sc-cspYLC chwTjr"
         >
           <form
             action="/recherche"
-            class="sc-eifrsQ fpULWb"
+            class="sc-fKWMtX nLBUO"
             role="search"
           >
             <div
@@ -81,7 +81,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               aria-expanded="false"
               aria-labelledby="downshift-:r0:-label"
               autocomplete="off"
-              class="sc-fUBkdm gknpQq"
+              class="sc-hBtRBD jBDoTn"
               id="downshift-:r0:-input"
               placeholder="Rechercher"
               role="combobox"
@@ -89,19 +89,19 @@ exports[`<DroitDuTravail /> should render 1`] = `
             />
             <ul
               aria-labelledby="downshift-:r0:-label"
-              class="sc-hBtRBD fbzHjE"
+              class="sc-hYmls gwHjRF"
               id="downshift-:r0:-menu"
               role="listbox"
             />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz kyVwqT sc-cMa-dbN dBNHbC"
+              class="sc-kOPcWz kyVwqT sc-fUBkdm gLfJpD"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-fKWMtX gvLvNQ"
+                class="sc-kgOKUu iKwraL"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -115,11 +115,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-camqpD inLzlc"
+          class="sc-gweoQa dABIRs"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-jdkBTo bFjyHv"
+            class="sc-fmzyuX zWSUy"
             href="/recherche"
             rel="nofollow"
           >
@@ -137,17 +137,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-eHsDsR kXYXUU"
+          class="sc-jdkBTo jbNKiX"
         >
           <button
-            class="sc-kOPcWz cOwJar sc-tagGq sc-gweoQa bZXUzd fbOsrt"
+            class="sc-kOPcWz cOwJar sc-tagGq sc-eIcdZJ bZXUzd czWmmg"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-bOQTJJ ilhIfy"
+          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-eXsaLi bXscSU"
         >
           <svg
             aria-hidden="true"
@@ -167,7 +167,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-BQMaI VjSqX"
+      class="sc-epqpcT klnDDW"
       id="content"
       tabindex="-1"
     >
@@ -193,7 +193,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             >
               Retrouvez la définition du droit du travail, les textes qui en sont à l’origine 
               <br
-                class="sc-epqpcT kZxqwb"
+                class="sc-bvgPty fSsONi"
               />
               ainsi que leur articulation.
             </p>

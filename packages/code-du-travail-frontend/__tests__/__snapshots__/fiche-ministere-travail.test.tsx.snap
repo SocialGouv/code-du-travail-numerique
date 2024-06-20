@@ -89,7 +89,7 @@ exports[`<FicheMT /> should render 1`] = `
             />
             <ul
               aria-labelledby="downshift-:r0:-label"
-              class="sc-gplwa-d ckjAjy"
+              class="sc-gplwa-d hvAaYK"
               id="downshift-:r0:-menu"
               role="listbox"
             />
