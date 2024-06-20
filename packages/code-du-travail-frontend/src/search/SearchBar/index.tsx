@@ -105,7 +105,7 @@ const SearchBar = ({
 
       <StyledInput
         {...getInputProps()}
-        id={"inputId"}
+        id={inputId}
         placeholder={
           hasButton ? "congés payés, durée de préavis" : "Rechercher"
         }
