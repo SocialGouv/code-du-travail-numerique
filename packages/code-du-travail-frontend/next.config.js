@@ -21,7 +21,6 @@ const sentryConfig = {
   release: {
     name: process.env.NEXT_PUBLIC_SENTRY_RELEASE,
     setCommits: {
-      auto: false,
       repo: "socialgouv/code-du-travail-numerique",
       commit: process.env.NEXT_PUBLIC_COMMIT,
     },
