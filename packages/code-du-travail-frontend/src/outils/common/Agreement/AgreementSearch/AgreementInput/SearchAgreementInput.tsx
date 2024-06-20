@@ -97,6 +97,7 @@ export const SearchAgreementInput = ({
       <StyledSearch
         {...getInputProps()}
         data-testid="agreement-search-input"
+        id="agreement-search"
         placeholder={"Ex : Transports routiers ou 1486"}
       />
 
