@@ -44,7 +44,7 @@ describe("Stats", () => {
       return Promise.reject("MATOMO IS DOWN");
     });
     const response = await request(server).get("/api/stats");
-    expect(response.status).toBe(404);
+    expect(response.status).toBe(500);
     expect(response.body).toStrictEqual({
       message: "No visit data and info data",
     });

@@ -43,16 +43,14 @@ export const getStatsService = async () => {
   const visitsPromises = Array.from(Array(numberLoop).keys()).map((index) => {
     const url = generateUrlVisit(index);
     console.log(url);
-    return fetch(url)
-      .then(async (data: Response) => data.json())
-      .catch((e: Error) => {
-        console.error(e);
-        return null;
-      });
+    return fetch(url).then(async (data: Response) => data.json());
   });
 
-  const nbVisitDatas = await Promise.all(visitsPromises);
-  const nbVisitData = nbVisitDatas.reduce(
+  const nbVisitDatas = await Promise.all(visitsPromises).catch((e: Error) => {
+    console.error(e);
+    return null;
+  });
+  const nbVisitData = nbVisitDatas?.reduce(
     (obj, item) => {
       return {
         nbVisits: obj.nbVisits + (item.value ?? 0),
