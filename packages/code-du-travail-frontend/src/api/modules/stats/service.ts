@@ -6,6 +6,15 @@ import {
 } from "../../utils";
 import { getDocsCountQuery } from "./queries";
 
+type ActionStat = {
+  nb_pageviews: number;
+  nb_searches: number;
+};
+
+type VisitStat = {
+  value: number;
+};
+
 export const getStatsService = async () => {
   const body: any = getDocsCountQuery();
   const refYear = 2020;
@@ -40,52 +49,56 @@ export const getStatsService = async () => {
     }-01-01`;
   };
 
-  const visitsPromises = Array.from(Array(numberLoop).keys()).map((index) => {
+  const visitsPromises: Promise<VisitStat>[] = Array.from(
+    Array(numberLoop).keys()
+  ).map((index) => {
     const url = generateUrlVisit(index);
-    return fetch(url).then(async (data: Response) => data.json());
+    return fetch(url)
+      .then(async (data: Response) => data.json())
+      .catch(() => {
+        throw new NotFoundError({
+          cause: null,
+          message: "No visit data and info data",
+          name: "STATS_NOT_FOUND",
+        });
+      });
   });
 
-  const nbVisitDatas = await Promise.all(visitsPromises).catch((e: Error) => {
-    console.error(e);
-    return null;
-  });
+  const nbVisitDatas = await Promise.all(visitsPromises);
   const nbVisitData = nbVisitDatas?.reduce(
     (obj, item) => {
       return {
-        nbVisits: obj.nbVisits + (item.value ?? 0),
+        nbVisits: obj.nbVisits + (item?.value ?? 0),
       };
     },
     { nbVisits: 0 }
   );
 
-  const actionsPromises = Array.from(Array(numberLoop).keys()).map((index) => {
+  const actionsPromises: Promise<ActionStat | undefined>[] = Array.from(
+    Array(numberLoop).keys()
+  ).map((index) => {
     const url = generateUrlAction(index);
     return fetch(url)
       .then(async (data: Response) => data.json())
-      .catch((e: Error) => {
-        console.error(e);
-        return null;
+      .catch(() => {
+        throw new NotFoundError({
+          cause: null,
+          message: "No visit data and info data",
+          name: "STATS_NOT_FOUND",
+        });
       });
   });
 
   const infoDatas = await Promise.all(actionsPromises);
-  const infoData = infoDatas.reduce(
+  const infoData = infoDatas?.reduce(
     (obj, item) => {
       return {
-        nbPageViews: obj.nbPageViews + (item.nb_pageviews ?? 0),
-        nbSearches: obj.nbSearches + (item.nb_searches ?? 0),
+        nbPageViews: obj.nbPageViews + (item?.nb_pageviews ?? 0),
+        nbSearches: obj.nbSearches + (item?.nb_searches ?? 0),
       };
     },
     { nbPageViews: 0, nbSearches: 0 }
   );
-
-  if (!nbVisitData && !infoData) {
-    throw new NotFoundError({
-      cause: null,
-      message: "No visit data and info data",
-      name: "STATS_NOT_FOUND",
-    });
-  }
 
   return {
     nbDocuments,
