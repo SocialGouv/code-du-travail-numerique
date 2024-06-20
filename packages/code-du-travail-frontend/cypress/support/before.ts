@@ -1,12 +1,11 @@
 // @ts-ignore
 import fs from "fs";
+import { SITE_URL } from "../../src/config";
 
 export const downloadAllUrlsToValidate = async () => {
   const urls: string[] = ["/convention-collective", "/contribution"];
 
-  const response = await fetch(
-    "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/api/plan-du-site"
-  );
+  const response = await fetch(`${SITE_URL}/api/plan-du-site`);
   const data = await response.json();
 
   data.informations.forEach((doc) => {
