@@ -65,7 +65,7 @@ function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
               <br />
               Plus d&apos;info&nbsp;:{" "}
               <a
-                href="/fiche-service-public/lemployeur-peut-il-mettre-doffice-un-salarie-a-la-retraite"
+                href="/fiche-service-public/un-employeur-peut-il-mettre-doffice-un-salarie-a-la-retraite"
                 target="_blank"
               >
                 L&apos;employeur peut-il mettre d&apos;office un salarié à la
