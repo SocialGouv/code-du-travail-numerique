@@ -3,38 +3,38 @@
 exports[`<Theme /> should render 1`] = `
 <div>
   <div
-    class="sc-fmzyuX ifhsuS"
+    class="sc-jdkBTo hnalNj"
   >
     <div
-      class="sc-cspYLC cUJswY"
+      class="sc-fmzyuX kaJmFn"
     />
     <header
-      class="sc-bOhtcR hzqlAB"
+      class="sc-hoLEA bUSWqC"
     >
       <div
-        class="sc-fFlnrN fSGXaS"
+        class="sc-bOhtcR fALbUA"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-aXZVg sc-gweoQa gZgZQL hSRCya"
+        class="sc-aXZVg sc-camqpD gZgZQL gvhtaq"
       >
         <a
-          class="sc-eIcdZJ dLnBur"
+          class="sc-gweoQa dBnSUO"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-jdUcAg kASzHZ"
+            class="sc-eIcdZJ cRxKRw"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-bddgXz eTyBaf"
+            class="sc-jdUcAg fjNykK"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<Theme /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-jdkBTo bLQdUx"
+          class="sc-eHsDsR fNntQa"
         >
           <form
             action="/recherche"
-            class="sc-fKWMtX nLBUO"
+            class="sc-iLsKjm vqKyr"
             role="search"
           >
             <div
@@ -74,41 +74,34 @@ exports[`<Theme /> should render 1`] = `
                 Rechercher
               </label>
             </div>
-            <div
+            <input
+              aria-activedescendant=""
+              aria-autocomplete="list"
+              aria-controls="downshift-:r0:-menu"
               aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="react-autowhatever-1"
+              aria-labelledby="downshift-:r0:-label"
+              autocomplete="off"
+              class="sc-bfhvDw bngMSI"
+              id="downshift-:r0:-input"
+              placeholder="Rechercher"
               role="combobox"
-              style="flex: 1 1 auto;"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="react-autowhatever-1"
-                aria-label="recherchez par mots-clés"
-                autocomplete="off"
-                class="sc-cMa-dbN koAZjn"
-                id="floating-search"
-                name="q"
-                placeholder="Rechercher"
-                title="recherchez par mots-clés"
-                type="search"
-                value=""
-              />
-              <div
-                class="sc-eifrsQ fWGXEu"
-                id="react-autowhatever-1"
-                role="listbox"
-              />
-            </div>
+              value=""
+            />
+            <ul
+              aria-labelledby="downshift-:r0:-label"
+              class="sc-cMa-dbN TPUtg"
+              id="downshift-:r0:-menu"
+              role="listbox"
+            />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz kyVwqT sc-hBtRBD zOmVu"
+              class="sc-kOPcWz kyVwqT sc-kgOKUu gAzQbo"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kgOKUu iKwraL"
+                class="sc-lbJcrp fTRJCy"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,11 +115,11 @@ exports[`<Theme /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-kbdlSk keNudb"
+          class="sc-fFlnrN bSQpXw"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-eHsDsR cHnHEg"
+            class="sc-fyVfxW hQzGIn"
             href="/recherche"
             rel="nofollow"
           >
@@ -144,17 +137,17 @@ exports[`<Theme /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-fyVfxW kOLqIf"
+          class="sc-bddgXz hVIKfM"
         >
           <button
-            class="sc-kOPcWz cOwJar sc-tagGq sc-camqpD bZXUzd eYHsZl"
+            class="sc-kOPcWz cOwJar sc-tagGq sc-kbdlSk bZXUzd eFdtnG"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-hYmls gtNtDd"
+          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-hBtRBD gomQLA"
         >
           <svg
             aria-hidden="true"
@@ -174,7 +167,7 @@ exports[`<Theme /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-dwalKd bTRwAU"
+      class="sc-cspYLC cSkGVL"
       id="content"
       tabindex="-1"
     >
@@ -257,34 +250,34 @@ exports[`<Theme /> should render 1`] = `
             </p>
           </header>
           <div
-            class="sc-aXZVg sc-BQMaI gZgZQL gsAGlt"
+            class="sc-aXZVg sc-dwalKd gZgZQL bSjdje"
           >
             <a
-              class="sc-epqpcT lkDKcU sc-kOPcWz gWtlVM"
+              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
               href="/themes//themes/121-cdi"
             >
               CDI
             </a>
             <a
-              class="sc-epqpcT lkDKcU sc-kOPcWz gWtlVM"
+              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
               href="/themes//themes/122-cdd"
             >
               CDD
             </a>
             <a
-              class="sc-epqpcT lkDKcU sc-kOPcWz gWtlVM"
+              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
               href="/themes//themes/123-interim"
             >
               Intérim
             </a>
             <a
-              class="sc-epqpcT lkDKcU sc-kOPcWz gWtlVM"
+              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
               href="/themes//themes/124-contrat-dapprentissage"
             >
               Contrat d'apprentissage
             </a>
             <a
-              class="sc-epqpcT lkDKcU sc-kOPcWz gWtlVM"
+              class="sc-BQMaI kAhYth sc-kOPcWz gWtlVM"
               href="/themes//themes/125-contrat-de-professionnalisation"
             >
               Contrat de professionnalisation
