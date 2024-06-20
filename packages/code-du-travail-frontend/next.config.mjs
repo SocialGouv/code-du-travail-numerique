@@ -17,11 +17,17 @@ const MappingReplacement = require("./redirects");
 const sentryConfig = {
   org: process.env.NEXT_PUBLIC_SENTRY_ORG,
   project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
+  sentryUrl: process.env.NEXT_PUBLIC_SENTRY_URL,
   authToken: process.env.SENTRY_AUTH_TOKEN,
   release: {
     name: process.env.NEXT_PUBLIC_SENTRY_RELEASE,
+    setCommits: {
+      repo: "socialgouv/code-du-travail-numerique",
+      commit: process.env.NEXT_PUBLIC_COMMIT,
+    },
   },
-  sentryUrl: process.env.NEXT_PUBLIC_SENTRY_URL,
+  hideSourceMaps: true,
+  widenClientFileUpload: true,
 };
 
 const nextConfig = {
