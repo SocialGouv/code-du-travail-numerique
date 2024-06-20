@@ -20,9 +20,6 @@ const sentryConfig = {
   authToken: process.env.SENTRY_AUTH_TOKEN,
   release: {
     name: process.env.NEXT_PUBLIC_SENTRY_RELEASE,
-    setCommits: {
-      auto: true,
-    },
   },
   sentryUrl: process.env.NEXT_PUBLIC_SENTRY_URL,
 };
