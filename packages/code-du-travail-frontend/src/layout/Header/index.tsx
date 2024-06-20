@@ -80,7 +80,7 @@ export const Header = ({ currentPage = "" }) => {
                         id="search-540"
                         role="search"
                       >
-                        <label className="fr-label" for="search-540-input">
+                        <label className="fr-label" htmlFor="search-540-input">
                           Rechercher
                         </label>
                         <input
