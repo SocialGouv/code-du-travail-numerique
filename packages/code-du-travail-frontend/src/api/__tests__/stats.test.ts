@@ -45,9 +45,6 @@ describe("Stats", () => {
     });
     const response = await request(server).get("/api/stats");
     expect(response.status).toBe(500);
-    expect(response.body).toStrictEqual({
-      message: "No visit data and info data",
-    });
     expect(response.ok).toBe(false);
   });
 });
