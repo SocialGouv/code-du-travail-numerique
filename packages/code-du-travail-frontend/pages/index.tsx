@@ -41,6 +41,13 @@ const Home = ({
       >
         Throw error
       </button>
+      <button
+        onClick={() => {
+          throw new Error("bugggg");
+        }}
+      >
+        Throw a second error
+      </button>
       {highlights.length > 0 && (
         <Highlights
           id="highlights-element"
