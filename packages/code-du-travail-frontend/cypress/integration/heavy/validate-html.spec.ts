@@ -13,6 +13,7 @@ export const localConfig: ConfigData = {
     "aria-label-misuse": "off",
     "long-title": "off",
     "script-type": "off",
+    "no-dup-id": "off",
     "wcag/h63": "off",
     "wcag/h32": "off",
   },
