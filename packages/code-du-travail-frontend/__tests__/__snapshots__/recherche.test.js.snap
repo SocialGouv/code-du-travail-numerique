@@ -137,12 +137,6 @@ exports[`<Recherche /> should render 1`] = `
               role="combobox"
               value=""
             />
-            <ul
-              aria-labelledby="downshift-:r0:-label"
-              class="sc-hoLEA dbnMIx"
-              id="downshift-:r0:-menu"
-              role="listbox"
-            />
             <button
               aria-label="Lancer ma recherche"
               class="sc-kOPcWz cefBoA sc-bOQTJJ hJnDeP"

@@ -116,9 +116,9 @@ const SearchBar = ({
         hasSearchIcon={hasSearchIcon}
       />
 
-      <StyledList {...getMenuProps()} hasButton={hasButton}>
-        {isOpen &&
-          suggestions.map((item, index) => (
+      {isOpen && suggestions.length > 0 && (
+        <StyledList {...getMenuProps()} hasButton={hasButton}>
+          {suggestions.map((item, index) => (
             <StyledSuggestion
               {...getItemProps({
                 item,
@@ -130,7 +130,8 @@ const SearchBar = ({
               <Html>{renderBoldFromQuery(item, query)}</Html>
             </StyledSuggestion>
           ))}
-      </StyledList>
+        </StyledList>
+      )}
 
       {hasButton ? (
         <SubmitButton

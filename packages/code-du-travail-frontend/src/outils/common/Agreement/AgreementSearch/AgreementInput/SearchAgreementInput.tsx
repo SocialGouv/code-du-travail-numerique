@@ -101,12 +101,12 @@ export const SearchAgreementInput = ({
         placeholder={"Ex : Transports routiers ou 1486"}
       />
 
-      <StyledUl
-        {...getMenuProps()}
-        hideBorder={suggestions.length === 0 || !isOpen}
-      >
-        {isOpen &&
-          suggestions.map((item: Agreement, index) => (
+      {isOpen && suggestions.length > 0 && (
+        <StyledUl
+          {...getMenuProps()}
+          hideBorder={suggestions.length === 0 || !isOpen}
+        >
+          {suggestions.map((item: Agreement, index) => (
             <StyledSuggestion
               {...getItemProps({
                 item,
@@ -118,7 +118,8 @@ export const SearchAgreementInput = ({
               {item.shortTitle} (IDCC {formatIdcc(item.num)})
             </StyledSuggestion>
           ))}
-      </StyledUl>
+        </StyledUl>
+      )}
       {query !== null && query !== "" && (
         <AgreementNoResult
           data={suggestions}

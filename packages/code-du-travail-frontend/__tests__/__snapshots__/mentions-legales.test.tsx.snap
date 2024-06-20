@@ -87,12 +87,6 @@ exports[`<MentionLegales /> should render 1`] = `
               role="combobox"
               value=""
             />
-            <ul
-              aria-labelledby="downshift-:r0:-label"
-              class="sc-lbJcrp kokiBX"
-              id="downshift-:r0:-menu"
-              role="listbox"
-            />
             <button
               aria-label="Lancer ma recherche"
               class="sc-kOPcWz kyVwqT sc-epALIP hCiGPx"
