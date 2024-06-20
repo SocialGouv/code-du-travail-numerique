@@ -42,15 +42,7 @@ export function getThemeBySlugQuery(slug: string) {
 
 export function getThemeBySlugsQuery(slugs: string[]) {
   return {
-    _source: [
-      "title",
-      "slug",
-      "position",
-      "breadcrumbs",
-      "children",
-      "description",
-      "refs",
-    ],
+    _source: ["title", "slug"],
     query: {
       bool: {
         filter: [
