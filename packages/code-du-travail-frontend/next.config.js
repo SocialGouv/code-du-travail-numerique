@@ -18,10 +18,8 @@ const sentryConfig = {
   org: process.env.NEXT_PUBLIC_SENTRY_ORG,
   project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
   authToken: process.env.SENTRY_AUTH_TOKEN,
-  release: { name: process.env.NEXT_PUBLIC_SENTRY_RELEASE },
+  release: process.env.NEXT_PUBLIC_SENTRY_RELEASE,
   sentryUrl: process.env.NEXT_PUBLIC_SENTRY_URL,
-  hideSourceMaps: true,
-  widenClientFileUpload: true,
 };
 
 const nextConfig = {
