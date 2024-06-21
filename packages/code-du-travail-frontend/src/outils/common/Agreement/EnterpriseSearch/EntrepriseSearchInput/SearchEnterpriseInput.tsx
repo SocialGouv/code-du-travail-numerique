@@ -12,6 +12,7 @@ import {
 } from "../../../../ConventionCollective/types";
 import { InfoBulle } from "../../../InfoBulle";
 import { EntrepriseSearchResults } from "../EntrepriseSearchResult";
+import { LocationSearchInput } from "../Location/Search";
 
 const { Search: SearchIcon } = icons;
 
@@ -95,16 +96,9 @@ export const SearchEnterpriseInput = ({
             (facultatif)
           </InlineText>
           <InputWithButton>
-            <BlockInputRight
-              placeholder="Ex : 31000 ou Toulouse"
-              value={address}
-              type="text"
-              name="address"
-              id="enterprise-search-address"
-              onChange={(e) => setAddress(e.target.value)}
-              autoComplete="off"
-              data-testid="agreement-postal-code-search-input"
-              disabled={isDisabled}
+            <LocationSearchInput
+              setAddress={setAddress}
+              isDisabled={isDisabled}
             />
             <SubmitIcon
               type="submit"
@@ -147,14 +141,6 @@ const BlockInputLeft = styled(BlockInput)`
     input {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
-    }
-  }
-`;
-const BlockInputRight = styled(BlockInput)`
-  @media (min-width: ${theme.breakpoints.tablet}) {
-    input {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
     }
   }
 `;
