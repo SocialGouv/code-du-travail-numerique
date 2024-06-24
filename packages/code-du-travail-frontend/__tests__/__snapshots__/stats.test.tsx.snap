@@ -62,7 +62,7 @@ exports[`<Stats /> should render 1`] = `
         >
           <form
             action="/recherche"
-            class="sc-kCMKrZ fAggpb"
+            class="sc-dQEtJz dDGKmp"
             role="search"
           >
             <div
@@ -74,41 +74,28 @@ exports[`<Stats /> should render 1`] = `
                 Rechercher
               </label>
             </div>
-            <div
+            <input
+              aria-activedescendant=""
+              aria-autocomplete="list"
+              aria-controls="downshift-:r0:-menu"
               aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="react-autowhatever-1"
+              aria-labelledby="downshift-:r0:-label"
+              autocomplete="off"
+              class="sc-iLsKjm cykCX"
+              id="floating-search"
+              placeholder="Rechercher"
               role="combobox"
-              style="flex: 1 1 auto;"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="react-autowhatever-1"
-                aria-label="recherchez par mots-clés"
-                autocomplete="off"
-                class="sc-iLsKjm cykCX"
-                id="floating-search"
-                name="q"
-                placeholder="Rechercher"
-                title="recherchez par mots-clés"
-                type="search"
-                value=""
-              />
-              <div
-                class="sc-imwsjW MXbtV"
-                id="react-autowhatever-1"
-                role="listbox"
-              />
-            </div>
+              value=""
+            />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz kyVwqT sc-eifrsQ hbTAEy"
+              class="sc-kOPcWz kyVwqT sc-epALIP hCiGPx"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-dJiZtA dqyRfb"
+                class="sc-imwsjW kdnIoO"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"

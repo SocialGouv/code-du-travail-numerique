@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.144.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.2...v4.144.0) (2024-06-24)
+
+### Features
+
+- **combobox:** use `downshift` instead of `react-autosuggest` ([#5972](https://github.com/SocialGouv/code-du-travail-numerique/issues/5972)) ([2bdc92f](https://github.com/SocialGouv/code-du-travail-numerique/commit/2bdc92f8bbb8baacde68869469485411f009eb02))
+
+## [4.143.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.1...v4.143.2) (2024-06-18)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+## [4.143.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.0...v4.143.1) (2024-06-17)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+# [4.143.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.142.0...v4.143.0) (2024-06-17)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
 # [4.142.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.141.0...v4.142.0) (2024-06-13)
 
 ### Features
