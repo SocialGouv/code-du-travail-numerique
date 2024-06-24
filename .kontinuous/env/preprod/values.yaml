@@ -1,3 +1,10 @@
+app:
+  tolerations:
+    - key: startup
+      operator: Equal
+      value: cdtn
+      effect: NoSchedule
+
 jobs:
   runs:
     build-app:

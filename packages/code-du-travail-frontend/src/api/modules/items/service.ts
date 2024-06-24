@@ -24,14 +24,13 @@ export const getBySourceAndSlugItems = async (source: any, slug: string) => {
 
   const {
     _id,
-    _source: { title, covisits },
+    _source: { covisits },
   } = item;
 
   const relatedItems = await getRelatedItems({
     covisits,
     settings: [{ _id }],
     slug,
-    title,
   });
 
   delete item._source.covisits;

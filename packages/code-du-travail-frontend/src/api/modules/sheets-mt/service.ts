@@ -27,7 +27,6 @@ export const getSheetsMtService = async (slug: string) => {
     covisits: sheetMT._source.covisits,
     settings: sheetMT._source.title,
     slug,
-    title: sheetMT._source.title,
   });
 
   delete sheetMT._source.covisits;
