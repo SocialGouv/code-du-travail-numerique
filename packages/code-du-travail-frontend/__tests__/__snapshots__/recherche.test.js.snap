@@ -120,6 +120,7 @@ exports[`<Recherche /> should render 1`] = `
             >
               <label
                 for="search-input"
+                id="downshift-:r0:-label"
               >
                 Rechercher
               </label>
@@ -135,7 +136,14 @@ exports[`<Recherche /> should render 1`] = `
               id="search-input"
               placeholder="congés payés, durée de préavis"
               role="combobox"
+              type="search"
               value=""
+            />
+            <ul
+              aria-labelledby="downshift-:r0:-label"
+              class="sc-hoLEA dbnMIx"
+              id="downshift-:r0:-menu"
+              role="listbox"
             />
             <button
               aria-label="Lancer ma recherche"

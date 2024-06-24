@@ -70,6 +70,7 @@ exports[`<FicheMT /> should render 1`] = `
             >
               <label
                 for="floating-search"
+                id="downshift-:r0:-label"
               >
                 Rechercher
               </label>
@@ -85,7 +86,14 @@ exports[`<FicheMT /> should render 1`] = `
               id="floating-search"
               placeholder="Rechercher"
               role="combobox"
+              type="search"
               value=""
+            />
+            <ul
+              aria-labelledby="downshift-:r0:-label"
+              class="sc-gplwa-d hvAaYK"
+              id="downshift-:r0:-menu"
+              role="listbox"
             />
             <button
               aria-label="Lancer ma recherche"
