@@ -31,6 +31,11 @@ jobs:
             secretKey: ELASTICSEARCH_URL
 
 app:
+  tolerations:
+    - key: startup
+      operator: Equal
+      value: cdtn
+      effect: NoSchedule
   env:
     - name: "NEXT_PUBLIC_BRANCH_NAME_SLUG"
       value: "{{.Values.global.branchSlug32}}"
