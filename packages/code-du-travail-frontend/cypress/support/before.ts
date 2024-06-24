@@ -21,9 +21,6 @@ export const downloadAllUrlsToValidate = async () => {
     "./cypress/support/urls-to-validate.json",
     JSON.stringify(urls)
   );
-  console.log(
-    "Urls à valider sauvegardées dans le fichier ./cypress/support/urls-to-validate.json"
-  );
 
   const urlsContributions: string[] = [];
   data.contributions.forEach((contrib) => {
@@ -33,18 +30,8 @@ export const downloadAllUrlsToValidate = async () => {
     });
   });
 
-  const FILE_SIZE = Math.floor(urlsContributions.length / 2) + 1;
-
   fs.writeFileSync(
-    "./cypress/support/urls-contributions-to-validate-1.json",
-    JSON.stringify(urlsContributions.slice(0, FILE_SIZE))
-  );
-  fs.writeFileSync(
-    "./cypress/support/urls-contributions-to-validate-2.json",
-    JSON.stringify(urlsContributions.slice(FILE_SIZE, urlsContributions.length))
-  );
-
-  console.log(
-    `Urls des contributions à valider sauvegardées dans les fichier "./cypress/support/urls-contributions-to-validate-1.json" et "./cypress/support/urls-contributions-to-validate-2.json"`
+    "./cypress/support/urls-contributions-to-validate.json",
+    JSON.stringify(urlsContributions)
   );
 };
