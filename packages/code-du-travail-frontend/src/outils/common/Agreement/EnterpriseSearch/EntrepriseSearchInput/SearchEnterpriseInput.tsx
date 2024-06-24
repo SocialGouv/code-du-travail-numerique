@@ -14,8 +14,6 @@ import { InfoBulle } from "../../../InfoBulle";
 import { EntrepriseSearchResults } from "../EntrepriseSearchResult";
 import { LocationSearchInput } from "../Location/Search";
 
-const { Search: SearchIcon } = icons;
-
 type Props = {
   searchParams?: SearchParams;
   placeholder?: string;
@@ -86,35 +84,11 @@ export const SearchEnterpriseInput = ({
           />
         </Box>
         <Box>
-          <InlineLabel
-            htmlFor="enterprise-search-address"
-            disabled={isDisabled}
-          >
-            Code postal ou ville
-          </InlineLabel>{" "}
-          <InlineText fontWeight="400" fontSize="small" disabled={isDisabled}>
-            (facultatif)
-          </InlineText>
-          <InputWithButton>
-            <LocationSearchInput
-              setAddress={setAddress}
-              isDisabled={isDisabled}
-            />
-            <SubmitIcon
-              type="submit"
-              title="Lancer ma recherche"
-              aria-label="Lancer ma recherche"
-              onClick={searchInputHandler}
-              small
-              narrow
-              variant="secondary"
-              data-testid="agreement-company-search-button"
-              disabled={isDisabled}
-            >
-              <MobileOnly>Rechercher</MobileOnly>
-              <StyledSearchIcon />
-            </SubmitIcon>
-          </InputWithButton>
+          <LocationSearchInput
+            searchInputHandler={searchInputHandler}
+            setAddress={setAddress}
+            isDisabled={isDisabled}
+          />
         </Box>
       </Flex>
       <EntrepriseSearchResults
@@ -126,11 +100,6 @@ export const SearchEnterpriseInput = ({
     </>
   );
 };
-
-const InlineText = styled(Text)`
-  color: ${({ theme, disabled }) =>
-    disabled ? theme.placeholder : theme.paragraph};
-`;
 
 const BlockInput = styled(Input)`
   width: 100%;
@@ -172,42 +141,5 @@ const Box = styled.div`
     @media (max-width: ${theme.breakpoints.mobile}) {
       padding-top: ${theme.spacings.xmedium};
     }
-  }
-`;
-
-const InputWithButton = styled.div`
-  position: relative;
-`;
-const SubmitIcon = styled(Button)`
-  @media (min-width: ${theme.breakpoints.mobile}) {
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    width: 2.5rem;
-  }
-  @media (max-width: ${theme.breakpoints.mobile}) {
-    width: 100%;
-    margin-top: ${theme.spacings.xmedium};
-    box-sizing: inherit;
-  }
-  color: ${({ theme }) => theme.white};
-  background-color: ${({ theme, disabled }) =>
-    disabled ? theme.placeholder : theme.secondary};
-  border-color: ${({ theme, disabled }) =>
-    disabled ? theme.placeholder : theme.secondary};
-`;
-
-const StyledSearchIcon = styled(SearchIcon)`
-  @media (max-width: ${theme.breakpoints.mobile}) {
-    display: none;
-  }
-  color: ${({ theme }) => theme.white};
-  height: 25px;
-  width: 25px;
-`;
-
-const MobileOnly = styled.span`
-  @media (min-width: ${theme.breakpoints.mobile}) {
-    display: none;
   }
 `;
