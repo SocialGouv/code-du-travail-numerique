@@ -139,7 +139,7 @@ export const SearchAgreementInput = ({
 
 const StyledSearch = styled(StyledInput)`
   margin-top: ${theme.spacings.small};
-  padding: 1rem 1.6rem;
+  padding-right: 1.6rem;
 `;
 
 const StyledUl = styled(StyledList)`
