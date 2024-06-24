@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.144.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.144.0...v4.144.1) (2024-06-24)
+
+### Bug Fixes
+
+- dedicated nodepool ([#5987](https://github.com/SocialGouv/code-du-travail-numerique/issues/5987)) ([a7f2a67](https://github.com/SocialGouv/code-du-travail-numerique/commit/a7f2a6703c08068912fbdb39dd0c7a2c1ba5f5af))
+- **html:** correction de l'invalidité html sur la partie recherche ([#5989](https://github.com/SocialGouv/code-du-travail-numerique/issues/5989)) ([ed2b100](https://github.com/SocialGouv/code-du-travail-numerique/commit/ed2b100e90e627a9e4a44785b34239ad0a7252a8))
+
 # [4.144.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.2...v4.144.0) (2024-06-24)
 
 ### Bug Fixes
