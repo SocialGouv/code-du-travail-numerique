@@ -64,7 +64,7 @@ export const LocationSearchInput = (props: Props) => {
             >
               {item.nom} (
               {item.codesPostaux.length > 1
-                ? "Toute la ville"
+                ? item.codeDepartement
                 : item.codesPostaux[0]}
               )
             </StyledSuggestion>
