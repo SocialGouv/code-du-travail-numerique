@@ -159,6 +159,7 @@ exports[`Plan du site should return a list for /plan-du-site 1`] = `
         {
           "label": "Démission",
           "slug": "demission",
+          "title": "Démission",
         },
         {
           "label": "Fin d’un CDD - CTT",

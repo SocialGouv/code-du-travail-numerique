@@ -1,10 +1,7 @@
 import { getSourceByRoute, SOURCES } from "@socialgouv/cdtn-utils";
-import { vectorizeQuery } from "@socialgouv/cdtn-elasticsearch";
 
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getSearchBySourceSlugBody, getRelatedItemsBody } from "./queries";
-import { getSemQuery } from "../search/queries";
-import { mergePipe } from "../search/utils";
 
 const MAX_RESULTS = 4;
 
@@ -73,72 +70,32 @@ export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {
 };
 
 // use search based on item title : More Like This & Semantic
-export const getSearchBasedItems = async ({
-  title,
-  settings,
-  slug,
-}: {
-  title: string;
-  settings: any;
-  slug: string;
-}) => {
+export const getSearchBasedItems = async ({ settings }: { settings: any }) => {
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
   const requestBodies = [{ index: elasticDocumentsIndex }, relatedItemBody];
 
-  const query_vector = await vectorizeQuery(title.toLowerCase()).catch(
-    (error: any) => {
-      if (error.message === "Cannot vectorize empty query.") {
-        console.log(
-          `[WARNING] Try to vectorize an empty title: ${title} (slug: ${slug}) `
-        );
-      } else {
-        console.error(error.message);
-      }
-    }
-  );
-
-  if (query_vector) {
-    const semBody = getSemQuery(
-      query_vector,
-      sources,
-      MAX_RESULTS + 1
-      // we +1 the size to remove the document source that should match perfectly for the given vector
-    );
-    // we use relatedItem query _source to have the same prop returned
-    // for both request
-    // semBody._source = relatedItemBody._source;
-    requestBodies.push({ index: elasticDocumentsIndex }, semBody);
-  }
-
   const {
-    responses: [esResponse = {}, semResponse = {}],
+    responses: [esResponse = {}],
   }: any = await elasticsearchClient.msearch({ body: requestBodies });
 
-  const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
   const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
 
-  return (
-    mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
-      // we filter fields and add some info about recommandation type for evaluation purpose
-      .map(({ _source }: any) => mapSource("search")(_source))
-  );
+  return fullTextHits.map(({ _source }: any) => mapSource("search")(_source));
 };
 
 // get related items, depending on : covisits present & non empty
 export const getRelatedItems = async ({
-  title,
   settings,
   slug,
   covisits,
 }: {
-  title: string;
   settings: any;
   slug: string;
   covisits: string;
 }): Promise<any> => {
   const covisitedItems = covisits ? await getCovisitedItems({ covisits }) : [];
 
-  const searchBasedItems = await getSearchBasedItems({ settings, title, slug });
+  const searchBasedItems = await getSearchBasedItems({ settings });
 
   const filteredItems = covisitedItems
     .concat(searchBasedItems)

@@ -39,3 +39,20 @@ export function getThemeBySlugQuery(slug: string) {
     sort: [{ position: { order: "asc" } }],
   };
 }
+
+export function getThemeBySlugsQuery(slugs: string[]) {
+  return {
+    _source: ["title", "slug"],
+    query: {
+      bool: {
+        filter: [
+          { terms: { slug: slugs } },
+          { term: { isPublished: true } },
+          { term: { source: SOURCES.THEMES } },
+        ],
+      },
+    },
+    sort: [{ position: { order: "asc" } }],
+    size: 500,
+  };
+}

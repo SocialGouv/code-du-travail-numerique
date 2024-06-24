@@ -1,11 +1,9 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { vectorizeQuery } from "@socialgouv/cdtn-elasticsearch";
 import { elasticsearchClient, elasticDocumentsIndex } from "../../../utils";
 import {
   getRelatedArticlesBody,
   getRelatedThemesBody,
   getSearchBody,
-  getSemQuery,
 } from "../queries";
 import { merge, mergePipe, removeDuplicate } from "../utils";
 import { getPrequalifiedResults } from "./prequalified";
@@ -14,11 +12,8 @@ const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;
 const THEMES_RESULTS_NUMBER = 5;
 const CDT_RESULTS_NUMBER = 5;
-const SEMANTIC_THRESHOLD = 1.11;
-const DOCUMENTS_SEM = "documents_sem";
 const DOCUMENTS_ES = "documents_es";
 const THEMES_ES = "themes_es";
-const THEMES_SEM = "themes_sem";
 const CDT_ES = "cdt_es";
 
 export const searchWithQuery = async (
@@ -66,16 +61,6 @@ export const searchWithQuery = async (
   const shouldRequestThemes = themes.length < 5;
   const size = Math.min(sizeParams ?? DEFAULT_RESULTS_NUMBER, MAX_RESULTS);
 
-  const query_vector = await vectorizeQuery(query.toLowerCase()).catch(
-    (error) => {
-      if (error.message === "Cannot vectorize empty query.") {
-        console.log(`[WARNING] Try to vectorize an empty search: ${query}`);
-      } else {
-        console.error(error.message);
-      }
-    }
-  );
-
   // if not enough prequalified results, we also trigger ES search
   if (
     !prequalifiedResults ||
@@ -85,12 +70,6 @@ export const searchWithQuery = async (
       { index: elasticDocumentsIndex },
       getSearchBody(query, size, sources),
     ];
-    if (query_vector) {
-      searches[DOCUMENTS_SEM] = [
-        { index: elasticDocumentsIndex },
-        getSemQuery(query_vector, sources, size),
-      ];
-    }
   }
 
   if (shouldRequestThemes) {
@@ -99,12 +78,6 @@ export const searchWithQuery = async (
       { index: elasticDocumentsIndex }, // we search in themeIndex here to try to match title in breadcrumb
       getRelatedThemesBody(query, themeNumber),
     ];
-    if (query_vector) {
-      searches[THEMES_SEM] = [
-        { index: elasticDocumentsIndex },
-        getSemQuery(query_vector, [SOURCES.THEMES], themeNumber),
-      ];
-    }
   }
 
   if (shouldRequestCdt) {
@@ -120,32 +93,14 @@ export const searchWithQuery = async (
   const fulltextHits = extractHits(results[DOCUMENTS_ES]);
   fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
 
-  const semanticHits = extractHits(results[DOCUMENTS_SEM]);
-  semanticHits.forEach((item) => (item._source.algo = "semantic"));
-
-  // we only consider semantic results above a given threshold
-  const semanticHitsFiltered = semanticHits.filter(
-    (item) => item._score > SEMANTIC_THRESHOLD
-  );
-
-  // we merge prequalified + full text + semantic results
-  const mergedSearchResults = mergePipe(
-    fulltextHits,
-    semanticHitsFiltered,
-    size
-  );
-  documents.push(...mergedSearchResults);
+  documents.push(...fulltextHits);
   documents = removeDuplicate(documents);
 
   if (shouldRequestThemes) {
     const fulltextHits = extractHits(results[THEMES_ES]);
-    const semanticHits = extractHits(results[THEMES_SEM]);
     fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
-    semanticHits.forEach((item) => (item._source.algo = "semantic"));
     themes = removeDuplicate(
-      themes
-        .concat(merge(fulltextHits, semanticHits, THEMES_RESULTS_NUMBER * 2))
-        .slice(0, THEMES_RESULTS_NUMBER)
+      themes.concat(fulltextHits).slice(0, THEMES_RESULTS_NUMBER)
     );
   }
   if (shouldRequestCdt) {
