@@ -36,6 +36,7 @@ export const SearchAgreementInput = ({
     isOpen,
     getMenuProps,
     getInputProps,
+    getLabelProps,
     highlightedIndex,
     getItemProps,
   } = useCombobox({
@@ -72,7 +73,11 @@ export const SearchAgreementInput = ({
 
   return (
     <>
-      <InlineLabel htmlFor="agreement-search" id="agreement-search-label">
+      <InlineLabel
+        {...getLabelProps()}
+        htmlFor="agreement-search"
+        id="agreement-search-label"
+      >
         Nom de la convention collective ou son numéro d’identification{" "}
         <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
         <Text fontWeight="400" fontSize="small">
@@ -102,12 +107,12 @@ export const SearchAgreementInput = ({
         type="search"
       />
 
-      {isOpen && suggestions.length > 0 && (
-        <StyledUl
-          {...getMenuProps()}
-          hideBorder={suggestions.length === 0 || !isOpen}
-        >
-          {suggestions.map((item: Agreement, index) => (
+      <StyledUl
+        {...getMenuProps()}
+        hideBorder={suggestions.length === 0 || !isOpen}
+      >
+        {isOpen &&
+          suggestions.map((item: Agreement, index) => (
             <StyledSuggestion
               {...getItemProps({
                 item,
@@ -119,8 +124,7 @@ export const SearchAgreementInput = ({
               {item.shortTitle} (IDCC {formatIdcc(item.num)})
             </StyledSuggestion>
           ))}
-        </StyledUl>
-      )}
+      </StyledUl>
       {query !== null && query !== "" && (
         <AgreementNoResult
           data={suggestions}
@@ -135,6 +139,7 @@ export const SearchAgreementInput = ({
 
 const StyledSearch = styled(StyledInput)`
   margin-top: ${theme.spacings.small};
+  padding: 1rem 1.6rem;
 `;
 
 const StyledUl = styled(StyledList)`

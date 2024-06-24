@@ -31,6 +31,7 @@ const SearchBar = ({
     isOpen,
     getMenuProps,
     getInputProps,
+    getLabelProps,
     highlightedIndex,
     getItemProps,
   } = useCombobox({
@@ -102,7 +103,9 @@ const SearchBar = ({
   return (
     <SearchForm role="search" action="/recherche" onSubmit={onFormSubmit}>
       <ScreenReaderOnly>
-        <label htmlFor={inputId}>Rechercher</label>
+        <label {...getLabelProps()} htmlFor={inputId}>
+          Rechercher
+        </label>
       </ScreenReaderOnly>
       {hasButton && !hasSearchIcon && <SearchIconLeft aria-hidden="true" />}
 
@@ -117,9 +120,9 @@ const SearchBar = ({
         type="search"
       />
 
-      {isOpen && suggestions.length > 0 && (
-        <StyledList {...getMenuProps()} hasButton={hasButton}>
-          {suggestions.map((item, index) => (
+      <StyledList {...getMenuProps()} hasButton={hasButton}>
+        {isOpen &&
+          suggestions.map((item, index) => (
             <StyledSuggestion
               {...getItemProps({
                 item,
@@ -131,8 +134,7 @@ const SearchBar = ({
               <Html>{renderBoldFromQuery(item, query)}</Html>
             </StyledSuggestion>
           ))}
-        </StyledList>
-      )}
+      </StyledList>
 
       {hasButton ? (
         <SubmitButton
