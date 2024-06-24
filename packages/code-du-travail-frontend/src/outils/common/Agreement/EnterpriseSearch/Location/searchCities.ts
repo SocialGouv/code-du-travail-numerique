@@ -1,11 +1,16 @@
 import { captureException } from "@sentry/nextjs";
-import { API_GEO_URL, DEBOUNCE_TIME_MS } from "../../../../../config";
+import {
+  API_GEO_MAX_SEARCH_RESULTS,
+  API_GEO_URL,
+  DEBOUNCE_TIME_MS,
+} from "../../../../../config";
 import debounce from "debounce-promise";
 
 export type ApiGeoResult = {
   code: string;
   nom: string;
   population: number;
+  codesPostaux: string[];
   _score?: number;
 };
 
@@ -15,12 +20,16 @@ const apiGeoSearchCommunes = async (
   const fields = "nom,codesPostaux,population";
   try {
     const response = await Promise.all([
-      fetch(`${API_GEO_URL}/communes?codePostal=${search}&fields=${fields}`),
       fetch(`${API_GEO_URL}/communes?nom=${search}&fields=${fields}`),
+      fetch(`${API_GEO_URL}/communes?codePostal=${search}&fields=${fields}`),
     ]);
-    const results = (
-      await Promise.all(response.map((r) => r.json() as any as ApiGeoResult[]))
-    ).flat();
+    const apiResults = await Promise.all(
+      response.map((r) => r.json() as any as ApiGeoResult[])
+    );
+    const results = [
+      ...apiResults[0].slice(0, API_GEO_MAX_SEARCH_RESULTS),
+      ...apiResults[1],
+    ];
     const sortedResult = results.sort((a, b) => b.population - a.population);
     return sortedResult;
   } catch (error) {

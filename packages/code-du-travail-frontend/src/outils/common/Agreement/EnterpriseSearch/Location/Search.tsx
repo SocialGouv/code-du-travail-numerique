@@ -62,7 +62,11 @@ export const LocationSearchInput = (props: Props) => {
               key={`${item.code}${index}`}
               isHighlighted={highlightedIndex === index}
             >
-              {item.nom}
+              {item.nom} (
+              {item.codesPostaux.length > 1
+                ? "Toute la ville"
+                : item.codesPostaux[0]}
+              )
             </StyledSuggestion>
           ))}
       </StyledList>

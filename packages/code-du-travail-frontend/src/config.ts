@@ -23,3 +23,4 @@ export const REVALIDATE_TIME = 1800; // 30 minutes
 export const REVALIDATE_TIME_DAY = 86400; // 1 day
 export const API_GEO_URL = "https://geo.api.gouv.fr";
 export const DEBOUNCE_TIME_MS = 300;
+export const API_GEO_MAX_SEARCH_RESULTS = 10;
