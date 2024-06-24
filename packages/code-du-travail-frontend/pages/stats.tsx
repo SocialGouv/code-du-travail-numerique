@@ -7,12 +7,11 @@ import {
   Section,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
-import { max, startOfDay, subMonths } from "date-fns";
 import React from "react";
 import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
-import { REVALIDATE_TIME, SITE_URL } from "../src/config";
+import { REVALIDATE_TIME, REVALIDATE_TIME_DAY, SITE_URL } from "../src/config";
 import { Layout } from "../src/layout/Layout";
 import { captureException } from "@sentry/nextjs";
 import { getStatsService } from "../src/api";
@@ -29,9 +28,6 @@ type Props = {
 };
 
 const Stats = ({ data }: Props): JSX.Element => {
-  const launchDate = new Date(Date.UTC(2020, 0, 1));
-  const startDate = max([subMonths(startOfDay(new Date()), 6), launchDate]);
-
   return (
     <Layout>
       <Metas
@@ -94,7 +90,7 @@ export async function getStaticProps() {
     } else {
       data = await getStatsService();
     }
-    return { props: { data }, revalidate: REVALIDATE_TIME };
+    return { props: { data }, revalidate: REVALIDATE_TIME_DAY };
   } catch (e) {
     console.error(e);
     captureException(e);

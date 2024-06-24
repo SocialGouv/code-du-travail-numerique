@@ -1,3 +1,6 @@
+import { withSentryConfig } from "@sentry/nextjs";
+import MappingReplacement from "./redirects.json" assert { type: "json" };
+
 const ContentSecurityPolicy = `
 default-src 'self' *.travail.gouv.fr *.data.gouv.fr *.fabrique.social.gouv.fr;
 img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr https://www.service-public.fr https://cdtn-prod-public.s3.gra.io.cloud.ovh.net;
@@ -11,15 +14,20 @@ worker-src 'self' blob:;
 child-src 'self' blob:;
 `;
 
-const { withSentryConfig } = require("@sentry/nextjs");
-const MappingReplacement = require("./redirects");
-
 const sentryConfig = {
   org: process.env.NEXT_PUBLIC_SENTRY_ORG,
   project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
-  authToken: process.env.SENTRY_AUTH_TOKEN,
-  release: { name: process.env.NEXT_PUBLIC_SENTRY_RELEASE },
   sentryUrl: process.env.NEXT_PUBLIC_SENTRY_URL,
+  authToken: process.env.SENTRY_AUTH_TOKEN,
+  release: {
+    name: process.env.NEXT_PUBLIC_SENTRY_RELEASE,
+    setCommits: process.env.NEXT_PUBLIC_COMMIT
+      ? {
+          repo: "SocialGouv/code-du-travail-numerique",
+          commit: process.env.NEXT_PUBLIC_COMMIT,
+        }
+      : { auto: true },
+  },
   hideSourceMaps: true,
   widenClientFileUpload: true,
 };
@@ -86,4 +94,4 @@ const moduleExports = {
   },
 };
 
-module.exports = withSentryConfig(moduleExports, sentryConfig);
+export default withSentryConfig(moduleExports, sentryConfig);

@@ -8,8 +8,10 @@
   "description": "Composants ReactJS",
   "main": "lib/index.js",
   "files": [
-    "lib"
+    "lib",
+    "types.d.ts"
   ],
+  "types": "./types.d.ts",
   "scripts": {
     "build": "tsc",
     "build:dev": "swc ./src -d lib --strip-leading-paths",

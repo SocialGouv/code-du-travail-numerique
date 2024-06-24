@@ -112,7 +112,7 @@ exports[`<Recherche /> should render 1`] = `
         >
           <form
             action="/recherche"
-            class="sc-hYmls cZgcka"
+            class="sc-fUBkdm hYdaqy"
             role="search"
           >
             <div
@@ -124,41 +124,28 @@ exports[`<Recherche /> should render 1`] = `
                 Rechercher
               </label>
             </div>
-            <div
+            <input
+              aria-activedescendant=""
+              aria-autocomplete="list"
+              aria-controls="downshift-:r0:-menu"
               aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="react-autowhatever-1"
+              aria-labelledby="downshift-:r0:-label"
+              autocomplete="off"
+              class="sc-gEkIjz ihmYtE"
+              id="search-input"
+              placeholder="congés payés, durée de préavis"
               role="combobox"
-              style="flex: 1 1 auto;"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="react-autowhatever-1"
-                aria-label="recherchez par mots-clés"
-                autocomplete="off"
-                class="sc-gEkIjz ihmYtE"
-                id="search-input"
-                name="q"
-                placeholder="congés payés, durée de préavis"
-                title="recherchez par mots-clés"
-                type="search"
-                value=""
-              />
-              <div
-                class="sc-hBtRBD cJLOam"
-                id="react-autowhatever-1"
-                role="listbox"
-              />
-            </div>
+              value=""
+            />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz cefBoA sc-hoLEA iZtlxs"
+              class="sc-kOPcWz cefBoA sc-bOQTJJ hJnDeP"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-bOQTJJ gofZPX"
+                class="sc-hBtRBD iUiOtB"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
