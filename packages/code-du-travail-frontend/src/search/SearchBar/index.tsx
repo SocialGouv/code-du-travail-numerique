@@ -114,6 +114,7 @@ const SearchBar = ({
         }
         hasButton={hasButton}
         hasSearchIcon={hasSearchIcon}
+        type="search"
       />
 
       {isOpen && suggestions.length > 0 && (
