@@ -9,7 +9,6 @@ repositories:
   cdtn-contrib: https://github.com/SocialGouv/code-du-travail-backoffice
   kali-data: https://github.com/SocialGouv/kali-data
   legi-data: https://github.com/SocialGouv/legi-data
-  serving-ml: https://github.com/SocialGouv/serving-ml
   siret2idcc: https://github.com/SocialGouv/siret2idcc
 
 # List all docs links
@@ -31,8 +30,6 @@ stack:
     - NextJS
   api:
     - ElasticSearch
-  nlp:
-    - tensorflow
   cdtn-admin:
     - NextJS
     - hasura
