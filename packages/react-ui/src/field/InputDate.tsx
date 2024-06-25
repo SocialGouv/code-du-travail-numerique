@@ -5,6 +5,7 @@ import { box, breakpoints, fonts, spacings } from "../theme";
 import { DefaultInputProps, INPUT_HEIGHT } from "./Input";
 
 function formatValueToFr(value: string): string {
+  if (!value) return value;
   const [year, month, days] = value.split("-");
   return `${days}/${month}/${year}`;
 }
