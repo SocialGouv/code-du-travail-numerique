@@ -20,9 +20,9 @@ module.exports = defineConfig({
     setupNodeEvents(on) {
       htmlvalidate.install(on);
       on("before:run", async () => {
-        if (process.env.ALL_TEST) {
+        // if (process.env.ALL_TEST) {
           await downloadAllUrlsToValidate();
-        }
+        // }
       });
     },
   },
