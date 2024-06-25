@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
 import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
@@ -25,14 +25,14 @@ describe("Page ancienneté: vérification validation lorsque absence > anciennet
     userAction.click(ui.agreement.noAgreement.get());
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2024");
-    userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2024");
-    userAction.setInput(ui.seniority.endDate.get(), "01/02/2024");
+    userAction.setInput(ui.seniority.notificationDate.get(), "31/01/2024");
+    userAction.setInput(ui.seniority.endDate.get(), "31/01/2024");
     userAction.click(ui.seniority.hasAbsence.oui.get());
     userAction.setInput(ui.seniority.absences.duration(0).get(), "1");
     userAction.click(ui.next.get());
     expect(
       getByText(
-        /Le temps d'absence ne peut pas être supérieur au temps de travail/
+        /La durée de l'absence doit être inférieure ou égale à l'ancienneté/
       )
     ).toBeInTheDocument();
   });

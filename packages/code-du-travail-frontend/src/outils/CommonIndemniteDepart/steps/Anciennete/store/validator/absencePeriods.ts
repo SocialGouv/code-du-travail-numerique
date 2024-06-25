@@ -82,7 +82,7 @@ export const getAbsencePeriodsErrors = (
     } else if (totalMonth < totalMonthAbsence) {
       errors.errorAbsencePeriods = {
         global:
-          "Le temps d'absence ne peut pas être supérieur au temps de travail",
+          "La durée de l'absence doit être inférieure ou égale à l'ancienneté",
       };
     } else {
       errors.errorAbsencePeriods = undefined;
