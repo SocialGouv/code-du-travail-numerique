@@ -37,7 +37,7 @@ export const fetchEnterprises = async (
 
     const entreprises = jsonResponse.results.map((result) => {
       const conventions =
-        result.siege.liste_idcc?.map((idccNumber) => {
+        result.complements.liste_idcc?.map((idccNumber) => {
           return {
             idcc: parseInt(idccNumber, 10),
             shortTitle: `Convention collective ${idccNumber}`,

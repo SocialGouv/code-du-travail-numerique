@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.144.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.144.0...v4.144.1) (2024-06-24)
+
+### Bug Fixes
+
+- **html:** correction de l'invalidité html sur la partie recherche ([#5989](https://github.com/SocialGouv/code-du-travail-numerique/issues/5989)) ([ed2b100](https://github.com/SocialGouv/code-du-travail-numerique/commit/ed2b100e90e627a9e4a44785b34239ad0a7252a8))
+
+# [4.144.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.2...v4.144.0) (2024-06-24)
+
+### Bug Fixes
+
+- 5948 error dans les logs maxlistenersexceededwarning ([#5966](https://github.com/SocialGouv/code-du-travail-numerique/issues/5966)) ([3d63440](https://github.com/SocialGouv/code-du-travail-numerique/commit/3d634405c79d736c35f140a36ba178ef3f4c92b0))
+- **preavis de retraire:** modification de l'url de la fiche service publique ([#5975](https://github.com/SocialGouv/code-du-travail-numerique/issues/5975)) ([ee28723](https://github.com/SocialGouv/code-du-travail-numerique/commit/ee2872365ebdf8fac3be26bbdc25957becdb6a35))
+- **sentry:** adding commit information to release context + avoid to create n release by n commit on dev ([#5974](https://github.com/SocialGouv/code-du-travail-numerique/issues/5974)) ([2195b5d](https://github.com/SocialGouv/code-du-travail-numerique/commit/2195b5d27a33189449364d65ba5c87bf34112d19))
+
+### Features
+
+- 5954 fix page stats ([#5971](https://github.com/SocialGouv/code-du-travail-numerique/issues/5971)) ([c5c2798](https://github.com/SocialGouv/code-du-travail-numerique/commit/c5c27985371e0dde53b98bd6379efc8cde2b46ba))
+- **combobox:** use `downshift` instead of `react-autosuggest` ([#5972](https://github.com/SocialGouv/code-du-travail-numerique/issues/5972)) ([2bdc92f](https://github.com/SocialGouv/code-du-travail-numerique/commit/2bdc92f8bbb8baacde68869469485411f009eb02))
+- **search:** remove usage of NLP to process document ([#5950](https://github.com/SocialGouv/code-du-travail-numerique/issues/5950)) ([4e9f061](https://github.com/SocialGouv/code-du-travail-numerique/commit/4e9f06176a93426082e56143d50087fa48bb5372)), closes [#5943](https://github.com/SocialGouv/code-du-travail-numerique/issues/5943)
+
+## [4.143.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.1...v4.143.2) (2024-06-18)
+
+**Note:** Version bump only for package @cdt/frontend
+
+## [4.143.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.0...v4.143.1) (2024-06-17)
+
+### Bug Fixes
+
+- **sentry:** modification configuration ([#5969](https://github.com/SocialGouv/code-du-travail-numerique/issues/5969)) ([3f40c0e](https://github.com/SocialGouv/code-du-travail-numerique/commit/3f40c0e12e9895d55445c21c4e49eeb9ee334c94))
+
+# [4.143.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.142.0...v4.143.0) (2024-06-17)
+
+### Bug Fixes
+
+- **simulateur indemnité de licenciement:** ajout d'une validation pour bloquer les utilisateurs qui entrent des dates de type "23/05/272024" ([#5965](https://github.com/SocialGouv/code-du-travail-numerique/issues/5965)) ([9a39511](https://github.com/SocialGouv/code-du-travail-numerique/commit/9a39511477edaf9ab2342bf6a8fd5fbf5493bad4))
+
+### Features
+
+- CC fusions ([#5967](https://github.com/SocialGouv/code-du-travail-numerique/issues/5967)) ([1af11e9](https://github.com/SocialGouv/code-du-travail-numerique/commit/1af11e96c493909487fddb85b12a2a6409d162a3))
+- **sentry:** upgrade to V8 + use default setup configuration to use `opentelemetry` ([#5960](https://github.com/SocialGouv/code-du-travail-numerique/issues/5960)) ([146f8f2](https://github.com/SocialGouv/code-du-travail-numerique/commit/146f8f2ec4f096d27890561e446f552b8144754f))
+
 # [4.142.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.141.0...v4.142.0) (2024-06-13)
 
 ### Bug Fixes

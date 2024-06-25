@@ -2,17 +2,24 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-export const ScreenReaderOnly = React.forwardRef(({ type, ...props }, ref) => {
-  return type === "inline" ? (
-    <SROnly as="span" {...props} ref={ref} />
-  ) : (
-    <SROnly {...props} ref={ref} />
-  );
-});
+export const ScreenReaderOnly = React.forwardRef(
+  ({ type, children, ...props }, ref) => {
+    return type === "inline" ? (
+      <SROnly as="span" {...props} ref={ref}>
+        {children}
+      </SROnly>
+    ) : (
+      <SROnly {...props} ref={ref}>
+        {children}
+      </SROnly>
+    );
+  }
+);
 
 ScreenReaderOnly.displayName = "ScreenReaderOnly";
 
 ScreenReaderOnly.propTypes = {
+  children: PropTypes.node,
   type: PropTypes.oneOf(["block", "inline"]),
 };
 

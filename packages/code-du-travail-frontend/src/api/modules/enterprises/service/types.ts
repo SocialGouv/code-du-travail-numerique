@@ -134,6 +134,7 @@ export interface Complements {
   identifiant_association: any;
   statut_bio: boolean;
   statut_entrepreneur_spectacle: boolean;
+  liste_idcc: string[];
 }
 
 export interface CollectiviteTerritoriale {
