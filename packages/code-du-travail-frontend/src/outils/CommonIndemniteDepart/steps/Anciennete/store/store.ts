@@ -147,6 +147,7 @@ const createAncienneteStore: StoreSlice<
                 ? JSON.stringify(absencePeriods)
                 : undefined,
           };
+
           const result = publicodes.calculate(situation);
           if (result.type === "ineligibility") {
             errorEligibility = result.ineligibility;
@@ -154,6 +155,7 @@ const createAncienneteStore: StoreSlice<
         } catch (e) {
           console.error(e);
           Sentry.captureException(e);
+          return ValidationResponse.NotValid;
         }
       }
 
