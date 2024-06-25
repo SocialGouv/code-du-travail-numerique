@@ -13,9 +13,8 @@ export const getAbsencePeriodsErrors = (
   information?: CommonInformationsStoreInput
 ): Partial<AncienneteStoreError> => {
   const dEntree = parse(state.dateEntree);
-  const dNotification = parse(state.dateNotification);
   const dSortie = parse(state.dateSortie);
-  const totalMonth = differenceInMonths(dNotification, dEntree);
+  const totalMonth = differenceInMonths(dSortie, dEntree);
   let errors: AncienneteStoreError = {};
 
   if (!information) return errors;
