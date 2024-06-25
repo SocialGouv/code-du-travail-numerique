@@ -81,7 +81,7 @@ export const getAbsencePeriodsErrors = (
     } else if (totalMonth < totalMonthAbsence) {
       errors.errorAbsencePeriods = {
         global:
-          "La durée total des absences doit être inférieure ou égale à l'ancienneté",
+          "La durée totale des absences doit être inférieure ou égale à l'ancienneté",
       };
     } else {
       errors.errorAbsencePeriods = undefined;
