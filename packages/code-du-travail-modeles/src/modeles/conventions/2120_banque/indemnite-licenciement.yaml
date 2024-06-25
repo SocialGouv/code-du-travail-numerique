@@ -252,7 +252,7 @@ contrat salarié . convention collective . banque . résultat conventionnel 6:
 contrat salarié . convention collective . banque . résultat conventionnel licenciement disciplinaire:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - licenciement disciplinaire = 'Oui'
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
   valeur: oui

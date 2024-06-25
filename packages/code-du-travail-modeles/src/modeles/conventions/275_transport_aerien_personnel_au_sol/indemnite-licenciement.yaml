@@ -66,7 +66,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 an
       - contrat salarié . indemnité de licenciement . date de notification >= 31/01/2024
   plafond: indemnité de licenciement . salaire de référence conventionnel * 18
@@ -498,7 +498,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 an
       - contrat salarié . indemnité de licenciement . date de notification >= 31/01/2024
   plafond: indemnité de licenciement . salaire de référence conventionnel * 18

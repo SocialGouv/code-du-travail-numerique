@@ -23,7 +23,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
 contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle . résultat conventionnel:
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - inaptitude suite à un accident non professionnelle = 'Oui'
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
