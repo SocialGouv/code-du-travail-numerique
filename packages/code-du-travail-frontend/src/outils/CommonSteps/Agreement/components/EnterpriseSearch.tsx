@@ -43,6 +43,8 @@ const EnterpriseSearch = ({
   const [searchParams, setSearchParams] = useState<SearchParams>({
     address: "",
     query: "",
+    codePostal: "",
+    codeCommune: "",
   });
 
   if (enterprise) {

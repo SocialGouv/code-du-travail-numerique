@@ -4,11 +4,14 @@ import { useCombobox } from "downshift";
 import { useState } from "react";
 import { ApiGeoResult, searchCities } from "./searchCities";
 import { StyledList, StyledSuggestion } from "../../../../../search/SearchBar";
+import { detectIfPostalCode } from "../../../../../conventions/Search/api/utils";
 
 const { Search: SearchIcon } = icons;
 
 type Props = {
   setAddress: (address: string) => void;
+  setCodePostal: (codePostal: string) => void;
+  setCodeCommune: (codeCommune: string) => void;
   isDisabled?: boolean;
   searchInputHandler: (e: React.FormEvent) => void;
 };
@@ -16,6 +19,7 @@ type Props = {
 export const LocationSearchInput = (props: Props) => {
   const [suggestions, setSuggestions] = useState<ApiGeoResult[]>([]);
   const [selectedItem, setSelectedItem] = useState<null | ApiGeoResult>(null);
+  const [postalCode, setPostalCode] = useState<string | undefined>(undefined);
   const {
     isOpen,
     getMenuProps,
@@ -25,13 +29,13 @@ export const LocationSearchInput = (props: Props) => {
     getItemProps,
   } = useCombobox({
     items: suggestions,
-    itemToString(item) {
-      return item ? item.nom : "";
-    },
+    itemToString,
     onInputValueChange: async ({ inputValue }) => {
       try {
         const results = await searchCities(inputValue);
         setSuggestions(results);
+        const isPostalCode = detectIfPostalCode(inputValue);
+        setPostalCode(isPostalCode ? inputValue : undefined);
       } catch (error) {
         setSuggestions([]);
         console.error(error);
@@ -39,11 +43,26 @@ export const LocationSearchInput = (props: Props) => {
     },
     selectedItem,
     onSelectedItemChange(changes) {
-      console.log("ok");
       props.setAddress(changes.selectedItem.nom);
+      if (postalCode) {
+        props.setCodePostal(postalCode);
+      } else {
+        props.setCodeCommune(changes.selectedItem.code);
+      }
       setSelectedItem(changes.selectedItem);
     },
   });
+
+  function itemToString(item: ApiGeoResult | null) {
+    return item
+      ? `${item.nom} (${
+          postalCode ??
+          (item.codesPostaux.length > 1
+            ? item.codeDepartement
+            : item.codesPostaux[0])
+        })`
+      : "";
+  }
 
   return (
     <>
@@ -78,11 +97,7 @@ export const LocationSearchInput = (props: Props) => {
                   key={`${item.code}${index}`}
                   isHighlighted={highlightedIndex === index}
                 >
-                  {item.nom} (
-                  {item.codesPostaux.length > 1
-                    ? item.codeDepartement
-                    : item.codesPostaux[0]}
-                  )
+                  {itemToString(item)}
                 </StyledSuggestion>
               ))}
           </StyledList>

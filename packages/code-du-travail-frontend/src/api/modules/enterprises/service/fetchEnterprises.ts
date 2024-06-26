@@ -1,6 +1,5 @@
 import { ENTERPRISE_API_URL } from "../../../../config";
 import { Enterprise } from "../types";
-import { getCodeCommune } from "./fetchCp";
 import { nafMapper } from "./naf";
 import { ApiRechercheEntrepriseResponse } from "./types";
 import { captureException } from "@sentry/nextjs";
@@ -21,13 +20,17 @@ export type EnterpriseApiResponse = {
 
 export const fetchEnterprises = async (
   query: string,
-  address: string | undefined
+  codePostal: string | undefined,
+  codeCommune: string | undefined
 ): Promise<EnterpriseApiResponse> => {
   const q = encodeURIComponent(query);
-  const codeCommune = address ? await getCodeCommune(address) : undefined;
 
   const url = `${ENTERPRISE_API_URL}/search?q=${q}&page=1&per_page=25&etat_administratif=A&sort_by_size=true${
-    codeCommune ? `&code_commune=${codeCommune}` : ""
+    codeCommune
+      ? `&code_commune=${codeCommune}`
+      : codePostal
+      ? `&code_postal=${codePostal}`
+      : ""
   }`;
 
   try {

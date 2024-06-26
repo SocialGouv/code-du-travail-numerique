@@ -88,7 +88,12 @@ function AgreementSearchTool({
 
     setScreen(null);
     setEnterprise(null);
-    setSearchParams({ address: "", query: "" });
+    setSearchParams({
+      address: "",
+      query: "",
+      codeCommune: "",
+      codePostal: "",
+    });
   }
 
   function handleEnterpriseSelection(
@@ -100,14 +105,12 @@ function AgreementSearchTool({
     if (widgetMode) {
       setScreen(ScreenType.agreementSelection);
     } else {
-      router.push(
-        {
-          pathname: `/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreementSelection}`,
-          query: {
-            noRedirect,
-          },
-        }
-      );
+      router.push({
+        pathname: `/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreementSelection}`,
+        query: {
+          noRedirect,
+        },
+      });
     }
   }
 
@@ -196,6 +199,8 @@ const AgreementSearchUI = (props: Props): JSX.Element => {
   const [searchParams, setSearchParams] = useState<SearchParams>({
     address: "",
     query: "",
+    codeCommune: "",
+    codePostal: "",
   });
 
   return (

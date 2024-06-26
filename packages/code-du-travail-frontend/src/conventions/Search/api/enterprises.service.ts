@@ -19,7 +19,9 @@ const siretNumberError =
 
 const apiEnterprises = function createFetcher(
   query: string,
-  address: string | undefined | null = undefined
+  _address: string | undefined | null = undefined,
+  codePostal: string | undefined | null = undefined,
+  codeCommune: string | undefined | null = undefined
 ): Promise<Enterprise[]> {
   if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {
     return Promise.reject(siretSirenError);
@@ -35,7 +37,11 @@ const apiEnterprises = function createFetcher(
   }
 
   const url = `${SITE_URL}/api/enterprises?q=${encodeURIComponent(query)}${
-    address ? `&a=${encodeURIComponent(address)}` : ""
+    codePostal
+      ? `&cp=${encodeURIComponent(codePostal)}`
+      : codeCommune
+      ? `&cc=${encodeURIComponent(codeCommune)}`
+      : ""
   }`;
 
   return fetch(url).then(async (response) => {

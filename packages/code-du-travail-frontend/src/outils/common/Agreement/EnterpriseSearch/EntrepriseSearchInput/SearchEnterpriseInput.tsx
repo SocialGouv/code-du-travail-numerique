@@ -27,9 +27,11 @@ type Props = {
 export type SearchParams = {
   address: string;
   query: string;
+  codePostal: string;
+  codeCommune: string;
 };
 export const SearchEnterpriseInput = ({
-  searchParams = { address: "", query: "" },
+  searchParams = { address: "", query: "", codeCommune: "", codePostal: "" },
   onUserAction,
   onSearchParamsChange,
   isDisabled,
@@ -37,19 +39,36 @@ export const SearchEnterpriseInput = ({
 }: Props): JSX.Element => {
   const useEnterpriseSuggester = createSuggesterHook(
     searchEnterprises,
-    (query, address) => {
-      onUserAction(UserAction.SearchEnterprise, { address, query });
+    (query, address, codePostal, codeCommune) => {
+      onUserAction(UserAction.SearchEnterprise, {
+        address,
+        query,
+        codePostal,
+        codeCommune,
+      });
     }
   );
   const state = useEnterpriseSuggester(
     searchParams.query,
-    searchParams.address
+    searchParams.address,
+    searchParams.codePostal,
+    searchParams.codeCommune
   );
   const [query, setQuery] = useState(searchParams.query);
   const [address, setAddress] = useState(searchParams.address);
+  const [codePostal, setCodePostal] = useState<string>(searchParams.codePostal);
+  const [codeCommune, setCodeCommune] = useState<string>(
+    searchParams.codeCommune
+  );
   const searchInputHandler = (e) => {
     e.preventDefault();
-    onSearchParamsChange({ ...searchParams, query: query, address: address });
+    onSearchParamsChange({
+      ...searchParams,
+      query,
+      address,
+      codePostal,
+      codeCommune,
+    });
   };
 
   return (
@@ -87,6 +106,8 @@ export const SearchEnterpriseInput = ({
           <LocationSearchInput
             searchInputHandler={searchInputHandler}
             setAddress={setAddress}
+            setCodePostal={setCodePostal}
+            setCodeCommune={setCodeCommune}
             isDisabled={isDisabled}
           />
         </Box>
