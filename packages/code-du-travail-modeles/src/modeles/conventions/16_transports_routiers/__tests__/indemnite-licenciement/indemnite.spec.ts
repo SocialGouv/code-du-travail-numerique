@@ -109,7 +109,7 @@ describe("CC 16", () => {
       ${2}           | ${6}      | ${66} | ${false}              | ${2738}    | ${0}
       ${2}           | ${6}      | ${66} | ${true}               | ${2738}    | ${0}
     `(
-      "ancienneté: $seniority ($seniorityRight) ans, sref: $salaireRef €, age: $age, droit à la retraite: $haveRightToRetirement => une compensation de base de $expectedCompensation €",
+      "ancienneté: $seniority ans, sref: $salaireRef €, age: $age, droit à la retraite: $haveRightToRetirement => une compensation de base de $expectedCompensation €",
       ({
         salaireRef,
         expectedCompensation,
@@ -161,7 +161,7 @@ describe("CC 16", () => {
       ${2}           | ${2}      | ${62} | ${false}              | ${2471}    | ${494.2}
       ${2}           | ${5}      | ${62} | ${false}              | ${2471}    | ${2471}
     `(
-      "Ancienneté: $seniority ans ($seniorityRight), sref: $salaireRef €, age: $age, droit à la retraite: $haveRightToRetirement => une compensation de base de $expectedCompensation €",
+      "Ancienneté: $seniority ans, sref: $salaireRef €, age: $age, droit à la retraite: $haveRightToRetirement => une compensation de base de $expectedCompensation €",
       ({
         salaireRef,
         expectedCompensation,

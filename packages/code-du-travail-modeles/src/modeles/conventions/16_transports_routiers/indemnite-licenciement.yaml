@@ -42,11 +42,6 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   applicable si: catégorie professionnelle = 'Ingénieurs et cadres'
   valeur: oui
 
-contrat salarié . convention collective . transport routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . minimum ancienneté conventionnelle requise en année:
-  applicable si: contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle = 'Ingénieurs et cadres'
-  remplace: contrat salarié . paramètre . minimum ancienneté conventionnelle requise en année
-  valeur: 3 ans
-
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien:
   titre: Avant d'être cadre, le salarié a été employé, technicien ou agent de maîtrise dans l’entreprise
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
@@ -230,11 +225,6 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   applicable si: catégorie professionnelle = 'TAM'
   valeur: oui
 
-contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . TAM . minimum ancienneté conventionnelle requise en année:
-  applicable si: catégorie professionnelle = 'TAM'
-  remplace: contrat salarié . paramètre . minimum ancienneté conventionnelle requise en année
-  valeur: 2 an
-
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . TAM . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: age <= 65 an
@@ -251,7 +241,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   remplace: base
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= contrat salarié . paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 3
   valeur: entre 2 et 3 ans d'ancienneté
   cdtn:
@@ -327,7 +317,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   remplace: base
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 3
   valeur: entre 2 et 3 ans d'ancienneté
   cdtn:
@@ -437,7 +427,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   remplace: base
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 3
   valeur: calcul 2 et 3 ans d'ancienneté
   cdtn:
@@ -493,7 +483,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité temporaire de conduite . résultat conventionnel 2:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 3
   valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   unité: €
   arrondi: 2 décimales
@@ -518,7 +508,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 3 ans
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 ans
   valeur: 2 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   unité: €
