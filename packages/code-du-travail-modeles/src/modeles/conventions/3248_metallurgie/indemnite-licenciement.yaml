@@ -124,7 +124,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . non cadre . résultat conventionnel:
   remplace: contrat salarié . convention collective . métallurgie . indemnité de licenciement . base
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
   somme:
     - contrat salarié . indemnité de licenciement . facteur dix ans ou moins cc
     - contrat salarié . indemnité de licenciement . facteur plus de dix ans cc
@@ -143,7 +143,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . non cadre . résultat conventionnel référence forfait jour:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour = 'Oui'
   valeur: oui
   références:
@@ -165,7 +165,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel:
   remplace: contrat salarié . convention collective . métallurgie . indemnité de licenciement . base
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
   le maximum de:
     - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel défault
     - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul
@@ -173,7 +173,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
     Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel défault:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
   somme:
     - contrat salarié . indemnité de licenciement . facteur dix ans ou moins cc
     - contrat salarié . indemnité de licenciement . facteur plus de dix ans cc
@@ -185,7 +185,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel référence forfait jour:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour = 'Oui'
   valeur: oui
   références:
@@ -222,7 +222,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   valeur: contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul
 
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
   valeur: base * majoration * minoration
   unité: €
   plancher: plancher
@@ -265,7 +265,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   remplace: base
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 8 an
   valeur: calcul simple
   cdtn:
@@ -279,7 +279,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
   remplace: base
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 an
   valeur: calcul complexe
   cdtn:
@@ -452,7 +452,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . formule résultat conventionnel défault:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . cadre . résultat conventionnel défault > contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul
   valeur: oui
   cdtn:
@@ -467,7 +467,7 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . formule résultat conventionnel avec majoration:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . convention collective . métallurgie . indemnité de licenciement . majoration 50 > 1
   valeur: oui
   cdtn:
@@ -477,13 +477,13 @@ contrat salarié . convention collective . métallurgie . indemnité de licencie
 contrat salarié . convention collective . métallurgie . indemnité de licenciement . résultat conventionnel référence licenciement absences prolongés ou répétés:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées = 'Oui'
   valeur: oui
   références:
     Article 91.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314615#KALIARTI000046314615
 
-contrat salarié . convention collective . métallurgie . indemnité de licenciement . notification arrêt de travail au moment du licenciement:
+contrat salarié . convention collective . métallurgie . indemnité de licenciement . notification arrêt de travail au moment du licenciement :
   applicable si: contrat salarié . indemnité de licenciement . arrêt de travail
   type: notification
   description: Le montant de l’indemnité calculé pour la convention collective de la métallurgie pourrait être différent. En effet, les salaires pris en compte dans cette simulation sont ceux que le salarié a perçu avant l'arrêt de travail. Or, la convention collective indique que la rémunération à retenir est celle que le salarié aurait perçue s'il avait travaillé pendant la période d’absence pour maladie.

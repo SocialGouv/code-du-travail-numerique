@@ -187,12 +187,13 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . anciennes règles . refus . résultat conventionnel:
-  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
   remplace: indemnité de licenciement . résultat conventionnel identique au légal
   valeur: oui
   références:
     Article 61: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851537?idConteneur=KALICONT000005635173
     Article 12: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851428?idConteneur=KALICONT000005635173&origin=list#KALIARTI000005851428
+
 
 ### Nouvelles règles (à partir du 1er mai 2023)
 
@@ -214,7 +215,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
   valeur:
     produit:
@@ -235,7 +236,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
   valeur:
     produit:
@@ -262,7 +263,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 2 an
   valeur:
     produit:
@@ -283,7 +284,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
   valeur:
     produit:
