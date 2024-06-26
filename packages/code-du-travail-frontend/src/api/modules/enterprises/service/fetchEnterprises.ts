@@ -60,7 +60,7 @@ export const fetchEnterprises = async (
       return {
         activitePrincipale: `${nafMapper[result.activite_principale]}`,
         etablissements: result.nombre_etablissements_ouverts,
-        highlightLabel: result.nom_raison_sociale,
+        highlightLabel: result.nom_raison_sociale ?? result.nom_complet,
         label: result.nom_complet,
         simpleLabel: result.nom_complet,
         matching: result.nombre_etablissements_ouverts,

@@ -46,8 +46,10 @@ export const LocationSearchInput = (props: Props) => {
       props.setAddress(changes.selectedItem.nom);
       if (postalCode) {
         props.setCodePostal(postalCode);
+        props.setCodeCommune("");
       } else {
         props.setCodeCommune(changes.selectedItem.code);
+        props.setCodePostal("");
       }
       setSelectedItem(changes.selectedItem);
     },
