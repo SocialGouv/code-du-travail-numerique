@@ -167,7 +167,7 @@ describe("<ContributionGeneric />", () => {
           "trackEvent",
           "enterprise_search",
           "/contribution/my-contrib",
-          '{"address":"","query":"carrefour"}',
+          '{"query":"carrefour"}',
         ],
       ],
       [

@@ -9,16 +9,22 @@ import { detectIfPostalCode } from "../../../../../conventions/Search/api/utils"
 const { Search: SearchIcon } = icons;
 
 type Props = {
-  setAddress: (address: string) => void;
-  setPostCode: (postCode: string[]) => void;
+  selectedApiGeoResult?: ApiGeoResultWithSelectedPostCode;
+  setSelectedApiGeoResult: (
+    apiGeoResult?: ApiGeoResultWithSelectedPostCode
+  ) => void;
   isDisabled?: boolean;
   searchInputHandler: (e: React.FormEvent) => void;
 };
 
+export type ApiGeoResultWithSelectedPostCode = ApiGeoResult & {
+  selectedPostCode: string[];
+};
+
 export const LocationSearchInput = (props: Props) => {
   const [suggestions, setSuggestions] = useState<ApiGeoResult[]>([]);
-  const [selectedItem, setSelectedItem] = useState<null | ApiGeoResult>(null);
   const [postalCode, setPostalCode] = useState<string | undefined>(undefined);
+  const [hasSearchError, setHasSearchError] = useState<boolean>(false);
   const {
     isOpen,
     getMenuProps,
@@ -30,25 +36,29 @@ export const LocationSearchInput = (props: Props) => {
     items: suggestions,
     itemToString,
     onInputValueChange: async ({ inputValue }) => {
+      if (!inputValue) {
+        props.setSelectedApiGeoResult(undefined);
+      }
       try {
         const results = await searchCities(inputValue);
         setSuggestions(results);
         const isPostalCode = detectIfPostalCode(inputValue);
         setPostalCode(isPostalCode ? inputValue : undefined);
+        setHasSearchError(false);
       } catch (error) {
         setSuggestions([]);
         console.error(error);
+        setHasSearchError(true);
       }
     },
-    selectedItem,
+    selectedItem: props.selectedApiGeoResult,
     onSelectedItemChange(changes) {
-      props.setAddress(changes.selectedItem.nom);
-      if (postalCode) {
-        props.setPostCode([postalCode]);
-      } else {
-        props.setPostCode(changes.selectedItem.codesPostaux);
-      }
-      setSelectedItem(changes.selectedItem);
+      props.setSelectedApiGeoResult({
+        ...changes.selectedItem,
+        selectedPostCode: postalCode
+          ? [postalCode]
+          : changes.selectedItem.codesPostaux,
+      });
     },
   });
 
@@ -84,6 +94,13 @@ export const LocationSearchInput = (props: Props) => {
             placeholder="Ex : 31000 ou Toulouse"
             disabled={props.isDisabled}
           />
+
+          {hasSearchError && (
+            <InlineText hasSearchError={hasSearchError}>
+              Une erreur est survenue lors de la recherche par ville, veuillez
+              réessayer plus tard.
+            </InlineText>
+          )}
 
           <StyledList {...getMenuProps()}>
             {isOpen &&
@@ -138,8 +155,12 @@ const InlineLabel = styled(Label)`
 `;
 
 const InlineText = styled(Text)`
-  color: ${({ theme, disabled }) =>
-    disabled ? theme.placeholder : theme.paragraph};
+  color: ${({ theme, disabled, hasSearchError }) =>
+    disabled
+      ? theme.placeholder
+      : hasSearchError
+      ? theme.error
+      : theme.paragraph};
 `;
 
 const InputWithButton = styled.div`

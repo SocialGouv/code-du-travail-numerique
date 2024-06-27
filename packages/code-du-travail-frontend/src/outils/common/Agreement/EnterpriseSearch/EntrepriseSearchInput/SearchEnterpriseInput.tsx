@@ -12,7 +12,10 @@ import {
 } from "../../../../ConventionCollective/types";
 import { InfoBulle } from "../../../InfoBulle";
 import { EntrepriseSearchResults } from "../EntrepriseSearchResult";
-import { LocationSearchInput } from "../Location/Search";
+import {
+  ApiGeoResultWithSelectedPostCode,
+  LocationSearchInput,
+} from "../Location/Search";
 
 type Props = {
   searchParams?: SearchParams;
@@ -24,13 +27,14 @@ type Props = {
     params?: SearchParams
   ) => void;
 } & TrackingProps;
+
 export type SearchParams = {
-  address: string;
   query: string;
-  postCode: string[];
+  apiGeoResult?: ApiGeoResultWithSelectedPostCode;
 };
+
 export const SearchEnterpriseInput = ({
-  searchParams = { address: "", query: "", postCode: [] },
+  searchParams = { query: "" },
   onUserAction,
   onSearchParamsChange,
   isDisabled,
@@ -38,29 +42,22 @@ export const SearchEnterpriseInput = ({
 }: Props): JSX.Element => {
   const useEnterpriseSuggester = createSuggesterHook(
     searchEnterprises,
-    (query, address, postCode) => {
-      onUserAction(UserAction.SearchEnterprise, {
-        address,
-        query,
-        postCode,
-      });
+    (searchParams) => {
+      onUserAction(UserAction.SearchEnterprise, searchParams);
     }
   );
-  const state = useEnterpriseSuggester(
-    searchParams.query,
-    searchParams.address,
-    searchParams.postCode
-  );
+  const state = useEnterpriseSuggester(searchParams);
   const [query, setQuery] = useState(searchParams.query);
-  const [address, setAddress] = useState(searchParams.address);
-  const [postCode, setPostCode] = useState<string[]>(searchParams.postCode);
+  const [selectedApiGeoResult, setSelectedApiGeoResult] = useState<
+    ApiGeoResultWithSelectedPostCode | undefined
+  >(searchParams.apiGeoResult);
+
   const searchInputHandler = (e) => {
     e.preventDefault();
     onSearchParamsChange({
       ...searchParams,
       query,
-      address,
-      postCode,
+      apiGeoResult: selectedApiGeoResult,
     });
   };
 
@@ -98,8 +95,8 @@ export const SearchEnterpriseInput = ({
         <Box>
           <LocationSearchInput
             searchInputHandler={searchInputHandler}
-            setAddress={setAddress}
-            setPostCode={setPostCode}
+            setSelectedApiGeoResult={setSelectedApiGeoResult}
+            selectedApiGeoResult={selectedApiGeoResult}
             isDisabled={isDisabled}
           />
         </Box>

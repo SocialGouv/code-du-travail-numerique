@@ -6,17 +6,13 @@ import styled from "styled-components";
 
 import { Enterprise } from "../../conventions/Search/api/enterprises.service";
 import { Title } from "../Components/SimulatorDecorator/Components";
-import {
-  NavProvider,
-  ScreenType,
-  SearchParams,
-  useNavContext,
-} from "./common/NavContext";
+import { NavProvider, ScreenType, useNavContext } from "./common/NavContext";
 import { TrackingProvider, useTrackingContext } from "./common/TrackingContext";
 import Steps from "./steps";
 import handleTrackEvent from "./tracking/HandleTrackEvent";
 import { OnUserAction, UserAction } from "./types";
 import { MatomoSearchAgreementCategory } from "../../lib";
+import { SearchParams } from "../common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
 
 interface Props {
   icon: string;
@@ -89,9 +85,7 @@ function AgreementSearchTool({
     setScreen(null);
     setEnterprise(null);
     setSearchParams({
-      address: "",
       query: "",
-      postCode: [],
     });
   }
 
@@ -196,9 +190,7 @@ function AgreementSearchTool({
 const AgreementSearchUI = (props: Props): JSX.Element => {
   const [enterprise, setEnterprise] = useState<Enterprise | null>(null);
   const [searchParams, setSearchParams] = useState<SearchParams>({
-    address: "",
     query: "",
-    postCode: [],
   });
 
   return (

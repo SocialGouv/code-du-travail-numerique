@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Paragraph, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 import { Agreement } from "../../../types";
-import { SearchParams } from "../../../ConventionCollective/common/NavContext";
 import { TrackingProps } from "../../../ConventionCollective/types";
 import styled from "styled-components";
 import {
@@ -12,7 +11,10 @@ import {
 import ShowAgreements from "./ShowAgreements";
 import ShowAgreement from "../../../common/Agreement/EnterpriseSearch/ShowAgreement";
 import SelectedEnterprise from "../../../common/Agreement/EnterpriseSearch/SelectedEnterprise";
-import { SearchEnterpriseInput } from "../../../common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
+import {
+  SearchEnterpriseInput,
+  SearchParams,
+} from "../../../common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export type Props = {
@@ -41,9 +43,7 @@ const EnterpriseSearch = ({
     selectedEnterprise
   );
   const [searchParams, setSearchParams] = useState<SearchParams>({
-    address: "",
     query: "",
-    postCode: [],
   });
 
   if (enterprise) {
