@@ -185,7 +185,6 @@ describe("Outil - Préavis de retraite", () => {
     cy.get("#enterprise-search").clear();
     cy.get("#enterprise-search").type("VERNIN", { delay: 0 });
     cy.get("#enterprise-search-address").type("69007", { delay: 0 });
-    cy.get('ul[role="listbox"] li').first().click();
     cy.get('button[type="submit"]').last().click();
     cy.contains("VERNIN").click();
     cy.contains(

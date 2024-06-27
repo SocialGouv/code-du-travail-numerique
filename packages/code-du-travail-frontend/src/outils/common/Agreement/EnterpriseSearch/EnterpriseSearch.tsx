@@ -44,6 +44,7 @@ const EnterpriseSearch = ({
   const [searchParams, setSearchParams] = useState<SearchParams>({
     address: "",
     query: "",
+    postCode: [],
   });
 
   if (enterprise) {
