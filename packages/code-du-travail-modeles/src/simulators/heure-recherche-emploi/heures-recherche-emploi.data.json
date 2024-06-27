@@ -284,69 +284,6 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "48| Cadres"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 29,
-      "typeRupture": "1| Démission",
-      "answer": "50 heures par mois de préavis",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures sont prises en une ou plusieurs fois.",
-      "ref": "Article 15.02.2.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952847&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "48| Cadres"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 29,
-      "typeRupture": "3| Licenciement",
-      "answer": "50 heures par mois de préavis",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont prises en une ou plusieurs fois.",
-      "ref": "Article 15.02.2.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952847&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "38| Non-cadres"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 29,
-      "typeRupture": "1| Démission",
-      "answer": "2 heures par jour de travail ou 1 journée entière par semaine de travail",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": null,
-      "ref": "Article 15.02.2.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952847&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "38| Non-cadres"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 29,
-      "typeRupture": "3| Licenciement",
-      "answer": "2 heures par jour de travail ou 1 journée entière par semaine de travail",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": null,
-      "ref": "Article 15.02.2.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952847&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {},
-      "type": "heures pour recherche d'emploi",
-      "idcc": 29,
-      "typeRupture": "7| Rupture de la période d'essai",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 04.06.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=4D66405756547B67E430323FA00D38D8.tplgfr33s_1?idSectionTA=KALISCTA000005763867&cidTexte=KALITEXT000029787837&idConvention=KALICONT000005635234"
-    },
-    {
-      "criteria": {
         "catégorie professionnelle": "23| Agents de maîtrise"
       },
       "type": "heures pour recherche d'emploi",
@@ -991,84 +928,6 @@
       "answer3": null,
       "ref": "Article 8",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=749A300E450CB5EABE46C1A4B2EC63E3.tplgfr24s_2?idArticle=KALIARTI000005856324&cidTexte=KALITEXT000005682020&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "48| Cadres"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 413,
-      "typeRupture": "1| Démission",
-      "answer": "50 heures par mois",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures peuvent être prises en une ou plusieurs fois.",
-      "ref": "Article 9 de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "48| Cadres"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 413,
-      "typeRupture": "3| Licenciement",
-      "answer": "50 heures par mois ",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures peuvent être prises en une ou plusieurs fois.",
-      "ref": "Article 9 de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "38| Non-cadres"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 413,
-      "typeRupture": "1| Démission",
-      "answer": "2 heures par jour de travail ou 1 journée de travail par semaine de travail",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": null,
-      "ref": "Article 16",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6B7F66290E5A27E516CA3A19F104D2C7.tplgfr24s_3?idArticle=KALIARTI000005863125&cidTexte=KALITEXT000022192697&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "38| Non-cadres"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 413,
-      "typeRupture": "3| Licenciement",
-      "answer": "2 heures par jour de travail ou 1 journée de travail par semaine de travail",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": null,
-      "ref": "Article 16",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6B7F66290E5A27E516CA3A19F104D2C7.tplgfr24s_3?idArticle=KALIARTI000005863125&cidTexte=KALITEXT000022192697&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "38| Non-cadres"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 413,
-      "typeRupture": "7| Rupture de la période d'essai",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 13 bis",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005863122&cidTexte=KALITEXT000022192697&dateTexte=19760915"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "48| Cadres"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 413,
-      "typeRupture": "7| Rupture de la période d'essai",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 5 de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000022837385&cidTexte=KALITEXT000005684719&dateTexte=20010501"
     },
     {
       "criteria": {},
@@ -2911,39 +2770,6 @@
       "answer3": "Ces heures pourront être prises par demi-journée ou journée entière, dans les conditions fixées d'un commun accord par l'employeur et le salarié.",
       "ref": "Article 46",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801981&cidTexte=KALITEXT000005658770"
-    },
-    {
-      "criteria": {},
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2420,
-      "typeRupture": "1| Démission",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 7.3",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=66A29F5D26CA9B3AB9D6CF5888110E5B.tplgfr30s_3?idArticle=KALIARTI000017941895&cidTexte=KALITEXT000017941844&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {},
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2420,
-      "typeRupture": "3| Licenciement",
-      "answer": " 5 journées ou 10 demi-journées par mois",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les absences peuvent être prises en une ou plusieurs fois, et fixé alternativement par le salarié et l'employeur.",
-      "ref": "Article 7.3",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=66A29F5D26CA9B3AB9D6CF5888110E5B.tplgfr30s_3?idArticle=KALIARTI000017941895&cidTexte=KALITEXT000017941844&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {},
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2420,
-      "typeRupture": "7| Rupture de la période d'essai",
-      "answer": " 5 journées ou 10 demi-journées par mois",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Le cadre est autorisé, s'il en fait la demande, à s'absenter pour recherche d'emploi pendant 5 journées ou 10 demi-journées par mois, prises en une ou plusieurs fois. Les autorisations d'absence seront fixées moitié par le cadre, et moitié par l'employeur, moyennant information réciproque. ",
-      "ref": "Article 2.3",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000017941870&cidTexte=KALITEXT000017941844&dateTexte=20050101"
     },
     {
       "criteria": {},
