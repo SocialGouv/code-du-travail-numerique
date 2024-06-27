@@ -41,9 +41,9 @@ const AgreementSelectionStep = ({
           ? `1 convention collective trouvée pour `
           : `${enterprise.conventions.length} conventions collectives trouvées pour `}
         <strong>
-          « {enterprise.simpleLabel}
+          « {enterprise.label}
           {enterprise.address &&
-            ` , ${enterprise.firstMatchingEtablissement?.address}`}{" "}
+            `, ${enterprise.firstMatchingEtablissement?.address}`}{" "}
           »
         </strong>
       </Paragraph>

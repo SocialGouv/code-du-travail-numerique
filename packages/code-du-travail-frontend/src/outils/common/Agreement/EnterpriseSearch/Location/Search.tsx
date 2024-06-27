@@ -83,9 +83,10 @@ export const LocationSearchInput = (props: Props) => {
   return (
     <>
       <InlineLabel
-        {...getLabelProps()}
-        htmlFor="enterprise-search-address"
-        disabled={props.isDisabled}
+        {...getLabelProps({
+          htmlFor: "enterprise-search-address",
+          disabled: props.isDisabled,
+        })}
       >
         Code postal ou ville
       </InlineLabel>{" "}
@@ -95,9 +96,10 @@ export const LocationSearchInput = (props: Props) => {
       <InputWithButton>
         <div>
           <BlockInputRight
-            {...getInputProps()}
+            {...getInputProps({
+              id: "enterprise-search-address",
+            })}
             data-testid="agreement-postal-code-search-input"
-            id="enterprise-search-address"
             placeholder="Ex : 31000 ou Toulouse"
             disabled={props.isDisabled}
             type="search"
