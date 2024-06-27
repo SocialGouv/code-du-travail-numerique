@@ -3,6 +3,7 @@ import { InvalidQueryError } from "../../utils";
 import { fetchEnterprises, populateAgreements } from "./service";
 import { ApiEnterpriseData } from "./types";
 import { ErrorResponse } from "../../types";
+import { captureException } from "@sentry/nextjs";
 
 export class EnterprisesController {
   private req: NextApiRequest;
@@ -35,10 +36,11 @@ export class EnterprisesController {
       const jsonResponse = await fetchEnterprises(query, postCodeArray);
 
       const response = await populateAgreements(jsonResponse);
-
       this.res.status(200).json(response);
     } catch (error) {
-      this.res.status(404).json({ message: "Not found" });
+      console.error(error);
+      this.res.status(500).json({ message: error.toString() });
+      captureException(error);
     }
   }
 }

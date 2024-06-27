@@ -5,6 +5,7 @@ import { useState } from "react";
 import { ApiGeoResult, searchCities } from "./searchCities";
 import { StyledList, StyledSuggestion } from "../../../../../search/SearchBar";
 import { detectIfPostalCode } from "../../../../../conventions/Search/api/utils";
+import { captureException } from "@sentry/nextjs";
 
 const { Search: SearchIcon } = icons;
 
@@ -15,6 +16,7 @@ type Props = {
   ) => void;
   isDisabled?: boolean;
   searchInputHandler: (e: React.FormEvent) => void;
+  setHasLocationSearchError: (hasError: boolean) => void;
 };
 
 export type ApiGeoResultWithSelectedPostCode = ApiGeoResult & {
@@ -23,8 +25,12 @@ export type ApiGeoResultWithSelectedPostCode = ApiGeoResult & {
 
 export const LocationSearchInput = (props: Props) => {
   const [suggestions, setSuggestions] = useState<ApiGeoResult[]>([]);
-  const [postalCode, setPostalCode] = useState<string | undefined>(undefined);
-  const [hasSearchError, setHasSearchError] = useState<boolean>(false);
+  const [postalCode, setPostalCode] = useState<string | undefined>(
+    props.selectedApiGeoResult?.selectedPostCode &&
+      props.selectedApiGeoResult.selectedPostCode.length > 1
+      ? props.selectedApiGeoResult.codeDepartement
+      : props.selectedApiGeoResult?.selectedPostCode[0]
+  );
   const {
     isOpen,
     getMenuProps,
@@ -44,11 +50,12 @@ export const LocationSearchInput = (props: Props) => {
         setSuggestions(results);
         const isPostalCode = detectIfPostalCode(inputValue);
         setPostalCode(isPostalCode ? inputValue : undefined);
-        setHasSearchError(false);
+        props.setHasLocationSearchError(false);
       } catch (error) {
-        setSuggestions([]);
         console.error(error);
-        setHasSearchError(true);
+        captureException(error);
+        setSuggestions([]);
+        props.setHasLocationSearchError(true);
       }
     },
     selectedItem: props.selectedApiGeoResult,
@@ -93,14 +100,8 @@ export const LocationSearchInput = (props: Props) => {
             id="enterprise-search-address"
             placeholder="Ex : 31000 ou Toulouse"
             disabled={props.isDisabled}
+            type="search"
           />
-
-          {hasSearchError && (
-            <InlineText hasSearchError={hasSearchError}>
-              Une erreur est survenue lors de la recherche par ville, veuillez
-              réessayer plus tard.
-            </InlineText>
-          )}
 
           <StyledList {...getMenuProps()}>
             {isOpen &&
@@ -118,6 +119,7 @@ export const LocationSearchInput = (props: Props) => {
               ))}
           </StyledList>
         </div>
+
         <SubmitIcon
           type="submit"
           title="Lancer ma recherche"
@@ -139,6 +141,9 @@ export const LocationSearchInput = (props: Props) => {
 
 const BlockInputRight = styled(Input)`
   width: 100%;
+  input {
+    padding-right: 6rem;
+  }
 
   @media (min-width: ${theme.breakpoints.tablet}) {
     input {
@@ -155,12 +160,8 @@ const InlineLabel = styled(Label)`
 `;
 
 const InlineText = styled(Text)`
-  color: ${({ theme, disabled, hasSearchError }) =>
-    disabled
-      ? theme.placeholder
-      : hasSearchError
-      ? theme.error
-      : theme.paragraph};
+  color: ${({ theme, disabled }) =>
+    disabled ? theme.placeholder : theme.paragraph};
 `;
 
 const InputWithButton = styled.div`

@@ -47,7 +47,7 @@ const EntrepriseSearchResults = ({
     );
   }
 
-  if (state.isError) {
+  if (state.error) {
     if (typeof state.error === "string") {
       return <Error>{state.error}</Error>;
     }

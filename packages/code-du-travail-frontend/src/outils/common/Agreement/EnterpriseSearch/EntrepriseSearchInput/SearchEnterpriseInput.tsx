@@ -16,6 +16,7 @@ import {
   ApiGeoResultWithSelectedPostCode,
   LocationSearchInput,
 } from "../Location/Search";
+import { Error } from "../../../ErrorField";
 
 type Props = {
   searchParams?: SearchParams;
@@ -48,6 +49,7 @@ export const SearchEnterpriseInput = ({
   );
   const state = useEnterpriseSuggester(searchParams);
   const [query, setQuery] = useState(searchParams.query);
+  const [hasLocationSearchError, setHasLocationSearchError] = useState(false);
   const [selectedApiGeoResult, setSelectedApiGeoResult] = useState<
     ApiGeoResultWithSelectedPostCode | undefined
   >(searchParams.apiGeoResult);
@@ -96,6 +98,7 @@ export const SearchEnterpriseInput = ({
           <LocationSearchInput
             searchInputHandler={searchInputHandler}
             setSelectedApiGeoResult={setSelectedApiGeoResult}
+            setHasLocationSearchError={setHasLocationSearchError}
             selectedApiGeoResult={selectedApiGeoResult}
             isDisabled={isDisabled}
           />
@@ -107,6 +110,12 @@ export const SearchEnterpriseInput = ({
         state={state}
         params={searchParams}
       />
+      {hasLocationSearchError && (
+        <Error>
+          Une erreur est survenue lors de la recherche par ville, veuillez
+          réessayer plus tard.
+        </Error>
+      )}
     </>
   );
 };

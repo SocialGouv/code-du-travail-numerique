@@ -49,11 +49,8 @@ const apiEnterprises = function createFetcher(
       const res = await response.json();
       return res.entreprises;
     }
-    if (response.status === 404 || !response.ok) {
-      return { entreprises: [] };
-    }
     return Promise.reject(
-      "Ce service est momentanément indisponible. Vous pouvez tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
+      "Ce service est momentanément indisponible. Dans le cas de l'utilisation d'un simulateur, vous pourrait tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
     );
   });
 };
