@@ -91,8 +91,7 @@ function AgreementSearchTool({
     setSearchParams({
       address: "",
       query: "",
-      codeCommune: "",
-      codePostal: "",
+      postCode: [],
     });
   }
 
@@ -199,8 +198,7 @@ const AgreementSearchUI = (props: Props): JSX.Element => {
   const [searchParams, setSearchParams] = useState<SearchParams>({
     address: "",
     query: "",
-    codeCommune: "",
-    codePostal: "",
+    postCode: [],
   });
 
   return (

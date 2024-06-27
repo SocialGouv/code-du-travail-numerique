@@ -16,27 +16,23 @@ export class EnterprisesController {
   public async get() {
     try {
       const query = this.req.query.q;
-      const codePostal = this.req.query.cp;
-      const codeCommune = this.req.query.cc;
+      const postCode = this.req.query.cp;
 
       if (
         !query ||
         typeof query !== "string" ||
-        (codePostal && typeof codePostal !== "string") ||
-        (codeCommune && typeof codeCommune !== "string")
+        (postCode && typeof postCode !== "string")
       ) {
         throw new InvalidQueryError({
           message: "Invalid query",
           name: "INVALID_QUERY",
-          cause: { query, codeCommune, codePostal },
+          cause: { query, postCode },
         });
       }
 
-      const jsonResponse = await fetchEnterprises(
-        query,
-        codePostal,
-        codeCommune
-      );
+      const postCodeArray = postCode ? postCode.split(",") : [];
+
+      const jsonResponse = await fetchEnterprises(query, postCodeArray);
 
       const response = await populateAgreements(jsonResponse);
 

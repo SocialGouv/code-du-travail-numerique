@@ -12,8 +12,7 @@ export enum ScreenType {
 export type SearchParams = {
   query: string;
   address: string;
-  codePostal: string;
-  codeCommune: string;
+  postCode: string[];
 };
 
 type NavContext = {
@@ -25,7 +24,7 @@ type NavContext = {
 
 export const navContext = createContext<NavContext>({
   enterprise: null,
-  searchParams: { address: "", query: "", codeCommune: "", codePostal: "" },
+  searchParams: { address: "", query: "", postCode: [] },
   setEnterprise: () => {
     /* nothing to do */
   },

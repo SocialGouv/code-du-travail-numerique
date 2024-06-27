@@ -67,8 +67,7 @@ const dataFetchReducer = <A>(
 type Fetcher<Result> = (
   query: string,
   address?: string,
-  codePostal?: string,
-  codeCommune?: string
+  postCode?: string[]
 ) => Promise<Result>;
 
 /**
@@ -80,18 +79,12 @@ type Fetcher<Result> = (
  */
 export function createSuggesterHook<Result>(
   fetcher: Fetcher<Result>,
-  onResult: (
-    query: string,
-    address?: string,
-    codePostal?: string,
-    codeCommune?: string
-  ) => void
+  onResult: (query: string, address?: string, postCode?: string[]) => void
 ) {
   return function (
     query: string,
     address?: string,
-    codePostal?: string,
-    codeCommune?: string
+    postCode?: string[]
   ): FetchReducerState<Result> {
     const [state, dispatch] = useReducer<
       Reducer<FetchReducerState<Result>, FecthActions<Result>>
@@ -109,17 +102,12 @@ export function createSuggesterHook<Result>(
         }
         dispatch({ type: Actions.init });
         try {
-          const results = await fetcher(
-            query,
-            address,
-            codePostal,
-            codeCommune
-          );
+          const results = await fetcher(query, address, postCode);
           if (shouldCancel) {
             return;
           }
 
-          onResult(query, address, codePostal, codeCommune);
+          onResult(query, address, postCode);
 
           dispatch({ payload: results, type: Actions.success });
         } catch (error) {
@@ -131,7 +119,7 @@ export function createSuggesterHook<Result>(
       return () => {
         shouldCancel = true;
       };
-    }, [query, address, codePostal, codeCommune]);
+    }, [query, address, postCode]);
     return state;
   };
 }

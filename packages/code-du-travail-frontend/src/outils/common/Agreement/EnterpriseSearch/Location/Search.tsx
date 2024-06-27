@@ -10,8 +10,7 @@ const { Search: SearchIcon } = icons;
 
 type Props = {
   setAddress: (address: string) => void;
-  setCodePostal: (codePostal: string) => void;
-  setCodeCommune: (codeCommune: string) => void;
+  setPostCode: (postCode: string[]) => void;
   isDisabled?: boolean;
   searchInputHandler: (e: React.FormEvent) => void;
 };
@@ -45,11 +44,9 @@ export const LocationSearchInput = (props: Props) => {
     onSelectedItemChange(changes) {
       props.setAddress(changes.selectedItem.nom);
       if (postalCode) {
-        props.setCodePostal(postalCode);
-        props.setCodeCommune("");
+        props.setPostCode([postalCode]);
       } else {
-        props.setCodeCommune(changes.selectedItem.code);
-        props.setCodePostal("");
+        props.setPostCode(changes.selectedItem.codesPostaux);
       }
       setSelectedItem(changes.selectedItem);
     },

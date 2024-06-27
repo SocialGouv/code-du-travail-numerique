@@ -20,17 +20,12 @@ export type EnterpriseApiResponse = {
 
 export const fetchEnterprises = async (
   query: string,
-  codePostal: string | undefined,
-  codeCommune: string | undefined
+  postCode: string[]
 ): Promise<EnterpriseApiResponse> => {
   const q = encodeURIComponent(query);
 
   const url = `${ENTERPRISE_API_URL}/search?q=${q}&page=1&per_page=25&etat_administratif=A&sort_by_size=true${
-    codeCommune
-      ? `&code_commune=${codeCommune}`
-      : codePostal
-      ? `&code_postal=${codePostal}`
-      : ""
+    postCode.length > 0 ? `&code_postal=${postCode.join(",")}` : ""
   }`;
 
   try {
