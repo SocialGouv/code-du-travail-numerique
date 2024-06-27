@@ -5504,8 +5504,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "38| Moins de 2 ans",
-        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
+        "ancienneté": "38| Moins de 2 ans"
       },
       "type": "préavis de Licenciement",
       "idcc": 2420,
