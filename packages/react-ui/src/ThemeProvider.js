@@ -11,29 +11,22 @@ const ThemeContext = React.createContext({
 });
 
 const isBlackAndWhiteTheme = () => {
-  if (typeof window !== "undefined") {
-    try {
-      return (
-        window.localStorage &&
-        Boolean(
-          window.localStorage.getItem(BLACK_AND_WHITE_STORAGE_KEY) === "true"
-        )
-      );
-    } catch (error) {
-      return false;
-    }
+  try {
+    return (
+      window?.localStorage?.getItem(BLACK_AND_WHITE_STORAGE_KEY) === "true"
+    );
+  } catch (error) {
+    return false;
   }
-  return false;
 };
 
 const setBlackAndWhiteTheme = (value) => {
-  if (typeof window !== "undefined") {
-    try {
-      window.localStorage &&
-        window.localStorage.setItem(BLACK_AND_WHITE_STORAGE_KEY, value);
-    } catch (error) {
-      console.error(error);
+  try {
+    if (window?.localStorage) {
+      window.localStorage.setItem(BLACK_AND_WHITE_STORAGE_KEY, value);
     }
+  } catch (error) {
+    console.error(error);
   }
 };
 

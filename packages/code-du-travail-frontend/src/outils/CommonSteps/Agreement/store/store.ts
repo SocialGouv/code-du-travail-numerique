@@ -4,7 +4,11 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import { validateStep } from "./validator";
 
 import { CommonAgreementStoreData, CommonAgreementStoreSlice } from "./types";
-import { STORAGE_KEY_AGREEMENT, StoreSlicePublicode } from "../../../types";
+import {
+  Agreement,
+  STORAGE_KEY_AGREEMENT,
+  StoreSlicePublicode,
+} from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { loadPublicodes } from "../../../api";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
@@ -16,7 +20,6 @@ import {
 import { pushAgreementEvents } from "../../../common/Agreement";
 import { AgreementRoute } from "../../../common/type/WizardType";
 import { isCcFullySupportedIndemniteLicenciement } from "../../../CommonIndemniteDepart/common";
-import { Agreement } from "../../../types";
 
 const initialState: Omit<
   CommonAgreementStoreData<PublicodesSimulator>,
@@ -40,9 +43,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
   agreementFunction: {
     onInitAgreementPage: () => {
       try {
-        const data =
-          window.localStorage &&
-          window.localStorage.getItem(STORAGE_KEY_AGREEMENT);
+        const data = window?.localStorage?.getItem(STORAGE_KEY_AGREEMENT);
         if (data) {
           const parsedData: Agreement = JSON.parse(data);
           if (parsedData?.num !== get().agreementData.input.agreement?.num) {
@@ -70,9 +71,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
               set(
                 produce(
                   (state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-                    state.agreementData.input.informationError = isOk
-                      ? false
-                      : true;
+                    state.agreementData.input.informationError = !isOk;
                   }
                 )
               );
@@ -85,8 +84,12 @@ const createCommonAgreementStore: StoreSlicePublicode<
     },
     onRouteChange: (value) => {
       if (value === "not-selected") {
-        if (window.localStorage) {
-          window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+        try {
+          if (window?.localStorage) {
+            window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+          }
+        } catch (e) {
+          console.error(e);
         }
         set(
           produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
@@ -105,19 +108,23 @@ const createCommonAgreementStore: StoreSlicePublicode<
       const isOk = get().informationsFunction.generatePublicodesQuestions();
       set(
         produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-          state.agreementData.input.informationError = isOk ? false : true;
+          state.agreementData.input.informationError = !isOk;
         })
       );
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
-      if (agreement) {
-        window.localStorage.setItem(
-          STORAGE_KEY_AGREEMENT,
-          JSON.stringify(agreement)
-        );
-      } else {
-        window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+      try {
+        if (agreement) {
+          window?.localStorage?.setItem(
+            STORAGE_KEY_AGREEMENT,
+            JSON.stringify(agreement)
+          );
+        } else {
+          window?.localStorage?.removeItem(STORAGE_KEY_AGREEMENT);
+        }
+      } catch (e) {
+        console.error(e);
       }
       applyGenericValidation(get, set, "enterprise", enterprise);
       const idcc = agreement?.num?.toString();
