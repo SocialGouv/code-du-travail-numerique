@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.145.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.144.1...v4.145.0) (2024-06-27)
+
+### Bug Fixes
+
+- **indemenité de licenciement:** ne pas crasher si la date est invalid ([#5993](https://github.com/SocialGouv/code-du-travail-numerique/issues/5993)) ([6171807](https://github.com/SocialGouv/code-du-travail-numerique/commit/6171807afb0f3b79a75f2e33b1747f8a68848999))
+
 ## [4.144.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.144.0...v4.144.1) (2024-06-24)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui

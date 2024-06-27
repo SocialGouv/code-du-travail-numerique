@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.145.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.144.1...v4.145.0) (2024-06-27)
+
+### Bug Fixes
+
+- **preavis-licenciement:** catégorie professionnel rajouté en plus sur 2420 ([#5996](https://github.com/SocialGouv/code-du-travail-numerique/issues/5996)) ([1bbb4b1](https://github.com/SocialGouv/code-du-travail-numerique/commit/1bbb4b181232882ab71ea13acd39ecd2bf6e7061))
+
 ## [4.144.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.144.0...v4.144.1) (2024-06-24)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
