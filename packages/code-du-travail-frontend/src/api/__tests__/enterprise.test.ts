@@ -1,10 +1,6 @@
 import request from "supertest";
 import server from "nextjs-http-supertest";
 
-jest.mock("../modules/enterprises/service/fetchCp.ts", () => ({
-  getCodeCommune: jest.fn(() => "75056"),
-}));
-
 describe("Test enterprise endpoint", () => {
   test("Call returns 404 if no enterprises found", async () => {
     const apiEnterpriseResponse = {
