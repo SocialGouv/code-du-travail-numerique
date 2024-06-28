@@ -46,7 +46,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 contrat salarié . convention collective . commerces de detail non alimentaires . indemnité de licenciement . calcul moins de 10 ans:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
   remplace: calcul
   valeur: dix ans ou moins

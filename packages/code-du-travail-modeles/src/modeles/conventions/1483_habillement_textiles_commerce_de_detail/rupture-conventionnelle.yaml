@@ -7,3 +7,11 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   question: Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?
   cdtn:
     type: entier
+
+contrat salarié . convention collective . habillement textiles commerce de detail . catégorie professionnelle . non cadres . minimum ancienneté conventionnelle requise en année rupture conventionnelle:
+  remplace: contrat salarié . convention collective . habillement textiles commerce de detail . catégorie professionnelle . non cadres . minimum ancienneté conventionnelle requise en année
+  valeur: 0
+
+contrat salarié . convention collective . habillement textiles commerce de detail . catégorie professionnelle . cadres . minimum ancienneté conventionnelle requise en année rupture conventionnelle:
+  remplace: contrat salarié . convention collective . habillement textiles commerce de detail . catégorie professionnelle . cadres . minimum ancienneté conventionnelle requise en année
+  valeur: 0

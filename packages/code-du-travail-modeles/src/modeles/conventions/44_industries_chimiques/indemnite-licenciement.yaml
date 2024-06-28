@@ -128,6 +128,10 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
 # Résultat conventionnel
 
 ## Ouvrier
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 2 ans
+
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . age . résultat conventionnel 4:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si:
@@ -137,7 +141,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   valeur: trois dixième sref
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 14
   unité: €
@@ -211,7 +215,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   valeur: somme agent de maîtrise
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
@@ -291,7 +295,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Ingénieurs et cadres (Groupe V)'
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   valeur: somme ingénieur
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
   unité: €

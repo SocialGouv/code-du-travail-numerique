@@ -82,4 +82,76 @@ describe("Gestion des multiples types de licenciement pour la CC 573", () => {
       expect(result).toAgreementResultBeEqual(9900, "€");
     });
   });
+
+  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+    test("Cadres", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC0573'",
+        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle":
+          "'Cadres'",
+        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans question":
+          "'Non'",
+        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          "01/01/2024",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        licenciementFauteGrave: "non",
+        salaryPeriods:
+          '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
+        typeContratTravail: "cdi",
+      });
+      expect(result).toAgreementResultBeEqual(100, "€");
+    });
+
+    test("Agents de maitrise", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC0573'",
+        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle":
+          "'Agents de maîtrise, techniciens et assimilés'",
+        "contrat salarié . convention collective . commerces de gros . rupture conventionnelle . licenciement économique agents age":
+          "50",
+        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          "01/01/2024",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        licenciementFauteGrave: "non",
+        salaryPeriods:
+          '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
+        typeContratTravail: "cdi",
+      });
+      expect(result).toAgreementResultBeEqual(100, "€");
+    });
+
+    test("Autres", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC0573'",
+        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle":
+          "'Autres salariés'",
+        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          "01/01/2024",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        licenciementFauteGrave: "non",
+        salaryPeriods:
+          '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
+        typeContratTravail: "cdi",
+      });
+      expect(result).toAgreementResultBeEqual(100, "€");
+    });
+  });
 });

@@ -26,8 +26,12 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     - sinon: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
   unité: an
 
+contrat salarié . convention collective . sociétés d'assurances . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 3 ans
+
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . non cadres . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 3 an
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
   remplace: non cadres
   valeur: base + majoration
   unité: €
@@ -101,13 +105,12 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   remplace: majoration
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 3 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
       - age >= 50 an
   valeur: 0.005 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté
   cdtn:
     formule:
       formula: ($formule) + (0.5% * Sref * A1)
-
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres:
   applicable si: catégorie professionnelle = 'Cadres (Classes 5 à 7)'
@@ -140,7 +143,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   unité: an
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 3 an
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
   valeur: base + majoration
   unité: €
   arrondi: 2 décimales
@@ -148,7 +151,6 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     Point 8 de la Convention collective nationale du 27 mai 1992 relative aux dispositions particulières "Cadres": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792103?idConteneur=KALICONT000005635918
     Article 35 b.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792023?idConteneur=KALICONT000005635918&origin=list#KALIARTI000005792023
     Article 86.e: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792094?idConteneur=KALICONT000005635918&origin=list#KALIARTI000005792094
-
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . résultat conventionnel . base:
   valeur: 0 €
@@ -177,7 +179,6 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
       explanations:
         - "A2 : Années de présence dans l'entreprise en tant que cadre": contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . ancienneté cadre
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . résultat conventionnel . base . calcul entre 10 et 20 ans:
   remplace: base
