@@ -145,10 +145,10 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
           "'Oui'",
         "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour":
           "'Non'",
-        "contrat salarié . convention collective . métallurgie . rupture conventionnelle . age":
-          "30",
         "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . remplit conditions pour la retraite":
           "'Oui'",
+        "contrat salarié . convention collective . métallurgie . rupture conventionnelle . age":
+          "30",
         "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
         "contrat salarié . indemnité de licenciement . date d'entrée":
           "01/01/2004",
@@ -184,10 +184,10 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
           "'Oui'",
         "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour":
           "'Oui'",
-        "contrat salarié . convention collective . métallurgie . rupture conventionnelle . age":
-          "35",
         "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . remplit conditions pour la retraite":
           "'Oui'",
+        "contrat salarié . convention collective . métallurgie . rupture conventionnelle . age":
+          "35",
         "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
         "contrat salarié . indemnité de licenciement . date d'entrée":
           "01/01/2014",
@@ -254,7 +254,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         salaryPeriods: '[{"month":"janvier 2024","value":2000}]',
         typeContratTravail: "cdi",
       });
-      expect(result).toAgreementResultBeEqual(0, "€");
+      expect(result).toAgreementResultBeEqual(125, "€");
       expect(result).toHaveReferencesBeEqual(expectedLegalReferences);
     });
   });
