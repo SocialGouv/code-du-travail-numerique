@@ -4,25 +4,21 @@ import styled, { css } from "styled-components";
 
 import { box, breakpoints, fonts, spacings } from "../theme";
 
-export const Input = ({
-  icon: Icon,
-  text,
-  className,
-  updateOnScrollDisabled,
-  ref,
-  ...props
-}) => {
+export const Input = React.forwardRef(function Input(
+  { icon: Icon, text, className, updateOnScrollDisabled, ...props },
+  ref
+) {
   const onWheel = updateOnScrollDisabled
     ? { onWheel: (e) => e.target.blur() }
     : {};
   return (
     <StyledWrapper className={className}>
       <StyledInput
+        ref={ref}
         hasIcon={Boolean(Icon)}
         text={text}
         {...onWheel}
         {...props}
-        ref={ref}
       />
       {Icon && (
         <StyledIcon text={text}>
@@ -36,7 +32,7 @@ export const Input = ({
       )}
     </StyledWrapper>
   );
-};
+});
 
 export const DefaultInputProps = {
   className: PropTypes.string,

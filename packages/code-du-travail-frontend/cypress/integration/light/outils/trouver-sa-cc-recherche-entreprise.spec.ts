@@ -19,13 +19,13 @@ describe("Outil - Trouver sa convention collective", () => {
 
     cy.contains("Précédent").click();
     cy.get("#enterprise-search").clear();
-    cy.get("#enterprise-search").type("CARREFOUR BANQUE", { delay: 0 });
     cy.get("#enterprise-search-address").clear();
+    cy.get("#enterprise-search").type("CARREFOUR BANQUE", { delay: 0 });
     cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR BANQUE").click();
     cy.get("p").should(
       "contain",
-      "2 conventions collectives trouvées pour « CARREFOUR BANQUE, 13 QUAI DE LA MARNE 51200 EPERNAY »"
+      "2 conventions collectives trouvées pour « CARREFOUR BANQUE CARREFOUR BANQUE, AGENCE TRESORERIE 3 RUE JEAN MERMOZ 91000 EVRY-COURCOURONNES »"
     );
     cy.contains("Banque IDCC2120")
       .should("have.prop", "href")
