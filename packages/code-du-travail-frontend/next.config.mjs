@@ -106,7 +106,11 @@ const moduleExports = {
                 "../../",
                 "node_modules/@gouvfr/dsfr/dist/**/*"
               ),
-              to: "static/dsfr/**/*",
+              to: ({ context, absoluteFilename }) => {
+                const pathData = path.parse(absoluteFilename);
+                const rootFolder = pathData.dir.split("node_modules")[1];
+                return "static" + rootFolder + "/" + pathData.base;
+              },
             },
           ],
         })

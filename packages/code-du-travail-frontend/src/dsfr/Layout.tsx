@@ -7,22 +7,22 @@ export const DsfrLayout = ({ children }) => {
       <Head>
         <link
           rel="stylesheet"
-          href="/_next/static/dsfr/node_modules/@gouvfr/dsfr/dist/dsfr.min.css"
+          href="/_next/static/@gouvfr/dsfr/dist/dsfr.min.css"
         />
         <link
           rel="stylesheet"
-          href="/_next/static/dsfr/node_modules/@gouvfr/dsfr/dist/utility/utility.min.css"
+          href="/_next/static/@gouvfr/dsfr/dist/utility/utility.min.css"
         />
       </Head>
       {children}
       <Script
         type="module"
-        src="/_next/static/dsfr/node_modules/@gouvfr/dsfr/dist/dsfr.module.min.js"
+        src="/_next/static/@gouvfr/dsfr/dist/dsfr.module.min.js"
       ></Script>
       <Script
         type="text/javascript"
         noModule
-        src="/_next/static/dsfr/node_modules/@gouvfr/dsfr/dist/dsfr.nomodule.min.js"
+        src="/_next/static/@gouvfr/dsfr/dist/dsfr.nomodule.min.js"
       ></Script>
     </>
   );
