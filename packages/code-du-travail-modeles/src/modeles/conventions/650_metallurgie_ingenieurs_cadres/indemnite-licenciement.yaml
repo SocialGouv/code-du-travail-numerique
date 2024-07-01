@@ -181,9 +181,9 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
         - "A2 : Ancienneté au delà de 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . au dela de sept ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
-contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . minimum ancienneté conventionnelle requise en année:
+contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . calcul . minimum ancienneté conventionnelle requise en année:
   remplace: paramètre . minimum ancienneté conventionnelle requise en année
-  valeur: 12 mois
+  valeur: 1 an
 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . calcul . résultat conventionnel 4:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel

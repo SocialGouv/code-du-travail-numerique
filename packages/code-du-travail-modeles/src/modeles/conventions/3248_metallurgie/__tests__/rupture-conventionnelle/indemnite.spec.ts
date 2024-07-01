@@ -43,26 +43,10 @@ const expectedReferenceGroupeFGHI = [
   },
 ];
 
-const expectedLegalReferences = [
+const expectedReferenceGroupeFGHI2 = [
   {
-    article: "Article L. 1234-9 à L. 1234-11",
-    url: "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006195623/#LEGISCTA000006195623",
-  },
-  {
-    article: "Art. R. 1234-1 à R. 1234-5",
-    url: "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000018483186/#LEGISCTA000018537572",
-  },
-  {
-    article: "Art. L. 1226-7",
-    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023272293",
-  },
-  {
-    article: "Art. L. 1225-54",
-    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018764621",
-  },
-  {
-    article: "Art. L. 1225-65",
-    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038219280",
+    article: "Article 75.3.1.2",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314538?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046314538",
   },
 ];
 
@@ -255,7 +239,7 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
         typeContratTravail: "cdi",
       });
       expect(result).toAgreementResultBeEqual(125, "€");
-      expect(result).toHaveReferencesBeEqual(expectedLegalReferences);
+      expect(result).toHaveReferencesBeEqual(expectedReferenceGroupeFGHI2);
     });
   });
 });
