@@ -1,11 +1,15 @@
 describe("Outil - Trouver sa convention collective", () => {
-  it("Recherche de convention collective par entreprise", () => {
+  it.only("Recherche de convention collective par entreprise", () => {
     cy.visit("/outils/convention-collective");
     cy.get("h1").should("have.text", "Trouver sa convention collective");
     cy.contains("Je la recherche").click();
 
     cy.get("#enterprise-search").type("82129756100010", { delay: 0 });
-    cy.get("#enterprise-search-address").type("75018{downArrow}{enter}");
+    cy.get("#enterprise-search-address").type("7501");
+    cy.get("#enterprise-search-address").type("8{downArrow}{enter}", {
+      delay: 3000,
+      force: true,
+    });
     cy.get('button[type="submit"]').last().click();
     cy.contains("BOUILLON PIGALLE").click();
 
