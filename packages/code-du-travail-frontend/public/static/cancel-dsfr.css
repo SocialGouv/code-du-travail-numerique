@@ -1,0 +1,19 @@
+a[href] {
+    background-image: none;
+}
+p, label, span, div, a {
+    font-size: inherit;
+    line-height: normal;
+}
+input[type="radio"]:checked {
+    /* margin: inherit; */
+    /* margin: calc(0.32rem) calc(1.06667rem) 0px 0px; */
+    /* outline-color: none; */
+    border-color: rgb(246, 102, 99) !important;
+    color: rgb(246, 102, 99) !important;
+    outline-color: rgb(246, 102, 99) !important;
+}
+button:hover {
+    /* background-color: transparent !important; */
+    background-color: transparent;
+}
