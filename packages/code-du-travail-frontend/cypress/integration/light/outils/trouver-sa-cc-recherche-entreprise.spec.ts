@@ -26,7 +26,7 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.contains("CARREFOUR BANQUE").click();
     cy.get("p").should(
       "contain",
-      "2 conventions collectives trouvées pour « CARREFOUR BANQUE CARREFOUR BANQUE, AGENCE TRESORERIE 3 RUE JEAN MERMOZ 91000 EVRY-COURCOURONNES »"
+      "2 conventions collectives trouvées pour « CARREFOUR BANQUE, AGENCE TRESORERIE 3 RUE JEAN MERMOZ 91000 EVRY-COURCOURONNES »"
     );
     cy.contains("Banque IDCC2120")
       .should("have.prop", "href")
