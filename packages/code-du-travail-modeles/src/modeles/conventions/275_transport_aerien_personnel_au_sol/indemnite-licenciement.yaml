@@ -41,9 +41,15 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
       facteur: 1 / 4
   unité: €
 
-contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté jusqu'à 5 ans . minimum ancienneté conventionnelle requise en année avant 1er fevrier 2024:
+contrat salarié . convention collective . transport aérien personnel au sol . minimum ancienneté conventionnelle requise en année avant 1er fevrier 2024:
+  applicable si: contrat salarié . indemnité de licenciement . date de notification < 31/01/2024
   remplace: paramètre . minimum ancienneté conventionnelle requise en année
   valeur: 1 an
+
+contrat salarié . convention collective . transport aérien personnel au sol . minimum ancienneté conventionnelle requise en année après 1er fevrier 2024:
+  applicable si: contrat salarié . indemnité de licenciement . date de notification >= 31/01/2024
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 8 mois
 
 contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté jusqu'à 5 ans . résultat conventionnel avant 1er fevrier 2024:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
