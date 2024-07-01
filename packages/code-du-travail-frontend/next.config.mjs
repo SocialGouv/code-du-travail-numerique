@@ -1,5 +1,9 @@
 import { withSentryConfig } from "@sentry/nextjs";
 import MappingReplacement from "./redirects.json" assert { type: "json" };
+import CopyPlugin from "copy-webpack-plugin";
+import path from "path";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const ContentSecurityPolicy = `
 default-src 'self' *.travail.gouv.fr *.data.gouv.fr *.fabrique.social.gouv.fr;
@@ -87,6 +91,29 @@ const moduleExports = {
         ],
       },
     ];
+  },
+  webpack: (config, { isServer }) => {
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = dirname(__filename);
+
+    if (!isServer) {
+      config.plugins.push(
+        new CopyPlugin({
+          patterns: [
+            {
+              from: path.join(
+                __dirname,
+                "../../",
+                "node_modules/@gouvfr/dsfr/dist/**/*"
+              ),
+              to: "static/dsfr/**/*",
+            },
+          ],
+        })
+      );
+    }
+
+    return config;
   },
 
   async redirects() {
