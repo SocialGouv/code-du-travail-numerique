@@ -27,7 +27,7 @@ class WebComponentsTooltip extends LitElement {
 
   _handleCopy = (e) => {
     const selection = document?.getSelection();
-    if (selection) {
+    if (selection?.rangeCount > 0) {
       const text = selection.toString();
       const fragmentElt = document.createElement("div");
       fragmentElt.appendChild(selection.getRangeAt(0).cloneContents());
