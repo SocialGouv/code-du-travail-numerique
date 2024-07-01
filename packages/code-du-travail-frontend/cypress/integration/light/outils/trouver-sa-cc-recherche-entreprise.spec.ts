@@ -5,10 +5,7 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.contains("Je la recherche").click();
 
     cy.get("#enterprise-search").type("82129756100010", { delay: 0 });
-    cy.get("#enterprise-search-address").type("75018{downArrow}{enter}", {
-      delay: 3000,
-      force: true,
-    });
+    cy.get("#enterprise-search-address").type("75018{downArrow}{enter}");
     cy.get('button[type="submit"]').last().click();
     cy.contains("BOUILLON PIGALLE").click();
 
