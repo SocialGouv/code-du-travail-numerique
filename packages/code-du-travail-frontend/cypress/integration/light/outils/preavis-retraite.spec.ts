@@ -145,7 +145,7 @@ describe("Outil - Préavis de retraite", () => {
     );
   });
 
-  it.only("Parcours en ne connaissant pas sa convention collective", () => {
+  it("Parcours en ne connaissant pas sa convention collective", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
     cy.contains("Commencer").click();

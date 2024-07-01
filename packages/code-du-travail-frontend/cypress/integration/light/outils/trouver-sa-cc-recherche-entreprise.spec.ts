@@ -1,5 +1,5 @@
 describe("Outil - Trouver sa convention collective", () => {
-  it.only("Recherche de convention collective par entreprise", () => {
+  it("Recherche de convention collective par entreprise", () => {
     cy.visit("/outils/convention-collective");
     cy.get("h1").should("have.text", "Trouver sa convention collective");
     cy.contains("Je la recherche").click();
