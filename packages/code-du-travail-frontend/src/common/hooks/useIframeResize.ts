@@ -8,19 +8,25 @@ export const isIframe = () => {
   }
 };
 
+const minHeight = 200;
 export const useIframeResizer = () => {
   useEffect(() => {
     if (!isIframe()) {
       return;
     }
+    try {
+      if (!window?.ResizeObserver) {
+        return;
+      }
+      const observer = new ResizeObserver(([entry]) => {
+        const value = Math.max(minHeight, entry.contentRect.height);
+        window?.parent?.postMessage({ kind: "resize-height", value }, "*");
+      });
+      observer.observe(window?.document?.body);
 
-    const minHeight = 200;
-    const observer = new ResizeObserver(([entry]) => {
-      const value = Math.max(minHeight, entry.contentRect.height);
-      window.parent?.postMessage({ kind: "resize-height", value }, "*");
-    });
-    observer.observe(window.document.body);
-
-    return () => observer.disconnect();
+      return () => observer.disconnect();
+    } catch (e) {
+      return;
+    }
   }, []);
 };
