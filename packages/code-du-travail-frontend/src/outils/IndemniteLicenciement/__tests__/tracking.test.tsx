@@ -148,7 +148,7 @@ describe("Indemnité licenciement - Tracking", () => {
       "trackEvent",
       "enterprise_search",
       "Indemnité de licenciement",
-      JSON.stringify({ address: "", query: "carrefour" }),
+      JSON.stringify({ query: "carrefour" }),
     ]);
   });
 

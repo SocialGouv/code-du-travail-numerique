@@ -4,6 +4,7 @@ import {
   Enterprise as ApiEntreprise,
   EnterpriseAgreement as ApiEnterpriseAgreement,
 } from "../../../api/modules/enterprises/types";
+import { SearchParams } from "../../../outils/common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
 
 export type Enterprise = ApiEntreprise;
 export type EnterpriseAgreement = ApiEnterpriseAgreement;
@@ -18,24 +19,29 @@ const siretNumberError =
   "Veuillez indiquer un numéro Siret (14 chiffres uniquement)";
 
 const apiEnterprises = function createFetcher(
-  query: string,
-  address: string | undefined | null = undefined
+  searchParams: SearchParams
 ): Promise<Enterprise[]> {
-  if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {
+  if (/^\d{2,8}$/.test(searchParams.query.replace(/\s/g, ""))) {
     return Promise.reject(siretSirenError);
   }
   if (
-    /^\d{10,13}$/.test(query.replace(/\s/g, "")) ||
-    /^\d{15,}$/.test(query.replace(/\s/g, ""))
+    /^\d{10,13}$/.test(searchParams.query.replace(/\s/g, "")) ||
+    /^\d{15,}$/.test(searchParams.query.replace(/\s/g, ""))
   ) {
     return Promise.reject(siretLengthError);
   }
-  if (/\D+\d{14}/.test(query.replace(/\s/g, ""))) {
+  if (/\D+\d{14}/.test(searchParams.query.replace(/\s/g, ""))) {
     return Promise.reject(siretNumberError);
   }
 
-  const url = `${SITE_URL}/api/enterprises?q=${encodeURIComponent(query)}${
-    address ? `&a=${encodeURIComponent(address)}` : ""
+  const url = `${SITE_URL}/api/enterprises?q=${encodeURIComponent(
+    searchParams.query
+  )}${
+    searchParams.apiGeoResult
+      ? `&cp=${encodeURIComponent(
+          searchParams.apiGeoResult.selectedPostCode.join(",")
+        )}`
+      : ""
   }`;
 
   return fetch(url).then(async (response) => {
@@ -43,11 +49,8 @@ const apiEnterprises = function createFetcher(
       const res = await response.json();
       return res.entreprises;
     }
-    if (response.status === 404 || !response.ok) {
-      return { entreprises: [] };
-    }
     return Promise.reject(
-      "Ce service est momentanément indisponible. Vous pouvez tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
+      "Ce service est momentanément indisponible. Dans le cas de l'utilisation d'un simulateur, vous pourrait tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
     );
   });
 };

@@ -21,7 +21,7 @@ export const getResults = async (query: string): Promise<ResultType | null> => {
     case QueryType.TEXT:
       [conventions, entreprises] = await Promise.all([
         searchAgreement(trimmedQuery),
-        searchEnterprises(trimmedQuery).then((entreprises) =>
+        searchEnterprises({ query: trimmedQuery }).then((entreprises) =>
           entreprises.filter(
             (entreprise) =>
               entreprise.conventions && entreprise.conventions.length

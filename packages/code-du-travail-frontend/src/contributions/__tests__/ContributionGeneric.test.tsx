@@ -167,7 +167,7 @@ describe("<ContributionGeneric />", () => {
           "trackEvent",
           "enterprise_search",
           "/contribution/my-contrib",
-          '{"address":"","query":"carrefour"}',
+          '{"query":"carrefour"}',
         ],
       ],
       [
@@ -183,7 +183,7 @@ describe("<ContributionGeneric />", () => {
           "trackEvent",
           "enterprise_select",
           "/contribution/my-contrib",
-          '{"label":"CARREFOUR HYPERMARCHES CARREOUR","siren":"451321335"}',
+          '{"label":"CARREFOUR HYPERMARCHES","siren":"451321335"}',
         ],
       ],
       [["trackEvent", "cc_select_p2", "/contribution/my-contrib", "idcc2216"]],

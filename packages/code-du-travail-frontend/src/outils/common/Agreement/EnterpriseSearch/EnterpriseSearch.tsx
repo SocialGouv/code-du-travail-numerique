@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Field } from "react-final-form";
 import { Paragraph, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { SearchParams } from "../../../ConventionCollective/common/NavContext";
 import { TrackingProps } from "../../../ConventionCollective/types";
 import { ErrorField } from "../../ErrorField";
 import { required } from "../../validators";
@@ -11,7 +10,10 @@ import { AgreementSupportInfo, OnSelectAgreementFn } from "../types";
 import SelectedEnterprise from "./SelectedEnterprise";
 import ShowAgreement from "./ShowAgreement";
 import ShowAgreements from "./ShowAgreements";
-import { SearchEnterpriseInput } from "./EntrepriseSearchInput/SearchEnterpriseInput";
+import {
+  SearchEnterpriseInput,
+  SearchParams,
+} from "./EntrepriseSearchInput/SearchEnterpriseInput";
 import styled from "styled-components";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Simulator } from "../../NoticeExample";
@@ -42,7 +44,6 @@ const EnterpriseSearch = ({
     selectedEnterprise
   );
   const [searchParams, setSearchParams] = useState<SearchParams>({
-    address: "",
     query: "",
   });
 
