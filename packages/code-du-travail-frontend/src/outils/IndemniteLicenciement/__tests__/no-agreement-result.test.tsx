@@ -8,12 +8,12 @@ jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
   () => `
 {
-  "num": 413,
-  "shortTitle": "Hôpital",
-  "id": "XXXX",
-  "title": "Hôpital",
-  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=XXXX",
-  "slug": "413-hopital"
+  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173",
+  "id": "1486",
+  "num": 1486,
+  "shortTitle": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
+  "slug": "1486-bureaux-detudes-techniques-cabinets-dingenieurs-conseils-et-societes-de",
+  "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
 }
 `
 );
@@ -21,7 +21,7 @@ jest.mock("../../../conventions/Search/api/enterprises.service");
 
 describe("Indemnité licenciement", () => {
   let userAction: UserAction;
-  describe("parcours avec la convention collective 413 pour tester le cas où il n'y a pas d'indemnité conventionnel", () => {
+  describe("parcours avec la convention collective 2596 pour tester le cas où il n'y a pas d'indemnité conventionnel", () => {
     beforeEach(() => {
       render(
         <CalculateurIndemniteLicenciement
@@ -38,17 +38,25 @@ describe("Indemnité licenciement", () => {
       userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.next.get());
-      userAction.changeInputList(
-        ui.information.agreement413.proCategory.get(),
-        "Non-cadres"
-      );
-      userAction.click(ui.next.get());
-      userAction.setInput(ui.seniority.startDate.get(), "01/01/2021");
-      userAction.setInput(ui.seniority.notificationDate.get(), "01/03/2022");
-      userAction.setInput(ui.seniority.endDate.get(), "01/03/2022");
-      userAction.click(ui.seniority.hasAbsence.non.get());
-      userAction.click(ui.next.get());
-      userAction.click(ui.salary.hasPartialTime.non.get());
+      userAction
+        .changeInputList(
+          ui.information.agreement1486.proCategory.get(),
+          "Chargés d'enquête intermittents"
+        )
+        .click(ui.information.agreement1486.refus.non.get())
+        .click(ui.next.get())
+
+        .setInput(ui.seniority.startDate.get(), "01/10/2023")
+        .setInput(ui.seniority.notificationDate.get(), "01/06/2024")
+        .setInput(ui.seniority.endDate.get(), "01/06/2024")
+        .click(ui.seniority.hasAbsence.oui.get())
+        .changeInputList(
+          ui.seniority.absences.motif(0).get(),
+          "Absence pour maladie non professionnelle"
+        )
+        .setInput(ui.seniority.absences.duration(0).get(), "3")
+        .click(ui.next.get())
+        .click(ui.salary.hasPartialTime.non.get())
       userAction.click(ui.salary.hasSameSalary.oui.get());
       userAction.setInput(ui.salary.sameSalaryValue.get(), "2000");
       userAction.click(ui.next.get());

@@ -4,7 +4,6 @@ import { IndemniteDepartStepName } from "..";
 import { MainStore } from "../store";
 import { validateAgreement1516 } from "./1516-organismes-formation";
 import { validateAgreement1527 } from "./1527-immobilier";
-import { validateAgreement29 } from "./29-hospitalisation-privee-but-non-lucratif";
 import { validateAgreement16 } from "./16-transports-routiers";
 import { validateAgreement44 } from "./44-industries-chimiques";
 import { validateAgreement2609 } from "./2609-batiment-etam";
@@ -30,9 +29,6 @@ const validatorAgreement = (
     case SupportedCc.IDCC1527 === idcc &&
       step === IndemniteDepartStepName.Salaires:
       return validateAgreement1527(get, set);
-    case SupportedCc.IDCC0029 === idcc &&
-      step === IndemniteDepartStepName.Salaires:
-      return validateAgreement29(get, set);
     case SupportedCc.IDCC0016 === idcc &&
       step === IndemniteDepartStepName.Salaires:
       return validateAgreement16(get, set);

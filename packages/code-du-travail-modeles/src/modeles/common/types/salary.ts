@@ -1,7 +1,6 @@
 import type { LegalReferenceSalaryProps } from "../../base";
 import type {
   CC16ReferenceSalaryProps,
-  CC29ReferenceSalaryProps,
   CC44ReferenceSalaryProps,
   CC573ReferenceSalaryProps,
   CC675ReferenceSalaryProps,
@@ -40,8 +39,6 @@ export interface IReferenceSalary<T extends SupportedCc> {
 
 export type ReferenceSalaryProps<T> = T extends SupportedCc.IDCC0016
   ? CC16ReferenceSalaryProps
-  : T extends SupportedCc.IDCC0029
-  ? CC29ReferenceSalaryProps
   : T extends SupportedCc.IDCC0044
   ? CC44ReferenceSalaryProps
   : T extends SupportedCc.IDCC0573

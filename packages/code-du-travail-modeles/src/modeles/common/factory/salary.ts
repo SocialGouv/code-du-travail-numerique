@@ -7,11 +7,9 @@ import {
   ReferenceSalary2614,
 } from "../../conventions";
 import { ReferenceSalary16 } from "../../conventions/16_transports_routiers";
-import { ReferenceSalary0029 } from "../../conventions/29_hospitalisation_privee_but_non_lucratif";
 import { ReferenceSalary44 } from "../../conventions/44_industries_chimiques";
 import { ReferenceSalary86 } from "../../conventions/86_publicite_francaise";
 import { ReferenceSalary292 } from "../../conventions/292_plasturgie";
-import { ReferenceSalary413 } from "../../conventions/413_handicap";
 import { ReferenceSalary573 } from "../../conventions/573_commerces_de_gros";
 import { ReferenceSalary675 } from "../../conventions/675_habillement_commerce_succursales";
 import { ReferenceSalary1486 } from "../../conventions/1486_bureaux_etudes_techniques";
@@ -34,8 +32,6 @@ export class ReferenceSalaryFactory {
         return new ReferenceSalary1516() as IReferenceSalary<T>;
       case SupportedCc.IDCC1606:
         return new ReferenceSalary1606() as IReferenceSalary<T>;
-      case SupportedCc.IDCC413:
-        return new ReferenceSalary413() as IReferenceSalary<T>;
       case SupportedCc.IDCC1486:
         return new ReferenceSalary1486() as IReferenceSalary<T>;
       case SupportedCc.IDCC1527:
@@ -48,8 +44,6 @@ export class ReferenceSalaryFactory {
         return new ReferenceSalary44() as IReferenceSalary<T>;
       case SupportedCc.IDCC0573:
         return new ReferenceSalary573() as IReferenceSalary<T>;
-      case SupportedCc.IDCC0029:
-        return new ReferenceSalary0029() as IReferenceSalary<T>;
       case SupportedCc.IDCC2596:
         return new ReferenceSalary2596() as IReferenceSalary<T>;
       case SupportedCc.IDCC2098:
