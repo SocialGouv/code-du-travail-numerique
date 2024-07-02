@@ -38,6 +38,7 @@ export const LocationSearchInput = (props: Props) => {
     getLabelProps,
     highlightedIndex,
     getItemProps,
+    setInputValue,
   } = useCombobox({
     items: suggestions,
     itemToString,
@@ -79,6 +80,13 @@ export const LocationSearchInput = (props: Props) => {
         })`
       : "";
   }
+
+  const onSearch = (e: React.MouseEvent) => {
+    if (!props.selectedApiGeoResult) {
+      setInputValue("");
+    }
+    props.searchInputHandler(e);
+  };
 
   return (
     <>
@@ -126,7 +134,7 @@ export const LocationSearchInput = (props: Props) => {
           type="submit"
           title="Lancer ma recherche"
           aria-label="Lancer ma recherche"
-          onClick={props.searchInputHandler}
+          onClick={onSearch}
           small
           narrow
           variant="secondary"

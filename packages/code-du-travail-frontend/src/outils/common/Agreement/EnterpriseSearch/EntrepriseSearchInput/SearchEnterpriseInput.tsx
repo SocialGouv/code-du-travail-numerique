@@ -68,17 +68,20 @@ export const SearchEnterpriseInput = ({
       <Flex>
         <Box>
           <InlineLabel htmlFor="enterprise-search" disabled={isDisabled}>
-            Nom de votre entreprise ou numéro Siret
+            Nom de votre entreprise ou numéro Siren/Siret
           </InlineLabel>
           <InfoBulle
-            title={"Qu’est ce qu’un n°siret ?"}
+            title={"Qu’est ce qu’un n° Siret ou Siren  ?"}
             isDisabled={isDisabled}
           >
             <p>
+              Le numéro Siren est un{" "}
+              <strong>numéro unique de 9 chiffres</strong> attribuée à chaque
+              entreprise (ex : 401237780).
+              <br />
               Le numéro Siret est un <strong>numéro de 14 chiffres</strong>{" "}
               unique pour chaque entreprise. Il est présent sur la{" "}
-              <strong>fiche de paie du salarié</strong>.<br />
-              Ex : 40123778000127
+              <strong>fiche de paie du salarié</strong> (ex : 40123778000127).
             </p>
           </InfoBulle>
 
@@ -155,7 +158,7 @@ const Box = styled.div`
 
   & + & {
     @media (min-width: ${theme.breakpoints.mobile}) {
-      flex: 0 1 26rem;
+      flex: 0 1 32rem;
     }
     @media (max-width: ${theme.breakpoints.mobile}) {
       padding-top: ${theme.spacings.xmedium};
