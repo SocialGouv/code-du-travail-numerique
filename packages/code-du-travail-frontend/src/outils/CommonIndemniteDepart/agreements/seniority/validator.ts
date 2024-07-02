@@ -4,7 +4,6 @@ import { CommonInformationsStoreInput } from "../../../CommonSteps/Informations/
 import { AncienneteStoreInput } from "../../steps/Anciennete/store";
 import { validateStep } from "../../steps/Anciennete/store/validator";
 import { ContratTravailStoreInput } from "../../steps/ContratTravail/store";
-import { validateStep1517 } from "../1517-commerces-de-detail-non-alimentaires";
 
 export const customSeniorityValidator = (
   state: AncienneteStoreInput,
@@ -16,11 +15,5 @@ export const customSeniorityValidator = (
   if (agreeement) {
     idcc = getSupportedAgreement(agreeement.num);
   }
-  switch (idcc) {
-    case SupportedCc.IDCC1517:
-      return validateStep1517(state, stateContratTravail, information);
-    default: {
-      return validateStep(state, stateContratTravail, information);
-    }
-  }
+  return validateStep(state, stateContratTravail, information);
 };
