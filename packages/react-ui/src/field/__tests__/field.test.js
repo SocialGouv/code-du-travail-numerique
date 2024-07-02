@@ -50,11 +50,47 @@ describe("<InputDate />", () => {
     expect(container).toMatchSnapshot();
   });
   it("should be able to update input date", () => {
-    const { container } = render(<InputDate name="input_date" />);
+    const onChangeObserveMock = jest.fn();
+    const { container } = render(
+      <InputDate name="input_date" onChange={onChangeObserveMock} />
+    );
     const testValue = "2020-01-01";
     const input = container.querySelector("input");
     fireEvent.change(input, { target: { value: testValue } });
     expect(input.value).toEqual(testValue);
+    expect(onChangeObserveMock).toHaveBeenCalledWith("01/01/2020");
+  });
+  it("should crash if empty string", () => {
+    const onChangeObserveMock = jest.fn();
+
+    const { container } = render(
+      <InputDate name="input_date" onChange={onChangeObserveMock} />
+    );
+    const input = container.querySelector("input");
+    fireEvent.change(input, { target: { value: undefined } });
+    expect(input.value).toEqual("");
+    expect(onChangeObserveMock).toHaveBeenCalledTimes(0);
+  });
+  it("should not fail if format is invalid", () => {
+    const { container } = render(<InputDate name="input_date" />);
+    const testValue = "wrong";
+    const input = container.querySelector("input");
+    fireEvent.change(input, { target: { value: testValue } });
+    expect(input.value).toEqual("");
+  });
+  it("should set default value if it is valid", () => {
+    const { container } = render(
+      <InputDate name="input_date" value={"01/01/2024"} />
+    );
+    const input = container.querySelector("input");
+    expect(input.value).toEqual("2024-01-01");
+  });
+  it("should not set default value if it is invalid", () => {
+    const { container } = render(
+      <InputDate name="input_date" value={"wrong"} />
+    );
+    const input = container.querySelector("input");
+    expect(input.value).toEqual("");
   });
 });
 

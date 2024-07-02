@@ -21,6 +21,6 @@ jest.mock("../src/config", () => ({
   BUCKET_DEFAULT_FOLDER: "default",
   BUCKET_SITEMAP_FOLDER: "sitemap",
   PACKAGE_VERSION: "vX.Y.Z",
-  ENTERPRISE_API_URL:
-    "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1",
+  ENTERPRISE_API_URL: "https://api-entreprise",
+  API_GEO_URL: "https://api-geo",
 }));

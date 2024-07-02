@@ -32,12 +32,11 @@ describe("Page résultat: vérification de la formule affichée", () => {
       startDate: "01/01/2000",
       notifDate: "01/03/2022",
       endDate: "01/03/2022",
-      ccNum: 29,
-      ccTitle:
-        " : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
+      ccNum: 2596,
+      ccTitle: "Coiffure",
       select:
-        "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle",
-      selectOption: "Autres salariés",
+        "infos.contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle",
+      selectOption: "Cadres",
       expectedA1: "A1 : Ancienneté de 10 ans ou moins (10 ans)",
       expectedA2:
         "A2 : Ancienneté au-delà de 10 ans (≈ 12.17 ans : valeur arrondie)",
@@ -49,12 +48,11 @@ describe("Page résultat: vérification de la formule affichée", () => {
       startDate: "01/01/2022",
       notifDate: "31/12/2022",
       endDate: "31/12/2022",
-      ccNum: 29,
-      ccTitle:
-        " : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
+      ccNum: 2596,
+      ccTitle: "Coiffure",
       select:
-        "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle",
-      selectOption: "Autres salariés",
+        "infos.contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle",
+      selectOption: "Cadres",
       expectedA1: "A : Ancienneté totale (1 an)",
       expectedA2: "A : Ancienneté totale (1 an)",
       expectedFormula: "14×Sref×A",
@@ -64,12 +62,11 @@ describe("Page résultat: vérification de la formule affichée", () => {
       startDate: "01/11/2021",
       notifDate: "01/01/2022",
       endDate: "01/01/2022",
-      ccNum: 29,
-      ccTitle:
-        " : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
+      ccNum: 2596,
+      ccTitle: "Coiffure",
       select:
-        "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle",
-      selectOption: "Autres salariés",
+        "infos.contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle",
+      selectOption: "Cadres",
       expectedA1: "A : Ancienneté totale (≈ 0.17 an : valeur arrondie)",
       expectedA2: "A : Ancienneté totale (≈ 0.17 an : valeur arrondie)",
       expectedFormula: "(14×Sref×A)×2",

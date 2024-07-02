@@ -19,12 +19,6 @@ import {
   createAgreement16StoreSalaires,
 } from "./16-transports-routiers";
 import {
-  Agreement29StoreError,
-  Agreement29StoreInput,
-  Agreement29StoreSlice,
-  createAgreement29StoreSalaires,
-} from "./29-hospitalisation-privee-but-non-lucratif";
-import {
   Agreement44StoreError,
   Agreement44StoreInput,
   Agreement44StoreSlice,
@@ -88,7 +82,6 @@ import {
 export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement1527StoreInput &
   Agreement16StoreInput &
-  Agreement29StoreInput &
   Agreement44StoreInput &
   Agreement2596StoreInput &
   Agreement2120StoreInput &
@@ -104,7 +97,6 @@ export type AgreementStoreError = Agreement1516StoreError &
   Agreement1527StoreError &
   Agreement16StoreError &
   Agreement44StoreError &
-  Agreement29StoreError &
   Agreement2596StoreError &
   Agreement2120StoreError &
   Agreement2148StoreError &
@@ -119,7 +111,6 @@ export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement1527StoreSlice &
   Agreement16StoreSlice &
   Agreement44StoreSlice &
-  Agreement29StoreSlice &
   Agreement2614StoreSlice &
   Agreement2596StoreSlice &
   Agreement2120StoreSlice &
@@ -138,7 +129,6 @@ export const createRootAgreementsStore = (
   ...createAgreement1516StoreSalaires(set, get, options),
   ...createAgreement1527StoreSalaires(set, get, options),
   ...createAgreement16StoreSalaires(set, get, options),
-  ...createAgreement29StoreSalaires(set, get, options),
   ...createAgreement44StoreSalaires(set, get, options),
   ...createAgreement2596StoreSalaires(set, get, options),
   ...createAgreement2120StoreSalaires(set, get, options),

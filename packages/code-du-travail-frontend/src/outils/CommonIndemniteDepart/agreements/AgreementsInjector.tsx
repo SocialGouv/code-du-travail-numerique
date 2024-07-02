@@ -1,4 +1,4 @@
-import { PublicodesSimulator, SupportedCc } from "@socialgouv/modeles-social";
+import { SupportedCc } from "@socialgouv/modeles-social";
 import React from "react";
 import { IndemniteDepartStepName } from "..";
 import {
@@ -7,10 +7,6 @@ import {
 } from "./1516-organismes-formation";
 import { Agreement1527, Agreement1527Informations } from "./1527-immobilier";
 import { Agreement16, Agreement16Informations } from "./16-transports-routiers";
-import {
-  Agreement29,
-  Agreement29Informations,
-} from "./29-hospitalisation-privee-but-non-lucratif";
 import {
   Agreement44,
   Agreement44Informations,
@@ -53,12 +49,6 @@ export default function AgreementsInjector(props: Props) {
     case SupportedCc.IDCC0016 === props.idcc &&
       props.step === IndemniteDepartStepName.Resultat:
       return <Agreement16Informations />;
-    case SupportedCc.IDCC0029 === props.idcc &&
-      props.step === IndemniteDepartStepName.Salaires:
-      return <Agreement29 />;
-    case SupportedCc.IDCC0029 === props.idcc &&
-      props.step === IndemniteDepartStepName.Resultat:
-      return <Agreement29Informations />;
     case SupportedCc.IDCC0044 === props.idcc &&
       props.step === IndemniteDepartStepName.Salaires:
       return <Agreement44 />;

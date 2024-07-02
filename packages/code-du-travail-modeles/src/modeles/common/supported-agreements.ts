@@ -11,7 +11,6 @@ export enum SupportedCc {
   IDCC1996 = "1996",
   IDCC3043 = "3043",
   IDCC1090 = "1090",
-  IDCC413 = "413",
   IDCC3127 = "3127",
   IDCC1351 = "1351",
   IDCC2941 = "2941",
@@ -24,7 +23,6 @@ export enum SupportedCc {
   IDCC0573 = "573",
   IDCC1596 = "1596",
   IDCC1702 = "1702",
-  IDCC0029 = "29",
   IDCC0044 = "44",
   IDCC1517 = "1517",
   IDCC2098 = "2098",
@@ -62,12 +60,10 @@ export const getSupportedAgreement = (idcc: number): SupportedCc | null => {
 };
 
 export enum SupportedAgreementHorsAni {
-  IDCC0413 = "413",
-  IDCC0029 = "29",
-  IDCC2941 = "2941",
-  IDCC2511 = "2511",
-  IDCC1518 = "1518",
   IDCC1043 = "1043",
+  IDCC1518 = "1518",
+  IDCC2511 = "2511",
+  IDCC2941 = "2941",
 }
 
 export const getSupportedAgreementHorsAni = (

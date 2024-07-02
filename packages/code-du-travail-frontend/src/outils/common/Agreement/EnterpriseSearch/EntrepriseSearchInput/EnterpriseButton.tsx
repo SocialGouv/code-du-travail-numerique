@@ -25,10 +25,8 @@ export function EnterpriseButton({
   onUserAction,
 }: CompagnyItemProps): JSX.Element {
   const {
-    label,
     matching,
     highlightLabel,
-    simpleLabel,
     activitePrincipale,
     address,
     siren,
@@ -36,24 +34,12 @@ export function EnterpriseButton({
   } = enterprise;
 
   const clickHandler = () => {
-    onUserAction(UserAction.SelectEnterprise, { label, siren });
+    onUserAction(UserAction.SelectEnterprise, { label: highlightLabel, siren });
     onClick(enterprise);
   };
-  const showTitleWithHighlight = label === simpleLabel;
   return (
     <ItemButton isFirst={isFirst} onClick={clickHandler} autoFocus={isFirst}>
-      {showTitleWithHighlight ? (
-        <Title fontSize="hsmall" fontWeight="600">
-          {highlightLabel}
-        </Title>
-      ) : (
-        <>
-          <Title fontWeight="600" fontSize="hsmall">
-            {simpleLabel}
-          </Title>
-          <Subtitle fontSize="small">{highlightLabel}</Subtitle>
-        </>
-      )}
+      <Title>{highlightLabel}</Title>
       {activitePrincipale && (
         <Activity as="div">Activité : {activitePrincipale}</Activity>
       )}
@@ -81,11 +67,5 @@ const ItemButton = styled(ResultItem)`
 
 const Title = styled(Html)`
   padding-bottom: ${spacings.xsmall};
-
-  & b {
-    font-weight: 700;
-  }
-`;
-const Subtitle = styled(Html)`
-  padding-bottom: ${spacings.xsmall};
+  font-weight: 700;
 `;

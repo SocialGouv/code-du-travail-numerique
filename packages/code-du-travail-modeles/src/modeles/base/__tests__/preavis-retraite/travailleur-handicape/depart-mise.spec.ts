@@ -47,15 +47,14 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
 
   test.each`
     seniority | expectedNotice
-    ${6}      | ${4}
+    ${6}      | ${2}
     ${24}     | ${6}
   `(
-    "En ayant $seniority mois d'ancienneté (CC: Hopital), son préavis devrait être $expectedNotice mois",
+    "En ayant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, expectedNotice }) => {
       const { result, missingArgs } = engine.setSituation({
         "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective": `'IDCC0029'`,
-        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'Médecins'`,
+        "contrat salarié . convention collective": `'IDCC0843'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "oui",
       });
@@ -67,24 +66,21 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
   );
 
   test.each`
-    seniority | category           | expectedNotice
-    ${3}      | ${"Non-cadres"}    | ${2}
-    ${24}     | ${"Non-cadres"}    | ${2}
-    ${3}      | ${"Autres cadres"} | ${3}
-    ${24}     | ${"Autres cadres"} | ${3}
+    seniority | expectedNotice | expectedUnit
+    ${3}      | ${2}           | ${"semaines"}
+    ${24}     | ${3}           | ${"mois"}
   `(
-    "En ayant $seniority mois d'ancienneté (CC: Hopital), son préavis devrait être $expectedNotice mois",
-    ({ seniority, category, expectedNotice }) => {
+    "En ayant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
+    ({ seniority, expectedNotice, expectedUnit }) => {
       const { result, missingArgs } = engine.setSituation({
         "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective": `'IDCC0029'`,
-        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . convention collective": `'IDCC0843'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "oui",
       });
 
       expect(result.value).toEqual(expectedNotice);
-      expect(result.unit).toEqual("mois");
+      expect(result.unit).toEqual(expectedUnit);
       expect(missingArgs).toEqual([]);
     }
   );

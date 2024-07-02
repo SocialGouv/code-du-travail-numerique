@@ -75,7 +75,7 @@ describe("EnterpriseSearch", () => {
       simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
     };
 
-    it("should render the mandatory question 'Nom de votre entreprise ou numéro Siret' and not mandatory 'Code postal ou ville'", () => {
+    it("should render the mandatory question 'Nom de votre entreprise ou numéro Siren/Siret' and not mandatory 'Code postal ou ville'", () => {
       const { getByText } = render(
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
@@ -83,7 +83,7 @@ describe("EnterpriseSearch", () => {
         />
       );
       expect(
-        getByText(/Nom de votre entreprise ou numéro Siret/)
+        getByText(/Nom de votre entreprise ou numéro Siren\/Siret/)
       ).toBeInTheDocument();
       expect(getByText(/Code postal ou ville/)).toBeInTheDocument();
       expect(getByText(/\(facultatif\)/)).toBeInTheDocument();

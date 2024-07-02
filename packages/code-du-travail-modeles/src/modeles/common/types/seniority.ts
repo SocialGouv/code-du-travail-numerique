@@ -1,6 +1,5 @@
 import type {
   CC0016SeniorityProps,
-  CC0413SeniorityProps,
   CC650SeniorityProps,
   CC650SeniorityRequiredProps,
   CC1672SeniorityProps,
@@ -57,8 +56,6 @@ export type SeniorityRequiredProps<T> = T extends SupportedCc.IDCC3248
 
 export type SeniorityProps<T> = T extends SupportedCc.IDCC0016
   ? CC0016SeniorityProps
-  : T extends SupportedCc.IDCC413
-  ? CC0413SeniorityProps
   : T extends SupportedCc.IDCC1672
   ? CC1672SeniorityProps
   : T extends SupportedCc.IDCC3248

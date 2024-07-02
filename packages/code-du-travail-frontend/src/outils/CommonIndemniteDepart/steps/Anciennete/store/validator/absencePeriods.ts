@@ -1,4 +1,4 @@
-import { isAfter, isWithinInterval } from "date-fns";
+import { isAfter, isWithinInterval, differenceInMonths } from "date-fns";
 import { parse } from "../../../../../common/utils";
 import {
   AncienneteAbsenceStoreError,
@@ -14,6 +14,7 @@ export const getAbsencePeriodsErrors = (
 ): Partial<AncienneteStoreError> => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
+  const totalMonth = differenceInMonths(dSortie, dEntree);
   let errors: AncienneteStoreError = {};
 
   if (!information) return errors;
@@ -24,8 +25,10 @@ export const getAbsencePeriodsErrors = (
 
   // Check all absences
   if (state.hasAbsenceProlonge === "oui") {
+    let totalMonthAbsence = 0;
     const absenceErrors: AncienneteAbsenceStoreError[] =
       state.absencePeriods.map((item): AncienneteAbsenceStoreError => {
+        totalMonthAbsence += item.durationInMonth ?? 0;
         if (
           !item.durationInMonth ||
           (item.motif.startAt &&
@@ -74,6 +77,11 @@ export const getAbsencePeriodsErrors = (
     ) {
       errors.errorAbsencePeriods = {
         absences: absenceErrors,
+      };
+    } else if (totalMonth < totalMonthAbsence) {
+      errors.errorAbsencePeriods = {
+        global:
+          "La durée totale des absences doit être inférieure ou égale à l'ancienneté",
       };
     } else {
       errors.errorAbsencePeriods = undefined;

@@ -1,4 +1,5 @@
 import { Reducer, useEffect, useReducer } from "react";
+import { SearchParams } from "../EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
 
 export enum Status {
   idle = "idle",
@@ -64,7 +65,7 @@ const dataFetchReducer = <A>(
   }
 };
 
-type Fetcher<Result> = (query: string, address?: string) => Promise<Result>;
+type Fetcher<Result> = (searchParams: SearchParams) => Promise<Result>;
 
 /**
  * a factory function that return a suggesterHook that
@@ -75,9 +76,9 @@ type Fetcher<Result> = (query: string, address?: string) => Promise<Result>;
  */
 export function createSuggesterHook<Result>(
   fetcher: Fetcher<Result>,
-  onResult: (query: string, address?: string) => void
+  onResult: (searchParams: SearchParams) => void
 ) {
-  return function (query: string, address?: string): FetchReducerState<Result> {
+  return function (searchParams: SearchParams): FetchReducerState<Result> {
     const [state, dispatch] = useReducer<
       Reducer<FetchReducerState<Result>, FecthActions<Result>>
     >(dataFetchReducer, {
@@ -88,18 +89,18 @@ export function createSuggesterHook<Result>(
       let shouldCancel = false;
 
       async function fetchData() {
-        if (!query) {
+        if (!searchParams.query) {
           dispatch({ type: Actions.reset });
           return;
         }
         dispatch({ type: Actions.init });
         try {
-          const results = await fetcher(query, address);
+          const results = await fetcher(searchParams);
           if (shouldCancel) {
             return;
           }
 
-          onResult(query, address);
+          onResult(searchParams);
 
           dispatch({ payload: results, type: Actions.success });
         } catch (error) {
@@ -111,7 +112,7 @@ export function createSuggesterHook<Result>(
       return () => {
         shouldCancel = true;
       };
-    }, [query, address]);
+    }, [JSON.stringify(searchParams)]);
     return state;
   };
 }

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.145.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.145.0...v4.145.1) (2024-06-27)
+
+### Bug Fixes
+
+- **localStorage error:** do not crash if error "Failed to read the 'localStorage' property from 'Window': Access is denied for this document." is thrown ([#5999](https://github.com/SocialGouv/code-du-travail-numerique/issues/5999)) ([fa29fd5](https://github.com/SocialGouv/code-du-travail-numerique/commit/fa29fd516cda01b1e59ecdbbfd21955cf9067c34))
+
+# [4.145.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.144.1...v4.145.0) (2024-06-27)
+
+### Bug Fixes
+
+- bug page resultat simu ([#5981](https://github.com/SocialGouv/code-du-travail-numerique/issues/5981)) ([81bdb2d](https://github.com/SocialGouv/code-du-travail-numerique/commit/81bdb2d06450610fdcc8d4fa75affe3e21c4a613))
+- **indemenité de licenciement:** ne pas crasher si la date est invalid ([#5993](https://github.com/SocialGouv/code-du-travail-numerique/issues/5993)) ([6171807](https://github.com/SocialGouv/code-du-travail-numerique/commit/6171807afb0f3b79a75f2e33b1747f8a68848999))
+- **preavis-licenciement:** catégorie professionnel rajouté en plus sur 2420 ([#5996](https://github.com/SocialGouv/code-du-travail-numerique/issues/5996)) ([1bbb4b1](https://github.com/SocialGouv/code-du-travail-numerique/commit/1bbb4b181232882ab71ea13acd39ecd2bf6e7061))
+
+### Features
+
+- **e2e:** test la validité de l'html de toutes les pages contributions et convention-collectives ([#5686](https://github.com/SocialGouv/code-du-travail-numerique/issues/5686)) ([d91c95c](https://github.com/SocialGouv/code-du-travail-numerique/commit/d91c95caa16e15e12d440b27c57032d416b2cca6))
+
 ## [4.144.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.144.0...v4.144.1) (2024-06-24)
 
 ### Bug Fixes
