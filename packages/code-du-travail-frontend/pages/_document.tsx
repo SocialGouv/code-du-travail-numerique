@@ -5,6 +5,7 @@ import * as Sentry from "@sentry/nextjs";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
 import { ServerStyleSheet } from "styled-components";
+import { DSFR_READY_PATHS } from "../src/config";
 
 process.on("unhandledRejection", (err) => {
   Sentry.captureException(err);

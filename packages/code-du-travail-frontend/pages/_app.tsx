@@ -11,7 +11,12 @@ import React, { useEffect } from "react";
 import { A11y } from "../src/a11y";
 import { getSourceUrlFromPath } from "../src/lib";
 import { useRouter } from "next/router";
-import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL } from "../src/config";
+import {
+  DSFR_READY_PATHS,
+  PIWIK_SITE_ID,
+  PIWIK_URL,
+  SITE_URL,
+} from "../src/config";
 
 if (typeof window !== "undefined") {
   import("../src/web-components/tooltip")
@@ -57,16 +62,19 @@ function MyApp({ Component, pageProps }: AppProps) {
       excludeUrlsPatterns: [WIDGETS_PATH],
     });
   }, []);
-
-  return (
-    <React.StrictMode>
-      <ThemeProvider>
-        <GlobalStyles />
-        <A11y />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </React.StrictMode>
-  );
+  if (!DSFR_READY_PATHS.includes(router.pathname)) {
+    return (
+      <React.StrictMode>
+        <ThemeProvider>
+          <GlobalStyles />
+          <A11y />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </React.StrictMode>
+    );
+  } else {
+    return <Component {...pageProps} />;
+  }
 }
 
 export default MyApp;
