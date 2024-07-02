@@ -80,8 +80,9 @@ export const SearchEnterpriseInput = ({
               entreprise (ex : 401237780).
               <br />
               Le numéro Siret est un <strong>numéro de 14 chiffres</strong>{" "}
-              unique pour chaque entreprise. Il est présent sur la{" "}
-              <strong>fiche de paie du salarié</strong> (ex : 40123778000127).
+              unique pour chaque établissement de l&apos;entreprise. Il est
+              présent sur la <strong>fiche de paie du salarié</strong> (ex :
+              40123778000127).
             </p>
           </InfoBulle>
 
