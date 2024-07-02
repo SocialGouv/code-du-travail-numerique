@@ -190,7 +190,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés ou agents:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - une de ces conditions:
           - catégorie professionnelle = 'Employés et ouvriers, personnel de livraison'
           - catégorie professionnelle = 'Agents de maîtrise et techniciens'
@@ -253,7 +253,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Cadres'
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   valeur: oui
 
 # 5ans ou moins

@@ -2,8 +2,12 @@ contrat salarié . convention collective . boulangerie patisserie . indemnité d
   applicable si: indemnité de licenciement
   valeur: oui
 
+contrat salarié . convention collective . boulangerie patisserie . indemnité de licenciement . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 2 ans
+
 contrat salarié . convention collective . boulangerie patisserie . indemnité de licenciement . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
   valeur: oui
   références:

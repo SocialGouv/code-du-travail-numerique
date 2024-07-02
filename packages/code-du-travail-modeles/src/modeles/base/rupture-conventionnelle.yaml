@@ -5,6 +5,9 @@ contrat salarié . indemnité de licenciement . rupture conventionnelle . minimu
   remplace: contrat salarié . paramètre . minimum ancienneté requise en année
   valeur: 0 mois
 
+contrat salarié . indemnité de licenciement . rupture conventionnelle . minimum ancienneté conventionnelle requise en année:
+  remplace: contrat salarié . paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 0 mois
 
 contrat salarié . indemnité de licenciement . rupture conventionnelle . ancienneté requise en année:
   remplace: contrat salarié . indemnité de licenciement . ancienneté requise en année

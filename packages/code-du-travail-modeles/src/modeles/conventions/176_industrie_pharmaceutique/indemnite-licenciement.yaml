@@ -15,7 +15,7 @@ contrat salarié . convention collective . industrie pharmaceutique . après ave
 contrat salarié . convention collective . industrie pharmaceutique . après avenant 1er juillet 2019 . moins de 5 ans d'ancienneté:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 ans
   valeur: oui
 

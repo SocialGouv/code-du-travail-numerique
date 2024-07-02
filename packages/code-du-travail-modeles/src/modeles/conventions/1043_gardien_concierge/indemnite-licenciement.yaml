@@ -6,11 +6,15 @@ contrat salarié . convention collective . gardien concierge . ancienneté total
       facteur: 1 / 5
   unité: €
 
+contrat salarié . convention collective . gardien concierge . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 1 an
+
 contrat salarié . convention collective . gardien concierge . ancienneté totale . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 7 an
   valeur: indemnité
   unité: €
@@ -42,7 +46,7 @@ contrat salarié . convention collective . gardien concierge . ancienneté au de
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 7 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 19 an
   somme:
@@ -78,7 +82,7 @@ contrat salarié . convention collective . gardien concierge . ancienneté au de
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 19 an
   somme:
     - ancienneté totale . indemnité

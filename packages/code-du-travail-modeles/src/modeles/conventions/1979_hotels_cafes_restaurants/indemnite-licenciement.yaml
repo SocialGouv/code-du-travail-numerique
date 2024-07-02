@@ -25,11 +25,15 @@ contrat salarié . convention collective . hotels cafes restaurants . indemnité
 # (1/10*Sref*A1) + (1/15*Sref *A2)
 # A1 : Ancienneté totale
 # A2 : Ancienneté au delà de 10 ans
+contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 2 ans
+
 contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . résultat conventionnel 1:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 10 ans
   somme:
     - facteur 1

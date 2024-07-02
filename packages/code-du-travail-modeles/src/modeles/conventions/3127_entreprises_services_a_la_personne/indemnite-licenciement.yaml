@@ -22,11 +22,15 @@ contrat salarié . convention collective . entreprises de services à la personn
       facteur: 2 / 15
   unité: €
 
+contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 1 an
+
 contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+      - indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - indemnité de licenciement . ancienneté conventionnelle en année <= 10 ans
   valeur: calcul total
   unité: €

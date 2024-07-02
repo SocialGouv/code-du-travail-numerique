@@ -32,8 +32,12 @@ contrat salarié . convention collective . restauration collectivités . catégo
       facteur: 1 / 5
   unité: €
 
+contrat salarié . convention collective . restauration collectivités . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 1 an
+
 contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . non cadres . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - calcul total
@@ -103,7 +107,7 @@ contrat salarié . convention collective . restauration collectivités . catégo
   unité: €
 
 contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . cadres . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - calcul total

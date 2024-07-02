@@ -61,8 +61,12 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
       facteur: 2 / 15
   unité: €
 
+contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 2 ans
+
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . résultat conventionnel:
-  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   grille:
     assiette: indemnité de licenciement . ancienneté conventionnelle en année
     tranches:
@@ -152,7 +156,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
     formule:
       formula: $formule + (15% * ($formule))
     annotations:
-        - "15% : majoration pour motif économique"
+      - "15% : majoration pour motif économique"
 
 ## CADRES
 
@@ -210,8 +214,12 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
       facteur: 3 / 15
   unité: €
 
+contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 1 an
+
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . résultat conventionnel:
-  applicable si:  indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   grille:
     assiette: indemnité de licenciement . ancienneté conventionnelle en année
     tranches:
@@ -249,7 +257,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . résultat conventionnel . moins de 5 ans:
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+      - indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - indemnité de licenciement . ancienneté conventionnelle en année <= 5 an
   valeur: oui
   cdtn:
@@ -320,4 +328,4 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
     formule:
       formula: $formule + (15% * ($formule))
     annotations:
-        - "15% : majoration pour motif économique"
+      - "15% : majoration pour motif économique"

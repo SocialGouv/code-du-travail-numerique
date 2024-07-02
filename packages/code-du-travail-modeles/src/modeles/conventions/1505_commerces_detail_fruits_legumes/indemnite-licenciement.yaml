@@ -34,7 +34,7 @@ contrat salarié . convention collective . commerces detail fruits legumes . ré
 contrat salarié . convention collective . commerces detail fruits legumes . résultat conventionnel:
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - (1 / 4) * jusqu'à dix ans ou moins * indemnité de licenciement . salaire de référence conventionnel

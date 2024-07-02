@@ -169,13 +169,17 @@ contrat salarié . convention collective . habillement commerce succursales . in
   applicable si: catégorie professionnelle = 'Employés'
   valeur: oui
 
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . employés . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 2 ans
+
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . employés . résultat conventionnel entre deux et quinze ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: salaire mensuel des 3 derniers mois * 6
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Employés'
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 ans
   somme:
     - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence pour moins de 10 ans
@@ -211,16 +215,20 @@ contrat salarié . convention collective . habillement commerce succursales . in
 ### Agents de maîtrise
 #
 #### Avec autre licenciement
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . agents . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 2 ans
+
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . agents . autres licenciement . résultat conventionnel entre deux et vingt ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 9
   applicable si:
     une de ces conditions:
       - toutes ces conditions:
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
           - age < 50 ans
       - toutes ces conditions:
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 20 ans
           - age >= 50 ans
   somme:
@@ -266,7 +274,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . agents . licenciement collectif . résultat conventionnel au delà de deux ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
   somme:
     - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence pour moins de 10 ans
     - contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . deux cinquièmes du salaire de référence pour plus de 10 ans
@@ -285,11 +293,15 @@ contrat salarié . convention collective . habillement commerce succursales . in
 ## Cadres
 
 ### Avec autres licenciement
+contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 2 ans
+
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . autres licenciement . résultat conventionnel entre deux et cinq ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 ans
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
   valeur: contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence
@@ -360,7 +372,7 @@ contrat salarié . convention collective . habillement commerce succursales . in
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 ans
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
   valeur: contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . un dixième du salaire de référence

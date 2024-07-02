@@ -54,9 +54,13 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
       facteur: 1 / 80
   unité: €
 
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 9 mois
+
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 9 mois
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   valeur: un quatre vingtième du total
   unité: €
   arrondi: 2 décimales
@@ -80,7 +84,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   applicable si: catégorie professionnelle = 'Salarié du particulier employeur'
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . pe . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
   valeur: oui
   références:

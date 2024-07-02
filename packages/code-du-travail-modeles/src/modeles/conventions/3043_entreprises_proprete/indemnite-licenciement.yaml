@@ -67,11 +67,15 @@ contrat salarié . convention collective . entreprises de propreté . indemnité
 # A1 : Années d'ancienneté pour la fraction des 5 premières années
 # A2 : Années d'ancienneté pour la fraction de 6 ans à 10 ans révolus
 # A3 : Années d'ancienneté au-delà de 10 ans révolus
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 2 ans
+
 contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . résultat conventionnel 1:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 6 an
   somme:
     - facteur moins de 5 ans

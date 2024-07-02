@@ -46,6 +46,7 @@ contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
       - 10 an
 
 contrat salarié . paramètre . minimum ancienneté requise en année: 8 mois
+contrat salarié . paramètre . minimum ancienneté conventionnelle requise en année: 8 mois
 
 contrat salarié . indemnité de licenciement . au dela de dix ans:
   somme:

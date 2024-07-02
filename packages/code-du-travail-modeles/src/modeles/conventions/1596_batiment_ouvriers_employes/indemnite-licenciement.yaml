@@ -9,7 +9,6 @@ contrat salarié . convention collective . batiment ouvriers employés . indemni
   cdtn:
     type: entier
 
-
 # Formule de calculs
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . un dixième du salaire de reference:
   valeur:
@@ -64,10 +63,14 @@ contrat salarié . convention collective . batiment ouvriers employés . indemni
   applicable si: age >= 55
   valeur: oui
 
+contrat salarié . convention collective . restauration rapide . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 2 ans
+
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . plus de 55 ans . entre 2 et 5 ans d'ancienneté:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5
   valeur: oui
 
@@ -122,7 +125,7 @@ contrat salarié . convention collective . batiment ouvriers employés . indemni
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . moins de 55 ans . entre 2 et 5 ans d'ancienneté:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5
   valeur: oui
 

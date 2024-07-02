@@ -167,4 +167,76 @@ describe("Gestion des licenciements pour la CC675", () => {
       }
     );
   });
+
+  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+    test("Employés", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC0675'",
+        "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle":
+          "'Employés'",
+        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          "01/01/2024",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        licenciementFauteGrave: "non",
+        salaryPeriods:
+          '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
+        typeContratTravail: "cdi",
+      });
+      expect(result).toAgreementResultBeEqual(33.33, "€");
+    });
+
+    test("Agents de maitrise", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC0675'",
+        "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle":
+          "'Agents de maîtrise'",
+        "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . agents . autres licenciement . age":
+          "50",
+        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          "01/01/2024",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        licenciementFauteGrave: "non",
+        salaryPeriods:
+          '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
+        typeContratTravail: "cdi",
+      });
+      expect(result).toAgreementResultBeEqual(33.33, "€");
+    });
+
+    test("Cadres", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC0675'",
+        "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle":
+          "'Cadres'",
+        "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . autres licenciement . age":
+          "50",
+        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          "01/01/2024",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        licenciementFauteGrave: "non",
+        salaryPeriods:
+          '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
+        typeContratTravail: "cdi",
+      });
+      expect(result).toAgreementResultBeEqual(33.33, "€");
+    });
+  });
 });
