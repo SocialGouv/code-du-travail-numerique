@@ -65,7 +65,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis . ind
 
 contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . minimum ancienneté conventionnelle requise en année:
   remplace: paramètre . minimum ancienneté conventionnelle requise en année
-  valeur: 2
+  valeur: 2 ans
 
 contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . plus de 55 ans . entre 2 et 5 ans d'ancienneté:
   applicable si:

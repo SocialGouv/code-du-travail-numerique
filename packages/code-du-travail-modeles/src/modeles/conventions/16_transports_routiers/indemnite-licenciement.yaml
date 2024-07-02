@@ -110,7 +110,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . minimum ancienneté conventionnelle requise en année:
   remplace: paramètre . minimum ancienneté conventionnelle requise en année
-  valeur: 3 an
+  valeur: 3 ans
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base . seulement cadre:
   remplace: calcul
@@ -243,7 +243,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . TAM . minimum ancienneté conventionnelle requise en année:
   remplace: paramètre . minimum ancienneté conventionnelle requise en année
-  valeur: 2 an
+  valeur: 2 ans
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . TAM . résultat conventionnel . base . entre 2 et 3 ans d'ancienneté:
   remplace: base

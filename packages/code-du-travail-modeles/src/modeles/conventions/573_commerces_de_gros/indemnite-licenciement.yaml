@@ -251,7 +251,7 @@ contrat salarié . convention collective . commerces de gros . somme cadre avec 
 # Résultats
 contrat salarié . convention collective . commerces de gros . minimum ancienneté conventionelle requise en année:
   remplace: paramètre . minimum ancienneté conventionnelle requise en année
-  valeur: 1
+  valeur: 1 an
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . autres . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
