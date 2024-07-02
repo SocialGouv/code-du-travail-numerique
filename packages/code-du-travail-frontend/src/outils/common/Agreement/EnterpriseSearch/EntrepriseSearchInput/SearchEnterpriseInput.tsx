@@ -76,7 +76,7 @@ export const SearchEnterpriseInput = ({
           >
             <p>
               Le numéro Siren est un{" "}
-              <strong>numéro unique de 9 chiffres</strong> attribuée à chaque
+              <strong>numéro unique de 9 chiffres</strong> attribué à chaque
               entreprise (ex : 401237780).
               <br />
               Le numéro Siret est un <strong>numéro de 14 chiffres</strong>{" "}
