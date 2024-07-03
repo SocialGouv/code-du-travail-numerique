@@ -46,6 +46,14 @@ const nextConfig = {
   },
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
   experimental: { instrumentationHook: true },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.woff2$/,
+      type: "asset/resource",
+    });
+    return config;
+  },
+  transpilePackages: ["@codegouvfr/react-dsfr"],
 };
 
 const moduleExports = {
