@@ -1,23 +1,29 @@
 import { theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled, { css } from "styled-components";
+import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
 
 import { ErrorBoundary } from "../common/ErrorBoundary";
 import Footer from "./Footer";
 import { Header, HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
+import { A11y } from "../a11y";
 
 const Layout = ({ children, currentPage = "" }) => {
   return (
-    <BackgroundContainer>
-      <BackgroundLayer currentPage={currentPage} />
-      <Header currentPage={currentPage} />
-      <ErrorBoundary message="Une erreur est survenue">
-        <StyledMain id="content" tabIndex="-1">
-          {children}
-        </StyledMain>
-      </ErrorBoundary>
-      <Footer />
-    </BackgroundContainer>
+    <ThemeProvider>
+      <GlobalStyles />
+      <A11y />
+      <BackgroundContainer>
+        <BackgroundLayer currentPage={currentPage} />
+        <Header currentPage={currentPage} />
+        <ErrorBoundary message="Une erreur est survenue">
+          <StyledMain id="content" tabIndex="-1">
+            {children}
+          </StyledMain>
+        </ErrorBoundary>
+        <Footer />
+      </BackgroundContainer>
+    </ThemeProvider>
   );
 };
 
