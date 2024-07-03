@@ -1,13 +1,16 @@
+// pages/yourPage.js ou pages/index.js selon l'emplacement souhaité dans votre projet Next.js
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { DsfrLayout } from "../src/dsfr/Layout";
 
-function Hello() {
+function Hello({ dynamicProp }) {
   const router = useRouter();
+
   return (
     <DsfrLayout>
       <section>
-        <h1>Bienvenue sur la page statique</h1>
+        <h1>Bienvenue sur la page dynamique</h1>
+        <p>Propriété dynamique reçue du serveur : {dynamicProp}</p>
         <Link href="/">Accueil with link</Link>
         <button onClick={() => router.push("/")}>Accueil with router</button>
         <br />
@@ -342,6 +345,15 @@ function Hello() {
       </section>
     </DsfrLayout>
   );
+}
+
+export async function getServerSideProps(context) {
+  const dynamicProp = "Exemple de valeur dynamique";
+  return {
+    props: {
+      dynamicProp,
+    },
+  };
 }
 
 export default Hello;

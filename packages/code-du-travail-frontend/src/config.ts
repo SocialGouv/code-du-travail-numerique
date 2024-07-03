@@ -21,4 +21,4 @@ export const ENTERPRISE_API_URL =
   "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1";
 export const REVALIDATE_TIME = 1800; // 30 minutes
 export const REVALIDATE_TIME_DAY = 86400; // 1 day
-export const DSFR_READY_PATHS = ["/dsfr"];
+export const DSFR_READY_PATHS = ["/dsfr", "/dsfr-server"];
