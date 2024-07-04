@@ -1,6 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
-import "@ungap/url-search-params";
-
 import * as Sentry from "@sentry/nextjs";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";

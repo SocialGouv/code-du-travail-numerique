@@ -85,21 +85,6 @@ const SearchBar = ({
     }
   };
 
-  function renderBoldFromQuery(item: string, query: string | string[]) {
-    if (typeof query === "string") {
-      const regex = new RegExp(`(${query})`, "gi");
-      return item.replace(regex, "<b>$1</b>");
-    } else if (Array.isArray(query)) {
-      let result = item;
-      query.forEach((q) => {
-        const regex = new RegExp(`(${q})`, "gi");
-        result = result.replace(regex, "<b>$1</b>");
-      });
-      return result;
-    }
-    return item;
-  }
-
   return (
     <SearchForm role="search" action="/recherche" onSubmit={onFormSubmit}>
       <ScreenReaderOnly>
@@ -131,7 +116,7 @@ const SearchBar = ({
               isHighlighted={highlightedIndex === index}
               key={`${item}${index}`}
             >
-              <Html>{renderBoldFromQuery(item, query)}</Html>
+              item
             </StyledSuggestion>
           ))}
       </StyledList>
