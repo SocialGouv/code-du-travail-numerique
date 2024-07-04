@@ -40,19 +40,23 @@ const apiIdcc = function createFetcher(query) {
       parseInt(query.replace(/\W/g, ""))
     )}`;
   }
-  return fetch(url).then(async (response) => {
-    if (response.ok) {
-      let result = await response.json().then((results) => {
-        return results.hits.hits.map(({ _source }) =>
-          formatCCn(_source)
-        ) as Agreement[];
-      });
-      return result;
-    }
-    return Promise.reject(
-      "Ce service est momentanément indisponible. Vous pouvez tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
-    );
-  });
+  return fetch(url)
+    .then(async (response) => {
+      if (response.ok) {
+        let result = await response.json().then((results) => {
+          return results.hits.hits.map(({ _source }) =>
+            formatCCn(_source)
+          ) as Agreement[];
+        });
+        return result;
+      }
+      throw new Error();
+    })
+    .catch(() => {
+      return Promise.reject(
+        "Ce service est momentanément indisponible. Vous pouvez tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
+      );
+    });
 };
 
 const searchAgreements = debounce(apiIdcc, 300);

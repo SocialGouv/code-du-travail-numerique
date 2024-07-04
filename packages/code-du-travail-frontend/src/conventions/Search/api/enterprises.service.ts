@@ -44,15 +44,19 @@ const apiEnterprises = function createFetcher(
       : ""
   }`;
 
-  return fetch(url).then(async (response) => {
-    if (response.ok) {
-      const res = await response.json();
-      return res.entreprises;
-    }
-    return Promise.reject(
-      "Ce service est momentanément indisponible. Dans le cas de l'utilisation d'un simulateur, vous pourrait tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
-    );
-  });
+  return fetch(url)
+    .then(async (response) => {
+      if (response.ok) {
+        const res = await response.json();
+        return res.entreprises;
+      }
+      throw new Error();
+    })
+    .catch(() => {
+      return Promise.reject(
+        "Ce service est momentanément indisponible. Dans le cas de l'utilisation d'un simulateur, vous pourrait tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
+      );
+    });
 };
 
 const searchEnterprises = debounce(apiEnterprises, 300);
