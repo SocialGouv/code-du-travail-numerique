@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.146.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.0...v4.146.1) (2024-07-04)
+
+### Bug Fixes
+
+- **csp:** add geo api gouv ([3e30c21](https://github.com/SocialGouv/code-du-travail-numerique/commit/3e30c21a1a92aa332a79ca6a9de5e5d1646e65c3))
+
 # [4.146.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.145.1...v4.146.0) (2024-07-04)
 
 ### Bug Fixes
