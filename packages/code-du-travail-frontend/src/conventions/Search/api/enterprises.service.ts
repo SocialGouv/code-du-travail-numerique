@@ -8,6 +8,8 @@ import { SearchParams } from "../../../outils/common/Agreement/EnterpriseSearch/
 
 export type Enterprise = ApiEntreprise;
 export type EnterpriseAgreement = ApiEnterpriseAgreement;
+export const messageFetchSearchCcOrEnterprise =
+  "Ce service est momentanément indisponible. Dans le cas de l'utilisation d'un simulateur, vous pourrait tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\"";
 
 const siretSirenError =
   "Veuillez indiquer un numéro Siret (14 chiffres) ou Siren (9 chiffres) valide";
@@ -53,9 +55,7 @@ const apiEnterprises = function createFetcher(
       throw new Error();
     })
     .catch(() => {
-      return Promise.reject(
-        "Ce service est momentanément indisponible. Dans le cas de l'utilisation d'un simulateur, vous pourrait tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
-      );
+      return Promise.reject(messageFetchSearchCcOrEnterprise);
     });
 };
 

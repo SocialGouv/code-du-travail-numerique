@@ -3,6 +3,7 @@ import { SITE_URL } from "../../../config";
 
 import { nafError } from "./error";
 import { Agreement } from "../../../outils/types";
+import { messageFetchSearchCcOrEnterprise } from "./enterprises.service";
 
 const formatCCn = ({
   num,
@@ -53,9 +54,7 @@ const apiIdcc = function createFetcher(query) {
       throw new Error();
     })
     .catch(() => {
-      return Promise.reject(
-        "Ce service est momentanément indisponible. Vous pouvez tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\""
-      );
+      return Promise.reject(messageFetchSearchCcOrEnterprise);
     });
 };
 
