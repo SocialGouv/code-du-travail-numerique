@@ -5,7 +5,6 @@
   font-display: swap;
 	src:
 		local('/static/assets/fonts/Merriweather Regular'),
-		local('/static/assets/fonts/Merriweather-Regular'),
 		/* from https://fonts.gstatic.com/s/merriweather/v21/u-440qyriQwlOrhSvowK_l5-fCZM.woff2 */
 		url('/static/assets/fonts/Merriweather_400.woff2') format('woff2'),
 		/* from https://fonts.gstatic.com/s/merriweather/v21/u-440qyriQwlOrhSvowK_l5-fCZK.woff */
@@ -24,7 +23,6 @@
   font-display: swap;
 	src:
 		local('/static/assets/fonts/Merriweather Bold'),
-		local('/static/assets/fonts/Merriweather-Bold'),
 		/* from https://fonts.gstatic.com/s/merriweather/v21/u-4n0qyriQwlOrhSvowK_l52xwNZWMf6.woff2 */
 		url('/static/assets/fonts/Merriweather_700.woff2') format('woff2'),
 		/* from https://fonts.gstatic.com/s/merriweather/v21/u-4n0qyriQwlOrhSvowK_l52xwNZWMf8.woff */
@@ -43,7 +41,6 @@
   font-display: swap;
 	src:
 		local('/static/assets/fonts/Open Sans Regular'),
-		local('/static/assets/fonts/OpenSans-Regular'),
 		/* from https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2 */
 		url('/static/assets/fonts/Open_Sans_400.woff2') format('woff2'),
 		/* from https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0d.woff */
@@ -62,7 +59,6 @@
   font-display: swap;
 	src:
 		local('/static/assets/fonts/Open Sans SemiBold Italic'),
-		local('/static/assets/fonts/OpenSans-SemiBoldItalic'),
 		/* from https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKXGUdhrIqM.woff2 */
 		url('/static/assets/fonts/Open_Sans_600i.woff2') format('woff2'),
 		/* from https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKXGUdhrIqU.woff */
