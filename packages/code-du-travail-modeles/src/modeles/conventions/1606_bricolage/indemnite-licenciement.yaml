@@ -17,9 +17,13 @@ contrat salarié . convention collective . bricolage . indemnité de licenciemen
   unité: €
   arrondi: 2 décimales
 
+contrat salarié . convention collective . bricolage . indemnité de licenciement . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 1 an
+
 contrat salarié . convention collective . bricolage . indemnité de licenciement . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 1 an
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   somme:
     - résultat conventionnel base
     - cadres . résultat conventionnel majoration

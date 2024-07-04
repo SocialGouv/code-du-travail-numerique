@@ -91,9 +91,13 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   applicable si: catégorie professionnelle = 'Non-cadres'
   valeur: oui
 
+contrat salarié . convention collective . habillement textiles commerce de detail . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 1 an
+
 contrat salarié . convention collective . habillement textiles commerce de detail . catégorie professionnelle . non cadres . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
   somme:
     - un cinquième du salaire de référence
     - un tiers du salaire de référence à partir de dix ans
@@ -120,7 +124,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 1 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
   valeur: un cinquième du salaire de référence
   unité: €

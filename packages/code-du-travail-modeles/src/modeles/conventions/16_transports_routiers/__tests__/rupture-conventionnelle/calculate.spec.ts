@@ -124,4 +124,102 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
       expect(result).toAgreementResultBeEqual(2600, "€");
     });
   });
+
+  describe("Vérifier qu'il n'y a pas d'ancienneté conventionnelle requise", () => {
+    test("Ouvriers", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC0016'",
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle": `'Ouvriers'`,
+        "contrat salarié . convention collective . transports routiers . rupture conventionnelle . ouvrier age":
+          "56",
+        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          "01/01/2022",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/03/2022",
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          "01/03/2022",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        licenciementFauteGrave: "non",
+        salaryPeriods:
+          '[{"month":"février 2024","value":2600},{"month":"janvier 2024","value":2600}]',
+        typeContratTravail: "cdi",
+      });
+      expect(result).toAgreementResultBeEqual(28.89, "€");
+    });
+    test("Ingénieurs et cadres", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC0016'",
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+          "'Ingénieurs et cadres'",
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien":
+          "'Non'",
+        "contrat salarié . convention collective . transports routiers . rupture conventionnelle . cadre age":
+          "50",
+        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          "01/01/2024",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        licenciementFauteGrave: "non",
+        salaryPeriods:
+          '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
+        typeContratTravail: "cdi",
+      });
+      expect(result).toAgreementResultBeEqual(200, "€");
+    });
+
+    test("Employés", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC0016'",
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+          "'Employés'",
+        "contrat salarié . convention collective . transports routiers . rupture conventionnelle . employé ou TAM age":
+          "50",
+        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          "01/01/2024",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        licenciementFauteGrave: "non",
+        salaryPeriods:
+          '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
+        typeContratTravail: "cdi",
+      });
+      expect(result).toAgreementResultBeEqual(33.33, "€");
+    });
+
+    test("TAM", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC0016'",
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+          "'TAM'",
+        "contrat salarié . convention collective . transports routiers . rupture conventionnelle . employé ou TAM age":
+          "50",
+        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
+        "contrat salarié . indemnité de licenciement . date d'entrée":
+          "01/01/2024",
+        "contrat salarié . indemnité de licenciement . date de notification":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . date de sortie":
+          "01/03/2024",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        licenciementFauteGrave: "non",
+        salaryPeriods:
+          '[{"month":"février 2024","value":3000},{"month":"janvier 2024","value":3000}]',
+        typeContratTravail: "cdi",
+      });
+      expect(result).toAgreementResultBeEqual(50, "€");
+    });
+  });
 });

@@ -249,9 +249,13 @@ contrat salarié . convention collective . commerces de gros . somme cadre avec 
   unité: €
 
 # Résultats
+contrat salarié . convention collective . commerces de gros . minimum ancienneté conventionelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 1 an
+
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . autres . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   valeur: somme autre
   unité: €
   arrondi: 2 décimales
@@ -269,7 +273,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   non applicable si: contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age . résultat conventionnel 55 ans
   valeur: somme agent sans majoration
   unité: €
@@ -313,7 +317,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 1
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5
   valeur: formule 3 agent
   plafond: plafond 12 mois
