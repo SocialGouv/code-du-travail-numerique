@@ -2,7 +2,6 @@ import React from "react";
 
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
-import { Layout } from "../../src/layout/Layout";
 import {
   Breadcrumb,
   ElasticSearchContribution,
@@ -13,6 +12,7 @@ import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
+import { DsfrLayout } from "../../src/dsfr/Layout";
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);
@@ -65,8 +65,9 @@ function PageContribution(props: Props): React.ReactElement {
   );
 
   return (
-    <Layout>
+    <DsfrLayout>
       <Metas title={metas.title} description={metas.description} />
+
       <Answer
         title={getTitleFromNewContrib(props.contribution)}
         breadcrumbs={props.contribution.breadcrumbs}
@@ -85,7 +86,7 @@ function PageContribution(props: Props): React.ReactElement {
           />
         )}
       </Answer>
-    </Layout>
+    </DsfrLayout>
   );
 }
 
