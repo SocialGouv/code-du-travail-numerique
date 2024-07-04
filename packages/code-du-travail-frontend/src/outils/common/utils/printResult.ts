@@ -1,5 +1,6 @@
 import { MatomoBaseEvent, MatomoSimulatorEvent } from "../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
+import * as Sentry from "@sentry/nextjs";
 
 export default function printResult(simulatorTitle: string): void {
   matopush([
@@ -12,5 +13,10 @@ export default function printResult(simulatorTitle: string): void {
   for (let i = 0; i < detailsTags.length; i++) {
     detailsTags[i].setAttribute("open", "");
   }
-  window.print();
+  try {
+    window?.print();
+  } catch (e) {
+    console.error(e);
+    Sentry.captureException(e);
+  }
 }
