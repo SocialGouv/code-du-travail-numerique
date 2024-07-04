@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import * as Sentry from "@sentry/nextjs";
 
 export const isIframe = () => {
   try {
@@ -10,6 +9,19 @@ export const isIframe = () => {
 };
 
 const minHeight = 200;
+
+const postMessage = (value) => {
+  try {
+    window?.parent?.postMessage({ kind: "resize-height", value }, "*");
+  } catch (e) {
+    console.error(e);
+  }
+};
+const postOffsetHeight = () => {
+  const box = document.querySelector("body");
+  box && postMessage(box.offsetHeight);
+};
+
 export const useIframeResizer = () => {
   useEffect(() => {
     if (!isIframe()) {
@@ -17,7 +29,7 @@ export const useIframeResizer = () => {
     }
     try {
       if (!window?.ResizeObserver) {
-        return;
+        return postOffsetHeight();
       }
       const observer = new ResizeObserver(([entry]) => {
         const value = Math.max(minHeight, entry.contentRect.height);
@@ -27,8 +39,7 @@ export const useIframeResizer = () => {
 
       return () => observer.disconnect();
     } catch (e) {
-      console.error(e);
-      Sentry.captureException(e);
+      return postOffsetHeight();
     }
   }, []);
 };
