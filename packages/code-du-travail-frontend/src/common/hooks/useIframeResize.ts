@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import * as Sentry from "@sentry/nextjs";
 
 export const isIframe = () => {
   try {
@@ -26,7 +27,8 @@ export const useIframeResizer = () => {
 
       return () => observer.disconnect();
     } catch (e) {
-      return;
+      console.error(e);
+      Sentry.captureException(e);
     }
   }, []);
 };
