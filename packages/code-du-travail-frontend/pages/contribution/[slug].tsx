@@ -2,7 +2,6 @@ import React from "react";
 
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
-import { Layout } from "../../src/layout/Layout";
 import {
   Breadcrumb,
   ElasticSearchContribution,
@@ -13,7 +12,9 @@ import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
-
+import { ThemeProvider } from "@socialgouv/cdtn-ui";
+import { fr } from "@codegouvfr/react-dsfr";
+import { Accordion } from "@codegouvfr/react-dsfr/Accordion";
 const fetchQuestion = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/contributions/${slug}`);
 
@@ -65,8 +66,13 @@ function PageContribution(props: Props): React.ReactElement {
   );
 
   return (
-    <Layout>
+    <ThemeProvider>
       <Metas title={metas.title} description={metas.description} />
+
+      <div className={fr.cx("fr-accordions-group")}>
+        <Accordion label="Name of the Accordion 1">Content of the Accordion 1</Accordion>
+        <Accordion label="Name of the Accordion 2">Content of the Accordion 2</Accordion>
+      </div>
       <Answer
         title={getTitleFromNewContrib(props.contribution)}
         breadcrumbs={props.contribution.breadcrumbs}
@@ -85,7 +91,7 @@ function PageContribution(props: Props): React.ReactElement {
           />
         )}
       </Answer>
-    </Layout>
+    </ThemeProvider>
   );
 }
 

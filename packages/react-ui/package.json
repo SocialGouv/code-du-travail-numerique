@@ -30,6 +30,7 @@
     "test:update": "jest --silent -u"
   },
   "dependencies": {
+    "@codegouvfr/react-dsfr": "^1.9.21",
     "@reach/dialog": "0.15.3",
     "@socialgouv/react-accessible-accordion": "4.1.1",
     "polished": "^4.2.2",

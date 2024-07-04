@@ -5533,6 +5533,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@socialgouv/cdtn-ui@workspace:packages/react-ui"
   dependencies:
+    "@codegouvfr/react-dsfr": ^1.9.21
     "@reach/dialog": 0.15.3
     "@socialgouv/eslint-config-react": ^1.75.0
     "@socialgouv/react-accessible-accordion": 4.1.1

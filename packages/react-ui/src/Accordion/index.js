@@ -1,26 +1,10 @@
-import { AccordionItemHeading } from "@socialgouv/react-accessible-accordion";
+import { Accordion } from "@codegouvfr/react-dsfr/Accordion";
 import PropTypes from "prop-types";
 import React from "react";
-import styled from "styled-components";
 
-import { Heading } from "../Titles/Heading";
-import * as variants from "./components/variants/index.js";
 import { VerticalArrow as AccordionArrow } from "./components/VerticalArrow";
 
-export const Accordion = ({
-  items,
-  disableStyles,
-  variant,
-  titleLevel,
-  ...props
-}) => {
-  /* eslint-disable import/namespace */
-  const AccordionVariant = variants[variant].Accordion;
-  const AccordionItem = variants[variant].Item;
-  const AccordionItemButton = variants[variant].ItemButton;
-  const AccordionItemPanel = variants[variant].ItemPanel;
-  /* eslint-enable */
-
+export const AccordionCustom = ({ items, ...props }) => {
   React.useEffect(() => {
     if (props?.preExpanded?.length && props.preExpanded[0]?.length) {
       try {
@@ -33,56 +17,19 @@ export const Accordion = ({
       }
     }
   }, [props.preExpanded]);
+
   return (
-    <AccordionVariant
-      {...props}
-      allowZeroExpanded
-      allowMultipleExpanded
-      preExpanded={props.preExpanded ?? []}
-    >
-      {items.map(({ body, icon, id, title }, index) => (
+    <div className="fr-accordions-group">
+      {items.map(({ body, id, title }, index) => (
         <div id={id} key={`${id}-${index}`}>
-          <AccordionItem
-            index={index}
-            uuid={id}
-            isLast={index === items.length - 1}
-          >
-            <AccordionItemHeading>
-              <AccordionItemButton
-                icon={icon}
-                index={index}
-                isLast={index === items.length - 1}
-                disableStyles={disableStyles}
-              >
-                {titleLevel && titleLevel <= 6 ? (
-                  <Heading
-                    as={"h" + titleLevel}
-                    stripe="none"
-                    style={{ margin: 0 }}
-                    dataTestid={
-                      props["data-testid"]
-                        ? `${props["data-testid"]}-${index}`
-                        : undefined
-                    }
-                  >
-                    {title}
-                  </Heading>
-                ) : (
-                  <p>{title}</p>
-                )}
-              </AccordionItemButton>
-            </AccordionItemHeading>
-            <AccordionItemPanel>
-              <AccordionItemPanelContent>{body}</AccordionItemPanelContent>
-            </AccordionItemPanel>
-          </AccordionItem>
+          <Accordion label={title}>{body}</Accordion>
         </div>
       ))}
-    </AccordionVariant>
+    </div>
   );
 };
 
-Accordion.propTypes = {
+AccordionCustom.propTypes = {
   "data-testid": PropTypes.string,
   disableStyles: PropTypes.bool,
   items: PropTypes.arrayOf(
@@ -98,20 +45,9 @@ Accordion.propTypes = {
   variant: PropTypes.oneOf(["base", "tile", "hierarchy"]),
 };
 
-Accordion.defaultProps = {
+AccordionCustom.defaultProps = {
   preExpanded: [],
   variant: "base",
 };
-
-const AccordionItemPanelContent = styled.div`
-  & > div:first-child > *:first-child,
-  & > *:first-child {
-    margin-top: 0;
-  }
-
-  & > *:last-child {
-    margin-bottom: 0;
-  }
-`;
 
 export { AccordionArrow };
