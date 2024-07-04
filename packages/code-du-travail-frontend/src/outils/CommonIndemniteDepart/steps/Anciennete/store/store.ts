@@ -18,10 +18,10 @@ import {
   SupportedCc,
 } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
-import { customSeniorityValidator } from "../../../agreements/seniority";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
+import { validateStep } from "./validator";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -111,11 +111,10 @@ const createAncienneteStore: StoreSlice<
       applyGenericValidation(get, set, "hasAbsenceProlonge", value);
     },
     onNextStep: () => {
-      const { isValid, errorState } = customSeniorityValidator(
+      const { isValid, errorState } = validateStep(
         get().ancienneteData.input,
         get().contratTravailData.input,
-        get().informationsData.input,
-        get().agreementData.input.agreement
+        get().informationsData.input
       );
       let errorEligibility;
 
@@ -197,11 +196,10 @@ const applyGenericValidation = (
       draft.ancienneteData.input[paramName as string] = value;
     });
 
-    const { isValid, errorState } = customSeniorityValidator(
+    const { isValid, errorState } = validateStep(
       nextState.ancienneteData.input,
       nextState.contratTravailData.input,
-      get().informationsData.input,
-      get().agreementData.input.agreement
+      get().informationsData.input
     );
     set(
       produce((state: AncienneteStoreSlice) => {
