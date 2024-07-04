@@ -12,6 +12,7 @@ style-src 'self' 'unsafe-inline';
 font-src 'self' data: blob:;
 worker-src 'self' blob:;
 child-src 'self' blob:;
+connect-src 'self' https://geo.api.gouv.fr;
 `;
 
 const sentryConfig = {
