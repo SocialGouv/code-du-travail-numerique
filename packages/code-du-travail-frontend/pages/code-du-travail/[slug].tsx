@@ -10,11 +10,15 @@ import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
-import { handleError } from "../../src/lib/fetch-error";
-import { SITE_URL } from "../../src/config";
+import { getBySourceAndSlugItems } from "../../src/api";
 
-const fetchFiche = ({ slug }) =>
-  fetch(`${SITE_URL}/api/items/code_du_travail/${slug}`);
+type RelatedItem = {
+  description: string;
+  reco: string;
+  slug: string;
+  source: string;
+  title: string;
+};
 
 interface Props {
   breadcrumbs: Breadcrumb[];
@@ -25,7 +29,7 @@ interface Props {
   html;
   notaHtml;
   referencedTexts;
-  relatedItems: Array<any>;
+  relatedItems: Array<RelatedItem>;
 }
 
 function Fiche(props: Props): JSX.Element {
@@ -62,11 +66,7 @@ function Fiche(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const response = await fetchFiche(query);
-  if (!response.ok) {
-    return handleError(response);
-  }
-  const data = await response.json();
+  const data = await getBySourceAndSlugItems("code_du_travail", query.slug);
   return { props: { relatedItems: data.relatedItems, ...data._source } };
 };
 

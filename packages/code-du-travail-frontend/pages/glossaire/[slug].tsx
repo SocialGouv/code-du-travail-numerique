@@ -16,6 +16,8 @@ import Metas from "../../src/common/Metas";
 import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
+import { NotFoundError } from "../../src/api/utils";
+import { getGlossary } from "../../src/api";
 
 interface Props {
   term: string;
@@ -74,11 +76,17 @@ function Term(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query: { slug } }) => {
-  const responseContainer = await fetch(`${SITE_URL}/api/glossary/${slug}`);
-  if (!responseContainer.ok) {
-    return handleError(responseContainer);
+  const glossaryData = await getGlossary();
+
+  const [term] = glossaryData.filter((term) => slug === term.slug);
+
+  if (!term) {
+    throw new NotFoundError({
+      message: `there is no glossary term that match slug ${slug}`,
+      name: "GLOSSARY_TERM_NOT_FOUND",
+      cause: null,
+    });
   }
-  const term = await responseContainer.json();
   return { props: term };
 };
 

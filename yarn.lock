@@ -5582,6 +5582,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@socialgouv/code-du-travail@workspace:."
   dependencies:
+    async_hooks: ^1.0.0
     husky: ^8.0.0
     is-ci: ^3.0.0
     lerna: ^5.0.0
@@ -8952,6 +8953,13 @@ __metadata:
   version: 3.2.4
   resolution: "async@npm:3.2.4"
   checksum: 43d07459a4e1d09b84a20772414aa684ff4de085cbcaec6eea3c7a8f8150e8c62aa6cd4e699fe8ee93c3a5b324e777d34642531875a0817a35697522c1b02e89
+  languageName: node
+  linkType: hard
+
+"async_hooks@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "async_hooks@npm:1.0.0"
+  checksum: d31a4cb971a980b095cde18879598d1b196b32cb38905d1c2ed0aca7ebc7e040344af52fe2dedba410a1eaf4bc12d63db797b91285048387cac78319a6366901
   languageName: node
   linkType: hard
 

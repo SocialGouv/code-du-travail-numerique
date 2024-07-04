@@ -42,13 +42,7 @@ function Glossaire({ glossary }) {
 
 export async function getStaticProps() {
   try {
-    let data: any;
-    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-      const response = await fetch(`${SITE_URL}/api/glossary`);
-      data = await response.json();
-    } else {
-      data = await getGlossary();
-    }
+    const data: any = await getGlossary();
     return { props: { glossary: data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);

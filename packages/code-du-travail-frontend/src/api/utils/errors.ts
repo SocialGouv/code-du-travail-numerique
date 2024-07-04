@@ -31,6 +31,7 @@ export class NotFoundError extends ErrorBase<
   | "GLOSSARY_TERM_NOT_FOUND"
   | "STATS_NOT_FOUND"
   | "ITEMS_NOT_FOUND"
+  | "CDT_NOT_FOUND"
 > {}
 
 export const DEFAULT_ERROR_500_MESSAGE =
