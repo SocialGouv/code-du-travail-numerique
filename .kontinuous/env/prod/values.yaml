@@ -34,17 +34,15 @@ app:
   redirectFrom:
     - www.code.travail.gouv.fr
     - code.travail.fabrique.social.gouv.fr
-  autoscale:
-    minReplicas: 2
-    maxReplicas: 10
-    enabled: true
   resources:
     limits:
-      cpu: 700m
+      cpu: 900m
       memory: 1536Mi
     requests:
-      cpu: 600m
+      cpu: 800m
       memory: 1280Mi
+  autoscale:
+    enabled: true
     annotations:
       oblik.socialgouv.io/min-request-cpu: 600m
       oblik.socialgouv.io/min-request-memory: 1280Mi
