@@ -18,12 +18,16 @@ const sources = [
 // select certain fields and add recommendation source (covisits or search)
 const mapSource =
   (reco: string) =>
-  ({ description, slug, source, title }: any) => ({
+  ({ action, description, icon, slug, source, subtitle, title, url }: any) => ({
+    action,
     description,
+    icon,
     reco,
     slug,
     source,
+    subtitle,
     title,
+    url,
   });
 
 // rely on covisit links within the item, computed offline from usage logs (Monolog)
@@ -68,14 +72,11 @@ export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {
 // use search based on item title : More Like This & Semantic
 export const getSearchBasedItems = async ({ settings }: { settings: any }) => {
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
-  console.log("relatedItemBody", relatedItemBody);
   const requestBodies = [{ index: elasticDocumentsIndex }, relatedItemBody];
 
   const {
     responses: [esResponse = {}],
   }: any = await elasticsearchClient.msearch({ body: requestBodies });
-
-  console.log("esResponse", JSON.stringify(esResponse.hits.hits[0]));
 
   const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
 
@@ -95,7 +96,6 @@ export const getRelatedItems = async ({
   const covisitedItems = covisits ? await getCovisitedItems({ covisits }) : [];
 
   const searchBasedItems = await getSearchBasedItems({ settings });
-  // console.log("searchBasedItems", searchBasedItems);
 
   const filteredItems = covisitedItems
     .concat(searchBasedItems)

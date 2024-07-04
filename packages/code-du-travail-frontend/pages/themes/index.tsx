@@ -73,7 +73,13 @@ const ThemesPage = ({ children = [] }) => (
 
 export async function getStaticProps() {
   try {
-    let data = await getAllThemes();
+    let data: any;
+    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
+      const response = await fetch(`${SITE_URL}/api/themes`);
+      data = await response.json();
+    } else {
+      data = await getAllThemes();
+    }
     return { props: { children: data.children }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);

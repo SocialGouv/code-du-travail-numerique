@@ -1,14 +1,10 @@
 import { Tool } from "@socialgouv/cdtn-types";
-import { getBySlugTools } from "../api";
+import { SITE_URL } from "../config";
 
-type FetchTool = Partial<Tool>;
-
-export const fetchTool = async (
-  slug: string
-): Promise<FetchTool | undefined> => {
-  const result = await getBySlugTools(slug);
-  return {
-    ...result._source,
-    _id: result._id,
-  };
+export const fetchTool = async (slug: string): Promise<Tool | undefined> => {
+  const responseContainer = await fetch(`${SITE_URL}/api/tools/${slug}`);
+  if (responseContainer.ok) {
+    const result = await responseContainer.json();
+    return { ...result._source, _id: result._id };
+  }
 };

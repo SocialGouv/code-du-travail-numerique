@@ -15,7 +15,6 @@ import {
   EditorialContentBaseContentPart,
   EditorialContentElasticDocument,
 } from "@socialgouv/cdtn-types";
-import { getBySourceAndSlugItems } from "../../src/api";
 
 export type EditorialContentDataWrapper = {
   information: {
@@ -93,10 +92,13 @@ const Information = ({
 export default Information;
 
 export const getServerSideProps = async ({ query }) => {
-  const information = await getBySourceAndSlugItems(
-    SOURCES.EDITORIAL_CONTENT,
-    query
+  const responseContainer = await fetch(
+    `${SITE_URL}/api/items/${SOURCES.EDITORIAL_CONTENT}/${query.slug}`
   );
+  if (!responseContainer.ok) {
+    return { notFound: true };
+  }
+  const information = await responseContainer.json();
 
   return { props: { information, slug: query.slug } };
 };

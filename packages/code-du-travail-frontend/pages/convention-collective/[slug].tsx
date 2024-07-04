@@ -9,10 +9,11 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Convention from "../../src/conventions/Convention";
 import { Layout } from "../../src/layout/Layout";
+import { SITE_URL } from "../../src/config";
 import { apiIdcc } from "../../src/conventions/Search/api/agreement.service";
 import { addPrefixAgreementTitle } from "../../src/conventions/utils";
 import Head from "next/head";
-import { getBySlugAgreements } from "../../src/api";
+import { handleError } from "../../src/lib/fetch-error";
 
 interface Props {
   convention;
@@ -97,7 +98,11 @@ export const getServerSideProps = async ({ query }) => {
     }
     return { redirect: { destination: conventions[0].slug, permanent: true } };
   }
-  const convention = await getBySlugAgreements(query.slug);
+  const res = await fetch(`${SITE_URL}/api/agreements/${query.slug}`);
+  if (!res.ok) {
+    return handleError(res);
+  }
+  const convention = await res.json();
   return { props: { convention } };
 };
 

@@ -7,7 +7,6 @@ import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import { LetterModel, LetterModelProps, getTitle } from "../../src/modeles";
 import Answer from "../../src/common/Answer";
-import { getBySourceAndSlugItems } from "../../src/api";
 
 const fetchCourrier = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/modeles_de_courriers/${slug}`);
@@ -50,7 +49,12 @@ function ModeleCourrier(props: LetterModelProps): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const data = await getBySourceAndSlugItems("modeles_de_courriers", query);
+  const response = await fetchCourrier(query);
+  if (!response.ok) {
+    return handleError(response);
+  }
+
+  const data = await response.json();
   return {
     props: {
       relatedItems: data.relatedItems,

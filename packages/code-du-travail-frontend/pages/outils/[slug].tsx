@@ -26,7 +26,6 @@ import {
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
 } from "../../src/outils";
-import { getBySourceAndSlugItems } from "../../src/api";
 
 const toolsBySlug = {
   "convention-collective": AgreementSearch,
@@ -117,23 +116,29 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     metaTitle,
     metaDescription,
   } = tool;
-  if (!slug) {
-    return {
-      notFound: true,
-    };
+  let relatedItems = [];
+  try {
+    const response = await fetch(
+      `${SITE_URL}/api/items/${SOURCES.TOOLS}/${slug}`
+    );
+    if (response.ok) {
+      relatedItems = await response.json().then((data) => data.relatedItems);
+    }
+  } catch (e) {
+    console.error(e);
+    Sentry.captureException(e);
   }
-  const { relatedItems } = await getBySourceAndSlugItems(SOURCES.TOOLS, slug);
 
   return {
     props: {
-      description: description ?? "",
-      icon: icon ?? "",
+      description,
+      icon,
       relatedItems,
-      slug: slug ?? "",
-      title: title ?? "",
-      displayTitle: displayTitle ?? "",
-      metaTitle: metaTitle ?? "",
-      metaDescription: metaDescription ?? "",
+      slug,
+      title,
+      displayTitle,
+      metaTitle,
+      metaDescription,
     },
   };
 };

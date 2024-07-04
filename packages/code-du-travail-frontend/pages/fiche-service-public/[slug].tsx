@@ -9,7 +9,6 @@ import { Layout } from "../../src/layout/Layout";
 import { Breadcrumb } from "@socialgouv/cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
-import { getBySourceAndSlugItems } from "../../src/api";
 
 const fetchFiche = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/fiches_service_public/${slug}`);
@@ -65,7 +64,12 @@ function Fiche(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const data = await getBySourceAndSlugItems("fiches_service_public", query);
+  const response = await fetchFiche(query);
+  if (!response.ok) {
+    return handleError(response);
+  }
+
+  const data = await response.json();
   if (data._source.raw) {
     data._source.raw = JSON.parse(data._source.raw);
   }

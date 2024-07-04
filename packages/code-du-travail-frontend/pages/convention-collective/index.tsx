@@ -81,7 +81,13 @@ export default Page;
 
 export async function getStaticProps() {
   try {
-    const data: any = await getAllAgreements();
+    let data: any;
+    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
+      const response = await fetch(`${SITE_URL}/api/agreements`);
+      data = await response.json();
+    } else {
+      data = await getAllAgreements();
+    }
     return { props: { ccs: data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);

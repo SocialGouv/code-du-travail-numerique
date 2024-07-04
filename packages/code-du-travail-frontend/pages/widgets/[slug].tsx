@@ -98,12 +98,12 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 
   return {
     props: {
-      icon: icon ?? "",
-      slug: slug ?? "",
-      title: title ?? "",
-      displayTitle: displayTitle ?? "",
-      metaDescription: metaDescription ?? "",
-      metaTitle: metaTitle ?? "",
+      icon,
+      slug,
+      title,
+      displayTitle,
+      metaDescription,
+      metaTitle,
     },
   };
 };

@@ -13,9 +13,6 @@ import { SITE_URL } from "../../../src/config";
 import { Layout } from "../../../src/layout/Layout";
 import { AgreementSearch, fetchTool } from "../../../src/outils";
 import { Flex, ShareContainer } from "../[slug]";
-import { getBySlugTools } from "../../../src/api";
-import { SearchHit } from "@elastic/elasticsearch/lib/api/types";
-import { Tool } from "@socialgouv/cdtn-types";
 
 export interface Props {
   description: string;
@@ -70,12 +67,12 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
       notFound: true,
     };
   }
-  // const tool = await fetchTool("convention-collective");
-  const result: SearchHit<Tool> = await getBySlugTools(slug);
-  const tool = {
-    ...result._source,
-    _id: result._id,
-  };
+  const tool = await fetchTool("convention-collective");
+  if (!tool) {
+    return {
+      notFound: true,
+    };
+  }
 
   const { description, icon, title, displayTitle, metaTitle, metaDescription } =
     tool;
@@ -93,13 +90,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   }
   return {
     props: {
-      description: description ?? "",
-      icon: icon ?? "",
+      description,
+      icon,
       relatedItems,
-      title: title ?? "",
-      displayTitle: displayTitle ?? "",
-      metaTitle: metaTitle ?? "",
-      metaDescription: metaDescription ?? "",
+      title,
+      displayTitle,
+      metaTitle,
+      metaDescription,
     },
   };
 };

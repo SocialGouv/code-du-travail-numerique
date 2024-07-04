@@ -100,7 +100,13 @@ export async function getStaticProps() {
   let agreements: GetHomePage["agreements"] = [];
 
   try {
-    const data = await getHomeData();
+    let data: GetHomePage;
+    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
+      const response = await fetch(`${SITE_URL}/api/home`);
+      data = await response.json();
+    } else {
+      data = await getHomeData();
+    }
     themes = data.themes.children;
     highlights = data.highlights;
     tools = data.tools.map(({ _id, _source }) => ({ ..._source, _id }));

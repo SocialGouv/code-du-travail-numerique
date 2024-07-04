@@ -190,7 +190,13 @@ export async function getStaticProps() {
   let informations: GetSitemapPage["informations"] = [];
 
   try {
-    const data = await getSitemapData();
+    let data: GetSitemapPage;
+    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
+      const response = await fetch(`${SITE_URL}/api/plan-du-site`);
+      data = await response.json();
+    } else {
+      data = await getSitemapData();
+    }
     themes = data.themes;
     tools = data.tools;
     contributions = data.contributions;

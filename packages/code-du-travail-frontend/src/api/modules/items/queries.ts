@@ -98,7 +98,16 @@ export const getRelatedItemsBody = ({
   sources: any[];
 }): any => {
   return {
-    _source: ["title", "source", "slug", "description", "cdtnId"],
+    _source: [
+      "title",
+      "source",
+      "slug",
+      "description",
+      "url",
+      "action",
+      "icon",
+      "cdtnId",
+    ],
     query: {
       bool: {
         filter: [
