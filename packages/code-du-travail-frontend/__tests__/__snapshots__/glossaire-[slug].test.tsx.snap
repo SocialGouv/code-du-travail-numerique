@@ -3,38 +3,38 @@
 exports[`<Term /> should render 1`] = `
 <div>
   <div
-    class="sc-eIcdZJ cLCduI"
+    class="sc-gweoQa bnxmsR"
   >
     <div
-      class="sc-jdUcAg kriaHo"
+      class="sc-eIcdZJ jZjaFB"
     />
     <header
-      class="sc-hBtRBD eNRbnf"
+      class="sc-fUBkdm cdIumq"
     >
       <div
-        class="sc-hYmls gfLDKb"
+        class="sc-hBtRBD hhFrKi"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-aXZVg sc-gEkIjz gZgZQL gjeOiA"
+        class="sc-aXZVg sc-eXsaLi gZgZQL hTNWeq"
       >
         <a
-          class="sc-hoLEA jMWIzX"
+          class="sc-gEkIjz eZnYXg"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-bOhtcR OoGsH"
+            class="sc-hoLEA cAIauw"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-fFlnrN foaHVq"
+            class="sc-bOhtcR fxvZkA"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ exports[`<Term /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-gweoQa fZVcwr"
+          class="sc-camqpD jBVvSj"
         >
           <form
             action="/recherche"
-            class="sc-dQEtJz dDGKmp"
+            class="sc-deXhhX dCERfw"
             role="search"
           >
             <div
@@ -82,7 +82,7 @@ exports[`<Term /> should render 1`] = `
               aria-expanded="false"
               aria-labelledby="downshift-:r0:-label"
               autocomplete="off"
-              class="sc-iLsKjm cykCX"
+              class="sc-epALIP byJirg"
               id="floating-search"
               placeholder="Rechercher"
               role="combobox"
@@ -91,19 +91,19 @@ exports[`<Term /> should render 1`] = `
             />
             <ul
               aria-labelledby="downshift-:r0:-label"
-              class="sc-lbJcrp kokiBX"
+              class="sc-iLsKjm jreAvU"
               id="downshift-:r0:-menu"
               role="listbox"
             />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz kyVwqT sc-epALIP hCiGPx"
+              class="sc-kOPcWz kyVwqT sc-dJiZtA hVSvKc"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-imwsjW kdnIoO"
+                class="sc-dQEtJz gghWjv"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -117,11 +117,11 @@ exports[`<Term /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-bOQTJJ enQbXO"
+          class="sc-hYmls jvwQAF"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-camqpD fZZIzR"
+            class="sc-kbdlSk dVYOry"
             href="/recherche"
             rel="nofollow"
           >
@@ -139,17 +139,17 @@ exports[`<Term /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-kbdlSk iUBUcS"
+          class="sc-fFlnrN dIbHpx"
         >
           <button
-            class="sc-kOPcWz cOwJar sc-tagGq sc-eXsaLi bZXUzd bPnIjZ"
+            class="sc-kOPcWz cOwJar sc-tagGq sc-bOQTJJ bZXUzd diAojX"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-fKWMtX kNVIOp"
+          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-eifrsQ hKKQkM"
         >
           <svg
             aria-hidden="true"
@@ -169,7 +169,7 @@ exports[`<Term /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-bddgXz dtqZxK"
+      class="sc-jdUcAg kmqmj"
       id="content"
       tabindex="-1"
     >
