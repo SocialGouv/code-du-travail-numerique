@@ -34,8 +34,6 @@ app:
   redirectFrom:
     - www.code.travail.gouv.fr
     - code.travail.fabrique.social.gouv.fr
-  autoscale:
-    enabled: true
   resources:
     limits:
       cpu: 900m
