@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.146.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.145.1...v4.146.0) (2024-07-04)
+
+### Bug Fixes
+
+- bug CC 1517 validation notif ne fonctionne pas ([#6009](https://github.com/SocialGouv/code-du-travail-numerique/issues/6009)) ([9a1dbf1](https://github.com/SocialGouv/code-du-travail-numerique/commit/9a1dbf146becad1490f8db79d3c85266829b0fea))
+- **search:** clean deps + highlight dans la recherche ([#6016](https://github.com/SocialGouv/code-du-travail-numerique/issues/6016)) ([e813007](https://github.com/SocialGouv/code-du-travail-numerique/commit/e81300713cae0477d88e13fce85be2965da6b329))
+
+### Features
+
+- **cc non étendues:** suppression de tous les simulateurs des CC non étendues 29, 413 et 2420 ([#5998](https://github.com/SocialGouv/code-du-travail-numerique/issues/5998)) ([3d4d0af](https://github.com/SocialGouv/code-du-travail-numerique/commit/3d4d0afb185ec0677f9433c742572f733cc50355))
+- **recherche-entreprise:** utilisation d'annuaire entreprise ([#5631](https://github.com/SocialGouv/code-du-travail-numerique/issues/5631)) ([beef24f](https://github.com/SocialGouv/code-du-travail-numerique/commit/beef24f82970e7ced658d87e0f9ef4cd9247de7b))
+
 ## [4.145.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.145.0...v4.145.1) (2024-06-27)
 
 ### Bug Fixes
