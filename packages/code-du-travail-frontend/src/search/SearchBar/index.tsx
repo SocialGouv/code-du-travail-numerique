@@ -116,7 +116,7 @@ const SearchBar = ({
               isHighlighted={highlightedIndex === index}
               key={`${item}${index}`}
             >
-              item
+              {item}
             </StyledSuggestion>
           ))}
       </StyledList>

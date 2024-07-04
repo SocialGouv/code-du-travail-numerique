@@ -3,38 +3,38 @@
 exports[`<Recherche /> should render 1`] = `
 <div>
   <div
-    class="sc-cyRcrZ gjBWZE"
+    class="sc-bvgPty erOqxR"
   >
     <div
-      class="sc-kUdmhA bpiyAA"
+      class="sc-cyRcrZ YBNMx"
     />
     <header
-      class="sc-jdUcAg doqBPP"
+      class="sc-eIcdZJ jBuosG"
     >
       <div
-        class="sc-bddgXz kkJWdj"
+        class="sc-jdUcAg gPiBgu"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-aXZVg sc-jdkBTo gZgZQL jNrRbY"
+        class="sc-aXZVg sc-eHsDsR gZgZQL bflkSb"
       >
         <a
-          class="sc-fmzyuX hPTjLB"
+          class="sc-jdkBTo cXJWrc"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-cspYLC hrpNrB"
+            class="sc-fmzyuX BKjem"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-dwalKd jxsfat"
+            class="sc-cspYLC dUmsPW"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,17 +58,17 @@ exports[`<Recherche /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-BQMaI cCGDyl"
+          class="sc-dwalKd hBkSSm"
         >
           <button
-            class="sc-kOPcWz cOwJar sc-tagGq sc-eHsDsR bZXUzd jeXpOg"
+            class="sc-kOPcWz cOwJar sc-tagGq sc-fyVfxW bZXUzd fRQnWD"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-fFlnrN cMqjBE"
+          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-bOhtcR grtzTG"
         >
           <svg
             aria-hidden="true"
@@ -88,7 +88,7 @@ exports[`<Recherche /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-hgRRfv jRurkG"
+      class="sc-kUdmhA iUKMOz"
       id="content"
       tabindex="-1"
     >
@@ -108,11 +108,11 @@ exports[`<Recherche /> should render 1`] = `
           </h1>
         </header>
         <div
-          class="sc-emIrwa hZMmWh"
+          class="sc-hgRRfv eDuvTP"
         >
           <form
             action="/recherche"
-            class="sc-fUBkdm hYdaqy"
+            class="sc-cMa-dbN bygzub"
             role="search"
           >
             <div
@@ -132,7 +132,7 @@ exports[`<Recherche /> should render 1`] = `
               aria-expanded="false"
               aria-labelledby="downshift-:r0:-label"
               autocomplete="off"
-              class="sc-gEkIjz ihmYtE"
+              class="sc-eXsaLi cRNLOq"
               id="search-input"
               placeholder="congés payés, durée de préavis"
               role="combobox"
@@ -141,19 +141,19 @@ exports[`<Recherche /> should render 1`] = `
             />
             <ul
               aria-labelledby="downshift-:r0:-label"
-              class="sc-hoLEA dbnMIx"
+              class="sc-gEkIjz eHkyJK"
               id="downshift-:r0:-menu"
               role="listbox"
             />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz cefBoA sc-bOQTJJ hJnDeP"
+              class="sc-kOPcWz cefBoA sc-hYmls bDWAkA"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-hBtRBD iUiOtB"
+                class="sc-fUBkdm hLHJqE"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +177,7 @@ exports[`<Recherche /> should render 1`] = `
           class="sc-aXZVg gZgZQL"
         >
           <div
-            class="sc-iGgWBj sc-gRtvSG cRLRjd eTDrfZ"
+            class="sc-iGgWBj sc-emIrwa cRLRjd dqmLhL"
           >
             <strong
               aria-level="2"
@@ -190,7 +190,7 @@ exports[`<Recherche /> should render 1`] = `
               Vous n’avez pas trouvé ce que vous cherchiez ? Essayez …
             </strong>
             <div
-              class="sc-dUYLmH itnGre"
+              class="sc-gRtvSG gMTBLM"
             >
               <button
                 class="sc-kOPcWz cpQXMn"
