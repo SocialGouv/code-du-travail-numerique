@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.146.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.2...v4.146.3) (2024-07-05)
+
+### Bug Fixes
+
+- **csp:** optimisation des permissions ([#6023](https://github.com/SocialGouv/code-du-travail-numerique/issues/6023)) ([6a45e1d](https://github.com/SocialGouv/code-du-travail-numerique/commit/6a45e1dee3417072b16a316034c7dc06e76102a9))
+- **recherche:** mettre en place des messages d'erreur en mode hors-ligne ([#6021](https://github.com/SocialGouv/code-du-travail-numerique/issues/6021)) ([379246e](https://github.com/SocialGouv/code-du-travail-numerique/commit/379246ebeb14ea91df9f23e2a88f32445dd10bc3))
+
 ## [4.146.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.1...v4.146.2) (2024-07-05)
 
 ### Bug Fixes
