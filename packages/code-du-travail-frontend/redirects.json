@@ -1071,17 +1071,17 @@
   },
   {
     "source": "/convention-collective/(7012|7012(?:-[a-z0-9-]+)?)",
-    "destination": "/convention-collective/personnels-des-activites-hippiques",
+    "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
     "permanent": true
   },
   {
     "source": "/convention-collective/(7013|7013(?:-[a-z0-9-]+)?)",
-    "destination": "/convention-collective/personnels-des-activites-hippiques",
+    "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
     "permanent": true
   },
   {
     "source": "/convention-collective/(7014|7014(?:-[a-z0-9-]+)?)",
-    "destination": "/convention-collective/personnels-des-activites-hippiques",
+    "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
     "permanent": true
   },
   {
@@ -1107,6 +1107,11 @@
   {
     "source": "/convention-collective/(1734|1734(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/2642-production-audiovisuelle",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/personnels-des-activites-hippiques",
+    "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
     "permanent": true
   }
 ]
