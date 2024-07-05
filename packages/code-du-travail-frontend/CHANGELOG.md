@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.146.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.1...v4.146.2) (2024-07-05)
+
+### Bug Fixes
+
+- **agreement:** mise à jour de l'URL pour la convention collective 7026 ([#6012](https://github.com/SocialGouv/code-du-travail-numerique/issues/6012)) ([c223b42](https://github.com/SocialGouv/code-du-travail-numerique/commit/c223b42425b0c18374b96bd58de20effdb163bea))
+- **csp:** add matomo to connect-src ([c683b57](https://github.com/SocialGouv/code-du-travail-numerique/commit/c683b57c8eeb1e1742eec788613207e563208d3e))
+- **widget search:** ne pas crasher si l'on ne peut pas accéder à la méthod ResizeObserver ([#6005](https://github.com/SocialGouv/code-du-travail-numerique/issues/6005)) ([28bdeb9](https://github.com/SocialGouv/code-du-travail-numerique/commit/28bdeb90bc8e39c05783f0ca406b4f5f1bcbbd0f))
+
 ## [4.146.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.0...v4.146.1) (2024-07-04)
 
 ### Bug Fixes
