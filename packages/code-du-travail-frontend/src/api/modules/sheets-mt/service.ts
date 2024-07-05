@@ -24,12 +24,9 @@ export const getSheetsMtService = async (slug: string) => {
   const sheetMT = response.hits.hits[0];
 
   const relatedItems = await getRelatedItems({
-    covisits: sheetMT._source.covisits,
     settings: sheetMT._source.title,
     slug,
   });
-
-  delete sheetMT._source.covisits;
 
   return {
     ...sheetMT,

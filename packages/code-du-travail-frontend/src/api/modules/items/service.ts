@@ -22,18 +22,12 @@ export const getBySourceAndSlugItems = async (source: any, slug: string) => {
 
   const item = response.hits.hits[0];
 
-  const {
-    _id,
-    _source: { covisits },
-  } = item;
+  const { _id } = item;
 
   const relatedItems = await getRelatedItems({
-    covisits,
     settings: [{ _id }],
     slug,
   });
-
-  delete item._source.covisits;
 
   return {
     ...item,
