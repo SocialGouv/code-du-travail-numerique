@@ -108,18 +108,18 @@ export const SearchEnterpriseInput = ({
           />
         </Box>
       </Flex>
-      <EntrepriseSearchResults
-        handleEnterpriseSelection={handleEnterpriseSelection}
-        onUserAction={onUserAction}
-        state={state}
-        params={searchParams}
-      />
       {hasLocationSearchError && (
         <Error>
           Une erreur est survenue lors de la recherche par ville, veuillez
           réessayer plus tard.
         </Error>
       )}
+      <EntrepriseSearchResults
+        handleEnterpriseSelection={handleEnterpriseSelection}
+        onUserAction={onUserAction}
+        state={state}
+        params={searchParams}
+      />
     </>
   );
 };
