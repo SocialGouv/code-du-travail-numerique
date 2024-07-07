@@ -1,13 +1,7 @@
-import { Input, InputDate, theme } from "@socialgouv/cdtn-ui";
 import React, { FunctionComponent, useEffect, useState } from "react";
-
-import styled from "styled-components";
 import Html from "../../common/Html";
-import { Error } from "../common/ErrorField";
-import { Question, Tooltip } from "../common/Question";
-import { SmallText } from "../common/stepStyles";
-import { SubLabel } from "./SelectQuestion";
-import { xssWrapper } from "../../lib";
+import { Tooltip } from "../common/Question";
+import { Input } from "@codegouvfr/react-dsfr/Input";
 
 type Props = {
   onChange: (value: string) => void;
@@ -46,7 +40,6 @@ export default function TextQuestion({
   text,
   autoFocus = false,
 }: Props) {
-  const InputComponent = inputType === "date" ? InputDate : Input;
   const [inputRef, setInputRef] = useState<HTMLInputElement>();
   useEffect(() => {
     if (inputRef && error) {
@@ -54,7 +47,25 @@ export default function TextQuestion({
     }
   }, [inputRef, error]);
   return (
-    <Wrapper>
+    <Input
+      hintText={subLabel}
+      label={<Html as="span">{label}</Html>}
+      state={error ? "error" : "default"}
+      stateRelatedMessage={error}
+      nativeInputProps={{
+        type: inputType === "date" ? "date" : "text",
+        required: showRequired,
+        onChange(e) {
+          console.log("OnChange: ", e);
+          onChange(e.target.value);
+        },
+      }}
+    />
+  );
+}
+
+/*
+<Wrapper>
       <Question required={showRequired} tooltip={tooltip} htmlFor={id}>
         <Html as="span">{label}</Html>
       </Question>
@@ -93,20 +104,4 @@ export default function TextQuestion({
         </Error>
       )}
     </Wrapper>
-  );
-}
-
-const { spacings } = theme;
-
-const Wrapper = styled.div`
-  margin-bottom: ${spacings.base};
-`;
-
-const QuestionWrapper = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-export const ErrorWrapper = styled.div`
-  display: flex;
-`;
+ */

@@ -20,6 +20,17 @@ const About = () => {
         title="À propos"
         description="Service public gratuit pour faciliter l'accès au droit du travail. Obtenez une réponse détaillée à vos questions."
       />
+      <div className={"fr-container"}>
+        <div className={"fr-col-md-8 fr-col-sm-10 fr-col-12 fr-pb-md-12v"}>
+          <h1>À propos</h1>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+/*
+
       <Section>
         <Container narrow>
           <PageTitle subtitle="Apprenez-en plus sur notre histoire, notre équipe et nos méthodes">
@@ -147,7 +158,5 @@ const About = () => {
           </Wrapper>
         </Container>
       </Section>
-    </Layout>
-  );
-};
+ */
 export default About;

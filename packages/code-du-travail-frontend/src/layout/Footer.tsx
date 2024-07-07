@@ -68,7 +68,7 @@ const Footer = (): JSX.Element => {
                     </Link>
                   </li>
                   <li>
-                    <Link passHref href="/a-propos" legacyBehavior>
+                    <Link passHref href="/a-propos-dsfr" legacyBehavior>
                       <StyledLink>À propos</StyledLink>
                     </Link>
                   </li>

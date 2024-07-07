@@ -1,12 +1,6 @@
-import { Fieldset, InputRadio } from "@socialgouv/cdtn-ui";
 import React from "react";
-import styled from "styled-components";
-import Html from "../../common/Html";
-
-import { Error } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
-import { RadioContainer, SmallText } from "../common/stepStyles";
-import { SubLabel } from "./SelectQuestion";
+import RadioButtons from "@codegouvfr/react-dsfr/RadioButtons";
 
 type Question = {
   label: string;
@@ -46,9 +40,27 @@ export default function RadioQuestion({
   };
 
   return (
-    <>
-      <StyledFieldset>
-        <Question required={showRequired} tooltip={tooltip}>
+    <RadioButtons
+      hintText={subLabel}
+      legend={label}
+      name={name}
+      options={questions.map((question, index) => ({
+        label: question.label,
+        nativeInputProps: {
+          required: showRequired,
+          checked: selectedOption === question.value,
+          onChange: () => onChange(question.value),
+          "data-testid": `${name} - ${question.label}`,
+        },
+      }))}
+      state={error ? "error" : "default"}
+      stateRelatedMessage={error}
+    />
+  );
+}
+
+/*
+<Question required={showRequired} tooltip={tooltip}>
           <Html as="span">{label}</Html>
         </Question>
         {subLabel && <SubLabel>{subLabel}</SubLabel>}
@@ -69,11 +81,4 @@ export default function RadioQuestion({
           {error && <Error>{error}</Error>}
         </RadioContainer>
         {note && <SmallText as="i">{note}</SmallText>}
-      </StyledFieldset>
-    </>
-  );
-}
-
-export const StyledFieldset = styled(Fieldset)`
-  display: contents;
-`;
+ */
