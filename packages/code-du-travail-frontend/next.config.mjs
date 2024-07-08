@@ -62,7 +62,7 @@ const moduleExports = {
       },
       {
         key: "Report-To",
-        value: `{"group":"csp-endpoint","max_age":10886400,"endpoints":[{"url":"${process.env.NEXT_PUBLIC_SENTRY_BASE_URL}/api/${process.env.NEXT_PUBLIC_SENTRY_PROJECT_ID}/security/?sentry_key=${process.env.NEXT_PUBLIC_SENTRY_PUBLIC_KEY}"}],"include_subdomains":true}`,
+        value: `{"group":"sentry-default","max_age":10886400,"endpoints":[{"url":"${process.env.NEXT_PUBLIC_SENTRY_BASE_URL}/api/${process.env.NEXT_PUBLIC_SENTRY_PROJECT_ID}/security/?sentry_key=${process.env.NEXT_PUBLIC_SENTRY_PUBLIC_KEY}"}],"include_subdomains":true}`,
       },
     ];
     if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
