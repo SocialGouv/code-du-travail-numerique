@@ -1,3 +1,4 @@
+import { fr } from "@codegouvfr/react-dsfr";
 import { Accordion } from "@codegouvfr/react-dsfr/Accordion";
 import PropTypes from "prop-types";
 import React from "react";
@@ -19,7 +20,7 @@ export const AccordionCustom = ({ items, ...props }) => {
   }, [props.preExpanded]);
 
   return (
-    <div className="fr-accordions-group">
+    <div className={fr.cx("fr-accordions-group")}>
       {items.map(({ body, id, title }, index) => (
         <div id={id} key={`${id}-${index}`}>
           <Accordion label={title}>{body}</Accordion>
