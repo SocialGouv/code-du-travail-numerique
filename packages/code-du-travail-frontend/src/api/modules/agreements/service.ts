@@ -10,7 +10,7 @@ import {
   getAllAgreementsWithContributions,
 } from "./queries";
 import { ElasticSearchItem } from "../../types";
-import { ElasticAgreement } from "@socialgouv/cdtn-types";
+import { AgreementDoc, ElasticAgreement } from "@socialgouv/cdtn-types";
 import { nonNullable } from "@socialgouv/modeles-social";
 
 export const getAllAgreements = async (): Promise<ElasticAgreement[]> => {
@@ -56,7 +56,7 @@ export const getByIdsAgreements = async (
 export const getBySlugAgreements = async (slug: string) => {
   const body = await getAgreementBySlugBody(slug);
 
-  const response = await elasticsearchClient.search<any>({
+  const response = await elasticsearchClient.search<AgreementDoc[]>({
     body,
     index: elasticDocumentsIndex,
   });

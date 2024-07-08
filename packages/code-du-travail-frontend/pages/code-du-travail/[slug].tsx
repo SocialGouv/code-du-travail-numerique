@@ -1,5 +1,5 @@
 import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { Breadcrumb } from "@socialgouv/cdtn-types";
+import { Breadcrumb, LaborCodeArticle } from "@socialgouv/cdtn-types";
 import { Alert } from "@socialgouv/cdtn-ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
@@ -10,11 +10,7 @@ import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
-import { handleError } from "../../src/lib/fetch-error";
-import { SITE_URL } from "../../src/config";
-
-const fetchFiche = ({ slug }) =>
-  fetch(`${SITE_URL}/api/items/code_du_travail/${slug}`);
+import { getBySourceAndSlugItems } from "../../src/api";
 
 interface Props {
   breadcrumbs: Breadcrumb[];
@@ -62,11 +58,10 @@ function Fiche(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const response = await fetchFiche(query);
-  if (!response.ok) {
-    return handleError(response);
-  }
-  const data = await response.json();
+  const data = await getBySourceAndSlugItems<LaborCodeArticle>(
+    "code_du_travail",
+    query.slug
+  );
   return { props: { relatedItems: data.relatedItems, ...data._source } };
 };
 

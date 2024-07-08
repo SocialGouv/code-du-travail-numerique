@@ -9,6 +9,7 @@ import { Breadcrumb } from "@socialgouv/cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import { AccordionWithAnchor as Accordion } from "../../src/common/AccordionWithAnchor";
+import { getSheetsMtService } from "../../src/api";
 
 const fetchSheetMT = ({ slug }) => fetch(`${SITE_URL}/api/sheets-mt/${slug}`);
 
@@ -69,11 +70,7 @@ function Fiche(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const response = await fetchSheetMT(query);
-  if (!response.ok) {
-    return handleError(response);
-  }
-  const data = await response.json();
+  const data = await getSheetsMtService(query.slug);
   return { props: { relatedItems: data.relatedItems, ...data._source } };
 };
 
