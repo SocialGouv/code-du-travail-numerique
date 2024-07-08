@@ -2,7 +2,6 @@ import { ENTERPRISE_API_URL } from "../../../../config";
 import { Enterprise } from "../types";
 import { nafMapper } from "./naf";
 import { ApiRechercheEntrepriseResponse } from "./types";
-import { captureException } from "@sentry/nextjs";
 
 export type Convention = {
   idcc: number;
@@ -28,52 +27,44 @@ export const fetchEnterprises = async (
     postCode.length > 0 ? `&code_postal=${postCode.join(",")}` : ""
   }`;
 
-  try {
-    const fetchReq = await fetch(url);
+  const fetchReq = await fetch(url);
 
-    const jsonResponse: ApiRechercheEntrepriseResponse = await fetchReq.json();
+  const jsonResponse: ApiRechercheEntrepriseResponse = await fetchReq.json();
 
-    const entreprises = jsonResponse.results.map((result) => {
-      const conventions =
-        result.complements.liste_idcc?.map((idccNumber) => {
-          return {
-            idcc: parseInt(idccNumber, 10),
-            shortTitle: `Convention collective ${idccNumber}`,
-            id: idccNumber,
-            title: `Convention collective ${idccNumber}`,
-          };
-        }) ?? [];
+  const entreprises = jsonResponse.results.map((result) => {
+    const conventions =
+      result.complements.liste_idcc?.map((idccNumber) => {
+        return {
+          idcc: parseInt(idccNumber, 10),
+          shortTitle: `Convention collective ${idccNumber}`,
+          id: idccNumber,
+          title: `Convention collective ${idccNumber}`,
+        };
+      }) ?? [];
 
-      const firstMatchingEtablissement =
-        result.matching_etablissements.length > 0
-          ? {
-              siret: result.matching_etablissements[0].siret,
-              address: result.matching_etablissements[0].adresse,
-            }
-          : { siret: result.siege.siret, address: result.siege.adresse };
-
-      return {
-        activitePrincipale: `${nafMapper[result.activite_principale]}`,
-        etablissements: result.nombre_etablissements_ouverts,
-        highlightLabel: result.nom_complet,
-        label: result.nom_complet,
-        simpleLabel: result.nom_complet,
-        matching: result.nombre_etablissements_ouverts,
-        siren: result.siren,
-        address: result.siege.adresse,
-        firstMatchingEtablissement,
-        conventions,
-      };
-    });
+    const firstMatchingEtablissement =
+      result.matching_etablissements.length > 0
+        ? {
+            siret: result.matching_etablissements[0].siret,
+            address: result.matching_etablissements[0].adresse,
+          }
+        : { siret: result.siege.siret, address: result.siege.adresse };
 
     return {
-      entreprises,
+      activitePrincipale: `${nafMapper[result.activite_principale]}`,
+      etablissements: result.nombre_etablissements_ouverts,
+      highlightLabel: result.nom_complet,
+      label: result.nom_complet,
+      simpleLabel: result.nom_complet,
+      matching: result.nombre_etablissements_ouverts,
+      siren: result.siren,
+      address: result.siege.adresse,
+      firstMatchingEtablissement,
+      conventions,
     };
-  } catch (error) {
-    console.error(error);
-    captureException(error);
-    return {
-      entreprises: [],
-    };
-  }
+  });
+
+  return {
+    entreprises,
+  };
 };
