@@ -2,12 +2,10 @@ import { withSentryConfig } from "@sentry/nextjs";
 import MappingReplacement from "./redirects.json" assert { type: "json" };
 
 const ContentSecurityPolicy = `
-img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr https://cdtn-prod-public.s3.gra.io.cloud.ovh.net;
+img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr;
 script-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr ${
   process.env.NEXT_PUBLIC_APP_ENV !== "production" && "'unsafe-eval'"
 };
-frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
-connect-src 'self' https://geo.api.gouv.fr https://sentry.fabrique.social.gouv.fr https://matomo.fabrique.social.gouv.fr;
 worker-src 'self' blob:;
 report-uri ${process.env.NEXT_PUBLIC_SENTRY_BASE_URL}/api/${
   process.env.NEXT_PUBLIC_SENTRY_PROJECT_ID
