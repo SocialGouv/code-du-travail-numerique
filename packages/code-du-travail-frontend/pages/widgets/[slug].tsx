@@ -19,6 +19,7 @@ import {
 } from "../../src/outils";
 import Metas from "../../src/common/Metas";
 import { SITE_URL } from "../../src/config";
+import { getBySlugTools } from "../../src/api";
 
 const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
@@ -87,14 +88,15 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     };
   }
 
-  const tool = await fetchTool(slug);
-  if (!tool) {
+  const tool = await getBySlugTools(slug);
+  if (!tool || !tool._source) {
     return {
       notFound: true,
     };
   }
 
-  const { icon, title, displayTitle, metaDescription, metaTitle } = tool;
+  const { icon, title, displayTitle, metaDescription, metaTitle } =
+    tool._source;
 
   return {
     props: {
