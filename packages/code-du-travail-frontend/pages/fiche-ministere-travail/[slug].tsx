@@ -66,10 +66,7 @@ function Fiche(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const data = await getBySourceAndSlugItems<FicheTravailEmploi>(
-    "contributions",
-    query.slug
-  );
+  const data = await getSheetsMtService(query.slug);
   return { props: { relatedItems: data.relatedItems, ...data._source } };
 };
 
