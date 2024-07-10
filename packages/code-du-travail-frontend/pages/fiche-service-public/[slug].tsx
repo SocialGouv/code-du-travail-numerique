@@ -6,7 +6,7 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
-import { Breadcrumb } from "@socialgouv/cdtn-types";
+import { Breadcrumb, FicheServicePublicDoc } from "@socialgouv/cdtn-types";
 import { getBySourceAndSlugItems } from "../../src/api";
 
 interface Props {
@@ -59,10 +59,8 @@ function Fiche(props: Props): JSX.Element {
   );
 }
 
-type FicheSPDocument = FicheServicePublic & { raw: string };
-
 export const getServerSideProps = async ({ query }) => {
-  const data = await getBySourceAndSlugItems<FicheSPDocument>(
+  const data = await getBySourceAndSlugItems<FicheServicePublicDoc>(
     "fiches_service_public",
     query.slug
   );
