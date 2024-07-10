@@ -9,10 +9,11 @@ import { Feedback } from "../../../src/common/Feedback";
 import Metas from "../../../src/common/Metas";
 import { RelatedItems } from "../../../src/common/RelatedItems";
 import { Share } from "../../../src/common/Share";
-import { SITE_URL } from "../../../src/config";
 import { Layout } from "../../../src/layout/Layout";
 import { AgreementSearch, fetchTool } from "../../../src/outils";
 import { Flex, ShareContainer } from "../[slug]";
+import { RelatedItem, getBySourceAndSlugItems } from "../../../src/api";
+import { Tool } from "@socialgouv/cdtn-types";
 
 export interface Props {
   description: string;
@@ -76,14 +77,20 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 
   const { description, icon, title, displayTitle, metaTitle, metaDescription } =
     tool;
-  let relatedItems = [];
+  let relatedItems: RelatedItem[] = [];
   try {
-    const response = await fetch(
-      `${SITE_URL}/api/items/${SOURCES.TOOLS}/convention-collective`
-    );
-    if (response.ok) {
-      relatedItems = await response.json().then((data) => data.relatedItems);
+    if (!query.slug) {
+      return {
+        notFound: true,
+      };
     }
+    const data = await getBySourceAndSlugItems<Tool>(SOURCES.TOOLS, slug);
+    if (!data) {
+      return {
+        notFound: true,
+      };
+    }
+    relatedItems = data.relatedItems;
   } catch (e) {
     console.error(e);
     Sentry.captureException(e);
