@@ -1,3 +1,7 @@
+import {
+  DocumentElasticWithSource,
+  MailTemplate,
+} from "@socialgouv/cdtn-types";
 import { ElasticSearchItem } from "../../types";
 import {
   elasticsearchClient,
@@ -13,7 +17,9 @@ import {
 
 export const getAllModeles = async () => {
   const body = getModeles();
-  const response = await elasticsearchClient.search<any>({
+  const response = await elasticsearchClient.search<
+    DocumentElasticWithSource<MailTemplate>
+  >({
     body,
     index: elasticDocumentsIndex,
   });

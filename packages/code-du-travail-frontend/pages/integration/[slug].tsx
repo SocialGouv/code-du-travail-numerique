@@ -5,7 +5,7 @@ import Breadcrumbs from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { IntegrationContainer, integrationData } from "../../src/integration";
-import { SITE_URL } from "../../src/config";
+import { getAllModeles } from "../../src/api";
 
 const IntegrationPage = (props): JSX.Element => {
   const {
@@ -54,17 +54,17 @@ export const getServerSideProps = async ({ query, req }) => {
       notFound: true,
     };
   }
-  const { select } = integrationData[slug];
+  const { isModele } = integrationData[slug];
   let selectOptions: any[] | null = null;
-  if (select) {
-    const responseContainer = await fetch(`${SITE_URL}${select?.url}`);
-    selectOptions = await responseContainer.json();
+  if (isModele) {
+    const modeles = (selectOptions = await getAllModeles());
+
     selectOptions =
-      selectOptions
+      modeles
         ?.map((item) => {
           return {
-            label: item[select.labelPath],
-            value: item[select.valuePath],
+            label: item?.title ?? "",
+            value: item?.cdtnId ?? "",
           };
         })
         ?.sort((a, b) => a.label.localeCompare(b.label)) ?? null;
