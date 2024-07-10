@@ -24,7 +24,7 @@ import {
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
 } from "../../src/outils";
-import { getBySourceAndSlugItems } from "../../src/api";
+import { getBySlugTools, getBySourceAndSlugItems } from "../../src/api";
 
 const toolsBySlug = {
   "convention-collective": AgreementSearch,
@@ -96,7 +96,8 @@ export default Outils;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const tool = await fetchTool(query.slug as string);
+  const { _source: tool } = await getBySlugTools(query.slug as string);
+
   if (
     !tool ||
     (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT && !tool.displayTool) // En production, ne pas afficher les outils en displayTool à false
