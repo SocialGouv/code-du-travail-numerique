@@ -15,6 +15,7 @@ import { SearchResults } from "../../src/search/SearchResults";
 import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
+import { getBySlugThemes } from "../../src/api";
 
 interface Props {
   theme;
@@ -61,13 +62,7 @@ function Theme(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const searchThemeResponse = await fetch(`${SITE_URL}/api/themes/${query.slug}`);
-
-  if (!searchThemeResponse.ok) {
-    return handleError(searchThemeResponse);
-  }
-
-  const theme = await searchThemeResponse.json();
+  const theme = await getBySlugThemes(query.slug);
 
   return { props: { theme } };
 };
