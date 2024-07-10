@@ -52,13 +52,13 @@ const PlanDuSite = ({
               <Link href={"/modeles-de-courriers"}>Modèles de documents</Link>
               <ul>
                 {modeles.map((modele) => (
-                  <StyledLi key={modele.slug}>
+                  <StyledLi key={modele?.slug}>
                     <Link
                       href={`/${getRouteBySource(SOURCES.LETTERS)}/${
-                        modele.slug
+                        modele?.slug
                       }`}
                     >
-                      {modele.title}
+                      {modele?.title}
                     </Link>
                   </StyledLi>
                 ))}

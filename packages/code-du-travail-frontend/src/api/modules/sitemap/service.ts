@@ -2,6 +2,8 @@ import {
   Tool,
   EditorialContent,
   ElasticAgreement,
+  MailTemplate,
+  DocumentElasticWithSource,
 } from "@socialgouv/cdtn-types";
 import { getAllAgreements } from "../agreements";
 import { getAllContributionsGroupByQuestion } from "../contributions";
@@ -16,7 +18,7 @@ type Information = Pick<EditorialContent, "slug" | "title">;
 export type GetSitemapPage = {
   themes: any;
   tools: Tool[];
-  modeles: ElasticSearchItem[];
+  modeles: (DocumentElasticWithSource<MailTemplate> | undefined)[];
   contributions: {
     generic: ElasticSearchItem;
     agreements: ElasticSearchItem[];
