@@ -5,9 +5,9 @@ import Answer from "../../src/common/Answer";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import { Breadcrumb, FicheTravailEmploi } from "@socialgouv/cdtn-types";
+import { Breadcrumb } from "@socialgouv/cdtn-types";
 import { AccordionWithAnchor as Accordion } from "../../src/common/AccordionWithAnchor";
-import { getBySourceAndSlugItems, getSheetsMtService } from "../../src/api";
+import { getSheetsMtService } from "../../src/api";
 
 const buildAccordionSections = (sections) =>
   sections

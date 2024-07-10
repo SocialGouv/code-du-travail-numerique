@@ -3,15 +3,10 @@ import { Badge } from "@socialgouv/cdtn-ui";
 
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
-import { SITE_URL } from "../../src/config";
 import { LetterModel, LetterModelProps, getTitle } from "../../src/modeles";
 import Answer from "../../src/common/Answer";
 import { getBySourceAndSlugItems } from "../../src/api";
 import { MailTemplate } from "@socialgouv/cdtn-types";
-
-const fetchCourrier = ({ slug }) =>
-  fetch(`${SITE_URL}/api/items/modeles_de_courriers/${slug}`);
 
 function ModeleCourrier(props: LetterModelProps): JSX.Element {
   const {

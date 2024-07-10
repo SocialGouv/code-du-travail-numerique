@@ -7,12 +7,7 @@ import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 import { Breadcrumb } from "@socialgouv/cdtn-types";
-import { handleError } from "../../src/lib/fetch-error";
-import { SITE_URL } from "../../src/config";
 import { getBySourceAndSlugItems } from "../../src/api";
-
-const fetchFiche = ({ slug }) =>
-  fetch(`${SITE_URL}/api/items/fiches_service_public/${slug}`);
 
 interface Props {
   breadcrumbs: Breadcrumb[];
@@ -64,10 +59,13 @@ function Fiche(props: Props): JSX.Element {
   );
 }
 
+type FicheSPDocument = FicheServicePublic & { raw: string };
+
 export const getServerSideProps = async ({ query }) => {
-  const data = await getBySourceAndSlugItems<
-    FicheServicePublic & { raw: string }
-  >("fiches_service_public", query.slug);
+  const data = await getBySourceAndSlugItems<FicheSPDocument>(
+    "fiches_service_public",
+    query.slug
+  );
   if (data && data._source && data._source.raw) {
     data._source.raw = JSON.parse(data._source.raw);
   }

@@ -10,7 +10,6 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Contents } from "../../src/information";
 import { QuestionnaireWrapper } from "../../src/questionnaire";
 import { useRouter } from "next/router";
-import { SITE_URL } from "../../src/config";
 import {
   EditorialContentBaseContentPart,
   EditorialContentElasticDocument,
@@ -93,10 +92,11 @@ const Information = ({
 export default Information;
 
 export const getServerSideProps = async ({ query }) => {
-  const information = await getBySourceAndSlugItems(
-    SOURCES.EDITORIAL_CONTENT,
-    query.slug
-  );
+  const information =
+    await getBySourceAndSlugItems<EditorialContentElasticDocument>(
+      SOURCES.EDITORIAL_CONTENT,
+      query.slug
+    );
 
   return { props: { information, slug: query.slug } };
 };

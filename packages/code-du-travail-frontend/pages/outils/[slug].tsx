@@ -1,4 +1,3 @@
-import * as Sentry from "@sentry/nextjs";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Container, theme } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
@@ -11,7 +10,6 @@ import { Feedback } from "../../src/common/Feedback";
 import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
-import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import {
   AgreementSearch,
