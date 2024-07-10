@@ -1,4 +1,3 @@
-import { DocumentElasticWithSource } from "@socialgouv/cdtn-types";
 import {
   elasticDocumentsIndex,
   elasticsearchClient,

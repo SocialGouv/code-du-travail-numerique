@@ -5,13 +5,9 @@ import Answer from "../../src/common/Answer";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import { Breadcrumb } from "@socialgouv/cdtn-types";
-import { handleError } from "../../src/lib/fetch-error";
-import { SITE_URL } from "../../src/config";
+import { Breadcrumb, FicheTravailEmploi } from "@socialgouv/cdtn-types";
 import { AccordionWithAnchor as Accordion } from "../../src/common/AccordionWithAnchor";
-import { getSheetsMtService } from "../../src/api";
-
-const fetchSheetMT = ({ slug }) => fetch(`${SITE_URL}/api/sheets-mt/${slug}`);
+import { getBySourceAndSlugItems, getSheetsMtService } from "../../src/api";
 
 const buildAccordionSections = (sections) =>
   sections
@@ -70,7 +66,10 @@ function Fiche(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const data = await getSheetsMtService(query.slug);
+  const data = await getBySourceAndSlugItems<FicheTravailEmploi>(
+    "contributions",
+    query.slug
+  );
   return { props: { relatedItems: data.relatedItems, ...data._source } };
 };
 

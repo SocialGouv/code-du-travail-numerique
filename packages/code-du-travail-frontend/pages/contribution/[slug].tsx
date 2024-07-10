@@ -10,13 +10,9 @@ import {
   ElasticSearchContributionConventionnelle,
   ElasticSearchContributionGeneric,
 } from "@socialgouv/cdtn-types";
-import { SITE_URL } from "../../src/config";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
 import { getBySourceAndSlugItems } from "../../src/api";
-
-const fetchQuestion = ({ slug }) =>
-  fetch(`${SITE_URL}/api/items/contributions/${slug}`);
 
 type Props = {
   contribution: ElasticSearchContribution;
