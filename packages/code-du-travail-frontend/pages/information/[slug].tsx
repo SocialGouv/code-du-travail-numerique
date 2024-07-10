@@ -93,13 +93,6 @@ const Information = ({
 export default Information;
 
 export const getServerSideProps = async ({ query }) => {
-  // const responseContainer = await fetch(
-  //   `${SITE_URL}/api/items/${SOURCES.EDITORIAL_CONTENT}/${query.slug}`
-  // );
-  // if (!responseContainer.ok) {
-  //   return { notFound: true };
-  // }
-  // const information = await responseContainer.json();
   const information = await getBySourceAndSlugItems(
     SOURCES.EDITORIAL_CONTENT,
     query.slug

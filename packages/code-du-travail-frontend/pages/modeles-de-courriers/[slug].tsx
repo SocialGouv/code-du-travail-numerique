@@ -7,6 +7,8 @@ import { handleError } from "../../src/lib/fetch-error";
 import { SITE_URL } from "../../src/config";
 import { LetterModel, LetterModelProps, getTitle } from "../../src/modeles";
 import Answer from "../../src/common/Answer";
+import { getBySourceAndSlugItems } from "../../src/api";
+import { MailTemplate } from "@socialgouv/cdtn-types";
 
 const fetchCourrier = ({ slug }) =>
   fetch(`${SITE_URL}/api/items/modeles_de_courriers/${slug}`);
@@ -49,12 +51,10 @@ function ModeleCourrier(props: LetterModelProps): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const response = await fetchCourrier(query);
-  if (!response.ok) {
-    return handleError(response);
-  }
-
-  const data = await response.json();
+  const data = await getBySourceAndSlugItems<MailTemplate>(
+    "modeles_de_courriers",
+    query.slug
+  );
   return {
     props: {
       relatedItems: data.relatedItems,
