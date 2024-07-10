@@ -11,8 +11,11 @@ connect-src 'self' https://geo.api.gouv.fr https://sentry.fabrique.social.gouv.f
 worker-src 'self' blob:;
 report-uri ${process.env.NEXT_PUBLIC_SENTRY_BASE_URL}/api/${
   process.env.NEXT_PUBLIC_SENTRY_PROJECT_ID
-}/security/?sentry_key=${process.env.NEXT_PUBLIC_SENTRY_PUBLIC_KEY};
-report-to sentry-default;
+}/security/?sentry_key=${
+  process.env.NEXT_PUBLIC_SENTRY_PUBLIC_KEY
+}&sentry_environment=${process.env.NEXT_PUBLIC_SENTRY_ENV}&sentry_release=${
+  process.env.NEXT_PUBLIC_SENTRY_RELEASE
+};
 `;
 
 const sentryConfig = {
@@ -60,10 +63,6 @@ const moduleExports = {
       {
         key: "Content-Security-Policy",
         value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
-      },
-      {
-        key: "Report-To",
-        value: `{"group":"sentry-default","max_age":10886400,"endpoints":[{"url":"${process.env.NEXT_PUBLIC_SENTRY_BASE_URL}/api/${process.env.NEXT_PUBLIC_SENTRY_PROJECT_ID}/security/?sentry_key=${process.env.NEXT_PUBLIC_SENTRY_PUBLIC_KEY}"}],"include_subdomains":true}`,
       },
     ];
     if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
