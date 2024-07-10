@@ -5,6 +5,9 @@ jobs:
       with:
         buildArgs:
           NEXT_PUBLIC_SENTRY_DSN: https://81b6e3d265cf736588f894040d265705@sentry.fabrique.social.gouv.fr/107
+          NEXT_PUBLIC_SENTRY_PUBLIC_KEY: 81b6e3d265cf736588f894040d265705
+          NEXT_PUBLIC_SENTRY_PROJECT_ID: 107
+          NEXT_PUBLIC_SENTRY_BASE_URL: https://sentry.fabrique.social.gouv.fr
           NEXT_PUBLIC_SENTRY_ENV: dev
           NEXT_PUBLIC_SENTRY_RELEASE: "{{.Values.global.branchSlug32}}"
           NEXT_PUBLIC_BUCKET_DEFAULT_FOLDER: "default"
