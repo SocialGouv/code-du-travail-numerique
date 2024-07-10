@@ -1,5 +1,5 @@
-import { withSentryConfig } from "@sentry/nextjs";
-import MappingReplacement from "./redirects.json" assert { type: "json" };
+import {withSentryConfig} from "@sentry/nextjs";
+import MappingReplacement from "./redirects.json" assert {type: "json"};
 
 const ContentSecurityPolicy = `
 img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr;
@@ -23,10 +23,10 @@ const sentryConfig = {
     name: process.env.NEXT_PUBLIC_SENTRY_RELEASE,
     setCommits: process.env.NEXT_PUBLIC_COMMIT
       ? {
-          repo: "SocialGouv/code-du-travail-numerique",
-          commit: process.env.NEXT_PUBLIC_COMMIT,
-        }
-      : { auto: true },
+        repo: "SocialGouv/code-du-travail-numerique",
+        commit: process.env.NEXT_PUBLIC_COMMIT,
+      }
+      : {auto: true},
   },
   hideSourceMaps: true,
   widenClientFileUpload: true,
@@ -37,7 +37,7 @@ const nextConfig = {
   compiler: {
     reactRemoveProperties:
       process.env.NEXT_PUBLIC_APP_ENV === "production"
-        ? { properties: ["data-testid"] }
+        ? {properties: ["data-testid"]}
         : false,
     styledComponents: true,
   },
@@ -45,7 +45,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
-  experimental: { instrumentationHook: true },
+  experimental: {instrumentationHook: true},
 };
 
 const moduleExports = {
@@ -62,7 +62,12 @@ const moduleExports = {
       },
       {
         key: "Report-To",
-        value: {"group":"csp-endpoint","max_age":10886400,"endpoints":[{"url":"${process.env.NEXT_PUBLIC_SENTRY_BASE_URL}/api/${process.env.NEXT_PUBLIC_SENTRY_PROJECT_ID}/security/?sentry_key=${process.env.NEXT_PUBLIC_SENTRY_PUBLIC_KEY}&sentry_environment=${process.env.NEXT_PUBLIC_SENTRY_ENV}"}],"include_subdomains":true},
+        value: JSON.stringify({
+          "group": "csp-endpoint",
+          "max_age": 10886400,
+          "endpoints": [{"url": "${process.env.NEXT_PUBLIC_SENTRY_BASE_URL}/api/${process.env.NEXT_PUBLIC_SENTRY_PROJECT_ID}/security/?sentry_key=${process.env.NEXT_PUBLIC_SENTRY_PUBLIC_KEY}&sentry_environment=${process.env.NEXT_PUBLIC_SENTRY_ENV}"}],
+          "include_subdomains": true
+        }),
       },
     ];
     if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
