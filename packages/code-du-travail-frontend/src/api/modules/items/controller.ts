@@ -14,7 +14,10 @@ export class ItemsController {
   public async getBySourceAndSlug() {
     try {
       const { slug, source } = this.req.query;
-      const response = await getBySourceAndSlugItems(source, slug as string);
+      const response = await getBySourceAndSlugItems(
+        source as string,
+        slug as string
+      );
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {
