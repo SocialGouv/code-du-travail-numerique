@@ -6,12 +6,11 @@ img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr;
 script-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr ${
   process.env.NEXT_PUBLIC_APP_ENV !== "production" && "'unsafe-eval'"
 };
-connect-src 'self' https://geo.api.gouv.fr https://sentry.fabrique.social.gouv.fr https://matomo.fabrique.social.gouv.fr;
+connect-src 'self' https://geo.api.gouv.fr ${process.env.NEXT_PUBLIC_SENTRY_BASE_URL} https://matomo.fabrique.social.gouv.fr;
 worker-src 'self' blob:;
 report-uri ${process.env.NEXT_PUBLIC_SENTRY_BASE_URL}/api/${
   process.env.NEXT_PUBLIC_SENTRY_PROJECT_ID
 }/security/?sentry_key=${process.env.NEXT_PUBLIC_SENTRY_PUBLIC_KEY}&sentry_environment=${process.env.NEXT_PUBLIC_SENTRY_ENV};
-report-to csp-endpoint;
 `;
 
 const sentryConfig = {
@@ -59,10 +58,6 @@ const moduleExports = {
       {
         key: "Content-Security-Policy",
         value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
-      },
-      {
-        key: "Report-To",
-        value: `{"group":"csp-endpoint","max_age":10886400,"endpoints":[{"url":"${process.env.NEXT_PUBLIC_SENTRY_BASE_URL}/api/${process.env.NEXT_PUBLIC_SENTRY_PROJECT_ID}/security/?sentry_key=${process.env.NEXT_PUBLIC_SENTRY_PUBLIC_KEY}&sentry_environment=${process.env.NEXT_PUBLIC_SENTRY_ENV}"}],"include_subdomains":true}`,
       },
     ];
     if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
