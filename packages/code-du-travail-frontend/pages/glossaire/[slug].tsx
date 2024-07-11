@@ -13,11 +13,8 @@ import styled from "styled-components";
 
 import { A11yLink } from "../../src/common/A11yLink";
 import Metas from "../../src/common/Metas";
-import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
 import { getGlossary } from "../../src/api";
-import { NotFoundError } from "../../src/api/utils";
 
 interface Props {
   term: string;
