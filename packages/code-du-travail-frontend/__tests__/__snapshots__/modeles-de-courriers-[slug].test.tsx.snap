@@ -272,6 +272,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       >
                         <span
                           class="sc-iowXnY eoMrLf"
+                          data-testid="article-date"
                         >
                           Mis à jour le
                            : 

@@ -47,6 +47,7 @@ exports[`<Article /> should render 1`] = `
                 </span>
                 <span
                   class="sc-kRRyDe bHlAJy"
+                  data-testid="article-date"
                 >
                   Mis à jour le
                    : 

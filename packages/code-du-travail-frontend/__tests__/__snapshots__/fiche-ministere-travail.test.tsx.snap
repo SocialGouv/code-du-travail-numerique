@@ -292,6 +292,7 @@ exports[`<FicheMT /> should render 1`] = `
                         </span>
                         <span
                           class="sc-dhFUGM knjPBM"
+                          data-testid="article-date"
                         >
                           Mis à jour le
                            : 
