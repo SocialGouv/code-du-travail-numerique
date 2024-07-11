@@ -8,6 +8,7 @@ import { Layout } from "../../src/layout/Layout";
 import { Breadcrumb } from "@socialgouv/cdtn-types";
 import { AccordionWithAnchor as Accordion } from "../../src/common/AccordionWithAnchor";
 import { getSheetsMtService } from "../../src/api";
+import { notFound } from "next/navigation";
 
 const buildAccordionSections = (sections) =>
   sections
@@ -67,6 +68,11 @@ function Fiche(props: Props): JSX.Element {
 
 export const getServerSideProps = async ({ query }) => {
   const data = await getSheetsMtService(query.slug);
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
   return { props: { relatedItems: data.relatedItems, ...data._source } };
 };
 

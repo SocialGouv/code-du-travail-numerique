@@ -64,7 +64,12 @@ export const getServerSideProps = async ({ query }) => {
     "fiches_service_public",
     query.slug
   );
-  if (data && data._source && data._source.raw) {
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+  if (data._source && data._source.raw) {
     data._source.raw = JSON.parse(data._source.raw);
   }
   return { props: { relatedItems: data.relatedItems, ...data._source } };

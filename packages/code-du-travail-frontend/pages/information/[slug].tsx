@@ -97,6 +97,11 @@ export const getServerSideProps = async ({ query }) => {
       SOURCES.EDITORIAL_CONTENT,
       query.slug
     );
+  if (!information) {
+    return {
+      notFound: true,
+    };
+  }
 
   return { props: { information, slug: query.slug } };
 };

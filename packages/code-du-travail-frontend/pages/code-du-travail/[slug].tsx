@@ -62,6 +62,11 @@ export const getServerSideProps = async ({ query }) => {
     "code_du_travail",
     query.slug
   );
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
   return { props: { relatedItems: data.relatedItems, ...data._source } };
 };
 

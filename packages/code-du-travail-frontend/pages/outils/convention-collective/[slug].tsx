@@ -12,7 +12,11 @@ import { Share } from "../../../src/common/Share";
 import { Layout } from "../../../src/layout/Layout";
 import { AgreementSearch, fetchTool } from "../../../src/outils";
 import { Flex, ShareContainer } from "../[slug]";
-import { RelatedItem, getBySourceAndSlugItems } from "../../../src/api";
+import {
+  RelatedItem,
+  getBySlugTools,
+  getBySourceAndSlugItems,
+} from "../../../src/api";
 import { Tool } from "@socialgouv/cdtn-types";
 
 export interface Props {
@@ -68,7 +72,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
       notFound: true,
     };
   }
-  const tool = await fetchTool("convention-collective");
+  // const tool = await fetchTool("convention-collective");
+  const tool = await getBySlugTools("convention-collective");
   if (!tool) {
     return {
       notFound: true,
@@ -84,7 +89,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
         notFound: true,
       };
     }
-    const data = await getBySourceAndSlugItems<Tool>(SOURCES.TOOLS, slug);
+    const data = await getBySourceAndSlugItems<Tool>(
+      SOURCES.TOOLS,
+      "convention-collective"
+    );
     if (!data) {
       return {
         notFound: true,

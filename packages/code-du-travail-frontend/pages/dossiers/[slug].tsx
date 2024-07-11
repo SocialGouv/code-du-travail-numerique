@@ -16,9 +16,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import Metas from "../../src/common/Metas";
-import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
 import { getDossiers } from "../../src/api";
 
 const { breakpoints, fonts, spacings } = theme;
@@ -104,6 +102,11 @@ function DossierThematique(props: Props): JSX.Element {
 
 export const getServerSideProps = async ({ query: { slug } }) => {
   const dossier = await getDossiers(slug);
+  if (!dossier) {
+    return {
+      notFound: true,
+    };
+  }
   return { props: dossier };
 };
 

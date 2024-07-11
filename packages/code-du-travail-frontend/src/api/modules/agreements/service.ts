@@ -61,11 +61,7 @@ export const getBySlugAgreements = async (slug: string) => {
     index: elasticDocumentsIndex,
   });
   if (response.hits.hits.length === 0) {
-    throw new NotFoundError({
-      message: `Agreement not found, no agreement match ${slug}y`,
-      name: "AGREEMENT_NOT_FOUND",
-      cause: null,
-    });
+    return;
   }
 
   return { ...response.hits.hits[0]._source };

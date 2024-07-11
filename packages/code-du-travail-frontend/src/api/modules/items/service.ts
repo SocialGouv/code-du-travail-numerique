@@ -10,23 +10,16 @@ export const getBySourceAndSlugItems = async <Type>(
   source: string,
   slug: string
 ) => {
-  console.log(source, slug);
   const body = getSearchBySourceSlugBody({ slug, source });
-  console.log("body", JSON.stringify(body));
   const response = await elasticsearchClient.search<Type>({
     body,
     index: elasticDocumentsIndex,
   });
 
   const item = response.hits.hits[0];
-  console.log("hits", response.hits);
 
   if (!item || !item._source) {
-    throw new NotFoundError({
-      name: "ITEMS_NOT_FOUND",
-      message: `There is no documents that match ${slug} in ${source}`,
-      cause: null,
-    });
+    return;
   }
 
   const { _id } = item;

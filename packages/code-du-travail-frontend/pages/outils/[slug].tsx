@@ -19,12 +19,12 @@ import {
   DureePreavisDemission,
   DureePreavisLicenciement,
   DureePreavisRetraite,
-  fetchTool,
   HeuresRechercheEmploi,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
 } from "../../src/outils";
 import { getBySlugTools, getBySourceAndSlugItems } from "../../src/api";
+import { Tool } from "@socialgouv/cdtn-types";
 
 const toolsBySlug = {
   "convention-collective": AgreementSearch,
@@ -96,7 +96,7 @@ export default Outils;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const { _source: tool } = await getBySlugTools(query.slug as string);
+  const tool = await getBySlugTools(query.slug as string);
 
   if (
     !tool ||
@@ -116,8 +116,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     metaTitle,
     metaDescription,
   } = tool;
-  const data = await getBySourceAndSlugItems(SOURCES.TOOLS, slug);
-  const relatedItems = data.relatedItems;
+  const data = await getBySourceAndSlugItems<Tool>(SOURCES.TOOLS, slug);
+  const relatedItems = data?.relatedItems ?? [];
 
   return {
     props: {

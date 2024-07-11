@@ -80,11 +80,9 @@ export const getServerSideProps = async ({ query: { slug } }) => {
   const [term] = glossaryData.filter((term) => slug === term.slug);
 
   if (!term) {
-    throw new NotFoundError({
-      message: `there is no glossary term that match slug ${slug}`,
-      name: "GLOSSARY_TERM_NOT_FOUND",
-      cause: null,
-    });
+    return {
+      notFound: true,
+    };
   }
 
   return { props: term };

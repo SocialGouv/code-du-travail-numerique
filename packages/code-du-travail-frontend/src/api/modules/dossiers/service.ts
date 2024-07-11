@@ -1,9 +1,5 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import {
-  elasticsearchClient,
-  elasticDocumentsIndex,
-  NotFoundError,
-} from "../../utils";
+import { elasticsearchClient, elasticDocumentsIndex } from "../../utils";
 import { getSearchBySourceSlugBody } from "../items/queries";
 
 export const getDossiers = async (slug: string) => {
@@ -16,11 +12,7 @@ export const getDossiers = async (slug: string) => {
     index: elasticDocumentsIndex,
   });
   if (response.hits.hits.length === 0) {
-    throw new NotFoundError({
-      message: `There is no thematic files that match ${slug}`,
-      name: "THEMATIC_FILES_NOT_FOUND",
-      cause: null,
-    });
+    return;
   }
 
   const thematicFile = response.hits.hits[0]._source;

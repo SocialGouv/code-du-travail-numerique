@@ -99,6 +99,11 @@ export const getServerSideProps = async ({ query }) => {
     return { redirect: { destination: conventions[0].slug, permanent: true } };
   }
   const convention = await getBySlugAgreements(query.slug);
+  if (!convention) {
+    return {
+      notFound: true,
+    };
+  }
   return { props: { convention } };
 };
 

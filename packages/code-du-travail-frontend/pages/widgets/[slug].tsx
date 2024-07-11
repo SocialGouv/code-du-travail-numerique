@@ -14,7 +14,6 @@ import {
   DureePreavisDemission,
   DureePreavisLicenciement,
   DureePreavisRetraite,
-  fetchTool,
   SimulateurIndemnitePrecarite,
 } from "../../src/outils";
 import Metas from "../../src/common/Metas";
@@ -89,14 +88,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   }
 
   const tool = await getBySlugTools(slug);
-  if (!tool || !tool._source) {
+  if (!tool) {
     return {
       notFound: true,
     };
   }
 
-  const { icon, title, displayTitle, metaDescription, metaTitle } =
-    tool._source;
+  const { icon, title, displayTitle, metaDescription, metaTitle } = tool;
 
   return {
     props: {

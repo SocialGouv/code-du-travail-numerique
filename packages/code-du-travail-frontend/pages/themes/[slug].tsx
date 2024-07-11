@@ -61,6 +61,11 @@ function Theme(props: Props): JSX.Element {
 
 export const getServerSideProps = async ({ query }) => {
   const theme = await getBySlugThemes(query.slug);
+  if (!theme) {
+    return {
+      notFound: true,
+    };
+  }
 
   return { props: { theme } };
 };

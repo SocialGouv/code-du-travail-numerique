@@ -15,21 +15,13 @@ export const getSheetsMtService = async (slug: string) => {
   });
 
   if (response.hits.hits.length === 0) {
-    throw new NotFoundError({
-      name: "AGREEMENT_NOT_FOUND",
-      message: `there is no sheet mt that match ${slug}`,
-      cause: null,
-    });
+    return;
   }
 
   const sheetMT = response.hits.hits[0];
 
   if (!sheetMT || !sheetMT._source) {
-    throw new NotFoundError({
-      name: "AGREEMENT_NOT_FOUND",
-      message: `there is no sheet mt that match ${slug}`,
-      cause: null,
-    });
+    return;
   }
 
   const relatedItems = await getRelatedItems({
