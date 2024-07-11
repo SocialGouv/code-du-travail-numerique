@@ -28,7 +28,10 @@ export const fetchEnterprises = async (
   }`;
 
   const fetchReq = await fetch(url);
-
+  if (!fetchReq.ok) {
+    console.log("OK")
+    throw new Error(fetchReq.statusText);
+  }
   const jsonResponse: ApiRechercheEntrepriseResponse = await fetchReq.json();
 
   const entreprises = jsonResponse.results.map((result) => {
