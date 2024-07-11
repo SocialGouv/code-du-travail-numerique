@@ -5,7 +5,6 @@ const fetchSearchResults = async (query = "", excludeSources = "") => {
   const url = `${SITE_URL}/api/search?q=${encodeURIComponent(
     query
   )}&excludeSources=${encodeURIComponent(excludeSources)}`;
-  console.log("url", url);
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error("Un problème est survenu.");
