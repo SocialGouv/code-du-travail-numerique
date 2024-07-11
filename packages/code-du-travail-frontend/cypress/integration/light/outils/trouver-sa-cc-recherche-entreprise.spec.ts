@@ -19,6 +19,7 @@ describe("Outil - Trouver sa convention collective", () => {
     );
 
     cy.contains("Précédent").click();
+    cy.get("#enterprise-search").focus();
     cy.get("#enterprise-search").clear();
     cy.get("#enterprise-search-address").clear();
     cy.get("#enterprise-search").type("CARREFOUR BANQUE", { delay: 0 });
@@ -26,7 +27,7 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.contains("CARREFOUR BANQUE").click();
     cy.get("p").should(
       "contain",
-      "2 conventions collectives trouvées pour « CARREFOUR BANQUE, AGENCE TRESORERIE 3 RUE JEAN MERMOZ 91000 EVRY-COURCOURONNES »"
+      "2 conventions collectives trouvées pour « CARREFOUR BANQUE, 37 AVENUE D'ESSOMES 02400 CHATEAU-THIERRY »"
     );
     cy.contains("Banque IDCC2120")
       .should("have.prop", "href")
