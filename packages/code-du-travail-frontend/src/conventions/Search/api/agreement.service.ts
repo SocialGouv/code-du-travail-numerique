@@ -16,19 +16,23 @@ const formatCCn = ({ num, id, slug, title, shortTitle, highlight, url }) => ({
 const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
   const url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(query)}`;
 
-  return fetch(url).then(async (response) => {
-    if (response.ok) {
-      return response
-        .json()
-        .then(
-          (results) =>
-            results.hits.hits.map(({ _source }) =>
-              formatCCn(_source)
-            ) as Agreement[]
-        );
-    }
-    return Promise.reject("Ce service est momentanément indisponible.");
-  });
+  return fetch(url)
+    .then(async (response) => {
+      if (response.ok) {
+        return response
+          .json()
+          .then(
+            (results) =>
+              results.hits.hits.map(({ _source }) =>
+                formatCCn(_source)
+              ) as Agreement[]
+          );
+      }
+      throw new Error();
+    })
+    .catch(() => {
+      return Promise.reject("Ce service est momentanément indisponible.");
+    });
 };
 
 const searchAgreement = debounce(apiIdcc, 300);
