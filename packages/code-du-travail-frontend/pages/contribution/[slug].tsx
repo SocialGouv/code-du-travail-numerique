@@ -64,12 +64,14 @@ function PageContribution(props: Props): React.ReactElement {
     props.contribution.description
   );
 
+
   return (
     <Layout>
       <Metas title={metas.title} description={metas.description} />
       <Answer
         title={getTitleFromNewContrib(props.contribution)}
         breadcrumbs={props.contribution.breadcrumbs}
+        // @ts-ignore
         date={props.contribution.date}
         dateLabel="Mise à jour le"
       >
