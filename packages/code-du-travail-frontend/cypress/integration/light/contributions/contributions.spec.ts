@@ -8,6 +8,10 @@ describe("Contributions", () => {
       "contain",
       "Obtenez une réponses personnalisée selon votre convention collective"
     );
+    cy.get('[data-testid="article-date"]').should(
+      "match",
+      "Mise à jour le : \d\d/\d\d/\d\d\d\d"
+    );
     cy.get("#content h2").should("have.length", 6);
     cy.get("#content h2")
       .first()

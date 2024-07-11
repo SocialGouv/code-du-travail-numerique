@@ -70,6 +70,8 @@ function PageContribution(props: Props): React.ReactElement {
       <Answer
         title={getTitleFromNewContrib(props.contribution)}
         breadcrumbs={props.contribution.breadcrumbs}
+        date={props.contribution.date}
+        dateLabel="Mise à jour le"
       >
         {props.contribution.idcc === "0000" ? (
           <ContributionGeneric
