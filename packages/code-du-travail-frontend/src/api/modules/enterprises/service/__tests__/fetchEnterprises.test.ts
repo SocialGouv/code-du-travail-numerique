@@ -240,6 +240,8 @@ describe("Test enterprise endpoint", () => {
 
     await expect(async () => {
       await fetchEnterprises("22760540900019", []);
-    }).rejects.toThrow("Mon erreur");
+    }).rejects.toThrowErrorMatchingInlineSnapshot(
+      '"Erreur lors de la récupération des entreprises depuis annuaire-entreprise, code : 500 (Mon erreur)"'
+    );
   });
 });

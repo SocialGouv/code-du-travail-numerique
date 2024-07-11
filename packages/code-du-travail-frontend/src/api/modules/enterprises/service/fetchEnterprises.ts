@@ -29,7 +29,9 @@ export const fetchEnterprises = async (
 
   const fetchReq = await fetch(url);
   if (!fetchReq.ok) {
-    throw new Error(`Erreur lors de la récupération des entreprises depuis annuaire-entreprise, code : ${fetchReq.status} (${fetchReq.statusText})`);
+    throw new Error(
+      `Erreur lors de la récupération des entreprises depuis annuaire-entreprise, code : ${fetchReq.status} (${fetchReq.statusText})`
+    );
   }
   const jsonResponse: ApiRechercheEntrepriseResponse = await fetchReq.json();
 
