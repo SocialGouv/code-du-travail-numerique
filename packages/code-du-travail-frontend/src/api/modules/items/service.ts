@@ -15,12 +15,11 @@ export const getBySourceAndSlugItems = async <Type>(
     body,
     index: elasticDocumentsIndex,
   });
-
-  const item = response.hits.hits[0];
-
-  if (!item || !item._source) {
+  if (response.hits.hits.length === 0) {
     return;
   }
+
+  const item = response.hits.hits[0];
 
   const { _id } = item;
 

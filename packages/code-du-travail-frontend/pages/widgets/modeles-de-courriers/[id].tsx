@@ -2,7 +2,6 @@ import Metas from "../../../src/common/Metas";
 import { useIframeResizer } from "../../../src/common/hooks";
 import { SITE_URL } from "../../../src/config";
 import { LetterModel, LetterModelProps } from "../../../src/modeles";
-import { handleError } from "../../../src/lib/fetch-error";
 import styled from "styled-components";
 import { theme, Paragraph, Wrapper, PageTitle } from "@socialgouv/cdtn-ui";
 import { LogoLink } from "../../../src/widgets";
@@ -40,6 +39,11 @@ function Widgets(props: LetterModelProps): JSX.Element {
 
 export const getServerSideProps = async ({ query }) => {
   const modeles = await getByIdsModeles([query.id]);
+  if (!modeles.length) {
+    return {
+      notFound: true,
+    };
+  }
   return { props: { relatedItems: [], ...(modeles.length ? modeles[0] : {}) } };
 };
 

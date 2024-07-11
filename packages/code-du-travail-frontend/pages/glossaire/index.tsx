@@ -42,7 +42,6 @@ function Glossaire({ glossary }) {
 export async function getStaticProps() {
   try {
     const data = await getGlossary();
-    console.log("data", data);
     return { props: { glossary: data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);

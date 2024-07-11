@@ -50,7 +50,7 @@ export const getServerSideProps = async ({ query }) => {
     "modeles_de_courriers",
     query.slug
   );
-  if (!data) {
+  if (!data?._source) {
     return {
       notFound: true,
     };
