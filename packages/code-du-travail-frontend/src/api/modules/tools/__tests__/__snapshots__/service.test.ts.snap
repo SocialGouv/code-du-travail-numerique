@@ -25,46 +25,38 @@ exports[`Tools getAllTools 1`] = `
 
 exports[`Tools getBySlugTools 1`] = `
 {
-  "_id": "14",
-  "_index": "cdtn_test-v2_documents",
-  "_score": null,
-  "_source": {
-    "action": "Estimer",
-    "breadcrumbs": [
-      {
-        "label": "Départ de l’entreprise",
-        "position": 8,
-        "slug": "/themes/depart-de-lentreprise",
-      },
-      {
-        "label": "Licenciement : droits des salariés et procédures",
-        "position": 4,
-        "slug": "/themes/licenciement-droits-des-salaries-et-procedures",
-      },
-    ],
-    "cdtnId": "d8a3605790",
-    "date": "18/10/2018",
-    "description": "Estimez simplement le montant de l’indemnité de licenciement",
-    "displayTool": true,
-    "icon": "Indemnity",
-    "id": "085a07ba-2936-4b0c-89c5-89c3e0cdb773",
-    "isPublished": true,
-    "metaDescription": "Estimez simplement le montant de l’indemnité de licenciement",
-    "order": 1,
-    "slug": "indemnite-licenciement",
-    "source": "outils",
-    "text": "Quelle est mon indemnité de licenciement
+  "action": "Estimer",
+  "breadcrumbs": [
+    {
+      "label": "Départ de l’entreprise",
+      "position": 8,
+      "slug": "/themes/depart-de-lentreprise",
+    },
+    {
+      "label": "Licenciement : droits des salariés et procédures",
+      "position": 4,
+      "slug": "/themes/licenciement-droits-des-salaries-et-procedures",
+    },
+  ],
+  "cdtnId": "d8a3605790",
+  "date": "18/10/2018",
+  "description": "Estimez simplement le montant de l’indemnité de licenciement",
+  "displayTool": true,
+  "icon": "Indemnity",
+  "id": "085a07ba-2936-4b0c-89c5-89c3e0cdb773",
+  "isPublished": true,
+  "metaDescription": "Estimez simplement le montant de l’indemnité de licenciement",
+  "order": 1,
+  "slug": "indemnite-licenciement",
+  "source": "outils",
+  "text": "Quelle est mon indemnité de licenciement
 Comment calculer mon indemnité de licenciement
 indemnité de licenciement pour inaptitude d’origine professionnelle
 indemnité de licenciement pour inaptitude d’origine professionnelle
 indemnité spéciale de licenciement pour inaptitude ’origine professionnelle
 indemnité de licenciement en cas d’alternance temps plein temps partiel
 calculez le montant d’une indemnité de licenciement en fonction de votre situation",
-    "title": "Indemnité de licenciement",
-  },
-  "sort": [
-    1,
-  ],
+  "title": "Indemnité de licenciement",
 }
 `;
 
