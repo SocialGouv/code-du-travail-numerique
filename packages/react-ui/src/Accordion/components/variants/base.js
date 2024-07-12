@@ -33,16 +33,15 @@ export const ItemPanel = styled(AccordionItemPanel)`
   }
 `;
 
-export const ItemButton = ({ children, disableStyles = false }) => (
+export const ItemButton = ({ children }) => (
   <StyledAccordionItemButton>
     <VerticalArrow aria-hidden="true" />
-    <ButtonText disableStyles={disableStyles}>{children}</ButtonText>
+    <ButtonText>{children}</ButtonText>
   </StyledAccordionItemButton>
 );
 
 ItemButton.propTypes = {
   children: PropTypes.node.isRequired,
-  disableStyles: PropTypes.bool,
 };
 
 const StyledAccordionItemButton = styled(AccordionItemButton)`
@@ -63,12 +62,8 @@ const StyledAccordionItemButton = styled(AccordionItemButton)`
 const ButtonText = styled(({ disableStyles, ...props }) => <div {...props} />)`
   margin: ${spacings.medium} 0 ${spacings.medium} ${spacings.small};
   color: ${({ theme }) => theme.title};
-  ${({ disableStyles }) =>
-    !disableStyles &&
-    `
-      font-weight: 600;
-      font-size: ${fonts.sizes.headings.small};
-  `}
+  font-weight: 600;
+  font-size: ${fonts.sizes.headings.small};
   font-family: "Open Sans", sans-serif;
   line-height: ${fonts.lineHeightTitle};
   @media (max-width: ${breakpoints.mobile}) {
