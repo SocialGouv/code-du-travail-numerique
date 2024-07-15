@@ -1,10 +1,6 @@
+import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import {
-  elasticDocumentsIndex,
-  elasticsearchClient,
-  NotFoundError,
-} from "../../utils";
-import {
-  getAgreementBySlugBody,
+  getAgreementBySlug,
   getAgreementsByIds,
   getAgreementsBySlugs,
   getAllAgreementsWithContributions,
@@ -54,7 +50,7 @@ export const getByIdsAgreements = async (
 };
 
 export const getBySlugAgreements = async (slug: string) => {
-  const body = await getAgreementBySlugBody(slug);
+  const body = await getAgreementBySlug(slug);
 
   const response = await elasticsearchClient.search<AgreementDoc[]>({
     body,
