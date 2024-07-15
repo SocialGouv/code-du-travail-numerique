@@ -7,13 +7,7 @@ import { Heading } from "../Titles/Heading";
 import * as variants from "./components/variants/index.js";
 import { VerticalArrow as AccordionArrow } from "./components/VerticalArrow";
 
-export const Accordion = ({
-  items,
-  disableStyles,
-  variant,
-  titleLevel,
-  ...props
-}) => {
+export const Accordion = ({ items, variant, titleLevel, ...props }) => {
   /* eslint-disable import/namespace */
   const AccordionVariant = variants[variant].Accordion;
   const AccordionItem = variants[variant].Item;
@@ -52,7 +46,6 @@ export const Accordion = ({
                 icon={icon}
                 index={index}
                 isLast={index === items.length - 1}
-                disableStyles={disableStyles}
               >
                 {titleLevel && titleLevel <= 6 ? (
                   <Heading
@@ -84,7 +77,6 @@ export const Accordion = ({
 
 Accordion.propTypes = {
   "data-testid": PropTypes.string,
-  disableStyles: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       body: PropTypes.node.isRequired,

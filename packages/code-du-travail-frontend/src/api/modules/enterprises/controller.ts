@@ -39,8 +39,8 @@ export class EnterprisesController {
       this.res.status(200).json(response);
     } catch (error) {
       console.error(error);
-      this.res.status(500).json({ message: error.toString() });
       captureException(error);
+      this.res.status(500).json({ message: error.toString() })
     }
   }
 }

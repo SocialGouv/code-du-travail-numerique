@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.146.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.3...v4.146.4) (2024-07-15)
+
+### Bug Fixes
+
+- **api entreprises:** ne pas catch l'erreur pour qu'elle apparaisse côté client ([#6031](https://github.com/SocialGouv/code-du-travail-numerique/issues/6031)) ([62bd84f](https://github.com/SocialGouv/code-du-travail-numerique/commit/62bd84f71769171506f30961741cb9833590ea5c))
+- **code:** nettoyage de code inutilisé ([#6024](https://github.com/SocialGouv/code-du-travail-numerique/issues/6024)) ([37993db](https://github.com/SocialGouv/code-du-travail-numerique/commit/37993dbda37170c496bff43a1328ca26cbb5e3eb))
+- **csp:** add a `report-to` param to get csp report ([#6028](https://github.com/SocialGouv/code-du-travail-numerique/issues/6028)) ([7beb52c](https://github.com/SocialGouv/code-du-travail-numerique/commit/7beb52c251456a43c72488c5e0b09e2362752d4f))
+
 ## [4.146.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.2...v4.146.3) (2024-07-05)
 
 ### Bug Fixes
