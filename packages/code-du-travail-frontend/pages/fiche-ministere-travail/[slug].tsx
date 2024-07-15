@@ -68,7 +68,7 @@ function Fiche(props: Props): JSX.Element {
 
 export const getServerSideProps = async ({ query }) => {
   const data = await getSheetsMtService(query.slug);
-  if (!data) {
+  if (!data?._source) {
     return {
       notFound: true,
     };

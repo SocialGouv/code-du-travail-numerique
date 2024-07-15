@@ -91,7 +91,7 @@ export const getServerSideProps = async ({ query }) => {
     "contributions",
     query.slug
   );
-  if (!data) {
+  if (!data?._source) {
     return {
       notFound: true,
     };

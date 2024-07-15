@@ -62,7 +62,7 @@ export const getServerSideProps = async ({ query }) => {
     "code_du_travail",
     query.slug
   );
-  if (!data) {
+  if (!data?._source) {
     return {
       notFound: true,
     };
