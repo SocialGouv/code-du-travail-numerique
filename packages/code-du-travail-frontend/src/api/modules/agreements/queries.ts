@@ -90,6 +90,12 @@ export const getAgreementBySlug = (slug: string) => {
       "description",
       "answers",
       "contributions",
+      "metaDescription",
+      "num",
+      "date_publi",
+      "effectif",
+      "id",
+      "text"
     ],
     query: {
       bool: {
