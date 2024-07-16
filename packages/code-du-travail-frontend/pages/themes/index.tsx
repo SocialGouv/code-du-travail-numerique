@@ -12,7 +12,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
-import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
 import { getAllThemes } from "../../src/api";

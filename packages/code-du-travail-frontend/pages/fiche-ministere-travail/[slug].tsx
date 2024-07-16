@@ -8,7 +8,6 @@ import { Layout } from "../../src/layout/Layout";
 import { Breadcrumb } from "@socialgouv/cdtn-types";
 import { AccordionWithAnchor as Accordion } from "../../src/common/AccordionWithAnchor";
 import { getSheetsMtService } from "../../src/api";
-import { notFound } from "next/navigation";
 
 const buildAccordionSections = (sections) =>
   sections

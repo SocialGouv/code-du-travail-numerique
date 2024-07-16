@@ -11,7 +11,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
-import { REVALIDATE_TIME, REVALIDATE_TIME_DAY, SITE_URL } from "../src/config";
+import { REVALIDATE_TIME, REVALIDATE_TIME_DAY } from "../src/config";
 import { Layout } from "../src/layout/Layout";
 import { captureException } from "@sentry/nextjs";
 import { getStatsService } from "../src/api";
