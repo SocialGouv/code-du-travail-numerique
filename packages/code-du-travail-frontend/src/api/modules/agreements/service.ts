@@ -1,16 +1,12 @@
+import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import {
-  elasticDocumentsIndex,
-  elasticsearchClient,
-  NotFoundError,
-} from "../../utils";
-import {
-  getAgreementBySlugBody,
+  getAgreementBySlug,
   getAgreementsByIds,
   getAgreementsBySlugs,
   getAllAgreementsWithContributions,
 } from "./queries";
 import { ElasticSearchItem } from "../../types";
-import { ElasticAgreement } from "@socialgouv/cdtn-types";
+import { AgreementDoc, ElasticAgreement } from "@socialgouv/cdtn-types";
 import { nonNullable } from "@socialgouv/modeles-social";
 
 export const getAllAgreements = async (): Promise<ElasticAgreement[]> => {
@@ -54,18 +50,14 @@ export const getByIdsAgreements = async (
 };
 
 export const getBySlugAgreements = async (slug: string) => {
-  const body = await getAgreementBySlugBody(slug);
+  const body = await getAgreementBySlug(slug);
 
-  const response = await elasticsearchClient.search<any>({
+  const response = await elasticsearchClient.search<AgreementDoc[]>({
     body,
     index: elasticDocumentsIndex,
   });
   if (response.hits.hits.length === 0) {
-    throw new NotFoundError({
-      message: `Agreement not found, no agreement match ${slug}y`,
-      name: "AGREEMENT_NOT_FOUND",
-      cause: null,
-    });
+    return;
   }
 
   return { ...response.hits.hits[0]._source };

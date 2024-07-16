@@ -74,8 +74,29 @@ export function getAgreementsByIds(ids: string[]) {
   };
 }
 
-export const getAgreementBySlugBody = (slug: string) => {
+export const getAgreementBySlug = (slug: string) => {
   return {
+    _source: [
+      "title",
+      "shortTitle",
+      "description",
+      "url",
+      "slug",
+      "breadcrumbs",
+      "source",
+      "cdtnId",
+      "articlesByTheme",
+      "source",
+      "description",
+      "answers",
+      "contributions",
+      "metaDescription",
+      "num",
+      "date_publi",
+      "effectif",
+      "id",
+      "text"
+    ],
     query: {
       bool: {
         filter: [{ term: { slug } }, { term: { source: SOURCES.CCN } }],

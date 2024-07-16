@@ -82,18 +82,14 @@ export const getToolsBySlugs = async (
 
 export const getBySlugTools = async (
   slug: string
-): Promise<SearchHit<Tool>> => {
+): Promise<Tool | undefined> => {
   const body: any = getTools(undefined, [slug]);
   const response = await elasticsearchClient.search<Tool>({
     body,
     index: elasticDocumentsIndex,
   });
   if (response.hits.hits.length === 0) {
-    throw new NotFoundError({
-      message: `There is no tools that match query`,
-      name: "TOOL_NOT_FOUND",
-      cause: null,
-    });
+    return;
   }
-  return response.hits.hits[0] as SearchHit<Tool>;
+  return response.hits.hits[0]._source;
 };

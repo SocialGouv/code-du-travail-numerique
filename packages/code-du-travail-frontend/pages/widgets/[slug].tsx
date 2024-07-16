@@ -14,11 +14,11 @@ import {
   DureePreavisDemission,
   DureePreavisLicenciement,
   DureePreavisRetraite,
-  fetchTool,
   SimulateurIndemnitePrecarite,
 } from "../../src/outils";
 import Metas from "../../src/common/Metas";
 import { SITE_URL } from "../../src/config";
+import { getBySlugTools } from "../../src/api";
 
 const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
@@ -87,7 +87,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     };
   }
 
-  const tool = await fetchTool(slug);
+  const tool = await getBySlugTools(slug);
   if (!tool) {
     return {
       notFound: true,

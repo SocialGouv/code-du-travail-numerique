@@ -1,4 +1,3 @@
-import * as Sentry from "@sentry/nextjs";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Container, theme } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
@@ -11,7 +10,6 @@ import { Feedback } from "../../src/common/Feedback";
 import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
-import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import {
   AgreementSearch,
@@ -21,11 +19,12 @@ import {
   DureePreavisDemission,
   DureePreavisLicenciement,
   DureePreavisRetraite,
-  fetchTool,
   HeuresRechercheEmploi,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
 } from "../../src/outils";
+import { getBySlugTools, getBySourceAndSlugItems } from "../../src/api";
+import { Tool } from "@socialgouv/cdtn-types";
 
 const toolsBySlug = {
   "convention-collective": AgreementSearch,
@@ -97,7 +96,8 @@ export default Outils;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const tool = await fetchTool(query.slug as string);
+  const tool = await getBySlugTools(query.slug as string);
+
   if (
     !tool ||
     (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT && !tool.displayTool) // En production, ne pas afficher les outils en displayTool à false
@@ -116,18 +116,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     metaTitle,
     metaDescription,
   } = tool;
-  let relatedItems = [];
-  try {
-    const response = await fetch(
-      `${SITE_URL}/api/items/${SOURCES.TOOLS}/${slug}`
-    );
-    if (response.ok) {
-      relatedItems = await response.json().then((data) => data.relatedItems);
-    }
-  } catch (e) {
-    console.error(e);
-    Sentry.captureException(e);
-  }
+  const data = await getBySourceAndSlugItems<Tool>(SOURCES.TOOLS, slug);
+  const relatedItems = data?.relatedItems ?? [];
 
   return {
     props: {

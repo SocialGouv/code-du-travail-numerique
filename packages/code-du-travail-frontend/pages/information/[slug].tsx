@@ -10,11 +10,11 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Contents } from "../../src/information";
 import { QuestionnaireWrapper } from "../../src/questionnaire";
 import { useRouter } from "next/router";
-import { SITE_URL } from "../../src/config";
 import {
   EditorialContentBaseContentPart,
   EditorialContentElasticDocument,
 } from "@socialgouv/cdtn-types";
+import { getBySourceAndSlugItems } from "../../src/api";
 
 export type EditorialContentDataWrapper = {
   information: {
@@ -92,13 +92,16 @@ const Information = ({
 export default Information;
 
 export const getServerSideProps = async ({ query }) => {
-  const responseContainer = await fetch(
-    `${SITE_URL}/api/items/${SOURCES.EDITORIAL_CONTENT}/${query.slug}`
-  );
-  if (!responseContainer.ok) {
-    return { notFound: true };
+  const information =
+    await getBySourceAndSlugItems<EditorialContentElasticDocument>(
+      SOURCES.EDITORIAL_CONTENT,
+      query.slug
+    );
+  if (!information) {
+    return {
+      notFound: true,
+    };
   }
-  const information = await responseContainer.json();
 
   return { props: { information, slug: query.slug } };
 };

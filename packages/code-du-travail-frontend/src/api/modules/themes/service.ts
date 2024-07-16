@@ -59,11 +59,7 @@ export const getBySlugThemes = async (slug: string) => {
   });
 
   if (response.hits.hits.length === 0) {
-    throw new NotFoundError({
-      message: `There is no theme that match ${slug}`,
-      name: "THEME_NOT_FOUND",
-      cause: null,
-    });
+    return;
   }
 
   const theme = response.hits.hits[0];

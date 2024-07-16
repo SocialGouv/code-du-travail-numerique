@@ -11,9 +11,8 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
-import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
 import { getGlossary } from "../../src/api";
 
 const subtitle =
@@ -42,13 +41,7 @@ function Glossaire({ glossary }) {
 
 export async function getStaticProps() {
   try {
-    let data: any;
-    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-      const response = await fetch(`${SITE_URL}/api/glossary`);
-      data = await response.json();
-    } else {
-      data = await getGlossary();
-    }
+    const data = await getGlossary();
     return { props: { glossary: data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);

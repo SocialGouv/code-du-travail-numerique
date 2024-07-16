@@ -13,9 +13,8 @@ import styled from "styled-components";
 
 import { A11yLink } from "../../src/common/A11yLink";
 import Metas from "../../src/common/Metas";
-import { SITE_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
+import { getGlossary } from "../../src/api";
 
 interface Props {
   term: string;
@@ -74,11 +73,15 @@ function Term(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query: { slug } }) => {
-  const responseContainer = await fetch(`${SITE_URL}/api/glossary/${slug}`);
-  if (!responseContainer.ok) {
-    return handleError(responseContainer);
+  const glossaryData = await getGlossary();
+  const [term] = glossaryData.filter((term) => slug === term.slug);
+
+  if (!term) {
+    return {
+      notFound: true,
+    };
   }
-  const term = await responseContainer.json();
+
   return { props: term };
 };
 
