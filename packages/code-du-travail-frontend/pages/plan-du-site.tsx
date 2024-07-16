@@ -192,12 +192,12 @@ export async function getStaticProps() {
 
   return {
     props: {
-      themes: data.themes,
-      tools: data.tools,
-      contributions: data.contributions,
-      modeles: data.modeles,
-      agreements: data.agreements,
-      informations: data.informations,
+      themes: data?.themes ?? [],
+      tools: data?.tools ?? [],
+      contributions: data?.contributions ?? [],
+      modeles: data?.modeles ?? [],
+      agreements: data?.agreements ?? [],
+      informations: data?.informations ?? [],
     },
     revalidate: REVALIDATE_TIME,
   };

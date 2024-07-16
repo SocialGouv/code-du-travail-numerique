@@ -103,12 +103,12 @@ export async function getStaticProps() {
 
   return {
     props: {
-      themes: data.themes.children,
-      highlights: data.highlights,
-      tools: data.tools.map(({ _id, _source }) => ({ ..._source, _id })),
-      contributions: data.contributions,
-      modeles: data.modeles,
-      agreements: data.agreements.map((v) => ({ ...v, title: v.shortTitle })),
+      themes: data?.themes.children ?? [],
+      highlights: data?.highlights ?? [],
+      tools: data?.tools.map(({ _id, _source }) => ({ ..._source, _id })) ?? [],
+      contributions: data?.contributions ?? [],
+      modeles: data?.modeles ?? [],
+      agreements: data?.agreements.map((v) => ({ ...v, title: v.shortTitle })) ?? [],
     },
     revalidate: REVALIDATE_TIME,
   };
