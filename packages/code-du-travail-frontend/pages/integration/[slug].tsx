@@ -45,29 +45,31 @@ const IntegrationPage = (props): JSX.Element => {
     </Layout>
   );
 };
+const keys = Object.keys(integrationData);
+
+const getModelesList = async () => {
+  const modeles = await getAllModeles();
+  return modeles
+    .map((item) => {
+      return {
+        label: item?.title ?? "",
+        value: item?.cdtnId ?? "",
+      };
+    })
+    ?.sort((a, b) => a.label.localeCompare(b.label));
+};
 
 export const getServerSideProps = async ({ query, req }) => {
   const slug: string = query.slug;
-  const keys = Object.keys(integrationData);
   if (!keys.includes(slug)) {
     return {
       notFound: true,
     };
   }
   const { isModele } = integrationData[slug];
-  let selectOptions: any[] | null = null;
+  let selectOptions;
   if (isModele) {
-    const modeles = (selectOptions = await getAllModeles());
-
-    selectOptions =
-      modeles
-        ?.map((item) => {
-          return {
-            label: item?.title ?? "",
-            value: item?.cdtnId ?? "",
-          };
-        })
-        ?.sort((a, b) => a.label.localeCompare(b.label)) ?? null;
+    selectOptions = await getModelesList();
   }
 
   const hostname: string = req.headers.host;

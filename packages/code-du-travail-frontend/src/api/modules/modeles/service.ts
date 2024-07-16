@@ -4,15 +4,15 @@ import {
 } from "@socialgouv/cdtn-types";
 import { ElasticSearchItem } from "../../types";
 import {
-  elasticsearchClient,
   elasticDocumentsIndex,
+  elasticsearchClient,
   NotFoundError,
 } from "../../utils";
 import {
-  getModeles,
-  getModelesBySlugs,
   getModeleBySlug,
+  getModeles,
   getModelesByIds,
+  getModelesBySlugs,
 } from "./queries";
 
 export const getAllModeles = async () => {
