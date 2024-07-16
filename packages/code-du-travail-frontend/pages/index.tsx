@@ -4,11 +4,11 @@ import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 import SearchHero from "../src/search/SearchHero";
 import { Highlights, HomeSlice, Themes, Tools } from "../src/home";
-import { GetHomePage, getHomeData } from "../src/api";
+import { getHomeData, GetHomePage } from "../src/api";
 import { ListLinkItemProps } from "../src/search/SearchResults/Results";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent, MatomoHomeEvent } from "../src/lib";
-import { REVALIDATE_TIME, SITE_URL } from "../src/config";
+import { REVALIDATE_TIME } from "../src/config";
 
 const Home = ({
   themes,
@@ -92,27 +92,10 @@ const Home = ({
 };
 
 export async function getStaticProps() {
-  let themes: GetHomePage["themes"] = [];
-  let highlights: GetHomePage["highlights"] = [];
-  let tools: GetHomePage["tools"] = [];
-  let contributions: GetHomePage["contributions"] = [];
-  let modeles: GetHomePage["modeles"] = [];
-  let agreements: GetHomePage["agreements"] = [];
+  let data;
 
   try {
-    let data: GetHomePage;
-    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-      const response = await fetch(`${SITE_URL}/api/home`);
-      data = await response.json();
-    } else {
-      data = await getHomeData();
-    }
-    themes = data.themes.children;
-    highlights = data.highlights;
-    tools = data.tools.map(({ _id, _source }) => ({ ..._source, _id }));
-    contributions = data.contributions;
-    modeles = data.modeles;
-    agreements = data.agreements.map((v) => ({ ...v, title: v.shortTitle }));
+    data = await getHomeData();
   } catch (e) {
     console.error(e);
     Sentry.captureException(e);
@@ -120,12 +103,12 @@ export async function getStaticProps() {
 
   return {
     props: {
-      highlights,
-      themes,
-      tools,
-      contributions,
-      modeles,
-      agreements,
+      themes: data.themes.children,
+      highlights: data.highlights,
+      tools: data.tools.map(({ _id, _source }) => ({ ..._source, _id })),
+      contributions: data.contributions,
+      modeles: data.modeles,
+      agreements: data.agreements.map((v) => ({ ...v, title: v.shortTitle })),
     },
     revalidate: REVALIDATE_TIME,
   };

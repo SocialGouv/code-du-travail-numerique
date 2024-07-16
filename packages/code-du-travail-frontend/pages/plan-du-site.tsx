@@ -13,7 +13,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { getSitemapData, GetSitemapPage } from "../src/api";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { REVALIDATE_TIME, SITE_URL } from "../src/config";
+import { REVALIDATE_TIME } from "../src/config";
 
 const PlanDuSite = ({
   tools,
@@ -182,27 +182,9 @@ const PlanDuSite = ({
 };
 
 export async function getStaticProps() {
-  let themes: GetSitemapPage["themes"] = [];
-  let tools: GetSitemapPage["tools"] = [];
-  let contributions: GetSitemapPage["contributions"] = [];
-  let modeles: GetSitemapPage["modeles"] = [];
-  let agreements: GetSitemapPage["agreements"] = [];
-  let informations: GetSitemapPage["informations"] = [];
-
+  let data;
   try {
-    let data: GetSitemapPage;
-    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-      const response = await fetch(`${SITE_URL}/api/plan-du-site`);
-      data = await response.json();
-    } else {
-      data = await getSitemapData();
-    }
-    themes = data.themes;
-    tools = data.tools;
-    contributions = data.contributions;
-    modeles = data.modeles;
-    agreements = data.agreements;
-    informations = data.informations;
+    data = await getSitemapData();
   } catch (e) {
     console.error(e);
     Sentry.captureException(e);
@@ -210,12 +192,12 @@ export async function getStaticProps() {
 
   return {
     props: {
-      tools,
-      modeles,
-      contributions,
-      agreements,
-      themes,
-      informations,
+      themes: data.themes,
+      tools: data.tools,
+      contributions: data.contributions,
+      modeles: data.modeles,
+      agreements: data.agreements,
+      informations: data.informations,
     },
     revalidate: REVALIDATE_TIME,
   };

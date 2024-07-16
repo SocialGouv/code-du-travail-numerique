@@ -14,7 +14,7 @@ import { Layout } from "../../src/layout/Layout";
 import styled from "styled-components";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME } from "../../src/config";
 import { getGenericContributionsGroupByThemes } from "../../src/api";
 
 const ALL = "all";

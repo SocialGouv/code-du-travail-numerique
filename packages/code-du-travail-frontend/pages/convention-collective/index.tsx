@@ -15,7 +15,7 @@ import { ListLink } from "../../src/search/SearchResults/Results";
 import styled from "styled-components";
 import Link from "next/link";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME } from "../../src/config";
 import { getAllAgreements } from "../../src/api";
 
 function Page({ ccs }) {
