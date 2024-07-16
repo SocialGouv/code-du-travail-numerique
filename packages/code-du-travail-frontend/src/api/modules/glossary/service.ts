@@ -21,9 +21,7 @@ async function getGlossaryData() {
       name: "GLOSSARY_NOT_FOUND",
     });
   }
-  const glossaryData = response.hits.hits[0]._source.data;
-
-  return glossaryData;
+  return  response.hits.hits[0]._source.data;
 }
 
 export const getGlossary = memoizee(getGlossaryData, {

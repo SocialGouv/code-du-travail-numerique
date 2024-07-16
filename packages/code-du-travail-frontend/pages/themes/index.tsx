@@ -12,7 +12,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
-import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
 import { getAllThemes } from "../../src/api";
@@ -73,13 +73,7 @@ const ThemesPage = ({ children = [] }) => (
 
 export async function getStaticProps() {
   try {
-    let data: any;
-    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-      const response = await fetch(`${SITE_URL}/api/themes`);
-      data = await response.json();
-    } else {
-      data = await getAllThemes();
-    }
+    const data = await getAllThemes();
     return { props: { children: data.children }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);

@@ -5,17 +5,14 @@ import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import {
   Breadcrumb,
+  ContributionElasticDocument,
   ElasticSearchContribution,
   ElasticSearchContributionConventionnelle,
   ElasticSearchContributionGeneric,
 } from "@socialgouv/cdtn-types";
-import { handleError } from "../../src/lib/fetch-error";
-import { SITE_URL } from "../../src/config";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
-
-const fetchQuestion = ({ slug }) =>
-  fetch(`${SITE_URL}/api/items/contributions/${slug}`);
+import { getBySourceAndSlugItems } from "../../src/api";
 
 type Props = {
   contribution: ElasticSearchContribution;
@@ -92,12 +89,15 @@ function PageContribution(props: Props): React.ReactElement {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const response = await fetchQuestion(query);
-  if (!response.ok) {
-    return handleError(response);
+  const data = await getBySourceAndSlugItems<ContributionElasticDocument>(
+    "contributions",
+    query.slug
+  );
+  if (!data?._source) {
+    return {
+      notFound: true,
+    };
   }
-  const data = await response.json();
-
   return {
     props: {
       contribution: data._source,

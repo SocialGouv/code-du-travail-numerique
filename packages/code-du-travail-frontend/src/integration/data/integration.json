@@ -33,11 +33,7 @@
     ],
     "shortTitle": "Modèles de documents",
     "shortDescription": "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail",
-    "select": {
-      "url": "/api/modeles",
-      "labelPath": "title",
-      "valuePath": "cdtnId"
-    },
+    "isModele": true,
     "url": "/widgets/modeles-de-courriers/[value]",
     "id": "modeles-de-courriers"
   },

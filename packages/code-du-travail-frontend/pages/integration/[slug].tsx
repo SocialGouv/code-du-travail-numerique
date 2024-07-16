@@ -5,7 +5,7 @@ import Breadcrumbs from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { IntegrationContainer, integrationData } from "../../src/integration";
-import { SITE_URL } from "../../src/config";
+import { getAllModeles } from "../../src/api";
 
 const IntegrationPage = (props): JSX.Element => {
   const {
@@ -45,29 +45,31 @@ const IntegrationPage = (props): JSX.Element => {
     </Layout>
   );
 };
+const keys = Object.keys(integrationData);
+
+const getModelesList = async () => {
+  const modeles = await getAllModeles();
+  return modeles
+    .map((item) => {
+      return {
+        label: item?.title ?? "",
+        value: item?.cdtnId ?? "",
+      };
+    })
+    ?.sort((a, b) => a.label.localeCompare(b.label));
+};
 
 export const getServerSideProps = async ({ query, req }) => {
   const slug: string = query.slug;
-  const keys = Object.keys(integrationData);
   if (!keys.includes(slug)) {
     return {
       notFound: true,
     };
   }
-  const { select } = integrationData[slug];
-  let selectOptions: any[] | null = null;
-  if (select) {
-    const responseContainer = await fetch(`${SITE_URL}${select?.url}`);
-    selectOptions = await responseContainer.json();
-    selectOptions =
-      selectOptions
-        ?.map((item) => {
-          return {
-            label: item[select.labelPath],
-            value: item[select.valuePath],
-          };
-        })
-        ?.sort((a, b) => a.label.localeCompare(b.label)) ?? null;
+  const { isModele } = integrationData[slug];
+  let selectOptions;
+  if (isModele) {
+    selectOptions = await getModelesList();
   }
 
   const hostname: string = req.headers.host;

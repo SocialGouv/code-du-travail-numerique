@@ -40,7 +40,6 @@ export const getSearchBySourceSlugBody = ({
       "contents", // editorial_content
       "folder", // editorial_content
       "cdtnId",
-      "covisits",
       "source",
       "highlight", // convention-collective,
       "sectionDisplayMode",

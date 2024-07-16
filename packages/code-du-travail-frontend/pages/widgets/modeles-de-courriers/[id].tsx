@@ -2,12 +2,12 @@ import Metas from "../../../src/common/Metas";
 import { useIframeResizer } from "../../../src/common/hooks";
 import { SITE_URL } from "../../../src/config";
 import { LetterModel, LetterModelProps } from "../../../src/modeles";
-import { handleError } from "../../../src/lib/fetch-error";
 import styled from "styled-components";
 import { theme, Paragraph, Wrapper, PageTitle } from "@socialgouv/cdtn-ui";
 import { LogoLink } from "../../../src/widgets";
 import Html from "../../../src/common/Html";
 import { isHTML } from "../../../src/lib";
+import { getByIdsModeles } from "../../../src/api";
 
 function Widgets(props: LetterModelProps): JSX.Element {
   useIframeResizer();
@@ -37,16 +37,14 @@ function Widgets(props: LetterModelProps): JSX.Element {
   );
 }
 
-const fetchCourrier = ({ id }) => fetch(`${SITE_URL}/api/modeles/${id}`);
-
 export const getServerSideProps = async ({ query }) => {
-  const response = await fetchCourrier(query);
-  if (!response.ok) {
-    return handleError(response);
+  const modeles = await getByIdsModeles([query.id]);
+  if (!modeles.length) {
+    return {
+      notFound: true,
+    };
   }
-
-  const data = await response.json();
-  return { props: { relatedItems: [], ...data[0] } };
+  return { props: { relatedItems: [], ...(modeles.length ? modeles[0] : {}) } };
 };
 
 export default Widgets;
