@@ -71,7 +71,6 @@ function PageContribution(props: Props): React.ReactElement {
       <Answer
         title={getTitleFromNewContrib(props.contribution)}
         breadcrumbs={props.contribution.breadcrumbs}
-        // @ts-ignore
         date={props.contribution.date}
       >
         {props.contribution.idcc === "0000" ? (
