@@ -62,7 +62,7 @@ const Article = ({
                       </HideOnMobile>
                     )}
                     {date && (
-                      <StyledSpan data-testid="article-date">
+                      <StyledSpan>
                         {dateLabel}&nbsp;:&nbsp;{date}
                       </StyledSpan>
                     )}

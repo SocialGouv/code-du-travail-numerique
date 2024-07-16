@@ -8,10 +8,6 @@ describe("Contributions", () => {
       "contain",
       "Obtenez une réponses personnalisée selon votre convention collective"
     );
-    cy.get('[data-testid="article-date"]').should(
-      "match",
-      "Mise à jour le : \d\d/\d\d/\d\d\d\d"
-    );
     cy.get("#content h2").should("have.length", 6);
     cy.get("#content h2")
       .first()
@@ -29,6 +25,10 @@ describe("Contributions", () => {
       "have.text",
       "La période d’essai peut-elle être renouvelée ?"
     );
+
+    cy.get("div > p > span").invoke('text').should("match", /Mis à jour le/);
+    cy.get("div > p > span").invoke('text').should("match", /\d\d\/\d\d\/\d\d\d\d/);
+
     cy.contains(
       "Accéder aux informations générales sans renseigner ma convention collective"
     ).click();

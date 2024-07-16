@@ -73,7 +73,6 @@ function PageContribution(props: Props): React.ReactElement {
         breadcrumbs={props.contribution.breadcrumbs}
         // @ts-ignore
         date={props.contribution.date}
-        dateLabel="Mise à jour le"
       >
         {props.contribution.idcc === "0000" ? (
           <ContributionGeneric
