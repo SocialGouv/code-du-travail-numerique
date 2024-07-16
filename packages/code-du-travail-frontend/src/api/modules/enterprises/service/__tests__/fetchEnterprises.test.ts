@@ -5,12 +5,13 @@ import {
   searchWithOnePostalCodeMockResponse,
   searchWithSiretMockResponse,
 } from "../__mocks__/fetchEnterprises.mock";
-import { fetchEnterprises, EnterpriseApiResponse } from "../fetchEnterprises";
+import { fetchEnterprises } from "../fetchEnterprises";
 
 describe("Test enterprise endpoint", () => {
   test("Return empty array if no enterprises found", async () => {
     (global as any).fetch = jest.fn(() => ({
       json: () => searchWithNoResponse,
+      ok: true,
       status: 200,
     }));
 
@@ -26,6 +27,7 @@ describe("Test enterprise endpoint", () => {
   test("A call to retrieve enterprises from an enterprise", async () => {
     (global as any).fetch = jest.fn(() => ({
       json: () => searchWithNameMockResponse,
+      ok: true,
       status: 200,
     }));
 
@@ -73,6 +75,7 @@ describe("Test enterprise endpoint", () => {
   test("A call to retrieve enterprises from an enterprise with one postal code", async () => {
     (global as any).fetch = jest.fn(() => ({
       json: () => searchWithOnePostalCodeMockResponse,
+      ok: true,
       status: 200,
     }));
 
@@ -122,6 +125,7 @@ describe("Test enterprise endpoint", () => {
   test("A call to retrieve enterprises from an enterprise with multiple postals codes", async () => {
     (global as any).fetch = jest.fn(() => ({
       json: () => searchWithMultiplePostalCodeMockResponse,
+      ok: true,
       status: 200,
     }));
 
@@ -177,6 +181,7 @@ describe("Test enterprise endpoint", () => {
   test("A call to retrieve enterprises from an enterprise with siret", async () => {
     (global as any).fetch = jest.fn(() => ({
       json: () => searchWithSiretMockResponse,
+      ok: true,
       status: 200,
     }));
 
@@ -223,6 +228,20 @@ describe("Test enterprise endpoint", () => {
 
     expect(fetch).toHaveBeenCalledWith(
       "https://api-entreprise/search?q=22760540900019&page=1&per_page=25&etat_administratif=A&sort_by_size=true"
+    );
+  });
+
+  test("Call with error should be thrown", async () => {
+    (global as any).fetch = jest.fn(() => ({
+      json: () => searchWithSiretMockResponse,
+      status: 500,
+      statusText: "Mon erreur",
+    }));
+
+    await expect(async () => {
+      await fetchEnterprises("22760540900019", []);
+    }).rejects.toThrowErrorMatchingInlineSnapshot(
+      '"Erreur lors de la récupération des entreprises depuis annuaire-entreprise, code : 500 (Mon erreur)"'
     );
   });
 });

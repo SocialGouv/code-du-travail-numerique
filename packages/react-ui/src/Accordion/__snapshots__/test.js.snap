@@ -43,7 +43,7 @@ exports[`<Accordion /> do not throw error if preExpended attribut is an invalid 
               />
             </svg>
             <div
-              class="sc-gsFSXq UOsQV"
+              class="sc-gsFSXq cuSiEF"
             >
               <h3
                 class="sc-gEvEer gGoEse"
@@ -116,7 +116,7 @@ exports[`<Accordion /> renders 1`] = `
               />
             </svg>
             <div
-              class="sc-gsFSXq UOsQV"
+              class="sc-gsFSXq cuSiEF"
             >
               <h3
                 class="sc-gEvEer gGoEse"
@@ -189,7 +189,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
               />
             </svg>
             <div
-              class="sc-gsFSXq UOsQV"
+              class="sc-gsFSXq cuSiEF"
             >
               <h3
                 class="sc-gEvEer gGoEse"
@@ -262,7 +262,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
               />
             </svg>
             <div
-              class="sc-gsFSXq UOsQV"
+              class="sc-gsFSXq cuSiEF"
             >
               <h1
                 class="sc-gEvEer gGoEse"
@@ -335,7 +335,7 @@ exports[`<Accordion /> renders as h2 1`] = `
               />
             </svg>
             <div
-              class="sc-gsFSXq UOsQV"
+              class="sc-gsFSXq cuSiEF"
             >
               <h2
                 class="sc-gEvEer gGoEse"

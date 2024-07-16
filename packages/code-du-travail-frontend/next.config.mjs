@@ -2,16 +2,20 @@ import { withSentryConfig } from "@sentry/nextjs";
 import MappingReplacement from "./redirects.json" assert { type: "json" };
 
 const ContentSecurityPolicy = `
-default-src 'self' *.travail.gouv.fr *.data.gouv.fr *.fabrique.social.gouv.fr;
-img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr https://www.service-public.fr https://cdtn-prod-public.s3.gra.io.cloud.ovh.net;
-script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr https://cdnjs.cloudflare.com ${
+img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr https://cdtn-prod-public.s3.gra.io.cloud.ovh.net;
+script-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr ${
   process.env.NEXT_PUBLIC_APP_ENV !== "production" && "'unsafe-eval'"
 };
-frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com https://cdtn-prod-public.s3.gra.io.cloud.ovh.net;
-style-src 'self' 'unsafe-inline';
-font-src 'self' data: blob:;
+frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
+connect-src 'self' https://geo.api.gouv.fr https://sentry.fabrique.social.gouv.fr https://matomo.fabrique.social.gouv.fr;
 worker-src 'self' blob:;
-child-src 'self' blob:;
+report-uri ${process.env.NEXT_PUBLIC_SENTRY_BASE_URL}/api/${
+  process.env.NEXT_PUBLIC_SENTRY_PROJECT_ID
+}/security/?sentry_key=${
+  process.env.NEXT_PUBLIC_SENTRY_PUBLIC_KEY
+}&sentry_environment=${process.env.NEXT_PUBLIC_SENTRY_ENV}&sentry_release=${
+  process.env.NEXT_PUBLIC_SENTRY_RELEASE
+};
 `;
 
 const sentryConfig = {
@@ -56,15 +60,15 @@ const moduleExports = {
         key: "X-Content-Type-Options",
         value: "nosniff",
       },
+      {
+        key: "Content-Security-Policy",
+        value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
+      },
     ];
     if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
       headers.push({
         key: "X-Robots-Tag",
         value: "all",
-      });
-      headers.push({
-        key: "Content-Security-Policy",
-        value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
       });
     } else {
       headers.push({

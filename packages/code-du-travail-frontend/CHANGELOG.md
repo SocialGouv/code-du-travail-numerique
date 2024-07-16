@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.146.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.3...v4.146.4) (2024-07-15)
+
+### Bug Fixes
+
+- **api entreprises:** ne pas catch l'erreur pour qu'elle apparaisse côté client ([#6031](https://github.com/SocialGouv/code-du-travail-numerique/issues/6031)) ([62bd84f](https://github.com/SocialGouv/code-du-travail-numerique/commit/62bd84f71769171506f30961741cb9833590ea5c))
+- **code:** nettoyage de code inutilisé ([#6024](https://github.com/SocialGouv/code-du-travail-numerique/issues/6024)) ([37993db](https://github.com/SocialGouv/code-du-travail-numerique/commit/37993dbda37170c496bff43a1328ca26cbb5e3eb))
+- **csp:** add a `report-to` param to get csp report ([#6028](https://github.com/SocialGouv/code-du-travail-numerique/issues/6028)) ([7beb52c](https://github.com/SocialGouv/code-du-travail-numerique/commit/7beb52c251456a43c72488c5e0b09e2362752d4f))
+
+## [4.146.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.2...v4.146.3) (2024-07-05)
+
+### Bug Fixes
+
+- **csp:** optimisation des permissions ([#6023](https://github.com/SocialGouv/code-du-travail-numerique/issues/6023)) ([6a45e1d](https://github.com/SocialGouv/code-du-travail-numerique/commit/6a45e1dee3417072b16a316034c7dc06e76102a9))
+- **recherche:** mettre en place des messages d'erreur en mode hors-ligne ([#6021](https://github.com/SocialGouv/code-du-travail-numerique/issues/6021)) ([379246e](https://github.com/SocialGouv/code-du-travail-numerique/commit/379246ebeb14ea91df9f23e2a88f32445dd10bc3))
+
+## [4.146.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.1...v4.146.2) (2024-07-05)
+
+### Bug Fixes
+
+- **agreement:** mise à jour de l'URL pour la convention collective 7026 ([#6012](https://github.com/SocialGouv/code-du-travail-numerique/issues/6012)) ([c223b42](https://github.com/SocialGouv/code-du-travail-numerique/commit/c223b42425b0c18374b96bd58de20effdb163bea))
+- **csp:** add matomo to connect-src ([c683b57](https://github.com/SocialGouv/code-du-travail-numerique/commit/c683b57c8eeb1e1742eec788613207e563208d3e))
+- **widget search:** ne pas crasher si l'on ne peut pas accéder à la méthod ResizeObserver ([#6005](https://github.com/SocialGouv/code-du-travail-numerique/issues/6005)) ([28bdeb9](https://github.com/SocialGouv/code-du-travail-numerique/commit/28bdeb90bc8e39c05783f0ca406b4f5f1bcbbd0f))
+
+## [4.146.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.0...v4.146.1) (2024-07-04)
+
+### Bug Fixes
+
+- **csp:** add geo api gouv ([3e30c21](https://github.com/SocialGouv/code-du-travail-numerique/commit/3e30c21a1a92aa332a79ca6a9de5e5d1646e65c3))
+
+# [4.146.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.145.1...v4.146.0) (2024-07-04)
+
+### Bug Fixes
+
+- bug CC 1517 validation notif ne fonctionne pas ([#6009](https://github.com/SocialGouv/code-du-travail-numerique/issues/6009)) ([9a1dbf1](https://github.com/SocialGouv/code-du-travail-numerique/commit/9a1dbf146becad1490f8db79d3c85266829b0fea))
+- **search:** clean deps + highlight dans la recherche ([#6016](https://github.com/SocialGouv/code-du-travail-numerique/issues/6016)) ([e813007](https://github.com/SocialGouv/code-du-travail-numerique/commit/e81300713cae0477d88e13fce85be2965da6b329))
+
+### Features
+
+- **cc non étendues:** suppression de tous les simulateurs des CC non étendues 29, 413 et 2420 ([#5998](https://github.com/SocialGouv/code-du-travail-numerique/issues/5998)) ([3d4d0af](https://github.com/SocialGouv/code-du-travail-numerique/commit/3d4d0afb185ec0677f9433c742572f733cc50355))
+- **recherche-entreprise:** utilisation d'annuaire entreprise ([#5631](https://github.com/SocialGouv/code-du-travail-numerique/issues/5631)) ([beef24f](https://github.com/SocialGouv/code-du-travail-numerique/commit/beef24f82970e7ced658d87e0f9ef4cd9247de7b))
+
 ## [4.145.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.145.0...v4.145.1) (2024-06-27)
 
 ### Bug Fixes

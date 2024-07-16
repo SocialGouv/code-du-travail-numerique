@@ -30,16 +30,16 @@ describe("Landing pages", () => {
   });
 
   it("je vois une page fiche service public", () => {
-    cy.visit("/fiche-service-public/conges-payes");
-    cy.get("h1").should("contain", "Congés payés");
+    cy.visit("/fiche-service-public/salaire-primes-et-avantages#salaire");
+    cy.get("h1").should("contain", "Salaire, primes et avantages");
     cy.get("body").should("contain", "Source: Fiche service-public.fr");
-    cy.get("h2").first().should("contain", "Quel salarié a droit aux congés payés");
+    cy.get("h2").first().should("contain", "Salaire");
   });
 
   it("je vois une fiche service public avec un accordéon ouvert", () => {
-    cy.visit("/fiche-service-public/conges-payes#a-combien-de-jours-de-conges-payes-le-salarie-a-t-il-droit");
-    cy.get("h1").should("have.text", "Congés payés du salarié dans le secteur privé");
-    cy.get('[aria-expanded="true"]').find("h2").should("contain", "À combien de jours de congés payés le salarié a-t-il droit");
+    cy.visit("/fiche-service-public/salaire-primes-et-avantages#salaire");
+    cy.get("h1").should("have.text", "Salaire, primes et avantages");
+    cy.get('[aria-expanded="true"]').find("h2").should("contain", "Salaire");
   });
 
   it("je vois une page convention collective", () => {

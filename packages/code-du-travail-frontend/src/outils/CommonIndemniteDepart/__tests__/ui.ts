@@ -387,6 +387,9 @@ export const ui = {
       duration: (index: number) => byTestId(`absence-duree-${index}`),
       date: (index: number) => byTestId(`absence-date-${index}`),
     },
+    error: {
+      requiredDate: byText(/Veuillez saisir cette date/),
+    },
   },
   salary: {
     hasPartialTime: {
