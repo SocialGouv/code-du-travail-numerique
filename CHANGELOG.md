@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.147.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.4...v4.147.0) (2024-07-17)
+
+### Bug Fixes
+
+- **csp:** ajout de matomo au niveau de l'image ([#6038](https://github.com/SocialGouv/code-du-travail-numerique/issues/6038)) ([40af0f7](https://github.com/SocialGouv/code-du-travail-numerique/commit/40af0f7734cbf8b4c79f5c93d2c9d131e801c230))
+
+### Features
+
+- **apis:** migrations des APIs côté `getServerSideProps` ([#6033](https://github.com/SocialGouv/code-du-travail-numerique/issues/6033)) ([2615cd6](https://github.com/SocialGouv/code-du-travail-numerique/commit/2615cd669c0ca143e0dc093949bc44ee851336f1))
+- **contributions:** ajout de la date de mise à jour sur les contributions ([#6034](https://github.com/SocialGouv/code-du-travail-numerique/issues/6034)) ([01838d4](https://github.com/SocialGouv/code-du-travail-numerique/commit/01838d426a5b240bcec6c693f839b76aaff392d7))
+
 ## [4.146.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.3...v4.146.4) (2024-07-15)
 
 ### Bug Fixes

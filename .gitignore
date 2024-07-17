@@ -2,6 +2,7 @@ node_modules
 coverage
 dist
 /.env
+.env
 docker-compose.override.yml
 __pycache__
 package-lock.json

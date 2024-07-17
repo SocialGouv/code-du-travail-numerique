@@ -14,7 +14,7 @@ import { Layout } from "../../src/layout/Layout";
 import styled from "styled-components";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME } from "../../src/config";
 import { getGenericContributionsGroupByThemes } from "../../src/api";
 
 const ALL = "all";
@@ -90,13 +90,7 @@ export default Page;
 
 export async function getStaticProps() {
   try {
-    let data: any;
-    if (process.env.NEXT_PUBLIC_APP_ENV === "external-api") {
-      const response = await fetch(`${SITE_URL}/api/contributions`);
-      data = await response.json();
-    } else {
-      data = await getGenericContributionsGroupByThemes();
-    }
+    const data = await getGenericContributionsGroupByThemes();
     return { props: { contribs: data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);

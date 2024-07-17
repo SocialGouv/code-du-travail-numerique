@@ -20,6 +20,7 @@ import SearchBar from "../src/search/SearchBar";
 import { SearchResults } from "../src/search/SearchResults";
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
+import { searchWithQuery } from "../src/api";
 
 const SEARCH_ID = "search-input";
 
@@ -103,7 +104,7 @@ const SearchPage = ({
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const q = (context.query.q as string) ?? "";
-  const items = await fetchSearchResults(q);
+  const items = await searchWithQuery(q, true, undefined);
   return { props: { items } };
 };
 

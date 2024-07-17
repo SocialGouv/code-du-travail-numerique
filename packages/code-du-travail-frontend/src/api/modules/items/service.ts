@@ -6,34 +6,27 @@ import {
 import { getSearchBySourceSlugBody } from "./queries";
 import { getRelatedItems } from "./utils";
 
-export const getBySourceAndSlugItems = async (source: any, slug: string) => {
+export const getBySourceAndSlugItems = async <Type>(
+  source: string,
+  slug: string
+) => {
   const body = getSearchBySourceSlugBody({ slug, source });
-  const response = await elasticsearchClient.search<any>({
+  const response = await elasticsearchClient.search<Type>({
     body,
     index: elasticDocumentsIndex,
   });
   if (response.hits.hits.length === 0) {
-    throw new NotFoundError({
-      name: "ITEMS_NOT_FOUND",
-      message: `There is no documents that match ${slug} in ${source}`,
-      cause: null,
-    });
+    return;
   }
 
   const item = response.hits.hits[0];
 
-  const {
-    _id,
-    _source: { covisits },
-  } = item;
+  const { _id } = item;
 
   const relatedItems = await getRelatedItems({
-    covisits,
     settings: [{ _id }],
     slug,
   });
-
-  delete item._source.covisits;
 
   return {
     ...item,
