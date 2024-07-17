@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.146.4",
+  "version": "4.147.0",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -38,7 +38,7 @@
     "@sentry/nextjs": "^8.13.0",
     "@socialgouv/cdtn-elasticsearch": "^2.44.2",
     "@socialgouv/cdtn-logger": "^2.0.0",
-    "@socialgouv/cdtn-types": "^2.42.3",
+    "@socialgouv/cdtn-types": "^2.47.0",
     "@socialgouv/cdtn-ui": "workspace:^",
     "@socialgouv/cdtn-utils": "workspace:^",
     "@socialgouv/fiches-travail-data": "^4.241.0",

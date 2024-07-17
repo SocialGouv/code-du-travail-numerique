@@ -22,6 +22,7 @@ describe("Information Contents", () => {
                 type: EditorialContentType.markdown,
                 markdown: "myText1",
                 html: "myText1",
+                htmlWithGlossary: "myText1",
               },
             ],
             references: [
@@ -54,6 +55,7 @@ describe("Information Contents", () => {
                 type: EditorialContentType.markdown,
                 markdown: "myText2",
                 html: "myText2",
+                htmlWithGlossary: "myText2",
               },
             ],
             references: [],

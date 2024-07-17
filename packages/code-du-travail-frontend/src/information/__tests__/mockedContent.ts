@@ -13,6 +13,7 @@ export const mockedContents: EditorialContentBaseContentPart[] = [
         type: EditorialContentType.markdown,
         markdown: "myText1",
         html: "myText1",
+        htmlWithGlossary: "myText1",
       },
       {
         type: EditorialContentType.graphic,
@@ -22,6 +23,7 @@ export const mockedContents: EditorialContentBaseContentPart[] = [
         altText: "myAltText",
         markdown: "myGraphical",
         html: "myGraphical",
+        htmlWithGlossary: "myGraphical",
       },
       {
         type: EditorialContentType.content,
@@ -75,6 +77,7 @@ export const mockedContents: EditorialContentBaseContentPart[] = [
         type: EditorialContentType.markdown,
         markdown: "myText2",
         html: "myText2",
+        htmlWithGlossary: "myText2",
       },
     ],
     references: [],
