@@ -18,13 +18,13 @@ import {
   DismissalProcess,
   DureePreavisDemission,
   DureePreavisLicenciement,
-  DureePreavisRetraite,
   HeuresRechercheEmploi,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
 } from "../../src/outils";
 import { getBySlugTools, getBySourceAndSlugItems } from "../../src/api";
 import { Tool } from "@socialgouv/cdtn-types";
+import { CalculateurPreavisRetraite } from "../../src/outils/PreavisRetraite";
 
 const toolsBySlug = {
   "convention-collective": AgreementSearch,
@@ -33,7 +33,7 @@ const toolsBySlug = {
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "preavis-demission": DureePreavisDemission,
   "preavis-licenciement": DureePreavisLicenciement,
-  "preavis-retraite": DureePreavisRetraite,
+  "preavis-retraite": CalculateurPreavisRetraite,
   "simulateur-embauche": SimulateurEmbauche,
   "procedure-licenciement": DismissalProcess,
   "indemnite-rupture-conventionnelle": CalculateurRuptureConventionnelle,
