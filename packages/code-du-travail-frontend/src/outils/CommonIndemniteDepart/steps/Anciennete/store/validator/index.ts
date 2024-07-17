@@ -1,6 +1,6 @@
 import { deepEqualObject } from "../../../../../../lib";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
-import { CommonInformationsStoreInput } from "../../../../../CommonSteps/Informations/store";
+import { CommonInformationsStoreInput } from "../../../Informations/store";
 
 import { getDateEntreeErrors } from "./dateEntree";
 import { getDateSortieErrors } from "./dateSortie";

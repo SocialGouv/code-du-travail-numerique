@@ -1,10 +1,10 @@
-import { deepEqualObject } from "../../../../lib";
+import { deepEqualObject } from "../../../../../lib";
 import {
   CommonInformationsStoreError,
   CommonInformationsStoreInput,
 } from "./types";
 import { RuleType } from "@socialgouv/modeles-social";
-import { isDate, isPositiveNumber } from "../../../common/validators";
+import { isDate, isPositiveNumber } from "../../../../common/validators";
 
 export const validateStep = (state: CommonInformationsStoreInput) => {
   const informations = state.publicodesInformations;

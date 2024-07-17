@@ -8,7 +8,7 @@ import {
   theme,
 } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
-import { Question } from "../../../common/Question";
+import { Question } from "../../common/Question";
 
 type Props = {
   onCheckboxChange: (v: boolean) => void;

@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { Paragraph, Section as SectionUi } from "@socialgouv/cdtn-ui";
-import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "../../../types";
-import { TrackingProps } from "../../../ConventionCollective/types";
+import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
+import { Agreement } from "../../types";
+import { TrackingProps } from "../../ConventionCollective/types";
 import styled from "styled-components";
 import {
   AgreementSupportInfo,
   OnSelectAgreementFn,
-} from "../../../common/Agreement/types";
+} from "../../common/Agreement/types";
 import ShowAgreements from "./ShowAgreements";
-import ShowAgreement from "../../../common/Agreement/EnterpriseSearch/ShowAgreement";
-import SelectedEnterprise from "../../../common/Agreement/EnterpriseSearch/SelectedEnterprise";
+import ShowAgreement from "../../common/Agreement/EnterpriseSearch/ShowAgreement";
+import SelectedEnterprise from "../../common/Agreement/EnterpriseSearch/SelectedEnterprise";
 import {
   SearchEnterpriseInput,
   SearchParams,
-} from "../../../common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
+} from "../../common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export type Props = {

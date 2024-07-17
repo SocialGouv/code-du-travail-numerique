@@ -9,7 +9,7 @@ import { IndemniteDepartType, StoreSlice } from "../../../../types";
 import { validateStep } from "./validator";
 import { AncienneteStoreSlice } from "../../Anciennete";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
-import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { loadPublicodes } from "../../../../api";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";

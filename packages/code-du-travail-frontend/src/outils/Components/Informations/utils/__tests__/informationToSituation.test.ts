@@ -1,5 +1,5 @@
 import { informationToSituation } from "../informationToSituation";
-import { PublicodesInformation } from "../../store";
+import { PublicodesInformation } from "../../../../CommonIndemniteDepart/steps/Informations/store";
 
 describe("Transforme les informations dans le state en un object pour une situation publicodes", () => {
   test("avec des informations saisies", () => {

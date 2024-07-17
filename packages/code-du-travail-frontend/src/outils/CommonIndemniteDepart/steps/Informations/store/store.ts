@@ -7,20 +7,20 @@ import {
   CommonInformationsStoreSlice,
   PublicodesInformation,
 } from "./types";
-import { StoreSlice } from "../../../types";
+import { StoreSlice } from "../../../../types";
 import {
   CatPro3239,
   MissingArgs,
   PublicodesSimulator,
 } from "@socialgouv/modeles-social";
-import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
-import { CommonAgreementStoreSlice } from "../../Agreement/store";
-import { removeDuplicateObject } from "../../../../lib";
-import { informationToSituation } from "../utils";
-import { ValidationResponse } from "../../../Components/SimulatorLayout";
-import { ContratTravailStoreSlice } from "../../../CommonIndemniteDepart/steps/ContratTravail/store";
+import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../../publicodes";
+import { removeDuplicateObject } from "../../../../../lib";
+import { informationToSituation } from "../../../../Components/Informations/utils";
+import { ValidationResponse } from "../../../../Components/SimulatorLayout";
+import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import * as Sentry from "@sentry/nextjs";
-import { CommonSituationStoreSlice } from "../../../common/situationStore";
+import { CommonSituationStoreSlice } from "../../../../common/situationStore";
+import { CommonAgreementStoreSlice } from "../../Agreement/store";
 
 const initialState: CommonInformationsStoreData = {
   input: {

@@ -1,9 +1,7 @@
-import {
-  IndemniteDepartContext,
-  useIndemniteDepartStore,
-} from "../../store";
-import CommonInformationStep from "../../../CommonSteps/Informations";
+import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 import { useContext } from "react";
+import { InlineError } from "../../../common/ErrorField";
+import { PubliQuestion } from "../../../Components/Informations";
 
 const InformationsStep = (): JSX.Element => {
   const store = useContext(IndemniteDepartContext);
@@ -15,11 +13,32 @@ const InformationsStep = (): JSX.Element => {
     }));
 
   return (
-    <CommonInformationStep
-      errors={errors}
-      onChange={onInformationsChange}
-      informations={informations}
-    />
+    <>
+      {informations.map((info, index) => {
+        return (
+          <PubliQuestion
+            key={info.id}
+            name={"infos." + info.question.name}
+            rule={info.question.rule}
+            value={info.info}
+            onChange={(v) =>
+              onInformationsChange(
+                info.question.rule.nom,
+                v,
+                info.question.rule.cdtn?.type
+              )
+            }
+            error={
+              errors.errorInformations[info.question.rule.nom] ?? undefined
+            }
+            autoFocus={index === 0}
+          />
+        );
+      })}
+      {errors.errorPublicodes && (
+        <InlineError>{errors.errorPublicodes}</InlineError>
+      )}
+    </>
   );
 };
 

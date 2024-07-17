@@ -6,6 +6,8 @@ import {
   OriginDepartStoreInput,
   OriginDepartStoreSlice,
 } from "./OriginStep/store";
+import { CommonAgreementStoreSlice } from "../../CommonSteps/Agreement/store";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export type StoreSliceWrapperPreavisRetraite<
   T extends object,
@@ -15,7 +17,8 @@ export type StoreSliceWrapperPreavisRetraite<
   get: StoreApi<E extends T ? E : E & T>["getState"]
 ) => T;
 
-export type MainStore = OriginDepartStoreSlice;
+export type MainStore = OriginDepartStoreSlice &
+  CommonAgreementStoreSlice<PublicodesSimulator.PREAVIS_RETRAITE>;
 
 export type StepData<
   T extends OriginDepartStoreInput,

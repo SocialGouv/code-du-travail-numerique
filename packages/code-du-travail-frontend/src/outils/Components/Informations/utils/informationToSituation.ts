@@ -1,4 +1,4 @@
-import { PublicodesInformation } from "../store";
+import { PublicodesInformation } from "../../../CommonIndemniteDepart/steps/Informations/store";
 
 export const informationToSituation = (
   informationData: Array<PublicodesInformation>

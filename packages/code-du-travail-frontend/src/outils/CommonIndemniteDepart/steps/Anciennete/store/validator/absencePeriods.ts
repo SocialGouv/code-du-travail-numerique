@@ -5,8 +5,8 @@ import {
   AncienneteStoreError,
   AncienneteStoreInput,
 } from "../types";
-import { CommonInformationsStoreInput } from "../../../../../CommonSteps/Informations/store";
-import { informationToSituation } from "../../../../../CommonSteps/Informations/utils";
+import { CommonInformationsStoreInput } from "../../../Informations/store";
+import { informationToSituation } from "../../../../../Components/Informations/utils";
 
 export const getAbsencePeriodsErrors = (
   state: AncienneteStoreInput,

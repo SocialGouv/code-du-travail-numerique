@@ -42,9 +42,9 @@ const steps: Step[] = [
     Component: StepOrigin,
   },
   {
-    label: "Introduction",
-    name: PreavisRetraiteStepName.Intro,
-    Component: StepIntro,
+    label: "Convention collective",
+    name: PreavisRetraiteStepName.Agreement,
+    Component: StepAgreement,
   },
 ];
 

@@ -9,7 +9,7 @@ import {
   Agreement16StoreSlice,
 } from "./types";
 import { validateStep } from "./validator";
-import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { CommonInformationsStoreSlice } from "../../../steps/Informations/store";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 
 const initialState: Agreement16StoreData = {

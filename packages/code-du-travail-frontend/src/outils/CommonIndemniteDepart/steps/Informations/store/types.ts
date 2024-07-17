@@ -1,9 +1,14 @@
 import {
   IndemniteLicenciementPublicodes,
+  Rule,
   RuleType,
 } from "@socialgouv/modeles-social";
-import { Question } from "../../../DureePreavisRetraite/state";
-import { ValidationResponse } from "../../../Components/SimulatorLayout";
+import { ValidationResponse } from "../../../../Components/SimulatorLayout";
+
+export type Question = {
+  name: string;
+  rule: Rule;
+};
 
 export type PublicodesInformation = {
   info: string | undefined;

@@ -9,7 +9,7 @@ import {
   Agreement44StoreSlice,
 } from "./types";
 import { validateStep } from "./validator";
-import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { CommonInformationsStoreSlice } from "../../../steps/Informations/store";
 import { computeSalaryPeriods } from "../../../common";
 import { parse } from "../../../../common/utils";
 import { SalaryPeriods } from "@socialgouv/modeles-social";

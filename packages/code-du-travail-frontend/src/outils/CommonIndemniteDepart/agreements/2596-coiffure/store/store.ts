@@ -12,7 +12,7 @@ import {
   Agreement2596StoreSlice,
 } from "./types";
 import { validateStep } from "./validator";
-import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { CommonInformationsStoreSlice } from "../../../steps/Informations/store";
 import { ContratTravailStoreSlice } from "../../../steps/ContratTravail/store";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 

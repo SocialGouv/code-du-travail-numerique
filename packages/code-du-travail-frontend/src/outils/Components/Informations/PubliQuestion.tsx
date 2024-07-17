@@ -1,15 +1,11 @@
 import React from "react";
 
 import { Rule, RuleType } from "@socialgouv/modeles-social";
-import Html from "../../../../common/Html";
-import {
-  RadioQuestion,
-  SelectQuestion,
-  TextQuestion,
-} from "../../../Components";
-import { reverseValues } from "../../../publicodes";
-import { eventEmitter } from "../../../CommonIndemniteDepart/events/emitter";
-import { EventType } from "../../../CommonIndemniteDepart/events/events";
+import Html from "../../../common/Html";
+import { RadioQuestion, SelectQuestion, TextQuestion } from "../../Components";
+import { reverseValues } from "../../publicodes";
+import { eventEmitter } from "../../CommonIndemniteDepart/events/emitter";
+import { EventType } from "../../CommonIndemniteDepart/events/events";
 
 interface Props {
   name: string;

@@ -6,12 +6,12 @@ import {
 } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 
-import { Agreement } from "../../../types";
-import { TrackingProps } from "../../../ConventionCollective/types";
-import { Question } from "../../../common/Question";
-import { AgreementSupportInfo } from "../../../common/Agreement/types";
-import ShowAlert from "../../../common/Agreement/components/ShowAlert";
-import { SearchAgreementInput } from "../../../common/Agreement/AgreementSearch/AgreementInput/SearchAgreementInput";
+import { Agreement } from "../../types";
+import { TrackingProps } from "../../ConventionCollective/types";
+import { Question } from "../../common/Question";
+import { AgreementSupportInfo } from "../../common/Agreement/types";
+import ShowAlert from "../../common/Agreement/components/ShowAlert";
+import { SearchAgreementInput } from "../../common/Agreement/AgreementSearch/AgreementInput/SearchAgreementInput";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export type Props = {
