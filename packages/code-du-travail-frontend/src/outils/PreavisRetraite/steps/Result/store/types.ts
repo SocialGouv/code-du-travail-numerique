@@ -1,27 +1,40 @@
-import { ValidationResponse } from "../../../../Components/SimulatorLayout";
+import {
+  PublicodesPreavisRetraiteResult,
+  References,
+  Notification,
+} from "@socialgouv/modeles-social";
 import { StepData } from "../../store";
+import { NoticeUsed, WarningType } from "../utils/types";
 
-export type DepartOuMiseRetraite = "depart-retraite" | "mise-retraite";
-
-export type OriginDepartStoreInput = {
-  originDepart?: DepartOuMiseRetraite;
+export type ResultStoreInput = {
+  noticeUsed?: NoticeUsed;
+  warningType?: WarningType;
+  isSeniorityLessThan6Months?: boolean;
+  hasAgreement?: boolean;
+  hasAgreementResult?: boolean;
+  isAgreementSupported?: boolean;
+  legalResult?: PublicodesPreavisRetraiteResult;
+  agreementResult?: PublicodesPreavisRetraiteResult;
+  agreementMaximumResult?: PublicodesPreavisRetraiteResult;
+  bestResult?: PublicodesPreavisRetraiteResult;
+  hasNotice?: boolean;
+  legalNotification?: Notification[];
+  legalReferences?: References[];
+  agreementNotification?: Notification[];
+  agreementReferences?: References[];
 };
 
-export type OriginDepartStoreError = {
-  errorOriginDepart?: string;
+export type ResultStoreError = {
+  errorPublicodes?: string;
 };
 
-export type OriginDepartStoreData = StepData<
-  OriginDepartStoreInput,
-  OriginDepartStoreError
->;
+export type ResultStoreData = StepData<ResultStoreInput, ResultStoreError>;
 
-export type OriginDepartStoreFn = {
-  onChangeOriginDepart: (value: DepartOuMiseRetraite) => void;
-  onNextStep: () => ValidationResponse;
+export type ResultStoreFn = {
+  getPublicodesResult: () => void;
 };
 
-export type OriginDepartStoreSlice = {
-  originDepartData: OriginDepartStoreData;
-  originDepartFunction: OriginDepartStoreFn;
+export type ResultStoreSlice = {
+  resultData: ResultStoreData;
+  resultFunction: ResultStoreFn;
 };

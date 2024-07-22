@@ -39,17 +39,14 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
       const agreement = get().agreementData.input.agreement;
       const originDepart = get().originDepartData.input.originDepart!;
       try {
-        const result = publicodes.calculate(
+        const result = publicodes.setSituation(
           mapToPublicodesSituationForCalculationPreavisRetraite(
             originDepart,
             agreement?.num,
             undefined
           )
         );
-        let resultMissingArgs: MissingArgs[] = [];
-        if (result.type === "missing-args") {
-          resultMissingArgs = result.missingArgs;
-        }
+        let resultMissingArgs: MissingArgs[] = result.missingArgs;
         const missingArgs = resultMissingArgs.filter(
           (item) => item.rawNode.cdtn
         );
@@ -120,9 +117,8 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
         const rules = informationToSituation(newPublicodesInformations);
         const originDepart = get().originDepartData.input.originDepart!;
         let missingArgs: MissingArgs[] = [];
-        let blockingNotification: any = undefined;
         try {
-          const result = publicodes.calculate(
+          const result = publicodes.setSituation(
             mapToPublicodesSituationForCalculationPreavisRetraite(
               originDepart,
               agreement?.num,
@@ -130,25 +126,12 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
               rules
             )
           );
-          let resultMissingArgs: MissingArgs[] = [];
-          if (result.type === "missing-args") {
-            resultMissingArgs = result.missingArgs;
-          }
+          let resultMissingArgs: MissingArgs[] = result.missingArgs;
           missingArgs = resultMissingArgs.filter((item) => item.rawNode.cdtn);
-          const notifBloquante = publicodes.getNotificationsBloquantes();
-          if (notifBloquante.length > 0) {
-            blockingNotification = notifBloquante[0].description;
-          }
         } catch (e) {
           informationError = true;
           console.error(e);
         }
-        set(
-          produce((state: InformationsStoreSlice) => {
-            state.informationsData.input.blockingNotification =
-              blockingNotification;
-          })
-        );
         const newQuestions = missingArgs
           .sort((a, b) => b.indice - a.indice)
           .map((arg, index) => ({
@@ -194,21 +177,6 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
     onNextStep: () => {
       const state = get().informationsData.input;
       const { isValid, errorState } = validateStep(state);
-      let errorEligibility;
-
-      if (isValid) {
-        const publicodes = get().agreementData.publicodes;
-        const situation = {
-          ...informationToSituation(
-            get().informationsData.input.publicodesInformations
-          ),
-        };
-        const result = publicodes.calculate(situation);
-        errorEligibility =
-          result.type === "ineligibility"
-            ? result.ineligibility
-            : state.blockingNotification;
-      }
 
       set(
         produce((state: InformationsStoreSlice) => {
@@ -218,11 +186,7 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
           state.informationsData.error = errorState;
         })
       );
-      return errorEligibility
-        ? ValidationResponse.NotEligible
-        : isValid
-        ? ValidationResponse.Valid
-        : ValidationResponse.NotValid;
+      return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
     },
   },
 });

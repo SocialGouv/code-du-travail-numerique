@@ -1,2 +1,2 @@
-export { default as createOriginDepartStore } from "./store";
+export { default as createResultStore } from "./store";
 export * from "./types";

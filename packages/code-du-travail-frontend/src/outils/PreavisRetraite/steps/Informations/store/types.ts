@@ -9,7 +9,6 @@ import { PublicodesInformation } from "../../../../CommonIndemniteDepart/steps/I
 export type InformationsStoreInput = {
   publicodesInformations: Array<PublicodesInformation>;
   hasNoMissingQuestions: boolean;
-  blockingNotification?: string;
   informationError: boolean;
 };
 

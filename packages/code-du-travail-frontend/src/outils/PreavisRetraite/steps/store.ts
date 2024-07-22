@@ -11,6 +11,7 @@ import {
   InformationsStoreSlice,
 } from "./Informations/store";
 import { createSeniorityStore, SeniorityStoreSlice } from "./Seniority/store";
+import { createResultStore, ResultStoreSlice } from "./Result/store";
 
 export type StoreSliceWrapperPreavisRetraite<
   T extends object,
@@ -23,7 +24,8 @@ export type StoreSliceWrapperPreavisRetraite<
 export type MainStore = OriginDepartStoreSlice &
   AgreementStoreSlice &
   InformationsStoreSlice &
-  SeniorityStoreSlice;
+  SeniorityStoreSlice &
+  ResultStoreSlice;
 
 export type StepData<T, U> = {
   input: T;
@@ -40,6 +42,7 @@ const createRootSlice = (
   ...createAgreementStore(set, get),
   ...createInformationsStore(set, get),
   ...createSeniorityStore(set, get),
+  ...createResultStore(set, get),
 });
 
 const createStore = () =>

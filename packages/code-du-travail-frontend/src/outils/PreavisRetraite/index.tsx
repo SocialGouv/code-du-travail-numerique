@@ -11,6 +11,7 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import AgreementStep from "./steps/Agreement";
 import InformationsStep from "./steps/Informations";
 import StepSeniority from "./steps/Seniority";
+import StepResult from "./steps/Result";
 
 type Props = {
   icon: string;
@@ -58,6 +59,11 @@ const steps: Step[] = [
     label: "Ancienneté",
     name: PreavisRetraiteStepName.Seniority,
     Component: StepSeniority,
+  },
+  {
+    label: "Résultat",
+    name: PreavisRetraiteStepName.Result,
+    Component: StepResult,
   },
 ];
 

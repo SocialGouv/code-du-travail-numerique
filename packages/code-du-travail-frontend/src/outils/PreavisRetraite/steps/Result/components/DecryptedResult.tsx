@@ -1,29 +1,85 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
-import {
-  AgreementInfo,
-  PublicodesPreavisRetraiteResult,
-  SupportedTypes,
-  supportedCcn,
-} from "@socialgouv/modeles-social";
+import { PublicodesPreavisRetraiteResult } from "@socialgouv/modeles-social";
 import React from "react";
-
 import { SectionTitle } from "../../../../common/stepStyles";
-import { PreavisRetraiteFormState } from "../../../form";
+import { getDescription } from "../utils/getDescription";
+import { DepartOuMiseRetraite } from "../../OriginStep/store";
+import { NoticeUsed } from "../utils/types";
 
 type Props = {
-  data: PreavisRetraiteFormState;
-  result: PublicodesPreavisRetraiteResult;
   legalResult: PublicodesPreavisRetraiteResult;
-  agreement: {
-    result: PublicodesPreavisRetraiteResult;
-    maximum: PublicodesPreavisRetraiteResult | null;
-  };
+  agreementResult?: PublicodesPreavisRetraiteResult;
+  agreementMaximumResult?: PublicodesPreavisRetraiteResult;
+  hasHandicap: boolean;
+  typeDeDepart: DepartOuMiseRetraite;
+  noticeUsed: NoticeUsed;
+  isSeniorityLessThan6Months: boolean;
+  hasAgreement: boolean;
+  hasAgreementResult: boolean;
+  isAgreementSupported: boolean;
 };
 
-const ShowResult: React.FC<{
+const DecryptedResult: React.FC<Props> = ({
+  hasHandicap,
+  legalResult,
+  agreementMaximumResult,
+  typeDeDepart,
+  noticeUsed,
+  isSeniorityLessThan6Months,
+  hasAgreement,
+  hasAgreementResult,
+  isAgreementSupported,
+  agreementResult,
+}) => {
+  const description = getDescription(
+    typeDeDepart,
+    noticeUsed,
+    isSeniorityLessThan6Months,
+    hasAgreement,
+    hasAgreementResult,
+    isAgreementSupported
+  );
+  return (
+    <>
+      <SectionTitle>Le résultat décrypté</SectionTitle>
+      <Paragraph>
+        Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
+        <ShowResult
+          result={legalResult}
+          agreementMaximumResult={agreementMaximumResult}
+        />
+      </Paragraph>
+      <Paragraph>
+        Durée prévue par la convention collective (durée
+        conventionnelle)&nbsp;:&nbsp;
+        <ShowResultAgreement
+          result={agreementResult}
+          isAgreementSupported={isAgreementSupported}
+          agreementMaximumResult={agreementMaximumResult}
+        />
+      </Paragraph>
+      {description && <Paragraph>{description}</Paragraph>}
+      {hasHandicap && (
+        <Paragraph italic>
+          Ce résultat tient compte de la majoration pour les travailleurs
+          handicapés.
+        </Paragraph>
+      )}
+    </>
+  );
+};
+
+export default DecryptedResult;
+
+type ShowResultProps = {
   result: PublicodesPreavisRetraiteResult;
-  agreementMaximumResult: PublicodesPreavisRetraiteResult | null;
-}> = ({ result, agreementMaximumResult }) => {
+  agreementMaximumResult?: PublicodesPreavisRetraiteResult;
+};
+
+const ShowResult: React.FC<ShowResultProps> = ({
+  result,
+  agreementMaximumResult,
+}) => {
   if (result.value > 0) {
     return (
       <strong>
@@ -44,15 +100,19 @@ const ShowResult: React.FC<{
   return <strong>pas de préavis</strong>;
 };
 
-const ShowResultAgreement: React.FC<{
-  result: PublicodesPreavisRetraiteResult | null;
-  detail: LocalAgreement | null;
-  agreementMaximumResult: PublicodesPreavisRetraiteResult | null;
-}> = ({ result, detail, agreementMaximumResult }) => {
+type ShowResultAgreementProps = Partial<ShowResultProps> & {
+  isAgreementSupported?: boolean;
+};
+
+const ShowResultAgreement: React.FC<ShowResultAgreementProps> = ({
+  result,
+  isAgreementSupported,
+  agreementMaximumResult,
+}) => {
   if (!result) {
     return <strong>convention collective non renseignée</strong>;
   }
-  if (result?.value > 0) {
+  if (result?.value > 0 && agreementMaximumResult) {
     return (
       <ShowResult
         result={result}
@@ -60,172 +120,8 @@ const ShowResultAgreement: React.FC<{
       />
     );
   }
-  if (detail?.status === AgreementStatus.Supported) {
+  if (isAgreementSupported) {
     return <strong>pas de préavis</strong>;
   }
   return <strong>convention collective non traitée</strong>;
 };
-
-export enum NoticeUsed {
-  legal = "Legal",
-  agreementLabor = "agreementLabor",
-  same = "same",
-  none = "none",
-}
-
-export enum AgreementStatus {
-  Supported = "Supported",
-  Planned = "Planned",
-  NotSupported = "NotSupported",
-}
-
-type LocalAgreement = {
-  status: AgreementStatus;
-  notice: number;
-};
-
-type RootData = {
-  agreement: LocalAgreement | null;
-  handicap: boolean;
-  isVoluntary: boolean;
-  noticeUsed: NoticeUsed;
-  seniorityLessThan6Months: boolean;
-};
-
-export const createRootData = (
-  data: PreavisRetraiteFormState,
-  result: PublicodesPreavisRetraiteResult,
-  legalResult: PublicodesPreavisRetraiteResult,
-  supportedCcn: AgreementInfo[],
-  agreementResult: PublicodesPreavisRetraiteResult | null
-): RootData => {
-  let agreement: LocalAgreement | null = null;
-  if (data.ccn?.selected) {
-    const agreementFound = supportedCcn.find(
-      (item) => item.idcc === data.ccn?.selected?.num
-    );
-    agreement = {
-      notice: agreementResult?.valueInDays ?? 0,
-      status: agreementFound
-        ? agreementFound.preavisRetraite === SupportedTypes.FULLY_SUPPORTED
-          ? AgreementStatus.Supported
-          : AgreementStatus.Planned
-        : AgreementStatus.NotSupported,
-    };
-  }
-  let noticeUsed = NoticeUsed.none;
-  if (
-    (legalResult.valueInDays > 0 &&
-      legalResult.valueInDays === agreementResult?.valueInDays) ??
-    -1
-  ) {
-    noticeUsed = NoticeUsed.same;
-  } else if (
-    result.valueInDays > 0 &&
-    result.valueInDays === legalResult.valueInDays
-  ) {
-    noticeUsed = NoticeUsed.legal;
-  } else if (
-    result.valueInDays > 0 &&
-    result.valueInDays === agreementResult?.valueInDays
-  ) {
-    noticeUsed = NoticeUsed.agreementLabor;
-  }
-  return {
-    agreement: agreement,
-    handicap:
-      data.infos !== undefined &&
-      data.infos["contrat salarié - travailleur handicapé"] === "oui",
-    isVoluntary: data.origin?.isRetirementMandatory === "non",
-    noticeUsed,
-    seniorityLessThan6Months: Number(data.seniority?.value) < 6,
-  };
-};
-
-export const getDescription = (data: RootData): string | null => {
-  if (data.seniorityLessThan6Months) {
-    switch (true) {
-      case data.noticeUsed === NoticeUsed.none && data.agreement === null:
-        return "Le salarié ayant une ancienneté inférieure à 6 mois, il n’y a pas de préavis à respecter.";
-      case data.noticeUsed === NoticeUsed.none &&
-        data.agreement?.status === AgreementStatus.Supported:
-        return "Pour un salarié ayant une ancienneté inférieure à 6 mois, ni le code du travail ni la convention collective sélectionnée ne prévoit de préavis à respecter.";
-      case data.noticeUsed === NoticeUsed.agreementLabor &&
-        data.agreement?.status === AgreementStatus.Supported:
-        return "Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective.";
-    }
-    return null;
-  }
-
-  if (data.agreement === null) {
-    return "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale.";
-  } else if (data.agreement.status === AgreementStatus.Planned) {
-    return "La convention collective n’ayant pas été traitée pour le moment par nos services, la durée de préavis affichée correspond à la durée légale.";
-  } else if (data.agreement.status === AgreementStatus.NotSupported) {
-    return "La convention collective n’ayant pas été traitée par nos services, la durée de préavis affichée correspond à la durée légale.";
-  } else {
-    switch (data.noticeUsed) {
-      case NoticeUsed.legal:
-        if (data.agreement.notice > 0) {
-          return `La durée à appliquer pour le salarié est donc la durée légale, celle-ci étant plus ${
-            data.isVoluntary ? "courte" : "longue"
-          } que la durée prévue par la convention collective.`;
-        } else {
-          return "En l’absence de durée prévue par la convention collective, la durée de préavis à appliquer pour le salarié est donc la durée légale.";
-        }
-      case NoticeUsed.agreementLabor:
-        return `La durée à appliquer pour le salarié est donc la durée prévue par la convention collective, celle-ci étant plus ${
-          data.isVoluntary ? "courte" : "longue"
-        } que la durée légale.`;
-      case NoticeUsed.same:
-      case NoticeUsed.none:
-        return null;
-    }
-  }
-};
-
-const DecryptedResult: React.FC<Props> = ({
-  data,
-  legalResult,
-  agreement,
-  result,
-}) => {
-  const rootData = createRootData(
-    data,
-    result,
-    legalResult,
-    supportedCcn,
-    agreement.result
-  );
-  const description = getDescription(rootData);
-  return (
-    <>
-      <SectionTitle>Le résultat décrypté</SectionTitle>
-      <Paragraph>
-        Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
-        <ShowResult
-          result={legalResult}
-          agreementMaximumResult={agreement.maximum}
-        />
-      </Paragraph>
-      <Paragraph>
-        Durée prévue par la convention collective (durée
-        conventionnelle)&nbsp;:&nbsp;
-        <ShowResultAgreement
-          result={agreement.result}
-          detail={rootData.agreement}
-          agreementMaximumResult={agreement.maximum}
-        />
-      </Paragraph>
-      {description && <Paragraph>{description}</Paragraph>}
-      {rootData.handicap && (
-        <Paragraph italic>
-          Ce résultat tient compte de la majoration pour les travailleurs
-          handicapés.
-        </Paragraph>
-      )}
-    </>
-  );
-};
-
-export default DecryptedResult;

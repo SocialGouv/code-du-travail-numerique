@@ -11,11 +11,12 @@ import {
   SectionTitle,
   SmallText,
 } from "../../../../common/stepStyles";
+import { DepartOuMiseRetraite } from "../../OriginStep/store";
 
 type Props = {
   result: PublicodesPreavisRetraiteResult;
-  agreementMaximumResult: PublicodesPreavisRetraiteResult | null;
-  type: "mise" | "départ";
+  agreementMaximumResult?: PublicodesPreavisRetraiteResult;
+  type: DepartOuMiseRetraite;
   notifications: Notification[];
   idccNumber?: number;
 };
@@ -70,7 +71,7 @@ const ShowResult: React.FC<Props> = ({
             />
           }
           simulator={
-            type === "mise"
+            type === "mise-retraite"
               ? Simulator.PREAVIS_MISE_RETRAITE
               : Simulator.PREAVIS_DEPART_RETRAITE
           }
