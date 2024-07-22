@@ -1,7 +1,16 @@
 import { MatomoBaseEvent } from "../../../lib/matomo";
 import { push as matopush } from "@socialgouv/matomo-next";
 
-const EVENT_CATEGORY = "feedback_simulateurs";
+export enum EVENT_CATEGORY {
+  indemniteLicenciement = "feedback_simulateurs",
+  ruptureConventionnelle = "feedback_simulateurs_rupture_co",
+}
+
+export enum EVENT_SUGGESTION {
+  indemniteLicenciement = "feedback_suggestion",
+  ruptureConventionnelle = "feedback_suggestion_rupture_co",
+}
+
 export enum EVENT_ACTION {
   GLOBAL = "Comment_s_est_passée_la_simulation",
   EASINESS = "Facilité_utilisation_simulateur",
@@ -21,15 +30,22 @@ export enum FEEDBACK_RESULT {
 
 export const trackFeedback = (
   event: EVENT_ACTION,
-  feedback: FEEDBACK_RESULT
+  feedback: FEEDBACK_RESULT,
+  category: EVENT_CATEGORY
 ) => {
-  matopush([MatomoBaseEvent.TRACK_EVENT, EVENT_CATEGORY, event, feedback]);
+  matopush([MatomoBaseEvent.TRACK_EVENT, category, event, feedback]);
 };
 
-export const trackFeedbackText = (text: string, url: string) => {
+export const trackFeedbackText = (
+  text: string,
+  url: string,
+  category: EVENT_CATEGORY
+) => {
   matopush([
     "trackEvent",
-    "feedback_suggestion",
+    category === EVENT_CATEGORY.indemniteLicenciement
+      ? EVENT_SUGGESTION.indemniteLicenciement
+      : EVENT_SUGGESTION.ruptureConventionnelle,
     text,
     url.replace(/\?.*$/, ""),
   ]);

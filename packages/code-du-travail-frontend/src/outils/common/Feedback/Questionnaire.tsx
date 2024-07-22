@@ -2,14 +2,23 @@ import styled from "styled-components";
 import { Button, Heading, theme } from "@socialgouv/cdtn-ui";
 
 import { QuestionnaireItem } from "./QuestionnaireItem";
-import { EVENT_ACTION, FEEDBACK_RESULT, trackFeedback } from "./tracking";
+import {
+  EVENT_ACTION,
+  EVENT_CATEGORY,
+  FEEDBACK_RESULT,
+  trackFeedback,
+} from "./tracking";
 import { useState } from "react";
 
 type QuestionnaireProps = {
   onClick: () => void;
+  category: EVENT_CATEGORY;
 };
 
-export const Questionnaire = ({ onClick }: QuestionnaireProps): JSX.Element => {
+export const Questionnaire = ({
+  onClick,
+  category,
+}: QuestionnaireProps): JSX.Element => {
   const [status, setStatus] = useState<FEEDBACK_RESULT>();
   const [displayError, setDisplayError] = useState(false);
   return (
@@ -33,7 +42,7 @@ export const Questionnaire = ({ onClick }: QuestionnaireProps): JSX.Element => {
           if (!status) {
             setDisplayError(true);
           } else {
-            trackFeedback(EVENT_ACTION.GLOBAL, status);
+            trackFeedback(EVENT_ACTION.GLOBAL, status, category);
             onClick();
           }
         }}
