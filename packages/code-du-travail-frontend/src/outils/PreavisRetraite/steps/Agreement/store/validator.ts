@@ -1,8 +1,8 @@
-import { deepEqualObject } from "../../../../lib";
-import { CommonAgreementStoreError, CommonAgreementStoreInput } from "./types";
+import { deepEqualObject } from "../../../../../lib";
+import { AgreementStoreError, AgreementStoreInput } from "./types";
 
-export const validateStep = (state: CommonAgreementStoreInput) => {
-  const errorState: CommonAgreementStoreError = {
+export const validateStep = (state: AgreementStoreInput) => {
+  const errorState: AgreementStoreError = {
     route: !state.route ? "Vous devez répondre à cette question" : undefined,
     agreement:
       state.route === "agreement" && !state.agreement

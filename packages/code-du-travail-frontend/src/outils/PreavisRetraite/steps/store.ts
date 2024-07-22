@@ -2,12 +2,15 @@ import { createStore as create, StoreApi, useStore } from "zustand";
 import { createContext } from "react";
 import {
   createOriginDepartStore,
-  OriginDepartStoreError,
-  OriginDepartStoreInput,
   OriginDepartStoreSlice,
 } from "./OriginStep/store";
-import { CommonAgreementStoreSlice } from "../../CommonSteps/Agreement/store";
-import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import { AgreementStoreSlice } from "./Agreement/store";
+import createAgreementStore from "./Agreement/store/store";
+import {
+  createInformationsStore,
+  InformationsStoreSlice,
+} from "./Informations/store";
+import { createSeniorityStore, SeniorityStoreSlice } from "./Seniority/store";
 
 export type StoreSliceWrapperPreavisRetraite<
   T extends object,
@@ -18,12 +21,11 @@ export type StoreSliceWrapperPreavisRetraite<
 ) => T;
 
 export type MainStore = OriginDepartStoreSlice &
-  CommonAgreementStoreSlice<PublicodesSimulator.PREAVIS_RETRAITE>;
+  AgreementStoreSlice &
+  InformationsStoreSlice &
+  SeniorityStoreSlice;
 
-export type StepData<
-  T extends OriginDepartStoreInput,
-  U extends OriginDepartStoreError
-> = {
+export type StepData<T, U> = {
   input: T;
   error: U;
   hasBeenSubmit: boolean;
@@ -35,6 +37,9 @@ const createRootSlice = (
   get: StoreApi<MainStore>["getState"]
 ) => ({
   ...createOriginDepartStore(set, get),
+  ...createAgreementStore(set, get),
+  ...createInformationsStore(set, get),
+  ...createSeniorityStore(set, get),
 });
 
 const createStore = () =>

@@ -8,6 +8,9 @@ import {
 } from "./steps/store";
 import { SimulatorLayout } from "../Components";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import AgreementStep from "./steps/Agreement";
+import InformationsStep from "./steps/Informations";
+import StepSeniority from "./steps/Seniority";
 
 type Props = {
   icon: string;
@@ -44,7 +47,17 @@ const steps: Step[] = [
   {
     label: "Convention collective",
     name: PreavisRetraiteStepName.Agreement,
-    Component: StepAgreement,
+    Component: AgreementStep,
+  },
+  {
+    label: "Informations",
+    name: PreavisRetraiteStepName.Infos,
+    Component: InformationsStep,
+  },
+  {
+    label: "Ancienneté",
+    name: PreavisRetraiteStepName.Seniority,
+    Component: StepSeniority,
   },
 ];
 

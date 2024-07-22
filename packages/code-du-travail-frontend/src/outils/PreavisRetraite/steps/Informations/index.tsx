@@ -1,16 +1,26 @@
-import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
-import { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { InlineError } from "../../../common/ErrorField";
 import { PubliQuestion } from "../../../Components/Informations";
+import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
 
 const InformationsStep = (): JSX.Element => {
-  const store = useContext(IndemniteDepartContext);
-  const { errors, onInformationsChange, informations } =
-    useIndemniteDepartStore(store, (state) => ({
-      errors: state.informationsData.error,
-      onInformationsChange: state.informationsFunction.onInformationsChange,
-      informations: state.informationsData.input.publicodesInformations,
-    }));
+  const store = useContext(PreavisRetraiteContext);
+  const {
+    errors,
+    onInformationsChange,
+    informations,
+    generatePublicodesQuestions,
+  } = usePreavisRetraiteStore(store, (state) => ({
+    errors: state.informationsData.error,
+    onInformationsChange: state.informationsFunction.onInformationsChange,
+    informations: state.informationsData.input.publicodesInformations,
+    generatePublicodesQuestions:
+      state.informationsFunction.generatePublicodesQuestions,
+  }));
+
+  useEffect(() => {
+    generatePublicodesQuestions();
+  }, []);
 
   return (
     <>

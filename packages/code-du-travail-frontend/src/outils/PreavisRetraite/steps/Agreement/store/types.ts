@@ -1,42 +1,37 @@
-import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { ValidationResponse } from "../../../Components/SimulatorLayout";
-import { AgreementRoute } from "../../../common/type/WizardType";
 import {
   PublicodesInstance,
   PublicodesSimulator,
 } from "@socialgouv/modeles-social";
-import { Agreement } from "../../../types";
+import { Enterprise } from "../../../../../conventions/Search/api/enterprises.service";
+import { AgreementRoute } from "../../../../common/type/WizardType";
+import { Agreement } from "../../../../types";
+import { AgreementSearchValue } from "../../../../CommonIndemniteDepart/steps/Agreement/store";
+import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 
-export type CommonAgreementStoreInput = {
+export type AgreementStoreInput = {
   route?: AgreementRoute;
   agreement?: Agreement;
   enterprise?: Enterprise;
-  isAgreementSupportedIndemniteLicenciement: boolean;
   hasNoEnterpriseSelected: boolean;
   informationError: boolean;
 };
 
-export type CommonAgreementStoreError = {
+export type AgreementStoreError = {
   route?: string;
   agreement?: string;
   enterprise?: string;
   errorPublicodes?: string;
 };
 
-export type CommonAgreementStoreData<T extends PublicodesSimulator> = {
-  input: CommonAgreementStoreInput;
-  error: CommonAgreementStoreError;
+export type AgreementStoreData = {
+  input: AgreementStoreInput;
+  error: AgreementStoreError;
   hasBeenSubmit: boolean;
   isStepValid: boolean;
-  publicodes: PublicodesInstance<T>;
+  publicodes: PublicodesInstance<PublicodesSimulator.PREAVIS_RETRAITE>;
 };
 
-export type AgreementSearchValue = {
-  address: string;
-  query: string;
-};
-
-export type CommonAgreementStoreFn = {
+export type AgreementStoreFn = {
   onRouteChange: (value: AgreementRoute) => void;
   onInitAgreementPage: () => void;
   onAgreementChange: (
@@ -49,7 +44,7 @@ export type CommonAgreementStoreFn = {
   setHasNoEnterpriseSelected: (value: boolean) => void;
 };
 
-export type CommonAgreementStoreSlice<T extends PublicodesSimulator> = {
-  agreementData: CommonAgreementStoreData<T>;
-  agreementFunction: CommonAgreementStoreFn;
+export type AgreementStoreSlice = {
+  agreementData: AgreementStoreData;
+  agreementFunction: AgreementStoreFn;
 };

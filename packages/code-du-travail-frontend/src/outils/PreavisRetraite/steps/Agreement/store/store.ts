@@ -1,32 +1,23 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
 import { push as matopush } from "@socialgouv/matomo-next";
-import { validateStep } from "./validator";
 
-import { CommonAgreementStoreData, CommonAgreementStoreSlice } from "./types";
-import {
-  Agreement,
-  STORAGE_KEY_AGREEMENT,
-  StoreSlicePublicode,
-} from "../../../types";
-import { CommonInformationsStoreSlice } from "../../Informations/store";
-import { loadPublicodes } from "../../../api";
-import { ValidationResponse } from "../../../Components/SimulatorLayout";
 import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
+import { loadPublicodes } from "../../../../api";
+import { Agreement, STORAGE_KEY_AGREEMENT } from "../../../../types";
+import { AgreementRoute } from "../../../../common/type/WizardType";
+import { pushAgreementEvents } from "../../../../common";
+import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 import {
   MatomoBaseEvent,
   MatomoSearchAgreementCategory,
-} from "../../../../lib";
-import { pushAgreementEvents } from "../../../common/Agreement";
-import { AgreementRoute } from "../../../common/type/WizardType";
-import { isCcFullySupportedIndemniteLicenciement } from "../../../CommonIndemniteDepart/common";
+} from "../../../../../lib";
+import { StoreSliceWrapperPreavisRetraite } from "../../store";
+import { AgreementStoreData, AgreementStoreSlice } from "./types";
+import { validateStep } from "./validator";
 
-const initialState: Omit<
-  CommonAgreementStoreData<PublicodesSimulator>,
-  "publicodes"
-> = {
+const initialState: Omit<AgreementStoreData, "publicodes"> = {
   input: {
-    isAgreementSupportedIndemniteLicenciement: false,
     hasNoEnterpriseSelected: false,
     informationError: false,
   },
@@ -35,11 +26,15 @@ const initialState: Omit<
   isStepValid: true,
 };
 
-const createCommonAgreementStore: StoreSlicePublicode<
-  CommonAgreementStoreSlice<PublicodesSimulator>,
-  CommonInformationsStoreSlice
-> = (set, get, { simulator, type }) => ({
-  agreementData: { ...initialState, publicodes: loadPublicodes(simulator) },
+const createAgreementStore: StoreSliceWrapperPreavisRetraite<
+  AgreementStoreSlice
+> = (set, get) => ({
+  agreementData: {
+    ...initialState,
+    publicodes: loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
+      PublicodesSimulator.PREAVIS_RETRAITE
+    ),
+  },
   agreementFunction: {
     onInitAgreementPage: () => {
       try {
@@ -56,24 +51,15 @@ const createCommonAgreementStore: StoreSlicePublicode<
             );
             const idcc = parsedData?.num?.toString();
             if (idcc) {
-              const publicodes = loadPublicodes(simulator, idcc);
+              const publicodes =
+                loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
+                  PublicodesSimulator.PREAVIS_RETRAITE,
+                  idcc
+                );
               set(
-                produce(
-                  (state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-                    state.agreementData.publicodes = publicodes;
-                    state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-                      isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
-                  }
-                )
-              );
-              const isOk =
-                get().informationsFunction.generatePublicodesQuestions();
-              set(
-                produce(
-                  (state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-                    state.agreementData.input.informationError = !isOk;
-                  }
-                )
+                produce((state: AgreementStoreSlice) => {
+                  state.agreementData.publicodes = publicodes;
+                })
               );
             }
           }
@@ -92,25 +78,22 @@ const createCommonAgreementStore: StoreSlicePublicode<
           console.error(e);
         }
         set(
-          produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-            state.agreementData.publicodes = loadPublicodes(simulator);
+          produce((state: AgreementStoreSlice) => {
+            state.agreementData.publicodes =
+              loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
+                PublicodesSimulator.PREAVIS_RETRAITE
+              );
           })
         );
       }
       set(
-        produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+        produce((state: AgreementStoreSlice) => {
           state.agreementData.input.enterprise = undefined;
           state.agreementData.input.agreement = undefined;
           state.agreementData.input.hasNoEnterpriseSelected = false;
         })
       );
       applyGenericValidation(get, set, "route", value);
-      const isOk = get().informationsFunction.generatePublicodesQuestions();
-      set(
-        produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-          state.agreementData.input.informationError = !isOk;
-        })
-      );
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
@@ -129,18 +112,12 @@ const createCommonAgreementStore: StoreSlicePublicode<
       applyGenericValidation(get, set, "enterprise", enterprise);
       const idcc = agreement?.num?.toString();
       set(
-        produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-          state.agreementData.publicodes = loadPublicodes(simulator, idcc);
-          state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-            idcc
-              ? isCcFullySupportedIndemniteLicenciement(parseInt(idcc))
-              : false;
-        })
-      );
-      const isOk = get().informationsFunction.generatePublicodesQuestions();
-      set(
-        produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
-          state.agreementData.input.informationError = isOk ? false : true;
+        produce((state: AgreementStoreSlice) => {
+          state.agreementData.publicodes =
+            loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
+              PublicodesSimulator.PREAVIS_RETRAITE,
+              idcc
+            );
         })
       );
     },
@@ -158,11 +135,11 @@ const createCommonAgreementStore: StoreSlicePublicode<
       const { route, agreement, enterprise } = input;
       if (isValid && route) {
         const isTreated = !!supportedCcn.find(
-          ({ indemniteLicenciement, idcc }) =>
-            indemniteLicenciement && idcc === agreement?.num
+          ({ preavisRetraite, idcc }) =>
+            preavisRetraite && idcc === agreement?.num
         );
         pushAgreementEvents(
-          type,
+          PublicodesSimulator.PREAVIS_RETRAITE,
           {
             route,
             selected: agreement,
@@ -173,7 +150,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
         );
       }
       set(
-        produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+        produce((state: AgreementStoreSlice) => {
           state.agreementData.hasBeenSubmit = !isValid;
           state.agreementData.isStepValid = isValid;
           state.agreementData.error = errorState;
@@ -185,7 +162,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
       matopush([
         MatomoBaseEvent.TRACK_EVENT,
         MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
-        type,
+        PublicodesSimulator.PREAVIS_RETRAITE,
         JSON.stringify(data),
       ]);
     },
@@ -193,7 +170,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
       matopush([
         MatomoBaseEvent.TRACK_EVENT,
         MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
-        type,
+        PublicodesSimulator.PREAVIS_RETRAITE,
         JSON.stringify(data),
       ]);
     },
@@ -201,8 +178,8 @@ const createCommonAgreementStore: StoreSlicePublicode<
 });
 
 const applyGenericValidation = (
-  get: StoreApi<CommonAgreementStoreSlice<PublicodesSimulator>>["getState"],
-  set: StoreApi<CommonAgreementStoreSlice<PublicodesSimulator>>["setState"],
+  get: StoreApi<AgreementStoreSlice>["getState"],
+  set: StoreApi<AgreementStoreSlice>["setState"],
   paramName: any,
   value: any
 ) => {
@@ -212,7 +189,7 @@ const applyGenericValidation = (
     });
     const { isValid, errorState } = validateStep(nextState.agreementData.input);
     set(
-      produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+      produce((state: AgreementStoreSlice) => {
         state.agreementData.error = errorState;
         state.agreementData.isStepValid = isValid;
         state.agreementData.input[paramName] = value;
@@ -220,11 +197,11 @@ const applyGenericValidation = (
     );
   } else {
     set(
-      produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
+      produce((state: AgreementStoreSlice) => {
         state.agreementData.input[paramName] = value;
       })
     );
   }
 };
 
-export default createCommonAgreementStore;
+export default createAgreementStore;

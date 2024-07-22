@@ -1,14 +1,9 @@
-import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
-import CommonAgreementStep from "../../../CommonSteps/Agreement";
-import { getSupportedCc } from "../../common";
-import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { useContext } from "react";
-import { Agreement } from "../../../types";
-import { inject650IfDetected } from "../../../CommonIndemniteDepart/steps/Agreement";
-import { usePreavisRetraiteStore } from "../store";
+import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
+import { CommonAgreementStep } from "../../../CommonIndemniteDepart/steps/Agreement/components/AgreementStep";
 
 const AgreementStep = (): JSX.Element => {
-  const store = useContext(IndemniteDepartContext);
+  const store = useContext(PreavisRetraiteContext);
   const {
     error,
     onRouteChange,
@@ -38,20 +33,17 @@ const AgreementStep = (): JSX.Element => {
 
   return (
     <CommonAgreementStep
+      agreement={agreement}
+      enterprise={enterprise}
       error={error}
-      onRouteChange={onRouteChange}
-      selectedRoute={route}
+      hasNoEnterpriseSelected={hasNoEnterpriseSelected}
       onAgreementChange={onAgreementChange}
-      onInitAgreementPage={onInitAgreementPage}
-      selectedEnterprise={enterprise}
-      selectedAgreement={agreement}
-      supportedAgreements={getSupportedCc()}
-      simulator={PublicodesSimulator.PREAVIS_RETRAITE}
       onAgreementSearch={onAgreementSearch}
       onEnterpriseSearch={onEnterpriseSearch}
-      hasNoEnterpriseSelected={hasNoEnterpriseSelected}
+      onInitAgreementPage={onInitAgreementPage}
+      onRouteChange={onRouteChange}
+      route={route}
       setHasNoEnterpriseSelected={setHasNoEnterpriseSelected}
-      searchAgreementResultOverride={inject650IfDetected}
     />
   );
 };

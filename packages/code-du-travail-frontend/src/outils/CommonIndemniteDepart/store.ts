@@ -30,12 +30,6 @@ import {
   SalairesStoreSlice,
 } from "./steps/Salaires/store";
 import {
-  CommonAgreementStoreError,
-  CommonAgreementStoreInput,
-  CommonAgreementStoreSlice,
-  createCommonAgreementStore,
-} from "../CommonSteps/Agreement/store";
-import {
   CommonInformationsStoreError,
   CommonInformationsStoreInput,
   CommonInformationsStoreSlice,
@@ -50,6 +44,12 @@ import {
 import { IndemniteDepartType } from "../types";
 import { createContext } from "react";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import {
+  CommonAgreementStoreSlice,
+  CommonAgreementStoreInput,
+  CommonAgreementStoreError,
+  createCommonAgreementStore,
+} from "./steps/Agreement/store";
 
 export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
