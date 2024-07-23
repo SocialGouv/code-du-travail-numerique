@@ -7,7 +7,7 @@ import { DepartOuMiseRetraite } from "../../OriginStep/store";
 import { NoticeUsed } from "../utils/types";
 
 type Props = {
-  legalResult: PublicodesPreavisRetraiteResult;
+  legalResult?: PublicodesPreavisRetraiteResult;
   agreementResult?: PublicodesPreavisRetraiteResult;
   agreementMaximumResult?: PublicodesPreavisRetraiteResult;
   hasHandicap: boolean;
@@ -72,7 +72,7 @@ const DecryptedResult: React.FC<Props> = ({
 export default DecryptedResult;
 
 type ShowResultProps = {
-  result: PublicodesPreavisRetraiteResult;
+  result?: PublicodesPreavisRetraiteResult;
   agreementMaximumResult?: PublicodesPreavisRetraiteResult;
 };
 
@@ -80,7 +80,7 @@ const ShowResult: React.FC<ShowResultProps> = ({
   result,
   agreementMaximumResult,
 }) => {
-  if (result.value > 0) {
+  if (result && result.value > 0) {
     return (
       <strong>
         {agreementMaximumResult?.value &&
@@ -100,7 +100,7 @@ const ShowResult: React.FC<ShowResultProps> = ({
   return <strong>pas de préavis</strong>;
 };
 
-type ShowResultAgreementProps = Partial<ShowResultProps> & {
+type ShowResultAgreementProps = ShowResultProps & {
   isAgreementSupported?: boolean;
 };
 

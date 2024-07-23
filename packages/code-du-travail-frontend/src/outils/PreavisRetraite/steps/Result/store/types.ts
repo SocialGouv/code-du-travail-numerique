@@ -17,11 +17,11 @@ export type ResultStoreInput = {
   agreementResult?: PublicodesPreavisRetraiteResult;
   agreementMaximumResult?: PublicodesPreavisRetraiteResult;
   bestResult?: PublicodesPreavisRetraiteResult;
-  hasNotice?: boolean;
   legalNotification?: Notification[];
   legalReferences?: References[];
   agreementNotification?: Notification[];
   agreementReferences?: References[];
+  hasHandicap?: boolean;
 };
 
 export type ResultStoreError = {

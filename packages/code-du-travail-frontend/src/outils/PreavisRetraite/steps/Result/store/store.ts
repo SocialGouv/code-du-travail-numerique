@@ -107,17 +107,24 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
             agreementMaximumResult;
           state.resultData.input.bestResult = bestResult;
           state.resultData.input.noticeUsed =
-            legalResult?.valueInDays! === agreementResult?.valueInDays!
+            legalResult?.valueInDays === 0 && agreementResult?.valueInDays === 0
+              ? NoticeUsed.none
+              : legalResult?.valueInDays! === agreementResult?.valueInDays!
               ? NoticeUsed.same
               : legalResult?.valueInDays! > agreementResult?.valueInDays!
               ? NoticeUsed.legal
               : NoticeUsed.agreementLabor;
-          state.resultData.input.hasNotice = (bestResult?.valueInDays ?? 0) > 0;
           state.resultData.input.isAgreementSupported = isAgreementSupported;
           state.resultData.input.agreementNotification = agreementNotification;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.legalNotification = legalNotification;
           state.resultData.input.legalReferences = legalReferences;
+          state.resultData.input.isSeniorityLessThan6Months =
+            Number(get().seniorityData.input.seniorityInMonths) < 6;
+          state.resultData.input.hasHandicap =
+            get().informationsData.input.publicodesInformations[
+              "contrat salarié . handicap"
+            ] === "oui";
         })
       );
     },

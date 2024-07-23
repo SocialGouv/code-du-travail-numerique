@@ -14,7 +14,7 @@ import {
 import { DepartOuMiseRetraite } from "../../OriginStep/store";
 
 type Props = {
-  result: PublicodesPreavisRetraiteResult;
+  result?: PublicodesPreavisRetraiteResult;
   agreementMaximumResult?: PublicodesPreavisRetraiteResult;
   type: DepartOuMiseRetraite;
   notifications: Notification[];
@@ -28,9 +28,13 @@ const ShowResult: React.FC<Props> = ({
   notifications,
   idccNumber,
 }: Props) => {
+  if (!result) return null;
   return (
     <>
-      <SectionTitle>Préavis de {type} à la retraite</SectionTitle>
+      <SectionTitle>
+        Préavis de {type === "depart-retraite" ? "départ" : "mise"} à la
+        retraite
+      </SectionTitle>
       <p>
         À partir des éléments que vous avez saisis
         {result.value > 0

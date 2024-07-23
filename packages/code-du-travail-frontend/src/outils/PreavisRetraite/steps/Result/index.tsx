@@ -6,7 +6,6 @@ import { getWarningType } from "./utils/getWarningType";
 import PubliReferences from "../../../common/PubliReferences";
 import DecryptedResult from "./components/DecryptedResult";
 import ShowResult from "./components/ShowResult";
-import Situation from "./components/Situation";
 import { NoticeUsed } from "./utils/types";
 
 const StepResult = (): JSX.Element => {
@@ -17,7 +16,6 @@ const StepResult = (): JSX.Element => {
     originDepart,
     agreement,
     isAgreementSupported,
-    hasNotice,
     legalResult,
     agreementResult,
     agreementMaximumResult,
@@ -27,11 +25,12 @@ const StepResult = (): JSX.Element => {
     agreementReferences,
     noticeUsed,
     bestResult,
+    hasHandicap,
+    isSeniorityLessThan6Months,
   } = usePreavisRetraiteStore(store, (state) => ({
     originDepart: state.originDepartData.input.originDepart,
     agreement: state.agreementData.input.agreement,
     isAgreementSupported: state.resultData.input.isAgreementSupported,
-    hasNotice: state.resultData.input.hasNotice,
     getPublicodesResult: state.resultFunction.getPublicodesResult,
     legalResult: state.resultData.input.legalResult,
     agreementResult: state.resultData.input.agreementResult,
@@ -42,6 +41,9 @@ const StepResult = (): JSX.Element => {
     agreementReferences: state.resultData.input.agreementReferences,
     noticeUsed: state.resultData.input.noticeUsed,
     bestResult: state.resultData.input.bestResult,
+    isSeniorityLessThan6Months:
+      state.resultData.input.isSeniorityLessThan6Months,
+    hasHandicap: state.resultData.input.hasHandicap,
   }));
 
   useEffect(() => {
@@ -53,29 +55,37 @@ const StepResult = (): JSX.Element => {
       <ShowResult
         notifications={
           noticeUsed === NoticeUsed.legal
-            ? legalNotification
-            : agreementNotification
+            ? legalNotification ?? []
+            : agreementNotification ?? []
         }
-        references={
-          noticeUsed === NoticeUsed.legal
-            ? legalReferences
-            : agreementReferences
-        }
-        result={noticeUsed === NoticeUsed.legal ? legalResult : agreementResult}
+        result={bestResult}
+        agreementMaximumResult={agreementMaximumResult}
+        type={originDepart!}
+        idccNumber={agreement?.num}
       />
       <ShowDetails>
         <DecryptedResult
           hasAgreement={!!agreement}
-          hasAgreementResult={!!bestResult}
-          isAgreementSupported={isAgreementSupported}
-          hasHandicap={notice.hasHandicap}
-          legalResult={notice.result}
-          agreementMaximumResult={notice.agreement.maximum}
+          hasAgreementResult={!!agreementResult}
+          isAgreementSupported={!!isAgreementSupported}
+          hasHandicap={!!hasHandicap}
+          legalResult={legalResult}
+          agreementResult={agreementResult}
+          agreementMaximumResult={agreementMaximumResult}
+          noticeUsed={noticeUsed!}
+          typeDeDepart={originDepart!}
+          isSeniorityLessThan6Months={!!isSeniorityLessThan6Months}
         />
-        <PubliReferences references={formatRefs(refs)} />
+        <PubliReferences
+          references={
+            noticeUsed === NoticeUsed.legal || NoticeUsed.same === noticeUsed
+              ? legalReferences ?? []
+              : agreementReferences ?? []
+          }
+        />
       </ShowDetails>
       <WarningResult
-        hasNotice={!!hasNotice}
+        hasNotice={NoticeUsed.none !== noticeUsed}
         type={getWarningType(
           originDepart,
           agreement?.num,
