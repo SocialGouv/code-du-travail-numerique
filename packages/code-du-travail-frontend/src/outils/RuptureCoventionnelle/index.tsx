@@ -11,12 +11,13 @@ import {
   StepSalaires,
 } from "../CommonIndemniteDepart/steps";
 import {
-  StepResultat,
-  StepIntro,
-  StepContratTravail,
   StepAnciennete,
+  StepContratTravail,
+  StepIntro,
+  StepResultat,
 } from "./steps";
 import { useRuptureCoEventEmitter } from "./events/useRuptureCoEventEmitter";
+import { EVENT_CATEGORY } from "../common/Feedback/tracking";
 
 type Props = {
   icon: string;
@@ -77,7 +78,7 @@ export const CalculateurRuptureConventionnelle = ({
       displayTitle={displayTitle}
       tool={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
       steps={steps}
-      hasFeedbackPopup={false}
+      feedbackPopup={EVENT_CATEGORY.ruptureConventionnelle}
     />
   );
 };

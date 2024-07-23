@@ -17,6 +17,7 @@ import {
   StepResultat,
 } from "./steps";
 import { useIndemniteLicenciementEventEmitter } from "./events/useIndemniteLicenciementEventEmitter";
+import { EVENT_CATEGORY } from "../common/Feedback/tracking";
 
 type Props = {
   icon: string;
@@ -75,7 +76,7 @@ export const CalculateurIndemniteLicenciement = ({
       displayTitle={displayTitle}
       tool={IndemniteDepartType.LICENCIEMENT}
       steps={steps}
-      hasFeedbackPopup={true}
+      feedbackPopup={EVENT_CATEGORY.indemniteLicenciement}
     />
   );
 };
