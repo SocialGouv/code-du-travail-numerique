@@ -1113,5 +1113,20 @@
     "source": "/convention-collective/personnels-des-activites-hippiques",
     "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
     "permanent": true
+  },
+  {
+    "source": "/convention-collective/(2564|2564(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/1875-veterinaires-personnel-salarie-des-cabinets-et-cliniques-veterinaires",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0731|731(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/3243-quincaillerie-fournitures-industrielles-fers-metaux-et-equipement-de-la",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(1383|1383(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/3243-quincaillerie-fournitures-industrielles-fers-metaux-et-equipement-de-la",
+    "permanent": true
   }
 ]
