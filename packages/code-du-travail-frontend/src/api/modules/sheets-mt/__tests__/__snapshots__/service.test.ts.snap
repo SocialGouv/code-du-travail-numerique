@@ -73,6 +73,7 @@ exports[`Sheets MT getSheetsMtService 1`] = `
       "slug": "certificat-de-travail",
       "source": "fiches_service_public",
       "title": "Certificat de travail",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
     },
     {
       "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail.",
@@ -80,6 +81,7 @@ exports[`Sheets MT getSheetsMtService 1`] = `
       "slug": "certificat-de-travail",
       "source": "modeles_de_courriers",
       "title": "Certificat de travail",
+      "url": null,
     },
     {
       "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
@@ -87,6 +89,7 @@ exports[`Sheets MT getSheetsMtService 1`] = `
       "slug": "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
       "source": "contributions",
       "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
+      "url": null,
     },
   ],
 }

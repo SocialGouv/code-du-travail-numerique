@@ -21,6 +21,7 @@ export type RelatedItem = {
   slug: string;
   source: string;
   title: string;
+  url: string | null;
 };
 
 export type RelatedItemSettings = {
@@ -30,12 +31,13 @@ export type RelatedItemSettings = {
 // select certain fields and add recommendation source (covisits or search)
 const mapSource =
   (reco: string) =>
-  ({ description, slug, source, title }: RelatedItem) => ({
+  ({ description, slug, source, title, url }: RelatedItem) => ({
     description,
     reco,
     slug,
     source,
     title,
+    url: url ?? null,
   });
 
 // use search based on item title : More Like This & Semantic
@@ -64,21 +66,19 @@ export const getRelatedItems = async ({
 }): Promise<RelatedItem[]> => {
   const searchBasedItems = await getSearchBasedItems({ settings });
 
-  const filteredItems =
-    // drop duplicates (between covisits and search) using source/slug
-    searchBasedItems
-      // avoid elements already visible within the item as fragments
-      .filter(
-        (item: { slug: string }) => !slug.startsWith(item.slug.split("#")[0])
-      )
-      // only return sources of interest
-      .filter(({ source }) => sources.includes(source))
-      .reduce<Map<string, RelatedItem>>((acc: any, related: RelatedItem) => {
-        const key = related.source + related.slug;
-        if (!acc.has(key)) acc.set(key, related);
-        return acc;
-      }, new Map())
-      .values();
+  const filteredItems = searchBasedItems
+    // avoid elements already visible within the item as fragments
+    .filter(
+      (item: { slug: string }) => !slug.startsWith(item.slug.split("#")[0])
+    )
+    // only return sources of interest
+    .filter(({ source }) => sources.includes(source))
+    .reduce<Map<string, RelatedItem>>((acc: any, related: RelatedItem) => {
+      const key = related.source + related.slug;
+      if (!acc.has(key)) acc.set(key, related);
+      return acc;
+    }, new Map())
+    .values();
 
   return Array.from(filteredItems).slice(0, MAX_RESULTS);
 };
