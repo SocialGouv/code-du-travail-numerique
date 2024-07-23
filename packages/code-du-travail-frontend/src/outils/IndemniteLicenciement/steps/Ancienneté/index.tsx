@@ -84,7 +84,6 @@ const StepAnciennete = () => {
         id="dateEntree"
         showRequired
         dataTestId={"date-entree"}
-        autoFocus
       />
       <TextQuestion
         label="Quelle est la date de notification du licenciement&nbsp;?"
