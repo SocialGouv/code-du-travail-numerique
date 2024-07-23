@@ -7,6 +7,7 @@ import PubliReferences from "../../../common/PubliReferences";
 import DecryptedResult from "./components/DecryptedResult";
 import ShowResult from "./components/ShowResult";
 import { NoticeUsed } from "./utils/types";
+import Situation from "./components/Situation";
 
 const StepResult = (): JSX.Element => {
   const store = useContext(PreavisRetraiteContext);
@@ -27,6 +28,8 @@ const StepResult = (): JSX.Element => {
     bestResult,
     hasHandicap,
     isSeniorityLessThan6Months,
+    seniorityInMonths,
+    publicodesInformations,
   } = usePreavisRetraiteStore(store, (state) => ({
     originDepart: state.originDepartData.input.originDepart,
     agreement: state.agreementData.input.agreement,
@@ -44,6 +47,8 @@ const StepResult = (): JSX.Element => {
     isSeniorityLessThan6Months:
       state.resultData.input.isSeniorityLessThan6Months,
     hasHandicap: state.resultData.input.hasHandicap,
+    seniorityInMonths: state.seniorityData.input.seniorityInMonths,
+    publicodesInformations: state.informationsData.input.publicodesInformations,
   }));
 
   useEffect(() => {
@@ -64,6 +69,14 @@ const StepResult = (): JSX.Element => {
         idccNumber={agreement?.num}
       />
       <ShowDetails>
+        <Situation
+          agreement={agreement}
+          hasHandicap={hasHandicap}
+          isAgreementSupported={isAgreementSupported}
+          originDepart={originDepart!}
+          seniorityInMonths={seniorityInMonths}
+          situations={publicodesInformations}
+        />
         <DecryptedResult
           hasAgreement={!!agreement}
           hasAgreementResult={!!agreementResult}
