@@ -1,13 +1,17 @@
 import styled from "styled-components";
-import { icons, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { Button, icons, theme } from "@socialgouv/cdtn-ui";
 import { Introduction } from "./introduction";
 import { useState } from "react";
 import { Questionnaire } from "./Questionnaire";
 import { QuestionnaireAdvanced } from "./QuestionnaireAdvanced";
 import { QuestionnaireEnd } from "./QuestionnaireEnd";
-import { Button } from "@socialgouv/cdtn-ui";
+import { EVENT_CATEGORY } from "./tracking";
 
-export const Feedback = (): JSX.Element => {
+type Props = {
+  category: EVENT_CATEGORY;
+};
+
+export const Feedback = ({ category }: Props): JSX.Element => {
   const [status, setStatus] = useState<
     "questionnaire" | "questionnaireAdvanced" | "questionnaireEnd"
   >();
@@ -57,6 +61,7 @@ export const Feedback = (): JSX.Element => {
               onClick={() => {
                 setStatus("questionnaireAdvanced");
               }}
+              category={category}
             />
           )}
           {status === "questionnaireAdvanced" && (
@@ -65,6 +70,7 @@ export const Feedback = (): JSX.Element => {
                 setStatus("questionnaireEnd");
                 window.scrollTo(0, position - bodyPosition - 220);
               }}
+              category={category}
             />
           )}
           {status === "questionnaireEnd" && <QuestionnaireEnd />}

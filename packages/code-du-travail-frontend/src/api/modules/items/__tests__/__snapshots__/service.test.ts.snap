@@ -63,6 +63,7 @@ exports[`Items getBySourceAndSlugItems 1`] = `
       "slug": "demission-dune-assistante-maternelle",
       "source": "fiches_service_public",
       "title": "Démission d'une assistante maternelle",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     {
       "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",
@@ -70,6 +71,7 @@ exports[`Items getBySourceAndSlugItems 1`] = `
       "slug": "certificat-de-travail",
       "source": "fiches_service_public",
       "title": "Certificat de travail",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
     },
     {
       "description": "Le code du travail prévoit que le salarié bénéficie de congés à l’occasion de certains événements familiaux. Ils n’entrainent aucune diminution de la rémunération…",
@@ -77,6 +79,7 @@ exports[`Items getBySourceAndSlugItems 1`] = `
       "slug": "les-conges-pour-evenements-familiaux",
       "source": "contributions",
       "title": "Les congés pour événements familiaux",
+      "url": null,
     },
     {
       "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
@@ -84,6 +87,7 @@ exports[`Items getBySourceAndSlugItems 1`] = `
       "slug": "heures-recherche-emploi",
       "source": "outils",
       "title": "Heures d'absence pour rechercher un emploi",
+      "url": null,
     },
   ],
 }

@@ -16,7 +16,7 @@ export class Seniority2148 extends SeniorityDefault<SupportedCc.IDCC2148> {
     const result = this.compute(dateEntree, dateSortie, absencePeriods);
     return {
       ...result,
-      value: Math.trunc(result.value),
+      value: result.value < 1 ? result.value : Math.trunc(result.value),
     };
   }
 

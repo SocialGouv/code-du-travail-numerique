@@ -9,7 +9,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       class="sc-fFlnrN guAbeS"
     >
       <div
-        class="sc-hBtRBD fBOCwQ"
+        class="sc-hBtRBD hoRcHt"
       >
         <div
           class="sc-bOQTJJ enQbXO"
@@ -105,7 +105,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
       class="sc-fFlnrN guAbeS"
     >
       <div
-        class="sc-hBtRBD fBOCwQ"
+        class="sc-hBtRBD hoRcHt"
       >
         <div
           class="sc-bOQTJJ enQbXO"
@@ -207,7 +207,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       class="sc-fFlnrN guAbeS"
     >
       <div
-        class="sc-hBtRBD fBOCwQ"
+        class="sc-hBtRBD hoRcHt"
       >
         <div
           class="sc-bOQTJJ enQbXO"
@@ -313,7 +313,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
       class="sc-fFlnrN guAbeS"
     >
       <div
-        class="sc-hBtRBD fBOCwQ"
+        class="sc-hBtRBD hoRcHt"
       >
         <div
           class="sc-bOQTJJ enQbXO"
@@ -415,7 +415,7 @@ exports[`<Wizard /> should render a step 1`] = `
       class="sc-fFlnrN guAbeS"
     >
       <div
-        class="sc-hBtRBD fBOCwQ"
+        class="sc-hBtRBD hoRcHt"
       >
         <div
           class="sc-bOQTJJ enQbXO"

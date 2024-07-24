@@ -1,0 +1,6 @@
+contrat salarié . convention collective . bureaux études techniques . rupture conventionnelle:
+  valeur: oui
+
+contrat salarié . convention collective . bureaux études techniques . rupture conventionnelle . désactivation des anciennes règles de calcul:
+  remplace: contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . utilisation des anciennes règles de calcul
+  valeur: non

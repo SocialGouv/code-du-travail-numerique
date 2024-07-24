@@ -21,6 +21,7 @@ export type RelatedItem = {
   slug: string;
   source: string;
   title: string;
+  url: string | null;
 };
 
 export type RelatedItemSettings = {
@@ -29,12 +30,13 @@ export type RelatedItemSettings = {
 
 const mapSource =
   (reco: string) =>
-  ({ description, slug, source, title }: RelatedItem) => ({
+  ({ description, slug, source, title, url }: RelatedItem) => ({
     description,
     reco,
     slug,
     source,
     title,
+    url: url ?? null,
   });
 
 // use search based on item title : More Like This & Semantic

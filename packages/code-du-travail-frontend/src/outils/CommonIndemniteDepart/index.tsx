@@ -11,6 +11,7 @@ import { IndemniteDepartType } from "../types";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Feedback } from "../common/Feedback";
 import styled from "styled-components";
+import { EVENT_CATEGORY } from "../common/Feedback/tracking";
 
 type Props = {
   icon: string;
@@ -18,7 +19,7 @@ type Props = {
   displayTitle: string;
   tool: IndemniteDepartType;
   steps: Step<IndemniteDepartStepName>[];
-  hasFeedbackPopup: boolean;
+  feedbackPopup?: EVENT_CATEGORY;
 };
 
 type SimulateurProps = Props & {
@@ -42,7 +43,7 @@ const IndemniteDepartSimulator = ({
   title,
   icon,
   displayTitle,
-  hasFeedbackPopup,
+  feedbackPopup,
   steps,
 }: SimulateurProps): JSX.Element => {
   const store = useContext(IndemniteDepartContext);
@@ -123,7 +124,7 @@ const IndemniteDepartSimulator = ({
         ]}
         hiddenStep={getHiddenSteps()}
       />
-      {hasFeedbackPopup && <Feedback />}
+      {feedbackPopup && <Feedback category={feedbackPopup} />}
     </Flex>
   );
 };
@@ -134,7 +135,7 @@ export const CalculateurIndemnite = ({
   displayTitle,
   tool,
   steps,
-  hasFeedbackPopup,
+  feedbackPopup,
 }: Props): JSX.Element => {
   const store = React.useRef(createIndemniteDepartStore(tool)).current;
 
@@ -146,7 +147,7 @@ export const CalculateurIndemnite = ({
         displayTitle={displayTitle}
         tool={tool}
         steps={steps}
-        hasFeedbackPopup={hasFeedbackPopup}
+        feedbackPopup={feedbackPopup}
       />
     </IndemniteDepartProvider>
   );

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.148.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.147.0...v4.148.0) (2024-07-24)
+
+### Bug Fixes
+
+- **related-content:** passer l'url pour les articles liés externes ([#6050](https://github.com/SocialGouv/code-du-travail-numerique/issues/6050)) ([fb96ebf](https://github.com/SocialGouv/code-du-travail-numerique/commit/fb96ebf648e6b873dca1cb7df21279baaef183cf))
+- **rupture-co:** activation du questionnaire de satisfaction ([#6046](https://github.com/SocialGouv/code-du-travail-numerique/issues/6046)) ([b7aed3a](https://github.com/SocialGouv/code-du-travail-numerique/commit/b7aed3a2adca0125e04c00f44fa915366f61379b))
+- **rupture-co:** ajout d'espace pour le titre long ([#6048](https://github.com/SocialGouv/code-du-travail-numerique/issues/6048)) ([6a9527e](https://github.com/SocialGouv/code-du-travail-numerique/commit/6a9527e6d4704f256b0e72c7bfdb8d765fdbe0e8))
+- **rupture-co:** retrait de l'autofocus sur l'étape ancienneté ([#6047](https://github.com/SocialGouv/code-du-travail-numerique/issues/6047)) ([77eba52](https://github.com/SocialGouv/code-du-travail-numerique/commit/77eba52f549fb3c7d435e5ea834152bdc9177ac6))
+
+### Features
+
+- **agreements:** ajout de nouvelles fusions de convention collective ([#6051](https://github.com/SocialGouv/code-du-travail-numerique/issues/6051)) ([bed0ec9](https://github.com/SocialGouv/code-du-travail-numerique/commit/bed0ec95e3ca5e39fbbfc904ada31047eac26a32))
+- **tools:** ajout d'un identifiant de campagne pour la recherche d'entreprise ([#6052](https://github.com/SocialGouv/code-du-travail-numerique/issues/6052)) ([cf4749c](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf4749c12260e6a5a34957723764a3bf6cd56e73))
+
 # [4.147.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.4...v4.147.0) (2024-07-17)
 
 ### Bug Fixes

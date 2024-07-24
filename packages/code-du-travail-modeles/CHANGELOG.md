@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.148.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.147.0...v4.148.0) (2024-07-24)
+
+### Bug Fixes
+
+- **2148:** ne pas arrondir l'ancienneté en année complète si moins d'un pour avoir une indemnité en cas de rupture co (ne change rien à l'indemnité de licenciement) ([#6036](https://github.com/SocialGouv/code-du-travail-numerique/issues/6036)) ([3f1e854](https://github.com/SocialGouv/code-du-travail-numerique/commit/3f1e854c6887bcdbce9b192288541b96813947d7))
+- **rupture-co:** désactiver les anciennes règles de la 1486 ([#6045](https://github.com/SocialGouv/code-du-travail-numerique/issues/6045)) ([299b29f](https://github.com/SocialGouv/code-du-travail-numerique/commit/299b29f89510663579b669c97f4740ed11b6d746))
+
 # [4.147.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.4...v4.147.0) (2024-07-17)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

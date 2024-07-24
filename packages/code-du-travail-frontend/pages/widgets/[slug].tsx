@@ -10,6 +10,7 @@ import { Footer } from "../../src/widgets";
 import {
   AgreementSearch,
   CalculateurIndemniteLicenciement,
+  CalculateurRuptureConventionnelle,
   DismissalProcess,
   DureePreavisDemission,
   DureePreavisLicenciement,
@@ -25,6 +26,7 @@ const toolsBySlug = {
   "preavis-retraite": DureePreavisRetraite,
   "procedure-licenciement": DismissalProcess,
   "indemnite-licenciement": CalculateurIndemniteLicenciement,
+  "indemnite-rupture-conventionnelle": CalculateurRuptureConventionnelle,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "convention-collective": AgreementSearch,
   "preavis-demission": DureePreavisDemission,

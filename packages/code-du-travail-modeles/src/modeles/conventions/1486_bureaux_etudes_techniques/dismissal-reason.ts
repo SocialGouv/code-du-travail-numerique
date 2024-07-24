@@ -15,15 +15,6 @@ export class DismissalReason1486 implements IDismissalReason {
           },
         ],
       },
-      {
-        name: "licenciement éco",
-        rules: [
-          {
-            rule: "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement",
-            value: "'Oui'",
-          },
-        ],
-      },
     ];
   }
 }
