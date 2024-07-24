@@ -25,7 +25,7 @@ export const fetchEnterprises = async (
 
   const url = `${ENTERPRISE_API_URL}/search?q=${q}&page=1&per_page=25&etat_administratif=A&sort_by_size=true${
     postCode.length > 0 ? `&code_postal=${postCode.join(",")}` : ""
-  }`;
+  }&mtm_campaign=cdtn`;
 
   const fetchReq = await fetch(url);
   if (!fetchReq.ok) {
