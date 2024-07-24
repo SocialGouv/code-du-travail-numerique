@@ -30,6 +30,7 @@ const StepResult = (): JSX.Element => {
     isSeniorityLessThan6Months,
     seniorityInMonths,
     publicodesInformations,
+    moreThanXYears,
   } = usePreavisRetraiteStore(store, (state) => ({
     originDepart: state.originDepartData.input.originDepart,
     agreement: state.agreementData.input.agreement,
@@ -48,7 +49,8 @@ const StepResult = (): JSX.Element => {
       state.resultData.input.isSeniorityLessThan6Months,
     hasHandicap: state.resultData.input.hasHandicap,
     seniorityInMonths: state.seniorityData.input.seniorityInMonths,
-    publicodesInformations: state.informationsData.input.publicodesInformations,
+    publicodesInformations: state.resultData.input.publicodesInformations,
+    moreThanXYears: state.seniorityData.input.moreThanXYears,
   }));
 
   useEffect(() => {
@@ -71,11 +73,12 @@ const StepResult = (): JSX.Element => {
       <ShowDetails>
         <Situation
           agreement={agreement}
-          hasHandicap={hasHandicap}
           isAgreementSupported={isAgreementSupported}
           originDepart={originDepart!}
           seniorityInMonths={seniorityInMonths}
-          situations={publicodesInformations}
+          situations={publicodesInformations ?? []}
+          hasHandicap={hasHandicap}
+          seniorityMoreThanXYears={moreThanXYears === "oui"}
         />
         <DecryptedResult
           hasAgreement={!!agreement}

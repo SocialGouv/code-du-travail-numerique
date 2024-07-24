@@ -3,12 +3,12 @@ import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 import { StepData } from "../../store";
 
 export type SeniorityStoreInput = {
-  moreThanTwoYears?: OuiNon;
+  moreThanXYears?: OuiNon;
   seniorityInMonths?: string;
 };
 
 export type SeniorityStoreError = {
-  errorMoreThanTwoYears?: string;
+  errorMoreThanXYears?: string;
   errorSeniorityInMonths?: string;
 };
 
@@ -18,7 +18,7 @@ export type SeniorityStoreData = StepData<
 >;
 
 export type SeniorityStoreFn = {
-  onChangeMoreThanTwoYears: (value: OuiNon) => void;
+  onChangeMoreThanXYears: (value: OuiNon) => void;
   onChangeSeniorityInMonths: (value: string) => void;
   onNextStep: () => ValidationResponse;
 };

@@ -6,9 +6,10 @@ import {
 } from "./types";
 import produce from "immer";
 import { validateStep } from "./validator";
-import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 import { StoreSliceWrapperPreavisRetraite } from "../../store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
+import { MatomoBaseEvent, MatomoRetirementEvent } from "../../../../../lib";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 const initialState: OriginDepartStoreData = {
   input: {},
@@ -18,8 +19,7 @@ const initialState: OriginDepartStoreData = {
 };
 
 const createOriginDepartStore: StoreSliceWrapperPreavisRetraite<
-  OriginDepartStoreSlice,
-  any
+  OriginDepartStoreSlice
 > = (set, get) => ({
   originDepartData: { ...initialState },
   originDepartFunction: {
@@ -38,13 +38,21 @@ const createOriginDepartStore: StoreSliceWrapperPreavisRetraite<
         })
       );
 
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoBaseEvent.OUTIL,
+        get().originDepartData.input.originDepart === "mise-retraite"
+          ? MatomoRetirementEvent.MISE_RETRAITE
+          : MatomoRetirementEvent.DEPART_RETRAITE,
+      ]);
+
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
     },
   },
 });
 
 const applyGenericValidation = (
-  get: StoreApi<OriginDepartStoreSlice & CommonSituationStoreSlice>["getState"],
+  get: StoreApi<OriginDepartStoreSlice>["getState"],
   set: StoreApi<OriginDepartStoreSlice>["setState"],
   paramName: keyof OriginDepartStoreInput,
   value: any

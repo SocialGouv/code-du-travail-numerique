@@ -38,7 +38,9 @@ const ShowResult: React.FC<Props> = ({
       <p>
         À partir des éléments que vous avez saisis
         {result.value > 0
-          ? `, la durée du préavis en cas de ${type} à la retraite est estimée à`
+          ? `, la durée du préavis en cas de ${
+              type === "depart-retraite" ? "départ" : "mise"
+            } à la retraite est estimée à`
           : ""}
         &nbsp;:{" "}
         <HighlightResult>

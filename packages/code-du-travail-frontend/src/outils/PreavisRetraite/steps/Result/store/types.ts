@@ -5,6 +5,7 @@ import {
 } from "@socialgouv/modeles-social";
 import { StepData } from "../../store";
 import { NoticeUsed, WarningType } from "../utils/types";
+import { AgreementInformation } from "../../../../CommonIndemniteDepart/common";
 
 export type ResultStoreInput = {
   noticeUsed?: NoticeUsed;
@@ -22,6 +23,7 @@ export type ResultStoreInput = {
   agreementNotification?: Notification[];
   agreementReferences?: References[];
   hasHandicap?: boolean;
+  publicodesInformations?: AgreementInformation[];
 };
 
 export type ResultStoreError = {

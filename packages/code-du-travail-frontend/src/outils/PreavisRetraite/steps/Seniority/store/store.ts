@@ -9,6 +9,8 @@ import { validateStep } from "./validator";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 import { StoreSliceWrapperPreavisRetraite } from "../../store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
+import { push as matopush } from "@socialgouv/matomo-next";
+import { MatomoBaseEvent, MatomoRetirementEvent } from "../../../../../lib";
 
 const initialState: SeniorityStoreData = {
   input: {},
@@ -18,13 +20,15 @@ const initialState: SeniorityStoreData = {
 };
 
 const createSeniorityStore: StoreSliceWrapperPreavisRetraite<
-  SeniorityStoreSlice,
-  any
+  SeniorityStoreSlice
 > = (set, get) => ({
   seniorityData: { ...initialState },
   seniorityFunction: {
-    onChangeMoreThanTwoYears: (value) => {
-      applyGenericValidation(get, set, "moreThanTwoYears", value);
+    onChangeMoreThanXYears: (value) => {
+      applyGenericValidation(get, set, "moreThanXYears", value);
+      if (value === "oui") {
+        applyGenericValidation(get, set, "seniorityInMonths", undefined);
+      }
     },
     onChangeSeniorityInMonths: (value) => {
       applyGenericValidation(get, set, "seniorityInMonths", value);
@@ -41,13 +45,21 @@ const createSeniorityStore: StoreSliceWrapperPreavisRetraite<
         })
       );
 
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoBaseEvent.OUTIL,
+        get().seniorityData.input.moreThanXYears === "oui"
+          ? MatomoRetirementEvent.ANCIENNETE_PLUS_2_ANS
+          : MatomoRetirementEvent.ANCIENNETE_MOINS_2_ANS,
+      ]);
+
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
     },
   },
 });
 
 const applyGenericValidation = (
-  get: StoreApi<SeniorityStoreSlice & CommonSituationStoreSlice>["getState"],
+  get: StoreApi<SeniorityStoreSlice>["getState"],
   set: StoreApi<SeniorityStoreSlice>["setState"],
   paramName: keyof SeniorityStoreInput,
   value: any

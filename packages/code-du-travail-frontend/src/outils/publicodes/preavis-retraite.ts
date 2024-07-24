@@ -9,6 +9,15 @@ export const mapToPublicodesSituationForCalculationPreavisRetraite = (
   seniority?: string,
   moreInfos?: Record<string, string>
 ): Record<string, string | undefined> => {
+  const moreInfosPimped = moreInfos?.["contrat salarié . travailleur handicapé"]
+    ? {
+        ...moreInfos,
+        "contrat salarié . travailleur handicapé":
+          moreInfos["contrat salarié . travailleur handicapé"] === "'Oui'"
+            ? "oui"
+            : "non",
+      }
+    : moreInfos;
   return {
     "contrat salarié . ancienneté": seniority ?? DEFAULT_SENIORITY_VALUE,
     "contrat salarié . convention collective": ccn
@@ -16,6 +25,6 @@ export const mapToPublicodesSituationForCalculationPreavisRetraite = (
       : "''",
     "contrat salarié . mise à la retraite":
       departOuMiseRetraite === "mise-retraite" ? "oui" : "non",
-    ...moreInfos,
+    ...moreInfosPimped,
   };
 };

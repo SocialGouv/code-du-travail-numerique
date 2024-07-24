@@ -3,24 +3,27 @@ import { Agreement } from "../../../../types";
 import { SectionTitle } from "../../../../common/stepStyles";
 import { DepartOuMiseRetraite } from "../../OriginStep/store";
 import { Paragraph } from "@socialgouv/cdtn-ui";
-import { PublicodesInformation } from "../../../../CommonIndemniteDepart/steps/Informations/store";
+import { publicodesUnitTranslator } from "../../../../publicodes";
+import { AgreementInformation } from "../../../../CommonIndemniteDepart/common";
 
 type Props = {
-  situations: PublicodesInformation[];
+  situations: AgreementInformation[];
   seniorityInMonths?: string;
   agreement?: Agreement;
-  hasHandicap?: boolean;
   originDepart: DepartOuMiseRetraite;
   isAgreementSupported?: boolean;
+  hasHandicap?: boolean;
+  seniorityMoreThanXYears?: boolean;
 };
 
 const Situation: React.FC<Props> = ({
   situations,
   agreement,
   seniorityInMonths,
-  hasHandicap,
   originDepart,
   isAgreementSupported,
+  hasHandicap,
+  seniorityMoreThanXYears,
 }) => {
   return (
     <>
@@ -39,6 +42,11 @@ const Situation: React.FC<Props> = ({
             Ancienneté : <strong>{seniorityInMonths} mois</strong>
           </li>
         )}
+        {seniorityMoreThanXYears && (
+          <li key="ancienneté" data-testid="situation-ancienneté">
+            Ancienneté : <strong>Plus de 2 ans</strong>
+          </li>
+        )}
         {agreement && (
           <li
             key="convention-collective"
@@ -47,23 +55,18 @@ const Situation: React.FC<Props> = ({
             Convention collective : <strong>{agreement.shortTitle}</strong>
           </li>
         )}
-        {hasHandicap && (
-          <li key="handicap" data-testid="situation-handicap">
-            Travailleur handicapé :{" "}
+        {situations.map((info, index) => (
+          <li key={"agreement-" + index}>
+            {info.label}&nbsp;:&nbsp;
             <strong>
-              Oui<sup>*</sup>
+              {info.value.replace(/^'|'$/g, "")}
+              {info.label === "Travailleur handicapé" &&
+                info.value === "'Oui'" && <sup>*</sup>}
             </strong>
+            &nbsp;
+            {publicodesUnitTranslator(info.value.replace(/'/g, ""), info.unit)}
           </li>
-        )}
-        )
-        {situations.map((element) => {
-          return (
-            <li key={element.id} data-testid={`situation-${element.id}`}>
-              {element.question.name}&nbsp;:&nbsp;
-              <strong>{element.info}</strong>
-            </li>
-          );
-        })}
+        ))}
       </ul>
       {hasHandicap &&
       originDepart === "mise-retraite" &&

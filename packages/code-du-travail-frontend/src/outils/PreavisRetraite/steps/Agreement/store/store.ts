@@ -15,6 +15,9 @@ import {
 import { StoreSliceWrapperPreavisRetraite } from "../../store";
 import { AgreementStoreData, AgreementStoreSlice } from "./types";
 import { validateStep } from "./validator";
+import { InformationsStoreSlice } from "../../Informations/store";
+import { captureException } from "@sentry/nextjs";
+import { OriginDepartStoreSlice } from "../../OriginStep/store";
 
 const initialState: Omit<AgreementStoreData, "publicodes"> = {
   input: {
@@ -27,7 +30,8 @@ const initialState: Omit<AgreementStoreData, "publicodes"> = {
 };
 
 const createAgreementStore: StoreSliceWrapperPreavisRetraite<
-  AgreementStoreSlice
+  AgreementStoreSlice,
+  InformationsStoreSlice & OriginDepartStoreSlice
 > = (set, get) => ({
   agreementData: {
     ...initialState,
@@ -51,14 +55,14 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
             );
             const idcc = parsedData?.num?.toString();
             if (idcc) {
-              const publicodes =
-                loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
-                  PublicodesSimulator.PREAVIS_RETRAITE,
-                  idcc
-                );
+              get().informationsFunction.generatePublicodesQuestions();
               set(
                 produce((state: AgreementStoreSlice) => {
-                  state.agreementData.publicodes = publicodes;
+                  state.agreementData.publicodes =
+                    loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
+                      PublicodesSimulator.PREAVIS_RETRAITE,
+                      idcc
+                    );
                 })
               );
             }
@@ -66,6 +70,7 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
         }
       } catch (e) {
         console.error(e);
+        captureException(e);
       }
     },
     onRouteChange: (value) => {
@@ -74,17 +79,19 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
           if (window?.localStorage) {
             window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
           }
+          get().informationsFunction.generatePublicodesQuestions();
+          set(
+            produce((state: AgreementStoreSlice) => {
+              state.agreementData.publicodes =
+                loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
+                  PublicodesSimulator.PREAVIS_RETRAITE
+                );
+            })
+          );
         } catch (e) {
           console.error(e);
+          captureException(e);
         }
-        set(
-          produce((state: AgreementStoreSlice) => {
-            state.agreementData.publicodes =
-              loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
-                PublicodesSimulator.PREAVIS_RETRAITE
-              );
-          })
-        );
       }
       set(
         produce((state: AgreementStoreSlice) => {
@@ -106,20 +113,23 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
         } else {
           window?.localStorage?.removeItem(STORAGE_KEY_AGREEMENT);
         }
+
+        applyGenericValidation(get, set, "enterprise", enterprise);
+        const idcc = agreement?.num?.toString();
+        get().informationsFunction.generatePublicodesQuestions();
+        set(
+          produce((state: AgreementStoreSlice) => {
+            state.agreementData.publicodes =
+              loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
+                PublicodesSimulator.PREAVIS_RETRAITE,
+                idcc
+              );
+          })
+        );
       } catch (e) {
         console.error(e);
+        captureException(e);
       }
-      applyGenericValidation(get, set, "enterprise", enterprise);
-      const idcc = agreement?.num?.toString();
-      set(
-        produce((state: AgreementStoreSlice) => {
-          state.agreementData.publicodes =
-            loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
-              PublicodesSimulator.PREAVIS_RETRAITE,
-              idcc
-            );
-        })
-      );
     },
     setHasNoEnterpriseSelected: (value) => {
       applyGenericValidation(

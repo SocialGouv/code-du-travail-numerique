@@ -5,22 +5,12 @@ import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
 
 const InformationsStep = (): JSX.Element => {
   const store = useContext(PreavisRetraiteContext);
-  const {
-    errors,
-    onInformationsChange,
-    informations,
-    generatePublicodesQuestions,
-  } = usePreavisRetraiteStore(store, (state) => ({
-    errors: state.informationsData.error,
-    onInformationsChange: state.informationsFunction.onInformationsChange,
-    informations: state.informationsData.input.publicodesInformations,
-    generatePublicodesQuestions:
-      state.informationsFunction.generatePublicodesQuestions,
-  }));
-
-  useEffect(() => {
-    generatePublicodesQuestions();
-  }, []);
+  const { errors, onInformationsChange, informations } =
+    usePreavisRetraiteStore(store, (state) => ({
+      errors: state.informationsData.error,
+      onInformationsChange: state.informationsFunction.onInformationsChange,
+      informations: state.informationsData.input.publicodesInformations,
+    }));
 
   return (
     <>

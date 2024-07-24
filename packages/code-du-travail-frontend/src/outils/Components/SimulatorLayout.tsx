@@ -194,10 +194,10 @@ const SimulatorContent = <StepName extends string>({
           onNext={onNextStep}
           onStart={onNextStep}
         />
-        {visibleSteps[currentStepIndex].options?.annotation && (
-          <p>{visibleSteps[currentStepIndex].options?.annotation}</p>
-        )}
       </StyledForm>
+      {visibleSteps[currentStepIndex].options?.annotation && (
+        <p>{visibleSteps[currentStepIndex].options?.annotation}</p>
+      )}
       {process.env.NEXT_PUBLIC_APP_ENV !== "production" &&
         process.env.NEXT_PUBLIC_APP_ENV !== "test" &&
         debug}

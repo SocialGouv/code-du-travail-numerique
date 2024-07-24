@@ -6,16 +6,16 @@ const StepSeniority = (): JSX.Element => {
   const store = useContext(PreavisRetraiteContext);
 
   const {
-    moreThanTwoYears,
-    onChangeMoreThanTwoYears,
-    errorMoreThanTwoYears,
+    moreThanXYears,
+    onChangeMoreThanXYears,
+    errorMoreThanXYears,
     seniorityInMonths,
     onChangeSeniorityInMonths,
     errorSeniorityInMonths,
   } = usePreavisRetraiteStore(store, (state) => ({
-    moreThanTwoYears: state.seniorityData.input.moreThanTwoYears,
-    onChangeMoreThanTwoYears: state.seniorityFunction.onChangeMoreThanTwoYears,
-    errorMoreThanTwoYears: state.seniorityData.error.errorMoreThanTwoYears,
+    moreThanXYears: state.seniorityData.input.moreThanXYears,
+    onChangeMoreThanXYears: state.seniorityFunction.onChangeMoreThanXYears,
+    errorMoreThanXYears: state.seniorityData.error.errorMoreThanXYears,
     seniorityInMonths: state.seniorityData.input.seniorityInMonths,
     onChangeSeniorityInMonths:
       state.seniorityFunction.onChangeSeniorityInMonths,
@@ -29,19 +29,19 @@ const StepSeniority = (): JSX.Element => {
           {
             label: "Oui",
             value: "oui",
-            id: "moreThanTwoYears-oui",
+            id: "moreThanXYears-oui",
           },
           {
             label: "Non",
             value: "non",
-            id: "moreThanTwoYears-non",
+            id: "moreThanXYears-non",
           },
         ]}
-        name="moreThanTwoYears"
+        name="moreThanXYears"
         label="Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise (2 ans + 1 jour)&nbsp;?"
-        selectedOption={moreThanTwoYears}
-        onChangeSelectedOption={onChangeMoreThanTwoYears}
-        error={errorMoreThanTwoYears}
+        selectedOption={moreThanXYears}
+        onChangeSelectedOption={onChangeMoreThanXYears}
+        error={errorMoreThanXYears}
         showRequired
         autoFocus
         tooltip={{
@@ -53,7 +53,7 @@ const StepSeniority = (): JSX.Element => {
           ),
         }}
       />
-      {moreThanTwoYears === "non" && (
+      {moreThanXYears === "non" && (
         <TextQuestion
           label="Quelle est l'ancienneté du salarié dans l'entreprise en mois&nbsp;?"
           value={seniorityInMonths}
