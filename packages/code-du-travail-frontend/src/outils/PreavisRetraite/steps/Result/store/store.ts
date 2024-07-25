@@ -16,6 +16,7 @@ import {
 } from "@socialgouv/modeles-social";
 import { NoticeUsed } from "../utils/types";
 import { AgreementInformation } from "../../../../CommonIndemniteDepart/common";
+import { getSeniorityInMonths } from "../../../agreements/seniority/getSeniority";
 
 const initialState: ResultStoreData = {
   input: {},
@@ -59,8 +60,12 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
 
       const situation = mapToPublicodesSituationForCalculationPreavisRetraite(
         get().originDepartData.input.originDepart!,
+        getSeniorityInMonths(
+          get().seniorityData.input.moreThanXYears,
+          get().seniorityData.input.seniorityInMonths,
+          get().agreementData.input.agreement
+        ),
         agreement?.num,
-        get().seniorityData.input.seniorityInMonths,
         infos
       );
 

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
+import { getSeniorityMessageQuestion } from "../../agreements/seniority/messages";
 
 const StepSeniority = (): JSX.Element => {
   const store = useContext(PreavisRetraiteContext);
@@ -12,6 +13,7 @@ const StepSeniority = (): JSX.Element => {
     seniorityInMonths,
     onChangeSeniorityInMonths,
     errorSeniorityInMonths,
+    agreement,
   } = usePreavisRetraiteStore(store, (state) => ({
     moreThanXYears: state.seniorityData.input.moreThanXYears,
     onChangeMoreThanXYears: state.seniorityFunction.onChangeMoreThanXYears,
@@ -20,6 +22,7 @@ const StepSeniority = (): JSX.Element => {
     onChangeSeniorityInMonths:
       state.seniorityFunction.onChangeSeniorityInMonths,
     errorSeniorityInMonths: state.seniorityData.error.errorSeniorityInMonths,
+    agreement: state.agreementData.input.agreement,
   }));
 
   return (
@@ -38,7 +41,7 @@ const StepSeniority = (): JSX.Element => {
           },
         ]}
         name="moreThanXYears"
-        label="Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise (2 ans + 1 jour)&nbsp;?"
+        label={getSeniorityMessageQuestion(agreement?.num)}
         selectedOption={moreThanXYears}
         onChangeSelectedOption={onChangeMoreThanXYears}
         error={errorMoreThanXYears}

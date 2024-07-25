@@ -12,6 +12,7 @@ import { StoreSliceWrapperPreavisRetraite } from "../../store";
 import { PublicodesInformation } from "../../../../CommonIndemniteDepart/steps/Informations/store";
 import { AgreementStoreSlice } from "../../Agreement/store";
 import { OriginDepartStoreSlice } from "../../OriginStep/store";
+import { getSeniorityInMonths } from "../../../agreements/seniority/getSeniority";
 
 const initialState: InformationsStoreData = {
   input: {
@@ -42,6 +43,7 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
         const result = publicodes.setSituation(
           mapToPublicodesSituationForCalculationPreavisRetraite(
             originDepart,
+            getSeniorityInMonths(),
             agreement?.num,
             undefined
           )
@@ -121,8 +123,8 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
           const result = publicodes.setSituation(
             mapToPublicodesSituationForCalculationPreavisRetraite(
               originDepart,
+              getSeniorityInMonths(),
               agreement?.num,
-              undefined,
               rules
             )
           );
@@ -176,8 +178,8 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
     },
     onNextStep: () => {
       const state = get().informationsData.input;
-      const { isValid, errorState } = validateStep(state);
-
+      const originDepartState = get().originDepartData.input;
+      const { isValid, errorState } = validateStep(state, originDepartState);
       set(
         produce((state: InformationsStoreSlice) => {
           state.informationsData.hasBeenSubmit = isValid ? false : true;
@@ -192,17 +194,19 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
 });
 
 const applyGenericValidation = (
-  get: StoreApi<InformationsStoreSlice>["getState"],
-  set: StoreApi<InformationsStoreSlice>["setState"],
+  get: StoreApi<InformationsStoreSlice & OriginDepartStoreSlice>["getState"],
+  set: StoreApi<InformationsStoreSlice & OriginDepartStoreSlice>["setState"],
   paramName: string,
   value: any
 ) => {
   if (get().informationsData.hasBeenSubmit) {
+    const originDepartState = get().originDepartData.input;
     const nextState = produce(get(), (draft) => {
       draft.informationsData.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.informationsData.input
+      nextState.informationsData.input,
+      originDepartState
     );
     set(
       produce((state: InformationsStoreSlice) => {

@@ -21,10 +21,10 @@ import {
   HeuresRechercheEmploi,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
+  CalculateurPreavisRetraite,
 } from "../../src/outils";
 import { getBySlugTools, getBySourceAndSlugItems } from "../../src/api";
 import { Tool } from "@socialgouv/cdtn-types";
-import { CalculateurPreavisRetraite } from "../../src/outils/PreavisRetraite";
 
 const toolsBySlug = {
   "convention-collective": AgreementSearch,

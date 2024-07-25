@@ -1,12 +1,10 @@
 import { formatIdcc } from "@socialgouv/modeles-social";
 import { DepartOuMiseRetraite } from "../PreavisRetraite/steps/OriginStep/store";
 
-const DEFAULT_SENIORITY_VALUE = "24";
-
 export const mapToPublicodesSituationForCalculationPreavisRetraite = (
   departOuMiseRetraite: DepartOuMiseRetraite,
+  seniority: string,
   ccn?: number,
-  seniority?: string,
   moreInfos?: Record<string, string>
 ): Record<string, string | undefined> => {
   const moreInfosPimped = moreInfos?.["contrat salarié . travailleur handicapé"]
@@ -19,7 +17,7 @@ export const mapToPublicodesSituationForCalculationPreavisRetraite = (
       }
     : moreInfos;
   return {
-    "contrat salarié . ancienneté": seniority ?? DEFAULT_SENIORITY_VALUE,
+    "contrat salarié . ancienneté": seniority,
     "contrat salarié . convention collective": ccn
       ? `'IDCC${formatIdcc(ccn)}'`
       : "''",

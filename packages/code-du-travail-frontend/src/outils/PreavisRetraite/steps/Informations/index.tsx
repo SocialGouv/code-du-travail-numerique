@@ -1,7 +1,8 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { InlineError } from "../../../common/ErrorField";
 import { PubliQuestion } from "../../../Components/Informations";
 import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
+import { Note } from "./components/Note";
 
 const InformationsStep = (): JSX.Element => {
   const store = useContext(PreavisRetraiteContext);
@@ -38,6 +39,7 @@ const InformationsStep = (): JSX.Element => {
       {errors.errorPublicodes && (
         <InlineError>{errors.errorPublicodes}</InlineError>
       )}
+      {errors.errorNote && <Note message={errors.errorNote} />}
     </>
   );
 };
