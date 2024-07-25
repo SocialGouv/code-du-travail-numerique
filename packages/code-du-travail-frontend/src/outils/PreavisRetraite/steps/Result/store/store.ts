@@ -13,6 +13,7 @@ import {
   References,
   Notification,
   supportedCcn,
+  PublicodesData,
 } from "@socialgouv/modeles-social";
 import { NoticeUsed } from "../utils/types";
 import { AgreementInformation } from "../../../../CommonIndemniteDepart/common";
@@ -45,14 +46,24 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
         throw new Error("Publicodes is not defined");
       }
 
-      let errorPublicodes: boolean;
+      const isSeniorityLessThan6Months =
+        Number(get().seniorityData.input.seniorityInMonths) < 6;
+
+      const hasHandicap =
+        get().informationsData.input.publicodesInformations.find(
+          (v) =>
+            v.question.name === "contrat salarié - travailleur handicapé" &&
+            v.info === "'Oui'"
+        ) !== undefined;
+
+      let errorPublicodes: boolean = false;
+      let result: PublicodesPreavisRetraiteResult | undefined;
       let agreementResult: PublicodesPreavisRetraiteResult | undefined;
       let legalResult: PublicodesPreavisRetraiteResult | undefined;
       let agreementMaximumResult: PublicodesPreavisRetraiteResult | undefined;
-      let legalNotification: Notification[] | undefined;
-      let legalReferences: References[] | undefined;
-      let agreementNotification: Notification[] | undefined;
-      let agreementReferences: References[] | undefined;
+      let resultNotifications: Notification[] | undefined;
+      let resultReferences: References[] | undefined;
+      let noticeUsed = NoticeUsed.none;
 
       const infos = informationToSituation(
         get().informationsData.input.publicodesInformations
@@ -82,27 +93,46 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
         .filter((v) => v !== undefined) as AgreementInformation[];
 
       try {
-        publicodes.setSituation(situation);
+        const publicodesCalculation = publicodes.setSituation(situation);
+
+        result = publicodesCalculation.result;
+
+        resultNotifications = publicodes.getNotifications();
+
+        resultReferences = publicodes.getReferences();
 
         legalResult = publicodes.execute(
           "contrat salarié . préavis de retraite légale en jours"
         );
 
-        legalNotification = publicodes.getNotifications();
-
-        legalReferences = publicodes.getReferences();
-
         agreementResult = publicodes.execute(
           "contrat salarié . préavis de retraite collective en jours"
         );
 
-        agreementNotification = publicodes.getNotifications();
-
-        agreementReferences = publicodes.getReferences();
-
         agreementMaximumResult = publicodes.execute(
           "contrat salarié . préavis de retraite collective maximum en jours"
         );
+
+        if (
+          legalResult &&
+          agreementResult &&
+          legalResult.valueInDays > 0 &&
+          legalResult.valueInDays === agreementResult.valueInDays
+        ) {
+          noticeUsed = NoticeUsed.same;
+        } else if (
+          legalResult &&
+          result.valueInDays > 0 &&
+          result.valueInDays === legalResult.valueInDays
+        ) {
+          noticeUsed = NoticeUsed.legal;
+        } else if (
+          agreementResult &&
+          result.valueInDays > 0 &&
+          result.valueInDays === agreementResult.valueInDays
+        ) {
+          noticeUsed = NoticeUsed.agreementLabor;
+        }
       } catch (e) {
         errorPublicodes = true;
         console.error(`La situation est ${JSON.stringify(situation)}`);
@@ -113,56 +143,23 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
         Sentry.captureException(e);
       }
 
-      const bestResult =
-        agreementResult?.valueInDays! > legalResult?.valueInDays!
-          ? agreementResult
-          : legalResult;
-
-      let noticeUsed = NoticeUsed.none;
-      if (
-        (legalResult &&
-          legalResult.valueInDays > 0 &&
-          legalResult.valueInDays === agreementResult?.valueInDays) ??
-        -1
-      ) {
-        noticeUsed = NoticeUsed.same;
-      } else if (
-        bestResult &&
-        bestResult.valueInDays > 0 &&
-        bestResult.valueInDays === legalResult?.valueInDays
-      ) {
-        noticeUsed = NoticeUsed.legal;
-      } else if (
-        bestResult &&
-        bestResult.valueInDays > 0 &&
-        bestResult.valueInDays === agreementResult?.valueInDays
-      ) {
-        noticeUsed = NoticeUsed.agreementLabor;
-      }
-
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.input.agreementResult = agreementResult;
           state.resultData.input.legalResult = legalResult;
           state.resultData.input.agreementMaximumResult =
             agreementMaximumResult;
-          state.resultData.input.bestResult = bestResult;
           state.resultData.input.noticeUsed = noticeUsed;
           state.resultData.input.isAgreementSupported = isAgreementSupported;
-          state.resultData.input.agreementNotification = agreementNotification;
-          state.resultData.input.agreementReferences = agreementReferences;
-          state.resultData.input.legalNotification = legalNotification;
-          state.resultData.input.legalReferences = legalReferences;
+          state.resultData.input.resultNotifications = resultNotifications;
+          state.resultData.input.resultReferences = resultReferences;
           state.resultData.input.isSeniorityLessThan6Months =
-            Number(get().seniorityData.input.seniorityInMonths) < 6;
-          state.resultData.input.hasHandicap =
-            get().informationsData.input.publicodesInformations.find(
-              (v) =>
-                v.question.name === "contrat salarié - travailleur handicapé" &&
-                v.info === "'Oui'"
-            ) !== undefined;
+            isSeniorityLessThan6Months;
+          state.resultData.input.hasHandicap = hasHandicap;
           state.resultData.input.publicodesInformations =
             publicodesInformations;
+          state.resultData.error.errorPublicodes = errorPublicodes;
+          state.resultData.input.result = result;
         })
       );
     },

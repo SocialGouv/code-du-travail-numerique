@@ -8,6 +8,7 @@ import DecryptedResult from "./components/DecryptedResult";
 import ShowResult from "./components/ShowResult";
 import { NoticeUsed } from "./utils/types";
 import Situation from "./components/Situation";
+import { ErrorPublicodes } from "../../../CommonIndemniteDepart/steps/Resultat/components";
 
 const StepResult = (): JSX.Element => {
   const store = useContext(PreavisRetraiteContext);
@@ -20,17 +21,16 @@ const StepResult = (): JSX.Element => {
     legalResult,
     agreementResult,
     agreementMaximumResult,
-    legalNotification,
-    legalReferences,
-    agreementNotification,
-    agreementReferences,
+    resultReferences,
+    resultNotifications,
     noticeUsed,
-    bestResult,
     hasHandicap,
     isSeniorityLessThan6Months,
     seniorityInMonths,
     publicodesInformations,
     moreThanXYears,
+    errorPublicodes,
+    result,
   } = usePreavisRetraiteStore(store, (state) => ({
     originDepart: state.originDepartData.input.originDepart,
     agreement: state.agreementData.input.agreement,
@@ -39,33 +39,32 @@ const StepResult = (): JSX.Element => {
     legalResult: state.resultData.input.legalResult,
     agreementResult: state.resultData.input.agreementResult,
     agreementMaximumResult: state.resultData.input.agreementMaximumResult,
-    legalNotification: state.resultData.input.legalNotification,
-    legalReferences: state.resultData.input.legalReferences,
-    agreementNotification: state.resultData.input.agreementNotification,
-    agreementReferences: state.resultData.input.agreementReferences,
+    resultNotifications: state.resultData.input.resultNotifications,
+    resultReferences: state.resultData.input.resultReferences,
     noticeUsed: state.resultData.input.noticeUsed,
-    bestResult: state.resultData.input.bestResult,
     isSeniorityLessThan6Months:
       state.resultData.input.isSeniorityLessThan6Months,
     hasHandicap: state.resultData.input.hasHandicap,
     seniorityInMonths: state.seniorityData.input.seniorityInMonths,
     publicodesInformations: state.resultData.input.publicodesInformations,
     moreThanXYears: state.seniorityData.input.moreThanXYears,
+    errorPublicodes: state.resultData.error.errorPublicodes,
+    result: state.resultData.input.result,
   }));
 
   useEffect(() => {
     getPublicodesResult();
   }, []);
 
+  if (errorPublicodes) {
+    return <ErrorPublicodes title={"Préavis"} />;
+  }
+
   return (
     <>
       <ShowResult
-        notifications={
-          noticeUsed === NoticeUsed.legal
-            ? legalNotification ?? []
-            : agreementNotification ?? []
-        }
-        result={bestResult}
+        notifications={resultNotifications ?? []}
+        result={result}
         agreementMaximumResult={agreementMaximumResult}
         type={originDepart!}
         idccNumber={agreement?.num}
@@ -92,20 +91,14 @@ const StepResult = (): JSX.Element => {
           typeDeDepart={originDepart!}
           isSeniorityLessThan6Months={!!isSeniorityLessThan6Months}
         />
-        <PubliReferences
-          references={
-            noticeUsed === NoticeUsed.legal || NoticeUsed.same === noticeUsed
-              ? legalReferences ?? []
-              : agreementReferences ?? []
-          }
-        />
+        <PubliReferences references={resultReferences ?? []} />
       </ShowDetails>
       <WarningResult
         hasNotice={NoticeUsed.none !== noticeUsed}
         type={getWarningType(
           originDepart,
           agreement?.num,
-          bestResult?.value,
+          result?.value,
           isAgreementSupported
         )}
       />

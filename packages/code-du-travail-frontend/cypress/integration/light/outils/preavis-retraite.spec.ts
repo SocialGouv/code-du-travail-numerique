@@ -126,7 +126,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains(
       "Quelle est l'ancienneté du salarié dans l'entreprise en mois ?"
     );
-    cy.get('input[name="seniority.value"]').type("10");
+    cy.get('input[name="seniorityInMonths"]').type("10");
     cy.get("button").contains("Suivant").click();
 
     // Résultat

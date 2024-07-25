@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const WarningOriginDepart = (): JSX.Element => {
   return (
-    <StyledAlert variant="primary">
+    <StyledAlert variant="primary" data-testid="warning-origin-depart">
       <Paragraph noMargin>
         <Text variant="primary" fontSize="hsmall" fontWeight="700">
           À noter

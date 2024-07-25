@@ -14,20 +14,18 @@ export type ResultStoreInput = {
   hasAgreement?: boolean;
   hasAgreementResult?: boolean;
   isAgreementSupported?: boolean;
+  result?: PublicodesPreavisRetraiteResult;
   legalResult?: PublicodesPreavisRetraiteResult;
   agreementResult?: PublicodesPreavisRetraiteResult;
   agreementMaximumResult?: PublicodesPreavisRetraiteResult;
-  bestResult?: PublicodesPreavisRetraiteResult;
-  legalNotification?: Notification[];
-  legalReferences?: References[];
-  agreementNotification?: Notification[];
-  agreementReferences?: References[];
+  resultNotifications?: Notification[];
+  resultReferences?: References[];
   hasHandicap?: boolean;
   publicodesInformations?: AgreementInformation[];
 };
 
 export type ResultStoreError = {
-  errorPublicodes?: string;
+  errorPublicodes?: boolean;
 };
 
 export type ResultStoreData = StepData<ResultStoreInput, ResultStoreError>;

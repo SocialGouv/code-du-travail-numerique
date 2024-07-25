@@ -26,7 +26,7 @@ const StepResult = ({ eligibleComponent, ineligibleComponent }: Props) => {
   }, []);
 
   if (errorPublicodes) {
-    return <ErrorPublicodes />;
+    return <ErrorPublicodes title={"Indemnité"} />;
   }
 
   return <>{isEligible ? eligibleComponent : ineligibleComponent}</>;
