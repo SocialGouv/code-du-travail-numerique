@@ -15,6 +15,7 @@ export type InformationsStoreInput = {
 export type InformationsStoreError = {
   errorInformations: Record<string, string>;
   errorPublicodes?: string;
+  errorNote?: string;
 };
 
 export type InformationsStoreData = {
