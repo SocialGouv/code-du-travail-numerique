@@ -8,6 +8,5 @@ export * from "./IndemnitePrecarite";
 export * from "./SimulateurEmbauche";
 export * from "./DismissalProcess";
 export * from "./RuptureCoventionnelle";
-export * from "./PreavisRetraite";
 export * from "./api";
 export * from "./service";

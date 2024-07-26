@@ -86,7 +86,7 @@ const ShowResult: React.FC<Props> = ({
         />
       )}
       {notifications.length > 0 && (
-        <SmallText>
+        <SmallText data-testid="notice-description">
           {notifications.map((notification, index) => (
             <>
               <NoticeNote

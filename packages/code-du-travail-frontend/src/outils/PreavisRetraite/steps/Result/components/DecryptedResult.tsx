@@ -58,7 +58,9 @@ const DecryptedResult: React.FC<Props> = ({
           agreementMaximumResult={agreementMaximumResult}
         />
       </Paragraph>
-      {description && <Paragraph>{description}</Paragraph>}
+      {description && (
+        <Paragraph data-testid="description-decrypted">{description}</Paragraph>
+      )}
       {hasHandicap && (
         <Paragraph italic>
           Ce résultat tient compte de la majoration pour les travailleurs

@@ -17,7 +17,10 @@ export const titrePreavis =
 
 const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
   return (
-    <Disclaimer title={hasNotice ? titreFavorable : titrePreavis}>
+    <Disclaimer
+      title={hasNotice ? titreFavorable : titrePreavis}
+      dataTestId="notice-warning"
+    >
       {type === WarningType.noNoticeWithAgreement ? (
         <>
           <p>

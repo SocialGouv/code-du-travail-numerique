@@ -56,7 +56,10 @@ const Situation: React.FC<Props> = ({
           </li>
         )}
         {situations.map((info, index) => (
-          <li key={"agreement-" + index}>
+          <li
+            key={"agreement-" + index}
+            data-testid={`situation-${info.label}`}
+          >
             {info.label}&nbsp;:&nbsp;
             <strong>
               {info.value.replace(/^'|'$/g, "")}
@@ -71,7 +74,7 @@ const Situation: React.FC<Props> = ({
       {hasHandicap &&
       originDepart === "mise-retraite" &&
       isAgreementSupported ? (
-        <Paragraph italic>
+        <Paragraph italic data-testid="situation-note-handicap-1">
           *&nbsp;Le salarié étant reconnu en tant que travailleur handicapé, la
           durée du préavis de mise à la retraite est doublée mais ne peut pas
           dépasser un maximum de 3 mois. Si la durée de préavis prévue par la
@@ -81,7 +84,7 @@ const Situation: React.FC<Props> = ({
         </Paragraph>
       ) : (
         hasHandicap && (
-          <Paragraph italic>
+          <Paragraph italic data-testid="situation-note-handicap-2">
             *&nbsp;Le salarié étant reconnu en tant que travailleur handicapé,
             la durée du préavis de départ à la retraite est doublée mais ne peut
             pas dépasser un maximum de 3 mois.
