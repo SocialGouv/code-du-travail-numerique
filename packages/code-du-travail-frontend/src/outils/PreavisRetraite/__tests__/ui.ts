@@ -59,10 +59,41 @@ export const ui = {
   },
   information: {
     agreement16: {
-      categoryQuestion: byText("Qui est à l’origine du départ en retraite ?"),
+      categoryQuestion: byText(
+        "Quelle est la catégorie professionnelle du salarié ?"
+      ),
       categoryAnswers: byTestId(
         "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
       ),
+    },
+    agreement1090: {
+      categoryQuestion: byText(
+        "Quelle est la catégorie professionnelle du salarié ?"
+      ),
+      categoryAnswers: byTestId(
+        "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle"
+      ),
+      echelonQuestion: byText("Quel est l'échelon du salarié ?"),
+      echelonAnswers: byTestId(
+        "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle - ouvriers - échelon"
+      ),
+    },
+    agreement2264: {
+      categoryQuestion: byText(
+        "Quelle est la catégorie professionnelle du salarié ?"
+      ),
+      categoryAnswers: byTestId(
+        "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+      ),
+    },
+    agreement3239: {
+      categoryQuestion: byText(
+        "Quelle est la catégorie professionnelle du salarié ?"
+      ),
+      categoryAnswers: byTestId(
+        "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle"
+      ),
+      alert: byTestId("alert-3239-mise"),
     },
     handicap: {
       question: byText(
@@ -81,6 +112,9 @@ export const ui = {
       question: byText(
         "Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise (2 ans + 1 jour) ?"
       ),
+      questionAvec5ans: byText(
+        "Le salarié a-t-il plus de 5 ans d'ancienneté dans l'entreprise (5 ans + 1 jour) ?"
+      ),
       answerNon: byTestId("moreThanXYears - Non"),
       answerOui: byTestId("moreThanXYears - Oui"),
     },
@@ -88,7 +122,7 @@ export const ui = {
       question: byText(
         "Quelle est l'ancienneté du salarié dans l'entreprise en mois ?"
       ),
-      input: byTestId("seniorityInMonths"),
+      input: byTestId("seniority-months"),
       error: byText(/Vous devez répondre à cette question/),
     },
   },
@@ -107,6 +141,11 @@ export const ui = {
     travailleurHandicape: byTestId("situation-Travailleur handicapé"),
     decryptedDescription: byTestId("description-decrypted"),
     noticeWarning: byTestId("notice-warning"),
+    noticeHandicap1: byTestId("situation-note-handicap-1"),
+    noticeHandicap2: byTestId("situation-note-handicap-2"),
+    conventionCollective: byTestId("situation-convention collective"),
+    categorieProfessionnelle: byTestId("situation-Catégorie professionnelle"),
+    echelon: byTestId("situation-Échelon"),
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),

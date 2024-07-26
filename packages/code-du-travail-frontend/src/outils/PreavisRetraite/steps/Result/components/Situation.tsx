@@ -5,6 +5,7 @@ import { DepartOuMiseRetraite } from "../../OriginStep/store";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import { publicodesUnitTranslator } from "../../../../publicodes";
 import { AgreementInformation } from "../../../../CommonIndemniteDepart/common";
+import { getSenioritySituationMessage } from "../../../agreements/seniority/messages";
 
 type Props = {
   situations: AgreementInformation[];
@@ -44,7 +45,8 @@ const Situation: React.FC<Props> = ({
         )}
         {seniorityMoreThanXYears && (
           <li key="ancienneté" data-testid="situation-ancienneté">
-            Ancienneté : <strong>Plus de 2 ans</strong>
+            Ancienneté :{" "}
+            <strong>{getSenioritySituationMessage(agreement?.num)}</strong>
           </li>
         )}
         {agreement && (

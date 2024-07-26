@@ -80,8 +80,7 @@ const StepResult = (): JSX.Element => {
           seniorityMoreThanXYears={moreThanXYears === "oui"}
         />
         <DecryptedResult
-          hasAgreement={!!agreement}
-          hasAgreementResult={!!agreementResult}
+          hasAgreement={agreement ? true : false}
           isAgreementSupported={!!isAgreementSupported}
           hasHandicap={!!hasHandicap}
           legalResult={legalResult}

@@ -15,7 +15,6 @@ type Props = {
   noticeUsed: NoticeUsed;
   isSeniorityLessThan6Months: boolean;
   hasAgreement: boolean;
-  hasAgreementResult: boolean;
   isAgreementSupported: boolean;
 };
 
@@ -27,7 +26,6 @@ const DecryptedResult: React.FC<Props> = ({
   noticeUsed,
   isSeniorityLessThan6Months,
   hasAgreement,
-  hasAgreementResult,
   isAgreementSupported,
   agreementResult,
 }) => {
@@ -36,7 +34,7 @@ const DecryptedResult: React.FC<Props> = ({
     noticeUsed,
     isSeniorityLessThan6Months,
     hasAgreement,
-    hasAgreementResult,
+    agreementResult && agreementResult.value > 0 ? true : false,
     isAgreementSupported
   );
   return (

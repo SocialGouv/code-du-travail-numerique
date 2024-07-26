@@ -12,7 +12,6 @@ export type ResultStoreInput = {
   warningType?: WarningType;
   isSeniorityLessThan6Months?: boolean;
   hasAgreement?: boolean;
-  hasAgreementResult?: boolean;
   isAgreementSupported?: boolean;
   result?: PublicodesPreavisRetraiteResult;
   legalResult?: PublicodesPreavisRetraiteResult;

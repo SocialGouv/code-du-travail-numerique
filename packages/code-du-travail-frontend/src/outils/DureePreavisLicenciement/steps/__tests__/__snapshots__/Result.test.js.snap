@@ -224,6 +224,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   </p>
   <p
     class="sc-ePDLzJ gdXTTi"
+    data-testid="notice-preavis-licenciement"
   >
     <sup
       class="sc-eBHhsj hwyzbG"
@@ -246,6 +247,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     </i>
     <span
       class="sc-ePDLzJ gdXTTi"
+      data-testid="notice-commun-accord"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -459,6 +461,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   </p>
   <p
     class="sc-ePDLzJ gdXTTi"
+    data-testid="notice-preavis-licenciement"
   >
     <sup
       class="sc-eBHhsj hwyzbG"
@@ -481,6 +484,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     </i>
     <span
       class="sc-ePDLzJ gdXTTi"
+      data-testid="notice-commun-accord"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -694,6 +698,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   </p>
   <p
     class="sc-ePDLzJ gdXTTi"
+    data-testid="notice-preavis-licenciement"
   >
     <sup
       class="sc-eBHhsj hwyzbG"
@@ -716,6 +721,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     </i>
     <span
       class="sc-ePDLzJ gdXTTi"
+      data-testid="notice-commun-accord"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
@@ -872,6 +878,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   </p>
   <p
     class="sc-ePDLzJ gdXTTi"
+    data-testid="notice-preavis-licenciement"
   >
     <sup
       class="sc-eBHhsj hwyzbG"
@@ -894,6 +901,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </i>
     <span
       class="sc-ePDLzJ gdXTTi"
+      data-testid="notice-commun-accord"
     >
       <br />
       L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.

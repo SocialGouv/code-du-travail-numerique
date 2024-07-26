@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const Note = ({ message }: Props) => (
-  <StyledAlert variant="primary">
+  <StyledAlert variant="primary" data-testid="alert-3239-mise">
     <Paragraph noMargin>
       <Text variant="primary" fontSize="hsmall" fontWeight="700">
         À noter
