@@ -17,6 +17,7 @@ export type SalairesStoreError = {
   errorSalary?: string;
   errorTempsPartiel?: boolean;
   errorSalaryPeriods?: string;
+  errorLengthSalaryPeriods?: string;
   errorPrimes?: string;
 };
 
