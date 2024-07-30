@@ -10,6 +10,7 @@ import { StoreSliceWrapperPreavisRetraite } from "../../store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 import { MatomoBaseEvent, MatomoRetirementEvent } from "../../../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
+import { InformationsStoreSlice } from "../../Informations/store";
 
 const initialState: OriginDepartStoreData = {
   input: {},
@@ -19,12 +20,14 @@ const initialState: OriginDepartStoreData = {
 };
 
 const createOriginDepartStore: StoreSliceWrapperPreavisRetraite<
-  OriginDepartStoreSlice
+  OriginDepartStoreSlice,
+  InformationsStoreSlice
 > = (set, get) => ({
   originDepartData: { ...initialState },
   originDepartFunction: {
     onChangeOriginDepart: (value) => {
       applyGenericValidation(get, set, "originDepart", value);
+      get().informationsFunction.generatePublicodesQuestions();
     },
     onNextStep: () => {
       const state = get().originDepartData.input;

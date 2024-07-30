@@ -65,6 +65,7 @@ const StepSeniority = (): JSX.Element => {
           id="seniorityInMonths"
           showRequired
           dataTestId={"seniority-months"}
+          inputType="number"
         />
       )}
     </>

@@ -38,17 +38,6 @@ const Situation: React.FC<Props> = ({
               : "Mise à la retraite"}
           </strong>
         </li>
-        {seniorityInMonths && (
-          <li key="ancienneté" data-testid="situation-ancienneté">
-            Ancienneté : <strong>{seniorityInMonths} mois</strong>
-          </li>
-        )}
-        {seniorityMoreThanXYears && (
-          <li key="ancienneté" data-testid="situation-ancienneté">
-            Ancienneté :{" "}
-            <strong>{getSenioritySituationMessage(agreement?.num)}</strong>
-          </li>
-        )}
         {agreement && (
           <li
             key="convention-collective"
@@ -72,6 +61,17 @@ const Situation: React.FC<Props> = ({
             {publicodesUnitTranslator(info.value.replace(/'/g, ""), info.unit)}
           </li>
         ))}
+        {seniorityInMonths && (
+          <li key="ancienneté" data-testid="situation-ancienneté">
+            Ancienneté du salarié : <strong>{seniorityInMonths} mois</strong>
+          </li>
+        )}
+        {seniorityMoreThanXYears && (
+          <li key="ancienneté" data-testid="situation-ancienneté">
+            Ancienneté du salarié :{" "}
+            <strong>{getSenioritySituationMessage(agreement?.num)}</strong>
+          </li>
+        )}
       </ul>
       {hasHandicap &&
       originDepart === "mise-retraite" &&
