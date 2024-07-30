@@ -1,4 +1,4 @@
-import { format, isAfter, isValid } from "date-fns";
+import { format, isAfter, isEqual, isValid } from "date-fns";
 import { parse } from "../../../../../common/utils";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 import frLocale from "date-fns/locale/fr";
@@ -17,7 +17,7 @@ export const getDateSortieErrors = (
   } else if (
     state.dateEntree &&
     state.dateSortie &&
-    isAfter(dEntree, dSortie)
+    (isAfter(dEntree, dSortie) || isEqual(dEntree, dSortie))
   ) {
     errors.errorDateSortie = `La date de fin de contrat doit se situer après le <strong>${format(
       dEntree,
