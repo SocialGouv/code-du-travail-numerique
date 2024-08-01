@@ -88,7 +88,8 @@
     "@types/cors": "^2.8.13",
     "@types/debounce-promise": "^3.1.4",
     "@types/jest": "^29.5.12",
-    "cypress": "^13.9.0",
+    "@types/xml2js": "^0.4.14",
+    "cypress": "^13.13.2",
     "cypress-html-validate": "^6.1.0",
     "cypress-iframe": "^1.0.1",
     "eslint": "8.57.0",
@@ -109,6 +110,7 @@
     "stylelint-processor-styled-components": "^1.10.0",
     "supertest": "^6.3.3",
     "testing-library-selector": "0.3.1",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "xml2js": "^0.6.2"
   }
 }
