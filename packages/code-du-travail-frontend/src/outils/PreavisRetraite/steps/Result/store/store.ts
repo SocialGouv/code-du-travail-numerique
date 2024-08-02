@@ -13,11 +13,11 @@ import {
   References,
   Notification,
   supportedCcn,
-  PublicodesData,
 } from "@socialgouv/modeles-social";
 import { NoticeUsed } from "../utils/types";
 import { AgreementInformation } from "../../../../CommonIndemniteDepart/common";
 import { getSeniorityInMonths } from "../../../agreements/seniority/getSeniority";
+import { getValueForPublicodesResult } from "../utils/getValueForPublicodesResult";
 
 const initialState: ResultStoreData = {
   input: {},
@@ -85,7 +85,7 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
           if (v.question.rule.titre && v.info) {
             return {
               label: v.question.rule.titre,
-              value: v.info,
+              value: getValueForPublicodesResult(v),
               unit: v.question.rule.unité,
             };
           }

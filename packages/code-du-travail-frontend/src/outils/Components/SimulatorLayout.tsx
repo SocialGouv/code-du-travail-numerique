@@ -194,10 +194,12 @@ const SimulatorContent = <StepName extends string>({
           onNext={onNextStep}
           onStart={onNextStep}
         />
+        {visibleSteps[currentStepIndex].options?.annotation && (
+          <StyledDiv>
+            <p>{visibleSteps[currentStepIndex].options?.annotation}</p>
+          </StyledDiv>
+        )}
       </StyledForm>
-      {visibleSteps[currentStepIndex].options?.annotation && (
-        <p>{visibleSteps[currentStepIndex].options?.annotation}</p>
-      )}
       {process.env.NEXT_PUBLIC_APP_ENV !== "production" &&
         process.env.NEXT_PUBLIC_APP_ENV !== "test" &&
         debug}
@@ -239,7 +241,8 @@ const StyledForm = styled.form`
   grid-template-areas:
     "a b"
     "a c"
-    "a d";
+    "a d"
+    "a e";
   column-gap: 42px;
   padding-right: 42px;
   @media (max-width: ${breakpoints.tablet}) {
@@ -247,7 +250,8 @@ const StyledForm = styled.form`
       "b b"
       "a a"
       "c c"
-      "d d";
+      "d d"
+      "e e";
     padding: 12px;
   }
 `;
@@ -272,6 +276,15 @@ const StepWrapper = styled.div`
 
 const SimulatorNavigationWrapper = styled(SimulatorNavigation)`
   grid-area: d;
+`;
+
+const StyledDiv = styled.div`
+  grid-area: e;
+  align-items: center;
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-flow: column;
+    align-items: stretch;
+  }
 `;
 
 export default SimulatorLayout;

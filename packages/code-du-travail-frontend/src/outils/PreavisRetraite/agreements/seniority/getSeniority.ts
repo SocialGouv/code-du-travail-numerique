@@ -7,10 +7,10 @@ export const getSeniorityInMonths = (
   agreement?: Agreement
 ): string => {
   if (agreement && agreement.num === 2264 && moreThanXYears) {
-    return "60";
+    return "61";
   } else if (seniorityInMonths) {
     return seniorityInMonths;
   } else {
-    return "24";
+    return "25";
   }
 };
