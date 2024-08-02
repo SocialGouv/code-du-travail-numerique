@@ -183,14 +183,14 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains("Cliquez sur Suivant pour poursuivre la simulation.");
     cy.get('[aria-label="Fermer"]').click();
     cy.get("#enterprise-search").clear();
-    cy.get("#enterprise-search").type("VERNIN", { delay: 0 });
-    cy.get("#enterprise-search-address").type("6900");
-    cy.get("#enterprise-search-address").type("7{downArrow}{enter}", {
+    cy.get("#enterprise-search").type("boulangerie", { delay: 0 });
+    cy.get("#enterprise-search-address").type("7927");
+    cy.get("#enterprise-search-address").type("0{downArrow}{enter}", {
       delay: 3000,
       force: true,
     });
     cy.get('button[type="submit"]').last().click();
-    cy.contains("VERNIN").click();
+    cy.contains("PHILIPPE PETIT").click();
     cy.contains(
       "Une convention collective a été trouvée pour cette entreprise"
     );

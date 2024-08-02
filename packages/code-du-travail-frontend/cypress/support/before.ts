@@ -1,37 +1,48 @@
 // @ts-ignore
 import fs from "fs";
+import { parseString } from "xml2js";
 
 export const downloadAllUrlsToValidate = async () => {
-  const urls: string[] = ["/convention-collective", "/contribution"];
+  console.log("Download all URLs to validate HTML...");
+  try {
+    const response = await fetch(
+      "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/sitemap.xml"
+    );
+    const data = await response.text();
+    const parseUrls: Promise<string[]> = new Promise((resolve, reject) => {
+      parseString(data, (err, result) => {
+        if (err) {
+          reject(err);
+        }
 
-  const response = await fetch(
-    "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/api/plan-du-site"
-  );
-  const data = await response.json();
-
-  data.informations.forEach((doc) => {
-    urls.push("/information/" + doc.slug);
-  });
-
-  data.agreements.forEach((doc) => {
-    urls.push("/convention-collective/" + doc.slug);
-  });
-
-  fs.writeFileSync(
-    "./cypress/support/urls-to-validate.json",
-    JSON.stringify(urls)
-  );
-
-  const urlsContributions: string[] = [];
-  data.contributions.forEach((contrib) => {
-    urlsContributions.push("/contribution/" + contrib.generic.slug);
-    contrib.agreements.forEach((doc) => {
-      urlsContributions.push("/contribution/" + doc.slug);
+        const urls: string[] = result.urlset.url.map((url: any) => url.loc[0]);
+        resolve(urls);
+      });
     });
-  });
 
-  fs.writeFileSync(
-    "./cypress/support/urls-contributions-to-validate.json",
-    JSON.stringify(urlsContributions)
-  );
+    const urls = await parseUrls;
+
+    fs.writeFileSync(
+      "./cypress/support/urls-to-validate.json",
+      JSON.stringify(
+        urls.filter(
+          (url) =>
+            url.includes("/information") ||
+            url.includes("/convention-collective")
+        )
+      )
+    );
+
+    const urlsContributions: string[] = urls.filter((url) =>
+      url.includes("/contribution")
+    );
+
+    fs.writeFileSync(
+      "./cypress/support/urls-contributions-to-validate.json",
+      JSON.stringify(urlsContributions)
+    );
+    console.log("All URLs to validate HTML downloaded");
+  } catch (error) {
+    console.error("Failed to download URLs from sitemap", error);
+  }
 };
