@@ -15,7 +15,7 @@ const defaultSituation = {
 
 describe("Ordre des questions pour la CC 650", () => {
   describe("Affiche les questions", () => {
-    // eslint-disable-next-line @typescript-eslint/init-declarations
+     
     let result: PublicodesData<PublicodesIndemniteLicenciementResult>;
 
     beforeEach(() => {

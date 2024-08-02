@@ -15,7 +15,7 @@ const defaultSituation = {
 
 describe("Ordre des questions pour la CC 3248", () => {
   describe("Affiche les questions", () => {
-    // eslint-disable-next-line @typescript-eslint/init-declarations
+     
     let result: PublicodesData<PublicodesIndemniteLicenciementResult>;
 
     beforeEach(() => {
