@@ -1,9 +1,7 @@
 import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
-import CommonAgreementStep from "../../../CommonSteps/Agreement";
-import { getSupportedCc } from "../../common";
-import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import React from "react";
 import { useContext } from "react";
-import { Agreement } from "../../../types";
+import { CommonAgreementStep } from "./components/AgreementStep";
 
 const AgreementStep = (): JSX.Element => {
   const store = useContext(IndemniteDepartContext);
@@ -34,57 +32,25 @@ const AgreementStep = (): JSX.Element => {
       state.agreementFunction.setHasNoEnterpriseSelected,
   }));
 
+  React.useEffect(() => {
+    onInitAgreementPage();
+  }, [onInitAgreementPage]);
+
   return (
     <CommonAgreementStep
+      agreement={agreement}
+      enterprise={enterprise}
       error={error}
-      onRouteChange={onRouteChange}
-      selectedRoute={route}
+      hasNoEnterpriseSelected={hasNoEnterpriseSelected}
       onAgreementChange={onAgreementChange}
-      onInitAgreementPage={onInitAgreementPage}
-      selectedEnterprise={enterprise}
-      selectedAgreement={agreement}
-      supportedAgreements={getSupportedCc()}
-      simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
       onAgreementSearch={onAgreementSearch}
       onEnterpriseSearch={onEnterpriseSearch}
-      hasNoEnterpriseSelected={hasNoEnterpriseSelected}
+      onInitAgreementPage={onInitAgreementPage}
+      onRouteChange={onRouteChange}
+      route={route}
       setHasNoEnterpriseSelected={setHasNoEnterpriseSelected}
-      searchAgreementResultOverride={inject650IfDetected}
     />
   );
 };
 
-const inject650IfDetected = (
-  query: string,
-  results: Agreement[]
-): Agreement[] => {
-  const lowerQuery = query.toLowerCase();
-  const words = [
-    "métallurgie",
-    "ingénieurs",
-    "cadres",
-    "metallurgie",
-    "ingénieur",
-    "cadre",
-    "650",
-  ];
-  const detectInQuery = (word) => {
-    return lowerQuery.toLowerCase().includes(word);
-  };
-  const atLeastOneWordDetected = words.some(detectInQuery);
-  if (atLeastOneWordDetected) {
-    return results.concat([
-      {
-        url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
-        id: "KALICONT000005635842",
-        num: 650,
-        shortTitle: "Métallurgie : ingénieurs et cadres",
-        slug: "650-metallurgie-ingenieurs-et-cadres",
-        title: "Métallurgie : ingénieurs et cadres",
-        contributions: false,
-      },
-    ]);
-  }
-  return results;
-};
 export default AgreementStep;

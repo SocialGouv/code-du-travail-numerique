@@ -1,6 +1,5 @@
 import produce from "immer";
 import { StoreApi } from "zustand";
-import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { StoreSlice } from "../../../../types";
 import { SalairesStoreSlice } from "../../Salaires/store";
 import * as Sentry from "@sentry/nextjs";
@@ -9,7 +8,7 @@ import {
   AncienneteStoreInput,
   AncienneteStoreSlice,
 } from "./types";
-import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { CommonInformationsStoreSlice } from "../../Informations/store";
 import {
   Absence,
   getSupportedAgreement,
@@ -17,11 +16,12 @@ import {
   SeniorityFactory,
   SupportedCc,
 } from "@socialgouv/modeles-social";
-import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
+import { informationToSituation } from "../../../../Components/Informations/utils";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 import { validateStep } from "./validator";
+import { CommonAgreementStoreSlice } from "../../Agreement/store";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,

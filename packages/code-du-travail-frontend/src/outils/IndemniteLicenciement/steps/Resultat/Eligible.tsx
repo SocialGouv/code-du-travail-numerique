@@ -12,7 +12,7 @@ import {
   FormulaInterpreter,
   Result,
 } from "../../../CommonIndemniteDepart/steps/Resultat/components";
-import { informationToSituation } from "../../../CommonSteps/Informations/utils";
+import { informationToSituation } from "../../../Components/Informations/utils";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,

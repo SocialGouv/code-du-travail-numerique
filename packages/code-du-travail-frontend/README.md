@@ -1,13 +1,5 @@
 # Code-du-travail - Frontend (@cdt/frontend)
 
-## Lancer l'environnement de développement
-
-**Important** : pour tourner en local, ce projet nécessite les services api et elasticsearch. Par défaut on va utiliser l'API publique de dev.
-
-```sh
-yarn dev:frontend:preprod-api
-```
-
 ## Ajouter une convention collective pour l'indemnité de licenciement
 
 ### 1. Ajouter le salaire de référence (`code-du-travail-modeles`)

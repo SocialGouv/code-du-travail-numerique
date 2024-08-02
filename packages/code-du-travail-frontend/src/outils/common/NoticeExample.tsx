@@ -56,7 +56,7 @@ export const NoticeExample = ({
   switch (simulator) {
     case Simulator.PREAVIS_DEMISSION:
       return (
-        <SmallText>
+        <SmallText data-testid="notice-preavis-demission">
           {note}
           <MorePrecision extra={extra} />
           {defaultDayPreavisDemissionMessage}
@@ -82,7 +82,7 @@ export const NoticeExample = ({
       );
     case Simulator.PREAVIS_LICENCIEMENT:
       return (
-        <SmallText>
+        <SmallText data-testid="notice-preavis-licenciement">
           {note}
           <MorePrecision extra={extra} />
           {defaultDayPreavisLicenciementMessage}
@@ -103,7 +103,7 @@ export const NoticeExample = ({
       );
     case Simulator.PREAVIS_DEPART_RETRAITE:
       return (
-        <>
+        <div data-testid="notice-depart-retraite">
           <MorePrecision extra={extra} />
           <SmallText>
             {note}
@@ -113,11 +113,11 @@ export const NoticeExample = ({
             l’employeur.
             <CommunAccord />
           </SmallText>
-        </>
+        </div>
       );
     case Simulator.PREAVIS_MISE_RETRAITE:
       return (
-        <>
+        <div data-testid="notice-mise-retraite">
           <MorePrecision extra={extra} />
           <SmallText>
             {note}
@@ -126,7 +126,7 @@ export const NoticeExample = ({
             importe le jour de son retrait par le salarié.
             <CommunAccord />
           </SmallText>
-        </>
+        </div>
       );
     default:
       return <></>;
@@ -145,7 +145,7 @@ const MorePrecision = ({ extra }: { extra: Extra | null }): JSX.Element => {
 };
 
 const PrecisionOpenDay = (): JSX.Element => (
-  <SmallText as="span">
+  <SmallText as="span" data-testid="notice-open-day">
     Les jours ouvrés sont les jours effectivement travaillés dans une entreprise
     ou une administration. On en compte 5 par semaine.
     <br />
@@ -153,7 +153,7 @@ const PrecisionOpenDay = (): JSX.Element => (
 );
 
 const PrecisionCalendarDay = (): JSX.Element => (
-  <SmallText as="span">
+  <SmallText as="span" data-testid="notice-calendar-day">
     Les jours calendaires correspondent à la totalité des jours du calendrier de
     l’année civile, du 1er janvier au 31 décembre, y compris les jours fériés ou
     chômés.
@@ -162,7 +162,7 @@ const PrecisionCalendarDay = (): JSX.Element => (
 );
 
 const CommunAccord = (): JSX.Element => (
-  <SmallText as="span">
+  <SmallText as="span" data-testid="notice-commun-accord">
     <br />
     L’employeur et le salarié peuvent fixer d’un commun accord une date de
     départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou

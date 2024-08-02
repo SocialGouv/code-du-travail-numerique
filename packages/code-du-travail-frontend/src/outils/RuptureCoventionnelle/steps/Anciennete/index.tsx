@@ -10,7 +10,7 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "../../../CommonIndemniteDepart/store";
-import { informationToSituation } from "../../../CommonSteps/Informations/utils";
+import { informationToSituation } from "../../../Components/Informations/utils";
 // Do not optimize the following import
 import { getMessageMotifExample } from "../../../CommonIndemniteDepart/agreements/ui-customizations/messages";
 

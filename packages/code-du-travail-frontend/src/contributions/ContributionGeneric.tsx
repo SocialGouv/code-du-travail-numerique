@@ -6,12 +6,7 @@ import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
 import { RadioQuestion } from "../outils/Components";
 import { AgreementRoute } from "../outils/common/type/WizardType";
 import router from "next/router";
-import {
-  EnterpriseSearch,
-  NoEnterprise,
-} from "../outils/CommonSteps/Agreement/components";
 import { AgreementSupportInfo } from "../outils/common/Agreement/types";
-import AgreementSearch from "../outils/CommonSteps/Agreement/components/AgreementSearch";
 import { pushAgreementEvents } from "../outils/common";
 import { OnUserAction } from "../outils/ConventionCollective/types";
 import { handleTrackEvent } from "../outils/common/Agreement/tracking";
@@ -41,6 +36,9 @@ import {
 import { Alert } from "../common/Alert";
 import { Agreement } from "../outils/types";
 import { SupportedTypes } from "@socialgouv/modeles-social";
+import EnterpriseSearch from "../outils/Components/Agreements/EnterpriseSearch";
+import { NoEnterprise } from "../outils/Components/Agreements/NoEnterprise";
+import AgreementSearch from "../outils/Components/Agreements/AgreementSearch";
 
 const { DirectionRight } = icons;
 

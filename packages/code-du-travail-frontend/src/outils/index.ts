@@ -1,5 +1,5 @@
 export * from "./ConventionCollective";
-export * from "./DureePreavisRetraite";
+export * from "./PreavisRetraite";
 export * from "./DureePreavisDemission";
 export * from "./DureePreavisLicenciement";
 export * from "./IndemniteLicenciement";

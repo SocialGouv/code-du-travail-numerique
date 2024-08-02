@@ -14,10 +14,10 @@ import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
 import { SmallText } from "../stepStyles";
 import { ErrorField } from "../ErrorField";
 import { STORAGE_KEY_AGREEMENT } from "../../types";
-import { NoEnterprise } from "../../CommonSteps/Agreement/components";
 import { getCc3239Informations } from "../../api";
 import { Agreement } from "../../../outils/types";
 import { Simulator } from "../NoticeExample";
+import { NoEnterprise } from "../../Components/Agreements";
 
 export type Props = {
   title: string;

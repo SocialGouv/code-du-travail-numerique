@@ -13,11 +13,10 @@ import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
 
 import { ResultStoreData, ResultStoreSlice } from "./types";
-import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
-import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
 import { AgreementInformation, hasNoBetterAllowance } from "../../../common";
-import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
+import { informationToSituation } from "../../../../Components/Informations/utils";
 import { getInfoWarning } from "./service";
 import getSupportedCc from "../../../common/usecase/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
@@ -25,6 +24,7 @@ import { CommonSituationStoreSlice } from "../../../../common/situationStore";
 import { eventEmitter } from "../../../events/emitter";
 import { EventType } from "../../../events/events";
 import { PublicodesResult } from "@socialgouv/modeles-social/bin";
+import { CommonAgreementStoreSlice } from "../../Agreement/store";
 
 const initialState: ResultStoreData = {
   input: {

@@ -3,7 +3,7 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "../../../CommonIndemniteDepart/store";
-import { informationToSituation } from "../../../CommonSteps/Informations/utils";
+import { informationToSituation } from "../../../Components/Informations/utils";
 import {
   DecryptResult,
   FilledElements,

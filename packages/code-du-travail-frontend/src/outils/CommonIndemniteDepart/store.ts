@@ -30,17 +30,11 @@ import {
   SalairesStoreSlice,
 } from "./steps/Salaires/store";
 import {
-  CommonAgreementStoreError,
-  CommonAgreementStoreInput,
-  CommonAgreementStoreSlice,
-  createCommonAgreementStore,
-} from "../CommonSteps/Agreement/store";
-import {
   CommonInformationsStoreError,
   CommonInformationsStoreInput,
   CommonInformationsStoreSlice,
   createCommonInformationsStore,
-} from "../CommonSteps/Informations/store";
+} from "./steps/Informations/store";
 
 import {
   CommonSituationStoreSlice,
@@ -50,6 +44,12 @@ import {
 import { IndemniteDepartType } from "../types";
 import { createContext } from "react";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import {
+  CommonAgreementStoreSlice,
+  CommonAgreementStoreInput,
+  CommonAgreementStoreError,
+  createCommonAgreementStore,
+} from "./steps/Agreement/store";
 
 export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
@@ -99,7 +99,10 @@ const createRootSlice = (
   ...createSalairesStore(set, get, { type: toolName }),
   ...createResultStore(set, get, { type: toolName }),
   ...createRootAgreementsStore(set, get, { type: toolName }),
-  ...createCommonAgreementStore(set, get, { type: toolName, simulator: simulatorName }),
+  ...createCommonAgreementStore(set, get, {
+    type: toolName,
+    simulator: simulatorName,
+  }),
   ...createCommonInformationsStore(set, get, { type: toolName }),
   ...createCommonSituationStore(set, get, { type: toolName }),
 });
@@ -112,9 +115,10 @@ const createStore = (type: IndemniteDepartType) =>
     ) =>
       createRootSlice(set, get, {
         toolName: type,
-        simulatorName: type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE
-          ? PublicodesSimulator.RUPTURE_CONVENTIONNELLE
-          : PublicodesSimulator.INDEMNITE_LICENCIEMENT,
+        simulatorName:
+          type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE
+            ? PublicodesSimulator.RUPTURE_CONVENTIONNELLE
+            : PublicodesSimulator.INDEMNITE_LICENCIEMENT,
       })
   );
 

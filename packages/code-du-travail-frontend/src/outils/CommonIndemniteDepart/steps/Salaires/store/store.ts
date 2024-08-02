@@ -18,10 +18,10 @@ import {
 import { IndemniteDepartStepName } from "../../..";
 import { deepMergeArray } from "../../../../../lib";
 import { computeSalaryPeriods } from "../../../common";
-import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 import { parse, dateToString } from "../../../../common/utils";
 import { add } from "date-fns";
+import { CommonAgreementStoreSlice } from "../../Agreement/store";
 
 const initialState: SalairesStoreData = {
   input: {

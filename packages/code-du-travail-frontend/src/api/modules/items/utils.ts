@@ -28,7 +28,6 @@ export type RelatedItemSettings = {
   _id: string;
 };
 
-// select certain fields and add recommendation source (covisits or search)
 const mapSource =
   (reco: string) =>
   ({ description, slug, source, title, url }: RelatedItem) => ({
@@ -56,7 +55,6 @@ export const getSearchBasedItems = async ({
   return hits.hits.map(({ _source }) => mapSource("search")(_source!));
 };
 
-// get related items, depending on : covisits present & non empty
 export const getRelatedItems = async ({
   settings,
   slug,
