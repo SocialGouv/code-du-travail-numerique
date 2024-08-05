@@ -15,7 +15,7 @@ const defaultSituation = {
 
 describe("CC 3248 - Ordre des questions pour la rupture conventionnelle", () => {
   describe("Affiche les questions", () => {
-    // eslint-disable-next-line @typescript-eslint/init-declarations
+     
     let result: PublicodesData<PublicodesIndemniteLicenciementResult>;
 
     beforeEach(() => {
