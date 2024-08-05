@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.149.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.148.0...v4.149.0) (2024-08-05)
+
+### Bug Fixes
+
+- **e2e:** utilisation du sitemap pour générer les tests e2e ([#6060](https://github.com/SocialGouv/code-du-travail-numerique/issues/6060)) ([0453b98](https://github.com/SocialGouv/code-du-travail-numerique/commit/0453b986296421e6c910ba97d7d8881ff8234a85))
+- **eslint:** upgrade to latest version ([#6061](https://github.com/SocialGouv/code-du-travail-numerique/issues/6061)) ([81c072e](https://github.com/SocialGouv/code-du-travail-numerique/commit/81c072ebddebcf8aca3e24268eec4e16363744e8))
+- **rupture-co:** ne pas autoriser une date de fin identique à la date de début ([#6055](https://github.com/SocialGouv/code-du-travail-numerique/issues/6055)) ([d1d84c7](https://github.com/SocialGouv/code-du-travail-numerique/commit/d1d84c702678256fd348f84ff28671e5083ca4b3))
+
+### Features
+
+- **preavis-retraite:** refacto au niveau du `state` du simulateur ([#6054](https://github.com/SocialGouv/code-du-travail-numerique/issues/6054)) ([1efb1c5](https://github.com/SocialGouv/code-du-travail-numerique/commit/1efb1c545a71d18441d5e444c120eb8dcf43eef4))
+- **widget:** implement rupture co ([#5900](https://github.com/SocialGouv/code-du-travail-numerique/issues/5900)) ([70f1bc9](https://github.com/SocialGouv/code-du-travail-numerique/commit/70f1bc9233621b638a9650ed1b240b6d54915202))
+
 # [4.148.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.147.0...v4.148.0) (2024-07-24)
 
 ### Bug Fixes
