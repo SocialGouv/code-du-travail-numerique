@@ -1,9 +1,5 @@
 import "cypress-html-validate/commands";
-
-import urls from "../../support/urls-to-validate.json";
-import { ConfigData } from "cypress-html-validate";
-import {localConfig} from "../heavy/validate-html.spec";
-
+import { localConfig } from "../heavy/validate-html.spec";
 
 describe("Validation de l'html d'un échantillon de pages", () => {
   [
