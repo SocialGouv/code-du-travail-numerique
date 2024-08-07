@@ -49,3 +49,8 @@ app:
       oblik.socialgouv.io/min-request-memory: 1280Mi
       oblik.socialgouv.io/min-limit-cpu: 900m
       oblik.socialgouv.io/min-limit-memory: 1536Mi
+  tolerations:
+    - key: startup
+      operator: Equal
+      value: cdtn
+      effect: NoSchedule
