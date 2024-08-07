@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { fetchSuggestResults } from "../search.service";
 import { useCombobox } from "downshift";
-import Html from "../../common/Html";
 const { Search: SearchIcon } = icons;
 
 const suggestMaxResults = 5;

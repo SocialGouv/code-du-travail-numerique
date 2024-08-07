@@ -72,7 +72,7 @@ export const Header = ({ currentPage = "" }) => {
               passHref
               legacyBehavior
             >
-              <StyledLink rel="nofollow" aria-label="Lancer ma recherche">
+              <StyledLink aria-label="Lancer ma recherche">
                 <icons.Search />
               </StyledLink>
             </Link>
