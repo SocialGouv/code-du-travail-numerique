@@ -27,14 +27,14 @@ export const downloadAllUrlsToValidate = async () => {
       JSON.stringify(
         urls.filter(
           (url) =>
-            url.includes("/information") ||
-            url.includes("/convention-collective")
+            url.includes("/information/") ||
+            url.includes("/convention-collective/")
         )
       )
     );
 
     const urlsContributions: string[] = urls.filter((url) =>
-      url.includes("/contribution")
+      url.includes("/contribution/")
     );
 
     fs.writeFileSync(
