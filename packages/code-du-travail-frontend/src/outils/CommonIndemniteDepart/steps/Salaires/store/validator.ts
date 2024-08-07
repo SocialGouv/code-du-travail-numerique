@@ -39,6 +39,10 @@ export const validateStep = (state: SalairesStoreInput) => {
           sumSalaryPeriods(state.salaryPeriods) <= 0
         ? "Vous devez saisir un montant supérieur à zéro"
         : undefined,
+    errorLengthSalaryPeriods:
+      state.salaryPeriods.length <= 0
+        ? "Aucun mois complet n'a été réalisé, veuillez vérifier les dates que vous avez saisies aux étapes précédentes."
+        : undefined,
   };
 
   return {
@@ -48,6 +52,7 @@ export const validateStep = (state: SalairesStoreInput) => {
       errorSalary: undefined,
       errorTempsPartiel: false,
       errorSalaryPeriods: undefined,
+      errorLengthSalaryPeriods: undefined,
     }),
     errorState,
   };

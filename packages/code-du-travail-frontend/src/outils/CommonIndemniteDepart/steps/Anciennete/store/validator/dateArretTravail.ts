@@ -1,4 +1,4 @@
-import { isAfter, isBefore } from "date-fns";
+import { isAfter, isBefore, isEqual } from "date-fns";
 import { parse } from "../../../../../common/utils";
 import { ContratTravailStoreInput } from "../../../ContratTravail/store";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
@@ -19,7 +19,11 @@ export const getDateArretTravailErrors = (
   const dArret = getDateArret(stateContratTravail);
   let errors: AncienneteStoreError = {};
 
-  if (dArret && state.dateEntree && isBefore(dArret, dEntree)) {
+  if (
+    dArret &&
+    state.dateEntree &&
+    (isBefore(dArret, dEntree) || isEqual(dArret, dEntree))
+  ) {
     errors.errorDateEntree =
       "La date de début de contrat doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2";
   } else if (dArret && state.dateEntree && isAfter(dArret, dEntree)) {
