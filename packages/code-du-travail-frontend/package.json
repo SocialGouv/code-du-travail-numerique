@@ -35,7 +35,7 @@
     "@opentelemetry/instrumentation-generic-pool": "^0.37.0",
     "@opentelemetry/instrumentation-http": "^0.52.0",
     "@opentelemetry/instrumentation-net": "^0.37.0",
-    "@sentry/nextjs": "^8.13.0",
+    "@sentry/nextjs": "^8.24.0",
     "@socialgouv/cdtn-elasticsearch": "^2.44.2",
     "@socialgouv/cdtn-logger": "^2.0.0",
     "@socialgouv/cdtn-types": "^2.47.0",
