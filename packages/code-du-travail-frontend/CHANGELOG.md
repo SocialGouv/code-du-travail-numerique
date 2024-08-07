@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.149.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.149.0...v4.149.1) (2024-08-07)
+
+### Bug Fixes
+
+- **e2e:** utilisation du sitemap pour générer les tests e2e ([#6063](https://github.com/SocialGouv/code-du-travail-numerique/issues/6063)) ([7d2aad0](https://github.com/SocialGouv/code-du-travail-numerique/commit/7d2aad0985d3ec7d617f2d639e97235f68a839f9))
+
 # [4.149.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.148.0...v4.149.0) (2024-08-05)
 
 ### Bug Fixes
