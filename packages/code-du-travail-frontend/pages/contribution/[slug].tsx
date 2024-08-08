@@ -22,7 +22,9 @@ function PageContribution(props: Props): React.ReactElement {
   return (
     <Layout>
       <Metas
+        //@ts-ignore
         title={props.contribution.metas.title}
+        //@ts-ignore
         description={props.contribution.metas.description}
       />
       <Answer
