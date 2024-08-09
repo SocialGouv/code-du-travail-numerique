@@ -8,7 +8,7 @@ const contribution = {
   linkedContent: [],
   references: [],
   idcc: "",
-  ccnShortTitle: "Métallurgie",
+  metaTitle: "La période d’essai peut-elle être renouvelée ? - Métallurgie",
   title: "La période d’essai peut-elle être renouvelée ?",
   breadcrumbs: [],
 } as any;
@@ -19,7 +19,7 @@ describe("<PageContribution />", () => {
     );
     const titreH1 = getByRole("heading", { level: 1 });
     expect(titreH1.textContent).toBe(
-      "La période d’essai peut-elle être renouvelée ? - Métallurgie"
+      "La période d’essai peut-elle être renouvelée ?"
     );
   });
   it("should render title with only question", () => {
@@ -38,7 +38,7 @@ describe("<PageContribution />", () => {
       linkedContent: [{ source: "", title: "My link", slug: "" }],
       references: [],
       idcc: "",
-      ccnShortTitle: "Métallurgie",
+      metaTitle: "La période d’essai peut-elle être renouvelée ? - Métallurgie",
       title: "La période d’essai peut-elle être renouvelée ?",
     } as any;
     const { getByRole } = render(
