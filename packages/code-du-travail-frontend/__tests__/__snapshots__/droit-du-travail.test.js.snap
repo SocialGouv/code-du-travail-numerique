@@ -2760,9 +2760,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <li>
                     <a
                       class="sc-lbJcrp fVfqop"
-                      href="/outils/indemnite-licenciement"
+                      href="/outils/indemnite-rupture-conventionnelle"
                     >
-                      Calcul de l'indemnité de licenciement
+                      Calcul de l'indemnité de rupture conventionnelle
                     </a>
                   </li>
                   <li>
