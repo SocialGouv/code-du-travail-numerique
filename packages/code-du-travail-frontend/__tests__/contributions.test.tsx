@@ -8,10 +8,14 @@ const contribution = {
   linkedContent: [],
   references: [],
   idcc: "",
-  metaTitle: "La période d’essai peut-elle être renouvelée ? - Métallurgie",
+  metas: {
+    title: "SEO Title",
+    description: "SEO Description",
+  },
   title: "La période d’essai peut-elle être renouvelée ?",
   breadcrumbs: [],
 } as any;
+
 describe("<PageContribution />", () => {
   it("should render title with cc name in it", () => {
     const { getByRole } = render(
@@ -38,7 +42,10 @@ describe("<PageContribution />", () => {
       linkedContent: [{ source: "", title: "My link", slug: "" }],
       references: [],
       idcc: "",
-      metaTitle: "La période d’essai peut-elle être renouvelée ? - Métallurgie",
+      metas: {
+        title: "SEO Title",
+        description: "SEO Description",
+      },
       title: "La période d’essai peut-elle être renouvelée ?",
     } as any;
     const { getByRole } = render(

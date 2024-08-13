@@ -23,9 +23,9 @@ function PageContribution(props: Props): React.ReactElement {
     <Layout>
       <Metas
         //@ts-ignore
-        title={props.contribution.metaTitle}
+        title={props.contribution.metas.title}
         //@ts-ignore
-        description={props.contribution.metaDescription}
+        description={props.contribution.metas.description}
       />
       <Answer
         title={props.contribution.title}
