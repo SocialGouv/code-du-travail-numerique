@@ -1,10 +1,8 @@
 import React from "react";
-
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import {
-  Breadcrumb,
   ContributionElasticDocument,
   ElasticSearchContribution,
   ElasticSearchContributionConventionnelle,
@@ -22,9 +20,7 @@ function PageContribution(props: Props): React.ReactElement {
   return (
     <Layout>
       <Metas
-        //@ts-ignore
         title={props.contribution.metas.title}
-        //@ts-ignore
         description={props.contribution.metas.description}
       />
       <Answer

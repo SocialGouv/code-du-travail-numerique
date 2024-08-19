@@ -2,6 +2,7 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import PageContribution from "../pages/contribution/[slug]";
+import { ElasticSearchContribution } from "@socialgouv/cdtn-types";
 
 const contribution = {
   source: "contributions",
@@ -14,7 +15,7 @@ const contribution = {
   },
   title: "La période d’essai peut-elle être renouvelée ?",
   breadcrumbs: [],
-} as any;
+} as Partial<ElasticSearchContribution> as any;
 
 describe("<PageContribution />", () => {
   it("should render title with cc name in it", () => {

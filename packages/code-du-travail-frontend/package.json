@@ -38,7 +38,7 @@
     "@sentry/nextjs": "^8.13.0",
     "@socialgouv/cdtn-elasticsearch": "^2.44.2",
     "@socialgouv/cdtn-logger": "^2.0.0",
-    "@socialgouv/cdtn-types": "^2.47.0",
+    "@socialgouv/cdtn-types": "^2.48.1",
     "@socialgouv/cdtn-ui": "workspace:^",
     "@socialgouv/cdtn-utils": "workspace:^",
     "@socialgouv/fiches-travail-data": "^4.241.0",
