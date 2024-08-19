@@ -55,6 +55,7 @@ export const getSearchBySourceSlugBody = ({
       "ccnShortTitle", // pour une contribution conventionnelle
       "linkedContent", // pour les contributions
       "messageBlock", // pour les contributions
+      "metas", // pour les contributions
     ],
     query: {
       bool: {
