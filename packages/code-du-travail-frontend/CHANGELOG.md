@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.151.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.150.0...v4.151.0) (2024-08-19)
+
+### Features
+
+- **contribution:** ajout d'un titre pour le SEO ([#6071](https://github.com/SocialGouv/code-du-travail-numerique/issues/6071)) ([0ec1b1c](https://github.com/SocialGouv/code-du-travail-numerique/commit/0ec1b1c7e9752b956bdd16819b1daaaf6426bc12))
+
 # [4.150.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.149.1...v4.150.0) (2024-08-13)
 
 ### Bug Fixes
